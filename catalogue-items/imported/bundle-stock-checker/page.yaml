@@ -16,7 +16,7 @@ when:
   - One component is running low and you need to know which bundles it affects.
   - You want a safety buffer so parts do not hit zero.
 not_for:
-  - "You have single products with no bundle setup: use the restock-list-builder skill, or check stock in your Shopify admin."
+  - "You have single products with no bundle setup: use the Shopify restock list builder skill, or check stock in your Shopify admin."
   - "You want to change stock counts or hide a bundle: this only reads data, so make those changes in Shopify yourself."
   - "Your store is not on Shopify: ask a person on your team to compare parts by hand, since this needs Shopify access."
 you_give:

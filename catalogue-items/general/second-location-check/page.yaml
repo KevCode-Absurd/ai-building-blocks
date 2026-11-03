@@ -23,7 +23,7 @@ when:
 not_for:
   - "You are still deciding whether to open, or choosing a site: use the Go or no-go launch checker."
   - "You have no manual yet: write one with the Operations manual writer, then run a trial shift."
-  - "You want to know which market to enter next, and in what order: use the Market expansion sequencer."
+  - "You want to know which market to enter next, and in what order: use the Market expansion roadmap planner."
   - "You want to know if one bad year would sink the business: use the Bad-year break-even tester."
 
 you_give:

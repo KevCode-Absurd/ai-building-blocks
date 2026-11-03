@@ -21,7 +21,7 @@ not_for:
   - "You want to set room prices, not buy supplies: use the Hotel room pricing planner."
   - "You plan the food supply chain from farm to plate: use the Food supply chain planner."
   - "You want savings across all your business payments, not only supplies: use the Spend savings finder."
-  - "You need to compare two supplier quotes line by line. Use the Supplier quote comparer."
+  - "You need to compare two supplier quotes line by line. Use the Supplier quote reviewer."
 you_give:
   - Property type, size and service level, such as 80 rooms or a 60-seat restaurant
   - Annual spend by category, from your accounts

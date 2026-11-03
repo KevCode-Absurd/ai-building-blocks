@@ -15,7 +15,7 @@ when:
   - New subscribers buy at a lower rate than you expected.
   - You have knowledge your customers want and never share it.
 not_for:
-  - Your list has not opted in. Get permission first, then run this. The Email permission and message review can help you check.
+  - Your list has not opted in. Get permission first, then run this. The Email consent and message reviewer can help you check.
   - You want a one-off promotion. Use the Campaign email writer for a single email.
   - You want emails that chase buyers who did not reply or buy. Use the Follow-up email sequence writer instead.
 you_give:
@@ -30,7 +30,7 @@ you_get:
   - The emails fixed
   - A send-readiness check for each email
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Email sequence writer, Email draft reviewer, Plain English editor and Email send-readiness scorer.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the four skill files, in the order they run: Email sequence writer, Email draft reviewer, Plain English editor and Email send-readiness scorer."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your offer, your reader, the useful things you know and a voice sample. Say that your list opted in. It writes the sequence.
   - Read the review and the fixed emails. Change anything that does not sound like you.

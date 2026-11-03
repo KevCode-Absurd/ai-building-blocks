@@ -20,7 +20,7 @@ when:
 not_for:
   - Capital came in or went out during the period. Split it into dated parts first. This covers one constant balance.
   - The hurdle compounds, or the manager gets a catch-up. This covers simple accrual only, so read the fund agreement first.
-  - You want to split a whole payout between investors and the manager. Use the No-catchup waterfall checker, and bring this result to it.
+  - You want to split a whole payout between investors and the manager. Use the Fund payout without catch-up checker, and bring this result to it.
 you_give:
   - The fund agreement wording on the preferred return and how it builds up
   - The capital not yet returned to investors, held constant over the period (from the investor statement)

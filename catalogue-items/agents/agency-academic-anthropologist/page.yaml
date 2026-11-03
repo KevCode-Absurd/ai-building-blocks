@@ -37,9 +37,9 @@ when:
   - You added a new ritual or law and want to see whether it clashes with the rest of the culture.
 not_for:
   - You need fieldwork, a study design or an ethics review for real research. Work with a qualified anthropologist.
-  - You want to check land, climate and trade routes. Use the Geographer agent for worldbuilding or the Fictional setting plausibility check.
+  - You want to check land, climate and trade routes. Use the Geography analyst or the Fictional world logic reviewer.
   - You want to check dates, technology and daily life of a real period. Use the Historian agent for period accuracy.
-  - You want story structure or what a character wants. Use the Narratologist agent or the Narrative Designer agent.
+  - You want story structure or what a character wants. Use the Narrative analyst or the Game narrative designer.
 you_give:
   - Your project type, such as a novel, game, campaign or script, and the genre
   - The facts about your world that are already fixed

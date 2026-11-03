@@ -43,6 +43,7 @@ output_sample:
     - A Slack app with Socket Mode on, made at api.slack.com/apps
     - Bot scopes chat:write and channels:history, and the message.channels event turned on
     - An app-level token with the connections:write scope
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Package install
       contains: The Slack Bolt package added to your project, after you confirm the install.

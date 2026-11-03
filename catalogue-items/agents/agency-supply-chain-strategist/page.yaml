@@ -37,7 +37,7 @@ when:
   - You compare suppliers by price alone and want to see the full cost of each.
   - You want a monthly or quarterly supply chain report in one fixed layout.
 not_for:
-  - You already hold quotes or factory answers and want them compared or scored. Use the Supplier quote comparer or the Supplier shortlist vetter.
+  - You already hold quotes or factory answers and want them compared or scored. Use the Supplier quote reviewer or the Supplier shortlist vetter.
   - You need the message that asks factories for quotes. Use the Supplier quote request writer.
   - You need to know how much to order and the cash it takes. Use the Inventory cash planner.
   - You need a ruling on customs, tax, contracts or product certification. Ask a customs broker or a lawyer.

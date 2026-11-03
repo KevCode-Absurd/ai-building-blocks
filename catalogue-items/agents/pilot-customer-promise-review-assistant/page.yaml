@@ -20,8 +20,8 @@ when:
 not_for:
   - The promise was never written down or recorded anywhere. Write it down first. This tracks promises that have a source.
   - You only need to pass work to a new owner. Use the Handover note writer.
-  - You want to reply to a customer's support message. Use the Customer inbox triage and reply drafter.
-  - You want to track actions from your own team meetings. Use the Executive action register keeper.
+  - You want to reply to a customer's support message. Use the Customer inbox reply drafter.
+  - You want to track actions from your own team meetings. Use the Action item tracker keeper.
   - You want customers messaged for you. It drafts and stops.
 you_give:
   - The pilot agreement or order form, and any written scope (from your contract folder)

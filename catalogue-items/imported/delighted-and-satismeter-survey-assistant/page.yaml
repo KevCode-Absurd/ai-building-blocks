@@ -18,9 +18,9 @@ when:
   - You just solved a batch of tickets and want to ask those customers for a rating.
   - You need a short report for your team with real customer quotes.
 not_for:
-  - You want themes from comments across several survey tools. Use the Customer feedback report from survey tools, which also reads GatherUp, Gleap and Simplesat.
+  - You want themes from comments across several survey tools. Use the Customer survey feedback analyst, which also reads GatherUp, Gleap and Simplesat.
   - You want to write a new survey from scratch. Use the Post-purchase survey builder.
-  - You have one angry message to rate. Use the Customer message tone and urgency review.
+  - You have one angry message to rate. Use the Customer message tone and urgency reviewer.
   - You do not use Delighted or Satismeter. Export your responses to a sheet and paste it in for the report only.
 you_give:
   - Your choice of task, either "analyze" or "send"

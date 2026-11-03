@@ -18,10 +18,10 @@ when:
   - A shared service cost is spread evenly and you doubt it is fair.
   - You are about to reprice a service and need the real cost per billable hour.
 not_for:
-  - You only need utilization and margin. Use the Service utilization margin builder on its own.
-  - You only need to spread a shared cost by use. Use the Shared service activity cost allocator on its own.
-  - You want to know if you can promise a delivery date. Use the Check capacity before promising a delivery date workflow.
-  - You want a hotel or property view. Use the Reconcile hotel room and food contribution workflow.
+  - You only need utilization and margin. Use the Service hours and margin calculator on its own.
+  - You only need to spread a shared cost by use. Use the Shared service cost calculator on its own.
+  - You want to know if you can promise a delivery date. Use the Team capacity and delivery-date planner workflow.
+  - You want a hotel or property view. Use the Hotel room and food contribution checker workflow.
 you_give:
   - Paid hours and client hours for the same month (from timesheets or payroll)
   - Leave and fixed duties that cannot be billed (from your leave and rota records)

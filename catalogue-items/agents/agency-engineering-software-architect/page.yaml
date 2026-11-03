@@ -19,9 +19,9 @@ when:
   - A new feature, such as payments or a partner link, needs a clear boundary around it.
 not_for:
   - You need an API and data layout for one backend. Use the Backend Architect agent.
-  - You want a bug fixed or a pull request reviewed. Use the Code Reviewer agent or the Minimal Change Engineer agent.
+  - You want a bug fixed or a pull request reviewed. Use the Code Reviewer agent or the Focused code fix developer.
   - You want a threat review of a design. Use the Security Architect agent.
-  - You want a quick test of an idea. Use the Rapid Prototyper agent.
+  - You want a quick test of an idea. Use the Software prototype designer.
 you_give:
   - The goal of the system and who uses it
   - Limits, such as team size, budget, deadlines and rules you must follow

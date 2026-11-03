@@ -96,8 +96,8 @@ terms:
     meaning: The share of people you reach who buy.
 not_for:
   - "You already know who you sell to and need the price itself: use Pricing decision planner."
-  - "You have not chosen a market yet: use Starving crowd market scorer first."
-  - "You want three price tiers for one buyer group: use Three-tier price ladder drafter."
+  - "You have not chosen a market yet: use Market demand scorer first."
+  - "You want three price tiers for one buyer group: use Three-package pricing planner."
 output_sample:
   input:
     - Your offer in broad form, with its going price

@@ -18,10 +18,10 @@ when:
   - You have a tune and want it played in a different style.
   - You want clips for a personal project, a draft or a test of an idea.
 not_for:
-  - "You plan to use the clips in paid or commercial work: the MusicGen model weights may allow non-commercial use only. Check the weights' licence first, or use a stock music library or the Suno song and music bed prompt writer."
+  - "You plan to use the clips in paid or commercial work: the MusicGen model weights may allow non-commercial use only. Check the weights' licence first, or use a stock music library or the Suno music prompt writer."
   - "You want a spoken voiceover or text read aloud: use a text-to-speech tool, not this one."
   - "You want a long, finished commercial track: use a stock music library or a music producer."
-  - "You have no way to run Python code: use the Suno song and music bed prompt writer, or pick a stock music site."
+  - "You have no way to run Python code: use the Suno music prompt writer, or pick a stock music site."
 you_give:
   - A text description of the sound
   - A melody file (optional)

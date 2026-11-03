@@ -21,10 +21,10 @@ when:
   - A fix list from a review has more items than you can do.
   - You keep adding campaigns instead of choosing one.
 not_for:
-  - "You have one campaign to plan, not a choice between moves: use the One-goal marketing plan builder."
-  - "You have no plan or fix list yet: run the Marketing plan law checker first to get one."
+  - "You have one campaign to plan, not a choice between moves: use the Focused marketing planner."
+  - "You have no plan or fix list yet: run the Marketing strategy reviewer first to get one."
   - "Your product is brand new and has no rivals yet: use the First market picker."
-  - "You want a plan checked against rules, not a move picked: use the Marketing plan law checker."
+  - "You want a plan checked against rules, not a move picked: use the Marketing strategy reviewer."
 
 you_give:
   - Your plan, or a list of three to eight moves you are considering

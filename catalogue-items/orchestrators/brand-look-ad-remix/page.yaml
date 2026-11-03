@@ -31,9 +31,9 @@ how_it_works:
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
-  - You want to find which of your ads win and why. Use the Winning ad DNA mapper first.
-  - You have one product photo and want it repeated in new colours as ads. Use Repeat one product photo in new colours as ads.
-  - You want ads built from a rival's layouts or reference ads. Use the Swipe library ad builder.
+  - You want to find which of your ads win and why. Use the Successful ad pattern analyst first.
+  - You have one product photo and want it repeated in new colours as ads. Use Product photo ad variation planner.
+  - You want ads built from a rival's layouts or reference ads. Use the Reference-based image ad builder.
 output_sample:
   input:
     - At least three of your own ad images, with results if you have them

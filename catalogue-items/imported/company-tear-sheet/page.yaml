@@ -18,7 +18,7 @@ when:
   - You are preparing the first page of a longer research pack.
   - You want a quick profile of a prospect before a sales call.
 not_for:
-  - You want a PowerPoint slide for a pitch book. Use the company strip profile slide maker.
+  - You want a PowerPoint slide for a pitch book. Use the Company profile slide maker.
   - You want a valuation or a fair price. Use the company fair value modeler.
   - You will send the sheet to a client as it is. The price data comes from yfinance, which is for personal use only. Check the figures against filings or a licensed source first, or label the sheet internal.
   - You need live prices or a document a client will trade on. Free data is end of day or delayed, so use a licensed data terminal.
@@ -44,7 +44,7 @@ how_to_use:
   - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
   - Check the figures and dates against the latest results. Note that the price data is delayed.
   - Put the sheet in your pack only after you have checked it. Refresh it after each results release. To value the company, use the company fair value modeler. For a pitch slide, use the company strip profile slide maker.
-  - The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source.
+  - "The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source."
 output_sample:
   input:
     - The company name or ticker

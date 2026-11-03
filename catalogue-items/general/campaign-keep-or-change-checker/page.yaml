@@ -18,9 +18,9 @@ when:
   - "A new manager or agency wants to start again."
   - "Pull has dropped and you do not know whether to fix or replace."
 not_for:
-  - "Your ad is brand new and has no survey data: use the Ad recall and pull calculator first to get your figures."
-  - "You want to plan how often to show an ad: use the Reach-before-repeat planner."
-  - "You need a new ad claim: use the Selling proposition finder, then test it before you drop the old one."
+  - "Your ad is brand new and has no survey data: use the Ad survey results calculator first to get your figures."
+  - "You want to plan how often to show an ad: use the Ad reach planner."
+  - "You need a new ad claim: use the Product promise finder, then test it before you drop the old one."
 
 you_give:
   - "Recall and pull results, from the Ad recall and pull calculator"

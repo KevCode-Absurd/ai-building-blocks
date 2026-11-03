@@ -20,7 +20,7 @@ when:
 not_for:
   - "The answer is clear from data you already have: check the numbers or run a small test instead."
   - "One person owns the decision and does not need the group: ask a trusted expert for a direct review."
-  - "You need a shared note after a call is made: use the Disagree-and-commit note writer."
+  - "You need a shared note after a call is made: use the Team decision and dissent note writer."
 
 you_give:
   - The decision and the goal in a sentence

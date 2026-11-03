@@ -35,7 +35,7 @@ you_get:
   - Parameter sweep results
 how_to_use:
   - Check that you have MATLAB R2026a or later with the Wireless Network Toolbox. Your AI needs to run MATLAB code.
-  - Gather these first: how many nodes you have and where each one sits (with units, such as metres), the traffic each node sends and its rate (for example in Kbps), how long to run the simulation, and any settings you want to sweep with their start, end and step.
+  - "Gather these first: how many nodes you have and where each one sits (with units, such as metres), the traffic each node sends and its rate (for example in Kbps), how long to run the simulation, and any settings you want to sweep with their start, end and step."
   - Open your AI tool and paste in the skill, or upload the skill folder.
   - Describe your nodes, where they sit and what traffic each one sends. Add movement or sweep settings if you need them.
   - Ask your AI first to confirm that MATLAB, the Wireless Network Toolbox and any other toolbox it needs are installed. Then ask it to define your nodes and one traffic flow, and run it for a short duration. Check the per-node throughput table. Only then add more flows, movement or sweeps and run longer.

@@ -21,7 +21,7 @@ when:
 not_for:
   - "Your product is an impulse buy or a novelty with no switch history: run a short direct ad instead."
   - "You want the story ad written now: use the Story image ad writer once this setup sheet is done."
-  - "You need a plan for reach and budget: use the Ad reach planning review."
+  - "You need a plan for reach and budget: use the Ad reach planner."
 
 you_give:
   - Your product, who buys it, and the claims you may and may not make

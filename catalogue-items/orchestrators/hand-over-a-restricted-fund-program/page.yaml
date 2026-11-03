@@ -20,7 +20,7 @@ when:
 not_for:
   - "The fund has no written agreement: get the terms in writing first. Until then, use the Handover note writer for a plain handover."
   - "Nothing restricts the money: use the Handover note writer on its own."
-  - "You want to check that spending followed the agreement: use the Prepare a grant spending evidence pack workflow."
+  - "You want to check that spending followed the agreement: use the Grant spending and evidence report preparer workflow."
   - "You need to know if a new use of the money is allowed: ask the fund owner or funder. A handover cannot approve it."
 you_give:
   - The signed fund agreement, with any changes or side letters

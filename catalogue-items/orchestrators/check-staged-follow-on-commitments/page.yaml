@@ -18,9 +18,9 @@ when:
   - A staged commitment has a milestone signed off and you want to know what can be drawn.
   - You are setting the follow-on reserve for the next year.
 not_for:
-  - "You hold rights in one company only: use the Pro rata allocation checker."
-  - "You first need to find your stake after a SAFE converts: use the Check a SAFE into priced financing workflow."
-  - "You only need to compare reserve with rounds already known: use the Follow-on reserve planner."
+  - "You hold rights in one company only: use the Investor pro rata funding calculator."
+  - "You first need to find your stake after a SAFE converts: use the SAFE ownership and funding checker workflow."
+  - "You only need to compare reserve with rounds already known: use the Follow-on investment cash planner."
 you_give:
   - Side letters and outside-only allocations for both companies (from the signed agreements)
   - Round confirmations that show the full round including your cash, for each company

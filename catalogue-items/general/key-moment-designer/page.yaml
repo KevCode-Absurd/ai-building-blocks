@@ -22,7 +22,7 @@ when:
   - You are about to add a surprise to every step and suspect that is the wrong move.
 
 not_for:
-  - "You run a regular meeting, not a one-off event: use the one-on-one meeting planner, or the process and meeting cull planner to cut meetings."
+  - "You run a regular meeting, not a one-off event: use the one-on-one meeting planner, or the Process and meeting cleanup planner to cut meetings."
   - "You are planning a new hire's first week as a whole: use the new hire first week planner. Come here for the one moment inside it."
   - "You want to reward people for hitting targets: use the recognition plan designer."
   - "The basics are broken, such as a late start, no food or no clear directions. It will tell you to fix those first, and a peak will not cover them."

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a video, not a still: use the paper world ad script skill."
   - "Proof, fabric, food or a real face is the point, so a picture could mislead: use a plain product photo."
-  - "You have no brand file or approved claims yet: use the Website brand brain builder first."
+  - "You have no brand file or approved claims yet: use the Brand profile builder first."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea

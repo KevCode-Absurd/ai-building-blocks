@@ -18,10 +18,10 @@ when:
   - "Your accountant asks how you worked out the interest accrual for the period."
   - "You are moving a hand-built spreadsheet to one place where every rate and day count is visible."
 not_for:
-  - "You want to know how much you can still borrow on the line: use the Revolver availability checker."
-  - "Interest is added to the loan balance instead of being paid: use the Cash and PIK interest checker."
-  - "You need interest that is capitalised into an asset you are building: use the Construction interest schedule builder."
-  - "You want to know if you pass a lender's cash-cover test: use the Debt service covenant headroom checker."
+  - "You want to know how much you can still borrow on the line: use the Revolving credit availability checker."
+  - "Interest is added to the loan balance instead of being paid: use the Cash and added interest calculator."
+  - "You need interest that is capitalised into an asset you are building: use the Construction loan interest calculator."
+  - "You want to know if you pass a lender's cash-cover test: use the Loan covenant cash coverage checker."
 you_give:
   - "The average amount drawn over the period, from the lender's statement or your loan system"
   - "The average unused amount the fee applies to. Your credit agreement says what counts, such as whether letters of credit are left out"
@@ -81,6 +81,7 @@ output_sample:
   prerequisites:
     - "The lender statement and the rate and fee terms from your credit agreement"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Period and sources", contains: "The dates, currency and documents used, so a reviewer can trace every figure."}
     - {name: "Inputs", contains: "Each figure you gave with its source, and a MISSING line for any you did not."}

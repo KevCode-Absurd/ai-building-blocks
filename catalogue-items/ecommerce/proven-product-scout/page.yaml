@@ -19,7 +19,7 @@ when:
   - You have no ad spy tool and want to use the free Ad Library.
 not_for:
   - "You have no ad data at all and want ideas from search demand: use a supplier site or a search volume tool, such as Google Trends."
-  - "You already have a shortlist and need to judge how crowded it is: use the Competitor saturation checker or the Winning product scorer."
+  - "You already have a shortlist and need to judge how crowded it is: use the Competitor saturation checker or the Product idea viability scorer."
   - "You plan to sell brand-name or regulated health products: talk to a qualified person and read the ad policy first, because this skill only checks ad proof."
 
 you_give:

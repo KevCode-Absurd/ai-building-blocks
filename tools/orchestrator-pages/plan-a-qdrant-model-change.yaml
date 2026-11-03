@@ -15,7 +15,7 @@ when:
   - Some searches already return weak results and you want to know whether the new model helps.
   - You want alerts and rollback gates ready before you send live traffic to the new model.
 not_for:
-  - "Your Qdrant search is slow, not wrong or changing models: use Diagnose slow Qdrant search or the Qdrant search speed tuner."
+  - "Your Qdrant search is slow, not wrong or changing models: use Qdrant performance reviewer or the Qdrant search speed tuner."
   - "You only need to pick where to host Qdrant: use the Qdrant hosting option adviser."
   - "You are upgrading Qdrant itself and keeping your model: use the Qdrant version upgrade planner."
 you_give:

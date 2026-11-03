@@ -17,10 +17,10 @@ when:
   - A customer wants to cancel and you want to offer one real alternative, then respect their choice.
   - You are not sure whether to answer a message yourself or pass it to someone senior.
 not_for:
-  - You have a pile of new emails to sort and answer. Use the Customer inbox triage and reply drafter.
+  - You have a pile of new emails to sort and answer. Use the Customer inbox reply drafter.
   - You only want one calming reply for an angry customer. Use the Angry customer reply writer.
-  - The message is about a return or refund at a shop. Use the Retail Customer Returns agent or the Refund request reply writer.
-  - The customer is a hotel or restaurant guest, or a patient. Use the Hospitality Guest Services agent or the Healthcare Customer Service agent.
+  - The message is about a return or refund at a shop. Use the Retail returns response writer or the Refund request reply writer.
+  - The customer is a hotel or restaurant guest, or a patient. Use the Guest service response writer or the Patient service reply writer.
   - The message names a safety risk or a lawyer. Pass it to a person at once. The agent flags it, but a person decides.
 you_give:
   - The customer's message, copied as written

@@ -18,9 +18,9 @@ when:
   - You must choose between GCPs and RTK, or between Pix4D, Metashape and WebODM.
 not_for:
   - "You need a legal boundary or certified survey: hire a licensed surveyor."
-  - "You need to analyze satellite images: use the GeoAI/ML Engineer agent."
-  - "You only need an aerial photo placed on a map: use the GIS Analyst agent."
-  - "You already have LiDAR and need a 3D scene: use the 3D & Scene Developer agent."
+  - "You need to analyze satellite images: use the Geospatial machine learning planner."
+  - "You only need an aerial photo placed on a map: use the GIS analyst."
+  - "You already have LiDAR and need a 3D scene: use the 3D map scene developer."
 you_give:
   - "The site: area size, terrain and any boundary file"
   - The products you need, such as an orthomosaic, height model, point cloud or 3D mesh, and what each is for

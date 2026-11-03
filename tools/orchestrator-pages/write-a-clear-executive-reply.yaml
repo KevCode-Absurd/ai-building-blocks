@@ -18,7 +18,7 @@ when:
   - You know what you want to say but not how to fit it into a short reply.
   - You want a reply that sounds like you wrote it, not like a template.
 not_for:
-  - You have many due tasks and threads to follow up at once. Use the Draft your due task follow ups workflow.
+  - You have many due tasks and threads to follow up at once. Use the Task follow-up and voice editor workflow.
   - The reply goes to an angry or upset customer. Use the Angry customer reply writer.
   - It is a marketing email or newsletter to a list. Use the Campaign email writer.
   - You only want a draft you already wrote tightened. Use the Plain English editor.

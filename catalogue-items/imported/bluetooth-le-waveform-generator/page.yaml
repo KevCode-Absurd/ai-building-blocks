@@ -35,7 +35,7 @@ you_get:
   - "Sensible defaults when your request is vague: LE1M, 37-byte payload, channel 37"
   - "A clear next step: feed the waveform into a receiver, a BER loop or an RF-PHY test"
 how_to_use:
-  - Before you start, decide four things to tell your AI: the PHY mode (LE1M, LE2M, LE500K or LE125K), the payload length, the channel and the test type.
+  - "Before you start, decide four things to tell your AI: the PHY mode (LE1M, LE2M, LE500K or LE125K), the payload length, the channel and the test type."
   - Open an AI tool that can write and run MATLAB code. You need MATLAB R2022a or later with the Bluetooth Toolbox. MATLAB and the Bluetooth Toolbox are paid MathWorks products, and you need your own licence for each. No API key is needed.
   - Add this skill to your AI tool, or paste the SKILL.md text into the chat.
   - Say which packet type or PHY mode you want and what you plan to test. Add payload size and channel if you know them.

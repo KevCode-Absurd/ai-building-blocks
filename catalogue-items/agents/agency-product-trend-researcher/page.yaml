@@ -21,10 +21,10 @@ when:
   - You are about to enter a market and want to know how big it is and how early you would be.
   - An investor or your team asks "why now?" and you have no evidence written down.
 not_for:
-  - You want to pull findings from a pile of papers or reports into one summary. Use the Research Synthesist agent.
+  - You want to pull findings from a pile of papers or reports into one summary. Use the Research evidence reviewer.
   - You want live market numbers, such as exact market size or a financial forecast. It needs real data from you, and a financial adviser should review any plan that relies on it.
-  - You want to see what people say about your brand on X. Use the X/Twitter Intelligence Analyst agent.
-  - You want to compare tools you could buy. Use the Tool Evaluator agent.
+  - You want to see what people say about your brand on X. Use the X research analyst.
+  - You want to compare tools you could buy. Use the Software tool comparison planner.
 you_give:
   - The trend, market or product idea to study, and the decision it should help with
   - Any data you already have, such as search interest, articles, reviews, rival pages or survey results

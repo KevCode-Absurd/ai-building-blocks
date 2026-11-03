@@ -18,7 +18,7 @@ when:
   - You are restructuring and must keep old URLs working.
   - You want internal links that help search rankings.
 not_for:
-  - You want an XML sitemap file for Google. Use an SEO audit tool or your site platform's sitemap setting instead.
+  - You want an XML sitemap file for Google. Use an SEO auditor tool or your site platform's sitemap setting instead.
   - You only need to pick a website builder. Compare platforms on their own first, then come back to plan your pages.
   - You have a one-page site. A simple list of sections on that page is enough.
 you_give:
@@ -33,7 +33,7 @@ you_get:
   - An internal linking map
   - Redirect notes for moved pages
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed. The skill links to four reference files in the references folder of this item: site-type-templates.md, navigation-patterns.md, mermaid-templates.md and platforms-and-migration.md. In a chat that cannot open them, paste the one for your site type, and platforms-and-migration.md if you are moving platforms.
+  - "Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed. The skill links to four reference files in the references folder of this item: site-type-templates.md, navigation-patterns.md, mermaid-templates.md and platforms-and-migration.md. In a chat that cannot open them, paste the one for your site type, and platforms-and-migration.md if you are moving platforms."
   - "Have ready: your business brief (what you do, who you serve, your top 3 goals), your site type and platform, and your current URL list if the site exists."
   - "Paste your business brief first: what you do, who you serve and your top 3 goals."
   - Add your site type and platform. If the site exists, paste your current URL list and say what is broken.

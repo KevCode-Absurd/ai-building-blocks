@@ -18,10 +18,10 @@ when:
   - You want slides whose numbers match the report, with the page for each one
   - You need a deck others can edit afterward, not a picture of slides
 not_for:
-  - You only need a summary and a slide plan, not a built file. Use Make a research report easier to share.
-  - Your numbers sit in a messy spreadsheet, not in a report. Use Turn a messy spreadsheet into a clean slide deck.
-  - You already have a deck and want it ready to present and share. Use Prepare a PowerPoint deck for presenting and sharing.
-  - You want a talk built around one story. Use Build a talk around one real case.
+  - You only need a summary and a slide plan, not a built file. Use Research report summary and slide-brief writer.
+  - Your numbers sit in a messy spreadsheet, not in a report. Use Spreadsheet cleanup, data-check and slide-deck builder.
+  - You already have a deck and want it ready to present and share. Use PowerPoint presenter handout and notes writer.
+  - You want a talk built around one story. Use Case-based pitch and talk writer.
 you_give:
   - Your report, as a document file or pasted text
   - The charts or data you trust, such as tables or an Excel file (optional)

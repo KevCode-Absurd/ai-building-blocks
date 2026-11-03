@@ -44,7 +44,7 @@ judge:
   - Nothing is uploaded or published.
 how_to_use:
   - Download the pack and unzip it. Give the folder to your AI and start with START_HERE.txt.
-  - Give your bug notes: what you expected, what happened, your setup and what you tried. Say who will read the issue and whether the tracker is public or private.
+  - "Give your bug notes: what you expected, what happened, your setup and what you tried. Say who will read the issue and whether the tracker is public or private."
   - Pick one path for the screenshot. On your own computer with a privacy mask tool and Tesseract, give the file path and the AI masks a copy. In a cloud chat or without tools, attach only a copy you already redacted.
   - Read the sharing gate. PASS means the checks that ran passed. FAIL means fix it and run again. NOT RUN means a check, such as the pixel review, did not happen, so do not share that image.
   - Check the masked copy yourself against the place you will post. Automatic masking is never complete.

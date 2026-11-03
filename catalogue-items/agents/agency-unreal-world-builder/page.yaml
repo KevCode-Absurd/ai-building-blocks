@@ -17,9 +17,9 @@ when:
   - Far-away objects pop in, and you want to know if HLOD is the cause.
   - You need to fill a large area with trees or rocks without placing them by hand.
 not_for:
-  - You need one material or Niagara effect planned. Use the Unreal Technical Artist agent.
-  - You need gameplay code or systems. Use the Unreal Systems Engineer agent.
-  - You need the fights and pacing of one level. Use the Level Designer agent.
+  - You need one material or Niagara effect planned. Use the Unreal technical artist.
+  - You need gameplay code or systems. Use the Unreal gameplay systems engineer.
+  - You need the fights and pacing of one level. Use the Game level designer.
 you_give:
   - World size, such as kilometres by kilometres, and how fast the player moves
   - Your Unreal Engine 5 version, platforms and frame rate target

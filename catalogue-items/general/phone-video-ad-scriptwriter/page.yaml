@@ -16,8 +16,8 @@ when:
   - You need to check that a presenter claims nothing untrue.
 not_for:
   - "You need a script for a business buyer or a product no one has used yet: write a plain pitch yourself or ask a person who knows the buyer."
-  - "You want the full set of checks on a selfie-style script: use the Selfie style ad script."
-  - "You want to check an ad against Meta rules before it goes live: this script has no rule check, so run it through the Meta ads compliance checker."
+  - "You want the full set of checks on a selfie-style script: use the Selfie-style video ad script writer."
+  - "You want to check an ad against Meta rules before it goes live: this script has no rule check, so run it through the Meta ad policy checker."
 you_give:
   - Who is on camera
   - Your buyer's doubt in their own words

@@ -19,7 +19,7 @@ when:
   - You need exact wording for an ad or landing page.
 not_for:
   - "You need totals across every customer: use a survey or a CRM report, because this finds quotes, not full counts."
-  - "You have product reviews or survey comments, not calls: use the Review reason spotter or the Feedback theme finder."
+  - "You have product reviews or survey comments, not calls: use the Customer buying reason counter or the Feedback theme finder."
   - "You want one interview turned into needs and next steps: use the Customer interview synthesizer."
 you_give:
   - The topic, such as an objection, a feature or a competitor

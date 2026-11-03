@@ -18,9 +18,9 @@ when:
   - Repairs have piled up and you cannot tell which decisions are overdue.
   - An owner or manager asks "what is stuck, and why?"
 not_for:
-  - "You want to check that repairs are really closed, with proof, over time: use the Property maintenance evidence review assistant."
+  - "You want to check that repairs are really closed, with proof, over time: use the Property repair and access reviewer."
   - "You want to plan equipment servicing on a schedule: use the Equipment maintenance planner."
-  - "The work is a building project with defects: use Prepare a construction defects handover."
+  - "The work is a building project with defects: use Construction defect handover planner."
   - A safety problem is happening now. Call your emergency contact first. Do not wait for a handover.
 you_give:
   - Your open maintenance tickets, with ID, status and dates (an export or a pasted list)

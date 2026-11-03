@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no TikTok data yet and need a test layout: use the TikTok starter campaign builder."
   - "You want to pick organic posts that won on their own to boost: use the TikTok Spark ad picker."
-  - "Your ads run on Meta or Google: the cost lines here are TikTok numbers, so ask a media buyer or use the Campaign keep-or-change checker."
+  - "Your ads run on Meta or Google: the cost lines here are TikTok numbers, so ask a media buyer or use the Ad change decision checker."
 
 you_give:
   - "Per ad: spend, impressions, CTR, watch time, CPM, CPC, cost per add to cart and cost per purchase"

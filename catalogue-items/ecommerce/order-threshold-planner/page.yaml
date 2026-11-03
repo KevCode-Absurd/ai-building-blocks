@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have under a few hundred orders: treat the result as a first guess, or run a simple price test on your store instead."
   - "You sell one product at one price and want no ladder: a simple price test is enough."
-  - "You want to check the combined effect of stacked discount codes: use the discount impact checker."
+  - "You want to check the combined effect of stacked discount codes: use the Discount margin and ad-cost checker."
 
 you_give:
   - A list or export of order totals and units per order

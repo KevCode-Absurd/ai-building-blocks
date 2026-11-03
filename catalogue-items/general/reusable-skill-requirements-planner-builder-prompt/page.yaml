@@ -20,7 +20,7 @@ when:
 not_for:
   - "You are in a chat AI and not in Claude Code, and want a draft from a job you repeat: use the Reusable AI skill writer."
   - "You already have a skill file and want it checked: use the AI skill file checker."
-  - "You want to turn a whole book into skills: use the Book to skill converter."
+  - "You want to turn a whole book into skills: use the Book and document skill builder."
   - "The task happens once. Ask your AI directly. A skill only pays off when you repeat the work."
 
 you_give:

@@ -15,8 +15,8 @@ when:
   - Your current name says who you are, not what you do.
   - You keep adding variants and the name no longer means one thing.
 not_for:
-  - "Your product already has customers under its current name and you want to stretch it: use the Brand name stretch checker."
-  - "You have no job spec yet: write one first with the Job spec writer, then come back."
+  - "Your product already has customers under its current name and you want to stretch it: use the Brand name fit checker."
+  - "You have no job spec yet: write one first with the Customer task definition writer, then come back."
   - "You need to know if a name is free to use: ask a trademark lawyer or search your national trademark register and domain sites."
 you_give:
   - A job spec for one circumstance

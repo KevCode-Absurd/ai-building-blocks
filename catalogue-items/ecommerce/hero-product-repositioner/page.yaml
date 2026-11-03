@@ -20,7 +20,7 @@ when:
 not_for:
   - "You sell a wide catalogue of many products: this fits one hero product, so work on your best seller first or use a person who knows your range."
   - "You have no reviews or survey answers yet: ask customers why they bought first, then come back. Without their words the angles are guesses."
-  - "You already have an angle and only need to test the discount cost: use the Discount impact checker."
+  - "You already have an angle and only need to test the discount cost: use the Discount margin and ad-cost checker."
 
 you_give:
   - Your hero product's facts and the claims you are allowed to make

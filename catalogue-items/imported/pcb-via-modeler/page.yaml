@@ -22,8 +22,8 @@ when:
   - You suspect a resonance in a thick board stackup.
   - You want to try different pad and antipad sizes.
 not_for:
-  - "You need to design a trace or control impedance: use the PCB trace designer or a plain trace calculator."
-  - "You want to check power delivery on an imported board: use the PCB power network checker."
+  - "You need to design a trace or control impedance: use the MATLAB PCB trace designer or a plain trace calculator."
+  - "You want to check power delivery on an imported board: use the MATLAB PCB power network checker."
   - "You have no MATLAB with the RF PCB Toolbox: ask a signal integrity engineer or use your board tool's own via checker."
 you_give:
   - Your layer stackup and materials

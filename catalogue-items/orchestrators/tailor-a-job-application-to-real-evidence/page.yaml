@@ -18,7 +18,7 @@ when:
   - You have the right experience, but your resume describes an older job.
   - A recruiter said your resume does not match the post, and you think it does.
 not_for:
-  - You are preparing for the interview itself. Use Prepare work examples for a job interview.
+  - You are preparing for the interview itself. Use Job interview work-example coach.
   - You want to build a resume from scratch with no work records. Use the Resume and job application builder on its own.
   - You only want spelling and grammar fixed. Use the Proofreader.
   - You are applying to many jobs at once. Run this once per job, because each needs its own match.

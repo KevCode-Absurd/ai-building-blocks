@@ -7,7 +7,7 @@ job: find-a-job
 headline: Portfolio case study writer
 subhead: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.
 not_for:
-  - "You only want to polish a resume line: use the resume-job-application-builder skill, or ask your AI to rewrite the bullet."
+  - "You only want to polish a resume line: use the Resume and job application builder skill, or ask your AI to rewrite the bullet."
   - "You have no notes or results yet: write down what you did, when, and what changed, then come back."
   - "You need a full portfolio website built: use a site builder, then paste this draft into it."
 explain: Share a project summary, your role, key decisions and measured results. It expands those facts into a clear story for your portfolio. You get a case study covering the problem, process, solution and lessons, plus a list of useful visuals.

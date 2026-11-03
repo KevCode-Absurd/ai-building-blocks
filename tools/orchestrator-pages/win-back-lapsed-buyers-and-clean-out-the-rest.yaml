@@ -93,9 +93,9 @@ improve:
   - Re-run steps 4 and 5 every quarter on a fresh export.
   - Pair it with the first-weeks workflow so fewer buyers lapse in the first place.
 not_for:
-  - "Your emails land in spam and open rates fell: use Fix inbox placement and win back your opens."
+  - "Your emails land in spam and open rates fell: use Email delivery recovery and quiet-subscriber plan."
   - "You only want to find which customers have gone quiet: use Lapsed customer finder."
-  - "You sell by subscription and want to cut cancellations: use Churn reducer."
+  - "You sell by subscription and want to cut cancellations: use Subscription churn prevention planner."
 output_sample:
   input:
     - Your orders export, with customer, date, order value, discount and refund

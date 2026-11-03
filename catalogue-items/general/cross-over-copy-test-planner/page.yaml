@@ -19,7 +19,7 @@ when:
   - "You count replies but have never followed them through to sales."
 not_for:
   - "You only have one place to run the copy or no way to track replies: first set up a code, link or phone number for each version, or run one version at a time."
-  - "Both versions can run at the same time to matched halves of one audience: use the Split-run test planner."
+  - "Both versions can run at the same time to matched halves of one audience: use the A/B test design planner."
   - "You want ideas for what to test: ask a colleague or your AI for new angles first, then come back with two finished versions."
 
 you_give:

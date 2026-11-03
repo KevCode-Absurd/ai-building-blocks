@@ -18,7 +18,7 @@ when:
   - You need to know if the change between two weeks is real or just chance.
   - You must explain a result to a team that does not like statistics.
 not_for:
-  - You need the exact test chosen, checked and written up in APA style. Use the Research test picker and reporter.
+  - You need the exact test chosen, checked and written up in APA style. Use the Statistical test and results writer.
   - You want to find which factors drive a result, or build a forecast. Use the Regression and forecast modeller.
   - You have fewer than about 30 events in a group. The results will not hold, so collect more data first.
   - A big decision about money or health rests on the answer. Ask a statistician to check it.

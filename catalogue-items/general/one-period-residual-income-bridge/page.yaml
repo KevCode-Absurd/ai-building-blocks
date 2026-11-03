@@ -18,9 +18,9 @@ when:
   - A reviewer asks why a profit of 15 on equity of 100 is not the same as value added.
   - You need next year's opening book equity for a model, and want it tied to this year's earnings and dividends.
 not_for:
-  - You want what the whole company is worth. One year does not price it. Use the Justified price-to-book scenario, or a full residual income model.
-  - You work from total capital and a cost of capital, not equity alone. Use the Economic profit fade schedule.
-  - You only want book value per share from a filing. Use the Book value per share roll-forward.
+  - You want what the whole company is worth. One year does not price it. Use the Price-to-book scenario calculator, or a full residual income model.
+  - You work from total capital and a cost of capital, not equity alone. Use the Economic profit value calculator.
+  - You only want book value per share from a filing. Use the Book value per share calculator.
 you_give:
   - Opening common book equity, from the balance sheet at the start of the year
   - Net income for common owners for the year, from the income statement

@@ -19,9 +19,9 @@ when:
   - Inspection notes, photos and emails sit in different places and nobody has one list.
 not_for:
   - You need a safety inspection or a certificate. Use the engineer's signed report. This workflow tracks and does not certify.
-  - A defect needs a price or a change to the contract. Use the Prepare a construction variation decision workflow.
-  - You only want actions pulled from meeting notes. Use the Executive action register.
-  - The building is already running and you are handing over maintenance. Use the Prepare a property maintenance handover workflow.
+  - A defect needs a price or a change to the contract. Use the Construction change decision brief writer workflow.
+  - You only want actions pulled from meeting notes. Use the Action item tracker.
+  - The building is already running and you are handing over maintenance. Use the Property maintenance handover and action tracker workflow.
   - The contractor's own register already tracks closure evidence. Use that one.
 you_give:
   - Inspection records with defect IDs (from the inspector's report or your snag list)

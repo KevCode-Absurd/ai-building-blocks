@@ -18,10 +18,10 @@ when:
   - You have a shortlist you do not love and want different directions.
   - You need a set of names to bring to a team vote.
 not_for:
-  - "You want to name a whole group of products that sound like one family. Use the Name family planner."
+  - "You want to name a whole group of products that sound like one family. Use the Naming system planner."
   - "You are naming an offer or a deal, not a product. Use the Offer name writer."
   - "You are naming a new category. Use the Category name writer."
-  - "You want to know if your current brand name can cover a new product. Use the Brand name stretch checker."
+  - "You want to know if your current brand name can cover a new product. Use the Brand name fit checker."
   - "You need to know a name is free to use. Only a trademark search and a domain check can tell you, and this cannot run either."
 you_give:
   - "A short description of the product and what it does for the buyer"

@@ -17,9 +17,9 @@ when:
   - You want a welcome message, a menu and keyword replies so subscribers find answers on their own.
   - You want your account to bring in leads or sales without sounding like an ad.
 not_for:
-  - You want WeChat group chats and customer lists across channels. Use the Private Domain Operator agent.
-  - You are entering the China market and need to choose channels first. Use the China Market Localization Strategist agent.
-  - You post short videos, not articles. Use the Douyin Strategist agent.
+  - You want WeChat group chats and customer lists across channels. Use the Customer community planner.
+  - You are entering the China market and need to choose channels first. Use the China market localization planner.
+  - You post short videos, not articles. Use the Douyin content planner.
   - You want paid ads, WeChat Pay set-up or a Mini Program built. This agent plans content only.
 you_give:
   - What your business sells and who your readers are

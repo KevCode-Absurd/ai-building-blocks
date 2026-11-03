@@ -18,7 +18,7 @@ when:
   - Your screens mix border widths, shadows and yellows from page to page.
   - You are briefing a designer and want the look pinned down before they start.
 not_for:
-  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system reviewer to check it."
   - "You want a harsh, blunt, anti-polish look with little colour: use the Raw brutalist style guide writer."
   - "Your product is a dense data tool, or needs a calm, quiet look: use the Minimal style guide writer."
   - "You want soft, puffy shapes instead of hard borders: use the Soft clay style guide writer."

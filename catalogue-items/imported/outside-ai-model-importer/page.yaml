@@ -53,6 +53,7 @@ output_sample:
     - An AI that can run MATLAB code
     - Python with torch 2.8 to export PyTorch models
     - Python with onnxruntime to compare ONNX results (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Imported network
       contains: Your model loaded in MATLAB as a dlnetwork, ready to run with predict.

@@ -16,9 +16,9 @@ when:
   - You want to say no kindly and have the reason ready.
 not_for:
   - "You only have one big request to answer, with no plan to shape: use the Feature request screener."
-  - "Your plan is already set and you want to shrink it to hit a launch date: use Launch a smaller product on the date you set."
-  - "You want to cut a live product down to what matters: use Review a product against ten principles, then cut extras."
-  - "You need a task list for a sprint, not a bet: use the Sprint Prioritizer agent."
+  - "Your plan is already set and you want to shrink it to hit a launch date: use Small product launch planner."
+  - "You want to cut a live product down to what matters: use Product design and scope reviewer."
+  - "You need a task list for a sprint, not a bet: use the Sprint priority planner."
 output_sample:
   input:
     - Your product plan, goal and who it is for

@@ -19,7 +19,7 @@ when:
 not_for:
   - You only want clearer, plainer error wording. Use the Error message rewriter.
   - You want all the labels and messages for one screen. Use the Interface microcopy writer.
-  - You want the rules and feedback for small moments, not personality. Use the Small interface details designer.
+  - You want the rules and feedback for small moments, not personality. Use the Interface interaction details designer.
 you_give:
   - What the product is, who uses it and the tone people expect, such as serious, friendly or quirky
   - Your brand voice notes or a few lines of your own text (optional)

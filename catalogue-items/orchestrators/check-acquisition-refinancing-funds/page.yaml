@@ -18,9 +18,9 @@ when:
   - The draft funds flow for a closing does not add up.
   - A sponsor asks how much equity cash the deal needs.
 not_for:
-  - "You want what the seller receives at closing: use the Reconcile seller closing cash workflow."
+  - "You want what the seller receives at closing: use the Seller closing proceeds and retained cash checker workflow."
   - "You want interest, cash sweep and debt ratios after closing: use the Review sponsor debt cash demands workflow."
-  - "You are tracking a construction loan drawn in stages: use the Reconcile construction draws and completion funding workflow."
+  - "You are tracking a construction loan drawn in stages: use the Construction funding and interest checker workflow."
 you_give:
   - "The new debt terms: face value, issue price or discount, and fees taken out at issue (from the financing documents)"
   - The payoff letter for the old debt, with any prepayment premium

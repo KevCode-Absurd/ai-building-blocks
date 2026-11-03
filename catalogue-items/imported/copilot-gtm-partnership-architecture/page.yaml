@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a plan for outside coders who build on your API or app. Use the Developer adoption program planner.
   - You are working one large deal with one buyer. Use the Enterprise account deal planner.
-  - You only need a joint campaign with a partner you already have. Use the Partner campaign planner.
+  - You only need a joint campaign with a partner you already have. Use the Software partner campaign planner.
 you_give:
   - What your product does and who buys it
   - The partners, or kinds of partner, you are weighing

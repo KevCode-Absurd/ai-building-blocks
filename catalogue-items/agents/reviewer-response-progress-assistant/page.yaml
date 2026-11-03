@@ -19,9 +19,9 @@ when:
   - An editor asks where each reviewer request is addressed.
 not_for:
   - You want the response letter written for you. This agent tracks and checks, and it never invents results. Use the Proofreader to polish a draft you wrote.
-  - You track tasks that are not tied to reviewer comments. Use the Executive action register keeper.
-  - You have no reviewer comments yet and want your reference list checked. Use the Bibliography revision review assistant.
-  - You need one pass and no record for later. Use the Map journal reviewer requests to evidence workflow.
+  - You track tasks that are not tied to reviewer comments. Use the Action item tracker keeper.
+  - You have no reviewer comments yet and want your reference list checked. Use the Manuscript reference change tracker.
+  - You need one pass and no record for later. Use the Journal revision response planner workflow.
 you_give:
   - The reviewer comments, word for word as the journal sent them, with the response deadline
   - Your manuscript, with its version or date

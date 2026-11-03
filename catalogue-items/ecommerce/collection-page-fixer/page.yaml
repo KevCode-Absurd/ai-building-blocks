@@ -14,9 +14,9 @@ when:
   - A best seller has gone out of stock in the common sizes and you want to know what to show instead.
   - You want a short daily routine for the pages that carry most of your sales.
 not_for:
-  - Your products have no sizes or colours. Use the Store friction checker for menus and checkout, or build a custom landing page for your ad traffic.
-  - You have no stock numbers at all. Get stock by size from your store first, or use the Store friction checker for the page itself.
-  - You need to read scroll maps or session recordings. Use the heatmap and recording reader, then bring the scroll map back here.
+  - Your products have no sizes or colours. Use the Store usability checker for menus and checkout, or build a custom landing page for your ad traffic.
+  - You have no stock numbers at all. Get stock by size from your store first, or use the Store usability checker for the page itself.
+  - You need to read scroll maps or session recordings. Use the Heatmap and session recording analyst, then bring the scroll map back here.
 you_give:
   - A screenshot of your collection page, with its top 6 to 12 products (required)
   - Stock by size and colour for those products (required for the stock checks)

@@ -16,7 +16,7 @@ when:
   - You are about to raise money or hire for growth and want evidence the product holds up.
 not_for:
   - "You have fewer than about 30 active users: talk to them one by one first, or use the Customer purchase interview script writer."
-  - "Your product has not launched and has no users: use the Smallest test picker to test the idea with real people first."
+  - "Your product has not launched and has no users: use the Minimum experiment planner to test the idea with real people first."
   - "You already know your fans and only want to compare competitors: use the Competitor funnel mystery shopper."
 you_give:
   - What your product does and the core experience a user should have had

@@ -17,7 +17,7 @@ when:
   - You want to pitch commit and best case with deal names behind each.
 not_for:
   - "You need to lock the number into your company's forecasting tool: submit it there, this only writes the story and keeps categories honest."
-  - "You want to know what happens to the number if one deal slips: ask a teammate who owns the forecast, or review the whole pipeline with the weekly sales pipeline reviewer."
+  - "You want to know what happens to the number if one deal slips: ask a teammate who owns the forecast, or review the whole pipeline with the Sales pipeline deal priority reviewer."
   - "You have no CRM access and no pipeline export: pull a deal list from your CRM first, then come back."
 you_give:
   - CRM access or a pipeline export

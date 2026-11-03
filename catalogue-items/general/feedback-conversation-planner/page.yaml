@@ -19,8 +19,8 @@ when:
   - You have a draft message and need to turn it into a conversation.
 not_for:
   - "You need to raise a serious conduct, safety or legal issue: talk to HR or your manager first."
-  - "You only want to thank someone: write a short note yourself, or use the Honest appreciation note writer."
-  - "You want to calm a disagreement between peers: use the Disagreement calming line writer."
+  - "You only want to thank someone: write a short note yourself, or use the Honest thank-you note writer."
+  - "You want to calm a disagreement between peers: use the Disagreement response writer."
 
 you_give:
   - The person, your relationship and how long the problem has gone on

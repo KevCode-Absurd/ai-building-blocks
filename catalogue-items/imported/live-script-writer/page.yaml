@@ -43,7 +43,7 @@ how_to_use:
   - Your AI writes the live script as a .m file. If it can run MATLAB, it also runs the code, saves the outputs and checks an HTML copy. If MATLAB is not attached, stop after the write step and open the .m file yourself in MATLAB.
   - Open the .m file in MATLAB R2025a or later and select Run All to check it.
   - Share the .m file for review, or export it to HTML from MATLAB.
-  - Next, put the reviewed .m file where it will be used: in your course page, your report folder or your version-control repo. For a plain script or a function file instead of a notebook, ask your AI to write that directly.
+  - "Next, put the reviewed .m file where it will be used: in your course page, your report folder or your version-control repo. For a plain script or a function file instead of a notebook, ask your AI to write that directly."
 output_sample:
   input:
     - The topic or analysis you want to cover

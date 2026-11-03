@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "The work is finished and needs polish. Use an editor or reviewer for that kind of work, such as the Sales copy editor."
-  - "The decision is made and the team still disagrees. Use the Disagree-and-commit note writer."
+  - "The decision is made and the team still disagrees. Use the Team decision and dissent note writer."
   - "You only want to know who is pulling on the project. Use the Incentive checker first, then bring its report here."
-  - "You want a rough idea kept safe from pressure, not judged. Use the New idea protection planner."
+  - "You want a rough idea kept safe from pressure, not judged. Use the Early idea protection planner."
 
 you_give:
   - "What the project is, who leads it and how long it has run"

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need real customer pictures: the flash snapshots are staged, so use photos from your own customers instead."
   - "You only want one plain studio photo set: use the Product photo shoot planner."
-  - "You want to fix flaws in pictures you already made: use the Ad image generation and edit planner."
+  - "You want to fix flaws in pictures you already made: use the Ad image planner."
 
 you_give:
   - Your website, as a link or saved pages

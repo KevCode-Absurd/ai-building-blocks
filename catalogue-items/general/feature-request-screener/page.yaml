@@ -21,7 +21,7 @@ not_for:
   - "You have a one-off bug to fix or a single loud customer: use a simple bug list or talk to that customer directly."
   - "You need to fit the yes items into a launch date: use the Launch scope cutter after this."
   - "You have no product vision written down yet: write one or two sentences first, because the vision test depends on it."
-  - "You want a quick first pass with fewer checks: use the Yes-later-no request sorter."
+  - "You want a quick first pass with fewer checks: use the Feature request priority planner."
 
 you_give:
   - The request list, with who asked and when

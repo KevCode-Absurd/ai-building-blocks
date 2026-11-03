@@ -19,9 +19,9 @@ when:
   - "A reviewer asks how you reached the seller's ownership percentage."
 not_for:
   - "The seller's stake is a different class of share, or comes with extra shares or a preferred return: take it to a deal lawyer or adviser. This skill covers the same class at the same price only."
-  - "You want the cash the seller receives at closing after debt and price adjustments: use the Closing equity proceeds checker."
-  - "You want to check a manager's share above a value hurdle: use the Management equity hurdle checker."
-  - "You want ownership after a startup funding round: use the Post-money SAFE ownership checker."
+  - "You want the cash the seller receives at closing after debt and price adjustments: use the Business sale proceeds checker."
+  - "You want to check a manager's share above a value hurdle: use the Management equity payout checker."
+  - "You want ownership after a startup funding round: use the Post-money SAFE ownership calculator."
   - "You want to know if the rollover is tax free: ask a tax adviser. This skill does not decide that."
 you_give:
   - "Seller proceeds before rollover, from the purchase agreement or term sheet"
@@ -79,6 +79,7 @@ output_sample:
   prerequisites:
     - "The term sheet or purchase agreement pages that show the share class and price"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Deal terms", contains: "Your figures, the currency and scale, and whether same class and price is confirmed."}
     - {name: "Sums", contains: "Rolled amount, seller cash, total equity and the seller's ownership share, each with its working."}

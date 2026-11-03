@@ -15,7 +15,7 @@ explain: |-
 when:
   - You have a full day of meetings tomorrow and want a short brief for each one before it starts.
   - Open requests are spread over notes and email threads, and you want them in one list with owners and dates.
-  - You want one daily brief for a single date: the priorities, the clashes and the work waiting on others.
+  - "You want one daily brief for a single date: the priorities, the clashes and the work waiting on others."
 you_give:
   - The date and your calendar for that day, as an export or a pasted list
   - Meeting notes or email threads with open requests
@@ -62,8 +62,8 @@ improve:
 terms: []
 not_for:
   - "You only need to prepare for one meeting: use the Executive meeting brief writer."
-  - "You want a review of the whole week, not one day: use Prepare your weekly executive review."
-  - "You need to answer one email or request: use Write a clear executive reply."
+  - "You want a review of the whole week, not one day: use Executive priorities and commitment reviewer."
+  - "You need to answer one email or request: use Executive email reply editor."
 output_sample:
   input:
     - Your calendar for the day, as an export or pasted list

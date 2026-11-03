@@ -13,7 +13,7 @@ when:
   - You changed the Russian text and need to see whether the English and Portuguese caught up.
   - You are about to commit translated chapters and want a drift check first.
 not_for:
-  - "You edit text in one language only: use draft-proofreader instead."
+  - "You edit text in one language only: use Draft proofreader instead."
   - "You want a machine translation or a new translation: use a human translator, since this only checks existing text."
   - "You have no matching RU, EN and PT-BR passages yet: finish the translations first, then run this check."
 you_give:

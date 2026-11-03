@@ -16,7 +16,7 @@ when:
   - You're new to a category and want a quick picture of what other brands run and keep running.
 not_for:
   - "You haven't collected any ads yet: browse the Meta Ad Library by hand first and save each ad's ID, start date and a screenshot."
-  - "You want ideas that competitors all miss: use the Competitor ad gap finder."
+  - "You want ideas that competitors all miss: use the Competitor ad opportunity finder."
   - "You want a review of your own ads: ask a person who knows your account, or check them against your own results."
 you_give:
   - The ads, each with its library ID, advertiser, start date, text and a screenshot (attach the screenshots; your AI can see pictures)

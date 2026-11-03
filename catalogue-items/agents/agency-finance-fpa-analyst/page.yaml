@@ -20,7 +20,7 @@ when:
   - You are building next year's budget and want each line linked to a driver, not to last year's number.
 not_for:
   - You want a first budget built from scratch. Use the Budget and forecast builder or the Department budget planner.
-  - You want to decide on one big spend. Use the Chief Financial Officer agent.
+  - You want to decide on one big spend. Use the Finance decision reviewer.
   - You want a financial model checked for errors. Use the Financial Analyst agent.
   - You need an audited statement or a tax return. Those go to a qualified accountant.
 you_give:

@@ -19,7 +19,7 @@ when:
   - Buyers say they like it but object to the price.
 not_for:
   - "You only need a headline: write it with your buyer brief, then come back here for the copy below it."
-  - "You need proof, quotes or a guarantee section: use the Belief ladder builder, which builds belief step by step."
+  - "You need proof, quotes or a guarantee section: use the Sales argument order editor, which builds belief step by step."
   - "You want to polish finished copy for tone or flow: use the Sales copy editor."
 
 you_give:

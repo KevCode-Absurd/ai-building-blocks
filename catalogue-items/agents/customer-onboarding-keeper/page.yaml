@@ -16,7 +16,7 @@ when:
   - You made an onboarding change and cannot tell whether it worked.
 not_for:
   - "You sell one-off purchases, or your product has no first win: look at your sales and reviews by hand, or ask a person to call a few buyers."
-  - "Your customers are already past 30 days and you want to know who may cancel: use the Weekly customer health watcher."
+  - "Your customers are already past 30 days and you want to know who may cancel: use the Customer renewal risk reviewer."
   - "You have no step counts by sign-up week: start with a simple export from your product, store or email tool, then come back."
 you_give:
   - Each sign-up week's count at every onboarding step, from your product, store or email tool

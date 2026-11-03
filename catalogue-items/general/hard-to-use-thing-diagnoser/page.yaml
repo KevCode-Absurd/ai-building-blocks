@@ -19,7 +19,7 @@ when:
   - You see people hesitate or push the wrong part and want to know why.
 not_for:
   - "You have one odd complaint, not a repeat mistake: reply to that person and watch for more before you change anything."
-  - "The problem is only confusing wording: rewrite the text in plain words, or use the Plain words interface rewriter if you can find it."
+  - "The problem is only confusing wording: rewrite the text in plain words, or use the Forms and instructions rewriter if you can find it."
   - "You want a full redesign or a new feature plan: this finds one cause and small fixes, so hire a designer for bigger work."
 
 you_give:

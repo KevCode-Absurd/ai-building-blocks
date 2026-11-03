@@ -19,10 +19,10 @@ when:
   - You have to decide which agents may send email, edit data or spend money, and which need a person's approval.
   - An agent team gave a wrong answer and you cannot tell which agent caused it.
 not_for:
-  - You use one AI with one prompt and no handoffs. Use the Prompt Engineer agent.
-  - You want a team of agents to build software for you. Use the Agents Orchestrator agent.
-  - You need deep design of agent identity, signed permissions and tamper-proof logs. Use the Agentic Identity & Trust Architect agent.
-  - You want to plan a tool server so your AI can use an app. Use the MCP Builder agent.
+  - You use one AI with one prompt and no handoffs. Use the Prompt engineer.
+  - You want a team of agents to build software for you. Use the AI agent team planner.
+  - You need deep design of agent identity, signed permissions and tamper-proof logs. Use the AI agent identity designer.
+  - You want to plan a tool server so your AI can use an app. Use the MCP server planner.
   - You want it to run, test or monitor your agents. It writes the design. Your developers build and test it.
 you_give:
   - The job the agent team must do, in plain words, and what a good result looks like.

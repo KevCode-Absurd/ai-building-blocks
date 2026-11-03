@@ -16,7 +16,7 @@ when:
   - You want to test a new page layout without copying anyone's content.
 not_for:
   - "You want to write the page copy first: use the Ad-matched landing page writer, then place the copy in your layout."
-  - "You want to score a page you already built: use the Landing page 30-point checker."
+  - "You want to score a page you already built: use the 30-point landing page checker."
   - "You want to copy another business's words, photos or reviews: this is the wrong tool, so write your own or hire a designer."
 you_give:
   - A screenshot of the reference page, desktop and phone if you have both (attach it; your AI can see pictures)

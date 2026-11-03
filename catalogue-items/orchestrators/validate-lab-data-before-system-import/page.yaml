@@ -35,7 +35,7 @@ thinking: high
 not_for:
   - "You only want to convert instrument files, with no term checks: use Lab instrument data converter."
   - "You only want to score the quality of a data set: use Data quality auditor."
-  - "You want a method validation plan, not a data import: use Lab method validation planner."
+  - "You want a method validation plan, not a data import: use Lab test validation planner."
 output_sample:
   input:
     - Your original instrument export files (CSV, Excel, TXT or PDF) and which instrument and run they came from

@@ -18,6 +18,9 @@ import {roleSeeds,sameJobAgentPages} from "../src/roles/role-definitions.mjs";
 import { compileClassifications } from "./lib/catalogue-classification.mjs";
 import { gitDates } from "./lib/git-dates.mjs";
 import { FEEDS, connectLines, feedItems, jobHubDates, jsonFeed, newest, pageFacts, rssFeed, sitemapIndex, urlset as sitemapUrlset } from "./lib/crawl-files.mjs";
+import { linkNotFor, makeNameIndex } from "../../tools/lib/not-for-links.mjs";
+import { loadSiblings } from "./lib/similar-items.mjs";
+import { pagePath } from "./lib/crawl-files.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -367,6 +370,11 @@ if (fs.existsSync(looksFile)) {
 // What each block needs first, the steps before it and the paths after it (tools/lib/needs.mjs), on its page.
 const { planOf } = await import("../../tools/lib/needs.mjs");
 const describe = (t) => ({ label: t.replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase()), what: (typeDesc[t] ?? t).replace(/\.$/, "").replace(/^./, (c) => c.toLowerCase()) });
+// "Skip it when" lines that name another item link to it under its current name, and near-duplicates in one job get a
+// "Similar items and how they differ" table (tools/lib/not-for-links.mjs, scripts/lib/similar-items.mjs, siblings.json).
+const renamedAll = fs.existsSync(path.join(ROOT, "renamed.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "renamed.json"), "utf8")) : {};
+const notForIndex = makeNameIndex(blocks.filter((b) => b.headline).map((b) => ({ slug: b.slug, name: b.name, aliases: b.aliases ?? [], href: pagePath(b) })), renamedAll);
+const siblingsOf = loadSiblings({ root: ROOT, pagesDir: OUT_PAGES, bySlug, hrefOf: pagePath, renamed: renamedAll });
 for (const b of blocks) {
   const f = path.join(OUT_PAGES, `${b.slug}.json`);
   if (!fs.existsSync(f)) continue;
@@ -374,6 +382,13 @@ for (const b of blocks) {
   const links = linkOverrides.get(b.slug) ?? {};
   for (const slug of [...(links.next ?? []), ...(links.before ?? [])]) if (!bySlug[slug]) problems.push(`${b.slug}: next/before names "${slug}", which isn't a block`);
   pageData.plan = planOf(b, bySlug, blocks, describe, links);
+  if (Array.isArray(pageData.not_for)) {
+    const nf = linkNotFor(pageData.not_for, notForIndex, b.slug);
+    pageData.not_for = nf.lines;
+    if (nf.links.length) pageData.not_for_links = nf.links.map(({ line, start, end, href }) => ({ line, start, end, href }));
+  }
+  const siblings = siblingsOf(b.slug);
+  if (siblings) pageData.siblings = siblings;
   // Why it needs that much thinking is only shown on the block's own page, so it travels there, not in blocks.json.
   if (b.thinkingWhy) pageData.thinkingWhy = b.thinkingWhy;
   delete b.thinkingWhy;

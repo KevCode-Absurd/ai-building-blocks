@@ -31,7 +31,7 @@ when:
 not_for:
   - You have no docs, SDK or API yet. Use the Product requirements writer first to plan it.
   - You only want a few error messages rewritten. Use the Error message rewriter.
-  - You want a plan to cut the time to a first API call from a sign-up path. Use the Developer onboarding improver.
+  - You want a plan to cut the time to a first API call from a sign-up path. Use the API first-call experience reviewer.
   - You want a guide for new teammates joining a codebase. Use the Codebase onboarding guide writer.
   - You want proof from real developers. Watch five or more people try the guide and take notes. This agent reads, it does not observe.
 you_give:

@@ -19,7 +19,7 @@ when:
   - A new campaign is due and you want a second look before you raise budgets.
 not_for:
   - You want to set up new campaigns or change live settings. This skill only reads, so make changes in TikTok Ads Manager yourself.
-  - You run ads on several platforms and want one report. Use the Twelve-platform ad account auditor.
+  - You run ads on several platforms and want one report. Use the Paid ad account auditor.
   - You have no ad data yet. Plan first with the TikTok Shop ad planner.
 you_give:
   - Campaign and ad exports from TikTok Ads Manager

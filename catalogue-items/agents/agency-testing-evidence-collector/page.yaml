@@ -19,11 +19,11 @@ when:
   - You changed a page and want to know if the menu, form or accordion still works on a phone.
   - You have a written spec and want to see which lines the build misses.
 not_for:
-  - "You want a final go or no-go call that also checks earlier QA claims: use the Reality Checker agent. Bring this agent's report to it."
-  - "You want to check the site for screen readers and keyboard use: use the Accessibility Auditor agent."
+  - "You want a final go or no-go call that also checks earlier QA claims: use the Release acceptance evidence reviewer. Bring this agent's report to it."
+  - "You want to check the site for screen readers and keyboard use: use the Accessibility auditor."
   - "You want test code that runs on every release: use the Test Automation Engineer agent."
-  - "You want to know how fast the site loads under traffic: use the Performance Benchmarker agent."
-  - "You have an online store and want a launch checklist: use the Pre-launch store checker."
+  - "You want to know how fast the site loads under traffic: use the Performance benchmark planner."
+  - "You have an online store and want a launch checklist: use the Store launch readiness reviewer."
 you_give:
   - The spec, brief or feature list the site must match. Paste the text.
   - The site. Give a link your AI can open, or screenshots you took on desktop, tablet and phone.

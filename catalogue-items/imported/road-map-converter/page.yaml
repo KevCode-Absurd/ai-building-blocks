@@ -53,6 +53,7 @@ output_sample:
     - The eight supporting files, found in the Road map author item
     - An AI that can run MATLAB code and write script files
     - A RoadRunner project folder
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: MATLAB script files (.m)
       contains: The conversion steps your AI wrote and ran, saved so you can rerun or edit them.

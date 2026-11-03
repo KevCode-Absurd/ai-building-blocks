@@ -21,7 +21,7 @@ when:
 not_for:
   - You want the root cause of a slow process, with baseline numbers measured first. Use the Operations Manager agent.
   - You only want each step marked as value or waste, fast. Use the Process waste finder.
-  - You want to see why deadlines slip, week after week. Use the Weekly project delay evidence assistant.
+  - You want to see why deadlines slip, week after week. Use the Project delay test reviewer.
   - You want the automation itself set up in Zapier or Make. Use the Automation flow sketcher after this review.
 you_give:
   - One process, in plain words, with the steps in order and who does each one

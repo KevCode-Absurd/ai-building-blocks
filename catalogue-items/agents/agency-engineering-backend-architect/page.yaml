@@ -29,9 +29,9 @@ when:
   - You need to plan a database change on a live system without downtime.
   - You want a security and monitoring plan for the server side before launch.
 not_for:
-  - You want a software design that covers the whole product, with decision records. Use the Software Architect agent.
+  - You want a software design that covers the whole product, with decision records. Use the Software architect.
   - You are designing an API for outside developers. Use the API Platform Engineer agent.
-  - You have one slow query to fix. Use the Database Optimizer agent or the Slow query fixer.
+  - You have one slow query to fix. Use the Database performance analyst or the Slow query fixer.
   - You need working code today. Use the Backend builder.
   - You need to change a live system. Ask an engineer with access, using this plan as the brief.
 you_give:

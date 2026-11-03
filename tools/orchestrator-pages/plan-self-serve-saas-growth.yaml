@@ -15,7 +15,7 @@ when:
   - You want tests tied to the metric each one should move, not a list of ideas.
   - You need a weekly rhythm for reviewing those numbers with your team.
 not_for:
-  - "You do not know yet which growth channel to try: use Find your SaaS growth channel."
+  - "You do not know yet which growth channel to try: use SaaS growth channel test planner."
   - "Your product needs a sales call to close, with large deals: use the Enterprise customer onboarding planner, or expect this to tell you self serve is a poor fit."
   - "You only want to improve first-time use: use the First-use onboarding designer."
 you_give:

@@ -18,7 +18,7 @@ when:
   - You are planning where to place transmitters for coverage.
   - You must show an RF exposure check for a wearable or implant.
 not_for:
-  - "You need to design the antenna shape or an antenna array: use the antenna designer, which this skill does not cover."
+  - "You need to design the antenna shape or an antenna array: use the MATLAB antenna designer, which this skill does not cover."
   - "You work with reflector antennas, reflectarrays, installed antennas or radar cross section: use the matlab-analyze-antenna-structures skill."
   - "You have no MATLAB with the Antenna and RF Toolboxes: ask an RF engineer, or use a free matching calculator for a quick L network."
 you_give:

@@ -21,7 +21,7 @@ not_for:
   - "The bug is in the app and has nothing to do with Oracle or PostgreSQL: use the Bug report writer."
   - "You are still checking whether code has migration risks: use the Oracle migration risk reviewer first."
   - "You need a test that proves Oracle behavior before you migrate: use the Oracle behavior baseline test writer."
-  - "You want to translate a stored procedure: use the Oracle stored procedure migrator."
+  - "You want to translate a stored procedure: use the Oracle to PostgreSQL procedure migrator."
 you_give:
   - A short description of what went wrong
   - What Oracle returns and what PostgreSQL returns, with the seed data used

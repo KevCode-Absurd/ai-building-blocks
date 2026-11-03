@@ -15,7 +15,7 @@ when:
   - You have three ways to improve an offer and want to know which first.
   - You are about to raise the price and want to know what to add.
 not_for:
-  - "You want a new offer built around buyer doubts: use the Offer builder that answers buyer doubts."
+  - "You want a new offer built around buyer doubts: use the Customer offer builder."
   - "You want your offer checked against a tested checklist: use the Offer checklist reviewer."
   - "You want a sales forecast or a price test: run a small real test with buyers, because the index only compares versions."
 you_give:

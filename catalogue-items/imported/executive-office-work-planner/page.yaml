@@ -18,7 +18,7 @@ when:
   - A leader moves on and the decisions and open commitments must be written down.
   - You are asked to cut the leader's calendar and want a reasoned list, not a guess.
 not_for:
-  - "You want action items from a meeting: use the Executive action register keeper."
+  - "You want action items from a meeting: use the Action item tracker keeper."
   - "You need a short prep sheet for one meeting: use the Executive meeting brief writer."
   - "You want a one-page summary of a long report: use the Executive summary writer."
   - "You want a steady weekly update to your boss: use the Weekly status update writer."
@@ -37,7 +37,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code is needed, and the skill never changes your calendar or task tools.
   - Paste the skill text. If you can add the skill folder, do so, so your AI can read its reference files.
-  - Say which task you need: a brief, triage, calendar review or handover. Paste what you have.
+  - "Say which task you need: a brief, triage, calendar review or handover. Paste what you have."
   - Check the facts first. Anything you cannot source should be marked as an assumption or unknown.
   - Give the draft to the leader to review. Share it only after a person approves it.
   - Next, use the Executive action register keeper for commitments that have an owner and a date.

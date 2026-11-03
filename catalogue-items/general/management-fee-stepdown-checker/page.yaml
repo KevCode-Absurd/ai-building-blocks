@@ -18,8 +18,8 @@ when:
   - A fee notice shows a new basis and you cannot tell how the number was reached.
   - Your finance team asks what the stepdown saves over one quarter.
 not_for:
-  - "Fees are reduced by portfolio fees the manager collected: use the Transaction fee offset checker."
-  - "You want a full check of every fee line on a fund: use the Reconcile private fund fee charges workflow."
+  - "Fees are reduced by portfolio fees the manager collected: use the Fund management fee offset checker."
+  - "You want a full check of every fee line on a fund: use the Private fund fee and offset checker workflow."
   - You need fee waivers, offsets or a fee that changes day by day inside the quarter. This skill compares two whole quarters. Split a part quarter into separate periods first.
   - You want to know what the fee base should legally be. A fund lawyer must read the agreement.
 you_give:

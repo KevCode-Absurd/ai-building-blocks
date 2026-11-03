@@ -19,8 +19,8 @@ when:
   - You have draft hooks and want them graded against what has worked.
 not_for:
   - "You have fewer than about four ads per source, or no result number for them: run a split test of your own ads instead."
-  - "You want hooks written from scratch with no ads to learn from: use the Ad first line writer and scorer."
-  - "You want to plan which hooks to test next: use the Split-run test planner."
+  - "You want hooks written from scratch with no ads to learn from: use the Ad opening writer and reviewer."
+  - "You want to plan which hooks to test next: use the A/B test design planner."
 
 you_give:
   - Your top 10 ads or videos with the hook or transcript and a result number

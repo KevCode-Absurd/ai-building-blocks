@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to choose a carrier or shipping mode before you ship: use the Freight mode and carrier picker."
   - "You want to set up tracking so problems show early: use the Shipment tracking planner."
-  - "You manage your carrier list and rate quotes: use the Freight carrier manager."
+  - "You manage your carrier list and rate quotes: use the Freight carrier selection planner."
   - "You are going to court or the claim is large. See a lawyer and read your carrier contract first."
 you_give:
   - What happened, in your own words

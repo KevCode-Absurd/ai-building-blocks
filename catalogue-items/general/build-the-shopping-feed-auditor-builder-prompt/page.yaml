@@ -16,10 +16,10 @@ when:
   - A developer needs a clear brief for a product tiering module, with the tier tests set out in order.
   - You want fix, bid and pause lists you can hand to a person to approve.
 not_for:
-  - "You only want a feed review from your Merchant Center reports, with no software: use the Merchant Center feed health checker."
+  - "You only want a feed review from your Merchant Center reports, with no software: use the Google Merchant Center feed checker."
   - "You have no Shopping campaigns or no product-level results: nothing here can run, so start with the Google Ads campaign structure planner."
   - "You only need better product titles: use the Shopping feed title writer."
-  - "You are looking for wasted spend on Display placements: use the Display placement review coding prompt."
+  - "You are looking for wasted spend on Display placements: use the Display ad audit tool planner."
 you_give:
   - A code project and a coding AI, such as Claude Code, that can edit it
   - Product rows with cost, impressions, clicks, conversions, conversion value and campaign type, from the Google Ads API or sample rows

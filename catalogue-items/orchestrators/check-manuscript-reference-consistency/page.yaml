@@ -19,7 +19,7 @@ when:
   - A journal asks you to switch citation style and you want a list of what no longer fits.
 not_for:
   - You want missing DOIs, volumes or page numbers looked up. This workflow uses only what you supply and lists the gaps as source requests. Your reference manager can fill them.
-  - You want a record that carries over to your next revision. Use the Bibliography revision review assistant.
+  - You want a record that carries over to your next revision. Use the Manuscript reference change tracker.
   - You want to know if a cited paper really backs your sentence. Use the Source note summariser on that paper, then compare it to your claim.
   - You want grammar and wording fixed in the text. Use the Proofreader.
 you_give:

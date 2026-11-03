@@ -19,8 +19,8 @@ when:
   - Two people disagree about whether a piece is ready.
 not_for:
   - "Your copy is still a rough draft: use the Sales copy editor first, then run this as the last check."
-  - "You need new ad copy written from scratch: use the Reply-getting fix writer, then check the result here."
-  - "You want to plan what to test or read ad results: use the Ad test brief writer or the Campaign keep-or-change checker."
+  - "You need new ad copy written from scratch: use the Ad response copy editor, then check the result here."
+  - "You want to plan what to test or read ad results: use the Ad test brief writer or the Ad change decision checker."
 
 you_give:
   - The finished copy

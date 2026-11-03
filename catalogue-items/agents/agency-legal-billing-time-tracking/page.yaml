@@ -35,10 +35,10 @@ when:
   - An invoice is 35, 60 or 90 days late and you need a polite reminder in the right tone.
 not_for:
   - "You want to match invoices against purchase orders: use the Invoice checker."
-  - "You want to chase all your open invoices each week, in any business: use the Weekly invoice and cash chaser."
-  - "You need medical claims, codes and denials reviewed: use the Medical Billing & Coding Specialist agent."
+  - "You want to chase all your open invoices each week, in any business: use the Late invoice and cash forecast reviewer."
+  - "You need medical claims, codes and denials reviewed: use the Medical billing and coding specialist."
   - "You need legal or ethics advice on trust accounts or fee agreements. Ask your bar association or ethics counsel."
-  - "You want software built to take payments: use the Payments & Billing Engineer agent."
+  - "You want software built to take payments: use the Payments and billing engineer agent."
 you_give:
   - Your time entries for the period, with date, timekeeper, hours, matter and narrative
   - The rate sheet or the rate in the fee agreement

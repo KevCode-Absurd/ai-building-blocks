@@ -50,7 +50,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Financial Instruments Toolbox, which is a paid product
     - An AI that can run MATLAB, or a MATLAB window where you paste the code
-    - Optional: the MATLAB MCP server, which lets your AI look up MATLAB help before it writes code. Without it the skill still works, but you should check each function name yourself
+    - "Optional: the MATLAB MCP server, which lets your AI look up MATLAB help before it writes code. Without it the skill still works, but you should check each function name yourself"
   output:
     - name: Price
       contains: The fair value of the instrument from the method the skill picked.

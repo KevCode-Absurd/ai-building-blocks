@@ -101,6 +101,7 @@ output_sample:
   prerequisites:
     - A signed loan agreement that sets the payment order
     - A cash available figure from the Project cash for debt checker or your own accounts
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scope and dated sources
       contains: The period date, currency and units, and the source and date of each figure.

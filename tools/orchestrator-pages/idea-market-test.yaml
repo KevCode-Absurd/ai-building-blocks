@@ -19,8 +19,8 @@ when:
   - You are about to pitch backers or hire a team and want to know where the plan is weakest.
 not_for:
   - "Your product already has proven sales and you want to improve them: use a pricing review or a sales review instead."
-  - "You want to check how strong your edge is over rivals: use the Ten-times-better checker."
-  - "You want to test the guesses behind your plan: use the workflow Find the riskiest guess in your plan and test it."
+  - "You want to check how strong your edge is over rivals: use the Product alternative comparison reviewer."
+  - "You want to test the guesses behind your plan: use the workflow Risky business assumption test planner."
 
 you_give:
   - Your idea in a few sentences, and who it is for

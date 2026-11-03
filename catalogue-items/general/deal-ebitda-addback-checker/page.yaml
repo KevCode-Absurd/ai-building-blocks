@@ -21,7 +21,7 @@ not_for:
   - "Your cap is measured on EBITDA after the addbacks: ask an adviser or your lawyer to work out the algebra, because this tool only handles caps on EBITDA before addbacks."
   - "You need to know if the addback is legally allowed under your contract: ask your lawyer, because this tool only does the arithmetic."
   - "You want audited earnings or free cash flow: use your accountant's reported figures, because adjusted EBITDA here is a contract scenario."
-  - "You need to fix an EV to EBITDA multiple that leaves out minority interests: use the Minority-interest multiple reconciliation instead."
+  - "You need to fix an EV to EBITDA multiple that leaves out minority interests: use the Minority interest valuation checker instead."
 you_give:
   - Your actual EBITDA before addbacks.
   - Adjustments that have no cap, with their support (optional).

@@ -18,8 +18,8 @@ when:
   - A lender asks for a covenant schedule that shows the headroom.
   - You are changing a debt payment and want to see the effect on headroom.
 not_for:
-  - Your covenant tests net debt against EBITDA, not cash. That is a different check. If a test is missed, use the Equity cure scenario checker.
-  - Your covenant counts fixed charges, not debt service. Use the Fixed charge coverage bridge builder.
+  - Your covenant tests net debt against EBITDA, not cash. That is a different check. If a test is missed, use the Loan covenant equity cure checker.
+  - Your covenant counts fixed charges, not debt service. Use the Fixed payment cash coverage checker.
   - You want to know whether you are in breach in law, or whether a waiver applies. Ask a lawyer. This skill shows the sums only.
   - A period has no debt service. The ratio means nothing there, so handle that period on its own.
 you_give:

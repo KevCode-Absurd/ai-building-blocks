@@ -36,9 +36,9 @@ when:
   - You are training a new host and need drills, a script to learn and a way to score each practice run.
   - You want your selling lines checked for claims a platform may ban, such as "lowest price anywhere" or health promises.
 not_for:
-  - You want a short video edited or a hook written for a clip. Use the Short-Video Editing Coach agent.
-  - You want a content plan for Douyin videos as well as live. Use the Douyin Strategist agent.
-  - You sell mainly on TikTok outside China. Use the TikTok Strategist agent for the content plan. The ad parts here are about Chinese ad tools.
+  - You want a short video edited or a hook written for a clip. Use the Short video editing coach agent.
+  - You want a content plan for Douyin videos as well as live. Use the Douyin content planner.
+  - You sell mainly on TikTok outside China. Use the TikTok content planner for the content plan. The ad parts here are about Chinese ad tools.
   - You want it to run ads, set prices or go live for you. It cannot log in or spend money.
   - You run a bid-style live auction rather than a sales stream. Use the Live auction show planner.
 you_give:

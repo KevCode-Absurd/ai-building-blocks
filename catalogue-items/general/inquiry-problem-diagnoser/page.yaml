@@ -16,8 +16,8 @@ when:
   - Your replies fell and you do not know why.
 not_for:
   - "You have no ad results yet, or fewer than about 20 replies in total: wait for more data before you judge, or run the ads longer first."
-  - "You want the offer itself rewritten: use the Lead offer tuner once you know what to fix."
-  - "You want to know whether to keep or change a whole campaign: use the Campaign keep-or-change checker."
+  - "You want the offer itself rewritten: use the Lead magnet reviewer once you know what to fix."
+  - "You want to know whether to keep or change a whole campaign: use the Ad change decision checker."
 you_give:
   - Your offer and what a reply gets the person
   - "For each ad: cost, replies, qualified leads, sales"

@@ -24,7 +24,7 @@ when:
 not_for:
   - "You need a legal, safety or health sign-off, or a certificate: hire a qualified auditor. This skill does not certify anything."
   - "You already know the harm and only want to test a swap: use the Small test and rollout planner."
-  - "You want to cut cost, not harm: use the Raw cost breakdown finder or the Price-first cost planner."
+  - "You want to cut cost, not harm: use the Raw cost breakdown finder or the Target price cost planner."
 
 you_give:
   - "Your products, each with the share of income it earns (from your sales report)"

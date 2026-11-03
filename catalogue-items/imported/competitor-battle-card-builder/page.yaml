@@ -30,7 +30,7 @@ you_get:
   - A feature grid
   - A list of rival weak points
 how_to_use:
-  - Have these ready first: a one-line description of your product, your target customer, three or more rivals (names or links), any earlier market notes, and web search switched on.
+  - "Have these ready first: a one-line description of your product, your target customer, three or more rivals (names or links), any earlier market notes, and web search switched on."
   - Open Claude Code if you can. It runs rival research in parallel and saves files. Claude.ai also works, but it is slower.
   - Add the skill to your AI, or paste its instructions into a new chat. Turn on web search. Review sites and forums such as Reddit, Quora and Indie Hackers are read page by page, so check each site's terms before you collect anything in bulk.
   - Tell your AI your product, your target customers and any rivals you know. Add earlier market notes if you have them.

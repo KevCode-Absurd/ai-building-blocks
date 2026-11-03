@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open your AI tool and check that it can make images. This skill needs that. The save and view steps in the skill file are written for Codex. In other tools, attach the image in the chat and ask your AI to save the result in your project folder.
   - Paste the skill, or say you want to use it.
-  - Write your brief. Say what the image is for (website hero, logo, cutout) and what must or must not appear. Name the file type and shape you want: ask for PNG for a cutout with a transparent background, and say wide or square for a website hero.
+  - "Write your brief. Say what the image is for (website hero, logo, cutout) and what must or must not appear. Name the file type and shape you want: ask for PNG for a cutout with a transparent background, and say wide or square for a website hero."
   - Add the image you want changed, if you have one. Say what to keep the same.
   - Name the folder to save in. Your AI saves new files there and adds a version number instead of overwriting.
   - Check any text or logo in the image before you publish it.

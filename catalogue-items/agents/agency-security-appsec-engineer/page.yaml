@@ -21,9 +21,9 @@ when:
   - A customer sent a security questionnaire and you need a threat model and a list of security requirements.
   - Your scanner reports many issues and you want to know which ones matter and what to fix first.
 not_for:
-  - Your code was mostly written by an AI tool and you worry about leaked keys or open database rules. Use the AI-Generated Code Security Auditor agent.
+  - Your code was mostly written by an AI tool and you worry about leaked keys or open database rules. Use the AI-written code security reviewer.
   - You want only a threat model with no code review. Use the Threat modeler.
-  - You want someone to attack your running app. Use the Penetration Tester agent, and only on systems you own.
+  - You want someone to attack your running app. Use the Penetration test planner, and only on systems you own.
   - You want a security design for a whole company or cloud setup. Use the Security Architect agent.
 you_give:
   - A short description of the feature or system, what it does and what data it handles.

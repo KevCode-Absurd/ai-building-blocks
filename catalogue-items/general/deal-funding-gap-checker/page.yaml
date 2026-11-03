@@ -19,9 +19,9 @@ when:
   - A plug line shows up in a draft funds flow, and you want it traced to a real commitment.
 not_for:
   - You want a full buyout return or a borrowing capacity study. This checks one closing balance only. A zero gap also does not clear the closing conditions, so ask your lawyer or lender.
-  - You only need the debt cash after discount and fees. Use the Debt issue proceeds checker.
-  - You want to check a debt payoff, premium and fees against new funding. Use the Refinancing closing cost checker, or run the Check acquisition refinancing funds workflow.
-  - You want the seller's ownership after rollover. Use the Rollover equity ownership checker.
+  - You only need the debt cash after discount and fees. Use the New loan cash proceeds checker.
+  - You want to check a debt payoff, premium and fees against new funding. Use the Loan refinancing cash gap checker, or run the Acquisition funding and debt payoff checker workflow.
+  - You want the seller's ownership after rollover. Use the Seller rollover ownership calculator.
 you_give:
   - The price paid for the equity before rollover (from the signed purchase terms)
   - The debt payoff, deal fees and cash the company must hold at closing (from payoff and fee letters)

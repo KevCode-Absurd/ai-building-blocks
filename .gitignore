@@ -92,6 +92,7 @@ site/.copyable-build/
 !/tools/check-client-secrets.mjs
 !/tools/check-seo-contract.mjs
 !/tools/check-pages.mjs
+!/tools/cluster-siblings.mjs
 !/tools/screen-items.mjs
 !/tools/test-blocks.mjs
 !/tools/test-minds.mjs

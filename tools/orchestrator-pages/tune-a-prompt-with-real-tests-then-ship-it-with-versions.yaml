@@ -15,7 +15,7 @@ when:
   - Several people edit the same prompt and you cannot tell which edit hurt.
   - A prompt runs in a product or a weekly routine, and a bad answer costs you.
 not_for:
-  - "You will use the prompt once and want a quick rewrite: use the Prompt improver on its own."
+  - "You will use the prompt once and want a quick rewrite: use the Prompt editor on its own."
   - "You have no way to judge a good answer yet: write down what good looks like first, or ask a teammate who reads the answers."
   - "You only want rules for editing a prompt you already tested: use the Prompt change manager on its own."
 you_give:

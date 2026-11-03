@@ -33,9 +33,9 @@ when:
   - A preference run (DPO) or reward run (RL) finishes, but answers aren't better or just get longer.
   - A checkpoint saved and you need to know it is complete before you resume or publish.
 not_for:
-  - You use a hosted model and only change prompts. Use the Prompt Engineer agent.
+  - You use a hosted model and only change prompts. Use the Prompt engineer.
   - You want to find silent bugs in a small model's training code. Use the AI model training debugger.
-  - You want a working AI feature in an app, with retrieval and deployment. Use the AI Engineer agent.
+  - You want a working AI feature in an app, with retrieval and deployment. Use the AI feature planner.
 you_give:
   - The behaviour you want to change in the model, and what must stay the same
   - The base model name and how you train now, such as SFT, DPO or GRPO (optional)

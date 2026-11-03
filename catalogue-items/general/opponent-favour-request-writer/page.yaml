@@ -23,16 +23,16 @@ when:
 
 not_for:
   - "Someone is harassing, threatening or bullying you, or there is a safety or legal issue. Go to HR, a mediator or the proper complaint route. Do not use a favour for this."
-  - "You first want to understand their side of the dispute. Use the other person's view mapper."
-  - "You need to rebuild trust before a hard talk. Use the trust deposit planner."
-  - "You need calm words for a live disagreement. Use the disagreement calming line writer."
+  - "You first want to understand their side of the dispute. Use the Disagreement perspective mapper."
+  - "You need to rebuild trust before a hard talk. Use the Relationship trust planner."
+  - "You need calm words for a live disagreement. Use the Disagreement response writer."
   - "You want something big from them. A favour only works if it is small and easy to give."
 
 you_give:
   - The person, who they are and your relationship with them
   - What they oppose, and why you think they do (say if you do not know)
   - What they have, know or own that you could ask to borrow or hear about
-  - How you usually contact them: email, message or in person (optional)
+  - "How you usually contact them: email, message or in person (optional)"
   - A short history of the dispute (optional)
 you_get:
   - A small, specific favour to ask for, and why it fits this person

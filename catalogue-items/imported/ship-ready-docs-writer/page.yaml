@@ -18,10 +18,10 @@ when:
   - You need a map of who can do what before a security review.
   - You want to see which rules in the app have tests and which have none.
 not_for:
-  - "You have one script, or a project with no AI-written code: a README is enough. Use the GitHub README improver."
+  - "You have one script, or a project with no AI-written code: a README is enough. Use the GitHub README reviewer."
   - "You want the code checked for bugs and risks: use the AI-written code reviewer. This skill writes the map it works from."
   - "You want a security scan of the code: use the Code security scanner, after these docs exist."
-  - "You want a note that lets a coding agent carry on a task: use the Coding agent handoff writer."
+  - "You want a note that lets a coding agent carry on a task: use the AI coding task brief writer."
 you_give:
   - The app's code folder, which your AI must be able to open
   - Any existing docs, or your AGENTS.md or CLAUDE.md file (optional)

@@ -16,9 +16,9 @@ when:
   - You have a product people pay for but no steady way to find buyers.
   - You need a growth forecast you can defend.
 not_for:
-  - "You have no paying customers yet: use the Idea to business guide to find and test your first buyers."
-  - "Your offer, customer retention or daily operations are broken: run the Business turnaround guide first, then come back."
-  - "Your product itself must drive the growth, such as invites or sharing inside an app: use the App stickiness guide."
+  - "You have no paying customers yet: use the Business idea validation planner to find and test your first buyers."
+  - "Your offer, customer retention or daily operations are broken: run the Business turnaround planner first, then come back."
+  - "Your product itself must drive the growth, such as invites or sharing inside an app: use the App retention planner."
 you_give:
   - Description of your business and customers
   - Current revenue and sales figures

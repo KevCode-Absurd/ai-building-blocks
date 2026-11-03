@@ -20,7 +20,7 @@ when:
 not_for:
   - "You sell a service, or a bundle that shares costs across products: ask your accountant for a full profit and loss review."
   - "You have no cost quotes at all yet: get a quote from your supplier, carrier and warehouse first, then come back."
-  - "You want to pick a price from scratch: use the waterfall price setter, then check the result here."
+  - "You want to pick a price from scratch: use the Minimum viable price calculator, then check the result here."
 
 you_give:
   - Selling price, excluding tax

@@ -16,7 +16,7 @@ when:
   - You are not sure whether the problem is your ads, your site, your product or your cash.
 not_for:
   - "Your main problem is cash, stock or shipping: use the Online store bottleneck finder."
-  - "You want to know if your ad platform's ROAS is real: use the platform ROAS reality check, then the incrementality test planner for proof."
+  - "You want to know if your ad platform's ROAS is real: use the Ad return evidence checker, then the incrementality test planner for proof."
   - "You have no ad, funnel or margin numbers yet: collect 3 months of data first, or ask your analyst for an export."
 you_give:
   - Monthly revenue, ad spend and gross margin

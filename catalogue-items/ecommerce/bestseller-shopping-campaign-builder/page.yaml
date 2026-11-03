@@ -18,9 +18,9 @@ when:
   - Your Shopping spend is spread over many products and few of them sell.
   - You want a cold-traffic Shopping campaign that leaves brand searches to the branded campaigns.
 not_for:
-  - "Your account already has Shopping data and you want to tune it: use the Shopping campaign tuner."
+  - "Your account already has Shopping data and you want to tune it: use the Google Shopping campaign reviewer."
   - "You want a feed-only setup with less control: use the Feed-only Performance Max builder."
-  - "You want ads for brand searches: use the Branded Search and Shopping builder."
+  - "You want ads for brand searches: use the Google branded Search and Shopping planner."
 
 you_give:
   - Your list of 5 to 10 bestsellers with prices

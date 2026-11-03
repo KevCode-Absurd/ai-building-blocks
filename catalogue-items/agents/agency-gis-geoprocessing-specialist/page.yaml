@@ -17,10 +17,10 @@ when:
   - A script fails on odd data, such as empty layers, NoData cells or locked files.
   - You want to turn a Model Builder model into Python so you can add logic.
 not_for:
-  - "You need a one-off analysis or a single map: use the GIS Analyst agent."
+  - "You need a one-off analysis or a single map: use the GIS analyst."
   - "You need a full data pipeline with scheduled loads: use the Spatial Data Engineer agent."
   - "You need a custom web tool or web map: use the Web GIS Developer agent."
-  - "You use QGIS and not ArcGIS Pro: ArcPy will not run there. Use the GIS Analyst agent or the Spatial Data Engineer agent."
+  - "You use QGIS and not ArcGIS Pro: ArcPy will not run there. Use the GIS analyst or the Spatial Data Engineer agent."
 you_give:
   - Your manual steps in order, as you do them today
   - "The inputs and outputs: layer types, fields and folders"

@@ -21,8 +21,8 @@ when:
 not_for:
   - "You want help with a mental health condition, medical symptoms or a crisis: please see a qualified professional or call your local emergency number."
   - "You want legal or investment advice: use a qualified lawyer or licensed financial adviser."
-  - "You want to review how your work month matched your roles: use the Monthly roles and goals reviewer."
-  - "You want to grow a business or test a marketing idea: use the Growth experiment agent."
+  - "You want to review how your work month matched your roles: use the Life goals and time planner."
+  - "You want to grow a business or test a marketing idea: use the Growth experiment planner."
   - "You want a quick pep talk or a quote: this agent will not give one."
 you_give:
   - Your goal in your own words, and the area it sits in, such as career, learning, health habits, money habits or focus.

@@ -19,7 +19,7 @@ not_for:
   - "The NDA is part of a larger contract: send the whole contract to a lawyer."
   - "You need a signed legal opinion: ask a lawyer, because this tool only screens."
   - "You need the NDA redrafted or negotiated: ask a lawyer to mark it up."
-  - "You want odd clauses quoted with their plain meaning and changes to ask for: use the NDA traffic-light checker."
+  - "You want odd clauses quoted with their plain meaning and changes to ask for: use the NDA risk reviewer."
 you_give:
   - The NDA as a file, link or pasted text
   - Your own NDA rules (optional)

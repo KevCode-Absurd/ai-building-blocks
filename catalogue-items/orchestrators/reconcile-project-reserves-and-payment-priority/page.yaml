@@ -18,10 +18,10 @@ when:
   - A reserve draw was approved and you need to restate what is still unfilled.
   - A reviewer wants every payment traced back to the loan's payment order.
 not_for:
-  - You only need the reserve top-up. Use the Debt reserve rollforward builder on its own.
-  - You only need to split one period's cash in loan order. Use the Project payment waterfall builder on its own.
-  - You want a debt coverage test against loan covenants. Use the Review contractual debt service cash tests workflow.
-  - You want a loan repayment schedule over several years. Use the Build a project debt service cash pack workflow.
+  - You only need the reserve top-up. Use the Debt payment reserve checker on its own.
+  - You only need to split one period's cash in loan order. Use the Project payment priority planner on its own.
+  - You want a debt coverage test against loan covenants. Use the Debt service coverage checker workflow.
+  - You want a loan repayment schedule over several years. Use the Project debt repayment modeler workflow.
 you_give:
   - Actual project cash after operations for one period (from the project bank and operating statements)
   - The senior and junior debt service schedule, with due dates (from the loan agreement or lender schedule)

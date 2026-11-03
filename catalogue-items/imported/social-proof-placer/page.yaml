@@ -19,7 +19,7 @@ not_for:
   - "You have no real proof yet: collect customer quotes, results or reviews first, then come back."
   - "You want to build brand awareness, not remove doubt at a buying step: talk to a marketer or write a brand story instead."
   - "You need the full page copy written: use your AI with the page text, or ask a copywriter. This plan only covers proof."
-  - "Your proof goes on a store page and you want a layout map and a drop list: use the Store social proof placer."
+  - "Your proof goes on a store page and you want a layout map and a drop list: use the Store testimonial placement planner."
 you_give:
   - Who your buyer is
   - Their main doubts
@@ -32,7 +32,7 @@ you_get:
   - Flags on weak or unverifiable claims
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Your AI works in this order: it learns your buyer, lists their doubts, reads your proof, builds the proof map, places each piece, then flags weak claims.
+  - "Your AI works in this order: it learns your buyer, lists their doubts, reads your proof, builds the proof map, places each piece, then flags weak claims."
   - Describe your buyer and how well they know you. Say what you want them to do.
   - List the doubts that hold them back, such as price, fit or trust.
   - "Paste the proof you have: quotes, numbers, logos and case studies. Only real proof. For reviews and quotes, paste the exact words with the date and where each one came from."

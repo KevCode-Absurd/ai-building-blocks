@@ -16,7 +16,7 @@ when:
   - Your ads all look alike and results are flattening.
 not_for:
   - Your account has only a few sales a day. The numbers swing too much, so check once a week by hand or ask your AI for a plain ad review.
-  - You want to check an ad against Meta's rules before it goes live. Use the Meta ads compliance checker instead.
+  - You want to check an ad against Meta's rules before it goes live. Use the Meta ad policy checker instead.
   - You have one ad that never worked. A new opening will not fix it, so pause it or give it more spend.
 you_give:
   - Ad results for the last 7 days, one row per ad, with spend, purchases, frequency and click rate

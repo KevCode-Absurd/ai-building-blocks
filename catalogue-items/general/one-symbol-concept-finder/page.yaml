@@ -22,10 +22,10 @@ when:
   - "A designer asked what the one thing is that this should say, and you had three answers."
 
 not_for:
-  - "You want the finished design or its layout. This plans the idea only. For a layout, use the Layout default breaker, then hand the result to a designer."
+  - "You want the finished design or its layout. This plans the idea only. For a layout, use the Template layout alternatives planner, then hand the result to a designer."
   - "You are drawing the letters of a name. Use the Wordmark sketch planner."
   - "You already have several logo ideas and want to pick one. Use the Logo strength tester."
-  - "You need a whole brand identity for many places. Use the Identity system planner."
+  - "You need a whole brand identity for many places. Use the Brand identity system planner."
 
 you_give:
   - "What the piece is about, in a few sentences (required)"

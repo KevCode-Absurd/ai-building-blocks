@@ -20,7 +20,7 @@ when:
 not_for:
   - You are building only the browser side of an app. This skill is for the Node.js server.
   - You need to choose a database or a host. This covers the Node.js side only.
-  - You want a full API design with routes and data shapes. Use the REST API designer.
+  - "You want a full API designer with routes and data shapes. Use the REST API designer."
   - You want the whole backend built for you. Use the backend builder.
 you_give:
   - What you are building, in a few lines
@@ -77,6 +77,8 @@ output_sample:
     - Where it will run, such as a server, serverless or the edge
     - What your team already knows
     - Existing code you must keep (optional)
+  prerequisites:
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Your project
       contains: Your answers in one place, with anything missing marked.

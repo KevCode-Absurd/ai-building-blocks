@@ -18,10 +18,10 @@ when:
   - Inventory on the balance sheet changed and you want the cash really put into it.
   - A reviewer asks that no charge or reserve change is counted twice.
 not_for:
-  - The company reports under IFRS or does not use LIFO. Skip step 1 and use the Inventory charge margin bridge and the Noncash working capital bridge instead.
+  - The company reports under IFRS or does not use LIFO. Skip step 1 and use the Inventory write-down margin checker and the Working capital cash change checker instead.
   - You want to judge whether inventory is valued correctly or what reserve to hold. This explains disclosures. It does not value stock.
-  - You want wider working capital and tax cash. Use the Reconcile working capital and tax cash workflow.
-  - Revenue, not cost, moved. Use the Reconcile revenue presentation and perimeter workflow.
+  - You want wider working capital and tax cash. Use the Working capital and cash tax checker workflow.
+  - Revenue, not cost, moved. Use the Comparable revenue growth checker workflow.
   - You do not have the filings. Every figure has to come from the notes.
 you_give:
   - LIFO inventory, opening and closing LIFO reserves and the tax effect, where the company uses LIFO (from the inventory note)

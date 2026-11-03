@@ -33,8 +33,8 @@ when:
   - You want a panel that shows rules your team agreed, so no one has to remember them.
 not_for:
   - You want to learn to model, sculpt or texture. Use Blender's own manual and tutorials.
-  - You need an editor tool for Unity instead. Use the Unity Editor Tool Developer agent.
-  - You need materials and effects set up inside Unreal. Use the Unreal Technical Artist agent.
+  - You need an editor tool for Unity instead. Use the Unity editor tool developer.
+  - You need materials and effects set up inside Unreal. Use the Unreal technical artist.
   - You want a finished add-on you can trust without testing. Any add-on must be tested by you in Blender, on a copy of your scene first.
   - You want a paid or commercial add-on checked for licence terms. Ask a lawyer.
 you_give:

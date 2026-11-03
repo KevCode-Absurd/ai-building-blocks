@@ -18,9 +18,9 @@ when:
   - "You run an email list or a social account and want a sequence that earns attention."
   - "You do not know how long to wait before you ask."
 not_for:
-  - "You have no audience yet. Use the First customers by hand planner to win your first buyers one by one."
-  - "You want a month of content built for one platform. Use the Platform-native content planner."
-  - "You want to borrow someone else's audience. Use the Network launch distribution planner."
+  - "You have no audience yet. Use the First customer outreach planner to win your first buyers one by one."
+  - "You want a month of content built for one platform. Use the Social platform content planner."
+  - "You want to borrow someone else's audience. Use the Audience network launch planner."
   - "You need the ask or sales copy sharpened line by line. Use the Sales copy editor."
 you_give:
   - "Your offer: what it is, the price and the terms"

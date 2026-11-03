@@ -18,10 +18,10 @@ when:
   - You are writing to staff or owners and want to say how you will decide hard cases.
   - You passed on a sale last year because it would have hurt you later, and want that to be a rule, not luck.
 not_for:
-  - "You want one rule from one mistake: use the Mistake-to-principle writer."
-  - "You are writing rules for a space, a service or an app, such as a shop or a community: use the Place principles writer."
-  - "You are weighing one choice today, not a standing list: use the Decision options and tripwire planner."
-  - "You want to pick the numbers that show whether you keep your promises: use the Input metric picker."
+  - "You want one rule from one mistake: use the Lessons learned principle writer."
+  - "You are writing rules for a space, a service or an app, such as a shop or a community: use the Place design principles writer."
+  - "You are weighing one choice today, not a standing list: use the Decision backup planner."
+  - "You want to pick the numbers that show whether you keep your promises: use the Business activity metric planner."
 you_give:
   - A short description of your business and who you answer to, such as owners, partners, staff or customers
   - Two or three past choices where you gave up something now for later, or wish you had (optional)

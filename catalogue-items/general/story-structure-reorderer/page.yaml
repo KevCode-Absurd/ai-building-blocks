@@ -20,7 +20,7 @@ when:
   - "Your piece is a story, case study, talk or short film with more than one thread or a reveal. A plain how-to or list talk gains less."
 not_for:
   - "Your draft is finished and only needs polish: use a line editor, or a friend who reads closely."
-  - "You want to check one scene or the whole draft for a single effect: use the Single-effect draft checker."
+  - "You want to check one scene or the whole draft for a single effect: use the Story impact reviewer."
   - "You need new scenes or a new plot: write them first, then come back to reorder."
 
 you_give:

@@ -16,9 +16,9 @@ when:
   - You want the same brand look and exact wording in every ad in a set.
   - A teammate says "make six variations" and each one needs a clear job.
 not_for:
-  - "You need one image prompt, not six. Use the Brand-to-image prompt compiler."
+  - "You need one image prompt, not six. Use the Brand image prompt writer."
   - "You want ads chosen by buyer stage and proof, with full copy and layout briefs. Use the Twelve-pattern static ad brief maker."
-  - "You already made images and want to edit them. Use the Ad image generation and edit planner."
+  - "You already made images and want to edit them. Use the Ad image planner."
   - "You want finished pictures from Claude. It writes prompts and cannot draw. ChatGPT, Gemini or another image tool makes the pictures."
 you_give:
   - One clear photo of the exact product you sell, front on

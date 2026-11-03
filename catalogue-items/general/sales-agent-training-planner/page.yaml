@@ -18,7 +18,7 @@ when:
   - "Agents sign up and drop out in the first month."
   - "You need a plan for pay, prizes and training that you can afford."
 not_for:
-  - "You want to plan one agent's sales talk: use the Counter demo script writer."
+  - "You want to plan one agent's sales talk: use the Product demonstration script writer."
   - "You want to keep buyers coming back after a sale: use the Post-sale follow-up planner."
   - "You need legal advice on pay or recruiting rules: ask a local lawyer or your trade body."
 

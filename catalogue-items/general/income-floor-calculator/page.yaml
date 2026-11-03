@@ -22,9 +22,9 @@ when:
   - "A partner or family member wants to see the number before you hand in notice."
 
 not_for:
-  - "You already know your floor and need a fee, a client limit and billing terms. Use the Client fee and cap setter."
+  - "You already know your floor and need a fee, a client limit and billing terms. Use the Client pricing planner."
   - "You want the notice letter and the order of talks for leaving. Use the Job exit plan writer."
-  - "You want cash rules for thin months. Use the Lean-year cash rules writer."
+  - "You want cash rules for thin months. Use the Cash shortage planning adviser."
   - "You need tax or legal advice for your country. Ask a local adviser. This uses one flat tax share."
 
 you_give:

@@ -19,7 +19,7 @@ when:
   - "You want a repeatable monthly test that takes one morning."
 not_for:
   - "Your page has no visitors yet and no real tasks to test: ask two or three people to try your idea on paper or a rough draft instead."
-  - "You have no review of the page and want a cheap check first: use the Usability heuristic reviewer, then come back."
+  - "You have no review of the page and want a cheap check first: use the Website usability reviewer, then come back."
   - "You want numbers from hundreds of people: use an analytics tool or a survey, because this plan is for three to four testers."
 
 you_give:

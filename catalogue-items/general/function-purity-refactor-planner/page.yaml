@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to explain finished code to a teammate: use the Code walkthrough writer."
   - "You want to rework a whole program at once: start with a design review by a senior developer, then come back with one function."
-  - "You only need to move code around without changing what it does: use the Structure and behaviour change splitter."
+  - "You only need to move code around without changing what it does: use the Process and behavior change planner."
 
 you_give:
   - The function, pasted in full, and the code it calls (the more the better)

@@ -16,7 +16,7 @@ when:
   - Someone says to run an A/B test and you want to know if your numbers can support one.
 not_for:
   - "Your page has no traffic yet: set up basic analytics first, then come back once visits are coming in."
-  - "You only want the page scored before launch: use the Landing page auditor."
+  - "You only want the page scored before launch: use the Landing page conversion reviewer."
   - "You only want to know if your traffic can support a test: use the A/B test traffic checker."
 you_give:
   - The address or saved copy of the page (optional for the first step, needed for the audit)

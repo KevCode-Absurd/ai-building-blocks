@@ -32,7 +32,7 @@ you_get:
   - A list of DICOM series
   - DICOM copies with common patient details removed, when asked
 how_to_use:
-  - What you need first: MATLAB, the Image Processing Toolbox, and ideally the Medical Imaging Toolbox. MATLAB and both toolboxes are paid MathWorks products. Type ver in MATLAB to see which you have.
+  - "What you need first: MATLAB, the Image Processing Toolbox, and ideally the Medical Imaging Toolbox. MATLAB and both toolboxes are paid MathWorks products. Type ver in MATLAB to see which you have."
   - Know that the Medical Imaging Toolbox is a paid MathWorks add-on. NRRD reading, extractSlice and updateOrientation need it. Without it you can only read DICOM and NIfTI, using the Image Processing Toolbox calls, and your AI should say which features it had to skip.
   - "Open your AI tool and paste in this skill. A plain chat window cannot run MATLAB, so it can only write the code: you run that code in MATLAB yourself and paste any errors back. An AI tool that can run MATLAB does both."
   - "Have ready: the scan file path, your ver output, what you want out, and for a slice the slice number and view. Give them to your AI."

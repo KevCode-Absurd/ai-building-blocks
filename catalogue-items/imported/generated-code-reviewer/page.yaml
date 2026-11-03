@@ -37,7 +37,7 @@ how_to_use:
   - Run your own linter and tests after. This skill does not replace them.
   - If the diff is too long to paste at once, send it one file at a time and ask for findings per file.
   - Next, rerun your tests on the fixed code, then send the diff for a human review before you merge it.
-  - The skill file's "risk: critical" line is the source collection's own label. In a chat this skill only reads code and suggests changes. Nothing runs or changes until you apply it.
+  - "The skill file's \"risk: critical\" line is the source collection's own label. In a chat this skill only reads code and suggests changes. Nothing runs or changes until you apply it."
 output_sample:
   input:
     - The code or files your AI just wrote or changed

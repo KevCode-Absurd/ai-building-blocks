@@ -38,7 +38,7 @@ how_to_use:
   - Add your topic, format and time limit if you have them (optional).
   - Read each task and its answer guide. Each set ends with a "Check before use" line. If the AI wrote a source itself, it can still slip in a made-up author, date or archive. Check each one against a real collection, or swap in a real source, before students see it.
   - Use the weak, partial and strong answer notes to plan what to teach next. To check whether the tasks are fair, run them through the Assessment fit and fairness checker. To mark answers, use the Marking rubric writer.
-  - Timing: one task takes about 7 minutes. A set of two or three takes about 15 to 20 minutes, which is what it plans for if you give no time limit. Start with a single task.
+  - "Timing: one task takes about 7 minutes. A set of two or three takes about 15 to 20 minutes, which is what it plans for if you give no time limit. Start with a single task."
 output_sample:
   input:
     - The history skills you want to check, such as sourcing or contextualisation

@@ -16,8 +16,8 @@ when:
   - A borrower offers a high rate, a short term or collateral to make up for thin numbers.
   - You already hold a loan and a new set of accounts has just come out.
 not_for:
-  - "You are weighing a share, not a loan: use Value a stock with a margin of safety."
-  - "You want to know if the business is worth owning for years: use Find out if a business is worth owning long term."
+  - "You are weighing a share, not a loan: use Stock valuation margin-of-safety reviewer."
+  - "You want to know if the business is worth owning for years: use Long-term business quality reviewer."
   - "You only have a year or two of accounts. The average needs about seven years, and five will do."
   - "You want to be told what to buy or how much to put in. Ask a licensed adviser. This gives a call on one loan."
 you_give:

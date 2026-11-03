@@ -16,7 +16,7 @@ when:
   - A leader asked "so what does that mean" after your last report.
 not_for:
   - "You need one figure explained once, with no weekly update: ask your AI for a short summary instead."
-  - "You want the numbers charted with a forecast: use the Build a weekly KPI report with a forecast and dashboard workflow."
+  - "You want the numbers charted with a forecast: use the Weekly metrics report and dashboard builder workflow."
   - "You have no numbers yet and only a rough idea of what to track: write a short list of goals with your team first."
 you_give:
   - The metrics you track and where each comes from

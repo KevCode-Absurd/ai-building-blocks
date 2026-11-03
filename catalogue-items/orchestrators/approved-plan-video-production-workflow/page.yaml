@@ -19,9 +19,9 @@ when:
   - A client pays for the video and you need a record that the edit matched the approved plan.
 not_for:
   - You want a single static clip trimmed or a quick caption. Edit it in your phone or editing app, or use the video ad edit planner for a cut list.
-  - You have no footage yet. Write the script first with the founder video ad script writer or the video ad script angle chooser.
+  - You have no footage yet. Write the script first with the founder video ad script writer or the Video ad message planner.
   - You only need captions in your brand font. Use the video caption maker in your brand font.
-  - You want finished sound, not a cut. Use the video audio finishing plan workflow.
+  - You want finished sound, not a cut. Use the Video audio finishing planner workflow.
 you_give:
   - Raw footage, or a transcript with timestamps for each clip (from your camera, recorder or a transcription tool)
   - The platform, such as Reel, TikTok, YouTube Short or LinkedIn

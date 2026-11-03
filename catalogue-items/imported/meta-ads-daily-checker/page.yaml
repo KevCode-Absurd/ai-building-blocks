@@ -21,7 +21,7 @@ not_for:
   - "You want to build new ads or campaigns: use Ads Manager. This skill only reads and suggests."
   - "A campaign is brand new and has little data. Wait until it has a few days of results, or the checks will say too little data."
   - "You want to know why ads stall in delivery, with a set path to fix them: use the Meta delivery troubleshooter."
-  - "You want to catch tired ads and get a brief for each replacement: use the Ad fatigue watcher."
+  - "You want to catch tired ads and get a brief for each replacement: use the Ad decline tracker and replacement briefs."
 you_give:
   - Your campaign and ad results for the last 7 days, exported from Ads Manager
   - Today's spend and your daily budgets

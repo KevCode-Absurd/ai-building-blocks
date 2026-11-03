@@ -19,7 +19,7 @@ when:
   - A big model has to be split across two or more GPUs.
 not_for:
   - "You want AI on a laptop or a single user's CPU: use llama.cpp or a desktop model app instead."
-  - "You want a rented GPU for training, not serving: use the Rented GPU server setup helper."
+  - "You want a rented GPU for training, not serving: use the Lambda GPU server setup helper."
   - "You do not want to run a server at all: call a hosted model API instead."
 you_give:
   - The exact name of the model, from Hugging Face

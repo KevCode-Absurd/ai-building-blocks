@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the instructions from this skill into the chat.
-  - Gather first: a list of your devices with their OS and update dates, the admin settings of your cloud services (especially whether multi-factor login is on), and how staff work remotely.
+  - "Gather first: a list of your devices with their OS and update dates, the admin settings of your cloud services (especially whether multi-factor login is on), and how staff work remotely."
   - List your devices and operating systems, your cloud services, how staff work remotely and your company size.
   - Ask for the readiness gap table and the scope statement.
   - Fix any auto-fail flags first, then work down the fix list.

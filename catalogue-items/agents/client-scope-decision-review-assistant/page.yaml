@@ -22,8 +22,8 @@ when:
 
 not_for:
   - The work is a construction or building contract. Use the Construction variation cost and approval tracker.
-  - You want a risk review of contract clauses for a lawyer. Use the Contract intake reviewer.
-  - You only want to reprice a client by their hours and fees. Use the Quarterly client rate reviewer.
+  - You want a risk review of contract clauses for a lawyer. Use the Contract clause risk reviewer.
+  - You only want to reprice a client by their hours and fees. Use the Client fee and work-hour reviewer.
   - You are writing the first change request form and nothing is in dispute. Use the Change request writer.
   - You want the AI to send the reply or decide what is in scope. It drafts, and a person decides.
 
@@ -44,7 +44,7 @@ you_get:
   - A MISSING list, CHECKS MISSED and a short record for the next review
 
 how_to_use:
-  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Prepare a client scope change brief, Plain-words contract summary, Team capacity planner, Stakeholder update writer and Executive action register keeper. If one is missing, stop and ask for it.
+  - "Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Prepare a client scope change brief, Plain-words contract summary, Team capacity planner, Stakeholder update writer and Executive action register keeper. If one is missing, stop and ask for it."
   - Say if this is a first run. If not, paste your last review and its record.
   - Attach the signed engagement, the change request, your commitments and the available hours. Write your approval rules in two or three lines.
   - Read the scope comparison first. Check each clause it quotes against the contract.

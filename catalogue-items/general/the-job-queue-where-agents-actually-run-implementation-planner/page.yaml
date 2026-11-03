@@ -16,7 +16,7 @@ when:
   - You are moving agent work out of a web request and into a background worker.
   - A failed-jobs list keeps growing and nobody knows which ones are safe to replay.
 not_for:
-  - Your queue works and you only want alerts. Use the Agent anomaly monitoring builder instead.
+  - Your queue works and you only want alerts. Use the Agent anomaly monitor builder instead.
   - You want to cap AI spend, not run jobs. Use the Agent spending cap builder instead.
   - You can't run Redis. Use a managed queue service from your host and ask this skill only for the job record and recovery ideas.
   - You want a single task run by one agent with no queue. Use the Single-task agent heartbeat builder.

@@ -23,17 +23,17 @@ when:
   - Two schedules both include the working-capital adjustment and you suspect the seller's total is overstated.
 
 you_give:
-  - The signed closing price bridge: enterprise value, cash, debt, debt-like items and seller expenses at the closing cutoff (from the closing statement)
+  - "The signed closing price bridge: enterprise value, cash, debt, debt-like items and seller expenses at the closing cutoff (from the closing statement)"
   - Working capital for the peg, the estimate paid at close and the final figure, all under the same contract definition (from the purchase agreement and the final statement)
-  - The escrow account: the amount deposited, what has been paid out, and the pending claims with their IDs and amounts (from the escrow agent and the claim ledger)
+  - "The escrow account: the amount deposited, what has been paid out, and the pending claims with their IDs and amounts (from the escrow agent and the claim ledger)"
   - The agreement's rule on who pays a negative settlement, and whether it is netted from the escrow (optional, but it changes the payer line)
   - The closing date, the currency and the scale, such as thousands
 
 you_get:
   - Equity proceeds at closing, built line by line from enterprise value
   - The working-capital settlement, as final less estimate, with its sign and who pays
-  - The escrow split: deposited, paid out, held for pending claims, ready to release and any claims above the balance
-  - One seller cash picture: paid at closing, still held, owed back and total expected, each counted once
+  - "The escrow split: deposited, paid out, held for pending claims, ready to release and any claims above the balance"
+  - "One seller cash picture: paid at closing, still held, owed back and total expected, each counted once"
   - Every MISSING item, and any check that could not run
 
 how_to_use:
@@ -125,7 +125,7 @@ terms:
 
 not_for:
   - The price bridge is not signed yet. Wait for the signed statement. A draft can be run only as a labelled draft.
-  - You only need the equity bridge, or only the escrow balance. Use the closing equity proceeds checker or the escrow release checker on its own.
+  - You only need the equity bridge, or only the escrow balance. Use the Business sale proceeds checker or the Escrow release balance checker on its own.
   - The deal used a locked-box price with no working-capital peg. Use the locked-box closing price workflow.
   - There is a dispute, a tax question, an earnout or a collar. This covers a plain dollar-for-dollar adjustment only.
 

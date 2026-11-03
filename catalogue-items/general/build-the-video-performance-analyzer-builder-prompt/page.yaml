@@ -17,8 +17,8 @@ when:
   - Your team wants a short list of ads to refresh or scale, with the numbers behind each.
 not_for:
   - Your account runs Search or Display only, or you want a one-time review with no code. Paste your export into the Google Ads report auditor instead.
-  - You want to review where Display ads showed. Use the Display placement review coding prompt.
-  - Your video ads run on Meta, not Google. Use the Meta Ads report coding prompt.
+  - You want to review where Display ads showed. Use the Display ad audit tool planner.
+  - Your video ads run on Meta, not Google. Use the Meta Ads reporting app planner.
   - You want it to pause ads or change budgets. It only proposes. You make the change in Google Ads.
 you_give:
   - Your code project, or its main folders and database schema

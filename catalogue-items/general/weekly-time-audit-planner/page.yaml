@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You have no record of last week and cannot recall it. Keep a rough log for three days, then run this."
-  - "You want a plan for next week from a task list. Use the Week plan maker from a task list."
+  - "You want a plan for next week from a task list. Use the Weekly task planner."
   - "You already know your takers and want rules to stop them. Use the Not-to-do list builder."
 
 you_give:

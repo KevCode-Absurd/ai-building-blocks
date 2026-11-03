@@ -18,10 +18,10 @@ when:
   - Several accounts hold cash and part of it is restricted or pledged.
   - A lender or board wants a dated view against a minimum cash level.
 not_for:
-  - You only need accessible cash today. Use the Restricted cash availability checker on its own.
+  - You only need accessible cash today. Use the Spendable cash balance checker on its own.
   - You only need to test a past forecast. Use the Treasury forecast backtest checker on its own.
-  - You only need the ladder. Use the Settlement liquidity ladder builder on its own.
-  - You want a seasonal cash buffer. Use the Prepare a seasonal cash buffer workflow.
+  - You only need the ladder. Use the Payment timing cash balance planner on its own.
+  - You want a seasonal cash buffer. Use the Seasonal cash forecast and buffer planner workflow.
 you_give:
   - Dated bank balances and restrictions, by account (from bank statements and agreements)
   - Your frozen prior net-flow forecast with its opening balance (from your last forecast file)

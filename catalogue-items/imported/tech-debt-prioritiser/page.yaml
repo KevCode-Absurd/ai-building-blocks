@@ -36,7 +36,7 @@ how_to_use:
   - Open your AI in a tool that can read your project files and change history. Paste in the skill instructions. SonarQube, Codecov and Dependabot are optional. They need their own accounts and may cost money, and the skill works without them.
   - Add the repository. Also add recent bug history, team size and the cost of an engineer hour, if you have them.
   - Tell your AI which areas you already worry about, if any.
-  - Your AI works in this order: it ranks files by how often they change in the history, adds any bug history you gave, asks for cost inputs, and marks gaps as unknown.
+  - "Your AI works in this order: it ranks files by how often they change in the history, adds any bug history you gave, asks for cost inputs, and marks gaps as unknown."
   - Ask it to run the full debt analysis. It reviews and plans only. It changes no code.
   - Check that any cost figure comes from your own data. Items with no data should say unknown.
   - Pick one quick win from the list and start it this week. The report is Markdown, in seven sections, and the first quick win is the action for this week.

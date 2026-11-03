@@ -19,9 +19,9 @@ when:
   - Your manager asks what must be in place before a first hire abroad.
 not_for:
   - "You need a legal opinion on a contract or a firing: ask a local employment lawyer."
-  - "You are hiring a contractor, not an employee: use the Employee or contractor checker first."
+  - "You are hiring a contractor, not an employee: use the Worker classification reviewer first."
   - "You only want to know what to pay for one role: use the Pay band builder."
-  - "You already have a local team and want a headcount plan: use the Headcount plan builder."
+  - "You already have a local team and want a headcount plan: use the Hiring headcount planner."
 you_give:
   - The country, or the two countries you are comparing
   - The number and type of roles

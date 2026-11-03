@@ -23,7 +23,7 @@ when:
 not_for:
   - You have only a handful of ideas. With fewer than three for each slot, get more ideas first.
   - You are choosing between two options. Use the Pros and cons decision planner.
-  - You want to make the items themselves better. Use the Honest draft feedback giver on the ones you keep.
+  - You want to make the items themselves better. Use the Long-form draft reviewer on the ones you keep.
 
 you_give:
   - Every candidate, even rough ones

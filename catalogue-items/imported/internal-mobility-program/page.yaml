@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need to end a job, run a layoff or restructure the company: use your HR policy and ask an employment adviser."
   - "You want a plan for who replaces key leaders: use the Succession plan builder."
-  - "You need career levels for one job family: use the Career ladder and growth plan writer."
+  - "You need career levels for one job family: use the Career level and growth planner."
 you_give:
   - Your company size and how it is organised
   - How people move or apply for other roles today

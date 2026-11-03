@@ -33,10 +33,10 @@ when:
   - Month end is close and you want a paid, pending and unmatched summary to give your accountant.
 not_for:
   - You want it to approve or send real payments. It will not. Use your accounting or bank software, with a person approving.
-  - You are chasing invoices that customers owe you. Use the Weekly invoice and cash chaser.
-  - You only want to find duplicates, wrong sums and missing receipts in a supplier batch. Use the Recurring invoice exception review assistant.
+  - You are chasing invoices that customers owe you. Use the Late invoice and cash forecast reviewer.
+  - You only want to find duplicates, wrong sums and missing receipts in a supplier batch. Use the Supplier invoice exception reviewer.
   - You need a full match of your ledger against a bank statement. Use the Account reconciler.
-  - You are building payment software. Use the Payments & Billing Engineer agent.
+  - You are building payment software. Use the Payments and billing engineer agent.
 you_give:
   - The invoices to check, with vendor, invoice number, date, amount, currency and any order or contract reference.
   - Your approved vendor list, with names only. Do not paste full bank account numbers.

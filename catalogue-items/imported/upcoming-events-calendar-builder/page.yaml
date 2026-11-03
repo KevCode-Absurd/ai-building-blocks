@@ -38,7 +38,7 @@ how_to_use:
   - Ask your AI to build the calendar and the weekly preview. Give it web access if it has it. Without it, every date should be marked unverified, with the page to check, never filled in from memory.
   - Check each date against the company's investor relations page or NSE and BSE notices, as dates often shift.
   - Use the weeks to watch to plan your reviews. Treat the result as a planning aid, not advice.
-  - After each date passes, archive the event with its actual outcome. Pair the calendar with a simple review sheet with five columns: date, event, what you expected, actual outcome, and decision. Fill it in after each event.
+  - "After each date passes, archive the event with its actual outcome. Pair the calendar with a simple review sheet with five columns: date, event, what you expected, actual outcome, and decision. Fill it in after each event."
 output_sample:
   input:
     - A list of company names or tickers

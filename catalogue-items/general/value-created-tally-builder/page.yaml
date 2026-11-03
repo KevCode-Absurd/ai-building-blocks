@@ -17,7 +17,7 @@ when:
 not_for:
   - "You want a formal audit or sign-off on your numbers: ask an accountant instead."
   - "You want to know if your money holds up in a bad year: use the Bad-year break-even tester."
-  - "You want to write the annual letter itself: use the Annual letter writer, then bring this tally to it."
+  - "You want to write the Annual letter and results reviewer itself: use the Annual letter writer, then bring this tally to it."
 you_give:
   - The groups you deal with
   - "Figures for each: net income, pay, partner profit, customer savings or time (whatever you have)"

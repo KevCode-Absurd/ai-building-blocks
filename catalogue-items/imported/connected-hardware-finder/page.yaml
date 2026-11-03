@@ -43,6 +43,7 @@ output_sample:
     - MATLAB installed on the computer the hardware is plugged into
     - An AI that can run MATLAB code
     - A MATLAB licence, and licences for any add-ons you use
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Connected devices
       contains: A short reply in this order, connected devices (name and how each connects), capability matches, device details, install state, then missing packages. The LICENSE.md file in this folder sets the licence.

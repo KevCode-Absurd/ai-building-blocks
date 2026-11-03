@@ -18,10 +18,10 @@ when:
   - You bought or sold a business and need comparable growth for the businesses you kept.
   - Gross billings and net revenue are far apart and you need the deductions explained.
 not_for:
-  - You only need gross to net. Use the Gross-to-net revenue bridge on its own.
-  - You only need to take out acquisitions, disposals and currency. Use the Organic revenue perimeter bridge on its own.
-  - You want a trailing 12-month revenue model. Use the Build a comparable trailing revenue model workflow.
-  - You want to judge customer cash, not revenue. Use the Reconcile contract balances and customer cash workflow.
+  - You only need gross to net. Use the Gross to net revenue checker on its own.
+  - You only need to take out acquisitions, disposals and currency. Use the Like-for-like sales growth checker on its own.
+  - You want a trailing 12-month revenue model. Use the Comparable annual revenue modeler workflow.
+  - You want to judge customer cash, not revenue. Use the Contract revenue and cash checker workflow.
 you_give:
   - Gross billings and the revenue policies for deductions such as returns and rebates (from the accounts and notes)
   - Reported net revenue for both periods (from the income statement)

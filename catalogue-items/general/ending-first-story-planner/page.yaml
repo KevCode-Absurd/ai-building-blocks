@@ -18,7 +18,7 @@ when:
   - "You know how you want people to feel at the end and need a way to get there."
   - "Your piece peaks in the middle and the ending feels like an afterthought."
 not_for:
-  - "You have a draft and want to test it against one feeling: use the Single-effect draft checker."
+  - "You have a draft and want to test it against one feeling: use the Story impact reviewer."
   - "You are writing a factual report or a piece with several equal messages: use a plain outline instead."
   - "You want a long book or series plan: this suits short pieces read or heard in one sitting, so ask a person or a longer plot tool."
 

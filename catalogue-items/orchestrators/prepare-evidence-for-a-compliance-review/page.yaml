@@ -20,7 +20,7 @@ when:
 not_for:
   - You are still deciding which framework to follow. Use the Compliance readiness checklist builder on its own.
   - You are planning an HR audit with file sampling. Use the HR compliance audit planner.
-  - You need to answer a customer's security questions. Use Prepare a vendor security questionnaire response.
+  - You need to answer a customer's security questions. Use Vendor security questionnaire response writer.
 you_give:
   - "The review scope: systems, teams and the period under review"
   - The framework or control list your reviewer uses (from their request). This is required. The workflow stops at step 1 without it and never picks a framework for you.

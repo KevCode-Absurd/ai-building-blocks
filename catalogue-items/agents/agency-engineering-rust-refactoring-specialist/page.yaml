@@ -31,9 +31,9 @@ when:
   - A function takes owned values and clones them at every call, and you want to borrow instead.
   - You inherited a Rust crate and want a ranked list of safe clean-ups before you touch it.
 not_for:
-  - You need a one-line bug fix with the smallest possible diff. Use the Minimal Change Engineer agent.
-  - Your code is not Rust. Use the Code Reviewer agent, or the Senior Developer agent for other languages.
-  - You want a security review of unsafe code or crypto. Use the Application Security Engineer agent, and have a Rust expert review it.
+  - You need a one-line bug fix with the smallest possible diff. Use the Focused code fix developer.
+  - Your code is not Rust. Use the Code Reviewer agent, or the Full stack developer for other languages.
+  - You want a security review of unsafe code or crypto. Use the Application security reviewer, and have a Rust expert review it.
   - You have no tests and no way to run cargo. Expect a plan and a list of tests to write first, not changes you can trust.
 you_give:
   - The Rust code in scope, such as files, a module or a crate, pasted or attached

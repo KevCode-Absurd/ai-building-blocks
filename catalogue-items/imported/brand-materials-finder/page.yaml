@@ -36,7 +36,7 @@ how_to_use:
   - Read the plan it shows and confirm which tools to search. It waits for your go-ahead.
   - Read the report. Confirm or change each open question, and note any conflicts between documents.
   - Pick a next step. To write guidelines, give the report to the Brand voice guide builder. The skill's own generate-guidelines command is not included here. Nothing is saved until you approve.
-  - The skill hands the search to a helper agent that is not included either. This is the normal case: your AI does all four search steps itself in the same chat (search, sort, read the best sources, write the report).
+  - "The skill hands the search to a helper agent that is not included either. This is the normal case: your AI does all four search steps itself in the same chat (search, sort, read the best sources, write the report)."
   - This is a copy of the discover-brand skill from Anthropic's knowledge-work plugins, originally by Tribe AI. It is under the MIT licence.
 next: [brand-voice-guide-builder]
 output_sample:

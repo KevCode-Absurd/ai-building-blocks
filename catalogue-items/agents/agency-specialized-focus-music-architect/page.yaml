@@ -17,8 +17,8 @@ when:
   - You need different music for different jobs, such as careful reading, coding or a rush task.
   - You make a focus app, video or stream and need a set of matching background tracks.
 not_for:
-  - "You want a song with lyrics, or a catchy music bed for a video: use the Suno song and music bed prompt writer."
-  - "You want music for a game that changes with play: use the Game Audio Engineer agent."
+  - "You want a song with lyrics, or a catchy music bed for a video: use the Suno music prompt writer."
+  - "You want music for a game that changes with play: use the Game audio engineer."
   - "You want a voice or narration: use the ElevenLabs voice description writer or the Voiceover maker."
   - "You want proof that music treats stress, sleep, ADHD or any health condition. This agent makes no health claims: ask a qualified professional."
   - "You want licensed tracks for a business: use a music library and check its licence."

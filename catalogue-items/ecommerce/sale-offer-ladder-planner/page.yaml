@@ -18,7 +18,7 @@ when:
   - You need to clear slow stock without hurting profit on your best sellers.
   - You sell subscriptions and do not want a sale to make subscribers cancel.
 not_for:
-  - "You only want to know if one discount still makes money: use the Discount impact checker."
+  - "You only want to know if one discount still makes money: use the Discount margin and ad-cost checker."
   - "You want a long-term plan for subscription pricing and perks: use the Subscription offer designer."
   - "Your team cannot change offers mid-sale: pick one fixed offer and run it, or ask a person who runs your ads."
 

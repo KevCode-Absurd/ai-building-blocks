@@ -20,10 +20,10 @@ when:
   - Reported share compensation expense and the cash cost are far apart and you need to explain why.
   - Option exercise proceeds may be counted in two places.
 not_for:
-  - You only need weighted shares and basic EPS. Use the Weighted-average share schedule on its own.
-  - You only need option dilution. Use the Treasury-stock option dilution skill on its own.
-  - You want basic and diluted EPS tested against reported EPS across several instruments. Use the Reconcile basic and diluted issuer EPS workflow.
-  - You want to link buybacks to owner cash. Use the Reconcile buybacks with owner cash workflow.
+  - You only need weighted shares and basic EPS. Use the Weighted share count calculator on its own.
+  - You only need option dilution. Use the Employee option dilution calculator skill on its own.
+  - You want basic and diluted EPS tested against reported EPS across several instruments. Use the Basic and diluted earnings per share checker workflow.
+  - You want to link buybacks to owner cash. Use the Share buyback accounting checker workflow.
 you_give:
   - Share-based award notes, with terms for each award class (from the annual report notes)
   - Average market prices for each period (from your price source, with dates)

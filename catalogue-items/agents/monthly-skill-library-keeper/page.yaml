@@ -17,7 +17,7 @@ when:
 not_for:
   - "You want a one-off check of one new skill: use the Skill file validator, which covers that alone."
   - "You have no skills yet: write your first skill by hand, then come back once you have a folder."
-  - "You want a failed skill fixed: use the Prompt and skill tuner, then run this agent again next month."
+  - "You want a failed skill fixed: use the Prompt and skill improvement tester, then run this agent again next month."
 you_give:
   - The folder of skills, each with its SKILL.md
   - Which ones came from outside (optional)

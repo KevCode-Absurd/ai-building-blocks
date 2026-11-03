@@ -23,7 +23,7 @@ when:
 
 not_for:
   - You have no script yet. Write one first with the Paper craft video ad script writer.
-  - Your ad has no paper look. For clay figures, use the Clay town video clip prompt writer. For flat cutout figures, use the Paper cutout explainer video clip prompt writer.
+  - Your ad has no paper look. For clay figures, use the Clay town video clip prompt writer. For flat cutout figures, use the Paper cutout explainer clip prompt writer.
   - You want one still image. Use the Paper craft image ad maker.
   - You have no product photos and no label text. It still writes prompts, but marks the product sheet check as still to do.
 

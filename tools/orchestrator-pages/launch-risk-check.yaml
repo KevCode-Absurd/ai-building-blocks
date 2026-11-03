@@ -17,7 +17,7 @@ when:
 not_for:
   - "You change one system with one owner: use a plain test plan and a rollback note instead."
   - "You need a project schedule or task list: use a project planning tool or ask a project manager."
-  - "You want to design code changes after the check: use the Structure and behaviour change splitter once you have the plan."
+  - "You want to design code changes after the check: use the Process and behavior change planner once you have the plan."
 you_give:
   - What is launching, the date and what success looks like
   - The parts, teams and suppliers involved, as far as you know them

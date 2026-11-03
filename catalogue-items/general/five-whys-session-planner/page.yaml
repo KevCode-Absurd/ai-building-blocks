@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have a one-off error with a known fix: just fix it and tell the people it touched."
   - "You want to run the review and find the cause: use the Root cause finder."
-  - "You need to pick and size the fixes after the review: use the Proportional fix planner."
+  - "You need to pick and size the fixes after the review: use the Problem response planner."
 you_give:
   - What went wrong, when, and who noticed
   - Your team and how they get on (optional)

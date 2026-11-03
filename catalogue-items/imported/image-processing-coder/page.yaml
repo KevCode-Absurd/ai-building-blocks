@@ -17,8 +17,8 @@ when:
   - You want to align or stitch several images into one.
   - You are unsure which MATLAB function suits your image problem.
 not_for:
-  - "You work with DICOM or NIfTI medical scans: use the Medical scan reader instead."
-  - "You have hyperspectral data or factory defect inspection: use the Spectral image analyst or the Machine vision inspector builder."
+  - "You work with DICOM or NIfTI medical scans: use the MATLAB medical image file reader instead."
+  - "You have hyperspectral data or factory defect inspection: use the Spectral image analyst or the MATLAB machine vision inspector builder."
   - "You need point clouds, 3-D reconstruction, video stabilization or code generation: use Computer Vision Toolbox or MATLAB Coder directly."
 you_give:
   - A sample image or a description of it

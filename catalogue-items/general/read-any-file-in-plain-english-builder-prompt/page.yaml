@@ -18,7 +18,7 @@ when:
   - "You are learning to read code and want to practise on files from your own project."
 
 not_for:
-  - "You have no project folder and only want to paste a snippet into a chat: use the Code explainer for newcomers."
+  - "You have no project folder and only want to paste a snippet into a chat: use the Code explainer for beginners."
   - "You want a guide for a whole team, with the reason beside every piece: use the Code walkthrough writer."
   - "You want the file changed, fixed or tested. This prompt only explains."
   - "The file is a document, a spreadsheet or a picture, not code. This prompt only reads code."

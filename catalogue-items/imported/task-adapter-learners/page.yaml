@@ -19,7 +19,7 @@ when:
 not_for:
   - "You want to find out what a student needs: ask your SENCO or a specialist, because this tool does not diagnose anyone."
   - "A student already has a support plan: start with the school's plan, then use this to shape one task."
-  - "You need a whole lesson plan adapted for English language learners: use the ELL lesson adapter."
+  - "You need a whole lesson plan adapted for English language learners: use the English learner lesson adapter."
   - "You need a task made from scratch: write the task first, or ask your AI to draft one, then bring it here."
 you_give:
   - The original task

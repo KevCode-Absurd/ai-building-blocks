@@ -20,10 +20,10 @@ when:
 not_for:
   - "You want sprint status or an update on one ticket: use your project tracker, or the Sprint plan writer for sprint plans."
   - "You want release notes from commit messages with a version bump: use the Release notes writer."
-  - "You want to rewrite a list of features as goals: use the Feature roadmap to outcomes rewriter."
+  - "You want to rewrite a list of features as goals: use the Product outcome roadmap planner."
 you_give:
   - Your plans, initiatives or feature list, with any dates, owners and status
-  - Who will read the update: executives, engineers or customers
+  - "Who will read the update: executives, engineers or customers"
   - What you want written, such as a roadmap story, release notes or a changelog
   - A release date or version range (optional)
   - Your git commit messages or git access, for a changelog (optional)

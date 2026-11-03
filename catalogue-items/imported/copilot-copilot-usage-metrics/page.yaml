@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only want seat counts or the bill: use GitHub's billing page, since this skill reads usage, not cost."
   - "You are on a free or Team plan, or are not an admin: GitHub will refuse the request, so ask your admin to run it."
-  - "You want to connect other tools to your AI: use the Go MCP server generator or the Google Workspace CLI helper."
+  - "You want to connect other tools to your AI: use the Go MCP server generator or the Google Workspace command-line operator helper."
 you_give:
   - Your GitHub organization name or enterprise slug
   - Whether you want totals or one row per person

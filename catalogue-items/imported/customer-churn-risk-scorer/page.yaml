@@ -18,8 +18,8 @@ when:
   - You sell something people reorder, and you want to catch lapses early.
   - You are choosing which customers to call before a sale.
 not_for:
-  - Most of your customers buy once. There is no rhythm to measure, so use the Customer segment builder instead.
-  - You sell subscriptions or software. Use the Churn risk finder, which reads usage, support and billing data.
+  - Most of your customers buy once. There is no rhythm to measure, so use the Customer RFM segment builder instead.
+  - You sell subscriptions or software. Use the Customer cancellation risk finder, which reads usage, support and billing data.
   - You want to tag lapsed customers and export a list by a fixed number of days. Use the Lapsed customer finder.
 you_give:
   - Your store address, such as mystore.myshopify.com
@@ -28,7 +28,7 @@ you_give:
   - The minimum orders and the At Risk cut-off (optional)
 you_get:
   - A 0 to 100 churn score for each repeat customer
-  - A group for each: Active, Cooling, At Risk or Likely Churned
+  - "A group for each: Active, Cooling, At Risk or Likely Churned"
   - Each customer's usual gap and days since last order
   - Past spend of the late customers
   - A CSV you can export

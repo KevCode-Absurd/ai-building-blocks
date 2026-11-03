@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your buyers already know your brand: send them to a normal product page, or ask a copywriter for a short sales page."
   - "You sell a one-off item to people who are ready to buy: use the Shopify landing page builder."
-  - "You only want to check a page you already have: use the Landing page 30-point checker."
+  - "You only want to check a page you already have: use the 30-point landing page checker."
 you_give:
   - Your product facts, price, offers, guarantee and the claims you're allowed to make
   - The ad that sends people to the page (its first line, buyer and offer, with its image attached)

@@ -19,8 +19,8 @@ when:
 not_for:
   - "You sell one product and have no import costs: a simple P&L in a spreadsheet, or your bookkeeper, will do."
   - "You only want to know what freight and duty add to each product: use the Landed cost allocator."
-  - "You only want to see what first-time buyers cost against returning ones: use the New and returning P&L splitter."
-  - "You have only a few orders a month: the new versus returning split is not worth reading below a few hundred. Use the Store P&L builder."
+  - "You only want to see what first-time buyers cost against returning ones: use the New and returning customer profit analyst."
+  - "You have only a few orders a month: the new versus returning split is not worth reading below a few hundred. Use the Store profit and loss builder."
 you_give:
   - Supplier, freight, duty and other import invoices, with the purchase order lines
   - Your selling price for each product, if you know it

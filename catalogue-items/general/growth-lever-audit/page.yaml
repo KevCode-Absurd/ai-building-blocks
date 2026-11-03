@@ -22,7 +22,7 @@ when:
   - Your shop or service has steady sales, but you cannot say which number to move first.
 
 not_for:
-  - "You have no sales history yet, so there is nothing to size. Use the Target size back-solver to work out what has to be true to reach a goal."
+  - "You have no sales history yet, so there is nothing to size. Use the Business target calculator to work out what has to be true to reach a goal."
   - "You want the most you can spend to win one customer. Use the Customer value and spend limit calculator."
   - "You already have a list of growth ideas and want them ranked. Use the Growth idea ranker."
 

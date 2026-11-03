@@ -18,9 +18,9 @@ when:
   - A revised note adds or changes options, convertible bonds or other instruments that could dilute EPS.
   - Your reviewer asks which instruments went into diluted EPS, and why the others were left out.
 not_for:
-  - You are building a first EPS model from scratch. Use the Reconcile basic and diluted issuer EPS.
-  - You only need old EPS restated for one split or one rights issue. Use the Stock-split EPS restatement or the Rights-issue EPS adjustment.
-  - You want to judge a share buyback. Use the Cash-funded buyback EPS bridge.
+  - You are building a first EPS model from scratch. Use the Basic and diluted earnings per share checker.
+  - You only need old EPS restated for one split or one rights issue. Use the Stock split earnings adjustment calculator or the Rights issue earnings adjustment calculator.
+  - You want to judge a share buyback. Use the Cash buyback EPS checker.
   - You want a buy or sell view, or a price target. It gives neither and uses no live market data.
   - The company has not filed anything dated, such as a rumour or a draft. It works only from dated filings you supply.
 you_give:

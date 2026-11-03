@@ -18,7 +18,7 @@ not_for:
   - "Your note has no signed lower-of clause: ask a lawyer or your finance lead which price applies."
   - "You need to read what the contract means: get legal review, because this only does the arithmetic."
   - "You need the cap price worked out from a full capitalization table: use your deal lawyer or a cap table tool."
-  - "You need the simple interest on a convertible note and the shares its balance becomes: use the Convertible note interest checker instead."
+  - "You need the simple interest on a convertible note and the shares its balance becomes: use the Convertible loan interest calculator instead."
 you_give:
   - Signed instrument explicitly granting lower-of pricing, approved cap conversion price, round price, discount and converting balance. The skill needs only these five things. It does not need a buyer brief or other source text.
   - "The conversion date, plus the currency and scale used for the note conversion price."

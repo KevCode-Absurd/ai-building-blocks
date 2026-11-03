@@ -20,7 +20,7 @@ when:
 not_for:
   - You do not have MATLAB with the Financial Toolbox. The code will not run. Use the Stock and bond split planner for a plain split with no code.
   - You want CVaR or other risk measures that are not mean-variance. This skill does not cover them.
-  - You want to review bonds you already hold. Use the Bond portfolio reviewer.
+  - You want to review bonds you already hold. Use the Indian bond portfolio reviewer.
 you_give:
   - A table of past returns for each asset, or expected returns and a covariance matrix
   - Limits such as a cap per asset or sector (optional)

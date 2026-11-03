@@ -23,7 +23,7 @@ when:
 not_for:
   - You need medical advice, a dose or a medicine check. Ask the care team or a pharmacist.
   - Your relative has urgent symptoms. Call the care team or emergency services now.
-  - You want a full care plan with medicines and appointments tracked over time. Use the Aging Parent Care Companion agent.
+  - You want a full care plan with medicines and appointments tracked over time. Use the Aging parent care coordinator.
 you_give:
   - The purpose and date of the visit, and what you want from it
   - A short summary of the facts that matter, using first names or initials

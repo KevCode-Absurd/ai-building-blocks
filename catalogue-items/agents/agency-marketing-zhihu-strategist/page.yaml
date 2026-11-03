@@ -17,10 +17,10 @@ when:
   - You want a column that builds a following over six months.
   - You want answers that bring in qualified leads without sounding like an ad.
 not_for:
-  - You have no real expertise or proof to share. Zhihu readers notice. Build the proof first, or use the Social Media Strategist agent for a lighter channel.
-  - You want search ranking on Baidu. Use the Baidu SEO Specialist agent.
-  - You want quick short posts. Use the Weibo Strategist agent or the Xiaohongshu Specialist agent.
-  - You want English posts for LinkedIn. Use the LinkedIn Content Creator agent.
+  - You have no real expertise or proof to share. Zhihu readers notice. Build the proof first, or use the Social media strategist for a lighter channel.
+  - You want search ranking on Baidu. Use the Baidu SEO specialist.
+  - You want quick short posts. Use the Weibo Strategist agent or the Xiaohongshu content planner.
+  - You want English posts for LinkedIn. Use the LinkedIn content writer.
 you_give:
   - Your field, what you sell and who you want to reach
   - The topics you really know, with proof such as years of work, results you can show or published work

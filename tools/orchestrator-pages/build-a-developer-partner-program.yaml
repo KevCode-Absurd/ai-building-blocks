@@ -18,9 +18,9 @@ when:
   - You want to set partner tiers before partners start asking for special deals.
   - You want to test a partnership with one or two customers before you invest in it.
 not_for:
-  - You are selling to one large customer. Use Prepare an enterprise account plan.
-  - You need the terms and profit sums for one partner deal. Use Set up a partner deal both sides win from.
-  - You are ready to announce a partnership. Use Prepare a partner launch announcement pack.
+  - You are selling to one large customer. Use Enterprise sales and onboarding planner.
+  - You need the terms and profit sums for one partner deal. Use Partner deal profit planner.
+  - You are ready to announce a partnership. Use Partner launch announcement and approval planner.
   - Your product is not working yet, or nobody uses it. Fix that first, because a program built too early stalls.
 you_give:
   - What your platform or API does, and who builds on it today

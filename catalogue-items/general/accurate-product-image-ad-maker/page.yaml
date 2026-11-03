@@ -21,7 +21,7 @@ when:
 
 not_for:
   - You have no approved ad yet, only a product and a vague idea. Write the words first with the fact-based ad copy writer, then come back.
-  - You want six different ad ideas from one product photo. Use the six image ad prompt builder.
+  - You want six different ad ideas from one product photo. Use the Product photo ad prompt set writer.
   - You want a moving clip. Approve a still here first, then use it as the start frame in a video prompt writer.
   - You have no photos of the product and no lock lines. It still writes a prompt, but marks the photo match as still to do and shows the product closed, so expect a rough first image.
 
@@ -44,7 +44,7 @@ how_to_use:
   - Paste the approved ad, the exact words and the product facts. Rejected versions can stay in; they'll be dropped.
   - Attach your product photos as pictures, not a description, and say what each one is for.
   - Say which image tool you use, the image shape and any length limit, such as "GPT Image, 4:5, 1,000 characters".
-  - Read the prompt before you make anything. Check the lock lines match your photos, the words are spelt right, and the hands make sense: which hand holds the pack, which one tears.
+  - "Read the prompt before you make anything. Check the lock lines match your photos, the words are spelt right, and the hands make sense: which hand holds the pack, which one tears."
   - Make one image only, put your photos beside it and run the six checks. Ask for one fix at a time until it passes.
 
 how_it_works:

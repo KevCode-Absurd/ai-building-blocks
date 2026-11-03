@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a live product demo. This plans a teaching session, not a demo script.
   - You are recording a full course. This workflow plans one live session.
-  - You only need slides from an existing report. Use the Turn a report into an editable briefing deck workflow.
+  - You only need slides from an existing report. Use the Report-to-slide briefing deck builder and reviewer workflow.
   - You want to fix low sign-ups for a session you already ran. Use the Webinar promotion planner on its own, with your numbers.
 you_give:
   - The problem your audience has, in their words

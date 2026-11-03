@@ -31,10 +31,10 @@ when:
   - You do the same conversion every month and want it as a repeatable script, not hand work.
   - You need to publish data to PostGIS, a GeoPackage or ArcGIS Online and want the checks planned first.
 not_for:
-  - You need one map made once. Use the GIS Analyst agent.
-  - You need statistics on the data after it is clean. Use the Spatial Data Scientist agent.
+  - You need one map made once. Use the GIS analyst.
+  - You need statistics on the data after it is clean. Use the Spatial data scientist.
   - You need a live web map or API for the data. Use the Web GIS Developer agent.
-  - You need to read objects out of images with a model. Use the GeoAI/ML Engineer agent.
+  - You need to read objects out of images with a model. Use the Geospatial machine learning planner.
 you_give:
   - Your data sources and their formats, such as shapefile, CSV with coordinates, KML or a file geodatabase
   - Where the clean data must go and in what format

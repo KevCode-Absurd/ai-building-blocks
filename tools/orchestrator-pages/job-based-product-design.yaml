@@ -18,9 +18,9 @@ when:
   - You have a long list of feature requests and no way to choose between them.
   - You are about to name a product or range and want the name to say what it is for.
 not_for:
-  - "You do not yet know the job: write it first with the Job spec writer, then come back."
+  - "You do not yet know the job: write it first with the Customer task definition writer, then come back."
   - "You face one feature decision, not a whole product: use the Feature request screener."
-  - "You want to see who else the customer could hire for the job: use the Job rival mapper."
+  - "You want to see who else the customer could hire for the job: use the Customer alternatives researcher."
 you_give:
   - A job spec for one customer circumstance
   - Your feature wish list, with every request, and your question, such as what to build next

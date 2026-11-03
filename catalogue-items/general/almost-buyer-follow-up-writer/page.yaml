@@ -19,8 +19,8 @@ when:
   - You cannot tell which follow-up message led to a sale.
 not_for:
   - "You want to reach people who never engaged with your offer: write a first-contact email sequence by hand, or ask a person who knows your market."
-  - "You want to check an email flow you already send: use the Email sequence auditor."
-  - "You want to check consent before you email a list: use the Permission email audit."
+  - "You want to check an email flow you already send: use the Email sequence results auditor."
+  - "You want to check consent before you email a list: use the Email consent and message reviewer."
 
 you_give:
   - Your offer, with its price, terms and any real deadline

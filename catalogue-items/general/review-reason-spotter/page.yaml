@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have fewer than 20 entries: read them yourself, because a count on so few is thin."
   - "You want the full version with every check: use the Customer buying reasons finder."
-  - "You want finished ad copy: take the ranked reasons to the Ad headline ideas skill."
+  - "You want finished ad copy: take the ranked reasons to the Ad headline variation writer skill."
 you_give:
   - 20 or more reviews, emails or survey answers, numbered
   - One line on what you sell (optional)

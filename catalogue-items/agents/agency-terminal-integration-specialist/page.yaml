@@ -35,7 +35,7 @@ not_for:
   - You use a terminal library other than SwiftTerm. The plan will not fit.
   - You are building a terminal on Android, Windows or the web.
   - You want to manage servers or shells on the server side. This agent plans the part that runs on the device only.
-  - You are planning the whole Apple app. Use the Desktop App Engineer agent or the Mobile App Builder agent.
+  - You are planning the whole Apple app. Use the Desktop App Engineer agent or the Mobile app builder.
 you_give:
   - The platforms the app runs on, such as iOS, macOS or visionOS
   - How the app is built, such as SwiftUI or UIKit

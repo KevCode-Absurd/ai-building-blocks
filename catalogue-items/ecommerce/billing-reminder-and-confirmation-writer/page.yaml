@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your cancels come from product fit or slow shipping: fix that first, because these emails will not change it. Ask a few cancelled customers why they left."
   - "You need the flow for what happens after someone clicks cancel: use the Subscription cancel flow builder."
-  - "You need a gift plan for your subscribers: use the Subscriber retention calendar, then bring the gift schedule here."
+  - "You need a gift plan for your subscribers: use the Subscriber retention calendar planner, then bring the gift schedule here."
 
 you_give:
   - Your subscription products and plans, and which order number each gift or perk lands on

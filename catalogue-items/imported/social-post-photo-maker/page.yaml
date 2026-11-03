@@ -38,7 +38,7 @@ how_to_use:
   - The skill file is in Chinese, with an English summary at the top. The example images it points to (in a docs folder) are not included here, so use your own outfit and scene photos.
   - Make three or four images per scene. Pick the most natural pose.
   - Check each image for swapped items, odd hands and a busy background. Add a fix line to the prompt and run again if needed.
-  - Required before you post: label the images as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion. The person in the photo is invented. Do not present them as a real customer or as someone who endorses your product.
+  - "Required before you post: label the images as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion. The person in the photo is invented. Do not present them as a real customer or as someone who endorses your product."
   - Next, save each set in a folder named for the scene, pick one image to post, and note which pose and prompt worked so you can reuse them.
 output_sample:
   input:

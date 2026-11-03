@@ -18,9 +18,9 @@ when:
   - An ad tested badly and you suspect the format, not the words.
   - You're choosing between a person on camera, animation and an image ad for the same idea.
 not_for:
-  - "Your script is still being written: use the Video ad script writer from customer quotes first, then come back."
+  - "Your script is still being written: use the Customer quote video ad writer first, then come back."
   - "You want a written script in a style you already chose: use the matching script skill named in your result, such as selfie-style-ad-script."
-  - "You only need a still image ad: use single-image-ad-planner or carousel-ad-writer instead."
+  - "You only need a still image ad: use Single image ad planner or carousel-ad-writer instead."
   - "You want formats and hooks for short organic videos from your product: use the Short video format picker."
 
 you_give:

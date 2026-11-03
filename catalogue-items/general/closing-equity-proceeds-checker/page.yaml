@@ -18,9 +18,9 @@ when:
   - Someone says debt was taken off twice, and you want to see where.
   - You sold your company and want to follow each step from deal price to your cash.
 not_for:
-  - You need the later price change for working capital. Use the Working capital true-up checker.
-  - You want to know how much escrow can be released. Use the Escrow release checker.
-  - You want to see how adviser fee tiers change the proceeds. Use the Adviser fee tier checker, or run the Check adviser fees in seller proceeds workflow.
+  - You need the later price change for working capital. Use the Sale working capital settlement checker.
+  - You want to know how much escrow can be released. Use the Escrow release balance checker.
+  - You want to see how adviser fee tiers change the proceeds. Use the Deal adviser fee checker, or run the Seller adviser fee and proceeds checker workflow.
   - You want to value the business. The deal price is an input here. This skill does not work it out.
 you_give:
   - The deal price (enterprise value), the closing cutoff date and the currency and units, from the signed agreement

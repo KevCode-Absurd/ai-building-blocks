@@ -15,7 +15,7 @@ when:
   - You sell in a crowded category and every rival's ad sounds the same.
   - You want a new market for an existing product, but have no proof it works for them.
 not_for:
-  - "You only want a map of who your rivals sell to: use the Job rival mapper."
+  - "You only want a map of who your rivals sell to: use the Customer alternatives researcher."
   - "You already know your buyer and only want the ad copy: use the Fact-based ad copy writer."
   - "You have no product yet or no proof it helps anyone: talk to a few real buyers first, then come back."
 you_give:

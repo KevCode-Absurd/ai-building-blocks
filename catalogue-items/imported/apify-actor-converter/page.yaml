@@ -19,7 +19,7 @@ when:
   - You want to publish your tool in the Apify Store so others can run it.
 not_for:
   - "You have only an idea for a scraper and no code yet: use the Apify Actor builder."
-  - "Your Actor already exists and you only need its results file described: use the Apify output schema writer."
+  - "Your Actor already exists and you only need its results file described: use the Apify result table schema writer."
   - "The code must stay on your own servers: run it there directly. This skill is only for Apify's cloud."
   - "You cannot run commands on your computer: ask a developer to do the steps with you."
 you_give:

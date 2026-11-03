@@ -21,8 +21,8 @@ when:
   - You need to decide where your free plan ends and your paid plan starts.
 not_for:
   - You want the whole free plan designed, with limits and upgrade prompts. Use the Free plan designer.
-  - You are pricing physical products in a store. Use the Pricing decision planner or the Waterfall price setter.
-  - You have a price test running and need to read the result. Use the Price test keeper.
+  - You are pricing physical products in a store. Use the Pricing decision planner or the Minimum viable price calculator.
+  - You have a price test running and need to read the result. Use the Price test results reviewer.
 you_give:
   - What the product is, such as an API, developer tool or SaaS app
   - Your current prices and how long they have stood
@@ -37,7 +37,7 @@ you_get:
   - A raise, hold or restructure verdict
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
-  - Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost.
+  - "Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost."
   - Ask for the value check first. Give your best estimate of what a customer would otherwise spend on the problem. If you do not know what the alternative costs, ask the skill to run its questions first to find it, before the value check.
   - Ask for the model pick, the free line and the enterprise call plan. Fix any line marked MISSING with real numbers.
   - Treat the price multiples and the raised-price story in the skill as the author's experience, not proof for your product.

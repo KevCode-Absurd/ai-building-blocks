@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
   - State your point in a line or two. Say who the channel's audience is and whether the tone is formal or casual.
-  - Say which kind of post you want: a message, a thread reply or a canvas. If you are not sure, your AI picks by length.
+  - "Say which kind of post you want: a message, a thread reply or a canvas. If you are not sure, your AI picks by length."
   - Add any links or people to mention. Slack needs the user ID for a mention, so write the name and fix it before you send.
   - A Slack connector is a link between your AI and your Slack workspace, added in your AI's settings. With it, your AI can save the message as a draft in Slack for you to send, or make a canvas (a longer Slack page) for you. Without one, just ask for text you can paste into Slack.
   - Get the draft. Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it yourself. Check the thread later for replies. If the update needs more detail, ask for a canvas or a short follow-up thread reply after the first post. For a longer written update, the internal update writer pairs well with this.

@@ -33,7 +33,7 @@ when:
   - You are preparing a network for a level 2 or level 3 MLPS assessment.
   - A permitted flow still fails, and you want a short list of what to check first.
 not_for:
-  - You run Cisco, Juniper or another non-Chinese vendor. Use the Network Engineer agent.
+  - You run Cisco, Juniper or another non-Chinese vendor. Use the Network engineer.
   - Your network is down right now. Call your on-call engineer or vendor support. This agent cannot see your devices.
   - You want a full security or compliance audit, or an assessor's sign-off. Use the Compliance Auditor agent. This agent covers the network part only.
   - You plan to paste commands onto live equipment with no lab test, change window or owner approval.

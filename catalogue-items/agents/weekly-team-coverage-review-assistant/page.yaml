@@ -20,8 +20,8 @@ when:
 not_for:
   - A one-off cover request for a single task. Use the Handover note writer.
   - You want a longer plan for hiring or workload. Use the Team capacity planner.
-  - You want to follow up on staff survey answers. Use the Employee feedback action review assistant.
-  - You need an end-of-shift note for a restaurant. Use the Restaurant shift exception review assistant.
+  - You want to follow up on staff survey answers. Use the Employee feedback action reviewer.
+  - You need an end-of-shift note for a restaurant. Use the Restaurant shift handover reviewer.
 you_give:
   - Upcoming absence dates for each person, dates only (from your leave calendar)
   - Critical commitments, each with an ID, a due date, an owner and the hours it needs (from your project or task list)

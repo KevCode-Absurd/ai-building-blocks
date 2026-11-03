@@ -44,7 +44,7 @@ output_sample:
     - Your currency and fiscal year (optional)
   prerequisites:
     - An AI that can open spreadsheet files
-    - Optional: the India modeling rules checker, if you want the April to March year and lakh and crore checks. Without it the skill says what it could not check.
+    - "Optional: the India modeling rules checker, if you want the April to March year and lakh and crore checks. Without it the skill says what it could not check."
   output:
     - name: Summary line
       contains: "For model scope only: the model type, an overall rating, and the count of critical, warning and info findings."

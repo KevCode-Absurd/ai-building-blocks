@@ -21,7 +21,7 @@ when:
   - The answer will go to a client or a boss, so you want it checked twice.
 not_for:
   - Your question has one checkable answer, like a date or a sum. Ask one AI, or use the AI answer fact-checker.
-  - You want to test one claim from many sides. Use the Claim stress tester or the Strategy Duel agent instead.
+  - You want to test one claim from many sides. Use the Claim stress tester or the Turn-based strategy debate moderator instead.
   - You have no Fireworks key or cannot run code. The skill has a manual fallback, but it is a weaker version.
   - You want one fast, cheap answer. A panel makes many calls, so it costs more and takes longer.
 you_give:

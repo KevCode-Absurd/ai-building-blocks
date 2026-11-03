@@ -18,8 +18,8 @@ when:
   - The investment committee meets soon and someone will argue the other side.
   - You suspect you only gathered evidence that agreed with you.
 not_for:
-  - Your thesis is a university dissertation. Use the Prepare a thesis defence evidence brief workflow.
-  - You want a valuation or a target price. This builds none. Use the Review equity valuation sensitivity assumptions workflow to test your assumptions.
+  - Your thesis is a university dissertation. Use the Thesis defence outline and question planner workflow.
+  - You want a valuation or a target price. This builds none. Use the Equity valuation scenario reviewer workflow to test your assumptions.
   - You have no dated filings. The ledger will show claims with no evidence, but it cannot supply facts.
   - You want a buy or sell recommendation. This tests a thesis. A person makes the decision.
 you_give:

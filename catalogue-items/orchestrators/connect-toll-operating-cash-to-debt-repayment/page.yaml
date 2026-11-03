@@ -18,9 +18,9 @@ when:
   - You want to see what a traffic or collection drop does to the repayment profile.
   - You are unsure whether operating costs are being taken off twice between your model and the lender's definition.
 not_for:
-  - The project is paid a fixed availability payment. Use the Bridge availability payments into project cash workflow.
-  - You already have cash for debt service and only need repayments and cover. Use the Build a project debt service cash pack workflow.
-  - You want covenant headroom tested period by period. Use the Review contractual debt service cash tests workflow.
+  - The project is paid a fixed availability payment. Use the Project contract cash flow checker workflow.
+  - You already have cash for debt service and only need repayments and cover. Use the Project debt repayment modeler workflow.
+  - You want covenant headroom tested period by period. Use the Debt service coverage checker workflow.
   - You want a traffic forecast. This takes a traffic study as an assumption and does not produce one.
   - You have fewer or more than three years. This is built for three annual periods.
 you_give:

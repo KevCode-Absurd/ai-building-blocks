@@ -30,7 +30,7 @@ you_get:
   - Before and after code snippets
   - A verification section with build and test results
 how_to_use:
-  - Finish your coding task first. Run your build and your tests, and keep three things to paste: the task in a sentence, the diff (for example the output of git diff), and the build and test commands with their results.
+  - "Finish your coding task first. Run your build and your tests, and keep three things to paste: the task in a sentence, the diff (for example the output of git diff), and the build and test commands with their results."
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Paste the task, the changed files or diff, and the real build and test output. Add your reasons for key choices if you have them.
   - Ask your AI to write the report. Tell it to write 'not run' for any check you skipped.

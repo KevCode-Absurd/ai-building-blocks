@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your ad depends on motion you watch finish, like a pour or a before and after: use the Best ad in a new format skill for a video remake."
   - "You want to reword or shorten the ad: this keeps every word unchanged, so rewrite the script first."
-  - "You have no working ad yet: write a script first with the Video ad script writer from customer quotes."
+  - "You have no working ad yet: write a script first with the Customer quote video ad writer."
 
 you_give:
   - The original ad, with a screenshot of each shot, plus every spoken word, on-screen line and the post text

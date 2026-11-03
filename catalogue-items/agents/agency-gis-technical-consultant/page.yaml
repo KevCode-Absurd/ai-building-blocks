@@ -17,8 +17,8 @@ when:
   - You are replacing AutoCAD files, a legacy GIS or spreadsheets with a proper system.
   - You are writing the technical part of an RFP or a bid.
 not_for:
-  - "You need someone to open ArcGIS Pro and build a map: use the GIS Analyst agent."
-  - "You need a working demo to show: use the Solution Engineer agent."
+  - "You need someone to open ArcGIS Pro and build a map: use the GIS analyst."
+  - "You need a working demo to show: use the GIS solution designer."
   - "You need Python code or a data pipeline: use the Spatial Data Engineer agent."
   - "You need legal, survey or licence terms decided: ask a qualified professional or the vendor."
 you_give:

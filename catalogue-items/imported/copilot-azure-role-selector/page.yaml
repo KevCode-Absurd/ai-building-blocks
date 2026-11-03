@@ -20,12 +20,12 @@ when:
 not_for:
   - You need an Entra ID directory role, such as managing users or groups. Those are not Azure roles.
   - Access is set by a storage key, a shared access signature or an old Key Vault access policy. Change that setting instead.
-  - You want to check your whole setup against good practice. Use the Azure workload practice reviewer.
+  - You want to check your whole setup against good practice. Use the Azure architecture reviewer.
   - You want to check a Bicep file before you deploy it. Use the Bicep deployment preflight checker.
 you_give:
   - The identity that needs access, such as an app, a group or a person
   - What it must do, in plain words
-  - The scope: subscription, resource group or one resource
+  - "The scope: subscription, resource group or one resource"
   - What it must never do (optional)
   - An AI with the Azure MCP tools connected, and an Azure subscription
 you_get:

@@ -18,9 +18,9 @@ when:
   - You want an honest answer to whether a feature is good enough to ship.
   - You need to test a first-run flow before launch.
 not_for:
-  - "You need a usability audit of screens and flows: use the Usability heuristic reviewer."
+  - "You need a usability audit of screens and flows: use the Website usability reviewer."
   - "You need a pricing, legal or compliance review of a finished product: ask a specialist in that area."
-  - "You only want to polish visual style or small details: use the Visual hierarchy fixer for visual design or the Small interface details designer for detail polish."
+  - "You only want to polish visual style or small details: use the Visual hierarchy fixer for visual design or the Interface interaction details designer for detail polish."
 you_give:
   - A description, screenshots or link to the product or feature
   - Who the customer is

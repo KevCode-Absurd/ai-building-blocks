@@ -19,8 +19,8 @@ when:
   - You see a lookalike of your store name and want to know what to protect.
 not_for:
   - "You want to plan your domain layout or redirects: use the Domain and DNS planner."
-  - "You want rules for staff to spot fake email addresses: use the Staff phishing rules briefer."
-  - "You want headers and HTTPS checks for your site pages: use the Website security check skill."
+  - "You want rules for staff to spot fake email addresses: use the Staff phishing awareness trainer."
+  - "You want headers and HTTPS checks for your site pages: use the Website security baseline checker skill."
 
 you_give:
   - Every domain and subdomain you know of, with where each points

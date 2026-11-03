@@ -7,7 +7,7 @@ job: study-and-practice
 headline: Study notebook review
 subhead: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.
 not_for:
-  - "You have a brand-new topic and no lesson notes yet: build the lessons first with the personal study notebook, then come back here."
+  - "You have a brand-new topic and no lesson notes yet: build the lessons first with the Personal study planner, then come back here."
   - "You want a quick one-off quiz on a topic: ask your AI for a short quiz and skip the notebook."
   - "Your notes have no review dates and no dashboard: set those up first, or this skill has no queue to read."
 explain: Give it the lesson notes and review dates from your study notebook. It asks what you recall before showing the notes, then checks the gaps. You get feedback, fresh review dates and a mixed quiz across the topics you revisited.

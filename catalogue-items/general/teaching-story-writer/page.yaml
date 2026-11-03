@@ -21,7 +21,7 @@ when:
   - "You want a funny way to explain a mistake without blaming anyone."
 not_for:
   - "You need a true incident report or anything that must be accurate: use a real case, told as it happened."
-  - "You want a story built from a real customer or team case: use the Case-first story builder."
+  - "You want a story built from a real customer or team case: use the Case study story planner."
   - "You need a plain checklist or rule sheet people can look up: write a short list by hand instead."
 
 you_give:

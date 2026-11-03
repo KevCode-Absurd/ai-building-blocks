@@ -19,8 +19,8 @@ when:
   - You are about to buy reserved instances or a savings plan and want to check it is safe to commit.
   - You want to see cloud cost per customer or per order, not only the total.
 not_for:
-  - You want to review your monthly cloud and AI bills as a routine. Use the Monthly cloud and AI bill keeper.
-  - You want to cap what your app spends on AI model calls. Use the Autonomous Optimization Architect agent.
+  - You want to review your monthly cloud and AI bills as a routine. Use the Cloud and AI bills, waste and spend limits.
+  - You want to cap what your app spends on AI model calls. Use the AI model routing planner.
   - You want real-time cost alerts or budget changes made for you. Use your cloud provider's own cost tools. This agent writes a plan only.
   - You want reliability goals and alerts for a service. Use the SRE agent.
 you_give:

@@ -97,6 +97,7 @@ output_sample:
   prerequisites:
     - The signed financing documents, so the commitment and milestone conditions are the real ones
     - An AI that can make files, if you want the workbook (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scope and dated sources
       contains: The date, currency and units, and the source and date of each figure.

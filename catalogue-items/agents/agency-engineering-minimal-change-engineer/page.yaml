@@ -29,9 +29,9 @@ when:
   - You need one small feature, such as a flag or a field, with no redesign.
   - Your AI coding tool keeps changing files you never asked about.
 not_for:
-  - You want to restructure or rename across many files. For Rust, use the Rust Refactoring Specialist agent, which is built for whole-repo changes.
+  - You want to restructure or rename across many files. For Rust, use the Rust refactoring planner, which is built for whole-repo changes.
   - You want code that already exists checked for problems. Use the Code Reviewer agent.
-  - You want a new system designed or a rough app built fast. Use the Software Architect agent or the Rapid Prototyper agent.
+  - You want a new system designed or a rough app built fast. Use the Software architect or the Software prototype designer.
   - You can't say what is wrong or what you want. Tell the agent that, and expect questions, not a fix.
 you_give:
   - The task in one or two sentences, worded as you would tell a teammate

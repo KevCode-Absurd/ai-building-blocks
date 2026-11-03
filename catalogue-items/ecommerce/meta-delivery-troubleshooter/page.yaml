@@ -20,7 +20,7 @@ when:
 not_for:
   - You have less than 7 days of results, or spend under about $1,000 a day. Wait and collect more data, then run it again.
   - You want to plan how to lay out campaigns and ad sets. Use a Meta account structure planner if you have one, or ask a media buyer.
-  - You only want to know whether to keep or cut one campaign. Use the Campaign keep-or-change checker.
+  - You only want to know whether to keep or cut one campaign. Use the Ad change decision checker.
 
 you_give:
   - "Symptoms with numbers: frequency, click rate, CPM, cost per sale and spend by ad"

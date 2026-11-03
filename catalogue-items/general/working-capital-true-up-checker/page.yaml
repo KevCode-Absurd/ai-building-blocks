@@ -20,8 +20,8 @@ when:
 not_for:
   - The purchase agreement has a cap, a collar or a basket on the adjustment. Ask a lawyer or accountant. This is plain dollar-for-dollar only.
   - The final working capital is still in dispute. Use the figure only once it is agreed, or label it proposed.
-  - You want what the seller receives at closing in total. Use the Closing equity proceeds checker.
-  - You want to release escrow after the true-up. Use the Escrow release checker.
+  - You want what the seller receives at closing in total. Use the Business sale proceeds checker.
+  - You want to release escrow after the true-up. Use the Escrow release balance checker.
 you_give:
   - The working capital peg (from the purchase agreement)
   - The estimated working capital used at closing (from the closing statement)

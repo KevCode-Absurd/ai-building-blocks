@@ -19,7 +19,7 @@ when:
   - You want to push a popular collection with its own Search ad group and page.
 not_for:
   - "You want to reach people who already visited your site: use the Google remarketing campaign builder."
-  - "You want to write or score the first line of an ad: use the Ad first line writer and scorer."
+  - "You want to write or score the first line of an ad: use the Ad opening writer and reviewer."
   - "You want a campaign for people who search your brand name: set up a separate branded Search campaign in Google Ads, or ask your ads person."
 
 you_give:

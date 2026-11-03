@@ -22,7 +22,7 @@ when:
 not_for:
   - "Your screen is a dense data table or trading view: flat greys can hide what matters, so use the Interface polish checker to find spacing and type slips instead."
   - "You want a bold look that is different for every client: use the Interface designer, which picks a fresh visual direction for each brief."
-  - "You already have a brand system or component library: use the Interface upgrader to fix what is generic without replacing your system."
+  - "You already have a brand system or component library: use the Interface improvement reviewer to fix what is generic without replacing your system."
 you_give:
   - A short description of the screen or product, and who uses it
   - Your real wording for headings, labels and body text

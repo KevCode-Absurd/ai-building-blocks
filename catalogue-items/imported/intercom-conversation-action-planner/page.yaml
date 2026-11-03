@@ -20,7 +20,7 @@ when:
 not_for:
   - You have fewer than five open chats. Read them yourself in Intercom.
   - You use Gorgias, Zendesk, Freshdesk or Zoho Desk. Use the Gorgias support queue action planner, the Zendesk ticket priority planner, the Freshdesk ticket priority planner or the Zoho Desk ticket priority planner.
-  - You want a first reply to a WhatsApp chat. Use the WhatsApp support reply assistant.
+  - You want a first reply to a WhatsApp chat. Use the WhatsApp support reply writer.
   - You have a pasted batch of tickets and no Intercom link. Use the Support ticket sorter.
 you_give:
   - Your Intercom account, linked through Composio

@@ -33,10 +33,10 @@ when:
   - A chart you made may be misleading, such as a bar chart that does not start at zero.
   - Your chart must work for colour-blind readers, on a screen reader or in a black and white print.
 not_for:
-  - "You want the chart drawn from your data now: use the Data chart drawer or the Chart maker."
+  - "You want the chart drawn from your data now: use the Data chart maker or the Chart maker."
   - "You want a dashboard file people can open offline: use the Offline dashboard builder."
   - "You want an existing PowerPoint chart rebuilt so you can edit it: use the PowerPoint editable chart rebuilder."
-  - "You want a report that explains what your numbers say in words: use the Analytics Reporter agent."
+  - "You want a report that explains what your numbers say in words: use the Analytics report writer."
 you_give:
   - The question the chart must answer, in one sentence
   - A list of your columns, what each holds, and how many rows you have

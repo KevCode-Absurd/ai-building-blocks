@@ -20,7 +20,7 @@ when:
 not_for:
   - Your site already runs on a host that works for you. Moving it adds risk with no gain.
   - You want a different host. Use the Netlify publisher, Vercel publisher or Render publisher.
-  - You need to check that the live site is the new version. Use the Deploy verifier after you publish.
+  - You need to check that the live site is the new version. Use the Release readiness and live version checker after you publish.
   - You have no Cloudflare account and do not want to make one. Make the account first, since the skill cannot do it for you.
 you_give:
   - Your project folder

@@ -33,7 +33,7 @@ you_get:
   - A 0 to 10 diagnostic score with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. It needs no code, files or paid tools.
-  - Gather first: a product description, your current users and why they like it, a named list of the candidate segments, and any partners (optional). Your AI needs these to write a complete brief.
+  - "Gather first: a product description, your current users and why they like it, a named list of the candidate segments, and any partners (optional). Your AI needs these to write a complete brief."
   - Paste them in, one item per heading, and add your partners and references if you have them.
   - Ask your AI to pick one beachhead segment and score you with the quick diagnostic.
   - Check the result against what you know about your customers. Fill in any messaging templates with real customer words before you use them.

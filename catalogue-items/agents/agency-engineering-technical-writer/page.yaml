@@ -18,7 +18,7 @@ when:
   - An engineer sends rough notes, and you need a clean how-to for other developers.
 not_for:
   - You need release notes, a changelog or a decision record. Use the Technical writer.
-  - You already have a doc and want its false claims and drift from the code found. Use the Documentation checker.
+  - You already have a doc and want its false claims and drift from the code found. Use the Documentation accuracy reviewer.
   - You want docstrings and a README written straight from a repo by a tool that reads the code. Use the Code documentation writer.
 you_give:
   - What you are documenting, such as a feature, API endpoint, library or setup process

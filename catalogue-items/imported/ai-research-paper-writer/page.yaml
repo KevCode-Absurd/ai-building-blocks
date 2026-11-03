@@ -16,7 +16,7 @@ when:
   - You want a reference list you can trust.
   - You are rewriting a rejected paper for a different venue.
 not_for:
-  - "You are writing for a systems venue such as OSDI, NSDI, ASPLOS or SOSP: use the systems-paper-writing skill instead."
+  - "You are writing for a systems venue such as OSDI, NSDI, ASPLOS or SOSP: use the Systems paper writer skill instead."
   - "Your experiments are not final yet: finish the runs first, because the draft is built on your real results."
   - "You only need a quick summary of a paper you read: ask your AI for a plain summary instead."
 you_give:

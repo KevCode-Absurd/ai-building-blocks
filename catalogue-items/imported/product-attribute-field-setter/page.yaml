@@ -36,7 +36,7 @@ how_to_use:
   - Read the planned fields and the value preview. Check that each value is true for its product.
   - Run it again with dry_run off to write the fields and values to your store.
   - Fill in any blank values by hand. The skill leaves a field empty when it is not sure.
-  - Next steps: open the CSV of filled values and check a sample against your store. Then run the Product description enricher as a separate task to make the descriptions match the new fields.
+  - "Next steps: open the CSV of filled values and check a sample against your store. Then run the Product description enricher as a separate task to make the descriptions match the new fields."
 output_sample:
   input:
     - Your store domain

@@ -20,7 +20,7 @@ not_for:
   - A patient describes chest pain, trouble breathing, stroke signs, heavy bleeding or thoughts of self-harm. Follow your emergency steps first. In the US that means 911, or 988 for a crisis line. Elsewhere use your local number.
   - A patient asks what a symptom means, whether to take a drug or what a test result says. Send it to clinical staff. This agent never gives clinical advice.
   - You want to check an app or data use against health privacy rules. Use the Health data privacy checker.
-  - The customer is not a patient, such as an online shopper. Use the Customer Service agent.
+  - The customer is not a patient, such as an online shopper. Use the Customer service writer.
   - You would have to paste identifiable patient data into a tool your organisation has not approved. Remove the identifiers first.
 you_give:
   - The patient's message, with names, dates of birth, record numbers, phone numbers and addresses removed

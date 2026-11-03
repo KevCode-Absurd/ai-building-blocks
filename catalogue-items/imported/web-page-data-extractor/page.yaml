@@ -21,8 +21,8 @@ when:
   - You need every job, event or listing from a results page in one clean file.
 not_for:
   - "The site has an official API or a download button: use that, it is faster and allowed."
-  - "You want the brand voice and product facts from one page: use the product page brand profile extractor."
-  - "Your file is already on your computer and is messy: use the data file clean-up loop."
+  - "You want the brand voice and product facts from one page: use the Product-page brand analyst."
+  - "Your file is already on your computer and is messy: use the Spreadsheet and CSV cleaner."
   - The data is behind a login, or the site blocks bots. It will stop and tell you, not work around it.
 you_give:
   - One or more page links, such as a category page or a results page

@@ -27,9 +27,9 @@ you_get:
   - Required files, setup gaps and test cases
 how_to_use:
   - Paste the text of SKILL.md into Claude, ChatGPT or Gemini. Use Claude Code or Codex if you want it to read your project files.
-  - Attach or open your repository, then answer the inputs it asks for: customer ID, date range, currency, ROAS or CPA targets and your spending limit.
+  - "Attach or open your repository, then answer the inputs it asks for: customer ID, date range, currency, ROAS or CPA targets and your spending limit."
   - Check the brief against your own facts before you use it.
-  - Next: give the brief to a developer or your coding AI. Review every proposed move with the budget owner before anything is changed in Google Ads.
+  - "Next: give the brief to a developer or your coding AI. Review every proposed move with the budget owner before anything is changed in Google Ads."
 output_sample:
   input:
     - Your code project, or its schema and file layout

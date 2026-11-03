@@ -19,7 +19,7 @@ not_for:
   - "You have a simple one-step request: just type it to your AI as a normal prompt."
   - "You want the agent to do the job itself: run the goal in your agent tool, since this only writes the goal."
   - "You want to run a goal loop inside an agent tool that has its own goal feature: use that tool's own goal loop. This skill only writes the text."
-  - "You want a short goal fast, with fewer checks: use the Job to agent goal writer."
+  - "You want a short goal fast, with fewer checks: use the AI task brief writer."
 you_give:
   - A rough description of the job
   - What you want to end up with

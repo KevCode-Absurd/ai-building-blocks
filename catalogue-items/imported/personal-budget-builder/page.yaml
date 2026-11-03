@@ -45,6 +45,7 @@ output_sample:
     - Your main money goal, such as an emergency fund or a house deposit
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini. No code is needed.
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Budget Summary
       contains: Your income, totals for Needs, Wants and Savings, a comparison with the 50/30/20 targets, and any surplus or deficit.

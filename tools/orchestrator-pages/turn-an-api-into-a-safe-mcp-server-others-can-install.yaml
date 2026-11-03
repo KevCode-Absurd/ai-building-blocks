@@ -16,7 +16,7 @@ when:
   - You are about to publish a server and want it checked first.
 not_for:
   - "You only need a quick MCP server for your own one-off script: use the API to MCP server builder skill on its own."
-  - "You already have a server and only want it checked: use the MCP server hardener skill on its own."
+  - "You already have a server and only want it checked: use the MCP server security reviewer skill on its own."
   - "You only want to add sign-in to a server you already have: use the MCP server sign-in builder skill on its own."
 you_give:
   - Your API spec (OpenAPI or similar), or the API code

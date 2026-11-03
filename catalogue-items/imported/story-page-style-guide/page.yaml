@@ -19,7 +19,7 @@ when:
   - You want accessibility rules written in before the build starts.
 not_for:
   - "You want a page built to get clicks and sign-ups fast, with offers and proof up front: use the Conversion page style guide writer."
-  - "You want a page that reads like a printed magazine with columns and big pictures: use the Magazine layout style guide writer."
+  - "You want a page that reads like a printed magazine with columns and big pictures: use the Magazine-style interface guide writer."
   - "You need rules for a product screen or dashboard, not a story: use the Minimal style guide writer or the Brand style guide writer."
 you_give:
   - A short version of your story, in a few lines

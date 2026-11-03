@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no buyers who agreed to a call: ask a few for a short call first, or read your reviews instead."
   - "You want to ask buyers what features to add: this guide never asks that, so use a short survey instead."
-  - "You have no order records, only a story to tell: use the Buying story interview guide, which starts from memory and not from order data."
+  - "You have no order records, only a story to tell: use the Customer purchase interview script writer, which starts from memory and not from order data."
 
 you_give:
   - A list of buyers who agreed to a call, each with a buyer code, order date, time, device, items and order value

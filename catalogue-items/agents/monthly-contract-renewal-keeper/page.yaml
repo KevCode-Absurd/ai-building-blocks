@@ -15,7 +15,7 @@ when:
   - A price rise arrived in a terms update and you found out from the invoice.
   - You want to renegotiate supplier terms and need the asks ready before the call.
 not_for:
-  - "You have one new contract to read before signing: use the Contract intake reviewer."
+  - "You have one new contract to read before signing: use the Contract clause risk reviewer."
   - "You need legal advice on a dispute or a breach: ask a lawyer."
   - "You want it to renew, cancel or email a vendor for you: do that yourself, as this agent never acts."
 you_give:

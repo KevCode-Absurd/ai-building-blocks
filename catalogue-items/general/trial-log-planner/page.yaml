@@ -21,7 +21,7 @@ when:
 not_for:
   - "You have one choice to make with a clear answer: use the Reversible decision sorter or the Pros and cons decision planner."
   - "You want to test one change on a live page or ad: use the One-change experiment planner."
-  - "You want to test a business guess with real people: use the Smallest test picker."
+  - "You want to test a business guess with real people: use the Minimum experiment planner."
 
 you_give:
   - The result you want to get working, and who would pay for it

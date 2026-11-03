@@ -33,10 +33,10 @@ when:
   - You need an Excel file with formulas and charts made from a list of records.
   - You want a Word template with real styles, a table of contents and headers.
 not_for:
-  - You want a plain file built from a JSON spec with PaperJSX and no tool choice. Use the Document file generator.
-  - You have a web page that must become a perfect PDF. Use the HTML to PDF layout architect agent.
-  - You have a YAML or JSON file with unknown fields and need layout rules. Use the YAML and JSON to PDF document agent.
-  - You need to read or fill PDFs you already have. Use the PDF toolkit.
+  - You want a plain file built from a JSON spec with PaperJSX and no tool choice. Use the JSON document file generator.
+  - You have a web page that must become a perfect PDF. Use the PDF layout designer.
+  - You have a YAML or JSON file with unknown fields and need layout rules. Use the Document layout engine designer.
+  - You need to read or fill PDFs you already have. Use the PDF file editor.
   - The file is a contract, medical or financial filing. A qualified person must review it before it goes out.
 you_give:
   - What the document is for and who reads it

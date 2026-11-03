@@ -18,7 +18,7 @@ when:
   - A team argument about priorities needs a neutral list to look at.
   - You want cheap tests for the few assumptions that could sink a new product.
 not_for:
-  - You only have a plan, not a list. Use the Leap-of-faith assumption finder or the Plan guess ranker to pull the assumptions out first.
+  - You only have a plan, not a list. Use the Startup assumption checker or the Business assumption test planner to pull the assumptions out first.
   - You want to attack one assumption in depth. Use the Business assumption stress tester.
   - Your customers already tell you what they want, through sales data or interviews. Read that evidence first, then rank what is still unknown.
 you_give:
@@ -29,7 +29,7 @@ you_get:
   - Each assumption scored for impact and risk, marked as an estimate or as based on your data
   - A four-box matrix showing where each one lands
   - A test for each high-impact, high-risk assumption, with a metric and a pass line
-  - A call on each assumption: test, build, wait or drop
+  - "A call on each assumption: test, build, wait or drop"
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill.
   - Paste your idea in a sentence or two, then your assumptions, one per line. Add any real numbers you have.

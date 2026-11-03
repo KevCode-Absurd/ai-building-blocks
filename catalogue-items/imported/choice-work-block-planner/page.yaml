@@ -30,7 +30,7 @@ you_get:
   - Notes on how to open and close the session
   - Ways to support students who struggle to choose
 how_to_use:
-  - Licence: this skill is by Gareth Manning, under CC BY-SA 4.0. Keep the credit, and share any changes you publish under the same licence.
+  - "Licence: this skill is by Gareth Manning, under CC BY-SA 4.0. Keep the credit, and share any changes you publish under the same licence."
   - Open Claude, ChatGPT or Gemini. Paste in the full skill text from the SKILL.md file in this item. It has fields in double curly brackets, such as {{available_time}} and {{learning_activities}}. Your AI fills each one from what you say next.
   - Tell your AI the real length of your time block.
   - List the activities students can choose from. Add class size, age and your worries if you like. Anything you skip is marked not provided.

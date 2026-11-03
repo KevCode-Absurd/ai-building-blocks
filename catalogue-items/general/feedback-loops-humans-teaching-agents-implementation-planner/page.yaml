@@ -16,7 +16,7 @@ when:
   - You want an agent's rules improved from real feedback, with a person approving each change.
   - You have a starter reaction handler and need to know what it is missing before you rely on it.
 not_for:
-  - You want an agent to score its own past predictions against what happened. Use the Agent prediction review builder.
+  - You want an agent to score its own past predictions against what happened. Use the Agent prediction log builder.
   - You only need to change one rule once. Edit the agent's rules file by hand.
   - You want to collect feedback from customers. Use a survey tool. This skill is for your own team's reactions to agent output.
   - You want the agent to rewrite its own live rules. It only drafts lessons. A person approves each one.

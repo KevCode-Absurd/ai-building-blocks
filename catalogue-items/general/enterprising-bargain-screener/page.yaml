@@ -16,7 +16,7 @@ when:
   - You want a repeatable first cut that you can rerun each year.
 not_for:
   - You want a calmer list built on ten years of records. Use the Defensive stock quality screener.
-  - You want a verdict on one company. This cuts a table. For one name, use the Asset floor estimator, then the Price versus value gap judge.
+  - You want a verdict on one company. This cuts a table. For one name, use the Business asset value estimator, then the Investment margin of safety reviewer.
   - Your table is mostly banks, insurers or utilities. It sets them aside, because they need other tests.
   - You want a company to buy. It never names one, and it is not personal financial advice.
 you_give:

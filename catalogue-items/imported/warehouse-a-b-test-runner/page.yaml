@@ -16,7 +16,7 @@ when:
   - You want one source of truth for test results.
   - Your team needs to show every step of the maths.
 not_for:
-  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Use experiment-designer first, then come back. For the sample size alone, use sample-size-planner.
+  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Use Experiment designer first, then come back. For the sample size alone, use Sample size planner.
   - You want a ready-made testing tool with no SQL. Pick a testing platform instead, or ask a data person to set one up.
   - You have no data warehouse or no one who can run SQL. Use a simple spreadsheet comparison or a testing platform.
 you_give:
@@ -31,7 +31,7 @@ you_get:
   - An analysis plan with variance reduction
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder.
-  - Gather these first so the sample size check can run: your baseline rate for the main metric, the smallest change you care about, your daily traffic, and how long you can run the test. Say so if you do not have one.
+  - "Gather these first so the sample size check can run: your baseline rate for the main metric, the smallest change you care about, your daily traffic, and how long you can run the test. Say so if you do not have one."
   - Tell your AI your warehouse, your test idea, your main metric and the field that identifies users.
   - Ask for the platform or warehouse call first. Check it fits your team before you go on.
   - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test. The SQL returns only the t-statistic. To turn it into a p-value and a confidence interval, ask your AI for the Python step (or a warehouse function) that does the conversion."

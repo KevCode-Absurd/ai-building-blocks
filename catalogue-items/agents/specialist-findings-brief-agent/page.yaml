@@ -17,8 +17,8 @@ when:
   - You want next month's review to start from this decision.
 not_for:
   - You have one report and nothing to compare it with. Use the Source note summariser.
-  - You need a hard choice argued from several sides. Use the Advisory council.
-  - You only want one report sorted into proven, likely and guess. Use the Findings and guesses separator.
+  - You need a hard choice argued from several sides. Use the Council decision brief writer.
+  - You only want one report sorted into proven, likely and guess. Use the Research evidence checker.
 you_give:
   - Findings from two or more specialists on the same scope, each with its date
   - The evidence behind each finding, or where to find it

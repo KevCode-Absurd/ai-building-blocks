@@ -16,8 +16,8 @@ when:
   - You want a guarantee and a deadline you can keep, without fake timers.
 not_for:
   - "Your buyers never reach the offer or the product page: fix traffic and the page first, or run a simple discount test before you use this."
-  - "Nobody objects to your price: skip this and use the Split-run test planner to find what else holds sales back."
-  - "You need ad copy, not a closing line: use the Ad first line writer and scorer, then check it with the Meta ads compliance checker."
+  - "Nobody objects to your price: skip this and use the A/B test design planner to find what else holds sales back."
+  - "You need ad copy, not a closing line: use the Ad opening writer and reviewer, then check it with the Meta ad policy checker."
 you_give:
   - Your offer, with what is included, the price, the terms and how it is delivered
   - Your cost to deliver per buyer, in time and cash

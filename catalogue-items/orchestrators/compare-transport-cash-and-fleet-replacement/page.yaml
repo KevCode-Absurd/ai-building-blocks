@@ -18,8 +18,8 @@ when:
   - Your lender or partner asks for the cash case behind a fleet replacement.
   - Fuel use on the old vehicle looks high and you want to put a number on what it costs per year.
 not_for:
-  - You only want to know if one route or trip pays. Use the Freight trip contribution builder on its own.
-  - You are choosing between purchases against a cash limit. Use the Plan a purchase around your real budget workflow.
+  - You only want to know if one route or trip pays. Use the Freight trip cash margin calculator on its own.
+  - You are choosing between purchases against a cash limit. Use the Purchase total-cost comparison analyst workflow.
   - You have no trip logs, or no sale value for the old vehicle at the end of the horizon. Gather those first, because the comparison cannot run on a guess.
   - You want advice on routes, driver hours, safety or carrier licensing. None of that is covered.
 you_give:

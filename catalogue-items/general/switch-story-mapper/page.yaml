@@ -16,8 +16,8 @@ when:
   - You suspect the real reasons are not the ones on your website.
 not_for:
   - "You have hundreds of reviews or survey answers to count: use the Customer buying reasons finder."
-  - "You have not run any interviews yet: use the Buying story interview guide first to get the right notes."
-  - "You need a fix for what holds buyers back: map the stories here first, then use the Switch friction remover."
+  - "You have not run any interviews yet: use the Customer purchase interview script writer first to get the right notes."
+  - "You need a fix for what holds buyers back: map the stories here first, then use the Customer switching barrier planner."
 you_give:
   - Interview notes for each person, with an ID and a date
   - Your interview guide (optional)

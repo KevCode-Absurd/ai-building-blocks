@@ -15,7 +15,7 @@ when:
   - Your AI bill jumped and you do not know why.
   - You want to know whether last month's savings really showed up.
 not_for:
-  - "You want a one-off review of a single bill with no earlier month to compare: use cloud-bill-waste-finder for an AWS bill, or ask a person who knows your setup."
+  - "You want a one-off review of a single bill with no earlier month to compare: use AWS cost waste finder for an AWS bill, or ask a person who knows your setup."
   - "You want waste fixed without your sign-off: this agent only hands back a list, so make the changes yourself or approve each one."
   - "You only want to check one AWS account for waste: run cloud-bill-waste-finder alone, with no monthly history needed."
 you_give:

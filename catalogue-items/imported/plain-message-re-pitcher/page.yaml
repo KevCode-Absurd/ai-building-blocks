@@ -19,7 +19,7 @@ when:
   - You want replies that use your project's own words, not new ones.
 not_for:
   - You want a fresh answer or new research. Ask a new question instead.
-  - You want a long text shortened. Use the Context shrinker.
+  - You want a long text shortened. Use the AI context editor.
   - You want a claim checked for truth. Use the AI answer fact-checker.
   - The message is not in this chat and you cannot paste it. There is nothing to restate.
 you_give:

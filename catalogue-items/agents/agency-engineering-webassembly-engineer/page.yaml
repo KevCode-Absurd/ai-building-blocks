@@ -18,9 +18,9 @@ when:
   - Someone says "let's rewrite it in Rust and compile it to Wasm" and you want proof first.
   - Your Wasm file is several megabytes and slows the first page load.
 not_for:
-  - Your slow part is page layout, DOM work or network calls. Use the Frontend Developer agent.
-  - You want to clean up Rust code, not compile it to Wasm. Use the Rust Refactoring Specialist agent.
-  - You need to measure the speed of a whole site or API. Use the Performance Benchmarker agent.
+  - Your slow part is page layout, DOM work or network calls. Use the Frontend developer.
+  - You want to clean up Rust code, not compile it to Wasm. Use the Rust refactoring planner.
+  - You need to measure the speed of a whole site or API. Use the Performance benchmark planner.
   - You need a security review of your sandbox setup. Use the Security Architect agent.
 you_give:
   - The task or code you want to speed up or isolate, in plain words

@@ -19,7 +19,7 @@ when:
   - Your product ads or retargeting hold most of the spend and the account feels like it is slowly declining.
 not_for:
   - You have one channel and under a few hundred orders a month. Run a single holdout test instead, where one region sees your ads and a matched region does not.
-  - You want to size spend on past buyers only. Use the Existing-customer ad budget sizer.
+  - You want to size spend on past buyers only. Use the Returning customer ad budget planner.
   - You want to judge a platform's reported return. Use the Platform return reality check.
 
 you_give:

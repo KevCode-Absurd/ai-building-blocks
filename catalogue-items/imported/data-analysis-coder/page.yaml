@@ -19,15 +19,15 @@ when:
   - You need to resample a time series to a steady interval.
 not_for:
   - "You want charts or plots: use the MATLAB chart maker instead."
-  - "You need to read or save CSV, Excel or MAT files: use the Data file reader and writer, which handles file reading and writing."
-  - "You want to train a model on your table: use the Data classifier comparer, or ask a data scientist to help."
+  - "You need to read or save CSV, Excel or MAT files: use the MATLAB data file reader and writer, which handles file reading and writing."
+  - "You want to train a model on your table: use the Classifier comparison analyst, or ask a data scientist to help."
   - "You do not use MATLAB: the licence allows use only with MathWorks products."
 you_give:
   - Your table or data description
   - The question you want answered
   - MATLAB release (optional)
 you_get:
-  - In order: the reference notes it read, the MATLAB code, the cleaning steps and notes, then the answer to your question
+  - "In order: the reference notes it read, the MATLAB code, the cleaning steps and notes, then the answer to your question"
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. If your AI supports skill files, add the skill folder instead.
   - Load your data into MATLAB as a table or timetable. Tell your AI the column names, what type each holds, which column has the timestamp and the sample rate if it is sensor data. A few pasted rows are not enough to run the code.

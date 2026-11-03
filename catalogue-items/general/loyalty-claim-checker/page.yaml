@@ -20,7 +20,7 @@ when:
 not_for:
   - "You sell something people buy once or very rarely and have no repeat data: use a plain budget check with your own cost per new buyer instead."
   - "You want to split a budget between brand and sales work: use the Brand and sales budget splitter."
-  - "You want to test a vendor claim that has nothing to do with loyalty or retention: use the Claim skepticism kit."
+  - "You want to test a vendor claim that has nothing to do with loyalty or retention: use the Claim credibility reviewer."
 
 you_give:
   - "The claim or plan, with its cost and promised gain"

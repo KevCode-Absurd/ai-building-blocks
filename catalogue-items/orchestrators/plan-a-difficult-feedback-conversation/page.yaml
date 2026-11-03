@@ -20,7 +20,7 @@ when:
 not_for:
   - The issue is harassment, safety or a legal case. Follow your HR process and take advice first.
   - You are the go-between for two students in conflict. Use the Restorative conversation planner.
-  - You want feedback on a piece of writing. Use the Honest draft feedback giver.
+  - You want feedback on a piece of writing. Use the Long-form draft reviewer.
   - You only need the message written, with no talk planned. Use the Hard feedback message writer.
 you_give:
   - One behavior you saw, as what happened, not what you think of the person
@@ -31,7 +31,7 @@ you_give:
   - What the person has said about it before (optional)
   - Notes or an earlier draft of what you plan to say (optional)
 you_get:
-  - A conversation plan: where you stand, what to praise, what to say and how to say it
+  - "A conversation plan: where you stand, what to praise, what to say and how to say it"
   - An opening you can say aloud, built on facts, with one clear request
   - Listening questions, and what to do if they push back
   - A plain-words edit of the opening, with each change explained

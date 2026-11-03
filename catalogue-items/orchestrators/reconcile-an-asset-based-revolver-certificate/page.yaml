@@ -32,9 +32,9 @@ you_give:
   - The certificate date, the currency and the scale, such as thousands
 
 you_get:
-  - A receivables line: aging less ineligibles and concentration excess, times the advance rate, less the reserve
-  - An inventory line: the lowest of the cost-based, appraisal-based and sublimit amounts, less the reserve, with the limit that applied named
-  - Availability: both lines added, capped at your commitment, less drawn loan, letters of credit and blocks. It is signed, so a negative shows as an overadvance
+  - "A receivables line: aging less ineligibles and concentration excess, times the advance rate, less the reserve"
+  - "An inventory line: the lowest of the cost-based, appraisal-based and sublimit amounts, less the reserve, with the limit that applied named"
+  - "Availability: both lines added, capped at your commitment, less drawn loan, letters of credit and blocks. It is signed, so a negative shows as an overadvance"
   - A comparison with your draft certificate, each difference explained or flagged
   - Every MISSING item, and any check that could not run
 
@@ -124,8 +124,8 @@ terms:
     meaning: Practice numbers that show how the calculation works, with no claim about a real company.
 
 not_for:
-  - You only need one line, such as receivables. Use the receivables borrowing base builder on its own.
-  - You want to know what the revolver costs in interest and fees. Use the revolver interest and fee checker.
+  - You only need one line, such as receivables. Use the Customer invoice borrowing limit calculator on its own.
+  - You want to know what the revolver costs in interest and fees. Use the Revolving loan interest and fee checker.
   - You want a certificate to send to your lender. This checks the arithmetic and tracing. A person who knows the agreement must review and sign the real one.
   - Your receivables and inventory are as of different dates, or you don't have the agreement's definitions. It stops those lines instead of guessing.
 

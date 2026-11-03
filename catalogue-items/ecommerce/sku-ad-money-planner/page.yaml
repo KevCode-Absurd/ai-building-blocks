@@ -20,7 +20,7 @@ when:
 not_for:
   - "You sell 1 to 3 products: skip the grading and set one ROAS target by hand from your break-even."
   - "You want the cash view of your stock only: use the Inventory cash planner."
-  - "You want to test a flat discount before you run it: use the Discount impact checker."
+  - "You want to test a flat discount before you run it: use the Discount margin and ad-cost checker."
 
 you_give:
   - Stock by SKU and days of stock at current sales

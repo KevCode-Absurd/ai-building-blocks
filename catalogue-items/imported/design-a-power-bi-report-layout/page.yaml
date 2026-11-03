@@ -18,8 +18,8 @@ when:
   - An executive wants a one-page view and an analyst wants drill-down from the same data.
   - People will open the report on a phone.
 not_for:
-  - "Your report is slow to open or refresh: use the Diagnose a slow Power BI report."
-  - "Your tables, links or storage modes look wrong: use Review a Power BI data model."
+  - "Your report is slow to open or refresh: use the Power BI report speed checker."
+  - "Your tables, links or storage modes look wrong: use Power BI data model checker."
   - "You first need to decide which metrics matter, or want a dashboard outside Power BI: use the KPI dashboard designer."
   - "You want the finished report file: this gives a layout to build from, not the Power BI file itself."
 you_give:

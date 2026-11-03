@@ -20,9 +20,9 @@ when:
   - Pages that list posts or products take seconds to load, or the admin area feels slow.
   - A developer or host says "upgrade your plan" and you want proof of the real cause first.
 not_for:
-  - You run a WooCommerce shop and want plain fixes in order without code detail. Use the Self-hosted store speed fixer.
+  - You run a WooCommerce shop and want plain fixes in order without code detail. Use the WooCommerce speed repair planner.
   - Your site runs on Drupal. Use the Drupal Performance Engineer agent.
-  - You want a shop built or its checkout fixed. Use the WordPress Shopping Cart Engineer agent.
+  - You want a shop built or its checkout fixed. Use the WooCommerce checkout engineer.
 you_give:
   - Your WordPress and PHP versions, and the kind of hosting (shared, VPS or managed)
   - The addresses of the slowest pages

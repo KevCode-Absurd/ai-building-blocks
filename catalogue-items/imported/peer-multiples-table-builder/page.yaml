@@ -20,10 +20,10 @@ when:
   - You want to see whether a stock trades above or below its sector median.
   - You need figures in crore with correct fiscal year labels.
 not_for:
-  - The company is private with no listed peers, or it is a start-up with no revenue. Use the Early-stage valuation estimator.
-  - You want a full valuation with forecasts. Use the DCF model builder for India.
-  - You want to check a comps file someone else built. Use the India modeling rules checker.
-  - You want an earnings view for one company. Use the Earnings preview report builder for India.
+  - The company is private with no listed peers, or it is a start-up with no revenue. Use the Early-stage startup valuation scenario builder.
+  - You want a full valuation with forecasts. Use the Indian company DCF modeler.
+  - You want to check a comps file someone else built. Use the India financial model checker.
+  - You want an earnings view for one company. Use the India earnings preview writer.
 you_give:
   - The target company name or ticker
   - Peers you want in the table, or the sector so your AI can suggest some (optional)

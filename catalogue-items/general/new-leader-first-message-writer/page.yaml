@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You want a lasting culture document, not a first message: use the team culture memo writer."
-  - "You want the whole first month, including who you will listen to and agreements after those talks: use the Take over a team as its new leader workflow."
+  - "You want the whole first month, including who you will listen to and agreements after those talks: use the Team leader introduction planner workflow."
   - "You are announcing a change of direction or a re-org to an existing team: use the internal change announcement writer."
   - "You have no personal memory or team details yet. It will ask for them first rather than write a template with nothing in it."
 

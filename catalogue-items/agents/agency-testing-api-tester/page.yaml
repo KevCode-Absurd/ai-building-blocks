@@ -31,8 +31,8 @@ when:
   - You have a spec or Postman collection but no tests, and need a place to start.
   - A bug report says "it returned 500", and you want the cases around it written down.
 not_for:
-  - You want a real load test with traffic at scale. Use the Performance Benchmarker agent.
-  - You want a deep security test or attack simulation. Use the Penetration Tester agent, and only with written permission.
+  - You want a real load test with traffic at scale. Use the Performance benchmark planner.
+  - You want a deep security test or attack simulation. Use the Penetration test planner, and only with written permission.
   - You want to test a screen or a button in a web app. Use the Test Automation Engineer agent.
   - You only have a public third-party API you do not control. Do not run stress or injection tests on it. Test your own code that calls it.
 you_give:

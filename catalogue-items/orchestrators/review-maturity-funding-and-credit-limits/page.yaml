@@ -18,9 +18,9 @@ when:
   - You lend to one borrower or group and want total exposure, including undrawn lines.
   - A credit committee asks for a maturity and limit exceptions pack.
 not_for:
-  - "You only need the order of cash payments and receipts by date: use the Settlement liquidity ladder builder."
+  - "You only need the order of cash payments and receipts by date: use the Payment timing cash balance planner."
   - "You want a plan to restructure debt you cannot pay: use the Debt restructuring plan drafter."
-  - "You check one loan's cash sweep: use the Debt cash sweep checker."
+  - "You check one loan's cash sweep: use the Excess cash debt payment checker."
   - "You want approval to lend: this is a check, not a credit decision. Approval stays with your committee."
 you_give:
   - The contractual maturity dates and amounts, in three dated buckets

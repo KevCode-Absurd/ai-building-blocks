@@ -20,8 +20,8 @@ when:
 not_for:
   - You want facts checked claim by claim against sources. Use the AI answer fact-checker.
   - You want to test your own idea from all sides. Use the Claim stress tester.
-  - Your question is neutral and nobody is pushing. Ask it normally, or use the Answer double-checker.
-  - You want to know if an advisor has a stake in the outcome. Use the Advice skin-in-the-game checker.
+  - Your question is neutral and nobody is pushing. Ask it normally, or use the AI answer review question writer.
+  - You want to know if an advisor has a stake in the outcome. Use the Advice credibility checker.
 you_give:
   - The message or request that is pushing you
   - The evidence you have, such as tests, numbers or documents

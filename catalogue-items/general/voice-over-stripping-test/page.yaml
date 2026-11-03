@@ -25,7 +25,7 @@ not_for:
 - "Your script has no narration. There is nothing to strip. Use the Video ad script line checker to check the lines you have."
 - "Spoken lines that must stay, such as price, terms or legal wording. Mark them as must-keep, and the test will not cut them."
 - "You want the spoken words to sound natural when read out loud. Use the Ad script read-aloud editor."
-- "You have no script yet. Use the Video ad script writer from customer quotes first, then come back."
+- "You have no script yet. Use the Customer quote video ad writer first, then come back."
 
 you_give:
 - "The full script with narration marked as voice-over or VO, scene by scene, from your script document"

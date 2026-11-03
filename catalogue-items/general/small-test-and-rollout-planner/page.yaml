@@ -18,8 +18,8 @@ when:
   - "You do not know what response you need to break even."
   - "A test is over and you cannot decide whether to scale it."
 not_for:
-  - "You have no offer or price yet: build your offer first with the Hidden offer finder, then come back."
-  - "You need to pick who to test on: use the Hungry audience ranker first."
+  - "You have no offer or price yet: build your offer first with the New offer opportunity finder, then come back."
+  - "You need to pick who to test on: use the Market demand reviewer first."
   - "You want the ad copy itself: use the Story image ad writer."
 
 you_give:

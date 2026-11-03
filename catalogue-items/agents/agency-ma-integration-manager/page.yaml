@@ -19,10 +19,10 @@ when:
   - The seller will run some services for you for a while, and you want an end date for each.
   - Your board or lender asks for a 100-day plan after the deal closes.
 not_for:
-  - You are still deciding whether to buy, or how to value the deal. Use the Chief Financial Officer agent or the Business Strategist agent.
+  - You are still deciding whether to buy, or how to value the deal. Use the Finance decision reviewer or the Business Strategist agent.
   - You need legal, tax or regulatory advice on the deal. Take the questions to a lawyer and an accountant.
-  - You want a plan to help staff adopt new ways of working. Use the Change Management Consultant agent.
-  - You have a normal project with no merger. Use the Senior Project Manager agent.
+  - You want a plan to help staff adopt new ways of working. Use the Change management consultant.
+  - You have a normal project with no merger. Use the Project planning manager.
 you_give:
   - The deal in a few lines, such as what you bought, why, the close date, and the size of each side by headcount and customers
   - The people and teams on both sides, and who runs each function such as finance, IT, HR and sales

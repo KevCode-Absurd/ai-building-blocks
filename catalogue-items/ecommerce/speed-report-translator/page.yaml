@@ -19,8 +19,8 @@ when:
   - "A developer or app says your store is slow."
 not_for:
   - "Your store is brand new and has no real-user data yet: run a lab-only check, or wait about 28 days and test again."
-  - "You want the actual fix made: use the Self-hosted store speed fixer, which takes the audit report."
-  - "You want every check in full detail: use the Store speed report reader."
+  - "You want the actual fix made: use the WooCommerce speed repair planner, which takes the audit report."
+  - "You want every check in full detail: use the Store speed report analyst."
 
 you_give:
   - "PageSpeed Insights results (required): the text for your homepage, one collection page and one product page. Mobile first."

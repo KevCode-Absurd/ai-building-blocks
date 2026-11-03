@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have under three months of data: wait and gather more, because a short run can be noise."
   - "You run one new channel with no history: use a simple weekly check of cost per customer instead."
-  - "You want to know if one campaign should stay live: use the Campaign keep-or-change checker."
+  - "You want to know if one campaign should stay live: use the Ad change decision checker."
 
 you_give:
   - "Results by channel for at least six months"

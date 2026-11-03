@@ -16,10 +16,10 @@ when:
   - Your bot has answered its own messages, or answered the same message twice.
   - You want a refusal path written down before a user asks an agent for something they should not get.
 not_for:
-  - You have never built a Slack bot. Start with the First Slack Bot coding prompt, then come back.
+  - You have never built a Slack bot. Start with the Slack bot build brief writer, then come back.
   - You have one agent and one channel. A router adds checks you won't use. A plain command handler is enough.
   - You need the job queue itself, with retries and crash recovery. Use the Recoverable agent job queue builder.
-  - You want the agents to run all day on a server. Use the Agent worker runtime starter builder, then the Deploy Worker to Render coding prompt.
+  - You want the agents to run all day on a server. Use the TypeScript agent worker builder, then the Render worker deployment planner.
 you_give:
   - Your channel list, with the client each channel belongs to
   - Who may use which agent, as a short table of users or roles

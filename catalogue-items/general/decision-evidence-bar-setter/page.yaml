@@ -16,7 +16,7 @@ when:
   - A choice has dragged on and each week of waiting is costing something.
 not_for:
   - "You only need to know if a choice can be undone and who owns it: use the Reversible decision sorter."
-  - "People disagree and the real problem is who decides: use the Informed captain decision planner."
+  - "People disagree and the real problem is who decides: use the Team decision ownership planner."
   - "The choice is already made and you want to know if it worked: look back at the results with your team, since this skill sets a bar before you decide."
 you_give:
   - The decision, and whether it can be undone

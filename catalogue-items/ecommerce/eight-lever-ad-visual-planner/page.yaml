@@ -16,7 +16,7 @@ when:
   - A designer or an image tool needs clear direction, and you need to say what stays fixed.
   - You want to test one theme, such as lifestyle or social proof, in three different looks.
 not_for:
-  - "You want ready-to-paste image prompts for each version: use the Ad image generation and edit planner. It takes this spec."
+  - "You want ready-to-paste image prompts for each version: use the Ad image planner. It takes this spec."
   - "You want a visual brief with conflicting choices flagged, from a few picks: use the Image ad visual brief writer."
   - "You want the layout of text and product on the picture: use the Themed ad layout planner."
   - "You want to choose a photo style, such as flat lay or editorial, from twelve: use the Ad photography style chooser."

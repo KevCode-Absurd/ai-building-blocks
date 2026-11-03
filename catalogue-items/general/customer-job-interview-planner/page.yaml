@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need pricing or packaging research: use a survey or a review of your sales calls instead."
   - "You want the exact wording of each interview question: use the Customer interview question writer."
-  - "You want a full timeline script for recent buyers: use the Buying story interview guide."
+  - "You want a full timeline script for recent buyers: use the Customer purchase interview script writer."
 
 you_give:
   - What you sell and when or where people buy it

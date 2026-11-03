@@ -20,8 +20,8 @@ when:
 not_for:
   - Your cash flows fall on uneven dates. Use a dated return function such as XIRR in Excel or Google Sheets.
   - The fund has facility fees, rolling calls or a loan against fund value. This covers a fixed two-year hold and one simple bridge.
-  - You want to split fund payouts between investors and the sponsor. Use the No-catchup waterfall checker.
-  - You want to see what an early dividend does to a return. Use the Dividend recap timing checker.
+  - You want to split fund payouts between investors and the sponsor. Use the Fund payout without catch-up checker.
+  - You want to see what an early dividend does to a return. Use the Dividend timing return calculator.
 you_give:
   - The amount the investor puts in at the start (from the capital account statement)
   - What the investor receives at the end of year two (from the exit or distribution notice)

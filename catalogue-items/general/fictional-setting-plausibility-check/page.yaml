@@ -18,7 +18,7 @@ when:
   - A reader or editor said something in your world does not add up, such as where the food or trade comes from.
   - You want questions and small fixes, with your own words quoted, not a grade.
 not_for:
-  - "You want to check new scenes against an older canon document: use the world-detail consistency checker."
+  - "You want to check new scenes against an older canon document: use the World detail consistency checker."
   - "You want real history or culture fact-checked: ask a historian or read your own sources, since this check needs supplied references."
   - "You want a score or a yes or no on realism: this gives questions and small fixes, not a grade."
 you_give:

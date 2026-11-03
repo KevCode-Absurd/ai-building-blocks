@@ -24,7 +24,7 @@ when:
 not_for:
   - "The task is small or has one step: do it directly."
   - "Each part needs the one before it: run the steps in order, for example with the Multi-session build plan writer."
-  - "You want several agents to attempt the same coding task so you can pick the best: use the Competing agent racer."
+  - "You want several agents to attempt the same coding task so you can pick the best: use the AI coding attempt reviewer."
   - "You want to design a standing team of agents with roles and memory: use the Agent team builder."
 you_give:
   - The large task and the result you want

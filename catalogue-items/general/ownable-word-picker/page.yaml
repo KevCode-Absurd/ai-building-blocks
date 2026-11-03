@@ -21,10 +21,10 @@ when:
   - You must choose between two good words and cannot decide.
   - You are about to write a homepage, a name or a slogan.
 not_for:
-  - "You have no map of the words rivals own: run the Owned word mapper first."
+  - "You have no map of the words rivals own: run the Competitor brand association mapper first."
   - "You already have your word and need the sentence that states your position: use the Positioning statement writer."
   - "You want a name for a new kind of product: use the Category name writer."
-  - "You have your word and want a full list of what to cut against it: use the Give-up list planner. This skill only gives a short stop list."
+  - "You have your word and want a full list of what to cut against it: use the Brand focus trade-off planner. This skill only gives a short stop list."
 
 you_give:
   - "Your word map: which rival owns which word, and which words are open (from the Owned word mapper)"

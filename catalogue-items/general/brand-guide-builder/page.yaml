@@ -15,9 +15,9 @@ when:
   - Your brand rules live across a few files and nobody can find the hex codes.
   - You want a sheet you can paste into an AI image or design tool so it stays on brand.
 not_for:
-  - "Your brand has no colour codes or fonts yet: use the Website brand brain builder first, then come back."
+  - "Your brand has no colour codes or fonts yet: use the Brand profile builder first, then come back."
   - "You need a logo or a new visual identity designed: hire a designer, because this only writes down what you already have."
-  - "You want a quick set of brand notes for your AI to write in your voice: use the Website brand brain builder."
+  - "You want a quick set of brand notes for your AI to write in your voice: use the Brand profile builder."
 you_give:
   - Your brand file, mainly voice-and-look.md and proof-and-claims.md
   - Your logo file and its rules, such as clear space and smallest size (optional)

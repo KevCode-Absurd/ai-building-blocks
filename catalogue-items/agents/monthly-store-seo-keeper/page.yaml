@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your store has no search traffic yet: start with the Monthly store SEO planner, then come back once clicks arrive."
   - "You get under about 1,000 search clicks a month: ask it to compare quarters, or use a simple monthly look at Search Console yourself."
-  - "You want a one-off check of a single traffic drop: use the Search Console traffic drop diagnoser, which needs only the export."
+  - "You want a one-off check of a single traffic drop: use the Search Console traffic drop investigator, which needs only the export."
 you_give:
   - Search Console queries and pages for the last 3 months and the 3 months before
   - GA4 organic sessions and orders, if you have them

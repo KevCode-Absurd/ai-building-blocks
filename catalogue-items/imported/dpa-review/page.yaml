@@ -38,7 +38,7 @@ how_to_use:
   - Paste the skill, then add the agreement as a file, link or pasted text. A paid legal research tool is optional. Without one, the AI works from general knowledge and tags its citations "verify".
   - Say whether you are the processor or the controller. If you skip this, your AI will ask.
   - Read the bottom line, then the term-by-term table and the redlines.
-  - Check every law, regulation and section number it cites against the official text before you rely on the memo. Pinpoint citations are the likeliest to be wrong. Check these three first: GDPR Art. 28, 45 C.F.R. 164.504(e) and 15 U.S.C. 6802.
+  - "Check every law, regulation and section number it cites against the official text before you rely on the memo. Pinpoint citations are the likeliest to be wrong. Check these three first: GDPR Art. 28, 45 C.F.R. 164.504(e) and 15 U.S.C. 6802."
   - Send the redlines to the other side only after a lawyer has looked at them. The memo ends with a list of points that need a privacy lawyer, such as federal data rules, transfers across borders and terms outside your fallbacks.
 output_sample:
   input:

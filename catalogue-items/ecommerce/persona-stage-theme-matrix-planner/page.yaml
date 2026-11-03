@@ -16,10 +16,10 @@ when:
   - Your ads all lean on one theme or one stage and you want to see the holes.
   - One buyer group is not converting and you want to see what you have tried for them.
 not_for:
-  - "You only have product facts and reviews and want 30 to 40 persona and angle ideas. Use the Ad concept matrix builder."
-  - "You want briefs written for the gaps. Use the Creative gap-to-brief queue planner."
-  - "You want to see how your live ads spread across concept types. Use the Meta concept diversity test planner."
-  - "You need ads for one funnel stage only. Use the Funnel-stage creative brief builder."
+  - "You only have product facts and reviews and want 30 to 40 persona and angle ideas. Use the Ad concept testing planner."
+  - "You want briefs written for the gaps. Use the Ad production brief planner."
+  - "You want to see how your live ads spread across concept types. Use the Meta ad concept test planner."
+  - "You need ads for one funnel stage only. Use the Sales funnel ad brief writer."
   - "You have no customer words and no sales history. You would get a starter matrix to test, not a finding. Collect reviews first."
 you_give:
   - Customer evidence, such as reviews, survey answers, support notes or sales calls

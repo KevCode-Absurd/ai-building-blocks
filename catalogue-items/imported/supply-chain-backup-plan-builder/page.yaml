@@ -39,7 +39,7 @@ how_to_use:
   - "Before you paste anything, gather: your key suppliers, their lead times, what a day of downtime costs you, and how many days of safety stock you hold. Take the cost, chance and stock figures from your own ERP, supplier contracts or finance records."
   - "The scenario and simulation steps need Python. If your AI cannot run code, fill in the risk register and mitigation table by hand, or ask your AI to build them as plain tables from your numbers. Risk register columns: risk ID, description, category, chance, impact, risk score (chance times impact), current controls, priority. Mitigation table columns: action, risk it covers, cost, yearly benefit, timeline, owner."
   - "Describe your supply chain: key suppliers, routes, sites and what an outage costs you."
-  - Add your own cost, chance and stock numbers. Warning: the code uses placeholder figures for cascade effects (8, 20 and 25 percent), mitigation cost (10 percent) and variability. Do not show any dollar figure to management until you have replaced them with your own data.
+  - "Add your own cost, chance and stock numbers. Warning: the code uses placeholder figures for cascade effects (8, 20 and 25 percent), mitigation cost (10 percent) and variability. Do not show any dollar figure to management until you have replaced them with your own data."
   - Check the ranked risks and the owners in the plan. Fix anything that does not match your business.
   - Share the plan with the people named as owners. Name one owner for the mitigation plan, and review it every quarter or after any disruption.
   - To score the suppliers behind it, use the supplier risk scorecard builder. To track the plan on a screen, use the supply chain dashboard designer.

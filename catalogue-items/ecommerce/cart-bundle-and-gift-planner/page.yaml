@@ -19,7 +19,7 @@ when:
   - You have products that go together but sell them one at a time.
 not_for:
   - "You sell one item with no routine or set: offer multi-packs or a build-your-own set, and plan the price by hand."
-  - "You want to run or read a store test: use the Store test readiness checker to size it and the Store test verdict maker to read it."
+  - "You want to run or read a store test: use the Store test readiness checker to size it and the Store test evidence reviewer to read it."
   - "You want a site-wide sale or percent-off plan: ask a person who knows your margins, since this plan avoids discounting everything."
 
 you_give:

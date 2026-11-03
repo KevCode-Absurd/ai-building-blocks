@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only need paywall screens and copy for one upgrade moment: use the Paywall designer."
   - "You need to set the prices or pick a pricing model first: use the SaaS pricing designer, then come back."
-  - "You want to stop paying customers from cancelling right now: use the Churn reducer."
+  - "You want to stop paying customers from cancelling right now: use the Subscription churn prevention planner."
   - "You sell one-off products, not subscriptions: this plan does not apply."
 you_give:
   - Your plans and prices

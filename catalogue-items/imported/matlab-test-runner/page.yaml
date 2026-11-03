@@ -49,6 +49,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB, for example through the MATLAB MCP server
     - MATLAB installed, with your release number to hand
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Test results
       contains: Pass and fail counts for the run, shown before anything else happens.

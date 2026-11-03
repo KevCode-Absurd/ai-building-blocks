@@ -18,8 +18,8 @@ when:
   - You need to know when final pay is due after someone leaves.
   - You want to know if accrued PTO must be paid out in your state.
 not_for:
-  - "You must decide if someone is an employee or a contractor: use the Employee or contractor checker."
-  - "You plan to fire someone and want the risks: use the Termination risk checker."
+  - "You must decide if someone is an employee or a contractor: use the Worker classification reviewer."
+  - "You plan to fire someone and want the risks: use the Employee termination risk reviewer."
   - "You need a final back-pay figure to pay or claim: use a wage and hour lawyer. The skill only sets out the method."
 you_give:
   - Your question

@@ -31,8 +31,8 @@ when:
 not_for:
   - You have one slow query and want it rewritten. Use the Slow query fixer.
   - You want queries written from plain words. Use the Plain-words SQL writer.
-  - Your concern is backups, failover or uptime. Use the Database Reliability Engineer agent.
-  - You run GaussDB. Use the GaussDB Expert Engineer agent.
+  - Your concern is backups, failover or uptime. Use the Database recovery planner.
+  - You run GaussDB. Use the GaussDB query and schema reviewer.
   - You plan to run changes on a live database with no copy to test on. Ask a database administrator.
 you_give:
   - Your database engine and version, such as PostgreSQL 15 or MySQL 8.

@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a dollar value for donations or a tax receipt. This counts items only. Ask your tax adviser.
   - You are planning how to accept and grade new donations. Use the Donated goods intake planner.
-  - You are splitting bank cash into restricted grant money and free cash. Use the Grant restrictions cash reconciler.
+  - You are splitting bank cash into restricted grant money and free cash. Use the Restricted grant cash tracker.
   - You have one messy list and want it checked for errors. Use the Spreadsheet checker on its own.
 you_give:
   - "Your donation intake records: what came in, with item, quantity, unit, date and ID"

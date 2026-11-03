@@ -18,9 +18,9 @@ when:
   - You have a long list of feature ideas and need to cut it to the 3 to 5 that matter.
   - You are about to show a first version to users and need to know what to measure.
 not_for:
-  - You need code that is safe for real customers and payments. Use the Senior Developer agent to plan the build and the Code Reviewer agent to check it.
-  - You need a long-term system design for a product that already works. Use the Software Architect agent.
-  - You want a roadmap or a ranked list of what to build next. Use the Product Manager agent or the Sprint Prioritizer agent.
+  - You need code that is safe for real customers and payments. Use the Full stack developer to plan the build and the Code Reviewer agent to check it.
+  - You need a long-term system design for a product that already works. Use the Software architect.
+  - You want a roadmap or a ranked list of what to build next. Use the Product manager or the Sprint priority planner.
 you_give:
   - Your app idea in one or two sentences
   - Who it is for and the problem it solves for them

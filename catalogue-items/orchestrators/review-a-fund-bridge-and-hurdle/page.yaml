@@ -20,8 +20,8 @@ when:
 not_for:
   - "Cash flows fall on irregular dates: run an XIRR in a spreadsheet first. This covers two annual periods only."
   - "Your agreement has a GP catch-up: this does not fit. Use your fund administrator's waterfall."
-  - "You only need to split one distribution: use the Check a no-catchup fund distribution workflow."
-  - "You want to check a capital call notice: use the Reconcile a private fund capital call workflow."
+  - "You only need to split one distribution: use the No-catchup fund payout checker workflow."
+  - "You want to check a capital call notice: use the Private fund commitment and capital call checker workflow."
 you_give:
   - The investment amounts and exit cash, with exact annual dates over two years
   - "The bridge: one year long, a simple annual cost, and a call at the first anniversary"

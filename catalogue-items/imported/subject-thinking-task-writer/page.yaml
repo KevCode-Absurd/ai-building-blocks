@@ -36,7 +36,7 @@ you_get:
 next: [marking-rubric-writer, single-point-rubric-builder]
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. From SKILL.md, copy only the block under the "Prompt" heading, with its {{placeholders}}. You do not need to paste the whole file.
-  - Replace each {{placeholder}} in the pasted prompt with your own words: the curriculum topic, the learner stage and the subject. Leave the optional ones blank if you do not have them.
+  - "Replace each {{placeholder}} in the pasted prompt with your own words: the curriculum topic, the learner stage and the subject. Leave the optional ones blank if you do not have them."
   - Type your topic, your subject and your students' year or age.
   - Add what students already know and the type of thinking you want. Both are optional, but they make the task fit better.
   - Read the Knowledge Prerequisite Check first. If students lack the facts, teach those before you set the task.

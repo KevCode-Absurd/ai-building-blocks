@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need custom code or a very high volume pipeline: ask a developer, or use plain code instead."
   - "You only move data once: copy it by hand, or use an export and import in the app."
-  - "You only want two apps kept in sync: use the sync option built into one of the apps, or use the No-code automation planner for the full version."
+  - "You only want two apps kept in sync: use the sync option built into one of the apps, or use the Zapier and Make automation planner for the full version."
 
 you_give:
   - "The task, step by step as you do it now"

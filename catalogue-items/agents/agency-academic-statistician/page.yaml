@@ -20,9 +20,9 @@ when:
   - You must pick between a trial, a before and after check and a survey to answer a question.
 not_for:
   - "You want the final analysis of raw data for a medical, legal or money decision: use a qualified statistician."
-  - "You have a finished store A/B test and want a quick ship or stop call: use the Test result trust checker."
-  - "You want to log tests over time and what you learned: use the Experiment Tracker agent or the Experiment readout desk."
-  - "You want to check a machine learning model: use the Model QA Specialist agent."
+  - "You have a finished store A/B test and want a quick ship or stop call: use the Store experiment result reviewer."
+  - "You want to log tests over time and what you learned: use the Experiment tracker or the Experiment plan and results reviewer."
+  - "You want to check a machine learning model: use the Machine learning model reviewer."
   - "You want to make a chart or a spreadsheet model from raw rows: ask your AI for that directly, or use a spreadsheet tool."
 you_give:
   - The claim or question, in plain words, such as "Do users of the new feature stay longer?"

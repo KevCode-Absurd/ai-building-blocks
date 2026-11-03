@@ -22,9 +22,9 @@ when:
   - You run a small team and every new idea pulls you in a different direction.
 
 not_for:
-  - "You are choosing between two prices or two campaigns. Use the Pricing decision planner for prices, or the One bold move picker to back one move."
-  - "You already know your focus and want to test whether your edge will last against rivals. Use the Business power tester."
-  - "You want a list of products to cut. Use this first to find the focus, then the Product line cutter."
+  - "You are choosing between two prices or two campaigns. Use the Pricing decision planner for prices, or the Competitive strategy planner to back one move."
+  - "You already know your focus and want to test whether your edge will last against rivals. Use the Competitive advantage tester."
+  - "You want a list of products to cut. Use this first to find the focus, then the Product range reviewer."
 
 you_give:
   - What you do and who you do it for

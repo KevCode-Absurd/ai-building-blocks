@@ -15,7 +15,7 @@ when:
   - Email revenue slipped and you want to know whether to fix sending or a flow first.
   - You rebuilt a flow last month and want to know whether it helped.
 not_for:
-  - "You have under two months of numbers or no live flows yet: use the email and SMS performance reader alone for a one-off check."
+  - "You have under two months of numbers or no live flows yet: use the Email and SMS results reviewer alone for a one-off check."
   - "You want to send a campaign or turn a flow on: do that in your email tool, because this agent never sends or switches anything on."
   - "You only want to rebuild one flow with no monthly check: use the matching flow builder, such as the welcome flow builder, on its own."
 you_give:

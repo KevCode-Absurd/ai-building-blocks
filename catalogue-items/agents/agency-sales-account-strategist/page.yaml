@@ -31,10 +31,10 @@ when:
   - A customer's usage is growing, and you want to know if it is a real chance to sell more.
   - A quarterly business review is coming and you want an agenda that leads to a next step, not a status report.
 not_for:
-  - You want to win a new customer. Use the Deal Strategist agent for a live deal.
+  - You want to win a new customer. Use the Sales deal reviewer for a live deal.
   - You want one page that sums up an account from your CRM, email and calls. Use the Account catch-up brief writer.
-  - You want to rank many accounts against each other. Use the Account tier ranker.
-  - You want churn scores across your whole customer base. Use the Churn risk finder.
+  - You want to rank many accounts against each other. Use the Sales account ranker.
+  - You want churn scores across your whole customer base. Use the Customer cancellation risk finder.
   - You want it to send emails, change your CRM or book meetings. It only writes the plan.
 you_give:
   - The account name, what they bought, their contract value and the renewal date

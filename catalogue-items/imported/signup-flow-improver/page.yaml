@@ -16,7 +16,7 @@ when:
   - Trial users sign up but never reach their first useful step.
   - You are redesigning registration and want a checklist.
 not_for:
-  - "You want to fix what happens after people sign up: use the First-use onboarding designer or the Onboarding improver."
+  - "You want to fix what happens after people sign up: use the First-use onboarding designer or the Product onboarding planner."
   - "You need a lead capture or contact form, not account creation: use a simple form review or ask a conversion specialist."
   - "You want to run the A/B test itself: use your testing tool, as this gives test ideas only and does not run them."
 you_give:
@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill from the Add it to your AI section on this page, or copy its text from there and paste it into a new chat.
   - Paste your signup fields, step by step. Add your drop-off numbers and any rules that force a field.
   - Answer any question your AI asks about your flow type, such as free trial or paid account.
-  - Ask for the result in these sections: audit findings, field verdicts, quick wins, high-impact changes and test ideas. That gives you a fixed shape to check against.
+  - "Ask for the result in these sections: audit findings, field verdicts, quick wins, high-impact changes and test ideas. That gives you a fixed shape to check against."
   - Read the field verdicts first. Each field is marked keep, defer or cut.
   - For a B2B trial, test the number of fields and the work-email rule first. For a free B2C product, test social login and button wording first.
   - Act on the quick wins first, since you can make them the same day. Then pick one or two test ideas and run them in your own testing tool. This skill does not run tests.

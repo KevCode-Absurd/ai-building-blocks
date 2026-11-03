@@ -19,8 +19,8 @@ when:
   - The incident is over and you have to write the post-mortem and the follow-up actions.
   - You want a first runbook for a failure that has happened before.
 not_for:
-  - You think you were hacked or data was stolen. Use the Incident Responder agent, which covers security incidents.
-  - A database is down or may have lost data. Use your own runbook and your database admin first. For recovery planning later, use the Database Reliability Engineer agent.
+  - You think you were hacked or data was stolen. Use the Security incident responder, which covers security incidents.
+  - A database is down or may have lost data. Use your own runbook and your database admin first. For recovery planning later, use the Database recovery planner.
   - You want service goals, error budgets and alert rules set up. Use the SRE agent.
   - You want it to find the cause in your logs or fix the system. It cannot see your systems. Your engineers do that.
 you_give:

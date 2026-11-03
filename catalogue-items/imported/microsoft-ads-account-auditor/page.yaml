@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to make changes in the account, such as bids or budgets. This audit is read-only, and every change stays a draft."
   - "Your account has no conversion tracking and you want to set it up. Fix the UET tag first, then run the audit."
-  - "You run ads on several platforms and want one report: use the Twelve-platform ad account auditor."
+  - "You run ads on several platforms and want one report: use the Paid ad account auditor."
   - "You only run Google Ads: use the Google Ads account auditor."
 you_give:
   - Microsoft Ads exports or screenshots, such as campaigns, keywords, search terms and conversions

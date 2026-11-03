@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only want a title and description for one page: use the Title and meta tag writer on its own."
   - "Your traffic comes from paid ads: use the Ad sales drop analyst to find out why results fell."
-  - "Your search traffic fell after a change and you want the cause: use the Fix a drop in search traffic and check it recovers workflow."
+  - "Your search traffic fell after a change and you want the cause: use the Shopify search traffic recovery reviewer workflow."
 you_give:
   - Your site address
   - The pages that matter most and the searches you want them to rank for

@@ -45,6 +45,7 @@ output_sample:
     - Categories to avoid (optional)
   prerequisites:
     - An AI that can run the Shopify CLI, such as Claude Code
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Proposed categories
       contains: Each product with its old category, proposed category and confidence score, also saved as a CSV.

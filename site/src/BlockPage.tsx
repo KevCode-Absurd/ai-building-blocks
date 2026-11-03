@@ -35,6 +35,7 @@ import { TASK_STARTERS } from "./lib/task-discovery";
 import CopyableTask from "./CopyableTask";
 import BlockHeader from "./BlockHeader";
 import ItemMainAction, { RunInMyAi } from "./ItemMainAction";
+import SimilarItems, { SkipLine, type NotForLink, type SiblingRow } from "./SimilarItems";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
@@ -474,10 +475,11 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
                 <h3 className="bp-h3">Is it for you?</h3>
                 <div className="bp-fit-cols">
                   {useWhen.length > 0 && <div><h4>Use it when</h4><ul>{useWhen.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul></div>}
-                  {skipWhen.length > 0 && <div><h4>Skip it when</h4><ul>{skipWhen.map((w, i) => <li key={i}>{txt(w)}</li>)}</ul></div>}
+                  {skipWhen.length > 0 && <div><h4>Skip it when</h4><ul>{(Array.isArray(p?.not_for) ? p.not_for : []).map((w, i) => typeof w === "string" && w.trim() ? <li key={i}><SkipLine text={w} links={(p as { not_for_links?: NotForLink[] }).not_for_links} index={i} /></li> : null)}</ul></div>}
                 </div>
               </div>
             )}
+            <SimilarItems rows={(p as { siblings?: SiblingRow[] } | null)?.siblings} self={b.slug} />
           </section>
         )}
 

@@ -32,10 +32,10 @@ when:
   - You are building a code map or an AI coding helper that needs to know where each function is defined and used.
   - You need an index that updates when files change, without a full rebuild.
 not_for:
-  - You are new to a codebase and want to understand it. Use the Codebase Onboarding Engineer agent or the Codebase Archaeologist agent.
+  - You are new to a codebase and want to understand it. Use the Codebase onboarding planner or the Codebase history researcher.
   - You want a code review of a change. Use the Code Reviewer agent.
-  - You want to build an editor plugin or command line tool for your team. Use the Developer Tooling Engineer agent.
-  - Your graph is about documents and facts, not code. Use the Knowledge Graph Engineer agent.
+  - You want to build an editor plugin or command line tool for your team. Use the Developer tools engineer.
+  - Your graph is about documents and facts, not code. Use the Knowledge graph engineer.
 you_give:
   - The languages in your codebase, and the size of each in files or lines
   - What the tool must answer, such as definitions, references, hover text or call links, and who will use it

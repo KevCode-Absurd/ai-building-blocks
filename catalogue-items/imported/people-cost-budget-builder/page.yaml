@@ -19,7 +19,7 @@ when:
   - You need to share recruiting and training costs across teams.
 not_for:
   - "You are planning one job offer, not a team budget: use the Job offer planner. This does not run payroll either."
-  - "You want to decide how many people to hire: use the Headcount plan builder first, then bring its plan here."
+  - "You want to decide how many people to hire: use the Hiring headcount planner first, then bring its plan here."
   - "You need a full company budget or a finance-approved model: use your finance team's planning model, and use this for the people lines."
 you_give:
   - Your headcount plan with roles, teams, start dates and whether each is approved

@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "The meeting is mostly live talk, such as an interview, a coaching one-on-one or an incident call: keep it as a call."
-  - "You have a long list of meetings and approvals to cut: use the Process and meeting cull planner."
-  - "You only have rough notes from one meeting and want minutes: use the Rough notes to minutes writer."
-  - "A decision keeps slipping and you want one meeting to settle it: use the Debate-then-decide meeting planner."
+  - "You have a long list of meetings and approvals to cut: use the Process and meeting cleanup planner."
+  - "You only have rough notes from one meeting and want minutes: use the Rough-note meeting minutes writer."
+  - "A decision keeps slipping and you want one meeting to settle it: use the Decision debate meeting planner."
 
 you_give:
   - "The meeting's purpose, how often it runs, how long it lasts, who attends and the usual agenda"

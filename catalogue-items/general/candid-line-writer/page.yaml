@@ -21,7 +21,7 @@ when:
   - Your name, price, size or look is a known weak point.
   - You have picked a word and need a line that sets it up.
 not_for:
-  - "You have not picked your word yet: use the Ownable word picker first."
+  - "You have not picked your word yet: use the Brand focus word picker first."
   - "You want a full ad built on a product weakness: use Flaw-first ad writer."
   - "The flaw touches safety, law or health: fix the problem, don't write a line about it."
 

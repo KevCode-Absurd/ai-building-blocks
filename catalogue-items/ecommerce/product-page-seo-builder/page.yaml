@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to rank a collection or category page: write that page by hand or with your usual SEO tool, since this skill builds one product page only."
   - "You only need better product photos: use the Product page image checker."
-  - "You need to rewrite a page so AI tools can quote it: use the AI-ready product page editor."
+  - "You need to rewrite a page so AI tools can quote it: use the Product page editor for AI search."
 
 you_give:
   - The product facts, such as specs, materials or ingredients, use and variants

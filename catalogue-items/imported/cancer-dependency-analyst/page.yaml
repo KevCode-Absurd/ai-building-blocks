@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - "Plan for manual downloads. We have not run this skill end to end on the current DepMap files. DepMap may show a browser check, or its terms may block automated downloads, so expect to fetch the files yourself."
   - Open an AI that can run Python 3.10 or newer with numpy, pandas and scipy, and reach the internet. Paste in this skill. The files it will fetch are the DepMap release's CRISPRGeneEffect.csv, Model.csv and, for drug links, the PRISM files.
-  - Start here, in three steps. Confirm the release your AI found. Download CRISPRGeneEffect.csv and Model.csv from the DepMap portal. Run the gene profile for one gene and compare the first result with the release README. Before you read any ranked list, check one known control: a common-essential gene should score near minus 1, and a nonessential gene near 0.
+  - "Start here, in three steps. Confirm the release your AI found. Download CRISPRGeneEffect.csv and Model.csv from the DepMap portal. Run the gene profile for one gene and compare the first result with the release README. Before you read any ranked list, check one known control: a common-essential gene should score near minus 1, and a nonessential gene near 0."
   - Tell it your gene or cell line. Add a cancer type to compare, if you have one.
   - Let it find the latest DepMap release and list the files it needs. It saves a release record (file names, checksums, date).
   - Ask for the gene dependency profile of your target. It gives a table of scores for each cancer model.

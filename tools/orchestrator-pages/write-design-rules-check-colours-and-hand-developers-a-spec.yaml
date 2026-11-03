@@ -19,8 +19,8 @@ when:
   - You are setting up the look of a new site, app or event and need one source of truth.
 not_for:
   - You only want to test the colours you already have. Use the Colour contrast checker on its own.
-  - You already have a design system and want to move it to a new setup. Use the Prepare a design system migration workflow.
-  - You need one poster or one page laid out. Use the Make a readable event poster workflow.
+  - You already have a design system and want to move it to a new setup. Use the Design system change and migration planner workflow.
+  - You need one poster or one page laid out. Use the Event poster designer and reviewer workflow.
   - You want a quick brief for one design job, not a rule sheet. Use the Design brief rules writer.
 you_give:
   - What the brand or event is, who it is for and where it will appear (web, app, print or signs)

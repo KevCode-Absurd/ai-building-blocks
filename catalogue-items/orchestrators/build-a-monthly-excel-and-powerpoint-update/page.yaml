@@ -18,9 +18,9 @@ when:
   - You must use the company template, with charts and tables that stay editable.
   - You present each month to a board, a client or a team and want speaker notes too.
 not_for:
-  - Your records are not clean yet. Check them first with the Check a spreadsheet before sharing the results workflow.
-  - You have a report, not records, and want slides. Use Turn a report into an editable briefing deck.
-  - You have a messy sheet and no template and want a deck fast. Use Turn a messy spreadsheet into a clean slide deck.
+  - Your records are not clean yet. Check them first with the Spreadsheet results reviewer workflow.
+  - You have a report, not records, and want slides. Use Report-to-slide briefing deck builder and reviewer.
+  - You have a messy sheet and no template and want a deck fast. Use Spreadsheet cleanup, data-check and slide-deck builder.
   - You only want to check numbers on an existing deck. Use the Excel to PowerPoint number checker.
 you_give:
   - Your dated records for the month, as a spreadsheet or CSV export

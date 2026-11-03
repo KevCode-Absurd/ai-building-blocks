@@ -22,7 +22,7 @@ when:
 not_for:
   - "You need a legal or compliance certificate: ask an accessibility specialist, because this review never certifies a deck."
   - "Your file is a PDF, Word or Excel file: use a checker built for that file type."
-  - "Your PowerPoint has no Reading Order pane: use PowerPoint's own Accessibility Checker and a manual checklist instead."
+  - "Your PowerPoint has no Reading Order pane: use PowerPoint's own Web accessibility checker and a manual checklist instead."
 you_give:
   - Actual PPTX, audience needs, intended presentation app and available source images or chart data.
   - The app and file tools your AI can use for the requested work

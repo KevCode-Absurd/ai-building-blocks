@@ -16,7 +16,7 @@ when:
   - You want the message, voice and look decided together, so they do not fight each other.
 not_for:
   - "You already have a brand guide and want to fill gaps: use the Brand guide builder."
-  - "You have a website and want your facts read from it: use the Website brand brain builder."
+  - "You have a website and want your facts read from it: use the Brand profile builder."
   - "You only need a short brief on who you sell to: use the Buyer brief writer."
 you_give:
   - What you make and what it costs

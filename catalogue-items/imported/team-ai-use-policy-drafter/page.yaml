@@ -33,10 +33,10 @@ you_get:
   - A list of sources used
   - An adoption checklist and next steps
 how_to_use:
-  - Have ready: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. The original plugin commands and its CLAUDE.md file are not included, so you paste this profile instead.
+  - "Have ready: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. The original plugin commands and its CLAUDE.md file are not included, so you paste this profile instead."
   - Use an AI that can search the web. The skill needs it to find current public AI policies.
   - Open the skill folder and paste the skill text into a new chat, or upload the folder if your AI takes files.
-  - Paste a short company profile: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. Or answer the setup interview in the setup-interview folder.
+  - "Paste a short company profile: whether you build or use AI, your countries and sector, who approves policy, and any policy you already have. Or answer the setup interview in the setup-interview folder."
   - "Answer the short interview: which sections you need, who reads the policy, and where your team uses AI."
   - First pick the sections you want. Sections 1 to 5 and 9 in the checklist are a good start. You then get the draft header, the sources list and the first section.
   - Read the draft and check every review flag. Answer the open questions at the end of each section.

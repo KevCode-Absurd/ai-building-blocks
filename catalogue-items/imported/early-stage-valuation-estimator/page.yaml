@@ -18,7 +18,7 @@ when:
 not_for:
   - "Your company has steady revenue and a track record: use Business investment analyst, which values mature companies."
   - "You need a final price for a deal: ask an adviser or lawyer, and read the term sheet. This gives a starting range only."
-  - "You want to know if the raise fits your cash needs: use Startup runway forecaster."
+  - "You want to know if the raise fits your cash needs: use Startup cash forecast builder."
 you_give:
   - Stage and funding round
   - Traction and monthly growth rate

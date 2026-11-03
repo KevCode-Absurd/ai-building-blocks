@@ -21,7 +21,7 @@ not_for:
   - "You have fewer than 15 live products: feed-only Performance Max has too little to learn from, so start with a plain tidy-up of your titles by hand."
   - "You have no search data and only want messy titles cleaned up: use a simple title cleaner, or fix the titles by hand."
   - "Your main problem is price or disapproved items: fix those in Google Merchant Center first, or ask your feed agency or developer."
-  - "You want a quick first pass with fewer checks: use the Shopping title rewriter."
+  - "You want a quick first pass with fewer checks: use the Google Shopping title rewriter."
 
 you_give:
   - Product list with current titles, variants, colours, sizes and features

@@ -18,7 +18,7 @@ when:
   - A borrower offers its property as security and you want to know how much that is worth.
   - The earnings look good but the business has little equity behind its debt.
 not_for:
-  - "You want to test earnings cover first: use the Average earnings coverage tester, then come back here."
+  - "You want to test earnings cover first: use the Debt and preferred dividend coverage checker, then come back here."
   - "You need a final verdict for a lending decision: use the Lender safety verdict writer once you have both tests."
   - "You are making a large or personal money decision: talk to a licensed financial adviser, because this is a method, not advice."
 

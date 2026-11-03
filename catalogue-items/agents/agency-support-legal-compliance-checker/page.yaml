@@ -20,8 +20,8 @@ when:
   - You are about to update your privacy policy and terms and want to know what they must now cover.
 not_for:
   - You need a lawyer's sign-off on a contract or a filing with a regulator. Ask a lawyer. Use this agent to prepare.
-  - You want one contract read clause by clause. Use the Legal Document Review agent.
-  - You want a deep privacy review of one way you use customer data. Use the Data Privacy Officer agent.
+  - You want one contract read clause by clause. Use the Legal document reviewer.
+  - You want a deep privacy review of one way you use customer data. Use the Data privacy officer.
 you_give:
   - What you do or plan to do, in a few lines, such as a promotion, a sign-up flow, a vendor setup or a new market
   - Where you sell and where your customers live

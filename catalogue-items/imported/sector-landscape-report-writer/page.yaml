@@ -35,7 +35,7 @@ you_get:
   - A list of figures that still need a source
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste the text of SKILL.md into a new chat.
-  - Name the sector and answer five scope questions: purpose, depth, view, public or private companies, and any data you hold.
+  - "Name the sector and answer five scope questions: purpose, depth, view, public or private companies, and any data you hold."
   - Let your AI search the web if it can. Attach any research or filings you own, so figures come from named sources.
   - Read the company table and check three figures against each company's own results. Look for the fiscal year beside each one.
   - Fix every line marked MISSING or UNSOURCED before you send it. Then ask for the Word or PowerPoint version.

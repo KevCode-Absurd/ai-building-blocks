@@ -20,7 +20,7 @@ when:
 not_for:
   - You have no ledger extract or query access. Every line would be unverified, so pull the ledger first.
   - You need to match two ledgers or find breaks between a ledger and a bank statement. Use the ledger to subledger reconciler or the account reconciler.
-  - You want a roll-forward of debt reserves or equity per share. Use the debt reserve rollforward builder or the book value per share roll-forward.
+  - You want a roll-forward of debt reserves or equity per share. Use the Debt payment reserve checker or the Book value per share calculator.
 you_give:
   - The account or account group, such as accrued expenses
   - The entity and the period, such as March 2026

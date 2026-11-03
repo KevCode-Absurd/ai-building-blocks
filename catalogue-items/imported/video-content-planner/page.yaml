@@ -17,9 +17,9 @@ when:
   - You need a script for a tutorial or product video.
   - Your videos get few views and you want to fix titles and keywords.
 not_for:
-  - "You want written blog posts: use blog-post-writer, not this skill."
-  - "You want a script for one YouTube video only: use youtube-script-writer."
-  - "You only want to audit your site's search ranking: use seo-auditor, then come back for video keywords."
+  - "You want written blog posts: use Blog post writer, not this skill."
+  - "You want a script for one YouTube video only: use YouTube script writer."
+  - "You only want to audit your site's search ranking: use SEO auditor, then come back for video keywords."
 you_give:
   - Your main goal, such as leads or authority
   - Your audience

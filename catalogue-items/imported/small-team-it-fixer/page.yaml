@@ -22,7 +22,7 @@ when:
   - A teammate leaves today and you must cut their access quickly.
 not_for:
   - "Your site or app is down for customers: use the Outage incident leader."
-  - "You think there was a break-in or a data leak: use the Security incident triager first."
+  - "You think there was a break-in or a data leak: use the Security incident response planner first."
   - "You want a lasting help desk process for your team: use the IT Service Manager agent."
   - "You want to write a runbook for later: use the Incident runbook writer."
 you_give:
@@ -40,7 +40,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. A plain chat can write the steps. You run any command yourself.
   - Paste the skill text. Then describe the problem, who is hit and which systems you use.
   - Read each step and its command before you run it. Do not run anything you do not understand. Never run a command that downloads a script and runs it in one go. Read the script first.
-  - Check what each admin section needs before you start: Google Workspace admin, Okta, Slack admin and AWS IAM each need a paid plan or admin role.
+  - "Check what each admin section needs before you start: Google Workspace admin, Okta, Slack admin and AWS IAM each need a paid plan or admin role."
   - Before a reset, delete or security change, confirm the target, take a backup and get the owner's yes.
   - Keep real passwords, tokens and keys out of the chat. Use your password manager.
   - Write the incident log line. For a break-in, switch to the Security incident triager.

@@ -16,7 +16,7 @@ when:
   - You are tutoring and want to stop giving away the answer.
 not_for:
   - "The learner lacks the basic skill the task builds on: teach that skill first, then come back."
-  - "Several learners share the same gap: use the Build a lesson from explanation to practice and a quiz workflow."
+  - "Several learners share the same gap: use the Lesson and recall quiz planner workflow."
   - "You want a plan for mixed practice across many topics: use the Mixed practice unit planner."
 you_give:
   - The learner's attempts, as they wrote them

@@ -18,7 +18,7 @@ when:
   - Too many deliveries fail on the first try and drivers return with parcels.
   - You must choose between hiring drivers and using gig drivers.
 not_for:
-  - "You need the best order of stops for today's drivers: use the Delivery route planner."
+  - "You need the best order of stops for today's drivers: use the Delivery route planner (vehicle routing)."
   - "Customers choose delivery time slots and you must fit routes to them: use the Delivery time slot route planner."
   - "You ship pallets and loads between sites: use the Freight mode and carrier picker."
   - "You collect returns from customers, not deliver orders: use the Return pickup route planner."

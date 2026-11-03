@@ -19,7 +19,7 @@ when:
   - You want a financial waterfall chart and keep getting a 3D plot.
 not_for:
   - "You want a full app with buttons and charts: use the MATLAB app builder (matlab-build-app), which calls this skill for the chart parts."
-  - "You want dark mode or brand colours on your chart: use the Chart and app styler (matlab-apply-theme) after you have the chart code."
+  - "You want dark mode or brand colours on your chart: use the MATLAB chart and app styler (matlab-apply-theme) after you have the chart code."
   - "You work in Simulink scopes or Simscape plots: use the plotting tools built into those products."
 you_give:
   - Your data or its column names

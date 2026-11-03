@@ -19,8 +19,8 @@ when:
   - Two people edited the same files and you must merge the changes with confidence
 not_for:
   - You have one workbook and one deck and no earlier versions. Use the Excel to PowerPoint number checker.
-  - You want to build this month's workbook and deck from records. Use Build a monthly Excel and PowerPoint update.
-  - You only want the numbers in a deck refreshed from new figures. Use the Deck number refresher.
+  - You want to build this month's workbook and deck from records. Use Excel report and PowerPoint update writer.
+  - You only want the numbers in a deck refreshed from new figures. Use the Slide deck number updater.
   - You only compare two workbooks, or two decks. Use the Excel workbook change reviewer or the PowerPoint deck change reviewer on its own.
 you_give:
   - The old workbook and the revised workbook (.xlsx)

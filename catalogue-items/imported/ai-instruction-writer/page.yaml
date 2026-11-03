@@ -18,7 +18,7 @@ when:
   - You are writing a new skill and want it to fire at the right time.
   - Your AI gives different results each run from the same instructions.
 not_for:
-  - "You want to build a skill from a task you repeat: use the skill writer or the skill builder."
+  - "You want to build a skill from a task you repeat: use the skill writer or the AI skill builder."
   - "You only want a skill file checked for structure and naming: use the skill file validator."
   - "You want to know why one skill never fires, with grades across all your skills: use the skill trigger auditor."
   - "You are writing for people, not an AI, such as a handbook or a help page."

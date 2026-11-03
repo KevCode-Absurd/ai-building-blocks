@@ -18,7 +18,7 @@ when:
   - Your boss asks "what is our exposure?" and you need a clear answer on paper.
   - You are filling in a data protection impact assessment and need the data inventory.
 not_for:
-  - "A breach is happening now. Follow your incident response plan and call your lawyer. The Incident Responder agent can help you run it."
+  - "A breach is happening now. Follow your incident response plan and call your lawyer. The Security incident responder can help you run it."
   - "You want a general bug hunt in your code: use the Code security reviewer or the Code security scanner."
   - You need legal advice on fines or notice rules. The report gives pointers only. Take it to your lawyer or data protection officer.
 you_give:

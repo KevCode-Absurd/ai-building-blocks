@@ -21,7 +21,7 @@ not_for:
   - "You have no live product page yet: write the page first, or build your brand facts with the Brand profile builder."
   - "You have no customer words yet: collect reviews, support emails or call notes first, or expect a smaller map built from guesses."
   - "You want to rewrite the page around the answers: use the Ad-matched landing page writer after this."
-  - "You want a quick first pass with fewer checks: use the Buyer doubt gap finder."
+  - "You want a quick first pass with fewer checks: use the Customer objection coverage checker."
 
 you_give:
   - Customer words such as reviews, return reasons, support tickets, pre-sale questions or call notes, each with a source

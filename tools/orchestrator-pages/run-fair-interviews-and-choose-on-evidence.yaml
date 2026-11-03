@@ -16,7 +16,7 @@ when:
   - You want a process you can show a candidate who asks how the decision was made.
 not_for:
   - "You have one candidate or fewer than four: use a plain scorecard of your own and a simple chat with your team."
-  - "You only need the job post and the offer letter: use the Hire fairly, from job post to a checked offer letter workflow."
+  - "You only need the job post and the offer letter: use the Hiring document and candidate reviewer workflow."
   - "You need to check a candidate's background or references: ask the candidate for referees and call them yourself."
 you_give:
   - The role, its level, what the person must be able to do and the main tasks of their first 90 days

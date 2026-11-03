@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to check a video ad or an organic post: ask your AI for a plain review, since this works on one image ad only."
   - "You need the landing page itself judged: use a landing page audit, because this only checks how well the page matches the ad."
-  - "You need to know if the ad breaks Meta's rules: use the Meta ads compliance checker, then run it again after any fix."
+  - "You need to know if the ad breaks Meta's rules: use the Meta ad policy checker, then run it again after any fix."
 
 you_give:
   - The image ad itself, attached as a file

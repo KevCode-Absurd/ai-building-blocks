@@ -18,8 +18,8 @@ when:
   - "After a speed cleanup, to stop it creeping back."
   - "You add apps or content often."
 not_for:
-  - "Your store has no sale, launch or ad push planned and you just want a one-off speed fix: use the Speed fix ranker."
-  - "You want to find which apps slow your pages: use the App script auditor."
+  - "Your store has no sale, launch or ad push planned and you just want a one-off speed fix: use the Website performance fix ranker."
+  - "You want to find which apps slow your pages: use the Store app script reviewer."
   - "You need someone to run a load test or change the theme code: ask your developer or your platform support."
 
 you_give:

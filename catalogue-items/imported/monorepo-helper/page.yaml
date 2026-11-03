@@ -19,9 +19,9 @@ when:
   - You are choosing between Turborepo and Nx for a JavaScript or TypeScript repo.
 not_for:
   - You have one app and no shared packages. A plain repo is fine, and there is nothing to scope.
-  - You want to set up a CI pipeline from nothing. Use the build and release pipeline setter, then come back for scoped runs.
-  - You want to retire an old system or feature. Use the migration planner.
-  - Your CI is failing for an unknown reason. Use the CI failure fixer first.
+  - You want to set up a CI pipeline from nothing. Use the CI/CD pipeline builder, then come back for scoped runs.
+  - You want to retire an old system or feature. Use the System migration and retirement planner.
+  - Your CI is failing for an unknown reason. Use the GitHub check failure fixer first.
 you_give:
   - Your monorepo folder, or its list of packages and their dependencies
   - The change you are about to make, such as the files or package you will edit

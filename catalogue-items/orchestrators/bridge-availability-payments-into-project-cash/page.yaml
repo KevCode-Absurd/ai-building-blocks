@@ -18,9 +18,9 @@ when:
   - An invoice went out in one quarter and the bank receipt landed in the next.
   - Your cash available for debt service looks too high and you suspect working capital was counted twice.
 not_for:
-  - The project is paid by traffic or demand, not a fixed payment. Use the Connect toll operating cash to debt repayment workflow.
-  - You already have project cash and want to size repayments and cover. Use the Build a project debt service cash pack workflow.
-  - You only need to check one payment against its cap. Use the Availability payment deduction checker.
+  - The project is paid by traffic or demand, not a fixed payment. Use the Toll road debt repayment modeller workflow.
+  - You already have project cash and want to size repayments and cover. Use the Project debt repayment modeler workflow.
+  - You only need to check one payment against its cap. Use the Project availability payment deduction checker.
   - You want the contract read, or a dispute settled. A person who knows the contract has to do that.
 you_give:
   - The certified availability payment for the period (from the payment certificate)

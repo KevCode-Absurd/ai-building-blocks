@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open your AI tool (Claude, ChatGPT or Gemini) and paste in the skill text. This is an adapted copy of the sickn33 skill under the CC BY-4.0 licence. We changed it to label share rates as scenario assumptions and to use bracketed placeholders in place of sample figures.
   - Choose a method to start. Use bottom-up (customers times price) for a business-to-business or niche product. Use value theory (what the problem costs, times what people would pay to solve it) for a new category. Then cross-check with top-down.
-  - Gather two numbers first: how many customers could buy from you, and what one customer would pay you per year. Then describe your product or idea, your target customers, your region and your price.
+  - "Gather two numbers first: how many customers could buy from you, and what one customer would pay you per year. Then describe your product or idea, your target customers, your region and your price."
   - "Ask your AI to work in this order: define the market, gather data, work out TAM, then SAM, then SOM, then cross-check the three methods and list your assumptions."
   - Paste any industry reports you have (optional). If your AI can search the web, ask it to find current market data.
   - Read the three estimates and the cross-check. If they are far apart, ask your AI why.

@@ -18,7 +18,7 @@ when:
   - Your spend is growing and you need to know when to add a campaign and when to leave the layout alone.
   - You sell in several countries or at several margin levels and don't know how much to split.
 not_for:
-  - "Your account is past testing and needs to scale winners: use the Meta scaling campaign planner."
+  - "Your account is past testing and needs to scale winners: use the Meta campaign growth planner."
   - "You have no margin data yet: work out your gross margin by product first, then come back."
   - "You want to audit an account that already runs: use the Meta campaign purpose checker."
 

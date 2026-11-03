@@ -17,7 +17,7 @@ when:
 not_for:
   - "You need one lesson and have no assignment to check: use a plain worksheet and write the lesson yourself."
   - "You only need a school-wide AI policy: ask your head of department or use your school's policy template."
-  - "You want to grade student work: use the Mark student work against a rubric and sharpen your feedback workflow."
+  - "You want to grade student work: use the Student marking and feedback reviewer workflow."
 you_give:
   - The subject, the age group and what they already know
   - An assignment you set, with its current AI rules if any

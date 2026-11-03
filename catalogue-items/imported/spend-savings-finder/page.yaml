@@ -21,7 +21,7 @@ when:
   - You need a short list of savings to act on this quarter, ranked by size and effort.
 not_for:
   - You only want to find double-paid software. Use the Software spend auditor.
-  - Your supplier names in Shopify have typos. Use the Supplier name cleaner first.
+  - Your supplier names in Shopify have typos. Use the Shopify supplier name reviewer first.
   - You have a handful of payments. Read them by eye, since a table of 20 rows needs no analysis.
   - You want to review payroll or a single one-off purchase. Use your accounting system's own reports.
 you_give:

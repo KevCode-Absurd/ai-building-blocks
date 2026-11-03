@@ -17,7 +17,7 @@ when:
   - A site redesign is coming and you need to know what to keep.
 not_for:
   - "You only want new keyword ideas: use Keyword researcher, or a plain keyword tool."
-  - "You want to compare your keywords with rivals: use Rival keyword gap finder."
+  - "You want to compare your keywords with rivals: use Competitor keyword opportunity finder."
   - "You have no site yet and no content: plan from scratch with a content strategy first, or ask a content writer."
 you_give:
   - Your site and content scope
@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Check you have a paid Ahrefs plan with MCP access. Ahrefs is the main data source. Similarweb and Semrush are optional extras.
   - Open Claude, ChatGPT or Gemini with Ahrefs connected, and paste in the skill text.
-  - Export your content list from your CMS or analytics tool. Use one row per page with four columns: URL, topic, publish date and organic clicks.
+  - "Export your content list from your CMS or analytics tool. Use one row per page with four columns: URL, topic, publish date and organic clicks."
   - Add your site, your three to five rivals, and that content list.
   - Ask for the full audit. Tell it the time window to check, such as the last 12 months.
   - Check the Decaying content section first. Compare year over year, so seasonal dips are not mistaken for decay.

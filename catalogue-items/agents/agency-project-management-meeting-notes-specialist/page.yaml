@@ -21,8 +21,8 @@ when:
 not_for:
   - You need a formal record for HR, legal or the board. Use a human note-taker, or check the wording with the people involved.
   - You need a word-for-word record. Use a transcription tool, such as the one built into your meeting app.
-  - You run the same meeting each week and want open actions tracked over time. Use the Weekly meeting actions keeper.
-  - You want follow-up messages drafted from the notes. Use the Executive work keeper.
+  - You run the same meeting each week and want open actions tracked over time. Use the Meeting minutes and action tracker.
+  - You want follow-up messages drafted from the notes. Use the Work commitment and follow-up writer.
 you_give:
   - The meeting content, pasted in as a transcript, bullet points, a voice memo summary or recalled notes
   - The meeting date and the project or topic name

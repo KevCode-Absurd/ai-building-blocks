@@ -29,10 +29,10 @@ when:
   - You want to check that your web screens cannot reach files or system tools they should not.
   - Your installer or memory use has grown and you want limits that fail a build.
 not_for:
-  - You have an Electron app and want it tested by clicking and typing. Use the Desktop app tester.
-  - You are building a phone or tablet app. Use the Mobile App Builder agent.
-  - You are building a web app that runs in the browser. Use the Frontend Developer agent.
-  - You want a full security audit of finished code. Use the Application Security Engineer agent.
+  - You have an Electron app and want it tested by clicking and typing. Use the Electron desktop app tester.
+  - You are building a phone or tablet app. Use the Mobile app builder.
+  - You are building a web app that runs in the browser. Use the Frontend developer.
+  - You want a full security audit of finished code. Use the Application security reviewer.
   - You would paste certificate files or private keys into a chat. Never do that. Keep them in your own secure store.
 you_give:
   - What the app does and who uses it.

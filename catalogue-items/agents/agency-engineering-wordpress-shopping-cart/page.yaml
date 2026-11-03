@@ -19,7 +19,7 @@ when:
   - You are adding or changing a payment gateway such as WooPayments, Stripe or PayPal and want the setup and test steps.
   - Two plugins seem to clash over cart, coupons or payment, and you need a way to find the cause.
 not_for:
-  - Your store runs on Drupal Commerce. Use the Drupal Shopping Cart Engineer agent.
+  - Your store runs on Drupal Commerce. Use the Drupal Commerce developer.
   - You are starting a new WooCommerce store and want a non-technical plan. Use the WooCommerce store setup planner.
   - Your store is on Shopify. Use the Shopify store setup planner.
   - You want your store settings checked against your country's rules. Use the Payments and checkout settings checker.

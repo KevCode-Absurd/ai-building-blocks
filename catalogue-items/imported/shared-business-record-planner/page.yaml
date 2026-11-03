@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need to merge duplicate customers inside Shopify now: use the Customer record merger."
   - "You only want to check one file for blanks and repeats: use the Data quality auditor."
-  - "You are moving everything from one tool to another: use the Business data move runbook."
+  - "You are moving everything from one tool to another: use the Business data migration planner."
   - "Your records live in one tool and already match: you do not need a plan."
 you_give:
   - The tools that hold the same kind of record, such as your shop, email list and accounting tool

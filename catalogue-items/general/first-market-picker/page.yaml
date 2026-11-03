@@ -18,7 +18,7 @@ when:
   - "Your plan says \"small businesses\" or \"everyone\"."
   - "You need a group you can reach in the next few weeks."
 not_for:
-  - "Your product already sells well to a proven group: use the Market boundary checker to test where that market ends."
+  - "Your product already sells well to a proven group: use the Market definition and share checker to test where that market ends."
   - "You already know your first group and want to talk to buyers: write a short request and ask five people for a call."
   - "You want the size of a whole industry: use a market report or ask a person who knows the trade."
   - "You want a broad group sliced into people you can reach this week: use the First customer group picker."

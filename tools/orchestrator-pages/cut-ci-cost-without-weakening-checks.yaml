@@ -58,7 +58,7 @@ terms: []
 next: [ci-failure-fixer, failed-workflow-diagnoser]
 
 not_for:
-  - "Your build is failing right now: use the CI failure fixer or the Failed workflow diagnoser."
+  - "Your build is failing right now: use the GitHub check failure fixer or the GitHub Actions failure diagnoser."
   - "You only want a security check of your workflows: use the GitHub Actions permission reviewer."
   - "You do not use GitHub Actions. These steps read GitHub workflow files only."
 output_sample:

@@ -18,9 +18,9 @@ when:
   - You have just run a rival comparison and need to turn it into a decision.
   - One person is pushing a big move out of pride or a wish to get even, and you want it tested.
 not_for:
-  - "The plan has already launched. Use the Program keep-or-cut reviewer on its results, or the Pivot or persevere decider if it is stalling."
-  - "The rival is your main risk and you have no comparison yet. Run the Rival matchup scorer first. Without it the rival fault is marked missing and the best verdict is wait."
-  - "You want an open list of everything that could go wrong, not a verdict. Use the Failure-first plan check."
+  - "The plan has already launched. Use the Program keep-or-cut reviewer on its results, or the Product pivot decision reviewer if it is stalling."
+  - "The rival is your main risk and you have no comparison yet. Run the Competitor comparison reviewer first. Without it the rival fault is marked missing and the best verdict is wait."
+  - "You want an open list of everything that could go wrong, not a verdict. Use the Plan failure reviewer."
 you_give:
   - "Your plan: what you will do, when, with what team and money"
   - A comparison with your rival, such as a Rival matchup scorer result (optional)

@@ -20,8 +20,8 @@ when:
   - You want to send one file that opens on any device.
   - You are not sure what style you want and need to see a few first.
 not_for:
-  - "You need a file your team will edit in PowerPoint: use the editable slide deck builder, since this deck is HTML."
-  - "Your deck is mostly data tables and charts for a board or client: use the board deck builder or the editable slide deck builder."
+  - "You need a file your team will edit in PowerPoint: use the Editable PowerPoint deck builder, since this deck is HTML."
+  - "Your deck is mostly data tables and charts for a board or client: use the board deck builder or the Editable PowerPoint deck builder."
   - "You want a deck from LibreOffice tools only: use the LibreOffice slide builder, which makes ODP and PPTX files."
 you_give:
   - Your talk topic, outline or rough notes

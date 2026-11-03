@@ -19,7 +19,7 @@ when:
   - You need to show that a plan to use AI protects people and their judgment.
 not_for:
   - "You have one task you can just do yourself: do it, or ask your AI for help with that one task."
-  - "You want to turn chosen tasks into steps: use the Repeat chore automation planner."
+  - "You want to turn chosen tasks into steps: use the Routine task automation planner."
   - "You need a plan for a whole company or sector: use a broader strategy planner, or talk to a senior person who knows the business."
 
 you_give:

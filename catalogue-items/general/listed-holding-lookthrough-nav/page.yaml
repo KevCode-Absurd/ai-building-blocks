@@ -101,6 +101,7 @@ output_sample:
   prerequisites:
     - Prices from one market date, and an annual report that separates the parent's own cash and debt from the group's
     - An AI that can make files, if you want the workbook (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scope and dated sources
       contains: The market date, currency and units, and the source and date of each figure.

@@ -19,10 +19,10 @@ when:
   - Your sprints keep ending with half the work undone, and you suspect you are over-committing.
   - You run a small product team and need a priority list you can defend to the boss or a client.
 not_for:
-  - You are deciding whether to build one feature at all. Use the Product Manager agent.
-  - You want a plan for a whole project with tasks and dates. Use the Senior Project Manager agent.
-  - You want to sort customer feedback into themes first. Use the Feedback Synthesizer agent.
-  - You need to track a test and decide what it proved. Use the Experiment Tracker agent.
+  - You are deciding whether to build one feature at all. Use the Product manager.
+  - You want a plan for a whole project with tasks and dates. Use the Project planning manager.
+  - You want to sort customer feedback into themes first. Use the Product feedback analyst.
+  - You need to track a test and decide what it proved. Use the Experiment tracker.
 you_give:
   - Your backlog, one line per item, with a short note on what each is for
   - Your team size, the days each person can work this sprint, and any time off or fixed meetings

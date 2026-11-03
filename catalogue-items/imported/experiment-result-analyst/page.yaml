@@ -32,7 +32,7 @@ you_get:
   - Plain-language verdict
   - Ship, hold or extend advice
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. The three scripts in its scripts folder only run where your AI can run Python 3: hypothesis_tester.py checks a finished test, sample_size_calculator.py sizes a test before launch, and confidence_interval.py gives the range around a result. Upload the one you need.
+  - "Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. The three scripts in its scripts folder only run where your AI can run Python 3: hypothesis_tester.py checks a finished test, sample_size_calculator.py sizes a test before launch, and confidence_interval.py gives the range around a result. Upload the one you need."
   - If your AI cannot run Python, it must label every p-value and interval as estimated, not computed, and show each formula. Check them on an online calculator before you act.
   - "Say what you need: check a finished test, size a test before launch, or judge a number someone shared."
   - "Paste your numbers: users in each group and conversions or averages. Add your usual rate and smallest change that matters if you are sizing a test."

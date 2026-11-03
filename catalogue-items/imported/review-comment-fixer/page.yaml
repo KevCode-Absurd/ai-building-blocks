@@ -19,7 +19,7 @@ when:
   - You are on the branch already and want feedback applied from your own terminal.
 not_for:
   - "The pull request has no reviewer comments yet: there is nothing to fix, so wait for the review."
-  - "A check failed in GitHub Actions and you want the cause: use the CI failure fixer."
+  - "A check failed in GitHub Actions and you want the cause: use the GitHub check failure fixer."
   - "You want every comment applied with no choice step: this skill always asks first, so ask your AI directly, and review the changes with the Code change reviewer."
 you_give:
   - A branch with an open pull request, checked out in your repo folder

@@ -16,7 +16,7 @@ when:
   - Your workspace is messy and people lose time looking for things.
   - You want an improvement plan without a big project.
 not_for:
-  - "You need the one step that holds everything up: use process-bottleneck-finder, not this one."
+  - "You need the one step that holds everything up: use Process bottleneck finder, not this one."
   - "A machine keeps breaking down: call your repair person, as this plan does not cover maintenance."
   - "You have a one-off project, not a process you repeat: a simple task list will do."
 you_give:

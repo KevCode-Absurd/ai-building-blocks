@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "The customer is angry about more than the refund. Use the Angry customer reply writer."
-  - "You already have a draft reply and want its promises checked. Use the Complaint reply promise checker."
+  - "You already have a draft reply and want its promises checked. Use the Customer reply promise checker."
   - "The request is a chargeback, a legal threat or a claim that someone was harmed. A person should handle it."
-  - "The reply is public, under a review. Use the Review reply batch writer."
+  - "The reply is public, under a review. Use the Store review reply writer."
 
 you_give:
   - "The customer's refund request, as written"

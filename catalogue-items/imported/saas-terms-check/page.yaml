@@ -21,9 +21,9 @@ when:
   - Your finance lead wants a limit on yearly price rises written into the deal.
 not_for:
   - "The deal is large, cross-border or hard to leave: have a lawyer review it, and use this check to prepare your questions."
-  - "You want a plain-words summary of what a contract says: use the Plain-words contract summary."
+  - "You want a plain-words summary of what a contract says: use the Contract plain-language summary writer."
   - "You are signing with an AI tool and care most about data training: use the AI vendor terms checker."
-  - "You only need an NDA checked: use the NDA traffic-light checker."
+  - "You only need an NDA checked: use the NDA risk reviewer."
 you_give:
   - The software subscription contract or terms, pasted or uploaded
   - Your own rules for what you will accept, such as notice window and price rise limit (optional)

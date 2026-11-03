@@ -19,7 +19,7 @@ when:
   - You want a quick audit of settings before you spend more.
 not_for:
   - "You only want to judge ad creative: use the Ad test brief writer to plan what to test."
-  - "You want to read results and decide what to change: use the Campaign keep-or-change checker."
+  - "You want to read results and decide what to change: use the Ad change decision checker."
   - "Your account spends under about $10k a month and has one or two campaigns: a quick look at your settings by hand is enough."
   - "Your account runs only one product line: a campaign list adds little. Use the Meta account structure planner to lay out a structure instead."
 

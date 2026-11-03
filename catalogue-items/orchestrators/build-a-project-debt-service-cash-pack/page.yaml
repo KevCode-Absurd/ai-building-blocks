@@ -18,9 +18,9 @@ when:
   - The loan-life cover test uses a rate set in the agreement and you need it applied correctly.
   - Your cash forecast mixes accrual figures with actual receipts and payments.
 not_for:
-  - The project earns from traffic or demand, and you need to model that revenue first. Use the Connect toll operating cash to debt repayment workflow.
-  - The project is paid a fixed availability payment. Start with the Bridge availability payments into project cash workflow.
-  - You already have cash available for debt service and want covenant headroom across periods. Use the Review contractual debt service cash tests workflow.
+  - The project earns from traffic or demand, and you need to model that revenue first. Use the Toll road debt repayment modeller workflow.
+  - The project is paid a fixed availability payment. Start with the Project contract cash flow checker workflow.
+  - You already have cash available for debt service and want covenant headroom across periods. Use the Debt service coverage checker workflow.
   - You have fewer or more than three years of cash. This pack is built for three annual periods.
 you_give:
   - Three annual project operating cash records, or approved scenarios (from your project model)

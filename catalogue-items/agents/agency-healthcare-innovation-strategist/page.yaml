@@ -35,9 +35,9 @@ when:
   - Your investor deck, grant draft and partner proposal have drifted apart and you want one version of each claim.
   - A draft reads like a generic startup pitch and you want it sharpened for doctors, a health system or a funder.
 not_for:
-  - You want each health claim checked against its source. Use the Clinical Evidence agent.
-  - You want China healthcare ads or posts checked for banned claims. Use the Healthcare Marketing Compliance Specialist agent.
-  - You are approaching a national health ministry. Use the Health ministry engagement agent.
+  - You want each health claim checked against its source. Use the Clinical evidence reviewer.
+  - You want China healthcare ads or posts checked for banned claims. Use the China healthcare marketing reviewer.
+  - You are approaching a national health ministry. Use the Health systems strategy planner.
   - You need legal advice or a regulatory filing. Ask a lawyer, because this agent only frames the question.
 you_give:
   - Who will read the document and what you want them to do next, one reader per document

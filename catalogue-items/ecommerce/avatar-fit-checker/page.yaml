@@ -18,7 +18,7 @@ when:
   - Your ads get clicks, but the page loses people, and you suspect the page tells a different story.
   - You are about to test a new buyer group and want ad, page and photos to match before you spend.
 not_for:
-  - "You have no buyer quotes or reviews yet: use the Forum and review avatar digger first, because this skill checks evidence and does not find it."
+  - "You have no buyer quotes or reviews yet: use the Forum buyer researcher first, because this skill checks evidence and does not find it."
   - "You want new hooks or ad copy written from scratch: use an ad copywriting skill, then bring the result here to check."
   - "You want to find new buyer groups to test: use the Buyer identity segment finder."
 

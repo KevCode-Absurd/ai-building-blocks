@@ -18,9 +18,9 @@ when:
   - Your product page converts cold traffic poorly and the buyer needs a story before an offer.
   - You have a winning advertorial from another source and want to rebuild its structure for your own product, in your own words.
 not_for:
-  - "You have no ad that already works yet: run the Advertorial readiness checker first, and fix the ad before you write a long page."
+  - "You have no ad that already works yet: run the Article-style ad readiness checker first, and fix the ad before you write a long page."
   - "You sell impulse or fashion products, or your buyers are young: write a short product page instead, since this long story form suits problem-solving products."
-  - "You only want to tighten a draft you already have: use the Advertorial draft editor, or place reviews with the Store social proof placer."
+  - "You only want to tighten a draft you already have: use the Article-style ad draft editor, or place reviews with the Store testimonial placement planner."
 
 you_give:
   - The avatar, one specific customer, and the angle, root cause and mechanism

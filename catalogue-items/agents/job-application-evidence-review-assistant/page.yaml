@@ -18,8 +18,8 @@ when:
   - You rewrote lines of your resume and want to know which ones your record backs up.
   - A recruiter sent short application questions and you want each answer tied to something you did.
 not_for:
-  - You want a quick resume rewrite with no check against your record. Use the Resume tailor agent.
-  - You want to see how a resume reads to applicant tracking software. Use the ATS resume checker agent.
+  - You want a quick resume rewrite with no check against your record. Use the Resume editor.
+  - You want to see how a resume reads to applicant tracking software. Use the Resume parsing checker.
   - You only want spelling and grammar fixed. Use the Proofreader.
   - You have no job post yet. It tailors to the real words of one role, so find the post first.
   - You want applications sent for you. It never submits.

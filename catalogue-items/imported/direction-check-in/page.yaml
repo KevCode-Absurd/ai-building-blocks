@@ -40,6 +40,8 @@ output_sample:
     - A phrase such as "step back" or "are we on track"
     - Your real goal in a sentence (optional)
     - Any doubts you have (optional)
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Where the chat has been heading
       contains: A look back from your first goal to now, showing whether the work has narrowed or drifted.

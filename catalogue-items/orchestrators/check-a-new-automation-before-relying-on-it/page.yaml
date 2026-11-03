@@ -18,9 +18,9 @@ when:
   - You are handing an automation to a teammate and they need a procedure, not just your memory.
   - You want a test checklist and recovery steps written down before the first live run.
 not_for:
-  - You have no automation yet and want one built. Use the Build an n8n automation that reports failures and is reusable workflow.
-  - You want to find which chores are worth automating. Use the Repeat chore automation planner.
-  - You want a plan for an AI agent with tools and permissions. Use the Review an agent before launch workflow.
+  - You have no automation yet and want one built. Use the n8n workflow reliability planner workflow.
+  - You want to find which chores are worth automating. Use the Routine task automation planner.
+  - You want a plan for an AI agent with tools and permissions. Use the AI agent launch security reviewer workflow.
   - You want the automation tested for you. This workflow checks the design and writes the test list. You still run the test.
 you_give:
   - A description of the automation, or its prompt or settings pasted in
@@ -36,7 +36,7 @@ you_get:
   - Recovery steps for a failed or doubled run
 how_to_use:
   - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini.
-  - Paste the automation as it stands now: the prompt, the steps or the settings. Add what starts it, what it reads and where results go.
+  - "Paste the automation as it stands now: the prompt, the steps or the settings. Add what starts it, what it reads and where results go."
   - Read the weak parts in step 1. Decide which fixes you accept. Say so before the AI writes the procedure.
   - Run the test checklist yourself on one small real case. Mark each line pass or fail.
   - Give the procedure to the people who will run it. Keep the failed checks with it.

@@ -22,7 +22,7 @@ when:
   - You want the same clay lead and set to look the same across a whole ad.
 
 not_for:
-  - You have no script yet. Write one first with the Clay town video ad script writer, then come back.
+  - You have no script yet. Write one first with the Clay town video ad writer, then come back.
   - You want one character on one tabletop with one changing object. Use the Claymation video clip prompt writer.
   - You want a single still image, not a clip. Use the Clay town image ad maker.
   - You want a paper look, not clay. Use the Paper craft video clip prompt writer.

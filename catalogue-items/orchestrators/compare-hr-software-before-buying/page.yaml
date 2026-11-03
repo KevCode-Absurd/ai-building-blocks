@@ -20,8 +20,8 @@ when:
 not_for:
   - You only want to vet one vendor's AI tool. Use the HR AI tool vendor checker.
   - You are comparing software that is not for HR. Use the Software vendor chooser.
-  - You are hiring a person, not software. Use Hire fairly, from job post to a checked offer letter.
-  - You have chosen already and need to switch over. Use Plan a vendor change without losing work.
+  - You are hiring a person, not software. Use Hiring document and candidate reviewer.
+  - You have chosen already and need to switch over. Use Vendor transition continuity planner.
 you_give:
   - The HR tasks you need, such as payroll, leave and onboarding (from your HR lead)
   - How many employees you have and where they work

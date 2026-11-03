@@ -29,10 +29,10 @@ when:
   - You worry that a player could cheat by sending fake data to your server.
   - You are adding Relay and Lobby and need to know what to put in each.
 not_for:
-  - You use Godot. Use the Godot Multiplayer Engineer agent.
-  - You use Unreal Engine. Use the Unreal Multiplayer Architect agent.
+  - You use Godot. Use the Godot multiplayer designer.
+  - You use Unreal Engine. Use the Unreal multiplayer designer.
   - You use Mirror, Photon or another network tool. This agent covers Netcode for GameObjects and Unity Gaming Services only.
-  - You only want to tidy your project's structure. Use the Unity Architect agent.
+  - You only want to tidy your project's structure. Use the Unity software architect.
 you_give:
   - The game type and the most players one match holds
   - Who hosts the game, such as a dedicated server, a player host, or not decided

@@ -22,11 +22,11 @@ when:
   - "You are writing a sales page and want the extras on it to answer real objections, not just fill space."
 
 not_for:
-  - "You need a real deadline or a cap on places to make buyers decide. Use the Honest scarcity and urgency planner."
-  - "You have no offer yet and want to build one from a buyer's problem. Use the Offer builder that answers buyer doubts."
-  - "You want to know how buyers will compare your price with others. Use the Commodity trap checker."
-  - "You want a first low-cost step to bring buyers in. Use the Front-end offer picker."
-  - "You want a quick first pass with fewer checks: use the Bonus idea matcher."
+  - "You need a real deadline or a cap on places to make buyers decide. Use the Offer limits and deadline planner."
+  - "You have no offer yet and want to build one from a buyer's problem. Use the Customer offer builder."
+  - "You want to know how buyers will compare your price with others. Use the Offer price-comparison reviewer."
+  - "You want a first low-cost step to bring buyers in. Use the First purchase offer planner."
+  - "You want a quick first pass with fewer checks: use the Offer bonus planner."
 
 you_give:
   - "Your offer: what is in it, and the price"

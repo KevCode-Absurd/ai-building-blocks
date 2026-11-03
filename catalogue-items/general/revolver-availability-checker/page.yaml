@@ -18,9 +18,9 @@ when:
   - Sales or stock drop and you want to see if you are heading for an overadvance.
   - A lender or board asks for a bridge from borrowing base to availability.
 not_for:
-  - You want to build the base itself from raw receivables. Use the Receivables borrowing base builder.
-  - You want to build the base from stock. Use the Inventory borrowing base builder.
-  - You want to review the evidence behind a borrowing base. Use the Borrowing base evidence reviewer.
+  - You want to build the base itself from raw receivables. Use the Customer invoice borrowing limit calculator.
+  - You want to build the base from stock. Use the Inventory borrowing limit calculator.
+  - You want to review the evidence behind a borrowing base. Use the Borrowing base and credit line reviewer.
   - You want approval to draw. Only your lender can give it. This shows arithmetic capacity.
 you_give:
   - The receivables advance amount at one certificate date (from the borrowing base certificate)

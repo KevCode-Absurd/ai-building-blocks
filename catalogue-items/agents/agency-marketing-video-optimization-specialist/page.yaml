@@ -17,8 +17,8 @@ when:
   - Your retention graph drops in the first minute and you do not know why.
   - You want chapters and a description that help people find one part of a long video.
 not_for:
-  - You only post on TikTok or Reels. Use the TikTok Strategist agent.
-  - You have a finished video and want the edit fixed, such as cuts, pace and captions. Use the Short-Video Editing Coach agent.
+  - You only post on TikTok or Reels. Use the TikTok content planner.
+  - You have a finished video and want the edit fixed, such as cuts, pace and captions. Use the Short video editing coach agent.
   - You want a script for a paid YouTube ad. Use the Long-form video ad script writer.
   - You need the thumbnail picture itself. This writes ideas only. Give them to a designer or an image tool.
 you_give:

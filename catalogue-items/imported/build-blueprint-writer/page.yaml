@@ -16,7 +16,7 @@ when:
   - You plan to have an AI agent build the app and need clear instructions.
   - You need a backlog with acceptance criteria for a small team.
 not_for:
-  - "You only need one screen of copy or a short feature note: use the Feature spec writer for one feature, or the Idea to dev brief writer for a short brief."
+  - "You only need one screen of copy or a short feature note: use the Feature spec writer for one feature, or the Developer brief writer for a short brief."
   - "You already have a spec and want it reviewed: ask your AI to review it, since this skill writes new blueprints."
   - "You have no way to search the web or save files: use a plain chat for a rough outline, not this skill."
 you_give:
@@ -35,7 +35,7 @@ how_to_use:
   - If the session runs out before it finishes, ask your AI to save the approved decision brief and its progress notes, then start a new session and say continue from the saved brief.
   - If your AI cannot search the web, it marks every outside fact UNVERIFIED and warns you on the cover. Treat those as guesses until you check them.
   - Add this skill's instructions to your AI, or upload the skill folder.
-  - Gather first: your idea in a few lines, your budget, the platform (web, phone, bot), any deadline and the competitors you know.
+  - "Gather first: your idea in a few lines, your budget, the platform (web, phone, bot), any deadline and the competitors you know."
   - Tell your AI your product idea in a few lines. Add your budget, platform, deadline and known competitors if you have them.
   - Answer the intake questions. Then check the decision brief and approve it or ask for changes.
   - Read the finished blueprint. Open the Sources list and check every claim tagged VERIFIED before you trust a competitor or market figure. Fix anything that is wrong for your product. Ask a lawyer or accountant about any rules, tax or availability-by-country question it flags.
@@ -50,6 +50,7 @@ output_sample:
     - An AI that can search the web and save files
     - Claude Code or Codex if you want the AI to build the product from the blueprint
     - Your AI's highest thinking setting, which costs more but gives better research
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Decision brief
       contains: A short checkpoint of the research and choices for you to approve before the full blueprint is written.

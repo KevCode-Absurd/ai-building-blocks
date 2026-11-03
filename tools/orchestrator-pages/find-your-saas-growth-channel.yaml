@@ -12,7 +12,7 @@ when:
   - You want to test a growth idea before committing more time or money.
 not_for:
   - "Your product has no public link or pricing yet: write down what you sell and who buys it first, then come back."
-  - "You run a shop or service, not software: use the Find your business growth channel workflow instead."
+  - "You run a shop or service, not software: use the Business growth channel test planner workflow instead."
   - "You want a full campaign built and sent: this workflow only plans tests and stops before sending or spending."
 you_give:
   - A public product link or pasted product and pricing text

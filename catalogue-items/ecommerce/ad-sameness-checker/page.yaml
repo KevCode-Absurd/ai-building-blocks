@@ -19,7 +19,7 @@ when:
   - Before you brief new creative, you want to see which ideas you already cover.
 not_for:
   - "You have fewer than about 10 ads: there is too little to group, so add more ads first or ask a person to review them."
-  - "You want to see what rival ads do: use the Competitor ad gap finder."
+  - "You want to see what rival ads do: use the Competitor ad opportunity finder."
   - "You only need ideas for new ads: use a brainstorm with your AI, then come back to check them."
 
 you_give:

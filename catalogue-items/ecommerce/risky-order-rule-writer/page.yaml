@@ -19,7 +19,7 @@ when:
   - "You are not sure what to do with orders marked risky."
 not_for:
   - "Your store gets under 100 orders a month: keep your platform's default fraud settings, as there is too little data to tune rules."
-  - "You need extra card check settings, such as 3D Secure, or checks for false declines: use the Fraud rules setter, which covers them."
+  - "You need extra card check settings, such as 3D Secure, or checks for false declines: use the Store fraud rules planner, which covers them."
   - "Nobody can look at held orders: use flag-only rules, or ask your payment provider to review risky orders for you."
 
 you_give:

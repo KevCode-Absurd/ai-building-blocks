@@ -18,7 +18,7 @@ when:
 not_for:
   - "You teach a whole class by talk or slides with no objects to handle: write a normal lesson plan or use a simple slide outline instead."
   - "The concept has nothing physical to show, like an abstract idea: pick a different planner or a short worked example instead."
-  - "You want practice after the lesson to help students remember: use recall-quiz-writer once the lesson is done."
+  - "You want practice after the lesson to help students remember: use Recall quiz writer once the lesson is done."
 you_give:
   - The word or concept to teach
   - Objects or materials you have on hand

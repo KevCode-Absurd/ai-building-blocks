@@ -20,7 +20,7 @@ when:
 not_for:
   - "The search is still open: use the Hiring progress reporter for an update."
   - "You want to plan the new hire's first 90 days in detail: use the 30-60-90 day onboarding planner."
-  - "You want to learn why someone left: use the Exit interview and grievance guide."
+  - "You want to learn why someone left: use the Exit interview and grievance planner."
   - "You want to rate a candidate in the interview: use the Interview scorecard builder."
 you_give:
   - The role and the outcome of the search (filled or cancelled)
@@ -39,7 +39,7 @@ how_to_use:
   - Paste the skill text. Then paste the facts of the search. Say which of the four parts you want, or ask for all.
   - If you lack a fact, such as scores, leave it out. The AI will mark it missing and not guess.
   - Read the look back first. Check each finding against what you remember of the search.
-  - Send the surveys and the checklist only after you have edited them to fit your company. Add a short privacy note to each candidate survey: why you ask, who reads it, how long you keep it, and that replying is optional.
+  - "Send the surveys and the checklist only after you have edited them to fit your company. Add a short privacy note to each candidate survey: why you ask, who reads it, how long you keep it, and that replying is optional."
   - Get a candidate's permission before you keep them on a near-miss list.
 output_sample:
   input:

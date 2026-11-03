@@ -19,7 +19,7 @@ when:
   - "You are about to hire someone to run operations and want them to report on the same seven things."
 not_for:
   - "Your business has no repeat numbers yet: check your bank balance each week and write down what came in and went out."
-  - "A number just fell and you want to know why: use the Numbers drop explainer."
+  - "A number just fell and you want to know why: use the Business results drop investigator."
   - "You need a live dashboard that updates itself: set that up in your spreadsheet or reporting tool, then bring the seven numbers here first."
 
 you_give:

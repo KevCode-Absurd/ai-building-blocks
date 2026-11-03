@@ -19,8 +19,8 @@ when:
   - You compare two companies that account for R&D costs in different ways.
 not_for:
   - "You have no R&D spend by year, or the company is private: get the yearly spend first, since the schedule starts from it."
-  - "You only want to test growth in the stable years: use the Link operating growth to terminal reinvestment workflow."
-  - "You already have a terminal value and want to challenge it: use the Challenge terminal value with excess returns workflow."
+  - "You only want to test growth in the stable years: use the Growth and reinvestment spreadsheet modeller workflow."
+  - "You already have a terminal value and want to challenge it: use the Long-term value assumption checker workflow."
   - "You want a full valuation or a buy or sell view: use the Valuation method comparer. This workflow gives no investment advice."
 you_give:
   - R&D spend for each year, from the income statement or notes, going back as far as the life you pick

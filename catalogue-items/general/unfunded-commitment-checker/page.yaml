@@ -19,9 +19,9 @@ when:
   - A reviewer asks how you got from the signed commitment to the unfunded figure.
 not_for:
   - You want NAV or return figures. Use the Investor statement NAV checker.
-  - You want to split one call between several investors. Use the Capital call allocation checker.
-  - You want to check how much a fund can reinvest from distributions. Use the Fund recycling capacity checker.
-  - You want to price a secondary sale. Use the Secondary NAV price checker.
+  - You want to split one call between several investors. Use the Fund capital call checker.
+  - You want to check how much a fund can reinvest from distributions. Use the Fund reinvestment limit checker.
+  - You want to price a secondary sale. Use the Secondhand fund stake price checker.
 you_give:
   - The signed commitment (from the subscription agreement or commitment register)
   - Original capital calls, not counting recall calls (from the call notices)

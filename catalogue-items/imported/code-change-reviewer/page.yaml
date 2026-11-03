@@ -18,7 +18,7 @@ when:
   - You want to know if a change breaks your written coding standards.
   - You are unsure the code covers everything the spec asked for.
 not_for:
-  - You want one ranked list of risks to post on a pull request. Use the Pull request risk reviewer or the Pull request reviewer.
+  - You want one ranked list of risks to post on a pull request. Use the Pull request risk reviewer or the Pull request review tracker.
   - You want a security review of a diff. Use the Security-focused change reviewer.
   - You have no written spec and no coding standards. Use the Parallel code reviewer for a general review instead.
 you_give:

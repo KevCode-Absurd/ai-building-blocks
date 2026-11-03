@@ -16,10 +16,10 @@ when:
   - Google brand search goes up when Meta spend does, and you wonder if they are linked.
   - Someone asks which channel is "better" and you need a fair answer.
 not_for:
-  - "You want to check one platform's ROAS against your store totals. Use the Platform ROAS reality check."
+  - "You want to check one platform's ROAS against your store totals. Use the Ad return evidence checker."
   - "You only need a holdout test design. Use the Holdout test planner."
   - "You want to know why Meta is not spending. Use the Meta delivery troubleshooter."
-  - "You run only one ad channel and want to find your growth bottleneck. Use the Ad account bottleneck auditor."
+  - "You run only one ad channel and want to find your growth bottleneck. Use the Store growth bottleneck auditor."
   - "You want daily pacing or live changes. Use each platform's own reports. This is a review, not a monitor."
 you_give:
   - A Meta campaign export with spend, reported revenue and purchases for set dates

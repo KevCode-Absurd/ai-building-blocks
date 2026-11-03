@@ -23,12 +23,12 @@ not_for:
   - You only need a crop or a resize. A plain photo editor is faster.
 you_give:
   - Your product photos, at least 512 pixels on the short side (required)
-  - The ad theme, such as lifestyle, urgency or social proof, and the shape you want: square, tall or wide (required)
+  - "The ad theme, such as lifestyle, urgency or social proof, and the shape you want: square, tall or wide (required)"
   - Your brand colours and rules, and any words that must appear on the image (optional)
   - The image tool you will use, such as ChatGPT or Gemini (optional)
   - How many versions you want, 1 to 6 (optional, 3 if you don't say)
 you_get:
-  - A setup for the batch: theme, shape, style, background, lighting, type and eight visual settings
+  - "A setup for the batch: theme, shape, style, background, lighting, type and eight visual settings"
   - One ready-to-paste image prompt for each version
   - A review list to check every picture against your photo and your approved words
   - Edit requests for the changes you want, split into text edits and style edits

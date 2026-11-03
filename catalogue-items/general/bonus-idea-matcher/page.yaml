@@ -15,7 +15,7 @@ when:
   - You want to add value without cutting your price.
   - Your offer has the same core as rivals' and needs something extra.
 not_for:
-  - "You want the full version with every check: use the Bonus stack builder."
+  - "You want the full version with every check: use the Offer bonus package builder."
   - "You have no offer yet and want ideas for one: use the New offer opportunity finder."
   - "You want to cut your price or run a sale: this prompt adds value and keeps your price."
 you_give:

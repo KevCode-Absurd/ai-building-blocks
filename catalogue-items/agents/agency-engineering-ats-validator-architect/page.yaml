@@ -31,7 +31,7 @@ when:
   - You want to know which words in the job post your resume lacks, and which you can truthfully add.
   - Your bullets say "Responsible for" and you want them to show results.
 not_for:
-  - You want the whole resume rewritten for one job. Use the Resume Tailor agent.
+  - You want the whole resume rewritten for one job. Use the Resume editor.
   - You want a cover letter as well. Use the Resume and job application builder.
   - You want the look of your resume fixed, such as fonts and spacing. Use the Resume layout editor.
   - You are building or buying hiring software and need a bias audit. This check is not a legal or independent audit.

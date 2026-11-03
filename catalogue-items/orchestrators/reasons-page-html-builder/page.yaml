@@ -36,7 +36,7 @@ thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - "You only need the words, not a built page: use the Reasons-to-switch page writer."
   - "You want a Shopify page built from a plan, not a five-reasons page: use the Shopify landing page builder."
-  - "You want an existing landing page reviewed, not built: use the Landing page 30-point checker."
+  - "You want an existing landing page reviewed, not built: use the 30-point landing page checker."
 output_sample:
   input:
     - Your product facts, the buyer and the ad that sends traffic to the page

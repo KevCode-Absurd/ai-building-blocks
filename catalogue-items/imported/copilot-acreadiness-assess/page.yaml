@@ -29,7 +29,7 @@ output_sample:
     - An AI that can run code and read and write files in your repo
     - Node 20 or newer installed
     - Web access, so the scan can fetch the AgentRC tool
-    - The ai-readiness-reporter custom agent (optional: if it is missing, your AI builds the page from report-template.html)
+    - "The ai-readiness-reporter custom agent (optional: if it is missing, your AI builds the page from report-template.html)"
   output:
     - name: reports/index.html
       contains: One static dashboard file that opens in a browser, with all styling built in.

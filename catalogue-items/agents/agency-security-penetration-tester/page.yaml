@@ -24,15 +24,15 @@ not_for:
   - You don't have written authorization and a named scope yet. Get that first. This agent will ask for it before planning anything.
   - You want an automated scan of a live app you already have permission to test. Use the Live app security tester.
   - You want the system's design reviewed instead of attacked. Use the Security Architect agent.
-  - You want to fix the findings. Use the Application Security Engineer agent or the Cloud Security Architect agent.
+  - You want to fix the findings. Use the Application security reviewer or the Cloud security designer.
 you_give:
   - Confirmation that you have written authorization for this engagement, from the system's actual owner.
-  - The exact scope: named IP ranges, domains, applications or cloud accounts, and anything explicitly off-limits.
-  - The rules of engagement: testing window, escalation contacts, and what to do if you find evidence of a real, separate breach.
-  - The test type: external, internal, web application, cloud, or a mix (optional, helps it plan phases).
+  - "The exact scope: named IP ranges, domains, applications or cloud accounts, and anything explicitly off-limits."
+  - "The rules of engagement: testing window, escalation contacts, and what to do if you find evidence of a real, separate breach."
+  - "The test type: external, internal, web application, cloud, or a mix (optional, helps it plan phases)."
 you_get:
   - A confirmed scope and rules-of-engagement summary, so everyone involved can check it matches what was agreed.
-  - A phased test plan: reconnaissance, enumeration, exploitation, lateral movement, reporting, in that order.
+  - "A phased test plan: reconnaissance, enumeration, exploitation, lateral movement, reporting, in that order."
   - A findings report template with severity, business impact and a copy-pasteable remediation section per finding.
   - A retest plan so the client can verify fixes actually worked.
 how_to_use:

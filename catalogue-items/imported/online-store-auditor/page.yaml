@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want to fix one product page: use the Product page auditor."
   - "You want to fix your cart or checkout form: use the Checkout page auditor."
-  - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them. Use the Post-purchase experience or the Pricing strategist."
+  - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them. Use the After-purchase experience planner or the SaaS pricing strategist."
 you_give:
   - What you sell and who buys, with your store link or pasted homepage text if you have it
   - Company size, and whether your product is high-tech

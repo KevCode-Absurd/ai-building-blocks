@@ -25,7 +25,7 @@ you_give:
   - Existing code or schema (optional)
   - Language or framework (optional)
 you_get:
-  - A written contract for the interface: its actions, their typed inputs and results, and the errors each can return
+  - "A written contract for the interface: its actions, their typed inputs and results, and the errors each can return"
   - Clear names, types and error shapes
   - Notes on what to hide
   - A plan for changing it later

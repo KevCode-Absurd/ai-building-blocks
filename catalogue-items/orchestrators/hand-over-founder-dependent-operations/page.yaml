@@ -18,10 +18,10 @@ when:
   - A deputy asks "what do you actually do all week?" and you cannot answer on one page.
   - An investor, lender or buyer has asked how the business runs without you.
 not_for:
-  - You are away for a short time and will return. Use the prepare a team absence handover workflow.
-  - You need a long-term plan for who replaces a key role or leader. Use the plan coverage for a critical role workflow.
+  - You are away for a short time and will return. Use the Team absence handover planner workflow.
+  - You need a long-term plan for who replaces a key role or leader. Use the Critical role backup and training planner workflow.
   - You have one task and one person taking it. Use the handover note writer on its own.
-  - You are hiring someone to take the work over. Use the hire the person who unblocks growth and hand over workflow.
+  - You are hiring someone to take the work over. Use the Key hire and results handover planner workflow.
 you_give:
   - The founder's recurring tasks, with how often each happens and where the steps are written down (from your calendar, inbox and task list)
   - Who could take each task now, and what shows they can, such as past cover or work they have done

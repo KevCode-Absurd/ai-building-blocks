@@ -31,7 +31,7 @@ you_get:
   - Test cases to check the setup
 how_to_use:
   - Download the skill folder, or paste the skill text into a chat with your AI.
-  - Check you have what you need. Minimum: an AI that can run Node, or no code at all if you only need a few rows labelled by hand. The BigQuery function needs your own BigQuery project and may cost money.
+  - "Check you have what you need. Minimum: an AI that can run Node, or no code at all if you only need a few rows labelled by hand. The BigQuery function needs your own BigQuery project and may cost money."
   - Paste or upload your rows as a CSV, one row per visit or order. Use columns such as source, medium, referrer, click ID (gclid, fbclid and so on), landing page URL and any native channel. Say which system they came from, such as GA4 or Shopify.
   - Ask your AI to follow the skill and label each row. Ask it to keep the rule and raw signals next to each label.
   - Check any rows labelled Other. Add native labels or landing page URLs if you have them, then run again.

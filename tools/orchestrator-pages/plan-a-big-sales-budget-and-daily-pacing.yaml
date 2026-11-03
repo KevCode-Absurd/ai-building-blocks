@@ -15,7 +15,7 @@ when:
   - Last year's sale brought record sales and an empty bank account.
   - You have a discount in mind but do not know the most you can pay to win a customer during it.
 not_for:
-  - "You run an evergreen offer, not a big sale: use the Weekly store ad pulse checker on its own."
+  - "You run an evergreen offer, not a big sale: use the Weekly store ad performance reviewer on its own."
   - "You do not know your landed cost per order: work it out first with your accountant or a simple sheet, then come back."
   - "Cash is tight before the sale: sort that first with a simple cash forecast, then run this plan."
 you_give:

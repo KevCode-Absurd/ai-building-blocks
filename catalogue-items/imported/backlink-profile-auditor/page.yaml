@@ -17,7 +17,7 @@ when:
   - You want a starting point before a link building campaign.
 not_for:
   - "You want to build new links: this skill only audits. Use a link building plan or an outreach person instead."
-  - "You want a general SEO check of your whole site: use a broad SEO audit, not a link-only review."
+  - "You want a general SEO check of your whole site: use a broad SEO auditor, not a link-only review."
   - "You have no Ahrefs plan or cannot connect it: the skill will state the data gap and cannot fill in numbers, so pull the link data first."
 you_give:
   - Your domain

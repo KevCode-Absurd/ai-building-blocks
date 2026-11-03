@@ -34,7 +34,7 @@ not_for:
   - "Your agent has no tools and only writes text: there is nothing to lock down, so skip this."
   - "You want to attack the agent and see if it breaks: use the AI agent attack tester."
   - "You want to watch the agent once it is live: use the AI agent monitoring planner."
-  - "Your concern is the API behind the agent: use Fix API security gaps with tests and a pull request."
+  - "Your concern is the API behind the agent: use API security repair reviewer."
 output_sample:
   input:
     - The agent's job in one or two sentences

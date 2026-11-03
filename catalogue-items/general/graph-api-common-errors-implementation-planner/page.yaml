@@ -18,8 +18,8 @@ when:
 not_for:
   - You haven't made a Meta developer app or token yet. Set that up in your Meta app dashboard first, then come back with the first error.
   - Meta has not approved your app for the permission you need. This skill can show the symptom, but only a Meta app review fixes it.
-  - Your ad was rejected or your account is restricted. Use the Meta ads compliance checker.
-  - You want code that pulls your Meta report. Use the Meta Ads report coding prompt.
+  - Your ad was rejected or your account is restricted. Use the Meta ad policy checker.
+  - You want code that pulls your Meta report. Use the Meta Ads reporting app planner.
 you_give:
   - The error code, type and message from each failing call, with the token removed
   - Which call failed. Your ad accounts list, your Ad Library search or your insights pull

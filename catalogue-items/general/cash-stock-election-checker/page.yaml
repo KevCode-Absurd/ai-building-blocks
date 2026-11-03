@@ -18,7 +18,7 @@ when:
   - A deal team asks what share of cash requests the pool can pay.
   - You are checking an exchange agent's allocation against the signed terms.
 not_for:
-  - Every target share is swapped at one fixed ratio, with no choice. Use the Fixed exchange consideration checker.
+  - Every target share is swapped at one fixed ratio, with no choice. Use the Fixed share-swap payout calculator.
   - The stock side is also oversubscribed, so both pools run short. This covers cash only, so ask the deal lawyers for the allocation rules.
   - You need exact rounding and final share counts. The exchange agent's own rules decide those.
 you_give:

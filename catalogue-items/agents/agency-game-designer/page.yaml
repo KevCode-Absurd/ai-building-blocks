@@ -29,9 +29,9 @@ when:
   - You are adding a new mechanic and want to know how it touches the rest of the game.
   - You want a first-session flow that teaches the main action without a long tutorial.
 not_for:
-  - You only need coins, gems, prices and drop rates. Use the Game economy designer agent.
+  - You only need coins, gems, prices and drop rates. Use the Game economy designer.
   - You are building on Roblox and need pass, product and retention advice. Use the Roblox Experience Designer agent.
-  - You need code for the game. Use the Unity Architect agent or the Godot Gameplay Scripter agent.
+  - You need code for the game. Use the Unity software architect or the Godot gameplay programmer.
   - You want proof the game is fun. Only playtests with real players can show that.
 you_give:
   - Your game idea in a few lines, and the genre

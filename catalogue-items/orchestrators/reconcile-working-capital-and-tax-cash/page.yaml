@@ -18,10 +18,10 @@ when:
   - Cash taxes paid differ from the tax expense in the income statement.
   - A reviewer asks whether current tax was counted inside working capital as well.
 not_for:
-  - You only need the working capital effect. Use the Noncash working-capital bridge on its own.
-  - You only need constant-currency revenue. Use the Constant-currency revenue bridge on its own.
-  - You only need tax paid. Use the Current tax cash-payment bridge on its own.
-  - Factoring or supplier finance may be inside operating cash. Use the Separate financing effects from operating cash workflow first.
+  - You only need the working capital effect. Use the Working capital cash change checker on its own.
+  - You only need constant-currency revenue. Use the Revenue growth currency checker on its own.
+  - You only need tax paid. Use the Cash tax payment reconciler on its own.
+  - Factoring or supplier finance may be inside operating cash. Use the Factoring and supplier-finance cash-flow reviewer workflow first.
 you_give:
   - Opening and closing balances for receivables, inventory, payables and other operating items (from the balance sheet)
   - Acquisition, translation and other noncash movements (from the notes)

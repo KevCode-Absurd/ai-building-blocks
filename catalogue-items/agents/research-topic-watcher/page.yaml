@@ -29,7 +29,7 @@ you_get:
   - Lines of your summary that a strong new paper goes against, with a proposed rewrite
   - Up to three papers worth reading in full, each with a plain summary, and the search so it can be repeated
 how_to_use:
-  - Start a chat with the agent. In Claude Code (a paid tool, needed to keep the folder and run each month), add it as a skill or save it in .claude/agents, then name your topic. Zotero is optional: it is free to use, with paid plans for extra storage.
+  - "Start a chat with the agent. In Claude Code (a paid tool, needed to keep the folder and run each month), add it as a skill or save it in .claude/agents, then name your topic. Zotero is optional: it is free to use, with paid plans for extra storage."
   - On the first run, read the draft standing summary. Fix it and say yes before it is saved.
   - Each month, ask it to run. It reads the same folder and searches only what is new.
   - Read the papers at risk and the three to read. Say yes or no to each proposed change.

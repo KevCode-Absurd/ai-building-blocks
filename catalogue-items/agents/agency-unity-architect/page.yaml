@@ -29,8 +29,8 @@ when:
   - You are starting a bigger Unity project and want the structure settled before you write systems.
 not_for:
   - You are building multiplayer or networking. Use the Unity Multiplayer Engineer agent.
-  - You want a custom editor window or import rule. Use the Unity Editor Tool Developer agent.
-  - You want a shader. Use the Unity Shader Graph Artist agent.
+  - You want a custom editor window or import rule. Use the Unity editor tool developer.
+  - You want a shader. Use the Unity Shader Graph artist.
   - You are making a small jam game or a throwaway test. This structure may cost more time than it saves.
 you_give:
   - Your Unity version and the platforms you build for

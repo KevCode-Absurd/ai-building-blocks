@@ -19,7 +19,7 @@ when:
   - Your current spreadsheet applies one growth percentage to every month.
 not_for:
   - You want advice on a raise, dilution or a board pack. Use the Startup finance advisor.
-  - You only need the month your cash runs out from past cash data. Use the Startup runway forecaster.
+  - You only need the month your cash runs out from past cash data. Use the Startup cash forecast builder.
   - You need tax, audited accounts or a model an investor has signed off. Use an accountant or finance lead.
 you_give:
   - Pricing and plan tiers

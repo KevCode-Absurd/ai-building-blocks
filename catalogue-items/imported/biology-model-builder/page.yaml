@@ -20,8 +20,8 @@ when:
   - You need a clean diagram of a model for a paper or a talk.
   - You are loading a saved project and must keep its diagram layout.
 not_for:
-  - "You want to run a simulation of a finished model: use the Biology model simulator."
-  - "You want to fit parameters to data or run population or NCA work: use the Biology model fitter."
+  - "You want to run a simulation of a finished model: use the SimBiology model simulator."
+  - "You want to fit parameters to data or run population or NCA work: use the SimBiology model parameter fitter."
   - "You do not have MATLAB with SimBiology: ask a colleague who does, or draw the model on paper first."
 you_give:
   - The species and reactions to model
@@ -36,7 +36,7 @@ you_get:
   - A saved model file you can reopen
   - The result is a MATLAB script, a saved .mat or .sbproj file and a layout check count for the diagram
 how_to_use:
-  - Gather first: your species list, the units for each, the form of each rate law, the compartment each species sits in, and starting values.
+  - "Gather first: your species list, the units for each, the form of each rate law, the compartment each species sits in, and starting values."
   - Open an AI that can run MATLAB with SimBiology. Add the whole skill folder, and tell your AI the folder path so it can add the helper scripts to the MATLAB path. Pasting the text alone is not enough.
   - Paste your species, reactions, rate laws, starting values and units. Add a .sbproj file if you have one.
   - Say if you want a diagram. Without that request, the model is built in code only.

@@ -37,7 +37,7 @@ how_to_use:
   - Find your stage times in a ticketing system, ERP or workflow export (look for the created, started and finished timestamps). If you have no measured times yet, use rough estimates and say so. Measured times give better results.
   - Mark each stage as real work, waiting or rework. Answer any question your AI asks about handoffs and batch sizes.
   - The cut-offs it uses (real work above 25% is healthy, below 10% is waste-heavy, a stage over 2x the average, waiting over 40%, rework over 15%) are the skill's own rules of thumb, not published standards. Treat them as a guide.
-  - Read the map and the ranked list. The list is a table with one row per stage: its severity, the likely cause and the action to take.
+  - "Read the map and the ranked list. The list is a table with one row per stage: its severity, the likely cause and the action to take."
   - Take the single top bottleneck into one fix plan. Run the analysis again after the change to see if the constraint has moved.
 output_sample:
   input:

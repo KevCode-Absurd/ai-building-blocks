@@ -19,9 +19,9 @@ when:
   - You train on proteins, molecules or medical images and want advice for that kind of data.
 not_for:
   - Your model is for patient care or other clinical use. These settings are for research and need expert and regulatory review first.
-  - You want to fine-tune a chat model on one GPU. Use the LLM fine-tuning guide.
+  - You want to fine-tune a chat model on one GPU. Use the Unsloth fine-tuning code writer.
   - You want full training code that loads, splits and checks your data. Use the model training builder.
-  - You train in MATLAB. Use the neural network trainer instead.
+  - You train in MATLAB. Use the MATLAB neural network trainer instead.
 you_give:
   - What you are training and on what data
   - How many samples or tokens you have

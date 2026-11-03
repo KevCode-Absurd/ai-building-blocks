@@ -20,7 +20,7 @@ when:
 not_for:
   - "The policy is still being drafted or reviewed: finish approval first. This works from the approved text."
   - "You need the official reading of a rule for a dispute: ask the policy owner or a lawyer. This explains, it does not rule."
-  - "You want to know whether staff understood it after launch: use the Review staff adoption of a policy change workflow."
+  - "You want to know whether staff understood it after launch: use the Policy adoption support planner workflow."
   - "You only need to answer one staff question on an existing policy: use the Company policy explainer on its own."
 you_give:
   - The approved policy text, with its version and start date

@@ -21,9 +21,9 @@ when:
   - You need the empty and error states that nobody drew.
 not_for:
   - "You only need loading, empty and error states added to code that already exists: use the Loading and error state designer."
-  - "You have no components, tokens or brief yet: write rules first with the Minimal style guide writer or the Design rules file writer."
+  - "You have no components, tokens or brief yet: write rules first with the Minimal style guide writer or the Project design rules writer."
   - "You are building for Android or a desktop app: this skill covers web and iOS."
-  - "You want a check for AI-made looks in finished code: use the AI-look design reviewer."
+  - "You want a check for AI-made looks in finished code: use the UI design consistency reviewer."
 you_give:
   - Your product brief and what the screen is for
   - Web or iOS

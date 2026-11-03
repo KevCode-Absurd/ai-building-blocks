@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have fewer than six ads with about 20 sales each: treat your best ad as one example, and wait for more results before you look for a style."
   - "You only want ad words for a product: use the Fact-based ad copy writer."
-  - "You want finished image ads made from a plan: use the Accurate product image ad maker."
+  - "You want finished image ads made from a plan: use the Product image ad prompt writer."
 
 you_give:
   - Six or more of your own ads, with the images attached (your AI can see pictures), dates, spend and results

@@ -16,7 +16,7 @@ when:
   - You are moving from a test account to a live one and want to know what access level you need.
   - A teammate handed you a script that is not in the repository and you need a safe way to check access.
 not_for:
-  - You haven't made the Google Cloud project or OAuth client yet. Use the Google Ads Cloud and OAuth client planner first.
+  - You haven't made the Google Cloud project or OAuth client yet. Use the Google Ads OAuth setup planner first.
   - You want to change campaigns, budgets or ads. This is read-only and changes nothing.
   - You want to pull reports and analyse results. Get access working here, then use the Ad sales drop analyst on an export.
   - You are connecting Meta, not Google. Use the Meta developer app setup planner.

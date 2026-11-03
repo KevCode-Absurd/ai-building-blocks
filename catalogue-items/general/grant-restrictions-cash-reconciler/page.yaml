@@ -91,6 +91,7 @@ output_sample:
   prerequisites:
     - "A bank statement and a fund ledger for the same period"
     - "Someone who has approved each grant payment against the award"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency, scale and the period it covers."

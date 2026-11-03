@@ -18,8 +18,8 @@ when:
   - "Buyers hesitate at the price or the size choice."
   - "You are redesigning a page and need to place proof."
 not_for:
-  - "You have no reviews or proof yet: collect some first, or use the Buyer doubt gap finder to find which doubts need proof."
-  - "You want the full set of checks for a store page: use the Store social proof placer."
+  - "You have no reviews or proof yet: collect some first, or use the Customer objection coverage checker to find which doubts need proof."
+  - "You want the full set of checks for a store page: use the Store testimonial placement planner."
   - "You need the page itself written: use the Sales letter outline planner."
 
 you_give:

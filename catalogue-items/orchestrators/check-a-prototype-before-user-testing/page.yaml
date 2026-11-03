@@ -18,9 +18,9 @@ when:
   - Your tasks read "click the Save button", which gives the answer away.
   - Someone who uses a screen reader or only a keyboard will join the test.
 not_for:
-  - The product is already live and you want it reviewed. Use the Usability heuristic reviewer.
+  - The product is already live and you want it reviewed. Use the Website usability reviewer.
   - You need a quick plan for a simple page. Use the Small usability test planner.
-  - You have an idea and no prototype yet. Use the Throwaway prototype builder.
+  - You have an idea and no prototype yet. Use the Throwaway prototype planner.
 you_give:
   - "The prototype: a link, screenshots or a design file"
   - Your research question, such as "Can people find where to change their plan?"

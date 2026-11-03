@@ -8,7 +8,7 @@ headline: Enterprise customer onboarding planner
 subhead: "Give your AI the signed customer and their success goals. It builds an onboarding plan with stages, owners and checks. It also flags two points where, in the author's experience, enterprise customers often drift away: Week 4 and Week 12. These are one author's patterns, not measured data."
 not_for:
   - "Your customer is self-serve or has a single seat: use a simple welcome email and a short setup guide, not a full plan."
-  - "You want to grow through free trials and product-led sign-ups: use Self serve product growth planner."
+  - "You want to grow through free trials and product-led sign-ups: use Self-service product growth planner."
   - "You have not signed the deal yet: use your sales process and a person on your team to qualify the buyer first."
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the full text of the skill into a new chat.

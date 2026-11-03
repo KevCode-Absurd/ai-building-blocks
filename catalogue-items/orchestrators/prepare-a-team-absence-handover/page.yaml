@@ -18,7 +18,7 @@ when:
   - Two people are away at once and you need to see where work will go unowned.
   - A manager asks "who has this while she is out?" and you have no clear answer.
 not_for:
-  - "A critical role needs a named backup before anyone is away: use Plan coverage for a critical role."
+  - "A critical role needs a named backup before anyone is away: use Critical role backup and training planner."
   - "A sudden event has left many people unavailable: use Plan staff coverage during a disruption."
   - "Someone is leaving for good and you hand over their whole role: use the Handover note writer."
   - You want to decide leave entitlements or pay. Take that to HR. This pack plans the work only.

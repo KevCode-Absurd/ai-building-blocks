@@ -19,7 +19,7 @@ when:
   - You are worried an AI-written query might change live data.
 not_for:
   - "You need to change data, add a column or run a migration: ask a developer or database admin, or use the database migration writer for the plan."
-  - "Your data is in large CSV or Parquet files, not Postgres: use the DuckDB big file query helper."
+  - "Your data is in large CSV or Parquet files, not Postgres: use the MATLAB DuckDB query writer."
   - "Your login has write rights and you cannot get a read-only one: do not use it on a live database until an admin makes you one."
 you_give:
   - A settings file (connections.json) listing each database, with a name, a note on what it holds and a read-only login

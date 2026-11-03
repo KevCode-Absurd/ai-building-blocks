@@ -21,7 +21,7 @@ not_for:
   - Your product has no screens yet to compare with. Use the First-use onboarding designer on its own to plan the path.
   - You only want a tour built for a path you already trust. Use the In-app tour designer.
   - You want emails for new customers, not in-product text. Use the New customer onboarding sequence writer.
-  - You want to rewrite help articles, not first-use screens. Use the Plain words interface rewriter.
+  - You want to rewrite help articles, not first-use screens. Use the Forms and instructions rewriter.
 you_give:
   - Your current onboarding screens, as screenshots, a recording transcript or a list of screens in order
   - Your help text, tooltips and welcome emails that give setup instructions

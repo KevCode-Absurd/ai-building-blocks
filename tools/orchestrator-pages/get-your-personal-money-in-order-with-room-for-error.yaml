@@ -16,9 +16,9 @@ when:
   - You have saved before and spent it in one bad month.
   - A raise, a new baby or a move is coming and you want a plan that holds.
 not_for:
-  - "You want to plan one big purchase: use Plan a purchase around your real budget."
-  - "You want to choose what to invest in or how to split stocks and bonds: use Choose your investing style and your stock and bond split."
-  - "It is your business's cash, not your own: use Build a monthly P&L and know your real margin."
+  - "You want to plan one big purchase: use Purchase total-cost comparison analyst."
+  - "You want to choose what to invest in or how to split stocks and bonds: use Investment policy and style reviewer."
+  - "It is your business's cash, not your own: use Store profit and margin analyst."
   - "A debt is in collections or you cannot pay the minimums. Talk to a licensed adviser or a nonprofit credit counsellor first."
 you_give:
   - Your monthly income after tax

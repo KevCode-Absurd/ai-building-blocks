@@ -18,10 +18,10 @@ when:
   - A writer has comments from several readers and wants them sorted into what to fix first.
   - You want reviewers to practise feedback before it counts for anything.
 not_for:
-  - You need grades or marks. Peer comments are not marking. Use the Marking rubric writer or the Student work marking desk.
-  - No peers are available. Get feedback on one draft from the Honest draft feedback giver.
+  - You need grades or marks. Peer comments are not marking. Use the Marking rubric writer or the Student rubric feedback writer.
+  - No peers are available. Get feedback on one draft from the Long-form draft reviewer.
   - You already have comments and only want them sorted. Use the Reader feedback sorter.
-  - You need to give one person hard feedback face to face. Use the Plan a difficult feedback conversation workflow.
+  - You need to give one person hard feedback face to face. Use the Evidence-based feedback conversation planner workflow.
 you_give:
   - The drafts to be reviewed, such as stories, scripts or other creative writing
   - The task or criteria reviewers should use

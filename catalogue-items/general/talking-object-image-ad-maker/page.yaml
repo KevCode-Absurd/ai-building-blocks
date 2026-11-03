@@ -18,7 +18,7 @@ when:
   - Your product replaces an old thing people keep and feel a bit silly about.
   - You run a talking object video and want a still that matches it.
 not_for:
-  - "You want a video, not a still: use the talking object ad script skill, which writes the video version."
+  - "You want a video, not a still: use the Talking object video ad script writer skill, which writes the video version."
   - "Your product needs proof to sell, like numbers or before and after photos: use a plain product photo ad with the proof written on it."
   - "You have no brand file or buyer details yet: use the Brand profile builder and the Buyer brief writer first."
 

@@ -19,7 +19,7 @@ not_for:
   - "You have no purchase tracking set up: fix tracking first. Use the Meta server tracking checker."
   - "You want to know why ads stopped getting delivered this week: use the Meta delivery troubleshooter."
   - "You want each ad marked keep, watch or pause from your own numbers: use the Daily Meta ad review planner."
-  - "You only want to know if one ad will be rejected: use the Meta ads compliance checker."
+  - "You only want to know if one ad will be rejected: use the Meta ad policy checker."
   - "Your account is under three weeks old or spends very little. The audit runs, but its scores are weak evidence."
 you_give:
   - Your Meta Ads Manager results for the last 30 days, broken down by ad (CSV or pasted table)

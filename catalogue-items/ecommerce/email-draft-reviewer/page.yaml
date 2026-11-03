@@ -21,7 +21,7 @@ not_for:
   - "You need order, shipping or legal emails to stay formal: keep the 'we' lines as they are and ask a person to check the terms."
   - "You want a final check for typos: use a spell checker or a proofreader after your edits."
   - "You want the email written from scratch: ask your AI to write a first draft, then bring it here to review."
-  - "You want a quick first pass with fewer checks: use the Email send-readiness scorer (a prompt in this library)."
+  - "You want a quick first pass with fewer checks: use the Email draft readiness checker (a prompt in this library)."
 
 you_give:
   - The email draft, its subject line and preview text

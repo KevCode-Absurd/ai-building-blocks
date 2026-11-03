@@ -18,7 +18,7 @@ when:
   - Testers feel dizzy and you suspect the view or the controls.
 not_for:
   - You need menus, HUDs or panels for a general XR app. Use the XR Interface Architect agent.
-  - You need the WebXR app built and rendered. Use the XR Immersive Developer agent.
+  - You need the WebXR app built and rendered. Use the WebXR experience designer.
   - You are building for Apple Vision Pro. Use the visionOS Spatial Engineer agent.
   - You need help choosing a headset. This agent plans controls for the headset you name.
 you_give:

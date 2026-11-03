@@ -18,8 +18,8 @@ when:
   - You want the messages ready before the next incident, not during it.
   - The incident is over and you owe customers a recovery note.
 not_for:
-  - You want to find the cause. Use Investigate an AWS service incident, or the Outage incident leader.
-  - You want to learn from an outage afterwards. Use Turn an incident into a safer procedure.
+  - You want to find the cause. Use AWS incident investigation planner, or the Outage incident leader.
+  - You want to learn from an outage afterwards. Use Incident learning and follow-up planner.
   - You need to reply to one customer. Use the Angry customer reply writer.
   - Nothing is confirmed yet. Wait until you know what is affected, or send 'we are looking into it'.
 you_give:

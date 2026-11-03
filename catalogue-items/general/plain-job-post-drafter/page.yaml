@@ -71,7 +71,7 @@ works_best_with:
     - The role and the team
 not_for:
   - "You want the full set of inclusive-language checks: use Inclusive job post writer."
-  - "You want the post built around one problem the new hire must solve: use Problem-first job description writer."
+  - "You want the post built around one problem the new hire must solve: use Outcome-focused job description writer."
   - "You have the resumes already and need a shortlist: use Applicant shortlist builder."
 output_sample:
   input:

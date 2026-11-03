@@ -34,7 +34,7 @@ you_get:
   - A list of open questions
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Use an AI that can read uploaded files.
-  - Upload your brand documents. Add call transcripts if you have them. A discovery report from an earlier step is optional. Without one, sort your sources by hand: list each file and say which is most trusted.
+  - "Upload your brand documents. Add call transcripts if you have them. A discovery report from an earlier step is optional. Without one, sort your sources by hand: list each file and say which is most trusted."
   - The skill names helper steps (document analysis, conversation analysis, a quality check) and a /brand-voice:discover-brand command. They are not in this item. In ChatGPT or Gemini, ask your AI to do the same steps one after another in the chat.
   - Paste in a few lines on how you want your brand to sound (optional).
   - Read the guide. It has an executive summary, a We Are / We Are Not list, personality, a messaging framework, a tone-by-situation table and a terminology list. Check the confidence scores first, then answer each open question or accept the suggested answer.

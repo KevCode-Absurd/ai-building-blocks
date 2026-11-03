@@ -18,8 +18,8 @@ when:
   - You paid a retainer and are not sure how much the letter credits.
   - A seller wants to know the cash they will receive after fees.
 not_for:
-  - "You want the whole seller cash bridge, with working capital and escrow: use the Reconcile seller closing cash workflow."
-  - "Your price depends on leakage between the locked-box date and closing: use the Reconcile a locked-box closing price workflow."
+  - "You want the whole seller cash bridge, with working capital and escrow: use the Seller closing proceeds and retained cash checker workflow."
+  - "Your price depends on leakage between the locked-box date and closing: use the Locked-box deal price checker workflow."
   - "The adviser charges a flat fee with no tiers: read the letter and check the invoice by hand. No tier check is needed."
 you_give:
   - The engagement letter with the fee tiers, the minimum fee and how deal value is defined

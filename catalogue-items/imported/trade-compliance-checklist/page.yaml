@@ -33,7 +33,7 @@ you_get:
   - A list of gaps and risks
   - Suggested next steps
 how_to_use:
-  - Have ready: a product list with the materials in each, a supplier list with their countries, and your current compliance steps.
+  - "Have ready: a product list with the materials in each, a supplier list with their countries, and your current compliance steps."
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It is long. If your chat cuts it off, add the skill to your AI as a saved skill or project file instead.
   - Answer its questions about what you make, where you sell, and how many suppliers and countries you use.
   - Add your current compliance steps and any past issues if you have them.

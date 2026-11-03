@@ -21,7 +21,7 @@ not_for:
   - "You need a lawyer to say the document set is complete: this lists what you hold. It cannot say what is legally required. Ask your counsel."
   - "You are not sure you may share the files: get approval first. This works only on the set you are allowed to disclose."
   - "Your data room tool already keeps an index: use that. Run this only to compare it with the request list."
-  - "You want the contents of one contract checked: use the Review a contract and get edits and a plain summary workflow."
+  - "You want the contents of one contract checked: use the Contract clause and ownership reviewer workflow."
 you_give:
   - The documents you may share, as files or a list with where each is stored
   - The reviewer's request list, with request numbers if they have them

@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your page has no real study or proof to check: add the proof first, or use a plain copy editor for the wording only."
   - "Your ad is not written like an article, such as a short social ad: use the Sales copy editor instead."
-  - "You only want to strip stock AI phrases from any copy: use the Anti-AI-slop copy editor instead."
+  - "You only want to strip stock AI phrases from any copy: use the AI-style wording editor instead."
 
 you_give:
   - The advertorial draft

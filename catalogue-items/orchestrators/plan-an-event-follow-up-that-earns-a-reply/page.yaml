@@ -18,10 +18,10 @@ when:
   - You told three people "I'll introduce you" and want to be sure that happens
   - A teammate met the leads, and you need to follow up from their notes, not from memory
 not_for:
-  - You have no event, only tasks due from email threads. Use Draft your due task follow ups.
+  - You have no event, only tasks due from email threads. Use Task follow-up and voice editor.
   - You want a multi-email sequence over weeks, after the first reply. Use the Follow-up email sequence writer.
   - You want to plan the event itself, before and during. Use the Event marketing planner.
-  - You want to write to people who did not attend but showed interest. Use Offer useful information first and follow up with stalled leads.
+  - You want to write to people who did not attend but showed interest. Use Information offer and lead follow-up writer.
 you_give:
   - Your attendee list with names, emails, what each person asked for and whether they agreed to be contacted (a consent column)
   - "Your dated notes from the event: who you met and what you promised"

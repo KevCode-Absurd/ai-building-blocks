@@ -20,8 +20,8 @@ when:
 not_for:
   - "You want to know if you are in breach or need a waiver: ask your lender and a lawyer. This does the arithmetic only."
   - "Your covenant is net debt to EBITDA: use the net debt to EBITDA and cure workflow listed under After this."
-  - "You test one period for one ratio: use the Debt service covenant headroom checker, or the Fixed charge coverage bridge builder, on its own."
-  - "You are building project finance cover ratios over the life of a loan: use the Build a project debt service cash pack workflow."
+  - "You test one period for one ratio: use the Loan covenant cash coverage checker, or the Fixed payment cash coverage checker, on its own."
+  - "You are building project finance cover ratios over the life of a loan: use the Project debt repayment modeler workflow."
 you_give:
   - The signed definitions of qualifying cash, debt service and fixed charges, from the credit agreement
   - Cash before charges for each of three test periods, from the compliance certificate or your accounts

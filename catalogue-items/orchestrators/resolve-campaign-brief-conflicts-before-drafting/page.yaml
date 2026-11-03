@@ -12,9 +12,9 @@ when:
   - Several ad briefs, comments or brand files disagree on facts, tone, offer or ad deliverables.
   - You want useful ad drafting to continue without guessing who approved a material change.
 not_for:
-  - "You have one clear brief and want ad copy: use Get ad copy for one buyer, built on one fact."
-  - "The clash is with a client over scope or fees: use Prepare a client scope change brief."
-  - "You only want to know if your ad claims have proof: use the Ad claim proof gap finder."
+  - "You have one clear brief and want ad copy: use Single-buyer ad copywriter."
+  - "The clash is with a client over scope or fees: use Client scope change planner."
+  - "You only want to know if your ad claims have proof: use the Ad claims checker."
   - "You are starting a brief from nothing: use the Creative brief writer."
 output_sample:
   input:

@@ -26,6 +26,7 @@ output_sample:
   prerequisites:
     - An AI that can read your repo files and run read-only commands
     - Python, if you want the bundled drift script to run (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Summary
       contains: The scope checked, what was compared, and whether any top-severity problems were found.

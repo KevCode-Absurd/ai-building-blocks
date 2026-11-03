@@ -33,7 +33,7 @@ when:
   - A workbook breaks every month at the same step and nobody can say why.
 
 not_for:
-  - "You want a cleaned or fixed version of the workbook. Use the Spreadsheet formula auditor or the Messy spreadsheet cleaner."
+  - "You want a cleaned or fixed version of the workbook. Use the Spreadsheet formula auditor or the Indian spreadsheet data cleaner."
   - "You want to compare two versions and see what changed. Use the Excel workbook change reviewer."
   - "You only want to know if a PivotTable is safe to share. Use the Excel PivotTable refresh planner."
   - "Your AI cannot open the file and you cannot paste the sheets. It can then only write a plan, and every fact is marked as unchecked."

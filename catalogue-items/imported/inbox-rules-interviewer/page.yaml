@@ -19,7 +19,7 @@ when:
 not_for:
   - "You want a shared team inbox sorted: set a plain filter rule in your email app, or ask a teammate who knows the senders."
   - "You only need a one-off clean-up of your inbox: a quick manual pass is faster than an interview."
-  - "You already have your rules saved and want your mail sorted now: run the inbox triage skill that reads these files, not this setup."
+  - "You already have your rules saved and want your mail sorted now: run the Email sorter and reply drafter skill that reads these files, not this setup."
 you_give:
   - Answers to the interview questions
   - Examples of emails you reply to and ones you ignore
@@ -44,6 +44,7 @@ output_sample:
     - Your pricing and terms, if you get pitches or offers (optional)
   prerequisites:
     - An AI that can save files to a workspace folder, or one you can copy the files from by hand
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: email-taxonomy.md
       contains: Your sorting scheme for email types, plus how and when you want your triage report delivered.

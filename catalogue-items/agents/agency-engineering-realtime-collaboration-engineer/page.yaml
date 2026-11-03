@@ -19,8 +19,8 @@ when:
   - Live updates work in your demo but you fear what happens at ten times the users.
 not_for:
   - You only need a page that refreshes every few seconds or a notification. A simple refresh plan is enough, and the Backend Architect agent can size it.
-  - Your app is down right now. Use the Incident Response Commander agent.
-  - You want the full system layout or a database choice. Use the Backend Architect agent or the Software Architect agent.
+  - Your app is down right now. Use the Incident response coordinator.
+  - You want the full system layout or a database choice. Use the Backend Architect agent or the Software architect.
 you_give:
   - What people edit together, such as documents, a task board or a form
   - The tech you use today, such as your web framework, database and hosting

@@ -24,7 +24,7 @@ not_for:
   - You want to decide how the company should record factoring or supplier finance. This tests analysis only and gives no accounting ruling. Ask your auditor.
   - You have no factor statements and no supplier terms. The affected adjustments stop and show MISSING, so the result is thin. Collect those records first.
   - You want to test a loan covenant on net debt. This review fixes the debt figure only. Take its result to your covenant test.
-  - You want to check buybacks or dividends against cash flow. Use the Issuer capital distribution review assistant.
+  - You want to check buybacks or dividends against cash flow. Use the Share buyback and dividend reviewer.
 
 you_give:
   - The cash flow statement, balance sheet, debt and operating cash flow for each period (from the company's filing)

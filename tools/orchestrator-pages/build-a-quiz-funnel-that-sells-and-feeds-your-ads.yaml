@@ -17,7 +17,7 @@ when:
 not_for:
   - "You sell low-priced impulse products: use a plain product page and the Fact-based ad copy writer instead."
   - "You cannot send paid traffic yet: the quiz needs about 100 answers, so start with the Buyer problem list builder."
-  - "You only want ad ideas from answers you already have: use the Quiz answers to ad angles reader on its own."
+  - "You only want ad ideas from answers you already have: use the Quiz response ad angle writer on its own."
 you_give:
   - Your product page text, price and what it replaces
   - Your offer, with terms

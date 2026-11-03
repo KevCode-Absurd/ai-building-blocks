@@ -18,8 +18,8 @@ when:
   - Last quarter left an unused fee credit, and you need to know if it carries forward and by how much.
   - A side letter or amendment changed the fee rate or the offset share, and your fee schedule is out of date.
 not_for:
-  - You only want to compare one quarter's fee before and after a rate change. Use the Management fee stepdown checker.
-  - You only need the offset and carryforward sums for one period. Use the Transaction fee offset checker.
+  - You only want to compare one quarter's fee before and after a rate change. Use the Fund management fee change checker.
+  - You only need the offset and carryforward sums for one period. Use the Fund management fee offset checker.
   - Your question is about unfunded commitments or one investor's capital call. Use the Fund commitments and capital call reviewer.
   - You want to check an investor's capital account or NAV. Use the Investor statement NAV checker.
   - You want to know what the fund agreement means in law. It works from the clauses you paste and gives no legal advice.

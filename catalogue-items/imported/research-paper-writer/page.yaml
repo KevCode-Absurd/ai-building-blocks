@@ -19,7 +19,7 @@ when:
   - Reviewers sent comments and you must revise the text.
 not_for:
   - "You only need a draft of one section from your notes: use the scientific manuscript drafter."
-  - "You are writing for NeurIPS, ICML, ICLR or ACL: use the AI research paper writer."
+  - "You are writing for NeurIPS, ICML, ICLR or ACL: use the Machine learning research paper writer."
   - "You are writing for OSDI, SOSP or NSDI: use the systems paper writer."
   - "You need to review someone else's paper: use the manuscript peer review drafter."
   - You have no results yet. It cannot write findings you do not have.

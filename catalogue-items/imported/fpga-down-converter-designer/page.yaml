@@ -38,7 +38,7 @@ how_to_use:
   - Say you want a digital down converter. Your AI asks for your rates and bands, one question at a time.
   - Look at the simulation plots (I/Q and spectrum) and the sample counts before you generate HDL. Compare them with your own floating-point model if you have one.
   - Run the generated Verilog or VHDL testbench in your HDL simulator to confirm the result.
-  - What comes back at the end: the sample counts, the I/Q and spectrum plots, the MATLAB design function and testbench, and the paths of the HDL files. Next, take the HDL into your FPGA synthesis and timing flow, and check the results against your own floating-point model.
+  - "What comes back at the end: the sample counts, the I/Q and spectrum plots, the MATLAB design function and testbench, and the paths of the HDL files. Next, take the HDL into your FPGA synthesis and timing flow, and check the results against your own floating-point model."
 output_sample:
   input:
     - Your input sample rate

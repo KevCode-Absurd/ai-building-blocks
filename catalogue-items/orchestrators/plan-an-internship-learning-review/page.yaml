@@ -19,9 +19,9 @@ when:
   - A mid-point review is due and the tasks have drifted away from the goals.
 not_for:
   - You need to decide whether to hire or pass on someone. This plans learning, not selection.
-  - A course has already run and you want to know what stuck. Use the Check training transfer after a course workflow.
+  - A course has already run and you want to know what stuck. Use the Post-course skill reviewer workflow.
   - You are planning one training session for a team. Use the Staff training session planner.
-  - You want skills for a whole company, not one role. Use the Role skills framework builder on its own.
+  - You want skills for a whole company, not one role. Use the Job skills and level planner on its own.
 you_give:
   - The internship role and the tasks the host has approved
   - The learning goals, from the intern, the school or the host

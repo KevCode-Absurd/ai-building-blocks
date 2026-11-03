@@ -22,7 +22,7 @@ when:
 not_for:
   - "You have one slow query to rewrite: use the Postgres query tuner."
   - "You are designing tables from scratch: use the Postgres schema designer."
-  - "Your database is MySQL, SQL Server or Snowflake: these rules are for Postgres only. For Snowflake, use the Snowflake SQL helper."
+  - "Your database is MySQL, SQL Server or Snowflake: these rules are for Postgres only. For Snowflake, use the Snowflake SQL developer."
   - "Your database is down right now: call your database admin or your host's support first."
 you_give:
   - Your slow queries, or the SQL files from your project

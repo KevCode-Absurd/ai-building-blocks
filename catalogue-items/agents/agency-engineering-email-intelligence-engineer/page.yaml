@@ -19,8 +19,8 @@ when:
   - A summary tool keeps giving a task to the wrong person and you want to see why.
   - You are about to hand a deal thread to a teammate and want a clean record to go with it.
 not_for:
-  - You want to read your live inbox or send replies. This agent works on text you paste. Use the Customer inbox triage and reply drafter for new customer emails.
-  - You want minutes from a meeting, not an email thread. Use the Meeting Notes Specialist agent.
+  - You want to read your live inbox or send replies. This agent works on text you paste. Use the Customer inbox reply drafter for new customer emails.
+  - You want minutes from a meeting, not an email thread. Use the Meeting notes writer.
   - You need production code, hosting and tests. This agent gives a plan and a design. Hand it to a developer.
 you_give:
   - One email thread, pasted or attached, with the From, To, Cc and Date lines kept on every message

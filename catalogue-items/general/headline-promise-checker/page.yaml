@@ -18,10 +18,10 @@ when:
   - "You have a slogan where a promise should be."
   - "You want to compare a gain version with a loss version of the same promise."
 not_for:
-  - You need to check body copy or a full ad. Use the Meta ads compliance checker for rules, or ask a colleague to read it.
+  - You need to check body copy or a full ad. Use the Meta ad policy checker for rules, or ask a colleague to read it.
   - You have no offer facts yet. Use the Fact-based ad copy writer first, then bring the headline here.
   - You want to plan which version to test. Use the Ad test brief writer after this.
-  - "You want a quick first pass with fewer checks: use the Headline reader and reward checker."
+  - "You want a quick first pass with fewer checks: use the Headline relevance checker."
 
 you_give:
   - "Your headline, or the ad it belongs to"

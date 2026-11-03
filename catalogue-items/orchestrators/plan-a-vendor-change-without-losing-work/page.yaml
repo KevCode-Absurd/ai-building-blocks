@@ -19,7 +19,7 @@ when:
   - The person who set up a vendor is leaving and nobody knows everything it does.
 not_for:
   - You have not picked a replacement and only want to compare quotes. Use the Vendor comparison writer.
-  - You only want a plain summary of the contract. Use the Plain-words contract summary.
+  - You only want a plain summary of the contract. Use the Contract plain-language summary writer.
   - The change is inside your team, such as a new process, with no vendor. Use the Change rollout planner.
   - You need a lawyer to read notice terms or a dispute. This workflow reads terms but gives no legal advice.
   - The contract has no exit terms and no way to export your data. This workflow lists that as the top risk, but you need the vendor, and a lawyer, to fix it.

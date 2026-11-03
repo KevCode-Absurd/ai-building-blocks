@@ -19,8 +19,8 @@ when:
   - You want a sorted list to cross out and test, not a single line to take on trust.
 not_for:
   - "You want one fixed set of plain lines with character counts: use the Ad headline writer."
-  - "You already have a list and want it ranked: use the Headline cover test ranker."
-  - "You have no buying reasons yet: run the What you really sell finder first, or ask five customers why they bought."
+  - "You already have a list and want it ranked: use the Headline and cover test planner."
+  - "You have no buying reasons yet: run the Core customer benefit finder first, or ask five customers why they bought."
 
 you_give:
   - Your top buying reasons, ideally from "What you really sell finder"

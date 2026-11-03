@@ -32,8 +32,8 @@ when:
   - You already use OrgScript and want a process, rule or state flow reviewed.
   - You want a Mermaid flowchart of a process from its text.
 not_for:
-  - You only want the procedure written clearly in plain words. Use the Technical Writer agent.
-  - You want to design the software behind a process. Use the Software Architect agent.
+  - You only want the procedure written clearly in plain words. Use the Engineering documentation writer.
+  - You want to design the software behind a process. Use the Software architect.
   - You don't use OrgScript and don't plan to. A plain checklist is simpler.
 you_give:
   - The procedure as text, such as an SOP, an email thread or meeting notes

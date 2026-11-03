@@ -25,7 +25,7 @@ when:
 not_for:
   - "Your photo has several subjects or no one clear shape. Use the Single image ad planner."
   - "You want a different idea for each ad, not one image in many colours. Use the Image ad remake planner."
-  - "You want the written words on the image set exactly. Use the Image ad maker with exact text."
+  - "You want the written words on the image set exactly. Use the Exact-text image ad prompt writer."
   - "You want to know which style your past ads won with. Use the Winning image ad style finder."
 
 you_give:

@@ -20,8 +20,8 @@ when:
   - A founder asks how much ownership a down round will cost.
   - You need to check a conversion price that a lawyer or investor sent you.
 not_for:
-  - "You have no anti-dilution clause and only a pool request: use the Option pool top-up checker."
-  - "You only need the new conversion price: use the Weighted-average antidilution checker."
+  - "You have no anti-dilution clause and only a pool request: use the Employee option pool top-up calculator."
+  - "You only need the new conversion price: use the Down-round conversion price checker."
   - "You want a legal reading of the charter: ask the company's lawyer. This only does the arithmetic from your definitions."
   - "You need a full cap table after the round: bring every security to a cap table tool, since this covers two changes only."
 you_give:

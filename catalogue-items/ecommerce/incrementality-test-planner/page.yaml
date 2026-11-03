@@ -18,7 +18,7 @@ when:
   - You doubt that a channel, such as branded search or an automated Google campaign, really earns what it reports.
   - A platform's number and your store's sales do not match, and the Platform ROAS reality check could not settle it.
 not_for:
-  - "You want to check a platform's reported ROAS against your store sales: use the Platform ROAS reality check."
+  - "You want to check a platform's reported ROAS against your store sales: use the Ad return evidence checker."
   - "You want to test retargeting, email or a site change on single users: use the Holdout test planner."
   - "Your store is small or sells through one channel: skip the test and use the cheaper checks the planner names."
 

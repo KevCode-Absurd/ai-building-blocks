@@ -19,7 +19,7 @@ when:
   - You want to prevent a stolen token from working on other services.
 not_for:
   - Your MCP server runs locally over stdio. OAuth does not apply there, so read keys from the environment and keep them out of client settings.
-  - You need to find attack risks like injection or sandbox gaps. Use the MCP attack defence reviewer instead.
+  - You need to find attack risks like injection or sandbox gaps. Use the MCP attack risk reviewer instead.
   - You want login for an ordinary web or mobile app. Use your identity provider's own guide, since this follows the MCP rules only.
 you_give:
   - "How people connect: local or web"

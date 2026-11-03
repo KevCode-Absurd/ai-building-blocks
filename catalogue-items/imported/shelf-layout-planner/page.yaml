@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
   - Paste your product list with sizes, sales and margin, then your shelf sizes. A spreadsheet export works.
-  - Say your goal: sales, profit or fewer empty shelves.
+  - "Say your goal: sales, profit or fewer empty shelves."
   - Answer its questions. It marks any missing numbers instead of making them up.
   - Check the shelf plan against your floor. Does every product fit its shelf?
   - Reset one section first. Compare sales per facing after a few weeks before you do the rest.

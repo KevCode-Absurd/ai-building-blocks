@@ -18,7 +18,7 @@ when:
   - You use findDOMNode, unmountComponentAtNode or defaultProps on function components.
   - A search for useRef() with no argument returns hits in many files.
 not_for:
-  - "You need to fix test files, such as act imports or Simulate: use the React 19 test migration helper."
+  - "You need to fix test files, such as act imports or Simulate: use the React 19 test migration planner."
   - "You want deep help on one old API: use the React legacy context migrator or the React string ref migrator, which cover those two in full."
   - "You have not reached React 18.3.1 yet: move to 18.3.1 first, so React shows you the warnings."
 you_give:

@@ -17,9 +17,9 @@ when:
   - Most of your ads are one format, such as static images, and you want a plan to spread them out.
 not_for:
   - "You do not know your gaps yet. Run the Meta creative similarity risk reviewer first, or count your ads by hand."
-  - "You want a target mix across source, stage and format, not briefs. Use the Creative portfolio mix planner."
+  - "You want a target mix across source, stage and format, not briefs. Use the Ad creative mix planner."
   - "You want one brief built from reviews and product facts. Use the Creative brief writer."
-  - "You want tests with budgets and a calendar. Use the Meta concept diversity test planner."
+  - "You want tests with budgets and a calendar. Use the Meta ad concept test planner."
 you_give:
   - Your live ads counted by format (short video, long video, static, carousel)
   - Your live ads counted by message angle, such as social proof, offer, lifestyle or how-to

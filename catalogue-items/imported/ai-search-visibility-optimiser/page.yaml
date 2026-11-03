@@ -18,7 +18,7 @@ when:
   - You want existing blog posts rewritten so an answer can be lifted from them.
   - You need a way to track AI mentions over time.
 not_for:
-  - "You need a technical or on-page SEO audit for Google search: use the technical SEO auditor instead."
+  - "You need a technical or on-page SEO auditor for Google search: use the technical SEO auditor instead."
   - "You only need schema markup added to a page: use a schema tool or a developer, since this skill only suggests markup."
   - "The page does not affect sales or leads: skip it, because the edits take time and will not pay back."
 you_give:

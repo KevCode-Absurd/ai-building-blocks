@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your ad is a plain product or price ad with no story: use a direct product picture, or the Fact-based ad copy writer to fix the copy first."
   - "You have no story ad yet: use the Fact-based ad copy writer to write the ad, then come back."
-  - "You want a full check of every picture rule: use the Image style picker for story ads."
+  - "You want a full check of every picture rule: use the Story ad visual style planner."
 you_give:
   - Your story ad
   - Who the buyer is and what they tried (optional)

@@ -18,7 +18,7 @@ when:
   - "A draft is full of jargon and you want a stranger to follow it."
   - "You want to cut length without losing what you mean."
 not_for:
-  - "You want to smooth machine-sounding ad copy: use the Anti-AI-slop copy editor."
+  - "You want to smooth machine-sounding ad copy: use the AI-style wording editor."
   - "You are editing legal or contract wording where exact terms must stay: ask a lawyer or the person who owns the contract."
   - "You want to turn a flat story scene into a vivid one: use the Show-don't-tell scene rewriter."
 

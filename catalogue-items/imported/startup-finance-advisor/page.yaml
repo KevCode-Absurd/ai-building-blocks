@@ -19,7 +19,7 @@ when:
   - You want to know when to start cutting costs before cash gets tight.
 not_for:
   - You want a full three to five year model in a spreadsheet. Use the Startup financial model builder.
-  - You only want the month your cash runs out, with odds. Use the Startup runway forecaster.
+  - You only want the month your cash runs out, with odds. Use the Startup cash forecast builder.
   - You need audited accounts, tax advice or legal review of a term sheet. Use an accountant or lawyer.
 you_give:
   - Monthly revenue, costs and cash balance for the last 6 to 12 months
@@ -36,7 +36,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste the text of SKILL.md into a new chat.
   - Paste your monthly numbers from your books or a spreadsheet. Add churn by signup month and your hiring plan.
-  - Say what you need first: runway, unit economics, a raise plan or a board pack.
+  - "Say what you need first: runway, unit economics, a raise plan or a board pack."
   - If your AI can run Python, ask it to edit the scripts to use your numbers. If not, ask it to show the maths step by step.
   - Check the cash balance and last month's burn against your bank. Read each assumption tagged as assumed.
   - Take the plan to your accountant or an experienced adviser before you raise money or cut costs.

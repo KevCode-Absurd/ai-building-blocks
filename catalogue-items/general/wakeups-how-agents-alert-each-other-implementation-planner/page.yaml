@@ -12,7 +12,7 @@ when:
   - You need a bounded wakeup dispatcher with retry and stale-claim recovery.
   - You are adding this function to an agent system.
   - You need to compare an existing version with the supplied starter.
-  - You want a starter to review: the output is not run or tested, so check it before you turn it on.
+  - "You want a starter to review: the output is not run or tested, so check it before you turn it on."
 you_give:
   - The list of events that should wake an agent
   - The fields that make two events the same (the dedup key)

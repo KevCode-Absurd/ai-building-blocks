@@ -20,7 +20,7 @@ when:
 not_for:
   - You use Gorgias, Freshdesk or Zoho Desk. Use the Gorgias ticket priority planner, the Freshdesk ticket priority planner or the Zoho Desk ticket priority planner.
   - You have a pasted batch of emails, not a Zendesk queue. Use the Support ticket sorter.
-  - You want to rate how upset one customer is. Use the Customer message tone and urgency review.
+  - You want to rate how upset one customer is. Use the Customer message tone and urgency reviewer.
   - You have only a few tickets. Use your Zendesk views and sort them by hand.
 you_give:
   - Your Zendesk account, linked through Composio

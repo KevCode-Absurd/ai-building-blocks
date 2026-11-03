@@ -24,7 +24,7 @@ when:
   - You have pairs of related texts, such as questions and the answers that match them.
   - You want proof that training helped before you switch models.
 not_for:
-  - You only want to turn text into vectors with a model that already exists. Use the Text embedding maker.
+  - You only want to turn text into vectors with a model that already exists. Use the Sentence Transformers embedding maker.
   - You want to search your own documents with an AI answer on top. Use the RAG pipeline designer.
   - You have no pairs or labels at all. Collect some first, or use a ready-made model.
   - You want to fine-tune a chat model. Use the Language model trainer.

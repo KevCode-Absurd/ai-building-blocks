@@ -18,7 +18,7 @@ when:
   - You know what stops people buying (price, trust, "will it work for me") and want an offer that answers it.
   - You want different offers for new buyers and returning buyers.
 not_for:
-  - "You have many delivery options and need them cut and grouped: use the Offer trim and stack builder."
+  - "You have many delivery options and need them cut and grouped: use the Offer package planner."
   - "You want a quick list of offers from what you already have: use a plain brainstorm with your AI, then come back here to build the best one."
   - "You want a discount for a one-off sale with no repeat buyers: set the price yourself and check your costs in a spreadsheet."
 

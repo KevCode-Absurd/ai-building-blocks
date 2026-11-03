@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can search the web and read web pages
     - Node.js, to build the Word file
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Verdict on your hypothesis
       contains: Whether the evidence supports or disproves what you believed, with the points for and against.

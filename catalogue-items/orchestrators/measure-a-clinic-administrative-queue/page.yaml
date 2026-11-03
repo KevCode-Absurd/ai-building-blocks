@@ -22,7 +22,7 @@ not_for:
   - Your files still hold names, dates of birth or patient numbers. Remove them first. This workflow stops when it sees them.
   - You want one slow process mapped, outside a clinic. Use the Process bottleneck finder.
   - You only need staff hours set against workload, with no stage times. Use the Team capacity planner.
-  - Work keeps missing deadlines across a whole team. Use the Trace why work keeps missing deadlines workflow.
+  - Work keeps missing deadlines across a whole team. Use the Recurring work delay reviewer workflow.
 you_give:
   - Deidentified task records, one row per task and stage (from your practice system or a log you keep)
   - The role that owns each stage, such as front desk or referral coordinator

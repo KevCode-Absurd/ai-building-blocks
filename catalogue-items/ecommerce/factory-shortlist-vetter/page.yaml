@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no factory contacts yet and only one product idea: find a few listings first, then come back to vet them."
   - "You make a regulated product, such as food or cosmetics: have a compliance specialist lead, and use this to compare factories only."
-  - "You already have a sample and want to judge its quality: use the sample approval gatekeeper."
+  - "You already have a sample and want to judge its quality: use the Product sample approval reviewer."
 
 you_give:
   - Your tech pack or product spec

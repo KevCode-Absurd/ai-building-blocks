@@ -17,7 +17,7 @@ when:
   - You want a consistent memo format across launches.
 not_for:
   - "You only need to check ad or marketing copy: use the Marketing claims checker, not this one. This review covers every legal area, and the Marketing claims checker covers only the claims in your copy."
-  - "You need one risk studied in depth: use the Feature legal risk assessor, since this review gives each area only a first check."
+  - "You need one risk studied in depth: use the Product feature legal risk reviewer, since this review gives each area only a first check."
   - "Your launch is in a sector with its own rules, such as children's products, health or finance, or is outside the US: the base eight areas are not enough. The skill adds a sector overlay for these, so name the sector. Have a local lawyer check the result."
   - "Your launch is outside the US: the base eight areas do not cover other countries' rules. Talk to a local lawyer first, then use the memo to prepare your questions for them."
   - "You need a final legal opinion or sign-off: ask a qualified lawyer. This memo is a first check."

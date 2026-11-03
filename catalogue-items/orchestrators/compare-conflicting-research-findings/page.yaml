@@ -19,9 +19,9 @@ when:
   - A supervisor or editor asks why two sets of results differ.
 not_for:
   - You have one paper and want its claims and evidence. Use the Source note summariser.
-  - You want an answer to a question, with sources found for you. Use the Cited research assistant.
+  - You want an answer to a question, with sources found for you. Use the Research evidence report writer.
   - You are running a formal systematic review or a meta-analysis. This workflow compares only the papers you give it and does not search or pool results.
-  - You want a record that updates when a new paper arrives. Use the Research contradiction review assistant.
+  - You want a record that updates when a new paper arrives. Use the Research finding comparison reviewer.
 you_give:
   - Two or more full papers on the same question, as PDFs or pasted text (abstracts alone are not enough)
   - Your research question, in one sentence

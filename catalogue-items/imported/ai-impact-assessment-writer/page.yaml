@@ -20,7 +20,7 @@ not_for:
   - "You only have a privacy question: run a privacy impact assessment with your privacy lead instead."
   - "The system runs in places you did not list: redo the places check first, or ask a lawyer who knows those rules."
   - "You need legal advice or a sign-off: ask your own lawyer to review the result. Do not rely on a risk tier or a cited rule until you have checked it against the source."
-  - "You only want to review a vendor contract: use ai-vendor-terms-checker instead."
+  - "You only want to review a vendor contract: use AI vendor terms checker instead."
 you_give:
   - The AI use you are assessing, and the vendor behind it
   - The decision it makes or helps make, and who is affected

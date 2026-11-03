@@ -18,8 +18,8 @@ when:
   - A client, lender or insurer asked who covers a role if the owner is out.
   - You plan a long leave and want a backup trained before it starts.
 not_for:
-  - You are covering one short absence. Use the prepare a team absence handover workflow.
-  - A founder is stepping back from many tasks at once. Use the hand over founder dependent operations workflow.
+  - You are covering one short absence. Use the Team absence handover planner workflow.
+  - A founder is stepping back from many tasks at once. Use the Founder work handover planner workflow.
   - You run a nonprofit and need a plan for the top leader. Use the nonprofit leadership handover planner.
   - You already know the skills gap and only need a training plan. Use the training program builder on its own.
 you_give:

@@ -15,7 +15,7 @@ when:
   - Your team nods at the strategy and then does different things.
   - You need a 90-day plan with owners to share on Monday.
 not_for:
-  - "Your strategy is already agreed and running: use the marketing-plan-writer skill alone if you only need a channel plan."
+  - "Your strategy is already agreed and running: use the Marketing plan writer skill alone if you only need a channel plan."
   - "You have no strategy or goal on paper yet: write a short goal and the problem you face first, then come back."
   - "You want one quick idea or a single ad: ask your AI for that directly, not a full plan."
 you_give:

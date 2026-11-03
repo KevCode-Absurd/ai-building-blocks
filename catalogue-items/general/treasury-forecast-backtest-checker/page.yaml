@@ -19,9 +19,9 @@ when:
   - "You are choosing how big a cash buffer to keep and want evidence of your usual miss."
 not_for:
   - "You want a statistical test of forecast quality or a confidence range. A few periods cannot give one."
-  - "You want to know if you can pay debts that fall due: use the Debt maturity funding ladder."
-  - "You want to know how much cash is really free to use: use the Restricted cash availability checker."
-  - "You want to set a cash buffer from your results: use the Lean-year cash rules writer."
+  - "You want to know if you can pay debts that fall due: use the Debt repayment funding planner."
+  - "You want to know how much cash is really free to use: use the Spendable cash balance checker."
+  - "You want to set a cash buffer from your results: use the Cash shortage planning adviser."
 you_give:
   - "The cash forecast as it stood before the period, one net cash number per period. It must be the frozen version, not a revised one"
   - "The actual net cash flow for each period, from your bank statements or ledger"
@@ -80,6 +80,7 @@ output_sample:
   prerequisites:
     - "The forecast file as it was before the period, and bank statements or ledger actuals"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Sources and cutoffs", contains: "The forecast version and date, where actuals came from, and the period boundaries."}
     - {name: "Periods", contains: "Forecast, actual, signed error and absolute error for each period."}

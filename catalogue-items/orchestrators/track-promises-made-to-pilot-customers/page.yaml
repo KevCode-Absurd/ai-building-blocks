@@ -18,9 +18,9 @@ when:
   - Two customers were promised things that clash.
   - The founder who ran the calls is leaving and handing over.
 not_for:
-  - You want action items from internal meetings. Use the Executive action register keeper.
-  - You are answering one complaint. Use the Complaint reply promise checker.
-  - You need a go or no-go on the pilot itself. Use Prepare an AI pilot go decision.
+  - You want action items from internal meetings. Use the Action item tracker keeper.
+  - You are answering one complaint. Use the Customer reply promise checker.
+  - You need a go or no-go on the pilot itself. Use AI pilot decision checker.
   - You have no written record of what was said. Gather notes first, as this cannot recall calls.
 you_give:
   - Pilot agreements or order forms, as files or pasted text

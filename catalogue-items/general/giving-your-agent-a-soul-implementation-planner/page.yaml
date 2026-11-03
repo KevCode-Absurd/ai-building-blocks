@@ -19,7 +19,7 @@ not_for:
   - You want help writing the role file itself, such as its voice or expertise. Write it in any AI chat. This skill loads and protects the file.
   - You have no agent code yet. Start with the Scoped base agent builder, then come back here.
   - Your agent uses one fixed prompt and has no role files. You don't need a loader.
-  - You want to track the cost of each call. Use the Agent AI call cost tracker builder.
+  - You want to track the cost of each call. Use the Agent AI cost tracker builder.
 you_give:
   - One or two real role files, or the template filled in
   - Your size limit, in tokens, for the role file in one call

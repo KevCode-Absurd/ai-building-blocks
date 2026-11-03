@@ -51,6 +51,7 @@ output_sample:
     - An AI that can run MATLAB code
     - MATLAB with the Statistics and Machine Learning Toolbox
     - Use it only with MathWorks products such as MATLAB. The licence (BSD 2-Clause plus MathWorks reuse terms) says so
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Ranked inputs
       contains: A table of the inputs that matter most, ordered by how much each one changes the model's answer.

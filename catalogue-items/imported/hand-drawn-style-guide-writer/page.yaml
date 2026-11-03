@@ -18,7 +18,7 @@ when:
   - A developer needs rules for wobbly lines and handwritten fonts without asking a designer each time.
   - You want a playful style that still passes accessibility checks.
 not_for:
-  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system reviewer to check it."
   - "You are building serious enterprise or finance screens where a sketchy look would cost trust: use the Minimal style guide writer."
   - "You want chunky, bold borders rather than loose lines: use the Bold-border style guide writer."
   - "You want the look of paper, leather or other real surfaces: use the Real-world texture style guide writer."

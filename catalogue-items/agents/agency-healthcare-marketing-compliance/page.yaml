@@ -17,10 +17,10 @@ when:
   - Your team wants safer wording for a claim such as 'lowers blood pressure'.
   - You need a pre-publish review form to hand to your compliance team.
 not_for:
-  - "You run healthcare ads outside China on Meta: use the Meta ads compliance checker."
+  - "You run healthcare ads outside China on Meta: use the Meta ad policy checker."
   - "You need a legal opinion or the official ad approval: ask a qualified lawyer in China and the health authority. This agent cannot give either."
-  - "You want to check medical facts or studies behind a claim: use the Clinical Evidence agent."
-  - "You write replies to patients or customers: use the Healthcare Customer Service agent."
+  - "You want to check medical facts or studies behind a claim: use the Clinical evidence reviewer."
+  - "You write replies to patients or customers: use the Patient service reply writer."
 you_give:
   - The ad, post, script or page text to review, in full
   - "What it promotes: a drug, a device, a supplement, a cosmetic procedure or a medical service"

@@ -16,7 +16,7 @@ when:
   - You suspect the ad is written for people like you, not for your buyer.
 not_for:
   - "You already have a finished ad and want a better headline: use the Ad headline writer."
-  - "You want a ranked list of many reasons to buy, with three to test: use the What you really sell finder."
+  - "You want a ranked list of many reasons to buy, with three to test: use the Core customer benefit finder."
   - "You have no facts about your product yet: gather them first, or ask a customer why they bought."
 you_give:
   - "Your product or service: what it is, what it does, price and proof you may use"

@@ -42,7 +42,7 @@ how_to_use:
   - Once the test run passes on small input, move to your real data. For each new Python call, ask for notes on the data types that call expects.
   - Keep the virtual environment pinned to the library versions that worked. If a later run fails, paste the new error and ask your AI to run the error triage again.
   - If the error is a TypeError or ValueError inside the Python code itself, debug that code. Do not rerun the environment setup for it.
-  - Next steps: save your pinned requirements file, and rerun your small test call after any MATLAB release upgrade or library change.
+  - "Next steps: save your pinned requirements file, and rerun your small test call after any MATLAB release upgrade or library change."
   - To go the other way and call MATLAB from Python, use the MATLAB Engine API for Python.
 output_sample:
   input:

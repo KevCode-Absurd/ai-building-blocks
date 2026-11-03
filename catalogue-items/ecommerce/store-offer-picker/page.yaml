@@ -18,7 +18,7 @@ when:
   - Your conversion rate is fine but your AOV or your repeat rate is the problem.
   - You are about to put a discount on everything and want to know what else you could test.
 not_for:
-  - "You only want to check what one discount does to your margin: use the discount impact checker."
+  - "You only want to check what one discount does to your margin: use the Discount margin and ad-cost checker."
   - "You have no order export and no margin figures: pull those from your store first, or ask whoever keeps your books."
   - "You already know the offer and want ad copy: write it with a copywriter or your own words, then test it."
 

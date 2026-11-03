@@ -19,9 +19,9 @@ when:
   - A website or design project has open questions that only the client can answer.
 not_for:
   - The project is internal and has no client. Use the Project kickoff brief writer on its own.
-  - The kickoff already happened and you only want to track actions. Use the Executive action register.
+  - The kickoff already happened and you only want to track actions. Use the Action item tracker.
   - You only want to know if a meeting is worth holding. Use the Meeting agenda and cost planner.
-  - A client has asked for a change after work began. Use the Prepare a client scope change brief workflow.
+  - A client has asked for a change after work began. Use the Client scope change planner workflow.
   - The scope is not approved yet. Settle the scope first, because this workflow plans from approved work only.
 you_give:
   - "The approved scope: what is in and what is out (from the signed proposal or statement of work)"

@@ -36,7 +36,7 @@ how_to_use:
   - Check the severity. Send the updates, and change the times and details in the templates first.
   - After the fix, paste your timestamped logs and chat messages. Ask for one ordered timeline and a list of gaps.
   - Ask for the post-incident review. Read the root cause and follow-up actions with your team before you share it.
-  - If your AI cannot run the scripts, tell it these rules for severity: SEV1 is a full outage for all users or a critical business function. SEV2 is more than 25 percent of users hurt, or a major feature down. SEV3 is under 25 percent of users hurt, with a workaround. SEV4 is a small issue with no real user impact. It should show its reasoning so you can check it.
+  - "If your AI cannot run the scripts, tell it these rules for severity: SEV1 is a full outage for all users or a critical business function. SEV2 is more than 25 percent of users hurt, or a major feature down. SEV3 is under 25 percent of users hurt, with a workaround. SEV4 is a small issue with no real user impact. It should show its reasoning so you can check it."
   - Send each follow-up action to a named owner with a date, and check them at your next team meeting. Use the Incident postmortem writer to tidy the review, and the Incident runbook writer to turn the fixes into steps for next time.
 output_sample:
   input:

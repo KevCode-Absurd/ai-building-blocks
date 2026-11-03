@@ -18,7 +18,7 @@ when:
   - You want to see whether results beat or missed market estimates.
   - You follow Indian companies and need fiscal-year labels done right.
 not_for:
-  - You want a full valuation model in Excel. Use the DCF model builder for India.
+  - You want a full valuation model in Excel. Use the Indian company DCF modeler.
   - You want a judgement against sector peers with a source beside every figure. Use the Company stock analyst.
   - You want a buy or sell call, or help with a live trade. The note gives a research view, not advice.
 you_give:

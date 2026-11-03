@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have fewer than 10 ads and want patterns: the skill can split them, but you need 10 or more to compare. Gather more ads first."
   - "You want to copy a rival's ad word for word: this skill never reuses a rival's words or images. Write from your own product facts and proof."
-  - "You need to check an ad against Meta's rules before you publish: use the Meta ads compliance checker, or read Meta's own ad policies."
+  - "You need to check an ad against Meta's rules before you publish: use the Meta ad policy checker, or read Meta's own ad policies."
 
 you_give:
   - The ads, as images, screenshots, links or transcripts (10 or more for patterns)

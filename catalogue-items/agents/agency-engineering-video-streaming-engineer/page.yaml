@@ -18,10 +18,10 @@ when:
   - Your video delivery bill is climbing and you want to cut it without hurting quality.
   - You must protect paid content and are unsure how DRM fits into playback.
 not_for:
-  - Your live stream is failing right now. Use the Incident Response Commander agent or the SRE (Site Reliability Engineer) agent.
-  - You want to cut, caption or edit clips for social. Use the Short-Video Editing Coach agent.
-  - You want your marketing videos to perform better on a platform. Use the Video Optimization Specialist agent.
-  - You want to cut cloud costs across your whole system. Use the FinOps Engineer agent.
+  - Your live stream is failing right now. Use the Incident response coordinator or the Site reliability engineer.
+  - You want to cut, caption or edit clips for social. Use the Short video editing coach agent.
+  - You want your marketing videos to perform better on a platform. Use the Video presentation reviewer.
+  - You want to cut cloud costs across your whole system. Use the Cloud cost analyst.
 you_give:
   - Your video type, such as on demand, live, low-delay live or two-way calls
   - The devices and networks your viewers use, such as phones, smart TVs and slow mobile

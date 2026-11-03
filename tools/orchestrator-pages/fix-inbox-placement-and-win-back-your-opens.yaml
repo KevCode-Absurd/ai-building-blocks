@@ -99,9 +99,9 @@ improve:
 next: [win-back-lapsed-buyers-and-clean-out-the-rest, win-back-flow-builder, email-and-sms-performance-reader]
 not_for:
   - "You have not sent in the last 60 days, or you are a brand-new sender: use the Email setup health checker on its own first."
-  - "Your mail reaches the inbox and you only want lapsed buyers back: use the Win back lapsed buyers and clean out the rest workflow."
+  - "Your mail reaches the inbox and you only want lapsed buyers back: use the Lapsed buyer email results planner workflow."
   - "You only need a win-back email series: use the Win-back flow builder."
-  - "You want this month's email and SMS results read: use the Email and SMS performance reader."
+  - "You want this month's email and SMS results read: use the Email and SMS results reviewer."
 output_sample:
   input:
     - Your sending domain settings and your email platform's list and tracking settings

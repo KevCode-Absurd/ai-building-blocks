@@ -18,9 +18,9 @@ when:
   - You are checking a cap table or a lawyer's conversion schedule against the signed note.
   - An investor asks how much interest has built up on their note.
 not_for:
-  - The conversion price depends on a cap or a discount. Use the Cap and discount conversion checker for the price, then bring it here.
-  - The investment is a SAFE, which has no interest. Use the Post-money SAFE ownership checker.
-  - The note pays part of its interest in cash and adds the rest to the loan. Use the Cash and PIK interest checker.
+  - The conversion price depends on a cap or a discount. Use the Convertible note price checker for the price, then bring it here.
+  - The investment is a SAFE, which has no interest. Use the Post-money SAFE ownership calculator.
+  - The note pays part of its interest in cash and adds the rest to the loan. Use the Cash and added interest calculator.
 you_give:
   - The principal that was funded (from the signed note)
   - The simple yearly interest rate (from the signed note)

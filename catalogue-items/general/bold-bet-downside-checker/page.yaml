@@ -21,8 +21,8 @@ when:
 not_for:
   - "The choice is small and easy to undo: use the Reversible decision sorter."
   - "You want the single outcome that could end the business, whatever its odds: use the Ruin risk stress tester."
-  - "You want the strongest argument against your plan: use the Case-against writer."
-  - "You are not sure the idea is wanted yet: use the Smallest test picker first."
+  - "You want the strongest argument against your plan: use the Plan objection writer."
+  - "You are not sure the idea is wanted yet: use the Minimum experiment planner first."
 
 you_give:
   - "The plan in a few lines"

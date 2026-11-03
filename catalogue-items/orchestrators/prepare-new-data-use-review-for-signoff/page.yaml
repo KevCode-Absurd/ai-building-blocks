@@ -18,7 +18,7 @@ when:
   - Your reviewer wants one tidy pack to sign off.
 not_for:
   - You have no privacy rules, assessment template or named reviewer yet. Set those up first. The Privacy management audit planner shows what a privacy setup needs.
-  - The data belongs to staff, such as an HR tool. Use Review employee data access before a change or the Employee data privacy checker.
+  - The data belongs to staff, such as an HR tool. Use Employee data privacy reviewer or the Employee data privacy checker.
   - You want your code scanned for GDPR risks. Use the GDPR privacy checker.
   - You want legal advice or a launch approval. Only a qualified reviewer can give those.
 you_give:

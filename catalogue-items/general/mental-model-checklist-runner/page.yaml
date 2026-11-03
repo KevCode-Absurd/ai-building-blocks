@@ -18,7 +18,7 @@ when:
   - You feel sure, and you want to check you are not just using your favourite tool.
   - Your team always starts from the same angle, such as marketing or the numbers.
 not_for:
-  - "You want a deep look at the mind-tricks part only. Use the Decision bias pile-up checker."
+  - "You want a deep look at the mind-tricks part only. Use the Decision bias checker."
   - "You want to know who is paid for what in a plan. Use the Incentive checker."
   - "You already have your own checklist to run. Use the Decision checklist runner."
   - "You have a simple fact to check, or a plan with no real trade-off. One direct question is faster."

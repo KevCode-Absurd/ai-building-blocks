@@ -20,7 +20,7 @@ when:
   - You want a quick list of costs you could trim, from three months of bank and card lines.
 not_for:
   - You want to sort every transaction into tax and department categories. Use the Expense sorter.
-  - You want to know how many months of cash a startup has. Use the Startup runway forecaster.
+  - You want to know how many months of cash a startup has. Use the Startup cash forecast builder.
   - You want a first budget built. Use the Budget and forecast builder.
   - You need tax filing, an audit or investment advice. Hand those to a qualified accountant or adviser.
 you_give:

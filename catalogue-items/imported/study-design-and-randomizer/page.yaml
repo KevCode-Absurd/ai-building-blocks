@@ -17,7 +17,7 @@ when:
   - A reviewer asked how you randomised.
 not_for:
   - "You need to know how many people or samples to test: use the sample size planner."
-  - "You already have data and want to analyse it: use the statistical test picker or the statistics helper."
+  - "You already have data and want to analyse it: use the Statistical test and results writer or the Statistical data analyst."
   - "You want a quick A/B test of two email subject lines: split your list at random in your email tool, no Python needed."
 you_give:
   - The question you want to test

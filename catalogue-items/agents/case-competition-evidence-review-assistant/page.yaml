@@ -18,9 +18,9 @@ when:
   - A teammate rebuilt a financial slide and you need to know the numbers still add up.
   - You want the hardest judge questions, each with an answer tied to a source.
 not_for:
-  - This is your first pass and you have no earlier review. Run the Stress test a case competition recommendation workflow.
-  - You only want practice questions from the judges. Use the Prepare case competition judge questions workflow.
-  - You want a talk story, not a deck review. Use the Build a talk around one real case workflow.
+  - This is your first pass and you have no earlier review. Run the Case competition financial-assumption reviewer workflow.
+  - You only want practice questions from the judges. Use the Case competition answer and backup-slide planner workflow.
+  - You want a talk story, not a deck review. Use the Case-based pitch and talk writer workflow.
 you_give:
   - The full case text and its exhibits
   - The judging rubric and your time limit

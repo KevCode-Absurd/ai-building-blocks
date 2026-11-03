@@ -15,7 +15,7 @@ when:
   - Margin or profit slipped and you don't know which cost line did it.
   - You want to see whether new customers pay for themselves, month after month.
 not_for:
-  - "You only need a one-off P&L: build it with a single skill like the Store P&L builder instead of running the whole close."
+  - "You only need a one-off P&L: build it with a single skill like the Store profit and loss builder instead of running the whole close."
   - "Your store has no full month of real sales and costs yet: wait a month, or ask your accountant for a simple profit check."
   - "You need tax or filing advice: ask your accountant, because this agent does not do tax."
 you_give:

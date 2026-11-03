@@ -16,7 +16,7 @@ when:
   - You want every lesson re-checked on a schedule instead of when someone complains.
 not_for:
   - "You want one new lesson written from scratch: ask your AI to draft it, or use the Lesson opener planner for just the start of a class."
-  - "You only want to see which quiz topics your class missed: use the Class quiz reteach keeper, which reads quiz results after each test."
+  - "You only want to see which quiz topics your class missed: use the Quiz results and reteaching tracker, which reads quiz results after each test."
   - "Your course teaches a subject that never changes and gets no learner questions: a yearly read-through by you is enough."
 you_give:
   - Your lessons as text, with the date each was last updated

@@ -17,10 +17,10 @@ when:
   - Your editors find the admin confusing and you want a block or layout plan for them.
   - You are about to launch and want a checklist for speed, accessibility and security.
 not_for:
-  - "Your site is slow and that is the only problem: use the WordPress Performance Engineer agent or the Drupal Performance Engineer agent."
-  - "You are building an online store: use the WordPress Shopping Cart Engineer agent or the Drupal Shopping Cart Engineer agent."
-  - "Your front end is a separate Next.js or Nuxt app: use the Frontend Developer agent."
-  - "You need a formal accessibility audit: use the Accessibility Auditor agent."
+  - "Your site is slow and that is the only problem: use the WordPress performance reviewer or the Drupal Performance Engineer agent."
+  - "You are building an online store: use the WooCommerce checkout engineer or the Drupal Commerce developer."
+  - "Your front end is a separate Next.js or Nuxt app: use the Frontend developer."
+  - "You need a formal accessibility audit: use the Accessibility auditor."
 you_give:
   - "Which CMS and version: WordPress, Drupal, or 'help me choose'"
   - Whether the site is new or a change to an existing one

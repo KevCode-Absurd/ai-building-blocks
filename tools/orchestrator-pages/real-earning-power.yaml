@@ -16,9 +16,9 @@ when:
   - You are valuing a business and need one earnings figure you can defend.
   - You are reading an annual report and want to know which profit is for show.
 not_for:
-  - "You want a price or value for the company: run this first, then Value a stock with a margin of safety."
-  - "You are lending to the company, not owning it: use Check if a bond or loan is safe to hold."
-  - "You want to know if the business itself is any good: use Find out if a business is worth owning long term."
+  - "You want a price or value for the company: run this first, then Stock valuation margin-of-safety reviewer."
+  - "You are lending to the company, not owning it: use Bond and loan repayment risk review."
+  - "You want to know if the business itself is any good: use Long-term business quality reviewer."
   - "You have fewer than five years of statements, or the company is new. The record cannot guide, and the run will say so."
 you_give:
   - Five to ten years of income statements, with the notes

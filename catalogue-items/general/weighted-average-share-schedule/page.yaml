@@ -18,9 +18,9 @@ when:
   - A reviewer asks how you got the share count behind your EPS.
   - You want to see how much EPS changes if a share issue fell a month earlier or later.
 not_for:
-  - "You need diluted EPS for share options: use the Treasury-stock option dilution."
-  - "You need diluted EPS for convertible notes: use the Convertible EPS inclusion test."
-  - "A rights issue changed the share count: use the Rights-issue EPS adjustment. For a stock split, use the Stock-split EPS restatement."
+  - "You need diluted EPS for share options: use the Employee option dilution calculator."
+  - "You need diluted EPS for convertible notes: use the Convertible earnings per share checker."
+  - "A rights issue changed the share count: use the Rights issue earnings adjustment calculator. For a stock split, use the Stock split earnings adjustment calculator."
   - "You want to know if a stock is worth buying. This is a calculation, not investment advice."
 you_give:
   - Opening ordinary shares, from the balance sheet or filing
@@ -74,6 +74,7 @@ output_sample:
   prerequisites:
     - "Primary records, such as the filing or share register, with dates"
     - "An AI that can make files, if you want an editable workbook"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Scope and dated sources", contains: "The period, currency, scale and accounting basis, and where each number came from."}
     - {name: "Inputs and assumptions", contains: "Opening shares, each dated change, profit for ordinary holders and the day-count rule used."}

@@ -19,7 +19,7 @@ when:
   - You are reviewing policies, pricing rules or ways of working.
 not_for:
   - "The rule is a legal, safety or regulatory duty: ask the authority that sets it, or a specialist such as a lawyer."
-  - "You need to choose between two live options, not question an old rule: use the Yes, no or too-hard call writer."
+  - "You need to choose between two live options, not question an old rule: use the Investment decision brief writer."
   - "The rule is tied to pay or targets and you want to check the incentive: use the Incentive checker."
 
 you_give:

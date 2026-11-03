@@ -18,7 +18,7 @@ when:
   - "You are sharing an article and want to be sure it holds up."
   - "You read a post that cites a study but gives no detail."
 not_for:
-  - "You need a full review of many studies or a medical, legal or money decision: ask a qualified person, or use the full Study claim checker."
+  - "You need a full review of many studies or a medical, legal or money decision: ask a qualified person, or use the full Study and claim evidence reviewer."
   - "You want to check a product or ad claim, not a study: check the seller's proof directly or ask a person who knows the field."
   - "You want to find new studies on a topic: use a search tool such as Google Scholar, then paste what you find here."
 

@@ -19,7 +19,7 @@ when:
   - You're about to launch lots of new formats at once and want to narrow it to the few your budget can read.
 not_for:
   - "You have no image ads running yet: write a plain test plan with the Ad test brief writer, or start with one simple product photo ad."
-  - "You run video ads: use the Video ad script type picker to choose what to film next."
+  - "You run video ads: use the Video ad format planner to choose what to film next."
   - "You already know the ad you want to test and only need the plan: use the Ad test brief writer."
 
 you_give:

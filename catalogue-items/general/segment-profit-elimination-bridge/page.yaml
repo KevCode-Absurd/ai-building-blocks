@@ -18,8 +18,8 @@ when:
   - "The segment table and the income statement show different profit and you need to find out why."
   - "A reviewer asks for the bridge from segment profit to consolidated operating profit."
 not_for:
-  - "You want to reconcile revenue, not profit: use the Gross-to-net revenue bridge for sales deductions, or the Organic revenue perimeter bridge for acquisitions and currency."
-  - "You want to value the business or pick a multiple. This skill stops at the bridge. The Minority-interest multiple reconciliation is the next step for valuation."
+  - "You want to reconcile revenue, not profit: use the Gross to net revenue checker for sales deductions, or the Like-for-like sales growth checker for acquisitions and currency."
+  - "You want to value the business or pick a multiple. This skill stops at the bridge. The Minority interest valuation checker is the next step for valuation."
   - "You want to compare profit with cash: use the Cash versus earnings checker."
   - "You only have group figures and no segment note. There is nothing to bridge."
   - "The reported group figure is adjusted but the segment measure is statutory, or the other way round: settle which measure each uses first, because the bridge cannot tie across two measures."
@@ -84,6 +84,7 @@ output_sample:
   prerequisites:
     - "The segment note and the income statement from the annual report"
     - "An AI that can make files, only if you want a spreadsheet (optional)"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - {name: "Scope", contains: "The period, currency, scale and pages used, and which group measure the bridge ties to."}
     - {name: "Segment measures", contains: "Each segment's measure and definition, and whether it matches group operating profit."}

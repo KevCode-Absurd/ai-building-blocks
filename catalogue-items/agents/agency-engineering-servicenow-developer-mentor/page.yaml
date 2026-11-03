@@ -31,7 +31,7 @@ when:
   - A user can't see or edit a record, and you suspect an ACL (an access rule).
   - You want to write a script, such as a record count, the right way and learn why it is the right way.
 not_for:
-  - You want to fix a live production outage right now. Use the Incident Response Commander agent to run the incident, and make code changes on a non-production instance first.
+  - You want to fix a live production outage right now. Use the Incident response coordinator to run the incident, and make code changes on a non-production instance first.
   - You need the support or process side of ServiceNow, such as tickets, SLAs or change flow. Use the IT Service Manager agent.
   - You want the AI to log in and change your instance. It can't. It gives steps you run yourself.
   - You can't get logs or a failing example. Expect a list of what to collect first, not a fix.

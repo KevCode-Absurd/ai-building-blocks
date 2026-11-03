@@ -19,11 +19,11 @@ when:
   - Fixes came back and you want to know if the old issues are really gone.
   - You have a spec and want to know how much of it was built.
 not_for:
-  - "You still need screenshots taken and each page tested: use the Evidence Collector agent first, then bring its report here."
+  - "You still need screenshots taken and each page tested: use the Visual QA evidence collector first, then bring its report here."
   - "You want a security review or a code review of unreleased code: use a security reviewer or your engineers."
-  - "You want an accessibility check: use the Accessibility Auditor agent."
-  - "You are launching an online store: use the Pre-launch store checker or the Store go-live checker."
-  - "You manage app releases with versions and rollbacks: use the Release manager."
+  - "You want an accessibility check: use the Accessibility auditor."
+  - "You are launching an online store: use the Store launch readiness reviewer or the Store go-live checker."
+  - "You manage app releases with versions and rollbacks: use the Software release verification coordinator."
 you_give:
   - The original spec or acceptance rules. Paste the text.
   - What was built. Give a staging link your AI can open, or screenshots on desktop, tablet and phone.

@@ -18,7 +18,7 @@ when:
 not_for:
   - "You only want the comparison done on your own numbers, not built into software: use the Meta and Google budget comparison reviewer."
   - "You are not a developer and have no coding AI set up: use the Google Ads store account auditor or the Meta Ads 30-check account auditor."
-  - "You have no way to read your Meta or Google results yet: set up access first, starting with the Google Ads token and access check planner."
+  - "You have no way to read your Meta or Google results yet: set up access first, starting with the Google Ads developer access checker."
   - "You want a full Google Ads audit module, not a comparison: use the Google Ads audit engine builder."
 you_give:
   - A code project and a coding AI, such as Claude Code, that can edit it

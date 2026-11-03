@@ -15,7 +15,7 @@ when:
   - Your comments take long to write and you suspect they are too vague.
   - You want a rubric students can use to check their own work.
 not_for:
-  - "You want a rubric with wording for every level of work: use the Task rubric drafter. This workflow builds a single-point rubric with one criterion."
+  - "You want a rubric with wording for every level of work: use the Task marking guide writer. This workflow builds a single-point rubric with one criterion."
   - "You are checking an AI tutor's replies, not your own comments: use the AI feedback quality checker."
   - "You need a mark or grade given to a whole class at once: this handles one piece of work, or a small set, at a time."
 you_give:

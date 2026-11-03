@@ -17,9 +17,9 @@ when:
   - "You are about to let one agent hand tasks to others and want the rules checked first."
 not_for:
   - "You run one agent. Its own report is enough. A brief only pays off when several agents report."
-  - "You want one person's daily summary of email and meetings. Use the Executive daily briefing writer."
-  - "You want the task table where agents claim work. Use the Agent issue and checkout builder."
-  - "You want rules for who must approve an action. Use the Agent action approval builder."
+  - "You want one person's daily summary of email and meetings. Use the Daily executive brief writer."
+  - "You want the task table where agents claim work. Use the Agent task ownership workflow builder."
+  - "You want rules for who must approve an action. Use the Agent approval workflow builder."
   - "You want it to post the brief or assign the tasks. It drafts the brief and the plan. You send them."
 you_give:
   - "The findings your agents posted, with agent name, date, client or team, severity, title and evidence"

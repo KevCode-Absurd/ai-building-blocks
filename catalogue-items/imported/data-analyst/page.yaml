@@ -20,10 +20,10 @@ when:
   - You have survey results and want the strongest links between answers.
   - You need a short findings note with numbers for a decision.
 not_for:
-  - You just got a file and have no question yet. Use the New dataset explorer first.
+  - You just got a file and have no question yet. Use the Tabular dataset explorer first.
   - You are checking an A/B test for a ship or hold call. Use the Experiment result analyst.
   - You want a forecast with ranges. Use the Trend and forecast analyst.
-  - Your file is too large for a normal sheet. Use the Fast data table analyst.
+  - Your file is too large for a normal sheet. Use the Polars data table analyst.
 you_give:
   - A data file, such as a CSV, Excel, Parquet or JSON file
   - The one question you want answered

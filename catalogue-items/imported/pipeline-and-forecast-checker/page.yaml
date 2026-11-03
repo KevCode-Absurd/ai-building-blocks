@@ -29,7 +29,7 @@ you_get:
   - Forecast accuracy by period
   - Risk flags for aged or concentrated deals
 how_to_use:
-  - Export your open deals from your CRM or a sheet. You need stage, value, close date, owner and age in days for each deal, plus your quota. The scripts read a JSON file, not a plain list. Ask your AI to convert your export into the layout in the skill: quota, stages, average_cycle_days, and a deals list with id, stage, value, close_date, owner and age_days.
+  - "Export your open deals from your CRM or a sheet. You need stage, value, close date, owner and age in days for each deal, plus your quota. The scripts read a JSON file, not a plain list. Ask your AI to convert your export into the layout in the skill: quota, stages, average_cycle_days, and a deals list with id, stage, value, close_date, owner and age_days."
   - Export past forecast periods with the forecast and the actual result for each.
   - In an AI that can run Python, upload the skill folder and the files. Ask it to run the pipeline analyzer, the forecast tracker and the cost calculator.
   - In a plain chat, paste the skill text and your tables. Ask it to work out the same numbers step by step and show its sums. Working out forecast error and coverage by hand across many deals is easy to get wrong, so check the totals against your CRM before you act.

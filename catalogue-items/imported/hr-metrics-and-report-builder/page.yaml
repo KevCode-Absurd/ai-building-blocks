@@ -18,7 +18,7 @@ when:
   - Your monthly people report is a pile of tables that nobody reads.
   - You need rules for keeping people data accurate and private.
 not_for:
-  - "You only need a headcount or turnover report from a spreadsheet: use the Headcount and turnover reporter."
+  - "You only need a headcount or turnover report from a spreadsheet: use the Team size and turnover report writer."
   - "You want to predict which named employees will leave: this skill does not do that. Use your HR and legal advisers first."
   - "You want a report on hiring speed and pipeline: use the Hiring progress reporter."
   - "You want to audit HR files for legal risk: use the HR compliance audit planner."

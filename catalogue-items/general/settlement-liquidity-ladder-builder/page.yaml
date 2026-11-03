@@ -19,8 +19,8 @@ when:
   - A receipt slips to a later time and you want to see the new low point.
 not_for:
   - You need the order of payments inside one time slot. This checks balances at the end of each slot only.
-  - You want to know how much of your bank balance is restricted. Use the Restricted cash availability checker.
-  - You want to check cash against debt maturities over months or years. Use the Debt maturity funding ladder.
+  - You want to know how much of your bank balance is restricted. Use the Spendable cash balance checker.
+  - You want to check cash against debt maturities over months or years. Use the Debt repayment funding planner.
   - You want a longer cash forecast. This covers three settlement times, not weeks.
 you_give:
   - Opening cash you can reach (from the bank balance at the start of the day)

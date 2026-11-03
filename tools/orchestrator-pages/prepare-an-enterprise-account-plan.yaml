@@ -57,7 +57,7 @@ terms: []
 not_for:
   - "You only need to plan one live deal: use the Enterprise account deal planner."
   - "The customer has already signed and you only need the first 90 days: use the Enterprise customer onboarding planner."
-  - "You want help with a single sales call: use the Sales call prep assistant."
+  - "You want help with a single sales call: use the Sales call follow-up planner."
 output_sample:
   input:
     - The target account and the product you sell

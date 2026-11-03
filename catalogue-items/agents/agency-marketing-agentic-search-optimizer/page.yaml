@@ -32,7 +32,7 @@ when:
   - You added a CAPTCHA or forced sign-up and wonder what it does to AI agents.
   - You were told to prepare for WebMCP and want a plain list of what to change.
 not_for:
-  - You want AI tools to mention your brand in their answers. Use the AI citation audit agent.
+  - You want AI tools to mention your brand in their answers. Use the AI citation visibility planner.
   - You want AI crawlers allowed and an llms.txt file. Use the AI crawler and llms.txt setup agent.
   - You want to see how people, not agents, struggle with a form. Use the UX Researcher agent.
   - You need your live site changed for you. This writes the markup and fixes. You or your developer apply them.

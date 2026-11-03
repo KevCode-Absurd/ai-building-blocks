@@ -21,24 +21,24 @@ when:
   - You added an integration, such as a payment processor or a login provider, and want to know what trust boundary it creates.
   - A customer or investor asks how your system defends itself and you have nothing written down.
 not_for:
-  - You have an active breach or suspicious activity right now. Use the Incident Responder agent and call your security lead first.
-  - You want your code scanned for bugs like SQL injection or broken access control. Use the Application Security Engineer agent.
+  - You have an active breach or suspicious activity right now. Use the Security incident responder and call your security lead first.
+  - You want your code scanned for bugs like SQL injection or broken access control. Use the Application security reviewer.
   - You need a SOC 2, ISO 27001, HIPAA or PCI-DSS gap check. Use the Compliance Auditor agent.
 you_give:
   - Your system's architecture (monolith, microservices or serverless), and its languages, frameworks, databases and cloud provider.
   - What data it handles and how sensitive it is, such as passwords, payment details or health records.
-  - Every way in: public APIs, admin panels, mobile apps, third-party integrations, internal service calls.
+  - "Every way in: public APIs, admin panels, mobile apps, third-party integrations, internal service calls."
   - Any controls you already have, such as login checks, encryption or a firewall (optional).
   - An architecture diagram or design doc (optional).
 you_get:
-  - A trust boundary table: where control passes between a user, a service or a third party, and what protects that crossing today.
-  - A ranked STRIDE threat table: each risk that applies, the component it hits, an attack scenario, and the proposed fix.
+  - "A trust boundary table: where control passes between a user, a service or a third party, and what protects that crossing today."
+  - "A ranked STRIDE threat table: each risk that applies, the component it hits, an attack scenario, and the proposed fix."
   - An attack surface list, split into external, internal, data and infrastructure entry points.
   - A control list in priority order, each sized small, medium or large.
   - The assumptions it made and what you should confirm before you trust the result.
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
-  - Describe your system: architecture, tech stack, data types, and every way in, including internal and third-party ones.
+  - "Describe your system: architecture, tech stack, data types, and every way in, including internal and third-party ones."
   - List any controls you already have, and attach a diagram if you have one.
   - Say "Build the threat model. Score each threat and tell me what you assumed."
   - Read the trust boundary table first. If a boundary is wrong, fix that before trusting the risks listed under it.

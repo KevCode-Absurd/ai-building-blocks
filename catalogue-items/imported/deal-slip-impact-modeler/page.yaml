@@ -31,7 +31,7 @@ you_get:
   - Pipeline needed to backfill
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload it as a file.
-  - Add your pipeline export as a file, or connect your CRM if your AI can. Give your quota too. With no CRM connection, upload the pipeline export and quota as files and the skill runs on those alone. Gather first: how your stages map to commit, best case and pipeline, your quota source, and the close date and amount of the deal.
+  - "Add your pipeline export as a file, or connect your CRM if your AI can. Give your quota too. With no CRM connection, upload the pipeline export and quota as files and the skill runs on those alone. Gather first: how your stages map to commit, best case and pipeline, your quota source, and the close date and amount of the deal."
   - This is a copy of Anthropic's deal-slip-scenario skill, under the Apache 2.0 licence. We gave it a plain name.
   - Name the deal and say if it slips, shrinks or is lost. For a shrink, give the new amount.
   - Check the baseline first. Make sure booked, commit and best case match your own numbers.

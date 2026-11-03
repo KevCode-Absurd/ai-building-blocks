@@ -20,7 +20,7 @@ when:
 not_for:
   - "You are changing your embedding model, not the Qdrant version: use the Qdrant embedding migration planner."
   - "You want to move from your own server to a hosted one: use the Qdrant hosting option adviser."
-  - "You need a general plan to ship any release safely: use the Safe release planner."
+  - "You need a general plan to ship any release safely: use the Release safety planner."
 you_give:
   - Your current Qdrant server version and the version you want
   - The version of your app's Qdrant library, or SDK

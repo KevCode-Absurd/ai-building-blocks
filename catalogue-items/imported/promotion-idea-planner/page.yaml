@@ -14,7 +14,7 @@ when:
   - You are deciding whether to offer a free gift or a discount.
   - You need to word a free bonus so it feels like a real prize.
 not_for:
-  - "You only want to size or word a plain price cut: use the Discount wording planner, since this tool avoids price cuts."
+  - "You only want to size or word a plain price cut: use the Discount wording and price display planner, since this tool avoids price cuts."
   - "You need to set your everyday price: use a pricing guide or a simple cost-plus check, not a promotion."
   - "You want ad copy for the offer: write the offer here first, then ask a copywriter or your AI for the ad text."
 you_give:

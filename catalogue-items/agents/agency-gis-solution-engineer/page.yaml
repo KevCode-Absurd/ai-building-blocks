@@ -17,10 +17,10 @@ when:
   - You need a demo that runs without Wi-Fi at a conference or site visit.
   - You must find out early if a data format, an API or a licence blocks your idea.
 not_for:
-  - "You need strategy, tool choice or a roadmap: use the Technical Consultant agent."
+  - "You need strategy, tool choice or a roadmap: use the GIS implementation planner."
   - "You need production ready software: use the Web GIS Developer agent and your engineering team."
   - "You need your data cleaned in depth: use the Spatial Data Engineer agent."
-  - "You need the demo map styled: use the Cartography Designer agent."
+  - "You need the demo map styled: use the Map designer."
 you_give:
   - The strategy, architecture plan or goal, in a few lines
   - The three to five things the demo must show

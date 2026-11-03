@@ -25,7 +25,7 @@ when:
 
 not_for:
   - "You have one slide to change once: resize it in PowerPoint (Design, then Slide Size) and check it by eye."
-  - "You want to pour new content into a brand template: use the PowerPoint template populator."
+  - "You want to pour new content into a brand template: use the PowerPoint template deck builder."
   - "You want picture charts turned into editable charts: use the PowerPoint editable chart rebuilder."
   - "Your AI cannot open .pptx files. It can plan each layout, but it cannot make the resized file."
 

@@ -21,7 +21,7 @@ when:
   - Your team keeps arguing about what counts as a breaking change.
 not_for:
   - You only need release notes for one release today. Use the Release notes writer or the Changelog writer.
-  - You want to bump the version, write the changelog and tag one release right now. Use the Release preparer.
+  - You want to bump the version, write the changelog and tag one release right now. Use the Software release preparer.
   - Your commit messages are free text with no style. Start with the Commit message writer, then come back.
 you_give:
   - Your git repo, or its package.json and recent commit messages
@@ -52,6 +52,7 @@ output_sample:
     - Git repository with commit history
     - Node.js installed
     - A GitHub token, and an NPM_TOKEN secret only if you publish to npm (optional)
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Next version
       contains: The version your recent commits produce, and which commits caused the bump.

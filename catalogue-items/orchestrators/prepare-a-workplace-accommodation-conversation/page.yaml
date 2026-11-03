@@ -18,10 +18,10 @@ when:
   - HR asked for a written plan of options and a date to review them.
   - A first fix did not work and you need to prepare the next conversation.
 not_for:
-  - You need a company-wide accommodation process and draft policy. Use the workplace accommodation process builder on its own.
+  - You need a company-wide accommodation process and draft policy. Use the Workplace accommodation planner on its own.
   - You want legal or medical advice, or a view on what the law requires. Ask an employment adviser or an occupational health service.
-  - The employee has made a complaint about how they were treated. Use the workplace investigation guide.
-  - You need cover for someone who is away. Use the prepare a team absence handover workflow.
+  - The employee has made a complaint about how they were treated. Use the Workplace investigation planner.
+  - You need cover for someone who is away. Use the Team absence handover planner workflow.
 you_give:
   - What the employee said makes the work hard, in their own words (from your notes or their written request)
   - What they chose to share about what would help (optional)

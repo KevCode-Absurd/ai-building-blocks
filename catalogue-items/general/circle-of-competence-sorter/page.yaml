@@ -21,8 +21,8 @@ not_for:
   - "You need a buy or sell call on a named stock: this gives a method of analysis only, so talk to a licensed financial adviser."
   - "You want to size up a market or a rival's strength: do that research first, then bring what you learn here."
   - "You need to check if a business survives a bad year: work through the numbers in a spreadsheet or with your accountant."
-  - "You want a quick first pass with fewer checks: use the Know-it-or-skip-it sorter."
-  - "You want the topic broken into the parts you must understand, with your level in each: use the Circle of competence mapper."
+  - "You want a quick first pass with fewer checks: use the Business decision knowledge checker."
+  - "You want the topic broken into the parts you must understand, with your level in each: use the Knowledge gap reviewer."
 
 you_give:
   - The business, bet or field and what it sells

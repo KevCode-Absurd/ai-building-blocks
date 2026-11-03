@@ -18,7 +18,7 @@ not_for:
   - "You fund the buyback with debt or have costs: build a separate debt-funding schedule with your finance lead, because this skill only covers cash."
   - "The buyback happens part way through the period: use a separate timing schedule built with your analyst or in your own spreadsheet."
   - "You want to know if the buyback is good value or should happen: ask a qualified adviser, because this skill does not recommend or run a repurchase."
-  - "You want to know whether dividends and buybacks fit within equity cash flow: use the Shareholder distribution coverage instead."
+  - "You want to know whether dividends and buybacks fit within equity cash flow: use the Shareholder payout cash checker instead."
 you_give:
   - Ordinary profit, opening shares, cash-funded repurchase amount, execution price, timing and after-tax return forgone on cash.
   - "The repurchase date, plus the currency and scale used for the buyback EPS bridge."

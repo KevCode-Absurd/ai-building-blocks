@@ -18,7 +18,7 @@ when:
   - You need a warranty or maintenance figure with a confidence range.
   - Some units have not failed yet and your data is censored.
 not_for:
-  - "You want general statistics on data that is not about failures: use the Data analysis coder."
+  - "You want general statistics on data that is not about failures: use the MATLAB data analysis coder."
   - "You want to simulate failures with Monte Carlo or fault trees: this skill only fits curves to real data."
   - "You do not have MATLAB: ask your AI for a Python version instead, and check the code yourself."
   - "You have only one or two failures: the ranges will be very wide, so treat any figure as a rough guide."

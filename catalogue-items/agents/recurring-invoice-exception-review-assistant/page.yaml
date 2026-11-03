@@ -18,9 +18,9 @@ when:
   - A supplier sends a corrected invoice or a credit note for an earlier exception.
   - Your approver asks which invoices are ready for review.
 not_for:
-  - This is your first check and you have no ledger yet. Use the Check supplier invoices before approval workflow.
+  - This is your first check and you have no ledger yet. Use the Supplier invoice and receipt checker workflow.
   - You want the sums on one invoice rechecked. Use the Invoice totals checker.
-  - You want to chase customers who owe you. Use the Weekly invoice and cash chaser.
+  - You want to chase customers who owe you. Use the Late invoice and cash forecast reviewer.
 you_give:
   - The new supplier invoices for the batch
   - Purchase orders and goods or service receipts for those invoices

@@ -34,7 +34,7 @@ not_for:
   - You want a monthly shopper-question check for a store. Use the AI recommendation mention tracker.
   - You want one page scored on how easy it is to quote. Use the AI citation scorer.
   - You want the sites AI tools cite for five buyer questions, and who to contact. Use the AI citation source finder.
-  - You want a Google search review or link building. Use the SEO Specialist agent.
+  - You want a Google search review or link building. Use the SEO reviewer.
 you_give:
   - Your brand name, site address and product category.
   - Two to four main rivals.

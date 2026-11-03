@@ -21,7 +21,7 @@ not_for:
   - Your data fits a normal SQL database. Use the database schema designer or the Postgres schema designer.
   - You use MongoDB or another document store. This skill covers Cassandra, ScyllaDB and DynamoDB only.
   - You do not know your queries yet. List them first, since the whole design starts from them.
-  - You want a full system design with services and queues. Use the data system designer.
+  - You want a full system design with services and queues. Use the Data system design reviewer.
 you_give:
   - The queries you need to run, one line each
   - Which database, such as Cassandra, ScyllaDB or DynamoDB

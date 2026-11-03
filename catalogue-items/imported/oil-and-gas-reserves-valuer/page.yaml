@@ -17,7 +17,7 @@ when:
   - You are comparing the value of 1P and 2P cases.
 not_for:
   - You need a reserve report for an SEC filing or a lender. Ask a qualified reserves engineer to sign it off.
-  - You want the cost of closing wells and platforms. Use the Cleanup cost liability calculator.
+  - You want the cost of closing wells and platforms. Use the Cleanup liability calculator.
   - You want to value a whole oil company. Ask an analyst, or use the Company financial health reviewer for the books.
 you_give:
   - Reserve volumes for 1P, 2P and 3P, in MMbbl (oil) or Bcf (gas)

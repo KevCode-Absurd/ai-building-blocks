@@ -51,7 +51,7 @@ output_sample:
     - The MATLAB Coder Support Package for PyTorch and LiteRT Models
     - GPU Coder and an NVIDIA GPU, only if you want CUDA code
     - An AI tool connected to MATLAB that can run MATLAB code, or you run the steps yourself
-    - For the embedded hardware step only, three other MathWorks skills that are not in this item: matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. Without them, stop after the MEX check and the generated code
+    - "For the embedded hardware step only, three other MathWorks skills that are not in this item: matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. Without them, stop after the MEX check and the generated code"
   output:
     - name: Model inspection
       contains: The model's input and output shapes and types, read after loading it into MATLAB.

@@ -15,7 +15,7 @@ when:
   - A price test just ended and you need to know whether to keep the new price.
   - A rival cut its price and you want a calm answer, not a reflex.
 not_for:
-  - "You want to plan a sale or a discount: use the Discount and price change checker."
+  - "You want to plan a sale or a discount: use the Sale discount and price change review."
   - "You get very few orders each month: wait until you have enough orders at each price, or test for longer."
   - "You want to change prices in your store now: change them yourself, because this agent never edits a live price."
 you_give:

@@ -66,11 +66,11 @@ improve:
   - Update the notes and rerun step 2 only for the tasks that changed.
 terms: []
 not_for:
-  - "You only need tidy minutes to circulate: use Rough notes to minutes writer."
-  - "You want a short written update from one meeting: use Meeting to written update converter."
-  - "You want the same action list kept up to date every week: use Weekly meeting actions keeper."
-  - "You want a weekly review of commitments and next week's priorities: use Prepare your weekly executive review."
-  - "You already have due tasks and only need follow-up drafts in your voice: use Draft your due task follow ups."
+  - "You only need tidy minutes to circulate: use Rough-note meeting minutes writer."
+  - "You want a short written update from one meeting: use Meeting and written update planner."
+  - "You want the same action list kept up to date every week: use Meeting minutes and action tracker."
+  - "You want a weekly review of commitments and next week's priorities: use Executive priorities and commitment reviewer."
+  - "You already have due tasks and only need follow-up drafts in your voice: use Task follow-up and voice editor."
 output_sample:
   input:
     - Meeting notes, a transcript or email threads

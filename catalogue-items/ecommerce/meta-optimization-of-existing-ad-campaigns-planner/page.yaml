@@ -17,13 +17,13 @@ when:
   - You need a written record of what you changed, why, and when you will judge it.
 not_for:
   - "You want a routine daily table of marks for every ad: use the Daily Meta ad review planner."
-  - "Your campaign is working and you want to scale it: use the Meta scaling campaign planner."
+  - "Your campaign is working and you want to scale it: use the Meta campaign growth planner."
   - "You are launching a new campaign: use the Meta creative test campaign planner."
   - "You want to add new ads to a campaign that works: use the Meta creative refresh setup planner."
   - "Purchases are missing or counted twice. Fix tracking first with the Meta server tracking checker."
 you_give:
   - Your Meta Ads Manager results at campaign, ad set and ad level, for a recent window and the one before it (CSV or pasted table)
-  - The columns it needs: date, campaign, ad set, ad, spend, purchases and revenue. Helpful extras are impressions, link clicks, frequency and add to cart
+  - "The columns it needs: date, campaign, ad set, ad, spend, purchases and revenue. Helpful extras are impressions, link clicks, frequency and add to cart"
   - Your time zone, currency and attribution window, shown in your export settings
   - Your break-even cost per sale, or your contribution per order after product and running costs
   - The most you will let one ad spend with no purchase, and how long buyers take to buy after a click

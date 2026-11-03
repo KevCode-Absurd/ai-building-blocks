@@ -31,7 +31,7 @@ you_get:
   - Seeds to repeat any result
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text. Better still, upload the skill folder if your AI accepts files. The skill reads a viewer template from that folder, so if you only paste the text, tell your AI to build the viewer page itself.
-  - Before you describe it, decide: the mood words, the colours or palette, whether you want one piece or a set of variations, and the output size.
+  - "Before you describe it, decide: the mood words, the colours or palette, whether you want one piece or a set of variations, and the output size."
   - Describe the mood or look you want. Add colours, a seed or a size if you care about them.
   - This is a copy of Anthropic's algorithmic-art skill (Apache-2.0, see LICENSE.txt), with a few edits so the philosophy does not claim mastery or years of work. Do not publish such claims yourself.
   - Your AI first writes a short art philosophy, then the viewer and the sketch code.

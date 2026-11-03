@@ -18,7 +18,7 @@ when:
   - Earlier tries gave you a different skeleton in every shot, or words and numbers baked into the picture.
   - You want to approve each step before you spend money on video credits.
 not_for:
-  - "You have no skeleton script yet: use the Video ad script writer from customer quotes to write a plain script first."
+  - "You have no skeleton script yet: use the Customer quote video ad writer to write a plain script first."
   - "You want live-action footage with real people: brief a videographer or film it yourself, as this only writes prompts for AI tools."
   - "You need one quick still image or a single short clip: use your image or video tool directly with a short prompt."
 

@@ -31,7 +31,7 @@ you_get:
   - Phase noise check against targets
 how_to_use:
   - "Licence: the terms in this item's LICENSE.md apply (BSD 2-Clause, and use only with MathWorks products such as MATLAB). Ignore the different licence link inside the skill file."
-  - You need paid MathWorks products to run this: MATLAB, Simulink and the Mixed-Signal Blockset. Without them the skill cannot build the model, so use another tool or ask a hardware engineer.
+  - "You need paid MathWorks products to run this: MATLAB, Simulink and the Mixed-Signal Blockset. Without them the skill cannot build the model, so use another tool or ask a hardware engineer."
   - Open your AI tool and paste in the skill instructions. Also paste in the companion file, modeling-pll-datasheet-validate.md. It is in the references folder of this item, and you need it. It holds the loop filter, phase noise, measurement and common-mistake steps, so those steps are missed without it.
   - Tell it you want a PLL model. Add your datasheet or your output and reference frequencies.
   - Answer its questions. It asks one at a time. The skill text mentions Claude Code features, such as cost and time placeholders in the report footer and MATLAB tool names that start with mcp__matlab__. In another AI tool, leave those out or use your tool's own way to run MATLAB code.
@@ -51,6 +51,7 @@ output_sample:
     - MATLAB and Simulink
     - Mixed-Signal Blockset (without MATLAB, Simulink and this blockset the skill cannot build the model)
     - Control System Toolbox, release R2026b or later, only for the phase noise estimate (estimatePLLPhaseNoise)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Extracted parameters
       contains: "The key numbers pulled from your datasheet, plus the PLL type it found: integer-N, fractional-N or dual modulus."

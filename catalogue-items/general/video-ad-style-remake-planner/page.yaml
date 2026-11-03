@@ -19,7 +19,7 @@ when:
   - You're handing the remake to a video tool or an editor and need the words locked.
 not_for:
   - "You want a still image or carousel remake: use the Image ad remake planner, which locks the words the same way."
-  - "You have no original ad to copy and need a new video ad written from scratch: use the Video ad script writer from customer quotes."
+  - "You have no original ad to copy and need a new video ad written from scratch: use the Customer quote video ad writer."
   - "You want to improve weak lines in your ad: fix the ad first, because this plan keeps every word as it is."
 
 you_give:

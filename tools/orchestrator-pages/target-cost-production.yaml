@@ -33,10 +33,10 @@ you_get:
   - A list of waste and by-products, each priced as a possible product, reuse or saving, and ranked by money recovered for the effort
 
 not_for:
-  - "You want to know what each step costs today, not work back from a price: use Cost every step and turn your waste into profit."
-  - "Your main cost is what a factory charges you: use Cut your product cost and turn supplier terms into cash."
-  - "You only want to find where a process wastes time and why: use Find process waste and the cause behind it."
-  - "You want to set a price that covers every cost, not cut cost to meet a price: use Price a product so it pays after every cost."
+  - "You want to know what each step costs today, not work back from a price: use Process waste reuse opportunity planner."
+  - "Your main cost is what a factory charges you: use Supplier cost and payment terms planner."
+  - "You only want to find where a process wastes time and why: use Process waste and root-cause reviewer."
+  - "You want to set a price that covers every cost, not cut cost to meet a price: use Product price and discount planner."
 
 output_sample:
   input:

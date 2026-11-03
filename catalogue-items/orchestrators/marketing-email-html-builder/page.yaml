@@ -11,8 +11,8 @@ when:
   - You want an editable HTML handoff for an email platform.
 not_for:
   - "You only need the email words: use the Campaign email writer."
-  - "You want a layout plan for your own designer, not finished HTML: use the Email layout brief writer."
-  - "You already have a designed email and want it checked before sending: use the Email design checker."
+  - "You want a layout plan for your own designer, not finished HTML: use the Email build brief writer."
+  - "You already have a designed email and want it checked before sending: use the Email layout and delivery reviewer."
   - "You have no real photos of the product: you get a labelled wireframe, not product images."
 you_give:
   - Campaign goal, audience, current offer terms and approved product facts.

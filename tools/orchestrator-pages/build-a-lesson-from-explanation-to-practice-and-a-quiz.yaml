@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only need one short explanation of an idea: use the Direct teaching lesson builder on its own."
   - "You have no source and no time to check facts: without a source it builds from general knowledge, which you must check before teaching."
-  - "You want to grade student work you already have: use the Mark student work against a rubric and sharpen your feedback workflow."
+  - "You want to grade student work you already have: use the Student marking and feedback reviewer workflow."
 you_give:
   - The topic and the source material you teach from
   - Who the learners are and what they already know

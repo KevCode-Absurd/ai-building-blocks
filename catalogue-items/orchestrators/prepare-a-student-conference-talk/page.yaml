@@ -18,7 +18,7 @@ when:
   - Your supervisor asked for a talk outline and speaker notes by next week.
   - You have slides but no clear way to say them in the time you have.
 not_for:
-  - You are defending a thesis. Use the Prepare a thesis defence evidence brief workflow.
+  - You are defending a thesis. Use the Thesis defence outline and question planner workflow.
   - You want slides built from a paper and result tables with every figure traced. Use the Build a research talk from checked figures workflow.
   - You are making a poster. This workflow plans a spoken talk.
   - Your project is not finished and has no results yet. Wait until you have findings to talk about.

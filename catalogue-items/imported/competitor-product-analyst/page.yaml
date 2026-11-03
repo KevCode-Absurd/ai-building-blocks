@@ -49,6 +49,7 @@ output_sample:
   prerequisites:
     - An AI that can read pasted text. Web access helps if you want it to look up rival pages.
     - Some sources may need a paid account or API key, such as Twitter/X data or an SEO tool. Check each site's terms before you collect job posts or LinkedIn data.
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scorecard
       contains: A 1 to 5 score for each of 12 dimensions, per rival and for you, each with an evidence note.

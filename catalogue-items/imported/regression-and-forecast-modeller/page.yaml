@@ -18,8 +18,8 @@ when:
   - A model gave odd results and you need to find out which rows or assumptions caused it.
   - You have two candidate models and need to compare them and pick one.
 not_for:
-  - You only want averages, spread or a quick test of two weeks. Use the Statistics helper or the Research test picker and reporter.
-  - You want a fast forecast with no model fitting. Use the Quick time series forecaster or the Trend and forecast analyst.
+  - You only want averages, spread or a quick test of two weeks. Use the Statistical data analyst or the Statistical test and results writer.
+  - You want a fast forecast with no model fitting. Use the Time series forecaster or the Trend and forecast analyst.
   - You want to prove one thing caused another. A model on past data cannot do that. You need a planned test.
   - You have fewer than about 30 rows. The results will swing too much to use.
 you_give:

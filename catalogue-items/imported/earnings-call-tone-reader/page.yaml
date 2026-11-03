@@ -21,7 +21,7 @@ when:
   - You need a short note on what management talked about more or less.
 not_for:
   - You want the results against expectations. Use the earnings recap writer.
-  - You want to prepare before the company reports. Use the earnings preview writer, or the earnings week briefing writer.
+  - You want to prepare before the company reports. Use the earnings preview writer, or the Indian earnings scenario brief writer.
   - You want a buy or sell signal. Tone is one input, not a trade call, so ask a licensed adviser.
 you_give:
   - The earnings call transcript, pasted or attached

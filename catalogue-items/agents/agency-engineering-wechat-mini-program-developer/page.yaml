@@ -32,8 +32,8 @@ when:
   - Your main package is close to the size limit and you need to know what to move into subpackages.
   - You want a check against what WeChat review looks for before you submit.
 not_for:
-  - You want a web app or a phone app for iPhone and Android. Use the Frontend Developer agent or the Mobile App Builder agent.
-  - You want posts, menus and content for a WeChat Official Account. Use the WeChat Official Account Manager agent.
+  - You want a web app or a phone app for iPhone and Android. Use the Frontend developer or the Mobile app builder.
+  - You want posts, menus and content for a WeChat Official Account. Use the WeChat account content planner.
   - You have existing code and want it reviewed line by line. Use the Code Reviewer agent.
 you_give:
   - What the Mini Program should do and who uses it, in a few lines

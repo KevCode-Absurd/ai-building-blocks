@@ -19,9 +19,9 @@ when:
   - "You want to know if your guide is strong enough before you spend time on outreach."
 not_for:
   - "Your guide is thin or looks like a plain document. Improve it first. The guide check will stop the plan."
-  - "You would email people who have no reason to expect it. Build an audience first with the Give before ask sequence planner."
-  - "You want to launch through someone else's audience. Use the Network launch distribution planner."
-  - "You want to pay for reach. Use the Reach-before-repeat planner."
+  - "You would email people who have no reason to expect it. Build an audience first with the Relationship outreach planner."
+  - "You want to launch through someone else's audience. Use the Audience network launch planner."
+  - "You want to pay for reach. Use the Ad reach planner."
 you_give:
   - "Your guide, as a link or its text, and its topic"
   - "Who the guide is for"

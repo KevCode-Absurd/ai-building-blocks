@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no customer words or research yet: build your research first with the Copy research file builder."
   - "You already know the feeling and need a page plan: use the Sales letter outline planner."
-  - "You want to find ad angles from customer quotes, not one feeling: use the Shared want hook mapper."
+  - "You want to find ad angles from customer quotes, not one feeling: use the Buyer wish hook planner."
 
 you_give:
   - "An angle library or a research file with its sources"

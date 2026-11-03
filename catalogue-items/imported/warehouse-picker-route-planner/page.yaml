@@ -18,7 +18,7 @@ when:
   - You moved stock or changed aisles and the old routes no longer fit.
   - You want to know how much walking a layout change would save before you make it.
 not_for:
-  - "You need to decide which orders go together in one trip: use the Picking batch planner first, then route each batch here."
+  - "You need to decide which orders go together in one trip: use the Warehouse order picking planner first, then route each batch here."
   - "You want fast sellers moved closer to the pack area: use the Warehouse slot assigner."
   - "You plan truck routes between sites, not walking routes inside one building: use the Multi-warehouse route planner."
   - "You have one or two items per order in a very small stockroom. A simple rule, such as walking aisles in number order, is enough."

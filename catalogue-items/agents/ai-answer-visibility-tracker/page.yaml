@@ -18,8 +18,8 @@ when:
   - An assistant said something wrong about your store, and you want to catch that each month.
   - A rival keeps showing up in AI answers and you want to see how often, and why.
 not_for:
-  - You want a one-off check today. Use the AI recommendation panel runner, which runs one set of questions.
-  - You already know which rivals are named and want to know why. Use the AI recommendation gap finder.
+  - You want a one-off check today. Use the AI search visibility tester, which runs one set of questions.
+  - You already know which rivals are named and want to know why. Use the AI search recommendation gap finder.
   - Your buyers do not ask AI assistants for picks, for example a very local trade or a custom-order business. A manual spot check each quarter is enough.
   - You want to check whether Google ranks your pages. Use the Search Console quick-win finder.
 you_give:

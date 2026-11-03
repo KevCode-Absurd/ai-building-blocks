@@ -20,7 +20,7 @@ when:
   - You are launching a product with a nostalgic feel and developers need exact colours, sizes and spacing.
   - A developer asks which blue and which font size to use, and nobody can say.
 not_for:
-  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system reviewer to check it."
   - "You want a calm, plain look for a bank or health tool: use the Minimal style guide writer."
   - "You want a two-colour print look on warm paper: use the Risograph print style guide writer."
   - "You want one vintage poster, not a rules file: use the Poster designer."

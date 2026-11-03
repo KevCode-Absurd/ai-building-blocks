@@ -29,10 +29,10 @@ when:
   - You have a gap, a short job or no degree and want to explain it plainly.
   - You keep one base resume and want a version for each kind of job.
 not_for:
-  - You want a score and a check of layout and parsing. Use the ATS resume checker agent.
+  - You want a score and a check of layout and parsing. Use the Resume parsing checker.
   - You want a cover letter and resume built together. Use the Resume and job application builder.
-  - You want to understand what a job post really asks for before you apply. Use the Job ad reader.
-  - You want a draft checked for claims you cannot back up. Use the Job application evidence review assistant.
+  - You want to understand what a job post really asks for before you apply. Use the Job description reviewer.
+  - You want a draft checked for claims you cannot back up. Use the Job application evidence reviewer.
 you_give:
   - Your current resume. Paste the text.
   - The full job post, not a summary.

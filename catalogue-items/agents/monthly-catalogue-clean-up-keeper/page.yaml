@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your store has only a handful of products: look through them by hand, it is faster."
   - "You want the agent to fix products for you: it only reads and lists fixes, so make the changes in your store admin."
-  - "You need a one-off check of one problem, such as clashing SKUs: run the single skill, such as the duplicate SKU finder, instead."
+  - "You need a one-off check of one problem, such as clashing SKUs: run the single skill, such as the Shopify duplicate SKU and barcode finder, instead."
 you_give:
   - A connection to your Shopify store, or a product export
   - The sales channels every live product should appear on, the first time

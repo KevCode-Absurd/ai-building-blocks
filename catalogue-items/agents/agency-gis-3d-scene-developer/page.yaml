@@ -18,9 +18,9 @@ when:
   - You must choose between Cesium and the ArcGIS JavaScript API for a 3D project.
 not_for:
   - "You want a normal 2D web map: use the Web GIS Developer agent."
-  - "You want to bring building models (BIM) into a map: use the BIM/GIS Specialist agent."
-  - "You want to make a 3D mesh from drone photos: use the Drone/Reality Mapping Specialist agent."
-  - "You want map colors and labels designed: use the Cartography Designer agent."
+  - "You want to bring building models (BIM) into a map: use the BIM and GIS integration planner."
+  - "You want to make a 3D mesh from drone photos: use the Drone mapping specialist."
+  - "You want map colors and labels designed: use the Map designer."
 you_give:
   - What the scene must show and the one thing viewers should learn
   - "Your data: terrain, buildings, imagery, 3D models or point clouds, with format and size"

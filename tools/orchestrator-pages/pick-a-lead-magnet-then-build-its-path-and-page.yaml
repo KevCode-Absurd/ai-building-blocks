@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your buyers will never trade an email for anything: add a plain newsletter signup box on your site instead."
   - "You only need the signup page: use the Ad-matched landing page writer on its own."
-  - "You already have a live page and only want it checked: use the Landing page auditor on its own."
+  - "You already have a live page and only want it checked: use the Landing page conversion reviewer on its own."
 you_give:
   - Who your buyer is and the problem they have now
   - What you sell and your price

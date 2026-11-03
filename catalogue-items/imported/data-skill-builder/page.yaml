@@ -46,6 +46,7 @@ output_sample:
     - An AI that can connect to your data warehouse through a connector
     - Read-only database access is the safest choice
     - An analyst who knows how your data works
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: SKILL.md
       contains: The main file of your new skill, with its name, description, SQL dialect notes and links to the reference files.

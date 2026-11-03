@@ -17,9 +17,9 @@ when:
   - You inherited a codebase and want to know what was half-migrated and left behind.
   - Before a big refactor, you want to know which files are safe to build on.
 not_for:
-  - You are new to a repo and want to know how it is laid out. Use the Codebase Onboarding Engineer agent.
+  - You are new to a repo and want to know how it is laid out. Use the Codebase onboarding planner.
   - You want a code review of a pull request or one file. Use the Code Reviewer agent or the Bug and security code reviewer.
-  - You want to find out where docs no longer match one feature. Use the Code and docs drift checker.
+  - You want to find out where docs no longer match one feature. Use the Code and documentation consistency checker.
   - Something is broken in production now. Debug it first, then use this for the wider cleanup.
 you_give:
   - The repo, as files your AI can open, such as a folder, a zip or a project open in Claude Code

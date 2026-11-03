@@ -19,7 +19,7 @@ when:
   - You want new ads that test one change at a time, not ten new guesses.
 not_for:
   - "You have fewer than six image ads with results: use the Single image ad planner to plan new ads from your product facts instead."
-  - "You want a video ad: use the Video ad script writer from customer quotes, or write the script with a person who makes video."
+  - "You want a video ad: use the Customer quote video ad writer, or write the script with a person who makes video."
   - "You want to copy one winning layout exactly: use the Reference layout image ad maker."
 
 you_give:

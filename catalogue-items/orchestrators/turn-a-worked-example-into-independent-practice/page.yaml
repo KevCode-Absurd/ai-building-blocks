@@ -18,9 +18,9 @@ when:
   - Students get right answers but cannot say why they work.
   - You are setting cover work or homework and need staged practice with an answer key.
 not_for:
-  - You have no worked example yet. Build the steps first with the Worked example to practice sequence builder.
+  - You have no worked example yet. Build the steps first with the Worked-example practice ladder builder.
   - You only need a set of problems. Use the Practice problem set writer.
-  - You are planning how to fade help across a unit, not writing the problems. Use the Example to solo practice planner.
+  - You are planning how to fade help across a unit, not writing the problems. Use the Independent practice planner.
   - The example is for an online course. Use the Online worked example builder.
 you_give:
   - A worked example that is correct, with every step shown
@@ -30,7 +30,7 @@ you_give:
   - How many problems you want and how long learners have (optional)
   - Real learner answers, if you have them (optional)
 you_get:
-  - A staged sequence: a full model, problems with fading steps and problems to solve alone
+  - "A staged sequence: a full model, problems with fading steps and problems to solve alone"
   - Comparable problems with worked answers and a note on how hard each one is
   - A short understanding check that asks why, with a feedback line for each likely wrong answer
   - A rule for what to practise next after each kind of mistake

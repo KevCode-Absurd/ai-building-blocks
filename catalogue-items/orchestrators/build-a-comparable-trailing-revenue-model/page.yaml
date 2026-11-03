@@ -18,10 +18,10 @@ when:
   - This year had 53 weeks and last year had 52.
   - Revenue sits in several currencies and you need growth without exchange rates.
 not_for:
-  - You have one currency, no deals and no extra week. A simple trailing sum is enough. Use the Trailing-period financial bridge.
-  - You need to explain gross-to-net deductions and business scope for a presentation. Use the Reconcile revenue presentation and perimeter workflow.
-  - You only need the currency effect. Use the Constant-currency revenue bridge.
-  - You only need to take out an extra week. Use the Extra-week revenue comparability schedule.
+  - You have one currency, no deals and no extra week. A simple trailing sum is enough. Use the Trailing year financial calculator.
+  - You need to explain gross-to-net deductions and business scope for a presentation. Use the Comparable revenue growth checker workflow.
+  - You only need the currency effect. Use the Revenue growth currency checker.
+  - You only need to take out an extra week. Use the Extra week sales growth checker.
 you_give:
   - Annual revenue and year-to-date revenue by business and currency (from the annual and interim reports)
   - The matching prior-year year-to-date figures, restated if the company restated them

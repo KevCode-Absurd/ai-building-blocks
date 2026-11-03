@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a one-page summary of a single paper. Use the Research paper summarizer.
   - Your AI cannot read and write files. It needs a file-capable AI, such as Claude Code, to build the folder. In a plain chat window you can only get the main files as text.
-  - You want to critique a paper's evidence rather than record it. Use the Research paper evidence review.
+  - You want to critique a paper's evidence rather than record it. Use the Research paper evidence reviewer.
 you_give:
   - A paper (PDF or arXiv link), a code repo, logs, notebooks or notes
   - A folder to save the result in

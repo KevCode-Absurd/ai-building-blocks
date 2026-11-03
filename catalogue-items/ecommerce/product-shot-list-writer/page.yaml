@@ -19,7 +19,7 @@ when:
   - "Your current photos do not sell the product."
 not_for:
   - "You want a full brief with every check for a shoot: use the Product shoot brief writer."
-  - "You need to plan the order of images on a product page: use the Eight-picture product page planner."
+  - "You need to plan the order of images on a product page: use the Product page photo planner."
   - "You need a shot list for a video ad: use the Video ad shot list maker."
 
 you_give:

@@ -16,7 +16,7 @@ when:
   - You are running many interviews and want the same format each time.
   - You want follow-up actions captured with owners and dates.
 not_for:
-  - "You have many interviews or survey answers and want themes across them: use hidden-theme-finder on all the notes together, not this single-interview summary."
+  - "You have many interviews or survey answers and want themes across them: use Story theme and scene reviewer on all the notes together, not this single-interview summary."
   - "You only have notes and no transcript: write up the notes first, or ask the person who ran the call for a transcript."
   - "You need a full research report with a plan and sample size: ask a researcher, since this skill only summarizes one call."
 you_give:

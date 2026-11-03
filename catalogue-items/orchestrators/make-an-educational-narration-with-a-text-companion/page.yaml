@@ -9,7 +9,7 @@ when:
   - Creating spoken access to a short educational resource
 not_for:
   - "You only need a plain-words rewrite of a lesson: use the Plain English editor."
-  - "You have a final script and want it dubbed into other languages with subtitles: use Make a voiceover and ship it in other languages."
+  - "You have a final script and want it dubbed into other languages with subtitles: use Multilingual voiceover and subtitle producer."
   - "The lesson is not yet approved or you do not hold the rights to its text: get that first, since this workflow keeps the facts as given."
 you_give:
   - "APPROVED_LESSON: attach exact learning facts, examples, citations and rights-approved text."

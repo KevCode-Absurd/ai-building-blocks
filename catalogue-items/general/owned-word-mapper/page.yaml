@@ -21,7 +21,7 @@ when:
 not_for:
   - "You are in a new category with no rivals yet: ask five likely buyers what word they link to the problem, then pick a word."
   - "You only want your own tagline checked: ask a friend or a customer what one word it makes them think of."
-  - "You already have an open word and need to choose between options: use the Ownable word picker."
+  - "You already have an open word and need to choose between options: use the Brand focus word picker."
 
 you_give:
   - Your rivals, with their taglines or homepage lines

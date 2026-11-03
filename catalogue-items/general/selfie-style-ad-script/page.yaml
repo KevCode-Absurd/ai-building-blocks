@@ -16,7 +16,7 @@ when:
   - Your buyers have one doubt, such as "is this just candy?", that seeing the product in a hand can settle.
 not_for:
   - "Your product's benefit can't be seen in a hand, like software or a service: use a plain narrated video with diagrams, or a short screen recording."
-  - 'You need the AI presenter clips made from the script: use "Turn your selfie-style script into consistent clips" after this one.'
+  - 'You need the AI presenter clips made from the script: use "Selfie-style video clip prompt writer" after this one.'
   - 'You want a brief for a real creator to film: use "Creator filming brief writer" with this script.'
 you_give:
   - Why people buy, how much your buyer knows already, and the length if you have one

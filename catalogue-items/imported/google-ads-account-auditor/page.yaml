@@ -20,8 +20,8 @@ when:
 not_for:
   - "You want a quick score and a few fixes from one export: use the Google Ads report auditor."
   - "You want to build campaigns or change bids and budgets in the account. This audit is read-only, and every change stays a draft."
-  - "Your ads run on more than one platform and you want one report: use the Twelve-platform ad account auditor."
-  - "You only want to know why results dropped last week: use the Ad performance diagnoser."
+  - "Your ads run on more than one platform and you want one report: use the Paid ad account auditor."
+  - "You only want to know why results dropped last week: use the Ad performance troubleshooter."
 you_give:
   - Google Ads exports or screenshots, such as campaigns, search terms, keywords and assets
   - Your goal and what counts as a conversion

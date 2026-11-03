@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no approved storyboard yet: run the Video avatar and storyboard planner first, then come back here."
   - "You want a still product ad with no video: write the ad copy and shoot a photo instead."
-  - "You need a script from customer quotes: use the Video ad script writer from customer quotes, then bring the script here."
+  - "You need a script from customer quotes: use the Customer quote video ad writer, then bring the script here."
 
 you_give:
   - The approved script or voice-over lines
@@ -41,7 +41,7 @@ how_to_use:
   - Add what you sell, how it's used and a product photo. Say the pace, the look and your tool's clip length.
   - Approve the shot tables, then make two or three takes of each clip from its prompt and pick the best.
   - Cut the clips together with the edit list, and check the timings in the finished video.
-  - Cost: the plan and prompts are free text. Making the clips needs a paid video service and costs credits, so confirm the price first.
+  - "Cost: the plan and prompts are free text. Making the clips needs a paid video service and costs credits, so confirm the price first."
   - Use only generic presenters, or a person who gave written consent. Never make an AI presenter that looks like a real person, a public figure or a celebrity.
 output_sample:
   input:

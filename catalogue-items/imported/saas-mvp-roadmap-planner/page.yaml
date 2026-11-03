@@ -37,7 +37,7 @@ how_to_use:
   - Build in the order it gives you. You need your own code editor and accounts, such as Stripe and hosting, for the build itself.
   - Before you launch, go through the pre-launch checklist and tick off each item.
   - Tools such as Stripe, Clerk, Vercel and Railway cost money as you grow, and the code samples are tied to certain library versions. Check prices and the current Clerk and Stripe docs before you use any sample.
-  - Add the Stripe webhook step, or your subscriptions will never be saved. Finish the blocking items first: payments end to end, the webhook test, sign-in, and the Terms and Privacy pages.
+  - "Add the Stripe webhook step, or your subscriptions will never be saved. Finish the blocking items first: payments end to end, the webhook test, sign-in, and the Terms and Privacy pages."
   - Next, hand the build order to a developer or an AI coding tool, one step at a time.
 next: [saas-starter-builder, saas-pricing-designer, saas-terms-check]
 output_sample:

@@ -18,8 +18,8 @@ when:
   - A deal will add debt, and you want to know how much room is left under the cap.
   - A board member or reviewer asks where the covenant number comes from.
 not_for:
-  - The test is about cash flow cover or fixed charges, not net debt. Use the Debt service covenant headroom checker or the Fixed charge coverage bridge builder.
-  - You are over the limit and want to test an equity fix. Use the Equity cure scenario checker.
+  - The test is about cash flow cover or fixed charges, not net debt. Use the Loan covenant cash coverage checker or the Fixed payment cash coverage checker.
+  - You are over the limit and want to test an equity fix. Use the Loan covenant equity cure checker.
   - You need to know if you are in default, or what the contract means. This gives arithmetic for a reviewer. Ask your lawyer or lender.
 you_give:
   - The covenant test wording from your loan agreement

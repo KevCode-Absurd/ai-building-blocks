@@ -19,8 +19,8 @@ when:
   - A new product, boss or target pulls you off your position.
   - Your position changes every budget cycle.
 not_for:
-  - "You have not chosen a word yet: use the Ownable word picker first."
-  - "You want to judge the name of one new product: use the Brand name stretch checker."
+  - "You have not chosen a word yet: use the Brand focus word picker first."
+  - "You want to judge the name of one new product: use the Brand name fit checker."
   - "You want to choose a position and what you will not do before you have a word: use the Strategy trade-off planner."
 
 you_give:

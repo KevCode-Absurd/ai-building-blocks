@@ -21,9 +21,9 @@ when:
 
 not_for:
   - You have only one period of numbers. It will describe them, but it can't call a drop without an earlier period to compare.
-  - It's a one-day blip or a new ad with a few dozen clicks. Wait for more data, or use the two version result reader to see whether a gap between two ads is big enough to mean anything.
+  - It's a one-day blip or a new ad with a few dozen clicks. Wait for more data, or use the Two-version response results reviewer to see whether a gap between two ads is big enough to mean anything.
   - You need a clean report for someone else, not a diagnosis. Use the ad results report writer.
-  - You want to know whether to keep or replace an ad's whole idea. Use the campaign keep-or-change checker.
+  - You want to know whether to keep or replace an ad's whole idea. Use the Ad change decision checker.
   - You want it to pause an ad or move budget. It proposes only; you make each change.
 
 you_give:
@@ -45,7 +45,7 @@ how_to_use:
   - Add the earlier period if you have it, and say what changed between the two (a new offer, a page change, a bigger budget).
   - Add your target cost per sale and your margin if you know them. Without them it will describe, not judge.
   - Read Finding 1 first. If it's a tracking problem, fix that before acting on anything else.
-  - Check one row yourself: spend divided by purchases should match its cost per sale. Then check that every finding gives at least two possible reasons, and run the "what to check" items before you change anything.
+  - "Check one row yourself: spend divided by purchases should match its cost per sale. Then check that every finding gives at least two possible reasons, and run the \"what to check\" items before you change anything."
 
 how_it_works:
   - title: Redoes the sums

@@ -21,8 +21,8 @@ when:
   - You have a deck full of market claims and few sources.
 not_for:
   - "You have no case brief or no analysis yet: start with a plan, then use the Case competition slide deck builder."
-  - "You want practice Q&A questions and answer notes: use the Prepare case competition judge questions workflow."
-  - "You already ran this once and only a number or the rubric changed: use the Case competition evidence review assistant."
+  - "You want practice Q&A questions and answer notes: use the Case competition answer and backup-slide planner workflow."
+  - "You already ran this once and only a number or the rubric changed: use the Case competition slide reviewer."
 you_give:
   - The full case, with every exhibit and its figures
   - Your recommendation, as a draft deck, an outline or a few paragraphs

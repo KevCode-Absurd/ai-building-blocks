@@ -19,7 +19,7 @@ when:
   - You want to see which claims in your thesis you cannot point to a page for.
 not_for:
   - Your thesis is still being written. Ask your supervisor for feedback on the draft first.
-  - You are giving a short talk at a student conference. Use the Prepare a student conference talk workflow.
+  - You are giving a short talk at a student conference. Use the Student conference talk and rehearsal planner workflow.
   - You want slides made from a paper with every figure traced. Use the Build a research talk from checked figures workflow.
   - You want to predict what your examiners will ask. This workflow only gives practice questions from your own thesis.
 you_give:

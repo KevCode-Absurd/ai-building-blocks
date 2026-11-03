@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want a designed brochure or a page with tight layout: use a layout tool, since this skill builds plain documents and does not fine-tune design."
   - "You need a spreadsheet or a slide deck: use the LibreOffice spreadsheet builder or the LibreOffice slide builder."
-  - "You want to edit a PDF or fill a PDF form: use the PDF toolkit, which works on PDF files directly."
+  - "You want to edit a PDF or fill a PDF form: use the PDF file editor, which works on PDF files directly."
 you_give:
   - What the document should say, in plain words or as notes
   - The format you need back (ODT, DOCX, PDF, HTML, RTF, TXT or EPUB)

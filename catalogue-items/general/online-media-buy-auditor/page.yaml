@@ -19,7 +19,7 @@ when:
   - "You are about to renew or raise a budget and want questions to put to the supplier."
 not_for:
   - "You run one campaign and no seller or agency sends you reports: check it against your own site analytics instead."
-  - "You want to know if one ad should stay or go: use the Campaign keep-or-change checker."
+  - "You want to know if one ad should stay or go: use the Ad change decision checker."
   - "You think you have proof of fraud: ask a lawyer or an outside verification firm, because this skill only flags risk."
 
 you_give:

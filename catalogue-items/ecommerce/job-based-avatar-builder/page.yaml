@@ -22,7 +22,7 @@ when:
 not_for:
   - "You have fewer than 5 buyer stories: collect more first, or treat the cards as guesses to check."
   - "Buyers choose on price or habit alone, such as commodity top-ups: use a simple price comparison, not this skill."
-  - "You want to map one buyer's whole decision: use the Switch story mapper. To write one job in full, use the Job spec writer."
+  - "You want to map one buyer's whole decision: use the Switch story mapper. To write one job in full, use the Customer task definition writer."
 
 you_give:
   - 5 to 8 recent buyer stories, such as interview notes, long reviews, support emails or post-purchase survey answers

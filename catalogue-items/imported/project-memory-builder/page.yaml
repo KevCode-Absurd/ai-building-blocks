@@ -21,7 +21,7 @@ not_for:
   - Your notes file is short and you can edit it by hand. Keep a plain file and skip the extra layers.
   - Your sessions often include passwords, client data or other private details. Do not turn on session capture, because the privacy filter misses some of it.
   - You want a small context file for each folder in a big codebase. Use the Project memory organizer.
-  - You want notes saved as you work, with no review step. Use the Project memory keeper.
+  - You want notes saved as you work, with no review step. Use the Project design and decision recorder.
 you_give:
   - Your project notes file, such as CLAUDE.md
   - Past Claude Code session files, saved as .jsonl (optional)

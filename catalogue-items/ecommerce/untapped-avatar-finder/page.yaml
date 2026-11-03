@@ -19,8 +19,8 @@ when:
   - You want a new group to test, with proof that it exists, before you make new ads.
 not_for:
   - "You sell something truly new with no rivals: talk to a few likely buyers yourself, because there are no rival ads or reviews to learn from."
-  - "You already know your buyer and want to go deeper: use the Forum and review avatar digger."
-  - "You want to test your ads or page against a buyer: use the Avatar fit checker."
+  - "You already know your buyer and want to go deeper: use the Forum buyer researcher."
+  - "You want to test your ads or page against a buyer: use the Buyer profile reviewer."
   - "You want three to five buyer groups nobody targets, each with a small test plan: use the Untapped buyer finder."
 
 you_give:

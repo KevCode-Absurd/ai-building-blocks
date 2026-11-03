@@ -22,7 +22,7 @@ when:
 not_for:
   - "You only need to filter harmful text: a hosted moderation API is simpler than building rails."
   - "You want to attack-test an AI agent you already built: use the AI agent attack tester."
-  - "You want to score your app's answers against a test set: use the AI app evaluation planner."
+  - "You want to score your app's answers against a test set: use the Python LLM app evaluation planner."
 you_give:
   - What your app does and what it must never say or do
   - Examples of attacks or bad requests you have seen (optional)

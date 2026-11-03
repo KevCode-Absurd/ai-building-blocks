@@ -19,7 +19,7 @@ when:
   - You are adding a payment gateway such as Stripe or PayPal and want the setup and test steps.
   - You are moving to Drupal Commerce from another shop platform and want to know what to map first.
 not_for:
-  - Your store runs on WordPress and WooCommerce. Use the WordPress Shopping Cart Engineer agent.
+  - Your store runs on WordPress and WooCommerce. Use the WooCommerce checkout engineer.
   - Your store is on Shopify. Use the Shopify store setup planner.
   - You are not a developer and want a no-code store. Use the Shopify store setup planner or the WooCommerce store setup planner.
   - Customers are being charged wrongly right now. Call your payment provider and your developer first. This agent cannot see or fix a live store.

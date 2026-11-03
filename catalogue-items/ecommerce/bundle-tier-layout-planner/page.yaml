@@ -14,7 +14,7 @@ when:
   - You show your savings as a small percentage under the option and want a clearer way to say it.
   - You want to test bundle layouts with a clear plan and margin check.
 not_for:
-  - "You need to set bundle prices or quantity breaks from scratch: use the bundle and quantity break builder first, then bring the prices here."
+  - "You need to set bundle prices or quantity breaks from scratch: use the Product pack and quantity discount planner first, then bring the prices here."
   - "You sell a single size, or only two pack sizes: there is nothing to cut to three tiers, so test your price or page copy instead."
   - "You want to find friction elsewhere on the page: use a store friction check, or watch a few session recordings of real buyers."
 you_give:

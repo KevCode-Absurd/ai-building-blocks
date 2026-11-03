@@ -17,22 +17,22 @@ when:
   - You want a launch list with IDs and dates, so you can read the results later.
 not_for:
   - "You are starting a new campaign, or changing the objective or conversion event: use the Meta creative test campaign planner."
-  - "One ad has gone stale and you need ideas to revive it: use the Fatigued ad reviver."
+  - "One ad has gone stale and you need ideas to revive it: use the Fading ad refresh planner."
   - "You want each ad marked keep, watch or pause from its numbers: use the Daily Meta ad review planner."
-  - "You want to know if a new ad will be rejected: use the Meta ads compliance checker."
+  - "You want to know if a new ad will be rejected: use the Meta ad policy checker."
   - "You want the new ads written or made. This plans the setup. It does not create the creative."
 you_give:
   - The campaign and ad set you want to add to, with its objective, conversion event, link and tracking tags
   - An existing ad to copy from
   - The new creatives, as files or previews, and what each one tests
   - Your approved offer text, with any end dates
-  - Your spend limits: the daily cap and the most the new ads may spend before your first review
+  - "Your spend limits: the daily cap and the most the new ads may spend before your first review"
   - Recent results and your target cost per sale (optional)
   - Whether you want drafts only, or drafts plus submission (the default is drafts only)
 you_get:
   - The ad set settings to keep, written down as a baseline
   - A draft list with a creative ID, a name, what it tests, a launch date and a status for each new ad
-  - A pre-launch checklist for each ad: media, crop, copy, offer dates, link, tracking and placements
+  - "A pre-launch checklist for each ad: media, crop, copy, offer dates, link, tracking and placements"
   - Spend limits, a review date and a keep, hold or stop rule
   - A list of what is missing, and the checks that were not run
 how_to_use:

@@ -38,7 +38,7 @@ how_to_use:
   - Check the alert thresholds with the burn-rate formula in the skill. Agree the error budget policy with the service owner.
   - Next, turn the alert rules into real rules in your monitoring tool. The Reliability target setter can do that.
 not_for:
-  - "You want Prometheus rules and a dashboard layout as well. Use the Reliability target setter."
+  - "You want Prometheus rules and a dashboard layout as well. Use the Service reliability target planner."
   - "You want a full plan for metrics, logs and traces. Use the Monitoring system planner."
   - "You need a customer contract with penalties. That is a legal document, so ask a lawyer. This tool sets engineering targets only."
 output_sample:

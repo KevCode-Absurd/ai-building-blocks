@@ -36,7 +36,7 @@ how_to_use:
   - Paste your brand facts, the claims you can back and a few real reviews. Attach product photos.
   - Read each opening aloud, then your ad's first line. Approve the line-up, then the presenter, the sheet and the storyboard.
   - Make one clip, check the join, then the rest. Test each opening on the same ad as separate ads.
-  - Costs: writing the prompts is free in any chat AI. Making the clips needs a paid video tool (Higgsfield credits, a paid Google AI plan, or an API key from a video service). Each clip is billed by that service, so check its price per clip before you run a batch.
+  - "Costs: writing the prompts is free in any chat AI. Making the clips needs a paid video tool (Higgsfield credits, a paid Google AI plan, or an API key from a video service). Each clip is billed by that service, so check its price per clip before you run a batch."
   - The presenter is an AI-made adult. Keep the AI label on, and never let the presenter claim a personal result or story.
 output_sample:
   input:

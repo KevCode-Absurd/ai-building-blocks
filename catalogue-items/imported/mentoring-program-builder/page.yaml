@@ -20,7 +20,7 @@ when:
 not_for:
   - "You are dealing with one person's performance problem or a formal disciplinary case: use a manager 1:1 and your HR case process."
   - "You want a full leadership curriculum: use the Leadership program designer."
-  - "You want career levels and growth paths: use the Career ladder and growth plan writer."
+  - "You want career levels and growth paths: use the Career level and growth planner."
 you_give:
   - Who the program is for, such as new managers
   - How many people join and how long it runs

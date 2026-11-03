@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to attack a live app or agent to find holes: use the AI agent attack tester."
   - "You want rules for what an agent's tools may do: use the AI agent control designer."
-  - "You only want a vague prompt made clearer: use the Prompt improver or the Prompt fixer."
+  - "You only want a vague prompt made clearer: use the Prompt editor or the Prompt fixer."
   - "Your prompt holds real passwords, keys or customer data: remove them before you paste."
 you_give:
   - The prompt to review, pasted in full

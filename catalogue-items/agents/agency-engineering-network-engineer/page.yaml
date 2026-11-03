@@ -32,8 +32,8 @@ when:
   - A firewall rule or NAT isn't doing what you expect on Cisco ASA, Palo Alto or Junos.
   - You must change a router or firewall in a maintenance window and need steps and a rollback.
 not_for:
-  - Your equipment is Huawei, H3C, Ruijie or Hillstone. Use the China Network Engineer agent.
-  - The whole service is down and you need to run the response. Use the Incident Response Commander agent.
+  - Your equipment is Huawei, H3C, Ruijie or Hillstone. Use the China network engineer.
+  - The whole service is down and you need to run the response. Use the Incident response coordinator.
   - You need to log in and change live devices for you. This agent only writes the plan and commands. You run them.
 you_give:
   - The problem in one line, with the source and destination addresses

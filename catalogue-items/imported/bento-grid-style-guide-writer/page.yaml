@@ -20,7 +20,7 @@ not_for:
   - "You want a guide for a page built to sell with one main button: use a conversion page style guide, not a card grid guide."
   - "You want finished page designs or code: hire a designer or developer, because this skill writes rules only."
   - "You want a plain look with few colours and no card grid: use the Minimal style guide writer."
-  - "Your look is built on surface textures and not on a grid of cards: use the Texture style guide. Choose this item when your layout is a grid of cards in mixed sizes."
+  - "Your look is built on surface textures and not on a grid of cards: use the Real-world texture style guide writer. Choose this item when your layout is a grid of cards in mixed sizes."
 you_give:
   - A description of your product and brand
   - Colours and fonts you already use (optional)
@@ -32,11 +32,11 @@ you_get:
   - Component rules with states
   - Do and don't lists and quality gates
 how_to_use:
-  - Decide your grid first: how many columns at each width (for example 12, 4 and 1) and your tile sizes (for example 1x1, 2x1 and 2x2). Pick one lead tile, and decide which tiles come first when the page stacks on a phone. The grid rules are the main value of this guide.
+  - "Decide your grid first: how many columns at each width (for example 12, 4 and 1) and your tile sizes (for example 1x1, 2x1 and 2x2). Pick one lead tile, and decide which tiles come first when the page stacks on a phone. The grid rules are the main value of this guide."
   - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat. It is plain text, and it needs no paid service or API key.
   - Have ready a short description of your product, your brand colours and fonts, and the components that need rules (cards, buttons, forms). Describe your product, your brand and who uses the page.
   - Add the colours and fonts you already use, if you have them. Say which components you need rules for, and the accessibility level. The skill starts from WCAG 2.2 AA.
-  - Check the grid rules in the result: how many columns, which tile sizes, and how tiles stack on a phone. The skill sets starting values for these. Change them to fit your content.
+  - "Check the grid rules in the result: how many columns, which tile sizes, and how tiles stack on a phone. The skill sets starting values for these. Change them to fit your content."
   - Read the tokens first. Change any default, such as the Inter font or the peach and blue colours, to match your brand.
   - Hand the finished guide to your designers and developers. Turn the tokens into a design-token file, and run the QA checklist on one existing page first.
 next: [design-token-builder, design-system-auditor]

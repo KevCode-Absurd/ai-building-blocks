@@ -19,7 +19,7 @@ when:
   - "You are cutting a script to length and need to know which scenes to lose."
 not_for:
   - "You want to test the idea behind the story before you outline: use the Story premise tester."
-  - "You have a finished script and need to check that the pictures carry the story: use the Voice-over stripping test."
+  - "You have a finished script and need to check that the pictures carry the story: use the Silent video story reviewer."
   - "You need line edits on a finished draft or notes on nonfiction: ask an editor or a trusted reader."
 
 you_give:

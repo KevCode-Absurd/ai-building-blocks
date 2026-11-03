@@ -116,9 +116,9 @@ terms:
   - term: Reconciliation
     meaning: A check that explains any gap between two sets of figures that should match.
 not_for:
-  - You have more than three maturities, or you need the order of payments inside one day. Use the Settlement liquidity ladder builder.
-  - You want to know if a loan covenant is met. Use the Debt service covenant headroom checker.
-  - You want to split one period's cash across lenders in the order the loan sets. Use the Project payment waterfall builder.
+  - You have more than three maturities, or you need the order of payments inside one day. Use the Payment timing cash balance planner.
+  - You want to know if a loan covenant is met. Use the Loan covenant cash coverage checker.
+  - You want to split one period's cash across lenders in the order the loan sets. Use the Project payment priority planner.
   - You want to know if a lender will refinance you. This is a cash check and gives no view on that.
 output_sample:
   input:

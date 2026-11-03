@@ -16,7 +16,7 @@ when:
   - You want urgency but refuse to use fake timers.
 not_for:
   - "You only need the closing ask for one ad: use the Call-to-action writer."
-  - "Buyers doubt the offer itself, not the timing: use the Bonus stack builder."
+  - "Buyers doubt the offer itself, not the timing: use the Offer bonus package builder."
   - "You can serve any number of buyers at any time: skip limits and fix the offer first."
 you_give:
   - Your offer and price

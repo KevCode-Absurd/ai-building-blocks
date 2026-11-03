@@ -17,10 +17,10 @@ when:
   - You work across several client accounts and need the same checks on each.
 not_for:
   - You want a one-time audit of an account, not code. Paste an export into the Google Ads report auditor.
-  - You only need one area, such as Performance Max or Display placements. Use the Performance Max checks coding prompt or the Display placement review coding prompt.
-  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
+  - You only need one area, such as Performance Max or Display placements. Use the Performance Max check code planner or the Display ad audit tool planner.
+  - You have no Google Ads API access yet. Start with the Google Ads OAuth setup planner, then the Google Ads developer access checker.
   - You want the engine to fix the account. It reads and reports. You make changes in Google Ads.
-  - "You only want the Meta and Google comparison module: use the Meta and Google comparison coding prompt."
+  - "You only want the Meta and Google comparison module: use the Meta and Google comparison code planner."
 you_give:
   - Your code project, or its main folders, language and database
   - Your Google Ads access details by name, such as the manager account, the customer ID and where credentials are kept (never the secrets)

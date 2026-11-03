@@ -18,8 +18,8 @@ when:
   - You are choosing which advantage to build next with limited time and money.
   - You are judging whether a rival's edge is real before you decide how to respond.
 not_for:
-  - "You want to design a model a market leader would lose money by copying: use the Counter-positioning finder."
-  - "You are weighing a new market to enter: use the Second business picker."
+  - "You want to design a model a market leader would lose money by copying: use the Competitive business model planner."
+  - "You are weighing a new market to enter: use the Second business planner."
   - "You want advice on buying or selling shares: ask a licensed financial adviser, as this skill gives no investment advice."
 
 you_give:

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need the money within five years: keep it in cash or a savings account, outside the split."
   - "You want to pick a fund, a bond or a company: this plan names none, so use a licensed financial adviser."
-  - "You still don't know your investor type: use the Defensive or enterprising investor sorter first, then come back."
+  - "You still don't know your investor type: use the Investment approach interviewer first, then come back."
 
 you_give:
   - Your investor type, from "Defensive or enterprising investor sorter"

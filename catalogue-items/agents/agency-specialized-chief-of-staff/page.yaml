@@ -30,9 +30,9 @@ when:
   - You are about to launch or raise money and want a short daily check-in.
   - A decision is stuck and you want the options, the cost of waiting and a recommendation on one page.
 not_for:
-  - You want to sort a week of tasks and loose notes and close the open loops. Use the Weekly review keeper.
+  - You want to sort a week of tasks and loose notes and close the open loops. Use the Weekly task focus planner.
   - You only need three priorities from a task list and your real hours. Use the Week priority picker.
-  - You need meeting notes turned into minutes and next actions. Use the Weekly meeting actions keeper.
+  - You need meeting notes turned into minutes and next actions. Use the Meeting minutes and action tracker.
   - You want one choice written up for the record, with the options you passed on. Use the Decision record writer.
   - You want it to send messages, move files or edit your documents. A chat AI cannot do that. It lists what to change.
 you_give:

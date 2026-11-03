@@ -20,7 +20,7 @@ when:
 not_for:
   - You have a single article and want a quick summary. Use the Source note summariser on its own.
   - You want quiz questions from notes you already have. Use the Recall quiz writer.
-  - You want a lasting notebook for a whole course of self-study. Use the Personal study notebook.
+  - You want a lasting notebook for a whole course of self-study. Use the Personal study planner.
   - You will not answer recall questions. Skip this workflow and use the Source note summariser.
 you_give:
   - The articles or book excerpts, pasted or as files, each with its title, author and date

@@ -20,8 +20,8 @@ when:
 not_for:
   - "Your document is confidential: the speech step sends text to an online service. Use the slides and script only route, and read it aloud yourself."
   - "You want a product demo from screenshots, with a scene plan: use the product demo video maker."
-  - "You only want your text read aloud as an audio file: use the multilingual narrator."
-  - "You need slides for a business talk in PowerPoint: use the storyboard to PowerPoint deck builder."
+  - "You only want your text read aloud as an audio file: use the ElevenLabs multilingual narrator."
+  - "You need slides for a business talk in PowerPoint: use the PowerPoint storyboard deck builder."
 you_give:
   - A Markdown document
   - A Marp slide style (optional)

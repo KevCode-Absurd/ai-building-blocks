@@ -18,7 +18,7 @@ when:
 not_for:
   - "You need legal, background or right-to-work checks: use your lawyer, a licensed screening provider or your local rules, not this guide."
   - "You want to write the job ad or job description: write that first with a person who knows the role, then bring it here."
-  - "You want a full interview loop with several rounds and a debrief: use the hiring interview designer. For a scorecard per stage, use the interview scorecard builder."
+  - "You want a full interview loop with several rounds and a debrief: use the Hiring interview planner. For a scorecard per stage, use the interview scorecard builder."
   - "You want the AI to pick the hire: it will not. Your team makes the call from the scores and notes."
 you_give:
   - The exact role title and level

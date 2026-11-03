@@ -23,7 +23,7 @@ when:
 not_for:
   - "Your accounts do not follow IAS 19, such as US GAAP. The method here does not apply. Use your own standard's pension note."
   - "You need the size of the obligation or the value of plan assets. That takes an actuary. This only reconciles figures you already have."
-  - "You want to explain how the funded status moved, split into contributions and everything else. Use the Pension funded-status change schedule."
+  - "You want to explain how the funded status moved, split into contributions and everything else. Use the Pension funding gap tracker."
 
 you_give:
   - "The opening net pension deficit, from the prior year's pension note"
@@ -94,6 +94,7 @@ output_sample:
   prerequisites:
     - "The company's pension note for the year and the year before"
     - "A reviewer who can confirm the accounts follow IAS 19"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with the note it came from, its date, currency, scale and period."

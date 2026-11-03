@@ -43,6 +43,7 @@ output_sample:
     - Files or a project your AI can see (optional)
   prerequisites:
     - An AI that can read your files or project, only if you want the Connections section filled in
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Projects & Ideas
       contains: Related items grouped under project names in your words, with open questions and decisions kept inside each project.

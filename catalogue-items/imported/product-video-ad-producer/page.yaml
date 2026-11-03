@@ -17,7 +17,7 @@ when:
   - One bad shot should not mean starting the whole ad again.
 not_for:
   - "You want a single 3 second clip for a product photo slot: ask your video model for one clip from your photo."
-  - "You want a real person talking to camera: use the Talking product video ad workflow."
+  - "You want a real person talking to camera: use the Talking-product video ad writer workflow."
   - "You need voice or music in the ad: add them in a video editor after this skill gives you the video."
 you_give:
   - Your product and its main selling points

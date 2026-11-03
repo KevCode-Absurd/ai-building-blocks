@@ -17,7 +17,7 @@ when:
 not_for:
   - "You sell a one-off product that people buy once: use a simple margin check on one sale, since a prepaid plan has nothing to repeat."
   - "You only want to plan stock timing and cash: use the Inventory cash planner."
-  - "You want to compare other ways to raise cash: use the Cash lever ranker."
+  - "You want to compare other ways to raise cash: use the Cash flow improvement planner."
 you_give:
   - Prices, product and fulfilment costs, plus fees and refund allowances at each plan price
   - The discount you plan for each plan, such as 25 percent for 3 orders

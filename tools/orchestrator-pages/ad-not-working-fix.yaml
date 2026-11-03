@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no ad yet: write one first with the Fact-based ad copy writer, then come back to fix it."
   - "You want to know why sales dropped overall, not why one ad gets no replies: use the Ad sales drop analyst."
-  - "You only want the likely causes, with no rewrite or test: run the Ad pull diagnoser on its own."
+  - "You only want the likely causes, with no rewrite or test: run the Ad response troubleshooter on its own."
 
 you_give:
   - The ad as the reader sees it, including the reply path

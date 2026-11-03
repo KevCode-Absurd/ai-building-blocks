@@ -16,9 +16,9 @@ when:
   - You refreshed posts last year and never checked whether it helped.
   - Two or three of your posts answer the same search and none of them ranks.
 not_for:
-  - "Your traffic fell off a cliff across the whole site: use Fix a drop in search traffic and check it recovers."
-  - "You want to plan new posts, not rescue old ones: use Plan a topic cluster from keywords to briefs and links."
-  - "You want a full check of titles, tags and markup across the site: use Audit your site's SEO and fix what matters first."
+  - "Your traffic fell off a cliff across the whole site: use Shopify search traffic recovery reviewer."
+  - "You want to plan new posts, not rescue old ones: use Search topic and content brief planner."
+  - "You want a full check of titles, tags and markup across the site: use Website SEO editor."
   - "Your site has less than twelve months of traffic. Decay only shows over time."
 you_give:
   - Your site address

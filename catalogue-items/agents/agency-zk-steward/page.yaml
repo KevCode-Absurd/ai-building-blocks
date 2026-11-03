@@ -34,7 +34,7 @@ not_for:
   - You only want clean Obsidian formatting, such as callouts and properties. Use the Obsidian note writer.
   - You want what you learned turned into small linked notes and an index for your AI to read. Use the Notes wiki builder.
   - You want a graph of people, things and relations pulled out of a text. Use the Text-to-knowledge-graph builder.
-  - You want book notes with margin marks and no linking system. Use the Book notes and margin system builder.
+  - You want book notes with margin marks and no linking system. Use the Book reading routine planner.
 you_give:
   - The note, reading summary or task you want filed and linked.
   - A list of your existing note titles, so links point to real notes (optional).

@@ -15,9 +15,9 @@ when:
   - Your page reads like everyone else's in your field.
   - You are about to cut your price to win business.
 not_for:
-  - "You have no offer written down yet: use the Hidden offer finder first, then come back."
+  - "You have no offer written down yet: use the New offer opportunity finder first, then come back."
   - "You sell in a market where only price matters and you cannot change the offer: this will only confirm that, so work on your costs instead."
-  - "You want to know if your market is worth entering: use the Starving crowd market scorer."
+  - "You want to know if your market is worth entering: use the Market demand scorer."
 you_give:
   - "Your offer: what is included, price, terms, how you sell it"
   - The options a buyer might compare you with, or let it find the common ones (optional)

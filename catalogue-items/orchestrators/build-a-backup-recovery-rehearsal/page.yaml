@@ -22,7 +22,7 @@ not_for:
   - You would restore over live production data. Do not run this. It is for an approved test environment only.
   - You only want a general recovery plan with no test. Use the Backup and recovery planner.
   - You only want a response guide for outages. Use the Incident runbook writer.
-  - Your device needs a safe update and rollback test. Use the Firmware update recovery rehearsal workflow.
+  - Your device needs a safe update and rollback test. Use the Firmware update recovery test planner workflow.
 you_give:
   - A list of your critical files and systems and where their data lives
   - Your current backup records, such as the tool, how often it runs and the last successful date

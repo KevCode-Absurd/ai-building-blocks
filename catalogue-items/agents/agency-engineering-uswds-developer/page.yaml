@@ -17,10 +17,10 @@ when:
   - You are deciding whether to use an official component or build your own.
   - You are adding USWDS to a Drupal or WordPress theme.
 not_for:
-  - "Your site is not on USWDS and is not government: use the Frontend Developer agent."
-  - "You need an accessibility audit or sign-off: use the Section 508 Accessibility Specialist agent or the Accessibility Auditor agent."
+  - "Your site is not on USWDS and is not government: use the Frontend developer."
+  - "You need an accessibility audit or sign-off: use the Section 508 accessibility reviewer or the Accessibility auditor."
   - "You want a quick check of one page you already built: use the Federal accessibility checker."
-  - "You want a general WordPress or Drupal build: use the CMS Developer agent."
+  - "You want a general WordPress or Drupal build: use the WordPress and Drupal developer."
 you_give:
   - What the page or site is for and who uses it
   - Your agency name, domain, brand colors and fonts

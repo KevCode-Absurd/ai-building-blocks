@@ -32,10 +32,10 @@ when:
   - A scan came back clean, but a user says they could not use a form or menu.
   - You built a custom tab, menu or pop-up, and want to know if it works for screen reader and keyboard users.
 not_for:
-  - You are a U.S. government body or contractor and need a Section 508 report. Use the Section 508 Accessibility Specialist agent.
+  - You are a U.S. government body or contractor and need a Section 508 report. Use the Section 508 accessibility reviewer.
   - You need a legal certificate of conformance. Only a qualified auditor can give one.
-  - You want the page fixed and rebuilt. Take the findings to the Frontend Developer agent, or fix them yourself in your code.
-  - You want a general quality check of how a site looks and works. Use the Evidence Collector agent.
+  - You want the page fixed and rebuilt. Take the findings to the Frontend developer, or fix them yourself in your code.
+  - You want a general quality check of how a site looks and works. Use the Visual QA evidence collector.
 you_give:
   - The pages or flows in scope, such as "sign up and check out", as a link, HTML or screenshots
   - The level you are aiming for, such as WCAG 2.2 AA (it assumes this if you do not say)

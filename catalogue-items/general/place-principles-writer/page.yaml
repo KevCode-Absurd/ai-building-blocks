@@ -24,7 +24,7 @@ when:
 not_for:
   - "You already have signed principles and need a brief for a designer. Use the Design brief rules writer."
   - "You want colour, type and grid rules for a brand or event. Use the Visual system rules writer."
-  - "You want a floor plan or screen layout. This writes principles, not drawings. For screens, use the Page grid and type planner."
+  - "You want a floor plan or screen layout. This writes principles, not drawings. For screens, use the Page typography and layout planner."
   - "You do not know who will use the place yet. It asks for that first and writes nothing until you answer."
 
 you_give:

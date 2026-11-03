@@ -15,7 +15,7 @@ when:
   - You want to know when the plan needs a rebuild and when it only needs a note.
   - You want a short update for leaders and the cost of each new role request.
 not_for:
-  - "You have fewer than about 15 people: work out each hire on its own with the Headcount business case builder."
+  - "You have fewer than about 15 people: work out each hire on its own with the Hire or contract cost checker."
   - "You have no stable goals for the year: write them down first, or the forecast only repeats the past."
   - "You cannot share people data with an AI: give counts only, or do the check by hand in a spreadsheet."
 you_give:

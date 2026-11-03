@@ -19,7 +19,7 @@ when:
   - Your deals have piled up and different pages now say different things.
 not_for:
   - "You have no written price list or brand file: write down your prices, guarantee and current deals first, then run it."
-  - "You want one offer built around a single buyer's doubt with a profit check: use the Commodity trap checker."
+  - "You want one offer built around a single buyer's doubt with a profit check: use the Offer price-comparison reviewer."
   - "You only want a discount code or a sale price: set that in your shop settings, no skill needed."
 
 you_give:

@@ -18,9 +18,9 @@ when:
   - You want a light and dark theme that switches smoothly across the whole site.
   - You are weighing a 3D hero section or animations and need to know what they cost in speed.
 not_for:
-  - Your site is not on Laravel. Use the Frontend Developer agent.
-  - You want a quick test version to show users this week. Use the Rapid Prototyper agent.
-  - You need the overall system design or database layout. Use the Software Architect agent or the Backend Architect agent.
+  - Your site is not on Laravel. Use the Frontend developer.
+  - You want a quick test version to show users this week. Use the Software prototype designer.
+  - You need the overall system design or database layout. Use the Software architect or the Backend Architect agent.
   - You want a finished change checked for bugs. Use the Code Reviewer agent.
 you_give:
   - Your spec or task list, with the pages and features you want

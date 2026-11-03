@@ -20,8 +20,8 @@ when:
   - Your years are labelled by calendar year, and you need April to March labels.
   - The balance sheet does not balance and you suspect broken links between tabs.
 not_for:
-  - You have no template yet and want a full valuation. Use the DCF model builder for India instead.
-  - You already have a finished model and want it checked for unit and year errors. Use the India modeling rules checker.
+  - You have no template yet and want a full valuation. Use the Indian company DCF modeler instead.
+  - You already have a finished model and want it checked for unit and year errors. Use the India financial model checker.
   - Your AI cannot run commands or edit files. The build uses a command-line tool, so a plain chat will only give you instructions.
   - The company is not Indian. The year, unit and tax rules here are for India.
 you_give:

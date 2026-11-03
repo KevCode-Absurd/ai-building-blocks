@@ -19,7 +19,7 @@ not_for:
   - "You need tax, financing or downtime effects: these need their own dated sources, so ask your accountant or finance lead."
   - "You do not know what the old vehicle would sell for at the end: find a dated quote first, because the skill will not assume zero."
   - "You want to decide if a vehicle is safe or due for service: ask your mechanic or fleet manager, as this only compares cash."
-  - "You want what one freight trip earns after fuel, driver and tolls: use the Freight trip contribution builder instead."
+  - "You want what one freight trip earns after fuel, driver and tolls: use the Freight trip cash margin calculator instead."
 you_give:
   - The quoted cash price of the replacement vehicle, with its date and currency.
   - What the old vehicle would sell for today, with its date.

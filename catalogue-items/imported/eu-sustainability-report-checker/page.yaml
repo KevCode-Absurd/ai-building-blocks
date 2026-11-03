@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your company has 1,000 employees or fewer, or turnover of €450 million or less: it is outside the mandatory rule. Ask your counsel about the voluntary standard."
   - "You need a legal opinion or a signed assurance statement: only counsel and an accredited assurance provider can give those."
-  - "You want to turn your raw energy and HR data into an ESG report draft: use the ESG report preparer."
+  - "You want to turn your raw energy and HR data into an ESG report draft: use the Sustainability reporting reviewer."
   - "You want to measure your supply chain emissions: use the Supply chain carbon tracker, then bring the numbers back here."
 you_give:
   - Number of employees and net turnover for your last year
@@ -41,7 +41,7 @@ how_to_use:
   - Say which standards version you want, the 2023 one or the revised one.
   - "If you are in scope, the double materiality work follows eight steps: understand the context, find impacts, rate their significance, find financial risks and opportunities, rate their financial significance, decide what is material, document the process, then check and update it each year."
   - Read the scope verdict first. Confirm it, and the first reporting year, with counsel before you draft the gap table, not after.
-  - Next step: once scope is confirmed, give your data to the ESG report preparer to draft the report. Take the scope verdict and the dates to counsel to confirm.
+  - "Next step: once scope is confirmed, give your data to the ESG report preparer to draft the report. Take the scope verdict and the dates to counsel to confirm."
   - Collect the data marked MISSING. Have a sustainability lead or an assurance provider review any draft text.
 output_sample:
   input:

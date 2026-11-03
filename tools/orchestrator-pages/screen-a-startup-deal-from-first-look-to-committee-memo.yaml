@@ -17,7 +17,7 @@ when:
 not_for:
   - "You want to judge a public company or a late-stage round: use a full analyst process or an outside adviser, as this is built for early-stage equity deals."
   - "You only need a quick score of the idea itself: use the Seven-question startup scorer."
-  - "You already have the term sheet and need to read it: use a lawyer, or the Contract review workflow for a plain summary and edits."
+  - "You already have the term sheet and need to read it: use a lawyer, or the Contract reviewer workflow for a plain summary and edits."
 you_give:
   - The pitch deck and any data room files, as text
   - What the founders told you in calls, and their asking valuation and terms

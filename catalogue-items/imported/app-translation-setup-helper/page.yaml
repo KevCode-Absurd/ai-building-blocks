@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your app will only ever use one language: you do not need this yet."
   - "You want the text translated: use the Translator, or the Article translator for long pieces."
-  - "You want finished translations checked for changed numbers or names: use Check translation parity across three languages."
+  - "You want finished translations checked for changed numbers or names: use Russian, English and Brazilian Portuguese translation checker."
 you_give:
   - Your project folder
   - The languages you want, such as English plus Turkish and Arabic

@@ -19,7 +19,7 @@ when:
   - You like a competitor's email layout and want your own version with your own words.
 not_for:
   - "You need the copy itself: write it with the campaign email writer, then come back for the layout."
-  - "You want to score a finished email design: use the email design checker."
+  - "You want to score a finished email design: use the Email layout and delivery reviewer."
   - "You are sending a receipt, password reset or other system email: use your email tool's built-in template."
 you_give:
   - Your email goal and offer, plus the copy if you have it

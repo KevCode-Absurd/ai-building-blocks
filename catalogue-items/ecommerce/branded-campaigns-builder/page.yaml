@@ -18,7 +18,7 @@ when:
   - You run Performance Max or Shopping and want brand clicks in their own campaign.
   - You are new to Google Ads and want cheap early sales data to feed the algorithm.
 not_for:
-  - "You need to find and stop non-brand traffic leaking into your brand terms: use a Brand and non-brand splitter, or check your search terms report by hand."
+  - "You need to find and stop non-brand traffic leaking into your brand terms: use a Google Ads brand traffic splitter, or check your search terms report by hand."
   - "You want to win new customers who have never heard of you: build a non-brand Search or Performance Max campaign instead."
   - "Nobody searches your brand name yet: put the budget into ads that reach new people before you build this."
 

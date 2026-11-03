@@ -16,8 +16,8 @@ when:
   - You want a report of spend by agent, by job and by client that you can check against the invoice.
   - You have a starter budget module and need to know what it is missing before you rely on it.
 not_for:
-  - You want to record the tokens and cost of every AI call. Use the Agent AI call cost tracker builder. This skill sets the limits.
-  - You want to plan who must approve an action, such as a refund or an email send. Use the Agent action approval builder.
+  - You want to record the tokens and cost of every AI call. Use the Agent AI cost tracker builder. This skill sets the limits.
+  - You want to plan who must approve an action, such as a refund or an email send. Use the Agent approval workflow builder.
   - You have one script and one provider. Use the provider's own billing alert and budget cap instead.
   - You want it to create tables or pause agents for you. It drafts the code and rules. You run them on a copy first.
 you_give:

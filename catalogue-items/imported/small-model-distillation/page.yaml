@@ -18,8 +18,8 @@ when:
   - You need a model small enough for limited hardware.
   - You already have teacher answers and want to train a student on them.
 not_for:
-  - "The two models are close in size, or you just want a model in your style: use the LLM fine-tuning guide."
-  - "You have a small GPU and a large model: use the Low-memory fine-tuning guide."
+  - "The two models are close in size, or you just want a model in your style: use the Unsloth fine-tuning code writer."
+  - "You have a small GPU and a large model: use the Low-memory model fine-tuning planner."
   - "You have no GPU or no budget to rent one: a hosted API or a smaller ready-made model costs less."
   - "You want to train a model from nothing: use the Tiny GPT trainer."
 you_give:
@@ -35,7 +35,7 @@ you_get:
   - A comparison script that scores student and teacher on your test prompts
   - Notes on cost, model access and the teacher's terms of use
 how_to_use:
-  - This skill is adapted from Orchestra Research's public AI-research-SKILLs (MIT licence). Our changes: cost and memory warnings, a dataset set-up step and a tokenising step so the code runs.
+  - "This skill is adapted from Orchestra Research's public AI-research-SKILLs (MIT licence). Our changes: cost and memory warnings, a dataset set-up step and a tokenising step so the code runs."
   - Pick your teacher and student models. Check that you can get both, because some need an access request on Hugging Face. Set aside prompts for training and a separate set for testing.
   - Open Claude, ChatGPT or Gemini. Paste the skill text. Then give the model names, your task, and how many prompts you have.
   - Read the plan first. Check the memory and cost of your model pair before you run anything. The large example in the skill (a 70B teacher and a 7B student) needs a lot of GPU memory and rented GPUs cost real money. If the teacher is a hosted model, check its terms of use before you generate training data.

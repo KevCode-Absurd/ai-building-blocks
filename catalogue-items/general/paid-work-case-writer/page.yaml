@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You already charge and want to raise the price. Use the price rise letter writer."
-  - "You are setting a fee for client work by the hour or project. Use the client fee and cap setter."
+  - "You are setting a fee for client work by the hour or project. Use the Client pricing planner."
   - "You give the work away on purpose to win customers. Use the free sample offer planner to plan what you give and what it costs."
   - "You have no costs you can show yet. It will mark them missing and pick a price model on a stated assumption you must check."
 

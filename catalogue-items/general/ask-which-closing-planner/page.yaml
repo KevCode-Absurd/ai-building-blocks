@@ -25,14 +25,14 @@ not_for:
   - "Buyers still have doubts about the offer itself. Use the objection answer sheet writer first, then come here to close."
   - "You want the first line of a talk. Use the ten-second opener writer."
   - "A quiet deal has stalled for weeks. Use the stalled deal indecision checker."
-  - "You are asking for something that is not a sale, such as a favour or a decision. Use the yes-ladder question writer."
+  - "You are asking for something that is not a sale, such as a favour or a decision. Use the Sales agreement question planner."
   - "The offer is free or has only one option. There are no real choices to put in a question."
 
 you_give:
   - Your offer, with price, terms and every option you can really give (sizes, colours, dates, payment plans)
   - Where buyers stall, or the objection map from the objection answer sheet writer (optional)
   - Your current closing lines (optional)
-  - Where you close: in person, by phone or by message (optional)
+  - "Where you close: in person, by phone or by message (optional)"
 you_get:
   - A list of the real choices you can offer
   - Closing questions with two honest ways to say yes, each next to the old version
@@ -43,7 +43,7 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your offer and every option you can give today. Include dates and stock you can keep to.
-  - Say where buyers stall and where you close: in person, by phone or by message. Wording differs for each.
+  - "Say where buyers stall and where you close: in person, by phone or by message. Wording differs for each."
   - Check that every choice is one you would honour at the stated price. Cut any that are not.
   - Try the sequence in your next real talk, then tell the skill what happened and ask for a change.
 

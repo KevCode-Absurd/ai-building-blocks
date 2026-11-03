@@ -21,7 +21,7 @@ not_for:
   - The app is only slow right after a deploy. That is a start-up problem, so check your host's settings first.
   - You need to know what size of server to buy. That is capacity planning, not profiling.
   - You want a general review of messy code. Use the Code habits reviewer instead.
-  - Your slow part is a single loop you have not shipped yet. Use the Code speed planner to plan it before you write it.
+  - Your slow part is a single loop you have not shipped yet. Use the Code performance planner to plan it before you write it.
 you_give:
   - The project folder, or the slow endpoint, page or query
   - Your language, Node.js, Python or Go

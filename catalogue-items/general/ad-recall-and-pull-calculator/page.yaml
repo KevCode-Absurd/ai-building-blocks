@@ -18,9 +18,9 @@ when:
   - "Sales are muddy and you want a number for what the ad adds."
   - "People talk about your ad, and you want to know if it sells."
 not_for:
-  - "You have no survey answers yet: plan the survey first with the Recall and pull survey planner."
+  - "You have no survey answers yet: plan the survey first with the Ad response survey planner."
   - "You want to compare two ad versions head to head: run a proper A/B test in your ad platform instead."
-  - "You want to know whether to keep or change a whole campaign: use the Campaign keep-or-change checker with your audit report."
+  - "You want to know whether to keep or change a whole campaign: use the Ad change decision checker with your audit report."
 
 you_give:
   - "The answer sheet: what each person said, whether they buy, and who they are"

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have one prompt or a one-off piece of copy: write a plain brief and skip the planning."
   - "You want to write the ads themselves: use the Story image ad writer once your chain is planned."
-  - "You want to know if a new prompt writes better ads: use the Reach-before-repeat planner to plan the test."
+  - "You want to know if a new prompt writes better ads: use the Ad reach planner to plan the test."
 
 you_give:
   - The steps in order and what each one should produce

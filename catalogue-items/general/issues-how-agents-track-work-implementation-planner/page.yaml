@@ -18,7 +18,7 @@ when:
 not_for:
   - Your agents never share a task list, or you run one agent by hand. A simple task tracker is enough.
   - You need to set up the whole agent database first. Use the Agent database setup planner, then come back.
-  - You want a loader for agent role files. Use the Agent role file loader builder.
+  - You want a loader for agent role files. Use the Agent role loader builder.
   - You want it to apply the SQL for you. It drafts the SQL. You run it on a copy first.
 you_give:
   - Your database and how your code talks to it, such as Postgres with Supabase

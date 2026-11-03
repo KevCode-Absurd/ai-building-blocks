@@ -36,7 +36,7 @@ how_to_use:
   - Know the five shots you need before you start, in this order. Front hero, 45-degree angle, in-use scene, detail close-up, and size or inside view.
   - Ask for the shot list and one prompt per shot. You get the two shared paragraphs first (product and mood), then five labelled prompts, one per shot. Check that the product description is identical in every prompt.
   - Draw the images. In ChatGPT or Gemini, upload your photo with each prompt. The example commands in this skill use the paid dlazy gpt-image-2 tool. It needs a dlazy account, credits and a way to run commands. You do not need it.
-  - Drift check. Put all images side by side with your real photo. Compare the same details in each: any label or logo text, the buckle, buttons or dial, the stitching, the colour and the shape. If any detail differs from the real item, rerun only that shot. Do not upload an image that shows a feature your product does not have.
+  - "Drift check. Put all images side by side with your real photo. Compare the same details in each: any label or logo text, the buckle, buttons or dial, the stitching, the colour and the shape. If any detail differs from the real item, rerun only that shot. Do not upload an image that shows a feature your product does not have."
   - Next, check each image against your marketplace's photo rules.
 next: [marketplace-photo-rule-checker, main-image-a-b-test-planner]
 output_sample:

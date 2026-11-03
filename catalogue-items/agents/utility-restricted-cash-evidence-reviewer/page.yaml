@@ -15,7 +15,7 @@ explain: |
   It checks a loan cash test only if the utility has a signed one due. With no such loan, it marks that step as not applicable instead of making up a rule. It reviews and reports. It does not release grant money, pay anyone or contact the bank. The grant manager and the finance lead check the sources.
 
 when:
-  - Month end: the bank balance is up and you need to know how much is customer money, how much is grant money and how much you can spend.
+  - "Month end: the bank balance is up and you need to know how much is customer money, how much is grant money and how much you can spend."
   - A new grant instalment arrives and you want to see the restricted balance move before anyone spends it.
   - A payment is marked as grant-eligible and you want to check that the approval is on file before it comes off the restricted balance.
   - A lender asks for proof of cash on a test date and you need cash that counts under the loan agreement, not the whole bank balance.
@@ -29,7 +29,7 @@ not_for:
   - You want it to release grant money or pay a bill. It prepares the review and takes no action.
 
 you_give:
-  - Billing and collection records for the period: amount billed, current and arrears receipts, opening receivables and approved adjustments (from your billing system export)
+  - "Billing and collection records for the period: amount billed, current and arrears receipts, opening receivables and approved adjustments (from your billing system export)"
   - Opening and closing bank balances for the program account (from the bank statement)
   - The grant award terms, with the award version and date (from the grant agreement)
   - Each approved grant-eligible payment, with an ID and the approval evidence (from the grant manager's sign-off)

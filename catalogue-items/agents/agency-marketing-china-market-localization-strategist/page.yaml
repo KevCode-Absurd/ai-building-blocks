@@ -37,9 +37,9 @@ when:
   - You are a solo founder or small team and need a launch plan that works in one-week steps.
   - A product is rising on TikTok and you want to know if China has the same demand and what to change.
 not_for:
-  - You already run a China store and want help with daily operations. Use the China E-Commerce Operator agent.
-  - You ship goods across borders and need customs, tax and shipping rules. Use the Cross-Border E-Commerce Specialist agent.
-  - You promote health products and need ads checked for banned claims. Use the Healthcare Marketing Compliance Specialist agent.
+  - You already run a China store and want help with daily operations. Use the China ecommerce operations planner.
+  - You ship goods across borders and need customs, tax and shipping rules. Use the Cross-border ecommerce planner.
+  - You promote health products and need ads checked for banned claims. Use the China healthcare marketing reviewer.
   - Your product is not for China or Chinese apps. Use the New country expansion planner.
   - You need legal advice on advertising law or company filings. Ask a lawyer who works in China.
 you_give:

@@ -18,7 +18,7 @@ when:
   - Your list of requirements is long and half of it is not needed.
   - A teammate says, "Can you check this ad for biased wording?"
 not_for:
-  - "You want to find or message candidates: use the Candidate sourcing planner or the Candidate outreach drafter."
+  - "You want to find or message candidates: use the Candidate sourcing plan writer or the Candidate outreach drafter."
   - "Your company fixes the wording or pay bands by policy: fill in your approved template instead."
   - "You want the AI to ask you questions first and pass the post to sourcing steps: use the Job post writer."
 you_give:

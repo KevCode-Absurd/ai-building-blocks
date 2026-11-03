@@ -18,10 +18,10 @@ when:
   - Working capital moved a lot in a year with an acquisition or a big currency swing.
   - You are comparing two companies and one uses factoring while the other does not.
 not_for:
-  - The company has no factoring or supplier finance. Use Reconcile working capital and tax cash.
+  - The company has no factoring or supplier finance. Use Working capital and cash tax checker.
   - You want a cash forecast for your own business. This reads reports for past years.
   - You need a ruling on whether a deal is a sale or a loan. That takes an accounting review.
-  - You want earnings per share, not cash. Use Reconcile alternative EPS and comprehensive income.
+  - You want earnings per share, not cash. Use Adjusted EPS and comprehensive income checker.
 you_give:
   - The cash flow statement, with reported cash from operations (from the annual report)
   - "Factoring records: advances from the factor and customer receipts paid to it, for the same period and the same set of invoices sold to the factor (from the notes or company records)"

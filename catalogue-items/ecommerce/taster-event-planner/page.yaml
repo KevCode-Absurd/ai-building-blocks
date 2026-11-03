@@ -20,7 +20,7 @@ when:
 not_for:
   - "You can't sample the product, like software or large items: use a short buyer survey or customer calls instead."
   - "You have no budget for an event: ask your own team to taste first, but treat their votes as a first filter only."
-  - "You want to compare what people say with what they buy: use the Say-do gap checker."
+  - "You want to compare what people say with what they buy: use the Customer survey reliability reviewer."
 
 you_give:
   - The versions to test and what each one is

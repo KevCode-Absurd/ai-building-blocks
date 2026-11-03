@@ -9,10 +9,10 @@ when:
   - You have a swipe library and want finished ads from selected layouts.
   - You need a review deck with revisions tracked by ad and size.
 not_for:
-  - "You have no reference ads, only your own: use the Own-ad style remix builder."
-  - "You want new image ads in the style your winners share: use Make new image ads in the style your winners share."
-  - "You want one ad built on an offer: use Get three offer image ads ready to launch."
-  - "You only want a product photo set: use the Reference library product photoshoot."
+  - "You have no reference ads, only your own: use the Brand ad remix designer."
+  - "You want new image ads in the style your winners share: use Image ad style and concept planner."
+  - "You want one ad built on an offer: use Meta offer image ad planner."
+  - "You only want a product photo set: use the Reference-based product photoshoot planner."
 output_sample:
   input:
     - Your brand facts, logo, fonts, live offers and approved claims

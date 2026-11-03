@@ -37,7 +37,7 @@ how_to_use:
   - If you have no earlier review, run the Test coverage gap investigator or the Code and docs drift checker on its own first.
   - Paste your commit ID and the list of files in the change.
   - Add your last agent-state.json and finding IDs if you have them.
-  - Say "Follow the agent. Write MISSING: for any fact you lack, and list every MISSING line in the hand-back."
+  - "Say \"Follow the agent. Write MISSING: for any fact you lack, and list every MISSING line in the hand-back.\""
   - Read the hand-back. Check that each VERIFIED mark rests on a test that really ran.
   - Approve any outside action yourself. It only drafts messages and never sends them.
   - Next, fix what the gaps show, then run it again with the new commit ID and the saved agent-state.json.

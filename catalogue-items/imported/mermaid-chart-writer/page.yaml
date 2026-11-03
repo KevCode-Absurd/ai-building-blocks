@@ -19,7 +19,7 @@ when:
   - Your diagram code will not render and you want it fixed.
 not_for:
   - "You need exact artwork or a brand graphic: use a drawing tool such as draw.io or Figma, since Mermaid places the boxes for you."
-  - "You want a styled SVG picture to edit by hand: use the diagram maker."
+  - "You want a styled SVG picture to edit by hand: use the Dark-theme SVG diagram maker."
   - "You want a chart of numbers from a spreadsheet: use the chart maker."
 you_give:
   - A plain description of the process, system, database tables or plan

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need proof that rests on a real person, or a texture, pour or fit people judge by eye: film a demo or customer-style video instead, with a person or a simple phone shoot."
   - "You already have a script and only want it to sound right aloud: use the Ad script read-aloud editor."
-  - "You want to check a finished ad against Meta rules: use the Meta ads compliance checker."
+  - "You want to check a finished ad against Meta rules: use the Meta ad policy checker."
 
 you_give:
   - Your selling idea or an existing script

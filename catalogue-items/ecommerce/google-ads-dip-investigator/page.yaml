@@ -19,7 +19,7 @@ when:
   - You are about to rebuild an account and want to be sure that is needed.
 not_for:
   - Your account has under about 30 conversions a month. Weekly swings are mostly noise, so wait for more data or ask a person who runs your ads.
-  - You want standing problems found, not a drop explained. Use a Google Ads account audit, or ask a person to review the account.
+  - You want standing problems found, not a drop explained. Use a Google Ads account auditor, or ask a person to review the account.
   - You have no change history and no weekly data for 90 days or more. Export both from Google Ads first, then run this.
 
 you_give:

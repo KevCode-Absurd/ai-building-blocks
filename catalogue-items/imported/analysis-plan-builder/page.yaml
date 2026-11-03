@@ -17,7 +17,7 @@ when:
   - You want stakeholders to agree on the plan at a kickoff.
 not_for:
   - "You only need a quick one-off number pulled: just run the query or build the sheet yourself."
-  - "Your brief is not agreed yet: gather the requirements from your stakeholders first, using the requirements question asker."
+  - "Your brief is not agreed yet: gather the requirements from your stakeholders first, using the Requirements interviewer."
   - "You already have a plan and want to start the work: begin with your first step and check it against the deadline."
 you_give:
   - The analysis brief or requirements

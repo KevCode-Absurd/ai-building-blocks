@@ -19,7 +19,7 @@ when:
   - Your branded search or shopping spend looks high and you want to test whether it earns its keep.
 not_for:
   - "You spend under about $10K a day in total: pick one main channel and run one small capped test instead of a split."
-  - "You want to share one channel's budget across campaigns: use the next dollar budget allocator, not this planner."
+  - "You want to share one channel's budget across campaigns: use the Marketing budget allocation planner, not this planner."
   - "You need to design a holdout test in detail: use the holdout test planner, then bring the results back here."
 
 you_give:

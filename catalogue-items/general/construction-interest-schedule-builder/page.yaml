@@ -18,8 +18,8 @@ when:
   - A draw is delayed or brought forward, and you want to see the effect on interest.
   - A reviewer asks you to tie the closing loan balance back to draws and interest.
 not_for:
-  - You want to know if there is enough money to finish the build. Use the Completion funding gap checker.
-  - You want to plan which source pays each draw, equity first then loan. Use the Construction funding draw planner.
+  - You want to know if there is enough money to finish the build. Use the Project completion funding checker.
+  - You want to plan which source pays each draw, equity first then loan. Use the Construction funding schedule planner.
   - Interest is paid in cash, or the rate changes. This covers a fixed rate with interest added to the loan, so ask your lender for a full model.
 you_give:
   - The loan balance at the start (from the lender statement or loan agreement)

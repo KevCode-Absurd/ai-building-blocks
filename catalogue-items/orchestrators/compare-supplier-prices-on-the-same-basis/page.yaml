@@ -20,8 +20,8 @@ when:
 not_for:
   - "You are comparing software or service vendors: use the Vendor comparison writer."
   - "You have one supplier and want your cost per unit after freight and duty: use the Landed cost calculator."
-  - "You already chose suppliers and want to divide an order: use the Set your order size and split it across suppliers workflow."
-  - "You only want the quote table, fast: use the Supplier quote table builder."
+  - "You already chose suppliers and want to divide an order: use the Supplier order quantity planner workflow."
+  - "You only want the quote table, fast: use the Supplier quote comparison planner."
 you_give:
   - Two or more supplier quotes with unit price, pack size, minimum order, lead time and what the price covers
   - The currency, quantity and delivery terms of each quote, such as who pays freight

@@ -43,6 +43,8 @@ output_sample:
     - Prices of each item sold on its own (optional)
     - Payment terms and dates
     - Any discounts, rebates or bonuses (optional)
+  prerequisites:
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: The Contract
       contains: The separate promises found in the contract and how the transaction price was set.

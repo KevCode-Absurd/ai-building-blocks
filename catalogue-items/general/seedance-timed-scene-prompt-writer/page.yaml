@@ -44,7 +44,7 @@ how_it_works:
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
-  - "You want a rapid-cut product ad that ends on a hero shot: use Rapid-cut product video prompt."
+  - "You want a rapid-cut product ad that ends on a hero shot: use Rapid-cut product video prompt writer."
   - "You have a finished ad script and need it cut into shots: use Video ad shot list maker."
   - "You want a prompt for an image or for another video tool: use Image and video prompt director."
 output_sample:

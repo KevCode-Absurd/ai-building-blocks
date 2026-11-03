@@ -18,8 +18,8 @@ when:
   - You already use a draft sync tool and want a checked plan around it.
 not_for:
   - You post to LinkedIn, X or Instagram. Use the Multi-platform post planner or the Cross-platform post writer.
-  - You want a deep plan for one platform. Use the Zhihu Strategist agent, the Xiaohongshu Specialist agent or the Bilibili Content Strategist agent.
-  - You need the article written first. Use the Content Creator agent.
+  - You want a deep plan for one platform. Use the Zhihu Strategist agent, the Xiaohongshu content planner or the Bilibili content planner.
+  - You need the article written first. Use the Content writer.
   - You want posts published for you without a review. This agent stops at drafts, by design.
 you_give:
   - Your article, pasted or as a file, or a topic if you need it written first
@@ -29,7 +29,7 @@ you_give:
   - The tools you have installed, if you use a draft sync tool (optional)
 you_get:
   - A fit check for each platform, with a reason for each yes or no
-  - A table of the details used: topic, platforms, original or repost, tags
+  - "A table of the details used: topic, platforms, original or repost, tags"
   - One draft per platform you keep, in that platform's voice
   - A limits check on title length, body length and images, for you to confirm in each editor
   - A draft-only publishing plan, with the steps in order and a place for each draft link

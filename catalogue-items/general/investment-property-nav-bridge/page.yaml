@@ -19,9 +19,9 @@ when:
   - A new valuation comes in and you want to see how it moves NAV and the discount.
 not_for:
   - "You want to check a fund statement your manager sent: use the Investor statement NAV checker."
-  - "The company mostly holds listed shares in other companies: use the Listed holding look-through NAV."
+  - "The company mostly holds listed shares in other companies: use the Holding company value calculator."
   - You want to value the buildings yourself from rents. This skill uses valuations you supply and does not estimate them.
-  - "You want to reconcile book value to NAV across a whole period: use the Reconcile property NAV and book value workflow."
+  - "You want to reconcile book value to NAV across a whole period: use the Property net asset value and book-value checker workflow."
 you_give:
   - The valuation of each property, with its date and who prepared it (from the annual report or valuer's letter)
   - Other net assets, meaning cash and other items less the liabilities already netted in them (from the balance sheet)

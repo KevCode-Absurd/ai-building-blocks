@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "You have already chosen a free first step for a physical product. Use the Free sample offer planner."
-  - "You have chosen to lead with useful information. Use the Information-led lead offer planner."
-  - "You have no offer or price yet. Use the Hidden offer finder first."
-  - "You want to improve a lead offer you already run. Use the Lead offer tuner."
+  - "You have chosen to lead with useful information. Use the Educational lead magnet planner."
+  - "You have no offer or price yet. Use the New offer opportunity finder first."
+  - "You want to improve a lead offer you already run. Use the Lead magnet reviewer."
 
 you_give:
   - "Your offer: what is in it, and the price"

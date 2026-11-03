@@ -17,8 +17,8 @@ when:
   - You need to check that a converted road looks right.
 not_for:
   - "You need to open RoadRunner or manage projects: use the roadrunner-core skill first."
-  - "You need to turn a Lanelet2 map into RRHD: use the Road map converter."
-  - "You need to write or edit road content in an RRHD file: use the Road map author."
+  - "You need to turn a Lanelet2 map into RRHD: use the Lanelet2 to RoadRunner map converter."
+  - "You need to write or edit road content in an RRHD file: use the RoadRunner road map builder."
 you_give:
   - A map file (.rrhd or .xodr)
   - A running RoadRunner session

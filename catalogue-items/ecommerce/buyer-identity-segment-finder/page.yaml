@@ -19,8 +19,8 @@ when:
   - You are choosing between a few buyer groups and want a count behind the choice.
 not_for:
   - "You have no reviews and no buyers yet: ask people in forums and reviews of similar products first, or run a small survey with a few possible buyers."
-  - "You want to check if your ad or page fits one buyer group: use the Avatar fit checker."
-  - "You need a plan to survey buyers and non-buyers with a reward: use the Buyer research plan with survey."
+  - "You want to check if your ad or page fits one buyer group: use the Buyer profile reviewer."
+  - "You need a plan to survey buyers and non-buyers with a reward: use the Buyer research and survey planner."
 
 you_give:
   - Your reviews, a rival's reviews, or reviews of similar products from larger brands

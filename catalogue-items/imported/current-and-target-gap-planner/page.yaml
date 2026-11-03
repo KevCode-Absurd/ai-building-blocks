@@ -43,6 +43,7 @@ output_sample:
     - Who is responsible for the outcome
   prerequisites:
     - A chat AI that can read pasted text or uploaded files
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Executive decision
       contains: The decision in one short section, with the answer your evidence supports.

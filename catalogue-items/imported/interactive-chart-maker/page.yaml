@@ -33,7 +33,7 @@ you_get:
   - Install steps
 how_to_use:
   - Open an AI that can run Python code, such as Claude or ChatGPT with code tools turned on. Without code running, you get the script but no chart file.
-  - Paste the skill text into the chat, or upload the skill folder. This copy comes from a third-party collection at a fixed date, so if a Plotly command fails, check it against Plotly's own current docs. The skill file's "risk: critical" line is the collection's own label. This skill only writes chart code and changes nothing else.
+  - "Paste the skill text into the chat, or upload the skill folder. This copy comes from a third-party collection at a fixed date, so if a Plotly command fails, check it against Plotly's own current docs. The skill file's \"risk: critical\" line is the collection's own label. This skill only writes chart code and changes nothing else."
   - Add your data as a CSV with a header row. Say which columns go on each axis.
   - Ask for the chart type you want, or let your AI pick one and say why.
   - Open chart.html in your browser. Hover, zoom and pan to check it. If the chart is blank, check that the CSV header names match the columns you asked to plot.

@@ -16,7 +16,7 @@ when:
   - You want to see which keywords moved up or down since last week.
   - You already have Google Ads code in a project and want the tiers saved with your other audit results.
 not_for:
-  - You want to group search terms people typed, or find negative keywords. Use the Google search term coding prompt.
+  - You want to group search terms people typed, or find negative keywords. Use the Google search term code planner.
   - Your account has no conversion tracking. Tiers by results would mean nothing. Fix tracking first. The Google Ads report auditor can help check.
   - You want a one-time review and no code. Paste your export into the Google Ads report auditor.
   - You want it to pause keywords or change bids for you. It only proposes them. You apply them in Google Ads.

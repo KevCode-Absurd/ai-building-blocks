@@ -17,7 +17,7 @@ when:
   - You review every month and want each review to start from the last one.
 not_for:
   - You want a score across 30 account checks. Use the Meta Ads 30-check account auditor.
-  - You want the same checks every Monday and a scale-or-hold call. Use the Meta Ads weekly account keeper.
+  - You want the same checks every Monday and a scale-or-hold call. Use the Meta Ads weekly account reviewer.
   - You have one odd symptom, such as ads that will not spend. Use the Meta delivery troubleshooter.
 you_give:
   - Ads Manager exports for one date range, at campaign, ad set and ad level, with spend, results, conversion value and frequency

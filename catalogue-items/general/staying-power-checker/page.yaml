@@ -16,8 +16,8 @@ when:
   - A new technology could change the field and you cannot tell who benefits.
 not_for:
   - "You will sell or switch within a year: a quick check of price and demand is enough, so ask a colleague or run a simple pros and cons list."
-  - "You do not yet know if you understand the field: start with the Circle of competence mapper, then come back here."
-  - "You want to know if the people running it can be trusted: use the People trust checker."
+  - "You do not yet know if you understand the field: start with the Knowledge gap reviewer, then come back here."
+  - "You want to know if the people running it can be trusted: use the Working relationship trust reviewer."
 you_give:
   - What you are considering, in a few lines
   - The result of "Circle of competence mapper" (optional)

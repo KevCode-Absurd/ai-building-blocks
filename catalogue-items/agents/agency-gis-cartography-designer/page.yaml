@@ -17,8 +17,8 @@ when:
   - You need one consistent style across a series of maps.
   - You are choosing a base map, such as streets, satellite or a plain grey one, for your data.
 not_for:
-  - You need the analysis itself, such as hot spots, distances or areas. Use the Spatial Data Scientist agent or the GIS Analyst agent.
-  - You need a 3D scene. Use the 3D & Scene Developer agent.
+  - You need the analysis itself, such as hot spots, distances or areas. Use the Spatial data scientist or the GIS analyst.
+  - You need a 3D scene. Use the 3D map scene developer.
   - You need an interactive web map built. Use the Web GIS Developer agent.
 you_give:
   - What the map must show, and the one thing readers should learn from it

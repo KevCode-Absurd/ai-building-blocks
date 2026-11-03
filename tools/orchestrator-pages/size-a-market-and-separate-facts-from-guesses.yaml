@@ -18,8 +18,8 @@ when:
   - An investor or buyer asks where a market size figure came from.
   - You want to know which inputs to test first, because they are guesses.
 not_for:
-  - You cannot yet say who would buy. Use the Pick a market worth selling to and its price workflow first, then come back.
-  - You want to know whether your idea can win its market, not how large it is. Use the Test if your idea can own its market workflow.
+  - You cannot yet say who would buy. Use the Target market and pricing reviewer workflow first, then come back.
+  - You want to know whether your idea can win its market, not how large it is. Use the Business idea market reviewer workflow.
   - A source you trust already sized the market and you only need it written up. Use the Market research report writer.
   - You need survey sample sizes or a plan to test the guesses. Use the Market size and survey planner.
 you_give:

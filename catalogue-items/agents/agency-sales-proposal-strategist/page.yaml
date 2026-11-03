@@ -21,9 +21,9 @@ when:
   - Several people will write the sections and need one set of themes to follow.
 not_for:
   - You need contract terms, a scope of work or NDA wording. Use the Contract and proposal drafter, and have a lawyer check it.
-  - You need the price set or your tiers worked out. Use the Pricing Analyst agent.
-  - You want to judge whether a deal is worth chasing. Use the Deal Strategist agent.
-  - You want short outreach emails, not a proposal. Use the Sales Outreach agent.
+  - You need the price set or your tiers worked out. Use the Pricing analyst.
+  - You want to judge whether a deal is worth chasing. Use the Sales deal reviewer.
+  - You want short outreach emails, not a proposal. Use the Sales outreach writer.
   - You have no buyer requirements or call notes. Get them first. The plan is only as specific as what you give it.
 you_give:
   - The RFP, or your notes from calls with the buyer, pasted as text. A long RFP can go in as an uploaded file.

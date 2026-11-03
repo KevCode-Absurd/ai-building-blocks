@@ -19,8 +19,8 @@ when:
   - You need a clear summary for your leadership team.
 not_for:
   - "You have fewer than about 50 responses, or one channel such as app reviews: read the comments yourself, or use the Review insight finder."
-  - "Your feedback comes from several places, such as tickets, calls and surveys: use the Feedback pile sorter."
-  - "Your survey tool is Delighted, GatherUp, Gleap or Simplesat and you want to pull the answers from it: use the Customer feedback report from survey tools."
+  - "Your feedback comes from several places, such as tickets, calls and surveys: use the Customer feedback sorter."
+  - "Your survey tool is Delighted, GatherUp, Gleap or Simplesat and you want to pull the answers from it: use the Customer survey feedback analyst."
 you_give:
   - Survey responses with a score and a comment, as a CSV, JSON or pasted rows
   - The date of each response (optional, needed for trends)

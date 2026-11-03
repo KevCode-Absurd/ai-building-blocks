@@ -30,10 +30,10 @@ when:
   - You are using the Gameplay Ability System and abilities or attributes do not sync.
   - You want every server RPC reviewed for cheats before launch.
 not_for:
-  - You want gameplay systems in general, not networking. Use the Unreal Systems Engineer agent.
-  - You use Unity. Use the Unity Multiplayer Engineer agent. For Godot, use the Godot Multiplayer Engineer agent.
+  - You want gameplay systems in general, not networking. Use the Unreal gameplay systems engineer.
+  - You use Unity. Use the Unity Multiplayer Engineer agent. For Godot, use the Godot multiplayer designer.
   - You want a general game design or a single-player game.
-  - You want world building or visuals. Use the Unreal World Builder agent or the Unreal Technical Artist agent.
+  - You want world building or visuals. Use the Unreal world designer or the Unreal technical artist.
 you_give:
   - The game type and the most players one match holds
   - The server type you want, such as dedicated or listen, or not decided

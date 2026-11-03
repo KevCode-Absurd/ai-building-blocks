@@ -18,7 +18,7 @@ when:
   - You keep re-explaining the same background at the start of each session.
   - You want regular check-ins scheduled toward a goal.
 not_for:
-  - You want to break a huge project into open decisions on an issue tracker. Use the Big project mapper.
+  - You want to break a huge project into open decisions on an issue tracker. Use the Project decision map builder.
   - You only need to turn a vague job into a clear goal with proof of done. Use the Agent goal writer.
   - You have one job to repeat on a loop with checks. Use the Agent loop designer.
 you_give:

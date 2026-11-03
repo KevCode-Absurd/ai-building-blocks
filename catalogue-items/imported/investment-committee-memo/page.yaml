@@ -20,8 +20,8 @@ when:
 not_for:
   - You only need a first screen of a teaser or CIM. Use the Deal screening memo writer.
   - You need a lender's view of a loan. Use the Borrower credit memo writer.
-  - You still need to do the diligence. Use the Due diligence checklist builder first, then come back.
-  - You want returns worked out from scratch. Use the Deal returns sensitivity builder, then paste its tables here.
+  - You still need to do the diligence. Use the India deal due diligence planner first, then come back.
+  - You want returns worked out from scratch. Use the Deal return sensitivity modeler, then paste its tables here.
 you_give:
   - A description of the company and the market it sells into
   - Three to five years of financials, in crore (₹ Cr)
@@ -39,7 +39,7 @@ how_to_use:
   - Gather your notes in one place. Put them in the order of the list above.
   - Open the skill in your AI and paste your notes. Add your firm's template if you have one.
   - Check the AI's list of missing items. Answer what you can. Anything left stays marked MISSING.
-  - Read the draft. Check that the tables add up: the EBITDA bridge, sources and uses, and the returns math.
+  - "Read the draft. Check that the tables add up: the EBITDA bridge, sources and uses, and the returns math."
   - Edit the recommendation and risks yourself. They carry your judgement, not the AI's.
   - Take the memo to the committee once the open questions are closed or flagged.
 output_sample:

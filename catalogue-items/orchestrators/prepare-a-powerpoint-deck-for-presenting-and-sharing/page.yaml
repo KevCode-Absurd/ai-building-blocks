@@ -18,8 +18,8 @@ when:
   - Your organization asks for accessible slides.
   - Someone else will present your deck and needs notes and timing.
 not_for:
-  - You still need to build the deck. Use the Editable slide deck builder or Turn a report into an editable briefing deck.
-  - The deck's numbers come from Excel and must be checked. Use Build a monthly Excel and PowerPoint update.
+  - You still need to build the deck. Use the Editable PowerPoint deck builder or Report-to-slide briefing deck builder and reviewer.
+  - The deck's numbers come from Excel and must be checked. Use Excel report and PowerPoint update writer.
   - You only want an accessibility check. Use the PowerPoint accessibility reviewer on its own.
   - The deck is a research talk built from a paper. Use Build a research talk from checked figures.
 you_give:

@@ -18,10 +18,10 @@ when:
   - A reader asked "out of how many?" and you are not sure of the answer.
   - You have a spreadsheet of answers and need a short, plain briefing, not a data dump.
 not_for:
-  - You have not sent the survey yet. Use the Check a marketing survey before sending it workflow.
+  - You have not sent the survey yet. Use the Marketing survey design reviewer workflow.
   - You need a statistical estimate for a whole population, with weights or margins of error. Ask a statistician. This workflow checks counts and caveats.
-  - You have a general dataset and want the top insights. Use the Turn a dataset into a checked brief of top insights workflow.
-  - You want slides made, not an outline. Take the outline to a slide tool or the Turn a report into an editable briefing deck workflow.
+  - You have a general dataset and want the top insights. Use the Dataset analysis and insight reviewer workflow.
+  - You want slides made, not an outline. Take the outline to a slide tool or the Report-to-slide briefing deck builder and reviewer workflow.
 you_give:
   - The survey answers as a sheet, with names or emails removed
   - The questionnaire, with any questions that skip people based on an earlier answer

@@ -41,7 +41,7 @@ how_to_use:
   - Read the preview. It lists each item, its quantity, the price the customer paid and the exact refund total. Shipping and tax are left out unless you ask. Check them before you go on.
   - Ask your AI to run it again with dry run off only after you have typed yes to the exact refund total it showed. This moves real money and cannot be undone.
   - If you asked for a replacement, send the invoice link to your customer. The draft order is not paid or shipped until they pay.
-  - Next steps: open the order in your Shopify admin and check the refund shows the right amount. Use the Refund speed checker to see how long the money takes to reach the customer. Use the Order lookup assistant if the customer asks where their replacement is.
+  - "Next steps: open the order in your Shopify admin and check the refund shows the right amount. Use the Refund speed checker to see how long the money takes to reach the customer. Use the Order lookup assistant if the customer asks where their replacement is."
 output_sample:
   input:
     - Your store domain

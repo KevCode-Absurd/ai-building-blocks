@@ -24,7 +24,7 @@ not_for:
   - "You want full fleet profit with truck payments, insurance and office costs. This covers the cash costs of one trip only."
   - "You have no trip records yet. Use the Per-order profit calculator for product orders, or gather your fuel receipts first."
   - "You want to check a 3PL or carrier invoice line by line. Use the 3PL bill auditor."
-  - "You are deciding whether to replace a truck. Use the Fleet replacement cash comparer."
+  - "You are deciding whether to replace a truck. Use the Vehicle replacement cost analyst."
 
 you_give:
   - "Loaded kilometers and empty kilometers for the trip, from your trip log or dispatch sheet"
@@ -97,6 +97,7 @@ output_sample:
     - "What the trip earned"
   prerequisites:
     - "Your trip log, fuel receipts and the invoice or settlement for the trip"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency and unit."

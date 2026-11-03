@@ -20,8 +20,8 @@ when:
   - You want a take-home task that is fair and takes a sensible amount of time.
   - You already use a test and want it checked for bias.
 not_for:
-  - "You only need good interview questions: use hiring-interview-designer or interview-scorecard-builder."
-  - "You want to check a test for fairness only: use the assessment fairness check."
+  - "You only need good interview questions: use Hiring interview planner or interview-scorecard-builder."
+  - "You want to check a test for fairness only: use the Assessment fit and fairness checker."
   - "The job needs a licence or a portfolio you can simply look at: check those first, and skip a test."
 you_give:
   - The role and level

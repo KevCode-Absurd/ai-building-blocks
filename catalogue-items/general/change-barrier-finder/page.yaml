@@ -21,7 +21,7 @@ when:
   - "You want a ranked list of barriers and a first ask you can send today."
 not_for:
   - "You have a one-off decision and nobody is resisting: ask them in a plain request."
-  - "You want to plan the talk itself, starting from what they want: use the Buy-in conversation planner."
+  - "You want to plan the talk itself, starting from what they want: use the Proposal discussion planner."
   - "You have no words, emails or notes from the person: gather some first, or every barrier stays a guess."
 
 you_give:

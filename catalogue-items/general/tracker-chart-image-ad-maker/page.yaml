@@ -19,8 +19,8 @@ when:
   - You want a picture that sorts trackers from everyone else at a glance.
 not_for:
   - "Your idea needs a clinic scan, a doctor's file or a reading only a clinic can take: use a person who can check the claims, or pick a different picture idea."
-  - "Your buyer does not check this reading at home: use the empty-room-image-ad-maker or the problem-moment-image-ad-maker."
-  - "The problem shows on the body itself: use the visible-symptom-image-ad-maker."
+  - "Your buyer does not check this reading at home: use the Empty-room photo ad brief writer or the Problem moment image ad maker."
+  - "The problem shows on the body itself: use the Visible symptom image ad maker."
 
 you_give:
   - Your approved story ad and the reading it mentions

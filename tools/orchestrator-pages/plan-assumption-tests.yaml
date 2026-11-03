@@ -18,7 +18,7 @@ when:
   - You are about to hire sales or marketing staff before you know who buys and why.
   - You have talked to a few people but never wrote down what you were trying to learn.
 not_for:
-  - "Your plan has already been proven with paying customers: use the Smallest test picker to choose your next test."
+  - "Your plan has already been proven with paying customers: use the Minimum experiment planner to choose your next test."
   - "You only want to plan the customer talks and already have your guesses: use the Customer discovery interview planner."
   - "You want a market size or competitor study from public data: use the Community evidence researcher or a paid research report."
 

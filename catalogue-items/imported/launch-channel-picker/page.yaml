@@ -19,7 +19,7 @@ when:
   - Your main channel has stopped working and you need a new one.
 not_for:
   - You already run several channels and need to split spend between them. Use the Channel budget mix planner.
-  - You want growth loops that feed themselves. Use the Growth loop designer.
+  - You want growth loops that feed themselves. Use the Product sharing and referral loop planner.
   - You need a launch sequence and early buyer targets for a new product. Use the First customer launch planner.
 you_give:
   - What you sell, and its price

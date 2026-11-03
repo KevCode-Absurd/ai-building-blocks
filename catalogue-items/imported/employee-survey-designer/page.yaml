@@ -18,8 +18,8 @@ when:
   - Managers have survey results and do not know what to do with them.
   - You want to check morale after a restructure.
 not_for:
-  - "One person has a complaint or a misconduct claim: use the Workplace investigation guide, or hold a 1-to-1."
-  - "You want to learn from one person who is leaving: use the Exit interview and grievance guide."
+  - "One person has a complaint or a misconduct claim: use the Workplace investigation planner, or hold a 1-to-1."
+  - "You want to learn from one person who is leaving: use the Exit interview and grievance planner."
   - "You want to map a stage of the employee experience, such as onboarding: use the Employee experience map builder."
   - "You want review forms for performance: use the Review cycle form builder."
 you_give:

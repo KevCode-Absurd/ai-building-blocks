@@ -22,8 +22,8 @@ when:
 
 not_for:
   - "The company has no acquired intangibles. There is nothing to add back."
-  - "You want to change the share count, for example after a buyback. Use the Cash-funded buyback EPS bridge."
-  - "You want to test whether convertible bonds or options dilute EPS. Use the Convertible EPS inclusion test."
+  - "You want to change the share count, for example after a buyback. Use the Cash buyback EPS checker."
+  - "You want to test whether convertible bonds or options dilute EPS. Use the Convertible earnings per share checker."
   - "You want to see whether earnings turn into cash. Use the Cash versus earnings checker."
 
 you_give:
@@ -95,6 +95,7 @@ output_sample:
     - "The tax benefit the company reported on that amortization"
   prerequisites:
     - "The income statement, the intangibles note and the tax note for the same period"
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: "SCOPE AND SOURCES"
       contains: "Each figure with where it came from, its date, currency, scale and period."

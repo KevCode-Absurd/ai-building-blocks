@@ -19,7 +19,7 @@ when:
   - A lender questions your compliance certificate.
 not_for:
   - "Your agreement caps addbacks on EBITDA after addbacks: stop and ask a lawyer or the lender's agent. The cap method here does not fit."
-  - "You test debt service cash cover, not net debt to EBITDA: use the Review contractual debt service cash tests workflow."
+  - "You test debt service cash cover, not net debt to EBITDA: use the Debt service coverage checker workflow."
   - "You want to know if a cure is valid or on time, or need a waiver: ask your lawyer and lender. This does the arithmetic only."
   - "You want net debt to EBITDA after cash interest and PIK interest: use the Review sponsor debt cash demands workflow."
 you_give:

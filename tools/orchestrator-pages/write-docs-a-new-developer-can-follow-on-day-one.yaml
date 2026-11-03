@@ -30,7 +30,7 @@ you_get:
   - An onboarding guide to the code and a quickstart to a running app
   - A first-run test report with every step that broke
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the five skill files, in the order they run: Codebase architecture reviewer, README and decision interviewer, Codebase onboarding guide writer, Developer quickstart writer and README first-run tester.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the five skill files, in the order they run: Codebase architecture reviewer, README and decision interviewer, Codebase onboarding guide writer, Developer quickstart writer and README first-run tester."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Open the codebase in Claude Code and start. It reads the architecture and asks you about the decisions. If nobody can answer yet, each decision is marked MISSING in the README and nothing is guessed.
   - Read the guide and the quickstart. Fix anything that is wrong about your setup.

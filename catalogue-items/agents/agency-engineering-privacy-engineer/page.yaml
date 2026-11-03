@@ -19,7 +19,7 @@ when:
   - You share data with an analytics or ad tool and want consent to actually stop the data when a user says no.
   - You want to call a dataset anonymous before sharing it and need to know if people could still be picked out.
 not_for:
-  - You want to know which privacy laws and duties apply to you. Use the Data Privacy Officer agent.
+  - You want to know which privacy laws and duties apply to you. Use the Data privacy officer.
   - You want your code checked for privacy risks against GDPR. Use the GDPR privacy checker.
   - You have a new app idea and want privacy built in from the start. Use the Privacy-first app designer.
   - You want it to scan your systems or run deletions. It writes the plan. Your developers build and run it.

@@ -17,7 +17,7 @@ when:
   - You need metal shapes from a layout to reuse in your own design.
   - You want to run signal tests on a board someone else designed.
 not_for:
-  - "You want to save your own design as Gerber files: use the PCB Gerber exporter (matlab-write-pcb-layout), not this reader."
+  - "You want to save your own design as Gerber files: use the MATLAB PCB Gerber exporter (matlab-write-pcb-layout), not this reader."
   - "You want S-parameters or other signal tests after loading the board: use the MATLAB analyze EM skill (matlab-analyze-em)."
   - "You want to build a board from simple shapes, or define materials: use matlab-assemble-pcb-layout or matlab-manage-pcb-material."
 you_give:

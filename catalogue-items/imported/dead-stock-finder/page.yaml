@@ -19,8 +19,8 @@ when:
   - A supplier review needs their unsold lines listed.
 not_for:
   - A product launched inside the window. It has had no time to sell, so it will show up here by mistake.
-  - Slow movers that still sell now and then. Use the Days of stock calculator to see how long they will last.
-  - You want stock sorted by how long it has sat. Use the Stock age report builder.
+  - Slow movers that still sell now and then. Use the Shopify days of stock calculator to see how long they will last.
+  - You want stock sorted by how long it has sat. Use the Shopify slow stock report builder.
   - You want the products tagged or discounted. This only reads. Use the Product tag bulk editor after you review the list.
 you_give:
   - Your Shopify store address, like mystore.myshopify.com
@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - Read-only access to your Shopify products, orders and inventory, or exports of each as CSV
     - The read_all_orders permission if your window is longer than 60 days
+    - An AI that can run code, to run the commands in this skill
   output:
     - name: Dead stock report
       contains: Items with stock, items with no sales, the percent that is dead, and the estimated cash value.

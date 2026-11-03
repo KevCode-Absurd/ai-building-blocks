@@ -19,8 +19,8 @@ when:
   - A long-term contractor has asked to become an employee, and you need the steps.
   - A contract ended and you need to be sure the person's system access is removed.
 not_for:
-  - "You only want to check one worker: use the Employee or contractor checker."
-  - "You want to check this month's contractor invoices against what you agreed: use the Monthly contractor roster keeper."
+  - "You only want to check one worker: use the Worker classification reviewer."
+  - "You want to check this month's contractor invoices against what you agreed: use the Contractor invoice and terms reviewer."
   - "You need a ruling on one person's status: ask an employment lawyer who knows your local law."
   - "You are choosing an HR tool or staffing vendor: use the HR vendor selection planner."
 you_give:

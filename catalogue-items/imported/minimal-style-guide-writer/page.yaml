@@ -21,8 +21,8 @@ when:
   - An engineer needs accessibility rules written down.
 not_for:
   - "Your brand needs bold colour, illustration or a lot of personality: use the Bold-border style guide writer or the Soft clay style guide writer."
-  - "You build a dense admin tool full of tables and filters: whitespace costs you space, so start from the Design rules file writer on your real project."
-  - "You only need colour, type and spacing as code files from one brand colour: use the Design token builder."
+  - "You build a dense admin tool full of tables and filters: whitespace costs you space, so start from the Project design rules writer on your real project."
+  - "You only need colour, type and spacing as code files from one brand colour: use the Design token and handoff builder."
   - "You want a vintage look: use the Retro throwback style guide writer."
   - "You want a layout of cards in different sizes: use the Bento grid style guide writer."
 you_give:

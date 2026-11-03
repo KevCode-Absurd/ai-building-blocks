@@ -18,7 +18,7 @@ when:
 not_for:
   - Your app answers web requests or serves pages. A worker is the wrong service type. Ask the assistant to plan a Render Web Service instead.
   - You only need a task that runs once an hour or once a day. A scheduled job may fit better than an always-on worker. Check Render's current options.
-  - You haven't built the worker yet. Use the Agent worker runtime starter builder first.
+  - You haven't built the worker yet. Use the TypeScript agent worker builder first.
   - You want it to create the Render service and press deploy. It only plans and drafts. You do those steps in Render yourself.
 you_give:
   - Your code project, or its package file and main folders

@@ -29,9 +29,9 @@ when:
   - Your designers struggle to edit a field in the Inspector, and a custom drawer would help.
   - You want the build to stop automatically when a project rule is broken.
 not_for:
-  - You want code that runs inside the game for players. Use the Unity Architect agent.
-  - You want a shader or look for materials. Use the Unity Shader Graph Artist agent.
-  - You want a general developer tool outside Unity. Use the Developer Tooling Engineer agent.
+  - You want code that runs inside the game for players. Use the Unity software architect.
+  - You want a shader or look for materials. Use the Unity Shader Graph artist.
+  - You want a general developer tool outside Unity. Use the Developer tools engineer.
   - Your team only needs a written checklist. Tooling costs more than a list does.
 you_give:
   - The job people do by hand, and how often

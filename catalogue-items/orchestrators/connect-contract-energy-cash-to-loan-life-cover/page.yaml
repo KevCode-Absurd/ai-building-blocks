@@ -19,10 +19,10 @@ when:
   - You are not sure whether your figures are accrual or cash, and need the working capital step to match.
 not_for:
   - The plant sells at market prices, not one contract price. Step 1 assumes one price per MWh.
-  - You want a repayment schedule sized to the cash. Use the Build a project debt service cash pack workflow.
-  - You want cover tested period by period against covenants. Use the Review contractual debt service cash tests workflow.
+  - You want a repayment schedule sized to the cash. Use the Project debt repayment modeler workflow.
+  - You want cover tested period by period against covenants. Use the Debt service coverage checker workflow.
   - You have fewer or more than three years of data. This is built for three annual periods.
-  - You only want the operating cash. Use the Contracted energy cash model on its own.
+  - You only want the operating cash. Use the Energy contract cash modeler on its own.
 you_give:
   - Delivered and accepted MWh for each of three years (from meter or settlement statements)
   - Contract price per MWh, variable cash cost per MWh and fixed cash per year (from the contract and your accounts)

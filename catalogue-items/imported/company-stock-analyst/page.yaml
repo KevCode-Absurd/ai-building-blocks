@@ -44,6 +44,7 @@ output_sample:
     - Peers you want it compared with (optional)
   prerequisites:
     - An AI that can search the web for company data, or filings you paste in
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Verdict and key risks
       contains: The main finding and the biggest risks, placed first so a short read still gives the substance.

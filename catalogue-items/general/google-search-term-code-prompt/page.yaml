@@ -16,9 +16,9 @@ when:
   - A lot of your spend goes to searches that never sell and you want them found by rule.
   - You already have a Google Ads audit engine in your code and want to add search terms to it.
 not_for:
-  - You don't have Google Ads API access. Use the Google Ads token and access check planner first.
-  - You have one export and no code. Use the Search Query Analyst agent, or the Google Ads report auditor.
-  - You want to sort keywords by results, not search terms. Use the Keyword grouping coding prompt.
+  - You don't have Google Ads API access. Use the Google Ads developer access checker first.
+  - You have one export and no code. Use the Search query analyst, or the Google Ads report auditor.
+  - You want to sort keywords by results, not search terms. Use the Keyword grouping coding brief writer.
   - You want it to add the negative keywords to your account. It only drafts rows for you to review and paste.
 you_give:
   - Your code project, or its package file and main folders

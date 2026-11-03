@@ -19,7 +19,7 @@ when:
   - You are about to ask for money or support again and want the doubts handled first.
 not_for:
   - "You have not pitched yet and have no nos to learn from: talk to likely customers first, then come back."
-  - "You need a short answer to one tough objection: use the Hardest objections answer writer."
+  - "You need a short answer to one tough objection: use the Pitch objection and answer writer."
   - "You want a pitch written from scratch for a new idea: ask your AI for a first draft, then bring it here after a few meetings."
 
 you_give:

@@ -30,7 +30,7 @@ you_get:
   - A quality score out of ten
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
-  - Paste the skill instructions into the chat. The skill also uses six reference files that ship in this item's references folder. Paste or attach them with it. If you cannot, say so: it then works from the main text alone and is less exact.
+  - "Paste the skill instructions into the chat. The skill also uses six reference files that ship in this item's references folder. Paste or attach them with it. If you cannot, say so: it then works from the main text alone and is less exact."
   - Paste the code you want to improve. Add your test command and any parts that must not change (optional).
   - Read the smells and score first. Check that each named move fits your code.
   - No tests yet? Ask it first for a few simple tests that pin down what the code does today. Run them and make sure they pass before the first move.

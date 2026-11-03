@@ -19,7 +19,7 @@ when:
   - You are about to change your plan and want data behind the change.
 not_for:
   - "You have fewer than 20 posts or no numbers yet: keep posting for a few more weeks, then come back."
-  - "You want to judge paid ad campaigns: use the Six-pattern ad performance diagnoser."
+  - "You want to judge paid ad campaigns: use the Ad performance change investigator."
   - "You only want new hook lines: use the Short video hook writer, then bring the best ones back here as your test."
 
 you_give:

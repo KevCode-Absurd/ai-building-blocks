@@ -20,8 +20,8 @@ when:
   - You are building a balun to join a balanced and an unbalanced line.
   - You want a ring resonator for a filter or test structure.
 not_for:
-  - "You need a filter: use the PCB RF filter designer, since this skill only builds single parts."
-  - "You need a coupler or splitter: use the PCB coupler designer, which sizes those parts directly."
+  - "You need a filter: use the MATLAB PCB RF filter designer, since this skill only builds single parts."
+  - "You need a coupler or splitter: use the MATLAB PCB coupler and splitter designer, which sizes those parts directly."
   - "You have no MATLAB with the RF PCB Toolbox: ask an RF engineer, or use a free circuit simulator for a rough value."
 you_give:
   - The part type, such as spiral inductor, interdigital capacitor, balun, ring resonator, phase shifter or radial stub
@@ -42,7 +42,7 @@ how_to_use:
   - "6. Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency."
   - "7. If the memory estimate is more than your computer has, ask your AI to coarsen the mesh before you approve a full-wave solve."
   - "8. Compare the quick estimate with the full result, since they differ near resonance."
-  - The skill file points to other MathWorks skills by their original names. Each has a match in this library: matlab-manage-pcb-material is the PCB material setup helper, matlab-analyze-em is the PCB signal loss analyzer, matlab-optimize-pcb-design is the PCB design optimizer, matlab-integrate-pcb-circuit is the PCB circuit combiner, matlab-design-pcb-filter is the PCB RF filter designer and matlab-design-pcb-coupler is the PCB coupler designer. The layout-assembly skill (matlab-assemble-pcb-layout) is not in this library yet. Paste the related skills into the same chat if you want your AI to follow them.
+  - "The skill file points to other MathWorks skills by their original names. Each has a match in this library: matlab-manage-pcb-material is the PCB material setup helper, matlab-analyze-em is the PCB signal loss analyzer, matlab-optimize-pcb-design is the PCB design optimizer, matlab-integrate-pcb-circuit is the PCB circuit combiner, matlab-design-pcb-filter is the PCB RF filter designer and matlab-design-pcb-coupler is the PCB coupler designer. The layout-assembly skill (matlab-assemble-pcb-layout) is not in this library yet. Paste the related skills into the same chat if you want your AI to follow them."
 output_sample:
   input:
     - The part type, such as spiral inductor, balun or ring resonator

@@ -15,7 +15,7 @@ when:
   - You just released something and want to know what it broke.
   - Search traffic or page speed dipped and you want the likely cause ranked.
 not_for:
-  - "You want a one-off check of a single page: run the wcag-accessibility-fixer or the page-metadata-fixer on its own, which is faster."
+  - "You want a one-off check of a single page: run the WCAG accessibility reviewer or the Page metadata fixer on its own, which is faster."
   - "You want the agent to change your live site by itself: it never does, so ask a developer or approve each fix first."
   - "You have no key pages or speed reports to share: start by running PageSpeed Insights on your home page, then come back."
 you_give:

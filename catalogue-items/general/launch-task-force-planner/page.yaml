@@ -22,7 +22,7 @@ when:
   - You are a team of two or three and want to know which roles you are missing.
 
 not_for:
-  - "Your product is built and you need the launch order of teaser, preview and launch. Use the Launch teaser to preview planner, or the Publicity-first launch planner to lead with press."
+  - "Your product is built and you need the launch order of teaser, preview and launch. Use the Launch teaser and preview planner, or the Publicity-first launch planner to lead with press."
   - "You are not sure the product should launch at all. Run the Go or no-go launch checker on your plan first."
   - "You want a task-by-task schedule with dates. This gives roles, one agenda and a brief, not a full schedule. Use a project tool for that."
 

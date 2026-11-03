@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Copy the full text of the Prompt block in SKILL.md (the text inside the code fence under the Prompt heading) and paste it in, or add the skill to your AI. The page does not hold the prompt itself.
   - "Add your programme description and your school context: phase, pupil numbers, share of pupils from deprived homes (such as Pupil Premium), and exclusion and attendance rates. Then add the outcomes you hope for and who will read the case."
-  - Gather your baseline figures first if you have them: attendance, exclusions and survey results. Add them. If you have none, say so, and the case will tell you to collect a baseline before you start.
+  - "Gather your baseline figures first if you have them: attendance, exclusions and survey results. Add them. If you have none, say so, and the case will tell you to collect a baseline before you start."
   - Read the result. The example output in SKILL.md shows layout only. Its citations and figures come from the original author and were not checked here, so they are placeholders and must not be quoted. Check every study and figure against the original source before you put it in a bid or report.
   - "Check each study the case names against its original source before you share anything with governors, funders or inspectors. The skill leans on five: Fredrickson (2001), Durlak et al. (2011), Hattie (2009), Roffey (2012) and Seligman et al. (2009). The result ends with a Sources table. Use only claims marked Checked, and remove any line marked [SOURCE NEEDED] unless you add a source you have checked."
   - Add your own school's data to the rationale before you share it.

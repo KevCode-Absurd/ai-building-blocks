@@ -23,8 +23,8 @@ when:
 not_for:
   - There is no signed contract or priced scope yet. Take it to the commercial team first, because this review has nothing to compare against.
   - The work is a client service engagement and not construction. Use the Client scope change and decision tracker.
-  - You are checking a delay or time claim only. Use the Weekly project delay evidence assistant.
-  - You want a risk review of the contract wording for a lawyer. Use the Contract intake reviewer.
+  - You are checking a delay or time claim only. Use the Project delay test reviewer.
+  - You want a risk review of the contract wording for a lawyer. Use the Contract clause risk reviewer.
   - You want the AI to approve, price or instruct the work. It drafts, and a person with authority decides.
 
 you_give:
@@ -46,7 +46,7 @@ you_get:
   - A MISSING list, CHECKS MISSED and a short record for the next review
 
 how_to_use:
-  - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Construction change decision brief writer, Contract plain-language summary writer, Invoice totals checker, Stakeholder update writer and Action item tracker. If the decision brief writer or one of its three steps is missing, it stops and asks for it. If only the Action item tracker is missing, it finishes the review and lists any approval as open.
+  - "Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Construction change decision brief writer, Contract plain-language summary writer, Invoice totals checker, Stakeholder update writer and Action item tracker. If the decision brief writer or one of its three steps is missing, it stops and asks for it. If only the Action item tracker is missing, it finishes the review and lists any approval as open."
   - The agent can only call its pieces once they are installed. With no file access it prints the tables and the record in the chat, and the comparison with the last review then needs you to paste that record.
   - It works on any contract text you supply. It has not been tested against a particular standard form or place, and it quotes clauses only from your own contract.
   - Say if this is a first run. If not, paste your last review and its record.

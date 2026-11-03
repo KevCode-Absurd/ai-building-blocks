@@ -15,10 +15,10 @@ when:
   - You send the same reorder email to everyone and want it to fit each buyer.
   - You want to know which branch of a flow earns before you build more.
 not_for:
-  - "Your products are one-off buys, like furniture, where nobody needs a refill: use Plan a month of campaign emails that sell without discounts."
-  - "You need welcome, cart and browse emails first: use Roll out your welcome, cart and browse emails."
-  - "You want to restock your own shelves, not email buyers: use Reorder stock before you run out and track the shipment."
-  - "You sell on subscription and want to cut cancellations: use Launch a subscription and keep your subscribers."
+  - "Your products are one-off buys, like furniture, where nobody needs a refill: use Monthly campaign email and layout planner."
+  - "You need welcome, cart and browse emails first: use Welcome, cart and browse email rollout planner."
+  - "You want to restock your own shelves, not email buyers: use Stock reorder and inbound shipment planner."
+  - "You sell on subscription and want to cut cancellations: use Subscription offer and retention planner."
 output_sample:
   input:
     - Your products and how many days each one lasts

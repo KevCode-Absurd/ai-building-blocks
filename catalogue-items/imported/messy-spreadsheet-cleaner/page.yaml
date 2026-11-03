@@ -18,8 +18,8 @@ when:
   - A customer list has repeated rows that differ only by spacing or case.
   - Category names appear in three different spellings.
 not_for:
-  - "You have a database table or a file with many thousands of rows: use the data cleaner or a database tool, since this works on one Excel sheet at a time."
-  - "You need blanks filled in or odd values judged: use the data cleaner, which handles missing values and outliers."
+  - "You have a database table or a file with many thousands of rows: use the Dataset cleaner and validator or a database tool, since this works on one Excel sheet at a time."
+  - "You need blanks filled in or odd values judged: use the Dataset cleaner and validator, which handles missing values and outliers."
   - "The data is already clean and you want a summary: pair it with the data story writer after cleaning."
 you_give:
   - Your spreadsheet file (.xlsx)
@@ -30,7 +30,7 @@ you_get:
   - A cleaned copy of your sheet, with fixes in helper columns
   - Dates and numbers in one format
   - Duplicates marked, and removed only after you say yes
-  - A table of every fix: column, issue, count and fix used
+  - "A table of every fix: column, issue, count and fix used"
   - A list of columns that mix types, for you to review
 how_to_use:
   - Start a chat and add the skill. Attach your .xlsx file. Name the range or columns to clean, if you only want part of the sheet.

@@ -16,7 +16,7 @@ when:
   - You have reviews and survey answers that explain why people hesitate, but no ads that use them.
 not_for:
   - "Your store has no retargeting traffic yet: build the audience first, then come back to this."
-  - "You only need to check an ad against Meta's rules: use the Meta ads compliance checker."
+  - "You only need to check an ad against Meta's rules: use the Meta ad policy checker."
   - "You want to set the test budget for new ads, not retargeting: use the Ad test budget calculator."
 you_give:
   - Your store conversion rate

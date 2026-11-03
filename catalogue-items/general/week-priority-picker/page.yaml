@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have one urgent deadline and no list to sort: just block time for that task and start it today."
   - "You need a roadmap for a whole team: use a shared project planner or a planning meeting with your team."
-  - "You want the full version with every check: use the Weekly big-task sorter."
+  - "You want the full version with every check: use the Weekly big task sorter."
 you_give:
   - Every open task, with rough hours
   - Your real hours this week

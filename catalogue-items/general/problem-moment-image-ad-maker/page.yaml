@@ -18,8 +18,8 @@ when:
   - Another picture type can't be made honestly from your story (no note, no review, no sourced fact).
   - Your current image ads show the product on a clean background and people scroll past them.
 not_for:
-  - "Your problem shows mainly on the body: use the visible-symptom-image-ad-maker, which is built for that."
-  - "Nobody would photograph the moment: use the hand-drawn-story-image-ad-maker instead."
+  - "Your problem shows mainly on the body: use the Visible symptom image ad maker, which is built for that."
+  - "Nobody would photograph the moment: use the Hand-drawn story image ad maker instead."
   - "You have no story ad yet: write one first, or describe the problem in plain words and let this skill start from that."
 
 you_give:

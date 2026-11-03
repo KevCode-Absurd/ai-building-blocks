@@ -19,8 +19,8 @@ when:
   - A new support lead asks 'who do I escalate to?' and gets four answers.
 not_for:
   - You need to answer one upset customer now. Use the Angry customer reply writer.
-  - You are in the middle of an outage. Use Prepare a service outage communication pack.
-  - You want to clear a backlog of tickets. Use Clear your support inbox and turn fixes into help pages.
+  - You are in the middle of an outage. Use Service outage update writer.
+  - You want to clear a backlog of tickets. Use Support reply and help-page writer.
   - You want legal service levels for a contract. A lawyer must agree those. This writes your internal process.
 you_give:
   - Your support tiers and who sits in each (from your help desk or org chart)

@@ -32,7 +32,7 @@ you_get:
   - Commands to set up DiffDock and run one pair or a batch
   - A plain note on what the scores cannot show
 how_to_use:
-  - Before you start: you need an NVIDIA GPU with CUDA for the best path, plus disk space for the model downloads. The setup, Docker, pretrained docking and GNINA commands were not run when this item was reviewed, so expect to debug them.
+  - "Before you start: you need an NVIDIA GPU with CUDA for the best path, plus disk space for the model downloads. The setup, Docker, pretrained docking and GNINA commands were not run when this item was reviewed, so expect to debug them."
   - Use an AI that can run code and read files, on a computer with a GPU. Or use the DiffDock Docker image.
   - Give your AI the skill, your protein file or sequence, and your molecule.
   - Ask it to set up DiffDock v1.1.3 and run one pair or a batch. Treat the setup and docking commands as untested recipes, as noted above, and be ready to fix errors.

@@ -23,8 +23,8 @@ when:
 
 not_for:
   - "You already sell something and want to raise its price: use the Price rise readiness checker."
-  - "You want to turn your own hours into a product: use the Hours-to-assets planner."
-  - "You want narrower versions of one offer at different prices: use the Niche price ladder builder."
+  - "You want to turn your own hours into a product: use the Hourly work to product planner."
+  - "You want narrower versions of one offer at different prices: use the Niche offer pricing planner."
   - "You plan to take pre-orders or deposits and need rules on refunds or delivery dates: ask a lawyer or your local consumer agency. This skill only flags the risk."
 
 you_give:

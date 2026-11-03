@@ -22,7 +22,7 @@ not_for:
   - "You have not chosen the picture yet: pick the picture and its layout first, then come back."
   - "You want one story told across the ad: use the Story image ad writer."
   - "You want only headlines to test, with no picture: use the Ad headline writer."
-  - "Your ad makes health, gut or body claims. Check the wording against approved claims and ad rules first, and run the Meta ads compliance checker before it goes live."
+  - "Your ad makes health, gut or body claims. Check the wording against approved claims and ad rules first, and run the Meta ad policy checker before it goes live."
 
 you_give:
   - The picture itself, or a mockup if it isn't made yet (attach it; your AI can see pictures), plus who it's for and its ad type if you know it

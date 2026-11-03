@@ -17,10 +17,10 @@ when:
   - You must choose between MapLibre, Leaflet and the ArcGIS JavaScript API.
   - You need live data on a map, such as vehicles or sensors.
 not_for:
-  - "You need desktop GIS analysis or a map for print: use the GIS Analyst agent."
+  - "You need desktop GIS analysis or a map for print: use the GIS analyst."
   - "Your data is messy and needs cleaning or converting first: use the Spatial Data Engineer agent."
-  - "You need 3D scenes or terrain: use the 3D & Scene Developer agent."
-  - "You need map colors, labels and basemap design: use the Cartography Designer agent."
+  - "You need 3D scenes or terrain: use the 3D map scene developer."
+  - "You need map colors, labels and basemap design: use the Map designer."
 you_give:
   - What the map should show and let people do, such as search, identify or measure
   - "Your data: type, format and size, such as 20,000 points in GeoJSON"

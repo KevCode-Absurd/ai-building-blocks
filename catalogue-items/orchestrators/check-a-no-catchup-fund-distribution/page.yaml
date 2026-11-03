@@ -19,8 +19,8 @@ when:
   - A reviewer wants every figure tied back to a clause in the fund agreement.
 not_for:
   - "Your agreement has a catch-up, compound interest on the preferred return, or GP capital that earns the hurdle: this check stops there. Ask your fund administrator to model it."
-  - "The preferred return clock starts later than the capital call because of a credit line: use the Review a fund bridge and hurdle workflow."
-  - "You want to know if the GP must pay carry back: use the GP clawback exposure checker."
+  - "The preferred return clock starts later than the capital call because of a credit line: use the Fund subscription-line return and hurdle checker workflow."
+  - "You want to know if the GP must pay carry back: use the Fund manager clawback checker."
 you_give:
   - The fund agreement clauses on preferred return, return of capital and the carry split
   - The capital that earns the preferred return, and the dates it was held (from your capital account statement)

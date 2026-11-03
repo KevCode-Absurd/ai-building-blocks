@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have no git tags yet: do a first release by hand, so the steps have a commit range to read."
   - "You only want to check a site that is already live: use a person or a simple page check, not this release workflow."
-  - "You host on something other than Vercel: swap step 3 for a Netlify or Cloudflare publisher, or deploy by hand."
+  - "You host on something other than Vercel: swap step 3 for a Netlify or Cloudflare deploy planner, or deploy by hand."
 you_give:
   - Your project (a folder or repo with its git history and tags)
   - Your Vercel account, signed in on your computer

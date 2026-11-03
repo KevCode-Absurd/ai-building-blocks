@@ -18,9 +18,9 @@ when:
   - Your lawyer's cap table and your own do not match.
   - You hold a side letter with pro rata rights and need to know how much cash to bring.
 not_for:
-  - "Your instrument is a convertible note with interest, or has a discount: use the Check a convertible note conversion workflow."
+  - "Your instrument is a convertible note with interest, or has a discount: use the Convertible note conversion checker workflow."
   - "Your SAFE is pre-money, or has no cap: this workflow covers cap-only post-money SAFEs. Ask your lawyer."
-  - "You hold pro rata rights in several companies: use the Check staged follow-on commitments workflow."
+  - "You hold pro rata rights in several companies: use the Staged follow-on investment checker workflow."
 you_give:
   - The signed post-money SAFE, with its cap and its definition of company capitalization
   - The cash you funded and the date (from your bank record or the SAFE)

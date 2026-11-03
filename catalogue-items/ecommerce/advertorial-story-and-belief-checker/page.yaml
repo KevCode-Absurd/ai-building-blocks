@@ -19,7 +19,7 @@ when:
   - An advertorial is live but readers drop off halfway and you don't know where.
   - Your AI wrote the page and you want to check it hits every belief the buyer needs.
 not_for:
-  - "You only want a style edit of the draft: use the Advertorial draft editor."
+  - "You only want a style edit of the draft: use the Article-style ad draft editor."
   - "You have a plain sales page, not an article-style ad: ask a person who knows your buyers to review it, since this checker looks for story breaks."
   - "You need to know if your claims are true or legal: check them against real sources, or ask a compliance reviewer."
 

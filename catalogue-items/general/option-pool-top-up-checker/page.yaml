@@ -97,6 +97,7 @@ output_sample:
   prerequisites:
     - A dated cap table that separates granted options from the unissued reserve
     - An AI that can make files, if you want the workbook (optional)
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Scope and dated sources
       contains: The cap table date, the source of each figure and the term sheet wording used.

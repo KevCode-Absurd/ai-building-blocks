@@ -22,9 +22,9 @@ when:
   - A buyer says "why should I pay that?" and you need a better answer.
 
 not_for:
-  - You have no offer yet, only an idea. Use the Hidden offer finder first.
-  - You want the one sentence your ad rests on. Use the Selling proposition finder.
-  - You want a first message to a stranger. Use the Stranger first-message writer.
+  - You have no offer yet, only an idea. Use the New offer opportunity finder first.
+  - You want the one sentence your ad rests on. Use the Product promise finder.
+  - You want a first message to a stranger. Use the First outreach message writer.
   - You have neither an offer nor a customer to describe. It asks for them first and writes nothing until you give at least one.
 
 you_give:

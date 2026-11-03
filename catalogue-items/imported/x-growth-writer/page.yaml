@@ -73,6 +73,7 @@ output_sample:
   prerequisites:
     - A web search tool for the niche step, or posts pasted in by you
     - Python only if you want the optional helper scripts
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Profile audit
       contains: Your bio, pinned post and activity checked, with a fix for each gap.

@@ -23,7 +23,7 @@ when:
 not_for:
   - There is more than one investor, or preferred shares with their own terms. Use the Preferred share payout reviewer, or supply a full ownership split first.
   - You want to check a fund's carry or distribution waterfall. Use the No-catchup fund payout checker.
-  - You only need the management payout and have no sponsor cash dates. Use the Management equity hurdle checker.
+  - You only need the management payout and have no sponsor cash dates. Use the Management equity payout checker.
   - Your cash dates are not exact years apart and you need an annual IRR. This review will not quote one. Run a date-based IRR in a spreadsheet with its XIRR function.
   - You want investment advice or a price view. This checks records and arithmetic only.
 

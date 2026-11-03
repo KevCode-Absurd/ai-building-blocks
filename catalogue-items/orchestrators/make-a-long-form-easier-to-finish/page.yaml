@@ -20,7 +20,7 @@ when:
 not_for:
   - Your form has about five fields on one page. Use the Web form designer on its own.
   - You already have a finished design and only want a test plan. Use the Small usability test planner.
-  - Every field is required by law or by a contract. It can still reorder and reword, but it cannot cut fields. Use the Plain words interface rewriter for wording.
+  - Every field is required by law or by a contract. It can still reorder and reword, but it cannot cut fields. Use the Forms and instructions rewriter for wording.
   - You want clearer error messages on a form. Use the Error message rewriter.
 you_give:
   - Your current form, as a link, screenshot or list of fields

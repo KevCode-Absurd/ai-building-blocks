@@ -32,7 +32,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files.
   - Paste the skill text, or upload the skill folder.
-  - Add your post stats as a spreadsheet or pasted table. Use these column names: platform, post_id, likes, comments, shares, saves, reach, impressions, clicks, date. Say which platform they came from. Leave a column out if you do not have it.
+  - "Add your post stats as a spreadsheet or pasted table. Use these column names: platform, post_id, likes, comments, shares, saves, reach, impressions, clicks, date. Say which platform they came from. Leave a column out if you do not have it."
   - Add spend, revenue, method and window only if you have them. All four are needed for financial ROI.
   - Check the totals look right, then use the top and bottom posts to plan what to post next. The benchmark figures are rough averages with no source or date, so treat them as unsourced estimates and compare them with your own past posts. To write the next posts, use social-post-writer or social-post-planner.
 output_sample:

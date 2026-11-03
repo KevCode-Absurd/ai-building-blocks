@@ -16,7 +16,7 @@ when:
   - You need a brief for your designer that rests on numbers.
 not_for:
   - "You have no past results, such as a first launch: wait for data, or start with a plain plan for your first test ads."
-  - "You have no brand file yet: build one first with the Website brand brain builder, then come back."
+  - "You have no brand file yet: build one first with the Brand profile builder, then come back."
   - "You only want the cause of the drop: use the Ad sales drop analyst."
 you_give:
   - Your ad results export, one row per ad, for this period and the one before

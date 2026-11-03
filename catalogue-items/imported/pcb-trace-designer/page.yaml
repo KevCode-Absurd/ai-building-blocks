@@ -22,9 +22,9 @@ when:
   - You want per-unit-length values to feed a circuit model.
   - You are designing a substrate-integrated waveguide line.
 not_for:
-  - "You only need S-parameters or fields from an existing part: use the PCB signal loss analyzer, or ask an RF engineer."
+  - "You only need S-parameters or fields from an existing part: use the MATLAB PCB signal loss analyzer, or ask an RF engineer."
   - "You do not have MATLAB with the RF PCB Toolbox: use your PCB tool's built-in impedance calculator, or ask your board maker for a stackup check."
-  - "You want to set up substrate or metal materials only: use the PCB material setup helper."
+  - "You want to set up substrate or metal materials only: use the MATLAB PCB material setup helper."
 you_give:
   - Target impedance and frequency
   - Substrate and metal

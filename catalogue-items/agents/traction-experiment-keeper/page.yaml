@@ -29,8 +29,8 @@ you_get:
   - The next action and what needs approval
 how_to_use:
   - Add the agent and both companion skills (Find your SaaS growth channel and Traction experiment result reviewer) to your AI. It needs both.
-  - First run: paste your product URL and any facts you already know, such as your goal, buyer, cash and time limits.
-  - Later runs: attach the saved folder (business-profile.md, results-ledger.csv, decision-log.md) and add the new results with their dates.
+  - "First run: paste your product URL and any facts you already know, such as your goal, buyer, cash and time limits."
+  - "Later runs: attach the saved folder (business-profile.md, results-ledger.csv, decision-log.md) and add the new results with their dates."
   - Review the plan and the decision. Approve any send, spend or booking yourself.
 output_sample:
   input:

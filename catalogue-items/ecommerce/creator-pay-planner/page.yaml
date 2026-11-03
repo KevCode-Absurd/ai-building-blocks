@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You have no Meta ad cost and no paid view price to start from: run a small ad test first to get one. This skill won't guess a CPM."
-  - "You want to pay many people only for approved clips of your own footage: use the Clipper program planner."
+  - "You want to pay many people only for approved clips of your own footage: use the Paid video clipping program planner."
   - "You are sending free product with no cash fee: use the Influencer gifting planner."
   - "You want equity or a long deal with a well-known creator: use the Creator equity deal planner, and ask a lawyer."
 
@@ -37,7 +37,7 @@ you_give:
 you_get:
   - A fee with the target CPM, expected views, audience cut and cash fee, with the sum shown
   - A go, no-go or counter-offer on the creator's quote
-  - Offer terms: a flat fee, or a floor or commission for shop sales, with posts and usage rights
+  - "Offer terms: a flat fee, or a floor or commission for shop sales, with posts and usage rights"
   - What to ask for in return, such as number of posts and ad rights
   - Volume targets, a plan for posting the content again, and a check to run after posting
 

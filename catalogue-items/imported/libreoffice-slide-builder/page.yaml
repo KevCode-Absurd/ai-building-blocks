@@ -18,7 +18,7 @@ when:
   - You must send PDFs of twenty decks by tonight.
   - You repeat the same deck with new numbers each month and keep a template.
 not_for:
-  - "You want a designed, branded deck with animation: use the HTML slide deck maker or the editable slide deck builder."
+  - "You want a designed, branded deck with animation: use the HTML slide deck maker or the Editable PowerPoint deck builder."
   - "You want to edit one slide inside an existing deck: open it in LibreOffice Impress or PowerPoint and edit by hand."
   - "You need a document or a spreadsheet: use the LibreOffice document builder or the LibreOffice spreadsheet builder."
 you_give:

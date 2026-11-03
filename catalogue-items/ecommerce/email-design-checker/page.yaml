@@ -19,7 +19,7 @@ when:
   - A designer or an AI tool made the email and you want an independent check.
 not_for:
   - "You have a plain-text or order-confirmation email: send it as is, because the design rules do not fit it."
-  - "You need a new layout from scratch: use the email layout brief writer first, then check the result here."
+  - "You need a new layout from scratch: use the Email build brief writer first, then check the result here."
   - "You want the words reviewed, not the design: use the email draft reviewer."
 
 you_give:

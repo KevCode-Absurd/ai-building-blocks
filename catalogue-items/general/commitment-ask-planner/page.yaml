@@ -19,7 +19,7 @@ when:
   - You have a list of leads and can't tell which are real.
 not_for:
   - "You need to sort raw interview notes first: use the Customer conversation notes sorter, then bring the notes here."
-  - "You want to count commitments across many talks: use the Idea evidence review."
+  - "You want to count commitments across many talks: use the Idea evidence reviewer."
   - "You want to pitch hard and win a yes: this plan asks for a clear yes or no, so a plain sales script suits you better."
 
 you_give:

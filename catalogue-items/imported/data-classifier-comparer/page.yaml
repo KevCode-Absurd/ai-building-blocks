@@ -49,6 +49,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Statistics and Machine Learning Toolbox (paid licence)
     - An AI that can run MATLAB code, such as through a MATLAB connection
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Data check and cleaning
       contains: What was found in your table, such as missing values, and how it was cleaned before training.

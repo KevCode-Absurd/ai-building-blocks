@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a tool cancelled or changed. This plans only. You or the owner of the account cancels.
   - You need legal review of a contract. Ask a lawyer. The Software subscription terms checker explains terms in plain words.
-  - You sell subscriptions to customers. Use the Subscription revenue tracker or the Subscription churn audit.
+  - You sell subscriptions to customers. Use the Subscription revenue tracker or the Subscription churn auditor.
   - You are weighing one tool only. Use the Spend savings finder.
 you_give:
   - A bill export from your card, bank or accounting tool that shows software charges

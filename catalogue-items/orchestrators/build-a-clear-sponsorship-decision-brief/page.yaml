@@ -20,7 +20,7 @@ when:
 not_for:
   - "The proposal has no price yet: ask the seller for the full price first, then run this."
   - "You want to sell sponsorships to others: use the Nonprofit sponsor package planner."
-  - "You are choosing a software or service vendor: use the Preserve a procurement decision audit trail workflow."
+  - "You are choosing a software or service vendor: use the Supplier bid decision reviewer workflow."
 you_give:
   - The sponsorship proposal, with what is included and the dates (from the seller)
   - Every quoted cost, including fees and extras

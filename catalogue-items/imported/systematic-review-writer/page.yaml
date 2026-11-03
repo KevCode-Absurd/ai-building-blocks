@@ -33,7 +33,7 @@ you_get:
   - A PRISMA flow diagram
   - A themed review with verified citations
 how_to_use:
-  - Start here. Have these ready: your research question, your inclusion and exclusion rules, the databases you will use, your date range and any papers you already have.
+  - "Start here. Have these ready: your research question, your inclusion and exclusion rules, the databases you will use, your date range and any papers you already have."
   - Open an AI that can run code and reach the internet. Install the skill folder, or paste in its instructions.
   - Paste your research question and your inclusion and exclusion rules. Add your databases and date range if you have them.
   - Your AI runs the steps for you. In order, it runs search_databases.py on the records you bring back from each database, then verify_citations.py on your draft. You do not need to type these commands yourself.
@@ -42,7 +42,7 @@ how_to_use:
   - Read the citation check as a DOI and metadata check only. Open each source yourself to confirm it supports the claim.
   - Ask for a PDF only if Pandoc and XeLaTeX are installed. Schematics need a paid OpenRouter key.
   - The optional parallel-cli web search needs a Parallel account and sign-in (parallel-cli auth or a PARALLEL_API_KEY). You do not need it for the core database search.
-  - The steps follow the seven phases in the skill: plan, search, screen, extract, synthesise, verify citations, write up. Next, pull out more papers with the literature review finder, or compare two sources with the research literature comparison.
+  - "The steps follow the seven phases in the skill: plan, search, screen, extract, synthesise, verify citations, write up. Next, pull out more papers with the literature review finder, or compare two sources with the research literature comparison."
 next: [literature-review-finder, research-literature-comparison]
 output_sample:
   input:

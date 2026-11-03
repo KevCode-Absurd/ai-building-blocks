@@ -21,7 +21,7 @@ not_for:
   - You want payroll run or pay changed. This only flags. HR or your payroll provider makes changes.
   - You need tax or employee status advice. Ask your payroll provider or accountant.
   - You want one quick look at a single timesheet. Use the Payroll timesheet checker.
-  - You are sorting business expenses. Use the Prepare expenses for your bookkeeper workflow.
+  - You are sorting business expenses. Use the Bookkeeping expense matching checker workflow.
 you_give:
   - The timesheet export for the pay period
   - Approved leave for the same period

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want a quick ranked list of searches with no plan around it: use the Keyword research planner."
   - "You only need tags or a single line of keywords from a text you already have: use the Keyword list maker."
-  - "You have an Ahrefs account and want a scored list of what rivals rank for that you do not: use the Rival keyword gap finder."
+  - "You have an Ahrefs account and want a scored list of what rivals rank for that you do not: use the Competitor keyword opportunity finder."
   - "You only plan paid ads: use the keyword tool inside your ad platform."
 you_give:
   - Your topic, product or service

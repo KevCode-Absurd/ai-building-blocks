@@ -20,9 +20,9 @@ when:
   - Tests that pass or fail at random are making your reports hard to trust.
 not_for:
   - "You want the failing tests fixed or new tests written: use the Test Automation Engineer agent."
-  - "You want a review of whether a finished build matches its spec: use the Reality Checker agent."
-  - "You ran an A/B test of a store change: use the Test result trust checker."
-  - "You want to check a machine learning model's accuracy: use the Model QA Specialist agent."
+  - "You want a review of whether a finished build matches its spec: use the Release acceptance evidence reviewer."
+  - "You ran an A/B test of a store change: use the Store experiment result reviewer."
+  - "You want to check a machine learning model's accuracy: use the Machine learning model reviewer."
   - "You have only a vague 'tests are slow' feeling and no results: run the tests first, then bring the output here."
 you_give:
   - The test run output. Paste the summary, a JUnit XML file, JSON or the console log.

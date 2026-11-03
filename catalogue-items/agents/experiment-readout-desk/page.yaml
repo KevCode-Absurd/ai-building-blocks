@@ -17,7 +17,7 @@ when:
   - You want to know, before you build a test, whether you have the traffic to read it.
 not_for:
   - "Your site has too little traffic to read a test: talk to ten customers or run a simple survey instead, and use the readiness score to confirm."
-  - "You want ideas for what to test: use the Weekly product funnel watcher, which proposes the experiments this desk reads."
+  - "You want ideas for what to test: use the Product funnel steps and experiment review, which proposes the experiments this desk reads."
   - "You want a test started, stopped or shipped for you: do that in your own testing tool, because this agent never does it."
 you_give:
   - The test plan, with what changes, for whom, the rate to move, by how much and the read date

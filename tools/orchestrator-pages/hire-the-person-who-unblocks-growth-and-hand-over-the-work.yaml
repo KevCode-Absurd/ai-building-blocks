@@ -15,8 +15,8 @@ when:
   - You are about to write a job ad and cannot say what result the person must deliver.
   - You hired before, handed over too little, and ended up doing the job yourself.
 not_for:
-  - "You have already hired and only need to manage them: use the one-on-one meeting plan step on its own, or ask your AI to plan your weekly check-ins."
-  - "Your real limit is traffic, conversion or margin: fix that first with the Lead cost and friction planner, then come back to hire."
+  - "You have already hired and only need to manage them: use the One-on-one meeting planner step on its own, or ask your AI to plan your weekly check-ins."
+  - "Your real limit is traffic, conversion or margin: fix that first with the Lead generation cost planner, then come back to hire."
   - "You need to pick between candidates: write the questions and scoring with the Interview scorecard builder."
 you_give:
   - Your revenue, net margin and growth target with a time frame

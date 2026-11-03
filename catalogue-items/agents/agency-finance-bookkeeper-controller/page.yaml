@@ -22,7 +22,7 @@ not_for:
   - You need to sort a pile of transactions into categories. Use the Expense sorter.
   - You want accruals worked out in a schedule. Use the Accrual schedule drafter.
   - You need an audit, a tax return or a signed set of statements. Hand those to a qualified accountant.
-  - You only want to check bank fees. Use the Bank fee reconciliation checker.
+  - You only want to check bank fees. Use the Bank service fee checker.
 you_give:
   - Your bank and card statements for the month, as a CSV, PDF or pasted list.
   - Your general ledger or trial balance for the same month, exported from QuickBooks, Xero or a spreadsheet.

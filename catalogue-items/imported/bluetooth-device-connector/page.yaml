@@ -49,6 +49,7 @@ output_sample:
     - MATLAB, which is a paid product, on a computer with Bluetooth
     - An AI that can run MATLAB code and reach your device
     - Your BLE device switched on and advertising
+    - An AI that can run code, to use the scripts that come with this skill
   output:
     - name: Existing connection check
       contains: A check for a connected ble object, since a connected device stops advertising and cannot be scanned.

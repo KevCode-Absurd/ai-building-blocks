@@ -20,7 +20,7 @@ when:
 not_for:
   - You need a whole course or unit mapped out. Use the Course scope and sequence planner.
   - You have no lesson yet. Build one first with the Direct teaching lesson builder, then bring it back here.
-  - You only want to adapt a lesson for access needs. Use the Adapt a lesson for different access needs workflow.
+  - You only want to adapt a lesson for access needs. Use the Lesson access and activity planner workflow.
   - You only want a five-minute opener. Use the Lesson opener planner.
 you_give:
   - Your lesson plan, with the tasks, handout text and timings

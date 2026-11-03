@@ -16,7 +16,7 @@ when:
   - Teams hit their numbers and customers still complain.
 not_for:
   - "You have no numbers to track yet: start with the Customer task definition writer, then come back."
-  - "You want to clean up numbers you share with investors or the press: use the Vanity metric fixer."
+  - "You want to clean up numbers you share with investors or the press: use the Business metric quality reviewer."
   - "You are planning a one-off product launch: write a simple launch checklist with your team instead."
 you_give:
   - The numbers and reports you track now

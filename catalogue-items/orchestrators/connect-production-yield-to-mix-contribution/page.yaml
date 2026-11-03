@@ -21,7 +21,7 @@ not_for:
   - You want the best mix worked out for you. This tests a mix you choose and does not optimize.
   - You have recipes or targets but no measured batch results. Measure real batches first.
   - You have more than two products or several bottlenecks. Split the plan into pairs, or ask an analyst.
-  - You only need the cost per good kilogram. Use the Manufacturing yield cost bridge on its own.
+  - You only need the cost per good kilogram. Use the Manufacturing yield and unit cost calculator on its own.
 you_give:
   - "For each product, one measured batch: input kilograms, good output and scrap (from production logs)"
   - The batch's input cost and conversion cash, such as labor and energy (from your accounts)

@@ -18,10 +18,10 @@ when:
   - A complaint landed and you need a fair, step-by-step process.
   - You want stay interviews to keep your strongest people.
 not_for:
-  - "The complaint is about harassment, discrimination or safety: use the Workplace investigation guide and talk to an employment lawyer."
-  - "Two people are in conflict and need a talk: use the Workplace conflict mediation guide."
+  - "The complaint is about harassment, discrimination or safety: use the Workplace investigation planner and talk to an employment lawyer."
+  - "Two people are in conflict and need a talk: use the Workplace conflict mediation planner."
   - "You need the leaving checklist, handover and access removal: use the Offboarding plan builder."
-  - "You are planning to fire someone: use the Termination risk checker first."
+  - "You are planning to fire someone: use the Employee termination risk reviewer first."
 you_give:
   - A description of the exit or the complaint, with no names
   - The role and team (optional)

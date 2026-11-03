@@ -22,7 +22,7 @@ when:
   - You want a steady testing routine for Klaviyo, one test at a time.
 
 not_for:
-  - "You want to read how your last emails performed: use the Email and SMS performance reader."
+  - "You want to read how your last emails performed: use the Email and SMS results reviewer."
   - "You want to find missing flows or timing gaps: use the Email automation gaps and trigger reviewer."
   - "You need popup offers to test, ranked by cost: use the Welcome pop-up offer tester."
   - "Your flows reach only a few hundred people a month in total: a test can't finish yet, so grow the list first."

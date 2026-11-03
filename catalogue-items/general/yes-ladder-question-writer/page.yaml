@@ -20,7 +20,7 @@ when:
 not_for:
   - "The other person has already decided: talk to them directly and ask what would change their mind."
   - "The ask is high stakes or sensitive: have a plain, open talk instead of a set of questions."
-  - "A rung drew a no and you need words to calm things down: use the Disagreement calming line writer."
+  - "A rung drew a no and you need words to calm things down: use the Disagreement response writer."
 
 you_give:
   - "Your request in one line"

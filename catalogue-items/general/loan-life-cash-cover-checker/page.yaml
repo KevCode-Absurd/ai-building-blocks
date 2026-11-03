@@ -18,9 +18,9 @@ when:
   - You want to see how much a lower cash forecast cuts the cushion.
   - You are reading a loan agreement and need to apply its discount rate to a cash forecast.
 not_for:
-  - "You want to test cash against each year's repayment: use the Debt service covenant headroom checker."
+  - "You want to test cash against each year's repayment: use the Loan covenant cash coverage checker."
   - You want to value the project or the shares. The discount rate here comes from the loan agreement, not from a valuation.
-  - "You first need to work out how much cash is really available: use the Project cash available bridge."
+  - "You first need to work out how much cash is really available: use the Project cash for debt checker."
   - You need a credit decision. This skill checks one ratio. It does not approve a loan.
 you_give:
   - The cash you will have to repay the loan in each of the next three years (from your forecast and the loan agreement's definition of qualifying cash)

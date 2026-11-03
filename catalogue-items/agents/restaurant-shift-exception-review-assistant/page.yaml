@@ -21,7 +21,7 @@ not_for:
   - A food safety problem is happening now, such as a failing fridge or a guest unwell after eating. Follow your approved procedure and call your lead first. Use this agent afterwards to write it up.
   - You want one quick note for the next shift and no tracking. Use the Handover note writer.
   - You need a written procedure for a task, such as how to isolate a leaking machine. Use the Process and SOP writer. This agent only flags that the procedure is missing.
-  - You want a weekly view of who is away and who covers. Use the Weekly team coverage review assistant.
+  - You want a weekly view of who is away and who covers. Use the Team absence coverage reviewer.
 you_give:
   - The outgoing shift's notes, with the date and shift times (from the lead's notebook, messages or the end-of-night report)
   - The name of the incoming lead and of the manager who handles escalations

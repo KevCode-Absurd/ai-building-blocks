@@ -18,7 +18,7 @@ when:
   - "Readers say it dragged in the middle."
   - "You are over a word limit."
 not_for:
-  - "Your draft has several good ideas fighting each other: use the Overstuffed draft cutter to pick one main idea first."
+  - "Your draft has several good ideas fighting each other: use the Long draft editor to pick one main idea first."
   - "Your draft is already lean or needs new ideas: leave it as it is, or ask a friend or editor to read it."
   - "You want your wording or voice rewritten: use a plain editing pass, since this only deletes and shortens."
 

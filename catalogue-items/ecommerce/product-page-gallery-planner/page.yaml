@@ -21,8 +21,8 @@ not_for:
   - "You need one single product photo made: brief a photographer or designer, or use your image tool directly."
   - "You have no photos, facts or reviews yet: gather them first, because the plan marks every missing proof as a gap."
   - "You already have finished gallery images and want them checked: use the Product page image checker."
-  - "You want a quick first pass with fewer checks: use the Eight-picture product page planner."
-  - "You want the images built and numbered with alt text, not just a plan: use the Product gallery doubt review and image builder."
+  - "You want a quick first pass with fewer checks: use the Product page photo planner."
+  - "You want the images built and numbered with alt text, not just a plan: use the Product gallery image planner."
 
 you_give:
   - Product facts (name, variant, price, how it's used, ingredients or materials with amounts, size, what's in the box)

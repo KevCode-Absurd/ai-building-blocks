@@ -15,9 +15,9 @@ when:
   - A rival is named in AI answers and you cannot tell why you are not.
   - Your product pages describe the product in marketing words, with the plain facts missing.
 not_for:
-  - "You have no product pages yet: build them first, then come back. For the facts to put on them, use the Website brand brain builder."
+  - "You have no product pages yet: build them first, then come back. For the facts to put on them, use the Brand profile builder."
   - "You sell to other businesses and want lead lists: use a simple prospect list in a spreadsheet, or ask a sales person to build one."
-  - "You only want one product page rewritten: use the AI-ready product page editor on its own."
+  - "You only want one product page rewritten: use the Product page editor for AI search on its own."
 you_give:
   - Your products and collections with prices
   - The page address and text of the product pages you want rewritten

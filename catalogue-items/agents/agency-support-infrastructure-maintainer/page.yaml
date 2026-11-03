@@ -20,9 +20,9 @@ when:
   - An audit, a customer or an insurer asks how you keep your systems patched and who can get in.
   - Your hosting bill is rising and you do not know why.
 not_for:
-  - Your system is down right now. Use the Incident Response Commander agent.
-  - You want reliability goals and an error budget for a service. Use the SRE (Site Reliability Engineer) agent.
-  - You only want to cut your cloud bill. Use the FinOps Engineer agent, or the Cloud bill waste finder.
+  - Your system is down right now. Use the Incident response coordinator.
+  - You want reliability goals and an error budget for a service. Use the Site reliability engineer.
+  - You only want to cut your cloud bill. Use the Cloud cost analyst, or the AWS cost waste finder.
   - You want the code that builds your servers. Use the Terraform setup builder.
 you_give:
   - A list of what you run, such as servers, cloud services, databases and the tools around them

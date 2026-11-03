@@ -20,7 +20,7 @@ when:
 not_for:
   - Your project is still running. Hold a short mid-project check-in with your team instead.
   - It was a one-person task. Write yourself a short note on what to repeat and what to skip.
-  - You need to sort the lists people send back. Use the Review lists sorter for that step.
+  - You need to sort the lists people send back. Use the Team review theme sorter for that step.
 
 you_give:
   - The project, its dates and the people by role

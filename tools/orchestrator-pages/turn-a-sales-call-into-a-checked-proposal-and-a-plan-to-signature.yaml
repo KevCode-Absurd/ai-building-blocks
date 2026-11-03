@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only need a price quote and there was no call: write the quote yourself from your price list, or ask the buyer for a short call first."
   - "You have no call notes or transcript yet: have the call first, then come back with what was said."
-  - "The buyer named a rival and you need a plan to beat them: use the Win a deal against a named rival."
+  - "The buyer named a rival and you need a plan to beat them: use the Competitive sales deal planner."
 you_give:
   - The call transcript or your notes
   - Your price list, discount limits and standard terms

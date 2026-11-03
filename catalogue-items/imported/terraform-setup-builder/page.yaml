@@ -34,7 +34,7 @@ you_get:
   - Refactor suggestions for existing code
   - "Note: all of this is review text and code for you to read and run. Nothing is deployed for you."
 how_to_use:
-  - Gather first: all your .tf files, your cloud provider and version, the state backend you want and any security rules you must meet.
+  - "Gather first: all your .tf files, your cloud provider and version, the state backend you want and any security rules you must meet."
   - Open your AI tool and paste in this skill. Use Claude, ChatGPT or Gemini.
   - Paste your .tf files, or describe your cloud setup and name your provider.
   - "Pick one of three jobs and ask for it in words (the skill names them /terraform:review, /terraform:module and /terraform:security; in a chat, plain words work). Each gives a findings list with a fix for each item."

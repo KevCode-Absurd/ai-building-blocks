@@ -18,9 +18,9 @@ when:
   - You need a price-to-book figure that follows from return on equity, growth and the return shareholders require.
   - A reviewer asks where each equity movement came from.
 not_for:
-  - You value the company on its cash flows. Use the Link operating growth to terminal reinvestment workflow or the Challenge terminal value with excess returns workflow.
-  - You only need book value per share for one year. Use the Book value per share roll-forward.
-  - The company is a property group where reported net asset value and book value differ. Use the Reconcile property NAV and book value workflow.
+  - You value the company on its cash flows. Use the Growth and reinvestment spreadsheet modeller workflow or the Long-term value assumption checker workflow.
+  - You only need book value per share for one year. Use the Book value per share calculator.
+  - The company is a property group where reported net asset value and book value differ. Use the Property net asset value and book-value checker workflow.
   - You want a buy or sell call or a target price. This builds a scenario for a person to review.
 you_give:
   - Common equity at the start and end of each period, for parent shareholders only (from the balance sheet)

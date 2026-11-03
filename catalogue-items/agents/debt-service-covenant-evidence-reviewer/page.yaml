@@ -23,7 +23,7 @@ when:
 not_for:
   - You have no signed covenant wording, only a term sheet or an email. It marks the definition MISSING and stops, because a rule from memory is not a rule.
   - You want to know whether you are in breach in law, or whether a waiver applies. A lawyer or your lender decides that. This shows the numbers only.
-  - You only want one period's headroom. Use the Debt service covenant headroom checker.
+  - You only want one period's headroom. Use the Loan covenant cash coverage checker.
   - You want to compare against a typical ratio for your industry. No market benchmark becomes the rule here, only your contract.
   - You need next year's cash forecast. It tests the periods you give it and does not predict.
 
@@ -65,7 +65,7 @@ you_give:
 
 you_get:
   - What changed since the last review, period by period
-  - A debt service test table: qualifying cash, required cash, headroom and ratio for each period, with the lowest headroom marked
+  - "A debt service test table: qualifying cash, required cash, headroom and ratio for each period, with the lowest headroom marked"
   - A fixed charge coverage bridge for the same periods, tied back to the first test's interest, principal and rent
   - Any period below the line shown as it is, and any difference between the two tests explained
   - A short record to paste into the next review, plus MISSING lines and any checks that could not run
@@ -74,7 +74,7 @@ how_to_use:
   - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Review contractual debt service cash tests workflow and the Debt service covenant headroom checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
   - Say whether this is the first run. If not, paste last time's record. Then attach or paste the covenant wording, the cash bridge for each period and the payment schedule.
   - Read "changed since last review" first. Check the changed period's cash against your accounts.
-  - Check one period by hand: required cash is debt service times the minimum, and headroom is cash less required cash. Check that the two tests use their own definitions.
+  - "Check one period by hand: required cash is debt service times the minimum, and headroom is cash less required cash. Check that the two tests use their own definitions."
   - Fix every MISSING line. Run it again whenever a cash figure, a schedule or a signed definition changes. Installing it sets up no schedule.
 
 how_it_works:

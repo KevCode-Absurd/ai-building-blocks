@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want an ad without a painted look, or a photo-style product video: use a standard video ad skill instead."
   - "You want cut-paper layers with crisp edges, not soft paint: use the paper craft video clip prompt writer."
-  - "You have no script yet: write one first with the Video ad script writer from customer quotes."
+  - "You have no script yet: write one first with the Customer quote video ad writer."
   - "You want a finished video file: this writes prompts and an edit list, so use your own image and video tools to make the clips."
 
 you_give:
@@ -36,7 +36,7 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Know the cost first: writing prompts is free, but making pictures and clips is paid per use and needs a connected tool or API key before stage 5.
+  - "Know the cost first: writing prompts is free, but making pictures and clips is paid per use and needs a connected tool or API key before stage 5."
   - Paste your watercolor script and attach the product photos. Type out the label text.
   - Approve the avatar card, then make the reference images and pick one.
   - Make the sheets and approve them with the lock lines, then approve the storyboard.

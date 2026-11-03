@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no conversion data yet: start with Maximize Clicks and fix your traffic quality first, since this skill needs results to read."
   - "You want to find your break-even ROAS first: work it out from gross margin (100 divided by margin %), then bring it here."
-  - "You want to decide whether to keep or change a campaign after a test: use the Campaign keep-or-change checker."
+  - "You want to decide whether to keep or change a campaign after a test: use the Ad change decision checker."
 
 you_give:
   - Each campaign's type, bid strategy, spend, conversions and conversion value for the last 30 days

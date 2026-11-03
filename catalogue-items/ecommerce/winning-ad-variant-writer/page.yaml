@@ -18,9 +18,9 @@ when:
   - Your winner is tiring and you need fresh versions that keep its voice.
   - Some ads you rated highly got no spend and you want to give them a fair run.
 not_for:
-  - "You have no proven ad yet, or too little spend to test: write one first with the Ad first line writer and scorer."
-  - "You want new angles, not the same ad for new groups: use the Ad angle multiplier."
-  - "You need to check an ad against Meta's rules before it runs: use the Meta ads compliance checker."
+  - "You have no proven ad yet, or too little spend to test: write one first with the Ad opening writer and reviewer."
+  - "You want new angles, not the same ad for new groups: use the Ad angle writer."
+  - "You need to check an ad against Meta's rules before it runs: use the Meta ad policy checker."
 
 you_give:
   - Your winning ad, with its copy and image

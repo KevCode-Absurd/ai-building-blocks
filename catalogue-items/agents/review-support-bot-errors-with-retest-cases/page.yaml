@@ -21,8 +21,8 @@ not_for:
   - You want the bot or your help pages edited. This reviewer only proposes; a person makes each change.
   - Your chats still carry names, emails or order numbers. Remove them first. It works on redacted copies only.
   - You have no approved help text to check against. It can sort topics and flag risks, but it cannot call an answer wrong.
-  - You want to find the questions your help pages miss. Use the Monthly help centre keeper.
-  - You want one transcript scored once. Use the Support chatbot conversation review.
+  - You want to find the questions your help pages miss. Use the Support help article writer.
+  - You want one transcript scored once. Use the Support chatbot conversation reviewer.
 you_give:
   - Redacted chat logs with an ID, a date and every turn of each chat (export from your bot tool)
   - The approved help pages, policies and escalation rules the bot should follow, each with its effective date

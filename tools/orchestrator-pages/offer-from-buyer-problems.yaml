@@ -15,7 +15,7 @@ when:
   - You have many ideas for what to include and cannot tell which to keep.
   - You are about to set or raise a price and want it tied to the value.
 not_for:
-  - "You have no buyer data yet: run the Website brand brain builder first, then come back."
+  - "You have no buyer data yet: run the Brand profile builder first, then come back."
   - "You only want a bonus package on an offer you already have: use the Offer bonus package builder."
   - "You only need to price a one-off discount: use the pricing planner step alone, or ask a person who knows your margins."
 you_give:

@@ -19,8 +19,8 @@ when:
   - Your readme gets visitors but few of them try the project.
 not_for:
   - "You want to promote a paid app or a software company: use a normal marketing plan or a person who does marketing."
-  - "You only need the launch-day post or tweet written: use the Social post writer, or the Developer Advocate agent for talks and outreach."
-  - "Your readme is the only problem: use the GitHub README improver."
+  - "You only need the launch-day post or tweet written: use the Social post writer, or the Developer outreach planner for talks and outreach."
+  - "Your readme is the only problem: use the GitHub README reviewer."
   - "You have not built anything yet: finish a first working version before you plan any promotion."
   - "You need help writing code, fixing bugs or reviewing pull requests: use a coding assistant or a maintainer you trust."
 you_give:

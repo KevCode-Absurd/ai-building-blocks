@@ -18,7 +18,7 @@ when:
   - Interest on the note converts into shares and you need the converting balance.
   - A lawyer's cap table shows a share count you want to tie out.
 not_for:
-  - Your investment is a SAFE, which has no interest and no maturity. Use the Check a SAFE into priced financing workflow.
+  - Your investment is a SAFE, which has no interest and no maturity. Use the SAFE ownership and funding checker workflow.
   - The note has no cap, compound interest, interest paid in cash, or other terms. This is built for simple interest and a lower-of cap and discount clause.
   - You want the whole cap table after the round, with the option pool. This works out one note's shares only.
   - You want a legal view on what the note says. Ask the issuer's counsel.

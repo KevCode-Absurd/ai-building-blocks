@@ -35,8 +35,8 @@ when:
   - You must clean data you cannot send to a cloud service, and want fix rules you can run on your own machine.
 not_for:
   - "You only want to know what is wrong with a file, not to fix it: use the Dataset profiler or the Data quality scorecard maker."
-  - "You want a file cleaned over several passes until it passes your checks: use the Data file clean-up loop."
-  - "You need to design a data pipeline, warehouse or table layout: use the Data Engineer agent."
+  - "You want a file cleaned over several passes until it passes your checks: use the Spreadsheet and CSV cleaner."
+  - "You need to design a data pipeline, warehouse or table layout: use the Data pipeline designer."
   - "You want to apply fixes straight to live data. Run every rule on a copy first, and keep a backup."
 you_give:
   - What the table is, and what the column in question should hold

@@ -37,7 +37,7 @@ how_to_use:
   - Add your budget if you have one (optional). Check current prices on the Zapier or Make pricing page before you decide. They change.
   - Read the tool choice and the trigger, filter and action layout.
   - Build the flow in Zapier or Make. Test it on real sample data before you turn it on.
-  - Next: after the plan, use the test checklist in the plan to run it on sample data, then turn it on. If the flow outgrows Zapier or Make, plan it again with the n8n workflow designer.
+  - "Next: after the plan, use the test checklist in the plan to run it on sample data, then turn it on. If the flow outgrows Zapier or Make, plan it again with the n8n workflow designer."
   - If the first test passes, watch the first few real runs and read any errors in the platform's run history. If it grows or slows, run the switch-to-code check again.
 next: [n8n-workflow-designer]
 output_sample:

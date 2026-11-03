@@ -18,7 +18,7 @@ when:
 not_for:
   - You have one small app or a plain create, read, update, delete tool. Skip this and keep the code simple.
   - You want to design the layers of your code, such as where the database and screens sit. Use the Codebase architecture reviewer instead.
-  - You want to cut complexity inside one module or class. Use the Simple software designer instead.
+  - You want to cut complexity inside one module or class. Use the Software complexity reviewer instead.
 you_give:
   - A description of your business rules and processes
   - The words your team uses for key things
@@ -38,7 +38,7 @@ how_to_use:
   - Say which part of the business matters most, if you know.
   - Read the glossary first and check each term with someone from the business.
   - Use the area map to plan where to split your system. Then fix the checks that failed.
-  - A complete result has these parts in order: the glossary, the business areas and their borders, the data groups, the core area, then the score out of 10 with the checks that failed.
+  - "A complete result has these parts in order: the glossary, the business areas and their borders, the data groups, the core area, then the score out of 10 with the checks that failed."
 output_sample:
   input:
     - Your business rules and processes, in plain words

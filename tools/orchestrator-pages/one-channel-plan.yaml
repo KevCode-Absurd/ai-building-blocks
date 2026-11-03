@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your product already sells well through a proven channel: keep running that channel, and skip this plan."
   - "You only need to pick a route and not plan it: use the Sales route picker on its own."
-  - "You want to test whether the idea itself can own its market: use the Business power tester."
+  - "You want to test whether the idea itself can own its market: use the Competitive advantage tester."
 
 you_give:
   - What you sell, the price and who buys it

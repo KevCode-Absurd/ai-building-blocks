@@ -18,7 +18,7 @@ when:
   - Your agreement caps the cure, and you want to know whether the cap is enough.
   - A draft compliance certificate lets the cure add EBITDA and also cut debt, and you want to check it.
 not_for:
-  - You need to check a requested EBITDA addback first. Use the Deal EBITDA addback checker.
+  - You need to check a requested EBITDA addback first. Use the Deal earnings adjustment checker.
   - Your agreement cures with a cash paydown or a liquidity top-up. Those work differently. This skill covers an EBITDA-only cure.
   - You want to know whether a default or waiver applies in law. Ask a lawyer and read the signed agreement. A scenario cannot say.
 you_give:

@@ -23,8 +23,8 @@ when:
 
 not_for:
   - "The purchase is small or everyday, such as groceries or a repair you must make. A review takes longer than the choice is worth."
-  - "You want a short copy-and-paste version with no questions: use the Big purchase pause check."
-  - "You want to know if your savings can survive a bad year: use the Room for error plan checker."
+  - "You want a short copy-and-paste version with no questions: use the Big purchase reviewer."
+  - "You want to know if your savings can survive a bad year: use the Business plan risk buffer reviewer."
   - "You want to be told to buy or not to buy. This shows the drivers and the costs. The choice stays yours."
 
 you_give:

@@ -16,8 +16,8 @@ when:
   - You want to test a few wrappers for the same offer.
 not_for:
   - "Your offer has no fixed time or result: use a plain product name, or ask a customer how they would describe it."
-  - "You need to find or shape the offer itself: use the Hidden offer finder first, then come back for the name."
-  - "You want ad copy, not a name: use the Candid line writer once the name is chosen."
+  - "You need to find or shape the offer itself: use the New offer opportunity finder first, then come back for the name."
+  - "You want ad copy, not a name: use the Product weakness line writer once the name is chosen."
   - "You want a quick first pass with fewer checks: use the Offer name batch writer."
 you_give:
   - "Your offer: what is in it and the result"

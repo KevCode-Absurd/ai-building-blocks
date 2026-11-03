@@ -34,9 +34,9 @@ when:
   - Your editor and your preview must stay in step, and edits keep wiping comments or the cursor.
   - Long sections split across pages and you want rules to stop it.
 not_for:
-  - You want one PDF from text or a sheet with no code. Use the PDF maker and reader or the Document file generator.
-  - Your problem is blank pages or blurry text in a web-page PDF. Use the HTML to PDF layout architect agent.
-  - You need a Word, slide or Excel file. Use the Document generator agent for PDF, Word, slides and Excel.
+  - You want one PDF from text or a sheet with no code. Use the PDF maker and reader or the JSON document file generator.
+  - Your problem is blank pages or blurry text in a web-page PDF. Use the PDF layout designer.
+  - You need a Word, slide or Excel file. Use the Document generation planner.
   - You need a final contract, medical or financial report. Have a qualified person sign it off, even if this agent plans the layout.
 you_give:
   - The data file, or a sample of it, in YAML, JSON or Markdown front matter

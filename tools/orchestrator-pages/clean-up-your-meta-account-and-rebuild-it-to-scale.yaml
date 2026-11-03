@@ -16,7 +16,7 @@ when:
   - You want to raise spend but do not trust the structure under it.
 not_for:
   - "Your account is new and has little spend: start with one testing campaign and add more once sales come in."
-  - "You want to check ads against Meta's rules before you publish: use the Meta ads compliance checker."
+  - "You want to check ads against Meta's rules before you publish: use the Meta ad policy checker."
   - "You only want to set a test budget for new ads: use the Ad test budget calculator."
 you_give:
   - Your campaign list with spend, results and attribution settings

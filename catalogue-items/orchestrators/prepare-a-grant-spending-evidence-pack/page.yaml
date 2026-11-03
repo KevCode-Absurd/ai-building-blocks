@@ -79,6 +79,6 @@ terms:
     meaning: The checked information and file passed from one step to the next.
 
 not_for:
-  - "You want to hand over a recurring process, not report on grant spending: use Make a recurring process easier to hand over."
+  - "You want to hand over a recurring process, not report on grant spending: use Process handover guide writer."
   - "You need an audit opinion or the funder's sign-off on the spending: ask your auditor or grant officer, because this prepares the table and marks the gaps."
   - "You have no transaction records for the reporting period: pull them from your accounts first, because the table cannot be reconciled without them."

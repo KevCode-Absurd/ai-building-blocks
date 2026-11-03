@@ -18,7 +18,7 @@ when:
   - You need to label recordings for machine learning.
   - You have a folder of signal files and need one clean dataset.
 not_for:
-  - "You need to design a filter for a set band, a notch or a custom FIR or IIR: use the digital filter designer."
+  - "You need to design a filter for a set band, a notch or a custom FIR or IIR: use the MATLAB signal filter designer."
   - "You want features from a clean signal, such as RMS or spectral values: use the signal feature extractor."
   - "You want to classify raw .wav audio and have Audio Toolbox: use audioDatastore in MATLAB instead."
 you_give:

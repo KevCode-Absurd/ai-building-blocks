@@ -19,7 +19,7 @@ when:
 not_for:
   - "You have no money, lease or guarantee at stake yet: run a simple test with a few real customers first."
   - "You only want to check one number, such as break-even in a bad year: use the Bad-year break-even tester."
-  - "You want to know if the idea suits AI rather than whether the business works: use the AI-fit problem checker."
+  - "You want to know if the idea suits AI rather than whether the business works: use the AI suitability reviewer."
 you_give:
   - The business plan, however rough
   - "The numbers behind it: costs, prices, how many customers and when"

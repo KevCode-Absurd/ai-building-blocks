@@ -37,7 +37,7 @@ you_get:
   - A plain summary of what the numbers say
 how_to_use:
   - Check that you have MATLAB R2026a or later with the Bluetooth Toolbox. Both are paid MathWorks products.
-  - Open an AI that can run MATLAB code, or one that writes the script for you to run yourself. Paste this skill. The reference files in the skill folder hold the full pattern for each Bluetooth type, so paste them too, or ask your AI to read them. Also add the Wireless network simulator item, which this skill leans on for the general setup. If you do not, your AI follows the short order written in this skill: start the simulator, set traffic, set movement, add statistics, add the devices, run.
+  - "Open an AI that can run MATLAB code, or one that writes the script for you to run yourself. Paste this skill. The reference files in the skill folder hold the full pattern for each Bluetooth type, so paste them too, or ask your AI to read them. Also add the Wireless network simulator item, which this skill leans on for the general setup. If you do not, your AI follows the short order written in this skill: start the simulator, set traffic, set movement, add statistics, add the devices, run."
   - For a first run, pick the simplest case, one Low Energy data link between a central and one peripheral. Try LE Audio, classic or mixed setups after that works.
   - Describe your devices, links and traffic. Give the data rate in kilobits per second and say how long to run.
   - Read the setup it proposes before it runs. Check the device types, the number of links and the traffic.

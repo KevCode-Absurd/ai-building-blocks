@@ -18,25 +18,25 @@ explain: |-
 when:
   - You're looking at something suspicious right now, a strange login, a locked file, an alert, and need to know how serious it is and what to do first.
   - You contained an incident and need a plan for the investigation and recovery that follows.
-  - You need to write the post-mortem: the timeline, the root cause, and the fixes that would have stopped it.
+  - "You need to write the post-mortem: the timeline, the root cause, and the fixes that would have stopped it."
   - You want a severity framework and a response runbook in place before your next incident, not during it.
 not_for:
   - This is a live, ongoing breach with data actively leaving right now. Call your incident response retainer and legal counsel immediately; use this agent's severity call and evidence list while you wait for them, not instead of them.
   - You want a security design reviewed before anything happened. Use the Security Architect agent.
-  - You need day-to-day alert triage, not a structured incident. Use the Security incident triager.
+  - You need day-to-day alert triage, not a structured incident. Use the Security incident response planner.
 you_give:
-  - What you're observing: the alert, the symptom, or what someone reported, in your own words.
+  - "What you're observing: the alert, the symptom, or what someone reported, in your own words."
   - What systems, accounts or data might be affected, as far as you know.
   - Whether the activity is still happening now, or already stopped.
   - Any logs, alerts or screenshots you have (optional, but they sharpen the severity call).
 you_get:
   - A severity classification (SEV1 to SEV4) with the reasoning behind it.
-  - An evidence list: what to preserve right now, before you touch anything else.
+  - "An evidence list: what to preserve right now, before you touch anything else."
   - A containment plan that stops the spread without destroying what you'll need to investigate.
   - An investigation and recovery plan in order, plus a post-mortem outline once it's over.
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
-  - Describe what you're seeing in plain words: what happened, what system or account, whether it's still happening.
+  - "Describe what you're seeing in plain words: what happened, what system or account, whether it's still happening."
   - Attach any logs, alerts or screenshots you have.
   - Say "Classify this and tell me what to preserve before I do anything else."
   - If it's SEV1 or SEV2, call your incident response retainer or legal counsel now. Use the plan while you wait, not instead of them.

@@ -22,7 +22,7 @@ when:
 not_for:
   - The company is unlisted or foreign. The Indian sources and rules do not fit, so use a general valuation with a professional.
   - You want a quick range from peer multiples and past deals. Use the valuation method comparer or the company fair value modeler.
-  - You want to check a model you already have for unit and year-label errors. Use the India modeling rules checker.
+  - You want to check a model you already have for unit and year-label errors. Use the India financial model checker.
   - You want a buy or sell call. This is a research model, not investment advice.
 you_give:
   - The company name or NSE or BSE ticker

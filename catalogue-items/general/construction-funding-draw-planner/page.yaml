@@ -19,8 +19,8 @@ when:
   - You suspect part of the cost has no funding behind it and want it listed.
 not_for:
   - You need the lender to approve a draw. Only the lender or its monitor can do that.
-  - You want interest during construction added. Use the Construction interest schedule builder.
-  - You want to know whether the money left covers the cost to finish. Use the Completion funding gap checker, or run the Reconcile construction draws and completion funding workflow.
+  - You want interest during construction added. Use the Construction loan interest calculator.
+  - You want to know whether the money left covers the cost to finish. Use the Project completion funding checker, or run the Construction funding and interest checker workflow.
   - Your contract funds debt first or splits each cost by percent. This skill covers equity first only.
 you_give:
   - Certified eligible construction costs for three periods, with the currency and units (from the cost reports your certifier signed)

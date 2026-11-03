@@ -20,8 +20,8 @@ when:
   - You want to decide when to pause new features and fix stability, and need a rule that is not a gut call.
   - A big launch is coming and you want to know what could fail and how you would recover.
 not_for:
-  - Your service is down right now. Use the Incident Response Commander agent.
-  - You want only targets and an error budget for one service. Use the Reliability target setter.
+  - Your service is down right now. Use the Incident response coordinator.
+  - You want only targets and an error budget for one service. Use the Service reliability target planner.
   - You run a small site and want simple uptime pings and an on-call plan. Use the Uptime and alert setup planner.
 you_give:
   - The service name and what users do with it, such as logging in, paying or loading a page

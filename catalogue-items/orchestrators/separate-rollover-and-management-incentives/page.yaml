@@ -21,7 +21,7 @@ not_for:
   - There is no rollover and no management award. Use the Deal funding gap checker on its own.
   - The seller and the sponsor buy different share classes. Step 1 will not give an ownership figure.
   - You want deal returns or an exit model. This checks one closing and one payout case.
-  - You want to check a locked-box price or seller closing cash. Use Reconcile a locked-box closing price or Reconcile seller closing cash.
+  - You want to check a locked-box price or seller closing cash. Use Locked-box deal price checker or Seller closing proceeds and retained cash checker.
 you_give:
   - Seller proceeds before rollover and the rollover share (from the purchase agreement or term sheet)
   - Proof that seller and sponsor buy the same share class at the same price

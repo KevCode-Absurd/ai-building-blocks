@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to bring back people who already visited your site: use the Google remarketing campaign builder."
   - "You sell an impulse item nobody searches for: this plan needs real search demand, so start with ads on social instead."
-  - "You want only ad copy checked for policy: use the Meta ads compliance checker for Meta ads, or read Google's ad policy for Search."
+  - "You want only ad copy checked for policy: use the Meta ad policy checker for Meta ads, or read Google's ad policy for Search."
 
 you_give:
   - Your product and the problem it solves

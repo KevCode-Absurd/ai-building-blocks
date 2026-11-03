@@ -18,9 +18,9 @@ when:
   - Adjusted EPS uses a different share count from reported EPS and you want them on the same one.
   - A reviewer wants proof that total comprehensive income is the same before and after the transfer.
 not_for:
-  - "You only want reported basic and diluted EPS: use Reconcile basic and diluted issuer EPS."
-  - "You are updating a whole model after a new filing: use Prepare a filing-based earnings model update."
-  - "Your OCI item is a pension remeasurement, which is not moved to profit: use Separate pension cost funding and remeasurement."
+  - "You only want reported basic and diluted EPS: use Basic and diluted earnings per share checker."
+  - "You are updating a whole model after a new filing: use Company filing earnings workbook updater."
+  - "Your OCI item is a pension remeasurement, which is not moved to profit: use Pension funding, expense and remeasurement checker."
 you_give:
   - Reported profit for the ordinary shareholders, from the income statement
   - Amortization of purchased intangibles and the tax benefit recognized on it, from the notes or the company's reconciliation

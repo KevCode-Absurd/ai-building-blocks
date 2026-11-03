@@ -23,10 +23,10 @@ you_get:
   - Current retail prices with every assumption shown (list prices, not your bill)
   - Savings tied to named resources, each with its risk, and gaps rated high, medium or low
 not_for:
-  - "Your setup runs on AWS, not Azure: use Review AWS cost and resilience."
+  - "Your setup runs on AWS, not Azure: use AWS cost and resilience reviewer."
   - "You want a new Azure design from scratch: use the Azure architecture designer."
   - "A deploy is failing or an Azure service is down: use the Azure service health investigator."
-  - "You only want to check that your deploy will pass: use the Bicep deployment preflight checker or Check Azure access before deploy."
+  - "You only want to check that your deploy will pass: use the Bicep deployment preflight checker or Azure deployment access reviewer."
 output_sample:
   input:
     - The name of your Azure resource group, or a list of your Azure resources

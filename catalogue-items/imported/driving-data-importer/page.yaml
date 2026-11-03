@@ -38,7 +38,7 @@ how_to_use:
   - Point it to your recording folder and say which dataset type it is. Check first whether the recording comes with annotations (labelled boxes or tracks for other cars and people), which short clips often do and long drives often do not. If they exist it uses them directly. If not, it has to build actor tracks from the lidar, which takes longer.
   - Add calibration files and sensor mounting details if you have them.
   - If your annotations or timestamps are laid out in a way the skill cannot read, it should ask you how, not guess. Tell it where the timestamps are kept.
-  - Check the data summary it prints before you go on: dataset and recording name, duration, each sensor with its sample count and rate, whether annotations exist, and which calibration is available. Fix any missing sensor or wrong frame.
+  - "Check the data summary it prints before you go on: dataset and recording name, duration, each sensor with its sample count and rate, whether annotations exist, and which calibration is available. Fix any missing sensor or wrong frame."
   - Ask it to sync, trim or fix time offsets, then save the result for scenario building. It saves the wrapped objects to a file such as sandbox/<dataset>_wrapped.mat. Open that file in MATLAB to check it loads.
 output_sample:
   input:

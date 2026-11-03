@@ -16,8 +16,8 @@ when:
   - The same task has carried for a week and you keep rolling it forward.
   - You want one fixed end-of-day routine instead of a new planning app.
 not_for:
-  - You want to close a whole week and plan the next one. Use the Weekly review keeper.
-  - You only want a brief of today's meetings and open tasks. Use the Executive daily briefing writer.
+  - You want to close a whole week and plan the next one. Use the Weekly task focus planner.
+  - You only want a brief of today's meetings and open tasks. Use the Daily executive brief writer.
   - You have no task list at all. It can't close a day it can't see, so write down what you did and what is left first.
   - You want it to move meetings, decline invites or message people. It only proposes, and you make each change.
 you_give:

@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You have feedback to give someone else: use the feedback conversation planner, or the hard feedback message writer for a tough message."
-  - "You want to thank someone, not ask for anything: use the honest appreciation note writer."
+  - "You want to thank someone, not ask for anything: use the Honest thank-you note writer."
   - "You need an anonymous survey, a formal review or an exit interview. This plans one face-to-face ask between two people."
 
 you_give:

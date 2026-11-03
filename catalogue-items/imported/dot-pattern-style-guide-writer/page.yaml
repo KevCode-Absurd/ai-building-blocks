@@ -18,7 +18,7 @@ when:
   - You need a design file that developers can follow, with pattern sizes and palette limits.
   - You want an accessible rule set for a stylised interface.
 not_for:
-  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system reviewer to check it."
   - "You want a clean, flat or corporate look: use the Minimal style guide writer."
   - "You want vintage type and bold colour pairs, not dot patterns: use the Retro throwback style guide writer."
   - "You want a two-colour print look on warm paper: use the Risograph print style guide writer."

@@ -20,9 +20,9 @@ when:
   - An auditor or client wants to trace a release back to the tickets behind it.
 not_for:
   - You want to change Jira itself, such as statuses, permissions or boards. Ask your Jira admin.
-  - You want rules for how a whole team should use Git. Use the Git workflow agent.
-  - You want the code in a pull request checked for bugs. Use the Code Reviewer agent or the Pull request reviewer.
-  - You want to plan a release and write its changelog. Use the Release manager.
+  - You want rules for how a whole team should use Git. Use the Git workflow planner.
+  - You want the code in a pull request checked for bugs. Use the Code Reviewer agent or the Pull request review tracker.
+  - You want to plan a release and write its changelog. Use the Software release verification coordinator.
 you_give:
   - The Jira ticket ID, exactly as it appears, such as JIRA-214
   - What you changed or plan to change, in a few lines

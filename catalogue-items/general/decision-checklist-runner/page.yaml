@@ -16,7 +16,7 @@ when:
   - You want a written record of why you chose, to judge later.
 not_for:
   - "You have no written checklist yet: build one first with the Decision checklist builder."
-  - "Your checklist is out of date or has vague items: fix it with the Checklist upkeep planner."
+  - "Your checklist is out of date or has vague items: fix it with the Checklist review planner."
   - "The choice is routine, with no deadline and little at stake: just decide, or ask a friend."
 you_give:
   - Your checklist, or the output of "Decision checklist builder"

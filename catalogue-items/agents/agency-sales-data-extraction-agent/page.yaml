@@ -34,8 +34,8 @@ when:
   - You want a record of what was read, what was skipped and why, before you build a report from it.
   - A report is wrong, and you need to trace each number back to its file and sheet.
 not_for:
-  - "You already have one clean table and want a report by territory and rep: use the Sales data consolidation agent."
-  - "You want to review deal health or forecast a quarter from a CRM export: use the Sales pipeline health and forecast agent."
+  - "You already have one clean table and want a report by territory and rep: use the Sales data consolidation planner."
+  - "You want to review deal health or forecast a quarter from a CRM export: use the Sales pipeline analyst."
   - "You want an AI to fill in a CRM record from a call note: use the CRM activity logger."
   - "You need a script that watches a folder and writes to a database. Ask the AI for code, then have a developer run and check it."
 you_give:

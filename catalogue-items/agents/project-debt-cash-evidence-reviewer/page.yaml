@@ -21,9 +21,9 @@ when:
   - You want to see how much a project can repay each year at a target cover.
 
 not_for:
-  - You need to test a signed covenant, such as minimum cash cover in each period. Use the Debt service covenant evidence reviewer.
-  - Your project earns from road tolls or traffic and you need a traffic scenario. Use the Connect toll cash to debt repayment workflow.
-  - You need the reserve account and who gets paid first. Use the Project reserve evidence reviewer.
+  - You need to test a signed covenant, such as minimum cash cover in each period. Use the Loan covenant cash cover reviewer.
+  - Your project earns from road tolls or traffic and you need a traffic scenario. Use the Toll road debt repayment modeller workflow.
+  - You need the reserve account and who gets paid first. Use the Project debt reserve and payment reviewer.
   - You have no signed loan terms. The rate and loan-life rate stop and show MISSING, because a guessed rate changes every number.
 
 you_give:

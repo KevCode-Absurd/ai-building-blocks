@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to build brand awareness or run ads outside Meta: this plan is built for Meta ad sets, so use a plan made for that channel."
   - "You have fewer than about 20 real reviews or survey answers: collect more buyer words first, or ask a few recent buyers why they bought."
-  - "You only need one new ad written: write it yourself, or use the Image ad maker from customer quotes or the Video ad script writer from customer quotes."
+  - "You only need one new ad written: write it yourself, or use the Image ad maker from customer quotes or the Customer quote video ad writer."
 
 you_give:
   - Your product facts and price

@@ -24,8 +24,8 @@ when:
 not_for:
   - "You must tell someone they are being let go or have broken a rule: use the layoff plan writer for cuts, and HR or a lawyer for discipline or legal disputes."
   - "You want to give feedback on someone's work or behaviour, not decline a request: use the hard feedback message writer."
-  - "You want a quick one-paste version with no setup: use the word-for-word no writer. This skill adds the true-reason test and the fairness check."
-  - "You are too angry or hurt to write calmly: start with the Anger pause and repair planner."
+  - "You want a quick one-paste version with no setup: use the Polite refusal writer. This skill adds the true-reason test and the fairness check."
+  - "You are too angry or hurt to write calmly: start with the Difficult conversation repair planner."
 
 you_give:
   - "The request, who made it and when"

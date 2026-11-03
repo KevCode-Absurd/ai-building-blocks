@@ -16,9 +16,9 @@ when:
   - You track busyness instead of results.
   - You are a new manager and want a proven routine.
 not_for:
-  - "You have no direct reports: a manager routine will not fit. Use the Week plan from task list maker for your own tasks."
-  - "You want a system for the whole company: use the Company operating system setter, not this one."
-  - "You want to boost your team's drive and motivation: use the Motivation designer, and talk to each person about what they want."
+  - "You have no direct reports: a manager routine will not fit. Use the Weekly task planner for your own tasks."
+  - "You want a system for the whole company: use the Team routines and ownership planner, not this one."
+  - "You want to boost your team's drive and motivation: use the Team and product motivation planner, and talk to each person about what they want."
 you_give:
   - Your role and team size (how many people report to you)
   - Your calendar for the last 4 weeks, pasted as text, with each meeting's name, length and who attends

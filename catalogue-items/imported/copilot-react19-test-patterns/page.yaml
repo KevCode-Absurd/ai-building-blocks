@@ -18,7 +18,7 @@ when:
   - A spy assertion with toHaveBeenCalledTimes fails after the upgrade.
   - Tests show a "not wrapped in act" warning.
 not_for:
-  - "Your tests still use Enzyme: use the Enzyme test migration helper first, since Enzyme has no React 18 adapter."
+  - "Your tests still use Enzyme: use the Enzyme to React Testing Library migrator first, since Enzyme has no React 18 adapter."
   - "Your app code, not your tests, fails on React 19: use the React 19 source migration helper."
   - "A test fails for a reason unrelated to the upgrade: debug it on its own, for example with the Live screen debugger for a screen bug."
 you_give:

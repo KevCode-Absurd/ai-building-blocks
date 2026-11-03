@@ -18,9 +18,9 @@ when:
   - Two loans reset on different dates and you need the extra cost of each one.
   - A lender, board or partner asks how much a rate rise adds to your interest cost.
 not_for:
-  - "You want to check what a lender actually charged on a revolving credit line: use the Revolver interest and fee checker."
+  - "You want to check what a lender actually charged on a revolving credit line: use the Revolving loan interest and fee checker."
   - You need floors, caps or repayments during the year. This skill applies one flat rate move to each loan, so those need a separate schedule.
-  - "Part of your interest is added to the loan instead of paid in cash: use the Cash and PIK interest checker."
+  - "Part of your interest is added to the loan instead of paid in cash: use the Cash and added interest calculator."
 you_give:
   - The floating balance of each loan (from your lender statement)
   - The extra annual rate for each loan, such as 1% or 2% (your rate scenario)

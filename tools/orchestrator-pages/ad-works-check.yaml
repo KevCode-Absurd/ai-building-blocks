@@ -16,7 +16,7 @@ when:
   - You are not sure whether people even notice your ad.
 not_for:
   - "Your ad is brand new and has no sales history: run it first, then come back. Until then, a simple test with a small group of buyers is enough."
-  - "You already have survey answers: use the Ad recall and pull calculator on its own."
+  - "You already have survey answers: use the Ad survey results calculator on its own."
   - "You need a better claim, not a verdict: use the Big problem splitter to break down what the ad should say."
 you_give:
   - Your current ad, or the claim it makes

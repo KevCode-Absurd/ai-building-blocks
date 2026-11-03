@@ -18,8 +18,8 @@ when:
   - You want to check that a character stays consistent across a long story or game.
 not_for:
   - "You want to diagnose, treat or advise on a real person's mental health: see a qualified professional."
-  - "You want to study how a team at work behaves: use the Organizational Psychologist agent."
-  - "You want plot, structure or point of view: use the Narratologist agent."
+  - "You want to study how a team at work behaves: use the Organizational psychologist."
+  - "You want plot, structure or point of view: use the Narrative analyst."
   - "You want to know how a culture shapes behavior: use the Anthropologist agent."
 you_give:
   - The character's name and role in your story, game or script

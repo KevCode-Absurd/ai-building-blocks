@@ -22,11 +22,11 @@ when:
   - "You decided to keep some apps and want them out of the way of the first screen."
 
 not_for:
-  - "You still need to decide which apps to keep: run the app script auditor first."
+  - "You still need to decide which apps to keep: run the Store app script reviewer first."
   - "A slow hero image is the problem: use the hero image loading fixer."
   - "The page jumps as it loads: use the layout shift fixer."
-  - "You don't use Shopify, or nobody on your team can edit theme code: ask a developer, or use the app script auditor to remove apps instead."
-  - "Your apps load their code through the page head with no separate script address you can find, or they inject checkout or tracking code there: skip the content_for_header step and use the app script auditor instead."
+  - "You don't use Shopify, or nobody on your team can edit theme code: ask a developer, or use the Store app script reviewer to remove apps instead."
+  - "Your apps load their code through the page head with no separate script address you can find, or they inject checkout or tracking code there: skip the content_for_header step and use the Store app script reviewer instead."
 
 you_give:
   - "Your theme.liquid file and the theme editor's app embeds list"

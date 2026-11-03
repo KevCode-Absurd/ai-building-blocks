@@ -50,8 +50,8 @@ how_to_use:
     the workbook.
 not_for:
   - Your deal is outside India or your company uses calendar years. This skill assumes April to March years and lakh and crore.
-  - You only need to know whether a requested EBITDA addback fits your deal cap. Use the Deal EBITDA addback checker.
-  - You want a model that someone else built checked for errors. Use the India modeling rules checker.
+  - You only need to know whether a requested EBITDA addback fits your deal cap. Use the Deal earnings adjustment checker.
+  - You want a model that someone else built checked for errors. Use the India financial model checker.
 output_sample:
   input:
     - Entry EBITDA and the entry multiple (EV to EBITDA)

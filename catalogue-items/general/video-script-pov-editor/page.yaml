@@ -18,8 +18,8 @@ when:
   - A customer story was written as "I", and you need a version an AI presenter can say honestly.
   - You want the same ad as a direct "you" script and as a told story, to see which one people watch.
 not_for:
-  - Your script has not run yet and you do not know it works. Test it first, or write a new one with the Video ad script writer from customer quotes.
-  - You need to change the message, offer or buying reason. Use the Video ad script writer from customer quotes to write a fresh script.
+  - Your script has not run yet and you do not know it works. Test it first, or write a new one with the Customer quote video ad writer.
+  - You need to change the message, offer or buying reason. Use the Customer quote video ad writer to write a fresh script.
   - You want the script easier to say aloud, with shorter lines. Use the Ad script read-aloud editor.
 
 you_give:

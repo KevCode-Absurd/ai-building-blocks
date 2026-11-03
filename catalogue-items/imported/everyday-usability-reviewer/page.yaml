@@ -17,7 +17,7 @@ when:
   - A physical product or device gets blamed for user mistakes.
 not_for:
   - "You want a review of visual style or brand look: ask a designer, since this checks how easy it is to use."
-  - "You need proof of what real users do: use the Usability test runner, or run a short test with five real users instead. The score here is your AI's judgement, not a measured result."
+  - "You need proof of what real users do: use the Usability test planner, or run a short test with five real users instead. The score here is your AI's judgement, not a measured result."
 you_give:
   - Description or screenshot of the product or screen
   - The task users try to do

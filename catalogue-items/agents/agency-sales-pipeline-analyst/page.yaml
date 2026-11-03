@@ -33,7 +33,7 @@ when:
   - Win rates are falling, and you need to know at which stage deals die.
   - You want a short list of deals to rescue this week, with an action for each.
 not_for:
-  - "You want a repeat review each Monday from a fresh export: use the Weekly sales pipeline reviewer."
+  - "You want a repeat review each Monday from a fresh export: use the Sales pipeline deal priority reviewer."
   - "You only want a forecast, with the maths shown: use the Bookings forecast builder."
   - "You want to find where visitors drop off on a website or app: use the Conversion funnel analyst."
   - "You want live numbers. Use your CRM's own reports, and use this agent to question them."

@@ -22,8 +22,8 @@ when:
 
 not_for:
   - The work is a construction or building contract. Use the Construction variation cost and approval tracker.
-  - You want a risk review of contract clauses for a lawyer. Use the Contract intake reviewer.
-  - You only want to reprice a client by their hours and fees. Use the Quarterly client rate reviewer.
+  - You want a risk review of contract clauses for a lawyer. Use the Contract clause risk reviewer.
+  - You only want to reprice a client by their hours and fees. Use the Client fee and work-hour reviewer.
   - You are writing the first change request form and nothing is in dispute. Use the Change request writer.
   - You want the AI to send the reply or decide what is in scope. It drafts, and a person decides.
 

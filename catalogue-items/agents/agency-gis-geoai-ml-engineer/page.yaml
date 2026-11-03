@@ -29,9 +29,9 @@ when:
   - You want to compare images from two dates to find change, such as new buildings or lost trees.
   - A model works in your notebook and you need the steps to make it work on a whole city.
 not_for:
-  - You need a buffer, overlay or simple map analysis. Use the GIS Analyst agent.
-  - You need a study of spatial patterns or statistics. Use the Spatial Data Scientist agent.
-  - You need drone photos turned into maps and 3D models. Use the Drone/Reality Mapping Specialist agent.
+  - You need a buffer, overlay or simple map analysis. Use the GIS analyst.
+  - You need a study of spatial patterns or statistics. Use the Spatial data scientist.
+  - You need drone photos turned into maps and 3D models. Use the Drone mapping specialist.
   - Your files need cleaning and converting before any model. Use the Spatial Data Engineer agent first.
 you_give:
   - What you want to find, such as buildings, roads, vehicles, water or crop types

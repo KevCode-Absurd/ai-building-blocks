@@ -17,7 +17,7 @@ when:
   - Your testing tool shows a high chance to win and you want a second check before you ship.
 not_for:
   - "Your test is still running or ran under two weeks: wait for it to finish, then come back."
-  - "You only want a verdict on one result and no next-test plan: use the Store test verdict maker alone."
+  - "You only want a verdict on one result and no next-test plan: use the Store test evidence reviewer alone."
   - "You want to know if your traffic is enough before you start a test: use the A/B test traffic checker."
 you_give:
   - "Test numbers: visits, orders and revenue for each version, with start and end dates"

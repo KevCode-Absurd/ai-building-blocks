@@ -36,7 +36,7 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
 not_for:
-  - You only want the hidden beliefs behind a problem. Use the Hidden belief mapper.
+  - You only want the hidden beliefs behind a problem. Use the Belief and assumption mapper.
   - Something broke at work and you want the cause fast. Use the Problem root cause tracer or the Five whys session planner.
   - You want an action plan. This gives a map of possible causes, not a response plan.
 output_sample:

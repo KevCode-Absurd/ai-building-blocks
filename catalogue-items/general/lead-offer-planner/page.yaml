@@ -18,9 +18,9 @@ when:
   - Leads arrive but nobody follows up on a set day.
   - You sell something costly or slow to decide, and buyers research first.
 not_for:
-  - "You have not yet chosen between a premium, free or discount first step: use the Front-end offer picker."
+  - "You have not yet chosen between a premium, free or discount first step: use the First purchase offer planner."
   - "You sell a low-cost impulse item where buyers do not research first: write a direct offer with a price and a buy button instead."
-  - "People already reply but do not buy: use the Almost-buyer follow-up writer to bring them back."
+  - "People already reply but do not buy: use the Sales follow-up email writer to bring them back."
 
 you_give:
   - Your product or service, what it costs and what it does

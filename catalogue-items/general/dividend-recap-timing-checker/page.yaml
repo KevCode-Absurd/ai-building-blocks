@@ -116,8 +116,8 @@ terms:
     meaning: A check that explains any gap between two sets of figures that should match.
 not_for:
   - Your cash flows fall on uneven dates. Use a spreadsheet function for dated returns, such as XIRR in Excel or Google Sheets.
-  - You want to know if the company can afford the new debt. This is not a lender's test. Use the Debt service covenant headroom checker.
-  - You want to split fund payouts between investors and the sponsor. Use the No-catchup waterfall checker.
+  - You want to know if the company can afford the new debt. This is not a lender's test. Use the Loan covenant cash coverage checker.
+  - You want to split fund payouts between investors and the sponsor. Use the Fund payout without catch-up checker.
   - You have more than two years, or several dividends. This version covers one dividend and one exit.
 output_sample:
   input:

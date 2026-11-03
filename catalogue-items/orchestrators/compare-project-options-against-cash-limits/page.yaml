@@ -34,7 +34,7 @@ how_to_use:
 thinking: high
 not_for:
   - You only want a 30, 60 and 90 day cash forecast. Use the Cash forecast builder.
-  - You have one plan and want to see where a bad year breaks it. Use the Bad year plan stress tester.
+  - You have one plan and want to see where a bad year breaks it. Use the Budget stress tester.
   - You have no cash records yet. This workflow will not recommend funded projects without a starting balance, fixed commitments and a reserve rule.
 output_sample:
   input:

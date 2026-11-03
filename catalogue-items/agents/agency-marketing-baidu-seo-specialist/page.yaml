@@ -17,9 +17,9 @@ when:
   - Your China site gets few visits from Baidu and you don't know why.
   - You need a list of Chinese search terms for one product, grouped by what the searcher wants.
 not_for:
-  - You only care about Google or Bing. Use the SEO Specialist agent.
-  - You want your pages to show up in AI answers. Use the AI citation audit agent.
-  - You want to sell in China through video or social, not search. Use the Douyin Strategist agent or the Xiaohongshu Specialist agent.
+  - You only care about Google or Bing. Use the SEO reviewer.
+  - You want your pages to show up in AI answers. Use the AI citation visibility planner.
+  - You want to sell in China through video or social, not search. Use the Douyin content planner or the Xiaohongshu content planner.
 you_give:
   - Your website link, or the name of the site you plan to launch
   - What you sell and who in China should find it

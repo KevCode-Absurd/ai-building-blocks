@@ -20,9 +20,9 @@ when:
   - You need review points you can show a team.
 not_for:
   - "You want to know what real users do: run a usability test, or plan one with the Small usability test planner."
-  - "You want a score against a checklist of usability rules: use the Usability heuristic reviewer."
+  - "You want a score against a checklist of usability rules: use the Website usability reviewer."
   - "You are checking an iPhone, iPad or Mac app against Apple rules: use the Apple app design checker."
-  - "You want to catch UI that looks AI-made: use the AI-look design reviewer."
+  - "You want to catch UI that looks AI-made: use the UI design consistency reviewer."
 you_give:
   - A description, screenshot or code of the screen
   - Who uses it and what they want to do

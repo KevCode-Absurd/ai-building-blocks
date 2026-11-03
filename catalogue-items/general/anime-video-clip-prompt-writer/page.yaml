@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want a live-action ad: write the script and shot list yourself, or ask a video editor, because this skill only plans hand-drawn 2D anime."
   - "You need one still picture: use your image tool directly, because this skill plans a full video with clips."
-  - "You have no script yet: write one first with the Video ad script writer from customer quotes, then come back."
+  - "You have no script yet: write one first with the Customer quote video ad writer, then come back."
 
 you_give:
   - The approved script with its shots, and its cast note if it has one

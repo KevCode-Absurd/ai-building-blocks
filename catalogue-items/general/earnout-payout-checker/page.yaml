@@ -118,7 +118,7 @@ terms:
 not_for:
   - Your earnout has more than one tier, a catch-up payment, a cliff or acceleration on a sale. This covers one straight-line range only.
   - You want the earnout's value for the accounts, weighted by how likely it is. Take that to your accountant.
-  - You want to settle the working capital after closing. Use the Working capital true-up checker.
+  - You want to settle the working capital after closing. Use the Sale working capital settlement checker.
   - You want the cash needed at closing. Use the Deal funding gap checker.
 output_sample:
   input:

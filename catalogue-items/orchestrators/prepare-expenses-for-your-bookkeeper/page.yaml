@@ -20,7 +20,7 @@ when:
 not_for:
   - You have no approved category list. Ask your bookkeeper for one first. This workflow will not make up categories.
   - You want tax deductions decided. Ask your bookkeeper or accountant.
-  - You want your bank matched to full books and a profit and loss. Use the Match bank to books and issue a clean P&L workflow.
+  - You want your bank matched to full books and a profit and loss. Use the Bank-to-ledger reconciliation and financial statement preparer workflow.
   - You want a quick suggested category for each line. Use the Expense sorter.
 you_give:
   - Your receipts, as photos, PDFs or a list with date and amount

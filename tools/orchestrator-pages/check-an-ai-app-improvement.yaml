@@ -58,8 +58,8 @@ improve:
 terms: []
 not_for:
   - You want to compare an old prompt with a new one on the same test cases. Use the Prompt change tester.
-  - Your app is not Python code, or your AI cannot run code. Use the AI agent tester for a test set and a ship or hold memo.
-  - You want one agent to check and fix its own answers. Use the Agent answer feedback designer.
+  - Your app is not Python code, or your AI cannot run code. Use the AI agent release tester for a test set and a ship or hold memo.
+  - You want one agent to check and fix its own answers. Use the AI agent feedback designer.
 output_sample:
   input:
     - Your AI app's code, or a description of the job it does

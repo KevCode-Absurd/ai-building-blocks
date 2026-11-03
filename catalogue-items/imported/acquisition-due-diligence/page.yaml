@@ -19,8 +19,8 @@ when:
   - You got an offer and want to know which terms to push on.
 not_for:
   - "You are checking a startup before you invest or join it: use the startup due diligence reviewer."
-  - "You need a request list for an Indian deal, with status tracking: use the due diligence checklist builder."
-  - "You only want to estimate what an early-stage company is worth: use the early-stage valuation estimator or the valuation method comparer."
+  - "You need a request list for an Indian deal, with status tracking: use the India deal due diligence planner."
+  - "You only want to estimate what an early-stage company is worth: use the Early-stage startup valuation scenario builder or the valuation method comparer."
   - "You need legal, tax or financial advice, or a formal valuation: hire a lawyer, an accountant or an M&A advisor."
 you_give:
   - A description of the deal and the parties

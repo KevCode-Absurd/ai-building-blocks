@@ -18,7 +18,7 @@ when:
 not_for:
   - Your account has no Performance Max campaigns, or they started less than two weeks ago. There is not enough data to judge. Use the Google Ads report auditor on an export when you have more.
   - You want a one-time review and no code. Paste your export into the Google Ads report auditor.
-  - You want to check a Shopping feed. Use the Shopping feed audit coding prompt.
+  - You want to check a Shopping feed. Use the Shopping feed audit prompt writer.
   - You want it to change assets or goals for you. It only proposes changes. You make them in Google Ads.
 you_give:
   - Your code project, or its main folders and database schema

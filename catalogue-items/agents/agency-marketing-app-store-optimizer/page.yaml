@@ -32,7 +32,7 @@ when:
 not_for:
   - You want one listing scored and rewritten fast. Use the App store listing optimiser.
   - You want the "What's new" text for a release. Use the App Store release notes writer.
-  - You want a website SEO review. Use the SEO Specialist agent.
+  - You want a website SEO reviewer. Use the SEO reviewer.
   - You need real keyword volumes. Pull them from an ASO tool or your store console, then bring the numbers here.
 you_give:
   - Your app name, the store (App Store, Google Play or both) and what the app does.

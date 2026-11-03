@@ -16,9 +16,9 @@ when:
   - You are choosing a replacement for a contractor who is not delivering.
   - You need to show a manager or board why one contractor was chosen.
 not_for:
-  - "You are comparing prices for goods from suppliers: use Compare supplier prices on the same basis."
-  - "You are comparing freight quotes: use Compare freight quotes with all charges."
-  - "You already have a contractor and are renewing: use Prepare a contract renewal negotiation."
+  - "You are comparing prices for goods from suppliers: use Supplier quote cost and risk analyst."
+  - "You are comparing freight quotes: use Freight quote reviewer."
+  - "You already have a contractor and are renewing: use Contract renewal and negotiation planner."
   - "You need a lawyer's reading of the liability or termination wording. This gives a plain summary for a qualified reviewer, not legal advice."
 you_give:
   - Each contractor's proposal, priced for the same sites and the same contract period

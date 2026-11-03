@@ -17,7 +17,7 @@ when:
   - You need a quick profile for a data handover.
 not_for:
   - "You already have a clear question or a decision to make: use the Data analyst or ask your AI that question directly."
-  - "You need the data cleaned or fixed: this only reports problems, so fix them in your spreadsheet or use the Data cleaner next."
+  - "You need the data cleaned or fixed: this only reports problems, so fix them in your spreadsheet or use the Dataset cleaner and validator next."
   - "Your file is not a table, such as a PDF or a stack of notes: use a plain chat and ask your AI to pull out the numbers first."
 you_give:
   - A table of data (CSV, Excel or similar)

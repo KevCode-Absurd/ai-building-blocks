@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no plan yet and only an idea: write down the plan first, or ask a friend to poke holes in it, then come back."
   - "You want to judge feature requests on a product that is already live: use the Feature request screener on its own."
-  - "You want to test whether anyone wants the product: run a small test with real people first, such as the Smallest test picker."
+  - "You want to test whether anyone wants the product: run a small test with real people first, such as the Minimum experiment planner."
 
 you_give:
   - Your launch plan with the full feature list

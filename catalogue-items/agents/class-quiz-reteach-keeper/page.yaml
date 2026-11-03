@@ -15,7 +15,7 @@ when:
   - A topic keeps coming back wrong and you want to try something different.
   - You want a short recall starter for the topics students just missed.
 not_for:
-  - "You only want a fresh set of recall questions: use the retrieval-quiz-writer skill on its own, with no results table."
+  - "You only want a fresh set of recall questions: use the Retrieval quiz writer skill on its own, with no results table."
   - "You have a very small class or a quiz of fewer than five questions: read the answers yourself, as the shares will swing too much."
   - "You want marks changed, reports written or families contacted: do that yourself, as this agent never does it."
 you_give:

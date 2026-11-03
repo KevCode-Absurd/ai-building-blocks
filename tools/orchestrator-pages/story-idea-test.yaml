@@ -18,7 +18,7 @@ when:
   - A draft reads flat, with scenes that feel like they could be cut, and you can't say why.
   - Your video relies on a narrator to explain what is happening, and you want to know which lines it really needs.
 not_for:
-  - "You want to check an ad for Meta rules: use the Meta ads compliance checker, which looks at ad policy, not story."
+  - "You want to check an ad for Meta rules: use the Meta ad policy checker, which looks at ad policy, not story."
   - "You only want to know if a short idea has a strong core: use the Story premise tester on its own."
   - "You want notes from real readers sorted into themes: use the Reader feedback sorter."
 

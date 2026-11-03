@@ -19,8 +19,8 @@ when:
   - "You want one clear thing to try next, not a list of ten."
 not_for:
   - "You have not published the post yet: ask a person you trust to read the draft, or wait for real numbers."
-  - "You want every check run on a flop: use the Flop post diagnoser."
-  - "You want to sort customer feedback, not post numbers: use the Feedback pile sorter."
+  - "You want every check run on a flop: use the Low-performing post reviewer."
+  - "You want to sort customer feedback, not post numbers: use the Customer feedback sorter."
 
 you_give:
   - "The post text"

@@ -20,10 +20,10 @@ when:
   - You want every part tested, with proof, before the next part starts.
   - You are using several AI agents and need to decide who does what and when to stop.
 not_for:
-  - You only want a task list from a spec. Use the Senior Project Manager agent.
-  - You want one software design with options and trade-offs. Use the Software Architect agent.
-  - You want to design how several AI agents trust and talk to each other. Use the Multi-Agent Systems Architect agent.
-  - You need a final go or no-go on a release. Use the Reality Checker agent.
+  - You only want a task list from a spec. Use the Project planning manager.
+  - You want one software design with options and trade-offs. Use the Software architect.
+  - You want to design how several AI agents trust and talk to each other. Use the Multi-agent system architect.
+  - You need a final go or no-go on a release. Use the Release acceptance evidence reviewer.
   - You have no written spec. Write one first. Without it the plan is a guess.
 you_give:
   - A written project spec that says what to build, for whom and what done looks like. Any document works.

@@ -33,9 +33,9 @@ when:
   - You plan to chase AI mentions and want the groundwork checked first.
 not_for:
   - You only want the llms.txt file. Use the llms.txt writer.
-  - You want to know if AI tools mention you now and why rivals win. Use the AI citation audit agent.
+  - You want to know if AI tools mention you now and why rivals win. Use the AI citation visibility planner.
   - You want a full technical SEO crawl with every broken link. Use the Technical SEO auditor.
-  - You want to know if an AI browsing agent can book or buy on your site. Use the AI browsing agent readiness checker.
+  - You want to know if an AI browsing agent can book or buy on your site. Use the AI search visibility reviewer.
 you_give:
   - Your site address.
   - The text of your robots.txt. Open yoursite.com/robots.txt and copy it.

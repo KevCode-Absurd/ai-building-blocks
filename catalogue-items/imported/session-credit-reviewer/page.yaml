@@ -20,8 +20,8 @@ when:
 not_for:
   - Your session was a typo fix or a quick rename. It rates it low and writes nothing, by design.
   - The project has no git history. It can work from the chat alone, but the file-based checks are skipped.
-  - You want to grade the quality of an AI's work. Use the AI work grader.
-  - You want to hand a half-finished job to someone else. Use the AI workflow handoff planner.
+  - You want to grade the quality of an AI's work. Use the AI execution quality reviewer.
+  - You want to hand a half-finished job to someone else. Use the AI creative workflow handoff planner.
 you_give:
   - A git project with commits from the session
   - The conversation from the session

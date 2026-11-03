@@ -19,8 +19,8 @@ when:
   - A reviewer wants the sweep traced back to the loan terms.
 not_for:
   - You want to work out excess cash flow itself. This takes a confirmed figure and does not build one.
-  - The loan has several debt tranches that are repaid in an order, or required repayments on a schedule. Use the Project payment waterfall builder for order of payment.
-  - You want to test a loan limit after the sweep, such as debt service cover. Use the Debt service covenant headroom checker.
+  - The loan has several debt tranches that are repaid in an order, or required repayments on a schedule. Use the Project payment priority planner for order of payment.
+  - You want to test a loan limit after the sweep, such as debt service cover. Use the Loan covenant cash coverage checker.
   - You want a full cash forecast. This is one year and one tier only.
 you_give:
   - The excess cash flow your lender has confirmed (from the compliance certificate or the loan agreement's definition)

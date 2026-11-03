@@ -19,8 +19,8 @@ when:
   - You finished a long session and want lessons from it.
 not_for:
   - "The session was short with no repeated mistakes: there is little to learn. Skip the retro."
-  - "You want a review of one bug or one diff: use the Pull request reviewer or the Bug diagnoser."
-  - "You want a team meeting agenda after a sprint: use the Sprint retro facilitator."
+  - "You want a review of one bug or one diff: use the Pull request review tracker or the Bug diagnoser."
+  - "You want a team meeting agenda after a sprint: use the Sprint retrospective facilitator."
   - "Your AI tool does not save session logs: paste the key parts of the session in by hand, or skip this."
 you_give:
   - The session to review, or say "the current one"

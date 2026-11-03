@@ -18,7 +18,7 @@ when:
   - You inherited a store with many half-finished pages.
   - You want a quick content check before an SEO review.
 not_for:
-  - "You want to check product or collection search fields: use the Store SEO gap finder, or check them by hand in Shopify."
+  - "You want to check product or collection search fields: use the Store SEO completeness checker, or check them by hand in Shopify."
   - "You have no Shopify admin access: ask the store owner to add you, or to run it and send you the list."
   - "You want a full review of one landing page: read it yourself, or ask a writer to check it."
 you_give:

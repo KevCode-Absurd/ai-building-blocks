@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You have no Meta ad cost and no paid view price to start from: run a small ad test first to get one. This skill won't guess a CPM."
-  - "You want to pay many people only for approved clips of your own footage: use the Clipper program planner."
+  - "You want to pay many people only for approved clips of your own footage: use the Paid video clipping program planner."
   - "You are sending free product with no cash fee: use the Influencer gifting planner."
   - "You want equity or a long deal with a well-known creator: use the Creator equity deal planner, and ask a lawyer."
 

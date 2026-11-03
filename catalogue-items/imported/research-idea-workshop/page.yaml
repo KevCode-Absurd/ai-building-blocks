@@ -18,7 +18,7 @@ when:
   - You need a written record of why you chose one idea.
   - You are working alone and want the group effect.
 not_for:
-  - "You already have a testable idea and need a hypothesis: use the Research hypothesis builder."
+  - "You already have a testable idea and need a hypothesis: use the Research hypothesis planner."
   - "You need a study plan or sample size: use the Study design and randomizer or the Sample size planner."
   - "You need ethics approval or clinical advice: ask your ethics board or a qualified clinician."
 you_give:

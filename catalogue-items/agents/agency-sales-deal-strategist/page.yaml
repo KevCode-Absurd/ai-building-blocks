@@ -34,10 +34,10 @@ when:
   - Your manager asks for a deal review and you have an hour to prepare.
 not_for:
   - You want one deal read straight from your CRM, email and calls. Use the Deal health reviewer, which is built for connected tools.
-  - You want a whole pipeline checked and a forecast. Use the Sales pipeline health and forecast agent.
-  - A deal has gone quiet and you want a message to revive it. Use the Stalled deal revival desk.
+  - You want a whole pipeline checked and a forecast. Use the Sales pipeline analyst.
+  - A deal has gone quiet and you want a message to revive it. Use the Sales deal follow-up tracker.
   - You want to improve how a rep sells. Use the Sales Coach agent.
-  - You want a proposal or a contract written. Use the Proposal Strategist agent.
+  - You want a proposal or a contract written. Use the Sales proposal narrative writer.
 you_give:
   - The account, the deal value, the stage and the date you hope to close
   - Everything you know under the eight MEDDPICC headings, even if it is only a line each

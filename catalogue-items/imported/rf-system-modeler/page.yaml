@@ -22,7 +22,7 @@ when:
 not_for:
   - "You are designing an antenna or its radiation pattern: use MATLAB's Antenna Toolbox."
   - "You are modeling radio path loss, fading or radar: use Communications Toolbox or Phased Array System Toolbox."
-  - "You are laying out a PCB filter: use the PCB RF filter designer."
+  - "You are laying out a PCB filter: use the MATLAB PCB RF filter designer."
   - "You do not have MATLAB with RF Toolbox: the code will not run, so ask an RF engineer who has it to run the model."
 you_give:
   - S-parameter files (.s2p, .s4p) or part specs from data sheets

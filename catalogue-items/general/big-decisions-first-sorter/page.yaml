@@ -25,7 +25,7 @@ not_for:
   - "Your goal is still unclear, or the whole thing just feels too big: use the Big problem splitter."
   - "You are stuck on one choice and want to know how easy it is to undo: use the Reversible decision sorter."
   - "The questions come down to taste. No goal forces an answer, so they stay open."
-  - "You already have a plan and want to know how it could fail: use the Failure-first plan check."
+  - "You already have a plan and want to know how it could fail: use the Plan failure reviewer."
 
 you_give:
   - Your goal, with a size or a date, such as "10,000 paying users by next spring"

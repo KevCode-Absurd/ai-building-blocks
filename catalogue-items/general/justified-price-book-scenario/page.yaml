@@ -18,8 +18,8 @@ when:
   - You are comparing two companies and want to see how much growth and ROE each moves P/B.
   - A reviewer asks how your target P/B ties back to ROE, growth and required return.
 not_for:
-  - "You want a full valuation with cash flows by year: use the Build a clean surplus residual income model workflow."
-  - "You want to measure one period's earnings above the required return: use the One-period residual income bridge."
+  - "You want a full valuation with cash flows by year: use the Equity and residual income modeler workflow."
+  - "You want to measure one period's earnings above the required return: use the Excess earnings calculator."
   - The company is a bank or insurer that needs capital rules, or its book value is negative. This formula does not fit them.
   - "You want to check ROE and margins from several years of accounts first: use the ROE and margin check."
 you_give:

@@ -21,7 +21,7 @@ when:
   - You want to test whether a move from another category works for your buyer.
 not_for:
   - 'You only have notes about a brand, like "science-first", and no ad you have seen: collect one real ad from the Meta Ad Library first, or give your own words about an ad you saw.'
-  - "You want to keep the ad's rows, order and pace: use the Competitor ad video script writer."
+  - "You want to keep the ad's rows, order and pace: use the Competitor video script adapter."
   - "You have no customer reviews or product facts: gather a few real quotes and facts first, or the proof lines will be marked missing."
   - "Your script would make vitamin, health or money claims you have not checked: run each claim past the label and your local rules first, because this skill checks copying, not claim rules."
 

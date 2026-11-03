@@ -19,7 +19,7 @@ when:
   - Facts change over time and the agent must know which version is current.
 not_for:
   - "Your agent works inside a single session, or has no state: a plain notes file is enough, and this skill will say so."
-  - "You want ChatGPT or Claude to remember things about you in your own chats: use the AI memory habit setter."
+  - "You want ChatGPT or Claude to remember things about you in your own chats: use the AI memory routine designer."
   - "You want search over your documents, not memory of past chats: use the RAG pipeline designer."
 you_give:
   - What your agent does and who uses it

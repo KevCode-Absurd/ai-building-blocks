@@ -22,8 +22,8 @@ when:
 
 not_for:
   - You only need to test a signed covenant, such as cash cover each period. Use the Loan covenant cash cover reviewer. This agent runs that test only when a distribution is requested.
-  - You need to build the loan schedule and the cover ratios first. Use the Project debt cash evidence reviewer.
-  - Your reserve is a plain cash balance with no payment priority. A simple balance check is enough, and the Treasury settlement evidence reviewer covers daily cash.
+  - You need to build the loan schedule and the cover ratios first. Use the Project cash and debt coverage reviewer.
+  - Your reserve is a plain cash balance with no payment priority. A simple balance check is enough, and the Cash settlement forecast reviewer covers daily cash.
   - You want to know if a payout is legally allowed. It reads the order and gates you supply. It gives no legal opinion.
 
 you_give:

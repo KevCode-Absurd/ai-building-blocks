@@ -22,8 +22,8 @@ when:
   - A big rival has just made a move and you do not know how hard to react.
 not_for:
   - You have one bad month and no cash or customer numbers. Do a normal review first. Wartime needs a real threat to survival.
-  - You need to decide whether to change what you sell. Use the Pivot or persevere decider.
-  - You want to test a budget against a bad year. Use the Bad year plan stress tester.
+  - You need to decide whether to change what you sell. Use the Product pivot decision reviewer.
+  - You want to test a budget against a bad year. Use the Budget stress tester.
 
 you_give:
   - "Your situation: what you sell, who to, how you are doing and what worries you"

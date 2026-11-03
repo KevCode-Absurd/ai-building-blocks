@@ -18,10 +18,10 @@ when:
   - Your training loss is unstable, or a few experts get all the work.
   - You need to spread experts across several GPUs with DeepSpeed.
 not_for:
-  - You have one GPU or a small dataset. Use a dense model, or the LLM fine-tuning guide to adapt an existing one.
+  - You have one GPU or a small dataset. Use a dense model, or the Unsloth fine-tuning code writer to adapt an existing one.
   - You want to train a small model from scratch to learn how it works. Use the tiny GPT trainer or the LitGPT model trainer.
-  - You only need to run a finished MoE model. Use the local model runner for laptops instead.
-  - You still need to set up several GPUs. Start with the multi-GPU training setup helper.
+  - You only need to run a finished MoE model. Use the Laptop local model setup planner instead.
+  - You still need to set up several GPUs. Start with the Hugging Face Accelerate training planner.
 you_give:
   - Your GPUs, such as how many and what type
   - Your goal, such as a language or domain

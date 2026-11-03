@@ -20,7 +20,7 @@ when:
 not_for:
   - Your store has no margin to give free items. Fix delivery, returns and support first, or use a simple discount rule instead.
   - You have a problem with no cause fixed yet. Fix the cause first, because a gift will not repair a late or broken order.
-  - You want the full build order for the post-purchase experience. Use the after-purchase experience planner, which this page does not cover.
+  - You want the full build order for the After-purchase experience planner. Use the after-purchase experience planner, which this page does not cover.
 
 you_give:
   - Your average order value and cost of goods

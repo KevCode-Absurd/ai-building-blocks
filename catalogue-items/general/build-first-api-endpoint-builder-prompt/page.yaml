@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want to test endpoints you already have: use the API test suite builder."
   - "Your app is a mobile app that needs a server: use the Expo API route builder."
-  - "You want a Slack bot, not a web route: use the First Slack Bot coding prompt."
+  - "You want a Slack bot, not a web route: use the Slack bot build brief writer."
   - "You do not have a Next.js project with an app folder and Node.js installed: set those up first, or ask your AI which steps change for your stack."
 you_give:
   - A Next.js project that uses the App Router, open in your coding AI

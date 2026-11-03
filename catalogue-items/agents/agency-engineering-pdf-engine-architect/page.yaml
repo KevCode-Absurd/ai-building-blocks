@@ -34,9 +34,9 @@ when:
   - One page must print on A4, US Letter and a custom size without breaking.
   - You need tagged PDFs for accessibility and want a plan to check them.
 not_for:
-  - You want to make one PDF from text or a sheet and have no code. Use the PDF maker and reader or the Document file generator.
-  - You want to read, merge, split or fill PDFs you already have. Use the PDF toolkit.
-  - You need a Word, slide or Excel file. Use the Document generator agent for PDF, Word, slides and Excel.
+  - You want to make one PDF from text or a sheet and have no code. Use the PDF maker and reader or the JSON document file generator.
+  - You want to read, merge, split or fill PDFs you already have. Use the PDF file editor.
+  - You need a Word, slide or Excel file. Use the Document generation planner.
   - You want an Excel sheet to print well. Use the Excel print layout fixer.
   - You need a designer to judge how the page looks or a print proof. Ask a person.
 you_give:

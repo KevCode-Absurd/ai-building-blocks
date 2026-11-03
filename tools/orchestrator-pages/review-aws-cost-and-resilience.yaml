@@ -26,9 +26,9 @@ you_get:
   - Architecture risks
   - Prioritized change and rollback plan
 not_for:
-  - "Your setup runs on Azure, not AWS: use Review Azure cost and resilience."
-  - "Something is broken on AWS right now: use Investigate an AWS service incident."
-  - "You only want to cut the cost of your build and test runs: use Cut CI cost without weakening checks."
+  - "Your setup runs on Azure, not AWS: use Azure resource costs and resilience reviewer."
+  - "Something is broken on AWS right now: use AWS incident investigation planner."
+  - "You only want to cut the cost of your build and test runs: use GitHub Actions workflow reviewer."
 output_sample:
   input:
     - Your AWS design files (Terraform, CloudFormation or CDK) or a list of your AWS services

@@ -18,10 +18,10 @@ when:
   - You want to know which questions the bot cannot answer, so you can add articles.
   - You suspect the bot is making up policies and want to find examples.
 not_for:
-  - You are building a bot. Use the Chatbot conversation designer.
+  - You are building a bot. Use the Chatbot flow planner.
   - You want to check one written claim against your facts. Use the Unsupported claim spotter.
   - You have no help content or product facts to check against. Gather them first, or the accuracy check will say "Not checked".
-  - You want a report on survey scores or comments. Use the Customer feedback report from survey tools.
+  - You want a report on survey scores or comments. Use the Customer survey feedback analyst.
 you_give:
   - Your Botsonic, Docsbot or Landbot account, linked through Composio
   - Your help articles, product facts or policies, pasted in

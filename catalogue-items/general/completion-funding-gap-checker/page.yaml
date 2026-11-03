@@ -18,8 +18,8 @@ when:
   - You are preparing a note to a board or lender about the cash needed to complete a build.
   - A reviewer asks you to separate the funding gap from the budget overrun.
 not_for:
-  - You want to plan how each month's draws are paid, equity first then the loan. Use the Construction funding draw planner.
-  - You need the interest cost while the loan is drawn. Use the Construction interest schedule builder.
+  - You want to plan how each month's draws are paid, equity first then the loan. Use the Construction funding schedule planner.
+  - You need the interest cost while the loan is drawn. Use the Construction loan interest calculator.
   - You need the funding gap at deal closing for an acquisition. Use the Deal funding gap checker.
 you_give:
   - The cost spent so far (from your cost ledger or the latest cost report)

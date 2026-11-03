@@ -19,7 +19,7 @@ when:
   - You are not sure if you need a product tour or better help pages.
 not_for:
   - "You need a step-by-step setup flow for new accounts: use the First-run wizard designer."
-  - "You need chat-style help inside the product: use the Chatbot conversation designer."
+  - "You need chat-style help inside the product: use the Chatbot flow planner."
   - "You need to write the help pages themselves: use the Help article writer from support tickets."
 you_give:
   - What your product is and who uses it

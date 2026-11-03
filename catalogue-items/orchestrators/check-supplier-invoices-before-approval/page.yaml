@@ -20,8 +20,8 @@ when:
 not_for:
   - You want payment released or approval changed. This checks only. Approve in your accounts system.
   - You need tax advice or filing. The tax figure is only re-added, not judged. Ask your accountant.
-  - A customer owes you money. Use the Get a late invoice paid and keep the customer workflow.
-  - You want your bank matched to your books. Use the Match bank to books and issue a clean P&L workflow.
+  - A customer owes you money. Use the Overdue invoice reminder writer workflow.
+  - You want your bank matched to your books. Use the Bank-to-ledger reconciliation and financial statement preparer workflow.
 you_give:
   - The supplier invoices to check, as PDFs, photos or an export
   - The purchase orders for those invoices

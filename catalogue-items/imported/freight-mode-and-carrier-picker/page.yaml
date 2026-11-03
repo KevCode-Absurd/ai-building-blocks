@@ -18,9 +18,9 @@ when:
   - You are unsure whether parcel, LTL or truckload is cheaper on a lane.
   - You use many carriers and want to know if fewer would get you better rates.
 not_for:
-  - "You need local delivery routes for your own drivers: use the Delivery route planner."
+  - "You need local delivery routes for your own drivers: use the Delivery route planner (vehicle routing)."
   - "You plan the final leg to customers' homes: use the Last-mile delivery planner."
-  - "You have a late or damaged shipment right now: use the Shipment problem handler."
+  - "You have a late or damaged shipment right now: use the Shipment exception claims planner."
   - "You have less than three months of freight invoices. There is not enough to find a pattern."
 you_give:
   - Freight invoices or a table with date, origin, destination, weight, size, mode, carrier and charge

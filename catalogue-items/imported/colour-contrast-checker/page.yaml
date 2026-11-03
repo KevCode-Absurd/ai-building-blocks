@@ -20,8 +20,8 @@ when:
 not_for:
   - "Your text sits on photos, gradients or see-through colours: check those by eye on the screen, because this reads tokens only."
   - "You need a full accessibility audit: contrast is only one part of WCAG, so ask an accessibility specialist to sign off before you publish."
-  - "You have one brand colour and no tokens yet: use design-token-builder first, then check the result here."
-  - "You want to check a whole page, not just colours: use page-design-standards-checker."
+  - "You have one brand colour and no tokens yet: use Design token and handoff builder first, then check the result here."
+  - "You want to check a whole page, not just colours: use Page design standards checker."
 you_give:
   - Your CSS file with colour variables, such as src/styles/tokens.css
   - Your dark mode colours, in the same file (optional)

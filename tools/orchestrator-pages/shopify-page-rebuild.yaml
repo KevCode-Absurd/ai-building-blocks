@@ -17,8 +17,8 @@ when:
   - You want a new page built in Shopify without writing theme code.
 not_for:
   - "You have no store yet or no product photos: set up your Shopify store first, then come back."
-  - "You already have the layout and only need a page built: use the Static HTML landing page builder."
-  - "You want to score a page you already have: use the Landing page conversion review or the Landing page 30-point checker."
+  - "You already have the layout and only need a page built: use the Plain HTML landing page builder."
+  - "You want to score a page you already have: use the Landing page conversion reviewer or the 30-point landing page checker."
 
 you_give:
   - A screenshot of the page you admire

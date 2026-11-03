@@ -19,7 +19,7 @@ when:
   - A change already shipped and users are complaining it broke their work.
 not_for:
   - "You are fixing a bug or making an internal change that no user relies on: just ship it and test it."
-  - "You want to remove a weak part of your product on purpose: use the Weak part design-out planner."
+  - "You want to remove a weak part of your product on purpose: use the Product weak-point redesign planner."
   - "You need a code review or a test run: ask a developer, since this skill checks the plan and not the code."
 
 you_give:

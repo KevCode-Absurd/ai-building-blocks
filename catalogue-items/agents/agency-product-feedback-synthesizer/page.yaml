@@ -17,10 +17,10 @@ when:
   - Ratings dropped and you need to know which complaint is behind it.
   - You have a list of feature requests and no way to rank them.
 not_for:
-  - "You want the reasons people buy, in their own words, from reviews or emails: use the Review reason spotter."
-  - "You want to mine social media comments: use the Comment mining analyst."
+  - "You want the reasons people buy, in their own words, from reviews or emails: use the Customer buying reason counter."
+  - "You want to mine social media comments: use the Social comment mining analyst."
   - "You want to plan interviews or usability tests before you collect feedback: use the UX Researcher agent."
-  - "You want each month's new reviews tracked against your last list: use the Monthly customer voice keeper."
+  - "You want each month's new reviews tracked against your last list: use the Customer feedback and brand reviewer."
   - "You have fewer than about 10 pieces of feedback. Read them yourself."
 you_give:
   - The feedback, pasted as text or CSV, from reviews, tickets, surveys or interviews

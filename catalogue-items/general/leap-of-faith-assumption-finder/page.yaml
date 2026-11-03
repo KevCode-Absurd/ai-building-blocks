@@ -15,10 +15,10 @@ when:
   - Your pitch leans on "we are like X, but for Y".
   - You are about to spend months building and want to know what you are really assuming.
 not_for:
-  - "You already have sales data from real customers: go straight to the Smallest test picker."
-  - "You want to run a test on one guess: use the Smallest test picker, which takes this list."
+  - "You already have sales data from real customers: go straight to the Minimum experiment planner."
+  - "You want to run a test on one guess: use the Minimum experiment planner, which takes this list."
   - "You need a forecast or budget: build it in a spreadsheet or ask your accountant."
-  - "You want a quick first pass with fewer checks: use the Plan guess ranker."
+  - "You want a quick first pass with fewer checks: use the Business assumption test planner."
 you_give:
   - "Your plan: what, for whom, how they find it, what you get back"
   - Your biggest worry (optional)

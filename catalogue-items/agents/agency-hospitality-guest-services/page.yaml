@@ -32,8 +32,8 @@ when:
 not_for:
   - A guest is hurt, ill or in danger. Call your manager, security or emergency services first. Use this agent only afterwards, to write the record.
   - You want replies sent for you. It drafts only. A staff member must check and send each one.
-  - The customer is not a guest on a stay, such as an online shopper. Use the Customer Service agent or the Refund request reply writer.
-  - You have a pile of public reviews to answer. Use the Public review reply desk.
+  - The customer is not a guest on a stay, such as an online shopper. Use the Customer service writer or the Refund request reply writer.
+  - You have a pile of public reviews to answer. Use the Public review response manager.
   - You have not decided what staff may give away. It cannot set your compensation limits. Your manager decides that.
 you_give:
   - The guest's message, review or request, copied as it was written

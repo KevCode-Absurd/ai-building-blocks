@@ -17,7 +17,7 @@ when:
   - Your best ad has stopped working and you are not sure whether to make more like it or something new.
   - You are about to add budget and want to know where an extra dollar earns the most new customers.
 not_for:
-  - "You have one ad with no spend data: use the Ad recall and pull calculator first, then come back."
+  - "You have one ad with no spend data: use the Ad survey results calculator first, then come back."
   - "Your test has only a handful of sales in total: wait for more results, as the reads are too thin to act on."
   - "You only want a Meta test layout from a brief you already have: use the Ad test brief writer or the Ad test budget calculator."
 you_give:

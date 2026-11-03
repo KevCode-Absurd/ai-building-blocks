@@ -15,7 +15,7 @@ when:
   - A good customer has hit a rough patch and you want to be paid without losing them.
   - Your reminders either sound like threats or like apologies.
 not_for:
-  - "The invoice is in dispute, or the customer says the work was wrong: use the Turn a dispute into a checked demand letter draft workflow."
+  - "The invoice is in dispute, or the customer says the work was wrong: use the Dispute demand letter draft writer workflow."
   - "You have not billed the customer yet: send the invoice first, with a plain note of the due date."
   - "You want to sue or hand the debt to a collector: talk to a lawyer or a debt collection service."
 you_give:

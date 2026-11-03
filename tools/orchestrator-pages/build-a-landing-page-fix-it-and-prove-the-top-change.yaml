@@ -15,9 +15,9 @@ when:
   - You have a list of page fixes and no way to tell which ones work.
   - You get enough visits to test (a few hundred a week or more).
 not_for:
-  - "You get under a few hundred visits a week: the test would take too long, so use the Landing page auditor on its own and fix the top items by hand."
-  - "You only want a review of a page you already have: use the Landing page auditor."
-  - "You want to read test counts you already have: use the A/B test verdict maker."
+  - "You get under a few hundred visits a week: the test would take too long, so use the Landing page conversion reviewer on its own and fix the top items by hand."
+  - "You only want a review of a page you already have: use the Landing page conversion reviewer."
+  - "You want to read test counts you already have: use the A/B test results analyst."
 you_give:
   - Your offer, price and buyer
   - What counts as success on the page (a sale, a signup or a call)

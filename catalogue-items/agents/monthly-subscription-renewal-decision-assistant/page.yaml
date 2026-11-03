@@ -18,9 +18,9 @@ when:
   - A team's use of a tool has dropped or jumped.
   - You review software costs every month and want to see only the changes.
 not_for:
-  - You want a first sweep of every subscription for duplicates. Use the Find duplicate and unused business subscriptions workflow.
+  - You want a first sweep of every subscription for duplicates. Use the Business subscription usage auditor workflow.
   - You need one contract checked in depth. Use the Vendor agreement status checker.
-  - You sell subscriptions and want to know why customers cancel. Use the Subscription churn watcher.
+  - You sell subscriptions and want to know why customers cancel. Use the Subscriber cancellation and retention reviewer.
 you_give:
   - Your subscription bills or card statement lines for the month
   - Renewal dates and notice periods from your contracts or vendor accounts

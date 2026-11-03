@@ -17,8 +17,8 @@ when:
   - You want to check the paper against what reviewers look for before submitting.
   - You are a first-time author and want a clear section plan.
 not_for:
-  - "You are writing a NeurIPS, ICML or ICLR paper: use the AI research paper writer, which covers general machine learning papers."
-  - "You need to check your citations: use the AI research paper writer, which has the citation check. This skill does not bundle it."
+  - "You are writing a NeurIPS, ICML or ICLR paper: use the Machine learning research paper writer, which covers general machine learning papers."
+  - "You need to check your citations: use the Machine learning research paper writer, which has the citation check. This skill does not bundle it."
   - "You only need LaTeX formatting help: use the official template for your venue. This skill does not set up formatting."
 you_give:
   - A description of your system and what is new (a written description is enough, no code needed)

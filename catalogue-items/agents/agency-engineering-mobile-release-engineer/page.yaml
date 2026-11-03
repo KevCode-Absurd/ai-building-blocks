@@ -20,9 +20,9 @@ when:
   - A signing certificate is close to expiring, or one person holds all the keys.
   - You ship each update by hand and want a plan that makes every release the same.
 not_for:
-  - You release a website or a back-end service, not an app. Use the Safe release planner, or the DevOps Automator agent for a build and deploy pipeline.
-  - A bad version is live right now. Use the Incident Response Commander agent, and ask someone with store access to pause the rollout first.
-  - You build with Expo and want builds made and sent for you. Use the Mobile app release shipper.
+  - You release a website or a back-end service, not an app. Use the Release safety planner, or the Deployment pipeline designer for a build and deploy pipeline.
+  - A bad version is live right now. Use the Incident response coordinator, and ask someone with store access to pause the rollout first.
+  - You build with Expo and want builds made and sent for you. Use the Expo app deployment engineer.
 you_give:
   - The app name, whether it is iOS, Android or both, and what changed in this version
   - How you sign and ship today, and who holds the keys (never paste passwords or key files)

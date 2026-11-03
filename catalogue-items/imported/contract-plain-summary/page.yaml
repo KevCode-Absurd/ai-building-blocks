@@ -19,7 +19,7 @@ not_for:
   - "You have not had the contract reviewed yet: get a full review first, or ask a lawyer to read it, then come back with the review notes."
   - "The summary will go to a counterparty, a vendor or a public channel: remove the legal-only notes first, or ask your lawyer to check what is safe to share."
   - "You need advice on whether to sign or how to negotiate: talk to a lawyer, because this only shortens a review that already exists."
-  - "You have a contract nobody has reviewed and want a first plain-words read with clauses to watch: use the Plain-words contract summary."
+  - "You have a contract nobody has reviewed and want a first plain-words read with clauses to watch: use the Contract plain-language summary writer."
 you_give:
   - The contract text
   - Notes from a prior review (optional)

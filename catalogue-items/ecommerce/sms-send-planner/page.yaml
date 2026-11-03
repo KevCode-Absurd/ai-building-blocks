@@ -19,7 +19,7 @@ when:
   - You want to know whether sending more texts would earn more, without guessing.
 not_for:
   - "You have no list of people who clearly opted in to texts: first collect consent, or use email instead."
-  - "You have one small sale that an email can carry: use the Email campaign calendar planner."
+  - "You have one small sale that an email can carry: use the Monthly email campaign calendar planner."
   - "You want the wording of each text or a check of a finished text: write it with the text message writer skill and review it with the SMS send checker."
 
 you_give:

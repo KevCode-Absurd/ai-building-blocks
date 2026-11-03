@@ -15,7 +15,7 @@ when:
   - You want one voice across languages.
   - You need subtitles that match the final audio exactly.
 not_for:
-  - "You only have notes, not a final script: write the script first (the Read-aloud speech shaper helps with a speech), then come back."
+  - "You only have notes, not a final script: write the script first (the Read-aloud speech editor helps with a speech), then come back."
   - "You only want captions on a finished video: use the Video caption maker in your brand font."
   - "You have no native speaker for a language: skip that language, since this needs a person to check each dub before subtitles."
 you_give:

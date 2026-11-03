@@ -19,7 +19,7 @@ when:
   - You have a microphone's datasheet and need correct sound levels.
 not_for:
   - "You need live audio processing in a streaming loop: use the Live audio processing builder instead."
-  - "You want to record from a microphone or run live calibration: use the Audio streamer code writer instead."
+  - "You want to record from a microphone or run live calibration: use the MATLAB audio playback and recording code writer instead."
   - "You do not have MATLAB with Audio Toolbox: ask an audio engineer or use a free loudness meter for a quick check."
 you_give:
   - Your sound file or recording details

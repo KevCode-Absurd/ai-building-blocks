@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your ad is new and has under a week of data: wait for more numbers, or use the Ad opening writer and reviewer for a first launch."
   - "You want to check an ad against Meta rules before it goes live: use the Meta ad policy checker."
-  - "You want a full rework with every check, not only new openings: use the Fatigued ad reviver."
+  - "You want a full rework with every check, not only new openings: use the Fading ad refresh planner."
 you_give:
   - Spend and return by week
   - The ad's script or transcript

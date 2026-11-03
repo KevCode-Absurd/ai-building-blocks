@@ -15,7 +15,7 @@ when:
   - Renewals come up without anyone knowing whether the account is healthy.
   - You want one early sign that tells you, in the first month, whether a customer will stay.
 not_for:
-  - "You only want to know who has already cancelled: use the Subscription churn watcher."
+  - "You only want to know who has already cancelled: use the Subscriber cancellation and retention reviewer."
   - "You sell one-off orders with no plan or renewal: use a simple repeat-buyer list in a spreadsheet instead."
   - "You have under about 4 weeks of usage data: wait and gather it first, because there is no trend to read yet."
 you_give:

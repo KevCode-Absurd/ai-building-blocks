@@ -19,7 +19,7 @@ when:
   - A friend read your pitch and said "I would not believe that line", and you need to know which lines are weak.
 not_for:
   - You only need to check one slide or one paragraph. Use the Unsupported claim spotter on its own.
-  - You want to judge the shape of the deck, such as slide count and font size. Use the Pitch deck 10/20/30 checker.
+  - You want to judge the shape of the deck, such as slide count and font size. Use the Pitch deck presentation reviewer.
   - You have no records yet. Gather them first. The workflow will only list what is missing.
   - You want legal, tax or accounting advice on what to disclose. Ask a qualified person.
 you_give:

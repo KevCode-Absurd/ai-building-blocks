@@ -21,7 +21,7 @@ when:
 not_for:
   - "The story must be told in first person by a real customer or founder: use the Story image ad writer."
   - "Your buyers already know the answer exists and only need a reason to pick you: use the Fact-based ad copy writer."
-  - "You need a short opening line or headline, not a long story: use the Ad first line writer and scorer or the Ad headline writer."
+  - "You need a short opening line or headline, not a long story: use the Ad opening writer and reviewer or the Ad headline writer."
   - "You have no buyer note or product facts yet: build a short brief first with the Buyer brief writer."
 
 you_give:

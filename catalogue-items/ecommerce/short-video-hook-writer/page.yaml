@@ -19,9 +19,9 @@ when:
   - You are about to film a batch and want to pick which openings to shoot.
 not_for:
   - "You want long videos or horizontal video: write the script yourself or ask a video editor, because this only plans the first line and first shot of a short vertical clip."
-  - "You want the first line of a static ad: use the Ad first line writer and scorer."
+  - "You want the first line of a static ad: use the Ad opening writer and reviewer."
   - "Your product can't be filmed, such as a service with nothing to show: plan a simple picture first, or work with a person who shoots video."
-  - "You want a quick first pass with fewer checks: use the Video opening line batch writer."
+  - "You want a quick first pass with fewer checks: use the Video opening hook writer."
   - "You already have hooks and want them scored, with rewrites for the weak ones: use the Video hook scorer."
 
 you_give:

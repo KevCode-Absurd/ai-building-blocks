@@ -31,7 +31,7 @@ when:
   - You are adding an outfit or avatar shop to your own experience and want the HumanoidDescription steps.
 not_for:
   - You want the game itself designed, with goals and rewards. Use the Roblox Experience Designer agent.
-  - You want server scripts for saving, combat or security. Use the Roblox Systems Scripter agent.
+  - You want server scripts for saving, combat or security. Use the Roblox systems programmer.
   - You want a final yes or no on moderation. Only Roblox can give that.
 you_give:
   - What the item is and where it will be used, such as a hat for sale or an outfit shop in your game

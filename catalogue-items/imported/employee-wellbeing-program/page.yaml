@@ -20,8 +20,8 @@ when:
 not_for:
   - "Someone may be in danger or may harm themselves: contact local emergency services or their clinician now. Do not use an AI plan."
   - "You want to diagnose or assess one person: that is for a qualified clinician, not HR or an AI."
-  - "One person needs a workplace adjustment: use the Workplace accommodation process builder or the Prepare a workplace accommodation conversation prompt."
-  - "You want to find out how the whole team feels first: use the Employee survey designer."
+  - "One person needs a workplace adjustment: use the Workplace accommodation planner or the Workplace accommodation discussion planner prompt."
+  - "You want to find out how the whole team feels first: use the Employee feedback survey planner."
 you_give:
   - Your team size and the type of work
   - Known pressures, such as long hours or a recent restructure

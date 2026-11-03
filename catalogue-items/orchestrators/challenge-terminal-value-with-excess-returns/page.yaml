@@ -18,10 +18,10 @@ when:
   - You assume a company keeps earning above its cost of capital after the forecast ends.
   - A reviewer asks if your terminal growth rate fits your reinvestment.
 not_for:
-  - You want to connect the forecast's growth to the investment it needs. Use the Link operating growth to terminal reinvestment workflow. This one tests a terminal value you already have.
-  - You want to stress many valuation assumptions at once. Use the Review equity valuation sensitivity assumptions workflow.
+  - You want to connect the forecast's growth to the investment it needs. Use the Growth and reinvestment spreadsheet modeller workflow. This one tests a terminal value you already have.
+  - You want to stress many valuation assumptions at once. Use the Equity valuation scenario reviewer workflow.
   - The company has no stable end state, such as an early-stage business with negative profit. The checks assume a stable year.
-  - You only need the implied reinvestment from one terminal value. Use the Implied terminal reinvestment schedule.
+  - You only need the implied reinvestment from one terminal value. Use the Business terminal value assumption checker.
 you_give:
   - Invested capital and operating profit after tax (NOPAT) for the forecast years (from your model and the filings)
   - Evidence for any lasting competitive advantage, such as filings or market data (optional)

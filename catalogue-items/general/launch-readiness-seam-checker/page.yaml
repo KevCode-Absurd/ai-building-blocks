@@ -19,7 +19,7 @@ when:
   - Several teams own parts of the same release and no one owns the joins.
 not_for:
   - "You are making one small change with no joins to other parts: use a simple test checklist instead."
-  - "You want to design what the system shows when a join fails: use the Error warning and recovery designer."
+  - "You want to design what the system shows when a join fails: use the Error alarms and recovery planner."
   - "You want a person to run the launch day itself: use a project manager and a written launch plan."
 
 you_give:

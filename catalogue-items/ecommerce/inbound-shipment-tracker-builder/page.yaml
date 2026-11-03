@@ -18,7 +18,7 @@ when:
   - A warehouse receipt once came in short and you only found out weeks later.
   - You are choosing a freight forwarder and want quotes side by side.
 not_for:
-  - "You track shipments that are not store purchase orders: use the shipment-tracking planner, the general version."
+  - "You track shipments that are not store purchase orders: use the Shipment tracking planner, the general version."
   - "You have one small parcel on its way: a carrier's tracking link and a note to your team is enough."
   - "You need customs or duty checked: ask a customs broker, because this does not check them."
 

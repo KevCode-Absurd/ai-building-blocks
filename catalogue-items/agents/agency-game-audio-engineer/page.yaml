@@ -17,11 +17,11 @@ when:
   - You want music that gets tenser in a fight and calms down after, without hard cuts.
   - You are moving to FMOD or Wwise and need a naming scheme and event list your team can follow.
 not_for:
-  - "You want to mix, master or clean a finished audio file: use a person with an audio editor, or the Video audio finishing plan for video."
-  - "You want a prompt to make a music track or sound with an AI tool: use the Suno song and music bed prompt writer."
+  - "You want to mix, master or clean a finished audio file: use a person with an audio editor, or the Video audio finishing planner for video."
+  - "You want a prompt to make a music track or sound with an AI tool: use the Suno music prompt writer."
   - "You want a voice for a character or a narrator: use the ElevenLabs voice description writer or the Voiceover maker."
   - "You need music licensing or legal advice on samples."
-  - "You want game design, not sound: use the Game Designer agent."
+  - "You want game design, not sound: use the Gameplay designer."
 you_give:
   - The game's genre and a short description of how it plays
   - The engine and the sound tool, such as Unity, Unreal, Godot, FMOD, Wwise or the engine's own audio

@@ -19,8 +19,8 @@ when:
   - You want a growth plan template for each person on the team.
 not_for:
   - "You need pay ranges for each level: use the Pay band builder."
-  - "You want the skills for each role with interview questions: use the Role skills framework builder."
-  - "You want to pair juniors with mentors: use the Mentoring program builder."
+  - "You want the skills for each role with interview questions: use the Job skills and level planner."
+  - "You want to pair juniors with mentors: use the Mentoring and coaching program builder."
   - "You want to plan who covers a key role if someone leaves: use the Succession plan builder."
 you_give:
   - The job family, such as sales or engineering

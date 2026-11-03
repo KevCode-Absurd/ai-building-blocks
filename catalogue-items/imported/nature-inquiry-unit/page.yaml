@@ -43,7 +43,7 @@ next:
   - nature-inquiry-cycle
 not_for:
   - "You want a term-long cycle for children aged 5 to 12 with set stages. Use the Local nature inquiry cycle planner."
-  - "Your goal is a calmer classroom with plants and light. Use the Classroom nature layout planner."
+  - "Your goal is a calmer classroom with plants and light. Use the Nature-based classroom layout planner."
   - "You want a project that keeps going after your class moves on. Use the Plan a nature project that can continue workflow."
 output_sample:
   input:

@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store has no login, sign-up or checkout of its own: skip this and rely on your platform's own bot settings."
   - "You are a small hosted store with little traffic: switch on your platform's bot protection and set alerts first. Come back when you see real abuse."
-  - "You only want to decide which AI readers may copy your site text: use the AI crawler access editor."
+  - "You only want to decide which AI readers may copy your site text: use the Shopify AI crawler access editor."
 
 you_give:
   - Your traffic sources and any bot or firewall tool already in place

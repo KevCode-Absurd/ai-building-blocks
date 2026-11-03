@@ -16,8 +16,8 @@ when:
   - You want a plan that names the first customers and the power you would hold.
 not_for:
   - "You only want a quick test of a product idea: use the Seven-question startup scorer first."
-  - "You already sell in this market and want to know which edge you hold: use the Business power tester."
-  - "You need a rollout plan for markets you have picked: use the Market expansion sequencer."
+  - "You already sell in this market and want to know which edge you hold: use the Competitive advantage tester."
+  - "You need a rollout plan for markets you have picked: use the Market expansion roadmap planner."
 you_give:
   - The industry you would enter and what you would offer
   - What you know about the rivals, the buyers (who decides, whose word they take) and the suppliers

@@ -13,7 +13,7 @@ when:
   - You want to know how big a cushion to keep.
 not_for:
   - "You have no cash or must-pay cost figures yet: work those out first, or the sums will have gaps."
-  - "Your plan has many debts or complex terms: use the Room for error plan checker for the full version."
+  - "Your plan has many debts or complex terms: use the Business plan risk buffer reviewer for the full version."
   - "You want advice on what to buy, sell or borrow: ask a licensed financial adviser."
 you_give:
   - "Your plan: income, costs and debts"

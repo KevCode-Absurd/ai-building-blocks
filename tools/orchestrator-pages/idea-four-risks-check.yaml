@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your product is finished and you already have customer data: use a usage analysis of what people really do, or ask your analyst."
   - "You want to screen one feature request, not a whole roadmap: use the Feature request screener."
-  - "You only want a small test for one idea: use the Smallest test picker."
+  - "You only want a small test for one idea: use the Minimum experiment planner."
 you_give:
   - The idea, the problem it solves and who it is for
   - What you already know, such as customer words, tests, costs and limits

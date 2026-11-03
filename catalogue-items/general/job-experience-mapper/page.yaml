@@ -18,9 +18,9 @@ when:
   - Rivals match your features and price, and you want something harder to copy.
   - You are about to redo set-up or delivery and want to know which moment to fix first.
 not_for:
-  - "You have no job spec and no customer words. Write the spec first with the Job spec writer. This skill needs a job to design for."
+  - "You have no job spec and no customer words. Write the spec first with the Customer task definition writer. This skill needs a job to design for."
   - "You are deciding which features to keep or drop. Use the Feature cutting planner."
-  - "You want the numbers that show customers making progress. Use the Customer progress measure picker."
+  - "You want the numbers that show customers making progress. Use the Customer success metric planner."
 you_give:
   - A job spec for one situation, pasted as it is. The Job spec writer makes one.
   - Buyer stories, such as a map from the Switch story mapper (optional)

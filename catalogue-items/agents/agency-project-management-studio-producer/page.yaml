@@ -19,8 +19,8 @@ when:
   - A client or boss asks "what can your team take on?" and you need a plan with reasons.
   - A new project lands and you want to see what it pushes out.
 not_for:
-  - You need the week-by-week plan for one project. Use the Project delivery agent.
-  - You want to set up your studio's daily processes, tools and roles. Use the Studio Operations agent.
+  - You need the week-by-week plan for one project. Use the Project delivery manager.
+  - You want to set up your studio's daily processes, tools and roles. Use the Studio operations planner.
   - You need a signed budget, a contract or a legal check. Take those to your finance lead or a lawyer.
 you_give:
   - Your list of projects, each with its goal, a rough budget and a due date

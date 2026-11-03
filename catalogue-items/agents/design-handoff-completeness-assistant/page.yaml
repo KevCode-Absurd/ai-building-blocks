@@ -18,9 +18,9 @@ when:
   - A component's behavior changed, such as a new focus or keyboard rule, and the old handoff is out of date.
   - You are about to hand a Figma component to developers and want one last check for gaps.
 not_for:
-  - You want a whole screen reviewed for quality. Use the New screen design reviewer.
-  - You want your whole product checked for drift from your design rules. Use the Monthly design system keeper.
-  - You want a built site tested for accessibility. Use the Quarterly accessibility keeper.
+  - You want a whole screen reviewed for quality. Use the Screen usability reviewer.
+  - You want your whole product checked for drift from your design rules. Use the Design rule consistency reviewer.
+  - You want a built site tested for accessibility. Use the Website accessibility reviewer.
   - You have no component design yet. Design it first, then run this.
   - You want developers messaged for you. It writes the request and stops.
 you_give:

@@ -17,7 +17,7 @@ when:
 not_for:
   - "You already have a draft and want it checked: use the Email draft reviewer."
   - "You are writing to a cold list or a first contact: write a short personal note yourself, because this skill assumes people agreed to hear from you."
-  - "You want to clean up AI-sounding copy: use the Anti-AI-slop copy editor."
+  - "You want to clean up AI-sounding copy: use the AI-style wording editor."
 you_give:
   - The campaign type and goal (promotion, launch, value or restock)
   - Product or topic facts, including any real deadline or stock limit

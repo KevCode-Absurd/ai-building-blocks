@@ -47,7 +47,7 @@ how_to_use:
     own.
 not_for:
   - You already have your facts and want the letter written. Use the Demand letter drafter.
-  - Someone is copying your work and you want them to stop. Use the Cease-and-desist letter helper.
+  - Someone is copying your work and you want them to stop. Use the Cease-and-desist letter drafter.
   - You only need to chase a late invoice. Use the Payment reminder letter writer.
 next: [demand-letter-drafter]
 output_sample:

@@ -18,8 +18,8 @@ when:
   - A customer date depends on this shift and you need to know where it is at risk.
   - You hand the shift to another lead and want the blockers and decisions in writing.
 not_for:
-  - You run a restaurant or kitchen shift. Use the Prepare a restaurant shift handover workflow.
-  - A team member is away for days or weeks. Use the Prepare a team absence handover workflow.
+  - You run a restaurant or kitchen shift. Use the Restaurant shift handover and issue tracker workflow.
+  - A team member is away for days or weeks. Use the Team absence handover planner workflow.
   - A disruption, such as a storm or strike, hits the whole site. Use the Plan staff coverage during a disruption workflow.
   - You need machine speed or output worked out. Use your planning system, because this does not calculate throughput.
 you_give:

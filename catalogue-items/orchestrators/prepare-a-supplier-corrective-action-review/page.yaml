@@ -18,8 +18,8 @@ when:
   - An effectiveness review date is close and the evidence sits in five different places.
   - You take over a supplier file and need the open issues, with proof, in one document.
 not_for:
-  - You want a record that updates as each new lot arrives. Use the Supplier correction evidence review assistant.
-  - You are choosing between suppliers or comparing quotes. Use the Supplier quote comparer.
+  - You want a record that updates as each new lot arrives. Use the Supplier corrective action reviewer.
+  - You are choosing between suppliers or comparing quotes. Use the Supplier quote reviewer.
   - You have one defect and no inspection records. A short email asking the supplier for their evidence is enough.
   - The problem is a safety, recall or regulator question. Take it to the qualified person. This workflow does not judge safety.
 you_give:

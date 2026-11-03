@@ -19,7 +19,7 @@ when:
   - You want to know when to start cutting costs before cash gets tight.
 not_for:
   - You want a full three to five year model in a spreadsheet. Use the Startup financial model builder.
-  - You only want the month your cash runs out, with odds. Use the Startup runway forecaster.
+  - You only want the month your cash runs out, with odds. Use the Startup cash forecast builder.
   - You need audited accounts, tax advice or legal review of a term sheet. Use an accountant or lawyer.
 you_give:
   - Monthly revenue, costs and cash balance for the last 6 to 12 months

@@ -20,9 +20,9 @@ when:
   - You want your servers described in code, such as Terraform, so they can be rebuilt the same way.
 not_for:
   - You want goals, error budgets and on-call alerts for a service. Use the SRE agent.
-  - You want branch names, commit rules and pull request checks. Use the Git workflow agent.
-  - You want to keep existing servers healthy and patched. Use the Infrastructure Maintainer agent.
-  - You want your cloud bill reviewed. Use the FinOps Engineer agent.
+  - You want branch names, commit rules and pull request checks. Use the Git workflow planner.
+  - You want to keep existing servers healthy and patched. Use the Infrastructure maintenance planner.
+  - You want your cloud bill reviewed. Use the Cloud cost analyst.
   - You want it to deploy, install or change live systems. It writes the plan. Your engineers apply it on a test environment first.
 you_give:
   - Where your code lives and which CI tool you use or want, such as GitHub Actions or GitLab CI.

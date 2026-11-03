@@ -20,7 +20,7 @@ when:
 not_for:
   - "You work alone, or your course already sets the team rules: follow the course rules as they are."
   - "You only need the action items from one meeting: use the Action item tracker."
-  - "You are starting a project for a paying client: use the Prepare a clear client project kickoff workflow."
+  - "You are starting a project for a paying client: use the Client project kickoff planner workflow."
 you_give:
   - The assignment brief and marking rubric, or the list of deliverables (from your course page)
   - When each person can work, such as class times and busy weeks (ask each teammate)

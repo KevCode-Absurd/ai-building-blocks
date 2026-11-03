@@ -20,8 +20,8 @@ when:
 not_for:
   - You want the best mix. This tests a mix you choose. It does not find the best one.
   - You have more than two products, or more than one limit, such as a machine and a material. This covers two products and one bottleneck, so other limits stay open questions.
-  - You want cost per good unit after waste. Use the Manufacturing yield cost bridge first, then bring the contribution here.
-  - Your limit is billable staff hours in a service team. Use the Service utilization margin builder.
+  - You want cost per good unit after waste. Use the Manufacturing yield and unit cost calculator first, then bring the contribution here.
+  - Your limit is billable staff hours in a service team. Use the Service hours and margin calculator.
 you_give:
   - The units you plan to make of each of two products in the period (your plan)
   - The contribution per unit for each, which is price less the costs that change with each unit (from your costing)

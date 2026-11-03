@@ -17,9 +17,9 @@ when:
   - A colleague who teaches English as an additional language asks what the language demand of your task is.
 not_for:
   - Your lesson only needs recall of facts, such as dates or definitions. Write simple questions yourself.
-  - You already have a task and only want its hard language found. Use the Task language demand checker.
-  - You already know the language blocks and only want help added. Use the Task scaffold adder for language learners.
-  - You need a whole lesson, not one task. Use the Build a lesson from explanation to practice and a quiz workflow.
+  - You already have a task and only want its hard language found. Use the Student task language reviewer.
+  - You already know the language blocks and only want help added. Use the English learner task support planner.
+  - You need a whole lesson, not one task. Use the Lesson and recall quiz planner workflow.
 you_give:
   - The subject and topic
   - The thinking skill, such as weighing evidence, spotting bias or testing an argument

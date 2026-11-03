@@ -16,7 +16,7 @@ when:
   - You have a candidate metric and want to test it.
   - Revenue is your headline and you suspect it is the wrong guide.
 not_for:
-  - "You want to set goals or targets: use the OKR writer, which sets a goal on a metric. Pick the metric here first."
+  - "You want to set goals or targets: use the OKR writer and review planner, which sets a goal on a metric. Pick the metric here first."
   - "You need a full list of every number to track: ask a finance or data person for a reporting plan."
   - "You want to judge ad or campaign results: use the numbers inside your ad platform, not a company-wide metric."
 you_give:

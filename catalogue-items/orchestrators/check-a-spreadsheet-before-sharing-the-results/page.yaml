@@ -18,10 +18,10 @@ when:
   - The totals in your sheet do not match the raw export or your accounting software.
   - A manager will read the headline numbers and will not open the formulas.
 not_for:
-  - You want slides from a spreadsheet. Use Turn a messy spreadsheet into a clean slide deck.
-  - You need a monthly workbook and deck built every month. Use Build a monthly Excel and PowerPoint update.
-  - You need your analysis written up so someone else can repeat it. Use Document a dataset analysis for reproduction.
-  - You want to match two lists, such as bank lines to your books. Use Match bank to books and issue a clean P&L.
+  - You want slides from a spreadsheet. Use Spreadsheet cleanup, data-check and slide-deck builder.
+  - You need a monthly workbook and deck built every month. Use Excel report and PowerPoint update writer.
+  - You need your analysis written up so someone else can repeat it. Use Data analysis repeatability reviewer.
+  - You want to match two lists, such as bank lines to your books. Use Bank-to-ledger reconciliation and financial statement preparer.
 you_give:
   - Your workbook (.xlsx, .csv or similar)
   - The raw data or source reports behind it, if the workbook uses them

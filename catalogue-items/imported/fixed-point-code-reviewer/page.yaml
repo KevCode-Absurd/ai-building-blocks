@@ -16,8 +16,8 @@ when:
   - You want to compare double, single and fixed versions of one algorithm.
   - You inherited fi code and do not know if it is written well.
 not_for:
-  - "Your code only uses plain integer types like int8 or uint16: no fi objects are involved, so a normal MATLAB code review is enough."
-  - "Your algorithm is pure floating point with no fixed-point plan: ask a colleague or your AI for a general MATLAB code review."
+  - "Your code only uses plain integer types like int8 or uint16: no fi objects are involved, so a normal MATLAB code reviewer is enough."
+  - "Your algorithm is pure floating point with no fixed-point plan: ask a colleague or your AI for a general MATLAB code reviewer."
   - "You set up fixed-point in Simulink block dialogs: use the Fixed-Point Tool that comes with Simulink."
 you_give:
   - MATLAB code that uses fi, fimath or numerictype

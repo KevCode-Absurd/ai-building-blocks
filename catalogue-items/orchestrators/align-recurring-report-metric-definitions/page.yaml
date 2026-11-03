@@ -20,7 +20,7 @@ when:
 not_for:
   - You have one report and no conflict. Use the Spreadsheet checker to test its formulas.
   - You need a clear definition for one new metric. Use the Metric definition writer.
-  - You want a new weekly report built from scratch. Use the Build a weekly KPI report with a forecast and dashboard workflow.
+  - You want a new weekly report built from scratch. Use the Weekly metrics report and dashboard builder workflow.
   - No one owns the metric. The AI can propose a definition, but a person must approve it.
 you_give:
   - Two or more recurring reports that show different numbers for the same metric

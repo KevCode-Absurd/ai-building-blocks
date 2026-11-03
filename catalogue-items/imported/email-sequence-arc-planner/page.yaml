@@ -18,10 +18,10 @@ when:
   - You are planning a sales sequence for a new offer and need the order.
   - You have a draft sequence and want each message to have one clear job.
 not_for:
-  - "You want the full emails written: use the email sequence writer after this plan."
+  - "You want the full emails written: use the Email sequence and timing writer after this plan."
   - "You are planning a launch with fixed dates and resends: use the launch email sequence planner."
   - "You need a one-off message like a receipt or a password reset: use the transactional email builder."
-  - "You only want a posting plan for social posts: use the give before ask sequence planner."
+  - "You only want a posting plan for social posts: use the Relationship outreach planner."
 you_give:
   - The goal of the sequence, such as a trial that turns into a paid plan
   - Who the reader is and what they care about

@@ -18,7 +18,7 @@ when:
 not_for:
   - "You have a one-off question about your numbers: ask your AI directly, or pull the figure from your accounting tool."
   - "You want a live dashboard that updates by itself: use a dashboard tool such as Looker Studio or Power BI."
-  - "You want the wider picture of how your business is doing: use business-snapshot-writer instead."
+  - "You want the wider picture of how your business is doing: use Business snapshot writer instead."
 you_give:
   - Plain-words description of the report
   - Data from a connected tool or an uploaded file

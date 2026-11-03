@@ -25,7 +25,7 @@ not_for:
   - "You want your whole account reviewed: ask a person who knows social media, or look at your platform's own analytics."
   - "You cannot get impressions for the post: the skill can only read the writing, so ask a friend for honest feedback instead."
   - "You want a new post written from scratch: write the draft yourself or ask your AI for a plain first draft."
-  - "You want a quick verdict on one flopped post with fewer checks: use the Post flop reason finder."
+  - "You want a quick verdict on one flopped post with fewer checks: use the Social post performance reviewer."
 you_give:
   - Post text
   - Impressions, likes, comments and reposts

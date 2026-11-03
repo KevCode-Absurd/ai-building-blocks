@@ -21,7 +21,7 @@ not_for:
   - You sell one-off items like a rug or a shirt. A cancel flow needs a natural repeat order, so start with a simple after-purchase email instead.
   - Your portal cannot branch by reason or show a splash screen. Ask your portal's support what it can do first, or build the flow by hand.
   - You want a full audit of why subscribers leave over time. Ask a person who knows your numbers to review your cancel data first.
-  - "You want a quick first pass with fewer checks: use the Cancel reason save planner."
+  - "You want a quick first pass with fewer checks: use the Subscription cancellation response planner."
 
 you_give:
   - The reasons customers give today, or a survey

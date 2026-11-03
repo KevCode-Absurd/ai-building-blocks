@@ -16,7 +16,7 @@ when:
   - You want one number to judge the week by, and permission to skip the rest.
 not_for:
   - "You sell one-off products with no repeat billing: use a plain sales report from your shop or accounting tool."
-  - "You want a deep read on why customers cancel: use the Subscription churn watcher, and bring your cancel list with dates and plans."
+  - "You want a deep read on why customers cancel: use the Subscriber cancellation and retention reviewer, and bring your cancel list with dates and plans."
   - "You have no billing export and no customer list yet: start by writing down each customer's plan, price and start date in a spreadsheet."
 you_give:
   - Last week's billing export with plan, price, start, cancel and payments per customer, or a read-only billing connection

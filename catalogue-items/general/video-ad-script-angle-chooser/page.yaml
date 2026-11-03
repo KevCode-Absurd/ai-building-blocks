@@ -15,7 +15,7 @@ when:
   - You have a lot of facts and do not know which to lead with.
   - Your last batch of scripts all sounded alike.
 not_for:
-  - "You want the full version with every check: use the Video ad script type picker."
+  - "You want the full version with every check: use the Video ad format planner."
   - "You need the script written out in full: use the Phone video ad scriptwriter after you pick your types."
   - "You have no real facts about your buyer or offer yet: gather a few customer quotes or review lines first."
 you_give:

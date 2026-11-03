@@ -20,8 +20,8 @@ when:
 not_for:
   - "Your agent only reads and drafts and never acts. There is nothing to approve."
   - "You want a hard limit on what an agent can spend. Use the Agent spending cap builder. A cap stops spend. An approval asks a person."
-  - "You want the agent to learn from the answers people give. Use the Agent feedback learning builder."
-  - "You want to plan how Slack messages reach the right agent. Use the Scoped Slack agent router builder."
+  - "You want the agent to learn from the answers people give. Use the Agent feedback review system planner."
+  - "You want to plan how Slack messages reach the right agent. Use the Slack agent message router builder."
   - "You want it to post the request or approve it for you. It drafts the rules and the code. A person approves."
 you_give:
   - "The actions your agent may propose, in one line each"

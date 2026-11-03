@@ -19,8 +19,8 @@ when:
   - An auditor asks for a schedule that traces pool interest back to balances and rates.
 not_for:
   - You need to prove the internal rates are fair for tax. This gives the arithmetic only. Ask a tax or transfer pricing adviser.
-  - You want to check bank fees and charges on the pool account. Use the Bank fee reconciliation checker.
-  - You want to split a shared cost across teams, not interest. Use the Shared service activity cost allocator.
+  - You want to check bank fees and charges on the pool account. Use the Bank service fee checker.
+  - You want to split a shared cost across teams, not interest. Use the Shared service cost calculator.
 you_give:
   - Each entity's deposit and borrowing balance for the period (from your treasury report or bank statement)
   - The agreed deposit rate and borrow rate, each per year (from your pool agreement or rate memo)

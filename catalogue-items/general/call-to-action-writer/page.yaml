@@ -15,10 +15,10 @@ when:
   - People read your ad and do not click, call or reply.
   - You are not sure whether to ask for a purchase or a smaller step.
 not_for:
-  - "You need a brand awareness ad with no offer to act on: there is nothing to ask for, so write the ad first with the Ad first line writer and scorer."
+  - "You need a brand awareness ad with no offer to act on: there is nothing to ask for, so write the ad first with the Ad opening writer and reviewer."
   - "You need the page the reader lands on after the click: use the Ad-matched landing page writer."
-  - "You want a closing sum-up before the ask: use the Summing-up paragraph writer."
-  - "You want a quick first pass with fewer checks: use the Ad ask line writer."
+  - "You want a closing sum-up before the ask: use the Closing paragraph writer."
+  - "You want a quick first pass with fewer checks: use the Ad call to action writer."
 you_give:
   - Your ad draft
   - "Your offer: price, guarantee wording, trial or sample terms, dates and limits"

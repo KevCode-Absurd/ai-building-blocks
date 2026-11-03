@@ -30,10 +30,10 @@ when:
   - You are about to launch and need a plan that covers support, marketing and rollback.
 not_for:
   - You only want a short requirements document from a few lines. Use the Product requirements writer.
-  - You need to order tickets for the next sprint. Use the Sprint Prioritizer agent.
-  - You have raw customer feedback to sort first. Use the Feedback Synthesizer agent, then bring its themes here.
+  - You need to order tickets for the next sprint. Use the Sprint priority planner.
+  - You have raw customer feedback to sort first. Use the Product feedback analyst, then bring its themes here.
   - You need engineering estimates, legal review or financial forecasts. Ask the engineers, a lawyer or your finance lead.
-  - Your request is still vague. Use the Requirements question asker to sharpen it before you start.
+  - Your request is still vague. Use the Requirements interviewer to sharpen it before you start.
 you_give:
   - The idea or request, and who asked for it
   - Who the users are and what they struggle with now

@@ -17,7 +17,7 @@ when:
 not_for:
   - "You need a checkout or a landing page sign-up flow: use your shop or page builder, and ask a person who builds pages."
   - "You have no offer yet: work out the offer and its real terms first, then come back with them."
-  - "You want to judge the tone of finished copy: use the Anti-AI-slop copy editor."
+  - "You want to judge the tone of finished copy: use the AI-style wording editor."
 you_give:
   - Your current coupon or form text and fields
   - The offer with its exact terms

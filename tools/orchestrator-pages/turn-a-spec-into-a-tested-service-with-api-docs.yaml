@@ -81,7 +81,7 @@ improve:
 not_for:
   - "You already have a service and want its bugs found: use Bug and security code reviewer."
   - "Your routes exist and you only need documents: use API spec writer."
-  - "Your spec is already an OpenAPI file and you want an app from it: use Build an app from an OpenAPI spec."
+  - "Your spec is already an OpenAPI file and you want an app from it: use OpenAPI app builder."
 output_sample:
   input:
     - A written spec of what the service does, who uses it and what data it keeps

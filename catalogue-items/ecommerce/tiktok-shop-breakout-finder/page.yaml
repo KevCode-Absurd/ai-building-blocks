@@ -18,7 +18,7 @@ when:
   - A product's graph looks good and you want to know if it is an early breakout or already fading.
   - Your last tests lost money and you want to know if your revenue band is set wrong.
 not_for:
-  - "You want to judge margin and landed cost: use the winning product scorer, then come back here for the graphs."
+  - "You want to judge margin and landed cost: use the Product idea viability scorer, then come back here for the graphs."
   - "You want to see who already runs Meta ads for a product: use the competitor saturation checker, or search the Meta Ad Library yourself."
   - "You have no graphs or video dates from a TikTok Shop research tool: collect that data first, because this skill will not guess it."
 

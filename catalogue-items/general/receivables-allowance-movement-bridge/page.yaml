@@ -22,8 +22,8 @@ when:
 
 not_for:
   - "You want to know whether the allowance is big enough. That needs aging, loss rates and collateral that this roll-forward does not use."
-  - "You want to size how much a lender will advance against invoices. Use the Receivables borrowing base builder."
-  - "You want to check how much customer credit you are exposed to. Use the Credit exposure limit checker."
+  - "You want to size how much a lender will advance against invoices. Use the Customer invoice borrowing limit calculator."
+  - "You want to check how much customer credit you are exposed to. Use the Credit limit exposure checker."
   - "You want to see whether profit turned into cash. Use the Cash versus earnings checker."
 
 you_give:

@@ -19,7 +19,7 @@ when:
   - A rival changed its message and you need to respond.
 not_for:
   - You want one tested position with buyer reasons and a test plan. Use the SaaS market position adviser.
-  - You want to see rivals on a map and find one open corner. Use the Positioning grid builder.
+  - You want to see rivals on a map and find one open corner. Use the Competitor positioning mapper.
   - You want a full positioning plan with an ideal buyer, battlecards and launch steps. Use the Go-to-market positioning planner.
 you_give:
   - What your product does and what makes it different

@@ -18,9 +18,9 @@ when:
   - You're writing the words on an ad image and want them to add to the picture, not describe it.
   - Your headlines keep coming out clever or clipped, and you want plain ones that still sell.
 not_for:
-  - "You need the opening line of a video or post: use the Ad first line writer and scorer."
+  - "You need the opening line of a video or post: use the Ad opening writer and reviewer."
   - "You need a landing page or long copy: use the Ad-matched landing page writer."
-  - "You need to check ad copy against Meta's rules: use the Meta ads compliance checker."
+  - "You need to check ad copy against Meta's rules: use the Meta ad policy checker."
 
 you_give:
   - A note on the buyer, how aware they are, the one thing they want and their main doubt

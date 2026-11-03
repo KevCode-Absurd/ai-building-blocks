@@ -18,7 +18,7 @@ when:
   - You need a clear order-to-service checklist your team can follow on the day.
   - A new person is running service and needs the order checked and written out.
 not_for:
-  - The customer changed an order that was already confirmed and you only want that change reviewed. Use the Catering order change review assistant.
+  - The customer changed an order that was already confirmed and you only want that change reviewed. Use the Catering order change reviewer.
   - You want the AI to say a meal is safe for an allergy. It cannot. The chef or a dietitian must confirm every diet fact.
   - You only need invoice sums checked. Use the Invoice totals checker.
   - You want to know which tax applies. Ask your accountant.

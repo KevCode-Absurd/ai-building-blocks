@@ -12,7 +12,7 @@ when:
   - A new person starts and you are about to explain it again.
   - A task breaks now and then and the fix is not written down.
 not_for:
-  - "Your task has many roles or branches: use the Repeat task step guide writer."
+  - "Your task has many roles or branches: use the Recurring task procedure writer."
   - "You want to review a runbook you already have: use the SOP and runbook checker."
   - "You need a contract or long document made simple: use the Contract plain-language summary writer."
 you_give:

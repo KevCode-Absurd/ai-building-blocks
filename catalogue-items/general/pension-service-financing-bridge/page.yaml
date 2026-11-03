@@ -23,7 +23,7 @@ when:
 not_for:
   - "Your accounts do not follow IAS 19, such as US GAAP. The method here does not apply. Use your own standard's pension note."
   - "You need the size of the obligation or the value of plan assets. That takes an actuary. This only reconciles figures you already have."
-  - "You want to explain how the funded status moved, split into contributions and everything else. Use the Pension funded-status change schedule."
+  - "You want to explain how the funded status moved, split into contributions and everything else. Use the Pension funding gap tracker."
 
 you_give:
   - "The opening net pension deficit, from the prior year's pension note"

@@ -18,8 +18,8 @@ when:
   - You are about to rebuild the whole campaign and want to find the real problem first.
   - A client asks for a clear reason behind bad results.
 not_for:
-  - "You want to know what changed since last month, with a ranked cause and score: use the Six-pattern ad performance diagnoser."
-  - "You want a full check of one ad account for waste and set-up errors: use the Google Ads account auditor, the Microsoft Ads account auditor or the Twelve-platform ad account auditor."
+  - "You want to know what changed since last month, with a ranked cause and score: use the Ad performance change investigator."
+  - "You want a full check of one ad account for waste and set-up errors: use the Google Ads account auditor, the Microsoft Ads account auditor or the Paid ad account auditor."
   - "Your campaign is brand new or still in the platform's learning period. Wait until it has enough results to compare."
   - "Your Meta ads stall in delivery, with frequency and cost per thousand views rising: use the Meta delivery troubleshooter."
 you_give:

@@ -18,7 +18,7 @@ when:
   - You want a clean Go layout for an MCP server before you add real tools.
   - You are comparing Go with Python or TypeScript for an MCP server and want a starter in each.
 not_for:
-  - "You write Python or TypeScript: use the Python MCP server starter builder or the TypeScript MCP server starter builder."
+  - "You write Python or TypeScript: use the Python MCP server starter builder or the TypeScript MCP server builder."
   - "You want to change a server that already exists: use the MCP tool set designer to plan the tools, then edit the code yourself."
   - "You only want to wrap an existing web API: use the API to MCP server builder."
   - "You have no one who can run Go code: ask a developer to run it, as the result must be built and tested."

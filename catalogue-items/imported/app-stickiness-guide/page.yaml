@@ -16,7 +16,7 @@ when:
   - Daily active users stay flat and nothing looks broken.
   - You want one retention number your whole team trusts.
 not_for:
-  - "Your app has broken screens or slow load times: fix those first, because no retention trick can cover them up. Run the App polish guide, or ask a developer or designer."
+  - "Your app has broken screens or slow load times: fix those first, because no retention trick can cover them up. Run the App improvement planner, or ask a developer or designer."
   - "You have no app yet: build a first version before you plan retention. Start with a simple prototype or a person who builds apps."
   - "You only need one method, like habit design or a single metric: ask your AI for that one step instead of running all eight."
 you_give:

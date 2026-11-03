@@ -21,7 +21,7 @@ not_for:
   - The plan is defined contribution. The company pays in and owes nothing more, so read the expense line as it is.
   - The company reports under US GAAP, not IAS 19. This method does not fit, so use that standard's pension note.
   - You need the size of the obligation or the value of the assets. That takes an actuary.
-  - You want earnings per share or comprehensive income reconciled. Use Reconcile alternative EPS and comprehensive income.
+  - You want earnings per share or comprehensive income reconciled. Use Adjusted EPS and comprehensive income checker.
 you_give:
   - Opening and closing benefit obligation and plan assets (from the pension note)
   - Employer cash contributions for the year (from the pension note or cash flow statement)

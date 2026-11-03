@@ -18,9 +18,9 @@ when:
   - You are choosing how to handle state, styling and tests for a new app.
 not_for:
   - "You only need the visual design, with no code: use the UI Designer agent."
-  - "You need server, database or API design: use the Backend Architect agent."
-  - "You want a quick throwaway demo: use the Rapid Prototyper agent."
-  - "Your site runs on WordPress or Drupal themes: use the CMS Developer agent."
+  - "You need server, database or API designer: use the Backend Architect agent."
+  - "You want a quick throwaway demo: use the Software prototype designer."
+  - "Your site runs on WordPress or Drupal themes: use the WordPress and Drupal developer."
 you_give:
   - What the screen or app does and who uses it
   - Your framework and version, such as React 18, or 'no preference'

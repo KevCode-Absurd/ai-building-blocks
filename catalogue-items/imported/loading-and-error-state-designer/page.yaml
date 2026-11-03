@@ -22,7 +22,7 @@ when:
 not_for:
   - "You want to find every state a screen could be missing, including offline and no results: use the Screen states designer."
   - "You only need the words inside the states: write the wording first, then add it here."
-  - "You need to fix accessibility in states that already exist: use the Accessibility Auditor agent."
+  - "You need to fix accessibility in states that already exist: use the Accessibility auditor."
   - "You are building a new component from scratch: use the Interface builder first, then come back here."
 you_give:
   - The component or page code, or its file path

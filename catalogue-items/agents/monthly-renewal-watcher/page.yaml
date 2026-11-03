@@ -17,7 +17,7 @@ when:
 not_for:
   - "You sell one-off deals or chase new prospects: use your sales pipeline tool, since this agent needs a renewal date."
   - "Your accounts have no contract end date, like pay-as-you-go: use a churn report in your billing tool instead."
-  - "You want a weekly view of which customers are slipping: use the Weekly customer health watcher."
+  - "You want a weekly view of which customers are slipping: use the Customer renewal risk reviewer."
 you_give:
   - Your contract register with start date, renewal date, value, plan, notice period and contact
   - Recent emails, call notes and tickets for accounts renewing soon (advised)

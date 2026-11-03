@@ -17,7 +17,7 @@ when:
   - You want an ad that carries the platform's AI label from the start.
 not_for:
   - "You want a real customer on camera: film them on a phone and ask for a signed release, since this skill makes a made-up presenter."
-  - "You do not have a script yet: write one first with the Video ad script writer from customer quotes, then come back."
+  - "You do not have a script yet: write one first with the Customer quote video ad writer, then come back."
   - "Your product has never been photographed in use: take a few real photos first, because the sheets are built from them."
 you_give:
   - The approved script, with the demo line marked and the disclosure line

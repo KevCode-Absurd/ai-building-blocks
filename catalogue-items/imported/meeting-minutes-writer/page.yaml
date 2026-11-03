@@ -21,7 +21,7 @@ not_for:
   - "You need a word-for-word or legal record: use a transcript tool or keep the full recording."
   - "You have no notes yet, only a live call: take notes first, or use your meeting app's built-in transcript."
   - "You want to plan the next meeting: write the agenda by hand, because this only works from notes you already have."
-  - "You want a one-off prompt to paste, not a skill to add to your AI: use the Rough notes to minutes writer. It does the same job. This skill adds a written self-check of every item and keeps the minutes under a third of the length of your notes."
+  - "You want a one-off prompt to paste, not a skill to add to your AI: use the Rough-note meeting minutes writer. It does the same job. This skill adds a written self-check of every item and keeps the minutes under a third of the length of your notes."
 you_give:
   - Raw meeting notes or a transcript
   - Attendee names (optional)

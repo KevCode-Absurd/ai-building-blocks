@@ -18,7 +18,7 @@ when:
   - "Readers say it is good but long, or good but hard to follow."
   - "You are over the length limit and need to know what to lose first."
 not_for:
-  - "Your draft is only puffy and you want a set share trimmed: use the Ten percent cutter."
+  - "Your draft is only puffy and you want a set share trimmed: use the Draft shortening editor."
   - "Your draft has no single point yet: cutting will not fix that, so decide the main idea first, or ask a person you trust what they took from it."
   - "You want your lines reworded or polished: use an editor or a plain rewrite prompt, since this skill only cuts."
 

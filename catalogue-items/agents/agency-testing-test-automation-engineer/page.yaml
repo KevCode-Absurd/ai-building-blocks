@@ -19,10 +19,10 @@ when:
   - Your test suite takes too long in CI and you want it split across machines.
   - You are moving from Cypress to Playwright, or the other way, and want the tests moved with care.
 not_for:
-  - "You have a finished test run and want it sorted by cause and risk: use the Test Results Analyzer agent."
-  - "You want a page-by-page check with screenshots and no code: use the Evidence Collector agent."
-  - "You only need to test an API, not a browser: use the API Tester agent."
-  - "You want an accessibility audit: use the Accessibility Auditor agent."
+  - "You have a finished test run and want it sorted by cause and risk: use the Test results analyst."
+  - "You want a page-by-page check with screenshots and no code: use the Visual QA evidence collector."
+  - "You only need to test an API, not a browser: use the API test planner."
+  - "You want an accessibility audit: use the Accessibility auditor."
   - "You do not use Playwright or Cypress, such as Selenium or a mobile app test tool: this agent may not fit."
 you_give:
   - The flows that must never break, in plain words, such as "a customer adds a product and pays".

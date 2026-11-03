@@ -18,9 +18,9 @@ when:
   - You have reviews, tickets and search terms, and no list of what people are trying to do that you do not serve.
   - You want a cheap test for a new angle or bundle before you order stock.
 not_for:
-  - "Your store has under 50 pieces of customer text, or a brand-new product with no buyers yet: use the Job hunting spot finder or ask buyers in a short survey."
-  - "You already know the job and want it written up in full: use the Job spec writer."
-  - "You want a rival's ad gaps, not gaps in your own data: use the Competitor ad gap finder."
+  - "Your store has under 50 pieces of customer text, or a brand-new product with no buyers yet: use the Unmet customer need researcher or ask buyers in a short survey."
+  - "You already know the job and want it written up in full: use the Customer task definition writer."
+  - "You want a rival's ad gaps, not gaps in your own data: use the Competitor ad opportunity finder."
 
 you_give:
   - Reviews, support tickets, returns notes, on-site search terms and abandoned checkout notes, pasted (at least 50 together)

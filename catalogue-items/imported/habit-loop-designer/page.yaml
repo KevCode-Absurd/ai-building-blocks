@@ -16,8 +16,8 @@ when:
   - You want to know why users drop off after the first week.
   - You want to check that your engagement tactics are fair to users.
 not_for:
-  - "You want to cut sign-up steps and friction: use the Onboarding improver, not this one."
-  - "You want users to share your product with others: use the Growth loop designer for viral sharing."
+  - "You want to cut sign-up steps and friction: use the Product onboarding planner, not this one."
+  - "You want users to share your product with others: use the Product sharing and referral loop planner for viral sharing."
   - "Your product does not help users and relies on regret or addiction: fix the product first, because this tool caps the score at 3."
 you_give:
   - What your product does and who uses it

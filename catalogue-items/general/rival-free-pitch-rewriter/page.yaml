@@ -22,9 +22,9 @@ when:
   - An investor or buyer asks "so you're like X?" and you can only answer by naming a rival.
 
 not_for:
-  - "You have no edge yet, or you are not sure you do: use the Ten-times-better checker first. This skill will not make one up."
-  - "You want sales messages that use a rival's weak spot: use the Rival gap message writer."
-  - "You want to check a whole slide deck: use the Pitch deck 10/20/30 checker."
+  - "You have no edge yet, or you are not sure you do: use the Product alternative comparison reviewer first. This skill will not make one up."
+  - "You want sales messages that use a rival's weak spot: use the Competitive sales message writer."
+  - "You want to check a whole slide deck: use the Pitch deck presentation reviewer."
   - "You want one position statement for your team: use the Positioning statement writer."
 
 you_give:

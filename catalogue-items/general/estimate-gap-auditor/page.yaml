@@ -19,7 +19,7 @@ when:
   - "You have a number and want a sanity check on how it was made."
 not_for:
   - "You have only one estimate and no second side to compare: do a plain risk review, or ask a colleague to check the number."
-  - "You want to turn what went wrong into a lasting rule: use the Mistake-to-principle writer."
+  - "You want to turn what went wrong into a lasting rule: use the Lessons learned principle writer."
   - "You need one final number to act on right now: ask the people who made each estimate, since this audit shows the gap and does not settle it."
 
 you_give:

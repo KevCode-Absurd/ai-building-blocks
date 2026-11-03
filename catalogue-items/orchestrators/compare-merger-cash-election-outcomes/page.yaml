@@ -21,7 +21,7 @@ not_for:
   - The ratio floats or has a collar. This workflow assumes a fixed ratio, so ask a deal adviser for floating terms.
   - You need every holder's election solved together, or the stock pool oversubscribed as well. Neither is covered here.
   - You want the exchange agent's rounding or the legal meaning of the election terms. A person who has read the agreement does that.
-  - You only want the value of the base offer. Use the Fixed exchange consideration checker on its own.
+  - You only want the value of the base offer. Use the Fixed share-swap payout calculator on its own.
 you_give:
   - "The signed base terms: acquirer shares and cash paid per target share (from the merger agreement)"
   - Eligible target shares, and the acquirer's share price with its date (from the agreement and a dated price record)

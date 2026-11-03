@@ -22,7 +22,7 @@ when:
   - You changed shipping, returns or prices in Shopify and want to check Merchant Center still matches.
 
 not_for:
-  - "You need to fix disapproved products and feed errors: use the Merchant Center feed health checker."
+  - "You need to fix disapproved products and feed errors: use the Google Merchant Center feed checker."
   - "Google has already suspended you and you want the exact cause: this can't tell you. Read the reason in Merchant Center, fix that issue, then use Google's review process."
   - "You have no Merchant Center account or store site yet: set those up first, then run this."
   - "You want to plan your Shopping campaigns: use the Google Ads launch planner."

@@ -18,8 +18,8 @@ when:
   - Capex goes up in a scenario and you want to see the change in supported growth.
   - A reviewer asks where the growth rate in a model comes from.
 not_for:
-  - You want the reinvestment that a terminal value already assumes. Use the Implied terminal reinvestment schedule.
-  - You want to test a stable-growth terminal value against the cash it needs. Use the Terminal growth reinvestment check.
+  - You want the reinvestment that a terminal value already assumes. Use the Business terminal value assumption checker.
+  - You want to test a stable-growth terminal value against the cash it needs. Use the Terminal growth reinvestment checker.
   - The growth comes from price rises or cost cuts, not new capital. This only shows growth that new capital can support.
   - The company is a bank or an insurer. They need capital rules, not this operating capital approach.
 you_give:

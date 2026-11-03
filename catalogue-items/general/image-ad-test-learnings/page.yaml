@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only need one ad: use the Single image ad planner, which briefs a single image ad."
   - "You have no buyer research or product photos yet: gather your reviews and photos first, because this plan leaves out reasons it can't back."
-  - "You want to check finished ads against Meta rules: use the Meta ads compliance checker."
+  - "You want to check finished ads against Meta rules: use the Meta ad policy checker."
 you_give:
   - Your brand file with voice, claims, live offers, guarantee and never-show list
   - Buyer research such as reviews, buyer types and their own words

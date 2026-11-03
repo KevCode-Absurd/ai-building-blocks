@@ -21,7 +21,7 @@ when:
   - A security team or client asks what protects your MCP server.
 not_for:
   - "Your server only runs on your own laptop for one person: you can skip most of this. Check input handling and logging only."
-  - "You need a full code review of the server: use the Diff security skimmer on the changed code, or ask a security engineer."
+  - "You need a full code review of the server: use the Code change security reviewer on the changed code, or ask a security engineer."
   - "You want a compliance report for an audit: use the SOC 2 readiness checker."
 you_give:
   - How your server connects, such as local stdio, or HTTP over the web

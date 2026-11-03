@@ -18,7 +18,7 @@ when:
   - You are handing a finished project to a support team or a new account owner.
   - You must show a manager or auditor what was delivered and accepted.
 not_for:
-  - "The work is still in delivery, or nobody has accepted anything yet: use the Executive action register keeper to track what is open."
+  - "The work is still in delivery, or nobody has accepted anything yet: use the Action item tracker keeper to track what is open."
   - "You want to decide whether to invoice or chase payment: check your contract and ask your finance lead. This does not decide it."
   - "You only need a handover note for a person: use the Handover note writer."
   - "There is a dispute or a claim: ask a lawyer. This gathers records. It does not judge them."

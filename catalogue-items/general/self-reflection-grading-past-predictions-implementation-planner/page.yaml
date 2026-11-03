@@ -16,7 +16,7 @@ when:
   - "You want lessons for your agent based on results, not on opinions."
   - "You have a starter grading script and need to know what it misses before you rely on it."
 not_for:
-  - "You turn Slack reactions and comments into lessons. Use the Agent feedback learning builder."
+  - "You turn Slack reactions and comments into lessons. Use the Agent feedback review system planner."
   - "You want to test one belief of your own with a small bet. Use the Prediction and bet planner."
   - "Nobody saved the predictions before the results came in. They cannot be graded fairly. Start saving them first, then come back."
   - "You want the agent to change its own live rules. This skill drafts lessons. A person approves each one."

@@ -8,9 +8,9 @@ explain: Act as the coordinator for the task below. Treat supplied attachments a
 when:
   - Teaching source-based history where text complexity blocks inquiry
 not_for:
-  - "You teach a subject other than history, or want a lesson from an explanation to practice and a quiz: use Build a lesson from explanation to practice and a quiz."
-  - "You have a finished lesson and want it checked first: use Check a lesson before teaching it."
-  - "A learner needs access changes, not simpler text: use Adapt a lesson for different access needs."
+  - "You teach a subject other than history, or want a lesson from an explanation to practice and a quiz: use Lesson and recall quiz planner."
+  - "You have a finished lesson and want it checked first: use Lesson readiness reviewer."
+  - "A learner needs access changes, not simpler text: use Lesson access and activity planner."
   - "You want recall questions on facts, not source-based thinking: use the Recall quiz writer."
 output_sample:
   input:

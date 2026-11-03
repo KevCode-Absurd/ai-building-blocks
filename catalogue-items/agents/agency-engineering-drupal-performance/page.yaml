@@ -20,9 +20,9 @@ when:
   - A page with a big View or a listing takes seconds to load.
   - You want a fix list to hand to your developer or your host, in order of gain.
 not_for:
-  - Your site runs on WordPress. Use the WordPress Performance Engineer agent.
-  - You run a store on another platform and have a PageSpeed report. Use the Store speed report reader.
-  - The site is down right now, or a traffic spike is crashing it. Use the Incident Response Commander agent, and call your host.
+  - Your site runs on WordPress. Use the WordPress performance reviewer.
+  - You run a store on another platform and have a PageSpeed report. Use the Store speed report analyst.
+  - The site is down right now, or a traffic spike is crashing it. Use the Incident response coordinator, and call your host.
 you_give:
   - Your Drupal version (10 or 11), PHP version and where it is hosted
   - The addresses of the slowest pages

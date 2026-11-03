@@ -18,9 +18,9 @@ when:
   - You are about to take on a big customer and want to see how the concentration limit changes your base.
   - You want to know how much cash an asset-based loan could give you before you ask a bank.
 not_for:
-  - Your collateral is stock, not invoices. Use the Inventory borrowing base builder.
-  - You want the amount you can still draw on the loan after this base. Use the Revolver availability checker, and bring the base here.
-  - You sell invoices to a factor instead of borrowing against them. Use the Factoring cash-flow timing bridge.
+  - Your collateral is stock, not invoices. Use the Inventory borrowing limit calculator.
+  - You want the amount you can still draw on the loan after this base. Use the Revolving credit availability checker, and bring the base here.
+  - You sell invoices to a factor instead of borrowing against them. Use the Invoice financing cash flow checker.
   - You want a credit decision, or to send the certificate. This is arithmetic for you to review. It does not approve a loan.
 you_give:
   - The receivables aging report total for the certificate date, and the ledger total it should match

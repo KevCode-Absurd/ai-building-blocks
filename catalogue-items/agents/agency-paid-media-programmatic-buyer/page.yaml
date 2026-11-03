@@ -19,9 +19,9 @@ when:
   - You sell to other companies and want display ads aimed at a list of target accounts.
   - You are weighing newsletter or sponsored content deals from partners and need a way to compare them.
 not_for:
-  - You want search ads. Use the PPC Campaign Strategist agent.
-  - You want social ads on Meta, LinkedIn or TikTok. Use the Paid Social Strategist agent.
-  - You want an audit of an ad account that already runs. Use the Paid Media Auditor agent, or the Online media buy auditor for a plan and reports you paste.
+  - You want search ads. Use the Paid search campaign planner.
+  - You want social ads on Meta, LinkedIn or TikTok. Use the Paid social advertising strategist.
+  - You want an audit of an ad account that already runs. Use the Paid media auditor, or the Online media buy auditor for a plan and reports you paste.
   - You need live changes made in DV360 or Google Ads. Do those in the platform. This agent writes the plan.
 you_give:
   - Your goal, such as awareness, leads or sales, and your product or offer

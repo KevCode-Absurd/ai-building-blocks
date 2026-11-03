@@ -19,8 +19,8 @@ when:
   - You are moving a model from a US layout to an Indian one.
   - You want a review list for an Indian company model in Excel or Google Sheets.
 not_for:
-  - You need the model filled in, not checked. Use the Statement model template filler for India.
-  - You want a valuation. Use the DCF model builder for India, then run this check on the result.
+  - You need the model filled in, not checked. Use the Indian financial model template filler.
+  - You want a valuation. Use the Indian company DCF modeler, then run this check on the result.
   - The company is not Indian, or the file is US-GAAP only.
   - You want live prices, consensus or buy and sell advice. Use a licensed data provider.
 you_give:

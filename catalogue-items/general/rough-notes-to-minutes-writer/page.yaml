@@ -13,7 +13,7 @@ when:
   - You want minutes sent within the hour.
 not_for:
   - "You need formal board minutes: use the Board minutes drafter."
-  - "You want a running list of open actions across meetings: use the Weekly meeting actions keeper."
+  - "You want a running list of open actions across meetings: use the Meeting minutes and action tracker."
   - "You need a word-for-word record of the meeting: keep the transcript itself, because minutes leave out most remarks."
   - "You want the full checklist version of minutes: use the Meeting minutes writer."
 you_give:

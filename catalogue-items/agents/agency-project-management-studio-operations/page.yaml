@@ -20,7 +20,7 @@ when:
   - You run a design, video, photo or marketing studio and need a simple, shared way of working.
 not_for:
   - You want to find which step in a slow process wastes the most time. Use the Operations Manager agent.
-  - You already have a written process and need it kept up to date each month. Use the Process doc freshness keeper.
+  - You already have a written process and need it kept up to date each month. Use the Process guide revision reviewer.
   - You want an IT help desk, ticket priorities and a change process. Use the IT Service Manager agent.
   - You want a plan for several creative projects at once, with budget and team time. Use the Studio Producer agent.
 you_give:

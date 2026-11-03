@@ -24,8 +24,8 @@ when:
 not_for:
   - "You have one room or one door. A plain label is enough."
   - "You need fire exit, accessibility or other signs the law requires. Ask a licensed signage or accessibility professional."
-  - "You only want the words on your current signs checked. Use the Plain words interface rewriter."
-  - "You want a logo or a brand look for the business. Use the Brand mark system planner."
+  - "You only want the words on your current signs checked. Use the Forms and instructions rewriter."
+  - "You want a logo or a brand look for the business. Use the Brand logo planner."
 
 you_give:
   - "A description or floor plan of the place, with its entrances and main destinations"

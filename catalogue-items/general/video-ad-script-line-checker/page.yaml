@@ -20,9 +20,9 @@ when:
   - An ad isn't working and you want to know which lines are to blame.
   - You're writing a script and want the checks for one part, such as the opening or the proof.
 not_for:
-  - "You have no script yet: use the Video ad script writer from customer quotes to write one first."
+  - "You have no script yet: use the Customer quote video ad writer to write one first."
   - "Your script has no spoken or on-screen lines, such as a silent product clip: a script check has nothing to mark up, so plan the shots with a person or a storyboard."
-  - "You want to read your ad results, not judge a script: use the Campaign keep-or-change checker."
+  - "You want to read your ad results, not judge a script: use the Ad change decision checker."
 
 you_give:
   - The script you're writing or judging

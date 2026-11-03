@@ -36,7 +36,7 @@ not_for:
   - "You only need to fix Meta pixel and server events: use the Meta pixel and server events fixer."
   - "You run a Shopify store and need GA4 set up: use the GA4 store setup checker or the Shopify Google tracking builder."
   - "You want to explain why Meta and Google report different numbers: use the Cross-platform conversion reconciler."
-  - "You want a monthly health check on tracking you already trust: use the Monthly tracking health keeper."
+  - "You want a monthly health check on tracking you already trust: use the Analytics events and tracking gap review."
   - "You need someone to change live tags on your site. Hand the plan to a tracking engineer or your developer."
 you_give:
   - What counts as a conversion for you, such as a purchase, a lead form or a booked call, and what each is worth

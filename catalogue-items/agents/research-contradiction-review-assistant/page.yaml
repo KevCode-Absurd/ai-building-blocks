@@ -19,10 +19,10 @@ when:
   - A supervisor or editor asks why two sets of results differ.
 not_for:
   - You have one paper and want its claims and evidence. Use the Source note summariser.
-  - You want an answer to a question, with sources found for you. Use the Cited research assistant.
-  - You want new papers on a topic each month. Use the Research topic watcher.
+  - You want an answer to a question, with sources found for you. Use the Research evidence report writer.
+  - You want new papers on a topic each month. Use the Research paper discovery reviewer.
   - You are running a formal systematic review with a set protocol. This agent compares only the papers you give it and does not search databases.
-  - You need one comparison and no record for later. Use the Compare conflicting research findings workflow.
+  - You need one comparison and no record for later. Use the Research paper disagreement reviewer workflow.
 you_give:
   - Two or more full papers on the same question, as PDFs or pasted text (abstracts alone are not enough)
   - Your research question, in one sentence

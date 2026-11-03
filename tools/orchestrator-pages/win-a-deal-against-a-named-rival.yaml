@@ -20,8 +20,8 @@ when:
   - A deal is stuck between "we like you" and a signature.
   - A rep needs a one-page battlecard against one competitor before a call.
 not_for:
-  - "The buyer has not named a rival, or has already chosen: for a stalled deal use the Get a quiet deal moving again without pressure workflow."
-  - "You want a position against many rivals for your marketing, not one deal: use the Map your rivals and write a message they cannot answer workflow."
+  - "The buyer has not named a rival, or has already chosen: for a stalled deal use the Stalled sales deal follow-up writer workflow."
+  - "You want a position against many rivals for your marketing, not one deal: use the Competitor positioning message reviewer workflow."
   - "You only need to prepare a price or terms call: use the Negotiation call prep planner."
 you_give:
   - "The deal: who the buyer is, what they need, the timeline and who decides"

@@ -125,7 +125,7 @@ terms:
 
 not_for:
   - The price bridge is not signed yet. Wait for the signed statement. A draft can be run only as a labelled draft.
-  - You only need the equity bridge, or only the escrow balance. Use the closing equity proceeds checker or the escrow release checker on its own.
+  - You only need the equity bridge, or only the escrow balance. Use the Business sale proceeds checker or the Escrow release balance checker on its own.
   - The deal used a locked-box price with no working-capital peg. Use the locked-box closing price workflow.
   - There is a dispute, a tax question, an earnout or a collar. This covers a plain dollar-for-dollar adjustment only.
 

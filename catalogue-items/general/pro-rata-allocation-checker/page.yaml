@@ -20,8 +20,8 @@ when:
 not_for:
   - The quoted round already includes the investor, for example a round total of 100 that has their 10 inside it. This sum would overcount. Use the quoted figures.
   - More than one investor has rights, or the round is oversubscribed. You need a full allocation table. This covers one investor at one price.
-  - You want the cash to hold back across several companies for later rounds. Use the Follow-on reserve planner.
-  - You want ownership after a SAFE converts. Use the Post-money SAFE ownership checker.
+  - You want the cash to hold back across several companies for later rounds. Use the Follow-on investment cash planner.
+  - You want ownership after a SAFE converts. Use the Post-money SAFE ownership calculator.
 you_give:
   - The side letter or investment agreement wording on pro rata rights
   - The investor's ownership share that the right covers, and the denominator it uses (from the side letter and cap table)

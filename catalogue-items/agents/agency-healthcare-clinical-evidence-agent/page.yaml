@@ -22,7 +22,7 @@ when:
   - You have one body of evidence and need it written for investors, doctors and patients without changing the facts.
 not_for:
   - You want advice about a patient, a diagnosis or a treatment. This agent gives none. Ask a qualified doctor.
-  - You want a plain review of research on a topic from many sources. Use the Research Synthesist agent.
+  - You want a plain review of research on a topic from many sources. Use the Research evidence reviewer.
   - You want a legal or regulatory filing written. It prepares claim checks only, and a lawyer and a clinician must review the filing.
   - You only want an independent check of a single number. Look it up in the original study.
 you_give:

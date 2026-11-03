@@ -19,7 +19,7 @@ when:
   - A comparison page gets traffic but few sign-ups.
 not_for:
   - "You want a calculator that gives one number: use the Online calculator designer."
-  - "You want a quiz that sorts people into a type: use the Quiz and recommender designer."
+  - "You want a quiz that sorts people into a type: use the Quiz and product matcher."
   - "You are comparing vendor proposals for your own buying decision: use the Vendor comparison writer."
 you_give:
   - The options to compare, with real prices and features, or links to their pages

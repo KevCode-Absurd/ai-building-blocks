@@ -20,7 +20,7 @@ when:
 not_for:
   - "You write for one audience only: use a plain drafting step in your AI, since layers add nothing."
   - "You need a data report or a table of figures: write it plainly or ask your AI for a summary of the numbers."
-  - "You already have a draft that is too long: use the Overstuffed draft cutter to trim it."
+  - "You already have a draft that is too long: use the Long draft editor to trim it."
 
 you_give:
   - A brief from the Two-audience brief writer, or the same facts in your own words. Include both audiences, the promise to each, the format and the length.

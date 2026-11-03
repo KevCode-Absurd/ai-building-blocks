@@ -16,7 +16,7 @@ when:
   - You like a business as a customer and want to test that against how it earns.
 not_for:
   - "You want a buy or sell call on a listed stock or a trade: this gives no calls on named securities, so use a licensed financial adviser."
-  - "You only want to know if a price is too high after you like the business: use the Mispriced bet tester."
+  - "You only want to know if a price is too high after you like the business: use the Bet price and odds reviewer."
   - "You cannot study the business in depth, such as a firm with no public facts: ask someone who knows the field first, then come back."
 you_give:
   - The business, what it sells and who its main rivals are

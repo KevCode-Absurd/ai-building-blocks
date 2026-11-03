@@ -18,10 +18,10 @@ when:
   - Your last forecast missed and you want to see where it went wrong.
   - The target from leadership and the requests from teams do not match.
 not_for:
-  - "You have less than a year of headcount history: use the Headcount plan builder, which works from goals and budget, then forecast once you have more data."
-  - "You are deciding on one hire: use the Headcount business case builder."
+  - "You have less than a year of headcount history: use the Hiring headcount planner, which works from goals and budget, then forecast once you have more data."
+  - "You are deciding on one hire: use the Hire or contract cost checker."
   - "You want best, base and worst futures for a plan you already have: use the Headcount scenario planner."
-  - "You want a report on the past, not a forecast: use the Headcount and turnover reporter."
+  - "You want a report on the past, not a forecast: use the Team size and turnover report writer."
 you_give:
   - Past headcount and exits by month or quarter, ideally 12 months or more
   - The period you want to forecast, such as the next 12 months

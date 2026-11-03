@@ -16,8 +16,8 @@ when:
   - Business logic is copied into several places.
   - You want a quick quality score for a codebase.
 not_for:
-  - "You want line-level tidying of names and functions: use code-cleanup-planner."
-  - "You want to restructure messy code step by step: use code-refactor-planner."
+  - "You want line-level tidying of names and functions: use Code cleanup planner."
+  - "You want to restructure messy code step by step: use Code refactor planner."
   - "You have a small script or a throwaway prototype: skip this and just run it, since the habits pay off only when code lives long."
 you_give:
   - Code or a design description

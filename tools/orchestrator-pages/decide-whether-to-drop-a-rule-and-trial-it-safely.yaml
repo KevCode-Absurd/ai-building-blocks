@@ -16,8 +16,8 @@ when:
   - You are about to automate something and have not checked what it also does.
 not_for:
   - "The rule has a legal or safety basis: ask a compliance reviewer or a lawyer before you change it."
-  - "You are weighing a long list of ideas: use the Smallest test picker to choose one test."
-  - "You want the case against a plan you already chose: use the Case-against writer."
+  - "You are weighing a long list of ideas: use the Minimum experiment planner to choose one test."
+  - "You want the case against a plan you already chose: use the Plan objection writer."
 you_give:
   - The rule, step or habit, worded the way people state it
   - Who follows it and who it affects

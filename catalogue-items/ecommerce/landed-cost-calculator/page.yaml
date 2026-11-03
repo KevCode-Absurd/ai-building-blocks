@@ -22,7 +22,7 @@ not_for:
   - "You already hold stock and know your costs: use Shopify cost per item or your accounting books."
   - "You run a service business with no physical goods: use your own price sheet or ask your accountant."
   - "You need a duty rate or tariff code: ask a customs broker or use your country's tariff lookup."
-  - "You want a quick first pass with fewer checks: use the Cost per sellable unit finder."
+  - "You want a quick first pass with fewer checks: use the Sellable unit cost calculator."
 
 you_give:
   - The factory price per unit (ex-factory) and the units you will order

@@ -15,8 +15,8 @@ when:
   - A brand refresh changed a colour and you are not sure every pair still passes.
   - New screens ship every month and nobody checks them against the rules until a designer notices.
 not_for:
-  - "Your product has no design system yet and no tokens: start with the design-token-builder skill, then bring this agent in."
-  - "You only want to know if two colours pass contrast: use the colour-contrast-checker skill on its own."
+  - "Your product has no design system yet and no tokens: start with the Design token and handoff builder skill, then bring this agent in."
+  - "You only want to know if two colours pass contrast: use the Colour contrast checker skill on its own."
   - "You want the code changed for you: this agent never edits code, so give its fix list to a developer."
 you_give:
   - Your repo or front-end folder with components and styles

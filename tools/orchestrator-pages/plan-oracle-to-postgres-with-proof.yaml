@@ -15,9 +15,9 @@ when:
   - You need baseline tests that record how the Oracle code behaves today, so differences show up after the move.
   - You want a review of behavior risks before release, not after.
 not_for:
-  - "You are ready to change the code: use the Oracle to Npgsql code migrator or the Oracle stored procedure migrator."
+  - "You are ready to change the code: use the Oracle to Npgsql code migrator or the Oracle to PostgreSQL procedure migrator."
   - "You only want to review code you already moved: use the Oracle migration risk reviewer on its own."
-  - "Your move is not from Oracle to PostgreSQL, or your data access is not .NET: use the Migration planner or the Zero-downtime migration planner."
+  - "Your move is not from Oracle to PostgreSQL, or your data access is not .NET: use the System migration and retirement planner or the System migration and rollback planner."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits

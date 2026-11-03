@@ -17,7 +17,7 @@ when:
 not_for:
   - You have no analytics tags or paid platforms yet. Set up one basic tracking tool first, or ask a developer to add it.
   - You have one setup question, such as a GA4 store check. Use a single GA4 setup checker, not a monthly review.
-  - You want to watch product funnel drops each week. Use the Weekly product funnel watcher.
+  - You want to watch product funnel drops each week. Use the Product funnel steps and experiment review.
 you_give:
   - Which analytics and ad platforms you use, how tags are installed and which events you track
   - Last month's platform reports and your store or billing totals for the same dates

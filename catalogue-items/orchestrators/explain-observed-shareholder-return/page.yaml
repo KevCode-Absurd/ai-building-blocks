@@ -20,9 +20,9 @@ when:
 not_for:
   - You want to know what to buy, hold or sell. This explains a past return and gives no advice.
   - EPS was zero or negative at either date. The bridge needs positive, comparable EPS.
-  - A discounted rights issue was involved. Use the Restate EPS after splits and rights workflow.
-  - You want what a buyback did to EPS and book value. Use the Reconcile buybacks with owner cash workflow.
-  - You want a valuation. Use the Review equity valuation sensitivity assumptions workflow.
+  - A discounted rights issue was involved. Use the Stock split and rights EPS checker workflow.
+  - You want what a buyback did to EPS and book value. Use the Share buyback accounting checker workflow.
+  - You want a valuation. Use the Equity valuation scenario reviewer workflow.
 you_give:
   - Unadjusted share prices at the start and end dates (from exchange records or your broker)
   - EPS and P/E at both dates, on a comparable basis, with EPS above zero (from the company's filings)

@@ -14,7 +14,7 @@ when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
 not_for:
-  - "Your AWS bill is the problem, not an outage: use the Cloud bill waste finder or the AWS resource cost reviewer."
+  - "Your AWS bill is the problem, not an outage: use the AWS cost waste finder or the AWS resource cost reviewer."
   - "You want a health check on one resource with no incident to chase: use the AWS service health investigator on its own."
   - "The incident is over and you only need the write-up: use the Incident learning report writer or the Incident postmortem writer."
   - "Your service did not record logs or metrics at the time: nothing here can recover data that was never kept."

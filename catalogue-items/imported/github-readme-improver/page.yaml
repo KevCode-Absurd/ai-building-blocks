@@ -22,7 +22,7 @@ when:
   - You want your GitHub profile to show your best work.
   - You are launching an open source tool and need people to find it.
 not_for:
-  - You want a launch plan for your project, with issues, a schedule and follow-up. Use the open source promoter.
+  - You want a launch plan for your project, with issues, a schedule and follow-up. Use the Open-source promotion planner.
   - You need full API docs or a docs site. A README is the front page only. Write the docs separately.
   - Your repo is private and only your team uses it. A README rewrite will not bring visitors.
 you_give:

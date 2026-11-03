@@ -19,7 +19,7 @@ when:
   - You want to find managers with too many direct reports.
 not_for:
   - "You want to decide on one named person's pay, promotion or exit: use your HR and legal advisers. This reports on groups only."
-  - "You want to plan hires for next year: use the Headcount forecast builder or the Headcount plan builder."
+  - "You want to plan hires for next year: use the Headcount and hiring forecast planner or the Hiring headcount planner."
   - "You want to design the metrics and a dashboard from scratch: use the HR metrics and report builder."
 you_give:
   - A spreadsheet of employees with team, level, location, start date and end date

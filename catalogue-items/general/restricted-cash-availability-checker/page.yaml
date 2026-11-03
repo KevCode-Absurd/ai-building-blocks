@@ -18,9 +18,9 @@ when:
   - Pending payments are about to clear and you want to know if you stay above your minimum.
   - You are preparing a cash note and need to show gross cash and available cash side by side.
 not_for:
-  - You want to check cash against a lender's covenant test over several periods. Use the Debt service covenant headroom checker.
-  - You want to split grant money from free cash across a whole period. Use the Grant restrictions cash reconciler.
-  - You want to sequence payments through the day. Use the Settlement liquidity ladder builder.
+  - You want to check cash against a lender's covenant test over several periods. Use the Loan covenant cash coverage checker.
+  - You want to split grant money from free cash across a whole period. Use the Restricted grant cash tracker.
+  - You want to sequence payments through the day. Use the Payment timing cash balance planner.
   - You want to release, move or invest cash. This only does the sums. The bank or lender decides what is free.
 you_give:
   - Gross cash balance on one date (from the bank statement)

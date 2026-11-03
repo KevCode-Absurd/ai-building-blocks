@@ -18,7 +18,7 @@ when:
 not_for:
   - "Your whole pile already fits your size limit and has no repeats: paste it as it is, no cleaning needed."
   - "You only need to score or rank chunks by how well they match a question: ask your AI to score each chunk against your question."
-  - "You need to shrink the text you already picked: use Context shrinker."
+  - "You need to shrink the text you already picked: use AI context editor."
 you_give:
   - Your pile of text chunks or files
   - Your question or task

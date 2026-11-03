@@ -17,9 +17,9 @@ when:
   - You want a sponsored video that Bilibili viewers will accept.
   - You plan a video series and want moments that invite danmaku.
 not_for:
-  - You want short vertical videos for Douyin. Use the Douyin Strategist agent.
-  - You are bringing a whole brand to China across many platforms. Use the China Market Localization Strategist agent.
-  - You need help cutting and pacing the video itself. Use the Short-Video Editing Coach agent.
+  - You want short vertical videos for Douyin. Use the Douyin content planner.
+  - You are bringing a whole brand to China across many platforms. Use the China market localization planner.
+  - You need help cutting and pacing the video itself. Use the Short video editing coach agent.
 you_give:
   - Your channel name or link, or your brand and what you sell
   - Your content area on Bilibili, such as knowledge, tech, food or gaming

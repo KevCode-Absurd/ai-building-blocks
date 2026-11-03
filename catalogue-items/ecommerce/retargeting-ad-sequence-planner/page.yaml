@@ -20,7 +20,7 @@ when:
 not_for:
   - "You sell one product only: start with the objection ad alone, because there is nothing to cross-sell."
   - "You have very few site visitors: a sequence will not give a readable result, so run one objection ad first."
-  - "You want to set the total ad budget: use the existing customer ad budget sizer, then come back here."
+  - "You want to set the total ad budget: use the Returning customer ad budget planner, then come back here."
   - "You want to split visitors by why they left, with one ad per objection: use the Retargeting objection ad planner."
 
 you_give:

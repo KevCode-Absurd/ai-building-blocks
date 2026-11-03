@@ -18,7 +18,7 @@ when:
   - A developer needs exact blur, opacity and border values, not a screenshot.
   - You are handing a visual style to a team and want a fallback for devices without blur.
 not_for:
-  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "Your brand already has a written style guide: extend that guide, or run the Design system reviewer to check it."
   - "You want a flat, solid look with no see-through layers: use the Minimal style guide writer."
   - "You want soft raised and pressed-in surfaces: use the Soft shadow style guide writer. For chunky, puffy shapes use the Soft clay style guide writer."
   - "Your layout is a grid of cards and you want that grid defined: use the Bento grid style guide writer."

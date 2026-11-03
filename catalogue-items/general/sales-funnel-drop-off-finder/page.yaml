@@ -16,7 +16,7 @@ when:
   - You have step-by-step data and want fixes sized in money, not just a list.
   - A phone buyer converts far worse than a desktop buyer and you don't know why.
 not_for:
-  - "You want a review of one page with no numbers at all: use the Landing page conversion review, or the Landing page 30-point checker for a quick yes-or-no list."
+  - "You want a review of one page with no numbers at all: use the Landing page conversion reviewer, or the 30-point landing page checker for a quick yes-or-no list."
   - "You want to know if you have enough traffic to run a test: use the A/B test traffic checker."
   - "You run an app or software product and want to find where new sign-ups leave: use the New user drop-off finder."
   - "Your sales fell and you want to know why: use the Ad sales drop analyst."

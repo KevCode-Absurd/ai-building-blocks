@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "There is threat, abuse or any safety risk. Do not use a script for this. Get help from a qualified person."
-  - "You are too angry or hurt to listen yet: use the Anger pause and repair planner first, then come back."
+  - "You are too angry or hurt to listen yet: use the Difficult conversation repair planner first, then come back."
   - "You need to give someone feedback on their work or behaviour: use the feedback conversation planner or the hard feedback message writer."
-  - "You must say no to a request: use the hard no planner."
+  - "You must say no to a request: use the Clear refusal message writer."
 
 you_give:
   - "Who the person is and what the issue is, with what has happened so far"

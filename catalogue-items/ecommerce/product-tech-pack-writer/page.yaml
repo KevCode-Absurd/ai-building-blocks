@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a spec for complex hardware or moulded parts: hire an engineer or product designer."
   - "You sell a one-off dropship item you never inspect: skip the pack and test a sample yourself."
-  - "You want to judge a sample that has already arrived: use the Sample approval gatekeeper."
+  - "You want to judge a sample that has already arrived: use the Product sample approval reviewer."
 
 you_give:
   - Photos of your product from every angle, or a reference sample you like

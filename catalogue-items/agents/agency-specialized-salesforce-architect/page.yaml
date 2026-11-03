@@ -19,7 +19,7 @@ when:
 not_for:
   - You have one how-do-I question about a field, report or Flow. Ask your Salesforce admin or Salesforce Help.
   - You want changes made inside a live org. This agent only proposes, so hand its plan to your admin.
-  - You want to link two apps with no code, such as Zapier or Make. Use the No-code automation planner.
+  - You want to link two apps with no code, such as Zapier or Make. Use the Zapier and Make automation planner.
 you_give:
   - The business problem you want Salesforce to solve, in plain words
   - Which Salesforce products you use, and your edition if you know it

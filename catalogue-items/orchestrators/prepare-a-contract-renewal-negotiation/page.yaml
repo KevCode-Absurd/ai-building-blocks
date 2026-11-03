@@ -20,7 +20,7 @@ when:
 not_for:
   - You want a calendar of many renewals at once. Use the Renewal watch planner (useaiblocks.com/skills/renewal-watch-planner).
   - The notice date has already passed. Ask your legal reviewer what is still possible, then use the Negotiation prep coach (useaiblocks.com/skills/negotiation-prep-coach) for the talk.
-  - You are choosing between new vendors. Use the Software vendor chooser (useaiblocks.com/skills/software-vendor-chooser), or the Preserve a procurement decision audit trail workflow (useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail) if you need a record of the choice.
+  - You are choosing between new vendors. Use the Software vendor chooser (useaiblocks.com/skills/software-vendor-chooser), or the Supplier bid decision reviewer workflow (useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail) if you need a record of the choice.
 you_give:
   - The current signed agreement (PDF, Word or pasted terms)
   - The renewal quote or order form

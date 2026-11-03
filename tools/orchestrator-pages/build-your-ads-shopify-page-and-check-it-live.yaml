@@ -15,9 +15,9 @@ when:
   - You have page copy but no easy way to get it into your Shopify theme.
   - You built a page and want a second look at how it reads on a phone.
 not_for:
-  - "Your store is not on Shopify: use the Static HTML landing page builder to make a page you can host anywhere."
+  - "Your store is not on Shopify: use the Plain HTML landing page builder to make a page you can host anywhere."
   - "You only need the page words, with no Shopify files: use the Ad-matched landing page writer."
-  - "You already have a live page and want it reviewed: use the Landing page conversion review."
+  - "You already have a live page and want it reviewed: use the Landing page conversion reviewer."
 you_give:
   - "The ad that will send traffic: its headline and text"
   - "Your brand facts: products, claims, voice and the offer word for word"

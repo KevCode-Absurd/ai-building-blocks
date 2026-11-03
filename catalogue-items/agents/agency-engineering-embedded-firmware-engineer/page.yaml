@@ -18,7 +18,7 @@ when:
   - You want one driver, such as an SPI or Bluetooth routine, reviewed against safe-firmware rules.
 not_for:
   - You need circuit board layout, a schematic or radio and safety certification. That takes a hardware engineer and a test lab.
-  - You are updating many devices already in the field. Use the IoT Fleet Engineer agent.
+  - You are updating many devices already in the field. Use the IoT fleet rollout planner.
   - You are building the phone or web app that talks to the device. Use the Mobile app builder or the Full stack developer.
 you_give:
   - Your chip or board, such as ESP32-S3, STM32F4 or nRF52840, and your toolchain, such as ESP-IDF, PlatformIO or Zephyr

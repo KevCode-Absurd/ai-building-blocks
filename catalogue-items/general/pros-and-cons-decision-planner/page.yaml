@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "The outcome is fixed, or you must decide in under a day. Compare the costs of each option directly."
-  - "You want to know whether a choice can be undone. Use the One-way or two-way choice sorter."
+  - "You want to know whether a choice can be undone. Use the Decision undo-cost checker."
   - "Both options feel bad and you want a better one. Use the Third option finder."
-  - "You are afraid of one step and keep putting it off. Use the Fear-setting planner."
+  - "You are afraid of one step and keep putting it off. Use the Decision risk and delay planner."
 
 you_give:
   - "The choice, the options and the date you must decide by"

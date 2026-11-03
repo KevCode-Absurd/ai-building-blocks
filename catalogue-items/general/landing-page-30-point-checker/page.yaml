@@ -18,7 +18,7 @@ when:
   - A page just had a bad week and you want a quick read on why, before a deeper review.
   - You're giving feedback on someone else's page and want a fair, structured way to do it.
 not_for:
-  - "You want a deeper review ranked by how bad each problem is: use the Landing page auditor."
+  - "You want a deeper review ranked by how bad each problem is: use the Landing page conversion reviewer."
   - "You have sales numbers and want to find where buyers leave your funnel: use the Sales funnel drop-off finder."
   - "You have no page yet, only an idea: write the page first, then run this check on it."
 

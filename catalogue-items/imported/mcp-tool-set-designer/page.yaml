@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want the server code written: use an MCP SDK or ask a developer, because this plan stops before any code."
   - "You need sign-in, token or security setup: ask a developer or a security expert, as this skill does not cover it."
-  - "You are designing a normal web API for human developers: plain endpoint lists are fine there, so use your usual API design steps."
+  - "You are designing a normal web API for human developers: plain endpoint lists are fine there, so use your usual API designer steps."
 you_give:
   - The jobs your AI should do through MCP
   - The API or system behind it (optional)

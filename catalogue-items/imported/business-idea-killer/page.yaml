@@ -16,7 +16,7 @@ when:
   - You have many ideas and need a fast way to rule out the weak ones.
   - You want a cheap test to run before committing.
 not_for:
-  - Your idea already has paying customers. Use market-size-estimator to size the market instead.
+  - Your idea already has paying customers. Use Market size estimator to size the market instead.
   - You need legal, tax or money advice. Talk to a lawyer or an accountant.
   - You want help planning the build. Run this first, then plan only if the idea survives.
 you_give:

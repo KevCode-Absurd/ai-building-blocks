@@ -18,7 +18,7 @@ when:
 not_for:
   - "Your brand already has a locked photo style and you only need the full set of visual choices: use the Eight-lever ad visual planner."
   - "You want the style your own best ads share: use the Winning image ad style finder, which reads your ads and results."
-  - "You need ready-to-paste picture prompts: use the Six image ad prompt builder once the style is chosen."
+  - "You need ready-to-paste picture prompts: use the Product photo ad prompt set writer once the style is chosen."
   - "The content is not an ad, such as product pages or email images."
 you_give:
   - Your product and its category

@@ -19,8 +19,8 @@ when:
 not_for:
   - You want to buy ads or boost posts. This plans how to use them. Use Weibo's own ad tools to buy.
   - You need live monitoring of what people say now. It cannot see Weibo. You paste the posts and it reads them.
-  - You post short videos. Use the Douyin Strategist agent or the Kuaishou Strategist agent.
-  - You need a full PR or legal response to a real crisis. Use the PR & Communications Manager agent, and ask your own legal adviser.
+  - You post short videos. Use the Douyin content planner or the Kuaishou Strategist agent.
+  - You need a full PR or legal response to a real crisis. Use the Public relations message planner, and ask your own legal adviser.
 you_give:
   - Your brand and what you sell
   - Your goal on Weibo, such as awareness, a launch or customer care

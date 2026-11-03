@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only need a job post: use the Job post writer."
   - "You need a pay range: use the Pay band builder after this one."
-  - "You need skills and levels for many roles at once: use the Role skills framework builder."
+  - "You need skills and levels for many roles at once: use the Job skills and level planner."
   - "You need a legal decision on overtime pay or an accommodation: ask an employment lawyer. This skill only gathers the facts."
 you_give:
   - The role title and department

@@ -20,7 +20,7 @@ when:
 not_for:
   - The date is already fixed in a contract or signed order. This does not change commitments you have made.
   - You have no list of current work or who is available. Gather that first, or use the Team capacity planner on its own.
-  - You want to know what your team's hours earn after costs. Use the Reconcile service capacity and shared cost workflow.
+  - You want to know what your team's hours earn after costs. Use the Service capacity and cost reviewer workflow.
   - You are checking a product mix against machine or plant limits. Use the Product mix capacity checker.
 you_give:
   - "Your committed work: each job, who is on it and its due date"

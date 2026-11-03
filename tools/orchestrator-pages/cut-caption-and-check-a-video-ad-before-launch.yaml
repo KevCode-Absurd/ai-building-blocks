@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your ad is already cut and captioned: use the Pre-launch ad checker on its own."
   - "You only need captions on a finished video: use the Video caption maker in your brand font."
-  - "You still need a script: write one first with the Video ad script writer from customer quotes."
+  - "You still need a script: write one first with the Customer quote video ad writer."
 you_give:
   - The list of your raw clip files
   - The script the clips follow

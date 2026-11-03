@@ -18,10 +18,10 @@ when:
   - A filing shows a write-down or a reversal, and you need to know how much of the margin change it explains.
   - Stock on the balance sheet jumped, and you want to know how much was cash and how much was a purchase of a business or a currency move.
 not_for:
-  - You want the LIFO to FIFO adjustment for one year only. Use the LIFO reserve earnings bridge.
-  - You only want to pull a write-down out of one margin. Use the Inventory charge margin bridge.
-  - You only want to see how much cash went into working capital. Use the Noncash working-capital bridge.
-  - You want a bank borrowing limit for your own stock. Use the Inventory borrowing base builder.
+  - You want the LIFO to FIFO adjustment for one year only. Use the LIFO to FIFO comparison calculator.
+  - You only want to pull a write-down out of one margin. Use the Inventory write-down margin checker.
+  - You only want to see how much cash went into working capital. Use the Working capital cash change checker.
+  - You want a bank borrowing limit for your own stock. Use the Inventory borrowing limit calculator.
   - You want to value stock, set a reserve or decide what to buy. It explains reported numbers and gives no view on value.
 you_give:
   - The new dated filing, with the inventory note, the income statement and the cash flow statement (from the company's results page)

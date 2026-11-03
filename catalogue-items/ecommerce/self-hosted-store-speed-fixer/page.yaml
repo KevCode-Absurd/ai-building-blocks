@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store runs on Shopify or another hosted platform: ask the platform's own support, because it handles the server and caching for you."
   - "You have no way to test changes first: set up a staging site with your host before you start, or ask a developer to make the changes."
-  - "You want a list of fixes ranked by money, not by safe order: use the speed fix ranker if you have it, or ask your developer to rank them."
+  - "You want a list of fixes ranked by money, not by safe order: use the Website performance fix ranker if you have it, or ask your developer to rank them."
 
 you_give:
   - "Your hosting plan, PHP version, and any caching and CDN you use"

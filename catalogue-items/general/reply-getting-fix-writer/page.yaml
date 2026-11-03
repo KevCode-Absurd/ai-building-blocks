@@ -18,9 +18,9 @@ when:
   - Your rewrites change everything and you cannot tell what helped.
   - Your offer or reply path is hard to find.
 not_for:
-  - You have no diagnosis yet. Run the Ad pull diagnoser first, then come back.
+  - You have no diagnosis yet. Run the Ad response troubleshooter first, then come back.
   - You want a new ad from scratch. Use the Fact-based ad copy writer.
-  - You want to compare the old and new ad. Plan that with the Split-run test planner.
+  - You want to compare the old and new ad. Plan that with the A/B test design planner.
 
 you_give:
   - The ad to fix

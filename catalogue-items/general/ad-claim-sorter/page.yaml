@@ -15,7 +15,7 @@ not_for:
   - "You need legal sign-off on health or money claims: ask a qualified reviewer, because this is a first check and not legal advice."
   - "You want to check a whole site with every check: use the Marketing claims checker."
   - "You want to follow up after an audit with new policy wording: use the Policy redraft proposer."
-  - "You want every claim paired with its proof and a score out of 100: use the Ad claim proof gap finder."
+  - "You want every claim paired with its proof and a score out of 100: use the Ad claims checker."
 you_give:
   - The ad, page or email copy
   - The proof you hold

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have a new store with no ads or images yet: use the Buyer awareness stage mapper first to learn where your buyers sit."
   - "You need fresh ad copy written from your product facts: use the Fact-based ad copy writer instead."
-  - "You want to know if live ads are paying off: use the Campaign keep-or-change checker, which reads your ad results."
+  - "You want to know if live ads are paying off: use the Ad change decision checker, which reads your ad results."
 
 you_give:
   - The ad's copy, script or captions

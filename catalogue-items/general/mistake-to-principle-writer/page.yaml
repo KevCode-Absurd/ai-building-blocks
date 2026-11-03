@@ -19,7 +19,7 @@ when:
   - "You want a team habit of writing down what was learned."
 not_for:
   - "You made one small slip with no pattern: fix it and move on, no rule needed."
-  - "The mistake came from a forecast or estimate: use the Estimate gap auditor first, then bring the result here."
+  - "The mistake came from a forecast or estimate: use the Forecast disagreement reviewer first, then bring the result here."
   - "You need to choose between options now: use the Decision checklist builder."
 
 you_give:

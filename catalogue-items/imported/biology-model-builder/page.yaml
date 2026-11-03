@@ -20,8 +20,8 @@ when:
   - You need a clean diagram of a model for a paper or a talk.
   - You are loading a saved project and must keep its diagram layout.
 not_for:
-  - "You want to run a simulation of a finished model: use the Biology model simulator."
-  - "You want to fit parameters to data or run population or NCA work: use the Biology model fitter."
+  - "You want to run a simulation of a finished model: use the SimBiology model simulator."
+  - "You want to fit parameters to data or run population or NCA work: use the SimBiology model parameter fitter."
   - "You do not have MATLAB with SimBiology: ask a colleague who does, or draw the model on paper first."
 you_give:
   - The species and reactions to model

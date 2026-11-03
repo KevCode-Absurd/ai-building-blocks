@@ -19,7 +19,7 @@ when:
   - You must explain what turnover or slow hiring costs the business.
 not_for:
   - "You need a firm go or no-go without finance data: use this for a draft, then have finance confirm the figures."
-  - "You want a plan for how many people to hire across the year: use the Headcount plan builder."
+  - "You want a plan for how many people to hire across the year: use the Hiring headcount planner."
   - "You want the budget by team and month: use the People cost budget builder."
   - "You want three what-if futures for the hiring plan: use the Headcount scenario planner."
 you_give:

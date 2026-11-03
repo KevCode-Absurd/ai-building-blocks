@@ -23,7 +23,7 @@ when:
 not_for:
   - This is a live, ongoing breach with data actively leaving right now. Call your incident response retainer and legal counsel immediately; use this agent's severity call and evidence list while you wait for them, not instead of them.
   - You want a security design reviewed before anything happened. Use the Security Architect agent.
-  - You need day-to-day alert triage, not a structured incident. Use the Security incident triager.
+  - You need day-to-day alert triage, not a structured incident. Use the Security incident response planner.
 you_give:
   - "What you're observing: the alert, the symptom, or what someone reported, in your own words."
   - What systems, accounts or data might be affected, as far as you know.

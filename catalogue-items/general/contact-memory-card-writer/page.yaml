@@ -19,7 +19,7 @@ when:
   - "You owe someone a follow-up and want it to be about them."
 not_for:
   - "You need to load hundreds of contacts at once: use a CRM import or your contact tool for bulk records."
-  - "You want to thank someone in writing: use the Honest appreciation note writer."
+  - "You want to thank someone in writing: use the Honest thank-you note writer."
   - "You want to keep private details someone told you in confidence: leave them out, or ask the person first."
 
 you_give:

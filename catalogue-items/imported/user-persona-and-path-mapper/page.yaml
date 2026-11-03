@@ -40,7 +40,7 @@ not_for:
   - You have notes from fewer than 5 people. The personas will be guesses. Use the Customer interview coach to plan more interviews first.
   - You only want themes and real quotes from interviews, reviews or tickets. Use the Customer interview synthesizer or the Customer research analyst.
   - You only want a diagram of the steps a user takes on one task. Use the User flow mapper.
-  - You only want to test a prototype. Use the Usability test runner.
+  - You only want to test a prototype. Use the Usability test planner.
 output_sample:
   input:
     - Your user data, one row per person, with age, how often they use it, features used, device and pain points

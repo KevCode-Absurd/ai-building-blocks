@@ -16,7 +16,7 @@ when:
   - You want to know, before you discount, whether price is really the block.
 not_for:
   - "You have not sent a proposal yet, or the lead is new and unqualified: use the deal health check, or ask the buyer about budget, need and who decides."
-  - "You want a list of which deals have gone quiet: use the Weekly sales pipeline reviewer, then bring each quiet deal here."
+  - "You want a list of which deals have gone quiet: use the Sales pipeline deal priority reviewer, then bring each quiet deal here."
   - "The buyer has told you they chose someone else: close the deal yourself and ask them what made the difference."
 you_give:
   - The deal notes with every meeting and message dated, and the last thing the buyer said

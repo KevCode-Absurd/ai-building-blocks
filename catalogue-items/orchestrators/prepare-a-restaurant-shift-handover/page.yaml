@@ -18,9 +18,9 @@ when:
   - A fridge, oven or dishwasher is playing up and the next shift must know what was tried.
   - A large booking or a late delivery lands on the next shift.
 not_for:
-  - "You want repeat problems found across several shifts: use the Restaurant shift exception review assistant."
+  - "You want repeat problems found across several shifts: use the Restaurant shift handover reviewer."
   - "You want to build next week's rota: use the Shift schedule planner."
-  - "A food safety incident needs a written procedure: use Turn an incident into a safer procedure."
+  - "A food safety incident needs a written procedure: use Incident learning and follow-up planner."
   - "You are handing over a customer support queue, not a kitchen or floor: use the Gorgias shift handover writer."
 you_give:
   - Your shift notes, in any order

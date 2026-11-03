@@ -18,7 +18,7 @@ when:
   - Several services broke at once and you need to find the shared cause.
   - You must write down a clear incident timeline for your team.
 not_for:
-  - The problem is your AWS bill, not an outage. Use the Cloud bill waste finder.
+  - The problem is your AWS bill, not an outage. Use the AWS cost waste finder.
   - You want a full health check and a fix plan for one resource. Use the AWS service health investigator.
   - Logging was off when it happened. No tool can recover data that was never recorded.
 you_give:

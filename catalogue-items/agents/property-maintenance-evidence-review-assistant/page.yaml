@@ -20,8 +20,8 @@ when:
 not_for:
   - A gas smell, fire, flooding, exposed wiring or anyone at risk right now. Follow your approved emergency rule and call the emergency contact in it. Use this agent afterwards to write it up.
   - You want one quick note for the next person and no tracking. Use the Handover note writer.
-  - You want the agreed actions from a meeting turned into a list. Use the Executive action register keeper.
-  - You need to know who covers a team while people are away. Use the Weekly team coverage review assistant.
+  - You want the agreed actions from a meeting turned into a list. Use the Action item tracker keeper.
+  - You need to know who covers a team while people are away. Use the Team absence coverage reviewer.
 you_give:
   - Open maintenance tickets, each with an ID, a short location, a status and a date (from your ticket tool or a spreadsheet export)
   - Access approvals and appointment windows (from tenant messages, contractor bookings or your calendar)

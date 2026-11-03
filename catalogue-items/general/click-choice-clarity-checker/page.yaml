@@ -18,7 +18,7 @@ when:
   - "Visitors reach the page but do not click the thing you want."
   - "You are redesigning navigation and want a clear test for each label."
 not_for:
-  - "You want a full review of the whole site or app: use the Usability heuristic reviewer."
+  - "You want a full review of the whole site or app: use the Website usability reviewer."
   - "You need to know if real people can finish the task: run a small test with five visitors instead."
   - "Your page has no menu, buttons or links to choose from: ask a friend to read it and tell you what they would do next."
 

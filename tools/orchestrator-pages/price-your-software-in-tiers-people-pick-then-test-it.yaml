@@ -15,9 +15,9 @@ when:
   - You are about to launch and have no idea what to charge.
   - You want to raise prices but fear losing customers, and have no way to test it.
 not_for:
-  - You sell a product once, with no plans or renewals. Use Price a product so it pays after every cost.
-  - You want to ask buyers what they would pay before you pick tiers. Use Set your price from what buyers say, then test it.
-  - Visitors like the product but hesitate at the price. Use Make visitors who hesitate at the price say yes.
+  - You sell a product once, with no plans or renewals. Use Product price and discount planner.
+  - You want to ask buyers what they would pay before you pick tiers. Use Buyer pricing survey test planner.
+  - Visitors like the product but hesitate at the price. Use Price objection copy planner.
   - You want to change prices for current customers today. The test here runs on new sign-ups only, and you decide when it goes live.
 you_give:
   - What the product does and who pays for it

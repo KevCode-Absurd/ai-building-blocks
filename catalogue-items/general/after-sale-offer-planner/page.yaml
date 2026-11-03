@@ -19,7 +19,7 @@ when:
   - You tried an add-on once and cannot say whether it worked.
 not_for:
   - "You want a full set of offers from a free step to a top tier: use the Value ladder planner."
-  - "You need to win a first sale from a stranger: use the Stranger first-message writer."
+  - "You need to win a first sale from a stranger: use the First outreach message writer."
   - "You sell one-off items and never talk to buyers again: a plain upsell at checkout is enough."
 
 you_give:

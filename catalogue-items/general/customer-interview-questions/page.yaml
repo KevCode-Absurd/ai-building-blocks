@@ -18,7 +18,7 @@ when:
   - You have a long list of questions and don't know which ones matter.
   - You keep avoiding one question because the answer might hurt.
 not_for:
-  - "You want to test pricing with a survey: use the Smallest test picker, which suggests the smallest real test."
+  - "You want to test pricing with a survey: use the Minimum experiment planner, which suggests the smallest real test."
   - "You don't know who to talk to yet: use the First customer group picker to choose a group first."
   - "You need the message that gets someone to agree to a talk: use the Customer conversation request writer."
 

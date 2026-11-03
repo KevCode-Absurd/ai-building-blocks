@@ -18,7 +18,7 @@ when:
   - "You are learning a new field and want your reading to feed your work."
   - "You keep notes in many places and cannot find anything."
 not_for:
-  - "You want to choose what to read: use the Specific knowledge finder first, then come back here."
+  - "You want to choose what to read: use the Personal expertise finder first, then come back here."
   - "You read for pleasure and want no notes or homework: just read, and skip the system."
   - "You want to read as many books as you can: this routine is slow on purpose, so use a simple reading list."
 

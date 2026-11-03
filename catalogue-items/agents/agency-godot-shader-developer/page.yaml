@@ -30,10 +30,10 @@ when:
   - You have a tutorial shader for Godot 3 or raw GLSL and need it ported to Godot 4.
   - You need a full-screen effect and want to know which renderer it needs.
 not_for:
-  - Your game is in Unity. Use the Unity Shader Graph Artist agent.
-  - Your game is in Unreal. Use the Unreal Technical Artist agent.
-  - You need game rules and code rather than a visual effect. Use the Godot Gameplay Scripter agent.
-  - You need a wider art pipeline plan, not one effect. Use the Technical Artist agent.
+  - Your game is in Unity. Use the Unity Shader Graph artist.
+  - Your game is in Unreal. Use the Unreal technical artist.
+  - You need game rules and code rather than a visual effect. Use the Godot gameplay programmer.
+  - You need a wider art pipeline plan, not one effect. Use the Art pipeline planner.
 you_give:
   - The effect you want, ideally with a reference image or video
   - Whether it is for 2D sprites and interface, 3D surfaces, particles or the full screen

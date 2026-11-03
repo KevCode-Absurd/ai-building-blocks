@@ -40,7 +40,7 @@ when:
 not_for:
   - You sell software to a hospital or health plan. That is a normal sales process, so use the Go-to-market positioning planner.
   - You need an investor memo or grant section written. Use the Healthcare Innovation Strategist agent.
-  - You want your health claims checked against sources. Use the Clinical Evidence agent.
+  - You want your health claims checked against sources. Use the Clinical evidence reviewer.
   - You need legal advice, contract terms or a data law ruling. Ask a lawyer in each country.
 you_give:
   - Your product and the health problem it addresses

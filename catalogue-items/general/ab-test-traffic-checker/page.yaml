@@ -19,7 +19,7 @@ when:
   - You're thinking about A/B testing and want to know if you have the traffic for it.
 not_for:
   - "Your site gets only a few hundred visits a week: ship the obvious fixes and compare revenue per visitor before and after, or ask a person to review the page."
-  - "You want a full review of what is wrong on the page: use the Landing page auditor."
+  - "You want a full review of what is wrong on the page: use the Landing page conversion reviewer."
   - "You have no analytics or order numbers yet: set up tracking first, because this needs real visits and orders."
 
 you_give:

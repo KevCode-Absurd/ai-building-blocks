@@ -21,7 +21,7 @@ not_for:
   - You want missing DOIs, volumes or page numbers looked up. It only uses the papers you give it and lists the gaps as source requests.
   - You want grammar and wording fixed in your text. Use the Proofreader.
   - You want every claim in a draft that has no source at all. Use the Unsupported claim spotter.
-  - You need one check and no record for next time. Use the Check manuscript reference consistency workflow.
+  - You need one check and no record for next time. Use the Manuscript citation checker workflow.
 you_give:
   - Your manuscript, as a file or pasted text, with its version or date
   - Your reference list as it stands now (from your reference manager export or the end of the manuscript)

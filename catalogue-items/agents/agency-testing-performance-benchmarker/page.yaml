@@ -20,10 +20,10 @@ when:
   - Your developer asks for "a performance budget" and you need one you can check each release.
 not_for:
   - "You want to run a load test on a live production site without the owner's okay: stop, and test a staging copy instead."
-  - "You want to read a Shopify speed report in plain words: use the Store speed report reader."
+  - "You want to read a Shopify speed report in plain words: use the Store speed report analyst."
   - "You want code changes that make one page faster: use the Website speed tuner."
-  - "You want to check that an API returns the right answers: use the API Tester agent."
-  - "You have test results to sort by failure cause: use the Test Results Analyzer agent."
+  - "You want to check that an API returns the right answers: use the API test planner."
+  - "You have test results to sort by failure cause: use the Test results analyst."
 you_give:
   - What to test, such as a page link, an API endpoint or a path like login then dashboard.
   - Your speed goal, such as "95 percent of requests under 500 ms" (optional). Without one it proposes a goal and marks it as a proposal.

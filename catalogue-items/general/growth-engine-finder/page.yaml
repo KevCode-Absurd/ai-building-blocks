@@ -16,8 +16,8 @@ when:
   - Your weekly report has twenty numbers and no one acts on them.
 not_for:
   - "You have no customer records yet: first collect data or run a small test with a few real buyers, then come back."
-  - "You want to know if one idea is worth building: use the Smallest test picker."
-  - "You want a case against a plan you already like: use the Case-against writer."
+  - "You want to know if one idea is worth building: use the Minimum experiment planner."
+  - "You want a case against a plan you already like: use the Plan objection writer."
 you_give:
   - How your recent customers arrived and whether they stayed
   - Your rates, if you have them (optional)

@@ -19,8 +19,8 @@ when:
 not_for:
   - "You are building a native Apple Vision Pro app: use the visionOS Spatial Engineer agent."
   - "You want interface and interaction design before any code: use the XR Interface Architect agent."
-  - "You want cockpit or control-panel interaction in XR: use the XR Cockpit Interaction Specialist agent."
-  - "You want ordinary 2D web pages: use the Frontend Developer agent."
+  - "You want cockpit or control-panel interaction in XR: use the XR cockpit interaction designer."
+  - "You want ordinary 2D web pages: use the Frontend developer."
 you_give:
   - What the experience is and what the person does in it, in a few sentences
   - The devices and browsers it must run on, such as Meta Quest or a phone

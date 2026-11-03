@@ -16,8 +16,8 @@ when:
   - You need to show you did not change what they said.
 not_for:
   - "You have no permission to use the reviews, or cannot show they are real: get written permission from each reviewer first."
-  - "You want the full set of checks on one quote: use the Customer quote image ad."
-  - "You plan to run a result or health claim from a quote: check the proof first with the Ad claim proof gap finder."
+  - "You want the full set of checks on one quote: use the Image ad maker from customer quotes."
+  - "You plan to run a result or health claim from a quote: check the proof first with the Ad claims checker."
 you_give:
   - Two to four review lines, each with its source
   - What the product looks like, or a photo

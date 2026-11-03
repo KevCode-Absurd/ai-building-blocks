@@ -37,8 +37,8 @@ when:
   - You moved one mountain range or sea and want to see what else in the world changes.
 not_for:
   - You need real distances, weather data or a drawn map. Use a mapping tool or a weather service. This agent works from general knowledge in text.
-  - You build 3D terrain in a game engine. Use the Unreal World Builder agent.
-  - You want a short list of plausibility questions on a setting sheet. Use the Fictional setting plausibility check.
+  - You build 3D terrain in a game engine. Use the Unreal world designer.
+  - You want a short list of plausibility questions on a setting sheet. Use the Fictional world logic reviewer.
   - You want the customs and beliefs of the people who live there. Use the Anthropologist agent for worldbuilding.
 you_give:
   - A description of your world or region, or a map described in words or attached as an image

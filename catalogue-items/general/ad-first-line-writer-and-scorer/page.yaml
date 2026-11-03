@@ -19,7 +19,7 @@ when:
   - You have a list of hooks and want to know which to keep before you spend money testing them.
 not_for:
   - "You want the full ad body, not just the opening: use the Fact-based ad copy writer."
-  - "You need to check an ad against Meta's rules before it runs: use the Meta ads compliance checker."
+  - "You need to check an ad against Meta's rules before it runs: use the Meta ad policy checker."
   - "You have no checkable fact about your offer yet: gather one real proof point first, or the hooks will be skipped."
 
 you_give:

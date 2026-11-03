@@ -16,7 +16,7 @@ when:
   - You are deciding whether to push store credit over refunds.
   - You need numbers for a monthly returns report.
 not_for:
-  - "You want the reasons customers send items back: use the return reason finder."
+  - "You want the reasons customers send items back: use the Shopify return reason finder."
   - "You want the money lost to returns: use the return cost calculator."
   - "You have only a handful of returns a month: count them by hand in Shopify, as a percentage split will swing too much."
   - "You can't give your AI read access to your Shopify store: it cannot pull your returns, so a person on your team should export them first."

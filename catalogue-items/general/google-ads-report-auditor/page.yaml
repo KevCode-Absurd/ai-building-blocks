@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want one pass over your whole account: pull one report at a time and run this once per area."
   - "You want the changes made for you: this only proposes, so make each approved change by hand in Google Ads."
-  - "You need Meta or Facebook ad results read: use the Campaign keep-or-change checker, or your Meta Ads Manager report with a person you trust."
+  - "You need Meta or Facebook ad results read: use the Ad change decision checker, or your Meta Ads Manager report with a person you trust."
 
 you_give:
   - Which part to review (search terms, keywords, Quality Score, Performance Max assets, Display, video, or bids and budgets)

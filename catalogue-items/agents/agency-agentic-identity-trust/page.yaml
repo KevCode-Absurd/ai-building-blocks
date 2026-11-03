@@ -19,9 +19,9 @@ when:
   - An auditor, a customer or your boss asks how you know what an agent did and that the record was not changed.
   - You are about to add agents to a product and want the identity design done before anyone writes code.
 not_for:
-  - You need to decide if two customer or company records are the same one. Use the Identity Graph Operator agent.
-  - You want sign-in, single sign-on or passkeys for human users. Use the Identity & Access Engineer agent.
-  - You want finished code checked for bugs. Use the Application Security Engineer agent.
+  - You need to decide if two customer or company records are the same one. Use the Identity graph designer.
+  - You want sign-in, single sign-on or passkeys for human users. Use the Identity and access engineer.
+  - You want finished code checked for bugs. Use the Application security reviewer.
   - You want it to set up keys, servers or a live system. It writes the design. Your engineers build it and test it.
 you_give:
   - A list of your agents and what each one can do, in plain words.

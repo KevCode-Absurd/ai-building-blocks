@@ -17,7 +17,7 @@ when:
   - Three people answer almost every question and you need a contributor program.
   - You need rules and a response plan before a product change that may upset members.
 not_for:
-  - You want a plan for a Reddit community. Use the Reddit Community Builder agent.
+  - You want a plan for a Reddit community. Use the Reddit community planner.
   - You want to learn what customers say in public forums. Use the Community evidence researcher.
   - You want growth tests for your community as a channel. Use the Community growth experiment planner.
 you_give:

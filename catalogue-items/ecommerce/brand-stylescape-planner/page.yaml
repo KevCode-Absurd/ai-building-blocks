@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "Your logo and look are settled and customers know them. Use the Brand style guide writer to write the rules down."
-  - "You want finished mood boards or images. This plans them in words. Build them in Figma or an image tool, and use the Brand-to-image prompt compiler for the prompts."
-  - "You want to know if your site, emails and pack already say the same thing. Use the Store brand signal auditor."
-  - "You are still choosing how you differ from rivals, not how you look. Start with the Positioning grid builder."
+  - "You want finished mood boards or images. This plans them in words. Build them in Figma or an image tool, and use the Brand image prompt writer for the prompts."
+  - "You want to know if your site, emails and pack already say the same thing. Use the Store brand consistency reviewer."
+  - "You are still choosing how you differ from rivals, not how you look. Start with the Competitor positioning mapper."
 
 you_give:
   - "Three to five values you will not give up, and the traits your brand should show (write them, or take them from your brand brain)"

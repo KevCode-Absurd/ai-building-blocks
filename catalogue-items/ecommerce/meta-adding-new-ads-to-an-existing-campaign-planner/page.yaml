@@ -17,9 +17,9 @@ when:
   - You want a launch list with IDs and dates, so you can read the results later.
 not_for:
   - "You are starting a new campaign, or changing the objective or conversion event: use the Meta creative test campaign planner."
-  - "One ad has gone stale and you need ideas to revive it: use the Fatigued ad reviver."
+  - "One ad has gone stale and you need ideas to revive it: use the Fading ad refresh planner."
   - "You want each ad marked keep, watch or pause from its numbers: use the Daily Meta ad review planner."
-  - "You want to know if a new ad will be rejected: use the Meta ads compliance checker."
+  - "You want to know if a new ad will be rejected: use the Meta ad policy checker."
   - "You want the new ads written or made. This plans the setup. It does not create the creative."
 you_give:
   - The campaign and ad set you want to add to, with its objective, conversion event, link and tracking tags

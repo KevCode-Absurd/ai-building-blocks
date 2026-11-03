@@ -18,8 +18,8 @@ when:
   - A new practice manager inherits an FAQ nobody has checked in years.
   - You want a clinic FAQ that someone who has never visited can follow.
 not_for:
-  - You are writing down how new appointments are taken. Use Document a clinic appointment intake process.
-  - You want to measure waiting or call volume. Use Measure a clinic administrative queue.
+  - You are writing down how new appointments are taken. Use Clinic booking procedure writer.
+  - You want to measure waiting or call volume. Use Clinic administrative queue reviewer.
   - You need medical content checked. A clinician must review that. This only flags it.
   - You have no approved facts yet. List them first, then run this.
 you_give:

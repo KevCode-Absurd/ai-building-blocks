@@ -33,7 +33,7 @@ when:
   - A scan came back clean, but a user says they can't finish a form with a keyboard or screen reader.
   - You have a list of failed checks from axe, WAVE or Lighthouse and need to know which to fix first.
 not_for:
-  - You want a plain accessibility audit plan for any site, with no U.S. law angle. Use the Accessibility Auditor agent.
+  - You want a plain accessibility audit plan for any site, with no U.S. law angle. Use the Accessibility auditor.
   - You are building a government site from scratch on the U.S. Web Design System. Use the USWDS Developer agent.
   - You need legal sign-off or a certificate of conformance. Only a qualified auditor or your counsel can give that.
   - You want an overlay widget added to fix the problem. This agent fixes the page code instead.

@@ -16,8 +16,8 @@ when:
   - Your past write-ups repeated the headline and missed the shift in tone.
 not_for:
   - "You follow a private company or have no release and transcript: write notes by hand or ask your AI for a plain summary of what you do have."
-  - "You only want a note before the release: run the earnings-preview-writer skill by itself."
-  - "You want the real earning power in an annual report: use the workflow Find a company's real earning power and its tricks."
+  - "You only want a note before the release: run the Earnings preview writer skill by itself."
+  - "You want the Company earnings adjustments and reliability reviewer in an annual report: use the workflow Company earnings adjustments and reliability reviewer."
 you_give:
   - The company and what you already think matters
   - "After the release: the release and the call transcript"

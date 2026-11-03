@@ -20,8 +20,8 @@ when:
   - You are setting up scheduled sends in your CRM or reporting tool and need the rules written first.
 not_for:
   - You want it to send the emails or run on a schedule. A chat cannot. Use your CRM, report tool or email scheduler, with this plan as the setup guide.
-  - You need the report numbers built from raw sales data. Use the Data Consolidation agent first.
-  - You want a short written summary of a long report. Use the Executive summary generator agent.
+  - You need the report numbers built from raw sales data. Use the Sales data consolidation planner first.
+  - You want a short written summary of a long report. Use the Executive summary generator.
   - You plan to send reports outside your company. It will mark each outside recipient as needing your approval before anything goes.
 you_give:
   - The report or reports to send, and what each one contains (a sample or the column names is enough)

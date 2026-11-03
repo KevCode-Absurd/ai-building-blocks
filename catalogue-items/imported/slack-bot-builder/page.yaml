@@ -22,8 +22,8 @@ when:
 not_for:
   - "You only need to post a message into one channel: use a Slack incoming webhook, which needs no app."
   - "A no-code flow is enough: use Slack's Workflow Builder."
-  - "You want to control which AI agent answers which Slack message: use the Scoped Slack agent router builder."
-  - "You only want a first test that replies Pong to ping: use the First Slack Bot coding prompt."
+  - "You want to control which AI agent answers which Slack message: use the Slack agent message router builder."
+  - "You only want a first test that replies Pong to ping: use the Slack bot build brief writer."
 you_give:
   - What the bot should do, in one or two sentences
   - "Your language: Python, JavaScript or Java"

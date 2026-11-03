@@ -19,7 +19,7 @@ when:
   - "You want an auto-reply that actually answers the question."
 not_for:
   - "You have one ticket, or a new problem with no answer yet: ask the product owner for the fix first, then come back."
-  - "You need to answer the tickets in your inbox today: use the Customer inbox priorities and reply drafts."
+  - "You need to answer the tickets in your inbox today: use the Customer inbox reply drafter."
   - "You want to tidy the layout of an article you already wrote: use the Article formatter."
 
 you_give:

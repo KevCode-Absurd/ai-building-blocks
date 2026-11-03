@@ -15,9 +15,9 @@ when:
   - Your repeat rate is flat and you suspect discounts are not what brings people back.
   - You want to do something personal for your best customers, but not sure who or what.
 not_for:
-  - "You have fewer than about 30 repeat buyers: use the Best and worst customer profiler alone to learn who your best customers are first."
+  - "You have fewer than about 30 repeat buyers: use the Customer profitability and ad source analyst alone to learn who your best customers are first."
   - "You only want the tiers and perks: use the Loyalty and VIP program designer on its own."
-  - "You already know your VIPs and only want personal notes or calls: use the Top customer touch planner."
+  - "You already know your VIPs and only want personal notes or calls: use the Top-customer outreach planner."
 you_give:
   - Your order export with customer, date, order value, discount code, refunds and cost or margin
   - How each customer first came to you (optional)

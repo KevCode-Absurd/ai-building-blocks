@@ -19,7 +19,7 @@ when:
   - You need backup slides ready for the Q&A round.
 not_for:
   - "You have no deck or exhibits yet: use the Case competition slide deck builder first."
-  - "You want the deck and its numbers checked, not practice questions: use the Stress test a case competition recommendation workflow."
+  - "You want the deck and its numbers checked, not practice questions: use the Case competition financial-assumption reviewer workflow."
   - "You want a person to play the judge live: this workflow writes the questions, and a teammate has to ask them."
 you_give:
   - Your team deck, as slides or the text of each slide

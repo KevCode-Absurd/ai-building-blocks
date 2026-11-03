@@ -57,9 +57,9 @@ improve:
 terms: []
 next: [ship-readiness-gate, deploy-verifier]
 not_for:
-  - You want a go or no-go verdict on your code and a list of blockers. Use the Ship readiness gate.
+  - You want a go or no-go verdict on your code and a list of blockers. Use the Code release readiness checker.
   - You only need a read-only report on migrations, config, secrets and rollout order. Use the Release readiness reviewer.
-  - You only need the missing tests for one code change. Use the Test gap finder.
+  - You only need the missing tests for one code change. Use the Code change test coverage reviewer.
 output_sample:
   input:
     - Your repo or the code change you plan to release

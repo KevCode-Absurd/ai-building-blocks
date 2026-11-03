@@ -21,9 +21,9 @@ when:
 
 not_for:
   - You have only one period of numbers. It will describe them, but it can't call a drop without an earlier period to compare.
-  - It's a one-day blip or a new ad with a few dozen clicks. Wait for more data, or use the two version result reader to see whether a gap between two ads is big enough to mean anything.
+  - It's a one-day blip or a new ad with a few dozen clicks. Wait for more data, or use the Two-version response results reviewer to see whether a gap between two ads is big enough to mean anything.
   - You need a clean report for someone else, not a diagnosis. Use the ad results report writer.
-  - You want to know whether to keep or replace an ad's whole idea. Use the campaign keep-or-change checker.
+  - You want to know whether to keep or replace an ad's whole idea. Use the Ad change decision checker.
   - You want it to pause an ad or move budget. It proposes only; you make each change.
 
 you_give:

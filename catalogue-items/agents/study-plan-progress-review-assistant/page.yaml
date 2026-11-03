@@ -18,8 +18,8 @@ when:
   - Your free time changed, for example a new job or a closer exam date.
   - You tutor or parent a learner and want a weekly review built from their real answers.
 not_for:
-  - You have no plan yet. Use the Choose a study plan you can keep workflow.
-  - You want to check one topic today. Use the Study understanding check on its own.
+  - You have no plan yet. Use the Study roadmap and weekly session planner workflow.
+  - You want to check one topic today. Use the Study understanding checker on its own.
   - The learner has no practice answers yet. Do a session first, then come back to this.
 you_give:
   - Your learning goal and your exam or deadline date

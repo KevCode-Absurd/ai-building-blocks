@@ -17,8 +17,8 @@ when:
   - "You have a starter detector and need to know what it misses before you rely on it."
 not_for:
   - "A number with no history, or a one-time event. Use a plain fixed-limit alert in your own dashboard tool."
-  - "You want to catch tired ads from a pasted list of results twice a week. Use the Ad fatigue watcher."
-  - "You want to judge how right your agent's past calls were. Use the Agent prediction review builder."
+  - "You want to catch tired ads from a pasted list of results twice a week. Use the Ad decline tracker and replacement briefs."
+  - "You want to judge how right your agent's past calls were. Use the Agent prediction log builder."
   - "You want one daily brief that joins alerts from many agents. Use the Multi-agent findings brief builder."
   - "You want it to pause anything or change an account. It only plans alerts. A person decides what to do."
 you_give:

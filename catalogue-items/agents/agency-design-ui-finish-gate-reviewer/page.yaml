@@ -17,8 +17,8 @@ when:
   - You need a clear go or no-go before a release or a demo.
   - The phone version only stacks the desktop layout, and you suspect it hides the main job.
 not_for:
-  - You want a 0 to 100 score for how AI-made your UI code looks. Use the AI-look design reviewer.
-  - You want every new screen reviewed with several checks each time. Use the New screen design reviewer.
+  - You want a 0 to 100 score for how AI-made your UI code looks. Use the UI design consistency reviewer.
+  - You want every new screen reviewed with several checks each time. Use the Screen usability reviewer.
   - You want a new design, not a review. Use the UI Designer agent.
 you_give:
   - Screenshots of the built screens at desktop and phone width, or live links

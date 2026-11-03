@@ -19,7 +19,7 @@ when:
   - You need to decide between tiers, freemium or one flat price.
 not_for:
   - "Your product has months of live sales data: start with that data, then come back to test a change."
-  - "You want to design a guarantee or a stronger offer: use offer-builder, not a pricing plan."
+  - "You want to design a guarantee or a stronger offer: use Customer offer builder, not a pricing plan."
   - "You want to know what customers value or why they buy: study customer jobs first with jobs-to-be-done-framer."
 you_give:
   - Product description

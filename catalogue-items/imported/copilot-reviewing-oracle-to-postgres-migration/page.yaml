@@ -19,7 +19,7 @@ when:
   - A reviewer asks which known risks your migration has covered.
 not_for:
   - "You have one wrong result and want to write it up: use the Database migration bug report writer."
-  - "You want the procedures converted: use the Oracle stored procedure migrator."
+  - "You want the procedures converted: use the Oracle to PostgreSQL procedure migrator."
   - "You need a general SQL performance review: use the Postgres query tuner."
   - "You are moving to a database other than PostgreSQL: the 14 differences do not apply."
 you_give:

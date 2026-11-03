@@ -20,7 +20,7 @@ when:
 not_for:
   - You want to know if refinancing saves interest over time. This only checks the cash needed at closing, not future savings.
   - Your loan has a make-whole premium or a swap to break out of. This handles a simple percentage premium only. Ask your lender or adviser.
-  - You want to check what you receive from a new debt issue after discounts and fees. Use the Debt issue proceeds checker.
+  - You want to check what you receive from a new debt issue after discounts and fees. Use the New loan cash proceeds checker.
   - You want the funding gap for a whole company sale or deal. Use the Deal funding gap checker.
 you_give:
   - The old loan payoff amount (from the payoff letter)

@@ -19,7 +19,7 @@ when:
   - "You need to explain to someone why you are or are not shipping."
 not_for:
   - "Your test had no planned sample size, or ran under two weeks: wait and finish it, or ask a person who knows testing to set the plan first."
-  - "You want the full set of checks: use the Store test verdict maker."
+  - "You want the full set of checks: use the Store test evidence reviewer."
   - "You are still choosing what to test: use the Test idea ranker."
 
 you_give:

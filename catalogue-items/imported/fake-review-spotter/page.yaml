@@ -35,8 +35,8 @@ how_to_use:
     this page.
   - Before you act on a high-risk result, remember that flags are signals, not proof. Read the flagged reviews yourself before you report a rival or a store.
 not_for:
-  - You want to learn what buyers dislike in a rival's product. Use the Star-rating review miner.
-  - You want to know whether your own low reviews came from the wrong buyers. Use the Wrong-buyer review checker.
+  - You want to learn what buyers dislike in a rival's product. Use the Competitor review insight finder.
+  - You want to know whether your own low reviews came from the wrong buyers. Use the Customer fit reviewer.
   - You need proof to report to a store or platform. It flags reviews that look off. It does not prove anything.
 output_sample:
   input:

@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your product has no measurable facts yet: talk to ten likely buyers first, then come back with what you learn."
   - "You want to sort a list of feature requests: use the Feature request screener."
-  - "You have one idea and want to test it cheaply: use the Smallest test picker."
+  - "You have one idea and want to test it cheaply: use the Minimum experiment planner."
 
 you_give:
   - "What the product does, in plain terms and measured facts"

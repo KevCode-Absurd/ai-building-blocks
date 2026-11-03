@@ -20,8 +20,8 @@ not_for:
   - "You need to split a contract into performance obligations: ask your accountant or auditor, as this only checks the total roll-forward."
   - "You want to forecast future bookings or revenue: build that in your own spreadsheet, as this only looks back."
   - "You only have a receivables balance with no deferred revenue: check it with a simple aging report in your accounting tool."
-  - "You are tracking unbilled revenue turning into invoices and collections: use the Contract asset billing cash bridge instead."
-  - "You are bridging gross sales to net revenue after discounts, returns and rebates: use the Gross-to-net revenue bridge instead."
+  - "You are tracking unbilled revenue turning into invoices and collections: use the Unbilled work to cash tracker instead."
+  - "You are bridging gross sales to net revenue after discounts, returns and rebates: use the Gross to net revenue checker instead."
 you_give:
   - Opening/closing contract liabilities, new advances or deferred billings, signed non-revenue changes and disclosed releases.
   - "The period end, plus the currency and scale used for the contract liability roll-forward."

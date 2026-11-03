@@ -20,8 +20,8 @@ when:
 not_for:
   - "Your store has too few daily sales to read a result: fix your ads and your product page first, then come back."
   - "You want a new ad written: use the Story image ad writer."
-  - "You need to plan where a fixed budget goes next: use the Next-dollar budget allocator."
-  - "You want a gate-by-gate review of which campaigns are ready to scale: use the Five-gate campaign scaling planner."
+  - "You need to plan where a fixed budget goes next: use the Marketing budget allocation planner."
+  - "You want a gate-by-gate review of which campaigns are ready to scale: use the Meta campaign scaling planner."
 
 you_give:
   - Winning ad sets or post IDs with daily spend and ROAS or CPA

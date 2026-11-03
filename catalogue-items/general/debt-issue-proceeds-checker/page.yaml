@@ -21,7 +21,7 @@ not_for:
   - "You need tax OID amortization or effective-interest schedules: ask your tax adviser or accountant, because this only checks one issue."
   - "You need to know if a loan is legally available or funded: read the signed credit agreement and the lender's funding notice."
   - "You want to build a full debt payoff schedule: use a spreadsheet loan schedule, and keep principal at face there."
-  - "You are paying off old debt and need to tie the payoff, premium and fees to usable new funding: use the Refinancing closing cost checker instead."
+  - "You are paying off old debt and need to tie the payoff, premium and fees to usable new funding: use the Loan refinancing cash gap checker instead."
 you_give:
   - Debt face amount, from the signed contract.
   - Issue price as a share of par, from the contract.

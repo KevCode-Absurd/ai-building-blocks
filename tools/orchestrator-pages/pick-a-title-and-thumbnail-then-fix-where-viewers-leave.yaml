@@ -15,7 +15,7 @@ when:
   - Your videos get views but viewers leave early and you don't know why.
   - You want to pick the next video from what worked, not from a hunch.
 not_for:
-  - "You only want title and thumbnail ideas and have nothing published yet: use the Thumbnail and title planner."
+  - "You only want title and thumbnail ideas and have nothing published yet: use the Video title and thumbnail planner."
   - "You want the first seconds of a video ad scored before you film: use the Video hook scorer."
   - "Your video has too few views to show a pattern: wait for more views before reading the retention report."
   - "You want views from ads on YouTube read, not a video's own viewers: use the YouTube ad results reader."

@@ -17,7 +17,7 @@ when:
   - You need numbers for a talk with your team about promotions.
 not_for:
   - "You need profit after product cost: add your product costs and work it out in a spreadsheet first, since this only compares revenue to discount cost."
-  - "You want to find broken or unused codes: use the Old discount code cleaner, not this one."
+  - "You want to find broken or unused codes: use the Shopify old discount code cleaner, not this one."
   - "You do not use Shopify: this reads Shopify order and discount data only, so use your own store's sales report."
 you_give:
   - Your Shopify store domain

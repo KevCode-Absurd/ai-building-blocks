@@ -19,7 +19,7 @@ when:
   - Your pilot has no baseline or no written checklist and you want to know what is missing before you decide.
 not_for:
   - You have not started the pilot. Use the AI build-or-buy advisor to decide what to try first.
-  - You are checking one AI agent before it goes live. Use the Review an agent before launch workflow.
+  - You are checking one AI agent before it goes live. Use the AI agent launch security reviewer workflow.
   - You only need to check one results sheet. Use the Spreadsheet checker.
   - You want the decision made for you. This workflow prepares the evidence. A person decides.
 you_give:

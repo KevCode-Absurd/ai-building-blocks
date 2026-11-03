@@ -18,8 +18,8 @@ when:
   - A new hire joins and you want a first map of the repo without writing the guide by hand.
 not_for:
   - You want to know if the code is good or safe to ship. Use the Code Reviewer agent or the Codebase architecture reviewer.
-  - You want to know why the code is inconsistent after many AI-assisted edits. Use the Codebase Archaeologist agent.
-  - You want a README or setup guide written for other people. Use the Technical Writer agent.
+  - You want to know why the code is inconsistent after many AI-assisted edits. Use the Codebase history researcher.
+  - You want a README or setup guide written for other people. Use the Engineering documentation writer.
 you_give:
   - The repo, as files your AI can open, such as a folder, a zip, or a project open in Claude Code or Codex
   - The question or goal, for example where to start or how a login request flows

@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your file is small, or your current script is fast enough: keep what you have."
   - "The file is bigger than your computer's memory: split it by month first, or use a tool built for that, such as dask or vaex."
-  - "You want a messy file cleaned with a change log and no code: use the Data cleaner."
+  - "You want a messy file cleaned with a change log and no code: use the Dataset cleaner and validator."
   - "You want trends and tests with a written answer: use the Data analyst."
 you_give:
   - A data file, such as CSV or Parquet, saved on your computer

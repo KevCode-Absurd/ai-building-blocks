@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want a flat or minimal look with no fake materials: use the Minimal style guide writer."
   - "You need finished screens or mockups: use a design tool such as Figma, since this only writes rules."
-  - "You want a retro look instead: use the Retro style guide."
+  - "You want a retro look instead: use the Retro throwback style guide writer."
   - "You want a raw, blunt look with no polish (hard edges, flat color): use the Raw brutalist style guide writer. This guide is the opposite. It is built on named materials, one light direction, shadow depths and pressed button states, which the raw guide has none of."
 you_give:
   - A description of your product (what it is, who uses it, and whether it is an app or a site)

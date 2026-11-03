@@ -28,9 +28,9 @@ when:
   - Someone asks how you will test an AI feature for bias, privacy and drift.
 not_for:
   - You want a chatbot or app built today. Use the AI app and chatbot builder.
-  - Your feature answers questions from your own documents. Use the RAG Pipeline Engineer agent or the RAG pipeline designer.
-  - You are training or tuning a large language model. Use the LLM Post-Training Engineer agent.
-  - Your problem is moving and cleaning data, not the AI itself. Use the Data Engineer agent.
+  - Your feature answers questions from your own documents. Use the RAG pipeline implementation planner or the RAG pipeline designer.
+  - You are training or tuning a large language model. Use the LLM post-training planner.
+  - Your problem is moving and cleaning data, not the AI itself. Use the Data pipeline designer.
 you_give:
   - The feature you want, in one or two sentences, and who will use it.
   - What data you have, where it lives and roughly how much (a short description is enough).

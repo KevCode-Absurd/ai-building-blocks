@@ -18,10 +18,10 @@ when:
   - A leader asked whether the change "landed" and you only have attendance numbers.
   - A check or audit is coming and you want to know where staff need help first.
 not_for:
-  - The policy is not approved yet. Use the make a new policy understandable to staff workflow before it goes out.
+  - The policy is not approved yet. Use the Staff policy explanation and rollout writer workflow before it goes out.
   - You want to judge one person's compliance or performance. Take that to your HR reviewer.
-  - You need to collect feedback first. Use the employee survey designer.
-  - Your feedback is general, not about one policy. Use the turn employee feedback into owned actions workflow.
+  - You need to collect feedback first. Use the Employee feedback survey planner.
+  - Your feedback is general, not about one policy. Use the Employee feedback action planner workflow.
 you_give:
   - The approved policy change and its effective date (from the policy document)
   - Staff feedback with names removed, such as survey answers, questions to HR and helpdesk notes

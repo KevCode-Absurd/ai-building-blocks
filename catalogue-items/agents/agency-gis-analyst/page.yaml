@@ -17,10 +17,10 @@ when:
   - Layers do not line up on the map, which is often a coordinate system problem.
   - You have a spreadsheet with latitude and longitude and need a clear map for a report.
 not_for:
-  - "You need a strategy or a tool choice for a whole organization: use the Technical Consultant agent."
-  - "You need hot spot tests, regression or prediction: use the Spatial Data Scientist agent."
+  - "You need a strategy or a tool choice for a whole organization: use the GIS implementation planner."
+  - "You need hot spot tests, regression or prediction: use the Spatial data scientist."
   - "You need an automated data pipeline: use the Spatial Data Engineer agent."
-  - "You need the map styling worked out in depth: use the Cartography Designer agent."
+  - "You need the map styling worked out in depth: use the Map designer."
   - "You need a repeat task turned into a script or toolbox: use the Geoprocessing Specialist agent."
 you_give:
   - The question the map or query must answer, in plain words

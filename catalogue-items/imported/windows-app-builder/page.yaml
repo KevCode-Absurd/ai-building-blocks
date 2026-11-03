@@ -18,9 +18,9 @@ when:
   - You are not sure how a modern Windows app should look and behave.
   - An existing WinUI project has build errors you cannot trace.
 not_for:
-  - "You want a website or a cross-platform app: use the ASP.NET web app builder for the web, or the Single-file app builder for a quick shareable page."
+  - "You want a website or a cross-platform app: use the ASP.NET web app builder for the web, or the Bundled React app builder for a quick shareable page."
   - "You have a WPF, WinForms or UWP app you want to keep as it is: this skill builds new WinUI 3 apps only."
-  - "You want to test an Electron app: use the Desktop app tester."
+  - "You want to test an Electron app: use the Electron desktop app tester."
 you_give:
   - A description of what the app should do
   - An app name (optional)

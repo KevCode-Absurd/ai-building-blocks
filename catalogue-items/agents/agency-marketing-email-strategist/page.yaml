@@ -30,8 +30,8 @@ when:
   - Your emails land in spam, or complaints are rising, and you want a checklist to work through.
   - Someone says open rates are great, but nobody replies or buys, and you need a better way to measure.
 not_for:
-  - You want the email text written. Use the Email sequence writer or the Campaign email writer.
-  - You run a Shopify store and want flows such as welcome or cart recovery. Use the Welcome flow builder or the Cart recovery flow builder.
+  - You want the email text written. Use the Email sequence and timing writer or the Campaign email writer.
+  - You run a Shopify store and want flows such as welcome or cart recovery. Use the Welcome flow builder or the Cart and checkout email planner.
   - You only need your sending domain set up with SPF, DKIM and DMARC. Use the Inbox delivery fixer.
   - You send receipts and order updates. Plan those separately from marketing email, and use your shop or app tool.
   - You need a legal opinion on consent or privacy law. Ask a qualified lawyer.

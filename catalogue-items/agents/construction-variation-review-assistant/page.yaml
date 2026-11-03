@@ -23,8 +23,8 @@ when:
 not_for:
   - There is no signed contract or priced scope yet. Take it to the commercial team first, because this review has nothing to compare against.
   - The work is a client service engagement and not construction. Use the Client scope change and decision tracker.
-  - You are checking a delay or time claim only. Use the Weekly project delay evidence assistant.
-  - You want a risk review of the contract wording for a lawyer. Use the Contract intake reviewer.
+  - You are checking a delay or time claim only. Use the Project delay test reviewer.
+  - You want a risk review of the contract wording for a lawyer. Use the Contract clause risk reviewer.
   - You want the AI to approve, price or instruct the work. It drafts, and a person with authority decides.
 
 you_give:

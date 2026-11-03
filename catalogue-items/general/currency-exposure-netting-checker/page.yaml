@@ -18,7 +18,7 @@ when:
   - You are building a month-end report on foreign currency risk and need the net by currency.
   - A reviewer asks what a 10 cent move in the rate would do to the unhedged amount.
 not_for:
-  - You want to check a forward contract at its settlement date. Use the Currency forward settlement checker.
+  - You want to check a forward contract at its settlement date. Use the Currency forward payment checker.
   - You need hedge accounting, value at risk or a trade recommendation. This is arithmetic only, so use a treasury system or a qualified adviser.
   - You have several currencies. Run it once per currency and date range, then add the results in your reporting currency.
 you_give:

@@ -19,7 +19,7 @@ when:
   - You must brief the person who can approve it, in a short page.
 not_for:
   - "You want to track one variation through revised versions and record each approval as it arrives: use the Construction variation cost and approval tracker."
-  - "The work is a client service project, not building work: use Prepare a client scope change brief."
+  - "The work is a client service project, not building work: use Client scope change planner."
   - You want a lawyer's or quantity surveyor's view of what the clauses mean. This finds the clauses and lists questions. A professional reads them.
   - There is no signed contract or priced scope yet. Get those first, because there is nothing to compare against.
 you_give:

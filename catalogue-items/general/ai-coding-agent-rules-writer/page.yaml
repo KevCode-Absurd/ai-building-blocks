@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no test list yet: write it first with the Test list writer, then come back here."
   - "You are building a quick prototype with no tests: skip this and review the agent's work by hand."
-  - "You want to split one change into tidy commits after the fact: use the Structure and behaviour change splitter."
+  - "You want to split one change into tidy commits after the fact: use the Process and behavior change planner."
 
 you_give:
   - A description of the project and the language or tools

@@ -33,9 +33,9 @@ when:
   - A buyer, auditor or manager asks for proof that your model is calibrated and fair.
   - You inherited a model with thin notes and want a list of what to test and in what order.
 not_for:
-  - You want a model built or tuned. Use the AI Engineer agent.
+  - You want a model built or tuned. Use the AI feature planner.
   - You want a final sign-off for a regulated use such as credit or hiring. A qualified data scientist or your model risk team must give that.
-  - You want to check an AI chat prompt or an LLM, not a scoring model. Use the Prompt Engineer agent for prompts.
+  - You want to check an AI chat prompt or an LLM, not a scoring model. Use the Prompt engineer for prompts.
   - You have no results, no data and no documents. Expect a plan and a list of what to collect, not an opinion.
 you_give:
   - What the model predicts, how it is used, and its type, such as a churn classifier

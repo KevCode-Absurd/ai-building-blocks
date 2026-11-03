@@ -18,7 +18,7 @@ when:
   - Leaders want a regular status update in a set format.
   - You are rolling out a program in phases across several sites.
 not_for:
-  - "You need a legal case plan or a plan for one employee's situation: use your HR counsel, or the Exit interview and grievance guide for a fair process."
+  - "You need a legal case plan or a plan for one employee's situation: use your HR counsel, or the Exit interview and grievance planner for a fair process."
   - "You are choosing a vendor first: use the HR vendor selection planner, then come back to plan the rollout."
   - "You want to automate HR tasks and decide which to do first: use the HR process automation designer."
   - "You need a risk list of people and legal risks across the whole team: use the People risk register builder."

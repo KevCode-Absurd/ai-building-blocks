@@ -18,7 +18,7 @@ when:
   - A teammate wrote the questions and you suspect some push people toward one answer.
   - You plan to post a survey link on social media and need to know what the replies can and cannot show.
 not_for:
-  - You already have the answers. Use the Prepare a survey findings briefing workflow.
+  - You already have the answers. Use the Survey results checker and briefing planner workflow.
   - You want to size a market, not check a survey. Use the Market size and survey planner on its own.
   - You need to plan interviews, not a survey. Use the Interview and research planner.
   - You need legal advice on consent or privacy law. Ask a qualified person. This only checks that your consent wording is there.

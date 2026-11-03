@@ -22,9 +22,9 @@ when:
   - "Sales are slow and you are tempted to widen your message."
 
 not_for:
-  - "You want to know which groups are hungriest to buy: use the Hungry audience ranker."
+  - "You want to know which groups are hungriest to buy: use the Market demand reviewer."
   - "You do not yet know what buyers say or want: plan talks first with the Customer discovery interview planner."
-  - "You already picked your group and want to know where they spend time online: use the Audience hangout finder."
+  - "You already picked your group and want to know where they spend time online: use the Customer community finder."
   - "You want a copy brief for one ad, not a choice for the whole business: use the Buyer brief writer."
 
 you_give:

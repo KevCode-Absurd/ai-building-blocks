@@ -18,7 +18,7 @@ when:
   - A tool will start reading staff data, such as an AI note taker.
   - You need a record of why a role may see sensitive fields.
 not_for:
-  - You are choosing which HR software to buy. Use Compare HR software before buying.
+  - You are choosing which HR software to buy. Use HR software selection reviewer.
   - You only want to check one AI tool that uses staff data. Use the Employee data privacy checker.
   - You want to grant or remove access now. This lists actions for a reviewer. Your IT admin makes the change.
   - The data belongs to customers, not staff. Use Prepare a new data use for review.

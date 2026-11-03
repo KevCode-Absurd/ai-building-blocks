@@ -17,8 +17,8 @@ when:
   - Testers find the panels tiring, too close or hard to find.
   - A developer needs a flow and layout template before they start coding.
 not_for:
-  - Your app is a seated vehicle with levers and gauges. Use the XR Cockpit Interaction Specialist agent.
-  - You need the experience built in WebXR. Use the XR Immersive Developer agent.
+  - Your app is a seated vehicle with levers and gauges. Use the XR cockpit interaction designer.
+  - You need the experience built in WebXR. Use the WebXR experience designer.
   - You are building for Apple Vision Pro. Use the visionOS Spatial Engineer agent.
   - Your screens are flat, on the web or a phone. Use the UI Designer agent.
 you_give:

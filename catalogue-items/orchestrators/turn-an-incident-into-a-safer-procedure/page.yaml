@@ -20,7 +20,7 @@ when:
 not_for:
   - "The incident is still going: use the Outage incident leader first, then come back after recovery."
   - "You only need the report, not the procedure or the actions: use the Incident postmortem writer."
-  - "It is a security alert in its first hour: use the Security incident triager."
+  - "It is a security alert in its first hour: use the Security incident response planner."
 you_give:
   - The incident timeline, logs, chat or notes, with times (from your alerts, chat export or notes)
   - What was done to recover, and which facts are confirmed and which are guesses

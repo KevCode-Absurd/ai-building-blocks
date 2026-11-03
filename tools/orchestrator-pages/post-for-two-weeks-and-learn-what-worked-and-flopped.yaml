@@ -15,8 +15,8 @@ when:
   - You are about to start posting and want a first set you can trust.
   - A post flopped and you don't know whether to rewrite it or drop the topic.
 not_for:
-  - "You have one post that flopped and want only its reason: use the Post flop reason finder."
-  - "You want a week of posts with no numbers read afterwards: use the Weekly social content planner."
+  - "You have one post that flopped and want only its reason: use the Social post performance reviewer."
+  - "You want a week of posts with no numbers read afterwards: use the Weekly social post writer."
   - "You want posts for one account on X and LinkedIn: use the X and LinkedIn post pair writer."
 you_give:
   - The platforms you use and your goal

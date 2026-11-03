@@ -20,7 +20,7 @@ not_for:
   - You want to test someone else's agent, a live production system or another customer's data. It stops.
   - You want a design review and fix plan with no tests. Use the Prompt injection defender.
   - You already have an approved test plan and only want to run it. Use the AI agent attack tester.
-  - You want a general check of your code and packages. Use the Weekly dependency and security sweep.
+  - You want a general check of your code and packages. Use the Project secrets and package risk review.
 you_give:
   - A map of your agent. List what it reads, each tool and its access, its memory and where its output goes (from your architecture notes).
   - Written approval to test. Name the agent's owner, the exact system and accounts, the dates, the limits and a person who can stop the test.

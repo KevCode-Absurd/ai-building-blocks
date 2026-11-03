@@ -20,7 +20,7 @@ when:
 not_for:
   - "You already have a feature list and capacity and want RICE scores plus a requirements template: use the Feature priority scorer."
   - "You are choosing between a few big strategic bets with no customer data: use the Strategy trade-off planner."
-  - "You want to turn a roadmap of features into goals: use the Feature roadmap to outcomes rewriter."
+  - "You want to turn a roadmap of features into goals: use the Product outcome roadmap planner."
 you_give:
   - The list of items to rank, written as customer problems or ideas
   - Your team size and who decides

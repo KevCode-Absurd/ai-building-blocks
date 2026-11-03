@@ -18,10 +18,10 @@ when:
   - Your methods note says "we checked for duplicates" and you want to know if the files prove it.
   - You want to rerun last year's analysis on new data without guessing what you did.
 not_for:
-  - You want formula errors checked before you share a workbook. Use the Check a spreadsheet before sharing the results workflow.
-  - You want the top insights from a dataset. Use Turn a raw dataset into a checked brief of top insights.
+  - You want formula errors checked before you share a workbook. Use the Spreadsheet results reviewer workflow.
+  - You want the top insights from a dataset. Use Dataset analysis and insight reviewer.
   - You have not done the analysis yet. This documents one that is finished.
-  - You need to compare the methods of two research papers. Use Compare conflicting research findings.
+  - You need to compare the methods of two research papers. Use Research paper disagreement reviewer.
 you_give:
   - The dataset file or files, and a data dictionary that says what each column means
   - The commands, script or workbook you used for the analysis

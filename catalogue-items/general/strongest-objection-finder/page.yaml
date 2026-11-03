@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to check if a fact is true: use a fact check by a person, or look up the source yourself."
   - "The decision is already made and cannot be undone: talk it through with someone you trust instead."
-  - "You want the full version with every check: use the Case-against writer."
+  - "You want the full version with every check: use the Plan objection writer."
 
 you_give:
   - "Your plan or opinion"

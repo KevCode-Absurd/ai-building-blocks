@@ -18,7 +18,7 @@ when:
   - You are planning next quarter and need a case for a hire or a contractor.
   - A key person is leaving and you need to see the gap.
 not_for:
-  - "You size a support or operations team by ticket volume and queues: use the Ops capacity planner."
+  - "You size a support or operations team by ticket volume and queues: use the Operations staffing and capacity planner."
   - You plan one person's tasks or a single short sprint. A simple to-do list does the job.
   - "You want to know if a production line can make more: use the Production capacity checker."
 you_give:

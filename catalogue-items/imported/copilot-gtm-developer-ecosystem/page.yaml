@@ -20,7 +20,7 @@ when:
 not_for:
   - You have no working product, API or plugin system yet. Fix the core product first.
   - "You only need a plan for Discord or GitHub Discussions: use the Developer community builder agent."
-  - "You want tutorials and a monthly feedback report: use the Developer advocate agent."
+  - "You want tutorials and a monthly feedback report: use the Developer outreach planner."
   - "You want deals with other companies: use the Revenue partnership program planner."
 you_give:
   - "What developers can build on: an API, plugins, integrations or an SDK"

@@ -18,7 +18,7 @@ when:
   - You are restructuring and must keep old URLs working.
   - You want internal links that help search rankings.
 not_for:
-  - You want an XML sitemap file for Google. Use an SEO audit tool or your site platform's sitemap setting instead.
+  - You want an XML sitemap file for Google. Use an SEO auditor tool or your site platform's sitemap setting instead.
   - You only need to pick a website builder. Compare platforms on their own first, then come back to plan your pages.
   - You have a one-page site. A simple list of sections on that page is enough.
 you_give:

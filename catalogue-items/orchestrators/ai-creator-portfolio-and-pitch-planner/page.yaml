@@ -16,9 +16,9 @@ when:
   - You want to pitch brands but do not know what sample to send first.
   - You are about to quote your first job and have not settled revisions, usage rights or dates.
 not_for:
-  - A client has already asked for a price on a website project. Use the Prepare your first freelance project quote workflow.
-  - A signed client wants more than the agreed scope. Use the Prepare a client scope change brief workflow.
-  - You only need one pitch letter. Use the Capability pitch letter writer.
+  - A client has already asked for a price on a website project. Use the Freelance website quote and proposal planner workflow.
+  - A signed client wants more than the agreed scope. Use the Client scope change planner workflow.
+  - You only need one pitch letter. Use the Sales offer letter writer.
   - You want ads bought or sales guaranteed. This plans your own offer and outreach, and cannot promise clients or revenue.
 you_give:
   - The one deliverable you offer, such as product images, ad visuals, creator-style content or short video

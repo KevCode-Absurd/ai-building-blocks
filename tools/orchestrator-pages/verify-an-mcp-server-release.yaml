@@ -58,9 +58,9 @@ improve:
   - Update the source files and rerun only the work affected by the change.
 terms: []
 not_for:
-  - "You want to build the server, not check it: use Turn an API into a safe, installable MCP server."
+  - "You want to build the server, not check it: use API-to-MCP server release builder."
   - "You only want to run tests against a server: use MCP server test runner."
-  - "You want to fix the holes it finds in the server: use MCP server hardener."
+  - "You want to fix the holes it finds in the server: use MCP server security reviewer."
 output_sample:
   input:
     - Your MCP server code

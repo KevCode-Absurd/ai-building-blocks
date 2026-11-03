@@ -18,9 +18,9 @@ when:
   - "You are the boss and you disagree with a call your team wants to make."
   - "Two people want different things, such as speed against quality, and more talk is not fixing it."
 not_for:
-  - "You are still choosing between options and nobody is arguing. Use the Decision evidence bar setter first."
-  - "You want views weighed by track record to pick the call. Use the Believability-weighted decision helper."
-  - "You need to name one owner before the debate starts. Use the Informed captain decision planner."
+  - "You are still choosing between options and nobody is arguing. Use the Decision evidence planner first."
+  - "You want views weighed by track record to pick the call. Use the Group decision reviewer."
+  - "You need to name one owner before the debate starts. Use the Team decision ownership planner."
   - "You need to give one person hard feedback. Use the Hard feedback message writer."
 you_give:
   - "The decision and the options"

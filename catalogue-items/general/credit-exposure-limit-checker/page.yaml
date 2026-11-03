@@ -19,7 +19,7 @@ when:
   - A reviewer asks how total group exposure was built.
 not_for:
   - You need a bank's regulatory large-exposure test or a credit approval. This checks arithmetic against a limit you supply, so use your credit or risk team.
-  - You want to know whether a borrower's cash covers its debt coming due. Use the Debt maturity funding ladder.
+  - You want to know whether a borrower's cash covers its debt coming due. Use the Debt repayment funding planner.
   - You want a verdict on whether a loan is safe. Use the Lender safety verdict writer.
 you_give:
   - The amount the borrower group has drawn (from the loan ledger or facility report)

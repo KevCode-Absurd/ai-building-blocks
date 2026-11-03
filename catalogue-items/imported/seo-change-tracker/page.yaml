@@ -18,7 +18,7 @@ when:
   - A plugin may have overwritten your titles and you want to catch it.
   - You want a monthly check that key pages still rank and index.
 not_for:
-  - "You want a one-time SEO audit with no past snapshot: use a general SEO audit, since this tool needs a baseline to compare."
+  - "You want a one-time SEO auditor with no past snapshot: use a general SEO auditor, since this tool needs a baseline to compare."
   - "You need to crawl a very large site or read server logs: use a full crawl tool, or ask a developer."
   - "You want your AI to fix titles, tags or settings on your live site: ask a developer or your CMS, since this tool only reads and reports."
 you_give:

@@ -21,7 +21,7 @@ when:
   - A fit crashed and you are unsure which run was the last good one.
 not_for:
   - You have one fit and no plan to repeat it. A saved script is enough.
-  - You want to build the model first. Use the Bayesian model builder.
+  - You want to build the model first. Use the PyMC Bayesian model builder.
   - You want to check if a fit can be trusted. Use the Statistical model checker.
   - You want to serve predictions to a live app. The marketing mix wrapper is not ready for that in PyMC-Marketing 1.2.0. Use native model restoration.
 you_give:

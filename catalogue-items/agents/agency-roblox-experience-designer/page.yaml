@@ -30,10 +30,10 @@ when:
   - You want to add a shop, a daily reward or Game Passes without upsetting players.
   - You want to improve the title, description and thumbnail so more people click.
 not_for:
-  - You need the systems built in Luau, such as the shop, saves and server rules. Use the Roblox Systems Scripter agent.
-  - You want to design the avatar items and UGC. Use the Roblox Avatar Creator agent.
-  - You only need currencies, prices and drop rates balanced. Use the Game economy designer agent.
-  - You are designing a game for another platform. Use the Game Designer agent.
+  - You need the systems built in Luau, such as the shop, saves and server rules. Use the Roblox systems programmer.
+  - You want to design the avatar items and UGC. Use the Roblox avatar designer.
+  - You only need currencies, prices and drop rates balanced. Use the Game economy designer.
+  - You are designing a game for another platform. Use the Gameplay designer.
   - You need legal or child-safety advice. Ask a qualified person and read Roblox's own rules.
 you_give:
   - Your game idea in a few lines, and the Roblox genre, such as simulator, obby or roleplay

@@ -21,8 +21,8 @@ when:
   - You sell too many things and customers cannot choose.
   - You want to clear space before you launch something new.
 not_for:
-  - "You have no sales yet: you need customers first, so use the First customers by hand planner."
-  - "You only want to cut what you sell, not what you do: use the Product line cutter."
+  - "You have no sales yet: you need customers first, so use the First customer outreach planner."
+  - "You only want to cut what you sell, not what you do: use the Product range reviewer."
   - "You do not know where your hours go: run the Weekly time audit planner first, then come back."
   - "Cash is short and you need a forecast, not a sort: start with the Cash forecast builder."
 

@@ -17,7 +17,7 @@ when:
   - You need a plan for URLs, templates and internal links before building.
 not_for:
   - "You only need a few pages, or you have no real data for each page: write one landing page by hand instead."
-  - "You want to fix search problems on pages you already have: use an SEO audit, not this skill."
+  - "You want to fix search problems on pages you already have: use an SEO auditor, not this skill."
   - "You want to plan topics and a content calendar: use a content strategy step instead."
 you_give:
   - Keyword pattern, like [service] in [city]

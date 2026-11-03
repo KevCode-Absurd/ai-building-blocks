@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want an ad without a painted look, or a photo-style product video: use a standard video ad skill instead."
   - "You want cut-paper layers with crisp edges, not soft paint: use the paper craft video clip prompt writer."
-  - "You have no script yet: write one first with the Video ad script writer from customer quotes."
+  - "You have no script yet: write one first with the Customer quote video ad writer."
   - "You want a finished video file: this writes prompts and an edit list, so use your own image and video tools to make the clips."
 
 you_give:

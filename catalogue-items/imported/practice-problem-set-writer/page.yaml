@@ -18,7 +18,7 @@ when:
 not_for:
   - "You need a full unit plan: plan the unit yourself or ask your AI for a unit outline first."
   - "You need an assessed exam paper: write it with your exam board's past papers, since this set is for practice only."
-  - "Learners have not seen a model yet: use the Worked example practice skill to show one first, then come back to build the practice set."
+  - "Learners have not seen a model yet: use the Worked-example practice ladder builder skill to show one first, then come back to build the practice set."
   - "You want staff training in a business: this skill is built for teachers and tutors. It still works if you give your own skill and level, but check the problems fit your work."
 you_give:
   - Skill or topic to practise

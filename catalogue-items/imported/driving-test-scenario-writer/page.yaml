@@ -19,8 +19,8 @@ when:
   - You want the scenario checked before you simulate.
 not_for:
   - "You need to open or connect RoadRunner: open RoadRunner from MATLAB yourself first, as this skill needs a session already running."
-  - "You want to import a map or scene: use the Road scene importer first, since this skill does not do it."
-  - "You want to draw roads, lanes or junctions: use the Road map author or draw them in RoadRunner. To run the scenario, use Driving scenario simulator."
+  - "You want to import a map or scene: use the RoadRunner map scene importer first, since this skill does not do it."
+  - "You want to draw roads, lanes or junctions: use the RoadRunner road map builder or draw them in RoadRunner. To run the scenario, use Driving scenario simulator."
   - "You do not use MathWorks products: the licence allows use only with them."
 you_give:
   - A plain description of the traffic event

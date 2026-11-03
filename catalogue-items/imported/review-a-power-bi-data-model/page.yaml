@@ -16,8 +16,8 @@ when:
   - Refresh is getting slow or the file keeps growing, and you want to know what to trim.
   - You are about to share the model with more people and want to check it and its access rules first.
 not_for:
-  - One report page is slow and you do not know why. Use the Diagnose a slow Power BI report.
-  - You need to plan charts, filters and pages. Use the Design a Power BI report layout.
+  - One report page is slow and you do not know why. Use the Power BI report speed checker.
+  - You need to plan charts, filters and pages. Use the Power BI report layout planner.
   - You want one measure or formula written or fixed. This reviews the whole model, not a single measure.
   - You want a new model built from scratch. This reviews one that already exists.
 you_give:

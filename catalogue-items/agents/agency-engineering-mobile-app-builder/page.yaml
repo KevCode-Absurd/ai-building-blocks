@@ -32,9 +32,9 @@ when:
   - You are one developer and want a build order and a test plan.
   - Your app is slow, drains battery or crashes on older phones.
 not_for:
-  - You have a finished app and need to get it into the App Store or Google Play. Use the Mobile Release Engineer agent.
-  - You want listing text and keywords for the store page. Use the App store optimization strategy agent.
-  - You need a website that works well on phones, not an app. Use the Frontend Developer agent.
+  - You have a finished app and need to get it into the App Store or Google Play. Use the Mobile app release planner.
+  - You want listing text and keywords for the store page. Use the App store optimizer agent.
+  - You need a website that works well on phones, not an app. Use the Frontend developer.
 you_give:
   - What the app does and who uses it, in a few sentences
   - The features you need, such as login, camera, location, payments, push alerts or offline use

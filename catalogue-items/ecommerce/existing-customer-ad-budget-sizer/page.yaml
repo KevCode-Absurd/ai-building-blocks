@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have under a few thousand buyers synced to Meta: skip the cap and put the budget into finding new customers."
   - "Your repeat buying is weak: look at your product and buyer experience first, or ask a person who knows retention, because ads will not fix it."
-  - "You want a plan for what to show past buyers: use the AI workflow handoff planner only for setup, and write the ads by hand or with your own AI."
+  - "You want a plan for what to show past buyers: use the AI creative workflow handoff planner only for setup, and write the ads by hand or with your own AI."
 
 you_give:
   - How many existing customers are synced to Meta

@@ -17,10 +17,10 @@ when:
   - Your team argues about which concept to try next and you want a ranked plan.
 not_for:
   - "You have only a few ads or no dated results. Use the Small-budget ad test planner."
-  - "You want to read the results of a finished test. Use the Creative test reader."
+  - "You want to read the results of a finished test. Use the Ad creative test analyst."
   - "You want the campaign set up in Meta. Use the Meta test campaign planner."
-  - "You want briefs that fill the gaps. Use the Creative gap-to-brief queue planner."
-  - "You want to spread ads by buyer and awareness stage. Use the Persona, stage and theme matrix planner."
+  - "You want briefs that fill the gaps. Use the Ad production brief planner."
+  - "You want to spread ads by buyer and awareness stage. Use the Buyer-stage ad theme planner."
 you_give:
   - Your ad list with name or link, format, spend, impressions, clicks and results (an export from Meta Ads Manager works)
   - The dates for each ad's results, and how long each ad has run

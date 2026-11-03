@@ -19,8 +19,8 @@ when:
   - You want to fix the cheapest likely cause first, before a redesign.
 not_for:
   - "You have no way to trace replies to the ad: key the ad first, then come back."
-  - "You want to compare your best ads with your worst ones: use the Winners and losers ad comparer."
-  - "You already know the cause and need new wording: use the Reply-getting fix writer."
+  - "You want to compare your best ads with your worst ones: use the Ad results comparison analyst."
+  - "You already know the cause and need new wording: use the Ad response copy editor."
 
 you_give:
   - The ad as the reader sees it

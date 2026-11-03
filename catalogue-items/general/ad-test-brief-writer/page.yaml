@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only need the words for one ad: use the Fact-based ad copy writer, which takes your brief and writes the copy."
   - "You want to know which live ads to switch off: look at your Meta Ads Manager results yourself, because this skill does not judge live ads."
-  - "You have no brand facts at all: build a brand brain first with the Website brand brain builder, then come back."
+  - "You have no brand facts at all: build a brand brain first with the Brand profile builder, then come back."
 you_give:
   - Your brand file (facts, offers, claims you may make, buyers, voice, competitors)
   - Your ad results per ad for the last 1 to 4 weeks, or what the founder has seen (optional)

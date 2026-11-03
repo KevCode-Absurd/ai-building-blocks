@@ -16,7 +16,7 @@ when:
   - Someone is selling you an idea with a big commission and a thick pack of paper.
 not_for:
   - "You want a buy or sell call on a named stock or fund: ask a licensed financial adviser, as this gives no such calls."
-  - "You only want to know if you have real skill in one area: use the Circle of competence sorter first."
+  - "You only want to know if you have real skill in one area: use the Business expertise reviewer first."
   - "You want to check whether a single plan survives a bad year: use the Bad-year break-even tester."
 you_give:
   - The bets you are weighing, with what goes in, what each pays and what you lose if it fails

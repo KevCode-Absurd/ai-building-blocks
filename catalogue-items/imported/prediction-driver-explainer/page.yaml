@@ -22,8 +22,8 @@ when:
 not_for:
   - You want proof of why a decision was made, or a claim of cause. SHAP shows model behaviour only.
   - You want a fairness audit. Pair it with performance and fairness checks. Use the Statistical model checker for fit checks.
-  - You have not built a model yet. Use the Bayesian model builder or the Fast data table analyst first.
-  - You want to explain a model in MATLAB. Use the Model decision explainer.
+  - You have not built a model yet. Use the PyMC Bayesian model builder or the Polars data table analyst first.
+  - You want to explain a model in MATLAB. Use the MATLAB tabular model explainer.
 you_give:
   - A trained model, saved from a source you trust
   - The rows you want explained

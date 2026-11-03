@@ -21,11 +21,11 @@ when:
   - A new option pool is added before the round, and it may change the cap price.
 
 not_for:
-  - You hold a SAFE, not a note. Use the SAFE financing revision assistant.
+  - You hold a SAFE, not a note. Use the SAFE ownership and share-pool reviewer.
   - Your note charges compound interest, or sets its price a different way. This checks simple interest and a lower-of cap and discount only, and it stops if the note says otherwise.
   - You want a lawyer's or accountant's sign-off on the note terms and the share figures. This gives working figures only. Have your lawyer or accountant check them before anyone relies on them.
   - You want legal advice on what the note means. It reads the clauses you give it and lists what it cannot confirm. Ask your lawyer.
-  - You want the share count once and no record kept. Run the Check a convertible note conversion workflow on its own.
+  - You want the share count once and no record kept. Run the Convertible note conversion checker workflow on its own.
 
 you_give:
   - The signed note with the principal, the funding dates, the interest rate and the interest rule (from your signed note)

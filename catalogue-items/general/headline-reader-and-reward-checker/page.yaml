@@ -17,7 +17,7 @@ when:
 not_for:
   - "You need the full set of checks on a headline: use the Headline promise checker."
   - "Your page or email has no headline to check: write the headline first, or ask a person to read the opening line."
-  - "You want a batch of new opening lines for an ad: use the Ad opening line batch writer."
+  - "You want a batch of new opening lines for an ad: use the Ad hook writer."
 you_give:
   - The headline
   - Offer facts such as price, speed and terms (optional)

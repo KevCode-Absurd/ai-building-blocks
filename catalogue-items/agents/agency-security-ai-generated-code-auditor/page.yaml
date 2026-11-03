@@ -19,10 +19,10 @@ when:
   - Your app has an AI chat or agent and you want to know if a user could hijack its instructions.
   - You just fixed a list of security issues and want a rescan to see what is resolved and what is new.
 not_for:
-  - You want a deep review of any kind of code, a threat model or advice on scanning tools. Use the Application Security Engineer agent.
-  - You only want a quick check of one code change. Use the Diff security skimmer.
+  - You want a deep review of any kind of code, a threat model or advice on scanning tools. Use the Application security reviewer.
+  - You only want a quick check of one code change. Use the Code change security reviewer.
   - You want keys and private files found on a live website. Use the Exposed secrets finder.
-  - You want a hands-on attack test of your running app. Use the Penetration Tester agent or the Live app security tester, and only on systems you own.
+  - You want a hands-on attack test of your running app. Use the Penetration test planner or the Live app security tester, and only on systems you own.
 you_give:
   - The code files to review, pasted or uploaded. Start with client-side files, API routes, and any file that calls an AI model.
   - Your database rules and setup files, such as SQL migrations or policy definitions (optional)

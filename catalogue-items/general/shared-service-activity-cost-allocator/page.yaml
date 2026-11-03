@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a transfer price or a statutory costing rule. This is a management view, not an accounting policy. Ask your accountant."
   - "You want to prove that cutting a department would save the cost. An allocation does not show savings you could actually make."
-  - "You want margin on billable staff time: use the Service utilization margin builder."
+  - "You want margin on billable staff time: use the Service hours and margin calculator."
   - "You want to choose which products use limited capacity best: use the Product mix capacity checker."
 you_give:
   - "The shared service's total cost for one period, from your ledger"

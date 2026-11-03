@@ -15,10 +15,10 @@ when:
   - A good ad has stopped working and you want fresh openings on the same offer.
   - You have proof but no idea how to lead with it.
 not_for:
-  - "You want to score ad lines you already wrote: use the Ad first line writer and scorer."
+  - "You want to score ad lines you already wrote: use the Ad opening writer and reviewer."
   - "You have no proof, numbers or offer to lean on: gather your facts first, or ask a customer for a review line."
   - "You want a full ad with body text and a call to action: use the Fact-based ad copy writer."
-  - "You want openings for a Reel, TikTok or Short: use the Video opening line batch writer."
+  - "You want openings for a Reel, TikTok or Short: use the Video opening hook writer."
 you_give:
   - "Who the ad is for: one moment or object, what they know, a few of their words"
   - "The proof you may use: numbers, review lines, offer terms"

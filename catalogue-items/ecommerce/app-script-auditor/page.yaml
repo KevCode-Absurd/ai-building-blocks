@@ -24,7 +24,7 @@ when:
 not_for:
   - "You want to find code an uninstalled app left behind: use the leftover app code finder."
   - "You want to check apps and scripts for security risk, not speed: use the store script and app risk auditor."
-  - "You want to delay the scripts of the apps you keep: use the theme script and style loader."
+  - "You want to delay the scripts of the apps you keep: use the Shopify script and style loader."
   - "Your store is not on Shopify, or you can't open the Apps list or theme editor: the app checks won't fit."
 
 you_give:

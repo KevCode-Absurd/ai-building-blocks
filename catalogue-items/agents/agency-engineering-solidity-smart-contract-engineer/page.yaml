@@ -18,10 +18,10 @@ when:
   - Your gas costs are high and you want to know which storage and call patterns to change.
   - You are about to hire an auditor and want your tests and notes ready, so the audit is faster.
 not_for:
-  - You have a deployed contract and need it reviewed for flaws. Use the Blockchain Security Auditor agent.
+  - You have a deployed contract and need it reviewed for flaws. Use the Blockchain security reviewer.
   - You want to know whether to buy, sell or launch a token as an investment. This agent plans code, not money decisions.
-  - You need a general web or backend design. Use the Backend Architect agent or the Software Architect agent.
-  - You need a threat review of a non-blockchain app. Use the Application Security Engineer agent.
+  - You need a general web or backend design. Use the Backend Architect agent or the Software architect.
+  - You need a threat review of a non-blockchain app. Use the Application security reviewer.
 you_give:
   - What the contract must do, in plain words
   - Which chain or network it will run on, such as Ethereum or an L2

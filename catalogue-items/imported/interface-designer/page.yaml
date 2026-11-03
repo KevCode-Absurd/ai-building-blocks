@@ -19,8 +19,8 @@ when:
   - You want a strong first screen for a specific subject, such as a bakery, a clinic or a course.
   - You need fonts that fit the topic and not the usual defaults.
 not_for:
-  - "You already have a design system or component library: build in it, or use the Interface upgrader to fix only the generic parts."
-  - "You want a calm, Notion-like document look: use the Editorial web designer, which follows a fixed rulebook for that style."
+  - "You already have a design system or component library: build in it, or use the Interface improvement reviewer to fix only the generic parts."
+  - "You want a calm, Notion-like document look: use the Minimal editorial interface designer, which follows a fixed rulebook for that style."
   - "You only need spacing, type or layout slips fixed in existing code: use the Interface polish checker."
 you_give:
   - What the page or app is for

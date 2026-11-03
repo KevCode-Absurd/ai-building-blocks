@@ -32,8 +32,8 @@ when:
   - You want to stop clients from cheating by sending fake positions or damage.
   - You need a lobby and connect flow, with join, leave and rejoin handled.
 not_for:
-  - You are scripting single-player gameplay, such as health or an inventory. Use the Godot Gameplay Scripter agent.
-  - Your game is in Unity or Unreal. Use the Unity Multiplayer Engineer agent or the Unreal Multiplayer Architect agent.
+  - You are scripting single-player gameplay, such as health or an inventory. Use the Godot gameplay programmer.
+  - Your game is in Unity or Unreal. Use the Unity Multiplayer Engineer agent or the Unreal multiplayer designer.
   - You need to host servers, pay for them or plan scale. Use the Backend Architect agent.
   - You want a review of a live server under load. A plan cannot replace a load test you run.
 you_give:

@@ -21,7 +21,7 @@ when:
 not_for:
   - You want changes made in your Feishu account now. This agent writes plans and code sketches. Your admin must create the app and approve its permissions.
   - You want an API or webhook design for another system. Use the API Platform Engineer agent.
-  - You are deciding which workflows to automate first, and who owns them. Use the Automation Governance Architect agent.
+  - You are deciding which workflows to automate first, and who owns them. Use the Automation governance planner.
 you_give:
   - The job you want done, such as alerts to a group, an approval for expenses or a sync from your order system
   - Whether you use Feishu or Lark, and whether the app is for your own company or one you will sell to others

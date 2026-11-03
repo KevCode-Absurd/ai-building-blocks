@@ -22,9 +22,9 @@ when:
   - You know what you want done but not what to do first this week.
 
 not_for:
-  - "Your plan already has dates and numbers you want to check: use the Work-backwards plan checker."
-  - "You have a long list of open questions and a clear goal: use the Big decisions first sorter."
-  - "You want to know how a finished plan could fail: use the Failure-first plan check."
+  - "Your plan already has dates and numbers you want to check: use the Backwards planning checker."
+  - "You have a long list of open questions and a clear goal: use the Decision priority planner."
+  - "You want to know how a finished plan could fail: use the Plan failure reviewer."
 
 you_give:
   - The goal or problem in your own words, however messy

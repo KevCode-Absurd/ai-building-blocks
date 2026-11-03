@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only want your IAM permission policies reviewed and rewritten: use the AWS access policy reviewer."
   - You need a formal audit, a compliance sign-off or an attack test. This reads settings. A security professional or a penetration test does the rest.
-  - "You want to check cost, speed or design: use the AWS workload practice reviewer."
+  - "You want to check cost, speed or design: use the AWS architecture reviewer."
 you_give:
   - Read-only AWS command line access for your AI
   - The region or regions to check

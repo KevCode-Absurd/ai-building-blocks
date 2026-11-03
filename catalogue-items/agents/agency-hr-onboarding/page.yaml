@@ -32,8 +32,8 @@ not_for:
   - You need an answer on employment law, payroll or benefits rules. Ask your payroll provider or an employment lawyer. This agent only lists what to check.
   - You only want a plan for the first five days. Use the New hire first week planner.
   - You only want the 30, 60 and 90 day goals. Use the 30-60-90 day onboarding planner.
-  - You want a weekly check on one person's progress over time. Use the New hire onboarding keeper.
-  - You are onboarding a customer, not an employee. Use the Customer onboarding keeper.
+  - You want a weekly check on one person's progress over time. Use the New hire onboarding reviewer.
+  - You are onboarding a customer, not an employee. Use the New customer onboarding reviewer.
 you_give:
   - The role, the team, the start date and the manager's name or title
   - Whether the job is on site, remote or mixed, and the country and state, so the paperwork list fits

@@ -20,7 +20,7 @@ when:
 not_for:
   - "You only need a single product photo: use your AI's image tool with a plain prompt, since this skill plans a whole film."
   - "You have no approved script yet: use the Short film video ad script writer first, then come back here."
-  - "You want a fast talking-head or voiceover ad: use the Video ad script writer from customer quotes, which needs no floor plan or casting."
+  - "You want a fast talking-head or voiceover ad: use the Customer quote video ad writer, which needs no floor plan or casting."
 
 you_give:
   - The approved script with speaker labels, scenes and its cast note

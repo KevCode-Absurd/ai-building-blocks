@@ -18,8 +18,8 @@ when:
   - "A test came back unclear and you do not know what to do."
   - "You need a plan to show a team or investor that you tested the right thing."
 not_for:
-  - "You want to check your whole business model, not one test: use the Business model guess tester."
-  - "You already have paying customers and want to pick a test: use the Smallest test picker."
+  - "You want to check your whole business model, not one test: use the Business model assumption tester."
+  - "You already have paying customers and want to pick a test: use the Minimum experiment planner."
   - "You need to decide between features to build: use the Feature request screener."
 
 you_give:

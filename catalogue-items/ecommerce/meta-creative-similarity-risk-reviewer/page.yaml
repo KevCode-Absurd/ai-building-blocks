@@ -16,9 +16,9 @@ when:
   - You are about to brief a creator or editor and want to know which format, hook or look is missing.
   - A teammate says "make one like the winner" and you want to see how many near copies you already have.
 not_for:
-  - "You want a plan of what to test next across 13 concept types and a test budget: use the Meta concept diversity test planner."
-  - "One ad has gone stale and you want ways to bring it back: use the Fatigued ad reviver."
-  - "You want to know if ads will be rejected: use the Meta ads compliance checker."
+  - "You want a plan of what to test next across 13 concept types and a test budget: use the Meta ad concept test planner."
+  - "One ad has gone stale and you want ways to bring it back: use the Fading ad refresh planner."
+  - "You want to know if ads will be rejected: use the Meta ad policy checker."
   - "You only have ad names and no previews. The score will rest on weak labels. Attach the images first."
   - "You run fewer than four active ads. There is too little to compare. Make more first."
 you_give:

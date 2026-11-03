@@ -19,9 +19,9 @@ when:
   - A struggling team member needs an improvement plan with measurable steps.
   - Managers rate the same work differently and you want a calibration meeting.
 not_for:
-  - "You are writing one person's review or your own: use the Performance review helper."
+  - "You are writing one person's review or your own: use the Performance review writer."
   - "You need to dismiss someone or face a tribunal claim: take it to HR or an employment lawyer, not a form."
-  - "You want to define the skills for each role first: use the Role skills framework builder, then come back."
+  - "You want to define the skills for each role first: use the Job skills and level planner, then come back."
 you_give:
   - Your team and the job roles in it
   - The goals or OKRs to measure

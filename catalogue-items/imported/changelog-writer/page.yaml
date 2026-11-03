@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need notes for one tagged release: use the Release notes writer."
   - "You want a single entry for one change: use the Changelog entry writer."
-  - "You want versions and the changelog updated automatically on each release: use the Version and changelog automator."
+  - "You want versions and the changelog updated automatically on each release: use the Version and release notes planner."
   - "Your app is on the App Store or Google Play: use the App Store release notes writer."
 you_give:
   - A git repository, or the output of its git log

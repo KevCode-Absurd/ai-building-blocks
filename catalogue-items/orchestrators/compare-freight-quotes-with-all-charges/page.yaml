@@ -20,7 +20,7 @@ when:
 not_for:
   - "You ship parcels on a courier rate card: use the Freight mode and carrier picker."
   - "You want the cost per unit after freight and duty: use the Landed cost calculator."
-  - "A freight invoice has arrived and you want to check it: use the Check supplier invoices before approval workflow."
+  - "A freight invoice has arrived and you want to check it: use the Supplier invoice and receipt checker workflow."
   - "You need customs or duty advice: ask your customs broker."
 you_give:
   - Two or more freight quotes for the same route (from carriers or forwarders, as PDFs or pasted text)

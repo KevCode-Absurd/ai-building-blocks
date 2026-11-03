@@ -18,7 +18,7 @@ when:
   - AI tools quote your hours or prices wrongly.
   - You want fixes ready to upload, not a list of advice.
 not_for:
-  - "Your site is behind a login or has no public pages: use a plain SEO audit tool, since this audit can only read public pages."
+  - "Your site is behind a login or has no public pages: use a plain SEO auditor tool, since this audit can only read public pages."
   - "You need hosting or DNS changes made: ask your web developer or host. This audit only hands back the exact record to add."
   - "You want an AI to recommend your business: nobody can promise that, so use a Google Business Profile and honest reviews instead."
 you_give:

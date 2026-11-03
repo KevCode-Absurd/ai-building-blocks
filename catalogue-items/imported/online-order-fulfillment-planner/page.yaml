@@ -19,7 +19,7 @@ when:
   - Returns arrive with no clear process for what happens next.
 not_for:
   - You sell online and in shops. Use the Order fulfillment mix planner.
-  - Your problem sits inside one warehouse, such as picking methods. Use the Pick, pack and ship improver.
+  - Your problem sits inside one warehouse, such as picking methods. Use the Order picking, packing and shipping planner.
   - You deliver locally in your own vehicle. Use the Last-mile delivery planner.
   - You want a Shopify store pulled and analysed for you. Use the Online store bottleneck finder.
 you_give:

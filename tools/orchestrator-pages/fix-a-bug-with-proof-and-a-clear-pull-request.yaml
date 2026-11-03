@@ -82,8 +82,8 @@ improve:
   - Not worth the full run for a typo or a one-line change.
 
 not_for:
-  - "You only have a vague report and no code access yet: use Turn a bug report into proof."
-  - "A build in your CI is failing: use the CI failure fixer."
+  - "You only have a vague report and no code access yet: use Bug fix evidence reviewer."
+  - "A build in your CI is failing: use the GitHub check failure fixer."
   - "You only want an error message explained: use the Error and log debugger."
 output_sample:
   input:

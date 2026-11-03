@@ -18,8 +18,8 @@ when:
   - A matter is outside your practice area, and you need a kind message that points the person elsewhere.
 not_for:
   - You need the conflicts check itself. Run it in your firm's conflicts system. The attorney or intake lead clears it, not this agent.
-  - You want a review of a contract or court paper. Use the Legal Document Review agent or the Contract risk reviewer.
-  - You want to bill or log time. Use the Law firm time entry and billing agent.
+  - You want a review of a contract or court paper. Use the Legal document reviewer or the Contract risk reviewer.
+  - You want to bill or log time. Use the Legal billing reviewer.
 you_give:
   - Your notes from the call, chat or web form, with names removed or changed if your firm has not approved this AI tool
   - Your practice areas, the places you cover and the fee types you offer

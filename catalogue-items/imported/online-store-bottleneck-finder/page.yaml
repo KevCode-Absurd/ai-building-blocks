@@ -20,7 +20,7 @@ when:
 not_for:
   - Your store has no sales yet. There are no numbers to check.
   - You sell only on Amazon or Walmart. The fees and checks here are built for Shopify and direct-to-consumer stores.
-  - Your problem is inside one warehouse, such as slow picking. Use the Pick, pack and ship improver.
+  - Your problem is inside one warehouse, such as slow picking. Use the Order picking, packing and shipping planner.
   - You want profit for each product. Use the Store profit margin calculator.
 you_give:
   - Average selling price and average order value

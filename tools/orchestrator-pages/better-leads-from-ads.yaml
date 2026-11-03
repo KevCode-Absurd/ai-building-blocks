@@ -22,7 +22,7 @@ when:
 not_for:
   - "You want to build awareness with no reply offer: use the Ad results report writer to read how that ad did, or ask a marketer to set a goal first."
   - "Your sales fell and you do not know why: use the Ad sales drop analyst to find the cause before you change the offer."
-  - "You only want to know why one ad gets few replies: use the Reply-getting fix writer."
+  - "You only want to know why one ad gets few replies: use the Ad response copy editor."
 
 you_give:
   - Your reply offer, meaning what a reply gets the person, with exact terms

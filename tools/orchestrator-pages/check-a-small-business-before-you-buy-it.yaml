@@ -16,7 +16,7 @@ when:
   - You have bought before and found the surprises after closing.
 not_for:
   - "You are buying only the assets, like equipment or stock: ask your accountant or a valuation specialist instead."
-  - "You want to know what a business is worth without a deal in front of you: use \"Value a business and the discount to ask for\"."
+  - "You want to know what a business is worth without a deal in front of you: use \"Business valuation and price reviewer\"."
   - "You need a legal review of the contract or lease: hire a lawyer, since this workflow only prepares the questions."
 you_give:
   - The listing and what the seller claims

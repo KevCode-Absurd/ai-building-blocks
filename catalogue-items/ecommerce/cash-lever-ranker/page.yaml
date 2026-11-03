@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store makes digital goods or sells made-to-order items with no stock cycle: use a simple cash forecast in Google Sheets, or ask your accountant."
   - "You only need order dates and amounts for stock: use the Inventory cash planner."
-  - "You want to decide ad spend on slow products: use the SKU ad money planner."
+  - "You want to decide ad spend on slow products: use the Product ad budget planner."
 
 you_give:
   - Your monthly P&L for the last three months, split into new and returning customers

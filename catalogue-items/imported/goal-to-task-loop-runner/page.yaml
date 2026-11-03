@@ -40,7 +40,7 @@ how_to_use:
 not_for:
   - Your goal has no check a machine can run, such as a judgement call or a writing task. Use a plain chat workflow with your AI instead, and review the result yourself.
   - You want to design a repeatable loop on paper, with no code running. Use the Agent loop designer.
-  - You only want to keep one to-do list up to date. Use the Task list keeper.
+  - You only want to keep one to-do list up to date. Use the Task list manager.
   - Your goal is one small step. Just ask your AI to do it.
 output_sample:
   input:

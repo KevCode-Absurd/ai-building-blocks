@@ -19,8 +19,8 @@ when:
   - You need evidence to show your boss or client why you picked one creator.
 not_for:
   - "You can get the creator's own audience report or media kit: ask for it first, then use this to check their numbers."
-  - "You want to understand the followers of your own brand: use the Audience profile analyst."
-  - "You want a full breakdown of a creator's posts and what to test: use the Creator profile teardown writer."
+  - "You want to understand the followers of your own brand: use the Apify social audience analyst."
+  - "You want a full breakdown of a creator's posts and what to test: use the Creator content review writer."
 you_give:
   - The creator's name or profile link
   - Your product and the market you sell to, such as country and language

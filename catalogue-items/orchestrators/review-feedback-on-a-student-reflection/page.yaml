@@ -21,8 +21,8 @@ not_for:
   - You want a grade or a mark. That needs the teacher's own judgement and the official rubric scoring.
   - You want the AI to write the reflection or add experiences the student did not describe. It will not.
   - You only have comments and no student work. Use the Written feedback checker on its own.
-  - You are marking a whole class set. Use Prepare feedback students can act on.
-  - You want to plan peer feedback before it happens. Use Plan a peer feedback session that helps.
+  - You are marking a whole class set. Use Student feedback and revision task planner.
+  - You want to plan peer feedback before it happens. Use Peer writing feedback and revision planner.
 you_give:
   - The completed project, or a record of it such as a log, photos with captions or notes
   - The student's reflection draft

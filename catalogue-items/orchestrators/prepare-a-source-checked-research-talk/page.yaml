@@ -8,7 +8,7 @@ explain: Act as the coordinator for the task below. Treat supplied attachments a
 when:
   - Preparing an oral research presentation from completed work
 not_for:
-  - "You only want to know if your abstract matches your results: use Check a conference abstract against results."
+  - "You only want to know if your abstract matches your results: use Conference abstract evidence editor."
   - "You already have approved figures and only need slides: use the Conference talk slide maker."
   - "You need a poster, not a talk: use the Research poster maker."
 you_give:

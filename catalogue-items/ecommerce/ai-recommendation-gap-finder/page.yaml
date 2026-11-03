@@ -18,8 +18,8 @@ when:
   - You have a list of ideas, such as Reddit, video and review sites, and need to rank them.
   - You want to copy what a rival does, and need to know which topics and formats they cover that you do not.
 not_for:
-  - "You have no panel results yet: run the AI recommendation panel runner first, then come back here."
-  - "You want to rewrite a page so AI can quote it: use the answer-first page rewriter or the AI-ready product page editor."
+  - "You have no panel results yet: run the AI search visibility tester first, then come back here."
+  - "You want to rewrite a page so AI can quote it: use the answer-first page rewriter or the Product page editor for AI search."
   - "You want help with Google rankings only: use the Store SEO fix prioritiser."
 
 you_give:

@@ -19,7 +19,7 @@ when:
   - You have a media buyer and 100K or more a month in ad spend, and want pre-agreed rules for pushes and cuts.
 not_for:
   - "Your store spends under 100K a month on ads: use day-level rules only, and skip the hourly pacing, or ask your media buyer for a simple plan."
-  - "You have not worked out break-even ROAS or your CAC limit yet: use the Sale break-even and CAC allowance modeler first, then come back."
+  - "You have not worked out break-even ROAS or your CAC limit yet: use the Sale profit and ad cost planner first, then come back."
   - "You have no click-window exports from last year: this sheet cannot set the lag multiplier, so pull those from Meta Ads Manager first."
 
 you_give:

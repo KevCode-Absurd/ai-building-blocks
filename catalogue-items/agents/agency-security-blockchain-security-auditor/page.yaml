@@ -23,7 +23,7 @@ when:
   - You want a plan to brief a paid audit firm with, so the engagement starts from known risks, not from zero.
 not_for:
   - You need a full, paid audit before deploying funds-holding contracts. This plan is a starting point, not a substitute for a licensed audit firm.
-  - You're reviewing a traditional web app or API with no on-chain contracts. Use the Security Architect or Application Security Engineer agent.
+  - You're reviewing a traditional web app or API with no on-chain contracts. Use the Security Architect or Application security reviewer.
   - Your contracts are already live and under active attack. Get your team and an incident response firm on it now; this agent plans reviews, it doesn't respond to live exploits.
 you_give:
   - The contracts in scope, pasted or attached, and what the protocol is supposed to do.

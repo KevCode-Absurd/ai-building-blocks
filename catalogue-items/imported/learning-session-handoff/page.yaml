@@ -9,7 +9,7 @@ subhead: Share your last learner profile and notes from the current session. It 
 not_for:
   - "You only want a one-off summary of today's session: ask your AI for a plain session summary instead."
   - "You have no place to keep the profile between sessions: save the handoff note in a notes app or document yourself, or use a plain summary prompt and start fresh each time."
-  - "You want to find a new learner's starting level: use the Learning level check. The skill also hands weak areas to the Study gap tracker, but works without it."
+  - "You want to find a new learner's starting level: use the Learning level checker. The skill also hands weak areas to the Study gap tracker, but works without it."
 explain: Share your last learner profile and notes from the current session. It checks what is still current, records what you showed and updates open gaps. You get a compact profile and a handoff that says where to resume.
 you_give:
   - Your previous learner profile, if one exists. In your first session, just say none.

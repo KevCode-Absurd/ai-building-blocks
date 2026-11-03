@@ -18,7 +18,7 @@ when:
   - "You hand out samples but do not know what a customer costs."
   - "You are not sure if a small sample shows your product well."
 not_for:
-  - "You have not yet chosen between a premium, free or discount first step: use the Front-end offer picker first."
+  - "You have not yet chosen between a premium, free or discount first step: use the First purchase offer planner first."
   - "Your product needs a regulated sampling process, such as alcohol or supplements: check the rules with a qualified person before you plan any giveaway."
   - "You want to send samples or run the campaign: this plans the offer only, so use a form tool or your shop's own process to hand them out."
 

@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have a new product with no rivals or deals yet: build one card by hand from public facts, then come back next quarter."
   - "Your deals have no recorded reasons: add a one-line reason to each lost deal first, or the edge check will be weak."
-  - "You want to watch rival ads and web pages each month: use the Monthly competitor watcher."
+  - "You want to watch rival ads and web pages each month: use the Competitor ad change reviewer."
 you_give:
   - The quarter's won and lost deals with buyer type, rivals on the shortlist, reason, price and date
   - Your product facts, pricing and what you can claim with proof

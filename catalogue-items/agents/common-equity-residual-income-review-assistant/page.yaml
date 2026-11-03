@@ -18,7 +18,7 @@ when:
   - Other comprehensive income changed, such as a hedge or a pension item, and you need to know if it was recycled to profit.
   - You want to know whether a change is big enough to matter, using your own threshold.
 not_for:
-  - You have no accepted model yet. Build one first with the Build a clean-surplus residual income model workflow.
+  - You have no accepted model yet. Build one first with the Equity and residual income modeler workflow.
   - You want growth, margin or discount rate assumptions challenged. Use the Share valuation assumption reviewer.
   - You are checking revenue disclosures across periods. Use the Revenue comparison reviewer.
   - You want a buy or sell view, a price target or investment advice. It gives none. Speak to a licensed adviser.

@@ -20,8 +20,8 @@ when:
 not_for:
   - You already have a product and want fees and profit per unit. Use the Amazon seller profit calculator.
   - You resell other brands through wholesale or arbitrage. The scoring covers private label only.
-  - You sell a service, an app or something off Amazon. Use the Pick a market worth selling to and its price workflow.
-  - You have a go and want to launch. Use the Launch an Amazon product with sales from day one workflow.
+  - You sell a service, an app or something off Amazon. Use the Target market and pricing reviewer workflow.
+  - You have a go and want to launch. Use the Amazon product launch preparation workflow.
 you_give:
   - A hobby, problem or Amazon category, and whether you will make the product or only brand it
   - How much cash you can put into a first order

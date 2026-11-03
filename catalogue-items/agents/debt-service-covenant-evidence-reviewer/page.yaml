@@ -23,7 +23,7 @@ when:
 not_for:
   - You have no signed covenant wording, only a term sheet or an email. It marks the definition MISSING and stops, because a rule from memory is not a rule.
   - You want to know whether you are in breach in law, or whether a waiver applies. A lawyer or your lender decides that. This shows the numbers only.
-  - You only want one period's headroom. Use the Debt service covenant headroom checker.
+  - You only want one period's headroom. Use the Loan covenant cash coverage checker.
   - You want to compare against a typical ratio for your industry. No market benchmark becomes the rule here, only your contract.
   - You need next year's cash forecast. It tests the periods you give it and does not predict.
 

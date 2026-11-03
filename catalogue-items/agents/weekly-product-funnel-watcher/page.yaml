@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your product has no event tracking yet: set up a simple event list first, or review a plain dashboard with your team."
   - "Fewer than about 200 users reach the funnel each week: read two weeks together by hand, since one week swings too much."
-  - "An experiment just ended and you want the full result: use the Experiment readout desk."
+  - "An experiment just ended and you want the full result: use the Experiment plan and results reviewer."
 you_give:
   - Last week's event log or per-step counts with user id, event, time and sign-up date
   - The numbers your team reports today (advised)

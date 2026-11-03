@@ -19,7 +19,7 @@ when:
   - Old tier tags are out of date and you want a clean reset.
 not_for:
   - You only want a list of top spenders and no tags written. Use the VIP customer finder.
-  - You want to group by how recently and how often people buy, not just spend. Use the Customer segment builder.
+  - You want to group by how recently and how often people buy, not just spend. Use the Customer RFM segment builder.
   - Your tags already drive live automations. Ask whoever set them up first, because new tags could set off emails or discounts.
 you_give:
   - Your store address, such as mystore.myshopify.com

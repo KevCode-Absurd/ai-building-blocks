@@ -16,9 +16,9 @@ when:
   - You want to see what growth a price asks you to believe.
   - An owner or a partner offers to sell you their share, and you need a number to answer with.
 not_for:
-  - "You have not yet checked the business is any good: run Find out if a business is worth owning long term first."
-  - "You hold a listed company and want an asset floor from its balance sheet too: use Value a stock with a margin of safety."
-  - "You are buying a whole small business from a broker's listing: use Check a small business before you buy it."
+  - "You have not yet checked the business is any good: run Long-term business quality reviewer first."
+  - "You hold a listed company and want an asset floor from its balance sheet too: use Stock valuation margin-of-safety reviewer."
+  - "You are buying a whole small business from a broker's listing: use Small business acquisition reviewer."
   - "The record is short or swings between big losses and big gains. The run may stop at too hard to value."
 you_give:
   - The business in a few lines, and the price or stake value you are weighing

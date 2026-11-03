@@ -19,7 +19,7 @@ when:
   - You need a markdown rate that fits a margin limit.
 not_for:
   - "You have brand-new stock with no sales history: split it across stores first with store-stock-allocator, then come back once sales data exists."
-  - "You want a planned sale or promotion for items selling well: use promotion-and-stock-planner instead."
+  - "You want a planned sale or promotion for items selling well: use Promotion and stock planner instead."
   - "You only need a price for one new product: set it by hand from your cost and the margin you want."
 you_give:
   - Stock list with quantities and age

@@ -16,8 +16,8 @@ when:
   - You plan to put your name on a new product or a new group of customers.
 not_for:
   - "You have no plan yet: write a rough draft first, or talk the idea through with a colleague, then come back."
-  - "You want to judge only a new product name: use the Brand name stretch checker on its own."
-  - "You want to know if past tactics hurt you later: use the Long-run effects checker on its own."
+  - "You want to judge only a new product name: use the Brand name fit checker on its own."
+  - "You want to know if past tactics hurt you later: use the Long-term strategy impact reviewer on its own."
 you_give:
   - Your marketing plan, as rough as it is
   - Your brand facts, such as name, buyers and budget (optional, but the verdicts are better with them)

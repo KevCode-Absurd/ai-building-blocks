@@ -33,9 +33,9 @@ when:
   - You are setting up Backstage or a service catalogue and need a plan for it.
   - You built platform tools and want to know if teams use them.
 not_for:
-  - You need one build and deploy pipeline for one project. Use the DevOps Automator agent.
-  - You need to keep a live service up, with alerts and recovery goals. Use the SRE (Site Reliability Engineer) agent.
-  - You are designing the structure of a single app. Use the Software Architect agent.
+  - You need one build and deploy pipeline for one project. Use the Deployment pipeline designer.
+  - You need to keep a live service up, with alerts and recovery goals. Use the Site reliability engineer.
+  - You are designing the structure of a single app. Use the Software architect.
 you_give:
   - A short list of what slows your developers down, such as tickets and wait times
   - How many teams and services you have, and the main languages

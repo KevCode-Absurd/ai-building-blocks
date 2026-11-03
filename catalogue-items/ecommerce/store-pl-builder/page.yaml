@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a tax filing or statutory accounts: use your bookkeeper or accounting tool."
   - "You have under about 100 orders a month: per-order figures swing too much, so use a simple monthly profit sheet instead."
-  - "You want a cash forecast or supplier payment plan: use the Supplier terms and float planner."
+  - "You want a cash forecast or supplier payment plan: use the Supplier payment terms planner."
 
 you_give:
   - Your monthly P&L or an accounting export

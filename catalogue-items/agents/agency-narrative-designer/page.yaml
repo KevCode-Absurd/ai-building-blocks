@@ -29,7 +29,7 @@ when:
   - A player choice in your game changes nothing, and you want choices with real consequences.
   - You have lore notes in many places and need them sorted so the main story still works without them.
 not_for:
-  - You want the whole game designed, with loops, rules and numbers. Use the Game Designer agent.
+  - You want the whole game designed, with loops, rules and numbers. Use the Gameplay designer.
   - You want a novel, a screenplay or a blog story with no player choices. Use a general writing AI instead.
   - You want ads, emails or a brand story. Use the writing items made for that job.
   - You want finished game code or engine setup. This agent writes the story, not the game.

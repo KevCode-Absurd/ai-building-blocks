@@ -24,8 +24,8 @@ when:
 not_for:
   - Your app is web only or not built with Expo. Use the React app structure planner for a web app.
   - You need server routes that keep secret keys safe. Use the Expo API route builder.
-  - You need to move an existing app to a newer Expo version. Use the Expo upgrade helper.
-  - You need fetching, caching and offline data code. Use the Mobile data fetching coder.
+  - You need to move an existing app to a newer Expo version. Use the Expo upgrade planner.
+  - You need fetching, caching and offline data code. Use the Expo React Native data fetching coder.
 you_give:
   - A description of the screens and how people move between them
   - Your Expo project, new or existing

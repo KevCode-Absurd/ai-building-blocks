@@ -22,8 +22,8 @@ when:
   - You want to know in advance if your audience is big enough to reach the reply target.
 
 not_for:
-  - "You still need to design the test, split the audience and set the winner rule: use the Split-run test planner first."
-  - "You want to check your real prices and deals for clashes: use the Hidden offer finder."
+  - "You still need to design the test, split the audience and set the winner rule: use the A/B test design planner first."
+  - "You want to check your real prices and deals for clashes: use the New offer opportunity finder."
   - "You have one ad and no second version to compare: skip the test and use a plain survey."
   - "The versions must run in different places: plan the swap with the Cross-over copy test planner."
 

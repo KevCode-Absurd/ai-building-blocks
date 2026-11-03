@@ -17,7 +17,7 @@ when:
 not_for:
   - "You already have one document to test: use the SOP and runbook checker on it."
   - "Your team has no repeat tasks to write down: start with a simple shared notes page."
-  - "You need to teach one procedure with a training deck: use the Write a procedure, test it and build a training deck workflow."
+  - "You need to teach one procedure with a training deck: use the Procedure draft, newcomer test and training-deck builder workflow."
 you_give:
   - "How your team works: the repeat tasks, who does them, where notes live today"
   - What goes wrong and how it gets fixed now

@@ -23,8 +23,8 @@ when:
   - Your workflow file keeps failing with a format error.
 not_for:
   - "Your app is not built with Expo: use the Build pipeline writer, which writes GitHub Actions or GitLab CI files."
-  - "You want to move your app to a newer Expo SDK: use the Expo upgrade helper."
-  - "You want help with store accounts, app signing and first-time store setup: use the Mobile app release shipper."
+  - "You want to move your app to a newer Expo SDK: use the Expo upgrade planner."
+  - "You want help with store accounts, app signing and first-time store setup: use the Expo app deployment engineer."
 you_give:
   - How you want builds and releases to run, in plain words
   - The platforms to build, iOS, Android or both

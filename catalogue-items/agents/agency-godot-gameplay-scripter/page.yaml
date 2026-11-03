@@ -31,10 +31,10 @@ when:
   - Signals break at run time or scenes only work when placed under a certain parent.
   - You want to move from untyped GDScript to typed code without breaking the game.
 not_for:
-  - You need players to share a game over a network. Use the Godot Multiplayer Engineer agent.
+  - You need players to share a game over a network. Use the Godot multiplayer designer.
   - You want visual effects, such as outlines, dissolve or water. Use the Godot Shader Developer agent.
-  - You want ideas for the loop, goals or balance of the game. Use the Game Designer agent.
-  - Your project is in Unity. Use the Unity Architect agent.
+  - You want ideas for the loop, goals or balance of the game. Use the Gameplay designer.
+  - Your project is in Unity. Use the Unity software architect.
 you_give:
   - The gameplay feature you want, and how it should behave
   - Your Godot version and language, GDScript, C# or both

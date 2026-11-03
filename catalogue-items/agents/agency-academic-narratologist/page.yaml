@@ -35,7 +35,7 @@ not_for:
   - You only want to know if a story idea is strong. Use the Story premise tester.
   - You want a draft checked against plain fiction rules with a score. Use the Story rules checker.
   - You want a line edit or a proofread. Ask for an edit from your AI or a human editor.
-  - You write a game with branching dialogue and lore. Use the Narrative Designer agent.
+  - You write a game with branching dialogue and lore. Use the Game narrative designer.
   - You need publication-grade claims about literature. Check every claim in the source or ask a specialist.
 you_give:
   - Your story, script, outline or synopsis, pasted in full if you can

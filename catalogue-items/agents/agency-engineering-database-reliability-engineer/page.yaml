@@ -19,8 +19,8 @@ when:
   - You must change a table on a busy database, such as adding a column, without freezing the app.
   - Your app runs out of database connections under load, even when the database looks idle.
 not_for:
-  - Your database is down or losing data right now. Follow your own runbook and call your database admin or provider. For a live outage, use the Incident Response Commander agent to run the response.
-  - You want slow queries and missing indexes fixed. Use the Database Optimizer agent.
+  - Your database is down or losing data right now. Follow your own runbook and call your database admin or provider. For a live outage, use the Incident response coordinator to run the response.
+  - You want slow queries and missing indexes fixed. Use the Database performance analyst.
   - You want goals and alerts for a whole service, not just the database. Use the SRE agent.
   - You want it to run restores, failovers or changes. It writes the plan. Your team runs it on a spare copy first.
 you_give:

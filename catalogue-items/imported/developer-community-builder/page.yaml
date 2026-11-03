@@ -22,7 +22,7 @@ when:
 not_for:
   - Your product has no active users yet. Start with a docs page and a support inbox first, and build a community once people ask for one.
   - You want a contributor program and deeper health checks as well. Use the Developer Community Builder agent.
-  - Your goal is promoting an open source project, not running a community. Use the open source promoter.
+  - Your goal is promoting an open source project, not running a community. Use the Open-source promotion planner.
 you_give:
   - A short description of your developers, such as their role and where they talk now
   - Your product and what it does

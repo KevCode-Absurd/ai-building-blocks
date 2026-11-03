@@ -15,7 +15,7 @@ when:
   - New subscribers buy at a lower rate than you expected.
   - You have knowledge your customers want and never share it.
 not_for:
-  - Your list has not opted in. Get permission first, then run this. The Email permission and message review can help you check.
+  - Your list has not opted in. Get permission first, then run this. The Email consent and message reviewer can help you check.
   - You want a one-off promotion. Use the Campaign email writer for a single email.
   - You want emails that chase buyers who did not reply or buy. Use the Follow-up email sequence writer instead.
 you_give:

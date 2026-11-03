@@ -18,9 +18,9 @@ when:
   - You have a board with many rails and need all of them checked in one run.
   - You need to find which power nets are on an imported layout.
 not_for:
-  - "You need to import Gerber, ODB++ or Allegro files first: use the PCB layout file reader, then come back here."
-  - "You want S-parameters or EM field results: use the PCB signal loss analyzer or run an EM analysis in MATLAB."
-  - "You want crosstalk between signal traces: use the PCB trace designer."
+  - "You need to import Gerber, ODB++ or Allegro files first: use the MATLAB PCB layout file reader, then come back here."
+  - "You want S-parameters or EM field results: use the MATLAB PCB signal loss analyzer or run an EM analysis in MATLAB."
+  - "You want crosstalk between signal traces: use the MATLAB PCB trace designer."
 you_give:
   - An imported PCB layout
   - The power net names or voltages (optional)

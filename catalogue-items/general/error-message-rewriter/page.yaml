@@ -18,7 +18,7 @@ when:
   - "Support gets the same question again and again after an error."
   - "You are launching a form and want every failure to have a clear way out."
 not_for:
-  - "You want to check a whole flow, not just the errors: use the Usability heuristic reviewer."
+  - "You want to check a whole flow, not just the errors: use the Website usability reviewer."
   - "You have one error that no user will ever see: fix it in the code, not with a rewrite."
   - "You need the system to stop the error from happening: ask your developer to fix it, then rewrite what is left."
   - "You need legal or payment provider text that must keep fixed wording: check with the provider or a lawyer first."

@@ -18,9 +18,9 @@ when:
   - You are launching a product and want to see how rivals frame similar ones.
   - It is quarterly review time and you want to check whether the gaps moved.
 not_for:
-  - "You want to count ads, formats and ad age from an export: use the Ad library teardown counter."
-  - "You want to check gaps against what buyers say in reviews, with a score: use the Competitor ad gap finder."
-  - "You want to split winning ads into message and look: use the Winning ad DNA mapper."
+  - "You want to count ads, formats and ad age from an export: use the Competitor ad format analyst."
+  - "You want to check gaps against what buyers say in reviews, with a score: use the Competitor ad opportunity finder."
+  - "You want to split winning ads into message and look: use the Successful ad pattern analyst."
   - "Your competitors run no Meta ads, or you sell to other businesses with no ads to study: use a search or sales-data tool instead."
 you_give:
   - Your brand name, what you sell and what you do well

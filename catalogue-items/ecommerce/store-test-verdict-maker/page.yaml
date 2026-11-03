@@ -20,8 +20,8 @@ when:
 not_for:
   - Your test has no planned sample or dates. Write a plan first, or ask your testing tool for its suggested run length.
   - You have not run the test yet. Check the design with a person who knows testing, or a simple plan, before you start.
-  - You want a verdict on a test that is not about a store page. Use a general A/B test verdict maker instead.
-  - "You want a quick first pass with fewer checks: use the Test result trust checker."
+  - You want a verdict on a test that is not about a store page. Use a general A/B test results analyst instead.
+  - "You want a quick first pass with fewer checks: use the Store experiment result reviewer."
 
 you_give:
   - Visitors and conversions for each version, the planned split, and the planned sample and dates

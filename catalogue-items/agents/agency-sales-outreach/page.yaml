@@ -20,10 +20,10 @@ when:
   - A buyer said "send me some info", "not now" or "we use someone else" and you need a reply.
   - You have open deals and want each one to have a stage, a next action and a date.
 not_for:
-  - You want a plan for a whole list of accounts, with buying signals and tiers. Use the Outbound Strategist agent.
+  - You want a plan for a whole list of accounts, with buying signals and tiers. Use the Outbound sales planner.
   - You only want to check one email's claims before you send it. Use the Cold email pre-send checker.
-  - You want a full proposal written for a buyer. Use the Proposal Strategist agent.
-  - You want to plan a first call with questions to ask. Use the Discovery Coach agent.
+  - You want a full proposal written for a buyer. Use the Sales proposal narrative writer.
+  - You want to plan a first call with questions to ask. Use the Sales discovery call coach.
   - You know nothing about the prospect. Research them first. Without a fact to work from, this agent can only give you placeholders.
 you_give:
   - What you sell, roughly what it costs and one result you can really point to.

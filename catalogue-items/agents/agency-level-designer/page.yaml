@@ -17,9 +17,9 @@ when:
   - An artist needs room sizes, cover and lighting direction to build from.
   - A new mechanic needs a first level that teaches it without text.
 not_for:
-  - You need the core rules, loop or progression first. Use the Game Designer agent.
-  - You need the story, dialogue or choice paths. Use the Narrative Designer agent.
-  - You need streaming and landscape set up for a huge Unreal world. Use the Unreal World Builder agent.
+  - You need the core rules, loop or progression first. Use the Gameplay designer.
+  - You need the story, dialogue or choice paths. Use the Game narrative designer.
+  - You need streaming and landscape set up for a huge Unreal world. Use the Unreal world designer.
 you_give:
   - "What the level is for: the feeling, the story beat and any new mechanic it teaches"
   - Your game type and camera, for example third-person shooter or 2D platformer

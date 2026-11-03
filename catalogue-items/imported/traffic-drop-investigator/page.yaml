@@ -16,7 +16,7 @@ when:
   - You think a Google update or penalty hit your site.
   - You need a clear fix list to send to a developer.
 not_for:
-  - "You want a routine SEO health check with no sudden drop: ask your AI to run a standard SEO audit, or ask an SEO person for one."
+  - "You want a routine SEO health check with no sudden drop: ask your AI to run a standard SEO auditor, or ask an SEO person for one."
   - "Your traffic fell slowly over many months because of weak content: review your top pages by hand, or hire an editor."
   - "You have no Search Console or analytics access at all: first ask your web developer or agency to give you access, then run this."
 you_give:

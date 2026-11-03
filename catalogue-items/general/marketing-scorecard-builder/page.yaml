@@ -18,7 +18,7 @@ when:
   - You are asked to defend brand spend and have no measure for it.
   - You keep judging slow measures after one bad week.
 not_for:
-  - "You want to judge one campaign's return: use the Campaign keep-or-change checker."
+  - "You want to judge one campaign's return: use the Ad change decision checker."
   - "You want to split money between brand and sales: use the Brand and sales budget splitter."
   - "You spend nothing on brand work and track only sales: a simple sales report is enough."
 

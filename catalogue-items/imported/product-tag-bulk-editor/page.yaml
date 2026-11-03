@@ -21,7 +21,7 @@ not_for:
   - You are changing one or two products. Edit them in Shopify admin.
   - The tag drives a collection rule you have not checked. Look at the rule first, or the products can drop out of the collection.
   - You want to tag customers. Use the Customer tag bulk updater.
-  - You want to tag orders by your own rules. Use the Order tagger.
+  - You want to tag orders by your own rules. Use the Shopify order tagger.
 you_give:
   - Your Shopify store address, like mystore.myshopify.com
   - Add or remove, and the tag names

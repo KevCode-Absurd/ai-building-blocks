@@ -34,9 +34,9 @@ when:
   - A test has finished and you must decide whether to ship the new version.
   - You run several tests and want one place to track what you tried and what you learned.
 not_for:
-  - "You only have finished test numbers and want a quick verdict: use the A/B test verdict maker."
-  - "You do not know what to test yet: use the Growth experiment agent."
-  - "You want one run per test, with a lesson saved each time: use the Experiment readout desk."
+  - "You only have finished test numbers and want a quick verdict: use the A/B test results analyst."
+  - "You do not know what to test yet: use the Growth experiment planner."
+  - "You want one run per test, with a lesson saved each time: use the Experiment plan and results reviewer."
   - "You need a statistician to review a complex study, such as many variants over time. Use the Statistician agent."
   - "You can only send a small number of visitors, such as a few hundred a month. A test will not give a clear answer. Try customer interviews first."
 you_give:

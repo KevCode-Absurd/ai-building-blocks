@@ -16,8 +16,8 @@ when:
   - You want to know who you are not serving and why.
 not_for:
   - "You need to set a price or test a brand-new product with no customers yet: talk to a few likely buyers in person instead."
-  - "You already have a lead and want it written up as a clear job: use the Job spec writer."
-  - "You want to study rival ads: use the Competitor ad gap finder."
+  - "You already have a lead and want it written up as a clear job: use the Customer task definition writer."
+  - "You want to study rival ads: use the Competitor ad opportunity finder."
 you_give:
   - What you sell and who buys it
   - Your question, such as where growth could come from

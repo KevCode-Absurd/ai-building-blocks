@@ -21,7 +21,7 @@ not_for:
   - You want to know whether the delay triggers a fee or whether a breach happened. Take that to your lawyer.
   - The fee compounds or steps up automatically. This handles one fixed daily amount per line, so run each rate as its own line.
   - You want to see how much cash is needed at closing. Use the Deal funding gap checker.
-  - The payment depends on a metric, not on days. Use the Earnout payout checker.
+  - The payment depends on a metric, not on days. Use the Sale earnout payout checker.
 you_give:
   - The base consideration, which is the agreed price (from the signed agreement)
   - The fixed ticking amount per eligible day (from the agreement)

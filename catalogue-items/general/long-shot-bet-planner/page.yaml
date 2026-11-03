@@ -22,9 +22,9 @@ when:
   - You plan a content series or side project and want a spending cap before you start.
 
 not_for:
-  - "You only want the cheapest test for an idea you have already ranked. Use the Smallest test picker."
-  - "One loss could sink the business or your home, so no cap is possible. Don't place the bet. Use the Failure-first plan check to see how it could fail."
-  - "The bet is already running and you have results. Use the Program keep-or-cut reviewer, or the Pivot or persevere decider if you are thinking of changing course."
+  - "You only want the cheapest test for an idea you have already ranked. Use the Minimum experiment planner."
+  - "One loss could sink the business or your home, so no cap is possible. Don't place the bet. Use the Plan failure reviewer to see how it could fail."
+  - "The bet is already running and you have results. Use the Program keep-or-cut reviewer, or the Product pivot decision reviewer if you are thinking of changing course."
 
 you_give:
   - The idea, and what a big win would look like in figures or a plain outcome

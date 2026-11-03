@@ -19,8 +19,8 @@ when:
   - Your current ad lists features and doesn't say what problem they fix.
 not_for:
   - "You have no proof the fix works: stop and gather reviews, test results or a guarantee first. The skill will not write the ad."
-  - "You sell a high-cost item: add tests, specs and long copy, and use the Split-run test planner to compare versions."
-  - "You only want to check an ad you already wrote: use the Meta ads compliance checker."
+  - "You sell a high-cost item: add tests, specs and long copy, and use the A/B test design planner to compare versions."
+  - "You only want to check an ad you already wrote: use the Meta ad policy checker."
 
 you_give:
   - The problem and how common it is, with a source

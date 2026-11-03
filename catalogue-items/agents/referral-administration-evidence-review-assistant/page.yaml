@@ -21,7 +21,7 @@ not_for:
   - A patient's condition or urgency is in question. Go to the qualified clinic contact. This agent does not triage.
   - You want one quick note for the next administrator and no tracking. Use the Handover note writer.
   - You want to send a message or make a booking. This agent only drafts, and you send.
-  - You want the actions from a team meeting turned into a list. Use the Executive action register keeper.
+  - You want the actions from a team meeting turned into a list. Use the Action item tracker keeper.
 you_give:
   - Referral status records with a reference number, a status and dates (from your referral log or practice system; remove names and clinical details first)
   - Proof of sending and receipt, such as a dispatch confirmation, a receipt notice or a portal status

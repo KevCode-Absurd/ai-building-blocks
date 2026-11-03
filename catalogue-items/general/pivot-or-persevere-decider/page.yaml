@@ -19,8 +19,8 @@ when:
   - Your totals are rising, but the rates behind them are flat.
 not_for:
   - "You have no milestones or targets yet: use the Seven-question startup scorer or the MVP experiment planner first."
-  - "You only have raw numbers by join date: run the Cohort funnel reader first, then bring its result here."
-  - "You already decided to pivot and need the cheapest first test: use the Smallest test picker."
+  - "You only have raw numbers by join date: run the Cohort funnel analyst first, then bring its result here."
+  - "You already decided to pivot and need the cheapest first test: use the Minimum experiment planner."
   - "You run an established business whose sales are falling: use the Market shift turnaround planner."
 you_give:
   - Your progress against targets, by group of customers (the Cohort funnel reader gives you this, or paste your own table)

@@ -16,7 +16,7 @@ when:
   - You want one source of truth for test results.
   - Your team needs to show every step of the maths.
 not_for:
-  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Use experiment-designer first, then come back. For the sample size alone, use sample-size-planner.
+  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Use Experiment designer first, then come back. For the sample size alone, use Sample size planner.
   - You want a ready-made testing tool with no SQL. Pick a testing platform instead, or ask a data person to set one up.
   - You have no data warehouse or no one who can run SQL. Use a simple spreadsheet comparison or a testing platform.
 you_give:

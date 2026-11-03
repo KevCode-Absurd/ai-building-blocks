@@ -16,7 +16,7 @@ when:
   - You publish articles, recipes or events and want them marked up.
   - You have an FAQ and want it described in markup, knowing Google no longer shows FAQ rich results.
 not_for:
-  - "You want a full SEO review of titles, speed and links: use an SEO audit, since this only writes markup."
+  - "You want a full SEO reviewer of titles, speed and links: use an SEO auditor, since this only writes markup."
   - "You want Google FAQ or HowTo rich results: Google no longer shows them, so plan around other ways to get seen."
   - "Your page has little real content to mark up: write the page first, then come back."
 you_give:

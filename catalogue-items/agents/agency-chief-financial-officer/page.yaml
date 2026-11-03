@@ -19,9 +19,9 @@ when:
   - You have a plan with a rosy forecast and want to see what happens if sales come in lower.
   - You need to explain a money decision to a board, a bank or a business partner and want the logic written down.
 not_for:
-  - You want a month of bank and ledger entries checked. Use the Bookkeeper & Controller agent.
-  - You want a budget against actuals review for a team. Use the FP&A Analyst agent.
-  - You only want to know how long your cash lasts. Use the Startup runway forecaster.
+  - You want a month of bank and ledger entries checked. Use the Month-end bookkeeping reviewer.
+  - You want a budget against actuals review for a team. Use the Budget and forecast analyst.
+  - You only want to know how long your cash lasts. Use the Startup cash forecast builder.
   - You need a tax ruling, an audit sign-off or legal advice. Take the questions in the brief to a qualified accountant or lawyer.
 you_give:
   - The decision in one line, with the amount and the date. For example, hire one salesperson in March.

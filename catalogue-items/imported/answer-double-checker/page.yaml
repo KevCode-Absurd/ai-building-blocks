@@ -17,7 +17,7 @@ when:
   - A draft plan looks tidy and you want to find its weak spot.
 not_for:
   - "You want the AI to check your own draft or reasoning: ask it to review the work directly, and it will do the checking in its reply."
-  - "You want each claim checked against real sources: use the AI answer fact checker instead."
+  - "You want each claim checked against real sources: use the AI answer fact-checker instead."
   - "You want sources for each claim: ask your AI to cite its sources in the answer. The questions here do not add sources."
   - "You want code, poems, small talk or a quick lookup: skip it. It stays quiet for those anyway."
 you_give:

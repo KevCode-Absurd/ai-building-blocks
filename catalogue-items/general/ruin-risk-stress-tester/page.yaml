@@ -19,7 +19,7 @@ when:
   - A plan looks safe because nothing has gone wrong yet.
 not_for:
   - "You have no money, time or name at stake: skip it, a simple to-do list is enough."
-  - "You need a full list of every way a plan can fail: use the Failure-first plan check."
+  - "You need a full list of every way a plan can fail: use the Plan failure reviewer."
   - "You need a month-by-month cash forecast: use a spreadsheet or ask your accountant."
 
 you_give:

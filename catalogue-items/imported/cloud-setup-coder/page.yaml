@@ -19,9 +19,9 @@ when:
   - Someone edited a server in the console and you need to catch the difference.
 not_for:
   - You need one small resource that a person can click together safely. Code is more work than it saves.
-  - You want to host a finished site from a folder. Use the Cloudflare publisher.
+  - You want to host a finished site from a folder. Use the Cloudflare deploy planner.
   - You want to find risks in a setup that already exists. Use the Cloud misconfiguration finder.
-  - You want to see what your Google Cloud setup should look like before coding it. Use the Google Cloud architect.
+  - You want to see what your Google Cloud setup should look like before coding it. Use the Google Cloud architecture planner.
 you_give:
   - Your cloud provider, such as AWS, Google Cloud or Azure
   - The resources you need, such as a network, a server and a database

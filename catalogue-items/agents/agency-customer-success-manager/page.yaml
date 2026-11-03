@@ -31,10 +31,10 @@ when:
   - You need an agenda for a quarterly review with an account that shows results and not just activity.
   - A new customer is signing, and you want a 90-day onboarding plan with a goal in writing.
 not_for:
-  - You want a weekly view across all your accounts. Use the Weekly customer health watcher.
-  - You want a monthly list of every renewal due. Use the Monthly renewal watcher.
-  - You want to watch new customers stall in the first 30 days. Use the Customer onboarding keeper.
-  - The customer wants to cancel a consumer subscription. Use the Cancel reason save planner.
+  - You want a weekly view across all your accounts. Use the Customer renewal risk reviewer.
+  - You want a monthly list of every renewal due. Use the Customer contract renewal reviewer.
+  - You want to watch new customers stall in the first 30 days. Use the New customer onboarding reviewer.
+  - The customer wants to cancel a consumer subscription. Use the Subscription cancellation response planner.
   - You need legal, price or contract advice. Ask your legal and finance leads. It cannot judge a contract.
 you_give:
   - The account name or a label, the contract value and the renewal date

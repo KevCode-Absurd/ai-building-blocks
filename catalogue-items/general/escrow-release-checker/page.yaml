@@ -20,8 +20,8 @@ when:
 not_for:
   - You need a legal ruling on whether to release, or whether a claim is valid. Ask a lawyer or the escrow agent.
   - The escrow earns interest, has tax withheld or pays several kinds of claim in a set order. This skill covers one plain account.
-  - You are checking an earnout paid from escrow. Use the Earnout payout checker, or run the Check an escrow-funded earnout workflow.
-  - You want the sellers' total proceeds at closing. Use the Closing equity proceeds checker.
+  - You are checking an earnout paid from escrow. Use the Sale earnout payout checker, or run the Earnout payout and escrow cash checker workflow.
+  - You want the sellers' total proceeds at closing. Use the Business sale proceeds checker.
 you_give:
   - The opening escrow deposit (from the escrow agreement)
   - Payments already made from the escrow, with dates (from the escrow agent's statement)

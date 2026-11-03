@@ -19,9 +19,9 @@ when:
   - You are about to request a draw and need to know whether it fits, or whether you are already in overadvance.
 not_for:
   - You have no signed credit agreement. Eligibility, advance rates and reserves come from it, so the review stops without it.
-  - You want only the receivables part, or only the inventory part. Use the Receivables borrowing base builder or the Inventory borrowing base builder.
+  - You want only the receivables part, or only the inventory part. Use the Customer invoice borrowing limit calculator or the Inventory borrowing limit calculator.
   - You want covenant tests. Use the Loan covenant cash cover reviewer.
-  - You want the interest and fees on the line checked. Use the Revolver interest and fee checker.
+  - You want the interest and fees on the line checked. Use the Revolving loan interest and fee checker.
   - You need a certificate signed or sent to your lender. A person who knows the credit agreement does that.
 you_give:
   - The receivables aging for the certificate date, with its control total (from your accounting system)

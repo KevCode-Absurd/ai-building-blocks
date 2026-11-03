@@ -20,7 +20,7 @@ when:
 not_for:
   - Your claim is unproven. Run the USP claim checker first to find out what you can honestly say.
   - You cannot film or test anything that shows the claim. Ask a person who makes videos for ideas, or use plain text ads.
-  - You only want to check a finished script for rejected lines. Use the Meta ads compliance checker.
+  - You only want to check a finished script for rejected lines. Use the Meta ad policy checker.
 
 you_give:
   - "Your claim, or a report that names it"

@@ -18,9 +18,9 @@ when:
   - You need talking points for a rate renewal or a rate cut.
   - You want to see which carriers deserve more of your freight and which to drop.
 not_for:
-  - "You ship parcels or a single one-off load: ask a broker for a quote, or use the Shipping cost analyzer for parcel costs."
+  - "You ship parcels or a single one-off load: ask a broker for a quote, or use the Shipping cost checker for parcel costs."
   - "You want the cheapest mix of shipping modes for your shipments: use the Freight mode and carrier picker."
-  - "You ship from a Shopify store and want a default carrier per route: use the Carrier performance comparer."
+  - "You ship from a Shopify store and want a default carrier per route: use the Delivery time and price checker."
   - "Your freight is outside the US: the rules in this skill are US rules, so use a local expert."
 you_give:
   - Your lanes, with origin, destination, loads per week and spend

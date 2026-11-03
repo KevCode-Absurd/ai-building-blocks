@@ -31,7 +31,7 @@ when:
   - Two layers do not line up, and you suspect a coordinate system mismatch.
   - A grant, regulator or client asks for metadata and accuracy notes with the data.
 not_for:
-  - You need a map made or analysis run. Use the GIS Analyst agent.
+  - You need a map made or analysis run. Use the GIS analyst.
   - You need data cleaned, converted or moved into a pipeline. Use the Spatial Data Engineer agent.
   - You need a survey-grade accuracy sign-off. Use a licensed surveyor or your data provider's validation process.
   - You want it to open and test your files itself. A chat AI can't. Use QGIS or GDAL for the checks it lists, or an AI that can run code on your files.

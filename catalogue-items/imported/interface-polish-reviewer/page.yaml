@@ -21,7 +21,7 @@ when:
   - Your buttons and menus give no feedback when pressed.
 not_for:
   - "You want spacing, type and layout slips found in code: use the Interface polish checker."
-  - "You want a screen built from nothing: use the Polished interface builder."
+  - "You want a screen built from nothing: use the Interface code builder."
   - "Your brand system or platform already sets its own motion rules: follow those first."
   - "You need accessibility sign-off or a test on real devices: this reviews code and descriptions, so test on devices and ask a specialist."
 you_give:

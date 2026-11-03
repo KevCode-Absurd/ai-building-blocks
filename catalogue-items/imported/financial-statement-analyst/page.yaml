@@ -38,8 +38,8 @@ how_to_use:
 not_for:
   - You need to make a live investment decision. The DCF and forecast are working estimates, so have a qualified adviser review them first.
   - You run an online store and want a 36-month model from ad spend and costs. Use the Store financial model builder.
-  - You want a monthly budget against actuals by team. Use the Monthly budget versus actual keeper.
-  - You are weighing a private equity deal in India and want IRR tables. Use the Deal returns sensitivity builder.
+  - You want a monthly budget against actuals by team. Use the Budget, forecast and cash gap review.
+  - You are weighing a private equity deal in India and want IRR tables. Use the Deal return sensitivity modeler.
 output_sample:
   input:
     - Your income statement, balance sheet and cash flow statement

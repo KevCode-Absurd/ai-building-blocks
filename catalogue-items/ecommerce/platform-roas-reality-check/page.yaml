@@ -16,7 +16,7 @@ when:
   - A new channel looks weak while Meta suddenly looks better, and you wonder why.
 not_for:
   - "You want to plan a holdout or lift test: use the Incrementality test planner."
-  - "You want to know if your customers repay what you spend to win them: use the LTGP to CAC checker."
+  - "You want to know if your customers repay what you spend to win them: use the Customer acquisition profitability reviewer."
   - "You have no store totals or platform export yet: pull those numbers first, or ask your ad manager for them."
 you_give:
   - Platform ROAS with its attribution setting, plus the same ROAS on 7-day click, for set dates

@@ -17,10 +17,10 @@ when:
   - A teammate says 'set up GAS' and you want the module and class list first.
   - Designers need to tune your system in Blueprint without touching C++.
 not_for:
-  - "You need server design for a multiplayer game, such as prediction and dedicated servers: use the Unreal Multiplayer Architect agent."
-  - "You need materials, particle effects or art pipeline help: use the Unreal Technical Artist agent."
-  - "You need level layout or open-world streaming: use the Unreal World Builder agent."
-  - "Your game is built in Unity: use the Unity Architect agent."
+  - "You need server design for a multiplayer game, such as prediction and dedicated servers: use the Unreal multiplayer designer."
+  - "You need materials, particle effects or art pipeline help: use the Unreal technical artist."
+  - "You need level layout or open-world streaming: use the Unreal world designer."
+  - "Your game is built in Unity: use the Unity software architect."
 you_give:
   - The gameplay feature you want, such as a sprint ability or a health system, in a few sentences
   - Your Unreal Engine version, such as 5.4 (in the editor, open Help, then About Unreal Editor)

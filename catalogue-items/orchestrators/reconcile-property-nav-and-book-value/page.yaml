@@ -20,9 +20,9 @@ when:
   - The share count or liabilities in an NAV table do not match the balance sheet.
   - A reviewer asks which tax and debt adjustments sit between NAV and book value.
 not_for:
-  - You only need book value per share. Use the Book value per share roll-forward on its own.
-  - You only need the NAV bridge from supplied valuations. Use the Investment property NAV bridge on its own.
-  - You want to value several businesses inside one group. Use the Reconcile conglomerate valuation perimeters workflow.
+  - You only need book value per share. Use the Book value per share calculator on its own.
+  - You only need the NAV bridge from supplied valuations. Use the Property net asset value calculator on its own.
+  - You want to value several businesses inside one group. Use the Group company valuation checker workflow.
   - You have no appraisals. This workflow does not make up valuations, so get them first.
 you_give:
   - Property appraisals with their dates (from the valuer's reports)

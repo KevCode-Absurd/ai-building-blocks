@@ -19,7 +19,7 @@ when:
   - You want a full audit of your email program with a ranked fix list.
 not_for:
   - "A legal ruling on GDPR or CAN-SPAM: ask a lawyer. It gives a plain overview only."
-  - "You want the emails themselves written: use the email sequence writer or the campaign email writer."
+  - "You want the emails themselves written: use the Email sequence and timing writer or the campaign email writer."
   - "You want a quick check of your setup: use the email setup health checker."
   - "You want one cold email for sales: use the cold email writer."
   - You have no sending domain data or bounce messages. It can still advise, but it cannot find the cause of a spam problem.

@@ -16,7 +16,7 @@ when:
   - You want readers to move from articles into a mini-program or private group.
   - You are entering the Chinese market and do not know the platform's rules.
 not_for:
-  - "You want short visual posts for Xiaohongshu: use xiaohongshu-post-planner."
+  - "You want short visual posts for Xiaohongshu: use Xiaohongshu post planner."
   - "You have no WeChat Official Account yet: set one up with WeChat first, then come back for a plan."
   - "You need the finished article, design or layout: this gives a plan and copy, so use a writer or your own design tool."
 you_give:

@@ -85,7 +85,7 @@ terms:
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
 not_for:
   - "You want to match bank statement lines to your ledger: use Bank and ledger matcher."
-  - "You want to check interest and fees on a revolving credit line: use Revolver interest and fee checker."
+  - "You want to check interest and fees on a revolving credit line: use Revolving loan interest and fee checker."
   - "You want group cash pool interest and bank charges checked: use Cash pool interest and fee checker."
 output_sample:
   input:

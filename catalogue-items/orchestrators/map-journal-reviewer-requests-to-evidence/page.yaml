@@ -19,8 +19,8 @@ when:
   - An editor asks where each reviewer request is addressed in the revised manuscript.
 not_for:
   - You want the response letter written for you. This workflow maps and checks, and never invents results. Use the Proofreader to polish a draft you wrote.
-  - You track tasks that are not tied to reviewer comments. Use the Executive action register keeper.
-  - You want a matrix that updates over weeks as you revise. Use the Reviewer response progress assistant.
+  - You track tasks that are not tied to reviewer comments. Use the Action item tracker keeper.
+  - You want a matrix that updates over weeks as you revise. Use the Journal revision and response tracker.
   - You have one comment and no manuscript. Answer it directly. A matrix adds nothing.
 you_give:
   - The reviewer comments, word for word as the journal sent them, with the response deadline

@@ -19,7 +19,7 @@ when:
   - Someone shows you an average wait and you want to see how much it swings from day to day.
 not_for:
   - You have one step and no waiting line. A spreadsheet sum is faster and clearer.
-  - You want to forecast sales or traffic from past figures. Use the Trend and forecast analyst or the Quick time series forecaster.
+  - You want to forecast sales or traffic from past figures. Use the Trend and forecast analyst or the Time series forecaster.
   - You have no real timing figures at all. Time a sample of 20 to 30 jobs first, or the results will only repeat your guesses.
 you_give:
   - The question you want answered, in one line

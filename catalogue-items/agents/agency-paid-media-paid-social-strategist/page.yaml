@@ -19,10 +19,10 @@ when:
   - You sell to businesses and want to pair LinkedIn with Meta retargeting.
   - Your results have flattened and you need a clear funnel and test plan, not more of the same ads.
 not_for:
-  - You want an audit of an ad account you already run. Use the Paid Media Auditor agent, or the Meta Ads 30-check account auditor for Meta.
+  - You want an audit of an ad account you already run. Use the Paid media auditor, or the Meta Ads 30-check account auditor for Meta.
   - You only need the Meta campaign layout. Use the Meta account structure planner.
-  - You need paid search plans. Use the PPC Campaign Strategist agent. For display and programmatic, use the Programmatic & Display Buyer agent.
-  - You want unpaid posts and a content calendar. Use the Social Media Strategist agent.
+  - You need paid search plans. Use the Paid search campaign planner. For display and programmatic, use the Programmatic display media planner.
+  - You want unpaid posts and a content calendar. Use the Social media strategist.
 you_give:
   - Your goal, such as sales, leads or app installs, and the product or offer
   - Your monthly ad budget, and your target cost per sale or lead if you know it

@@ -22,8 +22,8 @@ when:
   - A detection rule is too noisy and you want its false-positive cases named so it can be tuned, not just muted.
   - You're setting up detection-as-code and want rules written in Sigma so they aren't locked to one SIEM.
 not_for:
-  - You have an active incident right now, not a detection gap to close. Use the Incident Responder agent.
-  - You want to test whether an attack actually gets through your defenses. Use the Penetration Tester agent.
+  - You have an active incident right now, not a detection gap to close. Use the Security incident responder.
+  - You want to test whether an attack actually gets through your defenses. Use the Penetration test planner.
   - You want a one-time snapshot of your overall security posture, not an ongoing detection rule. Use the Security posture auditor.
 you_give:
   - The technique you want to detect, named plainly or by its MITRE ATT&CK ID, and why (a threat report, a past incident, a known gap).

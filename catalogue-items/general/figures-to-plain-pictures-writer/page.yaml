@@ -18,7 +18,7 @@ when:
   - "Your slide has ten figures and no point."
   - "A board member always asks \"what does that mean?\""
 not_for:
-  - "You need every check shown for a high-stakes talk: use the Number-to-picture translator, the full version of this prompt."
+  - "You need every check shown for a high-stakes talk: use the Visual numbers explainer, the full version of this prompt."
   - "Your rates come with no totals: get the total first, or the prompt will mark the people count as MISSING."
   - "You need a chart or a full slide deck: build those yourself, then use this for the lines you say aloud."
 

@@ -18,9 +18,9 @@ when:
   - Two companies may raise at the same time and you need to see if one reserve covers both.
   - A partner or investment committee asks how much cash you need to hold back for follow-ons.
 not_for:
-  - "The round size you were quoted leaves out your own money: use the Pro rata allocation checker first, then come back here."
+  - "The round size you were quoted leaves out your own money: use the Investor pro rata funding calculator first, then come back here."
   - You want to rank which company deserves more cash. This skill only adds up cash for targets you already chose.
-  - "Your funding comes in stages tied to milestones: use the Milestone tranche funding checker."
+  - "Your funding comes in stages tied to milestones: use the Staged funding draw checker."
   - You need legal advice on what a side letter or SAFE gives you. A lawyer must read the contract.
 you_give:
   - The share you want to hold in each company, such as 10% (from your approved plan)

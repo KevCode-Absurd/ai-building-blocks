@@ -18,7 +18,7 @@ when:
   - You stop for the day and want to pick up cleanly tomorrow.
   - You move the work from one AI tool to another, for example from Claude to ChatGPT.
 not_for:
-  - "The next reader is a coding agent that will run alone: use the Coding agent handoff writer or the Task handoff writer."
+  - "The next reader is a coding agent that will run alone: use the AI coding task brief writer or the AI task handover writer."
   - "You are handing a shift to an engineer: use the On-call handoff writer."
   - "You want to pass the work to a person with a clear status: use the Status report writer."
   - "The chat is short, or you can still copy the answer by hand: skip the note."

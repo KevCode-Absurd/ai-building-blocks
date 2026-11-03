@@ -36,10 +36,10 @@ when:
   - You have one offer and need it adapted for Google, Meta and Performance Max.
 not_for:
   - You only want Facebook and Instagram ad text and video scripts. Use the Meta ad copywriter.
-  - You want your results checked for waste first. Use the Paid Media Auditor agent.
-  - You want to plan the campaign structure, bids and budget. Use the PPC Campaign Strategist agent or the Paid Social Strategist agent.
+  - You want your results checked for waste first. Use the Paid media auditor.
+  - You want to plan the campaign structure, bids and budget. Use the Paid search campaign planner or the Paid social advertising strategist.
   - You want ad lines built only on facts and reviews. Use the Fact-based ad copy writer.
-  - You want one clean A/B test between two ads. Use the Split-run test planner.
+  - You want one clean A/B test between two ads. Use the A/B test design planner.
 you_give:
   - Your product or service, the offer and the price or terms
   - Who you sell to and what they worry about

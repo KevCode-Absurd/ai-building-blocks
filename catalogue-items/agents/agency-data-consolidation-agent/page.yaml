@@ -30,9 +30,9 @@ when:
   - Your open deals are in a CRM export, and you want them next to the sales figures.
   - A boss asks who your top five performers are this year, and you need numbers to back it up.
 not_for:
-  - "You still have the raw Excel files and need the numbers pulled out first: use the Sales spreadsheet extraction agent."
+  - "You still have the raw Excel files and need the numbers pulled out first: use the Sales data extraction planner."
   - "You want a dashboard people can open every day: use the Offline dashboard builder or the Recurring KPI report maker."
-  - "You want to review deal health and forecast the quarter: use the Sales pipeline health and forecast agent or the Weekly sales pipeline reviewer."
+  - "You want to review deal health and forecast the quarter: use the Sales pipeline analyst or the Sales pipeline deal priority reviewer."
   - "You want final figures for tax or accounts. Use this for management reports only, and have your accountant sign off the books."
 you_give:
   - A table of sales results by rep, with territory, date, revenue and quota, and a column that says if the row is month to date, year to date or year end

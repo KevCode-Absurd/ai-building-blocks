@@ -18,8 +18,8 @@ when:
   - A client sent a short brief and you need to turn it into deliverables and exclusions before you name a price.
   - You want to know which contract terms to fix before you sign a freelance agreement.
 not_for:
-  - You and the client already signed a price. If the client now wants more, use the Prepare a client scope change brief workflow.
-  - You want to compare your rate to the market or choose between pricing models. Use the Three-tier price ladder drafter.
+  - You and the client already signed a price. If the client now wants more, use the Client scope change planner workflow.
+  - You want to compare your rate to the market or choose between pricing models. Use the Three-package pricing planner.
   - You need a legal opinion or tax advice. A lawyer or accountant has to give that. This workflow only lists what to ask them.
   - The project is not a website, such as a retainer or an app. The scope step assumes a website.
 you_give:

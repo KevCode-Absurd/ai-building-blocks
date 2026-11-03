@@ -16,7 +16,7 @@ when:
 not_for:
   - "Your product is a low-price repeat buy or needs no persuasion: send ad traffic to a product page instead."
   - "You want a long sales page, not a quiz: use the Shopify landing page builder."
-  - "You only want to check a page you already wrote: use the Landing page 30-point checker."
+  - "You only want to check a page you already wrote: use the 30-point landing page checker."
   - "You want a quiz that scores leads into result tiers with a follow-up plan: use the Quiz funnel builder."
 you_give:
   - "Customer research: your offer, buyer, the beliefs they must hold, their objections and what they tried before"

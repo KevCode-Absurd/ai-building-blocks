@@ -18,7 +18,7 @@ when:
   - A popular company seems to have a great record and you want to know how much you would pay for hope.
   - You are comparing two companies and want one clear price test for both.
 not_for:
-  - "You want to know if the company itself is sound: check its earnings and debt first, for example with the Earnings padding detector, then come back here."
+  - "You want to know if the company itself is sound: check its earnings and debt first, for example with the Reported earnings adjustment reviewer, then come back here."
   - "You need a buy or sell call or personal advice: talk to a licensed financial adviser, as this only tests price."
   - "The company has under three years of earnings, or is a bank or insurer: use a simple read of its annual report, as these ceilings fit poorly."
 

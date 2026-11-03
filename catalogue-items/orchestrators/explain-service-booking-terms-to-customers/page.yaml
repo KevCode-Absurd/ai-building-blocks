@@ -19,9 +19,9 @@ when:
   - A new team member keeps explaining refunds in a different way.
 not_for:
   - You need new terms written. A lawyer should draft those. This explains terms you already have.
-  - You are reading a contract someone else wants you to sign. Use the Plain-words contract summary on its own.
+  - You are reading a contract someone else wants you to sign. Use the Contract plain-language summary writer on its own.
   - You want a reply to one refund request. Use the Refund request reply writer.
-  - You are handing over a hotel group booking. Use Prepare a hotel group booking handover.
+  - You are handing over a hotel group booking. Use Hotel group booking handover checker.
 you_give:
   - Your full booking terms, pasted or attached
   - Your current customer explanation, such as an FAQ or confirmation email

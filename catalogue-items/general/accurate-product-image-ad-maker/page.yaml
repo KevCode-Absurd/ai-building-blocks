@@ -21,7 +21,7 @@ when:
 
 not_for:
   - You have no approved ad yet, only a product and a vague idea. Write the words first with the fact-based ad copy writer, then come back.
-  - You want six different ad ideas from one product photo. Use the six image ad prompt builder.
+  - You want six different ad ideas from one product photo. Use the Product photo ad prompt set writer.
   - You want a moving clip. Approve a still here first, then use it as the start frame in a video prompt writer.
   - You have no photos of the product and no lock lines. It still writes a prompt, but marks the photo match as still to do and shows the product closed, so expect a rough first image.
 

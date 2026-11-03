@@ -21,9 +21,9 @@ when:
   - You want a clear offer for people who leave your site at the browsing, cart or checkout stage.
 
 not_for:
-  - "You want offers shown after payment. Use the Upsell and downsell sequencer."
+  - "You want offers shown after payment. Use the Upsell and downsell sequence planner."
   - "You want to set free-shipping or bundle thresholds. Use the Order threshold planner."
-  - "You sell one product with no add-ons and no products bought together. Start with the Bundle and quantity-break builder."
+  - "You sell one product with no add-ons and no products bought together. Start with the Product pack and quantity discount planner."
   - "You want to check whether a live offer made money. Use the Offer profit-per-session checker."
 
 you_give:

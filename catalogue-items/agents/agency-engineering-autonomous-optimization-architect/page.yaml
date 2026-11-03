@@ -20,9 +20,9 @@ when:
   - A bot or a bug could run up your API bill, and you want a hard stop planned.
 not_for:
   - Your app makes no paid AI or API calls. There is nothing to route. Use the Backend Architect agent to design the app.
-  - You are adding your first AI feature. Use the AI Engineer agent, then come back to tune cost.
-  - You want to cut your cloud bill for servers and storage. Use the FinOps Engineer agent.
-  - You want a monthly check on cloud and AI bills. Use the Monthly cloud and AI bill keeper.
+  - You are adding your first AI feature. Use the AI feature planner, then come back to tune cost.
+  - You want to cut your cloud bill for servers and storage. Use the Cloud cost analyst.
+  - You want a monthly check on cloud and AI bills. Use the Cloud and AI bills, waste and spend limits.
   - You want it to run the tests or switch models for you. It writes the plan. Your developer builds and runs it.
 you_give:
   - The tasks your app sends to AI models, such as "pull fields from invoices" or "answer support chats".

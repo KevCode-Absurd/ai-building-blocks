@@ -20,8 +20,8 @@ when:
 not_for:
   - "You want one answer fixed once: ask your AI to fix it, no loop needed."
   - "You cannot yet say what a good answer is: write the success criteria first, or use the Agent goal writer."
-  - "You want to improve the agent's prompts and skills over many runs: use the Agent self-improvement loop builder."
-  - "You want a full test plan with pass marks before you ship: use the Agent system tester."
+  - "You want to improve the agent's prompts and skills over many runs: use the A-Evolve agent improvement loop builder."
+  - "You want a full test plan with pass marks before you ship: use the AI agent test framework designer."
 you_give:
   - The task your agent does, in the words it gets today
   - What a good answer must do, in plain sentences

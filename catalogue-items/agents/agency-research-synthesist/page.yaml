@@ -24,8 +24,8 @@ when:
   - You are starting a new project and want to know what is already known before you spend money on your own study.
 not_for:
   - You want to know whether a trend is rising and worth acting on. Use the Trend Researcher agent.
-  - You want a health or outcome claim in your own document checked. Use the Clinical Evidence agent.
-  - You want to compare software or tools you could buy. Use the Tool Evaluator agent.
+  - You want a health or outcome claim in your own document checked. Use the Clinical evidence reviewer.
+  - You want to compare software or tools you could buy. Use the Software tool comparison planner.
   - You need a single fact checked right now. Open the original source, or ask your AI to search for it.
 you_give:
   - The question you want the research to answer, in one or two sentences

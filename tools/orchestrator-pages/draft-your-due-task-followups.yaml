@@ -77,9 +77,9 @@ next: [executive-action-register, prepare-your-weekly-executive-review]
 
 not_for:
   - "You want to chase late invoices: use the Payment reminder letter writer."
-  - "You want a stalled sales lead nudged: use the Almost-buyer follow-up writer or the Follow-up email sequence writer."
+  - "You want a stalled sales lead nudged: use the Sales follow-up email writer or the Follow-up email sequence writer."
   - "You want one reply to an upset customer: use the Angry customer reply writer."
-  - "You start from meeting notes, not from tasks that are already due: use Turn meetings into owned actions."
+  - "You start from meeting notes, not from tasks that are already due: use Meeting action follow-up writer."
 output_sample:
   input:
     - Your task list or action register, with due dates and owners

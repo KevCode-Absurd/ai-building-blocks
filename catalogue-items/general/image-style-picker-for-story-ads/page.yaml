@@ -23,7 +23,7 @@ when:
   - "Your story ad runs on Facebook or Instagram and you need the short line under the picture too."
 
 not_for:
-  - "You want a quick brief with no picture-style chain. Use the Story ad picture brief writer, which is the lighter prompt version of this one."
+  - "You want a quick brief with no picture-style chain. Use the Story ad image brief writer, which is the lighter prompt version of this one."
   - "You already know the style you want. Use that picture skill on its own, such as the Sticky-note image ad maker, for more options."
   - "Your ad is a plain product ad with no story or moment of struggle. Use the Single image ad planner."
   - "You want to find what your past winners share. Use the Winning image ad style finder."

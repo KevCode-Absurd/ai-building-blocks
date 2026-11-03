@@ -18,7 +18,7 @@ when:
   - A meeting request needs a reply that offers your real free times.
   - You need first drafts for routine customer questions.
 not_for:
-  - "You want to clear your whole inbox, not only customer mail: use the email backlog clearer."
+  - "You want to clear your whole inbox, not only customer mail: use the Inbox triage and reply writer."
   - "You need one new email written from scratch: use the email drafter."
   - "You want to send bulk marketing or cold emails: use the campaign email writer or the cold email writer."
   - Anything legal, HR or an angry escalation. It flags those for you and does not draft them.

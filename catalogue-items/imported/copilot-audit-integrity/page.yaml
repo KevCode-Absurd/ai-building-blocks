@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to find new problems in your code: use the Code security scanner or the Code security reviewer."
   - You need a penetration test of a live system. This checks a written audit, not a running app.
-  - "You want to check only your secrets and keys: use the Secrets hygiene checker."
+  - "You want to check only your secrets and keys: use the Secret leak checker."
 you_give:
   - The audit report, or a list of its findings
   - The code, design or dependency files the audit covers

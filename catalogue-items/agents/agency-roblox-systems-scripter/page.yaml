@@ -31,7 +31,7 @@ when:
   - Your scripts have grown messy and you want them split into ModuleScripts.
 not_for:
   - You want to design the game itself, such as goals, rewards and levels. Use the Roblox Experience Designer agent.
-  - You are making avatar items, such as hats and clothes. Use the Roblox Avatar Creator agent.
+  - You are making avatar items, such as hats and clothes. Use the Roblox avatar designer.
   - You need a bug fixed in a live game right now. Test any fix in Studio first.
 you_give:
   - What the system should do, in a few plain sentences

@@ -18,7 +18,7 @@ when:
   - A rule or framework requirement changed since your last review.
   - Your evidence list lives in a sheet and last quarter's gap list is buried in a folder.
 not_for:
-  - You have no evidence list or checklist yet. Start with the Compliance readiness checklist builder, or run the Prepare evidence for a compliance review workflow.
+  - You have no evidence list or checklist yet. Start with the Compliance readiness checklist builder, or run the Compliance evidence and gap organizer workflow.
   - You only want a spreadsheet's formulas or data checked. Use the Spreadsheet checker.
   - You want a signed opinion that you comply, or legal advice. This reports readiness only. Your auditor or lawyer decides.
   - You want the requests emailed for you. It drafts them and stops.

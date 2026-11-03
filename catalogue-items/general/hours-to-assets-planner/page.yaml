@@ -22,9 +22,9 @@ when:
   - You freelance or consult and your income follows your hours almost exactly.
 
 not_for:
-  - "You don't yet know what you are known for, or you are looking for a first job. Use the Specific knowledge finder first."
-  - "You want to cut or hand off tasks, not change how you earn. Use the Money-first business cut planner or the Urgent versus important sorter."
-  - "You run a business with set products and want more sales from them. Use the Growth lever audit."
+  - "You don't yet know what you are known for, or you are looking for a first job. Use the Personal expertise finder first."
+  - "You want to cut or hand off tasks, not change how you earn. Use the Revenue-focused task planner or the Urgent versus important sorter."
+  - "You run a business with set products and want more sales from them. Use the Business growth lever planner."
 
 you_give:
   - "How you earn today: each client, role or product, with hours per week and what it pays"

@@ -19,7 +19,7 @@ when:
   - A flow underperforms and you cannot tell which type of customer it is failing.
 not_for:
   - "Your store has no automated flows yet: write the first emails by hand, or ask your email tool for its starter flows."
-  - "You want to find which flows you lack: use the email flow gap checker first, then come back here."
+  - "You want to find which flows you lack: use the Email automation gaps and trigger reviewer first, then come back here."
   - "You want the emails written: use a flow builder skill with the flow spec this one gives you."
 
 you_give:

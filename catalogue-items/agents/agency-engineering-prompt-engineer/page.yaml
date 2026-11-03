@@ -32,9 +32,9 @@ when:
   - A prompt works on your test and then fails on real inputs.
   - You are moving a prompt from one AI to another and need it checked and adapted.
 not_for:
-  - You want to tidy one rough prompt for everyday chat. Use the Rough prompt rebuilder.
-  - Your prompt is already in use and you want it tested and fixed in rounds. Use the Prompt and skill tuner.
-  - You want to turn a job you repeat into a reusable skill file. Use the Repeat job skill drafter.
+  - You want to tidy one rough prompt for everyday chat. Use the AI prompt editor.
+  - Your prompt is already in use and you want it tested and fixed in rounds. Use the Prompt and skill improvement tester.
+  - You want to turn a job you repeat into a reusable skill file. Use the Reusable AI skill writer.
   - You want to check a prompt for safety and bias risk. Use the Prompt safety and bias reviewer.
   - You need a prompt tuned on a live system with its real model and settings. Test it there, with an engineer.
 you_give:

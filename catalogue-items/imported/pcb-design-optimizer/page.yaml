@@ -16,8 +16,8 @@ when:
   - Return loss is too weak at the band edge.
   - You need a custom goal, not a standard one.
 not_for:
-  - "You have no starting design yet: build one first with the PCB RF filter designer or PCB coupler designer, then come back."
-  - "You only want to check how a design performs: use the PCB signal loss analyzer or run an EM analysis in MATLAB, with no search."
+  - "You have no starting design yet: build one first with the MATLAB PCB RF filter designer or MATLAB PCB coupler and splitter designer, then come back."
+  - "You only want to check how a design performs: use the MATLAB PCB signal loss analyzer or run an EM analysis in MATLAB, with no search."
   - "You only want to try a few sizes with no goal: loop over the S-parameter calls in MATLAB yourself."
 you_give:
   - Starting PCB design in MATLAB

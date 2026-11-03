@@ -17,7 +17,7 @@ when:
   - You are stuck on a problem and cannot say where the confusion starts.
 not_for:
   - "You need a fast answer or want to finish homework quickly: ask your AI for a direct explanation instead."
-  - "You want to practise recalling facts from memory: use the recall-first study tutor, or make flash cards with a friend."
+  - "You want to practise recalling facts from memory: use the Study recall tutor, or make flash cards with a friend."
   - "You are stuck on an error and cannot say what went wrong: ask a teacher or tutor to walk through it with you."
 you_give:
   - Topic or problem

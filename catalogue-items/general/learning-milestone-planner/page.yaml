@@ -16,7 +16,7 @@ when:
   - A boss or investor asks how you will know it is working.
 not_for:
   - "Your product is established and has plenty of data: review your own dashboard or a simple monthly report instead."
-  - "You only want to read rates from data you already have: use the Cohort funnel reader."
+  - "You only want to read rates from data you already have: use the Cohort funnel analyst."
   - "You need a feature roadmap or ship dates: ask your team lead or use a simple task list instead."
 you_give:
   - Your plan with the figures you hope for

@@ -31,7 +31,7 @@ when:
   - Your page serves two kinds of visitor and you want to see where their needs clash.
   - A visitor has just left a polished competitor and you want to see how your page feels next.
 not_for:
-  - You want a quick score and fix list from the page alone, with no visitor profile. Use the Landing page conversion review or the Landing page 30-point checker.
+  - You want a quick score and fix list from the page alone, with no visitor profile. Use the Landing page conversion reviewer or the 30-point landing page checker.
   - You need proof from real people. This only simulates one visitor. Use the UX Researcher agent to plan a real test.
   - You have interview notes and want personas built from them. Use the User persona and path mapper.
   - You have no page yet and want to write one. Use the Ad-matched landing page writer.

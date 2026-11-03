@@ -16,10 +16,10 @@ when:
   - A developer or an AI assistant is about to build Google Ads modules and needs one agreed shape first.
   - You need a written safety rule that the agent can read data but never change the account.
 not_for:
-  - You want to build only one area, such as Display placements or Performance Max. Use that area's own coding prompt, for example the Display placement review coding prompt.
+  - You want to build only one area, such as Display placements or Performance Max. Use that area's own coding prompt, for example the Display ad audit tool planner.
   - You want a one-time review of an account, not code. Paste an export into the Google Ads report auditor.
   - You want an agent that changes bids, budgets or campaigns for you. This plan is recommendation only and does not build write mode.
-  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
+  - You have no Google Ads API access yet. Start with the Google Ads OAuth setup planner, then the Google Ads developer access checker.
 you_give:
   - Your code project, or its main folders, language, database and job queue
   - Your Google Ads access details by name, such as the manager account, the customer IDs the agent may read and where credentials are kept (never the secrets)

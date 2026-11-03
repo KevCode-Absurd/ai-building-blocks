@@ -18,7 +18,7 @@ when:
   - A colleague wants a second look at their comments before work goes back.
   - You want feedback tied to a clear standard before a student redoes the work.
 not_for:
-  - You need a batch of work marked against a rubric. Use the Student work marking desk.
+  - You need a batch of work marked against a rubric. Use the Student rubric feedback writer.
   - You need a full marking grid with a level for each criterion. Use the Marking rubric writer.
   - You only want to check comments you already wrote. Use the Written feedback checker.
   - The feedback comes from an AI tutor. Use the AI feedback quality checker.

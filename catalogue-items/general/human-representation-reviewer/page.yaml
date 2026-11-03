@@ -18,7 +18,7 @@ when:
   - You have several versions and need to know what to fix in each.
 not_for:
   - You need final legal or cultural sign-off. Ask a person from the community or a legal reviewer.
-  - You want to talk through inclusive design in general. Use the Inclusive Visuals Specialist agent.
+  - You want to talk through inclusive design in general. Use the Inclusive image brief planner.
   - You want the AI to make or redraw the image. This skill only writes a review and a better prompt, so use your image tool.
 you_give:
   - Your creative brief.

@@ -19,7 +19,7 @@ when:
   - Your ad platform and GA4 show different conversion counts for the same week.
 not_for:
   - You only need one platform's own report read. Use that platform's own reporting, or the Meta ads daily checker.
-  - You want to know which channel earns the credit. Use the Attribution model chooser or the Campaign attribution analyst.
+  - You want to know which channel earns the credit. Use the Marketing attribution analyst or the Campaign attribution analyst.
   - Your reports already use the same window and definitions. Compare them directly.
   - You want your Meta tracking set up or fixed. Use the Meta pixel and server events fixer or the Meta server tracking checker.
 you_give:

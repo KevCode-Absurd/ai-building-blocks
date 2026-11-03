@@ -20,7 +20,7 @@ when:
 not_for:
   - There is more than one preferred series, or the series rank or share equally. This covers one class only.
   - The terms give full participation with no cap, or add unpaid dividends. Neither is covered here.
-  - You are working out how a SAFE or note turns into shares. Use the Check a SAFE into priced financing or Check a convertible note conversion workflow.
+  - You are working out how a SAFE or note turns into shares. Use the SAFE ownership and funding checker or Convertible note conversion checker workflow.
   - You want advice on which terms to accept. This shows payouts. It does not rank deals for you.
 you_give:
   - Both draft term sets, written as two alternatives (from the term sheets)

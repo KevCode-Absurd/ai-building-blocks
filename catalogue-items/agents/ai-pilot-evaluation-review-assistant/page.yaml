@@ -20,8 +20,8 @@ when:
 not_for:
   - You only have a demo or a few good examples and no baseline. Affected checklist items come back Unknown, and you will not get a Go.
   - You have no go or stop checklist. It applies yours and does not write one. Agree one with your team first.
-  - You need one decision and no record for later. Use the Prepare an AI pilot go decision workflow.
-  - You want to track what you promised pilot customers. Use the Pilot customer promise review assistant.
+  - You need one decision and no record for later. Use the AI pilot decision checker workflow.
+  - You want to track what you promised pilot customers. Use the Pilot customer promise reviewer.
   - You want to check one spreadsheet for errors. Use the Spreadsheet checker.
 you_give:
   - The pilot's goal, in one or two sentences (what you expect the AI to do better, and by how much)

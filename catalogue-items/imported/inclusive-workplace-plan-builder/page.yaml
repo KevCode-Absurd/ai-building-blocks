@@ -21,7 +21,7 @@ when:
 not_for:
   - "You need a legal review, compliance check or pay audit: ask an employment lawyer or a specialist adviser. You can plan one with the HR compliance audit planner."
   - "You only want a fair job post: use the Inclusive job post writer."
-  - "You only want survey questions: use the Employee survey designer."
+  - "You only want survey questions: use the Employee feedback survey planner."
 you_give:
   - Your team size, industry and country
   - How you hire, promote and set pay today

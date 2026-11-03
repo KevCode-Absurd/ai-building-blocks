@@ -18,7 +18,7 @@ when:
   - The rooming list and the booking may not match, and you want to know before you hand over.
   - The hotel said "that's fine" about a request, and you need to know what is really in writing.
 not_for:
-  - "You want to see what each booking site paid you after commission: use the Hotel channel revenue reconciler."
+  - "You want to see what each booking site paid you after commission: use the Hotel room revenue and cost checker."
   - "You want to set room prices: use the Hotel room pricing planner."
   - "You are handing over general work, not a booking: use the Handover note writer."
   - You want the AI to confirm, change or chase the booking with the hotel. It contacts no one.

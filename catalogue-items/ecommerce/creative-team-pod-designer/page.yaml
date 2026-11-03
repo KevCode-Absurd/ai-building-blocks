@@ -20,7 +20,7 @@ when:
 not_for:
   - "You run a large company that needs legal and brand sign-off on every post: keep your full review and ask your legal lead which parts can be lighter."
   - "You only need one fast ad for a health, money or other regulated claim: send it through full legal review, not a lighter tier."
-  - "You want to run a hard talk with your team about the plan: write it yourself, then use the Disagree-and-commit note writer."
+  - "You want to run a hard talk with your team about the plan: write it yourself, then use the Team decision and dissent note writer."
 
 you_give:
   - Who is on your team and what each person does

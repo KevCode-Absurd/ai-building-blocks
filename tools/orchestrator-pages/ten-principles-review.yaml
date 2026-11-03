@@ -16,8 +16,8 @@ when:
   - Your team can't agree on which features to keep, and you want a shared standard to argue from.
   - A settings menu or a form has gone past a screen long and nobody can say why each item is there.
 not_for:
-  - "You want to find where visitors get stuck on one page: use Review a page's ease of use, then plan a test."
-  - "You sell many products and want to cut the line by what pays: use Cut your product line to the few that pay."
+  - "You want to find where visitors get stuck on one page: use Page usability test planner."
+  - "You sell many products and want to cut the line by what pays: use Product and team priority planner."
   - "The product has no features yet. Talk to customers first with Interview customers and map what they hire you to do."
   - "You want a new look or a visual redesign. This decides what to remove, not how it looks."
 you_give:

@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "You are hiring for a role that is not sales: use the interview scorecard builder."
-  - "You want to hire on values and team fit: use the culture-fit hiring planner."
+  - "You want to hire on values and team fit: use the Values-based hiring planner."
   - "You want to check how you pay salespeople: use the sales pay plan checker."
-  - "You want the hiring scorecard and a pay check in one run: use the Hire, pay and measure a sales team on what works workflow, which runs this skill first."
+  - "You want the hiring scorecard and a pay check in one run: use the Sales hiring and pay planner workflow, which runs this skill first."
 
 you_give:
   - "What you sell, who buys it and how long a sale takes from first call to close"

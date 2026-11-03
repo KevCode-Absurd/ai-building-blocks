@@ -22,7 +22,7 @@ when:
 not_for:
   - You have only one or two periods of history. Use the Channel budget mix planner for a rule-based split.
   - You want to plan a single campaign in three scenarios. Use the Campaign budget scenario planner.
-  - You want to know where the next $10,000 should go. Use the Next-dollar budget allocator.
+  - You want to know where the next $10,000 should go. Use the Marketing budget allocation planner.
   - You need proof that ads caused sales. Use the Incrementality test planner to run a test.
 you_give:
   - Past spend by channel and period, weekly or monthly

@@ -18,8 +18,8 @@ when:
   - A draft has a list hidden inside a paragraph, and you want it to look like a list.
   - You want a blog or help-center post laid out, but you like your own wording.
 not_for:
-  - "You want the text reworded, shorter or less stiff. Use the Plain English editor, or the Anti-AI-slop copy editor if it sounds like a machine wrote it."
-  - "You want typos and grammar slips found and listed. Use the Doc typo and term checker."
+  - "You want the text reworded, shorter or less stiff. Use the Plain English editor, or the AI-style wording editor if it sounds like a machine wrote it."
+  - "You want typos and grammar slips found and listed. Use the Document proofreader."
   - "You have an article file and want a saved copy with the options set. Use the Article formatter, which needs Bun or npx on your computer."
   - "You need the claims checked. This does not check facts. It only changes layout."
 you_give:

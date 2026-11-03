@@ -18,10 +18,10 @@ when:
   - You have a design review with ten comments and need to know which three to fix first.
   - You want to prove a design change helped, not only that it looks better.
 not_for:
-  - You have real test results or customer complaints. Start from those with Turn user complaints into design questions, or the Hard-to-use thing diagnoser for one repeated mistake.
+  - You have real test results or customer complaints. Start from those with Customer complaint design researcher, or the Product ease of use checker for one repeated mistake.
   - You only want a quick score for a screen. Use the Everyday usability reviewer on its own.
-  - You need to find what blocks a test before you run it. Use the Check a prototype before user testing workflow.
-  - You review a new screen every week. Use the New screen design reviewer.
+  - You need to find what blocks a test before you run it. Use the Prototype usability test planner workflow.
+  - You review a new screen every week. Use the Screen usability reviewer.
 you_give:
   - One screen or prototype, as a screenshot, a Figma link or a clear description
   - The people who use it and the task they are trying to do

@@ -17,7 +17,7 @@ when:
   - You want one fix per ad group, not a long list of single keywords.
 not_for:
   - "You only want a review of your own numbers, not software: use the Google Ads store account auditor or the Google Ads report auditor."
-  - "You have no way to read Google Ads data yet: set up access first with the Google Ads token and access check planner."
+  - "You have no way to read Google Ads data yet: set up access first with the Google Ads developer access checker."
   - "Your account has a handful of keywords and no coding project: the numbers will not give a clear picture, so check them by hand in Google Ads."
   - "You want a full audit engine with many checks: use the Google Ads audit engine builder."
 you_give:

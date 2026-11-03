@@ -17,8 +17,8 @@ when:
   - You work in more than one engine and want one set of art rules.
   - A new effect or shader looks good, and you worry about its cost on mobile.
 not_for:
-  - You use Unity and need a shader graph planned. Use the Unity Shader Graph Artist agent.
-  - You use Unreal and need materials, Niagara or PCG planned. Use the Unreal Technical Artist agent.
+  - You use Unity and need a shader graph planned. Use the Unity Shader Graph artist.
+  - You use Unreal and need materials, Niagara or PCG planned. Use the Unreal technical artist.
   - You use Godot and need a shader plan. Use the Godot Shader Developer agent.
   - You want the art itself made. Hire an artist or use an image tool.
 you_give:

@@ -36,8 +36,8 @@ not_for:
   - You want a bid ready to submit. This gives an assessment, checklists and an outline. Your team and an adviser must write and sign off the bid.
   - You need legal advice on Chinese procurement law. Ask a qualified lawyer in China.
   - You are answering a request for proposal from a company or a non-Chinese agency. Use the RFP response builder.
-  - You are selling to a company, not a government body. Use the Proposal Strategist agent.
-  - You want to adapt a product or brand for Chinese consumers. Use the China Market Localization Strategist agent.
+  - You are selling to a company, not a government body. Use the Sales proposal narrative writer.
+  - You want to adapt a product or brand for Chinese consumers. Use the China market localization planner.
 you_give:
   - The tender notice or bid document, pasted as text, with the scoring table and deadlines
   - What you sell, in a short plain description

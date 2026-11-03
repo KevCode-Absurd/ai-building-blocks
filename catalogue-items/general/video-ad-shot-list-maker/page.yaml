@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have no approved storyboard yet: run the Video avatar and storyboard planner first, then come back here."
   - "You want a still product ad with no video: write the ad copy and shoot a photo instead."
-  - "You need a script from customer quotes: use the Video ad script writer from customer quotes, then bring the script here."
+  - "You need a script from customer quotes: use the Customer quote video ad writer, then bring the script here."
 
 you_give:
   - The approved script or voice-over lines

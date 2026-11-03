@@ -18,7 +18,7 @@ when:
   - Your product seems to get better as more people join, and you want to test that.
   - You are about to spend heavily on growth before the model is proven.
 not_for:
-  - "Your market is settled and cash flow is steady: use a plain growth plan with a budget and monthly targets, or the Market expansion sequencer."
+  - "Your market is settled and cash flow is steady: use a plain growth plan with a budget and monthly targets, or the Market expansion roadmap planner."
   - "You have no product or users yet: talk to likely buyers first, then come back when you have some use to measure."
   - "You need a dated plan with owners and tasks: use a project plan or a spreadsheet, as this only checks readiness."
 

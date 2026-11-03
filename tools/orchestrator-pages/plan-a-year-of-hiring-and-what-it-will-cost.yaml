@@ -17,9 +17,9 @@ when:
   - Finance asks for a people budget and you only have a list of roles.
   - You want to know how many hires you need just to stand still.
 not_for:
-  - "You have one role to fill, not a year of hiring: use the Job post writer or the Hiring pipeline runner."
-  - "You only want to track a plan you already have against actual spend: use the Monthly budget versus actual keeper."
-  - "You want to keep a hiring plan up to date every quarter: use the Quarterly headcount plan keeper."
+  - "You have one role to fill, not a year of hiring: use the Job post writer or the Applicant evidence and hiring reply drafts."
+  - "You only want to track a plan you already have against actual spend: use the Budget, forecast and cash gap review."
+  - "You want to keep a hiring plan up to date every quarter: use the Team size, hiring plan and budget review."
 you_give:
   - Your headcount history, with hires and exits by month if you have them (optional)
   - Your growth goals for the year

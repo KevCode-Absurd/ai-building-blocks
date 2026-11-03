@@ -18,7 +18,7 @@ when:
 not_for:
   - You have one small app or a plain create, read, update, delete tool. Skip this and keep the code simple.
   - You want to design the layers of your code, such as where the database and screens sit. Use the Codebase architecture reviewer instead.
-  - You want to cut complexity inside one module or class. Use the Simple software designer instead.
+  - You want to cut complexity inside one module or class. Use the Software complexity reviewer instead.
 you_give:
   - A description of your business rules and processes
   - The words your team uses for key things

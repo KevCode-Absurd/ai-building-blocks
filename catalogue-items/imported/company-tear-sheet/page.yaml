@@ -18,7 +18,7 @@ when:
   - You are preparing the first page of a longer research pack.
   - You want a quick profile of a prospect before a sales call.
 not_for:
-  - You want a PowerPoint slide for a pitch book. Use the company strip profile slide maker.
+  - You want a PowerPoint slide for a pitch book. Use the Company profile slide maker.
   - You want a valuation or a fair price. Use the company fair value modeler.
   - You will send the sheet to a client as it is. The price data comes from yfinance, which is for personal use only. Check the figures against filings or a licensed source first, or label the sheet internal.
   - You need live prices or a document a client will trade on. Free data is end of day or delayed, so use a licensed data terminal.

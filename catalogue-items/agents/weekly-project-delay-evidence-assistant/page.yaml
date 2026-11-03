@@ -18,10 +18,10 @@ when:
   - A key dependency moved and several projects may slip together.
   - You review work every week and want the trend, not a fresh guess.
 not_for:
-  - One project with no finished tasks yet. There is no baseline to compare. Use the Trace why work keeps missing deadlines workflow for a first pass.
+  - One project with no finished tasks yet. There is no baseline to compare. Use the Recurring work delay reviewer workflow for a first pass.
   - Tasks with no dates. Add start and finish dates first. Without them the agent can only ask for them.
-  - Only shared dependencies or risks across projects changed. Use the Project risk and portfolio manager on its own.
-  - You want a new finish date for one project. Use the Outside view timeline estimator.
+  - Only shared dependencies or risks across projects changed. Use the Project risk portfolio planner on its own.
+  - You want a new finish date for one project. Use the Past-project timeline estimator.
 you_give:
   - "Dated task updates with task ID, stage, start date, wait time or wait dates, and finish date (from your project tool export, a spreadsheet or status notes)"
   - The original estimate for each task

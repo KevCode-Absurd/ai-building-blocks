@@ -22,10 +22,10 @@ when:
   - You keep saying yes to requests and want help saying no kindly.
 
 not_for:
-  - "You want the week itself planned, with hours booked: use the Values-to-week planner. Bring this skill's week brief."
+  - "You want the week itself planned, with hours booked: use the Values-based weekly planner. Bring this skill's week brief."
   - "You don't yet know what matters to you: use the Roles and long-term goals mapper first."
   - "You want to see where last week's time went before you sort anything: use the Weekly time audit planner."
-  - "You have one big decision to make, not a pile of tasks: use the Big decisions first sorter."
+  - "You have one big decision to make, not a pile of tasks: use the Decision priority planner."
 
 you_give:
   - "Your task list or last week's calendar, with rough hours per item (required)"

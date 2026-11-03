@@ -22,8 +22,8 @@ when:
   - A reader said "nice" about your page but could not say what it was about.
 
 not_for:
-  - Your layout is already tested and working, or it is a form or data table where plain defaults help readers. Use the Usability heuristic reviewer to check it instead.
-  - You want a clear grid, type list and white-space plan with firm rules. Use the Page grid and type planner.
+  - Your layout is already tested and working, or it is a form or data table where plain defaults help readers. Use the Website usability reviewer to check it instead.
+  - You want a clear grid, type list and white-space plan with firm rules. Use the Page typography and layout planner.
   - You want a poster made from type only. Use the Type-led poster planner.
   - You do not know your readers or message yet. Write the brief first with the Design brief rules writer.
 

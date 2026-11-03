@@ -19,8 +19,8 @@ when:
   - The seller has repaid some of the money and you need to show what is still owed.
 not_for:
   - You are on a completion accounts deal, where the price is set after closing. Leakage rules for a locked box do not apply.
-  - "You want to work out what sellers receive at closing after debt and costs: use the Closing equity proceeds checker."
-  - "A ticking fee for delay is also in play: use the Deal ticking fee checker."
+  - "You want to work out what sellers receive at closing after debt and costs: use the Business sale proceeds checker."
+  - "A ticking fee for delay is also in play: use the Deal delay fee calculator."
   - You want a ruling on a legal claim, a liability cap or a tax gross-up. A deal lawyer or accountant must confirm those.
 you_give:
   - The signed locked-box price (from the share purchase agreement)

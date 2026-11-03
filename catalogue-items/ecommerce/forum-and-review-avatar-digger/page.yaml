@@ -19,8 +19,8 @@ when:
   - Your first ads did not sell and you suspect you are talking to the wrong person, or in the wrong way.
 not_for:
   - "You sell a brand-new kind of product with little forum chatter: talk to real customers on calls instead."
-  - "You want to split rival reviews by star rating: use the Star-rating review miner."
-  - "You want to check your ads and page against a buyer sketch you already have: use the Avatar fit checker."
+  - "You want to split rival reviews by star rating: use the Competitor review insight finder."
+  - "You want to check your ads and page against a buyer sketch you already have: use the Buyer profile reviewer."
 
 you_give:
   - Your product and the problem it solves

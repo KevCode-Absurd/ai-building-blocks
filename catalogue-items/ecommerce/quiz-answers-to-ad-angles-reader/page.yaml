@@ -16,7 +16,7 @@ when:
 not_for:
   - "You have fewer than about 100 quiz submissions: wait and collect more, or treat the result as a rough guide and rerun it later."
   - "Your quiz has no pain question or no question about what people tried: add those questions first, because the awareness read and pain ranking need them."
-  - "You want to plan a test or check one ad: use the Ad test brief writer or the Campaign keep-or-change checker."
+  - "You want to plan a test or check one ad: use the Ad test brief writer or the Ad change decision checker."
 you_give:
   - The quiz submissions export (one row per person, one column per question)
   - The ad sets that sent the traffic (optional)

@@ -59,10 +59,10 @@ improve:
   - Update the source files and rerun only the work affected by the change.
 terms: []
 not_for:
-  - "You only need today's plan and meeting briefs: use Prepare your executive day."
-  - "You want a plan for the week built around your goals: use Plan a week that puts what matters first."
-  - "You need a weekly review you run on a schedule: use the Weekly review keeper."
-  - "You only need to turn one set of meeting notes into owned actions and follow-up drafts: use Turn meetings into owned actions."
+  - "You only need today's plan and meeting briefs: use Executive daily action planner."
+  - "You want a plan for the week built around your goals: use Weekly priorities and delegation planner."
+  - "You need a weekly review you run on a schedule: use the Weekly task focus planner."
+  - "You only need to turn one set of meeting notes into owned actions and follow-up drafts: use Meeting action follow-up writer."
 output_sample:
   input:
     - This week's meeting notes and email threads

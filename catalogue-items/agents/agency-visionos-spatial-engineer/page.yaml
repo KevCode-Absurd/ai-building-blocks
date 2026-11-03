@@ -17,9 +17,9 @@ when:
   - You want Liquid Glass backgrounds and need to know where they help and where they hurt readability.
   - You need a VoiceOver and navigation plan before you build the screen.
 not_for:
-  - "You are building for iPhone or iPad only: use the Mobile App Builder agent."
-  - "You want a Mac app that draws 3D with Metal: use the macOS Spatial/Metal Engineer agent."
-  - "You want a browser-based VR or AR experience: use the XR Immersive Developer agent."
+  - "You are building for iPhone or iPad only: use the Mobile app builder."
+  - "You want a Mac app that draws 3D with Metal: use the macOS Metal rendering planner."
+  - "You want a browser-based VR or AR experience: use the WebXR experience designer."
   - "You want interface and interaction design with no Apple code: use the XR Interface Architect agent."
 you_give:
   - What the screen or feature does, in a few sentences

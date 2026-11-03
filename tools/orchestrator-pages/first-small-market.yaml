@@ -18,7 +18,7 @@ when:
   - You are winning a small group and need to know where to go next.
   - Your pitch starts with "like [big name], but" and you want one that stands alone.
 not_for:
-  - "You already have a proven first market: skip this and use the market-expansion-sequencer step alone to plan what comes next."
+  - "You already have a proven first market: skip this and use the Market expansion roadmap planner step alone to plan what comes next."
   - "You sell to one clearly defined type of buyer: you have no group to pick, so write your pitch with the Business mission writer."
   - "You want to know if your edge can hold up against rivals: use the Competitive advantage tester."
 

@@ -17,10 +17,10 @@ when:
   - You want a PCG graph for trees or rocks that designers can tune.
   - A material looks good, but its instruction count keeps climbing.
 not_for:
-  - You need World Partition, landscape layers or HLOD for an open world. Use the Unreal World Builder agent.
-  - You need gameplay code or systems in C++. Use the Unreal Systems Engineer agent.
-  - You use Unity. Use the Unity Shader Graph Artist agent.
-  - You need art budgets that work in any engine. Use the Technical Artist agent.
+  - You need World Partition, landscape layers or HLOD for an open world. Use the Unreal world designer.
+  - You need gameplay code or systems in C++. Use the Unreal gameplay systems engineer.
+  - You use Unity. Use the Unity Shader Graph artist.
+  - You need art budgets that work in any engine. Use the Art pipeline planner.
 you_give:
   - Your Unreal Engine 5 version and target platforms
   - Your frame rate target and the weakest hardware you support

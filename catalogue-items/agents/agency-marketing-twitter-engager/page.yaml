@@ -19,7 +19,7 @@ when:
 not_for:
   - You want only a reply to one post. Use the X reply writer.
   - You want only a thread from one idea. Use the X thread writer.
-  - You want a growth plan built from your past tweets. Use the X growth writer.
+  - You want a growth plan built from your past tweets. Use the X audience growth writer.
   - You want the same idea on X and LinkedIn. Use the X and LinkedIn post pair writer.
   - You want it to post, schedule or reply for you. It writes drafts only.
 you_give:

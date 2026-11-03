@@ -16,7 +16,7 @@ when:
   - You want a quarterly sweep that finds the rules that no longer earn their place.
 not_for:
   - "You need a decision about one person's behavior: talk to your manager and counsel, because that is not a handbook change."
-  - "You need to track rules that change outside your company, like new laws: use the Rule change policy keeper."
+  - "You need to track rules that change outside your company, like new laws: use the Policy change reviewer."
   - "You want legal advice or a final legal check: ask a lawyer, because every check here is a first pass."
 you_give:
   - Your current handbook or policies as text, with the places you operate

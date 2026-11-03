@@ -19,7 +19,7 @@ when:
   - You have several test ideas and need to know which can run side by side.
 not_for:
   - "You get under 30 orders a month: a test will not give a clear answer, so use the Store test readiness checker first."
-  - "You already have a test result and want to know if it won: use the Store test verdict maker."
+  - "You already have a test result and want to know if it won: use the Store test evidence reviewer."
   - "You only want to change one price and are not testing: ask a qualified person about local pricing rules instead."
 
 you_give:

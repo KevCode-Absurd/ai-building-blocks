@@ -18,10 +18,10 @@ when:
   - A company says growth is "organic" or "in constant currency", and you want to see the sums behind the label.
   - A company changed how it shows sales, such as net of rebates and returns instead of gross, and the growth rate looks different.
 not_for:
-  - You only want a trailing twelve month revenue figure. Use the Trailing-period financial bridge.
-  - You only want growth without currency moves. Use the Constant-currency revenue bridge.
-  - You only want growth without acquisitions and sales of businesses. Use the Organic revenue perimeter bridge.
-  - You only want to remove an extra week from a 53-week year. Use the Extra-week revenue comparability schedule.
+  - You only want a trailing twelve month revenue figure. Use the Trailing year financial calculator.
+  - You only want growth without currency moves. Use the Revenue growth currency checker.
+  - You only want growth without acquisitions and sales of businesses. Use the Like-for-like sales growth checker.
+  - You only want to remove an extra week from a 53-week year. Use the Extra week sales growth checker.
   - You want a sales forecast, a valuation or a view on the share price. It checks reported figures and gives no view.
 you_give:
   - The new dated revenue release or restated comparison note (from the company's results page)

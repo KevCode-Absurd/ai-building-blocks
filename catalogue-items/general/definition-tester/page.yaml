@@ -23,7 +23,7 @@ when:
 
 not_for:
   - "You need a ruling on a legal term or an ethics question. Ask a lawyer or an expert in that field. This only tests your own wording."
-  - "You want to know if a claim is true, not what a word in it means. Use the Claim skepticism kit."
+  - "You want to know if a claim is true, not what a word in it means. Use the Claim credibility reviewer."
   - "You want to test the sums behind a loyalty plan or loyalty claim. Use the Loyalty claim checker."
   - "The word is already defined in your contract or law. Use that definition and skip this."
 

@@ -20,9 +20,9 @@ when:
   - A building lands in the wrong place or at the wrong height after import, and you need the usual causes.
 not_for:
   - You need final coordinate sign-off. A licensed surveyor or your BIM manager must confirm it.
-  - You need a standard 2D building footprint map. Use the GIS Analyst agent.
-  - You need a 3D scene of terrain and buildings. Use the 3D & Scene Developer agent.
-  - You have a LiDAR point cloud to sort. Use the Drone/Reality Mapping Specialist agent.
+  - You need a standard 2D building footprint map. Use the GIS analyst.
+  - You need a 3D scene of terrain and buildings. Use the 3D map scene developer.
+  - You have a LiDAR point cloud to sort. Use the Drone mapping specialist.
 you_give:
   - What you want to do with the model, in one line, such as "show rooms by department on a campus map"
   - The model files you have, such as Revit or IFC, and what you know about the export

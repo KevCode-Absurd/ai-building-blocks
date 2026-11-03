@@ -19,7 +19,7 @@ when:
 not_for:
   - You want one change tested with care. Use the One-change experiment planner.
   - You only want to find the weakest step in your funnel. Use the Growth bottleneck finder.
-  - You have finished an experiment and want to read the result. Use the Traction experiment result reviewer.
+  - You have finished an experiment and want to read the result. Use the Customer acquisition experiment reviewer.
 you_give:
   - Your product and who you sell to
   - Your funnel steps with numbers for one recent period, such as visits, sign-ups, buyers and repeat buyers

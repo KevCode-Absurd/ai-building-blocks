@@ -21,7 +21,7 @@ not_for:
   - One line looks odd and you only need a quick answer. Use the Budget variance explainer.
   - You are building next year's budget. Use the Department budget planner.
   - You need accounting adjustments or an audit of accruals. Ask your accountant.
-  - You are checking stock count differences. Use the Explain a warehouse stock count variance workflow.
+  - You are checking stock count differences. Use the Warehouse stock variance reviewer workflow.
 you_give:
   - The approved budget, line by line, for one period
   - Actual spending for the same lines and period

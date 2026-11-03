@@ -20,7 +20,7 @@ when:
 not_for:
   - "You want to know what to buy or sell today: this gives no trade calls, so ask a licensed financial adviser."
   - "You hold only broad index funds: there is no single business to review, so check the fund's fees and mix on your fund provider's site."
-  - "You want to rank and size your bets: this reviews what you own, so use the Twenty-punch bet ranker after it."
+  - "You want to rank and size your bets: this reviews what you own, so use the Investment priority planner after it."
 
 you_give:
   - Your holdings, with share of the total, date bought and why

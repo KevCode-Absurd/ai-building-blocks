@@ -19,10 +19,10 @@ when:
   - You are about to join two customer lists, for example after buying a business, and want rules for matching them.
   - A merge went wrong once and you want a safer process with a review step and a way to undo it.
 not_for:
-  - You only want likely duplicate customers found in one store list. Use the Duplicate customer finder.
+  - You only want likely duplicate customers found in one store list. Use the Shopify duplicate customer record finder.
   - You want duplicates merged in your live store. Use the Customer record merger, and check each match first.
-  - You want AI agents to prove who they are. Use the Agentic Identity & Trust Architect agent.
-  - You want a messy spreadsheet cleaned. Use the Messy spreadsheet cleaner.
+  - You want AI agents to prove who they are. Use the AI agent identity designer.
+  - You want a messy spreadsheet cleaned. Use the Indian spreadsheet data cleaner.
 you_give:
   - The systems that hold the records, such as your shop, support tool, billing tool and email list.
   - The fields each system holds, such as email, phone, name and address.

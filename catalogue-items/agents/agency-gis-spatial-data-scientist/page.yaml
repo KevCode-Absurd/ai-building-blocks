@@ -17,8 +17,8 @@ when:
   - A regression on area data gives odd results and you suspect neighbors affect each other.
   - Your result changes when you change the zone boundaries, and you need to test how much.
 not_for:
-  - "You only need a clear map or a simple query: use the GIS Analyst agent."
-  - "You need to detect objects or land cover in images with machine learning: use the GeoAI/ML Engineer agent."
+  - "You only need a clear map or a simple query: use the GIS analyst."
+  - "You need to detect objects or land cover in images with machine learning: use the Geospatial machine learning planner."
   - "Your data is messy and needs cleaning or joining first: use the Spatial Data Engineer agent."
   - "Your data has no location and you need general statistics: use the Statistician agent."
 you_give:

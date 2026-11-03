@@ -18,9 +18,9 @@ when:
   - Three tasks passed their due date and you want follow-up email drafts to the right people.
   - You keep an action list in a spreadsheet or a note and want it checked against new notes each week.
 not_for:
-  - You have notes and want an action list once, with no saved state. Use the Executive action register keeper.
-  - You only want today's priorities from your calendar. Use the Executive daily briefing writer.
-  - You want one follow-up email drafted from one thread. Use the Due task follow up drafter.
+  - You have notes and want an action list once, with no saved state. Use the Action item tracker keeper.
+  - You only want today's priorities from your calendar. Use the Daily executive brief writer.
+  - You want one follow-up email drafted from one thread. Use the Task follow-up writer.
   - You expect it to send emails, update your task app or run every morning. It prepares drafts and files only. You send, and you set any schedule.
 you_give:
   - "New notes since the last run: meeting notes, a transcript or email threads, pasted in or attached (only the ones in scope)"

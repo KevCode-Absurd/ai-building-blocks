@@ -18,7 +18,7 @@ when:
   - A team argument about priorities needs a neutral list to look at.
   - You want cheap tests for the few assumptions that could sink a new product.
 not_for:
-  - You only have a plan, not a list. Use the Leap-of-faith assumption finder or the Plan guess ranker to pull the assumptions out first.
+  - You only have a plan, not a list. Use the Startup assumption checker or the Business assumption test planner to pull the assumptions out first.
   - You want to attack one assumption in depth. Use the Business assumption stress tester.
   - Your customers already tell you what they want, through sales data or interviews. Read that evidence first, then rank what is still unknown.
 you_give:

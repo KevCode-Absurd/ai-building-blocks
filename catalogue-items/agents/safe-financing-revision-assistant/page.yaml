@@ -21,9 +21,9 @@ when:
   - An investor with a side letter wants to know how much cash it needs to keep its share of the round.
 
 not_for:
-  - You hold a convertible note with interest. Use the Note conversion revision assistant.
+  - You hold a convertible note with interest. Use the Convertible note conversion reviewer.
   - Your SAFE converts at a discount, or the round price is below the cap price. The method covers cap-only post-money SAFEs and stops when the round price changes how the SAFE converts.
-  - You want to plan how much to hold back for later funding rounds. Use the Follow-on reserve planner.
+  - You want to plan how much to hold back for later funding rounds. Use the Follow-on investment cash planner.
   - You need legal sign-off on a live round. It reads the terms you supply and lists what it cannot confirm. Ask your lawyer.
 
 you_give:

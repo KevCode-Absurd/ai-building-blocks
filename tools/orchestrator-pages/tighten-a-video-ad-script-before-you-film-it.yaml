@@ -16,7 +16,7 @@ when:
   - A creator or agency sent a script and you need to judge it.
 not_for:
   - "You have a finished cut and only need the sound-off test: use the sound-off checker on its own."
-  - "You have no script yet: use the Video ad script writer from customer quotes first."
+  - "You have no script yet: use the Customer quote video ad writer first."
   - "You want a policy check on a Meta ad: use the Meta ad policy checker."
 you_give:
   - Your video ad script, with shots or on-screen text if you have them

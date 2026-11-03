@@ -22,9 +22,9 @@ when:
   - A key just leaked (committed, logged or pasted somewhere it shouldn't be) and you need the response steps now.
   - You're setting up secret scanning in CI and want to know what counts as a real finding versus noise.
 not_for:
-  - A secret is leaking right now as part of an active, wider breach. Use the Incident Responder agent; this agent's leak-response steps are one part of that larger response, not a replacement for it.
+  - A secret is leaking right now as part of an active, wider breach. Use the Security incident responder; this agent's leak-response steps are one part of that larger response, not a replacement for it.
   - You want a one-time scan of a repo for exposed secrets, not a full inventory and rotation plan. Use the Exposed secrets finder.
-  - You want a lighter day-to-day habit check, not a structured engineering review. Use the Secrets hygiene checker.
+  - You want a lighter day-to-day habit check, not a structured engineering review. Use the Secret leak checker.
 you_give:
   - "Where your secrets live today: which repos, config files, environment variables and CI systems hold them."
   - The cloud or CI provider you use (AWS, Azure, GCP, GitHub Actions, and so on).

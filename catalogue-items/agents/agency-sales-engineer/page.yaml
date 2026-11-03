@@ -34,8 +34,8 @@ when:
 not_for:
   - You are negotiating price, discounts or contract terms. Use the Deal desk reviewer.
   - You are answering a formal questionnaire or tender. Use the RFP response builder.
-  - You want a deal scored for risk. Use the Deal Strategist agent.
-  - You need a short demo script for a simple product with no technical evaluation. Use the Counter demo script writer.
+  - You want a deal scored for risk. Use the Sales deal reviewer.
+  - You need a short demo script for a simple product with no technical evaluation. Use the Product demonstration script writer.
   - You want it to run the demo or the test. It cannot access your product or the buyer's systems.
 you_give:
   - Your discovery notes on the buyer's problem, their systems and their technical team

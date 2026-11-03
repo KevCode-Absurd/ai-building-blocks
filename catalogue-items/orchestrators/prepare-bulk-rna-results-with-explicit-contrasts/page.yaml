@@ -33,7 +33,7 @@ how_to_use:
   - Follow its checkpoints and check the evidence before using any output. Agent packs run one requested cycle; they do not create a schedule.
 thinking: high
 not_for:
-  - "Your data is single-cell RNA: use the Single-cell RNA analysis pipeline."
+  - "Your data is single-cell RNA: use the Single-cell RNA count analyst."
   - "You only need the counts table built from reads or Salmon output: use the RNA-seq comparison preparer."
   - "You already have a results table and only need a chart: use the Journal-ready figure maker."
 output_sample:

@@ -19,7 +19,7 @@ when:
   - A developer asks you for the exact text for every failed state.
 not_for:
   - "You only have a list of error messages and want better wording: use the Error message rewriter."
-  - "You want a score and full review of one form or screen: use the Error message rewriter or the Plain words interface rewriter."
+  - "You want a score and full review of one form or screen: use the Error message rewriter or the Forms and instructions rewriter."
   - "Your product has no recovery steps yet, such as retry or undo: decide those first, then run this."
   - "The text has fixed legal or payment provider wording: check with the provider before you change it."
 you_give:

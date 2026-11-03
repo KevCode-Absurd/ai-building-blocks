@@ -19,7 +19,7 @@ when:
   - "You are not sure how much review a choice needs."
 not_for:
   - "You want the full version with every check: use the Reversible decision sorter."
-  - "You want to find how a plan could fail before you commit: use the Plan pre-mortem runner."
+  - "You want to find how a plan could fail before you commit: use the Plan risk reviewer."
   - "The choice is about money, law or health and needs real advice: ask a qualified person such as an accountant, lawyer or doctor."
 
 you_give:

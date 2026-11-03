@@ -19,7 +19,7 @@ when:
   - Your old skill model is out of date and needs an update.
 not_for:
   - "You need pay bands or salary ranges: ask your HR lead or use a pay survey, since this builds skills, not pay."
-  - "You are hiring one role once and have no team process: use the Structured interview guide builder or Hiring interview designer."
+  - "You are hiring one role once and have no team process: use the Structured interview guide builder or Hiring interview planner."
   - "You need review forms and goal templates: use the Review cycle form builder."
 you_give:
   - The role titles and the team or company they sit in

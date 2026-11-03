@@ -18,10 +18,10 @@ when:
   - Your team needs one shared set of type, colour and spacing rules.
   - You need type rules that also meet accessibility standards.
 not_for:
-  - "Your product must keep its own brand fonts and colours: this guide sets Gelasio and a fixed colour list, so extend your own guide with the Design rules file writer."
+  - "Your product must keep its own brand fonts and colours: this guide sets Gelasio and a fixed colour list, so extend your own guide with the Project design rules writer."
   - "You are building a chat screen: use the AI assistant interface style guide writer."
   - "You are building a sales page that tells a story: use the Story-led page style guide writer."
-  - "You only need colour, type and spacing as code files: use the Design token builder."
+  - "You only need colour, type and spacing as code files: use the Design token and handoff builder."
 you_give:
   - A description of your product and what it does
   - Who reads or uses it

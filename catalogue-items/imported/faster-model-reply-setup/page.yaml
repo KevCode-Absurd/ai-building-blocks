@@ -21,8 +21,8 @@ when:
   - You need to choose between a draft model, Medusa and lookahead decoding.
 not_for:
   - You use a hosted model through an API, such as ChatGPT or Claude. You cannot change how they reply.
-  - You have no NVIDIA GPU. Use the Local model runner for laptops.
-  - Your model is too big for your GPU. Use the Model size reducer first.
+  - You have no NVIDIA GPU. Use the Laptop local model setup planner.
+  - Your model is too big for your GPU. Use the AWQ model compression planner first.
   - You want to train a model on your own data. Use the Language model trainer.
 you_give:
   - The model you run, such as Llama 2 70B

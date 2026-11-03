@@ -26,7 +26,7 @@ not_for:
   - You want to know if a trend or market is worth entering. Use the Trend Researcher agent.
   - You need a security audit or a contract reviewed by a lawyer. This agent lists the questions to ask. A specialist must do the review.
   - You want to haggle on price. It lists terms to ask for. It does not talk to vendors for you.
-  - You want a summary of what many papers say about a topic. Use the Research Synthesist agent.
+  - You want a summary of what many papers say about a topic. Use the Research evidence reviewer.
 you_give:
   - The job the tool must do, and who will use it
   - The tools you are weighing, with links to their pages (two to five is best)

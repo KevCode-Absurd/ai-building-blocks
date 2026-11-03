@@ -19,8 +19,8 @@ when:
   - You are weighing a pivot or a shutdown and both paths look bad.
 not_for:
   - Your choice is easy to undo. Use the Reversible decision sorter and just try it.
-  - You are weighing a bold bet and want to check the downside. Use the Bold bet downside checker.
-  - You are scared of a choice and want to plan around the fear. Use the Fear-setting planner.
+  - You are weighing a bold bet and want to check the downside. Use the Business plan risk reviewer.
+  - You are scared of a choice and want to plan around the fear. Use the Decision risk and delay planner.
   - You need legal advice on a layoff or a share split. Ask a lawyer. This skill does not give it.
 you_give:
   - The decision, in plain words

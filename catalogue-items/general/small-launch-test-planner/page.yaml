@@ -20,7 +20,7 @@ when:
 not_for:
   - You have no price yet. Set a price first, because the test needs a real price to measure.
   - You are relaunching a whole brand. Use a simple plan with a person who knows your market, not a small test.
-  - You only need to choose what to test first. Use the Reach-before-repeat planner.
+  - You only need to choose what to test first. Use the Ad reach planner.
 
 you_give:
   - "Your offer or idea, with price and who it is for"

@@ -25,7 +25,7 @@ when:
 
 not_for:
   - "You have a picture of a chart and no data behind it. Get the data first. It can offer a labelled estimate, but never exact values."
-  - "The chart is already editable and you only want it to look better: restyle it in PowerPoint, or use the PowerPoint template populator."
+  - "The chart is already editable and you only want it to look better: restyle it in PowerPoint, or use the PowerPoint template deck builder."
   - "You want to check that slide figures match an Excel workbook without rebuilding charts: use the Excel to PowerPoint number checker."
   - "You want to see what changed between two versions of a deck: use the PowerPoint deck change reviewer."
 

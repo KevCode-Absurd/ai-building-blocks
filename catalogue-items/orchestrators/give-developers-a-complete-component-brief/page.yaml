@@ -18,10 +18,10 @@ when:
   - You are moving a Figma component into code and want variants and tokens written down once.
   - A component keeps coming back from review because focus, loading or disabled states were never defined.
 not_for:
-  - You only want to find states missing from a component that changed. Use the Design handoff completeness assistant.
+  - You only want to find states missing from a component that changed. Use the Design handoff completeness reviewer.
   - You want working code, not a brief. Use the Accessible UI builder.
-  - You need new colors, type sizes and spacing from one brand color. Use the Design token builder on its own.
-  - You want to find where a whole product drifts from its rules each month. Use the Monthly design system keeper.
+  - You need new colors, type sizes and spacing from one brand color. Use the Design token and handoff builder on its own.
+  - You want to find where a whole product drifts from its rules each month. Use the Design rule consistency reviewer.
 you_give:
   - The component design, as a Figma link, screenshot, code or a written description
   - Your design system rules or token file, so the brief reuses approved values (optional, but gaps show up without it)

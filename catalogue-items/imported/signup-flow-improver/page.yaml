@@ -16,7 +16,7 @@ when:
   - Trial users sign up but never reach their first useful step.
   - You are redesigning registration and want a checklist.
 not_for:
-  - "You want to fix what happens after people sign up: use the First-use onboarding designer or the Onboarding improver."
+  - "You want to fix what happens after people sign up: use the First-use onboarding designer or the Product onboarding planner."
   - "You need a lead capture or contact form, not account creation: use a simple form review or ask a conversion specialist."
   - "You want to run the A/B test itself: use your testing tool, as this gives test ideas only and does not run them."
 you_give:

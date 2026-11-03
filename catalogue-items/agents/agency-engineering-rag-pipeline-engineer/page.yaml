@@ -33,9 +33,9 @@ when:
   - You need to choose between search by meaning, search by keyword or both.
   - You changed something and want proof that answers got better, not just a feeling.
 not_for:
-  - You want a whole AI feature, with model choice and deployment. Use the AI Engineer agent.
+  - You want a whole AI feature, with model choice and deployment. Use the AI feature planner.
   - You want to improve a site or product search box. Use the Search Relevance Engineer agent.
-  - Your source data is messy, duplicated or broken. Use the Data Engineer agent first.
+  - Your source data is messy, duplicated or broken. Use the Data pipeline designer first.
 you_give:
   - What your documents are, how many, how long, and in which languages
   - Ten to twenty real questions people ask, with the document that holds each answer if you know

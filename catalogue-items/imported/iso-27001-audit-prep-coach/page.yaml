@@ -16,7 +16,7 @@ when:
   - You added a product, business unit or new SaaS tool and your scope changed.
   - You had a breach and want to check your management system.
 not_for:
-  - "You need a full SOC 2 readiness check: use the SOC 2 readiness checker, as this one covers ISO 27001 only."
+  - "You need a full SOC 2 readiness checker: use the SOC 2 readiness checker, as this one covers ISO 27001 only."
   - "You want an auditor to certify you: book a certification body, as this only helps you prepare."
   - "You want help writing policies from scratch: ask your security lead or a consultant, as this checks evidence and does not write it."
 you_give:

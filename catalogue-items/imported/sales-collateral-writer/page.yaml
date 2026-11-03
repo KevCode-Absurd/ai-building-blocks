@@ -18,10 +18,10 @@ when:
   - You need a one-page leave-behind for a buyer.
   - A demo is coming and the presenter needs a script.
 not_for:
-  - "You want a public page that compares you to rivals: use vendor-comparison-writer, not sales collateral."
-  - "You want a card on one rival for reps to use across deals: use sales-battlecard-builder."
+  - "You want a public page that compares you to rivals: use Vendor comparison writer, not sales collateral."
+  - "You want a card on one rival for reps to use across deals: use Sales competitor guide writer."
   - "You want to learn why buyers say yes or leave: run buyer interviews with customer-interview-coach, not this skill."
-  - "You need a cold outreach email: use cold-email-writer, not a sales deck."
+  - "You need a cold outreach email: use Cold email writer, not a sales deck."
 you_give:
   - What you sell, in one or two sentences, and who it is for
   - The deal or buyer to target, and the buyer's role

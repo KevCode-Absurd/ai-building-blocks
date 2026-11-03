@@ -18,7 +18,7 @@ when:
   - You are deciding whether a business deserves the work of a full valuation.
   - You are comparing two businesses on the same ten tests.
 not_for:
-  - "You have no findings yet: first run the Business power tester, then come back with its report."
+  - "You have no findings yet: first run the Competitive advantage tester, then come back with its report."
   - "You want to know if a stock is cheap or dear: this checks the business, not the price, so work out its value as the next step."
   - "You want a buy or sell call: it gives none, so talk to a licensed financial adviser."
 

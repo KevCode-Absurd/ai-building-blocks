@@ -18,7 +18,7 @@ when:
   - You are giving a PDF to an AI and want clean text that keeps its tables.
   - A two-column paper loses its reading order when you copy it.
 not_for:
-  - "You only need to merge, split, rotate or fill in a PDF: use the PDF toolkit."
+  - "You only need to merge, split, rotate or fill in a PDF: use the PDF file editor."
   - "You want text with page positions from scans, Office files or images, run on your own computer: use the scanned PDF text reader."
   - "The PDF is a simple one-page letter: copy the text by hand, since a full conversion is more than you need."
 you_give:

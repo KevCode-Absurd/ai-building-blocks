@@ -15,10 +15,10 @@ when:
   - Two people do the same job on very different pay.
   - Someone asks how their pay was set and you have no clear answer.
 not_for:
-  - "You are making one offer now and need the letter checked: use Hire fairly, from job post to a checked offer letter."
-  - "You want to plan how many people to hire and the cost: use Plan a year of hiring and what it will cost."
-  - "You pay a sales team on commission: use Hire, pay and measure a sales team on what works."
-  - "Payroll is due and you need the inputs checked: use Check payroll inputs before the cut off."
+  - "You are making one offer now and need the letter checked: use Hiring document and candidate reviewer."
+  - "You want to plan how many people to hire and the cost: use Annual hiring and staff-cost planner."
+  - "You pay a sales team on commission: use Sales hiring and pay planner."
+  - "Payroll is due and you need the inputs checked: use Payroll hours and approval review."
   - "You pay creators, not staff: use the Creator pay planner."
 output_sample:
   input:

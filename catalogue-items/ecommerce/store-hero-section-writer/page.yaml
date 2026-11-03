@@ -19,7 +19,7 @@ when:
   - You have a list of things to test and want a plan for the top of the page first.
 not_for:
   - "You need the whole landing page, not just the top screen: use the Conversion page writer."
-  - "You want to place reviews and proof further down the page: use the Store social proof placer."
+  - "You want to place reviews and proof further down the page: use the Store testimonial placement planner."
   - "Your page has almost no visits yet: talk to a few buyers first, since split tests need traffic."
 
 you_give:

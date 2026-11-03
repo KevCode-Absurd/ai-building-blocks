@@ -20,7 +20,7 @@ when:
 not_for:
   - Your buyer is ready to buy and a short offer ad would do. Ask your AI for a short ad instead of a long script.
   - "You need the script read aloud and tightened for speech: use the Ad script read-aloud editor."
-  - "You have the script and want it checked against Meta rules: use the Meta ads compliance checker."
+  - "You have the script and want it checked against Meta rules: use the Meta ad policy checker."
 
 you_give:
   - The brief, the length you want, where it will run, and the buyer stage

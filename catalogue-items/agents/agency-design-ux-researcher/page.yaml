@@ -19,7 +19,7 @@ when:
 not_for:
   - "You want to find what to ask in early customer interviews for a business idea: use the Customer discovery interview planner."
   - "You want a quick research method pick and plan, with no UX focus: use the User research planner."
-  - "You want to sort a pile of reviews, tickets or survey comments into themes: use the Feedback Synthesizer agent."
+  - "You want to sort a pile of reviews, tickets or survey comments into themes: use the Product feedback analyst."
   - "You need a study with real legal or medical risk, such as patient testing: use a trained researcher and an ethics review."
   - "You want to test whether a result is statistically real: use the Statistician agent."
 you_give:

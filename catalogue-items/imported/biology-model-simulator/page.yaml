@@ -20,7 +20,7 @@ when:
   - Gene expression noise matters and you need stochastic runs.
   - You must find out which parameters drive the output most.
 not_for:
-  - "You need to build the model or lay out its diagram: use SimBiology's model building tools in MATLAB, since this skill only runs a model that already exists."
+  - "You need to build the model or lay out its diagram: use SimBiology model builder tools in MATLAB, since this skill only runs a model that already exists."
   - "You want to fit parameters to your own data, or work out AUC or Cmax: do that in SimBiology's fitting tools, then bring the fitted model here."
   - "You have no MATLAB or SimBiology licence: ask a colleague who has one to run it, as this skill cannot run without both."
 you_give:

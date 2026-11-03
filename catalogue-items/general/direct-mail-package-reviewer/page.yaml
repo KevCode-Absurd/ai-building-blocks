@@ -18,7 +18,7 @@ when:
   - Your mailing gets few opens and you don't know whether the envelope or the letter is the problem.
   - You write an email series styled as a letter and want it to hold a reader.
 not_for:
-  - "You want a line-by-line pass on the letter copy: use the Slippery slide copy checker."
+  - "You want a line-by-line pass on the letter copy: use the Sales copy flow reviewer."
   - "You only send email with no letter or envelope: ask a colleague to read it aloud, or check your subject line by hand."
   - "You need legal or postal sign-off on prizes or mail rules: ask your printer, mailing house or a lawyer."
 

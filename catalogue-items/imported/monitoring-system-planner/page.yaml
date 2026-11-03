@@ -35,8 +35,8 @@ how_to_use:
   - Ask your AI to follow this skill, and paste those details in.
   - "It builds the plan in four steps, each from the one before: a list of user tasks with a reliability target for each, then a list of signals with how long to keep each, then a table of dashboards and alerts with owner, runbook and missing-data columns, then a test of one alert and a count of false alarms before rollout."
 not_for:
-  - "You only need reliability targets and an error budget. Use the Reliability target setter."
-  - "You want a ready Grafana dashboard and alert config from scripts. Use the Monitoring planner."
+  - "You only need reliability targets and an error budget. Use the Service reliability target planner."
+  - "You want a ready Grafana dashboard and alert config from scripts. Use the Monitoring dashboard and alert designer."
   - "You are watching an AI agent or an AI app. Use the AI agent monitoring planner."
   - "You cannot get at any metrics, logs or traces yet. Set up the data first, then plan."
 next: [monitoring-planner, reliability-target-setter]

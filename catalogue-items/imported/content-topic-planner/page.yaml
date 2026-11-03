@@ -17,7 +17,7 @@ when:
   - You need to explain to a client why you picked these topics.
 not_for:
   - "You need one blog post written now: ask your AI to use a copywriting skill, or write it yourself."
-  - "You want an audit of your site's search problems: use an SEO audit tool or ask an SEO expert."
+  - "You want an audit of your site's search problems: use an SEO auditor tool or ask an SEO expert."
   - "You only need social posts: use a social media post skill, not a full content plan."
 you_give:
   - What your business sells

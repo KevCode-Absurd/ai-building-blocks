@@ -18,7 +18,7 @@ when:
 not_for:
   - "You lose fewer than about five deals a month: the repeat rule cannot fire, so read each loss yourself or use your CRM dashboard."
   - "You want to contact lost buyers for feedback: do that yourself, because this agent never contacts a buyer."
-  - "You need a rival-by-rival comparison: use the Quarterly battle card keeper."
+  - "You need a rival-by-rival comparison: use the Competitor sales guide reviewer."
 you_give:
   - Last month's lost deals with buyer type, stage, reason, rival, urgency and notes
   - Your current pitch, deck or proposal template as text

@@ -17,8 +17,8 @@ when:
   - "You have a starter runner with stubs and need to know what to fill in first."
 not_for:
   - "You have one script that does one job on a timer. A plain scheduled job is enough."
-  - "You want to plan how wakeups are saved, claimed and retried. Use the Agent wakeup and stale-claim builder."
-  - "You want the task table and the lock on each task. Use the Agent issue and checkout builder."
+  - "You want to plan how wakeups are saved, claimed and retried. Use the Agent wakeup and claim recovery builder."
+  - "You want the task table and the lock on each task. Use the Agent task ownership workflow builder."
   - "You want hard spending limits. Use the Agent spending cap builder."
   - "You want jobs that survive a server restart. Use the Recoverable agent job queue builder."
 you_give:

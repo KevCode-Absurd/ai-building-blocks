@@ -16,9 +16,9 @@ when:
   - You want to choose which areas to build skill in over the next few years.
 not_for:
   - "You face a cheap choice you can undo: run a quick test instead of mapping your knowledge."
-  - "You want hard questions to test what you know: use the Real knowledge tester."
+  - "You want hard questions to test what you know: use the Subject knowledge tester."
   - "You need facts about a market or field: ask a person who works in it, or read the source reports."
-  - "You want five plain questions you answer without notes, sorted into yes, no or too tough: use the Circle of competence sorter."
+  - "You want five plain questions you answer without notes, sorted into yes, no or too tough: use the Business expertise reviewer."
 you_give:
   - The topic or decision
   - What you have done, studied or read about it

@@ -19,10 +19,10 @@ when:
   - A project is slipping and you must report it to a sponsor without hiding the problem.
   - You need a repeatable weekly status update that people actually read.
 not_for:
-  - You have one team and need a task list from a spec, with acceptance checks. Use the Senior Project Manager agent.
+  - You have one team and need a task list from a spec, with acceptance checks. Use the Project planning manager.
   - You are planning a creative shoot or production with crew and budgets. Use the Studio Producer agent.
-  - The project is a merger or acquisition. Use the M&A Integration Manager agent.
-  - You only need to keep track of open actions from a weekly meeting. Use the Weekly meeting actions keeper.
+  - The project is a merger or acquisition. Use the Merger integration manager.
+  - You only need to keep track of open actions from a weekly meeting. Use the Meeting minutes and action tracker.
 you_give:
   - The project in a few lines, with the problem it fixes and what done looks like
   - The teams and people involved, and who the sponsor is who can make the final call

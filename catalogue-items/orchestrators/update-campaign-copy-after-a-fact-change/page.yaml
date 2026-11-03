@@ -39,7 +39,7 @@ thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - "You are writing a new campaign, not changing an old one: use Campaign brief and calendar builder."
   - "You only want to check one finished ad before it goes live: use Pre-launch ad checker."
-  - "You want to see which copy a changed fact touches, without rewriting it: use Campaign change impact mapper."
+  - "You want to see which copy a changed fact touches, without rewriting it: use Campaign change impact reviewer."
 output_sample:
   input:
     - Your current ads, emails and page copy, each marked with its version and where it runs

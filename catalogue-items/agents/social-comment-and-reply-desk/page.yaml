@@ -16,7 +16,7 @@ when:
   - You keep answering the same question and want it to become a post.
 not_for:
   - "You get fewer than a few posts or comments a week: reply by hand, it will be faster."
-  - "You need to answer customer complaints: use the Customer inbox triage and reply drafter, your support desk or a person on your team."
+  - "You need to answer customer complaints: use the Customer inbox reply drafter, your support desk or a person on your team."
   - "You want to post, like or follow for you: this agent only drafts, so you post the replies yourself."
 you_give:
   - The posts you might reply to, or the comments on your own posts, with the platform and how old each is

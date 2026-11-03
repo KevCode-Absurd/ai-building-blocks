@@ -19,8 +19,8 @@ when:
   - You plan to put your name on a new product or a new customer group.
   - You are second or third in your market and the plan copies the leader.
 not_for:
-  - "Your plan is only a price cut, coupon run or sale: use the Long-run effects checker, which looks at what discounts do over time."
-  - "You only need to know if a brand name can stretch to a new product: use the Brand name stretch checker."
+  - "Your plan is only a price cut, coupon run or sale: use the Long-term strategy impact reviewer, which looks at what discounts do over time."
+  - "You only need to know if a brand name can stretch to a new product: use the Brand name fit checker."
   - "You want a plan written for you: ask a marketer or use your AI to draft one first. This checker tests a plan, it does not write it."
 
 you_give:

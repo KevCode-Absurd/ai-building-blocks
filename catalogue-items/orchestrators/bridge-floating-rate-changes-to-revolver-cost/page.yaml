@@ -19,9 +19,9 @@ when:
   - A board or bank asks what a 1% rise does to interest and the unused-line fee.
 not_for:
   - Your loan has a rate floor, a rate cap or a reset on a set day. This does not model them. It lists each one as a gap.
-  - You only want the extra interest per loan, with no tie to a bill. Use the Floating rate repricing planner.
-  - You only want to check one billing period against a lender's bill. Use the Revolver interest and fee checker.
-  - You want to know how much you can still borrow against receivables and stock. Use the Reconcile an asset-based revolver certificate workflow.
+  - You only want the extra interest per loan, with no tie to a bill. Use the Variable loan interest planner.
+  - You only want to check one billing period against a lender's bill. Use the Revolving loan interest and fee checker.
+  - You want to know how much you can still borrow against receivables and stock. Use the Asset-backed credit line checker workflow.
 you_give:
   - Each floating loan's balance, reset date and day count (from the loan agreement and the lender statement)
   - The fixed or hedged part of any loan, with the contract that proves it (optional)

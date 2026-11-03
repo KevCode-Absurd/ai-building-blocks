@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a legal, safety or compliance check on a rule: ask a qualified person, such as a lawyer or safety officer, before you change it."
   - "The job affects no one, such as an old file nobody opens: just delete it."
-  - "The advice to cut came from someone selling the replacement: use the Advice skin-in-the-game checker first."
+  - "The advice to cut came from someone selling the replacement: use the Advice credibility checker first."
 
 you_give:
   - "The job, step or rule, described in plain words"

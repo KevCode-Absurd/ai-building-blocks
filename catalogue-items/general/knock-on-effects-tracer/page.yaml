@@ -22,8 +22,8 @@ when:
   - "You need to explain a plan to people who will push back."
 
 not_for:
-  - "You want to know how much of a gain you keep, or a reworked plan. Use the Second-order effects tracer."
-  - "The change is already made and a result surprised you. Use the Surprise cause ranker."
+  - "You want to know how much of a gain you keep, or a reworked plan. Use the Decision consequence planner."
+  - "The change is already made and a result surprised you. Use the Unexpected result investigation planner."
   - "You are choosing between options, not tracing one change. Use the Pros and cons decision planner."
   - "It is a cost cut that no customer or staff member will notice. There is no chain to trace."
 

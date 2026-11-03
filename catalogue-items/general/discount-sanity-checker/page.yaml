@@ -19,7 +19,7 @@ when:
   - "You are about to launch a sale and want every number to agree before it goes live."
 not_for:
   - "You have one price and no discount: no check is needed, so just state the price plainly."
-  - "Your ads may break Meta rules: use the Meta ads compliance checker for that."
+  - "Your ads may break Meta rules: use the Meta ad policy checker for that."
   - "You want to pick a new price or discount level: talk it through with your accountant or a pricing adviser first."
 
 you_give:

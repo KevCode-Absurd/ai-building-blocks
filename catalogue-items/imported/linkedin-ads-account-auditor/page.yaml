@@ -19,9 +19,9 @@ when:
   - You want a second opinion before you raise budgets.
 not_for:
   - "Your account has only a few weeks of data or very few conversions. Run it later, or expect many findings marked unknown."
-  - "You advertise on TikTok: use the TikTok ads account auditor. For several platforms in one report, use the Twelve-platform ad account auditor."
+  - "You advertise on TikTok: use the TikTok ads account auditor. For several platforms in one report, use the Paid ad account auditor."
   - "You want to make changes in the account, such as bids or budgets. This audit is read-only, and every change stays a draft."
-  - "You want to know why one campaign underperforms, with no full audit: use the Ad performance diagnoser."
+  - "You want to know why one campaign underperforms, with no full audit: use the Ad performance troubleshooter."
 you_give:
   - Campaign Manager exports or screenshots, such as campaigns, audiences, lead forms and demographics
   - Your goal and what counts as a conversion

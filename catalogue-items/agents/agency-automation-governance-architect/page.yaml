@@ -20,10 +20,10 @@ when:
   - You plan to connect a CRM, a billing tool or a booking system and want rules for who owns what.
   - You need a handover document so another person can run an automation.
 not_for:
-  - You have decided to automate and only want a Zapier or Make setup. Use the No-code automation planner.
+  - You have decided to automate and only want a Zapier or Make setup. Use the Zapier and Make automation planner.
   - You want an n8n workflow laid out. Use the n8n workflow designer, then bring the design here for review.
-  - Your automation is already built and you want its failures checked. Use the workflow Check a new automation before relying on it.
-  - You want a full spec for a software workflow with every failure path. Use the Workflow Architect agent.
+  - Your automation is already built and you want its failures checked. Use the workflow Automation reliability reviewer.
+  - You want a full spec for a software workflow with every failure path. Use the Workflow specification writer.
   - You need a legal or privacy ruling on the data it handles. Ask a qualified professional.
 you_give:
   - "The process in plain steps: what happens now and what you want automated."

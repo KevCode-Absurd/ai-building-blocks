@@ -20,8 +20,8 @@ when:
 not_for:
   - "You need to find a time across time zones: use the Meeting scheduler."
   - "You want a pre-read from your Notion pages: use the Meeting pre-read writer."
-  - "You want full minutes from a recording or transcript: use the Meeting minutes writer or the Meeting notes maker."
-  - "You want to cut many meetings at once: use the Process and meeting cull planner."
+  - "You want full minutes from a recording or transcript: use the Meeting minutes writer or the Meeting transcript and notes writer."
+  - "You want to cut many meetings at once: use the Process and meeting cleanup planner."
   - "An urgent incident needs people on a call now: hold the call, then use this for the follow-up."
 you_give:
   - How many people, how long, and the average hourly pay rate

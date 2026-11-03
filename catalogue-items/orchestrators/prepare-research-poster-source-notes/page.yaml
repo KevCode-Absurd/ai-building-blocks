@@ -21,7 +21,7 @@ not_for:
   - You want the poster itself laid out for print. Use the Research poster builder for an editable PowerPoint, or the Research poster maker for a LaTeX PDF.
   - Your study has no approved results yet. Wait for them. This workflow only reports what was measured.
   - You want a talk, not a poster. Use Build a research talk from checked figures.
-  - You want a poster for a public event, with a date and a price. Use Make a readable event poster.
+  - You want a poster for a public event, with a date and a price. Use Event poster designer and reviewer.
 you_give:
   - Your finished study, as a paper, report or notes
   - The approved results you may show, such as tables and figures

@@ -19,7 +19,7 @@ when:
   - A creator or agency sent a script and you want a clear list of what to change.
 not_for:
   - "Your ad is already live and you have recall data: run the ten-person poll or compare branded search and add-to-cart before and after, instead of scoring the script."
-  - "You only need to know if Meta would reject the ad: use the Meta ads compliance checker, which covers ad policy."
+  - "You only need to know if Meta would reject the ad: use the Meta ad policy checker, which covers ad policy."
   - "You want to know if your live ads repeat the same idea: use the Ad sameness checker."
 
 you_give:

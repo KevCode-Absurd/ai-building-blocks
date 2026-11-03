@@ -21,7 +21,7 @@ when:
 not_for:
   - "You want to grow a show for English-language listeners on Spotify, Apple Podcasts or YouTube: use the Global Podcast Strategist agent."
   - "You want to publish the same show in several languages and markets: use the Global Podcast Strategist agent, then adapt for China with this one."
-  - "You want an audio file edited or mastered: use the Video audio finishing plan or a sound editor."
+  - "You want an audio file edited or mastered: use the Video audio finishing planner or a sound editor."
   - "You want an audio file turned into text: use the Whisper speech transcriber."
   - "You need legal advice on Chinese broadcast or content rules: ask a qualified professional."
 you_give:

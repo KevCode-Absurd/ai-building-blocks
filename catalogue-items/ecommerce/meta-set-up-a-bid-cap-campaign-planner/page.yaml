@@ -19,7 +19,7 @@ not_for:
   - "You have only a few sales or unreliable purchase tracking: check your tracking with the Meta server tracking checker first, then come back."
   - "Your bid caps already run and you want to raise, lower or scale them: use the Meta bid cap adjustment planner."
   - "You want to test new ads before you choose a bid: use the Meta creative test campaign planner or the Meta test campaign planner."
-  - "You do not know your break-even cost per sale yet: the Meta scaling campaign planner works out your break-even ROAS."
+  - "You do not know your break-even cost per sale yet: the Meta campaign growth planner works out your break-even ROAS."
 you_give:
   - Your goal and the sale or event you track, such as purchases
   - 30 to 60 days of results from Ads Manager, with dates, spend, purchases and cost per purchase by ad or ad set

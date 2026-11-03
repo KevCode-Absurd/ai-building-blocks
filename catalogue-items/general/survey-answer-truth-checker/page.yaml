@@ -22,10 +22,10 @@ when:
   - Most of your replies came from happy, recent buyers and you doubt the result.
 
 not_for:
-  - "You want channel comparisons from buyer answers, ad spend and sales. Use the post-purchase survey reader."
+  - "You want channel comparisons from buyer answers, ad spend and sales. Use the Post-purchase survey report builder."
   - "You need to write a survey from scratch. Use the post-purchase survey builder, then bring the draft here to check it."
   - You have very few answers. It will mark who-answered low and tell you to collect more first.
-  - "You want to read what customers say in their own words in reviews. Use the review reason spotter."
+  - "You want to read what customers say in their own words in reviews. Use the Customer buying reason counter."
   - It checks your own surveys. It does not judge public opinion polls you cannot see the questions of.
 
 you_give:

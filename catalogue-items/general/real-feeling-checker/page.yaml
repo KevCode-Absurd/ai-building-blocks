@@ -28,7 +28,7 @@ when:
   - "You have two drafts and need to pick the one that sounds lived, not staged."
 
 not_for:
-  - "You want the wording checked for machine-sounding lines. Use the Anti-AI-slop copy editor."
+  - "You want the wording checked for machine-sounding lines. Use the AI-style wording editor."
   - "You want a sales draft tightened line by line. Use the Sales copy editor."
   - "You have no draft yet and need a design brief written. Use the Design brief rules writer first."
   - "The text is a legal notice, a data report or safety copy, where feeling is not the goal."

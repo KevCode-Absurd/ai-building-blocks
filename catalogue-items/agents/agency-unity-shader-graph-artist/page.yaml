@@ -17,10 +17,10 @@ when:
   - The same node cluster appears in several graphs, and you want one Sub-Graph.
   - You need a Renderer Feature plan for a full-screen effect in URP.
 not_for:
-  - You need gameplay code in C#. Use the Unity Architect agent.
-  - You need a custom editor window or tool. Use the Unity Editor Tool Developer agent.
-  - Your project is in Unreal. Use the Unreal Technical Artist agent. For Godot, use the Godot Shader Developer agent.
-  - You need art budgets and import rules that apply to any engine. Use the Technical Artist agent.
+  - You need gameplay code in C#. Use the Unity software architect.
+  - You need a custom editor window or tool. Use the Unity editor tool developer.
+  - Your project is in Unreal. Use the Unreal technical artist. For Godot, use the Godot Shader Developer agent.
+  - You need art budgets and import rules that apply to any engine. Use the Art pipeline planner.
 you_give:
   - Your Unity version and render pipeline, URP or HDRP
   - Your target platforms, such as mobile, PC or console

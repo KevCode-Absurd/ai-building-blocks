@@ -23,7 +23,7 @@ not_for:
   - "Your work involves classified information: CMMC covers unclassified information only, so follow your security officer and the government's rules."
   - "You need a final compliance decision, a certificate or a score to submit: only a qualified assessor and your own senior official can give those."
   - "You want to know if a product or data is export controlled: use the Defense export rules checker."
-  - "You want to plan a FedRAMP route for a cloud service you sell: use the Federal cloud approval planner."
+  - "You want to plan a FedRAMP route for a cloud service you sell: use the FedRAMP readiness planner."
 you_give:
   - Your contract clauses, especially DFARS 252.204-7012, 7019, 7020 and 7021
   - The kind of data you handle, such as contract information only or controlled information too

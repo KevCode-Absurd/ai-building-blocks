@@ -19,7 +19,7 @@ when:
   - Someone will rely on these facts, such as an auditor, a lawyer or a customer.
 not_for:
   - The PDF is already text you can select and copy. Use the PDF maker and reader.
-  - You want a summary, not exact facts. For a contract, use the Plain-words contract summary prompt.
+  - You want a summary, not exact facts. For a contract, use the Contract plain-language summary writer prompt.
   - The document is handwritten. OCR is weak on handwriting. Use this for a first reading and check each fact yourself.
   - The document must not be uploaded anywhere. Say so at the start so the AI keeps the work on your computer, or do the reading yourself.
 you_give:

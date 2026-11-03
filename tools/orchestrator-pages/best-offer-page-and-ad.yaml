@@ -18,7 +18,7 @@ when:
 not_for:
   - You have no live deals to check. Skip the offer step and start with the Article-style landing page writer.
   - You already chose your offer. Use the Article-style landing page writer, then the 30-point landing page checker.
-  - You only need to review a page you already have. Use the Landing page conversion review.
+  - You only need to review a page you already have. Use the Landing page conversion reviewer.
 
 you_give:
   - Your brand file, with prices, deals, guarantee and terms

@@ -18,9 +18,9 @@ when:
   - Someone asks "does this work?" and you can't say what working means.
   - You are about to run a test and want a plan you can follow without second-guessing it.
 not_for:
-  - "You want to compare two versions of ad copy: use the Split-run test planner or the Cross-over copy test planner."
+  - "You want to compare two versions of ad copy: use the A/B test design planner or the Cross-over copy test planner."
   - "You have no number you can measure: first decide how you will count the result, or ask a person who sees the data."
-  - "You want many cheap tests, not one clean one: use the Trial log planner."
+  - "You want many cheap tests, not one clean one: use the Trial and learning log planner."
 
 you_give:
   - What you want to learn, in a sentence or two

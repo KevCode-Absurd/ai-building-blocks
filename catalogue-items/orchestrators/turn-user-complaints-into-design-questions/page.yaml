@@ -20,8 +20,8 @@ when:
 not_for:
   - You have one ticket or one bug report. Send it to the team that owns the bug.
   - You only want the complaints grouped. Use the Feedback theme finder on its own.
-  - You want to find the cause of one mistake users keep making. Use the Hard-to-use thing diagnoser.
-  - You already know the problem and want fixes. Use the Turn a design review into fixes workflow.
+  - You want to find the cause of one mistake users keep making. Use the Product ease of use checker.
+  - You already know the problem and want fixes. Use the Design revision usability test planner workflow.
 you_give:
   - Support tickets, reviews or survey comments, with the date and product version if you know them
   - The screens or flows the complaints are about

@@ -19,7 +19,7 @@ when:
   - You want one place that settles button labels, messages and empty or error screens.
 not_for:
   - "Your product has no chat-first screen, such as a dashboard or a shop: use the Brand style guide writer or the Minimal style guide writer."
-  - "You want a reading-heavy product with a printed-magazine feel: use the Magazine layout style guide writer."
+  - "You want a reading-heavy product with a printed-magazine feel: use the Magazine-style interface guide writer."
   - "You need a sales page that sells: use the Conversion page style guide writer or the Story-led page style guide writer."
   - "You only need to check contrast on colours you already have: use the Colour contrast checker."
 you_give:

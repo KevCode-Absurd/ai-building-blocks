@@ -16,7 +16,7 @@ when:
   - You keep switching target groups.
 not_for:
   - "You already sell to a market at a profit: keep going there and test your price or offer, not a new market."
-  - "Your problem is price, not who you serve: use the Commodity trap checker to see if your offer looks like everyone else's."
+  - "Your problem is price, not who you serve: use the Offer price-comparison reviewer to see if your offer looks like everyone else's."
   - "You need market size from a research firm: ask a person who knows your industry, or use a trade report."
 you_give:
   - What you can do and what you know

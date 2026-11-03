@@ -17,10 +17,10 @@ when:
   - You sell everyday goods to smaller cities and want a trust-first plan.
   - You run lives but have no routine for before and after the show.
 not_for:
-  - You sell on Douyin. Use the Douyin Strategist agent.
-  - You already run live shows and want coaching on the show itself. Use the Livestream Commerce Coach agent.
-  - You only want a plan to move customers into WeChat groups. Use the Private Domain Operator agent.
-  - You sell outside China or on TikTok. Use the TikTok Strategist agent.
+  - You sell on Douyin. Use the Douyin content planner.
+  - You already run live shows and want coaching on the show itself. Use the Livestream sales planner.
+  - You only want a plan to move customers into WeChat groups. Use the Customer community planner.
+  - You sell outside China or on TikTok. Use the TikTok content planner.
 you_give:
   - Your product, price range and who buys it
   - Your region or the kind of city your buyers live in

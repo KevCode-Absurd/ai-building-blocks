@@ -18,9 +18,9 @@ when:
   - A founder asks how much is left for common holders after one preferred class takes its pick.
   - You are checking a lawyer's or accountant's payout table against the share terms.
 not_for:
-  - The investor also shares in what is left after the money back. Use the Capped participation checker.
+  - The investor also shares in what is left after the money back. Use the Capped investor payout checker.
   - Two or more preferred classes rank against each other, or the terms add dividends that pile up. This covers one class with no dividends. Ask a lawyer or build a full payout table.
-  - You want the cash that reaches shareholders after debt and deal costs. Use the Closing equity proceeds checker first, then bring its result here.
+  - You want the cash that reaches shareholders after debt and deal costs. Use the Business sale proceeds checker first, then bring its result here.
 you_give:
   - The cash available to shareholders after debt and any claims that rank ahead (from the sale agreement)
   - The amount the investor paid for this class of preferred shares (from the term sheet or share purchase agreement)

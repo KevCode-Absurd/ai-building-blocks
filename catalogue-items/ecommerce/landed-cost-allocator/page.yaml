@@ -19,7 +19,7 @@ when:
   - You want margin per product after the true cost of getting it to your shelf.
 not_for:
   - "You have one product and want to check a supplier quote: use the landed cost calculator."
-  - "You want to know which costs count as COGS: use the COGS line sorter."
+  - "You want to know which costs count as COGS: use the Product cost sorter."
   - "You need to track costs across many products and shipments over time: use stock software, as a spreadsheet gets heavy."
 
 you_give:

@@ -22,8 +22,8 @@ when:
 not_for:
   - You want an email for one named company. Use the Account-based outreach drafter.
   - You already know your buyer and only want cold emails and follow-ups. Use the Cold email writer.
-  - You need to answer replies, handle objections and move deals forward. Use the Sales Outreach agent.
-  - You want to plan your offer and lead channels first. Use the Offer & Lead Gen Strategist agent.
+  - You need to answer replies, handle objections and move deals forward. Use the Sales outreach writer.
+  - You want to plan your offer and lead channels first. Use the Sales offer and lead planner.
   - You need a live list of companies or live buying signals. This agent cannot pull data. Get the list from your CRM or a data tool, then paste it in.
 you_give:
   - What you sell, its price range and the problem it solves. Your website or sales deck has this.

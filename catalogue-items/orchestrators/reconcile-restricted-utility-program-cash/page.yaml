@@ -20,10 +20,10 @@ when:
   - Billings are up but collections are slow, and you need the cash view, not the billing view.
   - A pending debit or collateral hold may block part of the balance.
 not_for:
-  - You only need the water billing and collections view. Use the Water utility collections reconciler on its own.
-  - You only need to split restricted from free cash. Use the Grant restrictions cash reconciler on its own.
-  - You need to prove grant spending followed the agreement. Use the Prepare a grant spending evidence pack workflow.
-  - You need a dated cash ladder of future payments. Use the Reconcile treasury settlement liquidity workflow.
+  - You only need the water billing and collections view. Use the Water utility billing and cash checker on its own.
+  - You only need to split restricted from free cash. Use the Restricted grant cash tracker on its own.
+  - You need to prove grant spending followed the agreement. Use the Grant spending and evidence report preparer workflow.
+  - You need a dated cash ladder of future payments. Use the Treasury liquidity and payment timing checker workflow.
 you_give:
   - Utility billing and collection records for the period, with receivables (from the billing system)
   - The program bank cash balance (from the bank statement)

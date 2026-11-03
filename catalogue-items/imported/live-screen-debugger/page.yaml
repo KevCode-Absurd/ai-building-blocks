@@ -23,9 +23,9 @@ when:
   - You are fixing a desktop app built with Electron.
   - You want your AI to test the screen with real clicks, not only read the code.
 not_for:
-  - "You want to debug a live website you do not own, or a page with real customer data: use the Browser page debugger, which reads a page through Chrome DevTools in a separate profile."
-  - "You want a lasting set of tests to run on every change: use the Browser test writer."
-  - "Your AI can only chat and cannot run code on your computer: ask a developer, or use the Browser page debugger if you can set it up."
+  - "You want to debug a live website you do not own, or a page with real customer data: use the Chrome DevTools page debugger, which reads a page through Chrome DevTools in a separate profile."
+  - "You want a lasting set of tests to run on every change: use the Playwright test writer."
+  - "Your AI can only chat and cannot run code on your computer: ask a developer, or use the Chrome DevTools page debugger if you can set it up."
   - "You would run it on a shared, work or personal computer: the sandbox-off setup is only safe on a throwaway machine or container. Before the first run, confirm the app address is 127.0.0.1 or localhost."
 you_give:
   - The address of your local app, such as http://127.0.0.1:3000, or the Electron project folder

@@ -19,8 +19,8 @@ when:
   - You need to resample a time series to a steady interval.
 not_for:
   - "You want charts or plots: use the MATLAB chart maker instead."
-  - "You need to read or save CSV, Excel or MAT files: use the Data file reader and writer, which handles file reading and writing."
-  - "You want to train a model on your table: use the Data classifier comparer, or ask a data scientist to help."
+  - "You need to read or save CSV, Excel or MAT files: use the MATLAB data file reader and writer, which handles file reading and writing."
+  - "You want to train a model on your table: use the Classifier comparison analyst, or ask a data scientist to help."
   - "You do not use MATLAB: the licence allows use only with MathWorks products."
 you_give:
   - Your table or data description

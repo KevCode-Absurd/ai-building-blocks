@@ -20,8 +20,8 @@ when:
 not_for:
   - The group owns all of its subsidiaries, so there are no outside owners. The plain EV to EBITDA sum is enough.
   - EBITDA is zero or negative. The multiple means nothing, and the skill will not give one.
-  - You want to price the company or choose peers. This shows one multiple only. To test a return from a multiple, use the EPS and multiple return bridge.
-  - The company holds stakes in other listed firms as investments. Use the Listed holding look-through NAV.
+  - You want to price the company or choose peers. This shows one multiple only. To test a return from a multiple, use the Share price return analyst.
+  - The company holds stakes in other listed firms as investments. Use the Holding company value calculator.
 you_give:
   - The parent company's market value of equity, with the date (share price times shares)
   - Total debt and cash from the latest consolidated balance sheet

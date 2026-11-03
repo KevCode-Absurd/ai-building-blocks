@@ -18,8 +18,8 @@ when:
   - You are about to launch a new SKU because a rival has it, or because current buyers would probably buy it.
   - You want a rule for approving launches that is not a hunch.
 not_for:
-  - "You have no job spec yet: build one first with the Job-based avatar builder, then come back."
-  - "You want a plain keep-or-cut sort with no job test: use the Product line cutter."
+  - "You have no job spec yet: build one first with the Customer needs profile builder, then come back."
+  - "You want a plain keep-or-cut sort with no job test: use the Product range reviewer."
   - "You have under 10 SKUs: skip the sort and ask only for the launch gate, or just talk it through with your team."
 
 you_give:

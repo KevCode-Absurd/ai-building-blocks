@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "You don't know your industry or where its profit sits yet: run the Five forces industry checker first."
-  - "You already have one word to own and only need to cut what blurs it: use the Give-up list planner."
+  - "You already have one word to own and only need to cut what blurs it: use the Brand focus trade-off planner."
   - "You have no offer or buyers yet: use the First market picker."
-  - "You want a model your market leader would lose money by copying: use the Counter-positioning finder."
+  - "You want a model your market leader would lose money by copying: use the Competitive business model planner."
 
 you_give:
   - "What you offer, who you serve and how you reach them"

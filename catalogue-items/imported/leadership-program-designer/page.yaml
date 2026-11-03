@@ -19,7 +19,7 @@ when:
   - Your board asked who could replace your key leaders.
 not_for:
   - "You need one workshop or a short course: ask your AI for a single session plan instead."
-  - "You want pairs of mentors and mentees: use the Mentoring program builder."
+  - "You want pairs of mentors and mentees: use the Mentoring and coaching program builder."
   - "You want to measure how well managers manage today: use the Manager quality review planner."
   - "You only need a replacement plan for key roles: use the Succession plan builder."
 you_give:

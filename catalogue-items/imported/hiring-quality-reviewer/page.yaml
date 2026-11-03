@@ -20,7 +20,7 @@ when:
 not_for:
   - "The search is still open: use the Hiring progress reporter for an update."
   - "You want to plan the new hire's first 90 days in detail: use the 30-60-90 day onboarding planner."
-  - "You want to learn why someone left: use the Exit interview and grievance guide."
+  - "You want to learn why someone left: use the Exit interview and grievance planner."
   - "You want to rate a candidate in the interview: use the Interview scorecard builder."
 you_give:
   - The role and the outcome of the search (filled or cancelled)

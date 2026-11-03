@@ -22,9 +22,9 @@ when:
 
 not_for:
   - You want to know if a lender will approve a loan or a refinancing. This reviews evidence you already hold. It does not predict an approval or contact a lender.
-  - Your worry is a foreign currency bill with a forward contract. Use the Currency maturity evidence reviewer.
-  - You want to test a loan covenant, such as cash cover in each period. Use the Debt service covenant evidence reviewer.
-  - You only need the interest and commitment fee on one revolving loan. Use the Revolver interest and fee checker.
+  - Your worry is a foreign currency bill with a forward contract. Use the Currency forward contract coverage reviewer.
+  - You want to test a loan covenant, such as cash cover in each period. Use the Loan covenant cash cover reviewer.
+  - You only need the interest and commitment fee on one revolving loan. Use the Revolving loan interest and fee checker.
 
 you_give:
   - Each loan's due date and repayment amount (from your loan agreements or debt schedule)

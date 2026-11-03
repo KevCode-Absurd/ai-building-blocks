@@ -19,7 +19,7 @@ when:
   - "You want to compare two versions of a story."
 not_for:
   - "You want facts, grammar or tone checked: use a fact-checker or the Plain English editor."
-  - "You have no draft yet: build a first one with the Hero story mapper, then bring it back to map."
+  - "You have no draft yet: build a first one with the True story outline writer, then bring it back to map."
   - "You want line-by-line edits or a rewrite: use a human editor, as this gives one change only."
 
 you_give:

@@ -17,7 +17,7 @@ when:
 not_for:
   - "You want to check your email set-up, such as sender records: use the email setup health checker."
   - "You need the next tests planned and ordered: use the email test planner."
-  - "You have ad results, not email or SMS figures: read them with the Campaign keep-or-change checker."
+  - "You have ad results, not email or SMS figures: read them with the Ad change decision checker."
 you_give:
   - Campaign list for the last 30 days or more, with revenue, clicks and placed orders
   - Flow revenue, with the number of recipients and skips

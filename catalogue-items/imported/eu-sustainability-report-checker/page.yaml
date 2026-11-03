@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your company has 1,000 employees or fewer, or turnover of €450 million or less: it is outside the mandatory rule. Ask your counsel about the voluntary standard."
   - "You need a legal opinion or a signed assurance statement: only counsel and an accredited assurance provider can give those."
-  - "You want to turn your raw energy and HR data into an ESG report draft: use the ESG report preparer."
+  - "You want to turn your raw energy and HR data into an ESG report draft: use the Sustainability reporting reviewer."
   - "You want to measure your supply chain emissions: use the Supply chain carbon tracker, then bring the numbers back here."
 you_give:
   - Number of employees and net turnover for your last year

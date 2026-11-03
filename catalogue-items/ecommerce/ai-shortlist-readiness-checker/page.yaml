@@ -20,9 +20,9 @@ when:
   - You edited robots.txt, changed your theme or added a CDN and want to be sure AI search bots can still reach you.
   - You are about to rewrite product pages and want to know which facts to fix first.
 not_for:
-  - "You need a Shopify admin audit of your catalogue data: use the AI shopping readiness checker, which connects to your store admin."
+  - "You need a Shopify admin audit of your catalogue data: use the Shopify AI shopping readiness checker, which connects to your store admin."
   - "You want to see how many visits come from AI chat: set up AI traffic tracking, because this check cannot measure visits."
-  - "You want the product pages rewritten for you: use the AI-ready product page editor after this check."
+  - "You want the product pages rewritten for you: use the Product page editor for AI search after this check."
 
 you_give:
   - Your store address and three to five key product pages

@@ -19,7 +19,7 @@ when:
   - A readiness check found joins that could fail and you need to plan for them.
 not_for:
   - "You run a single-user tool with no operators: a short checklist of what to test before release is enough."
-  - "You have no readiness findings yet and want to find weak joins first: use the Launch readiness seam checker, then come back."
+  - "You have no readiness findings yet and want to find weak joins first: use the Launch readiness checker, then come back."
   - "You only need a one-line message for a form field: write it by hand with a person who knows the screen."
 
 you_give:

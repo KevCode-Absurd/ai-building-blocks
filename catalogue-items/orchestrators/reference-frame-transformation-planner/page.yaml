@@ -40,7 +40,7 @@ how_it_works:
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
-  - "You want a video from scratch with no before and after frames: use the Rapid-cut product video prompt."
+  - "You want a video from scratch with no before and after frames: use the Rapid-cut product video prompt writer."
   - "You need a full storyboard with a character across many scenes: use the Video avatar and storyboard planner."
   - "You need a 3D explainer of how something works: use the 3D how-it-works video prompt writer."
 output_sample:

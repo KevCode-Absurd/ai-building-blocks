@@ -17,7 +17,7 @@ when:
 not_for:
   - "You only need a cash forecast: use the Cash forecast builder, or a simple sheet of bills and what you are owed."
   - "You have a one-off project with no budget: use a plain list of costs and a person to sign off each one."
-  - "You want to close the books and work out profit: use the Monthly profit close."
+  - "You want to close the books and work out profit: use the Monthly store profit reviewer."
 you_give:
   - Last month's actual spend and income by team and line
   - Your budget for the year by team and month, or past spend to build one from

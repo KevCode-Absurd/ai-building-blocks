@@ -16,9 +16,9 @@ when:
   - You have a buyer list and a clear offer.
   - You need follow-ups that do not sound pushy.
 not_for:
-  - "You write emails to customers or sign-ups you already have: use email-sequence-writer, which covers lifecycle email."
-  - "You need a list of prospects first: use prospect-list-builder to build and check the list, then come back."
-  - "You want a call script or voicemail: use sales-collateral-writer for call and sales material."
+  - "You write emails to customers or sign-ups you already have: use Email sequence and timing writer, which covers lifecycle email."
+  - "You need a list of prospects first: use Prospect account researcher to build and check the list, then come back."
+  - "You want a call script or voicemail: use Sales pitch material writer for call and sales material."
 you_give:
   - Who you are writing to
   - Your offer and proof

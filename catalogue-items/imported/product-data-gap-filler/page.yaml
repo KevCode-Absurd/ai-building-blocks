@@ -18,7 +18,7 @@ when:
   - Vendor or product type is blank on many products.
   - You are cleaning up a catalog after a bulk import.
 not_for:
-  - "You only want a read-only check of how ready your store is: use the AI shopping readiness checker first and do not use this tool to write changes."
+  - "You only want a read-only check of how ready your store is: use the Shopify AI shopping readiness checker first and do not use this tool to write changes."
   - "You need to fix values that are already filled in but wrong: use the Product field bulk editor, or edit them in your Shopify admin."
   - "You do not have real barcodes from your supplier: ask your supplier first, because a wrong barcode is worse than a blank one."
 you_give:

@@ -19,8 +19,8 @@ when:
   - Your product page tries to say everything to everyone, and you want a focused version.
 not_for:
   - "You have no ad and no page yet: write the ad first with the Fact-based ad copy writer, then come back here."
-  - "You want to check a finished page against a list: use the Landing page 30-point checker."
-  - "You want to check ad rules before you publish: use the Meta ads compliance checker."
+  - "You want to check a finished page against a list: use the 30-point landing page checker."
+  - "You want to check ad rules before you publish: use the Meta ad policy checker."
   - "You do not have a confirmed price, shipping or renewal term: this skill will not guess one. Confirm each against your live checkout first."
 
 you_give:

@@ -19,7 +19,7 @@ when:
 not_for:
   - "You want a shared team inbox sorted: set a plain filter rule in your email app, or ask a teammate who knows the senders."
   - "You only need a one-off clean-up of your inbox: a quick manual pass is faster than an interview."
-  - "You already have your rules saved and want your mail sorted now: run the inbox triage skill that reads these files, not this setup."
+  - "You already have your rules saved and want your mail sorted now: run the Email sorter and reply drafter skill that reads these files, not this setup."
 you_give:
   - Answers to the interview questions
   - Examples of emails you reply to and ones you ignore

@@ -41,7 +41,7 @@ thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - "You are planning a new copy test: use the Cross-over copy test planner."
-  - "Nothing changed during the test and you only want to read the result: use the Split-run result reader."
+  - "Nothing changed during the test and you only want to read the result: use the A/B test results reader."
   - "You want to pick the next idea to test from scratch: use the One-change experiment planner."
 output_sample:
   input:

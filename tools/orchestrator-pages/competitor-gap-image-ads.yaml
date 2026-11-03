@@ -16,7 +16,7 @@ when:
   - You have been rejected on Meta before and want a check before you launch.
 not_for:
   - "You have no saved competitor ads yet: start with the Competitor ad swipe file builder, then come back."
-  - "You only want the gaps and no copy: use the Competitor ad gap finder on its own."
+  - "You only want the gaps and no copy: use the Competitor ad opportunity finder on its own."
   - "You have no proof for your claims: the copy step marks each missing line, so gather your proof first or ask a person on your team."
 you_give:
   - Competitor ads you saved from the public Ad Library, with library ID, brand, start date and screenshot

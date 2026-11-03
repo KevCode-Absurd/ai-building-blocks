@@ -19,7 +19,7 @@ when:
   - You need to know how much escrow cash can be released.
 not_for:
   - "Your earnout has steps, cliffs or several metrics: this covers one straight-line clause only."
-  - "The escrow secures other claims, such as indemnity or working capital: use the Escrow release checker on its own."
+  - "The escrow secures other claims, such as indemnity or working capital: use the Escrow release balance checker on its own."
   - "You need the earnout's fair value for accounts: this checks a payout scenario and escrow cover, not valuation."
 you_give:
   - "The earnout clause: threshold, cap and the payout rate or formula"

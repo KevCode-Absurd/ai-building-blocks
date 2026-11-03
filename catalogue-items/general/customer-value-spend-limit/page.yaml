@@ -18,8 +18,8 @@ when:
   - Some customers cost a lot to win and you are not sure if they pay back.
   - You want to know which sources bring the best customers over time.
 not_for:
-  - "You have no sales history yet: run a small test budget first, or use the Smallest test picker to plan a cheap test."
-  - "You need to choose which growth lever to work on: use the Growth lever audit."
+  - "You have no sales history yet: run a small test budget first, or use the Minimum experiment planner to plan a cheap test."
+  - "You need to choose which growth lever to work on: use the Business growth lever planner."
   - "You want to judge one ad or one campaign on its own: check the ad platform report, since this tool looks at whole customer groups."
 
 you_give:

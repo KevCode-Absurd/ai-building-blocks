@@ -20,7 +20,7 @@ when:
   - "You sell one product or have no reviews yet: you get a smaller bank, built from the product facts and marked as not checked against real questions."
 not_for:
   - "You need a sale email this week: write a plain sale email yourself, one offer and one button."
-  - "You want to place emails on dates: use the Email campaign calendar planner after you have your ideas."
+  - "You want to place emails on dates: use the Monthly email campaign calendar planner after you have your ideas."
   - "You have no product facts yet: write down what it is, what is in it and how it is used first."
 
 you_give:

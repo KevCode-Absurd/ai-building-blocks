@@ -34,10 +34,10 @@ when:
   - A call just ended, you left unsure what happens next, and you want to see what you missed.
   - You are training a new seller and want a call structure and a set of questions they can use.
 not_for:
-  - You want to write a cold message to get a first meeting. Use the Outbound Strategist agent or the Sales Outreach agent.
+  - You want to write a cold message to get a first meeting. Use the Outbound sales planner or the Sales outreach writer.
   - You want only the order of questions, with no call structure or objections. Use the Sales call question planner.
-  - You want a whole deal scored after the call. Use the Deal Strategist agent.
-  - You want a proposal after the call. Use the Proposal Strategist agent.
+  - You want a whole deal scored after the call. Use the Sales deal reviewer.
+  - You want a proposal after the call. Use the Sales proposal narrative writer.
   - You are interviewing people to test a business idea, not selling. Use the Customer discovery interview planner.
 you_give:
   - Who you are calling, their company and their role

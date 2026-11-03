@@ -19,7 +19,7 @@ when:
   - A supplier or plant manager quotes a yield and you want the cost bridge behind it.
 not_for:
   - "You want to choose which products to make given limited machine time: use the Product mix capacity checker."
-  - "You want to follow raw material price changes into your selling price: use the Commodity pass through cost bridge."
+  - "You want to follow raw material price changes into your selling price: use the Raw material price impact calculator."
   - You need cost for tax or company accounts, which have their own rules. This skill does not value inventory.
   - You have many batches or a forecast for the year. This skill prices one batch at a time.
 you_give:

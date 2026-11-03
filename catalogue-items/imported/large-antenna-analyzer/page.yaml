@@ -19,8 +19,8 @@ when:
   - You need to know how a vehicle body changes your antenna pattern.
   - You must estimate radar cross section for a shape.
 not_for:
-  - "You want a single antenna element or a small array with no dish or platform: use the Antenna designer item (antenna-designer)."
-  - "You need impedance matching, measured antenna data, radio propagation or SAR: use the Antenna matching helper item (antenna-matching-helper)."
+  - "You want a single antenna element or a small array with no dish or platform: use the MATLAB antenna designer item (antenna-designer)."
+  - "You need impedance matching, measured antenna data, radio propagation or SAR: use the MATLAB antenna system designer item (antenna-matching-helper)."
   - "You have no MATLAB with Antenna Toolbox: ask an RF engineer, or use a simple dish calculator for a rough gain figure."
 you_give:
   - Antenna type and frequency

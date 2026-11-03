@@ -30,9 +30,9 @@ when:
   - You must decide if a ticket needs a developer or a billing specialist, and want the reasons written down.
   - The same question keeps coming in, and you want a help-article fix from it.
 not_for:
-  - The ticket is about a refund, a return or a chargeback. Use the Refund request reply writer or the Retail Customer Returns agent.
+  - The ticket is about a refund, a return or a chargeback. Use the Refund request reply writer or the Retail returns response writer.
   - The customer is angry and the main need is tone. Use the Angry customer reply writer first.
-  - You need a whole inbox sorted by urgency. Use the Customer inbox triage and reply drafter.
+  - You need a whole inbox sorted by urgency. Use the Customer inbox reply drafter.
   - The ticket involves a legal threat, a data leak or a security incident. Pass it to the person in charge now. Do not wait for a draft.
   - You want your helpdesk to answer by itself. This agent drafts for a person to check. It cannot connect to your tools.
 you_give:

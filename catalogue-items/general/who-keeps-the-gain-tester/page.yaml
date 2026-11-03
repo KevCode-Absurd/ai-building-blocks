@@ -22,8 +22,8 @@ when:
   - You own a small business and a new machine or supplier deal is on the table. You want to know if your rivals will get it too.
 
 not_for:
-  - "You want to know if a business has a lasting edge in the first place: use the Business power tester."
-  - "You want to price a purchase or work out long-run returns: use the Long-hold return calculator."
+  - "You want to know if a business has a lasting edge in the first place: use the Competitive advantage tester."
+  - "You want to price a purchase or work out long-run returns: use the Long-run business return calculator."
   - "You want to know how much a bad year could cost: use the Bad-year break-even tester."
   - "You want a view on whether to buy or sell a named stock. This skill gives none."
 

@@ -21,7 +21,7 @@ not_for:
   - "You have one question about two files today, such as why two totals differ. Use the Spreadsheet checker."
   - "You need a written procedure for a process and no report is in question. Use the Process and SOP writer."
   - "You want the monthly numbers report itself, not a check on its definitions. Use the Recurring KPI report maker."
-  - "You want a single run with no saved record for next time. Use the Align recurring report metric definitions workflow."
+  - "You want a single run with no saved record for next time. Use the Report totals and definition checker workflow."
 you_give:
   - "The recurring reports you want checked, as exports or files, with the period each covers."
   - "The source tables or exports behind them, with dates."

@@ -19,8 +19,8 @@ when:
   - Your finance person asks what shipping really costs per carrier.
 not_for:
   - You have no carrier invoices or rate card and want your true cost. Get those first, or the report can show charges only.
-  - You want carriers compared on delivery time. Use the Carrier performance comparer.
-  - You want zones with no shipping rate found. Use the Shipping rate gap finder.
+  - You want carriers compared on delivery time. Use the Delivery time and price checker.
+  - You want zones with no shipping rate found. Use the Missing shipping rate checker.
   - You want profit after all costs. Use the Store profit margin calculator.
 you_give:
   - Your Shopify store address, like mystore.myshopify.com

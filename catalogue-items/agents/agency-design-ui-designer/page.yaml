@@ -18,8 +18,8 @@ when:
   - You want dark mode, or a second brand theme, without redoing every screen.
 not_for:
   - You want a logo or brand identity. Use the Logo and brand kit designer.
-  - You already have a built screen and want a go or no-go before release. Use the UI Finish-Gate Reviewer agent.
-  - You want the page structure and CSS base for one new site. Use the UX Architect agent.
+  - You already have a built screen and want a go or no-go before release. Use the Interface finishing reviewer.
+  - You want the page structure and CSS base for one new site. Use the Web page structure designer.
 you_give:
   - What the product is, who uses it and whether it is a web app, mobile app or site
   - Your brand colours, fonts and logo, or "none yet" (optional)

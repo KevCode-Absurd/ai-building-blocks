@@ -21,8 +21,8 @@ when:
   - You're moving from a single account to multiple accounts or environments and want the guardrails planned first.
   - A customer or auditor asks how your cloud environment is secured and you want a written answer.
 not_for:
-  - You want your application code reviewed for bugs. Use the Application Security Engineer agent.
-  - You have an active breach or suspicious activity right now. Use the Incident Responder agent and act immediately.
+  - You want your application code reviewed for bugs. Use the Application security reviewer.
+  - You have an active breach or suspicious activity right now. Use the Security incident responder and act immediately.
   - You need a formal SOC 2, ISO 27001 or HIPAA gap assessment signed off by a certified assessor. Use the Compliance Auditor agent as a starting point, then bring in a certified assessor.
 you_give:
   - Your cloud provider (AWS, Azure, GCP, or more than one) and how your accounts or projects are organized.

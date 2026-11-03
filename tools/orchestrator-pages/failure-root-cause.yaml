@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have one small slip that needs no review: write a simple fix-it note, or just fix it and tell the team."
   - "You want to blame one person: use a talk with their manager instead, because this review stays on the process."
-  - "You need to calm a disagreement: use the Disagreement calming line writer, not a failure review."
+  - "You need to calm a disagreement: use the Disagreement response writer, not a failure review."
 you_give:
   - What went wrong, when, who noticed and how often it has happened
   - The people and teams involved, and how much they trust one another (optional)

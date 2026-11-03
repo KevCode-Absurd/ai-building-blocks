@@ -16,7 +16,7 @@ when:
   - Your changelog stopped months ago and the spec does not match the API.
   - You want docs checked on a schedule instead of when someone complains.
 not_for:
-  - "You want a one-off review of a single release: ask the Release manager, or read that release's notes yourself."
+  - "You want a one-off review of a single release: ask the Software release verification coordinator, or read that release's notes yourself."
   - "Nobody installs or builds on your repo: a short note in the README is enough, so skip a monthly check."
   - "You want the docs published or merged for you: this agent only proposes changes, so a person must commit them."
 you_give:

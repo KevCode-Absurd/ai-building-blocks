@@ -87,8 +87,8 @@ terms:
     meaning: Updating a small, mixed group of devices first, and widening only if they stay healthy.
 
 not_for:
-  - "You want a general review of embedded code: use the Embedded Firmware Engineer agent."
-  - "You want day-to-day help running a fleet of connected devices: use the IoT Fleet Engineer agent."
+  - "You want a general review of embedded code: use the Embedded firmware engineer."
+  - "You want day-to-day help running a fleet of connected devices: use the IoT fleet rollout planner."
   - "You have no lab and no past test records. It still plans the tests, but it cannot call an update safe to roll out."
 output_sample:
   input:

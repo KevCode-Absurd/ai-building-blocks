@@ -22,8 +22,8 @@ when:
 
 not_for:
   - You want a quote for a new loan, or want to compare lenders. This checks documents you already hold. It gives no market quote.
-  - You only want the cash a new loan pays out after discount and fees. Use the Debt issue proceeds checker.
-  - You want the seller's cash after closing. Use the Seller closing revision assistant.
+  - You only want the cash a new loan pays out after discount and fees. Use the New loan cash proceeds checker.
+  - You want the seller's cash after closing. Use the Seller closing cash and escrow reviewer.
   - You have no payoff letter from the old lender yet. The payoff stays MISSING and the closing gap cannot be called final.
 
 you_give:

@@ -18,7 +18,7 @@ when:
   - You need the magnetic field at a location for compass correction.
   - You need Moon or planet positions on a specific date.
 not_for:
-  - "You need to change coordinate frames or rotate vectors: use the Aerospace unit and frame converter."
+  - "You need to change coordinate frames or rotate vectors: use the MATLAB aerospace unit and frame converter."
   - "You need to predict an orbit or flight path over time: use a trajectory or orbit tool in MATLAB, since this only gives positions and values."
   - "You want a Simulink environment model: use the blocks in Aerospace Blockset instead."
 you_give:

@@ -17,7 +17,7 @@ when:
 not_for:
   - "Your product has one kind of buyer: use the Product angle and offer planner on its own."
   - "You only want to know if a discount still pays: use the Discount margin and ad-cost checker."
-  - "You sell only by subscription and care about repeat orders: use the Reach-before-repeat planner."
+  - "You sell only by subscription and care about repeat orders: use the Ad reach planner."
 you_give:
   - Your product, its price and what you may truthfully say about it
   - Reviews, survey answers or support lines in your buyers' words

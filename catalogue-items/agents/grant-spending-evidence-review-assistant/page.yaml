@@ -18,8 +18,8 @@ when:
   - New transactions arrive and you need to know which ones are eligible.
   - Your fund owner asks why spending is above or below budget.
 not_for:
-  - You are still writing the bid. Use the Grant Writer agent.
-  - You need restricted and general cash kept apart. Use the Grant restrictions cash reconciler.
+  - You are still writing the bid. Use the Grant proposal writer.
+  - You need restricted and general cash kept apart. Use the Restricted grant cash tracker.
   - You need an audit opinion or a funder return. Your fund owner or auditor does that. This agent submits nothing.
 you_give:
   - The award agreement, or the clauses on eligible costs, limits, dates and reporting

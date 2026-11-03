@@ -16,7 +16,7 @@ when:
   - You plan to have an AI agent build the app and need clear instructions.
   - You need a backlog with acceptance criteria for a small team.
 not_for:
-  - "You only need one screen of copy or a short feature note: use the Feature spec writer for one feature, or the Idea to dev brief writer for a short brief."
+  - "You only need one screen of copy or a short feature note: use the Feature spec writer for one feature, or the Developer brief writer for a short brief."
   - "You already have a spec and want it reviewed: ask your AI to review it, since this skill writes new blueprints."
   - "You have no way to search the web or save files: use a plain chat for a rough outline, not this skill."
 you_give:

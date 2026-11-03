@@ -19,7 +19,7 @@ when:
   - You want to compare two signals with coherence or a cross-spectrum.
 not_for:
   - You want to use this code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
-  - "You want to design or apply a filter: use the digital filter designer."
+  - "You want to design or apply a filter: use the MATLAB signal filter designer."
   - "You want a spectrogram or time-frequency view of a signal that changes over time: use the Time-frequency analyzer item, or in MATLAB the spectrogram function or the Time-Frequency analyzer app, since this skill does not cover it."
   - "You want audio features such as pitch, or Bode and Nyquist plots: use Audio Toolbox or Control System Toolbox."
 you_give:

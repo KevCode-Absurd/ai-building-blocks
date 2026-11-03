@@ -18,10 +18,10 @@ when:
   - You are a tutor planning the next few weeks for one learner or a small group
   - You want practice questions where a worked answer has one planted mistake to find
 not_for:
-  - You want one test marked or graded. Mark it yourself, or use the Study understanding check to talk through the answers.
+  - You want one test marked or graded. Mark it yourself, or use the Study understanding checker to talk through the answers.
   - You need a plan for a whole exam, not for fixing mistakes. Use the Exam study roadmap builder.
   - You have no real answers yet, only a topic. Use the Recall quiz writer to make questions first.
-  - You want to track progress over many weeks. Use the Study plan progress review assistant.
+  - You want to track progress over many weeks. Use the Study practice progress reviewer.
 you_give:
   - The learner's recent answers, with names removed. Typed text or photos both work
   - The correct solutions or mark scheme for the same questions

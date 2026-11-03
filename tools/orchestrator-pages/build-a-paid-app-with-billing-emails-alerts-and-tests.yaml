@@ -16,7 +16,7 @@ when:
   - You want monitoring and tests from day one.
 not_for:
   - "You only need a landing page or a one-time payment link: use a simple page builder or your payment provider's own payment link tool."
-  - "You already have a live app and only need to fix failing tests: use the Test failure repair loop."
+  - "You already have a live app and only need to fix failing tests: use the Failed test repairer."
   - "You want to take real payments right away: first get a developer to review the code, and use test keys until then."
 you_give:
   - Your app idea in a few sentences, with the features you need

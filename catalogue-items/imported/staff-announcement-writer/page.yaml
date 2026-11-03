@@ -18,7 +18,7 @@ when:
   - Managers need talking points before the announcement goes out.
   - You want one message ready for email, Slack and a team meeting.
 not_for:
-  - "You are announcing a re-org or layoffs and want the full package with a town hall script: use the Org change announcement writer or the Internal change announcement writer."
+  - "You are announcing a re-org or layoffs and want the full package with a town hall script: use the Workplace change announcement writer or the Internal change announcement writer."
   - "The news is about one person's performance or discipline: use a one-to-one meeting or your HR case process."
   - "You need the legal wording of a policy or job cut terms: ask HR or a lawyer to write it."
 you_give:

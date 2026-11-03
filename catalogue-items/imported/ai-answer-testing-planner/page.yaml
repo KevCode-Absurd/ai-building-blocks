@@ -19,7 +19,7 @@ when:
   - Your answers look fine in demos but users complain.
 not_for:
   - You only want to compare an old prompt with a new one on the same cases. Use the Prompt change tester.
-  - Your feature is a Python app and you want test cases and a repeatable pass or fail run. Use the AI app evaluation planner.
+  - Your feature is a Python app and you want test cases and a repeatable pass or fail run. Use the Python LLM app evaluation planner.
   - You will show the feature once, or it does not write text answers. Read a few outputs yourself instead of building a test plan.
 you_give:
   - A description of your AI feature and who uses it

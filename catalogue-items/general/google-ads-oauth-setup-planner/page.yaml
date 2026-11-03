@@ -49,7 +49,7 @@ how_it_works:
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
-  - "You already have the client and want to test the developer token and a read-only call: use Google Ads token and access check planner."
+  - "You already have the client and want to test the developer token and a read-only call: use Google Ads developer access checker."
   - "You want to audit the campaigns themselves: use Google Ads store account auditor."
   - "You need the connector code written: use API connector builder."
 output_sample:

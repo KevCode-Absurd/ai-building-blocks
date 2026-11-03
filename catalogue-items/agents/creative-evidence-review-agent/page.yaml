@@ -17,9 +17,9 @@ when:
   - You review creative each week and want each review to start from the last one.
 not_for:
   - You want final approval for paid ads or claims that need legal review. A person with that authority must approve. This agent only checks against the facts you give it.
-  - You want to check one ad's claims against proof. Use the Ad claim proof gap finder.
+  - You want to check one ad's claims against proof. Use the Ad claims checker.
   - You want to know if two ads look too alike for Meta to show both. Use the Meta creative similarity risk reviewer.
-  - You want to read test results and see which creative won. Use the Creative test reader.
+  - You want to read test results and see which creative won. Use the Ad creative test analyst.
   - You want new creative made, not checked. Use the Creative brief writer to plan it first.
 you_give:
   - Your brief, with the message, who it is for, the format and the placement, such as a Meta feed or a Google display ad

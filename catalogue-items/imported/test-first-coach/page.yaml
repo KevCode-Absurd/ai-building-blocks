@@ -18,7 +18,7 @@ when:
   - You are fixing a bug and want a test that proves it stays fixed.
   - An AI wrote a pile of tests that check nothing real.
 not_for:
-  - You already have working code and only want more tests. Use the Test plan writer to plan them, or the Change test prover to check your change is really covered.
+  - You already have working code and only want more tests. Use the Test plan writer to plan them, or the Python change test checker to check your change is really covered.
   - Your test suite is already failing and you just need it green. Use the Failing test fixer.
   - The code cannot run tests, or it is a one-off script. Skip test-first work there.
 you_give:

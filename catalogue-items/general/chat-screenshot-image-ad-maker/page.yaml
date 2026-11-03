@@ -18,7 +18,7 @@ when:
   - The problem is something a family jokes about or keeps noticing in each other.
   - You want a picture with words that still reads like a normal post.
 not_for:
-  - "Your story has no second person who noticed the problem: use the Phone note image ad."
+  - "Your story has no second person who noticed the problem: use the Phone note image ad maker."
   - "You need the picture to show the moment itself, with no words on it: use the Problem moment image ad maker."
   - "You want a finished picture file with no design step: paste the image prompt into ChatGPT or Gemini instead."
   - "You want to show a real customer's messages: this writes a staged scene. Use real screenshots you have permission to share, and never present a staged chat as a real testimonial."

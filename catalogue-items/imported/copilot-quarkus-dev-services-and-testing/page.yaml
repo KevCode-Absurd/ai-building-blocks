@@ -18,8 +18,8 @@ when:
   - A test fails because a container or port is not set up the way you expect.
   - Your build runs tests but silently skips your IT classes.
 not_for:
-  - You want to build a new feature in your Quarkus app, with tests after. Use Build a Quarkus application feature.
-  - You want to compile a native binary. Use Prepare a Quarkus native build.
+  - You want to build a new feature in your Quarkus app, with tests after. Use Quarkus feature builder.
+  - You want to compile a native binary. Use Quarkus native build troubleshooter.
   - Your app is Spring Boot or another framework. This skill is only for Quarkus.
 you_give:
   - Your Quarkus project, or its pom.xml and the class to test

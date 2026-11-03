@@ -20,7 +20,7 @@ when:
   - You want a sample app that developers can copy and run.
   - Developers read your docs once and never come back.
 not_for:
-  - "You want to find out why developers drop off before a first call: use the Developer onboarding improver."
+  - "You want to find out why developers drop off before a first call: use the API first-call experience reviewer."
   - "You need reference pages for every endpoint: use the Developer docs writer."
   - "You need a setup wizard inside your app: use the First-run wizard designer."
 you_give:

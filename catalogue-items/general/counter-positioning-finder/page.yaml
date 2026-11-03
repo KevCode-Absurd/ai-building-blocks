@@ -19,7 +19,7 @@ when:
   - You have a new model and want to know if the leader will copy it the moment it works.
 not_for:
   - You only want to cut prices. A leader can match a price cut, so this will not find an edge. Work on your cost per sale first.
-  - You have not found a gap in your market yet. Use the Competitor white space mapper first, then bring the gap here.
+  - You have not found a gap in your market yet. Use the Market opportunity finder first, then bring the gap here.
   - The leader is simply slow or has not noticed you. That is not counter-positioning. Watch how fast it moves and plan for a short window.
 
 you_give:

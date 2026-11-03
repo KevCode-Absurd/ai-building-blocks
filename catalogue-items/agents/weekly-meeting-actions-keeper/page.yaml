@@ -16,7 +16,7 @@ when:
   - You want the next agenda ready, led by what is still open.
 not_for:
   - "You hold a one-off or ad hoc meeting: use a plain minutes template or write a short note yourself, since this agent needs last week's list to compare."
-  - "You only want a running action list with no minutes or agenda: use the Task list keeper on its own."
+  - "You only want a running action list with no minutes or agenda: use the Task list manager on its own."
   - "You want to send the minutes or cancel a meeting automatically: this agent never sends or cancels, so do that step yourself."
 you_give:
   - This week's rough notes or transcript, with who was there

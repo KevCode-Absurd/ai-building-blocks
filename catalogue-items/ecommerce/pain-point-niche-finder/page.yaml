@@ -22,7 +22,7 @@ when:
   - You want to see who already advertises to a problem before you spend on ads.
 
 not_for:
-  - "You already have a product and want it scored on margin and shipping. Use the Winning product scorer."
+  - "You already have a product and want it scored on margin and shipping. Use the Product idea viability scorer."
   - "You want a short list of products already running ads. Use the Advertised product finder."
   - "Your market has no clear before and after, or your claims need proof you cannot give. Pick another market first."
   - "You sell services or to other businesses: talk to five likely buyers and ask what they struggle with."

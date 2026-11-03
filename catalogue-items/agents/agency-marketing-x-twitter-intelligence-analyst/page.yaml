@@ -21,8 +21,8 @@ when:
   - You want to know what your customers complain about or ask for on X, in their own words.
   - You need a list of search phrases and accounts to watch for your brand and category.
 not_for:
-  - You want to write or schedule posts. This agent does research only. Use the Twitter Engager agent for replies.
-  - You want to track results of paid social ads. Use the Paid Social Strategist agent.
+  - You want to write or schedule posts. This agent does research only. Use the X post and reply writer for replies.
+  - You want to track results of paid social ads. Use the Paid social advertising strategist.
   - You expect it to watch X live and alert you. A chat AI cannot do that without a data service and a webhook set up by you.
   - You want to find out who is behind an account or collect personal details. It will not do that.
 you_give:

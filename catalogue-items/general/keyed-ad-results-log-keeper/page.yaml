@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "You only have raw totals for two periods. Use the ad results report writer first, then bring its report here."
-  - "You want a keep, rerun or stop call on two live versions. Use the split-run result reader."
-  - "You want many ads ranked against each other. Use the winners and losers ad comparer."
-  - "Nothing has run yet, so there are no results to log. Plan the test first with the keyed headline test planner."
+  - "You want a keep, rerun or stop call on two live versions. Use the A/B test results reader."
+  - "You want many ads ranked against each other. Use the Ad results comparison analyst."
+  - "Nothing has run yet, so there are no results to log. Plan the test first with the Headline test tracking planner."
 
 you_give:
   - The results for one ad (replies, qualified leads, sales and cost), from your ad platform or the ad results report writer

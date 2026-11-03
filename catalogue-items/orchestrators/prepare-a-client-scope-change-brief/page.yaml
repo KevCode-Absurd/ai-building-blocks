@@ -20,9 +20,9 @@ when:
 not_for:
   - The client already signed the change. Plan the hours with the Team capacity planner.
   - You need a lawyer's view on what the contract means, or a dispute is under way. This workflow gives no legal advice.
-  - You only want a plain summary of the contract. Use the Plain-words contract summary.
-  - The change is a priced variation on a building job. Use the Prepare a construction variation decision workflow.
-  - The request is for a whole new project. Use the Prepare a clear client project kickoff workflow.
+  - You only want a plain summary of the contract. Use the Contract plain-language summary writer.
+  - The change is a priced variation on a building job. Use the Construction change decision brief writer workflow.
+  - The request is for a whole new project. Use the Client project kickoff planner workflow.
 you_give:
   - "The signed engagement: contract, proposal or statement of work"
   - The client's change request, as they wrote it (email, message or notes)

@@ -19,7 +19,7 @@ when:
 
 not_for:
   - "You only want to read one month of results and not build software: use the Ad results report writer."
-  - "You report on Google Ads: use the Google Ads report coding prompt."
+  - "You report on Google Ads: use the Google Ads report code planner."
   - "You want to know why sales dropped: use the Ad sales drop analyst."
   - "You have no stored daily results and no project folder. This prompt builds code, so it has nothing to run on."
 

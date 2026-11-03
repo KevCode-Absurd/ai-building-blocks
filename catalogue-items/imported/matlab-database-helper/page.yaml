@@ -18,7 +18,7 @@ when:
   - Your code has a password typed into the connection line.
   - You are setting up an ODBC connection for the first time.
 not_for:
-  - "You work with DuckDB: use the DuckDB big file query helper, which is built for it."
+  - "You work with DuckDB: use the MATLAB DuckDB query writer, which is built for it."
   - "You use MongoDB, Cassandra or Neo4j: they are not relational databases, so use each tool's own MATLAB support."
   - "You only read a CSV or Excel file: use readtable or a datastore in MATLAB, no database needed."
   - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."

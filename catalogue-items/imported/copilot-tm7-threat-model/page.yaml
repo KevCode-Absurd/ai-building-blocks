@@ -11,7 +11,7 @@ explain: |
 not_for:
   - "You do not need a .tm7 file: ask your AI for a plain STRIDE threat table instead."
   - "You use a different threat modeling tool: use that tool's own file format, since this one only writes .tm7."
-  - "You only want to read or review a model: open it in the Microsoft Threat Modeling Tool itself, which runs on Windows."
+  - "You only want to read or review a model: open it in the Microsoft Threat modeler Tool itself, which runs on Windows."
 how_to_use:
   - This is the MIT-licensed tm7-threat-model skill from github/awesome-copilot (commit 613efc8, copied on 2026-10-21), with a plainer name. Its file structure has not been tested by this catalogue.
   - First, on a Windows computer, open the bundled assets/example-minimal.tm7 in the Microsoft Threat Modeling Tool. If your version of the tool cannot load it, stop here, because a file your AI builds from it will fail too.

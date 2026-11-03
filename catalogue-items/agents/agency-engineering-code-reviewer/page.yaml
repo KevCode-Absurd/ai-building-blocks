@@ -20,8 +20,8 @@ when:
   - You are a solo developer and have no one to review your code.
   - Code came from a freelancer or a template and you want it checked before you use it.
 not_for:
-  - You want a security check only. Use the Diff security skimmer. For a full audit, use the Application Security Engineer agent and a human reviewer.
-  - You want every new pull request reviewed on a schedule, with history and drafted comments. Use the Pull request reviewer.
+  - You want a security check only. Use the Code change security reviewer. For a full audit, use the Application security reviewer and a human reviewer.
+  - You want every new pull request reviewed on a schedule, with history and drafted comments. Use the Pull request review tracker.
   - The code was written by an AI tool and you want it checked for typical AI mistakes. Use the AI-written code reviewer.
 you_give:
   - The code change, pasted as a diff or as the changed files. Keep it to what one person could review in one sitting.

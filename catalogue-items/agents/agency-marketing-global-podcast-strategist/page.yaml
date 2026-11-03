@@ -17,8 +17,8 @@ when:
   - You want guests, and need a ranked list, a pitch and a briefing for each one.
   - You want to earn from your show and need to know what sponsors or members expect.
 not_for:
-  - "You want to plan a show for listeners in China on Xiaoyuzhou or Ximalaya: use the Chinese Podcast Strategist agent."
-  - "You want an episode cleaned, mixed or mastered: use a sound editor, or the Video audio finishing plan for video."
+  - "You want to plan a show for listeners in China on Xiaoyuzhou or Ximalaya: use the Podcast strategist."
+  - "You want an episode cleaned, mixed or mastered: use a sound editor, or the Video audio finishing planner for video."
   - "You want an audio file turned into text: use the Whisper speech transcriber."
   - "You want the show in another language: use the Video dubbing editor for the audio, then this agent to plan each new market."
   - "You want to buy ads or run a paid campaign: plan the show here, then use your ad platform."

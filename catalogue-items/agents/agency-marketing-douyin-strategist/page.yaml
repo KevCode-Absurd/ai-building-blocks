@@ -17,8 +17,8 @@ when:
   - You plan to sell live on Douyin and need a product lineup and run order.
   - You want a weekly posting plan with scripts you can film.
 not_for:
-  - You sell on TikTok outside China. Use the TikTok Strategist agent.
-  - You want a coach for a livestream you already run. Use the Livestream Commerce Coach agent.
+  - You sell on TikTok outside China. Use the TikTok content planner.
+  - You want a coach for a livestream you already run. Use the Livestream sales planner.
   - You are on Kuaishou, not Douyin. Use the Kuaishou Strategist agent.
 you_give:
   - Your product and who buys it

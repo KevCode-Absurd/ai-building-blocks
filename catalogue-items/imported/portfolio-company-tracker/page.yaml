@@ -18,8 +18,8 @@ when:
   - A company's cash is falling and you want to see it before it becomes a problem.
   - Reports mix lakh, crore and plain rupee figures and need one unit.
 not_for:
-  - You need a value for one company. Use the DCF model builder for India.
-  - You want to check a finished model for unit and fiscal-year slips. Use the India modeling rules checker.
+  - You need a value for one company. Use the Indian company DCF modeler.
+  - You want to check a finished model for unit and fiscal-year slips. Use the India financial model checker.
   - You need audited numbers or a legal reading of a credit agreement. Use your auditor and the lender's own reports.
 you_give:
   - This period's financial pack, in Excel, PDF or CSV

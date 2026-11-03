@@ -86,9 +86,9 @@ improve:
   - Save the winning offer and its stop rule in your brand file for your ad and email skills.
   - Re-run step 4 before every sale, with that sale's discount and costs.
 not_for:
-  - You already have an offer and only want to test a discount against your profit goal. Use the Discount impact checker.
-  - You have not set your price yet. Use Price a product so it pays after every cost.
-  - You only want bundles, a free-shipping line and an after-sale offer. Use Raise order value with bundles and add-ons you can check.
+  - You already have an offer and only want to test a discount against your profit goal. Use the Discount margin and ad-cost checker.
+  - You have not set your price yet. Use Product price and discount planner.
+  - You only want bundles, a free-shipping line and an after-sale offer. Use Bundle and add-on offer test planner.
 output_sample:
   input:
     - Your product, its price and your buyer's biggest doubt in their own words

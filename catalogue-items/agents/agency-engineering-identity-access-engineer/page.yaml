@@ -20,8 +20,8 @@ when:
   - Your app serves many companies and you need to be sure one company can never see another's data.
 not_for:
   - You have a small app and want a simple login and permissions plan or review. Use the Login and access builder.
-  - You need rules for AI agents, not people. Use the Agentic Identity & Trust Architect agent.
-  - You want a bug review of finished code. Use the Application Security Engineer agent.
+  - You need rules for AI agents, not people. Use the AI agent identity designer.
+  - You want a bug review of finished code. Use the Application security reviewer.
   - You want it to change your live login or provider settings. It writes the design. Your team makes and tests each change.
 you_give:
   - What your app does and who logs in, such as shoppers, staff or business customers.

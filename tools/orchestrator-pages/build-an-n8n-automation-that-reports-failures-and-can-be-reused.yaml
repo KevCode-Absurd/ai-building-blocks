@@ -19,7 +19,7 @@ not_for:
   - The task runs once, or you watch it every time. A plain n8n workflow without error handling is enough.
   - You want an AI agent inside n8n that decides what to do. Use the n8n AI agent builder.
   - Your workflow already exists and only fails quietly. Use the n8n failure handler.
-  - You want a person to test a new automation before you rely on it. Use Check a new automation before relying on it.
+  - You want a person to test a new automation before you rely on it. Use Automation reliability reviewer.
 you_give:
   - "A plain description of the task: what starts it, what it reads, what it should do"
   - The services it touches, such as Gmail, Slack, Shopify or a database

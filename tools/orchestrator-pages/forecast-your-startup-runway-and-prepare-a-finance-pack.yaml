@@ -77,7 +77,7 @@ not_for:
   - "You have no rough plan for revenue yet: spend a week on that first."
   - "You run an online store and want its cash and stock planned: use the Store financial model builder or the Inventory cash planner."
   - "You only need a short cash forecast for the next few weeks: use the Cash forecast builder."
-  - "You only want practice for tough board questions: use the Hard-questions board prep coach."
+  - "You only want practice for tough board questions: use the Board meeting question coach."
 output_sample:
   input:
     - Your plan, with prices, expected customers and how long they stay

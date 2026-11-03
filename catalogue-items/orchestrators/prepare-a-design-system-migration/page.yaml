@@ -18,9 +18,9 @@ when:
   - You are upgrading to a new major version of your component library and some parts will break.
   - Two teams use different versions of the same components and need one agreed target.
 not_for:
-  - One component needs fixing and no migration is planned. Use the Design system auditor on its own.
-  - You need new tokens built from one brand color. Use the Design token builder.
-  - You want to watch for drift every month after the move. Use the Monthly design system keeper.
+  - One component needs fixing and no migration is planned. Use the Design system reviewer on its own.
+  - You need new tokens built from one brand color. Use the Design token and handoff builder.
+  - You want to watch for drift every month after the move. Use the Design rule consistency reviewer.
   - The change is about people and process, not components. Use the Change rollout planner on its own.
 you_give:
   - Your current components and where they are used, as code, a Figma file or a list

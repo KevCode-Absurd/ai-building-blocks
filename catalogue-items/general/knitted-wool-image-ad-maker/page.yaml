@@ -18,7 +18,7 @@ when:
   - You run a knitted-wool video and want a still that matches it.
   - You want a soft, unusual image ad for people who don't know you yet.
 not_for:
-  - "You need a knitted-wool video: use the knitted wool ad script skill, which plans moving scenes instead of one still."
+  - "You need a knitted-wool video: use the Knitted wool video ad script writer skill, which plans moving scenes instead of one still."
   - "Proof, fit or taste is the point of the ad: use a plain product photo, because a wool doll proves nothing."
   - "You need a person's face or a real customer in the ad: ask a photographer or use a real photo, because this skill never shows real people."
 

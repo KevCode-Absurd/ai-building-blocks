@@ -18,7 +18,7 @@ when:
   - "A client is great on revenue but you have a bad feeling about them."
   - "You are choosing between two hires or two vendors."
 not_for:
-  - "You are judging a seller's advice or pitch: use the Advice skin-in-the-game checker."
+  - "You are judging a seller's advice or pitch: use the Advice credibility checker."
   - "You are making a one-off, low-stakes purchase: a quick look at reviews or a short chat is enough."
   - "You have no firsthand dealings with the person yet: meet them or run a small paid trial first, then come back."
 

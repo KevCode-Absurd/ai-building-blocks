@@ -17,7 +17,7 @@ when:
 not_for:
   - "You face a routine choice with a clear precedent or a small choice you can undo: just check the fact directly or ask one expert."
   - "You only want to judge one adviser's advice: use the Advice credibility checker."
-  - "You want to test a business idea with real people: use the Smallest test picker."
+  - "You want to test a business idea with real people: use the Minimum experiment planner."
 you_give:
   - What you are about to do and the field it sits in
   - What you have done, studied or read about it

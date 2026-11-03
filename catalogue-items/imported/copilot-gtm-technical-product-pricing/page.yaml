@@ -21,8 +21,8 @@ when:
   - You need to decide where your free plan ends and your paid plan starts.
 not_for:
   - You want the whole free plan designed, with limits and upgrade prompts. Use the Free plan designer.
-  - You are pricing physical products in a store. Use the Pricing decision planner or the Waterfall price setter.
-  - You have a price test running and need to read the result. Use the Price test keeper.
+  - You are pricing physical products in a store. Use the Pricing decision planner or the Minimum viable price calculator.
+  - You have a price test running and need to read the result. Use the Price test results reviewer.
 you_give:
   - What the product is, such as an API, developer tool or SaaS app
   - Your current prices and how long they have stood

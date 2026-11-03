@@ -17,7 +17,7 @@ when:
   - You want timing and copy done together.
 not_for:
   - "You want cold outreach to people who don't know you: use Cold email writer, or write one short note by hand."
-  - "You want help inside your app, such as tips and tours: use First use onboarding designer, which covers in-app steps."
+  - "You want help inside your app, such as tips and tours: use First-use onboarding designer, which covers in-app steps."
   - "You want emails sent for you: this skill only writes them, so paste the copy into your email tool, such as Mailchimp."
   - "You have one planned email and want four follow-ups with a stop rule: use the Follow-up email sequence writer."
 you_give:

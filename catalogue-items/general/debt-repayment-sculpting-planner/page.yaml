@@ -117,9 +117,9 @@ terms:
     meaning: A check that explains any gap between two sets of figures that should match.
 not_for:
   - You have fees, a grace period, a cash sweep or repayments that are not once a year. This version has none of those.
-  - You want to test whether a loan limit is met on actual results. Use the Debt service covenant headroom checker.
-  - You want the loan sized from cash flow over its whole life. Use the Loan life cash cover checker.
-  - You want to split one period's cash across senior and junior lenders. Use the Project payment waterfall builder.
+  - You want to test whether a loan limit is met on actual results. Use the Loan covenant cash coverage checker.
+  - You want the loan sized from cash flow over its whole life. Use the Loan lifetime cash coverage checker.
+  - You want to split one period's cash across senior and junior lenders. Use the Project payment priority planner.
 output_sample:
   input:
     - Your opening loan balance and the yearly interest rate

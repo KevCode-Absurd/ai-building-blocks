@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your lists are under about 1,000 people: start with broad visitors or email first, as the skill itself will tell you."
   - "You want ads for people who have never visited your store: use a prospecting setup in Google Ads, not remarketing."
-  - "You only need ad copy or images: use the Fact-based ad copy writer or the Accurate product image ad maker."
+  - "You only need ad copy or images: use the Fact-based ad copy writer or the Product image ad prompt writer."
 
 you_give:
   - Your audiences and their sizes, from the audience manager

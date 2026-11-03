@@ -21,8 +21,8 @@ when:
   - Someone on the team has access needs, and you want them planned in from the start.
 not_for:
   - "You need an agenda for a regular weekly meeting: use the Meeting agenda and cost planner on its own."
-  - "Your event is open to the public or the community: use Prepare a community event access plan."
-  - You can settle the decision in writing. The gate will say so. For a decision that needs debate first, use the Debate then decide meeting planner.
+  - "Your event is open to the public or the community: use Community event access and support planner."
+  - You can settle the decision in writing. The gate will say so. For a decision that needs debate first, use the Decision debate meeting planner.
   - You want venues booked or invitations sent. This pack books and sends nothing.
 you_give:
   - The decision the offsite must reach (one or two lines)

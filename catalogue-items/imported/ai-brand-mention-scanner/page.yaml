@@ -18,8 +18,8 @@ when:
   - You want a starting score before a push to get your name out.
   - You want to compare your brand with one or two rivals.
 not_for:
-  - "You want to check how one page of your own site reads to search engines: use the AI search audit."
-  - "You want your reviews and ratings from Google Maps, TripAdvisor or social sites in one file: use the Brand mention tracker."
+  - "You want to check how one page of your own site reads to search engines: use the AI search auditor."
+  - "You want your reviews and ratings from Google Maps, TripAdvisor or social sites in one file: use the Brand reviews and mentions collector."
   - "You want a promise that an AI will recommend you: no tool can give that. Use the score as a rough guide and act on the gaps."
 you_give:
   - Your brand name, spelled as you write it, plus any other spellings

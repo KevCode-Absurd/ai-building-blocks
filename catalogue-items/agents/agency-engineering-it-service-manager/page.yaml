@@ -19,10 +19,10 @@ when:
   - Your boss or a customer asks what your response and fix times are, and you have no answer.
   - You are moving to Jira Service Management, Freshservice or ServiceNow and need the process rules first.
 not_for:
-  - You are in an outage right now. Use the Incident Response Commander agent, then come back to write the process.
-  - You need to plan a security breach response. Use the Incident Responder agent.
-  - You want reliability goals and alerts for a web app. Use the SRE (Site Reliability Engineer) agent.
-  - You want help writing ServiceNow code or fixing a ServiceNow error. Use the ServiceNow Developer & Mentor agent.
+  - You are in an outage right now. Use the Incident response coordinator, then come back to write the process.
+  - You need to plan a security breach response. Use the Security incident responder.
+  - You want reliability goals and alerts for a web app. Use the Site reliability engineer.
+  - You want help writing ServiceNow code or fixing a ServiceNow error. Use the ServiceNow troubleshooting specialist.
 you_give:
   - The IT services your team runs, such as email, laptops, Wi-Fi, a web app or payroll software, and who relies on each
   - How requests, problems and changes get handled today, even if it is just "people message us"

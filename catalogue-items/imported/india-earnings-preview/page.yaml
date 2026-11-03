@@ -18,9 +18,9 @@ when:
   - You cover NSE or BSE stocks and have no paid data terminal.
   - You need a printable page to share with a team before the call.
 not_for:
-  - You want a full valuation or target price. Use the DCF model builder for India instead.
+  - You want a full valuation or target price. Use the Indian company DCF modeler instead.
   - You need real-time prices or live estimates. Free sources are end of day or delayed, so use a licensed data terminal.
-  - You want to check a finished spreadsheet for unit and year-label errors. Use the India modeling rules checker.
+  - You want to check a finished spreadsheet for unit and year-label errors. Use the India financial model checker.
   - You want a buy or sell call. This is a research aid, not investment advice.
 you_give:
   - The company name or NSE ticker, such as RELIANCE.NS

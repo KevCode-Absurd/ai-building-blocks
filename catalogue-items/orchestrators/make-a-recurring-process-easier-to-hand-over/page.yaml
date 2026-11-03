@@ -18,7 +18,7 @@ not_for:
   - "You only need a quick note for a holiday or leave: use the Handover note writer on its own."
   - "The process is slow or wasteful and you want to cut steps first: use the Process waste finder."
   - "Nobody has run the process lately and you have no real example: this needs a recent run, so do one first and keep the notes."
-  - "You need a reconciled grant spending table and a variance brief: use Prepare a grant spending evidence pack."
+  - "You need a reconciled grant spending table and a variance brief: use Grant spending and evidence report preparer."
 you_give:
   - A recent real process run, current instructions, exceptions, tools and intended replacement owner.
   - The intended reader, deadline and limits on what may be changed.

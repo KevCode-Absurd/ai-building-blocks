@@ -21,8 +21,8 @@ when:
 
 not_for:
   - "You have not done the audit yet: run one first, such as the Google Ads store account auditor or the Meta Ads 30-check account auditor."
-  - "You need a written proposal or contract: use the Proposal Strategist agent."
-  - "You want a cold outreach note, not a deck: use the Capability pitch letter writer."
+  - "You need a written proposal or contract: use the Sales proposal narrative writer."
+  - "You want a cold outreach note, not a deck: use the Sales offer letter writer."
   - "You have no real evidence or permission to share it: a plain one-page offer is safer than a deck."
 
 you_give:

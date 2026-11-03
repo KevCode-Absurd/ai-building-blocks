@@ -20,8 +20,8 @@ when:
   - You must turn how the team works today into a written procedure and a set of measures.
 not_for:
   - You need a growth or ad bottleneck found in your store numbers. Use the Growth bottleneck finder.
-  - You want a review of a team's testing or delivery workflow. Use the Workflow Optimizer agent.
-  - You want a procedure for a single task or an incident. Use the Incident runbook writer, or ask the Technical Writer agent for the doc.
+  - You want a review of a team's testing or delivery workflow. Use the Workflow improvement reviewer.
+  - You want a procedure for a single task or an incident. Use the Incident runbook writer, or ask the Engineering documentation writer for the doc.
 you_give:
   - The process or problem, in plain words, with who does each step and what tools they use
   - Any numbers you have, such as volume per week, time per step, error counts and late jobs

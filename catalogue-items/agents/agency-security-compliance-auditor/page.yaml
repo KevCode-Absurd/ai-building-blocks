@@ -21,7 +21,7 @@ when:
 not_for:
   - You need a real certification or report. Only an independent auditor can give one.
   - You want a plain evidence checklist for one framework, with no review of your setup. Use the Compliance readiness checklist builder.
-  - You sell cloud software to the US government and need FedRAMP. Use the FedRAMP & RMF Compliance Engineer agent.
+  - You sell cloud software to the US government and need FedRAMP. Use the FedRAMP and RMF compliance planner.
 you_give:
   - The framework you are aiming for, such as SOC 2, ISO 27001, HIPAA or PCI-DSS, and your audit date if you have one
   - The systems and tools in scope, such as your cloud host, login tool, ticket tool and code host

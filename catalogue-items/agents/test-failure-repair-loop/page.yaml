@@ -17,7 +17,7 @@ when:
 not_for:
   - Your suite is already green. There is nothing to fix, so run your normal checks instead.
   - You have one known bug you can fix yourself. Make the change by hand and run the tests once.
-  - The failure has no test output at all. Use the bug-root-cause-finder skill first, or a debugger, to find the cause.
+  - The failure has no test output at all. Use the Bug root cause finder skill first, or a debugger, to find the cause.
 you_give:
   - The code, in a folder or repository it can run
   - The command that runs your tests

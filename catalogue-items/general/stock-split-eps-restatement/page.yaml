@@ -18,9 +18,9 @@ when:
   - "A split took place after the year end, and you need that year's EPS on the new basis."
   - "You are checking the restated EPS in an annual report against the originals."
 not_for:
-  - "The company sold shares at a discount to market, such as in a rights issue: use the Rights-issue EPS adjustment."
-  - "You want weighted average shares from dated share issues and buybacks: use the Weighted-average share schedule."
-  - "You want diluted EPS from options or convertible notes: use the Treasury-stock option dilution or the Convertible EPS inclusion test."
+  - "The company sold shares at a discount to market, such as in a rights issue: use the Rights issue earnings adjustment calculator."
+  - "You want weighted average shares from dated share issues and buybacks: use the Weighted share count calculator."
+  - "You want diluted EPS from options or convertible notes: use the Employee option dilution calculator or the Convertible earnings per share checker."
   - "The split is only announced and its terms are not confirmed. Wait for the confirmed terms."
 you_give:
   - "The split terms: new shares for each old share, such as 2 for 1, or 1 for 2 for a reverse split"

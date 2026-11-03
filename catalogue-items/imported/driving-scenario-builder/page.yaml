@@ -20,7 +20,7 @@ when:
   - You must show scenario coverage from real data for a safety standard.
   - You want a road surface file from lidar for vehicle testing.
 not_for:
-  - "Your data still needs importing, syncing or timestamp fixes: run Driving data importer first, then come back."
+  - "Your data still needs importing, syncing or timestamp fixes: run MATLAB driving sensor data importer first, then come back."
   - "You have no recorded drive and want to make up a path: use MATLAB's waypointTrajectory to draw one by hand."
   - "You do not have MATLAB with the Scenario Builder support package: ask an engineer who does, or pick a simpler tool."
   - "You do not use MathWorks products: the licence allows use only with them."

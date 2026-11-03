@@ -31,9 +31,9 @@ when:
   - You need gaze and pinch picking, so a person can select an item in 3D.
 not_for:
   - You are building the windows and buttons of a visionOS app, with no custom GPU drawing. Use the visionOS Spatial Engineer agent.
-  - You want a 3D experience that runs in a web browser. Use the XR Immersive Developer agent.
-  - Your game runs in Unity or Unreal. Use the Unity Architect agent or the Unreal Systems Engineer agent.
-  - You want an iPhone or iPad app. Use the Mobile App Builder agent.
+  - You want a 3D experience that runs in a web browser. Use the WebXR experience designer.
+  - Your game runs in Unity or Unreal. Use the Unity software architect or the Unreal gameplay systems engineer.
+  - You want an iPhone or iPad app. Use the Mobile app builder.
 you_give:
   - What you want to draw and how many items, such as a graph of 25,000 nodes or one 3D model
   - Which devices must show it, such as a Mac only or a Mac and Vision Pro

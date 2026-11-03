@@ -15,7 +15,7 @@ when:
   - You must defend a decision to people who disagree.
   - You catch yourself only reading things that agree with you.
 not_for:
-  - "You need to find how a plan could fail in practice: use the Failure-first plan check."
+  - "You need to find how a plan could fail in practice: use the Plan failure reviewer."
   - "You are choosing between options and have nothing at stake: make a plain pros-and-cons list instead."
   - "You want people to agree with you: ask a trusted colleague to argue your side, not this skill."
   - "You want a quick first pass with fewer checks: use the Strongest objection finder."

@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your product needs proof or real texture to sell: use a plain product photo instead."
   - "You want cut-paper layers with crisp edges and shadows: use the paper craft image ad maker."
-  - "You want a moving ad: use the watercolor ad script skill, which plans a video."
+  - "You want a moving ad: use the Watercolor video ad script writer skill, which plans a video."
   - "You need food that looks tasty or a believable human face: use a real photo shoot or a photographer."
 
 you_give:

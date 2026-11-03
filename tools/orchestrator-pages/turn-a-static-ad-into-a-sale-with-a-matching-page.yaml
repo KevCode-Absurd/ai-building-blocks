@@ -16,7 +16,7 @@ when:
   - You wrote the ad and the page at different times, and the promise has drifted.
 not_for:
   - "You have a video ad: use the Pre-launch ad checker, or the Video hook scorer if you only need the first seconds."
-  - "You only want to check ad rules before launch: use the Meta ads compliance checker."
+  - "You only want to check ad rules before launch: use the Meta ad policy checker."
   - "You have no landing page plan yet and only want a new ad picture: use the Single image ad planner."
 you_give:
   - Your image ad, attached as a file

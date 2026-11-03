@@ -17,7 +17,7 @@ when:
 not_for:
   - "You have one existing product, no rivals and no name choice: use the Big problem splitter to break the job into smaller parts."
   - "You want to know how far your brand already reaches: use the Brand reach reviewer."
-  - "You need to write a brief for a creative team from a vague ask: use the Brief reframer."
+  - "You need to write a brief for a creative team from a vague ask: use the Creative brief reframer."
 you_give:
   - Your product and who it is for
   - Your main rivals and what each is known for

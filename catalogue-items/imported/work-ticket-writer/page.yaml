@@ -16,8 +16,8 @@ when:
   - Developers keep asking what a ticket means.
   - Your backlog has vague items nobody can start.
 not_for:
-  - "You need the spec or PRD itself written first: use feature-spec-writer first, then bring the spec here."
-  - "You want to decide what ships this quarter: use quarterly-roadmap-builder, not tickets."
+  - "You need the spec or PRD itself written first: use Feature spec writer first, then bring the spec here."
+  - "You want to decide what ships this quarter: use Quarterly roadmap builder, not tickets."
   - "You want to hand a whole plan to a coding agent to run alone: use a task brief for that agent instead."
 you_give:
   - Spec, bug or request

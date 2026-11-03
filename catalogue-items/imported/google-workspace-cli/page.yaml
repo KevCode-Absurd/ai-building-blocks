@@ -25,7 +25,7 @@ not_for:
   - "You want one small edit or a single email: do it in Google's own app, as it is faster than setting up a tool."
   - "You do not have Workspace admin rights and want admin changes: ask your admin, as those commands will fail."
   - "You run Microsoft 365, not Google: use the Microsoft 365 admin helper."
-  - "You only want to plan an automation without running anything: use the No-code automation planner."
+  - "You only want to plan an automation without running anything: use the Zapier and Make automation planner."
 you_give:
   - What you want done, in plain words, such as "list my 50 biggest Drive files"
   - A Google account to sign in with

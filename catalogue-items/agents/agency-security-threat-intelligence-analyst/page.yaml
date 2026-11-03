@@ -34,8 +34,8 @@ when:
   - You must tell a boss or a client what a threat means, in plain words, and how sure you are.
   - You want a detection rule written from a report, to test in your own tools.
 not_for:
-  - An attack is happening now. Call your security team or provider. The Incident Responder agent can help you plan the response.
-  - You only need detection rules for a known behavior, with no report. Use the Threat Detection Engineer agent.
+  - An attack is happening now. Call your security team or provider. The Security incident responder can help you plan the response.
+  - You only need detection rules for a known behavior, with no report. Use the Threat detection rule planner.
   - You want live feed lookups, dark web watching or malware testing. A chat AI cannot do these. Use a threat feed or a sandbox tool.
   - You need to name who attacked you for the police or a lawsuit. This brief gives a view with a confidence level, not proof. Ask a qualified investigator.
 you_give:

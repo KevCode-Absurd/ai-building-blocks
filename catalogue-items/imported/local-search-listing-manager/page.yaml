@@ -16,7 +16,7 @@ when:
   - You serve many towns and need a page for each one.
   - You have reviews with no reply and want drafts.
 not_for:
-  - "You want to rank across the whole country, not in your local area: use a general SEO audit instead."
+  - "You want to rank across the whole country, not in your local area: use a general SEO auditor instead."
   - "You only need schema markup for pages that are not local business pages: use a general schema markup tool."
   - "You want your business to show up in AI answers: use an AI answer visibility check instead."
 you_give:

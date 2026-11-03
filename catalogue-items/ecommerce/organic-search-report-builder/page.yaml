@@ -22,9 +22,9 @@ when:
   - You pay an agency or freelancer for SEO and want a report you can check yourself.
 
 not_for:
-  - "Your clicks fell and you want to know which pages lost them. Use the Search Console traffic drop diagnoser."
+  - "Your clicks fell and you want to know which pages lost them. Use the Search Console traffic drop investigator."
   - "You want pages to push this month from queries that rank on page two. Use the Search Console quick-win finder."
-  - "You want to know if SEO is worth doing for your store at all. Use the SEO worth-it checker."
+  - "You want to know if SEO is worth doing for your store at all. Use the SEO investment readiness reviewer."
   - "Your site is under three months old, or you have no Search Console set up. There is too little data for a trend."
 
 you_give:

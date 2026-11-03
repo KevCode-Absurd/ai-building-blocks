@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store has never had an app, pixel or widget removed: there is nothing to find, so skip it."
   - "You cannot duplicate your theme or open a code editor: hand the job to a developer."
-  - "You want to know which apps to remove: use the App script auditor first, then bring its list here."
+  - "You want to know which apps to remove: use the Store app script reviewer first, then bring its list here."
 
 you_give:
   - "Your theme folder (download it from Online Store, Themes, then unzip it) or the pasted theme.liquid, head and footer files"

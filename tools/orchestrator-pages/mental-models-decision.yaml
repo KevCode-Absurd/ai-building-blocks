@@ -17,7 +17,7 @@ when:
 not_for:
   - "You face a small choice that is easy to undo: make a simple pros-and-cons list instead."
   - "A clear rule already settles the decision: follow the rule, or ask one expert."
-  - "You only want the strongest argument against your plan: use the Case-against writer."
+  - "You only want the strongest argument against your plan: use the Plan objection writer."
 you_give:
   - The decision, the result you want and the date you must decide by
   - Your reasons for it, in your own words

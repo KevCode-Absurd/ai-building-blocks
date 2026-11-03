@@ -23,9 +23,9 @@ when:
 
 not_for:
   - "You have no start date or results yet. There is nothing to test. Make a plan first."
-  - "The real block is one scary step you keep avoiding. Use the Fear-setting planner."
+  - "The real block is one scary step you keep avoiding. Use the Decision risk and delay planner."
   - "You are choosing between two options, not deciding whether to quit. Use the Third option finder or the Pros and cons decision planner."
-  - "You want to set the stop line before you start. Use the Decision options and tripwire planner."
+  - "You want to set the stop line before you start. Use the Decision backup planner."
 
 you_give:
   - "The project and what you want from it"

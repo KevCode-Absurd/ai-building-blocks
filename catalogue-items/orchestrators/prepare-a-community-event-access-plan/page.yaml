@@ -21,8 +21,8 @@ not_for:
   - You want a general run of show with no focus on access. Use the Process and SOP writer.
   - You need a certificate or a legal check of the building. A qualified person or the venue must do that. This plans and does not certify.
   - You only want to see who is involved. Use the Stakeholder map builder.
-  - The event is a group stay in a hotel. Use the Prepare a hotel group booking handover workflow.
-  - The event is for a work team. Use the Prepare a small team offsite workflow.
+  - The event is a group stay in a hotel. Use the Hotel group booking handover checker workflow.
+  - The event is for a work team. Use the Team offsite decision and agenda planner workflow.
 you_give:
   - The event format, date, time and how many people you expect
   - "Venue details: address, floor plan, the venue's own access page and a contact"

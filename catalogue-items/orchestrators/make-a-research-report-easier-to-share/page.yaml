@@ -18,10 +18,10 @@ when:
   - A short version of your findings left out a caveat last time.
   - You must share findings with people outside your field.
 not_for:
-  - You want the report turned into a finished editable deck. Use Turn a report into an editable briefing deck.
-  - You have survey results, not a report. Use Prepare a survey findings briefing.
+  - You want the report turned into a finished editable deck. Use Report-to-slide briefing deck builder and reviewer.
+  - You have survey results, not a report. Use Survey results checker and briefing planner.
   - You want to check a report's claims against sources, not shorten it. Use the Unsupported claim spotter.
-  - Your sources disagree and you must compare them. Use Compare conflicting research findings.
+  - Your sources disagree and you must compare them. Use Research paper disagreement reviewer.
 you_give:
   - Your finished report (Word, PDF or pasted text)
   - The sources behind it, such as data, papers or links

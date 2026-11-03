@@ -16,7 +16,7 @@ when:
   - Your team argues after launch about whether it worked.
 not_for:
   - "You are fixing a bug or making a tiny change you cannot roll out to a subset: write a standard changelog line instead."
-  - "Your feature targets onboarding drop-off: pair it with the Find where new users leave and prove the fix works workflow."
+  - "Your feature targets onboarding drop-off: pair it with the New-user retention test planner workflow."
   - "You want to judge whether to build a feature at all: use the Feature request screener first."
 you_give:
   - "The feature: what it does and who it is for"

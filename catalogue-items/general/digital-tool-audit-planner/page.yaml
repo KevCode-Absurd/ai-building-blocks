@@ -20,7 +20,7 @@ when:
 not_for:
   - "You are choosing one app and a quick pick is enough: compare two options yourself or ask a friend who uses both."
   - "You need to change work tools your team or boss controls: talk with your team directly first."
-  - "You want to cut team meetings and processes, not apps: use the Process and meeting cull planner."
+  - "You want to cut team meetings and processes, not apps: use the Process and meeting cleanup planner."
 
 you_give:
   - "Your tools and habits"

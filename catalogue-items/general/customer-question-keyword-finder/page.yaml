@@ -20,7 +20,7 @@ when:
 not_for:
   - "You have a brand-new product and no customer words yet: use your search console or a keyword tool, or ask a few buyers or leads what they wondered before buying."
   - "You want ad copy from customer complaints: use the Product flaw copy writer."
-  - "You want to know who your buyers are, not what they search: use the Job spec writer."
+  - "You want to know who your buyers are, not what they search: use the Customer task definition writer."
 
 you_give:
   - "Reviews, tickets, chats and comments, as written"

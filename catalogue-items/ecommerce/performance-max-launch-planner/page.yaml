@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your daily budget is small, under about $100 a day, or you have under 30 conversions a month: run Search and Shopping campaigns instead, and come back later."
   - "Your purchase tracking does not work or your product feed is not approved: fix those first in Google Ads and Google Merchant Center."
-  - "You want one lean feed-only setup or weekly checks on a running campaign: use the Feed-only Performance Max builder or the Performance Max routine keeper."
+  - "You want one lean feed-only setup or weekly checks on a running campaign: use the Feed-only Performance Max builder or the Performance Max campaign reviewer."
 
 you_give:
   - Feed status and conversions per month

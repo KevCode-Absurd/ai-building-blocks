@@ -18,9 +18,9 @@ when:
   - You want an inclusion check on a workflow before launch.
 not_for:
   - You need legal, HR or hiring advice. Ask a qualified professional.
-  - You only want images that show people fairly. Use the Inclusive Visuals Specialist agent.
+  - You only want images that show people fairly. Use the Inclusive image brief planner.
   - You want to learn from real users. Use the UX Researcher agent to plan the research, then talk to them.
-  - You are preparing for a business meeting in South Korea or France. Use the Korean Business Navigator agent or the French Consulting Market Navigator agent.
+  - You are preparing for a business meeting in South Korea or France. Use the Korean business meeting planner or the French consulting market advisor.
 you_give:
   - "The material to review: form fields, screen text, a flow, an email or an image prompt"
   - The markets, languages or groups it serves

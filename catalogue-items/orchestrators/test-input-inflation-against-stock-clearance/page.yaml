@@ -18,8 +18,8 @@ when:
   - A lender or partner asks how much of the old batch has paid back what you spent on it.
   - You are planning a restock and want old-stock results kept out of the new batch's margin.
 not_for:
-  - You want a cash plan for your next stock order. Use Plan the cash for your next stock order.
-  - Your stock count does not match your records. Use Explain a warehouse stock count variance.
+  - You want a cash plan for your next stock order. Use Stock order cash planner.
+  - Your stock count does not match your records. Use Warehouse stock variance reviewer.
   - You want to know how many units a higher price will sell. This assumes demand stays the same.
   - You do not know what the old stock cost, or have no sales yet. Step 1 stops on missing records.
 you_give:

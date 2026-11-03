@@ -19,8 +19,8 @@ when:
   - A reviewer asks where the total interest cost comes from.
 not_for:
   - The borrower can pick cash or PIK each period. This skill assumes both parts always apply, so read the contract first.
-  - You need several years, repayments or changing rates. Use the Floating rate repricing planner for rate changes, or the Debt cash sweep checker for paydowns.
-  - You need the interest on a note that turns into shares. Use the Convertible note interest checker.
+  - You need several years, repayments or changing rates. Use the Variable loan interest planner for rate changes, or the Excess cash debt payment checker for paydowns.
+  - You need the interest on a note that turns into shares. Use the Convertible loan interest calculator.
 you_give:
   - The loan balance at the start of the period (from the lender statement)
   - The cash rate and the PIK rate, each per year (from the loan agreement)

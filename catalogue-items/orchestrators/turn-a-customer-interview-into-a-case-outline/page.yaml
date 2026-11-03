@@ -18,9 +18,9 @@ when:
   - Sales or marketing asks for a customer story and legal needs to know what the customer approved
   - You want a checklist to send the customer so approval is clear and in writing
 not_for:
-  - You want to show a pattern across many customers. Use the Customer interview synthesizer on all the interviews, or Build a buyer profile from interviews and reviews.
+  - You want to show a pattern across many customers. Use the Customer interview synthesizer on all the interviews, or Buyer research brief builder.
   - You want your own project turned into a portfolio piece. Use the Portfolio case study writer.
-  - You want a talk or pitch built around one story. Use Build a talk around one real case.
+  - You want a talk or pitch built around one story. Use Case-based pitch and talk writer.
   - The customer has not agreed to be interviewed or quoted. Get that first. This workflow only works with consented material.
 you_give:
   - The interview, as a transcript or notes. The customer must have agreed to it

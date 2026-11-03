@@ -19,7 +19,7 @@ when:
   - You are building an agent that must work through long documents.
 not_for:
   - "The chat is short and the answer is still wrong: use the Prompt fixer, since the cause is more likely a vague request."
-  - "You want the long chat shrunk or carried into a new one: use the Long chat summariser or the Context shrinker."
+  - "You want the long chat shrunk or carried into a new one: use the Long chat summariser or the AI context editor."
   - "The AI never got the file or data in the first place: fix the upload or tool first."
   - "You want to design what an agent remembers between sessions: use the Agent memory designer."
 you_give:

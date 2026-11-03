@@ -20,9 +20,9 @@ when:
   - You are choosing between a time-limited trial and a free plan that never expires.
   - You are adding paid plans and need to tell free users without a backlash.
 not_for:
-  - You need prices for your paid plans. Use the Technical SaaS pricing adviser.
+  - You need prices for your paid plans. Use the SaaS pricing planner.
   - You want a free tool or sample that brings in leads for a store or service. Use the Free diagnostic tool planner or the Free sample offer planner.
-  - You want to plan how people find and sign up for your product. Use the Self serve product growth planner.
+  - You want to plan how people find and sign up for your product. Use the Self-service product growth planner.
   - Your product is not a developer tool. The skill is written for developer tools, and its examples will not fit other products.
 you_give:
   - What your product does and who uses it

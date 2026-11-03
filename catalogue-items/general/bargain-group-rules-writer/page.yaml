@@ -18,7 +18,7 @@ when:
   - You bought a few cheap stocks and do not know how to judge the method.
   - You want to know if the research you do beats a plain fund or only feels good.
 not_for:
-  - "You are weighing one stock on its own: this skill judges a whole group, so check that one name with the Price versus value gap judge first."
+  - "You are weighing one stock on its own: this skill judges a whole group, so check that one name with the Investment margin of safety reviewer first."
   - "You want a name or fund to buy: it never picks one, so ask a licensed adviser."
   - "You hold only a plain index fund plan and do not pick stocks: keep the plain path and skip this."
 

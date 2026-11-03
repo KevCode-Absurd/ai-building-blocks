@@ -16,8 +16,8 @@ when:
   - You want the page clicked through before you show it to anyone.
 not_for:
   - "You only want copy edits on a live site: edit the text yourself or ask your AI to rewrite it, since no new design is needed."
-  - "You only want a layout review of an existing page: use the Page grid and type planner on its own."
-  - "You want to fix test failures you already have: use the Test failure repair loop."
+  - "You only want a layout review of an existing page: use the Page typography and layout planner on its own."
+  - "You want to fix test failures you already have: use the Failed test repairer."
 you_give:
   - A plain description of the site, covering what it says, who reads it and what they should do
   - The words and images you have (optional)

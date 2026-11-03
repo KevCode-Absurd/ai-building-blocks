@@ -20,7 +20,7 @@ when:
   - You want to name a space before a rival does.
 not_for:
   - "You already lead your market and want to defend it: use a plain plan to protect your lead, not a new category."
-  - "You have no map of rivals yet: build one first with the Competitor white space mapper."
+  - "You have no map of rivals yet: build one first with the Market opportunity finder."
   - "You already picked a category and need a name for it: use the Category name writer."
 
 you_give:

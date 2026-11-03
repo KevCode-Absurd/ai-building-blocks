@@ -30,9 +30,9 @@ when:
   - You inherited a codebase and want to understand why it works as it does before you change it.
   - You want a second view that challenges your plan, not one that agrees with it.
 not_for:
-  - You want the code written. Use the Senior Developer agent.
-  - You are choosing between designs and want decision records. Use the Software Architect agent.
-  - You want a quick prototype with a small scope. Use the Rapid Prototyper agent.
+  - You want the code written. Use the Full stack developer.
+  - You are choosing between designs and want decision records. Use the Software architect.
+  - You want a quick prototype with a small scope. Use the Software prototype designer.
   - You have no project files or goal to share. The plan would be guesses.
 you_give:
   - The change you want, in a few plain sentences, and why

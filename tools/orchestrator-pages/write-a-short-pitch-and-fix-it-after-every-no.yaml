@@ -15,7 +15,7 @@ when:
   - You have pitched a few times, heard no, and cannot tell what to change.
   - You want to persuade without pressure tricks or claims you cannot prove.
 not_for:
-  - "You have a finished pitch nobody has heard yet: use the Honest persuasion editor alone to check it first."
+  - "You have a finished pitch nobody has heard yet: use the Persuasion and claim editor alone to check it first."
   - "You need ad or sales copy that sells a product: use the Ad angle planner or the Ad headline writer."
   - "You need a letter to your customers or members, not a pitch: use the Annual letter writer."
 you_give:

@@ -17,9 +17,9 @@ when:
   - You already have Google Ads code in a project and want the placement check to fit it.
 not_for:
   - Your account runs Search or Video campaigns only, or you want a one-time review with no code. Paste your export into the Google Ads report auditor instead.
-  - You want to review video ad results. Use the Video ad results coding prompt.
+  - You want to review video ad results. Use the Video ad analysis code planner.
   - You want it to add the exclusions for you. It only proposes them. You add them in Google Ads yourself.
-  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
+  - You have no Google Ads API access yet. Start with the Google Ads OAuth setup planner, then the Google Ads developer access checker.
 you_give:
   - Your code project, or its main folders and database schema
   - The customer ID of the Display account, and the names of the credentials your project uses (never the secrets)

@@ -18,9 +18,9 @@ when:
   - Your FAQ page rambles and you want short answers that stand alone.
   - A page ranks but never gets named in AI answers.
 not_for:
-  - "You want to improve a product page: use the AI-ready product page editor."
+  - "You want to improve a product page: use the Product page editor for AI search."
   - "You have no data, results or first-hand experience to add: gather those first, or ask someone on your team for a real result or quote."
-  - "You want to find the questions shoppers ask: use the shopper question and fan-out mapper first, then bring the questions here."
+  - "You want to find the questions shoppers ask: use the Customer search question mapper first, then bring the questions here."
 
 you_give:
   - The page text

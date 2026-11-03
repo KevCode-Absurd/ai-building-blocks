@@ -18,7 +18,7 @@ when:
   - You want to know which guidance numbers could swing the share price.
   - You follow an Indian company and need fiscal quarter labels right.
 not_for:
-  - You want a data-built report with charts and a source appendix. Use the earnings preview writer for a US ticker, or the earnings preview report builder for India.
+  - You want a data-built report with charts and a source appendix. Use the earnings preview writer for a US ticker, or the India earnings preview writer.
   - The company has already reported. Use the earnings recap writer.
   - You want a view on whether to buy or sell. This is research support, so use a licensed broker note or adviser.
 you_give:

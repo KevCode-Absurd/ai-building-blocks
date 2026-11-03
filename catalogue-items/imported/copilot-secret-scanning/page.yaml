@@ -20,9 +20,9 @@ when:
   - You have a company key format that GitHub does not know, and want a custom pattern.
   - You have open secret alerts and need a clear order to deal with them.
 not_for:
-  - "A key has already leaked in a public repo. Rotate it today and follow your incident process. The Incident Responder agent can help. Setting up scanning does not fix a past leak."
+  - "A key has already leaked in a public repo. Rotate it today and follow your incident process. The Security incident responder can help. Setting up scanning does not fix a past leak."
   - "You want to check your live website for exposed keys: use the Exposed secrets finder."
-  - "You want to tidy .env files and plan key rotation across a project: use the Secrets hygiene checker."
+  - "You want to tidy .env files and plan key rotation across a project: use the Secret leak checker."
 you_give:
   - Whether your repo is public, or private under an organization
   - Your GitHub plan (Free, Team or Enterprise Cloud), and whether you have Copilot

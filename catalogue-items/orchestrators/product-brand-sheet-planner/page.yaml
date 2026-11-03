@@ -37,8 +37,8 @@ thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:
   - "You need a full brand guide with voice and rules for a whole business: use the Brand guide builder."
-  - "You want a set of finished product photos, not a plan: use the Product photo set maker."
-  - "You only need image prompts from an existing brand file: use the Brand-to-image prompt compiler."
+  - "You want a set of finished product photos, not a plan: use the Product photo set reviewer."
+  - "You only need image prompts from an existing brand file: use the Brand image prompt writer."
 output_sample:
   input:
     - Your product and what it is for

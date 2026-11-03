@@ -21,9 +21,9 @@ when:
   - You inherited a codebase and want a first-pass security scan of the files that handle auth, tokens or user input.
   - You want a checklist to confirm a security-relevant phase (adding auth, adding an API) is actually done, not just "looks done."
 not_for:
-  - You want a cloud account or network architecture reviewed, not application code. Use the Cloud Security Architect agent.
-  - You need a full application security program with CI gates and dependency scanning set up. Use the Application Security Engineer agent.
-  - You have an active incident, not a pre-merge review. Use the Incident Responder agent.
+  - You want a cloud account or network architecture reviewed, not application code. Use the Cloud security designer.
+  - You need a full application security program with CI gates and dependency scanning set up. Use the Application security reviewer.
+  - You have an active incident, not a pre-merge review. Use the Security incident responder.
 you_give:
   - "The code to review: a file, a diff, or a pull request's changed lines, pasted or attached."
   - "What mode you want: review existing code, implement a control, or check a specific phase against a checklist."

@@ -15,8 +15,8 @@ when:
   - Your ad is mostly adjectives and you want facts beside each claim.
   - Readers say they do not believe the ad.
 not_for:
-  - "You have no claims written yet: write the ad first with the Typed headline batch writer, then come back to find proof."
-  - "You want the ad body written for you: use the Typed headline batch writer for headlines, or ask a copywriter for the full body."
+  - "You have no claims written yet: write the ad first with the Ad headline variation writer, then come back to find proof."
+  - "You want the ad body written for you: use the Ad headline variation writer for headlines, or ask a copywriter for the full body."
   - "You only have a product description and no real facts, reviews or results: gather those first, or this will mostly list what is missing."
 you_give:
   - The ad brief or the list of claims you want to make

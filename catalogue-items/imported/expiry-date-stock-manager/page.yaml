@@ -18,7 +18,7 @@ when:
 not_for:
   - You handle regulated pharma batches that need recall and batch rules. Use a pharmaceutical supply chain specialist or your quality team.
   - You need food safety rules for a plant or a full supply chain. Ask your food safety adviser or your regulator.
-  - You only need to know what to reorder. Use the reorder and second order planner.
+  - You only need to know what to reorder. Use the Reorder and second-order planner.
 you_give:
   - Products with shelf life and date codes
   - Current waste rate and rotation method

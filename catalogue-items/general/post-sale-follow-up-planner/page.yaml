@@ -18,7 +18,7 @@ when:
   - "Your repeat business is lower than you want."
   - "You want referrals and do not know when to ask."
 not_for:
-  - "You are still working on the sale itself: use the Counter demo script writer."
+  - "You are still working on the sale itself: use the Product demonstration script writer."
   - "You made a one-off cash sale and have no way to contact the buyer again: skip it, a plan needs a phone, email or address."
   - "You want a mass email to your whole customer list: write one message yourself, because this plan is built for one buyer at a time."
 

@@ -21,7 +21,7 @@ when:
   - A reviewer wants opening and closing pension figures tied to the note with each sign shown.
 
 not_for:
-  - "You want to split pension cost into service cost, interest and remeasurement. Use the Pension service and financing bridge."
+  - "You want to split pension cost into service cost, interest and remeasurement. Use the Pension cost and funding checker."
   - "You need the size of the obligation, or a forecast of required contributions. That takes an actuary. This only reconciles figures you already have."
   - "The plan has an asset ceiling, a settlement or a changed set of plans, and you have no note on them. The simple schedule will not be right."
 

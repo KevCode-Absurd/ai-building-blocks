@@ -18,7 +18,7 @@ when:
   - You must decide if the server can only read, or can also create, update or delete.
 not_for:
   - You only need clear names and descriptions for a few tools. Use the MCP tool set designer.
-  - You have an API spec and want working server code. Use the API to MCP server builder, or the TypeScript MCP server starter builder or Python MCP server starter builder.
+  - You have an API spec and want working server code. Use the API to MCP server builder, or the TypeScript MCP server builder or Python MCP server starter builder.
   - Your problem is how people sign in to the server. Use the MCP server sign-in builder.
 you_give:
   - The app, data or API your AI should reach

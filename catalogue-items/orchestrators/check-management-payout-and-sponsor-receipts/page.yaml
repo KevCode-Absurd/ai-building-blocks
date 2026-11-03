@@ -18,9 +18,9 @@ when:
   - A model gives a management award that looks too big or too small.
   - A reviewer asks you to tie the award and the sponsor return to the same proceeds.
 not_for:
-  - "There are rollover holders, other investors or a preferred return ahead of management: use the Separate rollover and management incentives workflow."
+  - "There are rollover holders, other investors or a preferred return ahead of management: use the Seller rollover and incentive checker workflow."
   - "Your cash dates are not exactly one year apart: this yearly IRR does not fit. Use a date-based IRR in a spreadsheet."
-  - "You want to compare exit terms for preferred shares: use the Compare preferred exit payout terms workflow."
+  - "You want to compare exit terms for preferred shares: use the Preferred share payout reviewer workflow."
 you_give:
   - The sponsor's entry cash and date (from the closing statement)
   - "The management award terms: vested part, hurdle and share (from the plan documents)"

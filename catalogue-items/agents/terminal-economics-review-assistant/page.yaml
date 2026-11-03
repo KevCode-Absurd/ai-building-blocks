@@ -24,8 +24,8 @@ not_for:
   - You want a price target, a buy or sell view or advice on a trade. It reviews assumptions and nothing else.
   - The company is a bank or an insurer. Its growth is paid for with equity and regulatory capital, so this cash-flow method does not fit.
   - You have no dated sources for growth, return or discount rate. It will mark each gap MISSING and stop those lines, but it cannot judge numbers that have no source.
-  - You only want to check one number, such as the implied return. Use the Terminal growth reinvestment check.
-  - You want to build the whole growth and reinvestment spreadsheet from scratch. Use the Link operating growth to terminal reinvestment workflow.
+  - You only want to check one number, such as the implied return. Use the Terminal growth reinvestment checker.
+  - You want to build the whole growth and reinvestment spreadsheet from scratch. Use the Growth and reinvestment spreadsheet modeller workflow.
 
 you_give:
   - The model you accepted last time, as a spreadsheet, and last time's review record (optional on a first run)

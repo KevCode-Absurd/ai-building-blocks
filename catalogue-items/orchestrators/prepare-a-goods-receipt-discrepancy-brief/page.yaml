@@ -18,9 +18,9 @@ when:
   - Units differ, such as the PO in cases and the invoice in pieces.
   - The person who handled the delivery is away, and someone else must chase the supplier.
 not_for:
-  - "You want to approve a payment: use your accounts process, or the Check supplier invoices before approval workflow to prepare the evidence."
+  - "You want to approve a payment: use your accounts process, or the Supplier invoice and receipt checker workflow to prepare the evidence."
   - "You want to change stock records: do that in your warehouse system after a person signs off."
-  - "A delivery had a quality fault and you need the supplier to fix it: use the Prepare a supplier corrective action review workflow."
+  - "A delivery had a quality fault and you need the supplier to fix it: use the Supplier defect response planner workflow."
 you_give:
   - Purchase orders with item ID, unit and quantity ordered
   - Delivery or receipt records with quantity delivered, quantity accepted and any inspection or damage notes

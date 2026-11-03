@@ -38,7 +38,7 @@ how_to_use:
   - Next, take the top friction point into the Candidate message drafter or the Hiring interview designer. Run the survey after each stage for a month, then check the map again.
 not_for:
   - "You want to write the message to one candidate: use Candidate message drafter."
-  - "You want to design the interview itself: use Hiring interview designer."
+  - "You want to design the interview itself: use Hiring interview planner."
   - "You want to compare finalists fairly: use Fair candidate comparer."
 output_sample:
   input:

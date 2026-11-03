@@ -20,7 +20,7 @@ when:
 not_for:
   - "You hold only a share of a company and no debt or preferred share: this test does not fit, so ask a licensed financial adviser."
   - "The borrower has fewer than five years of earnings, such as a new business: use a person who knows the sector, since this test would be weak."
-  - "You want to test the asset cushion behind a loan: use the Equity cushion ratio tester."
+  - "You want to test the asset cushion behind a loan: use the Debt protection ratio checker."
 
 you_give:
   - The claim you are testing, with rank, amount, rate, due date and price

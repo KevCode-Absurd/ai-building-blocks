@@ -19,7 +19,7 @@ when:
   - You are looking at a business to buy and its seller shows one strong year.
 not_for:
   - "You have only one year of statements: this needs five or more years, so read that year's notes line by line yourself."
-  - "You want to judge whether a company padded its profit: use Earnings padding detector."
+  - "You want to judge whether a company padded its profit: use Reported earnings adjustment reviewer."
   - "You want a single normal earnings figure for a company: use Normal earnings estimator, or ask a licensed financial adviser for a big or personal decision."
 
 you_give:

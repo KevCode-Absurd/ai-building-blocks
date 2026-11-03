@@ -18,7 +18,7 @@ when:
   - You want to extend your return window and need to know if you can afford it.
   - Your guarantee is buried in a policy page and nobody sees it.
 not_for:
-  - "You only want a guarantee name and refund sums for any business: use the Guarantee designer."
+  - "You only want a guarantee name and refund sums for any business: use the Guarantee and refund plan writer."
   - "You cannot afford more refunds at your current margin: fix price or product quality first, then test again."
   - "You need legal wording you can publish as is: ask a qualified person in your market to check it."
 

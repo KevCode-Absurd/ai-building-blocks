@@ -19,9 +19,9 @@ when:
   - You are choosing between two or three vendors and need the same criteria applied to each.
 not_for:
   - You have no approval checklist yet. Build one first with the Decision checklist builder, then run it here.
-  - You want one vendor's contract terms read for risk. Use the Contract intake reviewer.
+  - You want one vendor's contract terms read for risk. Use the Contract clause risk reviewer.
   - You want one vendor's cost and risk review for a renewal. Use the Vendor comparison writer on its own.
-  - You are fixing a supplier's quality problem. Use the Supplier correction evidence review assistant.
+  - You are fixing a supplier's quality problem. Use the Supplier corrective action reviewer.
   - You want vendors told the result. It sends nothing.
 you_give:
   - The vendor proposals as sent, with their dates (from your email or procurement folder)

@@ -20,8 +20,8 @@ when:
   - The contract price changed and you want to see the cash effect year by year.
 
 not_for:
-  - "You are deciding whether to build or buy the plant. This stops at operating cash. Once you have yearly cash, use the Project cash available bridge."
-  - "You need to size a loan or test debt cover. Use the Loan life cash cover checker."
+  - "You are deciding whether to build or buy the plant. This stops at operating cash. Once you have yearly cash, use the Project cash for debt checker."
+  - "You need to size a loan or test debt cover. Use the Loan lifetime cash coverage checker."
   - "The energy sells at changing market prices, or output is a forecast and not delivered. This needs one fixed price and accepted MWh."
 
 you_give:

@@ -19,8 +19,8 @@ when:
   - You want to see how a loss of a set size would move the ratios.
 not_for:
   - "You need to file a regulatory return or sign off on compliance: use your regulator's own rules and a qualified compliance officer. This is a simplified check."
-  - "You want to check the IT side of a financial firm, such as DORA: use the Financial IT resilience checker."
-  - "You are checking payment-card or SWIFT security, not capital: use the Card payment security checker or the Bank messaging security checker."
+  - "You want to check the IT side of a financial firm, such as DORA: use the EU financial IT resilience checker."
+  - "You are checking payment-card or SWIFT security, not capital: use the Card payment security checker or the SWIFT messaging security checker."
 you_give:
   - Capital figures for CET1, Additional Tier 1 and Tier 2, on one date
   - Risk-weighted assets, or your exposures by asset class with amounts

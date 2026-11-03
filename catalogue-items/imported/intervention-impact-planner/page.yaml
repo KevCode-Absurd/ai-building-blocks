@@ -33,8 +33,8 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
 not_for:
-  - "You have not yet looked at why the problem keeps happening. Start with the Event-to-pattern iceberg builder, then bring its result here."
-  - "You are not sure what you can really change. Use the Control and influence circles map first, then test your action here."
+  - "You have not yet looked at why the problem keeps happening. Start with the Classroom and team issue mapper, then bring its result here."
+  - "You are not sure what you can really change. Use the Control and influence mapper first, then test your action here."
   - "You need a task list with dates and owners. This tool weighs ideas and does not schedule them."
 output_sample:
   input:

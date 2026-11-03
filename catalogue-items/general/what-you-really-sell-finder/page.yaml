@@ -19,9 +19,9 @@ when:
   - You are entering a new market or use for an existing product.
   - You are about to write headlines and have not chosen the one reason to lead with.
 not_for:
-  - "You have no product facts yet: build your brand brain first with the Website brand brain builder."
-  - "You want headlines for one angle you already chose: use the Typed headline batch writer."
-  - "You want one want to lead with and a list of claims to avoid: use the Lead want picker."
+  - "You have no product facts yet: build your brand brain first with the Brand profile builder."
+  - "You want headlines for one angle you already chose: use the Ad headline variation writer."
+  - "You want one want to lead with and a list of claims to avoid: use the Customer needs finder."
 
 you_give:
   - Your product facts

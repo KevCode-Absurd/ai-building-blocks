@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your store was already breached: contact your platform's support and a qualified security professional first."
   - "You want a deeper review of logins only: use the Sign-in security checker."
-  - "You need a team sheet on spotting fake emails: use the Staff phishing rules briefer."
+  - "You need a team sheet on spotting fake emails: use the Staff phishing awareness trainer."
 
 you_give:
   - Your platform (Shopify or another hosted platform, or a self-hosted store)

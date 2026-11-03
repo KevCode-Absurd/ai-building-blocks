@@ -16,7 +16,7 @@ when:
   - You want feedback on a README or quick start from a product angle.
   - You keep getting vague review comments and want specific ones.
 not_for:
-  - "You want a general review or a security check: use the bug and security code reviewer or the pull request reviewer."
+  - "You want a general review or a security check: use the bug and security code reviewer or the Pull request review tracker."
   - "Your change is cosmetic or has no logic change: a quick check by a teammate is enough, or use a lighter generic review."
   - "Your code is a throwaway prototype: skip the review and test it by running it."
   - "Your AI cannot search the web and the engineer is not covered in the skill's principles file: pick another engineer or ask a person to review."

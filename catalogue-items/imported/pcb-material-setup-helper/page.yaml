@@ -20,8 +20,8 @@ when:
   - You want a multi-layer stack for a stripline or embedded design.
   - Results need to stay accurate across a wide frequency band.
 not_for:
-  - "You need to build the board layout itself: use the PCB circuit combiner, after the materials are set."
-  - "You want to design a transmission line or filter: use the PCB trace designer or the PCB RF filter designer, after the materials are set."
+  - "You need to build the board layout itself: use the MATLAB RF circuit board combiner, after the materials are set."
+  - "You want to design a transmission line or filter: use the MATLAB PCB trace designer or the MATLAB PCB RF filter designer, after the materials are set."
   - "You have no MATLAB or RF PCB Toolbox: ask a board designer for the material values, or use a free field solver."
 you_give:
   - Your material name or its datasheet values

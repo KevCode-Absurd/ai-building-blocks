@@ -17,7 +17,7 @@ when:
 not_for:
   - "You want to value a company that already trades or has sales: use a valuation tool or ask an accountant."
   - "You have no buyer group in mind yet: use the Customer needs finder first, then come back."
-  - "You want to test how strong your edge is: use the Business power tester."
+  - "You want to test how strong your edge is: use the Competitive advantage tester."
 you_give:
   - The business, what it sells and to whom
   - The exact group of buyers

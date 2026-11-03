@@ -21,8 +21,8 @@ not_for:
   - "You have a loss, several convertibles, contingent settlement, cash elections or participating securities: ask an accountant for a full IAS 33 analysis."
   - "You want to check a fund or investor statement: use a plain review by your fund administrator or accountant instead."
   - "You need to know if a contract allows conversion: read the contract with your lawyer first, then come back."
-  - "Your dilution comes from options, not a convertible: use the Treasury-stock option dilution instead."
-  - "You want to explain a share-price change through EPS growth and the P/E multiple: use the EPS and multiple return bridge instead."
+  - "Your dilution comes from options, not a convertible: use the Employee option dilution calculator instead."
+  - "You want to explain a share-price change through EPS growth and the P/E multiple: use the Share price return analyst instead."
 you_give:
   - Profit from continuing operations for ordinary shareholders.
   - Basic weighted average shares.

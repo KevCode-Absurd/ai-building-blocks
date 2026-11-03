@@ -19,9 +19,9 @@ when:
   - Someone suggests buying more capacity and you want proof first.
 not_for:
   - The slowdown is a data-source outage or a gateway fault. Send it to your data platform team first.
-  - You want a full review of your tables and links. Use the Review a Power BI data model.
-  - You want a better page layout, not a faster one. Use the Design a Power BI report layout.
-  - You want to plan a new Power Platform app. Use the Plan a Power Platform solution.
+  - You want a full review of your tables and links. Use the Power BI data model checker.
+  - You want a better page layout, not a faster one. Use the Power BI report layout planner.
+  - You want to plan a new Power Platform app. Use the Power Platform solution planner.
 you_give:
   - The slow action, such as which report, page or visual, and what the person clicks
   - Who is affected, and when it is slow

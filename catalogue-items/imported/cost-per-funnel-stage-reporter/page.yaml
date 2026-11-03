@@ -21,8 +21,8 @@ when:
   - You want to refresh yesterday's report without rebuilding the whole history.
 not_for:
   - You only have a short export and no full CRM snapshot. Use the Conversion funnel analyst to see where people leave.
-  - You want to split sale credit across many ad touches. Use the Multi-touch credit calculator.
-  - You are choosing between attribution models. Use the Attribution model chooser.
+  - You want to split sale credit across many ad touches. Use the BigQuery multi-touch sales credit calculator.
+  - You are choosing between attribution models. Use the Marketing attribution analyst.
   - You do not use BigQuery or SQL. Use the Ad spend analyst on your ad exports for a simpler read.
 you_give:
   - A full CRM snapshot with one row per lead, plus the won and lost deals and any stage events

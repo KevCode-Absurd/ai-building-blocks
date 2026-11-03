@@ -22,8 +22,8 @@ when:
   - Some searches sell well and you want them turned into keywords with their own control.
 not_for:
   - You want one quick sort of a single report into winners and junk. Use the Search term sorter.
-  - You need a plan for your whole account structure and budget. Use the PPC Campaign Strategist agent.
-  - You think your sales tracking is wrong. Use the Tracking & Measurement Specialist agent first.
+  - You need a plan for your whole account structure and budget. Use the Paid search campaign planner.
+  - You think your sales tracking is wrong. Use the Conversion tracking planner first.
   - You want display or social ads reviewed. This agent covers search terms only.
 you_give:
   - A search terms report from Google Ads, pasted or attached as CSV, with spend, clicks and conversions for each term

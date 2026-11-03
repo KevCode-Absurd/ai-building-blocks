@@ -21,7 +21,7 @@ not_for:
   - "You need to move the data or table structure: this skill only converts procedures and functions."
   - "You are converting application code that calls the database: use the Oracle to Npgsql code migrator."
   - "You want to check migrated work for risks: use the Oracle migration risk reviewer."
-  - "You have not listed which procedures and tables exist yet: plan first with the Oracle to Postgres program planner."
+  - "You have not listed which procedures and tables exist yet: plan first with the Oracle to Postgres migration planner."
 you_give:
   - The Oracle stored procedures or functions to convert
   - The Oracle table and view definitions they use

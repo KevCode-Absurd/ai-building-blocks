@@ -15,7 +15,7 @@ when:
   - You priced it once, nobody bought, and you do not know whether the price or the launch was wrong.
   - You want a launch discount that does not look like a trick.
 not_for:
-  - "You only need a price: use the Digital product pricer on its own, without the emails."
+  - "You only need a price: use the Digital product price format planner on its own, without the emails."
   - "Your course or ebook is not finished, or it is a free lead magnet: finish it first, or just write a plain sign-up page."
   - "You want ideas for bundles, bonuses or gifts around the product: use the Offer bonus planner."
 you_give:

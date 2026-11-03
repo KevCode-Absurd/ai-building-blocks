@@ -18,8 +18,8 @@ when:
   - You have KPI numbers, such as denial rate and days in accounts receivable, and want a plain readout of what they suggest.
 not_for:
   - You want the final code or claim approved. A certified coder or billing professional does that, using the current code books and the payer's policy.
-  - You want to reply to a patient about a bill or a question. Use the Healthcare Customer Service agent.
-  - You are building billing software or a payments integration. Use the Payments & Billing Engineer agent.
+  - You want to reply to a patient about a bill or a question. Use the Patient service reply writer.
+  - You are building billing software or a payments integration. Use the Payments and billing engineer agent.
 you_give:
   - Visit notes or an operative report, with patient name, date of birth, member ID and record numbers removed
   - The codes and modifiers billed, or the codes you want checked

@@ -20,7 +20,7 @@ when:
   - You need cost per sale by channel for a budget meeting.
   - Some sales have no tracked touch and you need to see how many.
 not_for:
-  - You have no tracked touches, or no BigQuery. Use the Attribution model chooser for a simpler comparison.
+  - You have no tracked touches, or no BigQuery. Use the Marketing attribution analyst for a simpler comparison.
   - You want to match CRM stages to ad spend. Use the Cost per funnel stage reporter.
   - You want a quick read of channel results from exports. Use the Campaign attribution analyst.
   - You need proof that ads caused sales. Use the Incrementality test planner to design a test.

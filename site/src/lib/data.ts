@@ -253,8 +253,12 @@ export function useMindsCatalogue(enabled: boolean, requireFull = false) {
   }, [enabled, fullFirst, attempt]);
   return {catalogue, error, retry, requestFull, complete: !!catalogue && !catalogue.mindsStarter};
 }
+// A production build names the catalogue by its content (/assets/blocks-<hash>.json, cached for a year;
+// scripts/vite-site-data.mjs). The dev server and other bundlers use the plain file.
+declare const __CATALOGUE_URL__: string | undefined;
+const CATALOGUE_URL = typeof __CATALOGUE_URL__ === "string" ? __CATALOGUE_URL__ : "/data/blocks.json";
 export function loadCatalogue(): Promise<Catalogue> {
-  catalogue ??= fetchData("/data/blocks.json")
+  catalogue ??= fetchData(CATALOGUE_URL)
     .then(async (bytes) => {
       const digest = await crypto.subtle.digest("SHA-256", bytes);
       return { ...JSON.parse(new TextDecoder().decode(bytes)), sourceHash: Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("") };

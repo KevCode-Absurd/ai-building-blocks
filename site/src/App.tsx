@@ -215,7 +215,11 @@ export default function App() {
   const parts = path.split("/").filter(Boolean);
   const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
   const itemState = useItemCatalogue(pageSlug);
-  const needsCatalogue = !infoPage(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
+  // Sign-in, community and calculator pages never show catalogue items. My account names the skills in saved
+  // kits, so it waits for kits and then needs only the small list index (4 MB less for most visitors).
+  const hasKits = useStore(s => s.kits.length > 0);
+  const needsCatalogue = !infoPage(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md", "/sign-in", "/sign-up", "/community", "/publish", "/my-submissions", "/admin/review"].some((p) => path === p || path.startsWith(`${p}/`)) && (path !== "/account" || hasKits);
+  const listTier = path === "/" || (path === "/account" && !kitsOpen);
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
   const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
@@ -230,7 +234,7 @@ export default function App() {
   const [composeRequested, setComposeRequested] = useState(false);
   const requestComposeCatalogue = useCallback(() => { setComposeRequested(true); return loadCatalogue(); }, []);
   const mindsState = useMindsCatalogue(path === "/minds", search.has("q"));
-  const catalogueState = useCatalogueState((needsCatalogue && path !== "/minds" && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
+  const catalogueState = useCatalogueState((needsCatalogue && path !== "/minds" && !pageSlug && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || composeRequested)) || kitsOpen, { starterFirst, tier: listTier ? "index" : "full" });
   // Without starter picks there is nothing light to show, so open the library straight away.
   useEffect(() => { if (catalogueState.starterFailed) requestHomeCatalogue(); }, [catalogueState.starterFailed, requestHomeCatalogue]);
   const c = pageSlug ? itemState.catalogue : path === "/minds" ? mindsState.catalogue : catalogueState.catalogue;

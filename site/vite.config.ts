@@ -13,6 +13,7 @@ import { handleAccountMinds, memoryMinds } from "./src/server/account-minds";
 import { devPublicApi } from "./scripts/vite-public-api";
 import { handleCommunity } from "./src/server/community";
 import { memoryCommunity } from "./src/server/community-store";
+import { catalogueAsset, toolNextSteps } from "./scripts/vite-site-data.mjs";
 
 function devSecurity(): Plugin {
   return { name: "dev-security", configureServer(server) {
@@ -158,9 +159,10 @@ function exampleApp(): Plugin {
 
 // Preact runs the same React code at a fraction of the size: react and react-dom are aliased to preact/compat.
 export default defineConfig(({ mode }) => ({
-  plugins: [preact(), devPublicApi(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp()],
+  plugins: [preact(), devPublicApi(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp(), catalogueAsset({ root: process.cwd() }), toolNextSteps({ root: process.cwd() })],
   // Only the app entry is source; immutable release snapshots must not be scanned.
   optimizeDeps: { entries: ["index.html"] },
   server: { port: 5180, fs: { allow: [".."] }, ...(mode === "test" ? { hmr: false, watch: null } : {}) }, // tests use a stable snapshot while other tasks edit files
-  build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true, rollupOptions: { input: { main: path.resolve('index.html'), mcpConnect: path.resolve('connect-mcp.html') } } },
+  // Card patterns (src/patterns, scripts/build-dither-css.mjs) stay files so the main stylesheet stays small.
+  build: { target: "es2020", modulePreload: { polyfill: false }, cssCodeSplit: true, assetsInlineLimit: (file: string) => /[\\/]src[\\/]patterns[\\/]/.test(file) ? false : undefined, rollupOptions: { input: { main: path.resolve('index.html'), mcpConnect: path.resolve('connect-mcp.html') } } },
 }));

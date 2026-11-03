@@ -1,4 +1,5 @@
-// Index only already-published assets. Never read source libraries, credentials or user data.
+// Index only already-published assets. Never read source libraries, credentials or user data. (The only look at the
+// catalogue source is git history dates for an item's files, to say when its content last changed.)
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -10,6 +11,8 @@ import { blockSearchIndex, catalogueItems, extraSearchIndex, stepLibrary } from 
 import { searchIndexFor } from '../src/lib/goal.ts';
 import { taskIdsOf } from '../src/lib/catalogue-taxonomy.mjs';
 import { acquireBuildLock } from './lib/build-lock.mjs';
+import { gitDates } from './lib/git-dates.mjs';
+import { primarySkillFile } from './lib/skill-file.mjs';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const mime = name => /\.(md|txt|py|js|ts|sh|csv|ya?ml)$/i.test(name) ? 'text/plain' : /\.json$/i.test(name) ? 'application/json' : 'application/octet-stream';
@@ -22,7 +25,48 @@ function frontmatter(text) {
   catch { return undefined; }
 }
 
-export function buildPublicApiManifest(publicDir) {
+/** What a revision covers: each served file's digest by its path inside the item (SKILL.md, references/guide.md).
+ *  The ZIP's own copy of SKILL.md counts only when it differs from the served SKILL.md. Page text, catalogue metadata
+ *  (names, links, test cues) and ZIP bytes are left out, so a rebuild or an edit elsewhere never moves a revision. */
+export function contentFiles(entry) {
+  const out = new Map([['SKILL.md', entry.instruction.sha256]]);
+  for (const file of entry.files ?? []) {
+    const rel = file.path.slice(file.path.indexOf('/') + 1);
+    if (rel !== 'SKILL.md') out.set(rel, file.sha256);
+    else if (file.sha256 !== entry.instruction.sha256) out.set('SKILL.md (ZIP copy)', file.sha256);
+  }
+  return out;
+}
+export const contentRevision = entry => digest(JSON.stringify([...contentFiles(entry)].sort(([a], [b]) => a.localeCompare(b))));
+/** Paths added, removed or changed between two entries' content files, sorted. */
+export function changedFiles(before, after) {
+  const a = contentFiles(before), b = contentFiles(after);
+  return [...new Set([...a.keys(), ...b.keys()])].filter(p => a.get(p) !== b.get(p)).sort();
+}
+const MAX_HISTORY = 8;
+const DAY = /^\d{4}-\d{2}-\d{2}$/;
+/** The day an item's SKILL.md or packaged files last changed in the catalogue's git history (file time for uncommitted
+ *  edits). '' when the source folder or git is unavailable. */
+function contentDates(catalogueRoot) {
+  if (!catalogueRoot || !fs.existsSync(catalogueRoot)) return () => '';
+  const dates = gitDates(catalogueRoot);
+  const dirs = ['general', 'ecommerce', 'orchestrators', 'agents', 'imported', 'minds'];
+  return (slug, entry) => {
+    const folder = dirs.map(d => path.join(catalogueRoot, d, slug)).find(f => fs.existsSync(f));
+    if (!folder) return '';
+    let skill; try { skill = primarySkillFile(folder); } catch { skill = null; }
+    if (!skill) return '';
+    const rels = [...contentFiles(entry).keys()].filter(p => p !== 'SKILL.md' && !p.endsWith('(ZIP copy)'));
+    return dates.modified([skill, ...rels.map(rel => path.join(folder, ...rel.split('/')))]);
+  };
+}
+
+/** options.previous: the manifest this build replaces (its history and dates carry forward); options.today: the build
+ *  day; options.catalogueRoot: the catalogue source, for git dates (default ../catalogue-items next to site). */
+export function buildPublicApiManifest(publicDir, options = {}) {
+  const previous = options.previous?.schema === 'abb-public-catalogue/1' && options.previous.resources && typeof options.previous.resources === 'object' ? options.previous.resources : {};
+  const today = options.today ?? new Date().toISOString().slice(0, 10);
+  const contentDay = contentDates(options.catalogueRoot === undefined ? path.resolve(publicDir, '..', '..', 'catalogue-items') : options.catalogueRoot);
   const cataloguePath = path.join(publicDir, 'data', 'blocks.json');
   const catalogueBytes = fs.readFileSync(cataloguePath);
   const catalogue = JSON.parse(catalogueBytes);
@@ -56,12 +100,23 @@ export function buildPublicApiManifest(publicDir) {
       try { verifyLocalReferences(referenceFiles); } catch { reference_validation = { status: 'BLOCKED', error: 'Concrete supporting-file links are unresolved. Retrieve and review this package before use.' }; }
       const exclusions = referenceFixtureExclusions(referenceFiles);
       if (exclusions.length) reference_validation.negative_fixture_exclusions = exclusions;
-      const revision_sha256 = digest(JSON.stringify({ instruction: instruction.sha256, archive: archive?.sha256 ?? null, metadata: digest(JSON.stringify(block)), page: page?.sha256 ?? null }));
-      // Not part of the revision: the page's "Updated" day (search_library since) and the frontmatter (skills/list).
-      let updated;
-      try { if (page) updated = JSON.parse(fs.readFileSync(pageFile)).added; } catch { /* no date; the item still publishes */ }
+      // The revision changes only when SKILL.md or a packaged file changes (contentFiles).
+      const content = { instruction, files }, revision_sha256 = contentRevision(content);
+      // updated (search_library since) is the day that content last changed: its git date, falling back to the page's
+      // "Updated" day. If the served bytes changed with no newer commit (a build-time change), it is the build day.
+      let added;
+      try { if (page) added = JSON.parse(fs.readFileSync(pageFile)).added; } catch { /* no date; the item still publishes */ }
+      const before = previous[slug]?.instruction ? previous[slug] : null;
+      const changed = before ? changedFiles(before, content) : null;
+      let updated = contentDay(slug, content) || (typeof added === 'string' && DAY.test(added) ? added : '');
+      if (changed?.length && DAY.test(before.updated ?? '') && (!updated || updated <= before.updated)) updated = today;
+      // Earlier revisions, newest first, each with the files that changed when it was replaced, so a stale request can
+      // be told exactly what to review. An id for the same files (a revision formula change) records no changes.
+      let history = Array.isArray(before?.history) ? before.history.filter(h => h && typeof h.revision_sha256 === 'string' && h.revision_sha256 !== revision_sha256) : [];
+      if (before && before.revision_sha256 !== revision_sha256) history = [{ revision_sha256: before.revision_sha256, replaced: today, changed }, ...history];
+      history = history.slice(0, MAX_HISTORY);
       const front = frontmatter(instructionBytes.toString('utf8'));
-      resources[slug] = { revision_sha256, instruction, ...(archive ? { archive } : {}), ...(page ? { page } : {}), files, reference_validation, ...(typeof updated === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(updated) ? { updated } : {}), ...(front ? { frontmatter: front } : {}) };
+      resources[slug] = { revision_sha256, instruction, ...(archive ? { archive } : {}), ...(page ? { page } : {}), files, reference_validation, ...(updated ? { updated } : {}), ...(history.length ? { history } : {}), ...(front ? { frontmatter: front } : {}) };
     } catch {
       unavailable.push({ slug, reason: 'Published package is missing or failed package safety validation.' });
     }
@@ -130,7 +185,10 @@ export function buildApiExtras(publicDir, manifest) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   await acquireBuildLock('.index-build.lock');
   const publicDir = path.resolve('public');
-  const manifest = buildPublicApiManifest(publicDir);
+  // The manifest this build replaces, so revision history and content dates carry forward.
+  let previous;
+  try { previous = JSON.parse(fs.readFileSync(path.join(publicDir, 'data', 'public-api-manifest.json'), 'utf8')); } catch { /* first build */ }
+  const manifest = buildPublicApiManifest(publicDir, { previous, catalogueRoot: path.resolve(process.env.CATALOGUE_ROOT || '../catalogue-items') });
   const extras = Buffer.from(JSON.stringify(buildApiExtras(publicDir, manifest)));
   fs.writeFileSync(path.join(publicDir, 'data', 'api-extras.json'), extras);
   manifest.extras = { path: '/data/api-extras.json', sha256: digest(extras), bytes: extras.length };

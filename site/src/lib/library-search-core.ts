@@ -2,7 +2,9 @@
 import { geoAnswerAlias, searchIntents } from "./library-search-intents.ts";
 import { WORD_ALIASES } from "./library-search-language.ts";
 export type SearchField = "title" | "summary" | "intro" | "body" | "metadata";
-export type SearchHit = { score: number; field: SearchField; reason?: string; literal?: number };
+/** `strong`: every subject word is in the item's name or summary, or the item's stated purpose matches the request.
+ *  Callers count these to say "N strong matches" instead of every passing mention. */
+export type SearchHit = { score: number; field: SearchField; reason?: string; literal?: number; strong?: boolean };
 export type SearchDocument = { slug: string; title: string; kind?: string; summary?: string; intro?: string; body?: string; metadata?: string; purpose?: Partial<Record<SearchField, string[]>>; excludeIntents?: string[] };
 export type LibrarySearchIndex = { version: 1; sourceHash: string; corpusHash?: string; engineHash?: string; docs: string[]; terms: string[]; postings: string[]; shards?: { size: number; files: { file: string; sha256: string; terms: number }[] } };
 const FIELDS = ["title", "summary", "intro", "body", "metadata"] as const;
@@ -12,7 +14,8 @@ for (const filler of ["what", "which", "why", "where", "when", "should", "using"
 for (const filler of ["best", "recommend", "recommendation", "recommendations", "suggest", "suggestions", "looking", "searching"]) STOP.add(filler);
 for (const filler of ["no", "not", "will", "after", "are", "was", "were", "did", "got", "gets", "getting", "arent", "isnt", "dont", "doesnt", "didnt", "hasnt", "havent", "wont", "cant", "anymore", "really", "just", "very", "also", "any", "way", "ways", "thing", "things", "stuff"]) STOP.add(filler);
 export function searchTokens(text: string, preserveConceptWords = false): string[] {
-  const original = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/[_-]/g, " ");
+  // "No-shows" is one thing, not "no" and "shows"; so is an "about us" page. "T&Cs" are terms and conditions.
+  const original = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/\bno[\s_-]?shows?\b/g, " noshow ").replace(/\bt ?& ?cs?\b/g, " terms conditions ").replace(/\babout us\b/g, " aboutus ").replace(/[_-]/g, " ");
   const normalized = (geoAnswerAlias(original, preserveConceptWords) ? original.replace(/\bgeo\b/g, " aeo ") : original)
     .replace(/\b(?:answer\s*engine\s*optimi[sz]ation|generative\s*engine\s*optimi[sz]ation|ai\s*search|aeo)\b/g, " aeo ")
     .replace(/\b(?:search\s*engine\s*optimi[sz]ation|seo)\b/g, " seo ")
@@ -20,7 +23,7 @@ export function searchTokens(text: string, preserveConceptWords = false): string
   const inflections = normalized.replace(/\bcopywrit(?:ing|ers?|es|e)\b/g, ' copy write ').replace(/\b(?:writing|writers?|writes)\b/g, ' write ').replace(/\b(?:investing|investments?|investors?)\b/g, ' invest ').replace(/\b(?:budgeting|budgets)\b/g, ' budget ').replace(/\b(?:financial|financing)\b/g, ' finance ').replace(/\b(?:designing|designers?)\b/g, ' design ').replace(/\b(?:planning|planners?)\b/g, ' plan ').replace(/\b(?:pricing|priced)\b/g, ' price ')
     // One spelling for -ise/-ize words (analyse, summarise, organise) and one form of "ads".
     .replace(/\b(\w{3,}?)([iy])z(e|es|ed|er|ers|ing|ation|ations)\b/g, "$1$2s$3").replace(/\bads\b/g, " ad ");
-  return [...new Set(((preserveConceptWords ? original + " " + inflections : inflections).match(/[\p{L}\p{N}]+/gu) ?? []).filter(token => !STOP.has(token)).map(token => token === "ads" ? "ad" : token.length > 4 && token.endsWith("ies") ? token.slice(0, -3) + "y" : token.length > 3 && /[^s]s$/.test(token) ? token.slice(0, -1) : token))];
+  return [...new Set(((preserveConceptWords ? original + " " + inflections : inflections).match(/[\p{L}\p{N}]+/gu) ?? []).filter(token => !STOP.has(token)).map(token => token === "ads" ? "ad" : token.length > 4 && token.endsWith("ies") ? token.slice(0, -3) + "y" : token.length > 3 && /[^s]s$/.test(token) ? token.slice(0, -1) : token).filter(token => !STOP.has(token)))];
 }
 
 /** A query's words: required subject words, optional "how" words, and catalogue words that can stand in for a typed word. */
@@ -43,7 +46,9 @@ export function queryTokens(query: string): QueryWords {
     for (const token of tokens) { add(token, instead); if (tokens.length > 1) phrase[token] ??= phrases; }
     phrases++;
   }
-  let hard = all.filter(token => !SOFT.has(token));
+  // "Reviews" and "ratings" are what customers leave, so they are the subject; "review" alone is a "how" word.
+  const leftByCustomers = /\b(?:reviews|ratings)\b/.test(lower);
+  let hard = all.filter(token => !SOFT.has(token) || leftByCustomers && token === "review");
   // Nothing but "how" words: they are the subject after all.
   if (!hard.length) hard = all;
   const words = { hard: hard.slice(0, 12), soft: all.filter(token => !hard.includes(token)).slice(0, 12), alternatives, sequence: all, phrase };
@@ -67,7 +72,10 @@ function withJoinedWords(index: LibrarySearchIndex, words: QueryWords): Record<s
 
 /** Words that say how or how well, not what. They add evidence but are not required while a subject word remains.
  *  Kept in token form ("analysis" is the token "analysi"). */
-const SOFT = new Set(["creative", "write", "create", "generate", "build", "analyse", "analysis", "analyst", "check", "review", "fix", "improve", "better", "good", "great", "idea", "template", "tip", "example", "simple", "simply", "quick", "easy", "free", "tool", "online", "using", "old", "new", "small", "several", "multiple", "many", "more", "higher", "plan", "list", "set", "up", "keep", "keeping", "start", "starting", "find", "tell", "turn", "give", "ready", "proper", "professional"].flatMap(word => searchTokens(word)));
+const SOFT = new Set(["creative", "write", "create", "generate", "build", "analyse", "analysis", "analyst", "check", "review", "fix", "improve", "better", "good", "great", "idea", "template", "tip", "example", "simple", "simply", "quick", "easy", "free", "tool", "online", "using", "old", "new", "small", "several", "multiple", "many", "more", "higher", "plan", "list", "set", "up", "keep", "keeping", "start", "starting", "find", "tell", "turn", "give", "ready", "proper", "professional",
+  // The kind of business says who is asking, not what they need ("more bookings for my salon"): context, unless it
+  // is all they typed. library-search-language.ts maps each to local-service words.
+  "salon", "barber", "barbershop", "hairdresser", "spa", "dentist", "dental", "clinic", "physio", "vet", "plumber", "plumbing", "electrician", "roofer", "cleaner", "landscaper", "gardener", "handyman", "tradesman", "locksmith", "decorator", "bakery", "cafe", "coffee", "restaurant", "takeaway", "florist"].flatMap(word => searchTokens(word)));
 /** Plain wording people type, mapped to the words the catalogue uses. Each typed word may be met by the catalogue words instead. */
 const QUERY_ALIASES: [RegExp, string][] = [
   [/\b(?:stop(?:ped|s)? (?:working|selling|converting)|not (?:working|selling|converting)|are ?n'?t (?:working|selling|converting)|dropp?(?:ed|ing)|declin(?:e|ed|ing)|tank(?:ed|ing))\b/, "drop"],
@@ -149,8 +157,21 @@ function lowerBound(terms: string[], query: string): number {
   while (low < high) { const middle = (low + high) >>> 1; if (terms[middle] < query) low = middle + 1; else high = middle; }
   return low;
 }
-function prefixTerms(index: LibrarySearchIndex, token: string, result: number[]) {
-  for (let term = lowerBound(index.terms, token); term < index.terms.length && (index.terms[term] === token || token.length >= 4 && token !== "aeo" && token !== "seo" && index.terms[term].startsWith(token)); term++) if (!result.includes(term)) result.push(term);
+/** Endings that give another form of the same word ("review", "reviewing", "invoiced"). "-er" usually makes a
+ *  different word ("reviewer", "leader", "customer"), except after a few doing words, where it names the tool
+ *  that does it ("checker", "tracker", "maker"). */
+const FORM_ENDING = /^(?:s|es|d|ed|ing|ings|ment|ments|ly|ation|ations)$/;
+const DOERS = new Set(["check", "track", "build", "find", "make", "pick", "read", "test", "draft", "scan", "score", "print", "edit", "plan"]);
+export function isWordForm(word: string, ending: string): boolean {
+  return FORM_ENDING.test(ending) || DOERS.has(word) && (/^(?:n?ers?|ors?)$/.test(ending) || word.endsWith("e") && /^rs?$/.test(ending));
+}
+/** Terms that start with a typed word. A whole word the catalogue uses only meets its own forms; a word still being
+ *  typed ("analy") meets every word it starts. */
+function prefixTerms(index: LibrarySearchIndex, token: string, result: number[], whole = "") {
+  for (let term = lowerBound(index.terms, token); term < index.terms.length && (index.terms[term] === token || token.length >= 4 && token !== "aeo" && token !== "seo" && index.terms[term].startsWith(token)); term++) {
+    if (whole && index.terms[term] !== whole && !isWordForm(whole, index.terms[term].slice(token.length))) continue;
+    if (!result.includes(term)) result.push(term);
+  }
 }
 /** Edit distance with swapped neighbours, or max + 1 once it exceeds `max`. */
 function distance(a: string, b: string, max: number): number {
@@ -181,9 +202,9 @@ const outline = (word: string) => word[0] + word.slice(1).replace(/[aeiouy]/g, "
 /** Terms for one query word: exact, longer forms, then (for a word the catalogue never uses) close spellings such
  *  as "emial" or "refrel". Only typed words are corrected; catalogue stand-ins are used as written. */
 function matchingTerms(index: LibrarySearchIndex, token: string, correct = true): number[] {
-  const result: number[] = [];
-  prefixTerms(index, token, result);
-  if (token.length >= 6 && token.endsWith("e")) prefixTerms(index, token.slice(0, -1), result);
+  const result: number[] = [], whole = index.terms[lowerBound(index.terms, token)] === token ? token : "";
+  prefixTerms(index, token, result, whole);
+  if (token.length >= 6 && token.endsWith("e")) prefixTerms(index, token.slice(0, -1), result, whole);
   if (!correct || index.terms[lowerBound(index.terms, token)] === token || token.length < 4 || /\d/.test(token)) return result;
   let cache = fuzzyCache.get(index); if (!cache) { cache = new Map(); fuzzyCache.set(index, cache); }
   let fuzzy = cache.get(token);
@@ -282,6 +303,7 @@ export function searchLibraryIndex(index: LibrarySearchIndex, query: string): Ma
   const result = new Map<string, SearchHit>(literal.map(([id, hit]) => [index.docs[id], {
     score: (hit.score * (hit.weakest / hit.strongest) ** 0.4 + (optional.get(id) ?? 0) * 0.5) * (hit.count < hard.length ? 0.35 : 1),
     field: fieldOf(hit.mask),
+    ...(hit.count === hard.length && hit.weakest >= WEIGHTS[1] ? { strong: true } : {}),
   }]));
   const tokens = hard.length + soft.length;
   for (const intent of intents) {
@@ -293,7 +315,7 @@ export function searchLibraryIndex(index: LibrarySearchIndex, query: string): Ma
       const old = result.get(index.docs[id]);
       // The plain word match stays on the hit, so ranking can still treat a title that says the words as one.
       const literal = old?.literal ?? (old && !old.reason ? old.score : undefined);
-      if (!old || score > old.score) result.set(index.docs[id], { score, field: fieldOf(mask), reason: (fieldOf(mask) === "body" ? "Full instructions mention: " : "Matches goal: ") + intent.label + ".", ...(literal ? { literal } : {}) });
+      if (!old || score > old.score) result.set(index.docs[id], { score, field: fieldOf(mask), reason: (fieldOf(mask) === "body" ? "Full instructions mention: " : "Matches goal: ") + intent.label + ".", ...(literal ? { literal } : {}), ...(fieldOf(mask) !== "body" || old?.strong ? { strong: true } : {}) });
     }
   }
   // Explicit format requests change ranking only among relevant candidates.

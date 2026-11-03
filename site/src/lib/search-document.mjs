@@ -17,3 +17,14 @@ export function makeSearchDocument(block, page = {}, { body = '', extraText = ''
     title: [...new Set([...titles, block.slug, ...(block.aliases ?? [])])].join(' '), summary: summaries.join(' '), intro: introductions.join(' '), ...(body ? { body } : {}),
     metadata: metadata.join(' '), purpose: { title: [...new Set(titles)], summary: summaries, intro: introductions, metadata } };
 }
+
+/** Mini tools (calculators at /tools/<slug>) in the same search, as kind "tool". Their index key keeps them apart
+ *  from catalogue slugs, as in the public API (scripts/build-public-api.mjs). */
+export const miniToolKey = slug => `minitool-${slug}`;
+export const miniToolSlug = key => key.startsWith('minitool-') ? key.slice('minitool-'.length) : null;
+export function makeToolSearchDocument(tool) {
+  const titles = [tool.name, tool.short, tool.headline].filter(Boolean).map(plain), summaries = [tool.summary, tool.question].filter(Boolean).map(plain);
+  const metadata = [`${tool.category ?? ''} mini tool free calculator`];
+  return { slug: miniToolKey(tool.slug), kind: 'tool', title: [...new Set([...titles, tool.slug])].join(' '), summary: summaries.join(' '), metadata: metadata.join(' '),
+    purpose: { title: [...new Set(titles)], summary: summaries, metadata } };
+}

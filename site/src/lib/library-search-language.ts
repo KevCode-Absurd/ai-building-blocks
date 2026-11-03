@@ -33,6 +33,10 @@ const SYNONYM_GROUPS: string[][] = [
   ["forecast", "projection", "projections"],
   ["video", "videos", "clip", "clips"],
   ["analyse", "analyze", "analysis", "analytics"],
+  // Owners' words (3 Nov 2026 owner search pass)
+  ["facebook", "meta"],
+  ["booking", "bookings", "appointment", "appointments", "reservation", "reservations"],
+  ["cart", "basket"],
 ];
 
 /** One-way: a typed word or tool name, mapped to the catalogue's words for the job it implies. */
@@ -153,6 +157,24 @@ const ONE_WAY: [RegExp, string][] = [
   [/\b(?:reject\w*|disapprov\w*|flagged|banned|taken down|personal attributes)\b/, "rejected compliance policy"],
   [/\b(?:any good|before (?:i|we) (?:put money|spend|send|post|publish|launch|run) \w+)\b/, "check review checker"],
   [/\b(?:winning products?|products? to sell|what to sell)\b/, "product research niche proven"],
+  // Owners' words (3 Nov 2026 owner search pass): what a small business owner calls a thing.
+  [/\b(?:estimates?|quotations?)\b/, "quote proposal"],
+  [/\b(?:terms of service|terms of use|tos)\b/, "terms conditions"],
+  [/\b(?:enquir(?:y|ies)|inquir(?:y|ies))\b/, "lead"],
+  [/\b(?:google maps|maps listing|map listing|map pack|google business(?: profile)?|business profile|google my business|gbp)\b/, "local search listing"],
+  [/\b(?:about us|about page)\b/, "about founder story"],
+  [/\b(?:leave|left|leaving|abandon\w*)\b.{0,25}\b(?:carts?|baskets?|checkouts?)\b/, "abandoned cart checkout"],
+  [/\bfootfall\b|\bfoot traffic\b|\bwalk.ins?\b/, "local customer"],
+  [/\b(?:not growing|grow(?:ing)? (?:my |our )?(?:instagram|insta|tiktok|following|audience|account|page)|(?:instagram|insta|tiktok) (?:growth|followers?))\b/, "social audience growth follower"],
+  [/\b(?:instagram|insta|tiktok)\b/, "social"],
+  [/\b(?:loyalty|stamp|punch|rewards?) cards?\b/, "loyalty program reward"],
+  [/\b(?:not coming back|dont come back|do not come back|never come back|stopped coming|only (?:buy|bought|came|visit(?:ed)?) once)\b/, "win back lapsed"],
+  [/\b(?:charge|bill|price|rate)\b.{0,20}\b(?:per hour|an hour|hourly|by the hour|my hours?|my time)\b/, "hourly rate"],
+  // A kind of local business says the job is a local service: listings, bookings, quotes and word of mouth.
+  [/\b(?:salons?|barbers?|barbershops?|hairdressers?|nail bars?|beauty salons?|spas?)\b/, "local service appointment booking"],
+  [/\b(?:dentists?|dental|clinics?|physios?|physiotherap\w*|chiropract\w*|vets?|veterinar\w*)\b/, "local service appointment booking patient"],
+  [/\b(?:plumb(?:er|ers|ing)|electricians?|roofers?|cleaners?|cleaning (?:business|company)|landscap(?:er|ers|ing)|gardeners?|handym[ae]n|tradesm[ae]n|tradespeople|locksmiths?|decorators?)\b/, "local service quote job"],
+  [/\b(?:bakery|bakeries|cafes?|coffee shops?|restaurants?|takeaways?|florists?|food trucks?)\b/, "local shop"],
 ];
 
 const escape = (word: string) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s+");

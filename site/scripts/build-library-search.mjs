@@ -6,16 +6,19 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { buildLibrarySearchIndex } from '../src/lib/library-search-core.ts';
-import { makeSearchDocument } from '../src/lib/search-document.mjs';
+import { makeSearchDocument, makeToolSearchDocument } from '../src/lib/search-document.mjs';
+import { TOOLS as MINI_TOOLS } from '../../mini-tools/index.mjs';
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const decode = text => text.replace(/&(?:amp|lt|gt|quot|apos|#39|nbsp);/g, value => ({ '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'", '&#39;': "'", '&nbsp;': ' ' })[value]);
 const plain = value => decode(String(value ?? '').replace(/<[^>]*>/g, ' '));
 const strings = value => typeof value === 'string' ? plain(value) : Array.isArray(value) ? value.map(strings).join(' ') : value && typeof value === 'object' ? Object.values(value).map(strings).join(' ') : '';
+/** The files whose rules shape the published index; its engineHash covers them. */
+export const ENGINE_FILES = ['library-search-core.ts', 'library-search-intents.ts', 'library-search-language.ts', 'catalogue-taxonomy.mjs', 'catalogue-audience.mjs', 'search-document.mjs'];
 // Index the method itself, not other methods linked from navigation/recommendations.
 const instructionFields = ['when', 'not_for', 'output_sample', 'you_give', 'you_get', 'how_to_use', 'how_it_works', 'output_shape', 'tweaks', 'judge', 'test', 'improve', 'terms', 'thinkingWhy', 'stepNotes'];
 export async function buildPublicLibrarySearch(publicRoot) {
   publicRoot = path.resolve(publicRoot);
-  const engineFiles = ['library-search-core.ts', 'library-search-intents.ts', 'library-search-language.ts', 'catalogue-taxonomy.mjs', 'search-document.mjs'], engineHashes = {};
+  const engineFiles = ENGINE_FILES, engineHashes = {};
   for (const file of engineFiles) engineHashes[file] = sha(await fs.readFile(new URL('../src/lib/' + file, import.meta.url)));
   const source = await fs.readFile(path.join(publicRoot, 'data/blocks.json')), catalogue = JSON.parse(source), sourceHash = sha(source);
   const inputs = { 'data/blocks.json': sourceHash }, documents = [];
@@ -35,7 +38,10 @@ export async function buildPublicLibrarySearch(publicRoot) {
     documents.push(makeSearchDocument(block, page, { body: `${instructions} ${plain(page.html?.skill)} ${skill}` }));
    }
   }));
-  for (const [file, hash] of Object.entries(inputs)) assert.equal(sha(await fs.readFile(path.join(publicRoot, file))), hash, 'Public search input changed: ' + file);
+  // The mini tools join as kind "tool" (keys minitool-<slug>), from their source definitions.
+  for (const tool of MINI_TOOLS) documents.push(makeToolSearchDocument(tool));
+  inputs['mini-tools'] = sha(JSON.stringify(MINI_TOOLS.map(t => [t.slug, t.name, t.short, t.headline, t.summary, t.question, t.category])));
+  for (const [file, hash] of Object.entries(inputs)) if (file !== 'mini-tools') assert.equal(sha(await fs.readFile(path.join(publicRoot, file))), hash, 'Public search input changed: ' + file);
   const index = buildLibrarySearchIndex(documents, sourceHash);
   const sorted = Object.fromEntries(Object.keys(inputs).sort().map(file => [file, inputs[file]]));
   index.corpusHash = sha(JSON.stringify(sorted));

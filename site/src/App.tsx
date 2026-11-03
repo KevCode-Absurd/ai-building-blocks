@@ -23,6 +23,7 @@ import SiteFooter from "./SiteFooter";
 import PageRecovery from "./PageRecovery";
 import { initialPageHtml } from "./lib/public-opening";
 import {readItemOpening} from "./lib/item-opening";
+import { OutcomesRoute, isOutcomePath } from "./outcomes-site/route";
 
 
 // The other pages load after the home page has drawn, while the browser is idle, so a click opens them at once.
@@ -215,7 +216,7 @@ export default function App() {
   const parts = path.split("/").filter(Boolean);
   const pageSlug = parts.length === 2 && KIND_PATHS[parts[0]] ? parts[1] : null;
   const itemState = useItemCatalogue(pageSlug);
-  const needsCatalogue = !infoPage(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
+  const needsCatalogue = !infoPage(path) && !isOutcomePath(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md"].some((p) => path === p || path.startsWith(`${p}/`));
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
   const starterFirst = path === "/" && !search.has("block") && !search.has("workflow");
@@ -302,6 +303,8 @@ export default function App() {
             <ComposePage c={c} toast={setToast} requestCatalogue={requestComposeCatalogue} />
           ) : path === "/from-a-source" ? (
             c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+          ) : isOutcomePath(path) ? (
+            <OutcomesRoute path={path} toast={setToast} />
           ) : ["/api-and-mcp", "/api-and-mcp.html"].includes(path) ? (
             <ApiMcpPage />
           ) : path === "/me-md" ? (

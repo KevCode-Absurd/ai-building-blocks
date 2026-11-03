@@ -443,6 +443,7 @@ const { TOOLS } = await import("../../mini-tools/index.mjs");
 const roles = roleSeeds(blocks);
 const roleUrls = roles.length ? ["/roles", ...Array.from({length:Math.ceil(roles.length/24)-1},(_,i)=>`/roles/page/${i+2}`), ...roles.map(r=>`/roles/${r.id}`)] : [];
 const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+urls.push("/get-it-done", "/get-it-done/example", "/get-it-done/status"); // the outcome orchestrator's owner pages (src/outcomes-site)
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.
 // lastmod is only a date we can vouch for: an item page's is the day its own files (item.yaml, page.yaml, SKILL.md) last

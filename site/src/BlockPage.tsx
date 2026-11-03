@@ -507,7 +507,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
               </>}
               <KitMenu slug={b.slug} onChange={toast} />
               <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
-            </div>{!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} />}</details>
+            </div>{!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}</details>
           </div>
           {transferred && isFlow && <TransferGuide zip={zipName(b.name)} name={b.name} />}
           {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><KitMenu slug={b.slug} onChange={toast} /></div>}</div>}

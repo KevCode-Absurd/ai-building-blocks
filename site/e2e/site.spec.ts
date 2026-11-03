@@ -604,8 +604,9 @@ const BIZ = { name: "Sprout", sells: "Greens gummies in daily packs", buyer: "Ad
 const fillBusiness = async (page: Page) => {
   await page.getByTestId("open-business").click();
   const form = page.getByTestId("business-form");
+  await form.getByText("Add more detail (optional)").click();
   for (const [k, v] of Object.entries(BIZ)) await form.getByTestId(`biz-${k}`).fill(v);
-  await expect(form).toContainText("4 of 9 filled in");
+  await expect(form).toContainText("3 of 5 answered");
   await form.getByTestId("biz-save").click();
   await expect(form).toHaveCount(0);
 };

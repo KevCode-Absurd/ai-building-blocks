@@ -47,7 +47,7 @@ export default function SiteHeader() {
           <p className="small">{account.state === "signed-in" ? "Signed in" : account.state === "loading" ? "Opening your account…" : "Your account and browser saves"}</p>
           <Link to="/account" data-testid="open-saved-work">My saved work</Link>
           <AccountSessionActions onSignedOut={() => setOpen(false)} />
-          <button type="button" data-close-menu onClick={openBusiness}>Business details</button>
+          <button type="button" data-close-menu onClick={openBusiness} data-testid="nav-brand-file">Your brand file</button>
         </section>
         <div className="site-menu-appearance"><span>Appearance</span><ThemeToggle /></div>
       </nav>}

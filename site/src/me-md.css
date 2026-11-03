@@ -59,3 +59,4 @@
 @media (max-width: 760px) {
   .me-md-docs td[data-label]:not(:first-child)::before { content: attr(data-label) ": "; font-weight: 600; color: var(--muted); }
 }
+.me-md-docs .hero .me-brand-note { margin-top: 8px; }

@@ -7,7 +7,8 @@ import { assignedCustomMinds, customMindMarkdown, mindFile, withCustomMinds } fr
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
-import { type Catalogue, kindOf, loadSkillText, loadSkillZip, portLabel, taskOf, workflowEntries } from "./data";
+import { type Catalogue, kindOf, loadSkillText, loadSkillZip, pathOf, portLabel, taskOf, workflowEntries } from "./data";
+import { ACTION_RULE, MESSAGE_LIMIT, SITE, brandBlock, bullets, fitMethod } from "./one-message.mjs";
 import type { Flow } from "./store";
 import { type Business, meFor, withBusiness as addBusiness } from "./business";
 import type { TaskLike } from "./me-file";
@@ -175,6 +176,70 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
     edges: flow.edges.map((e) => ({ from: e.from, to: e.to })),
     completion: { required: "all-active-required-obligations-satisfied", not_run_is_pass: false, pending_review_is_pass: false, evidence: "artifact-revision-bound", report: "templates/execution-report.json" },
   };
+}
+
+export type FlowMessage = { text: string; chars: number; limit: number; shortened: boolean; fits: boolean; steps: number };
+
+/** "Copy as one message": the workflow as one chat message for the ChatGPT, Claude or Gemini app, which can't open
+ *  a zip. The goal, what to ask first, each step's method (shortened to fit when needed) and the owner's brand file,
+ *  added here in the browser. The zip from buildHandoffZip stays the full version for coding tools. */
+export async function flowMessage(c: Catalogue, flow: Flow, business: Business = {}, load: (slug: string) => Promise<string | null> = loadSkillText, limit = MESSAGE_LIMIT): Promise<FlowMessage | { error: string }> {
+  flow = { ...flow, customMinds: assignedCustomMinds(flow, flow.customMinds ?? []) };
+  c = withCustomMinds(withCustomSkills(c, flow.customSkills), flow.customMinds);
+  if (!flow.nodes.length) return { error: "This workflow has no steps of its own. Download the full pack instead." };
+  const order = orderFlow(flow);
+  if (!order) return { error: "This workflow loops back on itself. Remove one connection so it runs from start to finish." };
+  if (order.some(o => !c.bySlug[o.node.slug])) return { error: "A step is no longer in the library. Remove or replace it first." };
+  const skills = await Promise.all(order.map(async o => flow.customSkills?.find(s => s.slug === o.node.slug)?.markdown ?? await load(o.node.slug).catch(() => null)));
+  const about = meFor(business, order.map(o => c.bySlug[o.node.slug]));
+  const leads = leadsOf(c, flow, order);
+  const needs = needsOf(c, order).map(n => `${n.label}${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${listSteps(n.steps)}${n.about ? `: ${oneLine(n.about)}` : ""}`);
+  const finals = finalOutputs(c, flow, order);
+  const minds = crewSlugs(c, flow, order).map(s => mindName(c, s));
+  const NL = "\n", GAP = "\n\n";
+  const head = [
+    `Please run this workflow with me in this chat: ${flow.name}. This one message has what you need: the goal, what to ask me first and the method for each of its ${order.length} step${order.length === 1 ? "" : "s"}.`,
+    `## The goal${NL}${flow.goal?.trim() ? oneLine(flow.goal) : "Before step 1, ask me in one line what I want from this workflow."}${flow.notes?.trim() ? `${GAP}Notes from the person who set it up:${NL}${flow.notes.trim()}` : ""}`,
+    [`## How to start`,
+      `1. Ask only for what is missing, in one short list. Don't ask again for anything I already gave you${about ? ", including my brand file at the end of this message" : ""}.`,
+      ...(needs.length ? [bullets(needs)] : []),
+      "2. Run the steps in order. Each step uses what the earlier steps made.",
+      "3. After each step, run its checks. Fix what you can, or stop and tell me what is blocking it.",
+      "4. Never make up facts, numbers, prices or quotes. Mark anything you could not check."].join(NL),
+    ...(minds.length ? [`Some steps are done the way a mind would do them (${minds.join(", ")}). Their full files are in the workflow pack. Here, use what you know of their public method and never claim to be them.`] : []),
+  ];
+  const tail = [
+    `## When you finish${NL}Hand back ${finals.length ? finals.join(", ").toLowerCase() : "what the last step made"}. Say which checks passed and which you could not run. Then suggest one next step, and stop there.${GAP}${ACTION_RULE}`,
+    ...(about ? [brandBlock(about)] : []),
+    `Made with AI Blocks (${SITE}). Everything stays in this chat. For every file and reference, download the full workflow pack.`,
+  ];
+  const stepHead = (o: Ordered) => {
+    const b = c.bySlug[o.node.slug], lead = leads[o.step];
+    return [`### Step ${o.step}: ${b.name}`, `What it does: ${b.summary}`,
+      `Uses: ${o.from.length ? o.from.map(n => `the result of step ${n}`).join(", ") : "what I give you at the start"}. Makes: ${b.outputs.length ? b.outputs.map(p => portLabel(p.type).toLowerCase()).join(", ") : "what the method below describes"}.`,
+      ...(lead ? [`Done the way of: ${(lead.minds?.length ? lead.minds : [lead.mind]).map(s => mindName(c, s)).join(", ")}.`] : []),
+      ...(o.node.role?.trim() ? [`Role: ${oneLine(o.node.role)}`] : []),
+      ...(o.node.notes?.trim() ? [`Notes for this step: ${oneLine(o.node.notes)}`] : []),
+    ].join(NL);
+  };
+  const link = (o: Ordered) => `${SITE}${pathOf(c.bySlug[o.node.slug])}`;
+  const note = (o: Ordered) => `(Shorter version, cut to fit one message. The full method is at ${link(o)}.)`;
+  const missing = (o: Ordered) => `Method: read it at ${link(o)} if you can open links. If you can't, do the step as described above.`;
+  const fixed = [...head, "## Steps", ...order.map(o => `${stepHead(o)}${NL}Method:${GAP}${note(o)}`), ...tail].join(GAP).length + order.length * 4;
+  // Share what is left fairly: short methods go in whole and leave their spare room to longer ones.
+  const full = skills.map(s => (s ? fitMethod(s, Infinity).text : ""));
+  const budget = new Array<number>(order.length).fill(0);
+  let left = Math.max(0, limit - fixed);
+  const waiting = full.map((_, i) => i).filter(i => full[i]).sort((a, b) => full[a].length - full[b].length);
+  while (waiting.length) { const i = waiting.shift()!; budget[i] = Math.min(full[i].length, Math.floor(left / (waiting.length + 1))); left -= budget[i]; }
+  let shortened = false;
+  const steps = order.map((o, i) => {
+    const fit = skills[i] ? fitMethod(skills[i]!, budget[i]) : { text: "", shortened: true };
+    if (fit.shortened) shortened = true;
+    return fit.text ? `${stepHead(o)}${NL}Method:${NL}${fit.text}${fit.shortened ? `${GAP}${note(o)}` : ""}` : `${stepHead(o)}${NL}${missing(o)}`;
+  });
+  const text = [...head, "## Steps", ...steps, ...tail].join(GAP) + NL;
+  return { text, chars: text.length, limit, shortened, fits: text.length <= limit, steps: order.length };
 }
 
 const FIXED_TIME = new Date(2026, 0, 1, 5, 30, 0); // fixed dates keep the zip byte-for-byte repeatable

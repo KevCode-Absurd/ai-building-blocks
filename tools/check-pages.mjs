@@ -2,6 +2,13 @@
 //
 //   node tools/check-pages.mjs [slug ...]   check the named items (no slugs = every item)
 //   node tools/check-pages.mjs --tally      also print how many items fail each rule
+//   node tools/check-pages.mjs --pointers   also list the "Skip it when" pointers that name no item we know
+//   node tools/check-pages.mjs --fix-names  rewrite earlier item names in not_for to the current name, then check
+//
+// "Skip it when" (not_for) lines that name another item are linked on the site (tools/lib/not-for-links.mjs). A line that
+// uses an earlier name of an item (its old page.yaml name, a display-copy alias, an old slug from renamed.json) fails here,
+// because --fix-names can put the current name in. A "use the X" pointer that names no item is only counted, not failed:
+// those need a person to pick the right item.
 //
 // Pages checked: catalogue-items/<group>/<slug>/page.yaml, tools/orchestrator-pages/<slug>.yaml (workflows),
 // catalogue-items/ai-tools/<slug>.yaml and catalogue-items/minds/<slug>/mind.yaml (these two have to parse; AI tools also check
@@ -11,6 +18,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import YAML from "../site/node_modules/yaml/dist/index.js";
+import { linkNotFor, makeNameIndex, unresolvedPointers, findItemNames } from "./lib/not-for-links.mjs";
+import { applyDisplayCopy } from "./lib/display-copy.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ITEMS = path.join(ROOT, "catalogue-items");
@@ -160,16 +169,90 @@ function checkItem(it) {
   return fails.concat(checkPage(page, it.item, it.type));
 }
 
+// Every item a not_for line can point to, with its current name (display-copy.yaml wins, as on the site), its earlier
+// names and its page address. Items in quarantine.yaml have no page, so nothing links to them.
+function nameTargets(items) {
+  const copy = fs.existsSync(path.join(ITEMS, "display-copy.yaml")) ? readYaml(path.join(ITEMS, "display-copy.yaml")) ?? {} : {};
+  const held = fs.existsSync(path.join(ITEMS, "quarantine.yaml")) ? new Set(Object.keys(readYaml(path.join(ITEMS, "quarantine.yaml")) ?? {})) : new Set();
+  const kind = (it) => (it.type === "mind" ? "minds" : it.type === "agent" || it.group === "agents" ? "agents" : it.group === "orchestrators" || it.group === "orchestrator-pages" || ["workflow", "routine"].includes(it.type) ? "workflows" : it.type === "prompt" ? "prompts" : "skills");
+  const out = [];
+  for (const it of items) {
+    if (held.has(it.slug) || it.type === "ai-tool" || !it.file) continue;
+    let page = null;
+    try { page = readYaml(it.file); } catch { continue; }
+    if (!page || typeof page !== "object") continue;
+    const base = it.type === "mind" ? page.name : page.name ?? it.item?.name;
+    if (typeof base !== "string" || !base.trim()) continue;
+    const edited = applyDisplayCopy({ slug: it.slug, name: base }, { name: base }, copy[it.slug]);
+    out.push({ slug: it.slug, name: edited.page.name, aliases: [...edited.aliases, ...(it.item?.name && it.item.name !== edited.page.name ? [it.item.name] : [])], href: `/${kind(it)}/${it.slug}` });
+  }
+  return out;
+}
+const renamedMap = () => { try { return JSON.parse(fs.readFileSync(path.join(ITEMS, "renamed.json"), "utf8")); } catch { return {}; } };
+
+// Rewrites the earlier names in one page file's not_for, keeping the file's own quoting and line endings where it can.
+function fixNames(file, index, slug) {
+  const raw = fs.readFileSync(file, "utf8");
+  const doc = YAML.parseDocument(raw);
+  const seq = doc.get("not_for", true);
+  if (!seq || !Array.isArray(seq.items)) return 0;
+  const edits = [];
+  let fixed = 0;
+  for (const node of seq.items) {
+    if (!node || typeof node.value !== "string" || !node.range) continue;
+    const hits = findItemNames(node.value, index, slug).filter((h) => h.how === "old");
+    if (!hits.length) continue;
+    const [start, end] = node.range;
+    let src = raw.slice(start, end);
+    const plain = hits.every((h) => src.split(h.said).length === 2);
+    if (plain) for (const h of hits) src = src.replace(h.said, h.name);
+    else src = JSON.stringify(linkNotFor([node.value], index, slug).lines[0]);
+    edits.push([start, end, src]);
+    fixed += hits.length;
+  }
+  if (!edits.length) return 0;
+  let out = raw;
+  for (const [start, end, src] of edits.sort((a, b) => b[0] - a[0])) out = out.slice(0, start) + src + out.slice(end);
+  // A rewrite must never change anything but those lines.
+  const before = YAML.parse(raw), after = YAML.parse(out);
+  if (JSON.stringify({ ...before, not_for: null }) !== JSON.stringify({ ...after, not_for: null })) throw new Error(`${file}: fix touched more than not_for`);
+  fs.writeFileSync(file, out);
+  return fixed;
+}
+
 const args = process.argv.slice(2);
 const tally = args.includes("--tally");
 const wanted = args.filter((a) => !a.startsWith("--"));
 const all = collect();
 const picked = wanted.length ? all.filter((i) => wanted.includes(i.slug)) : all;
 for (const w of wanted) if (!picked.some((i) => i.slug === w)) { console.error(`No item named "${w}".`); process.exitCode = 1; }
+const nameIndex = makeNameIndex(nameTargets(all), renamedMap());
+if (args.includes("--fix-names")) {
+  let n = 0, files = 0;
+  for (const it of picked) if (it.file && !it.parseOnly) { const k = fixNames(it.file, nameIndex, it.slug); if (k) { n += k; files++; } }
+  console.log(`Put the current name in for ${n} earlier item names on ${files} pages.`);
+}
+const pointerStats = { lines: 0, linked: 0, items: 0, old: 0, unmatched: [] };
+// not_for lines: the earlier names they use (fixable, so they fail) and the pointers that name no item (counted only).
+function pointerFails(it) {
+  if (!it.file || it.type === "ai-tool") return [];
+  let page;
+  try { page = readYaml(it.file); } catch { return []; }
+  const lines = Array.isArray(page?.not_for) ? page.not_for.filter((x) => typeof x === "string") : [];
+  const fails = [];
+  for (const line of lines) {
+    pointerStats.lines++;
+    const found = findItemNames(line, nameIndex, it.slug);
+    if (found.length) { pointerStats.linked++; pointerStats.items += found.length; }
+    for (const f of found.filter((x) => x.how === "old")) { pointerStats.old++; fails.push({ rule: "not-for-name", msg: `not_for says "${f.said}": the item is now called "${f.name}" (node tools/check-pages.mjs --fix-names)` }); }
+    for (const u of unresolvedPointers(line, found)) pointerStats.unmatched.push(`${it.slug}: ${u}`);
+  }
+  return fails;
+}
 let failing = 0;
 const rules = {};
 for (const it of picked) {
-  const fails = checkItem(it);
+  const fails = checkItem(it).concat(pointerFails(it));
   if (!fails.length) continue;
   failing++;
   for (const r of new Set(fails.map((f) => f.rule))) rules[r] = (rules[r] ?? 0) + 1;
@@ -177,5 +260,7 @@ for (const it of picked) {
   for (const f of fails) console.log(`  - ${f.msg}`);
 }
 console.log(`\n${picked.length - failing} of ${picked.length} items pass, ${failing} fail.`);
+console.log(`not_for: ${pointerStats.lines} lines, ${pointerStats.linked} link to an item (${pointerStats.items} links), ${pointerStats.old} use an earlier name, ${pointerStats.unmatched.length} "use the ..." pointers name no item we know.`);
+if (args.includes("--pointers")) for (const u of pointerStats.unmatched) console.log(`  unmatched: ${u}`);
 if (tally && failing) console.log(Object.entries(rules).sort((a, b) => b[1] - a[1]).map(([r, n]) => `${r}: ${n}`).join(", "));
 if (failing || process.exitCode) process.exit(1);

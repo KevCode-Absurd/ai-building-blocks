@@ -18,6 +18,7 @@ import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
 import path from "node:path";
 import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
+import { similarHtml, skipWhenItems } from "./lib/similar-html.mjs";
 import { BRAND, describe, fitTitle, itemSeo, lowerFirst, mindTitle, pageTitle, titleLadder, trimDescription } from "../src/lib/seo-meta.mjs";
 
 const DIST = process.env.PRERENDER_DIST || "dist";
@@ -93,11 +94,12 @@ const hash = (s) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7)
 const LICENCE_URL = (id) => (id ? `https://spdx.org/licenses/${id}.html` : undefined);
 const jobHref = (t) => `/jobs/${t}`;
 const readPage = (slug) => { try { return JSON.parse(fs.readFileSync(`public/data/pages/${slug}.json`, "utf8")); } catch { return {}; } };
-// "Is it for you?" (the first 3 when, all not_for) and the output sample, for the What you get part of a page.
-function fitAndExample(page) {
+// "Is it for you?" (the first 3 when, all not_for with the items they name linked), the similar items in the same job,
+// and the output sample, for the What you get part of a page.
+function fitAndExample(page, slug) {
   const strs = (v) => (Array.isArray(v) ? v : v ? [v] : []).filter((x) => typeof x === "string" && x.trim());
-  const useWhen = strs(page.when).slice(0, 3), notFor = strs(page.not_for);
-  const fitHtml = useWhen.length || notFor.length ? `<div id="fit"><h3>Is it for you?</h3>${useWhen.length ? `<h4>Use it when</h4>${list(useWhen.map(esc))}` : ""}${notFor.length ? `<h4>Skip it when</h4>${list(notFor.map(esc))}` : ""}</div>` : "";
+  const useWhen = strs(page.when).slice(0, 3), notFor = skipWhenItems(page, esc);
+  const fitHtml = (useWhen.length || notFor.length ? `<div id="fit"><h3>Is it for you?</h3>${useWhen.length ? `<h4>Use it when</h4>${list(useWhen.map(esc))}` : ""}${notFor.length ? `<h4>Skip it when</h4>${list(notFor)}` : ""}</div>` : "") + similarHtml(page.siblings, slug, esc);
   // output_sample: what goes in, then what comes out. The full list is kept for crawlers; the page itself folds it after 6.
   const os = page.output_sample;
   const outs = (Array.isArray(os?.output) ? os.output : []).filter((o) => o && typeof o.name === "string" && o.name.trim() && typeof o.contains === "string" && o.contains.trim());
@@ -401,7 +403,7 @@ function pageFor(url) {
   const twin = b.twin && bySlug[b.twin] && hasPage(bySlug[b.twin]) ? bySlug[b.twin] : null;
   const explain = text(page.html?.explain);
   const when = Array.isArray(page.when) ? page.when : page.when ? [page.when] : [];
-  const { fitHtml, sampleHtml, hasSample } = fitAndExample(page);
+  const { fitHtml, sampleHtml, hasSample } = fitAndExample(page, slug);
   // The page's own subhead leads; the shared sentence is only for a page that has none.
   const kindLine = isCoordinator ? `It follows ${coordinatorFiles}, preserving the required inputs, evidence and checkpoints.` : isFlow ? "It guides your AI through several skills in order, passing each step's output to the next." : "Give the instructions to an AI assistant that supports the required files and tools, then review its output.";
   const subhead = text(page.subhead);

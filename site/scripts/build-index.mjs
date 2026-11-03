@@ -457,7 +457,7 @@ const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "age
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const roles = roleSeeds(blocks);
 const roleUrls = roles.length ? ["/roles", ...Array.from({length:Math.ceil(roles.length/24)-1},(_,i)=>`/roles/page/${i+2}`), ...roles.map(r=>`/roles/${r.id}`)] : [];
-const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/teams", "/compose", "/how-it-works", "/minds", ...roleUrls, "/from-a-source", "/community", "/tools", ...[...BROWSER_TOOLS, ...TOOLS].map((t) => `/tools/${t.slug}`), "/apps", "/api-and-mcp", "/me-md", "/train-your-own-ai-agent", ...INFO_PAGES.map(page => page.path), ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 urls.push("/get-it-done", "/get-it-done/example", "/get-it-done/status"); // the outcome orchestrator's owner pages (src/outcomes-site)
 // One sitemap per kind of page, under a sitemap index, so Search Console shows how each kind is indexed.
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs, with the same dates as jobHubDates below.
@@ -545,6 +545,7 @@ const intro = [
   `- [Workflow planner](${SITE}/compose): describe a task, review a plan and download it for your AI`,
   `- [Hire an AI specialist](${SITE}/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.`,
   `- [Your me.md](${SITE}/me-md): prepare reusable context for your AI`,
+  `- [Train your own AI agent](${SITE}/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way`,
   `- [API and MCP](${SITE}/api-and-mcp): connect an AI and read the public API documentation`,
   `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,
   `- [How it works](${SITE}/how-it-works): from one prompt to your own AI app`,

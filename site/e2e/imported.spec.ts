@@ -56,18 +56,17 @@ test("old maker links keep their search without silently hiding other makers", a
   await expect(page).not.toHaveURL(/by=/);
 });
 
-test("work groups remain available as secondary filters and old job links still work", async ({ page }) => {
+test("work groups remain reachable by link and old job links still work", async ({ page }) => {
   await page.goto("/#library");
-  await page.getByTestId("more-filters").click();
-  await page.getByTestId("filter-work").click();
-  for (const name of ["Build and code", "Work with files", "Connect your tools", "Run your work"]) {
-    await expect(page.getByRole("option", { name: new RegExp(`^${name}`) })).toHaveCount(1);
+  for (const id of ["more-filters", "filter-work", "filter-task"]) await expect(page.getByTestId(id)).toHaveCount(0);
+  for (const [fn, name] of [["developer", "Build and code"], ["files", "Work with files"], ["connector", "Connect your tools"], ["office", "Run your work"]]) {
+    await page.goto(`/?fn=${fn}#library`);
+    await expect(page.getByTestId("result-count")).toContainText(`for “${name}”`);
   }
-  await page.keyboard.press("Escape");
   await page.goto("/?q=pretend+imported&fn=developer&job=build-websites#library");
   await expect(card(page, FAKE[0].slug)).toBeVisible();
-  await expect(page.getByTestId("filter-work")).toContainText("Build and code");
-  await expect(page.getByTestId("filter-task")).toContainText("Build websites");
+  await expect(page.getByTestId("result-count")).toContainText("Build websites");
+  expect(new URL(page.url()).searchParams.get("fn")).toBe("developer");
 });
 
 test("an imported skill's page credits the maker and still reads clean with no page file", async ({ page }) => {

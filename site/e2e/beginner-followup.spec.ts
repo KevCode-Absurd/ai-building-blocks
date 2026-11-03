@@ -13,7 +13,8 @@ for(const tag of ['', '@mobile ']){
   await page.getByRole('button',{name:'Clear search',exact:true}).click();
   await expect(input).toHaveValue('');await expect(input).toBeFocused();
   await expect(page.getByTestId('tab-skill')).toHaveAttribute('aria-selected','true');
-  await expect(page.getByTestId('job-marketing')).toHaveAttribute('aria-pressed','true');
+  expect(new URL(page.url()).searchParams.get('area')).toBe('marketing');
+  await expect(page.getByTestId('result-count')).toContainText('in Marketing');
   expect(new URL(page.url()).searchParams.has('q')).toBe(false);
   await expect(page.getByTestId('result-count')).toHaveAttribute('role','status');
  });
@@ -32,7 +33,7 @@ for(const tag of ['', '@mobile ']){
   await page.getByRole('link',{name:'Back to results',exact:true}).click();
   await expect(page.getByTestId('library-search')).toHaveValue('AEO');
   await expect(page.getByTestId('tab-skill')).toHaveAttribute('aria-selected','true');
-  await expect(page.getByTestId('job-marketing')).toHaveAttribute('aria-pressed','true');
+  expect(new URL(page.url()).searchParams.get('area')).toBe('marketing');
   await page.goBack();await expect(page.locator('main h1')).toBeVisible();
   await page.goForward();await expect(page.getByTestId('library-search')).toHaveValue('AEO');
  });
@@ -81,11 +82,10 @@ test('@mobile narrow screens retain readable filters and contextual file help',a
  for(const width of [320,390]){
   await page.setViewportSize({width,height:844});
   await page.goto('/?q=AEO#library');await expect(page.getByTestId('library-search')).toHaveValue('AEO');
-  for(const id of ['job-coding','job-marketing','more-filters']){const rect=await page.getByTestId(id).boundingBox();expect(rect!.height).toBeGreaterThanOrEqual(44);}
+  for(const id of ['tab-all','tab-skill','tab-specialists']){const rect=await page.getByTestId(id).boundingBox();expect(rect!.height).toBeGreaterThanOrEqual(44);}
+  for(const id of ['job-coding','more-filters','filter-task'])await expect(page.getByTestId(id)).toHaveCount(0);
   const clear=await page.getByRole('button',{name:'Clear search',exact:true}).boundingBox();expect(clear!.width).toBe(44);expect(clear!.height).toBe(44);
-  await page.getByTestId('filter-task').click();await expect(page.getByRole('listbox',{name:'Use case',exact:true})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
-  await page.keyboard.press('Escape');
   await page.goto('/from-a-source');await page.getByText('How to use the downloaded files',{exact:true}).click();
   await expect(page.locator('.intake-transfer-help')).toContainText('keep all its files together');
   const summary=await page.locator('.intake-transfer-help > summary').boundingBox(),help=await page.locator('.workflow-launch').boundingBox();

@@ -6,12 +6,11 @@ test.beforeEach(async ({ page }) => {
 
 test("visible library choices preserve the hero and keep every destination available", async ({ page }) => {
   await page.goto("/", { waitUntil: "domcontentloaded" });
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Get your ads, emails and plans done with AI");
-  await expect(page.locator(".hero .lede")).toHaveText("Type what you need done. Then copy free instructions into the chatbot you use. Or hire a specialist for the whole task.");
-  await expect(page.locator(".hero .btn-primary")).toHaveCount(1);
-  await expect(page.getByTestId("hero-hire")).toHaveAttribute("href", "/roles");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
+  await expect(page.locator(".hero .lede")).toHaveText("Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).");
+  await expect(page.locator(".hero-actions .btn-primary")).toHaveCount(1);
   await expect(page.locator(".react-flow")).toHaveCount(0);
-  await page.getByRole("button", { name: "Find help" }).click();
+  await page.getByRole("link", { name: "Start with a task", exact: true }).click();
   await expect(page.getByTestId("library-search")).toBeFocused();
   for (const kind of ["all", "prompt", "skill", "workflow", "agent", "mind"]) await expect(page.getByTestId(`tab-${kind}`)).toBeVisible();
   await expect(page.locator("#library .grid > a")).toHaveCount(16);
@@ -56,10 +55,8 @@ test("@mobile a phone can find a task and all advanced destinations", async ({ p
   await page.getByTestId("menu-btn").click();
   await expect(page.getByTestId("nav-compose")).toBeVisible();
   await page.keyboard.press("Escape");
-  await page.getByTestId("hero-goal").fill("make this easier to read");
-  await page.getByTestId("hero-goal").press("Enter");
-  await expect(page.getByTestId("library-search")).toHaveValue("make this easier to read");
-  await expect(page.getByTestId("library-top-hits").locator('a[href="/skills/plain-english-editor"]')).toBeInViewport();
+  await page.getByRole("link", { name: "Start with a task", exact: true }).click();
+  await page.getByTestId("library-search").fill("make this easier to read");
   await expect(page.locator('#library .grid a[href="/skills/plain-english-editor"]')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
 });

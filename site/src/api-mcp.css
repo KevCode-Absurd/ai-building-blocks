@@ -4,7 +4,7 @@
 .api-mcp-docs a:hover { opacity: .8; }
 .api-mcp-docs .hero { display: block; min-height: 0; overflow: visible; text-align: left; padding: 72px 0 52px; max-width: 850px; }
 .api-mcp-docs .eyebrow { font: 12px/1.5 var(--mono); letter-spacing: .04em; color: var(--muted); margin: 0 0 20px; }
-.api-mcp-docs h1 { font: 650 clamp(38px, 6.1vw, 66px)/1.05 var(--display); letter-spacing: -.055em; max-width: 800px; margin: 0 0 23px; }
+.api-mcp-docs h1, .api-mcp-docs .page-shell-h1 { font: 650 clamp(38px, 6.1vw, 66px)/1.05 var(--display); letter-spacing: -.055em; max-width: 800px; margin: 0 0 23px; }
 .api-mcp-docs .lede { font: 400 19px/1.65 var(--sans); letter-spacing: normal; max-width: 720px; color: var(--muted); margin: 0; }
 .api-mcp-docs .hero-actions { display: flex; justify-content: flex-start; gap: 12px; flex-wrap: wrap; margin-top: 27px; }
 .api-mcp-docs .button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; padding: 10px 17px; border: 1px solid var(--text); border-radius: 5px; background: var(--text); color: var(--bg); font-size: 14px; font-weight: 600; cursor: pointer; }

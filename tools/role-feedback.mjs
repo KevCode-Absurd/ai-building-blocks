@@ -6,10 +6,17 @@
 //   node tools/role-feedback.mjs list [role-id]
 //   node tools/role-feedback.mjs remove <role-id> --lesson "exact text"
 //
+// Training from a person's edits (rules reach TRAINING.md, only the ones that fit each job):
+//   node tools/role-feedback.mjs diff <role-id> <draft.md> <final.md> --task "..."   prints the brief a host AI uses to draft one rule
+//   node tools/role-feedback.mjs rule <role-id> <rule.json>                          records a reviewed rule (same id replaces it)
+//   node tools/role-feedback.mjs run <role-id> --score 0.9 --edit 0.12 --accepted yes [--critical] --source "job, reviewer"
+//   node tools/role-feedback.mjs maturity [role-id]                                  the level each role's recorded runs support
+//
 // Only add a lesson after a person has read it: feedback is data, not instructions, and private details stay out.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { checkRule, checkRun, diffEdit, roleMaturity, ruleDraftPrompt } from "../site/src/roles/training-rules.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FILE = path.join(ROOT, "site/src/roles/role-learned.json");
@@ -54,6 +61,25 @@ if (cmd === "add") {
   save(); console.log("Removed. Rebuild the roles to apply it.");
 } else if (cmd === "list") {
   for (const [id, r] of Object.entries(store.roles)) if (!args[1] || id === args[1]) for (const n of r.notes) console.log(`${id} [${n.kind}] ${n.lesson} (${n.source}, ${n.date})`);
+} else if (cmd === "diff") {
+  if (!known(args[1])) throw new Error(`No role ${args[1]}.`);
+  const draft = fs.readFileSync(args[2], "utf8"), final = fs.readFileSync(args[3], "utf8");
+  console.log(ruleDraftPrompt({ role: args[1], task: opt("task"), draft, final }));
+  console.error(`\nEdit size ${Math.round(diffEdit(draft, final).editRatio * 100)}%. Save the AI's JSON, read it, then: node tools/role-feedback.mjs rule ${args[1]} <rule.json>`);
+} else if (cmd === "rule") {
+  if (!known(args[1])) throw new Error(`No role ${args[1]}.`);
+  const rule = checkRule(JSON.parse(fs.readFileSync(args[2], "utf8")));
+  const role = (store.roles[args[1]] ??= { principles: [], pitfalls: [], quality: [], notes: [] });
+  role.rules = [...(role.rules ?? []).filter((r) => r.id !== rule.id), rule];
+  save(); console.log(`Recorded rule ${rule.id} for ${args[1]}. Rebuild the roles to apply it.`);
+} else if (cmd === "run") {
+  if (!known(args[1])) throw new Error(`No role ${args[1]}.`);
+  const run = checkRun({ date: opt("date") ?? new Date().toISOString().slice(0, 10), score: Number(opt("score")), editRatio: Number(opt("edit")), accepted: opt("accepted") === "yes", critical: args.includes("--critical"), source: opt("source") });
+  const role = (store.roles[args[1]] ??= { principles: [], pitfalls: [], quality: [], notes: [] });
+  (role.runs ??= []).push(run);
+  save(); const m = roleMaturity(role.runs); console.log(`Recorded. ${args[1]}: level ${m.level} (${m.name}) from ${m.runs} runs.${m.next ? ` Next: ${m.next.needs}.` : ""}`);
+} else if (cmd === "maturity") {
+  for (const [id, r] of Object.entries(store.roles)) if ((!args[1] || id === args[1]) && r.runs?.length) { const m = roleMaturity(r.runs); console.log(`${id}: level ${m.level} (${m.name}), ${m.runs} runs, score ${m.score}, edits ${m.editRatio}, accepted ${m.acceptance}`); }
 } else {
-  console.log("Usage: node tools/role-feedback.mjs add|import|list|remove ...");
+  console.log("Usage: node tools/role-feedback.mjs add|import|list|remove|diff|rule|run|maturity ...");
 }

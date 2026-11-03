@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { withoutPageShell } from './page-shell.mjs';
 
 export const CONTENT_SCHEMA = 'abb-content-fingerprints/1';
 export const sha256 = value => createHash('sha256').update(value).digest('hex');
@@ -14,9 +15,9 @@ function withoutModifiedDates(value) {
   return Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'dateModified').map(([key, entry]) => [key, withoutModifiedDates(entry)]));
 }
 
-/** Content, not a new asset filename, stylesheet, loader script or the stamp itself. */
+/** Content, not a new asset filename, stylesheet, loader script, the loading cover's picture of the page or the stamp itself. */
 export function canonicalHtml(html) {
-  return html.replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
+  return withoutPageShell(html).replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
     /\btype\s*=\s*["']application\/ld\+json["']/i.test(attributes)
       ? `<script type="application/ld+json">${stableJson(withoutModifiedDates(JSON.parse(body)))}</script>` : '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi, '')

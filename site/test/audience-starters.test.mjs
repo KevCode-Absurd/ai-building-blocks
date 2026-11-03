@@ -45,12 +45,12 @@ test('the reusable intake asks for source dates, permissions and output checks',
   for (const term of ['Source date and version', 'Permission to use', 'Deadline and timezone', 'A good result must', 'Course rules', 'does not itself authorize']) assert.ok(text.includes(term), term);
 });
 
-test('the small business path is for owners and is offered on the home page without More filters', () => {
+test('the small business path is for owners, and the home page keeps only the format tabs and search', () => {
   const owner = starterFor('small-business');
   assert.equal(owner?.name, 'Small businesses');
   assert.equal(owner.slugs.length, 8);
   for (const slug of ['customer-review-reply-writer', 'invoice-maker', 'cash-forecast-builder']) assert.ok(isAudienceStarter(slug, 'small-business'), slug);
   const home = fs.readFileSync('src/HomePage.tsx', 'utf8');
-  const visible = home.indexOf('data-testid="starter-small-business"'), more = home.indexOf('id="library-more-filters"');
-  assert.ok(visible > 0 && visible < more, 'the owner path sits outside the More filters group');
+  for (const gone of ['starter-small-business', 'library-more-filters', 'library-job-functions', 'scope-toggle', 'library-star-filter', 'library-top-hits']) assert.ok(!home.includes(gone), gone + ' is not on the home page');
+  assert.match(home, /data-testid="tab-specialists"/);
 });

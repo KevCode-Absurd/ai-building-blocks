@@ -2,23 +2,32 @@ import { test, expect } from './fixtures/staging-aware-test';
 import fs from 'node:fs';
 import { unzipSync, strFromU8 } from 'fflate';
 
-test('only the five audience starters are offered, shareable and can return to the full library', async ({ page }) => {
+// Each starter's goal line in the audience guide names which starter is active.
+const GOALS: Record<string, string> = {
+  'small-business': 'Win customers, answer reviews',
+  students: 'Learn a topic, check your understanding',
+  professionals: 'Prepare meetings, turn notes into actions',
+  startups: 'Test an idea, plan runway',
+  enterprise: 'Review policies, suppliers and processes',
+};
+
+test('the five audience starter links are shareable and can return to the full library', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByTestId('block-card')).toHaveCount(16);
-  await page.getByTestId('filter-audience').click();
-  await expect(page.getByRole('option').locator('.sel-name')).toHaveText(['Full library', 'Small businesses', 'Students', 'Professionals', 'Startups', 'Enterprise']);
-  await page.keyboard.press('Escape');
-  for (const [id, label] of [['small-business', 'Small businesses'], ['students', 'Students'], ['professionals', 'Professionals'], ['startups', 'Startups'], ['enterprise', 'Enterprise']]) {
-    await page.getByTestId('filter-audience').click();
-    await page.getByRole('option', { name: label, exact: true }).click();
+  // The starter picker is no longer a home control; starters are reached by link.
+  await expect(page.getByTestId('filter-audience')).toHaveCount(0);
+  await expect(page.getByTestId('starter-small-business')).toHaveCount(0);
+  for (const id of ['small-business', 'students', 'professionals', 'startups', 'enterprise']) {
+    await page.goto(`/?audience=${id}#library`);
     await expect(page.getByTestId('block-card')).toHaveCount(8);
     await expect(page).toHaveURL(new RegExp(`audience=${id}`));
     await expect(page.getByTestId('audience-guide')).toContainText('Bring:');
+    await expect(page.getByTestId('audience-guide')).toContainText(GOALS[id]);
     await page.reload();
-    await expect(page.getByTestId('filter-audience')).toContainText(label);
+    await expect(page.getByTestId('audience-guide')).toContainText(GOALS[id]);
     await expect(page.getByTestId('block-card')).toHaveCount(8);
   }
-  await page.getByRole('button', { name: 'Clear all', exact: true }).click();
+  await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
   await expect(page.getByTestId('block-card')).toHaveCount(16);
   await expect(page).not.toHaveURL(/audience=/);
 });
@@ -44,13 +53,14 @@ test('student context reaches a complete imported download with its license', as
 });
 
 test('old audience and task links migrate to the current audience and survive refresh', async ({ page }) => {
-  for (const [old, id, label] of [['workers', 'professionals', 'Professionals'], ['small-businesses', 'small-business', 'Small businesses'], ['presentations', 'professionals', 'Professionals'], ['case-competitions', 'students', 'Students'], ['research-documents', 'students', 'Students'], ['equity-research', 'professionals', 'Professionals']]) {
+  for (const [old, id] of [['workers', 'professionals'], ['small-businesses', 'small-business'], ['presentations', 'professionals'], ['case-competitions', 'students'], ['research-documents', 'students'], ['equity-research', 'professionals']]) {
     await page.goto(`/?audience=${old}#library`);
     await expect(page).toHaveURL(new RegExp(`audience=${id}`));
-    await expect(page.getByTestId('filter-audience')).toContainText(label);
+    await expect(page.getByTestId('audience-guide')).toContainText(GOALS[id]);
     await expect(page.getByTestId('block-card')).toHaveCount(8);
     await page.reload();
-    await expect(page.getByTestId('filter-audience')).toContainText(label);
+    await expect(page).toHaveURL(new RegExp(`audience=${id}`));
+    await expect(page.getByTestId('audience-guide')).toContainText(GOALS[id]);
   }
 });
 
@@ -59,12 +69,9 @@ test('@mobile audience starters and intake template work at phone width', async 
   for (const id of ['small-business', 'students', 'professionals', 'startups', 'enterprise']) {
     await page.goto(`/?audience=${id}#library`);
     await expect(page.getByTestId('block-card')).toHaveCount(8);
+    await expect(page.getByTestId('audience-guide')).toContainText(GOALS[id]);
+    await expect(page.getByTestId('filter-audience')).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
-    await page.getByTestId('filter-audience').click();
-    await expect(page.getByRole('listbox', { name: 'Start with' })).toBeVisible();
-    await expect(page.getByRole('option').locator('.sel-name')).toHaveText(['Full library', 'Small businesses', 'Students', 'Professionals', 'Startups', 'Enterprise']);
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
-    await page.keyboard.press('Escape');
   }
   await page.goto('/?audience=enterprise#library');
   await expect(page.getByTestId('audience-guide')).toContainText('need your own implementation');

@@ -63,6 +63,8 @@ export function mindTitle({ name, identity, area }) {
   return fitTitle(titleLadder(clean(name), [
     ...(identity && a ? [`${clean(identity)} as an AI mind for ${a}`] : []),
     ...(a ? [`free AI mind for ${a} help`, `free AI mind for ${a}`] : []),
+    // A middle length, so a short area never leaves the title under 50 characters.
+    ...(identity ? [`${clean(identity)} as a free AI mind`] : []),
     "free AI mind for advice",
     "free AI mind to ask for help",
     "free AI mind",

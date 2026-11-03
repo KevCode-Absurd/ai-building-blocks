@@ -325,6 +325,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <li>Try one skill on a small real job first. Check whether it uses your facts, gives the promised result and follows its own checklist. Keep it if the result helps; adapt it if it misses your needs.</li>
               <li>Give it real facts. Your AI only knows what you tell it. When it has to guess, it can make things up.</li>
               <li data-testid="hiw-me-md"><Link to="/me-md">Make your me.md once. Every task then fits you.</Link> It's a short private file about you, added to what you copy and download.</li>
+              <li data-testid="hiw-train-agent"><Link to="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</Link> Each edit you make becomes a rule it follows next time.</li>
               <li>Set up your brand file once. Run “Brand profile builder” first, and every later step can use it.</li>
               <li>Start a new chat for a new job. Long chats about many things get muddled.</li>
               <li>Read the result before you use it, most of all prices, claims and anything legal.</li>

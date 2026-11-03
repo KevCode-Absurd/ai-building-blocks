@@ -1,7 +1,7 @@
 // Shared by the app and prerenderer so visitors and search engines read the same policies.
 export const SUPPORT_EMAIL = "hello@useaiblocks.com";
 export const OPERATOR = "Kevin Mark";
-export const POLICY_DATE = "26 October 2026";
+export const POLICY_DATE = "3 November 2026";
 // Public profiles for AI Blocks, listed once here. Each one goes into the site's structured data (Organization sameAs) and
 // the footer. Add only real, confirmed profiles, for example { label: "YouTube", url: "https://www.youtube.com/@name" }.
 // Left empty on purpose until the handles are confirmed.

@@ -10,6 +10,7 @@ import { factCheckHtml } from "./lib/fact-check-html.mjs";
 import { catalogueUsageHowTo } from "./lib/catalogue-usage.mjs";
 import { skillNeighbours } from "../src/lib/skill-neighbours.ts";
 import { hubDescription } from "./lib/hub-description.mjs";
+import { pageShell } from "./lib/page-shell.mjs";
 import {rolePage} from "./lib/role-pages.mjs";
 import { loadRoleLinks, specialistsSection, hubSpecialists } from "./lib/role-links.mjs";
 import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
@@ -129,7 +130,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Plan a job</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -165,10 +166,11 @@ const SEO_PAGES = {
   "/tools": ["Free online calculators and everyday tools | AI Blocks", STATIC["/tools"][1]],
   "/apps": ["Example AI app you can click through and copy | AI Blocks", STATIC["/apps"][1]],
   "/api-and-mcp": ["Connect your AI to AI Blocks with MCP or the API | AI Blocks", "Connect ChatGPT, Claude, Codex or your own app to AI Blocks once. Then your AI can find, plan and get any skill or workflow when it needs one."],
+  "/train-your-own-ai-agent": ["How to train your own AI agent, step by step | AI Blocks", "Train ChatGPT, Claude or Gemini to do one job your way, with no code. Nine plain steps, five prompts and a free starter pack with every file you need."],
   "/me-md": ["me.md: one file that tells every AI who you are | AI Blocks", "Make one private file that tells ChatGPT, Claude and Gemini who you are. Get the template, three prompts to make it, and where to put it in each AI."],
   "/tools/growth-channel-planner": ["Growth channel planner: compare 19 channels | AI Blocks", "Prepare a growth brief for any business. Compare 19 channels, define customer outcomes and download a complete planning skill pack. No sign-in needed."],
   "/support": ["Get help with AI Blocks skills and workflows | AI Blocks", "Ask a question, report a broken skill or get help with your workflow. Write to Kevin Mark at hello@useaiblocks.com and get a reply from a person."],
-  "/about": ["About: free reusable AI skills and workflows | AI Blocks", "AI Blocks is a free library of AI skills, prompts, workflows, minds and mini tools, run by Kevin Mark in India. See what it is for and who makes it."],
+  "/about": ["About: free reusable AI skills and workflows | AI Blocks", "AI Blocks is a free library of AI skills, prompts, workflows, minds and mini tools, run by Kevin Mark. See what it is for and who makes it."],
   "/privacy": ["Privacy policy: accounts, saved work and AI use | AI Blocks", "How AI Blocks handles saved work, accounts, AI requests and optional visitor analytics, and how to contact us about your data or ask for it to be deleted."],
   "/terms": ["Terms of service: accounts, licences, AI output | AI Blocks", "The terms for using AI Blocks, including free access, accounts, acceptable use, content licences, third-party tools and what to know about AI output."],
   "/cookies": ["Cookies and browser storage: what we save | AI Blocks", "What AI Blocks saves in your browser, which sign-in and security storage it uses, and how Google Analytics and Microsoft Clarity cookies work."],
@@ -192,6 +194,7 @@ function howItWorksBody() {
     `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use ${/^[aeiou]/i.test(kind) ? "an" : "a"} ${esc(kind.toLowerCase())}.`))}`,
     `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Plan a job from your goal</a> · <a href="/apps">See an example app</a></p>`,
     `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
+    `<p><a href="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</a></p>`,
     `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Tested means the item ran on a real business's files and a second AI graded the result against the page's own checks. Imported items say when they have not been tested yet."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
     `<h2>Words you'll see</h2>${list(words.map(([w, d]) => `<b>${esc(w)}</b>: ${esc(d)}`))}`,
   ].join("");
@@ -288,6 +291,18 @@ function pageFor(url) {
     desc: SEO_PAGES[url][1], modified: "2026-10-27", mainClass: "me-md-docs",
     content: fs.readFileSync("src/content/me-md.html", "utf8"),
     stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^MeMdPage-.*\.css$/.test(file)),
+  };
+  // The training guide: an Article by the site's operator, with the starter pack as its download.
+  if (url === "/train-your-own-ai-agent") return {
+    title: "Train your own AI agent", h1: "How to train your own AI agent, step by step", documentTitle: SEO_PAGES[url][0],
+    desc: SEO_PAGES[url][1], modified: "2026-11-03", mainClass: "agent-guide",
+    content: fs.readFileSync("src/content/train-agent.html", "utf8"),
+    stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^TrainAgentPage-.*.css$/.test(file)),
+    main: { "@type": "Article", "@id": `${SITE}${url}#article`, headline: "How to train your own AI agent, step by step", description: SEO_PAGES[url][1], inLanguage: "en",
+      author: { "@type": "Person", name: OPERATOR }, publisher: { "@id": `${SITE}/#org` }, datePublished: "2026-11-03", dateModified: "2026-11-03",
+      image: `${SITE}/og/default.png`, isAccessibleForFree: true,
+      about: ["AI agents", "Training an AI agent", "ChatGPT projects", "Claude projects", "Gemini Gems"],
+      associatedMedia: { "@type": "MediaObject", name: "AI agent starter pack", contentUrl: `${SITE}/templates/ai-agent-starter-pack.zip`, encodingFormat: "application/zip" } },
   };
   const info = infoPage(url);
   if (info) return {
@@ -563,6 +578,8 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     : p.hub
     ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
     : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
+  // The loading cover shows this page's header and heading at once, styled (scripts/lib/page-shell.mjs). Home has its own.
+  const picture = plain || url === "/" ? "" : pageShell({ logo, h1: esc(p.h1), body, content: p.content ?? "", mainClass: p.mainClass ?? "api-mcp-docs" });
   const metadata = { title, description: desc, canonical, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
@@ -579,6 +596,7 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     `<meta name="robots" content="${metadata.robots}" />`,
   ].filter(Boolean).join("\n    ");
   return injectPrerender((plain ? plainShell : shell)
+    .replace(/<div id="app-loader"[^>]*>/, (open) => open + picture)
     .replace(/<meta name="robots"[^>]*>\s*/g, "")
     .replace(/<title>[^<]*<\/title>/, () => `<title>${esc(title)}</title>`)
     .replace(/(<meta name="description" content=")[^"]*/, (_, prefix) => prefix + esc(desc))
@@ -601,6 +619,7 @@ const mindsXml = fs.readFileSync(mindsSitemap, "utf8");
 fs.writeFileSync(mindsSitemap, mindsXml.replace(/\s*<url><loc>https:\/\/useaiblocks\.com\/minds\/page\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "").replace("</urlset>", mindPages.map(url => `  <url><loc>${SITE}${url}</loc></url>`).join("\n") + "\n</urlset>"));
 if (!urls.includes("/api-and-mcp")) urls.push("/api-and-mcp");
 if (!urls.includes("/me-md")) urls.push("/me-md");
+if (!urls.includes("/train-your-own-ai-agent")) urls.push("/train-your-own-ai-agent");
 // Imported pages without a Tested label still get a page and stay indexable.
 const thinUrls = new Set(cat.blocks.filter((b) => hasPage(b) && isThin(b)).map(hrefOf));
 for (const u of thinUrls) if (!urls.includes(u)) urls.push(u);
@@ -610,17 +629,16 @@ const titles = new Map(), problems = [];
 
 // The home page: the main sections and every job, so a crawler reaches the whole library in two steps.
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
-const homeTypes = [["", "All", "Explore the library"], ["prompt", "Prompts", "Paste into a chat"], ["skill", "Skills", "Run the same steps every time"], ["workflow", "Workflows", "Connect several steps"], ["agent", "Agents", "Delegate a repeatable job"], ["mind", "Minds", "Borrow an expert's thinking"]];
+const homeTypes = [["", "All", "Explore the library"], ["skill", "Skills", "Run the same steps every time"], ["prompt", "Prompts", "Paste into a chat"], ["workflow", "Workflows", "Connect several steps"], ["agent", "Agents", "Delegate a repeatable job"], ["mind", "Minds", "Borrow an expert's thinking"]];
 const homeMinds = cat.blocks.filter(b => b.type === "mind");
 const homeFlows = cat.blocks.filter(b => kindPath(b) === "workflows" && hasPage(b));
 const homeAgents = cat.blocks.filter(b => b.type === "agent" && hasPage(b) && !isThin(b)).sort((a, b) => (b.tested ? 1 : 0) - (a.tested ? 1 : 0));
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
   documentTitle: "Free AI Skills & Custom Workflow Builder | AI Blocks",
-  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Get your ads, emails and plans done with AI",
+  title: "Free AI skills, workflows and minds", desc: "Explore free AI skills, prompts and workflows. Build a custom workflow, edit the steps and download a pack to run in your AI. Try free browser tools too.", h1: "Use AI like the top 1%",
   body: [
-    `<p class="bp-sub">Type what you need done. Then copy free instructions into the chatbot you use. Or hire a specialist for the whole task.</p>`,
-    `<form class="hero-goal" action="/#library" method="get" role="search"><input name="q" type="search" aria-label="What do you want to get done?" placeholder="What do you want to get done?" maxlength="300"><button type="submit" class="btn btn-primary">Find help →</button></form>`,
-    `<p><a class="btn btn-line" href="/roles" data-testid="hero-hire">Hire an AI specialist →</a> <a class="btn btn-line" href="/compose" data-testid="hero-build-workflow">Plan a job →</a></p>`,
+    `<p class="bp-sub">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>`,
+    `<p><a class="btn btn-line" href="/#build" data-testid="hero-build-workflow">Build a workflow →</a></p>`,
     `<section id="library"><h2>Explore the library</h2><nav aria-label="Task types">${list(homeTypes.map(([kind, name, description]) => `<a href="/${kind ? `?kind=${kind}` : ""}#library"><b>${name}</b></a>: ${description}`))}</nav>${list(cat.blocks.filter(b => hasPage(b) && b.type !== "mind").slice(0, 16).map(b => `${link(b)}: ${esc(b.summary)}`))}<p><a href="/jobs">Browse all tasks by job</a> · <a href="/how-it-works">How it works</a></p><p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p></section>`,
     `<section id="home-minds"><h2>Minds</h2>${list(homeMinds.slice(0, 8).map(link))}<p><a href="/minds">Explore all ${homeMinds.length} minds</a></p></section>`,
     `<section id="home-workflows"><h2>Workflows and builder</h2><p><a href="/#build">Open the workflow builder</a> · <a href="/compose">Plan from a goal</a> · <a href="/apps">See an example</a></p>${list(homeFlows.slice(0, 6).map(link))}<p><a href="/?kind=workflow#library">Browse all workflows</a></p></section>`,

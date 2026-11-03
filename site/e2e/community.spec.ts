@@ -71,7 +71,9 @@ test("stars live on detail pages and filter the library", async ({ page }) => {
   const star = page.getByRole("button", { name: `Star ${name}`, exact: true }); await star.click();
   await expect(page.getByRole("button", { name: `Unstar ${name}`, exact: true })).toHaveText("Starred");
   await page.getByRole("link", { name: "Back to results", exact: true }).click();
-  await page.getByRole("button", { name: "Starred", exact: true }).click();
+  // The library has no Starred toggle; the starred view is reached by link.
+  await expect(page.locator(".library-star-filter")).toHaveCount(0);
+  await page.goto("/?kind=skill&starred=1#library");
   await expect(cards).toHaveCount(1); await expect(cards).toHaveAttribute("data-slug", slug!);
   await page.reload(); await expect(cards).toHaveCount(1);
   await cards.click(); await page.getByRole("button", { name: `Unstar ${name}`, exact: true }).click();

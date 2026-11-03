@@ -7,6 +7,7 @@ import { Link, navigate, useLocation } from "./lib/router";
 import { openBusiness } from "./Business";
 import { browserSaves, type BrowserSave } from "./lib/signup-saves";
 import AccountSessionActions from "./AccountSessionActions";
+import { WORK_KEY, nameFromSlug, parseWork } from "./lib/saved-work-data";
 
 function downloadBrowserSave(save: BrowserSave, plan = false) {
   const raw = plan ? save.data["abb:composer"]! : JSON.stringify({ format: "ai-blocks-library/1", data: save.data });
@@ -78,7 +79,7 @@ function Settings() {
       }}>Download saving diagnostics</button>
     </section>
     <section className="account-setting"><div><h2>Your me.md</h2><p className="small">Edit the private file about you that is added to your prompts and downloads.</p></div><button className="btn btn-line btn-sm" onClick={openBusiness}>Edit your me.md</button></section>
-    <section className="account-setting"><div><h2>Team access</h2><p className="small">Manage your space, invited email addresses and company domain access.</p></div><Link to="/space" className="btn btn-line btn-sm">Manage my space</Link></section>
+    <section className="account-setting"><div><h2>Team space</h2><p className="small">Choose what you share with your team, and who can open it by email address or company domain.</p></div><Link to="/space" className="btn btn-line btn-sm">Manage team space</Link></section>
     {notice && <p className="account-notice" role="status">{notice}</p>}
   </div>;
 }
@@ -90,6 +91,8 @@ function MyWork({ c, onKits }: { c: Catalogue | null; onKits: () => void }) {
   const skills = [...new Set(kits.flatMap(k => k.slugs))].flatMap(slug => c?.bySlug[slug] ? [c.bySlug[slug]] : []);
   const custom = work.flatMap(flow => (flow.customSkills ?? []).map(skill => ({ skill, flow }))).filter((entry, i, all) => all.findIndex(other => other.skill.slug === entry.skill.slug && other.skill.markdown === entry.skill.markdown) === i);
   const resume = (id?: string) => { if (id) flows.open(id); navigate("/#build"); };
+  const recent = parseWork(snapshot.data[WORK_KEY]);
+  const tools = Object.entries(recent.tools).sort((a, b) => b[1].at - a[1].at).slice(0, 5), roles = Object.entries(recent.roles).sort((a, b) => b[1].at - a[1].at).slice(0, 5);
   return <>
     {!snapshot.user && <div className="account-local-note"><span>These saves are on this browser.</span><Link to="/sign-up">Sign up to keep an account copy →</Link></div>}
     {(snapshot.status === "error" || snapshot.status === "conflict") && <p role="alert" className="account-notice">Your latest changes need attention. <Link to="/account?view=settings">Open saving settings →</Link></p>}
@@ -101,8 +104,8 @@ function MyWork({ c, onKits }: { c: Catalogue | null; onKits: () => void }) {
       <section className="account-card"><div className="account-card-heading"><h2>Workflows</h2><span className="small">{saved.length}</span></div>
         {draft && <button className="account-work-row" onClick={() => resume()}><span>{draft.name || "Current workflow"}<small>Current draft</small></span><span aria-hidden="true">↗</span></button>}
         {saved.map(flow => <button className="account-work-row" key={flow.id} onClick={() => resume(flow.id)}><span>{flow.name}</span><span aria-hidden="true">↗</span></button>)}
-        {!draft && !saved.length && <p className="small">Plans and workflows you save appear here.</p>}
-        <Link to="/compose" className="account-card-action">{snapshot.data["abb:composer"] ? "Resume my last plan →" : "Plan a workflow →"}</Link>
+        {!draft && !saved.length && <p className="small">Every plan you make is saved here, with workflows you build.</p>}
+        <Link to="/compose" className="account-card-action">{snapshot.data["abb:composer"] ? "Open my last plan →" : "Plan a job →"}</Link>
       </section>
       <section className="account-card"><div className="account-card-heading"><h2>Skills</h2><span className="small">{skills.length + custom.length}</span></div>
         {skills.map(skill => <Link className="account-work-row" to={pathOf(skill)} key={skill.slug}>{skill.name}<span aria-hidden="true">↗</span></Link>)}
@@ -110,7 +113,13 @@ function MyWork({ c, onKits }: { c: Catalogue | null; onKits: () => void }) {
         {!skills.length && !custom.length && <p className="small">Skills in your kits and custom skills in your workflows appear here.</p>}
         <Link to="/#library" className="account-card-action">Find a skill →</Link>
       </section>
-      <section className="account-card"><div className="account-card-heading"><h2>Your space</h2></div><p className="small">Keep shared work together. Choose who can open it by email address or company domain.</p><Link to="/space" className="account-card-action">Open my space →</Link></section>
+      <section className="account-card" data-testid="account-numbers"><div className="account-card-heading"><h2>Calculators and specialists</h2><span className="small">{tools.length + roles.length}</span></div>
+        {tools.map(([slug, entry]) => <Link className="account-work-row" to={`/tools/${slug}`} key={`tool:${slug}`}><span>{entry.name || nameFromSlug(slug)}<small>Your numbers are saved</small></span><span aria-hidden="true">↗</span></Link>)}
+        {roles.map(([id, entry]) => <Link className="account-work-row" to={`/roles/${id}`} key={`role:${id}`}><span>{entry.name || nameFromSlug(id)}<small>Specialist you looked at</small></span><span aria-hidden="true">↗</span></Link>)}
+        {!tools.length && !roles.length && <p className="small">Numbers you type into a calculator and specialists you open appear here.</p>}
+        <Link to="/tools" className="account-card-action">Open a calculator →</Link>
+      </section>
+      <section className="account-card"><div className="account-card-heading"><h2>Team space</h2></div><p className="small">My work is only for you. Your team space is separate. It holds what you choose to share, and you pick who can open it by email address or company domain.</p><Link to="/space" className="account-card-action">Open team space →</Link></section>
       {browserSaves(snapshot.data).filter(save => save.data["abb:composer"] && save.data["abb:composer"] !== snapshot.data["abb:composer"]).map(save => <section className="account-card" key={save.id}><h2>Browser plan</h2><p className="small">This plan was kept separately so your current account plan stays intact.</p><button className="link-btn account-card-action" onClick={() => downloadBrowserSave(save, true)}>Download editable browser plan →</button></section>)}
     </div>
   </>;
@@ -123,7 +132,7 @@ export default function AccountPage({ c, onKits }: { c: Catalogue | null; onKits
   useEffect(() => { if (snapshot.user && (path === "/sign-up" || path === "/sign-in")) navigate("/account", { replace: true }); }, [snapshot.user, path]);
   if ((path === "/sign-up" || path === "/sign-in") && !snapshot.user) return <main className="wrap account-page"><SignUp signIn={path === "/sign-in"} /></main>;
   return <main className="wrap account-page" data-testid="account-page" data-account={snapshot.user ?? "guest"} data-save-status={snapshot.status}>
-    <div className="account-heading"><p className="account-eyebrow">{snapshot.user ? "My account" : "On this browser"}</p><h1>{settings ? "Settings" : account.profile.name ? `${account.profile.name.split(" ")[0]}’s saved work` : "Your saved work"}</h1><p className="lede">{settings ? "Your account, saving and personal details." : "Everything you’ve kept, in one place."}</p></div>
+    <div className="account-heading"><p className="account-eyebrow">{snapshot.user ? "My account" : "On this browser"}</p><h1>{settings ? "Settings" : account.profile.name ? `${account.profile.name.split(" ")[0]}’s work` : "My work"}</h1><p className="lede">{settings ? "Your account, saving and personal details." : "Your plans, workflows, kits, calculator numbers and specialists, in one place."}</p></div>
     <AccountSessionActions />
     <nav className="account-tabs" aria-label="Account"><Link to="/account" aria-current={!settings ? "page" : undefined}>My work</Link><Link to="/account?view=settings" aria-current={settings ? "page" : undefined}>Settings</Link></nav>
     {settings ? <Settings /> : <MyWork c={c} onKits={onKits} />}

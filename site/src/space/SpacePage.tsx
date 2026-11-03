@@ -79,7 +79,7 @@ function ItemCard({ item, c, toast, owner, onChange, onDelete, onSave }: {
         {item.body && <button className="btn btn-ghost btn-sm" onClick={() => copy(item.body, toast, "Source text copied.")}>{workflow ? "Copy source text" : "Copy"}</button>}
         {workflow ? <button className="btn btn-primary btn-sm" onClick={() => void getWorkflow()} disabled={busy} data-testid="space-workflow-download">{busy ? "Preparing the files…" : structured ? item.kind === "agent" ? "Download the agent pack" : "Download the workflow" : "Download source files"}</button> : item.body && <button className="btn btn-ghost btn-sm" onClick={() => download(new Blob([item.body], { type: "text/markdown" }), fileName(item))}>Download</button>}
         {(structured || slugs.length > 0) && <button className="btn btn-ghost btn-sm" onClick={toBuilder} data-testid="item-builder">Open in the builder</button>}
-        {onSave && <button className="btn btn-ghost btn-sm" onClick={onSave} data-testid="item-save">Save to my space</button>}
+        {onSave && <button className="btn btn-ghost btn-sm" onClick={onSave} data-testid="item-save">Save to team space</button>}
         {owner && onDelete && <button className="btn btn-ghost btn-sm sp-del" onClick={() => { if (confirm(`Delete "${item.title}" from your space? This can't be undone.`)) onDelete(); }} data-testid="item-delete">Delete</button>}
       </div>
       {workflow && <ExecutionPrompt name={item.title} goal={sourceGoal(item)} instructions={spaceExecutionPrompt(item)} copyTestId="space-copy-execution-prompt" />}
@@ -143,7 +143,7 @@ function AddForm({ onAdd }: { onAdd: (items: NewItem[]) => Promise<void> }) {
       <label className="sp-field"><span>{kind === "agent" ? "The agent's instructions" : kind === "workflow" ? "The steps, in order" : kind === "kit" ? "What's in it" : "The skill or prompt"}</span>
         <textarea rows={7} value={body} onInput={(e) => setBody(e.currentTarget.value)} placeholder={kind === "agent" ? "You answer support emails for…" : "Paste the SKILL.md or the prompt"} data-testid="add-body" />
       </label>
-      <p><button className="btn btn-primary btn-sm" disabled={busy || (!title.trim() && !body.trim())} data-testid="add-save">{busy ? "Saving…" : "Add to my space"}</button></p>
+      <p><button className="btn btn-primary btn-sm" disabled={busy || (!title.trim() && !body.trim())} data-testid="add-save">{busy ? "Saving…" : "Add to team space"}</button></p>
       <p className="small">Workflows and kits you make in the builder can be added from there, or brought in below.</p>
     </form>
   );
@@ -156,7 +156,7 @@ function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
   const make = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setBusy(true);
-    try { const r = await spaces.make(name.trim() || "My space"); if (!hasAccount()) setSpaceKey(r.ownerKey); onMade?.(); toast("Your space is ready"); }
+    try { const r = await spaces.make(name.trim() || "Team space"); if (!hasAccount()) setSpaceKey(r.ownerKey); onMade?.(); toast("Your space is ready"); }
     catch (err) { toast(errText(err)); }
     finally { setBusy(false); }
   };
@@ -168,10 +168,10 @@ function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
   return (
     <div className="sp-start">
       <form className="sp-card" onSubmit={make} data-testid="make-space">
-        <h2 className="bp-h2">Make your space</h2>
+        <h2 className="bp-h2">Make your team space</h2>
         <p className="small">Sign in above to keep ownership across devices and restrict team access. Guest spaces need a private recovery link.</p>
         <label className="sp-field"><span>Name it</span><input value={name} onInput={(e) => setName(e.currentTarget.value)} maxLength={60} placeholder="Sam's marketing team" data-testid="space-name" /></label>
-        <p><button className="btn btn-primary" disabled={busy} data-testid="make-space-go">{busy ? "Making it…" : "Make my space"} <ArrowIcon /></button></p>
+        <p><button className="btn btn-primary" disabled={busy} data-testid="make-space-go">{busy ? "Making it…" : "Make my team space"} <ArrowIcon /></button></p>
       </form>
       <form className="sp-card" onSubmit={open}>
         <h2 className="bp-h2">Already have one?</h2>
@@ -198,7 +198,7 @@ function BringIn({ items, onAdd }: { items: Item[]; onAdd: (items: NewItem[]) =>
   return (
     <div className="sp-bring" data-testid="bring-in">
       <p><b>{[newKits.length && `${newKits.length} kit${newKits.length > 1 ? "s" : ""}`, newFlows.length && `${newFlows.length} workflow${newFlows.length > 1 ? "s" : ""}`].filter(Boolean).join(" and ")}</b> {newKits.length + newFlows.length > 1 ? "are" : "is"} saved only in this browser.</p>
-      <button className="btn btn-dark btn-sm" onClick={bring} data-testid="bring-in-go">Add to my space</button>
+      <button className="btn btn-dark btn-sm" onClick={bring} data-testid="bring-in-go">Add to team space</button>
     </div>
   );
 }
@@ -218,7 +218,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
     catch (e) { setState({ status: hasAccount() && e instanceof SpaceError && e.status === 404 ? "empty" : e instanceof SpaceError && (e.status === 503 || e.status === 404) ? "off" : "error", name: "", share: "", items: [], message: errText(e) }); }
   }, []);
   useEffect(() => { load(); }, [k, load]);
-  useTitle(state.name || "My space");
+  useTitle(state.name || "Team space");
 
   const add = async (list: NewItem[]) => {
     let n = 0;
@@ -240,9 +240,10 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
     return (
       <main className="bp sp" data-testid="space-page">
         <header className="wrap bp-hero">
-          <p className="bp-kicker"><span className="kind">My space</span>Free</p>
+          <p className="bp-kicker"><span className="kind">Team space</span>Free</p>
           <h1 className="bp-h1">Keep your skills and workflows in one place, and share them with your team</h1>
           <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Sign in to save your space to your account. Choose invited email addresses or a company email domain before sharing. Make an item public only when you want everyone to find it.</p>
+          <p className="small sp-work-link" data-testid="space-work-link">Your private plans, workflows and calculator numbers are in <Link to="/account">My work</Link>. Only you see those. Your team space is what you choose to share.</p>
         </header>
         <div className="wrap ap-body">{hasAccount() && legacySpaceKey() && <p><button className="btn btn-dark" onClick={async () => { try { await spaces.claim(); await load(); } catch (e) { toast(errText(e)); } }}>Link my existing browser space to this account</button></p>}<MakeSpace toast={toast} onMade={load} /></div>
       </main>
@@ -251,11 +252,12 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
   return (
     <main className="bp sp" data-testid="space-page">
       <header className="wrap bp-hero">
-        <p className="bp-kicker"><span className="kind">My space</span>{state.items.length} item{state.items.length === 1 ? "" : "s"}</p>
+        <p className="bp-kicker"><span className="kind">Team space</span>{state.items.length} item{state.items.length === 1 ? "" : "s"}</p>
         {state.status === "ready"
           ? <h1 className="bp-h1"><input className="sp-name" defaultValue={state.name} key={state.name} aria-label="Space name" onBlur={(e) => rename(e.currentTarget.value)} onKeyDown={(e) => { if (e.key === "Enter") e.currentTarget.blur(); }} data-testid="space-title" /></h1>
-          : <h1 className="bp-h1">My space</h1>}
+          : <h1 className="bp-h1">Team space</h1>}
         <p className="bp-sub">Your skills, prompts, workflows, kits and agents. Share the link below with your team: they see everything here, and can't change it.</p>
+        <p className="small sp-work-link" data-testid="space-work-link">Your private plans, workflows and calculator numbers are in <Link to="/account">My work</Link>. Only you see those. Your team space is what you choose to share.</p>
       </header>
       <div className="wrap ap-body">
         {state.status === "loading" && <p className="small">Loading…</p>}

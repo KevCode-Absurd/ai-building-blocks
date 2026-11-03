@@ -543,7 +543,7 @@ function Stage({ c: baseCatalogue, toast, initialFlow, onFlowChange, onDelete }:
                   </select>
                 )}
                 <button className="btn btn-ghost btn-sm" onClick={share} disabled={!nodes.length} data-testid="share-flow">Share</button>
-                <button className="btn btn-ghost btn-sm" onClick={toSpace} disabled={!nodes.length} data-testid="flow-to-space">Save to my space</button>
+                <button className="btn btn-ghost btn-sm" onClick={toSpace} disabled={!nodes.length} data-testid="flow-to-space">Save to team space</button>
                 <button className="btn btn-ghost btn-sm" onClick={newFlow}>New</button>
               </div>
             </div>

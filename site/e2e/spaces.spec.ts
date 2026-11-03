@@ -21,11 +21,11 @@ async function makeSpace(page: Page, name: string) {
   await expect(page.getByTestId("share-box")).toBeVisible();
 }
 
-test("the header leads to My space, and a space is made in one click", async ({ page }) => {
+test("the header leads to Team space, and a space is made in one click", async ({ page }) => {
   await page.goto("/");
   await page.getByTestId("menu-btn").click();
   await page.getByRole("navigation", { name: "Sections", exact: true })
-    .getByRole("link", { name: "My space", exact: true }).click();
+    .getByRole("link", { name: "Team space", exact: true }).click();
   await expect(page.getByTestId("space-page")).toContainText("Keep your skills and workflows in one place");
   await page.getByTestId("space-name").fill("Sam's team");
   await page.getByTestId("make-space-go").click();
@@ -164,7 +164,7 @@ test("every skill says what to have first, links the steps before it, and offers
   expect(file).toContain("suggest what they could do next");
 });
 
-test("@mobile My space fits a phone: no sideways scroll", async ({ page }) => {
+test("@mobile Team space fits a phone: no sideways scroll", async ({ page }) => {
   await makeSpace(page, "Phone");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "no sideways scroll").toBe(true);
 });

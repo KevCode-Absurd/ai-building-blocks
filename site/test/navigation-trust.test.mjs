@@ -19,7 +19,7 @@ test('the menu and footer include Minds while navigation stays short', () => {
   const header = read('../src/SiteHeader.tsx');
   const main = header.slice(header.indexOf('aria-label="Main sections"'), header.indexOf('</section>', header.indexOf('aria-label="Main sections"')));
   const links = [...main.matchAll(/<Link to="([^"]+)"[^>]*>([^<]+)<\/Link>/g)].map((m) => [m[1], m[2]]);
-  assert.deepEqual(links, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/minds', 'Minds'], ['/tools', 'Tools'], ['/space', 'My space']]);
+  assert.deepEqual(links, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Plan a job'], ['/minds', 'Minds'], ['/tools', 'Tools'], ['/space', 'Team space']]);
   for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/ai-tools']) assert.ok(!header.includes(`to="${folded}"`), `${folded} is not a header link`);
   const footer = read('../src/SiteFooter.tsx');
   const listed = [...footer.slice(footer.indexOf('const groups'), footer.indexOf('export default')).matchAll(/\["(\/[^"]*)", "([^"]+)"\]/g)].map((m) => m[1]);

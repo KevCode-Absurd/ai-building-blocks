@@ -1,152 +1,168 @@
 {
   "case": "content-youtube-growth",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Grow the cooking channel for busy parents from about 2,050 subscribers toward 10,000 within a year, with honest titles and thumbnails, by finding and fixing what keeps new viewers from clicking, watching and subscribing.",
-    "deliverable": "A 12-week plan applied one approved change at a time: a diagnosis of the channel's click, watch and return problems, titles, thumbnail briefs and opening lines for the next videos, a series and weekly calendar sized to one video a week, and a monthly readout against the subscriber goal.",
+    "outcome": "Grow the cooking channel for busy parents from 2,050 subscribers toward 10,000 within a year, on one self-filmed video a week and without clickbait.",
+    "ambition": {
+      "goal_beyond": "The channel grows reliably on one video a week, so growth comes from a method that works and not from a lucky hit.",
+      "rungs": [
+        "Write better titles and thumbnails for the next videos.",
+        "Find from all 85 videos what really holds growth back (packaging, the first 30 seconds, topic, length or how viewers are asked to subscribe), fix the biggest cause first, and say honestly how far 10,000 is from what the data supports.",
+        "Keep it true: a short weekly check of the same measures that feeds the next video, so the method keeps improving."
+      ],
+      "chosen": 2,
+      "judge": "YouTube Studio's own analytics export per video (impressions, click-through rate, average percentage viewed, subscribers gained) and the results of YouTube's title and thumbnail tests, compared across the same number of videos before and after."
+    },
+    "deliverable": "A diagnosis from all 85 videos, a chosen plan, an eight-video pack (titles, thumbnails, hooks and outlines) in the owner's style, tests and uploads run with the owner's approval, and a weekly readout against the 10,000 goal.",
     "done": [
-      "Studio numbers pulled into this project and checked, with the owner's reported figures marked as checked or not",
-      "Diagnosis names what is limiting clicks, watch time and subscribing, with competing explanations",
-      "Owner has chosen the changes to try, with reasons recorded",
-      "Titles, thumbnails and opening lines made, checked for honesty and approved by the owner before use",
-      "Each change registered as an experiment before it goes live, then read back with a verdict",
-      "Learnings and the next round saved in this project"
+      "Per-video analytics for all 85 videos exported and checked against Studio totals",
+      "Causes of the plateau tested and each marked supported, refuted or unknown",
+      "Plan chosen by you from ranked options, with reasons recorded",
+      "Eight-video pack checked against YouTube's misleading-metadata rule and approved by you",
+      "Tests and uploads done only with your yes for each action",
+      "Weekly readout of subscribers per video, click-through, retention and the 10,000 gap",
+      "Rules saved for the next quarter"
     ],
     "metric": {
-      "name": "YouTube subscribers",
-      "direction": "reach",
+      "name": "Channel subscribers",
+      "direction": "increase",
       "unit": "subscribers",
       "baseline": 2050,
       "baseline_source": "reported",
       "target": 10000
     },
-    "deadline": "Within a year of starting (about November 2027)",
+    "deadline": "Within one year of plan approval",
     "guardrails": [
-      "No clickbait or misleading thumbnails or titles: every promise is kept in the video",
-      "One new video a week is still published",
-      "Average view duration stays near the reported 2:40 on 12-minute videos or improves",
-      "Views per video (reported average 900) do not fall while packaging changes"
+      "No clickbait or misleading thumbnails or titles",
+      "Average percentage viewed does not fall when click-through rises (a click gain that costs retention does not count)",
+      "The channel stays at one self-filmed video a week; hours per video do not rise",
+      "No bought subscribers, no sub-for-sub swaps",
+      "Nothing is changed on the channel without the owner's yes"
     ],
     "limits": [
-      "The owner films every video alone, one a week",
+      "One video a week, filmed by the owner",
       "No clickbait or misleading thumbnails",
-      "Nothing changes in YouTube Studio without the owner approving that change"
+      "Notes stay in this project",
+      "The owner decides"
     ],
     "assets": [
-      "85 published videos over two years",
-      "YouTube Studio analytics for the channel"
+      "85 videos over two years",
+      "YouTube Studio analytics for the channel (reported: 900 average views, click-through 3.1%, average view duration 2:40 on 12-minute videos)"
     ],
     "connections": [
       {
-        "name": "YouTube Studio (browser)",
+        "name": "YouTube Studio in the browser",
         "access": "live",
-        "status": "available"
+        "status": "connected"
       }
     ],
-    "data_home": "A folder of files in this project (the owner asked to keep notes in this project)",
-    "technical_level": "Not stated by the owner; explain in plain words and hand over ready text to review",
+    "data_home": "Files in this project (the owner asked for this)",
+    "technical_level": "Not stated. We will hand over ready drafts and plain steps, and ask if more is wanted.",
     "decides": "The owner",
     "unknowns": [
-      "Which videos get most of the views and where those views come from",
-      "How many viewers return and how many subscribe per video",
-      "Whether Test and Compare is switched on for the channel",
-      "Whether a brand style or thumbnail look exists",
-      "The owner's weekly time for planning beyond filming one video",
-      "Whether the 10,000 goal is reachable in a year at this pace; the plan reports the gap each month"
+      "Subscribers gained per video and per 1,000 views",
+      "Where views come from (search, browse, suggested, external)",
+      "Which topics and video lengths perform best",
+      "Audience retention curves by video",
+      "Whether the 900 average is pulled up by a few hits",
+      "Hours the owner spends per video",
+      "Whether the channel has Shorts or community posts"
     ],
     "answers": [
       {
-        "question": "What is the channel and how big is it?",
+        "question": "What is the channel and how big?",
         "answer": "Cooking channel for busy parents, 85 videos over two years, 2,050 subscribers."
       },
       {
-        "question": "How do videos perform now?",
+        "question": "What do the numbers look like?",
         "answer": "Average video gets 900 views; click-through rate about 3.1% and average view duration 2:40 on 12-minute videos (YouTube Studio, reported)."
       },
       {
-        "question": "How much can you produce?",
+        "question": "How is it made?",
         "answer": "I film one video a week myself."
       },
       {
-        "question": "What access do you have?",
-        "answer": "YouTube Studio access through the browser."
+        "question": "Target, access and rules?",
+        "answer": "10,000 subscribers within a year. YouTube Studio access through the browser. I will not do clickbait or misleading thumbnails."
       },
       {
-        "question": "What is the goal?",
-        "answer": "10,000 subscribers within a year."
-      },
-      {
-        "question": "What is off limits?",
-        "answer": "I will not do clickbait or misleading thumbnails."
-      },
-      {
-        "question": "Where to keep notes, who decides?",
+        "question": "Data home and who decides?",
         "answer": "Keep notes in this project. I decide."
+      },
+      {
+        "question": "My guess for what should happen after this (ambition)",
+        "answer": "Accepted as the working guess: you want a method that grows the channel steadily on one video a week, so we find the cause first and set the target against what the data supports."
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat a stalled small channel as a funnel with five links: discovery, click, watch, return and subscribe. They read the numbers per video, not as channel averages, find which link is weakest, and fix one link at a time. Packaging (title and thumbnail) and the opening of the video are tested before anything else, because they decide clicks and early drop-off. YouTube's own Test and Compare can run up to three titles or thumbnails per video and picks the winner by watch time. Topics are chosen from what people search for and from the channel's own best videos, and are packaged as a repeating series so viewers have a reason to come back and subscribe. Everything is judged on enough videos, not one.",
+    "approach": "Practitioners start from the per-video analytics table, not channel averages, and read three things together: how often the video is shown and clicked (impressions and click-through), how long people stay (retention, especially the first 30 seconds) and whether viewers subscribe. YouTube's own guidance says half of channels sit between 2% and 10% click-through, so 3.1% is typical, while 2:40 on a 12-minute video is about 22% viewed, which points at the opening and the video's shape. They compare like with like (similar length and topic, similar traffic source), judge by the median video and not by one hit, and avoid pushing click-through by misleading packaging, because YouTube treats that as a policy breach and a high click rate with low viewing hurts. They then change one thing at a time, using YouTube's own title and thumbnail test (which picks a winner by watch time share) and a before-and-after comparison across several videos, read at a set age such as 28 days. The target is checked against what each upload currently earns in subscribers.",
     "sources": [
       {
-        "id": "web-yt-test",
+        "id": "web-yt-ctr",
         "kind": "web",
-        "title": "YouTube Help: A/B test titles and thumbnails",
-        "ref": "https://support.google.com/youtube/answer/13861714",
-        "date": "2026-11",
-        "note": "Up to three variants per video, winner picked by watch time, finishes within about two weeks, desktop Studio only, labels Winner, Performed Same or Inconclusive. Page is undated; read 2026-11."
+        "title": "Impressions click-through rate (YouTube Help)",
+        "ref": "https://support.google.com/youtube/answer/7628154",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform documentation: half of channels and videos have a click-through between 2% and 10%; compare over time and by traffic source; a high click rate with low view duration can indicate clickbait."
       },
       {
         "id": "web-yt-retention",
         "kind": "web",
-        "title": "YouTube Help: Measure key moments for audience retention",
+        "title": "Audience retention (YouTube Help)",
         "ref": "https://support.google.com/youtube/answer/9314415",
-        "date": "2026-11",
-        "note": "How to read the retention curve and the share still watching at 30 seconds; needs 100 views. Page is undated; read 2026-11."
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform documentation: intro retention is the share still watching after 30 seconds; read flat lines, dips and spikes; compare with your own similar-length videos; segment new versus returning and subscribers versus not."
       },
       {
-        "id": "web-funnel",
+        "id": "web-yt-test",
         "kind": "web",
-        "title": "The 1,000 Subscriber Wall: Why Channels Stall (PC Tech Magazine)",
-        "ref": "https://pctechmag.com/2026/08/the-1000-subscriber-wall-why-channels-stall/",
+        "title": "A/B test titles and thumbnails (YouTube Help)",
+        "ref": "https://support.google.com/youtube/answer/13861714",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform documentation: test up to three titles or thumbnails on desktop in Studio; winner is chosen by watch time share, not click-through; tests finish within two weeks; low-impression videos are often inconclusive."
+      },
+      {
+        "id": "web-yt-policy",
+        "kind": "web",
+        "title": "Spam, deceptive practices and scams policy (YouTube Help)",
+        "ref": "https://support.google.com/youtube/answer/2801973",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform policy: maliciously misleading titles, thumbnails, descriptions or imagery are prohibited."
+      },
+      {
+        "id": "web-vidiq",
+        "kind": "web",
+        "title": "Mistakes small YouTube channels make (vidIQ)",
+        "ref": "https://vidiq.com/blog/post/avoid-small-youtube-channel-mistakes/",
         "date": "2026-08-14",
-        "note": "Five-link funnel (discovery, click, watch, return, subscribe), series for returning viewers, warns against bought engagement and deceptive clickbait."
+        "note": "Practitioner vendor, published 2024-02-01 and reviewed 2026-08-14: spend more time on titles and thumbnails, work on the first 30 seconds, avoid chasing the wrong metrics. Qualitative, with no data."
       },
       {
-        "id": "web-outlier",
-        "kind": "web",
-        "title": "YouTube Growth Strategy for Small Channels (OutlierKit)",
-        "ref": "https://outlierkit.com/resources/youtube-growth-strategy-small-channels/",
-        "date": "2026-09-27",
-        "note": "Package before you produce, learn from channels within about ten times your size, double down on your own outlier after 15 to 20 uploads. A vendor page; its timelines are directional."
-      },
-      {
-        "id": "web-tubefilter",
-        "kind": "web",
-        "title": "YouTube is expanding Test & Compare for titles and thumbnails (Tubefilter)",
-        "ref": "https://www.tubefilter.com/2025/07/16/youtube-feature-test-and-compare-titles-thumbnails/",
-        "date": "2025-07-16",
-        "note": "Rollout was gradual, so eligibility has to be checked for this channel."
-      },
-      {
-        "id": "cat-auditor",
-        "kind": "catalogue",
-        "title": "YouTube channel auditor",
-        "ref": "youtube-channel-auditor"
-      },
-      {
-        "id": "cat-title",
+        "id": "cat-title-retention",
         "kind": "catalogue",
         "title": "YouTube title and retention reviewer",
         "ref": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave"
       },
       {
-        "id": "cat-growth",
+        "id": "cat-growth-kit",
         "kind": "catalogue",
         "title": "YouTube channel growth planner",
         "ref": "youtube-channel-growth-kit"
+      },
+      {
+        "id": "cat-retention-reader",
+        "kind": "catalogue",
+        "title": "YouTube viewer drop-off reviewer",
+        "ref": "youtube-retention-reader"
+      },
+      {
+        "id": "cat-script",
+        "kind": "catalogue",
+        "title": "YouTube script writer",
+        "ref": "youtube-script-writer"
       },
       {
         "id": "owner",
@@ -157,821 +173,382 @@
     ],
     "steps": [
       {
-        "id": "s-data",
-        "name": "Pull per-video Studio numbers and check them",
-        "why": "Averages hide the few videos that work; the owner's figures are reports until checked.",
-        "sources": [
-          "web-funnel",
-          "web-yt-retention",
-          "owner"
-        ]
+        "id": "s-export",
+        "name": "Export the per-video table and traffic sources for all 85 videos",
+        "why": "Averages hide which videos, topics and sources move the channel; the raw table shows them.",
+        "sources": ["web-yt-ctr", "cat-growth-kit", "owner"]
       },
       {
-        "id": "s-peers",
-        "name": "Study what works for channels of a similar size",
-        "why": "Outliers among comparable channels show topics and packaging that the audience already rewards.",
-        "sources": [
-          "web-outlier",
-          "cat-auditor"
-        ]
+        "id": "s-check",
+        "name": "Check the numbers and set the comparison groups",
+        "why": "Click-through counts only some impressions, new videos need time, and a few hits skew the average.",
+        "sources": ["web-yt-ctr", "web-yt-retention"]
       },
       {
         "id": "s-diagnose",
-        "name": "Find the weakest link: click, watch, return or subscribe",
-        "why": "Each link needs a different fix, and a 3.1% click rate with about a fifth of the video watched points two ways.",
-        "sources": [
-          "web-funnel",
-          "web-yt-retention",
-          "cat-auditor"
-        ]
+        "name": "Read click-through, first 30 seconds, retention shape, topic and subscribe rate together",
+        "why": "Each cause needs a different fix and several can act at once.",
+        "sources": ["web-yt-ctr", "web-yt-retention", "cat-retention-reader", "web-vidiq"]
       },
       {
-        "id": "s-rank",
-        "name": "Rank the fixes and let the owner choose",
-        "why": "One link at a time keeps results readable and fits one video a week.",
-        "sources": [
-          "web-outlier",
-          "cat-growth"
-        ]
+        "id": "s-gap",
+        "name": "Check the 10,000 target against subscribers gained per upload",
+        "why": "A target is only useful if it is set beside what each video earns today.",
+        "sources": ["cat-growth-kit", "owner"]
       },
       {
-        "id": "s-package",
-        "name": "Make honest titles, thumbnails and opening lines before filming",
-        "why": "Packaging and the first 30 seconds set clicks and early drop-off.",
-        "sources": [
-          "web-outlier",
-          "web-yt-retention",
-          "cat-title"
-        ]
-      },
-      {
-        "id": "s-series",
-        "name": "Turn proven topics into a repeating series and weekly calendar",
-        "why": "Series give viewers a reason to return and subscribe.",
-        "sources": [
-          "web-funnel",
-          "cat-growth"
-        ]
+        "id": "s-pack",
+        "name": "Write packaging, hooks and outlines for the next videos within the policy",
+        "why": "Packaging and the opening are the cheapest levers for a solo channel, and misleading packaging breaks policy.",
+        "sources": ["cat-title-retention", "cat-script", "web-yt-policy", "web-vidiq"]
       },
       {
         "id": "s-test",
-        "name": "Run changes as registered tests, one change at a time",
-        "why": "Test and Compare reads watch time on real viewers; a result is only trusted on enough videos.",
-        "sources": [
-          "web-yt-test",
-          "web-tubefilter"
-        ]
+        "name": "Test one change at a time with YouTube's own tests and a before-and-after across videos",
+        "why": "A single test on a low-impression video is often inconclusive; comparing several videos and reading at a set age is steadier.",
+        "sources": ["web-yt-test", "web-yt-ctr"]
+      },
+      {
+        "id": "s-read",
+        "name": "Read weekly at a fixed video age and keep what works",
+        "why": "A short weekly look on the same measures shows what to repeat, improve or stop.",
+        "sources": ["web-yt-retention", "cat-title-retention"]
       }
     ],
     "pitfalls": [
       {
-        "text": "Judging a change from one video; views swing by topic and by age of the video.",
-        "sources": [
-          "web-outlier",
-          "web-yt-test"
-        ]
+        "text": "Raising click-through with misleading packaging, which can lower viewing time and break YouTube's policy.",
+        "sources": ["web-yt-ctr", "web-yt-policy"]
       },
       {
-        "text": "Chasing click rate alone with misleading packaging, which raises early drop-off and breaks the owner's honesty rule.",
-        "sources": [
-          "web-funnel",
-          "web-yt-test"
-        ]
+        "text": "Judging a thumbnail test with too few impressions, or changing a title or thumbnail mid-test.",
+        "sources": ["web-yt-test"]
       },
       {
-        "text": "Changing a title or thumbnail while a test is running, which stops it.",
-        "sources": [
-          "web-yt-test"
-        ]
+        "text": "Reading the channel average, so one or two hits hide a weak median video.",
+        "sources": ["web-yt-ctr", "web-yt-retention"]
       },
       {
-        "text": "Copying large channels whose reach comes from trust a small channel does not have.",
-        "sources": [
-          "web-outlier"
-        ]
-      },
-      {
-        "text": "Counting subscribers from views that never return, or from sub-for-sub tricks.",
-        "sources": [
-          "web-funnel"
-        ]
+        "text": "Chasing the wrong metric, such as raw click-through, instead of watch time and subscribers per view.",
+        "sources": ["web-vidiq", "web-yt-test"]
       }
     ]
   },
   "plan": {
-    "name": "Unstick the cooking channel and grow subscribers honestly",
+    "name": "Find what holds the channel back and fix it video by video",
     "capabilities": [
       {
         "id": "studio-read",
         "access": "read",
         "via": "browser",
         "name": "Read YouTube Studio analytics (browser)",
-        "why": "Open Analytics, Reach and Audience retention and export per-video tables."
+        "why": "Export the per-video table, traffic sources and retention curves."
       },
       {
-        "id": "public-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read public YouTube channels and search",
-        "why": "Look at similar channels' uploads, titles and view counts, and what viewers search for."
-      },
-      {
-        "id": "studio-write",
+        "id": "studio-live",
         "access": "live",
         "via": "browser",
-        "name": "Change titles and thumbnails in YouTube Studio (browser)",
-        "why": "Apply approved packaging and start Test and Compare, one video at a time."
+        "name": "Change titles and thumbnails, start tests and schedule uploads (YouTube Studio)",
+        "why": "Apply the chosen packaging and uploads; each action waits for the owner's yes."
       }
     ],
     "data": [
       {
         "id": "video-table",
-        "name": "Per-video Studio table",
-        "why": "The base for every click, watch, return and subscribe finding.",
-        "fields": [
-          "video title",
-          "publish date",
-          "length",
-          "views",
-          "impressions",
-          "impressions click-through rate",
-          "average view duration",
-          "average percentage viewed",
-          "subscribers gained",
-          "returning viewers",
-          "traffic source"
-        ],
+        "name": "Per-video analytics for all 85 videos",
+        "why": "The raw material: every video's reach, clicks, viewing and subscribers.",
+        "fields": ["video title", "publish date", "length", "impressions", "impressions click-through rate", "views", "average view duration", "average percentage viewed", "subscribers gained", "subscribers lost", "watch time"],
         "routes": [
-          {
-            "kind": "CSV",
-            "how": "Studio, Analytics, Advanced mode, Content, last 12 months, add the columns above, export as CSV."
-          },
-          {
-            "kind": "ASK",
-            "how": "If export is not possible, ask the owner for screenshots of the same table."
-          }
+          { "kind": "CSV", "how": "YouTube Studio, Analytics, Advanced mode, Content: set the lifetime range, show the table with these columns, and Export." },
+          { "kind": "ASK", "how": "If Advanced mode is unavailable, screenshots of the content table sorted by views, in pages." }
         ],
-        "required_for": [
-          "evidence-own",
-          "integrity-data",
-          "diagnosis"
-        ],
-        "alternative": "Without a per-video table, only the owner's channel averages exist and no video-level finding can be made."
+        "required_for": ["evidence", "integrity-numbers", "channel-diagnosis"],
+        "alternative": "Without it, only channel averages exist; causes by video, topic and length stay unknown."
       },
       {
-        "id": "retention",
-        "name": "Retention curves for the best and weakest videos",
-        "why": "Shows where viewers leave and how many are left at 30 seconds.",
-        "fields": [
-          "video",
-          "retention curve",
-          "share still watching at 30 seconds",
-          "key moments"
-        ],
+        "id": "traffic-sources",
+        "name": "Traffic sources and audience",
+        "why": "Shows whether views come from search, browse or suggested, and how many viewers are new or returning.",
+        "fields": ["traffic source", "views by source", "new versus returning viewers", "subscribers versus non-subscribers"],
         "routes": [
-          {
-            "kind": "ASK",
-            "how": "Screenshots of the Audience retention report for the top 5 and bottom 5 videos by views."
-          }
+          { "kind": "CSV", "how": "Studio, Analytics, Reach and Audience tabs: export for the last 12 months and for the lifetime range." }
         ],
-        "required_for": [
-          "diagnosis"
-        ],
-        "alternative": "Without curves, the watch problem stays UNKNOWN and only the average view duration is used."
+        "required_for": ["evidence", "channel-diagnosis"]
       },
       {
-        "id": "peer-channels",
-        "name": "Comparable channels and their outliers",
-        "why": "Shows packaging and topics that work for channels within about ten times this channel's size.",
-        "fields": [
-          "channel",
-          "subscribers",
-          "video title",
-          "views",
-          "upload date"
-        ],
+        "id": "retention-curves",
+        "name": "Retention curves for a sample of videos",
+        "why": "Shows where viewers leave in the best, median and worst videos.",
+        "fields": ["video", "elapsed time", "audience retention", "intro retention at 30 seconds"],
         "routes": [
-          {
-            "kind": "URL",
-            "how": "Public channel pages found by search; the owner may name channels they know."
-          }
+          { "kind": "CSV", "how": "Studio, each chosen video, Engagement tab: export the retention curve for the 5 best, 5 median and 5 weakest recent videos." }
         ],
-        "required_for": [
-          "evidence-peers"
-        ],
-        "alternative": "If no comparable channels are found, topic findings rest on the channel's own data only."
+        "required_for": ["channel-diagnosis"],
+        "alternative": "Without curves, the first 30 seconds is judged from the average view duration only and marked low-confidence."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the goal and the numbers",
-        "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
-        "owner": {
-          "role": "marketing-video-optimization-specialist"
-        },
+        "name": "Confirm the brief",
+        "goal": "Turn the owner's words into a measured goal, limits and what is unknown. Writes BRIEF.md.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
         "gate": "none",
         "from_steps": [],
         "uses": []
       },
       {
-        "id": "evidence-own",
+        "id": "evidence",
         "kind": "evidence",
-        "name": "Pull the channel's per-video numbers",
-        "goal": "Export the Studio table and retention screenshots into the project data folder and note exactly what was pulled.",
-        "owner": {
-          "role": "marketing-video-optimization-specialist"
-        },
-        "data": [
-          "video-table",
-          "retention"
-        ],
-        "needs": [
-          "studio-read"
-        ],
-        "depends_on": [
-          "intake"
-        ],
+        "name": "Export the channel's raw numbers",
+        "goal": "Export the per-video table for all 85 videos, the traffic-source and audience data, and retention curves for a sample of 15 videos into the project.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
+        "data": ["video-table", "traffic-sources", "retention-curves"],
+        "needs": ["studio-read"],
+        "depends_on": ["intake"],
         "outputs": [
-          {
-            "id": "videos-csv",
-            "name": "Per-video table",
-            "format": "csv",
-            "path": "evidence/videos.csv"
-          },
-          {
-            "id": "evidence-notes",
-            "name": "What was pulled and how",
-            "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
-          }
+          { "id": "videos", "name": "Per-video dataset", "format": "csv", "path": "evidence/videos.csv" },
+          { "id": "evidence-notes", "name": "What was pulled and how", "format": "markdown", "path": "evidence/EVIDENCE.md" }
         ],
         "checks": [
-          {
-            "id": "period",
-            "name": "Covers all 85 videos or states which are missing",
-            "required": true
-          },
-          {
-            "id": "totals",
-            "name": "Views and subscribers in the table add up to the Studio channel totals for the same dates",
-            "required": true
-          },
-          {
-            "id": "age",
-            "name": "Each video has its age, so new videos are not compared with old ones",
-            "required": true
-          }
+          { "id": "count", "name": "The file has all 85 videos, or lists each missing one", "required": true },
+          { "id": "totals", "name": "Total views and total subscribers gained in the file match Studio's channel totals for the same dates within 1%", "required": true },
+          { "id": "tags", "name": "Each video is tagged with a topic group and a length band", "required": true }
         ],
         "gate": "none",
-        "from_steps": [
-          "s-data"
-        ],
-        "uses": [
-          "youtube-channel-browser",
-          "youtube-transcript-reader"
-        ]
+        "from_steps": ["s-export"],
+        "uses": ["youtube-channel-auditor", "youtube-channel-browser"]
       },
       {
-        "id": "evidence-peers",
-        "kind": "evidence",
-        "name": "Study comparable channels and search demand",
-        "goal": "Find home-cooking channels for busy parents near this size, list their outlier videos, and list what viewers search for.",
-        "owner": {
-          "role": "marketing-video-optimization-specialist"
-        },
-        "data": [
-          "peer-channels"
-        ],
-        "needs": [
-          "public-read"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "peers",
-            "name": "Peer outliers and search topics",
-            "format": "markdown",
-            "path": "evidence/PEERS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "size",
-            "name": "Peer channels are within about ten times this channel's size, or the gap is stated",
-            "required": true
-          },
-          {
-            "id": "outlier",
-            "name": "An outlier is a video that beats its own channel's typical views, with the numbers shown",
-            "required": true
-          },
-          {
-            "id": "dated",
-            "name": "Every figure has the date it was read",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-peers"
-        ],
-        "uses": [
-          "youtube-viral-video-finder",
-          "youtube-video-finder",
-          "keyword-research-planner"
-        ]
-      },
-      {
-        "id": "integrity-data",
+        "id": "integrity-numbers",
         "kind": "integrity",
-        "name": "Check the numbers can be trusted",
-        "goal": "Check the owner's reported figures against the export, and flag videos too new or too small to judge.",
-        "owner": {
-          "role": "check-a-spreadsheet-before-sharing-the-results"
-        },
-        "data": [
-          "video-table"
-        ],
-        "depends_on": [
-          "evidence-own"
-        ],
+        "name": "Check the numbers and set the comparison groups",
+        "goal": "Check that the reported 3.1%, 2:40 and 900 views reproduce from the table, flag videos too new or too small to judge, and set groups to compare by length, topic and traffic source. Use the median, not the average.",
+        "owner": { "role": "experiment-readout-desk" },
+        "data": ["video-table"],
+        "depends_on": ["evidence"],
         "outputs": [
-          {
-            "id": "data-check",
-            "name": "Data check",
-            "format": "markdown",
-            "path": "integrity/DATA-CHECK.md"
-          }
+          { "id": "numbers-check", "name": "Numbers check and comparison groups", "format": "markdown", "path": "integrity/NUMBERS-CHECK.md" }
         ],
         "checks": [
-          {
-            "id": "reported",
-            "name": "Average views, click-through rate and view duration are recomputed and compared with the owner's reported 900, 3.1% and 2:40",
-            "required": true
-          },
-          {
-            "id": "weighted",
-            "name": "Channel click-through rate is weighted by impressions, not an average of averages",
-            "required": true
-          },
-          {
-            "id": "small",
-            "name": "Videos under 100 views or under 28 days old are marked low-confidence",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
-            "required": true
-          }
+          { "id": "reproduce", "name": "The reported averages are reproduced from the table within 5%, or the gap is explained", "required": true },
+          { "id": "age", "name": "Videos under 28 days old or with under 100 views are excluded from comparisons and listed", "required": true },
+          { "id": "median", "name": "Median and average views are both shown and the share of views from the top 5 videos is stated", "required": true },
+          { "id": "verdict", "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis", "required": true }
         ],
         "gate": "none",
-        "from_steps": [
-          "s-data"
-        ],
-        "uses": [
-          "spreadsheet-checker"
-        ]
+        "from_steps": ["s-check"],
+        "uses": ["growth-health-checker"]
       },
       {
-        "id": "diagnosis",
+        "id": "channel-diagnosis",
         "kind": "diagnosis",
-        "name": "Find the weakest link",
-        "goal": "Test the hypotheses against the per-video data and retention curves. Keep competing explanations.",
-        "owner": {
-          "role": "marketing-video-optimization-specialist"
-        },
-        "data": [
-          "video-table",
-          "retention"
-        ],
-        "depends_on": [
-          "evidence-own",
-          "evidence-peers",
-          "integrity-data"
-        ],
+        "name": "Find what holds growth back",
+        "goal": "Test the hypotheses against the table, traffic sources and retention curves, and check how far 10,000 is from what each upload earns in subscribers. Keep competing explanations.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
+        "support": ["marketing-video-optimization-specialist"],
+        "data": ["video-table", "traffic-sources", "retention-curves"],
+        "depends_on": ["evidence", "integrity-numbers"],
         "outputs": [
-          {
-            "id": "diagnosis",
-            "name": "Diagnosis",
-            "format": "markdown",
-            "path": "diagnosis/DIAGNOSIS.md"
-          },
-          {
-            "id": "hypotheses",
-            "name": "Hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses.json"
-          }
+          { "id": "diagnosis", "name": "Diagnosis", "format": "markdown", "path": "diagnosis/DIAGNOSIS.md" },
+          { "id": "hypotheses", "name": "Hypothesis verdicts", "format": "json", "path": "diagnosis/hypotheses.json" }
         ],
         "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the numbers behind it",
-            "required": true
-          },
-          {
-            "id": "volume",
-            "name": "Findings built on small or very new videos are marked low-confidence",
-            "required": true
-          },
-          {
-            "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
-            "required": true
-          },
-          {
-            "id": "funnel",
-            "name": "The finding says which link is weakest: discovery, click, watch, return or subscribe",
-            "required": true
-          }
+          { "id": "verdicts", "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the numbers behind it", "required": true },
+          { "id": "volume", "name": "A group is called better only with at least 8 videos in it, otherwise low-confidence", "required": true },
+          { "id": "alternatives", "name": "Each main finding names a competing explanation", "required": true },
+          { "id": "gap", "name": "States subscribers per upload now and the amount per upload that 10,000 in a year needs", "required": true }
         ],
         "gate": "none",
-        "from_steps": [
-          "s-diagnose"
-        ],
-        "support": [
-          "pick-a-title-and-thumbnail-then-fix-where-viewers-leave"
-        ],
-        "uses": [
-          "youtube-channel-auditor",
-          "youtube-viral-video-finder"
-        ]
+        "from_steps": ["s-diagnose", "s-gap"],
+        "uses": ["youtube-retention-reader", "video-hook-scorer", "growth-health-checker"]
       },
       {
-        "id": "options",
+        "id": "change-options",
         "kind": "options",
-        "name": "Rank what to try",
-        "goal": "Turn supported findings into a short list of ranked changes, each with the finding it rests on, the expected effect, effort, confidence, risk and how it will be measured. State plainly how far each is likely to move the 10,000 goal.",
-        "owner": {
-          "role": "marketing-growth-hacker"
-        },
-        "depends_on": [
-          "diagnosis"
-        ],
+        "name": "Rank what to change",
+        "goal": "Turn supported findings into ranked change cards (opening, packaging, topic or series, length, subscribe ask), each with the finding behind it, expected effect, effort for one video a week, confidence, risk and how it will be measured.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
+        "depends_on": ["channel-diagnosis"],
         "outputs": [
-          {
-            "id": "recommendations",
-            "name": "Ranked changes",
-            "format": "markdown",
-            "path": "options/RECOMMENDATIONS.md"
-          },
-          {
-            "id": "recommendations-json",
-            "name": "Ranked changes as data",
-            "format": "json",
-            "path": "options/recommendations.json"
-          }
+          { "id": "options", "name": "Ranked change cards", "format": "markdown", "path": "options/OPTIONS.md" }
         ],
         "checks": [
-          {
-            "id": "evidence",
-            "name": "Every option cites the finding it rests on",
-            "required": true
-          },
-          {
-            "id": "fields",
-            "name": "Every option has expected direction, effort, confidence, risk and how it will be measured",
-            "required": true
-          },
-          {
-            "id": "one-link",
-            "name": "Options change one link at a time and fit one video a week",
-            "required": true
-          },
-          {
-            "id": "honest",
-            "name": "No option relies on misleading packaging",
-            "required": true
-          },
-          {
-            "id": "gap",
-            "name": "The gap between the reachable subscribers and 10,000 is stated, not hidden",
-            "required": true
-          }
+          { "id": "finding", "name": "Every card cites the finding it rests on", "required": true },
+          { "id": "effort", "name": "Every card states added hours per video, and none raises hours per video", "required": true },
+          { "id": "honest-target", "name": "The set says what growth the supported changes can reasonably give against 10,000, with the uncertainty", "required": true }
         ],
         "gate": "none",
-        "from_steps": [
-          "s-rank"
-        ],
-        "uses": [
-          "one-change-experiment-planner",
-          "youtube-channel-growth-kit"
-        ]
+        "from_steps": [],
+        "uses": ["youtube-upload-planner", "youtube-channel-growth-kit"]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "Owner chooses",
-        "goal": "The owner picks which changes to try first. Ask why when a top option is passed over, and record it.",
-        "owner": {
-          "role": "marketing-growth-hacker"
-        },
-        "depends_on": [
-          "options"
-        ],
+        "name": "Owner chooses the plan",
+        "goal": "The owner picks the cards, the success rule per change and the target they will hold themselves to. Ask why when the top card is passed over.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
+        "depends_on": ["change-options"],
         "outputs": [
-          {
-            "id": "decision",
-            "name": "Chosen plan",
-            "format": "markdown",
-            "path": "decision/DECISION.md"
-          }
+          { "id": "decision", "name": "Chosen plan and rules", "format": "markdown", "path": "decision/DECISION.md" }
         ],
         "checks": [
-          {
-            "id": "recorded",
-            "name": "Chosen and passed-over options and the reasons are recorded",
-            "required": true
-          },
-          {
-            "id": "scope",
-            "name": "Only chosen options are carried into production",
-            "required": true
-          }
+          { "id": "recorded", "name": "Chosen and passed-over cards are recorded with reasons", "required": true },
+          { "id": "rule", "name": "Each change has a keep, adjust or stop rule with numbers written before it is tried", "required": true }
         ],
         "gate": "approve",
         "from_steps": [],
         "uses": []
       },
       {
-        "id": "packaging",
+        "id": "video-pack",
         "kind": "production",
-        "name": "Write honest packaging and plan the series",
-        "goal": "For the next videos, write three title options, thumbnail briefs and the first 30 seconds word for word, each promise one the video keeps. Turn the proven topics and search demand into one or two named series and a 12-week calendar of one video a week. The owner reviews the packaging and the calendar together.",
-        "owner": {
-          "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave"
-        },
-        "depends_on": [
-          "decision",
-          "integrity-data",
-          "evidence-peers"
-        ],
+        "name": "Write the next eight videos' packaging and hooks",
+        "goal": "For the next eight weekly videos, write title and thumbnail options (one tested pair each), the first-30-seconds hook and an outline in the owner's style, plus the subscribe ask the plan calls for. Check each against YouTube's misleading-metadata rule and the owner's no-clickbait rule.",
+        "owner": { "role": "marketing-video-optimization-specialist" },
+        "support": ["pick-a-title-and-thumbnail-then-fix-where-viewers-leave"],
+        "reviewers": ["experiment-readout-desk"],
+        "depends_on": ["decision"],
         "outputs": [
-          {
-            "id": "packaging",
-            "name": "Packaging pack for review",
-            "format": "markdown",
-            "path": "production/PACKAGING.md"
-          },
-          {
-            "id": "series-plan",
-            "name": "Series and calendar",
-            "format": "markdown",
-            "path": "production/SERIES-AND-CALENDAR.md"
-          }
+          { "id": "pack", "name": "Eight-video pack", "format": "markdown", "path": "production/VIDEO-PACK.md" },
+          { "id": "calendar", "name": "Upload calendar", "format": "markdown", "path": "production/CALENDAR.md" }
         ],
         "checks": [
-          {
-            "id": "promise",
-            "name": "Each title and thumbnail promise is delivered in the video, with the minute where it is delivered",
-            "required": true
-          },
-          {
-            "id": "change",
-            "name": "Variants differ in one thing so a result can be read",
-            "required": true
-          },
-          {
-            "id": "honest",
-            "name": "No false claims, fake reactions or misleading images",
-            "required": true
-          },
-          {
-            "id": "voice",
-            "name": "Fits the busy-parent audience and the owner's own wording",
-            "required": true
-          },
-          {
-            "id": "traced",
-            "name": "Each slot traces to a proven topic or a search the audience makes",
-            "required": true
-          },
-          {
-            "id": "capacity",
-            "name": "Exactly one video a week that the owner can film alone",
-            "required": true
-          },
-          {
-            "id": "return",
-            "name": "Each video names what brings the viewer back for the next one",
-            "required": true
-          }
+          { "id": "promise", "name": "Each title and thumbnail promises only what the video shows, and each pair differs in one thing", "required": true },
+          { "id": "hook", "name": "Each hook is scored and states the payoff in the first 30 seconds", "required": true },
+          { "id": "hours", "name": "No video needs more filming or editing hours than the owner's current weekly video", "required": true },
+          { "id": "traced", "name": "Every element traces to a chosen card", "required": true }
         ],
         "gate": "review",
-        "from_steps": [
-          "s-package",
-          "s-series"
-        ],
-        "reviewers": [
-          "marketing-short-video-editing-coach"
-        ],
-        "uses": [
-          "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
-          "content-topic-planner",
-          "standing-social-calendar-maker",
-          "youtube-channel-growth-kit"
-        ],
-        "optional_when": "No packaging or opening change was chosen."
+        "from_steps": ["s-pack"],
+        "uses": ["youtube-script-writer", "youtube-title-and-tags-writer", "video-hook-scorer", "youtube-upload-planner"]
       },
       {
-        "id": "launch",
+        "id": "run-tests",
         "kind": "execution",
-        "name": "Apply one approved change at a time",
-        "goal": "Register each test, then with the owner's approval apply a title or thumbnail test to one video in Studio and read the change back.",
-        "owner": {
-          "role": "marketing-video-optimization-specialist"
-        },
-        "needs": [
-          "studio-write"
-        ],
-        "depends_on": [
-          "packaging"
-        ],
+        "name": "Apply the tests and upload",
+        "goal": "Register each change with its baseline and rule, then start title and thumbnail tests on old and new videos and schedule the weekly uploads in Studio, one approved action at a time. Change one thing per video group.",
+        "owner": { "role": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave" },
+        "needs": ["studio-live"],
+        "depends_on": ["video-pack"],
         "outputs": [
-          {
-            "id": "receipt",
-            "name": "Change receipt",
-            "format": "markdown",
-            "path": "execution/CHANGE-RECEIPT.md"
-          }
+          { "id": "receipt", "name": "Test and upload receipt", "format": "markdown", "path": "execution/RECEIPT.md" }
         ],
         "checks": [
-          {
-            "id": "registered",
-            "name": "Each test is written down with its expected result before it starts",
-            "required": true
-          },
-          {
-            "id": "eligible",
-            "name": "Test and Compare availability for this channel and video is confirmed, or the change is made without it and marked untested",
-            "required": true
-          },
-          {
-            "id": "readback",
-            "name": "The title and thumbnail shown in Studio match what the owner approved",
-            "required": true
-          },
-          {
-            "id": "hands-off",
-            "name": "Nothing is changed while a test is running",
-            "required": true
-          }
+          { "id": "registered", "name": "Each change and its baseline are in experiments.jsonl before it goes live", "required": true },
+          { "id": "readback", "name": "Each title, thumbnail and test setting is read back from Studio and matches the approved pack", "required": true },
+          { "id": "no-midtest", "name": "No title or thumbnail is changed during a running test", "required": true }
         ],
         "gate": "approve_each_action",
-        "from_steps": [
-          "s-test"
-        ],
-        "uses": [
-          "one-change-experiment-planner"
-        ]
+        "from_steps": ["s-test"],
+        "uses": ["youtube-title-and-tags-writer", "youtube-upload-planner"]
       },
       {
-        "id": "measurement",
+        "id": "readout",
         "kind": "measurement",
-        "name": "Read the results honestly",
-        "goal": "Read each test and the subscriber count against the registered expectation and the guardrails.",
-        "owner": {
-          "role": "experiment-readout-desk"
-        },
-        "needs": [
-          "studio-read"
-        ],
-        "depends_on": [
-          "launch"
-        ],
+        "name": "Weekly readout at a fixed video age",
+        "goal": "Each week read the newest videos at 28 days and the tests' results from Studio's own data, compared with the previous eight videos on click-through, average percentage viewed, subscribers per 1,000 views and the gap to 10,000.",
+        "owner": { "role": "experiment-readout-desk" },
+        "data": ["video-table", "traffic-sources"],
+        "needs": ["studio-read"],
+        "depends_on": ["run-tests"],
         "outputs": [
-          {
-            "id": "readout",
-            "name": "Results readout",
-            "format": "markdown",
-            "path": "measurement/READOUT.md"
-          }
+          { "id": "readout", "name": "Weekly readout", "format": "markdown", "path": "measurement/READOUT.md" },
+          { "id": "routine", "name": "Twenty-minute weekly routine", "format": "markdown", "path": "measurement/ROUTINE.md" }
         ],
         "checks": [
-          {
-            "id": "volume",
-            "name": "A verdict is given only after the test window and enough videos; otherwise INCONCLUSIVE",
-            "required": true
-          },
-          {
-            "id": "like-for-like",
-            "name": "Videos are compared at the same age and against the prior videos",
-            "required": true
-          },
-          {
-            "id": "guardrails",
-            "name": "Average view duration, views and weekly publishing are checked",
-            "required": true
-          },
-          {
-            "id": "goal",
-            "name": "The monthly subscriber count is shown against the 10,000 line",
-            "required": true
-          }
+          { "id": "like-for-like", "name": "Videos are compared at the same age and, where possible, the same topic group and length band", "required": true },
+          { "id": "guardrail", "name": "Average percentage viewed on new videos is not more than 10% below the previous eight; a click-through gain that breaks this is not counted", "required": true },
+          { "id": "volume", "name": "A change is judged only with at least 8 videos in each group, or a test labelled Winner by Studio; otherwise INCONCLUSIVE", "required": true }
         ],
         "gate": "none",
-        "from_steps": [
-          "s-test"
-        ],
-        "uses": [
-          "agency-project-management-experiment-tracker"
-        ]
+        "from_steps": ["s-read"],
+        "uses": ["youtube-retention-reader"]
       },
       {
         "id": "learning",
         "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "Close each test, record wins and losses, propose rules with their scope, and plan the next round.",
-        "owner": {
-          "role": "experiment-readout-desk"
-        },
-        "depends_on": [
-          "measurement"
-        ],
+        "name": "Keep what worked and plan the next quarter",
+        "goal": "Close each experiment, save rules with their scope, and plan the next quarter's changes and a revised target against the data.",
+        "owner": { "role": "experiment-readout-desk" },
+        "depends_on": ["readout"],
         "outputs": [
-          {
-            "id": "learnings",
-            "name": "Learnings and next round",
-            "format": "markdown",
-            "path": "learning/LEARNINGS.md"
-          }
+          { "id": "learnings", "name": "Learnings and next quarter", "format": "markdown", "path": "learning/LEARNINGS.md" }
         ],
         "checks": [
-          {
-            "id": "closed",
-            "name": "Every test is closed with a verdict",
-            "required": true
-          },
-          {
-            "id": "scoped",
-            "name": "Each rule says if it holds for this video, this channel or all channels",
-            "required": true
-          }
+          { "id": "closed", "name": "Every experiment is closed in experiments.jsonl with a verdict", "required": true },
+          { "id": "scope", "name": "Each saved rule says whether it applies to one video type, this channel or any channel", "required": true },
+          { "id": "target", "name": "The 10,000 target is restated with the number of subscribers per upload the data supports", "required": true }
         ],
         "gate": "none",
-        "from_steps": [],
+        "from_steps": ["s-read"],
         "uses": []
       }
     ],
     "hypotheses": [
       {
-        "id": "h-click",
-        "statement": "Packaging is the weakest link: titles and thumbnails do not earn clicks from people who see them.",
-        "test": "Impressions click-through rate per video, weighted by impressions, against the channel's own best videos and the traffic source.",
-        "confirm_if": "Click-through rate is low on most videos and high only on a few distinct packaging styles.",
-        "refute_if": "Click-through rate is steady and the best videos win on topic, not packaging.",
-        "fix_stage": "packaging"
+        "id": "h-hook",
+        "statement": "Viewers leave in the opening, so most videos end with about a fifth of the video watched.",
+        "test": "Intro retention at 30 seconds and the shape of the curve for the 5 best, 5 median and 5 weakest recent videos; average percentage viewed (2:40 of 12:00 is about 22%) across all videos.",
+        "confirm_if": "Intro retention on the weakest 5 is at least 15 points below the best 5 and the steepest drop is inside the first 30 seconds on at least 3 of the weakest 5.",
+        "refute_if": "The steepest drop is later in the video, or intro retention is within 5 points across best and weakest.",
+        "fix_stage": "video-pack"
       },
       {
-        "id": "h-hook",
-        "statement": "Viewers leave in the opening, so the video is not recommended further.",
-        "test": "Retention at 30 seconds and the shape of the curve on the best and weakest videos.",
-        "confirm_if": "A steep early drop on most videos, with a flatter curve on the best.",
-        "refute_if": "Early retention is healthy and the loss comes later in the 12 minutes.",
-        "fix_stage": "packaging"
+        "id": "h-packaging",
+        "statement": "Titles and thumbnails limit views because too few viewers click.",
+        "test": "Views against click-through across the 85 videos; compare videos by click-through quartile with impressions held similar.",
+        "confirm_if": "Videos in the top quarter for click-through have at least 1.5 times the median views, and the bottom quarter sit below 2.5% click-through.",
+        "refute_if": "Click-through shows no link to views, or the bottom quarter is still within the 2% to 10% typical band with similar views.",
+        "fix_stage": "video-pack"
+      },
+      {
+        "id": "h-discovery",
+        "statement": "Few people are shown the videos, because impressions are low or flat, not because clicks are weak.",
+        "test": "Impressions per video and traffic-source mix for the last 20 videos compared with the first 20 comparable ones; share of views from search, browse and suggested.",
+        "confirm_if": "Median impressions on the last 20 videos are not higher than on the first 20, while click-through stays inside 2% to 10%.",
+        "refute_if": "Impressions are rising steadily and click-through is falling.",
+        "fix_stage": "change-options"
+      },
+      {
+        "id": "h-topic-fit",
+        "statement": "A few topic groups bring most new viewers, and the channel does not make enough of them.",
+        "test": "Tag the 85 videos by topic group; views from non-subscribers and subscribers gained per group, against share of uploads.",
+        "confirm_if": "Three topic groups give at least half of non-subscriber views from under 30% of the uploads.",
+        "refute_if": "Non-subscriber views are spread evenly across groups.",
+        "fix_stage": "video-pack"
       },
       {
         "id": "h-length",
-        "statement": "Twelve-minute videos lose viewers because they run longer than the promise needs.",
-        "test": "Average percentage viewed by video length, with the same topic compared where possible.",
-        "confirm_if": "Shorter videos hold a clearly higher share of the video.",
-        "refute_if": "Share watched does not vary with length.",
-        "fix_stage": "packaging"
+        "statement": "Twelve minutes is too long for these recipes, so the share of the video watched is low.",
+        "test": "Average percentage viewed by length band, with at least 8 videos per band.",
+        "confirm_if": "Videos under 8 minutes show an average percentage viewed at least 10 points above videos over 10 minutes.",
+        "refute_if": "Average percentage viewed is within 5 points across length bands.",
+        "fix_stage": "video-pack"
       },
       {
-        "id": "h-topic",
-        "statement": "Topics do not match what busy parents search for or what this audience rewards.",
-        "test": "Views per topic, search versus browse traffic, and peer outliers on the same topics.",
-        "confirm_if": "Few videos get search traffic and peer outliers cluster on topics the channel has not covered.",
-        "refute_if": "Search traffic is healthy and topics match the peer outliers.",
-        "fix_stage": "packaging"
+        "id": "h-subscribe-rate",
+        "statement": "Viewers watch but do not subscribe, because there is no clear reason or ask.",
+        "test": "Subscribers gained per 1,000 views per video, and whether the video has a spoken ask or series framing.",
+        "confirm_if": "Videos with a spoken ask or series framing gain at least double the subscribers per 1,000 views of those without, across 8 or more videos each.",
+        "refute_if": "Subscribers per 1,000 views are the same with and without an ask.",
+        "fix_stage": "video-pack"
       },
       {
-        "id": "h-return",
-        "statement": "Viewers watch once and do not come back or subscribe, because nothing links one video to the next.",
-        "test": "Returning viewers and subscribers gained per 1,000 views, by video.",
-        "confirm_if": "Subscribers per 1,000 views is low even on well-watched videos, and returning viewers are few.",
-        "refute_if": "Well-watched videos convert at a healthy rate and the problem is reach.",
-        "fix_stage": "packaging"
-      },
-      {
-        "id": "h-numbers",
-        "statement": "The reported figures are not what Studio shows for the whole period.",
-        "test": "Recompute average views, click-through rate and view duration from the export.",
-        "confirm_if": "Recomputed figures differ from the reported ones by more than a few percent.",
-        "refute_if": "They match within rounding.",
-        "fix_stage": "evidence-own"
+        "id": "h-target-gap",
+        "statement": "10,000 in a year needs far more subscribers per upload than the channel earns now.",
+        "test": "Subscribers gained over the last 20 videos divided by 20, against the roughly 7,950 new subscribers a year needed, which is about 150 per weekly upload.",
+        "confirm_if": "Subscribers per upload over the last 20 videos are under a quarter of the amount needed per upload.",
+        "refute_if": "Subscribers per upload are already above half of the amount needed.",
+        "fix_stage": "decision"
       }
     ],
+    "dropped": [],
     "measurement": {
-      "window": "Each Test and Compare run for up to the platform's two-week limit, then judge the change over at least the next 5 videos compared with the 10 before, at the same video age. Subscribers are read every month.",
-      "min_volume": "No verdict on a packaging change from fewer than 5 videos or from a test Studio labels Inconclusive; retention findings need at least 100 views per video.",
-      "stop_rule": "Stop and review if average view duration or views per video fall on the changed videos, or if any title or thumbnail is found to over-promise. Otherwise finish the window before judging."
+      "window": "Each video read at 28 days, weekly for eight videos per change, then monthly; title and thumbnail tests run up to two weeks as Studio allows.",
+      "min_volume": "At least 8 videos in each comparison group, or a Studio test result of Winner; below that the verdict is INCONCLUSIVE.",
+      "stop_rule": "Revert a change if average percentage viewed falls more than 10% below the previous eight videos for two videos in a row, or if the packaging is judged misleading; otherwise run the full window."
     }
   }
 }

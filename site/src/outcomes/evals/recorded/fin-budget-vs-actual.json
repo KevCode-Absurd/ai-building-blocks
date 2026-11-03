@@ -1,33 +1,50 @@
 {
   "case": "fin-budget-vs-actual",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "A one-page monthly budget-versus-actual report, readable in ten minutes, with the three biggest variances explained, ready from next month on.",
-    "deliverable": "A one-page report in a Google Sheet that ties to the Xero profit and loss, filled for the latest closed month, plus a written monthly routine to refresh it.",
+    "outcome": "A one-page monthly budget versus actual report for the agency that the owner can read in ten minutes, with the three biggest variances explained, produced every month from next month on.",
+    "ambition": {
+      "goal_beyond": "The owner sees where the money goes early enough to change course within a month or two, instead of finding out after the year is gone.",
+      "rungs": [
+        "Build one month's budget versus actual page with the three biggest variances explained",
+        "Turn the variances into decisions: a re-forecast of the year and a named action for each of the three gaps",
+        "Keep it true every month: the same page refreshes from the ledger, and flags a mapping break or a forecast that keeps missing before it costs a quarter"
+      ],
+      "chosen": 2,
+      "judge": "The agency's Xero ledger: report actuals must tie to Xero's own Profit and Loss for the month, and each re-forecast is later compared with what Xero shows once the month closes"
+    },
+    "deliverable": "A Google Sheet holding the budget, the actuals mapped to budget categories, and a one-page report tab for the month, plus saved steps to refresh it each month",
     "done": [
-      "The Xero chart of accounts is mapped to the budget categories, and gaps are listed",
-      "The January budget is loaded side by side with Xero actuals at the same level of detail",
-      "Actuals are checked against Xero and the Gusto payroll export before they are reported",
-      "The three biggest variances each have an evidenced cause",
-      "The report fits one page and the owner can read it in about ten minutes",
-      "A monthly routine says what to pull, what to check and how to refresh the report"
+      "Every Xero account with a balance maps to a budget category, or the gaps are listed",
+      "Report actuals tie to Xero's Profit and Loss for the month",
+      "One-page report with the three biggest variances explained, readable in ten minutes",
+      "The owner has chosen an action for each of the three variances",
+      "Refresh steps are saved and tested on a second month"
     ],
-    "metric": null,
-    "deadline": "From next month's close on",
+    "metric": {
+      "name": "Monthly budget versus actual reports delivered with the top three variances explained",
+      "direction": "increase",
+      "unit": "reports per month",
+      "baseline": 0,
+      "baseline_source": "reported",
+      "target": 1
+    },
+    "deadline": "From next month on, then every month",
     "guardrails": [
-      "Report actuals tie to the Xero profit and loss for the same month",
-      "The report stays one page and readable in ten minutes",
-      "Nothing is changed in Xero"
+      "Report actuals match Xero's own Profit and Loss for the month",
+      "The report stays on one page and reads in about ten minutes",
+      "Every variance explanation names its evidence; a cause nobody can show is marked unknown, not guessed"
     ],
     "limits": [
-      "Xero MCP is read-only; payroll comes from Gusto exports only",
-      "The budget is changed only if the owner decides to"
+      "Xero is read-only: nothing is posted to or changed in the ledger",
+      "Payroll comes from Gusto exports only",
+      "The budget and the report live in a Google Sheet",
+      "The owner makes the calls"
     ],
     "assets": [
       "The budget spreadsheet made in January",
-      "Xero bookkeeping",
       "Gusto payroll exports"
     ],
     "connections": [
@@ -37,97 +54,115 @@
         "status": "connected"
       },
       {
-        "name": "Gusto payroll export (CSV)",
+        "name": "Gusto exports",
         "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Google Sheets",
+        "access": "draft",
         "status": "available"
       }
     ],
     "data_home": "A Google Sheet",
-    "technical_level": "Not stated",
+    "technical_level": "Not stated; give a finished sheet and a short refresh guide rather than instructions",
     "decides": "The owner",
     "unknowns": [
       "Whether the Xero chart of accounts matches the budget categories",
-      "Which months the budget covers and whether it is monthly or annual",
-      "Whether Xero actuals are reconciled each month",
-      "Whether Xero uses tracking categories or departments",
-      "Whether the AI can write to the Google Sheet directly or the owner pastes the tabs",
-      "The variance threshold the owner wants to use",
-      "How technical the owner wants to be"
+      "Which categories and amounts the January budget holds, and whether it covers every month of the year",
+      "How the AI reaches the Google Sheet (a connector, or files the owner imports)",
+      "How hands-on the owner wants to be with the sheet",
+      "What the three biggest variances are, and how big"
     ],
     "answers": [
       {
-        "question": "Business?",
-        "answer": "Design agency, 14 people, about $1.6M revenue."
+        "question": "What business is this, and how big?",
+        "answer": "Design agency, 14 people, about $1.6M revenue"
       },
       {
-        "question": "Systems?",
-        "answer": "Bookkeeping in Xero (read-only MCP), payroll in Gusto (exports)."
+        "question": "Which tools hold the numbers?",
+        "answer": "Bookkeeping in Xero (read-only MCP), payroll in Gusto (exports)"
       },
       {
-        "question": "What exists?",
-        "answer": "A budget in a spreadsheet made in January and never looked at again."
+        "question": "What exists for the budget?",
+        "answer": "A budget made in a spreadsheet in January and never looked at again"
       },
       {
-        "question": "What do you want?",
-        "answer": "A one-page monthly report I can read in ten minutes, with the three biggest variances explained, from next month on."
+        "question": "What do you want to hold at the end?",
+        "answer": "A one-page monthly report readable in ten minutes, with the three biggest variances explained, from next month on, kept in a Google Sheet"
       },
       {
-        "question": "Where should it live and who decides?",
-        "answer": "In a Google Sheet. The owner decides."
-      },
-      {
-        "question": "What is unknown?",
-        "answer": "Whether the chart of accounts matches the budget categories."
+        "question": "Who decides, and what is unknown?",
+        "answer": "The owner decides. Unknown: whether the chart of accounts matches the budget categories"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners finish the close first so actuals are reconciled and accrual-based, then put budget and actuals side by side at the same level of detail. They compute dollar and percentage variance with one sign convention, for the month and year to date, and flag only lines that cross both a percentage and a dollar threshold agreed in advance. Each flagged line gets a written cause labelled timing, price, volume or plan error, and permanent changes are fed back into the forecast. The report puts a short summary on top, the table beneath and brief commentary on the few lines that matter, and runs on a fixed monthly schedule.",
+    "approach": "Practitioners start from closed actuals in the ledger and measure every line against plan with one fixed sign convention and one materiality rule (a dollar floor and a percent, applied the same way every month). Before any variance means anything they make sure the ledger accounts roll up to the budget categories and that the report ties to the ledger's own profit and loss. They then trace only the lines over the threshold to the transactions behind them, mark each gap as timing (it reverses) or lasting (it changes the year), and carry only lasting gaps into a re-forecast. Each note says cause, timing or lasting, forecast effect and who owns the action.",
     "sources": [
       {
-        "id": "web-monthly",
+        "id": "web-xero-bv",
         "kind": "web",
-        "title": "Budget vs actual variance analysis: a monthly habit (Beancount.io)",
-        "ref": "https://beancount.io/blog/2026/07/08/budget-vs-actual-variance-analysis-monthly-habit",
-        "date": "2026-07",
-        "note": "Five-step monthly routine, dual threshold, close first, same level of detail. Date taken from the page address."
+        "title": "Xero Central: Budget Variance report",
+        "ref": "https://central.xero.com/0/article/Budget-Variance-report",
+        "date": null,
+        "note": "Xero's own report for actuals against budget; shows what Xero can produce before any sheet work. Accessed 2026-11-03; the page shows no publication date."
       },
       {
-        "id": "web-futureproof",
+        "id": "web-xero-api",
         "kind": "web",
-        "title": "Budget vs actuals (Futureproof)",
-        "ref": "https://www.runfutureproof.com/blog/budget-vs-actuals",
-        "date": "2026-01-21",
-        "note": "Side-by-side layout, month and year to date, cause labels, threshold combining percent and dollars, three-month recurrence rule."
+        "title": "Xero Developer: Accounting API Budgets",
+        "ref": "https://developer.xero.com/documentation/api/accounting/budgets",
+        "date": null,
+        "note": "Budgets in Xero are overall or tracking budgets by account and month; the January budget is a spreadsheet, so account-to-category mapping is ours to build. Accessed 2026-11-03; the page shows no publication date."
       },
       {
-        "id": "web-acctdept",
+        "id": "web-gusto",
         "kind": "web",
-        "title": "How to manage budget variances like a pro (The Accounting Department)",
-        "ref": "https://www.accountingdepartment.com/blog/how-to-manage-budget-variances-like-a-pro",
-        "date": "2025-11-21",
-        "note": "Materiality, root cause analysis, favourable variances, monitoring."
+        "title": "Gusto Support: Download mapped payroll ledgers with the General Ledger Mapper",
+        "ref": "https://support.gusto.com/article/221020155120720/Download-mapped-payroll-ledgers-with-the-General-Ledger-Mapper",
+        "date": null,
+        "note": "Official note on how payroll exports map to ledger accounts; wages book gross, employer taxes and contributions as separate lines. Accessed 2026-11-03; the page shows no publication date."
+      },
+      {
+        "id": "web-ramp",
+        "kind": "web",
+        "title": "Ramp: How budget vs actual variances are explained in month-end reporting",
+        "ref": "https://ramp.com/answers/flux-variance-analysis/explain-budget-vs-actual-variances",
+        "date": null,
+        "note": "Closed actuals first, one threshold every month, plan-to-actual bridge, timing versus permanent, forecast impact and an owner for each note. Accessed 2026-11-03; the page shows no publication date."
+      },
+      {
+        "id": "web-xero-close",
+        "kind": "web",
+        "title": "Xero: Month-end close process",
+        "ref": "https://www.xero.com/au/guides/month-end-close-process/",
+        "date": "2026-07-25",
+        "note": "Lists variance analysis against last month and budget as a close step, with materiality thresholds so small items roll forward."
       },
       {
         "id": "cat-keeper",
         "kind": "catalogue",
         "title": "Budget, forecast and cash gap review",
-        "ref": "monthly-budget-versus-actual-keeper",
-        "note": "Compares spending with budget, updates the forecast, proposes changes for review."
+        "ref": "monthly-budget-versus-actual-keeper"
       },
       {
-        "id": "cat-explainer",
+        "id": "cat-variance",
         "kind": "catalogue",
         "title": "Budget variance explainer",
-        "ref": "budget-variance-explainer",
-        "note": "Splits each gap by cause with short notes for leadership."
+        "ref": "budget-variance-explainer"
       },
       {
         "id": "cat-commentary",
         "kind": "catalogue",
         "title": "Month-end variance commentary writer",
-        "ref": "variance-commentary",
-        "note": "A reason for each line that moved past the limit."
+        "ref": "variance-commentary"
+      },
+      {
+        "id": "cat-forecast",
+        "kind": "catalogue",
+        "title": "Budget and forecast builder",
+        "ref": "budget-and-forecast-builder"
       },
       {
         "id": "owner",
@@ -138,261 +173,254 @@
     ],
     "steps": [
       {
-        "id": "s-map",
-        "name": "Map the chart of accounts to the budget categories",
-        "why": "Budget and actuals must be compared at the same level of detail, or the variances are mapping noise.",
+        "id": "s-pull",
+        "name": "Pull month and year-to-date actuals from Xero and Gusto next to the budget",
+        "why": "Everything else rests on closed actuals for the same months as the budget.",
         "sources": [
-          "web-monthly",
+          "web-xero-bv",
+          "web-gusto",
+          "cat-keeper",
           "owner"
         ]
       },
       {
-        "id": "s-actuals",
-        "name": "Use closed, reconciled, accrual-based actuals",
-        "why": "A report built on unreconciled actuals is worse than none, and payroll must tie to the ledger.",
+        "id": "s-map",
+        "name": "Map each ledger account to one budget category and tie the total back to Xero",
+        "why": "If the two do not line up, a variance may be a labelling difference, not spending. Mapping is the owner's stated unknown.",
         "sources": [
-          "web-monthly",
-          "web-acctdept"
+          "web-xero-api",
+          "web-gusto",
+          "owner"
         ]
       },
       {
         "id": "s-variance",
-        "name": "Compute variance in dollars and percent, for the month and year to date",
-        "why": "One sign convention and both measures show size and relative importance.",
+        "name": "Compute variance by category with one sign rule and one threshold",
+        "why": "Same rule every month makes months comparable; sort by dollars so the three biggest are clear.",
         "sources": [
-          "web-futureproof",
-          "web-monthly"
-        ]
-      },
-      {
-        "id": "s-threshold",
-        "name": "Flag only lines that cross a dual threshold agreed in advance",
-        "why": "A percentage and a dollar floor keep trivial lines out and keep the review short enough to happen monthly.",
-        "sources": [
-          "web-monthly",
-          "web-futureproof",
-          "web-acctdept"
+          "web-ramp",
+          "web-xero-close",
+          "cat-variance"
         ]
       },
       {
         "id": "s-explain",
-        "name": "Explain the biggest variances with a labelled cause",
-        "why": "A variance is a symptom; the cause (timing, price, volume or plan error) decides the action.",
+        "name": "Trace the three biggest to transactions and mark each timing or lasting",
+        "why": "A cause nobody can show is a guess; timing gaps reverse and should not move the forecast.",
         "sources": [
-          "web-futureproof",
-          "web-acctdept",
-          "cat-explainer",
-          "cat-commentary"
+          "web-ramp",
+          "cat-commentary",
+          "cat-variance"
         ]
       },
       {
-        "id": "s-layout",
-        "name": "Lay out the report on one page",
-        "why": "Summary on top, table beneath and a few lines of commentary make a ten-minute read.",
+        "id": "s-forecast",
+        "name": "Re-forecast the year from lasting gaps and name an action and owner per gap",
+        "why": "Turns the report from a record into a decision tool.",
         "sources": [
-          "web-futureproof",
-          "web-monthly",
-          "cat-keeper"
+          "web-ramp",
+          "cat-keeper",
+          "cat-forecast"
         ]
       },
       {
-        "id": "s-routine",
-        "name": "Run it on a fixed monthly schedule and reforecast permanent changes",
-        "why": "A routine keeps the report alive, and recurring variances call for a changed forecast, not the same explanation every month.",
+        "id": "s-report",
+        "name": "Lay out one page that reads in ten minutes and refresh it monthly",
+        "why": "Same layout each month; the owner learns where to look.",
         "sources": [
-          "web-monthly",
-          "web-futureproof"
+          "cat-keeper",
+          "owner"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Comparing budget and actuals at different levels of detail, or using bank balances and miscategorised transactions as actuals.",
+        "text": "Chart of accounts and budget categories do not match, so a variance is really a classification gap.",
         "sources": [
-          "web-monthly"
+          "web-xero-api",
+          "owner"
         ]
       },
       {
-        "text": "Recording what happened without explaining why, or treating every variance as a problem.",
+        "text": "Explaining every line instead of only those over a threshold, which buries the three that matter.",
         "sources": [
-          "web-monthly",
-          "web-acctdept"
+          "web-ramp"
         ]
       },
       {
-        "text": "Explaining the same recurring variance every month instead of reforecasting the line.",
+        "text": "Treating a timing gap as lasting and moving the forecast, or the reverse.",
         "sources": [
-          "web-monthly",
-          "web-futureproof"
+          "web-ramp"
         ]
       },
       {
-        "text": "Ignoring favourable variances, which hide lessons and plan errors.",
+        "text": "Payroll booked gross in the ledger but exported net or by pay date from Gusto, so the two disagree for a reason that is not an error.",
         "sources": [
-          "web-acctdept"
-        ]
-      },
-      {
-        "text": "Setting the commentary rules only during the review, so people argue about them mid-meeting.",
-        "sources": [
-          "web-monthly"
+          "web-gusto"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Monthly budget versus actual, on one page",
+    "name": "Monthly budget versus actual report the owner can read in ten minutes",
     "capabilities": [
       {
         "id": "xero-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read the profit and loss and reconciliation status (Xero MCP)",
-        "why": "Pull monthly profit and loss by account, the chart of accounts and bank reconciliation status. Read-only."
+        "name": "Read the ledger (Xero MCP)",
+        "why": "Read Profit and Loss by month and the transactions behind a line. Read-only."
       },
       {
         "id": "gusto-export",
         "access": "read",
         "via": "file",
-        "name": "Gusto payroll export (CSV)",
-        "why": "Payroll totals by month to tie to the payroll expense in Xero."
+        "name": "Read Gusto payroll exports",
+        "why": "Payroll cost by month, split by employee cost and employer cost, from files the owner exports."
       },
       {
         "id": "budget-file",
         "access": "read",
         "via": "file",
-        "name": "The January budget spreadsheet",
-        "why": "The budget to load against actuals."
+        "name": "Read the January budget spreadsheet",
+        "why": "The budget by category and month."
       },
       {
-        "id": "sheet",
+        "id": "sheet-draft",
         "access": "draft",
-        "via": "owner",
-        "name": "Google Sheet for the report (owner shares it, or pastes the tabs)",
-        "why": "The owner wants the report in a Google Sheet; the tabs mirror the files in this project."
+        "via": "file",
+        "name": "Draft the Google Sheet tabs",
+        "why": "Build the sheet tabs as files or through a connector the owner approves; the owner imports or opens them. Nothing is sent anywhere."
       }
     ],
     "data": [
       {
-        "id": "budget",
-        "name": "The January budget",
-        "why": "The comparison base for every line.",
-        "fields": [
-          "category",
-          "month or period",
-          "budget amount",
-          "basis notes"
-        ],
-        "routes": [
-          {
-            "kind": "FILE",
-            "how": "Share the budget spreadsheet."
-          }
-        ],
-        "required_for": [
-          "actuals-check",
-          "variances"
-        ],
-        "alternative": "Without it, only prior-period comparisons are possible, and the report is not budget versus actual."
-      },
-      {
         "id": "xero-pl",
-        "name": "Xero profit and loss by account and month",
-        "why": "The actuals, on an accrual basis.",
+        "name": "Xero Profit and Loss by month, with transactions for large lines",
+        "why": "Closed actuals are the base for every variance.",
         "fields": [
-          "account code",
-          "account name",
+          "account",
           "month",
           "amount",
-          "accounting basis"
+          "transaction date",
+          "contact",
+          "reference"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Xero MCP read: profit and loss by month for the budget year, plus the chart of accounts and reconciliation status."
+            "how": "Read Profit and Loss by month from the start of the budget year with the Xero MCP; read transactions only for lines over the threshold."
           },
           {
             "kind": "CSV",
-            "how": "Xero: Reports, Profit and Loss, by month, accrual basis, export as CSV."
+            "how": "Xero: Reports, Profit and Loss, compare by month, export; Accounting, Transactions export for a line."
           }
         ],
         "required_for": [
-          "actuals-check",
-          "variances",
-          "report-build"
-        ]
+          "evidence",
+          "integrity-mapping",
+          "diagnosis"
+        ],
+        "alternative": "Without Xero access the report is built from an exported Profit and Loss and marked as an export, not live."
       },
       {
-        "id": "gusto",
-        "name": "Gusto payroll register by month",
-        "why": "Payroll is likely the biggest cost in a 14-person agency and must tie to the ledger.",
+        "id": "budget",
+        "name": "The January budget",
+        "why": "The plan every actual is measured against.",
         "fields": [
-          "pay date",
-          "gross pay",
-          "employer taxes",
-          "benefits",
-          "total cost"
+          "category",
+          "month",
+          "budgeted amount"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Gusto: Reports, payroll journal or payroll summary, one file for the budget year."
+            "how": "Export the budget tab of the January spreadsheet as CSV, one row per category and month."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owner which tab and which months are the approved budget."
           }
         ],
         "required_for": [
-          "actuals-check",
-          "variances"
+          "evidence",
+          "integrity-mapping",
+          "diagnosis"
         ],
-        "alternative": "Without it, the payroll line is reported from Xero and marked not tied."
+        "alternative": "If the budget is only a yearly total per category, variances are shown year to date only and the monthly view is marked unknown."
+      },
+      {
+        "id": "payroll",
+        "name": "Gusto payroll exports",
+        "why": "Payroll is a large agency cost and is checked against the ledger.",
+        "fields": [
+          "pay date",
+          "gross wages",
+          "employer taxes",
+          "employer contributions",
+          "department"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Gusto: Reports, run the ledger report (or the General Ledger Mapper download) for each month."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ],
+        "alternative": "Without payroll exports, payroll variance is read from the ledger accounts only and marked not cross-checked."
       }
     ],
     "stages": [
       {
+        "gate": "none",
+        "from_steps": [],
+        "uses": [],
         "id": "intake",
         "kind": "intake",
         "name": "Pin down the report",
-        "goal": "Turn the owner's words into a clear one-page report, the three-variance rule, limits and the data we can reach. Writes BRIEF.md.",
+        "goal": "Turn the request into a measured outcome, the budget file, the months and the data we can reach. Writes BRIEF.md.",
         "owner": {
-          "role": "finance-fpa-analyst"
-        },
-        "gate": "none"
+          "role": "monthly-budget-versus-actual-keeper"
+        }
       },
       {
-        "id": "budget-and-actuals",
+        "gate": "none",
+        "from_steps": [
+          "s-pull"
+        ],
+        "uses": [
+          "spreadsheet-checker",
+          "budget-and-forecast-builder"
+        ],
+        "id": "evidence",
         "kind": "evidence",
-        "name": "Pull the budget and the actuals side by side",
-        "goal": "Load the January budget, Xero profit and loss by month and the Gusto payroll register into one working sheet.",
+        "name": "Put actuals and budget side by side",
+        "goal": "Pull Xero Profit and Loss by month, the Gusto payroll exports and the January budget into one working sheet.",
         "owner": {
           "role": "finance-fpa-analyst"
         },
-        "from_steps": [
-          "s-variance"
-        ],
         "data": [
-          "budget",
           "xero-pl",
-          "gusto"
+          "budget",
+          "payroll"
         ],
         "needs": [
           "xero-read",
           "gusto-export",
-          "budget-file",
-          "sheet"
+          "budget-file"
         ],
         "depends_on": [
           "intake"
         ],
-        "gate": "none",
-        "uses": [
-          "department-budget-planner",
-          "spreadsheet-checker"
-        ],
         "outputs": [
           {
-            "id": "dataset",
-            "name": "Budget and actuals by line and month",
+            "id": "actuals",
+            "name": "Actuals and budget by month",
             "format": "csv",
-            "path": "evidence/budget-vs-actual.csv"
+            "path": "evidence/ACTUALS-AND-BUDGET.csv"
           },
           {
             "id": "evidence-notes",
@@ -403,224 +431,222 @@
         ],
         "checks": [
           {
-            "id": "periods",
-            "name": "Budget periods and actual periods cover the same months",
+            "id": "pl-tie",
+            "name": "Revenue, total expenses and net profit for each month equal Xero's Profit and Loss for the same dates within $1",
             "required": true
           },
           {
-            "id": "pl-total",
-            "name": "Actual totals equal the Xero profit and loss totals for each month",
-            "required": true
-          },
-          {
-            "id": "missing",
-            "name": "Missing data is named as unknown, not estimated",
-            "required": true
-          }
-        ]
-      },
-      {
-        "id": "actuals-check",
-        "kind": "integrity",
-        "name": "Map the accounts and check the actuals",
-        "goal": "Map each Xero account to a budget category, list unmapped accounts and budget lines, and check reconciliation status, payroll tie, suspense lines and the accounting basis before any variance is read.",
-        "owner": {
-          "role": "finance-bookkeeper-controller"
-        },
-        "from_steps": [
-          "s-map",
-          "s-actuals"
-        ],
-        "data": [
-          "budget",
-          "xero-pl",
-          "gusto"
-        ],
-        "needs": [
-          "xero-read",
-          "gusto-export"
-        ],
-        "depends_on": [
-          "budget-and-actuals"
-        ],
-        "gate": "none",
-        "uses": [
-          "spreadsheet-checker",
-          "ledger-to-subledger-reconciler",
-          "reconciliation-break-tracer"
-        ],
-        "outputs": [
-          {
-            "id": "category-map",
-            "name": "Account to budget category map",
-            "format": "csv",
-            "path": "integrity/category-map.csv"
-          },
-          {
-            "id": "actuals-md",
-            "name": "Actuals check",
-            "format": "markdown",
-            "path": "integrity/ACTUALS-CHECK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "mapped",
-            "name": "Every Xero account with activity maps to exactly one budget category, and unmapped accounts or budget lines are listed",
+            "id": "budget-tie",
+            "name": "Budget totals by month equal the January spreadsheet's own totals exactly",
             "required": true
           },
           {
             "id": "payroll-tie",
-            "name": "Gusto payroll totals tie to the payroll expense in Xero by month, or the gap is explained",
-            "required": true
-          },
-          {
-            "id": "reconciled",
-            "name": "Bank reconciliation status is stated for each month; unreconciled months are marked",
-            "required": true
-          },
-          {
-            "id": "suspense",
-            "name": "Uncategorised and suspense lines are listed",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the variances",
+            "name": "Payroll cost by month from Gusto agrees with the ledger payroll accounts within 2%, or the gap is explained (for example pay date versus accrual)",
             "required": true
           }
         ]
       },
       {
-        "id": "variances",
-        "kind": "diagnosis",
-        "name": "Find the biggest variances and why",
-        "goal": "Compute variance in dollars and percent for the month and year to date, rank by dollars, and trace the top lines to transactions to label the cause: timing, price, volume or plan error.",
+        "gate": "none",
+        "from_steps": [
+          "s-map"
+        ],
+        "uses": [
+          "expense-sorter",
+          "spreadsheet-checker"
+        ],
+        "id": "integrity-mapping",
+        "kind": "integrity",
+        "name": "Check accounts map to budget categories",
+        "goal": "Map each Xero account with a balance to exactly one budget category and say whether the two structures match.",
         "owner": {
-          "role": "finance-fpa-analyst"
+          "role": "finance-bookkeeper-controller"
         },
+        "data": [
+          "xero-pl",
+          "budget"
+        ],
+        "needs": [
+          "xero-read",
+          "budget-file"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
+            "id": "mapping",
+            "name": "Account to category map",
+            "format": "csv",
+            "path": "integrity/MAPPING.csv"
+          },
+          {
+            "id": "mapping-notes",
+            "name": "Mapping verdict and open questions",
+            "format": "markdown",
+            "path": "integrity/MAPPING.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "one-to-one",
+            "name": "Every account with a balance maps to exactly one budget category; none is split or left out without a note",
+            "required": true
+          },
+          {
+            "id": "unmapped",
+            "name": "Unmapped or ambiguous accounts are under 2% of total expenses, or each is listed for the owner",
+            "required": true
+          },
+          {
+            "id": "still-ties",
+            "name": "Mapped category totals still equal Xero's total expenses within $1 (nothing lost or counted twice)",
+            "required": true
+          },
+          {
+            "id": "verdict",
+            "name": "Ends with MATCHES, PARTLY or DOES NOT MATCH and what that means for the variances",
+            "required": true
+          }
+        ]
+      },
+      {
+        "gate": "none",
         "from_steps": [
           "s-variance",
           "s-explain"
-        ],
-        "data": [
-          "budget",
-          "xero-pl",
-          "gusto"
-        ],
-        "needs": [
-          "xero-read"
-        ],
-        "depends_on": [
-          "actuals-check"
-        ],
-        "gate": "none",
-        "support": [
-          "explain-a-department-budget-overrun"
         ],
         "uses": [
           "budget-variance-explainer",
           "variance-commentary"
         ],
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find and explain the three biggest variances",
+        "goal": "Compute variance by category, pick the three biggest gaps in dollars, trace each to transactions and mark each timing or lasting.",
+        "owner": {
+          "role": "monthly-budget-versus-actual-keeper"
+        },
+        "data": [
+          "xero-pl",
+          "payroll"
+        ],
+        "needs": [
+          "xero-read"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-mapping"
+        ],
         "outputs": [
           {
-            "id": "variances-md",
-            "name": "Variances and verdicts",
+            "id": "variances",
+            "name": "Variance table and the three explained",
             "format": "markdown",
             "path": "diagnosis/VARIANCES.md"
           },
           {
-            "id": "variance-table",
-            "name": "Variance table by line",
-            "format": "csv",
-            "path": "diagnosis/variance-table.csv"
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
           {
-            "id": "both-measures",
-            "name": "Every line has dollar and percentage variance with one stated sign convention",
+            "id": "rule",
+            "name": "One sign rule (actual minus budget; expense above budget unfavourable) and one threshold (a dollar floor and a percent, agreed before running) are written at the top and used for every line",
             "required": true
           },
           {
-            "id": "top-three",
-            "name": "The three biggest dollar variances each have a cause label and the transactions that show it",
+            "id": "sum",
+            "name": "Category variances add up to the net profit variance within $1",
+            "required": true
+          },
+          {
+            "id": "evidence",
+            "name": "Each of the three has at least one named transaction, invoice or payroll run behind it, or says cause unknown",
+            "required": true
+          },
+          {
+            "id": "timing",
+            "name": "Each of the three is marked timing or lasting with the test used (for example gap reverses in the next month, or year-to-date gap is under half the month gap)",
             "required": true
           },
           {
             "id": "verdicts",
-            "name": "Every hypothesis is marked SUPPORTED, REFUTED or UNKNOWN with evidence",
-            "required": true
-          },
-          {
-            "id": "favourable",
-            "name": "Large favourable variances are explained too",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
             "required": true
           }
+        ],
+        "reviewers": [
+          "explain-a-department-budget-overrun"
         ]
       },
       {
-        "id": "report-rules",
+        "gate": "none",
+        "from_steps": [
+          "s-forecast"
+        ],
+        "uses": [
+          "budget-and-forecast-builder",
+          "trend-and-forecast-analyst"
+        ],
+        "id": "options",
         "kind": "options",
-        "name": "Propose the report rules",
-        "goal": "Propose the dual threshold, month and year-to-date columns, what to do with plan-error lines (keep the budget or reforecast) and what the page shows, each with its effect on the length of the review.",
+        "name": "Re-forecast the year and rank actions",
+        "goal": "Carry only lasting gaps into a re-forecast of the year, then propose an action, an owner and an expected dollar effect for each of the three variances.",
         "owner": {
           "role": "finance-fpa-analyst"
         },
-        "from_steps": [
-          "s-threshold",
-          "s-layout"
-        ],
         "depends_on": [
-          "variances"
-        ],
-        "gate": "none",
-        "uses": [
-          "variance-commentary",
-          "monthly-budget-versus-actual-keeper"
+          "diagnosis"
         ],
         "outputs": [
           {
-            "id": "rules-md",
-            "name": "Report rule options",
+            "id": "forecast",
+            "name": "Re-forecast and ranked actions",
             "format": "markdown",
-            "path": "options/REPORT-RULES.md"
+            "path": "options/FORECAST-AND-ACTIONS.md"
           }
         ],
         "checks": [
           {
-            "id": "threshold-fit",
-            "name": "Each threshold option shows how many lines it would flag on the data we have",
+            "id": "lasting-only",
+            "name": "The re-forecast moves only for gaps marked lasting; timing gaps are shown but do not change the year",
             "required": true
           },
           {
-            "id": "one-page",
-            "name": "Each layout option fits one page",
+            "id": "cards",
+            "name": "Each action cites its variance, expected dollar effect, effort, confidence and who owns it",
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every option has its effect, effort and risk",
+            "id": "base",
+            "name": "The re-forecast equals actuals to date plus the remaining budget, adjusted; the arithmetic is shown and totals tie to the diagnosis",
             "required": true
           }
         ]
       },
       {
+        "gate": "approve",
+        "from_steps": [],
+        "uses": [],
         "id": "decision",
         "kind": "decision",
-        "name": "Owner chooses the rules",
-        "goal": "The owner picks the threshold, the layout and how plan-error lines are handled. Ask why when the top option is passed over and record it.",
+        "name": "Owner chooses what to do about each gap",
+        "goal": "The owner picks an action for each of the three variances and confirms the account-to-category map. Record the reason when a top action is passed over.",
         "owner": {
-          "role": "finance-fpa-analyst"
+          "role": "monthly-budget-versus-actual-keeper"
         },
         "depends_on": [
-          "report-rules"
+          "options"
         ],
-        "gate": "approve",
         "outputs": [
           {
-            "id": "decision-md",
-            "name": "Chosen report rules",
+            "id": "decision",
+            "name": "Chosen actions and confirmed map",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -628,130 +654,147 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over options are recorded with reasons",
+            "name": "Chosen and passed-over actions are in decisions.jsonl",
+            "required": true
+          },
+          {
+            "id": "map-confirmed",
+            "name": "The owner has confirmed or corrected every ambiguous account in the map",
             "required": true
           }
         ]
       },
       {
-        "id": "report-build",
+        "gate": "review",
+        "from_steps": [
+          "s-report"
+        ],
+        "uses": [
+          "report-builder",
+          "spreadsheet-checker"
+        ],
+        "id": "report",
         "kind": "production",
-        "name": "Build the one-page report and the monthly routine",
-        "goal": "Build the report with summary on top, budget, actual and variance columns for the month and year to date, flagged lines and short commentary on the top three variances, filled for the latest closed month. Then write the steps, owners, dates and checks to refresh it each month, and the prompt to ask the AI for it. The owner reviews both together.",
+        "name": "Build the one-page report and the monthly refresh",
+        "goal": "Build the Google Sheet tabs: mapped actuals, budget, and a one-page report with the headline, category table, the three explained variances and the chosen actions. Save the steps to refresh it each month.",
         "owner": {
           "role": "monthly-budget-versus-actual-keeper"
         },
-        "from_steps": [
-          "s-layout",
-          "s-explain",
-          "s-routine"
-        ],
-        "data": [
-          "xero-pl"
-        ],
         "needs": [
-          "xero-read",
-          "sheet"
+          "sheet-draft"
         ],
         "depends_on": [
           "decision",
-          "variances"
-        ],
-        "gate": "review",
-        "reviewers": [
-          "finance-bookkeeper-controller"
-        ],
-        "uses": [
-          "department-budget-planner",
-          "variance-commentary",
-          "budget-variance-explainer",
-          "financial-statement-analyst",
-          "monthly-budget-versus-actual-keeper"
+          "diagnosis"
         ],
         "outputs": [
           {
-            "id": "report",
-            "name": "One-page report and sheet layout",
+            "id": "one-pager",
+            "name": "One-page report",
             "format": "markdown",
-            "path": "production/REPORT.md"
+            "path": "production/ONE-PAGE-REPORT.md"
           },
           {
-            "id": "routine",
-            "name": "Monthly routine and prompt",
+            "id": "refresh",
+            "name": "Monthly refresh steps",
             "format": "markdown",
-            "path": "production/MONTHLY-ROUTINE.md"
+            "path": "production/REFRESH.md"
           }
         ],
         "checks": [
           {
-            "id": "ties",
-            "name": "Every actual in the report equals the Xero profit and loss for the month and year to date",
-            "required": true
-          },
-          {
             "id": "one-page",
-            "name": "The report fits one page and reads in about ten minutes",
+            "name": "The report fits one printed page and has no more than 400 words outside the tables",
             "required": true
           },
           {
-            "id": "cause",
-            "name": "Each commented variance has a cause label and the evidence behind it",
+            "id": "tie",
+            "name": "Every figure on the page matches the diagnosis and Xero's Profit and Loss within $1",
             "required": true
           },
           {
-            "id": "formulas",
-            "name": "Variance cells are formulas from budget and actual cells, not typed numbers",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "The routine closes the books and reconciles before pulling actuals",
-            "required": true
-          },
-          {
-            "id": "schedule",
-            "name": "It has a fixed day each month and a named person for each step",
-            "required": true
-          },
-          {
-            "id": "recurring",
-            "name": "It says when a variance that repeats for three months is reforecast instead of explained again",
+            "id": "rerun",
+            "name": "The refresh steps were rerun on the prior month's data and gave the same layout and a result that ties to Xero",
             "required": true
           }
         ]
       },
       {
+        "gate": "none",
+        "from_steps": [],
+        "uses": [],
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Check last month's forecast against what happened",
+        "goal": "Once the next month closes in Xero, compare the re-forecast and the explanations with closed actuals and say whether the report is earning its place.",
+        "owner": {
+          "role": "monthly-budget-versus-actual-keeper"
+        },
+        "needs": [
+          "xero-read"
+        ],
+        "depends_on": [
+          "report"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Forecast accuracy readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "like-for-like",
+            "name": "Forecast and actuals use the same categories, map and Xero closed figures",
+            "required": true
+          },
+          {
+            "id": "error",
+            "name": "Forecast error is shown per category; any line off by more than 10% and over the dollar floor is explained",
+            "required": true
+          },
+          {
+            "id": "min-months",
+            "name": "No verdict is given on the forecast until at least two months have closed; before that it says INCONCLUSIVE",
+            "required": true
+          }
+        ]
+      },
+      {
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "decision-checklist-builder"
+        ],
         "id": "learning",
         "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "After the first live month, record which lines the owner asked about, tune the threshold, and decide whether the budget needs rebasing.",
+        "name": "Keep the rules and plan next month",
+        "goal": "Save the threshold, sign rule and mapping as rules, list what the next run needs, and set how last month's re-forecast will be compared with actuals.",
         "owner": {
-          "role": "finance-fpa-analyst"
+          "role": "monthly-budget-versus-actual-keeper"
         },
         "depends_on": [
-          "report-build"
-        ],
-        "gate": "review",
-        "uses": [
-          "variance-commentary"
+          "measurement"
         ],
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and next month",
+            "name": "Rules and next run",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
         ],
         "checks": [
           {
-            "id": "scoped",
-            "name": "Each proposed rule says whether it holds for this job, this business or the playbook",
+            "id": "rules",
+            "name": "Each saved rule says whether it holds for this report, this business or the playbook",
             "required": true
           },
           {
-            "id": "budget",
-            "name": "The decision to keep or rebase the budget is recorded",
+            "id": "next",
+            "name": "Next run lists the inputs to export, the date they are needed and the re-forecast comparison to make",
             "required": true
           }
         ]
@@ -760,53 +803,57 @@
     "hypotheses": [
       {
         "id": "h-mapping",
-        "statement": "Xero accounts and budget categories do not line up, so some variances are mapping noise.",
-        "test": "Map each account to a budget category and list unmapped accounts, budget lines without accounts and lines mapped many-to-one.",
-        "confirm_if": "Active accounts or budget lines are unmapped, or total actuals by category differ from the Xero profit and loss.",
-        "refute_if": "Every active account maps cleanly and totals tie.",
-        "fix_stage": "actuals-check"
-      },
-      {
-        "id": "h-payroll",
-        "statement": "Payroll is the largest cost and drives at least one of the top variances, and it may not tie between Gusto and Xero.",
-        "test": "Compare Gusto totals with Xero payroll expense by month, and payroll share of the top three variances.",
-        "confirm_if": "Payroll is among the top three variances or the two sources disagree.",
-        "refute_if": "Payroll ties and is small against the other variances.",
-        "fix_stage": "actuals-check"
-      },
-      {
-        "id": "h-plan-error",
-        "statement": "The January budget rested on assumptions that proved wrong, so the same variances repeat in the same direction.",
-        "test": "Check whether variances on the same lines have the same sign in three or more months.",
-        "confirm_if": "Several lines miss in the same direction month after month.",
-        "refute_if": "Variances change sign or are one-off.",
-        "fix_stage": "report-build"
+        "statement": "Some variances are labelling differences because Xero accounts do not match the budget categories.",
+        "test": "Map every account with a balance and count dollars in accounts that map to no category or to more than one.",
+        "confirm_if": "More than 5% of expense dollars sit in unmapped or ambiguous accounts.",
+        "refute_if": "Under 2% of expense dollars are unmapped and category totals tie to Xero.",
+        "fix_stage": "decision"
       },
       {
         "id": "h-timing",
-        "statement": "Some variances are timing (annual fees, project billing, missing accruals) and reverse within the year.",
-        "test": "Compare the month and year-to-date variance and look for annual or lumpy transactions behind the top lines.",
-        "confirm_if": "A big month variance shrinks in year to date or traces to a single lumpy item.",
-        "refute_if": "Year-to-date variance is as large as the month.",
-        "fix_stage": "report-build"
+        "statement": "The biggest gaps are timing (annual bills, late invoices, pay dates) and reverse soon.",
+        "test": "Compare the month gap with the year-to-date gap and with the next month's gap for each of the three.",
+        "confirm_if": "The year-to-date gap is under half the month gap, or the gap reverses the next month.",
+        "refute_if": "The year-to-date gap is as large as or larger than the month gap.",
+        "fix_stage": "options"
       },
       {
-        "id": "h-uncategorised",
-        "statement": "Uncategorised or catch-all lines hide real spending.",
-        "test": "List uncategorised, suspense and 'other' accounts and their amounts by month.",
-        "confirm_if": "They hold a material share of costs.",
-        "refute_if": "They are small.",
-        "fix_stage": "actuals-check"
+        "id": "h-payroll",
+        "statement": "Payroll (hiring, overtime, bonuses or contractors) drives most of the expense variance.",
+        "test": "Compare Gusto payroll cost by month with the budgeted payroll lines and with headcount.",
+        "confirm_if": "Payroll lines account for more than 40% of the total expense variance.",
+        "refute_if": "Payroll is within the threshold and other lines carry the variance.",
+        "fix_stage": "options"
       },
       {
         "id": "h-revenue",
-        "statement": "The biggest gap is revenue (project timing or client mix) rather than cost overspend.",
-        "test": "Rank revenue and cost variances together by dollars and read the revenue lines by month.",
-        "confirm_if": "A revenue line is in the top three variances.",
-        "refute_if": "Cost lines make up the top three.",
-        "fix_stage": "report-build"
+        "statement": "Revenue, not cost, drives the gap between budget and actual profit.",
+        "test": "Compare revenue variance with the net profit variance.",
+        "confirm_if": "Revenue variance is more than half of the net profit variance.",
+        "refute_if": "Revenue is within the threshold of budget.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-stale-budget",
+        "statement": "The January budget is out of date, so the same lines miss every month.",
+        "test": "Check whether the same lines carry a variance of the same sign in each closed month of the year.",
+        "confirm_if": "The same line is more than 10% off budget, in the same direction, in at least 3 closed months.",
+        "refute_if": "Variances change sign or size from month to month.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-one-off",
+        "statement": "One-off or miscoded transactions inflate a line.",
+        "test": "List the largest transactions in each of the three lines and check vendor history and category.",
+        "confirm_if": "A single transaction accounts for more than half of a line's variance, or sits in an unusual category for that contact.",
+        "refute_if": "The variance is spread over many ordinary transactions.",
+        "fix_stage": "decision"
       }
     ],
-    "dropped": []
+    "measurement": {
+      "window": "Each month, once Xero closes, compare the previous re-forecast with closed actuals for the same lines.",
+      "min_volume": "At least two closed months before judging the re-forecast.",
+      "stop_rule": "No live changes are made; if actuals fail to tie to Xero within $1, fix the mapping before reporting."
+    }
   }
 }

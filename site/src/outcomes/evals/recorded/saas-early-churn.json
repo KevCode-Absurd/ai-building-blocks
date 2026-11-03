@@ -1,45 +1,60 @@
 {
   "case": "saas-early-churn",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Cut overall monthly churn from 6.5% to under 4%, mainly by keeping more clinics through their first three months.",
-    "deliverable": "A diagnosis of when and why new accounts cancel, a chosen set of onboarding, email and in-app message changes, ready to ship with each one tested against a comparison group, and a read-back of the churn result.",
+    "outcome": "Fewer clinics cancel in their first three months, so overall monthly churn falls from 6.5% to under 4% within two quarters, without a price change.",
+    "ambition": {
+      "goal_beyond": "A larger base of clinics that stay past month three, so every new signup adds to the base instead of replacing a leaver.",
+      "rungs": [
+        "Rewrite the onboarding emails and in-app messages that go out today and ship them.",
+        "Find which clinics leave early and why from the raw billing, usage and support records, then fix the biggest causes in onboarding, emails and in-app messages.",
+        "Do rung 2 as a holdout test, then keep a weekly check that flags new clinics stalling before month three, so early churn stays down without being asked."
+      ],
+      "chosen": 3,
+      "judge": "Stripe cancellations by signup cohort, treated clinics against a randomised holdout, read from Stripe's own records and not from our working tables."
+    },
+    "deliverable": "Changed onboarding, emails and in-app messages launched to new clinics with your approval and a holdout group, a weekly early-warning list, and an honest readout against the 4% target.",
     "done": [
-      "Monthly churn is defined once and checked against Stripe, with early churn split from later churn",
-      "The month one to three share of churn is measured, not assumed",
-      "Every hypothesis, including the missing-integration idea, is marked supported, refuted or unknown with evidence",
-      "The owner and the head of product have chosen the changes, with reasons recorded",
-      "Approved changes are shipped one at a time, each registered as a test beforehand",
-      "Churn and early-account retention are read back against the target and the limits",
-      "Learnings are saved for the next round"
+      "Early churn measured from raw Stripe records by tenure, split into chosen cancellations and failed payments",
+      "Diagnosis with every hypothesis marked supported, refuted or unknown, with the evidence",
+      "Your chosen fixes recorded with reasons, built and checked",
+      "Changes launched with your approval to a randomly chosen group, with a holdout registered before launch",
+      "Readout of treated clinics against the holdout and against the 4% target, with guardrails",
+      "Learnings and next round saved"
     ],
     "metric": {
       "name": "Overall monthly churn",
       "direction": "decrease",
-      "unit": "% of paying accounts per month",
+      "unit": "percent of paying accounts per month",
       "baseline": 6.5,
       "baseline_source": "reported",
       "target": 4
     },
     "deadline": "Two quarters from plan approval (about May 2027)",
     "guardrails": [
-      "Pricing stays as it is this year",
-      "Support load in Intercom does not rise because of the new messages (owner has not set a number)"
+      "Proposed, owner to confirm: no price change or discount (the owner's limit)",
+      "Proposed, owner to confirm: support conversations per new clinic in Intercom do not rise",
+      "Proposed, owner to confirm: no clinic receives a message that is wrong for what it has already done"
     ],
     "limits": [
-      "May change onboarding, emails and in-app messages",
-      "Pricing is off limits this year",
+      "Change onboarding, emails and in-app messages only",
+      "No pricing change this year",
       "Working data stays in the Postgres analytics schema",
-      "Stripe is read-only; Mixpanel and Intercom are read-only through MCP"
+      "Stripe is read-only for us"
     ],
     "assets": [
-      "Product usage in Mixpanel",
-      "Support conversations in Intercom",
-      "Billing history in Stripe"
+      "Stripe billing history (read-only)",
+      "Mixpanel product usage",
+      "Intercom conversations"
     ],
     "connections": [
+      {
+        "name": "Stripe",
+        "access": "read",
+        "status": "connected"
+      },
       {
         "name": "Mixpanel MCP",
         "access": "read",
@@ -51,100 +66,144 @@
         "status": "connected"
       },
       {
-        "name": "Stripe",
-        "access": "read",
-        "status": "connected"
-      },
-      {
         "name": "Postgres analytics schema",
         "access": "draft",
-        "status": "missing"
+        "status": "available"
       }
     ],
     "data_home": "The owner's Postgres analytics schema",
-    "technical_level": "Not stated; the head of product decides with the owner, so changes arrive as reviewed drafts they can hand to the team",
+    "technical_level": "Not stated yet; assume the head of product reviews anything technical",
     "decides": "The owner together with the head of product",
     "unknowns": [
-      "Whether clinics cancel because a particular integration is missing",
-      "Why clinics cancel at all: there is no cancellation survey",
-      "Whether the 6.5% figure and the 'most churn is in months one to three' belief hold up when counted by sign-up date",
-      "How much churn is failed payments rather than a choice to cancel",
-      "How to connect to the Postgres analytics schema (no access details given yet)",
-      "Whether the head of product wants a minimum size for any comparison group"
+      "Whether clinics churn because of a missing integration (the owner's own open question)",
+      "What share of the 6.5% is failed payments and what share is a clinic choosing to cancel",
+      "How the Stripe dashboard defines churn (accounts or revenue, and whether failed payments count)",
+      "Whether most churn is really in months one to three; this is the owner's belief from the dashboard until we rebuild it from raw records",
+      "Which product action marks a clinic as set up and getting value (the activation event)",
+      "How many new clinics sign up each month, which sets the holdout size",
+      "Which tool sends the current emails and in-app messages, and what they say today",
+      "Whether our AI can write working tables in the Postgres schema, or must hand over files",
+      "Why clinics cancel today: there is no cancellation survey"
     ],
     "answers": [
       {
-        "question": "What do you sell and to whom, and how many accounts?",
-        "answer": "B2B scheduling software for clinics, about 900 paying accounts at $79 a month per account."
+        "question": "What business and how big?",
+        "answer": "B2B scheduling software for clinics, about 900 paying accounts, $79 a month per account."
       },
       {
-        "question": "What is churn now and where does it sit?",
-        "answer": "6.5% monthly overall (Stripe dashboard). I believe most of it is in months one to three."
+        "question": "What is churn now and where is it?",
+        "answer": "6.5% overall monthly churn. The owner believes most of it is in months one to three (Stripe dashboard)."
       },
       {
-        "question": "What data and tools can your AI reach?",
-        "answer": "Mixpanel usage and Intercom support through MCP read access; Stripe read-only. There is no cancellation survey."
+        "question": "Which tools can your AI reach?",
+        "answer": "Mixpanel and Intercom have MCP read access. Stripe is read-only."
       },
       {
-        "question": "What is the goal and by when?",
+        "question": "Do you know why they cancel?",
+        "answer": "No cancellation survey. Unknown: whether clinics churn because of a missing integration."
+      },
+      {
+        "question": "What is the target and by when?",
         "answer": "Overall monthly churn under 4% within two quarters."
       },
       {
-        "question": "What may we change?",
+        "question": "What can we change?",
         "answer": "Onboarding, emails and in-app messages. Not pricing this year."
       },
       {
-        "question": "Where should data live, and who decides?",
-        "answer": "In our Postgres analytics schema. I decide with the head of product."
+        "question": "Where should working data live?",
+        "answer": "In your Postgres analytics schema."
       },
       {
-        "question": "What is still unknown?",
-        "answer": "Whether clinics churn because of a missing integration."
+        "question": "Who decides?",
+        "answer": "The owner with the head of product."
       }
     ]
   },
   "research": {
-    "approach": "Practitioners start by fixing the definition of churn and counting it by sign-up cohort, so early churn is separated from later churn and from failed payments. They then find the product action that separates accounts that stay from those that leave, and read support conversations and cancellation reasons to learn why. Only then do they change onboarding, emails and in-app prompts, one at a time, and judge each against a comparison group of new accounts, because retention differences between cohorts alone are correlation.",
+    "approach": "Practitioners do not treat a blended churn rate as one problem. They rebuild churn from the raw subscription records, split it by how long the account had been paying (the hazard by tenure month) and by chosen cancellation versus failed payment, and only then ask why. The early-months spike is usually accounts that never reached first value, so they join billing to product events and support conversations per account, find the early behaviour that separates stayers from leavers, and read the leavers' own words. Fixes go out as a controlled test with a randomised holdout, scored on cancellations from the billing system, not on opens or clicks. A weekly check flags new accounts that stall before the risky months.",
     "sources": [
       {
-        "id": "web-mixpanel",
+        "id": "web-stripe-cohorts",
         "kind": "web",
-        "title": "A primer on retention analytics for product leaders (Mixpanel)",
-        "ref": "https://mixpanel.com/blog/retention-analytics-primer/",
-        "date": "2026-06",
-        "note": "Define retention by meaningful product use, compare cohorts split by behaviour, and set aside churn that is not a problem."
+        "title": "Subscriber cohorts and cohort retention in Billing (Stripe Support)",
+        "ref": "https://support.stripe.com/questions/subscriber-cohorts-and-cohort-retention-in-billing",
+        "date": null,
+        "note": "Stripe puts subscribers in cohorts by the month they first pay and checks each month, in UTC, whether they churned; a re-subscriber stays in the original cohort. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "web-recurly",
+        "id": "web-stripe-cancel",
         "kind": "web",
-        "title": "Churn rate benchmarks (Recurly)",
-        "ref": "https://recurly.com/research/churn-rate-benchmarks/",
-        "date": "2026-07",
-        "note": "Splits voluntary from involuntary churn for B2B SaaS and points voluntary churn at onboarding and early product use; failed payments get their own fixes."
+        "title": "Cancel subscriptions (Stripe Docs)",
+        "ref": "https://docs.stripe.com/billing/subscriptions/cancel",
+        "date": null,
+        "note": "Subscriptions cancel automatically after up to eight failed billing attempts, so some cancellations are not a clinic's choice. Cancelled subscriptions keep a cancellation_details field. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "cat-cohort",
-        "kind": "catalogue",
-        "title": "Retention cohort analyst",
-        "ref": "retention-cohort-analyst"
+        "id": "web-stripe-reason",
+        "kind": "web",
+        "title": "Add a cancellation page to the customer portal (Stripe Docs)",
+        "ref": "https://docs.stripe.com/customer-management/cancellation-page",
+        "date": null,
+        "note": "Stripe can ask for a cancellation reason from a fixed list and shows it on the subscription, in Sigma and in the subscription webhook. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "cat-churn-audit",
-        "kind": "catalogue",
-        "title": "Subscription churn auditor",
-        "ref": "subscription-churn-audit"
+        "id": "web-stripe-retries",
+        "kind": "web",
+        "title": "Automate payment retries: Smart Retries (Stripe Docs)",
+        "ref": "https://docs.stripe.com/billing/revenue-recovery/smart-retries",
+        "date": null,
+        "note": "Stripe's own tool for retrying failed payments to prevent involuntary churn; set in Billing, Revenue recovery. Seen in search results, not opened in full. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "cat-onboarding",
-        "kind": "catalogue",
-        "title": "Product onboarding planner",
-        "ref": "onboarding-improver"
+        "id": "web-mixpanel-retention",
+        "kind": "web",
+        "title": "Retention report (Mixpanel Docs)",
+        "ref": "https://docs.mixpanel.com/docs/reports/retention",
+        "date": null,
+        "note": "Retention is set by an initial event and a return event, with rolling or calendar windows and breakdowns; the same pages build cohorts from behaviour. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "cat-churn-reducer",
+        "id": "web-intercom-topics",
+        "kind": "web",
+        "title": "Track and understand the topics your customers chat about (Intercom Help)",
+        "ref": "https://www.intercom.com/help/en/articles/4612191-track-and-understand-the-topics-your-customers-chat-about",
+        "date": "2026-06-26",
+        "note": "Conversation topics can be applied retroactively to old conversations, are in the conversations export and the API, and split reports. Topics do not record when they were added."
+      },
+      {
+        "id": "web-hazard",
+        "kind": "web",
+        "title": "The churn hazard curve: why one churn rate hides three different problems (Koji)",
+        "ref": "https://www.koji.so/docs/churn-hazard-curve-tenure-analysis",
+        "date": "2026-09-29",
+        "note": "Divide churners in a tenure month by accounts that entered it still active. Early months (about 0 to 3) are a different problem from mid-life and late churn. Warns about averaging across them and mistaking sorting for loyalty. Vendor write-up, updated 2026-09-29."
+      },
+      {
+        "id": "web-holdout",
+        "kind": "web",
+        "title": "Holdout campaign (Agile Brand Guide)",
+        "ref": "https://www.agilebrandguide.com/wiki/methods/holdout-campaign/",
+        "date": null,
+        "note": "Withhold a predefined share (5 to 20% depending on traffic and effect) of the eligible audience, randomise at the level of exposure, size by power analysis, analyse as intention to treat, audit delivery logs for leaks. No date on the page; accessed 2026-11-03."
+      },
+      {
+        "id": "cat-find-where",
         "kind": "catalogue",
-        "title": "Subscription churn prevention planner",
-        "ref": "churn-reducer"
+        "title": "New-user retention test planner",
+        "ref": "find-where-new-users-leave-and-prove-the-fix-works"
+      },
+      {
+        "id": "cat-churn-watcher",
+        "kind": "catalogue",
+        "title": "Subscriber cancellation and retention reviewer",
+        "ref": "subscription-churn-watcher"
+      },
+      {
+        "id": "cat-readout",
+        "kind": "catalogue",
+        "title": "Experiment plan and results reviewer",
+        "ref": "experiment-readout-desk"
       },
       {
         "id": "owner",
@@ -155,487 +214,580 @@
     ],
     "steps": [
       {
-        "id": "s-define",
-        "name": "Fix the churn definition and reconcile it with billing",
-        "why": "A blended 6.5% hides who leaves and when. Count by sign-up cohort and tenure, split choosing to leave from failed payments, and set aside leavers who got what they came for.",
+        "id": "s-rebuild",
+        "name": "Rebuild churn from raw Stripe records, split chosen from failed-payment",
+        "why": "The dashboard figure is a report until rebuilt; failed payments need a different fix from a clinic choosing to leave.",
         "sources": [
-          "web-mixpanel",
-          "web-recurly",
-          "cat-churn-audit",
+          "web-stripe-cohorts",
+          "web-stripe-cancel",
+          "web-stripe-retries",
           "owner"
         ]
       },
       {
-        "id": "s-gather",
-        "name": "Bring billing, usage and support data together by account",
-        "why": "Cohort and reason analysis need one row per account joining Stripe, Mixpanel and Intercom.",
+        "id": "s-hazard",
+        "name": "Plot churn by tenure month, not one blended rate",
+        "why": "It confirms or refutes the belief that churn sits in months one to three and shows whether it is one problem or several.",
         "sources": [
-          "owner",
-          "cat-cohort"
+          "web-hazard",
+          "web-stripe-cohorts",
+          "cat-churn-watcher"
         ]
       },
       {
-        "id": "s-cohorts",
-        "name": "Chart retention by sign-up cohort and find the activation action",
-        "why": "Show when accounts leave, then split by early product actions to find which one separates stayers from leavers.",
+        "id": "s-join",
+        "name": "Join billing, usage and support per account and check the join",
+        "why": "Usage and support evidence only helps if each account matches across the three systems.",
         "sources": [
-          "web-mixpanel",
-          "cat-cohort"
+          "web-mixpanel-retention",
+          "web-intercom-topics",
+          "owner"
         ]
       },
       {
-        "id": "s-reasons",
-        "name": "Learn why accounts leave from support conversations and cancellation reasons",
-        "why": "Usage shows what happened, not why. Support themes by tenure, including mentions of integrations, test the owner's open question; with no survey, a short cancel-reason prompt starts to fill the gap.",
+        "id": "s-activation",
+        "name": "Find the early behaviour that separates stayers from leavers",
+        "why": "Early churn is usually accounts that never reached first value; the activation event has to come from the data.",
         "sources": [
-          "web-mixpanel",
-          "web-recurly",
+          "web-mixpanel-retention",
+          "cat-find-where",
+          "web-hazard"
+        ]
+      },
+      {
+        "id": "s-voice",
+        "name": "Read the leavers' own words in support, and start capturing a reason",
+        "why": "There is no cancellation survey; support text is the only voice of leavers, and the missing-integration question lives there.",
+        "sources": [
+          "web-intercom-topics",
+          "web-stripe-reason",
           "owner"
         ]
       },
       {
         "id": "s-fix",
-        "name": "Change first-use onboarding, emails and in-app messages as tests",
-        "why": "Fix the biggest gap before first value, one change at a time, with a comparison group so the effect can be read.",
+        "name": "Change onboarding, emails and in-app messages around the milestone",
+        "why": "These are the levers the owner allows; each should fire on what a clinic has or has not done.",
         "sources": [
-          "web-recurly",
-          "cat-onboarding",
-          "cat-churn-reducer"
+          "cat-find-where",
+          "web-mixpanel-retention"
         ]
       },
       {
-        "id": "s-measure",
-        "name": "Read results by cohort against the comparison group",
-        "why": "Churn falls only after accounts pass their early months, so activation and month-by-month retention of new cohorts are read first and overall churn last.",
+        "id": "s-test",
+        "name": "Launch as a randomised holdout test scored on cancellations",
+        "why": "Without a holdout, a change cannot be told from the season or from sorting.",
         "sources": [
-          "web-mixpanel",
-          "cat-cohort"
+          "web-holdout",
+          "cat-readout",
+          "web-hazard"
+        ]
+      },
+      {
+        "id": "s-watch",
+        "name": "Keep a weekly early-warning list of stalled new clinics",
+        "why": "It keeps early churn down after the test without waiting for the next problem.",
+        "sources": [
+          "cat-churn-watcher",
+          "web-mixpanel-retention"
+        ]
+      },
+      {
+        "id": "s-offer",
+        "name": "Offer a retention coupon or discount at cancel",
+        "why": "A common save tactic at the cancel step.",
+        "sources": [
+          "web-stripe-reason"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Treating a gap between retained and churned cohorts as proof the milestone causes retention; without a comparison group it is only correlation.",
+        "text": "Treating one blended churn rate as one problem; early, mid-life and late churn have different causes.",
         "sources": [
-          "web-mixpanel"
+          "web-hazard"
         ]
       },
       {
-        "text": "Mixing failed-payment churn with accounts that chose to leave, so onboarding gets blamed for a billing problem.",
+        "text": "Counting failed-payment cancellations as clinics choosing to leave, then fixing the wrong thing.",
         "sources": [
-          "web-recurly"
+          "web-stripe-cancel",
+          "web-stripe-retries"
         ]
       },
       {
-        "text": "Spending effort on renewal-time saves and discounts while poor early engagement, the biggest driver of voluntary churn, goes unfixed.",
+        "text": "Reading a flattening curve as loyalty when high-risk accounts simply left first.",
         "sources": [
-          "web-recurly"
+          "web-hazard"
         ]
       },
       {
-        "text": "Counting churn as lost accounts divided by all accounts, so new cohorts' early losses are diluted by older, stable accounts.",
+        "text": "Counting very recent signups as retained before they have had 90 days.",
         "sources": [
-          "web-mixpanel",
-          "cat-churn-audit"
+          "web-stripe-cohorts",
+          "web-hazard"
+        ]
+      },
+      {
+        "text": "Picking the activation event by correlation alone, when stayers may just be better-fit clinics; only a holdout shows it causes retention.",
+        "sources": [
+          "web-mixpanel-retention",
+          "web-holdout"
+        ]
+      },
+      {
+        "text": "Holdout accounts still receiving the new messages through another tool, or judging the test on opens instead of cancellations.",
+        "sources": [
+          "web-holdout"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Keep more clinics through their first three months",
+    "name": "Cut early clinic cancellations and keep them down",
     "capabilities": [
       {
-        "id": "billing-read",
+        "id": "stripe-read",
         "access": "read",
         "via": "api_key",
-        "name": "Read subscriptions and cancellations (Stripe, read-only)",
-        "why": "Reconcile churn, tenure and failed payments."
+        "name": "Read subscriptions, invoices and cancellation details (Stripe, read-only)",
+        "why": "Rebuild churn by tenure and cancellation type from raw records. A restricted read-only key is asked for only when the stage is ready and stays with the host; a CSV export also works."
       },
       {
-        "id": "usage-read",
+        "id": "mixpanel-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read product usage (Mixpanel MCP)",
-        "why": "Find the early actions that separate accounts that stay from those that leave."
+        "name": "Read product events per account (Mixpanel MCP)",
+        "why": "Find the early behaviours that separate stayers from leavers and read retention by cohort."
       },
       {
-        "id": "support-read",
+        "id": "intercom-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read support conversations (Intercom MCP)",
-        "why": "Find cancellation themes, including integration requests, by account tenure."
+        "name": "Read conversations, topics and current messages (Intercom MCP)",
+        "why": "Read what early leavers asked and said, and what the clinics are sent today."
       },
       {
-        "id": "warehouse-write",
+        "id": "postgres-home",
         "access": "draft",
         "via": "api_key",
-        "name": "Write working tables (Postgres analytics schema)",
-        "why": "Keep the joined account data in the owner's schema, as asked."
+        "name": "Write working tables in the Postgres analytics schema",
+        "why": "Keeps the working data where the owner wants it. If write access is not possible, files are handed over instead."
       },
       {
-        "id": "ship-changes",
+        "id": "messages-live",
         "access": "live",
         "via": "owner",
-        "name": "Ship onboarding, email and in-app changes (owner's team)",
-        "why": "We have only read access to Mixpanel and Intercom, so the owner's team makes each approved change and we read it back."
+        "name": "Send emails and in-app messages to clinics (the owner's tools)",
+        "why": "The owner or head of product switches on each approved message; we prepare it and read back what was sent."
       }
     ],
     "data": [
       {
-        "id": "accounts",
-        "name": "Account lifecycle",
-        "why": "Sign-up date, cancel date, plan and payment status per account give churn by cohort and tenure.",
+        "id": "stripe-subscriptions",
+        "name": "Subscription history",
+        "why": "The raw base for churn by tenure and for splitting chosen cancellation from failed payment.",
         "fields": [
           "account id",
-          "sign-up date",
           "first paid date",
           "cancel date",
-          "cancel type (chosen or failed payment, if shown)",
-          "plan and price"
+          "status",
+          "cancellation_details reason",
+          "failed invoice history",
+          "plan amount"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read subscriptions, invoices and cancellations with the read-only Stripe access."
+            "how": "Read subscriptions and invoices through the read-only Stripe access."
           },
           {
             "kind": "CSV",
-            "how": "Stripe dashboard: export subscriptions and customers with created and canceled dates."
+            "how": "Stripe Dashboard export of subscriptions and invoices, including cancelled ones, all time."
           }
         ],
         "required_for": [
-          "evidence",
-          "integrity-churn",
-          "diagnosis-tenure"
+          "evidence-billing",
+          "integrity",
+          "measurement"
         ],
-        "alternative": "Without cancel type, failed-payment churn cannot be split out and is marked unknown."
+        "alternative": "Dashboard churn only; tenure and failed-payment findings stay unknown."
       },
       {
-        "id": "usage",
-        "name": "Early product usage by account",
-        "why": "Early actions per account in the first 30 and 90 days show who gets to first value.",
+        "id": "product-events",
+        "name": "Product events per account for the first 90 days",
+        "why": "Shows whether early leavers ever reached first value.",
         "fields": [
           "account id",
           "event name",
-          "event time",
-          "user count per account"
+          "timestamp"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read events per account with the Mixpanel MCP for the last 12 months of sign-ups."
+            "how": "Read events and retention by cohort with the Mixpanel MCP."
           },
           {
             "kind": "CSV",
-            "how": "Mixpanel: export event counts per account by week."
+            "how": "Mixpanel raw event export for all accounts that started in the last 12 months."
           }
         ],
         "required_for": [
-          "evidence",
-          "diagnosis-tenure"
+          "evidence-behaviour",
+          "integrity",
+          "diagnosis"
         ],
-        "alternative": "Without per-account events, only account-level usage totals can be compared, and the activation action stays unknown."
+        "alternative": "Aggregate retention charts only; account-level findings stay unknown."
       },
       {
-        "id": "conversations",
-        "name": "Support conversations by account",
-        "why": "Themes in support conversations by tenure show what blocks new clinics, and whether integrations come up.",
+        "id": "support-conversations",
+        "name": "Support conversations and topics",
+        "why": "The only voice of leavers, and the place a missing-integration reason would show.",
         "fields": [
           "account id",
-          "conversation date",
-          "topic or tags",
-          "first message",
-          "resolved or not"
+          "conversation text",
+          "topic",
+          "opened date",
+          "first response time",
+          "state"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read conversations with the Intercom MCP for accounts that cancelled and a sample that stayed."
+            "how": "Read conversations and topics with the Intercom MCP."
           },
           {
             "kind": "CSV",
-            "how": "Intercom: export conversations for the same period."
+            "how": "Intercom conversation export with topics."
           }
         ],
         "required_for": [
-          "evidence",
-          "diagnosis-reasons"
+          "evidence-behaviour",
+          "diagnosis"
         ],
-        "alternative": "Without conversations, the integration question stays unknown."
+        "alternative": "Counts of conversations only; the integration question stays unknown."
+      },
+      {
+        "id": "current-messages",
+        "name": "Current onboarding emails and in-app messages",
+        "why": "To see what is sent today, when, and what triggers it, before rewriting.",
+        "fields": [
+          "message",
+          "channel",
+          "trigger",
+          "send timing",
+          "audience"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read the messages in Intercom where they are sent from it."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owner for the email tool and the sequences, or screenshots."
+          }
+        ],
+        "required_for": [
+          "evidence-behaviour",
+          "changes"
+        ],
+        "alternative": "Write new messages without a before-state; the comparison is then only against the holdout."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the churn problem",
-        "goal": "Turn the owner's words into a measured problem with a target, limits and the data we can reach. Writes BRIEF.md.",
+        "name": "Pin down the problem",
+        "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
         "owner": {
-          "role": "weekly-saas-numbers-keeper"
+          "role": "subscription-churn-watcher"
         },
         "gate": "none"
       },
       {
-        "id": "evidence",
+        "id": "evidence-billing",
         "kind": "evidence",
-        "name": "Bring billing, usage and support together",
-        "goal": "Pull accounts, early usage and support conversations into the owner's Postgres analytics schema, one row per account where possible.",
+        "name": "Rebuild churn from Stripe records",
+        "goal": "Load the raw subscription and invoice history into the Postgres schema and rebuild monthly churn, churn by tenure month and each cancellation as chosen or failed payment.",
+        "from_steps": [
+          "s-rebuild",
+          "s-hazard"
+        ],
         "owner": {
           "role": "weekly-saas-numbers-keeper"
         },
-        "support": [
-          "weekly-product-funnel-watcher"
+        "uses": [
+          "subscription-churn-audit",
+          "retention-heatmap-maker",
+          "data-warehouse-query-reviewer"
         ],
         "data": [
-          "accounts",
-          "usage",
-          "conversations"
+          "stripe-subscriptions"
         ],
         "needs": [
-          "billing-read",
-          "usage-read",
-          "support-read",
-          "warehouse-write"
+          "stripe-read",
+          "postgres-home"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "dataset",
-            "name": "Joined account table and load notes",
-            "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
+            "id": "subscriptions",
+            "name": "Subscription history table",
+            "format": "csv",
+            "path": "evidence/subscriptions.csv"
           },
           {
-            "id": "dataset-sql",
-            "name": "Table definitions and load queries",
-            "format": "sql",
-            "path": "evidence/tables.sql"
+            "id": "billing-notes",
+            "name": "What was pulled, definitions and the rebuilt churn",
+            "format": "markdown",
+            "path": "evidence/BILLING.md"
           }
         ],
         "checks": [
           {
-            "id": "totals",
-            "name": "Active account count and monthly cancels match what Stripe shows for the same dates",
+            "id": "dashboard",
+            "name": "Rebuilt overall monthly churn is within 0.3 percentage points of the reported 6.5%, or the definition gap is written down",
             "required": true
           },
           {
-            "id": "join",
-            "name": "Share of accounts present in Stripe, Mixpanel and Intercom is reported, with unmatched accounts listed",
+            "id": "hazard",
+            "name": "Churn by tenure month is divided by accounts that entered the month still active, and signups under 90 days old are marked immature",
             "required": true
           },
           {
-            "id": "location",
-            "name": "Everything is written only to the named Postgres analytics schema",
+            "id": "classified",
+            "name": "At least 95% of cancellations are classified as chosen or failed payment, using cancellation_details and invoice history",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-gather"
-        ],
-        "uses": [
-          "churn-risk-finder"
-        ]
+        "gate": "none"
       },
       {
-        "id": "integrity-churn",
-        "kind": "integrity",
-        "name": "Check the 6.5% and the months one to three belief",
-        "goal": "Rebuild monthly churn from account dates, split early (months one to three) from later churn and failed payments from chosen cancels, and compare with the dashboard figure.",
+        "id": "evidence-behaviour",
+        "kind": "evidence",
+        "name": "Gather usage, support and current messages",
+        "goal": "Pull first-90-day product events and support conversations for every account in the same period as the billing history, plus the messages sent today.",
+        "from_steps": [
+          "s-join",
+          "s-voice"
+        ],
         "owner": {
-          "role": "report-definition-drift-review-assistant"
+          "role": "weekly-product-funnel-watcher"
         },
-        "support": [
-          "weekly-saas-numbers-keeper"
+        "uses": [
+          "event-tracking-planner",
+          "intercom-conversation-action-planner"
         ],
         "data": [
-          "accounts"
+          "product-events",
+          "support-conversations",
+          "current-messages"
         ],
         "needs": [
-          "billing-read"
+          "mixpanel-read",
+          "intercom-read",
+          "postgres-home"
         ],
         "depends_on": [
-          "evidence"
+          "intake"
         ],
         "outputs": [
           {
-            "id": "churn-check",
-            "name": "Churn definition and rebuilt figures",
+            "id": "events",
+            "name": "First-90-day events per account",
+            "format": "csv",
+            "path": "evidence/events.csv"
+          },
+          {
+            "id": "conversations",
+            "name": "Conversations with topics per account",
+            "format": "csv",
+            "path": "evidence/conversations.csv"
+          },
+          {
+            "id": "behaviour-notes",
+            "name": "What was pulled and the gaps",
             "format": "markdown",
-            "path": "integrity/CHURN-CHECK.md"
+            "path": "evidence/BEHAVIOUR.md"
           }
         ],
         "checks": [
           {
-            "id": "definition",
-            "name": "The churn formula, period and what counts as a cancel are written down and match across periods",
+            "id": "window",
+            "name": "Events and conversations cover the same dates as the billing history",
             "required": true
           },
           {
-            "id": "reconcile",
-            "name": "Rebuilt churn is compared with the 6.5% reported; any gap is explained",
+            "id": "read-only",
+            "name": "All pulls were read-only and nothing was sent to a clinic",
             "required": true
           },
           {
-            "id": "split",
-            "name": "Churn is split by tenure band and by chosen versus failed payment, or the missing split is stated",
+            "id": "gaps",
+            "name": "Any missing event, tool or period is named in the notes",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity",
+        "kind": "integrity",
+        "name": "Check the join can be trusted",
+        "goal": "Check accounts match across Stripe, Mixpanel and Intercom and that the events used to judge activation actually fire, before anyone reasons from them.",
+        "from_steps": [
+          "s-join"
+        ],
+        "owner": {
+          "role": "monthly-tracking-health-keeper"
+        },
+        "uses": [
+          "data-warehouse-query-reviewer",
+          "event-tracking-planner"
+        ],
+        "data": [
+          "stripe-subscriptions",
+          "product-events"
+        ],
+        "needs": [
+          "postgres-home"
+        ],
+        "depends_on": [
+          "evidence-billing",
+          "evidence-behaviour"
+        ],
+        "outputs": [
+          {
+            "id": "join-check",
+            "name": "Join and event check",
+            "format": "markdown",
+            "path": "integrity/JOIN-CHECK.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "match",
+            "name": "At least 95% of paying accounts match by id between Stripe and Mixpanel, and the unmatched are listed",
+            "required": true
+          },
+          {
+            "id": "grain",
+            "name": "Each query joins at one row per account and its counts match the source within 1%",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-define"
-        ],
-        "uses": [
-          "subscription-churn-audit",
-          "event-tracking-planner"
-        ]
+        "gate": "none"
       },
       {
-        "id": "diagnosis-tenure",
+        "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find when accounts leave and what separates stayers",
-        "goal": "Chart retention by sign-up cohort, then compare early product actions of accounts that stayed with those that left to find a candidate activation action.",
+        "name": "Find who leaves early and why",
+        "goal": "Test the hypotheses on the checked data: churn by tenure, chosen against failed payment, the activation milestone, support themes including integration requests, and today's messages. Keep competing explanations.",
+        "from_steps": [
+          "s-hazard",
+          "s-activation",
+          "s-voice"
+        ],
         "owner": {
-          "role": "weekly-product-funnel-watcher"
+          "role": "subscription-churn-watcher"
         },
         "support": [
-          "customer-success-manager"
+          "customer-onboarding-keeper"
+        ],
+        "uses": [
+          "retention-cohort-analyst",
+          "customer-health-and-churn-scorer",
+          "feedback-theme-finder",
+          "research-theme-synthesizer",
+          "find-where-new-users-leave-and-prove-the-fix-works"
         ],
         "data": [
-          "accounts",
-          "usage"
-        ],
-        "needs": [
-          "usage-read"
+          "stripe-subscriptions",
+          "product-events",
+          "support-conversations"
         ],
         "depends_on": [
-          "integrity-churn"
+          "integrity"
         ],
         "outputs": [
           {
-            "id": "cohorts",
-            "name": "Cohort retention and activation findings",
+            "id": "diagnosis",
+            "name": "Diagnosis",
             "format": "markdown",
-            "path": "diagnosis/COHORTS.md"
+            "path": "diagnosis/DIAGNOSIS.md"
           },
           {
-            "id": "tenure-hypotheses",
-            "name": "Hypothesis verdicts from usage data",
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
             "format": "json",
-            "path": "diagnosis/tenure-hypotheses.json"
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
           {
-            "id": "volume",
-            "name": "Each group has enough accounts to read, or the finding is marked low confidence",
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the numbers behind it",
+            "required": true
+          },
+          {
+            "id": "sorting",
+            "name": "Each retention claim is checked by signup month to rule out sorting, and signups under 90 days old are excluded or marked",
             "required": true
           },
           {
             "id": "alternatives",
-            "name": "Each activation finding names a competing explanation, such as clinic size or fit",
+            "name": "Each main finding names a competing explanation, and activation is called a correlation until the holdout shows it",
             "required": true
           },
           {
-            "id": "causal",
-            "name": "The report says a cohort gap is correlation until a comparison group tests it",
+            "id": "volume",
+            "name": "Any segment with fewer than 30 cancellations is marked low-confidence",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-cohorts"
-        ],
-        "uses": [
-          "retention-cohort-analyst",
-          "retention-heatmap-maker",
-          "new-user-drop-off-finder"
-        ]
-      },
-      {
-        "id": "diagnosis-reasons",
-        "kind": "diagnosis",
-        "name": "Find why accounts leave",
-        "goal": "Read support conversations by tenure for cancelled and retained accounts, count themes, and test whether missing integrations come up before cancellation.",
-        "owner": {
-          "role": "product-feedback-synthesizer"
-        },
-        "data": [
-          "conversations",
-          "accounts"
-        ],
-        "needs": [
-          "support-read"
-        ],
-        "depends_on": [
-          "integrity-churn"
-        ],
-        "outputs": [
-          {
-            "id": "reasons",
-            "name": "Cancellation themes with quotes",
-            "format": "markdown",
-            "path": "diagnosis/REASONS.md"
-          },
-          {
-            "id": "reason-hypotheses",
-            "name": "Hypothesis verdicts from support data",
-            "format": "json",
-            "path": "diagnosis/reason-hypotheses.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "counted",
-            "name": "Themes are counted, with the number of accounts behind each, not just quoted",
-            "required": true
-          },
-          {
-            "id": "integration",
-            "name": "The missing-integration idea is marked supported, refuted or unknown, with the conversations behind it",
-            "required": true
-          },
-          {
-            "id": "privacy",
-            "name": "Quotes carry no patient or clinic-staff personal details",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-reasons"
-        ],
-        "uses": [
-          "feedback-theme-finder",
-          "customer-research-analyst"
-        ]
+        "gate": "none"
       },
       {
         "id": "options",
         "kind": "options",
         "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked change cards for onboarding, emails and in-app messages, within the no-pricing limit.",
+        "goal": "Turn supported findings into ranked cards limited to onboarding, emails and in-app messages; send anything outside those limits, such as an integration, to the head of product as a finding.",
+        "from_steps": [
+          "s-fix",
+          "s-voice"
+        ],
         "owner": {
           "role": "customer-onboarding-keeper"
         },
+        "uses": [
+          "first-use-onboarding-designer",
+          "onboarding-improver"
+        ],
         "depends_on": [
-          "diagnosis-tenure",
-          "diagnosis-reasons"
+          "diagnosis"
         ],
         "outputs": [
           {
-            "id": "recommendations",
+            "id": "cards",
             "name": "Recommendation cards",
             "format": "markdown",
             "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "cards-json",
+            "name": "Recommendation cards as data",
+            "format": "json",
+            "path": "options/recommendations.json"
           }
         ],
         "checks": [
@@ -646,38 +798,36 @@
           },
           {
             "id": "fields",
-            "name": "Every card has expected effect, effort, confidence, risk and how it will be measured",
+            "name": "Every card has expected direction, effort, confidence, risk and how it will be measured in Stripe cancellations",
             "required": true
           },
           {
             "id": "limits",
-            "name": "No card changes pricing",
+            "name": "No card changes price or discounts, and any card outside onboarding, emails and in-app messages is marked as a finding for product",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [],
-        "uses": [
-          "onboarding-improver",
-          "first-use-onboarding-designer",
-          "churn-reducer"
-        ]
+        "gate": "none"
       },
       {
         "id": "decision",
         "kind": "decision",
         "name": "Owner and head of product choose",
-        "goal": "Choose which cards to build. Ask for the reason when the top card is passed over, and record it.",
+        "goal": "Pick card ids. Ask for the reason when the top card is passed over, and record it.",
+        "from_steps": [],
         "owner": {
           "role": "customer-onboarding-keeper"
         },
+        "uses": [
+          "narrative-decision-memo-writer"
+        ],
         "depends_on": [
           "options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen changes",
+            "name": "Chosen plan",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -685,85 +835,147 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded with reasons",
+            "name": "Chosen and passed-over cards are in decisions.jsonl",
+            "required": true
+          },
+          {
+            "id": "reason",
+            "name": "A reason is recorded wherever the top card was passed over",
             "required": true
           }
         ],
-        "gate": "approve",
-        "from_steps": []
+        "gate": "approve"
       },
       {
         "id": "changes",
         "kind": "production",
-        "name": "Draft the changes and the test design",
-        "goal": "Write the chosen onboarding steps, emails, in-app messages and a short cancel-reason prompt as drafts, and design the comparison group for each.",
+        "name": "Write the onboarding, email and in-app changes",
+        "goal": "Write the chosen changes so each message fires on what a clinic has or has not done and stops once it has done it, plus the stalled-account rule for the weekly list.",
+        "from_steps": [
+          "s-fix",
+          "s-watch"
+        ],
         "owner": {
           "role": "customer-onboarding-keeper"
         },
-        "support": [
-          "experiment-readout-desk"
+        "uses": [
+          "new-customer-onboarding-sequence-writer",
+          "email-sequence-writer",
+          "email-sequence-auditor",
+          "first-use-onboarding-designer"
+        ],
+        "data": [
+          "current-messages"
         ],
         "depends_on": [
           "decision"
         ],
         "outputs": [
           {
-            "id": "change-pack",
-            "name": "Draft changes",
+            "id": "changes",
+            "name": "Changes ready to ship",
             "format": "markdown",
             "path": "production/CHANGES.md"
           },
           {
-            "id": "test-plan",
-            "name": "Test plan with comparison groups",
-            "format": "markdown",
-            "path": "production/TEST-PLAN.md"
+            "id": "messages",
+            "name": "Messages with trigger, timing and exit rule",
+            "format": "json",
+            "path": "production/messages.json"
           }
         ],
         "checks": [
           {
-            "id": "scoped",
-            "name": "Only chosen changes are included",
+            "id": "traced",
+            "name": "Every change traces to a chosen card",
             "required": true
           },
           {
-            "id": "comparison",
-            "name": "Each change has a comparison group, the sign-up dates it covers and the number of accounts needed to read it",
+            "id": "trigger",
+            "name": "Every message names the clinic action that triggers it and the action that stops it",
             "required": true
           },
           {
-            "id": "tone",
-            "name": "Copy makes no claim the product cannot back up",
+            "id": "limits",
+            "name": "No message mentions a price change or discount, and plain wording is at grade 8 to 10 reading level",
             "required": true
           }
         ],
-        "gate": "review",
-        "from_steps": [
-          "s-fix"
-        ],
-        "uses": [
-          "onboarding-improver",
-          "first-use-onboarding-designer",
-          "traction-email-marketing",
-          "cancel-reason-save-planner",
-          "product-experiment-designer"
-        ]
+        "gate": "none",
+        "optional_when": "No onboarding, email or in-app card was chosen."
       },
       {
-        "id": "ship",
-        "kind": "execution",
-        "name": "Ship changes one at a time",
-        "goal": "Register each test, then have the owner's team switch on one approved change at a time. Read each back from Mixpanel and Intercom to confirm it reached the right accounts.",
+        "id": "experiment-design",
+        "kind": "production",
+        "name": "Design the holdout test",
+        "goal": "Fix who gets the changes: eligible clinics in their first 90 days, randomly assigned by account in the Postgres schema, with a holdout, a sample size and a stop rule.",
+        "from_steps": [
+          "s-test"
+        ],
         "owner": {
           "role": "experiment-readout-desk"
         },
+        "uses": [
+          "product-experiment-designer",
+          "warehouse-a-b-test-runner",
+          "traction-email-marketing"
+        ],
+        "data": [
+          "stripe-subscriptions"
+        ],
         "needs": [
-          "ship-changes",
-          "usage-read",
-          "support-read"
+          "postgres-home"
         ],
         "depends_on": [
           "changes"
+        ],
+        "outputs": [
+          {
+            "id": "experiment",
+            "name": "Experiment design with assignment query",
+            "format": "markdown",
+            "path": "production/EXPERIMENT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "random",
+            "name": "Assignment is random by account, reproducible with a stored seed, and the two groups match on signup month within 5 points",
+            "required": true
+          },
+          {
+            "id": "power",
+            "name": "Sample size and holdout share (between 5 and 20%) come from a power calculation on real signup counts, or the stage says what is missing",
+            "required": true
+          },
+          {
+            "id": "primary",
+            "name": "The primary measure is cancellation in Stripe by day 90, analysed as intention to treat",
+            "required": true
+          }
+        ],
+        "gate": "review"
+      },
+      {
+        "id": "launch",
+        "kind": "execution",
+        "name": "Ship the changes to the test group",
+        "goal": "Register the experiment, freeze the assignment, then the owner switches on each approved message for the test group only and we read back what was sent.",
+        "from_steps": [
+          "s-test"
+        ],
+        "owner": {
+          "role": "customer-onboarding-keeper"
+        },
+        "uses": [
+          "warehouse-a-b-test-runner"
+        ],
+        "needs": [
+          "messages-live",
+          "postgres-home"
+        ],
+        "depends_on": [
+          "experiment-design"
         ],
         "outputs": [
           {
@@ -776,45 +988,50 @@
         "checks": [
           {
             "id": "registered",
-            "name": "Each test is registered with its comparison group before it goes live",
+            "name": "The experiment and frozen assignment are in experiments.jsonl before the first message is sent",
+            "required": true
+          },
+          {
+            "id": "leaks",
+            "name": "Delivery logs show zero new messages sent to holdout accounts",
             "required": true
           },
           {
             "id": "readback",
-            "name": "Each change is confirmed as live for the intended accounts only",
+            "name": "Each shipped message was read back from the tool and matches the approved text",
             "required": true
           }
         ],
-        "gate": "approve_each_action",
-        "from_steps": [
-          "s-fix"
-        ],
-        "uses": [
-          "product-experiment-designer"
-        ]
+        "gate": "approve_each_action"
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read results against the comparison group",
-        "goal": "Compare activation, month-one to month-three retention and overall churn for exposed and comparison accounts, and check the guardrails.",
+        "name": "Read results against Stripe",
+        "goal": "Compare treated and holdout clinics on cancellation in Stripe, track overall monthly churn against the 4% target, and keep the weekly list of stalled new clinics. Read-only.",
+        "from_steps": [
+          "s-test",
+          "s-watch"
+        ],
         "owner": {
-          "role": "weekly-saas-numbers-keeper"
+          "role": "experiment-readout-desk"
         },
         "support": [
-          "experiment-readout-desk"
+          "weekly-saas-numbers-keeper"
         ],
-        "data": [
-          "accounts",
-          "usage"
+        "uses": [
+          "a-b-test-verdict-maker",
+          "retention-heatmap-maker",
+          "customer-health-and-churn-scorer"
         ],
         "needs": [
-          "billing-read",
-          "usage-read",
-          "support-read"
+          "stripe-read",
+          "mixpanel-read",
+          "intercom-read",
+          "postgres-home"
         ],
         "depends_on": [
-          "ship"
+          "launch"
         ],
         "outputs": [
           {
@@ -822,41 +1039,46 @@
             "name": "Results readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "monitor",
+            "name": "Weekly stalled-clinic list and schedule",
+            "format": "markdown",
+            "path": "measurement/MONITOR.md"
           }
         ],
         "checks": [
           {
-            "id": "volume",
-            "name": "A verdict is given only when the minimum number of accounts is met; otherwise it says INCONCLUSIVE",
+            "id": "judge",
+            "name": "Churn figures are recomputed from Stripe's own cohort retention records, not from our working tables, and agree within 0.3 points",
             "required": true
           },
           {
-            "id": "like-for-like",
-            "name": "Comparisons use the same churn definition and sign-up dates",
+            "id": "volume",
+            "name": "A verdict is given only when the planned sample is reached, otherwise INCONCLUSIVE with the confidence range",
             "required": true
           },
           {
             "id": "guardrails",
-            "name": "Pricing is unchanged and support volume is checked",
+            "name": "Support conversations per new clinic and wrongly timed messages are checked, and any breach is flagged",
+            "required": true
+          },
+          {
+            "id": "target",
+            "name": "Overall monthly churn is reported against 4% with the cohort mix, and a miss is reported as a miss",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-measure"
-        ],
-        "uses": [
-          "retention-cohort-analyst",
-          "product-experiment-designer"
-        ]
+        "gate": "none"
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Close each test, record wins and losses, propose durable rules with their scope and plan the next round.",
+        "goal": "Close the experiment, save rules with their scope, hand the head of product any integration finding, and plan the next round.",
+        "from_steps": [],
         "owner": {
-          "role": "experiment-readout-desk"
+          "role": "customer-onboarding-keeper"
         },
         "depends_on": [
           "measurement"
@@ -872,74 +1094,94 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every launched test is closed with a verdict",
+            "name": "The experiment is closed in experiments.jsonl with its verdict",
             "required": true
           },
           {
-            "id": "scoped",
-            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "id": "scope",
+            "name": "Each proposed rule says whether it holds for this job, this business or the playbook",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": []
+        "gate": "none"
       }
     ],
     "hypotheses": [
       {
-        "id": "h-early-concentrated",
-        "statement": "Most churn sits in months one to three after sign-up.",
-        "test": "Churn by tenure band for each sign-up cohort, rebuilt from account dates.",
-        "confirm_if": "Months one to three account for the majority of cancels relative to their share of accounts.",
-        "refute_if": "Churn is spread evenly across tenure, or sits mostly in later months.",
-        "fix_stage": "options"
+        "id": "h-early",
+        "statement": "Most cancellations happen in the first three months of paying.",
+        "test": "Churn by tenure month from raw Stripe records, dividing by accounts that entered each month still active, over the last 12 months.",
+        "confirm_if": "Months 1 to 3 hold more than 50% of cancellations and their monthly hazard is at least twice the hazard of months 7 to 12.",
+        "refute_if": "Months 1 to 3 hold under 35% of cancellations, or the hazard is flat across tenure.",
+        "fix_stage": "changes"
       },
       {
-        "id": "h-no-activation",
-        "statement": "Accounts that do not reach a first-value action in their first weeks are the ones that leave.",
-        "test": "Compare early actions of retained and churned accounts in Mixpanel; look for an action that separates them.",
-        "confirm_if": "One early action separates stayers from leavers with enough accounts behind it.",
-        "refute_if": "No early action separates the groups.",
+        "id": "h-involuntary",
+        "statement": "A material share of early cancellations are failed payments, not a clinic's choice.",
+        "test": "Classify each cancellation by cancellation_details and invoice history (payment failed and retries ran out versus cancelled by the customer).",
+        "confirm_if": "Failed payments are 20% or more of cancellations in months 1 to 3.",
+        "refute_if": "Failed payments are under 10% of cancellations in months 1 to 3.",
+        "fix_stage": "changes"
+      },
+      {
+        "id": "h-never-activated",
+        "statement": "Early leavers never reached first value.",
+        "test": "Pick candidate activation events from Mixpanel and compare the share of leavers and stayers that did each within 14 days of paying; check by signup month.",
+        "confirm_if": "At least 60% of early leavers never did the event, against at most 30% of stayers, and the gap holds in each signup month.",
+        "refute_if": "Leavers and stayers differ by under 10 points, or the gap disappears within signup months.",
+        "fix_stage": "changes"
+      },
+      {
+        "id": "h-slow-start",
+        "statement": "Clinics that reach first value late leave more than those that reach it fast.",
+        "test": "Days from first payment to the activation event; churn by 90 days for those under 7 days against 14 days or more.",
+        "confirm_if": "Churn is at least 1.5 times higher for those at 14 days or more, with at least 30 accounts per group.",
+        "refute_if": "Churn is within 20% across timing groups.",
         "fix_stage": "changes"
       },
       {
         "id": "h-integration",
-        "statement": "Clinics leave because a needed integration is missing.",
-        "test": "Count Intercom conversations that ask about or mention integrations before cancellation.",
-        "confirm_if": "Integration requests appear in a clear share of cancelled accounts' conversations and less in retained ones.",
-        "refute_if": "Integration mentions are rare or equally common among retained accounts.",
-        "fix_stage": "options"
-      },
-      {
-        "id": "h-failed-payments",
-        "statement": "A meaningful part of early churn is failed payments, not a choice to leave.",
-        "test": "Split cancels by chosen versus failed payment in Stripe.",
-        "confirm_if": "Failed-payment cancels are a notable share of early churn.",
-        "refute_if": "Nearly all early cancels are chosen.",
-        "fix_stage": "options"
-      },
-      {
-        "id": "h-support-friction",
-        "statement": "New accounts stall on setup questions that stay unresolved.",
-        "test": "Support conversation volume, themes and resolution in the first 30 days for cancelled versus retained accounts.",
-        "confirm_if": "Cancelled accounts show more unresolved setup conversations early.",
-        "refute_if": "Early support patterns look the same for both groups.",
+        "statement": "Early leavers cancel because of a missing integration.",
+        "test": "Tag Intercom conversations and topics of early leavers for integration, import or sync requests before they cancelled, and compare with stayers.",
+        "confirm_if": "At least 15% of early leavers raised an integration need and the rate is at least twice that of stayers.",
+        "refute_if": "Under 5% of early leavers did, and the rate is no higher than for stayers.",
         "fix_stage": "changes"
       },
       {
-        "id": "h-fit",
-        "statement": "Some leavers are a poor fit for the product, so onboarding will not keep them.",
-        "test": "Compare leavers and stayers on account attributes available in Stripe and Mixpanel, such as number of users and plan.",
-        "confirm_if": "A recognisable account profile accounts for much of the early churn.",
-        "refute_if": "Leavers look like stayers on every attribute we hold.",
-        "fix_stage": "options"
+        "id": "h-support-start",
+        "statement": "Early leavers hit slow or unresolved help in their first 30 days.",
+        "test": "First response time and share of conversations left unresolved in the first 30 days, leavers against stayers.",
+        "confirm_if": "Leavers' unresolved share is at least twice the stayers' and their median first response is longer.",
+        "refute_if": "The two groups are within 20% on both measures.",
+        "fix_stage": "changes"
+      },
+      {
+        "id": "h-messages",
+        "statement": "Today's messages run on a timer and ignore what the clinic has done.",
+        "test": "List each current email and in-app message with its trigger and timing and compare with each clinic's activation progress.",
+        "confirm_if": "No message depends on a missed milestone, or stalled clinics get the same messages as active ones.",
+        "refute_if": "Messages already branch on milestones and stalled clinics receive different ones.",
+        "fix_stage": "changes"
+      },
+      {
+        "id": "h-cohort-shift",
+        "statement": "Recent signup cohorts leave faster than older ones, for example after an acquisition or product change.",
+        "test": "Compare day-90 survival for the last three signup months against the three before them.",
+        "confirm_if": "Survival is at least 5 points lower for the recent cohorts.",
+        "refute_if": "The difference is under 2 points.",
+        "fix_stage": "changes"
       }
     ],
-    "dropped": [],
+    "dropped": [
+      {
+        "step": "s-offer",
+        "reason": "A retention coupon at cancel is a price change, which the owner ruled out for this year, and Stripe is read-only for us."
+      }
+    ],
     "measurement": {
-      "window": "Read activation and month-one to month-three retention for each new sign-up cohort for at least 90 days after its change; read overall churn monthly against the same churn definition.",
-      "min_volume": "Enough new accounts per comparison group to read, set in the test plan from the account counts; with about 900 accounts, expect small groups and wide uncertainty.",
-      "stop_rule": "Stop a change early only if cancellations or support load rise clearly in the exposed group compared with the comparison group."
+      "window": "First look when treated clinics reach day 30; verdict when they reach day 90; overall monthly churn read every month against 4%.",
+      "min_volume": "Set by the power calculation on the real signup count (not yet known); for scale, 900 accounts at 6.5% is about 58 cancellations a month overall (derived from the owner's figures).",
+      "stop_rule": "Stop early only if a guardrail breaks, such as support conversations per new clinic rising or a message firing at the wrong clinics; otherwise run to day 90 before a verdict."
     }
   }
 }

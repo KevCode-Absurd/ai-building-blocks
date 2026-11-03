@@ -1,83 +1,99 @@
 {
   "case": "content-newsletter-revenue",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Turn the weekly personal finance newsletter for nurses (about 8,100 subscribers) into a business that earns about $3,000 a month within six months, using only sponsors and products the owner would use and discloses.",
-    "deliverable": "A revenue plan the owner has chosen from checked options: sponsor rules and disclosure wording, a media kit and sponsor outreach drafts, and, if the owner chooses it, a premium tier with a reader survey and launch emails, all set up in Beehiiv with the owner's approval, and a monthly revenue sheet read against $3,000.",
+    "outcome": "Start earning $3,000 a month from the personal finance newsletter for nurses within six months, using only products and sponsors the owner is willing to stand behind, with every sponsor disclosed.",
+    "ambition": {
+      "goal_beyond": "A newsletter that earns steadily because readers still trust it, so income never costs the audience.",
+      "rungs": [
+        "Open sponsor slots and a paid tier and see what comes in.",
+        "Find out which income paths this audience will really support (sponsors, a paid tier or both) from the newsletter's own data and a reader test, then run the best mix and report honestly against $3,000.",
+        "Keep it steady: a monthly check of revenue against reader trust (unsubscribes, clicks) that flags a drop before a month is lost."
+      ],
+      "chosen": 2,
+      "judge": "Money actually paid: Beehiiv and Stripe payout and subscription records, and sponsor invoices; trust measured from the Beehiiv export (unsubscribes and clicks per send) before and after."
+    },
+    "deliverable": "A tested monetisation set-up: the chosen sponsor slots with a disclosure standard and a sponsor pitch, and a premium tier (if readers support it) set up on Beehiiv, launched with your approval, plus a monthly revenue and trust readout against $3,000.",
     "done": [
-      "Beehiiv numbers exported into the Google Sheet and checked against the dashboard",
-      "Open rate checked against clicks so sponsor claims are honest",
-      "Revenue options modelled with stated assumptions and ranked, and the owner has chosen",
-      "Sponsor rules and the disclosure wording written and approved by the owner",
-      "Media kit, outreach drafts and any premium offer ready for the owner to approve",
-      "Every sponsored placement, survey or paid tier switched on only after the owner approves that action",
-      "Monthly revenue read against $3,000 with learnings saved"
+      "Newsletter exports pulled into your Google Sheet and checked against Beehiiv's own totals",
+      "Opens and clicks checked for machine inflation, with a real engaged-reader count",
+      "Revenue maths for each path shown with its assumptions",
+      "Reader test run with your yes and read against a rule set in advance",
+      "Income paths chosen by you, with your product and disclosure rules written down",
+      "Sponsor and premium materials checked for claims and disclosure, then approved by you",
+      "Anything live done only with your yes for each action",
+      "Revenue read from payment records against $3,000, with the trust measures beside it"
     ],
     "metric": {
-      "name": "Monthly newsletter revenue",
-      "direction": "reach",
+      "name": "Newsletter revenue per month",
+      "direction": "increase",
       "unit": "USD per month",
       "baseline": 0,
       "baseline_source": "reported",
       "target": 3000
     },
-    "deadline": "Within six months of starting (about May 2027)",
+    "deadline": "Within six months of plan approval",
     "guardrails": [
-      "No promotion of a financial product the owner would not use themselves",
-      "Every sponsor, affiliate link or paid placement is disclosed clearly where readers see it",
-      "Open rate stays near the reported 52% and the list does not shrink faster than before",
-      "Readers' trust: a sponsor is dropped if it fails the owner's rule"
+      "Unsubscribe rate per send stays at or below the level before monetisation (baseline from the export)",
+      "Click rate per send, not open rate, holds at its pre-monetisation level",
+      "No product is promoted that the owner would not use, and the owner may reject any sponsor",
+      "Every sponsor and paid placement is clearly disclosed to readers",
+      "No personal financial advice claims or income promises in sponsor or premium copy"
     ],
     "limits": [
       "Sponsors must be disclosed",
-      "No financial product the owner would not use themselves",
-      "The owner decides every sponsor, price and launch",
-      "Nothing is sent or switched on in Beehiiv without the owner's approval of that action"
+      "Only products the owner would use",
+      "Data lives in a Google Sheet",
+      "Beehiiv is reached through the browser and exports; no API keys are asked for",
+      "The owner decides"
     ],
     "assets": [
-      "Weekly newsletter on Beehiiv with about 8,100 subscribers",
-      "Beehiiv dashboard and exports"
+      "Weekly personal finance newsletter for nurses on Beehiiv",
+      "8,100 subscribers; open rate about 52% (Beehiiv dashboard, reported)",
+      "The newsletter archive"
     ],
     "connections": [
       {
-        "name": "Beehiiv (browser and exports)",
+        "name": "Beehiiv exports and dashboard",
+        "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Beehiiv in the browser",
         "access": "live",
         "status": "available"
       },
       {
-        "name": "Google Sheet for working data",
+        "name": "Google Sheet (working data)",
         "access": "draft",
         "status": "available"
       }
     ],
-    "data_home": "A Google Sheet (the owner's choice)",
-    "technical_level": "Not stated by the owner; explain in plain words and hand over ready drafts to review",
+    "data_home": "A Google Sheet (the owner asked for this)",
+    "technical_level": "Not stated. We will hand over ready-to-use drafts and plain steps, and ask if more is wanted.",
     "decides": "The owner",
     "unknowns": [
-      "Whether readers would pay for a premium tier (the owner named this as unknown)",
-      "Click rate, unsubscribe rate and growth rate (only the 52% open rate is reported)",
-      "Which Beehiiv plan the owner is on and which monetisation features it includes",
-      "Whether any sponsors have approached the owner already",
-      "Where in the world the readers are, which affects disclosure rules",
-      "How the owner defines 'a product I would use' in practice; the plan asks for written criteria"
+      "Whether readers would pay for a premium tier (the owner named this)",
+      "How much of the 52% open rate is real, not machine opens",
+      "Click rate, unsubscribe rate and subscriber growth per issue",
+      "Sponsor demand and rates for this audience",
+      "Beehiiv plan, Stripe set-up and whether the ad network is open to this account",
+      "Where readers live and their roles (nurses only, or others too)",
+      "Profit target after fees and taxes"
     ],
     "answers": [
       {
-        "question": "What is the newsletter?",
+        "question": "What is the newsletter and the platform?",
         "answer": "Weekly newsletter about personal finance for nurses, on Beehiiv."
       },
       {
-        "question": "How big is it and how does it perform?",
-        "answer": "8,100 subscribers, open rate about 52% (Beehiiv dashboard)."
+        "question": "Where is it now?",
+        "answer": "8,100 subscribers, open rate about 52% (Beehiiv dashboard). No revenue yet."
       },
       {
-        "question": "What does it earn now?",
-        "answer": "No revenue yet."
-      },
-      {
-        "question": "What is the goal?",
+        "question": "What is the target and by when?",
         "answer": "$3,000 a month within six months."
       },
       {
@@ -85,73 +101,91 @@
         "answer": "I will not promote financial products I would not use myself and must disclose sponsors."
       },
       {
-        "question": "What access do you have and where does data live?",
-        "answer": "Beehiiv access through the browser and exports. Keep data in a Google Sheet."
+        "question": "What access, data home and decision rights?",
+        "answer": "Beehiiv access through the browser and exports. Keep data in a Google Sheet. I decide."
       },
       {
-        "question": "Who decides and what is unknown?",
-        "answer": "I decide. Unknown: whether readers would pay for a premium tier."
+        "question": "What is unknown?",
+        "answer": "Whether readers would pay for a premium tier."
+      },
+      {
+        "question": "My guess for what should happen after this (ambition)",
+        "answer": "Accepted as the working guess: you want income that lasts because readers keep trusting the newsletter, so we test what readers support first and watch trust beside revenue."
       }
     ]
   },
   "research": {
-    "approach": "Newsletter operators sell attention in a few separate ways and test each cheaply before leaning on one: sponsorships first because they need no new product, a paid tier as a distinct product rather than a paywalled copy of the free issue, and affiliate links only where the product truly fits. They know their numbers before pitching (subscribers, open rate, click rate, audience description), because sponsors price on those and on fit. They model revenue per stream with explicit assumptions instead of one hopeful total. Disclosure is built into the process: the label sits next to the sponsored item, in plain words, and not only at the bottom. A personal finance list for one profession adds a second rule, a written test for which products are acceptable, applied before any pitch goes out.",
+    "approach": "Practitioners work from the newsletter's own raw data: per-issue sends, unique opens, unique clicks, unsubscribes and link-level clicks, not the dashboard summary. They first check how real the opens are, because Apple's Mail Privacy Protection inflates opens and advertisers who pay per open are then overcharged, so they size sponsorship from clicks and engaged readers. They work out revenue for each path as audience times rate times sends, with the assumptions labelled, and see that sponsor slots at network rates may not reach a goal alone. They test willingness to pay with the audience before building a paid tier, then launch a premium tier with a clear free-versus-paid split, a launch date and a teaser. They choose sponsors the owner would use, label every placement clearly and close to the ad, avoid too many ads per issue because it hurts deliverability and engagement, and watch unsubscribes and clicks beside revenue. Results are read from payment records, not opens.",
     "sources": [
       {
-        "id": "web-sponsor",
+        "id": "web-beehiiv-ads",
         "kind": "web",
-        "title": "Newsletter sponsorship rates 2026 (Creators Agency)",
-        "ref": "https://creatorsagency.co/blog/newsletter-sponsorship-rates-2026",
-        "date": "2026-07-29",
-        "note": "Price each placement separately from a floor, the audience delivered and the outcome; name the denominator when quoting a CPM; opens can be inflated by Apple Mail Privacy Protection, so weight clicks. Agency blog, so a practitioner view, not a standard."
+        "title": "Beehiiv Ad Network (Beehiiv)",
+        "ref": "https://www.beehiiv.com/monetize/ad-network",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform page: pay per 1,000 unique opens (CPM) or verified unique click (CPC), clicks filtered for bots, the owner picks which offers to run, up to 3 ads per post, warning that too many ads hurt deliverability, payouts through Stripe Express. Does not say how to label sponsors."
       },
       {
-        "id": "web-paved",
+        "id": "web-beehiiv-paid",
         "kind": "web",
-        "title": "Paved finds HR newsletter ad rates run 15 times higher than lifestyle lists (PPC Land)",
-        "ref": "https://ppc.land/paved-finds-hr-newsletter-ad-rates-run-15-times-higher-than-lifestyle-lists/",
-        "date": "2026-08-30",
-        "note": "Q3 2026 prices per 1,000 subscribers by category: finance $7.11, health and wellness $5.60; priced per subscriber, not per thousand impressions. The article itself notes errors in the report's table, so treat as a rough range."
+        "title": "Going paid on Beehiiv (Beehiiv blog)",
+        "ref": "https://www.beehiiv.com/blog/going-paid-on-beehiiv.md",
+        "date": "2026-07",
+        "note": "Platform guide updated July 2026: connect Stripe in the Premium tab, set monthly and yearly prices, tease the launch and set a date, add a paywall break; freemium split of free and paid content. No conversion numbers."
       },
       {
-        "id": "web-paid",
+        "id": "web-mpp",
         "kind": "web",
-        "title": "The State of Paid Newsletters 2026 (beehiiv)",
-        "ref": "https://www.beehiiv.com/blog/the-state-of-paid-newsletters-2026",
-        "date": "2026-06-22",
-        "note": "Platform median free-to-paid conversion 0.62% at a median $10 a month; top performers far higher; make paid a distinct product; annual plans; a cancel flow. Vendor data, so treat as a planning range."
+        "title": "Mail Privacy Protection (Mailchimp)",
+        "ref": "https://mailchimp.com/resources/mail-privacy-protection/",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Feature in place since September 2021: Apple's feature may inflate open rates; track clicks and purchases instead and move automations from opens to clicks."
       },
       {
-        "id": "web-ftc",
+        "id": "web-ftc-disclosures",
         "kind": "web",
-        "title": "FTC: Endorsement Guides, what people are asking",
+        "title": "Disclosures 101 for Social Media Influencers (FTC)",
+        "ref": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+        "date": "2019-11",
+        "note": "Regulator guidance (dated November 2019): disclose any material connection, place it with the endorsement where it is hard to miss, use plain words such as ad or sponsored. Written for social media, applied here by analogy to a newsletter."
+      },
+      {
+        "id": "web-ftc-endorse",
+        "kind": "web",
+        "title": "FTC Endorsement Guides: what people are asking",
         "ref": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
-        "date": "2026-11",
-        "note": "Page is undated and reflects the 2023 revision of the Guides; read 2026-11. Payment, free products and affiliate commissions are material connections; disclose near the endorsement in plain words such as ad or paid link, not only in a description or behind a link. Written for social media and websites; the newsletter case follows the same principle."
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Regulator guidance, guides revised 2023: endorsements must reflect honest opinion; material connections must be disclosed clearly; do not suppress negative reviews."
       },
       {
-        "id": "cat-model",
-        "kind": "catalogue",
-        "title": "Revenue model picker",
-        "ref": "revenue-model-picker"
-      },
-      {
-        "id": "cat-price",
+        "id": "cat-pricing-survey",
         "kind": "catalogue",
         "title": "Buyer pricing survey test planner",
         "ref": "set-your-price-from-what-buyers-say-then-test-it-safely"
       },
       {
-        "id": "cat-member",
+        "id": "cat-presell",
         "kind": "catalogue",
-        "title": "Membership and subscription pricing planner",
-        "ref": "membership-plan-pricer"
+        "title": "Paid idea test launch planner",
+        "ref": "pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days"
       },
       {
-        "id": "cat-pitch",
+        "id": "cat-survey-check",
         "kind": "catalogue",
-        "title": "Short pitch feedback planner",
-        "ref": "write-a-short-pitch-and-fix-it-after-every-no"
+        "title": "Marketing survey design reviewer",
+        "ref": "check-a-marketing-survey-before-sending-it"
+      },
+      {
+        "id": "cat-delivery",
+        "kind": "catalogue",
+        "title": "Email delivery recovery and quiet-subscriber plan",
+        "ref": "fix-inbox-placement-and-win-back-your-opens"
+      },
+      {
+        "id": "cat-growth-maths",
+        "kind": "catalogue",
+        "title": "Business growth target and risk planner",
+        "ref": "new-business-growth-needs"
       },
       {
         "id": "owner",
@@ -162,278 +196,287 @@
     ],
     "steps": [
       {
-        "id": "s-numbers",
-        "name": "Export the list and issue numbers and check them",
-        "why": "Sponsors and pricing rest on subscriber, open and click numbers that must be right.",
+        "id": "s-data",
+        "name": "Export per-issue and per-link data into the sheet",
+        "why": "Revenue paths are sized from sends, unique clicks and subscriber history, not a dashboard summary.",
         "sources": [
-          "web-sponsor",
+          "web-beehiiv-ads",
           "owner"
         ]
       },
       {
-        "id": "s-market",
-        "name": "Learn what comparable newsletters earn and from what",
-        "why": "Rates and conversion differ by niche; a range with sources beats a guess.",
+        "id": "s-opens",
+        "name": "Check how real the opens are and count engaged readers",
+        "why": "Machine opens inflate the 52% and any open-based rate; clicks and recent clickers are the safer base.",
         "sources": [
-          "web-sponsor",
-          "web-paved",
-          "web-paid",
-          "cat-model"
+          "web-mpp",
+          "web-beehiiv-ads",
+          "cat-delivery"
         ]
       },
       {
-        "id": "s-fit",
-        "name": "Find which revenue streams fit this audience and the owner's rules",
-        "why": "Not every stream fits nurses reading about money, or the owner's no-products rule.",
+        "id": "s-maths",
+        "name": "Work out revenue for each path with labelled assumptions",
+        "why": "Sponsor income is opens or clicks times a rate times sends; premium income is readers times conversion times price. Both must be shown against $3,000.",
         "sources": [
-          "web-paid",
-          "web-sponsor",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-model",
-        "name": "Model revenue by stream and rank the options",
-        "why": "$3,000 a month may need more than one stream, and each carries different risk.",
-        "sources": [
-          "web-paid",
-          "cat-model",
-          "cat-member"
+          "web-beehiiv-ads",
+          "cat-growth-maths"
         ]
       },
       {
         "id": "s-rules",
-        "name": "Write sponsor rules and the disclosure wording",
-        "why": "Trust and compliance are set before the first pitch, not after.",
+        "name": "Write the product and disclosure rules before any pitch",
+        "why": "The owner's rules and the regulator's disclosure guidance set what can be sold and how it is labelled.",
         "sources": [
-          "web-ftc",
+          "web-ftc-disclosures",
+          "web-ftc-endorse",
           "owner"
         ]
       },
       {
-        "id": "s-pitch",
-        "name": "Build the media kit and sponsor outreach",
-        "why": "Sponsors respond to clear numbers, audience description and terms.",
+        "id": "s-test",
+        "name": "Test willingness to pay and sponsor interest before building",
+        "why": "Readers' willingness to pay is unknown; a short survey and a founding-member waitlist test it cheaply.",
         "sources": [
-          "web-sponsor",
-          "cat-pitch"
+          "cat-pricing-survey",
+          "cat-survey-check",
+          "cat-presell"
         ]
       },
       {
-        "id": "s-paid",
-        "name": "Test willingness to pay, then design the premium tier",
-        "why": "The owner does not know if readers would pay; ask before building.",
+        "id": "s-build",
+        "name": "Prepare the sponsor kit and the premium offer",
+        "why": "A clear free-versus-paid split, price, launch date and sponsor kit are the working pieces.",
         "sources": [
-          "web-paid",
-          "cat-price",
-          "cat-member"
+          "web-beehiiv-paid",
+          "web-beehiiv-ads",
+          "cat-pricing-survey"
         ]
       },
       {
         "id": "s-launch",
-        "name": "Go live one step at a time and read the money",
-        "why": "Each placement or tier is a live action; results are read monthly against the target.",
+        "name": "Go live in steps with disclosure on every placement",
+        "why": "Open sponsor slots and the paid tier one at a time so each can be read.",
         "sources": [
-          "web-paid",
-          "web-ftc"
+          "web-beehiiv-ads",
+          "web-beehiiv-paid",
+          "web-ftc-disclosures"
+        ]
+      },
+      {
+        "id": "s-read",
+        "name": "Read revenue from payment records with trust measures beside it",
+        "why": "Money paid is the outside judge; unsubscribes and clicks show whether trust is intact.",
+        "sources": [
+          "web-beehiiv-ads",
+          "web-mpp"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Quoting an open rate that machine opens may inflate; sponsors then see weak clicks.",
+        "text": "Pricing sponsorship or reporting reach from a 52% open rate that Apple's Mail Privacy Protection has inflated.",
         "sources": [
-          "web-sponsor"
+          "web-mpp",
+          "web-beehiiv-ads"
         ]
       },
       {
-        "text": "Paywalling part of the free issue instead of making paid a different product.",
+        "text": "Taking too many ads per issue, which Beehiiv itself warns hurts deliverability and engagement.",
         "sources": [
-          "web-paid"
+          "web-beehiiv-ads"
         ]
       },
       {
-        "text": "Planning on one hopeful conversion rate; the platform median is far below the top performers.",
+        "text": "Placing the sponsor label where it is easy to miss, or in vague words.",
         "sources": [
-          "web-paid"
+          "web-ftc-disclosures"
         ]
       },
       {
-        "text": "Disclosing a sponsor only at the end of an issue or in vague words.",
+        "text": "Building a paid tier before testing that readers will pay, or promising results from financial products.",
         "sources": [
-          "web-ftc"
-        ]
-      },
-      {
-        "text": "Taking a sponsor first and checking fit after, which breaks reader trust.",
-        "sources": [
-          "web-sponsor",
-          "owner"
+          "cat-pricing-survey",
+          "web-ftc-endorse"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Make the nurses' finance newsletter earn $3,000 a month, with rules the owner can stand behind",
+    "name": "Test and launch newsletter income that readers trust",
     "capabilities": [
       {
         "id": "beehiiv-read",
         "access": "read",
-        "via": "browser",
-        "name": "Read the Beehiiv dashboard and export lists (browser)",
-        "why": "Export subscribers, issue opens and clicks, and growth data."
+        "via": "file",
+        "name": "Beehiiv exports (subscribers and post stats)",
+        "why": "Per-issue sends, opens, unique clicks, unsubscribes and link clicks."
       },
       {
-        "id": "sheet-write",
+        "id": "beehiiv-browser",
         "access": "draft",
         "via": "browser",
-        "name": "Write the working data to the owner's Google Sheet (browser)",
-        "why": "Keep exports, checks and the revenue model in one sheet the owner can open."
+        "name": "Beehiiv in the browser (read dashboard, draft settings)",
+        "why": "Read the dashboard, the ad network and Premium settings and prepare drafts without publishing."
       },
       {
-        "id": "web-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read public pages on newsletters, sponsors and rates",
-        "why": "Find comparable newsletters and sponsor candidates."
-      },
-      {
-        "id": "beehiiv-write",
+        "id": "beehiiv-live",
         "access": "live",
         "via": "browser",
-        "name": "Schedule or send issues and survey, and set up a paid tier in Beehiiv (browser)",
-        "why": "Used only for actions the owner has approved one by one."
+        "name": "Send and publish in Beehiiv (browser)",
+        "why": "Send the reader survey, publish teasers, open sponsor slots and the Premium tier; each action waits for the owner's yes."
+      },
+      {
+        "id": "sheet",
+        "access": "draft",
+        "via": "file",
+        "name": "Google Sheet working data",
+        "why": "Keep the exports, maths and results in one place the owner can see."
+      },
+      {
+        "id": "payments-read",
+        "access": "read",
+        "via": "file",
+        "name": "Stripe and sponsor payment records (export)",
+        "why": "The outside judge: money actually paid."
+      },
+      {
+        "id": "sponsor-mail",
+        "access": "live",
+        "via": "owner",
+        "name": "Send sponsor outreach (owner's email)",
+        "why": "The owner sends each pitch from checked drafts."
       }
     ],
     "data": [
       {
-        "id": "list-export",
-        "name": "Beehiiv subscriber export",
-        "why": "Subscribers by sign-up source, status and engagement are the base for audience and sponsor claims.",
+        "id": "post-stats",
+        "name": "Per-issue newsletter stats",
+        "why": "The raw base for engagement, trust guardrails and sponsor maths.",
         "fields": [
-          "email id (no emails shared in the sheet)",
-          "sign-up date",
-          "source",
-          "status",
-          "opens in the last 90 days",
-          "clicks in the last 90 days"
-        ],
-        "routes": [
-          {
-            "kind": "CSV",
-            "how": "Beehiiv, Audience, export all subscribers; remove addresses before copying into the Google Sheet."
-          },
-          {
-            "kind": "ASK",
-            "how": "If export is limited by plan, ask for the dashboard totals by screenshot."
-          }
-        ],
-        "required_for": [
-          "evidence-list",
-          "integrity-numbers",
-          "diagnosis"
-        ],
-        "alternative": "Dashboard totals only; no segment findings, and audience claims to sponsors stay unverified."
-      },
-      {
-        "id": "issue-stats",
-        "name": "Per-issue results",
-        "why": "Opens, clicks and unsubscribes by issue show what the audience acts on.",
-        "fields": [
-          "issue date",
-          "subject",
-          "topic",
+          "send date",
           "recipients",
           "unique opens",
           "unique clicks",
           "unsubscribes",
-          "link clicked"
+          "spam complaints",
+          "link-level clicks",
+          "subject"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Beehiiv, Posts, export post statistics for the last 6 months."
+            "how": "Beehiiv: Posts, export post stats for the last 12 months or all issues."
+          },
+          {
+            "kind": "ASK",
+            "how": "If no export, screenshots of the last 20 issues' stats."
           }
         ],
         "required_for": [
-          "evidence-list",
-          "integrity-numbers",
-          "diagnosis"
+          "evidence",
+          "integrity-opens",
+          "revenue-diagnosis"
         ],
-        "alternative": "Totals only; topic and link findings stay unknown."
+        "alternative": "Dashboard averages only: trust guardrails and click-based sizing stay unknown."
       },
       {
-        "id": "market-benchmarks",
-        "name": "Comparable newsletter rates and conversion",
-        "why": "Sets the ranges used in the revenue model, each with a source and date.",
+        "id": "subscriber-list",
+        "name": "Subscriber export",
+        "why": "Growth, source, status and engagement by reader.",
         "fields": [
+          "signup date",
           "source",
-          "date",
-          "niche",
-          "metric",
-          "value"
-        ],
-        "routes": [
-          {
-            "kind": "URL",
-            "how": "Public benchmark pages and rate cards, read with web-read."
-          }
-        ],
-        "required_for": [
-          "evidence-market"
-        ],
-        "alternative": "If few sources are found, the model states wide ranges and marks the stream low-confidence."
-      },
-      {
-        "id": "reader-poll",
-        "name": "Reader survey answers",
-        "why": "Tests willingness to pay and the topics readers would value in a premium tier.",
-        "fields": [
-          "question",
-          "answer",
-          "date",
-          "segment"
+          "status",
+          "last open",
+          "last click",
+          "country or region"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Beehiiv survey or poll results export after the owner approves sending."
+            "how": "Beehiiv: Subscribers, export all with engagement fields. Keep it in the project; do not share emails outside it."
           }
         ],
         "required_for": [
-          "measurement"
+          "evidence",
+          "integrity-opens",
+          "revenue-diagnosis"
+        ]
+      },
+      {
+        "id": "payments",
+        "name": "Payments received",
+        "why": "Real money from sponsors and subscribers.",
+        "fields": [
+          "date",
+          "source",
+          "amount",
+          "refunds",
+          "fees"
         ],
-        "alternative": "Without answers, the premium tier stays UNKNOWN and is not launched."
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Stripe and Beehiiv payout exports, plus sponsor invoices."
+          }
+        ],
+        "required_for": [
+          "readout"
+        ],
+        "alternative": "Without payment records, revenue stays owner-reported."
+      },
+      {
+        "id": "survey-results",
+        "name": "Reader survey and waitlist results",
+        "why": "The first real evidence on willingness to pay.",
+        "fields": [
+          "responses",
+          "price answers",
+          "interest in paid tier",
+          "content wanted",
+          "waitlist sign-ups"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Export from the survey form and the founding-member waitlist after the test window."
+          }
+        ],
+        "required_for": [
+          "launch-revenue",
+          "readout"
+        ]
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the goal and rules",
-        "goal": "Turn the owner's words into a measured goal, limits, rules and the data we can reach. Writes BRIEF.md.",
+        "name": "Confirm the brief",
+        "goal": "Turn the owner's words into a measured goal, rules and what is unknown. Writes BRIEF.md.",
         "owner": {
-          "role": "marketing-email-strategist"
+          "role": "new-business-growth-needs"
         },
         "gate": "none",
         "from_steps": [],
         "uses": []
       },
       {
-        "id": "evidence-list",
+        "id": "evidence",
         "kind": "evidence",
-        "name": "Export the list and issue results into the sheet",
-        "goal": "Pull subscriber and per-issue data from Beehiiv into the Google Sheet and note exactly what was pulled.",
+        "name": "Pull the newsletter's own data",
+        "goal": "Export per-issue stats and the subscriber list into the Google Sheet, with link-level clicks, growth and unsubscribes by issue.",
         "owner": {
           "role": "turn-a-raw-dataset-into-a-checked-brief-of-top-insights"
         },
         "data": [
-          "list-export",
-          "issue-stats"
+          "post-stats",
+          "subscriber-list"
         ],
         "needs": [
           "beehiiv-read",
-          "sheet-write"
+          "sheet"
         ],
         "depends_on": [
           "intake"
@@ -441,9 +484,9 @@
         "outputs": [
           {
             "id": "sheet-data",
-            "name": "Working data in the Google Sheet",
-            "format": "markdown",
-            "path": "evidence/SHEET-NOTES.md"
+            "name": "Working data tabs in the sheet (export copy)",
+            "format": "csv",
+            "path": "evidence/newsletter-data.csv"
           },
           {
             "id": "evidence-notes",
@@ -455,157 +498,105 @@
         "checks": [
           {
             "id": "totals",
-            "name": "Subscriber and issue totals in the sheet match the Beehiiv dashboard",
+            "name": "Subscriber count and total sends in the sheet match Beehiiv's own totals exactly",
             "required": true
           },
           {
-            "id": "private",
-            "name": "No subscriber email addresses are copied into the sheet",
+            "id": "range",
+            "name": "Covers at least the last 12 issues, or says how many exist",
             "required": true
           },
           {
-            "id": "period",
-            "name": "Issue data covers the last six months or states what is missing",
+            "id": "pii",
+            "name": "Reader emails stay in the project and are not copied into any outside tool",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-numbers"
+          "s-data"
         ],
         "uses": [
           "turn-a-raw-dataset-into-a-checked-brief-of-top-insights"
         ]
       },
       {
-        "id": "evidence-market",
-        "kind": "evidence",
-        "name": "Find what comparable newsletters earn",
-        "goal": "Read dated public sources on sponsor rates, paid conversion and affiliate fit for niche newsletters, and list sponsor candidates by category.",
+        "id": "integrity-opens",
+        "kind": "integrity",
+        "name": "Check opens and count engaged readers",
+        "goal": "Test how much of the 52% is real: compare opens with unique clicks and recent clickers, find readers who open but never click, and count engaged readers on clicks. Check list health and deliverability.",
         "owner": {
-          "role": "market-and-price-picker"
+          "role": "fix-inbox-placement-and-win-back-your-opens"
         },
         "data": [
-          "market-benchmarks"
+          "post-stats",
+          "subscriber-list"
         ],
         "needs": [
-          "web-read",
-          "sheet-write"
+          "beehiiv-browser"
         ],
         "depends_on": [
-          "intake"
+          "evidence"
         ],
         "outputs": [
           {
-            "id": "benchmarks",
-            "name": "Benchmarks with sources",
+            "id": "opens-check",
+            "name": "Opens and engaged-reader check",
             "format": "markdown",
-            "path": "evidence/BENCHMARKS.md"
+            "path": "integrity/OPENS-CHECK.md"
           }
         ],
         "checks": [
           {
-            "id": "dated",
-            "name": "Every figure has a link, a date and who published it",
+            "id": "split",
+            "name": "Readers are split into clicked in last 90 days, opened but no click, and no activity, with counts that add to the list total",
             "required": true
           },
           {
-            "id": "vendor",
-            "name": "Vendor figures are marked as vendor claims and shown as ranges",
-            "required": true
-          },
-          {
-            "id": "niche",
-            "name": "Figures say if they are for finance or professional newsletters or general",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-market"
-        ],
-        "uses": [
-          "market-and-price-picker",
-          "revenue-model-picker"
-        ]
-      },
-      {
-        "id": "integrity-numbers",
-        "kind": "integrity",
-        "name": "Check the numbers a sponsor would see",
-        "goal": "Check that opens, clicks and list size can be defended: compare the 52% open rate with clicks, and flag inactive or duplicate subscribers.",
-        "owner": {
-          "role": "check-a-spreadsheet-before-sharing-the-results"
-        },
-        "data": [
-          "list-export",
-          "issue-stats"
-        ],
-        "depends_on": [
-          "evidence-list"
-        ],
-        "outputs": [
-          {
-            "id": "numbers-check",
-            "name": "Numbers check",
-            "format": "markdown",
-            "path": "integrity/NUMBERS-CHECK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "reported",
-            "name": "The reported 52% open rate is recomputed from the issue export and compared",
-            "required": true
-          },
-          {
-            "id": "clicks",
-            "name": "Unique click rate is shown next to open rate, with a note that opens can include machine opens",
-            "required": true
-          },
-          {
-            "id": "active",
-            "name": "The share of subscribers who opened or clicked in 90 days is reported",
+            "id": "base",
+            "name": "The sponsor base used later is stated as clicks or engaged readers, not raw opens",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and which numbers may go in a media kit",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for revenue maths",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-numbers"
+          "s-opens"
         ],
         "uses": [
-          "spreadsheet-checker"
+          "sunset-flow-and-list-cleaner",
+          "email-sequence-auditor"
         ]
       },
       {
-        "id": "diagnosis",
+        "id": "revenue-diagnosis",
         "kind": "diagnosis",
-        "name": "Find which streams fit this audience",
-        "goal": "Test the hypotheses against the data: which topics and links readers act on, whether sponsor, affiliate or paid fits, and what each could earn.",
+        "name": "What can this audience earn?",
+        "goal": "Work out revenue for sponsors, a premium tier and both, from engaged readers, with low, middle and high assumptions labelled, and test the hypotheses. State the gap to $3,000 for each path.",
         "owner": {
-          "role": "marketing-email-strategist"
+          "role": "new-business-growth-needs"
         },
+        "support": [
+          "turn-a-raw-dataset-into-a-checked-brief-of-top-insights"
+        ],
         "data": [
-          "list-export",
-          "issue-stats",
-          "market-benchmarks"
+          "post-stats",
+          "subscriber-list"
         ],
         "depends_on": [
-          "evidence-list",
-          "evidence-market",
-          "integrity-numbers"
+          "evidence",
+          "integrity-opens"
         ],
         "outputs": [
           {
-            "id": "fit",
-            "name": "Revenue fit findings",
+            "id": "diagnosis",
+            "name": "Revenue diagnosis",
             "format": "markdown",
-            "path": "diagnosis/FIT.md"
+            "path": "diagnosis/DIAGNOSIS.md"
           },
           {
             "id": "hypotheses",
@@ -617,99 +608,92 @@
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the figure behind it",
             "required": true
           },
-          {
-            "id": "rule",
-            "name": "Each stream is tested against the owner's no-products-I-would-not-use rule",
-            "required": true
-          },
-          {
-            "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-fit"
-        ],
-        "uses": [
-          "revenue-model-picker"
-        ]
-      },
-      {
-        "id": "options",
-        "kind": "options",
-        "name": "Model revenue and rank the options",
-        "goal": "Build a revenue model by stream with ranges and stated assumptions, show which mixes reach $3,000 a month and which do not, and rank the options.",
-        "owner": {
-          "role": "market-and-price-picker"
-        },
-        "depends_on": [
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "model",
-            "name": "Revenue model",
-            "format": "markdown",
-            "path": "options/REVENUE-MODEL.md"
-          },
-          {
-            "id": "recommendations-json",
-            "name": "Ranked options as data",
-            "format": "json",
-            "path": "options/recommendations.json"
-          }
-        ],
-        "checks": [
           {
             "id": "assumptions",
-            "name": "Every number in the model is labelled reported, sourced or assumed, with its range",
+            "name": "Every rate, price and conversion figure is labelled as an assumption with its source, or as owner-reported",
             "required": true
           },
           {
             "id": "gap",
-            "name": "States plainly whether $3,000 a month is reachable in six months and what would have to be true",
+            "name": "Each path shows monthly revenue at low, middle and high assumptions beside $3,000",
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every option has expected revenue, effort, confidence, risk to reader trust and how it will be measured",
-            "required": true
-          },
-          {
-            "id": "unknown",
-            "name": "Willingness to pay is left as unknown until readers are asked",
+            "id": "alternatives",
+            "name": "The main finding names a competing explanation",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-model"
+          "s-maths"
         ],
         "uses": [
-          "revenue-model-picker",
-          "membership-plan-pricer"
+          "break-even-ad-target-finder",
+          "hungry-audience-ranker"
+        ]
+      },
+      {
+        "id": "revenue-options",
+        "kind": "options",
+        "name": "Rank the income paths",
+        "goal": "Rank mixes of income paths to test: sponsor slots, a premium tier, both, and referral links for products the owner uses, each with revenue range, effort, trust risk and how it will be measured.",
+        "owner": {
+          "role": "new-business-growth-needs"
+        },
+        "depends_on": [
+          "revenue-diagnosis"
+        ],
+        "outputs": [
+          {
+            "id": "options",
+            "name": "Ranked options",
+            "format": "markdown",
+            "path": "options/OPTIONS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "finding",
+            "name": "Every option cites the diagnosis finding it rests on",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every option states revenue range, effort, confidence, trust risk and measure",
+            "required": true
+          },
+          {
+            "id": "rules",
+            "name": "No option conflicts with the owner's product and disclosure rules",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "membership-plan-pricer",
+          "three-tier-price-ladder-drafter"
         ]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "Owner chooses",
-        "goal": "The owner picks which streams to try and in what order. Ask why when a top option is passed over, and record it.",
+        "name": "Owner chooses the paths and rules",
+        "goal": "The owner picks which paths to test, the sponsor categories allowed and refused, the maximum ads per issue, the disclosure wording, and the go, adjust or stop rule for the reader test. Ask why when the top option is passed over.",
         "owner": {
-          "role": "market-and-price-picker"
+          "role": "new-business-growth-needs"
         },
         "depends_on": [
-          "options"
+          "revenue-options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen plan",
+            "name": "Chosen paths and rules",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -717,12 +701,17 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over options and the reasons are recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
             "required": true
           },
           {
-            "id": "scope",
-            "name": "Only chosen streams go into production",
+            "id": "rules",
+            "name": "The product rule, disclosure wording and ads-per-issue limit are written",
+            "required": true
+          },
+          {
+            "id": "stop",
+            "name": "The go, adjust or stop rule has numbers and is written before the test",
             "required": true
           }
         ],
@@ -731,265 +720,253 @@
         "uses": []
       },
       {
-        "id": "sponsor-kit",
+        "id": "revenue-kit",
         "kind": "production",
-        "name": "Write sponsor rules, disclosure wording and the media kit",
-        "goal": "Write the owner's written test for acceptable sponsors and products and the exact disclosure wording and placement, then use them to build a one-page media kit from checked numbers, a short list of fitting sponsors and outreach drafts. Nothing is sent. The owner reviews the rules, the kit and the drafts together.",
+        "name": "Prepare the survey, offer and sponsor kit",
+        "goal": "Make the pieces for the chosen paths: the reader survey and founding-member waitlist, the premium offer (free versus paid split, price, launch date, teaser), and the sponsor kit with audience facts, sponsor rules, disclosure label and pitch drafts. Check every claim and label before the owner sees them.",
         "owner": {
-          "role": "write-a-short-pitch-and-fix-it-after-every-no"
+          "role": "set-your-price-from-what-buyers-say-then-test-it-safely"
         },
+        "support": [
+          "build-a-prospect-list-rank-it-and-send-first-messages",
+          "weekly-newsletter-keeper"
+        ],
+        "reviewers": [
+          "support-legal-compliance-checker"
+        ],
         "depends_on": [
           "decision",
-          "integrity-numbers"
+          "integrity-opens"
         ],
         "outputs": [
           {
-            "id": "media-kit",
-            "name": "Media kit and outreach drafts",
+            "id": "survey",
+            "name": "Reader survey and waitlist copy",
             "format": "markdown",
-            "path": "production/MEDIA-KIT-AND-OUTREACH.md"
+            "path": "production/SURVEY.md"
           },
           {
-            "id": "rules",
-            "name": "Sponsor rules and disclosure standard",
+            "id": "premium",
+            "name": "Premium offer and teaser",
             "format": "markdown",
-            "path": "production/SPONSOR-RULES.md"
+            "path": "production/PREMIUM-OFFER.md"
+          },
+          {
+            "id": "sponsor-kit",
+            "name": "Sponsor kit and pitch drafts",
+            "format": "markdown",
+            "path": "production/SPONSOR-KIT.md"
           }
         ],
         "checks": [
           {
-            "id": "numbers",
-            "name": "Every figure in the kit comes from the numbers check, with its date",
+            "id": "survey-check",
+            "name": "The survey passes the survey reviewer: each question maps to a decision and none leads the answer",
             "required": true
           },
           {
-            "id": "fit",
-            "name": "Each sponsor candidate passes the written sponsor rules, with the reason",
+            "id": "audience-facts",
+            "name": "Every audience figure in the sponsor kit comes from the checked export; opens are not quoted as reach",
             "required": true
           },
           {
-            "id": "terms",
-            "name": "States what a sponsor gets, the slot, the label, and that the owner can decline any ad",
+            "id": "disclosure",
+            "name": "Every sponsor placement carries the chosen disclosure label next to the ad",
             "required": true
           },
           {
-            "id": "unsent",
-            "name": "All outreach is a draft for the owner to send",
-            "required": true
-          },
-          {
-            "id": "test",
-            "name": "The no-products-I-would-not-use rule is written as questions a sponsor can be checked against",
-            "required": true
-          },
-          {
-            "id": "placement",
-            "name": "Disclosure sits next to the sponsored item, in plain words such as sponsored or ad, not only at the end",
-            "required": true
-          },
-          {
-            "id": "sample",
-            "name": "Includes a worked example of a labelled sponsor slot and an affiliate line",
-            "required": true
-          },
-          {
-            "id": "lawyer",
-            "name": "Notes which points a qualified adviser should confirm for the readers' country",
+            "id": "claims",
+            "name": "No copy gives personal financial advice, promises returns or savings, or hides a sponsor link",
             "required": true
           }
         ],
         "gate": "review",
         "from_steps": [
-          "s-pitch",
-          "s-rules"
-        ],
-        "support": [
-          "marketing-email-strategist"
+          "s-rules",
+          "s-build"
         ],
         "uses": [
-          "write-a-short-pitch-and-fix-it-after-every-no",
-          "marketing-claims-checker"
-        ],
-        "optional_when": "No sponsor stream was chosen."
+          "willingness-to-pay-survey",
+          "willingness-to-pay-pricing",
+          "check-a-marketing-survey-before-sending-it",
+          "build-a-prospect-list-rank-it-and-send-first-messages",
+          "cold-outreach-batch-runner",
+          "weekly-newsletter-keeper",
+          "email-send-readiness-scorer"
+        ]
       },
       {
-        "id": "premium",
-        "kind": "production",
-        "name": "Draft the reader survey and premium offer",
-        "goal": "Write a short reader survey on willingness to pay and wanted topics, a price proposal with a distinct paid product, and the launch and welcome emails to use if readers say yes.",
-        "owner": {
-          "role": "set-your-price-from-what-buyers-say-then-test-it-safely"
-        },
-        "depends_on": [
-          "decision",
-          "integrity-numbers"
-        ],
-        "outputs": [
-          {
-            "id": "premium",
-            "name": "Survey, offer and emails for review",
-            "format": "markdown",
-            "path": "production/PREMIUM-DRAFTS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "distinct",
-            "name": "Paid is a different product from the free issue, not a paywalled part of it",
-            "required": true
-          },
-          {
-            "id": "bias",
-            "name": "Survey questions do not lead readers and ask what they would pay, not only whether",
-            "required": true
-          },
-          {
-            "id": "assumptions",
-            "name": "Price and conversion assumptions are shown as ranges and linked to the sources",
-            "required": true
-          },
-          {
-            "id": "honest",
-            "name": "No false scarcity and no claim about outcomes for readers' money",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-paid"
-        ],
-        "reviewers": [
-          "weekly-newsletter-keeper"
-        ],
-        "uses": [
-          "set-your-price-from-what-buyers-say-then-test-it-safely",
-          "membership-plan-pricer",
-          "email-test-planner"
-        ],
-        "optional_when": "A premium tier was not chosen."
-      },
-      {
-        "id": "launch",
+        "id": "demand-tests",
         "kind": "execution",
-        "name": "Go live one approved action at a time",
-        "goal": "Register what each action should earn, then with the owner's approval send the survey, place a labelled sponsor slot or set up the paid tier, and read each back.",
+        "name": "Run the reader test and sponsor outreach",
+        "goal": "Register the test and its rule, then send the reader survey and founding-member waitlist and the sponsor pitches, one approved action at a time.",
         "owner": {
-          "role": "marketing-email-strategist"
+          "role": "pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days"
         },
         "needs": [
-          "beehiiv-write"
+          "beehiiv-live",
+          "sponsor-mail",
+          "sheet"
         ],
         "depends_on": [
-          "sponsor-kit",
-          "premium"
+          "revenue-kit"
         ],
         "outputs": [
           {
             "id": "receipt",
-            "name": "Action receipt",
+            "name": "Test receipt",
             "format": "markdown",
-            "path": "execution/ACTION-RECEIPT.md"
+            "path": "execution/TEST-RECEIPT.md"
+          },
+          {
+            "id": "responses",
+            "name": "Responses and sponsor replies",
+            "format": "csv",
+            "path": "execution/responses.csv"
           }
         ],
         "checks": [
           {
             "id": "registered",
-            "name": "Each action has its expected result written down before it goes live",
+            "name": "The test rule and baseline are in experiments.jsonl before the first send",
             "required": true
           },
           {
-            "id": "label",
-            "name": "Every sponsored item shows the agreed label next to it in the sent or scheduled issue",
+            "id": "sample",
+            "name": "The survey goes to a random half of engaged readers and the rest are a comparison, or the unrandomised limit is stated",
             "required": true
           },
           {
-            "id": "rule",
-            "name": "Each sponsor was checked against the owner's written rule before placement",
-            "required": true
-          },
-          {
-            "id": "readback",
-            "name": "What is scheduled or live in Beehiiv matches what the owner approved",
+            "id": "sponsor-fit",
+            "name": "Each pitch goes only to a sponsor the owner has approved for fit with the product rule",
             "required": true
           }
         ],
         "gate": "approve_each_action",
         "from_steps": [
-          "s-launch"
+          "s-test"
         ],
         "uses": [
-          "email-cadence-planner"
+          "check-a-marketing-survey-before-sending-it",
+          "two-day-paid-ask-planner"
         ]
       },
       {
-        "id": "measurement",
+        "id": "launch-revenue",
+        "kind": "execution",
+        "name": "Open the income paths that passed",
+        "goal": "Read the test against the signed rule, then open only the paths that passed: sponsor slots in an issue with the disclosure label, and the Premium tier on Beehiiv with its teaser and launch date. Each action waits for the owner's yes.",
+        "owner": {
+          "role": "weekly-newsletter-keeper"
+        },
+        "data": [
+          "survey-results"
+        ],
+        "needs": [
+          "beehiiv-live"
+        ],
+        "depends_on": [
+          "demand-tests"
+        ],
+        "outputs": [
+          {
+            "id": "launch-receipt",
+            "name": "Go-live receipt",
+            "format": "markdown",
+            "path": "execution/GO-LIVE-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "rule",
+            "name": "Only paths that met the signed rule are opened; the figures are shown",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "Each sponsor placement and the Premium page are read back from Beehiiv and match the approved copy and disclosure",
+            "required": true
+          },
+          {
+            "id": "limit",
+            "name": "No issue carries more ads than the limit set at the decision",
+            "required": true
+          },
+          {
+            "id": "steps",
+            "name": "Sponsors and Premium open in separate weeks so each can be read",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "optional_when": "No path met the signed rule; then a revised plan is submitted instead.",
+        "from_steps": [
+          "s-launch"
+        ],
+        "uses": [
+          "prepare-a-useful-customer-newsletter-issue",
+          "email-send-readiness-scorer"
+        ]
+      },
+      {
+        "id": "readout",
         "kind": "measurement",
-        "name": "Read the money and the guardrails",
-        "goal": "Each month, enter revenue by stream in the sheet and read it against $3,000, the survey answers and the reader-trust guardrails.",
+        "name": "Read revenue and trust",
+        "goal": "Each month read revenue by path from payment records and put unsubscribes and clicks per send beside it, against $3,000 and the guardrails.",
         "owner": {
           "role": "experiment-readout-desk"
         },
         "data": [
-          "reader-poll"
-        ],
-        "needs": [
-          "beehiiv-read",
-          "sheet-write"
+          "payments",
+          "post-stats",
+          "survey-results"
         ],
         "depends_on": [
-          "launch"
+          "launch-revenue"
         ],
         "outputs": [
           {
             "id": "readout",
-            "name": "Monthly readout",
+            "name": "Monthly revenue and trust readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
           }
         ],
         "checks": [
           {
-            "id": "revenue",
-            "name": "Revenue is by stream and matches payout or invoice records, not estimates",
+            "id": "source",
+            "name": "Revenue comes from payment records; owner-reported amounts are labelled",
             "required": true
           },
           {
             "id": "guardrails",
-            "name": "Open rate, click rate and unsubscribes are compared with the earlier baseline",
+            "name": "Unsubscribe rate and click rate per send are compared with the pre-monetisation weeks",
             "required": true
           },
           {
             "id": "volume",
-            "name": "A paid-tier verdict is given only with enough survey answers or sign-ups; otherwise INCONCLUSIVE",
-            "required": true
-          },
-          {
-            "id": "gap",
-            "name": "The gap to $3,000 is shown each month",
+            "name": "A path is called working or not only after at least 4 sends or 4 weeks; before that INCONCLUSIVE",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-launch"
-        ],
-        "support": [
-          "weekly-saas-numbers-keeper"
+          "s-read"
         ],
         "uses": [
-          "agency-project-management-experiment-tracker"
+          "ad-results-report-writer"
         ]
       },
       {
         "id": "learning",
         "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "Close each test, record what earned and what cost trust, propose rules with their scope, and plan the next round.",
+        "name": "Keep what worked and plan the next round",
+        "goal": "Close the experiment, save rules with their scope, and propose the next round or a revised plan toward $3,000.",
         "owner": {
           "role": "experiment-readout-desk"
         },
         "depends_on": [
-          "measurement"
+          "readout"
         ],
         "outputs": [
           {
@@ -1002,66 +979,82 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every action is closed with a verdict",
+            "name": "The experiment is closed in experiments.jsonl with a verdict",
             "required": true
           },
           {
-            "id": "scoped",
-            "name": "Each rule says if it holds for this sponsor, this newsletter or all newsletters",
+            "id": "scope",
+            "name": "Each saved rule says whether it applies to this newsletter or to any newsletter",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "The remaining gap to $3,000 is stated with the next step",
             "required": true
           }
         ],
-        "gate": "review",
-        "from_steps": [],
+        "gate": "none",
+        "from_steps": [
+          "s-read"
+        ],
         "uses": []
       }
     ],
     "hypotheses": [
       {
-        "id": "h-open",
-        "statement": "The 52% open rate overstates real engagement, so sponsors will see weaker clicks than expected.",
-        "test": "Compare unique opens, unique clicks and 90-day activity from the export.",
-        "confirm_if": "Click rate is low next to the open rate and many subscribers have no clicks in 90 days.",
-        "refute_if": "Click rate and recent activity are strong.",
-        "fix_stage": "sponsor-kit"
+        "id": "h-opens-inflated",
+        "statement": "A large part of the 52% open rate is machine opens, so real reach is lower than it looks.",
+        "test": "Compare opens with unique clicks and with the share of readers who clicked in the last 90 days.",
+        "confirm_if": "Fewer than half of the readers counted as openers have clicked anything in the last 90 days.",
+        "refute_if": "Most openers have clicked at least once in 90 days and click-to-open is steady across issues.",
+        "fix_stage": "revenue-kit"
       },
       {
-        "id": "h-sponsor",
-        "statement": "Sponsors alone can cover most of $3,000 a month at this list size.",
-        "test": "Price one slot two ways from dated sources, then multiply by issues a month: per 1,000 subscribers (the Paved finance figure of about $7 gives roughly $58 for 8,100 readers) and per 1,000 opens at vendor CPM ranges of $25 to $150 (about 4,200 opens, roughly $105 to $630 an issue).",
-        "confirm_if": "A realistic rate times four to five issues, with more than one slot an issue, reaches most of $3,000.",
-        "refute_if": "Even the high end of sourced rates with one slot an issue falls well short.",
-        "fix_stage": "sponsor-kit"
+        "id": "h-sponsor-short",
+        "statement": "Sponsor slots alone cannot reach $3,000 a month with this audience.",
+        "test": "Engaged readers times assumed CPM or CPC times allowed ads times sends per month, at low, middle and high assumptions.",
+        "confirm_if": "At the middle assumption sponsor income is under $1,500 a month (half the goal).",
+        "refute_if": "At the low assumption sponsor income is already $3,000 or more.",
+        "fix_stage": "launch-revenue"
       },
       {
-        "id": "h-paid",
-        "statement": "A paid tier can contribute meaningfully: at the platform median of 0.62% conversion and $10 a month, 8,100 readers is roughly 50 payers and about $500 a month; 2 to 5% would be roughly $1,600 to $4,000.",
-        "test": "Run the reader survey, then compare answers with the sourced conversion range.",
-        "confirm_if": "Enough readers say they would pay and name a price near $10 or more.",
-        "refute_if": "Few say they would pay or the price they name is far below $10.",
-        "fix_stage": "premium"
+        "id": "h-premium-demand",
+        "statement": "Enough readers would pay for a premium tier to matter.",
+        "test": "Reader survey and a founding-member waitlist at a stated price, sent to a random half of engaged readers.",
+        "confirm_if": "At least 3% of the engaged readers who received the offer join the founding-member waitlist at the stated price, and at least 300 survey responses are in.",
+        "refute_if": "Under 1% join the waitlist, or most respondents say they would not pay.",
+        "fix_stage": "launch-revenue"
       },
       {
-        "id": "h-fit",
-        "statement": "Some common stream, such as affiliate links for financial products, conflicts with the owner's rule and would cost reader trust.",
-        "test": "Check each candidate stream and sponsor against the written rule.",
-        "confirm_if": "Most candidates in the stream fail the rule.",
-        "refute_if": "Enough candidates pass the rule.",
-        "fix_stage": "sponsor-kit"
+        "id": "h-sponsor-fit",
+        "statement": "Few sponsors that fit nurses and meet the owner's product rule are interested.",
+        "test": "Count approved-fit sponsors pitched, replies and offers received in the test window.",
+        "confirm_if": "Fewer than 3 fit sponsors reply with an offer after 15 pitches.",
+        "refute_if": "At least 3 fit sponsors make an offer, or the ad network offers at least 3 acceptable campaigns.",
+        "fix_stage": "revenue-kit"
       },
       {
-        "id": "h-topic",
-        "statement": "A few topics or links get most clicks, so sponsors in those spots would convert better.",
-        "test": "Clicks by topic and link in the issue export.",
-        "confirm_if": "Clicks concentrate on a few topics.",
-        "refute_if": "Clicks are spread evenly.",
-        "fix_stage": "sponsor-kit"
+        "id": "h-trust-cost",
+        "statement": "Adding ads or a paywall pushes unsubscribes up or clicks down.",
+        "test": "Unsubscribes and unique clicks per send for issues with a sponsor or paywall break against the weeks before.",
+        "confirm_if": "Unsubscribe rate rises by 25% or more or clicks fall by 15% or more on issues with ads.",
+        "refute_if": "Both stay within those bounds across at least 4 issues.",
+        "fix_stage": "launch-revenue"
+      },
+      {
+        "id": "h-free-value",
+        "statement": "Readers value the free issues too much to see paid extras as worth it, so the paid split is wrong.",
+        "test": "Survey ranking of extras (templates, tools, Q&A, archive) against the existing free content.",
+        "confirm_if": "No extra is ranked a top-two choice by at least 20% of respondents.",
+        "refute_if": "At least one extra is ranked top-two by 20% or more.",
+        "fix_stage": "revenue-kit"
       }
     ],
+    "dropped": [],
     "measurement": {
-      "window": "Read revenue monthly for six months; read each sponsor slot after its issue has had a full week of clicks; read the survey after enough answers have arrived.",
-      "min_volume": "No paid-tier decision from fewer survey answers than the survey plan sets; sponsor results are judged over at least three issues, not one.",
-      "stop_rule": "Stop a sponsor or stream at once if it fails the owner's rule, if disclosure is missing, or if unsubscribes or complaints rise above the earlier baseline; otherwise finish the window."
+      "window": "Reader test about 2 weeks; then monthly for the remaining months, with each path read after at least 4 sends or 4 weeks and compared with the 8 weeks before monetisation.",
+      "min_volume": "At least 300 survey responses before a premium verdict; at least 4 sends per sponsor slot before a sponsor verdict; below that the verdict is INCONCLUSIVE.",
+      "stop_rule": "Pause ads or the paywall break if unsubscribe rate rises 25% or more over the baseline for two issues in a row, or if the owner rejects a sponsor; otherwise run the full window."
     }
   }
 }

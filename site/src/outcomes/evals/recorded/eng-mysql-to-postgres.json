@@ -1,42 +1,56 @@
 {
   "case": "eng-mysql-to-postgres",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "The Rails app runs on managed Postgres (AWS RDS) instead of the self-hosted MySQL 5.7 server, with no data loss and a cutover short enough (5 minutes or less) that no customer notice is needed.",
-    "deliverable": "A tested migration: converted schema, the stored procedures that are still used rewritten, app changes, rehearsed and then run in production with the engineering manager approving each production step, and a rollback path kept until the move is proven.",
+    "outcome": "Move the Rails app's 380 GB, roughly 140-table MySQL 5.7 database to managed AWS RDS Postgres within three months with no data loss, and with customer-visible downtime at cutover of no more than 5 minutes (the point where a customer notice is needed), aiming for none.",
+    "ambition": {
+      "goal_beyond": "The app runs on managed Postgres with confidence, the old MySQL server can be switched off safely, and the team is not left with a migration that only looks finished.",
+      "rungs": [
+        "Copy the data to RDS Postgres and switch the app over",
+        "Prove parity before the switch (data, behaviour and speed), rehearse the cutover and the way back, then cut over inside the downtime limit",
+        "Keep it true without being asked: keep a way back for a set period, run a standing reconciliation after cutover, and decommission the old server only when it keeps passing"
+      ],
+      "chosen": 2,
+      "judge": "AWS DMS data validation and an independent row count and checksum comparison of source and target, the app's own test suite run against Postgres, and load balancer or app logs for the real downtime, none of them our own say-so"
+    },
+    "deliverable": "The app running on RDS Postgres in production, with a converted schema, the used stored procedures rewritten, a rehearsed and timed cutover runbook with a rollback, a parity readout, and a decommission proposal for the old server.",
     "done": [
-      "Every table, type and stored procedure is inventoried, and which procedures are still used is established from evidence",
-      "The engineering manager has chosen the migration approach",
-      "Schema, procedures and app changes are built and pass tests on Postgres",
-      "Full rehearsals show data matches the source and the cutover fits in 5 minutes",
-      "Production data is synced and validated, and cutover is approved step by step",
-      "After cutover no rows are missing and the app runs on Postgres",
-      "MySQL is kept as a rollback path until the engineering manager approves retiring it"
+      "Source database inventoried and checked as migratable, with the blockers listed",
+      "Every migration risk hypothesis marked supported, refuted or unknown with queries or code references behind it",
+      "Engineering manager chose the approach, cutover window and customer-notice rule",
+      "Schema, used stored procedures and Rails changes ready and tested on Postgres",
+      "A full rehearsal on a copy done, with measured cutover time and a tested rollback",
+      "Production cutover done with approval at each step, within 5 minutes of customer-visible downtime",
+      "Row counts and checksums match on every table after cutover, with no data lost",
+      "Decommission and learning rules proposed for the engineering manager to accept or reject"
     ],
     "metric": {
-      "name": "Customer-facing downtime at cutover",
+      "name": "Customer-visible downtime at cutover",
       "direction": "decrease",
       "unit": "minutes",
       "baseline": null,
       "baseline_source": "unknown",
       "target": 5
     },
-    "deadline": "Within three months of plan approval",
+    "deadline": "Three months from plan approval",
     "guardrails": [
-      "No data loss",
-      "Downtime stays at or under 5 minutes, because more needs a customer notice",
-      "The app keeps serving customers around the clock"
+      "No data loss: every table's row count and checksum match between source and target before the old server is retired",
+      "Customer-visible downtime stays at or below 5 minutes, so no customer notice is needed",
+      "App error rate and request speed after cutover stay at or better than the week before (baselines to be recorded)",
+      "A tested way back to MySQL exists until the engineering manager retires it",
+      "Anything in production waits for the engineering manager's approval of that action"
     ],
     "limits": [
-      "Anything in AWS production needs the engineering manager's approval",
-      "Target is AWS RDS for Postgres",
-      "GitHub access is read-only"
+      "AWS access through the console and CLI; every production action needs the owner's approval",
+      "GitHub is read-only; code changes are handed over as patches for the team to commit",
+      "The app serves customers around the clock, so no planned outage beyond the 5-minute limit"
     ],
     "assets": [
-      "The Rails app repository (read access)",
-      "The self-hosted MySQL 5.7 server: 380 GB, about 140 tables, with MySQL-specific types and stored procedures"
+      "The Rails app repository (GitHub, read)",
+      "The MySQL 5.7 server (380 GB, about 140 tables, stored procedures)",
+      "AWS account for RDS Postgres"
     ],
     "connections": [
       {
@@ -48,88 +62,118 @@
         "name": "GitHub",
         "access": "read",
         "status": "connected"
+      },
+      {
+        "name": "MySQL 5.7 server (read-only queries)",
+        "access": "read",
+        "status": "missing"
       }
     ],
-    "data_home": "Not stated. Proposed: working files in this project folder, because GitHub is read-only",
+    "data_home": "A folder of files in this project (the owner did not choose, so we chose)",
+    "technical_level": "Not stated by the owner. Hand over ready runbooks, scripts and patches with plain notes for the engineering manager.",
     "decides": "The engineering manager",
     "unknowns": [
-      "Which stored procedures are still used",
-      "Which tables use MySQL-specific types, and which types",
-      "Rails version, how much raw SQL the app contains, and test coverage of database behaviour",
-      "Whether MySQL binary logging is on, in row format and kept long enough",
-      "Write rate and peak traffic, which decide whether a 5-minute cutover is achievable",
-      "Where the working data should be kept, and how hands-on the engineering manager wants to be"
+      "Which stored procedures are still used (the owner's stated unknown)",
+      "Which tables use MySQL-specific types, and whether zero dates or invalid values exist",
+      "Whether binary logging is on, in ROW format, and how long logs are kept on the MySQL server",
+      "Which tables have no primary key",
+      "Peak write rate and the largest transaction",
+      "Rails version, and whether the app uses raw MySQL SQL",
+      "Network path between the MySQL server and AWS, and its bandwidth",
+      "Other systems that read the MySQL database (reports, BI, other apps)",
+      "Target RDS Postgres version, size and region",
+      "Whether a staging environment and a recent backup exist for rehearsal"
     ],
     "answers": [
       {
         "question": "What is the system?",
-        "answer": "Ten-year-old Rails app on a self-hosted MySQL 5.7 server, 380 GB, about 140 tables."
+        "answer": "Ten-year-old Rails app on a self-hosted MySQL 5.7 server, 380 GB, about 140 tables"
       },
       {
-        "question": "Where to, and how much downtime is acceptable?",
-        "answer": "AWS RDS Postgres. The app serves customers around the clock; downtime above 5 minutes needs a customer notice."
+        "question": "Where to?",
+        "answer": "AWS RDS Postgres, managed"
+      },
+      {
+        "question": "What are the downtime rules?",
+        "answer": "The app serves customers around the clock; downtime above 5 minutes needs a customer notice"
       },
       {
         "question": "What is hard about it?",
-        "answer": "Some tables use MySQL-specific types and there are stored procedures."
+        "answer": "Some tables use MySQL-specific types and there are stored procedures"
       },
       {
-        "question": "What can your AI reach?",
-        "answer": "AWS through the console and CLI, with the owner's approval for anything in production. GitHub read access."
+        "question": "What access do we have?",
+        "answer": "AWS console and CLI with the owner's approval for anything in production; GitHub read access"
       },
       {
-        "question": "By when, and what must not happen?",
-        "answer": "Within three months, with no data loss."
+        "question": "What counts as done, by when?",
+        "answer": "Done within three months with no data loss"
       },
       {
-        "question": "Who decides, and what is unknown?",
-        "answer": "The engineering manager decides. Unknown: which stored procedures are still used."
+        "question": "Who decides?",
+        "answer": "The engineering manager"
+      },
+      {
+        "question": "What is unknown?",
+        "answer": "Which stored procedures are still used"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat a MySQL to Postgres move as three separate problems done in order: convert the schema and code, copy the data, and switch over. They inventory the database first (types, routines, collation, size, write rate), convert the schema with a tool and fix what it flags, and rewrite only the procedures that are still used. They rehearse on a production-sized copy: full load, then change data capture from the MySQL binary log so the source stays live, with the tool's validation turned on and extra row-level checks of their own. Cutover is a short scripted sequence (let lag reach zero, stop writes, final validation, switch the app, watch), with the source kept for rollback. The usual surprises are types and zero dates, sequences and auto-increment values, constraints and indexes the data tool does not carry, case-insensitive collation behaviour, and queries that run differently on Postgres.",
+    "approach": "Practitioners separate a heterogeneous database move into three jobs that run in parallel: converting the schema and code (types, collations, stored procedures, SQL dialect), moving the data with a full load plus continuous change capture so the source stays live, and proving parity. The cutover is then a short, rehearsed event: let replication catch up, pause writes, check that nothing is pending, reset sequences, switch the app and keep a way back. They start from the raw source catalogue and logs, not a description of the schema, and they treat each unsupported feature in the tool's own limits list (primary keys, binlog format, cascade events, zero dates, 4 GB transactions) as a thing to test before choosing the approach. Stored procedures are migrated only if usage evidence shows they are still called.",
     "sources": [
       {
-        "id": "web-dms-guide",
+        "id": "web-dms-source",
         "kind": "web",
-        "title": "How to Migrate Databases to AWS with DMS (OneUptime)",
-        "ref": "https://oneuptime.com/blog/post/2026-02-12-migrate-databases-to-aws-with-dms/view",
-        "date": "2026-02-12",
-        "note": "Schema conversion tool for tables and procedures, full load plus CDC, validation, a 7-step cutover and rollback with the source kept."
-      },
-      {
-        "id": "web-mysql-pg",
-        "kind": "web",
-        "title": "How to Migrate from MySQL to PostgreSQL (BladePipe)",
-        "ref": "https://www.bladepipe.com/blog/tech_share/migrate_mysql_to_postgresql/",
-        "date": "2026-03-12",
-        "note": "Type mapping, AUTO_INCREMENT to identity and sequences, encoding, stricter SQL, rehearse in staging, verify before cutover, tune slow queries afterwards."
-      },
-      {
-        "id": "web-dms-mysql-source",
-        "kind": "web",
-        "title": "Using a MySQL-compatible database as a source for AWS DMS (AWS docs)",
+        "title": "Using a MySQL-compatible database as a source for AWS DMS (AWS DMS User Guide)",
         "ref": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html",
-        "date": "2026-11-02",
-        "note": "Vendor page with no printed date; read 2026-11-02. CDC needs binary logging in ROW format with full row image and retained logs; AUTO_INCREMENT, cascades and some indexes are not migrated."
+        "date": null,
+        "note": "CDC needs binary logging on in ROW format with full row image, log retention long enough, replication privileges; limits: ON DELETE CASCADE events not propagated, AUTO_INCREMENT not migrated, binlog transactions over 4 GB, zero dates may land as null, TIMESTAMP converted to UTC. Page shows no date; accessed 2026-11-03."
       },
       {
-        "id": "web-dms-pg-target",
+        "id": "web-dms-target",
         "kind": "web",
-        "title": "Using PostgreSQL as a target for AWS DMS (AWS docs)",
+        "title": "Using a PostgreSQL database as a target for AWS DMS (AWS DMS User Guide)",
         "ref": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.PostgreSQL.html",
-        "date": "2026-11-02",
-        "note": "Vendor page with no printed date; read 2026-11-02. Disable foreign keys during full load, reset sequences after replication stops."
+        "date": null,
+        "note": "Load tables one at a time with foreign keys relaxed (session_replication_role = replica); update sequence values after replication stops because sequences are not migrated; type mapping table. Page shows no date; accessed 2026-11-03."
       },
       {
-        "id": "cat-zero-downtime",
+        "id": "web-dms-validation",
+        "kind": "web",
+        "title": "AWS DMS data validation (AWS DMS User Guide)",
+        "ref": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Validating.html",
+        "date": null,
+        "note": "Compares each source row with its target row and reports mismatches in a control table; needs a primary key or unique index; stops after 10,000 failed records; adds load on both databases; views not validated. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-pg-wiki",
+        "kind": "web",
+        "title": "Converting from other Databases to PostgreSQL (PostgreSQL Wiki)",
+        "ref": "https://wiki.postgresql.org/wiki/Converting_from_other_Databases_to_PostgreSQL",
+        "date": "2026-10-13",
+        "note": "Directory of MySQL-to-PostgreSQL tools: pgloader for one-command schema and data migration, pg_chameleon for replication with a detachable replica for minimal downtime, and DMS-style binlog replication tools. Last edited date from the page."
+      },
+      {
+        "id": "cat-zero-down",
         "kind": "catalogue",
         "title": "System migration and rollback planner",
         "ref": "zero-downtime-migration-planner"
       },
       {
-        "id": "cat-reliability",
+        "id": "cat-oracle-pg",
+        "kind": "catalogue",
+        "title": "Oracle to PostgreSQL migration test planner",
+        "ref": "plan-oracle-to-postgres-with-proof"
+      },
+      {
+        "id": "cat-impact",
+        "kind": "catalogue",
+        "title": "SQL change impact investigator",
+        "ref": "copilot-sql-object-impact-analysis"
+      },
+      {
+        "id": "cat-dbre",
         "kind": "catalogue",
         "title": "Database recovery planner",
         "ref": "agency-engineering-database-reliability-engineer"
@@ -144,256 +188,317 @@
     "steps": [
       {
         "id": "s-inventory",
-        "name": "Inventory the database and what the app really uses",
-        "why": "Tables, types, routines, collation, size, write rate and the code that calls routines decide the work; unused procedures should not be ported.",
+        "name": "Inventory the source from its own catalogue: tables, types, keys, collations, routines, triggers, sizes",
+        "why": "Every later choice rests on what is really in the database, not on a description of it.",
         "sources": [
-          "web-dms-guide",
-          "web-mysql-pg",
+          "web-dms-source",
+          "web-pg-wiki",
           "owner"
         ]
       },
       {
+        "id": "s-code",
+        "name": "Scan the app for MySQL-specific SQL and for callers of stored procedures",
+        "why": "The dialect and the procedures are where the app breaks on Postgres; callers show which procedures are used.",
+        "sources": [
+          "cat-impact",
+          "web-pg-wiki"
+        ]
+      },
+      {
         "id": "s-ready",
-        "name": "Check the source is ready: restorable backup and change capture prerequisites",
-        "why": "No data loss starts with a backup that has been restored once; change capture needs binary logging in row format with retained logs, and turning it on may need a restart.",
+        "name": "Check the source can be migrated and record a parity baseline",
+        "why": "Missing primary keys, binlog settings, zero dates and invalid values stop replication or validation; baselines make later checks meaningful.",
         "sources": [
-          "web-dms-mysql-source",
-          "cat-reliability"
+          "web-dms-source",
+          "web-dms-validation"
         ]
       },
       {
-        "id": "s-schema",
-        "name": "Convert the schema, types and used procedures",
-        "why": "A conversion tool flags what it cannot convert; types, unsigned numbers, zero dates, enums, sequences, collation and procedures need decisions.",
+        "id": "s-risks",
+        "name": "Test the migration risks one by one",
+        "why": "Types, collations, cascades, big transactions and timezones each need a different handling.",
         "sources": [
-          "web-dms-guide",
-          "web-mysql-pg",
-          "web-dms-pg-target"
+          "web-dms-source",
+          "web-dms-target",
+          "web-pg-wiki"
         ]
       },
       {
-        "id": "s-app",
-        "name": "Port and test the application on Postgres",
-        "why": "Postgres is stricter than MySQL; raw SQL, case behaviour and ordering can change results, so the app is tested against the new database before any cutover.",
+        "id": "s-approach",
+        "name": "Choose full load plus continuous replication, or another approach, with the cutover window",
+        "why": "The downtime limit and the 380 GB size decide the approach.",
         "sources": [
-          "web-mysql-pg",
-          "web-dms-guide"
+          "web-dms-source",
+          "web-pg-wiki",
+          "cat-zero-down"
         ]
       },
       {
-        "id": "s-load-cdc",
-        "name": "Rehearse full load plus change capture on a production-sized copy",
-        "why": "Full load with the source live, then replicate changes; this shows load time, lag and failures before production is touched.",
+        "id": "s-convert",
+        "name": "Convert the schema, rewrite the procedures still used, change the app",
+        "why": "Converted objects and code must be tested on Postgres before data moves.",
         "sources": [
-          "web-dms-guide",
-          "web-dms-mysql-source",
-          "web-dms-pg-target"
+          "web-pg-wiki",
+          "web-dms-target",
+          "cat-oracle-pg",
+          "cat-impact"
         ]
       },
       {
-        "id": "s-validate",
-        "name": "Validate the data until it is clean, then compare behaviour and speed",
-        "why": "Turn on tool validation, add row counts and checksums by table, reconcile business totals, then compare slow queries with EXPLAIN.",
+        "id": "s-rehearse",
+        "name": "Rehearse on a copy: load, replicate, validate, time the cutover and the rollback",
+        "why": "Rehearsal gives the real cutover time and exposes failures where they are cheap.",
         "sources": [
-          "web-dms-guide",
-          "web-mysql-pg"
+          "web-dms-validation",
+          "web-dms-target",
+          "cat-zero-down"
         ]
       },
       {
         "id": "s-cutover",
-        "name": "Script the cutover and keep a rollback",
-        "why": "Reduce load, confirm lag zero, stop writes, final validation, switch the app, watch 24 to 48 hours, keep the source for rollback.",
+        "name": "Cut over: catch up, pause writes, verify, reset sequences, switch, keep the way back",
+        "why": "The sequence is short and ordered; sequences and cascades are the usual misses.",
         "sources": [
-          "web-dms-guide",
-          "cat-zero-downtime"
+          "web-dms-target",
+          "web-dms-source",
+          "cat-zero-down",
+          "cat-dbre"
+        ]
+      },
+      {
+        "id": "s-parity",
+        "name": "Prove parity after cutover and watch the app",
+        "why": "Validation, checksums and app metrics show no data was lost and nothing slowed.",
+        "sources": [
+          "web-dms-validation",
+          "cat-oracle-pg"
+        ]
+      },
+      {
+        "id": "s-retire",
+        "name": "Retire the old server only after a clean period",
+        "why": "Keeps a way back until parity keeps passing.",
+        "sources": [
+          "cat-zero-down",
+          "cat-dbre"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Assuming the data tool moves everything: sequences, auto-increment values, cascades, secondary indexes, foreign keys and stored procedures are handled separately.",
+        "text": "Starting replication before checking binary logging: enabling log-bin on the source needs a restart, which would itself cause downtime.",
         "sources": [
-          "web-dms-mysql-source",
-          "web-dms-pg-target",
-          "web-dms-guide"
+          "web-dms-source"
         ]
       },
       {
-        "text": "Binary logging not in row format, or logs purged too soon, which breaks or corrupts change capture.",
+        "text": "Forgetting to reset sequences after replication stops, so the first insert on Postgres collides with existing ids.",
         "sources": [
-          "web-dms-mysql-source"
+          "web-dms-target"
         ]
       },
       {
-        "text": "Zero dates (0000-00-00) and other MySQL-only values that Postgres rejects or turns to null.",
+        "text": "Relying on cascading deletes that replication does not carry, leaving orphan rows on the target.",
         "sources": [
-          "web-mysql-pg",
-          "web-dms-mysql-source"
+          "web-dms-source"
         ]
       },
       {
-        "text": "Porting every stored procedure without checking which are still used.",
+        "text": "Tables without a primary key are not validated, so a clean validation report can hide them.",
         "sources": [
-          "web-dms-guide",
-          "owner"
+          "web-dms-validation"
         ]
       },
       {
-        "text": "Leaving foreign keys active during full load so the task fails on table order.",
+        "text": "Converting every stored procedure instead of checking which are used.",
         "sources": [
-          "web-dms-pg-target"
+          "cat-impact"
         ]
       },
       {
-        "text": "Cutting over without a rehearsed rollback or a source kept alive.",
+        "text": "Zero dates, unsigned numbers and case-insensitive comparisons that load without error and behave differently.",
         "sources": [
-          "web-dms-guide"
+          "web-dms-source",
+          "web-pg-wiki"
+        ]
+      },
+      {
+        "text": "Retiring the old server before a clean period, with no way back.",
+        "sources": [
+          "cat-zero-down"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Move from MySQL 5.7 to managed Postgres without losing data or exceeding 5 minutes of downtime",
+    "name": "Move MySQL to RDS Postgres with proof and a short, rehearsed cutover",
     "capabilities": [
-      {
-        "id": "gh-read",
-        "access": "read",
-        "via": "mcp",
-        "name": "Read the Rails app code and history (GitHub, read-only)",
-        "why": "Find stored procedure calls, raw SQL and database-specific code."
-      },
       {
         "id": "mysql-read",
         "access": "read",
         "via": "owner",
-        "name": "Read-only exports from the MySQL server",
-        "why": "The owner or DBA runs read-only queries for schema, routines, settings and counters, so nothing is installed on production."
+        "name": "Run read-only inventory queries on the MySQL server (owner)",
+        "why": "Run the supplied read-only queries and share the output files; no write access is needed."
       },
       {
-        "id": "work-files",
-        "access": "draft",
-        "via": "file",
-        "name": "Write working files and patches in this project folder",
-        "why": "GitHub is read-only, so converted schema and app patches are delivered as files for the team to commit."
+        "id": "gh-read",
+        "access": "read",
+        "via": "mcp",
+        "name": "Read the Rails repository (GitHub)",
+        "why": "Scan SQL, models, migrations and procedure callers."
       },
       {
-        "id": "aws-rehearse",
-        "access": "live",
+        "id": "aws-read",
+        "access": "read",
         "via": "browser",
-        "name": "Create and run the rehearsal copy in a non-production AWS area (console and CLI)",
-        "why": "Rehearsals need a target Postgres and a replication task; each action still gets the owner's yes."
+        "name": "Read RDS, DMS and network settings (AWS console)",
+        "why": "Check the target and replication setup."
+      },
+      {
+        "id": "aws-nonprod",
+        "access": "live",
+        "via": "owner",
+        "name": "Create and change rehearsal resources in AWS (owner approves)",
+        "why": "Rehearsal RDS, DMS and test environment; costs money so each action is approved."
       },
       {
         "id": "aws-prod",
         "access": "live",
-        "via": "browser",
-        "name": "Create the production RDS target and run the production sync and cutover (console and CLI)",
-        "why": "The owner approves every production action."
-      },
-      {
-        "id": "app-deploy",
-        "access": "live",
         "via": "owner",
-        "name": "Deploy the app change that points it at Postgres (the team deploys)",
-        "why": "Only the team deploys the app; the engineering manager approves."
+        "name": "Production RDS, DMS and app configuration changes (engineering manager approves)",
+        "why": "Every production action waits for the engineering manager."
       }
     ],
     "data": [
       {
-        "id": "mysql-inventory",
-        "name": "MySQL schema, types, routines and settings",
-        "why": "The base for conversion and risk.",
+        "id": "source-catalogue",
+        "name": "MySQL catalogue and sizes",
+        "why": "The raw material: what is really in the database.",
         "fields": [
           "table",
-          "column and type",
-          "unsigned, enum, set, zero-date use",
-          "indexes and keys",
-          "stored procedures, triggers, views",
-          "character set and collation",
-          "row counts and sizes",
-          "binary log settings"
+          "column",
+          "type",
+          "nullability",
+          "default",
+          "collation",
+          "index",
+          "primary key",
+          "foreign key and cascade rule",
+          "trigger",
+          "view",
+          "routine",
+          "row count",
+          "data size"
         ],
         "routes": [
           {
             "kind": "ASK",
-            "how": "The owner or DBA runs read-only information_schema queries, SHOW CREATE for each routine, and SHOW VARIABLES for binary logging; results are saved as files."
+            "how": "Owner runs the supplied read-only queries against information_schema and saves the output files."
           }
         ],
         "required_for": [
-          "evidence",
-          "integrity-readiness",
-          "diagnosis-compat"
+          "evidence-schema",
+          "integrity-source",
+          "diagnosis"
         ],
-        "alternative": "A schema-only dump (mysqldump --no-data) gives types and routines, but not row counts or settings."
+        "alternative": "If only a schema dump is available, sizes, row counts and usage stay unknown."
+      },
+      {
+        "id": "source-config",
+        "name": "MySQL server settings",
+        "why": "Binary logging, format, retention, version, character set, time zone.",
+        "fields": [
+          "log_bin",
+          "binlog_format",
+          "binlog_row_image",
+          "binlog retention",
+          "server_id",
+          "character_set_server",
+          "time_zone",
+          "max_allowed_packet"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Owner runs SHOW VARIABLES and shares the output."
+          }
+        ],
+        "required_for": [
+          "integrity-source",
+          "diagnosis"
+        ]
       },
       {
         "id": "routine-usage",
-        "name": "Which stored procedures are called",
-        "why": "Decides which procedures to port and which to retire; this is the main unknown.",
+        "name": "Stored procedure usage",
+        "why": "Which procedures are still called.",
         "fields": [
-          "procedure name",
-          "called from code (file and line)",
-          "calls seen in server statistics or logs over a period",
-          "last seen"
+          "procedure",
+          "calls over 30 days",
+          "last call",
+          "caller in code"
         ],
         "routes": [
           {
-            "kind": "MCP",
-            "how": "Search the app code with the GitHub connector for CALL statements and routine names."
+            "kind": "ASK",
+            "how": "Owner runs the performance_schema program summary query if enabled; otherwise a sampled general log; combined with code search."
           },
           {
-            "kind": "ASK",
-            "how": "The owner enables routine call counters or a time-boxed general log on a replica or off-peak, over at least one full business cycle, and shares the counts."
+            "kind": "MCP",
+            "how": "GitHub: search the repository for each procedure name."
           }
         ],
         "required_for": [
-          "evidence",
-          "integrity-readiness",
-          "diagnosis-compat"
+          "evidence-schema",
+          "evidence-code",
+          "diagnosis"
         ],
-        "alternative": "A procedure with no call in code and no observed calls is marked \"probably unused\", not \"unused\", and is confirmed with the owner before it is dropped."
+        "alternative": "Without usage data every procedure stays UNKNOWN and the manager decides to port or drop with that stated."
       },
       {
-        "id": "write-profile",
-        "name": "Write rate and traffic profile",
-        "why": "Decides whether lag can reach zero fast enough for a 5-minute cutover.",
+        "id": "app-code",
+        "name": "Rails app code",
+        "why": "Raw MySQL SQL, ORM use, schema file, gems.",
         "fields": [
-          "binary log volume per hour",
-          "peak writes per second",
-          "largest transactions",
-          "busiest and quietest hours"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "The owner exports binary log sizes by hour and the peak counters from MySQL status."
-          }
-        ],
-        "required_for": [
-          "diagnosis-cutover",
-          "runbook"
-        ],
-        "alternative": "Without it, the rehearsal measures lag under replayed load and the cutover window stays unconfirmed."
-      },
-      {
-        "id": "app-usage",
-        "name": "Database-specific code in the Rails app",
-        "why": "Shows raw SQL, MySQL functions and adapter settings that need changing.",
-        "fields": [
-          "raw SQL locations",
-          "MySQL-only functions",
-          "adapter and gem versions",
-          "database tests"
+          "raw SQL occurrences",
+          "schema.rb or structure.sql",
+          "database adapter",
+          "Rails version",
+          "scheduled jobs and reports using the database"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Search the repository for raw SQL, find_by_sql, execute, MySQL-only functions and the database config."
+            "how": "GitHub MCP read of the repository."
           }
         ],
         "required_for": [
-          "diagnosis-compat",
-          "convert"
+          "evidence-code",
+          "diagnosis",
+          "build"
+        ]
+      },
+      {
+        "id": "parity-baseline",
+        "name": "Row counts and checksums",
+        "why": "The independent record that no data was lost.",
+        "fields": [
+          "table",
+          "row count",
+          "checksum over primary key and key columns",
+          "taken at"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Owner runs the supplied counting and checksum queries on a quiet replica or snapshot."
+          }
+        ],
+        "required_for": [
+          "integrity-source",
+          "rehearse",
+          "measurement"
         ]
       }
     ],
@@ -401,333 +506,339 @@
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the migration",
-        "goal": "Turn the request into a measured outcome, limits, the data we can reach and the decisions only the engineering manager can make. Writes BRIEF.md.",
-        "from_steps": [],
+        "name": "Pin down the move",
+        "goal": "Turn the owner's words into a measured goal, limits and the access we have. Writes BRIEF.md.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [],
-        "depends_on": [],
-        "outputs": [],
-        "checks": [],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "evidence",
+        "id": "evidence-schema",
         "kind": "evidence",
-        "name": "Inventory the database and the code that uses it",
-        "goal": "Collect the schema, types, routines, settings and sizes from MySQL, and find where the app calls stored procedures and writes raw SQL.",
-        "from_steps": [
-          "s-inventory"
-        ],
+        "name": "Inventory the MySQL database",
+        "goal": "Collect the catalogue, sizes, server settings and stored procedure usage into one folder, from the server's own tables.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "support": [
-          "engineering-database-optimizer"
-        ],
-        "uses": [
-          "business-data-move-runbook",
-          "migration-planner"
-        ],
         "data": [
-          "mysql-inventory",
-          "routine-usage",
-          "app-usage"
+          "source-catalogue",
+          "source-config",
+          "routine-usage"
         ],
         "needs": [
-          "gh-read",
-          "mysql-read",
-          "work-files"
+          "mysql-read"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "inventory",
-            "name": "Database and code inventory",
-            "format": "markdown",
-            "path": "evidence/INVENTORY.md"
+            "id": "catalogue",
+            "name": "Catalogue extract",
+            "format": "csv",
+            "path": "evidence/catalogue.csv"
           },
           {
-            "id": "inventory-tables",
-            "name": "Tables, columns and routines as data",
-            "format": "csv",
-            "path": "evidence/inventory.csv"
+            "id": "settings",
+            "name": "Server settings",
+            "format": "markdown",
+            "path": "evidence/SETTINGS.md"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
           }
         ],
         "checks": [
           {
             "id": "tables",
-            "name": "The table count matches the reported 140 or the difference is explained, and sizes add up to about 380 GB",
+            "name": "The number of tables is within 5 of the reported 140 and the total data size is within 10% of the reported 380 GB, or the difference is explained",
             "required": true
           },
           {
-            "id": "routines",
-            "name": "Every stored procedure, trigger and view is listed with where the app calls it, or \"no call found\"",
+            "id": "complete",
+            "name": "Every table has columns, keys, collation and a row count; every routine has its definition",
             "required": true
           },
           {
-            "id": "sources",
-            "name": "Each fact says whether it came from the server or the code",
+            "id": "usage",
+            "name": "Procedure usage covers at least 30 days or is marked UNKNOWN for each procedure",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-inventory"
+        ],
+        "uses": [
+          "agency-engineering-database-reliability-engineer",
+          "copilot-sql-object-impact-analysis"
+        ]
       },
       {
-        "id": "integrity-readiness",
-        "kind": "integrity",
-        "name": "Check the source is safe to start from",
-        "goal": "Check there is a backup that has been restored once, the change-capture prerequisites (binary logging, row format, retention) and the evidence for which procedures are used.",
-        "from_steps": [
-          "s-ready"
-        ],
+        "id": "evidence-code",
+        "kind": "evidence",
+        "name": "Scan the Rails app",
+        "goal": "Find MySQL-specific SQL, every caller of each stored procedure, other readers of the database, and how the schema is defined.",
         "owner": {
-          "role": "engineering-database-reliability-engineer"
+          "role": "engineering-backend-architect"
         },
-        "uses": [
-          "backup-and-recovery-planner",
-          "database-backup-setter"
-        ],
         "data": [
-          "mysql-inventory",
+          "app-code",
           "routine-usage"
         ],
         "needs": [
-          "mysql-read",
-          "work-files"
+          "gh-read"
         ],
         "depends_on": [
-          "evidence"
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "code-scan",
+            "name": "Code scan results",
+            "format": "markdown",
+            "path": "evidence/CODE-SCAN.md"
+          },
+          {
+            "id": "callers",
+            "name": "Procedure callers",
+            "format": "csv",
+            "path": "evidence/procedure-callers.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dialect",
+            "name": "Each MySQL-specific construct found lists file, line and the Postgres equivalent",
+            "required": true
+          },
+          {
+            "id": "callers",
+            "name": "Every stored procedure shows its callers or NONE FOUND",
+            "required": true
+          },
+          {
+            "id": "other-readers",
+            "name": "Scheduled jobs, reports and other apps that touch the database are listed or marked unknown",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-code"
+        ],
+        "uses": [
+          "copilot-sql-object-impact-analysis",
+          "agency-engineering-backend-architect"
+        ]
+      },
+      {
+        "id": "integrity-source",
+        "kind": "integrity",
+        "name": "Check the source can be migrated",
+        "goal": "Check primary keys, binary logging, zero dates, invalid values, case-only duplicates and foreign key orphans, and record row counts and checksums as the parity baseline.",
+        "owner": {
+          "role": "engineering-database-reliability-engineer"
+        },
+        "data": [
+          "source-catalogue",
+          "source-config",
+          "parity-baseline"
+        ],
+        "needs": [
+          "mysql-read"
+        ],
+        "depends_on": [
+          "evidence-schema"
         ],
         "outputs": [
           {
             "id": "readiness",
-            "name": "Source readiness check",
+            "name": "Migration readiness check",
             "format": "markdown",
-            "path": "integrity/SOURCE-READINESS.md"
+            "path": "integrity/READINESS.md"
+          },
+          {
+            "id": "baseline",
+            "name": "Parity baseline",
+            "format": "csv",
+            "path": "integrity/parity-baseline.csv"
           }
         ],
         "checks": [
           {
-            "id": "backup",
-            "name": "A restore of the latest backup has been done and compared with the source, or a restore test is listed as a blocker",
+            "id": "pk",
+            "name": "Tables without a primary key or unique index are listed (they cannot be validated)",
             "required": true
           },
           {
             "id": "binlog",
-            "name": "Binary logging is on, in row format with full row image, and retained long enough, or the change and its restart need are stated",
+            "name": "log_bin, binlog_format = ROW, binlog_row_image = FULL and retention are recorded, with the restart risk if any is wrong",
             "required": true
           },
           {
-            "id": "usage-evidence",
-            "name": "Procedure usage evidence covers at least one full business cycle, or the gap is stated and those procedures stay \"unknown\"",
+            "id": "values",
+            "name": "Counts of zero dates, out-of-range numbers, invalid UTF-8 and case-only duplicates under unique indexes are recorded per table",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "Row counts and checksums exist for every table, taken at a recorded time",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with READY, READY WITH CONDITIONS or NOT READY",
+            "name": "Ends with READY, READY WITH FIXES or BLOCKED and the list that decides it",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "diagnosis-compat",
-        "kind": "diagnosis",
-        "name": "Find what will not move cleanly",
-        "goal": "Test the compatibility hypotheses: types, collation, stored procedures, sequences and constraints, and the app's SQL.",
+        "gate": "none",
         "from_steps": [
-          "s-schema",
-          "s-app"
-        ],
-        "owner": {
-          "role": "engineering-backend-architect"
-        },
-        "support": [
-          "engineering-database-optimizer"
+          "s-ready"
         ],
         "uses": [
-          "postgres-schema-designer",
-          "migration-planner"
-        ],
+          "agency-engineering-database-reliability-engineer"
+        ]
+      },
+      {
+        "id": "diagnosis",
+        "kind": "diagnosis",
+        "name": "Find what will break",
+        "goal": "Test the migration risk hypotheses against the inventory, code scan and readiness check, and decide for each stored procedure: port, drop with evidence, or unknown.",
+        "owner": {
+          "role": "engineering-database-optimizer"
+        },
         "data": [
-          "mysql-inventory",
+          "source-catalogue",
+          "source-config",
           "routine-usage",
-          "app-usage"
-        ],
-        "needs": [
-          "gh-read",
-          "work-files"
+          "app-code"
         ],
         "depends_on": [
-          "integrity-readiness"
+          "evidence-schema",
+          "evidence-code",
+          "integrity-source"
         ],
         "outputs": [
           {
-            "id": "compat",
-            "name": "Compatibility findings",
+            "id": "diagnosis",
+            "name": "Risk findings",
             "format": "markdown",
-            "path": "diagnosis/COMPATIBILITY.md"
+            "path": "diagnosis/RISKS.md"
           },
           {
-            "id": "compat-hypotheses",
+            "id": "hypotheses",
             "name": "Hypothesis verdicts",
             "format": "json",
-            "path": "diagnosis/hypotheses-compat.json"
+            "path": "diagnosis/hypotheses.json"
+          },
+          {
+            "id": "routines",
+            "name": "Stored procedure decisions",
+            "format": "csv",
+            "path": "diagnosis/routines.csv"
           }
         ],
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every compatibility hypothesis is SUPPORTED, REFUTED or UNKNOWN with the tables, procedures or code lines that show it",
-            "required": true
-          },
-          {
-            "id": "types",
-            "name": "Every MySQL-specific type and zero-date use is listed with its Postgres mapping or the open question",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the query result or file reference behind it",
             "required": true
           },
           {
             "id": "routines",
-            "name": "Each stored procedure is sorted into used, probably unused or unknown, with the evidence",
+            "name": "Every stored procedure is marked PORT, DROP or UNKNOWN with the usage evidence; DROP needs zero calls over the window and no code caller",
+            "required": true
+          },
+          {
+            "id": "types",
+            "name": "Every column with a MySQL-specific type has a chosen Postgres type and a note on range or behaviour change",
             "required": true
           },
           {
             "id": "alternatives",
-            "name": "Each main finding names a competing explanation or option",
+            "name": "Each main finding names a competing explanation or a way it could be wrong",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "diagnosis-cutover",
-        "kind": "diagnosis",
-        "name": "Find whether a 5-minute cutover is achievable",
-        "goal": "Test the sync hypotheses: change-capture prerequisites, write rate, large transactions, load time and the lag the final switch would face.",
+        "gate": "none",
         "from_steps": [
-          "s-load-cdc",
-          "s-cutover"
+          "s-risks"
         ],
-        "owner": {
-          "role": "engineering-database-reliability-engineer"
-        },
+        "support": [
+          "engineering-backend-architect"
+        ],
         "uses": [
-          "zero-downtime-migration-planner"
-        ],
-        "data": [
-          "write-profile"
-        ],
-        "needs": [
-          "mysql-read",
-          "work-files"
-        ],
-        "depends_on": [
-          "integrity-readiness"
-        ],
-        "outputs": [
-          {
-            "id": "cutover-risk",
-            "name": "Cutover feasibility",
-            "format": "markdown",
-            "path": "diagnosis/CUTOVER-FEASIBILITY.md"
-          },
-          {
-            "id": "cutover-hypotheses",
-            "name": "Cutover hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses-cutover.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every cutover hypothesis is SUPPORTED, REFUTED or UNKNOWN with the numbers that show it",
-            "required": true
-          },
-          {
-            "id": "window",
-            "name": "States the quietest hours and the time each step of a cutover would take, or marks the estimate as unmeasured until rehearsal",
-            "required": true
-          },
-          {
-            "id": "restart",
-            "name": "States whether turning on binary logging needs a source restart and the customer-notice consequence",
-            "required": true
-          }
-        ],
-        "gate": "none"
+          "agency-engineering-database-optimizer",
+          "copilot-sql-object-impact-analysis"
+        ]
       },
       {
         "id": "options",
         "kind": "options",
-        "name": "Lay out the migration approaches",
-        "goal": "Compare approaches (for example, full load plus change capture with a short switch, versus a bulk move in a notified window), what to do with unused procedures, and the cutover method, each with downtime, risk, cost, effort and rollback.",
-        "from_steps": [],
+        "name": "Rank the approaches",
+        "goal": "Rank the ways to move: continuous replication with a short write pause, a tool-based migration with a longer pause, or a dual-write approach, each with downtime, risk, effort and cost.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [
-          "zero-downtime-migration-planner",
-          "migration-planner"
-        ],
         "depends_on": [
-          "diagnosis-compat",
-          "diagnosis-cutover"
+          "diagnosis"
         ],
         "outputs": [
           {
             "id": "approaches",
-            "name": "Ranked approaches",
+            "name": "Approach cards",
             "format": "markdown",
             "path": "options/APPROACHES.md"
           }
         ],
         "checks": [
           {
+            "id": "downtime",
+            "name": "Every card states expected customer-visible downtime against the 5-minute limit and what it assumes",
+            "required": true
+          },
+          {
             "id": "evidence",
-            "name": "Every option cites the finding it rests on",
+            "name": "Every card cites the readiness and risk findings it rests on",
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every option has expected downtime, data-loss risk, effort, cost, confidence and rollback",
-            "required": true
-          },
-          {
-            "id": "guardrails",
-            "name": "Options that exceed 5 minutes of downtime say that a customer notice would be needed",
-            "required": true
-          },
-          {
-            "id": "procedures",
-            "name": "The list of procedures to port, retire or confirm is part of the choice",
+            "id": "way-back",
+            "name": "Every card says how to go back to MySQL and until when",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-approach"
+        ],
+        "uses": [
+          "zero-downtime-migration-planner",
+          "agency-engineering-database-reliability-engineer"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "The engineering manager chooses",
-        "goal": "The engineering manager picks the approach and signs off the procedure list. Ask why when the top option is passed over and record it.",
-        "from_steps": [],
+        "name": "Engineering manager chooses",
+        "goal": "The engineering manager picks the approach, the cutover window, what happens to each stored procedure marked DROP or UNKNOWN, and whether a customer notice is planned as a fallback.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [],
         "depends_on": [
           "options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen approach",
+            "name": "Chosen approach and rules",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -735,296 +846,174 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "The chosen approach and passed-over options are recorded",
+            "name": "Chosen and passed-over approaches are recorded with the reason where the top card was passed over",
             "required": true
           },
           {
-            "id": "rationale",
-            "name": "A reason is recorded wherever the top option was passed over",
+            "id": "procedures",
+            "name": "Every UNKNOWN or DROP procedure has a recorded decision",
             "required": true
           }
         ],
-        "gate": "approve"
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "convert",
+        "id": "build",
         "kind": "production",
-        "name": "Convert the schema, procedures and app",
-        "goal": "Produce the Postgres schema, rewrite only the approved stored procedures as functions, and make the Rails changes, all as files and patches with tests that run on Postgres.",
-        "from_steps": [
-          "s-schema",
-          "s-app"
-        ],
+        "name": "Prepare the conversion",
+        "goal": "Write the Postgres schema, rewrite the stored procedures chosen to be ported, patch the Rails app, write the replication task settings and the validation queries, and test the app on Postgres.",
         "owner": {
           "role": "engineering-backend-architect"
         },
-        "support": [
-          "engineering-database-optimizer"
-        ],
-        "uses": [
-          "postgres-schema-designer",
-          "migration-planner",
-          "slow-query-fixer"
-        ],
         "data": [
-          "app-usage"
+          "app-code",
+          "source-catalogue"
         ],
         "needs": [
-          "gh-read",
-          "work-files"
+          "gh-read"
         ],
         "depends_on": [
-          "decision",
-          "diagnosis-compat"
+          "decision"
         ],
         "outputs": [
           {
-            "id": "schema-ddl",
-            "name": "Postgres schema and routines",
+            "id": "schema",
+            "name": "Postgres schema and procedure rewrites",
             "format": "markdown",
-            "path": "production/SCHEMA-AND-ROUTINES.md"
+            "path": "production/SCHEMA-AND-PROCEDURES.md"
           },
           {
-            "id": "app-patches",
-            "name": "Rails patches for the team to review",
+            "id": "patches",
+            "name": "App patches",
             "format": "markdown",
             "path": "production/APP-PATCHES.md"
+          },
+          {
+            "id": "tasks",
+            "name": "Replication task and validation settings",
+            "format": "json",
+            "path": "production/migration-tasks.json"
           }
         ],
         "checks": [
+          {
+            "id": "suite",
+            "name": "The app's own test suite passes on Postgres, with the count of passing and failing tests shown, or failures are listed with causes",
+            "required": true
+          },
+          {
+            "id": "procedures",
+            "name": "Each ported procedure has a test comparing its output on MySQL and Postgres for the same inputs",
+            "required": true
+          },
           {
             "id": "scoped",
-            "name": "Only approved procedures are ported, and each has a test that compares its result with MySQL on the same input",
+            "name": "Only chosen changes are included; each patch names the finding it carries out",
             "required": true
           },
           {
-            "id": "types",
-            "name": "Every MySQL-specific type has a mapping and a data check, including zero dates and unsigned values",
-            "required": true
-          },
-          {
-            "id": "sequences",
-            "name": "Sequence values and defaults are set from the data after load, and keys, indexes and cascades are recreated",
-            "required": true
-          },
-          {
-            "id": "tests",
-            "name": "The app's tests run against Postgres and the differences are listed",
-            "required": true
-          },
-          {
-            "id": "reviewed",
-            "name": "Reviewed by the database reliability specialist before the owner sees it",
+            "id": "review",
+            "name": "A second reviewer finds no unresolved blocker in the patches",
             "required": true
           }
         ],
-        "gate": "none",
-        "reviewers": [
-          "engineering-database-reliability-engineer"
-        ]
-      },
-      {
-        "id": "runbook",
-        "kind": "production",
-        "name": "Write the sync and cutover runbook",
-        "goal": "Write the replication task settings, validation plan, the timed cutover script, the rollback script and the customer-notice rule, using the rehearsal-ready steps.",
+        "gate": "review",
         "from_steps": [
-          "s-load-cdc",
-          "s-validate",
-          "s-cutover"
+          "s-convert"
         ],
-        "owner": {
-          "role": "engineering-database-reliability-engineer"
-        },
+        "support": [
+          "engineering-database-optimizer",
+          "pull-request-reviewer"
+        ],
         "uses": [
-          "zero-downtime-migration-planner",
-          "copilot-devops-rollout-plan",
-          "site-go-live-runbook-writer",
-          "backup-and-recovery-planner"
-        ],
-        "data": [
-          "write-profile"
-        ],
-        "needs": [
-          "work-files"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis-cutover"
-        ],
-        "outputs": [
-          {
-            "id": "runbook",
-            "name": "Migration and cutover runbook",
-            "format": "markdown",
-            "path": "production/RUNBOOK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "timed",
-            "name": "Every cutover step has an owner, a time budget and a check, and the budget adds up to 5 minutes or less",
-            "required": true
-          },
-          {
-            "id": "rollback",
-            "name": "There is a rollback script with a point after which it is no longer possible, and the source stays available",
-            "required": true
-          },
-          {
-            "id": "validation",
-            "name": "The validation plan includes the tool's validation, row counts and checksums per table, and business totals",
-            "required": true
-          },
-          {
-            "id": "approvals",
-            "name": "Each production action is marked as needing the engineering manager's yes",
-            "required": true
-          },
-          {
-            "id": "notice",
-            "name": "The plan says a customer notice is needed if the measured downtime would exceed 5 minutes",
-            "required": true
-          }
-        ],
-        "gate": "review"
+          "agency-engineering-backend-architect",
+          "plan-oracle-to-postgres-with-proof",
+          "copilot-sql-object-impact-analysis",
+          "pull-request-reviewer"
+        ]
       },
       {
         "id": "rehearse",
         "kind": "execution",
-        "name": "Rehearse on a production-sized copy",
-        "goal": "Build the target and replication in a non-production area, run full load and change capture from a restored copy, validate, run the cutover script and the rollback, and time each step. Repeat until validation is clean.",
-        "from_steps": [
-          "s-load-cdc",
-          "s-validate",
-          "s-cutover"
-        ],
+        "name": "Rehearse on a copy",
+        "goal": "Restore a recent backup to a rehearsal environment, run the full load and continuous replication to a rehearsal RDS Postgres, validate, run the app tests and a read-traffic comparison, time the cutover steps, and drill the way back.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "support": [
-          "engineering-database-optimizer"
-        ],
-        "uses": [
-          "zero-downtime-migration-planner",
-          "slow-query-fixer"
+        "data": [
+          "parity-baseline"
         ],
         "needs": [
-          "aws-rehearse",
-          "work-files"
+          "aws-nonprod",
+          "aws-read"
         ],
         "depends_on": [
-          "convert",
-          "runbook"
+          "build"
         ],
         "outputs": [
           {
-            "id": "rehearsal-report",
-            "name": "Rehearsal reports",
+            "id": "rehearsal",
+            "name": "Rehearsal report and timed runbook",
             "format": "markdown",
-            "path": "execution/REHEARSAL-REPORT.md"
+            "path": "execution/REHEARSAL.md"
           }
         ],
         "checks": [
           {
             "id": "approved",
-            "name": "Each AWS action had the owner's yes before it ran",
+            "name": "Each AWS resource created for the rehearsal was approved first, with its cost estimate",
             "required": true
           },
           {
-            "id": "clean",
-            "name": "Validation shows no missing, extra or different rows, and the last two rehearsals are clean",
+            "id": "parity",
+            "name": "Validation reports zero failed records and the independent row counts and checksums match for every table, or each exception is explained",
+            "required": true
+          },
+          {
+            "id": "lag",
+            "name": "Replication lag at peak load is recorded and returns to under 5 seconds",
             "required": true
           },
           {
             "id": "timed",
-            "name": "The measured cutover time is stated against the 5-minute limit",
+            "name": "Each cutover step is timed and the total pause is under 5 minutes, or the plan changes",
             "required": true
           },
           {
-            "id": "rollback-tested",
-            "name": "The rollback script was run once and worked",
-            "required": true
-          },
-          {
-            "id": "speed",
-            "name": "The slowest app queries on Postgres are compared with MySQL and fixed or listed",
+            "id": "rollback",
+            "name": "The way back to MySQL was drilled once and its time recorded",
             "required": true
           }
         ],
-        "gate": "approve_each_action"
-      },
-      {
-        "id": "production-sync",
-        "kind": "execution",
-        "name": "Build production and sync the data",
-        "goal": "Create the production RDS target and start full load and change capture from MySQL. Keep validating until the lag is steady and clean. The app is not switched here.",
+        "gate": "approve_each_action",
         "from_steps": [
-          "s-load-cdc",
-          "s-validate"
+          "s-rehearse"
         ],
-        "owner": {
-          "role": "engineering-database-reliability-engineer"
-        },
         "uses": [
-          "zero-downtime-migration-planner"
-        ],
-        "needs": [
-          "aws-prod",
-          "work-files"
-        ],
-        "depends_on": [
-          "rehearse"
-        ],
-        "outputs": [
-          {
-            "id": "sync-log",
-            "name": "Production sync log",
-            "format": "markdown",
-            "path": "execution/SYNC-LOG.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "approved",
-            "name": "Each production action had the engineering manager's yes before it ran",
-            "required": true
-          },
-          {
-            "id": "source-impact",
-            "name": "Load on the MySQL server was watched and stayed within what the owner agreed",
-            "required": true
-          },
-          {
-            "id": "validated",
-            "name": "Validation is clean and lag is steady before cutover is scheduled",
-            "required": true
-          }
-        ],
-        "gate": "approve_each_action"
+          "zero-downtime-migration-planner",
+          "agency-engineering-database-reliability-engineer",
+          "database-backup-setter"
+        ]
       },
       {
         "id": "cutover",
         "kind": "execution",
-        "name": "Cut over and keep the rollback",
-        "goal": "Run the scripted cutover with the engineering manager approving each step: let lag reach zero, stop writes, final validation, switch the app, and watch closely. MySQL stays untouched for rollback.",
-        "from_steps": [
-          "s-cutover"
-        ],
+        "name": "Cut over production",
+        "goal": "With the engineering manager approving each step: confirm the rehearsal passed, let replication catch up, pause writes, verify, reset sequences, switch the app to Postgres, run smoke tests and keep MySQL read-only as the way back.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [
-          "site-go-live-runbook-writer",
-          "copilot-devops-rollout-plan"
+        "data": [
+          "parity-baseline"
         ],
         "needs": [
           "aws-prod",
-          "app-deploy",
-          "work-files"
+          "aws-read"
         ],
         "depends_on": [
-          "production-sync"
+          "rehearse"
         ],
         "outputs": [
           {
@@ -1037,42 +1026,52 @@
         "checks": [
           {
             "id": "approved",
-            "name": "Each step had the engineering manager's yes before it ran",
+            "name": "Each production step has the engineering manager's approval recorded before it ran",
             "required": true
           },
           {
-            "id": "lag-zero",
-            "name": "Lag was zero and writes were stopped before the final validation",
+            "id": "caught-up",
+            "name": "Replication shows zero lag and zero pending validation before writes are paused",
             "required": true
           },
           {
-            "id": "timed",
-            "name": "Downtime is measured from write stop to writes accepted on Postgres",
+            "id": "sequences",
+            "name": "Every sequence is set above the maximum id of its table before the app writes",
             "required": true
           },
           {
-            "id": "rollback-ready",
-            "name": "MySQL is intact and the rollback path was ready through the watch period",
+            "id": "downtime",
+            "name": "Write-pause start and end are logged from load balancer or app logs and total 5 minutes or less",
+            "required": true
+          },
+          {
+            "id": "way-back",
+            "name": "MySQL is kept read-only and the rollback steps are ready until the manager retires them",
             "required": true
           }
         ],
-        "gate": "approve_each_action"
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-cutover"
+        ],
+        "uses": [
+          "zero-downtime-migration-planner",
+          "agency-engineering-database-reliability-engineer"
+        ]
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read the result honestly",
-        "goal": "Compare source and target after cutover, measure downtime, errors and query speed against the pre-cutover app, and report what is proven and what is still watched.",
-        "from_steps": [],
+        "name": "Prove parity and watch the app",
+        "goal": "Compare row counts and checksums on every table against the pre-cutover baseline, read validation results and app error rate and speed for 14 days, and measure the real downtime from the logs.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [
-          "slow-query-fixer"
+        "data": [
+          "parity-baseline"
         ],
         "needs": [
-          "mysql-read",
-          "work-files"
+          "aws-read"
         ],
         "depends_on": [
           "cutover"
@@ -1080,133 +1079,177 @@
         "outputs": [
           {
             "id": "readout",
-            "name": "Migration readout",
+            "name": "Parity and health readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
           }
         ],
         "checks": [
           {
-            "id": "no-loss",
-            "name": "Row counts and checksums per table match the last MySQL state, and business totals reconcile",
+            "id": "parity",
+            "name": "Every table's count and checksum match the baseline plus the writes since, or the exception is listed",
             "required": true
           },
           {
             "id": "downtime",
-            "name": "Measured customer-facing downtime is shown against 5 minutes",
+            "name": "Customer-visible downtime is measured from logs, not estimated, and compared with 5 minutes",
             "required": true
           },
           {
-            "id": "app-health",
-            "name": "Error rate and slow queries after cutover are compared with before; the baseline is stated as unknown if it was not captured",
+            "id": "health",
+            "name": "Error rate and request speed for 14 days are compared with the week before cutover on the same definitions",
             "required": true
           },
           {
-            "id": "watch",
-            "name": "The 24 to 48 hour watch is reported, with any rollback decision",
+            "id": "honest",
+            "name": "Any miss is reported with the numbers",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-parity"
+        ],
+        "uses": [
+          "plan-oracle-to-postgres-with-proof",
+          "agency-engineering-database-reliability-engineer"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Record what was learned, the rules for the next migration, and a proposal for when to retire the MySQL server. Retiring it is a separate approved action by the engineering manager.",
-        "from_steps": [],
+        "goal": "Propose when to retire the old MySQL server and what standing reconciliation to keep, and record the lessons for the next migration.",
         "owner": {
           "role": "engineering-database-reliability-engineer"
         },
-        "uses": [],
         "depends_on": [
           "measurement"
         ],
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and retirement proposal",
+            "name": "Learnings and decommission proposal",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
         ],
         "checks": [
           {
-            "id": "scoped",
-            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "id": "retire",
+            "name": "The decommission proposal names the clean period and the checks that must pass first, and nothing is switched off without the engineering manager's yes",
             "required": true
           },
           {
-            "id": "retire",
-            "name": "MySQL is not shut down by this plan; the proposal lists the checks and the approval needed",
+            "id": "scoped",
+            "name": "Each lesson says whether it holds for this app, this business or the playbook",
             "required": true
           }
         ],
-        "gate": "review"
+        "gate": "review",
+        "from_steps": [
+          "s-retire"
+        ],
+        "uses": [
+          "zero-downtime-migration-planner"
+        ]
       }
     ],
     "hypotheses": [
       {
         "id": "h-types",
-        "statement": "MySQL-specific types and values (unsigned integers, ENUM and SET, tinyint(1) booleans, zero dates, JSON, large text) will not load or map cleanly.",
-        "test": "List every column by type from the inventory and scan for zero dates, out-of-range values and enum values; trial-load samples into Postgres.",
-        "confirm_if": "Columns use these types or values that Postgres rejects or changes.",
-        "refute_if": "Types map directly and data scans find no bad values.",
-        "fix_stage": "convert"
+        "statement": "MySQL-specific column types need explicit handling.",
+        "test": "Group information_schema columns by type: unsigned integers, tinyint(1), enum, set, year, json, zero-default dates.",
+        "confirm_if": "One or more columns use types with no direct Postgres equivalent, or unsigned bigint values that exceed the signed range.",
+        "refute_if": "All columns map directly with no range change.",
+        "fix_stage": "build"
       },
       {
-        "id": "h-routines",
-        "statement": "Few of the stored procedures are still used, but the ones that are carry business logic the app depends on.",
-        "test": "Compare the routine list with CALL sites in code and call counters over a full business cycle.",
-        "confirm_if": "Most routines have no call in code or logs and a few are called on key paths.",
-        "refute_if": "Most routines are in use.",
-        "fix_stage": "convert"
+        "id": "h-zero-dates",
+        "statement": "Zero dates or invalid values exist and will fail or change on load.",
+        "test": "Count rows with 0000-00-00 dates and out-of-range or invalid UTF-8 values per table.",
+        "confirm_if": "Any such rows exist.",
+        "refute_if": "Counts are zero on every table.",
+        "fix_stage": "build"
       },
       {
         "id": "h-collation",
-        "statement": "MySQL's default case-insensitive comparison changes results on Postgres: lookups, unique keys and ordering.",
-        "test": "Check columns with unique indexes and lookups by name or email for case variants, and the character set and collation of each table.",
-        "confirm_if": "Duplicates differing only by case exist, or the app relies on case-insensitive matching.",
-        "refute_if": "The app already normalises case and no such duplicates exist.",
-        "fix_stage": "convert"
+        "statement": "Case-insensitive collation hides duplicates and lookups that break on Postgres.",
+        "test": "Find groups of values equal under the MySQL collation but different in case or accents in columns with unique indexes; search code for equality lookups on emails and names.",
+        "confirm_if": "One or more such duplicate groups or case-dependent lookups exist.",
+        "refute_if": "None found.",
+        "fix_stage": "build"
       },
       {
-        "id": "h-app-sql",
-        "statement": "The Rails app contains raw SQL or MySQL-only functions that fail or give different results on Postgres.",
-        "test": "Search the code for raw SQL and MySQL functions; run the test suite on Postgres.",
-        "confirm_if": "Such queries exist or tests fail on Postgres.",
-        "refute_if": "All queries go through the ORM and the test suite passes.",
-        "fix_stage": "convert"
+        "id": "h-no-pk",
+        "statement": "Some tables have no primary key or unique index.",
+        "test": "Tables without a primary key in information_schema.",
+        "confirm_if": "One or more tables lack one.",
+        "refute_if": "Every table has one.",
+        "fix_stage": "build"
       },
       {
-        "id": "h-sequences-constraints",
-        "statement": "Sequences, auto-increment values, foreign keys, cascades and partial indexes are not carried by the data copy and would be wrong after cutover.",
-        "test": "Compare identity and sequence values, keys, cascades and indexes between source and target after a rehearsal load.",
-        "confirm_if": "Any of them differ after the copy.",
-        "refute_if": "They match after the conversion scripts run.",
-        "fix_stage": "convert"
+        "id": "h-procedures",
+        "statement": "Many stored procedures are no longer used.",
+        "test": "30-day call counts from performance_schema plus code callers.",
+        "confirm_if": "30% or more have zero calls and no code caller.",
+        "refute_if": "Under 10% are unused, or the usage data cannot be read, which leaves them UNKNOWN.",
+        "fix_stage": "build"
       },
       {
-        "id": "h-cdc-prereq",
-        "statement": "Change capture cannot start as is: binary logging is off, not in row format, or kept too briefly, and fixing it needs a source restart.",
-        "test": "Read the binary log settings and retention from the inventory.",
-        "confirm_if": "Settings do not meet the change-capture prerequisites.",
-        "refute_if": "Settings already meet them.",
-        "fix_stage": "runbook"
+        "id": "h-raw-sql",
+        "statement": "The app has MySQL-specific raw SQL.",
+        "test": "Search for backticks, ON DUPLICATE KEY, IFNULL, GROUP BY on non-grouped columns, FIND_IN_SET, STR_TO_DATE and similar in code and jobs.",
+        "confirm_if": "One or more occurrences outside ORM-generated SQL.",
+        "refute_if": "None found.",
+        "fix_stage": "build"
       },
       {
-        "id": "h-lag",
-        "statement": "Write volume or very large transactions keep the lag from reaching zero fast enough for a 5-minute switch.",
-        "test": "Measure binary log volume, peak writes and the largest transactions, then replay in rehearsal and read the lag.",
-        "confirm_if": "Lag does not fall to zero within the time budget at the quietest hour.",
-        "refute_if": "Lag reaches zero quickly in rehearsal.",
+        "id": "h-binlog",
+        "statement": "Binary logging is not ready for continuous replication, and fixing it would need a restart.",
+        "test": "log_bin, binlog_format, binlog_row_image and retention from SHOW VARIABLES.",
+        "confirm_if": "log_bin is off, or format is not ROW, or retention is under 24 hours.",
+        "refute_if": "All set correctly.",
+        "fix_stage": "decision"
+      },
+      {
+        "id": "h-cascade",
+        "statement": "Cascading deletes or updates will not replicate.",
+        "test": "Foreign keys with ON DELETE CASCADE or ON UPDATE CASCADE.",
+        "confirm_if": "One or more exist.",
+        "refute_if": "None exist.",
+        "fix_stage": "build"
+      },
+      {
+        "id": "h-big-transactions",
+        "statement": "Write volume or transaction size will make replication fall behind or fail.",
+        "test": "Peak write rate and largest binlog transaction from the server; lag at peak in the rehearsal.",
+        "confirm_if": "Any transaction near 4 GB, or lag stays over 60 seconds at peak in rehearsal.",
+        "refute_if": "Largest transaction is far under 4 GB and lag recovers to under 5 seconds.",
         "fix_stage": "rehearse"
+      },
+      {
+        "id": "h-load-time",
+        "statement": "The full load will take longer than the binary log retention.",
+        "test": "Measured full-load throughput in the rehearsal against retention.",
+        "confirm_if": "Projected full load plus catch-up exceeds retention.",
+        "refute_if": "It finishes within half the retention.",
+        "fix_stage": "rehearse"
+      },
+      {
+        "id": "h-timezone",
+        "statement": "Timestamps will shift between servers.",
+        "test": "Compare TIMESTAMP and DATETIME samples and the server time zone on both sides.",
+        "confirm_if": "Any sample differs by a time zone offset.",
+        "refute_if": "Samples match exactly.",
+        "fix_stage": "build"
       }
     ],
     "measurement": {
-      "window": "Watch 24 to 48 hours after cutover, with a final readout once the rollback path is no longer needed.",
-      "min_volume": "Validation covers every table; for query speed, compare the same business-hours traffic before and after.",
-      "stop_rule": "Stop and roll back if validation finds a mismatch that cannot be fixed within the budget, or the measured downtime would exceed 5 minutes; the engineering manager decides whether to retry or give notice."
-    }
+      "window": "The cutover itself from logs, then 14 days of app error rate and speed against the 7 days before.",
+      "min_volume": "Every table is counted and checksummed, not sampled; app metrics are read over full days.",
+      "stop_rule": "Roll back to MySQL if parity fails on any table after cutover, or if the write pause runs past the 5-minute limit and the rollback is cheaper than continuing."
+    },
+    "dropped": []
   }
 }

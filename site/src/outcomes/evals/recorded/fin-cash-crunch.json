@@ -1,42 +1,53 @@
 {
   "case": "fin-cash-crunch",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Keep the cash balance from ever dropping below $150,000 for the next six months, without losing either of our two biggest retail customers.",
-    "deliverable": "A rolling weekly cash forecast in a Google Sheet that runs six months ahead, plus an approved set of cash moves (collections, timber stock buying, supplier terms) under way, and a weekly forecast-versus-actual check.",
+    "outcome": "Keep the cash balance at or above $150,000 in every week of the next six months, without losing either of the two biggest retail customers.",
+    "ambition": {
+      "goal_beyond": "The business pays for its own stock and growth from the profit it already makes, instead of living on the overdraft.",
+      "rungs": [
+        "Build a cash forecast from the ledger and bank and show the first week the balance falls below $150,000",
+        "Find which levers (collecting faster, holding less timber, timing supplier payments) free the most cash, and choose a package that holds $150,000 for six months in a bad case too",
+        "Keep it true: a weekly roll-forward compares the forecast with the bank balance, so a slide towards the floor is flagged weeks before it costs an overdraft"
+      ],
+      "chosen": 3,
+      "judge": "The bank statements: the actual weekly closing balance, compared with the forecast and with the $150,000 floor"
+    },
+    "deliverable": "A cash forecast in a Google Sheet that is rolled forward weekly, a chosen package of cash actions with drafts ready for the owner to use, and the first weekly check against the bank",
     "done": [
-      "Opening cash, receivables and payables are checked against the bank CSVs and QuickBooks",
-      "How late customers really pay is measured from paid invoices, by customer",
-      "A six-month weekly forecast with a downside case shows when and by how much cash would fall below $150,000",
-      "The owner and accountant have chosen the cash moves, with reasons recorded",
-      "Approved reminders, stock changes and term requests are under way, each sent or agreed only after approval",
-      "Forecast versus actual is read every week and the lowest balance is compared with $150,000"
+      "Opening balance ties to the bank and the ledger",
+      "How late customers really pay is measured, not assumed",
+      "Forecast shows the first week below $150,000 in a base case and a bad case",
+      "Owner and accountant have chosen a package of cash actions",
+      "Drafts for customers and suppliers are ready, and nothing is sent without the owner's yes",
+      "A weekly check against bank balances is running"
     ],
     "metric": {
-      "name": "Lowest weekly closing cash balance in the next six months",
+      "name": "Lowest weekly closing cash balance over the next six months",
       "direction": "reach",
       "unit": "USD",
       "baseline": null,
       "baseline_source": "unknown",
       "target": 150000
     },
-    "deadline": "The $150,000 floor must hold for six months from the start",
+    "deadline": "Six months from the start, with the first forecast and package ready in the first weeks",
     "guardrails": [
       "Neither of the two biggest retail customers is lost",
-      "The overdraft limit is not reached again (it was hit twice this quarter)"
+      "The overdraft limit is not reached again",
+      "Net margin does not fall far below last year's 12%"
     ],
     "limits": [
-      "QuickBooks Online MCP is read-only: nothing is changed in QuickBooks",
-      "No message goes to a customer, supplier or bank without the owner approving it",
-      "Any change to terms for the two biggest customers is the owner's decision, not a default"
+      "QuickBooks Online is read-only",
+      "Bank data comes as CSV statements",
+      "Anything sent to a customer or supplier waits for the owner's yes",
+      "The two biggest retail customers are off limits for hard measures"
     ],
     "assets": [
-      "QuickBooks Online (invoices, bills, bank transactions)",
+      "Last year's accounts (12% net margin)",
       "Bank statements as CSV",
-      "Last year's accounts (revenue about $4.2M, 12% net margin)",
-      "Google Sheet for working data"
+      "The QuickBooks Online ledger"
     ],
     "connections": [
       {
@@ -45,113 +56,110 @@
         "status": "connected"
       },
       {
-        "name": "Bank statements (CSV export)",
+        "name": "Bank statements (CSV)",
         "access": "read",
+        "status": "available"
+      },
+      {
+        "name": "Google Sheets",
+        "access": "draft",
         "status": "available"
       }
     ],
     "data_home": "A Google Sheet",
-    "technical_level": "Not stated",
+    "technical_level": "Not stated; give a finished sheet and plain-language actions",
     "decides": "The owner, together with their accountant",
     "unknowns": [
-      "How late customers really pay on average (owner does not know; to be measured)",
-      "The current bank balance and the overdraft limit",
-      "How much of receivables the two biggest customers hold",
-      "Value of timber stock and how many weeks it covers by type",
-      "Fixed monthly costs, payroll dates and tax dates",
-      "Whether the AI can write to the Google Sheet directly or the owner pastes the tabs",
-      "Whether orders follow a seasonal pattern",
-      "How technical the owner wants to be"
+      "How late customers really pay on average",
+      "The current cash balance and the size of the overdraft limit",
+      "Who the two biggest retail customers are and what share of sales they make",
+      "Supplier terms by supplier and the value of the timber stock",
+      "Whether sales are seasonal and when the peaks fall",
+      "How the AI reaches the Google Sheet (a connector, or files the owner imports)"
     ],
     "answers": [
       {
-        "question": "Business and size?",
-        "answer": "Furniture maker selling to retailers, revenue about $4.2M a year, 12% net margin (last year's accounts)."
+        "question": "What business, and how big?",
+        "answer": "Furniture maker selling to retailers, revenue about $4.2M a year, 12% net margin (last year's accounts)"
       },
       {
-        "question": "Payment terms and stock?",
-        "answer": "Customers pay on 60-day terms, many late. We pay suppliers in 30 days. We carry about three months of timber stock."
+        "question": "How do cash timings work?",
+        "answer": "Customers pay on 60-day terms, many late; we pay suppliers in 30 days; we carry about three months of timber stock"
       },
       {
-        "question": "What has happened?",
-        "answer": "We hit the overdraft limit twice this quarter."
+        "question": "What happened?",
+        "answer": "We hit the overdraft limit twice this quarter"
       },
       {
-        "question": "What can the AI reach?",
-        "answer": "QuickBooks Online MCP read-only, bank statements as CSV."
+        "question": "Which tools can the AI reach?",
+        "answer": "QuickBooks Online MCP read-only, bank statements as CSV"
       },
       {
-        "question": "Target?",
-        "answer": "A cash buffer that never drops below $150,000 within six months."
+        "question": "What counts as success, and what must not break?",
+        "answer": "A cash buffer that never drops below $150,000 within six months. Cannot lose our two biggest retail customers"
       },
       {
-        "question": "What must not happen?",
-        "answer": "Cannot lose the two biggest retail customers."
-      },
-      {
-        "question": "Data home and decision maker?",
-        "answer": "A Google Sheet. The owner decides with the accountant."
-      },
-      {
-        "question": "What is unknown?",
-        "answer": "How late customers really pay on average."
+        "question": "Where does data live, who decides, what is unknown?",
+        "answer": "A Google Sheet. The owner decides with their accountant. Unknown: how late customers really pay on average"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat a profitable business running short of cash as a timing problem. They start from a reconciled opening cash balance, build a direct-method rolling 13-week forecast from receipts and payments rather than profit, and base collections on how each customer really pays, not on stated terms. They set a minimum cash line first, run more than one scenario, review forecast against actual every week, and then pull the cash levers in order: collections, stock buying, supplier timing and financing, with early moves inside four weeks and structural moves after that. Collections follow a dated escalation that protects key relationships.",
+    "approach": "Practitioners treat 'profitable but short of cash' as a timing problem, not a profit problem. They bridge profit to cash (what receivables, stock and payables absorbed), measure the cash conversion cycle as days of stock plus days of receivables minus days of payables, and measure real days-to-pay per customer from invoice and payment dates rather than trusting the terms. They then build a direct-method weekly forecast (receipts and payments by week from the ledgers, tied to the bank), run a bad case, roll it forward every week and compare it with the bank. Levers are ranked by cash freed, by when, and by what each costs; stretching suppliers and cutting stock are the ones that most often backfire, and key customers are handled with care, not pressure.",
     "sources": [
       {
-        "id": "web-cla",
+        "id": "web-chaser",
         "kind": "web",
-        "title": "Why every manufacturer needs a rolling 13-week cash flow forecast (CLA)",
-        "ref": "https://www.claconnect.com/en/resources/blogs/manufacturing/cash-flow-forecast-why-every-manufacturer-needs-a-rolling-13-week-forecast",
-        "date": "2026-08-18",
-        "note": "Reconciled opening cash, receipts and disbursements, weekly roll, levers for collections, payables and inventory."
+        "title": "Chaser: QuickBooks cash flow forecast (days to pay per customer)",
+        "ref": "https://www.chaserhq.com/blog/quickbooks-cash-flow-forecast",
+        "date": "2026-08-13",
+        "note": "QuickBooks Online has no average-days-to-pay report; export invoices and payments, subtract due date from payment date per invoice, average per customer, then apply it to open invoices. Notes partial and combined payments as a pitfall."
       },
       {
-        "id": "web-beancount",
+        "id": "web-13wk",
         "kind": "web",
-        "title": "13-week rolling cash flow forecast, direct method (Beancount.io)",
+        "title": "Beancount.io: 13-week rolling cash flow forecast, direct method",
         "ref": "https://beancount.io/blog/2026/05/09/13-week-rolling-cash-flow-forecast-direct-method-spot-cash-crunches-small-business-guide",
-        "date": "2026-05",
-        "note": "Collections from payment history, minimum cash target, scenarios, weekly variance review. Date taken from the page address."
+        "date": null,
+        "note": "Weekly receipts and disbursements tied to invoices, bills and payroll; record actuals each week, investigate variances over a set threshold, roll forward. Accessed 2026-11-03; the page shows no publication date."
       },
       {
-        "id": "web-ramp",
+        "id": "web-afp",
         "kind": "web",
-        "title": "Accounts receivable collections (Ramp)",
-        "ref": "https://ramp.com/blog/accounts-payable/accounts-receivable-collections",
-        "date": "2026-09-20",
-        "note": "Dated escalation by days overdue, senior contacts after 60 days, DSO with collection effectiveness."
+        "title": "Association for Financial Professionals: Cash conversion cycle",
+        "ref": "https://www.financialprofessionals.org/glossary/cash-conversion-cycle",
+        "date": null,
+        "note": "Defines the cycle (days inventory plus days receivable minus days payable) used to see where cash is tied up. Accessed 2026-11-03; the page shows no publication date."
       },
       {
         "id": "cat-seasonal",
         "kind": "catalogue",
         "title": "Seasonal cash forecast and buffer planner",
-        "ref": "prepare-a-seasonal-cash-buffer",
-        "note": "Tested method: forecast, downside case, options checked against a chosen buffer."
+        "ref": "prepare-a-seasonal-cash-buffer"
       },
       {
         "id": "cat-lever",
         "kind": "catalogue",
         "title": "Cash flow improvement planner",
-        "ref": "cash-lever-ranker",
-        "note": "Compares cash levers by cash freed at 180 days and profit impact."
+        "ref": "cash-lever-ranker"
+      },
+      {
+        "id": "cat-tied",
+        "kind": "catalogue",
+        "title": "Cash tied-up finder",
+        "ref": "cash-tied-up-finder"
       },
       {
         "id": "cat-chaser",
         "kind": "catalogue",
         "title": "Late invoice and cash forecast reviewer",
-        "ref": "weekly-invoice-and-cash-chaser",
-        "note": "Late invoices, reminder drafts and a cash view that separates promises from money received."
+        "ref": "weekly-invoice-and-cash-chaser"
       },
       {
-        "id": "cat-terms",
+        "id": "cat-conc",
         "kind": "catalogue",
-        "title": "Supplier cost and payment terms planner",
-        "ref": "cut-your-product-cost-and-turn-supplier-terms-into-cash",
-        "note": "Plans payment-term talks and checks cash needs."
+        "title": "Customer concentration risk checker",
+        "ref": "customer-concentration-risk"
       },
       {
         "id": "owner",
@@ -162,128 +170,106 @@
     ],
     "steps": [
       {
-        "id": "s-opening",
-        "name": "Reconcile opening cash and the ledgers behind the forecast",
-        "why": "Every forecast week depends on a correct opening balance, and receivables must tie to the ledger before they are treated as future cash.",
+        "id": "s-data",
+        "name": "Pull invoices, payments, bills, stock purchases and bank balances for the last 12 months",
+        "why": "Real payment dates and bank balances are the rawest material; the terms on paper are not.",
         "sources": [
-          "web-cla",
-          "web-beancount"
-        ]
-      },
-      {
-        "id": "s-behaviour",
-        "name": "Measure how each customer really pays",
-        "why": "Collections should rest on observed payment history by customer, not the 60-day terms; the owner does not know the average.",
-        "sources": [
-          "web-beancount",
-          "web-ramp",
+          "web-chaser",
+          "web-13wk",
           "owner"
         ]
       },
       {
-        "id": "s-cycle",
-        "name": "Find where profit turns into cash too late",
-        "why": "Terms of 60 days in, 30 days out and months of timber stock explain a gap that the profit and loss does not show.",
+        "id": "s-trust",
+        "name": "Tie the opening balance and open invoices and bills to the bank and the ledger",
+        "why": "A forecast from a wrong starting point is wrong every week.",
         "sources": [
-          "web-cla",
-          "cat-lever",
-          "owner"
+          "web-13wk",
+          "web-chaser"
+        ]
+      },
+      {
+        "id": "s-paybehaviour",
+        "name": "Measure real days to pay per customer and the cash conversion cycle",
+        "why": "Resolves the owner's stated unknown and shows which of stock, receivables or payables ties up the cash.",
+        "sources": [
+          "web-chaser",
+          "web-afp",
+          "cat-tied"
+        ]
+      },
+      {
+        "id": "s-bridge",
+        "name": "Bridge profit to cash over the last year",
+        "why": "Shows where the 12% margin went before choosing levers.",
+        "sources": [
+          "web-afp",
+          "cat-tied",
+          "cat-seasonal"
         ]
       },
       {
         "id": "s-forecast",
-        "name": "Build a direct-method forecast with a minimum cash line and scenarios",
-        "why": "A weekly receipts and payments forecast with a downside case shows when and by how much cash would fall below the floor.",
+        "name": "Build a weekly direct-method forecast with a base and a bad case",
+        "why": "Finds the first week below $150,000 and how bad it gets.",
         "sources": [
-          "web-cla",
-          "web-beancount",
+          "web-13wk",
           "cat-seasonal"
         ]
       },
       {
         "id": "s-levers",
-        "name": "Rank the cash levers and choose",
-        "why": "Collections, stock buying, supplier timing and financing free different amounts of cash at different cost and risk.",
+        "name": "Rank cash levers by cash freed, timing, cost and customer risk",
+        "why": "Collections, stock and supplier timing each free cash at a different speed and cost.",
         "sources": [
-          "web-cla",
+          "web-afp",
           "cat-lever",
-          "cat-terms"
+          "cat-conc"
         ]
       },
       {
-        "id": "s-collect",
-        "name": "Run a dated, relationship-aware collections plan",
-        "why": "Early reminders and senior-level contact recover cash faster; key accounts need a personal approach.",
+        "id": "s-act",
+        "name": "Prepare careful customer and supplier steps for the owner to use",
+        "why": "Chasing and renegotiating are done by the owner; the two biggest customers need a relationship-first approach.",
         "sources": [
-          "web-ramp",
+          "cat-chaser",
+          "cat-conc",
+          "owner"
+        ]
+      },
+      {
+        "id": "s-roll",
+        "name": "Roll the forecast forward weekly and compare with the bank",
+        "why": "Catches a slide towards the floor weeks ahead.",
+        "sources": [
+          "web-13wk",
           "cat-chaser"
-        ]
-      },
-      {
-        "id": "s-stock",
-        "name": "Buy timber to a target cover",
-        "why": "Stock above target cover is cash on the shelf; the next orders can be smaller.",
-        "sources": [
-          "web-cla",
-          "cat-lever"
-        ]
-      },
-      {
-        "id": "s-terms",
-        "name": "Agree supplier timing and financing before a breach",
-        "why": "Structural moves take weeks, and lenders and suppliers should be spoken to early.",
-        "sources": [
-          "web-beancount",
-          "web-cla",
-          "cat-terms"
-        ]
-      },
-      {
-        "id": "s-rhythm",
-        "name": "Review forecast against actual every week and roll forward",
-        "why": "Replacing the finished week with actuals and re-forecasting catches slips while there is still time to act.",
-        "sources": [
-          "web-cla",
-          "web-beancount"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Assuming optimistic collection timing instead of how customers actually pay.",
+        "text": "Forecasting receipts on the 60-day terms instead of the days customers really take.",
         "sources": [
-          "web-beancount"
+          "web-chaser"
         ]
       },
       {
-        "text": "Treating receivables as cash, or starting from an opening balance that is not reconciled.",
+        "text": "Partial and combined payments make days-to-pay look better or worse than it is.",
         "sources": [
-          "web-cla"
+          "web-chaser"
         ]
       },
       {
-        "text": "Relying on a single scenario and forgetting irregular outflows such as taxes and annual premiums.",
+        "text": "Squeezing suppliers or cutting stock so hard that supply or a key customer's orders suffer.",
         "sources": [
-          "web-beancount"
+          "web-afp"
         ]
       },
       {
-        "text": "Building the forecast only during a crisis and not updating it weekly.",
+        "text": "A forecast built once and never compared with the bank, so errors compound.",
         "sources": [
-          "web-beancount",
-          "web-cla"
-        ]
-      },
-      {
-        "text": "Early-payment discounts that cost more than the cash they free: 2/10 net 30 is roughly 37% annualised.",
-        "sources": [
-          "web-cla"
-        ]
-      },
-      {
-        "text": "Chasing a key customer like any other, or looking only at average days outstanding and missing a few severely late accounts.",
-        "sources": [
-          "web-ramp"
+          "web-13wk"
         ]
       }
     ]
@@ -295,297 +281,255 @@
         "id": "qbo-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read invoices, bills and bank transactions (QuickBooks Online MCP)",
-        "why": "Pull receivables and payables ageing, paid-invoice history and bank transactions. Read-only."
+        "name": "Read the ledger (QuickBooks Online MCP)",
+        "why": "Read invoices, payments, bills, stock purchases and the aging report. Read-only."
       },
       {
         "id": "bank-csv",
         "access": "read",
         "via": "file",
-        "name": "Bank statements (CSV)",
-        "why": "Opening balances and actual receipts and payments by date."
+        "name": "Read bank statements (CSV)",
+        "why": "Actual balances and daily movements, the outside check on every forecast."
       },
       {
-        "id": "sheet",
+        "id": "sheet-draft",
         "access": "draft",
-        "via": "owner",
-        "name": "Google Sheet for working data (owner shares it, or pastes the tabs)",
-        "why": "The owner wants the working data in a Google Sheet; the tabs mirror the files in this project."
-      },
-      {
-        "id": "outreach",
-        "access": "live",
-        "via": "owner",
-        "name": "Send reminders, make calls and ask for terms (owner sends)",
-        "why": "Anything that reaches a customer, supplier or bank is sent by the owner, one approved message at a time."
+        "via": "file",
+        "name": "Draft the Google Sheet",
+        "why": "Build the forecast and tracking tabs for the owner to open or import. Nothing is sent anywhere."
       }
     ],
     "data": [
       {
-        "id": "cash-accounts",
-        "name": "Bank balances and transactions",
-        "why": "The reconciled opening balance and the actual weekly flows.",
-        "fields": [
-          "account",
-          "date",
-          "amount",
-          "description",
-          "running balance",
-          "overdraft limit"
-        ],
-        "routes": [
-          {
-            "kind": "CSV",
-            "how": "Bank statements as CSV for the last 12 months, every account."
-          },
-          {
-            "kind": "MCP",
-            "how": "QuickBooks Online MCP read of bank transactions for the same period."
-          }
-        ],
-        "required_for": [
-          "cash-position",
-          "books-check",
-          "forecast"
-        ]
-      },
-      {
-        "id": "receivables",
-        "name": "Invoices with due and paid dates",
-        "why": "Days-to-pay by customer is the unknown that drives the forecast.",
+        "id": "invoices-payments",
+        "name": "Customer invoices with due dates and payment dates, last 12 months",
+        "why": "Measures how late each customer really pays.",
         "fields": [
           "customer",
           "invoice number",
-          "issue date",
+          "invoice date",
           "due date",
           "amount",
-          "paid date",
-          "open balance"
+          "payment date",
+          "amount paid"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "QuickBooks Online MCP read: all invoices and payments for 12 months plus the open receivables ageing."
+            "how": "Read invoices and received payments with the QuickBooks Online MCP, paid and open."
           },
           {
             "kind": "CSV",
-            "how": "QuickBooks Online: Reports, Invoice list and A/R ageing detail, export as CSV."
+            "how": "QuickBooks Online: Reports, Invoices and Received Payments, export; plus A/R Aging Detail."
           }
         ],
         "required_for": [
-          "cash-position",
-          "books-check",
-          "cash-cycle",
-          "forecast",
-          "collections-plan"
+          "evidence",
+          "integrity-opening",
+          "diagnosis-cash",
+          "diagnosis-forecast"
         ],
-        "alternative": "Without paid dates, collections are modelled on the terms plus a stated delay and marked LIMITED."
+        "alternative": "With only the aging report, days to pay is estimated from open invoices and marked low-confidence."
       },
       {
-        "id": "payables",
-        "name": "Supplier bills with due and paid dates",
-        "why": "Supplier payments are the largest outflow timing the owner controls.",
+        "id": "bills-stock",
+        "name": "Supplier bills, due dates and timber purchases, last 12 months",
+        "why": "Payments by week and the stock build-up.",
         "fields": [
           "supplier",
           "bill date",
           "due date",
           "amount",
-          "paid date",
-          "terms"
+          "payment date",
+          "category"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "QuickBooks Online MCP read: bills and bill payments for 12 months plus open payables."
+            "how": "Read bills and bill payments with the QuickBooks Online MCP."
           },
           {
             "kind": "CSV",
-            "how": "QuickBooks Online: A/P ageing detail export."
+            "how": "QuickBooks Online: A/P Aging Detail and Transaction List by Vendor, export."
           }
         ],
         "required_for": [
-          "cash-position",
-          "cash-cycle",
-          "forecast",
-          "terms-proposals"
-        ]
+          "evidence",
+          "diagnosis-cash",
+          "diagnosis-forecast"
+        ],
+        "alternative": "Without bill dates, supplier payments are forecast from the 30-day terms and marked assumed."
       },
       {
-        "id": "fixed-outflows",
-        "name": "Payroll, tax, loan and rent dates",
-        "why": "Dated fixed outflows are the lumps that breach a floor.",
+        "id": "bank",
+        "name": "Bank statements, last 12 months",
+        "why": "Actual balances; ties the ledger to reality.",
         "fields": [
-          "item",
+          "date",
+          "description",
+          "amount",
+          "balance"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Bank portal: download statements as CSV for each account, including the overdraft account."
+          }
+        ],
+        "required_for": [
+          "integrity-opening",
+          "diagnosis-cash",
+          "measurement"
+        ],
+        "alternative": "Without bank files the forecast opens on the ledger cash balance and is marked unverified."
+      },
+      {
+        "id": "fixed-costs",
+        "name": "Payroll, rent, loan and tax payments by date",
+        "why": "The fixed outflows in each week.",
+        "fields": [
+          "payee",
           "amount",
           "frequency",
-          "next date"
+          "next due date"
         ],
         "routes": [
-          {
-            "kind": "ASK",
-            "how": "The owner or accountant lists payroll dates, tax payments, loan repayments, rent and annual premiums."
-          },
           {
             "kind": "MCP",
-            "how": "QuickBooks Online MCP read of recurring transactions and payroll liabilities."
-          }
-        ],
-        "required_for": [
-          "forecast"
-        ]
-      },
-      {
-        "id": "stock",
-        "name": "Timber stock and usage",
-        "why": "Three months of stock is cash on the shelf; target cover needs usage and lead time.",
-        "fields": [
-          "timber type",
-          "quantity",
-          "unit cost",
-          "monthly usage",
-          "supplier lead time",
-          "open purchase orders"
-        ],
-        "routes": [
-          {
-            "kind": "CSV",
-            "how": "Stock valuation and usage export from the stock records, or the QuickBooks inventory report if stock is held there."
+            "how": "Read recurring bills and payroll journals from the ledger."
           },
           {
             "kind": "ASK",
-            "how": "Ask where timber stock is recorded and the supplier lead times."
+            "how": "Ask the owner or accountant for payroll dates, loan repayments, tax dates and any owner drawings."
           }
         ],
         "required_for": [
-          "cash-cycle",
-          "stock-plan"
-        ]
+          "diagnosis-forecast"
+        ],
+        "alternative": "Missing items are listed as unknown and the forecast is marked incomplete."
       }
     ],
     "stages": [
       {
+        "gate": "none",
+        "from_steps": [],
+        "uses": [],
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the problem",
-        "goal": "Turn the owner's words into a measured cash problem, a $150,000 floor, limits and the data we can reach. Writes BRIEF.md.",
+        "name": "Pin down the cash problem",
+        "goal": "Turn the request into a cash floor, a six-month window, the data we can reach and the limits around the two biggest customers. Writes BRIEF.md.",
         "owner": {
-          "role": "support-finance-tracker"
-        },
-        "gate": "none"
+          "role": "prepare-a-seasonal-cash-buffer"
+        }
       },
       {
-        "id": "cash-position",
-        "kind": "evidence",
-        "name": "Pull cash, receivables, payables and stock",
-        "goal": "Collect twelve months of bank, invoice and bill history and the stock figures into the Google Sheet, with totals checked against the source.",
-        "owner": {
-          "role": "support-finance-tracker"
-        },
-        "from_steps": [
-          "s-opening",
-          "s-behaviour"
-        ],
-        "data": [
-          "cash-accounts",
-          "receivables",
-          "payables",
-          "fixed-outflows",
-          "stock"
-        ],
-        "needs": [
-          "qbo-read",
-          "bank-csv",
-          "sheet"
-        ],
-        "depends_on": [
-          "intake"
-        ],
         "gate": "none",
-        "uses": [
-          "cash-forecast-builder",
-          "bank-and-ledger-matcher"
-        ],
-        "outputs": [
-          {
-            "id": "cash-notes",
-            "name": "What was pulled and how",
-            "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
-          },
-          {
-            "id": "payments",
-            "name": "Paid invoices with days to pay",
-            "format": "csv",
-            "path": "evidence/payment-history.csv"
-          }
-        ],
-        "checks": [
-          {
-            "id": "totals",
-            "name": "Bank, invoice and bill totals match QuickBooks and the CSV statements for the same dates",
-            "required": true
-          },
-          {
-            "id": "twelve-months",
-            "name": "Covers twelve months, or the shorter period is stated",
-            "required": true
-          },
-          {
-            "id": "missing",
-            "name": "Anything not available is named as unknown, not estimated",
-            "required": true
-          }
-        ]
-      },
-      {
-        "id": "books-check",
-        "kind": "integrity",
-        "name": "Check the opening cash and the ledgers",
-        "goal": "Reconcile the bank CSVs to QuickBooks balances, tie receivables ageing to the control account, and find unapplied payments, credit notes and duplicates before any forecast uses them.",
-        "owner": {
-          "role": "reconcile-treasury-settlement-liquidity"
-        },
         "from_steps": [
-          "s-opening"
+          "s-data"
         ],
+        "uses": [
+          "spreadsheet-checker"
+        ],
+        "id": "evidence",
+        "kind": "evidence",
+        "name": "Pull invoices, bills and bank balances",
+        "goal": "Pull 12 months of customer invoices and payments, supplier bills and bank statements into one working Google Sheet.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
         "data": [
-          "cash-accounts",
-          "receivables"
+          "invoices-payments",
+          "bills-stock",
+          "bank"
         ],
         "needs": [
           "qbo-read",
           "bank-csv"
         ],
         "depends_on": [
-          "cash-position"
-        ],
-        "gate": "none",
-        "uses": [
-          "bank-and-ledger-matcher",
-          "ledger-to-subledger-reconciler"
+          "intake"
         ],
         "outputs": [
           {
-            "id": "books-md",
-            "name": "Opening cash and ledger check",
+            "id": "dataset",
+            "name": "Working dataset",
+            "format": "csv",
+            "path": "evidence/DATASET.csv"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
             "format": "markdown",
-            "path": "integrity/OPENING-CASH.md"
+            "path": "evidence/EVIDENCE.md"
           }
         ],
         "checks": [
           {
+            "id": "periods",
+            "name": "Covers at least 12 months of invoices, payments, bills and bank movements",
+            "required": true
+          },
+          {
+            "id": "totals",
+            "name": "Invoice and bill totals by month equal the QuickBooks Online reports for the same dates within $1",
+            "required": true
+          },
+          {
+            "id": "bank-complete",
+            "name": "Every bank account, including the overdraft, is present with no gaps in dates",
+            "required": true
+          }
+        ]
+      },
+      {
+        "gate": "none",
+        "from_steps": [
+          "s-trust"
+        ],
+        "uses": [
+          "ledger-to-subledger-reconciler",
+          "spreadsheet-checker"
+        ],
+        "id": "integrity-opening",
+        "kind": "integrity",
+        "name": "Check the starting numbers",
+        "goal": "Tie the opening cash balance, open invoices and open bills to the bank and the ledger, and find stale or unapplied items.",
+        "owner": {
+          "role": "finance-bookkeeper-controller"
+        },
+        "data": [
+          "invoices-payments",
+          "bank"
+        ],
+        "needs": [
+          "qbo-read",
+          "bank-csv"
+        ],
+        "depends_on": [
+          "evidence"
+        ],
+        "outputs": [
+          {
             "id": "opening",
-            "name": "The opening balance on each account agrees to the bank statement, or the gap is itemised",
+            "name": "Opening position and tie-out",
+            "format": "markdown",
+            "path": "integrity/OPENING.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "cash-tie",
+            "name": "Opening cash per bank statements equals the ledger cash balance within $1, or each reconciling item is listed",
             "required": true
           },
           {
-            "id": "ageing-tie",
-            "name": "Receivables and payables ageing total equals the ledger control account",
+            "id": "ar-tie",
+            "name": "Open invoices by customer add up to the A/R aging total within $1",
             "required": true
           },
           {
-            "id": "unapplied",
-            "name": "Unapplied payments and credit notes are listed so overdue balances are not overstated",
+            "id": "stale",
+            "name": "Invoices over 120 days old and unapplied payments are listed with their dollar total, and the share of open receivables is stated",
             "required": true
           },
           {
@@ -593,219 +537,233 @@
             "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the forecast",
             "required": true
           }
-        ],
-        "reviewers": [
-          "support-finance-tracker"
         ]
       },
       {
-        "id": "cash-cycle",
-        "kind": "diagnosis",
-        "name": "Find where profit turns into cash too late",
-        "goal": "Measure days-to-pay by customer against the 60-day terms, the share of overdue money held by the two biggest customers, stock cover and the gap to 30-day supplier terms. Test each hypothesis.",
-        "owner": {
-          "role": "support-finance-tracker"
-        },
-        "from_steps": [
-          "s-behaviour",
-          "s-cycle"
-        ],
-        "data": [
-          "receivables",
-          "payables",
-          "stock"
-        ],
-        "depends_on": [
-          "books-check"
-        ],
         "gate": "none",
-        "support": [
-          "weekly-invoice-and-cash-chaser"
+        "from_steps": [
+          "s-paybehaviour",
+          "s-bridge"
         ],
         "uses": [
-          "cash-lever-ranker",
-          "stock-and-reorder-planner"
+          "cash-tied-up-finder",
+          "customer-concentration-risk",
+          "trend-and-forecast-analyst"
+        ],
+        "id": "diagnosis-cash",
+        "kind": "diagnosis",
+        "name": "Find why profit does not turn into cash",
+        "goal": "Measure days to pay per customer, the cash conversion cycle and a profit-to-cash bridge for the last 12 months, and test the hypotheses.",
+        "owner": {
+          "role": "weekly-invoice-and-cash-chaser"
+        },
+        "data": [
+          "invoices-payments",
+          "bills-stock",
+          "bank"
+        ],
+        "needs": [
+          "qbo-read"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-opening"
         ],
         "outputs": [
           {
-            "id": "cycle",
-            "name": "Cash cycle and hypothesis verdicts",
+            "id": "diagnosis",
+            "name": "Cash diagnosis",
             "format": "markdown",
-            "path": "diagnosis/CASH-CYCLE.md"
+            "path": "diagnosis/CASH-DIAGNOSIS.md"
           },
           {
             "id": "days-to-pay",
             "name": "Days to pay by customer",
             "format": "csv",
-            "path": "diagnosis/days-to-pay-by-customer.csv"
+            "path": "diagnosis/DAYS-TO-PAY.csv"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
           {
-            "id": "measured",
-            "name": "Average and spread of days to pay are computed from paid invoices, by customer, and the owner's unknown is replaced by a measured figure or stays unknown",
+            "id": "matched",
+            "name": "Payments are matched to invoices for at least 90% of paid-invoice dollars; partial and combined payments are flagged, not guessed",
+            "required": true
+          },
+          {
+            "id": "weighted",
+            "name": "Average days to pay is weighted by invoice dollars and shown for each of the largest customers separately",
+            "required": true
+          },
+          {
+            "id": "bridge",
+            "name": "Net profit plus change in receivables, stock, payables and other items equals the bank cash change within 2%, or the gap is named",
             "required": true
           },
           {
             "id": "verdicts",
-            "name": "Every hypothesis is marked SUPPORTED, REFUTED or UNKNOWN with evidence",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
             "required": true
           },
           {
-            "id": "concentration",
-            "name": "The two biggest customers' share of receivables and of overdue balances is stated",
-            "required": true
-          },
-          {
-            "id": "reports",
-            "name": "Owner-reported numbers are labelled as reports",
+            "id": "alternatives",
+            "name": "Each main finding names at least one competing explanation",
             "required": true
           }
         ]
       },
       {
-        "id": "forecast",
-        "kind": "diagnosis",
-        "name": "Forecast weekly cash for six months",
-        "goal": "Build the direct-method weekly forecast from the checked opening cash, observed payment behaviour, dated outflows and stock buying, with a $150,000 line and a downside case where customers pay a week later.",
-        "owner": {
-          "role": "prepare-a-seasonal-cash-buffer"
-        },
+        "gate": "none",
         "from_steps": [
           "s-forecast"
         ],
-        "data": [
-          "cash-accounts",
-          "receivables",
-          "payables",
-          "fixed-outflows"
-        ],
-        "needs": [
-          "sheet"
-        ],
-        "depends_on": [
-          "books-check"
-        ],
-        "gate": "none",
         "uses": [
           "cash-forecast-builder",
-          "startup-runway-forecaster"
+          "prepare-a-seasonal-cash-buffer"
+        ],
+        "id": "diagnosis-forecast",
+        "kind": "diagnosis",
+        "name": "Forecast cash week by week",
+        "goal": "Build a direct-method weekly forecast for 26 weeks, using real days to pay, with a base case and a bad case, and mark the first week below $150,000.",
+        "owner": {
+          "role": "prepare-a-seasonal-cash-buffer"
+        },
+        "data": [
+          "invoices-payments",
+          "bills-stock",
+          "fixed-costs",
+          "bank"
+        ],
+        "needs": [
+          "qbo-read"
+        ],
+        "depends_on": [
+          "evidence",
+          "integrity-opening"
         ],
         "outputs": [
           {
-            "id": "forecast-md",
-            "name": "Forecast summary and assumptions",
-            "format": "markdown",
-            "path": "diagnosis/FORECAST.md"
+            "id": "forecast",
+            "name": "Weekly cash forecast",
+            "format": "csv",
+            "path": "diagnosis/FORECAST.csv"
           },
           {
-            "id": "forecast-csv",
-            "name": "Weekly forecast, base and downside",
-            "format": "csv",
-            "path": "diagnosis/weekly-forecast.csv"
+            "id": "forecast-notes",
+            "name": "Assumptions and first breach",
+            "format": "markdown",
+            "path": "diagnosis/FORECAST.md"
           }
         ],
         "checks": [
           {
-            "id": "direct",
-            "name": "Built from receipts and payments by week, not from profit",
+            "id": "opening",
+            "name": "The opening balance equals the bank balance within $1",
+            "required": true
+          },
+          {
+            "id": "receipts",
+            "name": "Receipts are timed from each customer's measured days to pay, with open invoices placed by due date plus that lag; confirmed and expected receipts are kept apart",
+            "required": true
+          },
+          {
+            "id": "bad-case",
+            "name": "The bad case delays each of the two biggest customers' payments by a further 15 days and states the lowest balance and the week it occurs",
             "required": true
           },
           {
             "id": "breach",
-            "name": "Names the first week and size of any shortfall below $150,000 and below the overdraft limit",
+            "name": "The first week below $150,000 in each case is stated, or 'none in 26 weeks'",
             "required": true
           },
           {
-            "id": "scenarios",
-            "name": "At least a base case and a downside with later customer payments",
-            "required": true
-          },
-          {
-            "id": "irregular",
-            "name": "Tax, payroll and annual outflows are included with dates",
-            "required": true
-          },
-          {
-            "id": "opening-link",
-            "name": "The opening balance links to the checked figure in the opening cash check",
+            "id": "backtest",
+            "name": "Run on the prior 8 weeks, the forecast closing balances are within 10% of the bank's",
             "required": true
           }
-        ],
-        "reviewers": [
-          "support-finance-tracker"
         ]
       },
       {
-        "id": "options",
-        "kind": "options",
-        "name": "Rank the cash moves",
-        "goal": "Turn the findings into ranked moves, each with cash freed by week, cost, risk to the two biggest customers, effort and how it will be measured.",
-        "owner": {
-          "role": "support-finance-tracker"
-        },
+        "gate": "none",
         "from_steps": [
           "s-levers"
         ],
-        "depends_on": [
-          "cash-cycle",
-          "forecast"
-        ],
-        "gate": "none",
         "uses": [
           "cash-lever-ranker",
-          "supplier-payment-terms-planner"
+          "cash-tied-up-finder",
+          "customer-concentration-risk"
+        ],
+        "id": "options",
+        "kind": "options",
+        "name": "Rank the cash levers",
+        "goal": "Rank the levers (collections, timber stock, supplier timing, financing) by cash freed and when, cost, effect on the two biggest customers and confidence, and combine them into packages that hold $150,000.",
+        "owner": {
+          "role": "prepare-a-seasonal-cash-buffer"
+        },
+        "depends_on": [
+          "diagnosis-cash",
+          "diagnosis-forecast"
         ],
         "outputs": [
           {
-            "id": "options-md",
-            "name": "Ranked cash moves",
+            "id": "levers",
+            "name": "Ranked levers and packages",
             "format": "markdown",
-            "path": "options/RECOMMENDATIONS.md"
+            "path": "options/LEVERS.md"
+          },
+          {
+            "id": "levers-json",
+            "name": "Levers as data",
+            "format": "json",
+            "path": "options/levers.json"
           }
         ],
         "checks": [
           {
-            "id": "evidence",
-            "name": "Every move cites the finding it rests on",
+            "id": "cards",
+            "name": "Each lever cites its finding and shows cash freed by week 4, 13 and 26, cost (discounts, interest, lost orders), effort and risk",
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every move has cash freed by week, cost, risk, effort and how it will be measured",
+            "id": "customers",
+            "name": "Every lever says what it asks of the two biggest customers; any that touch them are marked for the owner only",
             "required": true
           },
           {
             "id": "floor",
-            "name": "The chosen combination keeps the downside case above $150,000, or says by how much it falls short",
+            "name": "Each package is rerun through the weekly forecast and shows whether the lowest balance stays at or above $150,000 in the bad case",
             "required": true
           },
           {
-            "id": "discount-cost",
-            "name": "Any early-payment discount is priced as an annual cost",
+            "id": "margin",
+            "name": "Each package states its effect on net margin against last year's 12%",
             "required": true
           }
-        ],
-        "reviewers": [
-          "chief-financial-officer"
         ]
       },
       {
+        "gate": "approve",
+        "from_steps": [],
+        "uses": [],
         "id": "decision",
         "kind": "decision",
-        "name": "Owner and accountant choose",
-        "goal": "The owner and accountant pick the moves. Ask why when a top move is passed over and record it.",
+        "name": "Owner and accountant choose the package",
+        "goal": "The owner, with the accountant, picks the package and the order of actions. Record the reason if the top package is passed over.",
         "owner": {
-          "role": "chief-financial-officer"
+          "role": "prepare-a-seasonal-cash-buffer"
         },
         "depends_on": [
           "options"
         ],
-        "gate": "approve",
         "outputs": [
           {
-            "id": "decision-md",
-            "name": "Chosen moves",
+            "id": "decision",
+            "name": "Chosen package",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -813,356 +771,139 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over moves are recorded with reasons",
+            "name": "Chosen and passed-over packages are in decisions.jsonl",
             "required": true
           },
           {
-            "id": "big-two",
-            "name": "Any step involving the two biggest customers is explicitly approved or excluded",
+            "id": "rationale",
+            "name": "A reason is recorded wherever the top package was passed over",
             "required": true
           }
         ]
       },
       {
-        "id": "collections-plan",
+        "gate": "review",
+        "from_steps": [
+          "s-act"
+        ],
+        "uses": [
+          "payment-reminder-letter-writer",
+          "unpaid-invoice-chaser",
+          "negotiation-prep-coach",
+          "supplier-contract-manager"
+        ],
+        "id": "actions",
         "kind": "production",
-        "name": "Draft the collections plan and reminders",
-        "goal": "Rank overdue invoices by age and size, draft a dated reminder sequence for ordinary accounts and a personal approach for the two biggest customers.",
+        "name": "Prepare the actions for the owner to use",
+        "goal": "For the chosen package, draft customer reminders by tier, a separate note for the two biggest customers, supplier talking points and a stock-ordering plan. The owner sends and decides; nothing goes out from here.",
         "owner": {
           "role": "weekly-invoice-and-cash-chaser"
         },
-        "from_steps": [
-          "s-collect"
-        ],
-        "data": [
-          "receivables"
-        ],
-        "needs": [
-          "qbo-read"
-        ],
         "depends_on": [
-          "decision",
-          "cash-cycle"
-        ],
-        "gate": "none",
-        "uses": [
-          "unpaid-invoice-chaser",
-          "payment-reminder-letter-writer",
-          "invoice-totals-checker"
+          "decision"
         ],
         "outputs": [
           {
-            "id": "collections",
-            "name": "Collections plan and calls list",
+            "id": "action-pack",
+            "name": "Action pack",
             "format": "markdown",
-            "path": "production/COLLECTIONS-PLAN.md"
-          },
-          {
-            "id": "drafts",
-            "name": "Reminder drafts",
-            "format": "markdown",
-            "path": "production/REMINDER-DRAFTS.md"
+            "path": "production/ACTION-PACK.md"
           }
         ],
         "checks": [
           {
-            "id": "amounts",
-            "name": "Each draft states the invoice, amount and due date, checked against QuickBooks",
+            "id": "owned",
+            "name": "Every action has an owner, a date and the cash it should free",
             "required": true
           },
           {
-            "id": "key-accounts",
-            "name": "The two biggest customers have no automatic reminders, only talking points for the owner",
+            "id": "key-customers",
+            "name": "Messages for the two biggest customers are separate, written for the relationship, and marked owner approves before use",
             "required": true
           },
           {
-            "id": "disputes",
-            "name": "Invoices with a dispute or unapplied payment are excluded from chasing",
+            "id": "facts",
+            "name": "Every amount and date in a draft matches the invoice list in the working sheet",
             "required": true
           },
           {
-            "id": "tone",
-            "name": "No threat or claim the owner has not approved",
+            "id": "sum",
+            "name": "Cash freed by the actions adds up to the chosen package within 5%",
             "required": true
           }
-        ]
+        ],
+        "optional_when": "The chosen package contains no customer, supplier or stock actions."
       },
       {
-        "id": "stock-plan",
-        "kind": "production",
-        "name": "Plan timber buying to a target cover",
-        "goal": "Set target cover from usage and supplier lead time, show cash tied above it, and schedule smaller or later purchase orders.",
-        "owner": {
-          "role": "plan-the-cash-for-your-next-stock-order"
-        },
-        "from_steps": [
-          "s-stock"
-        ],
-        "data": [
-          "stock"
-        ],
-        "depends_on": [
-          "decision",
-          "cash-cycle"
-        ],
         "gate": "none",
-        "uses": [
-          "inventory-cash-planner",
-          "stock-and-reorder-planner",
-          "cash-lever-ranker"
-        ],
-        "outputs": [
-          {
-            "id": "stock-md",
-            "name": "Timber cover and purchase schedule",
-            "format": "markdown",
-            "path": "production/STOCK-PLAN.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "cover",
-            "name": "Target cover is based on usage and lead time, and cash above target is stated",
-            "required": true
-          },
-          {
-            "id": "production-risk",
-            "name": "The plan states what stock level would stop orders being filled",
-            "required": true
-          },
-          {
-            "id": "forecast-link",
-            "name": "Purchase changes are carried into the forecast",
-            "required": true
-          }
-        ]
-      },
-      {
-        "id": "terms-proposals",
-        "kind": "production",
-        "name": "Draft supplier terms and facility proposals",
-        "goal": "Prepare the supplier timing requests and a conversation with the bank about the overdraft or a line of credit, with the cost of each shown.",
-        "owner": {
-          "role": "cut-your-product-cost-and-turn-supplier-terms-into-cash"
-        },
         "from_steps": [
-          "s-terms"
+          "s-roll"
         ],
-        "data": [
-          "payables"
-        ],
-        "depends_on": [
-          "decision",
-          "forecast"
-        ],
-        "gate": "none",
         "uses": [
-          "supplier-payment-terms-planner",
-          "negotiation-prep-coach"
+          "treasury-forecast-backtest-checker",
+          "cash-forecast-builder"
         ],
-        "outputs": [
-          {
-            "id": "terms-md",
-            "name": "Supplier and bank talking points",
-            "format": "markdown",
-            "path": "production/TERMS-PROPOSALS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "cost",
-            "name": "Each request shows what it costs us and what it frees by week",
-            "required": true
-          },
-          {
-            "id": "limits",
-            "name": "Nothing offers a guarantee, security or new term the owner has not approved",
-            "required": true
-          },
-          {
-            "id": "approach",
-            "name": "Each is framed for a call or letter the owner sends",
-            "required": true
-          }
-        ],
-        "reviewers": [
-          "chief-financial-officer"
-        ]
-      },
-      {
-        "id": "rolling-forecast",
-        "kind": "production",
-        "name": "Set up the weekly rolling forecast sheet",
-        "goal": "Turn the forecast into a rolling sheet with the $150,000 line, an alert for any week below it and a weekly update routine, including the chosen moves. One review for the owner and accountant: the forecast, the stock buying schedule and the chosen moves side by side. Reminders and supplier or bank requests are seen again one at a time when they are sent.",
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Roll the forecast forward each week",
+        "goal": "Each week, add the bank's actual balance, compare it with the forecast, update the first-breach week and flag a slide towards $150,000.",
         "owner": {
           "role": "prepare-a-seasonal-cash-buffer"
         },
-        "from_steps": [
-          "s-rhythm"
+        "data": [
+          "bank"
         ],
         "needs": [
-          "sheet"
-        ],
-        "depends_on": [
-          "decision",
-          "forecast",
-          "collections-plan",
-          "stock-plan",
-          "terms-proposals"
-        ],
-        "gate": "review",
-        "uses": [
-          "cash-forecast-builder"
-        ],
-        "outputs": [
-          {
-            "id": "rolling",
-            "name": "Rolling forecast with update routine",
-            "format": "markdown",
-            "path": "production/ROLLING-FORECAST.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "roll",
-            "name": "Dropping a finished week and adding a new week is described step by step",
-            "required": true
-          },
-          {
-            "id": "owners",
-            "name": "Each input has an owner and a day of the week",
-            "required": true
-          },
-          {
-            "id": "alert",
-            "name": "Any week below $150,000 or within the overdraft margin is flagged",
-            "required": true
-          }
-        ]
-      },
-      {
-        "id": "contact-out",
-        "kind": "execution",
-        "name": "Send approved messages and agree terms",
-        "goal": "The owner sends each approved reminder, makes each approved call and asks for each approved term change. The AI logs what was sent and what was promised.",
-        "owner": {
-          "role": "weekly-invoice-and-cash-chaser"
-        },
-        "from_steps": [
-          "s-collect",
-          "s-terms"
-        ],
-        "needs": [
-          "outreach"
-        ],
-        "depends_on": [
-          "collections-plan",
-          "stock-plan",
-          "terms-proposals"
-        ],
-        "gate": "approve_each_action",
-        "uses": [
-          "unpaid-invoice-chaser",
-          "payment-reminder-letter-writer"
-        ],
-        "outputs": [
-          {
-            "id": "log",
-            "name": "Action log with promises to pay",
-            "format": "markdown",
-            "path": "execution/ACTION-LOG.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "approved",
-            "name": "Each message or request has the owner's recorded approval before it goes",
-            "required": true
-          },
-          {
-            "id": "promises",
-            "name": "Promised payment dates are logged and carried into the forecast as promises, not cash",
-            "required": true
-          },
-          {
-            "id": "big-two",
-            "name": "Contact with the two biggest customers is by the owner, in person or by phone",
-            "required": true
-          }
-        ]
-      },
-      {
-        "id": "measurement",
-        "kind": "measurement",
-        "name": "Read forecast against actual every week",
-        "goal": "Compare actual closing cash and receipts with the forecast each week, track the lowest balance against $150,000 and days-to-pay, and flag breaches four weeks ahead.",
-        "owner": {
-          "role": "reconcile-treasury-settlement-liquidity"
-        },
-        "from_steps": [
-          "s-rhythm"
-        ],
-        "needs": [
-          "qbo-read",
           "bank-csv",
-          "sheet"
+          "qbo-read"
         ],
         "depends_on": [
-          "contact-out",
-          "rolling-forecast"
-        ],
-        "gate": "none",
-        "support": [
-          "weekly-invoice-and-cash-chaser"
-        ],
-        "uses": [
-          "cash-forecast-builder"
+          "actions"
         ],
         "outputs": [
           {
-            "id": "readout",
-            "name": "Weekly forecast versus actual",
+            "id": "weekly",
+            "name": "Weekly roll-forward",
             "format": "markdown",
-            "path": "measurement/READOUT.md"
+            "path": "measurement/WEEKLY.md"
           }
         ],
         "checks": [
           {
             "id": "actuals",
-            "name": "Actuals come from the bank, not from the forecast sheet",
+            "name": "The actual closing balance comes from the bank statement, not the ledger",
             "required": true
           },
           {
-            "id": "guardrails",
-            "name": "Overdraft use and the status of the two biggest customers are reported every week",
+            "id": "variance",
+            "name": "Receipts and payments are compared with forecast by line; any line off by more than 10% and $10,000 is explained",
             "required": true
           },
           {
-            "id": "window",
-            "name": "No verdict on the six-month floor is given before the weeks have passed",
+            "id": "alert",
+            "name": "A warning is raised when the forecast shows a week within $25,000 of the floor in the next 8 weeks",
             "required": true
           },
           {
-            "id": "error",
-            "name": "Forecast error is shown by line so the biggest misses are fixed first",
+            "id": "like-for-like",
+            "name": "Each week uses the same definitions of confirmed and expected receipts",
             "required": true
           }
         ]
       },
       {
+        "gate": "none",
+        "from_steps": [],
+        "uses": [],
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Save measured payment behaviour, which moves worked and the rules for the forecast and the weekly review, and plan the next round.",
+        "goal": "Save rules (real days to pay per customer, stock cover, payment timing) with their scope and plan the next round.",
         "owner": {
-          "role": "support-finance-tracker"
+          "role": "prepare-a-seasonal-cash-buffer"
         },
         "depends_on": [
           "measurement"
-        ],
-        "gate": "review",
-        "uses": [
-          "cash-lever-ranker"
         ],
         "outputs": [
           {
@@ -1179,8 +920,8 @@
             "required": true
           },
           {
-            "id": "next",
-            "name": "The next round names the biggest remaining gap to the floor",
+            "id": "floor-result",
+            "name": "States the lowest actual balance reached against $150,000 and whether the guardrails held",
             "required": true
           }
         ]
@@ -1188,59 +929,66 @@
     ],
     "hypotheses": [
       {
-        "id": "h-late-pay",
-        "statement": "Customers pay materially later than the 60-day terms, and that gap is the main cause of the shortfalls.",
-        "test": "Days from invoice date to paid date for 12 months of paid invoices, by customer and overall; compare with the 60 days.",
-        "confirm_if": "Average or typical days to pay is clearly beyond 60 and the late invoices are most of the open balance.",
-        "refute_if": "Most invoices are paid by day 60 and open balances are not mostly overdue.",
-        "fix_stage": "collections-plan"
+        "id": "h-late-payers",
+        "statement": "Customers pay materially later than the 60-day terms.",
+        "test": "Dollar-weighted days from due date to payment date for paid invoices in the last 12 months, plus age of open invoices.",
+        "confirm_if": "Weighted average payment is 15 or more days after the due date.",
+        "refute_if": "Weighted average is within 5 days of the due date.",
+        "fix_stage": "actions"
       },
       {
-        "id": "h-big-two",
-        "statement": "The two biggest customers hold most of the overdue money, so the fix is relationship-led rather than a general chase.",
-        "test": "Share of receivables and of overdue balances by customer.",
-        "confirm_if": "The two biggest customers hold a large share of the overdue balance.",
-        "refute_if": "Overdue money is spread across many customers.",
-        "fix_stage": "collections-plan"
+        "id": "h-concentrated-late",
+        "statement": "Most late money sits with a few customers, possibly the two biggest.",
+        "test": "Overdue dollars by customer.",
+        "confirm_if": "Five or fewer customers hold more than half of overdue dollars.",
+        "refute_if": "Overdue dollars are spread across many customers with none above 15%.",
+        "fix_stage": "actions"
       },
       {
         "id": "h-stock",
-        "statement": "Three months of timber stock is more than lead time and usage require, so cash sits on the shelf.",
-        "test": "Stock value against monthly usage and supplier lead time, by timber type.",
-        "confirm_if": "Cover is well above lead time plus a safety margin for most of the value.",
-        "refute_if": "Cover is close to lead time, or long lead times justify it.",
-        "fix_stage": "stock-plan"
+        "statement": "Timber stock is the biggest sink of cash.",
+        "test": "Change in stock value over 12 months against change in receivables, and months of stock cover.",
+        "confirm_if": "Stock grew by more than receivables did, or stock cover is above 3 months at the last three month-ends.",
+        "refute_if": "Stock is flat and receivables grew more.",
+        "fix_stage": "options"
       },
       {
-        "id": "h-term-gap",
-        "statement": "Paying suppliers at 30 days while customers pay at 60 or later forces the overdraft to fund the gap.",
-        "test": "Weekly forecast: do shortfalls follow clusters of supplier payments ahead of receipts?",
-        "confirm_if": "Shortfall weeks follow bill payments that precede the related receipts.",
-        "refute_if": "Shortfalls follow other lumps such as tax or payroll.",
-        "fix_stage": "terms-proposals"
+        "id": "h-mismatch",
+        "statement": "The gap between paying suppliers in 30 days and being paid in 60+ days plus stock cover is the structural cause.",
+        "test": "Days of stock plus days of receivables minus days of payables, at each of the last four quarter-ends.",
+        "confirm_if": "The cycle is above 120 days and the overdraft hits follow the quarter-ends when it was longest.",
+        "refute_if": "The cycle is under 90 days or the overdraft hits do not line up.",
+        "fix_stage": "options"
       },
       {
-        "id": "h-lumps",
-        "statement": "One-off outflows (tax, payroll peaks, annual premiums, loan repayments) caused the two overdraft hits.",
-        "test": "List dated outflows in the weeks before each overdraft hit and compare with a normal week.",
-        "confirm_if": "A large dated outflow lands in the week of each hit.",
-        "refute_if": "Normal weekly flows alone breached the limit.",
-        "fix_stage": "rolling-forecast"
+        "id": "h-purchase-peaks",
+        "statement": "Overdraft hits follow months of heavy timber purchasing.",
+        "test": "Compare purchases in the month before each overdraft hit with the 12-month average.",
+        "confirm_if": "Purchases before both hits exceeded 1.5 times the monthly average.",
+        "refute_if": "Purchases were at or below average before the hits.",
+        "fix_stage": "options"
       },
       {
-        "id": "h-unapplied",
-        "statement": "Unapplied payments or credit notes make the receivables look more overdue than they are.",
-        "test": "List unapplied payments, credits and disputed invoices against open balances.",
-        "confirm_if": "Unapplied items are a meaningful share of the overdue balance.",
-        "refute_if": "Few unapplied items exist.",
-        "fix_stage": "collections-plan"
+        "id": "h-other-drains",
+        "statement": "Cash is leaving through items other than working capital (loan repayments, tax, owner drawings, equipment).",
+        "test": "Bridge net profit to bank cash change and list the residual by item.",
+        "confirm_if": "Non-working-capital outflows exceed 25% of net profit for the year.",
+        "refute_if": "They are under 10% of net profit.",
+        "fix_stage": "options"
+      },
+      {
+        "id": "h-stale-receivables",
+        "statement": "The ledger overstates what is collectable because of old invoices or unapplied payments.",
+        "test": "Receivables over 120 days and unapplied payments as a share of open receivables.",
+        "confirm_if": "More than 5% of open receivables are over 120 days or unapplied.",
+        "refute_if": "Under 2%.",
+        "fix_stage": "actions"
       }
     ],
-    "dropped": [],
     "measurement": {
-      "window": "Every week for six months; the floor is judged on actual weekly closing balances from the bank.",
-      "min_volume": "At least 13 weekly forecast-versus-actual comparisons before judging forecast accuracy; at least 12 months of paid invoices before treating days-to-pay as typical.",
-      "stop_rule": "Escalate to the owner and accountant the same week if the forecast shows cash below $150,000 within four weeks or the overdraft is touched, and stop any step that puts one of the two biggest customers at risk."
+      "window": "Weekly for 26 weeks, comparing the forecast with the bank's closing balance.",
+      "min_volume": "At least 4 weeks of actuals before judging the forecast's accuracy; a verdict on the floor needs all 26 weeks.",
+      "stop_rule": "If the actual balance falls within $25,000 of the floor, stop the weekly cycle and bring the owner and accountant a revised plan."
     }
   }
 }

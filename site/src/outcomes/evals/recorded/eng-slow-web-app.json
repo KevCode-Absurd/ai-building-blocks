@@ -1,39 +1,58 @@
 {
   "case": "eng-slow-web-app",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Pages in the B2B dashboard load fast again: API p95 latency back under 500 ms (it was about 400 ms before the last six releases), with no downtime while it is fixed.",
-    "deliverable": "Reviewed fixes for the slowest endpoints, queries and screens, shipped by your team through its normal approved deploys, with Datadog before-and-after numbers and notes kept in the repo.",
+    "outcome": "Bring the p95 API latency of the B2B dashboard app back from about 1.8 seconds to under 500 ms within a month, which should take the 4 to 6 second page loads customers complain about down with it, with no downtime and with every production deploy approved by the tech lead.",
+    "ambition": {
+      "goal_beyond": "Customers stop noticing the app is slow, and the next slow release is caught by the team before customers feel it.",
+      "rungs": [
+        "Find the slowest endpoints and queries and fix them",
+        "Find which release and which change caused each part of the slowdown, fix the causes in order of customer impact (including the page-level load customers feel), and prove each fix by comparing versions",
+        "Keep it true without being asked: a per-endpoint latency budget and a release-to-release comparison that flag a regression on the first deploy"
+      ],
+      "chosen": 2,
+      "judge": "Datadog APM latency by endpoint and by service version, and the Postgres server's own statement statistics (pg_stat_statements) before and after, with real-user page load times from Datadog RUM or a repeatable synthetic test if one exists"
+    },
+    "deliverable": "Tested fixes for the causes of the slowdown, deployed one at a time with the tech lead's approval, with a before and after readout by endpoint and by release, and a latency budget proposal.",
     "done": [
-      "The slowdown is traced to specific releases, endpoints and queries, with evidence",
-      "The tech lead has chosen which fixes to ship",
-      "Each chosen fix is tested, reviewed and measured before and after on a copy",
-      "Fixes are deployed one at a time with the tech lead approving each production deploy and no downtime",
-      "API p95 is read back from Datadog against the 500 ms target",
-      "A latency guard and notes are saved in the repo so it does not creep back"
+      "Latency numbers checked: per-endpoint p95 by release recomputed, with traffic mix accounted for",
+      "Every cause hypothesis marked supported, refuted or unknown with the trace, query or diff behind it",
+      "Tech lead chose the fixes, with reasons recorded",
+      "Fixes ready as tested patches, each with a before and after measurement on a copy of production data",
+      "Fixes deployed one at a time with the tech lead's approval, with no downtime",
+      "p95 API latency under 500 ms over a full week, or an honest miss with the numbers by endpoint",
+      "Page load time checked against what customers see",
+      "Latency budget and release check proposed for the tech lead to accept or reject",
+      "Notes kept in the repo as the owner asked"
     ],
     "metric": {
-      "name": "API p95 latency",
+      "name": "p95 API latency",
       "direction": "decrease",
-      "unit": "ms",
+      "unit": "milliseconds",
       "baseline": 1800,
       "baseline_source": "reported",
       "target": 500
     },
-    "deadline": "Within one month of plan approval",
+    "deadline": "One month from plan approval",
     "guardrails": [
-      "No downtime during any change"
+      "No downtime during fixes or deploys",
+      "API error rate stays at or below its current level (baseline to be recorded from Datadog)",
+      "Median (p50) latency does not rise",
+      "Responses stay correct: contract tests on every changed endpoint compare responses before and after",
+      "Database CPU and connections stay under their current peaks (baseline to be recorded)",
+      "Every production deploy waits for the tech lead's approval"
     ],
     "limits": [
-      "Every production deploy needs the tech lead's approval",
-      "Datadog and GitHub access is read-only",
-      "Changes ship through the existing GitHub Actions deploys"
+      "Datadog and GitHub are read-only for us; deploys go through GitHub Actions with the tech lead's approval",
+      "Notes are kept in the repo, written as files for the team to commit because our GitHub access is read-only",
+      "No downtime"
     ],
     "assets": [
-      "The repository and the history of the last six releases",
-      "Datadog dashboards and traces for the API"
+      "Datadog (APM, dashboards)",
+      "GitHub repository and Actions deploy workflow",
+      "Postgres on AWS RDS"
     ],
     "connections": [
       {
@@ -45,66 +64,100 @@
         "name": "GitHub",
         "access": "read",
         "status": "connected"
+      },
+      {
+        "name": "Postgres on AWS RDS (read-only queries)",
+        "access": "read",
+        "status": "missing"
       }
     ],
-    "data_home": "Notes and working data as files in the repo",
+    "data_home": "Files in the repo, in a notes folder (the owner asked for notes in the repo)",
+    "technical_level": "Not stated by the owner. Hand over patches, queries and plain notes for the tech lead.",
     "decides": "The tech lead",
     "unknowns": [
-      "Which of the six releases caused how much of the slowdown",
-      "Which endpoints and pages are slowest",
-      "Whether Datadog also holds Postgres, RDS and browser (real-user) data",
-      "How hands-on the tech lead wants to be with the technical parts",
-      "Other guardrails such as error rate or cost, to confirm at plan approval"
+      "Which endpoints and pages account for the slowdown",
+      "Whether Datadog APM has the service version tag set, so latency can be split by release",
+      "Whether Datadog RUM or another real-user measure exists for the 4 to 6 second page loads",
+      "Which of the six releases changed what, and whether any included database migrations",
+      "Whether we can run read-only queries against the production Postgres (pg_stat_statements, EXPLAIN)",
+      "Current error rate and database CPU and connection peaks",
+      "Data volume growth and the largest customers over the six weeks",
+      "Whether a staging copy of production data exists for measuring fixes",
+      "How notes get into the repo when GitHub access is read-only"
     ],
     "answers": [
       {
-        "question": "What is the app and stack?",
-        "answer": "B2B dashboard app, React front end, Node API, Postgres on AWS RDS."
+        "question": "What is the app?",
+        "answer": "B2B dashboard app, React front end, Node API, Postgres on AWS RDS"
       },
       {
-        "question": "How bad is it and since when?",
-        "answer": "Customers say pages take 4 to 6 seconds. API p95 went from about 400 ms to 1.8 s over the last six weeks (Datadog, reported). Six releases in that time."
+        "question": "What do customers see?",
+        "answer": "Pages take 4 to 6 seconds"
       },
       {
-        "question": "What can your AI reach?",
-        "answer": "Datadog and GitHub, both read-only. Deploys use GitHub Actions and every production deploy needs the tech lead's approval."
+        "question": "What do the numbers say?",
+        "answer": "p95 API latency went from about 400 ms to 1.8 s over the last six weeks (Datadog, reported); six releases in that time"
+      },
+      {
+        "question": "What access do we have?",
+        "answer": "Datadog and GitHub connected read-only; deploys with GitHub Actions"
+      },
+      {
+        "question": "What are the deploy rules?",
+        "answer": "Every production deploy needs the tech lead's approval; no downtime"
       },
       {
         "question": "What counts as fixed, by when?",
-        "answer": "p95 under 500 ms within a month, with no downtime."
+        "answer": "p95 under 500 ms within a month"
       },
       {
-        "question": "Where do notes go and who decides?",
-        "answer": "Notes in the repo. The tech lead decides."
+        "question": "Where do notes go, and who decides?",
+        "answer": "Notes in the repo; the tech lead decides"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat a latency regression as a comparison problem first. They tag every metric and trace with the release version, compare p95 per endpoint for matched windows before and after each deploy, and only then go down a level: which queries cost the most in total time (pg_stat_statements), what their plans look like (EXPLAIN with buffers, on a copy), and how much of the user-visible time is in the browser rather than the API. Fixes go in one at a time, each with a before and after number, and a latency guard is added so the same regression is caught on the next deploy.",
+    "approach": "Practitioners treat a slowdown across several releases as a bisection problem on real traces. They first make sure the latency figure means the same thing before and after (an overall p95 can rise just because the mix of endpoints shifted), then split latency by endpoint and by service version to see which release moved which endpoint. For each slow endpoint they open traces to see where the time goes: database, external calls or code. Database causes are found from the server's own statement statistics and query plans, run on a copy of production data because plans change with data size. Front end causes are checked separately, because a 4 to 6 second page with a 1.8 second API means the page waits on several calls or heavy scripts. Each fix is shipped alone and read by version so its effect can be attributed.",
     "sources": [
-      {
-        "id": "web-otel-regression",
-        "kind": "web",
-        "title": "How to Detect Latency Regression Between Deployments by Comparing OpenTelemetry Span Histograms (OneUptime)",
-        "ref": "https://oneuptime.com/blog/post/2026-02-06-detect-latency-regression-otel-span-histograms/view",
-        "date": "2026-02-06",
-        "note": "Tag spans with version and deploy data, compare p95 per route, wait 10 to 15 minutes after a deploy, match time of day."
-      },
-      {
-        "id": "web-pg-regress",
-        "kind": "web",
-        "title": "When fast SQL turns slow: detecting query performance regressions (HackerNoon)",
-        "ref": "https://hackernoon.com/when-fast-sql-turns-slow-detecting-query-performance-regressions-before-production-suffers",
-        "date": "2026-09-28",
-        "note": "pg_stat_statements by queryid, mean hides tail latency, EXPLAIN (ANALYZE, BUFFERS) on replicas only, stale statistics."
-      },
       {
         "id": "web-dd-deploy",
         "kind": "web",
-        "title": "Datadog APM deployment tracking",
+        "title": "Deployment Tracking (Datadog Docs)",
         "ref": "https://docs.datadoghq.com/tracing/services/deployment_tracking/",
-        "date": "2026-11-02",
-        "note": "Vendor page with no printed date; read 2026-11-02. The version tag enables version-to-version and per-endpoint comparison."
+        "date": null,
+        "note": "With the version tag set, the service page lists each version with request rate, error rate and latency percentiles, and a side-by-side comparison against the previous version (any two versions in the last 30 days) with an endpoint table sortable by % change. Needs more than one version in the window. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-pg-explain",
+        "kind": "web",
+        "title": "Using EXPLAIN (PostgreSQL Documentation)",
+        "ref": "https://www.postgresql.org/docs/current/using-explain.html",
+        "date": null,
+        "note": "EXPLAIN ANALYZE runs the query (wrap writes in a transaction and roll back); BUFFERS shows I/O; large gaps between estimated and actual rows mean stale statistics; a small test table can pick a different plan than production. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-pg-stat",
+        "kind": "web",
+        "title": "pg_stat_statements (PostgreSQL Documentation)",
+        "ref": "https://www.postgresql.org/docs/current/pgstatstatements.html",
+        "date": null,
+        "note": "Per-statement calls, total and mean execution time and rows; needs the module preloaded and the extension created; resetting discards history; entries are capped at 5000 by default. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-pg-index",
+        "kind": "web",
+        "title": "CREATE INDEX, CONCURRENTLY (PostgreSQL Documentation)",
+        "ref": "https://www.postgresql.org/docs/current/sql-createindex.html",
+        "date": null,
+        "note": "A concurrent build lets writes continue but takes longer and more load, cannot run in a transaction block, and a failed build leaves an INVALID index to drop and retry. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-vitals",
+        "kind": "web",
+        "title": "Web Vitals (web.dev)",
+        "ref": "https://web.dev/articles/vitals",
+        "date": "2024-10-31",
+        "note": "Page last updated 2024-10-31 (first published 2020-05-04). Good thresholds at the 75th percentile: LCP 2.5 s, INP 200 ms, CLS 0.1; field data from real users versus lab data for catching regressions."
       },
       {
         "id": "cat-slow-workflow",
@@ -113,10 +166,22 @@
         "ref": "find-what-is-slow-fix-it-and-show-the-numbers"
       },
       {
-        "id": "cat-db-optimizer",
+        "id": "cat-db-opt",
         "kind": "catalogue",
         "title": "Database performance analyst",
         "ref": "agency-engineering-database-optimizer"
+      },
+      {
+        "id": "cat-bench",
+        "kind": "catalogue",
+        "title": "Performance benchmark planner",
+        "ref": "agency-testing-performance-benchmarker"
+      },
+      {
+        "id": "cat-speed-plan",
+        "kind": "catalogue",
+        "title": "Code performance planner",
+        "ref": "code-speed-planner"
       },
       {
         "id": "owner",
@@ -127,277 +192,378 @@
     ],
     "steps": [
       {
-        "id": "s-baseline",
-        "name": "Pull latency by endpoint and release for matched windows",
-        "why": "A regression is only visible against the period before it, per endpoint and per version, not as one global p95.",
+        "id": "s-latency",
+        "name": "Pull latency by endpoint and by service version from Datadog",
+        "why": "The reported 400 ms to 1.8 s is one number; per-endpoint and per-version series show where and when it moved.",
         "sources": [
           "web-dd-deploy",
-          "web-otel-regression",
           "owner"
         ]
       },
       {
-        "id": "s-like-for-like",
-        "name": "Check the comparison is like for like",
-        "why": "Traffic mix, time of day, cold caches after a deploy and sampling can fake or hide a shift.",
+        "id": "s-releases",
+        "name": "Read what each of the six releases changed",
+        "why": "A step at a deploy boundary points to that release's diff: queries, migrations, dependencies, config.",
         "sources": [
-          "web-otel-regression",
-          "web-dd-deploy"
+          "web-dd-deploy",
+          "owner"
         ]
       },
       {
-        "id": "s-attribute",
-        "name": "Attribute the slowdown to releases, endpoints and layers",
-        "why": "Compare each release with the one before to see which endpoints moved and whether time is in code, queries or the browser.",
+        "id": "s-trust",
+        "name": "Check the latency number means the same before and after",
+        "why": "Traffic mix, sampling and missing version tags can make an overall p95 misleading; page times need their own measure.",
         "sources": [
           "web-dd-deploy",
-          "cat-slow-workflow"
+          "web-vitals"
+        ]
+      },
+      {
+        "id": "s-traces",
+        "name": "Open traces of the slowest endpoints and see where time goes",
+        "why": "Splits each slow request into database, external call and code time so fixes target the real cost.",
+        "sources": [
+          "web-dd-deploy",
+          "cat-slow-workflow",
+          "cat-speed-plan"
         ]
       },
       {
         "id": "s-database",
-        "name": "Rank queries by total time and read their plans",
-        "why": "Total time weighs how slow a query is by how often it runs; plans show scans, repeated nested loops and stale statistics.",
+        "name": "Read the database's own statistics and plans on a copy",
+        "why": "Statement totals show the costliest queries; plans show missing indexes, row-count misses and scans, and they differ on small data.",
         "sources": [
-          "web-pg-regress",
-          "cat-db-optimizer"
+          "web-pg-stat",
+          "web-pg-explain",
+          "cat-db-opt"
         ]
       },
       {
-        "id": "s-browser",
-        "name": "Separate browser time from API time",
-        "why": "Customers feel 4 to 6 seconds; the API p95 is only part of that. Each layer needs its own fix.",
+        "id": "s-frontend",
+        "name": "Check page-level load: request count, waterfall, payload and bundle",
+        "why": "A 4 to 6 second page with a 1.8 second API points to chained calls, large payloads or heavy scripts.",
         "sources": [
-          "cat-slow-workflow",
+          "web-vitals",
           "owner"
+        ]
+      },
+      {
+        "id": "s-rank",
+        "name": "Rank fixes by customer time saved and let the tech lead choose",
+        "why": "Fixes differ in payback, effort and deploy risk.",
+        "sources": [
+          "cat-slow-workflow"
         ]
       },
       {
         "id": "s-fix",
-        "name": "Fix one cause at a time and measure before and after",
-        "why": "One change per fix keeps the gain attributable and each fix easy to roll back.",
+        "name": "Make each fix small, tested and measured on a copy of production data",
+        "why": "Plans change with data size, so a fix is proven on realistic data before it deploys.",
         "sources": [
+          "web-pg-explain",
+          "web-pg-index",
           "cat-slow-workflow",
-          "web-pg-regress"
+          "cat-bench"
         ]
       },
       {
-        "id": "s-guard",
-        "name": "Add a latency guard for future deploys",
-        "why": "A per-route p95 check after each deploy catches the next regression in minutes, not six releases later.",
-        "sources": [
-          "web-otel-regression",
-          "web-dd-deploy"
-        ]
-      },
-      {
-        "id": "s-rollout",
-        "name": "Deploy gradually with version tags and watch",
-        "why": "The owner needs each deploy approved and no downtime; a tagged, watched, reversible deploy gives that.",
+        "id": "s-deploy",
+        "name": "Deploy one fix at a time and compare versions in Datadog",
+        "why": "One change per deploy lets the version comparison attribute the gain and revert cleanly.",
         "sources": [
           "web-dd-deploy",
-          "owner"
+          "web-pg-index"
+        ]
+      },
+      {
+        "id": "s-measure",
+        "name": "Read the results against the reported baseline and the database's own numbers",
+        "why": "Two independent records of speed, plus real-user page times, show whether customers will feel it.",
+        "sources": [
+          "web-dd-deploy",
+          "web-pg-stat",
+          "web-vitals"
+        ]
+      },
+      {
+        "id": "s-budget",
+        "name": "Propose a per-endpoint latency budget and a release comparison check",
+        "why": "Keeps the result true.",
+        "sources": [
+          "web-dd-deploy",
+          "cat-bench"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Reading averages or one global p95: a stable mean can hide a tail that doubled, and a shift on one route disappears in the total.",
+        "text": "Reading one overall p95 as proof of a regression when traffic shifted toward heavier endpoints, or missing a step because versions are not tagged.",
         "sources": [
-          "web-otel-regression",
-          "web-pg-regress"
+          "web-dd-deploy"
         ]
       },
       {
-        "text": "Comparing a peak-hour deploy with off-peak data, or reading numbers in the first minutes after a deploy while caches are cold.",
+        "text": "Adding an index with a plain CREATE INDEX on a busy table, which blocks writes, or leaving an INVALID index after a failed concurrent build.",
         "sources": [
-          "web-otel-regression"
+          "web-pg-index"
         ]
       },
       {
-        "text": "Running EXPLAIN ANALYZE on production writes: it executes the statement. Use a replica, a copy or read-only statements.",
+        "text": "Judging a query fix on a small test table, where the planner picks a different plan than in production.",
         "sources": [
-          "web-pg-regress"
+          "web-pg-explain"
         ]
       },
       {
-        "text": "Assuming a changed plan is a regression, or an unchanged plan is fine: data growth can slow an identical plan.",
+        "text": "Running EXPLAIN ANALYZE on a write statement without a rollback, which really changes data.",
         "sources": [
-          "web-pg-regress"
+          "web-pg-explain"
         ]
       },
       {
-        "text": "Fixing the API while the browser is the larger share of the 4 to 6 seconds.",
+        "text": "Resetting pg_stat_statements before saving the evidence, losing the history needed to rank queries.",
         "sources": [
-          "cat-slow-workflow"
+          "web-pg-stat"
+        ]
+      },
+      {
+        "text": "Fixing the API only, when the customer-felt page time also depends on chained requests and front-end weight.",
+        "sources": [
+          "web-vitals"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Bring API latency back under 500 ms without downtime",
+    "name": "Find which releases slowed the app and fix the causes in order",
     "capabilities": [
       {
-        "id": "apm-read",
+        "id": "dd-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read latency, traces and deploys (Datadog, read-only)",
-        "why": "Pull p95 per endpoint and version, traces and deploy markers."
+        "name": "Read APM latency, traces, deployments and RUM (Datadog)",
+        "why": "Per-endpoint and per-version latency, traces, error rate and database metrics."
       },
       {
-        "id": "repo-read",
+        "id": "gh-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read code, releases and workflow runs (GitHub, read-only)",
-        "why": "Read the diffs of the six releases and the deploy workflow."
+        "name": "Read code, releases, pull requests and workflows (GitHub)",
+        "why": "Read the six releases' diffs, migrations and the deploy workflow."
       },
       {
-        "id": "repo-notes",
-        "access": "draft",
-        "via": "file",
-        "name": "Write notes and patch files in the repo notes folder",
-        "why": "Keep findings, patches and receipts in the repo as the owner asked; the team applies them through its own pull requests."
-      },
-      {
-        "id": "db-stats",
+        "id": "db-read",
         "access": "read",
         "via": "owner",
-        "name": "Query statistics and plans from a copy or replica of Postgres",
-        "why": "The owner exports pg_stat_statements and runs EXPLAIN on a copy, so nothing heavy runs on production."
+        "name": "Run read-only queries on Postgres (owner or tech lead)",
+        "why": "pg_stat_statements output and EXPLAIN plans, shared as files; no write access."
+      },
+      {
+        "id": "copy-test",
+        "access": "draft",
+        "via": "owner",
+        "name": "Test fixes on a copy of production data (owner provides the environment)",
+        "why": "Measure each fix on realistic data before it deploys."
       },
       {
         "id": "deploy",
         "access": "live",
         "via": "owner",
-        "name": "Production deploy through GitHub Actions (the team runs it, the tech lead approves)",
-        "why": "Only the team can deploy; each deploy waits for the tech lead."
+        "name": "Approve and run a production deploy (tech lead, GitHub Actions)",
+        "why": "The tech lead approves each deploy; we do not deploy."
       }
     ],
     "data": [
       {
         "id": "latency",
-        "name": "API latency by endpoint and release",
-        "why": "The base for finding which release and endpoint moved.",
+        "name": "Datadog latency series",
+        "why": "The raw material: latency, throughput and errors by endpoint and by version.",
         "fields": [
-          "date and hour",
+          "timestamp",
+          "service",
+          "resource (endpoint)",
           "service version",
-          "endpoint",
-          "request count",
           "p50",
           "p95",
           "p99",
+          "requests",
           "error rate"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read from Datadog APM for at least two weeks before the first of the six releases up to now, grouped by version tag and resource."
+            "how": "Datadog MCP: trace metrics by resource and version for 8 weeks at hourly resolution."
           },
           {
             "kind": "CSV",
-            "how": "Datadog APM Service page, Resources view, export per endpoint and version."
+            "how": "Datadog dashboard or APM export if the MCP cannot return enough points."
           }
         ],
         "required_for": [
-          "evidence",
-          "integrity-baseline"
+          "evidence-latency",
+          "integrity-measure",
+          "diagnosis",
+          "measurement"
         ],
-        "alternative": "Without a version tag, align deploy times from GitHub Actions runs with hourly p95 and mark attribution as approximate."
+        "alternative": "If the version tag is not set, deploy times from GitHub Actions stand in and release attribution is marked lower confidence."
       },
       {
-        "id": "query-stats",
-        "name": "Postgres query statistics and plans",
-        "why": "Ranks queries by total time and shows plan shape.",
+        "id": "traces",
+        "name": "Slow traces",
+        "why": "Where the time goes inside the slowest requests.",
         "fields": [
-          "queryid",
-          "calls",
+          "trace id",
+          "resource",
           "total time",
-          "mean time",
-          "rows",
-          "shared blocks read",
-          "plan"
+          "database span time",
+          "database query count",
+          "external call time",
+          "version"
         ],
         "routes": [
           {
-            "kind": "ASK",
-            "how": "The owner exports pg_stat_statements (top 50 by total time) from RDS and runs EXPLAIN (ANALYZE, BUFFERS) on a copy for the top queries."
+            "kind": "MCP",
+            "how": "Datadog MCP: sample slow traces for the top endpoints, split by version."
           }
         ],
         "required_for": [
-          "diagnosis-backend"
-        ],
-        "alternative": "Without plans, query findings are limited to code reading and marked low confidence."
+          "evidence-latency",
+          "diagnosis"
+        ]
       },
       {
-        "id": "releases",
-        "name": "The six releases and their diffs",
-        "why": "Shows what changed in code, queries and front-end assets in each release.",
+        "id": "release-diffs",
+        "name": "The six releases",
+        "why": "What changed at each deploy boundary.",
         "fields": [
-          "release tag",
-          "deploy time",
-          "merged pull requests",
+          "release",
+          "deployed at",
+          "pull requests",
+          "migrations",
+          "dependency changes",
+          "config and flag changes",
           "changed files"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read tags, merged pull requests and deploy workflow runs with the GitHub connector."
+            "how": "GitHub MCP: tags, merged pull requests, workflow runs and diffs between releases."
           }
         ],
         "required_for": [
-          "diagnosis-backend",
-          "diagnosis-frontend"
+          "evidence-releases",
+          "diagnosis"
         ]
+      },
+      {
+        "id": "db-stats",
+        "name": "Postgres statement statistics and plans",
+        "why": "The database's own record of the costliest queries and how they run.",
+        "fields": [
+          "query id",
+          "calls",
+          "total exec time",
+          "mean exec time",
+          "rows",
+          "plan",
+          "table row counts",
+          "index list"
+        ],
+        "routes": [
+          {
+            "kind": "ASK",
+            "how": "Owner or tech lead runs the supplied read-only queries (pg_stat_statements top statements, table sizes) and shares the files; EXPLAIN runs on the copy."
+          },
+          {
+            "kind": "MCP",
+            "how": "Datadog database monitoring or RDS metrics if they are enabled."
+          }
+        ],
+        "required_for": [
+          "integrity-measure",
+          "diagnosis",
+          "measurement"
+        ],
+        "alternative": "Without database access, database causes stay UNKNOWN beyond what traces show."
+      },
+      {
+        "id": "page-load",
+        "name": "Page load measures",
+        "why": "What customers feel: request waterfall, payload size, bundle size and Web Vitals.",
+        "fields": [
+          "page",
+          "LCP p75",
+          "INP p75",
+          "requests per page",
+          "payload bytes",
+          "bundle size by release"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Datadog RUM if enabled."
+          },
+          {
+            "kind": "ASK",
+            "how": "Browser network capture of the slowest pages from the tech lead or a customer-like account."
+          },
+          {
+            "kind": "MCP",
+            "how": "GitHub MCP: build output sizes from workflow artifacts."
+          }
+        ],
+        "required_for": [
+          "evidence-latency",
+          "diagnosis",
+          "measurement"
+        ],
+        "alternative": "Without real-user data, page-level claims are limited to lab captures and marked as such."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the problem",
-        "goal": "Turn the request into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
-        "from_steps": [],
+        "name": "Pin down the slowdown",
+        "goal": "Turn the owner's words into a measured problem, target, limits and the data we can reach. Writes BRIEF.md.",
         "owner": {
-          "role": "testing-performance-benchmarker"
+          "role": "find-what-is-slow-fix-it-and-show-the-numbers"
         },
-        "uses": [],
-        "depends_on": [],
-        "outputs": [],
-        "checks": [],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "evidence",
+        "id": "evidence-latency",
         "kind": "evidence",
-        "name": "Line up latency with the six releases",
-        "goal": "Pull p95 per endpoint and version for matched windows before and after each release into one working dataset in the repo.",
-        "from_steps": [
-          "s-baseline"
-        ],
+        "name": "Pull latency by endpoint and version",
+        "goal": "Pull 8 weeks of latency, throughput and error rate by endpoint and service version, slow traces for the top endpoints, and page-level load data where it exists.",
         "owner": {
-          "role": "testing-performance-benchmarker"
+          "role": "engineering-sre"
         },
-        "uses": [
-          "slow-system-investigator"
-        ],
         "data": [
           "latency",
-          "releases"
+          "traces",
+          "page-load"
         ],
         "needs": [
-          "apm-read",
-          "repo-read",
-          "repo-notes"
+          "dd-read"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "latency-dataset",
-            "name": "Latency by endpoint and release",
+            "id": "latency-csv",
+            "name": "Latency by endpoint and version",
             "format": "csv",
-            "path": "evidence/latency-by-release.csv"
+            "path": "evidence/latency.csv"
+          },
+          {
+            "id": "trace-samples",
+            "name": "Slow trace samples",
+            "format": "markdown",
+            "path": "evidence/TRACES.md"
           },
           {
             "id": "evidence-notes",
@@ -408,135 +574,196 @@
         ],
         "checks": [
           {
-            "id": "periods",
-            "name": "Covers at least two weeks before the first of the six releases and the period since",
+            "id": "span",
+            "name": "Data covers the 2 weeks before the first of the six releases and every release since, hourly or finer",
             "required": true
           },
           {
-            "id": "totals",
-            "name": "Request counts and p95 match what Datadog shows for the same filters",
+            "id": "reported",
+            "name": "Overall p95 recomputed from the data is within 15% of the reported 400 ms at the start and 1.8 s now, or the difference is explained",
             "required": true
           },
           {
-            "id": "deploys",
-            "name": "Each of the six deploys has a time and a version tag, or the missing tag is noted",
+            "id": "versions",
+            "name": "Each of the six releases is identifiable in the data by version tag or deploy time, or marked unidentified",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-latency"
+        ],
+        "uses": [
+          "agency-testing-performance-benchmarker"
+        ]
       },
       {
-        "id": "integrity-baseline",
-        "kind": "integrity",
-        "name": "Check the comparison is fair",
-        "goal": "Confirm the shift from about 400 ms to 1.8 s survives matched traffic and time of day, and that sampling and version tags did not change.",
-        "from_steps": [
-          "s-like-for-like"
-        ],
+        "id": "evidence-releases",
+        "kind": "evidence",
+        "name": "Read the six releases",
+        "goal": "For each release record the deploy time, merged pull requests, database migrations, dependency and config changes and the files that changed.",
         "owner": {
-          "role": "testing-performance-benchmarker"
+          "role": "engineering-backend-architect"
         },
-        "uses": [
-          "monitoring-system-planner"
-        ],
         "data": [
-          "latency"
+          "release-diffs"
         ],
         "needs": [
-          "apm-read"
+          "gh-read"
         ],
         "depends_on": [
-          "evidence"
+          "intake"
         ],
         "outputs": [
           {
-            "id": "baseline-check",
-            "name": "Baseline check",
+            "id": "releases",
+            "name": "Release change log",
             "format": "markdown",
-            "path": "integrity/BASELINE-CHECK.md"
+            "path": "evidence/RELEASES.md"
           }
         ],
         "checks": [
           {
-            "id": "matched",
-            "name": "Before and after windows are matched by hour of day and traffic volume",
+            "id": "six",
+            "name": "Exactly the six releases in the window are covered, each with its deploy time from the Actions run",
             "required": true
           },
           {
-            "id": "post-deploy",
-            "name": "The first 15 minutes after each deploy are excluded or shown separately",
+            "id": "migrations",
+            "name": "Every migration, dependency bump and config change in each release is listed or the release is marked as having none",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-releases"
+        ],
+        "uses": [
+          "agency-engineering-backend-architect"
+        ]
+      },
+      {
+        "id": "integrity-measure",
+        "kind": "integrity",
+        "name": "Check the latency number can be trusted",
+        "goal": "Check the figure means the same before and after: endpoint mix, sampling, version tagging, and whether the 4 to 6 second page complaint is measured anywhere. Record baselines for the guardrails.",
+        "owner": {
+          "role": "engineering-sre"
+        },
+        "data": [
+          "latency",
+          "db-stats",
+          "page-load"
+        ],
+        "needs": [
+          "dd-read"
+        ],
+        "depends_on": [
+          "evidence-latency"
+        ],
+        "outputs": [
+          {
+            "id": "measure-check",
+            "name": "Measurement check",
+            "format": "markdown",
+            "path": "integrity/MEASUREMENT-CHECK.md"
+          },
+          {
+            "id": "baselines",
+            "name": "Guardrail baselines",
+            "format": "json",
+            "path": "integrity/baselines.json"
+          }
+        ],
+        "checks": [
+          {
+            "id": "mix",
+            "name": "p95 is recomputed per endpoint and as a request-weighted overall using the old traffic mix, and the share of the rise due to mix shift is stated",
+            "required": true
+          },
+          {
+            "id": "sampling",
+            "name": "Trace sampling or retention that could bias the high percentiles is recorded",
+            "required": true
+          },
+          {
+            "id": "page",
+            "name": "The page-load complaint is tied to a measure (RUM, synthetic or capture) or marked UNMEASURED",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "Error rate, p50, database CPU and connection peaks are recorded with dates",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and says what that means for the diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-trust"
+        ],
+        "uses": [
+          "agency-testing-performance-benchmarker"
+        ]
       },
       {
-        "id": "diagnosis-backend",
+        "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find the slow endpoints and queries",
-        "goal": "Attribute the shift to releases and endpoints, rank Postgres queries by total time, read plans on a copy, and test the backend hypotheses.",
-        "from_steps": [
-          "s-attribute",
-          "s-database"
-        ],
+        "name": "Find what slowed it down",
+        "goal": "Test the hypotheses: place each step of the rise at a release, follow the slowest endpoints into their traces and queries, check the database's statistics and plans on a copy, and check the page-level load. Keep competing explanations.",
         "owner": {
           "role": "engineering-database-optimizer"
         },
-        "support": [
-          "find-what-is-slow-fix-it-and-show-the-numbers"
-        ],
-        "uses": [
-          "slow-query-fixer",
-          "slow-code-finder",
-          "release-readiness-reviewer"
-        ],
         "data": [
           "latency",
-          "query-stats",
-          "releases"
+          "traces",
+          "release-diffs",
+          "db-stats",
+          "page-load"
         ],
         "needs": [
-          "apm-read",
-          "repo-read",
-          "repo-notes",
-          "db-stats"
+          "dd-read",
+          "gh-read",
+          "db-read",
+          "copy-test"
         ],
         "depends_on": [
-          "integrity-baseline"
+          "evidence-latency",
+          "evidence-releases",
+          "integrity-measure"
         ],
         "outputs": [
           {
-            "id": "diagnosis-backend",
-            "name": "Backend diagnosis",
+            "id": "diagnosis",
+            "name": "Diagnosis",
             "format": "markdown",
-            "path": "diagnosis/BACKEND.md"
+            "path": "diagnosis/DIAGNOSIS.md"
           },
           {
-            "id": "hypotheses-backend",
-            "name": "Backend hypothesis verdicts",
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
             "format": "json",
-            "path": "diagnosis/hypotheses-backend.json"
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every backend hypothesis is SUPPORTED, REFUTED or UNKNOWN with the trace, query or plan that shows it",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the trace, query, plan or diff behind it",
             "required": true
           },
           {
-            "id": "by-release",
-            "name": "Each finding names the release and endpoint where it first appears",
+            "id": "attribution",
+            "name": "The rise from 400 ms to 1.8 s is split across releases and endpoints, and the parts add to the total within 10%, or the unexplained share is stated",
             "required": true
           },
           {
-            "id": "safe-plans",
-            "name": "Plans were run on a copy or replica, never as a write against production",
+            "id": "plans",
+            "name": "Every query blamed has its plan from a copy with realistic row counts, and actual versus estimated rows noted",
             "required": true
           },
           {
@@ -545,94 +772,40 @@
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "diagnosis-frontend",
-        "kind": "diagnosis",
-        "name": "Split browser time from API time",
-        "goal": "Find how much of the 4 to 6 seconds is in the browser: bundle growth, rendering, and the number and size of API calls a page makes.",
+        "gate": "none",
         "from_steps": [
-          "s-browser"
+          "s-traces",
+          "s-database",
+          "s-frontend"
         ],
-        "owner": {
-          "role": "engineering-frontend-developer"
-        },
+        "support": [
+          "engineering-frontend-developer",
+          "engineering-backend-architect"
+        ],
         "uses": [
-          "web-page-speed-tuner"
-        ],
-        "data": [
-          "releases"
-        ],
-        "needs": [
-          "apm-read",
-          "repo-read",
-          "repo-notes"
-        ],
-        "depends_on": [
-          "integrity-baseline"
-        ],
-        "outputs": [
-          {
-            "id": "diagnosis-frontend",
-            "name": "Front-end diagnosis",
-            "format": "markdown",
-            "path": "diagnosis/FRONTEND.md"
-          },
-          {
-            "id": "hypotheses-frontend",
-            "name": "Front-end hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses-frontend.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every front-end hypothesis is SUPPORTED, REFUTED or UNKNOWN with evidence",
-            "required": true
-          },
-          {
-            "id": "field-or-lab",
-            "name": "States whether numbers are real-user or lab; lab-only findings are marked as such",
-            "required": true
-          },
-          {
-            "id": "per-page",
-            "name": "Names the slowest pages and the API calls each one waits on",
-            "required": true
-          }
-        ],
-        "gate": "none"
+          "find-what-is-slow-fix-it-and-show-the-numbers",
+          "agency-engineering-database-optimizer",
+          "code-speed-planner",
+          "node-js-code-advisor"
+        ]
       },
       {
         "id": "options",
         "kind": "options",
         "name": "Rank the fixes",
-        "goal": "Turn supported findings into ranked fix cards, each with the expected p95 effect, effort, risk, whether it needs a migration, and how it will be measured.",
-        "from_steps": [],
+        "goal": "Turn supported causes into ranked fix cards: milliseconds of p95 saved, customer pages helped, effort, deploy risk and how each will be measured.",
         "owner": {
           "role": "find-what-is-slow-fix-it-and-show-the-numbers"
         },
-        "uses": [
-          "code-speed-planner"
-        ],
         "depends_on": [
-          "diagnosis-backend",
-          "diagnosis-frontend"
+          "diagnosis"
         ],
         "outputs": [
           {
             "id": "fix-cards",
-            "name": "Ranked fix cards",
+            "name": "Fix cards",
             "format": "markdown",
-            "path": "options/FIXES.md"
-          },
-          {
-            "id": "fix-cards-json",
-            "name": "Fix cards as data",
-            "format": "json",
-            "path": "options/fixes.json"
+            "path": "options/FIX-CARDS.md"
           }
         ],
         "checks": [
@@ -642,40 +815,39 @@
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every card has expected effect on p95, effort, confidence, risk, rollback and how it will be measured",
+            "id": "effect",
+            "name": "Every card gives expected p95 saved on named endpoints, and the cards together are checked against the 500 ms target",
             "required": true
           },
           {
-            "id": "no-downtime",
-            "name": "Every card says how it ships without downtime, for example an index built concurrently",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "Cards are ranked by expected gain per effort",
+            "id": "risk",
+            "name": "Every card states deploy risk and whether it needs a database change, with the lock and rollback noted",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-rank"
+        ],
+        "uses": [
+          "find-what-is-slow-fix-it-and-show-the-numbers"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "The tech lead chooses",
-        "goal": "The tech lead picks the fix cards to build. Ask why when a top card is passed over and record it.",
-        "from_steps": [],
+        "name": "Tech lead chooses",
+        "goal": "The tech lead picks the fix cards and the deploy order. Ask for the reason when a top card is passed over.",
         "owner": {
           "role": "find-what-is-slow-fix-it-and-show-the-numbers"
         },
-        "uses": [],
         "depends_on": [
           "options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen fixes",
+            "name": "Chosen fixes and order",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -683,429 +855,352 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
+            "name": "Chosen and passed-over cards are recorded, with the reason wherever the top card was passed over",
             "required": true
           },
-          {
-            "id": "rationale",
-            "name": "A reason is recorded wherever a top card was passed over",
-            "required": true
-          }
-        ],
-        "gate": "approve"
-      },
-      {
-        "id": "backend-fixes",
-        "kind": "production",
-        "name": "Build the API and query fixes",
-        "goal": "Write the chosen API and database fixes as patch files with tests, and measure each on a copy before and after.",
-        "from_steps": [
-          "s-fix"
-        ],
-        "owner": {
-          "role": "find-what-is-slow-fix-it-and-show-the-numbers"
-        },
-        "support": [
-          "engineering-database-optimizer"
-        ],
-        "uses": [
-          "slow-query-fixer",
-          "slow-code-fixer",
-          "pull-request-risk-reviewer"
-        ],
-        "needs": [
-          "repo-read",
-          "repo-notes",
-          "db-stats"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis-backend"
-        ],
-        "outputs": [
-          {
-            "id": "backend-patches",
-            "name": "Patch files for the team to review",
-            "format": "markdown",
-            "path": "production/BACKEND-PATCHES.md"
-          },
-          {
-            "id": "backend-timings",
-            "name": "Before and after timings",
-            "format": "markdown",
-            "path": "production/BACKEND-TIMINGS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "scoped",
-            "name": "Only chosen fixes are included, one change per patch",
-            "required": true
-          },
-          {
-            "id": "before-after",
-            "name": "Each fix has a before and after timing and identical results on the same data",
-            "required": true
-          },
-          {
-            "id": "lock-free",
-            "name": "Index and schema changes avoid long table locks and are reversible",
-            "required": true
-          },
-          {
-            "id": "tests",
-            "name": "Existing tests pass and new tests cover the changed paths",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No API or query card was chosen.",
-        "reviewers": [
-          "testing-performance-benchmarker"
-        ]
-      },
-      {
-        "id": "frontend-fixes",
-        "kind": "production",
-        "name": "Build the front-end fixes",
-        "goal": "Write the chosen front-end fixes as patch files: smaller bundles, fewer re-renders, fewer or lighter API calls.",
-        "from_steps": [
-          "s-fix"
-        ],
-        "owner": {
-          "role": "engineering-frontend-developer"
-        },
-        "uses": [
-          "web-page-speed-tuner",
-          "speed-tuner"
-        ],
-        "needs": [
-          "repo-read",
-          "repo-notes"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis-frontend"
-        ],
-        "outputs": [
-          {
-            "id": "frontend-patches",
-            "name": "Patch files for the team to review",
-            "format": "markdown",
-            "path": "production/FRONTEND-PATCHES.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "scoped",
-            "name": "Only chosen fixes are included",
-            "required": true
-          },
-          {
-            "id": "measured",
-            "name": "Each fix has a lab before and after for the affected page",
-            "required": true
-          },
-          {
-            "id": "behaviour",
-            "name": "Screens behave the same: existing tests pass and visible differences are listed",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No front-end card was chosen.",
-        "reviewers": [
-          "testing-performance-benchmarker"
-        ]
-      },
-      {
-        "id": "latency-guard",
-        "kind": "production",
-        "name": "Add a latency guard",
-        "goal": "Draft a per-route p95 check by version and a Datadog monitor so the next regression is caught after one deploy.",
-        "from_steps": [
-          "s-guard"
-        ],
-        "owner": {
-          "role": "testing-performance-benchmarker"
-        },
-        "uses": [
-          "monitoring-planner"
-        ],
-        "needs": [
-          "apm-read",
-          "repo-notes"
-        ],
-        "depends_on": [
-          "decision",
-          "integrity-baseline"
-        ],
-        "outputs": [
-          {
-            "id": "guard-spec",
-            "name": "Latency guard and monitor spec",
-            "format": "markdown",
-            "path": "production/LATENCY-GUARD.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "thresholds",
-            "name": "Thresholds are per route and percentile and come from the checked baseline",
-            "required": true
-          },
-          {
-            "id": "timing",
-            "name": "The check waits for post-deploy traffic and matches time of day",
-            "required": true
-          },
-          {
-            "id": "draft-only",
-            "name": "Delivered as a draft for the team to add; nothing is created in Datadog or the pipeline",
-            "required": true
-          }
-        ],
-        "gate": "none"
-      },
-      {
-        "id": "release-plan",
-        "kind": "production",
-        "name": "Plan the rollout, one fix at a time",
-        "goal": "Order the approved patches, set the version tag for each deploy, the watch window, the stop rule and the rollback for each. This is the one review of the patches, the latency guard and the rollout order together, before any deploy.",
-        "from_steps": [
-          "s-rollout"
-        ],
-        "owner": {
-          "role": "release-manager"
-        },
-        "uses": [
-          "safe-release-planner",
-          "copilot-devops-rollout-plan"
-        ],
-        "needs": [
-          "repo-read",
-          "repo-notes"
-        ],
-        "depends_on": [
-          "backend-fixes",
-          "frontend-fixes",
-          "latency-guard"
-        ],
-        "outputs": [
-          {
-            "id": "release-plan",
-            "name": "Rollout plan",
-            "format": "markdown",
-            "path": "production/RELEASE-PLAN.md"
-          }
-        ],
-        "checks": [
           {
             "id": "order",
-            "name": "Deploys are one fix at a time, lowest risk first",
-            "required": true
-          },
-          {
-            "id": "rollback",
-            "name": "Every deploy has a rollback and a stop rule",
-            "required": true
-          },
-          {
-            "id": "approver",
-            "name": "The tech lead approves each production deploy before it starts",
+            "name": "The deploy order puts one change in each deploy, so each effect can be read",
             "required": true
           }
         ],
-        "gate": "review"
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "release-fixes",
-        "kind": "execution",
-        "name": "Deploy the approved fixes",
-        "goal": "The team deploys each approved fix through GitHub Actions; the tech lead approves every production deploy. Read back p95 for each version after the watch window.",
-        "from_steps": [
-          "s-rollout"
-        ],
+        "id": "fixes",
+        "kind": "production",
+        "name": "Make the fixes",
+        "goal": "For each chosen card write the smallest fix as a patch, with tests, and measure it on a copy of production data before and after.",
         "owner": {
-          "role": "release-manager"
+          "role": "engineering-backend-architect"
         },
+        "data": [
+          "release-diffs",
+          "db-stats"
+        ],
+        "needs": [
+          "gh-read",
+          "copy-test"
+        ],
+        "depends_on": [
+          "decision"
+        ],
+        "outputs": [
+          {
+            "id": "patches",
+            "name": "Patches with notes",
+            "format": "markdown",
+            "path": "production/PATCHES.md"
+          },
+          {
+            "id": "measures",
+            "name": "Before and after measurements",
+            "format": "csv",
+            "path": "production/measurements.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "one-change",
+            "name": "Each patch makes one change and names the card it carries out",
+            "required": true
+          },
+          {
+            "id": "faster",
+            "name": "Each patch shows before and after latency on the copy over at least 100 requests, with p95 and the plan",
+            "required": true
+          },
+          {
+            "id": "same-answers",
+            "name": "Contract tests show the changed endpoints return the same responses before and after, or each difference is explained",
+            "required": true
+          },
+          {
+            "id": "index-safe",
+            "name": "Any index is built with CREATE INDEX CONCURRENTLY outside a transaction, with a check for an INVALID index and the drop-and-retry step",
+            "required": true
+          },
+          {
+            "id": "review",
+            "name": "A second reviewer finds no unresolved blocker in the patches",
+            "required": true
+          }
+        ],
+        "gate": "review",
+        "from_steps": [
+          "s-fix"
+        ],
+        "support": [
+          "engineering-database-optimizer",
+          "testing-performance-benchmarker",
+          "pull-request-reviewer"
+        ],
         "uses": [
-          "safe-release-planner"
+          "find-what-is-slow-fix-it-and-show-the-numbers",
+          "agency-engineering-database-optimizer",
+          "agency-testing-performance-benchmarker",
+          "node-js-code-advisor",
+          "pull-request-reviewer"
+        ]
+      },
+      {
+        "id": "deploy",
+        "kind": "execution",
+        "name": "Deploy one fix at a time",
+        "goal": "With the tech lead approving each deploy through the existing GitHub Actions flow, ship one fix at a time and read Datadog by version before the next.",
+        "owner": {
+          "role": "engineering-sre"
+        },
+        "data": [
+          "latency"
         ],
         "needs": [
           "deploy",
-          "apm-read"
+          "dd-read"
         ],
         "depends_on": [
-          "release-plan"
+          "fixes"
         ],
         "outputs": [
           {
-            "id": "release-log",
-            "name": "Deploy log with versions and post-deploy readings",
+            "id": "deploy-log",
+            "name": "Deploy log with readings",
             "format": "markdown",
-            "path": "execution/RELEASE-LOG.md"
+            "path": "execution/DEPLOY-LOG.md"
           }
         ],
         "checks": [
           {
             "id": "approved",
-            "name": "Each production deploy has the tech lead's approval recorded before it ran",
+            "name": "Each deploy has the tech lead's approval recorded before it ran",
             "required": true
           },
           {
-            "id": "tagged",
-            "name": "Each deploy carries a version tag so Datadog can compare it with the one before",
+            "id": "no-downtime",
+            "name": "Error rate and availability during each deploy are read from Datadog and show no outage",
             "required": true
           },
           {
-            "id": "watch",
-            "name": "p95 for the new version is compared after the watch window; a breach triggers the rollback in the plan",
+            "id": "compare",
+            "name": "After each deploy, the new version is compared with the previous in Datadog deployment tracking, endpoint by endpoint, before the next deploy",
+            "required": true
+          },
+          {
+            "id": "revert",
+            "name": "A deploy that raises error rate or p95 on any endpoint is reverted, with the reason noted",
             "required": true
           }
         ],
-        "gate": "approve_each_action"
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-deploy"
+        ],
+        "uses": [
+          "agency-testing-performance-benchmarker"
+        ]
       },
       {
         "id": "measurement",
         "kind": "measurement",
         "name": "Read the results honestly",
-        "goal": "Read p95 against the 500 ms target on matched windows, per endpoint and overall, and check the guardrail.",
-        "from_steps": [],
+        "goal": "Compare p95 by endpoint and by version against the baseline, read the database's own statistics, check page-level load, and check every guardrail.",
         "owner": {
-          "role": "testing-performance-benchmarker"
+          "role": "engineering-sre"
         },
-        "uses": [
-          "monitoring-system-planner"
+        "data": [
+          "latency",
+          "db-stats",
+          "page-load"
         ],
         "needs": [
-          "apm-read"
+          "dd-read",
+          "db-read"
         ],
         "depends_on": [
-          "release-fixes"
+          "deploy"
         ],
         "outputs": [
           {
             "id": "readout",
-            "name": "Latency readout",
+            "name": "Results readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
           }
         ],
         "checks": [
           {
-            "id": "like-for-like",
-            "name": "Before and after use the same percentile, endpoints and matched hours",
+            "id": "window",
+            "name": "The after window is a full week with at least 7 weekdays of traffic comparable to the baseline week, or the difference is stated",
             "required": true
           },
           {
-            "id": "target",
-            "name": "Overall p95 and each fixed endpoint are shown against 500 ms",
+            "id": "two-records",
+            "name": "The verdict states Datadog p95 and the pg_stat_statements mean time for the changed queries",
             "required": true
           },
           {
-            "id": "guardrail",
-            "name": "Shows there was no downtime and notes any rise in errors",
+            "id": "mix",
+            "name": "Overall p95 is shown with the traffic mix held fixed as well as actual",
             "required": true
           },
           {
-            "id": "volume",
-            "name": "A verdict is given only after a full week of traffic; otherwise INCONCLUSIVE",
+            "id": "guardrails",
+            "name": "Error rate, p50, database CPU and connections and response correctness are each checked against the recorded baselines",
+            "required": true
+          },
+          {
+            "id": "pages",
+            "name": "Page load is reported from real-user or repeatable capture data, or marked UNMEASURED",
+            "required": true
+          },
+          {
+            "id": "honest",
+            "name": "A missed target is reported with the numbers and the endpoints that fell short",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "agency-testing-performance-benchmarker"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Record which fixes worked, save rules for the team (version tags, guard thresholds) with their scope and plan the next round if the target is missed.",
-        "from_steps": [],
+        "goal": "Record which release practices let the slowdown through and propose a per-endpoint latency budget and a release-to-release comparison for the tech lead.",
         "owner": {
           "role": "find-what-is-slow-fix-it-and-show-the-numbers"
         },
-        "uses": [],
         "depends_on": [
           "measurement"
         ],
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and next round",
+            "name": "Learnings and proposed rules",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
         ],
         "checks": [
           {
-            "id": "scoped",
-            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "id": "timeline",
+            "name": "Each cause is tied to the release that introduced it, with the deploy time",
             "required": true
           },
           {
-            "id": "next",
-            "name": "If the target was missed, the next hypotheses and the data needed are named",
+            "id": "budget",
+            "name": "The proposed budget gives numeric limits per top endpoint, where the check runs, and who owns it; nothing is switched on without the tech lead's yes",
+            "required": true
+          },
+          {
+            "id": "scoped",
+            "name": "Each rule says whether it holds for this app, this business or the playbook",
             "required": true
           }
         ],
-        "gate": "review"
+        "gate": "review",
+        "from_steps": [
+          "s-budget"
+        ],
+        "uses": [
+          "agency-testing-performance-benchmarker"
+        ]
       }
     ],
     "hypotheses": [
       {
+        "id": "h-one-release",
+        "statement": "One release caused most of the rise.",
+        "test": "p95 by service version and by day; compare each version with the previous in deployment tracking.",
+        "confirm_if": "A single version boundary accounts for 50% or more of the total rise in p95.",
+        "refute_if": "The rise is spread in steps of under 20% each across several releases, or is smooth.",
+        "fix_stage": "fixes"
+      },
+      {
+        "id": "h-traffic-mix",
+        "statement": "The overall p95 rose because traffic shifted to heavier endpoints, not because endpoints got slower.",
+        "test": "Per-endpoint p95 before and after, and overall p95 with the old traffic mix.",
+        "confirm_if": "Per-endpoint p95 changed by under 10% on the top endpoints while overall p95 rose.",
+        "refute_if": "Several top endpoints each rose by 50% or more.",
+        "fix_stage": "fixes"
+      },
+      {
         "id": "h-n-plus-one",
-        "statement": "A release added per-row queries (N+1) or extra queries on list and dashboard endpoints.",
-        "test": "Compare database queries per request for the same endpoint across versions in traces, and read the diff of each release for new loops that query.",
-        "confirm_if": "Queries per request rose on the slow endpoints at the release that added the loop.",
-        "refute_if": "Queries per request are flat across versions.",
-        "fix_stage": "backend-fixes"
+        "statement": "Changed endpoints now run many database queries per request.",
+        "test": "Database queries per trace for the top endpoints, by version.",
+        "confirm_if": "Queries per request on a top endpoint rose 3x or more between versions, or exceed 20.",
+        "refute_if": "Query counts are flat across versions.",
+        "fix_stage": "fixes"
       },
       {
-        "id": "h-plan-flip",
-        "statement": "A query plan changed or data growth made a query scan too much: a missing index, or stale statistics.",
-        "test": "Rank pg_stat_statements by total time, then run EXPLAIN (ANALYZE, BUFFERS) on a copy and compare scans, rows read and estimated versus actual rows.",
-        "confirm_if": "Top queries show sequential scans, heavy buffer reads or large estimate gaps that match the slow endpoints.",
-        "refute_if": "Top queries use sensible index plans and their time per call is unchanged.",
-        "fix_stage": "backend-fixes"
+        "id": "h-missing-index",
+        "statement": "Costly queries scan large tables without a useful index.",
+        "test": "pg_stat_statements top statements by total time, plans on a copy with realistic row counts.",
+        "confirm_if": "The top 5 statements are 50% or more of database time and at least one sequentially scans a large table while filtering out most rows.",
+        "refute_if": "Top statements use indexes and estimated and actual rows agree.",
+        "fix_stage": "fixes"
       },
       {
-        "id": "h-payload",
-        "statement": "Responses got larger or less filtered, so serialization and transfer time grew in both API and browser.",
-        "test": "Compare response size and API span time per endpoint by version; read the diffs for removed pagination or added fields.",
-        "confirm_if": "Payload size grew by release in step with latency.",
-        "refute_if": "Payload size is stable.",
-        "fix_stage": "backend-fixes"
+        "id": "h-data-growth",
+        "statement": "Slowness follows data growth or a few large customers, not a release.",
+        "test": "Latency against table row counts and per-customer volume over the six weeks.",
+        "confirm_if": "Latency rises smoothly with row counts or concentrates in a few customers, with no step at deploys.",
+        "refute_if": "Steps line up with deploy times and latency is similar across customers.",
+        "fix_stage": "fixes"
+      },
+      {
+        "id": "h-db-saturation",
+        "statement": "The database itself is saturated.",
+        "test": "RDS CPU, connections, IOPS and lock waits over the window.",
+        "confirm_if": "CPU above 70% or connections near the limit for sustained periods since the rise began.",
+        "refute_if": "Database load is flat and well under limits.",
+        "fix_stage": "fixes"
+      },
+      {
+        "id": "h-dependency",
+        "statement": "A dependency upgrade or new middleware added time to every request.",
+        "test": "Compare profiles or span breakdowns of the same endpoint between two versions.",
+        "confirm_if": "One package or function takes 20% or more extra time per request, in every endpoint.",
+        "refute_if": "The extra time is in one endpoint's own query or code.",
+        "fix_stage": "fixes"
+      },
+      {
+        "id": "h-external",
+        "statement": "A slower outside service is adding time.",
+        "test": "External call span time by version.",
+        "confirm_if": "External call time explains 30% or more of the added latency.",
+        "refute_if": "External call time is flat.",
+        "fix_stage": "fixes"
+      },
+      {
+        "id": "h-chatty-page",
+        "statement": "Pages are slow mainly because they wait on many or chained API calls and large payloads.",
+        "test": "Request waterfall of the slowest pages: calls per page, longest chain, payload size.",
+        "confirm_if": "More than 10 API calls per page, a chain of 3 or more dependent calls, or a payload over 1 MB.",
+        "refute_if": "Page time is close to the longest single call plus render.",
+        "fix_stage": "fixes"
       },
       {
         "id": "h-bundle",
-        "statement": "Part of the 4 to 6 seconds is in the browser: bundle growth or re-rendering added by recent releases.",
-        "test": "Build each release tag, compare bundle size, and profile the slowest pages; use real-user data if Datadog holds it.",
-        "confirm_if": "Bundle or render time grew across releases on the slow pages.",
-        "refute_if": "Browser time is flat and the API accounts for the full gap.",
-        "fix_stage": "frontend-fixes"
-      },
-      {
-        "id": "h-capacity",
-        "statement": "The database or connection pool is short of capacity (CPU, IO or connections), not a code change.",
-        "test": "Check RDS CPU, IOPS, connections and wait events and the app pool settings against the slow periods, if Datadog holds them.",
-        "confirm_if": "Resource saturation lines up with the slow periods.",
-        "refute_if": "Resources have headroom during the slow periods.",
-        "fix_stage": "backend-fixes"
-      },
-      {
-        "id": "h-measurement",
-        "statement": "Part of the apparent rise comes from the measurement: traffic mix, sampling or a version-tag change.",
-        "test": "Re-read p95 on matched hours and volumes and check sampling and tags over the six weeks.",
-        "confirm_if": "The rise shrinks a lot on matched data.",
-        "refute_if": "The rise holds on matched data.",
-        "fix_stage": "integrity-baseline"
+        "statement": "The front-end bundle grew and slows the page.",
+        "test": "Bundle size by release and Web Vitals at the 75th percentile.",
+        "confirm_if": "The main bundle grew 30% or more over the six releases, or LCP p75 is above 2.5 s with the API not the main cost.",
+        "refute_if": "Bundle size is flat and LCP is within 2.5 s.",
+        "fix_stage": "fixes"
       }
     ],
     "measurement": {
-      "window": "At least one full week of normal traffic after the last fix is live; compare the same hours and endpoints as the baseline.",
-      "min_volume": "Enough requests per endpoint for a stable p95 in each matched window; if an endpoint has too few, report it as INCONCLUSIVE.",
-      "stop_rule": "Stop and roll back a deploy if its p95 or error rate gets worse than the version before it after the watch window; otherwise keep the one-fix-at-a-time order."
-    }
+      "window": "A full week after the last deploy, against the week before the first deploy, and each deploy read against the previous version on the same days.",
+      "min_volume": "At least 1,000 requests per top endpoint in each comparison window; below that, the endpoint's verdict is INCONCLUSIVE.",
+      "stop_rule": "Revert a deploy at once if error rate rises or p95 rises on any endpoint; otherwise read the full window before a verdict."
+    },
+    "dropped": []
   }
 }

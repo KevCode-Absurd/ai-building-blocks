@@ -1,1265 +1,1301 @@
 {
-  "case": "local-dental-new-patients",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
-  "brief": {
-    "outcome": "Raise new patients at the two-dentist clinic from about 35 a month to 60 a month by June, using only advertising and claims that follow UK dental and health advertising rules, with no patient data leaving the practice system.",
-    "deliverable": "A compliant set of Google Business Profile, website and (if the owner chooses) Google search ad changes, applied with the owner's approval of each one, plus a monthly read of new patients against the 35 baseline.",
-    "done": [
-      "The baseline of 35 new patients a month is checked against the practice software report and the sources of new patients are known as far as the records allow",
-      "Enquiries (calls, forms, online bookings) can be counted by source without any patient data leaving the practice system",
-      "Every change and ad claim passed a UK advertising-rules check and no before-and-after photo is used without the patient's consent and proof on file",
-      "The owner and practice manager chose which fixes and which treatments to promote, with reasons recorded",
-      "Approved changes are live, and any search ad spend stays within 1,500 pounds a month",
-      "Results are read against 60 new patients a month and what was learned is saved for the next round"
-    ],
-    "metric": {
-      "name": "New patients per month",
-      "direction": "increase",
-      "unit": "new patients per month",
-      "baseline": 35,
-      "baseline_source": "reported",
-      "target": 60
-    },
-    "deadline": "June (the next June; the owner gave no year)",
-    "guardrails": [
-      "All advertising follows UK dental and health advertising rules",
-      "No before-and-after photos without the patient's consent",
-      "No patient data leaves the practice system"
-    ],
-    "limits": [
-      "Advertising budget up to 1,500 pounds a month",
-      "Changes are limited to the Google Business Profile, the WordPress website and new ads; the owner can edit the website",
-      "The owner and practice manager decide; nothing goes live without their approval of each action"
-    ],
-    "assets": [
-      "Google Business Profile: 4.6 stars from 140 reviews (reported)",
-      "WordPress website the practice can edit",
-      "Google Search Console for the website (browser access)",
-      "Practice software new-patient report (about 35 a month, reported)"
-    ],
-    "connections": [
-      {
-        "name": "Google Business Profile (browser)",
-        "access": "read",
-        "status": "available"
-      },
-      {
-        "name": "Google Search Console (browser)",
-        "access": "read",
-        "status": "available"
-      },
-      {
-        "name": "WordPress website (owner edits)",
-        "access": "draft",
-        "status": "available"
-      },
-      {
-        "name": "Practice software report (exported by the practice)",
-        "access": "read",
-        "status": "available"
-      },
-      {
-        "name": "Google Ads account",
-        "access": "live",
-        "status": "missing"
-      }
-    ],
-    "data_home": "A file in this project, holding counts only (the owner did not choose; we chose this because no patient data may leave the practice system)",
-    "technical_level": "Can edit the WordPress website; otherwise not stated",
-    "decides": "The owner, together with the practice manager",
-    "unknowns": [
-      "Which treatments are most profitable to promote",
-      "Where today's 35 new patients come from",
-      "Whether Google Analytics is installed on the website",
-      "Whether the practice is NHS, mixed or private (needed for advertising rules)",
-      "How soon a new patient can get a first appointment",
-      "Whether our AI may edit the Business Profile or only draft changes",
-      "How the 4.6 rating and 140 reviews compare with nearby practices",
-      "Whether a brand guide or approved claims list exists",
-      "Year of the June deadline"
-    ],
-    "answers": [
-      {
-        "question": "Who are you and what is the baseline?",
-        "answer": "Two-dentist clinic in a mid-sized UK town. About 35 new patients a month (practice software report), want 60 by June."
-      },
-      {
-        "question": "What do you already have online?",
-        "answer": "Google Business Profile has 4.6 stars from 140 reviews. Website is WordPress; we can edit it. No ads running now."
-      },
-      {
-        "question": "Budget?",
-        "answer": "Up to 1,500 pounds a month."
-      },
-      {
-        "question": "Rules and limits?",
-        "answer": "Advertising must follow UK dental and health advertising rules, no before-and-after photos without consent, and no patient data leaves the practice system."
-      },
-      {
-        "question": "What access do we have?",
-        "answer": "Google Business Profile and Search Console access through the browser."
-      },
-      {
-        "question": "Who decides?",
-        "answer": "I decide with my practice manager."
-      },
-      {
-        "question": "What is unknown?",
-        "answer": "Which treatments are most profitable to promote."
-      }
-    ]
+ "case": "local-dental-new-patients",
+ "host": "claude-sonnet-5-5 (Claude Code subagent)",
+ "recorded": "2026-11-03",
+ "method_version": 3,
+ "brief": {
+  "outcome": "Grow new patients at the two-dentist clinic from about 35 a month to 60 a month by June, with the practice able to see which of its channels brought them.",
+  "ambition": {
+   "goal_beyond": "A steady supply of the right new patients, for the treatments the practice most wants to do, that does not depend on one big push or on word of mouth alone",
+   "rungs": [
+    "Fix the Google profile and the website enquiry path, and launch one compliant search campaign",
+    "Find where people who look for a dentist in town are lost (not seen, not enquiring, or enquiring but not booked) and fix the biggest cause first",
+    "Keep it true: a monthly check of new patients by source and of enquiry-to-booking rate that flags a drop before it costs a quarter"
+   ],
+   "chosen": 2,
+   "judge": "The practice software new-patient report by month and by source (counts only), read against the 35 a month baseline and the same months a year earlier"
   },
-  "research": {
-    "approach": "Practitioners treat dental growth as a chain: be found locally, turn visits into contact, answer every enquiry quickly, and measure new patients by source. They fix the free, high-intent assets first (an accurate Business Profile with every service listed, mobile pages that make calling or booking one tap) and add paid search only for the treatments worth promoting. In the UK the advertising rules come first, not last: promotional material must be accurate and not misleading, must state NHS or private status and carry GDC details, and before-and-after images must be genuine and representative with signed, dated proof. Tracking is the usual weak spot, because phone calls are the main lead source and are rarely tied to a source, so they count enquiries by channel and judge success by new patients booked, not clicks.",
+  "deliverable": "A fixed and complete Google Business Profile, a faster enquiry path on the WordPress site with treatment pages, a compliant Google Ads search campaign launched with the owner's approval inside the budget, and a monthly readout of new patients against the 60 target",
+  "done": [
+   "Baseline of new patients by month and source checked against the practice software report",
+   "Tracking of calls, forms and booking requests checked, with no patient data sent to ad or analytics tools",
+   "Diagnosis that marks every hypothesis supported, refuted or unknown",
+   "Owner and practice manager choice recorded, including which treatments to promote",
+   "Profile, page and ad wording checked against UK dental advertising rules and approved by the owner",
+   "Changes made live only with approval, and the ad campaign created paused first",
+   "Monthly readout against 60 new patients a month, with guardrails checked"
+  ],
+  "metric": {
+   "name": "New patients per month",
+   "direction": "increase",
+   "unit": "new patients",
+   "baseline": 35,
+   "baseline_source": "reported",
+   "target": 60
+  },
+  "deadline": "June (taken as June 2027)",
+  "guardrails": [
+   "Google review rating stays at or above 4.6",
+   "Paid spend stays at or below 1,500 pounds in any month",
+   "Every ad and page claim follows UK dental and health advertising rules",
+   "No before-and-after photos without the patient's written consent",
+   "No patient data leaves the practice system",
+   "Cost per new patient stays below what a new patient is worth to the practice, once the practice sets that figure"
+  ],
+  "limits": [
+   "Advertising budget up to 1,500 pounds a month",
+   "UK dental and health advertising rules apply to all copy and images",
+   "No before-and-after photos without consent",
+   "Patient data stays inside the practice software; only counts and totals are shared with us",
+   "Changes to the website are made by the practice in WordPress"
+  ],
+  "assets": [
+   "Google Business Profile (4.6 stars, 140 reviews)",
+   "WordPress website the practice can edit",
+   "Practice software new-patient report"
+  ],
+  "connections": [
+   {
+    "name": "Google Business Profile (browser)",
+    "access": "read",
+    "status": "connected"
+   },
+   {
+    "name": "Google Search Console (browser)",
+    "access": "read",
+    "status": "connected"
+   },
+   {
+    "name": "WordPress site",
+    "access": "draft",
+    "status": "connected"
+   },
+   {
+    "name": "Practice software new-patient report (export)",
+    "access": "read",
+    "status": "available"
+   },
+   {
+    "name": "Google Ads",
+    "access": "live",
+    "status": "missing"
+   }
+  ],
+  "data_home": "Files in this project, chosen by us because the owner did not say; only counts and totals, never patient records",
+  "technical_level": "Not stated; ready drafts and plain steps for WordPress changes, with the practice manager making the edits",
+  "decides": "The owner together with the practice manager",
+  "unknowns": [
+   "Which treatments are most profitable to promote",
+   "What a new patient is worth to the practice over time",
+   "Where the 35 new patients a month come from today",
+   "How many calls, forms and booking requests come in and how many become a first appointment",
+   "Whether the clinic has chair time for 60 new patients a month",
+   "Whether Google Analytics and call or form tracking are in place on the site",
+   "Whether patients are NHS, private or mixed",
+   "Whether any Google Ads account exists"
+  ],
+  "answers": [
+   {
+    "question": "Clinic and goal",
+    "answer": "Two-dentist clinic in a mid-sized UK town; about 35 new patients a month (practice software report), want 60 by June"
+   },
+   {
+    "question": "Online presence",
+    "answer": "Google Business Profile 4.6 stars from 140 reviews; WordPress website we can edit"
+   },
+   {
+    "question": "Advertising and budget",
+    "answer": "No ads running now; up to 1,500 pounds a month"
+   },
+   {
+    "question": "Rules",
+    "answer": "UK dental and health advertising rules, no before-and-after photos without consent, no patient data leaves the practice system"
+   },
+   {
+    "question": "Access",
+    "answer": "Google Business Profile and Search Console through the browser"
+   },
+   {
+    "question": "Who decides",
+    "answer": "The owner with the practice manager"
+   },
+   {
+    "question": "Unknown",
+    "answer": "Which treatments are most profitable to promote"
+   }
+  ]
+ },
+ "research": {
+  "approach": "Practitioners treat local patient acquisition as a funnel with four leaks: not seen, not chosen, not enquiring, enquiring but not booked. They start from the raw material (the practice system's new-patient counts by source, the Google profile insights and the Search Console export) and fix what is free and fast first: a complete and accurate Google profile, one clear page per treatment, an easy way to ring or book, and a steady flow of genuine reviews. Paid search comes after tracking is trusted and after claims are checked, and starts small so cost per new patient is known before the budget grows. In UK dentistry every claim needs evidence on file, before-and-after images need signed consent, and review replies must never confirm that someone is a patient. The result is judged by the practice's own new-patient report, not by ad clicks.",
+  "sources": [
+   {
+    "id": "web-gbp",
+    "kind": "web",
+    "title": "Google Business Profile Help: How to improve your local ranking",
+    "ref": "https://support.google.com/business/answer/7091?hl=en-GB",
+    "date": null,
+    "note": "Platform documentation: local results rest on relevance, distance and prominence; verify, keep details complete, respond to reviews, add photos. No way to pay for local ranking. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-gbp-reviews",
+    "kind": "web",
+    "title": "Google Business Profile Help: Business Profile restrictions for policy violations",
+    "ref": "https://support.google.com/business/answer/14114287",
+    "date": null,
+    "note": "Platform documentation: fake or incentivised reviews can lead to reviews being removed or profile restrictions; no rewards for reviews and no selective asking. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-asa-dental",
+    "kind": "web",
+    "title": "ASA and CAP Advice Online: Dental general",
+    "ref": "https://www.asa.org.uk/advice-online/dental-general.html",
+    "date": "2022-03-16",
+    "note": "Regulator guidance: objective claims need evidence on file; before-and-after images must be genuine and representative with signed, dated proof; do not imply a medical qualification."
+   },
+   {
+    "id": "web-gdc",
+    "kind": "web",
+    "title": "General Dental Council: Guidance on advertising",
+    "ref": "https://gdc-uk.org/standards-guidance/standards-and-guidance/gdc-guidance-for-dental-professionals/guidance-on-advertising",
+    "date": null,
+    "note": "Regulator guidance: advertising must be accurate and not misleading; no implied specialist status; show registration details; say whether the practice is NHS, private or mixed. Read through a search summary; confirm the current text. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-denplan",
+    "kind": "web",
+    "title": "Denplan: Navigating social media comments and complaints",
+    "ref": "https://www.denplan.co.uk/the-core/practice-advice/running-your-practice/navigating-social-media-comments-and-complaints-denplan",
+    "date": "2025-10-14",
+    "note": "Dental sector advice: protect confidentiality, keep replies general and move the conversation to a private channel; never disclose patient information online, even indirectly. Article published 14 Oct 2025."
+   },
+   {
+    "id": "web-gads-calls",
+    "kind": "web",
+    "title": "Google Ads Help: Measure calls from ads",
+    "ref": "https://support.google.com/google-ads/answer/6095882?hl=en-GB",
+    "date": null,
+    "note": "Platform documentation: three ways to count calls (from ads, from the website, imported); website call tracking swaps the number for a Google forwarding number. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-gads-health",
+    "kind": "web",
+    "title": "Google Ads policy: Health in personalized advertising",
+    "ref": "https://support.google.com/adspolicy/answer/16701855?hl=en",
+    "date": null,
+    "note": "Platform policy: health is a sensitive category, so site-visitor remarketing and customer-list audiences are not allowed; conversion tracking is not restricted. Only fragments were readable; confirm the current text. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "cat-local",
+    "kind": "catalogue",
+    "title": "Local search listing manager",
+    "ref": "local-search-listing-manager"
+   },
+   {
+    "id": "cat-review",
+    "kind": "catalogue",
+    "title": "Review request and reply planner",
+    "ref": "review-request-and-reply-planner"
+   },
+   {
+    "id": "cat-clinicpage",
+    "kind": "catalogue",
+    "title": "Clinic booking information reviewer",
+    "ref": "check-a-clinic-service-information-page"
+   },
+   {
+    "id": "cat-tracking",
+    "kind": "catalogue",
+    "title": "Conversion tracking setup and repair planner",
+    "ref": "conversion-tracking-fixer"
+   },
+   {
+    "id": "cat-claims",
+    "kind": "catalogue",
+    "title": "Marketing claims checker",
+    "ref": "marketing-claims-checker"
+   },
+   {
+    "id": "cat-gsc",
+    "kind": "catalogue",
+    "title": "Search Console quick-win finder",
+    "ref": "search-console-quick-win-finder"
+   },
+   {
+    "id": "cat-value",
+    "kind": "catalogue",
+    "title": "Customer value and spend limit calculator",
+    "ref": "customer-value-spend-limit"
+   },
+   {
+    "id": "owner",
+    "kind": "owner",
+    "title": "Owner answers",
+    "ref": "BRIEF.md"
+   }
+  ],
+  "steps": [
+   {
+    "id": "s-baseline",
+    "name": "Pull the raw counts: new patients by month and source, enquiries and bookings",
+    "why": "The 35 a month is a report until the practice export checks it, and the source mix shows whether search can add 25 more.",
     "sources": [
-      {
-        "id": "web-asa-dental",
-        "kind": "web",
-        "title": "ASA and CAP advice: dental advertising",
-        "ref": "https://www.asa.org.uk/advice-online/dental-general.html",
-        "date": "2022-03",
-        "note": "Regulator advice. Before-and-after photos must be genuine and representative with signed and dated proof; objective claims need evidence; comparisons need robust evidence."
-      },
-      {
-        "id": "web-gdc",
-        "kind": "web",
-        "title": "GDC guidance on advertising",
-        "ref": "https://www.gdc-uk.org/standards-guidance/standards-and-guidance/gdc-guidance-for-dental-professionals/guidance-on-advertising",
-        "date": "2013-09",
-        "note": "Effective from 2013-09-30, the latest version the page shows. Accurate and not misleading; state NHS, mixed or private; GDC number on information carrying a name; rules on specialist titles."
-      },
-      {
-        "id": "web-gbp",
-        "kind": "web",
-        "title": "Google Business Profile guidelines: representing your business",
-        "ref": "https://support.google.com/business/answer/3038177",
-        "date": "2026-11",
-        "note": "Page is undated; date is when it was read (2026-11-02). Name must match the real name, use specific categories, no promotions or prices in the description, one profile per business."
-      },
-      {
-        "id": "web-dentistry-uk",
-        "kind": "web",
-        "title": "How can website visitors be converted into patients? (Dentistry.co.uk)",
-        "ref": "https://dentistry.co.uk/2025/06/24/how-can-website-visitors-be-converted-into-patients/",
-        "date": "2025-06-24",
-        "note": "Trade article sponsored by a vendor, so its figures are claims. Several contact options, fast mobile pages, separate journeys for urgent and cosmetic enquiries, measure enquiries divided by visitors."
-      },
-      {
-        "id": "web-gads-calls",
-        "kind": "web",
-        "title": "Google Ads Help: Measure calls from ads",
-        "ref": "https://support.google.com/google-ads/answer/6095882",
-        "date": "2026-11",
-        "note": "Page is undated; date is when it was found (2026-11-02). Calls can be counted as conversions by call length or by analysis of recordings; imported call outcomes are the most precise."
-      },
-      {
-        "id": "cat-local-search",
-        "kind": "catalogue",
-        "title": "Local search listing manager",
-        "ref": "local-search-listing-manager"
-      },
-      {
-        "id": "cat-search-console",
-        "kind": "catalogue",
-        "title": "Search Console content planner",
-        "ref": "monthly-search-console-keeper"
-      },
-      {
-        "id": "cat-growth",
-        "kind": "catalogue",
-        "title": "Business growth channel test planner",
-        "ref": "find-your-business-growth-channel"
-      },
-      {
-        "id": "cat-landing",
-        "kind": "catalogue",
-        "title": "Landing page conversion reviewer",
-        "ref": "landing-page-auditor"
-      },
-      {
-        "id": "cat-claims",
-        "kind": "catalogue",
-        "title": "Marketing claims checker",
-        "ref": "marketing-claims-checker"
-      },
-      {
-        "id": "cat-tracking",
-        "kind": "catalogue",
-        "title": "Conversion tracking setup and repair planner",
-        "ref": "conversion-tracking-fixer"
-      },
-      {
-        "id": "owner",
-        "kind": "owner",
-        "title": "Owner answers",
-        "ref": "BRIEF.md"
-      }
-    ],
-    "steps": [
-      {
-        "id": "s-rules",
-        "name": "Set the advertising rules and approved claims first",
-        "why": "UK dental promotion must be accurate, state NHS or private status, carry GDC details and keep proof for every objective claim and every before-and-after image. Agreeing what may be said before anything is written avoids rework and regulator complaints.",
-        "sources": [
-          "web-asa-dental",
-          "web-gdc",
-          "cat-claims",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-baseline",
-        "name": "Find where new patients come from today",
-        "why": "Growth work starts from the sources of the 35 current new patients: Business Profile actions (calls, directions, website clicks), Search Console queries and the practice software report, kept as counts only.",
-        "sources": [
-          "web-dentistry-uk",
-          "cat-search-console",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-tracking",
-        "name": "Make enquiries countable by source without patient data",
-        "why": "Phone calls, forms and online bookings must each be tied to a source, and the practice should count booked first appointments, not clicks. Counts stay in the practice; no names or patient details are shared.",
-        "sources": [
-          "web-dentistry-uk",
-          "web-gads-calls",
-          "cat-tracking",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-profile",
-        "name": "Fix the Business Profile and local listings",
-        "why": "The profile is the main local entry point. Experts check the real name, specific categories, every treatment listed as a service, accurate hours and links, photos with consent, and replies to reviews, and keep promotions out of the description.",
-        "sources": [
-          "web-gbp",
-          "cat-local-search"
-        ]
-      },
-      {
-        "id": "s-site",
-        "name": "Make the website easy to book from on a phone",
-        "why": "Most dental traffic is on phones. Experts give several one-tap ways to contact the practice, fast pages, and separate journeys for urgent and cosmetic visitors, then measure enquiries per visitor.",
-        "sources": [
-          "web-dentistry-uk",
-          "cat-landing"
-        ]
-      },
-      {
-        "id": "s-demand",
-        "name": "Choose which treatments and searches to go after",
-        "why": "Search Console shows what people already search for and where the site ranks. The owner still has to say which treatments are worth promoting, since profitability is unknown, before effort or ad money is pointed at them.",
-        "sources": [
-          "cat-search-console",
-          "cat-growth",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-paid",
-        "name": "Test a small, compliant paid search campaign",
-        "why": "With no ads today, a capped search test on the chosen treatments and the town can show whether paid demand exists. It is started paused, reviewed for advertising rules, and read before the budget grows.",
-        "sources": [
-          "web-asa-dental",
-          "web-gads-calls",
-          "cat-growth"
-        ]
-      },
-      {
-        "id": "s-measure",
-        "name": "Read results against new patients booked",
-        "why": "The target is new patients, so each month's practice report count is compared with the 35 baseline and with enquiries by source. Search visibility changes take weeks, so single weeks are not judged.",
-        "sources": [
-          "web-dentistry-uk",
-          "owner"
-        ]
-      }
-    ],
-    "pitfalls": [
-      {
-        "text": "Using before-and-after photos without signed, dated consent and proof they are genuine and representative.",
-        "sources": [
-          "web-asa-dental"
-        ]
-      },
-      {
-        "text": "Using titles such as specialist or orthodontist that the registrant is not entitled to, or leaving out NHS or private status and GDC details.",
-        "sources": [
-          "web-gdc"
-        ]
-      },
-      {
-        "text": "Putting prices, offers or promotions in the Business Profile description, or changing the profile name to add keywords.",
-        "sources": [
-          "web-gbp"
-        ]
-      },
-      {
-        "text": "Counting clicks or enquiries as new patients, or judging search work in a few weeks.",
-        "sources": [
-          "web-dentistry-uk"
-        ]
-      },
-      {
-        "text": "Moving patient details into marketing tools to track results, which breaks the owner's rule.",
-        "sources": [
-          "owner"
-        ]
-      }
+     "owner",
+     "web-gbp"
     ]
-  },
-  "plan": {
-    "name": "Bring in more new patients within UK advertising rules",
-    "capabilities": [
-      {
-        "id": "gbp-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read the Google Business Profile (browser)",
-        "why": "Read profile performance, categories, services, photos and reviews."
-      },
-      {
-        "id": "gsc-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read Search Console (browser)",
-        "why": "Read queries, pages, clicks and positions for the website."
-      },
-      {
-        "id": "site-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read the public website pages (browser)",
-        "why": "Check mobile speed, contact paths and what the pages claim."
-      },
-      {
-        "id": "practice-report",
-        "access": "read",
-        "via": "file",
-        "name": "Practice software report exported by the practice",
-        "why": "Monthly counts of new patients and, if recorded, how they found the practice. Counts only, no names."
-      },
-      {
-        "id": "ads-write",
-        "access": "live",
-        "via": "owner",
-        "name": "Create and switch on Google search ads (the practice's own account)",
-        "why": "The owner or their AI creates the approved campaign paused; each switch-on needs the owner's yes."
-      },
-      {
-        "id": "gbp-write",
-        "access": "live",
-        "via": "browser",
-        "name": "Change the Google Business Profile (browser)",
-        "why": "Apply approved profile edits one by one."
-      },
-      {
-        "id": "site-write",
-        "access": "live",
-        "via": "owner",
-        "name": "Change the WordPress website (owner edits)",
-        "why": "The owner applies approved page text and layout changes."
-      }
+   },
+   {
+    "id": "s-claims",
+    "name": "Set what we may say: claims register, consent and regulator rules",
+    "why": "UK dental advertising needs evidence for claims, consent for images and honest titles before any copy is written.",
+    "sources": [
+     "web-asa-dental",
+     "web-gdc",
+     "cat-claims"
+    ]
+   },
+   {
+    "id": "s-tracking",
+    "name": "Check that calls, forms and booking requests are counted without patient data",
+    "why": "Spend or page changes cannot be judged unless each enquiry route is counted once, and health data must stay out of ad tools.",
+    "sources": [
+     "web-gads-calls",
+     "web-gads-health",
+     "cat-tracking"
+    ]
+   },
+   {
+    "id": "s-diagnose",
+    "name": "Find where local searchers are lost: profile, visibility, pages, reviews, enquiry handling, capacity",
+    "why": "Each leak has a different fix and the cheapest are free.",
+    "sources": [
+     "web-gbp",
+     "cat-local",
+     "cat-gsc",
+     "cat-clinicpage"
+    ]
+   },
+   {
+    "id": "s-value",
+    "name": "Set what a new patient is worth and rank treatments to promote",
+    "why": "A spend limit only exists once the practice says what a new patient is worth.",
+    "sources": [
+     "cat-value",
+     "owner"
+    ]
+   },
+   {
+    "id": "s-profile",
+    "name": "Fix the Google profile and run a safe review routine",
+    "why": "Prominence and relevance come from a complete profile and genuine, recent reviews; replies must protect confidentiality.",
+    "sources": [
+     "web-gbp",
+     "web-gbp-reviews",
+     "web-denplan",
+     "cat-local",
+     "cat-review"
+    ]
+   },
+   {
+    "id": "s-pages",
+    "name": "Build one clear page per chosen treatment with an easy way to ring or book",
+    "why": "Searchers choose a clinic that answers their treatment question and makes the next step easy.",
+    "sources": [
+     "cat-clinicpage",
+     "cat-gsc",
+     "web-asa-dental",
+     "web-gdc"
+    ]
+   },
+   {
+    "id": "s-ads",
+    "name": "Launch a small, compliant Google search campaign, paused first",
+    "why": "Starting small shows cost per new patient before the budget grows, and keeps wording and audiences within policy.",
+    "sources": [
+     "web-gads-health",
+     "web-gads-calls",
+     "web-asa-dental"
+    ]
+   },
+   {
+    "id": "s-measure",
+    "name": "Read monthly new patients and enquiry-to-booking against the baseline",
+    "why": "The practice report, not ad clicks, shows whether more patients arrived and from where.",
+    "sources": [
+     "owner",
+     "web-gads-calls"
+    ]
+   },
+   {
+    "id": "s-calltrack",
+    "name": "Track calls with forwarding numbers on every page",
+    "why": "Practitioners use call tracking to link calls to ads, but it routes calls through a third party.",
+    "sources": [
+     "web-gads-calls"
+    ]
+   },
+   {
+    "id": "s-remarket",
+    "name": "Remarket to site visitors",
+    "why": "Common in local advertising to win back people who looked.",
+    "sources": [
+     "web-gads-health"
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "text": "Judging success by clicks or calls instead of new patients registered in the practice system.",
+    "sources": [
+     "owner",
+     "web-gads-calls"
+    ]
+   },
+   {
+    "text": "Replying to a review in a way that confirms the reviewer is a patient or mentions treatment.",
+    "sources": [
+     "web-denplan"
+    ]
+   },
+   {
+    "text": "Asking only happy patients for reviews, or offering anything in return, which puts the whole profile at risk.",
+    "sources": [
+     "web-gbp-reviews"
+    ]
+   },
+   {
+    "text": "Ad or page claims without evidence on file, unsupported superlatives, or before-and-after photos without signed consent.",
+    "sources": [
+     "web-asa-dental",
+     "web-gdc"
+    ]
+   },
+   {
+    "text": "Using site-visitor remarketing or customer lists for a health service, which Google restricts and which would also move patient data out of the practice.",
+    "sources": [
+     "web-gads-health"
+    ]
+   },
+   {
+    "text": "Buying clicks before the clinic has chair time and a fast reply to enquiries, so extra demand is lost.",
+    "sources": [
+     "owner"
+    ]
+   }
+  ]
+ },
+ "plan": {
+  "name": "More new patients, found and booked, within the rules",
+  "capabilities": [
+   {
+    "id": "gbp-read",
+    "access": "read",
+    "via": "browser",
+    "name": "Read Google Business Profile insights and reviews (browser)",
+    "why": "Counts of searches, calls, direction requests, website clicks and review history for the baseline."
+   },
+   {
+    "id": "gsc-read",
+    "access": "read",
+    "via": "browser",
+    "name": "Read Search Console (browser)",
+    "why": "Queries, pages, clicks, impressions and position for treatment and town searches."
+   },
+   {
+    "id": "practice-report",
+    "access": "read",
+    "via": "file",
+    "name": "Practice software new-patient report (export, counts only)",
+    "why": "The outside judge: new patients by month and by source, with no names."
+   },
+   {
+    "id": "site-read",
+    "access": "read",
+    "via": "browser",
+    "name": "Open the live site on a phone-sized view (browser)",
+    "why": "Check speed, tap-to-call, booking path and claims on the pages that matter."
+   },
+   {
+    "id": "gbp-edit",
+    "access": "live",
+    "via": "browser",
+    "name": "Edit the Google Business Profile (browser)",
+    "why": "Apply profile fixes and post review replies, each approved one by one."
+   },
+   {
+    "id": "wp-publish",
+    "access": "live",
+    "via": "owner",
+    "name": "Publish WordPress page changes (the practice does this)",
+    "why": "The practice manager publishes approved page changes from our ready drafts."
+   },
+   {
+    "id": "ads-live",
+    "access": "live",
+    "via": "browser",
+    "name": "Create and switch on a Google Ads campaign (browser)",
+    "why": "Created paused, read back, switched on only with approval. Needs an ads account the owner opens or confirms."
+   }
+  ],
+  "data": [
+   {
+    "id": "new-patients",
+    "name": "New patients by month and source",
+    "why": "The baseline and the final judge; shows whether search is already a source.",
+    "fields": [
+     "month",
+     "new patients",
+     "how they heard of us (if recorded)",
+     "treatment type (if recorded)",
+     "NHS or private (if recorded)"
     ],
+    "routes": [
+     {
+      "kind": "CSV",
+      "how": "Practice software: run the new-patient report for the last 24 months, grouped by month and source, counts only, no names; save as CSV."
+     },
+     {
+      "kind": "ASK",
+      "how": "If source is not recorded, ask reception how new patients are asked how they heard of the practice."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "diagnosis"
+    ],
+    "alternative": "Without source, the baseline is a total only and the channel questions stay unknown."
+   },
+   {
+    "id": "profile-insights",
+    "name": "Google profile performance and reviews",
+    "why": "Shows how often the profile is seen and used, and how recent the reviews are.",
+    "fields": [
+     "month",
+     "profile views from search and maps",
+     "calls",
+     "direction requests",
+     "website clicks",
+     "review count",
+     "review rating",
+     "reviews in last 90 days"
+    ],
+    "routes": [
+     {
+      "kind": "URL",
+      "how": "Business Profile performance page, last 16 months, plus the review list and its dates."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "diagnosis"
+    ],
+    "alternative": "Without insights, visibility findings stay unknown."
+   },
+   {
+    "id": "search-console",
+    "name": "Search Console queries and pages",
+    "why": "Shows which treatment and town searches already reach the site and at what position.",
+    "fields": [
+     "query",
+     "page",
+     "clicks",
+     "impressions",
+     "position",
+     "date"
+    ],
+    "routes": [
+     {
+      "kind": "URL",
+      "how": "Performance report, last 16 months, queries and pages, export to CSV."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "diagnosis"
+    ],
+    "alternative": "Without it, page and ranking findings stay unknown."
+   },
+   {
+    "id": "enquiry-log",
+    "name": "Enquiry log: how enquiries became first appointments",
+    "why": "Shows whether enquiries are lost between contact and booking.",
+    "fields": [
+     "date",
+     "route (phone, form, booking link)",
+     "booked first appointment yes or no",
+     "time to first reply",
+     "missed or out-of-hours"
+    ],
+    "routes": [
+     {
+      "kind": "ASK",
+      "how": "Reception keeps a tally for two weeks (counts only, no names), or exports call and form counts."
+     }
+    ],
+    "required_for": [
+     "diagnosis"
+    ],
+    "alternative": "Without it, the enquiry-to-booking leak stays unknown and is measured from the start of the run."
+   },
+   {
+    "id": "treatment-value",
+    "name": "Treatment value and capacity",
+    "why": "Sets the spend limit and which treatments to promote; the owner marked this unknown.",
+    "fields": [
+     "treatment",
+     "typical fee",
+     "approx. margin",
+     "new-patient appointments free per week"
+    ],
+    "routes": [
+     {
+      "kind": "ASK",
+      "how": "Owner and practice manager give fee, margin band and free new-patient slots per treatment."
+     }
+    ],
+    "required_for": [
+     "options",
+     "decision"
+    ],
+    "alternative": "Without it, treatments are ranked by owner judgement and marked low confidence, and the ad budget starts at the lowest test level."
+   },
+   {
+    "id": "claims-evidence",
+    "name": "Claims and consent register",
+    "why": "Every claim and image used needs evidence or consent on file.",
+    "fields": [
+     "claim or image",
+     "evidence or consent held",
+     "owner of the evidence",
+     "review date"
+    ],
+    "routes": [
+     {
+      "kind": "ASK",
+      "how": "Practice manager lists claims they want to make, GDC registration details and signed photo consents held."
+     }
+    ],
+    "required_for": [
+     "context",
+     "copy"
+    ]
+   }
+  ],
+  "stages": [
+   {
+    "id": "intake",
+    "kind": "intake",
+    "name": "Pin down the goal",
+    "goal": "Turn the request into a measured goal, rules, limits and the data we can reach. Writes BRIEF.md.",
+    "owner": {
+     "role": "sales-offer-lead-gen-strategist"
+    },
+    "gate": "none",
+    "from_steps": [],
+    "uses": []
+   },
+   {
+    "id": "context",
+    "kind": "context",
+    "name": "Set what we may say",
+    "goal": "Build a claims and consent register for the practice: approved claims with evidence, claims not allowed, image consent held, registration details and NHS or private statement.",
+    "owner": {
+     "role": "support-legal-compliance-checker"
+    },
     "data": [
-      {
-        "id": "new-patient-report",
-        "name": "New patients by month",
-        "why": "The baseline and the one number that shows success.",
-        "fields": [
-          "month",
-          "new patients (count)",
-          "how they found the practice, if recorded (counts per answer)"
-        ],
-        "routes": [
-          {
-            "kind": "FILE",
-            "how": "The practice exports the new-patient report from its software by month, with counts only: no names, dates of birth or patient IDs."
-          },
-          {
-            "kind": "ASK",
-            "how": "If the report has no source field, ask the practice manager for a rough tally by source for the last three months and mark it as an estimate."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "integrity-tracking",
-          "measurement"
-        ],
-        "alternative": "Without a source field, sources stay unknown and the plan starts a simple weekly tally."
-      },
-      {
-        "id": "gbp-performance",
-        "name": "Business Profile performance and reviews",
-        "why": "Shows how many people find the profile and what they do next.",
-        "fields": [
-          "month",
-          "profile views",
-          "calls",
-          "direction requests",
-          "website clicks",
-          "review count",
-          "rating",
-          "reply rate"
-        ],
-        "routes": [
-          {
-            "kind": "URL",
-            "how": "Read the Performance and Reviews pages of the Business Profile in the browser for the longest period available, by month."
-          },
-          {
-            "kind": "ASK",
-            "how": "If the pages cannot be read, the owner shares screenshots of the same pages."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "integrity-profile",
-          "diagnosis"
-        ]
-      },
-      {
-        "id": "search-console",
-        "name": "Search Console queries and pages",
-        "why": "Shows which searches bring people to the site and which treatments rank.",
-        "fields": [
-          "query",
-          "page",
-          "clicks",
-          "impressions",
-          "click-through rate",
-          "average position",
-          "month"
-        ],
-        "routes": [
-          {
-            "kind": "URL",
-            "how": "Search Console, Performance, last 12 months if available, by query and by page; read in the browser or exported as CSV."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "diagnosis"
-        ],
-        "alternative": "Without Search Console history, search findings stay low-confidence."
-      },
-      {
-        "id": "site-pages",
-        "name": "Website pages that matter",
-        "why": "Needed to check the booking path, speed and claims.",
-        "fields": [
-          "home page url",
-          "treatment page urls",
-          "contact or booking page url",
-          "page text and images"
-        ],
-        "routes": [
-          {
-            "kind": "URL",
-            "how": "Read the live pages in the browser; the owner lists the treatment pages."
-          }
-        ],
-        "required_for": [
-          "integrity-site",
-          "context"
-        ]
-      },
-      {
-        "id": "enquiry-log",
-        "name": "Weekly enquiry tally",
-        "why": "Shows how many enquiries arrive, by channel, and how many become booked first appointments.",
-        "fields": [
-          "week",
-          "calls answered",
-          "calls missed",
-          "form enquiries",
-          "online bookings",
-          "first appointments booked",
-          "days to the first free new-patient slot"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "The practice manager keeps a simple weekly tally of counts for four weeks; no patient details."
-          },
-          {
-            "kind": "FILE",
-            "how": "Phone system call log counts, if available, as totals only."
-          }
-        ],
-        "required_for": [
-          "integrity-tracking",
-          "diagnosis",
-          "measurement"
-        ],
-        "alternative": "Without it, enquiry handling stays unknown and the diagnosis marks that hypothesis UNKNOWN."
-      }
+     "claims-evidence"
     ],
-    "stages": [
-      {
-        "id": "intake",
-        "kind": "intake",
-        "name": "Pin down the goal",
-        "goal": "Turn the owner's words into a measured target, limits, rules and the data we can reach. Writes BRIEF.md.",
-        "owner": {
-          "role": "find-your-business-growth-channel"
-        },
-        "gate": "none",
-        "from_steps": [],
-        "uses": []
-      },
-      {
-        "id": "context",
-        "kind": "context",
-        "name": "Agree the advertising rules and approved claims",
-        "goal": "List the UK dental and health advertising rules that apply, then sort every claim and image already on the website and Business Profile into approved, needs proof or banned. Not legal advice: flag points the practice's indemnity provider or adviser should confirm.",
-        "owner": {
-          "role": "support-legal-compliance-checker"
-        },
-        "support": [
-          "brand-voice-reviewer"
-        ],
-        "data": [
-          "site-pages"
-        ],
-        "needs": [
-          "site-read"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "claims-register",
-            "name": "Rules and approved claims register",
-            "format": "markdown",
-            "path": "context/RULES-AND-CLAIMS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "sources",
-            "name": "Every rule names its source and date (ASA/CAP advice, GDC guidance)",
-            "required": true
-          },
-          {
-            "id": "register",
-            "name": "Each existing claim is marked approved, needs proof or banned",
-            "required": true
-          },
-          {
-            "id": "photos",
-            "name": "Any before-and-after photo is banned unless signed, dated consent and proof it is genuine and representative are on file",
-            "required": true
-          },
-          {
-            "id": "status",
-            "name": "NHS, mixed or private status, GDC numbers and specialist titles are checked, or listed as open questions for the owner",
-            "required": true
-          }
-        ],
-        "gate": "review",
-        "from_steps": [
-          "s-rules"
-        ],
-        "uses": [
-          "marketing-claims-checker",
-          "claim-and-proof-matcher",
-          "website-brand-brain-builder"
-        ]
-      },
-      {
-        "id": "evidence",
-        "kind": "evidence",
-        "name": "Gather where new patients come from",
-        "goal": "Pull monthly new-patient counts, Business Profile performance and Search Console data into one working file, counts only, and set the baseline.",
-        "owner": {
-          "role": "seo-specialist"
-        },
-        "data": [
-          "new-patient-report",
-          "gbp-performance",
-          "search-console"
-        ],
-        "needs": [
-          "gbp-read",
-          "gsc-read",
-          "practice-report"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "dataset",
-            "name": "Working dataset (counts only)",
-            "format": "csv",
-            "path": "evidence/dataset.csv"
-          },
-          {
-            "id": "evidence-notes",
-            "name": "What was pulled and how",
-            "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "baseline",
-            "name": "The baseline of 35 new patients a month is matched to the practice software report, or marked reported only",
-            "required": true
-          },
-          {
-            "id": "periods",
-            "name": "Months are compared like for like, and gaps in the history are stated",
-            "required": true
-          },
-          {
-            "id": "no-patient-data",
-            "name": "The files hold counts only: no names, contact details or patient IDs",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-baseline"
-        ],
-        "uses": [
-          "monthly-search-console-keeper",
-          "organic-search-report-builder"
-        ]
-      },
-      {
-        "id": "integrity-tracking",
-        "kind": "integrity",
-        "name": "Check enquiries can be counted by source",
-        "goal": "Find out how calls, forms and online bookings are recorded today, and design a counts-only way to tie each first appointment to a source (including a how-did-you-find-us answer taken at booking and kept in the practice system).",
-        "owner": {
-          "role": "paid-media-tracking-specialist"
-        },
-        "data": [
-          "new-patient-report",
-          "enquiry-log"
-        ],
-        "needs": [
-          "site-read",
-          "practice-report"
-        ],
-        "depends_on": [
-          "evidence"
-        ],
-        "outputs": [
-          {
-            "id": "tracking",
-            "name": "Enquiry tracking check and plan",
-            "format": "markdown",
-            "path": "integrity/ENQUIRY-TRACKING.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "channels",
-            "name": "Calls, forms and online bookings are each covered, or the gap is named",
-            "required": true
-          },
-          {
-            "id": "privacy",
-            "name": "No design sends patient data outside the practice system",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-tracking"
-        ],
-        "uses": [
-          "conversion-tracking-fixer",
-          "tracking-plan-builder"
-        ]
-      },
-      {
-        "id": "integrity-profile",
-        "kind": "integrity",
-        "name": "Check the Business Profile and local listings",
-        "goal": "Compare the profile with Google's guidelines and a local search checklist: name, categories, services, hours, links, photos, review replies, and consistent name, address and phone across listings.",
-        "owner": {
-          "role": "seo-specialist"
-        },
-        "data": [
-          "gbp-performance"
-        ],
-        "needs": [
-          "gbp-read"
-        ],
-        "depends_on": [
-          "evidence",
-          "context"
-        ],
-        "outputs": [
-          {
-            "id": "profile-check",
-            "name": "Profile and listings check",
-            "format": "markdown",
-            "path": "integrity/PROFILE-CHECK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "guidelines",
-            "name": "Name, categories, description and links are checked against Google's guidelines, with the rule cited",
-            "required": true
-          },
-          {
-            "id": "services",
-            "name": "Every treatment the practice offers is listed or marked missing",
-            "required": true
-          },
-          {
-            "id": "reviews",
-            "name": "Review count, rating, recency and reply rate are recorded as reported figures",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-profile"
-        ],
-        "uses": [
-          "local-search-listing-manager",
-          "seo-site-auditor"
-        ]
-      },
-      {
-        "id": "integrity-site",
-        "kind": "integrity",
-        "name": "Check the website's booking path",
-        "goal": "Test the key pages on a phone: speed, one-tap call and booking, treatment pages, urgent versus cosmetic paths, and whether any claim breaks the agreed rules.",
-        "owner": {
-          "role": "cro-specialist"
-        },
-        "data": [
-          "site-pages"
-        ],
-        "needs": [
-          "site-read"
-        ],
-        "depends_on": [
-          "context"
-        ],
-        "outputs": [
-          {
-            "id": "site-check",
-            "name": "Website booking-path check",
-            "format": "markdown",
-            "path": "integrity/SITE-CHECK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "mobile",
-            "name": "Mobile load and contact steps are measured on the real pages, or marked not tested",
-            "required": true
-          },
-          {
-            "id": "claims",
-            "name": "Each page's claims are compared with the approved register",
-            "required": true
-          },
-          {
-            "id": "journeys",
-            "name": "Clicks needed to call or book are counted for the urgent and cosmetic paths",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-site"
-        ],
-        "uses": [
-          "landing-page-auditor",
-          "page-seo-optimizer"
-        ]
-      },
-      {
-        "id": "diagnosis",
-        "kind": "diagnosis",
-        "name": "Find what limits new patients",
-        "goal": "Test the hypotheses against the evidence and keep competing explanations: visibility, site conversion, enquiry handling, search terms, trust and paid demand. Show which treatments search data supports, and mark treatment profitability as unknown until the owner supplies it.",
-        "owner": {
-          "role": "seo-specialist"
-        },
-        "support": [
-          "cro-specialist"
-        ],
-        "data": [
-          "gbp-performance",
-          "search-console",
-          "enquiry-log"
-        ],
-        "depends_on": [
-          "evidence",
-          "integrity-tracking",
-          "integrity-profile",
-          "integrity-site"
-        ],
-        "outputs": [
-          {
-            "id": "diagnosis",
-            "name": "Diagnosis",
-            "format": "markdown",
-            "path": "diagnosis/DIAGNOSIS.md"
-          },
-          {
-            "id": "hypotheses",
-            "name": "Hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with its evidence",
-            "required": true
-          },
-          {
-            "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
-            "required": true
-          },
-          {
-            "id": "volume",
-            "name": "Findings from small counts are marked low-confidence",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-demand"
-        ],
-        "uses": [
-          "inquiry-problem-diagnoser",
-          "seo-site-auditor",
-          "monthly-search-console-keeper"
-        ]
-      },
-      {
-        "id": "options",
-        "kind": "options",
-        "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked cards, each with the finding behind it, expected effect, effort, confidence, risk, cost and how it will be measured. Include a card for the paid search test only if the evidence supports it, and show treatments that search data supports next to the question of which are worth promoting.",
-        "owner": {
-          "role": "find-your-business-growth-channel"
-        },
-        "depends_on": [
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "recommendations",
-            "name": "Recommendation cards",
-            "format": "markdown",
-            "path": "options/RECOMMENDATIONS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "evidence",
-            "name": "Every card cites the finding it rests on",
-            "required": true
-          },
-          {
-            "id": "fields",
-            "name": "Every card has effect, effort, confidence, risk, cost and how it will be measured",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "Counting and compliance fixes come first when tracking is not CHECKED",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [],
-        "uses": [
-          "find-your-business-growth-channel"
-        ]
-      },
-      {
-        "id": "decision",
-        "kind": "decision",
-        "name": "Owner and practice manager choose",
-        "goal": "The owner and practice manager pick card ids, name the treatments to promote, and set the monthly ad budget within 1,500 pounds if paid search is chosen. Ask for the reason when they pass over a top card.",
-        "owner": {
-          "role": "find-your-business-growth-channel"
-        },
-        "depends_on": [
-          "options"
-        ],
-        "outputs": [
-          {
-            "id": "decision",
-            "name": "Chosen plan",
-            "format": "markdown",
-            "path": "decision/DECISION.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
-            "required": true
-          },
-          {
-            "id": "rationale",
-            "name": "A reason is recorded wherever the top card was passed over",
-            "required": true
-          },
-          {
-            "id": "treatments",
-            "name": "The treatments to promote are named by the owner",
-            "required": true
-          }
-        ],
-        "gate": "approve",
-        "from_steps": [],
-        "uses": []
-      },
-      {
-        "id": "profile-site-changes",
-        "kind": "production",
-        "name": "Prepare the profile and website changes",
-        "goal": "Write the chosen Business Profile edits (services, categories, description, photos with consent, review reply drafts) and the website text and layout changes (contact paths, treatment pages, speed fixes) as ready-to-apply drafts, each checked against the rules register.",
-        "owner": {
-          "role": "seo-specialist"
-        },
-        "support": [
-          "cro-specialist",
-          "campaign-copy-draft-agent"
-        ],
-        "reviewers": [
-          "support-legal-compliance-checker"
-        ],
-        "depends_on": [
-          "decision",
-          "integrity-profile",
-          "integrity-site",
-          "context"
-        ],
-        "outputs": [
-          {
-            "id": "profile-site-changes",
-            "name": "Profile and website changes for review",
-            "format": "markdown",
-            "path": "production/PROFILE-AND-SITE-CHANGES.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "scoped",
-            "name": "Only the chosen changes are included",
-            "required": true
-          },
-          {
-            "id": "rules",
-            "name": "Every claim and image passes the rules register, and no before-and-after photo lacks consent and proof",
-            "required": true
-          },
-          {
-            "id": "ready",
-            "name": "Each change is ready text or a clear step the owner can apply, with how to confirm it worked",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No profile or website card was chosen.",
-        "from_steps": [
-          "s-profile",
-          "s-site"
-        ],
-        "uses": [
-          "local-search-listing-manager",
-          "page-seo-optimizer",
-          "honest-conversion-copywriter",
-          "public-review-reply-drafter"
-        ]
-      },
-      {
-        "id": "search-ads-draft",
-        "kind": "production",
-        "name": "Draft the small search ad test",
-        "goal": "Draft a capped Google search campaign for the chosen treatments and the town: keywords, ads, the page each ad lands on, budget split and the question the test answers. Nothing is created yet.",
-        "owner": {
-          "role": "paid-media-ppc-strategist"
-        },
-        "support": [
-          "paid-media-creative-strategist"
-        ],
-        "reviewers": [
-          "support-legal-compliance-checker"
-        ],
-        "depends_on": [
-          "decision",
-          "integrity-tracking",
-          "context"
-        ],
-        "outputs": [
-          {
-            "id": "campaign-draft",
-            "name": "Search campaign draft",
-            "format": "markdown",
-            "path": "production/SEARCH-CAMPAIGN-DRAFT.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "budget",
-            "name": "Planned spend stays within 1,500 pounds a month",
-            "required": true
-          },
-          {
-            "id": "claims",
-            "name": "Every ad line is in the approved register; no offers, prices or comparisons without proof",
-            "required": true
-          },
-          {
-            "id": "tracking",
-            "name": "Enquiry counting from the tracking check is in place before launch",
-            "required": true
-          },
-          {
-            "id": "match",
-            "name": "Each ad matches the page it sends people to",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No paid search card was chosen.",
-        "from_steps": [
-          "s-paid"
-        ],
-        "uses": [
-          "non-brand-search-campaign-builder",
-          "ad-matched-landing-page-writer",
-          "ad-and-page-policy-checker"
-        ]
-      },
-      {
-        "id": "launch",
-        "kind": "execution",
-        "name": "Apply the approved changes one by one",
-        "goal": "Apply each approved profile edit, website change and ad, one at a time. Create ads paused and read them back, record what changed and when, and register the test with its metric and stop rule before anything goes live.",
-        "owner": {
-          "role": "media-buyer"
-        },
-        "support": [
-          "seo-specialist"
-        ],
-        "needs": [
-          "ads-write",
-          "gbp-write",
-          "site-write"
-        ],
-        "depends_on": [
-          "profile-site-changes",
-          "search-ads-draft",
-          "integrity-tracking"
-        ],
-        "outputs": [
-          {
-            "id": "change-log",
-            "name": "Change log with dates and read-back",
-            "format": "markdown",
-            "path": "execution/CHANGE-LOG.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "approved",
-            "name": "Each action was approved by the owner before it was applied",
-            "required": true
-          },
-          {
-            "id": "paused",
-            "name": "Ads were created paused, read back, and match the approved draft and budget",
-            "required": true
-          },
-          {
-            "id": "registered",
-            "name": "Each test is registered with its metric, date and stop rule before it goes live",
-            "required": true
-          },
-          {
-            "id": "rollback",
-            "name": "Each change records how to undo it",
-            "required": true
-          }
-        ],
-        "gate": "approve_each_action",
-        "optional_when": "No change was chosen.",
-        "from_steps": [
-          "s-paid",
-          "s-profile",
-          "s-site"
-        ],
-        "uses": [
-          "pre-launch-ad-checker",
-          "launch-checklist-runner"
-        ]
-      },
-      {
-        "id": "measurement",
-        "kind": "measurement",
-        "name": "Read results against new patients",
-        "goal": "Each month, compare new patients from the practice report with the 35 baseline and the 60 target, with enquiries and first appointments by source, and check every guardrail.",
-        "owner": {
-          "role": "experiment-readout-desk"
-        },
-        "data": [
-          "new-patient-report",
-          "enquiry-log"
-        ],
-        "needs": [
-          "practice-report",
-          "gbp-read",
-          "gsc-read"
-        ],
-        "depends_on": [
-          "launch"
-        ],
-        "outputs": [
-          {
-            "id": "readout",
-            "name": "Monthly results readout",
-            "format": "markdown",
-            "path": "measurement/READOUT.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "like-for-like",
-            "name": "Months, definitions and sources are the same as at baseline",
-            "required": true
-          },
-          {
-            "id": "guardrails",
-            "name": "Advertising rules, consent and patient-data limits are checked",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "A verdict is given only after enough time and counts, otherwise INCONCLUSIVE",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-measure"
-        ],
-        "uses": [
-          "recurring-kpi-report-maker",
-          "vanity-metric-fixer"
-        ]
-      },
-      {
-        "id": "learning",
-        "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "Close each registered test, record what worked and what did not, propose lasting rules with their scope, and plan the next round.",
-        "owner": {
-          "role": "traction-experiment-keeper"
-        },
-        "depends_on": [
-          "measurement"
-        ],
-        "outputs": [
-          {
-            "id": "learnings",
-            "name": "Learnings and next round",
-            "format": "markdown",
-            "path": "learning/LEARNINGS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "closed",
-            "name": "Every registered test is closed with a verdict",
-            "required": true
-          },
-          {
-            "id": "scoped",
-            "name": "Each proposed rule says whether it holds for this job or this practice",
-            "required": true
-          }
-        ],
-        "gate": "review",
-        "from_steps": [],
-        "uses": []
-      }
+    "depends_on": [
+     "intake"
     ],
-    "hypotheses": [
-      {
-        "id": "h-visibility",
-        "statement": "The Business Profile is incomplete or poorly categorised, so too few local searchers find it.",
-        "test": "Compare categories, services, photos and hours with the local search checklist; look at profile views and actions by month, split into searches for the practice name and other searches if shown.",
-        "confirm_if": "Services or categories are missing and non-name searches bring few views or actions.",
-        "refute_if": "The profile is complete and views from non-name searches are healthy and steady.",
-        "fix_stage": "profile-site-changes"
-      },
-      {
-        "id": "h-site-conversion",
-        "statement": "Visitors reach the website but few call or book.",
-        "test": "Count clicks needed to call or book on a phone, check mobile speed, and compare contact actions with visits if analytics exist.",
-        "confirm_if": "Booking takes several steps, pages are slow on a phone, or contact actions per visit are low.",
-        "refute_if": "Contact is one tap away, pages are fast and contact actions per visit are healthy.",
-        "fix_stage": "profile-site-changes"
-      },
-      {
-        "id": "h-enquiry-handling",
-        "statement": "Enquiries arrive but too few become booked first appointments, because of missed calls, slow replies or no free new-patient slots.",
-        "test": "Four-week tally of enquiries by channel, missed calls, first appointments booked and days to the first free new-patient slot.",
-        "confirm_if": "A large share of enquiries is not booked, calls are missed, or the first slot is weeks away.",
-        "refute_if": "Nearly all enquiries are booked quickly.",
-        "fix_stage": "profile-site-changes"
-      },
-      {
-        "id": "h-wrong-terms",
-        "statement": "The site ranks for general or branded terms but not for the treatments that matter.",
-        "test": "Match Search Console queries and pages to the treatments the owner names; check position and clicks for treatment-plus-town searches.",
-        "confirm_if": "Treatment searches have impressions but low position or no treatment page ranks.",
-        "refute_if": "Treatment pages already rank well and take clicks.",
-        "fix_stage": "profile-site-changes"
-      },
-      {
-        "id": "h-trust-gap",
-        "statement": "Nearby practices look more trustworthy because they have more or newer reviews, or reply more often.",
-        "test": "Compare review count, recency and reply rate with three nearby practices' public profiles.",
-        "confirm_if": "Competitors have clearly more recent reviews or reply to most reviews while this practice does not.",
-        "refute_if": "The practice matches or beats nearby practices.",
-        "fix_stage": "profile-site-changes"
-      },
-      {
-        "id": "h-paid-demand",
-        "statement": "People search for the chosen treatments in the town and no paid result from this practice captures them.",
-        "test": "Check search volume and who shows for the chosen treatment-plus-town searches; judge by a small capped paid test, not by estimates.",
-        "confirm_if": "Searches exist and a capped test produces enquiries that become booked first appointments at a cost the owner accepts.",
-        "refute_if": "Searches are few, or the test brings clicks and calls that do not book.",
-        "fix_stage": "search-ads-draft"
-      }
+    "outputs": [
+     {
+      "id": "claims-register",
+      "name": "Claims and consent register",
+      "format": "markdown",
+      "path": "context/CLAIMS-REGISTER.md"
+     }
     ],
-    "dropped": [],
-    "measurement": {
-      "window": "Monthly, for at least three months after the first approved change; search visibility changes take weeks.",
-      "min_volume": "Judge on monthly new-patient counts from the practice report; read the ad test only after the owner and AI agree, before launch, the number of enquiries needed.",
-      "stop_rule": "Pause any ad at once if a rules check fails or spend reaches the monthly cap; otherwise read results after the full window."
-    }
+    "checks": [
+     {
+      "id": "evidence",
+      "name": "Every approved claim names the evidence held and who holds it",
+      "required": true
+     },
+     {
+      "id": "banned",
+      "name": "Unsupported superlatives, specialist titles not held and anything implying a cure are listed as not allowed",
+      "required": true
+     },
+     {
+      "id": "images",
+      "name": "Before-and-after images are listed only where a signed, dated consent is confirmed; otherwise the count is zero",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-claims"
+    ],
+    "uses": [
+     "marketing-claims-checker",
+     "claim-and-proof-matcher"
+    ]
+   },
+   {
+    "id": "evidence",
+    "kind": "evidence",
+    "name": "Gather the raw counts",
+    "goal": "Pull new patients by month and source, profile insights, Search Console data and the enquiry tally into the data home, counts only.",
+    "owner": {
+     "role": "support-analytics-reporter"
+    },
+    "data": [
+     "new-patients",
+     "profile-insights",
+     "search-console",
+     "enquiry-log"
+    ],
+    "needs": [
+     "gbp-read",
+     "gsc-read",
+     "practice-report"
+    ],
+    "depends_on": [
+     "intake"
+    ],
+    "outputs": [
+     {
+      "id": "dataset",
+      "name": "Working dataset",
+      "format": "csv",
+      "path": "evidence/dataset.csv"
+     },
+     {
+      "id": "evidence-notes",
+      "name": "What was pulled and how",
+      "format": "markdown",
+      "path": "evidence/EVIDENCE.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "baseline",
+      "name": "Monthly new patients cover at least 12 months and the latest 3 months average within 10% of the reported 35, or the gap is explained",
+      "required": true
+     },
+     {
+      "id": "profile",
+      "name": "Review count and rating match the live profile page (140 and 4.6 as reported)",
+      "required": true
+     },
+     {
+      "id": "privacy",
+      "name": "No file contains a patient name, date of birth or contact detail",
+      "required": true
+     },
+     {
+      "id": "gaps",
+      "name": "Any missing field (source, treatment, enquiry log) is named and what it blocks is listed",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-baseline"
+    ],
+    "uses": [
+     "organic-search-report-builder",
+     "search-console-quick-win-finder"
+    ]
+   },
+   {
+    "id": "integrity-tracking",
+    "kind": "integrity",
+    "name": "Check enquiries are counted without patient data",
+    "goal": "List every way a person gets in touch (call, form, booking link, profile call and directions, email), check each is counted once, and design the events and consent needed before any ad spend.",
+    "owner": {
+     "role": "paid-media-tracking-specialist"
+    },
+    "needs": [
+     "site-read"
+    ],
+    "depends_on": [
+     "evidence"
+    ],
+    "outputs": [
+     {
+      "id": "tracking",
+      "name": "Measurement check and set-up plan",
+      "format": "markdown",
+      "path": "integrity/TRACKING.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "routes",
+      "name": "Each enquiry route has a named event or is marked untracked",
+      "required": true
+     },
+     {
+      "id": "test",
+      "name": "A test call click and a test form send each fire exactly one event",
+      "required": true
+     },
+     {
+      "id": "privacy",
+      "name": "No form field content, treatment name tied to a person, or patient identifier is sent to analytics or ad tools",
+      "required": true
+     },
+     {
+      "id": "consent",
+      "name": "Tags only fire after the cookie consent the site already shows, or the gap is stated",
+      "required": true
+     },
+     {
+      "id": "verdict",
+      "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the monthly readout",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-tracking"
+    ],
+    "uses": [
+     "conversion-tracking-fixer"
+    ]
+   },
+   {
+    "id": "diagnosis",
+    "kind": "diagnosis",
+    "name": "Find where local searchers are lost",
+    "goal": "Test the hypotheses on the profile, search visibility, treatment pages, reviews, enquiry handling and chair capacity, and keep competing explanations.",
+    "owner": {
+     "role": "marketing-seo-specialist"
+    },
+    "data": [
+     "new-patients",
+     "profile-insights",
+     "search-console",
+     "enquiry-log"
+    ],
+    "needs": [
+     "site-read"
+    ],
+    "depends_on": [
+     "evidence",
+     "integrity-tracking",
+     "context"
+    ],
+    "outputs": [
+     {
+      "id": "diagnosis",
+      "name": "Diagnosis",
+      "format": "markdown",
+      "path": "diagnosis/DIAGNOSIS.md"
+     },
+     {
+      "id": "hypotheses",
+      "name": "Hypothesis verdicts",
+      "format": "json",
+      "path": "diagnosis/hypotheses.json"
+     }
+    ],
+    "checks": [
+     {
+      "id": "verdicts",
+      "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the numbers used",
+      "required": true
+     },
+     {
+      "id": "volume",
+      "name": "A finding based on fewer than 30 impressions-weighted queries or fewer than 20 enquiries is marked low-confidence",
+      "required": true
+     },
+     {
+      "id": "alternatives",
+      "name": "Each main finding names a competing explanation",
+      "required": true
+     },
+     {
+      "id": "gap",
+      "name": "States the gap in patients: how many extra a month 60 needs, and how many each fix could plausibly add, or marks it unknown",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-diagnose"
+    ],
+    "support": [
+     "cro-specialist"
+    ],
+    "uses": [
+     "local-search-listing-manager",
+     "search-console-quick-win-finder",
+     "landing-page-auditor",
+     "check-a-clinic-service-information-page"
+    ]
+   },
+   {
+    "id": "options",
+    "kind": "options",
+    "name": "Rank what to change",
+    "goal": "Turn supported findings into ranked options with expected effect on new patients, effort, confidence, risk, cost and how each will be measured, plus the spend limit and a starting budget.",
+    "owner": {
+     "role": "paid-media-ppc-strategist"
+    },
+    "data": [
+     "treatment-value"
+    ],
+    "depends_on": [
+     "diagnosis"
+    ],
+    "outputs": [
+     {
+      "id": "recommendations",
+      "name": "Ranked options",
+      "format": "markdown",
+      "path": "options/RECOMMENDATIONS.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "evidence",
+      "name": "Every option cites the finding it rests on",
+      "required": true
+     },
+     {
+      "id": "fields",
+      "name": "Every option has expected effect, effort, confidence, risk, cost and how it is measured",
+      "required": true
+     },
+     {
+      "id": "limit",
+      "name": "Paid options show a spend limit from the practice's own value per new patient, or say it is unknown and start at the lowest test level",
+      "required": true
+     },
+     {
+      "id": "order",
+      "name": "Free fixes and measurement fixes rank before paid spend unless the diagnosis refutes them",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-value"
+    ],
+    "uses": [
+     "customer-value-spend-limit",
+     "small-budget-ad-test-planner"
+    ]
+   },
+   {
+    "id": "decision",
+    "kind": "decision",
+    "name": "Owner and practice manager choose",
+    "goal": "Choose the options, the treatments to promote, the monthly budget up to 1,500 pounds, and confirm chair time for the target. Record reasons when the top option is passed over.",
+    "owner": {
+     "role": "paid-media-ppc-strategist"
+    },
+    "depends_on": [
+     "options"
+    ],
+    "outputs": [
+     {
+      "id": "decision",
+      "name": "Chosen plan",
+      "format": "markdown",
+      "path": "decision/DECISION.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "recorded",
+      "name": "Chosen and passed-over options are in decisions.jsonl",
+      "required": true
+     },
+     {
+      "id": "capacity",
+      "name": "Free new-patient appointment slots per month are stated next to the target of 60, or marked unknown",
+      "required": true
+     },
+     {
+      "id": "budget",
+      "name": "The chosen monthly budget is a number at or below 1,500 pounds",
+      "required": true
+     }
+    ],
+    "gate": "approve",
+    "from_steps": [],
+    "uses": []
+   },
+   {
+    "id": "profile-fixes",
+    "kind": "production",
+    "name": "Prepare the profile and review routine",
+    "goal": "Draft the Google profile changes (categories, services, hours, booking link, photos list, description) and a genuine review routine with reply drafts that never confirm anyone is a patient.",
+    "owner": {
+     "role": "marketing-seo-specialist"
+    },
+    "data": [
+     "claims-evidence"
+    ],
+    "depends_on": [
+     "decision",
+     "context"
+    ],
+    "outputs": [
+     {
+      "id": "profile-changes",
+      "name": "Profile changes and review routine",
+      "format": "markdown",
+      "path": "production/PROFILE-CHANGES.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "scoped",
+      "name": "Only chosen changes are included",
+      "required": true
+     },
+     {
+      "id": "claims",
+      "name": "Every sentence in the profile text matches the claims register",
+      "required": true
+     },
+     {
+      "id": "reviews",
+      "name": "The review request is sent to every patient who is asked, with no reward and no filtering by how they feel",
+      "required": true
+     },
+     {
+      "id": "replies",
+      "name": "No reply names a person, a treatment or says they are a patient; complaints are moved to a private channel",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "optional_when": "No profile option was chosen.",
+    "from_steps": [
+     "s-profile"
+    ],
+    "uses": [
+     "local-search-listing-manager",
+     "review-request-and-reply-planner",
+     "public-review-reply-drafter"
+    ]
+   },
+   {
+    "id": "copy",
+    "kind": "production",
+    "name": "Write treatment pages, enquiry path and ads",
+    "goal": "Draft one page per chosen treatment with tap-to-call and a booking route, and Google search ads that match the pages. Check every claim before the practice sees it.",
+    "owner": {
+     "role": "cro-specialist"
+    },
+    "data": [
+     "claims-evidence"
+    ],
+    "depends_on": [
+     "decision",
+     "context",
+     "integrity-tracking"
+    ],
+    "outputs": [
+     {
+      "id": "pages",
+      "name": "Page drafts and ad copy for review",
+      "format": "markdown",
+      "path": "production/PAGES-AND-ADS.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "claims",
+      "name": "Every claim is in the claims register with evidence, or is removed",
+      "required": true
+     },
+     {
+      "id": "images",
+      "name": "No before-and-after image is used without a signed, dated consent",
+      "required": true
+     },
+     {
+      "id": "titles",
+      "name": "No specialist title is used unless it is held; GDC registration details and the NHS or private statement appear on the page",
+      "required": true
+     },
+     {
+      "id": "match",
+      "name": "Each ad group matches one page and its main promise",
+      "required": true
+     },
+     {
+      "id": "mobile",
+      "name": "Phone number or booking button is visible without scrolling on a 375 pixel wide screen",
+      "required": true
+     },
+     {
+      "id": "audiences",
+      "name": "The campaign plan uses no remarketing lists or customer lists",
+      "required": true
+     }
+    ],
+    "gate": "review",
+    "optional_when": "No page or ad option was chosen.",
+    "from_steps": [
+     "s-pages",
+     "s-ads"
+    ],
+    "support": [
+     "paid-media-creative-strategist"
+    ],
+    "reviewers": [
+     "support-legal-compliance-checker"
+    ],
+    "uses": [
+     "ad-matched-landing-page-writer",
+     "non-brand-search-campaign-builder",
+     "ad-and-page-policy-checker",
+     "marketing-claims-checker"
+    ]
+   },
+   {
+    "id": "launch",
+    "kind": "execution",
+    "name": "Apply changes and launch, paused first",
+    "goal": "Apply approved profile changes, hand over page drafts for the practice to publish, and create the search campaign paused with the approved budget cap. Register the tracking plan and the comparison before anything goes live.",
+    "owner": {
+     "role": "paid-media-ppc-strategist"
+    },
+    "needs": [
+     "gbp-edit",
+     "wp-publish",
+     "ads-live"
+    ],
+    "depends_on": [
+     "profile-fixes",
+     "copy"
+    ],
+    "outputs": [
+     {
+      "id": "receipt",
+      "name": "Change and launch receipt",
+      "format": "markdown",
+      "path": "execution/LAUNCH-RECEIPT.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "paused",
+      "name": "The campaign was created paused and read back from the account",
+      "required": true
+     },
+     {
+      "id": "budget",
+      "name": "Daily budget times days in the month is at or below 1,500 pounds, and the cap is shown on the receipt",
+      "required": true
+     },
+     {
+      "id": "targeting",
+      "name": "Location is the town area only, with no remarketing or customer lists",
+      "required": true
+     },
+     {
+      "id": "registered",
+      "name": "The comparison (new patients each month against the 35 baseline and the same months a year earlier) is registered in experiments.jsonl before anything goes live",
+      "required": true
+     },
+     {
+      "id": "staged",
+      "name": "Profile and page changes go live before the ads, so their effect can be told apart",
+      "required": true
+     }
+    ],
+    "gate": "approve_each_action",
+    "from_steps": [
+     "s-ads"
+    ],
+    "uses": [
+     "small-budget-ad-test-planner"
+    ]
+   },
+   {
+    "id": "measurement",
+    "kind": "measurement",
+    "name": "Read new patients each month",
+    "goal": "Each month, read new patients by source, enquiry-to-booking rate and cost per new patient against the baseline, and check every guardrail.",
+    "owner": {
+     "role": "experiment-readout-desk"
+    },
+    "data": [
+     "new-patients",
+     "enquiry-log"
+    ],
+    "needs": [
+     "practice-report",
+     "gbp-read",
+     "gsc-read"
+    ],
+    "depends_on": [
+     "launch"
+    ],
+    "outputs": [
+     {
+      "id": "readout",
+      "name": "Monthly readout",
+      "format": "markdown",
+      "path": "measurement/READOUT.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "source",
+      "name": "New patients come from the practice report, not from ad or profile clicks",
+      "required": true
+     },
+     {
+      "id": "compare",
+      "name": "Each month is compared with the 35 baseline and the same month a year earlier",
+      "required": true
+     },
+     {
+      "id": "guardrails",
+      "name": "Review rating is at least 4.6, spend is at most 1,500 pounds and cost per new patient is under the practice's own value figure",
+      "required": true
+     },
+     {
+      "id": "verdict",
+      "name": "A verdict is given only after at least 3 full months; before that the result is INCONCLUSIVE",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-measure"
+    ],
+    "uses": [
+     "organic-search-report-builder",
+     "google-ads-report-auditor"
+    ]
+   },
+   {
+    "id": "learning",
+    "kind": "learning",
+    "name": "Keep what we learned",
+    "goal": "Close the comparison, record what moved new patients and what did not, propose rules with their scope and plan the next round.",
+    "owner": {
+     "role": "experiment-readout-desk"
+    },
+    "depends_on": [
+     "measurement"
+    ],
+    "outputs": [
+     {
+      "id": "learnings",
+      "name": "Learnings and next round",
+      "format": "markdown",
+      "path": "learning/LEARNINGS.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "closed",
+      "name": "The registered comparison is closed in experiments.jsonl with a verdict",
+      "required": true
+     },
+     {
+      "id": "scoped",
+      "name": "Each proposed rule says whether it holds for this clinic or for any local clinic",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [],
+    "uses": []
+   }
+  ],
+  "hypotheses": [
+   {
+    "id": "h-profile",
+    "statement": "The Google profile is incomplete or inconsistent, so it is not matched to treatment searches.",
+    "test": "Check the profile against the checklist (primary category, services, hours, booking link, photos, description) and compare name, address and phone on the top 5 directories.",
+    "confirm_if": "Two or more required fields are missing or any of the top 5 directories shows a different name, address or phone.",
+    "refute_if": "All fields are complete and the details match everywhere.",
+    "fix_stage": "profile-fixes"
+   },
+   {
+    "id": "h-visibility",
+    "statement": "The clinic is not showing for treatment and town searches that bring new patients.",
+    "test": "Search Console non-brand queries with the town or treatment words: share of impressions by position.",
+    "confirm_if": "More than half of non-brand impressions are at position 11 or lower, or key treatments have almost no impressions.",
+    "refute_if": "Most non-brand impressions are in the top 5 and click-through is normal for those positions.",
+    "fix_stage": "copy"
+   },
+   {
+    "id": "h-pages",
+    "statement": "There is no clear page for the treatments people search for, so searches land on the home page or on rivals.",
+    "test": "List treatments offered against pages that exist; for each, check impressions and landing page in Search Console.",
+    "confirm_if": "Three or more treatments with search demand have no dedicated page.",
+    "refute_if": "Each treatment with demand has a page that is the one Google shows.",
+    "fix_stage": "copy"
+   },
+   {
+    "id": "h-review-recency",
+    "statement": "The rating is strong but reviews are not recent enough to keep the clinic in the local results.",
+    "test": "Count reviews in the last 90 days for the clinic and the top 3 rival clinics in the same area.",
+    "confirm_if": "The clinic has fewer recent reviews than two of the three rivals.",
+    "refute_if": "The clinic is at or above the middle of the rivals on recent reviews.",
+    "fix_stage": "profile-fixes"
+   },
+   {
+    "id": "h-enquiry-leak",
+    "statement": "Enquiries are lost between contact and first appointment (missed calls, slow replies, a hard booking path).",
+    "test": "From the two-week enquiry tally: share of enquiries that book a first appointment, share unanswered within one working day, and missed or out-of-hours calls.",
+    "confirm_if": "Fewer than half of enquiries book, or more than 1 in 4 get no reply within a working day.",
+    "refute_if": "Most enquiries book and nearly all get a same-day reply.",
+    "fix_stage": "copy"
+   },
+   {
+    "id": "h-capacity",
+    "statement": "The clinic does not have the chair time for 60 new patients a month, so more demand would be wasted.",
+    "test": "Compare free new-patient appointment slots in a normal month with 60.",
+    "confirm_if": "Free slots are fewer than 60 a month, or the wait for a first appointment is already longer than the practice wants.",
+    "refute_if": "At least 60 first-appointment slots are free each month with an acceptable wait.",
+    "fix_stage": "decision"
+   },
+   {
+    "id": "h-mix",
+    "statement": "Most new patients arrive by recommendation or other routes, so search can add less than the target needs.",
+    "test": "New patients by how they heard of the practice, from the practice report.",
+    "confirm_if": "More than half of new patients come from recommendation or referral and search is a small share.",
+    "refute_if": "Search and the profile already bring a large share and are growing.",
+    "fix_stage": "decision"
+   },
+   {
+    "id": "h-paid-cost",
+    "statement": "A 1,500 pound monthly budget cannot bring 25 extra patients at an acceptable cost per patient.",
+    "test": "After 2 months of data: spend divided by new patients from search, against the practice's own value per new patient. Before launch, a range from the Google Ads planner and the observed enquiry-to-booking rate.",
+    "confirm_if": "Cost per new patient from search is above the value per new patient, or the budget at the observed rates yields fewer than 25 extra patients.",
+    "refute_if": "Cost per new patient is below the value figure and the budget can reach 25 extra patients at observed rates.",
+    "fix_stage": "launch"
+   }
+  ],
+  "dropped": [
+   {
+    "step": "s-calltrack",
+    "reason": "Calls are recorded and routed through a third party, which could move patient information out of the practice; click-to-call events and the reception tally are used instead."
+   },
+   {
+    "step": "s-remarket",
+    "reason": "Google restricts remarketing and customer lists for health services, and it would use visitor data in ad tools; outside the owner's limits."
+   }
+  ],
+  "measurement": {
+   "window": "Monthly, with a verdict after at least 3 full months. Compare each month with the 35 baseline and with the same month a year earlier, because dental demand has seasons.",
+   "min_volume": "At least 3 months of data, and at least 20 enquiries in a month before the enquiry-to-booking rate is called a finding.",
+   "stop_rule": "Pause the ads at once if the review rating drops below 4.6, spend reaches 1,500 pounds in the month, or any ad or page claim is challenged; otherwise run the full window before a verdict."
   }
+ }
 }

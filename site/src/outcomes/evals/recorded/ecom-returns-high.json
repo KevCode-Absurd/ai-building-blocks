@@ -1,44 +1,54 @@
 {
   "case": "ecom-returns-high",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Bring the return rate on the women's clothing store down from 31% to under 20% by March 2027, so returns stop eating profit.",
-    "deliverable": "A cleaned returns dataset with a cost per reason, a returns form that captures usable reasons, corrected size charts and fit notes for the worst-returning products ready for the owner to apply, and a readout of how the return rate moved.",
+    "outcome": "Bring the returns rate on the women's clothing store from 31% to under 20% by March 2027, by finding the real reasons for returns and fixing product pages, size charts and the returns form, without touching the free returns policy before February.",
+    "ambition": {
+      "goal_beyond": "Profit per order rises because fewer garments come back, and the store keeps knowing why the ones that do come back are returned.",
+      "rungs": [
+        "Update size charts and product pages so fewer sizing returns happen",
+        "Find the real reasons behind the returns (including the 60% with no reason) by product and SKU, and fix each product's biggest cause, sizing or not",
+        "Keep it true: a monthly returns check by product and reason, with a returns form that always captures a usable reason, that flags a rising product early"
+      ],
+      "chosen": 2,
+      "judge": "Shopify returns report (physical returns by SKU) on one written definition, plus reasons recorded by the operations lead on a sample of at least 100 physical returned units, which does not depend on what customers typed in the form"
+    },
+    "deliverable": "A trusted returns baseline, real reasons by product, the chosen product page, size chart and returns form changes prepared and applied by wave, and a monthly readout against 20%",
     "done": [
-      "Returns data checked, with the blank-reason gap handled and stated",
-      "Cost of returns worked out by reason and product, using Rs 180 per return shipped back",
-      "Every cause hypothesis, including the owner's sizing theory, marked supported, refuted or unknown with evidence",
-      "Owner and operations lead have chosen the fixes, with reasons recorded",
-      "Returns form, size charts and fit notes prepared and checked",
-      "Each change applied only with the owner's yes, with changed products compared against unchanged ones",
-      "Return rate read back against the 31% baseline and the 20% target",
-      "Learnings saved, including what to revisit once the free returns policy can change"
+      "The 31% recomputed on a written definition from Shopify returns and orders",
+      "Real reasons found for the blank-reason returns from a sample of returned units",
+      "Every cause hypothesis marked supported, refuted or unknown, with numbers",
+      "Owner and operations lead chose the fixes and the reasons are recorded",
+      "Size chart, page and returns form changes prepared, reviewed and applied by product wave",
+      "Return rate read monthly against 20% with conversion and rating checked",
+      "Learnings and a monthly watch rule saved"
     ],
     "metric": {
-      "name": "Return rate (returns as a share of orders)",
+      "name": "Return rate",
       "direction": "decrease",
-      "unit": "percent of orders",
+      "unit": "percent",
       "baseline": 31,
       "baseline_source": "reported",
       "target": 20
     },
     "deadline": "March 2027",
     "guardrails": [
-      "Order volume (about 1,800 a month) does not fall because of the changes",
-      "Return shipping cost per return (about Rs 180) does not rise",
       "The free returns policy is not changed before February",
-      "Product pages keep only claims and measurements the owner has confirmed"
+      "Conversion rate on changed product pages does not fall more than 5% (relative) against unchanged products",
+      "Average product rating in Judge.me does not fall",
+      "Return shipping cost per return stays near Rs 180 or lower"
     ],
     "limits": [
-      "May change product pages, size charts and the returns form",
-      "Free returns policy is off limits before February",
-      "Shopify is connected read-only, so changes are prepared for the owner to apply"
+      "We may change product pages, size charts and the returns form; not the free returns policy before February",
+      "Shopify access is read-only for us: the owner or operations lead makes every change",
+      "Working data stays in files in this project (we chose this because the owner asked us to choose)"
     ],
     "assets": [
-      "Shopify returns report (last quarter)",
-      "Customer reviews in Judge.me as a CSV export"
+      "Shopify returns report for the last quarter",
+      "Judge.me reviews as a CSV export",
+      "Current size charts and product pages"
     ],
     "connections": [
       {
@@ -50,81 +60,90 @@
         "name": "Judge.me reviews CSV export",
         "access": "read",
         "status": "available"
+      },
+      {
+        "name": "Shopify admin changes (made by the owner or operations lead)",
+        "access": "draft",
+        "status": "available"
       }
     ],
-    "data_home": "A CSV set in this project (the owner asked us to choose)",
-    "technical_level": "Not stated",
-    "decides": "The owner, together with the operations lead",
+    "data_home": "CSV files in this project (we chose; the owner asked us to choose)",
+    "technical_level": "Not stated; changes are handed over as ready text, charts and form settings to review and apply",
+    "decides": "The owner together with the operations lead",
     "unknowns": [
-      "What the 60% of returns with a blank reason were really returned for",
-      "Whether sizing is the main reason, or only the main reason among the 40% that gave one",
-      "Which products and sizes return most",
-      "Margin and average order value, so profit lost to returns cannot yet be stated",
-      "How the 31% is defined (returns per orders or per units) and whether it counts exchanges",
-      "Whether the returns form is Shopify's own or an app, and whether the reason field is optional",
-      "Whether published size charts match measured garments"
+      "How the 31% is defined: orders, units or value; physical returns only or all refunds, cancellations and refused deliveries",
+      "The real reasons for the 60% of returns with a blank reason field",
+      "Which products and SKUs drive the returns",
+      "Whether sizing really is the main reason (the owner thinks so; untested)",
+      "Share of orders that contain the same item in two or more sizes",
+      "Cost per return beyond the Rs 180 return shipping (refund handling, damage, write-off)",
+      "Whether the returns form reason is required or optional, and who creates returns (customers or staff)",
+      "What the current size charts say and whether they match real garment measurements",
+      "Conversion rate by product page"
     ],
     "answers": [
       {
-        "question": "What do you sell, on what platform, how many orders?",
+        "question": "What store and how big?",
         "answer": "Women's clothing on Shopify, about 1,800 orders a month"
       },
       {
-        "question": "What is the return rate and where does it come from?",
-        "answer": "31% over the last quarter (Shopify returns report)"
+        "question": "How big is the problem?",
+        "answer": "Return rate 31% over the last quarter (Shopify returns report); 60% of returns have the reason field blank; return shipping costs about Rs 180 per return"
       },
       {
-        "question": "Why do you think people return?",
-        "answer": "The owner thinks sizing is the main reason, but 60% of returns have the reason field blank"
+        "question": "What does the owner think and want?",
+        "answer": "Thinks sizing is the main reason; wants returns under 20% by March"
       },
       {
-        "question": "What does a return cost?",
-        "answer": "Return shipping costs about Rs 180 per return"
+        "question": "What can change?",
+        "answer": "Product pages, size charts and the returns form; not the free returns policy before February"
       },
       {
-        "question": "What is the goal and deadline?",
-        "answer": "Returns under 20% by March"
-      },
-      {
-        "question": "What can and cannot change?",
-        "answer": "Product pages, size charts and the returns form can change; the free returns policy cannot before February"
-      },
-      {
-        "question": "Which tools can your AI reach?",
-        "answer": "Shopify MCP read access; reviews in Judge.me as a CSV export"
-      },
-      {
-        "question": "Where should data live and who decides?",
-        "answer": "Owner asked us to choose where to keep the data; the owner decides with the operations lead"
+        "question": "Tools, data home, decisions?",
+        "answer": "Shopify MCP read access; reviews in Judge.me as a CSV export; choose where to keep data; the owner decides with the operations lead"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners start by fixing the returns data: a reason on every return, logged by product and size, with fit kept apart from quality and expectation. They benchmark the rate by category and product, then read the fit pattern (too small versus too large, one size, one product, several sizes in one order) because each pattern needs a different fix. They put the cost on each reason so effort goes where money is lost, fix the worst products first with product-specific fit notes and measured garment sizes rather than a generic chart, and measure by changing a set of products while comparable ones stay as a control, across a full sell-through. Policy responses to bracketing come last.",
+    "approach": "Practitioners first pin down what the return rate counts, because Shopify separates physically returned quantity from every reversed quantity (refunds, cancellations, edits), and a rate on the wrong one points at the wrong fix. They then get the true reasons from the rawest source, the returned units and notes, because customer-selected reasons are missing or vague, split returns by product and SKU, and compare the reasoned returns with what reviews say about fit and quality. Fixes are made by product wave so unchanged products act as the comparison. The returns form is rebuilt to capture a usable reason, since without one the next round of analysis is blind.",
     "sources": [
       {
-        "id": "web-shipbob",
+        "id": "web-shopify-setup",
         "kind": "web",
-        "title": "ShipBob: The apparel brand's guide to managing and reducing returns",
-        "ref": "https://www.shipbob.com/blog/apparel-returns-guide/",
-        "date": "2026-10-07",
-        "note": "Benchmark by category and product, separate product-driven from operational returns, capture detailed reasons, find whether the problem is isolated or systemic, fix root causes, handle bracketing."
+        "title": "Self-serve returns setup (Shopify Help Center)",
+        "ref": "https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/self-serve-returns/setup",
+        "date": null,
+        "note": "Platform documentation, page shows no date; accessed 2026-11-03. Return reasons offered depend on the product category (for apparel, options such as too big or too small) and customers can add a note for the store."
       },
       {
-        "id": "web-claimlane",
+        "id": "web-shopify-sales",
         "kind": "web",
-        "title": "Claimlane: Size guides that actually reduce returns",
-        "ref": "https://www.claimlane.com/resources/blog/size-guides-reduce-returns",
-        "date": "2026-07-10",
-        "note": "Capture a reason on every return by product and size, read the too-small versus too-large pattern, write product-specific fit notes, measure against unchanged control products across a full sell-through. Vendor blog."
+        "title": "Sales report (Shopify Help Center)",
+        "ref": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report",
+        "date": null,
+        "note": "Platform documentation, page shows no date; accessed 2026-11-03. Defines the return line item reason, returned quantity (units physically returned) and reversed quantity (also includes refunds, cancellations and edits)."
       },
       {
-        "id": "web-shopify-changelog",
+        "id": "web-nrf",
         "kind": "web",
-        "title": "Shopify changelog: Enhanced return reasons",
-        "ref": "https://changelog.shopify.com/posts/enhanced-return-reasons",
-        "date": "2026-01-16",
-        "note": "Shopify now suggests return reasons by product category (for apparel, options such as too big or too small) in admin, POS and self-serve returns."
+        "title": "2025 Retail Returns Landscape (NRF and Happy Returns)",
+        "ref": "https://nrf.com/research/2025-retail-returns-landscape",
+        "date": "2025-10-15",
+        "note": "Industry research published 2025-10-15: an estimated 19.3% of online sales returned in 2025 across large US retailers, and 82% of consumers call free returns important. Useful as a yardstick for the 20% target; apparel runs higher than the all-product average and the survey is of large merchants."
+      },
+      {
+        "id": "web-judgeme",
+        "kind": "web",
+        "title": "Exporting reviews (Judge.me Help Center)",
+        "ref": "https://judge.me/help/en/articles/8236266-exporting-reviews",
+        "date": null,
+        "note": "Vendor documentation, page shows no date; accessed 2026-11-03. The CSV has review text, rating, date, product ID and handle, but not SKUs, order details or verified status, so reviews are matched to SKUs through the product handle."
+      },
+      {
+        "id": "cat-reasons",
+        "kind": "catalogue",
+        "title": "Shopify return reason finder",
+        "ref": "return-reason-finder"
       },
       {
         "id": "cat-returns-reviewer",
@@ -133,13 +152,13 @@
         "ref": "monthly-returns-and-refunds-reviewer"
       },
       {
-        "id": "cat-buyer-fit",
+        "id": "cat-bad-reviews",
         "kind": "catalogue",
         "title": "Customer return and buyer-fit reviewer",
         "ref": "find-out-why-good-orders-turn-into-bad-reviews-and-returns"
       },
       {
-        "id": "cat-return-cost",
+        "id": "cat-cost",
         "kind": "catalogue",
         "title": "Return cost calculator",
         "ref": "return-cost-calculator"
@@ -153,288 +172,254 @@
     ],
     "steps": [
       {
-        "id": "s-capture",
-        "name": "Get a usable reason on every return",
-        "why": "With 60% of reasons blank, no cause can be named. Practitioners turn on specific, apparel-aware reason choices and log the product and size.",
+        "id": "s-define",
+        "name": "Write down what the return rate counts and recompute it",
+        "why": "Shopify separates returned quantity from reversed quantity; the 31% could mix physical returns with cancellations and refunds.",
         "sources": [
-          "web-claimlane",
-          "web-shopify-changelog",
-          "web-shipbob"
-        ]
-      },
-      {
-        "id": "s-benchmark",
-        "name": "Pull returns and orders and benchmark by product, size and customer",
-        "why": "A 31% average hides which products and sizes drive it, and what is normal for this category.",
-        "sources": [
-          "web-shipbob",
-          "cat-returns-reviewer",
+          "web-shopify-sales",
           "owner"
         ]
       },
       {
-        "id": "s-clean",
-        "name": "Check the returns data before reasoning from it",
-        "why": "Blank reasons, the definition of the rate and exchanges counted as returns all change the answer.",
+        "id": "s-split",
+        "name": "Split returns by product, SKU, size and order type",
+        "why": "Returns usually concentrate in a few products; each needs its own fix, and bracketing orders look different from single-size orders.",
         "sources": [
-          "web-shipbob",
+          "cat-reasons",
           "cat-returns-reviewer"
         ]
       },
       {
-        "id": "s-pattern",
-        "name": "Read the pattern and separate fit from quality and expectation",
-        "why": "Too small and too big in equal numbers means weak guidance, one direction means a wrong size run, one size means production, several sizes in an order means bracketing.",
+        "id": "s-reasons",
+        "name": "Get the real reasons from the returned units",
+        "why": "The form reason is blank on 60% and customer-chosen labels are coarse; inspecting returned units gives the true reason and size.",
         "sources": [
-          "web-claimlane",
-          "web-shipbob",
-          "cat-buyer-fit"
+          "web-shopify-setup",
+          "cat-bad-reviews"
         ]
       },
       {
-        "id": "s-cost",
-        "name": "Put a rupee cost on each reason and product",
-        "why": "Effort should follow money lost: refunds, Rs 180 return shipping and stock that cannot be resold.",
+        "id": "s-reviews",
+        "name": "Read the reviews for fit, fabric and expectation mismatches",
+        "why": "Reviews say why garments did not work, but the CSV lacks SKUs and only covers people who kept the item.",
         "sources": [
-          "cat-return-cost",
-          "owner"
+          "web-judgeme",
+          "cat-bad-reviews"
+        ]
+      },
+      {
+        "id": "s-diagnose",
+        "name": "Test the causes and size what each costs",
+        "why": "Cost per return and the share each cause explains decide which fix comes first.",
+        "sources": [
+          "cat-cost",
+          "web-nrf"
         ]
       },
       {
         "id": "s-fix",
-        "name": "Fix the worst products first with measured, product-specific fit information",
-        "why": "A generic size chart helps little. Measured garment sizes, fit notes and size-up or size-down prompts on the flagged products address the usual cause.",
+        "name": "Fix the returns form, size charts and pages by product wave",
+        "why": "Changing products in waves lets unchanged products serve as the comparison; a better form feeds every later round.",
         "sources": [
-          "web-claimlane",
-          "web-shipbob"
+          "web-shopify-setup",
+          "cat-bad-reviews"
         ]
       },
       {
-        "id": "s-bracket",
-        "name": "Respond to bracketing and serial returners with policy",
-        "why": "Practitioners push exchanges over refunds and add restocking terms, but these change the returns policy.",
+        "id": "s-measure",
+        "name": "Read returns by order cohort, after returns have had time to arrive",
+        "why": "Returns arrive days or weeks after the order, so a recent cohort looks better than it is until it matures.",
         "sources": [
-          "web-shipbob"
-        ]
-      },
-      {
-        "id": "s-test",
-        "name": "Change a set of products and compare with unchanged ones over a full sell-through",
-        "why": "Returns arrive weeks after the order. A control group of similar products shows what the changes did.",
-        "sources": [
-          "web-claimlane"
+          "web-shopify-sales"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Assuming sizing is the cause from the 40% of returns that gave a reason, when the blank 60% may differ.",
+        "text": "Treating the owner's 'sizing' belief as fact when the reason field is blank on 60% of returns; the blank group may differ from the filled one.",
         "sources": [
-          "web-claimlane",
-          "owner"
+          "web-shopify-setup",
+          "cat-bad-reviews"
         ]
       },
       {
-        "text": "Fixing one generic size chart for the whole store instead of the few products that drive returns.",
+        "text": "Computing the rate on reversed quantity, which includes cancellations and edits, and chasing a problem that is partly not returns at all.",
         "sources": [
-          "web-claimlane",
-          "web-shipbob"
+          "web-shopify-sales"
         ]
       },
       {
-        "text": "Counting bracketing (several sizes bought, one kept) as a size chart problem.",
+        "text": "Using reviews alone: they miss the buyers who returned the item and the CSV has no SKU or order data.",
         "sources": [
-          "web-claimlane",
-          "web-shipbob"
+          "web-judgeme"
         ]
       },
       {
-        "text": "Reading results before returns from the changed orders have come in.",
+        "text": "Judging a fix on recent orders before their returns have arrived.",
         "sources": [
-          "web-claimlane"
-        ]
-      },
-      {
-        "text": "Treating vendor percentages for fit returns as this store's numbers.",
-        "sources": [
-          "web-shipbob",
-          "web-claimlane"
+          "web-shopify-sales"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Cut the return rate below 20% by fixing data, fit information and the returns form",
+    "name": "Cut returns below 20% by March",
     "capabilities": [
       {
         "id": "store-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read orders and returns (Shopify MCP, read-only)",
-        "why": "Pull orders, line items, returns and refund amounts."
+        "name": "Read orders, returns and refunds (Shopify MCP)",
+        "why": "Pull orders, line items with SKU and size, returns with reasons, and refunds for the last 6 months."
       },
       {
         "id": "reviews-file",
         "access": "read",
         "via": "file",
-        "name": "Read the Judge.me reviews export (CSV)",
-        "why": "Find fit and expectation comments in reviews to explain returns with blank reasons."
+        "name": "Read the Judge.me reviews CSV",
+        "why": "Reviews with product handle, rating and text, exported by the owner."
       },
       {
         "id": "owner-apply",
-        "access": "live",
+        "access": "draft",
         "via": "owner",
-        "name": "Owner applies approved changes in Shopify",
-        "why": "Our access is read-only, so the owner changes the returns form, size charts and product pages and tells us when each is done."
+        "name": "Owner or operations lead applies page, size chart and form changes and logs returned-unit reasons",
+        "why": "Shopify is read-only for us; people at the store make each change and do the returned-unit tally."
       }
     ],
     "data": [
       {
-        "id": "returns",
-        "name": "Returns with reasons and refunds",
-        "why": "The base for the return rate, the reason mix and the cost of returns.",
+        "id": "orders-returns",
+        "name": "Orders, returns and refunds by SKU",
+        "why": "The raw material for the rate, the split by product and size and the cost.",
         "fields": [
-          "return id",
-          "order id",
-          "created date",
-          "sku",
-          "size",
-          "color",
-          "quantity",
-          "return reason",
-          "reason note",
-          "refund amount",
-          "return shipping cost"
-        ],
-        "routes": [
-          {
-            "kind": "MCP",
-            "how": "Read returns and the related orders for the last 6 months with the Shopify MCP."
-          },
-          {
-            "kind": "CSV",
-            "how": "Shopify admin, Analytics, Reports, Orders and returns by product: export as CSV for the last 6 months."
-          }
-        ],
-        "required_for": [
-          "evidence-returns",
-          "integrity-returns",
-          "diagnosis"
-        ],
-        "alternative": "With only the last quarter, patterns by size stay low-confidence."
-      },
-      {
-        "id": "order-items",
-        "name": "Order lines",
-        "why": "Shows when one order holds several sizes of one style (bracketing) and the base for the return rate.",
-        "fields": [
-          "order id",
           "order date",
-          "customer id",
+          "order id",
           "sku",
           "size",
-          "color",
           "quantity",
-          "line price",
-          "discount"
+          "line value",
+          "payment method",
+          "return created by",
+          "return date",
+          "returned quantity",
+          "return reason",
+          "refund amount",
+          "cancellation or refused delivery"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read orders with line items for the same 6 months with the Shopify MCP."
+            "how": "Read orders, line items, returns and refunds for the last 6 months with the Shopify MCP."
           },
           {
             "kind": "CSV",
-            "how": "Shopify admin, Orders: export as CSV with line items."
+            "how": "Shopify admin: Analytics, Reports, the sales report with return line item reason and returned quantity by SKU; Orders export for the same dates."
           }
         ],
         "required_for": [
-          "evidence-returns",
-          "diagnosis"
-        ]
+          "evidence",
+          "integrity-definition",
+          "diagnosis",
+          "measurement"
+        ],
+        "alternative": "Product-level totals only: the split by product still works but size, bracketing and order-type findings stay unknown."
       },
       {
         "id": "reviews",
         "name": "Judge.me reviews",
-        "why": "Reviews that mention fit, length, fabric or colour explain returns that have no reason recorded.",
+        "why": "Buyer words about fit, fabric and colour to compare with the return reasons.",
         "fields": [
           "review date",
-          "product",
           "rating",
           "review text",
-          "reviewer size or fit answer if collected"
+          "product handle",
+          "product id"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Judge.me admin, Reviews, Export reviews as CSV."
+            "how": "Judge.me, Reviews, Export, published reviews for the last 12 months, as CSV."
           }
         ],
         "required_for": [
-          "evidence-returns",
+          "evidence",
           "diagnosis"
-        ],
-        "alternative": "Without reviews, expectation and quality causes stay unknown."
+        ]
       },
       {
-        "id": "garment-measurements",
-        "name": "Measured garment sizes and current size charts",
-        "why": "A size chart can only be corrected against real measurements of the garments sold.",
+        "id": "returned-units-sample",
+        "name": "Returned-unit sample with true reasons",
+        "why": "The outside check on the blank reasons: what is actually wrong, as seen on the garment.",
         "fields": [
-          "product",
-          "size",
-          "measured chest or bust",
-          "waist",
-          "hip",
-          "length",
-          "published chart value"
+          "return id",
+          "sku",
+          "size ordered",
+          "reason given by customer",
+          "reason found on inspection",
+          "condition",
+          "defect or fit note",
+          "measured against size chart"
         ],
         "routes": [
           {
             "kind": "ASK",
-            "how": "Ask the owner or operations lead for the supplier tech pack or a tape measurement of the top-returning styles."
-          },
+            "how": "Operations lead logs every returned unit that arrives over the next 2 to 3 weeks on a simple sheet (at least 100 units), including a short fit or defect note and, where possible, a one-line reply from the customer."
+          }
+        ],
+        "required_for": [
+          "evidence-sample",
+          "diagnosis"
+        ],
+        "alternative": "Without the sample, the blank 60% stays unexplained and any fit finding is marked low-confidence."
+      },
+      {
+        "id": "pages-and-charts",
+        "name": "Current product pages, size charts and returns form",
+        "why": "Needed to see what customers were told before the order and what the returns form asks.",
+        "fields": [
+          "product url",
+          "size chart as shown",
+          "fit note",
+          "model height and size",
+          "returns form fields",
+          "required or optional"
+        ],
+        "routes": [
           {
             "kind": "URL",
-            "how": "Read the currently published size chart and fit notes on each flagged product page."
+            "how": "Read the live product pages of the top returned products; owner screenshots the returns form."
           }
         ],
         "required_for": [
           "diagnosis",
-          "page-fixes"
-        ],
-        "alternative": "Without measurements, size chart accuracy stays UNKNOWN and fit notes are limited to what reviews say."
+          "build"
+        ]
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the problem",
+        "name": "Pin down the returns problem",
         "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
-        "from_steps": [],
         "owner": {
           "role": "monthly-returns-and-refunds-reviewer"
         },
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "evidence-returns",
+        "id": "evidence",
         "kind": "evidence",
-        "name": "Gather returns, orders and reviews",
-        "goal": "Pull the last 6 months of returns, order lines and the Judge.me reviews into CSV files in the project, with return rates by product and size.",
-        "from_steps": [
-          "s-benchmark"
-        ],
+        "name": "Gather orders, returns and reviews",
+        "goal": "Pull six months of orders, line items, returns and refunds, and the Judge.me reviews matched to products, into CSV files in this project.",
         "owner": {
           "role": "monthly-returns-and-refunds-reviewer"
         },
-        "uses": [
-          "return-reason-finder"
-        ],
         "data": [
-          "returns",
-          "order-items",
+          "orders-returns",
           "reviews"
         ],
         "needs": [
@@ -447,9 +432,15 @@
         "outputs": [
           {
             "id": "dataset",
-            "name": "Returns and orders dataset",
+            "name": "Working dataset",
             "format": "csv",
-            "path": "evidence/returns-dataset.csv"
+            "path": "evidence/returns.csv"
+          },
+          {
+            "id": "reviews-matched",
+            "name": "Reviews matched to products",
+            "format": "csv",
+            "path": "evidence/reviews-matched.csv"
           },
           {
             "id": "evidence-notes",
@@ -461,103 +452,153 @@
         "checks": [
           {
             "id": "totals",
-            "name": "Order and return counts match Shopify's own totals for the same dates",
+            "name": "Order and return counts match Shopify's own totals for the same dates within 1%",
             "required": true
           },
           {
-            "id": "rate",
-            "name": "The 31% is recomputed and the definition (orders or units, exchanges in or out) is written down",
+            "id": "match",
+            "name": "At least 95% of reviews are matched to a product by handle, and the rest are listed",
             "required": true
           },
           {
-            "id": "split",
-            "name": "Return rate is shown by product, size and month",
+            "id": "coverage",
+            "name": "The share of returns with a blank reason is recomputed and compared with the reported 60%",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "integrity-returns",
-        "kind": "integrity",
-        "name": "Check the returns data can be trusted",
-        "goal": "Measure how many returns have no reason, whether those differ from the ones that have one (by product, size, month), and whether reviews can fill the gap. Ends with a verdict on what the data can support.",
+        "gate": "none",
         "from_steps": [
-          "s-clean"
+          "s-define",
+          "s-split"
         ],
-        "owner": {
-          "role": "weekly-store-numbers-watcher"
-        },
         "uses": [
           "return-reason-finder",
-          "feedback-theme-finder"
-        ],
+          "refund-rate-analyzer"
+        ]
+      },
+      {
+        "id": "evidence-sample",
+        "kind": "evidence",
+        "name": "Log the real reasons on returned units",
+        "goal": "The operations lead logs every returned unit for 2 to 3 weeks with size ordered, the customer's reason if any, condition and a short fit or defect note, to learn why the blank returns come back.",
+        "owner": {
+          "role": "monthly-returns-and-refunds-reviewer"
+        },
         "data": [
-          "returns",
-          "reviews"
+          "returned-units-sample"
+        ],
+        "needs": [
+          "owner-apply"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "sample",
+            "name": "Returned-unit log",
+            "format": "csv",
+            "path": "evidence/returned-units.csv"
+          }
+        ],
+        "checks": [
+          {
+            "id": "size",
+            "name": "At least 100 returned units are logged, or the shortfall is stated and findings marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "fields",
+            "name": "Every row has the SKU, size ordered and a reason found on inspection or marked unknown",
+            "required": true
+          },
+          {
+            "id": "unbiased",
+            "name": "Units are logged as they arrive, not picked, and the logging period is stated",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-reasons"
+        ],
+        "uses": [
+          "trial-log-planner"
+        ]
+      },
+      {
+        "id": "integrity-definition",
+        "kind": "integrity",
+        "name": "Check the 31% means what we think",
+        "goal": "Write the definition of return rate, recompute it on physical returns and on all reversals, profile the blank-reason returns, and check how returns are created.",
+        "owner": {
+          "role": "support-analytics-reporter"
+        },
+        "data": [
+          "orders-returns"
         ],
         "needs": [
           "store-read"
         ],
         "depends_on": [
-          "evidence-returns"
+          "evidence"
         ],
         "outputs": [
           {
-            "id": "data-check",
-            "name": "Returns data check",
+            "id": "definition",
+            "name": "Return rate definition and baseline check",
             "format": "markdown",
-            "path": "integrity/RETURNS-DATA-CHECK.md"
+            "path": "integrity/BASELINE.md"
           }
         ],
         "checks": [
           {
-            "id": "blank",
-            "name": "Share of returns with no reason is measured overall and by product",
+            "id": "recompute",
+            "name": "The rate is recomputed three ways (orders returned, units returned, value returned) on physical returns, and the reported 31% is matched to one of them or the gap is explained",
             "required": true
           },
           {
-            "id": "bias",
-            "name": "Blank-reason returns are compared with reasoned ones, so a bias in the reasoned 40% is named or ruled out",
+            "id": "non-returns",
+            "name": "Cancellations, refused deliveries and refunds without a returned item are counted separately",
+            "required": true
+          },
+          {
+            "id": "blank-profile",
+            "name": "Blank-reason returns are split by who created them (customer or staff), product and month",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and the baseline to use for the target",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-define"
+        ],
+        "uses": [
+          "refund-rate-analyzer"
+        ]
       },
       {
         "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find what is driving returns",
-        "goal": "Test each hypothesis, including the owner's sizing theory, against returns, order lines, reviews and measurements. Split fit from quality and expectation, and put a rupee cost on each cause.",
-        "from_steps": [
-          "s-pattern",
-          "s-cost"
-        ],
+        "name": "Find why clothes come back",
+        "goal": "Test the hypotheses by product and SKU against reasons, the returned-unit log and reviews. Size what each cause costs. Keep competing explanations.",
         "owner": {
-          "role": "find-out-why-good-orders-turn-into-bad-reviews-and-returns"
+          "role": "monthly-returns-and-refunds-reviewer"
         },
-        "support": [
-          "monthly-returns-and-refunds-reviewer"
-        ],
-        "uses": [
-          "return-cost-calculator",
-          "feedback-theme-finder",
-          "serial-returner-spotter"
-        ],
         "data": [
-          "returns",
-          "order-items",
+          "orders-returns",
           "reviews",
-          "garment-measurements"
+          "returned-units-sample",
+          "pages-and-charts"
         ],
         "depends_on": [
-          "evidence-returns",
-          "integrity-returns"
+          "evidence",
+          "evidence-sample",
+          "integrity-definition"
         ],
         "outputs": [
           {
@@ -571,101 +612,103 @@
             "name": "Hypothesis verdicts",
             "format": "json",
             "path": "diagnosis/hypotheses.json"
-          },
-          {
-            "id": "return-costs",
-            "name": "Cost of returns by reason and product",
-            "format": "csv",
-            "path": "diagnosis/return-costs.csv"
           }
         ],
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the numbers behind it",
             "required": true
           },
           {
             "id": "volume",
-            "name": "Product and size findings meet a minimum count of returns, or are marked low-confidence",
+            "name": "A product finding rests on at least 30 orders of that product, otherwise it is marked low-confidence",
             "required": true
           },
           {
-            "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
+            "id": "sizing-test",
+            "name": "The sizing belief is tested separately on reasoned returns, the returned-unit log and reviews, and all three results are shown",
             "required": true
           },
           {
             "id": "cost",
-            "name": "Cost uses Rs 180 per return plus refunds and unsellable stock, and lists what is assumed",
+            "name": "Each cause is costed in rupees a month (return shipping, refund handling, written-off stock) and ranked",
+            "required": true
+          },
+          {
+            "id": "alternatives",
+            "name": "Each main finding names at least one competing explanation",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-split",
+          "s-reviews",
+          "s-diagnose"
+        ],
+        "support": [
+          "monthly-customer-voice-keeper"
+        ],
+        "uses": [
+          "find-out-why-good-orders-turn-into-bad-reviews-and-returns",
+          "feedback-theme-finder",
+          "return-cost-calculator"
+        ]
       },
       {
         "id": "options",
         "kind": "options",
-        "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked cards within the owner's limits, each with the products it covers, the returns it should prevent, effort and how it will be measured.",
-        "from_steps": [
-          "s-fix",
-          "s-bracket"
-        ],
+        "name": "Rank the fixes",
+        "goal": "Turn supported findings into a ranked list of fixes by product wave, each with expected returns avoided, saving in rupees, effort, confidence, risk to conversion and how it will be measured.",
         "owner": {
           "role": "monthly-returns-and-refunds-reviewer"
         },
-        "uses": [
-          "return-cost-calculator",
-          "big-swing-test-picker"
-        ],
         "depends_on": [
           "diagnosis"
         ],
         "outputs": [
           {
             "id": "recommendations",
-            "name": "Recommendation cards",
+            "name": "Ranked fixes",
             "format": "markdown",
             "path": "options/RECOMMENDATIONS.md"
-          },
-          {
-            "id": "recommendations-json",
-            "name": "Recommendation cards as data",
-            "format": "json",
-            "path": "options/recommendations.json"
           }
         ],
         "checks": [
           {
             "id": "evidence",
-            "name": "Every card cites the finding it rests on",
+            "name": "Every option cites the finding it rests on",
             "required": true
           },
           {
             "id": "fields",
-            "name": "Every card has expected direction, effort, confidence, risk and how it will be measured",
+            "name": "Every option has returns avoided, rupee saving, effort, confidence, risk and how it will be measured",
             "required": true
           },
           {
             "id": "limits",
-            "name": "No card changes the free returns policy before February",
+            "name": "No option changes the free returns policy before February",
             "required": true
           },
           {
-            "id": "order",
-            "name": "Cards are ranked by returns prevented per effort, with the reason capture fix first when data is not CHECKED",
+            "id": "gap",
+            "name": "The options together are sized against the 11-point gap to 20%, and the shortfall is stated",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "returns-cost-calculator",
+          "order-margin"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
         "name": "Owner and operations lead choose",
-        "goal": "The owner, with the operations lead, picks card IDs. Ask for the reason when they pass on a top card; record it as a decision.",
-        "from_steps": [],
+        "goal": "The owner and the operations lead pick the fixes, the product waves and their order. Ask for the reason when they pass over the top option and record it.",
         "owner": {
           "role": "monthly-returns-and-refunds-reviewer"
         },
@@ -675,7 +718,7 @@
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen plan",
+            "name": "Chosen fixes",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -683,222 +726,191 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
+            "name": "Chosen and passed-over options are in decisions.jsonl",
             "required": true
           },
           {
             "id": "rationale",
-            "name": "A reason is recorded wherever the top card was passed over",
+            "name": "A reason is recorded wherever the top option was passed over",
             "required": true
           }
         ],
-        "gate": "approve"
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "returns-form",
+        "id": "build",
         "kind": "production",
-        "name": "Prepare the returns form change",
-        "goal": "Prepare the change that gets a usable reason on every return: apparel-aware reasons that separate too small, too large, length, fabric, not as pictured and quality, with the reason required and a size field.",
-        "from_steps": [
-          "s-capture"
-        ],
+        "name": "Prepare the fixes",
+        "goal": "Prepare the chosen changes: a returns form whose reasons are specific (including how much too big or small), size charts with garment measurements, fit notes and page text for each product in wave 1, ready to apply. Batch into one review.",
         "owner": {
           "role": "monthly-returns-and-refunds-reviewer"
         },
-        "depends_on": [
-          "decision",
-          "integrity-returns"
-        ],
-        "outputs": [
-          {
-            "id": "form-changes",
-            "name": "Returns form changes",
-            "format": "markdown",
-            "path": "production/RETURNS-FORM.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "reasons",
-            "name": "Fit is kept apart from quality and expectation, and each reason maps to a report column",
-            "required": true
-          },
-          {
-            "id": "steps",
-            "name": "Exact steps in Shopify's returns settings or the form app, with a way to undo",
-            "required": true
-          },
-          {
-            "id": "policy",
-            "name": "The free returns policy and its wording are untouched",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No returns form card was chosen.",
-        "uses": [
-          "return-reason-finder"
-        ]
-      },
-      {
-        "id": "page-fixes",
-        "kind": "production",
-        "name": "Prepare size charts and fit notes",
-        "goal": "For the chosen products, prepare corrected size charts from measured garments, product-specific fit notes, and size-up or size-down prompts, using only facts the owner supplied or reviews that say so.",
-        "from_steps": [
-          "s-fix"
-        ],
-        "owner": {
-          "role": "landing-page-fix-loop"
-        },
-        "reviewers": [
-          "monthly-returns-and-refunds-reviewer"
-        ],
-        "uses": [
-          "product-page-section-planner",
-          "product-page-auditor"
-        ],
         "data": [
-          "garment-measurements"
+          "pages-and-charts"
         ],
         "depends_on": [
-          "decision",
-          "diagnosis"
+          "decision"
         ],
         "outputs": [
           {
-            "id": "page-changes",
-            "name": "Size chart and fit note changes",
+            "id": "fix-pack",
+            "name": "Fix pack for review",
             "format": "markdown",
-            "path": "production/PAGE-CHANGES.md"
+            "path": "production/FIX-PACK.md"
+          },
+          {
+            "id": "waves",
+            "name": "Product waves and rollout dates",
+            "format": "csv",
+            "path": "production/WAVES.csv"
           }
         ],
         "checks": [
           {
             "id": "scoped",
-            "name": "Only chosen products are included, each with the finding it answers",
+            "name": "Only chosen changes are included, and none touches the free returns policy",
             "required": true
           },
           {
-            "id": "facts",
-            "name": "Every measurement and fit statement comes from the owner's measurements or a quoted review",
+            "id": "measured",
+            "name": "Every size chart figure is a garment measurement supplied by the owner or operations lead, not an estimate",
             "required": true
           },
           {
-            "id": "preview",
-            "name": "Each change is previewed or comes with exact steps and the old text for undo",
+            "id": "form",
+            "name": "The returns form makes a reason required and offers specific choices plus a free note, and the old reason list is mapped to the new",
+            "required": true
+          },
+          {
+            "id": "claims",
+            "name": "Page text uses buyer words from reviews and makes no promise the garment cannot keep",
             "required": true
           }
         ],
         "gate": "review",
-        "optional_when": "No size chart or product page card was chosen."
+        "optional_when": "No page, chart or form change was chosen.",
+        "from_steps": [
+          "s-fix"
+        ],
+        "support": [
+          "monthly-customer-voice-keeper"
+        ],
+        "uses": [
+          "product-page-section-planner",
+          "customer-question-finder"
+        ]
       },
       {
-        "id": "go-live",
+        "id": "apply",
         "kind": "execution",
-        "name": "Owner applies each change",
-        "goal": "Register the test first: which products change and which comparable ones stay as control, with dates. Then hand the owner one change at a time to apply and record when it went live.",
-        "from_steps": [
-          "s-test"
-        ],
+        "name": "Apply the fixes by product wave",
+        "goal": "The owner or operations lead applies the returns form change and wave 1 product changes, leaves comparable products unchanged for now, and logs each change date. Register the comparison before wave 1 goes live.",
         "owner": {
-          "role": "store-test-program-runner"
+          "role": "monthly-returns-and-refunds-reviewer"
         },
         "needs": [
           "owner-apply"
         ],
         "depends_on": [
-          "returns-form",
-          "page-fixes"
+          "build"
         ],
         "outputs": [
           {
-            "id": "change-log",
-            "name": "Change log with dates and control products",
+            "id": "applied-log",
+            "name": "Applied changes log",
             "format": "markdown",
-            "path": "execution/CHANGE-LOG.md"
+            "path": "execution/APPLIED-LOG.md"
           }
         ],
         "checks": [
           {
             "id": "registered",
-            "name": "Changed products, control products and dates are recorded before the first change",
+            "name": "The wave comparison (changed products versus similar unchanged products, same period) is registered in experiments.jsonl before wave 1 goes live",
             "required": true
           },
           {
-            "id": "control",
-            "name": "Control products are similar in style, price and past return rate",
+            "id": "dated",
+            "name": "Every change has the date and time it was made",
             "required": true
           },
           {
-            "id": "confirmed",
-            "name": "The owner confirms each change is live and we check it on the store",
+            "id": "form-test",
+            "name": "A test return is made through the new form and the reason is recorded in Shopify",
             "required": true
           }
         ],
-        "gate": "approve_each_action",
-        "optional_when": "Nothing was chosen to apply.",
+        "gate": "none",
+        "from_steps": [
+          "s-fix"
+        ],
         "uses": [
-          "run-one-store-test-and-know-whether-to-ship-the-change"
+          "experiment-designer"
         ]
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read the return rate honestly",
-        "goal": "Read the return rate of orders placed after each change, for changed and control products, against the baseline and guardrails, once returns from those orders have had time to arrive.",
-        "from_steps": [],
+        "name": "Read the returns honestly",
+        "goal": "Each month read return rate by order cohort on the written definition, for changed versus unchanged products, with conversion, rating and cost per return checked.",
         "owner": {
           "role": "experiment-readout-desk"
         },
-        "uses": [
-          "return-cost-calculator"
-        ],
         "data": [
-          "returns",
-          "order-items"
+          "orders-returns"
         ],
         "needs": [
           "store-read"
         ],
         "depends_on": [
-          "go-live"
+          "apply"
         ],
         "outputs": [
           {
             "id": "readout",
-            "name": "Results readout",
+            "name": "Monthly readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
           }
         ],
         "checks": [
           {
-            "id": "cohort",
-            "name": "Return rate is computed on orders placed after the change, after the return window has passed",
+            "id": "mature",
+            "name": "Only order cohorts at least 30 days old are called, or the cohort is marked immature",
             "required": true
           },
           {
-            "id": "control",
-            "name": "Changed products are compared with control products, not with the old average",
+            "id": "like-for-like",
+            "name": "The same definition, product mix and months are used for changed versus unchanged products and for the baseline",
             "required": true
           },
           {
             "id": "guardrails",
-            "name": "Order volume and return shipping cost per return are checked",
+            "name": "Conversion on changed pages, rating and return shipping cost per return are checked every read",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A product group is called better or worse only with at least 100 orders in each group; otherwise INCONCLUSIVE",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "page-test-calculator"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Close each test, record what worked, propose rules with their scope, and plan the next round, including the exchange-first and bracketing policy ideas to revisit once the returns policy can change.",
-        "from_steps": [],
+        "goal": "Close the comparison, record which fixes cut returns, and propose a monthly returns watch by product and reason; plan wave 2 and the February policy conversation with real numbers.",
         "owner": {
-          "role": "experiment-readout-desk"
+          "role": "store-test-program-runner"
         },
         "depends_on": [
           "measurement"
@@ -906,7 +918,7 @@
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and next round",
+            "name": "Learnings and monthly watch rule",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
@@ -914,21 +926,17 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every applied change has a verdict",
+            "name": "Every registered comparison is closed in experiments.jsonl",
             "required": true
           },
           {
             "id": "scoped",
-            "name": "Each proposed rule says whether it holds for these products, this store or the category",
-            "required": true
-          },
-          {
-            "id": "policy",
-            "name": "Policy ideas set aside for now are listed with the date they can be reconsidered",
+            "name": "Each proposed rule says whether it holds for this product, this store or the playbook",
             "required": true
           }
         ],
         "gate": "none",
+        "from_steps": [],
         "uses": [
           "trial-log-planner"
         ]
@@ -936,67 +944,58 @@
     ],
     "hypotheses": [
       {
-        "id": "h-size-chart-wrong",
-        "statement": "Published size charts do not match the garments, so shoppers pick the wrong size.",
-        "test": "Compare measured garment sizes with the published chart for the top-returning products; read fit comments in reviews.",
-        "confirm_if": "The chart differs from measured garments by a size or more on those products, or reviews often say it runs small or large.",
-        "refute_if": "Charts match measurements and reviews do not mention fit.",
-        "fix_stage": "page-fixes"
+        "id": "h-definition",
+        "statement": "The 31% counts more than physical returns (cancellations, refused deliveries or refunds without a returned item), so the real return rate is lower.",
+        "test": "Recompute the rate on returned quantity (physical) and on reversed quantity (all reversals) for the same quarter.",
+        "confirm_if": "The physical-return rate is 5 points or more below 31%.",
+        "refute_if": "The physical-return rate is within 2 points of 31%.",
+        "fix_stage": "evidence"
       },
       {
-        "id": "h-concentrated",
-        "statement": "A small number of products or sizes cause most returns.",
-        "test": "Return rate and share of all returns by product and size, with a minimum number of orders.",
-        "confirm_if": "A few products or sizes have a return rate far above the store average and make up a large share of returns.",
-        "refute_if": "Returns are spread evenly across products and sizes.",
-        "fix_stage": "page-fixes"
+        "id": "h-size",
+        "statement": "Sizing and fit are the main reason for returns.",
+        "test": "Share of too-big and too-small among reasoned returns, the share of fit complaints in the returned-unit log, and fit mentions in reviews by product.",
+        "confirm_if": "Fit reasons are 40% or more of reasoned returns and of the logged units, and reviews of the top returned products mention fit on 15% or more of reviews.",
+        "refute_if": "Fit is under 20% in the returned-unit log.",
+        "fix_stage": "build"
+      },
+      {
+        "id": "h-blank-bias",
+        "statement": "The returns with a blank reason differ from those with a reason (for example, staff-created returns or one set of products), so the reasoned 40% misleads.",
+        "test": "Compare blank and reasoned returns by creator, product and month, and compare the reasons found on inspection for blank returns with the stated reasons.",
+        "confirm_if": "Blank returns are 80% or more staff-created, or their inspected reasons differ from the stated mix by 15 points or more on any main reason.",
+        "refute_if": "Blank and reasoned returns share the same product, creator and reason mix within 10 points.",
+        "fix_stage": "build"
+      },
+      {
+        "id": "h-concentration",
+        "statement": "A small number of products or SKUs cause most of the returns.",
+        "test": "Returns and return rate by SKU, ranked, with the cumulative share.",
+        "confirm_if": "The top 10 SKUs hold 40% or more of returns, with a return rate 10 points or more above the store average.",
+        "refute_if": "Returns are spread so that the top 10 SKUs hold under 20%.",
+        "fix_stage": "apply"
       },
       {
         "id": "h-bracketing",
-        "statement": "Shoppers buy two or more sizes of one style and return the extras.",
-        "test": "Orders with the same style in several sizes, and what share of their lines are returned.",
-        "confirm_if": "A large share of returned lines come from multi-size orders of one style.",
-        "refute_if": "Returned lines mostly come from single-size orders.",
-        "fix_stage": "learning"
+        "statement": "Customers order the same item in two sizes and send one back.",
+        "test": "Orders with two or more sizes of the same product and their return rate against single-size orders.",
+        "confirm_if": "These orders are 10% or more of orders and return at least 40%, making them 15% or more of returns.",
+        "refute_if": "They are under 5% of orders.",
+        "fix_stage": "build"
       },
       {
         "id": "h-expectation",
-        "statement": "Items are returned because colour, fabric or look differs from the page.",
-        "test": "Reviews and any reason notes that mention colour, material, see-through or not as pictured, by product.",
-        "confirm_if": "These themes are frequent on the products with the highest return rates.",
-        "refute_if": "They are rare compared with fit comments.",
-        "fix_stage": "page-fixes"
-      },
-      {
-        "id": "h-quality",
-        "statement": "A quality or defect problem on certain batches drives returns.",
-        "test": "Return reasons and review themes for damage, stitching, shrinkage or defects by product and order date.",
-        "confirm_if": "Defect themes cluster on specific products or supplier batches.",
-        "refute_if": "Defect themes are rare and spread out.",
-        "fix_stage": "options"
-      },
-      {
-        "id": "h-blank-reasons-differ",
-        "statement": "The 60% of returns with no reason differ from the 40% that have one, so the sizing theory may rest on a biased sample.",
-        "test": "Compare product, size, order value and review themes for blank versus reasoned returns.",
-        "confirm_if": "Blank-reason returns are concentrated in different products or customers than reasoned ones.",
-        "refute_if": "The two groups look alike on product, size and value.",
-        "fix_stage": "returns-form"
-      },
-      {
-        "id": "h-repeat-returners",
-        "statement": "A small group of customers returns a large share of items.",
-        "test": "Returns per customer over the period, and the share of returned lines from the top 5% of returners.",
-        "confirm_if": "A small group accounts for a large share of returns.",
-        "refute_if": "Returns are spread across many customers.",
-        "fix_stage": "options"
+        "statement": "Quality, colour or fabric not matching the page is a second cause besides fit.",
+        "test": "Share of not-as-described, defective or colour reasons in the returned-unit log, and fabric or colour complaints in reviews.",
+        "confirm_if": "These are 20% or more of logged units, or a product has such complaints in 10% or more of its reviews.",
+        "refute_if": "They are under 10% of logged units and rare in reviews.",
+        "fix_stage": "build"
       }
     ],
-    "dropped": [],
     "measurement": {
-      "window": "Orders placed in the 4 weeks after each change, read once the return window for those orders has passed, compared with control products over the same weeks.",
-      "min_volume": "At least 100 orders per group (changed and control), or the result is INCONCLUSIVE.",
-      "stop_rule": "Roll a change back early only if order volume on the changed products drops sharply or return shipping cost per return rises; otherwise read the full window."
+      "window": "From the first applied change to March 2027, read monthly by order cohort once the cohort is at least 30 days old; compare changed products with similar unchanged products in the same months.",
+      "min_volume": "At least 100 orders in each compared product group; fewer is INCONCLUSIVE.",
+      "stop_rule": "Pause a product change and ask the owner and operations lead if conversion on changed pages falls more than 5% (relative) against unchanged products or the rating falls."
     }
   }
 }

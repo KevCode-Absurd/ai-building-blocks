@@ -1,45 +1,58 @@
 {
   "case": "eng-leaked-api-key",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Both leaked credentials (a Stripe secret key and an AWS access key pushed to the public repo two days ago) are dead and replaced today, we know whether anyone else used them, and the secrets are gone from the repo history.",
-    "deliverable": "An evidence-backed answer to \"was anything abused\", both keys rotated with the CTO approving each action, the history cleaned, and an incident record in the repo's private ops folder.",
+    "outcome": "Today, make both leaked credentials (a Stripe secret key and an AWS access key, pushed to a public GitHub repo two days ago) useless to anyone else, find out from the logs whether either was used by someone other than us, and clean up the exposure, with the CTO approving every key rotation and every history rewrite.",
+    "ambition": {
+      "goal_beyond": "No secret can reach the repository again, and if one ever does the team finds out and shuts it in minutes, not days.",
+      "rungs": [
+        "Rotate both keys today and report whether the logs show any misuse",
+        "Establish what each key could reach, prove from the logs what it actually did (and say honestly where logging cannot tell), close any footholds, and clean the repository and its copies",
+        "Keep it true without being asked: push protection and secret scanning on, a pre-commit check, and keys that expire, so the next slip is blocked or caught at once"
+      ],
+      "chosen": 3,
+      "judge": "AWS CloudTrail and IAM, Stripe request logs and events, and GitHub's own secret scanning alerts and push protection, each an independent record of what the keys did and whether any secret remains; the settings changes are offered at the decision and need the CTO's yes"
+    },
+    "deliverable": "Both credentials rotated and the old ones dead, a sourced misuse finding for AWS and Stripe that says what the logs can and cannot show, the repository history cleaned if the CTO approves, and prevention proposed for the CTO to accept. Notes kept in the repo's private ops folder with no secret values in them.",
     "done": [
-      "The facts of the exposure are saved without writing any key value: commit, file, time, forks",
-      "AWS and Stripe activity for both keys since the push is reviewed, with what could not be seen stated",
-      "The CTO has approved the order of actions",
-      "Both exposed keys are inactive and replaced, and services that used them still work",
-      "The secrets are removed from the repository history and cached views are handled",
-      "No activity with the old keys appears after the change",
-      "The incident record and prevention steps are saved in the private ops folder"
+      "Evidence from AWS and Stripe logs exported before anything is changed",
+      "Both leaked credentials rotated and the old ones shown dead, with production health checked",
+      "A finding for each key: abused, no evidence of abuse within the logged coverage, or unknown, with the evidence",
+      "Any foothold an intruder created (new users, keys, roles, payouts, webhooks) found and closed or confirmed absent",
+      "Repository history cleaned and collaborators told, if the CTO approves; forks and cached views dealt with or listed",
+      "Prevention proposed and, if the CTO says yes, switched on",
+      "Notes saved in the private ops folder with no secrets in them"
     ],
     "metric": {
-      "name": "Valid exposed keys",
+      "name": "Leaked credentials still valid",
       "direction": "decrease",
-      "unit": "keys",
+      "unit": "credentials",
       "baseline": 2,
       "baseline_source": "reported",
       "target": 0
     },
-    "deadline": "Today",
+    "deadline": "Close off today; the abuse finding and cleanup follow the same day or the next",
     "guardrails": [
-      "No key rotation or history rewrite happens without the CTO's approval of that action",
-      "No key value is ever written into notes, chat or the repo"
+      "No key rotation or history rewrite happens without the CTO's approval of that exact action",
+      "Production payments and AWS workloads that use these keys keep working, or any outage is announced to the CTO before it happens",
+      "Log evidence is exported and kept before any key is deleted or changed",
+      "No secret value is written to notes, chat, pull requests or logs; keys are named by ID or last four characters only"
     ],
     "limits": [
-      "AWS and Stripe are reached only through the CTO's signed-in browser sessions",
-      "Notes go in the repo's private ops folder",
-      "The repository is public"
+      "Notes stay in the repo's private ops folder",
+      "Key rotation and history rewrite need the CTO's approval each time",
+      "Changes in AWS and Stripe are made through the consoles with the CTO's approval; we never hold or paste secret keys"
     ],
     "assets": [
-      "The public GitHub repo and its history",
-      "The repo's private ops folder"
+      "The public GitHub repository and its history",
+      "The repo's private ops folder",
+      "AWS console and Stripe dashboard (browser)"
     ],
     "connections": [
       {
-        "name": "GitHub MCP (admin)",
+        "name": "GitHub MCP",
         "access": "live",
         "status": "connected"
       },
@@ -54,88 +67,125 @@
         "status": "connected"
       }
     ],
-    "data_home": "Files in the repo's private ops folder",
+    "data_home": "The repo's private ops folder (the owner said to keep notes there)",
+    "technical_level": "Not stated by the owner. Give exact steps and ready commands, with plain notes, for the CTO to approve.",
     "decides": "The CTO",
     "unknowns": [
-      "Whether anyone else used either key",
-      "Which services and deploys use these keys, so replacing them does not break anything",
-      "Whether the repo has forks or clones, and whether GitHub secret scanning already raised an alert",
-      "What logging is on in AWS (CloudTrail) and how far back Stripe request logs go",
-      "How hands-on the CTO wants to be with the technical parts"
+      "Whether the keys were used by anyone else (the owner's stated unknown)",
+      "The exact time of the push, and when the first copy could have been taken",
+      "What permissions the AWS key had and whether it is a root or IAM user key",
+      "Whether the Stripe key is live or test mode, and whether it is a restricted key",
+      "Which services, deployments and CI jobs use these keys",
+      "Whether CloudTrail has a trail beyond the 90-day event history, and whether data events are logged",
+      "Whether the repo has forks or clones, and whether secret scanning or push protection is on",
+      "Whether other secrets sit in the history",
+      "Which IP addresses and tools the team uses, to tell its own activity from others"
     ],
     "answers": [
       {
         "question": "What happened?",
-        "answer": "A developer pushed a commit to the public GitHub repo two days ago with a Stripe secret key and an AWS access key in a config file. A later commit deleted it, but it is still in the history."
+        "answer": "A developer pushed a commit to the public GitHub repo two days ago containing a Stripe secret key and an AWS access key in a config file; it was deleted in a later commit but is still in the history"
       },
       {
-        "question": "What can your AI reach?",
-        "answer": "GitHub MCP with admin access, the AWS console and the Stripe dashboard through the browser."
+        "question": "What access do we have?",
+        "answer": "GitHub MCP with admin access; AWS console and Stripe dashboard through the browser"
       },
       {
         "question": "What needs approval?",
-        "answer": "Any key rotation or history rewrite needs the CTO's approval."
+        "answer": "Any key rotation or history rewrite needs the CTO's approval"
       },
       {
-        "question": "What do you want, by when?",
-        "answer": "To know if anything was abused and close it off today."
+        "question": "What do you want?",
+        "answer": "To know if anything was abused and to close it off today"
       },
       {
-        "question": "Where do notes go and who decides?",
-        "answer": "Notes in the repo's private ops folder. The CTO decides."
+        "question": "Where do notes go?",
+        "answer": "In the repo's private ops folder"
       },
       {
-        "question": "What is still unknown?",
-        "answer": "Whether the keys were used by anyone else."
+        "question": "Who decides?",
+        "answer": "The CTO"
+      },
+      {
+        "question": "What is unknown?",
+        "answer": "Whether the keys were used by anyone else"
       }
     ]
   },
   "research": {
-    "approach": "Responders treat a key that touched a public repo as compromised from the minute of the push, and deleting the commit does not change that. The order is: save the facts, then revoke or rotate the key at the provider before touching git history, because a live key still works while history is rewritten. At the provider they keep the evidence: AWS keys are deactivated, not deleted, so CloudTrail can still be read, and a replacement is put in place so services keep running. They then read the key's activity since the push (new IAM users, roles, policies, access keys, temporary session tokens, sensitive services and unusual regions on AWS; refunds, payouts, data reads, new keys and webhooks on Stripe) and watch for activity after rotation. Only then is the history rewritten, with GitHub Support asked to purge cached views, forks and collaborators dealt with, and push protection and a secrets store put in place.",
+    "approach": "Practitioners treat any key that touched a public repository as compromised from the moment of the push, because public repositories are scanned continuously: the response is containment first, evidence second, cleanup third. They record what the credential could reach, export the provider logs before changing anything, then disable (not delete) the AWS key and roll the Stripe key, restore service with new credentials from a secrets store, and only then read the logs for misuse and for footholds such as new IAM users, keys, payout destinations or webhooks. Rewriting git history is a cleanup step, not a fix: it cannot recall copies in clones, forks and caches, so rotation is what actually closes the exposure. Logs have limits (CloudTrail event history shows 90 days of management events only), so a clean log is reported as no evidence of abuse within what was logged, never as proof of none.",
     "sources": [
       {
-        "id": "web-aws-compromised-key",
+        "id": "web-aws-keys",
         "kind": "web",
-        "title": "Responding to a Compromised AWS Access Key (AWS Builder Center)",
-        "ref": "https://builder.aws.com/content/3F991dfwleuryC0VHAfUPmValmX/responding-to-a-compromised-aws-access-key",
-        "date": "2026-06-14",
-        "note": "Mark the key inactive without deleting it, query CloudTrail, look for new IAM users, roles and policies, check sensitive services, create a replacement, then harden."
+        "title": "Manage access keys for IAM users (AWS IAM User Guide)",
+        "ref": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html",
+        "date": null,
+        "note": "Access keys are long-term credentials; keep them out of project files; use CloudTrail to monitor key usage; two keys per user, so a new key can be created before the old one is removed. Page shows no date; accessed 2026-11-03."
       },
       {
-        "id": "web-aws-playbook",
+        "id": "web-cloudtrail",
         "kind": "web",
-        "title": "AWS Security Series: AWS access key is compromised, now what? An incident response playbook (DEV Community)",
-        "ref": "https://dev.to/shamimice03/aws-security-series-aws-access-key-is-compromised-now-what-an-incident-response-playbook-448b",
-        "date": "2025-12-08",
-        "note": "Temporary session tokens made with the key stay valid after it is deactivated; block them with a deny policy keyed to token issue time; review CloudTrail and GuardDuty."
+        "title": "Working with CloudTrail event history (AWS CloudTrail User Guide)",
+        "ref": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html",
+        "date": null,
+        "note": "Event history is a searchable, downloadable record of the past 90 days of management events, per Region, one attribute filter at a time; it does not show data events; a trail or event data store is needed for longer or wider coverage. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-stripe-compromised",
+        "kind": "web",
+        "title": "Protecting against compromised API keys (Stripe Support)",
+        "ref": "https://support.stripe.com/questions/protecting-against-compromised-api-keys",
+        "date": null,
+        "note": "Roll the key now, update the backend, delete the old key once the new one works, review connected accounts, payouts and bank accounts, reverse unauthorized payouts, refund fraudulent charges, audit usage, rotate other keys. Page shows no date; accessed 2026-11-03."
+      },
+      {
+        "id": "web-stripe-practices",
+        "kind": "web",
+        "title": "Best practices for managing secret API keys (Stripe Docs)",
+        "ref": "https://docs.stripe.com/keys-best-practices",
+        "date": null,
+        "note": "Treat any exposure as a potential compromise and rotate even if unsure anyone saw it; keep keys in a secrets vault; use restricted keys; audit request logs; Stripe may notify or deactivate exposed keys but does not guarantee detection. Page shows no date; accessed 2026-11-03."
       },
       {
         "id": "web-github-remove",
         "kind": "web",
         "title": "Removing sensitive data from a repository (GitHub Docs)",
         "ref": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
-        "date": "2026-11-02",
-        "note": "Vendor page with no printed date; read 2026-11-02. Revoke or rotate first; git-filter-repo; force push; GitHub Support for cached views and pull request refs; forks remain; collaborators rebase."
+        "date": null,
+        "note": "Rotate or revoke first; rewriting history cannot clean clones and forks, changes commit hashes, hides closed pull request diffs; GitHub Support can remove cached views only for data rotation cannot mitigate; git-filter-repo with --sensitive-data-removal. Page shows no date; accessed 2026-11-03."
       },
       {
-        "id": "web-stripe-keys",
+        "id": "web-github-push",
         "kind": "web",
-        "title": "API keys (Stripe Docs)",
-        "ref": "https://docs.stripe.com/keys",
-        "date": "2026-11-02",
-        "note": "Vendor page with no printed date; read 2026-11-02. Rotate or expire a compromised key, expiry options and grace period, request logs per key, restricted keys and access policies."
+        "title": "About push protection (GitHub Docs)",
+        "ref": "https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection",
+        "date": null,
+        "note": "Blocks pushes with secrets before they land; repository-level protection is off by default and an admin must enable it; bypasses create alerts and audit entries. Page shows no date; accessed 2026-11-03."
       },
       {
-        "id": "cat-incident-responder",
-        "kind": "catalogue",
-        "title": "Security incident responder",
-        "ref": "agency-security-incident-responder"
-      },
-      {
-        "id": "cat-secrets-workflow",
+        "id": "cat-keys-workflow",
         "kind": "catalogue",
         "title": "Secret exposure review and storage setup",
         "ref": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site"
+      },
+      {
+        "id": "cat-secrets-agent",
+        "kind": "catalogue",
+        "title": "Credential storage and rotation reviewer",
+        "ref": "agency-security-secrets-credential-engineer"
+      },
+      {
+        "id": "cat-triager",
+        "kind": "catalogue",
+        "title": "Security incident response planner",
+        "ref": "security-incident-triager"
+      },
+      {
+        "id": "cat-incident-learn",
+        "kind": "catalogue",
+        "title": "Incident learning and follow-up planner",
+        "ref": "turn-an-incident-into-a-safer-procedure"
       },
       {
         "id": "owner",
@@ -146,271 +196,333 @@
     ],
     "steps": [
       {
-        "id": "s-facts",
-        "name": "Save the facts before changing anything",
-        "why": "The commit, file, time of push, forks and which key is which are the evidence and the start of the exposure window. Nothing is written with the key value.",
+        "id": "s-snapshot",
+        "name": "Record what leaked, since when, where copies may be, and where each key is used",
+        "why": "Scope decides everything: which keys, how long exposed, what can reach them, and which services will break when they are rotated.",
         "sources": [
-          "cat-incident-responder",
           "web-github-remove",
+          "web-aws-keys",
+          "cat-triager",
           "owner"
         ]
       },
       {
-        "id": "s-visibility",
-        "name": "Check what logs can show",
-        "why": "CloudTrail event history and Stripe logs have limits; \"no activity found\" only means something if the logs cover the window.",
+        "id": "s-export",
+        "name": "Export provider logs before changing anything",
+        "why": "CloudTrail event history is limited to 90 days and Stripe logs are the only record of what the key did; evidence is kept before keys are changed.",
         "sources": [
-          "web-aws-compromised-key",
-          "web-stripe-keys"
+          "web-cloudtrail",
+          "web-stripe-compromised"
         ]
       },
       {
-        "id": "s-aws-activity",
-        "name": "Read the AWS key's activity since the push",
-        "why": "Look at every call the key made, new IAM users, roles, policies and access keys, temporary session tokens, sensitive services and unusual regions.",
+        "id": "s-coverage",
+        "name": "Check what the logs can and cannot prove",
+        "why": "Event history has no data events and covers one Region at a time, so absence of misuse needs a stated coverage.",
         "sources": [
-          "web-aws-compromised-key",
-          "web-aws-playbook"
-        ]
-      },
-      {
-        "id": "s-stripe-activity",
-        "name": "Read the Stripe key's request log since the push",
-        "why": "A secret key can do any API call: look for unknown IPs, data reads, refunds, payouts, new keys or webhook endpoints.",
-        "sources": [
-          "web-stripe-keys"
+          "web-cloudtrail"
         ]
       },
       {
         "id": "s-contain",
-        "name": "Replace and kill the keys at the provider, evidence kept",
-        "why": "The key works until it is revoked; history cleanup does not stop it. Replace first so services keep running, deactivate AWS rather than delete, and block sessions made by the old key.",
+        "name": "Rotate both keys and kill the old ones",
+        "why": "Rotation, not history rewriting, closes the exposure; AWS key disabled first and deleted later, Stripe key rolled and replaced in the backend.",
         "sources": [
-          "web-aws-compromised-key",
-          "web-aws-playbook",
-          "web-stripe-keys",
+          "web-github-remove",
+          "web-aws-keys",
+          "web-stripe-compromised",
+          "cat-secrets-agent"
+        ]
+      },
+      {
+        "id": "s-abuse",
+        "name": "Read the logs for misuse and footholds",
+        "why": "Intruders use a leaked key to create new access (users, keys, roles, payout destinations, webhooks), which survives rotation.",
+        "sources": [
+          "web-cloudtrail",
+          "web-aws-keys",
+          "web-stripe-compromised"
+        ]
+      },
+      {
+        "id": "s-cleanup",
+        "name": "Clean the repository, copies and cached views",
+        "why": "History rewrite removes the file from the default history but not from forks, clones or cached views; GitHub Support handles cached views.",
+        "sources": [
           "web-github-remove"
         ]
       },
       {
-        "id": "s-history",
-        "name": "Remove the secrets from the git history",
-        "why": "The key stays reachable in history, in forks and in cached views until the history is rewritten and GitHub Support purges the cache.",
+        "id": "s-prevent",
+        "name": "Block the next leak",
+        "why": "Push protection and a vault stop secrets reaching the repo; short-lived or restricted keys limit the damage of a slip.",
         "sources": [
-          "web-github-remove"
+          "web-github-push",
+          "web-stripe-practices",
+          "web-aws-keys",
+          "cat-keys-workflow"
         ]
       },
       {
         "id": "s-verify",
-        "name": "Verify it is closed and watch for use of the old keys",
-        "why": "Old keys must be rejected, new keys must work, and no new unknown identities or calls may appear after rotation.",
+        "name": "Verify the old keys are dead and nothing new was used",
+        "why": "Closing is proven by the provider consoles and logs, not by the plan.",
         "sources": [
-          "web-aws-compromised-key",
-          "web-stripe-keys"
+          "web-cloudtrail",
+          "web-stripe-compromised"
         ]
       },
       {
-        "id": "s-harden",
-        "name": "Prevent a repeat",
-        "why": "Push protection and secret scanning, a secrets store, least-privilege keys and access policies make the next slip harmless.",
+        "id": "s-learn",
+        "name": "Write a blameless note and propose lasting rules",
+        "why": "Keeps the result true.",
         "sources": [
-          "web-github-remove",
-          "web-stripe-keys",
-          "cat-secrets-workflow"
+          "cat-incident-learn",
+          "web-stripe-practices"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Rewriting history first. The key stays live and anyone who copied it still has access.",
+        "text": "Rewriting history first and rotating later, or treating the rewrite as the fix, while the key stays valid and copies remain in forks and clones.",
         "sources": [
           "web-github-remove"
         ]
       },
       {
-        "text": "Deleting the AWS key instead of deactivating it, which loses the evidence needed to see what it did.",
+        "text": "Deleting the AWS key before exporting logs and recording what it could reach.",
         "sources": [
-          "web-aws-compromised-key"
+          "web-aws-keys",
+          "web-cloudtrail"
         ]
       },
       {
-        "text": "Deactivating the key but missing temporary session tokens it created, which stay valid for hours.",
+        "text": "Reading a quiet log as proof of no misuse when event history shows only 90 days of management events in one Region at a time.",
         "sources": [
-          "web-aws-playbook"
+          "web-cloudtrail"
         ]
       },
       {
-        "text": "Rotating and then not checking: unauthorized calls can continue after rotation, for example through a backdoor identity.",
+        "text": "Rotating the Stripe key but not updating the backend, which takes payments down, or leaving the old key alive on a long expiry.",
         "sources": [
-          "web-aws-compromised-key"
+          "web-stripe-compromised"
         ]
       },
       {
-        "text": "Assuming a force push removes the data: forks and cached commit views still serve it.",
+        "text": "Missing footholds that survive rotation: new IAM users or keys, changed roles, new payout accounts or webhook endpoints.",
         "sources": [
-          "web-github-remove"
+          "web-stripe-compromised",
+          "web-aws-keys"
         ]
       },
       {
-        "text": "Putting the key value in tickets, chat or notes while investigating.",
+        "text": "Writing the secret into notes, tickets or chat while documenting the incident.",
         "sources": [
-          "cat-incident-responder"
+          "web-stripe-practices"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Close the leaked-key exposure today and find out if it was abused",
+    "name": "Close off the leaked keys today and prove what they did",
     "capabilities": [
       {
         "id": "gh-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read repo history, forks, events and alerts (GitHub MCP)",
-        "why": "Establish the commit, the file, the push time, forks and alerts without printing the secret."
+        "name": "Read repository history, forks, traffic and alerts (GitHub MCP)",
+        "why": "Find the commit, its time, forks, clones and secret scanning alerts."
       },
       {
         "id": "aws-read",
         "access": "read",
         "via": "browser",
-        "name": "Read IAM and CloudTrail in the AWS console (CTO's signed-in browser)",
-        "why": "See the key's owner and last use, its activity, and any new identities."
+        "name": "Read IAM, CloudTrail and billing (AWS console, browser)",
+        "why": "Key permissions, last used, event history and spend."
       },
       {
         "id": "stripe-read",
         "access": "read",
         "via": "browser",
-        "name": "Read API keys and request logs in the Stripe dashboard (CTO's signed-in browser)",
-        "why": "See the key's use and any new keys, webhook endpoints, refunds or payouts."
+        "name": "Read request logs, events, payouts and settings (Stripe dashboard, browser)",
+        "why": "See what the key did and what was changed."
       },
       {
-        "id": "ops-notes",
-        "access": "draft",
-        "via": "file",
-        "name": "Write notes in the repo's private ops folder",
-        "why": "Keep the incident record where the owner asked, with no secret values."
-      },
-      {
-        "id": "aws-write",
+        "id": "aws-rotate",
         "access": "live",
-        "via": "browser",
-        "name": "Change AWS keys and IAM (CTO's signed-in browser)",
-        "why": "Create the replacement, deactivate the exposed key, add a session deny policy and remove any identity the attacker made."
+        "via": "owner",
+        "name": "Disable and replace the AWS access key (CTO, AWS console)",
+        "why": "The CTO approves and makes each change; we never hold the secret."
       },
       {
-        "id": "stripe-write",
+        "id": "stripe-rotate",
         "access": "live",
-        "via": "browser",
-        "name": "Roll the Stripe key (CTO's signed-in browser)",
-        "why": "Replace the exposed secret key and set when the old one stops."
+        "via": "owner",
+        "name": "Roll the Stripe secret key (CTO, Stripe dashboard)",
+        "why": "The CTO approves and makes each change; the new key goes straight to the secrets store."
       },
       {
-        "id": "gh-write",
+        "id": "gh-live",
         "access": "live",
         "via": "mcp",
-        "name": "Rewrite history and change repo security settings (GitHub MCP, admin)",
-        "why": "Force-push the cleaned history and turn on push protection, each only with approval."
+        "name": "Rewrite history and change repository security settings (GitHub MCP, admin)",
+        "why": "Force-push a cleaned history and switch on push protection, each only after the CTO's yes."
       }
     ],
     "data": [
       {
-        "id": "exposure-facts",
-        "name": "Facts of the exposure",
-        "why": "Defines what leaked, when, and where copies may exist.",
+        "id": "repo-facts",
+        "name": "Repository facts",
+        "why": "Which commit, when, who saw it, and where else it may be.",
         "fields": [
-          "commit SHAs and times",
+          "commit sha",
+          "pushed at",
+          "author",
           "file path",
-          "which key is which (by console label, not value)",
-          "who pushed",
-          "forks and clones",
+          "key ids (not values)",
+          "fork count",
+          "clone traffic",
           "secret scanning alerts"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read the commits, file history, forks and any secret scanning alerts with the GitHub MCP; never print file contents that contain the value."
+            "how": "GitHub MCP: commit, repository forks, traffic and secret scanning alerts."
           }
         ],
         "required_for": [
-          "evidence",
-          "history-plan"
+          "evidence-exposure",
+          "contain",
+          "cleanup"
         ]
       },
       {
-        "id": "aws-activity",
-        "name": "AWS activity for the exposed key",
-        "why": "Shows whether anyone else used the key and what they changed.",
-        "fields": [
-          "event time",
-          "event name",
-          "source IP and region",
-          "user agent",
-          "resources touched",
-          "identities created"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "In the AWS console, CloudTrail Event history, filter by the access key ID for the window from the push time to now; the CTO signs in and the AI reads the pages."
-          },
-          {
-            "kind": "CSV",
-            "how": "Export the event history or run a CloudTrail Lake query if it is enabled."
-          }
-        ],
-        "required_for": [
-          "integrity-visibility",
-          "diagnosis-aws"
-        ],
-        "alternative": "If CloudTrail is incomplete, the finding is \"not visible\" and the key is treated as used."
-      },
-      {
-        "id": "stripe-activity",
-        "name": "Stripe request log for the exposed key",
-        "why": "Shows API calls made with the secret key.",
-        "fields": [
-          "time",
-          "endpoint",
-          "source IP",
-          "result",
-          "objects touched"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "In the Stripe dashboard, API keys, View request logs for the key; the CTO signs in and the AI reads the pages."
-          }
-        ],
-        "required_for": [
-          "integrity-visibility",
-          "diagnosis-stripe"
-        ],
-        "alternative": "If logs do not reach back to the push, the finding is \"not visible\" for that part."
-      },
-      {
-        "id": "key-usage",
+        "id": "key-use",
         "name": "Where the keys are used",
-        "why": "Replacing a key breaks whatever still uses it, so every user of each key must be found first.",
+        "why": "Rotating breaks whatever still uses the old key.",
         "fields": [
-          "service or deploy",
-          "where the key is read from",
-          "who owns it"
+          "service",
+          "environment",
+          "secret location",
+          "deploy method"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Search the repo, workflows and deploy config for the config name and environment variable names, never the values."
+            "how": "Search the repository, workflow files and deploy config for the key IDs and variable names."
           },
           {
             "kind": "ASK",
-            "how": "The CTO names services outside the repo that use the keys."
+            "how": "Ask the CTO which other systems or people hold copies."
           }
         ],
         "required_for": [
-          "rotation-runbook",
-          "options"
+          "evidence-exposure",
+          "contain"
+        ]
+      },
+      {
+        "id": "aws-logs",
+        "name": "AWS activity for the key",
+        "why": "What the key did, from where, in which Regions.",
+        "fields": [
+          "event time",
+          "event name",
+          "region",
+          "source IP",
+          "user agent",
+          "access key id",
+          "error code"
         ],
-        "alternative": "If usage cannot be traced, rotation uses an overlap period where the provider allows it and a service check after."
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "CloudTrail Event history, filtered by the access key ID, each Region in use plus all others, last 90 days, downloaded as files; or the CLI lookup-events command."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask whether a trail or event data store exists for longer coverage and data events."
+          }
+        ],
+        "required_for": [
+          "evidence-activity",
+          "integrity-logs",
+          "diagnosis-abuse",
+          "measurement"
+        ],
+        "alternative": "If only the console view can be read, findings are limited to what is on screen and marked low confidence."
+      },
+      {
+        "id": "aws-state",
+        "name": "AWS account state",
+        "why": "Footholds and spend: users, keys, roles, policies, running resources.",
+        "fields": [
+          "IAM users and keys with last used",
+          "roles and trust policies",
+          "policies attached to the leaked identity",
+          "running resources by Region",
+          "cost by service and Region"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "IAM credential report; resource and cost views by Region in the console."
+          }
+        ],
+        "required_for": [
+          "evidence-activity",
+          "diagnosis-abuse",
+          "measurement"
+        ]
+      },
+      {
+        "id": "stripe-logs",
+        "name": "Stripe activity for the key",
+        "why": "What the key did, from where.",
+        "fields": [
+          "request time",
+          "endpoint",
+          "method",
+          "source IP",
+          "status",
+          "key used"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Stripe Workbench or Developers, request logs filtered to the key, last 90 days where available."
+          }
+        ],
+        "required_for": [
+          "evidence-activity",
+          "integrity-logs",
+          "diagnosis-abuse",
+          "measurement"
+        ]
+      },
+      {
+        "id": "stripe-state",
+        "name": "Stripe account state",
+        "why": "Footholds and money movement: payouts, bank accounts, webhooks, connected accounts, team.",
+        "fields": [
+          "recent payouts and destinations",
+          "external bank accounts",
+          "webhook endpoints",
+          "connected accounts",
+          "refunds and large charges",
+          "team members and keys"
+        ],
+        "routes": [
+          {
+            "kind": "CSV",
+            "how": "Dashboard lists exported or read for the period since the push."
+          }
+        ],
+        "required_for": [
+          "evidence-activity",
+          "diagnosis-abuse",
+          "measurement"
+        ]
       }
     ],
     "stages": [
@@ -418,105 +530,167 @@
         "id": "intake",
         "kind": "intake",
         "name": "Pin down the incident",
-        "goal": "Turn the report into a clear incident: what leaked, when, the scope of access, the limits and what the CTO needs today. Writes BRIEF.md.",
-        "from_steps": [],
+        "goal": "Turn the owner's words into a scoped incident, limits and the access we have. Writes BRIEF.md. No secret value is recorded.",
         "owner": {
-          "role": "security-incident-responder"
+          "role": "security-secrets-credential-engineer"
         },
-        "uses": [],
-        "depends_on": [],
-        "outputs": [],
-        "checks": [],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "evidence",
+        "id": "evidence-exposure",
         "kind": "evidence",
-        "name": "Save the facts without the secrets",
-        "goal": "Record the commit, file, push time, who pushed, forks, alerts and which key is which by console label, and save them in the ops folder. Never write a key value.",
-        "from_steps": [
-          "s-facts"
-        ],
+        "name": "Scope the exposure",
+        "goal": "From the repository, record which commit leaked which keys (by ID or last four only), the time of the push, forks and clone traffic, secret scanning alerts, any other secrets in the history, and every place the keys are used.",
         "owner": {
-          "role": "security-incident-responder"
+          "role": "security-secrets-credential-engineer"
         },
-        "uses": [
-          "security-incident-triager",
-          "secrets-hygiene-checker"
-        ],
         "data": [
-          "exposure-facts"
+          "repo-facts",
+          "key-use"
         ],
         "needs": [
-          "gh-read",
-          "aws-read",
-          "stripe-read",
-          "ops-notes"
+          "gh-read"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "exposure-facts",
-            "name": "Exposure facts",
+            "id": "exposure",
+            "name": "Exposure record",
             "format": "markdown",
-            "path": "evidence/EXPOSURE-FACTS.md"
+            "path": "evidence/EXPOSURE.md"
           }
         ],
         "checks": [
           {
-            "id": "no-values",
-            "name": "No secret value, in full or in part, appears in any saved file",
+            "id": "no-secrets",
+            "name": "No file in the engagement folder contains a full key; a search for the key patterns returns nothing",
             "required": true
           },
           {
-            "id": "window",
-            "name": "The exposure window starts at the push time and runs to now",
+            "id": "timeline",
+            "name": "Push time, first-seen time and detection time are stated with sources; the exposure window in hours is computed",
             "required": true
           },
           {
-            "id": "copies",
-            "name": "Forks and known clones are listed, or their absence is stated",
+            "id": "all-history",
+            "name": "All branches, tags and pull request refs were scanned for other secrets, and the count found (including zero) is stated",
             "required": true
           },
           {
-            "id": "identify",
-            "name": "Each key is identified by console label and the file where it appeared",
+            "id": "users",
+            "name": "Every service, CI job and person that uses the old keys is listed, so rotation does not surprise production",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-snapshot"
+        ],
+        "uses": [
+          "agency-security-secrets-credential-engineer",
+          "security-incident-triager",
+          "secrets-hygiene-checker"
+        ]
       },
       {
-        "id": "integrity-visibility",
-        "kind": "integrity",
-        "name": "Check what the logs can show",
-        "goal": "Check that AWS CloudTrail and the Stripe request logs cover the whole window, so \"no abuse found\" can be trusted.",
-        "from_steps": [
-          "s-visibility"
-        ],
+        "id": "evidence-activity",
+        "kind": "evidence",
+        "name": "Export the provider logs now",
+        "goal": "Before any key changes, export AWS CloudTrail event history for the key in every Region, the IAM credential report, and Stripe request logs, payouts, bank accounts, webhooks and team, into the ops folder.",
         "owner": {
-          "role": "investigate-an-aws-service-incident"
+          "role": "security-cloud-security-architect"
         },
-        "uses": [
-          "copilot-aws-cloudwatch-investigation"
-        ],
         "data": [
-          "aws-activity",
-          "stripe-activity"
+          "aws-logs",
+          "aws-state",
+          "stripe-logs",
+          "stripe-state"
         ],
         "needs": [
           "aws-read",
           "stripe-read"
         ],
         "depends_on": [
-          "evidence"
+          "intake"
         ],
         "outputs": [
           {
-            "id": "visibility",
-            "name": "Log coverage check",
+            "id": "aws-export",
+            "name": "AWS log and state export",
+            "format": "csv",
+            "path": "evidence/aws-activity.csv"
+          },
+          {
+            "id": "stripe-export",
+            "name": "Stripe log and state export",
+            "format": "csv",
+            "path": "evidence/stripe-activity.csv"
+          },
+          {
+            "id": "export-notes",
+            "name": "What was exported and its limits",
+            "format": "markdown",
+            "path": "evidence/EXPORT-NOTES.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "before-change",
+            "name": "The export time is earlier than any key change, shown by timestamps",
+            "required": true
+          },
+          {
+            "id": "all-regions",
+            "name": "Every AWS Region was searched for the access key ID, or the skipped Regions are listed",
+            "required": true
+          },
+          {
+            "id": "window",
+            "name": "The export covers from before the push time to now, or the shortfall is stated",
+            "required": true
+          },
+          {
+            "id": "redacted",
+            "name": "Exports contain key IDs only, never secret values",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-export"
+        ],
+        "uses": [
+          "agency-security-secrets-credential-engineer",
+          "security-incident-triager"
+        ]
+      },
+      {
+        "id": "integrity-logs",
+        "kind": "integrity",
+        "name": "Check what the logs can prove",
+        "goal": "State what the logging covers and does not: event history length, Regions, management versus data events, trail or event data store, Stripe log retention, so a quiet log is read correctly.",
+        "owner": {
+          "role": "security-cloud-security-architect"
+        },
+        "data": [
+          "aws-logs",
+          "stripe-logs"
+        ],
+        "needs": [
+          "aws-read",
+          "stripe-read"
+        ],
+        "depends_on": [
+          "evidence-activity"
+        ],
+        "outputs": [
+          {
+            "id": "coverage",
+            "name": "Log coverage statement",
             "format": "markdown",
             "path": "integrity/LOG-COVERAGE.md"
           }
@@ -524,638 +698,439 @@
         "checks": [
           {
             "id": "coverage",
-            "name": "States for AWS and Stripe whether logs cover the full window and what kinds of events are not logged",
+            "name": "Each log source states its first and last event time and what event types it does not record",
+            "required": true
+          },
+          {
+            "id": "gap",
+            "name": "Any gap between the push time and the first available event is listed",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with COMPLETE, PARTIAL or BLIND for each system and what that means for the answer to \"was it abused\"",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE for AWS and for Stripe, and what that means for a no-abuse finding",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "diagnosis-aws",
-        "kind": "diagnosis",
-        "name": "Was the AWS key used by anyone else?",
-        "goal": "Read the key's activity since the push, look for new identities, temporary sessions and unusual regions and services, and test the AWS hypotheses.",
+        "gate": "none",
         "from_steps": [
-          "s-aws-activity"
-        ],
-        "owner": {
-          "role": "investigate-an-aws-service-incident"
-        },
-        "support": [
-          "security-cloud-security-architect"
+          "s-coverage"
         ],
         "uses": [
-          "copilot-aws-cloudwatch-investigation",
-          "security-incident-triager",
-          "aws-access-policy-reviewer"
-        ],
-        "data": [
-          "aws-activity"
-        ],
-        "needs": [
-          "aws-read",
-          "ops-notes"
-        ],
-        "depends_on": [
-          "integrity-visibility"
-        ],
-        "outputs": [
-          {
-            "id": "aws-findings",
-            "name": "AWS findings",
-            "format": "markdown",
-            "path": "diagnosis/AWS.md"
-          },
-          {
-            "id": "aws-hypotheses",
-            "name": "AWS hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses-aws.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every AWS hypothesis is SUPPORTED, REFUTED or UNKNOWN with the events that show it",
-            "required": true
-          },
-          {
-            "id": "known-ips",
-            "name": "Calls are split into the team's known sources and unknown sources, with the basis for \"known\"",
-            "required": true
-          },
-          {
-            "id": "persistence",
-            "name": "New or changed IAM users, roles, policies, login profiles and access keys in the window are listed",
-            "required": true
-          },
-          {
-            "id": "no-values",
-            "name": "No secret value or session token appears in the findings",
-            "required": true
-          }
-        ],
-        "gate": "none"
-      },
-      {
-        "id": "diagnosis-stripe",
-        "kind": "diagnosis",
-        "name": "Was the Stripe key used by anyone else?",
-        "goal": "Read the Stripe key's request log since the push and test the Stripe hypotheses.",
-        "from_steps": [
-          "s-stripe-activity"
-        ],
-        "owner": {
-          "role": "security-incident-responder"
-        },
-        "uses": [
-          "security-incident-triager"
-        ],
-        "data": [
-          "stripe-activity"
-        ],
-        "needs": [
-          "stripe-read",
-          "ops-notes"
-        ],
-        "depends_on": [
-          "integrity-visibility"
-        ],
-        "outputs": [
-          {
-            "id": "stripe-findings",
-            "name": "Stripe findings",
-            "format": "markdown",
-            "path": "diagnosis/STRIPE.md"
-          },
-          {
-            "id": "stripe-hypotheses",
-            "name": "Stripe hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses-stripe.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every Stripe hypothesis is SUPPORTED, REFUTED or UNKNOWN with the log lines that show it",
-            "required": true
-          },
-          {
-            "id": "unknown-sources",
-            "name": "Requests from sources other than the team's servers are listed with the endpoint and result",
-            "required": true
-          },
-          {
-            "id": "money-and-data",
-            "name": "Refunds, payouts, bank account changes, customer data reads, new keys and webhook endpoints in the window are listed or stated as none",
-            "required": true
-          }
-        ],
-        "gate": "none"
-      },
-      {
-        "id": "options",
-        "kind": "options",
-        "name": "Lay out the closing steps",
-        "goal": "Order the containment and cleanup actions with the reason, risk, what breaks if it goes wrong, and the evidence each one keeps or loses. Include escalation to AWS and Stripe support if abuse was found.",
-        "from_steps": [],
-        "owner": {
-          "role": "security-incident-responder"
-        },
-        "uses": [
-          "security-incident-triager"
-        ],
-        "data": [
-          "key-usage"
-        ],
-        "depends_on": [
-          "diagnosis-aws",
-          "diagnosis-stripe"
-        ],
-        "outputs": [
-          {
-            "id": "closing-steps",
-            "name": "Ranked closing steps",
-            "format": "markdown",
-            "path": "options/CLOSING-STEPS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "rotate-first",
-            "name": "Provider-side rotation comes before any history rewrite",
-            "required": true
-          },
-          {
-            "id": "evidence-kept",
-            "name": "Each step says what evidence it keeps or destroys; AWS keys are deactivated before they are deleted",
-            "required": true
-          },
-          {
-            "id": "breakage",
-            "name": "Each step lists the services that could break and how to check them",
-            "required": true
-          },
-          {
-            "id": "escalation",
-            "name": "The steps say when abuse found means calling AWS support, Stripe support and notifying affected parties",
-            "required": true
-          }
-        ],
-        "gate": "none"
+          "agency-security-secrets-credential-engineer"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "The CTO approves the order of actions",
-        "goal": "The CTO approves the order of actions, including how long the old Stripe key stays valid and whether to rewrite history. Record the reasons.",
-        "from_steps": [],
+        "name": "CTO chooses the response",
+        "goal": "The CTO approves rotating both keys now, and chooses whether to rewrite history, how to tell collaborators and whether to accept the prevention settings. Each is a separate yes or no.",
         "owner": {
-          "role": "security-incident-responder"
+          "role": "engineering-incident-response-commander"
         },
-        "uses": [],
         "depends_on": [
-          "options"
+          "evidence-exposure"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Approved actions and order",
+            "name": "Response decision",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
         ],
         "checks": [
           {
-            "id": "recorded",
-            "name": "Each action is marked approved, deferred or declined with the reason",
+            "id": "separate",
+            "name": "Rotation, history rewrite, collaborator notice and prevention settings are each a separate recorded decision with the CTO's reason",
             "required": true
           },
           {
-            "id": "one-by-one",
-            "name": "Each live action is still confirmed with the CTO when its turn comes",
+            "id": "risks",
+            "name": "For each choice, what could break (which service uses the key, who must re-clone) and the rollback are stated",
             "required": true
           }
         ],
-        "gate": "approve"
-      },
-      {
-        "id": "rotation-runbook",
-        "kind": "production",
-        "name": "Prepare the rotation runbook",
-        "goal": "Write the exact steps to replace each key, where each replacement is stored, which services to update and test, and how to confirm the old key is rejected. No values in the runbook.",
-        "from_steps": [
-          "s-contain"
-        ],
-        "owner": {
-          "role": "security-secrets-credential-engineer"
-        },
-        "support": [
-          "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235"
-        ],
+        "gate": "approve",
+        "from_steps": [],
         "uses": [
-          "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
-          "secrets-setup-helper",
-          "safe-secrets-manager"
-        ],
-        "data": [
-          "key-usage"
-        ],
-        "needs": [
-          "gh-read",
-          "ops-notes"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis-aws",
-          "diagnosis-stripe"
-        ],
-        "outputs": [
-          {
-            "id": "runbook",
-            "name": "Rotation runbook",
-            "format": "markdown",
-            "path": "production/ROTATION-RUNBOOK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "no-values",
-            "name": "The runbook contains no key value and says new keys go straight into the secrets store",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "For each key: replacement in place and tested, then old key inactive; AWS deactivated, not deleted",
-            "required": true
-          },
-          {
-            "id": "sessions",
-            "name": "Includes blocking temporary sessions issued by the AWS key before the change, if any exist",
-            "required": true
-          },
-          {
-            "id": "verify",
-            "name": "Each step has a check that proves it worked and a way back",
-            "required": true
-          },
-          {
-            "id": "scoped",
-            "name": "Only actions approved in the decision are included",
-            "required": true
-          }
-        ],
-        "gate": "none"
+          "agency-engineering-incident-response-commander"
+        ]
       },
       {
-        "id": "history-plan",
-        "kind": "production",
-        "name": "Prepare the history cleanup",
-        "goal": "Plan the history rewrite: a dry run on a fresh mirror clone, the list of affected pull requests, the force-push steps, the message for GitHub Support to purge cached views, and what collaborators and fork owners must do.",
-        "from_steps": [
-          "s-history"
-        ],
-        "owner": {
-          "role": "engineering-git-workflow-master"
-        },
-        "support": [
-          "security-secrets-credential-engineer"
-        ],
-        "uses": [
-          "secrets-hygiene-checker",
-          "copilot-secret-scanning"
-        ],
-        "data": [
-          "exposure-facts"
-        ],
-        "needs": [
-          "gh-read",
-          "ops-notes"
-        ],
-        "depends_on": [
-          "decision",
-          "evidence"
-        ],
-        "outputs": [
-          {
-            "id": "history-plan",
-            "name": "History cleanup plan",
-            "format": "markdown",
-            "path": "production/HISTORY-CLEANUP.md"
-          },
-          {
-            "id": "support-request",
-            "name": "Draft request to GitHub Support",
-            "format": "markdown",
-            "path": "production/GITHUB-SUPPORT-REQUEST.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "dry-run",
-            "name": "The plan includes a dry run on a copy and a check that the secrets are gone without printing them",
-            "required": true
-          },
-          {
-            "id": "prs",
-            "name": "The count of affected pull requests is checked before the irreversible push",
-            "required": true
-          },
-          {
-            "id": "people",
-            "name": "Instructions for collaborators (rebase, not merge) and for fork owners are included",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "The plan states that it runs only after the keys are dead",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "The CTO declined the history rewrite."
-      },
-      {
-        "id": "rotate-and-close",
+        "id": "contain",
         "kind": "execution",
-        "name": "Replace and kill the keys, one action at a time",
-        "goal": "With the CTO approving each action, put the replacements in place, deactivate the exposed keys, block old sessions and remove any identity the attacker made. The CTO signs in; the AI never sees secret values.",
-        "from_steps": [
-          "s-contain"
-        ],
+        "name": "Rotate both keys and kill the old ones",
+        "goal": "With the CTO approving each action: create the replacement AWS key and put it in the secrets store, deploy, then deactivate (not delete) the old AWS key; roll the Stripe key, update the backend, confirm payments, and expire the old key. Read each result back.",
         "owner": {
           "role": "security-secrets-credential-engineer"
         },
-        "support": [
-          "investigate-an-aws-service-incident"
-        ],
-        "uses": [
-          "aws-access-policy-reviewer",
-          "safe-secrets-manager"
+        "data": [
+          "key-use"
         ],
         "needs": [
-          "aws-write",
-          "stripe-write",
-          "ops-notes"
+          "aws-rotate",
+          "stripe-rotate",
+          "aws-read",
+          "stripe-read"
         ],
         "depends_on": [
-          "rotation-runbook"
+          "decision",
+          "evidence-activity"
         ],
         "outputs": [
           {
-            "id": "rotation-receipt",
-            "name": "Rotation receipt",
+            "id": "contain-log",
+            "name": "Containment log",
             "format": "markdown",
-            "path": "execution/ROTATION-RECEIPT.md"
+            "path": "execution/CONTAINMENT-LOG.md"
           }
         ],
         "checks": [
           {
             "id": "approved",
-            "name": "Each action has the CTO's yes recorded before it ran",
+            "name": "Each rotation step has the CTO's approval recorded first",
             "required": true
           },
           {
-            "id": "replacement-first",
-            "name": "The replacement is in the secrets store and tested before the old key is made inactive",
+            "id": "old-dead",
+            "name": "The AWS console shows the old key Inactive and the Stripe dashboard shows the old key expired, read back after the change",
             "required": true
           },
           {
-            "id": "evidence",
-            "name": "The AWS key is inactive, not deleted; the receipt lists what each action changed",
+            "id": "service",
+            "name": "A production payment and a representative AWS-backed request succeed on the new keys after the change",
             "required": true
           },
           {
-            "id": "no-values",
-            "name": "The receipt contains no key value",
-            "required": true
-          }
-        ],
-        "gate": "approve_each_action"
-      },
-      {
-        "id": "rewrite-history",
-        "kind": "execution",
-        "name": "Rewrite the history and turn on guards",
-        "goal": "After the keys are dead, with the CTO approving each action: run the history rewrite, send the Support request, and turn on push protection and secret scanning.",
-        "from_steps": [
-          "s-history",
-          "s-harden"
-        ],
-        "owner": {
-          "role": "engineering-git-workflow-master"
-        },
-        "uses": [
-          "copilot-secret-scanning"
-        ],
-        "needs": [
-          "gh-write",
-          "ops-notes"
-        ],
-        "depends_on": [
-          "history-plan",
-          "rotate-and-close"
-        ],
-        "outputs": [
-          {
-            "id": "history-receipt",
-            "name": "History and guard receipt",
-            "format": "markdown",
-            "path": "execution/HISTORY-RECEIPT.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "approved",
-            "name": "Each action has the CTO's yes recorded before it ran",
+            "id": "no-secret",
+            "name": "No new key value appears in any note, chat or log; it goes straight to the secrets store",
             "required": true
           },
           {
-            "id": "keys-dead",
-            "name": "Confirms the keys were inactive before the push",
-            "required": true
-          },
-          {
-            "id": "pr-count",
-            "name": "The affected pull request count matched the plan before the force push",
-            "required": true
-          },
-          {
-            "id": "guards",
-            "name": "Push protection and secret scanning are shown on, or marked declined",
+            "id": "delete-later",
+            "name": "The AWS key is deleted only after the logs are exported and the abuse finding is written",
             "required": true
           }
         ],
         "gate": "approve_each_action",
-        "optional_when": "The CTO declined the history rewrite and the repo guards."
+        "from_steps": [
+          "s-contain"
+        ],
+        "uses": [
+          "agency-security-secrets-credential-engineer",
+          "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site"
+        ]
       },
       {
-        "id": "measurement",
-        "kind": "measurement",
-        "name": "Confirm it is closed",
-        "goal": "Confirm both old keys are rejected, replacements work, no new unknown identities or calls appeared, and the history search finds no secrets. Repeat the log checks over the following days.",
-        "from_steps": [
-          "s-verify"
-        ],
+        "id": "diagnosis-abuse",
+        "kind": "diagnosis",
+        "name": "Read the logs for misuse",
+        "goal": "Test the hypotheses against the exported logs and state, separately for AWS and Stripe, whether there is evidence of misuse and of footholds, and what the logs cannot show.",
         "owner": {
-          "role": "investigate-an-aws-service-incident"
+          "role": "security-secrets-credential-engineer"
         },
-        "uses": [
-          "secrets-hygiene-checker",
-          "copilot-aws-cloudwatch-investigation"
-        ],
-        "needs": [
-          "aws-read",
-          "stripe-read",
-          "gh-read",
-          "ops-notes"
+        "data": [
+          "aws-logs",
+          "aws-state",
+          "stripe-logs",
+          "stripe-state"
         ],
         "depends_on": [
-          "rewrite-history"
+          "evidence-activity",
+          "integrity-logs"
         ],
         "outputs": [
           {
-            "id": "closure",
-            "name": "Closure readout",
+            "id": "abuse",
+            "name": "Misuse finding",
             "format": "markdown",
-            "path": "measurement/CLOSURE.md"
+            "path": "diagnosis/ABUSE-FINDING.md"
+          },
+          {
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
+            "format": "json",
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
           {
-            "id": "old-rejected",
-            "name": "Both old keys are shown inactive or rejected and no call with either appears after the change",
+            "id": "verdicts",
+            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN with the log lines or counts behind it",
             "required": true
           },
           {
-            "id": "new-work",
-            "name": "Services using the replacements work",
+            "id": "baseline-ips",
+            "name": "Source IPs and user agents are compared with the team's known list; unknown ones are listed with their first and last time",
             "required": true
           },
           {
-            "id": "no-new-identities",
-            "name": "No new IAM users, roles, keys or Stripe keys and webhooks appeared after the change",
+            "id": "after-push",
+            "name": "Activity is split into before and after the push time",
             "required": true
           },
           {
-            "id": "history-clean",
-            "name": "A search of the history finds no secret, reported without printing any value",
+            "id": "footholds",
+            "name": "New IAM users, keys, roles, policies, payout destinations, bank accounts and webhooks since the push are listed or confirmed absent",
+            "required": true
+          },
+          {
+            "id": "worded",
+            "name": "The finding uses ABUSE FOUND, NO EVIDENCE OF ABUSE WITHIN LOGGED COVERAGE, or UNKNOWN, never 'safe' without coverage",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-abuse"
+        ],
+        "support": [
+          "engineering-incident-response-commander"
+        ],
+        "uses": [
+          "security-incident-triager",
+          "agency-security-secrets-credential-engineer"
+        ]
+      },
+      {
+        "id": "cleanup",
+        "kind": "execution",
+        "name": "Clean the repository and block the next leak",
+        "goal": "With the CTO approving each action: rewrite history to remove the file (if chosen), tell collaborators to re-clone, list forks and ask for cached views to be removed, and switch on push protection and secret scanning (if chosen).",
+        "owner": {
+          "role": "security-secrets-credential-engineer"
+        },
+        "data": [
+          "repo-facts"
+        ],
+        "needs": [
+          "gh-live",
+          "gh-read"
+        ],
+        "depends_on": [
+          "decision",
+          "contain"
+        ],
+        "outputs": [
+          {
+            "id": "cleanup-log",
+            "name": "Cleanup log and collaborator notice",
+            "format": "markdown",
+            "path": "execution/CLEANUP-LOG.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "after-rotation",
+            "name": "History is rewritten only after both keys are shown dead, and the CTO's approval is recorded",
+            "required": true
+          },
+          {
+            "id": "gone",
+            "name": "After the rewrite a search of every branch, tag and ref finds no key pattern, or the remaining refs are listed",
+            "required": true
+          },
+          {
+            "id": "copies",
+            "name": "Forks and clones are listed with what was done about each, and cached views are requested through GitHub Support where needed",
+            "required": true
+          },
+          {
+            "id": "settings",
+            "name": "Push protection and secret scanning status is read back from the repository settings",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "from_steps": [
+          "s-cleanup",
+          "s-prevent"
+        ],
+        "uses": [
+          "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+          "secrets-hygiene-checker"
+        ]
+      },
+      {
+        "id": "measurement",
+        "kind": "measurement",
+        "name": "Prove it is closed",
+        "goal": "Read the consoles and logs to show both old keys are dead, no new attempts succeed, and no open secret scanning alert remains, then watch for 7 days for any use of the old keys.",
+        "owner": {
+          "role": "engineering-incident-response-commander"
+        },
+        "data": [
+          "aws-logs",
+          "aws-state",
+          "stripe-logs",
+          "stripe-state"
+        ],
+        "needs": [
+          "aws-read",
+          "stripe-read",
+          "gh-read"
+        ],
+        "depends_on": [
+          "contain",
+          "cleanup",
+          "diagnosis-abuse"
+        ],
+        "outputs": [
+          {
+            "id": "readout",
+            "name": "Closure readout",
+            "format": "markdown",
+            "path": "measurement/READOUT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "dead",
+            "name": "Both old credentials read as dead in the provider consoles on the day and again after 7 days",
+            "required": true
+          },
+          {
+            "id": "attempts",
+            "name": "Any attempts with the old keys after rotation are listed (AWS access denied events, Stripe failed requests) with source IPs, or confirmed none",
+            "required": true
+          },
+          {
+            "id": "alerts",
+            "name": "Open secret scanning alerts for the repository are zero, or each is explained",
+            "required": true
+          },
+          {
+            "id": "honest",
+            "name": "Metric reads 0 credentials valid only if both are shown dead; the abuse finding is restated with its coverage",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-verify"
+        ],
+        "uses": [
+          "security-incident-triager"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
-        "name": "Write the record and prevent a repeat",
-        "goal": "Write the incident record in the private ops folder: timeline, what was and was not visible, what was done, and prevention rules (push protection, secrets store, restricted keys, access policies) with their scope.",
-        "from_steps": [],
+        "name": "Keep what we learned",
+        "goal": "Write a blameless timeline, a runbook for the next leak and the prevention rules proposed to the CTO.",
         "owner": {
-          "role": "security-incident-responder"
+          "role": "engineering-incident-response-commander"
         },
-        "uses": [
-          "incident-postmortem-writer"
-        ],
         "depends_on": [
           "measurement"
         ],
         "outputs": [
           {
-            "id": "incident-record",
-            "name": "Incident record and prevention rules",
+            "id": "learnings",
+            "name": "Incident note and proposed rules",
             "format": "markdown",
-            "path": "learning/INCIDENT-RECORD.md"
+            "path": "learning/LEARNINGS.md"
           }
         ],
         "checks": [
           {
-            "id": "no-values",
-            "name": "The record contains no secret value",
+            "id": "timeline",
+            "name": "A sourced timeline from the push to closure, with times",
             "required": true
           },
           {
-            "id": "scoped",
-            "name": "Each prevention rule says whether it holds for this repo, this company or the playbook",
+            "id": "no-secrets",
+            "name": "The note contains no secret values and no private customer data",
             "required": true
           },
           {
-            "id": "gaps",
-            "name": "What could not be seen is listed so it is not mistaken for \"no abuse\"",
+            "id": "rules",
+            "name": "Each proposed rule (vault, expiring or restricted keys, pre-commit scan, who can push to the public repo) says its scope and owner, and nothing is switched on without the CTO's yes",
             "required": true
           }
         ],
-        "gate": "review"
+        "gate": "review",
+        "from_steps": [
+          "s-learn"
+        ],
+        "uses": [
+          "turn-an-incident-into-a-safer-procedure",
+          "agency-engineering-incident-response-commander"
+        ]
       }
     ],
     "hypotheses": [
       {
-        "id": "h-aws-unknown-use",
-        "statement": "The AWS key was used from a source that is not the team's own.",
-        "test": "CloudTrail event history for the key ID from the push time: source IPs, regions, user agents, first-use time.",
-        "confirm_if": "Calls come from unknown IPs, regions the team does not use, or tooling not used by the team.",
-        "refute_if": "All calls come from the team's known sources, or there are none.",
-        "fix_stage": "rotate-and-close"
+        "id": "h-aws-use",
+        "statement": "Someone other than us used the AWS key.",
+        "test": "CloudTrail events for the access key ID in every Region since the push time, by source IP and user agent.",
+        "confirm_if": "Any event from an IP or user agent not on the team's known list, after the push time.",
+        "refute_if": "All events are from known sources or there are none, and the log coverage verdict is CHECKED.",
+        "fix_stage": "contain"
       },
       {
         "id": "h-aws-persistence",
-        "statement": "An attacker created a foothold: new IAM users, access keys, roles, policy attachments or login profiles.",
-        "test": "Search the window for CreateUser, CreateAccessKey, CreateLoginProfile, AttachUserPolicy, PutUserPolicy, AddUserToGroup and role changes.",
-        "confirm_if": "Any such event from the exposed key or an unknown source.",
-        "refute_if": "No such events, with logs covering the window.",
-        "fix_stage": "rotate-and-close"
-      },
-      {
-        "id": "h-aws-sessions",
-        "statement": "The AWS key was used to create temporary session credentials that stay valid after the key is deactivated.",
-        "test": "Look for GetSessionToken, AssumeRole and GetFederationToken calls by the key and any later activity under those sessions.",
-        "confirm_if": "Sessions were created by the key and are still within their lifetime.",
-        "refute_if": "No session-creating calls by the key.",
-        "fix_stage": "rotate-and-close"
+        "statement": "An intruder created access that survives rotation.",
+        "test": "Events creating or changing IAM users, access keys, login profiles, roles, trust policies or policies since the push time.",
+        "confirm_if": "Any such event not made by the team.",
+        "refute_if": "None found and the IAM credential report shows no unknown users or keys.",
+        "fix_stage": "contain"
       },
       {
         "id": "h-aws-resources",
-        "statement": "The key was used to launch compute, read data or change protections: instances in unused regions, S3 or database reads, secrets reads, logging turned off.",
-        "test": "Check RunInstances by region, GetObject and ListBuckets, secrets and database calls, and Stop or Delete on CloudTrail.",
-        "confirm_if": "Unexpected launches, reads of sensitive data, or logging changes.",
-        "refute_if": "No such calls.",
-        "fix_stage": "rotate-and-close"
+        "statement": "Resources were launched or spend rose.",
+        "test": "Running resources and cost by Region and service against the prior month.",
+        "confirm_if": "Resources in a Region the team does not use, or a service with zero prior spend now billed.",
+        "refute_if": "Resources and cost match the prior pattern.",
+        "fix_stage": "contain"
+      },
+      {
+        "id": "h-aws-data",
+        "statement": "Data was read or copied with the AWS key.",
+        "test": "Data event logs, if they exist, for storage, secrets and database snapshots; otherwise the key's permissions.",
+        "confirm_if": "Read or copy events for data by the key after the push time.",
+        "refute_if": "Data events exist, cover the period, and show none; otherwise this stays UNKNOWN.",
+        "fix_stage": "contain"
+      },
+      {
+        "id": "h-stripe-use",
+        "statement": "Someone other than us used the Stripe key.",
+        "test": "Request logs for the key by source IP, endpoint and status since the push time.",
+        "confirm_if": "Any request from an IP not belonging to our servers, or any list-all or export call we do not make.",
+        "refute_if": "All requests are from our servers and match our integration's endpoints.",
+        "fix_stage": "contain"
       },
       {
         "id": "h-stripe-money",
-        "statement": "The Stripe key was used to move money or create access: refunds, payouts, bank account changes, new API keys or webhook endpoints.",
-        "test": "Read the key's request log and the dashboard for the window; compare any such events with the team's own activity.",
-        "confirm_if": "Such calls from unknown sources.",
-        "refute_if": "None, with logs covering the window.",
-        "fix_stage": "rotate-and-close"
+        "statement": "Money or customer data moved.",
+        "test": "Payouts, external accounts, refunds, new customers or charges, and webhook endpoints since the push time.",
+        "confirm_if": "Any payout or bank account we do not recognise, or a new webhook endpoint.",
+        "refute_if": "Nothing unrecognised in any list.",
+        "fix_stage": "contain"
       },
       {
-        "id": "h-stripe-data",
-        "statement": "The Stripe key was used to read customer or payment data.",
-        "test": "Look in the request log for list and retrieve calls on customers, charges and payment methods from sources other than the team's servers.",
-        "confirm_if": "Reads from unknown sources.",
-        "refute_if": "Reads only from the team's servers or none.",
-        "fix_stage": "rotate-and-close"
+        "id": "h-other-secrets",
+        "statement": "Other secrets are in the history.",
+        "test": "Scan all branches, tags and pull request refs with GitHub secret scanning and a local scanner.",
+        "confirm_if": "One or more other live secrets are found.",
+        "refute_if": "None found after scanning all refs.",
+        "fix_stage": "cleanup"
       },
       {
-        "id": "h-blind-spot",
-        "statement": "Logging does not cover the window or the event types needed, so abuse could have happened unseen.",
-        "test": "Check CloudTrail trails and event types, event history limits and Stripe log retention against the exposure window.",
-        "confirm_if": "Logs are missing for any part of the window or key event types.",
-        "refute_if": "Logs cover the window fully.",
-        "fix_stage": "integrity-visibility"
+        "id": "h-copies",
+        "statement": "Copies of the history exist outside our control.",
+        "test": "Fork count, clone traffic and cached views.",
+        "confirm_if": "Any fork exists, or unknown clones are recorded.",
+        "refute_if": "No forks and clone traffic matches the team.",
+        "fix_stage": "cleanup"
       }
     ],
     "measurement": {
-      "window": "A same-day readout after the actions, then repeat the log and history checks daily for the following week.",
-      "min_volume": "No volume needed: any call with an old key after the change counts, and a gap in logs is reported as a gap.",
-      "stop_rule": "Stop and call the CTO if any new unknown identity or call with an old key appears; widen the investigation and consider provider support."
-    }
+      "window": "Same day for the closure check, then 7 days of watching for any use of the old keys.",
+      "min_volume": "Not a sampling question: every log event for the two key IDs from the push time onward is read.",
+      "stop_rule": "If any foothold or live misuse is found, stop the cleanup, tell the CTO at once and widen containment before anything else."
+    },
+    "dropped": []
   }
 }

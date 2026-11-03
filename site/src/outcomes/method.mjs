@@ -30,7 +30,7 @@ export const AMBITION_RULES = [
   'Depth: before researching, answer four questions. What would a top professional in this field do here that the owner did not ask for? What is the rawest material they would start from (the platform export, the ledger, the logs), instead of a summary? Which methods and tools would they use? What, other than you or the owner, would show the result is right? Use the answers: research from primary sources, start evidence stages from the raw material, and make that outside check a stage check or reviewer.',
   'Set the target where good practitioners in this field land, not just better than today, when the owner\'s limits allow. Offer it in the question batch; the owner\'s answer wins. Report honestly against the judge: a missed hard target with real numbers is a good result.',
   'Range: say what the job does as verbs ("get busy people to decide under uncertainty", not "a deck"), and add a support specialist or reviewer only when its field brings a different method. Do what that expert does, not how they talk.',
-  'Ambition raises the standard, not the permissions. Anything that spends money, goes live or cannot be undone still waits for the owner\'s yes. Name missing data or access and what it would unlock; never invent it.',
+  'Ambition raises the standard, not the permissions. Keep every live step the job needs (launching, sending, publishing, changing the site, the store or the books) as its own execution stage with gate approve_each_action: the owner says yes to each action when it comes, so never leave the step out to avoid asking. Anything that spends money or cannot be undone waits for that yes. Name missing data or access and what it would unlock; never invent it.',
 ];
 
 export const RESEARCH_PROTOCOL = [

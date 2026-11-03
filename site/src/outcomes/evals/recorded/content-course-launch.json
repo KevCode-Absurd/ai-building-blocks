@@ -1,139 +1,178 @@
 {
   "case": "content-course-launch",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Turn the owner's 12 years of wedding photography into an online course that teaches other photographers to price and sell wedding packages, and sell 100 places in the first launch within four months, without promising anyone income results.",
-    "deliverable": "A launched first course offer: a chosen offer, price and platform, a course outline and the first lessons recorded, a sales page with checkout tested, a free workshop and launch emails, a launch run in steps the owner approves, and a readout of sales against 100.",
+    "outcome": "Launch a first cohort of an online course that teaches other photographers to price and sell wedding packages, and reach 100 paid course sales within four months, without promising income results.",
+    "ambition": {
+      "goal_beyond": "Photographers who buy the course use it, and the course can sell again after the first launch.",
+      "rungs": [
+        "Build the course page, price and launch emails, and run one launch to your list and Instagram.",
+        "Test who will really pay before the whole course is built: who is in your 900 and 18,000, what price they accept, and what stops them. Launch to the group that responds, and report honestly against 100 sales.",
+        "Keep the course selling: a standing weekly check of sales, sources and refunds, plus a second cohort date, so a drop is caught early."
+      ],
+      "chosen": 2,
+      "judge": "Paid orders and refunds exported from the course platform's own sales records, and each source's sales counted from tagged links; not the owner's or our estimate."
+    },
+    "deliverable": "A ready founding-cohort offer (course outline, price, sales page, launch emails, Instagram posts), the first launch run with your approval, and an honest sales readout against the 100-sale goal.",
     "done": [
-      "Who is actually in the owner's audience (photographers versus couples and past clients) counted and checked",
-      "Demand tested with real photographers before the whole course is built",
-      "Offer, price, platform and launch type chosen by the owner from costed options",
-      "Course outline, sales page, guarantee and emails written with no income promises, and checked",
-      "Checkout and a fresh-student path tested end to end before the cart opens",
-      "Launch run with each live action approved by the owner",
-      "Sales, refunds and ad spend read against the goal, with learnings saved"
+      "Who is on your email list and Instagram audience is counted, and how many are photographers is known or marked unknown",
+      "Price and offer chosen by you from ranked options, with reasons recorded",
+      "Course outline and the first module's recording brief ready for you to film",
+      "Sales page, emails and posts checked for earnings claims and email law, then approved by you",
+      "Launch sent and posted only with your yes for each action; ad spend stays within $1,000",
+      "Sales read from the platform's records against the 100-sale goal, with refunds and complaints",
+      "Lessons saved and a date set for the next cohort or a stop decision"
     ],
     "metric": {
-      "name": "Paid course places sold in the first launch",
-      "direction": "reach",
+      "name": "Paid course sales in the first launch",
+      "direction": "increase",
       "unit": "sales",
-      "baseline": 0,
-      "baseline_source": "reported",
+      "baseline_source": "unknown",
       "target": 100
     },
-    "deadline": "Within four months of starting (about March 2027)",
+    "deadline": "Within four months of plan approval (start date not yet set)",
     "guardrails": [
-      "No promise or hint of income, pay rise or booking results for students",
-      "Ad spend stays within $1,000",
-      "Refunds and complaints are tracked; a clear refund rule is stated before sale",
-      "Past clients on the email list are not spammed with an offer that does not fit them"
+      "No promise or hint of income or booking results from taking the course",
+      "Total ad spend stays at or under $1,000",
+      "Email spam complaints stay under 0.1% of sends, and every email has a working opt-out",
+      "Anyone who buys is refunded if the course cannot be delivered as sold"
     ],
     "limits": [
-      "No ad budget beyond $1,000",
-      "No income or results promises",
-      "The owner records the video lessons themselves",
-      "The owner decides platform, price and every live step",
-      "Nothing is published, sent or charged without the owner approving that action"
+      "Ad budget is $1,000 at most",
+      "Owner records all video",
+      "Working data stays in this project",
+      "No income or results claims"
     ],
     "assets": [
-      "12 years of wedding photography experience",
-      "About 18,000 Instagram followers",
-      "An email list of about 900, mostly past clients",
-      "The owner's own pricing and sales methods to teach"
+      "12 years of wedding photography experience and the packages the owner has priced and sold",
+      "Instagram account with 18,000 followers",
+      "Email list of about 900, mostly past clients"
     ],
     "connections": [
       {
-        "name": "Instagram Insights and email list counts, shared by the owner as exports or screenshots",
+        "name": "Course platform",
+        "access": "live",
+        "status": "missing"
+      },
+      {
+        "name": "Email list tool (not named)",
         "access": "read",
-        "status": "available"
+        "status": "missing"
+      },
+      {
+        "name": "Instagram insights",
+        "access": "read",
+        "status": "missing"
       }
     ],
-    "data_home": "Files in this project (the owner's choice)",
-    "technical_level": "Not stated by the owner; explain in plain words and hand over ready drafts to review",
+    "data_home": "Files in this project (the owner asked for this)",
+    "technical_level": "Not stated. We will hand over ready-to-use drafts with plain steps, and ask if more detail is wanted.",
     "decides": "The owner",
     "unknowns": [
-      "How many Instagram followers and list contacts are photographers rather than couples or past clients",
-      "Whether photographers will pay, and what price they would pay",
-      "Which course platform and email tool to use (none chosen)",
-      "What proof the owner can show of their own pricing and sales method, since results claims need proof",
-      "Course length and how many lessons the owner can record in the time available",
-      "Whether the owner's country sets rules on refunds, tax or consumer terms for digital courses"
+      "Course price and any prior course sales (baseline)",
+      "How many of the 900 emails and 18,000 followers are photographers rather than past clients",
+      "Which course platform and email tool will be used",
+      "Start date of the four months",
+      "Profit needed per sale after platform fees",
+      "How hands-on the owner wants to be with the technical parts"
     ],
     "answers": [
       {
-        "question": "Who are you?",
-        "answer": "Wedding photographer with 12 years experience."
+        "question": "What do you do and what is the course about?",
+        "answer": "Wedding photographer with 12 years experience. Want to teach other photographers to price and sell wedding packages."
       },
       {
-        "question": "What audience do you have?",
-        "answer": "18,000 Instagram followers, email list of 900 mostly past clients."
+        "question": "What audience and assets do you have?",
+        "answer": "18,000 Instagram followers, email list of 900 mostly past clients. I can record video myself."
       },
       {
-        "question": "What will the course teach?",
-        "answer": "Teach other photographers to price and sell wedding packages."
-      },
-      {
-        "question": "What is the goal?",
+        "question": "What does success look like and by when?",
         "answer": "100 course sales in the first launch, within four months."
       },
       {
-        "question": "What budget and skills?",
-        "answer": "No budget for ads beyond $1,000. I can record video myself."
+        "question": "Budget, platform, limits and who decides?",
+        "answer": "No budget for ads beyond $1,000. No platform chosen yet. Do not promise income results. Keep data in this project. I decide."
       },
       {
-        "question": "Which platform?",
-        "answer": "No platform chosen yet."
-      },
-      {
-        "question": "What are the rules?",
-        "answer": "Do not promise income results. Keep data in this project. I decide."
+        "question": "My guess for what should happen after the launch (ambition)",
+        "answer": "Accepted as the working guess: you want photographers who buy to use it, and the course to sell again. We aim to find who really buys before building everything, and report honestly against 100."
       }
     ]
   },
   "research": {
-    "approach": "Course creators who sell on the first attempt prove demand before they build the whole course. They write a one-sentence outcome, sell it to people they can reach with a real start date and price, and build one module ahead of students. They count how many of their followers are the buyer and not just fans, build a waitlist before the cart opens, and warm it up for about two weeks with a free workshop or lesson and a short email series ending in a real deadline. Before opening the cart they test checkout and a fresh-student account, and they state the refund rule. They avoid outcome promises they cannot prove, and they read results by step: waitlist, workshop attendance, sales page visits, sales and refunds.",
+    "approach": "Practitioners treat a first course launch as a demand test before a build. They define one concrete outcome for the buyer, set a real start date, and sell a founding cohort to the warm audience with a deadline, building the course a module ahead of the students. They check who the audience really is, because list size matters less than engaged buyers of this exact skill. They run a waitlist and value emails before cart opens, a short cart window with a real close, and a final-48-hour push. They keep claims honest (no typical-results implication from testimonials), keep email within the law, and read results against a rule set beforehand. When sales are low they talk to a handful of prospects to find out whether the problem is position, audience warmth or price. The owner's list is mostly past clients, who are couples and not photographers, so audience fit is the first thing to test.",
     "sources": [
-      {
-        "id": "web-schoolmaker",
-        "kind": "web",
-        "title": "Course launch checklist (SchoolMaker)",
-        "ref": "https://schoolmaker.com/blog/course-launch-checklist",
-        "date": "2026-10-29",
-        "note": "17 steps in three phases: define the promise, validate, pick a platform, build the sales page, test payment, build the list, then launch week and review. Pitfalls: treating a poll as proof of payment, untested checkout, fake urgency, outcome promises you cannot establish. Vendor page, updated 2026-10-29."
-      },
       {
         "id": "web-kajabi",
         "kind": "web",
-        "title": "How to sell an online course before you build it (Kajabi)",
+        "title": "How to Sell an Online Course Before You Build It (Kajabi)",
         "ref": "https://www.kajabi.com/blog/sell-your-course-before-you-build-it",
-        "date": "2026-08-07",
-        "note": "Write the outcome in one sentence, sell a first cohort with a start date six to eight weeks out, decide the green-light number beforehand, build one module ahead of students, refund in full if you cannot deliver. Vendor page."
+        "date": "2026-08",
+        "note": "Pre-sell steps: one concrete outcome, a real start date six to eight weeks out, sell to the existing list, decide in advance what counts as enough sales, build one module ahead, refund everyone if you cannot deliver. Vendor guidance, no benchmark data."
       },
       {
-        "id": "cat-pricing",
+        "id": "web-ruzuku",
+        "kind": "web",
+        "title": "Launch an online course (Ruzuku)",
+        "ref": "https://www.ruzuku.com/learn/articles/launch-online-course",
+        "date": "2026-11",
+        "note": "Phases: 2 to 3 weeks pre-launch with a waitlist and value emails, a 5 to 7 day enrollment window with a 48-hour warning, then post-launch survey. Says timing and discount advice is not platform data. If sales are zero, contact 5 to 10 prospects personally."
+      },
+      {
+        "id": "web-ftc-endorse",
+        "kind": "web",
+        "title": "FTC Endorsement Guides: what people are asking",
+        "ref": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Regulator guidance, current version revised 2023 (page itself is undated). Exceptional results in testimonials need clear statement of generally expected results; do not suppress negative reviews."
+      },
+      {
+        "id": "web-canspam",
+        "kind": "web",
+        "title": "CAN-SPAM Act: a compliance guide for business (FTC)",
+        "ref": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+        "date": "2024-01",
+        "note": "Regulator rules: honest header, clear opt-out honoured within 10 business days, a physical postal address, penalties per email."
+      },
+      {
+        "id": "web-google-sender",
+        "kind": "web",
+        "title": "Email sender guidelines (Google)",
+        "ref": "https://support.google.com/a/answer/81126",
+        "date": null,
+        "note": "Page shows no publication date; accessed 2026-11-03. Platform rules enforced from February 2024: SPF or DKIM for all senders, spam rate under 0.30% and ideally under 0.10%, one-click unsubscribe for marketing mail."
+      },
+      {
+        "id": "cat-price-launch",
         "kind": "catalogue",
         "title": "Digital product pricing and email planner",
         "ref": "price-a-course-or-ebook-and-write-its-launch-emails"
       },
       {
-        "id": "cat-interview",
+        "id": "cat-audience",
         "kind": "catalogue",
-        "title": "Customer interview evidence planner",
-        "ref": "idea-worth-building"
+        "title": "Market demand reviewer",
+        "ref": "hungry-audience-ranker"
       },
       {
-        "id": "cat-webinar",
+        "id": "cat-market-price",
         "kind": "catalogue",
-        "title": "Webinar outline, slides and promotion planner",
-        "ref": "prepare-a-webinar-people-can-follow"
+        "title": "Target market and pricing reviewer",
+        "ref": "market-and-price-picker"
       },
       {
-        "id": "cat-offer",
+        "id": "cat-launch-seq",
         "kind": "catalogue",
-        "title": "Offer designer",
-        "ref": "offer-designer"
+        "title": "Launch email sequence planner",
+        "ref": "launch-email-sequence-planner"
+      },
+      {
+        "id": "cat-small-ads",
+        "kind": "catalogue",
+        "title": "Small-budget ad test planner",
+        "ref": "small-budget-ad-test-planner"
       },
       {
         "id": "owner",
@@ -145,289 +184,321 @@
     "steps": [
       {
         "id": "s-audience",
-        "name": "Count who in the audience is the buyer",
-        "why": "A list of past clients and fans of wedding photos is not a list of photographers who would buy a pricing course.",
+        "name": "Count who the warm audience really is",
+        "why": "List size is not buyer count. Past wedding clients are couples, so the number of photographers on the list and among followers sets the ceiling for sales.",
         "sources": [
-          "web-schoolmaker",
+          "web-ruzuku",
+          "cat-audience",
           "owner"
         ]
       },
       {
-        "id": "s-validate",
-        "name": "Test demand with real photographers and a pre-sale",
-        "why": "A poll is not proof of payment; real money or a firm commitment is.",
+        "id": "s-market",
+        "name": "Scan rival photographer-business courses for price and promise",
+        "why": "A price and promise are judged against what the buyer can compare.",
         "sources": [
-          "web-kajabi",
-          "web-schoolmaker",
-          "cat-interview"
+          "cat-market-price",
+          "cat-price-launch"
+        ]
+      },
+      {
+        "id": "s-claims",
+        "name": "Fix the claims and list rules before writing",
+        "why": "Earnings or booking claims need proof the owner does not have, and the list must be lawful to email.",
+        "sources": [
+          "web-ftc-endorse",
+          "web-canspam",
+          "web-google-sender"
         ]
       },
       {
         "id": "s-offer",
-        "name": "Choose the offer, price, platform and launch type",
-        "why": "The owner must pick from costed options, with a start date and refund rule.",
+        "name": "Choose one buyer outcome, price and real start date",
+        "why": "A concrete outcome, a founding-cohort price and a real start date make the offer testable and the urgency honest.",
         "sources": [
           "web-kajabi",
-          "cat-pricing",
-          "cat-offer"
+          "web-ruzuku",
+          "cat-price-launch"
         ]
       },
       {
         "id": "s-build",
-        "name": "Write the outline, sales page, guarantee and honest claims",
-        "why": "One concrete outcome and truthful proof; no outcomes that cannot be shown.",
+        "name": "Outline the course and brief module one",
+        "why": "Build one module ahead of the students and use their questions for the rest.",
         "sources": [
-          "web-schoolmaker",
           "web-kajabi"
         ]
       },
       {
-        "id": "s-warm",
-        "name": "Warm the audience with a free workshop and emails",
-        "why": "A two-week warm-up with a real deadline turns a list into buyers.",
+        "id": "s-assets",
+        "name": "Write the sales page, emails and posts",
+        "why": "A waitlist, value emails, cart-open sequence and a final-48-hour close, with objections answered and proof placed.",
         "sources": [
-          "web-schoolmaker",
-          "cat-webinar"
-        ]
-      },
-      {
-        "id": "s-test",
-        "name": "Test checkout and a fresh student journey",
-        "why": "Failed payments, login links and support contact are launch killers.",
-        "sources": [
-          "web-schoolmaker"
+          "web-ruzuku",
+          "cat-launch-seq",
+          "cat-price-launch"
         ]
       },
       {
         "id": "s-launch",
-        "name": "Open the cart, answer objections and close on a true deadline",
-        "why": "Launch week is where sales happen; answers must use the real offer terms.",
+        "name": "Run the pre-sell, then the cart window, with tagged links",
+        "why": "Warm audience first with a real deadline; paid reach only after the warm result is read.",
         "sources": [
-          "web-schoolmaker",
-          "web-kajabi"
+          "web-kajabi",
+          "web-ruzuku",
+          "cat-small-ads"
         ]
       },
       {
-        "id": "s-review",
-        "name": "Read results by step and keep the learnings",
-        "why": "Without review the next cohort repeats the same gaps.",
+        "id": "s-read",
+        "name": "Read sales against a rule set before launch; interview if low",
+        "why": "Decide in advance what counts as enough; if sales are zero, talk to 5 to 10 prospects to find the cause.",
         "sources": [
-          "web-schoolmaker"
+          "web-kajabi",
+          "web-ruzuku"
+        ]
+      },
+      {
+        "id": "s-keep",
+        "name": "Survey buyers and non-buyers, set the next cohort date",
+        "why": "Buyers' questions shape the course; a date for the next cohort keeps the audience moving.",
+        "sources": [
+          "web-ruzuku",
+          "web-kajabi"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Assuming followers and past clients are the buyers when most are couples.",
+        "text": "Counting a list of past clients as a list of buyers when they are not photographers.",
         "sources": [
-          "web-schoolmaker",
-          "owner"
+          "web-ruzuku",
+          "cat-audience"
         ]
       },
       {
-        "text": "Treating positive poll answers as proof that people will pay.",
+        "text": "Building the whole course before testing demand, or rushing pre-launch.",
         "sources": [
-          "web-schoolmaker",
+          "web-ruzuku",
           "web-kajabi"
         ]
       },
       {
-        "text": "Launching with an untested checkout or student access.",
+        "text": "Using testimonials or hints that imply typical income or booking results.",
         "sources": [
-          "web-schoolmaker"
+          "web-ftc-endorse"
         ]
       },
       {
-        "text": "Fake countdown timers or promised outcomes, which break trust and the owner's rule.",
+        "text": "Emailing an older list without a clear opt-out or authentication, which raises spam complaints and hurts every later send.",
         "sources": [
-          "web-schoolmaker"
+          "web-canspam",
+          "web-google-sender"
         ]
       },
       {
-        "text": "Keeping money for a course never delivered; refund in full when delivery fails.",
+        "text": "Fake urgency; the deadline and start date must be real.",
         "sources": [
-          "web-kajabi"
+          "web-kajabi",
+          "web-ruzuku"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Launch the first photographer pricing course, honestly",
+    "name": "Pre-sell and launch a photographer pricing course",
     "capabilities": [
       {
-        "id": "audience-read",
+        "id": "list-export",
         "access": "read",
-        "via": "owner",
-        "name": "Audience counts shared by the owner (Instagram Insights screenshots, list tags)",
-        "why": "Count photographers versus couples and past clients without giving the AI account access."
+        "via": "file",
+        "name": "Email list export (owner's email tool)",
+        "why": "Count the list, its opt-in status and engagement, and tag who is a photographer."
+      },
+      {
+        "id": "ig-insights",
+        "access": "read",
+        "via": "file",
+        "name": "Instagram insights export or screenshots",
+        "why": "See follower makeup, reach per post and which business posts get saves and replies."
       },
       {
         "id": "web-read",
         "access": "read",
         "via": "browser",
-        "name": "Read public pages on photographer courses and platforms",
-        "why": "Find comparable courses, prices, formats, refund terms and platform fees."
+        "name": "Read rival course pages (browser)",
+        "why": "Record price, promise, length and proof on public pages."
       },
       {
-        "id": "platform-live",
-        "access": "live",
-        "via": "browser",
-        "name": "Create the course, sales page, checkout and cart in the chosen platform (browser)",
-        "why": "Set up and open the sale only after each step is approved."
+        "id": "orders-read",
+        "access": "read",
+        "via": "file",
+        "name": "Course platform sales export",
+        "why": "The outside judge: paid orders, source tags and refunds from the platform's own records."
       },
       {
-        "id": "owner-send",
+        "id": "send-email",
         "access": "live",
         "via": "owner",
-        "name": "The owner sends emails, posts, runs the workshop and places any ads from their own accounts",
-        "why": "No email tool or ad account is connected, so the owner publishes approved drafts."
+        "name": "Send launch emails (owner's email tool)",
+        "why": "Each send to the list is done by the owner, from a ready, checked draft."
+      },
+      {
+        "id": "post-instagram",
+        "access": "live",
+        "via": "owner",
+        "name": "Post on Instagram (owner)",
+        "why": "Each post goes out by the owner after approval."
+      },
+      {
+        "id": "course-platform",
+        "access": "live",
+        "via": "owner",
+        "name": "Set up and open the course page (course platform)",
+        "why": "Open the page and checkout once the platform is chosen; the owner presses publish."
+      },
+      {
+        "id": "ad-spend",
+        "access": "live",
+        "via": "owner",
+        "name": "Spend ad budget (owner's ad account)",
+        "why": "Any paid reach is placed and switched on by the owner, within $1,000."
       }
     ],
     "data": [
       {
-        "id": "audience-mix",
-        "name": "Who the audience is",
-        "why": "Shows how many people reached are photographers, which sets how many sales are possible.",
+        "id": "email-list",
+        "name": "Email list",
+        "why": "The warm audience; its makeup decides how many sales are reachable.",
         "fields": [
-          "Instagram follower mix if shown",
-          "email contacts tagged past client, photographer or other",
-          "comments and DMs from photographers about pricing"
+          "email domain or segment tag",
+          "date added",
+          "opted in to marketing",
+          "last open or click",
+          "photographer yes/no/unknown"
         ],
         "routes": [
           {
+            "kind": "CSV",
+            "how": "Export the list from the email tool as CSV; remove nothing, we tag in the project copy."
+          },
+          {
             "kind": "ASK",
-            "how": "The owner tags the 900 contacts and shares Insights screenshots; no names or emails are put in project files."
+            "how": "If no export is possible, the owner gives list size, opt-in source and unsubscribe rate."
           }
         ],
         "required_for": [
-          "evidence-audience",
-          "integrity-reach"
+          "audience-evidence",
+          "list-and-claims-check",
+          "demand-diagnosis"
         ],
-        "alternative": "Without a count, the reach arithmetic uses wide ranges and is marked low-confidence."
+        "alternative": "Without an export the audience count stays owner-reported and the funnel maths is marked low-confidence."
       },
       {
-        "id": "comparable-courses",
-        "name": "Comparable courses for photographers",
-        "why": "Sets price range, format, promises and refund terms.",
+        "id": "ig-audience",
+        "name": "Instagram audience and post results",
+        "why": "Shows how many followers are likely photographers and which business posts get replies and saves.",
         "fields": [
-          "course",
+          "follower location and age",
+          "reach per post",
+          "saves",
+          "replies",
+          "profile visits",
+          "link clicks"
+        ],
+        "routes": [
+          {
+            "kind": "FILE",
+            "how": "Screenshots of Insights: audience, and the last 90 days of posts with reach and saves."
+          },
+          {
+            "kind": "ASK",
+            "how": "A story poll to followers: are you a photographer? (tag-free, anonymous counts)."
+          }
+        ],
+        "required_for": [
+          "audience-evidence",
+          "demand-diagnosis"
+        ],
+        "alternative": "With neither, followers count only as reach and are not counted as buyers."
+      },
+      {
+        "id": "rival-courses",
+        "name": "Rival courses for photographers",
+        "why": "Price and promise to compare against.",
+        "fields": [
+          "course name",
           "price",
-          "format",
-          "length",
+          "format and length",
           "promise",
-          "refund terms",
-          "date read"
+          "proof shown",
+          "launch model (cohort or self-paced)"
         ],
         "routes": [
           {
             "kind": "URL",
-            "how": "Public sales pages found by search."
+            "how": "Five to ten public course pages found through search; record the date read."
           }
         ],
         "required_for": [
-          "evidence-market"
-        ],
-        "alternative": "If few courses are found, price advice rests on the interviews and is marked low-confidence."
+          "audience-evidence",
+          "offer-options"
+        ]
       },
       {
-        "id": "demand-signals",
-        "name": "Photographer demand signals",
-        "why": "Interview answers and any pre-sale or waitlist sign-ups.",
+        "id": "orders",
+        "name": "Course platform orders",
+        "why": "Real paid sales, refunds and where each came from.",
         "fields": [
-          "who",
-          "what they struggle with in pricing and selling",
-          "would pay",
-          "price named",
-          "sign-up or deposit"
+          "order date",
+          "price paid",
+          "refund status",
+          "source tag"
         ],
         "routes": [
           {
-            "kind": "ASK",
-            "how": "The owner talks to five to eight photographers they know and records answers without names."
+            "kind": "CSV",
+            "how": "Export orders from the course platform after each phase."
           }
         ],
         "required_for": [
-          "diagnosis",
-          "measurement"
+          "readout"
         ],
-        "alternative": "Without direct answers, demand stays UNKNOWN and the full course is not built."
+        "alternative": "Without it no result is verified; sales stay owner-reported."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the goal, limits and the audience question",
-        "goal": "Turn the owner's words into a measured goal, limits and the data we can reach. Writes BRIEF.md.",
+        "name": "Confirm the brief",
+        "goal": "Turn the owner's words into a measured goal, limits and what is unknown. Writes BRIEF.md.",
         "owner": {
-          "role": "price-a-course-or-ebook-and-write-its-launch-emails"
+          "role": "market-and-price-picker"
         },
         "gate": "none",
         "from_steps": [],
         "uses": []
       },
       {
-        "id": "evidence-audience",
+        "id": "audience-evidence",
         "kind": "evidence",
-        "name": "Count who is in the audience",
-        "goal": "Tag the 900 list contacts and read Instagram Insights to count photographers, couples, past clients and others, and note photographer questions about pricing.",
-        "owner": {
-          "role": "idea-worth-building"
-        },
-        "data": [
-          "audience-mix"
-        ],
-        "needs": [
-          "audience-read"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "audience",
-            "name": "Audience count",
-            "format": "markdown",
-            "path": "evidence/AUDIENCE.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "counts",
-            "name": "Counts are by group with how each was made; guesses are marked",
-            "required": true
-          },
-          {
-            "id": "private",
-            "name": "No names or email addresses are written to project files",
-            "required": true
-          },
-          {
-            "id": "questions",
-            "name": "Photographer questions about pricing are listed with where they came from",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-audience"
-        ],
-        "uses": [
-          "idea-worth-building"
-        ]
-      },
-      {
-        "id": "evidence-market",
-        "kind": "evidence",
-        "name": "Study comparable photographer courses",
-        "goal": "List what comparable courses promise, charge, how they are delivered, and what refund terms and platform fees apply.",
+        "name": "Count the audience and scan rival courses",
+        "goal": "Tag who on the list and followers is a photographer or likely buyer, read Instagram results for business posts, and record price and promise of five to ten rival courses.",
         "owner": {
           "role": "market-and-price-picker"
         },
+        "support": [
+          "marketing-social-media-strategist"
+        ],
         "data": [
-          "comparable-courses"
+          "email-list",
+          "ig-audience",
+          "rival-courses"
         ],
         "needs": [
+          "list-export",
+          "ig-insights",
           "web-read"
         ],
         "depends_on": [
@@ -435,165 +506,124 @@
         ],
         "outputs": [
           {
-            "id": "market",
-            "name": "Comparable courses",
+            "id": "audience",
+            "name": "Audience counts by group",
+            "format": "csv",
+            "path": "evidence/audience.csv"
+          },
+          {
+            "id": "rivals",
+            "name": "Rival course scan",
             "format": "markdown",
-            "path": "evidence/COMPARABLE-COURSES.md"
+            "path": "evidence/RIVAL-COURSES.md"
+          },
+          {
+            "id": "evidence-notes",
+            "name": "What was pulled and how",
+            "format": "markdown",
+            "path": "evidence/EVIDENCE.md"
           }
         ],
         "checks": [
           {
-            "id": "count",
-            "name": "At least five courses with price, format and date read",
+            "id": "totals",
+            "name": "List total in the working copy matches the export's own row count exactly",
             "required": true
           },
           {
-            "id": "claims",
-            "name": "Outcome claims on those pages are listed as claims, not as proof",
+            "id": "unknown-kept",
+            "name": "Anyone not clearly a photographer is counted as unknown, never as a buyer",
             "required": true
           },
           {
-            "id": "platforms",
-            "name": "At least three course platforms are compared on fees, checkout and student access",
+            "id": "rivals",
+            "name": "At least five rival courses with price, promise and date read",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-offer"
+          "s-audience",
+          "s-market"
         ],
         "uses": [
-          "market-and-price-picker"
-        ]
-      },
-      {
-        "id": "evidence-demand",
-        "kind": "evidence",
-        "name": "Talk to photographers and record what they say",
-        "goal": "Plan five to eight conversations with photographers the owner knows and sort the answers by pain, willingness to pay and price named.",
-        "owner": {
-          "role": "idea-worth-building"
-        },
-        "data": [
-          "demand-signals"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "interviews",
-            "name": "Interview plan and answers",
-            "format": "markdown",
-            "path": "evidence/PHOTOGRAPHER-INTERVIEWS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "real",
-            "name": "Answers come from real photographers, with the count shown, and not from the AI",
-            "required": true
-          },
-          {
-            "id": "pay",
-            "name": "Each answer separates what they like from what they would pay for",
-            "required": true
-          },
-          {
-            "id": "unsent",
-            "name": "Outreach drafts are for the owner to send",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-validate"
-        ],
-        "uses": [
-          "idea-worth-building",
+          "hungry-audience-ranker",
+          "social-content-results-reader",
           "buyer-research-plan-with-survey"
         ]
       },
       {
-        "id": "integrity-reach",
+        "id": "list-and-claims-check",
         "kind": "integrity",
-        "name": "Check that 100 sales is reachable",
-        "goal": "Work back from 100 sales through sales page visits, workshop attendance and waitlist to the number of photographers the owner can reach, using ranges, and check the list can be emailed about this offer.",
+        "name": "Check the list and the claims rules",
+        "goal": "Check that the list can lawfully and safely be emailed and set the claims register: what may be said, what proof is needed, and what is banned (any income or booking promise).",
         "owner": {
-          "role": "check-a-spreadsheet-before-sharing-the-results"
+          "role": "support-legal-compliance-checker"
         },
         "data": [
-          "audience-mix"
+          "email-list"
         ],
         "depends_on": [
-          "evidence-audience"
+          "audience-evidence"
         ],
         "outputs": [
           {
-            "id": "reach",
-            "name": "Reach check",
+            "id": "list-check",
+            "name": "List and claims check",
             "format": "markdown",
-            "path": "integrity/REACH-CHECK.md"
+            "path": "integrity/LIST-AND-CLAIMS.md"
           }
         ],
         "checks": [
           {
-            "id": "arithmetic",
-            "name": "The steps from audience to 100 sales are shown with a low, middle and high rate, each labelled assumed or sourced",
+            "id": "optin",
+            "name": "Each segment to be emailed has a recorded opt-in source, or is excluded from the send",
             "required": true
           },
           {
-            "id": "gap",
-            "name": "States plainly the size of the gap if the reachable photographers are far fewer than needed",
+            "id": "sender",
+            "name": "Sending domain passes SPF or DKIM, has a one-click unsubscribe and a postal address in the footer",
             "required": true
           },
           {
-            "id": "consent",
-            "name": "Notes whether past clients agreed to marketing emails and what an unrelated offer risks",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "Ends with REACHABLE, STRETCH or NOT LIKELY and what would change it",
+            "id": "claims",
+            "name": "Claims are sorted into allowed, needs-proof and banned; no sentence implies typical income or bookings",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-audience"
-        ],
-        "support": [
-          "support-legal-compliance-checker"
+          "s-claims"
         ],
         "uses": [
-          "spreadsheet-checker"
+          "headline-promise-checker"
         ]
       },
       {
-        "id": "diagnosis",
+        "id": "demand-diagnosis",
         "kind": "diagnosis",
-        "name": "Find the strongest offer and the gaps",
-        "goal": "Test the hypotheses against the audience count, comparable courses and photographer answers. Keep competing explanations.",
+        "name": "Can this audience reach 100 sales?",
+        "goal": "Turn the counts into funnel maths for the 100-sale goal, rank which groups to sell to first, and test the hypotheses about audience fit, reach, price and proof. State the gap to 100 honestly.",
         "owner": {
           "role": "market-and-price-picker"
         },
+        "support": [
+          "new-business-growth-needs"
+        ],
         "data": [
-          "demand-signals",
-          "audience-mix",
-          "comparable-courses"
+          "email-list",
+          "ig-audience"
         ],
         "depends_on": [
-          "evidence-audience",
-          "evidence-market",
-          "evidence-demand",
-          "integrity-reach"
+          "audience-evidence",
+          "list-and-claims-check"
         ],
         "outputs": [
           {
             "id": "diagnosis",
-            "name": "Offer findings",
+            "name": "Audience and funnel diagnosis",
             "format": "markdown",
-            "path": "diagnosis/OFFER-FINDINGS.md"
+            "path": "diagnosis/DIAGNOSIS.md"
           },
           {
             "id": "hypotheses",
@@ -605,73 +635,63 @@
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the count behind it",
             "required": true
           },
           {
-            "id": "volume",
-            "name": "Demand findings state how many photographers answered; under five is marked low-confidence",
+            "id": "ranges",
+            "name": "Funnel maths shows a low, middle and high buy rate and the audience size needed for 100 sales at each; rates are labelled as assumptions",
             "required": true
           },
           {
             "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
+            "name": "The main finding names a competing explanation",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-validate",
-          "s-offer"
+          "s-audience"
         ],
         "uses": [
-          "market-and-price-picker"
+          "hungry-audience-ranker",
+          "say-do-gap-checker",
+          "break-even-ad-target-finder"
         ]
       },
       {
-        "id": "options",
+        "id": "offer-options",
         "kind": "options",
-        "name": "Rank the launch routes",
-        "goal": "Build two or three launch routes (for example pre-sell a founding cohort with a start date, build one module then sell, or workshop-led launch) with platform, price scenarios, ad use up to $1,000, owner hours, risk, and how each is measured. State what each route can reach against 100.",
+        "name": "Rank offer, price and launch shapes",
+        "goal": "Offer three to five ranked combinations of buyer outcome, founding-cohort price, start date and launch shape (waitlist, live workshop, direct pre-sell), each with the finding it rests on, expected effect, effort, confidence, risk and how it is measured.",
         "owner": {
-          "role": "price-a-course-or-ebook-and-write-its-launch-emails"
+          "role": "offer-from-buyer-problems"
         },
         "depends_on": [
-          "diagnosis"
+          "demand-diagnosis"
         ],
         "outputs": [
           {
             "id": "options",
-            "name": "Launch routes",
+            "name": "Ranked options",
             "format": "markdown",
-            "path": "options/LAUNCH-ROUTES.md"
-          },
-          {
-            "id": "options-json",
-            "name": "Launch routes as data",
-            "format": "json",
-            "path": "options/options.json"
+            "path": "options/OPTIONS.md"
           }
         ],
         "checks": [
           {
+            "id": "finding",
+            "name": "Every option cites the diagnosis finding it rests on",
+            "required": true
+          },
+          {
             "id": "fields",
-            "name": "Every route has price, platform cost, ad spend, owner hours, risk and how success is measured",
+            "name": "Every option states price, start date, sales needed for the goal, effort, confidence and risk",
             "required": true
           },
           {
-            "id": "greenlight",
-            "name": "Each route names the green-light number for going ahead before the whole course is built",
-            "required": true
-          },
-          {
-            "id": "gap",
-            "name": "The route's expected sales are shown as a range against 100, not a promise",
-            "required": true
-          },
-          {
-            "id": "refund",
-            "name": "Each route states a refund rule and what happens if the course cannot be delivered",
+            "id": "no-claims",
+            "name": "No option relies on an income or booking promise",
             "required": true
           }
         ],
@@ -680,25 +700,25 @@
           "s-offer"
         ],
         "uses": [
-          "price-a-course-or-ebook-and-write-its-launch-emails",
-          "offer-designer"
+          "pricing-model-designer",
+          "two-day-paid-ask-planner"
         ]
       },
       {
         "id": "decision",
         "kind": "decision",
-        "name": "Owner chooses",
-        "goal": "The owner picks the route, price, platform and green-light number. Ask why when a top option is passed over, and record it.",
+        "name": "Owner chooses the offer",
+        "goal": "The owner picks the offer, price, start date and launch shape, and signs the success rule: how many sales or waitlist sign-ups by when mean go, adjust or stop. Ask why when the top option is passed over.",
         "owner": {
-          "role": "price-a-course-or-ebook-and-write-its-launch-emails"
+          "role": "offer-from-buyer-problems"
         },
         "depends_on": [
-          "options"
+          "offer-options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen plan",
+            "name": "Chosen offer and rule",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -706,12 +726,12 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over options and the reasons are recorded",
+            "name": "Chosen and passed-over options are recorded with reasons",
             "required": true
           },
           {
-            "id": "refund",
-            "name": "The refund rule is agreed before anything is sold",
+            "id": "rule",
+            "name": "The go, adjust or stop rule has numbers and dates and is written before anything is sent",
             "required": true
           }
         ],
@@ -720,226 +740,146 @@
         "uses": []
       },
       {
-        "id": "curriculum",
+        "id": "course-outline",
         "kind": "production",
-        "name": "Write the course outline and first lessons",
-        "goal": "Turn the promise into a short outline of lessons, with the first module's lesson plans, exercises and recording notes sized to what the owner can record.",
+        "name": "Outline the course and brief module one",
+        "goal": "Turn the chosen promise into a short module outline and a recording brief for module one, so the owner can film one module ahead of the buyers.",
         "owner": {
           "role": "corporate-training-designer"
         },
         "depends_on": [
-          "decision",
-          "evidence-demand"
+          "decision"
         ],
         "outputs": [
           {
             "id": "outline",
-            "name": "Course outline and first module",
+            "name": "Course outline",
             "format": "markdown",
             "path": "production/COURSE-OUTLINE.md"
+          },
+          {
+            "id": "module-one",
+            "name": "Module one recording brief",
+            "format": "markdown",
+            "path": "production/MODULE-ONE-BRIEF.md"
           }
         ],
         "checks": [
           {
             "id": "outcome",
-            "name": "The course promises one concrete skill in one sentence that does not state income or booking results",
+            "name": "Each module maps to one skill the promise names, with a practice task the buyer does",
             "required": true
           },
           {
-            "id": "traced",
-            "name": "Each lesson traces to a pain photographers named",
+            "id": "no-income",
+            "name": "No module description or outcome promises income or bookings",
             "required": true
           },
           {
-            "id": "capacity",
-            "name": "The recording plan fits the owner's time and equipment",
-            "required": true
-          },
-          {
-            "id": "sources",
-            "name": "Examples from the owner's own work are marked as the owner's experience",
+            "id": "owner-material",
+            "name": "Every example the owner must supply is listed, none invented",
             "required": true
           }
         ],
-        "gate": "review",
+        "gate": "none",
         "from_steps": [
           "s-build"
         ],
         "uses": [
-          "build-a-lesson-from-explanation-to-practice-and-a-quiz"
+          "course-scope-sequence",
+          "selling-proposition-finder"
         ]
       },
       {
-        "id": "sales-page",
+        "id": "launch-assets",
         "kind": "production",
-        "name": "Write the sales page, guarantee and checkout plan",
-        "goal": "Write the sales page copy, the guarantee and refund wording, the checkout steps and the plan for testing a fresh student journey.",
+        "name": "Write the sales page, emails and posts",
+        "goal": "Write the sales page, price display, waitlist and launch emails with a real close, answers to the buyer's doubts, and Instagram posts. Check every claim against the claims register before the owner sees it.",
         "owner": {
-          "role": "build-a-landing-page-fix-it-and-prove-the-top-change"
+          "role": "proof-sales-copy"
         },
+        "support": [
+          "price-a-course-or-ebook-and-write-its-launch-emails",
+          "marketing-social-media-strategist"
+        ],
+        "reviewers": [
+          "support-legal-compliance-checker"
+        ],
         "depends_on": [
           "decision",
-          "curriculum"
+          "course-outline",
+          "list-and-claims-check"
         ],
         "outputs": [
           {
             "id": "sales-page",
-            "name": "Sales page and offer terms",
+            "name": "Sales page copy",
             "format": "markdown",
             "path": "production/SALES-PAGE.md"
+          },
+          {
+            "id": "emails",
+            "name": "Waitlist and launch emails",
+            "format": "markdown",
+            "path": "production/EMAILS.md"
+          },
+          {
+            "id": "posts",
+            "name": "Instagram posts",
+            "format": "markdown",
+            "path": "production/POSTS.md"
           }
         ],
         "checks": [
           {
-            "id": "no-income",
-            "name": "No sentence states or implies income, pay rise or bookings students will get",
+            "id": "claims",
+            "name": "Every claim is allowed in the claims register; zero sentences imply typical income or bookings",
             "required": true
           },
           {
-            "id": "terms",
-            "name": "Start date, workload, access length, prerequisites and refund rule are stated",
+            "id": "real-deadline",
+            "name": "Every deadline and spot limit matches the start date and capacity the owner chose",
             "required": true
           },
           {
-            "id": "proof",
-            "name": "Every proof point is real and marked with its source, or left out",
+            "id": "email-law",
+            "name": "Every email has a clear opt-out, a postal address and honest sender details",
             "required": true
           },
           {
-            "id": "urgency",
-            "name": "Any deadline is a real one the owner will keep",
+            "id": "doubts",
+            "name": "The top five buyer doubts each have an answer on the page",
             "required": true
           }
         ],
         "gate": "review",
         "from_steps": [
-          "s-build",
-          "s-test"
-        ],
-        "reviewers": [
-          "support-legal-compliance-checker"
+          "s-assets"
         ],
         "uses": [
           "honest-conversion-copywriter",
-          "guarantee-designer",
-          "call-to-action-writer",
-          "marketing-claims-checker"
-        ]
-      },
-      {
-        "id": "workshop",
-        "kind": "production",
-        "name": "Plan the free workshop",
-        "goal": "Write the outline of a short free live workshop that teaches one pricing idea from the course, with a fair way to introduce the offer.",
-        "owner": {
-          "role": "prepare-a-webinar-people-can-follow"
-        },
-        "depends_on": [
-          "decision",
-          "curriculum"
-        ],
-        "outputs": [
-          {
-            "id": "workshop",
-            "name": "Workshop outline and promotion",
-            "format": "markdown",
-            "path": "production/WORKSHOP.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "value",
-            "name": "The workshop teaches something usable on its own",
-            "required": true
-          },
-          {
-            "id": "pitch",
-            "name": "The offer is introduced once, with the real terms",
-            "required": true
-          },
-          {
-            "id": "claims",
-            "name": "No income promises are made",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-warm"
-        ],
-        "uses": [
-          "prepare-a-webinar-people-can-follow",
-          "webinar-promotion-planner"
-        ],
-        "optional_when": "The chosen route has no workshop."
-      },
-      {
-        "id": "emails",
-        "kind": "production",
-        "name": "Write the launch emails and posts",
-        "goal": "Write the two-week warm-up emails, the cart-open and closing emails and matching Instagram posts, in the owner's voice, with a real deadline.",
-        "owner": {
-          "role": "marketing-email-strategist"
-        },
-        "depends_on": [
-          "decision",
-          "sales-page"
-        ],
-        "outputs": [
-          {
-            "id": "emails",
-            "name": "Launch emails and posts",
-            "format": "markdown",
-            "path": "production/LAUNCH-EMAILS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "segments",
-            "name": "Past clients get a different, lighter message than photographers",
-            "required": true
-          },
-          {
-            "id": "terms",
-            "name": "Every email states the offer terms and refund rule the same way as the sales page",
-            "required": true
-          },
-          {
-            "id": "claims",
-            "name": "No income promises or invented proof",
-            "required": true
-          },
-          {
-            "id": "drafts",
-            "name": "All messages are drafts for the owner to send",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-warm",
-          "s-launch"
-        ],
-        "uses": [
-          "price-a-course-or-ebook-and-write-its-launch-emails"
+          "launch-email-sequence-planner",
+          "digital-product-pricer",
+          "objection-answer-sheet-writer",
+          "platform-native-content-planner",
+          "headline-promise-checker"
         ]
       },
       {
         "id": "launch",
         "kind": "execution",
-        "name": "Run the launch one approved action at a time",
-        "goal": "Register the expected result of each step, then with the owner's approval set up the platform and checkout, test a purchase and a fresh student, publish the page, run the workshop, send the emails and open and close the cart.",
+        "name": "Run the pre-sell and cart window",
+        "goal": "Register the launch as an experiment with its rule and tagged links, open the page, then send the waitlist and launch emails and post, one approved action at a time. Warm audience first.",
         "owner": {
-          "role": "price-a-course-or-ebook-and-write-its-launch-emails"
+          "role": "plan-a-sale-across-email-and-sms"
         },
         "needs": [
-          "platform-live",
-          "owner-send"
+          "send-email",
+          "post-instagram",
+          "course-platform"
         ],
         "depends_on": [
-          "sales-page",
-          "workshop",
-          "emails"
+          "launch-assets"
         ],
         "outputs": [
           {
@@ -952,49 +892,92 @@
         "checks": [
           {
             "id": "registered",
-            "name": "Each step has its expected result written down before it goes live",
+            "name": "The launch rule and baseline are in experiments.jsonl before the first send",
             "required": true
           },
           {
-            "id": "checkout",
-            "name": "A test purchase, a failed payment and a fresh student login are tested before the cart opens",
+            "id": "test",
+            "name": "A test email and a test checkout work on a phone before the first real send",
             "required": true
           },
           {
-            "id": "terms",
-            "name": "The page, checkout and emails show the same price, dates and refund rule",
+            "id": "tags",
+            "name": "Every link carries a source tag so each channel's sales can be counted from orders",
             "required": true
           },
           {
-            "id": "readback",
-            "name": "What is live matches what the owner approved",
-            "required": true
-          },
-          {
-            "id": "spend",
-            "name": "Any ad spend is approved and capped at $1,000",
+            "id": "complaints",
+            "name": "Spam complaints stay under 0.1% of sends after the first send, or sending pauses",
             "required": true
           }
         ],
         "gate": "approve_each_action",
         "from_steps": [
-          "s-test",
           "s-launch"
         ],
         "uses": [
-          "call-to-action-writer"
+          "launch-email-sequence-planner",
+          "email-sequence-auditor"
         ]
       },
       {
-        "id": "measurement",
+        "id": "paid-test",
+        "kind": "execution",
+        "name": "Optional paid reach test",
+        "goal": "Only if the warm result shows paid reach could pay back, set a small test to photographers within the $1,000 cap, ready for the owner to switch on.",
+        "owner": {
+          "role": "plan-ad-tests-run-them-and-keep-what-they-teach"
+        },
+        "needs": [
+          "ad-spend"
+        ],
+        "depends_on": [
+          "launch"
+        ],
+        "outputs": [
+          {
+            "id": "ad-plan",
+            "name": "Paid test settings and receipt",
+            "format": "markdown",
+            "path": "execution/PAID-TEST.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "cap",
+            "name": "Total planned spend is at or under $1,000 and the daily cap is shown",
+            "required": true
+          },
+          {
+            "id": "break-even",
+            "name": "The maximum cost per sale is set from the price and platform fees, and spend stops above it",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "optional_when": "The warm launch already reaches the goal, or the owner chooses not to spend.",
+        "from_steps": [
+          "s-launch"
+        ],
+        "uses": [
+          "small-budget-ad-test-planner",
+          "ad-test-budget-calculator",
+          "break-even-ad-target-finder"
+        ]
+      },
+      {
+        "id": "readout",
         "kind": "measurement",
-        "name": "Read the launch by step",
-        "goal": "Read waitlist, workshop attendance, page visits, sales, refunds and spend against 100 sales and the guardrails.",
+        "name": "Read sales against the rule",
+        "goal": "Read paid orders, refunds and source tags from the platform's own export against the signed rule and the 100-sale goal. If sales are low, plan five to ten prospect calls to find the cause.",
         "owner": {
           "role": "experiment-readout-desk"
         },
         "data": [
-          "demand-signals"
+          "orders"
+        ],
+        "needs": [
+          "orders-read"
         ],
         "depends_on": [
           "launch"
@@ -1002,56 +985,51 @@
         "outputs": [
           {
             "id": "readout",
-            "name": "Launch readout",
+            "name": "Sales readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
           }
         ],
         "checks": [
           {
-            "id": "steps",
-            "name": "Each step from waitlist to sale is shown with its conversion and the number behind it",
+            "id": "source",
+            "name": "Sales come from the platform export; owner-reported counts are labelled as reports",
             "required": true
           },
           {
-            "id": "guardrails",
-            "name": "Refunds, complaints and ad spend are checked against the limits",
+            "id": "refunds",
+            "name": "Refunds and complaints are shown beside sales",
             "required": true
           },
           {
-            "id": "volume",
-            "name": "No conclusion about price or message from fewer sales or visits than the plan set; otherwise INCONCLUSIVE",
-            "required": true
-          },
-          {
-            "id": "gap",
-            "name": "The gap to 100 is shown",
+            "id": "rule",
+            "name": "The verdict uses the rule signed before launch and says how far the result is from 100",
             "required": true
           }
         ],
         "gate": "none",
         "from_steps": [
-          "s-review"
+          "s-read"
         ],
         "uses": [
-          "agency-project-management-experiment-tracker"
+          "ad-test-budget-calculator"
         ]
       },
       {
         "id": "learning",
         "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "Close the launch, record what worked and what did not, propose rules with their scope, and plan the next cohort or an evergreen version.",
+        "name": "Keep what we learned and set the next date",
+        "goal": "Close the experiment, send the buyer and non-buyer survey, save rules with their scope, and set the next cohort date or a stop decision.",
         "owner": {
           "role": "experiment-readout-desk"
         },
         "depends_on": [
-          "measurement"
+          "readout"
         ],
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and next cohort",
+            "name": "Learnings and next round",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
@@ -1059,74 +1037,76 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every step and test is closed with a verdict",
+            "name": "The launch experiment is closed in experiments.jsonl with a verdict",
             "required": true
           },
           {
-            "id": "scoped",
-            "name": "Each rule says if it holds for this launch, this course or all courses",
+            "id": "scope",
+            "name": "Each saved rule says whether it applies to this launch, this business or any course",
+            "required": true
+          },
+          {
+            "id": "next",
+            "name": "A next-cohort date or a stop decision is written",
             "required": true
           }
         ],
         "gate": "none",
-        "from_steps": [],
-        "uses": []
+        "from_steps": [
+          "s-keep"
+        ],
+        "uses": [
+          "check-training-transfer-after-a-course"
+        ]
       }
     ],
     "hypotheses": [
       {
-        "id": "h-audience",
-        "statement": "Most of the 18,000 followers and 900 contacts are couples and past clients, not photographers, so the reachable buyer audience is much smaller than it looks.",
-        "test": "Count photographers in the tagged list, Insights data and DMs.",
-        "confirm_if": "Photographers are a small share of each group.",
-        "refute_if": "Photographers are a large share.",
-        "fix_stage": "options"
+        "id": "h-audience-mismatch",
+        "statement": "Most of the 900 emails and many followers are couples and past clients, not photographers, so the buyer pool is small.",
+        "test": "Tag the list by photographer yes, no or unknown; read Instagram audience data; run a one-question story poll.",
+        "confirm_if": "Photographers on the list are fewer than 100 of the 900 (about one in nine), or the poll shows under 10% of responders are photographers.",
+        "refute_if": "Photographers are at least 20% of the list and of poll responders.",
+        "fix_stage": "offer-options"
       },
       {
-        "id": "h-demand",
-        "statement": "Photographers will pay for a course on pricing and selling wedding packages.",
-        "test": "Interview answers and pre-sale or deposit sign-ups, with the green-light number set beforehand.",
-        "confirm_if": "Enough photographers name a price and commit.",
-        "refute_if": "Few commit or the price named is far below the plan.",
-        "fix_stage": "curriculum"
+        "id": "h-reach-gap",
+        "statement": "The warm audience alone cannot reach 100 sales at a plausible buy rate.",
+        "test": "Funnel maths: photographers reachable times a low, middle and high buy rate (labelled as assumptions), compared to 100.",
+        "confirm_if": "At the middle rate the reachable photographers give fewer than 100 sales.",
+        "refute_if": "At the low rate the warm audience already gives 100 sales or more.",
+        "fix_stage": "paid-test"
       },
       {
-        "id": "h-reach",
-        "statement": "100 sales from this audience and up to $1,000 of ads is a stretch.",
-        "test": "Work back from 100 through visits, attendance and waitlist with low, middle and high rates.",
-        "confirm_if": "The needed waitlist is far above the reachable photographers.",
-        "refute_if": "The needed waitlist is within reach.",
-        "fix_stage": "options"
+        "id": "h-price-fit",
+        "statement": "The price is out of line with what rival courses charge and what the promise is worth to a working photographer.",
+        "test": "Compare the candidate price with the rival scan and with one booking's value; ask five to ten photographers about price in short calls.",
+        "confirm_if": "The price is above all rivals with a similar promise, or most called photographers say it is too high.",
+        "refute_if": "The price sits within the rival range and most called photographers call it fair.",
+        "fix_stage": "launch-assets"
       },
       {
-        "id": "h-price",
-        "statement": "The price that photographers accept is below what the owner expects.",
-        "test": "Prices named in interviews and comparable course prices.",
-        "confirm_if": "Named prices cluster below the plan.",
-        "refute_if": "Named prices match or exceed it.",
-        "fix_stage": "sales-page"
+        "id": "h-proof-gap",
+        "statement": "Without income claims, buyers doubt the owner can teach selling; proof is missing.",
+        "test": "Collect the top buyer doubts from the poll and calls; check which have honest proof on file (years, packages priced, work shown).",
+        "confirm_if": "Three or more of the top five doubts have no allowed proof.",
+        "refute_if": "Every top doubt has allowed proof ready to place on the page.",
+        "fix_stage": "launch-assets"
       },
       {
-        "id": "h-proof",
-        "statement": "Photographers will not buy a pricing course without proof the method works, and the owner cannot state income results.",
-        "test": "Which proof the owner can show without results promises (method, examples, own business facts), and what comparable pages use.",
-        "confirm_if": "Buyers ask for results the owner cannot claim.",
-        "refute_if": "Method and teaching proof are enough.",
-        "fix_stage": "sales-page"
-      },
-      {
-        "id": "h-checkout",
-        "statement": "Sales will be lost to an untested checkout or student access path.",
-        "test": "Test purchase, failed payment and a fresh student account before the cart opens.",
-        "confirm_if": "Any step fails in testing.",
-        "refute_if": "All steps pass.",
+        "id": "h-list-deliverability",
+        "statement": "The list is cold or not opted in for marketing, so emails go to spam or draw complaints.",
+        "test": "Check opt-in source and last-engagement date; read complaint and bounce rates after the first small send.",
+        "confirm_if": "More than 30% of the list has no recorded marketing opt-in, or complaints exceed 0.1% of the first send.",
+        "refute_if": "Opt-in is recorded for at least 80% and complaints stay under 0.1%.",
         "fix_stage": "launch"
       }
     ],
+    "dropped": [],
     "measurement": {
-      "window": "Read the funnel daily during launch week and weekly during the warm-up; read refunds for the refund period after close.",
-      "min_volume": "No verdict on a price or message from fewer than 30 page visits or five photographers' answers; the go or no-go on building the full course uses the green-light number the owner set beforehand.",
-      "stop_rule": "Pause the sale if checkout or access fails, if an income claim is found in any message, or if ad spend reaches $1,000; refund in full if the course cannot be delivered."
+      "window": "Waitlist 2 to 3 weeks, cart open 5 to 7 days, read daily during the cart, final readout 7 days after close; survey 30 days after delivery starts.",
+      "min_volume": "A price or channel verdict only at 20 or more paid orders or 200 or more tagged clicks per channel; below that the verdict is INCONCLUSIVE.",
+      "stop_rule": "Pause sending if spam complaints reach 0.1% of sends; stop paid spend if cost per sale passes the break-even set at decision or the $1,000 cap is reached; otherwise run the full window."
     }
   }
 }

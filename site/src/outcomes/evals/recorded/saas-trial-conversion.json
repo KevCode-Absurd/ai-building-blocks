@@ -1,43 +1,54 @@
 {
   "case": "saas-trial-conversion",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Lift trial-to-paid conversion from about 4% to 7% without cutting trial sign-ups by more than 10%.",
-    "deliverable": "A checked definition of trial-to-paid, a diagnosis of where trials stall, and the chosen onboarding, email, paywall and trial-length changes drafted and tested one at a time, with an honest readout.",
+    "outcome": "Raise trial-to-paid conversion from about 4% to 7% by the end of next quarter, counted the same way before and after, without sign-up volume falling by more than 10%.",
+    "ambition": {
+      "goal_beyond": "More of the freelancers who try the app become paying customers who stay, so growth does not depend on buying more sign-ups.",
+      "rungs": [
+        "Improve the trial emails and the upgrade screen that exist today.",
+        "Find, from raw sign-up, product and billing records, where trial users stop and what the activation moment is, then fix onboarding, emails, the paywall and the trial length in tested steps.",
+        "Do rung 2, then keep it true with a weekly cohort check by sign-up week that flags a drop in activation or conversion, and a standing holdout so the gain is never assumed."
+      ],
+      "chosen": 3,
+      "judge": "Paid subscriptions per sign-up cohort from Stripe, for treated users against a randomised holdout, rather than the admin dashboard."
+    },
+    "deliverable": "A conversion rate rebuilt from raw records, a diagnosis, changed onboarding, trial emails and paywall (and trial length if chosen) launched as randomised tests with your approval, a weekly cohort check, and an honest readout against 7%.",
     "done": [
-      "The 4% figure is rebuilt from sign-up and payment records, and how it was counted is written down",
-      "Where trial users stall, and what payers do that others do not, is shown with numbers",
-      "Every hypothesis is marked supported, refuted or unknown with evidence",
-      "The owner has chosen the changes, with reasons recorded",
-      "Each approved change is registered as a test before it goes live",
-      "Trial-to-paid and sign-up volume are read back against the target and the 10% limit",
-      "Learnings are saved for the next round"
+      "Trial-to-paid rebuilt from Stripe and PostHog records with the counting rule written down",
+      "Funnel from sign-up to first value to paid, with hypotheses marked supported, refuted or unknown",
+      "Your chosen changes recorded with reasons",
+      "Changes built, checked and launched as randomised tests, registered before launch",
+      "Results read from Stripe against the holdout, with the sign-up volume guardrail",
+      "Weekly cohort check set up and learnings saved"
     ],
     "metric": {
       "name": "Trial-to-paid conversion",
       "direction": "increase",
-      "unit": "% of trial sign-ups that become paying customers",
+      "unit": "percent of trial sign-ups that become paying",
       "baseline": 4,
       "baseline_source": "reported",
       "target": 7
     },
-    "deadline": "End of next quarter (31 March 2027)",
+    "deadline": "End of next quarter",
     "guardrails": [
-      "Monthly trial sign-ups do not fall by more than 10% from about 2,400 (floor about 2,160)"
+      "Sign-up volume does not fall by more than 10% (the owner's rule)",
+      "Proposed, owner to confirm: customers who convert are still paying after 60 days at the same rate as before",
+      "Proposed, owner to confirm: no change to how many people reach the product from sign-up, such as extra steps before the first screen, without your approval"
     ],
     "limits": [
       "May change onboarding, emails, the paywall and trial length",
-      "Working data stays in a CSV in this project",
-      "Customer.io access is draft only: emails are drafted, not sent by us",
-      "Stripe is read-only"
+      "Customer.io access is draft only; the owner activates",
+      "Stripe is read-only for us",
+      "Working data stays in a CSV in this project"
     ],
     "assets": [
-      "PostHog product analytics",
-      "Customer.io email account",
-      "Stripe payment records",
-      "Admin dashboard that reports trial-to-paid"
+      "Admin dashboard (source of the 4%; how it counts is not checked)",
+      "PostHog product analytics (read)",
+      "Customer.io emails (draft)",
+      "Stripe billing (read-only)"
     ],
     "connections": [
       {
@@ -54,96 +65,116 @@
         "name": "Stripe",
         "access": "read",
         "status": "connected"
+      },
+      {
+        "name": "Admin dashboard",
+        "access": "read",
+        "status": "available"
       }
     ],
     "data_home": "A CSV in this project",
-    "technical_level": "Not stated; changes arrive as drafts the owner can review and ship",
+    "technical_level": "Not stated yet; assume the owner reviews wording and results, and someone else ships product changes",
     "decides": "The owner",
     "unknowns": [
-      "How the 4% on the admin dashboard is counted (which sign-ups, what time window, what counts as paid)",
-      "Whether the 4% survives a rebuild from sign-up and Stripe records",
-      "Which product action, if any, separates trial users who pay from those who do not",
-      "What the paywall and the current emails look like today (no screenshots or exports given yet)",
-      "How the PostHog and Customer.io data connect to Stripe customers (no user id mapping stated)",
-      "The deadline date is read as the end of Q1 2027; the owner has not given an exact day"
+      "How the admin dashboard counts the 4% (which sign-ups are in the base, how long after sign-up a payment still counts, whether late payments and repeat sign-ups are included)",
+      "What the price and plans are, and whether payment is monthly or yearly",
+      "Which action in the product marks a trial user as getting value (the activation moment) and how long users take to reach it",
+      "How many of the 2,400 monthly sign-ups are real freelancers who opened the product, against bots, duplicates or people who never came back",
+      "What the trial emails and the upgrade screen say and when they appear today",
+      "Why people who do not convert say they did not",
+      "Whether PostHog and Stripe can be joined by user id or email, and how complete the PostHog events are",
+      "Who can ship product changes (onboarding, paywall) and how fast",
+      "How sign-ups are split by source, and whether some sources convert far better"
     ],
     "answers": [
       {
-        "question": "What is the product and how big is the trial?",
-        "answer": "Self-serve invoicing app for freelancers. About 2,400 trial sign-ups a month, 14-day trial, no card required."
+        "question": "What is the product?",
+        "answer": "A self-serve invoicing app for freelancers."
       },
       {
-        "question": "What is the conversion now and where does it come from?",
-        "answer": "About 4% trial-to-paid, from our admin dashboard. I have not checked how it is counted."
+        "question": "How many sign-ups and what trial?",
+        "answer": "About 2,400 trial sign-ups a month, a 14-day trial, no card required."
       },
       {
-        "question": "Which tools can your AI reach, and how?",
-        "answer": "PostHog for product analytics (read), Customer.io for emails (draft access), Stripe read-only."
+        "question": "What is conversion now?",
+        "answer": "Trial-to-paid is about 4% (admin dashboard; not checked how it is counted)."
       },
       {
-        "question": "What is the goal and by when?",
-        "answer": "7% trial-to-paid by the end of next quarter, without hurting sign-up volume by more than 10%."
+        "question": "Which tools can your AI reach?",
+        "answer": "PostHog (read), Customer.io (draft access), Stripe (read-only)."
       },
       {
-        "question": "What may we change?",
+        "question": "What is the target and the limit?",
+        "answer": "7% by the end of next quarter, without hurting sign-up volume by more than 10%."
+      },
+      {
+        "question": "What can change?",
         "answer": "Onboarding, emails, the paywall and trial length."
       },
       {
-        "question": "Where should data live, and who decides?",
-        "answer": "A CSV here. I decide."
+        "question": "Where should data live and who decides?",
+        "answer": "In a CSV here. The owner decides."
       }
     ]
   },
   "research": {
-    "approach": "Practitioners first pin down how trial-to-paid is counted, then compare where trial users stall, and find the early product action that separates payers from non-payers. They fix the path to that action first, then add behaviour-triggered and trial-end emails and a clearer paywall, and treat trial length and card requirements as structural tests. Each change runs against a comparison group, with sign-up volume watched so a gain in conversion is not bought with fewer sign-ups.",
+    "approach": "Practitioners start by rebuilding the conversion number from raw records, because dashboards differ on who is in the base and how long a payment still counts as a trial conversion. They then follow each sign-up cohort through the funnel (sign-up, first value, upgrade screen, payment) and find the activation behaviour and the days when users convert, because trial length should follow the time to value, not the other way round. Fixes are made around that moment: onboarding that gets users to it faster, emails that react to what the user did or did not do, and a paywall that appears when value is felt. Because conversion is a low-rate outcome, they size tests before starting, test bigger changes first, randomise at the user level with a holdout, and judge on payments from the billing system.",
     "sources": [
       {
-        "id": "web-chartmogul",
+        "id": "web-userpilot-length",
         "kind": "web",
-        "title": "The Conversion Report (ChartMogul)",
-        "ref": "https://chartmogul.com/reports/saas-conversion-report/",
-        "date": "2026-02-04",
-        "note": "Trials that require a card convert far better than those that do not; time to the first moment of value and clear trial-end terms matter."
+        "title": "Free trial length for SaaS (Userpilot, citing ChartMogul's January 2026 study)",
+        "ref": "https://userpilot.com/blog/free-trial-length/",
+        "date": "2026-08-19",
+        "note": "Trial length should follow time to value: find the median time from sign-up to activation and conversion by trial day. Cites ChartMogul's study of 200 products: median free-to-paid 8%, 14 days the most common length, and opt-in trials in the 4 to 6% range. Vendor blog; field results on length are marginal."
       },
       {
-        "id": "web-growth-unhinged",
+        "id": "web-stripe-trials",
         "kind": "web",
-        "title": "How to improve free-to-paid conversion (Growth Unhinged)",
-        "ref": "https://www.growthunhinged.com/p/how-to-improve-free-to-paid-conversion",
-        "date": "2026-03-18",
-        "note": "Levers: better-fit sign-ups, faster time to value, plan limits and feature gates, and the pricing page, with one owner for activation tests."
+        "title": "Configure trial offers on subscriptions (Stripe Docs)",
+        "ref": "https://docs.stripe.com/billing/subscriptions/trials",
+        "date": null,
+        "note": "A free trial with no card is a subscription in trialing status; what happens at trial end without a payment method (create an invoice, cancel or pause) is a setting; a trial_will_end event fires about 3 days before the end by default. Useful for counting conversions from billing records. No date on the page; accessed 2026-11-03."
       },
       {
-        "id": "web-customerio",
+        "id": "web-posthog-experiments",
         "kind": "web",
-        "title": "Trial expiration reminders (Customer.io docs)",
-        "ref": "https://docs.customer.io/journeys/send/recipes/trial-expiration-reminders/",
-        "date": "2026-09-14",
-        "note": "Store the trial end date, remind at 7 days and 1 day before expiry, send a trial-ended notice, and count an upgrade within a week of any message."
+        "title": "Experiment metrics (PostHog Docs)",
+        "ref": "https://posthog.com/docs/experiments/metrics",
+        "date": null,
+        "note": "Seen in search results, not opened in full. Experiments run on feature flags that randomise users and record exposure; conversion windows are anchored to each user's first exposure and can run past the end date. Search summary says the page may be old. No date; accessed 2026-11-03."
       },
       {
-        "id": "cat-dropoff",
-        "kind": "catalogue",
-        "title": "New user drop-off finder",
-        "ref": "new-user-drop-off-finder"
+        "id": "web-customerio-goals",
+        "kind": "web",
+        "title": "Automation goals and conversion criteria (Customer.io Docs)",
+        "ref": "https://customer.io/docs/campaign-conversions/",
+        "date": null,
+        "note": "Seen in search results, not opened in full. A goal can be an event or a segment change, with a conversion window of up to 90 days after delivery; exit conditions are set separately; holdout and A/B tests exist in the workflow builder. No date; accessed 2026-11-03."
       },
       {
-        "id": "cat-paywall",
+        "id": "cat-trial-workflow",
         "kind": "catalogue",
-        "title": "Paywall designer",
-        "ref": "paywall-designer"
+        "title": "New-user retention test planner",
+        "ref": "find-where-new-users-leave-and-prove-the-fix-works"
       },
       {
-        "id": "cat-flow",
+        "id": "cat-holdout",
         "kind": "catalogue",
-        "title": "Free-to-paid flow designer",
-        "ref": "free-to-paid-flow-designer"
+        "title": "Holdout test planner",
+        "ref": "holdout-test-planner"
       },
       {
-        "id": "cat-experiment",
+        "id": "cat-lifecycle-email",
         "kind": "catalogue",
-        "title": "Product experiment designer",
-        "ref": "product-experiment-designer"
+        "title": "Lifecycle email experiment planner",
+        "ref": "traction-email-marketing"
+      },
+      {
+        "id": "cat-readout",
+        "kind": "catalogue",
+        "title": "Experiment plan and results reviewer",
+        "ref": "experiment-readout-desk"
       },
       {
         "id": "owner",
@@ -154,456 +185,578 @@
     ],
     "steps": [
       {
-        "id": "s-define",
-        "name": "Fix the definition of trial-to-paid and rebuild it from records",
-        "why": "A dashboard rate can hide a wrong denominator or window. Count sign-ups in a cohort, then payments from Stripe within a stated time after the trial.",
+        "id": "s-count",
+        "name": "Rebuild trial-to-paid by sign-up cohort from raw records",
+        "why": "The 4% is unverified; payments must be counted for each sign-up month with a stated window, including late payments after the trial ends.",
         "sources": [
-          "web-chartmogul",
-          "cat-dropoff",
+          "web-stripe-trials",
+          "web-customerio-goals",
           "owner"
         ]
       },
       {
-        "id": "s-gather",
-        "name": "Collect sign-ups, product events and payments into one table",
-        "why": "Each trial user needs sign-up date, source, early actions and first payment on one row.",
+        "id": "s-clean",
+        "name": "Check who is really in the base: bots, duplicates, people who never opened the app",
+        "why": "A base full of non-users hides the true rate of the people who did try the product.",
         "sources": [
           "owner",
-          "cat-dropoff"
+          "cat-trial-workflow"
         ]
       },
       {
         "id": "s-funnel",
-        "name": "Find where trials stall and what payers do first",
-        "why": "Compare payers with non-payers step by step to find the activation action and the biggest drop-off, and see how long payers take to pay.",
+        "name": "Follow each cohort through sign-up, first value, upgrade screen and payment",
+        "why": "It shows the biggest leak and whether it differs by source.",
         "sources": [
-          "web-growth-unhinged",
-          "web-chartmogul",
-          "cat-dropoff"
+          "cat-trial-workflow",
+          "web-posthog-experiments"
         ]
       },
       {
-        "id": "s-experience",
-        "name": "Review the current onboarding, emails and paywall",
-        "why": "See which messages and screens a trial user meets, when, and whether trial-end terms are clear.",
+        "id": "s-activation",
+        "name": "Find the activation behaviour and how long users take to reach it",
+        "why": "Trial length and email timing should follow the time to value.",
         "sources": [
-          "web-customerio",
-          "web-chartmogul",
-          "cat-paywall"
+          "web-userpilot-length",
+          "cat-trial-workflow"
+        ]
+      },
+      {
+        "id": "s-voice",
+        "name": "Ask non-converters why they did not pay",
+        "why": "Behaviour shows where users stop, not why; a short question to leavers can.",
+        "sources": [
+          "cat-lifecycle-email",
+          "owner"
         ]
       },
       {
         "id": "s-fix",
-        "name": "Shorten the path to first value and add behaviour-based and trial-end emails",
-        "why": "Time to value and timely reminders are the main levers a team without a card requirement controls.",
+        "name": "Fix onboarding, trial emails and the paywall around the activation moment",
+        "why": "These are the levers the owner allows; each should react to what the user has done.",
         "sources": [
-          "web-growth-unhinged",
-          "web-customerio",
-          "cat-flow"
+          "cat-trial-workflow",
+          "web-customerio-goals",
+          "web-userpilot-length"
         ]
       },
       {
-        "id": "s-paywall",
-        "name": "Test the paywall, limits and trial length",
-        "why": "Plan limits and gates move conversion more than small price changes. Trial length and card requirements trade conversion against sign-ups.",
+        "id": "s-length",
+        "name": "Set the trial length from the activation and payment timing",
+        "why": "Field evidence on length is marginal, so own data decides.",
         "sources": [
-          "web-growth-unhinged",
-          "web-chartmogul",
-          "cat-paywall"
+          "web-userpilot-length",
+          "web-stripe-trials"
         ]
       },
       {
-        "id": "s-measure",
-        "name": "Read each test against a comparison group and the sign-up limit",
-        "why": "A trial needs time to finish, and conversion must be read with sign-up volume so a gain is not just fewer, better-fit sign-ups the owner did not want.",
+        "id": "s-test",
+        "name": "Test big changes first as randomised experiments with a holdout, sized before launch",
+        "why": "At about 4% a small lift needs thousands of users per arm; the sign-up guardrail needs watching too.",
         "sources": [
-          "cat-experiment",
-          "web-growth-unhinged"
+          "web-posthog-experiments",
+          "cat-holdout",
+          "cat-readout"
+        ]
+      },
+      {
+        "id": "s-watch",
+        "name": "Check each sign-up week's activation and conversion weekly",
+        "why": "It keeps a gain real after the tests end.",
+        "sources": [
+          "cat-trial-workflow",
+          "cat-readout"
+        ]
+      },
+      {
+        "id": "s-card",
+        "name": "Ask for a card at sign-up",
+        "why": "Card-required trials convert at a much higher rate in published benchmarks.",
+        "sources": [
+          "web-userpilot-length"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Quoting a benchmark from a trial type that differs from yours; opt-in trials with no card convert far below card-required trials, so compare like with like.",
+        "text": "Trusting a dashboard conversion rate without knowing the base, the window and whether late payments count.",
         "sources": [
-          "web-chartmogul"
+          "web-stripe-trials",
+          "web-customerio-goals"
         ]
       },
       {
-        "text": "Reading conversion before the trial and the pay window have closed, so recent cohorts look worse than they are.",
+        "text": "Setting trial length from convention instead of the time users take to reach value.",
         "sources": [
-          "web-customerio",
-          "cat-experiment"
+          "web-userpilot-length"
         ]
       },
       {
-        "text": "Adding a card requirement or shortening the trial to lift conversion while sign-ups fall, ending below the owner's volume limit.",
+        "text": "Running small tests on a 4% outcome and calling a winner without enough users in each group.",
         "sources": [
-          "web-chartmogul",
-          "web-growth-unhinged"
+          "web-posthog-experiments",
+          "cat-holdout"
         ]
       },
       {
-        "text": "Counting an upgrade as caused by an email when it would have happened anyway; without a comparison group the effect is not known.",
+        "text": "Trial emails that keep going after the user has acted, or that ignore what they did.",
         "sources": [
-          "web-customerio",
-          "cat-experiment"
+          "web-customerio-goals"
+        ]
+      },
+      {
+        "text": "Counting an experiment's conversions only until it ends, missing payments that arrive after the trial.",
+        "sources": [
+          "web-posthog-experiments",
+          "web-stripe-trials"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Turn more trial sign-ups into paying customers",
+    "name": "Turn more free trials into paying customers",
     "capabilities": [
       {
-        "id": "product-read",
+        "id": "stripe-read",
         "access": "read",
         "via": "api_key",
-        "name": "Read product events (PostHog, read-only)",
-        "why": "Build the funnel and compare early actions of payers and non-payers."
+        "name": "Read subscriptions and payments (Stripe, read-only)",
+        "why": "Count payments by sign-up cohort from raw records and judge the tests. A restricted read-only key is asked for only when the stage is ready and stays with the host; a CSV export also works."
       },
       {
-        "id": "billing-read",
+        "id": "posthog-read",
         "access": "read",
-        "via": "api_key",
-        "name": "Read payments (Stripe, read-only)",
-        "why": "Find which trial users paid, and when."
+        "via": "mcp",
+        "name": "Read product events and funnels (PostHog)",
+        "why": "Sign-ups, activation events, upgrade screen views and experiment exposure."
       },
       {
-        "id": "email-draft",
+        "id": "customerio-draft",
         "access": "draft",
         "via": "mcp",
-        "name": "Draft emails (Customer.io, draft access)",
-        "why": "Prepare the trial email campaigns as drafts. The owner switches them on."
+        "name": "Create email drafts (Customer.io, draft access)",
+        "why": "Put trial emails in as drafts; nothing is sent from them until the owner activates."
       },
       {
-        "id": "data-file",
-        "access": "draft",
-        "via": "file",
-        "name": "Working CSV files (this project)",
-        "why": "Keep the combined trial data where the owner asked."
-      },
-      {
-        "id": "ship-changes",
+        "id": "ship-live",
         "access": "live",
         "via": "owner",
-        "name": "Ship paywall, onboarding, trial-length and email changes (owner's team)",
-        "why": "We can only draft in Customer.io and read the rest, so the owner makes each approved change live and we read it back."
+        "name": "Ship product changes and activate emails (the owner and whoever builds the app)",
+        "why": "The owner switches on each approved email and ships onboarding, paywall and trial-length changes; we prepare exact steps and read back what went live."
       }
     ],
     "data": [
       {
-        "id": "trial-users",
-        "name": "Trial users with early actions and payment",
-        "why": "One row per trial sign-up lets us rebuild conversion and compare payers with non-payers.",
+        "id": "signups",
+        "name": "Trial sign-ups",
+        "why": "The base for the rate: one row per sign-up with date, source and whether they used the product.",
         "fields": [
           "user id",
+          "email",
           "sign-up date",
-          "sign-up source",
-          "trial end date",
-          "early product actions with dates",
-          "first payment date",
-          "plan paid"
+          "source",
+          "plan shown",
+          "first product event date"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read sign-ups and event counts from PostHog, and first payments from Stripe, for the last 6 months of trial cohorts."
+            "how": "Read the sign-up event and person properties from PostHog for the last 6 months."
           },
           {
             "kind": "CSV",
-            "how": "PostHog: export persons with event counts. Stripe: export customers and payments. Join on the user email or id in a CSV."
+            "how": "Export of the users table or admin dashboard sign-up list, last 6 months."
           }
         ],
         "required_for": [
-          "evidence",
-          "integrity-count",
-          "diagnosis-funnel",
-          "measurement"
+          "evidence-conversion",
+          "integrity",
+          "diagnosis"
         ],
-        "alternative": "If sign-ups and payments cannot be joined, conversion can only be estimated from totals and per-user findings stay unknown."
+        "alternative": "Monthly counts only; user-level findings stay unknown."
       },
       {
-        "id": "current-experience",
-        "name": "Current trial emails, onboarding screens and paywall",
-        "why": "We cannot judge or improve what we have not seen.",
+        "id": "payments",
+        "name": "Subscriptions and first payments",
+        "why": "Shows which sign-ups paid, and when, from the billing system.",
         "fields": [
-          "email list with send timing",
-          "onboarding screens",
-          "paywall screen and when it appears",
-          "trial length and end behaviour"
+          "customer id",
+          "email",
+          "subscription start",
+          "trial start and end",
+          "first paid date",
+          "cancel date",
+          "plan"
         ],
         "routes": [
           {
-            "kind": "ASK",
-            "how": "Owner shares screenshots of onboarding and the paywall, and an export or list of Customer.io campaigns."
+            "kind": "MCP",
+            "how": "Read subscriptions and invoices through the read-only Stripe access."
           },
           {
-            "kind": "MCP",
-            "how": "Read the existing Customer.io campaigns if the draft access shows them."
+            "kind": "CSV",
+            "how": "Stripe Dashboard export of subscriptions and invoices, last 6 months."
           }
         ],
         "required_for": [
-          "diagnosis-experience"
+          "evidence-conversion",
+          "integrity",
+          "measurement"
         ],
-        "alternative": "Without it, email and paywall findings stay unknown and the drafts start from scratch."
+        "alternative": "Dashboard totals only; the 4% stays a report."
+      },
+      {
+        "id": "trial-events",
+        "name": "Product events during the trial",
+        "why": "Shows who reached first value, when, and who saw the upgrade screen.",
+        "fields": [
+          "user id",
+          "event name",
+          "timestamp",
+          "properties"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read events for each sign-up's first 21 days from PostHog."
+          }
+        ],
+        "required_for": [
+          "evidence-behaviour",
+          "diagnosis"
+        ],
+        "alternative": "Funnel charts only; no per-user timing."
+      },
+      {
+        "id": "email-activity",
+        "name": "Trial emails and their results",
+        "why": "What is sent, when, to whom, and what happens after.",
+        "fields": [
+          "campaign",
+          "trigger",
+          "message",
+          "send timing",
+          "sent",
+          "opened",
+          "clicked",
+          "goal reached"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read campaigns and their metrics in Customer.io, where draft access allows."
+          },
+          {
+            "kind": "ASK",
+            "how": "Ask the owner for an export or screenshots of the campaigns and metrics."
+          }
+        ],
+        "required_for": [
+          "evidence-behaviour",
+          "changes"
+        ],
+        "alternative": "Write new emails without a before-state; the holdout still gives a clean comparison."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the trial problem",
-        "goal": "Turn the owner's words into a measured problem with a target, the sign-up limit and the data we can reach. Writes BRIEF.md.",
+        "name": "Pin down the problem",
+        "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
+        "from_steps": [],
         "owner": {
           "role": "weekly-product-funnel-watcher"
         },
         "gate": "none"
       },
       {
-        "id": "evidence",
+        "id": "evidence-conversion",
         "kind": "evidence",
-        "name": "Collect trial users, events and payments",
-        "goal": "Pull the last six months of trial cohorts from PostHog and Stripe into one CSV, one row per trial sign-up.",
+        "name": "Rebuild trial-to-paid from raw records",
+        "goal": "Join sign-ups to Stripe payments by sign-up month and rebuild the conversion rate with a written counting rule: base, window after sign-up, and treatment of late and repeat sign-ups.",
+        "from_steps": [
+          "s-count"
+        ],
         "owner": {
-          "role": "weekly-product-funnel-watcher"
+          "role": "weekly-saas-numbers-keeper"
         },
+        "uses": [
+          "cohort-funnel-reader"
+        ],
         "data": [
-          "trial-users"
+          "signups",
+          "payments"
         ],
         "needs": [
-          "product-read",
-          "billing-read",
-          "data-file"
+          "stripe-read",
+          "posthog-read"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "dataset",
-            "name": "Trial users table",
+            "id": "conversion-table",
+            "name": "Sign-ups with payment outcome",
             "format": "csv",
-            "path": "evidence/trial-users.csv"
+            "path": "evidence/conversion.csv"
           },
           {
-            "id": "evidence-notes",
-            "name": "What was pulled and how",
+            "id": "conversion-notes",
+            "name": "Counting rule and rebuilt rates",
             "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
+            "path": "evidence/CONVERSION.md"
           }
         ],
         "checks": [
           {
-            "id": "totals",
-            "name": "Sign-up counts per month match PostHog's own totals and payment counts match Stripe",
+            "id": "dashboard",
+            "name": "The rebuilt rate is shown next to the dashboard's 4%, and any gap of more than 0.5 points is explained by the counting rule",
             "required": true
           },
           {
-            "id": "join",
-            "name": "Share of sign-ups matched to a Stripe customer is reported, with how users were matched",
+            "id": "late",
+            "name": "Payments within 14 days of sign-up and payments later than 14 days are shown separately",
             "required": true
           },
           {
-            "id": "no-secrets",
-            "name": "No keys or personal data beyond user ids are written to the CSV",
+            "id": "cohorts",
+            "name": "Rates are shown by sign-up month, and months too recent to have finished the window are marked immature",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-gather"
-        ],
-        "uses": [
-          "new-user-drop-off-finder",
-          "event-tracking-planner"
-        ]
+        "gate": "none"
       },
       {
-        "id": "integrity-count",
-        "kind": "integrity",
-        "name": "Check how the 4% is counted",
-        "goal": "Rebuild trial-to-paid from the records: which sign-ups are in the base, how long after sign-up a payment counts, and whether test, duplicate or bot sign-ups sit in the dashboard figure.",
+        "id": "evidence-behaviour",
+        "kind": "evidence",
+        "name": "Gather trial behaviour and email activity",
+        "goal": "Pull product events for each sign-up's first 21 days and the trial emails with their results, so activation timing, upgrade screen views and email effect can be read.",
+        "from_steps": [
+          "s-funnel",
+          "s-activation"
+        ],
         "owner": {
-          "role": "report-definition-drift-review-assistant"
+          "role": "weekly-product-funnel-watcher"
         },
-        "support": [
-          "weekly-saas-numbers-keeper"
+        "uses": [
+          "cohort-funnel-reader",
+          "event-tracking-planner"
         ],
         "data": [
-          "trial-users"
+          "trial-events",
+          "email-activity"
+        ],
+        "needs": [
+          "posthog-read",
+          "customerio-draft"
         ],
         "depends_on": [
-          "evidence"
+          "intake"
         ],
         "outputs": [
           {
-            "id": "count-check",
-            "name": "Conversion definition and rebuilt rate",
+            "id": "events",
+            "name": "Per-user trial events",
+            "format": "csv",
+            "path": "evidence/events.csv"
+          },
+          {
+            "id": "emails",
+            "name": "Trial email list and results",
+            "format": "csv",
+            "path": "evidence/emails.csv"
+          },
+          {
+            "id": "behaviour-notes",
+            "name": "What was pulled and gaps",
             "format": "markdown",
-            "path": "integrity/COUNT-CHECK.md"
+            "path": "evidence/BEHAVIOUR.md"
           }
         ],
         "checks": [
           {
-            "id": "definition",
-            "name": "Base, time window and what counts as paid are written down",
+            "id": "window",
+            "name": "Events cover the same sign-ups and dates as the conversion table",
             "required": true
           },
           {
-            "id": "reconcile",
-            "name": "Rebuilt rate is compared with the dashboard 4%; any gap is explained",
+            "id": "read-only",
+            "name": "All pulls were read-only and no email was sent or activated",
             "required": true
           },
           {
-            "id": "mature",
-            "name": "Only cohorts whose trial and pay window have closed are used for the rate",
+            "id": "gaps",
+            "name": "Any event that is not tracked, such as the upgrade screen view, is named in the notes",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "integrity",
+        "kind": "integrity",
+        "name": "Check the base and the join can be trusted",
+        "goal": "Find bots, duplicates and sign-ups that never opened the product, and check PostHog users match Stripe customers, before anyone reasons from the rates.",
+        "from_steps": [
+          "s-clean"
+        ],
+        "owner": {
+          "role": "monthly-tracking-health-keeper"
+        },
+        "uses": [
+          "tracking-plan-builder",
+          "event-tracking-planner"
+        ],
+        "data": [
+          "signups",
+          "payments"
+        ],
+        "needs": [
+          "posthog-read"
+        ],
+        "depends_on": [
+          "evidence-conversion",
+          "evidence-behaviour"
+        ],
+        "outputs": [
+          {
+            "id": "base-check",
+            "name": "Base and join check",
+            "format": "markdown",
+            "path": "integrity/BASE-AND-JOIN.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "join",
+            "name": "At least 95% of paying customers in Stripe match a PostHog user by id or email, and the unmatched are listed",
+            "required": true
+          },
+          {
+            "id": "real-users",
+            "name": "The share of sign-ups with no product event at all is stated, and the rate is shown both with and without them",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "Monthly sign-up counts from PostHog agree with the owner's 2,400 within 5%",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-define"
-        ],
-        "uses": [
-          "event-tracking-planner"
-        ]
+        "gate": "none"
       },
       {
-        "id": "diagnosis-funnel",
+        "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find where trials stall",
-        "goal": "Show each step from sign-up to payment, compare payers with non-payers on early actions and sign-up source, and show how many days payers take to pay.",
+        "name": "Find where trial users stop",
+        "goal": "Follow each cohort through sign-up, activation, upgrade screen and payment; find the activation behaviour and timing, the biggest leak, and differences by source. Test the hypotheses and keep competing explanations.",
+        "from_steps": [
+          "s-funnel",
+          "s-activation",
+          "s-length",
+          "s-voice"
+        ],
         "owner": {
           "role": "weekly-product-funnel-watcher"
         },
         "support": [
-          "product-feedback-synthesizer"
+          "customer-onboarding-keeper"
+        ],
+        "uses": [
+          "find-where-new-users-leave-and-prove-the-fix-works",
+          "cohort-funnel-reader",
+          "sales-funnel-drop-off-finder",
+          "growth-health-checker"
         ],
         "data": [
-          "trial-users"
+          "signups",
+          "payments",
+          "trial-events",
+          "email-activity"
         ],
         "depends_on": [
-          "integrity-count"
+          "integrity"
         ],
         "outputs": [
           {
-            "id": "funnel",
-            "name": "Funnel and payer comparison",
+            "id": "diagnosis",
+            "name": "Diagnosis",
             "format": "markdown",
-            "path": "diagnosis/FUNNEL.md"
+            "path": "diagnosis/DIAGNOSIS.md"
           },
           {
-            "id": "funnel-hypotheses",
-            "name": "Hypothesis verdicts from the data",
+            "id": "hypotheses",
+            "name": "Hypothesis verdicts",
             "format": "json",
-            "path": "diagnosis/funnel-hypotheses.json"
+            "path": "diagnosis/hypotheses.json"
           }
         ],
         "checks": [
+          {
+            "id": "verdicts",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN with the numbers behind it",
+            "required": true
+          },
+          {
+            "id": "correlation",
+            "name": "Activation is called a correlation until a test shows that pushing users to it raises payments",
+            "required": true
+          },
           {
             "id": "volume",
-            "name": "Each segment has enough sign-ups to read, or is marked low confidence",
+            "name": "Source or segment findings with fewer than 300 sign-ups are marked low-confidence",
             "required": true
           },
           {
-            "id": "alternatives",
-            "name": "Each activation finding names a competing explanation, such as sign-up source",
-            "required": true
-          },
-          {
-            "id": "causal",
-            "name": "The report says a payer comparison is correlation until a test confirms it",
+            "id": "timing",
+            "name": "Days from sign-up to activation and to payment are shown as a distribution, with the median and the share after day 14",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-funnel"
-        ],
-        "uses": [
-          "new-user-drop-off-finder",
-          "retention-cohort-analyst"
-        ]
-      },
-      {
-        "id": "diagnosis-experience",
-        "kind": "diagnosis",
-        "name": "Review the trial experience today",
-        "goal": "Review the onboarding screens, the current emails and the paywall for timing, clarity of trial-end terms and the path to first value.",
-        "owner": {
-          "role": "new-screen-design-reviewer"
-        },
-        "support": [
-          "marketing-email-strategist"
-        ],
-        "data": [
-          "current-experience"
-        ],
-        "needs": [
-          "email-draft"
-        ],
-        "depends_on": [
-          "integrity-count"
-        ],
-        "outputs": [
-          {
-            "id": "experience",
-            "name": "Trial experience review",
-            "format": "markdown",
-            "path": "diagnosis/EXPERIENCE.md"
-          },
-          {
-            "id": "experience-hypotheses",
-            "name": "Hypothesis verdicts on the experience",
-            "format": "json",
-            "path": "diagnosis/experience-hypotheses.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "seen",
-            "name": "Every finding names the screen or email it was seen on; unseen items are listed as not reviewed",
-            "required": true
-          },
-          {
-            "id": "terms",
-            "name": "Whether the trial end and what happens at its end is clear to the user is checked",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-experience"
-        ],
-        "uses": [
-          "paywall-designer",
-          "free-to-paid-flow-designer"
-        ]
+        "gate": "none"
       },
       {
         "id": "options",
         "kind": "options",
-        "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked change cards across onboarding, emails, paywall and trial length, each with its effect on sign-ups.",
+        "name": "Rank what to change and test",
+        "goal": "Turn findings into ranked change cards for onboarding, trial emails, the paywall and trial length, each with the expected effect, effort, risk, the sign-up impact and the users needed to detect it; include a short non-converter question if the data cannot explain the leak.",
+        "from_steps": [
+          "s-fix",
+          "s-length",
+          "s-voice",
+          "s-test"
+        ],
         "owner": {
-          "role": "marketing-growth-hacker"
+          "role": "customer-onboarding-keeper"
         },
+        "uses": [
+          "first-use-onboarding-designer",
+          "paywall-designer",
+          "email-test-planner",
+          "product-experiment-designer"
+        ],
         "depends_on": [
-          "diagnosis-funnel",
-          "diagnosis-experience"
+          "diagnosis"
         ],
         "outputs": [
           {
-            "id": "recommendations",
+            "id": "cards",
             "name": "Recommendation cards",
             "format": "markdown",
             "path": "options/RECOMMENDATIONS.md"
+          },
+          {
+            "id": "cards-json",
+            "name": "Recommendation cards as data",
+            "format": "json",
+            "path": "options/recommendations.json"
           }
         ],
         "checks": [
@@ -613,39 +766,42 @@
             "required": true
           },
           {
-            "id": "fields",
-            "name": "Every card has expected effect, effort, confidence, risk and how it will be measured",
+            "id": "size",
+            "name": "Every card states the users per group needed to detect its expected lift at 80% power, and how many weeks that takes at about 1,200 sign-ups per group per month",
             "required": true
           },
           {
-            "id": "signups",
-            "name": "Every card says its likely effect on sign-up volume against the 10% limit",
+            "id": "signup",
+            "name": "Every card says whether it can change sign-up volume and how that would be watched against the 10% limit",
+            "required": true
+          },
+          {
+            "id": "limits",
+            "name": "No card falls outside onboarding, emails, the paywall and trial length",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [],
-        "uses": [
-          "free-to-paid-flow-designer",
-          "onboarding-improver",
-          "paywall-designer"
-        ]
+        "gate": "none"
       },
       {
         "id": "decision",
         "kind": "decision",
         "name": "Owner chooses",
-        "goal": "The owner picks cards. Ask for the reason when the top card is passed over, and record it.",
+        "goal": "The owner picks card ids and the order of tests. Ask for the reason when the top card is passed over, and record it.",
+        "from_steps": [],
         "owner": {
-          "role": "marketing-growth-hacker"
+          "role": "customer-onboarding-keeper"
         },
+        "uses": [
+          "narrative-decision-memo-writer"
+        ],
         "depends_on": [
           "options"
         ],
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen changes",
+            "name": "Chosen plan",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -653,111 +809,157 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded with reasons",
+            "name": "Chosen and passed-over cards are in decisions.jsonl",
+            "required": true
+          },
+          {
+            "id": "reason",
+            "name": "A reason is recorded wherever the top card was passed over",
             "required": true
           }
         ],
-        "gate": "approve",
-        "from_steps": []
+        "gate": "approve"
       },
       {
         "id": "changes",
         "kind": "production",
-        "name": "Draft onboarding, paywall and trial email changes",
-        "goal": "Draft the chosen onboarding steps, paywall screens and copy, any trial-length or limits change, and the behaviour-based onboarding and trial-end reminder emails as Customer.io drafts, so the terms match everywhere a trial user sees them. Each email has entry and exit rules so paid users stop receiving them, and each change says how it will be split against a comparison group.",
+        "name": "Build the onboarding, email and paywall changes",
+        "goal": "Write the chosen onboarding steps, trial emails as Customer.io drafts keyed to what the user did or did not do, paywall copy and layout, and the trial-length variant, with exact steps for whoever ships them.",
+        "from_steps": [
+          "s-fix",
+          "s-length"
+        ],
         "owner": {
           "role": "customer-onboarding-keeper"
         },
-        "support": [
-          "new-screen-design-reviewer",
-          "marketing-email-strategist"
+        "uses": [
+          "first-use-onboarding-designer",
+          "paywall-designer",
+          "new-customer-onboarding-sequence-writer",
+          "email-sequence-writer",
+          "email-sequence-auditor"
         ],
-        "reviewers": [
-          "experiment-readout-desk"
+        "data": [
+          "email-activity"
         ],
         "needs": [
-          "email-draft"
+          "customerio-draft"
         ],
         "depends_on": [
           "decision"
         ],
         "outputs": [
           {
-            "id": "flow-pack",
-            "name": "Draft onboarding and paywall changes",
+            "id": "changes",
+            "name": "Changes ready to ship",
             "format": "markdown",
-            "path": "production/FLOW-CHANGES.md"
+            "path": "production/CHANGES.md"
           },
           {
-            "id": "email-pack",
-            "name": "Email drafts with timing and rules",
-            "format": "markdown",
-            "path": "production/EMAILS.md"
-          },
-          {
-            "id": "test-plan",
-            "name": "Test plan with comparison groups",
-            "format": "markdown",
-            "path": "production/TEST-PLAN.md"
+            "id": "emails",
+            "name": "Email drafts with trigger, timing and exit rule",
+            "format": "json",
+            "path": "production/emails.json"
           }
         ],
         "checks": [
           {
-            "id": "scoped",
-            "name": "Only chosen changes are included",
+            "id": "traced",
+            "name": "Every change traces to a chosen card",
             "required": true
           },
           {
-            "id": "split",
-            "name": "Each change has a comparison group, a start date, the sign-ups needed to read it and the sign-up floor",
+            "id": "trigger",
+            "name": "Every email names the user action or missing action that triggers it and the action that stops it",
             "required": true
           },
           {
-            "id": "rules",
-            "name": "Each email has an entry rule, an exit rule and a stop when the user pays",
-            "required": true
-          },
-          {
-            "id": "drafts-only",
-            "name": "Everything is left as a draft; nothing is sent or activated",
+            "id": "drafts",
+            "name": "Every email exists in Customer.io as an inactive draft and none was activated",
             "required": true
           },
           {
             "id": "claims",
-            "name": "Copy and trial-end terms in screens and emails agree and make no claim the product cannot back up",
+            "name": "Nothing on the paywall or in emails states a price, feature or limit that the product does not have",
             "required": true
           }
         ],
-        "gate": "review",
-        "from_steps": [
-          "s-fix",
-          "s-paywall"
-        ],
-        "uses": [
-          "onboarding-improver",
-          "first-use-onboarding-designer",
-          "paywall-designer",
-          "free-to-paid-flow-designer",
-          "product-experiment-designer",
-          "email-sequence-writer",
-          "email-test-planner",
-          "email-draft-reviewer"
-        ]
+        "gate": "none"
       },
       {
-        "id": "ship",
-        "kind": "execution",
-        "name": "Ship changes one at a time",
-        "goal": "Register each test, then have the owner's team switch on one approved change at a time. Read each back from PostHog or Customer.io to confirm who sees it.",
+        "id": "experiment-design",
+        "kind": "production",
+        "name": "Design the randomised tests",
+        "goal": "Fix who is randomised (new sign-ups, by user), the groups and holdout, the order of tests, the primary measure and window, the sign-up guardrail, and the stop rule.",
+        "from_steps": [
+          "s-test"
+        ],
         "owner": {
           "role": "experiment-readout-desk"
         },
+        "uses": [
+          "holdout-test-planner",
+          "product-experiment-designer",
+          "email-test-planner"
+        ],
         "needs": [
-          "ship-changes",
-          "product-read"
+          "posthog-read"
         ],
         "depends_on": [
           "changes"
+        ],
+        "outputs": [
+          {
+            "id": "experiment",
+            "name": "Experiment design",
+            "format": "markdown",
+            "path": "production/EXPERIMENT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "random",
+            "name": "Assignment is random by user, recorded at first exposure, and the groups match on source within 5 points",
+            "required": true
+          },
+          {
+            "id": "primary",
+            "name": "The primary measure is a Stripe payment within a stated window after sign-up, counted the same way in every group, including payments after trial end",
+            "required": true
+          },
+          {
+            "id": "power",
+            "name": "The size per group is calculated for the expected lift, and tests that cannot finish before the end of next quarter are merged or dropped",
+            "required": true
+          },
+          {
+            "id": "guardrail",
+            "name": "Weekly sign-ups are compared with the previous 8 weeks and a fall of more than 10% triggers the stop rule",
+            "required": true
+          }
+        ],
+        "gate": "none"
+      },
+      {
+        "id": "launch",
+        "kind": "execution",
+        "name": "Ship the tests to new sign-ups",
+        "goal": "Register each test, then the owner ships the approved product changes and activates the approved emails for the test groups only, and we read back what went live.",
+        "from_steps": [
+          "s-test"
+        ],
+        "owner": {
+          "role": "customer-onboarding-keeper"
+        },
+        "uses": [
+          "email-test-planner"
+        ],
+        "needs": [
+          "ship-live",
+          "posthog-read"
+        ],
+        "depends_on": [
+          "experiment-design"
         ],
         "outputs": [
           {
@@ -770,44 +972,48 @@
         "checks": [
           {
             "id": "registered",
-            "name": "Each test is registered with its comparison group and sign-up floor before it goes live",
+            "name": "Each test is in experiments.jsonl with its measure, window, size and stop rule before it goes live",
+            "required": true
+          },
+          {
+            "id": "split",
+            "name": "After the first 200 sign-ups per group, the split is within 5% of the planned ratio, and holdout users receive none of the new emails",
             "required": true
           },
           {
             "id": "readback",
-            "name": "Each change is confirmed live for the intended sign-ups only",
+            "name": "Each shipped change and activated email was read back and matches the approved version",
             "required": true
           }
         ],
-        "gate": "approve_each_action",
-        "from_steps": [
-          "s-fix",
-          "s-paywall"
-        ],
-        "uses": [
-          "product-experiment-designer"
-        ]
+        "gate": "approve_each_action"
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read results against the comparison group",
-        "goal": "Read conversion for completed trial cohorts, exposed versus comparison, with sign-up volume beside it.",
+        "name": "Read results against Stripe and watch each cohort",
+        "goal": "Read each test on Stripe payments against its holdout, track sign-up volume, and keep a weekly check of activation and conversion by sign-up week that flags drops. Read-only.",
+        "from_steps": [
+          "s-test",
+          "s-watch"
+        ],
         "owner": {
           "role": "experiment-readout-desk"
         },
         "support": [
-          "weekly-product-funnel-watcher"
+          "weekly-saas-numbers-keeper"
         ],
-        "data": [
-          "trial-users"
+        "uses": [
+          "a-b-test-verdict-maker",
+          "cohort-funnel-reader",
+          "split-run-result-reader"
         ],
         "needs": [
-          "product-read",
-          "billing-read"
+          "stripe-read",
+          "posthog-read"
         ],
         "depends_on": [
-          "ship"
+          "launch"
         ],
         "outputs": [
           {
@@ -815,41 +1021,46 @@
             "name": "Results readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "monitor",
+            "name": "Weekly cohort check and prompt",
+            "format": "markdown",
+            "path": "measurement/MONITOR.md"
           }
         ],
         "checks": [
           {
-            "id": "mature",
-            "name": "Only cohorts whose trial and pay window have closed are counted",
+            "id": "judge",
+            "name": "Payment counts come from Stripe records, not the admin dashboard, with the same counting rule as the baseline",
             "required": true
           },
           {
             "id": "volume",
-            "name": "A verdict is given only when the planned number of sign-ups is reached; otherwise INCONCLUSIVE",
+            "name": "A verdict is given only when each group has reached its planned size and the window has finished, otherwise INCONCLUSIVE with the confidence range",
             "required": true
           },
           {
-            "id": "signups",
-            "name": "Monthly sign-ups are compared with the floor of about 2,160",
+            "id": "guardrails",
+            "name": "Sign-up volume and 60-day retention of converters are checked and any breach is flagged",
+            "required": true
+          },
+          {
+            "id": "target",
+            "name": "Conversion is reported against 7% for finished cohorts only, and a miss is reported as a miss",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": [
-          "s-measure"
-        ],
-        "uses": [
-          "product-experiment-designer",
-          "retention-cohort-analyst"
-        ]
+        "gate": "none"
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Close each test, record wins and losses, propose rules with their scope and plan the next round.",
+        "goal": "Close each experiment, save rules with their scope, and plan the next round of tests.",
+        "from_steps": [],
         "owner": {
-          "role": "experiment-readout-desk"
+          "role": "customer-onboarding-keeper"
         },
         "depends_on": [
           "measurement"
@@ -865,74 +1076,86 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every launched test is closed with a verdict",
+            "name": "Every launched test is closed in experiments.jsonl with its verdict",
             "required": true
           },
           {
-            "id": "scoped",
-            "name": "Each rule says whether it holds for this job, this business or the playbook",
+            "id": "scope",
+            "name": "Each proposed rule says whether it holds for this job, this business or the playbook",
             "required": true
           }
         ],
-        "gate": "none",
-        "from_steps": []
+        "gate": "none"
       }
     ],
     "hypotheses": [
       {
         "id": "h-count",
-        "statement": "The 4% is a counting artifact: the base or window on the dashboard differs from sign-ups and payments in the records.",
-        "test": "Rebuild the rate from sign-up and Stripe records for closed cohorts and compare with the dashboard.",
-        "confirm_if": "The rebuilt rate differs from 4% by a clear margin, or test or duplicate sign-ups sit in the base.",
-        "refute_if": "The rebuilt rate is close to 4% on a clean base.",
-        "fix_stage": "options"
+        "statement": "The 4% is measured differently from what the owner assumes, so the real rate is not 4%.",
+        "test": "Rebuild the rate by sign-up month from sign-ups and Stripe payments with a stated window and compare with the dashboard.",
+        "confirm_if": "The rebuilt rate differs from 4% by 1 point or more under the plain counting rule.",
+        "refute_if": "The rebuilt rate is within 0.5 points of 4%.",
+        "fix_stage": "integrity"
+      },
+      {
+        "id": "h-junk",
+        "statement": "A large part of the 2,400 sign-ups never used the product, which drags the rate down.",
+        "test": "Share of sign-ups with no product event in their first 7 days, and the conversion rate among those who did.",
+        "confirm_if": "At least 30% of sign-ups have no product event.",
+        "refute_if": "Fewer than 10% have no product event.",
+        "fix_stage": "integrity"
       },
       {
         "id": "h-no-activation",
-        "statement": "Most trial users never do the early action that leads to paying.",
-        "test": "Compare early actions and counts of payers and non-payers in PostHog.",
-        "confirm_if": "One early action separates payers from non-payers and most trial users never do it.",
-        "refute_if": "Most trial users do it and still do not pay, or no action separates the groups.",
+        "statement": "Most trial users never reach the action that shows value.",
+        "test": "Candidate activation actions from PostHog: the share of sign-ups doing each within 3 days, and payment rate for those who did against those who did not.",
+        "confirm_if": "At least 60% of active users do not do the action in 3 days, and those who do pay at least 3 times as often.",
+        "refute_if": "Most active users do the action, or payment rates differ by less than 1.5 times.",
         "fix_stage": "changes"
       },
       {
         "id": "h-timing",
-        "statement": "Payers need longer, or shorter, than 14 days, so the trial ends at the wrong moment.",
-        "test": "Distribution of days from sign-up to first payment, and when non-payers last were active.",
-        "confirm_if": "Many payers pay near or after day 14, or most non-payers stop using the product long before it.",
-        "refute_if": "Payment and last use are spread evenly through the trial.",
+        "statement": "The 14-day trial does not match how long users take to reach value or to decide.",
+        "test": "Distribution of days from sign-up to activation and to payment, and payments after day 14.",
+        "confirm_if": "At least a quarter of activated users first activate after day 7, or at least 20% of payments arrive after day 14.",
+        "refute_if": "Most users activate within 4 days and few payments arrive after day 14.",
+        "fix_stage": "changes"
+      },
+      {
+        "id": "h-emails",
+        "statement": "The trial emails run on a timer and ignore what the user has done.",
+        "test": "List each trial email with its trigger and compare who gets it with activation status.",
+        "confirm_if": "No email depends on activation, or activated and stalled users get the same emails.",
+        "refute_if": "Emails already branch on activation and stalled users receive different ones.",
         "fix_stage": "changes"
       },
       {
         "id": "h-paywall",
-        "statement": "Users who are active hit the paywall or trial end and leave because the value or the next step is unclear.",
-        "test": "Active users near trial end who do not pay, against the paywall screen and trial-end messages.",
-        "confirm_if": "A large share of active trial users reach the paywall or trial end and do not pay.",
-        "refute_if": "Non-payers were mostly inactive well before the paywall.",
+        "statement": "Users who found value never see a clear upgrade prompt before the trial ends.",
+        "test": "Share of activated users who viewed the upgrade screen before day 14, and the share of viewers who start checkout.",
+        "confirm_if": "Fewer than half of activated users saw the upgrade screen, or fewer than 10% of viewers start checkout.",
+        "refute_if": "Most activated users saw it and at least 20% of viewers start checkout.",
         "fix_stage": "changes"
       },
       {
-        "id": "h-no-reminders",
-        "statement": "Trial emails are missing, mistimed or not tied to behaviour.",
-        "test": "Review current Customer.io campaigns against the trial timeline and what each user did.",
-        "confirm_if": "No trial-end reminders, or messages do not respond to whether the user took the early action.",
-        "refute_if": "Timely behaviour-based emails already exist and open and click rates are healthy.",
-        "fix_stage": "changes"
-      },
-      {
-        "id": "h-source-mix",
-        "statement": "Some sign-up sources bring people unlikely to pay and pull the rate down.",
-        "test": "Conversion by sign-up source for closed cohorts.",
-        "confirm_if": "Large sources convert far below the rest.",
-        "refute_if": "Conversion is similar across sources.",
+        "id": "h-source",
+        "statement": "Conversion differs a lot by source, so one cause is a mix of poor-fit sign-ups.",
+        "test": "Conversion by sign-up source for sources with at least 300 sign-ups.",
+        "confirm_if": "The best source converts at least twice as well as the worst, with 300 or more sign-ups each.",
+        "refute_if": "Rates are within 30% of each other.",
         "fix_stage": "options"
       }
     ],
-    "dropped": [],
+    "dropped": [
+      {
+        "step": "s-card",
+        "reason": "Asking for a card at sign-up is not among the changes the owner listed and would put the sign-up volume guardrail (no more than 10% lower) at risk."
+      }
+    ],
     "measurement": {
-      "window": "Read each test on trial cohorts whose 14-day trial and pay window have both closed; expect at least a month per change.",
-      "min_volume": "Sign-ups per group as set by the test plan from the 4% baseline; at about 2,400 sign-ups a month, groups of a few hundred read only large effects.",
-      "stop_rule": "Stop a change early if monthly sign-ups fall toward the floor of about 2,160, or trial users report a clear problem; otherwise run the full window."
+      "window": "Each test is read once its last sign-up has had 14 days plus a stated grace window for late payments; the 7% target is read on cohorts that have finished that window, by the end of next quarter.",
+      "min_volume": "Derived from the reported 4% (80% power, 5% significance): about 6,700 per group to detect 4% to 5%, 1,900 for 4% to 6%, 900 for 4% to 7%. At about 1,200 per group a month that is 6 months, 1.5 months, 3 weeks, so bigger changes go first.",
+      "stop_rule": "Stop a test early if weekly sign-ups fall more than 10% below the previous 8 weeks, a message goes to the wrong group, or paid-customer retention at 60 days drops; otherwise run to the planned size."
     }
   }
 }

@@ -1,45 +1,53 @@
 {
   "case": "ecom-cart-abandonment",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Raise the share of started checkouts that are completed on the clothing store from 28% to 40% by the end of January 2027, without cutting margin.",
-    "deliverable": "A rebuilt abandoned-checkout email flow ready in Klaviyo as drafts, a ranked and owner-chosen set of mobile checkout fixes prepared for the owner to apply, and a readout of what moved the completion rate.",
+    "outcome": "Raise the share of started checkouts that are completed from about 28% to 40% by the end of January 2027, on a Shopify clothing store selling in India, without cutting margin.",
+    "ambition": {
+      "goal_beyond": "More of the shoppers who get as far as paying actually pay, and the store notices early when that slips again",
+      "rungs": [
+        "Fix the abandoned-cart email that goes out today",
+        "Find where in checkout the other 72% leave (cost, payment, mobile, email) and fix the biggest causes",
+        "Keep checkout completion healthy: a weekly check by device and payment method that flags a drop before it costs a month"
+      ],
+      "chosen": 2,
+      "judge": "Shopify's checkout-completion figure and completed orders, mobile and desktop, for the same number of weeks before and after; Klaviyo's placed-order revenue for the flow against a held-back group; the payment gateway's own failed-attempt report"
+    },
+    "deliverable": "A diagnosed and fixed checkout and abandoned-cart flow: the chosen store and email changes applied with the owner's approval, with a read-back of the result",
     "done": [
-      "Funnel numbers checked against real orders, or their limits stated",
-      "Payment failures confirmed or ruled out as a cause",
-      "Every cause hypothesis marked supported, refuted or unknown with evidence",
-      "Owner has chosen the fixes, with reasons recorded",
-      "Chosen checkout fixes and email drafts built and checked",
-      "Each change applied only with the owner's yes, and registered as a test first",
-      "Checkout completion rate read back against the 28% baseline and the 40% target",
-      "Learnings saved for the next round"
+      "Checkout completion figure checked against orders, or its limits stated",
+      "Every cause (payment failures, shipping cost, mobile, email) marked supported, refuted or unknown, with evidence",
+      "Owner picks the fixes, with reasons recorded",
+      "New abandoned-cart and checkout emails drafted in Klaviyo and the store changes prepared",
+      "Changes applied only with the owner's yes to each one, each registered as a test first",
+      "Results read against the registered metric and guardrails, with learnings saved"
     ],
     "metric": {
-      "name": "Checkout completion rate (checkouts completed as a share of checkouts started)",
+      "name": "Checkout completion rate",
       "direction": "increase",
-      "unit": "percent of checkouts started",
+      "unit": "% of started checkouts completed",
       "baseline": 28,
       "baseline_source": "reported",
       "target": 40
     },
     "deadline": "End of January 2027",
     "guardrails": [
-      "Margin per order does not fall: no new discounts to win checkouts back",
-      "Free shipping stays at Rs 999 and above",
+      "Margin per order does not fall: no new discounts or cuts to price",
       "Add-to-cart rate (about 9% today) does not fall",
-      "Abandoned-cart emails do not get more unsubscribes or spam complaints than today"
+      "Returns and cancellations do not rise",
+      "Email unsubscribes and spam complaints do not rise"
     ],
     "limits": [
-      "The Rs 999 free-shipping threshold cannot be lowered",
-      "Margin cannot be cut to win checkouts",
-      "Shopify is connected read-only, so store changes are prepared for the owner to apply",
-      "Klaviyo allows read and draft only, so nothing is switched on by us"
+      "The Rs 999 free-shipping threshold stays as it is",
+      "No margin cuts",
+      "Shopify is read-only for us; the owner applies store changes",
+      "Klaviyo is read and draft only; the owner switches flows on"
     ],
     "assets": [
-      "Shopify analytics (last 60 days)",
-      "The existing abandoned-cart email in Klaviyo, not reviewed in a year"
+      "The existing abandoned-cart email in Klaviyo (not reviewed for a year)",
+      "Shopify analytics for the last 60 days"
     ],
     "connections": [
       {
@@ -54,81 +62,87 @@
       }
     ],
     "data_home": "A CSV in this project",
-    "technical_level": "Not stated",
+    "technical_level": "Not stated; the owner decides, so give ready changes to review with plain-language reasons",
     "decides": "The owner",
     "unknowns": [
-      "Whether payment failures are part of the problem, and the failure rate by payment method",
-      "Which payment methods the checkout offers today",
-      "Completion rate by device, and by new versus returning visitors",
-      "What the current abandoned-cart email does, how long ago it was built and how it performs",
-      "Order volume, average order value and margin per order",
-      "How the 28% figure is defined in Shopify analytics"
+      "Whether payment failures are part of the drop (no gateway data seen yet)",
+      "Which payment gateway and which payment methods (UPI, cards, COD, wallets) the store offers",
+      "Margin per order and the orders that actually completed (only analytics percentages given)",
+      "What the current abandoned-cart email says, when it sends and whether it is switched on",
+      "Checkout completion split by mobile and desktop, and by cart value",
+      "Brand voice and any brand guide"
     ],
     "answers": [
       {
-        "question": "What kind of store, where, and on what platform?",
+        "question": "Store, platform and market?",
         "answer": "Clothing store on Shopify, selling in India"
       },
       {
-        "question": "Where is the funnel leaking today?",
-        "answer": "Add-to-cart rate about 9%; only 28% of checkouts started are completed (Shopify analytics, last 60 days)"
+        "question": "Where are you now?",
+        "answer": "Add-to-cart rate about 9%; only 28% of checkouts started are completed (Shopify analytics, last 60 days); about 80% of traffic is mobile"
       },
       {
-        "question": "Which devices do buyers use?",
-        "answer": "About 80% of traffic is mobile"
+        "question": "Limits?",
+        "answer": "Free shipping only above Rs 999 and it cannot be lowered; no margin cut"
       },
       {
-        "question": "What is fixed in your offer?",
-        "answer": "Shipping is free only above Rs 999 and that cannot be lowered"
+        "question": "Tools?",
+        "answer": "Klaviyo connected with read and draft access; Shopify MCP connected read-only; an abandoned-cart email exists but nobody has looked at it in a year"
       },
       {
-        "question": "Which tools can your AI reach?",
-        "answer": "Klaviyo with read and draft access; the Shopify MCP read-only"
+        "question": "Target and deadline?",
+        "answer": "Completed checkouts up to 40% by the end of January"
       },
       {
-        "question": "What is in place for recovery?",
-        "answer": "An abandoned-cart email exists but nobody has looked at it in a year"
-      },
-      {
-        "question": "What counts as success and by when?",
-        "answer": "Completed checkouts up to 40% by the end of January, without cutting margin"
-      },
-      {
-        "question": "Where should the data live, and who decides?",
+        "question": "Data home and who decides?",
         "answer": "Keep data in a CSV here; the owner decides"
       },
       {
         "question": "Are payment failures part of it?",
-        "answer": "The owner does not know"
+        "answer": "I do not know"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat low checkout completion as a measurement and friction problem before it is an email problem. They split the funnel by step and device, confirm the numbers against real orders, then walk the mobile checkout looking for late-revealed costs, forced sign-up, missing payment methods and payment errors with no retry. Fixes are ranked by impact over effort (guest checkout, early total cost and payment error handling come first), and the recovery email is rebuilt as a separate checkout-started flow with spaced emails and no blanket discount. Each change is tested on its own so the lift can be attributed.",
+    "approach": "Practitioners separate unavoidable abandonment (browsers, price checks) from fixable abandonment before changing anything. They measure the checkout funnel step by step and by device, check how the completion figure is defined, and read the payment gateway's failed-attempt report, because in India payment failure and missing payment methods (UPI intent, COD) are common and invisible in store analytics. They walk the real mobile checkout on a mid-range phone, then fix the largest cause first: surprise costs and shipping messaging, payment methods and flow, form length and forced accounts, speed. The abandoned-cart email is audited as its own system (trigger, timing, filters, copy) and judged by revenue per recipient against the platform benchmarks. Each change goes live as a registered test with a held-back group, and is read on enough checkouts to mean something.",
     "sources": [
       {
         "id": "web-baymard",
         "kind": "web",
-        "title": "Baymard Institute: How to reduce cart abandonment",
-        "ref": "https://baymard.com/learn/reduce-cart-abandonment",
-        "date": "2026-05",
-        "note": "Research-based reasons for abandonment (late costs, forced account, complex checkout, slow delivery) and a fix order by impact and effort, including payment error handling."
+        "title": "Baymard Institute: cart abandonment rate statistics",
+        "ref": "https://baymard.com/lists/cart-abandonment-rate",
+        "date": "2025-09-22",
+        "note": "Average documented abandonment about 70%. Reasons after 'just browsing': extra costs 40%, slow delivery 20%, distrust 19%, forced account 18%, long checkout 17%, site errors 17%. Says to separate unavoidable from fixable abandonment."
       },
       {
-        "id": "web-attribuly",
+        "id": "web-shopify",
         "kind": "web",
-        "title": "Attribuly: Shopify abandoned cart recovery checklist 2026",
-        "ref": "https://attribuly.com/blogs/shopify-abandoned-cart-recovery-checklist/",
-        "date": "2026-06-05",
-        "note": "Practitioner checklist: check tracking and resume-checkout links first, then a 2 to 3 email sequence (first at 2 to 4 hours, second at 20 to 48 hours), suppress duplicates and use single-use incentives to protect margin."
+        "title": "Shopify Help Center: abandoned checkouts",
+        "ref": "https://help.shopify.com/en/manual/orders/abandoned-checkouts",
+        "date": null,
+        "note": "Accessed 2026-11-03. A checkout counts as abandoned only after the shopper gives an email and leaves for 10 minutes, so earlier leavers are invisible. The checkout Timeline shows payment attempts and messages. Recovery emails are not sent after a payment processing error. An emails report shows sessions, orders and sales from recovery emails."
       },
       {
-        "id": "web-sociolabs",
+        "id": "web-razorpay",
         "kind": "web",
-        "title": "Socio Labs: Shopify checkout optimization, 18 tips",
-        "ref": "https://sociolabs.in/shopify-checkout-optimization-reduce-abandonment-2026/",
-        "date": "2026-05",
-        "note": "Agency write-up for Indian Shopify stores: payment mix (UPI, cards, COD), COD visibility, retry after gateway failure, mobile checkout details. Vendor figures are directional, not proof."
+        "title": "Razorpay: Shopify checkout issues and fixes in India",
+        "ref": "https://razorpay.com/blog/shopify-checkout-issues-india-fixes/",
+        "date": "2026-04-09",
+        "note": "Payment failures, UPI intent flow, COD handling, mobile tap targets and autofill, app scripts breaking checkout. Vendor article that sells payments products, so performance claims are unverified."
+      },
+      {
+        "id": "web-klaviyo",
+        "kind": "web",
+        "title": "Klaviyo Help Center: performance benchmarks for flows",
+        "ref": "https://help.klaviyo.com/hc/en-us/articles/360033669452-Performance-Benchmarks-for-Flows",
+        "date": "2026-10-08",
+        "note": "Abandoned cart flow benchmarks are revenue per recipient by revenue band and order value, shown as 25th and 75th percentiles and not guaranteed."
+      },
+      {
+        "id": "cat-cart-flow",
+        "kind": "catalogue",
+        "title": "Cart and checkout email planner",
+        "ref": "cart-recovery-flow-builder"
       },
       {
         "id": "cat-rollout",
@@ -137,16 +151,22 @@
         "ref": "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time"
       },
       {
-        "id": "cat-leaky",
+        "id": "cat-checkout-audit",
         "kind": "catalogue",
-        "title": "Sales funnel repair planner",
-        "ref": "leaky-funnel-fixer"
+        "title": "Checkout page auditor",
+        "ref": "checkout-page-auditor"
       },
       {
         "id": "cat-payments",
         "kind": "catalogue",
         "title": "Payments and checkout settings checker",
         "ref": "payments-and-checkout-settings-checker"
+      },
+      {
+        "id": "cat-funnel",
+        "kind": "catalogue",
+        "title": "Conversion funnel analyst",
+        "ref": "conversion-funnel-analyst"
       },
       {
         "id": "owner",
@@ -157,276 +177,320 @@
     ],
     "steps": [
       {
-        "id": "s-funnel",
-        "name": "Measure the funnel by step and by device",
-        "why": "Completion rate hides where people leave. Sessions, add to cart, checkout started, payment step and completed, split by mobile and desktop, show which step to work on first.",
+        "id": "s-define",
+        "name": "Pin down what 'completed' means and the funnel steps",
+        "why": "A 28% figure only guides action when its definition and the step-by-step funnel by device are known.",
         "sources": [
-          "web-attribuly",
-          "cat-leaky",
+          "web-baymard",
           "owner"
         ]
       },
       {
-        "id": "s-reconcile",
-        "name": "Reconcile funnel counts with real orders",
-        "why": "The 28% is reported from analytics. Checking completed checkouts against paid orders shows whether the baseline can be trusted.",
+        "id": "s-gather",
+        "name": "Pull the checkout funnel, abandoned checkouts and email flow results",
+        "why": "Raw exports by device, cart value and step show where people leave; abandoned-checkout timelines show payment attempts; the flow report shows what recovery brings back today.",
         "sources": [
-          "cat-leaky",
+          "cat-funnel",
+          "web-shopify",
+          "web-klaviyo",
           "owner"
+        ]
+      },
+      {
+        "id": "s-check-numbers",
+        "name": "Check the completion figure against real orders",
+        "why": "Bots, definitions and double counting can move the figure before any fix does.",
+        "sources": [
+          "web-baymard",
+          "cat-funnel"
         ]
       },
       {
         "id": "s-walk",
-        "name": "Walk the mobile checkout and check payment methods and errors",
-        "why": "Missing methods such as UPI or COD, forced sign-up, long forms and failed payments with no retry are the usual leaks, and 80% of this store's traffic is on mobile.",
+        "name": "Walk the real mobile checkout and the payment options",
+        "why": "Slow pages, long forms, forced accounts and missing UPI or COD show up on a real phone, not in a report.",
         "sources": [
-          "web-baymard",
-          "web-sociolabs",
+          "web-razorpay",
+          "cat-checkout-audit",
           "cat-payments"
         ]
       },
       {
-        "id": "s-costs",
-        "name": "Check when shipping cost and the free-shipping rule are shown",
-        "why": "Costs that appear late are the top reason carts are abandoned. The Rs 999 rule is fixed, so the question is whether shoppers see it and the total early enough.",
+        "id": "s-email-audit",
+        "name": "Audit the abandoned-cart flow",
+        "why": "A year-old flow may be off, late, or mis-triggered, and its results give a benchmark gap.",
         "sources": [
-          "web-baymard",
-          "web-attribuly"
+          "web-klaviyo",
+          "web-shopify",
+          "cat-cart-flow"
         ]
       },
       {
         "id": "s-diagnose",
-        "name": "Rank causes by checkouts lost and keep competing explanations",
-        "why": "Several causes can act at once. Each needs its own fix, and a cause is only worth fixing if the volume lost is large enough.",
-        "sources": [
-          "cat-leaky",
-          "web-baymard"
-        ]
-      },
-      {
-        "id": "s-recover",
-        "name": "Audit and rebuild the recovery email as a separate checkout flow",
-        "why": "A year-old flow is likely mistimed. Practitioners split checkout-started from added-to-cart, send early, space follow-ups by at least a day and avoid blanket discounts.",
-        "sources": [
-          "web-attribuly",
-          "cat-rollout"
-        ]
-      },
-      {
-        "id": "s-fix",
-        "name": "Fix in order of impact over effort",
-        "why": "Easy high-impact items such as showing the total early, guest checkout and payment error handling go before a full checkout redesign.",
+        "name": "Test the causes against the data and rank the fixes",
+        "why": "Cost, payment, mobile and email each need a different fix; the biggest measured cause goes first.",
         "sources": [
           "web-baymard",
-          "web-sociolabs"
+          "web-razorpay",
+          "cat-funnel"
+        ]
+      },
+      {
+        "id": "s-build",
+        "name": "Draft the email and checkout fixes",
+        "why": "Fix the flow (timing, two flows so nobody gets both, no discount) and the store settings the diagnosis supports.",
+        "sources": [
+          "cat-cart-flow",
+          "cat-rollout",
+          "web-shopify"
         ]
       },
       {
         "id": "s-test",
-        "name": "Apply one change at a time and read the result",
-        "why": "With several changes at once, the lift cannot be attributed and a harmful change can hide behind a good one.",
+        "name": "Apply as registered tests with a held-back group and read honestly",
+        "why": "A before-and-after in a sale month is not proof; a holdout and enough checkouts are.",
         "sources": [
-          "web-baymard",
+          "web-klaviyo",
           "cat-rollout"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Treating cart abandoners and checkout abandoners as one group, so the email is wrong for both.",
+        "text": "Treating all abandonment as fixable: a large share is shoppers who were never going to buy, so a 40% target must be tested against the recoverable pool.",
         "sources": [
-          "cat-rollout",
-          "web-attribuly"
+          "web-baymard"
         ]
       },
       {
-        "text": "Trusting vendor percentages (UPI lifts, COD reasons) as if they described this store.",
+        "text": "Judging the cart email by open rate instead of placed orders or revenue per recipient.",
         "sources": [
-          "web-sociolabs"
+          "web-klaviyo"
         ]
       },
       {
-        "text": "Winning checkouts back with discounts that eat margin.",
+        "text": "Missing payment failures because store analytics does not show them; they live in the gateway report.",
         "sources": [
-          "web-attribuly",
+          "web-razorpay"
+        ]
+      },
+      {
+        "text": "Offering a discount to recover carts, which cuts margin and the owner has ruled it out.",
+        "sources": [
+          "web-shopify",
           "owner"
         ]
       },
       {
-        "text": "Skipping payment failures because the owner does not suspect them, when a failed payment often ends the session.",
+        "text": "Sending both a cart email and a checkout email to the same shopper.",
         "sources": [
-          "web-sociolabs",
-          "web-baymard"
-        ]
-      },
-      {
-        "text": "Redesigning the whole checkout before fixing the cheap, high-impact items.",
-        "sources": [
-          "web-baymard"
+          "cat-rollout"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Lift checkout completion on mobile without cutting margin",
+    "name": "Lift checkout completion without cutting margin",
     "capabilities": [
       {
         "id": "store-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read store orders and analytics (Shopify MCP, read-only)",
-        "why": "Pull checkout, order and payment status data to rebuild the funnel and reconcile it with paid orders."
+        "name": "Read store analytics and orders (Shopify MCP)",
+        "why": "Pull checkout funnel, abandoned checkouts and orders."
       },
       {
         "id": "email-read",
         "access": "read",
         "via": "mcp",
-        "name": "Read flows and email results (Klaviyo)",
-        "why": "Read the current abandoned-cart flow, its timing and its results."
+        "name": "Read email flows and results (Klaviyo)",
+        "why": "Read the abandoned-cart flow setup and its results."
       },
       {
         "id": "email-draft",
         "access": "draft",
         "via": "mcp",
-        "name": "Draft email flows (Klaviyo)",
-        "why": "Save the rebuilt checkout and cart emails as drafts only."
+        "name": "Draft flows and emails (Klaviyo)",
+        "why": "Create draft emails and flows that are not sent."
       },
       {
-        "id": "site-browser",
+        "id": "phone-walk",
         "access": "read",
         "via": "browser",
-        "name": "Walk the live mobile checkout (browser)",
-        "why": "Step through the store on a phone-sized screen up to the payment step, without placing an order."
+        "name": "Walk the live checkout on a phone view (browser)",
+        "why": "Step through the real mobile checkout up to the payment step, without paying."
       },
       {
-        "id": "owner-apply",
+        "id": "gateway-report",
+        "access": "read",
+        "via": "file",
+        "name": "Payment gateway failed-attempt report (owner export)",
+        "why": "Shows payment failures that store analytics cannot show."
+      },
+      {
+        "id": "store-live",
         "access": "live",
         "via": "owner",
-        "name": "Owner applies approved changes in Shopify and Klaviyo",
-        "why": "Our access is read and draft only, so the owner makes each approved change live and tells us when it is done."
+        "name": "Change checkout and payment settings in Shopify admin",
+        "why": "Shopify is read-only for us, so the owner applies each change from our exact steps."
+      },
+      {
+        "id": "email-live",
+        "access": "live",
+        "via": "owner",
+        "name": "Switch on the new flow in Klaviyo",
+        "why": "Klaviyo is draft-only for us, so the owner turns the flow on."
       }
     ],
     "data": [
       {
-        "id": "funnel",
-        "name": "Funnel by step and device",
-        "why": "Shows which step loses the most shoppers and whether mobile differs from desktop.",
+        "id": "checkout-funnel",
+        "name": "Checkout funnel by step, device and cart value",
+        "why": "Shows which step loses people and whether mobile differs from desktop.",
         "fields": [
           "date",
           "device",
           "sessions",
-          "sessions with add to cart",
-          "checkouts started",
-          "reached payment step",
-          "checkouts completed",
-          "new or returning"
+          "added to cart",
+          "reached checkout",
+          "contact info step",
+          "shipping step",
+          "payment step",
+          "completed",
+          "cart value band"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read checkout and session data with the Shopify MCP for the last 90 days, daily, by device."
+            "how": "Read with the Shopify MCP: last 60 days (and the 60 days before), daily, by device."
           },
           {
             "kind": "CSV",
-            "how": "Shopify admin, Analytics, Reports, Conversion and Checkout reports: export as CSV for the same dates."
+            "how": "Shopify admin > Analytics > Reports > Conversion over time and checkout funnel; export CSV."
           }
         ],
         "required_for": [
-          "evidence-funnel",
-          "integrity-funnel",
+          "evidence",
           "diagnosis"
         ],
-        "alternative": "Without device splits, mobile findings stay unknown and the diagnosis rests on totals."
+        "alternative": "Without step data, only the headline 28% and order totals are usable; the leaking step stays unknown."
+      },
+      {
+        "id": "abandoned-checkouts",
+        "name": "Abandoned checkouts",
+        "why": "Shows cart value, items, payment attempts in the checkout timeline, and which were recoverable by email. Shopify counts a checkout as abandoned only after an email is given.",
+        "fields": [
+          "created at",
+          "cart value",
+          "items",
+          "shipping cost shown",
+          "device",
+          "email captured",
+          "payment attempt messages",
+          "recovered later"
+        ],
+        "routes": [
+          {
+            "kind": "MCP",
+            "how": "Read abandoned checkouts with the Shopify MCP for the same 60 days."
+          },
+          {
+            "kind": "CSV",
+            "how": "Shopify admin > Orders > Abandoned checkouts; export CSV."
+          }
+        ],
+        "required_for": [
+          "evidence",
+          "diagnosis"
+        ],
+        "alternative": "Without it, cart-value and shipping-threshold findings stay unknown."
       },
       {
         "id": "orders",
-        "name": "Orders and checkouts with payment status",
-        "why": "Checks completed checkouts against paid orders, and shows payment method and status on failed or pending attempts.",
+        "name": "Completed orders",
+        "why": "Checks the completion figure against real orders and gives margin per order.",
         "fields": [
-          "checkout id",
-          "created at",
-          "completed at",
+          "order date",
+          "order value",
           "device",
-          "payment gateway",
           "payment method",
-          "payment status",
-          "order total",
           "shipping charged",
           "discount"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read orders and abandoned checkouts for the same dates with the Shopify MCP."
+            "how": "Read orders for the same period with the Shopify MCP."
           },
           {
             "kind": "CSV",
-            "how": "Shopify admin, Orders and Abandoned checkouts: export as CSV."
+            "how": "Shopify admin > Orders > export."
           }
         ],
         "required_for": [
-          "integrity-funnel",
-          "diagnosis"
-        ]
+          "integrity-numbers"
+        ],
+        "alternative": "Without orders, the completion figure stays a report and the check is marked LIMITED."
       },
       {
-        "id": "payment-attempts",
-        "name": "Payment attempts and failures by method",
-        "why": "The owner does not know if payment failures matter. The gateway's own report is the only direct evidence.",
+        "id": "gateway-attempts",
+        "name": "Payment attempts and failures",
+        "why": "The owner does not know whether payment failures are part of the problem; only the gateway shows it.",
         "fields": [
           "date",
           "payment method",
+          "device",
           "attempts",
-          "successful",
-          "failed",
+          "successes",
           "failure reason"
         ],
         "routes": [
           {
-            "kind": "ASK",
-            "how": "Ask the owner for the payment gateway's success-rate or failed-payments export, or screenshots of that report."
+            "kind": "CSV",
+            "how": "Gateway dashboard > Payments > export for the last 60 days, by payment method."
           },
           {
-            "kind": "CSV",
-            "how": "Gateway dashboard, Payments report: export as CSV for the last 60 days."
+            "kind": "ASK",
+            "how": "Ask the owner which gateway and methods the store uses, and for the export."
           }
         ],
         "required_for": [
-          "integrity-checkout",
+          "evidence",
           "diagnosis"
         ],
-        "alternative": "Without it, payment failures stay UNKNOWN and are not fixed on a guess."
+        "alternative": "Without it, the payment-failure hypothesis stays UNKNOWN and is not ranked."
       },
       {
-        "id": "email-flow",
-        "name": "Abandoned-cart flow and its results",
-        "why": "Shows what the current emails say, when they send and what they recover.",
+        "id": "flow-results",
+        "name": "Abandoned-cart flow setup and results",
+        "why": "Shows when emails send, who is excluded and what the flow earns per recipient.",
         "fields": [
-          "flow trigger",
-          "email order",
-          "delay before each email",
-          "sends",
+          "flow name",
+          "trigger",
+          "status",
+          "email timing",
+          "filters",
+          "recipients",
           "opens",
           "clicks",
-          "orders placed",
-          "revenue",
-          "unsubscribes"
+          "placed orders",
+          "revenue"
         ],
         "routes": [
           {
             "kind": "MCP",
-            "how": "Read flow settings and flow metrics with Klaviyo for the last 90 days."
+            "how": "Read the flow and its report for the last 60 days with the Klaviyo connection."
           },
           {
             "kind": "CSV",
-            "how": "Klaviyo, Flows, the abandoned-cart flow, Analytics: export as CSV."
+            "how": "Klaviyo > Flows > the flow > Analytics; export."
           }
         ],
         "required_for": [
-          "evidence-funnel",
-          "diagnosis",
-          "email-rebuild"
-        ]
+          "integrity-email",
+          "diagnosis"
+        ],
+        "alternative": "Without it, the email fix is drafted from the checklist and the benchmark gap stays unknown."
       }
     ],
     "stages": [
@@ -435,34 +499,32 @@
         "kind": "intake",
         "name": "Pin down the problem",
         "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
-        "from_steps": [],
         "owner": {
           "role": "weekly-store-numbers-watcher"
         },
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "evidence-funnel",
+        "id": "evidence",
         "kind": "evidence",
-        "name": "Gather the funnel, orders and email data",
-        "goal": "Pull the last 90 days of funnel steps by device, checkouts and orders with payment status, and the current abandoned-cart flow results into one CSV set in the project.",
-        "from_steps": [
-          "s-funnel"
-        ],
+        "name": "Gather the checkout data in one place",
+        "goal": "Pull the funnel by step and device, abandoned checkouts, orders, gateway attempts and the email flow results into one CSV set.",
         "owner": {
           "role": "weekly-store-numbers-watcher"
         },
-        "uses": [
-          "sales-funnel-drop-off-finder"
-        ],
         "data": [
-          "funnel",
+          "checkout-funnel",
+          "abandoned-checkouts",
           "orders",
-          "email-flow"
+          "gateway-attempts",
+          "flow-results"
         ],
         "needs": [
           "store-read",
-          "email-read"
+          "email-read",
+          "gateway-report"
         ],
         "depends_on": [
           "intake"
@@ -484,165 +546,201 @@
         "checks": [
           {
             "id": "totals",
-            "name": "Checkout and order totals match Shopify's own totals for the same dates",
+            "name": "Completed-order count in the dataset matches the Shopify orders export for the same dates within 1%",
             "required": true
           },
           {
-            "id": "device",
-            "name": "Each step is split by mobile and desktop, or the missing split is stated",
+            "id": "periods",
+            "name": "Covers the last 60 days and the 60 days before, so a trend is visible",
             "required": true
           },
           {
-            "id": "definition",
-            "name": "How Shopify defines checkout started and completed is written down",
+            "id": "missing",
+            "name": "Any export not provided (for example the gateway report) is listed as missing with what it would unlock",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-gather"
+        ],
+        "uses": [
+          "abandoned-checkout-reader",
+          "conversion-funnel-analyst"
+        ]
       },
       {
-        "id": "integrity-funnel",
+        "id": "integrity-numbers",
         "kind": "integrity",
-        "name": "Check the 28% can be trusted",
-        "goal": "Reconcile completed checkouts with paid orders, and test whether the reported 28% holds on the pulled data and by device. Ends with a verdict on the baseline.",
-        "from_steps": [
-          "s-reconcile"
-        ],
+        "name": "Check the 28% figure can be trusted",
+        "goal": "Confirm how checkout completion is defined, strip bot or duplicate checkouts, and reconcile with real orders before anyone reasons from it.",
         "owner": {
           "role": "weekly-store-numbers-watcher"
         },
-        "uses": [
-          "leaky-funnel-fixer"
-        ],
         "data": [
-          "funnel",
-          "orders"
+          "orders",
+          "checkout-funnel"
         ],
         "needs": [
           "store-read"
         ],
         "depends_on": [
-          "evidence-funnel"
+          "evidence"
         ],
         "outputs": [
           {
-            "id": "funnel-check",
-            "name": "Funnel and baseline check",
+            "id": "numbers-check",
+            "name": "Completion figure check",
             "format": "markdown",
-            "path": "integrity/FUNNEL-CHECK.md"
+            "path": "integrity/COMPLETION-FIGURE.md"
           }
         ],
         "checks": [
           {
-            "id": "reconcile",
-            "name": "Completed checkouts agree with paid orders within 5%, or the gap is explained",
+            "id": "definition",
+            "name": "States whether completion is completed divided by checkouts started, and the same definition is used in both 60-day periods",
             "required": true
           },
           {
-            "id": "baseline",
-            "name": "The 28% is recomputed from the data and marked VERIFIED, DIFFERENT or UNKNOWN",
+            "id": "reconcile",
+            "name": "Completed checkouts and orders agree within 5%, or the gap is explained",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the 40% target",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-define",
+          "s-check-numbers"
+        ],
+        "uses": [
+          "set-up-tracking-you-can-trust-before-you-scale",
+          "conversion-funnel-analyst"
+        ]
       },
       {
         "id": "integrity-checkout",
         "kind": "integrity",
-        "name": "Walk the mobile checkout and check payments",
-        "goal": "Step through the mobile checkout as a shopper: payment methods offered (UPI, cards, COD and others), forced sign-up, form length, when shipping and the Rs 999 rule show, and what happens after a failed payment. Add mobile speed and the gateway's failure data when available.",
-        "from_steps": [
-          "s-walk",
-          "s-costs"
-        ],
+        "name": "Walk the real mobile checkout",
+        "goal": "Step through the live checkout on a mid-range phone view to the payment step: shipping cost visibility, forced account, form fields, payment methods offered (UPI, cards, COD, wallets) and speed.",
         "owner": {
-          "role": "pre-launch-store-checker"
+          "role": "cro-specialist"
         },
-        "support": [
-          "monthly-store-speed-keeper"
-        ],
-        "uses": [
-          "payments-and-checkout-settings-checker",
-          "decision-friction-auditor",
-          "store-speed-report-reader"
-        ],
-        "data": [
-          "payment-attempts"
-        ],
         "needs": [
-          "site-browser",
-          "store-read"
+          "phone-walk"
         ],
         "depends_on": [
           "intake"
         ],
         "outputs": [
           {
-            "id": "checkout-check",
-            "name": "Mobile checkout and payments check",
+            "id": "checkout-walk",
+            "name": "Mobile checkout walk-through",
             "format": "markdown",
-            "path": "integrity/CHECKOUT-CHECK.md"
+            "path": "integrity/CHECKOUT-WALK.md"
           }
         ],
         "checks": [
           {
-            "id": "mobile",
-            "name": "Walked on a phone-sized screen, with every step and screenshot listed",
+            "id": "steps",
+            "name": "Every checkout step is recorded with screenshots and the count of fields on each",
             "required": true
           },
           {
-            "id": "methods",
-            "name": "Payment methods offered are listed and compared with what shoppers in India expect",
+            "id": "speed",
+            "name": "Mobile load of the checkout pages is measured, and each page that takes over 2.5 s is flagged",
             "required": true
           },
           {
-            "id": "failure",
-            "name": "What a shopper sees after a failed payment is recorded, or marked not tested",
-            "required": true
-          },
-          {
-            "id": "no-order",
-            "name": "No real order or payment was placed during the walk",
+            "id": "not-tested",
+            "name": "Payment completion is marked not tested, because no real payment is made",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-walk"
+        ],
+        "uses": [
+          "checkout-page-auditor",
+          "payments-and-checkout-settings-checker",
+          "speed-report-translator"
+        ]
+      },
+      {
+        "id": "integrity-email",
+        "kind": "integrity",
+        "name": "Audit the abandoned-cart flow",
+        "goal": "Read how the current abandoned-cart flow is set up: trigger, status, timing, filters, whether the cart and checkout flows overlap, and revenue per recipient against the Klaviyo benchmark.",
+        "owner": {
+          "role": "monthly-email-flow-keeper"
+        },
+        "data": [
+          "flow-results"
+        ],
+        "needs": [
+          "email-read"
+        ],
+        "depends_on": [
+          "intake"
+        ],
+        "outputs": [
+          {
+            "id": "flow-audit",
+            "name": "Flow audit",
+            "format": "markdown",
+            "path": "integrity/FLOW-AUDIT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "status",
+            "name": "Records whether the flow is live, its trigger and the delay before the first email",
+            "required": true
+          },
+          {
+            "id": "overlap",
+            "name": "Records whether any shopper can get both a cart email and a checkout email",
+            "required": true
+          },
+          {
+            "id": "benchmark",
+            "name": "Revenue per recipient is compared with the Klaviyo benchmark row for the store's order value, or marked unknown",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "from_steps": [
+          "s-email-audit"
+        ],
+        "uses": [
+          "email-flow-gap-checker",
+          "email-sequence-auditor"
+        ]
       },
       {
         "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find where the checkouts are lost",
-        "goal": "Test each hypothesis against the funnel, orders, payment and email data. Rank causes by checkouts lost and keep competing explanations.",
-        "from_steps": [
-          "s-diagnose"
-        ],
+        "name": "Find where the other 72% leave",
+        "goal": "Test the hypotheses against the funnel, abandoned checkouts, gateway and flow data. Separate shoppers who were never buying from the recoverable pool. Keep competing explanations.",
         "owner": {
-          "role": "find-where-your-page-loses-buyers-and-prove-the-fix"
+          "role": "page-drop-off-fix"
         },
-        "support": [
-          "weekly-store-numbers-watcher",
-          "monthly-email-flow-keeper"
-        ],
-        "uses": [
-          "leaky-funnel-fixer",
-          "sales-funnel-drop-off-finder",
-          "email-sequence-auditor"
-        ],
         "data": [
-          "funnel",
-          "orders",
-          "payment-attempts",
-          "email-flow"
+          "checkout-funnel",
+          "abandoned-checkouts",
+          "gateway-attempts",
+          "flow-results"
         ],
         "depends_on": [
-          "evidence-funnel",
-          "integrity-funnel",
-          "integrity-checkout"
+          "evidence",
+          "integrity-numbers",
+          "integrity-checkout",
+          "integrity-email"
         ],
         "outputs": [
           {
@@ -661,55 +759,62 @@
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the rows it rests on",
             "required": true
           },
           {
             "id": "volume",
-            "name": "Each finding states the checkouts lost and meets a minimum volume, or is marked low-confidence",
+            "name": "A segment finding is made only with at least 100 checkouts started in the segment, otherwise marked low-confidence",
+            "required": true
+          },
+          {
+            "id": "recoverable",
+            "name": "Estimates how many extra completions the 40% target needs and whether the supported causes can plausibly deliver them",
             "required": true
           },
           {
             "id": "alternatives",
             "name": "Each main finding names a competing explanation",
             "required": true
-          },
-          {
-            "id": "payments",
-            "name": "Payment failures are SUPPORTED, REFUTED or UNKNOWN from gateway data, not guessed",
-            "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-diagnose"
+        ],
+        "support": [
+          "weekly-store-numbers-watcher"
+        ],
+        "reviewers": [
+          "experiment-readout-desk"
+        ],
+        "uses": [
+          "leaky-funnel-fixer",
+          "conversion-funnel-analyst",
+          "abandoned-checkout-reader"
+        ]
       },
       {
         "id": "options",
         "kind": "options",
         "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked recommendation cards, easy high-impact items first, each with its effect on margin and how it will be measured.",
-        "from_steps": [
-          "s-fix"
-        ],
+        "goal": "Turn supported findings into ranked fix cards, each inside the limits (no discount, Rs 999 threshold unchanged).",
         "owner": {
-          "role": "store-test-program-runner"
+          "role": "cro-specialist"
         },
-        "uses": [
-          "big-swing-test-picker",
-          "cart-and-checkout-upsell-planner"
-        ],
         "depends_on": [
           "diagnosis"
         ],
         "outputs": [
           {
             "id": "recommendations",
-            "name": "Recommendation cards",
+            "name": "Fix cards",
             "format": "markdown",
             "path": "options/RECOMMENDATIONS.md"
           },
           {
             "id": "recommendations-json",
-            "name": "Recommendation cards as data",
+            "name": "Fix cards as data",
             "format": "json",
             "path": "options/recommendations.json"
           }
@@ -722,30 +827,30 @@
           },
           {
             "id": "fields",
-            "name": "Every card has expected direction, effort, confidence, risk and how it will be measured",
+            "name": "Every card has expected effect in completion points, effort, confidence, risk to margin and how it will be measured",
             "required": true
           },
           {
-            "id": "margin",
-            "name": "No card cuts margin, adds a discount or changes the Rs 999 rule",
-            "required": true
-          },
-          {
-            "id": "order",
-            "name": "Cards are ranked by impact over effort, with measurement fixes first when the funnel check is not CHECKED",
+            "id": "limits",
+            "name": "No card needs a discount, a price cut or a change to the Rs 999 threshold",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "cart-and-checkout-upsell-planner",
+          "free-shipping-threshold",
+          "order-threshold-planner"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
         "name": "Owner chooses",
-        "goal": "The owner picks card IDs. Ask for the reason when they pass on a top card; record it as a decision.",
-        "from_steps": [],
+        "goal": "The owner picks card IDs. Ask for the reason when they pass over a top card; record it.",
         "owner": {
-          "role": "store-test-program-runner"
+          "role": "cro-specialist"
         },
         "depends_on": [
           "options"
@@ -761,35 +866,83 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
+            "name": "Chosen and passed-over cards are in decisions.jsonl",
             "required": true
           },
           {
             "id": "rationale",
-            "name": "A reason is recorded wherever the top card was passed over",
+            "name": "A reason is recorded wherever a top card was passed over",
             "required": true
           }
         ],
-        "gate": "approve"
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "checkout-fixes",
+        "id": "email-fix",
         "kind": "production",
-        "name": "Prepare the checkout fixes",
-        "goal": "Prepare the chosen mobile checkout changes as exact steps or ready code for the owner to apply: payment methods and retry, guest checkout, form length, showing the total and the Rs 999 rule early.",
-        "from_steps": [
-          "s-fix"
-        ],
+        "name": "Draft the new cart and checkout emails",
+        "goal": "Draft two flows in Klaviyo as drafts: added to cart and checkout started, so nobody gets both, with timing, filters and copy in the store's voice and no discount.",
         "owner": {
-          "role": "find-where-your-page-loses-buyers-and-prove-the-fix"
+          "role": "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time"
         },
-        "reviewers": [
-          "monthly-store-speed-keeper"
+        "needs": [
+          "email-draft"
+        ],
+        "depends_on": [
+          "decision",
+          "integrity-email"
+        ],
+        "outputs": [
+          {
+            "id": "email-pack",
+            "name": "Flow plan and email copy",
+            "format": "markdown",
+            "path": "production/EMAIL-FLOWS.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "exclusion",
+            "name": "Rules stop anyone who ordered, and stop a cart email going to someone who has started checkout",
+            "required": true
+          },
+          {
+            "id": "no-discount",
+            "name": "No email offers a discount or price cut",
+            "required": true
+          },
+          {
+            "id": "draft-only",
+            "name": "Everything is saved as a Klaviyo draft, nothing is live",
+            "required": true
+          },
+          {
+            "id": "holdout",
+            "name": "A random 10% holdout is specified so the flow can be compared with no email",
+            "required": true
+          }
+        ],
+        "gate": "none",
+        "optional_when": "No email card was chosen.",
+        "from_steps": [
+          "s-build"
         ],
         "uses": [
-          "shopify-checkout-customizer",
-          "decision-friction-auditor"
-        ],
+          "cart-recovery-flow-builder",
+          "customer-stage-flow-mapper",
+          "email-draft-reviewer"
+        ]
+      },
+      {
+        "id": "checkout-fix",
+        "kind": "production",
+        "name": "Prepare the checkout changes",
+        "goal": "Write exact steps for the chosen store changes (payment methods and UPI flow, shipping-cost message and cart nudge toward Rs 999, guest checkout, form fields, speed), each with how to confirm it worked.",
+        "owner": {
+          "role": "cro-specialist"
+        },
         "depends_on": [
           "decision",
           "integrity-checkout"
@@ -797,7 +950,7 @@
         "outputs": [
           {
             "id": "checkout-changes",
-            "name": "Checkout changes",
+            "name": "Checkout change steps",
             "format": "markdown",
             "path": "production/CHECKOUT-CHANGES.md"
           }
@@ -805,156 +958,139 @@
         "checks": [
           {
             "id": "scoped",
-            "name": "Only chosen changes are included, each with its before and after",
+            "name": "Only chosen changes are included",
             "required": true
           },
           {
-            "id": "preview",
-            "name": "Each change is previewed or comes with exact steps and a way to undo it",
+            "id": "undo",
+            "name": "Each change says how to undo it",
             "required": true
           },
           {
-            "id": "margin",
-            "name": "No change adds a discount, lowers the Rs 999 threshold or raises a fee",
+            "id": "verify",
+            "name": "Each change says how to confirm it in Shopify or the gateway report",
             "required": true
           }
         ],
         "gate": "none",
-        "optional_when": "No checkout card was chosen."
-      },
-      {
-        "id": "email-rebuild",
-        "kind": "production",
-        "name": "Rebuild the recovery emails as drafts",
-        "goal": "Draft a checkout-started flow and a separate added-to-cart flow in Klaviyo with spaced timing and no blanket discount, so no shopper gets both. Saved as drafts only.",
+        "optional_when": "No store card was chosen.",
         "from_steps": [
-          "s-recover"
-        ],
-        "owner": {
-          "role": "monthly-email-flow-keeper"
-        },
-        "support": [
-          "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time"
+          "s-build"
         ],
         "uses": [
-          "cart-recovery-flow-builder",
-          "email-sequence-auditor"
-        ],
-        "data": [
-          "email-flow"
-        ],
-        "needs": [
-          "email-read",
-          "email-draft"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "email-pack",
-            "name": "Email flow drafts and copy",
-            "format": "markdown",
-            "path": "production/EMAIL-FLOWS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "split",
-            "name": "Checkout-started and added-to-cart shoppers each enter one flow, never both",
-            "required": true
-          },
-          {
-            "id": "timing",
-            "name": "Delay before each email is stated, with at least a day between emails",
-            "required": true
-          },
-          {
-            "id": "offer",
-            "name": "No discount or fee change is promised; free shipping is stated as Rs 999 and above",
-            "required": true
-          },
-          {
-            "id": "drafts",
-            "name": "Everything is saved as drafts and read back, nothing is switched on",
-            "required": true
-          }
-        ],
-        "gate": "review",
-        "optional_when": "No email card was chosen."
+          "checkout-page-auditor",
+          "payments-and-checkout-settings-checker",
+          "cart-bundle-and-gift-planner"
+        ]
       },
       {
-        "id": "go-live",
+        "id": "switch-on-emails",
         "kind": "execution",
-        "name": "Owner applies each change",
-        "goal": "Register each change as a test with its metric and date, then hand the owner one change at a time to apply in Shopify or switch on in Klaviyo. Record what was applied and when.",
-        "from_steps": [
-          "s-test"
-        ],
+        "name": "Switch on the new email flows",
+        "goal": "Register the test, then the owner switches on each flow in Klaviyo after we show it. Read the live settings back.",
         "owner": {
-          "role": "run-one-store-test-and-know-whether-to-ship-the-change"
+          "role": "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time"
         },
-        "uses": [
-          "run-one-store-test-and-know-whether-to-ship-the-change"
-        ],
         "needs": [
-          "owner-apply"
+          "email-live",
+          "email-read"
         ],
         "depends_on": [
-          "checkout-fixes",
-          "email-rebuild"
+          "email-fix"
         ],
         "outputs": [
           {
-            "id": "change-log",
-            "name": "Change log with dates",
+            "id": "email-receipt",
+            "name": "Flow go-live receipt",
             "format": "markdown",
-            "path": "execution/CHANGE-LOG.md"
+            "path": "execution/EMAIL-RECEIPT.md"
           }
         ],
         "checks": [
           {
             "id": "registered",
-            "name": "Each change is registered as a test with its date before it is applied",
+            "name": "The test, holdout and start date are in experiments.jsonl before anything is switched on",
             "required": true
           },
           {
-            "id": "one-at-a-time",
-            "name": "Changes that affect the same step are not applied on the same day",
-            "required": true
-          },
-          {
-            "id": "confirmed",
-            "name": "The owner confirms each change is live and we read the result back where we can",
+            "id": "readback",
+            "name": "Live trigger, delay, filters and holdout read back from Klaviyo match the approved drafts",
             "required": true
           }
         ],
         "gate": "approve_each_action",
-        "optional_when": "Nothing was chosen to apply."
+        "optional_when": "No email card was chosen.",
+        "from_steps": [
+          "s-test"
+        ],
+        "uses": [
+          "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time"
+        ]
+      },
+      {
+        "id": "apply-store",
+        "kind": "execution",
+        "name": "Apply the checkout changes",
+        "goal": "Register each change as a test, then the owner applies it in Shopify admin, one at a time, after we show it. Read back the result.",
+        "owner": {
+          "role": "cro-specialist"
+        },
+        "needs": [
+          "store-live",
+          "store-read"
+        ],
+        "depends_on": [
+          "checkout-fix"
+        ],
+        "outputs": [
+          {
+            "id": "store-receipt",
+            "name": "Store change receipt",
+            "format": "markdown",
+            "path": "execution/STORE-RECEIPT.md"
+          }
+        ],
+        "checks": [
+          {
+            "id": "registered",
+            "name": "Each change has its date and expected effect in experiments.jsonl before it is applied",
+            "required": true
+          },
+          {
+            "id": "one-at-a-time",
+            "name": "Changes go live in separate steps, at least 7 days apart where traffic allows, so effects can be told apart",
+            "required": true
+          },
+          {
+            "id": "readback",
+            "name": "Each change is confirmed in Shopify after it is applied",
+            "required": true
+          }
+        ],
+        "gate": "approve_each_action",
+        "optional_when": "No store card was chosen.",
+        "from_steps": [
+          "s-test"
+        ],
+        "uses": [
+          "run-one-store-test-and-know-whether-to-ship-the-change"
+        ]
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read the completion rate honestly",
-        "goal": "Read the checkout completion rate against the recomputed baseline and the guardrails, by device, after each change.",
-        "from_steps": [],
+        "name": "Read the results honestly",
+        "goal": "Read completion by device and by payment method every week against the 28% baseline and the guardrails; compare the flow with its holdout; flag any slip early.",
         "owner": {
           "role": "experiment-readout-desk"
         },
-        "uses": [
-          "product-test-result-reader"
-        ],
-        "data": [
-          "funnel",
-          "orders"
-        ],
         "needs": [
           "store-read",
           "email-read"
         ],
         "depends_on": [
-          "go-live"
+          "switch-on-emails",
+          "apply-store"
         ],
         "outputs": [
           {
@@ -962,39 +1098,47 @@
             "name": "Results readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "monitor",
+            "name": "Weekly check prompt",
+            "format": "markdown",
+            "path": "measurement/MONITOR.md"
           }
         ],
         "checks": [
           {
             "id": "volume",
-            "name": "A verdict is given only when enough checkouts were started, otherwise INCONCLUSIVE",
+            "name": "A verdict is given only with at least 250 checkout starts per compared group, otherwise INCONCLUSIVE",
             "required": true
           },
           {
             "id": "guardrails",
-            "name": "Margin per order, add-to-cart rate and unsubscribes are checked",
+            "name": "Add-to-cart rate, margin per order, returns and unsubscribes are each checked",
             "required": true
           },
           {
             "id": "like-for-like",
-            "name": "Comparisons use the same definition of completion and the same length of period",
+            "name": "Compared periods have the same length and the same definition of completion; any sale days are marked",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-test"
+        ],
+        "uses": [
+          "experiment-designer"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Close each test, record what worked and what did not, propose rules with their scope and plan the next round.",
-        "from_steps": [],
+        "goal": "Close each experiment, save rules with their scope, and plan the next round.",
         "owner": {
           "role": "experiment-readout-desk"
         },
-        "uses": [
-          "trial-log-planner"
-        ],
         "depends_on": [
           "measurement"
         ],
@@ -1009,72 +1153,82 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every applied change has a verdict",
+            "name": "Every registered experiment is closed in experiments.jsonl with a verdict",
             "required": true
           },
           {
             "id": "scoped",
-            "name": "Each proposed rule says whether it holds for this store, this market or all stores",
+            "name": "Each rule says whether it holds for this job, this store or the playbook",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       }
     ],
     "hypotheses": [
       {
-        "id": "h-payment-failures",
-        "statement": "A large share of started checkouts end in a failed payment with no easy retry.",
-        "test": "Gateway success and failure rates by payment method, and checkouts that reached the payment step but have no paid order.",
-        "confirm_if": "A meaningful share of checkouts that reach payment fail on one method or gateway, and many of those shoppers do not come back.",
-        "refute_if": "Payment success is high on every method and drop-off happens before the payment step.",
-        "fix_stage": "checkout-fixes"
+        "id": "h-payment",
+        "statement": "Payment failures or missing payment methods lose a large share of shoppers who reach the payment step.",
+        "test": "Gateway success rate by method and device; payment-step drop-off in the funnel; methods offered versus UPI, cards, COD and wallets.",
+        "confirm_if": "More than 10% of payment attempts fail, or mobile payment success is 5 points or more below desktop, or UPI or COD is not offered.",
+        "refute_if": "Payment attempts succeed above 95% and the payment step loses under 5% of those who reach it.",
+        "fix_stage": "apply-store"
       },
       {
-        "id": "h-missing-methods",
-        "statement": "Shoppers leave because their preferred payment method (UPI, COD or wallet) is missing or hard to find.",
-        "test": "Payment methods offered against what is expected in India; checkouts lost at the payment step by device.",
-        "confirm_if": "An expected method is absent or buried, and drop-off at the payment step is high on mobile.",
-        "refute_if": "All the usual methods are offered and visible and payment-step drop-off is low.",
-        "fix_stage": "checkout-fixes"
+        "id": "h-shipping-cost",
+        "statement": "Shoppers leave when they see shipping cost on carts below Rs 999.",
+        "test": "Completion rate and drop-off step for carts below Rs 999 versus Rs 999 and above; step at which shipping cost first appears.",
+        "confirm_if": "Completion for carts below Rs 999 is 10 points or more lower than for carts above, with most leaving at the shipping step.",
+        "refute_if": "The gap is under 3 points.",
+        "fix_stage": "apply-store"
       },
       {
-        "id": "h-late-costs",
-        "statement": "Shipping cost or the Rs 999 free-shipping rule shows too late, so shoppers who are below the threshold leave.",
-        "test": "Where shipping shows in the flow; completion rate for checkouts below versus above Rs 999.",
-        "confirm_if": "Completion is clearly lower below Rs 999 and shipping first appears at the last step.",
-        "refute_if": "Completion is similar above and below the threshold, or shipping is shown on the cart page.",
-        "fix_stage": "checkout-fixes"
+        "id": "h-mobile",
+        "statement": "The mobile checkout is much worse than desktop (forms, tap targets, speed).",
+        "test": "Completion by device; field count and load time on the mobile walk-through.",
+        "confirm_if": "Mobile completion is 8 points or more below desktop, or any checkout page loads in over 2.5 s on a mid-range phone.",
+        "refute_if": "Mobile and desktop completion are within 3 points and pages load under 2.5 s.",
+        "fix_stage": "apply-store"
       },
       {
-        "id": "h-mobile-friction",
-        "statement": "The mobile checkout is slow or long, so mobile shoppers drop out.",
-        "test": "Completion by device; form fields and steps on mobile; mobile speed on the checkout pages.",
-        "confirm_if": "Mobile completion is well below desktop and the walk-through finds long forms, forced sign-up or slow pages.",
-        "refute_if": "Mobile and desktop complete at similar rates and the walk-through is clean.",
-        "fix_stage": "checkout-fixes"
+        "id": "h-friction",
+        "statement": "Forced account creation or a long form pushes people out before payment.",
+        "test": "Walk-through: guest checkout available, field count; funnel drop at the contact-information step.",
+        "confirm_if": "Guest checkout is off, or the contact step loses more than 25% of those who reach it.",
+        "refute_if": "Guest checkout is on and the contact step loses under 10%.",
+        "fix_stage": "apply-store"
       },
       {
-        "id": "h-weak-recovery-email",
-        "statement": "The year-old abandoned-cart email is mistimed or aimed at the wrong group, so it recovers little.",
-        "test": "Flow trigger, delay, send volume and orders placed per email; whether checkout and cart shoppers get the same emails.",
-        "confirm_if": "Late first email, one trigger for both groups or very low recovered orders per send.",
-        "refute_if": "The flow is split and timed well, and recovered orders are in line with the store's other flows.",
-        "fix_stage": "email-rebuild"
+        "id": "h-email-weak",
+        "statement": "The abandoned-cart email is late, off or mis-triggered, so recoverable shoppers are lost.",
+        "test": "Flow status, trigger, delay and filters; revenue per recipient against the Klaviyo benchmark row; share of abandoned checkouts with a captured email.",
+        "confirm_if": "The flow is off, the first email goes after more than 2 hours, or revenue per recipient is below the benchmark's 25th percentile.",
+        "refute_if": "The flow is live, sends within 2 hours and earns at or above the benchmark's 75th percentile.",
+        "fix_stage": "switch-on-emails"
       },
       {
-        "id": "h-baseline-wrong",
-        "statement": "The reported 28% is mismeasured, for example by counting test, duplicate or pending checkouts.",
-        "test": "Recompute completion from checkouts and paid orders for the same dates.",
-        "confirm_if": "The recomputed rate differs from 28% by more than a few points.",
-        "refute_if": "The recomputed rate is within a point or two of 28%.",
-        "fix_stage": "go-live"
+        "id": "h-unrecoverable",
+        "statement": "Much of the 72% were never going to buy, so 40% is hard to reach by fixes alone.",
+        "test": "Share of started checkouts that never became an abandoned checkout (no email given, so invisible in the abandoned list), and the extra completions needed for 40%.",
+        "confirm_if": "More than half of checkouts started never give an email address.",
+        "refute_if": "Most abandoned checkouts reach the shipping or payment step.",
+        "fix_stage": "measurement"
+      },
+      {
+        "id": "h-figure",
+        "statement": "The 28% figure is distorted by bots, duplicates or a different definition from the one assumed.",
+        "test": "Reconcile completed checkouts to orders; check the definition and bot filtering.",
+        "confirm_if": "Completed checkouts and orders differ by more than 5%, or the definition changed between periods.",
+        "refute_if": "They agree within 5% and the definition is stable.",
+        "fix_stage": "intake"
       }
     ],
     "measurement": {
-      "window": "At least 14 days per change, covering two weekends, compared with the recomputed baseline period.",
-      "min_volume": "Enough started checkouts per period that a 3-point change is larger than week-to-week noise, to be set once the funnel data is in.",
-      "stop_rule": "Stop and roll back a change early only if margin per order, add-to-cart rate or unsubscribes breach their guardrails; otherwise read the full window."
+      "window": "At least 4 weeks after the last change, and 2 weeks per email flow test; compare against the 60 days before and a 10% holdout for email.",
+      "min_volume": "At least 250 checkout starts per compared group to see a 12-point change; below that the verdict is INCONCLUSIVE.",
+      "stop_rule": "Stop and undo a change at once if margin per order falls, add-to-cart rate drops 1 point or more, or payment failures rise; otherwise run the full window."
     }
   }
 }

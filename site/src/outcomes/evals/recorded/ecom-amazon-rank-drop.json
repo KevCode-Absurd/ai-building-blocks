@@ -1,148 +1,159 @@
 {
   "case": "ecom-amazon-rank-drop",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
+  "host": "claude-sonnet-5-5 (Claude Code subagent)",
+  "recorded": "2026-11-03",
+  "method_version": 3,
   "brief": {
-    "outcome": "Get the garlic press back onto page one for \"garlic press\" on Amazon US and daily units from about 30 back up to 55 or more within six weeks, without raising Sponsored Products spend above $120 a day.",
-    "deliverable": "A diagnosis of why the listing lost its rank, a chosen set of listing and ad changes prepared for the owner to apply in Seller Central one at a time, and a weekly readout of units, rank and ad spend against the goal.",
+    "outcome": "Get the garlic press back to 55 or more units a day on Amazon US within six weeks of approval, by finding out why it fell off page one and fixing the causes, with Sponsored Products spend kept at or under $120 a day.",
+    "ambition": {
+      "goal_beyond": "The garlic press stays on page one and selling steadily, and a change to the listing can no longer quietly halve sales for three weeks before anyone notices.",
+      "rungs": [
+        "Find what pushed the listing off page one and fix the biggest cause",
+        "Find the decisions behind the drop (the image change, the review, the ad set-up) by changing one thing at a time, and win back 55+ units a day",
+        "Keep it true: a weekly check of units, unit session percentage, ad cost per unit and search position that flags a slide inside a week, not three"
+      ],
+      "chosen": 2,
+      "judge": "Seller Central business report units per day and unit session percentage for the same ASIN, compared with the three weeks before the drop; plus search position for 'garlic press' checked by the owner in a logged-out browser window"
+    },
+    "deliverable": "A diagnosed drop with every cause tested, the chosen listing and ad fixes prepared and applied by the owner one at a time, and a weekly readout of units per day against the target",
     "done": [
-      "The drop confirmed and dated, and what changed before it lined up on one timeline",
-      "Every cause hypothesis, including the main image change and the 1-star review, marked supported, refuted or unknown with evidence",
-      "Owner has chosen the fixes, with reasons recorded",
-      "Listing and ad changes prepared and checked",
-      "Each change applied by the owner, one at a time, with its date logged",
-      "Units a day, keyword rank and ad spend read back against 55 units and $120",
-      "Learnings saved"
+      "Daily units, sessions, unit session percentage and Buy Box share lined up in one dataset with a dated change log",
+      "Every cause tested and marked supported, refuted or unknown, with the numbers",
+      "Owner chose the fixes and the reason is recorded",
+      "Chosen listing and ad changes prepared, reviewed and applied one at a time with the date logged",
+      "Six weeks read weekly against 55 units a day and the $120 ad ceiling",
+      "Learnings and a weekly watch rule saved"
     ],
     "metric": {
-      "name": "Daily units sold of the garlic press",
+      "name": "Units ordered per day (garlic press)",
       "direction": "increase",
-      "unit": "units per day",
+      "unit": "units a day",
       "baseline": 30,
       "baseline_source": "reported",
       "target": 55
     },
-    "deadline": "Six weeks from the start of work",
+    "deadline": "Six weeks from the day the owner approves the plan",
     "guardrails": [
-      "Sponsored Products spend stays at or below $120 a day",
-      "Profit per unit after Amazon fees stays positive",
-      "Nothing that breaks Amazon policy: no review incentives or manipulation, and the main image meets Amazon's image rules"
+      "Sponsored Products spend stays at or under $120 a day",
+      "Review rating does not fall below the current 4.4",
+      "No incentivised or solicited-for-positive reviews and no listing change that breaks Amazon listing or image rules"
     ],
     "limits": [
-      "Ad spend may not go above $120 a day (it is $90 now)",
-      "Access is Seller Central CSV exports only, so changes are prepared for the owner to make; the owner can make listing changes",
-      "The rating of 4.4 from 2,100 reviews is a fact to work with, not something we change"
+      "Ad spend ceiling $120 a day (now $90)",
+      "The owner makes every listing and ad change in Seller Central; we prepare them and never log in",
+      "Working data stays in this project",
+      "One change at a time so its effect can be told apart"
     ],
     "assets": [
-      "Seller Central business report showing 60 units a day falling to 30 over three weeks",
-      "The main image from before the change, if the owner still has it",
-      "Sponsored Products campaigns at $90 a day"
+      "Seller Central business report and Sponsored Products report CSV exports",
+      "The main image used before the change two weeks before the drop (owner to supply)",
+      "The 1-star review with photos (owner to supply the text and photos)"
     ],
     "connections": [
       {
         "name": "Seller Central CSV exports",
         "access": "read",
+        "status": "connected"
+      },
+      {
+        "name": "Seller Central listing and ad changes (made by the owner)",
+        "access": "draft",
         "status": "available"
       }
     ],
-    "data_home": "Files in this project",
-    "technical_level": "Not stated; the owner makes listing changes personally",
+    "data_home": "CSV files and a change log in this project (the owner asked to keep data here)",
+    "technical_level": "Not stated; the owner makes the listing changes personally, so hand over ready-to-apply steps in plain words",
     "decides": "The owner",
     "unknowns": [
-      "Whether the main image change, the 1-star review or something else caused the rank and sales drop",
-      "The date the rank fell off page one and how the rank moved day by day",
-      "Click-through and conversion rate before and after the image change",
-      "Price, coupon, stock or Featured Offer (Buy Box) changes around the drop",
-      "Whether the listing is suppressed or has an account health issue",
-      "What competitors did, and whether the category as a whole fell",
-      "Sponsored Products results: cost per sale, search terms and whether \"garlic press\" is being defended",
-      "Margin per unit after fees",
-      "Whether the owner is enrolled in Brand Registry, which Amazon's listing experiments need"
+      "Whether the drop was caused by the main image change, the 1-star review, ad changes, a competitor or the season; this is what the diagnosis tests",
+      "Whether the brand is in Amazon Brand Registry, which decides if Manage Your Experiments image tests are available",
+      "What the old and new main images look like and the exact date of the change",
+      "Price, Buy Box share and stock history over the three weeks",
+      "Profit per unit and break-even ad cost",
+      "Whether the Sponsored Products search term and placement reports can be exported, and how the $90 a day is split across campaigns",
+      "Whether the current position of about 4 for 'garlic press' was checked on organic results only or included ads"
     ],
     "answers": [
       {
-        "question": "What is the product and where does it sell?",
-        "answer": "A garlic press from a kitchen gadget brand, selling on Amazon US"
+        "question": "What is the product, and where did it rank?",
+        "answer": "Kitchen gadget brand, garlic press on Amazon US; ranked around position 4 for 'garlic press', now on page two"
       },
       {
-        "question": "What happened to rank?",
-        "answer": "It ranked around position 4 for \"garlic press\" and now sits on page two"
+        "question": "How big is the drop and where does the number come from?",
+        "answer": "Daily units from about 60 to 30 over three weeks (Seller Central business report, reported by the owner)"
       },
       {
-        "question": "What happened to sales?",
-        "answer": "Daily units went from about 60 to 30 over three weeks (Seller Central business report, reported by the owner)"
+        "question": "What changed around the drop?",
+        "answer": "Rating 4.4 from 2,100 reviews; a 1-star review with photos appeared about a month ago; the main image was changed two weeks before the drop"
       },
       {
-        "question": "What is the rating?",
-        "answer": "4.4 from 2,100 reviews; a 1-star review with photos appeared about a month ago"
+        "question": "Ad spend and access?",
+        "answer": "Sponsored Products $90 a day; Seller Central CSV exports only; the owner can make listing changes"
       },
       {
-        "question": "What changed on the listing?",
-        "answer": "The main image was changed two weeks before the drop"
-      },
-      {
-        "question": "What do you spend on ads?",
-        "answer": "Sponsored Products spend is $90 a day"
-      },
-      {
-        "question": "What access do you give us?",
-        "answer": "Seller Central CSV exports only; the owner can make listing changes"
-      },
-      {
-        "question": "What is the goal?",
-        "answer": "55 or more units a day within six weeks without raising ad spend above $120 a day"
-      },
-      {
-        "question": "Where should data live and who decides?",
-        "answer": "Keep data here; the owner decides"
+        "question": "Target, deadline, limits?",
+        "answer": "55 or more units a day within six weeks, ad spend not above $120 a day, data kept in the project, the owner decides"
       }
     ]
   },
   "research": {
-    "approach": "Practitioners treat an Amazon rank drop as a diagnosis problem before any fix. They first verify the drop and date it (a cliff points to a stock-out or suppression, a slow slide to decay), then check the account and listing for suppression, the Featured Offer (Buy Box), stock and price changes. They line up every listing edit, including image and keyword changes, against the drop date, split the loss into traffic versus conversion, and look at competitors and ads. Only then do they change one thing at a time, defend the main keyword with ads within a cap, and give a recovery weeks to show, because rank returns slowly. Main image tests need enough traffic and run for weeks, so a quick revert and a slow test cannot both happen in the same window.",
+    "approach": "Practitioners split a sales drop before they explain it: they put daily sessions, unit session percentage (units divided by sessions) and Buy Box share side by side and ask whether fewer people arrived or fewer arrived people bought. Amazon does not publish how organic rank is computed, so they treat rank as a result of sales and conversion and read it from their own numbers rather than from blog rules of thumb. They line up every change on a dated log (image, price, review, bids, stock), read the ad reports for waste and cost rise, fix one thing at a time, and test image changes against the old one before keeping them.",
     "sources": [
       {
-        "id": "web-sellersprite",
+        "id": "web-sp-best",
         "kind": "web",
-        "title": "SellerSprite: Diagnosing a sudden drop in keyword ranking",
-        "ref": "https://www.sellersprite.com/en/blog/diagnosing-a-sudden-drop-in-keyword-ranking",
-        "date": "2026-06-26",
-        "note": "Ordered diagnosis: verify the drop and its shape, check inventory, price and promotions, competitors, then listing changes including main image changes and click-through. Warns against abruptly pausing ads. Tool vendor blog."
+        "title": "Best practices for your Sponsored Products ads (Amazon Ads)",
+        "ref": "https://advertising.amazon.com/library/guides/sponsored-products-best-practices",
+        "date": null,
+        "note": "Page shows no date; accessed 2026-11-03. Platform guide; page shows no publish date, read 2026-11-03. Check metrics at least twice a week early on; with low ROAS review the search term report and add negatives; with low sales audit the advertised products and detail pages."
       },
       {
-        "id": "web-bellavix",
+        "id": "web-sp-targeting",
         "kind": "web",
-        "title": "Bellavix: Amazon sales drop, how to diagnose and recover lost sales",
-        "ref": "https://www.bellavix.com/amazon-sales-drop-how-to-diagnose-and-recover-lost-sales/",
-        "date": "2026-04-30",
-        "note": "Diagnostic order: market demand, account health and suppression, traffic, conversion (price, listing, negative reviews), inventory and Featured Offer; recovery steps including ads and stock-outs. Agency blog."
+        "title": "A guide to targeting with Sponsored Products (Amazon Ads)",
+        "ref": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products",
+        "date": null,
+        "note": "Page shows no date; accessed 2026-11-03. Platform guide; undated, read 2026-11-03. Advice to collect about 20 clicks on a term before negating it and to use phrase or exact negatives."
       },
       {
-        "id": "web-sellerlabs-mye",
+        "id": "web-mye",
         "kind": "web",
-        "title": "Seller Labs: Manage Your Experiments, A/B testing listings the right way",
-        "ref": "https://www.sellerlabs.com/knowledge-base/manage-your-experiments-a-b-testing-listings-the-right-way/",
-        "date": "2026-08",
-        "note": "Main image tests need Brand Registry and enough traffic, change one thing, run 8 to 10 weeks or to significance (at least about four weeks), apply a winner only at about 95% confidence. Vendor knowledge base."
+        "title": "Test listing content with Manage Your Experiments (Sell on Amazon)",
+        "ref": "https://sell.amazon.com/tools/manage-your-experiments",
+        "date": null,
+        "note": "Page shows no date; accessed 2026-11-03. Platform page; undated, read 2026-11-03. Needs a Professional account and an enrolled Brand Registry brand, and enough traffic. Main images can be tested."
       },
       {
-        "id": "cat-sales-drop",
+        "id": "web-biz-reports",
+        "kind": "web",
+        "title": "Seller Central forum: Detail Page Sales and Traffic report",
+        "ref": "https://sellercentral.amazon.com/seller-forums/discussions/t/b724afea594b61f84787029897bff2ac",
+        "date": null,
+        "note": "Page shows no date; accessed 2026-11-03. Seller discussion on Amazon's own forum, undated, read 2026-11-03; treat as practitioner talk, not documentation. Unit session percentage is units over sessions; sellers compare traffic with it to tell fewer visits from fewer buyers."
+      },
+      {
+        "id": "cat-drop",
+        "kind": "catalogue",
+        "title": "Ad performance recovery brief writer",
+        "ref": "sales-drop-diagnosis"
+      },
+      {
+        "id": "cat-splitter",
         "kind": "catalogue",
         "title": "Store sales decline investigator",
         "ref": "store-sales-drop-splitter"
       },
       {
-        "id": "cat-account-keeper",
+        "id": "cat-amazon-keeper",
         "kind": "catalogue",
         "title": "Amazon margins, stock and claim review",
         "ref": "amazon-monthly-account-keeper"
       },
       {
-        "id": "cat-image-test",
+        "id": "cat-spend",
         "kind": "catalogue",
-        "title": "Main image A/B test planner",
-        "ref": "main-image-a-b-test-planner"
+        "title": "Ad spend analyst",
+        "ref": "ad-spend-analyst"
       },
       {
         "id": "owner",
@@ -153,349 +164,237 @@
     ],
     "steps": [
       {
-        "id": "s-verify",
-        "name": "Verify the drop and date it",
-        "why": "Rank moves a few places naturally. A cliff points to stock or suppression, a slide to decay; whether all keywords fell or one decides where to look.",
-        "sources": [
-          "web-sellersprite",
-          "owner"
-        ]
-      },
-      {
         "id": "s-timeline",
-        "name": "Put every change on one timeline against the drop date",
-        "why": "The main image change, price and coupon changes, stock-outs, the 1-star review and ad changes all sit near the drop. Without dates, the wrong one gets blamed.",
+        "name": "Build the dated timeline and pull the raw reports",
+        "why": "A drop only has a cause if it can be lined up with a dated change; the daily reports are the raw material, not the owner's summary.",
         "sources": [
-          "web-sellersprite",
-          "web-bellavix",
+          "web-biz-reports",
+          "cat-amazon-keeper",
           "owner"
-        ]
-      },
-      {
-        "id": "s-health",
-        "name": "Check suppression, Featured Offer and account health",
-        "why": "A suppressed listing or lost Buy Box is a same-day fix and explains a cliff. It must be ruled out before looking at content.",
-        "sources": [
-          "web-bellavix",
-          "web-sellersprite"
         ]
       },
       {
         "id": "s-split",
-        "name": "Split the loss into traffic and conversion",
-        "why": "Fewer sessions means rank and visibility; fewer purchases per session means price, listing or reviews. The fix differs.",
+        "name": "Split the drop into visits, buying rate and offer health",
+        "why": "Fewer sessions, a lower unit session percentage and a lost Buy Box need different fixes.",
         "sources": [
-          "web-bellavix",
-          "cat-sales-drop"
+          "web-biz-reports",
+          "cat-splitter",
+          "web-sp-best"
         ]
       },
       {
-        "id": "s-compete",
-        "name": "Read competitors, reviews and ads",
-        "why": "A competitor with heavy ads or a lower price can take the slot; a damaging photo review hits conversion; ads show whether the main keyword is still defended.",
+        "id": "s-ads",
+        "name": "Read the ad reports for waste and cost rise",
+        "why": "The ads carry about a third of the visits and rank follows sales; wasted spend and rising cost per click show up in the search term and placement reports.",
         "sources": [
-          "web-sellersprite",
-          "web-bellavix",
-          "cat-account-keeper"
+          "web-sp-best",
+          "web-sp-targeting",
+          "cat-spend"
+        ]
+      },
+      {
+        "id": "s-diagnose",
+        "name": "Test each cause against the numbers",
+        "why": "The image, the review, the ads, competitors and season can all act together; keep competing explanations until the numbers separate them.",
+        "sources": [
+          "cat-drop",
+          "cat-splitter"
         ]
       },
       {
         "id": "s-fix",
-        "name": "Fix one cause at a time and defend the keyword within the cap",
-        "why": "Several simultaneous changes cannot be attributed. Ads on the main keyword help rank recover but must stay under the $120 cap and be wound down gradually.",
+        "name": "Change one thing at a time and test image changes against the old image",
+        "why": "Two changes at once make the result unreadable; an image test against the old one shows whether the change cost clicks.",
         "sources": [
-          "web-sellersprite",
-          "web-bellavix",
-          "web-sellerlabs-mye"
+          "web-mye",
+          "web-sp-best"
         ]
       },
       {
-        "id": "s-image",
-        "name": "Decide whether to revert the main image or test it",
-        "why": "A main image test needs weeks and traffic; with six weeks to recover, a revert is quicker, a test is cleaner. The owner chooses and the date is logged.",
+        "id": "s-measure",
+        "name": "Read weekly against the target and the ceiling",
+        "why": "Early checks at least twice a week and a weekly readout catch a slide or a spend breach before it costs weeks.",
         "sources": [
-          "web-sellerlabs-mye",
-          "cat-image-test",
-          "web-sellersprite"
-        ]
-      },
-      {
-        "id": "s-read",
-        "name": "Read recovery weekly against rank, units and spend",
-        "why": "Rank returns over one to several weeks. A weekly read on the same definitions shows whether a change worked or something else moved.",
-        "sources": [
-          "web-sellersprite",
-          "web-bellavix"
+          "web-sp-best",
+          "web-mye"
         ]
       }
     ],
     "pitfalls": [
       {
-        "text": "Blaming the main image or the 1-star review because they are visible, without checking stock, price and Buy Box on the drop date.",
+        "text": "Treating blog 'A10' weightings as fact; Amazon does not publish how rank is computed, so read rank from your own sales and conversion data.",
         "sources": [
-          "web-sellersprite",
-          "web-bellavix"
+          "web-biz-reports"
         ]
       },
       {
-        "text": "Changing the image, title and ads together so the result cannot be attributed.",
+        "text": "Raising ad spend to buy rank back before the conversion problem is found, which wastes money if the page converts worse than before.",
         "sources": [
-          "web-sellersprite",
-          "web-sellerlabs-mye"
+          "web-sp-best"
         ]
       },
       {
-        "text": "Pausing or cutting ads abruptly, which lowers sales velocity and can deepen the rank loss.",
+        "text": "Negating or pausing search terms on too few clicks.",
         "sources": [
-          "web-sellersprite"
+          "web-sp-targeting"
         ]
       },
       {
-        "text": "Ending a main image test early because early results look good, or applying a low-confidence result.",
+        "text": "Changing the image, title and ads in the same week, so nobody can say which change helped.",
         "sources": [
-          "web-sellerlabs-mye"
-        ]
-      },
-      {
-        "text": "Trying to remove or incentivise reviews in ways that break Amazon policy and risk suppression.",
-        "sources": [
-          "web-bellavix",
-          "owner"
+          "web-mye"
         ]
       }
     ]
   },
   "plan": {
-    "name": "Find why the garlic press lost page one and win it back inside the ad cap",
+    "name": "Win back page one for the garlic press",
     "capabilities": [
       {
-        "id": "amazon-files",
+        "id": "exports-read",
         "access": "read",
         "via": "file",
         "name": "Read Seller Central CSV exports",
-        "why": "Read business reports, advertising reports, inventory and listing history exports the owner downloads."
-      },
-      {
-        "id": "listing-view",
-        "access": "read",
-        "via": "browser",
-        "name": "View the public listing and top competitor listings (browser)",
-        "why": "See the page as a shopper does: current main image, price, rating, review photos, and the page-one competitors. We read what is shown and do not bulk-collect reviews."
+        "why": "Business report and Sponsored Products reports dropped into the project folder by the owner."
       },
       {
         "id": "owner-apply",
-        "access": "live",
+        "access": "draft",
         "via": "owner",
-        "name": "Owner makes each change in Seller Central",
-        "why": "We have export access only, so the owner changes the listing and ad campaigns one at a time and tells us the date and what was changed."
+        "name": "Owner applies listing and ad changes in Seller Central",
+        "why": "We prepare the exact changes; the owner makes them and logs the date."
       }
     ],
     "data": [
       {
-        "id": "business-reports",
-        "name": "Daily sales and traffic by day",
-        "why": "Splits the loss into sessions and conversion and gives the exact drop date.",
+        "id": "daily-traffic",
+        "name": "Daily sales and traffic for the garlic press",
+        "why": "The base for splitting the drop into visits and buying rate and for the weekly readout.",
         "fields": [
           "date",
           "sessions",
           "page views",
           "units ordered",
           "unit session percentage",
-          "Featured Offer (Buy Box) percentage",
+          "featured offer (Buy Box) percentage",
           "ordered product sales"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Seller Central, Reports, Business Reports, Detail Page Sales and Traffic by child item: daily, last 90 days, export as CSV."
+            "how": "Seller Central, Reports, Business Reports, Detail Page Sales and Traffic by child item; export the 12 weeks before today; if daily rows are not offered, export one date range per week."
           }
         ],
         "required_for": [
           "evidence",
-          "integrity-timeline",
+          "integrity-offer",
           "diagnosis",
           "measurement"
-        ]
+        ],
+        "alternative": "Weekly totals only: the split into visits and buying rate still works but timing against the image change and the review stays low-confidence."
       },
       {
         "id": "ad-reports",
         "name": "Sponsored Products reports",
-        "why": "Shows whether the main keyword is defended, the cost per sale, and wasted search terms.",
+        "why": "Shows ad spend, clicks, orders, wasted search terms and cost per click for the same weeks.",
         "fields": [
           "date",
           "campaign",
-          "ad group",
-          "targeting",
-          "match type",
           "search term",
+          "placement",
           "impressions",
           "clicks",
           "spend",
           "orders",
-          "sales"
+          "ad sales"
         ],
         "routes": [
           {
             "kind": "CSV",
-            "how": "Advertising console, Reports: Sponsored Products campaign, targeting and search term reports, daily, last 90 days, export as CSV."
+            "how": "Amazon Ads console, Reports; export search term, targeting, placement and campaign over time for the same 12 weeks."
           }
         ],
         "required_for": [
           "evidence",
-          "diagnosis",
-          "ad-changes",
-          "measurement"
-        ]
+          "diagnosis"
+        ],
+        "alternative": "Campaign totals only: ad spend and cost per unit can be read but waste by search term stays unknown."
       },
       {
-        "id": "change-history",
-        "name": "What changed and when",
-        "why": "Dates for the main image change, any other listing edits, price and coupon changes, stock-outs and inbound stock.",
+        "id": "change-log",
+        "name": "Dated change log and listing evidence",
+        "why": "Every cause test needs the date of the change it blames.",
         "fields": [
           "date",
-          "change type",
+          "what changed",
           "old value",
           "new value",
-          "source"
+          "screenshot or file"
         ],
         "routes": [
           {
             "kind": "ASK",
-            "how": "Ask the owner for the exact date of the main image change, other listing edits, price or coupon changes, and the old image file."
-          },
-          {
-            "kind": "CSV",
-            "how": "Seller Central, Reports, FBA inventory and Manage All Inventory: export stock levels and any stock-out or suppressed status."
+            "how": "Owner lists the main image change date, the 1-star review date, any price, title, bid or budget change and any stock-out; supplies the old and new main images and the review text."
           }
         ],
         "required_for": [
           "evidence",
-          "integrity-timeline",
-          "integrity-listing",
-          "diagnosis"
-        ],
-        "alternative": "Without exact dates, the main image hypothesis stays UNKNOWN and the revert-or-test choice is made on weaker evidence."
-      },
-      {
-        "id": "rank-and-competitors",
-        "name": "Keyword rank and competitor snapshot",
-        "why": "Dates the rank fall and shows who took the page-one slots and at what price and review count.",
-        "fields": [
-          "date",
-          "keyword",
-          "rank",
-          "competitor",
-          "competitor price",
-          "competitor rating",
-          "competitor review count",
-          "competitor main image"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "Ask the owner for any rank history they or a tool they use hold, or to record the rank for \"garlic press\" by hand each day from now."
-          },
-          {
-            "kind": "URL",
-            "how": "View the public page-one results and the top five competitor listings now and note price, rating, review count and main image."
-          }
-        ],
-        "required_for": [
-          "integrity-timeline",
-          "diagnosis",
-          "measurement"
-        ],
-        "alternative": "Without rank history, the drop is dated from organic sessions and units in the business report."
-      },
-      {
-        "id": "reviews",
-        "name": "The 1-star review and recent review trend",
-        "why": "Shows whether the photos describe a real product fault and how the review count and rating moved after it.",
-        "fields": [
-          "review date",
-          "stars",
-          "review text",
-          "has photos",
-          "helpful votes",
-          "verified purchase"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "Ask the owner to paste the 1-star review text and describe the photos, and the review count and rating a month ago."
-          },
-          {
-            "kind": "URL",
-            "how": "View the review on the public listing."
-          }
-        ],
-        "required_for": [
           "diagnosis"
         ]
       },
       {
-        "id": "unit-economics",
-        "name": "Price, cost and Amazon fees per unit",
-        "why": "Profit per unit sets how much ad cost per sale is affordable inside the $120 cap.",
+        "id": "rank-checks",
+        "name": "Search position checks",
+        "why": "Rank is not in the exports; this is the outside check that the listing is back on page one.",
         "fields": [
-          "price",
-          "landed unit cost",
-          "referral fee",
-          "fulfilment fee",
-          "storage",
-          "return rate"
+          "date",
+          "search phrase",
+          "organic position",
+          "sponsored position",
+          "page"
         ],
         "routes": [
           {
-            "kind": "CSV",
-            "how": "Seller Central, Reports, Fee Preview, export as CSV."
-          },
-          {
             "kind": "ASK",
-            "how": "Ask the owner for landed unit cost."
+            "how": "Owner searches 'garlic press' in a logged-out browser window on Amazon US and notes the page and organic position of the listing, at the start and then weekly."
           }
         ],
         "required_for": [
-          "options",
-          "ad-changes"
+          "diagnosis",
+          "measurement"
         ],
-        "alternative": "Without unit cost, ad cost per sale is capped by the daily $120 limit only and profit stays unchecked."
+        "alternative": "Without position checks the readout reports units and conversion only and says rank is unchecked."
       }
     ],
     "stages": [
       {
         "id": "intake",
         "kind": "intake",
-        "name": "Pin down the problem",
+        "name": "Pin down the drop",
         "goal": "Turn the owner's words into a measured problem, a target, limits and the data we can reach. Writes BRIEF.md.",
-        "from_steps": [],
         "owner": {
           "role": "amazon-monthly-account-keeper"
         },
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": []
       },
       {
         "id": "evidence",
         "kind": "evidence",
-        "name": "Gather the sales, traffic, ads and change history",
-        "goal": "Pull 90 days of daily sales and traffic, Sponsored Products reports, inventory and listing history, the 1-star review and a competitor snapshot into CSV files in the project.",
-        "from_steps": [
-          "s-verify"
-        ],
+        "name": "Line up the daily numbers and the change log",
+        "goal": "Put daily traffic, sales, Buy Box share, ad spend and the dated changes into one dataset in this project, from the raw exports.",
         "owner": {
           "role": "amazon-monthly-account-keeper"
         },
-        "uses": [
-          "ad-sales-drop-analyst"
-        ],
         "data": [
-          "business-reports",
+          "daily-traffic",
           "ad-reports",
-          "change-history"
+          "change-log"
         ],
         "needs": [
-          "amazon-files",
-          "listing-view"
+          "exports-read"
         ],
         "depends_on": [
           "intake"
@@ -508,171 +407,111 @@
             "path": "evidence/dataset.csv"
           },
           {
-            "id": "evidence-notes",
-            "name": "What was pulled and how",
+            "id": "timeline",
+            "name": "Dated timeline of changes and drop",
             "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
+            "path": "evidence/TIMELINE.md"
           }
         ],
         "checks": [
           {
-            "id": "periods",
-            "name": "Covers at least 30 days before the drop and the weeks since",
-            "required": true
-          },
-          {
             "id": "totals",
-            "name": "Daily units match the 60 to 30 the owner reported, or the difference is explained",
+            "name": "Units and ad spend totals in the dataset match the exports within 1%",
             "required": true
           },
           {
-            "id": "gaps",
-            "name": "Missing items (rank history, change dates, unit cost) are listed rather than assumed",
+            "id": "periods",
+            "name": "At least three weeks before the drop and the three weeks of the drop are present, or the gap is stated",
+            "required": true
+          },
+          {
+            "id": "baseline",
+            "name": "The reported 60 and 30 units a day are re-computed from the daily rows and the difference is stated",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "integrity-timeline",
-        "kind": "integrity",
-        "name": "Verify the drop and build the timeline",
-        "goal": "Confirm the drop is real, find its date and shape (cliff or slide, one keyword or all), and put the image change, price, coupon, stock, review, competitor and ad events on one dated timeline.",
+        "gate": "none",
         "from_steps": [
-          "s-verify",
           "s-timeline"
         ],
-        "owner": {
-          "role": "weekly-store-numbers-watcher"
-        },
         "uses": [
           "store-sales-drop-splitter"
-        ],
+        ]
+      },
+      {
+        "id": "integrity-offer",
+        "kind": "integrity",
+        "name": "Check the offer itself is healthy",
+        "goal": "Rule out the non-marketing causes first: lost Buy Box, price move, stock gap, listing suppressed, and ads or data that do not line up.",
+        "owner": {
+          "role": "amazon-monthly-account-keeper"
+        },
         "data": [
-          "business-reports",
-          "change-history",
-          "rank-and-competitors"
+          "daily-traffic",
+          "ad-reports",
+          "rank-checks"
         ],
         "needs": [
-          "amazon-files"
+          "exports-read"
         ],
         "depends_on": [
           "evidence"
         ],
         "outputs": [
           {
-            "id": "timeline",
-            "name": "Drop verification and timeline",
+            "id": "offer-check",
+            "name": "Offer health check",
             "format": "markdown",
-            "path": "integrity/TIMELINE.md"
+            "path": "integrity/OFFER-CHECK.md"
           }
         ],
         "checks": [
           {
-            "id": "date",
-            "name": "The drop date is found from organic sessions and units, and from rank history if there is any",
+            "id": "buybox",
+            "name": "Buy Box share is reported for every week; any week under 90% is flagged with the price and stock for that week",
             "required": true
           },
           {
-            "id": "events",
-            "name": "Every change near the drop has a date and a source, or is marked unknown",
+            "id": "ad-vs-total",
+            "name": "Ad-attributed orders are no more than total orders on any day, or the gap is explained",
             "required": true
           },
           {
-            "id": "split",
-            "name": "The loss is split into sessions versus conversion, before and after the drop",
+            "id": "visible",
+            "name": "The listing is confirmed searchable for 'garlic press' (owner check) and not marked suppressed, or marked unchecked",
             "required": true
           },
           {
             "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
+            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for the diagnosis",
             "required": true
           }
         ],
-        "gate": "none"
-      },
-      {
-        "id": "integrity-listing",
-        "kind": "integrity",
-        "name": "Check the listing is healthy and eligible",
-        "goal": "Rule out suppression, lost Featured Offer, stock-outs, account health issues and a non-compliant main image, so content causes are only blamed when these are clear.",
+        "gate": "none",
         "from_steps": [
-          "s-health"
+          "s-split"
         ],
-        "owner": {
-          "role": "amazon-monthly-account-keeper"
-        },
         "uses": [
           "amazon-fee-and-margin-checker"
-        ],
-        "data": [
-          "change-history",
-          "business-reports"
-        ],
-        "needs": [
-          "amazon-files",
-          "listing-view"
-        ],
-        "depends_on": [
-          "evidence"
-        ],
-        "outputs": [
-          {
-            "id": "listing-health",
-            "name": "Listing health check",
-            "format": "markdown",
-            "path": "integrity/LISTING-HEALTH.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "suppression",
-            "name": "Suppressed status, account health and policy notices are checked or marked not seen",
-            "required": true
-          },
-          {
-            "id": "featured-offer",
-            "name": "Featured Offer percentage and stock are compared with the drop date",
-            "required": true
-          },
-          {
-            "id": "image-rules",
-            "name": "The current main image is checked against Amazon's main image rules",
-            "required": true
-          }
-        ],
-        "gate": "none"
+        ]
       },
       {
         "id": "diagnosis",
         "kind": "diagnosis",
-        "name": "Find what is driving the rank and sales loss",
-        "goal": "Test each hypothesis against the timeline, traffic and conversion split, competitors, review and ad data. Keep competing explanations; the main image and the 1-star review are tested, not assumed.",
-        "from_steps": [
-          "s-split",
-          "s-compete"
-        ],
+        "name": "Find what pushed the listing down",
+        "goal": "Split the drop into visits, buying rate and ad contribution, then test each hypothesis against the dated log. Keep competing explanations.",
         "owner": {
           "role": "amazon-monthly-account-keeper"
         },
-        "support": [
-          "media-buyer"
-        ],
-        "uses": [
-          "ad-sales-drop-analyst",
-          "feedback-theme-finder",
-          "amazon-product-edge-finder"
-        ],
         "data": [
-          "business-reports",
+          "daily-traffic",
           "ad-reports",
-          "rank-and-competitors",
-          "reviews",
-          "change-history"
+          "change-log",
+          "rank-checks"
         ],
         "depends_on": [
-          "integrity-timeline",
-          "integrity-listing"
+          "evidence",
+          "integrity-offer"
         ],
         "outputs": [
           {
@@ -691,98 +530,96 @@
         "checks": [
           {
             "id": "verdicts",
-            "name": "Every listed hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence",
+            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the numbers behind it",
             "required": true
           },
           {
-            "id": "order",
-            "name": "Each supported cause is shown to have happened before the drop, not only near it",
+            "id": "split-adds-up",
+            "name": "The change in units per day equals the sessions effect plus the unit session percentage effect, within 5%",
             "required": true
           },
           {
             "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
+            "name": "Each main finding names at least one competing explanation",
             "required": true
           },
           {
-            "id": "volume",
-            "name": "Conversion findings meet a minimum number of sessions, or are marked low-confidence",
+            "id": "timing",
+            "name": "A cause is called SUPPORTED only if the step in the data begins within 3 days after the dated change",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-ads",
+          "s-diagnose"
+        ],
+        "support": [
+          "paid-media-auditor"
+        ],
+        "reviewers": [
+          "experiment-readout-desk"
+        ],
+        "uses": [
+          "ad-sales-drop-analyst",
+          "ad-spend-analyst",
+          "search-term-sorter",
+          "sales-drop-diagnosis"
+        ]
       },
       {
         "id": "options",
         "kind": "options",
-        "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked cards: for example revert or test the main image, restore keyword terms, restructure Sponsored Products inside $120 a day, respond to the review. Each card gives expected effect on units, effort, risk and how it will be measured, and what must not be changed together.",
-        "from_steps": [
-          "s-fix",
-          "s-image"
-        ],
+        "name": "Rank the fixes",
+        "goal": "Turn supported findings into a short ranked list of changes, each with expected effect, effort, confidence, risk, what it costs in ad spend and how it will be measured.",
         "owner": {
           "role": "amazon-monthly-account-keeper"
         },
-        "uses": [
-          "amazon-fee-and-margin-checker",
-          "experiment-designer"
-        ],
-        "data": [
-          "unit-economics"
-        ],
         "depends_on": [
           "diagnosis"
         ],
         "outputs": [
           {
             "id": "recommendations",
-            "name": "Recommendation cards",
+            "name": "Ranked fixes",
             "format": "markdown",
             "path": "options/RECOMMENDATIONS.md"
-          },
-          {
-            "id": "recommendations-json",
-            "name": "Recommendation cards as data",
-            "format": "json",
-            "path": "options/recommendations.json"
           }
         ],
         "checks": [
           {
             "id": "evidence",
-            "name": "Every card cites the finding it rests on",
+            "name": "Every option cites the finding it rests on",
             "required": true
           },
           {
             "id": "fields",
-            "name": "Every card has expected direction, effort, confidence, risk and how it will be measured",
+            "name": "Every option has expected effect, effort, confidence, risk and how it will be measured",
             "required": true
           },
           {
-            "id": "cap",
-            "name": "No card needs more than $120 a day in Sponsored Products spend",
+            "id": "ceiling",
+            "name": "Every option keeps total Sponsored Products spend at or under $120 a day",
             "required": true
           },
           {
-            "id": "sequence",
-            "name": "Cards that would confuse each other are sequenced, not bundled, and the six-week window is respected",
-            "required": true
-          },
-          {
-            "id": "policy",
-            "name": "No card incentivises or tries to remove reviews outside Amazon's rules",
+            "id": "one-at-a-time",
+            "name": "Options are sequenced so only one listing change is live at a time",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "sku-ad-money-planner",
+          "experiment-designer"
+        ]
       },
       {
         "id": "decision",
         "kind": "decision",
         "name": "Owner chooses",
-        "goal": "The owner picks card IDs, including whether to revert the main image or test it. Ask for the reason when they pass on a top card; record it as a decision.",
-        "from_steps": [],
+        "goal": "The owner picks the fixes and their order. Ask for the reason when they pass over the top option and record it.",
         "owner": {
           "role": "amazon-monthly-account-keeper"
         },
@@ -792,7 +629,7 @@
         "outputs": [
           {
             "id": "decision",
-            "name": "Chosen plan",
+            "name": "Chosen fixes",
             "format": "markdown",
             "path": "decision/DECISION.md"
           }
@@ -800,194 +637,142 @@
         "checks": [
           {
             "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
+            "name": "Chosen and passed-over options are in decisions.jsonl",
             "required": true
           },
           {
             "id": "rationale",
-            "name": "A reason is recorded wherever the top card was passed over",
+            "name": "A reason is recorded wherever the top option was passed over",
             "required": true
           }
         ],
-        "gate": "approve"
+        "gate": "approve",
+        "from_steps": [],
+        "uses": []
       },
       {
-        "id": "listing-fixes",
+        "id": "fix-pack",
         "kind": "production",
-        "name": "Prepare the listing changes",
-        "goal": "Prepare the chosen listing changes: restore or test the main image, put back any removed high-volume keyword in the title or bullets, and draft a public reply to the 1-star review if the owner chose that. Each change comes with exact steps and the old value for undo.",
-        "from_steps": [
-          "s-fix",
-          "s-image"
-        ],
+        "name": "Prepare the chosen fixes",
+        "goal": "Prepare only the chosen changes: image revert or test plan, listing copy, a reply to the 1-star review, and ad changes (search-term negatives, bids), each as exact steps the owner can apply in Seller Central.",
         "owner": {
-          "role": "launch-an-amazon-product-with-sales-from-day-one"
+          "role": "amazon-monthly-account-keeper"
         },
-        "reviewers": [
-          "creative-evidence-review-agent"
-        ],
-        "uses": [
-          "amazon-listing-writer",
-          "amazon-keyword-picker",
-          "main-image-a-b-test-planner"
-        ],
         "depends_on": [
-          "decision",
-          "integrity-listing"
+          "decision"
         ],
         "outputs": [
           {
-            "id": "listing-changes",
-            "name": "Listing changes",
+            "id": "fix-pack",
+            "name": "Fix pack for review",
             "format": "markdown",
-            "path": "production/LISTING-CHANGES.md"
+            "path": "production/FIX-PACK.md"
+          },
+          {
+            "id": "test-plan",
+            "name": "Order of changes and test plan",
+            "format": "markdown",
+            "path": "production/TEST-PLAN.md"
           }
         ],
         "checks": [
           {
             "id": "scoped",
-            "name": "Only chosen changes are included, one per step, each with the finding it answers",
-            "required": true
-          },
-          {
-            "id": "undo",
-            "name": "The current value of everything changed is saved so it can be put back",
+            "name": "Only chosen changes are included",
             "required": true
           },
           {
             "id": "rules",
-            "name": "The main image and the copy follow Amazon's image and claims rules",
+            "name": "Every listing and image change is checked against Amazon's listing and image rules before the owner sees it",
+            "required": true
+          },
+          {
+            "id": "negatives",
+            "name": "No search term is proposed as a negative with fewer than 20 clicks, unless the owner asked",
+            "required": true
+          },
+          {
+            "id": "steps",
+            "name": "Each change has the exact Seller Central place to make it and how to confirm it saved",
             "required": true
           }
         ],
         "gate": "review",
-        "optional_when": "No listing card was chosen."
-      },
-      {
-        "id": "ad-changes",
-        "kind": "production",
-        "name": "Prepare the Sponsored Products changes",
-        "goal": "Prepare the chosen ad changes within $120 a day: defend \"garlic press\" and its close terms, cut search terms that spend without selling, and move budget between campaigns. Written as steps or a bulk sheet for the owner to apply.",
+        "optional_when": "No listing or ad change was chosen.",
         "from_steps": [
           "s-fix"
         ],
-        "owner": {
-          "role": "media-buyer"
-        },
         "uses": [
+          "amazon-listing-writer",
           "amazon-ppc-launch-builder",
-          "amazon-fee-and-margin-checker"
-        ],
-        "data": [
-          "ad-reports",
-          "unit-economics"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "ad-plan",
-            "name": "Sponsored Products change plan",
-            "format": "markdown",
-            "path": "production/AD-CHANGES.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "cap",
-            "name": "Planned daily spend across all campaigns never exceeds $120",
-            "required": true
-          },
-          {
-            "id": "gradual",
-            "name": "Cuts to existing campaigns are gradual, not an abrupt pause",
-            "required": true
-          },
-          {
-            "id": "stop",
-            "name": "Each change has a stop rule on cost per sale and a date to review",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No ad card was chosen."
+          "public-review-reply-drafter"
+        ]
       },
       {
-        "id": "apply-changes",
+        "id": "apply",
         "kind": "execution",
-        "name": "Owner applies each change, one at a time",
-        "goal": "Register each change as a test with its metric and review date, then hand the owner one change at a time to make in Seller Central. Record the date and what was changed, and check the live listing.",
-        "from_steps": [
-          "s-fix",
-          "s-image"
-        ],
+        "name": "Owner applies the changes one at a time",
+        "goal": "The owner applies each change on its planned date and logs it; register the test before the first change goes live. We never log in to Seller Central.",
         "owner": {
-          "role": "store-test-program-runner"
+          "role": "amazon-monthly-account-keeper"
         },
-        "uses": [
-          "experiment-designer"
-        ],
         "needs": [
-          "owner-apply",
-          "listing-view"
+          "owner-apply"
         ],
         "depends_on": [
-          "listing-fixes",
-          "ad-changes"
+          "fix-pack"
         ],
         "outputs": [
           {
-            "id": "change-log",
-            "name": "Change log with dates",
+            "id": "applied-log",
+            "name": "Applied changes log",
             "format": "markdown",
-            "path": "execution/CHANGE-LOG.md"
+            "path": "execution/APPLIED-LOG.md"
           }
         ],
         "checks": [
           {
             "id": "registered",
-            "name": "Each change is registered with its date, expected effect and review date before it is applied",
+            "name": "Each test is registered in experiments.jsonl with its metric and read date before the change goes live",
             "required": true
           },
           {
-            "id": "one-at-a-time",
-            "name": "Listing changes that could affect the same metric are spaced out",
+            "id": "one-change",
+            "name": "At least 7 days pass between listing changes, or the overlap is recorded",
             "required": true
           },
           {
-            "id": "confirmed",
-            "name": "The owner confirms each change is live and we check the public listing",
+            "id": "dated",
+            "name": "Every change has the date and time the owner made it",
             "required": true
           }
         ],
-        "gate": "approve_each_action"
+        "gate": "none",
+        "from_steps": [
+          "s-fix"
+        ],
+        "uses": [
+          "experiment-designer"
+        ]
       },
       {
         "id": "measurement",
         "kind": "measurement",
-        "name": "Read recovery weekly",
-        "goal": "Each week, read daily units, sessions, conversion, keyword rank, ad spend and cost per sale from fresh exports against the baseline and each registered change, and check the guardrails.",
-        "from_steps": [
-          "s-read"
-        ],
+        "name": "Read the six weeks honestly",
+        "goal": "Each week, read units per day, sessions, unit session percentage, ad spend and search position against the target and the ceiling, and compare with the three weeks before the drop.",
         "owner": {
           "role": "experiment-readout-desk"
         },
-        "uses": [
-          "ad-sales-drop-analyst"
-        ],
         "data": [
-          "business-reports",
+          "daily-traffic",
           "ad-reports",
-          "rank-and-competitors"
+          "rank-checks"
         ],
         "needs": [
-          "amazon-files"
+          "exports-read"
         ],
         "depends_on": [
-          "apply-changes"
+          "apply"
         ],
         "outputs": [
           {
@@ -995,46 +780,60 @@
             "name": "Weekly readout",
             "format": "markdown",
             "path": "measurement/READOUT.md"
+          },
+          {
+            "id": "monitor",
+            "name": "Weekly check prompt",
+            "format": "markdown",
+            "path": "measurement/MONITOR.md"
           }
         ],
         "checks": [
           {
-            "id": "like-for-like",
-            "name": "Weeks are compared on the same definitions and dates, and weekday mix is allowed for",
-            "required": true
-          },
-          {
-            "id": "attribution",
-            "name": "A result is credited to a change only if no other change landed in the same window",
-            "required": true
-          },
-          {
             "id": "guardrails",
-            "name": "Daily ad spend against $120 and profit per unit are checked",
+            "name": "Daily ad spend never above $120 and rating not below 4.4 are checked every week",
+            "required": true
+          },
+          {
+            "id": "like-for-like",
+            "name": "Each change is compared with the 7 days before it and the same weekdays, using the same report definitions",
+            "required": true
+          },
+          {
+            "id": "volume",
+            "name": "A change is called a win only with at least 7 days of data after it; otherwise INCONCLUSIVE",
+            "required": true
+          },
+          {
+            "id": "outside",
+            "name": "Units per day come from the Seller Central report, not from our own estimate, and rank from the owner's logged-out search",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [
+          "s-measure"
+        ],
+        "uses": [
+          "page-test-calculator",
+          "keyed-ad-results-log-keeper"
+        ]
       },
       {
         "id": "learning",
         "kind": "learning",
         "name": "Keep what we learned",
-        "goal": "Close each change with a verdict, record what caused the drop and what recovered it, propose rules for future listing changes, and plan the next round if 55 units a day is not yet reached.",
-        "from_steps": [],
+        "goal": "Close each test, record what moved units, and propose a weekly watch rule so the next slide is caught within a week.",
         "owner": {
-          "role": "experiment-readout-desk"
+          "role": "store-test-program-runner"
         },
-        "uses": [
-          "trial-log-planner"
-        ],
         "depends_on": [
           "measurement"
         ],
         "outputs": [
           {
             "id": "learnings",
-            "name": "Learnings and next round",
+            "name": "Learnings and weekly watch rule",
             "format": "markdown",
             "path": "learning/LEARNINGS.md"
           }
@@ -1042,89 +841,76 @@
         "checks": [
           {
             "id": "closed",
-            "name": "Every applied change has a verdict",
+            "name": "Every registered test is closed in experiments.jsonl",
             "required": true
           },
           {
             "id": "scoped",
-            "name": "Each proposed rule says whether it holds for this product, this brand or Amazon listings in general",
+            "name": "Each proposed rule says whether it holds for this listing, this business or the playbook",
             "required": true
           }
         ],
-        "gate": "none"
+        "gate": "none",
+        "from_steps": [],
+        "uses": [
+          "trial-log-planner"
+        ]
       }
     ],
     "hypotheses": [
       {
-        "id": "h-drop-not-real",
-        "statement": "The rank drop is partly normal movement or a tool artefact, and sales fell for another reason.",
-        "test": "Compare rank history with organic sessions and units by day; check whether all keywords fell or only the main one.",
-        "confirm_if": "Organic sessions held while reported rank moved, or rank fell only after sales fell.",
-        "refute_if": "Rank and organic sessions fell on the same days across keywords.",
-        "fix_stage": "diagnosis"
+        "id": "h-image",
+        "statement": "The new main image lowered clicks or buying, which cut sales and then rank.",
+        "test": "Compare sessions and unit session percentage for 14 days before and 14 days after the image change date, and Sponsored Products click-through rate on the same days.",
+        "confirm_if": "Unit session percentage or ad click-through rate fell by 15% or more (relative) within 3 days of the change and has not recovered.",
+        "refute_if": "Both stay within 5% of their earlier level for at least 7 days after the change.",
+        "fix_stage": "fix-pack"
       },
       {
-        "id": "h-main-image",
-        "statement": "The new main image lowered click-through or conversion and the rank followed.",
-        "test": "Click-through and unit session percentage in the weeks before and after the image change, against the drop date.",
-        "confirm_if": "Click-through or unit session percentage fell within days of the image change and before rank fell.",
-        "refute_if": "Click-through and conversion held after the change and the fall began later for another reason.",
-        "fix_stage": "listing-fixes"
+        "id": "h-review",
+        "statement": "The 1-star review with photos lowered buying, and may point to a product problem.",
+        "test": "Unit session percentage before and after the review date, rating trend, and whether other recent reviews repeat the complaint.",
+        "confirm_if": "A step down of 10% or more (relative) in unit session percentage starts within 7 days of the review, and two or more other reviews repeat the complaint.",
+        "refute_if": "No step at that date, or the drop began more than 14 days before the review.",
+        "fix_stage": "fix-pack"
       },
       {
-        "id": "h-photo-review",
-        "statement": "The 1-star review with photos is putting buyers off and lowering conversion.",
-        "test": "Unit session percentage by day around the review date; what the review and photos show; whether they were shown near the top of the reviews.",
-        "confirm_if": "Conversion fell soon after the review appeared and the review describes a fault buyers can see.",
-        "refute_if": "Conversion did not move when the review appeared.",
-        "fix_stage": "listing-fixes"
+        "id": "h-ads",
+        "statement": "Ad spend is leaking or getting costlier, so it no longer supports sales and rank.",
+        "test": "Cost per click, ad orders and wasted search terms (20 or more clicks, no orders) by week over the 12 weeks.",
+        "confirm_if": "Cost per click rose 20% or more, or wasted terms take more than 25% of spend, while ad orders fell.",
+        "refute_if": "Cost per click is within 10% and ad cost per order is steady.",
+        "fix_stage": "fix-pack"
       },
       {
-        "id": "h-stock-price-buybox",
-        "statement": "A stock-out, price or coupon change, or a lost Featured Offer cut sales and rank.",
-        "test": "Stock logs, price and coupon history and Featured Offer percentage lined up with the drop date.",
-        "confirm_if": "Any of them changed within about 48 hours before the drop.",
-        "refute_if": "Stock, price and Featured Offer were stable through the drop.",
-        "fix_stage": "listing-fixes"
+        "id": "h-offer",
+        "statement": "Price, Buy Box or stock changed and cut sales.",
+        "test": "Weekly Buy Box share, price and stock for the garlic press against the drop.",
+        "confirm_if": "Buy Box share fell below 90% in the weeks of the drop, or stock ran out for 2 or more days.",
+        "refute_if": "Buy Box share stays above 95% and no stock gap.",
+        "fix_stage": "fix-pack"
       },
       {
-        "id": "h-suppression-or-health",
-        "statement": "The listing is suppressed or has an account health or policy issue.",
-        "test": "Suppressed status in inventory, account health page and policy notices; main image compliance.",
-        "confirm_if": "A suppression, notice or non-compliant image is found around the drop date.",
-        "refute_if": "The listing is active with no notices.",
-        "fix_stage": "listing-fixes"
+        "id": "h-traffic",
+        "statement": "Fewer people reached the page (rank, competitors or season), not fewer bought.",
+        "test": "Sessions per day against unit session percentage per day; owner's position checks.",
+        "confirm_if": "Sessions fell 35% or more while unit session percentage moved less than 10%.",
+        "refute_if": "Sessions are within 10% of before and the whole drop comes from unit session percentage.",
+        "fix_stage": "fix-pack"
       },
       {
-        "id": "h-competitor-took-slot",
-        "statement": "A competitor with lower price, heavy ads or more reviews took the page-one slots.",
-        "test": "Compare current page-one competitors' price, rating, review count and image with ours, and when new ones appeared.",
-        "confirm_if": "One or more competitors are cheaper or newly promoted while our metrics held.",
-        "refute_if": "Competitors are unchanged and our own conversion fell.",
-        "fix_stage": "ad-changes"
-      },
-      {
-        "id": "h-ads-not-defending",
-        "statement": "Sponsored Products spend of $90 a day is not defending the main keyword and wastes budget on weak terms.",
-        "test": "Search term and targeting reports: spend and orders on \"garlic press\" and close terms versus terms that spend without selling.",
-        "confirm_if": "The main keyword gets little of the spend, or a large share goes to terms with no orders.",
-        "refute_if": "The main keyword is well covered and efficient.",
-        "fix_stage": "ad-changes"
-      },
-      {
-        "id": "h-category-demand",
-        "statement": "Demand for garlic presses fell across the category, not just for this listing.",
-        "test": "Compare our sessions with competitors' visible movement and, if available, category search volume trend over the same weeks.",
-        "confirm_if": "Competitors and search volume also fell in the same weeks.",
-        "refute_if": "Category demand is steady while ours fell.",
-        "fix_stage": "options"
+        "id": "h-competitor",
+        "statement": "A rival moved above the listing with a lower price, a coupon or a better offer.",
+        "test": "Owner's logged-out search: price, rating, review count and coupon badge of the top five results for 'garlic press' now, compared with the owner's notes from before.",
+        "confirm_if": "Two or more rivals above the listing are cheaper by 10% or more or carry a deal badge, and unit session percentage fell.",
+        "refute_if": "Top results are priced and badged as before.",
+        "fix_stage": "fix-pack"
       }
     ],
-    "dropped": [],
     "measurement": {
-      "window": "Weekly for six weeks from the first change, comparing like-for-like weeks and each registered change's start date.",
-      "min_volume": "Judge conversion only on at least 300 sessions per period; otherwise report INCONCLUSIVE. Daily units are read as a seven-day average.",
-      "stop_rule": "Stop and reverse a change early only if daily ad spend would pass $120, profit per unit turns negative, or the listing is suppressed; otherwise read the full week before judging."
+      "window": "Six weeks from approval, read weekly; compare each change with the 7 days before it and the same weekdays.",
+      "min_volume": "At least 7 days of data after a change before it is called a win; fewer than that is INCONCLUSIVE.",
+      "stop_rule": "Stop and ask the owner if daily Sponsored Products spend goes above $120, if rating falls below 4.4, or if units per day fall more than 15% below the level before the change."
     }
   }
 }

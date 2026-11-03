@@ -1,1067 +1,1094 @@
 {
-  "case": "local-restaurant-reviews",
-  "host": "claude-sonnet-5-5 (Claude Code subagent), plan revised under method v2",
-  "recorded": "2026-11-02",
-  "method_version": 2,
-  "brief": {
-    "outcome": "Win back weekly bookings from about 340 to 400 and lift the Google rating from 4.1 back to 4.4 within three months, by finding and fixing what is behind the slow service and cold food reviews, without ever offering anything in exchange for a review.",
-    "deliverable": "A diagnosis of the review and booking drop, service fixes agreed with the head chef, approved public replies to the recent reviews, and a weekly read of rating and bookings against target.",
-    "done": [
-      "The rating drop and the booking drop are placed on one dated timeline with the August kitchen team change and any menu change",
-      "The 18 recent low reviews are grouped by theme, date and session, and checked for genuineness",
-      "Competing explanations for the booking fall are tested, including whether the new menu is part of it",
-      "The owner and head chef chose the fixes, with reasons recorded",
-      "Public replies to reviews were approved one by one before posting",
-      "Rating and weekly bookings are read against 4.4 and 400 a week, and what was learned is saved"
-    ],
-    "metric": {
-      "name": "Weekly bookings",
-      "direction": "increase",
-      "unit": "bookings per week",
-      "baseline": 340,
-      "baseline_source": "reported",
-      "target": 400
-    },
-    "deadline": "Within three months of starting",
-    "guardrails": [
-      "Nothing is ever offered in exchange for reviews",
-      "Genuine negative reviews are never hidden, deleted or argued with"
-    ],
-    "limits": [
-      "Nothing is posted on the Business Profile without the owner's approval of that reply",
-      "The owner decides together with the head chef"
-    ],
-    "assets": [
-      "Google Business Profile (browser access): rating 4.1, down from 4.5 in two months",
-      "OpenTable booking exports: about 340 a week now, about 420 before (booking system report)",
-      "18 recent one- or two-star reviews that mention slow service and cold food"
-    ],
-    "connections": [
-      {
-        "name": "Google Business Profile (browser)",
-        "access": "live",
-        "status": "available"
-      },
-      {
-        "name": "OpenTable exports",
-        "access": "read",
-        "status": "available"
-      }
-    ],
-    "data_home": "A file in this project (the owner did not choose; we chose this)",
-    "technical_level": "Not stated",
-    "decides": "The owner, together with the head chef",
-    "unknowns": [
-      "Whether the new menu is part of the problem",
-      "Whether OpenTable shows all bookings or only one channel",
-      "When exactly in August the kitchen team changed, and whether the menu changed at the same time",
-      "Whether kitchen ticket times or service times are recorded",
-      "Staffing levels on the busiest sessions",
-      "What the rating and bookings were a year ago, for the same weeks"
-    ],
-    "answers": [
-      {
-        "question": "What kind of business?",
-        "answer": "Italian restaurant, 70 seats, in Melbourne."
-      },
-      {
-        "question": "What happened to reviews?",
-        "answer": "Google rating fell from 4.5 to 4.1 in two months; 18 one- or two-star reviews mention slow service and cold food."
-      },
-      {
-        "question": "What happened to bookings?",
-        "answer": "Weekly bookings fell from about 420 to 340 (booking system report)."
-      },
-      {
-        "question": "What changed?",
-        "answer": "We changed the kitchen team in August."
-      },
-      {
-        "question": "What access do we have?",
-        "answer": "Google Business Profile access through the browser; bookings are in OpenTable exports."
-      },
-      {
-        "question": "What is the target?",
-        "answer": "Rating back to 4.4 and bookings at 400 a week within three months."
-      },
-      {
-        "question": "Limits, who decides, and unknowns?",
-        "answer": "Never offer anything in exchange for reviews. I decide with my head chef. Unknown: whether the new menu is part of it."
-      }
-    ]
+ "case": "local-restaurant-reviews",
+ "host": "claude-sonnet-5-5 (Claude Code subagent)",
+ "recorded": "2026-11-03",
+ "method_version": 3,
+ "brief": {
+  "outcome": "Fix what guests are complaining about (slow service and cold food) so the Google rating returns from 4.1 to 4.4 and weekly bookings return from about 340 to 400 within three months.",
+  "ambition": {
+   "goal_beyond": "Guests who leave happy and say so, so the rating and bookings hold without the restaurant having to chase them",
+   "rungs": [
+    "Reply to the recent bad reviews and invite more guests to review",
+    "Find what changed since the August kitchen change that makes service slow and food cold, and fix that cause with the head chef",
+    "Keep it true: a weekly check of new reviews by theme and of service timing that flags a slide before it shows in the rating"
+   ],
+   "chosen": 2,
+   "judge": "New Google reviews by week (stars and counted themes) and the OpenTable weekly bookings report, read against the 4.1 rating and 340 weekly bookings now and the 4.5 and 420 before"
   },
-  "research": {
-    "approach": "Practitioners recover a restaurant rating by fixing the cause and then answering honestly, not by chasing new reviews. They log every complaint by theme and date, line it up against what changed in the kitchen, staffing and menu, fix the most frequent cause first, and reply to each review quickly, acknowledging the problem, saying what changed and moving detail to a private channel. Reviews are asked of guests in a neutral way, never for a reward, because Google can restrict a profile for fake or incentivised engagement and Australian consumer law treats fake or hidden reviews as misleading. Results lag the fix, so they track rating and bookings weekly rather than expecting an instant swing.",
+  "deliverable": "A dated list of what guests complain about and when it started, a service and kitchen plan agreed with the head chef, checked review replies posted with the owner's approval, an honest review invitation routine, and a weekly readout of the rating and bookings",
+  "done": [
+   "Reviews and bookings loaded for the last 12 months, with the complaint dates lined up against the August kitchen change",
+   "Booking path and review feed checked, with unfair or off-topic reviews separated out",
+   "Diagnosis with every hypothesis marked supported, refuted or unknown, including the new menu",
+   "Owner and head chef choice recorded",
+   "Service plan, review replies and review invitation routine built and checked",
+   "Replies posted and routine started only with approval",
+   "Weekly readout of rating and bookings against 4.4 and 400"
+  ],
+  "metric": {
+   "name": "Weekly bookings",
+   "direction": "increase",
+   "unit": "bookings per week",
+   "baseline": 340,
+   "baseline_source": "reported",
+   "target": 400
+  },
+  "deadline": "Three months from approval",
+  "guardrails": [
+   "Nothing is offered to anyone in exchange for a review, or for changing or removing one",
+   "Every guest is invited to review, not only guests who seemed happy",
+   "Food safety and hot-holding standards are not relaxed to speed up service",
+   "Google rating target is 4.4 and it must not fall below 4.1 during the work",
+   "Covers booked per time slot stay within what the kitchen can send out on time"
+  ],
+  "limits": [
+   "Never offer anything in exchange for reviews",
+   "Google Business Profile is reached through the browser; bookings come as OpenTable exports",
+   "Kitchen and menu changes are decided by the owner with the head chef",
+   "Replies and any post to Google are approved by the owner first"
+  ],
+  "assets": [
+   "Google Business Profile with the recent reviews",
+   "OpenTable booking exports",
+   "Head chef's knowledge of the August kitchen change and the new menu"
+  ],
+  "connections": [
+   {
+    "name": "Google Business Profile (browser)",
+    "access": "live",
+    "status": "connected"
+   },
+   {
+    "name": "OpenTable exports",
+    "access": "read",
+    "status": "connected"
+   },
+   {
+    "name": "Kitchen or point-of-sale timing data",
+    "access": "read",
+    "status": "missing"
+   }
+  ],
+  "data_home": "Files in this project, chosen by us because the owner did not say",
+  "technical_level": "Not stated; plain steps and ready drafts, with the head chef and manager making kitchen changes",
+  "decides": "The owner together with the head chef",
+  "unknowns": [
+   "Whether the new menu is part of the problem",
+   "How many Google reviews the restaurant has in total, to work out what 4.4 needs",
+   "Whether kitchen or point-of-sale timing data exists",
+   "Whether the booking drop is in channels that show the rating or in all channels",
+   "Whether other changes happened besides the kitchen team (front-of-house staff, menu, opening hours)",
+   "What the same weeks looked like last year"
+  ],
+  "answers": [
+   {
+    "question": "The business",
+    "answer": "Italian restaurant, 70 seats, in Melbourne"
+   },
+   {
+    "question": "What changed",
+    "answer": "Google rating fell from 4.5 to 4.1 in two months; 18 one- or two-star reviews mention slow service and cold food"
+   },
+   {
+    "question": "Bookings",
+    "answer": "Weekly bookings fell from about 420 to 340 (booking system report)"
+   },
+   {
+    "question": "Likely cause",
+    "answer": "The kitchen team changed in August"
+   },
+   {
+    "question": "Targets",
+    "answer": "Rating back to 4.4 and bookings at 400 a week within three months"
+   },
+   {
+    "question": "Access",
+    "answer": "Google Business Profile through the browser; bookings are in OpenTable exports"
+   },
+   {
+    "question": "Rule",
+    "answer": "Never offer anything in exchange for reviews"
+   },
+   {
+    "question": "Decides",
+    "answer": "The owner with the head chef"
+   },
+   {
+    "question": "Unknown",
+    "answer": "Whether the new menu is part of it"
+   }
+  ]
+ },
+ "research": {
+  "approach": "Practitioners treat a rating drop as a symptom of something that changed in service, and start from the raw review text and dates, not the star average. They tag every low review by theme, date it against the staffing and menu changes, and check whether the booking fall follows the rating or has other causes such as availability, seasons or the booking path. Fixes go to the cause with the head chef (peak-night capacity, pass checks for hot food, menu items that cannot be plated fast), while the front of house replies to reviews in a plain, specific way and invites every guest to review without rewards, because Google penalises incentives and selective asking. Because a lifetime average moves slowly, they read the rating of recent reviews separately and work out how many good reviews the target needs before promising a date.",
+  "sources": [
+   {
+    "id": "web-gbp-restrictions",
+    "kind": "web",
+    "title": "Google Business Profile Help: Business Profile restrictions for policy violations",
+    "ref": "https://support.google.com/business/answer/14114287",
+    "date": null,
+    "note": "Platform documentation: incentivised or fake reviews can lead to reviews being removed or the profile being restricted; do not reward reviews or ask selectively. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-gbp-report",
+    "kind": "web",
+    "title": "Google Business Profile Help: Report inappropriate reviews on your Business Profile",
+    "ref": "https://support.google.com/business/answer/4596773?hl=en",
+    "date": null,
+    "note": "Platform documentation: only reviews that break Google's policies can be removed; do not report a review just because it is unfair; one appeal is allowed. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-gbp-rank",
+    "kind": "web",
+    "title": "Google Business Profile Help: How to improve your local ranking",
+    "ref": "https://support.google.com/business/answer/7091?hl=en-GB",
+    "date": null,
+    "note": "Platform documentation: review count and score affect local ranking, and replying to reviews is recommended. (no date shown on the page; accessed 2026-11-03)"
+   },
+   {
+    "id": "web-luca",
+    "kind": "web",
+    "title": "Harvard Business School Working Knowledge: The Yelp Factor (Luca, Reviews, Reputation, and Revenue)",
+    "ref": "https://www.library.hbs.edu/working-knowledge/the-yelp-factor-are-consumer-reviews-good-for-business",
+    "date": null,
+    "note": "Research summary: a one-star rise on Yelp was linked to a 5 to 9 percent revenue rise for independent restaurants; chains were largely unaffected. Different platform and date approximate; read as direction only. (publication date not confirmed; the underlying paper is from around 2011; accessed 2026-11-03)"
+   },
+   {
+    "id": "cat-themes",
+    "kind": "catalogue",
+    "title": "Feedback theme finder",
+    "ref": "feedback-theme-finder"
+   },
+   {
+    "id": "cat-reply-plan",
+    "kind": "catalogue",
+    "title": "Customer review reply and request planner",
+    "ref": "reply-to-your-reviews-safely-and-plan-how-to-get-more"
+   },
+   {
+    "id": "cat-review-request",
+    "kind": "catalogue",
+    "title": "Review request and reply planner",
+    "ref": "review-request-and-reply-planner"
+   },
+   {
+    "id": "cat-handover",
+    "kind": "catalogue",
+    "title": "Restaurant shift handover and issue tracker",
+    "ref": "prepare-a-restaurant-shift-handover"
+   },
+   {
+    "id": "cat-fake",
+    "kind": "catalogue",
+    "title": "Fake review spotter",
+    "ref": "fake-review-spotter"
+   },
+   {
+    "id": "owner",
+    "kind": "owner",
+    "title": "Owner answers",
+    "ref": "BRIEF.md"
+   }
+  ],
+  "steps": [
+   {
+    "id": "s-reviews",
+    "name": "Load every review with date, stars and text, and tag each low review by theme",
+    "why": "The 18 one- and two-star reviews are the raw evidence; dated themes show what guests mean and when it began.",
     "sources": [
-      {
-        "id": "web-eatapp",
-        "kind": "web",
-        "title": "Reputation Management for Restaurants: The Complete 2026 Playbook (Eat App)",
-        "ref": "https://restaurant.eatapp.co/blog/reputation-management-for-restaurants-the-complete-2026-playbook",
-        "date": "2025-10-30",
-        "note": "Vendor blog, statistics unsourced. Useful for the order of work: review the last 50 reviews for patterns, log complaint types and fix the most frequent first, reply within about 24 hours with acknowledgement then move detail to a private channel, never offer money or discounts for reviews."
-      },
-      {
-        "id": "web-gbp-reply",
-        "kind": "web",
-        "title": "Google Business Profile Help: Read and reply to reviews",
-        "ref": "https://support.google.com/business/answer/3474050",
-        "date": "2026-11",
-        "note": "Page is undated; date is when it was read (2026-11-02). The business must be verified; replies are checked against content policies and shown as from the business; reviewers are notified."
-      },
-      {
-        "id": "web-gbp-restrictions",
-        "kind": "web",
-        "title": "Google Business Profile Help: Restrictions for policy violations",
-        "ref": "https://support.google.com/business/answer/14114287",
-        "date": "2026-11",
-        "note": "Page is undated; date is when it was read (2026-11-02). Fake or incentivised reviews can lead to reviews being removed and the profile being restricted, with an appeal process."
-      },
-      {
-        "id": "web-accc",
-        "kind": "web",
-        "title": "ACCC: Online reviews for products and services (business guidance)",
-        "ref": "https://www.accc.gov.au/business/advertising-and-promotions/online-reviews-for-product-and-services",
-        "date": "2023-12",
-        "note": "The page could not be opened here; the link and December 2023 date come from a search summary of the ACCC guidance. It says fake reviews breach the Australian Consumer Law and incentives must be disclosed and offered regardless of rating. Check the page before relying on it."
-      },
-      {
-        "id": "cat-reply-workflow",
-        "kind": "catalogue",
-        "title": "Customer review reply and request planner",
-        "ref": "reply-to-your-reviews-safely-and-plan-how-to-get-more"
-      },
-      {
-        "id": "cat-reply-desk",
-        "kind": "catalogue",
-        "title": "Public review response manager",
-        "ref": "public-review-reply-desk"
-      },
-      {
-        "id": "cat-feedback",
-        "kind": "catalogue",
-        "title": "Product feedback analyst",
-        "ref": "agency-product-feedback-synthesizer"
-      },
-      {
-        "id": "cat-process",
-        "kind": "catalogue",
-        "title": "Workflow improvement reviewer",
-        "ref": "agency-testing-workflow-optimizer"
-      },
-      {
-        "id": "owner",
-        "kind": "owner",
-        "title": "Owner answers",
-        "ref": "BRIEF.md"
-      }
-    ],
-    "steps": [
-      {
-        "id": "s-rules",
-        "name": "Set the reply and review rules first",
-        "why": "Before any reply or review request, the rules are fixed: nothing is offered for a review, genuine negative reviews are not hidden or argued with, and each public reply is approved. Google can restrict a profile for fake or incentivised engagement.",
-        "sources": [
-          "web-gbp-restrictions",
-          "web-accc",
-          "cat-reply-workflow",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-timeline",
-        "name": "Line up ratings, bookings and what changed on one dated timeline",
-        "why": "The rating fell in two months and bookings fell with it, and the kitchen team changed in August. A weekly timeline of rating, bookings and changes (kitchen, menu, staffing, hours) shows what moved first and rules out unrelated causes.",
-        "sources": [
-          "web-eatapp",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-genuine",
-        "name": "Check the reviews are genuine and the booking figures are comparable",
-        "why": "Before acting, experts check whether any recent low reviews look fake or unrepresentative and whether the booking report counts the same things before and after. Genuine negative reviews must not be hidden.",
-        "sources": [
-          "web-gbp-restrictions",
-          "web-accc",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-themes",
-        "name": "Group the complaints by theme, date and session",
-        "why": "Experts review the latest reviews in bulk, log each complaint type and how often it appears, and note the day and session, so the most frequent cause is fixed first.",
-        "sources": [
-          "web-eatapp",
-          "cat-feedback"
-        ]
-      },
-      {
-        "id": "s-rootcause",
-        "name": "Find the cause in the kitchen and on the floor",
-        "why": "Slow service often traces to staffing and pacing, and cold food to holding and delivery from the pass. The head chef and owner test these against ticket times, rosters and covers per session, and test whether the new menu adds prep time.",
-        "sources": [
-          "web-eatapp",
-          "cat-process",
-          "owner"
-        ]
-      },
-      {
-        "id": "s-fix",
-        "name": "Fix the biggest cause first and brief the team",
-        "why": "Reviews only recover if the cause is fixed. Changes are small, owned by a named person and dated so their effect can be read.",
-        "sources": [
-          "web-eatapp",
-          "cat-process"
-        ]
-      },
-      {
-        "id": "s-reply",
-        "name": "Reply to each review quickly, honestly and specifically",
-        "why": "Replies acknowledge the problem, apologise, say what changed and take detail offline. Google checks replies against its policies and notifies the reviewer, who may update the review.",
-        "sources": [
-          "web-gbp-reply",
-          "web-eatapp",
-          "cat-reply-desk"
-        ]
-      },
-      {
-        "id": "s-ask",
-        "name": "Ask guests for reviews in a neutral way, with no reward",
-        "why": "A steady, honest request to all guests helps recent reviews reflect the fix. Nothing is offered, and requests are not limited to guests who are likely to be happy.",
-        "sources": [
-          "web-eatapp",
-          "web-gbp-restrictions",
-          "web-accc"
-        ]
-      },
-      {
-        "id": "s-measure",
-        "name": "Track rating and bookings weekly against the fix dates",
-        "why": "Ratings lag the fix. Experts read the weekly rating and bookings against the dated changes and compare like for like before judging.",
-        "sources": [
-          "web-eatapp",
-          "owner"
-        ]
-      }
-    ],
-    "pitfalls": [
-      {
-        "text": "Offering a discount or free item for a review, or for editing or removing a negative review.",
-        "sources": [
-          "web-gbp-restrictions",
-          "web-eatapp"
-        ]
-      },
-      {
-        "text": "Replying defensively, with generic apologies, or promising fixes that have not happened.",
-        "sources": [
-          "web-eatapp"
-        ]
-      },
-      {
-        "text": "Asking only the guests most likely to be happy, which can look like selective review gathering; check Google's current policy before using any such request.",
-        "sources": [
-          "web-eatapp",
-          "web-gbp-restrictions"
-        ]
-      },
-      {
-        "text": "Hiding or deleting genuine negative reviews, or posting fake positive ones.",
-        "sources": [
-          "web-accc",
-          "web-gbp-restrictions"
-        ]
-      },
-      {
-        "text": "Expecting the rating to recover straight after a fix, or judging from a few weeks of bookings.",
-        "sources": [
-          "web-eatapp"
-        ]
-      }
+     "owner",
+     "cat-themes"
     ]
-  },
-  "plan": {
-    "name": "Recover the rating and weekly bookings",
-    "capabilities": [
-      {
-        "id": "gbp-read",
-        "access": "read",
-        "via": "browser",
-        "name": "Read the Google Business Profile reviews (browser)",
-        "why": "Read all recent reviews with date, stars, text and reply status."
-      },
-      {
-        "id": "bookings-export",
-        "access": "read",
-        "via": "file",
-        "name": "OpenTable booking exports",
-        "why": "Weekly bookings and covers by day and session."
-      },
-      {
-        "id": "owner-facts",
-        "access": "read",
-        "via": "owner",
-        "name": "Facts from the owner and head chef",
-        "why": "Dates of the kitchen and menu changes, rosters and any ticket times; answers are recorded as reported."
-      },
-      {
-        "id": "gbp-reply",
-        "access": "live",
-        "via": "browser",
-        "name": "Post replies on the Business Profile (browser)",
-        "why": "Post each approved reply as the business; each one needs the owner's yes."
-      }
+   },
+   {
+    "id": "s-timeline",
+    "name": "Line up complaint dates with the kitchen change, menu change and booking numbers",
+    "why": "Cause shows in timing: complaints that start with a change point to that change.",
+    "sources": [
+     "owner",
+     "cat-themes"
+    ]
+   },
+   {
+    "id": "s-bookings",
+    "name": "Check the booking drop by channel and the booking path",
+    "why": "Bookings can fall because of availability, the booking link, season or the rating, and each has a different fix.",
+    "sources": [
+     "owner",
+     "web-gbp-rank"
+    ]
+   },
+   {
+    "id": "s-fair",
+    "name": "Separate unfair or off-topic reviews from fair ones",
+    "why": "Only reviews that break Google's policies can be removed; the rest need an answer, not a report.",
+    "sources": [
+     "web-gbp-report",
+     "cat-fake"
+    ]
+   },
+   {
+    "id": "s-rootcause",
+    "name": "Find the service and kitchen cause with the head chef and fix it",
+    "why": "Slow service and cold food are operating problems, and replies cannot fix them.",
+    "sources": [
+     "owner",
+     "cat-handover"
+    ]
+   },
+   {
+    "id": "s-replies",
+    "name": "Reply to reviews specifically and invite every guest to review without rewards",
+    "why": "Replies show guests and future guests the response, and an honest invitation rebuilds the rating within Google's rules.",
+    "sources": [
+     "web-gbp-restrictions",
+     "web-gbp-rank",
+     "cat-reply-plan",
+     "cat-review-request"
+    ]
+   },
+   {
+    "id": "s-math",
+    "name": "Work out how many good reviews 4.4 needs and read recent reviews separately",
+    "why": "A lifetime average moves slowly, so the date promised must match the review flow.",
+    "sources": [
+     "web-luca",
+     "web-gbp-rank"
+    ]
+   },
+   {
+    "id": "s-measure",
+    "name": "Read the rating, review themes and bookings weekly",
+    "why": "Weekly reading shows whether the fix is working before the average moves.",
+    "sources": [
+     "owner",
+     "cat-themes"
+    ]
+   },
+   {
+    "id": "s-incentive",
+    "name": "Offer guests a discount or free item for leaving a review",
+    "why": "A common way to speed up review volume.",
+    "sources": [
+     "web-gbp-restrictions"
+    ]
+   }
+  ],
+  "pitfalls": [
+   {
+    "text": "Replying to reviews and asking for more while the cause (slow service, cold food) goes on, so new low reviews keep arriving.",
+    "sources": [
+     "owner"
+    ]
+   },
+   {
+    "text": "Asking only happy guests for reviews or offering anything in return, which Google treats as a violation and the owner has ruled out.",
+    "sources": [
+     "web-gbp-restrictions"
+    ]
+   },
+   {
+    "text": "Reporting fair but harsh reviews as fake; only policy-breaking reviews can be removed.",
+    "sources": [
+     "web-gbp-report"
+    ]
+   },
+   {
+    "text": "Blaming the new menu or the new kitchen team without dating the complaints against each change.",
+    "sources": [
+     "owner"
+    ]
+   },
+   {
+    "text": "Promising a rating date without working out how many good reviews the average needs.",
+    "sources": [
+     "web-gbp-rank",
+     "web-luca"
+    ]
+   },
+   {
+    "text": "Reading the booking drop as a rating effect when availability, the booking link or the season also changed.",
+    "sources": [
+     "owner"
+    ]
+   }
+  ]
+ },
+ "plan": {
+  "name": "Fix service, answer guests, and win back the rating and bookings",
+  "capabilities": [
+   {
+    "id": "gbp-read",
+    "access": "read",
+    "via": "browser",
+    "name": "Read Google Business Profile reviews and insights (browser)",
+    "why": "Every review with date, stars, text and reply status, plus profile views, calls and booking-link clicks."
+   },
+   {
+    "id": "ot-export",
+    "access": "read",
+    "via": "file",
+    "name": "OpenTable booking exports",
+    "why": "Weekly bookings by day, time, party size and channel."
+   },
+   {
+    "id": "site-read",
+    "access": "read",
+    "via": "browser",
+    "name": "Open the booking link from Google and the website on a phone (browser)",
+    "why": "Check the booking path works and shows availability."
+   },
+   {
+    "id": "gbp-edit",
+    "access": "live",
+    "via": "browser",
+    "name": "Post replies on Google Business Profile (browser)",
+    "why": "Post approved replies, one by one."
+   },
+   {
+    "id": "kitchen-routine",
+    "access": "live",
+    "via": "owner",
+    "name": "Run the new service routine (the head chef and manager do this)",
+    "why": "Kitchen and floor changes happen in the restaurant, not through us."
+   }
+  ],
+  "data": [
+   {
+    "id": "reviews",
+    "name": "Google reviews with dates and text",
+    "why": "The raw evidence for what guests say and when it started.",
+    "fields": [
+     "review date",
+     "stars",
+     "text",
+     "reply and reply date",
+     "dishes or staff mentioned"
     ],
+    "routes": [
+     {
+      "kind": "URL",
+      "how": "Business Profile reviews, last 12 months, copied into the sheet in date order."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "diagnosis"
+    ],
+    "alternative": "If only recent reviews are visible, older months are marked unknown and the before and after is weaker."
+   },
+   {
+    "id": "bookings",
+    "name": "OpenTable bookings by week and channel",
+    "why": "Shows the drop, when it started, and which channels fell.",
+    "fields": [
+     "date",
+     "time slot",
+     "party size",
+     "channel (OpenTable network, Google, own site, phone)",
+     "status (seated, cancelled, no-show)"
+    ],
+    "routes": [
+     {
+      "kind": "CSV",
+      "how": "OpenTable reporting: reservations for the last 12 months (24 if available), exported as CSV, covers by date and source."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "integrity-booking",
+     "diagnosis"
+    ],
+    "alternative": "Without channel, the question of whether the rating drives the drop stays unknown."
+   },
+   {
+    "id": "profile-insights",
+    "name": "Google profile performance",
+    "why": "Shows whether views and booking clicks fell with the rating.",
+    "fields": [
+     "week",
+     "views from search and maps",
+     "calls",
+     "direction requests",
+     "booking clicks"
+    ],
+    "routes": [
+     {
+      "kind": "URL",
+      "how": "Business Profile performance page, last 12 months."
+     }
+    ],
+    "required_for": [
+     "evidence",
+     "diagnosis"
+    ],
+    "alternative": "Without it, the rating-to-bookings link rests on OpenTable alone."
+   },
+   {
+    "id": "changes-timeline",
+    "name": "Timeline of changes",
+    "why": "Dates of the kitchen team change, menu changes, new front-of-house staff and any hour or price changes.",
+    "fields": [
+     "date",
+     "what changed",
+     "who changed it"
+    ],
+    "routes": [
+     {
+      "kind": "ASK",
+      "how": "The owner and head chef list every change since June with dates."
+     }
+    ],
+    "required_for": [
+     "diagnosis"
+    ],
+    "alternative": "Without dates, causes cannot be told apart and all remain UNKNOWN."
+   },
+   {
+    "id": "service-timing",
+    "name": "Service timing and covers per shift",
+    "why": "The only way to measure slow service and cold food from inside the kitchen.",
+    "fields": [
+     "date",
+     "shift",
+     "covers",
+     "kitchen ticket times if available",
+     "staff on floor and kitchen"
+    ],
+    "routes": [
+     {
+      "kind": "ASK",
+      "how": "If the point-of-sale or kitchen display records ticket times, export a month; otherwise the manager logs time from order to table for 10 tables per busy night for two weeks."
+     }
+    ],
+    "required_for": [
+     "diagnosis",
+     "measurement"
+    ],
+    "alternative": "Without timing, slow service rests on review text only and the fix is judged by reviews."
+   }
+  ],
+  "stages": [
+   {
+    "id": "intake",
+    "kind": "intake",
+    "name": "Pin down the goal",
+    "goal": "Turn the request into a measured goal, limits and the data we can reach. Writes BRIEF.md.",
+    "owner": {
+     "role": "hospitality-guest-services"
+    },
+    "gate": "none",
+    "from_steps": [],
+    "uses": []
+   },
+   {
+    "id": "evidence",
+    "kind": "evidence",
+    "name": "Load reviews, bookings and the change timeline",
+    "goal": "Put every review of the last 12 months, weekly bookings by channel, profile insights and the timeline of changes into one dataset, with each low review tagged by theme.",
+    "owner": {
+     "role": "monthly-customer-voice-keeper"
+    },
     "data": [
-      {
-        "id": "reviews",
-        "name": "Google reviews",
-        "why": "The source of the complaint themes and the rating timeline.",
-        "fields": [
-          "review date",
-          "stars",
-          "text",
-          "owner reply status",
-          "day or session mentioned",
-          "dish or topic mentioned"
-        ],
-        "routes": [
-          {
-            "kind": "URL",
-            "how": "Read the Reviews page of the Business Profile in the browser, newest first, back to at least six months before the drop."
-          },
-          {
-            "kind": "ASK",
-            "how": "If the page cannot be read, the owner shares screenshots or a pasted list of reviews."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "integrity-data",
-          "diagnosis",
-          "replies"
-        ]
-      },
-      {
-        "id": "bookings",
-        "name": "Weekly bookings",
-        "why": "The metric, and the second timeline to line up with the rating.",
-        "fields": [
-          "week",
-          "bookings",
-          "covers",
-          "day of week",
-          "session",
-          "no-shows",
-          "channel if shown"
-        ],
-        "routes": [
-          {
-            "kind": "FILE",
-            "how": "OpenTable export by week for at least the last 12 months, with the same fields before and after the drop."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "integrity-data",
-          "diagnosis",
-          "measurement"
-        ],
-        "alternative": "If OpenTable shows only part of the bookings, the owner adds phone and walk-in counts, marked as estimates."
-      },
-      {
-        "id": "change-timeline",
-        "name": "What changed and when",
-        "why": "Needed to test the kitchen team change, any menu change and other causes against the timeline.",
-        "fields": [
-          "kitchen team change date",
-          "menu change dates",
-          "roster changes",
-          "price or hours changes",
-          "closures or works"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "The owner and head chef list each change with its date; anything they cannot date is marked unknown."
-          }
-        ],
-        "required_for": [
-          "evidence",
-          "diagnosis"
-        ]
-      },
-      {
-        "id": "service-times",
-        "name": "Service and kitchen timings",
-        "why": "Shows whether tickets, holding at the pass or table turns got slower.",
-        "fields": [
-          "session",
-          "covers",
-          "staff on floor",
-          "staff in kitchen",
-          "ticket or table times if recorded"
-        ],
-        "routes": [
-          {
-            "kind": "ASK",
-            "how": "The head chef shares ticket or pass times if recorded; otherwise a one-week tally of order-to-table times on busy sessions."
-          },
-          {
-            "kind": "FILE",
-            "how": "Rosters for the six months around the change, as hours per session."
-          }
-        ],
-        "required_for": [
-          "diagnosis",
-          "service-fixes"
-        ],
-        "alternative": "Without timings, service-speed findings stay low-confidence and the first fix includes recording them."
-      }
+     "reviews",
+     "bookings",
+     "profile-insights",
+     "changes-timeline"
     ],
-    "stages": [
-      {
-        "id": "intake",
-        "kind": "intake",
-        "name": "Pin down the goal",
-        "goal": "Turn the owner's words into measured targets, limits and the data we can reach. Writes BRIEF.md.",
-        "owner": {
-          "role": "customer-support-specialist"
-        },
-        "gate": "none",
-        "from_steps": [],
-        "uses": []
-      },
-      {
-        "id": "context",
-        "kind": "context",
-        "name": "Agree the reply and review rules",
-        "goal": "Write the rules for every reply and review request: voice, what may be said about the changes made, what may never be offered (nothing in exchange for a review), what to escalate, and who approves each reply.",
-        "owner": {
-          "role": "public-review-reply-desk"
-        },
-        "reviewers": [
-          "support-legal-compliance-checker"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "reply-rules",
-            "name": "Reply and review-request rules",
-            "format": "markdown",
-            "path": "context/REPLY-RULES.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "no-incentive",
-            "name": "The rules forbid offering anything for a review, for editing a review or for removing a review",
-            "required": true
-          },
-          {
-            "id": "approval",
-            "name": "Every public reply needs the owner's approval, and sensitive cases are held for the owner",
-            "required": true
-          },
-          {
-            "id": "facts",
-            "name": "Statements about changes made are limited to what the owner and head chef confirm",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-rules"
-        ],
-        "uses": [
-          "reply-to-your-reviews-safely-and-plan-how-to-get-more",
-          "review-request-and-reply-planner"
-        ]
-      },
-      {
-        "id": "evidence",
-        "kind": "evidence",
-        "name": "Gather reviews, bookings and the timeline of changes",
-        "goal": "Collect reviews, weekly bookings, the change dates and any service timings into one working file and build one weekly timeline of rating, bookings and changes.",
-        "owner": {
-          "role": "support-analytics-reporter"
-        },
-        "data": [
-          "reviews",
-          "bookings",
-          "change-timeline",
-          "service-times"
-        ],
-        "needs": [
-          "gbp-read",
-          "bookings-export",
-          "owner-facts"
-        ],
-        "depends_on": [
-          "intake"
-        ],
-        "outputs": [
-          {
-            "id": "dataset",
-            "name": "Working dataset and weekly timeline",
-            "format": "csv",
-            "path": "evidence/dataset.csv"
-          },
-          {
-            "id": "evidence-notes",
-            "name": "What was pulled and how",
-            "format": "markdown",
-            "path": "evidence/EVIDENCE.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "reviews-complete",
-            "name": "Every review in the period is captured with date, stars and text, and the rating timeline is rebuilt from review dates",
-            "required": true
-          },
-          {
-            "id": "booking-totals",
-            "name": "Weekly bookings match the OpenTable report totals, and the 420 and 340 figures are matched or marked reported only",
-            "required": true
-          },
-          {
-            "id": "unknowns",
-            "name": "Dates the owner could not give are marked unknown, not guessed",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-timeline"
-        ],
-        "uses": [
-          "recurring-kpi-report-maker",
-          "customer-feedback-report-from-survey-tools"
-        ]
-      },
-      {
-        "id": "integrity-data",
-        "kind": "integrity",
-        "name": "Check the reviews are genuine and the booking numbers comparable",
-        "goal": "Look for signs that some recent low reviews are fake or unrepresentative, and check that the booking report counts the same things before and after the drop and covers all channels. Genuine negative reviews stay.",
-        "owner": {
-          "role": "monthly-review-proof-keeper"
-        },
-        "support": [
-          "support-analytics-reporter"
-        ],
-        "data": [
-          "reviews",
-          "bookings"
-        ],
-        "needs": [
-          "gbp-read",
-          "bookings-export"
-        ],
-        "depends_on": [
-          "evidence",
-          "context"
-        ],
-        "outputs": [
-          {
-            "id": "data-check",
-            "name": "Review and booking data check",
-            "format": "markdown",
-            "path": "integrity/DATA-CHECK.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "suspect",
-            "name": "Any suspect review is listed with the reasons, and is reported through Google's process rather than argued with",
-            "required": true
-          },
-          {
-            "id": "same-definition",
-            "name": "Booking counts use the same definition and channels before and after, or the gap is stated",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "Ends with CHECKED, LIMITED or UNRELIABLE and what that means for diagnosis",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-genuine"
-        ],
-        "uses": [
-          "fake-review-spotter",
-          "spreadsheet-checker"
-        ]
-      },
-      {
-        "id": "diagnosis",
-        "kind": "diagnosis",
-        "name": "Find what is behind the drop",
-        "goal": "Group the complaints by theme, date and session, then test the hypotheses against the timeline, including the kitchen change, staffing, the new menu, booked volume and non-review causes. Keep competing explanations and mark what is unknown.",
-        "owner": {
-          "role": "product-feedback-synthesizer"
-        },
-        "support": [
-          "testing-workflow-optimizer"
-        ],
-        "data": [
-          "reviews",
-          "bookings",
-          "change-timeline",
-          "service-times"
-        ],
-        "depends_on": [
-          "evidence",
-          "integrity-data"
-        ],
-        "outputs": [
-          {
-            "id": "diagnosis",
-            "name": "Diagnosis with complaint themes",
-            "format": "markdown",
-            "path": "diagnosis/DIAGNOSIS.md"
-          },
-          {
-            "id": "hypotheses",
-            "name": "Hypothesis verdicts",
-            "format": "json",
-            "path": "diagnosis/hypotheses.json"
-          }
-        ],
-        "checks": [
-          {
-            "id": "verdicts",
-            "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with evidence and real review quotes",
-            "required": true
-          },
-          {
-            "id": "timing",
-            "name": "Each finding states whether it started before or after the August change",
-            "required": true
-          },
-          {
-            "id": "alternatives",
-            "name": "Each main finding names a competing explanation",
-            "required": true
-          },
-          {
-            "id": "volume",
-            "name": "Themes from few reviews are marked low-confidence",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-themes",
-          "s-rootcause"
-        ],
-        "uses": [
-          "customer-feedback-report-from-survey-tools",
-          "monthly-review-proof-keeper"
-        ]
-      },
-      {
-        "id": "options",
-        "kind": "options",
-        "name": "Rank what to change",
-        "goal": "Turn supported findings into ranked fixes for the kitchen, floor and replies, each with the finding behind it, expected effect, effort, who owns it, confidence, risk and how it will be measured.",
-        "owner": {
-          "role": "testing-workflow-optimizer"
-        },
-        "depends_on": [
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "recommendations",
-            "name": "Recommendation cards",
-            "format": "markdown",
-            "path": "options/RECOMMENDATIONS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "evidence",
-            "name": "Every card cites the finding it rests on",
-            "required": true
-          },
-          {
-            "id": "fields",
-            "name": "Every card has effect, effort, named owner, confidence, risk and how it will be measured",
-            "required": true
-          },
-          {
-            "id": "no-incentive",
-            "name": "No card relies on a reward for reviews",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [],
-        "uses": []
-      },
-      {
-        "id": "decision",
-        "kind": "decision",
-        "name": "Owner and head chef choose",
-        "goal": "The owner and head chef pick card ids. Ask for the reason when the top card is passed over, and record it.",
-        "owner": {
-          "role": "testing-workflow-optimizer"
-        },
-        "depends_on": [
-          "options"
-        ],
-        "outputs": [
-          {
-            "id": "decision",
-            "name": "Chosen plan",
-            "format": "markdown",
-            "path": "decision/DECISION.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "recorded",
-            "name": "Chosen and passed-over cards are recorded",
-            "required": true
-          },
-          {
-            "id": "rationale",
-            "name": "A reason is recorded wherever the top card was passed over",
-            "required": true
-          }
-        ],
-        "gate": "approve",
-        "from_steps": [],
-        "uses": []
-      },
-      {
-        "id": "service-fixes",
-        "kind": "production",
-        "name": "Plan the kitchen and floor fixes",
-        "goal": "Write the chosen fixes as dated, owned changes: pass and holding routine, pacing and staffing on busy sessions, menu prep changes if the menu is implicated, a pre-service briefing, and how ticket or table times will be recorded to show the effect.",
-        "owner": {
-          "role": "testing-workflow-optimizer"
-        },
-        "support": [
-          "restaurant-shift-exception-review-assistant"
-        ],
-        "data": [
-          "service-times"
-        ],
-        "depends_on": [
-          "decision",
-          "diagnosis"
-        ],
-        "outputs": [
-          {
-            "id": "service-fixes",
-            "name": "Service fixes with owners and dates",
-            "format": "markdown",
-            "path": "production/SERVICE-FIXES.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "scoped",
-            "name": "Only chosen fixes are included, each with a named owner and a start date",
-            "required": true
-          },
-          {
-            "id": "measure",
-            "name": "Each fix says how its effect will be seen (times, complaints per session, rating, bookings)",
-            "required": true
-          },
-          {
-            "id": "small",
-            "name": "Changes are staged so their effects can be told apart",
-            "required": true
-          }
-        ],
-        "gate": "review",
-        "optional_when": "No kitchen or floor card was chosen.",
-        "from_steps": [
-          "s-fix"
-        ],
-        "uses": [
-          "prepare-a-restaurant-shift-handover"
-        ]
-      },
-      {
-        "id": "replies",
-        "kind": "production",
-        "name": "Draft the review replies and a neutral review request",
-        "goal": "Draft a specific reply to each recent review, hold sensitive cases for the owner, and write a short, even-handed request routine that offers nothing in return. Replies mention a fix only when it has actually started.",
-        "owner": {
-          "role": "public-review-reply-desk"
-        },
-        "support": [
-          "hospitality-guest-services"
-        ],
-        "reviewers": [
-          "support-legal-compliance-checker"
-        ],
-        "data": [
-          "reviews"
-        ],
-        "depends_on": [
-          "decision",
-          "context",
-          "integrity-data"
-        ],
-        "outputs": [
-          {
-            "id": "reply-drafts",
-            "name": "Reply drafts for approval",
-            "format": "markdown",
-            "path": "production/REPLY-DRAFTS.md"
-          },
-          {
-            "id": "ask-routine",
-            "name": "Neutral review request routine",
-            "format": "markdown",
-            "path": "production/REVIEW-ASK-ROUTINE.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "specific",
-            "name": "Each reply names the actual issue raised and is not a template",
-            "required": true
-          },
-          {
-            "id": "no-incentive",
-            "name": "No reply or request offers anything for a review, an edit or a removal",
-            "required": true
-          },
-          {
-            "id": "promises",
-            "name": "No reply promises a fix or remedy the owner has not approved",
-            "required": true
-          },
-          {
-            "id": "even-handed",
-            "name": "The request routine goes to all guests the same way, not only those likely to be happy",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "optional_when": "No reply card was chosen.",
-        "from_steps": [
-          "s-reply",
-          "s-ask"
-        ],
-        "uses": [
-          "public-review-reply-drafter",
-          "angry-customer-reply-checker",
-          "review-request-and-reply-planner"
-        ]
-      },
-      {
-        "id": "publish-replies",
-        "kind": "execution",
-        "name": "Post approved replies, one at a time",
-        "goal": "Post each approved reply from the business account in the browser, record the date, and start the neutral review request routine only after the owner approves it.",
-        "owner": {
-          "role": "customer-support-specialist"
-        },
-        "needs": [
-          "gbp-reply"
-        ],
-        "depends_on": [
-          "replies"
-        ],
-        "outputs": [
-          {
-            "id": "reply-log",
-            "name": "Reply log with dates and exact text posted",
-            "format": "markdown",
-            "path": "execution/REPLY-LOG.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "approved",
-            "name": "Each reply was approved by the owner before it was posted",
-            "required": true
-          },
-          {
-            "id": "match",
-            "name": "The posted text matches the approved text",
-            "required": true
-          },
-          {
-            "id": "no-incentive",
-            "name": "Nothing in any posted reply or request offers anything in return",
-            "required": true
-          }
-        ],
-        "gate": "approve_each_action",
-        "optional_when": "No reply card was chosen.",
-        "from_steps": [
-          "s-reply",
-          "s-ask"
-        ],
-        "uses": [
-          "angry-customer-reply-checker"
-        ]
-      },
-      {
-        "id": "measurement",
-        "kind": "measurement",
-        "name": "Read rating and bookings against the fixes",
-        "goal": "Each week, compare rating and weekly bookings with the dated fixes, the 400 a week and 4.4 targets, and last year's same weeks if the owner can supply them.",
-        "owner": {
-          "role": "experiment-readout-desk"
-        },
-        "data": [
-          "bookings",
-          "reviews"
-        ],
-        "needs": [
-          "gbp-read",
-          "bookings-export"
-        ],
-        "depends_on": [
-          "service-fixes",
-          "publish-replies"
-        ],
-        "outputs": [
-          {
-            "id": "readout",
-            "name": "Weekly results readout",
-            "format": "markdown",
-            "path": "measurement/READOUT.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "like-for-like",
-            "name": "Bookings use the same definition and channels as the baseline",
-            "required": true
-          },
-          {
-            "id": "lag",
-            "name": "Rating changes are read with the delay after each fix in mind, and fix dates are shown",
-            "required": true
-          },
-          {
-            "id": "guardrail",
-            "name": "No reply or request offered anything in return",
-            "required": true
-          },
-          {
-            "id": "verdict",
-            "name": "A verdict is given only after the window, otherwise INCONCLUSIVE",
-            "required": true
-          }
-        ],
-        "gate": "none",
-        "from_steps": [
-          "s-measure"
-        ],
-        "uses": [
-          "recurring-kpi-report-maker"
-        ]
-      },
-      {
-        "id": "learning",
-        "kind": "learning",
-        "name": "Keep what we learned",
-        "goal": "Record which fixes moved reviews and bookings, propose lasting rules (for example a pre-service check) with their scope, and plan the next round.",
-        "owner": {
-          "role": "project-management-experiment-tracker"
-        },
-        "depends_on": [
-          "measurement"
-        ],
-        "outputs": [
-          {
-            "id": "learnings",
-            "name": "Learnings and next round",
-            "format": "markdown",
-            "path": "learning/LEARNINGS.md"
-          }
-        ],
-        "checks": [
-          {
-            "id": "closed",
-            "name": "Every fix is closed with a result",
-            "required": true
-          },
-          {
-            "id": "scoped",
-            "name": "Each proposed rule says whether it holds for this restaurant, this season or restaurants in general",
-            "required": true
-          }
-        ],
-        "gate": "review",
-        "from_steps": [],
-        "uses": []
-      }
+    "needs": [
+     "gbp-read",
+     "ot-export"
     ],
-    "hypotheses": [
-      {
-        "id": "h-kitchen-transition",
-        "statement": "Slow service and cold food began after the August kitchen team change, as the new team settled in.",
-        "test": "Date each complaint and compare with the change date; compare ticket or pass times before and after if recorded.",
-        "confirm_if": "Complaints about speed or temperature are rare before the change and frequent after it, and timings worsened.",
-        "refute_if": "The same complaints existed before the change, or the rise started well before or after it.",
-        "fix_stage": "service-fixes"
-      },
-      {
-        "id": "h-floor-staffing",
-        "statement": "Floor or kitchen staffing on the busiest sessions is too thin for 70 seats.",
-        "test": "Complaints by day and session against rosters and covers for the same sessions.",
-        "confirm_if": "Complaints cluster on sessions with the lowest staff per cover.",
-        "refute_if": "Complaints are spread evenly or sit on well-staffed sessions.",
-        "fix_stage": "service-fixes"
-      },
-      {
-        "id": "h-new-menu",
-        "statement": "The new menu, if it changed, adds prep or holding time or disappoints guests.",
-        "test": "Find the menu change date, and compare dish-specific complaints and speed complaints before and after it.",
-        "confirm_if": "Complaints name new dishes, or speed worsened when the menu changed rather than when the team did.",
-        "refute_if": "Complaints do not mention new dishes and timing matches the team change only, or the menu did not change.",
-        "fix_stage": "service-fixes"
-      },
-      {
-        "id": "h-overbooked-sessions",
-        "statement": "Slow service is caused by too many covers booked into peak sessions.",
-        "test": "Covers per session against complaints and, if available, table turn times.",
-        "confirm_if": "Complaints rise with covers per session, especially above the level the team handled before.",
-        "refute_if": "Complaints occur on quiet sessions too.",
-        "fix_stage": "service-fixes"
-      },
-      {
-        "id": "h-rating-drives-bookings",
-        "statement": "The rating drop explains most of the booking fall, rather than season, competitors or booking-channel changes.",
-        "test": "Weekly bookings by channel against the rating timeline, and the same weeks last year if available.",
-        "confirm_if": "Bookings fell after the rating fell, on the same channels that show the rating, and last year's weeks were steady.",
-        "refute_if": "Bookings fell before the rating, fell on channels that do not show ratings, or the same weeks dropped last year.",
-        "fix_stage": "replies"
-      },
-      {
-        "id": "h-unrepresentative-reviews",
-        "statement": "Some of the 18 low reviews are not genuine or come from a single bad night.",
-        "test": "Check dates for clusters, reviewer history, and details that do not match the restaurant.",
-        "confirm_if": "Several reviews cluster on one date or show clear signs of being fake.",
-        "refute_if": "Reviews are spread over dates and look like real guests.",
-        "fix_stage": "replies"
-      }
+    "depends_on": [
+     "intake"
     ],
-    "dropped": [],
-    "measurement": {
-      "window": "Weekly for the three months; judge a fix only after at least four weeks of bookings and reviews following it.",
-      "min_volume": "Read bookings as four-week averages; read rating changes only with a meaningful number of new reviews since the fix, agreed with the owner before the first read.",
-      "stop_rule": "Stop and rethink a fix if complaints about the same issue keep rising after it has been in place for the agreed time; stop any practice that offers something in return for reviews at once."
-    }
+    "outputs": [
+     {
+      "id": "dataset",
+      "name": "Working dataset",
+      "format": "csv",
+      "path": "evidence/dataset.csv"
+     },
+     {
+      "id": "evidence-notes",
+      "name": "What was pulled and how",
+      "format": "markdown",
+      "path": "evidence/EVIDENCE.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "counts",
+      "name": "The dataset holds the 18 one- and two-star reviews and the rating of 4.1 recalculates from the review list within 0.1, or the gap is explained",
+      "required": true
+     },
+     {
+      "id": "bookings",
+      "name": "Weekly bookings reproduce the reported 420 before and 340 now within 5%",
+      "required": true
+     },
+     {
+      "id": "themes",
+      "name": "Each low review is tagged with at least one theme and a quote, and the theme counts add up to the review count",
+      "required": true
+     },
+     {
+      "id": "gaps",
+      "name": "Missing months, channels or dates are named with what they block",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-reviews",
+     "s-timeline"
+    ],
+    "uses": [
+     "feedback-theme-finder"
+    ]
+   },
+   {
+    "id": "integrity-booking",
+    "kind": "integrity",
+    "name": "Check the booking drop is real and the path works",
+    "goal": "Check the booking link from Google and the website on a phone, availability settings, and which channels fell, and separate unfair or off-topic reviews from fair ones.",
+    "owner": {
+     "role": "cro-specialist"
+    },
+    "data": [
+     "bookings",
+     "reviews"
+    ],
+    "needs": [
+     "site-read",
+     "gbp-read"
+    ],
+    "depends_on": [
+     "evidence"
+    ],
+    "outputs": [
+     {
+      "id": "booking-check",
+      "name": "Booking path and review feed check",
+      "format": "markdown",
+      "path": "integrity/BOOKING-AND-REVIEW-CHECK.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "path",
+      "name": "The booking link from Google, the website and the phone each reach a bookable page showing real availability",
+      "required": true
+     },
+     {
+      "id": "availability",
+      "name": "Seats offered per week before and after the drop are compared, so the fall is not caused by fewer slots",
+      "required": true
+     },
+     {
+      "id": "channels",
+      "name": "Bookings are split by channel, before and after, with the share each fell",
+      "required": true
+     },
+     {
+      "id": "fair",
+      "name": "Each review is marked fair, harsh but fair, or policy-breaking with the Google policy named; only the last group is flagged",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-bookings",
+     "s-fair"
+    ],
+    "uses": [
+     "fake-review-spotter",
+     "local-search-listing-manager"
+    ]
+   },
+   {
+    "id": "diagnosis",
+    "kind": "diagnosis",
+    "name": "Find what changed and why guests complain",
+    "goal": "Test the hypotheses on timing, peak nights, cold food, the new menu, staffing, the link between rating and bookings, and how many good reviews 4.4 needs.",
+    "owner": {
+     "role": "monthly-customer-voice-keeper"
+    },
+    "data": [
+     "reviews",
+     "bookings",
+     "service-timing",
+     "changes-timeline"
+    ],
+    "depends_on": [
+     "evidence",
+     "integrity-booking"
+    ],
+    "outputs": [
+     {
+      "id": "diagnosis",
+      "name": "Diagnosis",
+      "format": "markdown",
+      "path": "diagnosis/DIAGNOSIS.md"
+     },
+     {
+      "id": "hypotheses",
+      "name": "Hypothesis verdicts",
+      "format": "json",
+      "path": "diagnosis/hypotheses.json"
+     }
+    ],
+    "checks": [
+     {
+      "id": "verdicts",
+      "name": "Every hypothesis is SUPPORTED, REFUTED or UNKNOWN, with the numbers used",
+      "required": true
+     },
+     {
+      "id": "timing",
+      "name": "Complaint counts are shown by week against the kitchen change date and the menu change date",
+      "required": true
+     },
+     {
+      "id": "alternatives",
+      "name": "Each main finding names a competing explanation",
+      "required": true
+     },
+     {
+      "id": "math",
+      "name": "States how many new 5-star reviews are needed to reach a 4.4 average from the review count and total, and how many the restaurant gets a week now, or marks it unknown",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-rootcause",
+     "s-math"
+    ],
+    "support": [
+     "restaurant-shift-exception-review-assistant"
+    ],
+    "uses": [
+     "feedback-theme-finder",
+     "customer-research-analyst"
+    ]
+   },
+   {
+    "id": "options",
+    "kind": "options",
+    "name": "Rank what to change",
+    "goal": "Turn supported findings into ranked options (kitchen and floor changes, menu changes, booking path, replies, review invitations) with expected effect on rating and bookings, effort, confidence, risk and measurement.",
+    "owner": {
+     "role": "restaurant-shift-exception-review-assistant"
+    },
+    "depends_on": [
+     "diagnosis"
+    ],
+    "outputs": [
+     {
+      "id": "recommendations",
+      "name": "Ranked options",
+      "format": "markdown",
+      "path": "options/RECOMMENDATIONS.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "evidence",
+      "name": "Every option cites the finding it rests on",
+      "required": true
+     },
+     {
+      "id": "fields",
+      "name": "Every option has expected effect, effort, confidence, risk and how it is measured",
+      "required": true
+     },
+     {
+      "id": "cause",
+      "name": "Options that fix the cause rank before options that only change what guests see",
+      "required": true
+     },
+     {
+      "id": "rules",
+      "name": "No option offers anything for a review or asks only some guests",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [],
+    "uses": []
+   },
+   {
+    "id": "decision",
+    "kind": "decision",
+    "name": "Owner and head chef choose",
+    "goal": "Choose the options with the head chef, including any menu changes. Record reasons when the top option is passed over.",
+    "owner": {
+     "role": "restaurant-shift-exception-review-assistant"
+    },
+    "depends_on": [
+     "options"
+    ],
+    "outputs": [
+     {
+      "id": "decision",
+      "name": "Chosen plan",
+      "format": "markdown",
+      "path": "decision/DECISION.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "recorded",
+      "name": "Chosen and passed-over options are in decisions.jsonl",
+      "required": true
+     },
+     {
+      "id": "rationale",
+      "name": "A reason is recorded wherever the top option was passed over",
+      "required": true
+     }
+    ],
+    "gate": "approve",
+    "from_steps": [],
+    "uses": []
+   },
+   {
+    "id": "service-plan",
+    "kind": "production",
+    "name": "Build the service and kitchen plan",
+    "goal": "Turn the chosen options into a service routine the head chef can run: peak-night limits per slot, a hot-pass check, a floor handover, and a daily log of order-to-table time.",
+    "owner": {
+     "role": "restaurant-shift-exception-review-assistant"
+    },
+    "data": [
+     "service-timing"
+    ],
+    "depends_on": [
+     "decision"
+    ],
+    "outputs": [
+     {
+      "id": "service-plan",
+      "name": "Service and kitchen plan",
+      "format": "markdown",
+      "path": "production/SERVICE-PLAN.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "scoped",
+      "name": "Only chosen changes are included",
+      "required": true
+     },
+     {
+      "id": "measure",
+      "name": "Each change has a number that shows it worked, such as order-to-table time or hot dishes at the pass within a set time",
+      "required": true
+     },
+     {
+      "id": "safety",
+      "name": "No step relaxes food safety or hot-holding rules",
+      "required": true
+     },
+     {
+      "id": "capacity",
+      "name": "Covers per slot are set against what the kitchen can send out on time",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "optional_when": "No service option was chosen.",
+    "from_steps": [
+     "s-rootcause"
+    ],
+    "uses": [
+     "prepare-a-restaurant-shift-handover",
+     "technical-capacity-cost-planner"
+    ]
+   },
+   {
+    "id": "reviews-build",
+    "kind": "production",
+    "name": "Prepare replies and the review invitation",
+    "goal": "Draft specific replies to the recent low reviews and to praise, and an invitation routine for every guest without rewards.",
+    "owner": {
+     "role": "public-review-reply-desk"
+    },
+    "data": [
+     "reviews"
+    ],
+    "depends_on": [
+     "decision",
+     "integrity-booking"
+    ],
+    "outputs": [
+     {
+      "id": "reply-pack",
+      "name": "Replies and invitation routine",
+      "format": "markdown",
+      "path": "production/REPLIES-AND-INVITATION.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "specific",
+      "name": "Each reply names the real issue in the review and a real change, and nothing is promised that the service plan does not include",
+      "required": true
+     },
+     {
+      "id": "offers",
+      "name": "No reply or invitation offers a discount, free item or any reward, and none asks a guest to change or remove a review",
+      "required": true
+     },
+     {
+      "id": "everyone",
+      "name": "The invitation goes to every guest, not only those who seemed pleased",
+      "required": true
+     },
+     {
+      "id": "tone",
+      "name": "Replies are short, calm and in the restaurant's voice, with a contact for private follow-up",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "optional_when": "No reply option was chosen.",
+    "from_steps": [
+     "s-replies"
+    ],
+    "uses": [
+     "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+     "public-review-reply-drafter",
+     "review-request-and-reply-planner"
+    ]
+   },
+   {
+    "id": "launch",
+    "kind": "execution",
+    "name": "Start the routine and post replies",
+    "goal": "Start the service plan first, then post approved replies and start the invitation routine, and register the comparison before anything is live.",
+    "owner": {
+     "role": "public-review-reply-desk"
+    },
+    "needs": [
+     "gbp-edit",
+     "kitchen-routine"
+    ],
+    "depends_on": [
+     "service-plan",
+     "reviews-build"
+    ],
+    "outputs": [
+     {
+      "id": "receipt",
+      "name": "Change receipt",
+      "format": "markdown",
+      "path": "execution/RECEIPT.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "registered",
+      "name": "The comparison is registered in experiments.jsonl before anything is live: start date of each change, the baseline weeks, and the same weeks last year if available",
+      "required": true
+     },
+     {
+      "id": "order",
+      "name": "The service plan starts at least one week before the invitation routine, so new reviews reflect the fix",
+      "required": true
+     },
+     {
+      "id": "approved",
+      "name": "Each reply posted was shown to the owner and approved first",
+      "required": true
+     },
+     {
+      "id": "readback",
+      "name": "Each posted reply was read back from the profile",
+      "required": true
+     }
+    ],
+    "gate": "approve_each_action",
+    "from_steps": [
+     "s-replies",
+     "s-rootcause"
+    ],
+    "uses": [
+     "public-review-reply-drafter"
+    ]
+   },
+   {
+    "id": "measurement",
+    "kind": "measurement",
+    "name": "Read the rating and bookings weekly",
+    "goal": "Each week, read new reviews by stars and theme, the rating of reviews since the fix, order-to-table times and weekly bookings against the baseline.",
+    "owner": {
+     "role": "experiment-readout-desk"
+    },
+    "data": [
+     "reviews",
+     "bookings",
+     "service-timing"
+    ],
+    "needs": [
+     "gbp-read",
+     "ot-export"
+    ],
+    "depends_on": [
+     "launch"
+    ],
+    "outputs": [
+     {
+      "id": "readout",
+      "name": "Weekly readout",
+      "format": "markdown",
+      "path": "measurement/READOUT.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "recent",
+      "name": "The average of reviews posted since the fix is shown next to the lifetime average",
+      "required": true
+     },
+     {
+      "id": "themes",
+      "name": "Slow-service and cold-food mentions are counted per 10 new reviews and compared with the 4 weeks before the fix",
+      "required": true
+     },
+     {
+      "id": "like",
+      "name": "Bookings are compared with the same weekdays and, if available, the same weeks last year",
+      "required": true
+     },
+     {
+      "id": "volume",
+      "name": "A verdict on the rating needs at least 30 new reviews since the fix, otherwise INCONCLUSIVE",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [
+     "s-measure"
+    ],
+    "uses": [
+     "feedback-theme-finder"
+    ]
+   },
+   {
+    "id": "learning",
+    "kind": "learning",
+    "name": "Keep what we learned",
+    "goal": "Close the comparison, record which changes moved the rating and bookings, propose rules with their scope and plan the next round.",
+    "owner": {
+     "role": "experiment-readout-desk"
+    },
+    "depends_on": [
+     "measurement"
+    ],
+    "outputs": [
+     {
+      "id": "learnings",
+      "name": "Learnings and next round",
+      "format": "markdown",
+      "path": "learning/LEARNINGS.md"
+     }
+    ],
+    "checks": [
+     {
+      "id": "closed",
+      "name": "The registered comparison is closed in experiments.jsonl with a verdict",
+      "required": true
+     },
+     {
+      "id": "scoped",
+      "name": "Each proposed rule says whether it holds for this restaurant or any restaurant",
+      "required": true
+     }
+    ],
+    "gate": "none",
+    "from_steps": [],
+    "uses": []
+   }
+  ],
+  "hypotheses": [
+   {
+    "id": "h-kitchen-change",
+    "statement": "The complaints started after the August kitchen team change.",
+    "test": "Count one- and two-star reviews per week, before and after the change date, with the themes.",
+    "confirm_if": "At least 80% of the complaint reviews are dated after the change and weekly low reviews at least doubled.",
+    "refute_if": "Low reviews were already rising before the change.",
+    "fix_stage": "service-plan"
+   },
+   {
+    "id": "h-peak-nights",
+    "statement": "Slow service happens on peak nights or when bookings per slot are high.",
+    "test": "Match complaint review dates and any ticket times to covers per slot and weekday.",
+    "confirm_if": "More than half of the complaints fall on the busiest 2 nights or slots, or order-to-table time rises with covers.",
+    "refute_if": "Complaints are spread evenly across nights and covers.",
+    "fix_stage": "service-plan"
+   },
+   {
+    "id": "h-cold-food",
+    "statement": "Cold food comes from the pass, runners or dish design, not from the whole kitchen.",
+    "test": "Which dishes and which sections of the room the cold-food reviews name; time from pass to table if logged.",
+    "confirm_if": "Cold-food reviews name a small set of dishes or tables, or logged pass-to-table time is over the set limit.",
+    "refute_if": "Cold-food reviews name many unrelated dishes and tables and logged times are within the limit.",
+    "fix_stage": "service-plan"
+   },
+   {
+    "id": "h-new-menu",
+    "statement": "The new menu is part of the problem.",
+    "test": "Share of complaint reviews that name a dish added or changed since the menu change, and plating time of those dishes.",
+    "confirm_if": "More than 30% of complaint reviews name new or changed dishes.",
+    "refute_if": "Complaints name old and new dishes alike, or none by name.",
+    "fix_stage": "service-plan"
+   },
+   {
+    "id": "h-staffing",
+    "statement": "Floor or kitchen staffing did not match covers on the nights people complained.",
+    "test": "Covers per floor and kitchen staff on complaint nights against nights without complaints.",
+    "confirm_if": "Covers per staff member are higher on complaint nights by 20% or more.",
+    "refute_if": "Staffing ratios are similar.",
+    "fix_stage": "service-plan"
+   },
+   {
+    "id": "h-rating-drives-bookings",
+    "statement": "Bookings fell because of the rating, not because of availability, season or the booking path.",
+    "test": "Bookings by channel before and after, seats offered, the date the fall began against the date the rating fell, and the same weeks last year.",
+    "confirm_if": "Channels that show the rating fell at least 1.5 times as much as phone and own-site bookings, and the fall began after the rating fell.",
+    "refute_if": "All channels fell alike, seats offered fell, the fall began before the rating, or last year shows the same dip.",
+    "fix_stage": "decision"
+   },
+   {
+    "id": "h-no-reply",
+    "statement": "Low reviews have gone unanswered, which leaves the complaints unanswered for future guests.",
+    "test": "Share of one- and two-star reviews with a reply in the last 3 months.",
+    "confirm_if": "Fewer than half have a reply.",
+    "refute_if": "Most have a specific reply.",
+    "fix_stage": "reviews-build"
+   },
+   {
+    "id": "h-rating-math",
+    "statement": "A rating of 4.4 within three months is reachable only if the flow of good reviews is high enough.",
+    "test": "New 5-star reviews needed to lift the average to 4.4 from the review count and total, against the weekly review rate now.",
+    "confirm_if": "The needed number is more than what 12 weeks of reviews at the present weekly rate would bring.",
+    "refute_if": "The present rate delivers the needed number in 12 weeks or less.",
+    "fix_stage": "decision"
+   }
+  ],
+  "dropped": [
+   {
+    "step": "s-incentive",
+    "reason": "The owner said never to offer anything in exchange for reviews, and Google treats rewards for reviews as a violation."
+   }
+  ],
+  "measurement": {
+   "window": "Weekly for 12 weeks from the first change, comparing the weeks since the fix with the 8 weeks before, and the same weeks last year if available.",
+   "min_volume": "At least 30 new reviews since the fix before the rating is called a result, and at least 4 weeks of bookings per period compared.",
+   "stop_rule": "Roll back a kitchen or service change that makes order-to-table time worse for two weeks in a row; stop any reply or invitation that anyone reports as pressure or reward."
   }
+ }
 }

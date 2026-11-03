@@ -470,6 +470,7 @@ for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(
 fs.writeFileSync("public/sitemap.xml", sitemapIndex([
   ...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length).map((name) => ({ name, lastmod: newest(SITEMAPS[name].map((u) => lastmod[u] ?? "")) })),
   { name: "jobs", lastmod: jobHubDates(blocks).all },
+  { name: "guides" }, // How we test and the industry pages, written by scripts/prerender.mjs (scripts/lib/trust-pages.mjs)
 ]));
 // The feeds of new and changed items (the newest 100 by the dates above), linked from the home page, /jobs and llms.txt.
 const taskName = (t) => TASKS.find((x) => x.id === t)?.name;

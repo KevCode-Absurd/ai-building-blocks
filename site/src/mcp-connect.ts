@@ -22,6 +22,9 @@ async function boot() {
   status.textContent = `Signed in as ${clerk.user?.primaryEmailAddress?.emailAddress ?? 'your work account'}.`;
   details.hidden = false;
   const personal = String(context.scope).startsWith('saved:read');
+  // The check to run after connecting uses the read-only list tool of this kind of connection.
+  const check = document.querySelector<HTMLElement>('#check-prompt');
+  if (check && !personal) check.textContent = 'Use my AI Blocks company connection. Call list_company_items and tell me how many items it found.';
   const write=String(context.scope).split(' ').some(s=>s.endsWith(':write'));
   details.textContent = `AI client (name supplied by the client): ${context.client_name ?? context.client_id}. Client callback: ${new URL(context.redirect_uri).origin}. ${personal ? 'Personal library' : 'Company workspace'} endpoint: ${new URL(context.resource).pathname}. Access: read ${personal ? 'your saved kits, workflows, skills, agents and profiles' : 'this company’s saved skills, workflows, kits and agents'} and supporting files. Your chosen AI provider receives the selected content.`;
   connect.disabled = false;

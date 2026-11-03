@@ -193,3 +193,18 @@ export function catalogueGapReport(entries) {
   const markdown = `# Catalogue gaps\n\nStages where no specialist in the catalogue fit, from ${entries.length} engagements. Phase 1 builds these next.\n\n${rows.length ? `| Specialist needed | Times | Stage kinds | Industries | From |\n|---|---|---|---|---|\n${rows.map(r => `| ${r.gap.replace(/\|/g, '/')} | ${r.count} | ${r.kinds.join(', ')} | ${r.industries.join(', ') || '-'} | ${r.sources.join(', ')} |`).join('\n')}` : 'No gaps: every stage found a catalogue specialist.'}\n`;
   return { engagements: entries.length, gaps: gaps.length, rows, markdown };
 }
+
+// The outcome tool entry (spread into OUTCOME_TOOLS in outcome-mcp.mjs; MCP and REST are derived from it).
+const terms = { type: 'array', maxItems: 50, items: { type: 'string', minLength: 1, maxLength: 100 } };
+export const PATTERN_TOOL = {
+  name: 'prepare_outcome_pattern', title: 'Prepare a plan pattern to share', rest: '/api/v1/outcome-patterns', engagement: true, path: 'consent',
+  description: 'After a finished round, returns the exact anonymised PATTERN.json the owner would share (names, figures, links and contact details removed) and its sha256. Only if the owner says yes to that file, call again with consent to get PATTERN-SUBMISSION.json for review by a person at AI Blocks. Nothing is sent or published.',
+  input: { properties: {
+    engagement: { type: 'object', description: 'The complete engagement.json from the last outcome tool result, unchanged.' },
+    engagement_sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' },
+    experiments: { type: 'string', maxLength: 100000, description: 'Optional text of experiments.jsonl, to include results as relative change.' },
+    remove: { ...terms, description: 'More words that identify the business.' }, keep: { ...terms, description: 'Public words to keep, such as a platform name.' },
+    consent: { type: 'object', additionalProperties: false, required: ['pattern_sha256', 'by', 'consented', 'at'], properties: { pattern_sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' }, by: { type: 'string', enum: ['owner'] }, consented: { type: 'boolean' }, at: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' } } },
+  }, required: ['engagement', 'engagement_sha256'] },
+  run: (a, { engagement }) => preparePattern(engagement, { keep: a.keep, remove: a.remove, experiments: a.experiments, consent: a.consent }),
+};

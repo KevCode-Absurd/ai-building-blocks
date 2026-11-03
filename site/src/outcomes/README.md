@@ -8,7 +8,9 @@ Turns "my business isn't doing well" into a finished, measured result, run by ou
 | `plan-contract.mjs` | Checks the brief, the research and the composed plan: 11 stage kinds in order, every research step carried out or dropped with a reason, at least one source outside our catalogue, decisions always need the owner, live actions need approval of each action, nothing is built before the owner chooses. Catalogue gaps are allowed and reported. |
 | `engagement.mjs` | One owner's job through DEFINE → RESEARCH → PLAN_REVIEW → RUN: plan approval, revisions that keep unchanged finished stages, gates, autonomy, missing-data blocking, stage prompts, the files for `outcomes/<id>/` and the anonymised plan pattern. Refuses anything that looks like an API key. |
 | `records.mjs` | Decisions (passing over the top option needs a reason) and experiments (registered before launch; low volume means INCONCLUSIVE; a broken guardrail is never a WIN). Returns lines to append, learning candidates and an anonymised outcome report. |
-| `outcome-mcp.mjs` | Four tools: `start_outcome`, `advance_outcome`, `record_outcome_decision`, `record_outcome_experiment`, plus the catalogue resolver that checks a submitted plan's specialists and items. Two opt-in tools, `read_back_outcome_experiment` and `prepare_outcome_pattern`, are routed by `callOutcomeTool` but listed separately in `outcomeLoopMcpTools`. |
+| `outcome-mcp.mjs` | The tool registry (`OUTCOME_TOOLS`, one entry per tool; add a tool by appending one): `start_outcome`, `advance_outcome`, `record_outcome_decision`, `record_outcome_experiment`, `read_back_outcome_experiment` and `prepare_outcome_pattern` (their entries live in monitoring.mjs and patterns.mjs and are spread in), plus the catalogue resolver that checks a submitted plan's specialists and items and suggests the nearest real id. Every argument problem comes back at once with its field path. |
+| `outcome-schema.mjs` | The tools' input JSON Schemas, built from the validators' field lists (`FIELDS` in plan-contract.mjs, `EVENT_FIELDS` in engagement.mjs). |
+| `schema-check.mjs` | Checks arguments against those schemas, collecting every problem with its path and a did-you-mean. |
 | `monitoring.mjs` | Scheduled read-backs (B4): the schedule and routine prompt for a host scheduler, and the read-back that compares a reading with its registration, flags guardrail breaches and closes the test with an honest verdict. Budget ideas are proposals only. |
 | `patterns.mjs` | Plans that worked (B5): the anonymiser, opt-in consent to the exact file, the review queue format, the reviewed-pattern-to-workflow-draft export and the catalogue-gap report. |
 | `examples/rising-cpa.mjs` | A worked example of a good brief, research and plan, offered with `include_example`. Illustrative, not a playbook. |
@@ -18,7 +20,7 @@ Everything is stateless. The host keeps `engagement.json` and sends it back with
 
 ## Try it
 
-The four tools are in the local MCP preview (`site/scripts/scoping-mcp-preview.mjs`, Node 24). Add it to Claude Code, Claude Desktop or Codex as a stdio server, then say what you want:
+The outcome tools are in the local MCP preview (`site/scripts/scoping-mcp-preview.mjs`, Node 24). Add it to Claude Code, Claude Desktop or Codex as a stdio server, then say what you want:
 
 ```text
 My business isn't doing too well.

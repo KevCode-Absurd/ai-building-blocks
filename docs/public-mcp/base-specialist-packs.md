@@ -10,7 +10,7 @@ The host reads the current conversation before asking what job needs doing, what
 
 `prepare_specialist({"role_id":"coding-specialist"})` returns AWAITING_TASK, the base setup files, pinned source retrieval information and a complete pack URL. It does not execute a task or store private inputs. The host retrieves the full relevant methods and supporting files before using them. A method manifest is not a completed read.
 
-For task-led discovery, `find_specialist` suggests candidates. The host explains the proposed responsibilities and lets the user accept or change the selection. Task-specific `prepare_specialist` with task/context remains backward compatible. The local preview exposes direct discovery/base loading alongside optional scoping tools. Public MCP version 2.2.0 includes this mode; a host with cached tool schemas may need a connection refresh. It does not require an application-wide restart.
+For task-led discovery, `find_specialist` suggests candidates. The host explains the proposed responsibilities and lets the user accept or change the selection. Task-specific `prepare_specialist` with task/context remains backward compatible. The local preview exposes direct discovery/base loading alongside optional scoping tools. Public MCP version 2.2.0 added this mode, and 3.0.0 keeps it; a host with cached tool schemas may need a connection refresh. It does not require an application-wide restart.
 
 ## REST
 

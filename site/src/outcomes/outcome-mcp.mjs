@@ -1,137 +1,135 @@
 // Outcome orchestrator tools for MCP and REST. Stateless: the host keeps the engagement folder, researches, composes and does the work.
 import { advanceEngagement, checkEngagement, describeEngagement, engagementDigest, startEngagement } from './engagement.mjs';
 import { recordDecision, recordExperiment } from './records.mjs';
-import { checkCatalogue, planRefs, planWarnings, validatePlan, validateResearch } from './plan-contract.mjs';
+import { ValidationError, checkCatalogue, collector, planRefs, planWarnings, validateBrief, validatePlan, validateResearch } from './plan-contract.mjs';
+import { DECISION_SCHEMA, EVENT_SCHEMA, EXPERIMENT_SCHEMA } from './outcome-schema.mjs';
+import { checkSchema, nearest } from './schema-check.mjs';
 import example from './examples/rising-cpa.mjs';
+import { READBACK_TOOL } from './monitoring.mjs';
+import { PATTERN_TOOL } from './patterns.mjs';
 
 const str = (maxLength = 4000) => ({ type: 'string', minLength: 1, maxLength });
 const hash = { type: 'string', pattern: '^[a-f0-9]{64}$', description: 'engagement_sha256 from the last outcome tool result. A different value means the engagement changed.' };
 const engagement = { type: 'object', description: 'The complete engagement.json from the last outcome tool result, unchanged.' };
-const obj = (properties, required) => ({ type: 'object', properties, required, additionalProperties: false });
-// Read-only: nothing is stored or changed here. The host keeps the engagement and applies the returned files itself.
-const definition = (name, title, description, properties, required) => ({
-  name, title, description, inputSchema: obj(properties, required),
-  outputSchema: { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true },
-  annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-});
+const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+const outputSchema = { type: 'object', properties: { schema: { type: 'string' } }, required: ['schema'], additionalProperties: true };
+
+/** The outcome part of a server's instructions (the local scoping preview uses it; the public MCP has its own short text). */
+export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (more customers, rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words and follow each result\'s next step. You pin the outcome down with one batch of questions, research how experts do the job (memory, our catalogue, then the web), compose a plan from our specialists and items, and the owner approves it before anything runs. Save the returned files in outcomes/<id>/. Decisions and live actions always stop for the owner; API keys stay with you and never go in files.';
+
+/**
+ * The outcome tools, one entry each. To add a tool, append an entry (or spread a list imported from another file):
+ *   name, title, description: what the host sees in tools/list.
+ *   input: { properties, required }: the input JSON Schema; every argument is checked against it before run.
+ *   rest: the REST route that mirrors it (POST, JSON body = the tool arguments), if any.
+ *   engagement: true when the tool takes { engagement, engagement_sha256 } and needs the current engagement checked first.
+ *   run(args, { engagement, resolve, today }): the result, or throw (fail / ValidationError) to refuse.
+ */
+export const OUTCOME_TOOLS = [
+  {
+    name: 'start_outcome', title: 'Start here for any business goal', rest: '/api/v1/outcomes',
+    description: 'The front door for any goal or problem the owner states, in their own words. Returns a new engagement waiting for its brief, the next step and the files for outcomes/<id>/, with METHOD.md (brief frame with examples, research protocol, composition and run rules). include_example adds a worked example of a good brief, research and plan. No work runs here.',
+    input: { properties: {
+      request: str(), engagement_id: { type: 'string', pattern: '^[a-z0-9][a-z0-9-]{0,79}$' }, started: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' },
+      include_example: { type: 'boolean', description: 'Add the worked example (rising ad costs) to see the quality bar. Off by default; it is large.' },
+    }, required: ['request'] },
+    async run(a) {
+      const e = startEngagement({ request: a.request, id: a.engagement_id, started: a.started });
+      return { ...(await describeEngagement(e, { initial: true })), ...(a.include_example ? { example } : {}) };
+    },
+  },
+  {
+    name: 'advance_outcome', title: 'Move an outcome engagement forward', rest: '/api/v1/outcome-steps', engagement: true,
+    description: 'Apply one event to an engagement. Before the run: brief (the pinned-down outcome), plan (research and the composed plan, checked against our rules and the live catalogue), approve_plan (owner only). During the run: data, start, complete (with outputs and checks), approve (owner only), skip, block, reopen, next_round; a plan event during the run is a revision. autonomy (owner only) works any time. Every problem in an event comes back at once, with its field path.',
+    input: { properties: { engagement, engagement_sha256: hash, event: EVENT_SCHEMA }, required: ['engagement', 'engagement_sha256', 'event'] },
+    async run(a, { engagement: e, resolve, today }) {
+      let planCheck;
+      if (a.event.type === 'brief') await under('event.brief', () => validateBrief(a.event.brief));
+      if (a.event.type === 'plan') {
+        if (!e.brief) throw new ValidationError([{ path: 'event.type', message: 'Submit the brief before the plan.' }]);
+        // Research and plan problems come back together; the plan is checked against the research, so it waits for valid research.
+        const c = collector();
+        const research = c.try('event.research', () => validateResearch(a.event.research));
+        const plan = research && c.try('event.plan', () => validatePlan(a.event.plan, { research, brief: e.brief }));
+        c.done();
+        // A catalogue outage (PublicApiError) passes through unchanged; unknown ids come back as problems.
+        if (resolve) { const found = await resolve(planRefs(plan, research)); await under('event', () => checkCatalogue(found, plan, research)); }
+        planCheck = { catalogue_checked: Boolean(resolve), warnings: planWarnings(e.brief, research, plan, today ?? new Date().toISOString().slice(0, 10)) };
+      }
+      return describeEngagement(await under('event', () => advanceEngagement(e, a.event, { planCheck })));
+    },
+  },
+  {
+    name: 'record_outcome_decision', title: 'Record the owner\'s decision', rest: '/api/v1/outcome-decisions', engagement: true,
+    description: 'Record what the owner chose, the options considered (best-ranked first), what they passed over and why. Passing over the top option needs a reason. Returns a line for decisions.jsonl and, if a durable rule was stated, a learning candidate with where to save it.',
+    input: { properties: { engagement, engagement_sha256: hash, decision: DECISION_SCHEMA }, required: ['engagement', 'engagement_sha256', 'decision'] },
+    run: (a, { engagement: e }) => under('decision', () => recordDecision(e, a.decision)),
+  },
+  {
+    name: 'record_outcome_experiment', title: 'Register or close an experiment', rest: '/api/v1/outcome-experiments', engagement: true,
+    description: 'Register a test before it goes live (action register: change, metric, baseline, window, minimum volume, guardrails), then close it (action close: observed, volume, guardrail results, verdict). Low volume forces INCONCLUSIVE; a broken guardrail is never a WIN. Returns a line for experiments.jsonl, a learning candidate and an anonymised outcome report the owner may choose to share.',
+    input: { properties: { engagement, engagement_sha256: hash, experiment: EXPERIMENT_SCHEMA }, required: ['engagement', 'engagement_sha256', 'experiment'] },
+    run: (a, { engagement: e }) => under('experiment', () => recordExperiment(e, a.experiment)),
+  },
+  // Scheduled read-backs (B4) and plan patterns (B5): entries live with their engines.
+  ...[READBACK_TOOL, PATTERN_TOOL].map(({ path, run, ...t }) => ({ ...t, run: (a, c) => under(path, () => run(a, c)) })),
+];
+
+/** Run fn (sync or async) and report what it refuses as problems under path, so every refusal names its field. */
+async function under(path, fn) {
+  try { return await fn(); }
+  catch (error) { const c = collector(); c.try(path, () => { throw error; }); c.done(); }
+}
+
+export const outcomeMcpTools = OUTCOME_TOOLS.map(({ name, title, description, input }) => ({
+  name, title, description, inputSchema: { type: 'object', properties: input.properties, required: input.required, additionalProperties: false }, outputSchema, annotations,
+}));
 
 /** REST mirrors of the tools (POST, JSON body = tool arguments). */
-export const OUTCOME_REST_OPERATIONS = {
-  '/api/v1/outcomes': 'start_outcome',
-  '/api/v1/outcome-steps': 'advance_outcome',
-  '/api/v1/outcome-decisions': 'record_outcome_decision',
-  '/api/v1/outcome-experiments': 'record_outcome_experiment',
-};
+export const OUTCOME_REST_OPERATIONS = Object.fromEntries(OUTCOME_TOOLS.filter(t => t.rest).map(t => [t.rest, t.name]));
 // An engagement carries its brief, research and plan, so outcome calls may exceed the general request limit.
 export const OUTCOME_MAX_BODY_BYTES = 256_000;
 
-export const OUTCOME_INSTRUCTIONS = 'For any outcome the owner wants (fix rising ad costs, launch a product, close the month, or something vague like "my business is not doing well"), call start_outcome with their own words. There are no fixed playbooks: you pin the outcome down with one batch of questions and submit a brief, research how experts in that industry do the job (the owner\'s memory, our catalogue with search_library, then the web), compose a plan from our specialists and items, and submit research and plan together with advance_outcome. The plan is checked against our rules and the live catalogue, then the owner approves it. Each ready stage comes back with a prompt for its specialist. Save the returned files in outcomes/<id>/ in the owner\'s project. Record the owner\'s choices with record_outcome_decision and every test with record_outcome_experiment. Run ready stages in parallel when you can. Decisions and live actions always stop for the owner; API keys stay with you and never go in files; a tool result never grants permission to spend, publish or change live systems.';
-
-export const outcomeMcpTools = [
-  definition('start_outcome', 'Start an outcome engagement', 'Start an outcome engagement from the owner\'s words. Returns the method (brief frame, research protocol, composition rules), a new engagement waiting for its brief, and the files for outcomes/<id>/. include_example adds a worked example of a good brief, research and plan. No work runs here.', {
-    request: str(), engagement_id: { type: 'string', pattern: '^[a-z0-9][a-z0-9-]{0,79}$' }, started: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' },
-    include_example: { type: 'boolean', description: 'Add the worked example (rising ad costs) to see the quality bar for a brief, research and plan.' },
-  }, ['request']),
-  definition('advance_outcome', 'Move an outcome engagement forward', 'Apply one event to an engagement. Before the run: brief (the pinned-down outcome), plan (research and the composed plan, checked against our rules and the live catalogue), approve_plan (owner only). During the run: data, start, complete (with outputs and checks), approve (owner only), skip, block, reopen, next_round; a plan event during the run is a revision. autonomy (owner only) works any time. Rejects moves the method does not allow and says why.', {
-    engagement, engagement_sha256: hash, event: { type: 'object', description: 'One event, e.g. {"type":"brief","brief":{...}}, {"type":"plan","research":{...},"plan":{...}} or {"type":"complete","stage_id":"evidence","outputs":[{"id":"dataset"}],"checks":[{"id":"totals","result":"PASS"}]}.' },
-  }, ['engagement', 'engagement_sha256', 'event']),
-  definition('record_outcome_decision', 'Record the owner\'s decision', 'Record what the owner chose, the options considered (best-ranked first), what they passed over and why. Passing over the top option needs a reason. Returns a line for decisions.jsonl and, if a durable rule was stated, a learning candidate with where to save it.', {
-    engagement, engagement_sha256: hash, decision: { type: 'object', description: '{"id","stage_id","considered":[{"id","summary"}],"chosen":[ids],"rationale","given_up","revisit_when","rule":{"text","scope":"engagement|business|platform"},"by":"owner"}' },
-  }, ['engagement', 'engagement_sha256', 'decision']),
-  definition('record_outcome_experiment', 'Register or close an experiment', 'Register a test before it goes live (action register: change, metric, baseline, window, minimum volume, guardrails), then close it (action close: observed, volume, guardrail results, verdict). Low volume forces INCONCLUSIVE; a broken guardrail is never a WIN. Returns a line for experiments.jsonl, a learning candidate and an anonymised outcome report the owner may choose to share.', {
-    engagement, engagement_sha256: hash, experiment: { type: 'object' },
-  }, ['engagement', 'engagement_sha256', 'experiment']),
-];
-
-const fail = message => { throw Error(message); };
-const args = (name, input) => {
-  const def = outcomeMcpTools.find(t => t.name === name) ?? fail('Unknown outcome tool.');
-  if (!input || typeof input !== 'object' || Array.isArray(input)) fail('Use documented outcome tool arguments.');
-  const extra = Object.keys(input).find(k => !Object.hasOwn(def.inputSchema.properties, k));
-  if (extra) fail(`Unsupported argument ${extra}.`);
-  const missing = def.inputSchema.required.find(k => !Object.hasOwn(input, k));
-  if (missing) fail(`Missing argument ${missing}.`);
-  return input;
-};
 async function current(input) {
-  checkEngagement(input.engagement);
-  if (await engagementDigest(input.engagement) !== input.engagement_sha256) fail('This engagement changed since the last outcome result. Send the latest engagement.json and its engagement_sha256.');
+  try { checkEngagement(input.engagement); }
+  catch (error) { throw new ValidationError([{ path: 'engagement', message: `${error.message} Send the engagement.json from the last outcome result, unchanged.` }]); }
+  if (await engagementDigest(input.engagement) !== input.engagement_sha256) throw new ValidationError([{ path: 'engagement_sha256', message: 'This engagement changed since the last outcome result. Send the latest engagement.json and its engagement_sha256.' }]);
   return input.engagement;
 }
 
 /**
- * resolve, when given, checks catalogue ids: async ({roles, items}) => ({missing_roles, missing_items}).
+ * Call an outcome tool. Every argument problem is reported together in one ValidationError: issues with the field
+ * path, what is wrong and, where it is clear, the value that was probably meant.
+ * resolve, when given, checks catalogue ids: async ({roles, items}) => ({missing_roles, missing_items, suggestions?}).
  * Without it a plan is accepted on structure alone and the result says the catalogue was not checked.
  */
 export async function callOutcomeTool(name, input = {}, { resolve, today } = {}) {
-  if (Object.hasOwn(LOOP_HANDLERS, name)) return LOOP_HANDLERS[name](input, { today });
-  const a = args(name, input);
-  if (name === 'start_outcome') {
-    const e = startEngagement({ request: a.request, id: a.engagement_id, started: a.started });
-    return { ...(await describeEngagement(e, { initial: true })), ...(a.include_example ? { example } : {}) };
-  }
-  const e = await current(a);
-  if (name === 'advance_outcome') {
-    let planCheck;
-    if (a.event?.type === 'plan') {
-      if (!e.brief) fail('Submit the brief before the plan.');
-      const research = validateResearch(a.event.research);
-      const plan = validatePlan(a.event.plan, { research, brief: e.brief });
-      if (resolve) checkCatalogue(await resolve(planRefs(plan, research)));
-      planCheck = { catalogue_checked: Boolean(resolve), warnings: planWarnings(e.brief, research, plan, today ?? new Date().toISOString().slice(0, 10)) };
-    }
-    return describeEngagement(advanceEngagement(e, a.event, { planCheck }));
-  }
-  if (name === 'record_outcome_decision') return recordDecision(e, a.decision);
-  return recordExperiment(e, a.experiment);
+  const tool = OUTCOME_TOOLS.find(t => t.name === name);
+  if (!tool) throw new ValidationError([{ path: '', message: `Unknown outcome tool ${name}.`, suggestion: nearest(String(name), OUTCOME_TOOLS.map(t => t.name)) }]);
+  const def = outcomeMcpTools.find(t => t.name === name);
+  if (!input || typeof input !== 'object' || Array.isArray(input)) throw new ValidationError([{ path: '', message: 'Send the arguments as one JSON object.' }]);
+  const issues = checkSchema(def.inputSchema, input).map(i => !i.path.includes('.') && !i.path.includes('[') && /is not a field here/.test(i.message) ? { ...i, message: `is not an argument of ${name}. Arguments: ${Object.keys(def.inputSchema.properties).join(', ')}.` } : i);
+  if (issues.length) throw new ValidationError(issues);
+  const context = { resolve, today };
+  if (tool.engagement) context.engagement = await current(input);
+  return tool.run(input, context);
 }
 
-/** Catalogue resolver over the public catalogue service: one role inventory read, item lookups from the cached index. */
+/** Catalogue resolver over the public catalogue service: one role inventory read, item lookups from the cached index, and the nearest real id for each unknown one. */
 export function catalogueResolver(catalogue) {
   return async ({ roles, items }) => {
     const content = (await catalogue.readResource('aiblocks://roles')).contents[0];
-    const known = new Set((JSON.parse('text' in content ? content.text : '{}').roles ?? []).map(r => r.id));
+    const roleIds = (JSON.parse('text' in content ? content.text : '{}').roles ?? []).map(r => r.id);
+    const known = new Set(roleIds);
     const found = await Promise.all(items.map(id => catalogue.callTool('get_item', { id }).then(() => true, () => false)));
-    return { missing_roles: roles.filter(r => !known.has(r)), missing_items: items.filter((_, i) => !found[i]) };
+    const missing_roles = roles.filter(r => !known.has(r)), missing_items = items.filter((_, i) => !found[i]);
+    const suggestions = {};
+    for (const r of missing_roles) { const s = nearest(r, roleIds); if (s) suggestions[r] = s; }
+    await Promise.all(missing_items.map(async id => {
+      const rows = await catalogue.callTool('search_library', { query: id.replace(/-/g, ' ').slice(0, 300), limit: 5 }).then(r => r?.items ?? [], () => []);
+      const s = nearest(id, rows.map(r => r.id)) ?? rows[0]?.id;
+      if (s) suggestions[id] = s;
+    }));
+    return { missing_roles, missing_items, suggestions };
   };
 }
-
-// ---- Scheduled read-backs (B4) and plan patterns (B5) ----
-// Kept in one block so it merges cleanly. These tools are opt-in: callOutcomeTool routes them, but they are not in
-// outcomeMcpTools, so the public tool list is unchanged until ...outcomeLoopMcpTools is added there on purpose.
-import { planReadbacks, readBack } from './monitoring.mjs';
-import { preparePattern } from './patterns.mjs';
-
-const day = { type: 'string', pattern: '^\d{4}-\d{2}-\d{2}$' };
-const termList = { type: 'array', maxItems: 50, items: str(100) };
-export const outcomeLoopMcpTools = [
-  definition('read_back_outcome_experiment', 'Read back a running experiment', 'Without a reading: the read-back schedule for every open experiment and a routine prompt for a host scheduler (Claude Code scheduled task or cron). With a reading: compares it with the registered baseline, minimum volume and guardrails; flags a guardrail breach at once; once the window ends, returns an honest verdict and the close payload for record_outcome_experiment. Budget and pause ideas come back as proposals for the owner; nothing is ever changed.', {
-    engagement, engagement_sha256: hash, experiments: { type: 'string', maxLength: 100000, description: 'The text of experiments.jsonl.' },
-    reading: { type: 'object', description: '{"experiment_id","at":"YYYY-MM-DD","observed","volume","guardrails":[{"name","held"} or {"name","value","limit","worse_if":"above|below"}],"spend":{"to_date","cap"},"source":"where it was read"}' },
-    schedule: obj({ every_days: { type: 'integer', enum: [1, 2, 3, 7, 14] }, settle_days: { type: 'integer', minimum: 0, maximum: 14 }, hour: { type: 'integer', minimum: 0, maximum: 23 } }, []),
-  }, ['engagement', 'engagement_sha256', 'experiments']),
-  definition('prepare_outcome_pattern', 'Prepare a plan pattern to share', 'After a finished round, returns the exact anonymised PATTERN.json the owner would share (names, figures, links and contact details removed) and its sha256. Only if the owner says yes to that file, call again with consent to get PATTERN-SUBMISSION.json for review by a person at AI Blocks. Nothing is sent or published.', {
-    engagement, engagement_sha256: hash, experiments: { type: 'string', maxLength: 100000, description: 'Optional text of experiments.jsonl, to include results as relative change.' },
-    remove: { ...termList, description: 'More words that identify the business.' }, keep: { ...termList, description: 'Public words to keep, such as a platform name.' },
-    consent: obj({ pattern_sha256: hash, by: { type: 'string', enum: ['owner'] }, consented: { type: 'boolean' }, at: day }, ['pattern_sha256', 'by', 'consented', 'at']),
-  }, ['engagement', 'engagement_sha256']),
-];
-function loopArgs(name, input) {
-  const def = outcomeLoopMcpTools.find(t => t.name === name);
-  if (!input || typeof input !== 'object' || Array.isArray(input)) fail('Use documented outcome tool arguments.');
-  const extra = Object.keys(input).find(k => !Object.hasOwn(def.inputSchema.properties, k));
-  if (extra) fail(`Unsupported argument ${extra}.`);
-  const missing = def.inputSchema.required.find(k => !Object.hasOwn(input, k));
-  if (missing) fail(`Missing argument ${missing}.`);
-  return input;
-}
-const LOOP_HANDLERS = {
-  read_back_outcome_experiment: async (input, { today }) => {
-    const a = loopArgs('read_back_outcome_experiment', input), e = await current(a), when = today ?? new Date().toISOString().slice(0, 10);
-    return a.reading ? readBack(e, a.experiments, a.reading, { today: when, ...a.schedule }) : planReadbacks(e, a.experiments, { today: when, ...a.schedule });
-  },
-  prepare_outcome_pattern: async input => {
-    const a = loopArgs('prepare_outcome_pattern', input);
-    return preparePattern(await current(a), { keep: a.keep, remove: a.remove, experiments: a.experiments, consent: a.consent });
-  },
-};

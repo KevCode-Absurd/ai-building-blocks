@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { outcomeLoopMcpTools, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
+import { OUTCOME_REST_OPERATIONS, outcomeMcpTools } from '../src/outcomes/outcome-mcp.mjs';
 import { parseExperiments, planReadbacks, readBack, readbackDates } from '../src/outcomes/monitoring.mjs';
 import { REGISTER, call, complete, launched, rec } from './outcome-run-helper.mjs';
 
@@ -87,9 +87,11 @@ test('read-back schedules and tools stay small and opt-in', async () => {
   const { r, experiments } = await launched();
   assert.equal(planReadbacks(r.engagement, experiments, { every_days: 1 }).routine.cron, '0 9 * * *');
   assert.throws(() => planReadbacks(r.engagement, experiments, { every_days: 5 }), /every_days/);
-  // Not in the public list until added on purpose; routed by callOutcomeTool either way.
-  assert.ok(!outcomeMcpTools.some(t => t.name === 'read_back_outcome_experiment'));
-  assert.ok(JSON.stringify(outcomeLoopMcpTools).length < 4500);
+  // Registered like every outcome tool: MCP and REST come from the same entry, with a small schema.
+  const def = outcomeMcpTools.find(t => t.name === 'read_back_outcome_experiment');
+  assert.ok(def && JSON.stringify(def).length < 4000, 'small schema');
+  assert.equal(OUTCOME_REST_OPERATIONS['/api/v1/outcome-readbacks'], 'read_back_outcome_experiment');
+  await assert.rejects(call('read_back_outcome_experiment', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiments, reading: { experiment_id: 'x1', at: '2026-11-17', observed: 1, volume: 1 } }), /source/);
   await assert.rejects(call('read_back_outcome_experiment', { engagement: r.engagement, engagement_sha256: '0'.repeat(64), experiments }), /changed since/);
-  await assert.rejects(call('read_back_outcome_experiment', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiments, budget: 5 }), /Unsupported argument budget/);
+  await assert.rejects(call('read_back_outcome_experiment', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, experiments, budget: 5 }), /budget/);
 });

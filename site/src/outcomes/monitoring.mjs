@@ -188,3 +188,27 @@ export function readBack(engagement, experiments, reading, { today, every_days =
     next_readback: close ? null : upcoming, review: { host_reported: true, applies_changes: false },
   };
 }
+
+// The outcome tool entry (spread into OUTCOME_TOOLS in outcome-mcp.mjs; MCP and REST are derived from it).
+const s = (maxLength = 300) => ({ type: 'string', minLength: 1, maxLength });
+const n = { type: 'number' };
+export const READBACK_TOOL = {
+  name: 'read_back_outcome_experiment', title: 'Read back a running experiment', rest: '/api/v1/outcome-readbacks', engagement: true, path: 'reading',
+  description: 'Without a reading: the read-back schedule for every open experiment and a routine prompt for a host scheduler (Claude Code scheduled task or cron), set up only if the owner agrees. With a reading: compares it with the registered baseline, minimum volume and guardrails; flags a guardrail breach at once; after the window, returns an honest verdict and the close payload for record_outcome_experiment. Budget and pause ideas come back as proposals for the owner; nothing is ever changed.',
+  input: { properties: {
+    engagement: { type: 'object', description: 'The complete engagement.json from the last outcome tool result, unchanged.' },
+    engagement_sha256: { type: 'string', pattern: '^[a-f0-9]{64}$' },
+    experiments: { type: 'string', maxLength: 100000, description: 'The text of experiments.jsonl.' },
+    reading: { type: 'object', additionalProperties: false, required: ['experiment_id', 'at', 'observed', 'volume', 'source'], properties: {
+      experiment_id: { type: 'string', pattern: '^[a-z0-9][a-z0-9-]{0,79}$' }, at: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}$' }, observed: n, volume: { type: 'integer', minimum: 0 },
+      guardrails: { type: 'array', maxItems: 20, items: { type: 'object', additionalProperties: false, required: ['name'], properties: { name: s(), held: { type: 'boolean' }, value: n, limit: n, worse_if: { type: 'string', enum: ['above', 'below'] }, note: s(500) } } },
+      spend: { type: 'object', additionalProperties: false, required: ['to_date', 'cap'], properties: { to_date: n, cap: n } },
+      source: { ...s(), description: 'Where the numbers were read, read-only.' }, min_effect: { type: 'number', minimum: 0, maximum: 0.99 }, note: s(1000),
+    } },
+    schedule: { type: 'object', additionalProperties: false, properties: { every_days: { type: 'integer', enum: [1, 2, 3, 7, 14] }, settle_days: { type: 'integer', minimum: 0, maximum: 14 }, hour: { type: 'integer', minimum: 0, maximum: 23 } } },
+  }, required: ['engagement', 'engagement_sha256', 'experiments'] },
+  run(a, { engagement, today }) {
+    const when = today ?? new Date().toISOString().slice(0, 10);
+    return a.reading ? readBack(engagement, a.experiments, a.reading, { today: when, ...a.schedule }) : planReadbacks(engagement, a.experiments, { today: when, ...a.schedule });
+  },
+};

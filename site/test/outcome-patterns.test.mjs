@@ -54,7 +54,7 @@ test('consent is opt-in, for the exact file shown, and nothing is sent', async (
   assert.equal(shown.share, 'ONLY_WITH_OWNER_CONSENT');
   const consent = { pattern_sha256: preview.pattern_sha256, by: 'owner', consented: true, at: '2026-11-27' };
 
-  await assert.rejects(call('prepare_outcome_pattern', { ...base, consent: { ...consent, by: 'host' } }), /Only the owner/);
+  await assert.rejects(call('prepare_outcome_pattern', { ...base, consent: { ...consent, by: 'host' } }), /owner/);
   await assert.rejects(call('prepare_outcome_pattern', { ...base, remove: ['Purchase'], consent }), /different file/);
   assert.equal((await call('prepare_outcome_pattern', { ...base, consent: { ...consent, consented: false } })).state, 'NOT_SHARED');
 

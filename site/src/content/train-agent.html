@@ -1,0 +1,438 @@
+<article>
+      <section class="hero" aria-labelledby="agent-title">
+        <p class="eyebrow">Guide · By Kevin Mark · Updated <time datetime="2026-11-03">3 Nov 2026</time> · 25 min read</p>
+        <h1 id="agent-title">How to train your own AI agent, step by step</h1>
+        <p class="lede">Teach ChatGPT, Claude or Gemini to handle one recurring job exactly the way you would, without writing any code. All it takes is a small folder of plain-text files, a handful of strong examples and about ten minutes of review after each job. This guide walks through every step, and the free starter pack includes every file and prompt you need.</p>
+        <div class="hero-actions"><a class="button" href="#steps">Start the steps</a><a class="button secondary" href="/templates/ai-agent-starter-pack.zip" download>Download the starter pack</a></div>
+        <p class="note">Free to use with ChatGPT, Claude, Gemini, Claude Code and Codex. Your agent's files remain on your own computer or private drive.</p>
+      </section>
+
+      <nav class="toc" aria-label="On this page">
+        <p class="toc-title">On this page</p>
+        <ol>
+          <li><a href="#what">What training an AI agent means</a></li>
+          <li><a href="#pick">Pick one job to start</a></li>
+          <li><a href="#need">What you need</a></li>
+          <li><a href="#steps">The 9 steps at a glance</a></li>
+          <li><a href="#step-1">Steps 1 to 9, in detail</a></li>
+          <li><a href="#example">A worked example: the first two weeks</a></li>
+          <li><a href="#mistakes">Mistakes to avoid</a></li>
+          <li><a href="#safe">Keep it safe and private</a></li>
+          <li><a href="#marketplace">Later: list your agent on AI Blocks</a></li>
+          <li><a href="#faq">Questions people ask</a></li>
+        </ol>
+      </nav>
+
+      <section id="what" class="section" aria-labelledby="what-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">01</span><h2 id="what-heading">What it means to train your own AI agent</h2></div>
+        <p>An AI agent is an AI assistant that performs one specific job for you, consistently, every time you ask. You hand it the input, such as a customer email or the notes from a sales call, and it hands back finished work, such as a reply ready to send or a proposal ready to review.</p>
+        <p>The general assistants you already use, like ChatGPT, Claude and Gemini, are capable writers and researchers, but they know nothing about your standards. They also forget your corrections the moment a conversation ends, which is why so many people find themselves explaining the same preferences over and over.</p>
+        <p><strong>Training solves that problem.</strong> In this guide, training means writing down how you do the job in a few plain files that your AI reads before every task. Each time you correct its work, you capture that correction as one short rule. After 20 or 30 jobs, the agent handles the work the way you would, and the amount you need to edit keeps shrinking.</p>
+        <div class="subnote"><p><strong>You aren't changing the AI model itself.</strong> Changing the model is called fine-tuning, and it requires programming skills, large amounts of training data and a meaningful budget. The file-based method in this guide delivers what most people actually want from training, without any of that. You can read every rule, correct it whenever you like and move the whole agent to a different AI at any time.</p></div>
+        <h3>Why this method works</h3>
+        <p>Modern AI models are remarkably good at following instructions and imitating examples that appear in front of them. Researchers call this in-context learning: the model adapts its behaviour to whatever instructions and examples it has just read, without any permanent change to the model. Your agent's folder takes advantage of this. Every job starts with the AI reading your job description, your examples and your accumulated rules, so it behaves like an assistant who has already been briefed and corrected many times.</p>
+        <p>The weakness of in-context learning is that nothing persists unless you write it down. That's why the most important habit in this guide is converting each meaningful edit into a rule. Without that habit, you have a well-written prompt. With it, you have an agent that improves with every job.</p>
+        <h3>The three parts that make it work</h3>
+        <div class="cards">
+          <article class="card"><p class="tag">The folder</p><h3>Your agent is a folder of files</h3><p>It holds the job description, your rules, examples, permissions and quality checks. Your AI reads them before every job.</p></article>
+          <article class="card"><p class="tag">The loop</p><h3>Every edit becomes a rule</h3><p>Whenever you change the agent's work, your AI converts that change into a single rule, and once you approve it the agent stops repeating the mistake.</p></article>
+          <article class="card"><p class="tag">The score</p><h3>A scorecard shows real progress</h3><p>One line per job records how many checks it passed and how much of its work you changed, which tells you when the agent has earned more responsibility.</p></article>
+        </div>
+        <h3>A prompt, a custom GPT and a trained agent</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">What</th><th scope="col">What it is</th><th scope="col">Does it learn from you?</th></tr></thead>
+          <tbody>
+            <tr><td data-label="What">A prompt</td><td data-label="What it is">A message you paste into a chat.</td><td data-label="Does it learn from you?">No. You start from scratch every time.</td></tr>
+            <tr><td data-label="What">A custom GPT, Claude project or Gem</td><td data-label="What it is">Instructions and files your AI reads at the start of every chat.</td><td data-label="Does it learn from you?">Only when you update it, and most people set one up once and never touch it again.</td></tr>
+            <tr><td data-label="What">A trained agent (this guide)</td><td data-label="What it is">The same container, plus rules drawn from your edits, quality checks, permissions and a scorecard.</td><td data-label="Does it learn from you?">Yes. Every meaningful edit you make can become a permanent rule.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="pick" class="section" aria-labelledby="pick-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">02</span><h2 id="pick-heading">Pick one job to start</h2></div>
+        <p class="intro">The most common mistake is building an agent for something broad, like "my marketing" or "my admin". An agent like that can't improve, because no two of its jobs have the same standards. Start with one narrow job you do often, and train a second agent once the first one is reliable.</p>
+        <h3>What makes a good first job</h3>
+        <ul class="ticks">
+          <li><strong>You do it at least weekly</strong>, and the more often the job comes up, the faster your agent collects rules and reaches a higher level.</li>
+          <li><strong>It takes you 20 minutes or more.</strong> Shorter jobs rarely save enough time to justify the setup and review.</li>
+          <li><strong>You can judge quality by reading the result</strong>, which matters because if you can't tell a good result from a weak one, you can't teach the difference.</li>
+          <li><strong>The input and the output are text</strong>, or files your AI can open, such as documents, spreadsheets or PDFs.</li>
+          <li><strong>A mistake is easy to catch</strong> before anyone else sees it, so early errors cost you nothing but a few minutes.</li>
+        </ul>
+        <h3>Ideas for a first agent</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Your work</th><th scope="col">A good first job</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Your work">Shop owner</td><td data-label="A good first job">Answer customer questions about orders, delivery and returns.</td></tr>
+            <tr><td data-label="Your work">Freelancer or agency</td><td data-label="A good first job">Turn the notes from a sales call into a short, tailored proposal.</td></tr>
+            <tr><td data-label="Your work">Marketer</td><td data-label="A good first job">Turn one blog post into five social posts written in your brand voice.</td></tr>
+            <tr><td data-label="Your work">Recruiter or manager</td><td data-label="A good first job">Turn a hiring brief into a job advert and a set of screening questions.</td></tr>
+            <tr><td data-label="Your work">Finance or operations</td><td data-label="A good first job">Compare supplier invoices against purchase orders and list every mismatch.</td></tr>
+            <tr><td data-label="Your work">Consultant or coach</td><td data-label="A good first job">Write the follow-up email and action list after each client session.</td></tr>
+          </tbody>
+        </table></div>
+        <h3>Jobs to leave for later</h3>
+        <p>Avoid jobs that move money, sign agreements, give legal, medical or financial advice, or take effect before you've seen the result. Your agent can assist with these once it has a long and clean track record, but even then a person should approve the final step.</p>
+        <div class="subnote"><p><strong>Describe the job in one sentence:</strong> "When <em>a customer emails a question</em>, I <em>write the reply</em> so that <em>they get a clear answer the same day</em>." If you can't fill in all three parts, the job is still too vague, so narrow it down until you can.</p></div>
+      </section>
+
+      <section id="need" class="section" aria-labelledby="need-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">03</span><h2 id="need-heading">What you need</h2></div>
+        <ul class="ticks">
+          <li><strong>An AI you already use:</strong> ChatGPT, Claude or Gemini. A paid plan with projects or Gems saves you from attaching files to every chat, but a free plan works too.</li>
+          <li><strong>Three to five examples</strong> of this job done well, taken from your sent emails, past documents or notes.</li>
+          <li><strong>About an hour</strong> for the initial setup.</li>
+          <li><strong>About ten minutes after each job</strong> to grade the result and capture any new rule.</li>
+          <li><strong>The starter pack</strong>, which contains eight template files with instructions for completing each section.</li>
+        </ul>
+        <p><a class="button" href="/templates/ai-agent-starter-pack.zip" download>Download the AI agent starter pack (.zip)</a></p>
+        <p class="note">Prefer not to start from a blank page? <a href="/roles">Choose one of over 1,000 ready-made AI specialists</a>. Each one downloads with its job description, quality checks, permissions and training notes already written, so you can skip straight to steps 7 to 9 below.</p>
+      </section>
+
+      <section id="steps" class="section" aria-labelledby="steps-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">04</span><h2 id="steps-heading">The 9 steps at a glance</h2></div>
+        <ol class="steps">
+          <li><a href="#step-1"><strong>Create the agent's folder</strong></a> by unzipping the starter pack and naming the folder after the job it will handle.</li>
+          <li><a href="#step-2"><strong>Describe the job</strong></a> by letting your AI interview you and draft AGENT.md from your answers.</li>
+          <li><a href="#step-3"><strong>Add examples of good work</strong></a>, collecting three to five strong ones and at least one weak one in EXAMPLES.md.</li>
+          <li><a href="#step-4"><strong>Decide what it may do alone</strong></a> by sorting every possible action into green, yellow and red in PERMISSIONS.md.</li>
+          <li><a href="#step-5"><strong>Write the quality checks</strong></a>, meaning five to ten yes-or-no questions plus three test jobs, recorded in CHECKS.md.</li>
+          <li><a href="#step-6"><strong>Install it in your AI</strong></a> using a ChatGPT or Claude project, a Gemini Gem or a local folder for coding agents.</li>
+          <li><a href="#step-7"><strong>Run a real job, then turn your edit into a rule</strong></a>, because this repeated loop is where the actual training happens.</li>
+          <li><a href="#step-8"><strong>Grade every job</strong></a> by adding one line to SCORECARD.md, then watch the agent progress from level 1 towards level 4.</li>
+          <li><a href="#step-9"><strong>Tidy up once a month</strong></a> by merging overlapping rules, rerunning the test jobs and confirming the current level.</li>
+        </ol>
+      </section>
+
+      <section id="step-1" class="section" aria-labelledby="step-1-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S1</span><h2 id="step-1-heading">Step 1: Create the agent's folder</h2></div>
+        <p class="intro">Your agent isn't an app or a subscription. It's a folder of plain-text files that belongs entirely to you. Unzip the starter pack, then rename the folder after the job, for example "order-replies-agent".</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">File</th><th scope="col">What it holds</th><th scope="col">Your AI reads it?</th></tr></thead>
+          <tbody>
+            <tr><td data-label="File">AGENT.md</td><td data-label="What it holds">The job description: what the job is, who it serves, what goes in, what comes out and how you like it done.</td><td data-label="Your AI reads it?">Every job</td></tr>
+            <tr><td data-label="File">RULES.md</td><td data-label="What it holds">Everything the agent has learned from your edits, one rule at a time.</td><td data-label="Your AI reads it?">Every job</td></tr>
+            <tr><td data-label="File">EXAMPLES.md</td><td data-label="What it holds">Strong and weak examples of the job, with a short explanation of each.</td><td data-label="Your AI reads it?">Every job</td></tr>
+            <tr><td data-label="File">PERMISSIONS.md</td><td data-label="What it holds">What the agent may do on its own, and what always needs your approval.</td><td data-label="Your AI reads it?">Every job</td></tr>
+            <tr><td data-label="File">CHECKS.md</td><td data-label="What it holds">Yes-or-no quality checks, the serious mistakes to avoid and three test jobs.</td><td data-label="Your AI reads it?">Every job</td></tr>
+            <tr><td data-label="File">SCORECARD.md</td><td data-label="What it holds">One line for every job you review, plus the four levels.</td><td data-label="Your AI reads it?">Only for the monthly tidy-up</td></tr>
+            <tr><td data-label="File">PROMPTS.md</td><td data-label="What it holds">The five prompts on this page.</td><td data-label="Your AI reads it?">No, you copy from it</td></tr>
+            <tr><td data-label="File">SETUP.md</td><td data-label="What it holds">Where each file goes in each AI.</td><td data-label="Your AI reads it?">No, it's for you</td></tr>
+          </tbody>
+        </table></div>
+        <p>Store the folder somewhere secure, such as your computer or a private cloud drive, and back it up. Over time it becomes the most valuable part of your agent, because it holds everything the agent has learned. If you switch AI providers, you simply take the folder with you.</p>
+      </section>
+
+      <section id="step-2" class="section" aria-labelledby="step-2-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S2</span><h2 id="step-2-heading">Step 2: Describe the job (AGENT.md)</h2></div>
+        <p class="intro">AGENT.md is your agent's job description. Rather than writing it alone, let your AI interview you, because a good interviewer draws out details that a blank page never will.</p>
+        <p>Open a new chat, attach AGENT.md, PERMISSIONS.md and CHECKS.md from the starter pack, and paste the prompt below. Answer each question in your own words. Your AI then drafts all three files, so this single prompt also completes most of steps 4 and 5.</p>
+        <div class="prompt">
+          <p class="prompt-title">Prompt 1: Build my agent</p>
+          <pre id="prompt-build">Help me set up an AI agent for one job I do often. I've attached three files to fill in: AGENT.md, PERMISSIONS.md and CHECKS.md.
+
+Interview me. Ask one short question at a time, at most 15 in all. I can skip any question or say "enough" to stop.
+Start with the job: what starts it, what I do, who it's for and what a good result looks like. Then ask how I like it done, the tone, where true facts come from, and what must never happen.
+
+Then fill in the three files:
+- AGENT.md: every part, in my words where you can.
+- PERMISSIONS.md: keep the green and red lists. Leave yellow empty. Add any red actions this job could need.
+- CHECKS.md: 5 to 10 yes or no checks for this job, and 3 test jobs with what a good answer has. Make test job 3 a case where the agent should stop and ask.
+
+Rules for you:
+- Don't guess. If I haven't told you something, leave that part empty and list it at the end as a question.
+- Leave out passwords, keys, account numbers, health details and private facts about other people.
+
+Show me each file in its own Markdown block, with its file name above it. Then ask me what to fix.</pre>
+          <button class="copy" type="button" data-copy="prompt-build">Copy the prompt</button>
+        </div>
+        <h3>What a strong AGENT.md includes</h3>
+        <ul class="ticks">
+          <li><strong>The job in one sentence</strong>, so the agent always knows what it exists to do.</li>
+          <li><strong>Exactly what it receives and what it returns</strong>, including the format, length and structure of the result.</li>
+          <li><strong>Your working method</strong>, written as steps in the order you actually follow them.</li>
+          <li><strong>Where reliable facts come from</strong>, such as your price list or returns policy. An agent without trusted sources will invent plausible-sounding facts.</li>
+          <li><strong>A "never" list</strong> of things the agent must not say or do, for example "never promise a delivery date".</li>
+          <li><strong>"When you're unsure, stop and ask."</strong> This single instruction prevents more bad results than any other line in the file.</li>
+        </ul>
+        <p>When the draft is ready, read it as though you were a capable new employee on their first day. Any question that new employee would need to ask is a question your agent will face too, so add the answer to the file.</p>
+      </section>
+
+      <section id="step-3" class="section" aria-labelledby="step-3-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S3</span><h2 id="step-3-heading">Step 3: Add examples of good work (EXAMPLES.md)</h2></div>
+        <p class="intro">Examples teach faster than descriptions. Your agent will closely imitate the length, tone and structure of whatever examples you give it, so choose them carefully.</p>
+        <ol>
+          <li>Find three to five occasions when you did this job particularly well. Your sent emails, previous documents and project notes are the best places to look.</li>
+          <li>For each one, paste the original input and your finished response into EXAMPLES.md.</li>
+          <li>Add one line explaining why each example is good, because a specific reason such as "answers the question in the first sentence" teaches far more than a general one such as "good tone".</li>
+          <li>Add one or two weak examples with a note explaining what's wrong, and if you don't have any genuine ones, deliberately write an example of the mistakes you most want to prevent.</li>
+          <li>Replace real names, email addresses and figures with invented ones before you save the file.</li>
+        </ol>
+        <p>Choose examples that cover a range of situations: a routine case, a difficult one and an unusual one. Five nearly identical examples teach the agent less than three that differ, because variety shows it which qualities matter in every case.</p>
+      </section>
+
+      <section id="step-4" class="section" aria-labelledby="step-4-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S4</span><h2 id="step-4-heading">Step 4: Decide what it may do alone (PERMISSIONS.md)</h2></div>
+        <p class="intro">PERMISSIONS.md keeps your agent safe as it becomes more capable. It sorts every possible action into one of three levels, and any action that isn't listed is automatically treated as red.</p>
+        <div class="table-wrap"><table class="tiers">
+          <thead><tr><th scope="col">Level</th><th scope="col">What it means</th><th scope="col">Examples</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Level"><span class="tier tier-green">Green</span></td><td data-label="What it means">Do it, then tell me.</td><td data-label="Examples">Read the files you provide, write drafts, check its own work and do simple calculations.</td></tr>
+            <tr><td data-label="Level"><span class="tier tier-yellow">Yellow</span></td><td data-label="What it means">Only within a limit you've written down, and report it the same day.</td><td data-label="Examples">None at first. Later, perhaps: "Reply to delivery questions using the template, up to 10 a day."</td></tr>
+            <tr><td data-label="Level"><span class="tier tier-red">Red</span></td><td data-label="What it means">Ask me first, every time.</td><td data-label="Examples">Send, post or publish anything. Spend money. Delete anything. Make an offer or a refund. Change a live account.</td></tr>
+          </tbody>
+        </table></div>
+        <p>Only you may change this file. No rule, example, email or web page can move an action from red to green, and the starter pack states this at the top of the file so your agent understands it too.</p>
+        <p>Most chat assistants can't send emails or spend money on their own today. However, many can now connect to your email, calendar and business tools, so write this file before you connect anything. It's much easier to set boundaries before an agent has access than after.</p>
+      </section>
+
+      <section id="step-5" class="section" aria-labelledby="step-5-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S5</span><h2 id="step-5-heading">Step 5: Write the quality checks (CHECKS.md)</h2></div>
+        <p class="intro">Checks turn the vague question "is this good?" into specific questions anyone can answer the same way. Your agent applies them to its own work before showing you, and you use the same list to grade it.</p>
+        <h3>Good checks have a yes-or-no answer</h3>
+        <div class="cards cards-two">
+          <article class="card"><p class="tag">Too vague</p><h3>"Is the reply friendly?"</h3><p>Two reviewers would answer differently, so the check can't measure progress.</p></article>
+          <article class="card"><p class="tag">Clear</p><h3>"Does the reply answer the question within its first two lines?"</h3><p>Any reviewer who reads the reply will reach the same conclusion, so the result is consistent and measurable.</p></article>
+        </div>
+        <h3>Mark the serious mistakes</h3>
+        <p>Some mistakes fail the job no matter how good the rest is: an invented fact, a calculation error, a red action taken without asking, or private details that shouldn't appear. List these in CHECKS.md. On your scorecard, a single serious mistake holds the agent at level 1 until you've fixed the cause with a new rule or check.</p>
+        <h3>Keep three test jobs</h3>
+        <p>A test job is an input for which you already know what a good answer contains. Write one routine case, one typical case and one tricky case in which the agent should stop and ask rather than guess. Run all three after any significant change to the folder, and if a result gets worse, undo the change. Software teams call this a regression test, and it protects the progress your agent has already made.</p>
+      </section>
+
+      <section id="step-6" class="section" aria-labelledby="step-6-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S6</span><h2 id="step-6-heading">Step 6: Install your agent in your AI</h2></div>
+        <p class="intro">Place the files where your AI reads them automatically before every chat, so that each new job needs nothing more than the input. Menus change often, so if an option has moved, search your AI's help pages for "projects" or "instructions".</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">AI</th><th scope="col">Where AGENT.md goes</th><th scope="col">Where the other files go</th></tr></thead>
+          <tbody>
+            <tr><td data-label="AI">ChatGPT</td><td data-label="Where AGENT.md goes">Create a project and paste AGENT.md into its instructions. A custom GPT works the same way.</td><td data-label="Where the other files go">The project's files, or the custom GPT's knowledge.</td></tr>
+            <tr><td data-label="AI">Claude</td><td data-label="Where AGENT.md goes">Create a project and paste AGENT.md into the project instructions.</td><td data-label="Where the other files go">The project knowledge.</td></tr>
+            <tr><td data-label="AI">Gemini</td><td data-label="Where AGENT.md goes">Create a Gem and paste AGENT.md into its instructions.</td><td data-label="Where the other files go">Add them to the Gem as files.</td></tr>
+            <tr><td data-label="AI">Claude Code</td><td data-label="Where AGENT.md goes">Rename it CLAUDE.md and keep it in the agent's folder.</td><td data-label="Where the other files go">The same folder. Add a line to CLAUDE.md telling it to read them.</td></tr>
+            <tr><td data-label="AI">Codex</td><td data-label="Where AGENT.md goes">Rename it AGENTS.md and keep it in the agent's folder.</td><td data-label="Where the other files go">The same folder. Add a line to AGENTS.md telling it to read them.</td></tr>
+            <tr><td data-label="AI">Any other AI</td><td data-label="Where AGENT.md goes">Attach all the files to a new chat.</td><td data-label="Where the other files go">Then paste prompt 2 below, followed by the job.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="prompt">
+          <p class="prompt-title">Prompt 2: Do a job (when the files aren't in a project yet)</p>
+          <pre id="prompt-job">You are my agent for the job in AGENT.md. Read all the attached files first: AGENT.md, RULES.md, EXAMPLES.md, PERMISSIONS.md and CHECKS.md.
+
+Here is the job:
+[paste the input]
+
+How to work:
+1. Follow AGENT.md, and every rule in RULES.md whose "When" fits this job.
+2. Do only what the green list in PERMISSIONS.md allows. For anything else, stop and ask me.
+3. If you're missing a fact, ask me. Never guess.
+4. Before you show me the result, check it against CHECKS.md.
+
+Show me the result first. Under it, list each check with yes or no, and any question you have.</pre>
+          <button class="copy" type="button" data-copy="prompt-job">Copy the prompt</button>
+        </div>
+        <p class="note">Whenever you change a file, upload the new version and delete the old one. If your AI can see two versions of RULES.md, it can't tell which is current.</p>
+      </section>
+
+      <section id="step-7" class="section" aria-labelledby="step-7-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S7</span><h2 id="step-7-heading">Step 7: Run a real job, then turn your edit into a rule</h2></div>
+        <p class="intro">This loop is where the training actually happens. Your agent learns the most from the changes you make to its work, because each change reveals the exact gap between what it produced and what you wanted.</p>
+        <ol>
+          <li><strong>Give it a real job</strong> and read the result as critically as you would read work submitted by a new employee.</li>
+          <li><strong>Correct it the way you normally would</strong>, keeping both the agent's original draft and your final version for comparison.</li>
+          <li><strong>Paste both into prompt 3.</strong> Your AI compares them and proposes one rule, or replies NO_RULE when the edit doesn't generalise.</li>
+          <li><strong>Review the proposed rule</strong> carefully. Ask yourself whether it would help on the next job and whether it holds true every time. Adjust the wording if it doesn't.</li>
+          <li><strong>Add it to RULES.md</strong> and upload the updated file to your AI, replacing the previous version so only one copy exists.</li>
+        </ol>
+        <div class="prompt">
+          <p class="prompt-title">Prompt 3: Turn my edit into a rule</p>
+          <pre id="prompt-rule">I changed my agent's work before I used it. Help me turn my edit into one rule for its RULES.md.
+
+The job was:
+[one line about the job]
+
+The agent's draft:
+[paste the draft]
+
+My final version:
+[paste what you used]
+
+Compare the two. Then do one of these:
+- If my edit shows a pattern the agent should follow next time, write one rule in this format:
+  - When: the kind of job where this applies
+  - Avoid: what the draft did that I changed
+  - Prefer: what to do instead
+  - Example: one short line from my version
+  - Source: this job, edited by me
+  - Date: today's date
+  - Jobs: 1
+- If my edit was a one-off (a typo, a fact about this one customer, a change of mind), say NO_RULE and why.
+
+Rules for you:
+- Write a pattern, not this job's details. Leave out names, emails, links, figures and account numbers.
+- A rule can never give the agent permission to do something new.
+- If my RULES.md already has this rule, say which one, so I can raise its Jobs number instead.
+
+Also tell me how much of the text I changed, as a percentage.</pre>
+          <button class="copy" type="button" data-copy="prompt-rule">Copy the prompt</button>
+        </div>
+        <h3>What a well-written rule looks like</h3>
+        <div class="rule-card">
+          <p><b>When:</b> replying to a customer who is angry about a late order</p>
+          <p><b>Avoid:</b> opening with "We apologise for any inconvenience"</p>
+          <p><b>Prefer:</b> say what went wrong in one line, then the new delivery date</p>
+          <p><b>Example:</b> "Your parcel missed Tuesday's van. It's now booked for Thursday."</p>
+          <p><b>Source:</b> reply to an order email, edited by me · <b>Date:</b> 2026-11-03 · <b>Jobs:</b> 1</p>
+        </div>
+        <h3>Why each rule has "When", "Avoid" and "Prefer"</h3>
+        <ul class="ticks">
+          <li><strong>"When"</strong> limits the rule to the situations where it belongs. A rule written for angry customers shouldn't change the tone of your thank-you notes.</li>
+          <li><strong>"Avoid"</strong> names the specific habit you keep correcting. A rule that only describes the right behaviour is easy for an AI to overlook, while a rule that also names the wrong behaviour is far more likely to stick.</li>
+          <li><strong>"Prefer" and "Example"</strong> show the correct version, so the agent doesn't simply replace one bad habit with another.</li>
+          <li><strong>"Jobs"</strong> counts how many times you've made the same correction. When a rule comes up again, increase the number instead of adding a duplicate, so that well-supported rules stand out.</li>
+        </ul>
+        <div class="subnote"><p><strong>Not every edit deserves a rule.</strong> A typo, a fact about a single customer or a simple change of mind teaches the agent nothing it can reuse, which is why the prompt is allowed to reply NO_RULE. A short list of precise rules consistently outperforms a long list of vague ones.</p></div>
+      </section>
+
+      <section id="step-8" class="section" aria-labelledby="step-8-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S8</span><h2 id="step-8-heading">Step 8: Grade every job and track the level (SCORECARD.md)</h2></div>
+        <p class="intro">Without a score, "it seems to be getting better" is only an impression. With one line per job, you can see real progress, and you'll know exactly when the agent has earned more responsibility.</p>
+        <p>After each job, paste the agent's draft and your final version into prompt 4. It returns one row, ready to add to your scorecard.</p>
+        <div class="prompt">
+          <p class="prompt-title">Prompt 4: Grade this job</p>
+          <pre id="prompt-grade">Grade my agent's work on one job, using the attached CHECKS.md.
+
+The job:
+[one line about the job]
+
+The agent's draft:
+[paste the draft]
+
+What I used in the end:
+[paste your final version, or write "I didn't use it"]
+
+Do this:
+1. Go through each check in CHECKS.md. Answer yes or no, with a short reason.
+2. Say whether the draft made any of the serious mistakes in CHECKS.md.
+3. Work out how much of the draft I changed, as a percentage. 0% if I used it as it was.
+
+Then give me one table row for my SCORECARD.md in this order:
+| Date | Job | Checks passed | Edit size | Used it? | Serious mistake? | Rule added |
+Leave "Rule added" empty for me to fill in.</pre>
+          <button class="copy" type="button" data-copy="prompt-grade">Copy the prompt</button>
+        </div>
+        <h3>The four levels</h3>
+        <p>Your agent reaches a level once it meets every requirement for that level, averaged across all the jobs recorded so far. These are the same thresholds we use for the AI specialists on AI Blocks.</p>
+        <div class="table-wrap"><table class="levels">
+          <thead><tr><th scope="col">Level</th><th scope="col">Jobs checked</th><th scope="col">Checks passed</th><th scope="col">Edit size</th><th scope="col">Used</th><th scope="col">What you do</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Level">1. Shadow apprentice</td><td data-label="Jobs checked">10</td><td data-label="Checks passed">70%</td><td data-label="Edit size">Any</td><td data-label="Used">Any</td><td data-label="What you do">You still do the work yourself. The agent drafts alongside you and you compare the results.</td></tr>
+            <tr><td data-label="Level">2. Copilot</td><td data-label="Jobs checked">25</td><td data-label="Checks passed">80%</td><td data-label="Edit size">25% or less</td><td data-label="Used">80%</td><td data-label="What you do">The agent drafts, and you edit and approve every job.</td></tr>
+            <tr><td data-label="Level">3. Guardrailed autopilot</td><td data-label="Jobs checked">50</td><td data-label="Checks passed">90%</td><td data-label="Edit size">8% or less</td><td data-label="Used">90%</td><td data-label="What you do">The agent handles the job. You review unusual cases and approve every red action.</td></tr>
+            <tr><td data-label="Level">4. Certified</td><td data-label="Jobs checked">100</td><td data-label="Checks passed">90%</td><td data-label="Edit size">8% or less</td><td data-label="Used">95%</td><td data-label="What you do">Routine jobs need no edits. Red actions still require your approval.</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Checks passed, edit size and used are averages across all recorded jobs. Levels 2 to 4 also require zero serious mistakes, and red actions need your approval at every level.</p>
+        <p>Move an action from red to yellow only after your agent reaches level 3 for that job. Write the limit down precisely, such as "up to 10 a day", and keep reviewing what the agent did with that freedom.</p>
+      </section>
+
+      <section id="step-9" class="section" aria-labelledby="step-9-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">S9</span><h2 id="step-9-heading">Step 9: Tidy up once a month</h2></div>
+        <p class="intro">After a month of regular jobs, RULES.md grows longer, and some rules start to overlap or contradict each other. A short monthly review keeps the agent precise and stops the rule list from becoming noise.</p>
+        <div class="prompt">
+          <p class="prompt-title">Prompt 5: Monthly tidy-up</p>
+          <pre id="prompt-tidy">Review my agent's files with me. They are attached: AGENT.md, RULES.md, EXAMPLES.md, PERMISSIONS.md, CHECKS.md and SCORECARD.md.
+
+Do this:
+1. RULES.md: find rules that say the same thing and suggest how to merge them. Find rules that disagree. Find rules that are too narrow to help again.
+2. AGENT.md: suggest moving rules that apply to every job into AGENT.md itself.
+3. SCORECARD.md: count the jobs, then work out the average checks passed, the average edit size, how often I used the result and how many serious mistakes there were. Tell me the agent's level from the Levels table, and what it needs to reach the next one.
+4. Tell me which checks fail most often, and suggest one change that would fix the most.
+
+Don't change PERMISSIONS.md. Suggest changes only, and wait for my yes before you rewrite a file.</pre>
+          <button class="copy" type="button" data-copy="prompt-tidy">Copy the prompt</button>
+        </div>
+        <p>After the tidy-up, rerun your three test jobs. If any result has become worse, undo the most recent change before you upload the revised files to your AI.</p>
+        <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="example" class="section" aria-labelledby="example-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">05</span><h2 id="example-heading">A worked example: the first two weeks</h2></div>
+        <p class="intro">Here is how the process typically unfolds for an agent that answers customer emails about orders. The details are illustrative rather than measured, but the pattern is the one to expect.</p>
+        <ol>
+          <li><strong>Day 1, setup.</strong> The owner runs prompt 1 and answers twelve questions. AGENT.md now describes the job, names the returns policy and delivery page as the only trusted sources, and lists "never promise a refund" under Never. Four past replies go into EXAMPLES.md.</li>
+          <li><strong>Days 2 to 4, first jobs.</strong> The early drafts are accurate but stiff, opening with formal apologies and burying the delivery date in the third paragraph. The owner rewrites the openings, and prompt 3 produces two rules: lead with the new date, and drop the stock apology.</li>
+          <li><strong>Day 5, a serious mistake.</strong> One draft quotes a delivery time that doesn't appear in any source. The scorecard marks it as serious, and the owner adds a check: "Is every date and time taken from the delivery page?"</li>
+          <li><strong>Week 2, fewer edits.</strong> With five rules in place, most drafts need only a sentence changed. Prompt 4 records edit sizes falling from around half the text to under a fifth, and the owner now spends minutes rather than half an hour on each reply.</li>
+        </ol>
+        <p>Notice what drove the improvement: not a cleverer prompt, but a handful of specific rules and one new check, each captured immediately after a real correction.</p>
+      </section>
+
+      <section id="mistakes" class="section" aria-labelledby="mistakes-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">06</span><h2 id="mistakes-heading">Mistakes to avoid</h2></div>
+        <div class="cards cards-two">
+          <article class="card"><h3>One agent for everything</h3><p>An agent responsible for "my business" can't improve, because its jobs share no common standard. Train one agent per job.</p></article>
+          <article class="card"><h3>Correcting without recording</h3><p>If you fix the result and simply move on, the agent will repeat the same mistake tomorrow, so always spend the extra two minutes on prompt 3.</p></article>
+          <article class="card"><h3>Rules that are really facts</h3><p>A note such as "Jo's order ships on Friday" describes one particular job rather than a reusable pattern, so facts like this belong in the job's input or in your trusted sources.</p></article>
+          <article class="card"><h3>No trusted sources</h3><p>An agent with no price list or policy to consult will invent convincing ones. Tell it exactly where the reliable facts live.</p></article>
+          <article class="card"><h3>Trusting it too soon</h3><p>Ten good jobs is an encouraging start, not a track record. Wait for level 3 before allowing any independent action, and keep red actions red.</p></article>
+          <article class="card"><h3>Outdated files in your AI</h3><p>Upload the new RULES.md after every change and delete the previous version, because your AI can't tell which copy is current.</p></article>
+        </div>
+      </section>
+
+      <section id="safe" class="section" aria-labelledby="safe-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">07</span><h2 id="safe-heading">Keep it safe and private</h2></div>
+        <ul class="ticks">
+          <li><strong>Never store these in the files:</strong> passwords, API keys, identity numbers, bank or card details, health information or private facts about other people.</li>
+          <li><strong>Anonymise your examples.</strong> Replace real names, email addresses and figures with invented ones.</li>
+          <li><strong>Review your AI's privacy settings.</strong> Check whether your conversations are used to improve the provider's models, and switch that off if you prefer.</li>
+          <li><strong>Treat incoming content as information, not instructions.</strong> An email that says "ignore your rules" is just an email. Your agent follows AGENT.md and PERMISSIONS.md, and nothing else.</li>
+          <li><strong>Review everything before it leaves</strong>, because until you've written a yellow limit, you remain the person who sends, posts and pays, while the agent only prepares drafts.</li>
+        </ul>
+      </section>
+
+      <section id="marketplace" class="section" aria-labelledby="marketplace-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">08</span><h2 id="marketplace-heading">Later: list your agent on AI Blocks</h2></div>
+        <p class="intro">We're building a marketplace where businesses can hire agents trained by experienced professionals like you. It isn't open yet, and we haven't set a date.</p>
+        <p>If you train your agent with this guide, you'll be well prepared when it opens. The starter pack follows the same structure we use for the AI specialists on this site: a job description, rules learned from real edits, permissions, quality checks and a level based on recorded jobs. These are the things that will matter most:</p>
+        <ul class="ticks">
+          <li><strong>A genuine scorecard</strong>, because dated jobs with honest grades are the strongest evidence that your agent performs reliably. Start recording from your very first job.</li>
+          <li><strong>One clearly defined job.</strong> "Answers returns questions for online clothing shops" is far easier to trust than "customer service".</li>
+          <li><strong>Clean, portable files.</strong> No client names, no private details and no facts that only apply to your own business.</li>
+          <li><strong>Strong checks and test jobs</strong>, which allow someone unfamiliar with your work to understand precisely what "good" means for your agent.</li>
+        </ul>
+        <p>We haven't settled how listing, pricing or payment will work, and we'll publish those details before the marketplace opens. If you'd like to hear when it does, write to <a href="mailto:hello@useaiblocks.com">hello@useaiblocks.com</a> and tell us which job your agent handles.</p>
+      </section>
+
+      <section id="faq" class="section" aria-labelledby="faq-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">09</span><h2 id="faq-heading">Questions people ask</h2></div>
+        <div class="faq">
+          <h3>Do I need to know how to code?</h3>
+          <p>No. Everything in this guide uses plain-text files and prompts you paste into a chat. Claude Code and Codex are optional, and only useful if you already work in them.</p>
+          <h3>Is this the same as fine-tuning a model?</h3>
+          <p>No. Fine-tuning permanently changes the model's internal weights, and it requires programming, a large training dataset and a budget. This method changes what the model reads before each job instead. For one person's recurring work that is usually enough, and it has a major advantage: you can read, audit and correct every rule.</p>
+          <h3>How long does it take to train an AI agent?</h3>
+          <p>Allow about an hour for setup and around ten minutes after each job. Most people notice fewer edits within the first 10 to 20 jobs. Level 2 requires 25 reviewed jobs, so for a weekly task, expect it to take several weeks.</p>
+          <h3>Which AI is best for a personal agent?</h3>
+          <p>Usually the one you already use and pay for. ChatGPT projects, Claude projects and Gemini Gems all read instructions and files before each conversation. Because your agent lives in a portable folder, you can move it to a different AI later without losing anything.</p>
+          <h3>Can I use a free plan?</h3>
+          <p>Yes. On a free plan, attach the files to a new conversation and paste prompt 2 each time, because free plans may not include projects or Gems. A paid plan with those features simply saves you that repetitive step.</p>
+          <h3>How many rules is too many?</h3>
+          <p>Once you pass roughly 30 rules, run the monthly tidy-up. Merge rules that overlap, and move rules that apply to every job into AGENT.md, where they become part of the core job description.</p>
+          <h3>Can my agent work without me?</h3>
+          <p>Only within a yellow limit you've written down, and only after it reaches level 3. Some AI tools can run tasks on a schedule or connect to your accounts, but red actions such as sending, paying or deleting still need your approval every time.</p>
+          <h3>Can I train more than one agent?</h3>
+          <p>Yes, using one folder per job. Once your first agent reaches level 2, it is reasonable to begin training the next one. Different agents can share the same trusted sources, but each should maintain its own rules and scorecard so that their progress stays separate.</p>
+        </div>
+      </section>
+
+      <section id="related" class="section" aria-labelledby="related-heading">
+        <div class="section-head"><span class="num" aria-hidden="true">10</span><h2 id="related-heading">Keep going</h2></div>
+        <div class="cards">
+          <article class="card"><p class="tag">Start faster</p><h3>Hire a ready AI specialist</h3><p>Over 1,000 specialists, each with its job description, checks and permissions already written. Download one and train it with steps 7 to 9.</p><a href="/roles">Browse AI specialists</a></article>
+          <article class="card"><p class="tag">Tell it who you are</p><h3>Write your me.md</h3><p>One private file about you, your work and how you write, which every agent you train can draw on.</p><a href="/me-md">Make your me.md</a></article>
+          <article class="card"><p class="tag">Learn the terms</p><h3>How AI skills and workflows work</h3><p>An explanation of prompts, skills, workflows and agents, with practical guidance on choosing the right one for your job.</p><a href="/how-it-works">Read how it works</a></article>
+        </div>
+        <p class="note">Ready to begin? <a href="/templates/ai-agent-starter-pack.zip" download>Download the starter pack</a>, open PROMPTS.md and start with prompt 1, which builds your agent's first draft through a short interview.</p>
+      </section>
+</article>

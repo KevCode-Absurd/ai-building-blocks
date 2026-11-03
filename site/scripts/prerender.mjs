@@ -129,7 +129,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Plan a job</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -165,6 +165,7 @@ const SEO_PAGES = {
   "/tools": ["Free online calculators and everyday tools | AI Blocks", STATIC["/tools"][1]],
   "/apps": ["Example AI app you can click through and copy | AI Blocks", STATIC["/apps"][1]],
   "/api-and-mcp": ["Connect your AI to AI Blocks with MCP or the API | AI Blocks", "Connect ChatGPT, Claude, Codex or your own app to AI Blocks once. Then your AI can find, plan and get any skill or workflow when it needs one."],
+  "/train-your-own-ai-agent": ["How to train your own AI agent, step by step | AI Blocks", "Train ChatGPT, Claude or Gemini to do one job your way, with no code. Nine plain steps, five prompts and a free starter pack with every file you need."],
   "/me-md": ["me.md: one file that tells every AI who you are | AI Blocks", "Make one private file that tells ChatGPT, Claude and Gemini who you are. Get the template, three prompts to make it, and where to put it in each AI."],
   "/tools/growth-channel-planner": ["Growth channel planner: compare 19 channels | AI Blocks", "Prepare a growth brief for any business. Compare 19 channels, define customer outcomes and download a complete planning skill pack. No sign-in needed."],
   "/support": ["Get help with AI Blocks skills and workflows | AI Blocks", "Ask a question, report a broken skill or get help with your workflow. Write to Kevin Mark at hello@useaiblocks.com and get a reply from a person."],
@@ -288,6 +289,18 @@ function pageFor(url) {
     desc: SEO_PAGES[url][1], modified: "2026-10-27", mainClass: "me-md-docs",
     content: fs.readFileSync("src/content/me-md.html", "utf8"),
     stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^MeMdPage-.*\.css$/.test(file)),
+  };
+  // The training guide: an Article by the site's operator, with the starter pack as its download.
+  if (url === "/train-your-own-ai-agent") return {
+    title: "Train your own AI agent", h1: "How to train your own AI agent, step by step", documentTitle: SEO_PAGES[url][0],
+    desc: SEO_PAGES[url][1], modified: "2026-11-03", mainClass: "agent-guide",
+    content: fs.readFileSync("src/content/train-agent.html", "utf8"),
+    stylesheet: fs.readdirSync(path.join(DIST, "assets")).find(file => /^TrainAgentPage-.*.css$/.test(file)),
+    main: { "@type": "Article", "@id": `${SITE}${url}#article`, headline: "How to train your own AI agent, step by step", description: SEO_PAGES[url][1], inLanguage: "en",
+      author: { "@type": "Person", name: OPERATOR }, publisher: { "@id": `${SITE}/#org` }, datePublished: "2026-11-03", dateModified: "2026-11-03",
+      image: `${SITE}/og/default.png`, isAccessibleForFree: true,
+      about: ["AI agents", "Training an AI agent", "ChatGPT projects", "Claude projects", "Gemini Gems"],
+      associatedMedia: { "@type": "MediaObject", name: "AI agent starter pack", contentUrl: `${SITE}/templates/ai-agent-starter-pack.zip`, encodingFormat: "application/zip" } },
   };
   const info = infoPage(url);
   if (info) return {
@@ -601,6 +614,7 @@ const mindsXml = fs.readFileSync(mindsSitemap, "utf8");
 fs.writeFileSync(mindsSitemap, mindsXml.replace(/\s*<url><loc>https:\/\/useaiblocks\.com\/minds\/page\/[^<]+<\/loc>[\s\S]*?<\/url>/g, "").replace("</urlset>", mindPages.map(url => `  <url><loc>${SITE}${url}</loc></url>`).join("\n") + "\n</urlset>"));
 if (!urls.includes("/api-and-mcp")) urls.push("/api-and-mcp");
 if (!urls.includes("/me-md")) urls.push("/me-md");
+if (!urls.includes("/train-your-own-ai-agent")) urls.push("/train-your-own-ai-agent");
 // Imported pages without a Tested label still get a page and stay indexable.
 const thinUrls = new Set(cat.blocks.filter((b) => hasPage(b) && isThin(b)).map(hrefOf));
 for (const u of thinUrls) if (!urls.includes(u)) urls.push(u);

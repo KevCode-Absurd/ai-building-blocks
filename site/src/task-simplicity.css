@@ -5,7 +5,7 @@
 .task-start .composer-bar { flex-wrap: wrap; gap: .8rem; }
 .task-composer textarea, .task-copy-fallback textarea { display: block; box-sizing: border-box; width: 100%; max-width: 100%; min-height: 8rem; font: inherit; line-height: 1.5; padding: .8rem; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; resize: vertical; }
 .task-composer > label { display: block; font-weight: 600; margin-bottom: .6rem; }
-.task-materials { padding-left: 1.2rem; margin: .5rem 0 1rem; }
+.task-materials { padding-left: 1.2rem; margin: .5rem 0 1rem; overflow-wrap: anywhere; }
 .task-start details, .task-install details, .task-download details { margin: .8rem 0; }
 .task-start summary, .task-install summary, .task-download summary, .task-reference summary { cursor: pointer; padding: .5rem 0; }
 .task-output-example pre { max-height: 16rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.6; margin: .5rem 0; }

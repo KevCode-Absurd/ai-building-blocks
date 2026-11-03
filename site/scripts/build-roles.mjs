@@ -120,7 +120,8 @@ export function writeRoles(root=process.cwd()){
  // "Specialists who do this" on item pages: for each skill, prompt, agent or workflow, the roles that work with it
  // (the role built on it first). Split by the slug's first character so an item page loads one small file.
  const links=roleLinks(built.profiles),linkFolder=path.join(root,'public/data/role-links');fs.rmSync(linkFolder,{recursive:true,force:true});fs.mkdirSync(linkFolder,{recursive:true});
- const buckets={};for(const [slug,rows] of Object.entries(links))(buckets[slug[0]]??={})[slug]=rows;
+ // Every first character a slug can start with gets a file, empty when no specialist uses those items, so no item page asks for a missing one.
+ const buckets=Object.fromEntries([...'0123456789abcdefghijklmnopqrstuvwxyz'].map(c=>[c,{}]));for(const [slug,rows] of Object.entries(links))(buckets[slug[0]]??={})[slug]=rows;
  for(const [key,items] of Object.entries(buckets))fs.writeFileSync(path.join(linkFolder,key+'.json'),JSON.stringify({schema:'ai-blocks-role-links/1',items}));
  writeSpecialistLlms(root,built.profiles);
  const added=built.profiles.reduce((n,p)=>n+p.resources.filter(r=>r.support).length,0),reviewed=built.profiles.filter(p=>p.resources.some(r=>r.reviewer)).length;

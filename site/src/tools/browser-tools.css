@@ -1,5 +1,5 @@
 .browser-tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; margin-bottom: 64px; }
-.browser-tool-grid section { min-width: 0; }
+.browser-tool-grid section { min-width: 0; overflow-wrap: anywhere; }
 .browser-tool label { display: block; margin-bottom: 12px; font-size: 15px; }
 .browser-tool input, .browser-tool select, .browser-tool textarea { display: block; box-sizing: border-box; width: 100%; margin-top: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--panel); font: inherit; }
 .browser-tool textarea { min-height: 320px; resize: vertical; font-family: var(--mono); font-size: 14px; }

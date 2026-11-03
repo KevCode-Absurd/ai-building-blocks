@@ -39,6 +39,8 @@ button, input, select { font: inherit; color: inherit; }
 .wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4px; padding: 1px 5px; }
+/* A long line in a code block scrolls inside the block, never the page. */
+pre { max-width: 100%; overflow-x: auto; }
 
 /* Type */
 .h1 { font-family: var(--display); font-weight: 600; font-size: clamp(48px, 8.4vw, 112px); line-height: 0.98; letter-spacing: -0.04em; margin: 0 auto; max-width: 14em; text-wrap: balance; }
@@ -305,7 +307,7 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .when-box ul { margin: 0; padding-left: 18px; color: var(--text-2); }
 .when-box li { margin-bottom: 6px; }
 .give-get { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
-.give-get > div { border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; background: var(--panel); }
+.give-get > div { min-width: 0; overflow-wrap: anywhere; border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; background: var(--panel); }
 .give-get h3 { font-size: 15px; font-weight: 600; margin: 0 0 10px; }
 .give-get ul { margin: 0; padding-left: 18px; color: var(--text-2); font-size: 15px; }
 .give-get li { margin-bottom: 6px; }

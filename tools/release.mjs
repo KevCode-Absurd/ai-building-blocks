@@ -42,23 +42,26 @@ export function buildInventory(root){
   return {files,directories:dirs,entries:files+dirs,limit:ASSET_LIMIT,headroom:ASSET_LIMIT-files-dirs,used:`${Math.round((files+dirs)/ASSET_LIMIT*1000)/10}%`};
 }
 // Workers static assets keep only the files of the live version, so a page opened before a deploy would ask for code
-// files that are gone. Each verified deploy remembers its /assets (hashed names, never reused) for 7 days, and the next
-// deploy uploads them again beside the new build. Old pages keep working; app code still reloads once if a file is missing.
+// files that are gone. Each verified deploy remembers its own /assets (hashed names, never reused), and the next deploy
+// within 7 days uploads that one previous build again beside the new one. Only one previous build is carried (the
+// hashed catalogue alone is 4.5 MB), so pages two deploys old rely on the app's reload-once instead.
 export const ASSET_KEEP_MS=7*24*60*60*1000;
 const historyDir=root=>path.join(root,'site/.wrangler/asset-history');
 export function carryForwardAssets(root,now=Date.now()){
-  const history=historyDir(root),target=path.join(root,'site/dist/assets');let files=0,builds=0;
-  if(!fs.existsSync(history)||!fs.existsSync(target))return {files,builds};
-  for(const entry of fs.readdirSync(history).sort().reverse()){const at=Number(entry.split('-')[0]);if(!(now-at<ASSET_KEEP_MS))continue;builds++;
-    for(const name of fs.readdirSync(path.join(history,entry))){const to=path.join(target,name);if(!fs.existsSync(to)){fs.copyFileSync(path.join(history,entry,name),to);files++;}}}
-  return {files,builds};
+  const history=historyDir(root),target=path.join(root,'site/dist/assets'),names=[];
+  if(!fs.existsSync(history)||!fs.existsSync(target))return {files:0,builds:0,names};
+  const latest=fs.readdirSync(history).filter(entry=>now-Number(entry.split('-')[0])<ASSET_KEEP_MS).sort((a,b)=>Number(b.split('-')[0])-Number(a.split('-')[0]))[0];
+  if(!latest)return {files:0,builds:0,names};
+  for(const name of fs.readdirSync(path.join(history,latest))){const to=path.join(target,name);if(!fs.existsSync(to)){fs.copyFileSync(path.join(history,latest,name),to);names.push(name);}}
+  return {files:names.length,builds:1,names};
 }
-export function rememberAssets(root,version,now=Date.now()){
+// Saves the new build's own files (not the ones carried from before) and deletes every older entry.
+export function rememberAssets(root,version,now=Date.now(),carried=[]){
   const history=historyDir(root),source=path.join(root,'site/dist/assets');if(!fs.existsSync(source))return 0;
   fs.mkdirSync(history,{recursive:true});
-  for(const entry of fs.readdirSync(history))if(!(now-Number(entry.split('-')[0])<ASSET_KEEP_MS))fs.rmSync(path.join(history,entry),{recursive:true,force:true});
-  const keep=path.join(history,`${now}-${version}`);fs.mkdirSync(keep);let files=0;
-  for(const entry of fs.readdirSync(source,{withFileTypes:true}))if(entry.isFile()){fs.copyFileSync(path.join(source,entry.name),path.join(keep,entry.name));files++;}
+  for(const entry of fs.readdirSync(history))fs.rmSync(path.join(history,entry),{recursive:true,force:true});
+  const keep=path.join(history,`${now}-${version}`),skip=new Set(carried);fs.mkdirSync(keep);let files=0;
+  for(const entry of fs.readdirSync(source,{withFileTypes:true}))if(entry.isFile()&&!skip.has(entry.name)){fs.copyFileSync(path.join(source,entry.name),path.join(keep,entry.name));files++;}
   return files;
 }
 // The one version serving all traffic now: the rollback target if the new deploy fails its live check.
@@ -135,14 +138,14 @@ export async function release({deploy=false,root=REPO,fetcher=fetch}={}){
   const version=deployed.stdout?.match(/Current Version ID:\s*([a-f0-9-]{36})/)?.[1];if(!version)throw Error('Cannot identify deployed version; inspect deployment before advancing state');
   // Fixed arguments only: on Windows these pass through the command processor.
   const live=await verifyOrRollBack({check:()=>checkPublishedBuild({root,source,fetcher}),previous,rollBack:id=>execute(root,['Roll back production','npx',['wrangler','rollback',id,'-c','wrangler.production.jsonc','-m','live-check-failed','-y'],'site'])});
-  const remembered=rememberAssets(root,version);
+  const remembered=rememberAssets(root,version,Date.now(),carried?.names);
   await runSteps([['Notify IndexNow of changed URLs',process.execPath,['tools/indexnow-ping.mjs'],'.']],step=>execute(root,step));
   const file='tools/indexnow-state.json';if(git(root,['status','--porcelain']).toString().trim()!=='M '+file||git(root,['diff','--cached','--name-only']).toString().trim())throw Error('Only the verified IndexNow state may be committed');
   const state=JSON.parse(worktreeText(root,file));if(state.source_commit!==source||state.count!==live.urls||Object.keys(state.fingerprints??{}).length!==live.urls)throw Error('Unexpected publication state');
   git(root,['add','--',file]);git(root,['-c','core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol','diff','--cached','--check']);
   git(root,['commit','-m','Remember verified production content fingerprints','-m',`Save changed-URL publication state after deploy ${version}.\n\n${ATTRIBUTION}`]);
   git(root,['-c','credential.interactive=false','push','origin','HEAD'],{env:{...process.env,GIT_TERMINAL_PROMPT:'0'}});
-  console.log(JSON.stringify({source,deployment:version,previous,stateCommit:git(root,['rev-parse','HEAD']).toString().trim(),inventory,carriedAssets:carried,rememberedAssets:remembered,live},null,2));
+  console.log(JSON.stringify({source,deployment:version,previous,stateCommit:git(root,['rev-parse','HEAD']).toString().trim(),inventory,carriedAssets:carried&&{files:carried.files,builds:carried.builds},rememberedAssets:remembered,live},null,2));
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const args=process.argv.slice(2);

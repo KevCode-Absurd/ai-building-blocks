@@ -46,20 +46,22 @@ test('the rollback target is the single version serving all traffic, or nothing 
  for(const text of ['','not json','{}',JSON.stringify({versions:[{version_id:V1,percentage:50},{version_id:V2,percentage:50}]}),JSON.stringify({versions:[{version_id:'v1; rm -rf',percentage:100}]})])
   assert.throws(()=>liveVersion(text),/nothing was deployed|single version/);
 });
-test('verified builds keep their code files for 7 days and later deploys upload them again',()=>{
+test("a deploy carries only the previous build's own code files, for at most 7 days",()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'release-assets-'));const assets=path.join(root,'site/dist/assets');
+ const build=(...names)=>{fs.rmSync(assets,{recursive:true,force:true});fs.mkdirSync(assets,{recursive:true});for(const name of names)fs.writeFileSync(path.join(assets,name),name);};
+ const history=()=>fs.readdirSync(path.join(root,'site/.wrangler/asset-history'));
  try{
-  const now=Date.UTC(2026,10,3);fs.mkdirSync(assets,{recursive:true});fs.writeFileSync(path.join(assets,'index-old.js'),'old');fs.writeFileSync(path.join(assets,'shared.css'),'same');
-  assert.equal(rememberAssets(root,V1,now-ASSET_KEEP_MS-1000),2);
-  assert.equal(rememberAssets(root,V2,now-1000),2);
-  // The new build: the expired entry is pruned at the next remember; carry only reads entries younger than 7 days.
-  fs.rmSync(assets,{recursive:true});fs.mkdirSync(assets);fs.writeFileSync(path.join(assets,'index-new.js'),'new');fs.writeFileSync(path.join(assets,'shared.css'),'same');
-  assert.deepEqual(carryForwardAssets(root,now),{files:1,builds:1});
-  assert.deepEqual(fs.readdirSync(assets).sort(),['index-new.js','index-old.js','shared.css']);
-  assert.equal(fs.readFileSync(path.join(assets,'shared.css'),'utf8'),'same');
-  rememberAssets(root,'33333333-3333-4333-8333-333333333333',now);
-  assert.equal(fs.readdirSync(path.join(root,'site/.wrangler/asset-history')).length,2,'entries older than 7 days are deleted');
-  assert.deepEqual(carryForwardAssets(root,now+ASSET_KEEP_MS+5000),{files:0,builds:0});
+  const now=Date.UTC(2026,10,3);
+  build('a-1.js','shared.css');assert.equal(rememberAssets(root,V1,now-1000),2);
+  build('b-2.js','shared.css');
+  const carried=carryForwardAssets(root,now);
+  assert.deepEqual(carried,{files:1,builds:1,names:['a-1.js']});
+  assert.deepEqual(fs.readdirSync(assets).sort(),['a-1.js','b-2.js','shared.css']);
+  // The next snapshot holds only build 2's own files, so old catalogues and chunks never pile up.
+  assert.equal(rememberAssets(root,V2,now,carried.names),2);
+  assert.equal(history().length,1);assert.deepEqual(fs.readdirSync(path.join(root,'site/.wrangler/asset-history',history()[0])).sort(),['b-2.js','shared.css']);
+  build('c-3.js');assert.deepEqual(carryForwardAssets(root,now+1000).names,['b-2.js','shared.css']);
+  build('d-4.js');assert.deepEqual(carryForwardAssets(root,now+ASSET_KEEP_MS+5000),{files:0,builds:0,names:[]},'a previous build older than 7 days is not carried');
   const inventory=buildInventory(root);assert.equal(inventory.limit,95000);assert.equal(inventory.headroom,95000-inventory.entries);assert.match(inventory.used,/^\d+(\.\d)?%$/);
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
@@ -79,7 +81,7 @@ test('the live header check fails on a missing or weakened security header',asyn
 });
 test('a deploy reads the live version first, then verifies or rolls back, before any state is saved',()=>{
  const source=fs.readFileSync(new URL('../../tools/release.mjs',import.meta.url),'utf8');const body=source.slice(source.indexOf('export async function release('));
- const order=["carryForwardAssets(root)","buildInventory(root)","'Read live version'","'Deploy production'","verifyOrRollBack({check:()=>checkPublishedBuild(","rememberAssets(root,version)","'Notify IndexNow of changed URLs'","git(root,['commit'"].map(text=>body.indexOf(text));
+ const order=["carryForwardAssets(root)","buildInventory(root)","'Read live version'","'Deploy production'","verifyOrRollBack({check:()=>checkPublishedBuild(","rememberAssets(root,version,Date.now(),carried?.names)","'Notify IndexNow of changed URLs'","git(root,['commit'"].map(text=>body.indexOf(text));
  assert(order.every(index=>index>0),'every step is present');assert.deepEqual([...order].sort((a,b)=>a-b),order);
  assert.match(body,/\['wrangler','rollback',id,'-c','wrangler\.production\.jsonc','-m','live-check-failed','-y'\]/);
 });

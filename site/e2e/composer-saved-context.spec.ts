@@ -34,6 +34,8 @@ async function openAccountPage(page: Page, path: string) {
   await expect(page.getByTestId("account-page")).toHaveAttribute("data-save-status", "saved");
   if (path === "/#build") {
     await page.getByRole("link", { name: "AI Blocks, home", exact: true }).click();
+    // My account no longer loads the catalogue, so home opens on starter picks; focusing search opens the full library.
+    await page.locator("#task-search").focus();
     await page.locator("#home-workflows").getByRole("link", { name: /Open the workflow builder/ }).click();
     return;
   }

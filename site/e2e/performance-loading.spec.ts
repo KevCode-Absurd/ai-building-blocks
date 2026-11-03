@@ -1,5 +1,9 @@
 import {test, expect} from '@playwright/test';
 
+// The full catalogue: /data/blocks.json on the dev server, a fingerprinted /assets/blocks-<hash>.json in production builds.
+const FULL_CATALOGUE = /\/(?:data\/blocks|assets\/blocks-[\w-]+)\.json$/;
+const isFullCatalogue = (url: string) => FULL_CATALOGUE.test(new URL(url, 'http://x').pathname);
+
 for (const mobile of [false, true]) {
  test((mobile ? '@mobile ' : '') + 'home intro uses its brand font before app startup even when the full fonts are delayed', async ({page}) => {
   if (mobile) await page.setViewportSize({width: 412, height: 823});
@@ -120,7 +124,7 @@ for(const mobile of [false,true]){
    expect(await heading.evaluate(el=>el===(window as any).__skillHeading)).toBe(true);
    const after=await opening.boundingBox();expect(Math.abs(before!.height-after!.height)).toBeLessThan(1);
    await expect(page.getByTestId('block-page').getByRole('heading',{level:1})).toHaveCount(1);
-   expect(requests).not.toContain('/data/blocks.json');expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
+   expect(requests.some(isFullCatalogue)).toBe(false);expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false);
   }finally{release();}
  });
 }
@@ -301,7 +305,7 @@ for (const mobile of [false, true]) {
     await expect(page.getByTestId('minds-label-founder')).toHaveAttribute('aria-pressed', 'true');
     await page.getByRole('button', {name: 'Clear search and filters', exact: true}).click();
     await expect(page.getByTestId('mind-card')).toHaveCount(24);
-    expect(requests).not.toContain('/data/blocks.json');
+    expect(requests.some(isFullCatalogue)).toBe(false);
     expect(requests.some(p => /\/assets\/MyMinds-/.test(p))).toBe(false);
     await page.getByTestId('menu-btn').click();
     await expect(page.getByTestId('nav-minds')).toHaveAttribute('href', '/minds');
@@ -319,7 +323,7 @@ for (const mobile of [false, true]) {
     const modules: string[] = []; page.on('request', r => modules.push(new URL(r.url()).pathname));
     let release!: () => void, requested = false;
     const held = new Promise<void>(resolve => { release = resolve; });
-    await page.route('**/data/blocks.json', async r => { requested = true; await held; await r.continue(); });
+    await page.route(r => isFullCatalogue(r.href), async r => { requested = true; await held; await r.continue(); });
     try {
       await page.goto('/skills/voice-and-tone-guide-writer');
       await expect(page.getByTestId('skill-neighbours')).toBeVisible();
@@ -337,7 +341,7 @@ for (const mobile of [false, true]) {
       expect(modules.some(p => /\/assets\/handoff-(?!core-)/.test(p))).toBe(false);
       const before = await page.getByTestId('skill-neighbours').innerText();
       await page.locator('#root .bp-h1').evaluate(el => { (window as any).__firstSkillHeading = el; });
-      const full = page.waitForResponse(r => new URL(r.url()).pathname === '/data/blocks.json' && r.ok());
+      const full = page.waitForResponse(r => isFullCatalogue(r.url()) && r.ok());
       release(); await full;
       await expect.poll(() => page.getByTestId('skill-neighbours').innerText()).toBe(before);
       expect(await page.locator('#root .bp-h1').evaluate(el => el === (window as any).__firstSkillHeading)).toBe(true);
@@ -404,12 +408,12 @@ for (const mobile of [false, true]) {
     await expect(page.getByTestId('compose-goal')).toBeVisible();
     await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
     await page.waitForTimeout(1600);
-    expect(requests).not.toContain('/data/blocks.json');
+    expect(requests.some(isFullCatalogue)).toBe(false);
     expect(requests.some(p => /\/assets\/Builder-[^/]+\.(?:js|css)$/.test(p))).toBe(false);
     expect(requests.some(p => /\/assets\/(?:MyMinds|DownloadDialog|ExecutionPrompt)-/.test(p))).toBe(false);
     expect(requests.some(p => /\/assets\/HomePage-/.test(p))).toBe(false);
     expect(requests.some(p => /\/assets\/composer-runtime-/.test(p))).toBe(false);
-    const full = page.waitForResponse(r => new URL(r.url()).pathname === '/data/blocks.json' && r.ok());
+    const full = page.waitForResponse(r => isFullCatalogue(r.url()) && r.ok());
     await page.getByTestId('compose-goal').fill('Review supplied meeting notes and list the agreed actions');
     await full;
     await expect(page.getByTestId('compose-goal')).toHaveValue('Review supplied meeting notes and list the agreed actions');
@@ -526,9 +530,9 @@ for(const mobile of [false,true]){
   page.on('request',r=>{if(/RoleTaskSetup/.test(r.url()))requested.push(r.url());if(new URL(r.url()).pathname==='/data/roles/coding-specialist.json')fullProfiles.push(r.url());});
   await page.route(/(?:\/assets\/RoleTaskSetup-[^/]+\.js|\/src\/roles\/RoleTaskSetup\.tsx)/,async r=>{await held;await r.continue();});
   try{
-   await page.goto('/roles/coding-specialist');await expect(page.getByTestId('base-specialist-copy')).toBeVisible();expect(requested).toEqual([]);expect(fullProfiles).toEqual([]);
+   await page.goto('/roles/coding-specialist');await expect(page.getByTestId('base-specialist-message')).toBeVisible();expect(requested).toEqual([]);expect(fullProfiles).toEqual([]);
    await page.getByText('Add task context before downloading (optional)',{exact:true}).click();await expect(page.getByRole('status').filter({hasText:'Opening task setup…'})).toBeVisible();
-   await page.getByTestId('base-specialist-copy').click();expect(await page.evaluate(()=>(window as any).__specialistCopied)).toContain('"role_id":"coding-specialist"');
+   await page.getByText('Use with the pack, MCP or API',{exact:true}).click();await page.getByTestId('base-specialist-copy').click();expect(await page.evaluate(()=>(window as any).__specialistCopied)).toContain('"role_id":"coding-specialist"');
    await expect(page.getByTestId('base-specialist-download')).toBeEnabled();release();await expect(page.getByTestId('role-goal')).toBeVisible();expect(fullProfiles).toHaveLength(1);
    await page.getByTestId('role-goal').fill('Fix the supplied bug and return the code changes.');
    await page.getByText('Add task context before downloading (optional)',{exact:true}).click();await page.getByText('Add task context before downloading (optional)',{exact:true}).click();

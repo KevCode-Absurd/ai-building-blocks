@@ -166,7 +166,8 @@ test('start_outcome sends the method once and the example only when asked', asyn
   assert.equal(r.method, undefined);
   assert.equal(r.example, undefined);
   assert.ok(r.files['METHOD.md'].includes('| Field | Ask | Note | Example |'));
-  assert.ok(Buffer.byteLength(JSON.stringify(r)) < 12_000, `start_outcome is ${Buffer.byteLength(JSON.stringify(r))} bytes`);
+  // Method v3's aim-higher section adds about 2.7 KB; still well under the 17.6 KB that sent the method twice.
+  assert.ok(Buffer.byteLength(JSON.stringify(r)) < 15_000, `start_outcome is ${Buffer.byteLength(JSON.stringify(r))} bytes`);
   const withExample = await callOutcomeTool('start_outcome', { request: 'x', include_example: true });
   assert.equal(withExample.example.plan.stages[0].kind, 'intake');
 });

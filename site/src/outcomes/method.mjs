@@ -1,10 +1,12 @@
 // The orchestrator's method: written once, used for every outcome. It replaces per-outcome playbooks.
 // The host AI follows it to pin down the outcome, research how experts do the job and compose a plan from our catalogue.
 // Brief-frame examples show the shape of list and object fields; they are not rules, so they do not change METHOD_VERSION.
-export const METHOD_VERSION = 2;
+// v3 adds the aim-higher pass (Felix Rieseberg's altitude, depth and range, via the be-ambitious skill) and asks for checks with numbers.
+export const METHOD_VERSION = 3;
 
 export const BRIEF_FRAME = [
   { field: 'outcome', ask: 'What do you want to be true when this is done?', note: 'In the owner\'s terms, made specific.' },
+  { field: 'ambition', ask: 'What should happen after this is done? (I will suggest my guess; say yes or correct it.)', note: 'goal_beyond (the goal beyond the goal, one line), rungs (three, each more ambitious), chosen (1 to 3), judge (what, other than you or the owner, shows it worked). See Aim higher.', example: { goal_beyond: 'More of the people who enquire end up booking', rungs: ['Fix the follow-up email that goes out today', 'Find where enquiries drop off and fix the biggest cause', 'Keep enquiries converting: a weekly check that flags a drop before it costs a month'], chosen: 2, judge: 'Booking rate from the booking system, before and after, over the same number of weeks' } },
   { field: 'deliverable', ask: 'What should you have in hand at the end?', note: 'The finished thing: launched ads, a fixed site, a closed month. Not advice.' },
   { field: 'done', ask: 'How will we both know it is finished?', note: 'A short checklist.', example: ['Booking page fixed and checked', 'Changes launched with your approval'] },
   { field: 'metric', ask: 'Which one number shows it worked, what is it now, where does that figure come from, and what would count as success?', note: 'name, direction (decrease, increase or reach), unit, baseline, baseline_source (reported, verified or unknown), target. Leave out only when the deliverable has no number, such as a policy.', example: { name: 'Bookings per week', direction: 'increase', unit: 'bookings', baseline: null, baseline_source: 'unknown', target: null } },
@@ -17,6 +19,18 @@ export const BRIEF_FRAME = [
   { field: 'technical_level', ask: 'How hands-on do you want to be with the technical parts?', note: 'Sets how much we explain and how changes are handed over.' },
   { field: 'decides', ask: 'Who makes the final calls?', note: '' },
   { field: 'unknowns', ask: '', note: 'Anything still unknown after the questions. Name it; never guess it.', example: ['Profit per booking'] },
+];
+
+// Aim higher: raise the outcome, the standard or the set of experts, never the size of the job.
+// From Felix Rieseberg's "How to be more ambitious: a tutorial for humans with models", as the be-ambitious skill (MIT, RoboNuggets) lays it out.
+export const AMBITION_RULES = [
+  'Better, not bigger. Raise the outcome (altitude), the standard (depth) or the experts involved (range). Never add deliverables or side quests; if a change makes the job larger without making it better, drop it. Most jobs need one or two of the three.',
+  'Altitude: in the question batch, state your guess at what the owner wants to happen after this is done, as one line they can accept with yes ("My guess: you want X so that Y"). Then write three rungs, each more ambitious: do the task well; get to the decisions behind it; keep the result true without being asked. Record them in ambition.',
+  'Pick the highest rung that has an outside judge and fits the owner\'s limits, access and deadline. Never replace what the owner asked for without their yes: a higher rung raises the request, it does not swap it. If a rung has no outside judge, step down one.',
+  'Depth: before researching, answer four questions. What would a top professional in this field do here that the owner did not ask for? What is the rawest material they would start from (the platform export, the ledger, the logs), instead of a summary? Which methods and tools would they use? What, other than you or the owner, would show the result is right? Use the answers: research from primary sources, start evidence stages from the raw material, and make that outside check a stage check or reviewer.',
+  'Set the target where good practitioners in this field land, not just better than today, when the owner\'s limits allow. Offer it in the question batch; the owner\'s answer wins. Report honestly against the judge: a missed hard target with real numbers is a good result.',
+  'Range: say what the job does as verbs ("get busy people to decide under uncertainty", not "a deck"), and add a support specialist or reviewer only when its field brings a different method. Do what that expert does, not how they talk.',
+  'Ambition raises the standard, not the permissions. Anything that spends money, goes live or cannot be undone still waits for the owner\'s yes. Name missing data or access and what it would unlock; never invent it.',
 ];
 
 export const RESEARCH_PROTOCOL = [
@@ -49,7 +63,9 @@ export const COMPOSITION_RULES = [
   'Declare each capability once (read, draft or live; via mcp, api_key, file, browser or owner) and reference it from the stages that need it. A key is asked for only when its stage is ready, and stays with the host.',
   'Every stage after intake writes at least one output at a path inside the engagement folder and has at least one check that makes the output trustworthy, specific to this job.',
   'Gates: every owner stop costs the owner time, so add one only where their judgement changes the result. Most plans need three to five. none for internal steps that checks cover (evidence, integrity, diagnosis, options, measurement: the owner sees their findings at the decision or in the readout); approve for decisions; review for work the owner must see before it is used, batched into one review when pieces are used together, and left out when an approve_each_action stage will show the same work; approve_each_action for anything live. Learning needs review only when it proposes a rule for the whole business.',
-  'Write the hypotheses an expert would test first, from the research pitfalls and the brief, each with a test, what supports it, what refutes it and the stage that fixes it.',
+  'Write the hypotheses an expert would test first, from the research pitfalls and the brief, each with a test, what supports it, what refutes it and the stage that fixes it. Give support and refute a number or threshold that decides it where one exists ("more than 30% of drop-offs happen on mobile checkout").',
+  'Write each check so someone else could run it and get the same answer: name the number or threshold that passes ("totals match the export within 1%", "page loads in under 2.5 s on a mid-range phone"), not just "check it".',
+  'Where the job changes something and measures it, compare against a control, a holdout or the same period before, so the result is not just the season.',
   'Run independent stages in parallel: only add a dependency where a stage truly needs another\'s output.',
   'End with measurement (when there is a metric and anything goes live) and learning.',
 ];
@@ -65,15 +81,16 @@ export const RUN_RULES = [
 
 export const METHOD = {
   version: METHOD_VERSION,
-  loop: ['DEFINE: ask one batch of questions and submit the brief', 'RESEARCH: find out how experts do this job', 'COMPOSE: build the plan from our catalogue and submit it with the research', 'APPROVE: the owner approves the plan', 'RUN: specialists do the stages; the owner decides; live actions are approved one by one', 'MEASURE and LEARN: honest verdicts; rules saved; next round or a revised plan'],
-  brief_frame: BRIEF_FRAME, question_rules: ['Ask once, in one batch, only what changes a decision.', 'Skip anything the conversation, memory or brand files already answer.', 'Offer to choose for the owner when they would rather not decide (data home, tools).'],
-  research_protocol: RESEARCH_PROTOCOL, stage_kinds: KIND_GUIDE, composition_rules: COMPOSITION_RULES, run_rules: RUN_RULES,
+  loop: ['DEFINE: ask one batch of questions, aim higher with the owner, and submit the brief', 'RESEARCH: find out how experts do this job', 'COMPOSE: build the plan from our catalogue and submit it with the research', 'APPROVE: the owner approves the plan', 'RUN: specialists do the stages; the owner decides; live actions are approved one by one', 'MEASURE and LEARN: honest verdicts; rules saved; next round or a revised plan'],
+  brief_frame: BRIEF_FRAME, question_rules: ['Ask once, in one batch, only what changes a decision.', 'Lead with your best guess where you have one ("My guess: X. Yes, or tell me what is different"), so a yes is enough.', 'Skip anything the conversation, memory or brand files already answer.', 'Offer to choose for the owner when they would rather not decide (data home, tools).'],
+  ambition_rules: AMBITION_RULES, research_protocol: RESEARCH_PROTOCOL, stage_kinds: KIND_GUIDE, composition_rules: COMPOSITION_RULES, run_rules: RUN_RULES,
 };
 
 export function methodMarkdown() {
   return `# How this engagement works (method v${METHOD_VERSION})\n\n${METHOD.loop.map((s, i) => `${i + 1}. ${s}`).join('\n')}\n\n` +
     `## 1. Brief\n\n${METHOD.question_rules.map(r => `- ${r}`).join('\n')}\n\n| Field | Ask | Note | Example |\n|---|---|---|---|\n${BRIEF_FRAME.map(f => `| ${f.field} | ${f.ask || '-'} | ${f.note || '-'} | ${f.example === undefined ? '-' : `\`${JSON.stringify(f.example)}\``} |`).join('\n')}\n\n` +
-    `## 2. Research\n\n${RESEARCH_PROTOCOL.map((r, i) => `${i + 1}. ${r}`).join('\n')}\n\n` +
-    `## 3. Compose\n\n${COMPOSITION_RULES.map(r => `- ${r}`).join('\n')}\n\n| Kind | For |\n|---|---|\n${Object.entries(KIND_GUIDE).map(([k, v]) => `| ${k} | ${v} |`).join('\n')}\n\n` +
-    `## 4. Run\n\n${RUN_RULES.map(r => `- ${r}`).join('\n')}\n`;
+    `## 2. Aim higher\n\n${AMBITION_RULES.map(r => `- ${r}`).join('\n')}\n\n` +
+    `## 3. Research\n\n${RESEARCH_PROTOCOL.map((r, i) => `${i + 1}. ${r}`).join('\n')}\n\n` +
+    `## 4. Compose\n\n${COMPOSITION_RULES.map(r => `- ${r}`).join('\n')}\n\n| Kind | For |\n|---|---|\n${Object.entries(KIND_GUIDE).map(([k, v]) => `| ${k} | ${v} |`).join('\n')}\n\n` +
+    `## 5. Run\n\n${RUN_RULES.map(r => `- ${r}`).join('\n')}\n`;
 }

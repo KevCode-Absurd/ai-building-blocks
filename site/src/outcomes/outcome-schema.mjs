@@ -26,7 +26,9 @@ function shape(name, types, required = [], extra = {}) {
 }
 
 export const BRIEF_SCHEMA = shape('brief', {
-  outcome: str(1000), deliverable: str(600), done: list(str(500), 20, 1),
+  outcome: str(1000),
+  ambition: shape('ambition', { goal_beyond: str(500), rungs: list(str(500), 3, 3), chosen: { type: 'integer', minimum: 1, maximum: 3 }, judge: str(500) }, ['goal_beyond', 'rungs', 'chosen', 'judge']),
+  deliverable: str(600), done: list(str(500), 20, 1),
   metric: shape('metric', { name: str(200), direction: one(DIRECTIONS), unit: str(60), baseline: { type: 'number' }, baseline_source: one(BASELINE_SOURCES), target: { type: 'number' } }, ['name', 'direction', 'unit', 'baseline_source']),
   deadline: str(200), guardrails: texts(15, 500), limits: texts(20, 500), assets: texts(30, 500),
   connections: list(shape('connection', { name: str(200), access: one(ACCESS), status: one(CONNECTION_STATUSES) }, ['name', 'access', 'status']), 30),

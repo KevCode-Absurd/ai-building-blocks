@@ -17,7 +17,8 @@ export const BASELINE_SOURCES = ['reported', 'verified', 'unknown'];
 export const CONNECTION_STATUSES = ['connected', 'available', 'missing'];
 /** The fields each object may carry. The input JSON Schemas (outcome-schema.mjs) are built from these lists. */
 export const FIELDS = {
-  brief: ['outcome', 'deliverable', 'done', 'metric', 'deadline', 'guardrails', 'limits', 'assets', 'connections', 'data_home', 'technical_level', 'decides', 'unknowns', 'answers'],
+  brief: ['outcome', 'ambition', 'deliverable', 'done', 'metric', 'deadline', 'guardrails', 'limits', 'assets', 'connections', 'data_home', 'technical_level', 'decides', 'unknowns', 'answers'],
+  ambition: ['goal_beyond', 'rungs', 'chosen', 'judge'],
   metric: ['name', 'direction', 'unit', 'baseline', 'baseline_source', 'target'],
   connection: ['name', 'access', 'status'],
   answer: ['question', 'answer'],
@@ -108,6 +109,15 @@ export function validateBrief(input) {
     if ((baseline === null) !== (source === 'unknown')) fail('A missing baseline has source "unknown"; a stated baseline is "reported" or "verified".');
     return { name: text(m.name, 'Metric name', 200), direction: one(m.direction, DIRECTIONS, 'Metric direction'), unit: text(m.unit, 'Metric unit', 60), baseline, baseline_source: source, target: absent(m.target) ? null : num(m.target, 'Target') };
   });
+  // Aim higher (method v3): optional, so briefs from earlier methods stay valid.
+  const ambition = absent(b.ambition) ? null : c.try('ambition', () => {
+    const a = object(b.ambition, 'Ambition'); keys(a, FIELDS.ambition, 'Ambition');
+    const rungs = texts(a.rungs, 'Ambition rungs', 3, 500);
+    if (rungs.length !== 3) fail('Write exactly three rungs in ambition.rungs, each more ambitious than the last.');
+    const chosen = num(a.chosen, 'Chosen rung');
+    if (![1, 2, 3].includes(chosen)) fail('ambition.chosen is the rung you picked: 1, 2 or 3.');
+    return { goal_beyond: text(a.goal_beyond, 'Goal beyond the goal', 500), rungs, chosen, judge: text(a.judge, 'Outside judge', 500) };
+  });
   const done = c.try('done', () => { const d = texts(b.done, 'Definition of done', 20, 500); if (!d.length) fail('Say what finished looks like in done.'); return d; });
   const connections = each(c, b.connections, 'connections', 'Connections', 30, x => {
     object(x, 'Connection'); keys(x, FIELDS.connection, 'Connection');
@@ -115,7 +125,7 @@ export function validateBrief(input) {
   });
   const answers = each(c, b.answers, 'answers', 'Answers', 40, a => { object(a, 'Answer'); keys(a, FIELDS.answer, 'Answer'); return { question: text(a.question, 'Question', 500), answer: text(a.answer, 'Answer', 2000) }; });
   const brief = {
-    outcome: c.try('outcome', () => text(b.outcome, 'Outcome', 1000)), deliverable: c.try('deliverable', () => text(b.deliverable, 'Deliverable', 600)), done, metric, deadline: c.try('deadline', () => maybe(b.deadline, 'Deadline', 200)),
+    outcome: c.try('outcome', () => text(b.outcome, 'Outcome', 1000)), ambition, deliverable: c.try('deliverable', () => text(b.deliverable, 'Deliverable', 600)), done, metric, deadline: c.try('deadline', () => maybe(b.deadline, 'Deadline', 200)),
     guardrails: c.try('guardrails', () => texts(b.guardrails, 'Guardrails', 15, 500)), limits: c.try('limits', () => texts(b.limits, 'Limits', 20, 500)), assets: c.try('assets', () => texts(b.assets, 'Assets', 30, 500)), connections,
     data_home: c.try('data_home', () => text(b.data_home, 'Data home', 300)), technical_level: c.try('technical_level', () => maybe(b.technical_level, 'Technical level', 300)), decides: c.try('decides', () => text(b.decides, 'Who decides', 300)),
     unknowns: c.try('unknowns', () => texts(b.unknowns, 'Unknowns', 20, 500)), answers,

@@ -11,7 +11,7 @@ for(const mobile of [false,true]){
   expect(requests).not.toContain('/data/blocks.json');expect(requests).not.toContain('/data/roles-search.json');
   await page.getByTestId('roles-more').click();await expect(page.getByTestId('role-card')).toHaveCount(48);
   await page.getByTestId('role-search').fill('executive assistant');await expect(page.getByTestId('role-card').filter({hasText:'Executive assistant'})).toBeVisible();
-  await page.getByTestId('role-search').fill('unmatchable-role-xyz');await expect(page.getByText('No roles match that search.',{exact:false})).toBeVisible();
+  await page.getByTestId('role-search').fill('unmatchable-role-xyz');await expect(page.getByText('No roles match that search.',{exact:false})).toBeVisible();await expect(page.getByTestId('role-suggestions').getByRole('link').first()).toBeVisible();
   await page.getByRole('button',{name:'Clear search and filters'}).click();await expect(page.getByTestId('role-card')).toHaveCount(24);
   await page.getByRole('link',{name:'Page 2',exact:true}).click();await expect(page).toHaveURL(/\/roles\/page\/2$/);await expect(page.getByTestId('role-card')).toHaveCount(24);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

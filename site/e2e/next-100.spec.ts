@@ -116,4 +116,5 @@ test('next100 tools can be found by name and topic',async({page})=>{
   await page.getByRole('button',{name:'Clear filters',exact:true}).click();
   await page.getByTestId('tools-search').fill('zzqvnomatchingtool');
   await expect(page.getByTestId('tool-card')).toHaveCount(0);
+  await expect(page.getByTestId('tool-suggestion').first()).toBeVisible();
 });

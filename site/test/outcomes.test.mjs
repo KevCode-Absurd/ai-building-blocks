@@ -65,8 +65,11 @@ test('a vague request becomes a brief, then a researched plan the owner approves
   const r = await call('start_outcome', { request: 'My business is not doing too well', started: '2026-11-02', include_example: true });
   assert.equal(r.state, 'NEEDS_BRIEF');
   assert.equal(r.engagement.id, '20261102-my-business-is-not-doing');
-  assert.ok(r.method.brief_frame.some(f => f.field === 'metric'));
+  // The method travels once, as METHOD.md, with examples for the list and object fields of the brief.
+  assert.equal(r.method, undefined);
+  assert.equal(r.method_version, 2);
   assert.match(r.files['METHOD.md'], /Research/);
+  assert.match(r.files['METHOD.md'], /\| connections \|.*"access":"read","status":"connected"/);
   assert.equal(r.example.plan.stages[0].kind, 'intake');
   await assert.rejects(step(r, { type: 'plan', research: example.research, plan: example.plan }), /brief before the plan/);
   await assert.rejects(step(r, { type: 'brief', brief: { ...example.brief, metric: { ...example.brief.metric, baseline: null } } }), /missing baseline/);
@@ -203,8 +206,8 @@ test('a changed engagement or a plan edited outside the tools is rejected', asyn
   await assert.rejects(call('advance_outcome', { engagement: tampered, engagement_sha256: r.engagement_sha256, event: { type: 'start', stage_id: 'evidence' } }), /changed since/);
   const loosened = copy(r.engagement); loosened.plan.stages.find(s => s.id === 'launch').gate = 'none';
   await assert.rejects(call('advance_outcome', { engagement: loosened, engagement_sha256: await engagementDigest(loosened), event: { type: 'start', stage_id: 'evidence' } }), /every action needs owner approval/);
-  await assert.rejects(call('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event: { type: 'teleport' } }), /Event type/);
-  await assert.rejects(call('start_outcome', { request: 'x', mystery: true }), /Unsupported argument/);
+  await assert.rejects(call('advance_outcome', { engagement: r.engagement, engagement_sha256: r.engagement_sha256, event: { type: 'teleport' } }), /event\.type: must be one of brief, plan/);
+  await assert.rejects(call('start_outcome', { request: 'x', mystery: true }), /mystery: is not an argument of start_outcome/);
   assert.deepEqual(outcomeMcpTools.map(t => t.name), ['start_outcome', 'advance_outcome', 'record_outcome_decision', 'record_outcome_experiment']);
   const b = await briefed();
   const unchecked = await callOutcomeTool('advance_outcome', { engagement: b.engagement, engagement_sha256: b.engagement_sha256, event: { type: 'plan', research: example.research, plan: example.plan } });

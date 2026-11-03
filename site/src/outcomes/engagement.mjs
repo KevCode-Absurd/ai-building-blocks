@@ -3,6 +3,7 @@
 import { canonicalTeamJSON } from '../teams/team-contract.mjs';
 import { STAGE_KINDS, fail, text, validateBrief, validatePlan, validateResearch, planMarkdown, researchMarkdown, hypothesesMarkdown } from './plan-contract.mjs';
 import { METHOD, methodMarkdown } from './method.mjs';
+import { nearest } from './schema-check.mjs';
 
 export { fail, text };
 export const ENGAGEMENT_SCHEMA = 'ai-blocks-outcome-engagement/2';
@@ -16,7 +17,7 @@ const encoder = new TextEncoder();
 const SECRET = /(sk-(ant-|proj-)?[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{30,}|xox[abprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{35}|EAA[A-Za-z0-9]{60,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|Bearer\s+[A-Za-z0-9._~+/-]{20,})/;
 
 const object = (v, label) => v && typeof v === 'object' && !Array.isArray(v) ? v : fail(`${label} must be an object.`);
-const keys = (v, allowed, label) => { const extra = Object.keys(v).find(k => !allowed.includes(k)); if (extra) fail(`${label} has an unsupported field: ${extra}.`); };
+const keys = (v, allowed, label) => { const extra = Object.keys(v).find(k => !allowed.includes(k)); if (extra) fail(`${label} has an unsupported field: ${extra}.`, nearest(extra, allowed)); };
 const optionalText = (v, label, max) => v === undefined || v === null ? null : text(v, label, max);
 const date = (v, label) => v === undefined ? null : DATE.test(v ?? '') ? v : fail(`${label} must be YYYY-MM-DD.`);
 const clone = v => JSON.parse(JSON.stringify(v));
@@ -107,7 +108,8 @@ function installPlan(e, research, plan, check) {
   return auto;
 }
 
-const EVENT_FIELDS = {
+/** The fields each event type takes besides type and at. The advance_outcome input schema is built from this. */
+export const EVENT_FIELDS = {
   brief: ['brief'], plan: ['research', 'plan'], approve_plan: ['decision', 'by', 'note'],
   data: ['data_id', 'status', 'note'], start: ['stage_id'], complete: ['stage_id', 'outputs', 'checks', 'summary'], approve: ['stage_id', 'decision', 'by', 'note'],
   skip: ['stage_id', 'reason'], block: ['stage_id', 'reason'], reopen: ['stage_id'], autonomy: ['level', 'by', 'note'], next_round: ['note'],
@@ -123,7 +125,7 @@ export function advanceEngagement(input, event, { planCheck } = {}) {
   refuseSecrets(event);
   if (!(PHASE_OF[event.type] ?? ['RUN']).includes(e.phase)) fail(`A ${event.type} event is not allowed while the engagement is in ${e.phase}.${e.phase === 'PLAN_REVIEW' ? ' The owner approves the plan first.' : ''}`);
   const at = date(event.at, 'Event date');
-  const stage = () => { const s = e.stages.find(s => s.id === event.stage_id) ?? fail('Unknown stage.'); return [s, e.plan.stages.find(d => d.id === s.id)]; };
+  const stage = () => { const s = e.stages.find(s => s.id === event.stage_id) ?? fail(`Unknown stage ${event.stage_id}. The plan's stages: ${e.stages.map(s => s.id).join(', ')}.`, nearest(event.stage_id, e.stages.map(s => s.id))); return [s, e.plan.stages.find(d => d.id === s.id)]; };
   const need = (s, states, verb) => { if (!states.includes(s.state)) fail(`Stage ${s.id} is ${s.state}; it must be ${states.join(' or ')} to ${verb}.`); };
   let note = null;
   switch (event.type) {
@@ -142,7 +144,7 @@ export function advanceEngagement(input, event, { planCheck } = {}) {
       note = optionalText(event.note, 'Approval note', 2000); break;
     }
     case 'data': {
-      const d = e.data.find(d => d.id === event.data_id) ?? fail('Unknown data item.');
+      const d = e.data.find(d => d.id === event.data_id) ?? fail(`Unknown data item ${event.data_id}. The plan's data: ${e.data.map(d => d.id).join(', ') || 'none'}.`, nearest(event.data_id, e.data.map(d => d.id)));
       if (!['AVAILABLE', 'MISSING'].includes(event.status)) fail('Data status must be AVAILABLE or MISSING.');
       d.status = event.status; const n = optionalText(event.note, 'Data note', 1000); if (n) d.note = n; else delete d.note; break;
     }
@@ -271,7 +273,8 @@ export async function describeEngagement(e, { initial = false } = {}) {
   const files = { 'engagement.json': JSON.stringify(e, null, 2) + '\n', 'ENGAGEMENT.md': statusMarkdown(e), ...(e.brief ? { 'BRIEF.md': briefMarkdown(e) } : {}) };
   if (initial) Object.assign(files, { 'METHOD.md': methodMarkdown(), 'decisions.jsonl': '', 'experiments.jsonl': '', 'LEARNINGS.md': '# Learnings\n\nOne line per learning: date, scope (engagement, business or platform), the rule, and the decision or experiment it came from.\n' });
   const base = { schema: 'ai-blocks-outcome-step/1', folder: `outcomes/${e.id}/`, engagement: e, engagement_sha256: await engagementDigest(e), review: { host_reported: true, independently_verified: false, grants_execution_authority: false } };
-  if (e.phase === 'DEFINE') return { ...base, state: 'NEEDS_BRIEF', next: 'Ask the owner one batch of questions covering the brief frame (skip what the conversation, memory or brand files already answer), then call advance_outcome with {"type":"brief","brief":{...}}.', ...(initial ? { method: METHOD } : {}), files };
+  // The method travels once, as files["METHOD.md"], which the host saves and rereads at each phase.
+  if (e.phase === 'DEFINE') return { ...base, state: 'NEEDS_BRIEF', method_version: METHOD.version, next: `Ask the owner one batch of questions covering the brief frame${initial ? ' in files["METHOD.md"]' : ' in METHOD.md'} (skip what the conversation, memory or brand files already answer), then call advance_outcome with {"type":"brief","brief":{...}}.`, files };
   if (e.phase === 'RESEARCH') return { ...base, state: 'NEEDS_PLAN', next: `${e.plan_changes ? `The owner asked for changes to plan v${e.plan_version}: ${e.plan_changes}. ` : ''}Research how experts do this job (memory, then our catalogue, then the web), write RESEARCH.md, compose the plan from our catalogue, then call advance_outcome with {"type":"plan","research":{...},"plan":{...}}. METHOD.md has the rules.`, research_protocol: METHOD.research_protocol, composition_rules: METHOD.composition_rules, files };
   Object.assign(files, { 'PLAN.md': planMarkdown(e.brief, e.research, p, { version: e.plan_version, warnings: e.plan_check.warnings }), 'RESEARCH.md': researchMarkdown(e.research), 'hypotheses.md': hypothesesMarkdown(p), 'DATA-REQUESTS.md': dataRequestsMarkdown(e) });
   const warnings = [...e.plan_check.warnings, ...(e.plan_check.catalogue_checked ? [] : ['Specialists and items were not checked against the live catalogue on this call.'])];

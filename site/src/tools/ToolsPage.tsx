@@ -9,6 +9,7 @@ import { ArrowIcon, SearchIcon } from "../ui";
 import { Link, setSearch, useLocation } from "../lib/router";
 import { monthOf, pathOf, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, type Input, type Line, type Tool } from "./registry";
+import { STARTER_TOOLS, searchTools } from "./tool-search";
 
 const TITLE = "Free AI Skills & Custom Workflow Builder | AI Blocks";
 const store = {
@@ -299,8 +300,7 @@ function ToolsIndex() {
   const growth = { slug: "growth-channel-planner", short: "Growth channel planner", name: "Growth channel planner", headline: "Plan growth for any business", category: "growth", kind: "planner", summary: "Prepare a business brief, compare 19 channels and download a complete planning skill pack. No website required.", question: "Growth marketing customer acquisition planning for any business, local shop, nonprofit or ecommerce." };
   const all = [growth, ...BROWSER_TOOLS, ...TOOLS];
   const group = (t: typeof all[number]) => t.category || Object.keys(topics).find(key => topics[key].includes(t.slug)) || "pricing";
-  const words = q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
-  const matches = all.filter(t => words.every(w => `${t.name} ${t.summary} ${t.question} ${t.slug} ${categories.find(c => c.id === group(t))?.name ?? ""}`.toLowerCase().replace(/[_-]/g, " ").includes(w)));
+  const matches = searchTools(all, q, t => categories.find(c => c.id === group(t))?.name ?? "");
   const shown = matches.filter(t => !category || group(t) === category);
   useEffect(() => { document.title = "Free everyday tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
   return <main className="bp mt" data-testid="tools-index">
@@ -314,7 +314,7 @@ function ToolsIndex() {
       <label className="search tools-search"><SearchIcon /><span className="visually-hidden">Find a tool</span><input value={q} onChange={e => setQ(e.target.value)} placeholder="Search for a tool or a job to get done" data-testid="tools-search" /></label>
       <div className="tools-categories" role="group" aria-label="Tool topic">{categories.map(x => <button type="button" className="chip" key={x.id} aria-pressed={category === x.id} onClick={() => setCategory(x.id)}>{x.name} <span className="small">{matches.filter(t => !x.id || group(t) === x.id).length}</span></button>)}</div>
       <p className="result-line" role="status">{shown.length} tool{shown.length === 1 ? "" : "s"}{(q || category) && <button className="link-btn" onClick={() => { setQ(""); setCategory(""); }}>Clear filters</button>}</p>
-      {!shown.length && <p className="empty">No tools match this search. Try fewer words or clear the filters.</p>}
+      {!shown.length && <div className="empty"><p>No tools match this search. Try fewer words or clear the filters.</p><p>Or start with one of these: {STARTER_TOOLS.map(slug => all.find(t => t.slug === slug)).filter(t => t !== undefined).map((t, i) => <span key={t.slug}>{i ? ", " : ""}<Link to={`/tools/${t.slug}`} data-testid="tool-suggestion">{t.short}</Link></span>)}.</p></div>}
       <div className="grid">{shown.map(t => <Link className="card mt-card" key={t.slug} to={`/tools/${t.slug}`} data-testid="tool-card" data-slug={t.slug}>
         <span className="meta"><span className="kind">{t.slug === growth.slug ? "Planner" : "kind" in t ? "Browser tool" : "Calculator"}</span><span className="type">{categories.find(c => c.id === group(t))?.name}</span></span>
         <span className="nm">{t.short}</span><span className="peek">{t.summary}</span><span className="view">Open {t.slug === growth.slug ? "planner" : "kind" in t ? "tool" : "calculator"} <ArrowIcon size={12} /></span>

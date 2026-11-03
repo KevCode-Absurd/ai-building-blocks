@@ -413,7 +413,7 @@ for (const mobile of [false, true]) {
     await page.getByTestId('compose-goal').fill('Review supplied meeting notes and list the agreed actions');
     await full;
     await expect(page.getByTestId('compose-goal')).toHaveValue('Review supplied meeting notes and list the agreed actions');
-    await page.getByText('Customize: planner, minds and imports', {exact: true}).click();
+    await page.getByText('More options: plan type, minds and imports', {exact: true}).click();
     await expect(page.getByTestId('my-minds')).toBeVisible();
     expect(requests.some(p => /\/assets\/Builder-[^/]+\.(?:js|css)$/.test(p))).toBe(false);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -449,7 +449,7 @@ for (const mobile of [false, true]) {
     await page.route('**/assets/ComposePage-*.js', async r => { await held; await r.continue(); });
     try {
       await page.goto('/compose', {waitUntil: 'domcontentloaded'});
-      const heading = page.getByRole('heading', {name: 'Build a custom workflow', exact: true});
+      const heading = page.getByRole('heading', {name: 'Plan a job', exact: true});
       await expect(heading).toBeVisible();
       await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
       await page.evaluate(() => document.fonts.ready);

@@ -1,13 +1,13 @@
 import { expect, type Page } from "@playwright/test";
 
 export async function composerOptions(page: Page) {
- const summary = page.getByText("Customize: planner, minds and imports", { exact: true });
+ const summary = page.getByText("More options: plan type, minds and imports", { exact: true });
  await expect(summary).toBeVisible();
  if (!await summary.evaluate(el => (el.parentElement as HTMLDetailsElement).open)) await summary.click();
 }
 export async function choosePlanner(page: Page, mode: "free" | "ai") {
  await composerOptions(page);
- await page.getByRole("tab", { name: mode === "free" ? "Find steps from the library" : "AI planning", exact: true }).click();
+ await page.getByRole("tab", { name: mode === "free" ? "Quick plan" : "AI plan", exact: true }).click();
  if ((await page.getByTestId("compose-goal").inputValue()).trim() && await page.getByTestId("compose-submit").textContent() === "Continue") await page.getByTestId("compose-submit").click();
 }
 export async function submitPlan(page: Page) {

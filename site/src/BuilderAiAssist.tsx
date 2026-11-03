@@ -178,6 +178,6 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
       if (busy || signingIn) { event.preventDefault(); return; }
       try { sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices: {}, useContext, customSkills: [], assignMinds })); }
       catch { event.preventDefault(); setError("Your request could not be carried over. Copy it before opening advanced options."); }
-    }}>More planning options</Link>
+    }}>Open in Plan a job</Link>
   </section>;
 }

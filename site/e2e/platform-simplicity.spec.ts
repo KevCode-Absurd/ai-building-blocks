@@ -12,13 +12,13 @@ test("signed-in home shows its public first screen while private saved work is s
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
     await expect.poll(() => libraryRequested).toBe(true);
-    await expect(page.locator("#top .hero h1", { hasText: "Get your ads, emails and plans done with AI" })).toBeVisible();
+    await expect(page.locator("#top .hero h1", { hasText: "Use AI like the top 1%" })).toBeVisible();
     await expect(page.locator("#app-loader")).toHaveCount(0);
     await expect(page.getByTestId("library-search")).toBeEnabled();
     await expect(page.getByText("Saved to your account.", { exact: true })).toHaveCount(0);
     await page.screenshot({ path: test.info().outputPath("signed-in-library-loading.png") });
   } finally { release(); }
-  await expect(page.locator("#top .hero h1", { hasText: "Get your ads, emails and plans done with AI" })).toBeVisible();
+  await expect(page.locator("#top .hero h1", { hasText: "Use AI like the top 1%" })).toBeVisible();
   await page.getByTestId("menu-btn").click();
   await expect(page.getByRole("navigation", { name: "Sections", exact: true })).toContainText("Signed in");
   await expect(page.getByTestId("open-saved-work")).toBeVisible();

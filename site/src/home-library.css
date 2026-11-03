@@ -9,7 +9,7 @@
 .library-search-clear:hover { background: var(--btn-2); }
 .library-search-clear:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
 .library-toolbar a { text-decoration: none; }
-.library-me-step { margin: -8px 0 18px; color: var(--muted); }
+.library-me-step { margin: 12px 0 18px; color: var(--muted); }
 .result-line { margin-top: 20px; align-items: center; flex-wrap: wrap; }
 .result-line > span { flex: 1 1 160px; min-width: 0; }
 .result-line .btn { flex: 0 0 auto; white-space: nowrap; }

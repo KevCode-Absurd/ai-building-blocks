@@ -53,8 +53,8 @@ test("home headline and actions render while the decorative globe chunk is delay
   try {
     await page.goto("/", { waitUntil: "commit" });
     const globeRequest = page.waitForRequest(/\/assets\/Globe-[^/]+\.js$/);
-    await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
-    await expect(page.getByRole("button", { name: /Find help/ })).toBeEnabled();
+    await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Start with a task/ })).toBeEnabled();
     await expect(page.getByTestId("globe")).toHaveCount(0);
     await globeRequest;
     await expect(page.getByTestId("globe")).toHaveCount(0);
@@ -81,7 +81,7 @@ test("@mobile compact loader has no text wall while the app bundle is delayed", 
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.screenshot({ path: test.info().outputPath("designed-first-screen-mobile.png") });
   } finally { release(); }
-  await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
   await expect(page.getByTestId("library-search")).toBeEnabled();
 });
 
@@ -93,7 +93,7 @@ test("@mobile public first screen appears while account restoration is delayed",
   await page.route("**/api/auth", async route => { requested = true; await held; await route.fulfill({ json: { configured: false } }); });
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
-    await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
     await expect(page.locator("#app-loader")).toHaveCount(0);
     await expect(page.getByTestId("library-search")).toBeEnabled();
     await expect.poll(() => requested, { timeout: 5000 }).toBe(true);
@@ -108,13 +108,13 @@ test("a stalled account request does not delay the public homepage", async ({ pa
   await page.route("**/api/auth", async route => { requested = true; await held; await route.fulfill({ json: { configured: false } }); });
   try {
     await page.goto("/", { waitUntil: "domcontentloaded" });
-    await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
-    await expect(page.getByRole("button", { name: /Find help/ })).toBeEnabled();
+    await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Start with a task/ })).toBeEnabled();
     await expect(page.locator("#app-loader")).toHaveCount(0);
     await expect(page.locator("html")).toHaveAttribute("data-boot", "ready");
     await expect(page.getByTestId("library-search")).toBeEnabled();
     await expect.poll(() => requested, { timeout: 5000 }).toBe(true);
-    await expect(page.getByRole("heading", { name: "Get your ads, emails and plans done with AI" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Use AI like the top 1%" })).toBeVisible();
   } finally { release(); }
 });
 

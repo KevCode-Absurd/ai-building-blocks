@@ -124,14 +124,6 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .ghost { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-/* Home hero goal box: hands its words to the library search. Prefixed .hero so the first-paint CSS keeps it. */
-.hero-goal { display: flex; gap: 8px; max-width: 560px; margin: 24px auto 0; padding: 6px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; box-shadow: var(--shadow); }
-.hero-goal:focus-within { border-color: var(--text); box-shadow: var(--hard); }
-.hero-goal input { flex: 1; min-width: 0; height: 44px; padding: 0 12px; border: 0; outline: 0; background: none; color: var(--text); font: 400 16px var(--sans); }
-.hero-goal input::placeholder { color: var(--faint); }
-.hero-goal .btn { flex: none; min-height: 44px; }
-.hero-goal + .hero-actions { margin-top: 14px; }
-@media (max-width: 520px) { .hero-goal { flex-direction: column; } .hero-goal .btn { justify-content: center; } }
 /* Sits above the dithered band at the foot of the hero (.hero::after is 64px; the hero pads 24px). */
 .hero-connect { margin: 16px auto 44px; max-width: 48em; color: var(--text-2); text-wrap: balance; }
 .hero-connect a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
@@ -486,11 +478,13 @@ input[type="checkbox"] { accent-color: var(--text); width: 18px; height: 18px; }
 body.globe-dragging, body.globe-dragging * { user-select: none !important; -webkit-user-select: none !important; cursor: grabbing !important; }
 
 /* Library: formats stay visible; domain and optional work filters stay compact. */
-.library-formats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin: 18px 0 14px; }
-.library-formats button { display: flex; flex-direction: column; gap: 5px; min-height: 82px; padding: 14px; text-align: left; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; }
+.library-formats { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin: 18px 0 14px; }
+.library-formats button, .library-formats .library-format-link { display: flex; flex-direction: column; gap: 5px; min-height: 82px; padding: 14px; text-align: left; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); cursor: pointer; }
 .library-formats button > span { font: 600 17px/1.2 var(--display); }
 .library-formats small { font: 400 12px/1.4 var(--sans); color: var(--muted); }
-.library-formats button:hover { border-color: var(--text); }
+.library-formats button:hover, .library-formats .library-format-link:hover { border-color: var(--text); }
+.library-formats .library-format-link { text-decoration: none; }
+.library-formats .library-format-link > span { font: 600 17px/1.2 var(--display); }
 .library-formats button[aria-selected="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
 .library-formats button[aria-selected="true"] small { color: var(--bg); opacity: .8; }
 .library-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 18px; }

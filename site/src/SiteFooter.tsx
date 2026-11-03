@@ -7,7 +7,7 @@ import { usePeopleVisible } from "./lib/people";
 // App tours are reached through How it works; source and growth tools have their own entry points.
 const groups = [
   { label: "Explore", links: [["/#library", "Find a task"], ["/roles", "Hire an AI specialist"], ["/compose", "Plan a job"], ["/tools", "Tools"], ["/minds", "Minds"], ["/space", "Team space"]] },
-  { label: "Help", links: [["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/support", "Help & contact"], ["/about", "About AI Blocks"]] },
+  { label: "Help", links: [["/how-it-works", "How it works"], ["/support", "Help & contact"], ["/about", "About AI Blocks"]] },
 ];
 export default function SiteFooter() {
   const people = usePeopleVisible(); // From people shows here only once the public list has 20 or more items

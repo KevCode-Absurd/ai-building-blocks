@@ -193,6 +193,7 @@ function howItWorksBody() {
     `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use ${/^[aeiou]/i.test(kind) ? "an" : "a"} ${esc(kind.toLowerCase())}.`))}`,
     `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Plan a job from your goal</a> · <a href="/apps">See an example app</a></p>`,
     `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
+    `<p><a href="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</a></p>`,
     `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Tested means the item ran on a real business's files and a second AI graded the result against the page's own checks. Imported items say when they have not been tested yet."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
     `<h2>Words you'll see</h2>${list(words.map(([w, d]) => `<b>${esc(w)}</b>: ${esc(d)}`))}`,
   ].join("");

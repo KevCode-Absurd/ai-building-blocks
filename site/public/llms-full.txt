@@ -46,6 +46,7 @@ Once connected, ask in plain words:
 - [Workflow planner](https://useaiblocks.com/compose): describe a task, review a plan and download it for your AI
 - [Hire an AI specialist](https://useaiblocks.com/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.
 - [Your me.md](https://useaiblocks.com/me-md): prepare reusable context for your AI
+- [Train your own AI agent](https://useaiblocks.com/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way
 - [API and MCP](https://useaiblocks.com/api-and-mcp): connect an AI and read the public API documentation
 - [All skills by job](https://useaiblocks.com/jobs): every skill, workflow and prompt, sorted by the job it does
 - [How it works](https://useaiblocks.com/how-it-works): from one prompt to your own AI app

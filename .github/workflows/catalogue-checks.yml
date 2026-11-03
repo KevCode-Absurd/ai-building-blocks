@@ -46,6 +46,8 @@ jobs:
         run: npm --prefix site run test:unit
       - name: Build production pages
         run: npm --prefix site run build
+      - name: Check byte budgets and inline script hashes
+        run: node site/scripts/byte-budgets.mjs
       - name: Check SEO
         run: npm --prefix site run seo
       - name: Reject source drift after build

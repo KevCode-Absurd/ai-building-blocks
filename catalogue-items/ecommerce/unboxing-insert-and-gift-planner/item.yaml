@@ -2,6 +2,7 @@ slug: unboxing-insert-and-gift-planner
 name: "Unboxing insert and gift planner"
 summary: "Give it order value and margin. Get a costed unboxing plan with insert card, note and gift rules."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

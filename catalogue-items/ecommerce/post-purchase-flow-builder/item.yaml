@@ -2,6 +2,7 @@ slug: post-purchase-flow-builder
 name: Post-purchase flow builder
 summary: "Give it your products and delivery times. Get a six-email flow: thank-you, add-on, how-to, social ask and check-in."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

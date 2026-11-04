@@ -2,6 +2,7 @@ slug: layout-shift-fixer
 name: "Layout shift fixer"
 summary: "Give it your CLS report and page. Get the shifting element found and the fix for each cause."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

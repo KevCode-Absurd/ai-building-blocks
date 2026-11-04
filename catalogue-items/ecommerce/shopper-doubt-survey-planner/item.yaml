@@ -2,6 +2,7 @@ slug: shopper-doubt-survey-planner
 name: "Shopper doubt survey planner"
 summary: "Say what you sell. Get two on-site surveys, a user test script and a doubt tally."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

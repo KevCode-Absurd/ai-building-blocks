@@ -2,6 +2,7 @@ slug: growth-cash-limit-checker
 name: "Growth cash limit checker"
 summary: "Give it stock, terms and growth plan. Get whether cash or ads limit growth, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

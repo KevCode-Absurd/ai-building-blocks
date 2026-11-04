@@ -2,6 +2,7 @@ slug: growth-bottleneck-finder
 name: "Growth bottleneck finder"
 summary: "Give it your numbers and changes. Get the one growth limit, the work order and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

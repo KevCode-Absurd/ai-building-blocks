@@ -2,6 +2,7 @@ slug: amazon-launch-week-planner
 name: "Amazon launch week planner"
 summary: "Give it your product and audience. Get a pre-launch and launch-day plan for early sales and reviews."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

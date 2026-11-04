@@ -2,6 +2,7 @@ slug: email-and-sms-performance-reader
 name: "Email and SMS performance reader"
 summary: "Paste last month's numbers. Get what broke, what to repeat and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

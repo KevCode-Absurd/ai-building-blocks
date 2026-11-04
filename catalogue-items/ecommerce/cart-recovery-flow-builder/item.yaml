@@ -2,6 +2,7 @@ slug: cart-recovery-flow-builder
 name: "Cart recovery flow builder"
 summary: "Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

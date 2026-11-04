@@ -2,6 +2,7 @@ slug: creative-test-reader
 name: "Creative test reader"
 summary: "Paste ad results by ad set. Get keep, leave or replace calls, false winners and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

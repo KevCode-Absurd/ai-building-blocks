@@ -2,6 +2,7 @@ slug: email-test-planner
 name: "Email test planner"
 summary: "Give it your flows and send volumes. Get a ranked test queue with sample sizes and win rules."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

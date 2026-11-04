@@ -2,6 +2,7 @@ slug: sensory-unboxing-planner
 name: "Sensory unboxing planner"
 summary: "Describe your product and pack. Get matched sense cues with costs and an unboxing script."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: brand

@@ -2,6 +2,7 @@ slug: store-unmet-job-finder
 name: "Store unmet job finder"
 summary: "Paste reviews, tickets, returns and searches. Get ranked unmet-job leads in five groups, each with a test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

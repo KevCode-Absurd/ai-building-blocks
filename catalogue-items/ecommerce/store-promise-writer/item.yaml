@@ -2,6 +2,7 @@ slug: store-promise-writer
 name: "Store promise writer"
 summary: "Give it your product and best customers. Get a three-line promise and a not-for-you list."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: brand

@@ -2,6 +2,7 @@ slug: reddit-answer-planner
 name: "Reddit answer planner"
 summary: "Give it your category and cited Reddit threads. Get which to answer and what to say."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

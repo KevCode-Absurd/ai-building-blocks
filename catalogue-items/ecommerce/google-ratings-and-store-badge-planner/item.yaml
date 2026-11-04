@@ -2,6 +2,7 @@ slug: google-ratings-and-store-badge-planner
 name: "Google ratings and store badge planner"
 summary: "Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

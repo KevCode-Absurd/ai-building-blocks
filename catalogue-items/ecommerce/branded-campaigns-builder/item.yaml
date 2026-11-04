@@ -2,6 +2,7 @@ slug: branded-campaigns-builder
 name: "Branded Search and Shopping builder"
 summary: "Give it your brand name and offer. Get branded Search and Shopping campaigns with settings, keywords and ads."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

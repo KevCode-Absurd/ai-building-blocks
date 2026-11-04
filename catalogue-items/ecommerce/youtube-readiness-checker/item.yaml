@@ -2,6 +2,7 @@ slug: youtube-readiness-checker
 name: "YouTube readiness checker"
 summary: "Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

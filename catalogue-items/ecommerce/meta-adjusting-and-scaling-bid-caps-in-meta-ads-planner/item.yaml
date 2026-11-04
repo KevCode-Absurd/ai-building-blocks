@@ -2,6 +2,7 @@ slug: meta-adjusting-and-scaling-bid-caps-in-meta-ads-planner
 name: Meta bid cap adjustment planner
 summary: Review Meta bid caps against delivery and business targets. Get proposed adjustments, a test window and clear stop rules.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: brand-to-image-prompt-compiler
 name: Brand-to-image prompt compiler
 summary: Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

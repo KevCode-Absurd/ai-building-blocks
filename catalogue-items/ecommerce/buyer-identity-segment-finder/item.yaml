@@ -2,6 +2,7 @@ slug: buyer-identity-segment-finder
 name: "Buyer identity segment finder"
 summary: "Paste reviews and survey answers. Get buyer groups by self-description, their size and who to build for."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

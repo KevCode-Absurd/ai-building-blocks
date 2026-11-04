@@ -2,6 +2,7 @@ slug: sku-ad-money-planner
 name: "SKU ad money planner"
 summary: "Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

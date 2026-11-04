@@ -2,6 +2,7 @@ slug: meta-account-structure-planner
 name: "Meta account structure planner"
 summary: "Give your spend, products and margins. Get a Meta campaign and ad set layout with budgets and KPIs."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

@@ -2,6 +2,7 @@ slug: factory-shortlist-vetter
 name: "Supplier shortlist vetter"
 summary: "Give it your spec and factory answers. Get each scored out of 100, red flags and a pick."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

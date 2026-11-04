@@ -2,6 +2,7 @@ slug: post-purchase-survey-reader
 name: "Post-purchase survey reader"
 summary: "Give survey answers and channel spend. Get over-credited channels, budget moves and a trust score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

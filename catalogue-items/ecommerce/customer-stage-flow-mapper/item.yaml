@@ -2,6 +2,7 @@ slug: customer-stage-flow-mapper
 name: "Customer stage flow mapper"
 summary: "Describe your flows. Get each split into new, returning and loyal paths with their own goals."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

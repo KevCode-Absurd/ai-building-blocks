@@ -2,6 +2,7 @@ slug: ad-test-budget-calculator
 name: "Ad test budget calculator"
 summary: "Give it your target CPA and test days. Get a budget, a keep or cut rule and read window."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

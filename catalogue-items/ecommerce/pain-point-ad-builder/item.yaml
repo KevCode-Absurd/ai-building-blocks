@@ -2,6 +2,7 @@ slug: pain-point-ad-builder
 name: "Pain-point ad builder"
 summary: "Give it a real problem you solve. Get an honest pain-point ad and an answer to rival claims."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

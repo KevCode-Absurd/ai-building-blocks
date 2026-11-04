@@ -2,6 +2,7 @@ slug: non-brand-search-campaign-builder
 name: "Non-brand Search campaign builder"
 summary: "Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

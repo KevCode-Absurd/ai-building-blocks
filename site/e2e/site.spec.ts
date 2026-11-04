@@ -204,21 +204,14 @@ test("old links and wrong types land on the right page", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(missing?.status() === 404 ? "This page doesn't exist" : "That page has moved");
 });
 
-test("saving a block to a kit persists after a reload", async ({ page }) => {
+test("saving an item persists after a reload and shows on My work", async ({ page }) => {
   await page.goto(`/prompts/${MODEL}`);
-  await page.getByRole("button", { name: "Save to kit" }).click();
-  await page.getByLabel("New kit name").fill("Launch checks");
-  await page.getByRole("button", { name: "Create" }).click();
-  await expect(page.getByRole("status")).toContainText("Saved to Launch checks");
-  await page.goto("/");
-  await page.getByTestId("menu-btn").click();
-  await expect(page.getByTestId("open-kits")).toContainText("1");
-  await page.getByTestId("open-kits").click();
-  const kit = page.getByTestId("kit");
-  await expect(kit).toHaveCount(1);
-  await expect(kit.locator("input")).toHaveValue("Launch checks");
-  await kit.getByRole("link").first().click();
-  await expect(page).toHaveURL(new RegExp(`/prompts/${MODEL}$`));
+  await page.getByTestId("save-item").click();
+  await expect(page.locator(".toast")).toContainText("Saved in this browser");
+  await page.reload();
+  await expect(page.getByTestId("save-item")).toHaveText("Saved");
+  await page.goto("/account");
+  await expect(page.getByTestId("account-saved").locator(`a[href$="/prompts/${MODEL}"]`)).toBeVisible();
 });
 
 test("a ready workflow opens in the builder as connected, numbered steps", async ({ page }) => {
@@ -605,14 +598,14 @@ const fillBusiness = async (page: Page) => {
 test("about you: typed once, kept, and added to every copy and download", async ({ page, context }, info) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto(`/prompts/${MODEL}`);
-  await expect(page.getByTestId("business-note")).toContainText("Add your me.md so this fits you");
+  await expect(page.getByTestId("business-note")).toContainText("Add your brand file so this fits you");
   await page.getByTestId("business-add").click();
   await expect(page.getByTestId("business-form")).toBeVisible();
   await page.keyboard.press("Escape");
   await fillBusiness(page);
   await expect(page.getByTestId("open-business").locator(".dot")).toBeVisible();
   await page.reload();
-  await expect(page.getByTestId("business-note")).toContainText("Your me.md is included");
+  await expect(page.getByTestId("business-note")).toContainText("Your brand file is included");
 
   // The skill copies with the details after it.
   await page.getByTestId("copy-skill").click();

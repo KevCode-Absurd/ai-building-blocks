@@ -2,6 +2,7 @@ slug: order-threshold-planner
 name: "Order threshold planner"
 summary: "Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

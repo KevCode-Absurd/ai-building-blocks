@@ -2,6 +2,7 @@ slug: sms-send-planner
 name: "SMS send planner"
 summary: "Give it your launches, sales and list size. Get a month of texts and a frequency test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

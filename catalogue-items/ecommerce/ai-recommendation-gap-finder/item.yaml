@@ -2,6 +2,7 @@ slug: ai-recommendation-gap-finder
 name: "AI recommendation gap finder"
 summary: "Paste AI panel results. Get six gaps marked fix, build or influence, and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

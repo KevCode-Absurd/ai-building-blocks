@@ -2,6 +2,7 @@ slug: product-tech-pack-writer
 name: "Product tech pack writer"
 summary: "Give it your product photos and ideas. Get a factory-ready tech pack with exact measures."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

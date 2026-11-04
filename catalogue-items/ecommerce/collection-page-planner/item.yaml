@@ -2,6 +2,7 @@ slug: collection-page-planner
 name: "Collection page planner"
 summary: "Give it your range and keyword data. Get a set of collection pages, each aimed at one search."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

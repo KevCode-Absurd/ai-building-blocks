@@ -2,6 +2,7 @@ slug: staff-phishing-rules-briefer
 name: "Staff phishing rules briefer"
 summary: "Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: cash-lever-ranker
 name: "Cash lever ranker"
 summary: "Give it your P&L and stock. Get six cash levers ranked by cash freed, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

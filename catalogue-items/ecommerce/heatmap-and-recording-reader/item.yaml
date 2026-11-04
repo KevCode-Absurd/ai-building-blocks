@@ -2,6 +2,7 @@ slug: heatmap-and-recording-reader
 name: "Heatmap and recording reader"
 summary: "Paste your heatmap and recording notes. Get the friction found, a test idea for each, and a friction score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: research

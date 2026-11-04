@@ -1,5 +1,5 @@
 slug: sql-query-helper
-name: SQL query helper
+name: SQL query and migration helper
 summary: Describe the data you need. Get a checked SQL query, a faster version, or a migration.
 category: general
 boards: []

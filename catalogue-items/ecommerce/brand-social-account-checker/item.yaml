@@ -2,6 +2,7 @@ slug: brand-social-account-checker
 name: "Brand social account checker"
 summary: "Give it your accounts and posts. Get a score out of 100 and a fix per rule."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: organic

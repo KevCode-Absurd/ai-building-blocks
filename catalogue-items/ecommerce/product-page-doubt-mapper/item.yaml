@@ -2,6 +2,7 @@ slug: product-page-doubt-mapper
 name: "Product page doubt mapper"
 summary: "Paste your product and what buyers doubt. Get the page sections, each tied to real proof."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: page

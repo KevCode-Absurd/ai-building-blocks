@@ -2,6 +2,7 @@ slug: fraud-rules-setter
 name: "Fraud rules setter"
 summary: "Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: delivery-update-flow-builder
 name: "Delivery update flow builder"
 summary: "Give it your shipping setup and ticket counts. Get an update flow, tracking page plan and delay script."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

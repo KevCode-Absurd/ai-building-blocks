@@ -2,6 +2,7 @@ slug: wholesale-margin-checker
 name: "Wholesale margin checker"
 summary: "Give it shelf price and costs. Get your margin per unit after retailer cut, promos and freight, scored."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

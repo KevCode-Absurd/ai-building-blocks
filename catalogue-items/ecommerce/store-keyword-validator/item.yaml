@@ -2,6 +2,7 @@ slug: store-keyword-validator
 name: "Store keyword validator"
 summary: "Paste products and keyword data. Get keywords worth a page, page types and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

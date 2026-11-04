@@ -2,6 +2,7 @@ slug: meta-optimization-of-existing-ad-campaigns-planner
 name: Meta campaign change review planner
 summary: Review proposed changes to a Meta campaign. Use matched evidence, isolate the change and define how to judge the result.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

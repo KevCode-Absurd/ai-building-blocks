@@ -2,6 +2,7 @@ slug: cost-per-sellable-unit-finder
 name: "Cost per sellable unit finder"
 summary: "Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: ops

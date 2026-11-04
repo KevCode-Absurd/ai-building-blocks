@@ -2,6 +2,7 @@ slug: product-bill-of-materials-builder
 name: "Product bill of materials builder"
 summary: "Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

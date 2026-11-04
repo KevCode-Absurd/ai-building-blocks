@@ -2,6 +2,7 @@ slug: best-and-worst-customer-profiler
 name: "Best and worst customer profiler"
 summary: "Give it order and discount data. Get your best and worst buyers' traits, the ads behind them and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

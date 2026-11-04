@@ -2,6 +2,7 @@ slug: concrete-copy-rewriter
 name: "Concrete copy rewriter"
 summary: "Paste a line or product copy. Get pass or fail on three tests and a true, picturable rewrite."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: copy

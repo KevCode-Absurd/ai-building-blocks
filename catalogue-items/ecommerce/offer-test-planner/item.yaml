@@ -2,6 +2,7 @@ slug: offer-test-planner
 name: "Offer test planner"
 summary: "Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

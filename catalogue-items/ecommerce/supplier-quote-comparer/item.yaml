@@ -2,6 +2,7 @@ slug: supplier-quote-comparer
 name: "Supplier quote comparer"
 summary: "Paste supplier quotes. Get price, minimum order, lead time and risk side by side, a deposit-safety score and terms."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

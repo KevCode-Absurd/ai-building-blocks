@@ -2,6 +2,7 @@ slug: price-ending-picker
 name: Price ending picker
 summary: Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: offer

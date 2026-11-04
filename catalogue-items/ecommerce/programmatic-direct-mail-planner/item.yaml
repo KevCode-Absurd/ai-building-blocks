@@ -2,6 +2,7 @@ slug: programmatic-direct-mail-planner
 name: "Programmatic direct mail planner"
 summary: "Give it your flows and customer value. Get triggers to mail, a test cell and a payback check."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

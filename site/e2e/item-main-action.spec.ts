@@ -8,7 +8,7 @@ test.beforeEach(async ({ page, context }) => {
 
 test('@mobile the main action sits under the headline and follows as a slim bar on a phone', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  for (const [path, main] of [['/prompts/rough-notes-to-minutes-writer', 'run-in-my-ai'], ['/workflows/ad-ab-test', 'main-download']] as const) {
+  for (const [path, main] of [['/prompts/rough-notes-to-minutes-writer', 'download-task'], ['/workflows/ad-ab-test', 'download-task']] as const) {
     await page.goto(path);
     const action = page.getByTestId(main);
     await expect(action).toBeEnabled();
@@ -26,25 +26,33 @@ test('@mobile the main action sits under the headline and follows as a slim bar 
   }
 });
 
-test('Run in my AI opens the chosen AI and copies the instructions', async ({ page, context }) => {
+test('the main button downloads the item, and the upload steps sit right under it', async ({ page }) => {
   await page.goto('/prompts/rough-notes-to-minutes-writer');
-  await page.getByTestId('run-in-my-ai').click();
-  for (const name of ['ChatGPT', 'Claude', 'Gemini']) await expect(page.getByRole('group', { name: 'Choose your AI' }).getByRole('button', { name: new RegExp(name) })).toBeVisible();
-  await context.route(/^https:\/\/(chatgpt\.com|claude\.ai|gemini\.google\.com)\//, r => r.fulfill({ status: 200, contentType: 'text/html', body: '<title>stub</title>' }));
-  const [popup] = await Promise.all([context.waitForEvent('page'), page.getByTestId('run-in-gemini').click()]);
-  expect(popup.url()).toBe('https://gemini.google.com/app');
-  const copied = await page.evaluate(() => navigator.clipboard.readText());
-  expect(copied.length).toBeGreaterThan(200);
-  await expect(page.locator('.toast')).toContainText('Paste it into the new Gemini chat');
-  await popup.close();
-  await page.getByTestId('run-in-my-ai').click();
-  await expect(page.getByTestId('run-in-gemini')).toContainText('Last used');
-  await page.keyboard.press('Escape');
-  await expect(page.getByTestId('run-in-gemini')).toHaveCount(0);
-  // Everything else is still one tap away under More ways.
+  const main = page.getByTestId('main-action');
+  await expect(main.getByTestId('download-task')).toHaveText('Download prompt');
+  await expect(main.getByTestId('upload-steps')).toContainText('Then upload it to your AI');
+  await main.getByTestId('upload-chatgpt').click();
+  await expect(main.getByTestId('upload-steps')).toContainText("ChatGPT project's Sources");
+  await expect(page.getByText('Run in my AI')).toHaveCount(0);
+  await Promise.all([page.waitForEvent('download'), main.getByTestId('download-task').click()]);
+  // Copying is still one tap away under Other ways.
   await page.getByTestId('more-ways-link').click();
-  await expect(page.getByTestId('task-primary')).toContainText('More ways to run it');
+  await expect(page.getByTestId('task-primary')).toContainText('Other ways to use it');
   await expect(page.getByTestId('copy-skill')).toBeVisible();
+});
+
+test('Share copies the page address', async ({ page }) => {
+  await page.goto('/prompts/rough-notes-to-minutes-writer');
+  await page.getByTestId('share-item').click();
+  await expect(page.getByTestId('share-item')).toHaveText('Link copied');
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toMatch(/\/prompts\/rough-notes-to-minutes-writer$/);
+});
+
+test('a workflow page says to upload the whole pack and follow HANDOFF.md', async ({ page }) => {
+  await page.goto('/workflows/ad-ab-test');
+  const main = page.getByTestId('main-action');
+  await expect(main.getByTestId('download-task')).toHaveText('Download workflow');
+  await expect(main.getByTestId('upload-steps')).toContainText('follow HANDOFF.md');
 });
 
 test('@mobile home search says Searching until it can count, without a separate top-matches list', async ({ page }) => {

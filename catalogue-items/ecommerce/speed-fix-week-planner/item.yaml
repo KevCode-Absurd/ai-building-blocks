@@ -2,6 +2,7 @@ slug: speed-fix-week-planner
 name: "Speed fix week planner"
 summary: "Paste your speed problems and store numbers. Get this week's three fixes and what each could earn."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: ops

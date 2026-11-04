@@ -2,6 +2,7 @@ slug: product-margin-checker
 name: "Product margin checker"
 summary: "Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

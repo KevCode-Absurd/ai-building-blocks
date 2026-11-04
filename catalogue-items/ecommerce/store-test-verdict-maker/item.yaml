@@ -2,6 +2,7 @@ slug: store-test-verdict-maker
 name: "Store test verdict maker"
 summary: "Give it test numbers and dates. Get valid or not, the lift as a range, a ship call and a trust score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

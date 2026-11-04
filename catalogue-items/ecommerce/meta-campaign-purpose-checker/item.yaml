@@ -2,6 +2,7 @@ slug: meta-campaign-purpose-checker
 name: "Meta campaign purpose checker"
 summary: "List your Meta campaigns. Get each kept or cut, setup errors and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

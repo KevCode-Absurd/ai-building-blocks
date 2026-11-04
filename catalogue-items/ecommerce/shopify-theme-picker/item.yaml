@@ -2,6 +2,7 @@ slug: shopify-theme-picker
 name: "Shopify theme picker"
 summary: "Describe your store. Get a theme shortlist, each scored out of 100 on your must-haves."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: page

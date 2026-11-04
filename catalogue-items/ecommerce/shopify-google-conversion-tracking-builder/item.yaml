@@ -2,6 +2,7 @@ slug: shopify-google-conversion-tracking-builder
 name: "Shopify Google tracking builder"
 summary: "Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

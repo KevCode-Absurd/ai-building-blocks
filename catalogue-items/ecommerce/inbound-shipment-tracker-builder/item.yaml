@@ -2,6 +2,7 @@ slug: inbound-shipment-tracker-builder
 name: "Inbound shipment tracker builder"
 summary: "Give it your purchase orders and freight details. Get a shared tracker and a warehouse notice."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

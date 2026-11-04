@@ -2,6 +2,7 @@ slug: small-budget-ad-test-planner
 name: "Small-budget ad test planner"
 summary: "Give it your price, product and test cash. Get a staged plan: image test, then video, then people."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

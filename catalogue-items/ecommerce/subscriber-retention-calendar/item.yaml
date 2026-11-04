@@ -2,6 +2,7 @@ slug: subscriber-retention-calendar
 name: "Subscriber retention calendar"
 summary: "Give it your products and sending habits. Get gift timing, send rules and a monthly subscriber calendar."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

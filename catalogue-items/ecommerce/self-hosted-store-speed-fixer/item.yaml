@@ -2,6 +2,7 @@ slug: self-hosted-store-speed-fixer
 name: "Self-hosted store speed fixer"
 summary: "Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

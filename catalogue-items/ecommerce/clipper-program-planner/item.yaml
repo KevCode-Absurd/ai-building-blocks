@@ -2,6 +2,7 @@ slug: clipper-program-planner
 name: "Clipper program planner"
 summary: "Plan a paid clipper program: pay only for clips you approve, up to a cap, with a do-not list, a review checklist and a seeding plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

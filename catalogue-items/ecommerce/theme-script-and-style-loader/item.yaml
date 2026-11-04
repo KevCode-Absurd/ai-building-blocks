@@ -2,6 +2,7 @@ slug: theme-script-and-style-loader
 name: "Theme script and style loader"
 summary: "Give it your theme.liquid, apps and fonts. Get scripts delayed or deferred, styles unblocked and fonts set safely."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

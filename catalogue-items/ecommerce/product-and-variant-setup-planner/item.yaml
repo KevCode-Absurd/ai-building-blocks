@@ -2,6 +2,7 @@ slug: product-and-variant-setup-planner
 name: "Product and variant setup planner"
 summary: "List what you sell. Get each product type, a variant table and a fill-in checklist."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

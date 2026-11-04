@@ -2,6 +2,7 @@ slug: store-friction-checker
 name: "Store friction checker"
 summary: "Attach screenshots of your store pages. Get a ranked cut list and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: page

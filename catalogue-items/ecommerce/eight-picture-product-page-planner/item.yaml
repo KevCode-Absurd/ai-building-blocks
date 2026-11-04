@@ -2,6 +2,7 @@ slug: eight-picture-product-page-planner
 name: "Eight-picture product page planner"
 summary: "Paste your product facts and photos you have. Get a plan for the eight pictures on your product page."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: image

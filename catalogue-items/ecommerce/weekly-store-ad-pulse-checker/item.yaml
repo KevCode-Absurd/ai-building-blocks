@@ -2,6 +2,7 @@ slug: weekly-store-ad-pulse-checker
 name: "Weekly store ad pulse checker"
 summary: "Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

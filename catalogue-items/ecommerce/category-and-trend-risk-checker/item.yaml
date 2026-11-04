@@ -2,6 +2,7 @@ slug: category-and-trend-risk-checker
 name: "Category and trend risk checker"
 summary: "Name a category to enter. Get a score out of 100 on market size, trend risk and fit."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -2,6 +2,7 @@ slug: upsell-and-downsell-sequencer
 name: "Upsell and downsell sequencer"
 summary: "Give it prices and checkout steps. Get the offer order, a fallback for each no, and post-purchase rules."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

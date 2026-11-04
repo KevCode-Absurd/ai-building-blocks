@@ -2,6 +2,7 @@ slug: amazon-fee-and-margin-checker
 name: "Amazon fee and margin checker"
 summary: "Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

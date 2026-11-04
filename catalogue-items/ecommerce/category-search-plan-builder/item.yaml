@@ -2,6 +2,7 @@ slug: category-search-plan-builder
 name: "Category search plan builder"
 summary: "Pick one product category. Get a 90-day plan of what to publish, where, and in what order."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

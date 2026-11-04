@@ -2,6 +2,7 @@ slug: say-do-gap-checker
 name: "Say-do gap checker"
 summary: "Paste survey answers. Get a trust score out of 100 and a behaviour test to run first."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: research

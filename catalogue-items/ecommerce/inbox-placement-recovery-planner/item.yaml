@@ -2,6 +2,7 @@ slug: inbox-placement-recovery-planner
 name: "Inbox placement recovery planner"
 summary: "Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

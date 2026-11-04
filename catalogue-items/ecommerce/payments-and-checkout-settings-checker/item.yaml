@@ -2,6 +2,7 @@ slug: payments-and-checkout-settings-checker
 name: "Payments and checkout settings checker"
 summary: "Give it your payment and checkout settings. Get a score out of 100, ranked risks and fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

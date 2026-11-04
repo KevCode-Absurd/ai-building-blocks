@@ -2,6 +2,7 @@ slug: ai-recommendation-panel-runner
 name: "AI recommendation panel runner"
 summary: "Give it your store and shopper questions. Get who AI names, sources cited and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: research

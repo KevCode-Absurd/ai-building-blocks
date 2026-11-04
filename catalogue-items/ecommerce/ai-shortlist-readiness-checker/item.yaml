@@ -2,6 +2,7 @@ slug: ai-shortlist-readiness-checker
 name: "AI shortlist readiness checker"
 summary: "Give it your product pages. Get found, matched and chosen checks, fixes and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

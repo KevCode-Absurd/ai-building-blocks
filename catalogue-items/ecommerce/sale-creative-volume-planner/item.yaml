@@ -2,6 +2,7 @@ slug: sale-creative-volume-planner
 name: "Sale creative volume planner"
 summary: "Give it last year's top ads and your sale target. Get winners needed, ad count and phases."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

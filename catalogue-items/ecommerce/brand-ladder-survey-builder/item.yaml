@@ -2,6 +2,7 @@ slug: brand-ladder-survey-builder
 name: "Brand ladder survey builder"
 summary: "Give it your category and rivals. Get a short buyer survey that shows where you rank."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

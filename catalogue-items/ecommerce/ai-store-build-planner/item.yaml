@@ -2,6 +2,7 @@ slug: ai-store-build-planner
 name: "AI store build planner"
 summary: "Give it your products and sections you like. Get a Claude Code kickoff prompt and safe build plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

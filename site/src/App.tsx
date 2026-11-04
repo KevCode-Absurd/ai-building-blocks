@@ -127,6 +127,8 @@ function useHashLanding() {
     };
     const key = (e: KeyboardEvent) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) cancel(); };
     addEventListener("hashchange", land);
+    // A link opened in a new tab (How to use) lands on its anchor too, once the page has drawn.
+    if (location.hash) land();
     addEventListener("wheel", cancel, { passive: true });
     addEventListener("touchstart", cancel, { passive: true });
     addEventListener("pointerdown", cancel, { passive: true });

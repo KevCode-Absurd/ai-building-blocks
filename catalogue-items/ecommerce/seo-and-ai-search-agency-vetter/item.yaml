@@ -2,6 +2,7 @@ slug: seo-and-ai-search-agency-vetter
 name: "SEO and AI search agency vetter"
 summary: "Paste an agency proposal. Get red flags, questions to send, a keep-or-walk verdict and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

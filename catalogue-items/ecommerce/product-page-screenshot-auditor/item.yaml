@@ -3,6 +3,7 @@ renamed_from: find-what-stops-shoppers-backed-by-screenshots
 name: "Product page screenshot auditor"
 summary: "Attach product page screenshots. Get what blocks shoppers, changes to test and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: analysis

@@ -2,6 +2,7 @@ slug: process-fact-finder
 name: "Process fact finder"
 summary: "Paste maker, supplier and test notes. Get true facts rivals never state, as specific ad claims."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

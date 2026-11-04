@@ -2,6 +2,7 @@ slug: meta-delivery-troubleshooter
 name: "Meta delivery troubleshooter"
 summary: "Describe what Meta is doing with your ads. Get the failing delivery step and what to change first."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

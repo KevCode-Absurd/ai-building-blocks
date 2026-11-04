@@ -3,6 +3,7 @@ renamed_from: get-landing-page-live-in-shopify-store
 name: "Shopify landing page builder"
 summary: "Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

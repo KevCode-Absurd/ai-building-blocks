@@ -2,6 +2,7 @@ slug: store-security-checkup
 name: "Store security checkup"
 summary: "Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

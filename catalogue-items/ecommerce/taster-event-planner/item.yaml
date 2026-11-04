@@ -2,6 +2,7 @@ slug: taster-event-planner
 name: "Taster event planner"
 summary: "Give it your product versions and buyer. Get a one-day tasting plan, taster card and decision rule."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

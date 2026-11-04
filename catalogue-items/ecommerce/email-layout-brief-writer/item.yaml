@@ -2,6 +2,7 @@ slug: email-layout-brief-writer
 name: "Email layout brief writer"
 summary: "Give it your email copy and goal. Get a section-by-section layout brief a designer can build."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

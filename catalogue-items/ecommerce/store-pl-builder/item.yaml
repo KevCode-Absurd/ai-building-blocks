@@ -2,6 +2,7 @@ slug: store-pl-builder
 name: "Store P&L builder"
 summary: "Give it your sales and costs. Get a four-bucket P&L with targets and the line to fix first."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

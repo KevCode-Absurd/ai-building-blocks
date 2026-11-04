@@ -2,6 +2,7 @@ slug: store-seo-fix-prioritiser
 name: "Store SEO fix prioritiser"
 summary: "Turn a crawl report into the 5 to 10 store SEO fixes that matter, ranked by sales at risk, with an ignore list and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

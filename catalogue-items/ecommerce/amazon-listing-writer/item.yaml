@@ -2,6 +2,7 @@ slug: amazon-listing-writer
 name: "Amazon listing writer"
 summary: "Give it product facts and keyword tiers. Get an Amazon title, five benefit bullets and backend keywords."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: copy

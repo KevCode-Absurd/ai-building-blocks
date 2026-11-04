@@ -2,6 +2,7 @@ slug: heavy-feature-trimmer
 name: "Heavy feature trimmer"
 summary: "Give it your homepage and collection page. Get each slider, popup and video judged, and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: page

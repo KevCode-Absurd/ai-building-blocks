@@ -2,6 +2,7 @@ slug: ai-ready-product-page-editor
 name: "AI-ready product page editor"
 summary: "Give it a product page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

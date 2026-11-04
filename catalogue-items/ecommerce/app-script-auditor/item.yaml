@@ -2,6 +2,7 @@ slug: app-script-auditor
 name: "App script auditor"
 summary: "Give it your apps and speed report. Get each app marked keep, remove or delay, and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

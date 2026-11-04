@@ -2,6 +2,7 @@ slug: collections-and-menu-planner
 name: "Collections and menu planner"
 summary: "Give it your products. Get collections, filters, a menu and search settings so shoppers find things fast."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

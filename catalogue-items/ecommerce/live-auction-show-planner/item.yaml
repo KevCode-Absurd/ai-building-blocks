@@ -2,6 +2,7 @@ slug: live-auction-show-planner
 name: "Live auction show planner"
 summary: "Give it your stock, costs and show length. Get a run order, promotion schedule and profit sheet."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

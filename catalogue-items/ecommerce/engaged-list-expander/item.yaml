@@ -2,6 +2,7 @@ slug: engaged-list-expander
 name: "Engaged list expander"
 summary: "Give it your list and send results. Get a plan to bring quiet contacts back safely."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

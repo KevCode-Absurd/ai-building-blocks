@@ -2,6 +2,7 @@ slug: store-financial-model-builder
 name: "Store financial model builder"
 summary: "Give it ad budget, CAC, prices and costs. Get a 36-month store model with cash and runway."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

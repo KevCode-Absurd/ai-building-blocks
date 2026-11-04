@@ -2,6 +2,7 @@ slug: story-email-writer
 name: "Story email writer"
 summary: "Give it your list and one true story. Get three personal email drafts."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

@@ -2,6 +2,7 @@ slug: google-ads-store-account-auditor
 name: "Google Ads store account auditor"
 summary: "Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

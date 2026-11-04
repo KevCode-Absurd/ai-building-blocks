@@ -2,6 +2,7 @@ slug: supplier-payment-terms-planner
 name: "Supplier terms and float planner"
 summary: "Give it your order cycle and cash. Get your float, terms to ask for and a cost split."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

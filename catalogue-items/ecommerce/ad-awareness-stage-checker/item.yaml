@@ -2,6 +2,7 @@ slug: ad-awareness-stage-checker
 name: "Ad awareness stage checker"
 summary: "Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

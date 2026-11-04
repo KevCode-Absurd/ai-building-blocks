@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It follows a layout method with some design choices.
 new_slug: research-poster-maker
-name: Research poster maker
+name: LaTeX research poster maker
 summary: Make a research poster in LaTeX from your results and figures. You get a one-page PDF at your venue's size, plus a print check.
 job: work-with-files
-headline: Research poster maker
+headline: LaTeX research poster maker
 subhead: A printable research poster as a PDF, built in LaTeX from your results and figures. LaTeX keeps text sharp and layouts exact, so it prints well at conference size.
 explain: |
   A printable research poster as a PDF, built in LaTeX from your results and figures. LaTeX keeps text sharp and layouts exact, so it prints well at conference size.

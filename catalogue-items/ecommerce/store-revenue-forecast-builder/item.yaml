@@ -2,6 +2,7 @@ slug: store-revenue-forecast-builder
 name: "Store revenue forecast builder"
 summary: "Give it past spend, cohorts and a calendar. Get daily new and returning revenue and the target gap."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

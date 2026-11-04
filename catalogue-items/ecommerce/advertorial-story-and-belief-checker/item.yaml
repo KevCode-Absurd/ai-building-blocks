@@ -2,6 +2,7 @@ slug: advertorial-story-and-belief-checker
 name: "Advertorial story and belief checker"
 summary: "Paste your advertorial. Get each spot the story turns pitchy, fixes and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: page

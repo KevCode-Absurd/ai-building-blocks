@@ -2,6 +2,7 @@ slug: problem-aware-search-campaign-builder
 name: "Problem-aware Search campaign builder"
 summary: "Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

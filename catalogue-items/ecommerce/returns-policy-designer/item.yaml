@@ -2,6 +2,7 @@ slug: returns-policy-designer
 name: "Returns policy designer"
 summary: "Give it your returns data and costs. Get refund timing, keep-it rules and a recovery budget."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

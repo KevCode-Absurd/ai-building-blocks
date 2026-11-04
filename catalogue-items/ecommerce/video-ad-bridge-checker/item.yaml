@@ -2,6 +2,7 @@ slug: video-ad-bridge-checker
 name: "Video script bridge checker"
 summary: "Paste a video ad script. Get a bridge score out of 100, early-sell spots and a tighter script."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

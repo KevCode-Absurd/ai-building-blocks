@@ -2,6 +2,7 @@ slug: ad-sameness-checker
 name: "Ad sameness checker"
 summary: "Paste your live ads with persona, angle, offer. Get idea groups and a sameness score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

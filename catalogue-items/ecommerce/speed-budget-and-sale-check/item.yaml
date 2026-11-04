@@ -2,6 +2,7 @@ slug: speed-budget-and-sale-check
 name: "Speed budget and sale check"
 summary: "Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

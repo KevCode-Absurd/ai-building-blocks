@@ -2,6 +2,7 @@ slug: winning-product-scorer
 name: "Winning product scorer"
 summary: "Give it a product idea and its costs. Get a score out of 100 and a verdict."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

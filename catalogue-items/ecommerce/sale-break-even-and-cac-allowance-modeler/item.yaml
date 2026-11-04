@@ -2,6 +2,7 @@ slug: sale-break-even-and-cac-allowance-modeler
 name: "Sale break-even and CAC allowance modeler"
 summary: "Give it discount depth and margin. Get break-even ROAS, a CAC limit and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

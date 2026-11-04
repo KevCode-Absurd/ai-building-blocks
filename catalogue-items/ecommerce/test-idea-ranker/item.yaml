@@ -2,6 +2,7 @@ slug: test-idea-ranker
 name: "Test idea ranker"
 summary: "Paste your research findings. Get each test written as a hypothesis and ranked by evidence and profit."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

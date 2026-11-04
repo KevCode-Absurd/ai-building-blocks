@@ -338,7 +338,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <ul className="checks">
               <li>Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.</li>
               <li>Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.</li>
-              <li>“Tested” means the item passed our safety check for harmful or hidden instructions, and its page lists what goes in and what you get.</li>
+              <li>“Safety checked” means we checked the item for harmful or hidden instructions. Its page lists what goes in and what you get.</li>
             </ul>
             <p className="small"><Link to="/about#how-built">Read more about how we build and review</Link></p>
           </Section>

@@ -2,6 +2,7 @@ slug: store-name-generator
 name: "Store name generator"
 summary: "Give it your brief and rivals. Get 200 raw names, a shortlist of 15 and a clearance list."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: brand

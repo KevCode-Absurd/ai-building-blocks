@@ -2,6 +2,7 @@ slug: gmv-max-campaign-setup-planner
 name: "GMV Max campaign setup planner"
 summary: "Give top products and target cost per order. Get GMV Max settings, an ROI target and creator offers."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

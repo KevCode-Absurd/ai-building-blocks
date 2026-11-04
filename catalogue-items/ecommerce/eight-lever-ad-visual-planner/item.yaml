@@ -2,6 +2,7 @@ slug: eight-lever-ad-visual-planner
 name: Eight-lever ad visual planner
 summary: "Set eight visual choices for an ad image, lock the ones that must stay and get three version previews that differ enough to test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: static-ad-critic
 name: "Static ad critic"
 summary: "Attach a static ad and its page. Get a score out of 100, fixes and two rewrites."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

@@ -2,6 +2,7 @@ slug: ltgp-to-cac-checker
 name: "Lifetime gross profit to CAC checker"
 summary: "Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -40,7 +40,7 @@ export default function BaseSpecialistPanel({role,toast}:{role:RoleView;toast:(s
    const [{loadBaseSpecialistPack},{download}]=await Promise.all([import('./base-specialist-pack.ts'),import('../lib/download')]);
    const result=await loadBaseSpecialistPack(role);if(!alive.current)return;
    download(new Blob([result.bytes as BlobPart],{type:'application/zip'}),result.filename);
-   toast('Full pack downloaded. Extract it and start with START_HERE.md in your coding tool.');
+   toast('Specialist downloaded. Unzip it, add the files to your AI and say: Read START_HERE.md.');
   }catch(e){if(alive.current)setError(e instanceof Error?e.message:'The complete pack could not load. Try again.');}
   finally{if(alive.current)setBusy(false);}
  }
@@ -48,11 +48,11 @@ export default function BaseSpecialistPanel({role,toast}:{role:RoleView;toast:(s
  async function copyPackPrompt(){try{await navigator.clipboard.writeText(packPrompt());toast('Setup prompt copied. Paste it into your AI with the pack or connected AI Blocks MCP.');}catch{setError('Copy is unavailable. Expand the setup prompt below and copy it manually.');}}
  return <section className="role-form base-specialist" aria-label="Take this specialist to your AI" data-testid="base-specialist">
   <h2>Use this specialist in your AI</h2>
-  <p>Copy one message and paste it into ChatGPT, Claude or Gemini. It tells your AI how to start, what to ask you and the method to follow{hasBrand?', with your brand file':''}.</p>
-  <div className="role-form-actions"><button className="btn btn-primary" onClick={()=>void copyMessage()} onPointerEnter={()=>void loadMethod()} onFocus={()=>void loadMethod()} data-testid="base-specialist-message">Copy as one message</button><button className="btn btn-line" disabled={busy} onClick={()=>void download()} data-testid="base-specialist-download">{busy?'Downloading the full pack…':'Download full pack (zip)'}</button></div>
+  <p>Download the specialist, unzip it and add all the files to a Claude or ChatGPT project, or open the folder in Claude Code, Codex or Cursor. Then say: <b>Read START_HERE.md</b>. It tells your AI how to start, what to ask you and the method to follow{hasBrand?', with your brand file':''}.</p>
+  <div className="role-form-actions"><button className="btn btn-primary" disabled={busy} onClick={()=>void download()} data-testid="base-specialist-download">{busy?'Preparing the download…':'Download specialist'}</button><button className="btn btn-line" onClick={()=>void copyMessage()} onPointerEnter={()=>void loadMethod()} onFocus={()=>void loadMethod()} data-testid="base-specialist-message">Copy as one message</button></div>
   {copied&&<p className="small" role="status" data-testid="base-specialist-copied">{copied.fits?`Copied ${count(copied.chars)} characters. Paste it as your first message.`:`Copied ${count(copied.chars)} characters. That is longer than some chats take at once. If yours cuts it off, shorten your me.md or use the full pack.`}{copied.shortened?' The full method is longer than one message, so this has a shorter version and a link to the rest.':''}</p>}
   <p className="small" data-testid="base-specialist-brand">{hasBrand?<>Your brand file is added when you copy. <button type="button" className="link-btn" onClick={openBusiness}>Edit</button></>:<><button type="button" className="link-btn" onClick={openBusiness}>Add your brand file</button> so the message fits your business. It takes 5 quick questions.</>}</p>
-  <p className="small">The zip is for coding tools like Claude Code, Codex or Cursor. It has the setup, intake, handoff and every method with its references and licences.</p>
+  <p className="small">No download wanted? Copy one message and paste it into ChatGPT, Claude or Gemini. The download has the setup, intake, handoff and every method with its references and licences.</p>
   <details onToggle={e=>{if(e.currentTarget.open)void build().then(b=>{if(alive.current)setPreview(b);});}}><summary>Read the message before you copy</summary>{preview?<pre className="role-preview" tabIndex={0} data-testid="base-specialist-message-preview">{preview.text}</pre>:<p role="status" className="small">Preparing the message…</p>}</details>
   <details><summary>Use with the pack, MCP or API</summary>
    <ol><li>Extract the pack and give your AI access to the folder.</li><li>Ask it to read <code>START_HERE.md</code>, or paste the setup prompt.</li><li>Answer only the missing task questions and start the work there.</li></ol>

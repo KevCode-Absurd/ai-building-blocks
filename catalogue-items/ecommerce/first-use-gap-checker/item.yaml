@@ -2,6 +2,7 @@ slug: first-use-gap-checker
 name: "First-use gap checker"
 summary: "Paste returns, tickets and reviews. Get where buyers stall before first real use, a fix each and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

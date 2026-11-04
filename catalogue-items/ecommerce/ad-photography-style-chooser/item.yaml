@@ -2,6 +2,7 @@ slug: ad-photography-style-chooser
 name: Ad photography style chooser
 summary: Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

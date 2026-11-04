@@ -8,9 +8,9 @@ const read = (file) => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const catalogue = JSON.parse(read('../public/data/blocks.json'));
 const kindPath = (b) => (b.type === 'mind' ? 'minds' : b.type === 'agent' ? 'agents' : b.category === 'orchestrator' || b.type === 'workflow' || b.type === 'routine' ? 'workflows' : b.type === 'prompt' ? 'prompts' : 'skills');
 
-test('one label: Tested, or nothing', () => {
+test('one label: Safety checked, or nothing', () => {
   const passed = { result: 'pass', on: '', business: '' };
-  assert.equal(trustLabel({ tested: passed }), 'Tested');
+  assert.equal(trustLabel({ tested: passed }), 'Safety checked');
   assert.equal(trustLabel({ tested: null }), '');
   assert.equal(isTested({ tested: null }), false);
   for (const f of ['../src/ui.tsx', '../src/BlockPage.tsx', '../src/lib/site-info.mjs', '../src/HowItWorks.tsx']) assert.ok(!/not yet tested/i.test(read(f)), f);

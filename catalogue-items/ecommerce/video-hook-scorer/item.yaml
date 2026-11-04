@@ -2,6 +2,7 @@ slug: video-hook-scorer
 name: "Video hook scorer"
 summary: "Paste your video hooks and who sees them. Get each scored out of 100, with rewrites."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

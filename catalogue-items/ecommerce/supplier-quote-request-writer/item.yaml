@@ -2,6 +2,7 @@ slug: supplier-quote-request-writer
 name: "Supplier quote request writer"
 summary: "Give it your product and buyer complaints. Get a quote request in maker terms and checks to run."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

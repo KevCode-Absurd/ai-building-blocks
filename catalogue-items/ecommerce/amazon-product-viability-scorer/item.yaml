@@ -2,6 +2,7 @@ slug: amazon-product-viability-scorer
 name: "Amazon product viability scorer"
 summary: "Give it a product idea and costs. Get a score out of 100, the weakest test and a go or no-go."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

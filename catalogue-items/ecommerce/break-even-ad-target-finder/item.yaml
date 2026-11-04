@@ -2,6 +2,7 @@ slug: break-even-ad-target-finder
 name: "Break-even ad target finder"
 summary: "Paste one product's price and costs. Get its true margin, break-even ROAS and break-even CAC."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: analysis

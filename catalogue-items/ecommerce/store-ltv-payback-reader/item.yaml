@@ -2,6 +2,7 @@ slug: store-ltv-payback-reader
 name: "Store LTV and payback reader"
 summary: "Give it first-order cohorts by month. Get repeat rate, LTV and true CAC payback, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

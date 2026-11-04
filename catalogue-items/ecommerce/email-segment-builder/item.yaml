@@ -2,6 +2,7 @@ slug: email-segment-builder
 name: Email audience segment and exclusion planner
 summary: Define store email audiences with explicit AND/OR rules. Get engaged, buyer and exclusion groups, send order and a reviewed cleanup plan.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

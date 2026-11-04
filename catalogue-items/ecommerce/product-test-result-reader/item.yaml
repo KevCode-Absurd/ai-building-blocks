@@ -2,6 +2,7 @@ slug: product-test-result-reader
 name: "Product test result reader"
 summary: "Paste product test numbers. Get ad, page or checkout as the cause, and the next fix."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -2,6 +2,7 @@ slug: vsl-ad-scripter
 name: "VSL ad scripter"
 summary: "Give it your product, mechanism and reviews. Get a 7-part VSL script, hooks and short cuts."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: video

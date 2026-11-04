@@ -2,6 +2,7 @@ slug: ai-citation-source-finder
 name: "AI citation source finder"
 summary: "Give it five buyer questions. Get the sites AI tools keep citing, ranked, with who to contact."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

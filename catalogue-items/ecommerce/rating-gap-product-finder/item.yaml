@@ -2,6 +2,7 @@ slug: rating-gap-product-finder
 name: "Rating gap product finder"
 summary: "Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

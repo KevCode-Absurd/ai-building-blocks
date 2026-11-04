@@ -2,6 +2,7 @@ slug: ad-performance-early-warning-reviewer
 name: Ad performance early-warning reviewer
 summary: Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

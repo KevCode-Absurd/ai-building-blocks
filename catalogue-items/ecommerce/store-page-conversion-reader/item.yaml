@@ -2,6 +2,7 @@ slug: store-page-conversion-reader
 name: "Store page conversion reader"
 summary: "Paste GA4 exports. Get conversion by channel and page, your worst funnel drop and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

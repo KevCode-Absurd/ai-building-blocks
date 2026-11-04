@@ -2,6 +2,7 @@ slug: six-pattern-ad-performance-diagnoser
 name: Six-pattern ad performance diagnoser
 summary: Check six possible causes of an ad result change. Use local baselines first and explain confidence and missing evidence.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

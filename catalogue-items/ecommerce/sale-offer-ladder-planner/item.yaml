@@ -2,6 +2,7 @@ slug: sale-offer-ladder-planner
 name: "Sale offer ladder planner"
 summary: "Give it stock, margin, subscribers and a sale goal. Get a main offer, backups and a subscriber plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

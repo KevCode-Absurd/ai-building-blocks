@@ -2,6 +2,7 @@ slug: cac-payback-checker
 name: "CAC payback checker"
 summary: "Give it CAC, margins and cohort profit. Get profit to CAC ratios, a scale-or-fix call, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

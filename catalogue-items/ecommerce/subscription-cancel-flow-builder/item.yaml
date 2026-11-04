@@ -2,6 +2,7 @@ slug: subscription-cancel-flow-builder
 name: "Subscription cancel flow builder"
 summary: "Give it your cancel reasons and portal options. Get a cancel flow with one save per reason and a failed-payment plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

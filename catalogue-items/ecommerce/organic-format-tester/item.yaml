@@ -2,6 +2,7 @@ slug: organic-format-tester
 name: "Organic format tester"
 summary: "Give it 20 posts and their numbers. Get a score out of 100, winning formats and a test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: organic

@@ -2,6 +2,7 @@ slug: ad-account-bottleneck-auditor
 name: "Ad account bottleneck auditor"
 summary: "Give store and ad numbers. Get the growth bottleneck, a fix order and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -7,39 +7,29 @@ type Ai = (typeof AIS)[number];
 const NAMES: Record<Ai, string> = { claude: "Claude", chatgpt: "ChatGPT", gemini: "Gemini" };
 const KEY = "abb:run-ai";
 
-/** Add a skill to your own AI once, then ask for it by name in any chat. The three paths people use most.
- *  The Copy and Download buttons sit above this; these steps say what to do with what they hand you. */
-export default function RunInAi({ noun, hasFiles, slug, toast }: { noun: string; hasFiles: boolean; slug: string; toast: (m: string) => void }) {
+/** What to do after the main Download button: upload the file to ChatGPT, Claude or Gemini. Shown under the button,
+ *  so nobody has to guess. A workflow or agent pack is a folder of files with START_HERE.txt and HANDOFF.md. */
+export function UploadSteps({ noun, hasFiles, pack }: { noun: string; hasFiles: boolean; pack: boolean }) {
   const [ai, setAi] = useState<Ai>(() => { try { const v = localStorage.getItem(KEY); return AIS.find(x => x === v) ?? "claude"; } catch { return "claude"; } });
   const pick = (a: Ai) => { setAi(a); try { localStorage.setItem(KEY, a); } catch { /* the choice lasts for this visit */ } };
-  const steps: Record<Ai, ReactNode[]> = {
-    claude: [
-      <>Select <b>Download {noun}</b> above to get the ZIP.</>,
-      <>In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill.</>,
-      <>Upload the ZIP and turn the {noun} on. Then ask for it by name in any chat.</>,
-    ],
-    chatgpt: [
-      <>Select <b>Download {noun}</b> above and unzip it.</>,
-      <>Add the files to a ChatGPT project's Sources.</>,
-      <>In the project's instructions, tell ChatGPT to use those files for this job. Start your chats in that project.</>,
-    ],
-    gemini: [
-      <>{hasFiles ? <>Select <b>Download {noun}</b> above and unzip it.</> : <>Select <b>Copy {noun}</b> above.</>}</>,
-      <>In Gemini, open Gems and choose New Gem.</>,
-      <>Paste the instructions into the Gem{hasFiles ? ", add the other files as its knowledge" : ""} and save it. Start your chats with that Gem.</>,
-    ],
+  const steps: Record<Ai, ReactNode[]> = pack ? {
+    claude: [<>Unzip the download.</>, <>In Claude, start a new project and add all the files to it.</>, <>Start a chat in that project and say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
+    chatgpt: [<>Unzip the download.</>, <>In ChatGPT, start a new project and add all the files to its Sources.</>, <>Start a chat in that project and say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
+    gemini: [<>Unzip the download.</>, <>In a new Gemini chat, attach all the files.</>, <>Say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
+  } : {
+    claude: [<>In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill.</>, <>Upload the ZIP you downloaded and turn the {noun} on.</>, <>In any chat, ask for it by name.</>],
+    chatgpt: [<>Unzip the download.</>, <>Add the files to a ChatGPT project's Sources.</>, <>Start a chat in that project and ask it to use the {noun}.</>],
+    gemini: [<>Unzip the download.</>, <>In Gemini, open Gems and choose New Gem. Paste in the text of SKILL.md{hasFiles ? " and add the other files as its knowledge" : ""}.</>, <>Save the Gem and start your chats with it.</>],
   };
   return (
-    <div className="run-ai" data-testid="run-in-ai">
-      <h3 className="run-ai-h">Add it to your AI once, then ask for it by name</h3>
+    <div className="upload-steps" data-testid="upload-steps">
+      <p className="upload-steps-h">Then upload it to your AI:</p>
       <div className="kind-tabs install-tabs" role="group" aria-label="Which AI you use">
-        {AIS.map(a => <button key={a} aria-pressed={ai === a} onClick={() => pick(a)} data-testid={`run-ai-${a}`}>{NAMES[a]}</button>)}
+        {AIS.map(a => <button key={a} type="button" aria-pressed={ai === a} onClick={() => pick(a)} data-testid={`upload-${a}`}>{NAMES[a]}</button>)}
       </div>
-      <ol className="num-list" aria-label={`Add it to ${NAMES[ai]}`}>
+      <ol className="num-list" aria-label={`Upload it to ${NAMES[ai]}`}>
         {steps[ai].map((s, i) => <li key={`${ai}${i}`}><span className="n">{i + 1}</span><span>{s}</span></li>)}
       </ol>
-      <PullFromAi slug={slug} toast={toast} />
-      <p className="small">No setup wanted? Select <b>Copy {noun}</b>, paste it into a new chat and add your details.</p>
     </div>
   );
 }

@@ -2,6 +2,7 @@ slug: ad-and-page-match-checker
 name: "Ad and page match checker"
 summary: "Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

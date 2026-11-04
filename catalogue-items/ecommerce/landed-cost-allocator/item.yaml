@@ -2,6 +2,7 @@ slug: landed-cost-allocator
 name: "Landed cost allocator"
 summary: "Paste freight, duty and supplier invoices. Get the true landed cost per unit for each product."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

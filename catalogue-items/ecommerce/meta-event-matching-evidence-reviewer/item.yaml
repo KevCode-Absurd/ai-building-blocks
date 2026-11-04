@@ -2,6 +2,7 @@ slug: meta-event-matching-evidence-reviewer
 name: Meta event matching evidence reviewer
 summary: Review supplied Meta event scores, matching fields and duplicate events. List gaps without claiming a revenue lift.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

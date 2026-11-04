@@ -2,6 +2,7 @@ slug: billing-reminder-and-confirmation-writer
 name: "Billing reminder and confirmation writer"
 summary: "Give it your subscription products and gift schedule. Get billing reminder and order confirmation emails that cut cancels."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

@@ -2,6 +2,7 @@ slug: store-navigation-planner
 name: "Store navigation planner"
 summary: "Give it your collections. Get a menu, homepage feature list, sub-collection links and breadcrumbs."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

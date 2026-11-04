@@ -2,6 +2,7 @@ slug: sales-drop-cause-finder
 name: "Sales drop cause finder"
 summary: "Paste store numbers from before and after a drop. Get the lever that moved and the next check."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: analysis

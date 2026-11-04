@@ -2,6 +2,7 @@ slug: hero-product-repositioner
 name: "Hero product repositioner"
 summary: "Give it one hero product and its reviews. Get several buyer angles, each with its own offer."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

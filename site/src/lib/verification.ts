@@ -3,5 +3,5 @@
 import type { Block } from "./data";
 
 export const isTested = (b: Pick<Block, "tested">) => b.tested?.result === "pass";
-/** The badge text on a card: "Tested" or nothing. */
-export const trustLabel = (b: Pick<Block, "tested">) => isTested(b) ? "Tested" : "";
+/** The badge text on a card: "Safety checked" or nothing. */
+export const trustLabel = (b: Pick<Block, "tested">) => isTested(b) ? "Safety checked" : "";

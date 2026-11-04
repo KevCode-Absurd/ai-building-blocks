@@ -2,6 +2,7 @@ slug: collection-page-seo-builder
 name: "Collection page SEO builder"
 summary: "Give it a collection and keyword. Get the title, H1, URL, two-part copy, FAQ and links."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

@@ -2,6 +2,7 @@ slug: search-term-sorter
 name: "Search term sorter"
 summary: "Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

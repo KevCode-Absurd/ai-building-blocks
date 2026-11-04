@@ -2,6 +2,7 @@ slug: creative-volume-planner
 name: "Creative volume planner"
 summary: "Give it your spend, target and hit rate. Get ads needed per month and a weekly quota."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

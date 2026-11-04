@@ -2,6 +2,7 @@ slug: product-page-section-planner
 name: "Product page section planner"
 summary: "Give it your product and buyers' doubts. Get the page sections and settings that answer them."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

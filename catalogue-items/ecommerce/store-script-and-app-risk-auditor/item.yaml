@@ -2,6 +2,7 @@ slug: store-script-and-app-risk-auditor
 name: "Store script and app risk auditor"
 summary: "List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

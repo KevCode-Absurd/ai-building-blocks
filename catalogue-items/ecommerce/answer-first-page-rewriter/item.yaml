@@ -2,6 +2,7 @@ slug: answer-first-page-rewriter
 name: "Answer-first page rewriter"
 summary: "Give it a blog, guide or FAQ page. Get sections rewritten answer first, with a list of facts still needing a source."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: copy

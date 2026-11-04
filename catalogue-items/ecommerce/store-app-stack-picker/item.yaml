@@ -2,6 +2,7 @@ slug: store-app-stack-picker
 name: "Store app stack picker"
 summary: "List your apps. Get keep, swap or cut for each, a vetting list and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

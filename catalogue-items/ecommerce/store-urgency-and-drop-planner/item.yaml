@@ -2,6 +2,7 @@ slug: store-urgency-and-drop-planner
 name: "Store drop and urgency planner"
 summary: "Give it stock, dates and your email list. Get drop, deadline and early-access plans, truth-checked."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

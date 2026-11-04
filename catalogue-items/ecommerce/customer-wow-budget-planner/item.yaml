@@ -2,6 +2,7 @@ slug: customer-wow-budget-planner
 name: "Customer wow budget planner"
 summary: "Give it your weekly cash and support cases. Get a wow budget and delight-versus-fix rules."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: seventeen-section-advertising-report-writer
 name: Seventeen-section advertising report writer
 summary: Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

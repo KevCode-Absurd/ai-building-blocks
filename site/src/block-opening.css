@@ -10,3 +10,8 @@
    Share a grid cell so that brief overlap cannot push the task down a viewport. */
 .block-route-body{display:grid;min-width:0}
 .block-route-body>*{grid-area:1/1;min-width:0}
+
+/* Share sits opposite "Back to results", in the same quiet style. */
+.share-item{display:inline-flex;align-items:center;gap:8px}
+.share-btn{min-height:44px;font:500 13px var(--mono);color:var(--muted)}
+.share-btn:hover{color:var(--text)}

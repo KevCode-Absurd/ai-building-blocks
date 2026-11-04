@@ -7230,7 +7230,7 @@ product-photo-set-builder:
   summary: Share one product photo. Ask an image model for new angles and scenes,
     then check product details.
   reason: Removes an unsupported promise or clarifies the task and its limits.
-  name: Product photo set builder
+  name: Product photo angle and scene builder
   subhead: It plans a set from one photo. Review each generated angle for changes
     to shape, color or parts before using it in a listing.
 product-photo-to-clip-maker:
@@ -10604,7 +10604,7 @@ repeatable-ai-loop-designer:
   reason: Replaces repeated filler with the interview, feedback cycle, and
     explicit boundary between design and activation.
 research-poster-builder:
-  name: Research poster builder
+  name: PowerPoint research poster builder
   summary: Use approved text, local images, and print rules to build a PowerPoint
     poster you can edit.
   subhead: Supply approved text, local images, and print rules as JSON, a set data
@@ -31926,7 +31926,7 @@ chatgpt-app-builder:
   reason: Copy was clarified to state the source-supported task, process, output
     and limits.
 sql-query-helper:
-  name: SQL query helper
+  name: SQL query and migration helper
   summary: Describe the data question and share the schema. It drafts a query or
     migration and suggests checks; execution needs a connected database.
   subhead: Provide the question, database type and schema. It drafts SQL and can
@@ -32606,7 +32606,7 @@ single-cell-deep-learning:
   reason: Replaces claims batch effects are fixed and cell types always found with
     data-supported reduction/transfer.
 research-poster-maker:
-  name: Research poster maker
+  name: LaTeX research poster maker
   summary: Share results, figures and size. Get editable LaTeX and a checked PDF
     when tools are available.
   subhead: Share your results, figures, poster size and venue rules. It lays out a

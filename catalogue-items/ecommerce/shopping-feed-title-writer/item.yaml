@@ -2,6 +2,7 @@ slug: shopping-feed-title-writer
 name: "Shopping feed title writer"
 summary: "Give it your products and converting search terms. Get search-led titles, descriptions and image fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: copy

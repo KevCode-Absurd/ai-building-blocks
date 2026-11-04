@@ -2,6 +2,7 @@ slug: inventory-cash-planner
 name: "Inventory cash planner"
 summary: "Give it orders, lead time and unit cost. Get order timing, cash needed, a downside case and the raise."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

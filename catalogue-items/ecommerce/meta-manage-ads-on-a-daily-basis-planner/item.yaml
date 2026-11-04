@@ -2,6 +2,7 @@ slug: meta-manage-ads-on-a-daily-basis-planner
 name: Daily Meta ad review planner
 summary: "Get a daily review table for your Meta ads: each ad marked keep, watch, refresh or pause, with the proof and the next checks ranked."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

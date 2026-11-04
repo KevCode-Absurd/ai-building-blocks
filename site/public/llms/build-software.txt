@@ -371,7 +371,7 @@
 - [Spatial data engineer agent](https://useaiblocks.com/agents/agency-gis-spatial-data-engineer): Plan a pipeline that turns messy map data into clean, standard files, with coordinate fixes, field rules, quality checks and a repeatable run.
 - [Spectral image analyst](https://useaiblocks.com/skills/spectral-image-analyst): Spectral image analysis in MATLAB: give it a hyperspectral or satellite image. You get code to clean it, unmix materials and flag targets or odd spots.
 - [SQL change impact investigator](https://useaiblocks.com/skills/copilot-sql-object-impact-analysis): Find what breaks before you change a SQL table, column, view or stored procedure. Get a report of every caller and downstream use.
-- [SQL query helper](https://useaiblocks.com/skills/sql-query-helper): Describe the data question and share the schema. It drafts a query or migration and suggests checks; execution needs a connected database.
+- [SQL query and migration helper](https://useaiblocks.com/skills/sql-query-helper): Describe the data question and share the schema. It drafts a query or migration and suggests checks; execution needs a connected database.
 - [Starter code project builder](https://useaiblocks.com/skills/spec-to-starter-repo-builder): Give it an app spec and any required stack. Get a project scaffold, starter code and setup steps to validate.
 - [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder): Describe your billing rules. Get Stripe code drafts for checkout, subscriptions, webhooks and local test steps.
 - [Structured data extractor](https://useaiblocks.com/skills/structured-data-extractor): Pull names, dates and amounts out of AI replies as checked data. Get Python code that retries when a field is missing or wrong.

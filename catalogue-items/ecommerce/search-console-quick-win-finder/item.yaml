@@ -2,6 +2,7 @@ slug: search-console-quick-win-finder
 name: "Search Console quick-win finder"
 summary: "Paste Search Console queries and pages. Get pages to push this month and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

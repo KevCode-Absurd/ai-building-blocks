@@ -2,6 +2,7 @@ slug: google-bid-strategy-chooser
 name: "Google bid strategy chooser"
 summary: "Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

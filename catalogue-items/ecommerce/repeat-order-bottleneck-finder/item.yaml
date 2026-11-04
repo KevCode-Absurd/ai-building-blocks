@@ -2,6 +2,7 @@ slug: repeat-order-bottleneck-finder
 name: "Repeat order bottleneck finder"
 summary: "Give it your order export. Get a repeat health score out of 100 and the one stage to fix first."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

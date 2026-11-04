@@ -2,6 +2,7 @@ slug: search-term-junk-sorter
 name: "Search term junk sorter"
 summary: "Paste a search terms report. Get winners to promote, negatives to add and a waste score."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: ads

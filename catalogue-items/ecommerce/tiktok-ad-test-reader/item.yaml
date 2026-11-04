@@ -2,6 +2,7 @@ slug: tiktok-ad-test-reader
 name: "TikTok ad test reader"
 summary: "Paste TikTok test numbers. Get keep, fix or kill for each ad, and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

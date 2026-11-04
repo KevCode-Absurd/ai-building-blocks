@@ -3,6 +3,7 @@ renamed_from: get-shopify-theme-code-that-installs-cleanly
 name: "Shopify theme code writer"
 summary: "Name the section you need and your theme. Get installable code and what to upload."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

@@ -2,6 +2,7 @@ slug: shipping-rate-planner
 name: "Shipping rate planner"
 summary: "Give it your parcels, costs and countries. Get shipping zones, rates and a free-shipping line to enter."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

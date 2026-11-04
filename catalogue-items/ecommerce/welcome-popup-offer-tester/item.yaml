@@ -2,6 +2,7 @@ slug: welcome-popup-offer-tester
 name: "Welcome pop-up offer tester"
 summary: "Give it AOV, margin and site offers. Get four to eight pop-up offers to test, ranked by cost."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

@@ -195,7 +195,7 @@ function howItWorksBody() {
     `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Plan a job from your goal</a> · <a href="/apps">See an example app</a></p>`,
     `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
     `<p><a href="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</a></p>`,
-    `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Tested means the item ran on a real business's files and a second AI graded the result against the page's own checks. Imported items say when they have not been tested yet."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
+    `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Safety checked means we checked the item for harmful or hidden instructions. Its page lists what goes in and what you get."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
     `<h2>Words you'll see</h2>${list(words.map(([w, d]) => `<b>${esc(w)}</b>: ${esc(d)}`))}`,
   ].join("");
 }
@@ -419,7 +419,7 @@ function pageFor(url) {
   const give = (Array.isArray(page.you_give) && page.you_give.length ? page.you_give : (page.plan?.needed ?? []).map((n) => n.what ? `${n.label}: ${n.what}` : n.label)).concat((page.plan?.helps ?? []).map((n) => `${n.label} (optional)`)).slice(0, 8);
   const get = Array.isArray(page.you_get) && page.you_get.length ? page.you_get : (b.outputs ?? []).map((o) => portName(o).replace(/^./, (c) => c.toUpperCase()));
   const steps = isFlow ? (b.steps ?? []).map((x) => bySlug[Array.isArray(x) ? x[0] : x]).filter(Boolean) : [];
-  const facts = ["Free", "No account", ...(src.licence ? [`${src.licence.replace(/-/g, " ")} licence`] : []), `Made by ${by ?? "AI Blocks"}`, ...(b.level ? [`Level: ${b.level}`] : []), ...(b.thinking ? [`Thinking: ${b.thinking}`] : []), ...(page.tested?.result === "pass" ? ["Tested"] : []), ...(page.added ? [`Updated ${niceDate(page.added)}`] : [])];
+  const facts = ["Free", "No account", ...(src.licence ? [`${src.licence.replace(/-/g, " ")} licence`] : []), `Made by ${by ?? "AI Blocks"}`, ...(b.level ? [`Level: ${b.level}`] : []), ...(b.thinking ? [`Thinking: ${b.thinking}`] : []), ...(page.tested?.result === "pass" ? ["Safety checked"] : []), ...(page.added ? [`Updated ${niceDate(page.added)}`] : [])];
   // Links out: four others in the same job (picked by the page's name, so each page links to a different four),
   // the workflows that use it, its twin, and the job's hub.
   const peers = (byTask[b.task] ?? []).filter((x) => x !== b);
@@ -656,7 +656,7 @@ const KIND_LABEL = { skills: ["skill", "skills"], workflows: ["workflow", "workf
 const hubRank = (x) => (x.tested ? 1e6 : 0) + (Array.isArray(x.usedIn) ? x.usedIn.length : x.usedIn ?? 0);
 const bestOf = (bs, n) => [...bs].sort((a, b) => hubRank(b) - hubRank(a) || a.name.localeCompare(b.name)).slice(0, n);
 const arrow = `<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-const testedBadge = (x) => (x.tested ? `<span class="from trust tested">Tested</span>` : "");
+const testedBadge = (x) => (x.tested ? `<span class="from trust tested">Safety checked</span>` : "");
 // The library's card, drawn without the app: name, its one line, what kind it is and whether it is Tested.
 const hubCard = (x) => {
   const kind = KIND_LABEL[kindPath(x)]?.[0] ?? "skill";
@@ -675,7 +675,7 @@ function hubIntro(t, name, bs) {
   for (const x of bs) for (const s of [...(x.uses ?? []), ...(x.steps ?? []).map((y) => (Array.isArray(y) ? y[0] : y)), ...(usedBy[x.slug] ?? [])]) { const o = bySlug[s]?.task; if (o && o !== t && TASK_NAMES[o]) near[o] = (near[o] ?? 0) + 1; }
   const related = Object.entries(near).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4).map(([o]) => `<a href="${jobHref(o)}">${esc(TASK_NAMES[o])}</a>`);
   return [
-    `<p class="bp-sub">${esc(name)}: ${bs.length} free AI items you can run in Claude, ChatGPT or Gemini (${counts.join(", ")}).${tested ? ` ${tested} of them ${tested === 1 ? "is" : "are"} marked Tested and come first below.` : ""}</p>`,
+    `<p class="bp-sub">${esc(name)}: ${bs.length} free AI items you can run in Claude, ChatGPT or Gemini (${counts.join(", ")}).${tested ? ` ${tested} of them ${tested === 1 ? "is" : "are"} safety checked and come first below.` : ""}</p>`,
     gets.length ? `<p class="hub-gets">Examples of what you get: ${gets.map((g) => esc(lowerFirst(g))).join("; ")}.</p>` : "",
     hubSearch(bs.length, `Search the ${bs.length.toLocaleString("en-US")} items for this job`, t),
     `<h2 class="hub-h2">Start with these</h2><div class="grid hub-grid">${best.map(hubCard).join("")}</div>`,

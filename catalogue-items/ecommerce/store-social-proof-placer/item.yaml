@@ -2,6 +2,7 @@ slug: store-social-proof-placer
 name: "Store social proof placer"
 summary: "Give it buyer doubts and reviews. Get which proof to show, from whom and where."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

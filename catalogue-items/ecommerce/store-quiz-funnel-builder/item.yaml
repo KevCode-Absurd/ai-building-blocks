@@ -2,6 +2,7 @@ slug: store-quiz-funnel-builder
 name: "Store quiz funnel builder"
 summary: "Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

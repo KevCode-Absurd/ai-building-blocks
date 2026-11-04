@@ -2,6 +2,7 @@ slug: offer-profit-per-session-checker
 name: "Offer profit-per-session checker"
 summary: "Paste offer variants, costs and sessions. Get profit per visitor, a winner and a trust score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: offer

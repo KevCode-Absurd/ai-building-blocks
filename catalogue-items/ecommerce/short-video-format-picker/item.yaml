@@ -2,6 +2,7 @@ slug: short-video-format-picker
 name: "Short video format picker"
 summary: "Give it your product and who is on camera. Get a format pick, a script outline and 10 hooks."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

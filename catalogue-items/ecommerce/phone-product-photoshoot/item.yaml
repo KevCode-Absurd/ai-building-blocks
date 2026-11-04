@@ -3,6 +3,7 @@ renamed_from: get-a-full-product-photoshoot-from-phone-photos
 name: "A full product photoshoot from your phone photos"
 summary: "Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light."
 category: ecommerce
+boards: [ecommerce]
 type: workflow
 role: orchestrate
 job: image

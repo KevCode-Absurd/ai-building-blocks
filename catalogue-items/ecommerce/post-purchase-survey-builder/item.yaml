@@ -2,6 +2,7 @@ slug: post-purchase-survey-builder
 name: "Post-purchase survey builder"
 summary: "Say your store and customers. Get a post-purchase survey, a list survey and review-mining prompts."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

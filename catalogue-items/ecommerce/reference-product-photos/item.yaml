@@ -3,6 +3,7 @@ renamed_from: reference-style-product-photo-maker
 name: Reference-style product photo maker
 summary: Attach your product and a photo you like. Get a matching prompt and ranked pictures.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: render
 job: image

@@ -2,6 +2,7 @@ slug: feed-only-performance-max-builder
 name: "Feed-only Performance Max builder"
 summary: "Give it your Shopping setup. Get feed-only Performance Max settings that retarget shoppers without wasted spend."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

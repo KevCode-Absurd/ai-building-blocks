@@ -2,6 +2,7 @@ slug: hero-image-loading-fixer
 name: "Hero image loading fixer"
 summary: "Give it your slow-LCP page and theme. Get the hero image set to load first, with code."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

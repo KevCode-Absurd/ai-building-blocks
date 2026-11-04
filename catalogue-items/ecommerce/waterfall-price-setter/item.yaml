@@ -2,6 +2,7 @@ slug: waterfall-price-setter
 name: "Waterfall price setter"
 summary: "Give it your targets, CAC and costs. Get the lowest viable price, or a call to drop it."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

@@ -2,6 +2,7 @@ slug: email-flow-gap-checker
 name: Email automation gaps and trigger reviewer
 summary: Review a store’s email flows, triggers and timing. Get missing steps, possible rule conflicts and a house score based only on what was shown.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

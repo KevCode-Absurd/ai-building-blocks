@@ -2,6 +2,7 @@ slug: copy-foundation-docs-builder
 name: "Copy foundation docs builder"
 summary: "Give it your product page. Get a research doc, avatar sheet, offer brief and belief list to reuse."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

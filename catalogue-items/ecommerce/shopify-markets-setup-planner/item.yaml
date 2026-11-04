@@ -2,6 +2,7 @@ slug: shopify-markets-setup-planner
 name: "Shopify Markets setup planner"
 summary: "Give it your countries and gateway. Get market groups, currency rules, catalogs, languages and tax settings."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

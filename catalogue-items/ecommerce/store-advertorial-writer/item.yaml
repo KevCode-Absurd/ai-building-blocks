@@ -2,6 +2,7 @@ slug: store-advertorial-writer
 name: "Store advertorial writer"
 summary: "Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

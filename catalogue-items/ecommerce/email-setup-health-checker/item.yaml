@@ -2,6 +2,7 @@ slug: email-setup-health-checker
 name: "Email setup health checker"
 summary: "Paste your email settings and DNS records. Get a score out of 100 and the exact fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

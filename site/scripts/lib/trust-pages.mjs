@@ -92,7 +92,7 @@ export function startJobHref(request, routeExists) {
   return START_JOB.param ? `${START_JOB.path}?${START_JOB.param}=${encodeURIComponent(request)}` : START_JOB.path;
 }
 
-const itemLine = b => `<li><a href="${hrefOf(b)}">${esc(b.name)}</a><span class="from">${KIND_WORD[kindPath(b)] ?? "Skill"}</span>${b.tested ? `<span class="from trust tested">Tested</span>` : ""}<span>${esc(b.summary)}</span></li>`;
+const itemLine = b => `<li><a href="${hrefOf(b)}">${esc(b.name)}</a><span class="from">${KIND_WORD[kindPath(b)] ?? "Skill"}</span>${b.tested ? `<span class="from trust tested">Safety checked</span>` : ""}<span>${esc(b.summary)}</span></li>`;
 
 function industryBody(ind, { routeExists, scoreFor, all }) {
   const others = all.filter(x => x.slug !== ind.slug);

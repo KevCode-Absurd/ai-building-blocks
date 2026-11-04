@@ -2,6 +2,7 @@ slug: creative-team-pod-designer
 name: "Creative team pod designer"
 summary: "Give it your team and review process. Get a two-person pod design, review rules and a fast-trend budget."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

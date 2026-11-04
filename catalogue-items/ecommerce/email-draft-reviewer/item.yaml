@@ -2,6 +2,7 @@ slug: email-draft-reviewer
 name: "Email draft reviewer"
 summary: "Paste an email. Get cuts, a pacing map, subject fixes, a score out of 100 and a verdict."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

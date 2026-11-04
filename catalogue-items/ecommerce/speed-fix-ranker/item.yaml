@@ -2,6 +2,7 @@ slug: speed-fix-ranker
 name: "Speed fix ranker"
 summary: "Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: compress
 job: ops

@@ -2,6 +2,7 @@ slug: google-ads-launch-planner
 name: "Google Ads launch planner"
 summary: "Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

@@ -2,6 +2,7 @@ slug: meta-set-up-a-bid-cap-campaign-planner
 name: Meta bid cap launch planner
 summary: Plan a Meta bid-cap campaign. Set the bid limit, budget, business goals and checks for delivery.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

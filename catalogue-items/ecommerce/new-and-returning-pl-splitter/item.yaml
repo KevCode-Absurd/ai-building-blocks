@@ -2,6 +2,7 @@ slug: new-and-returning-pl-splitter
 name: "New and returning P&L splitter"
 summary: "Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

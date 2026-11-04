@@ -2,6 +2,7 @@ slug: store-name-tester
 name: "Store name tester"
 summary: "Paste your shortlisted names. Get each scored out of 100 with a keep, fix or drop call."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: brand

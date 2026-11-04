@@ -2,6 +2,7 @@ slug: cogs-line-sorter
 name: "COGS line sorter"
 summary: "Paste your cost lines. Get each sorted into COGS or expense, with the rule used, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -2,6 +2,7 @@ slug: factory-price-break-negotiator
 name: "Factory price-break negotiator"
 summary: "Give it your bill of materials and volume plan. Get asks, give-backs and a fallback."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: meta-test-campaign-planner
 name: "Meta test campaign planner"
 summary: "Give it your products, concepts and spend. Get a test campaign layout, ad pack names and scale rules."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

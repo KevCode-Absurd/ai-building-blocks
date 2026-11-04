@@ -2,6 +2,7 @@ slug: store-profit-per-visitor-calculator
 name: "Store profit per visitor calculator"
 summary: "Paste your Shopify and analytics numbers. Get corrected revenue and gross profit per visitor, and a trust score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

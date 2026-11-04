@@ -2,6 +2,7 @@ slug: store-speed-report-reader
 name: "Store speed report reader"
 summary: "Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

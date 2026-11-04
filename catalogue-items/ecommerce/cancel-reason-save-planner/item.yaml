@@ -2,6 +2,7 @@ slug: cancel-reason-save-planner
 name: "Cancel reason save planner"
 summary: "Paste your cancel reasons and what your tool can do. Get one save per reason and the numbers to track."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: ops

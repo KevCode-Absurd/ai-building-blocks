@@ -2,6 +2,7 @@ slug: signup-popup-builder
 name: "Signup popup builder"
 summary: "Give it your offer and order value. Get desktop and mobile popup specs, copy and tests."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

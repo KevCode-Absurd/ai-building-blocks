@@ -2,6 +2,7 @@ slug: retail-buyer-approach-planner
 name: "Retail buyer approach planner"
 summary: "Give it your product and retailer. Get a plan to make the buyer call and keep the shelf."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

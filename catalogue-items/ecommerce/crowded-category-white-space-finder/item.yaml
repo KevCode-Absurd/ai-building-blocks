@@ -2,6 +2,7 @@ slug: crowded-category-white-space-finder
 name: "Crowded category white space finder"
 summary: "Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

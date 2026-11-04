@@ -2,6 +2,7 @@ slug: bot-and-ai-agent-access-planner
 name: "Bot and AI agent access planner"
 summary: "Describe your traffic, logins and checkout. Get which bots and AI agents to allow, check or block."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -29,9 +29,6 @@ test("required task details explain the next action and copy a complete request"
   await expect(page.getByTestId("composer-copy")).toBeDisabled();
   await expect(page.getByTestId("task-input-help")).toContainText("Add the requested details");
   await expect(input).toHaveAttribute("aria-describedby", /task-input-help/);
-  const help = page.getByTestId("task-action-help"); await help.getByText("Where will I get the result?", { exact: true }).click();
-  await expect(help).toContainText("Paste the complete request into a new AI chat");
-  await expect(help).toContainText("Your AI makes the result in your chat or workspace");
   const notes = "Rae sends the revised draft on Friday. The budget decision is still open.";
   await input.fill(notes); await expect(page.getByTestId("composer-copy")).toBeEnabled();
   await expect(page.getByTestId("task-input-help")).toHaveCount(0);
@@ -90,8 +87,7 @@ test("workflow help separates files from the first message and explains required
 test("@mobile help opens the right guide while keeping the task draft", async ({ page, context }) => {
   await page.setViewportSize({ width: 320, height: 780 }); await page.goto("/prompts/rough-notes-to-minutes-writer");
   const input = page.getByLabel("Paste your meeting notes"); await input.fill("Keep these meeting notes while I read help.");
-  const help = page.getByTestId("task-action-help"); await help.getByText("Where will I get the result?", { exact: true }).click();
-  const [guide] = await Promise.all([context.waitForEvent("page"), help.getByRole("link", { name: "Read the steps in a new tab" }).click()]);
+  const [guide] = await Promise.all([context.waitForEvent("page"), page.getByTestId("how-to-use").click()]);
   await guide.waitForURL("**/how-it-works#use-in-ai"); await expect(guide.locator("#use-in-ai")).toBeVisible();
   await expect(guide.locator("#use-in-ai")).toContainText("Your AI makes the result in your chat or workspace");
   await expect(input).toHaveValue("Keep these meeting notes while I read help.");

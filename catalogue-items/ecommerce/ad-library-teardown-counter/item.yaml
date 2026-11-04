@@ -2,6 +2,7 @@ slug: ad-library-teardown-counter
 name: "Ad library teardown counter"
 summary: "Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: compress
 job: research

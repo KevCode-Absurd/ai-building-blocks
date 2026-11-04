@@ -2,6 +2,7 @@ slug: new-customer-onboarding-sequence-writer
 name: "New customer onboarding sequence writer"
 summary: "Give it your product and its use. Get a 14-day email and SMS plan and a 100-day map."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

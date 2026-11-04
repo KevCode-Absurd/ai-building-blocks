@@ -2,6 +2,7 @@ slug: sale-price-wording-picker
 name: Sale price wording picker
 summary: Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: offer

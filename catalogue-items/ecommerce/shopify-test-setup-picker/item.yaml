@@ -2,6 +2,7 @@ slug: shopify-test-setup-picker
 name: "Shopify test setup picker"
 summary: "Give it your Shopify plan and test idea. Get what you can test, the right route, and a setup score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

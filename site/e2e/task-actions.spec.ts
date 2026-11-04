@@ -17,7 +17,7 @@ for(const tag of ['', '@mobile ']){
    await expect(primary.getByRole('button',{name:`Copy ${kind}`,exact:true})).toBeEnabled();
    await primary.getByRole('button',{name:`Copy ${kind}`,exact:true}).click();
    expect(await page.evaluate(()=>navigator.clipboard.readText())).toContain('---');
-   const [file]=await Promise.all([page.waitForEvent('download'),primary.getByRole('button',{name:`Download ${kind}`,exact:true}).click()]);
+   const [file]=await Promise.all([page.waitForEvent('download'),page.getByTestId('main-action').getByRole('button',{name:`Download ${kind}`,exact:true}).click()]);
    expect(await file.failure()).toBeNull();
    const zip=unzipSync(await fs.readFile((await file.path())!));const names=Object.keys(zip);
    if(['workflow','agent'].includes(kind)){
@@ -46,7 +46,7 @@ for(const tag of ['', '@mobile ']){
   await expect(page.getByTestId('task-primary').getByLabel('Copy instructions manually')).toBeVisible();
   await page.route('**/skills/ai-search-audit.zip*',r=>r.abort());
   await page.getByTestId('download-task').click();
-  await expect(page.getByTestId('task-primary').getByRole('alert').filter({hasText:'complete skill files'})).toBeVisible();
+  await expect(page.getByTestId('main-action').getByRole('alert').filter({hasText:'complete skill files'})).toBeVisible();
   await expect(page.getByTestId('download-task')).toBeEnabled();
  });
 
@@ -77,8 +77,8 @@ for(const tag of ['', '@mobile ']){
   }
  });
 
- test(tag+'How to use reaches named setup guides and retains the library return',async({page})=>{
-  await page.goto('/skills/ai-search-audit');await page.getByTestId('task-primary').getByRole('link',{name:'How to use',exact:true}).click();
+ test(tag+'How to use reaches named setup guides and retains the library return',async({page:task,context})=>{
+  await task.goto('/skills/ai-search-audit');const [page]=await Promise.all([context.waitForEvent('page'),task.getByTestId('task-primary').getByRole('link',{name:'How to use',exact:true}).click()]);await page.waitForURL('**/how-it-works#use-in-ai');
   await expect(page.locator('#use-in-ai')).toBeInViewport();
   for(const [label,id]of [['ChatGPT','chatgpt'],['Claude','claude'],['Claude Code','claude-code'],['Codex','codex']]){
    await page.getByRole('navigation',{name:'Choose your AI'}).getByRole('link',{name:label,exact:true}).click();

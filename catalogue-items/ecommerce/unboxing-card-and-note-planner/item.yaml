@@ -2,6 +2,7 @@ slug: unboxing-card-and-note-planner
 name: "Unboxing card and note planner"
 summary: "Paste your order value and margin. Get an insert card, note and gift rule with a cost check."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: ops

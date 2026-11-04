@@ -2,6 +2,7 @@ slug: shopify-duplicate-page-fixer
 name: "Shopify duplicate page fixer"
 summary: "Give it your Shopify theme and crawl. Get each duplicate-page fix and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

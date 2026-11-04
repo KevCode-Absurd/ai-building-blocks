@@ -2,6 +2,7 @@ slug: store-image-prep-checker
 name: "Store image prep checker"
 summary: "Give it your image files and sizes. Get what to resize and rename, alt text and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: image

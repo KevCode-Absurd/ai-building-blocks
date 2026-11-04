@@ -2,6 +2,7 @@ slug: google-ads-purchase-tracking-checker
 name: "Google Ads purchase tracking checker"
 summary: "Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

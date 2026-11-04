@@ -26,12 +26,12 @@ const search = async (page: Page, words: string) => {
 const topLinks = async (page: Page, n = 5) =>
   cards(page).evaluateAll((els, n) => els.slice(0, n).map((e) => (e.closest("a") ?? e.querySelector("a"))?.getAttribute("href") ?? ""), n);
 
-test("home: one heading, the search box, cards marked Tested, and a short header", async ({ page }) => {
+test("home: one heading, the search box, cards marked Safety checked, and a short header", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("h1")).toHaveCount(1);
   await expect(page.getByTestId("library-search")).toBeVisible();
   await expect(cards(page).first()).toBeVisible();
-  await expect(page.getByTestId("trust-badge").first()).toHaveText("Tested");
+  await expect(page.getByTestId("trust-badge").first()).toHaveText("Safety checked");
   await expect(page.locator("body")).not.toContainText("not yet tested");
   await expect(page.getByRole("link", { name: "AI Blocks, home" }).getByTestId("logo")).toBeVisible();
   await expect(await menuButton(page)).toBeVisible();
@@ -55,12 +55,12 @@ test("search: a typo still finds results", async ({ page }) => {
   await expect(cards(page).first()).toBeVisible();
 });
 
-test("an item page: Tested, what goes in and comes out, copy, download, and what to do next", async ({ page, context }) => {
+test("an item page: Safety checked, what goes in and comes out, copy, download, and what to do next", async ({ page, context }) => {
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto("/prompts/fact-based-ad-copy-writer");
   const bp = page.getByTestId("block-page");
   await expect(bp.locator("h1")).toHaveCount(1);
-  await expect(bp.getByTestId("tested")).toHaveText("Tested");
+  await expect(bp.getByTestId("tested")).toHaveText("Safety checked");
   await expect(bp.getByTestId("output-sample")).toBeVisible();
   await bp.getByTestId("copy-skill").click();
   expect((await page.evaluate(() => navigator.clipboard.readText())).length).toBeGreaterThan(200);

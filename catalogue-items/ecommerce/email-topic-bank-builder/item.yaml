@@ -2,6 +2,7 @@ slug: email-topic-bank-builder
 name: "Email topic bank builder"
 summary: "Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

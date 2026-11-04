@@ -2,6 +2,7 @@ slug: buyer-trigger-and-proof-mapper
 name: Buyer trigger and proof mapper
 summary: Map what starts a buyer's search, how they feel, what proof they need and what outcome they want.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

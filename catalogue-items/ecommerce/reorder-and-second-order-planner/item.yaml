@@ -2,6 +2,7 @@ slug: reorder-and-second-order-planner
 name: "Reorder and second-order planner"
 summary: "Give it your products and how long they last. Get reorder, refill and second-order messages with timing and an offer cap."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

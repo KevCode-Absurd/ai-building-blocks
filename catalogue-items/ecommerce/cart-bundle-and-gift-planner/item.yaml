@@ -2,6 +2,7 @@ slug: cart-bundle-and-gift-planner
 name: "Cart bundle and gift planner"
 summary: "Give it products, margins and shipping costs. Get a cart bundle, gift and shipping line that hold margin."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

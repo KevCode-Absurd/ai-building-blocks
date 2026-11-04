@@ -2,6 +2,7 @@ slug: ga4-store-setup-checker
 name: "GA4 store setup checker"
 summary: "Describe your GA4 setup. Get missing day-one settings, store events to add and a setup score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

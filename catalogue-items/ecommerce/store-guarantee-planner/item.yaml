@@ -2,6 +2,7 @@ slug: store-guarantee-planner
 name: "Store guarantee planner"
 summary: "Give it sales, refund rate and product type. Get guarantee settings, a net-sales test and placement."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

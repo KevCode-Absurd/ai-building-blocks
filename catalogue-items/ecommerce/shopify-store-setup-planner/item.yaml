@@ -2,6 +2,7 @@ slug: shopify-store-setup-planner
 name: "Shopify store setup planner"
 summary: "Tell it your country, team and catalogue. Get your plan, payments, domain and a build order."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

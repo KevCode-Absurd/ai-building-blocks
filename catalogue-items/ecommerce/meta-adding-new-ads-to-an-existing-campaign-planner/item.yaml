@@ -2,6 +2,7 @@ slug: meta-adding-new-ads-to-an-existing-campaign-planner
 name: Meta creative refresh setup planner
 summary: Plan a creative refresh in an existing Meta campaign. Preserve working settings and define the new ads, review points and spend limits.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

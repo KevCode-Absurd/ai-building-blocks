@@ -2,6 +2,7 @@ slug: brand-facts-accuracy-fixer
 name: "Brand facts accuracy fixer"
 summary: "Paste what AI says about your store. Get wrong facts, the fix for each and a fact accuracy score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: brand

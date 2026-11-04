@@ -2,6 +2,7 @@ slug: launch-email-sequence-planner
 name: "Launch email sequence planner"
 summary: "Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

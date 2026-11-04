@@ -2,6 +2,7 @@ slug: shopify-dashboard-reader
 name: "Shopify dashboard reader"
 summary: "Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

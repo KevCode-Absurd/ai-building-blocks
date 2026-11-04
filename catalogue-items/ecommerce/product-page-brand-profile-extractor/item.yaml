@@ -2,6 +2,7 @@ slug: product-page-brand-profile-extractor
 name: Product page brand profile extractor
 summary: Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

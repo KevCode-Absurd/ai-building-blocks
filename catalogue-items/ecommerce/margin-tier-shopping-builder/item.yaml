@@ -2,6 +2,7 @@ slug: margin-tier-shopping-builder
 name: "Margin-tier Shopping builder"
 summary: "Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

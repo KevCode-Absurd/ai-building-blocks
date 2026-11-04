@@ -2,6 +2,7 @@ slug: tiktok-ads-account-setup-checker
 name: "TikTok ads account setup checker"
 summary: "Say what you set up on TikTok. Get missing steps and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

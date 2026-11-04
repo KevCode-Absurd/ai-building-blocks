@@ -2,6 +2,7 @@ slug: gift-with-purchase-planner
 name: "Gift-with-purchase planner"
 summary: "Give it your catalogue, AOV and margins. Get spend-to-earn gift tiers with a margin check."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

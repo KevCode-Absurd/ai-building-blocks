@@ -2,6 +2,7 @@ slug: tiktok-shop-breakout-finder
 name: "TikTok Shop breakout finder"
 summary: "Attach TikTok Shop product graphs. Get a score out of 100 for each, and test or drop."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

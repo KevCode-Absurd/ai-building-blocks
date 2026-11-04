@@ -2,6 +2,7 @@ slug: existing-customer-ad-budget-sizer
 name: "Existing customer ad budget sizer"
 summary: "Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

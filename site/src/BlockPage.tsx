@@ -3,9 +3,9 @@ import Comments from "./Comments";
 import FactCheckNotes from "./FactCheckNotes";
 import SkillNeighbours from "./SkillNeighbours";
 import SpecialistsForItem from "./roles/SpecialistsForItem";
-import { StarButton } from "./CommunityStars";
+import SaveButton from "./SaveButton";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
-import { ArrowIcon, KitMenu, Drawer } from "./ui";
+import { ArrowIcon, Drawer } from "./ui";
 import { type Block, type Catalogue, type Page, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, useCatalogueState, paidService, pathOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff-core";
@@ -14,13 +14,13 @@ import { getBusiness, hasBusiness, meFor, useBusiness, withBusiness } from "./li
 import type { TaskLike } from "./lib/me-file";
 import { openTailor } from "./Tailor";
 import { BusinessNote, openBusiness } from "./Business";
-import { DownloadDialog, TransferGuide } from "./DownloadDialog";
+import { DownloadDialog } from "./DownloadDialog";
 import ExecutionPrompt from "./ExecutionPrompt";
 import type { Flow } from "./lib/store";
 import { Link } from "./lib/router";
 import Install from "./Install";
 import { Before, Next } from "./Needs";
-import RunInAi, { PullFromAi } from "./RunInAi";
+import { PullFromAi, UploadSteps } from "./RunInAi";
 import { Gauge } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { HelpedBy, MindSkills, WorkflowList, flowsUsing } from "./MindPack";
@@ -34,7 +34,7 @@ import { normalizeSkillHtml } from "./lib/skill-html.mjs";
 import { TASK_STARTERS } from "./lib/task-discovery";
 import CopyableTask from "./CopyableTask";
 import BlockHeader from "./BlockHeader";
-import ItemMainAction, { RunInMyAi } from "./ItemMainAction";
+import ItemMainAction from "./ItemMainAction";
 import SimilarItems, { SkipLine, type NotForLink, type SiblingRow } from "./SimilarItems";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -236,7 +236,7 @@ function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel,
     {!ready && <p id="task-input-help" className="small task-input-help" role="status" data-testid="task-input-help">{skill ? "Add the requested details above to enable Copy the request." : "Waiting for the instructions to load. If loading fails, choose Try again above."}</p>}
     {example && <div className="task-example-actions"><button className="link-btn" onClick={useExample} data-testid="use-task-example">{exampleLabel ? `Use ${exampleLabel.toLowerCase()}` : "Use example material"}</button>{savedText !== null && exampleLabel && <span className="small">{exampleLabel}: made-up material to show what to add.</span>}{savedText !== null && <button className="link-btn" onClick={restoreText}>Restore my text</button>}</div>}
     {exampleError && <p role="alert">{exampleError}</p>}
-    <details className="task-extras"><summary>Add your me.md (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my me.md in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your me.md</button>}</details>
+    <details className="task-extras"><summary>Add your brand file (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my brand file in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your brand file</button>}</details>
     <div className="composer-bar"><span id="task-local-note" className="small">Your draft stays on this device. Copying does not send it to an AI.</span><button className="btn btn-primary btn-sm" disabled={!ready} onClick={() => void copy()} data-testid="composer-copy">{copied ? "Request copied" : "Copy the request"}</button></div>
     {failed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select the complete request below and copy it.</p><textarea aria-label="Copy the complete request manually" readOnly value={request} rows={7} onFocus={e => e.currentTarget.select()} /></div>}
     {(copied || failed) && <div className="task-transfer" data-testid="task-text-transfer"><h3>Use it in your AI</h3><ol><li>Open a new chat in your AI.</li><li>Paste the complete request and send it.</li><li>Check the result against the checks below before you use it.</li></ol><p className="small">This site prepares the request. Your AI does the work.</p></div>}
@@ -342,12 +342,10 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   };
   const copySkill = async () => {
     if (!skill) return;
-    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness(), [b])); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your me.md. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
+    try { await navigator.clipboard.writeText(withBusiness(skill, getBusiness(), [b])); setCopyFailed(false); trackUxEvent("request_copied"); toast(biz ? "Instructions copied with your brand file. Paste them into your AI." : "Instructions copied. Paste them into your AI."); }
     catch { setCopyFailed(true); }
   };
 
-  // The text "Run in my AI" opens a chat with (or copies). Null while the instructions load.
-  const runText = skill ? () => withBusiness(skill, getBusiness(), [b]) : null;
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const showExplanation = !!p?.explain && p.explain.trim() !== (p.subhead || b.summary).trim();
@@ -416,15 +414,10 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         {page === undefined && <p className="small" role="status">Loading…</p>}
         {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
 
-        {/* The main action sits right under the opening; every other way to use it is in "More ways" (#run). */}
-        {/* MERGE (lead): Stream C adds flowMessage() (lib/handoff.ts) and specialistMessage(). To give workflows and
-            agents the same "Run in my AI" button, return their one paste-ready message from runText and drop the textTask check. */}
-        <ItemMainAction moreId="run" render={compact => textTask
-          ? <RunInMyAi getText={runText} noun={noun} toast={toast} compact={compact} onRun={() => setTransferred(true)} />
-          : <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "main-download"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>}
-          note={textTask
-            ? <>Pick ChatGPT, Claude or Gemini. A new chat opens with the {noun} filled in or ready to paste. Your AI asks for anything it needs.{hasFill && <> Or <a href="#task-start">add your details first</a>.</>}</>
-            : <>Unzip it and give all the files to your AI.{bring.length > 0 && <> It will ask for <a href="#task-start">what to bring</a>.</>}</>} />
+        {/* The main action sits right under the opening: download it, then the steps to upload it to your AI.
+            Every other way to use it is in "Other ways" (#run). */}
+        <ItemMainAction moreId="run" render={compact => <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "download-task"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>}
+          note={<><UploadSteps noun={noun} hasFiles={!!b.hasFiles} pack={isFlow} />{downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}{bring.length > 0 && <p>Your AI will ask for <a href="#task-start">what to bring</a>.</p>}</>} />
 
         {hasGet && (
           <section className="bp-part bp-get" id="get" aria-labelledby="get-h">
@@ -501,33 +494,28 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         )}
 
         <section className="bp-part task-primary" id="run" data-testid="task-primary" aria-labelledby="run-h">
-          <h2 className="bp-h2" id="run-h">{num()}More ways to run it</h2>
-          <p className="bp-note">{isFlow ? "Download the complete files and open them in your AI. Copy gives you the main instructions." : `Add the ${noun} to your AI to reuse it. Pasting it into a chat works too.`}{b.hasFiles && !isFlow && " Use the download to include supporting files."} <Link to="/how-it-works#use-in-ai">How to use</Link></p>
+          <h2 className="bp-h2" id="run-h">{num()}Other ways to use it</h2>
+          <p className="bp-note">{isFlow ? "Copy the main instructions, or open the steps in the builder." : `Copy the ${noun} and paste it into any chat.`}{b.hasFiles && !isFlow && " Copying leaves out the supporting files, so use the download for those."} <a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer" data-testid="how-to-use">How to use</a></p>
           <div className="task-primary-actions">
-            {(kind.id === "skill" || kind.id === "workflow") && <StarButton target={`catalogue:${b.slug}`} title={b.name} />}
+            <SaveButton slug={b.slug} title={b.name} toast={toast} />
             <button className="btn btn-line" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {noun}</button>
-            <button className="btn btn-line" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid="download-task">{downloading ? "Preparing download…" : `Download ${noun}`}</button>
             {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
           </div>
-          {downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}
           {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness(), [b]) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
-          {isFlow ? <PullFromAi slug={b.slug} plan={!isAgent} toast={toast} /> : <RunInAi noun={noun} hasFiles={!!b.hasFiles} slug={b.slug} toast={toast} />}
           <div className="task-start-extras">
-            <details className="task-action-help" data-testid="task-action-help"><summary>Where will I get the result?</summary><p>{textTask ? "Copy the request puts the instructions and your details on your clipboard. Paste the complete request into a new AI chat and send it." : "Download the complete files, unzip them and give them to your AI. Keep the instructions and supporting files together. Copying instructions alone leaves out the files."}</p><p>Your AI makes the result in your chat or workspace. Add any material it asks for, then check the result before using it.</p><a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer">Read the steps in a new tab</a></details>
+            <details className="task-reuse" data-testid="task-reuse"><summary>Get it from a connected AI</summary><PullFromAi slug={b.slug} plan={isFlow && !isAgent} toast={toast} /></details>
             {isMind && has(p?.seats) && <div className="bp-actions"><button className="btn btn-line" data-testid="start-council" onClick={() => {
               const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
               toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
             }}>Start a council with {mindName}</button><Link to="/minds" className="btn btn-ghost">Pick other minds</Link></div>}
-            <details className="task-more" data-testid="task-more"><summary>Save it, adapt it or add it to a workflow</summary><div className="bp-actions">
+            <details className="task-more" data-testid="task-more"><summary>Add it to a workflow or get help</summary><div className="bp-actions">
               {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
                 <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
               </>}
-              <KitMenu slug={b.slug} onChange={toast} />
               <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
             </div>{!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}</details>
           </div>
-          {transferred && isFlow && <TransferGuide zip={zipName(b.name)} name={b.name} />}
-          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><KitMenu slug={b.slug} onChange={toast} /></div>}</div>}
+          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><SaveButton slug={b.slug} title={b.name} toast={toast} /></div>}</div>}
         </section>
 
         {!isFlow && !isMind && p?.plan ? <SkillNeighbours block={b} plan={p.plan} c={c} onAdd={slugs => toBuilder(slugs)} /> : has(p?.plan?.next) && (

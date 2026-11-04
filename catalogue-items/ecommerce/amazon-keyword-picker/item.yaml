@@ -2,6 +2,7 @@ slug: amazon-keyword-picker
 name: "Amazon keyword picker"
 summary: "Give it your product and a keyword export. Get the phrases for your title, bullets and backend."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

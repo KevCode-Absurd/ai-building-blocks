@@ -2,6 +2,7 @@ slug: support-capacity-planner
 name: "Support capacity planner"
 summary: "Give it ticket data and your sales forecast. Get cost per ticket and hiring dates for peak."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

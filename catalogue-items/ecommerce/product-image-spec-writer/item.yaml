@@ -3,6 +3,7 @@ renamed_from: stop-ai-pictures-getting-your-product-wrong
 name: "Product image spec writer"
 summary: "Attach your product photos. Get a sourced truth sheet, lock lines and the next photo to take."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: image

@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It plans the set, then checks that the product stays the same.
 new_slug: product-photo-set-builder
-name: Product photo set builder
+name: Product photo angle and scene builder
 summary: "Turn one product photo into a full set of product photos: new angles, scenes and close-ups. Your AI writes one prompt per shot. Free in ChatGPT or Gemini; the dlazy tool in the skill is paid."
 job: product-photos
-headline: Product photo set builder
+headline: Product photo angle and scene builder
 subhead: A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.
 explain: |
   A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.

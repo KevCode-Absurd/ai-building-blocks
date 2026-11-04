@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It writes and checks SQL against your schema.
 new_slug: sql-query-helper
-name: SQL query helper
+name: SQL query and migration helper
 summary: Describe the data you need in plain words. Get a SQL query checked for common mistakes, index tips, or a migration with a rollback plan.
 job: build-software
-headline: SQL query helper
+headline: SQL query and migration helper
 subhead: Describe the data you need in plain words. Your AI writes a SQL query and checks it for common mistakes. It can also suggest faster versions and write database migrations. It does not run anything against your database.
 explain: |
   A SQL query that has been written or sped up and checked for common mistakes, or a database migration ready for you to test. It is not run against your database. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.

@@ -21,8 +21,8 @@ export function BusinessNote() {
   return (
     <p className="biz-note" data-testid="business-note">
       {hasBusiness(b)
-        ? <>Your me.md is included · <button className="link-btn" onClick={openBusiness}>Edit</button></>
-        : <><button className="link-btn" onClick={openBusiness} data-testid="business-add">Add your me.md</button> so this fits you</>}
+        ? <>Your brand file is included · <button className="link-btn" onClick={openBusiness}>Edit</button></>
+        : <><button className="link-btn" onClick={openBusiness} data-testid="business-add">Add your brand file</button> so this fits you</>}
     </p>
   );
 }

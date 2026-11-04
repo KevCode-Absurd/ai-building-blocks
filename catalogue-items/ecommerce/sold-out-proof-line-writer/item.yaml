@@ -2,6 +2,7 @@ slug: sold-out-proof-line-writer
 name: "Sold-out proof line writer"
 summary: "Give it your real sales, rank and restock facts. Get short proof lines and where each one goes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: copy

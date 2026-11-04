@@ -2,6 +2,7 @@ slug: amazon-inbound-stock-planner
 name: "Amazon inbound stock planner"
 summary: "Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

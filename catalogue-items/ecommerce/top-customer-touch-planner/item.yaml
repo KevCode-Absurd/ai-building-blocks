@@ -2,6 +2,7 @@ slug: top-customer-touch-planner
 name: "Top customer touch planner"
 summary: "Give it your customer list and budget. Get a top-50 touch plan and a control group."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

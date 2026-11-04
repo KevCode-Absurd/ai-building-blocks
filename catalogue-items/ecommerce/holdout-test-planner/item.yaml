@@ -2,6 +2,7 @@ slug: holdout-test-planner
 name: "Holdout test planner"
 summary: "Name the channel or change you doubt. Get a holdout design, run time and how to read it."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

@@ -2,6 +2,7 @@ slug: platform-roas-reality-check
 name: "Platform ROAS reality check"
 summary: "Give it platform ROAS and store totals. Get a truer return and trust level, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -2,6 +2,7 @@ slug: persona-script-multiplier
 name: "Persona script multiplier"
 summary: "Give it one winning video script. Get a version and a page brief for each buyer group."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: video

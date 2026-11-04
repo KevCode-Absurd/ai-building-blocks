@@ -2,6 +2,7 @@ slug: pre-shipment-inspection-brief-writer
 name: "Pre-shipment inspection brief writer"
 summary: "Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

@@ -2,6 +2,7 @@ slug: creative-sprint-readiness-reviewer
 name: Creative sprint readiness reviewer
 summary: Review a creative sprint before briefs, before image generation and before launch. Check source facts, buyer fit, copy, product truth and delivery files.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

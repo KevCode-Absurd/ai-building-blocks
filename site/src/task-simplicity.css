@@ -74,3 +74,6 @@
   .task-install { padding: 1rem; }
   .task-composer .composer-bar > span { flex-basis: 100%; }
 }
+
+.task-reuse > summary { cursor: pointer; font-weight: 600; }
+.task-reuse[open] > summary { margin-bottom: .6rem; }

@@ -2,6 +2,7 @@ slug: discount-impact-checker
 name: "Discount impact checker"
 summary: "Add price, costs and a discount. Get the ROAS to hit and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: offer

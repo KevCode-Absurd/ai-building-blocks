@@ -1,36 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { MAX_PREFILL_URL, RUN_TARGETS, capSentences, runLink } from '../src/lib/item-actions.ts';
+import { capSentences } from '../src/lib/item-actions.ts';
 import { namesAMind } from '../src/lib/search-person.ts';
-
-test('Run in my AI offers ChatGPT, Claude and Gemini, and only prefills where a link is known', () => {
-  assert.deepEqual(RUN_TARGETS.map(t => t.name), ['ChatGPT', 'Claude', 'Gemini']);
-  const short = 'Write a reply to this review: "Great coffee & fast service"';
-  const chat = runLink('chatgpt', short);
-  assert.equal(chat.prefilled, true);
-  assert.ok(chat.url.startsWith('https://chatgpt.com/?q='));
-  assert.equal(new URL(chat.url).searchParams.get('q'), short);
-  const claude = runLink('claude', short);
-  assert.equal(claude.prefilled, true);
-  assert.equal(new URL(claude.url).origin + new URL(claude.url).pathname, 'https://claude.ai/new');
-  assert.equal(new URL(claude.url).searchParams.get('q'), short);
-  assert.deepEqual(runLink('gemini', short), { url: 'https://gemini.google.com/app', prefilled: false });
-});
-
-test('long instructions are copied instead of squeezed into an address', () => {
-  const long = 'Check every line. '.repeat(400);
-  for (const id of ['chatgpt', 'claude']) {
-    const link = runLink(id, long);
-    assert.equal(link.prefilled, false, id);
-    assert.ok(!link.url.includes('?q='), id);
-  }
-  const edge = 'a'.repeat(MAX_PREFILL_URL - 'https://chatgpt.com/?q='.length);
-  assert.equal(runLink('chatgpt', edge).prefilled, true);
-  assert.equal(runLink('chatgpt', edge + 'a').prefilled, false);
-  assert.equal(runLink('chatgpt', '   ').prefilled, false);
-  assert.equal(runLink('unknown', 'hi').url.startsWith('https://chatgpt.com/'), true);
-});
 
 test('the opening subhead keeps at most three sentences', () => {
   assert.equal(capSentences('One. Two. Three.'), 'One. Two. Three.');
@@ -51,11 +23,13 @@ test('a search names a mind only by full name, or by a long surname alone', () =
   assert.equal(namesAMind(blocks, 'review replies'), false);
 });
 
-test('item pages put one main action under the opening and keep the rest under More ways', () => {
+test('item pages put one Download button under the opening and keep the rest under Other ways', () => {
   const page = fs.readFileSync('src/BlockPage.tsx', 'utf8');
   const main = page.indexOf('<ItemMainAction'), get = page.indexOf('id="get"'), run = page.indexOf('id="run"');
-  assert.ok(main > 0 && main < get && get < run, 'main action comes before What you get and More ways');
-  assert.match(page, /More ways to run it/);
+  assert.ok(main > 0 && main < get && get < run, 'main action comes before What you get and Other ways');
+  assert.doesNotMatch(page, /Run in my AI/);
+  assert.match(page, /<UploadSteps /);
+  assert.match(page, /Other ways to use it/);
   assert.doesNotMatch(page.slice(run), /data-testid="copy-skill"[^>]*btn-primary|btn-primary[^>]*data-testid="copy-skill"/);
   const header = fs.readFileSync('src/BlockHeader.tsx', 'utf8');
   assert.match(header, /capSentences\(p\?\.subhead\|\|b\.summary,3\)/);

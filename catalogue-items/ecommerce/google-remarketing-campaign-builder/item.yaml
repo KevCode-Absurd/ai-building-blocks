@@ -2,6 +2,7 @@ slug: google-remarketing-campaign-builder
 name: "Google remarketing campaign builder"
 summary: "Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

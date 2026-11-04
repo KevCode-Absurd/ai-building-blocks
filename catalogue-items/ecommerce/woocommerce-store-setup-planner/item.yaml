@@ -2,6 +2,7 @@ slug: woocommerce-store-setup-planner
 name: "WooCommerce store setup planner"
 summary: "Give it your products and country. Get a WooCommerce build plan from hosting to first test order."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

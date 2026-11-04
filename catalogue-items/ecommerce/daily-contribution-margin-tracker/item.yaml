@@ -2,6 +2,7 @@ slug: daily-contribution-margin-tracker
 name: "Daily contribution margin tracker"
 summary: "Give it daily sales, costs and ad spend. Get a daily contribution margin sheet with a returns accrual."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

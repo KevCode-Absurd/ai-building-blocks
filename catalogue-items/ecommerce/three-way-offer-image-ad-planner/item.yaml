@@ -3,6 +3,7 @@ renamed_from: sell-one-offer-three-ways-with-image-ads
 name: "Three-way offer image ad planner"
 summary: "Paste your offer. Get three offer image ads in two sizes and one offer block."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

@@ -2,6 +2,7 @@ slug: bundle-and-quantity-break-builder
 name: "Bundle and quantity-break builder"
 summary: "Give it a hero product, cost and price. Get bundle tiers, a default, gifts and price lines."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

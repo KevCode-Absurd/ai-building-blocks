@@ -2,6 +2,7 @@ slug: speed-report-translator
 name: "Speed report translator"
 summary: "Paste your PageSpeed report. Get what passes, what causes the slowness and three fixes."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: analysis

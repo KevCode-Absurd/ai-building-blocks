@@ -2,6 +2,7 @@ slug: store-go-live-checker
 name: "Store go-live checker"
 summary: "Give it your store setup. Get a score out of 100, the blockers and a test-order plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ops

@@ -2,6 +2,7 @@ slug: incrementality-test-planner
 name: "Incrementality test planner"
 summary: "Tell it your spend and regions. Get a lift test sized to you and how to read it."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: analysis

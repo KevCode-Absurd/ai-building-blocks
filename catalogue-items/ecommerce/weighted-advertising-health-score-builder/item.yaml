@@ -2,6 +2,7 @@ slug: weighted-advertising-health-score-builder
 name: Weighted advertising health score builder
 summary: Score your Meta and Google ad account health out of 100 with weighted checks, a grade for each category and a ranked list of fixes.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

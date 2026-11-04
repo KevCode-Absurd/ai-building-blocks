@@ -2,6 +2,7 @@ slug: subscription-churn-audit
 name: "Subscription churn audit"
 summary: "Give it your subscription data. Get a score out of 100 for where subscribers leave."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

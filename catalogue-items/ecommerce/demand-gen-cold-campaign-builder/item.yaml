@@ -2,6 +2,7 @@ slug: demand-gen-cold-campaign-builder
 name: "Demand Gen cold traffic builder"
 summary: "Give it your winning videos, page and budget. Get Demand Gen settings, ad groups and a creative brief."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

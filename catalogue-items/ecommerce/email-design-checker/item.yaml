@@ -2,6 +2,7 @@ slug: email-design-checker
 name: "Email design checker"
 summary: "Paste an email design. Get a score out of 100 and fixes for layout, links and weight."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

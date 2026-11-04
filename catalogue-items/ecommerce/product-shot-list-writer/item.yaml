@@ -2,6 +2,7 @@ slug: product-shot-list-writer
 name: "Product shot list writer"
 summary: "Paste your product and where the photos will run. Get a shot list, with the reason for each shot."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: image

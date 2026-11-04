@@ -45,6 +45,7 @@
 - [Jupyter notebook builder](https://useaiblocks.com/skills/notebook-builder): Describe an experiment or lesson. Build a Jupyter notebook with clear cells, notes and checks for the target environment.
 - [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter): Convert lab instrument files into Allotrope JSON or flat CSV, with parser code for handoff.
 - [LaTeX paper converter](https://useaiblocks.com/skills/latex-paper-converter): Bring your LaTeX paper and journal template. Get converted source and a reusable conversion script.
+- [LaTeX research poster maker](https://useaiblocks.com/skills/research-poster-maker): Share results, figures and size. Get editable LaTeX and a checked PDF when tools are available.
 - [LibreOffice document builder](https://useaiblocks.com/skills/libreoffice-document-builder): Build a document from a plain description and turn it into Word, PDF or HTML, or make many letters from one template and a list, with LibreOffice.
 - [LibreOffice slide builder](https://useaiblocks.com/skills/libreoffice-slide-builder): Build plain slides from an outline with LibreOffice, then convert the deck to PowerPoint or PDF. Handle a whole folder of decks in one run.
 - [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Describe a spreadsheet and get an ODS file with formulas, or a copy as Excel, CSV or PDF. Charts are untested.
@@ -65,6 +66,7 @@
 - [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer): Compare an old and a new PowerPoint deck. Get every changed message, chart number, note, link and slide move in one list.
 - [PowerPoint editable chart rebuilder](https://useaiblocks.com/skills/powerpoint-chart-data-rebuilder): Turn picture charts in your deck into editable PowerPoint charts from your real data, with every value checked against the source.
 - [PowerPoint presenter handout and notes writer](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing): Share your deck, talk length and sharing rules. Get appendix links, speaker notes, accessibility findings and an audience handout.
+- [PowerPoint research poster builder](https://useaiblocks.com/skills/research-poster-builder): Use approved text, local images, and print rules to build a PowerPoint poster you can edit.
 - [PowerPoint slide size converter](https://useaiblocks.com/skills/powerpoint-slide-size-converter): Change a deck from 4:3 to 16:9 or any size. Get a reflowed PowerPoint copy with no stretched images and a list of layouts to check.
 - [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder): Turn your PowerPoint deck into speaker notes with source links, transitions and a timing plan for your talk length. Your original file stays safe.
 - [PowerPoint storyboard deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Turn your content, sources and audience into a storyboard and an editable PowerPoint deck for a business talk, lesson or report.
@@ -74,9 +76,7 @@
 - [Python chart maker](https://useaiblocks.com/skills/python-chart-maker): Share your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
 - [Repo slide deck builder](https://useaiblocks.com/skills/repo-slide-deck-builder): Share a repo. Get a slide deck with cited facts that warns you when the code changes.
 - [Report-to-slide briefing deck builder and reviewer](https://useaiblocks.com/workflows/turn-a-report-into-an-editable-briefing-deck): Share the report, audience and meeting length. Get a source-checked slide plan, an editable deck where tools allow and a layout review.
-- [Research poster builder](https://useaiblocks.com/skills/research-poster-builder): Use approved text, local images, and print rules to build a PowerPoint poster you can edit.
 - [Research poster content and source planner](https://useaiblocks.com/workflows/prepare-research-poster-source-notes): Share your completed study, approved results and poster rules. Get a reading order, figure briefs, source index and wording check.
-- [Research poster maker](https://useaiblocks.com/skills/research-poster-maker): Share results, figures and size. Get editable LaTeX and a checked PDF when tools are available.
 - [Research report summary and slide-brief writer](https://useaiblocks.com/workflows/make-a-research-report-easier-to-share): Share a report, its sources, audience and sharing limits. Get a plain summary, slide outline and checks across figures and claims.
 - [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
 - [Scanned document reader and fact checker](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Read text from a scan. Check key names and numbers against the original pages and flag what is unclear.

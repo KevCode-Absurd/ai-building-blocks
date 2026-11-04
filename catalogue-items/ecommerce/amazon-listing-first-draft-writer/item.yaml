@@ -2,6 +2,7 @@ slug: amazon-listing-first-draft-writer
 name: "Amazon listing first draft writer"
 summary: "Paste product facts and search phrases. Get an Amazon title, five bullets and backend keywords."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: copy

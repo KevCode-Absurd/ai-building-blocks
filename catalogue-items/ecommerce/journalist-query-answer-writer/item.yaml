@@ -2,6 +2,7 @@ slug: journalist-query-answer-writer
 name: "Journalist query answer writer"
 summary: "Give it journalist requests and your expertise. Get ranked picks, expert answers and a win-rate sheet."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

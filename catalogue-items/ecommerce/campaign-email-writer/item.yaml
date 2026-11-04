@@ -2,6 +2,7 @@ slug: campaign-email-writer
 name: Campaign email writer
 summary: Give it a campaign goal and product facts. Get email copy by block, with subject lines.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

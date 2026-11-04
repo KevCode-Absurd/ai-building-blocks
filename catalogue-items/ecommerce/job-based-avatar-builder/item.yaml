@@ -2,6 +2,7 @@ slug: job-based-avatar-builder
 name: "Job-based avatar builder"
 summary: "Paste buyer stories and reviews. Get avatar cards built on a job, a trigger and quoted proof."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

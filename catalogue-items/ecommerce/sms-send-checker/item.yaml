@@ -2,6 +2,7 @@ slug: sms-send-checker
 name: "SMS send checker"
 summary: "Paste a text and send plan. Get its cost, rule flags and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: email

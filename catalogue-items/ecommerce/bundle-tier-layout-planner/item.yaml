@@ -2,6 +2,7 @@ slug: bundle-tier-layout-planner
 name: "Bundle tier layout planner"
 summary: "Give it your product and costs. Get a 3-tier bundle layout, savings wording and a test plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

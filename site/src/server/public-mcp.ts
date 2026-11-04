@@ -90,7 +90,7 @@ export const PUBLIC_MCP_TOOLS: Tool[] = [
       type: { type: 'string', enum: KIND_LIST, description: 'Only this kind of item.' },
       job: { ...slug, description: 'A job id such as make-image-ads (the resource aiblocks://jobs lists them; get_item shows an item\'s job).' },
       level: { type: 'string', enum: ['beginner', 'advanced', 'expert'] },
-      tested: { type: 'boolean', description: 'true: only items with the Tested label (safety scan passed and a sample output).' },
+      tested: { type: 'boolean', description: 'true: only items with the Safety checked label (safety scan passed and a clear list of what goes in and comes out).' },
       since: { type: 'string', pattern: '^\\d{4}-\\d{2}-\\d{2}', maxLength: 40, description: 'ISO date. Only items added or changed on or after it; newest first when there is no query.' },
       category: { type: 'string', minLength: 1, maxLength: 40 },
       limit: { type: 'integer', minimum: 1, maximum: 25 }, offset: { type: 'integer', minimum: 0, maximum: 100000 },

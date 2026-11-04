@@ -2,6 +2,7 @@ slug: ad-recall-risk-checker
 name: "Ad recall risk checker"
 summary: "Paste your ad or creator brief. Get a brand-recall score out of 100 and fixes."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: ads

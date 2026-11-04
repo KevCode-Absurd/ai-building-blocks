@@ -2,6 +2,7 @@ slug: winning-ad-dna-mapper
 name: "Winning ad DNA mapper"
 summary: "Paste winning ads, yours or rivals'. Get each split into message and look, plus one-part swaps to test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

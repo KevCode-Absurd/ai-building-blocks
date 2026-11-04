@@ -2,6 +2,7 @@ slug: bestseller-shopping-campaign-builder
 name: "Bestseller Shopping campaign builder"
 summary: "Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

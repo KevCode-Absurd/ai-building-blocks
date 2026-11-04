@@ -2,6 +2,7 @@ slug: star-rating-review-miner
 name: "Star-rating review miner"
 summary: "Paste rivals' reviews by star. Get broken trust markers, product gaps and hot-lead phrases."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: source
 job: research

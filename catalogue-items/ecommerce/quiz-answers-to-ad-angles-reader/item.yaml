@@ -2,6 +2,7 @@ slug: quiz-answers-to-ad-angles-reader
 name: "Quiz answers to ad angles reader"
 summary: "Paste your quiz answers. Get who buys, how aware they are and ranked ad angles."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -2,6 +2,7 @@ slug: next-dollar-budget-allocator
 name: "Next-dollar budget allocator"
 summary: "Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

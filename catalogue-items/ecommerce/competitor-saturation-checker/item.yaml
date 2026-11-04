@@ -2,6 +2,7 @@ slug: competitor-saturation-checker
 name: "Competitor saturation checker"
 summary: "Give it a product name. Get store counts, rival strength, a score out of 100 and a go."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: research

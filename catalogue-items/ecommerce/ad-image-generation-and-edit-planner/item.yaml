@@ -2,6 +2,7 @@ slug: ad-image-generation-and-edit-planner
 name: Ad image generation and edit planner
 summary: "Plan a batch of ad images from your product photo: get the settings, a prompt for each version, edit requests and a log of every change."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

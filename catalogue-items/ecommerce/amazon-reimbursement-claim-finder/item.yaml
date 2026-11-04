@@ -2,6 +2,7 @@ slug: amazon-reimbursement-claim-finder
 name: "Amazon reimbursement claim finder"
 summary: "Give it shipment and fee reports. Get a claim-readiness score and the claims to file."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

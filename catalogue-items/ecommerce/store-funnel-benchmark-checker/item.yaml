@@ -2,6 +2,7 @@ slug: store-funnel-benchmark-checker
 name: "Store funnel benchmark checker"
 summary: "Paste your GA4 funnel and device numbers. Get the step that leaks most, why, and what to test."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

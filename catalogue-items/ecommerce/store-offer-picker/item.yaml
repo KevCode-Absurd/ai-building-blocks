@@ -2,6 +2,7 @@ slug: store-offer-picker
 name: "Store offer picker"
 summary: "Give it margin, order mix and repeat rate. Get the offer types to test first, with the maths."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

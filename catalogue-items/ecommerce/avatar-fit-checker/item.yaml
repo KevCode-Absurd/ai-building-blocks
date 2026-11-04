@@ -2,6 +2,7 @@ slug: avatar-fit-checker
 name: "Avatar fit checker"
 summary: "Paste your buyer notes, ad and page. Get a fit score out of 100 and every mismatch."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: research

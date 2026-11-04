@@ -2,6 +2,7 @@ slug: five-gate-campaign-scaling-planner
 name: Five-gate campaign scaling planner
 summary: Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

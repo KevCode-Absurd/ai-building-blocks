@@ -2,6 +2,7 @@ slug: creative-hit-rate-planner
 name: "Creative hit rate planner"
 summary: "Paste a prospecting ad export. Get your hit rate, concepts above your profit line and what to iterate."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

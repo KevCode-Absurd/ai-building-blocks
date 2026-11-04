@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SAVED_KIT } from "./SaveButton";
 import { usePersistence } from "./AccountPersistence";
 import { library } from "./lib/library-storage";
 import { flows, useStore } from "./lib/store";
@@ -78,7 +79,7 @@ function Settings() {
         const a = document.createElement("a"); a.href = url; a.download = "ai-blocks-saving-diagnostics.json"; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
       }}>Download saving diagnostics</button>
     </section>
-    <section className="account-setting"><div><h2>Your me.md</h2><p className="small">Edit the private file about you that is added to your prompts and downloads.</p></div><button className="btn btn-line btn-sm" onClick={openBusiness}>Edit your me.md</button></section>
+    <section className="account-setting"><div><h2>Your brand file</h2><p className="small">Edit the private file about you and your business that is added to your prompts and downloads.</p></div><button className="btn btn-line btn-sm" onClick={openBusiness}>Edit your brand file</button></section>
     <section className="account-setting"><div><h2>Team space</h2><p className="small">Choose what you share with your team, and who can open it by email address or company domain.</p></div><Link to="/space" className="btn btn-line btn-sm">Manage team space</Link></section>
     {notice && <p className="account-notice" role="status">{notice}</p>}
   </div>;
@@ -97,21 +98,18 @@ function MyWork({ c, onKits }: { c: Catalogue | null; onKits: () => void }) {
     {!snapshot.user && <div className="account-local-note"><span>These saves are on this browser.</span><Link to="/sign-up">Sign up to keep an account copy →</Link></div>}
     {(snapshot.status === "error" || snapshot.status === "conflict") && <p role="alert" className="account-notice">Your latest changes need attention. <Link to="/account?view=settings">Open saving settings →</Link></p>}
     <div className="account-work-grid">
-      <section className="account-card"><div className="account-card-heading"><h2>Kits</h2><span className="small">{kits.length}</span></div>
-        {kits.length ? kits.map(kit => <button className="account-work-row" key={kit.id} onClick={onKits}><span>{kit.name}</span><span className="small">{kit.slugs.length} items →</span></button>) : <p className="small">Save useful skills and tasks to a kit. They’ll be waiting here.</p>}
-        <button className="link-btn account-card-action" onClick={onKits}>Manage my kits →</button>
+      <section className="account-card" data-testid="account-saved"><div className="account-card-heading"><h2>Saved</h2><span className="small">{skills.length + custom.length}</span></div>
+        {skills.map(item => <Link className="account-work-row" to={pathOf(item)} key={item.slug}>{item.name}<span aria-hidden="true">↗</span></Link>)}
+        {custom.map(({ skill, flow }) => <button className="account-work-row" key={`${flow.id}:${skill.slug}`} onClick={() => resume(flow === draft ? undefined : flow.id)}><span>{skill.name}<small>In {flow.name || "your workflow"}</small></span><span aria-hidden="true">↗</span></button>)}
+        {!skills.length && !custom.length && <p className="small">Choose Save on any skill, prompt, workflow or agent. It will be waiting here.</p>}
+        {kits.filter(k => k.name !== SAVED_KIT).map(kit => <button className="account-work-row" key={kit.id} onClick={onKits}><span>{kit.name}<small>Kit</small></span><span className="small">{kit.slugs.length} items →</span></button>)}
+        {kits.length > 0 ? <button className="link-btn account-card-action" onClick={onKits}>Manage my kits →</button> : <Link to="/#library" className="account-card-action">Find a task →</Link>}
       </section>
       <section className="account-card"><div className="account-card-heading"><h2>Workflows</h2><span className="small">{saved.length}</span></div>
         {draft && <button className="account-work-row" onClick={() => resume()}><span>{draft.name || "Current workflow"}<small>Current draft</small></span><span aria-hidden="true">↗</span></button>}
         {saved.map(flow => <button className="account-work-row" key={flow.id} onClick={() => resume(flow.id)}><span>{flow.name}</span><span aria-hidden="true">↗</span></button>)}
         {!draft && !saved.length && <p className="small">Every plan you make is saved here, with workflows you build.</p>}
         <Link to="/compose" className="account-card-action">{snapshot.data["abb:composer"] ? "Open my last plan →" : "Plan a job →"}</Link>
-      </section>
-      <section className="account-card"><div className="account-card-heading"><h2>Skills</h2><span className="small">{skills.length + custom.length}</span></div>
-        {skills.map(skill => <Link className="account-work-row" to={pathOf(skill)} key={skill.slug}>{skill.name}<span aria-hidden="true">↗</span></Link>)}
-        {custom.map(({ skill, flow }) => <button className="account-work-row" key={`${flow.id}:${skill.slug}`} onClick={() => resume(flow === draft ? undefined : flow.id)}><span>{skill.name}<small>In {flow.name || "your workflow"}</small></span><span aria-hidden="true">↗</span></button>)}
-        {!skills.length && !custom.length && <p className="small">Skills in your kits and custom skills in your workflows appear here.</p>}
-        <Link to="/#library" className="account-card-action">Find a skill →</Link>
       </section>
       <section className="account-card" data-testid="account-numbers"><div className="account-card-heading"><h2>Calculators and specialists</h2><span className="small">{tools.length + roles.length}</span></div>
         {tools.map(([slug, entry]) => <Link className="account-work-row" to={`/tools/${slug}`} key={`tool:${slug}`}><span>{entry.name || nameFromSlug(slug)}<small>Your numbers are saved</small></span><span aria-hidden="true">↗</span></Link>)}

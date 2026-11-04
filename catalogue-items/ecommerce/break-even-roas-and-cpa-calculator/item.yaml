@@ -2,6 +2,7 @@ slug: break-even-roas-and-cpa-calculator
 name: "Break-even ROAS and CPA calculator"
 summary: "Give it price and margin. Get break-even ROAS and CPA for Meta or Google, and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

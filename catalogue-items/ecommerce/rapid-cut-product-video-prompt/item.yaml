@@ -2,6 +2,7 @@ slug: rapid-cut-product-video-prompt
 name: Rapid-cut product video prompt
 summary: Share a product and short spot idea. Get a timed product-only or surreal comedy prompt with a clear final hero shot.
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: video

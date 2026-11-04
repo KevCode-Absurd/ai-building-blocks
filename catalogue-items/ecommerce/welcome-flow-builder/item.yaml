@@ -2,6 +2,7 @@ slug: welcome-flow-builder
 name: "Welcome flow builder"
 summary: "Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: email

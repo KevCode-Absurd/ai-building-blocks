@@ -2,6 +2,7 @@ slug: prepaid-plan-ltv-modeler
 name: "Prepaid plan LTV modeler"
 summary: "Give it price, costs, retention. Get if a prepaid plan beats one-time sales, scored out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

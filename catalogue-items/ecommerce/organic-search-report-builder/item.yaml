@@ -2,6 +2,7 @@ slug: organic-search-report-builder
 name: "Organic search report builder"
 summary: "Paste Search Console and GA4 numbers. Get non-branded clicks against last period and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

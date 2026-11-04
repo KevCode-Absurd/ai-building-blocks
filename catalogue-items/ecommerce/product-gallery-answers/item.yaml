@@ -3,6 +3,7 @@ renamed_from: get-a-product-page-gallery-that-answers-doubts
 name: Product gallery doubt review and image builder
 summary: Share exact product photos, brand facts and customer feedback. Get a gallery review, image plan and checked files when image tools are available.
 category: ecommerce
+boards: [ecommerce]
 type: workflow
 role: orchestrate
 job: image

@@ -2,6 +2,7 @@ slug: creative-brief-writer
 name: "Creative brief writer"
 summary: "Give it reviews and product facts. Get one problem, a one-line angle, a proof list and a brief."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

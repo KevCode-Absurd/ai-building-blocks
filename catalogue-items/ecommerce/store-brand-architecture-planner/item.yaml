@@ -2,6 +2,7 @@ slug: store-brand-architecture-planner
 name: "Store brand architecture planner"
 summary: "List your stores and ranges. Get a brand structure, a naming rule and a name call per range."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: brand

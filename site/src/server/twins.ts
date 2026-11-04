@@ -79,7 +79,7 @@ export function twinMarkdown(page: Page, slug: string, skill: string | null): st
   out.push(`# ${f.name}`, '', `> ${f.summary}`, '');
   const lead = text(page.subhead) || (text(page.headline) !== f.name ? text(page.headline) : '');
   if (lead) out.push(lead, '');
-  out.push([`Free ${f.kind}`, f.job ? `for the job "${f.job.name}"` : '', f.level ? `· Level: ${f.level}` : '', f.thinking ? `· Thinking: ${f.thinking}` : '', tested(page) ? '· Tested' : '', page.added ? `· Updated ${page.added}` : ''].filter(Boolean).join(' '), '');
+  out.push([`Free ${f.kind}`, f.job ? `for the job "${f.job.name}"` : '', f.level ? `· Level: ${f.level}` : '', f.thinking ? `· Thinking: ${f.thinking}` : '', tested(page) ? '· Safety checked' : '', page.added ? `· Updated ${page.added}` : ''].filter(Boolean).join(' '), '');
   section('Links', [`Page: ${l.page}`, `Instructions (SKILL.md): ${l.instructions}`, ...(l.download ? [`All files (zip): ${l.download}`] : []), `JSON version: ${l.json}`, `In your AI: connect ${l.mcp} and ask "Use AI Blocks to get ${slug}"`]);
   if (text(page.explain)) out.push('## What it does', '', text(page.explain), '');
   if (f.kind === 'mind') {

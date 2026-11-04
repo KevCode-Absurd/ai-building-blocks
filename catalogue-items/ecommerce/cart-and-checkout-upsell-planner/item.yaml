@@ -2,6 +2,7 @@ slug: cart-and-checkout-upsell-planner
 name: "Cart and checkout upsell planner"
 summary: "Rank cart and checkout upsells by profit added per order. Get one offer per slot, a cart layout and exit offers by stage."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: offer

@@ -2,6 +2,7 @@ slug: merchant-center-feed-health-checker
 name: "Merchant Center feed health checker"
 summary: "Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

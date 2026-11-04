@@ -2,6 +2,7 @@ slug: channel-budget-mix-planner
 name: "Channel budget mix planner"
 summary: "Give it spend by channel and margin. Get a target split, small-channel caps and holdout tests."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

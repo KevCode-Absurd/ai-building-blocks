@@ -2,6 +2,7 @@ slug: creator-pay-planner
 name: "Creator pay planner"
 summary: "Work out a fair flat fee or floor-or-commission offer for a creator post from your Meta ad cost and their real views, with a go or no-go."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: organic

@@ -2,6 +2,7 @@ slug: launch-critical-path-builder
 name: "Launch critical path builder"
 summary: "Name your product and launch date. Get every step from samples to warehouse, dated, with owners and warnings."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

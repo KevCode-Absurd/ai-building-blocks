@@ -2,6 +2,7 @@ slug: brand-and-non-brand-splitter
 name: "Brand and non-brand splitter"
 summary: "Give it your campaigns and brand terms. Get the brand leaks, your true non-brand ROAS, a split plan and a score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

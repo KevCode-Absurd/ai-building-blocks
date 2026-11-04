@@ -2,6 +2,7 @@ slug: wrong-buyer-review-checker
 name: "Wrong-buyer review checker"
 summary: "Paste your low reviews. Get which came from wrong-job buyers, not-for lines and a promise-match score."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: analysis

@@ -1,10 +1,10 @@
 thinking: low
 thinking_why: It lays out content you already approved, then runs set checks.
 new_slug: research-poster-builder
-name: Research poster builder
+name: PowerPoint research poster builder
 summary: Build an editable PowerPoint research poster at print size from text you approved. It gets automatic file and access checks, then your own PowerPoint review.
 job: work-with-files
-headline: Research poster builder
+headline: PowerPoint research poster builder
 subhead: Give it your approved poster text, images and print rules. It builds an editable one-slide PowerPoint poster at print size. It then runs automatic checks on layout, access features and file safety, and stops if anything is unresolved. You still run PowerPoint's own accessibility check by hand.
 explain: |
   An editable PowerPoint poster at print size, built only from text and images you approved, and given automatic checks for access features and file safety. These checks cannot certify that the poster is accessible, so a manual PowerPoint accessibility review is still needed. You can still change the poster in PowerPoint afterward.

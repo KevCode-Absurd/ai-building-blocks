@@ -2,6 +2,7 @@ slug: amazon-search-gap-finder
 name: "Amazon search gap finder"
 summary: "Give it an interest or category. Get Amazon product ideas people search for that page 1 misses."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: research

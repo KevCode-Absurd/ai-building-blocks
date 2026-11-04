@@ -2,6 +2,7 @@ slug: store-team-role-planner
 name: "Store team role planner"
 summary: "Describe your store and revenue. Get who to hire next, what to outsource and who decides what."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

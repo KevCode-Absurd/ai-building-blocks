@@ -2,6 +2,7 @@ slug: performance-max-launch-planner
 name: "Performance Max launch planner"
 summary: "Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

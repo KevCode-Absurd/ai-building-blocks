@@ -2,6 +2,7 @@ slug: product-page-seo-builder
 name: "Product page SEO builder"
 summary: "Give it a product and target term. Get page layout, copy, image names, markup and an index call."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: page

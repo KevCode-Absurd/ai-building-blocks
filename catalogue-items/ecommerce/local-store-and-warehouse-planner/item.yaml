@@ -2,6 +2,7 @@ slug: local-store-and-warehouse-planner
 name: "Local store and warehouse planner"
 summary: "Give it sales by country. Get the order to open local stores and warehouses, with triggers."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ops

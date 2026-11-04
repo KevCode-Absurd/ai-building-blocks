@@ -2,6 +2,7 @@ slug: subscription-page-take-rate-checker
 name: "Subscription page take-rate checker"
 summary: "Give it your product page and pop-up. Get a score out of 100 for selling subscription."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: check
 job: page

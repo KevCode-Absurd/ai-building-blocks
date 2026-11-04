@@ -2,6 +2,7 @@ slug: shopping-title-rewriter
 name: "Shopping title rewriter"
 summary: "Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: make
 job: copy

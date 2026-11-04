@@ -2,6 +2,7 @@ slug: sign-in-policy-drafter
 name: "Sign-in policy drafter"
 summary: "Paste how staff and customers sign in. Get ranked gaps, a score and a one-page policy."
 category: ecommerce
+boards: [ecommerce]
 type: prompt
 role: check
 job: ops

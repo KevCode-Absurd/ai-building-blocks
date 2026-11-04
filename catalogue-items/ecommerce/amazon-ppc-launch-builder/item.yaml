@@ -2,6 +2,7 @@ slug: amazon-ppc-launch-builder
 name: "Amazon PPC launch builder"
 summary: "Give it your product, keywords and daily budget. Get auto, keyword and competitor campaigns with bids and negatives."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

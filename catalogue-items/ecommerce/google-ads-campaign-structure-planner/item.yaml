@@ -2,6 +2,7 @@ slug: google-ads-campaign-structure-planner
 name: "Google Ads campaign structure planner"
 summary: "Give it your catalogue and markets. Get the fewest campaigns, each with a reason, and a rollout."
 category: ecommerce
+boards: [ecommerce]
 type: skill
 role: make
 job: ads

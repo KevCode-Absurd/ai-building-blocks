@@ -24,7 +24,9 @@ test("goal comes before settings, the free plan says it is made in the browser, 
   await expect(page.getByTestId("compose-plan-note")).toContainText("Made in your browser");
   await page.getByText("More options: plan type, minds and imports", { exact: true }).click();
   await page.getByRole("tab", { name: "AI plan" }).click();
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toBeVisible();
+  expect(posts).toBe(0);
   await expect(page.getByTestId("compose-plan-note")).toContainText("AI plans are not available right now");
   await page.getByRole("tab", { name: "Quick plan" }).click();
   await page.getByTestId("compose-submit").click();

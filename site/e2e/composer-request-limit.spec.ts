@@ -29,7 +29,9 @@ for (const tag of ["", "@mobile "]) test(tag + "composer limits new requests to 
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(legacy)) });
   expect(await page.getByRole("alert").allTextContents()).toEqual([]);
   await expect(request).toHaveValue(legacyGoal);
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toContainText("Keep the request under 3000 characters.");
+  expect(posts).toBe(0);
   await expect(page.locator(".compose-voice-count")).toContainText("Shorten this draft before creating a new workflow");
   await expect(page.getByTestId("compose-download")).toBeEnabled();
   const [download] = await Promise.all([page.waitForEvent("download"), exportEditable(page)]);
@@ -43,13 +45,16 @@ for (const tag of ["", "@mobile "]) test(tag + "composer limits new requests to 
   // Reload exercises the real saved composer envelope, without truncating old requests.
   await page.reload();
   await expect(page.getByTestId("compose-goal")).toHaveValue(legacyGoal);
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toContainText("Keep the request under 3000 characters.");
+  expect(posts).toBe(0);
   await expect(page.getByTestId("compose-download")).toBeEnabled();
   await composerOptions(page);
   await page.getByRole("tab", { name: "Quick plan", exact: true }).click();
   await page.getByLabel("Import workflow JSON").setInputFiles({ name: "workflow.edit.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(exported)) });
   await expect(page.getByTestId("compose-goal")).toHaveValue(legacyGoal);
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toContainText("Keep the request under 3000 characters.");
   await page.getByTestId("compose-goal").fill("Write a checked weekly report from my supplied sales notes.");
   await expect(page.getByTestId("compose-submit")).toBeEnabled();
   expect(posts).toBe(0);

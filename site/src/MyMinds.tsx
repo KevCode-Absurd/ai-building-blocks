@@ -17,7 +17,7 @@ function pendingDraft(): { mind: CustomMind; owner: string | null; revision?: nu
     return { mind: m, owner: value.owner, revision: Number.isSafeInteger(value.revision) && value.revision >= 0 ? value.revision : undefined };
   } catch { return null; }
 }
-export default function MyMinds({ onSignIn }: { onSignIn?: () => Promise<void> } = {}) {
+export default function MyMinds({ onSignIn, startOpen = false }: { onSignIn?: () => Promise<void>; startOpen?: boolean } = {}) {
   const library = useMindLibrary(), minds = library.minds;
   const [pending] = useState(pendingDraft);
   const [draft, setDraft] = useState<CustomMind | null>(pending?.mind ?? null);
@@ -53,7 +53,7 @@ export default function MyMinds({ onSignIn }: { onSignIn?: () => Promise<void> }
     finally { if (input.current) input.current.value = ""; }
   };
   return <section className="my-minds" aria-label="My minds" data-testid="my-minds">
-    <details><summary>My minds · Keep your voice across workflows{minds.length ? ` (${minds.length})` : ""}</summary>
+    <details open={startOpen}><summary>My minds · Keep your voice across workflows{minds.length ? ` (${minds.length})` : ""}</summary>
       <p className="small">Create a reusable writing voice or way of working, then select it on any workflow task. Signed-in minds save privately to your account for use across devices. Assigned profiles are included in downloaded workflows and shared workflow links.</p>
       <div className="mind-account-status" data-testid="mind-account-status">
         {library.mode === "loading" ? <p className="small">Checking your account…</p> : library.mode === "account" ? <><p className="small">{library.busy ? "Syncing your account minds…" : "Your private account library"}</p><button type="button" className="link-btn" disabled={library.busy} onClick={() => void library.refresh()}>Refresh account minds</button></> : <><p className="small">These minds are saved in this browser. Sign in to use them across devices.{library.account.state === "error" ? " Account sign-in could not load." : ""}</p>{library.account.state === "signed-out" && <button type="button" className="link-btn" onClick={() => void signIn()}>Sign in to save minds</button>}{library.account.state === "error" && <button type="button" className="link-btn" onClick={library.account.retry}>Try account sign-in again</button>}</>}

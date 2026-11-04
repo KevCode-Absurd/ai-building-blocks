@@ -425,7 +425,7 @@ input[type="checkbox"] { accent-color: var(--text); width: 18px; height: 18px; }
 
 /* Toast */
 .toast { position: fixed; z-index: 90; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--btn); color: var(--btn-text); padding: 11px 18px; border-radius: 999px; font: 400 13px var(--mono); box-shadow: var(--shadow); animation: fade 0.2s ease; max-width: calc(100vw - 32px); text-align: center; }
-@media (max-width: 640px) { .toast[role="status"] { left: 16px; right: 76px; bottom: max(16px, env(safe-area-inset-bottom)); transform: none; width: auto; max-width: calc(100vw - 92px); border-radius: 12px; overflow-wrap: anywhere; } }
+@media (max-width: 640px) { .toast[role="status"] { left: 16px; right: 112px; bottom: max(16px, env(safe-area-inset-bottom)); transform: none; width: auto; max-width: calc(100vw - 128px); border-radius: 12px; overflow-wrap: anywhere; } }
 
 /* Add to a workflow: a pop-up over the skill page */
 .atf { width: min(620px, calc(100vw - 32px)); max-height: min(86vh, 860px); padding: 0; border: 1.5px solid var(--text); border-radius: 14px; background: var(--panel); color: var(--text); box-shadow: var(--hard), var(--shadow); overflow: hidden; }

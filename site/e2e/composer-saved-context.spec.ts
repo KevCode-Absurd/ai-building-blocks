@@ -53,7 +53,7 @@ test("AI planner uses saved work, filters expired facts, and reopens without dup
   await page.getByTestId("compose-goal").fill(goal);
   await planOptions(page);
   await page.getByText("Add context and constraints", { exact: true }).click();
-  const include = page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" });
+  const include = page.getByRole("checkbox", { name: "Use my saved brand file" });
   await expect(include).toBeChecked();
   await expect.poll(() => page.evaluate(() => document.body.textContent?.includes("Checking sign-in…"))).toBe(false);
   await page.getByLabel("Audience, offer, available inputs and limits").fill("Use the supplied CSV only.");
@@ -94,7 +94,7 @@ test("legacy planner exports retain old notes with automatic profile appending o
   await expect(page.getByTestId("flow-node")).toHaveCount(1);
   await planOptions(page);
   await page.getByText("Add context and constraints", { exact: true }).click();
-  await expect(page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" })).not.toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Use my saved brand file" })).not.toBeChecked();
   await submitPlan(page); await expect.poll(() => api.sent.length).toBe(1);
   expect(api.sent[0].context).toBe("Legacy notes and saved Core from the original export.");
 });
@@ -120,7 +120,7 @@ test("builder AI assist uses the same saved context and honors its opt-out", asy
   await page.getByTestId("builder-ai-goal").fill(goal);
   await page.getByTestId("builder-ai-assign-minds").uncheck();
   await page.getByText("Add context (optional)", { exact: true }).click();
-  const include = page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" });
+  const include = page.getByRole("checkbox", { name: "Use my saved brand file" });
   await expect(include).toBeChecked();
   await page.getByTestId("builder-ai-create").click(); await expect.poll(() => api.sent.length).toBe(1);
   expect(api.sent[0].context).toContain("Research editing for science teams");
@@ -137,7 +137,7 @@ test("@mobile saved-context controls and the resulting workflow fit a phone", as
   const api = await setup(page); await openAccountPage(page, "/compose");
   await page.getByTestId("compose-goal").fill(goal); await planOptions(page);
   await page.getByText("Add context and constraints", { exact: true }).click();
-  await expect(page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" })).toBeChecked();
+  await expect(page.getByRole("checkbox", { name: "Use my saved brand file" })).toBeChecked();
   await page.getByLabel("Audience, offer, available inputs and limits").fill("Use the supplied CSV only.");
   await page.getByTestId("compose-assign-minds").uncheck(); await submitPlan(page);
   await expect(page.getByTestId("compose-download")).toBeVisible();
@@ -150,7 +150,7 @@ test("the full 12,000-character context reopens and downloads as unvalidated pla
   const api = await setup(page); await openAccountPage(page, "/compose");
   await page.getByTestId("compose-goal").fill(goal); await planOptions(page);
   await page.getByText("Add context and constraints", { exact: true }).click();
-  await page.getByRole("checkbox", { name: "Use relevant parts of my saved me.md" }).uncheck();
+  await page.getByRole("checkbox", { name: "Use my saved brand file" }).uncheck();
   const notes = "Synthetic source notes: preserve every character.\n".padEnd(12000, "x");
   await page.getByLabel("Audience, offer, available inputs and limits").fill(notes);
   await page.getByTestId("compose-assign-minds").uncheck(); await submitPlan(page);

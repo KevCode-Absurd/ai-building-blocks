@@ -16,6 +16,6 @@ for(const tag of ['', '@mobile '])test(tag+'task preparation uses its own detail
  await expect(materials.locator('li')).toHaveCount(5);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await page.goto('/prompts/rough-notes-to-minutes-writer');
- const copy=page.getByTestId('composer-copy');await expect(copy).toBeDisabled();
+ const copy=page.getByTestId('composer-copy');await copy.click();await expect(page.getByTestId('task-input-help')).toContainText('Add your details above first.');await expect(page.locator('#composer-text')).toBeFocused();
  await page.locator('#composer-text').fill('Team meeting: Maya will send the draft on Friday.');await expect(copy).toBeEnabled();
 });

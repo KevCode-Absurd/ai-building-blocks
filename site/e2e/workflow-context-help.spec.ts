@@ -26,8 +26,8 @@ test("required task details explain the next action and copy a complete request"
   await page.addInitScript(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async (text: string) => { (window as any).requestFromHelpTest = text; } } }));
   await page.goto("/prompts/rough-notes-to-minutes-writer");
   const input = page.getByLabel("Paste your meeting notes");
-  await expect(page.getByTestId("composer-copy")).toBeDisabled();
-  await expect(page.getByTestId("task-input-help")).toContainText("Add the requested details");
+  await page.getByTestId("composer-copy").click();
+  await expect(page.getByTestId("task-input-help")).toContainText("Add your details above first.");
   await expect(input).toHaveAttribute("aria-describedby", /task-input-help/);
   const notes = "Rae sends the revised draft on Friday. The budget decision is still open.";
   await input.fill(notes); await expect(page.getByTestId("composer-copy")).toBeEnabled();

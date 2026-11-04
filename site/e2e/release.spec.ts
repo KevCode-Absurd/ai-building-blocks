@@ -90,12 +90,13 @@ test("ready workflows in the builder all have steps", async ({ page }) => {
   expect(empty, "no ready workflow with 0 steps").toEqual([]);
 });
 
-test("the menu has the four main areas and hides From people until it has enough items", async ({ page }) => {
+test("the header and menu have the main areas and hide From people until it has enough items", async ({ page }) => {
   await page.goto("/");
   await (await menuButton(page)).click();
   const menu = page.getByTestId("site-menu");
   await expect(menu).toBeVisible();
-  for (const href of ["/#library", "/compose", "/tools", "/space"]) await expect(menu.locator(`a[href="${href}"]`).first()).toBeAttached();
+  // Laptops show the main sections in the header; phones list them in the menu.
+  for (const href of ["/#library", "/compose", "/tools", "/space"]) await expect(page.locator("header.site-header").locator(`a[href="${href}"]`).first()).toBeAttached();
   await expect(page.locator('footer a[href="/how-it-works"]').first()).toBeAttached();
   await expect(menu.locator('a[href="/people"]')).toHaveCount(0);
 });

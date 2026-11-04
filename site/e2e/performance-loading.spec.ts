@@ -385,7 +385,7 @@ for (const mobile of [false, true]) {
     await trigger.focus(); await trigger.press('Enter');
     const menu = page.getByTestId('site-menu');
     await expect(menu).toBeVisible();
-    await expect(menu.getByRole('link', {name: 'Find a task', exact: true})).toBeFocused();
+    await expect(menu.locator('a[href]').first()).toBeFocused();
     const rect = await menu.boundingBox();
     expect(rect!.y).toBeGreaterThanOrEqual(64);
     expect(rect!.y + rect!.height).toBeLessThanOrEqual((page.viewportSize()!.height) + 1);

@@ -40,7 +40,8 @@ test("text request is near the top, has one main action and keeps the draft", as
  await page.goto(TASK, { waitUntil: "domcontentloaded" });
  const start = page.getByTestId("task-start");
  await expect(start.getByLabel("Paste your meeting notes")).toBeVisible();
- await expect(start.getByTestId("composer-copy")).toBeDisabled();
+ await start.getByTestId("composer-copy").click();
+ await expect(start.getByTestId("task-input-help")).toContainText("Add your details above first.");
  await start.getByLabel("Paste your meeting notes").fill(NOTES);
  await expect(start.getByTestId("composer-copy")).toBeEnabled();
  await page.reload({ waitUntil: "domcontentloaded" });

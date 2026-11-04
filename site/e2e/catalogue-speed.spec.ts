@@ -22,9 +22,12 @@ test('tool navigation switches between browser utilities and calculators with wo
   await page.getByTestId('browser-input').fill('A useful result');
   await expect(page.getByTestId('browser-output')).toContainText('3 words');
   await page.getByRole('link', { name: /All (mini )?tools/ }).first().click();
+  // The tools page shows 24 at a time; search reaches the rest.
+  await page.getByTestId('tools-search').fill('meeting cost');
   await page.locator('a[href="/tools/meeting-cost"]').first().click();
   await expect(page.getByTestId('tool-page')).toBeVisible();
-  await page.getByRole('link', { name: /All (mini )?tools/ }).first().click();
+  // Calculator pages lead back through the breadcrumb.
+  await page.getByRole('navigation', { name: 'Breadcrumb' }).getByRole('link', { name: 'Tools', exact: true }).click();
   await page.locator('a[href="/tools/json-formatter"]').first().click();
   await page.getByTestId('browser-input').fill('{"ready":true}');
   await expect(page.getByTestId('browser-output')).toContainText('"ready": true');

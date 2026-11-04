@@ -95,11 +95,13 @@ test("missing Clerk configuration leaves free assembly usable", async ({ page })
   await choosePlanner(page, "ai");
   // Guest pages defer account configuration until a sign-in is requested.
   await page.getByRole("button", {name: "Sign in", exact: true}).click();
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toBeVisible();
   await expect(page.getByTestId("compose-goal")).toHaveValue("Build a landing page from scratch");
   await choosePlanner(page, "ai");
   await expect(page.getByTestId("compose-account")).toContainText("Sign-in is unavailable");
-  await expect(page.getByTestId("compose-submit")).toBeDisabled();
+  await page.getByTestId("compose-submit").click();
+  await expect(page.locator(".compose-error")).toContainText("Sign-in is unavailable");
   await choosePlanner(page, "free");
   await page.getByTestId("compose-goal").fill("Build a landing page from scratch");
   await submitPlan(page);

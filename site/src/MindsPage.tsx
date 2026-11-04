@@ -46,7 +46,6 @@ export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, o
   }, [c]);
   useEffect(() => {
     document.title = `${myMinds ? "My minds" : "Minds"} · AI Blocks`;
-    if (myMinds) document.querySelector('[data-testid="my-minds"] details')?.setAttribute("open", "");
     return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; };
   }, [myMinds]);
   const hasQuery = !!query.trim();
@@ -78,7 +77,7 @@ export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, o
     toBuilder([...seated, ...(c.bySlug[COUNCIL] ? [COUNCIL] : [])], `Council: ${names.join(", ")}`);
   };
 
-  if (myMinds) return <div className="wrap minds-body"><Suspense fallback={<p role="status">Opening your minds…</p>}><MyMinds /></Suspense></div>;
+  if (myMinds) return <div className="wrap minds-body"><Suspense fallback={<p role="status">Opening your minds…</p>}><MyMinds startOpen /></Suspense></div>;
 
   return (
     <>

@@ -121,9 +121,9 @@ test("the starter pack downloads the same folder every time, with the prompt, th
   expect(strFromU8(files["app-starter/BUILD-RULES.md"])).toContain("mock mode");
 });
 
-test("How it works has six kinds, with routines, and its app section leads to Apps", async ({ page }) => {
+test("How it works lists the six library kinds, keeps routines, and its app section leads to Apps", async ({ page }) => {
   await page.goto("/how-it-works");
-  await expect(page.locator(".hiw-ladder li b")).toHaveText(["Prompt", "Skill", "Routine", "Workflow", "Agent", "App"]);
+  await expect(page.locator(".hiw-ladder li b")).toHaveText(["Prompt", "Skill", "Workflow", "Agent", "Mind", "Specialist"]);
   await expect(page.locator("#routine")).toBeVisible();
   await page.locator("#app").getByRole("link", { name: "Take the tour of a finished app" }).click();
   await expect(page.getByTestId("apps-index")).toBeVisible();

@@ -85,7 +85,7 @@ for(const tag of ['', '@mobile ']){
    await expect(page.getByTestId('guide-'+id)).toBeInViewport();
    await expect(page.getByTestId('guide-'+id).getByRole('listitem')).toHaveCount(3);
   }
-  await page.getByTestId('menu-btn').click();await page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Find a task',exact:true}).click();await expect(page.getByTestId('library-search')).toBeVisible();
+  if(await page.getByTestId('nav-find').count()===0)await page.getByTestId('menu-btn').click();await page.getByTestId('nav-find').click();await expect(page.getByTestId('library-search')).toBeVisible();
  });
 }
 

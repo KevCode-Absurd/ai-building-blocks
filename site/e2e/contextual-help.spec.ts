@@ -23,7 +23,7 @@ test("transfer help works with the keyboard, explains where results appear and k
   await expect(files).toContainText("does not replace the downloaded files");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await help.scrollIntoViewIfNeeded(); await page.screenshot({ path: info.outputPath("guide-transfer-320.png") });
-  await expect(page.locator(".hiw-ladder li b")).toHaveText(["Prompt", "Skill", "Routine", "Workflow", "Agent", "App"]);
+  await expect(page.locator(".hiw-ladder li b")).toHaveText(["Prompt", "Skill", "Workflow", "Agent", "Mind", "Specialist"]);
   for (const id of ["prompt", "skill", "routine", "workflow", "agent", "app", "council", "choose", "builder", "results", "words"]) await expect(page.locator("#" + id)).toBeAttached();
   await expect(page.locator("#builder")).toContainText("This does not run your work");
   await expect(page.locator("#routine")).toContainText("Downloading instructions here does not start a schedule");

@@ -36,6 +36,9 @@ test("AEO finds useful methods across types and filters retain relevance", async
 test("a natural goal finds AI answer visibility without knowing the skill name", async ({ page }) => {
   await page.goto("/#library");
   await page.getByTestId("library-search").fill("get my brand mentioned in ChatGPT answers");
+  // A search opens with its 12 best matches; the tracker is among the first page of results behind See more.
+  await expect(page.getByTestId("best-matches")).toBeVisible({ timeout: 20000 });
+  await page.getByTestId("show-more").click();
   await expect(page.locator('#library a[href="/agents/ai-answer-visibility-tracker"]')).toBeVisible({ timeout: 20000 });
   await expect(page.locator("#library .grid > a").first()).toContainText(/AI answer|visibility/i);
 });
@@ -48,7 +51,8 @@ test("agentic search includes the agent collection rather than one exact title",
   await page.getByTestId("library-search").fill("Agentic");
   await page.getByTestId("tab-agent").click();
   await expect(page.getByTestId("result-count")).toHaveText(`${agentCount} results`, { timeout: 20000 });
-  await expect(page.locator("#library .grid > a")).toHaveCount(16);
+  await expect(page.locator("#library .grid > a")).toHaveCount(12);
+  await expect(page.getByTestId("best-matches")).toBeVisible();
   await expect(page.getByTestId("show-more")).toBeVisible();
 });
 

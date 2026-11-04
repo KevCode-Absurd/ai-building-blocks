@@ -5,6 +5,8 @@ for (const tag of ["", "@mobile "]) {
   test(tag + "laptop header shows the main sections; the menu holds the rest and supports keyboard, outside close and small screens", async ({ page }) => {
     await mockComposerAccount(page, false);
     await page.goto('/apps');
+    // The prerendered header is replaced once the app starts; press keys only after that.
+    await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
     const header = page.locator('header.site-header'), trigger = page.getByTestId('menu-btn');
     const main = ['Find a task', 'Hire an AI specialist', 'Build a workflow', 'Tools', 'Minds'];
     const wide = (page.viewportSize()?.width ?? 0) >= 1000;

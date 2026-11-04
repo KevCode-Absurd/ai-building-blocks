@@ -3,7 +3,7 @@ import { BEFORE_LIBRARY_SYNC, REMOTE_LIBRARY_UPDATE } from "./lib/library-storag
 import { Drawer } from "./ui";
 import { Link } from "./lib/router";
 import { SaveHint } from "./AccountPersistence";
-import { BRAND_FILE_TITLE, DETAIL_FIELDS, GOAL_CHOICES, ME_MAX_BYTES, REACH_CHOICES, SETUP_QUESTIONS, type Business, businessText, drawerFocus, getBusiness, hasBusiness, meBytes, setBusiness, setupAnswered } from "./lib/business";
+import { BRAND_FILE_TITLE, DETAIL_FIELDS, GOAL_CHOICES, KIND_CHOICES, ME_MAX_BYTES, REACH_CHOICES, SETUP_QUESTIONS, type Business, businessText, drawerFocus, getBusiness, hasBusiness, meBytes, setBusiness, setupAnswered } from "./lib/business";
 import { MAKE_ME_PROMPT } from "./lib/me-prompts";
 import "./business-drawer.css";
 
@@ -77,6 +77,14 @@ export default function BusinessDrawer({ onClose, toast }: { onClose: () => void
                 : <textarea rows={2} value={form[q.id] ?? ""} onChange={(e) => set(q.id, e.target.value)} placeholder={q.placeholder} data-testid={`biz-${q.id}`} />}
             </label>
           ))}
+          <label className="biz-field">
+            <span>Kind of business (optional)</span>
+            <select value={form.kind ?? ""} onChange={(e) => set("kind", e.target.value)} data-testid="biz-kind">
+              <option value="">Not set</option>
+              {KIND_CHOICES.map((k) => <option key={k.id} value={k.id}>{k.label}</option>)}
+            </select>
+            <small className="small">Every download then includes a playbook for this kind of business. <Link to={form.kind ? `/industries/${form.kind}` : "/industries"} onClick={close}>See the {form.kind ? "board" : "boards"}</Link></small>
+          </label>
           <fieldset className="biz-choices" data-testid="biz-reach">
             <legend>4. {SETUP_QUESTIONS[3].label}</legend>
             {REACH_CHOICES.map((r) => (

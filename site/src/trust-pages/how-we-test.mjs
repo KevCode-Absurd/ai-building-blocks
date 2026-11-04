@@ -186,7 +186,7 @@ export function howWeTestPage(input) {
       "The average score falls at all.",
       "This scorecard is out of date.",
     ].map(t => `<span>${esc(t)}</span>`))}`,
-    `<p class="hub-links"><span>Next</span><a href="/industries">AI help by industry</a><a href="/api-and-mcp#connect">Connect your AI</a><a href="/roles">Hire an AI specialist</a></p>`,
+    `<p class="hub-links"><span>Next</span><a href="/industries">AI help by business</a><a href="/api-and-mcp#connect">Connect your AI</a><a href="/roles">Hire an AI specialist</a></p>`,
   ].join("");
   return {
     url: HOW_WE_TEST_PATH,

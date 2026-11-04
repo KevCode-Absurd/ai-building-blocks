@@ -10,7 +10,7 @@ import "./site-header.css";
 // Every main page is one menu click from anywhere, grouped by what people came to do.
 // Each link: [address, label, test id]. Policies and About sit in the footer.
 const MENU: { id: string; label: string; links: [string, string, string][] }[] = [
-  { id: "find", label: "Find", links: [["/#library", "Find a task", "find"], ["/minds", "Minds", "minds"], ["/tools", "Tools", "tools"], ["/ai-tools", "AI tool guides", "ai-tools"], ["/industries", "AI help by industry", "industries"]] },
+  { id: "find", label: "Find", links: [["/#library", "Find a task", "find"], ["/minds", "Minds", "minds"], ["/tools", "Tools", "tools"], ["/ai-tools", "AI tool guides", "ai-tools"], ["/industries", "AI help by business", "industries"]] },
   { id: "build", label: "Build", links: [["/compose", "Plan a job", "compose"], ["/get-it-done", "Get a whole job done", "get-it-done"], ["/from-a-source", "Turn an article or video into a workflow", "source"], ["/apps", "Turn a workflow into an app", "apps"]] },
   { id: "agents", label: "AI agents", links: [["/roles", "Hire an AI specialist", "roles"], ["/train-your-own-ai-agent", "Train your own AI agent", "train"], ["/teams", "Plan an AI team", "teams"]] },
   { id: "your-ai", label: "Your AI", links: [["/api-and-mcp", "Connect your AI", "api-mcp"], ["/me-md", "Your me.md file", "memd"], ["/space", "Team space", "space"]] },

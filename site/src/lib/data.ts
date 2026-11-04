@@ -94,6 +94,8 @@ export type Page = {
   fact_checks?: FactCheck[];
   /** Reviewed method adapters for this skill, generated from the published inputs and steps. */
   copyable?: ReturnType<typeof import('./copyable-task.mjs').makeTaskRecipe>;
+  /** The business boards this item is made for (scripts/lib/board-map.mjs), shown as "For" links. */
+  boards?: string[];
   headline: string; subhead: string; explain: string; when: string[];
   /** Situations where this item is the wrong tool, often naming a better one. */
   not_for?: string[];

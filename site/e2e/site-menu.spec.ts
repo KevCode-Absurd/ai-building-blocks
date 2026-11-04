@@ -12,7 +12,7 @@ for (const tag of ["", "@mobile "]) {
     const menu = page.getByTestId('site-menu');
     await expect(menu.getByRole('link').first()).toHaveText('Find a task');
     await expect(menu.getByRole('link').first()).toBeFocused();
-    for (const label of ['My Account', 'My work', 'Sign in', 'Find a task', 'Minds', 'Tools', 'AI tool guides', 'AI help by industry', 'Plan a job', 'Get a whole job done', 'Turn an article or video into a workflow', 'Turn a workflow into an app', 'Hire an AI specialist', 'Train your own AI agent', 'Plan an AI team', 'Connect your AI', 'Your me.md file', 'Team space', 'How it works', 'How we test', 'Documentation', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
+    for (const label of ['My Account', 'My work', 'Sign in', 'Find a task', 'Minds', 'Tools', 'AI tool guides', 'AI help by business', 'Plan a job', 'Get a whole job done', 'Turn an article or video into a workflow', 'Turn a workflow into an app', 'Hire an AI specialist', 'Train your own AI agent', 'Plan an AI team', 'Connect your AI', 'Your me.md file', 'Team space', 'How it works', 'How we test', 'Documentation', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
     await page.keyboard.press('Escape'); await expect(trigger).toBeFocused(); await expect(menu).toHaveCount(0);
     await trigger.click(); await header.click({ position: { x: 4, y: 4 } }); await expect(menu).toHaveCount(0);
     for (const width of [320, 390]) {

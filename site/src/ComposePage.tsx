@@ -109,8 +109,10 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
         setCustomSkills(validateCustomSkills(pending.customSkills)); setResult(null); setMode("ai"); void prepareCatalogue().catch(() => {});
       }
     } catch { /* Invalid local drafts never block sign-in. */ }
-    return () => { live = false; requestRef.current++; abortRef.current?.abort(); };
+    return () => { live = false; };
   }, [baseCatalogue]);
+  // Stop a plan in progress only when the page closes: the library arriving mid-plan must not cancel a click made before it loaded.
+  useEffect(() => () => { requestRef.current++; abortRef.current?.abort(); }, []);
   // One reader for a saved plan (this browser, the account, or another device's update).
   const readSaved = (saved: any, tools: WorkflowRuntime) => {
     const savedContext = restoreCompositionContext(saved); const custom = validateCustomSkills(saved.customSkills);
@@ -169,16 +171,18 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
   };
   // Saving needs an account only to reach other devices; the plan is already saved in this browser.
   const signInToSave = async () => { try { await account.signIn(false); } catch { setError("Sign-in could not open. Your plan is still saved in this browser."); } };
-  const adopt = (tools: WorkflowRuntime, next: Result, request: PlanRequest) => {
+  const adopt = (tools: WorkflowRuntime, next: Result, request: PlanRequest, cat: Catalogue = c) => {
     const workflowId = newWorkflowId();
-    const flow = { ...tools.compositionFlow(c, next.plan, request.goal, request.context), id: workflowId, customSkills };
+    const flow = { ...tools.compositionFlow(cat, next.plan, request.goal, request.context), id: workflowId, customSkills };
     try { flows.save(flow); } catch { /* the plan still shows; saving can be retried by editing */ }
     setPreparedZip(null); setPicks(null); setRestored(false); setGraphFlow(flow);
     setResult({ ...next, request, workflowId, createdAt: Date.now() });
   };
   const compose = async () => {
     setError(""); const invalid = requestError(goal); if (invalid) { setError(invalid); document.getElementById("compose-goal")?.focus(); return; }
-    if (!loaded) { setBusy(true); try { await prepareCatalogue(); } catch { setBusy(false); setError("The task library did not load. Check your connection and try again."); return; } setBusy(false); }
+    // A click before the library arrives waits for it, then plans with the library it just received (not the empty placeholder).
+    let lib = c;
+    if (!loaded) { setBusy(true); try { lib = withCustomSkills(await prepareCatalogue(), customSkills); } catch { setBusy(false); setError("The task library did not load. Check your connection and try again."); return; } setBusy(false); }
     if (planner === "ai" && connecting) { setError("Still checking that AI plans are available. Try again in a moment."); return; }
     if (planner === "ai" && (account.state === "loading" || account.state === "unconfigured")) { setError(account.state === "loading" ? "Still checking your sign-in. Try again in a moment." : "Sign-in is unavailable right now. Open More options and choose Quick plan to plan in your browser."); return; }
     if (planner === "ai" && !available) { setError("AI plans are not available right now. Open More options and choose Quick plan to plan in your browser."); return; }
@@ -195,8 +199,8 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
       const combined = workflowPlanningContext(context, useContext ? businessText(getBusiness()) : "", goal, useContext);
       if (planner === "free") {
         // Made in this browser from the library: free, instant and no sign-in.
-        const plan = tools.finalize(c, tools.freeSelection(c, goal, choices, context), "free");
-        adopt(tools, { plan, model: "free", cost: 0, latencyMs: 0, context: combined }, request);
+        const plan = tools.finalize(lib, tools.freeSelection(lib, goal, choices, context), "free");
+        adopt(tools, { plan, model: "free", cost: 0, latencyMs: 0, context: combined }, request, lib);
       } else {
         const verification = await protectedHeaders("compose");
         // Human verification can outlast a session JWT; acquire it immediately before sending.
@@ -204,7 +208,7 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
         const response = await fetch("/api/compose", { method: "POST", signal: controller.signal, headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context: combined, choices, assignMinds }) });
         if (response.status === 401) account.expired();
         const out = await response.json(); if (!response.ok) throw Error(out.error || "The AI plan could not finish. Try the quick plan instead.");
-        if (requestRef.current === id) { const nextPlan = tools.finalize(c, out.plan, "ai", undefined, assignMinds); adopt(tools, { ...out, context: combined, plan: nextPlan }, request); }
+        if (requestRef.current === id) { const nextPlan = tools.finalize(lib, out.plan, "ai", undefined, assignMinds); adopt(tools, { ...out, context: combined, plan: nextPlan }, request, lib); }
         void account.refreshUsage();
       }
       requestAnimationFrame(() => resultRef.current?.scrollIntoView({ block: "start", behavior: "smooth" }));

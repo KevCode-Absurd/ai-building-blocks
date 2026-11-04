@@ -16,7 +16,15 @@ details.mt-sec > summary { cursor: pointer; list-style-position: inside; }
 details.mt-sec[open] > summary { margin-bottom: 6px; }
 
 .mt-field { margin: 12px 0 18px; }
-.mt-label { display: block; font-weight: 500; font-size: 15px; margin-bottom: 6px; }
+.mt-label-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.mt-label { display: block; font-weight: 500; font-size: 15px; }
+.mt-label-row .mt-label { min-width: 0; }
+/* The (?) by each label: a 32px tap target around a small round mark. It shows where to find the number. */
+.mt-q { flex: none; display: inline-grid; place-items: center; width: 32px; height: 32px; margin: -4px 0; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--muted); cursor: pointer; }
+.mt-q span { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid currentColor; border-radius: 50%; font: 600 12px/1 var(--mono); }
+.mt-q:hover, .mt-q[aria-expanded="true"] { color: var(--text); }
+.mt-q[aria-expanded="true"] span { background: var(--text); border-color: var(--text); color: var(--bg); }
+.mt-q:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
 .mt-box { display: flex; align-items: center; height: 44px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--bg); transition: border-color 0.12s, box-shadow 0.12s; }
 .mt-box:focus-within { border-color: var(--text); box-shadow: 3px 3px 0 var(--text); }
 .mt-box.bad { border-color: #c0392b; }
@@ -27,13 +35,15 @@ details.mt-sec[open] > summary { margin-bottom: 6px; }
 .mt-err { margin: 4px 0 0; font-size: 13.5px; color: #c0392b; }
 :root[data-theme="dark"] .mt-err { color: #ff8a80; }
 :root[data-theme="dark"] .mt-box.bad { border-color: #ff8a80; }
-.mt-where summary { min-height: 24px; display: flex; align-items: center; margin-top: 6px; font: 400 12.5px var(--mono); color: var(--muted); cursor: pointer; width: fit-content; }
-.mt-where summary:hover { color: var(--text); }
-.mt-where p { margin: 6px 0 0; font-size: 13.5px; color: var(--text-2); }
+.mt-where { margin: 0 0 8px; padding: 8px 12px; border-left: 2px solid var(--line-2); background: var(--bg-2); border-radius: 0 6px 6px 0; }
+.mt-where[hidden] { display: none; }
+.mt-where p { margin: 0; font-size: 13.5px; color: var(--text-2); }
+.mt-where p + p { margin-top: 4px; }
 .mt-where .mt-held { color: var(--muted); }
 
-.mt-result { position: sticky; top: 84px; min-width: 0; max-height: calc(100vh - 100px); overflow-y: auto; padding: 0 6px 6px 0; overscroll-behavior: contain; scrollbar-width: thin; }
-@media (max-width: 900px) { .mt-result { position: static; max-height: none; overflow: visible; } }
+/* The answer panel grows to fit everything in it: no fixed height, so no line of the working is cut off. */
+.mt-result { position: sticky; top: 84px; min-width: 0; padding: 0 6px 6px 0; }
+@media (max-width: 900px) { .mt-result { position: static; } }
 .mt-answer { padding: 18px 20px; border: 1.5px solid var(--text); border-radius: 10px; background: var(--panel); box-shadow: var(--hard); font-size: 18px; font-weight: 500; line-height: 1.45; letter-spacing: -0.01em; }
 .mt-answer p { margin: 0 0 10px; }
 .mt-answer p:last-child { margin: 0; }
@@ -91,6 +101,9 @@ details.mt-sec[open] > summary { margin-bottom: 6px; }
 
 .mt-index { margin-top: 56px; }
 .mt-card .peek { font-family: var(--sans); }
+.mt-card .meta .type { margin-left: 0; text-align: left; }
+.mt-index-more { flex-direction: column; align-items: center; gap: 8px; }
+.mt-index-more p { margin: 0; }
 .mt-index-note { margin-top: 24px; }
 
 /* On a phone: the first line of the answer, pinned to the bottom while the answer itself is off screen. */

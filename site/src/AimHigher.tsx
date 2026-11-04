@@ -9,7 +9,7 @@ export type AimAnswers = Partial<Record<string, string>>;
 /** Three optional questions after a request. The answers go into the caller's request; "Copy a better prompt" works in any chat AI. */
 export default function AimHigher({ request, answers, onChange, onAdd, addLabel, toast }: {
   request: string; answers: AimAnswers; onChange: (next: AimAnswers) => void;
-  /** When set, a button adds the answers to the caller's own field (Plan a job's context). */
+  /** When set, a button adds the answers to the caller's own field (Build a workflow's context). */
   onAdd?: () => void; addLabel?: string; toast: (message: string) => void;
 }) {
   const id = useId();

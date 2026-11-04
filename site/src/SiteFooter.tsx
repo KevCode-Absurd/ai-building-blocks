@@ -6,7 +6,7 @@ import { usePeopleVisible } from "./lib/people";
 // Keep the starting points short, then help. Policies sit in the bottom row.
 // App tours are reached through How it works; source and growth tools have their own entry points.
 const groups = [
-  { label: "Explore", links: [["/#library", "Find a task"], ["/roles", "Hire an AI specialist"], ["/compose", "Plan a job"], ["/tools", "Tools"], ["/minds", "Minds"], ["/space", "Team space"]] },
+  { label: "Explore", links: [["/#library", "Find a task"], ["/roles", "Hire an AI specialist"], ["/compose", "Build a workflow"], ["/tools", "Tools"], ["/minds", "Minds"], ["/space", "Team space"]] },
   { label: "Help", links: [["/how-it-works", "How it works"], ["/support", "Help & contact"], ["/about", "About AI Blocks"]] },
 ];
 export default function SiteFooter() {

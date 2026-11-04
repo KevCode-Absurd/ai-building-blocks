@@ -66,6 +66,45 @@ const textFields = (tool) => {
 /** Everything a visitor reads, as one text, for the reading-level check. */
 export const visitorText = (tool) => textFields(tool).join("\n");
 
+// The engine's format() owns each unit: it already writes "6 hours", "25%", "$10.00", "3 weeks". So a template must
+// not add the unit again: "{peopleHours} hours" would show "6 hours hours". Words format() does not add, like
+// "minutes" or "people", belong in the template.
+const UNIT_AFTER = {
+  percent: /^\s*(%|per\s?cent\b)/i,
+  points: /^\s+(percentage\s+)?(points?|pts?)\b/i,
+  x: /^(\s*x\b|\s+times\b)/i,
+  tokens: /^\s+tokens?\b/i,
+  months: /^\s+(months?|mos?)\b/i,
+  weeks: /^\s+(weeks?|wks?)\b/i,
+  days: /^\s+days?\b/i,
+  hours: /^\s+(hours?|hrs?)\b/i,
+};
+const UNIT_BEFORE = { money: /[$£€]\s*$/, smallmoney: /[$£€]\s*$/ };
+/** Every {name} in a tool's working and answers that is followed (or led) by the unit format() already adds. */
+export function doubledUnits(tool) {
+  const unit = (id) => (tool.inputs.find((i) => i.id === id) ?? tool.outputs.find((o) => o.id === id))?.unit ?? "number";
+  const temps = [];
+  const walk = (x, self, where) => {
+    if (!x) return;
+    if (typeof x === "string") temps.push([x, self, where]);
+    else if (Array.isArray(x)) x.forEach((y) => walk(y, self, where));
+    else if (x.text) walk(x.text, self, where);
+    else if (!x.if) Object.values(x).forEach((y) => walk(y, self, where));
+  };
+  for (const o of tool.outputs) { walk(o.sum, o.id, `${o.id} working`); walk(o.means, o.id, `${o.id} meaning`); }
+  tool.answer.forEach((list) => walk(list, null, "answer"));
+  const p = [];
+  for (const [t, self, where] of temps) {
+    for (const m of t.matchAll(/\{(=|[A-Za-z_][A-Za-z0-9_]*)(?::\w+)?\}/g)) {
+      const u = unit(m[1] === "=" ? self : m[1]);
+      const after = t.slice(m.index + m[0].length);
+      const before = t.slice(0, m.index);
+      if (UNIT_AFTER[u]?.test(after) || UNIT_BEFORE[u]?.test(before)) p.push(`${tool.slug} ${where}: {${m[1]}} already shows its unit (${u}), so "${t}" says it twice`);
+    }
+  }
+  return p;
+}
+
 /** The tool file itself: formulas read, every name exists before it's used, every link is in the library, the copy follows the rules. */
 export function checkStructure(tool, examples, lib) {
   const p = [];
@@ -89,6 +128,7 @@ export function checkStructure(tool, examples, lib) {
   for (const c of conds) { try { for (const n of namesIn(parse(c))) if (!all.has(n)) p.push(`${tool.slug}: condition "${c}" uses unknown "${n}"`); } catch (e) { p.push(`${tool.slug}: condition "${c}": ${e.message}`); } }
   for (const t of temps) for (const m of t.matchAll(/\{([A-Za-z_][A-Za-z0-9_]*)(?::\w+)?\}/g)) if (!all.has(m[1])) p.push(`${tool.slug}: "${t}" names unknown "${m[1]}"`);
   for (const n of tool.next ?? []) if (lib && !lib[n.slug]) p.push(`${tool.slug}: next step "${n.slug}" isn't in catalogue-items`);
+  p.push(...doubledUnits(tool));
   for (const t of textFields(tool)) {
     if (t.includes("—")) p.push(`${tool.slug}: em dash in "${t}"`);
     if (/!/.test(t)) p.push(`${tool.slug}: exclamation mark in "${t}"`);

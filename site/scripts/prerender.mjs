@@ -131,11 +131,11 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
 const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
-const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Plan a job</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
+const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
 const logo = `<svg viewBox="0 0 24 24" aria-hidden="true" class="logo">${GLOBE.flatMap((row, y) => [...row].map((c, x) => (c === "." ? "" : `<rect x="${(x * 3.4 + 0.3).toFixed(1)}" y="${(y * 3.4 + 0.3).toFixed(1)}" width="2.9" height="2.9" fill="currentColor"${c === "+" ? ' opacity="0.32"' : ""}/>`))).join("")}</svg>`;
-const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/roles">Hire an AI specialist</a><a href="/compose">Plan a job</a><a href="/tools">Tools</a><a href="/minds">Minds</a><a href="/space">Team space</a></nav></div></header>`;
+const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/roles">Hire an AI specialist</a><a href="/compose">Build a workflow</a><a href="/tools">Tools</a><a href="/minds">Minds</a><a href="/space">Team space</a></nav></div></header>`;
 const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p>${SOCIAL_PROFILES.length ? `<p>${SOCIAL_PROFILES.map((p) => `<a href="${esc(p.url)}" rel="me noopener">${esc(p.label)}</a>`).join(" · ")}</p>` : ""}</footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
@@ -144,7 +144,7 @@ const STATIC = {
   "/publish": ["Share your skill or workflow", "Create a submission with your instructions and supporting files for our team to review."],
   "/my-submissions": ["Your community submissions", "Track your drafts, review feedback and published submissions."],
   "/admin/review": ["Review community submissions", "Backend review queue for community skills and workflows."],
-  "/compose": ["Plan a job", "Say what you want done. Get a free step-by-step plan with the right skills and checks. Edit it, then give it to your AI. No sign-up needed."],
+  "/compose": ["Build a workflow", "Say what you want done. Get a free step-by-step plan with the right skills and checks. Edit it, then give it to your AI. No sign-up needed."],
   "/how-it-works": ["How AI Blocks works", "Start with one prompt, add skills, join them into a workflow and build up to your own AI app. Free, step by step."],
   "/minds": ["Minds: hire great thinkers to work on your problem", "Over 500 minds built from public sources. Get practical help with everyday life, learning, work and creative projects, using their methods and questions."],
   "/from-a-source": ["Create AI skills from articles, transcripts and notes", "Paste source text and download a handoff pack. Your AI uses it to turn the source's method into reusable skills and a workflow you can review."],
@@ -192,7 +192,7 @@ function howItWorksBody() {
     `<h2>Start with one task</h2><ol><li>Choose what you want to do in <a href="/#library">Find a task</a>. Try meeting notes or an email reply.</li><li>Add the details the task asks for. Optional details can wait.</li><li>Copy the request into your AI chat, or give your AI the downloaded files. Send it to start the work.</li></ol>`,
     `<h2>Six kinds, from one message to an app</h2><p>Each one does more than the one before. Start with the smallest one that does your job.</p>${list(kinds.map(([n, l]) => `<b>${esc(n)}</b>: ${esc(l)}`))}`,
     `<h2>Which one to use</h2>${list(choose.map(([need, kind]) => `${esc(need)}: use ${/^[aeiou]/i.test(kind) ? "an" : "a"} ${esc(kind.toLowerCase())}.`))}`,
-    `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Plan a job from your goal</a> · <a href="/apps">See an example app</a></p>`,
+    `<p><a href="/jobs">Browse every skill by job</a> · <a href="/compose">Build a workflow from your goal</a> · <a href="/apps">See an example app</a></p>`,
     `<p><a href="/me-md">Make your me.md once. Every task then fits you.</a></p>`,
     `<p><a href="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</a></p>`,
     `<h2>How we build and review</h2>${list(["Kevin Mark runs AI Blocks. Each page says what you give the item, what you get back and when to skip it.", "Some items are rebuilt by us in our own words from public sources, which the page credits. Others are imported from open-licence collections, with the author, source and licence on the page.", "Safety checked means we checked the item for harmful or hidden instructions. Its page lists what goes in and what you get."])}<p><a href="/about#how-built">Read more about how we build and review</a></p>`,
@@ -213,7 +213,7 @@ function appsBody() {
     `<h2>What's inside the example app</h2>${list(areas.map(([n, l]) => `<b>${esc(n)}</b>: ${esc(l)}`))}`,
     `<section id="starter-pack"><h2>Build your own with the app starter pack</h2><p>A folder you give to your AI coding assistant. It asks you ten questions, writes a one-page brief, then builds one small stage at a time. It waits for your OK before it writes code, and stops after each stage so you can try it.</p></section>`,
     `<h2>Or start from our open-source app</h2><p>The open-source starter runs for one person on your own computer. It starts with sample data, so nothing costs money until you connect your own services.</p><ol>${setup.map(([h, t]) => `<li><b>${esc(h)}.</b> ${esc(t)}</li>`).join("")}</ol>`,
-    `<p><a href="/how-it-works">How skills, workflows and apps fit together</a> · <a href="/compose">Plan a job first</a></p>`,
+    `<p><a href="/how-it-works">How skills, workflows and apps fit together</a> · <a href="/compose">Build a workflow first</a></p>`,
   ].join("");
 }
 function composeBody() {
@@ -680,7 +680,7 @@ function hubIntro(t, name, bs) {
     hubSearch(bs.length, `Search the ${bs.length.toLocaleString("en-US")} items for this job`, t),
     `<h2 class="hub-h2">Start with these</h2><div class="grid hub-grid">${best.map(hubCard).join("")}</div>`,
     hubSpecialists(roleIndex, t),
-    `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Plan a job for ${esc(lowerFirst(name))}</a></p>`,
+    `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
   ].join("");
 }
 const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, [`${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills", `${n} free AI skills to use`, "AI skills"]));

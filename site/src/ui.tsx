@@ -99,7 +99,6 @@ export const BlockCard = memo(function BlockCard({ b, workflowBuilder = false }:
   const starter = TASK_STARTERS.find(task => task.slug === b.slug);
   // Pointing at a card starts fetching its page, so the click opens it without a wait.
   const wake = () => { void loadPage(b.slug); };
-  const view = kind.id === "workflow" && b.steps.length ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   const requirements = [paidService(b) ? `Needs a paid ${paidService(b)} account` : "", b.hasFiles ? "Uses supporting files" : "", b.warnings?.includes("scrapes") ? "Collects data from websites" : ""].filter(Boolean);
   const opensBuilder = workflowBuilder && kind.id === "workflow";
   const trust = trustLabel(b);
@@ -111,7 +110,7 @@ export const BlockCard = memo(function BlockCard({ b, workflowBuilder = false }:
       <span className="card-footer">
         {requirements.length > 0 && <span className="requirement">{requirements.join(" · ")}</span>}
         <span className="meta secondary-meta"><span className="kind">{kind.name}</span>{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{trust && <span className="from trust tested" data-testid="trust-badge">{trust}</span>}</span>
-        <span className="view">{opensBuilder ? "Open in builder" : starter ? "Start this task" : view}<ArrowIcon size={12} /></span>
+        <span className="view">{opensBuilder ? "Open in builder" : "Open"}<ArrowIcon size={12} /></span>
       </span>
     </Link>
   );

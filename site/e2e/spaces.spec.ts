@@ -125,7 +125,7 @@ test("kits from this browser and workflows from the builder go into the space an
     if (!localStorage.getItem("abb:v1")) localStorage.setItem("abb:v1", JSON.stringify({ kits: [{ id: "k1", name: "Launch kit", slugs: ["meta-ads-compliance-checker", "website-brand-brain-builder"], updated: 1 }], flows: [], recent: [], currentFlow: null, draft: null }));
   });
   await makeSpace(page, "Builder test");
-  await expect(page.getByTestId("bring-in")).toContainText("1 kit");
+  await expect(page.getByTestId("bring-in")).toContainText("1 saved set of skills");
   await page.getByTestId("bring-in-go").click();
   const kit = page.locator("[data-testid=space-item][data-kind=kit]");
   await expect(kit).toContainText("Launch kit");

@@ -1,9 +1,9 @@
 {
-  "source": "site/public/fonts/jetbrains-mono.woff2",
-  "source_sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
-  "output": "site/public/fonts/ai-blocks-intro-mono.woff2",
-  "bytes": 4672,
-  "sha256": "2da6d80ce92b9b032246ff3bf2be37fbca50b7de03d7d70e7f663feaa94950bb",
+  "source": "site/public/fonts/space-grotesk.woff2",
+  "source_sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+  "output": "site/public/fonts/ai-blocks-intro-sans.woff2",
+  "bytes": 4792,
+  "sha256": "bd2dfe0a7741ef803676cb976325d01e84dc1a43da28f30ebd9c71b5ff3a9ec1",
   "weight": 400,
   "text": "Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).",
   "codepoints": [

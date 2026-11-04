@@ -204,16 +204,25 @@ function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel,
   const [copied, setCopied] = useState(false);
   const biz = useBusiness();
   const about = includeBusiness ? meFor(biz, task ? [task] : []) : "";
-  const ready = !!skill && (give.length === 0 || !!text.trim());
-  const request = skill ? `${skill.trim()}\n\n---\n\n${[about, text.trim()].filter(Boolean).join("\n")}\n` : "";
+  // Several inputs get one labelled box each. Example material (one block of text) switches to a single box.
+  const fieldsKey = `${key}:fields`;
+  const [fields, setFields] = useState<string[]>(() => { try { const saved = JSON.parse(localStorage.getItem(fieldsKey) ?? "null"); return give.map((_, i) => Array.isArray(saved) && typeof saved[i] === "string" ? saved[i] : ""); } catch { return give.map(() => ""); } });
+  const [oneBox, setOneBox] = useState(() => give.length < 2 || !!text.trim());
+  const [missing, setMissing] = useState("");
+  const fieldName = (g: string) => txt(g).replace(/[.。]$/, "");
+  const input = oneBox ? text.trim() : give.map((g, i) => fields[i]?.trim() ? `${fieldName(g)}:\n${fields[i].trim()}` : "").filter(Boolean).join("\n\n");
+  const ready = !!skill && (give.length === 0 || !!input);
+  const request = skill ? `${skill.trim()}\n\n---\n\n${[about, input].filter(Boolean).join("\n")}\n` : "";
+  useEffect(() => { try { if (fields.some(Boolean)) localStorage.setItem(fieldsKey, JSON.stringify(fields)); else localStorage.removeItem(fieldsKey); } catch { /* storage unavailable; keep this draft in memory */ } }, [fieldsKey, fields]);
+  const changeField = (i: number, value: string) => { setFields(all => all.map((v, j) => j === i ? value : v)); setCopied(false); setFailed(false); setMissing(""); };
   useEffect(() => { try { if (text) localStorage.setItem(key, text); else localStorage.removeItem(key); } catch { /* storage unavailable; keep this draft in memory */ } }, [key, text]);
-  const change = (value: string) => { setText(value); setCopied(false); setFailed(false); };
+  const change = (value: string) => { setText(value); setCopied(false); setFailed(false); setMissing(""); };
   const useExample = () => {
     if (!example) return;
     const original = savedText ?? text;
     try { localStorage.setItem(backupKey, original); }
     catch { setExampleError("The example could not be saved. Your text is kept. Copy it before trying again."); return; }
-    setSavedText(original); setExampleError(""); change(example);
+    setSavedText(original); setExampleError(""); setOneBox(true); change(example);
   };
   const restoreText = () => {
     if (savedText === null) return;
@@ -224,20 +233,26 @@ function ScopedComposer({ slug, task, skill, give, toast, example, exampleLabel,
     } catch { setExampleError("Your text is restored here. This browser could not save it. Copy it before leaving."); }
   };
   const copy = async () => {
-    if (!ready) return;
+    // The button is never greyed out: say what is missing instead.
+    if (!skill) { setMissing("The instructions are still loading. Try again in a moment."); return; }
+    if (!ready) { setMissing(give.length > 1 && !oneBox ? "Fill in at least one box above first." : "Add your details above first."); document.getElementById("composer-text")?.focus(); return; }
     try { await navigator.clipboard.writeText(request); setFailed(false); setCopied(true); trackUxEvent("request_copied"); onTransfer(); toast("Request copied. Paste it into your AI chat."); }
     catch { setFailed(true); setCopied(false); }
   };
   const label = slug === "rough-notes-to-minutes-writer" ? "Paste your meeting notes" : give.length === 1 ? `Add ${txt(give[0]).replace(/[.。]$/, "")}` : "Add the details for this task";
   return <div className="composer task-composer" data-testid="composer">
-    <label htmlFor="composer-text">{label}{give.length === 0 && " (optional)"}</label>
-    {give.length > 1 && <ul className="task-materials">{give.map((g, i) => <li key={i}>{txt(g)}</li>)}</ul>}
-    <textarea id="composer-text" value={text} onChange={e => change(e.currentTarget.value)} rows={5} spellCheck placeholder={give.map(txt).join("\n")} aria-describedby={`task-local-note${!ready ? " task-input-help" : ""}`} />
-    {!ready && <p id="task-input-help" className="small task-input-help" role="status" data-testid="task-input-help">{skill ? "Add the requested details above to enable Copy the request." : "Waiting for the instructions to load. If loading fails, choose Try again above."}</p>}
+    {oneBox ? <>
+      <label htmlFor="composer-text">{label}{give.length === 0 && " (optional)"}</label>
+      <textarea id="composer-text" value={text} onChange={e => change(e.currentTarget.value)} rows={5} spellCheck placeholder={give.length === 1 ? `For example: ${txt(give[0])}` : give.length > 1 ? give.map(g => `${fieldName(g)}: …`).join("\n") : "Anything this task should know"} aria-describedby={`task-local-note${missing ? " task-input-help" : ""}`} />
+    </> : <div className="task-fields">{give.map((g, i) => <div className="task-field" key={i}>
+      <label htmlFor={i ? `composer-text-${i}` : "composer-text"}>{fieldName(g)}</label>
+      <textarea id={i ? `composer-text-${i}` : "composer-text"} value={fields[i] ?? ""} onChange={e => changeField(i, e.currentTarget.value)} rows={3} spellCheck aria-describedby={`task-local-note${missing ? " task-input-help" : ""}`} />
+    </div>)}</div>}
+    {missing && <p id="task-input-help" className="small task-input-help" role="alert" data-testid="task-input-help">{missing}</p>}
     {example && <div className="task-example-actions"><button className="link-btn" onClick={useExample} data-testid="use-task-example">{exampleLabel ? `Use ${exampleLabel.toLowerCase()}` : "Use example material"}</button>{savedText !== null && exampleLabel && <span className="small">{exampleLabel}: made-up material to show what to add.</span>}{savedText !== null && <button className="link-btn" onClick={restoreText}>Restore my text</button>}</div>}
     {exampleError && <p role="alert">{exampleError}</p>}
     <details className="task-extras"><summary>Add your brand file (optional)</summary><p className="small">Only the parts this task needs are added.</p>{hasBusiness(biz) ? <label className="task-check"><input type="checkbox" checked={includeBusiness} onChange={e => { setIncludeBusiness(e.currentTarget.checked); setCopied(false); }} />Include my brand file in this request</label> : <button className="link-btn" onClick={openBusiness}>Add your brand file</button>}</details>
-    <div className="composer-bar"><span id="task-local-note" className="small">Your draft stays on this device. Copying does not send it to an AI.</span><button className="btn btn-primary btn-sm" disabled={!ready} onClick={() => void copy()} data-testid="composer-copy">{copied ? "Request copied" : "Copy the request"}</button></div>
+    <div className="composer-bar"><span id="task-local-note" className="small">Your draft stays on this device. Copying does not send it to an AI.</span><button className="btn btn-primary btn-sm" onClick={() => void copy()} data-testid="composer-copy">{copied ? "Request copied" : "Copy the request"}</button></div>
     {failed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select the complete request below and copy it.</p><textarea aria-label="Copy the complete request manually" readOnly value={request} rows={7} onFocus={e => e.currentTarget.select()} /></div>}
     {(copied || failed) && <div className="task-transfer" data-testid="task-text-transfer"><h3>Use it in your AI</h3><ol><li>Open a new chat in your AI.</li><li>Paste the complete request and send it.</li><li>Check the result against the checks below before you use it.</li></ol><p className="small">This site prepares the request. Your AI does the work.</p></div>}
   </div>;
@@ -419,6 +434,23 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         <ItemMainAction moreId="run" render={compact => <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "download-task"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>}
           note={<><UploadSteps noun={noun} hasFiles={!!b.hasFiles} pack={isFlow} />{downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}{bring.length > 0 && <p>Your AI will ask for <a href="#task-start">what to bring</a>.</p>}</>} />
 
+        {hasFill && (
+          <section className="bp-part task-start" id="task-start" data-testid="task-start" aria-labelledby="fill-h">
+            <h2 className="bp-h2" id="fill-h">{num()}Fill it in</h2>
+            <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
+            {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+            {textTask && <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
+            {hasCopyable && <CopyableTask key={`copyable-${b.slug}`} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
+            {(betterWith.length > 0 || betterTools.length > 0) && (
+              <p className="small task-better" data-testid="better-with"><b>Better with: </b>
+                {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
+                  .flatMap((el, i) => i ? [", ", el] : [el])}.
+              </p>
+            )}
+            {!textTask && <BusinessNote />}
+          </section>
+        )}
+
         {hasGet && (
           <section className="bp-part bp-get" id="get" aria-labelledby="get-h">
             <h2 className="bp-h2" id="get-h">{num()}What you get</h2>
@@ -473,23 +505,6 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
               </div>
             )}
             <SimilarItems rows={(p as { siblings?: SiblingRow[] } | null)?.siblings} self={b.slug} />
-          </section>
-        )}
-
-        {hasFill && (
-          <section className="bp-part task-start" id="task-start" data-testid="task-start" aria-labelledby="fill-h">
-            <h2 className="bp-h2" id="fill-h">{num()}Fill it in</h2>
-            <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
-            {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
-            {textTask && <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
-            {hasCopyable && <CopyableTask key={`copyable-${b.slug}`} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
-            {(betterWith.length > 0 || betterTools.length > 0) && (
-              <p className="small task-better" data-testid="better-with"><b>Better with: </b>
-                {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
-                  .flatMap((el, i) => i ? [", ", el] : [el])}.
-              </p>
-            )}
-            {!textTask && <BusinessNote />}
           </section>
         )}
 

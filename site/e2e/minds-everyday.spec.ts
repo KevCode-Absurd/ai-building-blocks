@@ -8,6 +8,8 @@ test('browse starts with search and focused roles while tools stay in links', as
   await expect(page.getByTestId('mind-needs')).toHaveCount(0);
   await expect(page.getByTestId('council-guide')).toHaveCount(0);
   await expect(page.getByTestId('my-minds')).toHaveCount(0);
+  await expect(page.getByRole('navigation', { name: 'Breadcrumb' })).toContainText('Minds');
+  await expect(page.getByTestId('council-bar')).toHaveCount(0);
   await page.getByTestId('minds-label-founder').click();
   await page.getByRole('searchbox', { name: 'Search minds' }).fill('Steve Jobs');
   await expect(page.getByTestId('mind-card')).toHaveCount(1);

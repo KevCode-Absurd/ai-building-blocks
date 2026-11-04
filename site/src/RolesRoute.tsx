@@ -12,9 +12,10 @@ export default function RolesRoute({path,toast}:{path:string;toast:(text:string)
  const valid=path==='/roles'||!!page||/^\/roles\/[a-z0-9][a-z0-9-]{0,69}$/.test(path);
  return <main className="roles-page" data-testid="roles-page"><StartupReady/>
   <header className="wrap role-opening">
-   {id?<Link to="/roles" className="small role-back">← All AI roles</Link>:<span className="mono small">CHOOSE A ROLE. GIVE IT A JOB.</span>}
+   {id?<Link to="/roles" className="small role-back">← All AI roles</Link>:<nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">›</span><span aria-current="page">Specialists</span></nav>}
    <h1 id="role-heading">{roleOpeningTitle(path,id)}</h1>
-   <p className="role-opening-copy">{id?'Download the base specialist and give it the job inside your AI. No task form required.':'Choose a specialist for coding, design, support and more. Download its complete pack, or describe a task in your AI and accept its suggested specialists.'}</p>
+   <p className="role-opening-copy">{id?'Download the base specialist and give it the job inside your AI. No task form required.':'Pick a specialist for coding, design, support and more. Download it, then give it the job inside your AI.'}</p>
+   {!id&&<Link to="/teams" className="btn btn-line role-describe" data-testid="roles-team-entry">Not sure? Describe your task</Link>}
   </header>
   {error&&data&&<div className="wrap"><p role="alert">{error}</p><button className="btn btn-line" onClick={retry}>Try again</button></div>}
   {!valid||error&&!data?<section className="wrap role-pending"><p role="alert">{valid?error:'This role could not be found.'}</p>{valid&&<button className="btn btn-line" onClick={retry}>Try again</button>} <Link to="/roles">Browse all roles</Link></section>:

@@ -20,11 +20,11 @@ for (const mobile of [false, true]) {
   try {
    await page.goto('/', {waitUntil: 'domcontentloaded'});
    const intro = page.locator('#app-loader .hero .lede'); await expect(intro).toBeVisible();
-   await expect.poll(() => page.evaluate(() => [...document.fonts].some(face => face.family === 'AI Blocks Intro Mono' && face.status === 'loaded'))).toBe(true);
+   await expect.poll(() => page.evaluate(() => [...document.fonts].some(face => face.family === 'AI Blocks Intro Sans' && face.status === 'loaded'))).toBe(true);
    const cdp = await page.context().newCDPSession(page); await cdp.send('DOM.enable'); await cdp.send('CSS.enable');
    const doc = await cdp.send('DOM.getDocument'), node = await cdp.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: '#app-loader .hero .lede'});
    const actual = await cdp.send('CSS.getPlatformFontsForNode', {nodeId: node.nodeId});
-   expect(actual.fonts.some(face => face.familyName === 'AI Blocks Intro Mono' && face.isCustomFont)).toBe(true);
+   expect(actual.fonts.some(face => face.familyName === 'AI Blocks Intro Sans' && face.isCustomFont)).toBe(true);
    await intro.evaluate(el => { (window as any).__introBeforeApp = el; });
    const box = await intro.boundingBox();
    await page.waitForTimeout(200); const paints = await page.evaluate(() => (window as any).__introPaints);
@@ -35,7 +35,7 @@ for (const mobile of [false, true]) {
    expect(Math.abs((await live.boundingBox())!.y - box!.y)).toBeLessThan(1);
    await page.waitForTimeout(250);
    expect(await page.evaluate(() => (window as any).__introPaints)).toEqual(paints);
-   expect(await live.evaluate(el => getComputedStyle(el).fontFamily)).toContain('AI Blocks Intro Mono');
+   expect(await live.evaluate(el => getComputedStyle(el).fontFamily)).toContain('AI Blocks Intro Sans');
    await page.getByTestId('menu-btn').click(); await expect(page.getByTestId('menu-btn')).toHaveAttribute('aria-expanded', 'true');
    expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
   } finally { releaseEntry(); releaseFonts(); }
@@ -475,7 +475,7 @@ for (const mobile of [false, true]) {
     await page.route('**/assets/ComposePage-*.js', async r => { await held; await r.continue(); });
     try {
       await page.goto('/compose', {waitUntil: 'domcontentloaded'});
-      const heading = page.getByRole('heading', {name: 'Plan a job', exact: true});
+      const heading = page.getByRole('heading', {name: 'Build a workflow', exact: true});
       await expect(heading).toBeVisible();
       await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready');
       await page.evaluate(() => document.fonts.ready);

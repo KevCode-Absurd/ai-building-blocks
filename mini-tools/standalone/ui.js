@@ -58,17 +58,21 @@
       list.forEach(function (i) {
         var unit = i.unit === "money" || i.unit === "smallmoney" ? sym : i.unit === "percent" ? "%" : i.unit === "x" ? "x" : "";
         var input = el("input", { id: "in-" + i.id, inputmode: "decimal", autocomplete: "off", value: raw[i.id] == null ? "" : raw[i.id], "data-input": i.id, oninput: function (e) { raw[i.id] = e.target.value; save(); draw(); } });
-        var help = el("details", { "class": "where" }, [
-          el("summary", { text: "Where to find this number" }),
+        // Where to find the number: a small (?) button by the label shows it, so it doesn't repeat under every field.
+        var help = el("div", { "class": "where", id: "where-" + i.id, hidden: "" }, [
           el("p", { text: i.where }),
           i.tools && i.tools.length ? el("p", { "class": "tools", text: "Held in: " + i.tools.join(", ") }) : null,
         ]);
+        var q = el("button", { type: "button", "class": "q", "aria-expanded": "false", "aria-controls": "where-" + i.id, "aria-label": "Where to find: " + i.label, title: "Where to find this number" }, [el("span", { "aria-hidden": "true", text: "?" })]);
+        var toggle = function (show) { q.setAttribute("aria-expanded", String(show)); help.hidden = !show; };
+        q.addEventListener("click", function () { toggle(help.hidden); });
+        q.addEventListener("keydown", function (e) { if (e.key === "Escape" && !help.hidden) { e.preventDefault(); toggle(false); } });
         box.appendChild(el("div", { "class": "field" }, [
-          el("label", { "for": "in-" + i.id, "class": "lbl", text: i.label }),
+          el("div", { "class": "lrow" }, [el("label", { "for": "in-" + i.id, "class": "lbl", text: i.label }), q]),
+          help,
           el("div", { "class": "box" }, unit === sym ? [el("span", { "class": "unit pre", text: unit }), input] : [input, unit ? el("span", { "class": "unit", text: unit }) : null]),
           el("p", { "class": "help", text: i.help }),
           el("p", { "class": "err", id: "err-" + i.id }),
-          help,
         ]));
       });
       form.appendChild(box);

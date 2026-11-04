@@ -106,6 +106,6 @@ export function suggestNext(plan: PlanSummary, role: [string, RoleEntry] | null,
   const candidates: { at: number; step: NextStep }[] = [];
   if (plan) candidates.push({ at: plan.at, step: { text: "Download your plan and give it to your AI. Your AI does the steps and makes the result.", to: "/compose#compose-workflow", label: "Open my plan" } });
   if (role) candidates.push({ at: role[1].at, step: { text: `Add your business details to your ${(role[1].name || nameFromSlug(role[0])).toLowerCase()} and download it for your AI.`, to: `/roles/${role[0]}`, label: "Finish setting it up" } });
-  if (tool) candidates.push({ at: tool[1].at, step: { text: "Turn these numbers into a plan: say what you want to change and get the steps.", to: "/compose", label: "Plan a job" } });
+  if (tool) candidates.push({ at: tool[1].at, step: { text: "Turn these numbers into a plan: say what you want to change and get the steps.", to: "/compose", label: "Build a workflow" } });
   return candidates.sort((a, b) => b.at - a.at)[0]?.step ?? null;
 }

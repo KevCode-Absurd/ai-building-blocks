@@ -85,7 +85,7 @@ for (const tag of ["", "@mobile "]) {
     await expect(page.getByTestId("builder-ai-assign-minds")).not.toBeChecked();
     expect(posts).toBe(0);
     await expect(page.getByTestId("builder-ai-goal")).toHaveValue(goal);
-    await panel.getByRole("link", { name: "Open in Plan a job", exact: true }).click();
+    await panel.getByRole("link", { name: "Open in Build a workflow", exact: true }).click();
     await expect(page).toHaveURL(/\/compose$/);
     await expect(page.getByTestId("compose-assign-minds")).not.toBeChecked();
     await expect(page.getByTestId("compose-goal")).toHaveValue(goal);

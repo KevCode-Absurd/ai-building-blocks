@@ -30,3 +30,11 @@
 
 .mind-more { display: grid; justify-items: center; gap: 12px; margin-top: 24px; }
 .mind-more p { margin: 0; }
+
+/* Four cards a row on wide screens; a name and its company each stay on one line. */
+.minds-browse .mind-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .minds-browse .mind-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 820px) { .minds-browse .mind-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .minds-browse .mind-grid { grid-template-columns: minmax(0, 1fr); } }
+.minds-browse .mind-name, .minds-browse .mind-identity { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.minds-body.has-council { padding-bottom: 96px; }

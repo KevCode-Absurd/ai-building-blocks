@@ -108,17 +108,20 @@ test('a free plan comes before sign-in; sign-in is asked only for AI plans and f
   assert.doesNotMatch(page, /setReview/);
   assert.match(page, /Sign in to save/);
   assert.match(read('../src/lib/composer-runtime.ts'), /freeSelection/);
-  assert.match(read('../src/ComposeRoute.tsx'), /<h1 className="h2">Plan a job<\/h1>/);
-  assert.match(read('../scripts/prerender.mjs'), /"\/compose": \["Plan a job",/);
+  assert.match(read('../src/ComposeRoute.tsx'), /<h1 className="h2">Build a workflow<\/h1>/);
+  assert.match(read('../scripts/prerender.mjs'), /"\/compose": \["Build a workflow",/);
 });
 
 test('one label for planning, and saved-work places are named the same everywhere', () => {
   const header = read('../src/SiteHeader.tsx');
-  assert.match(header, /to="\/compose"[^>]*>Plan a job<\/Link>/);
+  // The home hero button, header, footer and page title all say "Build a workflow".
+  assert.match(header, /to: "\/compose", label: "Build a workflow"/);
+  assert.match(read('../src/HomePage.tsx'), />Build a workflow <ArrowIcon/);
   assert.match(header, /to="\/space"[^>]*>Team space<\/Link>/);
-  assert.match(header, /to="\/account" data-testid="open-saved-work">My work<\/Link>/);
+  assert.match(header, /to="\/account"[^>]*data-testid="open-saved-work">My work[{<]/);
+  assert.doesNotMatch(header, /My Account|My saved work|Plan a job/);
   assert.match(header, /rememberVisit\(path\)/);
-  assert.match(read('../src/SiteFooter.tsx'), /\["\/compose", "Plan a job"\]/);
+  assert.match(read('../src/SiteFooter.tsx'), /\["\/compose", "Build a workflow"\]/);
   assert.match(read('../src/AccountPage.tsx'), /Open team space/);
   assert.match(read('../src/space/SpacePage.tsx'), /data-testid="space-work-link"/);
   assert.match(read('../src/HomePage.tsx'), /<YourWork \/>/);

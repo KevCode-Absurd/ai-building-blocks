@@ -144,7 +144,7 @@ function AddForm({ onAdd }: { onAdd: (items: NewItem[]) => Promise<void> }) {
         <textarea rows={7} value={body} onInput={(e) => setBody(e.currentTarget.value)} placeholder={kind === "agent" ? "You answer support emails for…" : "Paste the SKILL.md or the prompt"} data-testid="add-body" />
       </label>
       <p><button className="btn btn-primary btn-sm" disabled={busy || (!title.trim() && !body.trim())} data-testid="add-save">{busy ? "Saving…" : "Add to team space"}</button></p>
-      <p className="small">Workflows and kits you make in the builder can be added from there, or brought in below.</p>
+      <p className="small">You can also add a workflow from the builder.</p>
     </form>
   );
 }
@@ -153,6 +153,9 @@ function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
   const [paste, setPaste] = useState("");
+  const [pasteError, setPasteError] = useState("");
+  const pasteRef = useRef<HTMLInputElement>(null);
+  const signedIn = hasAccount();
   const make = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setBusy(true);
@@ -162,6 +165,8 @@ function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
   };
   const open = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    if (!paste.trim()) { setPasteError("Paste your private link first. You copied it when you made your space."); pasteRef.current?.focus(); return; }
+    setPasteError("");
     const k = decodeURIComponent((/key=([^&\s]+)/.exec(paste)?.[1] ?? paste).trim());
     try { if (hasAccount()) await spaces.claim(k); else await spaces.mine(k); setSpaceKey(k); onMade?.(); toast("Space opened"); } catch (err) { toast(errText(err)); }
   };
@@ -169,15 +174,22 @@ function MakeSpace({ toast, onMade }: { toast: Toast; onMade?: () => void }) {
     <div className="sp-start">
       <form className="sp-card" onSubmit={make} data-testid="make-space">
         <h2 className="bp-h2">Make your team space</h2>
-        <p className="small">Sign in above to keep ownership across devices and restrict team access. Guest spaces need a private recovery link.</p>
+        {signedIn
+          ? <p className="small" data-testid="space-sign-in-note">Your space is saved to your account, so you can open it on any device.</p>
+          : <div className="sp-sign-in" data-testid="space-sign-in-note">
+              <p className="small">Sign in first to keep your space on every device and choose who on your team can open it.</p>
+              <p><Link to="/sign-in" className="btn btn-line btn-sm" data-testid="space-sign-in">Sign in</Link></p>
+              <p className="small">You can also make one without signing in. It stays in this browser, and you get a private link to open it anywhere else.</p>
+            </div>}
         <label className="sp-field"><span>Name it</span><input value={name} onInput={(e) => setName(e.currentTarget.value)} maxLength={60} placeholder="Sam's marketing team" data-testid="space-name" /></label>
         <p><button className="btn btn-primary" disabled={busy} data-testid="make-space-go">{busy ? "Making it…" : "Make my team space"} <ArrowIcon /></button></p>
       </form>
-      <form className="sp-card" onSubmit={open}>
+      <form className="sp-card" onSubmit={open} noValidate>
         <h2 className="bp-h2">Already have one?</h2>
-        <p className="small">Paste the "use on another device" link or key you saved.</p>
-        <label className="sp-field"><span>Link or key</span><input value={paste} onInput={(e) => setPaste(e.currentTarget.value)} data-testid="space-key-paste" /></label>
-        <p><button className="btn btn-dark btn-sm" disabled={!paste.trim()}>Open it</button></p>
+        <p className="small">Paste the private link you copied from "Use it on another device".</p>
+        <label className="sp-field"><span>Your private link</span><input ref={pasteRef} value={paste} onInput={(e) => { setPaste(e.currentTarget.value); if (pasteError) setPasteError(""); }} aria-invalid={pasteError ? true : undefined} aria-describedby={pasteError ? "space-key-error" : undefined} data-testid="space-key-paste" /></label>
+        {pasteError && <p className="sp-error" id="space-key-error" role="alert" data-testid="space-key-error">{pasteError}</p>}
+        <p><button className="btn btn-dark btn-sm" data-testid="space-key-open">Open it</button></p>
       </form>
     </div>
   );
@@ -197,7 +209,7 @@ function BringIn({ items, onAdd }: { items: Item[]; onAdd: (items: NewItem[]) =>
   ]);
   return (
     <div className="sp-bring" data-testid="bring-in">
-      <p><b>{[newKits.length && `${newKits.length} kit${newKits.length > 1 ? "s" : ""}`, newFlows.length && `${newFlows.length} workflow${newFlows.length > 1 ? "s" : ""}`].filter(Boolean).join(" and ")}</b> {newKits.length + newFlows.length > 1 ? "are" : "is"} saved only in this browser.</p>
+      <p><b>{[newKits.length && `${newKits.length} saved set${newKits.length > 1 ? "s" : ""} of skills`, newFlows.length && `${newFlows.length} workflow${newFlows.length > 1 ? "s" : ""}`].filter(Boolean).join(" and ")}</b> {newKits.length + newFlows.length > 1 ? "are" : "is"} saved only in this browser.</p>
       <button className="btn btn-dark btn-sm" onClick={bring} data-testid="bring-in-go">Add to team space</button>
     </div>
   );
@@ -242,7 +254,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
         <header className="wrap bp-hero">
           <p className="bp-kicker"><span className="kind">Team space</span>Free</p>
           <h1 className="bp-h1">Keep your skills and workflows in one place, and share them with your team</h1>
-          <p className="bp-sub">Save your own skills, prompts, workflows, kits and agents. Sign in to save your space to your account. Choose invited email addresses or a company email domain before sharing. Make an item public only when you want everyone to find it.</p>
+          <p className="bp-sub">Save your own skills, prompts, workflows and agents in one place. Then choose who on your team can open them: people you invite, or anyone with your company email. Nothing is public unless you make it public.</p>
           <p className="small sp-work-link" data-testid="space-work-link">Your private plans, workflows and calculator numbers are in <Link to="/account">My work</Link>. Only you see those. Your team space is what you choose to share.</p>
         </header>
         <div className="wrap ap-body">{hasAccount() && legacySpaceKey() && <p><button className="btn btn-dark" onClick={async () => { try { await spaces.claim(); await load(); } catch (e) { toast(errText(e)); } }}>Link my existing browser space to this account</button></p>}<MakeSpace toast={toast} onMade={load} /></div>
@@ -256,7 +268,7 @@ function MySpace({ c, toast }: { c: Catalogue | null; toast: Toast }) {
         {state.status === "ready"
           ? <h1 className="bp-h1"><input className="sp-name" defaultValue={state.name} key={state.name} aria-label="Space name" onBlur={(e) => rename(e.currentTarget.value)} onKeyDown={(e) => { if (e.key === "Enter") e.currentTarget.blur(); }} data-testid="space-title" /></h1>
           : <h1 className="bp-h1">Team space</h1>}
-        <p className="bp-sub">Your skills, prompts, workflows, kits and agents. Share the link below with your team: they see everything here, and can't change it.</p>
+        <p className="bp-sub">Your skills, prompts, workflows and agents. Share the link below with your team. They can read and copy what's here, but they can't change it.</p>
         <p className="small sp-work-link" data-testid="space-work-link">Your private plans, workflows and calculator numbers are in <Link to="/account">My work</Link>. Only you see those. Your team space is what you choose to share.</p>
       </header>
       <div className="wrap ap-body">

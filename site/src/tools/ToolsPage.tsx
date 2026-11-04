@@ -21,7 +21,9 @@ const store = {
   get<T>(key: string, fallback: T): T { try { const v = localStorage.getItem(key); return v ? (JSON.parse(v) as T) : fallback; } catch { return fallback; } },
   set(key: string, v: unknown) { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* private mode: still works for this visit */ } },
 };
-const asText = (d: Record<string, number>) => Object.fromEntries(Object.entries(d).map(([k, v]) => [k, String(v)]));
+/** How many tool cards the /tools list draws at first, and how many more each "Show more" adds. */
+const TOOLS_PAGE = 24;
+const asText =(d: Record<string, number>) => Object.fromEntries(Object.entries(d).map(([k, v]) => [k, String(v)]));
 const unitMark = (u: string, sym: string) => (u === "money" || u === "smallmoney" ? sym : u === "percent" ? "%" : u === "x" ? "x" : "");
 
 async function copy(text: string, toast: (m: string) => void, what: string) {
@@ -47,9 +49,18 @@ function CopyBox({ name, text, toast, testId }: { name: string; text: string; to
 function Field({ i, raw, error, sym, onChange }: { i: Input; raw: string; error?: string; sym: string; onChange: (v: string) => void }) {
   const mark = unitMark(i.unit, sym);
   const before = i.unit === "money" || i.unit === "smallmoney";
+  // Where to find the number: a small (?) button by the label shows it, so the hint doesn't repeat under every field.
+  const [open, setOpen] = useState(false);
   return (
     <div className="mt-field">
-      <label className="mt-label" htmlFor={`in-${i.id}`}>{i.label}</label>
+      <div className="mt-label-row">
+        <label className="mt-label" htmlFor={`in-${i.id}`}>{i.label}</label>
+        <button type="button" className="mt-q" aria-expanded={open} aria-controls={`where-${i.id}`} aria-label={`Where to find: ${i.label}`} title="Where to find this number" onClick={() => setOpen((o) => !o)} onKeyDown={(e) => { if (e.key === "Escape" && open) { e.preventDefault(); setOpen(false); } }} data-testid={`where-btn-${i.id}`}><span aria-hidden="true">?</span></button>
+      </div>
+      <div className="mt-where" id={`where-${i.id}`} hidden={!open} data-testid={`where-${i.id}`}>
+        <p>{i.where}</p>
+        {i.tools.length > 0 && <p className="mt-held">Held in: {i.tools.join(", ")}</p>}
+      </div>
       <div className={`mt-box${error ? " bad" : ""}`}>
         {before && <span className="mt-unit">{mark}</span>}
         <input id={`in-${i.id}`} inputMode="decimal" autoComplete="off" value={raw} onChange={(e) => onChange(e.target.value)} aria-invalid={!!error} aria-describedby={`help-${i.id}`} data-testid={`input-${i.id}`} />
@@ -57,11 +68,6 @@ function Field({ i, raw, error, sym, onChange }: { i: Input; raw: string; error?
       </div>
       <p className="mt-help" id={`help-${i.id}`}>{i.help}</p>
       {error && <p className="mt-err" role="alert">{error}</p>}
-      <details className="mt-where">
-        <summary>Where to find this number</summary>
-        <p>{i.where}</p>
-        {i.tools.length > 0 && <p className="mt-held">Held in: {i.tools.join(", ")}</p>}
-      </details>
     </div>
   );
 }
@@ -160,8 +166,7 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
   return (
     <main className="bp mt" data-testid="tool-page">
       <header className="wrap bp-hero">
-        <Link to="/tools" className="back"><span aria-hidden="true">←</span> All mini tools</Link>
-        <p className="bp-kicker"><span className="kind">{tool.short}</span>Free. No sign-up. Your numbers stay in this browser, or in your account when you sign in.</p>
+        <nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">›</span><Link to="/tools">Tools</Link><span aria-hidden="true">›</span><span aria-current="page">{tool.short}</span></nav><p className="bp-kicker">Free. No sign-up. Your numbers stay in this browser, or in your account when you sign in.</p>
         <h1 className="bp-h1">{tool.headline}</h1>
         <p className="bp-sub">{tool.summary}</p>
       </header>
@@ -306,10 +311,21 @@ function ToolsIndex() {
   const group = (t: typeof all[number]) => t.category || Object.keys(topics).find(key => topics[key].includes(t.slug)) || "pricing";
   const matches = searchTools(all, q, t => categories.find(c => c.id === group(t))?.name ?? "");
   const shown = matches.filter(t => !category || group(t) === category);
+  // The search and topics cover every tool; only the cards drawn are limited, PAGE at a time, so a phone isn't miles long.
+  const [limit, setLimit] = useState(TOOLS_PAGE);
+  useEffect(() => { setLimit(TOOLS_PAGE); }, [q, category]);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const focusAt = useRef<number | null>(null);
+  useEffect(() => {
+    if (focusAt.current === null) return;
+    (gridRef.current?.children[focusAt.current] as HTMLElement | undefined)?.focus();
+    focusAt.current = null;
+  }, [limit]);
+  const more = () => { focusAt.current = limit; setLimit(n => n + TOOLS_PAGE); };
   useEffect(() => { document.title = "Free everyday tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
   return <main className="bp mt" data-testid="tools-index">
     <header className="wrap bp-hero"><Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
-      <p className="bp-kicker"><span className="kind">Everyday tools</span>{all.length} free tools</p>
+      <nav className="crumbs" aria-label="Breadcrumb"><Link to="/">Home</Link><span aria-hidden="true">›</span><span aria-current="page">Tools</span></nav>
       <h1 className="bp-h1">Work out the numbers. Get the small jobs done.</h1>
       <p className="bp-sub">Tools for design, money, hiring, everyday work and life. Clean text, compare options, convert data or plan your budget. Your input stays in your browser.</p>
       <p className="bp-note tools-more" data-testid="tools-more">Choosing an AI product instead? <Link to="/ai-tools" data-testid="tools-ai-guides">Read the AI tool guides</Link>. Planning growth? <Link to="/tools/growth-channel-planner">Compare 19 growth channels</Link>.</p>
@@ -319,10 +335,11 @@ function ToolsIndex() {
       <div className="tools-categories" role="group" aria-label="Tool topic">{categories.map(x => <button type="button" className="chip" key={x.id} aria-pressed={category === x.id} onClick={() => setCategory(x.id)}>{x.name} <span className="small">{matches.filter(t => !x.id || group(t) === x.id).length}</span></button>)}</div>
       <p className="result-line" role="status">{shown.length} tool{shown.length === 1 ? "" : "s"}{(q || category) && <button className="link-btn" onClick={() => { setQ(""); setCategory(""); }}>Clear filters</button>}</p>
       {!shown.length && <div className="empty"><p>No tools match this search. Try fewer words or clear the filters.</p><p>Or start with one of these: {STARTER_TOOLS.map(slug => all.find(t => t.slug === slug)).filter(t => t !== undefined).map((t, i) => <span key={t.slug}>{i ? ", " : ""}<Link to={`/tools/${t.slug}`} data-testid="tool-suggestion">{t.short}</Link></span>)}.</p></div>}
-      <div className="grid">{shown.map(t => <Link className="card mt-card" key={t.slug} to={`/tools/${t.slug}`} data-testid="tool-card" data-slug={t.slug}>
-        <span className="meta"><span className="kind">{t.slug === growth.slug ? "Planner" : "kind" in t ? "Browser tool" : "Calculator"}</span><span className="type">{categories.find(c => c.id === group(t))?.name}</span></span>
+      <div className="grid" id="tool-results" ref={gridRef}>{shown.slice(0, limit).map(t => <Link className="card mt-card" key={t.slug} to={`/tools/${t.slug}`} data-testid="tool-card" data-slug={t.slug}>
+        <span className="meta"><span className="type">{categories.find(c => c.id === group(t))?.name}</span></span>
         <span className="nm">{t.short}</span><span className="peek">{t.summary}</span><span className="view">Open {t.slug === growth.slug ? "planner" : "kind" in t ? "tool" : "calculator"} <ArrowIcon size={12} /></span>
       </Link>)}</div>
+      {shown.length > limit && <div className="more mt-index-more"><p className="small">Showing {limit} of {shown.length} tools</p><button type="button" className="btn btn-dark" aria-controls="tool-results" onClick={more} data-testid="tools-show-more">Show {Math.min(TOOLS_PAGE, shown.length - limit)} more</button></div>}
       <p className="bp-note mt-index-note">Calculators include offline, spreadsheet, AI and embed versions. Browser tools export their result. The growth planner prepares a brief and skill pack.</p>
     </div>
   </main>;

@@ -28,10 +28,10 @@ export default {
     { id: "cut", label: "Share of the meeting you would cut", unit: "percent", example: 50, min: 0, max: 100, step: 5, help: "Cut half by running it every other time, or by halving its length. 50 means half.", where: "The change you are thinking about.", tools: [] },
   ],
   outputs: [
-    { id: "hourly", label: "What one person's hour costs", unit: "money", formula: "pay * (1 + oncost / 100) / workHours", sum: "{pay} × (100% + {oncost}) ÷ {workHours} hours = {=}", means: "Pay plus the extra costs, spread over the hours worked." },
+    { id: "hourly", label: "What one person's hour costs", unit: "money", formula: "pay * (1 + oncost / 100) / workHours", sum: "{pay} × (100% + {oncost}) ÷ {workHours} = {=}", means: "Pay plus the extra costs, spread over the hours worked." },
     { id: "peopleHours", label: "People-hours used each time", unit: "hours", formula: "attendees * (minutes + refocus) / 60", sum: "{attendees} people × ({minutes} + {refocus} minutes) ÷ 60 = {=}", means: "The hours of work given up each time it runs, added across everyone in it." },
     { id: "costPerMinute", label: "Cost of each minute in the room", unit: "money", formula: "attendees * hourly / 60", sum: "{attendees} × {hourly} ÷ 60 = {=}", means: "What every minute costs while it runs, before any refocus time." },
-    { id: "costPerRun", label: "Cost each time it runs", unit: "money", formula: "peopleHours * hourly", sum: "{peopleHours} hours × {hourly} = {=}", means: "The value of the time people spend, not money out of your account." },
+    { id: "costPerRun", label: "Cost each time it runs", unit: "money", formula: "peopleHours * hourly", sum: "{peopleHours} × {hourly} = {=}", means: "The value of the time people spend, not money out of your account." },
     { id: "hoursYear", label: "People-hours a year", unit: "hours", formula: "peopleHours * runs", sum: "{peopleHours} × {runs} = {=}", means: "Divide by 8 for working days given up across the group." },
     { id: "costYear", label: "Cost a year", unit: "money", formula: "costPerRun * runs", sum: "{costPerRun} × {runs} = {=}", means: [
       { if: "costYear = 0", text: "Nothing to count yet. Check that pay, length and times a year are filled in." },
@@ -43,8 +43,8 @@ export default {
   answer: [
     [
       { if: "costYear = 0", text: "Nothing to count yet. Type the length, the times it runs a year and what people earn." },
-      { if: "cut = 0", text: "This meeting costs {costYear} a year in people's time: {costPerRun} each time, across {hoursYear} hours. You have not cut any of it yet." },
-      { text: "This meeting costs {costYear} a year in people's time: {costPerRun} each time, across {hoursYear} hours. Cutting {cut} of it gives back {savedHours} hours, worth {savedYear}." },
+      { if: "cut = 0", text: "This meeting costs {costYear} a year in people's time: {costPerRun} each time, across {hoursYear}. You have not cut any of it yet." },
+      { text: "This meeting costs {costYear} a year in people's time: {costPerRun} each time, across {hoursYear}. Cutting {cut} of it gives back {savedHours}, worth {savedYear}." },
     ],
   ],
   next: [

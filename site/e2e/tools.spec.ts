@@ -7,7 +7,7 @@ import { execFileSync } from "node:child_process";
 // The tools and their worked examples, as plain data: tools/build-mini-tool.mjs writes this file on every `npm run dev` or build.
 // (Playwright can't load the .mjs formula files themselves, so the board rules are repeated in a few lines below.)
 type Item = { id: string; unit: string; boards?: string[]; none?: string; row?: string; helper?: boolean };
-type AnyTool = { slug: string; headline: string; presets: { id: string; label: string }[]; sections?: { id: string; label: string; closed?: boolean }[]; inputs: Item[]; outputs: Item[] };
+type AnyTool = { slug: string; short: string; headline: string; presets: { id: string; label: string }[]; sections?: { id: string; label: string; closed?: boolean }[]; inputs: Item[]; outputs: Item[] };
 type Example = { name: string; preset?: string; inputs: Record<string, number>; expect: Record<string, number | null>; says?: string };
 // A frozen release must be tested against its own examples, not parallel source edits.
 const DATA = JSON.parse(fs.readFileSync(`${process.env.PW_ASSET_ROOT || "public"}/mini-tools/tools.json`, "utf8")) as { tools: AnyTool[]; examples: Record<string, Example[]> };
@@ -46,7 +46,15 @@ test("the Tools page lists every mini tool, and the header and footer lead to it
   await expect(page).toHaveURL(/\/tools$/);
   const index = page.getByTestId("tools-index");
   await expect(index.getByRole("heading", { level: 1 })).toHaveText("Work out the numbers. Get the small jobs done.");
-  await expect(index.getByTestId("tool-card")).toHaveCount(tools.length + BROWSER_TOOLS.length + 1);
+  // 24 cards at first, then 24 more each time, until every tool is on the page.
+  const total = tools.length + BROWSER_TOOLS.length + 1;
+  await expect(index.getByTestId("tool-card")).toHaveCount(Math.min(24, total));
+  await expect(index.getByText("Browser tool", { exact: true })).toHaveCount(0);
+  for (let n = 24; n < total; n += 24) {
+    await index.getByTestId("tools-show-more").click();
+    await expect(index.getByTestId("tool-card")).toHaveCount(Math.min(n + 24, total));
+  }
+  await expect(index.getByTestId("tools-show-more")).toHaveCount(0);
   expect(await index.getByTestId("tool-card").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")))).toEqual(["growth-channel-planner", ...[...BROWSER_TOOLS, ...tools].map((t) => t.slug)]);
   await index.locator('[data-slug="discount-calculator"]').click();
   await expect(page).toHaveURL(/\/tools\/discount-calculator$/);
@@ -54,6 +62,14 @@ test("the Tools page lists every mini tool, and the header and footer lead to it
   await page.goto("/how-it-works");
   await page.locator(".footer").getByRole("link", { name: "Mini tools" }).click();
   await expect(page).toHaveURL(/\/tools$/);
+});
+
+test("the Tools search finds tools past the first 24 cards", async ({ page }) => {
+  await page.goto("/tools");
+  const last = tools[tools.length - 1];
+  await expect(page.locator(`[data-slug="${last.slug}"]`)).toHaveCount(0);
+  await page.getByTestId("tools-search").fill(last.short);
+  await expect(page.locator(`[data-slug="${last.slug}"]`)).toBeVisible();
 });
 
 test("the answer and every line of the working change as you type", async ({ page }) => {
@@ -136,10 +152,25 @@ test("AI run cost shows each model per run and per month, with the date the pric
 
 test("each input says where to find the real number, and the page lists the tools that hold it", async ({ page }) => {
   await page.goto("/tools/order-margin");
-  const where = page.locator(".mt-where").first();
-  await where.locator("summary").click();
+  // The hint sits behind a small (?) button by each label, not under every field.
+  await expect(page.getByText("Where to find this number", { exact: true })).toHaveCount(0);
+  const first = tools.find((t) => t.slug === "order-margin")!.inputs[0];
+  const btn = page.getByTestId(`where-btn-${first.id}`);
+  const where = page.getByTestId(`where-${first.id}`);
+  await expect(where).toBeHidden();
+  await expect(btn).toHaveAttribute("aria-expanded", "false");
+  await expect(btn).toHaveAttribute("aria-controls", `where-${first.id}`);
+  const size = await btn.boundingBox();
+  expect(Math.min(size!.width, size!.height)).toBeGreaterThanOrEqual(32);
+  await btn.click();
+  await expect(btn).toHaveAttribute("aria-expanded", "true");
+  await expect(where).toBeVisible();
   await expect(where).toContainText("Revenue divided by orders");
   await expect(where).toContainText("Held in: Shopify analytics");
+  await btn.press("Escape");
+  await expect(where).toBeHidden();
+  await btn.press("Enter");
+  await expect(where).toBeVisible();
   const best = page.getByTestId("works-best-with");
   for (const name of ["Shopify analytics", "Meta Ads Manager", "Stripe"]) await expect(best).toContainText(name);
   await expect(page.getByTestId("next-step").getByRole("link")).toHaveCount(1);

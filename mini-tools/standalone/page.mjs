@@ -14,7 +14,10 @@ h2{font-size:16px;margin:26px 0 10px}.sub{color:var(--muted);margin:10px 0 0;max
 .box input{flex:1;min-width:0;border:0;background:none;padding:9px 10px;font:500 16px var(--mono);color:var(--text)}.unit.pre{padding:0 0 0 10px}
 .cur{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:13px;color:var(--muted)}.cur input{border:1px solid var(--line);border-radius:6px;width:64px;padding:6px 8px;background:var(--panel);color:var(--text);font:500 15px var(--mono)}
 .unit{padding:0 10px;color:var(--muted);font:13px var(--mono)}.help{margin:4px 0 0}.err{color:var(--bad);font-size:13px;margin:2px 0 0}.err:empty{display:none}
-input[aria-invalid=true]{outline:2px solid var(--bad)}.where summary{font:400 12.5px var(--mono);color:var(--muted);cursor:pointer;margin-top:4px}.where p{font-size:13px;margin:6px 0 0}
+input[aria-invalid=true]{outline:2px solid var(--bad)}.lrow{display:flex;align-items:center;gap:4px;margin-bottom:4px}.lrow .lbl{margin:0;min-width:0}
+.q{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;margin:-4px 0;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);cursor:pointer}.q span{display:grid;place-items:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font:600 12px/1 var(--mono)}
+.q:hover,.q[aria-expanded=true]{color:var(--text)}.q[aria-expanded=true] span{background:var(--text);border-color:var(--text);color:var(--bg)}.q:focus-visible{outline:2px solid var(--text);outline-offset:1px}
+.where{margin:0 0 6px;padding:6px 10px;border-left:2px solid var(--line);background:var(--panel)}.where[hidden]{display:none}.where p{font-size:13px;margin:0}.where p+p{margin-top:4px;color:var(--muted)}
 .seg{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;margin-bottom:10px}.seg button{border:0;background:none;border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;color:var(--muted);cursor:pointer}
 .seg button[aria-pressed=true]{background:var(--text);color:var(--bg)}
 .answer{border:1.5px solid var(--text);border-radius:8px;padding:14px 16px;background:var(--panel);font-size:17px;font-weight:500}.answer p{margin:0 0 8px}.answer p:last-child{margin:0}

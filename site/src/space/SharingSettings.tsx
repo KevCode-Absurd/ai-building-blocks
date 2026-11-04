@@ -2,10 +2,11 @@ import { useState } from "react";
 import type { AccessPolicy } from "../server/space-access";
 import { spaces } from "../lib/space";
 import { hasAccount } from "../lib/library-storage";
+import { Link } from "../lib/router";
 export function SharingSettings({ access, onSaved }: { access: AccessPolicy; onSaved: () => void }) {
   const [mode, setMode] = useState(access.mode), [emails, setEmails] = useState(access.emails.join("\n")), [domain, setDomain] = useState(access.domain);
   const [busy, setBusy] = useState(false), [message, setMessage] = useState("");
-  if (!hasAccount()) return <p className="small">Sign in using the account button above, then link this space to restrict sharing to verified company emails or invited people.</p>;
+  if (!hasAccount()) return <div className="sp-card sp-sign-in" data-testid="space-access-sign-in"><p className="small">Sign in to choose who can open your share link. You can allow only people you invite, or anyone with your company email.</p><p><Link to="/sign-in" className="btn btn-line btn-sm">Sign in</Link></p></div>;
   return <form className="sp-card" aria-label="Workspace access" onSubmit={async e => {
     e.preventDefault(); setBusy(true); setMessage("");
     try { await spaces.access({ mode, emails: emails.split(/[\s,;]+/).filter(Boolean), domain }); setMessage("Access saved. Removed people lose access immediately."); onSaved(); }

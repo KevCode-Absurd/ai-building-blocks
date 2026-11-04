@@ -16,20 +16,20 @@ for(const tag of ['', '@mobile ']){
   await page.goto('/#library');await ready(page);
   const toggle=page.getByTestId('menu-btn');
   await toggle.click();await expect(toggle).toHaveAttribute('aria-expanded','true');
-  if(info.project.name==='mobile')await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'My Account',exact:true})).toBeFocused();
-  for(const name of ['Workflow Builder','Plan a job','Browser tools','Apps','Minds','AI tools','Growth planner','Create skills from content','Team space','Help & contact'])await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name,exact:true})).toBeVisible();
+  if(info.project.name==='mobile')await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Find a task',exact:true})).toBeFocused();
+  for(const name of ['Find a task','Hire an AI specialist','Build a workflow','Tools','Minds','Team space','Connect your AI','My work'])await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name,exact:true})).toBeVisible();
   if(info.project.name==='mobile'){
    await page.screenshot({path:info.outputPath('mobile-menu-top.png')});
-   const last=page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Help & contact',exact:true});await last.scrollIntoViewIfNeeded();await expect(last).toBeInViewport();
+   const last=page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Account settings',exact:true});await last.scrollIntoViewIfNeeded();await expect(last).toBeInViewport();
    await page.screenshot({path:info.outputPath('mobile-menu-bottom.png')});
   }
   await page.keyboard.press('Escape');await expect(toggle).toHaveAttribute('aria-expanded','false');await expect(toggle).toBeFocused();
   if(info.project.name==='mobile'){
-   await page.keyboard.press('Enter');await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'My Account',exact:true})).toBeFocused();
-   await page.keyboard.press('Tab');await expect(page.getByTestId('open-saved-work')).toBeFocused();
+   await page.keyboard.press('Enter');await expect(page.getByRole('navigation',{name:'Sections'}).getByRole('link',{name:'Find a task',exact:true})).toBeFocused();
+   await page.keyboard.press('Tab');await expect(page.getByTestId('nav-roles')).toBeFocused();
    await page.keyboard.press('Escape');await expect(toggle).toBeFocused();
   }
-  await toggle.click();await page.getByTestId('nav-intake').click();await expect(page.getByTestId('intake-text')).toBeVisible();
+  await toggle.click();await page.getByTestId('nav-compose').click();await expect(page.getByTestId('compose-page')).toBeVisible();
   await expect(toggle).toHaveAttribute('aria-expanded','false');await fits(page);
  });
 

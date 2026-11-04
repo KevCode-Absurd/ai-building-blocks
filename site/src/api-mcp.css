@@ -68,7 +68,34 @@
 .api-mcp-docs .technical li { margin-bottom: 9px; }
 .api-mcp-docs .status { min-height: 24px; font-size: 13px; color: var(--muted); margin-top: 13px; }
 .api-mcp-docs .subtle { color: var(--muted); }
+/* The three plain steps at the top: one main button (Copy the link), everything else quiet. */
+.api-mcp-docs .hero { padding-bottom: 32px; }
+.api-mcp-docs .connect-steps { list-style: none; padding: 0; margin: 0 0 48px; display: grid; gap: 14px; max-width: 760px; scroll-margin-top: 80px; }
+.api-mcp-docs .connect-step { display: flex; gap: 18px; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 23px; }
+.api-mcp-docs .connect-step > div { flex: 1; min-width: 0; }
+.api-mcp-docs .step-num { flex: 0 0 34px; height: 34px; border-radius: 50%; background: var(--text); color: var(--bg); display: grid; place-items: center; font: 650 16px/1 var(--sans); }
+.api-mcp-docs .connect-step h2 { font-size: 22px; letter-spacing: -.02em; margin: 4px 0 10px; }
+.api-mcp-docs .connect-step p { margin: 0 0 12px; }
+.api-mcp-docs .connect-step p:last-child { margin-bottom: 0; }
+.api-mcp-docs .connect-step .url { margin: 0; font-size: 14px; }
+.api-mcp-docs .copy-main { margin: 12px 0 0; }
+.api-mcp-docs .sample { font-size: 16px; line-height: 1.6; padding: 14px 16px; background: var(--raise); border-radius: 4px; }
+.api-mcp-docs .connect-step .sample { margin: 0; }
+.api-mcp-docs .connect-step .copy { margin: 12px 0 14px; }
+.api-mcp-docs .cards-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.api-mcp-docs #saved-links .note { margin-top: 17px; }
+/* Developer reference: collapsed by default; ApiMcpPage opens it when a #link points inside. */
+.api-mcp-docs .dev-reference { margin-top: 8px; }
+.api-mcp-docs .dev-reference > summary { display: inline-flex; justify-content: flex-start; gap: 9px; padding: 10px 17px; border: 1px solid var(--line-2); border-radius: 5px; font-size: 14px; font-weight: 600; }
+.api-mcp-docs .dev-reference > summary:hover { border-color: var(--text); }
+.api-mcp-docs .dev-reference > summary::before { content: "+"; font-family: var(--mono); }
+.api-mcp-docs .dev-reference[open] > summary::before { content: "−"; }
+.api-mcp-docs .dev-links { font-size: 14px; margin: 20px 0 0; }
 @media (max-width: 760px) {
+  .api-mcp-docs .cards-two { grid-template-columns: 1fr; }
+  .api-mcp-docs .connect-step { padding: 18px; gap: 14px; }
+  .api-mcp-docs .step-num { flex-basis: 30px; height: 30px; }
+  .api-mcp-docs .connect-step h2 { font-size: 20px; }
   .api-mcp-docs .cards, .api-mcp-docs .requirements { grid-template-columns: 1fr; }
   .api-mcp-docs .card { padding: 21px; }
   .api-mcp-docs .hero { padding: 49px 0 39px; }

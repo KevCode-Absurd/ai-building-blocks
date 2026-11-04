@@ -8,8 +8,10 @@ import './block-opening.css';
 /** The public opening stays mounted while the task controls and references load. */
 export default function BlockHeader({b,p,portrait,labels}:{b:Block;p:Page|null;portrait?:ReactNode;labels?:ReactNode}) {
  const kind=kindInfo(b),task=taskOf(b),isMind=b.type==='mind',tested=b.tested?.result==='pass';
+ // "Back to results" only makes sense after a search or filter. Visitors from Google or a shared link see "All tasks".
+ const returnTo=libraryReturnTo(),fromSearch=/[?&](q|kind|job|area|task|fn|audience|starred)=[^&#]/.test(returnTo);
  return <header className="wrap bp-hero" data-testid="block-opening">
-  <div className="bp-top"><Link to={libraryReturnTo()} className="back"><span aria-hidden="true">←</span> Back to results</Link><ShareButton title={p?.headline||b.name} /></div>
+  <div className="bp-top"><Link to={fromSearch?returnTo:'/#library'} className="back" data-testid="bp-back"><span aria-hidden="true">←</span> {fromSearch?'Back to results':'All tasks'}</Link><ShareButton title={p?.headline||b.name} /></div>
   {portrait}
   <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
   <h1 className="bp-h1">{p?.headline||b.name}</h1>

@@ -4,16 +4,13 @@ import { useEffect, type CSSProperties, type ReactNode } from "react";
 import { ArrowIcon } from "./ui";
 import { Code, Section } from "./BlockPage";
 import { Link } from "./lib/router";
+import { KIND_GLOSSARY } from "./lib/kinds-glossary";
+import { openBusiness } from "./Business";
 import "./contextual-help.css";
 
-const KINDS: { id: string; n: number; name: string; line: string; here: boolean }[] = [
-  { id: "prompt", n: 1, name: "Prompt", line: "One message. You paste it in and get one result.", here: true },
-  { id: "skill", n: 2, name: "Skill", line: "Saved instructions for a job you do again, with steps and checks.", here: true },
-  { id: "routine", n: 3, name: "Routine", line: "A skill or workflow you schedule in your AI or another tool.", here: true },
-  { id: "workflow", n: 4, name: "Workflow", line: "Several skills in order. Each one hands its work to the next.", here: true },
-  { id: "agent", n: 5, name: "Agent", line: "An AI that works through the steps on its own, using tools. Optional.", here: true },
-  { id: "app", n: 6, name: "App", line: "A screen your team signs in to. Fill in a form, press a button.", here: true },
-];
+// The ladder shows the six kinds in the library, defined once in lib/kinds-glossary.ts.
+const KINDS: { id: string; n: number; name: string; line: string; href: string }[] = (["prompt", "skill", "workflow", "agent", "mind", "specialist"] as const)
+  .map((id, i) => { const k = KIND_GLOSSARY.find(x => x.id === id)!; return { id, n: i + 1, name: k.name, line: k.define, href: k.anchor.startsWith("/how-it-works") ? k.anchor.slice("/how-it-works".length) : k.anchor }; });
 
 const PROMPT = `Write 10 headlines for a Facebook ad.
 
@@ -159,15 +156,14 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             </details>
             <p className="small">Need the result here instead? <Link to="/tools">Open browser tools</Link>. <Link to="/apps">App tours</Link> show example screens; a tour does not run your work.</p>
           </Section>
-          <Section id="kinds" title="Six kinds, from one message to an app" lead="Each one does more than the one before. Start with the smallest one that does your job." wide>
+          <Section id="kinds" title="The six kinds in the library" lead="These are the same six tiles you see on the home page. Start with the smallest one that does your job." wide>
             <ol className="hiw-ladder">
               {KINDS.map((k) => (
                 <li key={k.id} style={{ "--i": k.n } as CSSProperties}>
-                  <a href={`#${k.id}`}>
+                  <a href={k.href}>
                     <span className="hiw-n">{k.n}</span>
                     <b>{k.name}</b>
                     <span className="hiw-line">{k.line}</span>
-                    <Status here={k.here} />
                   </a>
                 </li>
               ))}
@@ -215,7 +211,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <Code name="SKILL.md" text={SKILL} toast={toast} />
           </Section>
 
-          <Section id="routine" title="A routine: a skill that runs on a schedule">
+          <Section id="routine" title="Also useful: run a skill on a schedule">
             <div className="prose big">
               <p>A routine is a skill or a workflow with a time or a trigger. “Every Monday at 9, read last week's ad results and tell me what to cut.” You set it up once, and it runs without you starting it.</p>
               <p>You set up the schedule in your AI or another tool. Downloading instructions here does not start a schedule.</p>
@@ -270,7 +266,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <p className="hiw-now"><Status here /> <Link to="/?kind=agent#library">See the ready-made agents</Link>.</p>
           </Section>
 
-          <Section id="app" title="An app: a finished tool with its own screen">
+          <Section id="app" title="Also useful: an app with its own screen">
             <div className="prose big">
               <p>An app puts a workflow behind a form and a button. You fill in your details, press the button, and get the result. There's no chat and no files to upload, so anyone on your team can use it.</p>
               <p>An app is worth it when many people do the same job the same way, many times. For a job you do now and then, a skill is enough.</p>
@@ -279,7 +275,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps#starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
 
-          <Section id="council" title="An advisory council: different views on one decision">
+          <Section id="council" title="A mind, and an advisory council of several">
             <p>Choose three to five minds with different strengths, such as customers, money and design. Each uses ideas from their public work to review the same facts. The council compares their answers, keeps the strongest disagreement and gives you a recommendation with next steps.</p>
             <Steps items={[
               <>Go to <Link to="/minds">Minds</Link> and use “Seat on council” on the people you want.</>,
@@ -324,7 +320,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <ul className="checks">
               <li>Try one skill on a small real job first. Check whether it uses your facts, gives the promised result and follows its own checklist. Keep it if the result helps; adapt it if it misses your needs.</li>
               <li>Give it real facts. Your AI only knows what you tell it. When it has to guess, it can make things up.</li>
-              <li data-testid="hiw-me-md"><Link to="/me-md">Make your me.md once. Every task then fits you.</Link> It's a short private file about you, added to what you copy and download.</li>
+              <li data-testid="hiw-me-md"><button type="button" className="link-btn" onClick={openBusiness}>Add your brand file once.</button> Every task then fits your business. Your <Link to="/me-md">me.md</Link> is the optional part about you.</li>
               <li data-testid="hiw-train-agent"><Link to="/train-your-own-ai-agent">Train your own AI agent for a job you do often.</Link> Each edit you make becomes a rule it follows next time.</li>
               <li>Set up your brand file once. Run “Brand profile builder” first, and every later step can use it.</li>
               <li>Start a new chat for a new job. Long chats about many things get muddled.</li>

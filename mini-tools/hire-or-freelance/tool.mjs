@@ -26,7 +26,7 @@ export default {
   ],
   outputs: [
     { id: "employeeCost", label: "Cost of an employee a year", unit: "money", formula: "salary * (1 + oncost / 100)", sum: "{salary} × (100% + {oncost}) = {=}", means: "You pay this whether the work fills the year or not." },
-    { id: "freelanceCost", label: "Cost of a freelancer a year", unit: "money", formula: "rate * hours", sum: "{rate} × {hours} hours = {=}", means: "You pay only for the hours you use." },
+    { id: "freelanceCost", label: "Cost of a freelancer a year", unit: "money", formula: "rate * hours", sum: "{rate} × {hours} = {=}", means: "You pay only for the hours you use." },
     { id: "gap", label: "Freelancer cost minus employee cost", unit: "money", formula: "freelanceCost - employeeCost", sum: "{freelanceCost} − {employeeCost} = {=}", means: [
       { if: "gap > 0", text: "Positive: hiring costs {=} less a year." },
       { if: "gap < 0", text: "Negative: the freelancer costs {=:abs} less a year." },
@@ -47,10 +47,10 @@ export default {
     [
       { if: "hours = 0", text: "With no hours of work there is nothing to compare. Type the hours of work you need a year." },
       { if: "rate = 0", text: "At a freelancer rate of zero, a freelancer is always cheaper. Type the rate you were quoted." },
-      { if: "AND(gap < 0, breakEven > capacity)", text: "A freelancer costs {freelanceCost} a year and an employee {employeeCost}, so the freelancer costs {gap:abs} less. Hiring only pays above {breakEven} hours, more than one person works in a year." },
-      { if: "gap = 0", text: "A freelancer and an employee both cost {employeeCost} a year. Hiring pays above {breakEven} hours." },
-      { if: "gap > 0", text: "An employee costs {employeeCost} a year and a freelancer {freelanceCost}, so hiring costs {gap} less. Hiring pays above {breakEven} hours, and this work is {fill} of one person's year." },
-      { text: "A freelancer costs {freelanceCost} a year and an employee {employeeCost}, so the freelancer costs {gap:abs} less. Hiring pays above {breakEven} hours, and this work is {fill} of one person's year." },
+      { if: "AND(gap < 0, breakEven > capacity)", text: "A freelancer costs {freelanceCost} a year and an employee {employeeCost}, so the freelancer costs {gap:abs} less. Hiring only pays above {breakEven}, more than one person works in a year." },
+      { if: "gap = 0", text: "A freelancer and an employee both cost {employeeCost} a year. Hiring pays above {breakEven}." },
+      { if: "gap > 0", text: "An employee costs {employeeCost} a year and a freelancer {freelanceCost}, so hiring costs {gap} less. Hiring pays above {breakEven}, and this work is {fill} of one person's year." },
+      { text: "A freelancer costs {freelanceCost} a year and an employee {employeeCost}, so the freelancer costs {gap:abs} less. Hiring pays above {breakEven}, and this work is {fill} of one person's year." },
     ],
   ],
   next: [

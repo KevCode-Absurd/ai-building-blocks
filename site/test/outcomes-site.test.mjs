@@ -152,7 +152,8 @@ test('crawlers get the same pages: prerendered HTML, sitemap entries, a route an
   const app = read('../src/App.tsx');
   assert.match(app, /isOutcomePath\(path\) \? \(\s*<OutcomesRoute/);
   assert.match(app, /!isOutcomePath\(path\)/, 'the pages load no library data');
-  assert.match(read('../src/SiteHeader.tsx'), /<Link to="\/get-it-done"[^>]*>Get a whole job done<\/Link>/);
+  // One name per destination: the header lists Build a workflow once; "get a whole job done" is offered from that page.
+  assert.match(read('../src/ComposeRoute.tsx'), /<Link to="\/get-it-done"[^>]*>get a whole job done<\/Link>/);
 });
 
 test('the start page stays light: the checks and the worked example load only on the pages that use them', () => {

@@ -20,8 +20,8 @@
       <div class="abb-support-conversation"></div>
       <footer><span>Chat with AI Blocks support.</span><a href="mailto:hello@useaiblocks.com">Email instead ↗</a></footer>
     </section>
-    <button type="button" class="abb-support-launcher" aria-expanded="false" aria-controls="abb-support-panel" aria-label="Open support chat" title="Support">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 2h14v10H7l-5 4V2Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 6h8M5 9h5" stroke="currentColor" stroke-width="1.5"/></svg>
+    <button type="button" class="abb-support-launcher" aria-expanded="false" aria-controls="abb-support-panel" aria-label="Help: open support chat">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 2h14v10H7l-5 4V2Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 6h8M5 9h5" stroke="currentColor" stroke-width="1.5"/></svg><span>Help</span>
     </button>`;
   document.body.append(host);
   const panel = host.querySelector('section');

@@ -7,9 +7,9 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import { TOOLS, EXAMPLES } from "../index.mjs";
-import { compute, defaults, evaluate, format, normsinv, parse, toExcel, toPython } from "../engine.mjs";
+import { answerLines, compute, defaults, evaluate, format, normsinv, parse, toExcel, toPython, workingLines } from "../engine.mjs";
 import { buildTool, checkTool } from "../../tools/build-mini-tool.mjs";
-import { checkStructure, checkXlsx, catalogue, exampleValues, findPython, readSheet, sheetMap, visitorText } from "../check.mjs";
+import { checkStructure, checkXlsx, catalogue, doubledUnits, exampleValues, findPython, readSheet, sheetMap, visitorText } from "../check.mjs";
 import { grade } from "../../tools/readability.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -75,6 +75,34 @@ test("numbers read the way a person writes them", () => {
   assert.equal(format("months", 1), "1.0 month");
   assert.equal(format("points", -0.7), "-0.7 points");
   assert.equal(format("money", null), "none");
+});
+
+test("a template that repeats a unit the number already shows is caught", () => {
+  const tool = {
+    slug: "t", inputs: [{ id: "h", unit: "hours" }, { id: "p", unit: "money" }, { id: "c", unit: "percent" }, { id: "m", unit: "minutes" }],
+    outputs: [{ id: "o", unit: "hours", sum: "{h} hours × {c} = {=} hours", means: "Cost {p}." }],
+    answer: [[{ if: "o = 0", text: "Costs ${p} for {m} minutes." }, { text: "Takes {h} and {c}% of it." }]],
+  };
+  const found = doubledUnits(tool);
+  assert.equal(found.length, 4, found.join("\n"));
+  assert.ok(found.some((x) => x.includes(": {=} already")), "{=} is checked with its own answer's unit");
+  assert.ok(!found.some((x) => x.includes(": {m} already")), "format() adds no word for minutes, so the template owns it");
+});
+
+test("no tool's answer or working says a unit twice, like \"6 hours hours\"", () => {
+  const twice = /\b(hour|day|week|month|token|point)s?\s+\1s?\b|%\s*(%|per\s?cent\b)|[$£€]\s*[$£€]|\dx\s+(x|times)\b/i;
+  const bad = [];
+  for (const tool of TOOLS) {
+    bad.push(...doubledUnits(tool));
+    const sym = tool.fixedCurrency ?? "$";
+    for (const ex of EXAMPLES[tool.slug]) {
+      const preset = ex.preset ?? tool.presets[0].id;
+      const env = compute(tool, exampleValues(tool, ex));
+      const text = [...answerLines(tool, env, preset, sym), ...workingLines(tool, env, preset, sym).flatMap((w) => [w.shown, w.sum, w.means])];
+      for (const t of text) if (t && twice.test(t)) bad.push(`${tool.slug} "${ex.name}": ${t}`);
+    }
+  }
+  assert.deepEqual(bad, []);
 });
 
 // ---- Every tool, five ways ----

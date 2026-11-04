@@ -21,6 +21,7 @@ import { isTested } from "./lib/verification";
 
 import {StartupReady} from "./StartupReady";
 import LibraryLoading, {LIBRARY_FORMATS} from "./LibraryLoading";
+import { kindLine } from "./lib/kinds-glossary";
 import YourWork from "./YourWork";
 const Builder = lazy(() => import("./Builder"));
 const Globe = lazy(() => import("./Globe"));
@@ -130,7 +131,9 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
   const activeTask = TASKS.find((t) => t.id === f.task);
   const area = AREAS.find((a) => a.id === f.area);
   const audience = starterFor(f.audience);
-  const shownResults = results.slice(0, limit);
+  // A search leads with its best 12 matches; the rest open on request.
+  const BEST = 12, bestOnly = hasQuery && limit === PAGE && results.length > BEST, shown = bestOnly ? BEST : limit;
+  const shownResults = results.slice(0, shown);
   const hasFilters = f.kind !== "all" || !!f.starred || !!(f.audience || f.area || f.fn || f.task);
   const formats = LIBRARY_FORMATS;
   const { searching, total } = resultCount({ hasQuery, complete, loading: searchState.loading, results });
@@ -153,20 +156,20 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
         {formats.map((k) => <button key={k.id} id={`format-${k.id}`} type="button" role="tab" aria-selected={f.kind === k.id} aria-controls="library-results" tabIndex={f.kind === k.id ? 0 : -1} onClick={() => set({ kind: k.id })} data-testid={`tab-${k.id}`}>
           <span>{k.name}</span><small>{k.line}</small>
         </button>)}
-        <Link to="/roles" className="library-format-link" data-testid="tab-specialists"><span>Specialists</span><small>Hire one for a whole job</small></Link>
+        <Link to="/roles" className="library-format-link" data-testid="tab-specialists"><span>Specialists</span><small>{kindLine("specialist")}</small></Link>
       </div>
       <div className="search big library-search-field"><SearchIcon /><label className="visually-hidden" htmlFor="task-search">What do you want to get done?</label><input id="task-search" value={f.q} onFocus={() => { if (!complete) onNeedFull?.(); }} onChange={e => set({ q: e.target.value })} placeholder="What do you want to get done?" title="Try SEO, AEO, meeting notes or a product launch" data-testid="library-search" />{f.q ? <button type="button" className="library-search-clear" aria-label="Clear search" onClick={() => { set({ q: "" }); document.getElementById("task-search")?.focus(); }}><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m5 5 8 8M13 5l-8 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg></button> : <kbd className="kbd" aria-hidden="true">/</kbd>}</div>
       {!complete && (error
         ? <p className="small" role="alert">{error} <button type="button" className="library-retry" onClick={retry}>Try the full library again</button></p>
-        : <p className="small" role="status">Showing starter picks. Search or scroll to open the full library.</p>)}
-      <p className="small library-me-step" data-testid="home-me-step"><Link to="/me-md">Make your me.md once.</Link> Every task then fits you.</p>
+        : <p className="visually-hidden" role="status">Loading the full library.</p>)}
       {audience && <div className="audience-guide small" data-testid="audience-guide">
         <p><strong>{audience.goal}</strong> These are starter picks. Clear this filter to explore all tasks.</p>
         <p>Bring: {audience.bring}</p>
-        <p><button className="link-btn" onClick={openBusiness}>Add your me.md</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
+        <p><button className="link-btn" onClick={openBusiness}>Add your brand file</button> · <a href={starterTemplate(audience.id)} download>Download a details template</a></p>
         {audience.id === "enterprise" && <p>These packs support your work in your chosen AI tool. Team access controls, company system connections and audit storage need your own implementation.</p>}
       </div>}
       <div id="library-results" role="tabpanel" aria-labelledby={`format-${f.kind}`}>
+      {!hasQuery && !hasFilters && <h3 className="library-popular" data-testid="library-popular">Popular ways to start</h3>}
       <div className="result-line">
         {(complete || searching) && <span data-testid="result-count" role="status" aria-atomic="true">{searching ? "Searching…" : <>{total} result{total === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</>}</span>}
         {hasFilters && <button type="button" className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button>}
@@ -176,8 +179,9 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
       {hasQuery && searchState.error && <p className="small" role="alert">Full instructions could not be searched. These results use titles and descriptions. <button type="button" className="link-btn" onClick={searchState.retry}>Try full search again</button></p>}
       {f.starred && account.state !== "signed-in" ? <div className="empty"><h3 className="h3">Your starred library</h3><p>Sign in to keep useful skills and workflows close, across devices.</p><button className="btn btn-dark" onClick={() => void account.signIn()}>Sign in to see your stars</button></div> : f.starred && loadError ? <div className="empty"><h3 className="h3">Your stars could not be loaded</h3><p>Please try again to see your saved stars.</p><button className="btn btn-dark" onClick={reload}>Try again</button></div> : f.starred && starsLoading ? <p role="status">Loading your stars...</p> : results.length ? (
         <>
+          {bestOnly && <h3 className="library-popular" data-testid="best-matches">Best matches</h3>}
           {!!shownResults.length && <div className="grid">{shownResults.map((b) => <BlockCard key={b.slug} b={b} workflowBuilder />)}</div>}
-          {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button></div>}
+          {results.length > shown && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit(n => bestOnly ? PAGE * 2 : n + PAGE)} data-testid="show-more">{bestOnly ? `See more results (${results.length.toLocaleString("en-US")} in all)` : `Show ${Math.min(PAGE, results.length - limit)} more`}</button></div>}
           {!personNamed && minds}
         </>
       ) : f.starred && starred.size === 0 ? <div className="empty"><h3 className="h3">Keep your next good find</h3><p>Open a skill or workflow and select Star. It will appear here.</p><button className="btn btn-dark" onClick={() => set({ starred: "" })}>Explore the library</button></div> : searching ? null : (

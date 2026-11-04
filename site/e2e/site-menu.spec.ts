@@ -2,27 +2,30 @@ import { test, expect } from "@playwright/test";
 import { mockComposerAccount } from "./fixtures/composer-account";
 
 for (const tag of ["", "@mobile "]) {
-  test(tag + "one menu exposes all features and supports keyboard, outside close and small screens", async ({ page }) => {
+  test(tag + "laptop header shows the main sections; the menu holds the rest and supports keyboard, outside close and small screens", async ({ page }) => {
     await mockComposerAccount(page, false);
     await page.goto('/apps');
     const header = page.locator('header.site-header'), trigger = page.getByTestId('menu-btn');
-    await expect(header.getByRole('button', { name: 'Menu', exact: true })).toHaveCount(1);
-    await expect(header.getByRole('link')).toHaveCount(1);
+    const main = ['Find a task', 'Hire an AI specialist', 'Build a workflow', 'Tools', 'Minds'];
+    const wide = (page.viewportSize()?.width ?? 0) >= 1000;
+    for (const label of main) await expect(header.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: label, exact: true })).toBeVisible({ visible: wide });
+    await expect(trigger).toHaveText(wide ? /More/ : /Menu/);
     await trigger.focus(); await page.keyboard.press('Enter');
     const menu = page.getByTestId('site-menu');
-    await expect(menu.getByRole('link').first()).toHaveText('My Account');
-    await expect(menu.getByRole('link').first()).toBeFocused();
-    for (const label of ['My work', 'Sign in', 'Find a task', 'Workflow Builder', 'Plan a job', 'Prompts', 'Skills', 'Workflows', 'Agents', 'Minds', 'Browser tools', 'Apps', 'AI tools', 'Growth planner', 'Create skills from content', 'Team space', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
+    await expect(menu.getByRole('link').filter({ visible: true }).first()).toBeFocused();
+    for (const label of ['Team space', 'Connect your AI', 'My work', 'Account settings', 'Sign in']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeVisible();
+    for (const label of main) await expect(menu.getByRole('link', { name: label, exact: true })).toBeVisible({ visible: !wide });
+    await expect(menu.getByRole('link', { name: 'Get a whole job done', exact: true })).toHaveCount(0);
     await page.keyboard.press('Escape'); await expect(trigger).toBeFocused(); await expect(menu).toHaveCount(0);
     await trigger.click(); await header.click({ position: { x: 4, y: 4 } }); await expect(menu).toHaveCount(0);
     for (const width of [320, 390]) {
       await page.setViewportSize({ width, height: 568 }); await trigger.click();
-      const last = menu.getByRole('link', { name: 'Help & contact', exact: true }); await last.scrollIntoViewIfNeeded(); await expect(last).toBeInViewport();
+      const last = menu.getByRole('link', { name: 'Account settings', exact: true }); await last.scrollIntoViewIfNeeded(); await expect(last).toBeInViewport();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
       await page.keyboard.press('Escape');
     }
-    await trigger.click(); await menu.getByRole('link', { name: 'Create skills from content', exact: true }).click();
-    await expect(page.getByTestId('intake-text')).toBeVisible(); await expect(menu).toHaveCount(0);
+    await trigger.click(); await menu.getByRole('link', { name: 'Build a workflow', exact: true }).click();
+    await expect(page.getByTestId('compose-page')).toBeVisible(); await expect(menu).toHaveCount(0);
   });
 
   test(tag + "guest account exposes a real sign-in route and signed-in account can sign out", async ({ page }) => {

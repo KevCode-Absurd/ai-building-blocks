@@ -8,7 +8,6 @@ import { rankLibraryResults } from "./lib/library-rank";
 import { mindSearchOrder } from "./lib/mind-match";
 import { isTested } from "./lib/verification";
 import { Link } from "./lib/router";
-import { ArrowIcon } from "./ui";
 import PixelFace from "./PixelFace";
 import { LabelBadges, LabelIcon } from "./MindLabel";
 const MyMinds = lazy(() => import("./MyMinds"));
@@ -85,7 +84,7 @@ export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, o
     <>
       <div className="wrap minds-wall"><FaceWall roster={roster} /></div>
 
-      <section className="wrap minds-body" aria-label="Find a mind">
+      <section className={`wrap minds-body${seated.length ? " has-council" : ""}`} aria-label="Find a mind">
         <div className="mind-search">
           <label htmlFor="mind-search">Search minds</label>
           <input id="mind-search" type="search" value={query} onFocus={() => onNeedFull?.()} onChange={(event) => { setQuery(event.currentTarget.value); onNeedFull?.(); }} placeholder="Search by name, e.g. Steve Jobs" />
@@ -103,38 +102,41 @@ export default function MindsPage({ c, toBuilder, complete = true, onNeedFull, o
           {(query || label) && <button className="link-btn" onClick={clear}>Clear search and filters</button>}
         </div>
         <ul className="mind-grid" id="mind-results" tabIndex={-1} aria-label="Matching minds" data-testid="mind-grid">
-          {shown.slice(0, paintCount).map((m) => <MindCard key={m.slug} m={m} c={c} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
+          {shown.slice(0, paintCount).map((m) => <MindCard key={m.slug} m={m} c={c} label={label} on={seated.includes(m.slug)} full={seated.length >= MAX} onToggle={toggle} />)}
         </ul>
         {shown.length > visibleCount && <div className="mind-more"><p className="small" role="status">Showing {paintCount} of {shown.length} minds</p><button className="btn btn-line" type="button" aria-controls="mind-results" disabled={!complete && visibleCount > PAGE_SIZE} onClick={() => { setPage({query, label, count: visibleCount + PAGE_SIZE}); onNeedFull?.(); }} data-testid="show-more-minds">{!complete && visibleCount > PAGE_SIZE ? "Opening more minds…" : <>Show {Math.min(PAGE_SIZE, shown.length - visibleCount)} more minds</>}</button></div>}
         {!shown.length && !pendingSearch && <p>No minds match this search. Try another name or clear the filters.</p>}
         <p className="small mind-attribution">AI interpretations of public work. Explore a profile for its sources and methods.</p>
       </section>
 
-      <div className={`council-bar${seated.length ? " open" : ""}`} aria-live="polite" data-testid="council-bar">
+      {/* The bar appears once a mind is seated, so it never covers the cards for someone who is only browsing. */}
+      {seated.length > 0 && <div className="council-bar open" aria-live="polite" data-testid="council-bar">
         <div className="wrap council-in">
           <span className="council-faces" aria-hidden="true">{seated.map((s) => { const r = roster.find((m) => m.slug === s); return <PixelFace key={s} face={r?.face} area={r?.area} slug={s} size={28} />; })}</span>
-          <span className="council-names">{seated.length ? <><b>Your council:</b> {seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s).join(", ")}</> : "Seat up to seven minds to start a council."}</span>
-          {seated.length > 0 && <button className="link-btn" onClick={() => setSeated([])}>Clear</button>}
-          <button className="btn btn-primary btn-sm" disabled={!seated.length} onClick={open} data-testid="open-council">Open the council in the builder</button>
+          <span className="council-names"><b>Your council:</b> {seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s).join(", ")}<span className="council-room">{seated.length >= MAX ? " The council is full." : " You can seat up to seven."}</span></span>
+          <button className="link-btn" onClick={() => setSeated([])}>Clear</button>
+          <button className="btn btn-primary btn-sm" onClick={open} data-testid="open-council">Open the council in the builder</button>
         </div>
-      </div>
+      </div>}
     </>
   );
 }
 
-function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; on: boolean; full: boolean; onToggle: (s: string) => void }) {
-  const b = c.bySlug[m.slug];
+function MindCard({ m, c, label, on, full, onToggle }: { m: RosterMind; c: Catalogue; label: string; on: boolean; full: boolean; onToggle: (s: string) => void }) {
+  const b = c.bySlug[m.slug], identity = m.identity || b?.identity;
+  // One tag per card: the role being filtered by, or else the one they're most known for.
+  const tag = label && m.labels?.includes(label) ? [label] : m.labels?.slice(0, 1);
   return (
     <li className={`mind${m.built ? "" : " soon"}${on ? " on" : ""}`} data-testid="mind-card" data-slug={m.slug} data-role={m.labels?.[0] ?? "thinker"}>
       <span className="mind-role-mark" aria-hidden="true"><LabelIcon id={m.labels?.[0] ?? "thinker"} size={28} /></span>
       <div className="mind-person">
         <PixelFace face={m.face} area={m.area} slug={m.slug} size={48} className="mind-face" />
         <div><span className="mind-area">{c.minds?.areas[m.area] ?? m.area}</span>
-          {b ? <Link to={pathOf(b)} className="mind-name mind-profile-link">{m.name}<span className="mind-view" aria-hidden="true">View more <ArrowIcon size={11} /></span></Link> : <span className="mind-name">{m.name}</span>}
-          {(m.identity || b?.identity) && <span className="mind-identity" data-testid="mind-identity">{m.identity || b?.identity}</span>}
+          {b ? <Link to={pathOf(b)} className="mind-name mind-profile-link" title={m.name}>{m.name}</Link> : <span className="mind-name" title={m.name}>{m.name}</span>}
+          {identity && <span className="mind-identity" data-testid="mind-identity" title={identity}>{identity}</span>}
         </div>
       </div>
-      <LabelBadges c={c} labels={m.labels} size="sm" />
+      <LabelBadges c={c} labels={tag} max={1} size="sm" />
       <span className="mind-seat">{m.seat}</span>
       {m.useCases?.[0] && <p className="mind-use"><b>Try:</b> {m.useCases[0]}</p>}
       {m.built

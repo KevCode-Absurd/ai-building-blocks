@@ -43,7 +43,7 @@ for(const tag of ['', '@mobile ']){
   await expect(page.locator('main h1')).toBeVisible();
   await page.evaluate(()=>history.replaceState({abbLibraryReturn:'https://example.org/?q=outside'},'',location.href));
   await page.reload();
-  await expect(page.getByRole('link',{name:'Back to results',exact:true})).toHaveAttribute('href','/#library');
+  await expect(page.getByRole('link',{name:'All tasks',exact:true})).toHaveAttribute('href','/#library');
  });
 
  test(tag+'ordinary AI-answer wording finds relevant methods and empty searches can recover',async({page})=>{

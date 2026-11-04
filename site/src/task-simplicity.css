@@ -77,3 +77,9 @@
 
 .task-reuse > summary { cursor: pointer; font-weight: 600; }
 .task-reuse[open] > summary { margin-bottom: .6rem; }
+/* One labelled box per input. */
+.task-fields { display: grid; gap: 0; }
+.task-field { border-bottom: 1px solid var(--line); }
+.task-field > label { display: block; padding: .7rem 1rem .2rem; font-weight: 600; font-size: 14px; background: var(--panel); }
+.task-start .task-composer .task-field textarea { min-height: 4.5rem; border: 0; }
+.task-input-help[role="alert"] { color: var(--text); font-weight: 500; }

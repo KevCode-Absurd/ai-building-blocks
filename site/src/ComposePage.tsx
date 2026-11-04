@@ -95,7 +95,7 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
     if (seed) { explicitImport.current = true; setGoal(seed.goal); setContext(seed.context); setUseContext(seed.useContext); setResult(null); void prepareCatalogue().catch(() => {}); }
   }, []);
   useEffect(() => {
-    document.title = "Plan a job | AI Blocks";
+    document.title = "Build a workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
     if (!explicitImport.current) try {
@@ -177,8 +177,10 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
     setResult({ ...next, request, workflowId, createdAt: Date.now() });
   };
   const compose = async () => {
-    if (!loaded) { setError("The task library is still loading. Try again in a moment."); return; }
-    setError(""); const invalid = requestError(goal); if (invalid) { setError(invalid); return; }
+    setError(""); const invalid = requestError(goal); if (invalid) { setError(invalid); document.getElementById("compose-goal")?.focus(); return; }
+    if (!loaded) { setBusy(true); try { await prepareCatalogue(); } catch { setBusy(false); setError("The task library did not load. Check your connection and try again."); return; } setBusy(false); }
+    if (planner === "ai" && connecting) { setError("Still checking that AI plans are available. Try again in a moment."); return; }
+    if (planner === "ai" && (account.state === "loading" || account.state === "unconfigured")) { setError(account.state === "loading" ? "Still checking your sign-in. Try again in a moment." : "Sign-in is unavailable right now. Open More options and choose Quick plan to plan in your browser."); return; }
     if (planner === "ai" && !available) { setError("AI plans are not available right now. Open More options and choose Quick plan to plan in your browser."); return; }
     // An AI plan uses a free account (it has a daily limit). The quick plan never asks for one.
     if (planner === "ai" && account.state !== "signed-in") { void signIn(); return; }
@@ -252,7 +254,6 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
   const earlier = savedFlows.filter(f => f.goal && f.id !== result?.workflowId).slice(0, 3);
   const useAiPlan = () => { setMode("ai"); setError(""); document.getElementById("compose-request")?.scrollIntoView({ block: "start", behavior: "smooth" }); };
   return <>
-    <nav className="compose-navigation" aria-label="Composer sections"><a href="#compose-request">1. Your request</a>{busy || result || picks ? <a href="#compose-workflow">2. Your plan</a> : <span aria-disabled="true">2. Your plan</span>}</nav>
     <div className="compose-layout" onFocusCapture={() => { void prepareCatalogue().catch(() => {}); }} onPointerDownCapture={() => { void prepareCatalogue().catch(() => {}); }}>
       <section id="compose-request" className="compose-form" aria-label="Your request">
         <form className="compose-editor-grid" onSubmit={e => { e.preventDefault(); void compose(); }}>
@@ -261,21 +262,20 @@ export default function ComposePage({ c: loaded, toast, requestCatalogue }: { c:
             <textarea id="compose-goal" data-testid="compose-goal" value={goal} onChange={e => changeGoal(e.currentTarget.value)} maxLength={LIMITS.request} rows={5} placeholder="Build a landing page, check it and give me the source code" aria-describedby="compose-goal-help" required disabled={busy || dictating} />
             <div className="compose-request-footer"><VoiceRequest value={goal} onChange={changeGoal} disabled={busy} onListeningChange={setDictating} /><span className="compose-voice-count small">{goal.length.toLocaleString()} / {LIMITS.request.toLocaleString()} characters{goal.length > LIMITS.request ? " · Shorten this draft before creating a new workflow." : ""}</span></div>
           </div>
-          <p className="small compose-goal-help" id="compose-goal-help">Say what you need, who it is for and what you want back. Try an example below if you are unsure.</p>
+          <p className="small compose-goal-help" id="compose-goal-help">Say what you need, who it is for and what you want back.</p>
+          <div className="compose-examples" aria-label="Example requests"><span className="small">Try:</span>{EXAMPLES.map(s => <button type="button" key={s} disabled={busy || dictating} onClick={() => changeGoal(s)}>{s}</button>)}</div>
           {goal.trim() && <AimHigher request={goal} answers={aim} onChange={setAim} toast={toast} addLabel="Add to the plan's context"
             onAdd={() => { const added = aimHigherText(aim); setContext(current => (current.trim() ? `${current.trim()}\n\n${added}` : added).slice(0, LIMITS.context)); setAim({}); toast("Added to the plan's context"); }} />}
           {planner === "ai" && <div><label className="compose-check"><input type="checkbox" data-testid="compose-assign-minds" checked={assignMinds} disabled={busy || dictating} onChange={event => setAssignMinds(event.currentTarget.checked)} aria-describedby="compose-minds-help" /> Assign minds to tasks</label><p className="small" id="compose-minds-help">Uses a suggested perspective for each step. Complex decisions may use a small group. You can change or remove them.</p></div>}
           </div>{goal.trim() && <details className="compose-settings-pane workflow-options"><summary>Customize the plan (optional)</summary>
           {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Starting point: {defaultChoice(id)}</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}
-          <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => setContext(e.currentTarget.value)} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => setUseContext(e.currentTarget.checked)} disabled={busy} /> Use relevant parts of my saved me.md</label><p className="small">AI planning uses your work, projects and limits when saved. Turn this off to use only your notes.</p></details>
+          <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => setContext(e.currentTarget.value)} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => setUseContext(e.currentTarget.checked)} disabled={busy} /> Use my saved brand file</label><p className="small">AI planning uses your work, projects and limits when saved. Turn this off to use only your notes.</p></details>
           {planner === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service selects the model and enforces usage limits."}</p>}
           {planner === "ai" && <p className="small compose-policy-note">Generated results and usage records are stored by the service. Share only information you are authorised to provide. <Link to="/privacy#server">How your data is handled</Link>.</p>}
           </details>}<div className="compose-submit-pane">
-          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={!loaded || busy || dictating || !goal.trim() || goal.length > LIMITS.request || planner === "ai" && (!available || connecting || account.state === "loading" || account.state === "unconfigured")}>{busy ? "Preparing your plan…" : needsSignIn ? "Sign in for an AI plan" : result ? "Create a new plan" : "Create my plan"}</button>
+          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={busy || dictating}>{busy ? "Preparing your plan…" : needsSignIn ? "Sign in for an AI plan" : result ? "Create a new plan" : "Create my plan"}</button>
           <p className="small compose-plan-note" data-testid="compose-plan-note">{planner === "free" ? "Free. Made in your browser from our library. No sign-up needed." : !connecting && !available ? "AI plans are not available right now. Choose Quick plan in More options to plan in your browser." : needsSignIn ? "AI plans need a free account. Or choose Quick plan in More options to plan without one." : "An AI plan, written for your request. Free with your account."}</p>
-          {!loaded && <span className="small compose-loading" role="status">Loading the task library…</span>}
           {busy && <button type="button" className="link-btn" onClick={() => { abortRef.current?.abort(); requestRef.current++; setBusy(false); setError("Planning stopped. Your request is still here."); }}>Stop planning</button>}
-          <div className="compose-examples" aria-label="Example requests">{EXAMPLES.map(s => <button type="button" key={s} disabled={busy || dictating} onClick={() => changeGoal(s)}>{s}</button>)}</div>
           </div>
         </form>
         {planner === "ai" && <div className="compose-account" data-testid="compose-account" aria-label="Workflow account">

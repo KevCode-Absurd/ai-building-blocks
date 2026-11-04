@@ -17,9 +17,8 @@ test("the menu leads owners to the outcome page, and the goal box hands the job 
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   const sent: string[] = [];
   page.on("request", r => sent.push(`${r.url()} ${r.postData() ?? ""}`));
-  await page.goto("/apps");
-  await page.getByTestId("menu-btn").click();
-  await page.getByTestId("site-menu").getByRole("link", { name: "Get a whole job done", exact: true }).click();
+  await page.goto("/compose");
+  await page.getByTestId("compose-get-it-done").click();
   await expect(page).toHaveURL(/\/get-it-done$/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Hand your AI a whole job, and keep every decision");
   const job = page.getByTestId("outcome-job");

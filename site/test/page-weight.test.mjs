@@ -81,10 +81,12 @@ test('no text in the shared stylesheets is set below 12px', () => {
   assert.doesNotMatch(read("../src/styles.css"), /.gauge svg { width: 92px/);
 });
 
-test('floating buttons stack on phones and the teams page keeps its side gutter', () => {
+test('one floating button (Help), Questions sit in the task page top row, and the teams page keeps its side gutter', () => {
   const styles = read('../src/styles.css'), chat = read('../public/support-chat.css'), teams = read('../src/teams/teams.css');
   assert.match(styles, /\.bp\[data-testid="block-page"\] \.cm-tab \{ position: absolute;/);
-  assert.match(styles, /\.cm-tab \{ top: auto; bottom: calc\(/);
+  assert.doesNotMatch(styles, /\.cm-tab \{[^}]*position: fixed/, 'Questions is not a second floating button');
+  assert.match(styles, /\.footer \{ padding-bottom: 96px; \}/, 'the Help button never covers the last line');
+  assert.match(read('../public/support-chat.js'), /<span>Help<\/span>/);
   assert.match(chat, /:focus/);
   assert.match(teams, /^\.team-page\{padding-block:42px 70px\}/);
   assert.doesNotMatch(teams, /\.team-page\{padding:/);

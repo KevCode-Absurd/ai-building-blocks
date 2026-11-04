@@ -18,9 +18,12 @@ test('one label: Safety checked, or nothing', () => {
 
 test('the menu and footer include Minds while navigation stays short', () => {
   const header = read('../src/SiteHeader.tsx');
-  const main = header.slice(header.indexOf('aria-label="Main sections"'), header.indexOf('</section>', header.indexOf('aria-label="Main sections"')));
-  const links = [...main.matchAll(/<Link to="([^"]+)"[^>]*>([^<]+)<\/Link>/g)].map((m) => [m[1], m[2]]);
-  assert.deepEqual(links, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Plan a job'], ['/minds', 'Minds'], ['/tools', 'Tools'], ['/space', 'Team space']]);
+  // The five main sections show in the laptop header and open the menu on phones; the menu adds Team space and Connect your AI.
+  const main = header.slice(header.indexOf('const main = ['), header.indexOf('];', header.indexOf('const main = [')));
+  const links = [...main.matchAll(/to: "([^"]+)", label: "([^"]+)"/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(links, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/minds', 'Minds']]);
+  const menu = header.slice(header.indexOf('aria-label="Main sections"'), header.indexOf('</section>', header.indexOf('aria-label="Main sections"')));
+  assert.deepEqual([...menu.matchAll(/<Link to="([^"]+)"[^>]*>([^<]+)<\/Link>/g)].map((m) => [m[1], m[2]]), [['/space', 'Team space'], ['/api-and-mcp', 'Connect your AI']]);
   for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/ai-tools']) assert.ok(!header.includes(`to="${folded}"`), `${folded} is not a header link`);
   const footer = read('../src/SiteFooter.tsx');
   const listed = [...footer.slice(footer.indexOf('const groups'), footer.indexOf('export default')).matchAll(/\["(\/[^"]*)", "([^"]+)"\]/g)].map((m) => m[1]);

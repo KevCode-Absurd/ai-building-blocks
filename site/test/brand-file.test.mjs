@@ -59,3 +59,11 @@ test("one name: the brand file, in the menu, drawer, specialist setup and team p
   for (const file of ["../src/roles/RoleTaskSetup.tsx", "../src/teams/TeamPage.tsx", "../src/BusinessDrawer.tsx"]) assert.doesNotMatch(src(file), /[Bb]rand brain/, file);
   assert.match(src("../../docs/WRITING.md"), /brand brain \| your brand file/);
 });
+
+test("the kind of business names its playbook in the brand file, and only a real board counts", () => {
+  const text = biz.businessText({ name: "Sprout", kind: "ecommerce" });
+  assert.match(text, /- \*\*Kind of business:\*\* Online stores\. Follow its playbook, FOR-ECOMMERCE\.md, when it is attached, or read it at https:\/\/useaiblocks\.com\/playbooks\/FOR-ECOMMERCE\.md/);
+  assert.equal(biz.KIND_CHOICES.length, 11);
+  assert.equal(biz.kindName({ kind: "not-a-board" }), "");
+  assert.doesNotMatch(biz.businessText({ name: "Sprout", kind: "not-a-board" }), /Kind of business/);
+});

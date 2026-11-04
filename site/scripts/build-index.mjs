@@ -21,6 +21,7 @@ import { FEEDS, connectLines, feedItems, jobHubDates, jsonFeed, newest, pageFact
 import { linkNotFor, makeNameIndex } from "../../tools/lib/not-for-links.mjs";
 import { loadSiblings } from "./lib/similar-items.mjs";
 import { pagePath } from "./lib/crawl-files.mjs";
+import { boardsOf, readFixes } from "./lib/board-map.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -28,6 +29,8 @@ const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
 const factChecks = loadFactChecks(ROOT), sourceFactRows = new Map();
 const classificationFile = path.join(ROOT, "classification.yaml");
 const classifications = compileClassifications(fs.existsSync(classificationFile) ? YAML.parse(fs.readFileSync(classificationFile, "utf8")) : {});
+// Hand fixes for the business boards (catalogue-items/boards.yaml): checked here so a typo fails the build.
+const boardFixes = readFixes();
 const copyFile = path.join(ROOT, "display-copy.yaml");
 const copyEdits = fs.existsSync(copyFile) ? YAML.parse(fs.readFileSync(copyFile, "utf8")) ?? {} : {};
 const copyUsed = new Set();
@@ -178,6 +181,10 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
           inputs: asPorts(item.inputs), outputs: asPorts(item.outputs), uses: item.uses ?? [], steps, hasFiles: files.length > 0,
         }, { ...page, sourceInputFields: schemaFields(metadata.input_schema), sourceOutputFields: schemaFields(metadata.output_schema) }, skill);
       }
+      // The business boards this item is made for (src/trust-pages/boards.mjs): its page shows them as "For:" links.
+      const forBoards = boardsOf({ slug, name: page?.name ?? item.name ?? slug, summary: page?.summary ?? item.summary ?? "", headline: page?.headline ?? "", cues: cuesOf(page?.when),
+        task: classifications.primary.get(slug) ?? page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai", category: category === "orchestrators" ? "orchestrator" : category, type: item.type ?? "skill" }, boardFixes.fixes);
+      if (forBoards.length) out.boards = forBoards;
       fs.writeFileSync(path.join(OUT_PAGES, `${slug}.json`), JSON.stringify(out));
     }
     const links = Object.fromEntries(["next", "before"].map((k) => [k, page?.[k] ?? item[k]]).filter(([, v]) => v !== undefined));

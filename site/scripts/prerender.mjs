@@ -16,6 +16,7 @@ import { loadRoleLinks, specialistsSection, hubSpecialists } from "./lib/role-li
 import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
 import {mindDirectory, mindDirectoryUrls} from "./lib/mind-directory.mjs";
 import { brokenLinks, guidesSitemap, trustPages } from "./lib/trust-pages.mjs";
+import { BOARD_NAMES, boardHref, playbookHref } from "../src/trust-pages/board-names.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
@@ -130,7 +131,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by industry"], ["/how-we-test", "How we test"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Plan a job</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My saved work</a></nav></header>`;
 // The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -458,7 +459,7 @@ function pageFor(url) {
     crumbs: job ? [[job, jobHref(b.task)]] : [],
     body: [
       // The subhead goes where the app puts it (p.bp-sub), so the page reads the same before and after the app opens.
-      ...(subhead ? [`<p class="bp-sub">${esc(subhead)}</p>`, `<p>${esc(b.summary)}${isCoordinator ? ` ${esc(kindLine)}` : ""}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`]), `<p class="small">${facts.map(esc).join(" · ")}</p>`,
+      ...(subhead ? [`<p class="bp-sub">${esc(subhead)}</p>`, `<p>${esc(b.summary)}${isCoordinator ? ` ${esc(kindLine)}` : ""}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`]), `<p class="small">${facts.map(esc).join(" · ")}</p>`, ...(Array.isArray(page.boards) && page.boards.length ? [`<p class="small">For: ${page.boards.filter((x) => BOARD_NAMES[x]).map((x) => `<a href="${boardHref(x)}">${esc(BOARD_NAMES[x])}</a>`).join(", ")}</p>`] : []),
       // Three parts first (what you get, fill it in, run it), then what to do next, then everything else under one Details.
       page.output_shape || get.length || fitHtml || sampleHtml ? `<section id="get"><h2>What you get</h2>${sampleHtml}${page.output_shape ? (hasSample ? `<details><summary>See the full layout</summary><p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre></details>` : `<p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre>`) : hasSample ? "" : list(get.map(esc))}${fitHtml}</section>` : "",
       give.length ? `<section id="task-start"><h2>Fill it in</h2><p>${isFlow ? "Gather these first. You add them in your AI after you download." : "Add what this task works from, then copy the request."}</p>${list(give.map(esc))}</section>` : "",
@@ -732,7 +733,7 @@ for (const [t, bs] of tasks) {
 // catalogue, listed in their own sitemap (sitemap-guides.xml). A pick that no longer exists or a link that goes nowhere fails the build.
 const trustTools = [...BROWSER_TOOLS, ...TOOLS];
 const trust = await trustPages({ cat, readPage, roles: roleIndex, tools: trustTools, routeExists: (u) => urls.includes(u) || fs.existsSync(path.join(DIST, `${u.slice(1)}.html`)) });
-problems.push(...trust.problems, ...brokenLinks(trust.pages, { cat, roles: roleIndex, tools: trustTools, sitePaths: [...urls, ...hubUrls] }).map((l) => `guide page link goes nowhere: ${l}`));
+problems.push(...trust.problems, ...brokenLinks(trust.pages, { cat, roles: roleIndex, tools: trustTools, sitePaths: [...urls, ...hubUrls, ...Object.keys(BOARD_NAMES).map(playbookHref)] }).map((l) => `guide page link goes nowhere: ${l}`));
 for (const pg of trust.pages) write(pg.url, render(pg.url, pg, { plain: true }));
 guidesSitemap(trust.pages, DIST);
 

@@ -12,6 +12,7 @@ import { ACTION_RULE, MESSAGE_LIMIT, SITE, brandBlock, bullets, fitMethod } from
 import type { Flow } from "./store";
 import { type Business, meFor, withBusiness as addBusiness } from "./business";
 import type { TaskLike } from "./me-file";
+import { loadPlaybook } from "./playbook";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
 import { ASSURANCE, EXECUTION_VERSION, entryDocument, executionMarkdown, executionPolicy, executionPrompt, inspectSkillArchive, packageManifest, referenceFixtureExclusions, safePackagePath, sha256, verifyLocalReferences } from "./workflow-execution";
 import { prerequisiteMarkdown, prerequisitePolicy, prerequisiteRegister } from "./workflow-prerequisites";
@@ -298,6 +299,8 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   if (order.some(o => (leadsOf(c, flow, order)[o.step]?.minds?.length ?? 0) > 1)) put("TASK-COUNCIL.md", taskCouncilInstructions);
   for (const mind of flow.customMinds ?? []) put(`minds/${mind.slug}.json`, mindFile(mind));
   if (about) put("me.md", about);
+  const playbook = await loadPlaybook(business);
+  if (playbook) put(playbook.name, playbook.text);
   put("inputs.json", JSON.stringify({ format: "abb-inputs/1", contract_version: EXECUTION_VERSION, acceptance: "No inputs have been accepted by an execution runner. Check all supplied values against the consuming skill.", goal: { value: flow.goal?.trim() || null, status: flow.goal?.trim() ? "PROVIDED_UNVALIDATED" : "MISSING", source: "workflow-author", confirmation: null }, inputs: contract.steps.flatMap(s => s.inputs.map(p => ({ id: `${s.id}-input-${p.type}`, type: p.type, required: p.required, consumer_steps: [s.step], producer_candidates: s.reads_from.filter(n => contract.steps[n - 1].outputs.some(o => o.type === p.type) || s.input_bindings.some(b => b.type === p.type && b.from === contract.steps[n - 1].id)).map(n => ({ step_id: contract.steps[n - 1].id, artifact_id: contract.steps[n - 1].output_contract.artifact_id, accepted_revision: null })), value: null, status: "MISSING", provenance: [], acceptance_decision: null }))), supplied_context: about ? [{ path: "me.md", status: "PROVIDED_UNVALIDATED", source: "user-saved-context" }] : [], planning_context: { status: "PROVIDED_UNVALIDATED", data: planningInputs }, notes: "MISSING differs from an explicitly supplied empty value. A producer candidate is not an accepted upstream artifact. Planning choices and AI proposals do not confirm execution inputs." }, null, 2));
   put("templates/execution-report.json", JSON.stringify({ contract_version: EXECUTION_VERSION, mode: "portable", assurance: ASSURANCE, run_status: "NOT_STARTED", quality: { status: "NOT_REVIEWED", rubric: "Apply each selected skill's quality criteria; report hard constraints separately." }, instruction_compliance: { status: "NOT_REVIEWED", unresolved_coverage: [] }, steps: contract.steps.map(s => ({ id: s.id, step: s.step, state: "NOT_STARTED", artifacts: [], checks: s.checks, review: "NOT_REQUESTED" })), evidence: [], decisions: [], amendments: [], unresolved_inputs: contract.input_contracts.filter(n => n.required).map(n => n.id), next_permitted_action: "Read the entry documents and perform preflight. This is a template, not evidence of a run." }, null, 2));
   put("README.txt", [
@@ -306,7 +309,8 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
     "1. Give this whole folder to your AI assistant using file attachments or a local workspace. Check that it can read the files and use the tools each step needs.",
     "2. Your workflow request starts from START_HERE.txt and HANDOFF.md. OPTIONAL_USER_PROMPT.txt reinforces the same rules.",
     "3. Have the inputs listed under \"Before you start\" ready.",
-    ...(about ? ["The parts of your me.md this workflow needs are in me.md. Change that file to change what every step knows about you."] : []), "",
+    ...(about ? ["The parts of your me.md this workflow needs are in me.md. Change that file to change what every step knows about you."] : []),
+    ...(playbook ? [`${playbook.name} says how your kind of business works. Every step should follow it, after the step's own instructions.`] : []), "",
   ].join("\n"));
   // Every mind on a step, the overseer and the team ship as their own skills, so each one works in any chat.
   const extra = flow.team?.mode === "together" && hasTeam && c.bySlug[COUNCIL] ? [COUNCIL] : [];
@@ -394,11 +398,13 @@ export function withNotes(skill: string, steps: Ordered[], leadOf: (step: number
 export async function buildSkillZip(slug: string, skill: string, hasFiles = false, business: Business = {}, task: TaskLike = { slug }) {
   const built = hasFiles ? await loadSkillZip(slug) : null;
   if (hasFiles && !built) throw new Error("Couldn't load the complete skill files. Check your connection and try again.");
-  if (built && !meFor(business, [task])) return new Blob([built], { type: "application/zip" });
+  const playbook = await loadPlaybook(business);
+  if (built && !meFor(business, [task]) && !playbook) return new Blob([built], { type: "application/zip" });
   const { strToU8, zipSync, unzipSync } = await import("fflate");
   const files: Record<string, Uint8Array> = built ? unzipSync(built) : {};
   for (const name of Object.keys(files)) if (!name.startsWith(`${slug}/`) || name.includes("\\") || name.split("/").includes("..")) throw new Error("The skill pack contains an invalid file path.");
   files[`${slug}/SKILL.md`] = strToU8(addBusiness(skill, business, [task]));
+  if (playbook) files[`${slug}/${playbook.name}`] = strToU8(playbook.text);
   return new Blob([zipSync(files)], { type: "application/zip" });
 }
 
@@ -468,5 +474,7 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
   ].join("\n");
   tree[`${root}/README.md`] = strToU8(readme);
   if (packMe) tree[`${root}/me.md`] = strToU8(packMe);
+  const playbook = await loadPlaybook(business);
+  if (playbook) tree[`${root}/${playbook.name}`] = strToU8(playbook.text);
   return { blob: new Blob([zipSync(tree)], { type: "application/zip" }), filename: `${root}.zip`, skills: got.length } as const;
 }

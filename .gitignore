@@ -44,6 +44,7 @@ site/.copyable-build/
 !/docs/APPS-PRD.md
 !/docs/IMPORTING-SKILLS.md
 !/docs/SITE-SPEND-MONITOR.md
+!/docs/BUSINESS-BOARDS.md
 !/docs/public-mcp/
 
 # tools: only what the build, the tests and the content pipeline use. Add a new tool here to keep it in the repo.
@@ -73,6 +74,7 @@ site/.copyable-build/
 !/tools/test-mcp-api-e2e.mjs
 !/tools/build-minds.mjs
 !/tools/audit-library.mjs
+!/tools/map-boards.mjs
 !/tools/make-fake-catalogue.mjs
 !/tools/readability.mjs
 !/tools/reading-level.mjs

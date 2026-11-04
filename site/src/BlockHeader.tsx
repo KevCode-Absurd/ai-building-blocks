@@ -3,6 +3,7 @@ import {type Block,type Page,cap,kindInfo,taskOf,paidService} from './lib/data';
 import {Link,libraryReturnTo} from './lib/router';
 import {capSentences} from './lib/item-actions';
 import ShareButton from './ShareButton';
+import {BOARD_NAMES,boardHref} from './trust-pages/board-names.mjs';
 import './block-opening.css';
 
 /** The public opening stays mounted while the task controls and references load. */
@@ -22,6 +23,7 @@ export default function BlockHeader({b,p,portrait,labels}:{b:Block;p:Page|null;p
    {b.origin==='imported'&&b.source?.by&&<span>From {b.source.by}</span>}
    {p?.added&&<span data-testid="updated">Updated {new Date(`${p.added}T00:00:00Z`).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})}</span>}
   </p>
+  {!!p?.boards?.length&&<p className="bp-for" data-testid="bp-for"><span>For</span>{p.boards.filter(s=>Object.hasOwn(BOARD_NAMES,s)).map(s=><Link key={s} to={boardHref(s)}>{(BOARD_NAMES as Record<string,string>)[s]}</Link>)}</p>}
   {labels}
   {b.warnings?.includes('scrapes')&&<p className="bp-warn" data-testid="scrapes-note" role="note"><b>This skill scrapes websites.</b> It collects data from web pages. Before you run it, check each site's terms, follow its robots.txt and go slowly so you don't overload it. Don't collect people's personal details.</p>}
   {paidService(b)&&<p className="bp-warn" data-testid="paid-note" role="note"><b>You need a paid {paidService(b)} account.</b> This skill sends its work to {paidService(b)}, so it only runs once you add your own key. Check their prices before you start.</p>}

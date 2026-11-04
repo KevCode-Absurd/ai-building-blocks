@@ -103,7 +103,7 @@ test('plans are never lost: editing the request keeps the saved plan and every p
 test('a free plan comes before sign-in; sign-in is asked only for AI plans and for saving to the account', () => {
   const page = read('../src/ComposePage.tsx');
   assert.match(page, /const planner: "free" \| "ai" = mode \?\? \(account\.state === "signed-in" && available \? "ai" : "free"\)/);
-  assert.match(page, /tools\.freeSelection\(c, goal, choices, context\)/);
+  assert.match(page, /tools\.freeSelection\(lib, goal, choices, context\)/);
   assert.doesNotMatch(page, /"Continue"/, 'no extra Continue step between the goal and the plan');
   assert.doesNotMatch(page, /setReview/);
   assert.match(page, /Sign in to save/);

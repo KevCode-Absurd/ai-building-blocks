@@ -77,7 +77,7 @@ function RoleForm({role,owner,toast}:{role:RoleProfile;owner:string;toast:(text:
    <p className="role-setup-help">Download the specialist, unzip it and add all the files to your AI. Then say: <b>Read START_HERE.txt and follow HANDOFF.md</b>. Your AI checks access, does the work and gives you real files and checks.</p>
    <div className="role-form-actions"><button className="btn btn-primary" disabled={!!busy} onClick={()=>void work('download')} data-testid="role-download">{busy==='download'?'Preparing the download…':'Download specialist'}</button><button className="btn btn-line" disabled={!!busy} onClick={()=>void work('copy')} data-testid="role-copy">Copy launch brief</button></div>
    <div className="role-form-actions"><button className="btn btn-line" disabled={!!busy} onClick={()=>void work('save')} data-testid="role-save">{saved?'Setup saved':'Save this role'}</button><button className="btn btn-line" disabled={!!busy} onClick={()=>void work('open')} data-testid="role-open-builder">Open in builder</button><button className="btn btn-line" disabled={!!busy} onClick={()=>void work('planner')} data-testid="role-ai-planner">Tailor with AI</button></div>
-   {saved&&<div className="role-status" role="status"><p>Saved with your workflows. Reopen it from <Link to="/account">My saved work</Link> or the roles page.</p><SaveHint subject="role setup"/></div>}
+   {saved&&<div className="role-status" role="status"><p>Saved with your workflows. Reopen it from <Link to="/account">My work</Link> or the roles page.</p><SaveHint subject="role setup"/></div>}
    <p className="small">Prepared setup. Work begins when you ask your AI to run it.</p>
   </div>}
   {error&&<p role="alert" className="role-validation-error" data-testid="role-error">{error}</p>}

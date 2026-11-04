@@ -14,6 +14,9 @@ const { TOOLS } = await import("../../mini-tools/index.mjs");
 const tools = [...BROWSER_TOOLS, ...TOOLS];
 const readPage = slug => { try { return JSON.parse(fs.readFileSync(`${data}/pages/${slug}.json`, "utf8")); } catch { return {}; } };
 const SITE_PATHS = ["/", "/roles", "/jobs", "/compose", "/tools", "/api-and-mcp", "/how-it-works"];
+// Job pages and the playbooks are written by prerender and public/, not here.
+const { BOARD_NAMES, playbookHref } = await import("../src/trust-pages/board-names.mjs");
+SITE_PATHS.push(...new Set(cat.blocks.map(b => `/jobs/${b.task}`)), ...Object.keys(BOARD_NAMES).map(playbookHref));
 
 const { pages, problems } = await trustPages({ cat, readPage, roles, tools, routeExists: () => false });
 const broken = brokenLinks(pages, { cat, roles, tools, sitePaths: SITE_PATHS });

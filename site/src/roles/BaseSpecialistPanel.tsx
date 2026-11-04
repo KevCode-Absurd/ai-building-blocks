@@ -39,7 +39,9 @@ export default function BaseSpecialistPanel({role,toast}:{role:RoleView;toast:(s
   try{
    const [{loadBaseSpecialistPack},{download}]=await Promise.all([import('./base-specialist-pack.ts'),import('../lib/download')]);
    const result=await loadBaseSpecialistPack(role);if(!alive.current)return;
-   download(new Blob([result.bytes as BlobPart],{type:'application/zip'}),result.filename);
+   // The checked pack, plus the playbook for the brand file's kind of business when one is set.
+   const {addPlaybook}=await import('../lib/playbook');const bytes=await addPlaybook(result.bytes,getBusiness());if(!alive.current)return;
+   download(new Blob([bytes as BlobPart],{type:'application/zip'}),result.filename);
    toast('Specialist downloaded. Unzip it, add the files to your AI and say: Read START_HERE.md.');
   }catch(e){if(alive.current)setError(e instanceof Error?e.message:'The complete pack could not load. Try again.');}
   finally{if(alive.current)setBusy(false);}

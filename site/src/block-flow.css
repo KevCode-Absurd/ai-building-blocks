@@ -8,6 +8,10 @@
 .bp-badges { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin: 1rem 0 0; font: 400 12.5px var(--mono); color: var(--muted); }
 .bp-badges > span { border: 1px solid var(--line); border-radius: 999px; padding: .2rem .65rem; }
 .bp-badges .is-tested { color: var(--text); border-color: currentColor; }
+.bp-for { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; margin: .6rem 0 0; font-size: 13.5px; }
+.bp-for > span { font: 500 12px var(--mono); color: var(--faint); }
+.bp-for a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.bp-for a:hover { color: var(--text); }
 .bp-getlist { padding-left: 1.2rem; margin: .5rem 0 1rem; line-height: 1.6; overflow-wrap: anywhere; }
 .bp-get .code { margin-top: .5rem; }
 .bp-get .task-output-example pre { margin-top: 0; }

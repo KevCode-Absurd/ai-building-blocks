@@ -15,9 +15,9 @@ for (const tag of ["", "@mobile "]) {
     await trigger.focus(); await page.keyboard.press('Enter');
     const menu = page.getByTestId('site-menu');
     await expect(menu.getByRole('link').filter({ visible: true }).first()).toBeFocused();
-    for (const label of ['Team space', 'Connect your AI', 'My work', 'Account settings', 'Sign in']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeVisible();
-    for (const label of main) await expect(menu.getByRole('link', { name: label, exact: true })).toBeVisible({ visible: !wide });
-    await expect(menu.getByRole('link', { name: 'Get a whole job done', exact: true })).toHaveCount(0);
+    // The grouped menu reaches every main page; on a laptop the five in the header are left out of it.
+    for (const label of ['My work', 'Account settings', 'Sign in', 'AI tool guides', 'AI help by business', 'Get a whole job done', 'Turn an article or video into a workflow', 'Turn a workflow into an app', 'Train your own AI agent', 'Plan an AI team', 'Connect your AI', 'Your me.md file', 'Team space', 'How it works', 'How we test', 'Documentation', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
+    for (const label of main) await expect(menu.getByRole('link', { name: label, exact: true })).toHaveCount(wide ? 0 : 1);
     await page.keyboard.press('Escape'); await expect(trigger).toBeFocused(); await expect(menu).toHaveCount(0);
     await trigger.click(); await header.click({ position: { x: 4, y: 4 } }); await expect(menu).toHaveCount(0);
     for (const width of [320, 390]) {
@@ -28,6 +28,10 @@ for (const tag of ["", "@mobile "]) {
     }
     await trigger.click(); await menu.getByRole('link', { name: 'Build a workflow', exact: true }).click();
     await expect(page.getByTestId('compose-page')).toBeVisible(); await expect(menu).toHaveCount(0);
+    await trigger.click(); await menu.getByRole('link', { name: 'Turn an article or video into a workflow', exact: true }).click();
+    await expect(page.getByTestId('intake-text')).toBeVisible(); await expect(menu).toHaveCount(0);
+    await trigger.click(); await menu.getByRole('link', { name: 'Train your own AI agent', exact: true }).click();
+    await expect(page).toHaveURL(/\/train-your-own-ai-agent$/); await expect(page.getByRole('heading', { level: 1 })).toContainText('train your own AI agent'); await expect(menu).toHaveCount(0);
   });
 
   test(tag + "guest account exposes a real sign-in route and signed-in account can sign out", async ({ page }) => {

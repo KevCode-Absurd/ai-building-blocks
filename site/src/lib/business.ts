@@ -8,6 +8,7 @@ import { library, libraryStorage } from "./library-storage";
 import { useSyncExternalStore } from "react";
 import { ME_MAX_BYTES, meContext, meText, sectionsToMe, type TaskLike } from "./me-file";
 import { REACH_CHOICES, orderByProfile as orderItems, type Reach } from "./profile-order";
+import { BOARD_NAMES, playbookFile } from "../trust-pages/board-names.mjs";
 export { GOAL_CHOICES, REACH_CHOICES, ordersPicks, profileScore, type ProfileLike, type Reach } from "./profile-order";
 
 /** What the owner calls it everywhere on the site. */
@@ -39,7 +40,11 @@ export const DETAIL_FIELDS = FIELDS.filter((f) => !SETUP_QUESTIONS.some((q) => q
 
 /** The 9 fields, the setup answers (`reach`, `area`, `goal`) and `me`: a pasted or uploaded personal me.md.
  *  Older saved objects have only the fields or only `me` and still work. */
-export type Business = Partial<Record<FieldId | "reach" | "area" | "goal" | "me", string>>;
+export type Business = Partial<Record<FieldId | "reach" | "area" | "goal" | "kind" | "me", string>>;
+
+/** Kinds of business (the boards at /industries). Picking one adds its playbook to every download. */
+export const KIND_CHOICES = Object.entries(BOARD_NAMES as Record<string, string>).map(([id, label]) => ({ id, label }));
+export const kindName = (b: Business) => (b.kind ? (BOARD_NAMES as Record<string, string>)[b.kind] ?? "" : "");
 export { ME_MAX_BYTES };
 export const meBytes = (text: string) => new TextEncoder().encode(text).length;
 
@@ -81,6 +86,7 @@ export function reachText(b: Business): string {
 function basicsSection(b: Business, withFields: boolean): string {
   const rows = [
     ...(withFields ? FIELDS.filter((f) => SETUP_QUESTIONS.some((q) => q.id === f.id)).flatMap((f) => row(f.md, b[f.id])) : []),
+    ...row("Kind of business", kindName(b) ? `${kindName(b)}. Follow its playbook, ${playbookFile(b.kind!)}, when it is attached, or read it at https://useaiblocks.com/playbooks/${playbookFile(b.kind!)}` : ""),
     ...row("Where my customers are", reachText(b)),
     ...row("Main goal right now", b.goal),
   ];

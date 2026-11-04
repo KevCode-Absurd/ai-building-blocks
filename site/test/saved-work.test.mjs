@@ -116,8 +116,9 @@ test('one label for planning, and saved-work places are named the same everywher
   const header = read('../src/SiteHeader.tsx');
   // The home hero button, header, footer and page title all say "Build a workflow".
   assert.match(header, /to: "\/compose", label: "Build a workflow"/);
+  assert.match(header, /\["\/compose", "Build a workflow", "compose"\]/);
   assert.match(read('../src/HomePage.tsx'), />Build a workflow <ArrowIcon/);
-  assert.match(header, /to="\/space"[^>]*>Team space<\/Link>/);
+  assert.match(header, /\["\/space", "Team space", "space"\]/);
   assert.match(header, /to="\/account"[^>]*data-testid="open-saved-work">My work[{<]/);
   assert.doesNotMatch(header, /My Account|My saved work|Plan a job/);
   assert.match(header, /rememberVisit\(path\)/);

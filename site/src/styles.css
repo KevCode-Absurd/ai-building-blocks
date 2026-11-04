@@ -676,9 +676,9 @@ body.globe-dragging, body.globe-dragging * { user-select: none !important; -webk
 .biz { display: grid; gap: 14px; }
 .biz-lead { margin: -4px 0 6px; }
 .biz-field { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
-.biz-field input, .biz-field textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--panel); color: var(--text); font: 400 15px/1.5 var(--sans); resize: vertical; }
-.biz-field input { height: 44px; }
-.biz-field input:focus, .biz-field textarea:focus { outline: 0; border-color: var(--text); box-shadow: 0 0 0 1px var(--text); }
+.biz-field input, .biz-field textarea, .biz-field select { width: 100%; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--panel); color: var(--text); font: 400 15px/1.5 var(--sans); resize: vertical; }
+.biz-field input, .biz-field select { height: 44px; }
+.biz-field input:focus, .biz-field textarea:focus, .biz-field select:focus { outline: 0; border-color: var(--text); box-shadow: 0 0 0 1px var(--text); }
 .biz-field input::placeholder, .biz-field textarea::placeholder { color: var(--faint); }
 .biz-bar { position: sticky; bottom: -48px; z-index: 1; display: flex; align-items: center; gap: 8px; margin: 4px -28px 0; padding: 12px 28px 16px; border-top: 1px solid var(--line); background: var(--panel); }
 .biz-bar .small { margin-right: auto; }

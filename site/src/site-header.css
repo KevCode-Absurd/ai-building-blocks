@@ -15,7 +15,10 @@
 .site-menu-links .account-session-actions .btn { border: 1px solid var(--line-2); }
 .site-menu-types { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .site-menu-appearance { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 8px 4px; font-size: 14px; }
-@media (max-width: 640px) { .site-menu-links { position: fixed; top: 72px; right: 12px; left: 12px; width: auto; max-height: calc(100dvh - 84px); padding-bottom: max(12px, env(safe-area-inset-bottom)); } }
+/* The floating support button sits over the bottom-right corner: leave room so the last row can scroll clear of it. */
+.site-menu-links { padding-bottom: 64px; }
+@media (max-width: 640px) { .site-menu-links { position: fixed; top: 72px; right: 12px; left: 12px; width: auto; max-height: calc(100dvh - 84px); padding-bottom: calc(64px + env(safe-area-inset-bottom)); } }
+.site-menu-links .site-menu-label { margin: 6px 8px 2px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 /* Laptop: the five main sections sit in the header; "More" holds account, brand file and appearance. Phones keep one Menu button. */
 .site-nav { display: flex; align-items: center; gap: 2px; margin-left: 12px; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 8px; font-size: 14.5px; color: var(--muted); white-space: nowrap; }

@@ -16,6 +16,9 @@ import { makeSearchDocument } from "../../src/lib/search-document.mjs";
 import { rankSpecialists } from "../../src/roles/specialist-matching.mjs";
 import { INDUSTRIES, INDUSTRIES_PATH, START_JOB, FALLBACK_JOB_PATH } from "../../src/trust-pages/industries.mjs";
 import { HOW_WE_TEST_PATH, howWeTestPage } from "../../src/trust-pages/how-we-test.mjs";
+import { BOARDS, KEPT_PAGES } from "../../src/trust-pages/boards.mjs";
+import { boardPages } from "./board-pages.mjs";
+import { readFixes } from "./board-map.mjs";
 
 const SITE = "https://useaiblocks.com";
 const SITE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -108,7 +111,17 @@ function industryBody(ind, { routeExists, scoreFor, all }) {
     workflows.length ? `<h2 class="hub-h2">Workflows that fit</h2><p>A workflow joins several skills into one job, step by step.</p><ul class="hub-list">${workflows.map(itemLine).join("")}</ul>` : "",
     ind.miniTools.length ? `<h2 class="hub-h2">Free calculators and tools</h2><p>They run in your browser. Nothing you type is sent to us.</p><ul class="hub-list">${ind.miniTools.map(t => `<li><a href="/tools/${esc(t.slug)}">${esc(t.short ?? t.name)}</a><span>${esc(t.summary)}</span></li>`).join("")}</ul>` : "",
     score ? `<h2 class="hub-h2">How we check plans for ${esc(ind.name.toLowerCase())}</h2><p>We test the job planner on ${score.count} requests like these before each release. Their average score is ${score.average} out of 100. The test checks the plan, not the finished work. <a href="${HOW_WE_TEST_PATH}">See how we test</a>.</p>` : "",
-    `<p class="hub-links"><span>Other industries</span>${others.map(x => `<a href="${INDUSTRIES_PATH}/${x.slug}">${esc(x.name)}</a>`).join("")}<a href="${INDUSTRIES_PATH}">All industries</a></p>`,
+    `<p class="hub-links"><span>By business</span>${BOARDS.slice(0, 6).map(x => `<a href="${INDUSTRIES_PATH}/${x.slug}">${esc(x.name)}</a>`).join("")}<a href="${INDUSTRIES_PATH}">All businesses</a></p>`,
+  ].join("");
+}
+/** A board that used to be an industry page keeps its common jobs and its planner score, below the stages. */
+function industryExtras(ind, { routeExists, scoreFor }) {
+  if (!ind) return "";
+  const score = scoreFor(ind.eval);
+  const jobs = ind.jobs.map((j) => `<li><a href="${esc(startJobHref(j.request, routeExists))}">${esc(j.job)}</a><span>${esc(j.why)}${j.workflow ? ` Workflow: <a href="${hrefOf(j.workflow)}">${esc(j.workflow.name)}</a>.` : ""}</span></li>`).join("");
+  return [
+    `<h2 class="hub-h2">Common jobs ${esc(ind.short)} owners bring</h2><p>Pick one to start. Say what you want in your own words, and your AI plans it with our specialists. It asks a few questions first and waits for your yes before any work starts.</p><ul class="hub-list">${jobs}</ul>`,
+    score ? `<h2 class="hub-h2">How we check plans for ${esc(ind.name.toLowerCase())}</h2><p>We test the job planner on ${score.count} requests like these before each release. Their average score is ${score.average} out of 100. The test checks the plan, not the finished work. <a href="${HOW_WE_TEST_PATH}">See how we test</a>.</p>` : "",
   ].join("");
 }
 const j_lower = s => (s ? s[0].toLowerCase() + s.slice(1) : s);
@@ -120,25 +133,28 @@ export async function trustPages({ cat, readPage, roles, tools, routeExists = ()
   const card = JSON.parse(fs.readFileSync(path.join(evalsDir, "scorecard.json"), "utf8"));
   const scoreFor = id => { const n = card.cases.filter(c => c.industry === id && typeof c.score === "number").length; return n && typeof card.industries?.[id] === "number" ? { count: n, average: card.industries[id] } : null; };
   const pages = [{ ...test, crumbs: [], hub: true }];
-  pages.push({
-    url: INDUSTRIES_PATH, hub: true, collection: true,
-    title: "AI help by industry", documentTitle: "AI help by industry: skills, specialists, tools | AI Blocks",
-    desc: "Find AI skills, specialists, workflows and free tools for your kind of business: online stores, SaaS, local services, creators, finance and software teams.",
-    h1: "AI help by industry",
-    body: `<p class="bp-sub">Pick your kind of business. Each page lists the jobs owners like you bring, and the skills, specialists and tools that fit them.</p><ul class="hub-list">${industries.map(ind => `<li><a href="${INDUSTRIES_PATH}/${ind.slug}">${esc(ind.name)}</a><span>${esc(ind.jobs.slice(0, 3).map(j => j.job).join(", "))}, and more.</span></li>`).join("")}</ul><p class="hub-links"><span>Also</span><a href="${HOW_WE_TEST_PATH}">How we test</a><a href="/jobs">All skills by job</a><a href="/roles">Hire an AI specialist</a></p>`,
-    main: { "@type": "ItemList", numberOfItems: industries.length, itemListElement: industries.map((ind, i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${INDUSTRIES_PATH}/${ind.slug}`, name: ind.name })) },
+  // The business boards own /industries and the industry pages they replaced; finance and engineering keep theirs.
+  const byIndustry = Object.fromEntries(industries.map((ind) => [ind.slug, ind]));
+  const kept = industries.filter((ind) => KEPT_PAGES.includes(ind.slug));
+  const boards = boardPages({
+    blocks: cat.blocks, roles: roles.roles, tools, fixes: readFixes().fixes, jobExists: () => true,
+    industryExtras: (slug) => industryExtras(byIndustry[slug], { routeExists, scoreFor }),
+    keptPages: kept.map((ind) => ({ url: `${INDUSTRIES_PATH}/${ind.slug}`, name: ind.name, line: `${ind.jobs.slice(0, 3).map((j) => j.job).join(", ")}, and more.` })),
   });
-  for (const ind of industries) {
+  problems.push(...boards.problems);
+  pages.push(...boards.pages);
+  for (const ind of kept) {
     const listed = [...ind.jobs.flatMap(j => [...j.items, j.workflow].filter(Boolean)).map(b => [b.name, hrefOf(b)]), ...ind.specialists.map(r => [r.name, `/roles/${r.id}`]), ...ind.miniTools.map(t => [t.short ?? t.name, `/tools/${t.slug}`])];
     if (listed.length < 6) problems.push(`${ind.slug}: only ${listed.length} catalogue items found`);
     pages.push({
-      url: `${INDUSTRIES_PATH}/${ind.slug}`, hub: true, collection: true, crumbs: [["AI help by industry", INDUSTRIES_PATH]],
+      url: `${INDUSTRIES_PATH}/${ind.slug}`, hub: true, collection: true, crumbs: [["AI help by business", INDUSTRIES_PATH]],
       title: ind.title, documentTitle: ind.documentTitle, desc: ind.desc, h1: ind.title,
       body: industryBody(ind, { routeExists, scoreFor, all: industries }),
       main: { "@type": "ItemList", numberOfItems: listed.length, itemListElement: listed.map(([name, u], i) => ({ "@type": "ListItem", position: i + 1, url: `${SITE}${u}`, name })) },
       picks: ind,
     });
   }
+  void BOARDS;
   return { pages, problems };
 }
 

@@ -10,7 +10,7 @@ export default function PublicOpening({ html }: { html: string }) {
   if (!publicPage) return <main className="wrap bp-hero"><p role="status">Opening your saved work…</p></main>;
   if (html.includes("data-prerendered")) return <div data-testid="public-opening" dangerouslySetInnerHTML={{ __html: html }} />;
   return <div data-testid="public-opening">
-    <header className="wrap header-in"><a className="brand" href="/">AI Blocks</a><nav aria-label="Public pages"><a href="/#library">Find a task</a><span aria-hidden="true"> · </span><a href="/how-it-works">Help</a><span aria-hidden="true"> · </span><a href="/tools">Browser tools</a></nav><a className="btn btn-ghost btn-sm" href="/account" data-testid="account-link">My saved work</a></header>
+    <header className="wrap header-in"><a className="brand" href="/">AI Blocks</a><nav aria-label="Public pages"><a href="/#library">Find a task</a><span aria-hidden="true"> · </span><a href="/how-it-works">Help</a><span aria-hidden="true"> · </span><a href="/tools">Browser tools</a></nav><a className="btn btn-ghost btn-sm" href="/account" data-testid="account-link">My work</a></header>
     <main className="wrap bp-hero">
       <h1 className="bp-h1">{location.pathname === "/" ? "Use AI like the top 1%" : "Find a task for your work"}</h1>
       {location.pathname === "/" && <p className="lede">Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell).</p>}

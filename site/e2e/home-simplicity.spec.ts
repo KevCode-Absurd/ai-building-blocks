@@ -28,13 +28,15 @@ test("ordinary task wording finds a useful result and filters preserve the reque
   await page.goto("/", { waitUntil: "domcontentloaded" });
   const search = page.getByTestId("library-search");
   await search.fill("tidy my notes");
-  await expect(page.locator('#library .grid a[href="/prompts/rough-notes-to-minutes-writer"]')).toBeVisible();
+  // With the full library loaded, the best match for this wording is the note organizer.
+  await expect(page.getByTestId("best-matches")).toBeVisible();
+  await expect(page.locator('#library .grid a[href="/skills/note-organizer"]')).toBeVisible();
   await page.getByTestId("tab-prompt").click();
   await expect(page.getByTestId("tab-prompt")).toHaveAttribute("aria-selected", "true");
   await page.getByRole("button", { name: "Clear filters", exact: true }).click();
   await expect(search).toHaveValue("tidy my notes");
   await expect(page.getByTestId("tab-all")).toHaveAttribute("aria-selected", "true");
-  await expect(page.locator('#library .grid a[href="/prompts/rough-notes-to-minutes-writer"]')).toBeVisible();
+  await expect(page.locator('#library .grid a[href="/skills/note-organizer"]')).toBeVisible();
 });
 
 test("saved kits and workflows remain reachable from one account page", async ({ page }) => {

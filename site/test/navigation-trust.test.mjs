@@ -16,12 +16,13 @@ test('one label: Safety checked, or nothing', () => {
   for (const f of ['../src/ui.tsx', '../src/BlockPage.tsx', '../src/lib/site-info.mjs', '../src/HowItWorks.tsx']) assert.ok(!/not yet tested/i.test(read(f)), f);
 });
 
-test('the menu and footer include Minds while navigation stays short', () => {
+test('the menu reaches every main page in a few grouped links, and the footer stays short', () => {
   const header = read('../src/SiteHeader.tsx');
-  const main = header.slice(header.indexOf('aria-label="Main sections"'), header.indexOf('</section>', header.indexOf('aria-label="Main sections"')));
-  const links = [...main.matchAll(/<Link to="([^"]+)"[^>]*>([^<]+)<\/Link>/g)].map((m) => [m[1], m[2]]);
-  assert.deepEqual(links, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Plan a job'], ['/minds', 'Minds'], ['/tools', 'Tools'], ['/space', 'Team space']]);
-  for (const folded of ['/from-a-source', '/tools/growth-channel-planner', '/apps/starter-pack', '/people', '/ai-tools']) assert.ok(!header.includes(`to="${folded}"`), `${folded} is not a header link`);
+  const menu = header.slice(header.indexOf('const MENU'), header.indexOf('export default'));
+  const links = [...menu.matchAll(/\["(\/[^"]*)", "([^"]+)", "[^"]+"\]/g)].map((m) => m[1]);
+  for (const page of ['/#library', '/minds', '/tools', '/ai-tools', '/compose', '/get-it-done', '/from-a-source', '/apps', '/roles', '/train-your-own-ai-agent', '/teams', '/api-and-mcp', '/me-md', '/space', '/how-it-works', '/support']) assert.ok(links.includes(page), `${page} is in the menu`);
+  assert.ok(links.length <= 20, `menu lists ${links.length} links`);
+  for (const unfinished of ['/community', '/publish', '/people']) assert.ok(!links.includes(unfinished), `${unfinished} is not a menu link`);
   const footer = read('../src/SiteFooter.tsx');
   const listed = [...footer.slice(footer.indexOf('const groups'), footer.indexOf('export default')).matchAll(/\["(\/[^"]*)", "([^"]+)"\]/g)].map((m) => m[1]);
   assert.ok(listed.includes('/minds'), 'Minds remains directly reachable from the footer');

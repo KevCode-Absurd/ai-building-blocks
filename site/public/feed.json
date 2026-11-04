@@ -1231,6 +1231,38 @@
    }
   },
   {
+   "id": "https://useaiblocks.com/workflows/reference-library-photoshoot",
+   "url": "https://useaiblocks.com/workflows/reference-library-photoshoot",
+   "title": "Reference-based product photoshoot planner",
+   "summary": "Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for.",
+   "content_text": "Pick photo looks for one real product. Get a shot plan, a pilot and checked files in each size you ask for. Updated 2026-11-04.",
+   "date_published": "2026-10-25T00:00:00Z",
+   "date_modified": "2026-11-04T00:00:00Z",
+   "tags": [
+    "updated",
+    "workflow",
+    "Make product photos"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/reference-library-photoshoot.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/reference-library-photoshoot/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/reference-library-photoshoot.md",
+    "json": "https://useaiblocks.com/workflows/reference-library-photoshoot.json",
+    "skill": "https://useaiblocks.com/skills/reference-library-photoshoot/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/funnel-stage-creative-brief-builder",
    "url": "https://useaiblocks.com/skills/funnel-stage-creative-brief-builder",
    "title": "Sales funnel ad brief writer",
@@ -1484,6 +1516,38 @@
     "markdown": "https://useaiblocks.com/skills/weighted-advertising-health-score-builder.md",
     "json": "https://useaiblocks.com/skills/weighted-advertising-health-score-builder.json",
     "skill": "https://useaiblocks.com/skills/weighted-advertising-health-score-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/workflows/prepare-research-poster-source-notes",
+   "url": "https://useaiblocks.com/workflows/prepare-research-poster-source-notes",
+   "title": "Research poster content and source planner",
+   "summary": "Share your completed study, approved results and poster rules. Get a reading order, figure briefs, source index and wording check.",
+   "content_text": "Share your completed study, approved results and poster rules. Get a reading order, figure briefs, source index and wording check. Updated 2026-11-04.",
+   "date_published": "2026-10-22T00:00:00Z",
+   "date_modified": "2026-11-04T00:00:00Z",
+   "tags": [
+    "updated",
+    "workflow",
+    "Make documents, sheets and slides"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/prepare-research-poster-source-notes.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/prepare-research-poster-source-notes/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/prepare-research-poster-source-notes.md",
+    "json": "https://useaiblocks.com/workflows/prepare-research-poster-source-notes.json",
+    "skill": "https://useaiblocks.com/skills/prepare-research-poster-source-notes/SKILL.md"
    }
   },
   {
@@ -3148,70 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/pain-point-niche-finder.md",
     "json": "https://useaiblocks.com/skills/pain-point-niche-finder.json",
     "skill": "https://useaiblocks.com/skills/pain-point-niche-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/avatar-fit-checker",
-   "url": "https://useaiblocks.com/skills/avatar-fit-checker",
-   "title": "Buyer profile reviewer",
-   "summary": "Share buyer evidence, an ad or a page. Get an evidence and fit score, missing details and suggested rewrites.",
-   "content_text": "Share buyer evidence, an ad or a page. Get an evidence and fit score, missing details and suggested rewrites. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Understand your customers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/avatar-fit-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/avatar-fit-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/avatar-fit-checker.md",
-    "json": "https://useaiblocks.com/skills/avatar-fit-checker.json",
-    "skill": "https://useaiblocks.com/skills/avatar-fit-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/buyer-research-plan-with-survey",
-   "url": "https://useaiblocks.com/skills/buyer-research-plan-with-survey",
-   "title": "Buyer research and survey planner",
-   "summary": "Share your product, list sizes and reward budget. Get a call plan, recruiting email, buyer and non-buyer surveys, and an answer template.",
-   "content_text": "Share your product, list sizes and reward budget. Get a call plan, recruiting email, buyer and non-buyer surveys, and an answer template. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Understand your customers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/buyer-research-plan-with-survey.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/buyer-research-plan-with-survey/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/buyer-research-plan-with-survey.md",
-    "json": "https://useaiblocks.com/skills/buyer-research-plan-with-survey.json",
-    "skill": "https://useaiblocks.com/skills/buyer-research-plan-with-survey/SKILL.md"
    }
   }
  ]

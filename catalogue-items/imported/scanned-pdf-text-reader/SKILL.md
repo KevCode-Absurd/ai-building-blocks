@@ -342,6 +342,6 @@ or publisher DOI, cite the published version instead.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader). It takes the source text.
-- The [Research poster maker](https://useaiblocks.com/skills/research-poster-maker). It takes the source text.
+- The [LaTeX research poster maker](https://useaiblocks.com/skills/research-poster-maker). It takes the source text.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

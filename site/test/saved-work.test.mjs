@@ -114,8 +114,8 @@ test('a free plan comes before sign-in; sign-in is asked only for AI plans and f
 
 test('one label for planning, and saved-work places are named the same everywhere', () => {
   const header = read('../src/SiteHeader.tsx');
-  assert.match(header, /to="\/compose"[^>]*>Plan a job<\/Link>/);
-  assert.match(header, /to="\/space"[^>]*>Team space<\/Link>/);
+  assert.match(header, /\["\/compose", "Plan a job", "compose"\]/);
+  assert.match(header, /\["\/space", "Team space", "space"\]/);
   assert.match(header, /to="\/account" data-testid="open-saved-work">My work<\/Link>/);
   assert.match(header, /rememberVisit\(path\)/);
   assert.match(read('../src/SiteFooter.tsx'), /\["\/compose", "Plan a job"\]/);

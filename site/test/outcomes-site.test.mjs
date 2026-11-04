@@ -152,7 +152,7 @@ test('crawlers get the same pages: prerendered HTML, sitemap entries, a route an
   const app = read('../src/App.tsx');
   assert.match(app, /isOutcomePath\(path\) \? \(\s*<OutcomesRoute/);
   assert.match(app, /!isOutcomePath\(path\)/, 'the pages load no library data');
-  assert.match(read('../src/SiteHeader.tsx'), /<Link to="\/get-it-done"[^>]*>Get a whole job done<\/Link>/);
+  assert.match(read('../src/SiteHeader.tsx'), /\["\/get-it-done", "Get a whole job done", "get-it-done"\]/);
 });
 
 test('the start page stays light: the checks and the worked example load only on the pages that use them', () => {

@@ -325,7 +325,13 @@ test('the server card and AI Catalog follow the discovery draft: media types, op
   assert.equal((await handlePublicApi(new Request(origin + '/mcp/server-card', { method: 'POST', headers: edge }), e)).status, 405);
   assert.equal((await handlePublicApi(new Request('https://other.test/mcp/server-card', { headers: edge }), e)).status, 403);
   assert.equal((await handlePublicApi(new Request(origin + '/mcp/server-card', { method: 'OPTIONS', headers: edge }), e)).status, 204);
-  for (const p of ['/mcp/server-card', '/.well-known/ai-catalog.json']) assert.equal((await worker.fetch(get(p), e)).status, 200, p);
+  for (const p of ['/mcp/server-card', '/.well-known/ai-catalog.json', '/.well-known/mcp-registry-auth']) assert.equal((await worker.fetch(get(p), e)).status, 200, p);
+  // The MCP Registry's domain proof: plain text, the registry's own record format, a 32-byte Ed25519 public key.
+  const proof = await worker.fetch(new Request(origin + '/.well-known/mcp-registry-auth', { headers: { ...edge, accept: 'text/plain', 'user-agent': 'mcp-registry/1.0' } }), e);
+  assert.equal(proof.status, 200); assert.match(proof.headers.get('content-type'), /^text\/plain/);
+  const record = (await proof.text()).trim(), key = record.match(/^v=MCPv1;\s*k=ed25519;\s*p=([A-Za-z0-9+/=]+)$/);
+  assert.ok(key, record); assert.equal(Buffer.from(key[1], 'base64').length, 32);
+  assert.equal((await handlePublicApi(new Request(origin + '/.well-known/mcp-registry-auth', { method: 'POST', headers: edge }), e)).status, 405);
   assert.equal((await worker.fetch(get('/.well-known/oauth-authorization-server'), { ...e, MCP_OAUTH_ENABLED: 'false' })).headers.get('content-type')?.includes('mcp-server-card'), false, 'OAuth discovery stays on its own route');
 });
 

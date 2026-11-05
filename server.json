@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.useaiblocks/library",
+  "title": "AI Blocks",
+  "description": "Search and load free AI skills, workflows, agents and prompts. Read-only, no sign-in.",
+  "version": "3.0.0",
+  "websiteUrl": "https://useaiblocks.com/api-and-mcp",
+  "icons": [
+    {
+      "src": "https://useaiblocks.com/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://useaiblocks.com/mcp"
+    }
+  ]
+}

@@ -135,8 +135,13 @@ function queryArguments(url: URL) {
 }
 
 const SERVER_CARD = '/mcp/server-card', AI_CATALOG = '/.well-known/ai-catalog.json';
+/** The official MCP Registry (registry.modelcontextprotocol.io) proves we own useaiblocks.com, and so may publish
+ *  com.useaiblocks/*, by fetching this record (no redirects, 10 s timeout). Only the public half of the key is here;
+ *  the private half stays outside the repo (tools/publish-mcp-registry.mjs). */
+export const MCP_REGISTRY_AUTH = '/.well-known/mcp-registry-auth';
+export const MCP_REGISTRY_RECORD = 'v=MCPv1; k=ed25519; p=BafhgP3kRG94ovxOR+Li8beTcDKpS8ojGySRWlIQ84Q=';
 /** Every path this module answers; the Worker and the Vite bridge route them here before static assets. */
-export const isPublicApiRoute = (path: string) => path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/') || path === SERVER_CARD || path === AI_CATALOG;
+export const isPublicApiRoute = (path: string) => path === '/mcp' || path === '/api/v1' || path.startsWith('/api/v1/') || path === SERVER_CARD || path === AI_CATALOG || path === MCP_REGISTRY_AUTH;
 
 /** MCP discovery (SEP-2127 server cards and the AI Catalog, docs/discovery.md in modelcontextprotocol/experimental-ext-server-card):
  *  a card for the public server at <mcp url>/server-card and a domain catalogue pointing to it. Public metadata only,
@@ -173,6 +178,10 @@ async function discovery(request: Request, env: PublicApiEnv, route: string): Pr
 
 export async function handlePublicApi(request: Request, env: PublicApiEnv): Promise<Response> {
   const discoveryRoute = new URL(request.url).pathname.replace(/\/+$/, '');
+  if (discoveryRoute === MCP_REGISTRY_AUTH) {
+    if (!['GET', 'HEAD'].includes(request.method)) return new Response('Use GET.', { status: 405, headers: { allow: 'GET, HEAD', 'content-type': 'text/plain; charset=utf-8' } });
+    return new Response(request.method === 'HEAD' ? null : MCP_REGISTRY_RECORD + '\n', { status: 200, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=300', 'x-content-type-options': 'nosniff' } });
+  }
   if (discoveryRoute === SERVER_CARD || discoveryRoute === AI_CATALOG) return discovery(request, env, discoveryRoute);
   const url = new URL(request.url), route = url.pathname.replace(/\/+$/, '');
   const mcp = route === '/mcp' || route === '/api/v1/mcp';

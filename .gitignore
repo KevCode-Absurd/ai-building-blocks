@@ -68,6 +68,7 @@ site/.copyable-build/
 !/tools/import-sources.yaml
 !/tools/build-mini-tool.mjs
 !/tools/check-masking.mjs
+!/tools/publish-mcp-registry.mjs
 !/tools/indexnow-ping.mjs
 !/tools/evaluate-ai-builder.mjs
 !/tools/indexnow-state.json

@@ -24,8 +24,13 @@ test('a site-wide menu or footer change does not mark every page as updated', ()
   // The menu and footer the build writes are the ones the fingerprint leaves out.
   const prerender = fs.readFileSync(new URL('../scripts/prerender.mjs', import.meta.url), 'utf8');
   assert.match(prerender, /const header = `<header class="small" data-prerendered-nav>/);
-  assert.match(prerender, /const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav>/);
   assert.match(prerender, /const footer = `<footer class="wrap small">/);
+  // Plain pages (job hubs, business boards) draw the app's header and footer from lib/site-chrome.mjs.
+  const chrome = fs.readFileSync(new URL('../scripts/lib/site-chrome.mjs', import.meta.url), 'utf8');
+  assert.match(chrome, /`<header class="header site-header" data-prerendered-nav>/);
+  assert.match(chrome, /return `<footer class="footer">/);
+  const plain = (menu) => page().replace('<body>', `<body><header class="header site-header" data-prerendered-nav><div class="wrap header-in"><details class="site-menu"><nav><a href="/compose">${menu}</a></nav></details></div></header>`).replace('</body>', `<footer class="footer"><div class="wrap"><a href="/teams">${menu}</a></div></footer></body>`);
+  assert.equal(contentFingerprint(plain('Plan a job')), contentFingerprint(plain('Build a workflow')));
 });
 test('lastmod accepts real past calendar dates and timestamps, rejects impossible or future ones', () => {
   const now = Date.parse('2026-10-29T00:00:00Z');

@@ -17,7 +17,7 @@ function withoutModifiedDates(value) {
 
 // The site-wide menu and footer that scripts/prerender.mjs puts on every page. A new menu link is not new content on
 // 6,700 pages: counting it marked every page as updated on each deploy, and search engines stop trusting such dates.
-export const SITE_CHROME = /<header\b[^>]*\bdata-prerendered-nav\b[^>]*>[\s\S]*?<\/header\s*>|<footer class="wrap small">[\s\S]*?<\/footer\s*>/gi;
+export const SITE_CHROME = /<header\b[^>]*\bdata-prerendered-nav\b[^>]*>[\s\S]*?<\/header\s*>|<footer class="(?:wrap small|footer)">[\s\S]*?<\/footer\s*>/gi;
 
 /** Content, not a new asset filename, stylesheet, loader script, the loading cover's picture of the page, the
  *  site-wide menu and footer, or the stamp itself. */

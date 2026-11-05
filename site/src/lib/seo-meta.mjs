@@ -48,6 +48,11 @@ export function itemTitle({ name, kind, job }) {
     ...(job ? [`free ${noun} to ${lowerFirst(clean(job))}`] : []),
     `free ${noun} for Claude, ChatGPT and Gemini`,
     `free ${noun} for Claude and ChatGPT`,
+    // Name the assistants people search with before falling back to generic wording.
+    `free ${noun} for ChatGPT`,
+    `free ${noun} for Claude`,
+    `${noun} for Claude and ChatGPT`,
+    `${noun} for ChatGPT`,
     `free ${noun} to use in your AI`,
     `free ${noun} for your AI`,
     `free ${noun}, reusable`,

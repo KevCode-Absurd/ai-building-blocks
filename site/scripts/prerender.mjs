@@ -581,7 +581,7 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
     : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
   // The loading cover shows this page's header and heading at once, styled (scripts/lib/page-shell.mjs). Home has its own.
   const picture = plain || url === "/" ? "" : pageShell({ logo, h1: esc(p.h1), body, content: p.content ?? "", mainClass: p.mainClass ?? "api-mcp-docs" });
-  const metadata = { title, description: desc, canonical, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
+  const metadata = { title, description: desc, canonical, robots: noindex ? (noindex === "follow" ? "noindex, follow" : "noindex, nofollow") : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });
   fs.writeFileSync(metadataFile, JSON.stringify(metadata));
@@ -674,17 +674,30 @@ function hubIntro(t, name, bs) {
   const gets = best.slice(0, 3).map((x) => readPage(x.slug).you_get?.[0]).filter((g) => typeof g === "string" && g.length < 110).map((g) => g.replace(/[.\s]+$/, ""));
   const near = {};
   for (const x of bs) for (const s of [...(x.uses ?? []), ...(x.steps ?? []).map((y) => (Array.isArray(y) ? y[0] : y)), ...(usedBy[x.slug] ?? [])]) { const o = bySlug[s]?.task; if (o && o !== t && TASK_NAMES[o]) near[o] = (near[o] ?? 0) + 1; }
-  const related = Object.entries(near).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4).map(([o]) => `<a href="${jobHref(o)}">${esc(TASK_NAMES[o])}</a>`);
+  const relatedJobs = Object.entries(near).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4).map(([o]) => o);
+  const pill = (o) => `<a href="${jobHref(o)}">${esc(TASK_NAMES[o] ?? o)}</a>`;
+  const related = relatedJobs.map(pill);
+  // Every hub also links to the other jobs in each area it belongs to, so no hub is a dead end and crawlers reach each
+  // hub from several. A job alone in its areas links to the biggest hubs instead.
+  const linkable = (o) => o !== t && !relatedJobs.includes(o) && isIndexableHub(o);
+  const areaJobs = [...new Set(JOB_AREAS.flatMap((a) => { const ts = a.fns.flatMap((id) => FUNCTIONS.find((fn) => fn.id === id)?.tasks ?? []); return ts.includes(t) ? ts : []; }))]
+    .filter(linkable).sort((x, y) => (byTask[y]?.length ?? 0) - (byTask[x]?.length ?? 0)).slice(0, 6);
+  const popular = areaJobs.length + relatedJobs.length < 4 ? tasks.map(([o]) => o).filter((o) => linkable(o) && !areaJobs.includes(o)).slice(0, 6 - areaJobs.length) : [];
   return [
     `<p class="bp-sub">${esc(name)}: ${bs.length} free AI items you can run in Claude, ChatGPT or Gemini (${counts.join(", ")}).${tested ? ` ${tested} of them ${tested === 1 ? "is" : "are"} safety checked and come first below.` : ""}</p>`,
     gets.length ? `<p class="hub-gets">Examples of what you get: ${gets.map((g) => esc(lowerFirst(g))).join("; ")}.</p>` : "",
     hubSearch(bs.length, `Search the ${bs.length.toLocaleString("en-US")} items for this job`, t),
     `<h2 class="hub-h2">Start with these</h2><div class="grid hub-grid">${best.map(hubCard).join("")}</div>`,
     hubSpecialists(roleIndex, t),
+    areaJobs.length ? `<p class="hub-links"><span>Related jobs</span>${areaJobs.map(pill).join("")}</p>` : "",
+    popular.length ? `<p class="hub-links"><span>Popular jobs</span>${popular.map(pill).join("")}</p>` : "",
     `<p class="hub-links">${related.length ? `<span>Often used with</span>${related.join("")}` : ""}<a href="/jobs">All jobs</a><a href="/compose">Build a workflow for ${esc(lowerFirst(name))}</a></p>`,
   ].join("");
 }
-const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, [`${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills", `${n} free AI skills to use`, "AI skills"]));
+// A hub with only one or two items is too thin to rank and spends crawl time; it stays reachable but is not indexed.
+const MIN_HUB_ITEMS = 3;
+const isIndexableHub = (t) => (byTask[t]?.length ?? 0) >= MIN_HUB_ITEMS;
+const hubTitle = (name, n, pg) => fitTitle(titleLadder(pg ? `${name}, page ${pg + 1}` : name, ["free AI skills for ChatGPT and Claude", `${n} free AI skills for ChatGPT`, `${n} free AI skills and workflows`, `${n} free AI skills`, "free AI skills", `${n} free AI skills to use`, "AI skills"]));
 
 const hubUrls = ["/jobs"];
 // /jobs groups the jobs under the library's broad areas, each job once, in the area it is listed under first.
@@ -724,8 +737,8 @@ for (const [t, bs] of tasks) {
       crumbs: [["All skills by job", "/jobs"]], collection: true, hub: true,
       body: `${pg ? `<p class="bp-sub">Page ${pg + 1} of ${pages}: more free AI skills and workflows to ${esc(lowerFirst(name))}. <a href="${jobHref(t)}">Start with the best ${esc(lowerFirst(name))} skills on page 1</a>.</p>` : hubIntro(t, name, bs)}<h2 class="hub-h2">${pg ? `More to ${esc(lowerFirst(name))}` : `Every ${esc(lowerFirst(name))} skill and workflow`}</h2>${nav}<ul class="hub-list">${items.map((x) => `<li><a href="${hrefOf(x)}">${esc(x.name)}</a>${testedBadge(x)}<span>${esc(x.summary)}</span></li>`).join("")}</ul>${nav}`,
       main: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: pg * PER + i + 1, url: `${SITE}${hrefOf(x)}`, name: x.name })) },
-    }, { plain: true }));
-    hubUrls.push(url);
+    }, { plain: true, noindex: isIndexableHub(t) ? false : "follow" }));
+    if (isIndexableHub(t)) hubUrls.push(url);
   }
 }
 

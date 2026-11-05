@@ -297,12 +297,19 @@ export function checkXlsx(tool, examples, bytes, { unzipSync, strFromU8 }, where
 }
 
 /** Python 3, if this computer has it. */
+// Find Python 3 once per process and return the interpreter's real path. On Windows "python3" can be the Python
+// install manager's app alias: each launch through it starts a Store update check, and a build runs ~220 checks, which
+// leaked memory in the AppX service (23 GB on 2026-11-05). Running sys.executable directly skips the alias.
+let foundPython;
 export function findPython() {
+  if (foundPython !== undefined) return foundPython;
+  foundPython = null;
   for (const cmd of ["python3", "python"]) {
-    const r = spawnSync(cmd, ["-c", "import sys; print(sys.version_info[0])"], { encoding: "utf8" });
-    if (r.status === 0 && r.stdout.trim() === "3") return cmd;
+    const r = spawnSync(cmd, ["-c", "import sys; print(sys.version_info[0]); print(sys.executable)"], { encoding: "utf8" });
+    const [major, exe] = r.status === 0 ? r.stdout.trim().split(/\r?\n/) : [];
+    if (major === "3") { foundPython = exe && fs.existsSync(exe) ? exe : cmd; break; }
   }
-  return null;
+  return foundPython;
 }
 
 // A failed launch can have no stdout/stderr. Keep the actual process diagnostic

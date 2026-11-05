@@ -75,7 +75,8 @@
 .skill-neighbours-choice { display: flex; align-items: start; gap: 10px; }
 .skill-neighbours-choice input { flex: 0 0 auto; width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--text); cursor: pointer; }
 .skill-neighbours-current > button { margin-top: 16px; }
-.skill-neighbours-selection { margin-top: 20px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
+.skill-neighbours-pick { margin-top: 14px; }
+.skill-neighbours-selection { margin-top: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
 .skill-neighbours-selection h3 { margin: 0 0 8px; font-size: 1rem; }
 .skill-neighbours-order { padding-left: 24px; }
 .skill-neighbours-order li { padding: 8px 0; overflow-wrap: anywhere; }

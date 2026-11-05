@@ -2,6 +2,7 @@
 // Only /api/*, /mcp/*, OAuth and discovery run this router before assets; everything else reaches it only when no asset
 // matches, which is how the item pages' Markdown and JSON twins (/skills/<slug>.md, .json) get here.
 import { onRequest as comments } from "../functions/api/comments.ts";
+import { onRequest as votes } from "../functions/api/votes.ts";
 import { onRequest as spaces } from "../functions/api/spaces/[[path]].ts";
 import { onRequest as compose } from "../functions/api/compose.ts";
 import { onRequest as transcribe } from "../functions/api/transcribe.ts";
@@ -43,6 +44,7 @@ const router = {
     if (path === "/api/library") return library({ request, env });
     if (path === "/api/community" || path.startsWith("/api/community/")) return community({ request, env });
     if (path === "/api/comments") return comments({ request, env });
+    if (path === "/api/votes") return votes({ request, env });
     if (path === "/api/spaces" || path.startsWith("/api/spaces/")) return spaces({ request, env });
     if (path === "/api/compose") return compose({ request, env });
     if (path === CLIENT_ERROR_PATH) return clientError(request, env);

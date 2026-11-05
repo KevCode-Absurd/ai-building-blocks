@@ -31,6 +31,12 @@ test('item pages put one Download button under the opening and keep the rest und
   assert.match(page, /<UploadSteps /);
   assert.match(page, /Other ways to use it/);
   assert.doesNotMatch(page.slice(run), /data-testid="copy-skill"[^>]*btn-primary|btn-primary[^>]*data-testid="copy-skill"/);
+  // One Save, beside Download. Past Download and Copy, everything sits in one "More options" disclosure.
+  assert.equal(page.match(/<SaveButton /g)?.length, 1);
+  assert.ok(page.indexOf('<SaveButton ') > main && page.indexOf('<SaveButton ') < get, 'Save sits in the main action');
+  assert.equal(page.match(/<details className="task-(more|reuse)"/g)?.length, 1);
+  assert.ok(page.indexOf('<CopyableTask ') > page.indexOf('data-testid="task-more"'), 'the task prompt is under More options');
+  assert.ok(page.indexOf('<ItemVotes ') > main && page.indexOf('<ItemVotes ') < get, '"Did it work?" sits under the main action');
   const header = fs.readFileSync('src/BlockHeader.tsx', 'utf8');
   assert.match(header, /capSentences\(p\?\.subhead\|\|b\.summary,3\)/);
 });

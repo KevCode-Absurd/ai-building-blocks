@@ -77,8 +77,11 @@ test("keyboard request transfer contains all instructions and is honest about ex
  await expect(page.getByTestId("task-text-transfer")).toContainText("Your AI does the work");
  await expect(page.getByTestId("composer-copy")).toHaveText("Request copied");
  expect(await page.evaluate(() => (window as any).copiedRequest)).toContain(NOTES);
- await page.getByTestId("task-useful").click();
- await expect(page.getByTestId("task-useful")).toHaveText("Thanks for letting us know");
+ // After the request is copied, the page points to the one "Did it work?" row under Download.
+ await expect(page.getByTestId("task-vote-link")).toHaveAttribute("href", "#item-votes");
+ await page.getByTestId("vote-yes").click();
+ await expect(page.getByTestId("vote-yes")).toHaveAttribute("aria-pressed", "true");
+ await expect(page.getByTestId("vote-thanks")).toContainText("Thanks");
 });
 test("reference anchor opens preserved checks", async ({ page }) => {
  await page.goto(`${TASK}#test`, { waitUntil: "domcontentloaded" });

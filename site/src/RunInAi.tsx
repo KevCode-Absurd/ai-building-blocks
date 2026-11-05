@@ -2,9 +2,9 @@ import { useState, type ReactNode } from "react";
 import { Link } from "./lib/router";
 import "./block-flow.css";
 
-const AIS = ["claude", "chatgpt", "gemini"] as const;
+const AIS = ["claude", "claude-code", "chatgpt", "gemini"] as const;
 type Ai = (typeof AIS)[number];
-const NAMES: Record<Ai, string> = { claude: "Claude", chatgpt: "ChatGPT", gemini: "Gemini" };
+const NAMES: Record<Ai, string> = { claude: "Claude", "claude-code": "Claude Code", chatgpt: "ChatGPT", gemini: "Gemini" };
 const KEY = "abb:run-ai";
 
 /** What to do after the main Download button: upload the file to ChatGPT, Claude or Gemini. Shown under the button,
@@ -14,10 +14,12 @@ export function UploadSteps({ noun, hasFiles, pack }: { noun: string; hasFiles: 
   const pick = (a: Ai) => { setAi(a); try { localStorage.setItem(KEY, a); } catch { /* the choice lasts for this visit */ } };
   const steps: Record<Ai, ReactNode[]> = pack ? {
     claude: [<>Unzip the download.</>, <>In Claude, start a new project and add all the files to it.</>, <>Start a chat in that project and say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
+    "claude-code": [<>Unzip the download into your project folder.</>, <>Start Claude Code in that folder.</>, <>Say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
     chatgpt: [<>Unzip the download.</>, <>In ChatGPT, start a new project and add all the files to its Sources.</>, <>Start a chat in that project and say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
     gemini: [<>Unzip the download.</>, <>In a new Gemini chat, attach all the files.</>, <>Say: <b>Read START_HERE.txt and follow HANDOFF.md</b>.</>],
   } : {
     claude: [<>In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill.</>, <>Upload the ZIP you downloaded and turn the {noun} on.</>, <>In any chat, ask for it by name.</>],
+    "claude-code": [<>Unzip the download into <code>.claude/skills</code> in your project, or into <code>~/.claude/skills</code> to use it in every project.</>, <>Start Claude Code, or restart it if it was open.</>, <>Ask for the {noun} by name.</>],
     chatgpt: [<>Unzip the download.</>, <>Add the files to a ChatGPT project's Sources.</>, <>Start a chat in that project and ask it to use the {noun}.</>],
     gemini: [<>Unzip the download.</>, <>In Gemini, open Gems and choose New Gem. Paste in the text of SKILL.md{hasFiles ? " and add the other files as its knowledge" : ""}.</>, <>Save the Gem and start your chats with it.</>],
   };

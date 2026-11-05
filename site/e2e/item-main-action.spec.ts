@@ -41,6 +41,45 @@ test('the main button downloads the item, and the upload steps sit right under i
   await expect(page.getByTestId('copy-skill')).toBeVisible();
 });
 
+test('Save sits beside Download, Claude Code has its own steps, and extras wait under More options', async ({ page }) => {
+  await page.goto('/skills/ai-search-audit');
+  const main = page.getByTestId('main-action');
+  await expect(main.getByTestId('save-item')).toBeVisible();
+  await expect(page.getByTestId('save-item')).toHaveCount(1);
+  await main.getByTestId('upload-claude-code').click();
+  await expect(main.getByTestId('upload-steps')).toContainText('.claude/skills');
+  await expect(page.getByTestId('pull-from-ai')).toBeHidden();
+  await page.getByTestId('task-more').locator('> summary').click();
+  await expect(page.getByTestId('pull-from-ai')).toBeVisible();
+});
+
+test('anyone can say whether an item worked, change the answer, or take it back', async ({ page }) => {
+  await page.route('**/api/votes*', async r => {
+    const req = r.request();
+    if (req.method() === 'GET') return r.fulfill({ json: { yes: 3, no: 1, mine: null } });
+    const { worked } = req.postDataJSON();
+    return r.fulfill({ json: { yes: 3 + (worked === true ? 1 : 0), no: 1 + (worked === false ? 1 : 0), mine: worked } });
+  });
+  await page.goto('/prompts/rough-notes-to-minutes-writer');
+  const votes = page.getByTestId('item-votes');
+  await expect(votes.getByTestId('vote-count')).toHaveText('3 of 4 people say it worked.');
+  await votes.getByTestId('vote-no').click();
+  await expect(votes.getByTestId('vote-no')).toHaveAttribute('aria-pressed', 'true');
+  await expect(votes.getByTestId('vote-thanks').getByRole('link', { name: 'Tell others what went wrong' })).toHaveAttribute('href', '#comments');
+  await votes.getByTestId('vote-yes').click();
+  await expect(votes.getByTestId('vote-count')).toHaveText('4 of 5 people say it worked.');
+  await votes.getByTestId('vote-yes').click();
+  await expect(votes.getByTestId('vote-yes')).toHaveAttribute('aria-pressed', 'false');
+  await expect(votes.getByTestId('vote-count')).toHaveText('3 of 4 people say it worked.');
+});
+
+test('the answers row stays hidden when the service is off', async ({ page }) => {
+  await page.route('**/api/votes*', r => r.fulfill({ status: 503, json: { error: 'off' } }));
+  await page.goto('/prompts/rough-notes-to-minutes-writer');
+  await expect(page.getByTestId('download-task')).toBeEnabled();
+  await expect(page.getByTestId('item-votes')).toHaveCount(0);
+});
+
 test('Share copies the page address', async ({ page }) => {
   await page.goto('/prompts/rough-notes-to-minutes-writer');
   await page.getByTestId('share-item').click();

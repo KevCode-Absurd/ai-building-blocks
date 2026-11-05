@@ -334,7 +334,7 @@ for (const mobile of [false, true]) {
       // Reading and menus do not need the full catalogue. Only the editing control does.
       await page.locator("#root .bp-h1").click();
       expect(requested).toBe(false);
-      await page.getByTestId('task-more').locator('summary').click();
+      await page.getByTestId('task-more').locator('> summary').click();
       expect(requested).toBe(false);
       await page.getByTestId('add-to-workflow').click();
       await expect.poll(() => requested).toBe(true);
@@ -359,7 +359,7 @@ for (const mobile of [false, true]) {
       await page.goto('/skills/voice-and-tone-guide-writer');
       await expect(page.getByTestId('skill-neighbours')).toBeVisible();
       expect(requested).toBe(false);
-      await page.getByTestId('task-more').locator('summary').click();
+      await page.getByTestId('task-more').locator('> summary').click();
       await page.getByTestId('add-to-workflow').click();
       await expect.poll(() => requested).toBe(true);
       const opening = page.getByRole('dialog', {name: 'Add to a workflow', exact: true});
@@ -496,6 +496,8 @@ for (const mobile of [false, true]) {
     await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', {value: {writeText: async (text: string) => { (window as any).__previewCopied = text; }}}));
     if (mobile) await page.setViewportSize({width: 412, height: 823});
     await page.goto('/skills/claude-app-builder');
+    // The task prompt lives under More options, past Download and Copy.
+    await page.getByTestId('task-more').locator('> summary').click();
     const block = page.getByTestId('copyable-task');
     await expect(page.getByTestId('copy-task-adapter')).toBeEnabled();
     await block.locator('details > summary').click();

@@ -16,7 +16,7 @@ test('known legacy Mercatura app URL redirects to apps and preserves its query f
 
 test('Workers routes existing APIs before static assets and keeps unknown APIs as JSON 404s', async () => {
   const env = { API_ALLOWED_HOSTS: 'example.test', API_READ_LIMITER: { async limit() { return { success: true }; } }, ASSETS: { fetch() { throw new Error('API leaked into asset routing'); } } };
-  for (const path of ['/api/comments', '/api/comments/', '/api/spaces', '/api/spaces/me', '/api/spaces/shared/test']) {
+  for (const path of ['/api/comments', '/api/comments/', '/api/votes', '/api/spaces', '/api/spaces/me', '/api/spaces/shared/test']) {
     const response = await worker.fetch(new Request('https://example.test' + path, { headers: { 'cf-connecting-ip': '192.0.2.1' } }), env);
     assert.equal(response.status, 503, path); // Existing handler: database is not connected.
     assert.match(response.headers.get('content-type'), /json/);

@@ -16,6 +16,8 @@ function SkillChoices({block,plan,c,onAdd}:Props){
   const [busy,setBusy]=useState(false);
   const [message,setMessage]=useState('');
   const [error,setError]=useState('');
+  // The downloader with checkboxes and an order is for the few who want several skills at once: closed until asked for.
+  const [picking,setPicking]=useState(false);
   const chosen=selected.map(slug=>all.find(row=>row.slug===slug)).filter((row):row is Block=>!!row);
   const toggle=(slug:string)=>{
     setMessage('');setError('');
@@ -40,20 +42,21 @@ function SkillChoices({block,plan,c,onAdd}:Props){
     finally{setBusy(false);}
   };
   const choice=(row:{slug:string;name:string;url:string;note:string})=><li key={row.slug}>
-    <div className="skill-neighbours-choice"><input type="checkbox" aria-label={`Select ${row.name}`} checked={selected.includes(row.slug)} disabled={busy} onChange={()=>toggle(row.slug)}/><Link to={local(row.url)}>{row.name}</Link></div>
+    <div className="skill-neighbours-choice">{picking&&<input type="checkbox" aria-label={`Select ${row.name}`} checked={selected.includes(row.slug)} disabled={busy} onChange={()=>toggle(row.slug)}/>}<Link to={local(row.url)}>{row.name}</Link></div>
     <p className="small">{row.note}</p>
   </li>;
   return <section className="bp-next skill-neighbours" id="next" aria-labelledby="next-h" data-testid="skill-neighbours">
     <h2 className="bp-h2" id="next-h">Before and after this skill</h2>
-    <p className="bp-note">Open a skill to read it, or select the skills you need and choose their order.</p>
+    <p className="bp-note">What to run before this skill, and what to run with its result.</p>
     <div className="skill-neighbours-grid">
       <div className="skill-neighbours-card" data-testid="skill-before"><h3>Before</h3>{before.length?<ul>{before.map(choice)}</ul>:<p className="small">Bring the material listed under Fill it in.</p>}</div>
       <Arrow/>
-      <div className="skill-neighbours-card skill-neighbours-current"><h3>This skill</h3><div className="skill-neighbours-choice"><input type="checkbox" aria-label={`Select ${block.name}`} checked={selected.includes(block.slug)} disabled={busy} onChange={()=>toggle(block.slug)}/><Link to={pathOf(block)}>{block.name}</Link></div><button className="btn btn-line btn-sm" type="button" onClick={()=>onAdd([block.slug])} data-testid="add-this-skill">Add this skill to builder</button><p className="small">Then choose Add before or Add after to add another step.</p></div>
+      <div className="skill-neighbours-card skill-neighbours-current"><h3>This skill</h3><div className="skill-neighbours-choice">{picking&&<input type="checkbox" aria-label={`Select ${block.name}`} checked={selected.includes(block.slug)} disabled={busy} onChange={()=>toggle(block.slug)}/>}<Link to={pathOf(block)}>{block.name}</Link></div><button className="btn btn-line btn-sm" type="button" onClick={()=>onAdd([block.slug])} data-testid="add-this-skill">Add this skill to builder</button><p className="small">Then choose Add before or Add after to add another step.</p></div>
       <Arrow/>
       <div className="skill-neighbours-card" data-testid="skill-after"><h3>After</h3>{after.length?<ul data-testid="next">{after.map(choice)}</ul>:<p className="small">Use the result on its own, or choose another skill in the builder.</p>}</div>
     </div>
-    <div className="skill-neighbours-selection" aria-busy={busy}>
+    <button className="link-btn small skill-neighbours-pick" type="button" aria-expanded={picking} onClick={()=>setPicking(v=>!v)} data-testid="skill-neighbours-pick">{picking?'Hide the download choices':`Download these ${all.length} skills together`}</button>
+    {picking&&<div className="skill-neighbours-selection" aria-busy={busy}>
       <h3>Your selected order ({chosen.length})</h3>
       <p className="small">Move selected skills up or down to set their reading order. The ZIP includes that order and supporting files.</p>
       {chosen.length?<ol className="skill-neighbours-order" data-testid="skill-selected-order">{chosen.map((row,index)=><li key={row.slug}>
@@ -64,6 +67,6 @@ function SkillChoices({block,plan,c,onAdd}:Props){
       <p className="small">Download all includes the skills shown above in Before → This skill → After order.</p>
       <p className="small" role="status">{message}</p>
       {error&&<p className="small" role="alert">{error}</p>}
-    </div>
+    </div>}
   </section>;
 }

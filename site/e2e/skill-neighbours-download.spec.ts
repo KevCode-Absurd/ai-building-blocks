@@ -29,6 +29,9 @@ for(const mobile of [false,true])test(`${mobile?'@mobile ':''}before and after s
   await fixture(page);
   const section=page.getByTestId('skill-neighbours');
   await expect(section).toBeVisible();
+  // Plain links first; the checkboxes and order appear only when you ask to download several.
+  await expect(section.getByRole('checkbox')).toHaveCount(0);
+  await section.getByTestId('skill-neighbours-pick').click();
   const boxes=section.getByRole('checkbox');
   const count=await boxes.count();expect(count).toBeGreaterThan(1);
   await expect(section.getByRole('button',{name:'Download selected (1)',exact:true})).toBeEnabled();
@@ -68,6 +71,7 @@ test('a failed download shows a retryable error and keeps selected skills',async
   await page.route('**/skills/*/SKILL.md',route=>route.fulfill({status:503,body:'Unavailable'}));
   await page.route('**/skills/*.zip',route=>route.fulfill({status:503,body:'Unavailable'}));
   const section=page.getByTestId('skill-neighbours');
+  await section.getByTestId('skill-neighbours-pick').click();
   await section.getByRole('button',{name:'Download selected (1)',exact:true}).click();
   await expect(section.getByRole('alert')).toContainText(/Couldn't load/);
   await expect(section.getByRole('button',{name:'Download selected (1)',exact:true})).toBeEnabled();

@@ -35,6 +35,7 @@ import { TASK_STARTERS } from "./lib/task-discovery";
 import CopyableTask from "./CopyableTask";
 import BlockHeader from "./BlockHeader";
 import ItemMainAction from "./ItemMainAction";
+import ItemVotes from "./ItemVotes";
 import SimilarItems, { SkipLine, type NotForLink, type SiblingRow } from "./SimilarItems";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -265,7 +266,6 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   const [adding, setAdding] = useState(false);
   const [dl, setDl] = useState<Flow | null>(null);
   const [transferred, setTransferred] = useState(false);
-  const [useful, setUseful] = useState(false);
   const [copyFailed, setCopyFailed] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [reload, setReload] = useState(0);
@@ -282,7 +282,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
   useEffect(() => {
     let active = true;
     if (!embedded) setPage(undefined);
-    setSkill(null); setShowAllSample(false); setLoadError(false); setTransferred(false); setUseful(false); setCopyFailed(false);
+    setSkill(null); setShowAllSample(false); setLoadError(false); setTransferred(false); setCopyFailed(false);
     loadPage(slug).then(value => { if (active) { setPage(value); onPageLoaded?.(value); if (!value && b?.headline) setLoadError(true); } }).catch(() => { if (active) { setPage(null); onPageLoaded?.(null); setLoadError(true); } });
     loadSkillText(slug).then(value => { if (active) { setSkill(value); if (!value) setLoadError(true); } }).catch(() => { if (active) setLoadError(true); });
     markViewed(slug); trackUxEvent("task_started");
@@ -429,10 +429,14 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         {page === undefined && <p className="small" role="status">Loading…</p>}
         {loadError && <p role="alert">The instructions could not load. Your draft is kept. <button className="link-btn" onClick={() => { trackUxEvent("task_retried"); setReload(n => n + 1); }}>Try again</button></p>}
 
-        {/* The main action sits right under the opening: download it, then the steps to upload it to your AI.
-            Every other way to use it is in "Other ways" (#run). */}
-        <ItemMainAction moreId="run" render={compact => <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "download-task"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>}
+        {/* The main action sits right under the opening: download it (or save it for later), then the steps to upload
+            it to your AI. Every other way to use it is in "Other ways" (#run). */}
+        <ItemMainAction moreId="run" render={compact => {
+          const main = <button className="btn btn-primary" disabled={!skill || downloading} onClick={() => void downloadTask()} data-testid={compact ? "sticky-download" : "download-task"}>{downloading ? "Preparing download…" : `Download ${noun}`}</button>;
+          return compact ? main : <>{main}<SaveButton slug={b.slug} title={b.name} toast={toast} /></>;
+        }}
           note={<><UploadSteps noun={noun} hasFiles={!!b.hasFiles} pack={isFlow} />{downloadError && <p role="alert">{downloadError} <button className="link-btn" onClick={() => void downloadTask()}>Try again</button></p>}{bring.length > 0 && <p>Your AI will ask for <a href="#task-start">what to bring</a>.</p>}</>} />
+        <ItemVotes slug={b.slug} noun={noun} />
 
         {hasFill && (
           <section className="bp-part task-start" id="task-start" data-testid="task-start" aria-labelledby="fill-h">
@@ -440,7 +444,6 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
             <p className="bp-note">{textTask ? "Add what this task works from, then copy the request. Your details are optional but make the result yours." : bring.length > 0 ? "Gather these first. You add them in your AI after you download." : "Add these for a better result."}</p>
             {bring.length > 0 && !textTask && <div><b>What to bring</b><ul className="task-materials">{bring.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
             {textTask && <Composer key={`composer-${b.slug}`} slug={b.slug} task={b} skill={skill} give={required.length ? give.filter(x => !/\boptional\b/i.test(txt(x))) : []} toast={toast} example={p?.example?.input || starter?.example} exampleLabel={!p?.example?.input ? starter?.exampleLabel : undefined} onTransfer={() => setTransferred(true)} />}
-            {hasCopyable && <CopyableTask key={`copyable-${b.slug}`} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
             {(betterWith.length > 0 || betterTools.length > 0) && (
               <p className="small task-better" data-testid="better-with"><b>Better with: </b>
                 {[...betterWith.map(i => i.maker ? <Link key={i.key} to={local(i.maker.url)}>{i.label}</Link> : <span key={i.key}>{i.label}</span>), ...betterTools.map(t => <span key={t.name} title={t.why}>{t.name}</span>)]
@@ -512,25 +515,30 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
           <h2 className="bp-h2" id="run-h">{num()}Other ways to use it</h2>
           <p className="bp-note">{isFlow ? "Copy the main instructions, or open the steps in the builder." : `Copy the ${noun} and paste it into any chat.`}{b.hasFiles && !isFlow && " Copying leaves out the supporting files, so use the download for those."} <a href="/how-it-works#use-in-ai" target="_blank" rel="noopener noreferrer" data-testid="how-to-use">How to use</a></p>
           <div className="task-primary-actions">
-            <SaveButton slug={b.slug} title={b.name} toast={toast} />
             <button className="btn btn-line" disabled={!skill} onClick={() => void copySkill()} data-testid="copy-skill">Copy {noun}</button>
             {isFlow && <button className="btn btn-line" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)} data-testid="view-in-builder">View in builder</button>}
           </div>
           {copyFailed && <div className="task-copy-fallback"><p role="alert">Copy did not work. Select and copy the instructions below.</p><textarea aria-label="Copy instructions manually" readOnly value={skill ? withBusiness(skill, getBusiness(), [b]) : ""} rows={6} onFocus={e => e.currentTarget.select()} /></div>}
-          <div className="task-start-extras">
-            <details className="task-reuse" data-testid="task-reuse"><summary>Get it from a connected AI</summary><PullFromAi slug={b.slug} plan={isFlow && !isAgent} toast={toast} /></details>
-            {isMind && has(p?.seats) && <div className="bp-actions"><button className="btn btn-line" data-testid="start-council" onClick={() => {
-              const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
-              toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
-            }}>Start a council with {mindName}</button><Link to="/minds" className="btn btn-ghost">Pick other minds</Link></div>}
-            <details className="task-more" data-testid="task-more"><summary>Add it to a workflow or get help</summary><div className="bp-actions">
-              {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
-                <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
-              </>}
-              <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
-            </div>{!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}</details>
-          </div>
-          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<button className="btn btn-ghost btn-sm" onClick={() => { if (!useful) trackUxEvent("result_useful"); setUseful(true); }} data-testid="task-useful">{useful ? "Thanks for letting us know" : "I got a useful result"}</button><p className="small">Optional feedback. This site cannot check work done in another AI.</p>{useful && <div className="task-next-win"><p>Want to do this again?</p><SaveButton slug={b.slug} title={b.name} toast={toast} /></div>}</div>}
+          {/* Everything else sits behind one disclosure, so the page has one clear path: Download, or Copy. */}
+          <details className="task-more" data-testid="task-more"><summary>More options</summary>
+            <div className="task-more-body">
+              {hasCopyable && <CopyableTask key={`copyable-${b.slug}`} c={c} b={b} recipe={p!.copyable!} skill={skill} toast={toast} />}
+              <PullFromAi slug={b.slug} plan={isFlow && !isAgent} toast={toast} />
+              {isMind && has(p?.seats) && <div className="bp-actions"><button className="btn btn-line" data-testid="start-council" onClick={() => {
+                const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
+                toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
+              }}>Start a council with {mindName}</button><Link to="/minds" className="btn btn-ghost">Pick other minds</Link></div>}
+              <h3 className="run-ai-h">Add it to a workflow or get help</h3>
+              <div className="bp-actions">
+                {isFlow ? <button className="btn btn-ghost" onClick={() => toBuilder(keepCoordinator ? [b.slug] : b.steps.map(s => s.uses), b.name)}>Edit the steps</button> : <>
+                  <button className="btn btn-ghost" onClick={() => setAdding(true)} data-testid="add-to-workflow">Use in a multi-step task</button>
+                </>}
+                <button className="link-btn" onClick={() => openTailor(b.name)}>Get help adapting this task</button>
+              </div>
+              {!hasFill && <BusinessNote />}{isFlow && <ExecutionPrompt name={b.name} flow={workflowFlow()} catalogue={c} />}
+            </div>
+          </details>
+          {transferred && <div className="task-result-check" data-testid="task-result-check"><h3>Check the result in your AI</h3>{usefulChecks.length ? <ul>{usefulChecks.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul> : <p>Check that it uses your facts and gives you the result you asked for. Ask your AI to fix anything missing.</p>}<p className="small">Once you've tried it, <a href="#item-votes" data-testid="task-vote-link">say if it worked</a>. This site can't see work done in your AI, so your answer is how others find out.</p></div>}
         </section>
 
         {!isFlow && !isMind && p?.plan ? <SkillNeighbours block={b} plan={p.plan} c={c} onAdd={slugs => toBuilder(slugs)} /> : has(p?.plan?.next) && (

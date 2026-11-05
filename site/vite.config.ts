@@ -4,6 +4,7 @@ import path from "node:path";
 import { defineConfig, loadEnv, type Plugin } from "vite";
 import preact from "@preact/preset-vite";
 import { handleComments, memoryStore } from "./src/server/comments";
+import { handleVotes, memoryVotes } from "./src/server/votes";
 import { handleSpaces, memorySpaces } from "./src/server/spaces";
 import { decodeCatalogue, handleComposer, memoryComposer } from "./src/server/composer";
 import { loadWorkflowEnv } from "../tools/lib/workflow-env.mjs";
@@ -111,6 +112,26 @@ function devComments(): Plugin {
   };
 }
 
+/** /api/votes on the dev server: the live site's handler with an in-memory store (the live site uses D1). */
+function devVotes(): Plugin {
+  const store = memoryVotes();
+  return {
+    name: "dev-votes",
+    configureServer(server) {
+      server.middlewares.use("/api/votes", async (req, res) => {
+        const chunks: Buffer[] = [];
+        for await (const c of req) chunks.push(c as Buffer);
+        const body = ["GET", "HEAD"].includes(req.method ?? "GET") ? undefined : Buffer.concat(chunks);
+        const request = new Request(`http://localhost/api/votes${req.url === "/" ? "" : req.url}`, { method: req.method, headers: req.headers as Record<string, string>, body });
+        const out = await handleVotes(request, store, { ip: req.socket.remoteAddress ?? "", limit: false });
+        res.statusCode = out.status;
+        out.headers.forEach((v, k) => res.setHeader(k, v));
+        res.end(await out.text());
+      });
+    },
+  };
+}
+
 /** /api/spaces on the dev server: the live site's handler with an in-memory store (the live site uses D1). */
 function devSpaces(): Plugin {
   const store = memorySpaces();
@@ -159,7 +180,7 @@ function exampleApp(): Plugin {
 
 // Preact runs the same React code at a fraction of the size: react and react-dom are aliased to preact/compat.
 export default defineConfig(({ mode }) => ({
-  plugins: [preact(), devPublicApi(), devSecurity(), devComments(), devSpaces(), devComposer(), exampleApp(), catalogueAsset({ root: process.cwd() }), toolNextSteps({ root: process.cwd() })],
+  plugins: [preact(), devPublicApi(), devSecurity(), devComments(), devVotes(), devSpaces(), devComposer(), exampleApp(), catalogueAsset({ root: process.cwd() }), toolNextSteps({ root: process.cwd() })],
   // Only the app entry is source; immutable release snapshots must not be scanned.
   optimizeDeps: { entries: ["index.html"] },
   server: { port: 5180, fs: { allow: [".."] }, ...(mode === "test" ? { hmr: false, watch: null } : {}) }, // tests use a stable snapshot while other tasks edit files

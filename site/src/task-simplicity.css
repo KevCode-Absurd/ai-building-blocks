@@ -75,8 +75,13 @@
   .task-composer .composer-bar > span { flex-basis: 100%; }
 }
 
-.task-reuse > summary { cursor: pointer; font-weight: 600; }
-.task-reuse[open] > summary { margin-bottom: .6rem; }
+/* "More options": everything past Download and Copy, in one disclosure. */
+.task-more { margin-top: 1rem; }
+.task-more > summary { cursor: pointer; font-weight: 600; min-height: 44px; display: list-item; align-content: center; }
+.task-more-body { display: grid; gap: 1.25rem; margin-top: .5rem; }
+.task-more-body > * { margin: 0; }
+.task-more-body .pull-ai { margin-top: 0; }
+.task-more-body > .run-ai-h { margin-bottom: -.75rem; }
 /* One labelled box per input. */
 .task-fields { display: grid; gap: 0; }
 .task-field { border-bottom: 1px solid var(--line); }

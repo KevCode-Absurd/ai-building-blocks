@@ -15,9 +15,14 @@ function withoutModifiedDates(value) {
   return Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'dateModified').map(([key, entry]) => [key, withoutModifiedDates(entry)]));
 }
 
-/** Content, not a new asset filename, stylesheet, loader script, the loading cover's picture of the page or the stamp itself. */
+// The site-wide menu and footer that scripts/prerender.mjs puts on every page. A new menu link is not new content on
+// 6,700 pages: counting it marked every page as updated on each deploy, and search engines stop trusting such dates.
+export const SITE_CHROME = /<header\b[^>]*\bdata-prerendered-nav\b[^>]*>[\s\S]*?<\/header\s*>|<footer class="(?:wrap small|footer)">[\s\S]*?<\/footer\s*>/gi;
+
+/** Content, not a new asset filename, stylesheet, loader script, the loading cover's picture of the page, the
+ *  site-wide menu and footer, or the stamp itself. */
 export function canonicalHtml(html) {
-  return withoutPageShell(html).replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
+  return withoutPageShell(html).replace(SITE_CHROME, '').replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
     /\btype\s*=\s*["']application\/ld\+json["']/i.test(attributes)
       ? `<script type="application/ld+json">${stableJson(withoutModifiedDates(JSON.parse(body)))}</script>` : '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi, '')

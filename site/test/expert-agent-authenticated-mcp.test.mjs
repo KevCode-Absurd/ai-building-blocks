@@ -49,7 +49,9 @@ test('real OAuth PKCE and MCP HTTP persist profile, guided answers, proposals an
 test('read-only grants never advertise or execute writes; spoofed identities cannot change scope',async()=>{
  const f=await fixture(),g=await grant(f.deps,{write:false});const result=await rpc(f,g,'tools/list');assert(result.body.result.tools.every(t=>t.annotations.readOnlyHint));
  const denied=await call(f,g,'save_expert_profile',write({profile:profile()}));assert(denied.body.error);assert.equal((await f.deps.experts.list('personal:user-one','profile')).length,0);
- const writable=await grant(f.deps),bad=await call(f,writable,'save_expert_profile',write({profile:profile(),owner_id:'another-user'}));assert(bad.body.error);assert(!JSON.stringify(bad.body).includes('PRIVATE_PROFILE_SENTINEL'));
+ const writable=await grant(f.deps),bad=await call(f,writable,'save_expert_profile',write({profile:profile(),owner_id:'another-user'}));
+ // Refused either as a protocol error or, as the shared MCP layer now does for bad arguments, as a tool error; nothing is stored.
+ assert(bad.body.error||bad.body.result?.isError===true);assert.equal((await f.deps.experts.list('personal:another-user','profile')).length,0);assert.equal((await f.deps.experts.list('personal:user-one','profile')).length,0);assert(!JSON.stringify(bad.body).includes('PRIVATE_PROFILE_SENTINEL'));
 });
 test('anonymous, revoked and different-audience requests cannot initialize or read stored expert context',async()=>{
  const f=await fixture(),g=await grant(f.deps);value(await call(f,g,'save_expert_profile',write({profile:profile()})));

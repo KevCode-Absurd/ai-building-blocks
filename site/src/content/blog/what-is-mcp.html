@@ -1,0 +1,163 @@
+<h2 id="short-answer">What is MCP, in plain words?</h2>
+<p>What is MCP? It stands for Model Context Protocol, an open standard that lets AI applications such as Claude and ChatGPT connect to other tools and data. Those might be your files, your calendar, your notes app, your shop or a library of instructions. Anthropic, the maker of Claude, created the standard, and many AI applications now support it.</p>
+<p>The official site, <a href="https://modelcontextprotocol.io/docs/getting-started/intro" rel="noopener">modelcontextprotocol.io</a>, compares it to a USB-C port, because any device with a USB-C plug fits any USB-C socket. In the same way, a tool that supports MCP can connect to any AI application that supports MCP, without a custom integration for each pair.</p>
+<p>For a business owner, that has three practical consequences worth understanding:</p>
+<ul>
+<li><strong>Your AI can look things up</strong> in the tools you connect, instead of relying on you to copy and paste information.</li>
+<li><strong>Your AI can take actions</strong> in those tools, such as adding a spreadsheet row or creating a draft, whenever you allow it.</li>
+<li><strong>You stay in charge</strong> of what it can reach, because you choose which connections to add, which to turn on in each chat and which actions to approve.</li>
+</ul>
+<p>In most AI applications, an MCP connection is called a connector, although some call it a plugin or an app. The rest of this guide explains the terminology, the safety rules and the steps to add your first connector.</p>
+
+<h2 id="how-it-works">Model Context Protocol explained: servers, connectors and tools</h2>
+<p>You will see a few terms again and again, so here is what each one means in practice.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Word</th><th scope="col">What it means</th><th scope="col">Example</th></tr></thead>
+<tbody>
+<tr><td>MCP server</td><td>The program a company runs so AI apps can reach its tool. It usually lives at a web address.</td><td>A notes app's MCP server, at a link the app gives you.</td></tr>
+<tr><td>Connector</td><td>The name most AI apps give to an MCP connection once you add it.</td><td>"AI Blocks" in your list of connectors.</td></tr>
+<tr><td>Tools</td><td>The actions a server offers. Each tool does one thing.</td><td>"Search notes", "Create page", "Get item".</td></tr>
+<tr><td>Sign-in</td><td>How the server knows it's you. Often a normal sign-in screen, so your AI never sees your password.</td><td>"Sign in with your account" when you add the connector.</td></tr>
+</tbody>
+</table></div>
+<p>Here is what happens when you ask your AI to use a connector. You make a request, such as "find last week's meeting notes", and your AI recognises that a connected tool can do that, so it asks the server to run it. The server sends back the result, which your AI then uses in its answer. If the tool would change something, your application usually asks you to approve it first.</p>
+<aside class="callout"><p><strong>Tip.</strong> A connector gives your AI access to a tool, but your AI can still misunderstand a request, so start with jobs where it only reads and reports.</p></aside>
+
+<h2 id="what-it-does">What can an MCP server let your AI do?</h2>
+<p>That depends entirely on the individual server. The official MCP site gives examples such as an assistant that can reach your Google Calendar and Notion, and business chatbots that can query several databases. For a small business, typical uses include the following:</p>
+<ul>
+<li><strong>Read your own material:</strong> notes, documents, a product list or a help centre, so that answers are based on your facts.</li>
+<li><strong>Pull ready-made instructions:</strong> a library of skills or workflows that your AI can fetch whenever a job needs one.</li>
+<li><strong>Act in your apps:</strong> draft an email, add a task or update a spreadsheet, with your approval each time.</li>
+<li><strong>Join apps together:</strong> one server can reach many applications, as the Zapier example below shows.</li>
+</ul>
+<p>A connector doesn't give your AI new skills on its own, because it only provides access. The instructions for doing a job well still come from you, a prompt or a skill. Our guide to <a href="/blog/ai-prompts-vs-skills-vs-workflows">prompts, skills and workflows</a> explains how those fit together.</p>
+
+<h2 id="safety">Is MCP safe? Permissions and trusted servers</h2>
+<p>A connector can see data and take actions in the tools you connect, which is both its purpose and its risk. Anthropic and OpenAI therefore give similar advice about using connectors safely.</p>
+<ul class="checklist">
+<li><strong>Connect only servers you trust.</strong> Anthropic's <a href="https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp" rel="noopener">help on custom connectors</a> says to connect only to servers built and hosted by organisations you trust. OpenAI's <a href="https://developers.openai.com/api/docs/mcp/" rel="noopener">MCP docs</a> say not to connect a custom server unless you know and trust the app behind it.</li>
+<li><strong>Read what it asks for at sign-in:</strong> review the permissions requested, keep them as narrow as possible, and deny anything the job doesn't need.</li>
+<li><strong>Turn off tools you don't need:</strong> Claude lets you disable individual tools that aren't relevant to a particular chat.</li>
+<li><strong>Read approval requests before you allow them:</strong> in Claude, choose "Allow always" only for tools you trust to run unsupervised. OpenAI says ChatGPT asks for manual confirmation before write actions.</li>
+<li><strong>Watch for prompt injection:</strong> this happens when text inside a web page, email or file tries to give your AI orders. Both makers warn about it, so be careful whenever a connector reads content from outside your business.</li>
+<li><strong>Keep secrets out of chats:</strong> a well-built connector signs you in through its own screen, so you should never need to paste a password into the conversation.</li>
+</ul>
+<p>Before you rely on a new server, you can ask your AI to describe its tools first by pasting this prompt into a chat with the connector turned on.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: review a connector's tools before you use it</p><pre id="prompt-1">I have just connected [connector name]. Before we use it for real work, review it with me.
+
+Task: List every tool this connector gives you.
+
+Format: a table with these columns:
+- Tool name
+- What it does, in plain words
+- Reads only, or can change something (create, edit, send, delete, pay)
+- What data it can see
+
+Then:
+1. Tell me which tools I need for this job: [describe the job].
+2. Tell me which tools I could turn off for this job.
+3. Flag any tool that can send, delete, pay or change a live account.
+
+Rules: Do not call any tool that changes anything. If you are unsure what a tool does, say so instead of guessing. Wait for my go-ahead before using the connector.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h2 id="add-connector">How to add an MCP connector in Claude, ChatGPT and Claude Code</h2>
+<p>These steps follow each maker's help pages as of November 2026, although menus change often, and your plan or workspace must allow custom connectors. If a step doesn't match what you see, follow the linked page instead.</p>
+<h3>Claude (web and desktop)</h3>
+<ol>
+<li>Go to <strong>Customize</strong>, then <strong>Connectors</strong>.</li>
+<li>Select <strong>+ Add</strong>, then <strong>Add custom connector</strong>.</li>
+<li>Enter a name and the server's web address, then select <strong>Continue</strong> to proceed.</li>
+<li>Review the sign-in settings and choose the authentication option the server requires, then select <strong>Add</strong>.</li>
+<li>In a chat, select the <strong>+</strong> button at the lower left, then <strong>Connectors</strong>, and turn the connector on.</li>
+</ol>
+<p>On Team and Enterprise plans, an owner adds the connector first under <strong>Organization settings</strong>, then <strong>Connectors</strong>, and members then find it in their own Connectors list and select <strong>Connect</strong>. Anthropic's help says free accounts can add one custom connector.</p>
+<h3>ChatGPT</h3>
+<ol>
+<li>On the ChatGPT website, open <strong>Plugins</strong>.</li>
+<li>Select the plus button, then <strong>Add custom MCP server</strong>.</li>
+<li>Enter the server's address and its authentication details.</li>
+<li>Read the risk warning, choose <strong>I understand and want to continue</strong>, then <strong>Create as a plugin</strong>.</li>
+<li>Install the plugin, then type @ in a conversation and select it from the list.</li>
+</ol>
+<p>OpenAI notes that custom servers are third-party services it hasn't verified, and your account or workspace must allow custom MCP servers.</p>
+<h3>Claude Code</h3>
+<p>In your terminal, you can add a server with a single command, using a short name and the server's address: <code>claude mcp add --transport http [name] [server address]</code>. Afterwards, run <code>claude mcp list</code> to confirm that it says Connected.</p>
+
+<h2 id="worked-example">A worked example: Zapier MCP and one safe action</h2>
+<p>Zapier is an automation tool that connects different applications. Its <a href="https://zapier.com/mcp" rel="noopener">Zapier MCP page</a> says it connects AI tools such as Claude, ChatGPT and Cursor to more than 9,000 apps, as of November 2026. You connect apps to your Zapier account and then choose which apps and actions your AI may use. Zapier says you can review every MCP action in its History and remove access at any time, and the same page explains how MCP use counts toward your Zapier plan.</p>
+<p>Imagine you run a small design studio where new enquiries arrive by email, and you want your AI to add each one to a spreadsheet of leads. This is an example set-up written for this article rather than an official Zapier tutorial.</p>
+<h3>What goes in</h3>
+<ul>
+<li>In Zapier, you allow one action only, which is adding a row to your leads spreadsheet, and nothing that sends, deletes or pays.</li>
+<li>You add Zapier MCP to your AI as a connector, using the address that Zapier provides.</li>
+<li>You paste an enquiry into the conversation and ask your AI to prepare the row.</li>
+</ul>
+<h3>What comes out</h3>
+<p>Your AI reads the enquiry, fills in the name, company, request and date received, and shows you the row. Once you approve it, the row is added, and later you can check Zapier's History to see exactly what ran.</p>
+<p>The safety comes from the set-up, because the AI can perform only one action, it asks before performing it, and every action leaves a record.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: a safe first task with any connector</p><pre id="prompt-2">Use the [connector name] connection for this task.
+
+Task: [the job, for example "add this enquiry as one row in my leads spreadsheet"].
+
+Inputs:
+INPUT START
+[paste the enquiry, notes or other material]
+INPUT END
+
+Rules:
+- Use only the tool or tools needed for this task. Name them before you start.
+- Show me exactly what you will send to the tool (every field and value) and wait for my "yes".
+- Never send, delete, pay or publish anything.
+- If a field is missing from the input, leave it blank and tell me. Never guess.
+
+After the tool runs, tell me what it returned, and anything that did not work.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h2 id="ai-blocks-mcp">How AI Blocks offers an MCP connection</h2>
+<p>AI Blocks has its own MCP server, so you can connect your AI once and let it pull any skill or workflow from the library when a job needs one. The complete steps for each AI are on the <a href="/api-and-mcp">connect your AI page</a>. In short:</p>
+<ol>
+<li><strong>Pick your AI:</strong> the page has separate steps for Claude, Claude Code, ChatGPT, Codex and Cursor.</li>
+<li><strong>Add one link:</strong> create a custom connector named AI Blocks with the address <code>https://useaiblocks.com/mcp</code>, and note that you don't need to sign in for the public library.</li>
+<li><strong>Ask for a job:</strong> turn the connector on in a new chat and describe the task in your own words. One example is "Use AI Blocks to find a skill that writes product descriptions, then use it on my three best sellers."</li>
+</ol>
+<p>Your AI finds the skill, reads it and does the job with its own tools. Your AI does the work and your AI account pays for it, because AI Blocks doesn't run the AI.</p>
+<p>To use skills and workflows you saved on AI Blocks, add <code>https://useaiblocks.com/mcp/personal</code> as a separate connector and sign in to AI Blocks when asked. Teams can also add their shared team space link as another connector.</p>
+<h3>Check that it works</h3>
+<p>The AI Blocks page gives a simple verification test, which you paste into a new chat with the connector turned on.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: check the AI Blocks connection</p><pre id="prompt-3">Use the AI Blocks connection. Call get_item with id "discount-calculator" and tell me the title and link it returns.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+<p>You should see the title Discount profit calculator and the link https://useaiblocks.com/tools/discount-calculator in the reply. If your AI says it has no such tool, turn the connector on for that particular chat and try again.</p>
+
+<h2 id="mistakes">Common mistakes with MCP, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Adding a server from a link you found in a forum</td><td>Use the address from the company's own site or help pages.</td></tr>
+<tr><td>Giving every permission at sign-in</td><td>Allow only what the job needs. You can add more later.</td></tr>
+<tr><td>Choosing "Allow always" on the first day</td><td>Approve each action until you have seen the connector behave well.</td></tr>
+<tr><td>Starting with a task that sends or deletes</td><td>Start with read-and-report jobs, then add actions one at a time.</td></tr>
+<tr><td>Leaving every connector on in every chat</td><td>Turn on only the connectors a chat needs.</td></tr>
+<tr><td>Assuming the connector makes the AI right</td><td>Check the result, the same as any AI answer.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="ai-blocks">Where else AI Blocks helps</h2>
+<ul>
+<li><a href="/get-it-done">Get a whole job done</a>: an outcome planner for your connected AI.</li>
+<li><a href="/skills/skill-safety-reviewer">Skill safety reviewer</a>: get a read-only safety review of a skill, MCP server or add-on before you install it.</li>
+<li><a href="/roles/specialized-mcp-builder">MCP server planner</a>: plan an MCP server for your own app, with named tools, error rules and a test plan a developer can build from.</li>
+<li><a href="/workflows/verify-an-mcp-server-release">MCP server release reviewer</a>: for developers, check a server's code, permissions and protocol tests before release.</li>
+<li><a href="/ai-tools/zapier">Zapier tool guide</a>: what Zapier is particularly good for, organised by job.</li>
+</ul>
+<p>Connectors work particularly well alongside skills, so read <a href="/blog/how-to-use-claude-skills">how to use Claude skills</a>, and then <a href="/blog/ai-agents-for-small-business">AI agents for small business</a> for the next step.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Do I need to code to use MCP?</h3>
+<p>No, because to use a connector you simply paste a web address into your AI application's settings and sign in if asked. Building your own MCP server, however, does require a developer.</p>
+<h3>What is the difference between an MCP server and an API?</h3>
+<p>An API is how one piece of software communicates with another, and each one is different. MCP is a shared standard on top, so any AI application that supports MCP can use any MCP server in the same way. A company can build an MCP server on top of the API it already has.</p>
+<h3>Which AI apps support MCP?</h3>
+<p>The official MCP site lists Claude and ChatGPT among AI assistants, along with development tools such as Visual Studio Code and Cursor. Support and plan rules vary by application, so check its help pages.</p>
+<h3>Can an MCP connector see all my data?</h3>
+<p>It can see what the server offers and what you allow at sign-in. That is why you should read the permissions carefully, keep them narrow and use servers from companies you trust.</p>
+<h3>Is MCP the same as a plugin or an app?</h3>
+<p>Different applications use different names, so Claude calls them connectors, while ChatGPT creates custom MCP servers as plugins. Underneath, the connection uses MCP in every case.</p>

@@ -23,15 +23,17 @@ const main = [
   { to: "/compose", label: "Build a workflow", id: "nav-compose" },
   { to: "/tools", label: "Tools", id: "nav-tools" },
   { to: "/minds", label: "Minds", id: "nav-minds" },
+  { to: "/blog", label: "Blog", id: "nav-blog" },
 ];
 // Every main page is one menu click from anywhere, grouped by what people came to do.
 // Each link: [address, label, test id]. Policies and About sit in the footer.
 const MENU: { id: string; label: string; links: [string, string, string][] }[] = [
-  { id: "find", label: "Find", links: [["/#library", "Find a task", "find"], ["/minds", "Minds", "minds"], ["/tools", "Tools", "tools"], ["/ai-tools", "AI tool guides", "ai-tools"], ["/industries", "AI help by business", "industries"]] },
+  { id: "find", label: "Find", links: [["/#library", "Find a task", "find"], ["/minds", "Minds", "minds"], ["/tools", "Tools", "tools"], ["/ai-tools", "AI tool guides", "ai-tools"]] },
   { id: "build", label: "Build", links: [["/compose", "Build a workflow", "compose"], ["/get-it-done", "Get a whole job done", "get-it-done"], ["/from-a-source", "Turn an article or video into a workflow", "source"], ["/apps", "Turn a workflow into an app", "apps"]] },
-  { id: "agents", label: "AI agents", links: [["/roles", "Hire an AI specialist", "roles"], ["/train-your-own-ai-agent", "Train your own AI agent", "train"], ["/teams", "Plan an AI team", "teams"]] },
+  { id: "agents", label: "AI agents", links: [["/roles", "Hire an AI specialist", "roles"], ["/teams", "Plan an AI team", "teams"]] },
+  { id: "blog", label: "Blog", links: [["/blog", "All articles and guides", "blog"], ["/train-your-own-ai-agent", "Train your own AI agent", "train"], ["/industries", "AI help by business", "industries"], ["/how-we-test", "How we test", "how-we-test"]] },
   { id: "your-ai", label: "Your AI", links: [["/api-and-mcp", "Connect your AI", "api-mcp"], ["/me-md", "Your me.md file", "memd"], ["/space", "Team space", "space"]] },
-  { id: "help", label: "Help", links: [["/how-it-works", "How it works", "guide"], ["/how-we-test", "How we test", "how-we-test"], ["/api-and-mcp#api", "Documentation", "documentation"], ["/support", "Help & contact", "support"]] },
+  { id: "help", label: "Help", links: [["/how-it-works", "How it works", "guide"], ["/api-and-mcp#api", "Documentation", "documentation"], ["/support", "Help & contact", "support"]] },
 ];
 // Pages built only as plain HTML (scripts/lib/trust-pages.mjs): open them with a normal page load, not the in-app router.
 const STATIC_PAGES = ["/industries", "/how-we-test"];
@@ -60,7 +62,7 @@ export default function SiteHeader() {
   // A link is current on its own page; section links (/roles) also cover the pages under them.
   const here = (to: string) => {
     if (to.includes("#")) return to === "/#library" && path === "/" ? "page" as const : undefined;
-    return path === to || (["/roles", "/tools", "/ai-tools", "/apps", "/get-it-done", "/minds"].includes(to) && path.startsWith(`${to}/`)) ? "page" as const : undefined;
+    return path === to || (["/roles", "/tools", "/ai-tools", "/apps", "/get-it-done", "/minds", "/blog"].includes(to) && path.startsWith(`${to}/`)) ? "page" as const : undefined;
   };
   const signedIn = account.state === "signed-in";
   // On a laptop the header already shows the main sections, so the menu leaves them out.

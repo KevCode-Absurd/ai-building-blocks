@@ -23,6 +23,8 @@
 .site-nav { display: flex; align-items: center; gap: 2px; margin-left: 12px; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 8px; font-size: 14.5px; color: var(--muted); white-space: nowrap; }
 .site-nav a:hover { color: var(--text); background: var(--btn-2); }
+/* Six links and the account buttons share the bar: tighter spacing keeps it inside the narrowest laptop widths. */
+@media (max-width: 1150px) { .site-nav { margin-left: 4px; } .site-nav a { padding: 0 8px; font-size: 14px; } }
 .site-nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
 .site-menu-word-wide { display: none; }
 .site-menu-trigger { position: relative; }

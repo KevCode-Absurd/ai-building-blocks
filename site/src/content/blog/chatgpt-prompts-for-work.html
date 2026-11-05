@@ -1,0 +1,194 @@
+<h2 id="short-answer">How to write ChatGPT prompts: the short answer</h2>
+<p>If you want to know how to write ChatGPT prompts that produce work you can actually use, brief your AI the way you would brief a capable new assistant. A one-line request gets a one-size-fits-all answer, while a short brief with six parts usually gets you something close to finished.</p>
+<p>The six parts, in the order you would usually write them, are:</p>
+<ol>
+<li><strong>Role:</strong> say who your AI should act as, so it pitches the detail and tone appropriately.</li>
+<li><strong>Context:</strong> give the background, including your business, your intended reader and why the work matters.</li>
+<li><strong>Task:</strong> name the one job you want done, starting with a verb that describes the result.</li>
+<li><strong>Inputs:</strong> supply the material it should work from, pasted in or attached.</li>
+<li><strong>Format:</strong> describe what the finished answer should look like, including its length and layout.</li>
+<li><strong>Checks:</strong> list what your AI should test before it hands the work back to you.</li>
+</ol>
+<p>This structure works in ChatGPT, Claude and Gemini, because all three are designed to follow written instructions, and their makers give similar advice. Google's help for Gemini in Docs builds a prompt from <a href="https://support.google.com/docs/answer/15013615" rel="noopener">persona, task, context and format</a>. Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" rel="noopener">prompting guide for Claude</a> recommends treating Claude like a brilliant new employee who doesn't yet know your ways of working. The checks part is our own addition, and its job is to catch obvious mistakes before you have to.</p>
+<p>You don't need special phrases or clever tricks, because the most effective prompts simply state, in plain sentences, what you already understand about the task.</p>
+
+<h2 id="six-parts">The six parts of a good prompt, and why each one matters</h2>
+<p>Each part fixes a common reason that AI answers miss the mark, and the sections below explain what to write for each one and what typically goes wrong without it.</p>
+
+<h3>1. Role: who should your AI be?</h3>
+<p>Start with a single line that sets the role, such as "You are an editor for a small outdoor clothing shop". A more detailed role might be "You are a bookkeeper who explains things to owners with no accounting training". A role sets the level of detail and the tone of voice, so make it realistic and specific. A line like "You are the world's best marketer" adds nothing, because it gives your AI no new information about the job.</p>
+
+<h3>2. Context: what does your AI need to know?</h3>
+<p>Your AI knows nothing about your business unless you tell it, so explain what you sell, who will read the result and what happens after they read it. One sentence of background information can change the tone of the entire draft. For example: "This email goes to customers who bought from us last year, and most are not in a hurry."</p>
+<p>It also helps to explain why the task matters, since Anthropic's guide notes that explaining the reason behind an instruction helps Claude aim its answer. That is why "keep it short because people read it on their phones" works better than "keep it short".</p>
+
+<h3>3. Task: what is the one job?</h3>
+<p>Begin the task with a verb and name the result you expect, for example "Write three subject lines" or "Summarise these notes into decisions and actions". Ask for one task per prompt, because a prompt that requests several things gives each one less attention. If you need a plan and then a draft, ask for the plan first, check it, and only then ask for the draft.</p>
+
+<h3>4. Inputs: what material should it use?</h3>
+<p>Paste in the actual material, such as the customer's email, your price list, your notes or last month's figures. Mark clearly where the material starts and ends, for example with lines like "NOTES START" and "NOTES END", and then tell your AI to use only those facts. Without real inputs, your AI fills the gaps with plausible guesses, which is exactly how invented prices and delivery dates end up in drafts. Our guide on <a href="/blog/stop-ai-making-things-up">how to stop AI making things up</a> explains this problem in more depth.</p>
+
+<h3>5. Format: what should the answer look like?</h3>
+<p>State the length, the layout and the order you want, for instance "a table with three columns: issue, why it matters, fix" or "under 120 words, with no headings". You can also ask for comparison, such as two versions followed by a note on which one your AI would send and why. A clear format saves you the time you would otherwise spend rearranging the answer.</p>
+
+<h3>6. Checks: what should it test before it answers?</h3>
+<p>Ask your AI to review its own work against a short list before it shows you anything. For example, you might write "Before you answer, confirm that every price matches my price list and that nothing is promised that I didn't list". Then add "If a check fails, fix it, and tell me which checks you ran". Checks won't make an answer perfect, but they reliably catch the obvious errors before you see them.</p>
+<aside class="callout"><p><strong>Tip.</strong> Add the line "If anything is missing or unclear, ask me before you start," so that your AI asks for the price or the date instead of inventing one.</p></aside>
+
+<h2 id="before-after">Before and after: prompt examples for business</h2>
+<p>Here are two everyday business tasks, shown first the way most people ask and then as a full six-part brief.</p>
+
+<h3>Replying to a customer complaint</h3>
+<blockquote><p>Before: "Write a reply to this angry customer."</p></blockquote>
+<p>This usually produces a polite but generic apology, which may offer a refund your policy doesn't allow or promise a delivery date you can't meet.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: reply to a customer complaint</p><pre id="prompt-1">You are a customer service lead for [your business], a [what you sell] business. You write calm, plain replies that fix the problem.
+
+Context: This customer wrote to us about [the problem]. Our policy is pasted below. We can offer only what the policy allows. The customer reads this on their phone.
+
+Task: Write a reply to the customer's message.
+
+Inputs:
+MESSAGE START
+[paste the customer's message]
+MESSAGE END
+POLICY START
+[paste your refund, delivery or returns policy]
+POLICY END
+
+Format: Under 150 words. Start by naming their problem in one sentence. Then say what we will do and when. End with one clear next step for them. No headings.
+
+Checks before you answer:
+- Every promise is allowed by the policy.
+- No dates or amounts that are not in the inputs.
+- One apology at most.
+- The next step is clear.
+If anything is missing, ask me before you write. After the reply, list the checks you ran.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h3>Turning meeting notes into actions</h3>
+<blockquote><p>Before: "Summarise these notes."</p></blockquote>
+<p>This usually produces a tidy paragraph that hides the most useful part of any meeting record, which is who has agreed to do what.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: meeting notes into decisions and actions</p><pre id="prompt-2">You are an assistant who turns rough meeting notes into a clear record.
+
+Context: These are my notes from a [type of meeting] with [who was there]. The record goes to everyone who attended, so they know what they own.
+
+Task: Turn the notes into decisions and actions.
+
+Inputs:
+NOTES START
+[paste your notes]
+NOTES END
+
+Format:
+1. Decisions: one line each.
+2. Actions: a table with the columns Action, Owner, Due date.
+3. Open questions: anything that was raised but not settled.
+
+Checks before you answer:
+- Use only what is in the notes.
+- If an action has no owner or no date, write "not set" instead of guessing.
+- Keep each line under 20 words.
+Then tell me anything in the notes you were unsure how to read.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<p>Both full prompts are longer than the "before" versions, but they take only a minute to complete and save you the much longer job of rewriting a weak answer.</p>
+
+<h2 id="worked-example">A worked example: a trade-in email for Patagonia</h2>
+<p>To show the structure working on a real business, here is a brief for an email about Patagonia's Worn Wear programme. It is an example written for this article, so Patagonia didn't write it, and we don't know how Patagonia's team uses AI.</p>
+<p>The public facts in this example come directly from Patagonia's own pages. <a href="https://wornwear.patagonia.com/" rel="noopener">Worn Wear</a> is Patagonia's programme for used clothing and gear, where you can buy used items, trade in gear you no longer wear and get damaged gear repaired. Patagonia's <a href="https://www.patagonia.com/trade-in/" rel="noopener">trade-in page</a> sets the rules, which say that trade-ins earn store credit and that items have to be clean and in working order.</p>
+
+<h3>What goes in</h3>
+<ul>
+<li><strong>Role:</strong> an email writer for an outdoor clothing brand that wants people to keep their gear in use for longer.</li>
+<li><strong>Context:</strong> the email goes to past customers, and Worn Wear lets them trade in, buy used or get a repair.</li>
+<li><strong>Task:</strong> write one email that invites readers to trade in gear they no longer use.</li>
+<li><strong>Inputs:</strong> the trade-in rules, copied word for word from Patagonia's help page.</li>
+<li><strong>Format:</strong> a subject line, a preview line and a body under 120 words, with one button label.</li>
+<li><strong>Checks:</strong> every rule matches the pasted text, no credit amount appears unless it is in the inputs, and no environmental claim appears that the inputs don't support.</li>
+</ul>
+
+<h3>What comes out (example draft)</h3>
+<blockquote><p>Subject: That jacket in the cupboard could have another life<br>Preview: Trade it in for credit through Worn Wear.<br>Body: If you have Patagonia gear you no longer wear, it doesn't need to sit in a cupboard. Through Worn Wear, you can trade in clean, working items for credit. Someone else can keep wearing them. Check the trade-in rules, pack up your gear and send it in.<br>Button: See how trade-in works</p></blockquote>
+<p>Notice what the checks achieved: the draft gives no credit amount, because none was pasted in, and it makes no environmental claim that the inputs can't support. A vague prompt such as "write an email about Worn Wear" would probably produce a longer email, full of guessed details that you would then need to find and remove.</p>
+
+<h2 id="iterate">How to improve a prompt when the answer misses</h2>
+<p>Treat your AI's first answer as a draft, and improve it in the same conversation with the following steps, so that it keeps everything it has already understood.</p>
+<ol>
+<li><strong>Name what is wrong, in one line.</strong> Say something precise, such as "This is too formal for our regular customers", because vague feedback like "make it better" usually produces a random, unhelpful change.</li>
+<li><strong>Show one example:</strong> paste a past email you liked and ask your AI to match it, since one good example often corrects the tone faster than several rules.</li>
+<li><strong>Ask it to question you:</strong> ask "What else do you need to know to make this better? Ask me up to five questions," then answer them and request a new version.</li>
+<li><strong>Ask it to check against your list:</strong> ask your AI to rerun your checks and show which ones pass, so you can see exactly where it still falls short.</li>
+<li><strong>Fix the prompt, then save it:</strong> when a version works, add the correction to the prompt itself, so that you start from the improved prompt next time. For example, move "talk to a regular customer" into the context section.</li>
+</ol>
+<aside class="callout"><p><strong>Watch out.</strong> Long conversations that wander across many topics tend to become muddled, so when you start a new job, open a new chat and paste in your saved prompt.</p></aside>
+
+<h2 id="template">A prompt template you can reuse</h2>
+<p>Copy this template into a document, fill in the brackets for each new task, and delete any line that isn't relevant to the current one.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: reusable six-part template</p><pre id="prompt-3">You are [the role, for example "an editor for a small bakery"].
+
+Context:
+- My business: [what you sell and who to].
+- Who will read this: [the reader and what they know already].
+- Why it matters: [what happens next, or what good looks like].
+
+Task: [one verb and one result, for example "Write three versions of the opening line"].
+
+Inputs (use only these facts):
+INPUT START
+[paste your material]
+INPUT END
+
+Format: [length, layout, order, for example "a table with columns X, Y, Z" or "under 100 words, no headings"].
+
+Checks before you answer:
+- [check 1, for example "every price matches the inputs"]
+- [check 2, for example "one call to action only"]
+- [check 3, for example "nothing promised that is not in the inputs"]
+If something is missing or unclear, ask me before you start. After the answer, list the checks you ran and any you could not run.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h3>A quick checklist before you press send</h3>
+<ul class="checklist">
+<li>Did I say who the AI should be, in one specific line?</li>
+<li>Did I say who reads the result and what happens after they read it?</li>
+<li>Does the task start with a verb and ask for one result?</li>
+<li>Did I paste the real material and say "use only these facts"?</li>
+<li>Did I give a length and a layout?</li>
+<li>Did I list two or three checks, and ask it to say which ones it ran?</li>
+<li>Did I invite it to ask questions when something is missing?</li>
+</ul>
+
+<h2 id="mistakes">Common prompt mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">What happens</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Asking for several jobs in one prompt</td><td>Each part gets less care, and you can't tell which part went wrong.</td><td>Ask for one job, check it, then ask for the next.</td></tr>
+<tr><td>No real material</td><td>Your AI invents details that sound right.</td><td>Paste the facts and say "use only these facts".</td></tr>
+<tr><td>Praise roles like "the best expert in the world"</td><td>Nothing changes, because no new facts are given.</td><td>Give a real role and the reader, for example "a bookkeeper writing for owners".</td></tr>
+<tr><td>No format</td><td>You get a long answer you have to rearrange.</td><td>Say the length and layout, such as "a table" or "under 100 words".</td></tr>
+<tr><td>Starting over when the answer is wrong</td><td>You lose what was already right.</td><td>Say what is wrong in one line and ask for a new version in the same chat.</td></tr>
+<tr><td>Never saving the prompt that worked</td><td>You rewrite it from memory next time, and it works less well.</td><td>Keep a notes file of your best prompts, or turn the prompt into a skill.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps with prompts</h2>
+<p>AI Blocks is a free library of prompts, skills and workflows, where you copy a prompt or download a skill and then use it in your own AI. The items below support the specific steps described earlier in this guide.</p>
+<ul>
+<li><a href="/prompts/rough-prompt-rebuilder">AI prompt editor</a>: share a rough prompt and get back a clearer version, with the task, the facts and the expected result stated plainly.</li>
+<li><a href="/skills/prompt-fixer">Prompt fixer</a>: paste a prompt that gives vague or uneven answers, together with one bad reply, and get a tighter version.</li>
+<li><a href="/prompts/creative-ai-chat-starter-prompts">Creative AI prompt writer</a>: name a task, such as an ad or a sales page, and get a ready-to-paste prompt filled with your facts and output rules.</li>
+<li><a href="/skills/prompt-change-tester">Prompt change tester</a>: compare a new prompt with your old one on the same test cases, so you know whether it really is better before you switch.</li>
+<li><a href="/prompts/repeat-job-skill-drafter">Reusable AI skill writer</a>: when you use the same prompt every week, turn it into a skill file with steps and test prompts.</li>
+<li><a href="/me-md">Your me.md</a>: write one short file about yourself, so you no longer have to type the same context at the start of every chat.</li>
+</ul>
+<p>You can also search <a href="/">the library</a> for ready-made prompts by job, such as "customer reply" or "meeting notes". When you are ready for the next step after prompts, read <a href="/blog/ai-prompts-vs-skills-vs-workflows">AI prompts vs skills vs workflows</a> and <a href="/blog/give-ai-context-about-your-business">how to give your AI context about your business</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Does the same prompt work in ChatGPT, Claude and Gemini?</h3>
+<p>Mostly, yes, because all three follow plain written instructions, so a clear six-part prompt works in each of them. The answers will differ in style and level of detail, so when you switch tools, run your prompt once and adjust the format line if the result needs it.</p>
+<h3>How long should a prompt be?</h3>
+<p>A prompt should be long enough to cover the six parts and no longer. For a quick task that may be four lines, but a reply that must follow your returns policy may need twenty lines plus the pasted material. Length is never a problem when every line gives your AI information it needs.</p>
+<h3>Should I tell ChatGPT to act as an expert?</h3>
+<p>A role helps when it is specific about the job, the reader and the level of knowledge. "You are a bookkeeper explaining VAT to a first-time shop owner" sets both tone and detail. By contrast, "You are the best expert in the world" adds nothing, because it gives no new information.</p>
+<h3>What is a prompt template?</h3>
+<p>A prompt template is a saved prompt with blanks, usually in [square brackets], that you fill in for each new job. It saves time and keeps your results consistent from one week to the next, and the six-part template above is a good place to start.</p>
+<h3>How do I stop ChatGPT giving generic answers?</h3>
+<p>Give it your real material and your business context, and tell it to use only those facts, because generic answers come from generic inputs. Saving your business details once, in custom instructions or a project, also helps, and our guide on <a href="/blog/give-ai-context-about-your-business">giving AI context about your business</a> shows how to do it.</p>
+<h3>Is it safe to paste customer emails into a prompt?</h3>
+<p>Paste only the information the task requires, and remove names, addresses, card details and any other private information that the task doesn't require. Check your AI's data settings for your plan, and follow your own privacy policy when handling customer information.</p>

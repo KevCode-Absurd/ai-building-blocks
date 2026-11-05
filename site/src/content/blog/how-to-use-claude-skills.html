@@ -1,0 +1,218 @@
+<h2 id="what-are">What are Claude skills?</h2>
+<p>Claude skills are folders of instructions that teach Claude how to perform one particular job your way. Each skill contains a file called SKILL.md, which starts with a name and a short description of when to use it, followed by the steps, rules and checks. A skill folder can also hold supporting files, such as a template, a checklist or a script.</p>
+<p>Once a skill is turned on, you no longer need to paste it into every conversation. Claude reads the short descriptions of your skills and loads the full instructions when a request matches one. You can also mention a skill by name in your message to make Claude use it deliberately.</p>
+<p>Anthropic launched skills in October 2025 for the Claude apps, Claude Code and its developer platform (see <a href="https://claude.com/blog/skills" rel="noopener">Anthropic's launch post</a>). Canva was one of the companies named in that announcement, and it said it planned to use skills to customise agents. The folder format is also published as an open standard called <a href="https://agentskills.io/specification" rel="noopener">Agent Skills</a>, so other AI tools can read the same files.</p>
+<p>Here is the short version of this guide, in the order you would carry out each step:</p>
+<ol>
+<li>Turn on skills in Claude's settings, together with the code execution feature they depend on.</li>
+<li>Add a skill by uploading a ZIP of its folder (Claude apps) or copying the folder into your skills folder (Claude Code).</li>
+<li>Write your own with a simple SKILL.md containing a name, a description, and then the steps and checks.</li>
+<li>Test it with three realistic requests before you rely on it for real work.</li>
+</ol>
+<p>All the steps below match Anthropic's help centre and documentation as of November 2026. Menu names change regularly, so follow the linked pages if your screens look different.</p>
+
+<h2 id="how-claude-picks">How does Claude decide to use a skill?</h2>
+<p>Claude doesn't read every skill completely before each reply, because it starts with each skill's name and description. If your request fits a description, Claude loads that skill's full SKILL.md, and it opens any supporting files only when they are needed.</p>
+<p>That makes the description the most important line you write, and Anthropic's help centre calls it critical, because Claude relies on it to decide when to use the skill. A good description explains what the skill does and when to use it, in the words people would actually type. A description such as "Writes refund replies using our policy, for when a customer requests a refund" works far better than a vague line such as "Helps with customers".</p>
+<aside class="callout"><p><strong>Tip.</strong> If Claude ignores a skill you expected it to use, fix the description first, which matches Anthropic's own advice to make sure the description clearly says when the skill applies.</p></aside>
+
+<h2 id="install-apps">How to install Claude skills in the Claude apps</h2>
+<p>These steps come directly from Anthropic's help article on <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" rel="noopener">using skills in Claude</a>. Skills depend on Claude's code execution feature, so you turn that on first, and the article also lists which plans include skills.</p>
+<h3>Turn skills on (individual plans)</h3>
+<ol>
+<li>Open <strong>Settings</strong>, then <strong>Capabilities</strong>, and turn on <strong>Code execution and file creation</strong>. In the newer settings layout, this option is called <strong>Create and edit files</strong>.</li>
+<li>Go to <strong>Customize</strong>, then <strong>Skills</strong>, to see the skills available to you.</li>
+<li>Turn on the individual skills you want Claude to use.</li>
+</ol>
+<h3>Upload a skill you downloaded or wrote</h3>
+<ol>
+<li>Make sure the skill is a ZIP file with the skill folder at its root and SKILL.md inside that folder, because Claude looks for that exact structure.</li>
+<li>Go to <strong>Customize</strong>, then open the <strong>Skills</strong> section.</li>
+<li>Select the <strong>+</strong> button, then choose <strong>Create skill</strong> from the options.</li>
+<li>Choose <strong>Upload a skill</strong> and select your ZIP file from your computer.</li>
+<li>The skill then appears in your list of available skills, where you can activate it.</li>
+</ol>
+<h3>On a Team or Enterprise plan</h3>
+<p>An owner opens <strong>Organization settings</strong>, then <strong>Plugins &amp; skills</strong>, and checks the <strong>Policy</strong> tab, where both code execution and Skills need to be enabled. Owners can also add skills for the whole organisation and can turn off skills that members create, while members turn skills on under <strong>Customize</strong>, then <strong>Skills</strong>.</p>
+<h3>Why an upload fails</h3>
+<p>Anthropic lists the usual causes: the ZIP is too large, the folder name doesn't match the skill's name, SKILL.md is missing, or the name or description contains unacceptable characters. Its guide to <a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" rel="noopener">creating custom skills</a> also sets upload limits of 64 characters for the name and 200 characters for the description.</p>
+
+<h2 id="install-code">How to add a skill in Claude Code</h2>
+<p>Claude Code is Anthropic's coding assistant, which runs in your terminal and other places and reads skills from folders on your computer. These steps follow the official <a href="https://code.claude.com/docs/en/skills" rel="noopener">Claude Code skills docs</a>.</p>
+<ol>
+<li><strong>Pick where the skill should live:</strong> for every project on your computer, use <code>~/.claude/skills/skill-name/SKILL.md</code>. For one project only, use <code>.claude/skills/skill-name/SKILL.md</code> inside that project, so that a project skill can be shared with your team along with the project's files.</li>
+<li><strong>Copy the whole skill folder there:</strong> keep SKILL.md beside any supporting files it uses, or the skill may fail to find them.</li>
+<li><strong>Check that Claude Code recognises it:</strong> type <code>/skills</code> to list your skills, or type <code>/</code> and look for the name. If you created a new skills folder, run <code>/reload-skills</code>, although edits to an existing skill are picked up as you make them.</li>
+<li><strong>Use it:</strong> ask for the job in your own words, and Claude uses the skill when the description fits, or type <code>/skill-name</code> followed by your request to run it directly.</li>
+</ol>
+<p>Claude Code is more relaxed about the file than the Claude apps, because the name defaults to the folder name and the description is recommended rather than required. Write both anyway, so that the same skill also works when you upload it to the Claude apps.</p>
+
+<h2 id="write">How to write a simple SKILL.md</h2>
+<p>A SKILL.md always has two distinct parts. At the top is a short block of settings, called front matter, which sits between two lines of three dashes, followed by your instructions in ordinary text.</p>
+<h3>The rules for the top block</h3>
+<ul>
+<li><strong>name:</strong> use lowercase letters, numbers and hyphens only, up to 64 characters, such as <code>refund-reply-writer</code>. The open standard says it must match the folder name, and Claude's upload checks this too.</li>
+<li><strong>description:</strong> explain what the skill does and when to use it, and keep it under 200 characters so it uploads to the Claude apps.</li>
+</ul>
+<h3>What to put in the instructions</h3>
+<ul>
+<li><strong>What to ask for:</strong> the material the job needs, and what Claude should do when something is missing.</li>
+<li><strong>Steps:</strong> numbered instructions with one action each, in the order you would carry them out.</li>
+<li><strong>Rules:</strong> your standards for tone, length, words to avoid and anything Claude must never promise.</li>
+<li><strong>Checks:</strong> yes-or-no questions that Claude answers before it hands the work back to you.</li>
+<li><strong>An example:</strong> one short sample of a good result, if you have one available.</li>
+</ul>
+<p>Here is a template you can copy into a file named SKILL.md and then adapt for your own job:</p>
+<pre><code>---
+name: your-skill-name
+description: [What it does, in one sentence]. Use when [the requests that should trigger it].
+---
+# [Skill title]
+
+## Ask for
+- [Material 1, for example the customer's message]
+- [Material 2, for example our policy]
+If anything is missing, ask before you start. Never guess.
+
+## Steps
+1. [First action]
+2. [Second action]
+3. [Third action]
+
+## Rules
+- [Tone and length]
+- [What never to say or promise]
+
+## Checks before you answer
+- [Yes-or-no check 1]
+- [Yes-or-no check 2]
+Say which checks passed. Fix any that failed.</code></pre>
+<p>Keep the file short and focused on one job, since the open standard suggests keeping SKILL.md under 500 lines and moving long reference material into separate files. For a first skill, somewhere between 30 and 60 lines is usually sufficient.</p>
+<p>You don't have to write it from scratch, because you can paste this prompt into Claude and let it interview you and draft the file.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: draft a SKILL.md by interview</p><pre id="prompt-1">You are helping me write a Claude skill for one job I do often.
+
+Interview me first. Ask one short question at a time, at most 10 in all. Cover: what starts the job, what material I give you, the steps I follow, my rules (tone, length, what never to promise), what a good result looks like, and how I check it. I can say "enough" to stop.
+
+Then write the SKILL.md:
+- Start with front matter between two lines of three dashes.
+- "name": lowercase letters, numbers and hyphens only, under 64 characters.
+- "description": what it does and when to use it, under 200 characters, using words I would type when asking for this job.
+- Then sections: Ask for, Steps, Rules, Checks before you answer.
+- Turn every rule I give you into a line in Rules or Checks.
+
+Checks before you show me the file:
+- Nothing is added that I did not tell you.
+- The description names the requests that should trigger the skill.
+- The file is under 80 lines.
+Show the file in one code block. Then tell me the folder name to use, which must match the name.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h2 id="worked-example">A worked example: a skill for a Canva template creator</h2>
+<p>Canva runs a <a href="https://www.canva.com/help/canva-creators-program/" rel="noopener">Canva Creators programme</a>, which designers must apply to join. Once approved, they can publish templates to Canva's library and earn from a royalty pool based on how often their templates are used. Canva reviews every submission against its published design guidelines. Its help pages also say it doesn't accept templates made with AI tools to the point that the work isn't wholly the creator's own.</p>
+<p>That last rule suggests a sensible skill for a freelance designer in the programme who wants an independent review before submitting, while keeping the design work entirely their own. This example was written for this article, so Canva didn't make it, and it isn't an official Canva tool.</p>
+<h3>What goes in</h3>
+<ul>
+<li>The guideline text you copy from Canva's current help pages, so the checks reflect the latest rules.</li>
+<li>Your notes on the template, including what it is for, its pages, its fonts and any text you wrote.</li>
+</ul>
+<h3>The skill file (short version)</h3>
+<pre><code>---
+name: template-submission-checker
+description: Checks my own template notes against the design guidelines I paste in before I submit. Use when I say "check my template" or "ready to submit?"
+---
+# Template submission checker
+
+## Ask for
+- The guideline text, pasted from the current help pages.
+- My notes on the template.
+
+## Steps
+1. Turn the pasted guidelines into a numbered list of checks.
+2. Check my notes against each one: pass, fail or can't tell.
+3. For each fail, say what to change, in one line.
+
+## Rules
+- Use only the guidelines I paste. Never rely on memory.
+- Never suggest AI-made images or designs.
+- Don't rewrite my design. Point to the problem only.
+
+## Checks before you answer
+- Every guideline has a result.
+- "Can't tell" items say what I need to check by eye.</code></pre>
+<h3>What comes out</h3>
+<p>You get a table of guidelines with pass, fail or can't tell beside each one, plus a one-line correction for each failure, while every design decision stays yours. Because the skill reads the guidelines you paste in, it remains up to date whenever Canva changes them.</p>
+
+<h2 id="test">How to test a skill before you rely on it</h2>
+<p>A skill can look fine on the page and still fail in practice, so test it in three ways before you trust it with real work.</p>
+<ol>
+<li><strong>Test that it triggers:</strong> start a new chat and ask for the job in three different ways, as a real person would. This follows the help centre's advice to try several prompts that should trigger the skill. If Claude doesn't use it, rewrite the description with the words you used.</li>
+<li><strong>Test that it doesn't over-trigger:</strong> ask for something similar but different, because a refund skill shouldn't run when someone asks about delivery times.</li>
+<li><strong>Test the result:</strong> run it on one real, completed job where you already know the right answer, then compare the two. Check whether it follows every step and whether the checks catch what they should.</li>
+</ol>
+<p>When a test fails, change one thing at a time and then test again, so you know which change fixed it. In the Claude apps, you can highlight text in a skill file, choose <strong>Edit with Claude</strong> and describe the change you want.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: write test cases for a skill</p><pre id="prompt-2">You are a tester for AI skills.
+
+Inputs:
+SKILL START
+[paste your SKILL.md]
+SKILL END
+
+Task: Write test requests for this skill.
+
+Format:
+1. Three requests that should trigger the skill, each worded differently, the way a busy person would type them.
+2. Two requests that are close but should not trigger it.
+3. One tricky case where the skill should stop and ask a question, because material is missing.
+For each test, say what a good response must include.
+
+Checks: Use only what the skill says it does. Flag any step or check in the skill that is too vague to test.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<aside class="callout"><p><strong>Watch out.</strong> Skills can include scripts that run when Claude uses them, so only add skills from people and sites you trust, and read SKILL.md before you upload it. Anthropic's help centre notes that Enterprise plans can scan third-party skills before they run.</p></aside>
+
+<h2 id="mistakes">Common mistakes with Claude skills</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">What happens</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>A vague description such as "Helps with emails"</td><td>Claude can't tell when to use it, so it rarely does.</td><td>Say what it does and when, in the words you would type.</td></tr>
+<tr><td>Folder name and skill name don't match</td><td>The upload fails in the Claude apps.</td><td>Make the folder name exactly the same as the name line.</td></tr>
+<tr><td>One skill for many jobs</td><td>The steps blur together and results vary.</td><td>Make one skill per job.</td></tr>
+<tr><td>Zipping the files instead of the folder</td><td>Claude can't find SKILL.md.</td><td>Zip the folder itself, so the folder sits at the top of the ZIP.</td></tr>
+<tr><td>Installing skills you haven't read</td><td>You may run instructions or scripts you didn't expect.</td><td>Read the file first, and use skills from trusted sources.</td></tr>
+<tr><td>Never updating it</td><td>You keep fixing the same thing by hand.</td><td>Add each correction to Rules or Checks.</td></tr>
+</tbody>
+</table></div>
+<h3>Before you upload: a checklist</h3>
+<ul class="checklist">
+<li>Skills and code execution are both enabled in your settings.</li>
+<li>The name uses lowercase letters and hyphens, and is under 64 characters.</li>
+<li>The folder name matches the skill's name exactly, character for character.</li>
+<li>The description explains what the skill does and when to use it, in under 200 characters.</li>
+<li>SKILL.md is inside the folder, and the folder is at the top of the ZIP.</li>
+<li>You have read the entire file, including any scripts it contains.</li>
+<li>You have three realistic test requests prepared.</li>
+</ul>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>AI Blocks is a free library of skills, prompts and workflows that you use in your own AI. When you choose <strong>Download the files</strong> on a skill page, you get a ZIP named after the skill, containing the skill folder with its SKILL.md and any supporting files. The <a href="/how-it-works">how it works guide</a> shows where that ZIP goes in Claude, Claude Code, ChatGPT and Codex.</p>
+<p>Before you upload one to the Claude apps, open SKILL.md and compare the name line with the folder name. Some skills in the library come from other authors and use a different name in the file. If the two differ, rename the folder to match the name line exactly.</p>
+<ul>
+<li><a href="/skills/skill-making-guide">AI skill writing coach</a>: turn a task you repeat into your own skill, with a SKILL.md draft, a description that triggers and a test plan.</li>
+<li><a href="/skills/skill-writer-and-reviewer">Skill writer and reviewer</a>: write a skill from a job description, or review one you have, with a clearer trigger line and safety notes.</li>
+<li><a href="/prompts/repeat-job-skill-drafter">Reusable AI skill writer</a>: paste a job you repeat and get a draft with a trigger line, steps and three test prompts.</li>
+<li><a href="/skills/skill-safety-reviewer">Skill safety reviewer</a>: get a read-only safety review of a skill before you install it.</li>
+<li><a href="/workflows/write-a-skill-and-check-it-is-safe-to-share">AI skill release package builder</a>: a workflow that writes a skill, checks that it triggers and reviews it for safety before you share it.</li>
+<li><a href="/ai-tools/claude">Claude tool guide</a>: what Claude is particularly good for, organised by job.</li>
+</ul>
+<p>If the terminology is unfamiliar, read <a href="/blog/ai-prompts-vs-skills-vs-workflows">AI prompts vs skills vs workflows</a> first. To connect Claude to the entire library at once, see <a href="/blog/what-is-mcp">what MCP is and how to use it</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Which Claude plans include skills?</h3>
+<p>As of November 2026, Anthropic's help article on using skills covers both individual and team plans, but plans change, so check that article for your own subscription. Every skill in the AI Blocks library is free to download.</p>
+<h3>What is the difference between Agent Skills and Claude skills?</h3>
+<p>Agent Skills is the name of the open folder format published at agentskills.io, while Claude skills are simply skills used in Claude. A skill written to the open format can also be read by other tools that support the standard.</p>
+<h3>Do I need to code to make a Claude skill?</h3>
+<p>No, because a SKILL.md is ordinary text, and scripts are optional additions that most business skills don't need at all.</p>
+<h3>Why isn't Claude using my skill?</h3>
+<p>First check that both the skill and code execution are turned on. Then rewrite the description so it says when to use the skill, in the words you actually type, or name the skill in your message to make Claude use it.</p>
+<h3>Can I use the same skill in ChatGPT or Gemini?</h3>
+<p>You can attach SKILL.md to a conversation in any AI and ask it to follow the file, and Google now offers skills in the Gemini app too. Check each application's documentation to see exactly how it loads skills.</p>
+<h3>Where can I find ready-made Claude skills?</h3>
+<p>Anthropic's guide to creating custom skills links to a set of example skills, and you can also search <a href="/">the AI Blocks library</a> for skills by job. Whatever the source, read the file carefully before you turn it on.</p>

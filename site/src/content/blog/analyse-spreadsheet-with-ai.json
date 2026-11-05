@@ -1,0 +1,21 @@
+{
+  "slug": "analyse-spreadsheet-with-ai",
+  "title": "How to analyze data with ChatGPT and check the numbers",
+  "seoTitle": "How to analyze data with ChatGPT safely",
+  "description": "Analyze data with ChatGPT, Claude or Gemini. Prepare the file, ask clear questions, make the AI show its working and check every number before you act.",
+  "lede": "You can analyze data with ChatGPT, Claude or Gemini by uploading a spreadsheet and asking plain questions. This guide shows how to prepare the file and ask useful questions. It also covers how to make the AI show its working, check the numbers and keep private data safe.",
+  "category": "Get started with AI",
+  "keywords": [
+    "analyze data with ChatGPT",
+    "AI spreadsheet analysis",
+    "analyse Excel with AI",
+    "ChatGPT Excel analysis",
+    "upload CSV to ChatGPT"
+  ],
+  "related": [
+    "stop-ai-making-things-up",
+    "build-ai-workflow-without-code",
+    "seo-content-with-ai"
+  ],
+  "minutes": 10
+}

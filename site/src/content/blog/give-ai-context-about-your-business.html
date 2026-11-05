@@ -1,0 +1,190 @@
+<h2 id="why-generic">Why does your AI give generic answers?</h2>
+<p>Your AI only knows two things: what it learned during training, and whatever is in front of it in the current conversation. It doesn't know your prices, your customers or the way you talk. So when you ask for "a post about our new service", it writes the most likely post for any business, which is exactly what a generic answer is.</p>
+<p>The solution is to give it your business context once and store it somewhere your AI reads every time. ChatGPT custom instructions for business are one place to do that, and projects in ChatGPT and Claude, or Gems and skills in Gemini, are others. This guide covers each of the following steps in turn:</p>
+<ol>
+<li>The five things your AI needs to know: your <strong>offer</strong>, your <strong>buyer</strong>, your <strong>voice</strong>, your <strong>proof</strong> and your <strong>limits</strong>.</li>
+<li>How to write them into one short brand file that any AI can read.</li>
+<li>Where to store that file in ChatGPT, Claude and Gemini, so you no longer have to paste it into every chat.</li>
+<li>How to keep the file current, accurate and private.</li>
+</ol>
+<p>Think of a brand file as the briefing you would give a new employee on their first day, except that you only have to write it once.</p>
+
+<h2 id="what-to-give">What business context should you give your AI?</h2>
+<p>Five parts cover most business tasks, and for each one you should write facts rather than adjectives. A phrase like "friendly and professional" tells your AI almost nothing. By contrast, "we write the way we talk on the phone, with short sentences and first names" tells it a great deal.</p>
+<h3>1. Your offer</h3>
+<p>Describe what you sell in plain words, including your main products or services, what each one does and what it costs, if you publish your prices. Also include what you don't sell, so that your AI doesn't suggest it to customers.</p>
+<h3>2. Your buyer</h3>
+<p>Explain who buys from you and why, including the problem they have when they find you and what worries them before they buy. Add the words they actually use, taken from real emails, reviews or calls. A genuine phrase such as "I never know what to post" is worth far more than a label like "time-poor SMEs".</p>
+<h3>3. Your voice</h3>
+<p>Describe how you sound, including your typical sentence length, how formal you are, the words you use and the words you never use. Add one or two short samples of writing you are happy with, and for a complete method, see <a href="/blog/make-ai-writing-sound-like-you">how to make AI writing sound like you</a>.</p>
+<h3>4. Your proof</h3>
+<p>List the facts your AI may use to support a claim, such as years in business, awards, guarantees, figures you publish and links to reviews. Include only what is true and current, because your AI will repeat whatever you put in this section.</p>
+<h3>5. Your limits</h3>
+<p>Set out what your AI must never say or do, such as claims you can't make, competitors you never name, discounts you don't offer and topics to avoid. Limits prevent the most damaging mistakes, so don't skip them, and our guide on <a href="/blog/stop-ai-making-things-up">how to stop AI making things up</a> explains why.</p>
+<aside class="callout"><p><strong>Tip.</strong> Add one line telling your AI what to do when information is missing, such as "Ask me, and never guess a price, date or result".</p></aside>
+
+<h2 id="brand-file">Write a one-page brand file</h2>
+<p>Put the five parts in one plain-text file and keep it to about one page. A long file buries the facts that matter, and an AI tends to give every line roughly equal weight.</p>
+<pre><code># Brand file: [business name]
+Last checked: [date]
+
+## Offer
+- What we sell: [products or services, one line each]
+- Prices we share publicly: [or "don't quote prices"]
+- What we don't sell: [list]
+
+## Buyer
+- Who buys: [type of person or business]
+- The problem they have: [in their words]
+- What worries them before buying: [doubts]
+- Words they use: [real phrases from emails or reviews]
+
+## Voice
+- How we sound: [sentence length, formality, first person or "we"]
+- Words we use: [list]
+- Words we never use: [list]
+- One sample we like: [a short paragraph]
+
+## Proof (use only these)
+- [fact 1, with a link]
+- [fact 2, with a link]
+
+## Limits
+- Never claim: [list]
+- Never mention: [list]
+- If a fact is missing, ask. Never guess prices, dates or results.</code></pre>
+<p>You don't have to fill it in alone, because this prompt asks your AI to interview you and then draft the file from your answers.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: build a brand file by interview</p><pre id="prompt-1">You are helping me write a one-page brand file. Every AI I use will read it before it works for me.
+
+Interview me. Ask one short question at a time, at most 12 in all. Cover these parts in order: Offer, Buyer, Voice, Proof, Limits. I can skip a question or say "enough" to stop.
+
+Rules for the interview:
+- Ask for facts and real examples, not adjectives.
+- For Buyer, ask me for real phrases customers have used.
+- For Proof, ask for a link or source for each fact.
+
+Then write the brand file with these headings: Offer, Buyer, Voice, Proof (use only these), Limits. Add "Last checked: [today's date]" at the top.
+
+Checks before you show it:
+- Nothing is added that I did not tell you.
+- Every proof point has a source, or is marked "source needed".
+- No passwords, account numbers or private details about customers.
+- Under 400 words.
+Show it in one code block, then ask what to fix.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>If your website already contains most of this information, you can start from the site instead. The <a href="/skills/website-brand-brain-builder">brand profile builder</a> skill reads your website and drafts a profile of your products, customers, voice and approved claims, with sources.</p>
+
+<h2 id="worked-example">A worked example: a brand file for Buffer</h2>
+<p>Buffer makes social media tools, and its <a href="https://buffer.com/about" rel="noopener">about page</a> calls it one of the best-known social media marketing tools for small businesses, creators and individuals. It says the product is built to help customers grow through organic marketing, and it offers a free plan. The page lists six values, starting with "Default to transparency", and says Buffer has shared its finances, salaries and other figures openly since 2013. It has also been fully remote since 2013, and it says the whole company works a four-day week.</p>
+<p>Here is how those public facts could become the first draft of a brand file for someone writing for Buffer, such as a freelance writer. It is an example prepared for this article rather than Buffer's own brand guide, and anything not on Buffer's public pages is left as a gap to fill.</p>
+<pre><code># Brand file: Buffer (example draft)
+
+## Offer
+Social media tools for planning, publishing and analytics. A free plan is available.
+Prices: link to the pricing page, never quote from memory.
+
+## Buyer
+Small businesses, creators and individuals growing through organic marketing.
+Their words: [gap, collect from reviews and support emails]
+
+## Voice
+[gap, take from Buffer's own published posts]
+
+## Proof
+Shares finances, salaries and other figures openly since 2013. Fully remote since 2013.
+Source: buffer.com/about. Check figures on the live page before use.
+
+## Limits
+Never quote a metric or price without checking the live page.
+Never describe features that aren't on Buffer's site.</code></pre>
+<p>Notice what the gaps achieve: the voice and the buyers' own words aren't on the about page, so the file says so instead of guessing. Without the file, a request such as "write a LinkedIn post about Buffer's values" would probably get a generic post about teamwork. With it, your AI has the six real values, the real dates and a rule to check any figure, and it knows to ask before it invents anything.</p>
+
+<h2 id="where-to-store">ChatGPT custom instructions for business, projects and Gems</h2>
+<p>Each AI has two kinds of place to keep context: one that applies to every chat, and another that applies only inside a project or a saved assistant. Use the first for a short summary and the second for the complete brand file.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">AI</th><th scope="col">Every chat</th><th scope="col">One area of work</th></tr></thead>
+<tbody>
+<tr><td>ChatGPT</td><td>Custom instructions</td><td>Projects, with project instructions and files</td></tr>
+<tr><td>Claude</td><td>Instructions in your settings</td><td>Projects, with project instructions and project knowledge</td></tr>
+<tr><td>Gemini</td><td>(see Google's help for current options)</td><td>Gems, which Google is moving to skills on personal accounts</td></tr>
+</tbody>
+</table></div>
+<p>Menu names change often, so the steps below reflect each maker's help pages as of November 2026. If your screens look different, search the application's help centre for the feature name.</p>
+<h3>ChatGPT custom instructions</h3>
+<p>On the web or desktop app, open <strong>Settings</strong>, then <strong>Personalization</strong>, and make sure customization is turned on. Type your short business summary into the custom instructions field, and it will then apply to new chats. OpenAI's <a href="https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt" rel="noopener">custom instructions help article</a> has the details for each app.</p>
+<h3>ChatGPT projects</h3>
+<p>A project keeps related chats, files and instructions together, so add your brand file to the project's files and put your main rules in the project instructions. OpenAI's <a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" rel="noopener">projects help article</a> says project instructions apply only inside that project, and take priority over your general custom instructions there. That makes projects particularly useful for keeping one client or brand separate from another.</p>
+<h3>Claude instructions and projects</h3>
+<p>For every conversation, open <strong>Settings</strong> and add your summary under instructions, which Anthropic's help article on <a href="https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features" rel="noopener">personalisation features</a> says will apply to all your conversations. For one area of work, go to <strong>Projects</strong> and select <strong>New Project</strong>. Then choose <strong>Set project instructions</strong> for your rules and use the <strong>+</strong> button in the project knowledge area to add your brand file. Anthropic's <a href="https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects" rel="noopener">projects help article</a> says projects are available on all plans, with a limit on the number for free accounts.</p>
+<h3>Gemini Gems, becoming skills</h3>
+<p>In Gemini, open the sidebar and choose <strong>Gems</strong>, then <strong>New Gem</strong>. Give it a name and instructions, add your brand file under <strong>Knowledge</strong>, and save it. Google's <a href="https://support.google.com/gemini/answer/15146780" rel="noopener">Gems help page</a> also says that from November 2026, Gems on personal Google accounts will move over to skills automatically. If you are setting up Gemini now, check that page for the current steps.</p>
+
+<h2 id="short-core">What goes in custom instructions, and what goes in a project?</h2>
+<p>Settings boxes for every chat are small, and they apply to everything, including chats that have nothing to do with work. Keep them short, covering who you are, what the business does and how you like answers. Put the full brand file in a project, where it only appears for business work.</p>
+<p>If you run more than one brand, or work for several clients, use one project per brand. Never mix two brands' files in one place, because your AI may blend their voices and facts.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: make a short summary for your settings box</p><pre id="prompt-2">You are an editor who writes short context for AI settings.
+
+Inputs:
+BRAND FILE START
+[paste your brand file]
+BRAND FILE END
+
+Task: Write a short version for the "every chat" settings box in my AI.
+
+Format:
+- Under 700 characters.
+- Plain sentences, no headings.
+- Include: what the business sells, who buys, how answers should sound, and the single most important limit.
+- End with: "For business tasks, ask me which project or brand file to use."
+
+Checks: Use only facts in the brand file. Leave out proof points and long lists. Count the characters and show the count.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h2 id="keep-current">Keep your context current and private</h2>
+<p>An outdated brand file can be worse than none, because your AI trusts it completely, so last year's price or a discontinued product will turn up in new work.</p>
+<ul class="checklist">
+<li>Put a "Last checked" date at the top of the file.</li>
+<li>Update it when a price, product, offer or policy changes.</li>
+<li>Review it once a month, even if nothing seems to have changed.</li>
+<li>Keep one master copy, and paste the updated version into each AI after edits.</li>
+<li>Never include passwords, account numbers, card details or private facts about customers or staff.</li>
+<li>Check your AI's data settings for your plan before you add business documents.</li>
+</ul>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">What happens</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Describing your voice with adjectives</td><td>Every brand sounds "friendly and professional".</td><td>Give rules and one sample: sentence length, words you use and avoid.</td></tr>
+<tr><td>Pasting your whole website</td><td>The key facts get lost in the noise.</td><td>Write one page with the five parts.</td></tr>
+<tr><td>No limits section</td><td>Your AI makes claims you can't back up.</td><td>List what it must never claim, promise or mention.</td></tr>
+<tr><td>Putting everything in the settings box</td><td>Business rules leak into every chat, even personal ones.</td><td>Keep a short summary there, and the full file in a project.</td></tr>
+<tr><td>One project for several brands</td><td>Voices and facts get mixed.</td><td>Make one project per brand or client.</td></tr>
+<tr><td>Never updating the file</td><td>Old prices and products turn up in new work.</td><td>Date it, and review it monthly.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>AI Blocks is a free library you use with your own AI, and two of its features exist for this exact purpose.</p>
+<ul>
+<li><strong>Your brand file:</strong> open it from the site menu and answer five quick questions about your business. After that, the prompts you copy and the files you download include the parts of your brand file each task needs. It stays private, either on your device or in your account when you sign in.</li>
+<li><a href="/me-md">Your me.md</a>: one short private file about you as a person, covering your work, your projects and how you write. The guide explains where to put it in ChatGPT, Claude, Claude Code, Gemini and Cursor.</li>
+<li><a href="/skills/me-md-short-core-writer">me.md short-core writer</a>: give it your me.md and get a short version for your AI's settings box.</li>
+<li><a href="/workflows/make-your-me-md-and-set-it-up-in-every-ai">Make your me.md and set it up in every AI you use</a>: a workflow that makes the file and the short version together.</li>
+<li><a href="/skills/website-brand-brain-builder">Brand profile builder</a>: share your website and get a reusable profile of your products, customers, voice and approved claims, with sources.</li>
+<li><a href="/prompts/brand-voice-one-pager-writer">Brand voice one-pager writer</a>: get a one-page voice guide with tone sliders, word lists and before-and-after lines.</li>
+<li><a href="/skills/ideal-customer-profile-writer">Ideal customer profile writer</a>: describe what you sell and get buyer profiles with doubts, habits and the words buyers use.</li>
+</ul>
+<p>Once your context is in place, better prompts do the rest, so see <a href="/blog/chatgpt-prompts-for-work">how to write ChatGPT prompts for work</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>What should I put in ChatGPT custom instructions for my business?</h3>
+<p>Add a short summary covering what you sell, who buys, how answers should sound and your most important limit. Keep the full brand file in a project, so it only applies to business work.</p>
+<h3>What is the difference between custom instructions and a project?</h3>
+<p>Custom instructions apply to every new chat, while a project applies only to the chats inside it and can hold files such as your brand file. OpenAI's help says project instructions take priority over custom instructions inside that project.</p>
+<h3>Does ChatGPT memory replace a brand file?</h3>
+<p>No, because memory is built automatically by ChatGPT from your chats, whereas a brand file is a document you write, check and update yourself. You can use the file in any AI, so use both if you like, but treat the file as the source you trust.</p>
+<h3>How long should my brand file be?</h3>
+<p>Aim for about one page, or roughly 300 to 500 words, which is long enough for the five parts and short enough that every line matters.</p>
+<h3>Can I use the same brand file in ChatGPT, Claude and Gemini?</h3>
+<p>Yes, because it is a plain-text file, so you can add it to a ChatGPT project, a Claude project and a Gemini Gem or skill. Keep one master copy and update the others from it whenever it changes.</p>
+<h3>Is it safe to give AI my business information?</h3>
+<p>Share only the information the work requires, and leave out passwords, financial account details and private facts about customers or staff. Before you add business documents, check your AI's privacy and data settings for your particular plan.</p>

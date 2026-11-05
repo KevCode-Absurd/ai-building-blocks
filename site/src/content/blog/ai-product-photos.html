@@ -1,0 +1,223 @@
+<h2 id="short-answer">The short answer: start from real photos</h2>
+<p>AI product photography works best when you start from real photos of the real product, because image tools are far better at changing a setting than at inventing accurate details. Take a few clear phone photos of the item, then write down every detail that must not change, such as the logo, the label text, the colour and the shape. Next, ask your AI image tool to place that exact product into new scenes. Finally, compare every result with the real thing before it appears on a product page or in an advertisement.</p>
+<p>The order matters, because an AI tool asked to invent your product from a written description produces something that only resembles it. Typically the label is inaccurate, a handle moves or the colour drifts. A buyer who receives a product that doesn't match the photo is likely to send it back, or to leave a review that says so.</p>
+<p>This guide gives you the full method, from what AI can and can't do with product images to a reusable shot list and three prompts you can copy. It also covers the check to run before you publish, and how to stay honest about AI images in ads.</p>
+
+<h2 id="can-and-cant">What can AI product photography do, and what can't it?</h2>
+<p>AI image tools are good at changing everything around your product, while they remain much weaker at keeping small product details exactly right. Plan your shots around that difference, so that AI handles the parts it does well and real photos cover the rest.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">AI does this well</th><th scope="col">AI often gets this wrong</th></tr></thead>
+<tbody>
+<tr><td>New backgrounds and settings: a kitchen, a beach, a desk</td><td>Small printed text, like ingredient lists or model numbers</td></tr>
+<tr><td>Lighting and mood: soft morning light, bright studio light</td><td>Logos, which can come out warped or misspelled</td></tr>
+<tr><td>Props and styling around the product</td><td>Exact colours, especially close shades like navy and black</td></tr>
+<tr><td>Many versions of a scene, fast, so you can pick the best</td><td>Counts and proportions: the number of buttons, wheels or pockets</td></tr>
+<tr><td>Different sizes and crops for feeds, stories and banners</td><td>Keeping the same product identical across a set of images</td></tr>
+</tbody>
+</table></div>
+<p>You don't have to take this on trust, since OpenAI's own <a href="https://developers.openai.com/api/docs/guides/image-generation" rel="noopener">image generation guide</a> lists the limits of its image model, as of November 2026. It says the model can still struggle with precise text placement, and that it can struggle to keep brand elements consistent across several images.</p>
+<p>The central rule of this guide follows from that limitation. Let AI build the scene, keep the product as close to the reference photo as possible, and inspect it by eye every time.</p>
+
+<h2 id="steps">How to make AI product photos, step by step</h2>
+<p>Here is the method in seven steps, and each step explains its reasoning, so you can adapt it to your own product and the places your photos will appear.</p>
+
+<h3>Step 1: Take real reference photos</h3>
+<p>Your phone is enough for this step, because you are not making the final image yet; you are giving your AI an accurate record of the product's appearance.</p>
+<ul>
+<li>Shoot in daylight near a window, on a plain white or grey surface, so the colours stay true.</li>
+<li>Photograph the front, back, both sides, the top and a three-quarter angle, so the tool can understand the product's full shape.</li>
+<li>Take close-ups of the logo, the label and any small component that customers regularly ask about.</li>
+<li>Take one photo beside a familiar object, such as a hand or a mug, so the tool understands the product's size.</li>
+<li>Keep the files at full resolution, and don't add filters or editing.</li>
+</ul>
+<p>Image tools reproduce what they can see. A sharp, evenly lit photo of the label gives the tool its best chance of keeping it accurate, whereas a blurry one invites it to guess. If you skip this step, every later check has nothing reliable to compare against.</p>
+
+<h3>Step 2: Write a product truth sheet</h3>
+<p>A truth sheet is a short list of facts about how the product looks. Every scene prompt repeats these facts and every check tests them, so you write the sheet once and reuse it for every image.</p>
+<ul>
+<li>The exact colour name, plus the colour code if your supplier or designer has provided one.</li>
+<li>The overall shape and proportions, described specifically, such as tall and narrow, square corners or a curved lid.</li>
+<li>Every word printed on the product, spelled exactly as it appears.</li>
+<li>The number of each visible part, including wheels, buttons, pockets and straps.</li>
+<li>The materials and surface finish, described precisely, such as matte plastic, gloss enamel, brushed metal or ribbed knit.</li>
+<li>Anything that must never appear, including items that aren't included and features the product doesn't have.</li>
+</ul>
+<p>Paste your photos into your AI and let it draft the sheet with the prompt below. Then correct anything it got wrong, because a mistake in the truth sheet will repeat in every image you make from it.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: write a product truth sheet and shot list</p><pre id="prompt-1">You are a product photographer and art director. I am attaching real photos of my product. I want to make AI product photos that stay true to it.
+
+First, ask me for anything you need and can't see:
+- Product name and the exact colour name
+- What is included in the box, and what is not
+- Where the photos will run: [product page / Instagram feed / stories / Google Shopping / ads]
+- Who buys it and the one question they ask most before buying
+
+Then do two things.
+
+1. Write a product truth sheet. List, as short lines:
+- Colour, shape and proportions
+- Every word printed on the product, spelled exactly as in my photos
+- Counts of parts (wheels, buttons, pockets, straps)
+- Materials and finish
+- Things that must never appear (items not included, features it doesn't have)
+Mark any line you are unsure about with [CHECK] instead of guessing.
+
+2. Write a shot list of 8 shots. For each shot give: the shot name, the question it answers for a buyer, the setting, the camera angle, the lighting, and whether it needs a real photo or can be AI-made.
+
+Rules:
+- Use only details you can see in my photos or that I tell you.
+- Close-ups of labels, text and small parts must use real photos, not AI.
+- Keep the whole answer in two tables I can copy.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h3>Step 3: Plan a shot list before you make anything</h3>
+<p>A shot list stops you making 40 attractive pictures that answer none of a buyer's questions. Each shot should answer one specific thing a buyer wants to know before they pay, which is why the list below pairs every shot with its question.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Shot</th><th scope="col">The buyer's question</th><th scope="col">Real photo or AI?</th></tr></thead>
+<tbody>
+<tr><td>Hero on plain background</td><td>What does it look like?</td><td>Real photo, cleaned up</td></tr>
+<tr><td>Three-quarter angle</td><td>What shape is it, really?</td><td>Real photo</td></tr>
+<tr><td>Scale shot</td><td>How big is it?</td><td>Real photo with a hand or common object</td></tr>
+<tr><td>Detail close-up</td><td>What is it made of? What does the label say?</td><td>Real photo only</td></tr>
+<tr><td>In use</td><td>How would I use it?</td><td>AI scene from your real photo, checked</td></tr>
+<tr><td>Lifestyle setting</td><td>Does it fit my life or my home?</td><td>AI scene from your real photo, checked</td></tr>
+<tr><td>What's in the box</td><td>What do I get?</td><td>Real photo only</td></tr>
+<tr><td>Ad version</td><td>Why should I stop scrolling?</td><td>AI scene, with words added in a design tool</td></tr>
+</tbody>
+</table></div>
+<p>Notice the pattern in the table. Anything a buyer uses to judge the product itself stays a genuine photograph, while AI provides the setting, atmosphere and story around it.</p>
+
+<h3>Step 4: Write scene prompts that lock the product</h3>
+<p>A good scene prompt has two parts, and the first part describes the scene, including the place, the light, the camera and the props. The second part "locks" the product by repeating your truth sheet and telling the tool not to change it. Many image tools let you attach your photo as a reference. If yours does, always attach it, because a reference image does more to keep the product accurate than any written description.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: turn a shot into a scene prompt</p><pre id="prompt-2">You write prompts for AI image tools. I will use your prompt in [ChatGPT / Gemini / Midjourney / another tool] with my real product photo attached as a reference.
+
+My product truth sheet:
+[paste your truth sheet]
+
+The shot I want:
+- Shot name: [for example, in use]
+- Where it will run and the shape: [for example, Instagram feed, 4:5 portrait]
+- Setting: [for example, a hotel room in morning light]
+- Mood: [for example, calm, unhurried]
+
+Write one image prompt with these parts, in this order:
+1. Scene: place, time of day, surfaces and two or three props that suit the buyer.
+2. Camera: angle, distance, lens feel and depth of field.
+3. Light: direction, softness and colour of the light.
+4. Product lock: "Use the attached photo as the exact product. Keep its shape, colour, logo and every printed word unchanged." Then list each line of the truth sheet.
+5. Avoid: extra products, added text, changed logos, extra parts, hands with the wrong number of fingers.
+
+Then give me two variations that change only the setting, so I can compare.
+Keep each prompt under 120 words. Don't add any detail about the product that is not in my truth sheet.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h3>Step 5: Make a few, pick one, then edit</h3>
+<p>Generate three or four versions of each shot rather than 30. Choose the one where the product looks most like the real thing, even if another version has a more attractive background. Then fix small problems with your tool's edit feature, one change at a time. Ask for "make the light warmer" or "remove the extra cushion" instead of requesting a whole new image, because every fresh image is another chance for the product to drift.</p>
+<p>If a label or logo keeps coming out wrong, stop fighting it. Either make the scene with the product turned slightly away from the camera, or place a clean cut-out of your real photo onto the AI background in a design tool. The cut-out is often faster and always more accurate.</p>
+
+<h3>Step 6: Check every image before you publish</h3>
+<p>Display the AI image next to your real photo at full size, then work through the checklist in the next section. If any check fails, fix the image or drop it, because one inaccurate detail is enough to make a buyer doubt the rest of the page.</p>
+
+<h3>Step 7: Label it honestly and keep a record</h3>
+<p>Keep a simple log for every published image, recording the file name, the reference photo used, the tool, the prompt and the person who checked it. If a customer or an ad platform ever asks how an image was made, you can then answer in a minute. The section on honesty below explains what to tell buyers.</p>
+
+<h2 id="checklist">The check to run before you publish</h2>
+<p>Run this check on every image, since it takes about two minutes and catches the problems that buyers are most likely to notice.</p>
+<ul class="checklist">
+<li>The shape and proportions match the real product when it is photographed from the same angle.</li>
+<li>The colour matches the physical product viewed in daylight, rather than only matching your screen's version of it.</li>
+<li>Every printed word on the product is spelled correctly and appears in its correct position.</li>
+<li>The logo is the real logo, with no warping, missing strokes or extra letters.</li>
+<li>The number of wheels, buttons, pockets, straps and holes matches the real product exactly.</li>
+<li>Nothing appears alongside the product that a buyer could reasonably assume is included in the sale.</li>
+<li>The product's size looks believable compared with the people, furniture and other objects in the scene.</li>
+<li>Hands, faces and reflections look natural when you examine the image at full size.</li>
+<li>The background contains no garbled or invented text, which image tools can place on signs, packaging or book spines.</li>
+<li>The image has the correct dimensions and resolution for the placement where it will appear.</li>
+<li>Your log records the reference photo, the image tool, the exact prompt and the person who approved it.</li>
+</ul>
+<aside class="callout"><p><strong>Tip.</strong> Ask someone who knows the product, but didn't make the image, to spot the difference. Fresh eyes catch the moved zip or the missing stitch that you stopped noticing after the tenth version.</p></aside>
+<p>You can also ask your AI to do a first pass with the prompt below. It won't replace your own inspection, but it catches some faults and produces a written record of the check.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: compare an AI image with the real product</p><pre id="prompt-3">You are a strict product image checker. I am attaching two images:
+1. A real photo of my product (the reference).
+2. An AI-made image that is meant to show the same product.
+
+My product truth sheet:
+[paste your truth sheet]
+
+Compare image 2 with image 1 and the truth sheet. Check each item and answer pass, fail or can't tell:
+- Shape and proportions
+- Colour
+- Every printed word and the logo
+- Counts of parts
+- Materials and finish
+- Anything added that isn't part of the product or the sale
+- Scale next to people and objects
+- Hands, faces, reflections and background text
+
+Give your answer as a table: check, result, what you see, and the fix to ask the image tool for.
+Then give one overall call: use it, fix it, or drop it.
+If a detail is too small to judge, say "can't tell" and tell me to check it by eye. Never assume it passed.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="example">A worked example: The Carry-On from Away</h2>
+<p><a href="https://www.awaytravel.com/products/carry-on-jet-black" rel="noopener">Away</a> is a luggage company, and its product page for The Carry-On describes a lightweight polycarbonate hard shell, 360° wheels, a TSA-approved combination lock and a compression system inside. Luggage is a demanding test for this method, because the shape, wheels, handle and logo must stay accurate. Meanwhile, the photos need travel scenes that would be expensive to shoot for real.</p>
+<p>This is an example written for this article, so Away did not take part, and nothing here describes their real process or their real images.</p>
+<h3>What goes in</h3>
+<ul>
+<li>Real phone photos of the case from six angles, plus close-ups of the lock, the handle and the logo.</li>
+<li>The truth sheet from prompt 1, listing the colour name from the product page, the hard shell, the wheels, the lock, the trolley handle and the logo. Any detail that isn't visible in the photos is marked [CHECK].</li>
+<li>The placements, which in this example are the product page and a 4:5 Instagram feed advertisement.</li>
+</ul>
+<h3>What comes out</h3>
+<p>The shot list keeps four shots as real photos: the hero, the scale shot, the lock close-up and the open case showing the compression system. Those are the shots a buyer uses to judge the case itself. AI generates three scenes: the case beside a hotel bed in morning light, rolling through a bright airport hallway, and standing by a front door at dawn.</p>
+<p>A scene prompt from prompt 2 might start: "A quiet hotel room at 7am, soft window light from the left, white bedding, a folded jacket on the chair. Camera at waist height, 35mm feel, product in sharp focus. Use the attached photo as the exact product. Keep its shape, colour, logo and every printed word unchanged."</p>
+<p>The check then catches the typical faults of image tools, such as an additional wheel, a bent handle or a redrawn logo, each of which counts as a fail. The fix might be a targeted edit ("keep the handle straight and fully retracted"), or a cut-out of the real case placed on the AI background.</p>
+
+<h2 id="honesty">How honest do you need to be about AI images in ads?</h2>
+<p>You can use AI to build a scene around a real product. The line you must not cross is making the product look different from what the buyer receives, which is a truth-in-advertising problem whatever tool made the picture. The US Federal Trade Commission's <a href="https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business" rel="noopener">advertising guide for small businesses</a> states it plainly: advertising must be truthful and not deceptive.</p>
+<p>Ad platforms and marketplaces also set their own rules, and those rules change, so check them before each campaign. Here is where two of them stood as of November 2026.</p>
+<ul>
+<li><strong>Google Merchant Center:</strong> its <a href="https://support.google.com/merchants/answer/6324350" rel="noopener">image requirements</a> say the main image must clearly show the exact item being sold. Images made with generative AI must carry metadata saying so, and you shouldn't strip that metadata out when you edit them.</li>
+<li><strong>Meta:</strong> Meta <a href="https://about.fb.com/news/2025/02/gen-ai-transparency-metas-ads-products/" rel="noopener">says it labels ads</a> made or heavily edited with its own AI tools with "AI info". It also says it detects some ads made with other AI tools and labels those too.</li>
+</ul>
+<p>A simple house rule keeps you on the right side of all of this. Use real photos for anything the buyer judges the product by, and use AI for the setting. Never add a feature, a colour or an included item that the product doesn't have. And don't show a scene that a buyer could mistake for a real event, such as a customer using the product somewhere famous.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<p>The usual problems with AI product images come from a handful of avoidable habits, so the table pairs each one with a better alternative.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Asking the AI to draw the product from a description</td><td>Attach real reference photos every time, and repeat the truth sheet in the prompt.</td></tr>
+<tr><td>Trusting AI with label close-ups</td><td>Use real photos for labels, ingredients, sizes and anything with small print.</td></tr>
+<tr><td>Making 50 images and picking the prettiest</td><td>Make three or four per shot and pick the most accurate one.</td></tr>
+<tr><td>Regenerating to fix one small fault</td><td>Edit one thing at a time, or place a cut-out of the real product on the AI scene.</td></tr>
+<tr><td>Checking on a phone screen</td><td>Check at full size, next to the real photo, in good light.</td></tr>
+<tr><td>Adding props that look included</td><td>Keep props clearly separate, or leave them out of product page images.</td></tr>
+<tr><td>Letting the AI write words onto the image</td><td>Add headlines and prices later in a design tool, where you control the spelling.</td></tr>
+<tr><td>Keeping no record</td><td>Log the reference photo, tool, prompt and checker for every image you publish.</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>These free items each handle part of this job in your own AI. Copy the prompt or download the skill, then use it in ChatGPT, Claude, Gemini or another assistant.</p>
+<ul>
+<li><a href="/skills/product-image-spec-writer">Product image spec writer</a> checks your product photos and writes a truth sheet, with lock lines for every prompt and the next photo to take.</li>
+<li><a href="/prompts/product-shot-list-writer">Product shot list writer</a> gives you a shot list with a reason for each shot, based on where the photos will run.</li>
+<li><a href="/skills/product-photo-shoot-planner">Product photo shoot planner</a> makes a style sheet and a prompt for each frame, so that a whole set of images matches.</li>
+<li><a href="/workflows/phone-product-photoshoot">Product photoshoot planner and producer</a> is a workflow that takes you from real photos to a shot and lighting plan, an approved pilot, and generated photos where your tools allow.</li>
+<li><a href="/prompts/accurate-product-image-ad-maker">Product image ad prompt writer</a> turns your approved ad, facts and photos into an image prompt, plus a checklist for reviewing the first image.</li>
+<li><a href="/skills/product-page-image-checker">Product page image checker</a> gives a pass or fail for each image, one fix per fault and a score out of 100 for the set.</li>
+<li><a href="/ai-tools/nano-banana">Our guide to Nano Banana</a> covers Google's image tool inside Gemini, which edits images from plain requests.</li>
+</ul>
+<p>Once your images are ready, <a href="/blog/plan-ad-creative-tests">plan which ad images to test first</a>, and pair them with <a href="/blog/product-descriptions-that-sell">product descriptions that answer buyer questions</a>. If you have customer reviews, <a href="/blog/turn-reviews-into-ads">turn them into ad ideas</a> for your scenes.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can AI make product photos without a real photo of the product?</h3>
+<p>It can make an image, but the image won't show your product, because the tool invents the details from your description. Use that approach only for early mood boards, and start from real photos for anything a buyer will see.</p>
+<h3>Which AI tool is best for product photos?</h3>
+<p>Choose a tool that lets you attach a reference photo and edit parts of an image with plain requests. ChatGPT, Gemini and dedicated image tools can all do this as of November 2026. Test two of them on the same shot, and keep the one that alters your product least.</p>
+<h3>Can I use AI product photos on Amazon or Google Shopping?</h3>
+<p>Check each marketplace's image rules first, because they change and they are strict about main images. Google Merchant Center, for example, says the main image must show the exact item sold, and that AI-made images must carry metadata saying so. A safe habit is to use a real photo for the main image and AI scenes only for the additional ones.</p>
+<h3>Do I have to tell customers my product photos are AI?</h3>
+<p>The rules depend on your country and your platform, so check them before you publish. Whatever the regulations say, the product in the image must match what the buyer receives. You could add a short note such as "scene created with AI, product shown as sold", which is honest and costs nothing.</p>
+<h3>Why does AI keep getting my logo wrong?</h3>
+<p>Image tools still struggle with exact text and with keeping brand marks consistent across images. Turn the logo slightly away from the camera, or place a cut-out of your real product into the AI scene, and never publish a warped logo.</p>
+<h3>How many AI product photos do I need?</h3>
+<p>Start with the eight-shot list above, where each shot answers one buyer question. Additional images only help when they answer a question the existing ones don't.</p>

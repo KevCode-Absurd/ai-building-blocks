@@ -1,0 +1,21 @@
+{
+  "slug": "build-ai-workflow-without-code",
+  "title": "How to build an AI workflow without code, step by step",
+  "seoTitle": "How to build an AI workflow without code",
+  "description": "Build an AI workflow without code. Split a job into steps, set what each step takes in and gives back, add human checks and run it in your own AI.",
+  "lede": "An AI workflow is one job split into small steps that your AI does one at a time, while you check the parts that matter. This guide shows how to plan one on paper, turn each step into a prompt and run it in ChatGPT, Claude or Gemini, with no code.",
+  "category": "Get started with AI",
+  "keywords": [
+    "AI workflow",
+    "build an AI workflow without code",
+    "AI workflow automation for small business",
+    "AI workflow examples",
+    "no-code AI workflow"
+  ],
+  "related": [
+    "ai-prompts-vs-skills-vs-workflows",
+    "ai-agents-for-small-business",
+    "give-ai-context-about-your-business"
+  ],
+  "minutes": 14
+}

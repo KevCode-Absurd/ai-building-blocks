@@ -18,13 +18,13 @@ test('one label: Safety checked, or nothing', () => {
 
 test('the menu reaches every main page in a few grouped links, and the footer stays short', () => {
   const header = read('../src/SiteHeader.tsx');
-  // The five main sections show in the laptop header; the grouped menu reaches every main page.
+  // The main sections and the blog show in the laptop header; the grouped menu reaches every main page.
   const headerMain = header.slice(header.indexOf('const main = ['), header.indexOf('];', header.indexOf('const main = [')));
   const headerLinks = [...headerMain.matchAll(/to: "([^"]+)", label: "([^"]+)"/g)].map((m) => [m[1], m[2]]);
-  assert.deepEqual(headerLinks, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/minds', 'Minds']]);
+  assert.deepEqual(headerLinks, [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/minds', 'Minds'], ['/blog', 'Blog']]);
   const menu = header.slice(header.indexOf('const MENU'), header.indexOf('export default'));
   const links = [...menu.matchAll(/\["(\/[^"]*)", "([^"]+)", "[^"]+"\]/g)].map((m) => m[1]);
-  for (const page of ['/#library', '/minds', '/tools', '/ai-tools', '/compose', '/get-it-done', '/from-a-source', '/apps', '/roles', '/train-your-own-ai-agent', '/teams', '/api-and-mcp', '/me-md', '/space', '/how-it-works', '/support']) assert.ok(links.includes(page), `${page} is in the menu`);
+  for (const page of ['/#library', '/minds', '/tools', '/ai-tools', '/compose', '/get-it-done', '/from-a-source', '/apps', '/roles', '/train-your-own-ai-agent', '/blog', '/teams', '/api-and-mcp', '/me-md', '/space', '/how-it-works', '/support']) assert.ok(links.includes(page), `${page} is in the menu`);
   assert.ok(links.length <= 20, `menu lists ${links.length} links`);
   for (const unfinished of ['/community', '/publish', '/people']) assert.ok(!links.includes(unfinished), `${unfinished} is not a menu link`);
   const footer = read('../src/SiteFooter.tsx');

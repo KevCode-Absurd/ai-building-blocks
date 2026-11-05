@@ -1,0 +1,20 @@
+{
+  "slug": "how-to-use-claude-skills",
+  "title": "How to use Claude skills: install, write and test one",
+  "seoTitle": "Claude skills: how to install and write one",
+  "description": "Claude skills explained: how to install them in the Claude apps and Claude Code, write a simple SKILL.md and test it, with a template and prompts.",
+  "lede": "Claude skills are folders of saved instructions that teach Claude to perform one job your way. This guide explains how to enable skills, upload one to the Claude apps or copy it into Claude Code, write a simple SKILL.md and test it, with a template and prompts you can copy.",
+  "category": "Get started with AI",
+  "keywords": [
+    "Claude skills",
+    "how to install Claude skills",
+    "Agent Skills",
+    "SKILL.md"
+  ],
+  "related": [
+    "ai-prompts-vs-skills-vs-workflows",
+    "what-is-mcp",
+    "chatgpt-prompts-for-work"
+  ],
+  "minutes": 11
+}

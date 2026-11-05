@@ -1,0 +1,168 @@
+<h2 id="short-answer">How do AI meeting notes work?</h2>
+<p>AI meeting notes start with a record of what was said, which can be your rough notes, a transcript from your video call or both. Given clear instructions, your AI extracts four things from that record: the decisions made, the actions with an owner and a date, the questions still open and a short summary.</p>
+<p>Your AI is good at sorting and organising information, but it is poor at knowing what people meant and didn't say. So the method has one firm rule: the AI records only what is in the notes and marks every gap. A person then checks the result before it goes to the team.</p>
+<p>This guide covers the whole loop, from setting up the meeting and handling consent to turning notes into actions that get checked, sent and tracked. Along the way you get two prompts, a meeting summary template and a checklist.</p>
+
+<h2 id="before">Step 1: Set the meeting up so the notes can work</h2>
+<p>Good notes depend on a meeting with a clear, agreed goal. If nobody knows what the meeting is for, no AI can find the decisions in it, because there weren't any.</p>
+<ul>
+<li><strong>Write a short agenda in a shared doc</strong> that lists the goal and the questions to settle in order. Link the document in the calendar invitation, so that everyone can prepare beforehand.</li>
+<li><strong>Name one owner for the meeting</strong>, who is responsible for making sure the notes get checked and sent afterwards.</li>
+<li><strong>Take notes in the agenda doc</strong>, because writing under each agenda item keeps the notes and their topics together. That structure makes them far easier for your AI to organise later.</li>
+<li><strong>Say decisions out loud</strong>, since a phrase like "So we've decided to..." makes each decision easy to spot in a transcript later.</li>
+<li><strong>Name the owner and date as you go.</strong> The sentence "Sam will send the quote by Friday" gives your AI something to record, while "someone should send the quote" gives it a gap.</li>
+</ul>
+<p>If you're not sure the meeting is worth holding at all, the free <a href="/tools/meeting-cost">meeting cost calculator</a> shows what a regular meeting costs in people's time over a whole year.</p>
+
+<h2 id="consent">Do you need consent to record a meeting?</h2>
+<p>Often you do, and the rules depend on where you and the other people in the call are based. Some places let one person in a call record it, while others need everyone's agreement, and workplace and privacy laws can add further rules. We can't tell you the law for your country, so check your local rules or ask a lawyer if you're unsure.</p>
+<p>Whatever the law requires in your area, these habits keep you on safe ground:</p>
+<ul>
+<li>Tell everyone at the start that you're recording or using an AI note taker, and explain why.</li>
+<li>Give people a real way to say no, and take notes by hand if anyone does.</li>
+<li>Take extra care with customers, job candidates and anyone else outside your business.</li>
+<li>Don't record private or sensitive talks, such as those about health, pay or discipline, unless everyone has agreed and you have a clear reason.</li>
+<li>Decide in advance how long you will keep recordings and transcripts, and exactly who is allowed to access them.</li>
+</ul>
+<p>Some video tools build an automatic notice into the call itself. According to <a href="https://support.google.com/meet/answer/14754931" rel="noopener">Google Meet Help</a>, as of November 2026, the "Take notes for me" feature tells everyone that notes are being taken and displays an icon on their screens. A built-in notice helps, but it doesn't replace asking people directly.</p>
+<aside class="callout"><p><strong>Tip.</strong> You don't need a recording to get good AI meeting notes, because rough typed notes from one person, written during the meeting, are often enough.</p></aside>
+
+<h2 id="turn">Step 2: Turn rough notes or a transcript into action items</h2>
+<p>Paste your notes or transcript with the prompt below, which tells your AI to sort everything into decisions, actions and open questions. It must never invent an owner or a date, so whenever one is missing, the AI writes "no owner" or "no date" for you to fix.</p>
+<p>The rule is strict for a practical reason, since an action without an owner rarely gets done. An action with a made-up owner is even worse, because the wrong person ends up with a task they never agreed to.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Turn meeting notes into decisions and action items</p><pre id="prompt-1">You are a careful meeting secretary. Turn the notes or transcript below into clear meeting notes.
+
+Meeting: [name], on [date]. People there: [names and roles]. Goal of the meeting: [one line].
+
+Steps:
+1. Read everything once before you write.
+2. List each decision. Quote or closely follow the words used. Only list it if someone clearly agreed to it.
+3. List each action. Each action has: what will be done, the owner, the due date and the source line it came from.
+4. If no owner was named, write "NO OWNER". If no date was given, write "NO DATE". Never guess either one.
+5. List open questions: anything raised but not settled, and who should answer it.
+6. Write a summary of no more than five sentences.
+
+Rules:
+- Use only what is in the notes. Do not add tasks, dates or decisions.
+- Mark anything unclear with [CHECK] and say why.
+- Leave out side chat, jokes and personal details that aren't needed.
+
+Output format: four headed sections (Summary, Decisions, Actions, Open questions). Put the actions in a table with the columns Action, Owner, Due, Source.
+
+Notes or transcript: [paste]</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Transcripts are long and messy, so if your transcript runs to many pages, ask your AI to work through it one agenda item at a time. Working in smaller sections means fewer actions slip through unnoticed.</p>
+
+<h2 id="template">A meeting summary template you can reuse</h2>
+<p>Use an identical structure for every meeting, so people always know where to look for their actions. Paste this template into your agenda doc, or add it to the prompt above as the output format.</p>
+<div class="prompt-box"><p class="prompt-label">Template: Meeting summary</p><pre id="template-1">Meeting: [name]
+Date: [date]. Length: [minutes].
+People there: [names]. Notes checked by: [name].
+
+Summary.
+[Three to five sentences. What was the meeting for, and what came out of it?]
+
+Decisions.
+1. [Decision], agreed by [names].
+2. [Decision], agreed by [names].
+
+Actions.
+| Action | Owner | Due | Status |
+| [What will be done] | [one name] | [date] | Open |
+
+Open questions.
+1. [Question]. Who answers: [name]. By: [date].
+
+Next meeting: [date], or "none needed".</pre><button type="button" class="copy-btn" data-copy="template-1">Copy template</button></div>
+<p>Assign each action to a single named individual, because "Sam and Alex" often turns out to mean neither of them. If two people share a job, pick one of them to report back on it.</p>
+
+<h2 id="follow">Step 3: Check, send and track the actions</h2>
+<p>Meeting notes are only useful if the actions in them actually get done. That means checking them, sending them the same day and keeping one running list that you review at the next meeting.</p>
+<h3>Check before you send</h3>
+<ul class="checklist">
+<li>Every decision was genuinely agreed, rather than simply discussed.</li>
+<li>Every action has one owner and a date, or is marked for you to fix.</li>
+<li>Each owner agreed to their actions during the meeting itself.</li>
+<li>Every [CHECK] mark has been answered and removed.</li>
+<li>Names, numbers and dates match what was actually said.</li>
+<li>Nothing private or sensitive appears in notes that go to a wide group.</li>
+</ul>
+<h3>Send a short follow-up</h3>
+<p>Once the notes are correct, ask your AI for a follow-up message. Keep it short and limited to the decisions, each person's actions and the open questions, so nobody has to dig for their part.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Write the follow-up and check open actions</p><pre id="prompt-2">You are helping me follow up after a meeting. I've checked the notes below and they are correct.
+
+Part 1. Write a follow-up message to everyone who attended.
+- Start with the decisions, one line each.
+- Then list the actions, grouped by owner, with due dates.
+- Then the open questions and who will answer them.
+- Under 200 words. Plain and friendly. No new tasks.
+
+Part 2. Compare these actions with the list from our last meeting, pasted below.
+- Which earlier actions are done, still open or overdue?
+- Which earlier actions weren't mentioned at all this time?
+- Draft a one-line reminder for each overdue action, addressed to its owner.
+
+Rules: use only what is in the two lists. If a status is unclear, say "not mentioned" instead of guessing.
+
+This meeting's checked notes: [paste]
+Last meeting's action list: [paste]</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<h3>Keep one action list</h3>
+<p>Keep a single running list for each regular meeting, with columns for the action, owner, due date and status. The free <a href="/tools/meeting-action-register">meeting action register</a> turns a pasted list into a table and flags any missing owners and due dates. It works in your browser and doesn't send or schedule anything, so open the list at the start of the next meeting and close out whatever is done.</p>
+
+<h2 id="example">Worked example: GitLab's live doc meetings</h2>
+<p>GitLab, the software company, publishes its company handbook online, including detailed guidance on how it runs meetings. Its rules make a good model for AI meeting notes, because they make sure the notes exist and are clear before any AI sees them. As of November 2026, the handbook includes these recommendations:</p>
+<ul>
+<li>Every work meeting should have a shared, editable agenda doc linked in the invite. The handbook sums this up as "No agenda, no attenda" (<a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/live-doc-meetings/" rel="noopener">GitLab live doc meetings</a>).</li>
+<li>Notes go inline under each agenda item rather than in a separate notes section, and anyone who isn't talking helps take them.</li>
+<li>Notes don't need to be word for word, but they should be clear on decisions and next steps.</li>
+<li>Each meeting has a DRI, GitLab's term for the one directly responsible person. After the meeting, action items are captured from the notes, for example with TODO and DONE tags or as tasks in GitLab (<a href="https://handbook.gitlab.com/handbook/company/culture/all-remote/meetings/" rel="noopener">GitLab all-remote meetings</a>).</li>
+<li>When some people are in other time zones, the handbook suggests leaving 24 to 48 hours for them to respond to decisions and actions.</li>
+</ul>
+<p>The handbook doesn't say that GitLab uses AI to write these notes, and we're not claiming it does. A small team could still copy the habits and add an AI step at the end.</p>
+<h3>What goes in</h3>
+<p>Say your team copies the format for a weekly planning call, with three numbered items in the agenda doc. Under item 2, the shared notes read as follows (example notes written for this article): "Agreed to move the launch to the 14th. Priya to update the landing page. Need to check stock with the supplier."</p>
+<h3>What comes out</h3>
+<p>If you run prompt 1 on those notes, you'd expect something like the table below, which is an example draft and not GitLab's real notes:</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Type</th><th scope="col">Item</th><th scope="col">Owner</th><th scope="col">Due</th></tr></thead>
+<tbody>
+<tr><td>Decision</td><td>Launch moves to the 14th.</td><td>Agreed in item 2</td><td>None</td></tr>
+<tr><td>Action</td><td>Update the landing page for the new date.</td><td>Priya</td><td>NO DATE</td></tr>
+<tr><td>Action</td><td>Check stock with the supplier.</td><td>NO OWNER</td><td>NO DATE</td></tr>
+</tbody>
+</table></div>
+<p>The AI hasn't guessed who will call the supplier, and has flagged the gap so the meeting owner can fix it before the follow-up goes out. That small flag is what stops important actions from getting lost.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<ul>
+<li><strong>Trusting the summary without reading it</strong> is risky, because AI summaries can sound certain and still miss a point. Read the decisions and actions every time, which typically takes about two minutes.</li>
+<li><strong>Letting the AI fill in owners</strong> means it picks the most likely name, which may be the wrong one. Tell it to mark missing owners, and then confirm with the person yourself.</li>
+<li><strong>Treating discussion as a decision</strong> creates confusion, because "we talked about raising prices" isn't the same as "we agreed to raise prices". Ask the AI to list a decision only when someone clearly agreed to it.</li>
+<li><strong>Recording without telling people</strong> can break the law and always damages trust, so announce it at the start of every meeting.</li>
+<li><strong>Sending notes days later</strong> is a problem because people forget what they agreed to, so send the follow-up on the same day.</li>
+<li><strong>Starting a new action list every week</strong> lets old actions quietly vanish, so keep one running list and check it at the start of each meeting.</li>
+</ul>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>All of these are free: you copy the prompt, or download the skill, workflow or specialist, and use it in your own AI. AI Blocks doesn't join your calls, record anything or send messages on your behalf.</p>
+<ul>
+<li><a href="/prompts/rough-notes-to-minutes-writer">Rough-note meeting minutes writer</a>: paste rough meeting notes to get short minutes with decisions, owners and dates.</li>
+<li><a href="/skills/meeting-minutes-writer">Meeting minutes writer</a>: a skill that turns rough notes into short minutes with decisions, action items with owners and dates, and open questions.</li>
+<li><a href="/skills/executive-action-register">Action item tracker</a>: share meeting notes or email threads to get action items with owners, deadlines and unresolved commitments.</li>
+<li><a href="/workflows/turn-meetings-into-owned-actions">Meeting action follow-up writer</a>: a workflow that gives you a sourced action list, clear owners and dates, and follow-up drafts for open items.</li>
+<li><a href="/workflows/run-a-meeting-worth-holding-from-agenda-to-action-items">Meeting readiness and action-note planner</a>: decide whether to hold the meeting, plan the pre-reading, then write action notes after it.</li>
+<li><a href="/roles/project-management-meeting-notes-specialist">Meeting notes writer specialist</a>: a ready-made specialist that turns a transcript or rough notes into decisions, actions and open questions.</li>
+<li><a href="/ai-tools/otter">Otter guide</a> and <a href="/ai-tools/granola">Granola guide</a>: our guides to two AI note-taking tools, if you want live transcripts or fuller notes.</li>
+</ul>
+<p>For more prompts like these, see our list of <a href="/blog/chatgpt-prompts-for-work">ChatGPT prompts for work</a>. If you want the notes step to run as part of a bigger routine, read our guide to <a href="/blog/ai-agents-for-small-business">AI agents for small business</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can AI take meeting notes for me?</h3>
+<p>Yes. Some video tools, such as Google Meet, offer built-in AI note taking, and you can also paste any transcript or rough notes into ChatGPT, Claude or Gemini. Either way, read the result before you share it, because the AI can miss points or mix up who said what.</p>
+<h3>How do I turn meeting notes into action items?</h3>
+<p>List each task with one owner, a due date and the line in the notes where it came from. The first prompt above does this for you, and it marks any action that has no owner or date so you can fix it before sending.</p>
+<h3>What should a meeting summary template include?</h3>
+<p>A good template covers the meeting name and date, who was there, a short summary, the decisions, the actions with owners and dates, the open questions and the next meeting. Keep the same structure every time, so people know exactly where to find their actions.</p>
+<h3>Is it legal to record a meeting with AI?</h3>
+<p>It depends on where you and the other people are, since some places need everyone's consent. Tell people at the start, let them say no and check your local law, and when in doubt, take typed notes instead.</p>
+<h3>Are AI meeting notes accurate?</h3>
+<p>They are usually reliable on structure and often weaker on specific details, such as names, numbers and who agreed to what. Ask the AI to quote its source lines and mark anything unclear, so that a quick human check can catch most errors.</p>

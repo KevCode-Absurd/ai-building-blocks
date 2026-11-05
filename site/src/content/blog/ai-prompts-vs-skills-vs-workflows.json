@@ -1,0 +1,20 @@
+{
+  "slug": "ai-prompts-vs-skills-vs-workflows",
+  "title": "AI prompts vs skills vs workflows: which one to use",
+  "seoTitle": "AI prompts vs skills vs workflows explained",
+  "description": "AI prompts vs skills, workflows, agents and specialists in plain words, with a decision table, a real example and prompts to pick the right one.",
+  "lede": "Comparing AI prompts vs skills comes down to how much of a job you want to save for next time. A prompt is a single message, while a skill stores detailed instructions for a repeated job. A workflow connects several skills in sequence, and an agent works through the steps independently, using tools.",
+  "category": "Get started with AI",
+  "keywords": [
+    "AI prompts vs skills",
+    "what is an AI skill",
+    "AI workflow vs agent",
+    "AI skills vs workflows"
+  ],
+  "related": [
+    "chatgpt-prompts-for-work",
+    "how-to-use-claude-skills",
+    "ai-agents-for-small-business"
+  ],
+  "minutes": 10
+}

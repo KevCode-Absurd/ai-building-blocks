@@ -1,0 +1,169 @@
+<h2 id="answer">Can you analyze data with ChatGPT?</h2>
+<p>Yes. You can analyze data with ChatGPT, Claude or Gemini by uploading a spreadsheet or CSV file and asking questions about it in plain words. Your AI can sort, total, compare, identify trends and draw charts, but it can also misread a column or drop rows without mentioning it. Reliable results come from four habits: prepare the file, ask one clear question, make the AI show its working, and check the numbers before you act on them.</p>
+<p>Here is what each app says it can do with spreadsheets, as of November 2026. Features and limits change regularly, so check the current help page before you depend on any of them.</p>
+<ul>
+<li><strong>ChatGPT:</strong> OpenAI's help article on <a href="https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt" rel="noopener">data analysis with ChatGPT</a> says that for some tasks, ChatGPT writes and runs Python code on your file. It advises you to review the code, the outputs and the assumptions before you rely on a result.</li>
+<li><strong>Claude:</strong> Anthropic's page on <a href="https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude" rel="noopener">creating and editing files with Claude</a> says you can upload CSV, TSV and other files for analysis and charts. Claude can also create Excel files with working formulas, using a setting called code execution and file creation.</li>
+<li><strong>Gemini:</strong> Google's help page on <a href="https://support.google.com/gemini/answer/14903178?hl=en" rel="noopener">uploading files to Gemini</a> says you can upload spreadsheets to receive answers, summaries and insights, and ask it to create a chart from them.</li>
+</ul>
+<p>The method below works in all three apps.</p>
+
+<h2 id="prepare">Step 1: Prepare the file before you upload it</h2>
+<p>Ten minutes of tidying saves an hour of wrong answers. OpenAI's own recommendations make a good foundation: use a header row with clear column names and one record per row, with no blank rows or columns splitting the data. Then add the following habits:</p>
+<ul>
+<li><strong>Keep one table per sheet</strong>, and move notes, charts and side calculations to another tab or delete them from your working copy.</li>
+<li><strong>Remove total and subtotal rows</strong>, because otherwise the AI may add them in again and double your numbers.</li>
+<li><strong>Put units in the column names</strong>, since "Revenue (USD, before refunds)" is far clearer than "Rev".</li>
+<li><strong>Use one date format throughout.</strong> 03/04 means 3 April in some countries and 4 March in others, so use the format 2026-04-03 if you can.</li>
+<li><strong>Keep only the columns you need</strong>, which helps the AI concentrate and keeps private information out.</li>
+<li><strong>Remove personal data</strong> by replacing customer names and emails with an identifier such as C-1042, as explained in the privacy section below.</li>
+<li><strong>Work on a copy</strong>, and keep the original untouched so you can compare results against it.</li>
+</ul>
+<p>Three free browser tools help with this preparation. The <a href="/tools/csv-column-profiler">CSV column profiler</a> shows missing cells, distinct values and sample values for every column, so you spot gaps before the AI does. The <a href="/tools/csv-column-selector">CSV column selector</a> keeps only the columns you choose, and the <a href="/tools/csv-duplicate-row-remover">CSV duplicate row remover</a> deletes exact repeats.</p>
+<aside class="callout"><p><strong>Tip.</strong> Before you upload, write down two control numbers: the number of rows, and the total of your main column. You'll use them to check the AI's work in step 4, and although it's the simplest check available, it catches the most common mistake.</p></aside>
+
+<h2 id="questions">Step 2: Ask the right questions</h2>
+<p>A vague request such as "Analyze this" usually returns a list of obvious facts, whereas a specific business question gives you something to act on. Good questions name the decision, the measure and the time period, for example:</p>
+<ul>
+<li>"Which five products made the most profit last quarter, after refunds?"</li>
+<li>"Did average order value change after we raised prices on 1 June?"</li>
+<li>"Which customers bought twice in the first half of the year, but not since?"</li>
+</ul>
+<p>Define your terms as well. Does "sales" mean orders, money received or money after refunds, and does "a customer" mean an email address or an account? If you don't specify, the AI chooses for you, and it may not tell you which definition it chose.</p>
+<p>Before any analysis begins, ask for a profile of the file, because it shows you how the AI interpreted your data and it's where most problems first appear.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Read my file and plan the analysis first</p><pre id="prompt-1">I've attached a spreadsheet. Don't analyze it yet. First, show me how you read it.
+
+What the file is: [for example, "every online order from January to June 2026, one row per order"]
+My question: [one business question]
+How I define the key terms: [for example, "revenue means order total minus refunds"]
+
+Do this:
+1. Count the rows and columns. List every column with its type (number, date, text), a sample value and the number of empty cells.
+2. Flag anything odd: mixed date formats, numbers stored as text, duplicate rows, total rows inside the data, outliers, columns that look like personal data.
+3. Tell me which columns you'd use to answer my question, and any you'd need that are missing.
+4. Write your plan: the steps you'd take, any filters, and every assumption. Mark each assumption so I can confirm or change it.
+
+Stop there and wait for my go-ahead.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Compare the AI's row count with the one you wrote down, then confirm or correct each assumption before you say "go".</p>
+
+<h2 id="working">Step 3: Make the AI show its working</h2>
+<p>A number with no method behind it can't be verified, so ask for the method, the filters and the count of rows used for every figure. In ChatGPT and Claude, the AI often writes code to do the calculations, and you can ask to see it. You don't need to read code fluently, because you only need to notice whether it filtered out rows you intended to keep.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Analyze my data and show the working</p><pre id="prompt-2">Go ahead with the plan we agreed. Answer my question: [your question].
+
+For every number you give me, show:
+- how you worked it out (the formula, or the code you ran)
+- which rows you used, with a count, and any rows you left out and why
+- the time period it covers
+
+Then give me:
+1. The answer to my question in two or three plain sentences.
+2. A small table with the figures behind it.
+3. One chart, only if it makes the answer clearer.
+4. What the data can't tell us, and what extra data would.
+
+Rules:
+- Use only the data in the file. If you need something that isn't there, write MISSING.
+- Don't round until the final table, and say how you rounded.
+- If a result surprises you, say so and check it before you report it.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h2 id="check">Step 4: Check the numbers before you use them</h2>
+<p>The AI's answer reads equally well whether it's right or wrong, and our guide on <a href="/blog/stop-ai-making-things-up">stopping AI making things up</a> explains why. With data, checking is quick, because numbers either match or they don't.</p>
+<ul class="checklist">
+<li>The row count the AI used matches your own count, or the AI explained the difference.</li>
+<li>The total of the main column matches the total you calculated in your spreadsheet.</li>
+<li>You checked three rows by hand, choosing them in the file and following each one through the analysis.</li>
+<li>Dates were interpreted the right way round, and the period matches the one you requested.</li>
+<li>No total rows or duplicate records were counted twice.</li>
+<li>Percentages and averages were calculated from the raw numbers, because an average of averages is often misleading.</li>
+<li>You recalculated the one number you'll act on, in your own spreadsheet or with a calculator.</li>
+<li>When asked again in a new conversation, the AI produced the same key numbers.</li>
+</ul>
+<p>For questions about money, a second tool you trust is helpful. The free <a href="/tools/order-margin">order margin calculator</a> and <a href="/tools/customer-payback">customer payback calculator</a> let you rework an important figure by hand and see whether it matches.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Audit an analysis before I share it</p><pre id="prompt-3">You are a careful analyst checking someone else's work. Here is the file and the analysis I was given. Don't redo the whole analysis. Check it.
+
+The analysis:
+[paste the answer, table and method]
+
+My control numbers: [row count] rows, total of [column] = [your total]
+
+Check:
+1. Do the row count and the total match my control numbers? If not, find out why.
+2. Recompute the three most important figures from the raw data. Show your working.
+3. Look for common errors: dates read the wrong way round, total rows counted, duplicates, rows dropped by a filter, averages of averages, percentages of the wrong base.
+4. Does each conclusion follow from the numbers, or does it go further?
+
+Give me a table: Figure, Original value, Your value, Match (yes or no), Note. Then list anything I must fix before I share this.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="privacy">Is it safe to upload your data to AI?</h2>
+<p>It depends on what the file contains and which plan you use, so read your AI's data settings before you upload anything about customers or employees. Here's what each maker's help pages say, as of November 2026:</p>
+<ul>
+<li><strong>ChatGPT:</strong> OpenAI's page on <a href="https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt" rel="noopener">data controls in ChatGPT</a> explains a setting called "Improve the model for everyone", which is on by default for personal plans. You can switch it off so that your conversations aren't used to train its models, and OpenAI says it doesn't train on business plan data by default.</li>
+<li><strong>Gemini:</strong> Google's <a href="https://support.google.com/gemini/answer/13594961?hl=en" rel="noopener">Gemini Apps Privacy Hub</a> says human reviewers may read some conversations, and asks you not to enter confidential information you wouldn't want a reviewer to see. The Keep Activity setting controls whether your conversations are used to improve Google's AI.</li>
+<li><strong>Claude:</strong> Anthropic's help page on <a href="https://support.claude.com/en/articles/8325621-i-would-like-to-input-sensitive-data-into-my-chats-with-claude-who-can-view-my-conversations" rel="noopener">sensitive data in Claude</a> says you can change your model improvement setting at any time, and that incognito conversations aren't used to improve Claude.</li>
+</ul>
+<p>Whatever the setting, these rules keep your information safer:</p>
+<ul>
+<li>Replace names, emails, phone numbers and addresses with identifiers before you upload anything.</li>
+<li>Upload only the columns the question actually requires.</li>
+<li>Where possible, upload totals by week or by product instead of one row per customer.</li>
+<li>Never upload passwords, card numbers, bank details or health information.</li>
+<li>Check your own privacy policy, and any contract with clients, before you upload their data.</li>
+</ul>
+
+<h2 id="example">A worked example: an Ahrefs keyword export</h2>
+<p>Ahrefs makes tools for search engine optimization, or SEO, which means getting your pages found on Google. Its Keywords Explorer tool shows how often people search for a phrase and how hard it is to rank for. Many marketers export that data to a spreadsheet before deciding what to write first. It makes a good example because the data contains a trap.</p>
+<h3>What the columns mean</h3>
+<p>Ahrefs explains its own measures. <a href="https://ahrefs.com/academy/how-to-use-ahrefs/ahrefs-seo-metrics/keyword-and-search-traffic" rel="noopener">Keyword Difficulty</a> is a score from 0 to 100 for how hard it is to reach the top 10 results. Ahrefs says the score doesn't take everything into account, so you should look at the top 10 results yourself. Parent Topic is the broader search that sends the most traffic to the top page for a keyword. Traffic Potential is roughly how much search traffic that top page gets from all the keywords it ranks for.</p>
+<h3>What goes in</h3>
+<p>Suppose you export 300 keywords about one subject (an example figure) and keep the keyword, volume, Keyword Difficulty, Parent Topic and Traffic Potential columns. Your question is "Which five Parent Topics should we write about first, if we prefer topics with a Keyword Difficulty under 30?"</p>
+<h3>The trap, and the check that catches it</h3>
+<p>Ahrefs describes Traffic Potential as the traffic the top-ranking page gets from all the keywords it ranks for. One page often ranks for many of the keywords in your list. So when several rows share a Parent Topic, their Traffic Potential figures can describe the same page's traffic. An AI asked to "add up Traffic Potential by topic" may count that traffic many times over. Tell it in the prompt: "Traffic Potential describes the top page for the Parent Topic. Take it once per topic, don't add it up." Then check one topic by hand.</p>
+<h3>What comes out</h3>
+<p>You receive a table like the one below, in which all figures are example figures invented for this article rather than real Ahrefs data:</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parent Topic</th><th scope="col">Keywords in group</th><th scope="col">Total volume</th><th scope="col">Median Keyword Difficulty</th><th scope="col">Traffic Potential (once)</th></tr></thead>
+<tbody>
+<tr><td>Topic A</td><td>24</td><td>5,400</td><td>12</td><td>3,100</td></tr>
+<tr><td>Topic B</td><td>17</td><td>3,900</td><td>22</td><td>2,600</td></tr>
+<tr><td>Topic C</td><td>31</td><td>8,200</td><td>41</td><td>6,800</td></tr>
+</tbody></table></div>
+<p>Topic C has the most traffic, but its difficulty exceeds your limit, so the AI should flag it instead of ranking it first. The audit prompt then confirms that the keyword counts for all the topics add up to the 300 rows you started with. For more on turning keyword lists into articles, see our guide to <a href="/blog/seo-content-with-ai">SEO content with AI</a>.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Uploading the raw export with notes, totals and blank rows</td><td>Tidy a copy first: one table, one header row, no totals</td></tr>
+<tr><td>Asking "what does this data tell us?"</td><td>Ask one business question with the measure and the time frame</td></tr>
+<tr><td>Accepting numbers with no method</td><td>Ask for the formula or code and the row count behind each figure</td></tr>
+<tr><td>Skipping the control totals</td><td>Write down row count and main total before upload, and compare</td></tr>
+<tr><td>Uploading customer names and emails</td><td>Swap them for IDs, or upload totals instead of rows</td></tr>
+<tr><td>Trusting a chart</td><td>Check the numbers under the chart, not just its shape</td></tr>
+<tr><td>Acting on the first answer to a big decision</td><td>Run the audit prompt in a new chat and recalculate the key number yourself</td></tr>
+</tbody></table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>These items are free, so download the workflow or skill, or copy the prompt, and use it in your own AI with your own file.</p>
+<ul>
+<li>The <strong><a href="/workflows/turn-a-raw-dataset-into-a-checked-brief-of-top-insights">dataset analysis and insight reviewer</a></strong> takes a data file and one clear question, and gives you a data profile, checked analysis and a ranked brief with actions and limits.</li>
+<li>The <strong><a href="/workflows/check-a-spreadsheet-before-sharing-the-results">spreadsheet results reviewer</a></strong> checks formulas and source totals, then explains the checked results with clear units, dates and limits before you share them.</li>
+<li>The <strong><a href="/roles/support-analytics-reporter">analytics report writer</a></strong> is a specialist you can download. Paste a table of your numbers and the decision you face, and you get a report with findings, evidence and next steps.</li>
+<li>The <strong><a href="/agents/data-file-clean-up-loop">spreadsheet and CSV cleaner</a></strong> cleans a file using rules you agree, rechecks it each round and keeps unresolved cells for a person to decide.</li>
+<li>The <strong><a href="/prompts/numbers-drop-explainer">business results drop investigator</a></strong> takes the before and after figures and what changed, and gives you causes ranked by evidence and one check to run.</li>
+<li>The <strong><a href="/tools">free browser tools</a></strong> include CSV tools to profile, trim and de-duplicate a file, plus calculators to double-check an important number.</li>
+</ul>
+<p>If you analyze the same report every week, turn these steps into a workflow you can rerun, as our guide on <a href="/blog/build-ai-workflow-without-code">building an AI workflow without code</a> explains.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can ChatGPT read Excel files?</h3>
+<p>Yes. OpenAI's help pages list Excel and CSV files among the spreadsheet types you can upload, and Claude and Gemini accept spreadsheets too. A clean CSV with one header row is often the easiest format for any of them to read accurately.</p>
+<h3>How big a spreadsheet can I upload?</h3>
+<p>Each app has its own limits, and they change, so check the current help page. If a file is too large, upload only the columns and date range your question needs, or upload weekly totals instead of every individual row.</p>
+<h3>Is AI spreadsheet analysis accurate?</h3>
+<p>It's often correct, but it's sometimes wrong in ways that look convincing. Make it show its method and row counts, compare its totals with yours and recalculate the number you'll act on, and then you'll know whether to trust it.</p>
+<h3>Can AI write spreadsheet formulas for me?</h3>
+<p>Yes, and that's often the safer way to use it, because when you paste the formula into your own sheet, you can see exactly what it does. Claude can also create Excel files with working formulas.</p>
+<h3>Should I use AI inside my spreadsheet app instead?</h3>
+<p>That can work well, since your data stays in the file you already use, so check what your spreadsheet app offers today. The same rules apply either way: a clear question, a visible method and your own independent check.</p>
+<h3>What data should I never upload to an AI?</h3>
+<p>Never upload passwords, card and bank details, health information or anything a client contract says to keep private. Replace names and emails with identifiers, and upload only what the question requires.</p>

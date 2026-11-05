@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 116 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 117 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
 - [Apple app design checker](https://useaiblocks.com/skills/apple-app-design-checker): Share an Apple app screen or code and target platforms. Get design findings, reasons and concrete fixes to review.
@@ -112,6 +112,7 @@
 - [Website accessibility reviewer](https://useaiblocks.com/agents/quarterly-accessibility-keeper): Review key pages for access barriers. Recheck earlier fixes and get ranked issues, statement notes and tasks for human testing.
 - [Website design analyst](https://useaiblocks.com/skills/website-design-dna-extractor): Paste a public website link and get its colours, fonts, spacing and layout rules in a design guide. Use it to analyze a website's design.
 - [Website design planner](https://useaiblocks.com/skills/standout-website-designer): Describe your site. Get a design score and a plan for layout, type, motion and speed.
+- [Website design token extractor](https://useaiblocks.com/skills/website-design-token-extractor): Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.
 - [Website style and layout planner](https://useaiblocks.com/workflows/borrow-a-look-you-like-and-plan-a-readable-page): Use design references to plan a page style, layout and type. Check the contrast of the colours you plan to use.
 - [Website usability reviewer](https://useaiblocks.com/skills/usability-heuristic-reviewer): Check a page or form against ten usability rules. Get a usability review with a score out of 100, each break found and fixes ranked by harm.
 - [Wireframe drafter](https://useaiblocks.com/skills/wireframe-drafter): Describe each screen, its purpose and main action. Get low-, mid- and high-detail text wireframes with controls and behavior.

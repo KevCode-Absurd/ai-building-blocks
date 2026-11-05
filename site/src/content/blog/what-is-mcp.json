@@ -1,0 +1,20 @@
+{
+  "slug": "what-is-mcp",
+  "title": "What is MCP? How to connect your AI to your tools safely",
+  "seoTitle": "What is MCP? Model Context Protocol explained",
+  "description": "What is MCP? A plain guide to the Model Context Protocol: what it lets your AI do, how to stay safe, and how to add a connector in Claude and ChatGPT.",
+  "lede": "MCP, the Model Context Protocol, is an open standard that lets AI apps like Claude and ChatGPT connect to your other tools and data. This guide explains what MCP is in plain words, how to keep it safe, and how to add your first connector.",
+  "category": "Get started with AI",
+  "keywords": [
+    "what is MCP",
+    "Model Context Protocol explained",
+    "MCP server",
+    "connect AI to tools"
+  ],
+  "related": [
+    "how-to-use-claude-skills",
+    "ai-agents-for-small-business",
+    "ai-prompts-vs-skills-vs-workflows"
+  ],
+  "minutes": 9
+}

@@ -22,6 +22,7 @@ import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 import { BROWSER_TOOLS } from "../src/tools/browser-tools.mjs";
 import { INFO_PAGES, OPERATOR, POLICY_DATE, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink, infoPage } from "../src/lib/site-info.mjs";
+import { BLOG_DESCRIPTION, BLOG_PATH, BLOG_TITLE, articleLd, blogIndexHtml, blogPostHtml, inOrder, postPath, readingMinutes } from "../src/lib/blog.mjs";
 import path from "node:path";
 import { normalizeSkillHtml } from "../src/lib/skill-html.mjs";
 import { similarHtml, skipWhenItems } from "./lib/similar-html.mjs";
@@ -132,7 +133,7 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
   potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/?q={search_term_string}` }, "query-input": "required name=search_term_string" } };
 
 // The same links on every plain page, so no page is more than a few clicks from the rest.
-const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/teams", "Plan an AI team"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
+const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/blog", "Blog"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/teams", "Plan an AI team"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My work</a></nav></header>`;
 // Plain pages (job hubs, business boards, How we test) use the app's header and footer, drawn without the app (lib/site-chrome.mjs).
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
@@ -305,6 +306,7 @@ function pageFor(url) {
       about: ["AI agents", "Training an AI agent", "ChatGPT projects", "Claude projects", "Gemini Gems"],
       associatedMedia: { "@type": "MediaObject", name: "AI agent starter pack", contentUrl: `${SITE}/templates/ai-agent-starter-pack.zip`, encodingFormat: "application/zip" } },
   };
+  if (url === BLOG_PATH || url.startsWith(`${BLOG_PATH}/`)) return blogPage(url);
   const info = infoPage(url);
   if (info) return {
     title: info.title, h1: info.title, documentTitle: SEO_PAGES[url]?.[0], desc: SEO_PAGES[url]?.[1] ?? info.description, modified: isoDate(POLICY_DATE),
@@ -554,6 +556,31 @@ function jobsSitemap(hubUrls) {
   const all = [...jobDates.values()].sort().at(-1) ?? "";
   const dateOf = (u) => (u === "/jobs" ? all : jobDates.get(u.split("/")[2]) ?? "");
   fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc>${dateOf(u) ? `<lastmod>${dateOf(u)}</lastmod>` : ""}</url>`).join("\n")}\n</urlset>\n`);
+}
+
+// The blog: the index and each article, from the same HTML the app draws (src/lib/blog.mjs).
+const BLOG_DIR = "src/content/blog";
+const blogBodies = new Map(), blogPosts = (() => {
+  if (!fs.existsSync(BLOG_DIR)) return [];
+  const posts = fs.readdirSync(BLOG_DIR).filter(f => f.endsWith(".json")).map(f => JSON.parse(fs.readFileSync(path.join(BLOG_DIR, f), "utf8")));
+  for (const p of posts) { blogBodies.set(p.slug, fs.readFileSync(path.join(BLOG_DIR, `${p.slug}.html`), "utf8")); p.minutes ??= readingMinutes(blogBodies.get(p.slug)); }
+  return inOrder(posts);
+})();
+function blogPage(url) {
+  const stylesheet = fs.readdirSync(path.join(DIST, "assets")).find(file => /^BlogPage-.*\.css$/.test(file));
+  if (url === BLOG_PATH) return {
+    title: "Blog", h1: BLOG_TITLE, documentTitle: "Blog: AI guides for real business work | AI Blocks", desc: BLOG_DESCRIPTION, collection: true,
+    content: blogIndexHtml(blogPosts), mainClass: "blog-page", stylesheet, modified: blogPosts.map(p => p.updated ?? p.published ?? "2026-11-05").sort().at(-1),
+    main: itemList(blogPosts.map(p => [p.title, postPath(p.slug)])),
+  };
+  const post = blogPosts.find(p => postPath(p.slug) === url);
+  if (!post) return null;
+  const seo = `${post.seoTitle} | ${BRAND}`;
+  return {
+    title: post.seoTitle, h1: post.title, documentTitle: seo.length <= 62 ? seo : post.seoTitle, desc: post.description, crumbs: [["Blog", BLOG_PATH]],
+    content: blogPostHtml(post, blogBodies.get(post.slug), blogPosts, post.minutes), mainClass: "blog-page", stylesheet,
+    modified: post.updated ?? post.published ?? "2026-11-05", main: articleLd(SITE, post, post.minutes),
+  };
 }
 
 // One page's HTML: the shell with this page's head tags, structured data and first screen.

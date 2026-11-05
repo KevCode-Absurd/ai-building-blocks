@@ -1,0 +1,178 @@
+<h2 id="short-answer">How to use AI customer service without losing the human touch</h2>
+<p>AI customer service works best as a fast first draft that your AI writes from your own rules and a person checks before it goes out. You give your AI your policies and your best past replies, and it turns them into a reply library. Then, for each new email, it drafts an answer from that library in your tone, so the facts stay consistent from one reply to the next.</p>
+<p>Some messages should skip the AI draft and go straight to you, because a wrong word costs more than a slow reply. These include refunds outside your policy, angry complaints, anything about safety or injury, and legal threats. A good setup spots those messages automatically and hands them over with a short summary.</p>
+<p>This guide shows the whole method in five steps, and it works with ChatGPT, Claude, Gemini or any chat AI you already use. You get three prompts to copy, a tone guide and a table of cases a person must answer, plus a checklist to run before you hit send.</p>
+<aside class="callout"><p><strong>Tip.</strong> Start with your three most common questions, such as "Where is my order?", "Can I return this?" and "Do you ship to my country?". Get those replies right before you add anything else.</p></aside>
+
+<h2 id="reply-library">Step 1: Build a reply library from your policies</h2>
+<p>A reply library is a short document of approved answers to the questions customers ask most often. Each entry records what the customer wants, the facts you can promise and a model reply. Your AI reads the library before every draft, which means it answers from your rules instead of guessing what they might be.</p>
+<p>Without a library, an AI fills the gaps with answers that sound right but may be wrong, such as a refund you don't give or a date you can't keep. The library is how you prevent that, and our guide on <a href="/blog/stop-ai-making-things-up">how to stop AI making things up</a> explains in more depth why it happens.</p>
+<h3>What to collect first</h3>
+<ul>
+<li>Collect your returns, refunds, delivery and warranty policies, exactly as they appear on your website.</li>
+<li>Add your price list, opening hours and contact details, so the AI never has to guess them.</li>
+<li>Pick ten to twenty of your best past replies, choosing ones that solved the problem in a single message.</li>
+<li>Write a list of things you never promise, such as exact delivery dates or free replacements.</li>
+</ul>
+<p>Before you paste the past replies, remove customer names, email addresses, order numbers and street addresses, because your AI doesn't need personal details to learn your style.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Build my reply library</p><pre id="prompt-1">You are a customer service lead setting up a reply library for a small business.
+
+I will paste three things: my policies, my best past replies (with personal details removed) and a list of things we never promise.
+
+Before you write anything, ask me up to five short questions about gaps you notice. Wait for my answers.
+
+Then build the library. Make one entry for each common question you can find. Each entry has:
+1. The question, in the words a customer would use.
+2. The facts we can promise, quoted from my policies, with the policy name.
+3. A model reply of 60 to 120 words in my tone.
+4. "Hand to a person if..." with the cases this entry can't cover.
+
+Rules:
+- Use only facts from what I paste. If a fact is missing, write [ASK OWNER] instead of guessing.
+- Never add discounts, refunds, dates or freebies I haven't listed.
+- Keep my spelling and the words my customers use.
+
+At the end, list the questions customers ask that my policies don't answer yet.
+
+My policies: [paste]
+My best past replies: [paste]
+Things we never promise: [paste]</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Read the finished library line by line, correct anything that is wrong and fill each [ASK OWNER] gap yourself before you save it as one file. If your AI offers projects (ChatGPT and Claude) or Gems (Gemini), add the file there so that every new chat starts with it. Our guide on <a href="/blog/give-ai-context-about-your-business">giving your AI context about your business</a> shows where these files go in each tool.</p>
+
+<h2 id="draft">Step 2: Draft each reply with your AI, in your tone</h2>
+<p>Once the library exists, each new email becomes a short routine. You paste the customer's message and any order facts, and your AI picks the right library entry, writes a draft and tells you what it is unsure about.</p>
+<p>Ask for a short note above every draft that says which library entry it used, what it assumed and whether a person should take over. The note takes seconds to read, and it catches most problems before you even look at the reply itself.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Draft a reply from my library</p><pre id="prompt-2">You are drafting a reply to one customer email for me to review. You never send anything.
+
+Use my reply library and tone guide, which are attached or pasted below. Use only facts from the library and the order details I give you.
+
+Steps:
+1. Say in one line what the customer wants and how they feel (calm, worried, annoyed or angry).
+2. Check the "hand to a person" rules. If any apply, stop. Say which rule applies and write a two-line holding reply that promises a personal answer by [time we can keep].
+3. Otherwise, pick the library entry that fits best and name it.
+4. Write the reply. Answer their question in the first sentence. Keep it under 150 words. Match my tone guide.
+5. Under the draft, list every promise the reply makes and the policy line that supports it.
+6. List anything you weren't sure about.
+
+Customer email: [paste, with card numbers and passwords removed]
+Order details: [order date, items, delivery status]
+Reply library and tone guide: [paste or attach]</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<h3>How do you set the tone for customer replies?</h3>
+<p>Tone is far easier to copy than to describe, so give your AI a few clear rules and two or three real examples rather than adjectives like "friendly" or "professional". Put this short tone guide at the top of your reply library, where the AI will read it before every draft.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Rule</th><th scope="col">Write this</th><th scope="col">Not this</th></tr></thead>
+<tbody>
+<tr><td>Answer first</td><td>"Yes, you can return them until 12 May."</td><td>"Thank you so much for reaching out to us today."</td></tr>
+<tr><td>Say sorry once, for something real</td><td>"Sorry your parcel is late."</td><td>"We sincerely apologise for any inconvenience."</td></tr>
+<tr><td>Name the next step and who does it</td><td>"I've booked the pickup. The driver comes on Tuesday."</td><td>"The matter will be looked into."</td></tr>
+<tr><td>Use their words</td><td>"the blue trainers"</td><td>"your item (SKU 4471-B)"</td></tr>
+<tr><td>Sign with a real name</td><td>"Priya, customer care"</td><td>"The Support Team"</td></tr>
+</tbody>
+</table></div>
+<p>If your drafts still sound stiff after a week of edits, our guide to <a href="/blog/make-ai-writing-sound-like-you">making AI writing sound like you</a> has a fuller method for capturing your voice.</p>
+
+<h2 id="human">Step 3: Decide when a person must answer</h2>
+<p>Write these rules down before you start and put them in the library, so that your AI checks them on every single email. A clear written rule is far safer than hoping a draft will "feel off" to whoever reads it at the end of a busy day.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">The message is about</th><th scope="col">Why a person answers</th><th scope="col">What the AI can still do</th></tr></thead>
+<tbody>
+<tr><td>A refund or exception outside your policy</td><td>It costs money and sets a precedent.</td><td>Sum up the facts and the policy line.</td></tr>
+<tr><td>An angry complaint or a threat to post a review</td><td>The wrong word makes it worse, and it may become public.</td><td>Flag the tone and list what went wrong.</td></tr>
+<tr><td>Safety, injury, allergy or a faulty product that could hurt someone</td><td>It may need a recall, a report or legal advice.</td><td>Nothing beyond a holding reply. Answer the same day.</td></tr>
+<tr><td>Legal threats, chargebacks or a lawyer's letter</td><td>Anything you write may be used later.</td><td>Nothing. Pass it to whoever handles legal matters.</td></tr>
+<tr><td>A request to see or delete personal data</td><td>Privacy laws set rules and deadlines.</td><td>Draft a search plan for you to check.</td></tr>
+<tr><td>A customer in distress or at risk</td><td>They need a human, not a template.</td><td>Nothing. Reply yourself.</td></tr>
+</tbody>
+</table></div>
+<p>A holding reply is a short note that tells the customer you have seen the message and when they will get a full answer. Only promise a time you can keep, because a missed deadline turns a patient, waiting customer into an angry one. A good holding reply reads like this: "Thanks, I've passed this to our owner, Sam, who will reply by 4pm today."</p>
+
+<h2 id="checks">Step 4: Run the checks before you send</h2>
+<p>Read every draft before it goes out, which usually takes less than a minute once you know exactly what to look for. Run this checklist each time:</p>
+<ul class="checklist">
+<li>It answers the customer's actual question in the first sentence.</li>
+<li>Every promise (refund, date, replacement, discount) matches a written policy.</li>
+<li>Names, order numbers, dates and amounts match the order record.</li>
+<li>No [ASK OWNER] or other placeholder is left in the text.</li>
+<li>The tone fits how the customer feels: calm for a worried customer, direct for an annoyed one.</li>
+<li>It explains what happens next, who is responsible and by when.</li>
+<li>None of the "person must answer" rules apply to this message.</li>
+<li>It contains no personal details belonging to any other customer.</li>
+</ul>
+<p>For hard replies, add a second check by pasting the complaint and your draft into a fresh chat and asking your AI to test every promise. A fresh chat doesn't share the first chat's assumptions, so it is more likely to notice a promise the first draft slipped in.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Check a reply before I send it</p><pre id="prompt-3">You are checking a customer service reply before it is sent. Be strict. Do not rewrite the whole thing unless I ask.
+
+Check:
+1. Does the first sentence answer what the customer asked? Quote it.
+2. List every promise in the reply. For each one, say "supported" with the policy line, or "not supported".
+3. Do any names, dates, amounts or order numbers look wrong or unconfirmed?
+4. Is there any wording that could read as blame, sarcasm or a brush-off? Quote it.
+5. Should a person handle this instead? Use these rules: [paste your hand-to-a-person rules].
+
+Then give me a verdict: "send", "fix first" or "hand to a person". If "fix first", show only the lines to change, with the new wording.
+
+Customer message: [paste]
+My draft reply: [paste]
+My policies: [paste or attach]</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="privacy">Keep customer data private</h2>
+<p>Customer emails contain personal details, so treat your AI chat like any other place where you store customer information and share only what each reply actually needs.</p>
+<ul>
+<li><strong>Remove what the reply doesn't need.</strong> Your AI needs the question and the order status, but it rarely needs the customer's full address or phone number.</li>
+<li><strong>Never paste card numbers, passwords or ID numbers.</strong> No reply needs them, so if a customer sends one, delete it from the text before you paste.</li>
+<li><strong>Check your AI's data settings.</strong> On personal ChatGPT plans, OpenAI says chats can be used to train its models. You can turn this off with the "Improve the model for everyone" switch in Data controls (<a href="https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt" rel="noopener">OpenAI's data controls page</a>, as of November 2026). OpenAI also says business plans aren't used for training by default, and you should check the same settings in any other AI you use.</li>
+<li><strong>Tell customers how you handle their data.</strong> If you use an AI tool to help with emails, say so in your privacy notice. The privacy law where you trade decides exactly what you must say, so check it.</li>
+</ul>
+<aside class="callout"><p><strong>Watch out.</strong> Don't connect an AI to your inbox and let it send replies on its own. Keep a person approving each reply until you have checked many drafts and trust the results.</p></aside>
+
+<h2 id="example">Worked example: a reply library built on Zappos's public returns policy</h2>
+<p>Zappos, the online shoe and clothing shop, makes a useful example because its policies are public and clearly written. Its <a href="https://www.zappos.com/c/shipping-and-returns" rel="noopener">shipping and returns page</a> says the following, as of November 2026:</p>
+<ul>
+<li>Shipping and returns are free anywhere in the United States.</li>
+<li>Items must come back within 60 days, in new condition, unworn and with tags attached.</li>
+<li>Footwear must come back in its original shoe box.</li>
+<li>Items marked as final sale aren't eligible for return.</li>
+<li>Customer service is available 24 hours a day, seven days a week.</li>
+</ul>
+<p>We don't know how Zappos's customer service team writes its replies, and we are not suggesting that it uses AI. This example only shows what Step 1 and Step 2 would produce if you fed those public facts into the prompts above.</p>
+<h3>What goes in</h3>
+<p>The inputs are the five policy facts above, plus a sample customer email written for this article: "I bought running shoes 70 days ago. I've worn them twice and they hurt. Can I send them back?"</p>
+<h3>What comes out</h3>
+<p>First, you get a library entry whose promised facts are free US returns within 60 days for unworn items with tags, sent back in the original box. Its "hand to a person if..." line covers worn items, returns after 60 days and final sale items.</p>
+<p>Next comes the draft itself. Because this email is past 60 days and the shoes are worn, the AI shouldn't decide the return on its own, so it stops and flags the case. A good result looks like the one below, which is an example draft written for this article and not Zappos's real copy:</p>
+<blockquote><p><strong>Note for reviewer:</strong> Outside policy (70 days, worn). Rule "exception outside policy" applies. Holding reply only.</p><p>Hi Jordan, sorry the shoes are hurting. Our usual return window is 60 days for unworn items, so I've passed your message to a colleague who can look at your options. You'll hear back from us today.</p></blockquote>
+<p>Notice what the AI didn't do: it didn't promise a refund, invent a goodwill credit or quote a rule that doesn't exist. A person now decides whether to make an exception, which is exactly the split between drafting and deciding that you want.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<ul>
+<li><strong>Letting the AI answer from general knowledge</strong> means it will guess your policies. Give it the reply library every time, and tell it to write [ASK OWNER] whenever a fact is missing.</li>
+<li><strong>Long, padded replies</strong> are common because AI drafts tend to open with thanks and close with three offers of more help. Ask for the answer in the first sentence, and set a word limit.</li>
+<li><strong>Apologising for everything</strong> backfires, because too many apologies sound insincere, so say sorry once, for the real problem, and then fix it.</li>
+<li><strong>Having no rule for the hard cases</strong> is risky, because the AI will happily draft those replies too. Write down when a person must answer, and put those rules in the library.</li>
+<li><strong>A library that never changes</strong> goes stale as policies and prices move, so whenever you edit a draft for the same reason twice, update the library entry that caused it.</li>
+<li><strong>Pasting everything</strong> is a habit worth breaking, because whole email threads with addresses and phone numbers add risk without adding value. Trim each message to what the reply needs.</li>
+</ul>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>Everything on AI Blocks is free: you copy a prompt, or download a skill, workflow or specialist, and use it in your own AI. None of these tools sends anything to your customers on your behalf.</p>
+<ul>
+<li><a href="/prompts/refund-request-reply-writer">Refund request reply writer</a>: share a refund request, your policy and the order facts to get a policy-based decision draft, a reply and the missing facts to check.</li>
+<li><a href="/prompts/angry-customer-reply-writer">Angry customer reply writer</a>: share the message and your policy, and you get a private reply and a short public version that only offers fixes you can give.</li>
+<li><a href="/prompts/complaint-reply-promise-checker">Customer reply promise checker</a>: paste the complaint and your draft, and it checks each promise, flags the tone and repairs the draft.</li>
+<li><a href="/agents/customer-inbox-triage-and-reply-drafter">Customer inbox reply drafter</a>: it sorts customer emails by urgency and gives you reply drafts based on your policies, with clear reasons to hold a reply.</li>
+<li><a href="/workflows/clear-your-support-inbox-and-turn-fixes-into-help-pages">Support reply and help-page writer</a>: a workflow that sorts tickets, writes and checks replies, then turns confirmed fixes into help-page drafts.</li>
+<li><a href="/roles/customer-service">Customer service writer specialist</a>: a ready-made specialist you download that drafts the reply, lists the steps to fix the issue and says when to escalate.</li>
+<li><a href="/skills/data-request-reply-drafter">Data request reply drafter</a>: paste a request to see or delete personal data to get a search plan and a draft reply. It is a first check, not legal advice.</li>
+<li><a href="/tools/support-staffing">Support workload calculator</a>: a free browser tool where you enter ticket count, handling time and staff hours to estimate how many people you need.</li>
+</ul>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can AI answer customer emails on its own?</h3>
+<p>It can, but it shouldn't at first, because you need evidence that its drafts are reliable before you remove the human check. Let it draft while a person approves each reply, and only consider letting it answer routine questions alone after many correct drafts. Refunds, complaints and safety issues should always stay with a person.</p>
+<h3>What is the best AI for customer service in a small business?</h3>
+<p>The chat AI you already pay for is usually enough to start, since ChatGPT, Claude and Gemini can all draft good replies when you give them a reply library. The accuracy and completeness of your library matter far more than which brand of AI you choose.</p>
+<h3>How do I reply to customer emails with AI and keep my tone?</h3>
+<p>Give your AI a short tone guide and two or three of your best real replies. Then ask it to answer in the first sentence and stay under a word limit. Edit the first few drafts yourself, and add each edit you make more than once to the guide as a rule.</p>
+<h3>Is it safe to paste customer emails into ChatGPT?</h3>
+<p>It can be, if you remove anything the reply doesn't need and never paste card numbers or passwords. Check your AI's data settings, including whether chats are used for training, and remember that business plans often have stricter defaults. Your local privacy law applies as well.</p>
+<h3>Should I tell customers I use AI to write replies?</h3>
+<p>Be honest if they ask, and mention it in your privacy notice if your law requires it. What matters most to the customer is that a real person checked the reply and stands behind it, so sign each one with that person's name.</p>

@@ -488,6 +488,13 @@ if (fs.existsSync(aiToolsRoot)) {
   }
   lastmod["/ai-tools"] = newest(guides.map((f) => lastmod[`/ai-tools/${f.slice(0, -5)}`] ?? ""));
 }
+// The blog (src/content/blog, src/lib/blog.mjs): its own sitemap, each article dated by its updated or published day.
+const blogPosts = fs.existsSync("src/content/blog") ? fs.readdirSync("src/content/blog").filter((f) => f.endsWith(".json")).sort().map((f) => JSON.parse(fs.readFileSync(path.join("src/content/blog", f), "utf8"))) : [];
+if (blogPosts.length) {
+  SITEMAPS.blog = ["/blog", ...blogPosts.map((p) => `/blog/${p.slug}`)];
+  for (const p of blogPosts) lastmod[`/blog/${p.slug}`] = p.updated ?? p.published ?? "2026-11-05";
+  lastmod["/blog"] = newest(blogPosts.map((p) => lastmod[`/blog/${p.slug}`]));
+}
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
 for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, sitemapUrlset(us, lastmod));
 // Each child carries the newest lastmod of its pages, so a crawler re-reads only the children that changed.
@@ -553,6 +560,8 @@ const intro = [
   `- [Hire an AI specialist](${SITE}/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.`,
   `- [Your me.md](${SITE}/me-md): prepare reusable context for your AI`,
   `- [Train your own AI agent](${SITE}/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way`,
+  `- [Blog](${SITE}/blog): step-by-step guides to using AI for real business work, each with prompts to copy and the free skills that do the job`,
+  ...blogPosts.map((p) => `  - [${p.title}](${SITE}/blog/${p.slug}): ${p.description}`),
   `- [API and MCP](${SITE}/api-and-mcp): connect an AI and read the public API documentation`,
   `- [All skills by job](${SITE}/jobs): every skill, workflow and prompt, sorted by the job it does`,
   `- [How it works](${SITE}/how-it-works): from one prompt to your own AI app`,

@@ -1,0 +1,177 @@
+<h2 id="what">What is an AI workflow?</h2>
+<p>An AI workflow is one job divided into small steps that your AI completes one at a time, while you review the results at the points that matter. Each step takes in specific material, such as your notes or the result of the previous step, and returns one clearly defined result. You can build an AI workflow without code, because all you need is a written plan, a prompt for each step and the AI you already use.</p>
+<p>Why not ask for the whole job in a single prompt? The problem is that one big request hides small mistakes until it's too late to fix them cheaply. If your AI writes a product page, an email and three social posts in one go, a wrong fact in the first part spreads into everything after it. You usually notice only at the end, whereas a job that runs as separate steps lets you catch the wrong fact at step two and correct it once.</p>
+<p>Anthropic, the company behind Claude, draws the same distinction in its guide to <a href="https://www.anthropic.com/research/building-effective-agents" rel="noopener">building effective agents</a>. It describes a fixed path of steps as a workflow, and a system where the AI chooses its own steps as an agent. Its advice is to begin with the simplest setup that works, which for most small business jobs means a workflow you can read, check and change yourself.</p>
+<p>If the terms prompt, skill and workflow still blur together, read <a href="/blog/ai-prompts-vs-skills-vs-workflows">the difference between prompts, skills and workflows</a> first, since it takes five minutes.</p>
+
+<h2 id="when">Which jobs make a good AI workflow?</h2>
+<p>Choose a job you already do manually more than once a month, ideally one that follows roughly the same sequence of steps every time. These are the signs of a good candidate:</p>
+<ul>
+<li><strong>It has a clear beginning and a clear finish.</strong> "When a supplier changes a price, update every page that shows it" is a job you can plan, whereas "help with marketing" is far too broad to divide into steps.</li>
+<li><strong>The steps happen in a predictable order.</strong> You gather the information, then draft, then check, then send, and each stage depends on the accuracy of the one before it.</li>
+<li><strong>You can recognise a good result.</strong> If you can't judge the quality of the result yourself, you have no reliable way to evaluate what your AI produces.</li>
+<li><strong>The inputs are text or documents.</strong> Notes, emails, spreadsheets, web pages and PDFs all work well, because your AI can read them directly without any special software.</li>
+<li><strong>A mistake is easy to catch before anyone else sees it.</strong> Begin with jobs that end in a draft for you to approve, rather than anything that reaches customers automatically.</li>
+</ul>
+<p>Good first candidates include a weekly sales summary, a blog post turned into social posts and a monthly client report. Another strong candidate is updating every page when an offer ends, which is the worked example later in this guide.</p>
+
+<h2 id="steps">How do you build an AI workflow without code?</h2>
+<p>Follow the six steps below in order. The first four happen on paper or in a note on your phone, so the important thinking is finished before you open your AI at step five.</p>
+
+<h3>Step 1: Write down what "done" looks like</h3>
+<p>Write one sentence that describes the finished result, the person it's for and how you'll recognise that it's correct. A typical example would be "Every page and email that mentions the old offer shows the new one, checked by me, by Friday". This sentence keeps the workflow small, because any step that doesn't help you reach it can safely be removed.</p>
+
+<h3>Step 2: List the steps a careful person would take</h3>
+<p>Imagine a capable new employee doing the job well, and write down what they would do first, second and third. Name each step with a verb and an object, such as "Gather the facts", "Find every mention" or "Draft the new wording". Aim for three to seven steps, because fewer than three puts you back to one big prompt, while more than seven usually means two separate workflows.</p>
+<p>Each step should perform only one kind of work. Finding information, writing and checking are three different activities, so keep them apart. Your AI handles each one more accurately on its own, and when something goes wrong you can identify exactly which step caused the problem.</p>
+
+<h3>Step 3: Decide what each step takes in and gives back</h3>
+<p>Many people skip this step, although it's the one that decides whether the workflow holds together. For every step, write two short descriptions:</p>
+<ul>
+<li><strong>Takes in:</strong> exactly what the step needs and where it comes from, whether that's your own files, your notes or the result of an earlier step.</li>
+<li><strong>Gives back:</strong> what the step produces and in what structure, such as "a table with one row per page, showing the page name, the old line and the new line". Specify the format, the length and any columns you expect.</li>
+</ul>
+<p>When the result of one step is precisely what the next step needs, the steps connect like sections of pipe. When they don't connect, your AI fills the gap with guesses, which is where many errors begin. A clear description of what each step gives back also lets you check its result in seconds, because you know exactly what you should be looking at.</p>
+
+<h3>Step 4: Mark where a human checks</h3>
+<p>You don't need to review every step with equal care, so concentrate your attention wherever a mistake would be most expensive. Put a human check in these places:</p>
+<ul>
+<li>after any step that collects facts, prices, dates or names, because every later step will depend on them</li>
+<li>before anything is sent, published, paid for or deleted, because those actions are difficult or impossible to undo</li>
+<li>wherever your AI makes a judgement call, such as deciding which customers should receive a message</li>
+</ul>
+<p>Write each check as a question with a yes-or-no answer. "Does every price in the table match the price list?" works as a check, whereas "Is it good?" doesn't, because your answer would probably depend on your mood.</p>
+
+<h3>Step 5: Turn the plan into prompts</h3>
+<p>Now open your AI and paste the prompt below with your own job details filled in. Your AI interviews you first, then writes a step card for every step, recording its name, what it takes in, what it gives back and its check. The result is a complete plan you can review in about a minute.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Plan my AI workflow</p><pre id="prompt-1">You are helping me turn one job I do often into an AI workflow that I can run step by step in this chat.
+
+The job: [one sentence: what starts it and what "done" looks like]
+Who the result is for: [customers, my team, a client]
+What I have to start with: [files, notes, links, data]
+
+First, interview me. Ask one short question at a time, at most 8 in all. I can say "enough" to stop.
+
+Then do this:
+1. Split the job into 3 to 7 steps, in the order a careful person would do them. Each step does one kind of work: finding, writing or checking.
+2. For each step, write a step card:
+   - Name (verb first)
+   - Takes in: exactly what the step needs, and where it comes from (me, or an earlier step)
+   - Gives back: what it makes, with the format, length and any columns
+   - Check: one yes-or-no question that shows the result is good
+3. Mark the steps where I must check the work before the next step starts. Always add a check before anything is sent, published, paid for or deleted.
+4. List every fact or file you would need from me but don't have yet. Write MISSING next to each one. Don't guess.
+
+Show the step cards as a table. Then ask me what to change.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Read the table as if a new employee had written it, and ask yourself whether any step is doing two jobs or whether any description of its inputs is vague. Correct those problems immediately, before you run anything, because they're much cheaper to fix on paper than halfway through a real job.</p>
+
+<h3>Step 6: Run it one step at a time</h3>
+<p>Run each step as a separate message: paste the plan, name the step and provide its inputs. When the result comes back, apply your check immediately. If the result passes, carry it forward into the next step, and if it fails, correct that step and run it again before you continue.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Run one step of my workflow</p><pre id="prompt-2">We are running my workflow one step at a time. Here is the full plan:
+[paste the step cards]
+
+Run step [number] only: [step name].
+
+Its inputs:
+[paste your files or notes, or the checked result of the step before]
+
+Rules:
+- Do only this step. Don't start the next one.
+- Use only the inputs above and the facts I have given you in this chat. If something you need is missing, stop and ask me.
+- Mark any fact you are not sure of with CHECK.
+- Never send, post, publish, buy or delete anything. Prepare it for me instead.
+
+Show the result in exactly the format the step card asks for. Under it, answer the step's check question with yes or no and one short reason.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<p>Keep the entire run in one conversation, or in one project if your AI offers projects, so that your AI can refer to the plan and the earlier results. Save the final step cards in a note as well, which lets you begin the next run within seconds.</p>
+<aside class="callout"><p><strong>Tip.</strong> Keep a short facts sheet alongside the workflow, listing your prices, policies, product names and important dates, and paste it into the first step of every run. Most disappointing results begin with a fact your AI didn't have, so it guessed instead. Our guide on <a href="/blog/give-ai-context-about-your-business">giving your AI context about your business</a> explains how to write one.</p></aside>
+
+<h2 id="template">A step card template you can reuse</h2>
+<p>Copy this table into a note or spreadsheet and complete one row for every step. If you can't fill in a particular cell, that step isn't ready yet, so return to the plan before you run it.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Step</th><th scope="col">Takes in</th><th scope="col">Gives back</th><th scope="col">Check (yes or no)</th><th scope="col">Who checks</th></tr></thead>
+<tbody>
+<tr><td>1. Gather the facts</td><td>Your notes, price list, policy page</td><td>A facts sheet: one fact per line, each with its source</td><td>Does every fact have a source?</td><td>You</td></tr>
+<tr><td>2. Do the main work</td><td>Facts sheet from step 1, plus the files for the job</td><td>The draft, in the format you named</td><td>Does it use only facts from the sheet?</td><td>Your AI, then you</td></tr>
+<tr><td>3. Check the work</td><td>Draft from step 2, facts sheet from step 1</td><td>A list of problems, each with the line and the fix</td><td>Is every claim matched to a fact?</td><td>Your AI</td></tr>
+<tr><td>4. Approve and use</td><td>Fixed draft</td><td>Final version, ready for you to send or publish</td><td>Would you put your name to it?</td><td>You</td></tr>
+</tbody></table></div>
+<p>Before you run a new workflow on real customer work, review this checklist once:</p>
+<ul class="checklist">
+<li>The finished result can be described accurately in a single sentence.</li>
+<li>There are three to seven steps, and each one performs a single, separate activity.</li>
+<li>Every step states what it takes in and exactly where that information comes from.</li>
+<li>Every step describes what it gives back, including the expected format.</li>
+<li>Each check is written as a question with a definite yes-or-no answer.</li>
+<li>A person reviews the work before anything leaves your business.</li>
+<li>You have prepared an up-to-date facts sheet, and the first step always includes it.</li>
+<li>You tested the workflow once on a previous job where you already know the correct answer.</li>
+</ul>
+
+<h2 id="example">A worked example: when Warby Parker ended Home Try-On</h2>
+<p>Here's a real business change that shows why separate steps help. Warby Parker sells glasses, contacts and eye exams online and in its stores, and for years it offered Home Try-On, which sent customers frames to try at home before buying. In its <a href="https://img.warbyparker.com/PDF/impact-report/Impact-Report-2025-final.pdf" rel="noopener">2025 Impact Report</a>, the company says it retired Home Try-On "this past October", explaining that customers now had more ways to try on glasses, both virtually and in person. The same report also names its Virtual Try-On tool, which matters for the draft further down.</p>
+<p>When any business ends an offer like that, the old promise usually appears in many places at once, including product pages, FAQs, emails, advertisements and saved replies. Missing even one location means a customer reads about an offer that no longer exists. We don't know how Warby Parker managed its own update, and nothing here describes its real process. Instead, this is how a small team could run the same kind of job as an AI workflow.</p>
+
+<h3>The plan</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Step</th><th scope="col">Takes in</th><th scope="col">Gives back</th><th scope="col">Check</th></tr></thead>
+<tbody>
+<tr><td>1. Write the change</td><td>The official notice of the change</td><td>A facts sheet: what ended, when, and what customers can do now</td><td>Is every line backed by the notice? (you check)</td></tr>
+<tr><td>2. Find every mention</td><td>Text of your pages, FAQs, emails and saved replies</td><td>A table: where it is, the exact old line</td><td>Did it search every file you gave it?</td></tr>
+<tr><td>3. Sort by risk</td><td>Table from step 2</td><td>The same table, ranked: live pages and checkout first</td><td>Are customer-facing pages at the top?</td></tr>
+<tr><td>4. Draft new wording</td><td>Ranked table and facts sheet</td><td>A new line for each old one</td><td>Does each new line use only the facts sheet?</td></tr>
+<tr><td>5. Check the claims</td><td>Drafts and facts sheet</td><td>Any line that promises more than the facts allow</td><td>Zero unmatched claims?</td></tr>
+<tr><td>6. Approve and publish</td><td>Checked drafts</td><td>You make the changes in your own tools</td><td>Did a person approve each change? (you)</td></tr>
+</tbody></table></div>
+
+<h3>What comes out</h3>
+<p>Step 4 might turn an old FAQ question, "Can I try frames at home before I buy?", into a draft answer like the one below. It's an example draft written for this article, not Warby Parker's real copy:</p>
+<blockquote><p>"Our Home Try-On program has ended. You can still try frames before you buy: use Virtual Try-On, or visit one of our stores."</p></blockquote>
+<p>Step 5 then compares that answer with the facts sheet, and because "Virtual Try-On" and "stores" both appear in the company's own report, the answer passes. If the draft had promised "free next-day delivery", step 5 would flag it, since nothing in the facts sheet supports that claim. That single check is the reason to divide the job, because in one big prompt an invented promise slips through looking just as confident as the accurate lines around it.</p>
+<p>The library includes a skill designed for exactly this situation. The <a href="/skills/campaign-change-impact-mapper">campaign change impact reviewer</a> identifies which ads and pages break when an approved price, offer or claim changes, and gives you a repair order based on your own files.</p>
+
+<h2 id="automate">Can you automate an AI workflow without code?</h2>
+<p>Partly, yes, although running the steps by hand in a chat is the right way to begin, because you see every result and discover where the weak points are. Once a workflow has run cleanly many times, you have three ways to make it faster:</p>
+<ul>
+<li><strong>Save it as a project.</strong> Put the step cards and facts sheet in a ChatGPT project, a Claude project or a Gemini Gem, so that every run begins with the plan already available. The <a href="/train-your-own-ai-agent">guide to training your own AI agent</a> explains where each file belongs in each AI.</li>
+<li><strong>Download a workflow pack.</strong> A pack contains every step's instructions and checks in separate files that your AI reads in sequence, so it can work through the steps alongside you.</li>
+<li><strong>Connect an automation tool.</strong> Tools like Zapier and Make pass results between apps, which suits only repetitive, low-risk steps such as copying a form entry into a spreadsheet. Even then, the human checks stay in place. The <a href="/prompts/automation-flow-sketcher">automation flow sketcher</a> turns a task you repeat into a Zapier or Make plan, with every step, the filters and what happens when something fails.</li>
+</ul>
+<p>Whichever route you choose, the checks before anything is sent or published remain with a person. A workflow that prepares drafts for you saves time, whereas one that sends unchecked work can cost you a customer.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">What happens</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Steps that do two jobs</td><td>"Research and write" mixes facts with drafting, so you can't tell where an error started</td><td>Split finding, writing and checking into their own steps</td></tr>
+<tr><td>Vague "gives back" lines</td><td>The next step gets something it can't use, and fills the gap with guesses</td><td>Name the format: a table, a list, 150 words, these columns</td></tr>
+<tr><td>No facts sheet</td><td>The AI invents prices, dates and policies that sound right</td><td>Start every run with your facts, and tell it to write MISSING when a fact isn't there</td></tr>
+<tr><td>Checking only at the end</td><td>One early mistake spreads through every later step</td><td>Check after any step that gathers facts</td></tr>
+<tr><td>Starting too big</td><td>A 12-step workflow breaks in five places and you give up</td><td>Start with three or four steps, then add one at a time</td></tr>
+<tr><td>Letting it send things</td><td>Work goes out that nobody read</td><td>Every send, post, payment or delete waits for your yes</td></tr>
+</tbody></table></div>
+<p>One more habit matters: keep the plan up to date. Whenever you correct the same problem twice, change the step card so the correction happens automatically. That habit is what turns a collection of prompts into a workflow that improves with use.</p>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>You can do everything above with a notepad and your AI, but these free pages save you from starting with an empty page:</p>
+<ul>
+<li><strong><a href="/compose">Plan a job</a>.</strong> Describe the job you want done, the person it's for and what you want back, and you receive a plan showing every step, what it needs and what it produces. Edit the order, then download the workflow, unzip it, give the files to your AI and ask it to read START_HERE.txt and follow HANDOFF.md. A quick plan is created in your browser from the library without an account, while an AI-written plan for your exact request needs a free account.</li>
+<li><strong>Ready-made workflows in <a href="/">the library</a>.</strong> Search for your job to see what already exists. For example, the <a href="/workflows/turn-repeat-customer-questions-into-help-pages-people-understand">customer help article writer and reviewer</a> turns repeated questions and solved tickets into help pages, checked against your actual steps.</li>
+<li><strong><a href="/skills/workflow-diagram-and-change-planner">Workflow diagram and change planner</a>.</strong> Share a workflow or goal, and you receive it drawn as a diagram, with every hand-off reviewed and any suggested changes explained.</li>
+<li><strong><a href="/skills/repeat-chore-automation-planner">Routine task automation planner</a>.</strong> List your weekly tasks, and you get ranked suggestions for what to turn into a workflow first, with steps a new employee could follow.</li>
+<li><strong><a href="/from-a-source">Turn an article or video into a workflow</a>.</strong> If you've discovered a useful method in an article or a presentation, paste it in and receive it back as steps you can run.</li>
+</ul>
+<p>AI Blocks plans and packages the workflow, and your own AI completes the work in your conversation, using your own documents. Nothing on the site sends, posts or changes anything on your behalf.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Do I need Zapier, Make or n8n to build an AI workflow?</h3>
+<p>No. You can run an entire workflow by hand in ChatGPT, Claude or Gemini, one step per message. Automation tools become useful later, once a workflow is reliable and you want results to move between apps without copying and pasting.</p>
+<h3>What's the difference between an AI workflow and an AI agent?</h3>
+<p>A workflow follows steps you define, in an order you define, while an agent decides its own next step as it goes. Workflows are easier to check and cheaper to correct, so they're the better place to begin. Our guide to <a href="/blog/ai-agents-for-small-business">AI agents for small business</a> explains when an agent is worth the extra complexity.</p>
+<h3>Can I run an AI workflow on a free plan?</h3>
+<p>Yes. Paste the plan at the beginning of a new conversation and run each step as a separate message. Paid plans with projects or Gems save you that first paste, because the plan loads automatically every time.</p>
+<h3>How many steps should an AI workflow have?</h3>
+<p>Three to seven is a sensible range, provided each step performs only one kind of work. If you go beyond seven, consider whether the job is really two workflows, with one feeding the other.</p>
+<h3>How do I stop the AI making things up between steps?</h3>
+<p>Give it a facts sheet at the beginning, instruct it to use only those facts and to write MISSING whenever it lacks one, and review any step that gathers information. Our guide to <a href="/blog/stop-ai-making-things-up">stopping AI making things up</a> provides prompts for each of these.</p>
+<h3>Is AI workflow automation worth it for a small business?</h3>
+<p>It is for jobs you repeat often that follow the same steps every time. Begin with one job you do every week and run it by hand for a few weeks, and if the checks keep passing, consider automating the repetitive, low-risk steps.</p>

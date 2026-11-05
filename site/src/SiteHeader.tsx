@@ -44,7 +44,7 @@ export default function SiteHeader() {
   // A link is current on its own page; section links (/roles) also cover the pages under them.
   const here = (to: string) => {
     if (to.includes("#")) return to === "/#library" && path === "/" ? "page" as const : undefined;
-    return path === to || (["/roles", "/tools", "/ai-tools", "/apps", "/get-it-done", "/minds"].includes(to) && path.startsWith(`${to}/`)) ? "page" as const : undefined;
+    return path === to || (["/roles", "/tools", "/ai-tools", "/apps", "/get-it-done", "/minds", "/blog"].includes(to) && path.startsWith(`${to}/`)) ? "page" as const : undefined;
   };
   const signedIn = account.state === "signed-in";
   // On a laptop the header already shows the main sections, so the menu leaves them out.

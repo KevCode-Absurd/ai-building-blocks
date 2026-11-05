@@ -89,7 +89,7 @@ const HowItWorks = startupPage(PAGES.guide);
 const ApiMcpPage = startupPage(PAGES.docs);
 const MeMdPage = startupPage(PAGES.memd);
 const TrainAgentPage = startupPage(PAGES.agentguide);
-const BlogPage = startupPage<{ path: string }>(PAGES.blog);
+const BlogPage = startupPage<{ path: string }>(PAGES.blog, true);
 async function loadToolPage(to: string) {
   const slug = to.split(/[?#]/)[0].split("/")[2];
   if (!slug) return PAGES.tools();

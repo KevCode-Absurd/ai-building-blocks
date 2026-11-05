@@ -83,5 +83,7 @@ test('the index lists every article and every guide, and each article page links
     const page = blogPostHtml(p, bodies.get(p.slug), posts, p.minutes);
     assert.equal((page.match(/<h1/g) ?? []).length, 1, p.slug);
     assert.match(page, /href="\/blog"/);
+    // BlogPage reads the first article's text back from the built page between these markers, so it draws without moving.
+    assert.ok(page.includes(`<!--post-body-->${bodies.get(p.slug)}<!--/post-body-->`), `${p.slug}: body markers`);
   }
 });

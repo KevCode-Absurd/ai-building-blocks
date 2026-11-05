@@ -2,24 +2,29 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { BLOG_PATH, blogIndexHtml, blogPostHtml } from "./lib/blog.mjs";
 import { Link, navigate } from "./lib/router";
 import { isStaticPage } from "./lib/site-nav.mjs";
+import { initialPageHtml } from "./lib/public-opening";
+import { StartupReady } from "./StartupReady";
 import "./blog.css";
 
 /** /blog and /blog/<slug>: the blog index and each article. The HTML comes from src/lib/blog.mjs, the same code
- *  scripts/prerender.mjs uses, so the page a crawler reads matches this one. Article bodies load one at a time. */
+ *  scripts/prerender.mjs uses, so the page a crawler reads matches this one. Article bodies load one at a time, except
+ *  the one the visitor opened first: its text is already in the built page, so it draws at once and nothing moves. */
 type Post = { slug: string; title: string; description: string; lede: string; category: string; keywords?: string[]; related?: string[]; minutes?: number; published?: string; updated?: string };
 const POSTS = Object.values(import.meta.glob<Post>("./content/blog/*.json", { eager: true, import: "default" }));
 const BODIES = import.meta.glob<string>("./content/blog/*.html", { query: "?raw", import: "default" });
+// The article text the built page arrived with, between the markers blogPostHtml puts around it.
+const builtBody = (path: string) => initialPageHtml(path).match(/<!--post-body-->([\s\S]*?)<!--\/post-body-->/)?.[1] ?? null;
 
 export default function BlogPage({ path }: { path: string }) {
   const slug = path === BLOG_PATH ? null : path.slice(BLOG_PATH.length + 1);
   const post = slug ? POSTS.find(p => p.slug === slug) : undefined;
-  const [body, setBody] = useState<string | null>(null);
+  const [body, setBody] = useState<string | null>(() => (post ? builtBody(path) : null));
   const [failed, setFailed] = useState(false);
   const main = useRef<HTMLElement>(null);
   const timers = useRef(new Set<ReturnType<typeof setTimeout>>());
   useEffect(() => () => { timers.current.forEach(clearTimeout); timers.current.clear(); }, []);
   useEffect(() => {
-    if (!post) return;
+    if (!post || body !== null) return;
     const load = BODIES[`./content/blog/${post.slug}.html`];
     if (!load) { setFailed(true); return; }
     let live = true;
@@ -65,8 +70,8 @@ export default function BlogPage({ path }: { path: string }) {
     timers.current.add(timer);
   }
 
-  if (slug && (!post || failed)) return <main className="wrap blog-page" data-testid="blog-page"><div className="blog-missing"><h1>{post ? "This article didn't load" : "This article doesn't exist"}</h1><p>{post ? "Check your connection, then reload the page." : "The address may have changed."}</p><Link to={BLOG_PATH} className="btn btn-dark btn-sm">See all articles and guides</Link></div></main>;
+  if (slug && (!post || failed)) return <main className="wrap blog-page" data-testid="blog-page"><StartupReady /><div className="blog-missing"><h1>{post ? "This article didn't load" : "This article doesn't exist"}</h1><p>{post ? "Check your connection, then reload the page." : "The address may have changed."}</p><Link to={BLOG_PATH} className="btn btn-dark btn-sm">See all articles and guides</Link></div></main>;
   if (slug && body === null) return <main className="wrap blog-page" data-testid="blog-page"><p role="status" className="small">Opening the article…</p></main>;
   const html = post ? blogPostHtml(post, body ?? "", POSTS, post.minutes) : blogIndexHtml(POSTS);
-  return <main ref={main} className="wrap blog-page" data-testid="blog-page" onClick={click} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <><main ref={main} className="wrap blog-page" data-testid="blog-page" onClick={click} dangerouslySetInnerHTML={{ __html: html }} /><StartupReady /></>;
 }

@@ -80,7 +80,7 @@ export function blogPostHtml(post, body, posts, minutes = readingMinutes(body)) 
 </header>
 ${toc.length ? `<nav class="toc" aria-label="On this page"><p class="toc-title">On this page</p><ol>${toc.map(s => `<li><a href="#${esc(s.id)}">${esc(s.text)}</a></li>`).join("")}</ol></nav>` : ""}
 <div class="post-body">
-${body}
+<!--post-body-->${body}<!--/post-body-->
 </div>
 ${related.length ? `<aside class="post-related" aria-labelledby="keep-reading"><h2 id="keep-reading">Keep reading</h2><ul class="blog-cards">${related.map(card).join("")}</ul></aside>` : ""}
 <p class="post-back"><a href="${BLOG_PATH}">All articles and guides</a></p>

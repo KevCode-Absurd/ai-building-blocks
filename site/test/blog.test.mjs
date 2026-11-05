@@ -29,7 +29,8 @@ test('article metadata is complete and fits search results', () => {
     const where = p.slug;
     assert.equal(`${p.slug}.json`, `${where}.json`);
     assert.ok(p.title.length >= 30 && p.title.length <= 80, `${where}: title is ${p.title.length} characters`);
-    assert.ok(p.seoTitle.length <= 50, `${where}: seoTitle is ${p.seoTitle.length} characters`);
+    const full = `${p.seoTitle} | AI Blocks`;
+    assert.ok(full.length >= 50 && full.length <= 60, `${where}: the page title "${full}" is ${full.length} characters; search results show 50 to 60 best`);
     assert.ok(p.description.length >= 110 && p.description.length <= 160, `${where}: description is ${p.description.length} characters`);
     assert.ok(p.lede.split(/\s+/).length >= 20, `${where}: lede is too short`);
     assert.ok(names.has(p.category), `${where}: unknown category ${p.category}`);

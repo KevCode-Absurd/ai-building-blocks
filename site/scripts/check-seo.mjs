@@ -100,8 +100,12 @@ for (const pg of pages) {
   Object.assign(pg, { h, title, desc, robots, noindex, kind, body });
   heads.push(head.length);
 
-  // Noindex: only the listed pages, and all of them.
-  if (noindex && !NOINDEX.has(url)) bad("noindex on a page that should be indexed", url);
+  // Noindex: only the listed pages, and all of them. A job hub with fewer than 3 items is too thin to index, but its
+  // links must still be followed.
+  const thinHub = /^\/jobs\/[^/]+$/.test(url) && ((body.match(/<ul class="hub-list">([\s\S]*?)<\/ul>/)?.[1] ?? "").match(/<li>/g) ?? []).length < 3;
+  if (noindex && thinHub && /nofollow/.test(robots)) bad("a thin job hub must stay noindex, follow", url);
+  if (!noindex && thinHub) bad("a job hub with fewer than 3 items should be noindex, follow", url);
+  if (noindex && !NOINDEX.has(url) && !thinHub) bad("noindex on a page that should be indexed", url);
   if (!noindex && NOINDEX.has(url)) bad("a private page that is not noindex", url);
   if (NOINDEX.has(url) || noindex) continue;
   indexable.push(pg);

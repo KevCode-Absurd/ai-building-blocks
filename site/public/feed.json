@@ -47,6 +47,38 @@
    }
   },
   {
+   "id": "https://useaiblocks.com/skills/logo-strength-tester",
+   "url": "https://useaiblocks.com/skills/logo-strength-tester",
+   "title": "Logo strength tester",
+   "summary": "Test your logo ideas before you pick one. Get each scored out of 100 on seven tests, plus a one-colour and small-size check, with a keep, fix or drop call.",
+   "content_text": "Test your logo ideas before you pick one. Get each scored out of 100 on seven tests, plus a one-colour and small-size check, with a keep, fix or drop call. Updated 2026-11-05.",
+   "date_published": "2026-10-20T00:00:00Z",
+   "date_modified": "2026-11-05T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/logo-strength-tester.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/logo-strength-tester/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/logo-strength-tester.md",
+    "json": "https://useaiblocks.com/skills/logo-strength-tester.json",
+    "skill": "https://useaiblocks.com/skills/logo-strength-tester/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/seventeen-section-advertising-report-writer",
    "url": "https://useaiblocks.com/skills/seventeen-section-advertising-report-writer",
    "title": "17-section advertising report writer",
@@ -3180,38 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/persona-script-multiplier.md",
     "json": "https://useaiblocks.com/skills/persona-script-multiplier.json",
     "skill": "https://useaiblocks.com/skills/persona-script-multiplier/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/buyer-identity-segment-finder",
-   "url": "https://useaiblocks.com/skills/buyer-identity-segment-finder",
-   "title": "Buyer identity segment finder",
-   "summary": "Paste reviews or survey answers. Get buyer groups from their own words, sample counts, a proposed focus and a three-question survey.",
-   "content_text": "Paste reviews or survey answers. Get buyer groups from their own words, sample counts, a proposed focus and a three-question survey. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Understand your customers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/buyer-identity-segment-finder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/buyer-identity-segment-finder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/buyer-identity-segment-finder.md",
-    "json": "https://useaiblocks.com/skills/buyer-identity-segment-finder.json",
-    "skill": "https://useaiblocks.com/skills/buyer-identity-segment-finder/SKILL.md"
    }
   }
  ]

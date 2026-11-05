@@ -365,7 +365,7 @@
     "catalogue-items/imported/website-design-token-extractor/item.yaml": {
       "reviewed_by": "AI Blocks source review (Claude)",
       "reviewed_on": "2026-11-05",
-      "method_sha256": "2c17aa38ca72cfd45be8e173f565919b3d673837ab1581f480b96ba9a4680767",
+      "method_sha256": "692f909ea559406ade96a4dd570bb8de94e42ff5a7f89276f41e8cb4c21493af",
       "inputs": [
         {
           "type": "web_page",

@@ -16,6 +16,7 @@ import { loadRoleLinks, specialistsSection, hubSpecialists } from "./lib/role-li
 import { roleSeeds, sameJobAgentPages } from "../src/roles/role-definitions.mjs";
 import {mindDirectory, mindDirectoryUrls} from "./lib/mind-directory.mjs";
 import { brokenLinks, guidesSitemap, trustPages } from "./lib/trust-pages.mjs";
+import { staticFooter, staticHeader } from "./lib/site-chrome.mjs";
 import { BOARD_NAMES, boardHref, playbookHref } from "../src/trust-pages/board-names.mjs";
 import { readPrerenderShell, injectPrerender } from "./lib/prerender-shell.mjs";
 import { AREAS as JOB_AREAS, FUNCTIONS, TASKS } from "../src/lib/catalogue-taxonomy.mjs";
@@ -134,10 +135,9 @@ const WEBSITE = { "@type": "WebSite", "@id": `${SITE}/#site`, name: "AI Blocks",
 // The same links on every plain page, so no page is more than a few clicks from the rest.
 const NAV = [["/roles", "Hire an AI specialist"], ["/jobs", "All skills by job"], ["/minds", "Minds"], ["/tools", "Tools"], ["/ai-tools", "AI tool guides"], ["/how-it-works", "How it works"], ["/blog", "Blog"], ["/train-your-own-ai-agent", "Train your own AI agent"], ["/teams", "Plan an AI team"], ["/apps", "Apps"], ["/api-and-mcp", "Connect your AI"], ["/api-and-mcp#api", "Documentation"], ["/industries", "AI help by business"], ["/how-we-test", "How we test"]];
 const header = `<header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/#library">Find a task</a> · <a href="/roles">Hire an AI specialist</a> · <a href="/compose">Build a workflow</a> · <a href="/tools">Tools</a> · <a href="/minds">Minds</a> · <a href="/space">Team space</a> · <a href="/account" data-testid="account-link">My work</a></nav></header>`;
-// The job hubs use the app's own header (logo, name, the four main links), drawn without the app.
+// Plain pages (job hubs, business boards, How we test) use the app's header and footer, drawn without the app (lib/site-chrome.mjs).
 const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
 const logo = `<svg viewBox="0 0 24 24" aria-hidden="true" class="logo">${GLOBE.flatMap((row, y) => [...row].map((c, x) => (c === "." ? "" : `<rect x="${(x * 3.4 + 0.3).toFixed(1)}" y="${(y * 3.4 + 0.3).toFixed(1)}" width="2.9" height="2.9" fill="currentColor"${c === "+" ? ' opacity="0.32"' : ""}/>`))).join("")}</svg>`;
-const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><a href="/" class="brand" aria-label="AI Blocks, home">${logo}AI Blocks</a><nav class="hub-nav" aria-label="Main navigation"><a href="/#library">Find a task</a><a href="/roles">Hire an AI specialist</a><a href="/compose">Build a workflow</a><a href="/tools">Tools</a><a href="/minds">Minds</a><a href="/blog">Blog</a><a href="/space">Team space</a></nav></div></header>`;
 const footer = `<footer class="wrap small"><p>Free AI skills, workflows, prompts, minds and mini tools.</p><p>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" · ")} · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p><p>${INFO_PAGES.map(page => `<a href="${page.path}">${esc(page.label)}</a>`).join(" · ")}</p><p><a href="${emailLink()}">${SUPPORT_EMAIL}</a></p>${SOCIAL_PROFILES.length ? `<p>${SOCIAL_PROFILES.map((p) => `<a href="${esc(p.url)}" rel="me noopener">${esc(p.label)}</a>`).join(" · ")}</p>` : ""}</footer>`;
 
 // Pages that aren't blocks: their title and the line a search result shows.
@@ -604,7 +604,7 @@ function render(url, p, { plain = p.plain ?? false, noindex = false } = {}) {
   const body = p.content
     ? `<main class="wrap ${p.mainClass ?? "api-mcp-docs"}" data-prerendered>${header}${p.content}${footer}</main>`
     : p.hub
-    ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
+    ? `${staticHeader(url, logo)}<main id="main-content" class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${staticFooter()}<script defer src="/site-menu.js"></script>`
     : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
   // The loading cover shows this page's header and heading at once, styled (scripts/lib/page-shell.mjs). Home has its own.
   const picture = plain || url === "/" ? "" : pageShell({ logo, h1: esc(p.h1), body, content: p.content ?? "", mainClass: p.mainClass ?? "api-mcp-docs" });

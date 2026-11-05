@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { BLOG_PATH, blogIndexHtml, blogPostHtml } from "./lib/blog.mjs";
 import { Link, navigate } from "./lib/router";
+import { isStaticPage } from "./lib/site-nav.mjs";
 import "./blog.css";
 
 /** /blog and /blog/<slug>: the blog index and each article. The HTML comes from src/lib/blog.mjs, the same code
@@ -8,8 +9,6 @@ import "./blog.css";
 type Post = { slug: string; title: string; description: string; lede: string; category: string; keywords?: string[]; related?: string[]; minutes?: number; published?: string; updated?: string };
 const POSTS = Object.values(import.meta.glob<Post>("./content/blog/*.json", { eager: true, import: "default" }));
 const BODIES = import.meta.glob<string>("./content/blog/*.html", { query: "?raw", import: "default" });
-// Pages built only as plain HTML open with a normal page load; every other site link uses the in-app router.
-const STATIC_PAGES = ["/industries", "/how-we-test"];
 
 export default function BlogPage({ path }: { path: string }) {
   const slug = path === BLOG_PATH ? null : path.slice(BLOG_PATH.length + 1);
@@ -39,7 +38,7 @@ export default function BlogPage({ path }: { path: string }) {
     const href = link?.getAttribute("href") ?? "";
     if (link && href.startsWith("/") && !href.startsWith("//") && !link.hasAttribute("download") && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0) {
       const to = href.split(/[?#]/)[0];
-      if (!/\.[a-z0-9]+$/i.test(to) && !STATIC_PAGES.some(p => to === p || to.startsWith(`${p}/`))) { event.preventDefault(); navigate(href); }
+      if (!/\.[a-z0-9]+$/i.test(to) && !isStaticPage(to)) { event.preventDefault(); navigate(href); }
       return;
     }
     const button = target.closest<HTMLButtonElement>("button[data-copy]");

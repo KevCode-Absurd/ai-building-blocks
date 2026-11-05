@@ -152,7 +152,7 @@ test('crawlers get the same pages: prerendered HTML, sitemap entries, a route an
   const app = read('../src/App.tsx');
   assert.match(app, /isOutcomePath\(path\) \? \(\s*<OutcomesRoute/);
   assert.match(app, /!isOutcomePath\(path\)/, 'the pages load no library data');
-  assert.match(read('../src/SiteHeader.tsx'), /\["\/get-it-done", "Get a whole job done", "get-it-done"\]/);
+  assert.match(read('../src/lib/site-nav.mjs'), /\["\/get-it-done", "Get a whole job done", "get-it-done"\]/);
   // One name per destination: the header lists Build a workflow once; "get a whole job done" is offered from that page.
   assert.match(read('../src/ComposeRoute.tsx'), /<Link to="\/get-it-done"[^>]*>get a whole job done<\/Link>/);
 });

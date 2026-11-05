@@ -115,14 +115,15 @@ test('a free plan comes before sign-in; sign-in is asked only for AI plans and f
 test('one label for planning, and saved-work places are named the same everywhere', () => {
   const header = read('../src/SiteHeader.tsx');
   // The home hero button, header, footer and page title all say "Build a workflow".
-  assert.match(header, /to: "\/compose", label: "Build a workflow"/);
-  assert.match(header, /\["\/compose", "Build a workflow", "compose"\]/);
+  const nav = read('../src/lib/site-nav.mjs');
+  assert.match(nav, /\["\/compose", "Build a workflow", "nav-compose"\]/);
+  assert.match(nav, /\["\/compose", "Build a workflow", "compose"\]/);
   assert.match(read('../src/HomePage.tsx'), />Build a workflow <ArrowIcon/);
-  assert.match(header, /\["\/space", "Team space", "space"\]/);
+  assert.match(nav, /\["\/space", "Team space", "space"\]/);
   assert.match(header, /to="\/account"[^>]*data-testid="open-saved-work">My work[{<]/);
   assert.doesNotMatch(header, /My Account|My saved work|Plan a job/);
   assert.match(header, /rememberVisit\(path\)/);
-  assert.match(read('../src/SiteFooter.tsx'), /\["\/compose", "Build a workflow"\]/);
+  assert.match(nav, /FOOTER_GROUPS[\s\S]*\["\/compose", "Build a workflow", ""\]/);
   assert.match(read('../src/AccountPage.tsx'), /Open team space/);
   assert.match(read('../src/space/SpacePage.tsx'), /data-testid="space-work-link"/);
   assert.match(read('../src/HomePage.tsx'), /<YourWork \/>/);

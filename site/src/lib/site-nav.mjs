@@ -24,7 +24,7 @@ export const MENU_GROUPS = [
 ];
 
 /** Pages built only as plain HTML (scripts/lib/trust-pages.mjs): the app opens them with a normal page load. */
-export const STATIC_PAGES = ["/industries", "/how-we-test"];
+export const STATIC_PAGES = ["/industries", "/how-we-test", "/how-we-check-safety"];
 export const isStaticPage = (to) => STATIC_PAGES.some((p) => to === p || to.startsWith(`${p}/`));
 
 // The footer: three short columns, then the policies in the bottom row. [address, label, test id or ""]

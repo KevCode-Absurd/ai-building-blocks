@@ -113,6 +113,8 @@ export type Page = {
   works_best_with?: { tools?: { name: string; why: string }[]; inputs?: string[] };
   /** Public sources the block was built from (item.yaml credits). */
   credits?: { title: string; by: string; url: string; used: string }[];
+  /** The safety scan's date and this item's plain guardrails (tools/safety-scan.mjs, tools/lib/safety-guardrails.mjs). */
+  safety?: { checked: string; guardrails: string[] };
   /** For a mind: their big ideas, suggested council seats and the minds they pair well with. */
   ideas?: { title: string; text: string }[];
   hire?: { jobs: { title: string; text: string }[]; steps: { title: string; text: string }[]; questions: string[] };

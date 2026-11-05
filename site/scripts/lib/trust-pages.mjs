@@ -16,6 +16,7 @@ import { makeSearchDocument } from "../../src/lib/search-document.mjs";
 import { rankSpecialists } from "../../src/roles/specialist-matching.mjs";
 import { INDUSTRIES, INDUSTRIES_PATH, START_JOB, FALLBACK_JOB_PATH } from "../../src/trust-pages/industries.mjs";
 import { HOW_WE_TEST_PATH, howWeTestPage } from "../../src/trust-pages/how-we-test.mjs";
+import { safetyPage } from "../../src/trust-pages/safety-check.mjs";
 import { BOARDS, KEPT_PAGES } from "../../src/trust-pages/boards.mjs";
 import { boardPages } from "./board-pages.mjs";
 import { readFixes } from "./board-map.mjs";
@@ -23,6 +24,8 @@ import { readFixes } from "./board-map.mjs";
 const SITE = "https://useaiblocks.com";
 const SITE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const EVALS = path.join(SITE_ROOT, "src/outcomes/evals");
+// The safety scan's results (tools/safety-scan.mjs write), read for /how-we-check-safety.
+const SAFETY_FILE = path.resolve(process.env.CATALOGUE_ROOT || path.join(SITE_ROOT, "../catalogue-items"), "_safety.json");
 
 const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 export const kindPath = b => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
@@ -133,6 +136,7 @@ export async function trustPages({ cat, readPage, roles, tools, routeExists = ()
   const card = JSON.parse(fs.readFileSync(path.join(evalsDir, "scorecard.json"), "utf8"));
   const scoreFor = id => { const n = card.cases.filter(c => c.industry === id && typeof c.score === "number").length; return n && typeof card.industries?.[id] === "number" ? { count: n, average: card.industries[id] } : null; };
   const pages = [{ ...test, crumbs: [], hub: true }];
+  if (fs.existsSync(SAFETY_FILE)) pages.push({ ...safetyPage(JSON.parse(fs.readFileSync(SAFETY_FILE, "utf8"))), crumbs: [], hub: true });
   // The business boards own /industries and the industry pages they replaced; finance and engineering keep theirs.
   const byIndustry = Object.fromEntries(industries.map((ind) => [ind.slug, ind]));
   const kept = industries.filter((ind) => KEPT_PAGES.includes(ind.slug));

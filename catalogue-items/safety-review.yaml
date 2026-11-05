@@ -1,0 +1,1287 @@
+# Safety scan review decisions (tools/safety-scan.mjs). One entry per finding id: <slug>|<rule>|<file>|<sha8 of the line>.
+# decision: safe (false alarm, note says why) | note (shown on the item page) | fixed | block (withheld via quarantine.yaml).
+# First review 2026-11-05: every critical and high finding was read in context by Claude reviewers (one for text, one for code); a sample was spot-checked before merging.
+community-evidence-researcher|concealed-action|SKILL.md|a2427e2b:
+  decision: safe
+  note: Forbids silently running paid tools or bypassing access limits; tells the AI to explain limits.
+excel-input-form-builder|concealed-action|SKILL.md|214278b6:
+  decision: safe
+  note: Warns against silently deleting data; tells the AI to flag or list instead.
+excel-input-form-builder|concealed-action|tests/cases.json|035e50c4:
+  decision: safe
+  note: "Test expectation: flag duplicates and do not silently delete either."
+executive-action-register|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+executive-daily-digest|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+executive-due-task-drafts|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+executive-email-draft|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+executive-meeting-brief|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+arduino-connector|concealed-action|SKILL.md|8bf7db3b:
+  decision: safe
+  note: "Ordinary prose: port names alone do not tell the user which device is connected."
+booking-page-designer|concealed-action|SKILL.md|5c9b5202:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+cell-direction-velocity-analyst|concealed-action|SKILL.md|ba8d1594:
+  decision: safe
+  note: Describes a validation step that stops preprocessing from silently running twice.
+claude-app-builder|concealed-action|shared/evals/build-eval.md|afa171ce:
+  decision: safe
+  note: "Failure-modes list: do not force a framework on the user; also warns against running before the user says go."
+code-habits-reviewer|concealed-action|references/dry-orthogonality.md|7773dcd1:
+  decision: safe
+  note: Programming idiom 'ask, don't tell' in a code example.
+company-stock-analyst|concealed-action|references/05-returns-and-dupont.md|3cd6728f:
+  decision: safe
+  note: "Finance method: list one-off items and do not silently delete them."
+company-stock-analyst|concealed-action|references/19-ipo-mode.md|adddc8ef:
+  decision: safe
+  note: "Boundary: do not give a personal investment decision; present analysis instead."
+copilot-roundup|concealed-action|SKILL.md|50e96aa8:
+  decision: safe
+  note: Only asks the AI not to narrate each read of user-listed sources; the skill drafts only, never sends, and asks before reading private sources.
+curve-fitting-helper|concealed-action|references/interpreting-fit-results.md|9f032e2d:
+  decision: safe
+  note: "Neutrality rule: present metrics and let the user choose the fit."
+curve-fitting-helper|concealed-action|references/interpreting-fit-results.md|511cf9c8:
+  decision: safe
+  note: Requires asking the user before changing start points.
+customer-email-list-checker|concealed-action|SKILL.md|33b50d76:
+  decision: safe
+  note: Warns not to silently delete customers; hand the list to the email provider instead.
+design-interviewer|concealed-action|SKILL.md|585f9648:
+  decision: safe
+  note: Requires telling the user before overwriting glossary entries.
+directory-listing-planner|concealed-action|SKILL.md|9caeafe9:
+  decision: safe
+  note: "AI Blocks caveat: do not tell the user unverified rules are proven."
+driving-scenario-builder|concealed-action|references/workflow-08-lane-localization.md|822a551d:
+  decision: safe
+  note: Forbids silently skipping a step; always tell the user and ask how to proceed.
+exchange-or-refund-split-reader|concealed-action|SKILL.md|e037661d:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+marketing-claims-checker|concealed-action|SKILL.md|7082c8c6:
+  decision: safe
+  note: Requires asking the user before filling research gaps from web search or memory.
+narrated-video-maker|concealed-action|SKILL.md|710f0945:
+  decision: safe
+  note: "Best-practice list: confirm before installing; never silently change system dependencies."
+net-worth-calculator|concealed-action|SKILL.md|31e69e4d:
+  decision: safe
+  note: "Scope boundary: not a financial adviser, does not tell the user what to buy or sell."
+new-project-planner|concealed-action|SKILL.md|7d44029f:
+  decision: safe
+  note: Requires asking the user before writing Design.md.
+old-matlab-code-updater|concealed-action|SKILL.md|cd499492:
+  decision: safe
+  note: "Technical note: do not push the user to replace working subplot code."
+pi-asset-finder|concealed-action|SKILL.md|ab8b4837:
+  decision: safe
+  note: "Common-mistakes table: lists scanning without asking as a mistake; the fix is to ask first."
+portfolio-mix-optimizer|concealed-action|SKILL.md|0e6c2fe6:
+  decision: safe
+  note: "Boundary: calculation aid, not investment advice."
+prompt-injection-defender|concealed-action|SKILL.md|932332c2:
+  decision: safe
+  note: "Security guidance: do not silently delete evidence; quarantine and follow policy."
+small-model-distillation|concealed-action|SKILL.md|ab6e767e:
+  decision: safe
+  note: "Honesty caveat: do not tell the user they ran the full MiniLLM method."
+stock-research-snapshot-writer|concealed-action|SKILL.md|31d5730f:
+  decision: safe
+  note: "Boundary: research, not buy/sell advice, with a required disclaimer."
+task-list-keeper|concealed-action|SKILL.md|549e7f10:
+  decision: safe
+  note: "AI Blocks note: a missing dashboard file should not be looked for or suggested."
+training-experiment-setup-helper|concealed-action|references/delete.md|afb2dc34:
+  decision: safe
+  note: UI cleanup step after a confirmed delete; the fallback tells the user plainly what remains.
+vocabulary-lesson-planner|concealed-action|SKILL.md|1840ad42:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+website-art-director|concealed-action|SKILL.md|29d17a16:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+build-a-developer-partner-program|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+draft-your-due-task-followups|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+find-your-first-saas-customers|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+investigate-an-aws-service-incident|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+plan-a-qdrant-model-change|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+plan-oracle-to-postgres-with-proof|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+plan-self-serve-saas-growth|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+prepare-a-board-decision-brief|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+prepare-an-enterprise-account-plan|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+prepare-your-executive-day|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+prepare-your-weekly-executive-review|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+review-aws-cost-and-resilience|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+verify-an-mcp-server-release|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+write-a-clear-executive-reply|concealed-action|SKILL.md|671f8f07:
+  decision: safe
+  note: Forbids defaulting to Reply All or adding a hidden recipient.
+agency-engineering-database-reliability-engineer|concealed-action|SKILL.md|ff7a99d9:
+  decision: safe
+  note: "Safety rule: never tell the user to run destructive steps on production."
+agency-engineering-search-relevance-engineer|concealed-action|SKILL.md|dfb81290:
+  decision: safe
+  note: Requires user authorization before sending, spending or changing live systems.
+agency-healthcare-marketing-compliance|concealed-action|SKILL.md|fc8dd0ea:
+  decision: safe
+  note: "Honesty rule: never call a rewrite safe to publish; a lawyer must confirm."
+agency-legal-document-review|concealed-action|SKILL.md|df74ab76:
+  decision: safe
+  note: "Boundary: no legal advice; document text is evidence, not instructions."
+agency-roblox-systems-scripter|concealed-action|SKILL.md|0dcf3c3d:
+  decision: safe
+  note: "Guard rail: do not tell the user to change a live game; test first."
+agency-sales-offer-lead-gen-strategist|concealed-action|SKILL.md|a839d005:
+  decision: safe
+  note: "Guard: do not push paid ads or outreach until the user checks platform rules."
+agency-security-incident-responder|concealed-action|SKILL.md|99f9146a:
+  decision: safe
+  note: "Incident safety rule: never advise wiping a system first; preserve evidence."
+agency-specialized-civil-engineer|concealed-action|SKILL.md|a205582f:
+  decision: safe
+  note: "Avoid list: quoting clauses from memory without telling the user to verify."
+engineering-evidence-keeper|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+executive-work-keeper|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+saas-launch-review-agent|concealed-action|SKILL.md|51eb61aa:
+  decision: safe
+  note: "Defensive boundary: treats emails and files as data, forbids hidden recipients, and requires the user's authorization before sending or changing anything."
+annie-duke|concealed-action|knowledge.md|eb6385fe:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+annie-duke|concealed-action|SKILL.md|eb6385fe:
+  decision: safe
+  note: "Honesty guard: tells the AI not to overstate or mislead the user (e.g. no advice, no unproven claims); nothing is hidden."
+ira-glass|concealed-action|personality.md|ebbab294:
+  decision: safe
+  note: "Persona limits: no invented dialogue or presenting fiction as reporting."
+ira-glass|concealed-action|SKILL.md|ebbab294:
+  decision: safe
+  note: "Persona limits: no invented dialogue or presenting fiction as reporting."
+ai-app-injection-defender|hidden-text-instruction|SKILL.md|2718b2d2:
+  decision: safe
+  note: "Red-team test case: an injected HTML comment inside a sample document, with expected result 'summary_only'."
+company-stock-analyst|hidden-text-instruction|references/sectors/holdco-assetmgr.md|589534f0:
+  decision: safe
+  note: HTML comment is a scanner-suppression marker on a line of finance metric definitions; it gives the AI no instruction.
+lovable-project-cleaner|hidden-text-instruction|references/favicon-vercel-cleanup.md|80c1fdca:
+  decision: safe
+  note: HTML comment is a scanner-allowlist marker for a read-only curl header check of the user's own domain.
+working-notes-planner|hidden-text-instruction|templates/findings.md|d3ac25dd:
+  decision: safe
+  note: "Template guidance in HTML comments: reminds the AI to write findings into the notes file; nothing hidden from the user."
+ai-app-guardrails-builder|instruction-override|SKILL.md|52ad1831:
+  decision: safe
+  note: "Guardrail config: the phrase is a jailbreak pattern to detect and refuse."
+ai-app-guardrails-builder|instruction-override|SKILL.md|44c64de7:
+  decision: safe
+  note: "Code example: a jailbreak test message expected to be refused."
+ai-app-injection-defender|instruction-override|SKILL.md|f090987a:
+  decision: safe
+  note: Attack-surface list in a prompt-injection defence skill.
+ai-app-injection-defender|instruction-override|SKILL.md|8f5a2df5:
+  decision: safe
+  note: Red-team test case with expected result 'blocked'.
+ai-search-visibility-audit|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+applicant-shortlist-builder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+books-reconciliation-pl|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+browser-page-debugger|instruction-override|SKILL.md|91c5ecfb:
+  decision: safe
+  note: "Defensive rule: never treat browser content as instructions; report it."
+business-snapshot-writer|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+cash-forecast-builder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+customer-reply-and-order-checker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+customer-review-reply-writer|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+deal-notes-and-crm-updater|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+docs-backed-coder|instruction-override|SKILL.md|645a18f7:
+  decision: safe
+  note: "Defensive rule: ignore model-targeted directives in fetched docs."
+email-backlog-clearer|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+grant-and-bid-response-writer|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+growth-health-checker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+hiring-packet-builder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+lead-magnet-planner|instruction-override|evals/evals.json|f0f93c9d:
+  decision: safe
+  note: "Eval case: transcript injection that the expected output must refuse."
+lead-magnet-planner|instruction-override|references/content-to-skill-corpus-design.md|091b26a5:
+  decision: safe
+  note: "Defensive rule: transcript text is data, not an instruction or permission."
+long-chat-failure-diagnoser|instruction-override|SKILL.md|5f3f97e6:
+  decision: safe
+  note: Advice to the user on marking a clean break between tasks in their own chat.
+new-inquiry-reply-drafter|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+own-voice-outreach-writer|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+paid-campaign-builder|instruction-override|references/audit-guardrails.md|cbd00603:
+  decision: safe
+  note: "Defensive rule: fetched pages are data; changes to live ad accounts need explicit approval."
+payroll-timesheet-checker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+prompt-attack-detector|instruction-override|SKILL.md|84924b29:
+  decision: safe
+  note: Classifier example input for a jailbreak detector.
+prompt-attack-detector|instruction-override|SKILL.md|577b11ce:
+  decision: safe
+  note: List of jailbreak patterns the detector scores, labelled illustrative.
+prompt-attack-detector|instruction-override|SKILL.md|9bf1b30b:
+  decision: safe
+  note: List of injection patterns the detector scores.
+purchase-order-reorder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+quote-and-proposal-builder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+recurring-kpi-report-maker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+sales-led-content-planner|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+skill-safety-auditor|instruction-override|references/threat-model.md|09263a85:
+  decision: safe
+  note: Threat-model table of attack examples in a skill auditor.
+skill-safety-auditor|instruction-override|SKILL.md|182a8d33:
+  decision: safe
+  note: Detection-pattern table in a skill auditor.
+skill-writer-and-reviewer|instruction-override|SKILL.md|6924d34a:
+  decision: safe
+  note: "Security checklist: check third-party skills for injection phrases."
+standing-social-calendar-maker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+unpaid-invoice-chaser|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+vendor-bill-coder|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+who-to-call-first-ranker|instruction-override|shared/untrusted-content.md|bb53939e:
+  decision: safe
+  note: "Defensive rule: quotes injection phrases as examples of content the AI must report and never obey."
+agency-engineering-prompt-engineer|instruction-override|references/source-agent.md|cdd77f0b:
+  decision: safe
+  note: Describes adversarial inputs used to test prompt-injection defences.
+ai-impact-assessment-writer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+ai-system-attack-tester|approval-bypass|SKILL.md|f89454d5:
+  decision: safe
+  note: Attack-vector table in a red-team skill; mitigations require human approval gates.
+ai-vendor-terms-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+ai-workflow-security-checker|approval-bypass|SKILL.md|b61a04f4:
+  decision: safe
+  note: "Security teaching: explains why --yolo and full-access sandboxes are dangerous."
+ai-workflow-security-checker|approval-bypass|SKILL.md|1759daa1:
+  decision: safe
+  note: "Detection table: dangerous sandbox configs to flag in CI workflows."
+ai-workflow-security-checker|approval-bypass|SKILL.md|2b7f97f4:
+  decision: safe
+  note: "Severity rule: dangerous modes raise a finding's severity."
+article-cover-maker|approval-bypass|references/config/first-time-setup.md|12e966fe:
+  decision: safe
+  note: Optional quick-mode preference the user picks; default and recommended answer is to confirm.
+article-cover-maker|approval-bypass|references/config/preferences-schema.md|b8f79c44:
+  decision: safe
+  note: "Preference schema: quick_mode defaults to false (confirm)."
+article-cover-maker|approval-bypass|references/config/preferences-schema.md|3d7d11dc:
+  decision: safe
+  note: "Preference schema: quick_mode defaults to false (confirm)."
+article-cover-maker|approval-bypass|SKILL.md|55973402:
+  decision: safe
+  note: Confirmation policy defaults to confirming before generating; skipping happens only when the user explicitly asks, and assumptions are stated.
+article-cover-maker|approval-bypass|SKILL.md|c16fb218:
+  decision: safe
+  note: User-chosen --quick flag only skips confirming image style choices.
+article-illustrator|approval-bypass|SKILL.md|bef2ce0f:
+  decision: safe
+  note: Confirmation policy defaults to confirming before generating; skipping happens only when the user explicitly asks, and assumptions are stated.
+board-minutes-drafter|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+board-written-consent-drafter|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+cease-and-desist-letter-helper|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/04-subagents/README.txt|5d7522c9:
+  decision: safe
+  note: Lesson text describing Claude Code's own defence that scans subagent output for injection.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/09-advanced-features/README.txt|32f6140a:
+  decision: safe
+  note: Lesson text documenting what the skip-permissions flag covers; reference material the skill says is not operating instructions.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|07ed54d6:
+  decision: safe
+  note: CLI reference table describing the purge command's flags.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|7e926ea6:
+  decision: safe
+  note: CLI reference table listing the skip-permissions flag next to safer options.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|630eb48b:
+  decision: safe
+  note: CLI reference row, itself marked 'use only in sandboxes'.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|99a168c7:
+  decision: safe
+  note: Env-var reference describing a safety timeout on dangerous rm prompts.
+claude-code-learning-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|486cd3d1:
+  decision: note
+  note: Its lesson notes suggest a flag that turns off your AI's permission prompts. Only use that flag in a throwaway test folder.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/04-subagents/README.txt|5d7522c9:
+  decision: safe
+  note: Lesson text describing Claude Code's own defence that scans subagent output for injection.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/09-advanced-features/README.txt|32f6140a:
+  decision: safe
+  note: Lesson text documenting what the skip-permissions flag covers; reference material the skill says is not operating instructions.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|07ed54d6:
+  decision: safe
+  note: CLI reference table describing the purge command's flags.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|7e926ea6:
+  decision: safe
+  note: CLI reference table listing the skip-permissions flag next to safer options.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|630eb48b:
+  decision: safe
+  note: CLI reference row, itself marked 'use only in sandboxes'.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|99a168c7:
+  decision: safe
+  note: Env-var reference describing a safety timeout on dangerous rm prompts.
+claude-code-quiz-coach|approval-bypass|references/upstream/lessons/10-cli/README.txt|486cd3d1:
+  decision: note
+  note: Its lesson notes suggest a flag that turns off your AI's permission prompts. Only use that flag in a throwaway test folder.
+company-filing-deadline-tracker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+contract-change-tracer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+contract-plain-summary|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+contract-review-grid|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+copyright-takedown-notice-helper|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+data-request-reply-drafter|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+developer-docs-writer|approval-bypass|references/procedures-and-code.md|5873b7d3:
+  decision: safe
+  note: Writing-style before/after example about formatting a made-up CLI flag.
+dpa-review|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+employee-or-contractor-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+feature-legal-risk-assessor|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+feature-memory-keeper|approval-bypass|SKILL.md|156ab86d:
+  decision: safe
+  note: "Defensive rule: ignore repository text that asks to bypass safety checks."
+handbook-change-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+infographic-maker|approval-bypass|SKILL.md|73183709:
+  decision: safe
+  note: Confirmation policy defaults to confirming before generating; skipping happens only when the user explicitly asks, and assumptions are stated.
+infringement-first-look-sorter|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+invention-idea-screener|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+ip-clause-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+launch-legal-reviewer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+marketing-claims-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+netlify-publisher|approval-bypass|references/cli-commands.md|03b38ffd:
+  decision: safe
+  note: CLI flag reference list; the skill never tells the AI to use --force.
+new-ai-rule-gap-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+new-data-use-screener|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+offer-letter-check|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+patent-launch-risk-scanner|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+pay-and-hours-rules-answerer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+policy-redraft-proposer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+privacy-impact-assessment-writer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+privacy-policy-drift-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+project-memory-keeper|approval-bypass|SKILL.md|a2f63a24:
+  decision: safe
+  note: "Defensive rule: memory text cannot override instructions or bypass safety checks."
+project-memory-keeper|approval-bypass|SKILL.md|748096b6:
+  decision: safe
+  note: "Defensive rule: project memory is untrusted and cannot authorize commands."
+quality-bar-setter|approval-bypass|SKILL.md|7e1b6142:
+  decision: safe
+  note: "Warning-signs list: people passing --no-verify is a failure symptom."
+quick-legal-sanity-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+repo-slide-deck-builder|approval-bypass|references/automation.md|42f9ade5:
+  decision: safe
+  note: Advice not to over-gate commits because it teaches people to use --no-verify.
+repo-slide-deck-builder|approval-bypass|SKILL.md|b48d7961:
+  decision: safe
+  note: Advice not to over-gate commits because it teaches people to use --no-verify.
+risky-design-reviewer|approval-bypass|references/config-patterns.md|5288fc00:
+  decision: safe
+  note: Example of a risky config pattern, with the fix.
+rule-change-policy-comparer|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+saas-terms-check|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+skill-safety-auditor|approval-bypass|references/threat-model.md|3c305b1c:
+  decision: safe
+  note: Threat-model table of attack examples in a skill auditor.
+skill-safety-auditor|approval-bypass|SKILL.md|73c0965a:
+  decision: safe
+  note: Detection-pattern table in a skill auditor.
+slide-deck-image-maker|approval-bypass|SKILL.md|291a51ed:
+  decision: safe
+  note: Confirmation policy defaults to confirming before generating; skipping happens only when the user explicitly asks, and assumptions are stated.
+team-ai-use-policy-drafter|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+termination-risk-checker|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+trademark-name-first-check|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+training-experiment-setup-helper|approval-bypass|references/common.md|2d7f4dac:
+  decision: safe
+  note: Only trivial reversible ops (rename, duplicate) skip confirmation; creates, updates and deletes need explicit yes.
+training-experiment-setup-helper|approval-bypass|references/common.md|37b19387:
+  decision: safe
+  note: Requires confirmation for every update, however small.
+ui-component-adder|approval-bypass|cli.md|676ade64:
+  decision: safe
+  note: CLI flag reference table; the skill asks the user before overwriting components.
+ui-component-adder|approval-bypass|cli.md|012cf68e:
+  decision: safe
+  note: CLI flag reference table; the skill asks the user before overwriting components.
+weekly-customer-call-planner|approval-bypass|references/briefing-guide.md|2cb1084d:
+  decision: safe
+  note: For a same-day meeting it skips confirming the meeting list and does read-only prep; nothing is sent or changed.
+workplace-investigation-guide|approval-bypass|setup-interview/SKILL.md|da9f8452:
+  decision: safe
+  note: "Setup interview branching: skips questions about a law firm's approval chain for solo lawyers; it does not skip any approval of AI actions."
+agency-marketing-carousel-growth-engine|approval-bypass|SKILL.md|2f454847:
+  decision: safe
+  note: "Adapter rule overriding the source profile: ignore its skip-confirmation and auto-posting instructions."
+claude-app-builder|role-hijack|shared/managed-agents-core.md|d670cf2e:
+  decision: safe
+  note: "API docs: rolling back a system prompt version."
+company-stock-analyst|role-hijack|references/13-situations.md|39e458fa:
+  decision: safe
+  note: "Finance prose: 'you are no longer valuing a business'."
+employee-wellbeing-program|role-hijack|content/understanding-employee-wellbeing-for-strategic-hr-leadership.md|0416ec7d:
+  decision: safe
+  note: HR guide prose addressed to the reader, not an identity change.
+pay-benefits-package|role-hijack|content/understanding-total-rewards-for-strategic-compensation-management.md|df70e57d:
+  decision: safe
+  note: HR guide prose addressed to the reader, not an identity change.
+succession-plan-builder|role-hijack|content/understanding-succession-planning-for-strategic-hr-leadership.md|3e6827aa:
+  decision: safe
+  note: HR guide prose addressed to the reader, not an identity change.
+thich-nhat-hanh|role-hijack|playbook.md|8657254f:
+  decision: safe
+  note: Persona advice about anger ('no longer carried by it'), not an identity change.
+thich-nhat-hanh|role-hijack|SKILL.md|8657254f:
+  decision: safe
+  note: Persona advice about anger ('no longer carried by it'), not an identity change.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|273cecb0:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|7ff713c1:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|0cb27f04:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|916f0e02:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|5b001a6a:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|ebb865c9:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|b834e292:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|cf0bc5ba:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|3ad6eb74:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|29bba852:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|e61bc8dc:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|6b21fbce:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+telemetry-detection-rule-builder|credential-theft|references/agency-security-threat-detection-engineer.md|002c2ff7:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+claude-app-builder|credential-theft|shared/evals/report/build-report-lite.mjs|d737cf84:
+  decision: safe
+  note: Code comment explaining a symlink defense that stops ~/.ssh/id_rsa from being read.
+claude-app-builder|credential-theft|shared/evals/report/runner-scaffold.mjs|4e3b19a7:
+  decision: safe
+  note: Code comment explaining a symlink defense that stops ~/.ssh/id_rsa from being read.
+claude-code-learning-coach|credential-theft|references/upstream/lessons/09-advanced-features/README.txt|20336398:
+  decision: safe
+  note: Claude Code sandbox config that masks ~/.aws/credentials (protects it), shown in a lesson.
+claude-code-quiz-coach|credential-theft|references/upstream/lessons/09-advanced-features/README.txt|20336398:
+  decision: safe
+  note: Claude Code sandbox config that masks ~/.aws/credentials (protects it), shown in a lesson.
+github-actions-attack-finder|credential-theft|references/runner-infrastructure.md|5307773b:
+  decision: safe
+  note: Security reference illustrating what an attacker could do on a self-hosted runner; not instructions to run.
+github-actions-attack-finder|credential-theft|references/runner-infrastructure.md|9be906c1:
+  decision: safe
+  note: Security reference illustrating what an attacker could do on a self-hosted runner; not instructions to run.
+github-actions-attack-finder|credential-theft|references/runner-infrastructure.md|5ed96d13:
+  decision: safe
+  note: Security reference illustrating what an attacker could do on a self-hosted runner; not instructions to run.
+google-workspace-cli|credential-theft|references/troubleshooting.md|d8212818:
+  decision: safe
+  note: Troubleshooting step to unlock the user's own login keychain so the CLI can store its token; macOS prompts for the password.
+rented-gpu-server-setup-helper|credential-theft|references/advanced-usage.md|2fe12619:
+  decision: safe
+  note: Adds the user's own public key (placeholder) to authorized_keys on their rented GPU server; standard SSH setup.
+rented-gpu-server-setup-helper|credential-theft|references/troubleshooting.md|0643defa:
+  decision: safe
+  note: Read-only check of authorized_keys on the user's own rented server.
+rented-gpu-server-setup-helper|credential-theft|SKILL.md|4f64ca91:
+  decision: safe
+  note: Adds the user's own public key (placeholder) to authorized_keys on their rented GPU server; standard SSH setup.
+skill-safety-auditor|credential-theft|SKILL.md|64dd686f:
+  decision: safe
+  note: Example finding output from the safety auditor showing a flagged pattern.
+agency-security-penetration-tester|credential-theft|references/source-agent.md|cb8233cf:
+  decision: safe
+  note: Pentest methodology checklist item (Skeleton Key) in documentation; no runnable code.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|273cecb0:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|7ff713c1:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|0cb27f04:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|916f0e02:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|5b001a6a:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|ebb865c9:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|b834e292:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|cf0bc5ba:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|3ad6eb74:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|29bba852:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|e61bc8dc:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|6b21fbce:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+agency-security-threat-detection-engineer|credential-theft|references/source-agent.md|002c2ff7:
+  decision: safe
+  note: Detection-engineering playbook describing LSASS dumping to hunt for it (Sysmon/Splunk queries); no credential access.
+skill-safety-auditor|encoded-execution|references/threat-model.md|2fc93667:
+  decision: safe
+  note: Threat-model / auditor signature table showing what malicious obfuscation looks like; not executed.
+skill-safety-auditor|encoded-execution|references/threat-model.md|7c244664:
+  decision: safe
+  note: Threat-model / auditor signature table showing what malicious obfuscation looks like; not executed.
+skill-safety-auditor|encoded-execution|SKILL.md|f6451160:
+  decision: safe
+  note: Threat-model / auditor signature table showing what malicious obfuscation looks like; not executed.
+cloudflare-publisher|exfil-host|references/pages-functions/patterns.md|c302e1c3:
+  decision: safe
+  note: Placeholder webhook.site/... URL in a Cloudflare docs example of waitUntil background fetch.
+shopify-app-builder|exfil-host|SKILL.md|b5c40b17:
+  decision: safe
+  note: Placeholder ngrok tunnel URL in a Shopify env example (your-tunnel-url).
+ad-account-audit|remote-shell|SKILL.md|82ab07a8:
+  decision: safe
+  note: Rule telling the AI to refuse pipe-to-shell installs.
+claude-app-builder|remote-shell|shared/managed-agents-onboarding-from-url.md|fbe52c8e:
+  decision: safe
+  note: Rule telling the AI never to run curl | sh lines from fetched pages.
+claude-code-learning-coach|remote-shell|references/upstream/lessons/06-hooks/README.txt|869ec260:
+  decision: safe
+  note: Lesson text listing curl | bash as an action Claude Code blocks or never allows.
+claude-code-learning-coach|remote-shell|references/upstream/lessons/09-advanced-features/README.txt|5aa72d85:
+  decision: safe
+  note: Lesson text listing curl | bash as an action Claude Code blocks or never allows.
+claude-code-learning-coach|remote-shell|references/upstream/lessons/10-cli/README.txt|5031e61a:
+  decision: note
+  note: Its lessons show Anthropic's install script from claude.ai. Check the address before you run it.
+claude-code-learning-coach|remote-shell|references/upstream/lessons/10-cli/README.txt|e42c82f7:
+  decision: note
+  note: Its lessons show Anthropic's install script from claude.ai. Check the address before you run it.
+claude-code-quiz-coach|remote-shell|references/upstream/lessons/06-hooks/README.txt|869ec260:
+  decision: safe
+  note: Lesson text listing curl | bash as an action Claude Code blocks or never allows.
+claude-code-quiz-coach|remote-shell|references/upstream/lessons/09-advanced-features/README.txt|5aa72d85:
+  decision: safe
+  note: Lesson text listing curl | bash as an action Claude Code blocks or never allows.
+claude-code-quiz-coach|remote-shell|references/upstream/lessons/10-cli/README.txt|5031e61a:
+  decision: note
+  note: Its lessons show Anthropic's install script from claude.ai. Check the address before you run it.
+claude-code-quiz-coach|remote-shell|references/upstream/lessons/10-cli/README.txt|e42c82f7:
+  decision: note
+  note: Its lessons show Anthropic's install script from claude.ai. Check the address before you run it.
+cloudflare-publisher|remote-shell|references/sandbox/patterns.md|d4ca82b3:
+  decision: note
+  note: Its sandbox example runs the code-server install script from code-server.dev. Check the address before you use it.
+crowdsec-protection-checker|remote-shell|references/troubleshooting.md|949bfc01:
+  decision: note
+  note: Its fix steps run CrowdSec's install script from crowdsec.net as an admin. Check the address before you run it.
+customer-feedback-report-from-survey-tools|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+customer-message-tone-and-urgency-review|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+customer-support-message-translator|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+delighted-and-satismeter-survey-assistant|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+developer-docs-writer|remote-shell|references/audit-checklist.md|b02d3d42:
+  decision: safe
+  note: Fictional 'shipd' README used as a bad-writing example in a docs audit; not a real installer.
+dialpad-and-leexi-call-summarizer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+freshdesk-ticket-priority-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-and-hubspot-contact-check|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-and-hubspot-customer-brief|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-bug-report-writer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-duplicate-ticket-finder|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-priority-customer-ticket-brief|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-refund-review-brief|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-response-deadline-checker|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-satisfaction-follow-up-writer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-shift-handover-writer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-support-metrics-report|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-support-queue-action-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-support-reply-writer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-ticket-priority-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-ticket-tag-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-to-linear-issue-handover|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+gorgias-weekly-support-report|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+intercom-conversation-action-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+multilingual-narrator|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+music-composer|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+noisy-audio-cleaner|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+notion-help-article-finder|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+render-publisher|remote-shell|SKILL.md|04267dd7:
+  decision: note
+  note: Its setup can run Render's install script from Render's GitHub. Check the address before you run it.
+rented-gpu-server-setup-helper|remote-shell|references/troubleshooting.md|8c31c385:
+  decision: note
+  note: Its fix steps run Lambda's driver install script from lambdalabs.com. Check the address before you run it.
+seo-auditor|remote-shell|README.md|a290a7e5:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|README.md|87847472:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|README.md|deefa868:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|README.md|d30035ba:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|a290a7e5:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|87847472:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|8d5febac:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|deefa868:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|61d0ab27:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+seo-auditor|remote-shell|wiki/Installation.md|d30035ba:
+  decision: note
+  note: Its setup runs an install script from the author's GitHub without a fixed version. Read the script before you run it.
+sequencing-pipeline-runner|remote-shell|references/installation.md|41b89a4d:
+  decision: note
+  note: Its setup runs Nextflow's install script from get.nextflow.io. Check the address before you run it.
+sequencing-pipeline-runner|remote-shell|scripts/check_environment.py|dbffc780:
+  decision: note
+  note: Its setup runs Nextflow's install script from get.nextflow.io. Check the address before you run it.
+sequencing-pipeline-runner|remote-shell|SKILL.md|2cbf7bd3:
+  decision: note
+  note: Its setup runs Nextflow's install script from get.nextflow.io. Check the address before you run it.
+skill-safety-auditor|remote-shell|references/threat-model.md|f94b590f:
+  decision: safe
+  note: Threat-model example of a malicious pipe-to-shell line, shown so the auditor can detect it.
+skill-safety-auditor|remote-shell|references/threat-model.md|55e0a374:
+  decision: safe
+  note: Threat-model example of a malicious pipe-to-shell line, shown so the auditor can detect it.
+sound-effects-designer|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+subtitle-and-transcript-maker|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+support-chatbot-conversation-review|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+support-issue-cause-investigator|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+support-reply-tone-editor|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+support-ticket-thread-summarizer|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+video-dubbing-editor|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+voice-assistant-builder|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+voice-swap-editor|remote-shell|references/installation.md|82df44f5:
+  decision: note
+  note: Its setup can run ElevenLabs' install script from ElevenLabs' GitHub. Check the address before you run it.
+whatsapp-support-reply-assistant|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+zendesk-ticket-priority-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+zoho-desk-ticket-priority-planner|remote-shell|README.md|1ff369f3:
+  decision: note
+  note: Its setup runs Composio's install script from composio.dev. Check the address before you run it.
+biology-model-builder|compiled-code|scripts/addAndPositionCompartment.p|410f2fc3:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/buildLayoutContext.p|7fa5825d:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/checkDiagramLayout.p|c2a47395:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/computeSafeReactionPosition.p|7d3d53f6:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/getModelByUUID.p|b504632e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/isAppOpen.p|6c55ac94:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/lineIntersectsRect.p|a65f42df:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/loadViaBuilder.p|651708b1:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/openLiveBuilder.p|51d0d515:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/positionAncillaryBlocks.p|1e525547:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/queryGridForLine.p|a4dd08ca:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/repositionAllReactions.p|5c9c999d:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/saveViaBuilder.p|613c276d:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-builder|compiled-code|scripts/updateContextBlock.p|33edf0e4:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+biology-model-simulator|compiled-code|scripts/getModelByUUID.p|b504632e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/getAddOnDetails.p|a0bd1a7e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/getDeviceAddOns.p|e28d6993:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/getDeviceDetails.p|a11c53cc:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/getDeviceSetupInfo.p|3e86bc08:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/hardwareDeviceCache.p|a784bdb5:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/isRequiredAddOnsInstalled.p|85e22cc7:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+connected-hardware-finder|compiled-code|scripts/listHardwareDevices.p|f1481dac:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+curve-fitting-helper|compiled-code|scripts/CurveFitterAppController.p|f2aa1f03:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+curve-fitting-helper|compiled-code|scripts/getFittypeTable.p|142d739b:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+data-classifier-comparer|compiled-code|scripts/helpers/count_categorical_levels.p|63fca900:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+data-classifier-comparer|compiled-code|scripts/helpers/stratified_subsample.p|adc349c7:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+gpu-code-speed-tuner|compiled-code|scripts/extractDiagnostics.p|fd998a05:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+live-script-writer|compiled-code|scripts/executeLiveScript.p|dfdefe51:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-app-builder|compiled-code|scripts/+module/+backgroundtask/BackgroundTaskModule.p|cd72473a:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-app-builder|compiled-code|scripts/+module/AppBuilderModule.p|06e93c5b:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-app-builder|compiled-code|scripts/AppDesignerAgentInterface.p|ed00fed5:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-app-builder|compiled-code|scripts/MlappBackend.p|2d611480:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-app-builder|compiled-code|scripts/PlainTextBackend.p|94d419ec:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/DocUtilities.p|3c827be3:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/extract_page_slugs.p|f3632dc6:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/fetch_doc_page.p|f20a1dea:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/fetch_product_index.p|d8e9cb4e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/find_replacement.p|87672ea3:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+matlab-docs-lookup-helper|compiled-code|scripts/get_local_function_list.p|b992c44e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/AlertDialogController.p|1cf04782:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/AppController.p|b146a6ca:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/AppControllerBase.p|b5d1141d:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/AutoDismissConfirmDialogController.p|340e204e:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/CoderExportStubs.p|356fee80:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/CustomModelController.p|856d6d0f:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ExperimentExportStub.p|8833d7fd:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ExplainPlotController.p|17f6e9a6:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ExportController.p|d66c8444:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ImportController.p|b3a9ed84:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ImportTestDataStubView.p|e39f2efb:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ModelOptionsController.p|3c07c5f1:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/NewSessionDialogController.p|e585042c:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ResultsPlotController.p|a2ddc62b:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/SessionController.p|d0e17627:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+no-code-model-trainer|compiled-code|scripts/+mlearnapp/+internal/+appcontroller/ToolstripController.p|6ce5aac0:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+parallel-cluster-finder|compiled-code|scripts/discoverClusters.p|cfc4b236:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/expandBlockMap.p|fb8fc2eb:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/lambdaSequence.p|4d5fd04b:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/lassoFeatureRanking.p|d6a43cae:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/mrmrFeatureRanking.p|827bc7af:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/mutualInformationPanel.p|4c1fa90b:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/ncaFeatureRanking.p|4d97df48:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/oobFeatureRanking.p|64bb2581:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+prediction-feature-picker|compiled-code|scripts/scoreFeaturePanel.p|24aebcde:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+training-experiment-setup-helper|compiled-code|scripts/+experiments/+internal/AgentFrontendBridge.p|80d4baca:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+training-experiment-setup-helper|compiled-code|scripts/+experiments/+internal/AppController.p|bdd2db0f:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+training-experiment-setup-helper|compiled-code|scripts/manageExperimentHelpers.p|addfc350:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canBaudRateScanActive.p|9d16fe97:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canBaudRateScanPassive.p|18ac4fe9:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canBurstDetection.p|066698cf:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canBusLoadCalc.p|b45bf617:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canChannelHealthCheck.p|e1851536:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canCycleTimeAnalysis.p|229e5ce3:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canDiagnosticProbe.p|ad7c132f:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canHardwareDiscovery.p|ae559cfe:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canLoopbackSelfTest.p|7a94aead:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canSupportSummary.p|761f17c4:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+vehicle-network-setup-helper|compiled-code|scripts/can/troubleshooting/canTrafficOverview.p|7aa10cb4:
+  decision: note
+  note: It includes compiled MATLAB files from MathWorks that can't be read. Get them from MathWorks' own repository if unsure.
+terraform-setup-builder|credential-in-file|scripts/tf_security_scanner.py|4038809f:
+  decision: safe
+  note: AWS documented fake example key (AKIAIOSFODNN7EXAMPLE) inside a demo Terraform file for the scanner.
+claude-app-builder|destructive-command|shared/managed-agents-tools.md|6f9e63a7:
+  decision: safe
+  note: Example API event showing a risky rm -rf being denied by the permission evaluator.
+claude-code-learning-coach|destructive-command|references/upstream/lessons/06-hooks/README.txt|3e14dbb2:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-learning-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|ff126d16:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-learning-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|7e889440:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-learning-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|bf0bc34f:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-learning-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|32f6140a:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-quiz-coach|destructive-command|references/upstream/lessons/06-hooks/README.txt|3e14dbb2:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-quiz-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|ff126d16:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-quiz-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|7e889440:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-quiz-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|bf0bc34f:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+claude-code-quiz-coach|destructive-command|references/upstream/lessons/09-advanced-features/README.txt|32f6140a:
+  decision: safe
+  note: Lesson text listing commands Claude Code blocks or denies (hooks, auto mode, hard_deny); protective.
+copilot-mcp-implementation-security-review|destructive-command|SKILL.md|737aad99:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+copilot-secret-scanning|destructive-command|references/alerts-and-remediation.md|6be6828f:
+  decision: note
+  note: Its cleanup steps rewrite Git history and force-push. Change the leaked key and warn your team first.
+dev-container-setup-builder|destructive-command|references/dockerfile-best-practices.md|675b3846:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+dev-container-setup-builder|destructive-command|references/dockerfile-best-practices.md|35521fd2:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+docker-setup-builder|destructive-command|references/dockerfile-best-practices.md|762392f4:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+docker-setup-builder|destructive-command|references/dockerfile-best-practices.md|4986a377:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+docker-setup-builder|destructive-command|scripts/dockerfile_analyzer.py|519c5082:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+docker-setup-builder|destructive-command|SKILL.md|73d16b7d:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+matlab-database-helper|destructive-command|SKILL.md|2fba135c:
+  decision: safe
+  note: Rule requiring user confirmation before any DROP/DELETE SQL; protective.
+mcp-server-hardener|destructive-command|references/details.md|4986a377:
+  decision: safe
+  note: Standard Docker cleanup of the apt package cache inside an image build.
+old-matlab-code-updater|destructive-command|references/core-functions-guidance.md|ba2c39ac:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/case-studies.md|68b2af4f:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/case-studies.md|9ba39c2e:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/config-patterns.md|a8b8386e:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/lang-php.md|856c39b9:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/lang-python.md|f5e8034f:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+risky-design-reviewer|destructive-command|references/lang-ruby.md|020d7382:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+skill-safety-checker|destructive-command|SKILL.md|f381b3fd:
+  decision: safe
+  note: Security documentation showing an attack payload or dangerous pattern to avoid; not run.
+stable-diffusion-image-maker|destructive-command|references/troubleshooting.md|714c80fd:
+  decision: note
+  note: Its fix steps delete your saved Hugging Face models. They will download again, which can take a long time.
+advisory-exposure-checker|persistence|SKILL.md|adea3d3c:
+  decision: safe
+  note: Read-only ls of LaunchAgents folders in an exposure checker.
+cloudflare-publisher|persistence|references/tunnel/patterns.md|16fd33a2:
+  decision: note
+  note: Its setup makes a background service start every time the computer starts. Skip that step if you don't need it.
+local-ai-model-setup|persistence|SKILL.md|2453817e:
+  decision: note
+  note: Its setup makes a background service start every time the computer starts. Skip that step if you don't need it.
+rented-gpu-server-setup-helper|persistence|references/advanced-usage.md|4959e31a:
+  decision: note
+  note: Its guide saves your Hugging Face token in the server's startup file. Use a token you can cancel later.
+sequencing-pipeline-runner|persistence|references/installation.md|c2598018:
+  decision: note
+  note: Its setup makes a background service start every time the computer starts. Skip that step if you don't need it.
+sequencing-pipeline-runner|persistence|references/installation.md|611b35ba:
+  decision: note
+  note: Its setup adds lines to your shell startup file. Read them before you agree.
+sequencing-pipeline-runner|persistence|references/installation.md|9419448b:
+  decision: note
+  note: Its setup adds lines to your shell startup file. Read them before you agree.
+skill-safety-auditor|persistence|references/threat-model.md|2df88c65:
+  decision: safe
+  note: Threat-model example of a malicious persistence plant, shown so the auditor can detect it.
+agency-security-incident-responder|persistence|references/source-agent.md|0de3933d:
+  decision: safe
+  note: Incident-response script that reads Run registry keys to collect evidence; read-only.
+agency-security-incident-responder|persistence|references/source-agent.md|96bb3bf6:
+  decision: safe
+  note: Incident-response script that reads Run registry keys to collect evidence; read-only.
+time-frequency-analyzer|unknown-binary|scripts/boundaryExDisjointSine.mat|837b0c31:
+  decision: safe
+  note: MATLAB v5 data file (sample signal sig/Fs/tm) loaded by the readable illustrateBoundary.m; data, not code.

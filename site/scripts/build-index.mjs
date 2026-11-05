@@ -22,6 +22,7 @@ import { linkNotFor, makeNameIndex } from "../../tools/lib/not-for-links.mjs";
 import { loadSiblings } from "./lib/similar-items.mjs";
 import { pagePath } from "./lib/crawl-files.mjs";
 import { boardsOf, readFixes } from "./lib/board-map.mjs";
+import { guardrails, safetyMarkdown, scanDay } from "../../tools/lib/safety-guardrails.mjs";
 await acquireBuildLock(".index-build.lock");
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
@@ -34,6 +35,10 @@ const boardFixes = readFixes();
 const copyFile = path.join(ROOT, "display-copy.yaml");
 const copyEdits = fs.existsSync(copyFile) ? YAML.parse(fs.readFileSync(copyFile, "utf8")) ?? {} : {};
 const copyUsed = new Set();
+// The safety scan's results (tools/safety-scan.mjs write): each item's guardrails on its page and SAFETY.md in its zip.
+const safetyFile = path.join(ROOT, "_safety.json");
+const safety = fs.existsSync(safetyFile) ? JSON.parse(fs.readFileSync(safetyFile, "utf8")) : { scanned: "", items: {} };
+const safetyFor = (slug) => (safety.scanned ? { checked: scanDay(safety.scanned), guardrails: guardrails(safety.items[slug]) } : null);
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
 // One fixed date inside every zip, so the same files always make the same zip.
@@ -155,6 +160,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     if (files.length) {
       const tree = { [`${slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
       for (const f of files) tree[`${slug}/${f}`] = fs.readFileSync(path.join(folder, f));
+      // Our guardrails ride along as their own file; an upstream SAFETY.md, if any, is kept as it is.
+      if (safety.scanned && !tree[`${slug}/SAFETY.md`]) tree[`${slug}/SAFETY.md`] = new TextEncoder().encode(safetyMarkdown(item.name ?? slug, safety.items[slug], safety.scanned));
       fs.writeFileSync(path.join(OUT_SKILLS, `${slug}.zip`), zipSync(tree, { level: 6, mtime: ZIP_DATE }));
     }
     const steps = (item.steps ?? []).map((s) => ({ uses: s.uses, note: s.note ?? "" }));
@@ -169,6 +176,8 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
       // Public sources a block was built from, shown on its page. Only http(s) links are kept.
       const credits = (item.credits ?? []).filter((c) => c && c.title && (!c.url || /^https?:\/\//.test(c.url))).map((c) => ({ title: String(c.title), by: c.by ? String(c.by) : "", url: c.url ? String(c.url) : "", used: c.used ? String(c.used) : "" }));
       if (credits.length) out.credits = credits;
+      const checked = safetyFor(slug);
+      if (checked) out.safety = checked;
       out.html = { explain: page?.explain ? sub(md.parse(String(page.explain))) : "", skill: sub(md.parse(bodyOf(skill))) };
       if ((item.type ?? "skill") === "skill") {
         let metadata = {};
@@ -270,6 +279,7 @@ for (const r of roster.minds) {
   const mindTree = { [`${r.slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
   for (const f of mindFiles) mindTree[`${r.slug}/${f}`] = fs.readFileSync(path.join(folder, f));
   mindTree[`${r.slug}/sources.md`] = new TextEncoder().encode([`# Sources: ${m.name}`, "", "The public work this mind was built from. knowledge.md cites them as [S1], [S2] and so on.", "", ...srcList, ""].join("\n"));
+  if (safety.scanned) mindTree[`${r.slug}/SAFETY.md`] = new TextEncoder().encode(safetyMarkdown(m.name, safety.items[r.slug], safety.scanned));
   fs.writeFileSync(path.join(OUT_SKILLS, `${r.slug}.zip`), zipSync(mindTree, { level: 6, mtime: ZIP_DATE }));
   mindFiles.push("sources.md");
   const first = m.name.split(" (")[0];
@@ -309,6 +319,8 @@ for (const r of roster.minds) {
     credits: m.sources.filter((s) => s.title).map((s) => ({ title: String(s.title), by: s.by ? String(s.by) : "", url: s.url && /^https?:\/\//.test(s.url) ? String(s.url) : "", used: "" })),
   };
   page.html = { explain: sub(md.parse(page.explain)), skill: sub(md.parse(bodyOf(skill))) };
+  const mindSafety = safetyFor(r.slug);
+  if (mindSafety) page.safety = mindSafety;
   fs.writeFileSync(path.join(OUT_PAGES, `${r.slug}.json`), JSON.stringify(page));
   blocks.push({
     slug: r.slug, name: m.name, summary: m.summary, headline: m.name,

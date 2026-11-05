@@ -56,7 +56,7 @@ export function safetyPage(safety) {
   return {
     url: SAFETY_PATH,
     title: "How we check items for safety",
-    documentTitle: "How we check AI skills for malware and hidden instructions | AI Blocks",
+    documentTitle: "AI skill safety: malware and hidden instructions | AI Blocks",
     desc: `We scanned ${n(s.items)} AI skills, prompts, workflows and agents for harmful code and hidden instructions. See what we look for, what we found and what a scan can't promise.`,
     h1: "How we check items for safety",
     body,

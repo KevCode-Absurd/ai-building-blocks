@@ -14,6 +14,19 @@ test('fingerprints ignore rebuilt asset names and date stamps, but retain real c
   assert.notEqual(contentFingerprint(page(), 'package-a'), contentFingerprint(page(), 'package-b'));
   assert.match(canonicalHtml(page()), /Source author/);
 });
+test('a site-wide menu or footer change does not mark every page as updated', () => {
+  const withChrome = (menu, footer, text) => page(text).replace('<body>', `<body><main><header class="small" data-prerendered-nav><a href="/"><b>AI Blocks</b></a><nav aria-label="Main navigation"><a href="/compose">${menu}</a></nav></header>`).replace('</body>', `<footer class="wrap small"><p><a href="/teams">${footer}</a></p></footer></main></body>`);
+  const hub = (menu) => page().replace('<body>', `<body><header class="header site-header hub-header" data-prerendered-nav><div class="wrap header-in"><nav class="hub-nav"><a href="/compose">${menu}</a></nav></div></header>`);
+  assert.ok(page().includes('<body>') && page().includes('</body>'), 'the fixture has a body to add the menu to');
+  assert.equal(contentFingerprint(withChrome('Plan a job', 'Plan an AI team')), contentFingerprint(withChrome('Build a workflow', 'AI help by business')));
+  assert.equal(contentFingerprint(hub('Plan a job')), contentFingerprint(hub('Build a workflow')));
+  assert.notEqual(contentFingerprint(withChrome('Plan a job', 'x')), contentFingerprint(withChrome('Plan a job', 'x', 'A changed method.')));
+  // The menu and footer the build writes are the ones the fingerprint leaves out.
+  const prerender = fs.readFileSync(new URL('../scripts/prerender.mjs', import.meta.url), 'utf8');
+  assert.match(prerender, /const header = `<header class="small" data-prerendered-nav>/);
+  assert.match(prerender, /const siteHeader = `<header class="header site-header hub-header" data-prerendered-nav>/);
+  assert.match(prerender, /const footer = `<footer class="wrap small">/);
+});
 test('lastmod accepts real past calendar dates and timestamps, rejects impossible or future ones', () => {
   const now = Date.parse('2026-10-29T00:00:00Z');
   for (const date of ['2024-02-29', '2026-10-28T18:04:03Z', '2026-10-28T18:04:03.123+05:30']) assert.equal(validLastmod(date, now), true, date);

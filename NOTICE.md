@@ -3358,3 +3358,11 @@ Copied as they are from https://github.com/robonuggets/be-ambitious at dc116a3eb
 | Block | Original | Licence |
 |---|---|---|
 | `imported/ambition-planner` | be-ambitious, https://github.com/robonuggets/be-ambitious | MIT |
+
+## Imported from Manavarya09/design-extract
+
+Copied as they are from https://github.com/Manavarya09/design-extract (commit 84c3c59), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/website-design-token-extractor` | extract-design, https://github.com/Manavarya09/design-extract/tree/main/skills/extract-design | MIT |

@@ -15,6 +15,38 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/website-design-token-extractor",
+   "url": "https://useaiblocks.com/skills/website-design-token-extractor",
+   "title": "Website design token extractor",
+   "summary": "Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.",
+   "content_text": "Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.",
+   "date_published": "2026-11-05T00:00:00Z",
+   "date_modified": "2026-11-05T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Design things people love"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/website-design-token-extractor.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/website-design-token-extractor/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/website-design-token-extractor.md",
+    "json": "https://useaiblocks.com/skills/website-design-token-extractor.json",
+    "skill": "https://useaiblocks.com/skills/website-design-token-extractor/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/seventeen-section-advertising-report-writer",
    "url": "https://useaiblocks.com/skills/seventeen-section-advertising-report-writer",
    "title": "17-section advertising report writer",
@@ -3180,38 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/buyer-identity-segment-finder.md",
     "json": "https://useaiblocks.com/skills/buyer-identity-segment-finder.json",
     "skill": "https://useaiblocks.com/skills/buyer-identity-segment-finder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/pain-point-niche-finder",
-   "url": "https://useaiblocks.com/skills/pain-point-niche-finder",
-   "title": "Buyer problem and product idea finder",
-   "summary": "Name a market and your budget. Get 30 problem ideas, five picks and a plan to check products and competitors.",
-   "content_text": "Name a market and your budget. Get 30 problem ideas, five picks and a plan to check products and competitors. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Find products worth selling"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/pain-point-niche-finder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/pain-point-niche-finder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/pain-point-niche-finder.md",
-    "json": "https://useaiblocks.com/skills/pain-point-niche-finder.json",
-    "skill": "https://useaiblocks.com/skills/pain-point-niche-finder/SKILL.md"
    }
   }
  ]

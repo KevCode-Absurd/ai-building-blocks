@@ -27,11 +27,14 @@ function frontmatter(text) {
 
 /** What a revision covers: each served file's digest by its path inside the item (SKILL.md, references/guide.md).
  *  The ZIP's own copy of SKILL.md counts only when it differs from the served SKILL.md. Page text, catalogue metadata
- *  (names, links, test cues) and ZIP bytes are left out, so a rebuild or an edit elsewhere never moves a revision. */
+ *  (names, links, test cues) and ZIP bytes are left out, so a rebuild or an edit elsewhere never moves a revision.
+ *  The SAFETY.md that build-index adds to each ZIP (our scan's guardrails, dated) is site metadata too, so it is left
+ *  out: a rescan never makes an item look edited. No catalogue item ships its own SAFETY.md. */
 export function contentFiles(entry) {
   const out = new Map([['SKILL.md', entry.instruction.sha256]]);
   for (const file of entry.files ?? []) {
     const rel = file.path.slice(file.path.indexOf('/') + 1);
+    if (rel === 'SAFETY.md') continue;
     if (rel !== 'SKILL.md') out.set(rel, file.sha256);
     else if (file.sha256 !== entry.instruction.sha256) out.set('SKILL.md (ZIP copy)', file.sha256);
   }

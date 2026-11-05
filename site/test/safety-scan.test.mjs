@@ -92,4 +92,8 @@ test('the committed scan results cover every item, and nothing critical or high 
   const missing = folders.filter((slug) => !(slug in s.items));
   assert.deepEqual(missing.slice(0, 10), [], `${missing.length} items have no safety scan: run node tools/safety-scan.mjs scan, then write`);
   assert.equal(Object.values(s.items).filter((e) => e.blocked).length, s.stats.blocked);
+  // Each zip carries our own SAFETY.md, which item revisions ignore (build-public-api contentFiles), so no item may ship one.
+  const own = ['general', 'ecommerce', 'imported', 'orchestrators', 'agents', 'minds', 'ai-tools'].flatMap((g) =>
+    fs.existsSync(new URL(g, root)) ? fs.readdirSync(new URL(g, root)).filter((slug) => fs.existsSync(new URL(`${g}/${slug}/SAFETY.md`, root))).map((slug) => `${g}/${slug}`) : []);
+  assert.deepEqual(own, [], 'an item ships its own SAFETY.md: rename it, or count it in item revisions');
 });

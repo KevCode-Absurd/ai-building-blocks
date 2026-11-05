@@ -542,6 +542,14 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
         )}
 
         <FactCheckNotes checks={p?.fact_checks} />
+        {has(p?.safety?.guardrails) && (
+          <section className="bp-sec bp-safety" id="safety" aria-labelledby="safety-h" data-testid="safety-guardrails">
+            <h2 className="bp-h2" id="safety-h">Safety guardrails</h2>
+            <p className="bp-note">We scanned every file in this {noun} on {p!.safety!.checked} for harmful code and hidden instructions. Before you use it:</p>
+            <ul className="plain-list">{p!.safety!.guardrails.map((g, i) => <li key={i}>{g}</li>)}</ul>
+            <p className="small"><a href="/how-we-check-safety">How we check items for safety</a>, and what a scan can't promise.</p>
+          </section>
+        )}
         {!isMind && <SpecialistsForItem slug={b.slug} />}
 
         <DetailsPanel watch={p}>

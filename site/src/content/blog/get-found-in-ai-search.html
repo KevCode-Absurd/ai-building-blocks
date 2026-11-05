@@ -1,0 +1,198 @@
+<h2 id="short-answer">AI search optimization, in short</h2>
+<p>AI search optimization means making your pages easy for AI tools to find, read and quote. Tools like ChatGPT search, Perplexity and Google's AI Overviews look up web pages, write an answer from what they read, and then link to the pages they relied on. If your page gives the clearest, best-supported answer to a question, it has a real chance of being one of those links.</p>
+<p>Most of the work is ordinary, careful website maintenance. You let the search crawlers reach your pages, answer real customer questions near the top of each page, and back your facts with sources and dates. You also keep your business information identical everywhere it appears, and you check once a month what AI tools are saying about you.</p>
+<p>Nobody can promise you a place in an AI answer, because Google, OpenAI and Perplexity each choose sources in their own way and change their methods often. What you can do is remove the reasons they would skip you. This guide shows you how, step by step, with prompts you can paste straight into your AI.</p>
+
+<h2 id="how-it-works">How do AI search tools find and cite sources?</h2>
+<p>Each tool works a little differently, but they all follow the same basic pattern. A crawler, which is a program that visits and reads web pages, collects pages into an index. When someone asks a question, the tool retrieves likely pages from that index, reads them and writes an answer with links. A page the crawler can't reach can therefore never be cited.</p>
+
+<h3>Google AI Overviews and AI Mode</h3>
+<p>Google's <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener">guide to its generative AI features</a> in Search Central says these features are built on its normal Search ranking systems. A page needs to be indexed and allowed to show a snippet in Search, and you don't need special structured data or new AI files to qualify.</p>
+<p>The guide explains two ideas that are worth understanding. The first is "query fan-out", where Google's AI runs several related searches at once to cover different parts of the question. For example, a question about a weedy lawn might also trigger searches for weed killers and weed prevention. The second is grounding, which means the AI picks pages from the Search index, reads them and links to the ones that support its answer. Both depend on your page ranking well in normal search, which is why the usual search basics still matter.</p>
+<p>The guide also asks for "unique, expert-led content that provides value beyond common knowledge." In plain words, say what only you can say, drawn from your own work and experience.</p>
+
+<h3>ChatGPT search</h3>
+<p>OpenAI runs several crawlers, and its <a href="https://developers.openai.com/api/docs/bots" rel="noopener">crawler overview</a> says OAI-SearchBot is the one used for ChatGPT search. Sites that block it won't appear in ChatGPT search answers, although they may still show up as plain navigation links. OpenAI recommends allowing OAI-SearchBot in your robots.txt file, which is the small text file at the root of your site that tells crawlers what they may visit. OpenAI says changes to that file take about 24 hours to take effect.</p>
+<p>GPTBot is a separate crawler that collects pages which may be used to train OpenAI's models. You can block GPTBot and still allow OAI-SearchBot, so the choice about training is yours and doesn't affect whether you appear in search.</p>
+
+<h3>Perplexity</h3>
+<p>Perplexity's <a href="https://docs.perplexity.ai/guides/bots" rel="noopener">crawler guide</a> says PerplexityBot finds and links websites in its search results, and that this bot isn't used to train AI models. Perplexity recommends allowing PerplexityBot in robots.txt and says changes may take up to 24 hours. If your site sits behind a firewall or a security service, check that it isn't blocking these bots by mistake.</p>
+<aside class="callout"><p><strong>Watch out.</strong> These facts come from each company's own pages as of November 2026, and the details change. Before you edit your robots.txt, check the maker's page again.</p></aside>
+
+<h2 id="steps">Seven steps to get found in AI answers</h2>
+<p>Work through these in order, because the first step is the one that most often prevents a good page from ever being cited.</p>
+
+<h3>Step 1: Let the search crawlers in</h3>
+<p>Open yoursite.com/robots.txt in a browser and look for lines that say "Disallow" next to Googlebot, OAI-SearchBot or PerplexityBot. If a search bot is blocked, the AI search tool that relies on it can't read your site. A rule that blocks every bot ("User-agent: *" with "Disallow: /") blocks all of them at once.</p>
+<p>If you want to allow the search bots, the lines look like this:</p>
+<pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /</code></pre>
+<p>If you can't edit the file yourself, ask whoever runs your website, and ask them to check your security settings too, since some hosting tools block AI bots by default. Then confirm your important pages are in Google by searching for "site:yoursite.com" plus the page name. Google's free Search Console shows exactly which pages it has indexed, so it's the surest way to tell this step worked.</p>
+
+<h3>Step 2: List the questions your buyers really ask</h3>
+<p>People type complete questions into ChatGPT, such as which accountant in Leeds handles freelancers, so AI search is driven by questions. Start from the questions your customers already ask you, which you'll find in support emails, sales calls, reviews and chat logs.</p>
+<p>Write each question the way the customer said it, then group the questions by topic. Next, mark which ones your site already answers well, which it answers badly and which it doesn't answer at all. That gap list becomes your plan, and it stops you writing pages nobody was looking for.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Turn customer messages into a question list</p><pre id="prompt-1">You are helping me plan pages that AI search tools can quote. My business is [what you sell, who for, where].
+
+Below are real customer messages: emails, reviews, chat logs and call notes.
+[paste 20 to 50 messages, with names and contact details removed]
+
+Do this:
+1. Pull out every question a buyer asked, or clearly wanted answered. Keep their own words.
+2. Group the questions into 5 to 8 topics.
+3. For each topic, write the 3 questions most likely to be typed into ChatGPT or Google as a full sentence.
+4. Tell me which questions need a fact only I can supply (a price, a policy, a time, a place). Mark those "needs my facts".
+
+Rules:
+- Don't invent questions that aren't backed by the messages. If you add a likely follow-up question, label it "suggested".
+- Don't answer the questions yet.
+
+Give me a table: Topic | Question | Source message (short quote) | Needs my facts?</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h3>Step 3: Answer each question at the top of a page</h3>
+<p>Give each important question a clear home, whether that's its own page, a section with its own heading or an entry on an FAQ page. Put the question in the heading and answer it in the first one or two sentences, in plain words. Then add the detail, the steps and the exceptions underneath, for readers who want the complete explanation.</p>
+<p>This structure helps people first, and it also helps AI tools, which pull short passages from pages to build their answers. A passage that makes sense on its own is much easier to quote than one that depends on three paragraphs above it. Google's guide says you don't need to chop pages into tiny pieces and that there's no ideal page length, so write for your reader. Just keep the answer in plain text on the page, rather than only inside an image or a video.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Rewrite a page so it answers first</p><pre id="prompt-2">You are an editor who makes web pages easy to quote. Here is one page from my website:
+[paste the page text]
+
+The question this page should answer is: [the customer's question, in their words]
+The facts I can stand behind are:
+[paste prices, policies, times, places, names, with where each comes from]
+
+Do this:
+1. Write a heading that is the question, or close to it.
+2. Write a direct answer in 1 or 2 sentences under 40 words. It must make sense if someone reads only those sentences.
+3. Then rewrite the rest of the page: the detail, steps, exceptions and a short "how we know" note for any fact.
+4. Keep my voice and every true fact. Cut repetition and filler.
+
+Rules:
+- Use only the facts I gave you or that are already on the page. Never add a number, date, price or claim.
+- If the page needs a fact I haven't given, write [NEEDS FACT: what] in its place.
+- Don't add keywords for their own sake.
+
+Show the new page, then a list of every change you made and why.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h3>Step 4: Back your facts with sources and dates</h3>
+<p>AI tools are built to give accurate answers, and a page that shows where each fact comes from is easier to trust, for people and for software alike. So whenever you state a fact, say how you know it. "Delivery takes 2 to 4 working days within the UK (from our courier's service terms, checked March 2026)" is far more useful than "fast delivery".</p>
+<p>Add a "last updated" date to pages that change, such as prices, opening hours and policies. Link to your sources whenever a fact comes from outside your business, such as a regulation or a supplier's specification sheet. Then add what only you know: your own process, your own photos and the mistakes you see customers make. That first-hand detail is the "beyond common knowledge" part that Google's guide asks for.</p>
+
+<h3>Step 5: Keep your business facts the same everywhere</h3>
+<p>AI tools read more than your website, since they may also draw on your Google Business Profile, directory listings and review sites. If your opening hours differ between your site and Google, either version could end up in an answer, and a customer could turn up to a locked door.</p>
+<p>Write down one true version of the basics: your name, address, phone number, hours, service area, prices and what you do. Then update that information everywhere it appears, so every source tells the same story. Google's guide specifically says to keep your Business Profile and Merchant Center (its tool for product listings) up to date.</p>
+
+<h3>Step 6: Add an llms.txt file if you like (it's unofficial)</h3>
+<p>An llms.txt file is a short Markdown file at the root of your site (yoursite.com/llms.txt) that lists your most important pages with a description of each. The idea comes from a <a href="https://llmstxt.org/" rel="noopener">proposal by Jeremy Howard</a>, first published in 2024, and it still describes itself as a proposal rather than a standard.</p>
+<p>Be realistic about what the file actually does. Google's guide says you don't need AI text files or Markdown to appear in Google Search, and that Google Search itself doesn't use them. They therefore neither help nor hurt your visibility there. Some other tools and AI agents may read the file, and since it takes about 20 minutes to write, it's cheap to add. Treat it as a tidy extra rather than the fix, because steps 1 to 5 matter far more.</p>
+
+<h3>Step 7: Test what AI tools say about you, monthly</h3>
+<p>Pick 10 representative questions from step 2 and, once a month, ask each one in ChatGPT, Perplexity and Google. For every answer, note whether your business is named, whether your site is linked and whether what it says is true, and save the answers with the date. Answers change from day to day, so look for patterns over a few months rather than reacting to a single result.</p>
+<p>When an answer is wrong, check the sources it shows, because the error usually traces back to one of them. Fix your own page first, then correct any outside listing that's out of date.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Review this month's AI answers about my business</p><pre id="prompt-3">You are helping me track how AI search tools describe my business, [business name], which [what you do, where].
+
+The true facts about my business are:
+[paste your one true version: name, address, hours, services, prices, policies]
+
+Below are answers I collected this month. For each one I noted the tool, the date and the question.
+[paste each answer with its tool, date, question and any links it showed]
+
+Do this:
+1. For each answer: was my business named? Was my site linked? Which other sources were linked?
+2. Check every claim about my business against my true facts. Mark each claim correct, wrong or not in my facts.
+3. For every wrong claim, say which linked source it most likely came from, if the answer shows its sources.
+4. List the 3 fixes that would correct the most wrong claims, starting with pages I control.
+
+Rules:
+- Don't guess at how any AI tool ranks sources. Stick to what these answers show.
+- If you can't tell where a claim came from, say so.
+
+Give me a table first, then the 3 fixes.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h2 id="example">A worked example: how Wise's pages answer questions</h2>
+<p>Wise is a financial company for sending, holding and converting money across currencies. We make no claim about how often AI tools cite it, and Wise hasn't told us anything about AI search. We picked it because its public pages show the habits from this guide unusually clearly.</p>
+
+<h3>What its pages do well</h3>
+<ul>
+<li><strong>Help articles are titled as questions</strong>, such as "<a href="https://wise.com/help/articles/2977951/why-is-my-transfer-taking-longer-than-the-estimate" rel="noopener">Why is my transfer taking longer than the estimate?</a>", which is almost exactly the sentence a worried customer would type into ChatGPT.</li>
+<li><strong>Each cause gets its own heading</strong>, because that article separates delays into security checks, the payment method used, and weekends and public holidays. Each section can therefore be quoted independently.</li>
+<li><strong>The pricing page states the rule in one line</strong>, since the <a href="https://wise.com/gb/pricing/" rel="noopener">pricing page</a> says "You only pay for what you use". It also explains its exchange rate approach in plain text, so an AI tool can quote it without guessing.</li>
+</ul>
+
+<h3>How a small business copies the pattern</h3>
+<p>Say you run a small bookkeeping firm, and clients keep asking whether you can take over their books partway through the year. Here is what goes in and what comes out at each stage.</p>
+<ul>
+<li><strong>In:</strong> 30 past client emails, run through prompt 1. Out comes a table of 24 questions in 6 topics, with 9 of them marked "needs my facts".</li>
+<li><strong>In:</strong> your "Services" page and your real answers, run through prompt 2. Out comes a section headed "Can you take over my books partway through the year?", whose first sentence gives the answer.</li>
+<li><strong>In:</strong> next month's answers from ChatGPT, Perplexity and Google, run through prompt 3. Out comes a table showing whether you were named, plus any wrong claims and where they came from.</li>
+</ul>
+<p>The bookkeeping firm and its numbers are an example for this article, while the Wise facts come from Wise's own pages, linked above.</p>
+
+<h2 id="checklist">An AI search checklist you can reuse</h2>
+<p>Run through this list once now, then again every three months, since sites and crawler rules both drift over time.</p>
+<ul class="checklist">
+<li>Your robots.txt file doesn't block Googlebot, OAI-SearchBot or PerplexityBot, unless you chose to block one.</li>
+<li>Your firewall or security service doesn't accidentally block those bots.</li>
+<li>Your key pages show up when you search "site:yoursite.com" in Google.</li>
+<li>You have a list of real customer questions, written in their own words.</li>
+<li>Each important question has a heading and a direct answer in the first two sentences.</li>
+<li>The answer appears in plain text, not only inside an image, video or PDF.</li>
+<li>Facts say where they come from, and pages that change show a "last updated" date.</li>
+<li>Each page adds something only you know, such as your process, examples or photos.</li>
+<li>Your name, address, phone, hours and prices match on your site, your Google Business Profile and your listings.</li>
+<li>You test 10 questions in three AI tools each month and save the answers with dates.</li>
+<li>Optionally, an llms.txt file lists your most useful pages with a short description of each.</li>
+</ul>
+
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Crawler</th><th scope="col">Who runs it</th><th scope="col">What it's for (per the maker)</th><th scope="col">Block it and...</th></tr></thead>
+<tbody>
+<tr><td>Googlebot</td><td>Google</td><td>Crawling for Google Search, which AI Overviews and AI Mode draw on</td><td>Google can't read your pages for Search or its AI features</td></tr>
+<tr><td>OAI-SearchBot</td><td>OpenAI</td><td>Finding sites for ChatGPT search</td><td>You won't appear in ChatGPT search answers</td></tr>
+<tr><td>GPTBot</td><td>OpenAI</td><td>Collecting pages that may train OpenAI's models</td><td>Your pages shouldn't be used for training; search isn't affected</td></tr>
+<tr><td>PerplexityBot</td><td>Perplexity</td><td>Finding and linking sites in Perplexity results</td><td>Perplexity's search crawler can't read your pages</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<h3>Blocking every AI bot without checking</h3>
+<p>Blocking all AI bots in one go, usually to stop training, can also block the search bots that would cite you. Decide bot by bot instead, because you can block training crawlers and still allow search crawlers.</p>
+<h3>Writing for robots instead of people</h3>
+<p>Pages stuffed with question phrases read badly and rarely say anything new. Google's guide says you don't need special phrasing or long lists of keyword variations, because AI systems understand meaning, so write one clear answer for one real reader.</p>
+<h3>Treating llms.txt as the fix</h3>
+<p>It's an unofficial proposal that Google Search doesn't use, so it won't rescue pages that are blocked or vague.</p>
+<h3>Churning out pages with AI</h3>
+<p>Hundreds of thin pages, one per keyword, are the opposite of the "unique, expert-led content" Google asks for. Use AI to help you write fewer, better pages that are built on your own facts.</p>
+<h3>Paying for fake mentions</h3>
+<p>Google's guide says chasing artificial mentions across the web isn't considered helpful. A better use of the same effort is being genuinely useful in the places where your buyers already ask questions.</p>
+<h3>Trusting a tool that promises a ranking</h3>
+<p>No outside tool can see inside Google's or OpenAI's systems, and Google's guide warns about third-party tools that claim access to its internal metrics. Track what you can actually see instead, which is your own monthly test answers and your site's traffic.</p>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>Everything here is free: you copy a prompt or download a skill, then use it in your own AI, such as ChatGPT, Claude or Gemini. AI Blocks doesn't change your website or run any AI for you.</p>
+<ul>
+<li><a href="/skills/ai-search-audit">AI search auditor</a>: share your website and get a content, access and search-readiness check, with fixes ranked by urgency. Live checks need your AI to have web access.</li>
+<li><a href="/skills/answer-first-page-rewriter">Answer-first page rewriter</a>: share a blog, guide or FAQ page and get its sections rewritten to answer first, with any facts that still need a source marked.</li>
+<li><a href="/skills/ai-citation-scorer">AI citation scorer</a>: share a page and get scores for how clear and self-contained each passage is, plus rewrites to try.</li>
+<li><a href="/prompts/customer-question-keyword-finder">Customer question keyword finder</a>: paste reviews and support messages to get likely search questions, the page types that match them and five topics to write first.</li>
+<li><a href="/skills/llms-txt-writer">llms.txt writer</a>: share your site and get a draft llms.txt file that lists the pages and facts that matter most.</li>
+<li><a href="/skills/local-search-listing-manager">Local search listing manager</a>: for service businesses, get a local search audit, listing fixes and review reply templates, which is useful for step 5.</li>
+<li><a href="/roles/marketing-ai-citation-strategist">AI citation visibility planner</a>: a specialist you can download. It checks whether ChatGPT, Claude, Gemini and Perplexity name you or a rival, and gives you a citation table and a ranked fix plan.</li>
+<li><a href="/skills/ai-answer-fact-checker">AI answer fact-checker</a>: paste AI answers and get each claim checked against public sources, with links, which is handy for step 7.</li>
+</ul>
+<p>For the writing side, read <a href="/blog/seo-content-with-ai">how to write SEO content with AI</a>. To stop your AI adding facts you never gave it, see <a href="/blog/stop-ai-making-things-up">how to stop AI making things up</a>. And to give your AI your one true set of business facts, see <a href="/blog/give-ai-context-about-your-business">how to give AI context about your business</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>How do I get my business to show up in ChatGPT?</h3>
+<p>Make sure OAI-SearchBot can reach your site, because OpenAI says that's the crawler behind ChatGPT search. Then make sure your pages clearly answer the questions people ask about your kind of business. There's no application form to submit, and no position is guaranteed.</p>
+<h3>Do I need special code or schema to get into Google's AI Overviews?</h3>
+<p>No. Google says no special structured data is needed for AI Overviews or AI Mode, and a page only needs to be indexed and allowed to show a snippet. Structured data, which is code that labels facts on a page for search engines, can still help with other search features, but it isn't required here.</p>
+<h3>What is generative engine optimization (GEO)?</h3>
+<p>It's another name for AI search optimization, the practice of making content easy for AI answer tools to find and cite. Google's guide treats it as part of normal search engine optimization, so the basics in this guide cover it.</p>
+<h3>Does llms.txt help?</h3>
+<p>Not for Google Search, which officially says it doesn't use the file. It's an unofficial proposal that some other tools may read, so add one if you like, but spend most of your time on clear, well-sourced pages.</p>
+<h3>Should I block GPTBot?</h3>
+<p>It depends on whether you want your pages used to train OpenAI's models. OpenAI says GPTBot is for training and OAI-SearchBot is for search, so blocking GPTBot doesn't remove you from ChatGPT search, as of November 2026.</p>
+<h3>How long does it take to show up in AI answers?</h3>
+<p>OpenAI and Perplexity say robots.txt changes take about 24 hours to apply, but being cited takes longer and isn't promised, because your pages must be crawled, indexed and then chosen. Track your 10 test questions monthly and look for change over a few months.</p>

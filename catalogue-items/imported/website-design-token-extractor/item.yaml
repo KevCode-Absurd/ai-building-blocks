@@ -1,0 +1,33 @@
+slug: website-design-token-extractor
+name: Website design token extractor
+summary: Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: design_tokens
+    required: true
+uses: []
+origin: imported
+source:
+  by: Manavarya Singh
+  repo: Manavarya09/design-extract
+  path: skills/extract-design
+  url: https://github.com/Manavarya09/design-extract/tree/main/skills/extract-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 84c3c59
+  original_name: extract-design
+  imported: 2026-11-05
+version: 1.0.0
+credits:
+  - title: extract-design skill
+    by: Manavarya Singh
+    url: https://github.com/Manavarya09/design-extract/tree/main/skills/extract-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

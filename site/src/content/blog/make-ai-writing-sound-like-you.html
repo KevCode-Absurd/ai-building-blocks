@@ -1,0 +1,182 @@
+<h2 id="answer">How do you make AI writing sound human?</h2>
+<p>To make AI writing sound human, and like you, give your AI two things it lacks: samples of how you actually write, and a list of habits to avoid. Without them, it writes in a safe, polished middle voice that could belong to anyone, and readers notice. Once they spot one stock phrase, they start to doubt everything around it.</p>
+<p>This happens because your AI writes the most likely next words, so with no other guidance it drifts toward the most common way of saying things. It also has favourite moves, such as tidy groups of three, dramatic contrasts and a neat summary at the end. A few of those in one email are enough to make it read as machine-made.</p>
+<p>The solution takes about an hour, and you only need to complete it once:</p>
+<ol>
+<li><strong>Collect five to ten samples</strong> of your own best writing, chosen from different situations.</li>
+<li><strong>Turn them into a one-page voice guide</strong> with your AI's help, using the prompt below.</li>
+<li><strong>Add a list of AI tells to ban</strong>, so your AI recognises exactly which habits to avoid.</li>
+<li><strong>Write with the guide, then run one edit pass</strong> before anything reaches a customer.</li>
+</ol>
+<p>This guide gives you the prompts for each step, a list of common AI tells, a reusable template and a worked example.</p>
+
+<h2 id="samples">Step 1: Collect samples of your own writing</h2>
+<p>Examples teach your AI faster than any description. Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" rel="noopener">prompting guide for Claude</a> calls examples one of the most reliable ways to steer tone and structure. It also says they should closely resemble the real task and vary enough that the AI doesn't copy the wrong pattern. It's written for Claude, but the advice is general.</p>
+<p>Gather five to ten pieces you wrote yourself and were genuinely happy with, for example:</p>
+<ul>
+<li>Emails that received a helpful or enthusiastic reply show how you communicate when the outcome matters.</li>
+<li>Social posts that people commented on or shared reveal the tone that connects with your audience.</li>
+<li>A product page, an About page or a newsletter you're proud of demonstrates how you describe your business.</li>
+<li>A transcribed voice note, in which you explained your work to someone, captures your natural, unedited phrasing.</li>
+</ul>
+<p>Mix the types, because five nearly identical emails teach the AI to write only that email. Three different pieces teach it what stays consistent across all of them, which is your voice. Leave out anything an agency or an earlier AI wrote, since the guide would copy their voice instead of yours. Remove customers' names and private details before you paste anything.</p>
+<aside class="callout"><p><strong>Tip.</strong> If you dislike writing, talk instead. Record yourself answering "what do you do and who is it for?" for two minutes, then transcribe the recording. Spoken answers are often closer to your natural voice than anything you've carefully polished.</p></aside>
+
+<h2 id="guide">Step 2: Build an AI brand voice guide from your samples</h2>
+<p>A voice guide is a one-page brief your AI reads before it writes anything. Most guides fail because they only list adjectives, such as "friendly, professional, clear", and since every brand says that, it tells the AI nothing useful. A practical guide shows each trait with a "do" example and a "don't" example, both in your own words.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Build my voice guide from my writing</p><pre id="prompt-1">You are an editor who studies how people write. I'll paste samples of my own writing. Build a one-page voice guide that another writer, or an AI, could follow to sound like me.
+
+Who I write for: [your customers or readers, in one line]
+My samples:
+[paste 5 to 10 samples, each with a line saying what it is, e.g. "Email to a customer"]
+
+Study the samples, then write the guide with these parts:
+1. Who I'm talking to, and how I treat them (in one or two lines).
+2. Three to five voice traits. For each: one line on what it means, a "do" example quoted from my samples, and a "don't" example written to show the opposite.
+3. Sentence habits: typical length, how I open, how I close, questions, contractions, humour.
+4. Words and phrases I use often (quote them). Words I never use.
+5. Punctuation habits (for example, no exclamation marks, short paragraphs).
+6. Three short before-and-after rewrites: a bland line, then the same line in my voice.
+
+Rules:
+- Base every point on the samples. Quote them. If the samples don't show something, write "not clear from samples" instead of guessing.
+- Keep it to one page. Plain words.
+At the end, ask me up to three questions about anything the samples left unclear.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<p>Read the finished guide out loud, and if a line makes you think "that's not me", correct it immediately. Then save it somewhere your AI reads it every time, such as a project's instructions, a custom GPT, a Gemini Gem or a file you attach. If you'd rather keep one file about yourself for every AI, put the voice guide in your <a href="/me-md">me.md</a>.</p>
+
+<h2 id="tells">Step 3: Which AI tells should you ban?</h2>
+<p>An AI tell is a habit that makes writing read as machine-made. Our own writing rules at AI Blocks prohibit a set of them, which makes a sensible starting list for any business. Add the table below to the end of your voice guide.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">The tell</th><th scope="col">What it looks like</th><th scope="col">Write this instead</th></tr></thead>
+<tbody>
+<tr><td>Contrast reveals</td><td>"This isn't a shampoo. It's a ritual."</td><td>Say the true thing, with the reason: "It's a solid bar, so it needs no bottle."</td></tr>
+<tr><td>Negation lists</td><td>"No fuss, no waiting, no hidden fees."</td><td>Say what does happen. A real absence gets said once, plainly.</td></tr>
+<tr><td>Trailing pile-ons</td><td>"...made by hand, with care, for you, every single day."</td><td>End the sentence when the point is made.</td></tr>
+<tr><td>Self-answered questions and colon reveals</td><td>"The outcome? Happier customers." "The best bit: it's free."</td><td>Just say it: "It's free."</td></tr>
+<tr><td>Stock openers</td><td>"In a world where...", "Picture this", "Let's dive in", "Look no further"</td><td>Start with the point, or with something specific.</td></tr>
+<tr><td>Groups of three, every time</td><td>"Fast, simple and affordable."</td><td>Use the number of points you really have. Often that's one.</td></tr>
+<tr><td>Puffed-up words</td><td>"crucial", "vibrant", "testament", "tapestry", "landscape", "realm"</td><td>Use the plain word, or a fact.</td></tr>
+<tr><td>Hedges and throat-clearing</td><td>"It's important to note that...", "It's worth mentioning..."</td><td>Delete the opener and keep the fact.</td></tr>
+<tr><td>Long dashes everywhere</td><td>Many em dashes in short copy</td><td>A full stop, a comma or brackets.</td></tr>
+<tr><td>The neat recap</td><td>A last line that repeats the whole message</td><td>Stop after the last useful thing, or end with the next step.</td></tr>
+<tr><td>Fake warmth</td><td>"Great question", "I hope this email finds you well"</td><td>Answer the question. Warmth comes from being useful.</td></tr>
+</tbody></table></div>
+<p>Don't ban too much, though. A list of 200 words makes the writing stiff, because the AI spends its effort avoiding things instead of communicating. Start with the table above plus your own five biggest pet hates, and add a new line only when the same tell appears twice.</p>
+
+<h2 id="write">Step 4: Write with the guide, then run one edit pass</h2>
+<p>Give your AI the guide, the facts and the specific job, and ask it to check its own draft against the guide before showing you. Facts matter here as well, because a draft in your voice that contains an invented claim is worse than a bland one, so keep facts and style as separate concerns. Our guide on <a href="/blog/stop-ai-making-things-up">stopping AI making things up</a> covers the factual side.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Write a draft in my voice</p><pre id="prompt-2">Write [what you need, e.g. a 120-word email to customers about our new opening hours] in my voice.
+
+My voice guide:
+[paste your voice guide, including the banned AI tells]
+
+The facts to use (use only these, and don't add any):
+[paste the facts]
+
+Who it's for: [the reader]
+What I want them to do after reading: [one action]
+
+How to work:
+1. Read the voice guide and my samples in it first.
+2. Write the draft. Keep sentences mostly short, and vary them the way my samples do.
+3. Check the draft against every banned tell in the guide. Fix any you find.
+4. If you need a fact I didn't give you, write [MISSING: what you need].
+
+Show me the draft. Under it, list any line you're unsure sounds like me, and why.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<p>The edit pass is for anything already written, whether that's an AI draft, a colleague's copy or your own tired first attempt. Run it in a new conversation so the AI reads the text with fresh attention.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Edit out the AI tells</p><pre id="prompt-3">You are a sharp human editor. Edit the text below so it sounds like a real person wrote it, following my voice guide. Keep every fact, number, price, name and promise exactly as it is. Don't add new claims.
+
+My voice guide:
+[paste your voice guide]
+
+The text:
+[paste the text]
+
+Do this:
+1. Quote every line that has an AI tell from the guide's banned list, or that sounds generic. Name the tell.
+2. Give a plain fix for each one.
+3. Then give the full edited version.
+4. Last, list any change that touched a fact, so I can check it.
+
+Make the smallest changes that fix the problem. If a line is already fine, leave it.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+<p>Then do the one check no AI can do for you, which is reading the result out loud and changing anything you wouldn't comfortably say to a customer's face.</p>
+
+<h2 id="example">A worked example: Lush's voice</h2>
+<p>Lush makes cosmetics such as bath bombs, shower jellies and solid shampoo bars. Its <a href="https://weare.lush.com/lush-life/our-company/" rel="noopener">company page</a> says it fights over-packaging by developing products that can be sold "naked", with no packaging at all. The same page says Lush opposes animal testing and values fresh ingredients, and its tone is warm, playful and proud of the people who make the products. One line on that page reads "We believe in happy people making happy soap."</p>
+<p>That's a distinctive voice to study, because you can hear it in a single sentence. Below is what a voice guide built from Lush's public pages might identify, which is our reading for this article rather than a guide Lush wrote:</p>
+<ul>
+<li><strong>Playful, with a purpose:</strong> jokes and wordplay sit comfortably alongside clearly stated values.</li>
+<li><strong>People first:</strong> it talks about the makers and the customer, and much less about the company itself.</li>
+<li><strong>Plain and concrete:</strong> it mentions fresh ingredients, missing packaging and the people who make things, which are all details you can picture.</li>
+<li><strong>Certain of what it believes:</strong> it states its opinions directly, without hedging or apologising.</li>
+</ul>
+<h3>Before and after</h3>
+<p>Suppose you asked an AI for a line about a solid shampoo bar without any voice guide. You'd probably receive something like this example, written for this article:</p>
+<blockquote><p>"Discover the perfect blend of luxury and sustainability with our innovative shampoo bar, designed to transform your haircare routine."</p></blockquote>
+<p>It's smooth, but it says nothing specific, because "perfect blend", "innovative" and "transform your routine" could describe any product from any brand.</p>
+<p>With a voice guide like the one above, the same request produces something closer to the draft below. Again, it's an example written for this article, not Lush's real copy, and the product details are placeholders to complete from the actual product page:</p>
+<blockquote><p>"[Bar name] comes naked. It's a solid shampoo bar, so there's no bottle to finish and throw away. Made by hand by people who are happy to put their name to it. [Fact from the product page about the ingredients.]"</p></blockquote>
+<p>Notice what changed between the two versions. The sentences became shorter, the vague claims turned into details you can picture, and the placeholders meant that no invented ingredient or result slipped in. Your own guide will make different choices, because your samples are different from anyone else's.</p>
+<aside class="callout"><p><strong>Watch out.</strong> Study voices you admire, but don't copy a real brand's voice so closely that people could mistake you for that company. Build your guide from your own writing, and use other brands only to understand what makes a voice distinctive.</p></aside>
+
+<h2 id="template">A one-page voice guide template</h2>
+<p>Copy this template into a note and complete it yourself, or let prompt 1 complete it from your samples.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Section</th><th scope="col">What to write</th><th scope="col">Example line</th></tr></thead>
+<tbody>
+<tr><td>Reader</td><td>Who you write for and how you treat them</td><td>"Busy shop owners. Treat them as smart friends with no time."</td></tr>
+<tr><td>Traits (3 to 5)</td><td>Each trait with a do and a don't</td><td>Do: "Your order left today." Don't: "We're delighted to inform you..."</td></tr>
+<tr><td>Sentences</td><td>Length, openings, endings</td><td>"Mostly under 15 words. Open with the news. End with one next step."</td></tr>
+<tr><td>Words we use</td><td>Your real phrases</td><td>"sorted", "here's how", "give it a go"</td></tr>
+<tr><td>Words we never use</td><td>Your pet hates, plus AI tells</td><td>"solutions", "crucial", "we're thrilled"</td></tr>
+<tr><td>Punctuation</td><td>Your habits</td><td>"No exclamation marks. No em dashes. Short paragraphs."</td></tr>
+<tr><td>Before and after</td><td>Three rewrites</td><td>A bland line, then your version</td></tr>
+<tr><td>Samples</td><td>Two or three short pieces you're proud of</td><td>Your best customer email</td></tr>
+</tbody></table></div>
+<ul class="checklist">
+<li>Every trait has both a "do" example and a "don't" example.</li>
+<li>The examples come directly from your own writing.</li>
+<li>The banned list includes the common AI tells, together with your own five most irritating habits.</li>
+<li>The complete guide fits comfortably on a single printed page.</li>
+<li>It's saved somewhere your AI automatically reads it before every conversation.</li>
+<li>You add a new instruction whenever you correct the same problem a second time.</li>
+</ul>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Asking it to "sound more human"</td><td>Give it samples and a guide. "Human" means nothing until you show it which human.</td></tr>
+<tr><td>Only adjectives in the guide</td><td>Show each trait with a quoted "do" and "don't" line</td></tr>
+<tr><td>One sample, or five of the same kind</td><td>Five to ten pieces of different types</td></tr>
+<tr><td>Banning hundreds of words</td><td>Start with a short list and grow it from real edits</td></tr>
+<tr><td>Letting the edit pass change facts</td><td>Tell it to keep every fact, and to list any change that touched one</td></tr>
+<tr><td>Setting it up once and never updating it</td><td>When you fix the same line twice, add a rule to the guide</td></tr>
+<tr><td>Skipping the read-aloud</td><td>Read every piece out loud before it goes out</td></tr>
+</tbody></table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>These free items handle each step for you, so download the skill or copy the prompt, then use it in your own AI.</p>
+<ul>
+<li>The <strong><a href="/skills/brand-voice-guide-builder">brand voice guide builder</a></strong> takes your documents or call transcripts and gives you a voice guide with rules, examples and open questions.</li>
+<li>The <strong><a href="/workflows/write-a-voice-guide-from-your-documents-and-check-copy">brand voice guide and copy reviewer</a></strong> is a workflow that turns approved writing samples and a draft into a voice guide, revised copy and checks against the guide.</li>
+<li>The <strong><a href="/skills/anti-ai-slop-copy-editor">AI-style wording editor</a></strong> reads finished copy and returns the style problems quoted, plain corrections, a complete rewrite and before-and-after scores.</li>
+<li>The <strong><a href="/skills/brand-voice-editor">brand voice editor</a></strong> takes your ad, voice rules and customer quotes, then suggests small wording changes that keep claims intact, along with a voice score.</li>
+<li>The <strong><a href="/skills/copilot-email-drafter">personal email style drafter</a></strong> uses your goal and previous emails to write a draft that sounds like you, with a note explaining the tone, greeting and sign-off.</li>
+<li>The <strong><a href="/minds/david-ogilvy">David Ogilvy</a></strong> profile, like the other <a href="/minds">minds</a>, lets you think alongside a well-known expert's recorded approach. This one helps you write a factual advertisement or edit business copy around one clear idea.</li>
+</ul>
+<p>For everyday writing jobs beyond voice, see <a href="/blog/chatgpt-prompts-for-work">ChatGPT prompts for work</a>, and for product pages in particular, see <a href="/blog/product-descriptions-that-sell">writing product descriptions that sell</a>.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>How do I stop AI sounding like AI?</h3>
+<p>Give it samples of your own writing, a one-page voice guide and a short list of banned AI tells. Then run an edit pass in a new conversation, and read the result out loud before you use it.</p>
+<h3>Can I train ChatGPT on my writing style?</h3>
+<p>Not in the sense of changing the model itself, but you can get most of the way there. Put your voice guide and two or three samples in a project, custom GPT or saved instructions, so that your AI reads them before every conversation. Our guide to <a href="/blog/give-ai-context-about-your-business">giving your AI context about your business</a> explains where to put them.</p>
+<h3>How many writing samples does a voice guide need?</h3>
+<p>Five to ten is enough for most people, and variety matters more than quantity. An email, a post, a product page and a transcribed voice note teach your AI more than ten similar emails.</p>
+<h3>Should I write to fool AI detectors?</h3>
+<p>Write for your readers instead, since detectors don't buy anything from you. Clear, specific writing in your own voice is what keeps readers interested, and it's the same effort either way.</p>
+<h3>Will an edit pass change my facts?</h3>
+<p>It can, so tell it not to. The edit prompt above instructs your AI to keep every fact, number and promise, and to list any change that affected one, so review that list every time.</p>
+<h3>What's the best way to describe my brand voice?</h3>
+<p>Show it rather than describe it, which means pairing each trait with a real line you wrote and a line that does the opposite. "Warm" means very little on its own, whereas "Do: 'Your order left today.' Don't: 'We are pleased to confirm dispatch.'" communicates a great deal.</p>

@@ -18,10 +18,10 @@ test('one label: Safety checked, or nothing', () => {
 
 test('the menu reaches every main page in a few grouped links, and the footer stays short', async () => {
   const { MAIN_NAV, MENU_GROUPS, FOOTER_GROUPS } = await import('../src/lib/site-nav.mjs');
-  // The five main sections show in the laptop header; the grouped menu reaches every main page.
-  assert.deepEqual(MAIN_NAV.map(([to, label]) => [to, label]), [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/minds', 'Minds']]);
+  // The main sections and the blog show in the laptop header; the grouped menu reaches every main page.
+  assert.deepEqual(MAIN_NAV.map(([to, label]) => [to, label]), [['/#library', 'Find a task'], ['/roles', 'Hire an AI specialist'], ['/compose', 'Build a workflow'], ['/tools', 'Tools'], ['/minds', 'Minds'], ['/blog', 'Blog']]);
   const links = MENU_GROUPS.flatMap((g) => g.links.map(([to]) => to));
-  for (const page of ['/#library', '/minds', '/tools', '/ai-tools', '/compose', '/get-it-done', '/from-a-source', '/apps', '/roles', '/train-your-own-ai-agent', '/teams', '/api-and-mcp', '/me-md', '/space', '/how-it-works', '/support']) assert.ok(links.includes(page), `${page} is in the menu`);
+  for (const page of ['/#library', '/minds', '/tools', '/ai-tools', '/compose', '/get-it-done', '/from-a-source', '/apps', '/roles', '/train-your-own-ai-agent', '/blog', '/teams', '/api-and-mcp', '/me-md', '/space', '/how-it-works', '/support']) assert.ok(links.includes(page), `${page} is in the menu`);
   assert.ok(links.length <= 20, `menu lists ${links.length} links`);
   for (const unfinished of ['/community', '/publish', '/people']) assert.ok(!links.includes(unfinished), `${unfinished} is not a menu link`);
   // The app header and the plain pages' header read the same lists.

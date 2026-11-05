@@ -1,0 +1,163 @@
+<h2 id="short-answer">How do you write Facebook ad copy with AI?</h2>
+<p>Good Facebook ad copy starts before you open your AI, with two things: the true facts about your product, and the words buyers use about their problem. Give both to your AI, then ask it to pick one reason to buy, write several hooks and fill each part of the ad. Finally, check every claim against your facts and against Meta's advertising rules before anything goes live.</p>
+<p>If you skip the facts, your AI fills the gaps with guesses, so you get lines like "the best quality on the market" that nobody believes and you can't prove. If you skip the buyer's words, the ad reads like a brochure. With both in front of it, your AI writes like someone who knows the product and understands the reader.</p>
+<p>This guide gives you the method in six steps, with two prompts you can copy, a worked example using a real brand and a checklist to run before you publish.</p>
+
+<h2 id="three-parts">What does each part of a Facebook ad do?</h2>
+<p>When you build an image or video ad in Meta Ads Manager, you write three separate pieces of text, and each one has its own job. In Meta's own <a href="https://www.facebook.com/business/help/223409425500940" rel="noopener">best practices for text in ads</a>, the primary text is the main copy above the picture. The headline is the bold line below it, and the description is the second line underneath.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Part</th><th scope="col">Where it shows</th><th scope="col">Its job</th><th scope="col">Meta's suggested length</th></tr></thead>
+<tbody>
+<tr><td>Primary text</td><td>Above the image or video</td><td>Stop the scroll with a hook, then give one reason to care</td><td>About 125 characters</td></tr>
+<tr><td>Headline</td><td>Bold, below the image</td><td>Say what they get, in a few words</td><td>About 40 characters</td></tr>
+<tr><td>Description</td><td>Under the headline</td><td>Add a small extra: a proof point or the offer</td><td>About 25 characters</td></tr>
+</tbody>
+</table></div>
+<p>Those lengths come from the same Meta page, which calls them the recommended length "for most placements" (as of November 2026). Longer text gets cut off, and some placements and phone screens cut it shorter still, so the most important words belong at the start. Meta also says the primary text should span one to three lines at most.</p>
+<p>One more detail matters when your AI writes the copy, because you can add several text options for each part, and Meta may show different versions to different people. Every version must therefore be true and complete on its own. Treat the description as a bonus line that may get cut, which means a price condition or a key limit should never sit only there. If the ad needs a detail to be honest, put it in the primary text.</p>
+
+<h2 id="steps">How to write Facebook ad copy with AI, in six steps</h2>
+<h3>Step 1. Write a fact sheet your AI must stick to</h3>
+<p>List what is true about the product, with each fact on its own line and a note of its source. Cover ingredients, sizes, materials, price, delivery times, guarantee terms and awards. Copy them from your label, your product page or your supplier's specification sheet, and mark anything you can't prove as "do not claim".</p>
+<p>This one page does more for your ads than any clever prompt, because your AI can only stay honest if it knows exactly what honest looks like. It also makes every later check fast, since a line in the ad either matches a fact on the sheet or it goes. To keep these facts available across chats, put them in a <a href="/me-md">me.md file that tells every AI who you are</a>.</p>
+<h3>Step 2. Collect the buyer's own words</h3>
+<p>Gather 20 or more pieces of real customer language, such as reviews, support emails, comments on your posts, sales call notes and answers to "what nearly stopped you buying?". Paste them in raw rather than tidying them up, because the odd, specific phrases are the ones readers recognise.</p>
+<p>As you read, look for three things: when the problem shows up, what they tried before, and which doubt nearly stopped them buying. Those answers become your hooks and the points your ad must answer. Our guide to <a href="/blog/turn-reviews-into-ads">turning customer reviews into ads</a> shows how to mine them in depth.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: turn facts and buyer words into a one-page ad brief</p><pre id="prompt-1">You are a careful direct-response copywriter. I'm going to write Facebook ads for one product. Before any copy, help me build a one-page brief.
+
+First, ask me for anything missing from this list, one question at a time:
+- The product and who it's for: [product, buyer]
+- My fact sheet (one fact per line, with its source): [paste facts]
+- Real customer words (reviews, emails, comments): [paste at least 20]
+- The offer and its terms: [price, discount, end date, delivery]
+- Claims I must never make: [list]
+
+Then do this:
+1. From the customer words only, list the top 5 reasons people buy. For each, quote 2 short exact phrases and count how many different people said something like it.
+2. List the top 3 doubts or objections, with exact phrases.
+3. Pick ONE reason to lead the ad and say why, using the counts.
+4. Match that reason to the fact on my sheet that proves it best.
+
+Rules:
+- Use only my facts. If a reason needs a fact I haven't given, say "needs proof" instead of filling it in.
+- Keep customer phrases exactly as written. Don't polish them.
+
+Output: a short brief with headings Reasons, Doubts, Lead reason, Proof fact, Gaps.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+<h3>Step 3. Pick one reason to buy per ad</h3>
+<p>An ad that tries to say five things usually lands none of them, so choose one reason to buy and back it with one fact. If you have three strong reasons, write three ads and let the results tell you which one wins, which our guide to <a href="/blog/plan-ad-creative-tests">ad creative testing</a> covers in detail.</p>
+<h3>Step 4. Write ten hooks before any body copy</h3>
+<p>The hook is the first line, the part people see before they decide whether to keep scrolling. Ask your AI for ten hooks for your one reason in different styles. Read them out loud and keep the two or three that sound like something a buyer would actually say. The section on hooks below lists the styles worth asking for, with an example of each.</p>
+<h3>Step 5. Fill each part of the ad for its job</h3>
+<p>Now ask for full ads, with the primary text, headline and description each written for its own job and length. Ask your AI to name the fact behind every line, which turns your review from "does this sound good?" into the far quicker question "is this true?".</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: write Facebook ad copy from the brief</p><pre id="prompt-2">Use the brief below to write Facebook ad copy for Meta Ads Manager.
+
+Brief: [paste the brief from the last prompt]
+Brand voice in 3 words: [e.g. warm, plain, dry]
+Where people land after the click: [page name and what it shows]
+
+Do this:
+1. Write 10 hooks for the lead reason. Mix these styles: the buyer's exact words, a specific moment, a question about their situation, a surprising true fact, a plain statement of the result. Keep each under 12 words.
+2. Pick the 3 strongest hooks and say why in one line each.
+3. For each of the 3, write one full ad:
+   - Primary text: the hook, then 1 to 2 short lines with one proof fact and what to do next. Aim for about 125 characters before the cut-off.
+   - Headline: what they get, about 40 characters or less.
+   - Description: one small extra, about 25 characters or less. Nothing essential.
+4. Under each ad, list every claim and the fact from the brief it rests on.
+
+Rules:
+- No claim without a fact from the brief. Flag any line you had to soften.
+- Don't say "you" plus a personal trait (health, age, money worries, religion and so on). Talk about the product or the situation instead.
+- No exclamation marks, no "best", "guaranteed" or "#1" unless the brief proves it.
+- Show the character count for each headline and description.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+<h3>Step 6. Check every line before it runs</h3>
+<p>Read each ad against your fact sheet first, then against Meta's ad rules, which the next sections cover. Then read it on your phone, the way buyers will see it, and rewrite the hook if you can't tell what the ad is selling within two seconds. Our guide on how to <a href="/blog/stop-ai-making-things-up">stop AI making things up</a> has more ways to catch invented facts before they reach an ad.</p>
+
+<h2 id="hooks">What makes a good hook for a Facebook ad?</h2>
+<p>A good hook makes the right person think "that's me" and keep reading. It doesn't need to be clever, but it does need to be specific and about their situation. Here are five styles worth asking your AI for, each built from the material you have already collected.</p>
+<ul>
+<li><strong>The buyer's own words:</strong> lift a phrase from a review, with the customer's permission when you quote them directly, because real phrasing beats anything a copywriter invents.</li>
+<li><strong>The moment:</strong> name the exact moment the problem bites, such as "3pm, back-to-back calls, no lunch", since people recognise moments faster than they take in benefits.</li>
+<li><strong>The question about their situation:</strong> "Skipping lunch again?" works, while "Are you overweight?" doesn't, for reasons the next section explains.</li>
+<li><strong>The surprising true fact:</strong> use a number or detail from your fact sheet that most people don't know about your product.</li>
+<li><strong>The plain result:</strong> say what they get in one short line, with no adjectives doing the work.</li>
+</ul>
+<p>Avoid hooks that promise a result you can't show, and avoid teases that hide what the ad is about. A tease may earn a click, but it tends to lose the sale when the page doesn't match what the ad implied.</p>
+
+<h2 id="meta-rules">How do you stay inside Meta's advertising standards?</h2>
+<p>Meta reviews ads mostly with automated tools, and every rejected ad costs you time while it sits waiting for a fix. Three rules catch AI-written copy more often than any others. Check them on Meta's own pages, because rules change and Meta's wording is the version that counts, starting with its <a href="https://transparency.meta.com/policies/ad-standards/" rel="noopener">Advertising Standards</a>.</p>
+<h3>Don't tell people what they are</h3>
+<p>Meta's policy on <a href="https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/" rel="noopener">privacy violations and personal attributes</a> says ads must not assert or imply personal attributes, which covers race, religion, age, health, sexual orientation, criminal record and financial status. Meta's own examples of what's not allowed include "Do you have diabetes?" and "Are you bankrupt?". Talking about the product or a group is allowed, and "Meet seniors" is one of Meta's allowed examples.</p>
+<p>AI often suggests "Struggling with your weight?" style openers because they appear so often in old ad copy, so rewrite them around the situation or the product instead. "Lunch that keeps you going till dinner" makes the same point without telling the reader what they are.</p>
+<h3>Don't overclaim about health or results</h3>
+<p>If you sell food, supplements, fitness or beauty products, read Meta's <a href="https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/" rel="noopener">health and wellness policy</a> before you publish. It bans exaggerated health claims and claims to cure certain serious illnesses, and it says weight loss ads must target people aged 18 or older. It also bans promises of specific results within a set time unless they come with qualifiers, so if your AI writes "lose 5kg in two weeks", delete it.</p>
+<h3>Don't mislead</h3>
+<p>Meta's standards also ban content that may deceive or mislead people. In practice, the price, the offer and the product in the ad must match the page people land on. A shared fact sheet for the ad and the landing page prevents most mismatches.</p>
+<aside class="callout"><p><strong>Watch out.</strong> Your AI doesn't know Meta's current rules, and it can't see the laws for your industry. Use it to flag risky lines, then check each flagged line against the policy pages yourself. In regulated areas like finance, health or housing, ask a qualified person to review the ad as well.</p></aside>
+
+<h2 id="example">Worked example: Facebook ad copy for Huel</h2>
+<p><a href="https://huel.com/products/huel-black-edition" rel="noopener">Huel</a> sells meal shakes and powders, and we'll use its Black Edition powder to show the method with public facts from Huel's own pages and ads. Huel has no link to this article, and the draft at the end was written for this guide rather than taken from Huel's real copy.</p>
+<h3>What went in</h3>
+<p><strong>The fact sheet</strong> starts with Huel's Black Edition product page, which we read in November 2026. It said the powder is "100% vegan", has no artificial sweeteners and contains "all 27 essential vitamins and minerals", while its comparison table listed 400 calories per serving.</p>
+<p>The same page gave two different protein figures in two sections, which can happen when a range has several versions or a page is partway through an update. Your AI can't tell which figure is right, but the label can, so the fact sheet marks protein as "check the label before you claim it". This is exactly the kind of gap Step 1 is there to catch.</p>
+<p><strong>The doubt to answer</strong> comes from Huel's own advertising, since its live UK ads in the <a href="https://www.facebook.com/ads/library/?id=1164343372918699" rel="noopener">Meta Ad Library</a> use the headline "This Is A Meal. Not A Protein Shake." across many versions of the ad (as of November 2026). You don't need inside data to read that choice, because the headline answers a doubt head on by setting the product apart from protein shakes. Our draft leads with the meal too, and proves it with facts from the sheet.</p>
+<p>For buyer words, you would paste reviews from your own site and inbox, and we haven't quoted any of Huel's customers here.</p>
+<h3>What came out (an example draft, not Huel's ad)</h3>
+<blockquote><p><strong>Primary text:</strong> Lunch at your desk again? Black Edition is a full meal you drink: 400 calories and all 27 essential vitamins and minerals. Vegan, with no artificial sweeteners.</p>
+<p><strong>Headline:</strong> A full meal in two minutes</p>
+<p><strong>Description:</strong> 100% vegan</p></blockquote>
+<p>Under the draft, the AI listed each claim with its source. "400 calories" came from the comparison table, while "27 vitamins and minerals", "vegan" and "no artificial sweeteners" came from the product page. "Two minutes" had no source, so the AI flagged it, and you would either confirm the preparation time on the label or cut it. The hook describes a situation ("lunch at your desk") rather than a personal trait, so it stays within Meta's personal attributes rule.</p>
+<p>Notice what the draft leaves out: there's no protein number, no weight claim and no "best", because each of those would need proof the fact sheet doesn't have.</p>
+
+<h2 id="checklist">Checklist before you publish a Facebook ad</h2>
+<ul class="checklist">
+<li>Every claim matches a line on the fact sheet, and each line on the sheet has a source.</li>
+<li>The hook names a moment or a situation rather than a personal trait of the reader.</li>
+<li>The primary text still makes sense if it's cut off after the first line.</li>
+<li>The headline says what they get, in about 40 characters or less.</li>
+<li>Nothing the buyer needs to know sits only in the description.</li>
+<li>The price, offer and end date match the landing page exactly.</li>
+<li>No health, money or results claim goes further than what you can prove.</li>
+<li>You read it on a phone and could tell what it sells within two seconds.</li>
+<li>Any customer quote is exact, and you have the right to use it.</li>
+<li>Each ad tests one reason to buy, so you'll know which reason worked.</li>
+</ul>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Why it hurts</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Asking "write me a Facebook ad for my product"</td><td>Your AI has no facts, so it writes generic praise</td><td>Give it the fact sheet and buyer words first</td></tr>
+<tr><td>Packing every benefit into one ad</td><td>Nothing sticks, and you can't tell what worked</td><td>One reason per ad, then test the reasons</td></tr>
+<tr><td>Polishing customer phrases</td><td>The specific, odd wording is what readers recognise</td><td>Keep their words exactly, even if they're rough</td></tr>
+<tr><td>"Are you..." openers about health, age or money</td><td>Meta's personal attributes policy rejects them</td><td>Describe the situation or the product</td></tr>
+<tr><td>Trusting the AI's policy check alone</td><td>It doesn't know the latest rules or your local law</td><td>Use it to flag lines, then check Meta's pages</td></tr>
+<tr><td>Hiding terms in the description</td><td>Some placements don't show it</td><td>Put anything essential in the primary text</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps with Facebook ad copy</h2>
+<p>Every item below is free: copy the prompt, or download the skill and add it to ChatGPT, Claude or Gemini. Your AI does all the writing on your own account, and nothing runs on our side.</p>
+<ul>
+<li><a href="/prompts/fact-based-ad-copy-writer">Fact-based ad copy writer</a>: give it the buyer and the facts, and you get an ad built on one fact, with the source of each line shown.</li>
+<li><a href="/skills/meta-ad-copywriter">Meta ad copywriter</a>: give it your offer and buyer, and you get hooks, primary text, headlines and video scripts to test.</li>
+<li><a href="/prompts/ad-opening-line-batch-writer">Ad hook writer</a>: describe your buyer to get ten different ad openings, follow-up lines and the three to test first.</li>
+<li><a href="/skills/ad-headline-writer">Ad headline writer</a>: get plain headlines with character counts, plus the one line worth testing first.</li>
+<li><a href="/skills/buyer-brief-writer">Buyer brief writer</a>: turn your offer and real buyer words into a short brief that sets out their situation and doubts.</li>
+<li><a href="/prompts/ad-claim-sorter">Ad claim sorter</a>: paste your ad to see each claim sorted as fine, needs proof or cut, with safer wording for the risky ones.</li>
+<li><a href="/skills/meta-ads-compliance-checker">Meta ad policy checker</a>: share ad copy, images or a script, and get possible policy issues and changes to review before launch.</li>
+</ul>
+<p>If you'd like the whole job planned for you, <a href="/compose">Plan a job</a> turns a goal like "write and check three Facebook ads" into a step-by-step workflow you can download.</p>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can ChatGPT write Facebook ads?</h3>
+<p>Yes. ChatGPT, Claude and Gemini can all write Facebook ad copy, but the quality depends on what you give them. With your real product facts, buyer words and the rules above, they write usable drafts quickly, while without them they produce generic ads that you would need to rewrite. Either way, check every claim yourself before the ad goes live.</p>
+<h3>How long should Facebook ad copy be?</h3>
+<p>Meta suggests about 125 characters of primary text, 40 for the headline and 25 for the description for most placements (as of November 2026). Longer primary text can work when the story needs it, but the first line must carry the hook, because the rest may be cut off.</p>
+<h3>Does Meta reject ads written by AI?</h3>
+<p>Meta reviews what the ad says, not who wrote it, so AI-written ads are rejected for the usual reasons, like personal attribute openers, health overclaims or misleading offers. Meta even offers its own AI text tools in Ads Manager, so check the copy against the Advertising Standards whichever way it was written.</p>
+<h3>Where can I see real Meta ad copy examples?</h3>
+<p>The Meta Ad Library at facebook.com/ads/library shows ads running across Meta's apps, and you can search a brand or a keyword to read what's live. It shows what brands run rather than how well it works, so treat what you find as ideas to test, never as proof.</p>
+<h3>Should I use Meta's own text suggestions?</h3>
+<p>You can, since Meta's text generation can make variations of your primary text and headline. Read each one before you publish, because variations may be shown to different people, and remember that strong, fact-based copy gives those variations a better starting point.</p>
+<h3>How many versions of an ad should I write?</h3>
+<p>Write one ad per reason to buy, with two or three hooks for each reason. That's enough to learn something useful without spreading your budget too thin, as long as you follow a proper test plan so you know which reason won.</p>

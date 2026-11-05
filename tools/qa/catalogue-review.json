@@ -361,6 +361,24 @@
           "rationale": "The method starts from the task or prompt the person typed, in their own words, which is a brief. Data, tools and access are optional and listed as present or missing."
         }
       ]
+    },
+    "catalogue-items/imported/website-design-token-extractor/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Claude)",
+      "reviewed_on": "2026-11-05",
+      "method_sha256": "2c17aa38ca72cfd45be8e173f565919b3d673837ab1581f480b96ba9a4680767",
+      "inputs": [
+        {
+          "type": "web_page",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "web_page",
+          "quote": "Extract the complete design language from any website URL.",
+          "rationale": "The method runs designlang on the website URL the person gives it, so a live web page address is the one required input."
+        }
+      ]
     }
   },
   "handoffs": {

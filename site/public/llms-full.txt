@@ -22,11 +22,11 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Browsing, catalogue downloads and manual workflow assembly are free, with no account needed. AI workflow planning requires sign-in and follows the current service limits.
-- 5022 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
+- 5023 skills, workflows and prompts in 70 jobs, 1063 specialists, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
-- Last changed 2026-11-04. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
+- Last changed 2026-11-05. See the [JSON Feed](https://useaiblocks.com/feed.json) or [RSS](https://useaiblocks.com/feed.xml) for what changed.
 
 ## Planning and privacy
 
@@ -47,6 +47,37 @@ Once connected, ask in plain words:
 - [Hire an AI specialist](https://useaiblocks.com/roles): choose a job role, its deliverables and methods, then prepare a complete role pack. MCP tools find_specialist and prepare_specialist choose and onboard a worker for a task. Read aiblocks://roles/{id} for SOUL.md, knowledge, playbook, method routing, connection requirements, editable training/context and permission boundaries. API: GET /api/v1/specialists?task=... and POST /api/v1/specialist-preparations. Execution happens in the user’s AI.
 - [Your me.md](https://useaiblocks.com/me-md): prepare reusable context for your AI
 - [Train your own AI agent](https://useaiblocks.com/train-your-own-ai-agent): a step-by-step guide and starter pack for teaching your AI one job your way
+- [Blog](https://useaiblocks.com/blog): step-by-step guides to using AI for real business work, each with prompts to copy and the free skills that do the job
+  - [AI agents for small business: what they are and how to start](https://useaiblocks.com/blog/ai-agents-for-small-business): AI agents for small business in plain words: what an agent is, what it can and can't do today, good first jobs, safe permissions and how to start free.
+  - [AI customer service: faster replies built on your own policies](https://useaiblocks.com/blog/ai-customer-support-replies): Set up AI customer service the safe way. Build a reply library from your policies, draft replies in your tone and know when a person must answer.
+  - [AI meeting notes: turn any meeting into clear action items](https://useaiblocks.com/blog/ai-meeting-notes-action-items): Turn rough notes or a transcript into AI meeting notes: decisions, owners, dates and open questions. Includes prompts, a template and a checklist.
+  - [AI product photography that still looks like your product](https://useaiblocks.com/blog/ai-product-photos): Make AI product photography from real photos of your real product. Get a shot list, scene prompts, checks before you publish and honest ad rules.
+  - [AI prompts vs skills vs workflows: which one to use](https://useaiblocks.com/blog/ai-prompts-vs-skills-vs-workflows): AI prompts vs skills, workflows, agents and specialists in plain words, with a decision table, a real example and prompts to pick the right one.
+  - [How to analyze data with ChatGPT and check the numbers](https://useaiblocks.com/blog/analyse-spreadsheet-with-ai): Analyze data with ChatGPT, Claude or Gemini. Prepare the file, ask clear questions, make the AI show its working and check every number before you act.
+  - [How to build an AI workflow without code, step by step](https://useaiblocks.com/blog/build-ai-workflow-without-code): Build an AI workflow without code. Split a job into steps, set what each step takes in and gives back, add human checks and run it in your own AI.
+  - [How to write ChatGPT prompts that get usable work](https://useaiblocks.com/blog/chatgpt-prompts-for-work): How to write ChatGPT prompts that give usable work: six parts, before-and-after examples, a reusable template and tips for Claude and Gemini too.
+  - [How to write a cold email with AI, one prospect at a time](https://useaiblocks.com/blog/cold-emails-with-ai): Write a cold email with AI that's short, true and personal. Get a research method, a cold email template, follow-ups, prompts and the legal basics.
+  - [Competitor analysis with AI: find the gaps your rivals leave](https://useaiblocks.com/blog/competitor-analysis-with-ai): Do a competitor analysis with AI. Pick the right rivals, collect public facts from sites, ads and reviews, then build a table and find the gaps.
+  - [Write Facebook ad copy with AI that people believe](https://useaiblocks.com/blog/facebook-ad-copy-with-ai): Write Facebook ad copy with AI from real product facts and buyer words. Get the job of each ad part, hook styles, Meta's rules and prompts to copy.
+  - [AI search optimization: get your business found and cited](https://useaiblocks.com/blog/get-found-in-ai-search): AI search optimization in plain steps: how ChatGPT, Perplexity and Google AI Overviews pick sources, and what to fix so your pages get found and cited.
+  - [ChatGPT custom instructions for business that end generic answers](https://useaiblocks.com/blog/give-ai-context-about-your-business): Set up ChatGPT custom instructions for business, plus projects in ChatGPT and Claude and Gems in Gemini, with a one-page brand file template and prompts.
+  - [Google Ads AI: write better ads and stop paying for junk searches](https://useaiblocks.com/blog/google-ads-with-ai): Use Google Ads AI help from your own assistant: write responsive search ads within the limits, find wasted spend and build negative keyword lists.
+  - [AI for hiring: clear job posts, fair interviews, people deciding](https://useaiblocks.com/blog/hiring-with-ai): Use AI for hiring safely. Write a job post from outcomes, build interview questions and a scorecard, set a fair work sample and keep a person deciding.
+  - [How to use Claude skills: install, write and test one](https://useaiblocks.com/blog/how-to-use-claude-skills): Claude skills explained: how to install them in the Claude apps and Claude Code, write a simple SKILL.md and test it, with a template and prompts.
+  - [The landing page checklist: find why visitors don't buy](https://useaiblocks.com/blog/landing-page-checklist): A landing page checklist in six parts: first screen, offer, proof, objections, form and mobile speed. Plus AI prompts to run a full landing page audit.
+  - [How to make AI writing sound human, and like you](https://useaiblocks.com/blog/make-ai-writing-sound-like-you): Make AI writing sound human. Build a voice guide from your own writing, ban the common AI tells and run one edit pass prompt before anything goes out.
+  - [Ad creative testing: plan tests that tell you what works](https://useaiblocks.com/blog/plan-ad-creative-tests): Plan ad creative testing that gives real answers. Test one idea at a time, size the test with example figures, read Meta's results and keep a log.
+  - [How to price a product: a simple pricing strategy with AI](https://useaiblocks.com/blog/pricing-strategy-with-ai): How to price a product, step by step. Count every cost, check value and rival prices, try tiers and test a price increase, with AI doing the sums.
+  - [How to write product descriptions that answer buyers and sell](https://useaiblocks.com/blog/product-descriptions-that-sell): Write product descriptions from real facts and buyer questions. Get a fact sheet, a scannable layout, product page SEO basics and AI prompts to copy.
+  - [Repurpose content with AI: turn one video into many posts](https://useaiblocks.com/blog/repurpose-content-with-ai): Repurpose content with AI: turn one video, podcast or article into posts, clips and emails. Get a repurposing map, three prompts and an accuracy check.
+  - [AI SEO content that ranks: how to use AI the way Google allows](https://useaiblocks.com/blog/seo-content-with-ai): Make AI SEO content Google rewards: what Google says about AI, search intent, outlines from real questions, first-hand experience, editing and links.
+  - [Build a social media content calendar you can keep up with](https://useaiblocks.com/blog/social-media-content-calendar): Build a social media content calendar from real customer questions. Get a weekly rhythm, a month template, AI prompts per platform and a review routine.
+  - [How to stop AI hallucinations and fact-check what AI writes](https://useaiblocks.com/blog/stop-ai-making-things-up): Why AI hallucinations happen, in plain words, and how to stop them. Give sources, ask for citations and MISSING markers, then fact-check with one list.
+  - [Customer reviews in ads: turn reviews into ads that sell](https://useaiblocks.com/blog/turn-reviews-into-ads): Use customer reviews in ads the right way. Mine reviews for buying reasons, doubts and exact phrases, follow the fairness rules, then turn themes into ads.
+  - [Video ad script template: hook, proof, offer and shots](https://useaiblocks.com/blog/video-ad-script-template): A fill-in video ad script template: hook in the first seconds, problem, proof, offer and call to action. Plus a shot list, two prompts and a real example.
+  - [How to write a welcome email series, with a 5-email template](https://useaiblocks.com/blog/welcome-email-series): Plan a welcome email series: a 5-email template with timing and subject lines, AI prompts to write it from your own facts, and the US consent basics.
+  - [What is MCP? How to connect your AI to your tools safely](https://useaiblocks.com/blog/what-is-mcp): What is MCP? A plain guide to the Model Context Protocol: what it lets your AI do, how to stay safe, and how to add a connector in Claude and ChatGPT.
+  - [Facebook ads stopped working? Find the cause, then fix it](https://useaiblocks.com/blog/why-facebook-ads-stopped-working): Facebook ads stopped working? Check tracking, offer, audience, fatigue, frequency, budget and learning in order. Get what to look at and what to fix first.
 - [API and MCP](https://useaiblocks.com/api-and-mcp): connect an AI and read the public API documentation
 - [All skills by job](https://useaiblocks.com/jobs): every skill, workflow and prompt, sorted by the job it does
 - [How it works](https://useaiblocks.com/how-it-works): from one prompt to your own AI app
@@ -66,7 +97,7 @@ Once connected, ask in plain words:
 - [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 109 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Connect AI to your tools](https://useaiblocks.com/llms/connect-tools.txt): 42 skills and workflows, such as AI tool set designer and Automation flow sketcher
 - [Design and test physical systems](https://useaiblocks.com/llms/engineer-systems.txt): 16 skills and workflows, such as MATLAB antenna designer and MATLAB antenna system designer
-- [Design things people love](https://useaiblocks.com/llms/design-work.txt): 116 skills and workflows, such as Brand logo planner and Design brief rules writer
+- [Design things people love](https://useaiblocks.com/llms/design-work.txt): 117 skills and workflows, such as Brand logo planner and Design brief rules writer
 - [Find products worth selling](https://useaiblocks.com/llms/find-products.txt): 15 skills and workflows, such as Category and trend risk checker and Competitor revenue estimator
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 101 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
 - [Grow on social](https://useaiblocks.com/llms/grow-social.txt): 119 skills and workflows, such as First customer outreach planner and Founder video series planner

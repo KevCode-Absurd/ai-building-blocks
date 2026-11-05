@@ -1,0 +1,31 @@
+Manavarya09/design-extract:skills/extract-design:
+  slug: website-design-token-extractor
+  name: Website design token extractor
+  summary: Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.
+  subhead: Give it a website address. It runs the free designlang tool to read the site's colours, fonts, spacing, shadows and components, and checks text contrast against WCAG accessibility rules. You get 8 files, including a Tailwind theme, CSS variables, Figma variables and a design summary your AI can build from. It needs an AI that can run commands, such as Claude Code or Codex, and Node.js.
+  task: design-work
+  role: make
+  thinking: low
+  inputs:
+    - type: web_page
+      required: true
+  outputs:
+    - type: design_tokens
+      required: true
+  you_give:
+    - The address of the website whose design you want to read, and whether to include dark mode or more pages.
+  you_get:
+    - The site's colours, fonts, spacing, shadows and component styles, a contrast score, and 8 files you can use in code or Figma.
+  how_it_works:
+    - title: Read the site
+      text: It runs designlang on the address you give, with screenshots of buttons, cards and menus. It can also read dark mode or several pages.
+    - title: Sum up the design
+      text: It reads the design summary and tells you the main colours with hex codes, the fonts, the spacing base, the contrast score and the notable choices.
+    - title: Hand over the files
+      text: It points you to the file for your setup, such as the Tailwind theme, CSS variables, a shadcn/ui theme, Figma variables or the visual preview.
+  works_best_with:
+    tools:
+      - name: An AI that can run commands, with Node.js
+        why: The skill runs `npx designlang`, which downloads and runs the maker's open-source tool on your computer.
+    inputs:
+      - Use it to document your own site or to study how a design works. Don't copy another brand's look as your own.

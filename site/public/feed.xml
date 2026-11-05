@@ -6,7 +6,17 @@
     <description>The newest free AI skills, workflows, prompts, agents and minds on AI Blocks, and the ones that changed most recently.</description>
     <language>en</language>
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Website design token extractor</title>
+      <link>https://useaiblocks.com/skills/website-design-token-extractor</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/website-design-token-extractor</guid>
+      <description>Give it a website address. Get its colours, fonts, spacing and contrast score as Tailwind, CSS and Figma files.</description>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Design things people love</category>
+    </item>
     <item>
       <title>17-section advertising report writer</title>
       <link>https://useaiblocks.com/skills/seventeen-section-advertising-report-writer</link>
@@ -996,16 +1006,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Understand your customers</category>
-    </item>
-    <item>
-      <title>Buyer problem and product idea finder</title>
-      <link>https://useaiblocks.com/skills/pain-point-niche-finder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/pain-point-niche-finder</guid>
-      <description>Name a market and your budget. Get 30 problem ideas, five picks and a plan to check products and competitors.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Find products worth selling</category>
     </item>
   </channel>
 </rss>

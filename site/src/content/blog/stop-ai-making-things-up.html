@@ -1,0 +1,178 @@
+<h2 id="what">What are AI hallucinations?</h2>
+<p>AI hallucinations are answers that sound confident but are wrong. Your AI invents a statistic, a quotation, a price or a web address, and presents it in the same calm voice as everything else. Nothing in the text warns you that this particular line is invented.</p>
+<p>You can't switch hallucinations off completely, but you can make them rare and easy to catch by following five practical habits:</p>
+<ol>
+<li><strong>Give your AI the facts.</strong> Paste or attach the relevant sources, and instruct it to use only that information.</li>
+<li><strong>Let it say "I don't know".</strong> Ask it to write MISSING whenever a fact isn't available in the sources, instead of inventing something to fill the gap.</li>
+<li><strong>Ask for a source for every claim</strong>, such as a quotation from your file or a link you can open and read.</li>
+<li><strong>Gather the facts first, then write.</strong> Treat research and drafting as two separate activities, never a single one.</li>
+<li><strong>Check before you use it.</strong> Review every number, name, date, quotation and link, every time it matters.</li>
+</ol>
+<p>The rest of this guide explains why AI makes things up and which kinds of facts go wrong most often. It also gives you three prompts and a checklist that let you fact-check AI work in a few minutes.</p>
+
+<h2 id="why">Why does AI make things up?</h2>
+<p>A chat AI writes by predicting which words should come next, based on patterns in an enormous amount of text. That makes it very good at producing sentences that sound right, but sounding right and being right are different things, and the AI can't always tell them apart.</p>
+<p>OpenAI describes a second cause in its 2025 research post, <a href="https://openai.com/index/why-language-models-hallucinate/" rel="noopener">Why language models hallucinate</a>. Think of a multiple-choice test that awards a point for a correct answer and nothing for a blank, where guessing always scores better than leaving the question empty. OpenAI argues that models are trained and scored in a similar way, so the system ends up rewarding a confident guess over an honest "I'm not sure".</p>
+<p>The <a href="https://arxiv.org/abs/2509.04664" rel="noopener">paper behind that post</a> adds a useful point for business owners, which is that some facts can't be worked out from patterns at all. Its example is a birthday, because no pattern in language reveals when a particular person was born. If that fact wasn't in the training text, the model can only guess. Your opening hours, your refund policy and last month's sales belong to the same category, and your AI has no way of knowing them unless you provide them.</p>
+<p>Hallucinations, then, are less a rare bug than the predictable result of asking an AI for a fact it doesn't have. Anthropic's own guide to <a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations" rel="noopener">reducing hallucinations in Claude</a> makes the same point plainly: its methods reduce hallucinations without removing them, so you should still verify anything important.</p>
+
+<h2 id="risky">Which facts does AI get wrong most often?</h2>
+<p>Not every line needs the same level of care. Rewording a paragraph you wrote yourself carries little risk, whereas a precise number your AI produced from memory carries a great deal. Concentrate your checking time where the risk is highest.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">What the AI wrote</th><th scope="col">Risk</th><th scope="col">Why</th></tr></thead>
+<tbody>
+<tr><td>Statistics, percentages, survey results</td><td>High</td><td>Precise numbers are easy to invent and hard to spot</td></tr>
+<tr><td>Quotes from real people</td><td>High</td><td>A quote can sound exactly like the person and still be made up</td></tr>
+<tr><td>Links, book titles, papers, court cases</td><td>High</td><td>The AI can invent a plausible title or web address</td></tr>
+<tr><td>Facts about your own business</td><td>High</td><td>It doesn't know your prices, policies or stock unless you tell it</td></tr>
+<tr><td>Recent news, laws and product features</td><td>High</td><td>Things change after the AI's training; check the date</td></tr>
+<tr><td>Summary of a document you pasted</td><td>Medium</td><td>Usually close, but it can blend in outside facts or miss a "not"</td></tr>
+<tr><td>Rewording, tone, structure of your own text</td><td>Low</td><td>The facts come from you; check it didn't add any</td></tr>
+</tbody></table></div>
+
+<h2 id="guards">How to stop ChatGPT making things up: six guards</h2>
+<p>These are ordinary prompting habits, so you can use them in ChatGPT, Claude or Gemini. Use the first three whenever a fact matters, and add the remaining three for anything you'll publish or send to customers.</p>
+
+<h3>1. Give it the sources, and fence it in</h3>
+<p>Paste the text or attach the file, whether that's your price list, a policy page, a report or a transcript. Then instruct it plainly to use only these sources and to ignore its general knowledge. Anthropic lists this among its recommended methods, and it works because the AI now has the relevant fact in front of it, so it has no reason to guess.</p>
+
+<h3>2. Make "I don't know" an acceptable answer</h3>
+<p>Your AI tends to fill every gap, so give it a better option by telling it to write MISSING whenever a fact isn't in the sources. A gap then appears as a word you can search for, which you can't mistake for a fact. Anthropic's guide says that giving the model permission to admit uncertainty can greatly reduce false information.</p>
+
+<h3>3. Ask for evidence next to every claim</h3>
+<p>Ask the AI to place a short quotation from your source, or a link, beside each fact it states. Anthropic suggests a further step, in which the AI reviews each claim after drafting, looks for a supporting quotation and removes any claim it can't support. This makes the work far easier to verify, because you glance at the quotation instead of searching through the entire document.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Answer only from my sources</p><pre id="prompt-1">Answer my question using only the sources below. Don't use your general knowledge or guess.
+
+My question: [your question]
+
+Sources:
+[paste the text, or say "see the attached files"]
+
+Rules:
+1. Before you answer, list the exact quotes from the sources that you will rely on. Number them.
+2. Write your answer. After each fact, add the number of the quote that supports it, like [2].
+3. If the sources don't contain something I asked about, write MISSING and say what source would answer it. Don't fill the gap.
+4. If two sources disagree, show both and say which is newer, if the dates show it.
+5. At the end, list anything you left out because no quote supported it.
+
+Keep the answer short and plain.</pre><button type="button" class="copy-btn" data-copy="prompt-1">Copy prompt</button></div>
+
+<h3>4. Separate gathering facts from writing</h3>
+<p>When the AI researches and writes in one go, facts and filler blur together, so divide the job into two stages. First, ask for a fact sheet with one fact per line and a source for each, which you can review in about a minute because it's short. Then ask for the draft, written only from the approved sheet. Our guide to <a href="/blog/build-ai-workflow-without-code">building an AI workflow without code</a> uses the same division for larger jobs.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Build a fact sheet, then write from it</p><pre id="prompt-2">We'll do this in two stages. Don't start stage 2 until I say "go".
+
+Stage 1: fact sheet
+Read the sources below. Make a table with these columns:
+- Fact (one short sentence)
+- Source (which file or link, and a short quote of the exact words)
+- Confidence (high if the source says it directly, low if you inferred it)
+
+Only include facts the sources state. For anything my draft will need that the sources don't cover, add a row with MISSING in the Source column.
+
+What the draft will be: [for example, a 200-word blog post about our new opening hours]
+Sources:
+[paste or attach]
+
+Stage 2: draft (after I say "go")
+Write the draft using only the facts I approved in the table. If you need a fact that isn't in the table, write [MISSING: what you need] in the text instead of inventing it.</pre><button type="button" class="copy-btn" data-copy="prompt-2">Copy prompt</button></div>
+
+<h3>5. Make the AI check its own work, then check it yourself</h3>
+<p>A fresh review often catches problems that the original pass missed entirely. Paste the draft and the sources into a new conversation and ask for a claim-by-claim audit, then do your own quick review with the checklist further down. The AI's check usually finds most of the problems, but your own check is the one that counts.</p>
+<div class="prompt-box"><p class="prompt-label">Prompt: Check every claim in a draft</p><pre id="prompt-3">You are a careful fact-checker. Check the draft below against the sources. Don't rewrite the draft.
+
+Draft:
+[paste the draft]
+
+Sources:
+[paste or attach]
+
+For every claim in the draft (any fact, number, name, date, quote, price or promise), make one table row:
+- Claim (the exact words from the draft)
+- Verdict: SUPPORTED, NOT IN SOURCES, or CONTRADICTED
+- Evidence: the exact quote from the sources, or "none"
+- Fix: for anything not supported, a safer rewording or "remove"
+
+Then list:
+1. Any number in the draft that doesn't appear in the sources.
+2. Any link or title that you can't match to a source.
+3. Any claim that goes further than the source says (for example "best", "always", "guaranteed").
+
+Be strict. If you aren't sure, mark it NOT IN SOURCES.</pre><button type="button" class="copy-btn" data-copy="prompt-3">Copy prompt</button></div>
+
+<h3>6. Ask twice, and open the links</h3>
+<p>If an answer matters, ask the same question again in a new conversation, and when two answers disagree about a fact, treat that fact as unverified. Anthropic suggests the same test, describing inconsistent answers to an identical prompt as a warning sign.</p>
+<p>When your AI searches the web and provides links, open them and confirm that each page exists and actually says what the AI claims. A genuine link to a page that says something different is a surprisingly common error.</p>
+<aside class="callout"><p><strong>Watch out.</strong> A confident tone tells you nothing, because the AI sounds just as certain about an invented fact as about an accurate one. Judge each fact by its source, never by how convincing it sounds.</p></aside>
+
+<h2 id="example">A worked example: a short post about Ben &amp; Jerry's first shop</h2>
+<p>Imagine you run a food blog and want 150 words about how Ben &amp; Jerry's started. Because it's a famous story, it's tempting to ask your AI to write it from memory, but that's the risky approach. Well-known stories are full of small details that are easy to blur, such as the exact date, the amounts, the address and the original menu.</p>
+<p>The safer approach is to begin with the company's own page. Ben &amp; Jerry's <a href="https://www.benjerry.com/about-us" rel="noopener">About us page</a> says the founders opened their first scoop shop in a renovated gas station in Burlington, Vermont, in 1978. It also says they did this after completing a $5 correspondence course in ice cream making from Penn State, with a $12,000 investment, $4,000 of which was borrowed.</p>
+<h3>What goes in</h3>
+<p>You paste that page into prompt 2 and explain that the draft is a 150-word introduction for a blog post. You also ask for the opening-day details and the first flavours, because they would make the post more vivid.</p>
+<h3>What comes out</h3>
+<p>Stage 1 returns a fact sheet, and the table below is an example of what it should look like, written for this article:</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Fact</th><th scope="col">Source</th><th scope="col">Confidence</th></tr></thead>
+<tbody>
+<tr><td>First scoop shop opened in 1978</td><td>About us page</td><td>High</td></tr>
+<tr><td>It was in a renovated gas station in Burlington, Vermont</td><td>About us page</td><td>High</td></tr>
+<tr><td>The founders took a $5 ice cream making course by post from Penn State</td><td>About us page</td><td>High</td></tr>
+<tr><td>They started with $12,000, of which $4,000 was borrowed</td><td>About us page</td><td>High</td></tr>
+<tr><td>Flavours sold on opening day</td><td>MISSING</td><td></td></tr>
+<tr><td>Street address of the first shop</td><td>MISSING</td><td></td></tr>
+</tbody></table></div>
+<p>The two MISSING rows are the real benefit, because these are exactly the details an AI working from memory might fill in with something that sounds believable. You now have a clear choice, which is either to find a reliable source for them or to leave them out, and either way nothing invented reaches your readers.</p>
+<p>After you approve the sheet, stage 2 writes from it. The following example draft line was written for this article rather than taken from Ben &amp; Jerry's own copy. "In 1978, Ben and Jerry, with a $5 ice cream course behind them, opened a scoop shop in an old gas station in Burlington, Vermont". Every fact in that sentence traces back to a row in the table. If you then run prompt 3 on the finished post, any line that drifted away from the approved sheet comes back marked.</p>
+
+<h2 id="checklist">A fact-check checklist for anything AI wrote</h2>
+<p>Run through this list before you publish, send or make a decision based on AI work, which for a short piece takes only a few minutes.</p>
+<ul class="checklist">
+<li>Every number has a source you can open and verify, or you have removed it.</li>
+<li>Every quotation from a real person links to the place where they actually said it.</li>
+<li>Every link opens correctly, and the page says exactly what the AI claims it says.</li>
+<li>The names of people, products and companies are spelled correctly and consistently.</li>
+<li>Every date is accurate, and the information is still current.</li>
+<li>Facts about your business match your own price list, policies and website.</li>
+<li>No claim goes further than its original source, so "may help" hasn't quietly become "will".</li>
+<li>No MISSING or [CHECK] markers remain anywhere in the text.</li>
+<li>You'd be comfortable defending every fact if a customer asked where it came from.</li>
+</ul>
+<p>Keep your business facts in one place so you can paste them into every conversation. A me.md file or a brand file works well for this, and our guide to <a href="/blog/give-ai-context-about-your-business">giving your AI context about your business</a> explains how to build one.</p>
+
+<h2 id="mistakes">Common mistakes, and what to do instead</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Do this instead</th></tr></thead>
+<tbody>
+<tr><td>Asking for facts from memory ("What's the average refund rate for online shops?")</td><td>Give it a source, or ask where you could find the figure</td></tr>
+<tr><td>Trusting the tone</td><td>Judge each fact by its source, never by how sure it sounds</td></tr>
+<tr><td>Asking "are you sure?"</td><td>Ask for the exact quote that supports the claim. A quote can be checked; "yes, I'm sure" can't</td></tr>
+<tr><td>Research and writing in one prompt</td><td>Fact sheet first, check it, then draft from it</td></tr>
+<tr><td>Checking only the parts that look wrong</td><td>Check every number, name, date, quote and link, because the wrong ones look fine</td></tr>
+<tr><td>Pasting a source but not fencing it in</td><td>Say "use only these sources" and "write MISSING if it isn't there"</td></tr>
+<tr><td>Letting a fixed error come back</td><td>Add the fact to your facts sheet, so the next chat starts with it</td></tr>
+</tbody></table></div>
+
+<h2 id="ai-blocks">Where AI Blocks helps</h2>
+<p>These free items are designed around sources and verification, so copy the prompt or download the skill, then use it in your own AI.</p>
+<ul>
+<li><strong><a href="/prompts/fact-vs-opinion-sorter">Fact and opinion sorter</a>.</strong> Share a pitch, article or report, and you receive its important lines sorted by category of claim, with sources flagged and a fact-check list.</li>
+<li><strong><a href="/skills/findings-and-guesses-separator">Research evidence checker</a>.</strong> Paste a report to see which lines are proven, which are likely and which are only guesses, along with a clean version and a list of open questions.</li>
+<li><strong><a href="/skills/claim-and-proof-matcher">Claim evidence checker</a>.</strong> Share your marketing copy and your evidence to see which claims are supported, which exaggerate and how to correct them.</li>
+<li><strong><a href="/workflows/research-a-question-and-write-a-cited-report">Research report and claim-source checker</a>.</strong> This complete workflow gives you an outline, a source shortlist, a cited report and a check of every claim against its source.</li>
+<li><strong><a href="/prompts/source-note-summariser">Source note summariser</a>.</strong> Paste an article, presentation or chapter, and you receive each claim, how well it's supported, the gaps and three quotations worth keeping.</li>
+<li><strong><a href="/me-md">Write your me.md</a>.</strong> A single file tells every AI who you are and what's accurate about your business, which leaves it fewer gaps to fill with guesses.</li>
+</ul>
+
+<h2 id="faq">Questions people ask</h2>
+<h3>Can you stop AI hallucinations completely?</h3>
+<p>No. Both OpenAI and Anthropic say their models can still produce false statements. You can make them much rarer by providing sources, and you can catch the rest by checking each claim against those sources.</p>
+<h3>Why does ChatGPT make up sources and links?</h3>
+<p>It writes what a source would probably look like, based on patterns, rather than looking one up. With web search switched on it can provide genuine links, but you still need to open them and confirm that each page says what the AI claims.</p>
+<h3>Does asking "are you sure?" help?</h3>
+<p>Not much, because the AI may apologise and change a correct answer, or simply confirm an incorrect one. Asking for the exact quotation or source behind a claim works better, since a quotation is something you can verify.</p>
+<h3>Are some AI apps better than others at facts?</h3>
+<p>They differ, and they change often, so any ranking goes out of date quickly. The guards in this guide work in all of them, and you should switch on web search or attach files whenever you need current information.</p>
+<h3>How do I fact-check AI quickly?</h3>
+<p>Ask the AI to place a source quotation next to every claim, then check only the numbers, names, dates, quotations and links. For a longer piece, run the claim check prompt in a new conversation and correct every line marked NOT IN SOURCES.</p>
+<h3>Is it safe to use AI for numbers and data?</h3>
+<p>Yes, provided it works from your own file and shows how it calculated each number. Our guide on <a href="/blog/analyse-spreadsheet-with-ai">analysing a spreadsheet with AI</a> explains how to make it show its working and how to check the totals.</p>

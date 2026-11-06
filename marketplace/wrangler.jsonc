@@ -1,0 +1,95 @@
+{
+  // AI Blocks marketplace Worker. Separate from the library site (site/), with its own databases and deploys.
+  // Environments: top level = local dev (`npm run worker:dev`), "staging" = agents-staging.useaiblocks.com,
+  // "production" = agents.useaiblocks.com. Bindings and vars are not inherited by environments, so each repeats them.
+  // Secrets (set with `npx wrangler secret put NAME --env <env>`, never committed):
+  //   ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY  model providers
+  //   CLERK_SECRET_KEY                                   optional: verified emails from Clerk
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-blocks-agents-local",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/mcp", "/mcp/*", "/oauth/*", "/.well-known/*"]
+  },
+  "observability": { "enabled": true, "head_sampling_rate": 1, "logs": { "enabled": true, "invocation_logs": false } },
+  "triggers": { "crons": ["*/15 * * * *"] },
+  "vars": {
+    "APP_ENV": "local",
+    "APP_ORIGIN": "http://localhost:5290",
+    "AUTH_TEST_MODE": "true",
+    "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
+    "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
+    "OPS_USER_IDS": "",
+    "BETA_MODE": "invite",
+    "MODEL_MODE": "fake",
+    "RELEASE_REVIEW": "required",
+    "DAILY_MODEL_CAP_USD": "5",
+    "JOB_COST_CAP_USD": "2",
+    "BASELINE_SAMPLE_RATE": "1",
+    "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "ai-blocks-agents-staging", "database_id": "25100c22-e873-43dc-a2c5-29ff348e9d72", "migrations_dir": "migrations" }
+  ],
+  "workflows": [
+    { "name": "ai-blocks-agents-local-job-run", "binding": "JOB_RUN", "class_name": "JobRunWorkflow" }
+  ],
+  "env": {
+    "staging": {
+      "name": "ai-blocks-agents-staging",
+      "routes": [{ "pattern": "agents-staging.useaiblocks.com", "custom_domain": true }],
+      "triggers": { "crons": ["*/15 * * * *"] },
+      "vars": {
+        "APP_ENV": "staging",
+        "APP_ORIGIN": "https://agents-staging.useaiblocks.com",
+        "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
+        "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
+        "OPS_USER_IDS": "",
+        "BETA_MODE": "invite",
+        "MODEL_MODE": "fake",
+        "RELEASE_REVIEW": "required",
+        "DAILY_MODEL_CAP_USD": "10",
+        "JOB_COST_CAP_USD": "2",
+        "BASELINE_SAMPLE_RATE": "1",
+        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+      },
+      "d1_databases": [
+        { "binding": "DB", "database_name": "ai-blocks-agents-staging", "database_id": "25100c22-e873-43dc-a2c5-29ff348e9d72", "migrations_dir": "migrations" }
+      ],
+      "workflows": [
+        { "name": "ai-blocks-agents-staging-job-run", "binding": "JOB_RUN", "class_name": "JobRunWorkflow" }
+      ]
+    },
+    "production": {
+      "name": "ai-blocks-agents",
+      "routes": [{ "pattern": "agents.useaiblocks.com", "custom_domain": true }],
+      "triggers": { "crons": ["*/15 * * * *"] },
+      "vars": {
+        "APP_ENV": "production",
+        "APP_ORIGIN": "https://agents.useaiblocks.com",
+        "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
+        "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
+        "OPS_USER_IDS": "",
+        "BETA_MODE": "invite",
+        "MODEL_MODE": "live",
+        "RELEASE_REVIEW": "required",
+        "DAILY_MODEL_CAP_USD": "25",
+        "JOB_COST_CAP_USD": "3",
+        "BASELINE_SAMPLE_RATE": "1",
+        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+      },
+      "d1_databases": [
+        { "binding": "DB", "database_name": "ai-blocks-agents", "database_id": "6d94173d-626a-4749-8f54-5ea10300d485", "migrations_dir": "migrations" }
+      ],
+      "workflows": [
+        { "name": "ai-blocks-agents-job-run", "binding": "JOB_RUN", "class_name": "JobRunWorkflow" }
+      ]
+    }
+  }
+}

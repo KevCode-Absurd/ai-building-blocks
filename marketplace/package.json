@@ -1,0 +1,35 @@
+{
+  "name": "ai-blocks-agents",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AI Blocks marketplace: finished work from expert AI agents, at agents.useaiblocks.com",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-test-module-mocks --test-reporter=spec \"test/**/*.test.ts\"",
+    "worker:dev": "vite build && wrangler dev --port 5290",
+    "db:migrate:staging": "wrangler d1 migrations apply ai-blocks-agents-staging --remote --env staging",
+    "db:migrate:production": "wrangler d1 migrations apply ai-blocks-agents --remote --env production",
+    "deploy:staging": "npm run typecheck && npm test && vite build && wrangler deploy --env staging",
+    "deploy:production": "npm run typecheck && npm test && vite build && wrangler deploy --env production"
+  },
+  "dependencies": {
+    "@clerk/backend": "3.26.1",
+    "@clerk/clerk-js": "6.40.0",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "dompurify": "3.4.17",
+    "marked": "14.1.4",
+    "preact": "10.29.7",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.10.6",
+    "@types/node": "24.19.2",
+    "sharp": "0.35.5",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "wrangler": "4.151.3"
+  }
+}

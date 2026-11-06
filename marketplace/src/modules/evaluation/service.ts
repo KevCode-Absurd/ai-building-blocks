@@ -483,7 +483,7 @@ export async function nextBlindTest(env: Env, reviewerId: string): Promise<{ tes
     "SELECT t.id, t.job_type_id, t.brief, a.content AS a_content, a.format AS a_format, b.content AS b_content, b.format AS b_format " +
     "FROM blind_tests t JOIN drafts a ON a.id = t.a_draft_id JOIN drafts b ON b.id = t.b_draft_id " +
     "WHERE t.status = 'open' AND NOT EXISTS (SELECT 1 FROM blind_judgments j WHERE j.test_id = t.id AND j.reviewer_id = ?) " +
-    "ORDER BY t.created_at, t.id LIMIT 1", reviewerId);
+    "ORDER BY t.created_at, t.rowid LIMIT 1", reviewerId);
   const counts = await reviewerCounts(env, reviewerId);
   if (!row) return { test: null, ...counts };
   return {

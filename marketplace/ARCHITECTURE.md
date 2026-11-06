@@ -134,6 +134,17 @@ While `HOSTED_JOBS` is off this is the ops-only test path; for everyone else a h
 | experts | `POST /api/experts/apply`, `GET /api/experts/me`, `GET /api/experts/me/dashboard`, `GET /api/experts/agreement`, `GET /api/experts` (ops), `POST /api/experts/:id/review` (ops) |
 | mcp | `POST /mcp`, `GET /.well-known/oauth-authorization-server`, `GET /.well-known/oauth-protected-resource`, `POST /oauth/register`, `GET /oauth/authorize`, `POST /oauth/token`, `POST /api/oauth/approve`. Tools `load_agent` (the core files: AGENTS.md, soul.md, personality.md, playbook.md, access.md, plus the list of the rest) and `get_agent_file` (any path listed in the agent's files.json) read the built pack through the `ASSETS` binding (`mcp/pack-files.ts`); they run no model. The job tools (`hosted: true`) are listed only while `HOSTED_JOBS` is "on", and the server instructions switch with it (`mcpInstructions`). Tool `get_agent` returns `agent.pack: { agent_zip, train_zip, files, guide }` (absolute `APP_ORIGIN` URLs: `/packs/<id>.zip`, `/packs/<id>-train.zip`, `/packs/<id>/files.json`, `/guides/train-your-own-agent`), or `null` for an expert's agent, and names the downloads in its text. |
 
+## Pages for search engines and AI crawlers
+
+`src/pages.ts` sends every page of the website (wrangler.jsonc `run_worker_first` sends all paths to the Worker except
+`/assets`, `/packs`, `/fonts` and portraits). Each page gets its own title, description, canonical address, robots tag,
+social preview and structured data (SoftwareApplication and BreadcrumbList for agents, WebSite with search for the home
+page). Public pages also get a plain version inside `#app` for crawlers that don't run scripts; the app replaces it
+when it starts. An agent's profile carries its `/api/agents/:id` answer in `script#boot` (`peekBoot` in
+`ui/lib/api.ts`), so the profile draws without a spinner. Unknown addresses, agents and guides are real 404s.
+`/robots.txt`, `/sitemap.xml` (pages, role pages, every live house agent) and `/llms.txt` are generated. Only
+production (`APP_ENV` "production") is indexed; other environments say noindex and disallow everything.
+
 ## UI map
 
 | Owner | Pages |

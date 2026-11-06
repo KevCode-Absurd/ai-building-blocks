@@ -4,6 +4,7 @@ import { createContext } from "preact";
 import { useContext, useEffect, useState } from "preact/hooks";
 import type { ComponentChildren } from "preact";
 import type { Clerk } from "@clerk/clerk-js";
+import { maybeSignedIn, PUBLIC_PAGE } from "./session-hint.ts";
 
 export interface Me {
   user: { id: string; email: string | null; emailVerified: boolean; name: string | null };
@@ -88,6 +89,20 @@ export function AuthProvider(props: { children: ComponentChildren }) {
     setMe(res.ok ? await res.json() : null);
   };
 
+  const startClerk = async (cfg: AppConfig): Promise<Clerk> => {
+    const c = await loadClerk(cfg.clerkPublishableKey);
+    tokenGetter = async () => (await c.session?.getToken()) ?? null;
+    setClerk(c);
+    const sync = async () => {
+      setSignedIn(!!c.user);
+      setName(c.user?.firstName ?? c.user?.primaryEmailAddress?.emailAddress ?? "");
+      await refreshMe();
+    };
+    c.addListener(() => { void sync(); });
+    await sync();
+    return c;
+  };
+
   useEffect(() => {
     (async () => {
       const cfg: AppConfig = await fetch("/api/config").then(r => r.json());
@@ -98,18 +113,9 @@ export function AuthProvider(props: { children: ComponentChildren }) {
         await refreshMe(); setLoaded(true);
         return;
       }
-      try {
-        const c = await loadClerk(cfg.clerkPublishableKey);
-        tokenGetter = async () => (await c.session?.getToken()) ?? null;
-        setClerk(c);
-        const sync = async () => {
-          setSignedIn(!!c.user);
-          setName(c.user?.firstName ?? c.user?.primaryEmailAddress?.emailAddress ?? "");
-          await refreshMe();
-        };
-        c.addListener(() => { void sync(); });
-        await sync();
-      } finally {
+      if (!PUBLIC_PAGE.test(location.pathname) || maybeSignedIn(document.cookie, location.search)) {
+        try { await startClerk(cfg); } finally { setLoaded(true); }
+      } else {
         setLoaded(true);
       }
     })();
@@ -126,7 +132,12 @@ export function AuthProvider(props: { children: ComponentChildren }) {
         return;
       }
       const urls = { signInForceRedirectUrl: back, signUpForceRedirectUrl: back };
-      void (opts?.signUp ? clerk?.redirectToSignUp(urls) : clerk?.redirectToSignIn(urls));
+      void (async () => {
+        // Clerk was skipped for a signed-out visitor: load it now. If they turn out to be signed in, just use that.
+        const c = clerk ?? (config ? await startClerk(config) : null);
+        if (!c || (!clerk && c.user)) return;
+        await (opts?.signUp ? c.redirectToSignUp(urls) : c.redirectToSignIn(urls));
+      })();
     },
     signOut: async () => {
       if (config?.env === "local") { localStorage.removeItem(DEMO_KEY); demoUser = null; setSignedIn(false); setMe(null); return; }

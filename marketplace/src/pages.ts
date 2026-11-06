@@ -1,0 +1,339 @@
+// The website's pages as the Worker sends them. The browser app (src/ui) draws every page, but search engines, AI
+// crawlers and link previews read the HTML first, so each page gets its own head tags here: title, description,
+// canonical address, robots, social preview and structured data. Public pages also get a plain version of their
+// content inside #app for crawlers that don't run scripts; the app replaces it when it starts. An agent's profile
+// also carries the same data /api/agents/:id returns (script#boot), so the app shows it without a second request.
+// Also robots.txt, sitemap.xml and llms.txt. Only production is indexed: every other environment says noindex, and
+// its robots.txt disallows everything. Paths are listed in ARCHITECTURE.md; wrangler.jsonc sends them to the Worker.
+import type { Env } from "./env.ts";
+import { AREAS } from "./core/types.ts";
+import { getRole, listRoles } from "./modules/directory/roles.ts";
+import { listPersonas } from "./modules/directory/service.ts";
+import { agentPayload } from "./modules/directory/routes.ts";
+import { areaLabel } from "./modules/directory/views.ts";
+import { AGENTS_TITLE, agentTitle, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
+import type { Persona } from "./core/types.ts";
+
+/** The how-to guides (src/ui/content/guides). Titles match each file's first heading (test/pages.test.ts checks). */
+export const GUIDES = [
+  {
+    slug: "use-an-agent-pack",
+    title: "Use an agent pack in your AI",
+    description: "How to load a free AI Blocks agent into Claude, Claude Code, ChatGPT, OpenAI Codex, Gemini or Cursor, and what to send as your first message.",
+  },
+  {
+    slug: "train-your-own-agent",
+    title: "Train your own agent",
+    description: "How the free Train your own pack turns the AI you use into a coach that helps you build your own version of an agent from your experience and voice.",
+  },
+] as const;
+
+const SITE = "AI Blocks";
+const HOME_TITLE = "Free AI agents that work in your own AI | AI Blocks";
+const HOME_DESCRIPTION = "Hire a named AI agent for a job role, free. Download it or connect your AI, and it works in Claude, ChatGPT, Gemini, Codex or Cursor, on your own plan.";
+const LIBRARY = "https://useaiblocks.com";
+
+/** Pages only the app draws (sign-in, accounts, ops, studio): served, never indexed. /oauth/consent is in mcp/routes.ts. */
+const APP_ONLY = [
+  /^\/sign-in$/, /^\/invite$/, /^\/jobs(\/[^/]+)?$/, /^\/notifications$/, /^\/ops(\/.*)?$/, /^\/review$/,
+  /^\/experts\/apply$/, /^\/expert$/, /^\/new$/, /^\/requests\/[^/]+$/, /^\/studio(\/agents\/[^/]+)?$/,
+];
+
+const isProduction = (env: Env) => env.APP_ENV === "production";
+const originOf = (env: Env) => env.APP_ORIGIN.replace(/\/+$/, "");
+
+/** Text for HTML: element content and attribute values alike. */
+export function esc(text: string): string {
+  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+/** JSON inside a <script> element: nothing in it can close the element or break the line. */
+const LINE_SEPARATORS = new RegExp("[\\u2028\\u2029]", "g");
+const scriptJson = (value: unknown) => JSON.stringify(value)
+  .replace(/</g, "\\u003c")
+  .replace(LINE_SEPARATORS, c => (c.charCodeAt(0) === 0x2028 ? "\\u2028" : "\\u2029"));
+
+/** Cut to `max` characters at a word break, with an ellipsis. */
+export function clip(text: string, max: number): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), max - 20)).replace(/[\s,.;:]+$/, "")}…`;
+}
+
+interface PageView {
+  status: number;
+  title: string;
+  description: string;
+  /** Canonical path (with its query when the query picks the page, e.g. /agents?role=seo-specialist). */
+  path: string;
+  index: boolean;
+  image?: string;
+  jsonLd?: object[];
+  /** Plain HTML for #app (public pages). */
+  body?: string;
+  /** API answers the app would ask for first, keyed by their path. */
+  boot?: Record<string, unknown>;
+}
+
+// ---------- Plain page content ----------
+
+function frame(inner: string): string {
+  return `<div class="seo-page"><header><a href="/">AI Blocks agents</a> <nav><a href="/agents">Agents</a> <a href="/connect">Connect your AI</a> <a href="/guides">Guides</a> <a href="${LIBRARY}">AI Blocks library</a></nav></header><main class="page">${inner}</main></div>`;
+}
+
+function agentLine(p: Persona): string {
+  return `<li><a href="/agents/${esc(p.id)}">${esc(p.name)}, ${esc(p.title)}</a>: ${esc(p.tagline)}</li>`;
+}
+
+function agentsByArea(list: Persona[]): string {
+  return AREAS.map(area => {
+    const inArea = list.filter(p => p.area === area);
+    return inArea.length ? `<h2>${esc(areaLabel(area))}</h2><ul>${inArea.map(agentLine).join("")}</ul>` : "";
+  }).join("");
+}
+
+// ---------- Pages ----------
+
+const notFound = (): PageView => ({
+  status: 404, index: false, path: "/404",
+  title: `Page not found | ${SITE}`,
+  description: "There is nothing at this address. See every free AI agent instead.",
+});
+
+async function homePage(env: Env): Promise<PageView> {
+  const count = (await listPersonas(env)).length;
+  const origin = originOf(env);
+  return {
+    status: 200, index: true, path: "/", title: HOME_TITLE, description: HOME_DESCRIPTION,
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "WebSite", name: "AI Blocks agents", url: `${origin}/`, publisher: { "@type": "Organization", name: SITE, url: LIBRARY, logo: `${origin}/icon-512.png` },
+        potentialAction: { "@type": "SearchAction", target: `${origin}/agents?q={search_term_string}`, "query-input": "required name=search_term_string" } },
+    ],
+    body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p><p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>`,
+  };
+}
+
+async function agentsPage(env: Env, url: URL): Promise<PageView> {
+  const everyone = await listPersonas(env);
+  const role = getRole(url.searchParams.get("role")?.trim());
+  const filtered = url.searchParams.has("q") || url.searchParams.has("area");
+  if (role) {
+    const inRole = everyone.filter(p => p.role === role.id);
+    return {
+      status: 200, index: inRole.length > 0 && !filtered, path: `/agents?role=${encodeURIComponent(role.id)}`,
+      title: roleTitle(role.name),
+      description: clip(`${role.summary} Each agent is free to download or load into your own AI.`, 160),
+      body: `<h1>${esc(role.name)} agents</h1><p>${esc(role.summary)}</p><ul>${inRole.map(agentLine).join("")}</ul><p><a href="/agents">See every agent</a></p>`,
+    };
+  }
+  return {
+    status: 200, index: !filtered, path: "/agents",
+    title: AGENTS_TITLE,
+    description: clip(`${everyone.length} named AI agents for marketing, sales, finance, operations and more. Each one is free to download or load into your own AI.`, 160),
+    body: `<h1>AI agents</h1><p>${everyone.length} named agents, each hired for a job role. Every one is free.</p>${agentsByArea(everyone)}`,
+  };
+}
+
+async function agentPage(env: Env, id: string): Promise<PageView> {
+  const payload = await agentPayload(env, id);
+  if (!payload) return notFound();
+  const a = payload.agent;
+  const origin = originOf(env);
+  const path = `/agents/${a.id}`;
+  const house = a.kind === "house";
+  const outcomes = a.outcomes.map(o => `<li><strong>${esc(o.title)}</strong>: ${esc(o.deliverable)}</li>`).join("");
+  return {
+    status: 200, index: house, path,
+    title: agentTitle(a.name, a.title),
+    description: clip(`${a.tagline} ${a.name} is a free AI agent you can download or load into your own AI.`, 160),
+    image: `${origin}${a.portrait}`,
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "SoftwareApplication", name: `${a.name}, ${a.title}`, description: a.tagline, url: `${origin}${path}`,
+        image: `${origin}${a.portrait}`, applicationCategory: "BusinessApplication", operatingSystem: "Any AI app that reads files: Claude, ChatGPT, Gemini, Codex, Cursor",
+        isAccessibleForFree: true, publisher: { "@type": "Organization", name: SITE, url: LIBRARY } },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Agents", item: `${origin}/agents` },
+        ...(a.role ? [{ "@type": "ListItem", position: 2, name: a.role.name, item: `${origin}/agents?role=${encodeURIComponent(a.role.id)}` }] : []),
+        { "@type": "ListItem", position: a.role ? 3 : 2, name: `${a.name}, ${a.title}`, item: `${origin}${path}` },
+      ] },
+    ],
+    body: `<p><a href="/agents">All agents</a></p><img src="${esc(a.portrait)}" alt="${esc(`${a.name}, ${a.title}`)}" width="160" height="160"><h1>${esc(a.name)}</h1><p>${esc(a.title)}${a.role ? ` · Job role: <a href="/agents?role=${esc(encodeURIComponent(a.role.id))}">${esc(a.role.name)}</a>` : ""}</p><p>${esc(a.tagline)}</p>${a.bio ? `<p>${esc(a.bio)}</p>` : ""}<h2>What ${esc(a.name)} delivers</h2><ul>${outcomes}</ul>${house ? `<h2>Get ${esc(a.name)}, free</h2><p>Download ${esc(a.name)}'s pack from this page, or <a href="/connect">connect your AI</a> and ask it to load ${esc(a.name)}. Read the personality in <a href="${esc(path)}/soul.md">soul.md</a>.</p>` : ""}`,
+    boot: { [`/api/agents/${a.id}`]: payload },
+  };
+}
+
+function guidesPage(): PageView {
+  return {
+    status: 200, index: true, path: "/guides",
+    title: `Guides to free AI agent packs | ${SITE}`,
+    description: "How to load a free AI Blocks agent into the AI you use, and how to train your own version of an agent.",
+    body: `<h1>Guides</h1><ul>${GUIDES.map(g => `<li><a href="/guides/${g.slug}">${esc(g.title)}</a>: ${esc(g.description)}</li>`).join("")}</ul>`,
+  };
+}
+
+function guidePage(slug: string): PageView {
+  const g = GUIDES.find(x => x.slug === slug);
+  if (!g) return notFound();
+  return {
+    status: 200, index: true, path: `/guides/${g.slug}`, title: `${g.title}${SITE_SUFFIX}`, description: g.description,
+    jsonLd: [{ "@context": "https://schema.org", "@type": "HowTo", name: g.title, description: g.description }],
+    body: `<p><a href="/guides">All guides</a></p><h1>${esc(g.title)}</h1><p>${esc(g.description)}</p>`,
+  };
+}
+
+function connectPage(): PageView {
+  return {
+    status: 200, index: true, path: "/connect",
+    title: `Connect your AI to free AI agents | ${SITE}`,
+    description: "Add AI Blocks to Claude, ChatGPT or another AI app once, then ask it to find an agent and load it into your chat. Free, on your own AI plan.",
+    body: `<h1>Connect your AI</h1><p>Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.</p><p>Developers can read every agent through the public API: <a href="/api/agents">/api/agents</a> and <a href="/packs/index.json">/packs/index.json</a>.</p>`,
+  };
+}
+
+async function viewFor(env: Env, url: URL): Promise<PageView> {
+  const path = url.pathname.replace(/\/+$/, "") || "/";
+  if (path === "/") return homePage(env);
+  if (path === "/agents") return agentsPage(env, url);
+  if (path === "/guides") return guidesPage();
+  if (path === "/connect") return connectPage();
+  let m = path.match(/^\/agents\/([a-z0-9-]+)$/);
+  if (m) return agentPage(env, m[1]);
+  m = path.match(/^\/agents\/([a-z0-9-]+)\/files\/.+$/);
+  if (m) {
+    const payload = await agentPayload(env, m[1]);
+    return payload ? { status: 200, index: false, path, title: `${payload.agent.name}'s pack files | ${SITE}`, description: `A file from ${payload.agent.name}'s free agent pack.` } : notFound();
+  }
+  m = path.match(/^\/guides\/([a-z0-9-]+)$/);
+  if (m) return guidePage(m[1]);
+  if (APP_ONLY.some(re => re.test(path))) return { status: 200, index: false, path, title: `${SITE} agents`, description: HOME_DESCRIPTION };
+  return notFound();
+}
+
+// ---------- The shell ----------
+
+/** The built index.html, once per isolate (assets don't change within a deploy). */
+let shellCache: { origin: string; html: string } | null = null;
+
+async function shell(env: Env, url: URL): Promise<string | null> {
+  if (shellCache?.origin === url.origin) return shellCache.html;
+  if (!env.ASSETS) return null;
+  const res = await env.ASSETS.fetch(new Request(new URL("/", url)));
+  if (!res.ok) return null;
+  const html = await res.text();
+  shellCache = { origin: url.origin, html };
+  return html;
+}
+
+/** Tests only. */
+export function clearShellCache(): void { shellCache = null; }
+
+/** The head tags for one page. */
+export function headTags(env: Env, view: PageView): string {
+  const origin = originOf(env);
+  const canonical = `${origin}${view.path}`;
+  const index = view.index && isProduction(env);
+  const image = view.image ?? `${origin}/icon-512.png`;
+  const tags = [
+    `<title>${esc(view.title)}</title>`,
+    `<meta name="description" content="${esc(view.description)}" />`,
+    `<meta name="robots" content="${index ? "index, follow, max-image-preview:large" : "noindex, follow"}" />`,
+    ...(view.status === 200 ? [`<link rel="canonical" href="${esc(canonical)}" />`] : []),
+    `<meta property="og:site_name" content="${SITE}" />`,
+    `<meta property="og:type" content="website" />`,
+    `<meta property="og:title" content="${esc(view.title)}" />`,
+    `<meta property="og:description" content="${esc(view.description)}" />`,
+    `<meta property="og:url" content="${esc(canonical)}" />`,
+    `<meta property="og:image" content="${esc(image)}" />`,
+    `<meta name="twitter:card" content="${view.image ? "summary_large_image" : "summary"}" />`,
+    ...(view.jsonLd ?? []).map(d => `<script type="application/ld+json">${scriptJson(d)}</script>`),
+  ];
+  return tags.join("\n    ");
+}
+
+/** The shell with this page's head tags, plain content and boot data. Tags the page sets itself are removed first. */
+export function renderShell(html: string, env: Env, view: PageView): string {
+  let out = html
+    .replace(/\s*<title>[\s\S]*?<\/title>/i, "")
+    .replace(/\s*<meta\s+(name|property)="(description|robots|og:[a-z_:]+|twitter:[a-z_:]+)"[^>]*>/gi, "")
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, "");
+  // Function replacements, so a "$" in an agent's text is never read as a replacement pattern.
+  const head = headTags(env, view);
+  out = out.replace(/<meta\s+name="viewport"[^>]*>/i, tag => `${tag}\n    ${head}`);
+  if (view.body) { const body = frame(view.body); out = out.replace(/<div id="app"><\/div>/, () => `<div id="app">${body}</div>`); }
+  // Vite puts the app's module script in <head>; module scripts run after parsing, so the end of <body> is in time.
+  if (view.boot) { const boot = scriptJson(view.boot); out = out.replace(/<\/body>/i, () => `  <script type="application/json" id="boot">${boot}</script>\n  </body>`); }
+  return out;
+}
+
+const PAGE_HEADERS = {
+  "content-type": "text/html; charset=utf-8",
+  "cache-control": "public, max-age=0, must-revalidate",
+  "x-content-type-options": "nosniff",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "x-frame-options": "DENY",
+  "content-security-policy": "frame-ancestors 'none'",
+  "strict-transport-security": "max-age=31536000",
+  "permissions-policy": "camera=(), microphone=(), geolocation=()",
+};
+
+/** A page of the website, or null when the app is not built here (tests without ASSETS, local API-only runs). */
+export async function pageResponse(req: Request, env: Env): Promise<Response | null> {
+  const url = new URL(req.url);
+  const html = await shell(env, url);
+  if (html === null) return null;
+  const view = await viewFor(env, url);
+  const headers: Record<string, string> = { ...PAGE_HEADERS };
+  if (!(view.index && isProduction(env))) headers["x-robots-tag"] = "noindex";
+  return new Response(req.method === "HEAD" ? null : renderShell(html, env, view), { status: view.status, headers });
+}
+
+// ---------- robots.txt, sitemap.xml, llms.txt ----------
+
+const TEXT_CACHE = "public, max-age=3600";
+const text = (body: string, type: string) => new Response(body, { status: 200, headers: { "content-type": `${type}; charset=utf-8`, "cache-control": TEXT_CACHE, "x-content-type-options": "nosniff" } });
+
+export function robotsTxt(env: Env): Response {
+  if (!isProduction(env)) return text("# Not the live site: nothing here should be indexed.\nUser-agent: *\nDisallow: /\n", "text/plain");
+  const origin = originOf(env);
+  const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/", "/*.zip$"];
+  return text(`User-agent: *\n${blocked.map(p => `Disallow: ${p}`).join("\n")}\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`, "text/plain");
+}
+
+export async function sitemapXml(env: Env): Promise<Response> {
+  const origin = originOf(env);
+  const everyone = await listPersonas(env);
+  const roles = listRoles().filter(r => everyone.some(p => p.role === r.id));
+  const paths = [
+    "/", "/agents", "/connect", "/guides", ...GUIDES.map(g => `/guides/${g.slug}`),
+    ...roles.map(r => `/agents?role=${encodeURIComponent(r.id)}`),
+    ...everyone.filter(p => p.kind === "house").map(p => `/agents/${p.id}`),
+  ];
+  const urls = paths.map(p => `  <url><loc>${esc(`${origin}${p}`)}</loc></url>`).join("\n");
+  return text(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, "application/xml");
+}
+
+export async function llmsTxt(env: Env): Promise<Response> {
+  const origin = originOf(env);
+  const everyone = (await listPersonas(env)).filter(p => p.kind === "house");
+  const lines = [
+    "# AI Blocks agents",
+    "",
+    `> ${everyone.length} free, named AI agents, each hired for a job role (SEO, sales, bookkeeping, support and more). Each agent is a pack of files: who it is, how it works, what it may touch and what it knows. Load one into your own AI (Claude, ChatGPT, Gemini, Codex, Cursor) and it works on your own plan. AI Blocks runs no work and holds no model keys for you.`,
+    "",
+    "Packs are free to use and change, including commercially in your own work, under the AI Blocks Agent Pack Licence 1.0. They may not be sold or resold.",
+    "",
+    "## Use the agents",
+    "",
+    `- [Connect your AI](${origin}/connect): add the AI Blocks MCP server (${origin}/mcp) once, then ask your AI to load an agent with load_agent.`,
+    `- [Agent list (JSON)](${origin}/api/agents): every agent with its role, area and outcomes.`,
+    `- [Pack index (JSON)](${origin}/packs/index.json): every pack's files.json and zip.`,
+    ...GUIDES.map(g => `- [${g.title}](${origin}/guides/${g.slug}): ${g.description}`),
+    "",
+    "## Agents",
+    "",
+    ...everyone.map(p => `- [${p.name}, ${p.title}](${origin}/agents/${p.id}): ${p.tagline}`),
+    "",
+  ];
+  return text(lines.join("\n"), "text/plain");
+}

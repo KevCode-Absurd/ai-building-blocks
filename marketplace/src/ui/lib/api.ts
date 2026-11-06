@@ -7,7 +7,25 @@ export class ApiError extends Error {
   constructor(status: number, code: string, message: string) { super(message); this.status = status; this.code = code; }
 }
 
+// Answers the Worker put in the page (script#boot, see src/pages.ts), keyed by API path. Each is used once, for the
+// first load, so a later visit to the same page asks the server again.
+let boot: Record<string, unknown> | null = null;
+function bootData(): Record<string, unknown> {
+  if (boot) return boot;
+  try { boot = JSON.parse(document.getElementById("boot")?.textContent || "{}"); } catch { boot = {}; }
+  return boot ?? {};
+}
+
+/** The answer for this GET path that came inside the page, without using it up. */
+export function peekBoot<T>(path: string): T | undefined {
+  return typeof document === "undefined" ? undefined : bootData()[path] as T | undefined;
+}
+
 export async function api<T = any>(path: string, opts: { method?: string; body?: unknown } = {}): Promise<T> {
+  if (!opts.method && opts.body === undefined && typeof document !== "undefined") {
+    const data = bootData();
+    if (path in data) { const hit = data[path] as T; delete data[path]; return hit; }
+  }
   const headers: Record<string, string> = { ...(await authHeaders()) };
   if (opts.body !== undefined) headers["content-type"] = "application/json";
   let res: Response;

@@ -1,9 +1,13 @@
 // /agents: every agent, with search and area filters. /agents?role=<id>: the agents in one job role. Public.
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import { Button, Empty, Notice, useLoad } from "../../components.tsx";
 import { api } from "../../lib/api.ts";
 import { AREAS } from "../../../core/types.ts";
+import { AGENTS_TITLE, roleTitle } from "../../../modules/directory/titles.ts";
 import { AgentCard, CardSkeletons, HowHiringWorks, type AgentList } from "./parts.tsx";
+
+/** Agent cards drawn per step; all 505 at once was over 9,000 elements, slow on phones. */
+const PAGE_SIZE = 60;
 
 const ROLE_ID = /^[a-z][a-z0-9-]{2,59}$/;
 
@@ -39,8 +43,19 @@ export function AgentsPage(props: { query: URLSearchParams }) {
   const data = state.data;
   const areaName = data?.areas.find(a => a.id === area)?.label;
   const roleInfo = role && data?.role?.id === role ? data.role : null;
-  useEffect(() => { document.title = roleInfo ? `${roleInfo.name} agents · AI Blocks` : "Agents · AI Blocks"; }, [roleInfo?.id]);
+  useEffect(() => { document.title = roleInfo ? roleTitle(roleInfo.name) : AGENTS_TITLE; }, [roleInfo?.id]);
   const showAll = () => { setQ(""); setArea(""); setRole(""); };
+  // Cards drawn so far: 60, then 60 more whenever the end of the list comes near (or the button is pressed).
+  const [shown, setShown] = useState(PAGE_SIZE);
+  useEffect(() => { setShown(PAGE_SIZE); }, [data]);
+  const moreRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = moreRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) setShown(n => n + PAGE_SIZE); }, { rootMargin: "800px 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [data, shown]);
 
   return (
     <main class="page page-wide dir-browse">
@@ -91,9 +106,16 @@ export function AgentsPage(props: { query: URLSearchParams }) {
       {!data && !state.error ? (
         <div class="dir-grid" aria-busy="true"><CardSkeletons count={8} /></div>
       ) : data && data.agents.length > 0 ? (
-        <div class={`dir-grid${state.loading ? " dir-grid-stale" : ""}`}>
-          {data.agents.map(a => <AgentCard agent={a} headingLevel={2} />)}
-        </div>
+        <>
+          <div class={`dir-grid${state.loading ? " dir-grid-stale" : ""}`}>
+            {data.agents.slice(0, shown).map(a => <AgentCard agent={a} headingLevel={2} />)}
+          </div>
+          {data.agents.length > shown && (
+            <div ref={moreRef} class="dir-more">
+              <Button kind="secondary" onClick={() => setShown(n => n + PAGE_SIZE)}>Show more agents ({data.agents.length - shown} left)</Button>
+            </div>
+          )}
+        </>
       ) : data ? (
         <Empty title={search ? `No agents match "${search}"${areaName ? ` in ${areaName}` : ""}` : "No agents here yet"}
           action={<div class="dir-empty-actions">

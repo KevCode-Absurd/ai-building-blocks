@@ -67,6 +67,10 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--text); }
 .skip-link { position: fixed; left: 16px; top: -100px; z-index: 10000; background: var(--text); color: var(--bg); padding: 12px 18px; font: 500 14px var(--mono); text-decoration: none; }
 .skip-link:focus { top: 12px; }
 #main-content:focus { outline: none; }
+/* Fills the screen so the footer starts below the fold and doesn't jump down when a page's content arrives. */
+#main-content { min-height: 100vh; }
+/* The plain copy the Worker puts in #app (src/pages.ts) is for crawlers and visitors without scripts. */
+.js .seo-page { display: none; }
 .link-btn { border: 0; background: none; padding: 0; color: var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
 /* Footer (library styles.css): the name, one line and the support address, short columns of links, then the year
@@ -238,3 +242,10 @@ select.input { appearance: none; padding-right: 36px; cursor: pointer; backgroun
   .btn { transition: none; }
   .btn:hover:not(:disabled), .btn:active:not(:disabled) { transform: none; }
 }
+
+/* The plain page the Worker puts in #app for crawlers (src/pages.ts). People see it only until the app starts. */
+.seo-page > header { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 16px var(--gutter); }
+.seo-page nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.seo-page img { border-radius: 50%; }
+.seo-page li { margin: 6px 0; }
+.dir-more { display: flex; justify-content: center; margin-top: 32px; }

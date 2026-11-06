@@ -1320,7 +1320,7 @@
       ],
       "not_for": [
         "Legal or regulatory sign-off on labels, allergens or claims",
-        "Drawing dielines or making print files",
+        "Drawing dielines from scratch (I work on your printer's dieline)",
         "Structural box engineering"
       ],
       "samples": [
@@ -2830,7 +2830,7 @@
         "Teams adding alt text for the first time"
       ],
       "not_for": [
-        "Images nobody has described in words (I cannot see image files)",
+        "Images your AI can't show me and nobody has described in words",
         "Accessibility certification or legal compliance sign-off",
         "Full website accessibility audits"
       ],

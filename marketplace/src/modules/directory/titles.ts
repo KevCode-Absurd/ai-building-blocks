@@ -1,0 +1,13 @@
+// Page titles for the agent pages, shared by the Worker (src/pages.ts, the HTML it sends) and the browser app, which
+// sets the same title once it starts, so search engines see one title either way. No imports: the app bundles this.
+
+export const SITE_SUFFIX = " | AI Blocks";
+export const AGENTS_TITLE = `Free AI agents by job role${SITE_SUFFIX}`;
+
+/** "Danielle, SEO strategist | Free AI agent | AI Blocks", or without "Free AI agent" when that runs long. */
+export function agentTitle(name: string, title: string): string {
+  const long = `${name}, ${title} | Free AI agent${SITE_SUFFIX}`;
+  return long.length <= 65 ? long : `${name}, ${title}${SITE_SUFFIX}`;
+}
+
+export const roleTitle = (roleName: string) => `${roleName} AI agents, free${SITE_SUFFIX}`;

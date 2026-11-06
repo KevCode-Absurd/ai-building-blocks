@@ -783,7 +783,7 @@
     "status": "live",
     "sort": 9341,
     "profile": {
-      "bio": "I run restaurant menus on Uber Eats, DoorDash and Deliveroo so they sell more and still make money after fees. I rebuild the menu for delivery, work out what you keep on each item after commission, and plan promotions that pass a margin check. You approve every price and promotion.",
+      "bio": "I run restaurant menus on Uber Eats, DoorDash and Deliveroo so they sell more and still make money after fees. I rebuild the menu for delivery, work out what you keep on each item after commission, and plan promotions that pass a margin check. Prices and promotions change only within limits you approve.",
       "outcomes": [
         {
           "id": "menu_rebuild",

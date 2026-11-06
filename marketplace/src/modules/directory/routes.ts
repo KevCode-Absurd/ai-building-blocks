@@ -24,6 +24,15 @@ function textFile(body: string, status: number, type: string, cache = true): Res
   });
 }
 
+/** What /api/agents/:id returns, or null for an unknown or hidden agent. The website's profile page (src/pages.ts) sends
+ *  the same answer inside the HTML, so the app can draw the profile without asking again. */
+export async function agentPayload(env: Env, id: string) {
+  const persona = await getPersona(env, id);
+  if (!persona) return null;
+  const neighbours = await listPersonas(env, { area: persona.area });
+  return { agent: agentProfile(persona), related: relatedAgents(persona, neighbours).map(agentCard) };
+}
+
 export const routes: Route[] = [
   {
     method: "GET", path: "/api/agents", handler: async ctx => {
@@ -62,13 +71,9 @@ export const routes: Route[] = [
   },
   {
     method: "GET", path: "/api/agents/:id", handler: async ctx => {
-      const persona = await getPersona(ctx.env, ctx.params.id);
-      if (!persona) return fail(404, "agent_not_found", "We could not find that agent. It may have a new name. See every agent at /agents.");
-      const neighbours = await listPersonas(ctx.env, { area: persona.area });
-      return json({
-        agent: agentProfile(persona),
-        related: relatedAgents(persona, neighbours).map(agentCard),
-      }, 200, PUBLIC_CACHE);
+      const payload = await agentPayload(ctx.env, ctx.params.id);
+      if (!payload) return fail(404, "agent_not_found", "We could not find that agent. It may have a new name. See every agent at /agents.");
+      return json(payload, 200, PUBLIC_CACHE);
     },
   },
   {

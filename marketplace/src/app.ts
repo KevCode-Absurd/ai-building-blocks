@@ -4,6 +4,7 @@ import { compile, dispatch, errorResponse } from "./core/http.ts";
 import { coreRoutes } from "./core/routes.ts";
 import { moduleRoutes, scheduledTasks } from "./modules/index.ts";
 import "./modules/fakes.ts";
+import { llmsTxt, pageResponse, robotsTxt, sitemapXml } from "./pages.ts";
 
 const compiled = compile([...coreRoutes, ...moduleRoutes]);
 const API_PREFIXES = ["/api/", "/mcp", "/oauth/", "/.well-known/"];
@@ -15,6 +16,16 @@ export async function handleFetch(req: Request, env: Env, exec: ExecutionContext
   if (API_PREFIXES.some(p => url.pathname === p.replace(/\/$/, "") || url.pathname.startsWith(p)) || WORKER_FILES.test(url.pathname)) {
     const res = await dispatch(compiled, req, env, exec);
     return res ?? errorResponse(404, "not_found", "There is nothing at this address.");
+  }
+  if (req.method === "GET" || req.method === "HEAD") {
+    if (url.pathname === "/robots.txt") return robotsTxt(env);
+    if (url.pathname === "/sitemap.xml") return sitemapXml(env);
+    if (url.pathname === "/llms.txt") return llmsTxt(env);
+    // A page (no file extension): its own head tags and plain content, and a real 404 for unknown addresses.
+    if (!/\.[A-Za-z0-9]+$/.test(url.pathname)) {
+      const page = await pageResponse(req, env);
+      if (page) return page;
+    }
   }
   if (env.ASSETS) return env.ASSETS.fetch(req);
   return errorResponse(404, "not_found", "There is nothing at this address.");

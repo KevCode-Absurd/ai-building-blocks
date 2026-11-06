@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 import { Link } from "./lib/router.tsx";
 
 export function Page(props: { title: string; intro?: ComponentChildren; actions?: ComponentChildren; children: ComponentChildren; wide?: boolean }) {
-  useEffect(() => { document.title = `${props.title} · AI Blocks`; }, [props.title]);
+  useEffect(() => { document.title = `${props.title} | AI Blocks`; }, [props.title]);
   return (
     <main class={`page${props.wide ? " page-wide" : ""}`}>
       <header class="page-head">
@@ -112,10 +112,11 @@ export function Tabs(props: { tabs: { id: string; label: string }[]; value: stri
 }
 
 /** Loads data with a loading and error state. reload() fetches again. */
-export function useLoad<T>(load: () => Promise<T>, deps: unknown[] = []): { data: T | null; error: string | null; loading: boolean; reload: () => void } {
-  const [data, setData] = useState<T | null>(null);
+export function useLoad<T>(load: () => Promise<T>, deps: unknown[] = [], initial?: T): { data: T | null; error: string | null; loading: boolean; reload: () => void } {
+  // initial: data that came with the page (peekBoot), so the first paint shows it instead of a spinner.
+  const [data, setData] = useState<T | null>(initial ?? null);
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(initial === undefined);
   const [n, setN] = useState(0);
   useEffect(() => {
     let live = true;

@@ -1721,7 +1721,7 @@
       "not_for": [
         "Legal contracts or tax advice",
         "Pyramid or multi-level schemes",
-        "Recruiting partners for you"
+        "Recruiting partners without an approved list and message"
       ],
       "samples": [
         {
@@ -2111,7 +2111,7 @@
         "Admitting legal liability or settling claims",
         "Legal service contracts",
         "Sending replies or contacting customers without your OK",
-        "Changing your ticket system set-up",
+        "Changing your ticket system beyond the change list you approve",
         "Replies that blame the customer"
       ],
       "samples": [
@@ -2657,7 +2657,7 @@
         "Short, honest summaries"
       ],
       "not_for": [
-        "Changing your help desk (I read it once you connect it)",
+        "Changing your help desk beyond the tags, views and reports you approve",
         "Replying to customers for you",
         "Conclusions from very small samples",
         "Judging individual agents",
@@ -4653,7 +4653,7 @@
       ],
       "not_for": [
         "Customs, tax or legal advice (check with local experts)",
-        "Live market data or account setup",
+        "Opening marketplace accounts or entering your identity, tax or bank details",
         "Guaranteed sales abroad"
       ],
       "samples": [

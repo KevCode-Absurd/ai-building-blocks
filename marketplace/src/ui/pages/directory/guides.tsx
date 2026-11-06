@@ -5,6 +5,7 @@ import { Button, Page } from "../../components.tsx";
 import { Link } from "../../lib/router.tsx";
 import { SafeMarkdown } from "./pack-parts.tsx";
 import { markdownSummary, markdownTitle } from "./packs.ts";
+import { SITE_SUFFIX } from "../../../modules/directory/titles.ts";
 import useAPack from "../../content/guides/use-an-agent-pack.md?raw";
 import trainYourOwn from "../../content/guides/train-your-own-agent.md?raw";
 
@@ -44,7 +45,7 @@ export function GuidesPage() {
 
 export function GuidePage(props: { params: Record<string, string> }) {
   const guide = GUIDES.find(g => g.slug === props.params.slug);
-  useEffect(() => { if (guide) document.title = `${guide.title} · AI Blocks`; }, [guide?.slug]);
+  useEffect(() => { if (guide) document.title = `${guide.title}${SITE_SUFFIX}`; }, [guide?.slug]);
   if (!guide) return (
     <Page title="We could not find that guide" intro="It may have moved. Here are the guides we have.">
       <GuideList />

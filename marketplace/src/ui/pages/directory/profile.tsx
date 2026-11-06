@@ -2,10 +2,11 @@
 // own AI (#dir-pack). Public.
 import { useEffect, useState } from "preact/hooks";
 import { Button, Notice, Page, Spinner, useLoad } from "../../components.tsx";
-import { api, ApiError } from "../../lib/api.ts";
+import { api, ApiError, peekBoot } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import { AgentCard, HowHiringWorks, Portrait, type AgentCardData, type AgentOutcome, type AgentProfile } from "./parts.tsx";
 import { SOUL_SECTIONS, splitVoice } from "../../../modules/directory/soul.ts";
+import { agentTitle } from "../../../modules/directory/titles.ts";
 import { PackContents, PackDownloads } from "./pack-parts.tsx";
 import { loadPack, viewerHref, type PackFile, type PackInfo } from "./packs.ts";
 
@@ -18,7 +19,7 @@ async function loadProfile(id: string): Promise<ProfileResponse | { missing: tru
 }
 
 export function AgentProfilePage(props: { params: Record<string, string> }) {
-  const state = useLoad(() => loadProfile(props.params.id), [props.params.id]);
+  const state = useLoad(() => loadProfile(props.params.id), [props.params.id], peekBoot<ProfileResponse>(`/api/agents/${encodeURIComponent(props.params.id)}`));
   const data = state.data;
   if (state.error) return (
     <Page title="We could not load this agent" intro="This is an agent's profile page. Check your connection, then try again.">
@@ -38,7 +39,7 @@ export function AgentProfilePage(props: { params: Record<string, string> }) {
 
 function Profile(props: { agent: AgentProfile; related: AgentCardData[] }) {
   const a = props.agent;
-  useEffect(() => { document.title = `${a.name}, ${a.title} · AI Blocks`; }, [a.id]);
+  useEffect(() => { document.title = agentTitle(a.name, a.title); }, [a.id]);
   // The free download (dist/packs). Missing before a local build, and for experts' agents, which have none.
   const pack = useLoad(() => loadPack(a.id), [a.id]);
   const files = pack.data?.files ?? [];

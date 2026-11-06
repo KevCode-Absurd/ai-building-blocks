@@ -24,6 +24,7 @@ async function consentShell(ctx: Ctx): Promise<Response> {
   headers.set("content-security-policy", "frame-ancestors 'none'");
   headers.set("cache-control", "no-store");
   headers.set("referrer-policy", "no-referrer");
+  headers.set("x-robots-tag", "noindex");
   return new Response(shell.body, { status: 200, headers });
 }
 

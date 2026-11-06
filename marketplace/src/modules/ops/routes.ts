@@ -6,6 +6,7 @@ import { gateMetrics } from "./service.ts";
 import { costReport, jobRecord, jobSummary, listAgents, listJobSummaries } from "./queries.ts";
 import {
   addNote, assignAgent, cancelJob, changeStaff, createBetaCodes, listBetaCodes, listStaff, parseExpiry, releaseJob, rerunJob, resolveJob, seedAll,
+  seedIfContentChanged,
 } from "./actions.ts";
 
 type Body = Record<string, unknown>;
@@ -166,4 +167,4 @@ export const routes: Route[] = [
 ];
 
 /** Work the 15-minute cron runs for this module. */
-export const scheduled: ((env: Env) => Promise<void>)[] = [];
+export const scheduled: ((env: Env) => Promise<void>)[] = [async env => { await seedIfContentChanged(env); }];

@@ -2,7 +2,7 @@
 import type { Env } from "../../env.ts";
 import type { JobRow } from "../../core/types.ts";
 import { getJob, transitionJob, TRANSITIONS } from "../../core/jobs.ts";
-import { all, first, newCode, newId, nowIso } from "../../core/db.ts";
+import { all, first, newCode, newId, nowIso, sha256Hex } from "../../core/db.ts";
 import { eventStatement, recordEvent } from "../../core/events.ts";
 import { fail } from "../../core/http.ts";
 import { notify } from "../../core/email.ts";
@@ -217,13 +217,35 @@ export async function changeStaff(env: Env, input: { action: "add" | "remove"; r
 
 // ---------- Seeding ----------
 
-export async function seedAll(env: Env, actor: string): Promise<{ personas: { created: number; updated: number }; agents: { created: number } }> {
+export async function seedAll(env: Env, actor: string, actorKind: "ops" | "system" = "ops"): Promise<{ personas: { created: number; updated: number }; agents: { created: number } }> {
+  const contentVersion = await houseContentVersion();
   let personas: { created: number; updated: number };
   try { personas = await (await neighbours.directory()).seedPersonas(env, actor); }
   catch (err) { return fail(503, "seed_failed", `We could not add the agent profiles. The directory said: ${errText(err)}`); }
   let agents: { created: number };
   try { agents = await (await neighbours.runner()).seedHouseAgents(env, actor); }
   catch (err) { return fail(503, "seed_failed", `The agent profiles were added, but the house agents were not. The runner said: ${errText(err)}`); }
-  await recordEvent(env.DB, { actor, actorKind: "ops", entity: "system", entityId: "seed", type: "ops.seeded", data: { personas, agents } });
+  await recordEvent(env.DB, { actor, actorKind, entity: "system", entityId: "seed", type: "ops.seeded", data: { personas, agents, content_version: contentVersion } });
   return { personas, agents };
+}
+
+/** A fingerprint of the house content in this build: the job menu version plus every house persona. */
+export async function houseContentVersion(): Promise<string> {
+  const { housePersonas } = await import("../directory/index.ts");
+  const { CATALOGUE_VERSION } = await import("../catalogue/index.ts");
+  return `${CATALOGUE_VERSION}/${(await sha256Hex(JSON.stringify(housePersonas()))).slice(0, 16)}`;
+}
+
+/**
+ * Cron: seed when this build's house content differs from the last seed, so a deploy with new agents or job types
+ * goes live on its own (seeding is idempotent and publishes changed packages as new versions). Errors are logged.
+ */
+export async function seedIfContentChanged(env: Env): Promise<"seeded" | "current" | "failed"> {
+  const version = await houseContentVersion();
+  const last = await first<{ data: string }>(env.DB, "SELECT data FROM events WHERE entity = 'system' AND entity_id = 'seed' AND type = 'ops.seeded' ORDER BY seq DESC LIMIT 1");
+  let lastVersion: unknown = null;
+  try { lastVersion = last ? JSON.parse(last.data).content_version : null; } catch { /* old or broken row: seed again */ }
+  if (lastVersion === version) return "current";
+  try { await seedAll(env, "system", "system"); return "seeded"; }
+  catch (err) { console.error("auto_seed_failed", errText(err)); return "failed"; }
 }

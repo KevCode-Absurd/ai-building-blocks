@@ -254,6 +254,27 @@ test("seed runs the directory first, then the runner, and returns both counts", 
   assert.match(broken.body.error.message, /house agents were not/);
 });
 
+test("the cron seeds when this build's house content changed since the last seed, and only then", async () => {
+  const t = await setup();
+  const { seedIfContentChanged, houseContentVersion } = await import("../src/modules/ops/actions.ts");
+  assert.equal(await seedIfContentChanged(t.env), "seeded", "nothing seeded yet");
+  assert.deepEqual(calls, ["personas:system", "agents:system"]);
+  const [ev] = await t.sql("SELECT actor_kind, data FROM events WHERE type = 'ops.seeded'");
+  assert.equal(ev.actor_kind, "system");
+  assert.equal(JSON.parse(ev.data).content_version, await houseContentVersion());
+  assert.equal(await seedIfContentChanged(t.env), "current");
+  assert.equal(calls.length, 2, "no second seed for the same content");
+
+  // The latest seed counts: one from an older build seeds again. (Events are append-only, so add a newer one.)
+  const older = () => t.sql("INSERT INTO events (at, actor, actor_kind, entity, entity_id, type, data) VALUES (?, 'system', 'system', 'system', 'seed', 'ops.seeded', ?)", NOW, JSON.stringify({ content_version: "cat-old/0000" }));
+  await older();
+  assert.equal(await seedIfContentChanged(t.env), "seeded");
+  // Errors are logged, never thrown from the cron.
+  await older();
+  seedHouseAgents.mock.mockImplementationOnce(async () => { throw new Error("runner down"); });
+  assert.equal(await seedIfContentChanged(t.env), "failed");
+});
+
 test("agents list shows persona, job type, live version, jobs, acceptance and win rate", async () => {
   const t = await setup();
   await t.sql("INSERT INTO personas (id, kind, name, title, tagline, area, status, sort, created_at, updated_at) VALUES ('nova-seo', 'house', 'Nova', 'SEO strategist', 'x', 'marketing', 'live', 10, ?, ?)", NOW, NOW);

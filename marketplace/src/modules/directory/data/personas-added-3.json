@@ -763,7 +763,7 @@
           "id": "careers_page",
           "title": "A careers page ready for your website",
           "deliverable": "Full careers page copy: opening, what we do, how we work, benefits, hiring steps, open roles block and FAQ, in your voice.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "careers page copy"
         },
         {
@@ -784,14 +784,14 @@
           "id": "hiring_posts",
           "title": "A set of posts that show your team at work",
           "deliverable": "Ten short social posts about life at work, hiring news and team moments, each with a photo idea and a call to apply.",
-          "job_type_id": null,
+          "job_type_id": "social-post-pack",
           "job_type_hint": "recruitment social posts"
         },
         {
           "id": "benefits_page",
           "title": "A clear benefits and perks summary",
           "deliverable": "A plain-words page on your pay approach, leave, flexibility, learning and perks, with the small print people ask about.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "benefits summary"
         }
       ],
@@ -1790,7 +1790,7 @@
           "id": "onboarding_workflow",
           "title": "An onboarding workflow from signed to first delivery",
           "deliverable": "A step-by-step map with who does what, by which day, the tools used and the checks before each handoff.",
-          "job_type_id": null,
+          "job_type_id": "process-map-steps",
           "job_type_hint": "client onboarding workflow"
         },
         {
@@ -1811,7 +1811,7 @@
           "id": "onboarding_emails",
           "title": "A set of onboarding emails for new clients",
           "deliverable": "Five to seven emails from welcome to first review, each with timing, purpose and one clear ask, in your firm's voice.",
-          "job_type_id": null,
+          "job_type_id": "customer-onboarding-emails",
           "job_type_hint": "client onboarding emails"
         },
         {
@@ -1891,7 +1891,7 @@
           "id": "fee_proposal",
           "title": "A fee proposal and scope of services",
           "deliverable": "A proposal letter with your services by stage, what is included, what is extra, fees and next steps, built from your fee figures.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "design fee proposal"
         },
         {
@@ -1912,7 +1912,7 @@
           "id": "studio_pages",
           "title": "An about page and service pages for your studio",
           "deliverable": "Copy for an about page and up to four service pages that explain how you work and what clients get.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "studio website copy"
         }
       ],
@@ -1978,7 +1978,7 @@
           "id": "cleaning_quote",
           "title": "A cleaning quote from your room count or walk-round",
           "deliverable": "A quote with the scope by room, how often, time on site, price from your rates, what is not included and how to book.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "cleaning quote"
         },
         {
@@ -2071,21 +2071,21 @@
           "id": "tasting_notes",
           "title": "Tasting notes and product copy for a release",
           "deliverable": "Tasting notes, a short story, food pairings and serving notes for up to eight drinks, from your brewer's or maker's notes.",
-          "job_type_id": null,
+          "job_type_id": "product-descriptions-batch",
           "job_type_hint": "drinks product descriptions"
         },
         {
           "id": "event_pack",
           "title": "A taproom or cellar door event pack",
           "deliverable": "An event plan with the idea, timeline, posts, an email, poster text and a simple way to measure how it went.",
-          "job_type_id": null,
+          "job_type_id": "webinar-event-promotion-pack",
           "job_type_hint": "taproom event promotion"
         },
         {
           "id": "release_emails",
           "title": "A release email series for your club or list",
           "deliverable": "Three or four emails for a new release: teaser, launch, last chance and thank-you, with subject lines.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "release email sequence"
         },
         {
@@ -2099,7 +2099,7 @@
           "id": "social_month",
           "title": "A month of social posts",
           "deliverable": "Twelve posts with captions and photo ideas, mixing new drinks, behind the scenes, events and people.",
-          "job_type_id": null,
+          "job_type_id": "social-media-calendar",
           "job_type_hint": "social post pack"
         }
       ],
@@ -2179,14 +2179,14 @@
           "id": "festival_invite",
           "title": "An invitation pack for a festival or special service",
           "deliverable": "An invitation, poster text, social posts and an email for a festival or special service, with timings and access details.",
-          "job_type_id": null,
+          "job_type_id": "webinar-event-promotion-pack",
           "job_type_hint": "special service invitation"
         },
         {
           "id": "visitor_page",
           "title": "A 'what to expect' page for first-time visitors",
           "deliverable": "A page covering times, where to go, what happens, what to wear, children, access and parking, so visitors feel at ease.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "visitor information page"
         },
         {
@@ -2272,7 +2272,7 @@
           "id": "booking_pitch",
           "title": "A booking pitch and follow-up for venues or promoters",
           "deliverable": "A short pitch email, a follow-up and a reply to an offer, tailored to the venues or festivals you name.",
-          "job_type_id": null,
+          "job_type_id": "cold-email-sequence",
           "job_type_hint": "booking pitch email"
         },
         {
@@ -2351,7 +2351,7 @@
           "id": "service_pages",
           "title": "Service pages with clear prices and what is included",
           "deliverable": "Copy for up to five service pages, such as full groom, walks or boarding, with what happens, timings, prices from your list and FAQs.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "pet service page copy"
         },
         {
@@ -2379,7 +2379,7 @@
           "id": "local_posts",
           "title": "A month of local social posts",
           "deliverable": "Twelve posts with captions and photo ideas, mixing pet features, tips and booking reminders, with a photo consent note.",
-          "job_type_id": null,
+          "job_type_id": "social-media-calendar",
           "job_type_hint": "social post pack"
         }
       ],
@@ -2546,14 +2546,14 @@
           "id": "shop_newsletter",
           "title": "A farm shop newsletter",
           "deliverable": "One newsletter issue with what is in season, a farm story, a recipe idea, events and opening times, in your voice.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "newsletter edition"
         },
         {
           "id": "event_pack",
           "title": "An open day or pick-your-own promotion pack",
           "deliverable": "Posts, an email, poster text, booking page text and on-the-day signs for one farm event.",
-          "job_type_id": null,
+          "job_type_id": "webinar-event-promotion-pack",
           "job_type_hint": "farm event promotion"
         },
         {
@@ -2567,7 +2567,7 @@
           "id": "farm_story",
           "title": "Your farm story and about page",
           "deliverable": "An about page and a short version for the shop and markets, telling your family or team story and how you farm.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "farm about page"
         }
       ],
@@ -2647,7 +2647,7 @@
           "id": "event_proposal",
           "title": "A proposal for one event",
           "deliverable": "A tailored proposal with the space, layout, timings, menu or package, costs from your rates, terms to confirm and how to hold the date.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "event venue proposal"
         },
         {
@@ -2661,7 +2661,7 @@
           "id": "proposal_followups",
           "title": "A follow-up series for proposals not yet signed",
           "deliverable": "Four polite follow-ups, including a message before a provisional hold ends and a close-the-file note.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "proposal follow-up"
         }
       ],

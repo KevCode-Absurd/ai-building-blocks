@@ -22,7 +22,7 @@
           "id": "category_cleanup",
           "title": "A clean category list for every transaction",
           "deliverable": "Your transaction export with a suggested category on each line, a list of lines I am unsure about, and a one-page rule set for next time.",
-          "job_type_id": null,
+          "job_type_id": "bank-transaction-categorisation",
           "job_type_hint": "transaction categorizing"
         },
         {
@@ -102,21 +102,21 @@
           "id": "forecast_13",
           "title": "A 13-week cash-flow forecast from your bank export",
           "deliverable": "A weekly forecast spreadsheet with money in, money out, closing cash and a short note on the assumptions behind each line.",
-          "job_type_id": null,
+          "job_type_id": "thirteen-week-cash-flow-forecast",
           "job_type_hint": "cash flow forecast"
         },
         {
           "id": "tight_weeks",
           "title": "A list of the weeks where cash gets tight",
           "deliverable": "The weeks where cash falls below the floor you set, the cause of each dip and the size of the gap.",
-          "job_type_id": null,
+          "job_type_id": "thirteen-week-cash-flow-forecast",
           "job_type_hint": "cash shortfall analysis"
         },
         {
           "id": "fix_options",
           "title": "Three ways to close a cash gap, with numbers",
           "deliverable": "Three options such as chasing invoices, moving a bill or trimming spend, each with the week it helps and how much.",
-          "job_type_id": null,
+          "job_type_id": "thirteen-week-cash-flow-forecast",
           "job_type_hint": "cash gap options"
         },
         {
@@ -196,7 +196,7 @@
           "id": "variance_notes",
           "title": "A plain-words note on every line that moved",
           "deliverable": "A table of each profit and loss line that changed by more than your threshold, with the likely cause and a question where I am unsure.",
-          "job_type_id": null,
+          "job_type_id": "monthly-financial-summary",
           "job_type_hint": "variance commentary"
         },
         {
@@ -303,7 +303,7 @@
           "id": "annual_budget",
           "title": "A 12-month budget for the business or one team",
           "deliverable": "A monthly budget with income, costs and profit by line, an owner for each line and the assumptions written beside it, built from last year's actuals and your goals.",
-          "job_type_id": null,
+          "job_type_id": "annual-budget-plan",
           "job_type_hint": "annual budget"
         },
         {
@@ -422,7 +422,7 @@
           "id": "reminder_set",
           "title": "A set of reminder messages from friendly to firm",
           "deliverable": "Four messages for an overdue invoice, from a first nudge to a final notice, each with when to send it and what to attach, ready to paste.",
-          "job_type_id": null,
+          "job_type_id": "collections-email-sequence",
           "job_type_hint": "payment reminder letters"
         },
         {
@@ -517,7 +517,7 @@
           "id": "price_recommendation",
           "title": "A price recommendation with the math shown",
           "deliverable": "A price or price range for one product or service, with a cost build-up, rival prices put on the same basis, a margin table and the reasoning.",
-          "job_type_id": null,
+          "job_type_id": "pricing-model",
           "job_type_hint": "price recommendation"
         },
         {
@@ -545,7 +545,7 @@
           "id": "price_survey",
           "title": "A set of pricing questions to ask your buyers",
           "deliverable": "Questions on value and price that do not lead the buyer, for you to ask. When you paste the answers back, I sort them and say what they mean for your price.",
-          "job_type_id": null,
+          "job_type_id": "survey-design",
           "job_type_hint": "pricing survey"
         },
         {
@@ -630,14 +630,14 @@
           "id": "monthly_update",
           "title": "A one-page monthly investor update",
           "deliverable": "A short update with headline numbers, wins, misses, the ask and next month's focus, ready to send.",
-          "job_type_id": null,
+          "job_type_id": "investor-update",
           "job_type_hint": "investor update"
         },
         {
           "id": "quarter_letter",
           "title": "A quarterly letter with a clear story",
           "deliverable": "A two-page letter with the quarter's results, what changed in the plan, key risks and the asks.",
-          "job_type_id": null,
+          "job_type_id": "investor-update",
           "job_type_hint": "quarterly investor letter"
         },
         {
@@ -981,14 +981,14 @@
           "id": "finance_pack",
           "title": "A monthly finance pack for the owner",
           "deliverable": "A short pack of key numbers, trends, risks and decisions needed, written for a non-finance reader.",
-          "job_type_id": null,
+          "job_type_id": "monthly-financial-summary",
           "job_type_hint": "finance report for owners"
         },
         {
           "id": "decision_memo",
           "title": "A decision memo on one big money choice",
           "deliverable": "A two-page memo that compares the options for one choice, such as a new hire or a lease, with numbers and a suggested next step.",
-          "job_type_id": null,
+          "job_type_id": "strategy-memo",
           "job_type_hint": "finance decision memo"
         }
       ],
@@ -1064,7 +1064,7 @@
           "id": "price_check",
           "title": "A check that a price covers every cost",
           "deliverable": "For a current or planned price: the full cost per sale with fees, shipping, returns and ad cost, the lowest price that still pays, and a clear pass or fail.",
-          "job_type_id": null,
+          "job_type_id": "pricing-model",
           "job_type_hint": "price margin check"
         },
         {
@@ -1183,7 +1183,7 @@
           "id": "metrics_dashboard_spec",
           "title": "A simple monthly metrics sheet to keep",
           "deliverable": "A spreadsheet layout with seven metrics, how to calculate each, and what a good or bad result looks like for you.",
-          "job_type_id": null,
+          "job_type_id": "kpi-dashboard-spec",
           "job_type_hint": "subscription metrics sheet"
         }
       ],
@@ -1416,7 +1416,7 @@
           "id": "operating_budget",
           "title": "An operating budget for the year",
           "deliverable": "A budget with income by source, costs by program and overheads, built from last year and your plans.",
-          "job_type_id": null,
+          "job_type_id": "annual-budget-plan",
           "job_type_hint": "nonprofit budget"
         },
         {
@@ -1666,7 +1666,7 @@
           "id": "kpi_set",
           "title": "The right set of KPIs, each with an exact definition",
           "deliverable": "Five to ten KPIs, each with a plain definition, formula, data source, owner, target and review rhythm, picked for your stage and goal.",
-          "job_type_id": null,
+          "job_type_id": "kpi-dashboard-spec",
           "job_type_hint": "kpi selection"
         },
         {
@@ -1680,7 +1680,7 @@
           "id": "dashboard_spec",
           "title": "A dashboard plan for your team",
           "deliverable": "A layout of tiles and charts, the data each one needs, the filters and the question each view answers, for you to build in your own tool.",
-          "job_type_id": null,
+          "job_type_id": "kpi-dashboard-spec",
           "job_type_hint": "dashboard design"
         },
         {
@@ -1874,7 +1874,7 @@
           "id": "supplier_compare",
           "title": "A like-for-like comparison of supplier prices",
           "deliverable": "A table that puts quotes on the same basis, including delivery, fees and terms, with the real cost per unit.",
-          "job_type_id": null,
+          "job_type_id": "vendor-comparison",
           "job_type_hint": "supplier price comparison"
         },
         {
@@ -1888,7 +1888,7 @@
           "id": "ops_budget",
           "title": "An operating cost budget for the next 12 months",
           "deliverable": "A monthly budget of fixed, variable and one-off running costs, with the assumption behind each line in its own column.",
-          "job_type_id": null,
+          "job_type_id": "annual-budget-plan",
           "job_type_hint": "operating budget"
         },
         {
@@ -2064,7 +2064,7 @@
           "id": "scorecard",
           "title": "A scorecard for scoring candidates fairly",
           "deliverable": "A scorecard with four to six criteria linked to the job, a 1 to 4 scale with plain examples, and notes on how to use it.",
-          "job_type_id": null,
+          "job_type_id": "interview-kit-scorecard",
           "job_type_hint": "candidate scorecard"
         },
         {
@@ -2141,7 +2141,7 @@
           "id": "job_post",
           "title": "A clear job post ready to publish",
           "deliverable": "A job post with a short pitch, the work, what you need, pay range, how to apply and what happens next. Plus short and long versions for different job boards, with the same facts.",
-          "job_type_id": null,
+          "job_type_id": "job-description",
           "job_type_hint": "job description"
         },
         {
@@ -2162,7 +2162,7 @@
           "id": "outreach_set",
           "title": "A set of first-contact messages for candidates",
           "deliverable": "Three versions of a first message for a role, plus two follow-ups, ready for you to personalise and send.",
-          "job_type_id": null,
+          "job_type_id": "recruiting-outreach-messages",
           "job_type_hint": "candidate outreach"
         },
         {
@@ -2271,14 +2271,14 @@
           "id": "question_set",
           "title": "A set of structured interview questions",
           "deliverable": "Eight to twelve questions linked to the job, each with what a strong answer looks like and follow-up prompts.",
-          "job_type_id": null,
+          "job_type_id": "interview-kit-scorecard",
           "job_type_hint": "interview questions"
         },
         {
           "id": "interview_scorecard",
           "title": "An interview scorecard with a plain scoring scale",
           "deliverable": "A scorecard with criteria, a 1 to 4 scale with examples and a place for notes.",
-          "job_type_id": null,
+          "job_type_id": "interview-kit-scorecard",
           "job_type_hint": "interview scorecard"
         },
         {
@@ -2388,7 +2388,7 @@
           "id": "plan_30_60_90",
           "title": "A 30-60-90 day plan with clear outcomes",
           "deliverable": "A plan with goals for each stage, how success is checked and the support given.",
-          "job_type_id": null,
+          "job_type_id": "onboarding-plan",
           "job_type_hint": "30-60-90 plan"
         },
         {
@@ -2483,7 +2483,7 @@
           "id": "policy_single",
           "title": "One policy written and explained",
           "deliverable": "One policy such as remote work, expenses or conduct, with its purpose, who it covers, the rules, examples, a one-page staff summary and manager notes.",
-          "job_type_id": null,
+          "job_type_id": "handbook-section",
           "job_type_hint": "hr policy"
         },
         {
@@ -2588,7 +2588,7 @@
           "id": "training_session",
           "title": "A training session plan with timings",
           "deliverable": "A session plan with goals, an agenda with minutes, activities, discussion prompts and a facilitator script.",
-          "job_type_id": null,
+          "job_type_id": "training-plan-course-outline",
           "job_type_hint": "training session plan"
         },
         {
@@ -2680,7 +2680,7 @@
           "id": "review_cycle",
           "title": "A review cycle kit with forms and calendar",
           "deliverable": "A kit with a self-review form, a manager form, a rating guide and a calendar for the cycle.",
-          "job_type_id": null,
+          "job_type_id": "performance-review-template",
           "job_type_hint": "review cycle"
         },
         {
@@ -3008,14 +3008,14 @@
           "id": "survey_design",
           "title": "A short employee survey with clear questions",
           "deliverable": "A survey of 10 to 20 questions on one scale, two open questions, a short intro, privacy rules and a plan for reading the results.",
-          "job_type_id": null,
+          "job_type_id": "survey-design",
           "job_type_hint": "employee survey"
         },
         {
           "id": "feedback_themes",
           "title": "Findings and comment themes from your staff survey",
           "deliverable": "Scores by question and topic, gaps between groups where groups are big enough, comments sorted into themes and counted, safe quotes and the biggest issues.",
-          "job_type_id": null,
+          "job_type_id": "survey-results-analysis",
           "job_type_hint": "employee feedback analysis"
         },
         {
@@ -3275,7 +3275,7 @@
           "id": "culture_memo",
           "title": "A short team culture memo",
           "deliverable": "A one to two page memo with your values, what each looks like in daily work and what it does not look like.",
-          "job_type_id": null,
+          "job_type_id": "values-culture-document",
           "job_type_hint": "culture memo"
         },
         {

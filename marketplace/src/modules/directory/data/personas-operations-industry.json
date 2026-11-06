@@ -15,14 +15,14 @@
           "id": "sop_one_task",
           "title": "A step-by-step SOP for one recurring task",
           "deliverable": "One SOP with purpose, owner, numbered steps, a quality check, common mistakes and what to do when a step fails.",
-          "job_type_id": null,
+          "job_type_id": "standard-operating-procedure",
           "job_type_hint": "sop"
         },
         {
           "id": "how_to_guide",
           "title": "A how-to guide for one task",
           "deliverable": "A step-by-step guide with what you need first, numbered steps, what you should see after each key step and a short 'stuck?' list.",
-          "job_type_id": null,
+          "job_type_id": "standard-operating-procedure",
           "job_type_hint": "how-to guide"
         },
         {
@@ -124,7 +124,7 @@
           "id": "process_map",
           "title": "A map of how one process works today",
           "deliverable": "A step-by-step map with owners, hand-offs and waiting points, written as a list and a simple text diagram.",
-          "job_type_id": null,
+          "job_type_id": "process-map-steps",
           "job_type_hint": "process map"
         },
         {
@@ -204,7 +204,7 @@
           "id": "project_plan",
           "title": "A project plan with tasks, owners and dates",
           "deliverable": "A plan with milestones, a task list, owners, dates, dependencies and a clear finish line.",
-          "job_type_id": null,
+          "job_type_id": "project-plan",
           "job_type_hint": "project plan"
         },
         {
@@ -284,7 +284,7 @@
           "id": "vendor_comparison",
           "title": "A side-by-side comparison of 2 to 5 vendors",
           "deliverable": "A scored table with quotes put on the same basis, a short write-up of trade-offs and a pick, based on your needs and the quotes or pages you give me.",
-          "job_type_id": null,
+          "job_type_id": "vendor-comparison",
           "job_type_hint": "vendor comparison"
         },
         {
@@ -394,7 +394,7 @@
           "id": "okr_set",
           "title": "A quarterly OKR set for a team",
           "deliverable": "Two to four objectives, each with two to four measurable key results, a baseline, a target and an owner.",
-          "job_type_id": null,
+          "job_type_id": "okr-set",
           "job_type_hint": "okr set"
         },
         {
@@ -666,14 +666,14 @@
           "id": "meeting_notes",
           "title": "Clean meeting notes with decisions and actions",
           "deliverable": "A one-page summary with decisions made, actions with owners and dates, and open questions.",
-          "job_type_id": null,
+          "job_type_id": "meeting-notes-to-action-plan",
           "job_type_hint": "meeting notes"
         },
         {
           "id": "followup_email",
           "title": "A follow-up email to attendees",
           "deliverable": "A short email with the decisions and each person's actions, ready to send.",
-          "job_type_id": null,
+          "job_type_id": "meeting-notes-to-action-plan",
           "job_type_hint": "meeting follow-up"
         },
         {
@@ -940,7 +940,7 @@
           "id": "automation_spec",
           "title": "An automation spec for one workflow",
           "deliverable": "A spec with trigger, inputs, rules, the data fields at each step, outputs, errors and a test list that a builder can follow.",
-          "job_type_id": null,
+          "job_type_id": "automation-workflow-spec",
           "job_type_hint": "automation spec"
         },
         {
@@ -954,7 +954,7 @@
           "id": "build_sheet",
           "title": "A build sheet for n8n, Zapier or Make",
           "deliverable": "Step-by-step instructions for your no-code tool, with field mappings and sample data.",
-          "job_type_id": null,
+          "job_type_id": "automation-workflow-spec",
           "job_type_hint": "workflow build sheet"
         },
         {
@@ -1055,7 +1055,7 @@
           "id": "board_update",
           "title": "A board or investor update",
           "deliverable": "An update with highlights, numbers, lessons, risks and asks, written from your notes.",
-          "job_type_id": null,
+          "job_type_id": "investor-update",
           "job_type_hint": "board update"
         },
         {
@@ -1069,7 +1069,7 @@
           "id": "strategy_memo",
           "title": "A strategy memo for one question",
           "deliverable": "A 2-page memo that frames the question, weighs options and sets next steps.",
-          "job_type_id": null,
+          "job_type_id": "strategy-memo",
           "job_type_hint": "strategy memo"
         }
       ],
@@ -1222,7 +1222,7 @@
           "id": "buyer_followup",
           "title": "A follow-up sequence for buyer leads",
           "deliverable": "Three to five messages for enquiries, viewings and after-offer silence, in your voice.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "real estate follow-up"
         },
         {
@@ -1295,7 +1295,7 @@
           "id": "practice_page",
           "title": "A practice-area web page",
           "deliverable": "A plain-language page that explains how you help, what to expect and how to book, with no result promises.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "law firm web page"
         },
         {
@@ -1309,7 +1309,7 @@
           "id": "firm_newsletter",
           "title": "A client newsletter or explainer post",
           "deliverable": "A short, general-information post on a topic you choose, from sources you provide.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "law firm newsletter"
         }
       ],
@@ -1629,14 +1629,14 @@
           "id": "enrolment_page",
           "title": "An enrolment page or brochure",
           "deliverable": "A page with who you help, how lessons work, prices you provide and how to start.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "tutoring enrolment page"
         },
         {
           "id": "term_newsletter",
           "title": "A term newsletter",
           "deliverable": "A one-page update on what was covered, dates and how parents can help at home.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "school newsletter"
         }
       ],
@@ -1796,7 +1796,7 @@
           "id": "traveller_followup",
           "title": "A follow-up sequence for travel enquiries",
           "deliverable": "Three to five messages from first enquiry to booking and pre-departure.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "travel follow-up"
         },
         {
@@ -1862,7 +1862,7 @@
           "id": "service_pages",
           "title": "Service pages for your firm",
           "deliverable": "Plain pages for bookkeeping, payroll, tax prep or advisory services, with who each is for and how to start.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "accounting service page"
         },
         {
@@ -1876,14 +1876,14 @@
           "id": "client_newsletter",
           "title": "A monthly client newsletter",
           "deliverable": "A short newsletter from topics and sources you supply, with general information only.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "accounting newsletter"
         },
         {
           "id": "onboarding_sequence",
           "title": "A new-client onboarding sequence",
           "deliverable": "Emails and a checklist to collect documents and set expectations.",
-          "job_type_id": null,
+          "job_type_id": "customer-onboarding-emails",
           "job_type_hint": "client onboarding"
         }
       ],
@@ -2043,7 +2043,7 @@
           "id": "shop_page",
           "title": "A shop website page and Google profile text",
           "deliverable": "A page that explains your services, warranty promises you provide and how to book.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "auto shop page"
         }
       ],
@@ -2109,7 +2109,7 @@
           "id": "package_page",
           "title": "A packages and pricing page",
           "deliverable": "Clear wording for your packages, what is included and how to book, using your prices.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "wedding packages"
         },
         {
@@ -2436,7 +2436,7 @@
           "id": "quote_proposal",
           "title": "A quote and proposal",
           "deliverable": "A proposal with scope, packages, timeline, usage terms you provide and booking steps.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "photography proposal"
         },
         {
@@ -2509,7 +2509,7 @@
           "id": "product_pages",
           "title": "Product pages for your food products",
           "deliverable": "Titles, descriptions, ingredients lists from your labels and storage notes for each product.",
-          "job_type_id": null,
+          "job_type_id": "product-descriptions-batch",
           "job_type_hint": "food product page"
         },
         {
@@ -2530,7 +2530,7 @@
           "id": "maker_story",
           "title": "A maker story and about page",
           "deliverable": "A true story about how and why you make your food, using your notes.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "about page"
         }
       ],
@@ -2589,14 +2589,14 @@
           "id": "job_ad",
           "title": "A clear, fair job ad",
           "deliverable": "A job ad with the role, the real requirements, pay range if you give it and how to apply.",
-          "job_type_id": null,
+          "job_type_id": "job-description",
           "job_type_hint": "job ad"
         },
         {
           "id": "candidate_outreach",
           "title": "Candidate outreach messages",
           "deliverable": "A first message and two follow-ups for a role, in a respectful, personal tone.",
-          "job_type_id": null,
+          "job_type_id": "recruiting-outreach-messages",
           "job_type_hint": "candidate outreach"
         },
         {
@@ -2676,7 +2676,7 @@
           "id": "parent_newsletter",
           "title": "A monthly parent newsletter",
           "deliverable": "A friendly newsletter with themes, dates, reminders and one story from your notes.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "parent newsletter"
         },
         {

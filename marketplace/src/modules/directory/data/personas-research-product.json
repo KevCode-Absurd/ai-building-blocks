@@ -22,7 +22,7 @@
           "id": "market_snapshot",
           "title": "A short market snapshot for one idea",
           "deliverable": "A 3 to 5 page brief on customers, segments, trends and risks for one product or service, with the sources you supplied marked.",
-          "job_type_id": null,
+          "job_type_id": "market-research-report",
           "job_type_hint": "market research report"
         },
         {
@@ -36,7 +36,7 @@
           "id": "open_space",
           "title": "A map of gaps competitors leave open",
           "deliverable": "A table of unmet needs and where rivals are weak, with a ranked list of openings for your business.",
-          "job_type_id": null,
+          "job_type_id": "competitor-analysis",
           "job_type_hint": "market gap analysis"
         }
       ],
@@ -95,21 +95,21 @@
           "id": "competitor_matrix",
           "title": "A competitor comparison for 3 to 6 rivals",
           "deliverable": "A side-by-side table covering offer, price, target buyer, strengths, weak points and message for each rival, plus a short summary.",
-          "job_type_id": null,
+          "job_type_id": "competitor-analysis",
           "job_type_hint": "competitor analysis"
         },
         {
           "id": "positioning_gaps",
           "title": "A positioning gap report",
           "deliverable": "A one-page read on what every rival says, what none of them say and a claim your business can own.",
-          "job_type_id": null,
+          "job_type_id": "competitor-teardown",
           "job_type_hint": "positioning analysis"
         },
         {
           "id": "rival_pricing",
           "title": "A pricing comparison with takeaways",
           "deliverable": "A table of rival plans and prices, what each includes, and where your price sits and why.",
-          "job_type_id": null,
+          "job_type_id": "competitor-analysis",
           "job_type_hint": "competitor pricing review"
         },
         {
@@ -175,7 +175,7 @@
           "id": "survey_draft",
           "title": "A ready-to-send survey for one goal",
           "deliverable": "A survey of 8 to 15 questions with answer options, order, intro text and thank-you message, built around one decision.",
-          "job_type_id": null,
+          "job_type_id": "survey-design",
           "job_type_hint": "survey design"
         },
         {
@@ -196,7 +196,7 @@
           "id": "findings_brief",
           "title": "A findings brief from your survey data",
           "deliverable": "A 2 to 4 page summary of your exported answers with counts, patterns, quotes and next steps.",
-          "job_type_id": null,
+          "job_type_id": "survey-results-analysis",
           "job_type_hint": "survey findings report"
         }
       ],
@@ -254,21 +254,21 @@
           "id": "interview_guide",
           "title": "An interview guide for one research goal",
           "deliverable": "A 30 to 45 minute script with opening, main questions, follow-up probes and a note-taking sheet.",
-          "job_type_id": null,
+          "job_type_id": "customer-interview-guide",
           "job_type_hint": "interview guide"
         },
         {
           "id": "interview_synthesis",
           "title": "A synthesis of 5 to 15 interviews",
           "deliverable": "A report with themes, supporting quotes, surprises and open questions from the transcripts or notes you provide.",
-          "job_type_id": null,
+          "job_type_id": "interview-synthesis",
           "job_type_hint": "interview synthesis"
         },
         {
           "id": "buyer_profile",
           "title": "A buyer profile built from real evidence",
           "deliverable": "A one-page profile of your buyer: situation, trigger, goals, worries and words they use, each tied to a source.",
-          "job_type_id": null,
+          "job_type_id": "customer-persona-pack",
           "job_type_hint": "customer profile"
         },
         {
@@ -341,7 +341,7 @@
           "id": "analysis_report",
           "title": "A written analysis of your dataset",
           "deliverable": "A report on your exported data with summary figures, a test or model, a plain-words result and its limits.",
-          "job_type_id": null,
+          "job_type_id": "csv-data-analysis",
           "job_type_hint": "statistical analysis"
         },
         {
@@ -653,7 +653,7 @@
           "id": "review_themes",
           "title": "A themes report from your reviews",
           "deliverable": "Top praise and complaint themes with counts, exact quotes and what each means for your business, plus the three fixes worth doing first.",
-          "job_type_id": null,
+          "job_type_id": "feedback-and-nps-analysis",
           "job_type_hint": "review analysis"
         },
         {
@@ -1180,21 +1180,21 @@
           "id": "prd",
           "title": "A product requirements document for one feature",
           "deliverable": "A PRD with problem, users, goals, scope, out of scope, user stories, acceptance criteria and success measures with targets.",
-          "job_type_id": null,
+          "job_type_id": "product-requirements-doc",
           "job_type_hint": "product requirements document"
         },
         {
           "id": "user_stories",
           "title": "User stories with acceptance criteria",
           "deliverable": "A set of 8 to 20 user stories for a feature, each with clear pass or fail tests.",
-          "job_type_id": null,
+          "job_type_id": "user-stories-acceptance",
           "job_type_hint": "user stories"
         },
         {
           "id": "launch_plan",
           "title": "A launch plan and checklist for a small release",
           "deliverable": "Steps, owners, messages and a rollback plan for one release, plus a checklist of pages, sign-up, payments, emails, support and tracking.",
-          "job_type_id": null,
+          "job_type_id": "product-launch-plan",
           "job_type_hint": "product launch plan"
         }
       ],
@@ -1351,28 +1351,28 @@
           "id": "error_messages",
           "title": "Error and empty-state messages for one flow",
           "deliverable": "A message for each error and empty screen in a flow, each saying what happened, why it matters and what to do next.",
-          "job_type_id": null,
+          "job_type_id": "ux-microcopy",
           "job_type_hint": "ux writing"
         },
         {
           "id": "onboarding_copy",
           "title": "Onboarding copy for a first-time user",
           "deliverable": "Welcome text, step prompts, tooltips and checklist items for one onboarding flow, matched to the real product steps.",
-          "job_type_id": null,
+          "job_type_id": "ux-microcopy",
           "job_type_hint": "onboarding copy"
         },
         {
           "id": "microcopy_pass",
           "title": "A microcopy pass on one screen or form",
           "deliverable": "Rewritten buttons, labels, hints and confirmations, in a before and after table with character counts.",
-          "job_type_id": null,
+          "job_type_id": "ux-microcopy",
           "job_type_hint": "microcopy"
         },
         {
           "id": "button_audit",
           "title": "A button and label audit across your product",
           "deliverable": "A table of your current labels, where each appears, a clearer replacement and the reason, with mixed terms for the same thing flagged.",
-          "job_type_id": null,
+          "job_type_id": "ux-microcopy",
           "job_type_hint": "interface copy review"
         },
         {
@@ -1450,21 +1450,21 @@
           "id": "ux_review",
           "title": "A usability review of one page or flow",
           "deliverable": "Problems found, ranked by how badly they hurt, each with a screen reference, why it matters and a fix.",
-          "job_type_id": null,
+          "job_type_id": "ux-review",
           "job_type_hint": "usability review"
         },
         {
           "id": "persona_walkthrough",
           "title": "A walkthrough as three types of user",
           "deliverable": "A step-by-step walk through your flow as three user types drawn from your notes, marking where each gets stuck.",
-          "job_type_id": null,
+          "job_type_id": "ux-review",
           "job_type_hint": "persona walkthrough"
         },
         {
           "id": "prototype_check",
           "title": "A pre-test check of a prototype",
           "deliverable": "A check of your prototype before user testing: gaps, dead ends, unclear labels and what to test first.",
-          "job_type_id": null,
+          "job_type_id": "ux-review",
           "job_type_hint": "prototype review"
         },
         {
@@ -1562,14 +1562,14 @@
           "id": "test_plan",
           "title": "A test plan with detailed test cases",
           "deliverable": "Scope, risks, 20 to 50 numbered test cases with steps, expected results and priority, edge cases, test data needs and the rules for when to ship.",
-          "job_type_id": null,
+          "job_type_id": "qa-test-plan",
           "job_type_hint": "qa test plan"
         },
         {
           "id": "acceptance_tests",
           "title": "Acceptance tests from your requirements",
           "deliverable": "Pass or fail tests for each requirement in your spec, in plain yes or no form.",
-          "job_type_id": null,
+          "job_type_id": "qa-test-cases",
           "job_type_hint": "acceptance criteria"
         },
         {
@@ -1675,14 +1675,14 @@
           "id": "api_reference",
           "title": "API reference for your endpoints",
           "deliverable": "A reference for each endpoint with purpose, parameters, example request and response, and error codes.",
-          "job_type_id": null,
+          "job_type_id": "api-documentation",
           "job_type_hint": "api documentation"
         },
         {
           "id": "quickstart",
           "title": "A quickstart guide for first-time developers",
           "deliverable": "A step-by-step guide from getting a key to a first successful call, with copy-ready examples.",
-          "job_type_id": null,
+          "job_type_id": "api-documentation",
           "job_type_hint": "developer quickstart"
         },
         {
@@ -1703,7 +1703,7 @@
           "id": "changelog",
           "title": "A changelog and migration note for a release",
           "deliverable": "Plain notes on what changed, who is affected and the steps to move over.",
-          "job_type_id": null,
+          "job_type_id": "release-notes",
           "job_type_hint": "release notes"
         },
         {
@@ -1786,7 +1786,7 @@
           "id": "sql_query",
           "title": "A SQL query for one business question",
           "deliverable": "A tested-by-reading query with comments, an explanation in plain words and notes on edge cases.",
-          "job_type_id": null,
+          "job_type_id": "sql-queries",
           "job_type_hint": "sql query"
         },
         {
@@ -1800,7 +1800,7 @@
           "id": "report_queries",
           "title": "A set of queries for a regular report",
           "deliverable": "Three to eight queries for a weekly or monthly report with column meanings and refresh notes.",
-          "job_type_id": null,
+          "job_type_id": "sql-queries",
           "job_type_hint": "reporting queries"
         },
         {
@@ -1866,14 +1866,14 @@
           "id": "insights_brief",
           "title": "A checked brief of top insights from your data",
           "deliverable": "A 2 to 4 page brief with the five most useful findings, each backed by a table or chart description and a caveat.",
-          "job_type_id": null,
+          "job_type_id": "csv-data-analysis",
           "job_type_hint": "data analysis"
         },
         {
           "id": "cohort_view",
           "title": "A cohort or segment comparison",
           "deliverable": "How groups of customers differ in spend, repeat rate or retention, from the file you send.",
-          "job_type_id": null,
+          "job_type_id": "csv-data-analysis",
           "job_type_hint": "segment analysis"
         },
         {
@@ -2057,7 +2057,7 @@
           "id": "funnel_report",
           "title": "A funnel analysis from your exported data",
           "deliverable": "Step-by-step conversion from visit to purchase, where the biggest drops are and what may cause them.",
-          "job_type_id": null,
+          "job_type_id": "csv-data-analysis",
           "job_type_hint": "funnel analysis"
         },
         {
@@ -3138,7 +3138,7 @@
           "id": "release_notes",
           "title": "Release notes for customers",
           "deliverable": "Plain release notes grouped by what users can now do, fix and change, with any action they must take.",
-          "job_type_id": null,
+          "job_type_id": "release-notes",
           "job_type_hint": "release notes"
         },
         {
@@ -3401,7 +3401,7 @@
           "id": "launch_plan",
           "title": "A launch plan for a product or feature",
           "deliverable": "A week-by-week plan from teaser to two weeks after, with audience, messages, channels, owners, first-week measures and a plan B if it flops.",
-          "job_type_id": null,
+          "job_type_id": "product-launch-plan",
           "job_type_hint": "product launch plan"
         },
         {
@@ -3415,7 +3415,7 @@
           "id": "positioning_sheet",
           "title": "A one-page positioning and message sheet",
           "deliverable": "Who it is for, the problem, the claim, three proof points and the words to use and avoid.",
-          "job_type_id": null,
+          "job_type_id": "positioning-messaging",
           "job_type_hint": "product positioning"
         },
         {

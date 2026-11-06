@@ -15,14 +15,14 @@
           "id": "crawl_fix_list",
           "title": "A crawl and indexing fix list from your crawl export",
           "deliverable": "Every issue in your crawl grouped by type (broken links, redirect chains, blocked pages, duplicates, missing canonicals), with the pages hit, why it matters and the fix, ranked by impact.",
-          "job_type_id": null,
+          "job_type_id": "seo-audit-report",
           "job_type_hint": "seo audit from your data: technical crawl fixes"
         },
         {
           "id": "indexing_readout",
           "title": "A read-out of your Search Console indexing report",
           "deliverable": "Each 'not indexed' reason in your page indexing export explained in plain words, with which pages should be indexed, which are fine to leave out, and the fix for each group.",
-          "job_type_id": null,
+          "job_type_id": "seo-audit-report",
           "job_type_hint": "search console indexing review"
         },
         {
@@ -182,7 +182,7 @@
           "id": "topic_clusters",
           "title": "A topic cluster plan for your main product or service",
           "deliverable": "Three to five clusters, each with a pillar page and 6 to 10 supporting pieces, the buyer question each piece answers and how the pieces link together.",
-          "job_type_id": null,
+          "job_type_id": "seo-content-plan",
           "job_type_hint": "seo content plan: topic clusters"
         },
         {
@@ -665,7 +665,7 @@
           "id": "store_listing",
           "title": "A full listing for the App Store and Google Play",
           "deliverable": "Title, subtitle or short description, keyword field, promotional text and full description for both stores, all inside the character limits, with the keyword each line targets.",
-          "job_type_id": null,
+          "job_type_id": "app-store-listing",
           "job_type_hint": "app store listing copy"
         },
         {
@@ -831,7 +831,7 @@
           "id": "ad_copy",
           "title": "Ad copy for one campaign in three formats",
           "deliverable": "Single image, document and conversation ad copy for one offer, inside LinkedIn's limits, with intro text, headlines and image notes.",
-          "job_type_id": null,
+          "job_type_id": "paid-ads-copy-set",
           "job_type_hint": "paid ads copy set: linkedin"
         },
         {
@@ -1471,7 +1471,7 @@
           "id": "explainer_script",
           "title": "A 60 to 90 second explainer script",
           "deliverable": "Voiceover and scene-by-scene visual notes in two columns, timed to the second, moving from the problem to how it works to the next step.",
-          "job_type_id": null,
+          "job_type_id": "video-script",
           "job_type_hint": "video script: explainer"
         },
         {
@@ -1644,7 +1644,7 @@
           "id": "workflow_specs",
           "title": "Workflow specs for up to five automations",
           "deliverable": "For each workflow: goal, trigger, enrolment and exit rules, steps, delays, branches, the emails needed and how to test it, ready for whoever builds it.",
-          "job_type_id": null,
+          "job_type_id": "automation-workflow-spec",
           "job_type_hint": "automation workflow spec: marketing"
         },
         {
@@ -1712,7 +1712,7 @@
           "id": "icp",
           "title": "An ideal customer profile from your customer data",
           "deliverable": "A profile built from your won, lost and churned deals: the industry, size, tools, triggers and pains that predict a good customer, with the deals that prove each point.",
-          "job_type_id": null,
+          "job_type_id": "ideal-customer-profile",
           "job_type_hint": "ideal customer profile"
         },
         {
@@ -1792,7 +1792,7 @@
           "id": "account_brief",
           "title": "A one-page pre-meeting account brief",
           "deliverable": "What the company does, recent changes, likely priorities, the people you will meet, how you might help and three smart questions, with the source of each fact.",
-          "job_type_id": null,
+          "job_type_id": "account-research-brief",
           "job_type_hint": "account research brief"
         },
         {
@@ -1806,14 +1806,14 @@
           "id": "trigger_points",
           "title": "Talking points tied to recent account events",
           "deliverable": "Each event in the material you give (funding, hiring, a new leader, expansion, results) linked to a reason to talk and one opening line.",
-          "job_type_id": null,
+          "job_type_id": "account-research-brief",
           "job_type_hint": "sales trigger talking points"
         },
         {
           "id": "batch_briefs",
           "title": "Short briefs for up to 10 accounts",
           "deliverable": "Half-page briefs for up to 10 accounts from the material you paste in for each, in the same layout so your team can compare them fast.",
-          "job_type_id": null,
+          "job_type_id": "account-research-brief",
           "job_type_hint": "batch account research"
         }
       ],
@@ -1872,14 +1872,14 @@
           "id": "call_script",
           "title": "A cold call script for one buyer type",
           "deliverable": "Opener, reason for the call, two qualifying questions, short answers to the five most common brush-offs and the meeting ask, all on one page.",
-          "job_type_id": null,
+          "job_type_id": "sales-call-script",
           "job_type_hint": "sales call script: cold call"
         },
         {
           "id": "gatekeeper_voicemail",
           "title": "Gatekeeper and voicemail scripts",
           "deliverable": "Lines for reception and assistants, three voicemails under 25 seconds each, and the follow-up email or text that goes with each one.",
-          "job_type_id": null,
+          "job_type_id": "sales-call-script",
           "job_type_hint": "voicemail and gatekeeper scripts"
         },
         {
@@ -1952,7 +1952,7 @@
           "id": "playbook",
           "title": "A sales playbook for one product and buyer",
           "deliverable": "Buyer profile, sales stages with what to do in each, key questions, talk tracks, proof to use, common objections, tools and rules, in one document of 15 to 25 pages.",
-          "job_type_id": null,
+          "job_type_id": "sales-playbook",
           "job_type_hint": "sales playbook"
         },
         {
@@ -2519,14 +2519,14 @@
           "id": "client_plan",
           "title": "A 90-day client plan for a solo expert",
           "deliverable": "Your offer, who it is for, two main channels, weekly actions that fit 5 hours a week, a simple tracker and the number of conversations you need to hit your goal.",
-          "job_type_id": null,
+          "job_type_id": "marketing-plan",
           "job_type_hint": "90-day marketing plan for coaches"
         },
         {
           "id": "work_with_me",
           "title": "A 'work with me' page and discovery call flow",
           "deliverable": "Page copy that explains the problem you solve, how you work, proof, fees or a starting price and the call booking step, plus the confirmation and follow-up messages.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "coaching services page"
         },
         {
@@ -2701,7 +2701,7 @@
           "id": "till_readout",
           "title": "A sales read-out from your till report",
           "deliverable": "Your till or POS export read for best and worst lines, busy and dead hours, basket size, and what to promote, move or reorder.",
-          "job_type_id": null,
+          "job_type_id": "csv-data-analysis",
           "job_type_hint": "retail sales review"
         },
         {

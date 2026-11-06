@@ -15,7 +15,7 @@
           "id": "listing_rewrite",
           "title": "Etsy listings rewritten for up to 15 items",
           "deliverable": "A new title, 13 tags, the attributes to set and a description for each item, using the words buyers search for.",
-          "job_type_id": null,
+          "job_type_id": "marketplace-listing-copy",
           "job_type_hint": "etsy listing copy"
         },
         {
@@ -297,7 +297,7 @@
           "id": "quote_comparison",
           "title": "A scored comparison of the quotes you got",
           "deliverable": "All quotes on the same basis, landed cost per unit, gaps in each quote and a ranked shortlist with reasons.",
-          "job_type_id": null,
+          "job_type_id": "vendor-comparison",
           "job_type_hint": "supplier quote comparison"
         },
         {
@@ -622,7 +622,7 @@
           "id": "bot_knowledge_base",
           "title": "A bot-ready knowledge base of 40 answer entries",
           "deliverable": "Short entries with the question, the ways customers ask it, the approved answer, its source and a hand-over rule.",
-          "job_type_id": null,
+          "job_type_id": "chatbot-knowledge-base",
           "job_type_hint": "chatbot knowledge base"
         },
         {
@@ -643,7 +643,7 @@
           "id": "kb_from_tickets",
           "title": "New entries from recent support tickets",
           "deliverable": "Questions customers asked that the knowledge base does not cover yet, written up as new entries for you to approve.",
-          "job_type_id": null,
+          "job_type_id": "chatbot-knowledge-base",
           "job_type_hint": "knowledge base gap fill"
         },
         {
@@ -717,14 +717,14 @@
           "id": "graded_sample",
           "title": "A graded sample of 30 support tickets",
           "deliverable": "Each ticket scored on the scorecard, with notes on what was good, what was missed and a better reply line.",
-          "job_type_id": null,
+          "job_type_id": "support-quality-review",
           "job_type_hint": "support ticket grading"
         },
         {
           "id": "coaching_notes",
           "title": "Coaching notes for each support agent",
           "deliverable": "Two strengths, two habits to fix and real examples from their tickets, written kindly and clearly.",
-          "job_type_id": null,
+          "job_type_id": "support-quality-review",
           "job_type_hint": "support agent coaching"
         },
         {
@@ -893,7 +893,7 @@
           "id": "nps_analysis",
           "title": "An NPS results analysis",
           "deliverable": "Score by segment and touchpoint, comment themes with counts and quotes, and what drives low and high scores.",
-          "job_type_id": null,
+          "job_type_id": "feedback-and-nps-analysis",
           "job_type_hint": "nps analysis"
         },
         {
@@ -1055,7 +1055,7 @@
           "id": "current_map",
           "title": "A current customer journey map",
           "deliverable": "Stages from first hearing of you to repeat purchase, with actions, questions, feelings and pain points at each step.",
-          "job_type_id": null,
+          "job_type_id": "personas-journey-map",
           "job_type_hint": "customer journey map"
         },
         {
@@ -2023,14 +2023,14 @@
           "id": "page_list",
           "title": "A new page list with a job for each page",
           "deliverable": "The pages the new site needs, what each must do, the content each needs and who writes it.",
-          "job_type_id": null,
+          "job_type_id": "website-wireframe-brief",
           "job_type_hint": "website page list"
         },
         {
           "id": "redesign_brief",
           "title": "A redesign brief for your designer or agency",
           "deliverable": "Goals, users, must-keep features, page list, brand rules, examples, budget and dates in one document.",
-          "job_type_id": null,
+          "job_type_id": "website-wireframe-brief",
           "job_type_hint": "website redesign brief"
         },
         {
@@ -2634,7 +2634,7 @@
           "id": "site_structure",
           "title": "A site structure for your website",
           "deliverable": "A page tree with levels, parent and child pages, and the visitor task each section serves.",
-          "job_type_id": null,
+          "job_type_id": "website-wireframe-brief",
           "job_type_hint": "information architecture"
         },
         {

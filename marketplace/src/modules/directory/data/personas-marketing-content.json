@@ -15,7 +15,7 @@
           "id": "seo_plan",
           "title": "A 90-day SEO plan built from your Search Console export",
           "deliverable": "A ranked list of pages to write or fix, each with the target search, the reason it matters, and a week-by-week order of work.",
-          "job_type_id": null,
+          "job_type_id": "seo-content-plan",
           "job_type_hint": "seo plan"
         },
         {
@@ -101,7 +101,7 @@
           "id": "ad_text",
           "title": "Responsive search ad text for one campaign",
           "deliverable": "15 headlines and 4 descriptions per ad group within Google's character limits, each tied to a keyword theme.",
-          "job_type_id": null,
+          "job_type_id": "paid-ads-copy-set",
           "job_type_hint": "google ads copy"
         },
         {
@@ -349,21 +349,21 @@
           "id": "welcome_flow_design",
           "title": "A welcome email series, planned and written",
           "deliverable": "Five emails that welcome, teach, build trust and make one soft offer, with order, timing, exit rules, subject lines and full copy.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "welcome email sequence"
         },
         {
           "id": "launch_emails",
           "title": "A launch email sequence",
           "deliverable": "Six to eight emails for a course, ebook, product or service launch, from first hint to last call, written in full.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "launch email sequence"
         },
         {
           "id": "single_send",
           "title": "A newsletter or campaign email with five subject lines",
           "deliverable": "One email for news, a sale, an event or a story with a lesson, with five subject lines, preview text and one clear action.",
-          "job_type_id": null,
+          "job_type_id": "promotional-email",
           "job_type_hint": "email campaign copy"
         },
         {
@@ -446,14 +446,14 @@
           "id": "positioning_statement",
           "title": "A positioning statement with a message sheet",
           "deliverable": "Who you serve, what you replace, your main reason to choose you, three proof points and the words to use and avoid.",
-          "job_type_id": null,
+          "job_type_id": "positioning-messaging",
           "job_type_hint": "positioning statement"
         },
         {
           "id": "rival_map",
           "title": "A rival map with open gaps",
           "deliverable": "A table of five or more rivals and what they claim, with the gaps none of them own.",
-          "job_type_id": null,
+          "job_type_id": "competitor-analysis",
           "job_type_hint": "competitor messaging analysis"
         },
         {
@@ -467,7 +467,7 @@
           "id": "buyer_profile",
           "title": "A buyer profile built from your reviews and calls",
           "deliverable": "A profile with the job the buyer hires you for, what they tried first, the words they use and what made them switch.",
-          "job_type_id": null,
+          "job_type_id": "customer-persona-pack",
           "job_type_hint": "customer profile"
         }
       ],
@@ -527,21 +527,21 @@
           "id": "month_calendar",
           "title": "A month-long social content calendar",
           "deliverable": "Thirty days of post ideas by platform, each with a format, a hook, a goal and a call to action.",
-          "job_type_id": null,
+          "job_type_id": "social-media-calendar",
           "job_type_hint": "social media calendar"
         },
         {
           "id": "caption_batch",
           "title": "A batch of captions ready to post",
           "deliverable": "Twelve to twenty captions in your voice for the photos, videos or topics you give, with hooks, hashtags and a call to action.",
-          "job_type_id": null,
+          "job_type_id": "social-post-pack",
           "job_type_hint": "social media captions"
         },
         {
           "id": "post_week",
           "title": "A week of short posts or a thread on one idea",
           "deliverable": "Fourteen short posts for X, Threads or Bluesky, or a thread of 6 to 12 posts from your notes, each within the character limit.",
-          "job_type_id": null,
+          "job_type_id": "social-post-pack",
           "job_type_hint": "short form posts"
         },
         {
@@ -636,7 +636,7 @@
           "id": "ad_copy_set",
           "title": "A set of ten ad copy variations for one offer",
           "deliverable": "Ten primary texts with headlines and calls to action across four or more angles, grouped into clean test pairs with what each pair teaches.",
-          "job_type_id": null,
+          "job_type_id": "paid-ads-copy-set",
           "job_type_hint": "ad copy variations"
         },
         {
@@ -650,7 +650,7 @@
           "id": "review_based_ads",
           "title": "Ads built from your real customer reviews",
           "deliverable": "Five ads whose hooks and proof come directly from reviews you provide, with the source line noted.",
-          "job_type_id": null,
+          "job_type_id": "paid-ads-copy-set",
           "job_type_hint": "review based ad copy"
         },
         {
@@ -829,7 +829,7 @@
           "id": "video_script",
           "title": "A 30-second video ad script with shot list",
           "deliverable": "Voiceover or spoken lines, shot-by-shot list, on-screen text and a call to action, for one offer.",
-          "job_type_id": null,
+          "job_type_id": "video-script",
           "job_type_hint": "video ad script"
         },
         {
@@ -924,7 +924,7 @@
           "id": "true_fact_ads",
           "title": "Ads built on true facts your rivals never state",
           "deliverable": "Five ads that lead with real, checkable differences between you and your rivals.",
-          "job_type_id": null,
+          "job_type_id": "paid-ads-copy-set",
           "job_type_hint": "comparison ad copy"
         },
         {
@@ -1072,7 +1072,7 @@
           "id": "one_goal_plan",
           "title": "A marketing plan cut down to one goal",
           "deliverable": "A two-page plan with one goal, one channel, one offer, weekly actions for 90 days and the number that proves it works.",
-          "job_type_id": null,
+          "job_type_id": "marketing-plan",
           "job_type_hint": "marketing plan"
         },
         {
@@ -1153,14 +1153,14 @@
           "id": "local_plan",
           "title": "A 90-day local marketing plan",
           "deliverable": "A plan covering your map listing, local pages, reviews, one local offer and a simple weekly routine.",
-          "job_type_id": null,
+          "job_type_id": "marketing-plan",
           "job_type_hint": "local marketing plan"
         },
         {
           "id": "service_area_pages",
           "title": "Service and area page copy",
           "deliverable": "Page copy for each service and town you cover, each with real local details and no copied text.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "local service page copy"
         },
         {
@@ -1174,7 +1174,7 @@
           "id": "quote_followup",
           "title": "Follow-ups for quotes you already sent",
           "deliverable": "Text and email follow-ups for day 2, day 5 and day 10 after a quote, each one adding a small helpful thing.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "quote follow-up"
         },
         {
@@ -1282,7 +1282,7 @@
           "id": "complaint_patterns",
           "title": "A repeat complaint report",
           "deliverable": "Review themes counted and ranked with example quotes, and the fix that would remove the most complaints.",
-          "job_type_id": null,
+          "job_type_id": "feedback-and-nps-analysis",
           "job_type_hint": "review analysis"
         },
         {
@@ -1380,7 +1380,7 @@
           "id": "optin_page",
           "title": "An opt-in page for your lead magnet",
           "deliverable": "Headline, bullets, form text and thank-you page copy, ready to paste in.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "opt-in page copy"
         },
         {
@@ -1615,7 +1615,7 @@
           "id": "saas_channel_plan",
           "title": "A self-serve SaaS growth plan",
           "deliverable": "One main channel, one backup, a 90-day plan, weekly actions and a scoreboard of sign-up, activation and paid numbers.",
-          "job_type_id": null,
+          "job_type_id": "marketing-plan",
           "job_type_hint": "saas growth plan"
         },
         {
@@ -1636,7 +1636,7 @@
           "id": "feature_launch_plan",
           "title": "A feature launch plan with a beta",
           "deliverable": "A plan to test a new feature with a small group, the messages and the numbers to read.",
-          "job_type_id": null,
+          "job_type_id": "product-launch-plan",
           "job_type_hint": "feature launch plan"
         }
       ],
@@ -2011,7 +2011,7 @@
           "id": "supporter_newsletter",
           "title": "A supporter newsletter or impact update",
           "deliverable": "One newsletter issue or one-page donor update with an impact story, your numbers, a thank-you and one clear next step.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "nonprofit newsletter"
         },
         {
@@ -2099,7 +2099,7 @@
           "id": "metrics_definitions",
           "title": "A metrics dictionary for your team",
           "deliverable": "Plain definitions of each number, where it comes from and who owns it, so everyone means the same thing.",
-          "job_type_id": null,
+          "job_type_id": "kpi-dashboard-spec",
           "job_type_hint": "marketing metrics definitions"
         },
         {
@@ -2174,7 +2174,7 @@
           "id": "new_patient_page",
           "title": "A new-patient page with clear next steps",
           "deliverable": "Page copy for one service with who it suits, what happens at the visit, how to book and a plain FAQ.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "clinic service page"
         },
         {
@@ -2291,7 +2291,7 @@
           "id": "promo_sequence",
           "title": "A registration and reminder sequence",
           "deliverable": "Invitation, reminder and replay emails and social posts timed to the event date.",
-          "job_type_id": null,
+          "job_type_id": "webinar-event-promotion-pack",
           "job_type_hint": "webinar promotion emails"
         },
         {
@@ -2444,7 +2444,7 @@
           "id": "seo_article",
           "title": "A 1,500 word SEO article",
           "deliverable": "A finished article with title, meta description, headings, FAQ and internal link suggestions, for one search.",
-          "job_type_id": null,
+          "job_type_id": "seo-blog-post",
           "job_type_hint": "seo blog post"
         },
         {
@@ -2458,7 +2458,7 @@
           "id": "post_beats_ranking",
           "title": "A post that beats the page ranking today",
           "deliverable": "A rewrite or new post that covers what the top pages miss, based on the pages you paste in.",
-          "job_type_id": null,
+          "job_type_id": "seo-blog-post",
           "job_type_hint": "seo article rewrite"
         },
         {
@@ -2538,7 +2538,7 @@
           "id": "about_page",
           "title": "Your about page",
           "deliverable": "A page that tells buyers who you are, why you do this and why they can trust you, with proof you supply.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "about page copy"
         },
         {
@@ -2604,28 +2604,28 @@
           "id": "homepage_copy",
           "title": "Homepage copy",
           "deliverable": "Headline, subhead, sections, proof, FAQ and calls to action for your homepage.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "homepage copy"
         },
         {
           "id": "service_pages",
           "title": "Copy for three service pages",
           "deliverable": "Three service pages each with a clear promise, who it is for, process, proof and a call to action.",
-          "job_type_id": null,
+          "job_type_id": "website-page-copy",
           "job_type_hint": "service page copy"
         },
         {
           "id": "landing_page_copy",
           "title": "Landing page copy for one offer",
           "deliverable": "Full landing page copy with sections, proof points and a clear call to action that matches your goal.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "landing page copy"
         },
         {
           "id": "sales_page_body",
           "title": "Body copy that persuades with proof",
           "deliverable": "A sales page body built on the proof you give, with objections answered in order.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "sales page copy"
         }
       ],
@@ -2685,7 +2685,7 @@
           "id": "press_release",
           "title": "A press release",
           "deliverable": "A release of 300 to 500 words with headline, summary, quotes you approve, facts, boilerplate and contact block.",
-          "job_type_id": null,
+          "job_type_id": "press-release",
           "job_type_hint": "press release"
         },
         {
@@ -2764,7 +2764,7 @@
           "id": "newsletter_issue",
           "title": "One newsletter issue",
           "deliverable": "A full issue with subject lines, a useful lead, a story or tip, and one clear call to action.",
-          "job_type_id": null,
+          "job_type_id": "newsletter-edition",
           "job_type_hint": "newsletter issue"
         },
         {
@@ -2844,7 +2844,7 @@
           "id": "post_batch",
           "title": "A batch of 12 LinkedIn posts",
           "deliverable": "Twelve posts in your voice with hooks, structure and a clear closing line, built from your notes.",
-          "job_type_id": null,
+          "job_type_id": "linkedin-post-pack",
           "job_type_hint": "linkedin posts"
         },
         {
@@ -2924,14 +2924,14 @@
           "id": "case_study",
           "title": "A full case study",
           "deliverable": "A 600 to 900 word case study with situation, what they tried, what changed and the results, with a pull quote.",
-          "job_type_id": null,
+          "job_type_id": "case-study",
           "job_type_hint": "case study"
         },
         {
           "id": "interview_guide",
           "title": "An interview guide for your customer",
           "deliverable": "Twelve questions and follow-ups that draw out the story, numbers and quotes.",
-          "job_type_id": null,
+          "job_type_id": "customer-interview-guide",
           "job_type_hint": "customer interview questions"
         },
         {
@@ -3004,7 +3004,7 @@
           "id": "video_script",
           "title": "A YouTube video script",
           "deliverable": "A full spoken script with intro hook, sections, examples and a call to action, with timing marks.",
-          "job_type_id": null,
+          "job_type_id": "video-script",
           "job_type_hint": "youtube script"
         },
         {
@@ -3085,7 +3085,7 @@
           "id": "repurpose_pack",
           "title": "A repurposing pack from one long piece",
           "deliverable": "From one article, talk or transcript: 5 social posts, 1 email, 3 short video ideas and 1 carousel.",
-          "job_type_id": null,
+          "job_type_id": "content-repurposing-pack",
           "job_type_hint": "content repurposing"
         },
         {
@@ -3106,7 +3106,7 @@
           "id": "channel_adapt",
           "title": "A version of your piece for each channel",
           "deliverable": "Your piece rewritten for LinkedIn, email and Instagram, each in the channel's style.",
-          "job_type_id": null,
+          "job_type_id": "content-repurposing-pack",
           "job_type_hint": "content adaptation"
         }
       ],
@@ -3165,7 +3165,7 @@
           "id": "grant_application",
           "title": "A grant application draft",
           "deliverable": "Answers to each question in the funder's form, in their order and within word limits, using only evidence you supplied, with gaps marked.",
-          "job_type_id": null,
+          "job_type_id": "grant-application-draft",
           "job_type_hint": "grant application"
         },
         {
@@ -3347,7 +3347,7 @@
           "id": "show_notes",
           "title": "Show notes for an episode",
           "deliverable": "Title, summary, key takeaways, timestamps, links list and a call to action from your transcript.",
-          "job_type_id": null,
+          "job_type_id": "podcast-show-notes",
           "job_type_hint": "podcast show notes"
         },
         {
@@ -3587,14 +3587,14 @@
           "id": "sales_letter",
           "title": "A long-form sales letter or sales page",
           "deliverable": "A 1,200 to 2,000 word letter or page with headline options, story, problem, solution, proof, offer, refund terms, FAQ and close.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "sales letter"
         },
         {
           "id": "short_sales_letter",
           "title": "A short sales letter or email for one offer",
           "deliverable": "A 400 to 700 word letter that opens with the problem, backs each claim with your proof and ends with one clear action.",
-          "job_type_id": null,
+          "job_type_id": "promotional-email",
           "job_type_hint": "short sales letter"
         },
         {
@@ -3701,7 +3701,7 @@
           "id": "traffic_drop_plan",
           "title": "A plan to recover a drop in search traffic",
           "deliverable": "A step-by-step checklist from your Search Console export for diagnosing and fixing a drop.",
-          "job_type_id": null,
+          "job_type_id": "seo-audit-report",
           "job_type_hint": "seo traffic drop"
         },
         {
@@ -3767,7 +3767,7 @@
           "id": "help_articles",
           "title": "A set of help articles from your top support questions",
           "deliverable": "Five to ten articles from your most common questions, each with steps, a result check, one common mistake and links to related pages.",
-          "job_type_id": null,
+          "job_type_id": "help-centre-articles",
           "job_type_hint": "help center articles"
         },
         {
@@ -3781,14 +3781,14 @@
           "id": "faq_page",
           "title": "An FAQ page for your product or shop",
           "deliverable": "20 questions with plain answers, grouped by topic.",
-          "job_type_id": null,
+          "job_type_id": "support-faq-page",
           "job_type_hint": "faq page"
         },
         {
           "id": "policy_page",
           "title": "A plain-language policy page",
           "deliverable": "Shipping, returns or booking terms rewritten in clear words, with an example for each rule.",
-          "job_type_id": null,
+          "job_type_id": "shop-faq-and-policies",
           "job_type_hint": "policy page rewrite"
         },
         {
@@ -3885,7 +3885,7 @@
           "id": "white_paper",
           "title": "A white paper on one topic",
           "deliverable": "A 2,000 to 3,500 word paper with an argument, evidence from sources you give, and a clear conclusion.",
-          "job_type_id": null,
+          "job_type_id": "white-paper",
           "job_type_hint": "white paper"
         },
         {
@@ -4069,7 +4069,7 @@
           "id": "course_outline",
           "title": "A course outline built around one result",
           "deliverable": "Modules, lessons, goals, exercises and a final project, sized for the time students have.",
-          "job_type_id": null,
+          "job_type_id": "training-plan-course-outline",
           "job_type_hint": "course outline"
         },
         {
@@ -4097,14 +4097,14 @@
           "id": "course_page",
           "title": "A course sales page and price note",
           "deliverable": "Page copy for the course with honest outcomes, who it is for and who it is not for, and a price rationale.",
-          "job_type_id": null,
+          "job_type_id": "landing-page-copy",
           "job_type_hint": "course sales page"
         },
         {
           "id": "course_launch",
           "title": "A course launch email set",
           "deliverable": "Five launch emails from your outline, price and audience notes, promising only what the course teaches.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "course launch emails"
         }
       ],

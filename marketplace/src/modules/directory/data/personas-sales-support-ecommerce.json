@@ -15,14 +15,14 @@
           "id": "cold_sequence",
           "title": "A 5-email cold sequence for one buyer type",
           "deliverable": "Five emails with subject lines, send gaps and a one-line goal for each, plus two alternate openers.",
-          "job_type_id": null,
+          "job_type_id": "cold-email-sequence",
           "job_type_hint": "cold email sequence"
         },
         {
           "id": "linkedin_messages",
           "title": "A set of LinkedIn connection and follow-up messages",
           "deliverable": "A connection note and three follow-up messages for one buyer type, each under 300 characters.",
-          "job_type_id": null,
+          "job_type_id": "linkedin-outreach-messages",
           "job_type_hint": "linkedin outreach messages"
         },
         {
@@ -94,7 +94,7 @@
           "id": "call_plan",
           "title": "A one-page plan for your next discovery call",
           "deliverable": "A page with goal, buyer background, 8 to 10 questions in order, likely objections and the next step to ask for.",
-          "job_type_id": null,
+          "job_type_id": "sales-call-script",
           "job_type_hint": "sales call plan"
         },
         {
@@ -108,14 +108,14 @@
           "id": "objection_guide",
           "title": "An objection handling guide for your offer",
           "deliverable": "Twelve common objections, each with an honest reply, a question to ask back and what not to say.",
-          "job_type_id": null,
+          "job_type_id": "objection-handling-guide",
           "job_type_hint": "objection handling guide"
         },
         {
           "id": "call_notes",
           "title": "Clean call notes and a follow-up email draft",
           "deliverable": "Notes turned into needs, risks, decision makers and next steps, with a follow-up email ready to edit.",
-          "job_type_id": null,
+          "job_type_id": "meeting-notes-to-action-plan",
           "job_type_hint": "call notes and follow-up"
         },
         {
@@ -202,14 +202,14 @@
           "id": "proposal",
           "title": "A proposal for one deal, ready to send",
           "deliverable": "A 3 to 6 page proposal with summary, scope, deliverables, timeline, three price options and acceptance steps.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "sales proposal"
         },
         {
           "id": "one_page_offer",
           "title": "A one-page offer summary for a quick yes",
           "deliverable": "One page with the problem, the plan, the price, what is not included and how to start.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "one-page proposal"
         },
         {
@@ -515,7 +515,7 @@
           "id": "nurture_series",
           "title": "A 6-message nurture series for one lead type",
           "deliverable": "Six emails over four weeks, each with a purpose, a useful tip or proof and one call to action.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "lead nurture emails"
         },
         {
@@ -529,7 +529,7 @@
           "id": "quote_chase",
           "title": "A polite series to revive an unanswered quote",
           "deliverable": "Three short messages with a different angle each, ending with a clean close.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "quote follow-up messages"
         },
         {
@@ -600,14 +600,14 @@
           "id": "buyer_profile",
           "title": "A buyer profile from interviews and reviews",
           "deliverable": "A one-page profile with jobs, pains, words they use and where they look.",
-          "job_type_id": null,
+          "job_type_id": "customer-persona-pack",
           "job_type_hint": "ideal customer profile"
         },
         {
           "id": "interview_script",
           "title": "An interview script and note template",
           "deliverable": "Twelve questions to learn what buyers really hire you to do, and a template to record answers.",
-          "job_type_id": null,
+          "job_type_id": "customer-interview-guide",
           "job_type_hint": "customer interview script"
         },
         {
@@ -930,7 +930,7 @@
           "id": "job_quote",
           "title": "A written quote from your site notes",
           "deliverable": "A tidy quote with scope, materials, labour, price, what is not included, the timeline, payment stages and how to accept.",
-          "job_type_id": null,
+          "job_type_id": "sales-proposal",
           "job_type_hint": "service quote"
         },
         {
@@ -951,7 +951,7 @@
           "id": "quote_followup",
           "title": "Follow-up messages for open quotes",
           "deliverable": "Three short, polite texts or emails for day 2, day 7 and day 14 that keep the job without discounting too soon.",
-          "job_type_id": null,
+          "job_type_id": "sales-follow-up-sequence",
           "job_type_hint": "quote follow up"
         },
         {
@@ -1283,7 +1283,7 @@
           "id": "returns_policy",
           "title": "A clear returns policy and customer wording",
           "deliverable": "A one-page policy plus short text for the product page, receipt and emails.",
-          "job_type_id": null,
+          "job_type_id": "shop-faq-and-policies",
           "job_type_hint": "returns policy"
         },
         {
@@ -1382,7 +1382,7 @@
           "id": "apology_templates",
           "title": "A set of apology templates",
           "deliverable": "Templates for delays, mistakes, service failures and unclear service, each with a how-not-to-write note.",
-          "job_type_id": null,
+          "job_type_id": "complaint-response-templates",
           "job_type_hint": "apology message templates"
         },
         {
@@ -1465,7 +1465,7 @@
           "id": "macro_library",
           "title": "A library of 25 reply templates",
           "deliverable": "Templates for your most common cases, each with fill-in fields and a note on when not to use it.",
-          "job_type_id": null,
+          "job_type_id": "canned-replies-and-macros",
           "job_type_hint": "support reply templates"
         },
         {
@@ -1479,7 +1479,7 @@
           "id": "hard_case_pack",
           "title": "Templates for hard cases",
           "deliverable": "Replies for delays, errors, refusals, outages and apologies.",
-          "job_type_id": null,
+          "job_type_id": "complaint-response-templates",
           "job_type_hint": "difficult customer replies"
         },
         {
@@ -1543,14 +1543,14 @@
           "id": "welcome_series",
           "title": "A welcome email series for new customers",
           "deliverable": "Four emails over two weeks that guide the customer to their first result.",
-          "job_type_id": null,
+          "job_type_id": "customer-onboarding-emails",
           "job_type_hint": "customer onboarding emails"
         },
         {
           "id": "setup_guide",
           "title": "A step-by-step setup guide",
           "deliverable": "A short guide with numbered steps, common mistakes and where to get help.",
-          "job_type_id": null,
+          "job_type_id": "help-centre-articles",
           "job_type_hint": "onboarding guide"
         },
         {
@@ -1744,14 +1744,14 @@
           "id": "voice_of_customer",
           "title": "A voice-of-customer report with ranked themes",
           "deliverable": "Themes ranked by how many customers raise them, with quotes, the segments affected and one suggested action each, for product and marketing.",
-          "job_type_id": null,
+          "job_type_id": "feedback-and-nps-analysis",
           "job_type_hint": "customer feedback themes"
         },
         {
           "id": "request_ranking",
           "title": "A ranked list of feature requests",
           "deliverable": "Requests merged, counted and scored on reach, pain and fit, with a top five and the reasoning.",
-          "job_type_id": null,
+          "job_type_id": "feedback-and-nps-analysis",
           "job_type_hint": "feature request ranking"
         },
         {
@@ -2078,7 +2078,7 @@
           "id": "product_descriptions",
           "title": "Product descriptions for up to 20 products",
           "deliverable": "A title, short description, bullets, a longer description and care or use notes for each product, from your spec sheet.",
-          "job_type_id": null,
+          "job_type_id": "product-descriptions-batch",
           "job_type_hint": "product descriptions"
         },
         {
@@ -2092,14 +2092,14 @@
           "id": "marketplace_listing",
           "title": "A marketplace listing set for Amazon or Etsy",
           "deliverable": "Title, bullets and description within the platform's length and style rules.",
-          "job_type_id": null,
+          "job_type_id": "marketplace-listing-copy",
           "job_type_hint": "marketplace listing"
         },
         {
           "id": "collection_page",
           "title": "A collection page for buying searches",
           "deliverable": "Intro copy, a buying guide with real differences and a FAQ for one collection, written for the searches shoppers use.",
-          "job_type_id": null,
+          "job_type_id": "collection-page-copy",
           "job_type_hint": "category page copy"
         },
         {
@@ -2187,7 +2187,7 @@
           "id": "amazon_listing",
           "title": "An Amazon listing: title, bullets and description",
           "deliverable": "A listing written from your product facts and shopper words, within Amazon length and style rules.",
-          "job_type_id": null,
+          "job_type_id": "marketplace-listing-copy",
           "job_type_hint": "amazon listing"
         },
         {
@@ -2286,7 +2286,7 @@
           "id": "trend_brief",
           "title": "A trend brief for your market",
           "deliverable": "A 3 to 5 page brief on the 4 to 6 trends in your material that matter most to you, with evidence, timing, how sure I am and a small first step.",
-          "job_type_id": null,
+          "job_type_id": "trend-brief",
           "job_type_hint": "trend research"
         },
         {
@@ -2368,14 +2368,14 @@
           "id": "welcome_flow",
           "title": "A welcome flow of 4 emails",
           "deliverable": "Four emails and an optional text, with timing, subject lines and a clear path to the first order.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "welcome email flow"
         },
         {
           "id": "cart_flow",
           "title": "An abandoned cart and product-view flow",
           "deliverable": "Three cart messages and two product-view emails, with timing, an optional text step and the rule that stops each one.",
-          "job_type_id": null,
+          "job_type_id": "abandoned-cart-email-flow",
           "job_type_hint": "abandoned cart emails"
         },
         {
@@ -2389,7 +2389,7 @@
           "id": "winback",
           "title": "A win-back plan for lapsed buyers",
           "deliverable": "Segments of lapsed buyers, a three-message win-back and a clean-out rule for contacts who never come back.",
-          "job_type_id": null,
+          "job_type_id": "email-sequence",
           "job_type_hint": "win back emails"
         },
         {
@@ -2403,7 +2403,7 @@
           "id": "sale_messages",
           "title": "A sale plan across email and SMS",
           "deliverable": "Messages, timing and limits for one sale, with a margin check and a rule on how often to text.",
-          "job_type_id": null,
+          "job_type_id": "ecommerce-promotion-plan",
           "job_type_hint": "sale email sms"
         }
       ],
@@ -2746,7 +2746,7 @@
           "id": "seo_audit",
           "title": "A store SEO audit with a fix list",
           "deliverable": "Titles, descriptions, collections, thin pages and duplicate content, ranked by payoff.",
-          "job_type_id": null,
+          "job_type_id": "seo-audit-report",
           "job_type_hint": "ecommerce seo audit"
         },
         {
@@ -2767,7 +2767,7 @@
           "id": "collection_copy",
           "title": "Collection page copy for up to 8 collections",
           "deliverable": "Intro text, FAQ and meta text for each collection.",
-          "job_type_id": null,
+          "job_type_id": "collection-page-copy",
           "job_type_hint": "collection page copy"
         }
       ],
@@ -2847,7 +2847,7 @@
           "id": "store_plan",
           "title": "A page plan for a new store",
           "deliverable": "Pages to build, what each says and a safe AI build plan.",
-          "job_type_id": null,
+          "job_type_id": "website-wireframe-brief",
           "job_type_hint": "ecommerce store plan"
         }
       ],
@@ -3020,7 +3020,7 @@
           "id": "faq_peak",
           "title": "A peak season FAQ",
           "deliverable": "Answers to the questions that spike in busy weeks, such as delivery dates, returns and gift receipts, ready to paste into your help pages.",
-          "job_type_id": null,
+          "job_type_id": "support-faq-page",
           "job_type_hint": "peak season faq"
         }
       ],

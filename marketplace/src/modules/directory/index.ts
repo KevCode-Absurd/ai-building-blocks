@@ -24,5 +24,9 @@ let HOUSE: Persona[] = ([g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13,
 
 export function housePersonas(): Persona[] { return HOUSE; }
 
+/** Goes up when the data above is swapped (tests only), so rosters held in memory (service.ts) are read again. */
+let dataVersion = 0;
+export function houseDataVersion(): number { return dataVersion; }
+
 /** Tests only. */
-export function setPersonasForTests(list: Persona[]): void { HOUSE = list; }
+export function setPersonasForTests(list: Persona[]): void { HOUSE = list; dataVersion++; }

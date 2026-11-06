@@ -16,15 +16,35 @@ function bootData(): Record<string, unknown> {
   return boot ?? {};
 }
 
-/** The answer for this GET path that came inside the page, without using it up. */
+// Recent answers about agents (/api/agents...), the same for everyone, kept for a few minutes. Going back to a page
+// then draws it at once and at full height, so the router can put the visitor back where they were.
+const RECENT_MS = 3 * 60_000, RECENT_MAX = 40;
+const recent = new Map<string, { at: number; data: unknown }>();
+const isRecentable = (path: string) => path.startsWith("/api/agents");
+function remember(path: string, data: unknown) {
+  if (!isRecentable(path)) return;
+  recent.delete(path);
+  recent.set(path, { at: Date.now(), data });
+  if (recent.size > RECENT_MAX) recent.delete(recent.keys().next().value!);
+}
+function recall<T>(path: string): T | undefined {
+  const hit = recent.get(path);
+  return hit && Date.now() - hit.at < RECENT_MS ? hit.data as T : undefined;
+}
+
+/** An answer for this GET path we already have (inside the page, or a recent one), without using it up. */
 export function peekBoot<T>(path: string): T | undefined {
-  return typeof document === "undefined" ? undefined : bootData()[path] as T | undefined;
+  if (typeof document === "undefined") return undefined;
+  return (bootData()[path] as T | undefined) ?? recall<T>(path);
 }
 
 export async function api<T = any>(path: string, opts: { method?: string; body?: unknown } = {}): Promise<T> {
-  if (!opts.method && opts.body === undefined && typeof document !== "undefined") {
+  const isGet = !opts.method && opts.body === undefined;
+  if (isGet && typeof document !== "undefined") {
     const data = bootData();
-    if (path in data) { const hit = data[path] as T; delete data[path]; return hit; }
+    if (path in data) { const hit = data[path] as T; delete data[path]; remember(path, hit); return hit; }
+    const known = recall<T>(path);
+    if (known !== undefined) return known;
   }
   const headers: Record<string, string> = { ...(await authHeaders()) };
   if (opts.body !== undefined) headers["content-type"] = "application/json";
@@ -37,6 +57,7 @@ export async function api<T = any>(path: string, opts: { method?: string; body?:
   const text = await res.text();
   const data = text ? (() => { try { return JSON.parse(text); } catch { return null; } })() : null;
   if (!res.ok) throw new ApiError(res.status, data?.error?.code ?? "error", data?.error?.message ?? "Something went wrong. Try again.");
+  if (isGet) remember(path, data);
   return data as T;
 }
 

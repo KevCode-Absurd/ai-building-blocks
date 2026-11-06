@@ -5,7 +5,7 @@ import type { Env } from "../../env.ts";
 import { AREAS } from "../../core/types.ts";
 import { getRole } from "./roles.ts";
 import { getPersona, listPersonas, searchPersonas } from "./service.ts";
-import { agentCard, agentProfile, areaCounts, pickFeatured, relatedAgents, soulMarkdown } from "./views.ts";
+import { agentCard, agentProfile, areaCounts, browseOrder, pickFeatured, relatedAgents, soulMarkdown } from "./views.ts";
 
 /** Public, short-lived: browsers keep it a minute, shared caches five, then refresh in the background. */
 const PUBLIC_CACHE = { "cache-control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600" };
@@ -64,7 +64,9 @@ export const routes: Route[] = [
       // search across all areas, so each chip says how many agents it would show.
       const inRole = role ? everyone.filter(p => p.role === role.id) : everyone;
       const matching = q ? searchPersonas(inRole, q) : inRole;
-      const shown = area ? matching.filter(p => p.area === area) : matching;
+      const inArea = area ? matching.filter(p => p.area === area) : matching;
+      // Browsing (no search, no role): the most useful agents first, with kinds of work mixed (views.ts browseOrder).
+      const shown = q || role ? inArea : browseOrder(inArea, { withinArea: !!area });
       return json({
         total: matching.length,
         area: area || null,

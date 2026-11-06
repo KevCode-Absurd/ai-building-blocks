@@ -1,13 +1,14 @@
 // /agents: every agent, with search and area filters. /agents?role=<id>: the agents in one job role. Public.
 import { useEffect, useRef, useState } from "preact/hooks";
 import { Button, Empty, Notice, useLoad } from "../../components.tsx";
-import { api } from "../../lib/api.ts";
+import { api, peekBoot } from "../../lib/api.ts";
+import { replaceAddress, useHistoryState } from "../../lib/router.tsx";
 import { AREAS } from "../../../core/types.ts";
 import { AGENTS_TITLE, roleTitle } from "../../../modules/directory/titles.ts";
 import { AgentCard, CardSkeletons, HowHiringWorks, type AgentList } from "./parts.tsx";
 
-/** Agent cards drawn per step; all 505 at once was over 9,000 elements, slow on phones. */
-const PAGE_SIZE = 60;
+/** Agent cards shown at first and added by each "View more agents" (all 505 at once was over 9,000 elements). */
+const PAGE_SIZE = 20;
 
 const ROLE_ID = /^[a-z][a-z0-9-]{2,59}$/;
 
@@ -36,26 +37,22 @@ export function AgentsPage(props: { query: URLSearchParams }) {
   // Keep the address in step, so a filtered list can be shared or reloaded.
   useEffect(() => {
     const next = `/agents${listQuery(search, area, role)}`;
-    if (location.pathname + location.search !== next) history.replaceState(null, "", next);
+    if (location.pathname + location.search !== next) replaceAddress(next);
   }, [search, area, role]);
 
-  const state = useLoad<AgentList>(() => api(`/api/agents${listQuery(search, area, role)}`), [search, area, role]);
+  const path = `/api/agents${listQuery(search, area, role)}`;
+  // An answer we already have (going back, say) draws the list at once, so the page returns to the same place.
+  const state = useLoad<AgentList>(() => api(path), [search, area, role], peekBoot<AgentList>(path));
   const data = state.data;
   const areaName = data?.areas.find(a => a.id === area)?.label;
   const roleInfo = role && data?.role?.id === role ? data.role : null;
   useEffect(() => { document.title = roleInfo ? roleTitle(roleInfo.name) : AGENTS_TITLE; }, [roleInfo?.id]);
   const showAll = () => { setQ(""); setArea(""); setRole(""); };
-  // Cards drawn so far: 60, then 60 more whenever the end of the list comes near (or the button is pressed).
-  const [shown, setShown] = useState(PAGE_SIZE);
-  useEffect(() => { setShown(PAGE_SIZE); }, [data]);
-  const moreRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = moreRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
-    const io = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) setShown(n => n + PAGE_SIZE); }, { rootMargin: "800px 0px" });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [data, shown]);
+  // Cards shown: 20, then 20 more each time "View more agents" is pressed. The count stays with this history entry,
+  // so going back from an agent shows the same cards at the same place. A new search or filter starts at 20 again.
+  const [shown, setShown] = useHistoryState("shown", PAGE_SIZE);
+  const filters = useRef(path);
+  useEffect(() => { if (filters.current !== path) { filters.current = path; setShown(PAGE_SIZE); } }, [path]);
 
   return (
     <main class="page page-wide dir-browse">
@@ -111,8 +108,8 @@ export function AgentsPage(props: { query: URLSearchParams }) {
             {data.agents.slice(0, shown).map(a => <AgentCard agent={a} headingLevel={2} />)}
           </div>
           {data.agents.length > shown && (
-            <div ref={moreRef} class="dir-more">
-              <Button kind="secondary" onClick={() => setShown(n => n + PAGE_SIZE)}>Show more agents ({data.agents.length - shown} left)</Button>
+            <div class="dir-more">
+              <Button kind="secondary" onClick={() => setShown(n => n + PAGE_SIZE)}>View more agents ({data.agents.length - shown} more)</Button>
             </div>
           )}
         </>

@@ -1,11 +1,11 @@
 // Directory: seeding house personas, listing and search, and the public agent API.
-import { test, beforeEach } from "node:test";
+import { test, beforeEach, mock } from "node:test";
 import assert from "node:assert/strict";
 import { testEnv } from "./helpers.ts";
 import { NOVA } from "./fixtures.ts";
 import type { Persona } from "../src/core/types.ts";
 import { setPersonasForTests } from "../src/modules/directory/index.ts";
-import { getPersona, listPersonas, seedPersonas } from "../src/modules/directory/service.ts";
+import { forgetPersonas, getPersona, listPersonas, seedPersonas } from "../src/modules/directory/service.ts";
 
 const ADA: Persona = {
   ...NOVA,
@@ -50,6 +50,7 @@ async function addExpertPersona(t: Awaited<ReturnType<typeof testEnv>>, id: stri
     "INSERT INTO personas (id, kind, expert_id, name, title, tagline, area, profile, status, sort, created_at, updated_at) VALUES (?, 'expert', 'exp_1', ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     id, p.name, p.title, p.tagline, p.area, JSON.stringify({ ...p.profile, portrait: `/agents/${id}.webp` }), status, p.sort, now, now,
   );
+  forgetPersonas(t.env); // raw SQL skips the app write paths that clear the roster held in memory
 }
 
 test("seeding creates every house persona once, then writes nothing when unchanged", async () => {
@@ -127,13 +128,14 @@ test("list filters by area and searches name, title, tagline and outcome titles"
   assert.deepEqual(await ids({ q: "nothing like this" }), []);
 });
 
-test("sort orders every list, ties go by name, and search puts name and title matches first", async () => {
+test("sort orders every list (browsing everyone takes turns by area), ties go by name, and search puts name and title matches first", async () => {
   const t = await testEnv();
   const BEA = { ...ADA, id: "bea-content", name: "Bea", sort: 20, profile: { ...ADA.profile, portrait: "/agents/bea-content.webp" } };
   setPersonasForTests([NOVA, ADA, { ...LEO, sort: 5 }, BEA]);
   await seedPersonas(t.env, "user_ops");
   const ids = async (path: string) => (await t.api("GET", path)).body.agents.map((a: any) => a.id);
-  assert.deepEqual(await ids("/api/agents"), ["leo-ads", "nova-seo", "ada-content", "bea-content"]);
+  // Browsing everyone mixes areas (views.ts browseOrder): the best of each area takes turns, in sort order.
+  assert.deepEqual(await ids("/api/agents"), ["leo-ads", "ada-content", "nova-seo", "bea-content"]);
   assert.deepEqual(await ids("/api/agents?area=content"), ["ada-content", "bea-content"]);
   assert.deepEqual(await ids("/api/agents?area=marketing"), ["leo-ads", "nova-seo"]);
   assert.deepEqual(await ids("/api/agents?q=seo"), ["nova-seo"]);
@@ -264,4 +266,36 @@ test("the agent API is public: no sign-in needed", async () => {
   assert.equal((await t.api("GET", "/api/agents")).status, 200);
   assert.equal((await t.api("GET", "/api/agents/nova-seo")).status, 200);
   assert.equal((await t.api("POST", "/api/agents")).status, 405);
+});
+
+test("the roster is read from D1 once for many requests at once, and a failed read keeps the last good roster", async () => {
+  const t = await testEnv();
+  await seedPersonas(t.env, "user_ops");
+  const db = t.env.DB as unknown as { prepare(sql: string): unknown };
+  const prepare = db.prepare.bind(db);
+  let reads = 0, broken = false;
+  db.prepare = (sql: string) => {
+    if (/FROM personas WHERE status = 'live'/.test(sql)) { reads++; if (broken) throw new Error("D1_ERROR: D1 DB is overloaded"); }
+    return prepare(sql);
+  };
+  mock.timers.enable({ apis: ["Date"], now: Date.now() });
+  try {
+    forgetPersonas(t.env);
+    const lists = await Promise.all(Array.from({ length: 20 }, () => listPersonas(t.env)));
+    assert.equal(reads, 1, "twenty requests share one read");
+    assert.ok(lists.every(l => l.length === lists[0].length && l.length > 0));
+    assert.equal((await getPersona(t.env, "nova-seo"))?.name, "Nova");
+    assert.equal(reads, 1, "a live agent comes from the roster in memory");
+
+    mock.timers.tick(61_000);
+    broken = true;
+    assert.equal((await listPersonas(t.env)).length, lists[0].length, "D1 overloaded: the last good roster is served");
+    broken = false;
+    mock.timers.tick(6_000);
+    await listPersonas(t.env);
+    assert.equal(reads, 3, "it tries D1 again a few seconds later");
+  } finally {
+    mock.timers.reset();
+    db.prepare = prepare;
+  }
 });

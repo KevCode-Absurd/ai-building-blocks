@@ -9,15 +9,7 @@
 .brand { display: inline-flex; align-items: center; min-height: 24px; gap: 10px; font: 500 14.5px var(--mono); letter-spacing: -0.01em; white-space: nowrap; color: var(--text); text-decoration: none; }
 .brand svg { width: 22px; height: 22px; flex: none; }
 
-/* The logo's bits flip when you point at it (library styles.css) */
-.logo rect { transition: opacity 0.18s; }
-.brand:hover .logo:not(.building) rect { opacity: 0.32; }
-.brand:hover .logo:not(.building) rect[opacity] { opacity: 1; }
-/* Each block drops into place; the finished build fades before the next one starts */
-.logo .drop { animation: block-drop 0.16s ease-out; }
-.logo.clearing .drop { opacity: 0; transition: opacity 0.32s; }
-@keyframes block-drop { from { transform: translateY(-6px); opacity: 0; } to { transform: none; opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .logo rect { transition: none; } }
+/* The logo stays still (components.tsx Logo), as on the library. */
 
 /* site-header.css */
 .site-header .header-in { justify-content: space-between; }

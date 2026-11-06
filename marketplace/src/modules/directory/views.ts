@@ -165,17 +165,78 @@ export const FEATURED_AREA_ORDER: readonly Area[] = [
 ];
 
 /**
- * Agents for the home page: the best-ranked agent (lowest sort, then name) from each area, in FEATURED_AREA_ORDER,
- * skipping areas with no agent. Areas missing from that order come after it, in AREAS order. If count is more than
- * the number of areas, the rest are the next best agents not picked yet. Stable: the same list gives the same picks.
+ * The first agents on /agents (no search, role or area filter) and the home page's pick for each area: the agents
+ * most businesses need first, one per job role, chosen by hand (7 Nov 2026). Ids that are missing or hidden are
+ * skipped. The order alternates areas, and the first 20 cover every area.
+ */
+export const START_HERE: readonly string[] = [
+  "mehdi-traction-general",   // growth lead for any business (marketing)
+  "araceli-inbox",            // customer support
+  "russell-bookkeeping",      // bookkeeper (finance)
+  "haruka-admin",             // executive assistant (operations)
+  "isaiah-outreach",          // outbound sales (sales)
+  "andile-seo-articles",      // SEO content writer (content)
+  "anjali-recruiter",         // recruiter (people)
+  "eloise-site-builders",     // website designer (design)
+  "glenn-aiworkflow",         // AI automation (data and AI)
+  "javier-store-launch",      // Shopify launch (ecommerce)
+  "danielle-seo",             // SEO strategist (marketing)
+  "valeria-data-analysis",    // data analyst (product)
+  "amira-ai-features",        // AI engineer (code)
+  "nadia-cashflow",           // cash flow (finance)
+  "ximena-social-media",      // social media (marketing)
+  "claire-proposals",         // proposal writer (sales)
+  "faisal-sops",              // SOPs (operations)
+  "caleb-email-courses",      // course writer (training)
+  "keisha-market-research",   // market research (research)
+  "candice-email-marketing",  // email marketing (marketing)
+];
+
+const bySort = (a: Persona, b: Persona) => a.sort - b.sort || a.name.localeCompare(b.name) || a.id.localeCompare(b.id);
+
+/**
+ * The browse order. Without an area: START_HERE first, then everyone else. Each next agent is the most useful one
+ * left (lowest sort) whose area is not among the last 3 shown and whose job role is not among the last 12, so the
+ * list mixes kinds of work instead of showing five growth leads in a row. When nothing fits, the role rule is
+ * dropped, then the area rule. Within one area only the role rule applies. Stable for the same list.
+ */
+export function browseOrder(list: Persona[], opts: { withinArea?: boolean } = {}): Persona[] {
+  const rest = [...list].sort(bySort);
+  const out: Persona[] = [];
+  if (!opts.withinArea) {
+    for (const id of START_HERE) {
+      const i = rest.findIndex(p => p.id === id);
+      if (i >= 0) out.push(...rest.splice(i, 1));
+    }
+  }
+  const AREA_GAP = 3, ROLE_GAP = 12;
+  while (rest.length) {
+    const areas = out.slice(-AREA_GAP).map(p => p.area);
+    const roles = new Set(out.slice(-ROLE_GAP).map(p => p.role ?? p.id));
+    const fits = (p: Persona, area: boolean, role: boolean) => (!area || !areas.includes(p.area)) && (!role || !roles.has(p.role ?? p.id));
+    let i = opts.withinArea ? -1 : rest.findIndex(p => fits(p, true, true));
+    if (i < 0) i = opts.withinArea ? -1 : rest.findIndex(p => fits(p, true, false));
+    if (i < 0) i = rest.findIndex(p => fits(p, false, true));
+    if (i < 0) i = 0;
+    out.push(...rest.splice(i, 1));
+  }
+  return out;
+}
+
+/**
+ * Agents for the home page: one per area, in FEATURED_AREA_ORDER, skipping areas with no agent. For each area it is
+ * the first START_HERE agent there, or else the best-ranked one (lowest sort, then name). Areas missing from that
+ * order come after it, in AREAS order. If count is more than the number of areas, the rest are the next best agents
+ * not picked yet. Stable: the same list gives the same picks.
  */
 export function pickFeatured(list: Persona[], count = 6): Persona[] {
-  const sorted = [...list].sort((a, b) => a.sort - b.sort || a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
+  const sorted = [...list].sort(bySort);
   const order = [...FEATURED_AREA_ORDER, ...AREAS.filter(a => !FEATURED_AREA_ORDER.includes(a))];
+  const starters = START_HERE.map(id => sorted.find(p => p.id === id)).filter((p): p is Persona => !!p);
   const picks: Persona[] = [];
   for (const area of order) {
     if (picks.length >= count) break;
-    const best = sorted.find(p => p.area === area);
+    const best = starters.find(p => p.area === area) ?? sorted.find(p => p.area === area);
     if (best) picks.push(best);
   }
   for (const p of sorted) {

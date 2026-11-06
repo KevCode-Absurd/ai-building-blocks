@@ -9,6 +9,7 @@ import { fail } from "../../core/http.ts";
 import { notify } from "../../core/email.ts";
 import { getJobType } from "../catalogue/index.ts";
 import { notifyOps } from "../ops/service.ts";
+import { forgetPersonas } from "../directory/service.ts";
 import { winRates } from "../evaluation/service.ts";
 import { learnableDecisionIds } from "../delivery/consent.ts";
 import { foundingAgreement, type Agreement } from "./agreement.ts";
@@ -277,6 +278,7 @@ export async function reviewApplication(env: Env, input: { expertId: string; dec
     .bind(now, input.actor, `expert.${to}`, row.status, note, row.id, to, now));
 
   const res = await db.batch(stmts);
+  forgetPersonas(env);
   if (!res[0]?.meta?.changes) fail(409, "application_changed", "Someone changed this application just now. Reload and try again.");
 
   const updated = (await first<ExpertRow>(db, "SELECT * FROM experts WHERE id = ?", row.id))!;
@@ -385,6 +387,7 @@ export async function syncExpertPersona(env: Env, expertId: string, actor = "sys
     ]);
     if (res[0]?.meta?.changes) changed++;
   }
+  if (changed) forgetPersonas(env);
   return { changed };
 }
 

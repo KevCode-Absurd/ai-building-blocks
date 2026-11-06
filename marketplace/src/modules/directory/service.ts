@@ -4,7 +4,7 @@ import type { Env } from "../../env.ts";
 import { AREAS, type Persona, type PersonaProfile } from "../../core/types.ts";
 import { all, first, nowIso, parseJson, sha256Hex, stableJson } from "../../core/db.ts";
 import { eventStatement } from "../../core/events.ts";
-import { housePersonas } from "./index.ts";
+import { houseDataVersion, housePersonas } from "./index.ts";
 import { getRole } from "./roles.ts";
 
 export interface PersonaRow {
@@ -116,6 +116,7 @@ export async function seedPersonas(env: Env, actor: string): Promise<SeedResult>
   }
 
   for (let i = 0; i < statements.length; i += BATCH) await db.batch(statements.slice(i, i + BATCH));
+  if (statements.length) forgetPersonas(env);
   return result;
 }
 
@@ -127,6 +128,9 @@ const byOrder = (a: Persona, b: Persona) => a.sort - b.sort || a.name.localeComp
 
 /** A live persona of either kind (or a hidden one with includeHidden). Before the first seed, house personas come from the data files. */
 export async function getPersona(env: Env, id: string, opts: { includeHidden?: boolean } = {}): Promise<Persona | null> {
+  const live = (await livePersonas(env)).byId.get(id);
+  if (live) return live;
+  // Not in the roster held in memory: hidden, unknown, or written by another instance in the last minute.
   const row = await first<PersonaRow>(env.DB, "SELECT * FROM personas WHERE id = ?", id);
   if (row) return row.status === "live" || opts.includeHidden ? rowToPersona(row) : null;
   if (await hasHouseRows(env)) return null;
@@ -181,13 +185,51 @@ export function searchPersonas(list: Persona[], q: string | undefined): Persona[
 /** Live personas of both kinds, in display order. area filters exactly; every word of q must match the name, title, job role, tagline or an outcome title. */
 export async function listPersonas(env: Env, filter?: { area?: string; q?: string }): Promise<Persona[]> {
   const area = filter?.area || undefined;
-  const rows = area
-    ? await all<PersonaRow>(env.DB, "SELECT * FROM personas WHERE status = 'live' AND area = ?", area)
-    : await all<PersonaRow>(env.DB, "SELECT * FROM personas WHERE status = 'live'");
+  const { list } = await livePersonas(env);
+  return searchPersonas(area ? list.filter(p => p.area === area) : list, filter?.q);
+}
+
+// ---------- Every live persona, held in memory for a minute ----------
+// Each page and most API answers read the whole roster. Reading 505 agents from D1 on every request overloaded it
+// when crawlers fetched pages in parallel ("D1 DB is overloaded", 7 Nov 2026). Each Worker instance now reads the
+// roster once a minute; requests that arrive together share that one read, and a failed read keeps the last good
+// roster for a few seconds. Writes in this app call forgetPersonas, so this instance sees them at once; other
+// instances see them within a minute. Callers must not change the personas they get back.
+
+const LIVE_TTL_MS = 60_000;
+const LIVE_RETRY_MS = 5_000;
+interface LiveSet { list: Persona[]; byId: Map<string, Persona> }
+const liveCache = new WeakMap<object, { at: number; data: number; load: Promise<LiveSet> }>();
+
+async function readLive(env: Env): Promise<LiveSet> {
+  const rows = await all<PersonaRow>(env.DB, "SELECT * FROM personas WHERE status = 'live'");
   let list = rows.map(rowToPersona);
-  if (!(await hasHouseRows(env))) {
+  // Before the first seed, house personas come from the data files.
+  if (!rows.some(r => r.kind === "house") && !(await hasHouseRows(env))) {
     const taken = new Set(list.map(p => p.id));
-    list = list.concat(housePersonas().filter(p => p.status === "live" && !taken.has(p.id) && (!area || p.area === area)));
+    list = list.concat(housePersonas().filter(p => p.status === "live" && !taken.has(p.id)));
   }
-  return searchPersonas(list, filter?.q);
+  return { list, byId: new Map(list.map(p => [p.id, p])) };
+}
+
+function livePersonas(env: Env): Promise<LiveSet> {
+  const key = env.DB as unknown as object;
+  const hit = liveCache.get(key);
+  const now = Date.now();
+  if (hit && now - hit.at < LIVE_TTL_MS && hit.data === houseDataVersion()) return hit.load;
+  const previous = hit?.load;
+  const load: Promise<LiveSet> = readLive(env).catch(async err => {
+    const old = previous ? await previous.catch(() => null) : null;
+    if (liveCache.get(key)?.load !== load) { if (old) return old; throw err; }
+    if (!old) { liveCache.delete(key); throw err; }
+    liveCache.set(key, { at: Date.now() - LIVE_TTL_MS + LIVE_RETRY_MS, data: houseDataVersion(), load: Promise.resolve(old) });
+    return old;
+  });
+  liveCache.set(key, { at: now, data: houseDataVersion(), load });
+  return load;
+}
+
+/** Call after any write to the personas table, so the next read in this instance sees it. */
+export function forgetPersonas(env: Env): void {
+  liveCache.delete(env.DB as unknown as object);
 }

@@ -154,7 +154,7 @@
 .dir-sample:hover, .dir-sample:focus-visible { background: var(--panel); border-style: solid; border-color: var(--text); box-shadow: var(--hard); transform: translate(-2px, -2px); }
 .dir-sample-title { font-weight: 700; }
 .dir-sample-brief { color: var(--text-2); font-size: 15px; }
-.dir-sample-go { margin-top: auto; padding-top: 4px; font-size: 14px; font-weight: 600; }
+.dir-sample-go { align-self: flex-start; margin-top: auto; padding-top: 4px; font-size: 14px; font-weight: 600; text-align: left; }
 
 .dir-hire-band { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 20px; margin-top: 56px; padding: 22px 24px; border: 1px solid var(--text); border-radius: var(--radius); background: color-mix(in srgb, var(--dir-accent) var(--dir-soft), var(--panel)); box-shadow: var(--hard); }
 .dir-hire-band h2 { font-size: 21px; margin: 0 0 4px; }

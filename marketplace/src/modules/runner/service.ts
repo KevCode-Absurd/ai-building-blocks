@@ -10,6 +10,7 @@ import { callModel, ModelError, type ModelResponse, type Provider, type WebSourc
 import { fail, HttpError } from "../../core/http.ts";
 import { getJobType, listJobTypes } from "../catalogue/index.ts";
 import { housePersonas } from "../directory/index.ts";
+import { forgetPersonas } from "../directory/service.ts";
 import { afterJobDraft, checkDraft } from "../evaluation/service.ts";
 import { releaseDraft } from "../delivery/service.ts";
 import { notifyOps } from "../ops/service.ts";
@@ -698,6 +699,7 @@ async function housePersonaList(env: Env, actor: string): Promise<Persona[]> {
     eventStatement(db, { actor, actorKind: "system", entity: "persona", entityId: p.id, type: "persona.created", data: { source: "runner.seed_house_agents" } }, now),
   ]);
   for (let i = 0; i < statements.length; i += 50) await db.batch(statements.slice(i, i + 50));
+  forgetPersonas(env);
   return list;
 }
 

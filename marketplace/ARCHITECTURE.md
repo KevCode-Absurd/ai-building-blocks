@@ -148,6 +148,21 @@ generated. robots.txt blocks `/api/` except `/api/agents` and `/api/config`, whi
 draw; every API answer says `x-robots-tag: noindex`. Only production (`APP_ENV` "production") is indexed; other
 environments say noindex and disallow everything.
 
+## Agent order, the roster in memory, and going back
+
+- Browse order (`directory/views.ts`): `/agents` with no search or role starts with `START_HERE`, 20 agents most
+  businesses need first (one per job role, every area), then `browseOrder` mixes the rest: the most useful agent
+  left whose area is not among the last 3 and whose role is not among the last 12. Searches keep relevance order and
+  role pages keep `sort`. The home strip (`pickFeatured`) takes each area's `START_HERE` agent first.
+- The roster in memory (`directory/service.ts`): each Worker instance reads every live persona from D1 once a minute
+  and shares that read between requests; a failed read keeps the last good roster. Anything that writes the
+  `personas` table calls `forgetPersonas(env)`. Reading the roster on every request overloaded D1 under crawls.
+- Going back (`ui/lib/router.tsx`): each history entry keeps its scroll position and page state from
+  `useHistoryState` (the browse page keeps how many cards are shown, 20 more per "View more agents"). Back and
+  forward restore both on every page. `ui/lib/api.ts` keeps recent `/api/agents` answers for 3 minutes, so the page
+  draws at full height at once. Change the address with `replaceAddress`, never `history.replaceState(null)`, or the
+  entry forgets what it holds.
+
 ## UI map
 
 | Owner | Pages |

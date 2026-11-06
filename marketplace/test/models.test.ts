@@ -60,6 +60,49 @@ test("tier map: Anthropic first, GPT and Gemini fallbacks; judges prefer another
   assert.deepEqual(modelCandidates(envWith({ GEMINI_API_KEY: "g", OPENAI_API_KEY: " " }), "standard").map(m => m.id), ["gemini-3.1-pro-preview"]);
 });
 
+const deepseekOk = (text: string, finish = "stop") => () => json({
+  model: "deepseek-v4-pro", choices: [{ finish_reason: finish, message: { role: "assistant", content: text, reasoning_content: "thinking it over" } }],
+  usage: { prompt_tokens: 1000, completion_tokens: 500, prompt_cache_hit_tokens: 400, prompt_cache_miss_tokens: 600, completion_tokens_details: { reasoning_tokens: 300 } },
+});
+
+test("MODEL_PROVIDERS keeps text work to the listed providers, even when other keys are set", () => {
+  const env = envWith({ ...ALL_KEYS, DEEPSEEK_API_KEY: "ds", MODEL_PROVIDERS: "anthropic, gemini,deepseek" });
+  assert.deepEqual(modelCandidates(env, "small").map(m => m.id), ["claude-haiku-5-5", "gemini-3.5-flash-lite", "deepseek-flash"]);
+  assert.deepEqual(modelCandidates(env, "standard").map(m => m.id), ["claude-sonnet-5-5", "gemini-3.1-pro-preview", "deepseek-v4-pro"]);
+  assert.deepEqual(modelCandidates(env, "judge", "anthropic").map(m => m.id), ["gemini-3.1-pro-preview", "deepseek-v4-pro"]);
+  assert.ok(Object.values(LIVE_MODELS).some(m => m.provider === "openai"), "OpenAI models stay defined for later");
+  assert.ok(["small", "standard", "premium", "judge"].every(t => modelCandidates(env, t as any).every(m => m.provider !== "openai")));
+  assert.equal(modelCandidates(envWith({ ...ALL_KEYS, MODEL_PROVIDERS: " " }), "standard")[1].provider, "openai", "blank = no allowlist");
+});
+
+test("DeepSeek call: chat completions, thinking with effort, JSON mode, answer without the thinking, cost", async () => {
+  const calls = mockFetch(deepseekOk("{\"pass\": true}"));
+  const res = await callProvider(envWith({ DEEPSEEK_API_KEY: "sk-ds-test" }), req({ json: true, schema: { type: "object", properties: { pass: { type: "boolean" } } } }));
+  assert.deepEqual(res.data, { pass: true });
+  assert.equal(res.provider, "deepseek");
+  assert.equal(res.inputTokens, 1000);
+  assert.equal(res.outputTokens, 500, "thinking tokens count as output");
+  assert.equal(res.costMicroUsd, Math.ceil(600 * 1.32 + 400 * 0.044 + 500 * 3.96));
+  const c = calls[0];
+  assert.equal(c.url, "https://api.deepseek.com/chat/completions");
+  assert.equal(c.headers.authorization, "Bearer sk-ds-test");
+  assert.equal(c.body.model, "deepseek-v4-pro");
+  assert.deepEqual(c.body.thinking, { type: "enabled" });
+  assert.equal(c.body.reasoning_effort, "medium");
+  assert.deepEqual(c.body.response_format, { type: "json_object" });
+  assert.equal(c.body.messages[0].role, "system");
+  assert.match(c.body.messages[0].content, /JSON schema/, "the schema goes in the prompt");
+});
+
+test("DeepSeek cut-offs and filtered replies fall back to the next provider", async () => {
+  mockFetch(deepseekOk("half an ans", "length"), anthropicOk("From Claude."));
+  const env = envWith({ DEEPSEEK_API_KEY: "d", ANTHROPIC_API_KEY: "a" });
+  const res = await callProvider(env, req({ tier: "judge" }));
+  assert.equal(res.provider, "anthropic");
+  mockFetch(deepseekOk("", "content_filter"));
+  await assert.rejects(callProvider(envWith({ DEEPSEEK_API_KEY: "d" }), req()), (err: unknown) => err instanceof ModelError && err.code === "provider_refused");
+});
+
 test("Anthropic call: headers, effort, no sampling settings, text only from text blocks, cost", async () => {
   const calls = mockFetch(anthropicOk("Hello there."));
   const res = await callProvider(envWith(ALL_KEYS), req({ temperature: 0.2, maxTokens: 1000 }));

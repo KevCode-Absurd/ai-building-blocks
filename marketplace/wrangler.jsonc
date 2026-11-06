@@ -4,7 +4,8 @@
   // "production" = agents.useaiblocks.com. Bindings and vars are not inherited by environments, so each repeats them.
   // Staging runs live models (approved 6 Nov 2026) under its caps: $10 a day, $2 a job.
   // Secrets (set with `npx wrangler secret put NAME --env <env>`, never committed):
-  //   ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY  model providers
+  //   ANTHROPIC_API_KEY, GEMINI_API_KEY, DEEPSEEK_API_KEY  model providers for text (OPENAI_API_KEY only if
+  //                                                      "openai" is added to MODEL_PROVIDERS; OpenAI is for images only today)
   //   CLERK_SECRET_KEY                                   optional: verified emails from Clerk
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ai-blocks-agents-local",
@@ -29,6 +30,7 @@
     "OPS_USER_IDS": "",
     "BETA_MODE": "invite",
     "MODEL_MODE": "fake",
+    "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
     "RELEASE_REVIEW": "required",
     "DAILY_MODEL_CAP_USD": "5",
     "JOB_COST_CAP_USD": "2",
@@ -55,6 +57,7 @@
         "OPS_USER_IDS": "",
         "BETA_MODE": "invite",
         "MODEL_MODE": "live",
+        "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
         "RELEASE_REVIEW": "required",
         "DAILY_MODEL_CAP_USD": "10",
         "JOB_COST_CAP_USD": "2",
@@ -83,6 +86,7 @@
         "OPS_USER_IDS": "",
         "BETA_MODE": "invite",
         "MODEL_MODE": "live",
+        "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
         "RELEASE_REVIEW": "required",
         "DAILY_MODEL_CAP_USD": "25",
         "JOB_COST_CAP_USD": "3",

@@ -10,7 +10,7 @@ import type { ModelTier } from "./types.ts";
 import { HttpError } from "./http.ts";
 import { newId, nowIso, today } from "./db.ts";
 
-export type Provider = "anthropic" | "openai" | "gemini" | "fake";
+export type Provider = "anthropic" | "openai" | "gemini" | "deepseek" | "fake";
 
 export interface ModelRequest {
   /** What the call is for, e.g. "intake.classify", "runner.step", "evaluation.rubric". Used for logs and fakes. */
@@ -87,10 +87,10 @@ async function callFake(req: ModelRequest): Promise<ModelResponse> {
 }
 
 // ---------- Live providers (runner module implements) ----------
-// Anthropic Messages, OpenAI Responses and Gemini generateContent, all over fetch with a timeout.
-// Each tier lists models in order of preference; providers without a key are skipped, and busy, failing or
-// cut-off replies fall back to the next model. Prompts, replies, keys and provider error bodies are never logged
-// or echoed: error messages are our own words.
+// Anthropic Messages, OpenAI Responses, Gemini generateContent and DeepSeek chat completions, all over fetch with a timeout.
+// Each tier lists models in order of preference; providers without a key, or left out of MODEL_PROVIDERS, are skipped,
+// and busy, failing or cut-off replies fall back to the next model. Prompts, replies, keys and provider error bodies are
+// never logged or echoed: error messages are our own words.
 
 type LiveProvider = Exclude<Provider, "fake">;
 
@@ -106,17 +106,26 @@ export const LIVE_MODELS: Record<string, LiveModel> = {
   "gpt-6-astra": { id: "gpt-6-astra", provider: "openai", input: 10, output: 50, cached: 1 },
   "gemini-3.5-flash-lite": { id: "gemini-3.5-flash-lite", provider: "gemini", input: 0.3, output: 2.5, cached: 0.03 },
   "gemini-3.1-pro-preview": { id: "gemini-3.1-pro-preview", provider: "gemini", input: 2, output: 12, cached: 0.2 },
+  // DeepSeek's peak-hour prices (off-peak is half), checked 2026-11-06. Thinking tokens are billed as output.
+  "deepseek-flash": { id: "deepseek-flash", provider: "deepseek", input: 0.3, output: 1.2, cached: 0.006 },
+  "deepseek-v4-pro": { id: "deepseek-v4-pro", provider: "deepseek", input: 1.32, output: 3.96, cached: 0.044 },
 };
 
 /** Models per tier, first choice first. Judges list other families first: the default writer is Anthropic. */
 export const TIER_MODELS: Record<ModelTier | "judge", string[]> = {
-  small: ["claude-haiku-5-5", "gpt-6-luna", "gemini-3.5-flash-lite"],
-  standard: ["claude-sonnet-5-5", "gpt-6.1-sol", "gemini-3.1-pro-preview"],
-  premium: ["claude-opus-5-5", "gpt-6-astra", "gemini-3.1-pro-preview"],
-  judge: ["gpt-6.1-sol", "gemini-3.1-pro-preview", "claude-sonnet-5-5"],
+  small: ["claude-haiku-5-5", "gpt-6-luna", "gemini-3.5-flash-lite", "deepseek-flash"],
+  standard: ["claude-sonnet-5-5", "gpt-6.1-sol", "gemini-3.1-pro-preview", "deepseek-v4-pro"],
+  premium: ["claude-opus-5-5", "gpt-6-astra", "gemini-3.1-pro-preview", "deepseek-v4-pro"],
+  judge: ["gpt-6.1-sol", "gemini-3.1-pro-preview", "deepseek-v4-pro", "claude-sonnet-5-5"],
 };
 
-export const PROVIDER_KEYS = { anthropic: "ANTHROPIC_API_KEY", openai: "OPENAI_API_KEY", gemini: "GEMINI_API_KEY" } as const;
+export const PROVIDER_KEYS = { anthropic: "ANTHROPIC_API_KEY", openai: "OPENAI_API_KEY", gemini: "GEMINI_API_KEY", deepseek: "DEEPSEEK_API_KEY" } as const;
+
+/** MODEL_PROVIDERS, e.g. "anthropic,gemini,deepseek": only these providers do text work. Unset = every provider with a key. */
+function allowedProviders(env: Env): Set<string> | null {
+  const list = (env.MODEL_PROVIDERS ?? "").split(",").map(s => s.trim().toLowerCase()).filter(Boolean);
+  return list.length ? new Set(list) : null;
+}
 
 type Effort = "low" | "medium" | "high";
 const EFFORT: Record<ModelTier | "judge", Effort> = { small: "low", standard: "medium", premium: "high", judge: "medium" };
@@ -132,11 +141,13 @@ export function usageCostMicroUsd(model: LiveModel, u: TokenUsage): number {
   return Math.ceil((u.input * model.input + u.output * model.output + u.cached * model.cached + u.cacheWrite * model.input * 1.25) * long);
 }
 
-/** The models callProvider will try for a request, in order: tier list, minus avoidProvider, minus providers without a key. */
+/** The models callProvider will try for a request, in order: tier list, minus avoidProvider, providers outside
+ *  MODEL_PROVIDERS and providers without a key. */
 export function modelCandidates(env: Env, tier: ModelTier | "judge", avoidProvider?: Provider): LiveModel[] {
+  const allowed = allowedProviders(env);
   return TIER_MODELS[tier]
     .map(id => LIVE_MODELS[id])
-    .filter(m => m && m.provider !== avoidProvider && !!env[PROVIDER_KEYS[m.provider]]?.trim());
+    .filter(m => m && m.provider !== avoidProvider && (!allowed || allowed.has(m.provider)) && !!env[PROVIDER_KEYS[m.provider]]?.trim());
 }
 
 /** Pick a provider and model for the tier, call it, and return usage and cost. Throws ModelError on failure. */
@@ -248,6 +259,19 @@ function buildRequest(model: LiveModel, key: string, b: BuildInput): { url: stri
       },
     };
   }
+  if (model.provider === "deepseek") {
+    // OpenAI-style chat completions. JSON mode needs the word "json" in the prompt; the system line above has it.
+    headers.authorization = `Bearer ${key}`;
+    return {
+      url: "https://api.deepseek.com/chat/completions", headers,
+      body: {
+        model: model.id, max_tokens: b.limit,
+        messages: [{ role: "system", content: b.system }, { role: "user", content: b.prompt }],
+        thinking: { type: "enabled" }, reasoning_effort: b.effort,
+        ...(b.json ? { response_format: { type: "json_object" } } : {}),
+      },
+    };
+  }
   headers["x-goog-api-key"] = key;
   return {
     url: `https://generativelanguage.googleapis.com/v1beta/models/${model.id}:generateContent`, headers,
@@ -266,6 +290,7 @@ function buildRequest(model: LiveModel, key: string, b: BuildInput): { url: stri
 
 /** Adapt a JSON schema to what each provider's structured output accepts; null = ask for JSON in the prompt instead. */
 function providerSchema(provider: LiveProvider, schema: Record<string, unknown>): ProviderSchema | null {
+  if (provider === "deepseek") return null; // JSON mode only: the schema goes in the prompt.
   if (provider === "gemini") return { schema, strict: false };
   if (provider === "openai") return { schema, strict: isStrictSchema(schema) };
   const copy = structuredClone(schema) as Record<string, unknown>;
@@ -338,6 +363,17 @@ function parseReply(model: LiveModel, payload: unknown): Reply {
     usage.output = num(d.usage?.output_tokens);
     const refused = parts.some(c => c?.type === "refusal");
     const finish = refused ? "refused" : d.status === "completed" ? "complete" : "incomplete";
+    return { text, usage, finish, actualModel: String(d.model ?? "") };
+  }
+  if (model.provider === "deepseek") {
+    // The answer is message.content; thinking arrives separately in reasoning_content and is not part of the reply.
+    const choice = d.choices?.[0];
+    const text = String(choice?.message?.content ?? "");
+    usage.cached = num(d.usage?.prompt_cache_hit_tokens);
+    usage.input = Math.max(0, num(d.usage?.prompt_tokens) - usage.cached);
+    usage.output = num(d.usage?.completion_tokens);
+    const reason = choice?.finish_reason;
+    const finish = reason === "stop" ? "complete" : reason === "content_filter" ? "refused" : "incomplete";
     return { text, usage, finish, actualModel: String(d.model ?? "") };
   }
   const candidate = d.candidates?.[0];

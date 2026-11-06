@@ -35,9 +35,13 @@ export interface Env {
   /** Where replies go. The sender address has no inbox; replies should reach the team's Google Workspace inbox. */
   EMAIL_REPLY_TO?: string;
 
+  /** Comma-separated providers allowed for text work, e.g. "anthropic,gemini,deepseek". Unset = any provider with a key. */
+  MODEL_PROVIDERS?: string;
+
   ANTHROPIC_API_KEY?: string;
   OPENAI_API_KEY?: string;
   GEMINI_API_KEY?: string;
+  DEEPSEEK_API_KEY?: string;
 
   /** Tests and local dev only: accept the x-test-user header as the signed-in user. Ignored unless APP_ENV is "test" or "local". */
   AUTH_TEST_MODE?: string;

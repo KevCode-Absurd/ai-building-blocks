@@ -43,7 +43,7 @@ async function loadDraft(env: Env, draftId: string): Promise<DraftRow> {
 /** The writer's provider family for a run, from its logged model calls, so the judge can avoid it. */
 async function writerProviderFor(env: Env, runId: string): Promise<Provider | undefined> {
   const row = await first<{ provider: string }>(env.DB,
-    "SELECT provider FROM model_calls WHERE run_id = ? AND ok = 1 AND provider IN ('anthropic','openai','gemini') AND purpose NOT LIKE 'evaluation.%' ORDER BY created_at DESC LIMIT 1", runId);
+    "SELECT provider FROM model_calls WHERE run_id = ? AND ok = 1 AND provider IN ('anthropic','openai','gemini','deepseek') AND purpose NOT LIKE 'evaluation.%' ORDER BY created_at DESC LIMIT 1", runId);
   return (row?.provider as Provider | undefined) ?? undefined;
 }
 

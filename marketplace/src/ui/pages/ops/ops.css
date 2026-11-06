@@ -1,0 +1,68 @@
+/* Ops console. Uses the tokens in src/ui/styles.css only; every class starts with .ops- */
+
+.ops-nav { display: flex; flex-wrap: wrap; gap: 4px; margin: -12px 0 24px; border-bottom: 1px solid var(--line); }
+.ops-nav a { padding: 8px 12px; text-decoration: none; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.ops-nav a:hover { color: var(--text); }
+.ops-nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--text); font-weight: 600; }
+
+.ops-section { margin-bottom: 24px; }
+.ops-gate { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.ops-tile { display: grid; gap: 8px; align-content: start; padding: 16px; background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.ops-tile-label { font-size: 14px; font-weight: 600; color: var(--text-2); }
+.ops-tile-value { font-size: 34px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+.ops-tile-target { font-size: 14px; color: var(--muted); }
+.ops-bar { height: 8px; background: var(--raise); border-radius: 999px; overflow: hidden; }
+.ops-bar > span { display: block; height: 100%; background: var(--text); border-radius: 999px; }
+.ops-bar-met > span { background: var(--ok); }
+.ops-secondary { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 16px 0 0; }
+.ops-secondary dt { font-size: 13px; color: var(--muted); }
+.ops-secondary dd { margin: 0; font-size: 18px; font-weight: 600; }
+
+.ops-search { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 220px) auto; gap: 8px; margin-bottom: 20px; }
+.ops-filters { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-bottom: 16px; }
+@media (max-width: 640px) {
+  .ops-search, .ops-filters { grid-template-columns: 1fr; }
+}
+
+.ops-list { list-style: none; margin: 0; padding: 0; }
+.ops-item { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.ops-item:first-child { padding-top: 0; }
+.ops-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.ops-item-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.ops-item-title { font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.ops-item-title:hover { text-decoration: underline; }
+.ops-meta { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+
+.ops-back { color: var(--muted); font-size: 14px; }
+.ops-head-badges { margin-bottom: 16px; }
+.ops-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.ops-panel { border-color: var(--text); box-shadow: var(--hard); margin-bottom: 24px; }
+.ops-check { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; cursor: pointer; }
+.ops-check input { width: 18px; height: 18px; accent-color: var(--text); }
+
+.ops-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px 24px; margin: 0 0 12px; }
+.ops-facts dt { font-size: 13px; color: var(--muted); }
+.ops-facts dd { margin: 0; overflow-wrap: anywhere; }
+.ops-sub { margin: 20px 0 8px; font-size: 16px; }
+.ops-request { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; margin: 6px 0 12px; }
+.ops-pre { white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--mono); font-size: 13px; background: var(--panel-2); border-radius: var(--radius); padding: 10px; margin: 6px 0 0; max-height: 360px; overflow: auto; }
+.ops-rubric { margin: 0; padding-left: 20px; display: grid; gap: 12px; }
+.ops-score { padding: 12px 0; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.ops-flags { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.ops-draft-body { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.ops-draft-body > summary, .ops-show > summary { cursor: pointer; font-weight: 600; }
+.ops-draft-body[open] > summary { margin-bottom: 12px; }
+.ops-note { white-space: pre-wrap; overflow-wrap: anywhere; margin-bottom: 6px; }
+.ops-claims { margin: 6px 0 12px; padding-left: 20px; overflow-wrap: anywhere; }
+.ops-inline-confirm { display: grid; gap: 8px; min-width: 200px; }
+
+.ops-form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0 12px; align-items: start; }
+.ops-form-end { display: flex; align-items: end; min-height: 72px; padding-bottom: 16px; }
+.ops-codes { display: grid; gap: 4px; margin: 8px 0; font-family: var(--mono); }
+.ops-codes code { user-select: all; }
+.ops-big { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+.ops-big .muted { font-size: 16px; font-weight: 400; }
+.ops-spark { width: 96px; padding-top: 8px; }
+
+.ops-stack { grid-template-columns: minmax(0, 1fr); }
+.ops-tile-value.ops-tile-empty { font-size: 20px; font-weight: 600; color: var(--muted); }

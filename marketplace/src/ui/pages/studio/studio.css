@@ -1,0 +1,85 @@
+/* Studio pages. Tokens from src/ui/styles.css only; every class starts with .studio- */
+
+/* /studio */
+.studio-agent-card { display: grid; gap: 8px; align-content: start; }
+.studio-card-top { display: flex; gap: 6px; flex-wrap: wrap; }
+.studio-card-title { font-size: 19px; margin: 4px 0 0; }
+.studio-facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 4px 0 8px; font-size: 14px; }
+.studio-facts dt { color: var(--muted); }
+.studio-facts dd { margin: 0; }
+.studio-progress { height: 6px; background: var(--raise); border-radius: 999px; overflow: hidden; margin-bottom: 12px; }
+.studio-progress span { display: block; height: 100%; background: var(--text); }
+.studio-how-list { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.studio-how-list .muted { font-size: 14px; }
+
+/* /studio/agents/:id */
+.studio-head-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.studio-overall { margin-bottom: 6px; }
+.studio-stepper { margin: 8px 0 24px; overflow-x: auto; }
+.studio-stepper ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(120px, 1fr)); gap: 8px; }
+.studio-step { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; cursor: pointer; }
+.studio-step:hover { border-color: var(--line-2); }
+.studio-step-on { border-color: var(--text); box-shadow: var(--hard); }
+.studio-step-n { flex: none; display: inline-grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line-2); font-family: var(--mono); font-weight: 700; font-size: 14px; }
+.studio-step-done .studio-step-n { background: var(--ok-bg); color: var(--ok); border-color: var(--ok); }
+.studio-step-on .studio-step-n { background: var(--text); color: var(--bg); border-color: var(--text); }
+.studio-step-text { display: grid; min-width: 0; }
+.studio-step-title { font-weight: 600; font-size: 15px; }
+.studio-step-state { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+@media (max-width: 860px) {
+  .studio-stepper ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .studio-stepper ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .studio-step { padding: 8px; gap: 8px; }
+}
+
+.studio-panel { display: grid; gap: 16px; }
+/* Wide tables and drafts scroll inside their own box instead of widening the page. */
+.studio-panel, .studio-panel .stack { grid-template-columns: minmax(0, 1fr); }
+.studio-guide { background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; }
+.studio-guide .eyebrow { margin-bottom: 4px; }
+.studio-guide h2 { margin-bottom: 12px; }
+.studio-guide-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.studio-guide-facts dt { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.studio-guide-facts dd { margin: 0; color: var(--text-2); font-size: 15px; }
+@media (max-width: 760px) { .studio-guide-facts { grid-template-columns: 1fr; gap: 10px; } }
+
+.studio-next { margin-top: 8px; }
+.studio-sub { font-size: 15px; margin: 14px 0 6px; }
+.studio-pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 10px; }
+.studio-question-text { font-size: 18px; font-weight: 600; }
+.studio-answered { border-top: 1px solid var(--line); padding: 10px 0; }
+.studio-answered summary { cursor: pointer; display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.studio-answered summary span:first-child { flex: 1; }
+.studio-answered[open] summary { margin-bottom: 8px; }
+.studio-followup { border-left: 3px solid var(--line-2); padding-left: 12px; margin: 8px 0 12px; }
+.studio-toggle { margin-bottom: 8px; }
+.studio-preview { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 16px; max-height: 560px; overflow: auto; }
+.studio-check { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 16px; font-size: 15px; cursor: pointer; }
+.studio-check input { margin-top: 4px; width: 18px; height: 18px; flex: none; }
+
+.studio-draft { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid var(--line-2); border-radius: var(--radius); padding: 14px 16px; background: var(--panel-2); max-height: 560px; overflow-y: auto; line-height: 1.6; }
+.studio-mark { background: var(--bad-bg); color: var(--bad); text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 2px; }
+.studio-marks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.studio-marks li { border-top: 1px solid var(--line); padding-top: 10px; }
+.studio-marks blockquote { margin: 0 0 6px; border-left: 3px solid var(--bad); padding-left: 12px; color: var(--text-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio-redo summary { cursor: pointer; color: var(--muted); }
+
+.studio-ready { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 6px; }
+.studio-ok span { color: var(--ok); font-weight: 700; }
+.studio-missing { color: var(--bad); }
+.studio-list { margin: 0 0 8px; padding-left: 20px; display: grid; gap: 4px; }
+.studio-json { background: var(--panel-2); padding: 12px; border-radius: var(--radius); overflow: auto; max-height: 480px; font-size: 13px; }
+
+.studio-side { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.studio-side section { min-width: 0; }
+@media (max-width: 860px) { .studio-side { grid-template-columns: 1fr; } }
+.studio-draft-box { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 16px; max-height: 640px; overflow: auto; margin-bottom: 10px; background: var(--panel); }
+.studio-draft-box .prose { max-width: none; }
+.studio-edited { border-left: 3px solid var(--info); padding-left: 10px; }
+.studio-edit { margin-top: 12px; }
+.studio-suggestions { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 12px; }
+.studio-suggestion { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; display: grid; gap: 8px; }
+.studio-suggestion p { margin: 0; }
+.studio-suggestion .badge { justify-self: start; }

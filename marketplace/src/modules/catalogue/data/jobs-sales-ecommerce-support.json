@@ -1,0 +1,4182 @@
+[
+  {
+    "id": "cold-email-sequence",
+    "title": "Cold email sequence",
+    "summary": "A short series of cold emails that introduces your business to a new prospect and asks for a reply.",
+    "area": "sales",
+    "deliverable": "A sequence of cold emails with subject lines, send timing, two variants of the first email, and a short note on who to send it to.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "target",
+        "label": "Who are you writing to?",
+        "type": "text",
+        "required": true,
+        "help": "Job title, industry and company size.",
+        "max": 300
+      },
+      {
+        "id": "pain",
+        "label": "Problem you solve for them",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "help": "Results, customer names or numbers we may quote.",
+        "max": 10
+      },
+      {
+        "id": "goal",
+        "label": "What should they do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Reply",
+          "Book a call",
+          "Take a demo",
+          "Start a trial"
+        ]
+      },
+      {
+        "id": "emails",
+        "label": "Number of emails",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Direct",
+          "Formal"
+        ]
+      },
+      {
+        "id": "sender",
+        "label": "Who is sending? Name and role",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Every result, customer name, number and claim comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No number, customer, result or claim appears that is not in the brief or plain knowledge about the buyer's own offer.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "personal_and_relevant",
+        "text": "Each email speaks to the stated target and problem, not to everyone.",
+        "weight": 4,
+        "pass_rule": "The first email names the target's role or industry and the problem within the first two sentences.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "one_ask",
+        "text": "Each email asks for one clear next step that matches the goal.",
+        "weight": 4,
+        "pass_rule": "Every email ends with exactly one ask, and the ask matches the goal field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short_and_human",
+        "text": "Emails are short and read like a person wrote them.",
+        "weight": 3,
+        "pass_rule": "Each email body is 120 words or fewer, with no sentence over 25 words, and none uses phrases like 'I hope this finds you well' or 'game-changing'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "follow_up_adds_value",
+        "text": "Each follow-up adds a new reason to reply instead of repeating the first.",
+        "weight": 3,
+        "pass_rule": "Each follow-up email uses a different angle, proof point or question from the one before it.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "emails",
+        "unit": "email",
+        "included": 5,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an expert B2B cold email copywriter. Write a cold email sequence for the business described below. Include subject lines, the send timing between emails, and two versions of the first email. Keep each email under 120 words, speak to one specific reader, ask for one next step, and make each follow-up add something new. Use only facts and proof given in the brief. Do not invent results, customers or numbers. Avoid filler openers and hype words.",
+    "not_for": [
+      "Spam or emails to purchased or scraped lists",
+      "Fake names, fake referrals or pretending to know the reader",
+      "Sending the emails for you",
+      "Claims about money, health or legal results the buyer cannot prove"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We run a 6-person bookkeeping firm for dental practices in Ohio. We want a 4-email sequence to practice owners. We save them about 5 hours a month, and we have 14 dental clients. Goal is a 15-minute call."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I sell cold-chain temperature loggers to small food distributors. The buyer is usually the operations manager. They fail audits when records are missing. Our loggers email a report each day. Want 5 emails, direct tone, goal is a free trial unit."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Our agency builds Shopify stores for outdoor gear brands doing $1M to $5M a year. Need a 3-email sequence to founders. Case study: we cut one client's checkout steps from 5 to 3 (name is Ridgeline Packs, they allow us to say that). Goal is a reply."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We offer fractional HR for startups with 10 to 50 staff, $1,800 a month. Writing to founders who have no HR person. We handle contracts, onboarding and policy. No case studies yet. 4 emails, friendly, goal is booking a call."
+      }
+    ],
+    "keywords": [
+      "cold email",
+      "outreach",
+      "email sequence",
+      "prospecting",
+      "outbound",
+      "sales emails",
+      "b2b email"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide shows cold outreach at $100 to $350 per email and $300 to $1,000 per sequence. Cold outreach is one of the most-bought writing jobs.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "linkedin-outreach-messages",
+    "title": "LinkedIn outreach messages",
+    "summary": "Connection requests and follow-up messages for LinkedIn that start real sales conversations.",
+    "area": "sales",
+    "deliverable": "A connection request note, three follow-up messages, a reply guide for common answers, and short variants for different buyer roles.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "target",
+        "label": "Who are you messaging?",
+        "type": "text",
+        "required": true,
+        "help": "Job title, industry, company size.",
+        "max": 300
+      },
+      {
+        "id": "pain",
+        "label": "Problem you solve",
+        "type": "longtext",
+        "required": true,
+        "max": 800
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "goal",
+        "label": "What should they do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Reply",
+          "Book a call",
+          "Join an event",
+          "Take a demo"
+        ]
+      },
+      {
+        "id": "variants",
+        "label": "Number of message versions",
+        "type": "number",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "sender_profile",
+        "label": "Sender's role and background",
+        "type": "text",
+        "required": false,
+        "help": "One or two lines for the writer to match your voice.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. No fake shared contacts, results, quotes or customer names.",
+        "weight": 5,
+        "pass_rule": "No claim, mutual connection, number or customer appears that is not in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_linkedin",
+        "text": "Messages fit LinkedIn length and manners.",
+        "weight": 4,
+        "pass_rule": "Connection note is 300 characters or fewer; each follow-up is 90 words or fewer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_pitch_first",
+        "text": "The first contact builds a reason to talk before selling.",
+        "weight": 4,
+        "pass_rule": "The connection note and first follow-up do not ask for a call or push the offer in the first message.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "one_ask",
+        "text": "Each follow-up has one clear, low-pressure ask that matches the goal.",
+        "weight": 3,
+        "pass_rule": "Each follow-up ends with one ask, and the final one matches the goal field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "reply_guide",
+        "text": "The reply guide covers likely answers.",
+        "weight": 3,
+        "pass_rule": "The guide gives a suggested reply for at least four answers, including 'not interested' and 'send me info'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "size": {
+        "field": "variants",
+        "unit": "version",
+        "included": 2,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced B2B social-selling coach. Write a LinkedIn outreach set for the business below: one connection request note (300 characters or fewer), three follow-up messages (90 words or fewer each), and a guide with suggested replies to likely answers such as not interested and send me info. Do not pitch in the first message. Use only the facts and proof in the brief. Do not invent mutual connections, results or names.",
+    "not_for": [
+      "Fake profiles or pretending to know the reader",
+      "Messages built on scraped or purchased data",
+      "Mass-spam automation scripts",
+      "Sending the messages for you",
+      "Claims the buyer cannot prove"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I run a payroll service for restaurants with 5 to 30 staff. I want to reach restaurant owners and general managers on LinkedIn. Flat fee of $4 per employee a month. Goal is a call. Friendly tone."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our company sells forklift safety training to warehouse managers in Texas. Training takes 2 hours on site. We want messages that get a reply, not a hard sell."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "I'm a freelance product designer who wants to reach heads of product at early SaaS startups. I redesign onboarding flows. I cut sign-up steps for a client from 7 to 4 (client name stays private). Goal is a short chat."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We sell a tool that turns Zoom calls into meeting notes for law firm office managers. Buyers worry about privacy. We store nothing after 30 days. Want two versions, one formal, one casual."
+      }
+    ],
+    "keywords": [
+      "linkedin outreach",
+      "linkedin messages",
+      "connection request",
+      "social selling",
+      "dm templates",
+      "prospecting"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide shows cold outreach at $100 to $350 per email and $300 to $1,000 per sequence. Cold outreach is one of the most-bought writing jobs.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by experience: single email $75 to $175 (junior), email sequence of 5 to 7 emails $500 to $1,000 (junior), landing page $300 to $750.",
+        "url": "https://www.mediabistro.com/employer/blog/trends/freelance-copywriter-rates/"
+      }
+    ]
+  },
+  {
+    "id": "sales-call-script",
+    "title": "Sales call script",
+    "summary": "A call script with opening, questions, talking points and a close, for discovery or demo calls.",
+    "area": "sales",
+    "deliverable": "A call script with an opening, discovery questions, a short pitch, answers to common questions, a close, and voicemail and gatekeeper lines.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "call_type",
+        "label": "Type of call",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Cold call",
+          "Discovery call",
+          "Demo call",
+          "Follow-up call"
+        ]
+      },
+      {
+        "id": "buyer",
+        "label": "Who is on the call?",
+        "type": "text",
+        "required": true,
+        "help": "Role, industry, usual worries.",
+        "max": 400
+      },
+      {
+        "id": "price_info",
+        "label": "Price range, if you share it on calls",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "Goal of the call",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "call_length",
+        "label": "Call length in minutes",
+        "type": "number",
+        "required": false,
+        "max": 90
+      },
+      {
+        "id": "process",
+        "label": "Your sales steps after this call",
+        "type": "longtext",
+        "required": false,
+        "max": 800
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Prices, results, features and customer names come from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, feature, result or customer name appears that is not in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "questions_first",
+        "text": "The script finds the buyer's need before pitching.",
+        "weight": 4,
+        "pass_rule": "At least five open questions appear before any pitch section, and they cover the problem, current approach, cost of the problem and who decides.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_call_type",
+        "text": "The script suits the stated call type and length.",
+        "weight": 3,
+        "pass_rule": "Opening and flow match the call_type field, and total talk time fits the call length when given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_close",
+        "text": "The script ends with a clear next step tied to the goal.",
+        "weight": 4,
+        "pass_rule": "A closing section asks for the step in the goal field and gives words for a yes and for a not now.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sounds_spoken",
+        "text": "Lines sound like speech, not writing.",
+        "weight": 3,
+        "pass_rule": "No spoken line is over 25 words, and lines are marked as what to say versus notes to the caller.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 299,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a veteran sales coach. Write a call script for the business and call type below. Include an opening, open discovery questions that come before any pitch, a short pitch, answers to likely questions, a close that asks for the stated next step (with words for yes and not now), and voicemail and gatekeeper lines if it is a cold call. Mark spoken lines separately from notes. Use only the facts given. Do not invent prices, results or customers.",
+    "not_for": [
+      "Deceptive tactics such as fake urgency or posing as someone else",
+      "Robocall or auto-dialler scripts that skip consent rules",
+      "Scripts for regulated advice such as investments, insurance or medical",
+      "Calling lists the buyer bought without consent"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell commercial cleaning to small offices in Denver. Our reps cold call office managers. Contracts start at $600 a month. I want a 3-minute cold call script with a voicemail."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "We sell a scheduling app to physical therapy clinics. After a demo request, our rep runs a 30-minute discovery call with the clinic owner. Main worry for owners is no-shows. Plans start at $79 a month per clinic."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Our firm installs rooftop solar for homeowners in Arizona. Leads come from a web form. The caller needs a 10-minute qualifying call script and a way to book a site visit. We never quote final prices on the phone."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "I sell used heavy trucks to small construction firms. Most buyers call us after seeing a listing. I need a script for the first inbound call that finds out what they need and sets a viewing."
+      }
+    ],
+    "keywords": [
+      "call script",
+      "cold calling",
+      "discovery call",
+      "sales script",
+      "phone script",
+      "talk track",
+      "demo script"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "objection-handling-guide",
+    "title": "Objection handling guide",
+    "summary": "Short, honest answers to the objections your buyers raise most, written for your reps to use.",
+    "area": "sales",
+    "deliverable": "For each objection: what the buyer really means, a short reply, one follow-up question, and what not to say. Plus a one-page cheat sheet.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "buyer",
+        "label": "Who raises the objections?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "objection_list",
+        "label": "Objections you hear",
+        "type": "list",
+        "required": true,
+        "help": "Add real ones if you have them. We add common ones.",
+        "max": 30
+      },
+      {
+        "id": "objections",
+        "label": "Number of objections to cover",
+        "type": "number",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "price_info",
+        "label": "Your pricing and what is flexible",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors buyers mention",
+        "type": "list",
+        "required": false,
+        "max": 6
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Facts, savings, features and competitor claims come from the brief.",
+        "weight": 5,
+        "pass_rule": "No number, feature, result or competitor claim appears that is not in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_listed",
+        "text": "Every objection the buyer listed is answered.",
+        "weight": 4,
+        "pass_rule": "Each item in objection_list has its own entry.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "understand_first",
+        "text": "Replies show the rep understands the worry before answering.",
+        "weight": 4,
+        "pass_rule": "Each entry has a 'what they mean' line and the reply starts by acknowledging the concern.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest",
+        "text": "Replies do not pressure or mislead.",
+        "weight": 4,
+        "pass_rule": "No reply uses fake urgency, hides a known limit, or runs down a competitor without a fact from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "usable",
+        "text": "Replies are short enough to say aloud.",
+        "weight": 3,
+        "pass_rule": "Each reply is 60 words or fewer and each entry includes one follow-up question.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "objections",
+        "unit": "objection",
+        "included": 8,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales trainer. Write an objection handling guide for the business below. For each objection give what the buyer really means, a short reply (60 words or fewer), one follow-up question, and what not to say. Cover every objection the buyer listed and add the most common ones for this kind of buyer. End with a one-page cheat sheet. Be honest: no fake urgency, no unproven claims, nothing invented.",
+    "not_for": [
+      "Manipulative or high-pressure tactics",
+      "Hiding fees, limits or contract terms",
+      "Unproven claims about competitors",
+      "Regulated sales such as insurance or investments"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell a $199 a month CRM for real estate teams. Reps hear: too expensive, we already use spreadsheets, and my agents will not use it. We offer a 30-day free trial and free setup."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I run a landscaping company and sell yearly lawn care plans to homeowners. People say they will do it themselves, or ask for a lower price. Plans start at $540 a year."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We sell managed IT support to accounting firms with 10 to 40 staff. Objections: we have a nephew who does our IT, and it costs too much. Our contract is month to month."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Our school sells weekend coding classes for kids aged 9 to 14. Parents say: my child is too busy, or is it worth the money? We give a free first class."
+      }
+    ],
+    "keywords": [
+      "objection handling",
+      "sales objections",
+      "rebuttals",
+      "sales training",
+      "price objection",
+      "cheat sheet"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "account-research-brief",
+    "title": "Account research brief",
+    "summary": "A one-page brief on a prospect company, built only from the notes and pages you give us.",
+    "area": "sales",
+    "deliverable": "A brief per account: what they do, recent news you supplied, likely needs, who matters, three talking points, and questions to ask. Every point shows where it came from.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "company",
+        "label": "Prospect company name",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "source_material",
+        "label": "Paste what you know",
+        "type": "longtext",
+        "required": true,
+        "help": "Website text, news, LinkedIn text, call notes, their job posts.",
+        "max": 12000
+      },
+      {
+        "id": "your_offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 1200
+      },
+      {
+        "id": "contact",
+        "label": "Person you will talk to",
+        "type": "text",
+        "required": false,
+        "help": "Name and role.",
+        "max": 200
+      },
+      {
+        "id": "goal",
+        "label": "Goal of the conversation",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "accounts",
+        "label": "Number of accounts",
+        "type": "number",
+        "required": false,
+        "help": "Paste material for each one.",
+        "max": 10
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Every fact about the prospect appears in the material the buyer pasted.",
+        "weight": 5,
+        "pass_rule": "Each factual claim about the prospect can be found in source_material; anything else is clearly marked as a guess or a question.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "sources_shown",
+        "text": "Each fact points back to where it came from.",
+        "weight": 4,
+        "pass_rule": "Facts carry a short source tag such as 'from the About page' or 'from your call notes'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "guess_vs_fact",
+        "text": "Guesses are labelled as guesses.",
+        "weight": 4,
+        "pass_rule": "Likely needs and pains are labelled 'likely' or 'to check' and are not stated as fact.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tied_to_offer",
+        "text": "The brief links the prospect to the buyer's offer.",
+        "weight": 3,
+        "pass_rule": "At least three talking points connect a supplied fact to the buyer's offer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "usable_in_five",
+        "text": "It can be read in five minutes.",
+        "weight": 3,
+        "pass_rule": "Each account brief is 500 words or fewer and starts with a three-line summary.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 199,
+      "size": {
+        "field": "accounts",
+        "unit": "account",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales researcher. Using only the notes and text I paste below, write a one-page account brief: what the company does, key facts, who matters, likely needs, three talking points tied to my offer, and questions to ask. Tag each fact with where it came from. Label guesses as guesses. Do not use any outside knowledge about the company and do not invent anything.",
+    "not_for": [
+      "Looking up live data, since agents cannot browse for you",
+      "Personal or private details about individuals",
+      "Scraped or purchased data",
+      "Guessing numbers such as revenue or headcount"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Prospect: Harbor Dental Group. I pasted their About page and two job posts for hygienists. I sell online appointment reminders. I will talk to their office manager next Tuesday."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Prospect: Brightfield Farms, an organic produce grower. I pasted a press article about a new packing plant and notes from a trade show chat. We sell cold storage space by the pallet."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Prospect: Lindqvist & Moore, a 25-person law firm. I pasted their website and a LinkedIn post by a partner about hiring a legal assistant. We sell document automation. Goal: first call with the managing partner."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Prospects: three bike shops in Portland. I pasted each shop's website text. I sell a point of sale system built for bike shops. Brief each one."
+      }
+    ],
+    "keywords": [
+      "account research",
+      "prospect research",
+      "company brief",
+      "sales prep",
+      "call prep",
+      "account plan"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "sales-proposal",
+    "title": "Sales proposal",
+    "summary": "A clear proposal for one prospect that sums up their problem, your plan, scope, price and next steps.",
+    "area": "sales",
+    "deliverable": "A proposal with summary, the client's problem, your approach, scope and what is not included, timeline, pricing table, terms in plain words, and next steps.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "client",
+        "label": "Client name and what they do",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "problem",
+        "label": "Their problem and goals",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste call notes or their request.",
+        "max": 5000
+      },
+      {
+        "id": "solution",
+        "label": "What you will do for them",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "price_info",
+        "label": "Prices and payment terms",
+        "type": "longtext",
+        "required": true,
+        "help": "Give your real numbers. We do not guess prices.",
+        "max": 1500
+      },
+      {
+        "id": "timeline",
+        "label": "Timeline",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "proof",
+        "label": "Proof or past work you can cite",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "exclusions",
+        "label": "What is not included",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Warm and plain",
+          "Formal",
+          "Short and direct"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Prices, dates, results and past clients come from the brief.",
+        "weight": 5,
+        "pass_rule": "Every price, date, deliverable, result and client name appears in the brief; missing details are shown as [to confirm], not made up.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "client_problem_first",
+        "text": "It opens with the client's problem in their own terms.",
+        "weight": 4,
+        "pass_rule": "The first section restates the client's problem and goals using details from the notes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "scope_clear",
+        "text": "What is and is not included is clear.",
+        "weight": 4,
+        "pass_rule": "The proposal lists deliverables and a separate list of what is not included, with no vague phrases like 'and more'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "price_clear",
+        "text": "Price, payment steps and what happens next are easy to find.",
+        "weight": 4,
+        "pass_rule": "A pricing table matches the price_info field and the last section names the next step and who does it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_terms",
+        "text": "Terms are in plain words and do not pose as legal advice.",
+        "weight": 3,
+        "pass_rule": "Terms are short bullets with no legal jargon, and the document says the buyer should have a lawyer review any contract.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced consultant who writes winning proposals. Write a proposal for the client below using only my notes. Include an executive summary, the client's problem in their own words, my approach, scope with a clear list of what is not included, a timeline, a pricing table that uses only the prices I give, plain-language terms, and next steps. Where a detail is missing, write [to confirm]. Do not invent prices, dates, results or past clients.",
+    "not_for": [
+      "Legal contracts or terms of service",
+      "Proposals with invented past work or testimonials",
+      "Government bids with compliance forms",
+      "Pricing advice, since the buyer sets prices"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I run a small web design studio. A bakery owner wants a 5-page site with online ordering. I quoted $4,800: half now, half at launch. Build takes 5 weeks. Her call notes are below: she hates her current site, loses orders by phone, wants to take pre-orders for holidays."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Freelance bookkeeper. A landscaping firm with 12 employees wants monthly books, payroll reports and quarterly tax prep. My fee is $650 a month, three-month minimum. They use QuickBooks and are 4 months behind on reconciling."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We are a 3-person video team. A regional credit union wants 6 short training videos for new tellers. Quote: $9,500 for the set, 6 weeks, two rounds of edits per video. They supply the script outline."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "I do HVAC installs. A small office building owner asked for a quote to replace two rooftop units. Price $31,200 including removal. Work takes 3 days over a weekend. Warranty is 5 years on parts from the maker."
+      }
+    ],
+    "keywords": [
+      "proposal",
+      "business proposal",
+      "quote",
+      "project proposal",
+      "bid",
+      "scope of work",
+      "sales proposal"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "sales-follow-up-sequence",
+    "title": "Sales follow-up sequence",
+    "summary": "Follow-up messages that keep a quote, demo or meeting moving without nagging.",
+    "area": "sales",
+    "deliverable": "A set of follow-up emails or messages with timing, subject lines, and a short note on when to stop. Each message adds something new.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "situation",
+        "label": "Where is the deal?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "After a meeting",
+          "After a demo",
+          "After sending a quote",
+          "Lead went quiet",
+          "Trial ended"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "What are you selling?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "context",
+        "label": "What happened so far",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste notes or the last emails.",
+        "max": 4000
+      },
+      {
+        "id": "buyer",
+        "label": "Who is the buyer?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "touches",
+        "label": "Number of messages",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "proof",
+        "label": "Proof or useful content to share",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "channel",
+        "label": "Channel",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Email",
+          "LinkedIn",
+          "Text message",
+          "Mix"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. No fake deadlines, discounts, results or things the buyer 'said'.",
+        "weight": 5,
+        "pass_rule": "No deadline, discount, number or quote appears that is not in the context or offer fields.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "uses_context",
+        "text": "Messages refer to what actually happened in the deal.",
+        "weight": 4,
+        "pass_rule": "At least half the messages mention a specific detail from the context field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "new_each_time",
+        "text": "Each message adds something new.",
+        "weight": 4,
+        "pass_rule": "No two messages share the same main reason for writing, and none is only 'just checking in'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "easy_next_step",
+        "text": "Each message makes the next step small and clear.",
+        "weight": 3,
+        "pass_rule": "Each message has one ask that takes under five minutes, such as a yes or no reply.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "polite_exit",
+        "text": "The sequence ends well.",
+        "weight": 3,
+        "pass_rule": "The last message is a polite close that leaves the door open, and the note says when to stop.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "touches",
+        "unit": "message",
+        "included": 4,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales coach. Write a follow-up sequence for the deal below. Give the timing, subject lines and message text for each touch. Refer to what really happened in the deal. Each message must add something new, not just check in, and must have one small ask. End with a polite breakup message and a note on when to stop. Use only the facts I give. Do not invent deadlines, discounts or results.",
+    "not_for": [
+      "Fake urgency, fake deadlines or invented discounts",
+      "Harassing contacts who asked to stop",
+      "Sending the messages for you",
+      "Bulk spam to people with no relationship"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sent a $12,000 quote for a kitchen remodel 5 days ago. The homeowners liked our design but have not replied. They said money is a little tight. Need 4 follow-ups by email."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Two of us at a SaaS startup gave a demo to an operations director at a trucking firm last week. She said she needed to talk to her CFO. Our plan is $450 a month. I want 5 touches."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "I own a photography studio. A couple asked about wedding packages in January and then went silent. Package prices start at $2,800. I want 3 gentle text messages."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Our free 14-day trial of an invoicing tool ended yesterday. The user created 8 invoices but did not upgrade. Plan costs $19 a month. Need a 3-email sequence."
+      }
+    ],
+    "keywords": [
+      "follow up",
+      "follow-up emails",
+      "sales follow up",
+      "nurture",
+      "quote follow up",
+      "chasing",
+      "after demo"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide shows cold outreach at $100 to $350 per email and $300 to $1,000 per sequence. Cold outreach is one of the most-bought writing jobs.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "ideal-customer-profile",
+    "title": "Ideal customer profile",
+    "summary": "A clear profile of the customers worth chasing, based on the customer facts you give us.",
+    "area": "sales",
+    "deliverable": "An ideal customer profile with firmographics, buying triggers, pains, buyer roles, disqualifiers, where to find them, and how to score a lead.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "customers",
+        "label": "Notes on your best customers",
+        "type": "longtext",
+        "required": true,
+        "help": "Who buys, why, how fast, how much. Paste a customer list or notes with names removed if you like.",
+        "max": 10000
+      },
+      {
+        "id": "bad_fit",
+        "label": "Customers who were a poor fit",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "price_info",
+        "label": "Your price range",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "market",
+        "label": "Where you sell",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "roles",
+        "label": "Roles involved in buying",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "personas",
+        "label": "Number of buyer personas",
+        "type": "number",
+        "required": false,
+        "max": 5
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Facts about customers come from the notes; market numbers are not made up.",
+        "weight": 5,
+        "pass_rule": "No statistic, customer detail or market size appears unless it is in the brief; inferences are labelled 'inferred'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "grounded",
+        "text": "Each trait is tied to evidence in the customer notes.",
+        "weight": 4,
+        "pass_rule": "Each major trait names the pattern in the notes that supports it, or says 'no evidence yet'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "specific",
+        "text": "The profile is specific enough to tell a good lead from a bad one.",
+        "weight": 4,
+        "pass_rule": "It gives concrete firmographic traits, at least three buying triggers and at least three disqualifiers.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "score_card",
+        "text": "It includes a simple way to score a lead.",
+        "weight": 3,
+        "pass_rule": "A scoring list of 5 to 10 yes-or-no checks is included with a rule for what score counts as a fit.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "action",
+        "text": "It says where and how to find these customers.",
+        "weight": 3,
+        "pass_rule": "At least three places or ways to find the profile are listed, without scraped-list suggestions.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "personas",
+        "unit": "persona",
+        "included": 2,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a B2B go-to-market strategist. From the customer notes below, write an ideal customer profile: firmographics, buying triggers, pains, roles in the buying group, disqualifiers, where to find these customers, and a simple lead scorecard. Tie each trait to evidence in my notes. Label inferences as inferred. Do not invent statistics or customer details.",
+    "not_for": [
+      "Market size claims without a source from the buyer",
+      "Buying or scraping lead lists",
+      "Profiles based on protected traits such as race, religion or age of a person",
+      "Personal data about named individuals"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell route-planning software to small plumbing and HVAC companies. Our best 10 customers have 8 to 25 trucks, mostly family owned, and found us when fuel costs jumped. Poor fits: one-truck owners and big chains. Plan is $30 per vehicle per month."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I coach new managers in tech firms. My best clients are engineering directors at companies of 50 to 300 people, referred by their HR leads. They sign up after a reorg or a promotion. Price is $2,400 for a 6-week programme."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We make compostable packaging for takeaway restaurants. Best customers are independent cafes with 2 to 5 sites in cities that banned plastic. Chains buy from big suppliers and never replied."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "My accounting practice serves online course creators earning $100k to $1M a year. They come after a surprise tax bill. Hobby creators below $30k a year do not stay."
+      }
+    ],
+    "keywords": [
+      "ideal customer profile",
+      "icp",
+      "buyer persona",
+      "target customer",
+      "customer profile",
+      "lead scoring",
+      "who to sell to"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "sales-playbook",
+    "title": "Sales playbook",
+    "summary": "A working playbook your reps can follow, built from how you actually sell today.",
+    "area": "sales",
+    "deliverable": "A playbook with sales stages, entry and exit rules, questions per stage, email and call guides, objection list, qualification rules, and a first-week plan for new reps.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What do you sell?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "process",
+        "label": "How you sell today",
+        "type": "longtext",
+        "required": true,
+        "help": "Steps from lead to signed deal, tools used, who does what.",
+        "max": 6000
+      },
+      {
+        "id": "buyer",
+        "label": "Who buys?",
+        "type": "text",
+        "required": true,
+        "max": 500
+      },
+      {
+        "id": "cycle",
+        "label": "Typical time to close",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "price_info",
+        "label": "Pricing and discount rules",
+        "type": "longtext",
+        "required": false,
+        "max": 1500
+      },
+      {
+        "id": "wins_losses",
+        "label": "Why you win and lose",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "team_size",
+        "label": "Team size",
+        "type": "number",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "materials",
+        "label": "Existing scripts or emails to build on",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Stages, prices, rules and win rates come from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, discount rule, win rate, quota or tool appears that is not in the brief; gaps are listed as 'to decide'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "matches_process",
+        "text": "The stages match how the business really sells.",
+        "weight": 4,
+        "pass_rule": "The stages follow the process field in order, and any new stage is marked 'suggested'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "each_stage_clear",
+        "text": "Each stage has a goal, entry rule, exit rule and key questions.",
+        "weight": 4,
+        "pass_rule": "Every stage lists all four items.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tools_for_reps",
+        "text": "Reps get words they can use.",
+        "weight": 3,
+        "pass_rule": "At least one email template, one call outline and one objection reply are included and tied to a stage.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ramp_plan",
+        "text": "New reps can get started from it.",
+        "weight": 3,
+        "pass_rule": "A first-week plan with daily tasks is included.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 299,
+      "min_usd": 179,
+      "max_usd": 799,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a head of sales enablement. Using only the facts below, write a sales playbook: stages with a goal, entry rule, exit rule and key questions for each; qualification rules; email and call guides; common objections with replies; pricing and discount rules as given; and a first-week plan for new reps. Follow the sales process described. Mark anything missing as 'to decide'. Do not invent prices, quotas, win rates or tools.",
+    "not_for": [
+      "Legal or tax advice",
+      "Invented quotas, win rates or benchmarks",
+      "Playbooks for regulated sales such as insurance or investments",
+      "Pressure tactics that mislead buyers"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell a $250 a month shift scheduling app to restaurants. Two reps. Leads come from Google ads. Steps today: web form, call within a day, 20-minute demo, 14-day trial, call at day 10, sign. We lose to a free app. We want a playbook for hiring a third rep."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our firm installs security cameras for small retail stores. Owners call us, we visit, quote, and install in 2 weeks. Jobs range $2,500 to $9,000. Founder closes most deals. We want his method written down."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "I run a 4-person agency selling monthly SEO retainers of $1,500 to $4,000 to local law firms. Sales cycle is 4 to 8 weeks. We win when we show a free site audit. We lose on price to cheap vendors."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We make custom uniforms and sell to schools and clubs. Orders open in spring. Reps are seasonal part-timers. Orders from $1,200 to $15,000. We need a playbook they can learn in a week."
+      }
+    ],
+    "keywords": [
+      "sales playbook",
+      "sales process",
+      "sales enablement",
+      "sales handbook",
+      "sales stages",
+      "rep onboarding"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "product-descriptions-batch",
+    "title": "Product descriptions in a batch",
+    "summary": "Clear, accurate product descriptions for your online shop, written in one voice for the whole batch.",
+    "area": "ecommerce",
+    "deliverable": "One description per product with a short headline, a main description, key features as bullets, and a short meta description. Delivered in a table you can copy.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop and brand voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "products",
+        "label": "Product details",
+        "type": "longtext",
+        "required": true,
+        "help": "One product per block: name, materials, size, features, price if you like.",
+        "max": 20000
+      },
+      {
+        "id": "count",
+        "label": "Number of products",
+        "type": "number",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "customer",
+        "label": "Who buys?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "length",
+        "label": "Length per description",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Short (40 to 60 words)",
+          "Medium (80 to 120 words)",
+          "Long (150 to 200 words)"
+        ]
+      },
+      {
+        "id": "keywords",
+        "label": "Words shoppers search for",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "platform",
+        "label": "Where it will be posted",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Shopify",
+          "WooCommerce",
+          "Squarespace",
+          "Other"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No feature, material, size, certification or claim is invented. Only the product details given are used.",
+        "weight": 5,
+        "pass_rule": "Every fact in a description appears in that product's details; missing facts are listed as questions, not guessed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "benefits_and_facts",
+        "text": "Each description pairs real details with what they mean for the buyer.",
+        "weight": 4,
+        "pass_rule": "Each description mentions at least two product facts and the benefit of each.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "consistent_voice",
+        "text": "The whole batch reads in the voice of the shop.",
+        "weight": 3,
+        "pass_rule": "Tone and sentence style match the shop field across all products, and no two descriptions share a repeated opening.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_length",
+        "text": "Each description fits the chosen length and format.",
+        "weight": 3,
+        "pass_rule": "Word counts are within 15 percent of the chosen range, and every product has headline, description, bullets and meta description.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_empty_hype",
+        "text": "Plain, specific words with no empty hype.",
+        "weight": 3,
+        "pass_rule": "No description uses words like 'amazing', 'perfect', 'luxurious' or 'must-have' without a fact beside it.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 899,
+      "size": {
+        "field": "count",
+        "unit": "product",
+        "included": 10,
+        "per_unit_usd": 7
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce copywriter. Write a description for each product listed below, in the shop's voice. For each product give a short headline, a main description of the length requested, key features as bullets, and a meta description under 155 characters. Use only the product details I give. If something important is missing, list it as a question instead of guessing. Do not invent materials, sizes, certifications or claims. Avoid empty hype words and vary the openings.",
+    "not_for": [
+      "Fake reviews or invented testimonials",
+      "Health, safety or eco claims the buyer cannot prove",
+      "Copying competitors' text",
+      "Adult or banned products",
+      "Images or photos"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell handmade soy candles from a small studio in Vermont. 12 products. Each has a scent, burn time, jar size and wax type. Voice is calm and homey. I will paste the details for all 12."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our shop sells men's work boots. I have 30 products with leather type, sole type, sizes and weight. Customers are tradespeople. Want medium-length descriptions, no hype."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Pet shop with 18 dog toys and 10 cat toys. Materials are listed for each. Some are made in Portugal. Tone is playful but clear about safety. We do not claim anything is indestructible."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We sell refurbished laptops. 15 listings, each with processor, RAM, storage, screen size, condition grade and battery health. Customers are students on a budget. Be clear about condition."
+      }
+    ],
+    "keywords": [
+      "product descriptions",
+      "ecommerce copy",
+      "shopify descriptions",
+      "product copy",
+      "catalog copy",
+      "bulk descriptions",
+      "woocommerce"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriter pricing guide: product descriptions earn about $3 to $18 each at volume; worked example of $5 each.",
+        "url": "https://www.susangreenecopywriter.com/articles/how-to-set-pricing-for-writing-product-descriptions.html"
+      },
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "marketplace-listing-copy",
+    "title": "Marketplace listing copy",
+    "summary": "Title, bullets, description and search terms for a listing on Amazon, Etsy or Shopify.",
+    "area": "ecommerce",
+    "deliverable": "For each listing: a title, five bullets or highlights, a description, search terms or tags, and a list of questions about missing facts. Written to the rules of the chosen marketplace.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "platform",
+        "label": "Marketplace",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Amazon",
+          "Etsy",
+          "Shopify",
+          "eBay",
+          "Walmart Marketplace"
+        ]
+      },
+      {
+        "id": "product",
+        "label": "Product details",
+        "type": "longtext",
+        "required": true,
+        "help": "Materials, sizes, what is in the box, how it is used, care, origin.",
+        "max": 6000
+      },
+      {
+        "id": "buyer",
+        "label": "Who buys it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "keywords",
+        "label": "Search words you want used",
+        "type": "list",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "competitors",
+        "label": "Competing listings to beat (paste their text)",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "listings",
+        "label": "Number of listings",
+        "type": "number",
+        "required": false,
+        "max": 50
+      },
+      {
+        "id": "rules",
+        "label": "Rules you already know",
+        "type": "text",
+        "required": false,
+        "help": "Banned words, character limits, category rules.",
+        "max": 500
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No feature, certification, size, material or result is invented. Only given facts are used.",
+        "weight": 5,
+        "pass_rule": "Every claim in the listing appears in the product field; certifications and 'best' or 'number one' claims appear only if the buyer supplied proof.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_platform",
+        "text": "Format and length fit the chosen marketplace.",
+        "weight": 4,
+        "pass_rule": "Title and bullets stay within the usual limits for the platform (Amazon title about 200 characters, Etsy title 140, Etsy tags 13 of 20 characters or fewer) or the limits the buyer gave.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "keywords_natural",
+        "text": "Search words appear naturally in the title and early text.",
+        "weight": 3,
+        "pass_rule": "The main search word appears in the title and in the first bullet or description line, with no stuffing or repeated word lists.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_buyer_questions",
+        "text": "The listing answers what a buyer wants to know before buying.",
+        "weight": 3,
+        "pass_rule": "Size, material, use and what is included are all stated, or flagged as missing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_banned_claims",
+        "text": "No risky or banned claims.",
+        "weight": 4,
+        "pass_rule": "No unproven health, safety, eco or 'cure' claim appears, and no mention of other sellers' brands or of reviews.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 599,
+      "size": {
+        "field": "listings",
+        "unit": "listing",
+        "included": 1,
+        "per_unit_usd": 29
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced marketplace listing writer for the platform named below. Write the listing for the product described: a title, five bullets, a description, and search terms or tags that follow the platform's usual limits. Use search words naturally and without stuffing. State size, material, use and what is included. Use only the facts I give. If a key fact is missing, list it as a question. Do not invent certifications, awards, reviews or health or eco claims.",
+    "not_for": [
+      "Fake or incentivised reviews",
+      "Copying a competitor's listing",
+      "Claims that break marketplace rules, such as medical cures",
+      "Listing for banned or restricted goods",
+      "Images, A+ content design or uploading"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Amazon listing for a stainless steel dog bowl with a non-slip rubber base. 32 oz and 64 oz sizes. Dishwasher safe. Keywords: dog bowl, pet water bowl, no spill. Our brand is called Pawline."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Etsy listing for a hand-stitched leather passport cover. Made in my workshop in Oaxaca from vegetable-tanned leather. Three colours. Takes about two weeks to make. Customers buy it as a gift."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Shopify product page text for an organic cotton baby blanket, 30 by 40 inches. Machine washable. Made in India with GOTS certification (certificate attached in notes). Sells at $48."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "eBay listing for a used Canon EOS Rebel T7 camera with 18-55mm lens. Shutter count 6,200. Small scratch on the grip. Includes battery, charger and strap."
+      }
+    ],
+    "keywords": [
+      "amazon listing",
+      "etsy listing",
+      "listing copy",
+      "marketplace seo",
+      "product title",
+      "bullet points",
+      "etsy tags",
+      "shopify product page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriter pricing guide: product descriptions earn about $3 to $18 each at volume; worked example of $5 each.",
+        "url": "https://www.susangreenecopywriter.com/articles/how-to-set-pricing-for-writing-product-descriptions.html"
+      },
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "collection-page-copy",
+    "title": "Collection page copy",
+    "summary": "Intro text, a buying guide and FAQs for a category page in your online shop.",
+    "area": "ecommerce",
+    "deliverable": "For each collection: page title, meta description, a short intro, a buying guide section, three to five FAQs, and ideas for internal links.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1200
+      },
+      {
+        "id": "collection",
+        "label": "Collection name and what is in it",
+        "type": "longtext",
+        "required": true,
+        "help": "List products, price range, key differences.",
+        "max": 4000
+      },
+      {
+        "id": "customer",
+        "label": "Who shops here?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "keywords",
+        "label": "Search words to use",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "collections",
+        "label": "Number of collections",
+        "type": "number",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "length",
+        "label": "Intro length in words",
+        "type": "number",
+        "required": false,
+        "max": 500
+      },
+      {
+        "id": "related",
+        "label": "Other collections to link to",
+        "type": "list",
+        "required": false,
+        "max": 10
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Products, prices, materials, shipping facts and claims come from the brief.",
+        "weight": 5,
+        "pass_rule": "No product, material, price, shipping promise or claim appears that is not in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "helps_choose",
+        "text": "The page helps a shopper choose between products.",
+        "weight": 4,
+        "pass_rule": "The buying guide explains at least three differences or choices using details from the collection field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "search_ready",
+        "text": "Title, meta description and intro use the main search word naturally.",
+        "weight": 3,
+        "pass_rule": "Title is 60 characters or fewer, meta description is 155 or fewer, and the main word is in the title and first sentence.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "faqs_real",
+        "text": "FAQs answer questions shoppers really ask.",
+        "weight": 3,
+        "pass_rule": "Three to five FAQs, each answered from the brief or marked 'confirm with shop'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "not_thin",
+        "text": "The copy is useful but short enough to leave room for products.",
+        "weight": 3,
+        "pass_rule": "The intro is under 150 words unless the buyer set a length, and no paragraph repeats another.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "collections",
+        "unit": "collection",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce SEO copywriter. Write copy for the collection page below: a page title (60 characters or fewer), a meta description (155 or fewer), a short intro, a buying guide that helps shoppers choose, and three to five FAQs. Use the search words naturally. Use only the facts in my brief. Do not invent products, materials, prices or shipping promises.",
+    "not_for": [
+      "Keyword stuffing",
+      "Claims the buyer cannot prove",
+      "Copying competitor pages",
+      "Health or safety claims without proof",
+      "Page design or code"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Collection: women's trail running shoes in my outdoor shop. 14 styles from $90 to $160. Differences: cushioning, grip, waterproof or not. Customers are weekend runners. Voice is friendly and honest."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Collection: loose leaf teas. 22 teas: black, green, herbal and oolong. Packs of 50g or 100g. We source from named farms in Sri Lanka and Japan. Customers are gift buyers and home drinkers."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Collection: standing desks for home offices. 6 models, electric and crank, $299 to $799. Weight limit, desktop sizes and warranty differ. Warranty is 5 years on frames."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Collection: engagement rings under $2,000. 18 lab-grown diamond rings in gold and platinum. We give a lab report for each stone. Shoppers are first-time ring buyers on a budget."
+      }
+    ],
+    "keywords": [
+      "collection page",
+      "category page",
+      "category description",
+      "shopify collection",
+      "seo category copy",
+      "buying guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "abandoned-cart-email-flow",
+    "title": "Abandoned-cart email flow",
+    "summary": "A short email series that reminds shoppers about their cart and answers what held them back.",
+    "area": "ecommerce",
+    "deliverable": "A flow of cart emails with trigger timing, subject lines with preview text, email body text, and notes on where to place the cart link and any offer.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1200
+      },
+      {
+        "id": "products",
+        "label": "What you sell and the price range",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "barriers",
+        "label": "Why people leave without buying",
+        "type": "longtext",
+        "required": false,
+        "help": "Shipping cost, doubts, sizing, trust. Paste feedback if you have it.",
+        "max": 2500
+      },
+      {
+        "id": "offer",
+        "label": "Offer you allow, if any",
+        "type": "text",
+        "required": false,
+        "help": "For example a code you already use. We will not invent discounts.",
+        "max": 300
+      },
+      {
+        "id": "policies",
+        "label": "Shipping and returns facts",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "emails",
+        "label": "Number of emails",
+        "type": "number",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "platform",
+        "label": "Email tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Klaviyo",
+          "Mailchimp",
+          "Shopify Email",
+          "Omnisend",
+          "Other"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No discount, deadline, stock level, review or policy is invented.",
+        "weight": 5,
+        "pass_rule": "Every offer, shipping or returns fact and any stock or deadline claim appears in the brief; no fake scarcity.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "timing_and_triggers",
+        "text": "The flow has sensible timing and clear triggers.",
+        "weight": 3,
+        "pass_rule": "Each email lists a send delay (such as 1 hour, 24 hours, 72 hours), and the flow stops when the customer buys.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_barriers",
+        "text": "Emails answer why shoppers leave.",
+        "weight": 4,
+        "pass_rule": "Each email after the first addresses a barrier from the barriers field or from the shipping and returns facts.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "offer_used_well",
+        "text": "An offer, if any, appears late and only as the buyer allows.",
+        "weight": 3,
+        "pass_rule": "A discount appears only if the offer field has one and is not in the first email.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short_and_clear",
+        "text": "Emails are short with one clear button text.",
+        "weight": 3,
+        "pass_rule": "Each email is 120 words or fewer with a single call to action and a subject line of 50 characters or fewer.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 299,
+      "size": {
+        "field": "emails",
+        "unit": "email",
+        "included": 3,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce email specialist. Write an abandoned-cart email flow for the shop below. For each email give the send delay, subject line, preview text, body and a button label. The flow should stop when the shopper buys. Answer the reasons shoppers hesitate, using the facts in my brief. Use any discount only if I allow it, and never in the first email. Do not invent offers, deadlines, stock levels, reviews or policies. Keep each email under 120 words.",
+    "not_for": [
+      "Fake scarcity, fake countdowns or invented stock levels",
+      "Emailing people who did not give consent",
+      "Fake reviews or testimonials",
+      "Building the flow inside the email tool",
+      "Spam or bulk unwanted email"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell organic skincare, average order $52. People abandon when they see shipping costs of $6. Free shipping over $60. Returns within 30 days if unopened. Want 3 emails, warm voice, no discount."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our shop sells handmade leather bags at $120 to $260. We make to order in 10 days. Shoppers worry about wait time and quality. 60-day returns on stock items only. Allowed offer: 10 percent off with code WELCOME10."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We run a shop for coffee gear: grinders, kettles, scales. Orders average $140. Free shipping on all orders in the US. Two-year warranty. Voice is nerdy but helpful. 4 emails."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Online store for kids' school uniforms. Peak season is July and August. Shoppers worry about sizing. We offer free size exchanges. No discounts. Need 3 emails."
+      }
+    ],
+    "keywords": [
+      "abandoned cart",
+      "cart recovery",
+      "klaviyo flow",
+      "ecommerce emails",
+      "cart abandonment",
+      "email flow"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide: welcome sequence of five emails about $400 to $600; a 5 to 7 email campaign $500 to $3,000.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by experience: single email $75 to $175 (junior), email sequence of 5 to 7 emails $500 to $1,000 (junior), landing page $300 to $750.",
+        "url": "https://www.mediabistro.com/employer/blog/trends/freelance-copywriter-rates/"
+      }
+    ]
+  },
+  {
+    "id": "post-purchase-email-flow",
+    "title": "Post-purchase email flow",
+    "summary": "Emails after a sale that confirm the order, set expectations, help with use and ask for a review.",
+    "area": "ecommerce",
+    "deliverable": "A flow of post-purchase emails with timing, subject lines, body text, care or setup tips, and a review request. Notes on what to pull from the order.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1200
+      },
+      {
+        "id": "products",
+        "label": "What you sell and how it is used",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "shipping",
+        "label": "Shipping times and tracking facts",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "returns",
+        "label": "Returns and support facts",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "goal",
+        "label": "Main goal",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Fewer support emails",
+          "More reviews",
+          "Repeat purchase",
+          "Product use and care"
+        ]
+      },
+      {
+        "id": "emails",
+        "label": "Number of emails",
+        "type": "number",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "review_site",
+        "label": "Where to ask for reviews",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "repeat_offer",
+        "label": "Offer for a next order, if any",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No time, policy, offer, care step or claim is invented.",
+        "weight": 5,
+        "pass_rule": "Every shipping time, policy, offer and care instruction appears in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "expectations",
+        "text": "The flow tells buyers what happens next.",
+        "weight": 4,
+        "pass_rule": "Order, shipping and delivery steps are covered with the timing given in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "helps_use",
+        "text": "It helps buyers use or care for the product.",
+        "weight": 3,
+        "pass_rule": "At least one email gives product use or care tips drawn from the products field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_review_ask",
+        "text": "The review request is honest and not pushy.",
+        "weight": 4,
+        "pass_rule": "The review ask is neutral, does not offer money or gifts for a good rating, and is not sent before delivery.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clean_structure",
+        "text": "Each email is short and has one purpose.",
+        "weight": 3,
+        "pass_rule": "Each email has timing, a subject line, one purpose and 130 words or fewer.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 139,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "emails",
+        "unit": "email",
+        "included": 4,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce lifecycle writer. Write a post-purchase email flow for the shop below: order confirmation add-on, shipping and delivery updates, product use and care tips, a review request, and an optional repeat purchase email. Give timing, subject line and body text for each email. Make the review request neutral and never offer rewards for positive reviews. Use only the facts in my brief and do not invent times, policies, offers or claims.",
+    "not_for": [
+      "Paying or rewarding reviewers for good ratings",
+      "Review gating (asking only happy customers)",
+      "Invented offers or policies",
+      "Marketing newsletters",
+      "Building the flow in the email tool"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell cast iron cookware. Orders ship in 2 business days with tracking. Care tips matter: seasoning, no soap soaking. Returns in 30 days. Goal: fewer 'is it rusted?' support emails. 4 emails."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "We sell custom pet portraits as prints. Each order is made in 7 days and ships in 3 to 5. Customers sometimes want edits. Edits allowed within 48 hours of the proof. Goal: more reviews. We use Judge.me."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Small tea company. Orders ship within 1 day. We want an email that teaches how to brew each tea, and one at day 30 offering a refill. Allowed offer: free shipping on a refill over $25."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We sell standing desks and each takes about 45 minutes to assemble. Delivery is by freight with a call from the driver. Goal: fewer damaged-item and assembly questions. 5 emails."
+      }
+    ],
+    "keywords": [
+      "post purchase",
+      "order confirmation emails",
+      "shipping update email",
+      "review request",
+      "customer lifecycle",
+      "thank you email"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide: welcome sequence of five emails about $400 to $600; a 5 to 7 email campaign $500 to $3,000.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by experience: single email $75 to $175 (junior), email sequence of 5 to 7 emails $500 to $1,000 (junior), landing page $300 to $750.",
+        "url": "https://www.mediabistro.com/employer/blog/trends/freelance-copywriter-rates/"
+      }
+    ]
+  },
+  {
+    "id": "ecommerce-promotion-plan",
+    "title": "Promotion plan for an online shop",
+    "summary": "A plan for a sale or promotion: offers, timing, message order and what to say on each page and channel.",
+    "area": "ecommerce",
+    "deliverable": "A promotion plan with goal, offer choices and trade-offs, a calendar, message copy for each step (site banner, product page note, emails, social captions as text), and a checklist for launch and wrap-up.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "promo_goal",
+        "label": "Goal",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Clear stock",
+          "Boost sales in a slow month",
+          "Holiday sale",
+          "Launch a product",
+          "Win back past buyers"
+        ]
+      },
+      {
+        "id": "dates",
+        "label": "Dates or season",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "margins",
+        "label": "Margins and what discounts you can afford",
+        "type": "longtext",
+        "required": true,
+        "help": "Give real numbers. We do not guess your costs.",
+        "max": 1500
+      },
+      {
+        "id": "products",
+        "label": "Products in the promotion",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "past",
+        "label": "What you ran before and results",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "channels",
+        "label": "Channels you use",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Email",
+          "Instagram",
+          "Facebook",
+          "TikTok",
+          "Site banner",
+          "SMS"
+        ]
+      },
+      {
+        "id": "budget",
+        "label": "Ad budget, if any",
+        "type": "number",
+        "required": false,
+        "max": 1000000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Costs, past results, stock and benchmarks come from the brief.",
+        "weight": 5,
+        "pass_rule": "No sales figure, margin, benchmark or past result appears that is not in the brief; forecasts are labelled as examples with their working shown.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_margins",
+        "text": "Offers fit the margins given.",
+        "weight": 4,
+        "pass_rule": "Each offer option shows the discount against the margins in the brief and warns when it would sell at a loss.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_calendar",
+        "text": "The plan has a clear calendar.",
+        "weight": 4,
+        "pass_rule": "A dated or day-numbered calendar covers before, during and after the promotion.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "copy_ready",
+        "text": "Messages are ready to use.",
+        "weight": 3,
+        "pass_rule": "Copy is written for each channel the buyer uses, with no channel left out.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_promo",
+        "text": "The promotion is honest.",
+        "weight": 4,
+        "pass_rule": "No fake 'was' price, fake countdown or invented stock limit is suggested.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce growth consultant. Write a promotion plan for the shop below. Include the goal, two or three offer options with trade-offs measured against the margins I give, a day-by-day calendar from before the promotion to after, ready-to-use copy for each channel I use, and a launch and wrap-up checklist. Be honest: no fake prices, fake countdowns or invented stock limits. Use only the numbers I supply and show the working for any example.",
+    "not_for": [
+      "Fake discounts, fake 'was' prices or fake scarcity",
+      "Paid ad setup or running ads",
+      "Financial forecasts presented as facts",
+      "Emailing or texting people without consent",
+      "Marketing emails as a standalone job"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell artisan candles online. January is slow. Margins are about 55 percent. We have 300 jars left from last season to clear. We use email and Instagram. Want a 10-day sale plan."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Black Friday plan for my yarn shop. Average order is $48 and gross margin 62 percent. I have email (2,400 subscribers) and Instagram. Last year I gave 20 percent off and sold more but made less profit."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We launch a new line of running socks in May. Price $18 a pair, cost $6.50. Want a 3-week launch plan with a small bundle offer. We use a site banner, email and TikTok."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Win-back plan for a pet supplements shop. Customers who bought once and did not return in 6 months. Margin is 70 percent. We can afford up to 20 percent off. Channels: email and SMS."
+      }
+    ],
+    "keywords": [
+      "promotion plan",
+      "sale plan",
+      "black friday plan",
+      "discount strategy",
+      "ecommerce promotion",
+      "launch plan",
+      "clearance"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "shop-faq-and-policies",
+    "title": "Shop FAQ and plain-language policies",
+    "summary": "A shop FAQ and plain-language drafts of your shipping, returns and privacy pages. Not legal advice.",
+    "area": "ecommerce",
+    "deliverable": "A shop FAQ and plain-language draft policies for shipping, returns, and contact, with a list of items to confirm. Each draft carries a note to have a lawyer check it.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "shop",
+        "label": "About your shop",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "shipping",
+        "label": "Shipping facts",
+        "type": "longtext",
+        "required": true,
+        "help": "Countries, carriers, times, costs, cut-off times.",
+        "max": 2500
+      },
+      {
+        "id": "returns",
+        "label": "Returns and refund facts",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "country",
+        "label": "Where you are based",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "questions",
+        "label": "Questions customers ask",
+        "type": "list",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "other",
+        "label": "Other facts",
+        "type": "longtext",
+        "required": false,
+        "help": "Warranty, custom orders, preorders, subscriptions.",
+        "max": 2000
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Formal"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No policy term, time limit, fee or promise is invented.",
+        "weight": 5,
+        "pass_rule": "Every time limit, fee, country and condition appears in the brief; missing items are shown as [to confirm].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "not_legal_advice",
+        "text": "The draft is clear that it is not legal advice.",
+        "weight": 5,
+        "pass_rule": "Each policy draft carries a short note that it is a plain-language draft to be checked by a lawyer, and it makes no claim of legal compliance.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_language",
+        "text": "The text is easy to read.",
+        "weight": 3,
+        "pass_rule": "Sentences are 25 words or fewer and there is no legal jargon without a plain explanation.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "covers_customer_questions",
+        "text": "The FAQ answers the questions customers really ask.",
+        "weight": 3,
+        "pass_rule": "Every question in the questions field is answered, and at least eight questions are covered in total.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "consistent",
+        "text": "Policies and FAQ agree with each other.",
+        "weight": 4,
+        "pass_rule": "Time limits, fees and conditions match across every section.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce writer who explains policies in plain language. Using only the facts below, write a shop FAQ and plain-language draft shipping, returns and contact policies. Answer every customer question listed. Keep sentences short. Mark any missing detail as [to confirm]. Add a note that these are drafts, not legal advice, and should be checked by a lawyer. Do not invent time limits, fees, countries or promises, and keep the FAQ and policies consistent.",
+    "not_for": [
+      "Legal advice or promises of legal compliance",
+      "Privacy policies or terms of service for regulated data",
+      "Tax or customs advice",
+      "Invented guarantees or warranties",
+      "Medical or safety claims"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell handmade ceramics from Maine. We ship in the US only through USPS in 3 to 5 days after the order. Free shipping over $75. Returns for unused items within 14 days; buyer pays return shipping. Broken items are replaced if you send a photo within 5 days."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Small online bookstore. We ship worldwide using tracked post. Orders over 100 pounds are free to the UK. Returns within 30 days, refund within 7 days. Preorders ship on the release date. Many customers ask about delivery times."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We sell custom-printed t-shirts made to order in 5 to 7 days. No returns on custom designs unless misprinted or damaged. Sizes run small. Customers ask about sizing, delays and how to change an order."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Store for refillable skincare. Subscriptions ship monthly and can be skipped or cancelled before the 5th of each month. We are in Australia and ship to Australia and New Zealand. Customers ask about ingredients, allergies and shipping."
+      }
+    ],
+    "keywords": [
+      "shop faq",
+      "shipping policy",
+      "returns policy",
+      "refund policy",
+      "store policies",
+      "ecommerce faq",
+      "shopify policies"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "review-response-templates",
+    "title": "Review response templates",
+    "summary": "Reply templates for good and bad customer reviews, in your voice, ready to personalise.",
+    "area": "ecommerce",
+    "deliverable": "A set of review reply templates by situation (five-star, mixed, late delivery, damaged item, wrong item, quality complaint, fake or unfair review), with a note on when to move to private messages.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1200
+      },
+      {
+        "id": "platform",
+        "label": "Where reviews appear",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Google",
+          "Amazon",
+          "Etsy",
+          "Trustpilot",
+          "Shopify store",
+          "Facebook"
+        ]
+      },
+      {
+        "id": "sample_reviews",
+        "label": "Real reviews to base replies on",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste 5 to 30 real reviews, names removed if you like.",
+        "max": 8000
+      },
+      {
+        "id": "policies",
+        "label": "Refund, replacement and contact facts",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "templates",
+        "label": "Number of templates",
+        "type": "number",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "avoid",
+        "label": "Things you never say",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No refund, offer, policy or fact is invented. Replies promise only what the brief allows.",
+        "weight": 5,
+        "pass_rule": "Every remedy, policy and contact detail appears in the policies field; nothing is promised beyond it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_situations",
+        "text": "The set covers the common situations.",
+        "weight": 4,
+        "pass_rule": "At least eight situations are covered, including positive, mixed, late delivery, damaged item and unfair review.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tone",
+        "text": "Replies are warm, short and human.",
+        "weight": 3,
+        "pass_rule": "Each reply is 90 words or fewer, thanks or acknowledges the person, and avoids defensive wording.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "move_private",
+        "text": "Replies move problems to private contact safely.",
+        "weight": 4,
+        "pass_rule": "Negative-review replies offer the contact route from the brief and never ask for personal data in public.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_blame",
+        "text": "Replies never blame or argue with the customer.",
+        "weight": 3,
+        "pass_rule": "No reply argues, blames the customer or reveals order details in public.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 179,
+      "size": {
+        "field": "templates",
+        "unit": "template",
+        "included": 10,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer care writer. Write review reply templates for the business below, covering positive, mixed, late delivery, damaged item, wrong item, quality complaint and unfair or fake review situations. Keep each reply under 90 words, warm, and not defensive. For problems, offer only the remedies and contact route I give and move the conversation to private contact. Never ask for personal data in public. Do not invent policies, offers or facts.",
+    "not_for": [
+      "Fake reviews or replies pretending to be customers",
+      "Offering money for removal or changes to reviews",
+      "Legal threats against reviewers",
+      "Posting the replies for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We run a family-owned pizza restaurant and get Google reviews. Typical issues: long waits on Fridays and cold delivery. We can offer a free pizza voucher if they email help@ourplace.example. Voice is friendly and small-town."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I sell vintage clothing on Etsy. Common complaints: item smaller than expected, slow shipping. I offer returns within 14 days. I want templates that sound kind and clear about sizing."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We sell supplements through our own store. Customers sometimes say they did not feel results. We cannot make health claims. We offer a 30-day refund. Replies must not promise results."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Boutique hotel on Booking.com. Issues: noise, check-in delays and breakfast variety. We can offer a late checkout on a return stay. General manager signs the replies. Tone is polite and calm."
+      }
+    ],
+    "keywords": [
+      "review responses",
+      "reply to reviews",
+      "google review reply",
+      "reputation management",
+      "negative review",
+      "customer reviews"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "help-centre-articles",
+    "title": "Help centre articles",
+    "summary": "Step-by-step help articles that answer customer questions and cut repeat tickets.",
+    "area": "customer-support",
+    "deliverable": "Help articles with a clear title, short intro, numbered steps, tips, a 'still stuck?' section and related article ideas. Each is written from the product facts you supply.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "About your product or service",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "topics",
+        "label": "Article topics or questions",
+        "type": "list",
+        "required": true,
+        "help": "One per line, such as 'How to reset your password'.",
+        "max": 40
+      },
+      {
+        "id": "facts",
+        "label": "Facts for each topic",
+        "type": "longtext",
+        "required": true,
+        "help": "Steps, screens, rules, limits, plan differences. Paste support notes or docs.",
+        "max": 20000
+      },
+      {
+        "id": "articles",
+        "label": "Number of articles",
+        "type": "number",
+        "required": true,
+        "max": 40
+      },
+      {
+        "id": "reader",
+        "label": "Who reads them?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Formal"
+        ]
+      },
+      {
+        "id": "contact",
+        "label": "How customers reach support",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "existing",
+        "label": "Existing article to match in style",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No step, button name, setting, limit or policy is invented. Only supplied facts are used.",
+        "weight": 5,
+        "pass_rule": "Every step, screen name and rule appears in the facts field; gaps are listed as questions, not guessed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "steps_work",
+        "text": "Steps are in order and easy to follow.",
+        "weight": 4,
+        "pass_rule": "Task articles use numbered steps with one action per step, and each step names where to click or what to enter.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_title",
+        "text": "Each article answers what its title asks.",
+        "weight": 4,
+        "pass_rule": "The first two sentences of each article answer or set up the title's question.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Words are plain and the text is easy to scan.",
+        "weight": 3,
+        "pass_rule": "Sentences are 20 words or fewer on average, headings are used, and no unexplained jargon appears.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "next_step",
+        "text": "Readers know what to do if it fails.",
+        "weight": 3,
+        "pass_rule": "Each article ends with a 'still stuck?' line using the contact route from the brief or a placeholder.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 49,
+      "max_usd": 899,
+      "size": {
+        "field": "articles",
+        "unit": "article",
+        "included": 3,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a technical support writer. Write a help centre article for each topic below using only the facts I give. For each: a clear title, a short intro that answers the question, numbered steps with one action each, tips for common problems, a 'still stuck?' section with the contact route, and two related article ideas. Use plain words and a consistent voice. If a fact or screen name is missing, list it as a question. Do not invent steps, settings, limits or policies.",
+    "not_for": [
+      "Screenshots, videos or design work",
+      "Articles about features you did not describe",
+      "Legal, medical or financial advice",
+      "Invented product behaviour"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell a scheduling app for hair salons. Please write 4 help articles: add a staff member, set opening hours, send appointment reminders, and refund a deposit. I pasted our internal notes for each."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our online bank for freelancers needs 3 help articles: how to link a bank account, why a transfer is pending, and how to download statements. Notes pasted below. We cannot give financial advice in articles."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Wi-Fi smart plug company. Need articles on setup with the app, resetting the plug, and what to do when the plug shows offline. We have a PDF manual and support ticket notes."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Online yoga studio. Articles for members: how to cancel or pause a membership, how to join a live class, and how to fix video problems. Pause is up to 2 months per year."
+      }
+    ],
+    "keywords": [
+      "help centre",
+      "help center",
+      "knowledge base",
+      "help articles",
+      "support docs",
+      "how-to articles",
+      "support content",
+      "zendesk articles"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "canned-replies-and-macros",
+    "title": "Canned replies and macros",
+    "summary": "Ready-to-use reply templates for the questions your team answers every day.",
+    "area": "customer-support",
+    "deliverable": "A set of macros by topic, each with a title, when to use it, the reply text with fill-in blanks, and a short note on what to check before sending.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "topics",
+        "label": "Topics or ticket types",
+        "type": "list",
+        "required": true,
+        "help": "For example refund, delivery delay, password reset.",
+        "max": 50
+      },
+      {
+        "id": "policies",
+        "label": "Policies and facts",
+        "type": "longtext",
+        "required": true,
+        "help": "Refund rules, times, limits, contact routes.",
+        "max": 6000
+      },
+      {
+        "id": "real_tickets",
+        "label": "Examples of real tickets and replies",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste anonymised tickets to match your style.",
+        "max": 8000
+      },
+      {
+        "id": "macros",
+        "label": "Number of macros",
+        "type": "number",
+        "required": false,
+        "max": 60
+      },
+      {
+        "id": "tool",
+        "label": "Support tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Zendesk",
+          "Intercom",
+          "Help Scout",
+          "Freshdesk",
+          "Gorgias",
+          "Other"
+        ]
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Warm",
+          "Neutral",
+          "Formal"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No policy, time, fee, refund rule or promise is invented. Every commitment comes from the brief.",
+        "weight": 5,
+        "pass_rule": "Every promise or time frame in a macro matches the policies field; missing details use [fill in] blanks.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_topics",
+        "text": "Every topic in the list has a macro.",
+        "weight": 4,
+        "pass_rule": "Each item in topics has at least one macro.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "usable",
+        "text": "Macros are ready to use with simple blanks.",
+        "weight": 3,
+        "pass_rule": "Each macro has a title, a use case, and blanks in brackets for names and order details.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tone_empathy",
+        "text": "Macros sound like a caring person, not a form.",
+        "weight": 3,
+        "pass_rule": "Each macro acknowledges the customer's problem in the first sentence and avoids robotic phrases like 'We apologise for any inconvenience'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_next_step",
+        "text": "Each reply says what happens next.",
+        "weight": 4,
+        "pass_rule": "Each macro states the next step, who does it and when, using facts from the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 399,
+      "size": {
+        "field": "macros",
+        "unit": "macro",
+        "included": 15,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced customer support team lead. Write canned replies (macros) for each topic below. For each give a title, when to use it, reply text with [blanks] for names and order details, and a note on what to check before sending. Start by acknowledging the customer's problem, state what happens next and when, and keep to the policies I give. Do not invent policies, times or promises. Avoid robotic phrases.",
+    "not_for": [
+      "Promises the business cannot keep",
+      "Legal, medical or financial advice in replies",
+      "Replies that blame the customer",
+      "Impersonating a real named agent without permission",
+      "Sending replies for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell furniture online. Topics: delivery delay, damaged item, wrong item, change address, cancel order, assembly help. We deliver in 10 to 15 days. Damaged items are replaced free with a photo within 7 days. 15 macros please."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I run a small app that tracks workouts. Topics: forgot password, subscription refund, cancel, sync problem with Apple Health, bug report. Refunds within 14 days of the first payment only."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Dentist office front desk. Topics: appointment change, insurance question (we cannot say what is covered), billing question, forms. Replies go by email. Warm and calm tone."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Meal kit company. Topics: missed box, wrong ingredient, allergies, skip a week, pause plan. We refund missed boxes in full. Allergy replies must never promise a food is free of an allergen."
+      }
+    ],
+    "keywords": [
+      "canned responses",
+      "macros",
+      "reply templates",
+      "support templates",
+      "saved replies",
+      "zendesk macros",
+      "customer service templates"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "support-faq-page",
+    "title": "Customer support FAQ page",
+    "summary": "A grouped FAQ page that answers your most common customer questions in plain words.",
+    "area": "customer-support",
+    "deliverable": "A FAQ page with grouped sections, a short answer for each question, links to related questions, and a list of questions we could not answer from your facts.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "questions",
+        "label": "Questions customers ask",
+        "type": "list",
+        "required": true,
+        "help": "Paste real questions from emails, chat or reviews.",
+        "max": 80
+      },
+      {
+        "id": "facts",
+        "label": "Facts that answer them",
+        "type": "longtext",
+        "required": true,
+        "max": 12000
+      },
+      {
+        "id": "count",
+        "label": "Number of questions",
+        "type": "number",
+        "required": false,
+        "max": 80
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Formal"
+        ]
+      },
+      {
+        "id": "contact",
+        "label": "Contact route",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "schema",
+        "label": "Add FAQ page markup text",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Yes",
+          "No"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No answer contains a fact, price, time or policy that is not in the brief.",
+        "weight": 5,
+        "pass_rule": "Every answer is supported by the facts field; unanswerable questions are listed separately, not guessed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "answers_first",
+        "text": "Each answer gives the answer in the first sentence.",
+        "weight": 4,
+        "pass_rule": "The first sentence of each answer directly answers the question before any extra detail.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grouped",
+        "text": "Questions are grouped in a sensible order.",
+        "weight": 3,
+        "pass_rule": "Questions sit under 3 to 7 headings, with the most common ones first.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short",
+        "text": "Answers are short and plain.",
+        "weight": 3,
+        "pass_rule": "Each answer is 80 words or fewer and uses no unexplained jargon.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "covers_listed",
+        "text": "All listed questions are covered.",
+        "weight": 4,
+        "pass_rule": "Each question in the list is either answered or appears in the 'could not answer' list.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "count",
+        "unit": "question",
+        "included": 12,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer support content writer. Write an FAQ page for the business below. Group the questions under clear headings with the most common first. Answer each question in the first sentence, then add only the needed detail, in under 80 words and plain words. Use only the facts I give. List any question you cannot answer from my facts at the end. Do not invent prices, times or policies. Suggest related questions to link.",
+    "not_for": [
+      "Legal, medical or financial advice",
+      "Answers about features not described",
+      "Invented policies",
+      "Site design or code (markup text only)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We are a 3-person bike repair shop with mobile service in Austin. Customers ask: how much, how long, do you come to me, do you fix e-bikes, how do I pay. I pasted our price list and rules."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "We sell a subscription razor kit. FAQ questions: how often does it ship, how do I skip, how do I cancel, what if the blade is dull, is it okay for sensitive skin (we cannot make medical claims). Facts pasted."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Online course platform for nurses. People ask about access length, certificates, refunds and whether the course counts for credit. Credit rules are set by each state board, so we only say what we know. I pasted our terms."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Coworking space in Leeds. FAQ for members and guests: opening hours, day passes, guest rules, printing, parking. Facts and prices are listed below."
+      }
+    ],
+    "keywords": [
+      "faq page",
+      "frequently asked questions",
+      "faq",
+      "support faq",
+      "customer faq",
+      "help page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "customer-onboarding-emails",
+    "title": "Customer onboarding emails",
+    "summary": "Welcome emails that help a new customer get set up and get value in the first weeks.",
+    "area": "customer-support",
+    "deliverable": "An onboarding email series with timing, subject lines, body text, what each email helps the customer do, and the sign that triggers the next one.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What the customer bought",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "first_win",
+        "label": "The first result a customer should get",
+        "type": "text",
+        "required": true,
+        "help": "For example 'send the first invoice'.",
+        "max": 300
+      },
+      {
+        "id": "steps",
+        "label": "Setup steps and key features",
+        "type": "longtext",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "customer",
+        "label": "Who are the customers?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "emails",
+        "label": "Number of emails",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "support",
+        "label": "Where to get help",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Formal"
+        ]
+      },
+      {
+        "id": "tone_example",
+        "label": "An email you like or already use",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No feature, step, time or promise is invented. Only the product facts given are used.",
+        "weight": 5,
+        "pass_rule": "Every feature, setup step, timing promise and help route appears in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "drives_first_win",
+        "text": "The series leads to the first result.",
+        "weight": 4,
+        "pass_rule": "The first email points to the first_win field, and every later email helps the customer move closer to it or build on it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "one_job",
+        "text": "Each email has one job.",
+        "weight": 4,
+        "pass_rule": "Each email asks the reader to do one thing and has a single button or link label.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "timing_logic",
+        "text": "Timing follows the customer's progress.",
+        "weight": 3,
+        "pass_rule": "Each email lists its timing or the action that triggers it, and notes what to do if the customer has not done the step.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "friendly_clear",
+        "text": "Emails are short and plain.",
+        "weight": 3,
+        "pass_rule": "Each email is 150 words or fewer with no sentence over 25 words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 139,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "emails",
+        "unit": "email",
+        "included": 5,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer success writer. Write an onboarding email series for the product below. For each email give timing or trigger, subject line, body and a single button label. Lead the customer to the first result I name, one step per email. Say what to send if the customer has not yet done the step. Keep each email under 150 words in plain words. Use only the product facts I give and do not invent features, steps or promises.",
+    "not_for": [
+      "Marketing or promotional email campaigns",
+      "Invented features or results",
+      "Sending the emails",
+      "Collecting personal data without consent",
+      "Legal or financial advice"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell an online invoicing tool for freelancers. The first win is sending a first invoice. Setup: add business details, add a client, create an invoice, connect a bank for payment. Need 5 emails over 14 days."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Meal planning app for families. First win is a plan for the week with a shopping list. Steps: set family size and diet, pick recipes, export the list. 4 emails over 10 days. Friendly tone."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We provide a managed website for dentists. After purchase, they need to send us photos and a team list. First win is going live. Timeline is 3 weeks. We want 6 emails that keep them on track."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "B2B time tracking software for 10 to 50 person agencies. First win is the team logging a full week. Steps: import team, create projects, set rates, invite staff. 5 emails for the account owner."
+      }
+    ],
+    "keywords": [
+      "onboarding emails",
+      "welcome email series",
+      "customer onboarding",
+      "new customer emails",
+      "activation",
+      "user onboarding"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide: welcome sequence of five emails about $400 to $600; a 5 to 7 email campaign $500 to $3,000.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      },
+      {
+        "note": "Rate table by experience: single email $75 to $175 (junior), email sequence of 5 to 7 emails $500 to $1,000 (junior), landing page $300 to $750.",
+        "url": "https://www.mediabistro.com/employer/blog/trends/freelance-copywriter-rates/"
+      }
+    ]
+  },
+  {
+    "id": "chatbot-knowledge-base",
+    "title": "Chatbot knowledge base content",
+    "summary": "Short question-and-answer entries your support chatbot can use, written from your own facts.",
+    "area": "customer-support",
+    "deliverable": "A set of Q&A entries with alternative ways customers ask each question, a short answer, a handover rule, and a list of topics the bot must pass to a person.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "topics",
+        "label": "Topics to cover",
+        "type": "list",
+        "required": true,
+        "max": 60
+      },
+      {
+        "id": "facts",
+        "label": "Source facts",
+        "type": "longtext",
+        "required": true,
+        "help": "Policies, prices, hours, product details, past tickets.",
+        "max": 20000
+      },
+      {
+        "id": "entries",
+        "label": "Number of entries",
+        "type": "number",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "handover",
+        "label": "Topics the bot must pass to a person",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "bot_voice",
+        "label": "Bot voice",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Formal"
+        ]
+      },
+      {
+        "id": "format",
+        "label": "Format",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Q&A table",
+          "Markdown list",
+          "CSV text"
+        ]
+      },
+      {
+        "id": "languages",
+        "label": "Language",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No answer includes a fact, price, time or policy that is not in the source facts.",
+        "weight": 5,
+        "pass_rule": "Every answer is supported by source facts; unsupported topics get a handover entry, not a guess.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "question_variants",
+        "text": "Each entry lists how real customers ask.",
+        "weight": 4,
+        "pass_rule": "Each entry has at least three differently worded customer questions, including a short or messy one.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short_answers",
+        "text": "Answers are short enough for a chat window.",
+        "weight": 3,
+        "pass_rule": "Each answer is 60 words or fewer and starts with the answer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "handover_rules",
+        "text": "Sensitive or unclear topics go to a person.",
+        "weight": 4,
+        "pass_rule": "A handover list covers complaints, refunds above stated limits, legal, medical, safety and anything not in the facts, and says what the bot should say.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "consistent",
+        "text": "Entries do not conflict.",
+        "weight": 3,
+        "pass_rule": "Times, prices and rules are the same wherever they appear across entries.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 499,
+      "size": {
+        "field": "entries",
+        "unit": "entry",
+        "included": 40,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a conversation designer. Using only the source facts below, write knowledge base entries for a support chatbot. For each entry give three or more differently worded customer questions, a short answer (60 words or fewer, starting with the answer), and a handover rule if needed. Add a list of topics the bot must pass to a person, with the words the bot should use when doing so. Keep facts consistent. Do not invent prices, times or policies.",
+    "not_for": [
+      "Building or training the chatbot",
+      "Answers that give legal, medical or financial advice",
+      "Collecting personal data",
+      "Making the bot pretend to be a human",
+      "Invented product facts"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We run an online shop selling running gear. Cover shipping, returns, sizing, order tracking and discount codes. 50 entries. I pasted our policy pages and 40 past support emails."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Dental clinic with 3 locations. Chatbot should answer opening hours, booking, insurance questions (pass to staff) and what to do in an emergency (pass to phone). I pasted our site pages."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "SaaS project tool. Cover pricing plans, free trial, integrations, importing data, and account deletion. 60 entries. Data protection questions go to a person."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Local council parking office. Cover permits, fines, appeals, where to pay and office hours. Appeals and anything about legal rights must go to staff. 40 entries from our website text."
+      }
+    ],
+    "keywords": [
+      "chatbot content",
+      "knowledge base",
+      "bot training data",
+      "faq for chatbot",
+      "intercom fin",
+      "ai agent knowledge",
+      "conversation design"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "complaint-response-templates",
+    "title": "Complaint response templates",
+    "summary": "Calm, fair reply templates for upset customers, from small issues to serious complaints.",
+    "area": "customer-support",
+    "deliverable": "Templates for common complaint types with a reply, a short guide for the agent on tone and limits, and a rule for when to pass a case to a manager.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business and voice",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "complaints",
+        "label": "Complaint types you get",
+        "type": "list",
+        "required": true,
+        "max": 30
+      },
+      {
+        "id": "remedies",
+        "label": "What you can offer",
+        "type": "longtext",
+        "required": true,
+        "help": "Refunds, replacements, credits, who can approve.",
+        "max": 3000
+      },
+      {
+        "id": "channel",
+        "label": "Where replies are sent",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Email",
+          "Chat",
+          "Social media",
+          "Phone follow-up"
+        ]
+      },
+      {
+        "id": "examples",
+        "label": "Real complaints (anonymised)",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "scenarios",
+        "label": "Number of scenarios",
+        "type": "number",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "escalation",
+        "label": "Escalation rules",
+        "type": "longtext",
+        "required": false,
+        "max": 1000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "No refund, credit, policy or time frame is invented. Replies offer only what the brief lists.",
+        "weight": 5,
+        "pass_rule": "Every remedy and time frame matches the remedies field; none is promised beyond it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "acknowledge_first",
+        "text": "Each reply shows the customer was heard before explaining.",
+        "weight": 4,
+        "pass_rule": "The first two sentences acknowledge the specific problem and avoid generic apology phrases.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_offer_and_next",
+        "text": "Each reply states the fix and what happens next.",
+        "weight": 4,
+        "pass_rule": "Each template gives the remedy, who acts and when, using the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_blame",
+        "text": "No reply blames, argues or is sarcastic.",
+        "weight": 3,
+        "pass_rule": "No reply puts blame on the customer or uses defensive wording.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "escalation",
+        "text": "Serious cases go to a person.",
+        "weight": 3,
+        "pass_rule": "A rule lists when to escalate, including threats of legal action, safety issues and repeat complaints.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "scenarios",
+        "unit": "scenario",
+        "included": 6,
+        "per_unit_usd": 10
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer experience manager. Write reply templates for the complaint types below. For each: the reply, a short note to the agent on tone and limits, and when to escalate. Acknowledge the specific problem first, state the fix and next step, and offer only the remedies I list. Do not blame the customer, be defensive, or promise anything outside my brief. Add a general escalation rule for legal threats, safety issues and repeat complaints.",
+    "not_for": [
+      "Legal advice or replies to legal claims",
+      "Admitting fault for injuries or safety issues without approval",
+      "Invented refunds or compensation",
+      "Replying on the buyer's behalf",
+      "Threats or pressure on the customer"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We run a small airline-style shuttle service. Complaints: late pick-up, driver was rude, lost luggage, wrong booking. We can refund up to 50 percent for lateness. Manager approves more. Replies by email."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Online furniture shop. Complaints: item arrived damaged, delivery late, colour different from the photo, poor assembly instructions. We can send replacement parts or a full refund. Facebook comments need short replies."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Gym chain. Complaints: cancelled classes, dirty facilities, billing after cancelling. We can credit one month. Billing errors go to finance. Tone is respectful and brief."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Mobile phone repair shop. Complaints: repair took too long, same fault returned, price higher than quote. Free redo within 30 days. Price disputes go to the owner."
+      }
+    ],
+    "keywords": [
+      "complaint response",
+      "customer complaint",
+      "angry customer",
+      "service recovery",
+      "apology email",
+      "complaint templates"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "support-quality-review",
+    "title": "Support quality review",
+    "summary": "A scored review of support conversations you paste in, with coaching points for your team.",
+    "area": "customer-support",
+    "deliverable": "A scorecard per conversation, patterns across all of them, strengths, top fixes, better sample replies, and training points for the team.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "transcripts",
+        "label": "Support conversations",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste tickets or chat transcripts. Remove names, emails and card details first.",
+        "max": 40000
+      },
+      {
+        "id": "count",
+        "label": "Number of conversations",
+        "type": "number",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "standards",
+        "label": "Your support standards",
+        "type": "longtext",
+        "required": false,
+        "help": "Tone rules, reply time targets, policy limits.",
+        "max": 3000
+      },
+      {
+        "id": "policies",
+        "label": "Policies agents must follow",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "focus",
+        "label": "What to focus on",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Tone",
+          "Accuracy",
+          "Policy",
+          "Speed",
+          "Upsells",
+          "Escalations"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "text",
+        "required": false,
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Every finding quotes or points to the supplied conversations.",
+        "weight": 5,
+        "pass_rule": "Each finding cites a conversation by number and quotes or paraphrases a line that is in it; no statistic is invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "scored_fairly",
+        "text": "Scores follow a clear scorecard.",
+        "weight": 4,
+        "pass_rule": "A scorecard with defined categories and a scoring rule is shown, and every conversation is scored with a short reason.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "patterns",
+        "text": "It finds patterns across conversations.",
+        "weight": 4,
+        "pass_rule": "At least three patterns are named, each with the conversation numbers that show it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "coaching",
+        "text": "Coaching is specific and kind.",
+        "weight": 3,
+        "pass_rule": "Each top fix includes a better sample reply or wording that uses only policy facts from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "privacy",
+        "text": "It handles private data with care.",
+        "weight": 3,
+        "pass_rule": "The review does not repeat personal data such as full names, emails or card numbers found in the transcripts.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "count",
+        "unit": "conversation",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a support quality analyst. Review the support conversations I paste below. Give each a score using a clear scorecard (tone, accuracy, policy, clarity, resolution) with a one-line reason. Then list patterns across the conversations with the conversation numbers, strengths, the top fixes with better sample replies, and coaching points for the team. Quote or cite the conversation for every finding. Do not invent statistics and do not repeat personal data.",
+    "not_for": [
+      "Judging or ranking individual staff for pay or firing decisions",
+      "Transcripts with unredacted card numbers or health data",
+      "Surveillance of staff",
+      "Invented statistics",
+      "Legal or HR advice"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Here are 20 chat transcripts from our online shop's support team of 3. I want to see tone problems, wrong policy answers and missed chances to fix the problem on the first reply. Our policy: refunds within 30 days."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "I pasted 12 email threads from our SaaS support. Our target is a first reply in under 4 hours and a clear next step in every reply. Please score each and give coaching points for two new agents."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "30 customer calls turned into text for our home repair booking line. Standards: confirm the address and time, never promise a price over the phone. Focus on accuracy and escalations."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Here are 15 tickets about refunds from our online course. Many customers write twice. I want to know why and what to change in the replies."
+      }
+    ],
+    "keywords": [
+      "support quality",
+      "qa review",
+      "ticket review",
+      "customer service audit",
+      "agent coaching",
+      "conversation review",
+      "quality assurance"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "feedback-and-nps-analysis",
+    "title": "Feedback and NPS comment analysis",
+    "summary": "Themes, counts and action points drawn from the customer comments and survey answers you paste in.",
+    "area": "customer-support",
+    "deliverable": "A report with top themes and counts, sample quotes, what promoters and detractors say, a ranked list of fixes, and a short summary you can share with your team.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "comments",
+        "label": "Customer comments",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste survey answers, reviews or tickets. Remove names and contact details.",
+        "max": 60000
+      },
+      {
+        "id": "comment_count",
+        "label": "Number of comments",
+        "type": "number",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "scores",
+        "label": "NPS or rating scores, if you have them",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste score counts or a list of score and comment pairs.",
+        "max": 6000
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "text",
+        "required": true,
+        "max": 600
+      },
+      {
+        "id": "questions",
+        "label": "What you want to learn",
+        "type": "longtext",
+        "required": false,
+        "max": 1000
+      },
+      {
+        "id": "segments",
+        "label": "Customer groups to compare",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "past",
+        "label": "Last report's themes",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invention",
+        "text": "Nothing is invented. Every theme, count and quote comes from the pasted comments.",
+        "weight": 5,
+        "pass_rule": "Counts add up to the supplied comments, every quote appears verbatim in the input, and no score or percentage is shown that cannot be worked out from the data.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "themes_clear",
+        "text": "Themes are clear and not overlapping.",
+        "weight": 4,
+        "pass_rule": "Themes have short names, a count, and at least two example quotes each.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "method_shown",
+        "text": "The method is shown.",
+        "weight": 3,
+        "pass_rule": "The report says how comments were grouped and how many comments fit no theme.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "actionable",
+        "text": "The fixes are ranked and specific.",
+        "weight": 4,
+        "pass_rule": "Each fix links to a theme, says who should act and why it is ranked where it is.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_with_small_data",
+        "text": "The report does not overclaim from few comments.",
+        "weight": 3,
+        "pass_rule": "Themes with fewer than 5 comments are labelled low evidence, and no trend is claimed without data to compare.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 349,
+      "size": {
+        "field": "comment_count",
+        "unit": "comment",
+        "included": 200,
+        "per_unit_usd": 0.25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer insights analyst. Analyse the customer comments I paste below. Group them into themes with counts and at least two verbatim example quotes each. Say what promoters and detractors talk about if scores are given. Rank fixes by how many customers raise them. Explain how you grouped comments and how many did not fit a theme. Label themes with few comments as low evidence. Do not invent numbers, quotes or trends.",
+    "not_for": [
+      "Statistical claims the data cannot support",
+      "Comments with unredacted personal data",
+      "Scoring individual customers",
+      "Fake surveys or reviews",
+      "Medical or legal conclusions"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I pasted 180 answers to 'What could we do better?' from our online yoga studio's survey. NPS was 41 last quarter. Please find top themes and what we should fix first."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Here are 90 app store reviews of our budgeting app, rating 1 to 5. I want themes by star rating and what to fix in the next release."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Hotel guest comments, 250 of them from the last 3 months, with scores from 0 to 10. Please compare what promoters and detractors mention and rank problems by how often they come up."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We ran a survey for our B2B accounting software. 60 comments are pasted, from small firms and larger firms. Compare the two groups and tell us if the data is too small to say."
+      }
+    ],
+    "keywords": [
+      "nps analysis",
+      "survey analysis",
+      "customer feedback",
+      "voice of customer",
+      "comment analysis",
+      "feedback themes",
+      "review analysis"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate table by deliverable: email sequence $500 to $5,000, product description $25 to $250 each, case study $1,200 to $2,000, article $250 to $800.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  }
+]

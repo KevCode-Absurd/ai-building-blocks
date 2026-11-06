@@ -1,0 +1,4102 @@
+[
+  {
+    "id": "market-research-report",
+    "title": "Market research report",
+    "summary": "A short report on your market: size, buyers, trends and gaps, built from your inputs and expert knowledge.",
+    "area": "research",
+    "deliverable": "A 1,500 to 2,500 word report with market overview, buyer segments, trends, risks, opportunities and a list of facts to verify. Sizes are labelled as estimates with the method shown.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "market",
+        "label": "Which market?",
+        "type": "text",
+        "required": true,
+        "help": "For example: dog grooming apps in the US.",
+        "max": 200
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, to whom, and what you charge.",
+        "max": 2000
+      },
+      {
+        "id": "decision",
+        "label": "What will this report help you decide?",
+        "type": "longtext",
+        "required": true,
+        "help": "A launch, a price, a new market, a pitch.",
+        "max": 800
+      },
+      {
+        "id": "regions",
+        "label": "Number of regions",
+        "type": "number",
+        "required": false,
+        "help": "Countries or regions to cover.",
+        "max": 6
+      },
+      {
+        "id": "known_data",
+        "label": "Facts and numbers you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "Customer counts, survey results, reports you hold. We use only these as hard data.",
+        "max": 6000
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors you know",
+        "type": "list",
+        "required": false,
+        "help": "Names only.",
+        "max": 15
+      },
+      {
+        "id": "depth",
+        "label": "How deep?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Quick scan",
+          "Standard",
+          "In depth"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented statistics, market sizes, quotes or sources.",
+        "weight": 5,
+        "pass_rule": "Every figure is either in the brief or marked as an estimate with its method (for example buyers x price x share). No named report, survey or URL appears unless the buyer supplied it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_decision",
+        "text": "The report helps with the decision the buyer named.",
+        "weight": 5,
+        "pass_rule": "A section titled for the decision gives a clear recommendation or options, each tied to at least two findings above it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sizing_method",
+        "text": "Market size is shown with its working, not just a number.",
+        "weight": 4,
+        "pass_rule": "Any size figure shows inputs and steps, gives a low and high case, and says which inputs are assumptions.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "segments_specific",
+        "text": "Buyer segments are specific to this market.",
+        "weight": 3,
+        "pass_rule": "At least 3 segments are named with who they are, what they need and what they pay for, using details from the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "regions",
+        "unit": "region",
+        "included": 1,
+        "per_unit_usd": 40
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior market researcher. Using the business description and facts below, write a market research report on the stated market. Cover market overview, buyer segments, trends, competitors, risks and opportunities, and finish with a recommendation for the decision the client named. You cannot browse the web, so use only the client's facts and what you know, label every estimate and show how you reached it, never invent statistics or sources, and list what the client should verify.",
+    "not_for": [
+      "Invented statistics, surveys or analyst quotes",
+      "Live web research, scraping or login-only data",
+      "Investment, legal or medical advice",
+      "Reports meant to mislead investors or lenders"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We run a small chain of three physiotherapy clinics in Leeds, UK. We are thinking of adding home visits for older patients. Is there a real market for this in the UK and what should we charge? I have our last year patient numbers if useful.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "I am launching a subscription box of South Indian filter coffee for US customers who miss home. I need a report on the specialty coffee gift market and whether Indian-diaspora buyers are a good first group.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We make replacement filters for commercial dishwashers in Ohio. Distributors want us to enter Canada. Please size the Canadian restaurant and care-home market for filters and tell us if it is worth a first trade show.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our SaaS helps independent driving schools manage bookings. Trying to understand the driving instruction market in Australia and Ireland before we spend on ads. We have 140 paying schools in the UK.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "market research",
+      "market analysis",
+      "industry report",
+      "market size",
+      "TAM",
+      "feasibility",
+      "market study"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "Lists what freelancers deliver in a competitive analysis: market report, competitor audit, SWOT, positioning plan. Used to size this job.",
+        "url": "https://www.wethos.co/blog/competitive-analysis-scope-of-work"
+      }
+    ]
+  },
+  {
+    "id": "competitor-analysis",
+    "title": "Competitor analysis",
+    "summary": "A side-by-side look at your competitors: offers, prices, positioning, strengths, weaknesses and gaps you can use.",
+    "area": "research",
+    "deliverable": "A comparison table and a written analysis of up to 5 competitors, plus positioning gaps, a SWOT and 5 to 8 actions. Built from the details you paste and expert knowledge.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "Your business and offer",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, to whom, price points.",
+        "max": 2000
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors to cover",
+        "type": "list",
+        "required": true,
+        "help": "Names and websites. Add any detail you have.",
+        "max": 12
+      },
+      {
+        "id": "competitors_count",
+        "label": "Number of competitors",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 5.",
+        "max": 12
+      },
+      {
+        "id": "competitor_info",
+        "label": "Pasted competitor details",
+        "type": "longtext",
+        "required": false,
+        "help": "Pricing pages, feature lists, reviews, ad copy. Paste text; we cannot open sites.",
+        "max": 15000
+      },
+      {
+        "id": "goal",
+        "label": "What do you want to learn?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Where to position",
+          "How to price",
+          "Which features to build",
+          "How to win customers from them",
+          "General overview"
+        ]
+      },
+      {
+        "id": "customers",
+        "label": "Who are your buyers?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Competitor facts, prices and features are not invented.",
+        "weight": 5,
+        "pass_rule": "Every competitor price, feature, review count or claim appears in the pasted details or is labelled 'from model knowledge, verify'. No made-up quotes.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "compare_same_terms",
+        "text": "Competitors are compared on the same points.",
+        "weight": 4,
+        "pass_rule": "A table compares every named competitor on the same 6 or more rows, with 'not known' where facts are missing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "gaps_actionable",
+        "text": "Gaps lead to actions the buyer can take.",
+        "weight": 5,
+        "pass_rule": "At least 5 actions are listed, each linked to a named gap and stating what to change.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tied_to_goal",
+        "text": "The analysis answers the buyer's stated goal.",
+        "weight": 3,
+        "pass_rule": "A section addresses the goal choice directly and its advice follows from the comparison.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "competitors_count",
+        "unit": "competitor",
+        "included": 5,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a strategy consultant. Analyse the competitors listed below against the client's business. Produce a comparison table (offer, price, audience, strengths, weaknesses), a SWOT for the client, positioning gaps and five to eight concrete actions that serve the client's stated goal. Use only the details supplied and your general knowledge. You cannot browse sites, so label anything uncertain as 'verify', and never invent prices, features or reviews.",
+    "not_for": [
+      "Scraping or monitoring live sites",
+      "Invented prices, reviews or quotes",
+      "Impersonating competitors or gathering private data about their staff",
+      "Legal claims about competitor wrongdoing"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I run an online yoga studio at $29 a month. Competitors: Glo, Yoga With Adriene (free on YouTube), and Alo Moves. I want to know where a small studio can stand out. I pasted their pricing pages below.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We are a 6-person accounting firm for restaurants in Chicago. Competitors are Bench, Pilot and two local firms. Show me how to position against Bench on price and service.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our fintech app lets freelancers in Nigeria invoice in dollars. Compare us with Payoneer, Wise and Grey. Which features should we build next?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Boutique hotel in Lisbon, 18 rooms. Compare with three nearby hotels (details pasted) on price, guest reviews and extras. Goal: win more direct bookings.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "competitor analysis",
+      "competitive analysis",
+      "competitor research",
+      "SWOT",
+      "benchmark",
+      "positioning",
+      "market comparison"
+    ],
+    "demand_sources": [
+      {
+        "note": "Lists what freelancers deliver in a competitive analysis: market report, competitor audit, SWOT, positioning plan. Used to size this job.",
+        "url": "https://www.wethos.co/blog/competitive-analysis-scope-of-work"
+      },
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      }
+    ]
+  },
+  {
+    "id": "customer-interview-guide",
+    "title": "Customer interview guide",
+    "summary": "A ready-to-use script of questions for customer interviews, with probes and notes on what to listen for.",
+    "area": "research",
+    "deliverable": "An interview guide with an intro script, 12 to 18 open questions in order, follow-up probes, a note-taking sheet and a short recruiting message.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business or product",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "goal",
+        "label": "What do you need to learn?",
+        "type": "longtext",
+        "required": true,
+        "help": "For example: why customers cancel.",
+        "max": 800
+      },
+      {
+        "id": "who",
+        "label": "Who will you interview?",
+        "type": "text",
+        "required": true,
+        "help": "Role, kind of customer.",
+        "max": 300
+      },
+      {
+        "id": "minutes",
+        "label": "Interview length in minutes",
+        "type": "number",
+        "required": false,
+        "max": 90
+      },
+      {
+        "id": "type",
+        "label": "Type of interview",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Problem discovery",
+          "Churn or cancellation",
+          "Product feedback",
+          "Buying decision",
+          "Usability"
+        ]
+      },
+      {
+        "id": "hypotheses",
+        "label": "What you already believe",
+        "type": "longtext",
+        "required": false,
+        "help": "We test these without leading the person.",
+        "max": 1200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "The guide does not state facts about the buyer's customers that are not in the brief.",
+        "weight": 5,
+        "pass_rule": "No invented customer details, statistics or quotes appear; any example answers are marked as examples.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "open_questions",
+        "text": "Questions are open and not leading.",
+        "weight": 5,
+        "pass_rule": "At least 90 percent of the main questions begin with how, what, when, tell me about or walk me through, and none suggests the answer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_time",
+        "text": "The guide fits the interview length.",
+        "weight": 3,
+        "pass_rule": "Estimated minutes per section add up to within 10 percent of the stated length.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "past_behaviour",
+        "text": "Questions ask about real past behaviour, not guesses.",
+        "weight": 4,
+        "pass_rule": "At least half of the questions ask about a specific past event or last time something happened.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "probes_notes",
+        "text": "Probes and a note sheet help the interviewer.",
+        "weight": 3,
+        "pass_rule": "Each main question has at least one probe, and a note sheet with tags for the goal is included.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced user researcher. Write a customer interview guide for the business below. Include a short intro script, 12 to 18 open, non-leading questions that ask about past behaviour, follow-up probes, timing per section to fit the stated length, a note-taking template and a short message for recruiting participants. Use only facts in the brief and do not invent customer data.",
+    "not_for": [
+      "Questions that collect sensitive personal data without care",
+      "Fake interview transcripts or invented customer quotes",
+      "Interviews that trick people into giving consent"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We sell meal kits to busy parents. 30% of new customers cancel within two months. I want 30-minute calls with people who cancelled to find out why.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "I am building an app that helps plumbers send quotes. I have never talked to a plumber. I want to find out how they quote today. 45 minute calls.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We run a 40-seat coworking space in Nairobi. Members renew yearly and many do not. Interview guide for renewal decisions, 20 minutes, mostly by phone.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our B2B tool tracks vehicle maintenance for small delivery fleets. We want to talk to fleet managers about how they pick maintenance software. Hour long calls.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "interview guide",
+      "user interview",
+      "customer discovery",
+      "discussion guide",
+      "research questions",
+      "interview script",
+      "voice of customer"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "interview-synthesis",
+    "title": "Interview synthesis from transcripts",
+    "summary": "Paste your interview transcripts. You get themes, quotes, patterns and what to do next.",
+    "area": "research",
+    "deliverable": "A report with 4 to 8 themes, each with exact quotes from your transcripts and counts, a summary table by participant, surprises, open questions and next steps.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "transcripts",
+        "label": "Interview transcripts or notes",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste all of them, with a label for each person.",
+        "max": 60000
+      },
+      {
+        "id": "count",
+        "label": "Number of interviews",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 5.",
+        "max": 30
+      },
+      {
+        "id": "goal",
+        "label": "What were you trying to learn?",
+        "type": "longtext",
+        "required": true,
+        "max": 800
+      },
+      {
+        "id": "business",
+        "label": "About your business or product",
+        "type": "longtext",
+        "required": false,
+        "max": 1200
+      },
+      {
+        "id": "format",
+        "label": "Report style",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Short summary",
+          "Full report",
+          "Slides outline"
+        ]
+      },
+      {
+        "id": "decision",
+        "label": "Decision this will feed",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Quotes and counts come only from the pasted transcripts.",
+        "weight": 5,
+        "pass_rule": "Every quote appears word for word in a transcript with the participant label, and every count matches the transcripts.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "themes_evidenced",
+        "text": "Each theme is backed by evidence from more than one person where possible.",
+        "weight": 5,
+        "pass_rule": "Each theme lists the participants who raised it and at least one quote; single-person themes are labelled as such.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_goal",
+        "text": "Findings answer the research goal.",
+        "weight": 4,
+        "pass_rule": "A section answers the stated goal in plain words and ranks the findings by how many participants raised them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_leaps",
+        "text": "The report does not claim more than the interviews show.",
+        "weight": 4,
+        "pass_rule": "The report states the sample size, avoids words like 'all customers' for a small group, and flags where it is guessing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "next_steps",
+        "text": "Next steps are specific.",
+        "weight": 3,
+        "pass_rule": "At least 3 next steps each name a change, test or follow-up question tied to a theme.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "count",
+        "unit": "interview",
+        "included": 5,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a qualitative researcher. Read the interview transcripts below and run a thematic analysis. Produce 4 to 8 themes, each supported by verbatim quotes with participant labels and the number of participants who raised it, a table by participant, surprises, open questions and next steps tied to the research goal. Quote only text that appears in the transcripts, state the sample size, and do not overstate what a small sample can show.",
+    "not_for": [
+      "Transcripts you do not have the right to share",
+      "Inventing or rewording quotes",
+      "Identifying people from anonymised transcripts",
+      "Medical or legal conclusions from interviews"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I interviewed 6 owners of dental practices about how they book new patients. Transcripts pasted below. I need the main themes and what to build first for our booking tool.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Five exit interviews with staff who left our bakery chain in the last year. I want to know the real reasons and what to fix. Notes are rough but I have them all.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "8 interviews with parents about school lunch choices, for our lunchbox startup. Please find what matters most to them and what they distrust.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Three long calls with procurement managers at hospitals about how they pick suppliers. I need a short summary for my board with the strongest quotes.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "interview synthesis",
+      "thematic analysis",
+      "user research",
+      "transcripts",
+      "affinity map",
+      "customer insights",
+      "qualitative analysis"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "survey-design",
+    "title": "Survey design",
+    "summary": "A survey that is short, clear and fair, with question wording, order, answer options and a plan for using the results.",
+    "area": "research",
+    "deliverable": "A complete survey (intro, screener, questions with answer options, thank-you text), notes on why each question is there, a sampling and analysis plan, and a paste-ready version.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "goal",
+        "label": "What do you need to find out?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "audience",
+        "label": "Who will answer?",
+        "type": "text",
+        "required": true,
+        "help": "Customers, staff, members, the public.",
+        "max": 300
+      },
+      {
+        "id": "questions",
+        "label": "Number of questions",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 15.",
+        "max": 50
+      },
+      {
+        "id": "tool",
+        "label": "Survey tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Google Forms",
+          "Typeform",
+          "SurveyMonkey",
+          "Other or not sure"
+        ]
+      },
+      {
+        "id": "decision",
+        "label": "What will you do with the results?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "existing",
+        "label": "Existing questions to improve",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "expected",
+        "label": "Expected number of responses",
+        "type": "number",
+        "required": false,
+        "max": 100000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "The survey does not claim facts or benchmarks that are not in the brief.",
+        "weight": 5,
+        "pass_rule": "No invented benchmark figures, response-rate claims or sources appear; any rules of thumb are labelled as such.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "neutral_wording",
+        "text": "Questions are neutral, single-topic and clear.",
+        "weight": 5,
+        "pass_rule": "No question is double-barrelled, leading or uses jargon the audience would not know; a checker finds none among sampled questions.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "maps_to_goal",
+        "text": "Every question links to the goal or decision.",
+        "weight": 4,
+        "pass_rule": "A table maps each question to the goal or decision; any question with no link is removed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answer_options",
+        "text": "Answer options are complete and balanced.",
+        "weight": 3,
+        "pass_rule": "Scales have balanced ends, choice lists include 'other' or 'not sure' where needed, and options do not overlap.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "length_analysis",
+        "text": "The survey is short enough and the analysis plan is stated.",
+        "weight": 3,
+        "pass_rule": "Estimated completion time is given and under 7 minutes unless the brief says otherwise, and the plan says how each result will be read.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "questions",
+        "unit": "question",
+        "included": 15,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a survey methodologist. Design a survey for the goal and audience below. Write an intro, any screening questions, each question with answer options, and a thank-you message. Keep it short, use neutral wording, one idea per question and balanced scales. Add a table mapping each question to the goal, an estimated completion time and a simple plan for analysing the results. Do not invent benchmarks.",
+    "not_for": [
+      "Push polls or questions designed to mislead",
+      "Collecting sensitive personal data without a lawful reason",
+      "Fake responses or results",
+      "Surveys of children without the buyer confirming consent"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I own a cafe with 800 loyalty-app members. I want to know why some stopped visiting and what would bring them back. Google Forms, under 5 minutes.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We are a church youth group of 60 teens. We need a simple survey to plan summer activities. Parents will help them fill it in.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our software company wants a customer satisfaction survey after support tickets close. About 400 tickets a month. We use Typeform.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "I teach a 10-week evening pottery course. Want feedback at the end that tells me what to change next time, and whether people would pay more for a longer course.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "survey design",
+      "questionnaire",
+      "customer survey",
+      "survey questions",
+      "NPS",
+      "feedback form",
+      "employee survey"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "survey-results-analysis",
+    "title": "Survey results analysis",
+    "summary": "Paste your survey results as CSV. You get what the numbers say, in plain words, with tables and next steps.",
+    "area": "research",
+    "deliverable": "A report with response summary, key findings with counts and percentages, breakdowns by group, a read of open-text answers, caveats and recommended actions.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "csv",
+        "label": "Survey results (CSV)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the rows with the header line. Remove names and emails first.",
+        "max": 80000
+      },
+      {
+        "id": "goal",
+        "label": "What did the survey try to find out?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "questions",
+        "label": "Number of questions in the survey",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 15.",
+        "max": 60
+      },
+      {
+        "id": "groups",
+        "label": "Groups to compare",
+        "type": "list",
+        "required": false,
+        "help": "For example: new vs repeat customers.",
+        "max": 6
+      },
+      {
+        "id": "audience",
+        "label": "Who sent the survey and to whom?",
+        "type": "text",
+        "required": false,
+        "help": "Helps judge how far the results can be trusted.",
+        "max": 300
+      },
+      {
+        "id": "report_for",
+        "label": "Who reads the report?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Me",
+          "My team",
+          "My board or investors",
+          "Customers or members"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Every number in the report can be traced to the pasted data.",
+        "weight": 5,
+        "pass_rule": "Counts, percentages and quotes match the CSV; the report shows the base (n) for each result, and no outside benchmark is quoted unless the buyer gave it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "sample_caveats",
+        "text": "The report states how far the results can be trusted.",
+        "weight": 5,
+        "pass_rule": "It gives the number of responses, the response rate if known, and at least 2 limits such as small groups or self-selection.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "group_breakdowns",
+        "text": "Results are broken down by the groups the buyer named.",
+        "weight": 3,
+        "pass_rule": "Each named group has a table or count, and groups under 10 responses are flagged as too small to compare.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "open_text",
+        "text": "Open-text answers are summarised honestly.",
+        "weight": 3,
+        "pass_rule": "Themes from free text come with counts and 2 or more verbatim quotes that appear in the CSV.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "actions_from_data",
+        "text": "Recommendations follow from the results.",
+        "weight": 4,
+        "pass_rule": "Each recommendation cites the finding that supports it and none relies on a result the data does not show.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 399,
+      "size": {
+        "field": "questions",
+        "unit": "question",
+        "included": 15,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a survey analyst. Analyse the CSV of survey results below against the stated goal. Report the number of responses, key findings with counts and percentages, breakdowns by the groups requested, themes from open-text answers with exact quotes, limits of the data, and recommended actions that follow from the results. Compute numbers only from the data given, show the base for each figure, flag groups too small to compare, and do not quote outside benchmarks.",
+    "not_for": [
+      "Re-identifying respondents from their answers",
+      "Inventing or padding responses",
+      "Presenting a small, self-selected sample as proof about everyone",
+      "Medical or legal conclusions"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I ran a customer satisfaction survey with my 12-person landscaping company. 94 responses in the CSV below. What should I fix first?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Staff survey at our 80-person law firm, 61 responses. Columns include department and years at firm. I need a summary for the partners. Names removed.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Post-event survey for our 300-person conference. CSV has ratings for sessions, food and venue plus a comments column. Which sessions do we repeat?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Alumni survey from our coding bootcamp, 210 responses, about job outcomes after 6 months. Need a clear summary for our website, without overclaiming.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "survey results",
+      "survey analysis",
+      "analyze survey data",
+      "csv",
+      "customer satisfaction",
+      "employee survey results",
+      "NPS analysis"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      },
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      }
+    ]
+  },
+  {
+    "id": "trend-brief",
+    "title": "Industry trend brief",
+    "summary": "A short brief on the trends shaping your industry and what each means for a business like yours.",
+    "area": "research",
+    "deliverable": "A 2 to 4 page brief with 5 to 8 trends, why each matters, what it means for your business, signals to watch, and a list of items to verify.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "industry",
+        "label": "Your industry or niche",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "Size, customers, what you sell.",
+        "max": 1500
+      },
+      {
+        "id": "horizon",
+        "label": "Time horizon",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Next 12 months",
+          "1 to 3 years",
+          "3 to 5 years"
+        ]
+      },
+      {
+        "id": "use",
+        "label": "What will you use it for?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Planning",
+          "A pitch or deck",
+          "A blog or newsletter",
+          "Team briefing"
+        ]
+      },
+      {
+        "id": "known",
+        "label": "Trends or sources you already follow",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "region",
+        "label": "Region",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented statistics, reports, quotes or dates.",
+        "weight": 5,
+        "pass_rule": "Every figure is in the brief or marked as a rough estimate; no named study, company announcement or quote is given unless the buyer supplied it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "so_what",
+        "text": "Each trend says what it means for this business.",
+        "weight": 5,
+        "pass_rule": "Every trend has a short 'what this means for you' line that uses details from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "signals",
+        "text": "Each trend comes with signs to watch.",
+        "weight": 3,
+        "pass_rule": "Each trend lists at least 2 observable signals, such as a price change, a rule or a competitor move.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "separates_fact_view",
+        "text": "Facts, views and guesses are told apart.",
+        "weight": 3,
+        "pass_rule": "The brief labels each claim as widely known, likely or speculative.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an industry analyst. Write a concise trend brief for the industry and business below, covering 5 to 8 trends. For each trend explain why it matters, what it means for this specific business, and which signals to watch. Mark each claim as well known, likely or speculative. You cannot browse the web, so do not cite studies, numbers or news you cannot verify, and end with a list of things to check.",
+    "not_for": [
+      "Invented statistics, studies or news",
+      "Predictions sold as certain",
+      "Investment or stock tips",
+      "Real-time news or live data"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I own a regional chain of 9 garden centres in the UK. What trends should I plan for over the next 3 years? Short brief for my managers.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We make wearable posture devices for desk workers. I need a trend brief on workplace wellness for a pitch deck to a corporate buyer.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "I run a 15-person marketing agency serving dentists. Brief on trends in dental patient acquisition and how AI affects local search.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our family farm sells direct to restaurants in Oregon. What trends in local food and restaurant buying should shape what we plant next year?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "trend report",
+      "industry trends",
+      "trend analysis",
+      "future outlook",
+      "market trends",
+      "industry brief",
+      "horizon scanning"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "pricing-research",
+    "title": "Pricing research and recommendation",
+    "summary": "A review of how to price your product or service, with options, reasons and a plan to test it.",
+    "area": "research",
+    "deliverable": "A pricing report with your cost and value picture, 3 pricing options with pros and cons, a recommended price, a comparison with prices you supply, and a test plan.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What are you pricing?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "current",
+        "label": "Current price and how you charge",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "costs",
+        "label": "Your costs per sale",
+        "type": "longtext",
+        "required": false,
+        "help": "Materials, time, fees. Needed to show margins.",
+        "max": 1500
+      },
+      {
+        "id": "competitor_prices",
+        "label": "Competitor or market prices you know",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste names and prices. We do not look them up.",
+        "max": 5000
+      },
+      {
+        "id": "customers",
+        "label": "Who buys and what do they say about price?",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "Main goal",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "More profit per sale",
+          "More customers",
+          "Fewer discounts",
+          "Launch price",
+          "Subscription tiers"
+        ]
+      },
+      {
+        "id": "sales_data",
+        "label": "Sales numbers by price",
+        "type": "longtext",
+        "required": false,
+        "help": "Units sold at each price, if you have them.",
+        "max": 5000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Prices, costs and sales figures are only those the buyer gave or are labelled assumptions.",
+        "weight": 5,
+        "pass_rule": "Every number in tables comes from the brief or is marked 'assumed' with the assumption stated; no competitor price is invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "options_compared",
+        "text": "At least three pricing options are compared fairly.",
+        "weight": 4,
+        "pass_rule": "Three options each show the price or structure, a margin or revenue effect using the brief's numbers, and one risk.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_recommendation",
+        "text": "One price or structure is recommended with reasons.",
+        "weight": 5,
+        "pass_rule": "A single recommendation is given, tied to the goal field, with the main reason and the condition that would change it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "test_plan",
+        "text": "The plan shows how to test the price safely.",
+        "weight": 3,
+        "pass_rule": "It names what to change, for whom, for how long and what result would count as success.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 179,
+      "min_usd": 119,
+      "max_usd": 499,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a pricing strategist. Review the offer, costs, customer facts and competitor prices below. Present three pricing options with pros, cons and the effect on margin or revenue using only the numbers given, recommend one with reasons, and propose a simple test plan. Mark every assumption, do not invent competitor prices or willingness-to-pay data, and note what extra data would improve the answer.",
+    "not_for": [
+      "Price fixing or agreeing prices with competitors",
+      "Deceptive pricing or fake discounts",
+      "Tax, legal or regulatory pricing advice",
+      "Invented competitor or market prices"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I run a small web design studio. I charge $2,500 per site and I am always busy but not making enough. Should I raise prices or move to monthly retainers? My costs and last 20 projects are below.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We launched a $12/month budgeting app. Free tier users are 90%. Trying to decide on a paid tier structure. Competitor prices: YNAB $14.99, Monarch $14.99, Goodbudget $10.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Family bakery with a wedding cake line. We charge $5 a slice. Costs and last year's orders are in the notes. Are we too cheap?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "B2B software for restaurant staff scheduling. Currently $99 flat per restaurant. Larger chains want multi-site pricing. Need options and a recommendation.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "pricing strategy",
+      "price research",
+      "how much to charge",
+      "pricing tiers",
+      "price test",
+      "subscription pricing",
+      "value-based pricing"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "strategy-memo",
+    "title": "Strategy memo",
+    "summary": "A short memo that frames a business choice, weighs the options and recommends one.",
+    "area": "research",
+    "deliverable": "A 2 to 4 page memo with the question, background, options with pros and cons, risks, a recommendation, first steps and open questions.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "question",
+        "label": "What choice do you face?",
+        "type": "longtext",
+        "required": true,
+        "help": "For example: open a second shop or grow online.",
+        "max": 1200
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "Size, money position, customers, team.",
+        "max": 2500
+      },
+      {
+        "id": "options",
+        "label": "Options you are considering",
+        "type": "list",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "facts",
+        "label": "Numbers and facts that matter",
+        "type": "longtext",
+        "required": false,
+        "help": "Revenue, costs, deadlines, offers on the table.",
+        "max": 6000
+      },
+      {
+        "id": "limits",
+        "label": "Limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Budget, time, people, rules.",
+        "max": 1000
+      },
+      {
+        "id": "reader",
+        "label": "Who reads the memo?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Me",
+          "Co-founder or partner",
+          "Board",
+          "Bank or investor"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented numbers, facts or outside evidence.",
+        "weight": 5,
+        "pass_rule": "All figures come from the brief or are marked assumed; no outside study, example company or quote is cited unless supplied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "question_framed",
+        "text": "The memo states the choice clearly and early.",
+        "weight": 4,
+        "pass_rule": "The first paragraph states the decision, the deadline if known and what a good outcome looks like.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "options_fair",
+        "text": "Options are weighed fairly, including doing nothing.",
+        "weight": 4,
+        "pass_rule": "At least 3 options, including keeping things as they are, each with a benefit, a cost and a risk drawn from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "firm_recommendation",
+        "text": "The memo makes a clear recommendation.",
+        "weight": 5,
+        "pass_rule": "One option is recommended with the main reason, the biggest risk and a trigger that would change the advice.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "first_steps",
+        "text": "First steps are concrete.",
+        "weight": 3,
+        "pass_rule": "At least 3 steps with an owner role and a time frame, such as 'this week'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a strategy consultant writing for a business owner. Write a 2 to 4 page memo on the decision below. State the question, give background from the facts supplied, compare at least three options including doing nothing, list risks, make one clear recommendation with the reason and what would change it, and give first steps. Use only facts provided, mark assumptions, and do not give legal, tax or financial advice.",
+    "not_for": [
+      "Regulated financial, legal, tax or medical advice",
+      "Invented facts or comparisons",
+      "Memos meant to deceive a bank, investor or regulator",
+      "Decisions about firing or disciplining a named person"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I own two coffee shops in Denver. A landlord offered me a third location at $6,800 a month. Revenue at the two shops is $38k and $31k a month. Should I take it?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We are a 5-person software shop. A big client is 55% of our revenue and wants exclusivity. Memo for my co-founder weighing accept, negotiate or refuse.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "My online course sells about 40 copies a month at $199. Choose between: new course, community membership, or ads. I can spend 15 hours a week.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our plumbing company of 12 trucks is thinking of buying a smaller competitor. Their owner wants to retire. I have their last two years of revenue only.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "strategy memo",
+      "decision memo",
+      "business strategy",
+      "options paper",
+      "recommendation",
+      "strategic plan",
+      "white paper"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "go-to-market-plan",
+    "title": "Go-to-market plan",
+    "summary": "A plan to launch a product or enter a market: who to sell to, what to say, where to reach them and what to do first.",
+    "area": "research",
+    "deliverable": "A plan with target buyers, positioning, offer and price view, channels with priorities, a 90-day action plan, success measures, risks and facts to verify.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What are you launching?",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "buyers",
+        "label": "Who is it for?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "budget",
+        "label": "Budget for the first 90 days (USD)",
+        "type": "number",
+        "required": true,
+        "max": 1000000
+      },
+      {
+        "id": "team",
+        "label": "Who can do the work?",
+        "type": "text",
+        "required": false,
+        "help": "People and hours per week.",
+        "max": 300
+      },
+      {
+        "id": "channels",
+        "label": "Channels you have used",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "assets",
+        "label": "What you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "List size, customers, partners, content.",
+        "max": 2000
+      },
+      {
+        "id": "launch_date",
+        "label": "Target launch date",
+        "type": "text",
+        "required": false,
+        "max": 60
+      },
+      {
+        "id": "goal",
+        "label": "Goal in numbers",
+        "type": "text",
+        "required": false,
+        "help": "For example: 100 paying customers.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented market data, conversion rates or benchmarks.",
+        "weight": 5,
+        "pass_rule": "Any rate or size is from the brief or labelled an assumption with the reason; no outside study or competitor figure is cited unless supplied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "budget_fit",
+        "text": "The plan fits the budget and team.",
+        "weight": 5,
+        "pass_rule": "Channel costs sum to no more than the budget field, and weekly hours fit the team field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "channels_prioritised",
+        "text": "Channels are chosen and ranked, not listed.",
+        "weight": 4,
+        "pass_rule": "At most 4 channels are chosen with a reason tied to the buyers, and others are marked 'not now'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ninety_days",
+        "text": "The 90-day plan is specific and measurable.",
+        "weight": 4,
+        "pass_rule": "Each of the three months has dated actions, an owner role and a measure that shows if it worked.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 249,
+      "min_usd": 149,
+      "max_usd": 699,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a go-to-market strategist. Write a launch plan for the product below. Cover target buyers, positioning, offer and price view, a ranked shortlist of channels that fit the budget and team, a 90-day action plan with measures, risks and open questions. Use only the facts provided, mark every assumption, never invent market data or conversion rates, and say what the client should verify.",
+    "not_for": [
+      "Invented market data or benchmarks",
+      "Spam, fake reviews or buying followers",
+      "Plans for regulated finance, health or legal services without the buyer's compliance review",
+      "Claims the product cannot back up"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We built an app that helps small clinics send appointment reminders by WhatsApp. 12 pilot clinics in Pune. Budget $3,000 for 90 days, two people part time. Goal: 60 paying clinics.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "I am launching a line of oat-based dog treats in the UK. Budget 5,000 pounds. I have 2,100 Instagram followers and two local pet shops willing to stock it.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "B2B tool for freight brokers that matches loads to trucks. Founders are two ex-brokers. Budget $20,000. No customers yet, 30 people on a waitlist.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "I am an independent financial wellness coach for nurses. Launching a 6-week group program at $350 a seat. Budget $1,200. List of 600 emails from a webinar.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "go to market",
+      "gtm plan",
+      "launch plan",
+      "marketing plan",
+      "product launch",
+      "market entry",
+      "launch strategy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance and boutique market research projects are quoted at $5,000 to $25,000, with AI reports at $0 to $59. Our desk-research price sits between the two.",
+        "url": "https://preuve.ai/blog/how-much-does-market-research-cost"
+      },
+      {
+        "note": "Lists what freelancers deliver in a competitive analysis: market report, competitor audit, SWOT, positioning plan. Used to size this job.",
+        "url": "https://www.wethos.co/blog/competitive-analysis-scope-of-work"
+      }
+    ]
+  },
+  {
+    "id": "product-requirements-doc",
+    "title": "Product requirements document (PRD)",
+    "summary": "A clear PRD for one feature or product: the problem, who it is for, what it must do and how you will know it worked.",
+    "area": "product",
+    "deliverable": "A PRD with problem, goals and non-goals, users, requirements in priority order, user flows in words, success measures, risks, open questions and a launch checklist.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "feature",
+        "label": "What are you building?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "problem",
+        "label": "What problem does it solve, and for whom?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "users",
+        "label": "Users or roles",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "constraints",
+        "label": "Limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Tech stack, deadline, budget, rules, things already decided.",
+        "max": 2000
+      },
+      {
+        "id": "existing",
+        "label": "Existing product notes",
+        "type": "longtext",
+        "required": false,
+        "help": "Current flows, past feedback, support tickets. Paste text.",
+        "max": 10000
+      },
+      {
+        "id": "metrics",
+        "label": "Numbers you track today",
+        "type": "longtext",
+        "required": false,
+        "help": "Only these are used as baselines.",
+        "max": 1500
+      },
+      {
+        "id": "depth",
+        "label": "Detail level",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "One-page",
+          "Standard",
+          "Detailed for engineers"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented user research, metrics, technical limits or competitor facts.",
+        "weight": 5,
+        "pass_rule": "Baseline numbers, user quotes and system facts appear only if in the brief; other targets are labelled proposed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "problem_first",
+        "text": "The document starts from the problem, not the solution.",
+        "weight": 4,
+        "pass_rule": "The problem statement names who has the problem, what happens today and why it matters, before any requirement appears.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "testable_reqs",
+        "text": "Requirements are specific enough to build and test.",
+        "weight": 5,
+        "pass_rule": "Each requirement has an id, a priority (must, should or could) and a way to check it; none uses words like 'fast' or 'easy' without a measure.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "scope_edges",
+        "text": "Scope has clear edges.",
+        "weight": 3,
+        "pass_rule": "Non-goals and open questions each list at least 3 items drawn from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "success_measures",
+        "text": "Success measures are defined.",
+        "weight": 3,
+        "pass_rule": "At least 2 measures give a metric, a target marked proposed, and how it is measured.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior product manager. Write a product requirements document for the feature below. Include the problem, goals and non-goals, users, prioritised requirements (must, should, could) that are specific and testable, user flows in words, success metrics with proposed targets, risks, open questions and a launch checklist. Use only facts from the brief, label anything proposed or assumed, and do not invent research findings or metrics.",
+    "not_for": [
+      "Invented user research or analytics",
+      "Legal, safety or medical compliance sign-off",
+      "Specs for products meant to deceive or harm users",
+      "Source code or system architecture sign-off"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We run a booking app for yoga studios. Studio owners keep asking for a waitlist when a class is full. Write the PRD. Stack is React and Node, two engineers, six weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our online pharmacy wants a repeat-order button on the order history page so customers can refill in two taps. Mobile web first. Pharmacist checks stay in place.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Internal tool for a logistics company: drivers need to upload proof of delivery photos offline and sync when they have signal. About 300 drivers on Android.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A marketplace for tutors. Tutors want to offer package deals (buy 5 lessons, get 1 free). Need a PRD that covers pricing, payments, refunds and how packages show on profiles.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "PRD",
+      "product requirements",
+      "product spec",
+      "feature spec",
+      "requirements document",
+      "product brief",
+      "BRD"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "user-stories-acceptance",
+    "title": "User stories with acceptance criteria",
+    "summary": "Turn a feature idea into user stories your developers can pick up, each with clear tests for done.",
+    "area": "product",
+    "deliverable": "A backlog of user stories grouped into epics, each with an acceptance checklist in Given-When-Then form, edge cases, priority and a rough size note.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "feature",
+        "label": "Feature or product area",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "stories",
+        "label": "Number of stories",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 10.",
+        "max": 60
+      },
+      {
+        "id": "users",
+        "label": "Who are the users?",
+        "type": "list",
+        "required": true,
+        "max": 8
+      },
+      {
+        "id": "notes",
+        "label": "Business rules and limits",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "format",
+        "label": "Story style",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "As a... I want... so that...",
+          "Job stories",
+          "Plain tasks"
+        ]
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Web",
+          "iOS and Android",
+          "Web and mobile",
+          "API only",
+          "Not sure"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Rules, numbers and system behaviour are not invented.",
+        "weight": 5,
+        "pass_rule": "Every rule or limit in a story is in the brief; anything guessed is placed in an 'assumptions to confirm' list.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "story_shape",
+        "text": "Each story is small, clear and has a purpose.",
+        "weight": 4,
+        "pass_rule": "Each story names a user, an action and a benefit, and can be built in a few days by the wording; no story bundles several features with 'and'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "testable_criteria",
+        "text": "Acceptance criteria can be tested.",
+        "weight": 5,
+        "pass_rule": "Every story has at least 3 criteria in Given-When-Then form with concrete values and no vague words such as 'quickly'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "edge_cases",
+        "text": "Edge cases and errors are covered.",
+        "weight": 4,
+        "pass_rule": "Each epic includes failure, empty and permission cases, at least 3 per epic.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "covers_feature",
+        "text": "The set of stories covers the whole feature without overlap.",
+        "weight": 3,
+        "pass_rule": "Each part of the feature in the brief maps to at least one story and no two stories repeat the same criteria.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "stories",
+        "unit": "story",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced product owner. Break the feature below into epics and small user stories. For each story write the user, action and benefit, acceptance criteria in Given-When-Then form with concrete values, edge cases, priority and a rough size note. Cover the whole feature without overlap. Use only business rules from the brief and put any guess in an assumptions list.",
+    "not_for": [
+      "Invented business rules",
+      "Safety-critical or regulated sign-off",
+      "Stories for features meant to deceive users"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are adding gift cards to our online bookshop. Buyers can send by email, pick a value from $10 to $100 and schedule delivery. Recipients redeem at checkout.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Staff scheduling app for cafes. Managers publish a weekly rota, staff can swap shifts, and swaps need manager approval. Web and mobile.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Customer portal for an HVAC company: see upcoming visits, reschedule, pay invoices, download past reports. Login by email link.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A school app where parents report a child absence before 9am and teachers see a daily list. Needs to work on phones and avoid sharing other children's data.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "user stories",
+      "acceptance criteria",
+      "backlog",
+      "agile stories",
+      "jira stories",
+      "Given When Then",
+      "epics"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance product managers average $77 an hour. A 2 to 3 hour document is priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "ux-microcopy",
+    "title": "UX copy and microcopy",
+    "summary": "Clear words for your app's buttons, forms, errors, empty states and emails, matched to your voice.",
+    "area": "product",
+    "deliverable": "A table of copy by screen: buttons, labels, hints, error and success messages, empty states and short emails, plus a one-page voice guide and notes on character limits.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What is the product?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "screens",
+        "label": "Screens or flows to cover",
+        "type": "longtext",
+        "required": true,
+        "help": "List each screen or paste current copy.",
+        "max": 8000
+      },
+      {
+        "id": "screen_count",
+        "label": "Number of screens",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 5.",
+        "max": 40
+      },
+      {
+        "id": "voice",
+        "label": "Voice and tone",
+        "type": "text",
+        "required": false,
+        "help": "For example: friendly, calm, no jokes.",
+        "max": 300
+      },
+      {
+        "id": "audience",
+        "label": "Who uses it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "limits",
+        "label": "Character limits and platform rules",
+        "type": "longtext",
+        "required": false,
+        "max": 1000
+      },
+      {
+        "id": "language",
+        "label": "Language",
+        "type": "text",
+        "required": false,
+        "help": "Default is English (US).",
+        "max": 60
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Copy does not promise features, prices or outcomes that the brief does not state.",
+        "weight": 5,
+        "pass_rule": "No feature, number, timeframe or guarantee appears in copy unless it is in the brief; unknowns use [placeholder] tags.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "clear_actions",
+        "text": "Buttons and labels say what happens.",
+        "weight": 4,
+        "pass_rule": "Every button begins with a verb and names the result; no button reads only 'Submit' or 'OK'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "helpful_errors",
+        "text": "Error messages say what went wrong and how to fix it.",
+        "weight": 5,
+        "pass_rule": "Each error has the cause in plain words and a next step, and none blames the user.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "voice_consistent",
+        "text": "The voice is consistent across screens.",
+        "weight": 3,
+        "pass_rule": "Terms for the same thing are the same in every screen, and the voice guide matches the tone given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_limits",
+        "text": "Copy fits the stated limits.",
+        "weight": 3,
+        "pass_rule": "Copy lengths respect every character limit in the brief, and short forms are given for small spaces.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "screen_count",
+        "unit": "screen",
+        "included": 5,
+        "per_unit_usd": 12
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a UX writer. Write the interface copy for the screens below: buttons, labels, hints, error and success messages, empty states and any short emails. Use plain words, begin buttons with verbs, make errors say what happened and how to fix it, keep terms consistent and respect any character limits. Add a one-page voice guide. Do not promise features, prices or timings that are not in the brief.",
+    "not_for": [
+      "Dark patterns that trick users into paying or staying",
+      "Legal terms, privacy notices or consent text",
+      "Medical or safety instructions",
+      "Copy that imitates another brand"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We have a budgeting app for students. Need copy for onboarding (4 screens), the empty state of the transactions page, and error messages for failed bank linking. Friendly tone, no jargon.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Checkout flow for our online plant shop: cart, address, payment, order confirmation, and a payment-failed message. Warm, short, a bit playful.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Admin dashboard for a clinic scheduling tool. Staff are stressed. Need clear labels, confirmation dialogs for cancelling appointments and a 'no results' state.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Mobile app for a bike-share scheme. Copy for unlock, low battery warning, parking outside the zone, and a fine notice. Must fit small screens, 40 characters for alerts.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "UX writing",
+      "microcopy",
+      "UX copy",
+      "button text",
+      "error messages",
+      "onboarding copy",
+      "interface copy"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "ux-review",
+    "title": "UX review of a page or flow",
+    "summary": "An expert review of a page or flow from your screenshots or description: what confuses users and how to fix it.",
+    "area": "product",
+    "deliverable": "A review with a score table, a ranked list of issues (what, why it matters, fix), quick wins, bigger changes and questions to test with users.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "page",
+        "label": "What are we reviewing?",
+        "type": "text",
+        "required": true,
+        "help": "For example: checkout, home page, signup.",
+        "max": 200
+      },
+      {
+        "id": "screens",
+        "label": "Describe or paste each screen",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the text on the page and describe the layout. Image descriptions are fine.",
+        "max": 10000
+      },
+      {
+        "id": "goal",
+        "label": "What should a user get done here?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "pages",
+        "label": "Number of pages or screens",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 1.",
+        "max": 12
+      },
+      {
+        "id": "users",
+        "label": "Who uses it?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "problems",
+        "label": "Problems you already know",
+        "type": "longtext",
+        "required": false,
+        "help": "Drop-off points, complaints.",
+        "max": 2000
+      },
+      {
+        "id": "device",
+        "label": "Main device",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Mobile",
+          "Desktop",
+          "Both"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Issues refer only to things in the screenshots or description.",
+        "weight": 5,
+        "pass_rule": "Every issue cites an element or text from the brief; no analytics, user complaints or testing results are invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ranked_issues",
+        "text": "Issues are ranked by effect on the goal.",
+        "weight": 5,
+        "pass_rule": "Issues are ordered by severity with a stated reason tied to the user's goal, and the top three are marked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fix_specific",
+        "text": "Each issue has a specific fix.",
+        "weight": 4,
+        "pass_rule": "Each issue names what to change, where, and the new wording or layout in a sentence.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "quick_wins",
+        "text": "Quick wins are separated from big changes.",
+        "weight": 3,
+        "pass_rule": "A section lists at least 3 changes that need less than a day of work.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "limits_said",
+        "text": "The review says what it cannot know.",
+        "weight": 3,
+        "pass_rule": "It states it has not tested with users or seen analytics, and lists questions to test.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "pages",
+        "unit": "page",
+        "included": 1,
+        "per_unit_usd": 60
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior UX reviewer. Review the page described below against the stated user goal. Give a ranked list of usability issues, each with the element affected, why it matters and a specific fix, then quick wins, larger changes and questions to test with users. Base every point only on what the description shows, say what you could not check without analytics or user tests, and do not invent data.",
+    "not_for": [
+      "Accessibility certification or legal compliance claims",
+      "Invented analytics or user complaints",
+      "Reviews of competitors' private systems",
+      "Security testing"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our signup page for an online tutoring site gets lots of visits but few signups. I pasted the text and described the layout. Mobile first. What is wrong?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Checkout page of my candle shop. People add to cart but 70% leave at checkout. Screenshots described below. Please find what to fix.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our patient portal login and password reset flow. Older users call us for help. I described each of the four screens.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Home page of a B2B accounting tool. Visitors do not click 'Start trial'. Here is the page text and layout notes. Desktop mainly.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "UX review",
+      "UX audit",
+      "usability review",
+      "heuristic evaluation",
+      "conversion review",
+      "website review",
+      "user experience audit"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "app-store-listing",
+    "title": "App store listing copy",
+    "summary": "Title, subtitle, description, keywords and what's new text for the App Store or Google Play, within store limits.",
+    "area": "product",
+    "deliverable": "Listing text for one store: title, subtitle or short description, full description, keyword field, promo text, what's new text and 3 screenshot caption ideas, all within character limits.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "app",
+        "label": "What does the app do?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "store",
+        "label": "Store",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Apple App Store",
+          "Google Play",
+          "Both"
+        ]
+      },
+      {
+        "id": "features",
+        "label": "Main features",
+        "type": "list",
+        "required": true,
+        "max": 12
+      },
+      {
+        "id": "keywords_seed",
+        "label": "Words people might search",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "proof",
+        "label": "Ratings, awards or facts you may quote",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "competitors",
+        "label": "Similar apps",
+        "type": "list",
+        "required": false,
+        "help": "Names only.",
+        "max": 8
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented ratings, awards, downloads, features or claims.",
+        "weight": 5,
+        "pass_rule": "Every number, rating, award and feature in the listing is in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "char_limits",
+        "text": "All fields respect store limits.",
+        "weight": 5,
+        "pass_rule": "Apple title is 30 characters or fewer, subtitle 30, keywords 100, promo text 170; Google title 30, short description 80, full description 4,000.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "benefit_first",
+        "text": "The first lines state who it is for and the main benefit.",
+        "weight": 4,
+        "pass_rule": "The subtitle or short description and first sentence of the description name the audience and the main benefit.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "keywords_used",
+        "text": "Search words are used naturally, without stuffing.",
+        "weight": 3,
+        "pass_rule": "The title and description include the main seed words once or twice and no word is repeated in the keyword field with the title.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "store_rules",
+        "text": "The copy follows store rules.",
+        "weight": 3,
+        "pass_rule": "No competitor brand names, no price or 'best' claims in the title, no unproven superlatives.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an app store optimisation copywriter. Write the listing for the app below for the store named: title, subtitle or short description, full description, keyword field, promo text, what's new text and three screenshot captions. Respect each store's character limits, lead with the audience and main benefit, use search words naturally, avoid unproven claims and use only facts from the brief.",
+    "not_for": [
+      "Fake reviews, ratings or download counts",
+      "Keyword stuffing with competitor brand names",
+      "Health, financial or legal claims the app cannot prove",
+      "Listings for apps that break store rules"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Habit tracker for ADHD adults. Features: visual streaks, gentle reminders, no guilt messages. Free with a $3.99/month pro plan. Apple App Store. Seed words: habit, ADHD, routine, focus.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Offline trail maps for hikers in the Alps. Download regions, track hikes, share routes. Google Play. 4.6 rating from 1,900 reviews that we can quote.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A language app for kids aged 5 to 8 learning Spanish through short stories. Parents control screen time. Both stores. No ads.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Invoice app for freelancers: create invoices, track payment, send reminders. Supports USD, EUR and GBP. Apple App Store. Want to rank for 'invoice maker'.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "app store",
+      "ASO",
+      "app description",
+      "google play listing",
+      "app store optimization",
+      "app title",
+      "app keywords"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "api-documentation",
+    "title": "API documentation from a spec",
+    "summary": "Readable developer docs written from your OpenAPI file or endpoint list: guides, references and examples.",
+    "area": "product",
+    "deliverable": "A docs set in markdown with overview, authentication, quickstart, one reference page per endpoint group, request and response examples, error list and a changelog stub.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "spec",
+        "label": "API spec or endpoint list",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste OpenAPI/Swagger (YAML or JSON), or a list of endpoints with fields.",
+        "max": 80000
+      },
+      {
+        "id": "endpoints",
+        "label": "Number of endpoints",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 10.",
+        "max": 150
+      },
+      {
+        "id": "audience",
+        "label": "Who reads the docs?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Your customers' developers",
+          "Partners",
+          "Internal teams",
+          "Mixed"
+        ]
+      },
+      {
+        "id": "auth",
+        "label": "How does auth work?",
+        "type": "text",
+        "required": false,
+        "help": "API key, OAuth, tokens.",
+        "max": 300
+      },
+      {
+        "id": "languages",
+        "label": "Example languages",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "curl",
+          "JavaScript",
+          "Python",
+          "PHP",
+          "Ruby",
+          "Go",
+          "Java"
+        ]
+      },
+      {
+        "id": "notes",
+        "label": "Business rules, limits and quirks",
+        "type": "longtext",
+        "required": false,
+        "help": "Rate limits, pagination, versions.",
+        "max": 4000
+      },
+      {
+        "id": "existing",
+        "label": "Existing docs to improve",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Docs describe only behaviour found in the spec or the buyer's notes.",
+        "weight": 5,
+        "pass_rule": "Every endpoint, parameter, field, status code and limit appears in the spec or notes; guessed items are marked 'confirm'. Example values are marked as examples.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_reference",
+        "text": "Every endpoint is documented with all its fields.",
+        "weight": 5,
+        "pass_rule": "Each endpoint in the spec has method, path, parameters with types and required flags, a request example and a response example.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "quickstart_works",
+        "text": "The quickstart can be followed in order.",
+        "weight": 4,
+        "pass_rule": "It goes from getting credentials to a first successful call in 5 steps or fewer, with a copy-paste example for each language chosen.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "errors_explained",
+        "text": "Errors are explained with fixes.",
+        "weight": 3,
+        "pass_rule": "Each error code in the spec has a cause and a fix, and the format of an error body is shown.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "consistent_terms",
+        "text": "Names match the spec and each other.",
+        "weight": 3,
+        "pass_rule": "Field and endpoint names match the spec exactly and one term is used for each concept throughout.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 799,
+      "size": {
+        "field": "endpoints",
+        "unit": "endpoint",
+        "included": 10,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a technical writer for developer documentation. From the API spec below, write a docs set: overview, authentication, a quickstart that gets to a first successful call, a reference for every endpoint with parameters, types, required flags, request and response examples in the languages requested, an error guide and a changelog stub. Use only behaviour found in the spec and notes, mark anything guessed as 'confirm', and keep names exactly as in the spec.",
+    "not_for": [
+      "Documenting endpoints that are not in the spec",
+      "Real secrets or keys in examples",
+      "Docs for systems the buyer does not own or have rights to describe",
+      "Security testing or exploit instructions"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Here is the OpenAPI file for our appointment booking API (14 endpoints). Customers' developers use API keys. We need a quickstart, reference and error guide with curl and JavaScript examples.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We have a small REST API for shipping labels: create label, track parcel, cancel, list. Partners call it. Spec pasted below. Docs in markdown for our docs site.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Internal payments API at our company, 9 endpoints, OAuth2 client credentials. Our existing docs are out of date and the Postman collection is pasted. Python and curl.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our weather alerts API has 22 endpoints and webhooks. Developers keep asking about rate limits and pagination, so cover both well. OpenAPI 3.0 JSON below.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "API documentation",
+      "API docs",
+      "OpenAPI",
+      "swagger docs",
+      "developer documentation",
+      "technical writing",
+      "REST API docs"
+    ],
+    "demand_sources": [
+      {
+        "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for API documentation work.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "release-notes",
+    "title": "Release notes and changelog",
+    "summary": "Clear release notes for your customers, written from your commit list, tickets or rough notes.",
+    "area": "product",
+    "deliverable": "Customer-facing release notes grouped by new, improved and fixed, with a headline summary, a short email version and an internal technical changelog.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "changes",
+        "label": "List of changes",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste commits, ticket titles or rough notes.",
+        "max": 15000
+      },
+      {
+        "id": "version",
+        "label": "Version or date",
+        "type": "text",
+        "required": true,
+        "max": 60
+      },
+      {
+        "id": "audience",
+        "label": "Who reads the notes?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Customers",
+          "Developers",
+          "Internal team",
+          "Mixed"
+        ]
+      },
+      {
+        "id": "product",
+        "label": "What is the product?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "highlights",
+        "label": "Changes to highlight",
+        "type": "list",
+        "required": false,
+        "max": 5
+      },
+      {
+        "id": "breaking",
+        "label": "Breaking changes",
+        "type": "longtext",
+        "required": false,
+        "help": "Anything users must do or may lose.",
+        "max": 1500
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Notes include only changes in the list.",
+        "weight": 5,
+        "pass_rule": "Every change in the notes can be matched to a line in the pasted list; no feature, date or benefit is added that was not given.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "user_language",
+        "text": "Changes are described by what users gain, not by code terms.",
+        "weight": 4,
+        "pass_rule": "For customer audiences, no internal ticket ids, function names or jargon appear in the main notes, and each item says what the user can now do.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grouped",
+        "text": "Changes are grouped and the biggest come first.",
+        "weight": 3,
+        "pass_rule": "Items are grouped under new, improved and fixed, and the headline or highlighted items come first.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "breaking_clear",
+        "text": "Breaking changes and actions are impossible to miss.",
+        "weight": 5,
+        "pass_rule": "Any breaking change is in its own section near the top with what changed, who is affected and what to do.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short_email",
+        "text": "A short email version is included.",
+        "weight": 2,
+        "pass_rule": "The email version is under 150 words, has a subject line, and names the top 3 changes.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 149,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a product writer. Turn the list of changes below into release notes for the stated audience. Group them as new, improved and fixed, put the most important first, describe each change by what the user can now do, call out any breaking changes and required actions clearly, and add a short email version and an internal changelog. Use only the changes listed and do not invent features, benefits or dates.",
+    "not_for": [
+      "Hiding security issues or known bugs from users",
+      "Invented features or dates",
+      "Notes that claim fixes the list does not contain"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Version 3.2 of our project tool. Commits pasted below. Customers are non-technical office managers. Highlight the new calendar view.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Weekly release notes for our mobile banking-style budgeting app. Tickets pasted. Keep it friendly and short.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "v2.0 of our Node SDK. There are three breaking changes (listed). Developers read these notes. Include migration steps from what I wrote.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Monthly update for our restaurant POS system. 25 raw ticket titles pasted. Needs a customer version and an internal one for support staff.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "release notes",
+      "changelog",
+      "product update",
+      "what's new",
+      "version notes",
+      "patch notes",
+      "update announcement"
+    ],
+    "demand_sources": [
+      {
+        "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for release notes writing.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "sql-queries",
+    "title": "SQL queries from a schema",
+    "summary": "Working SQL for the questions you need answered, written from your table layout, with notes on how it works.",
+    "area": "product",
+    "deliverable": "SQL for each question, in your database flavour, with a plain-words explanation, assumptions, sample output shape, index hints and checks to confirm the result.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "schema",
+        "label": "Table layout (schema)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste CREATE TABLE statements or a list of tables and columns.",
+        "max": 30000
+      },
+      {
+        "id": "questions",
+        "label": "Questions to answer",
+        "type": "longtext",
+        "required": true,
+        "help": "One per line, in plain words.",
+        "max": 4000
+      },
+      {
+        "id": "count",
+        "label": "Number of queries",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 3.",
+        "max": 30
+      },
+      {
+        "id": "dialect",
+        "label": "Database",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "PostgreSQL",
+          "MySQL",
+          "SQL Server",
+          "SQLite",
+          "BigQuery",
+          "Snowflake",
+          "Other"
+        ]
+      },
+      {
+        "id": "sample",
+        "label": "Sample rows",
+        "type": "longtext",
+        "required": false,
+        "help": "A few example rows help with odd data.",
+        "max": 5000
+      },
+      {
+        "id": "rules",
+        "label": "Business rules",
+        "type": "longtext",
+        "required": false,
+        "help": "What counts as active, refunded, a duplicate.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Queries use only tables and columns in the schema.",
+        "weight": 5,
+        "pass_rule": "Every table and column named in the SQL exists in the pasted schema; guessed definitions are listed under assumptions.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "correct_logic",
+        "text": "The SQL answers the question as asked.",
+        "weight": 5,
+        "pass_rule": "Joins, filters and grouping match the question and business rules; a walk-through on the sample rows (if given) produces the stated result.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "dialect_right",
+        "text": "The SQL runs in the chosen database.",
+        "weight": 4,
+        "pass_rule": "Only syntax and functions valid for the chosen dialect are used.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "explained",
+        "text": "Each query is explained in plain words.",
+        "weight": 3,
+        "pass_rule": "Each query has a two-sentence explanation, its assumptions and what the output columns mean.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_read_only",
+        "text": "Queries are safe to run.",
+        "weight": 4,
+        "pass_rule": "Every query is read-only unless the brief asks otherwise, and any write comes with a warning and a way to test first.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "count",
+        "unit": "query",
+        "included": 3,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior data engineer. Using the schema and business rules below, write a SQL query for each question in the dialect named. For each query give a plain explanation, assumptions, the output columns and a check the user can run to confirm the result. Use only tables and columns that exist in the schema, make queries read-only unless asked otherwise, and list any assumptions you had to make.",
+    "not_for": [
+      "Queries that extract personal data without the buyer's right to it",
+      "Destructive writes or deletes without warnings",
+      "Attacks, injection or access to systems the buyer does not own",
+      "Database design sign-off for regulated data"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Postgres database for a subscription box shop. Tables: customers, orders, order_items, subscriptions. I need: monthly revenue, customers who ordered twice in 30 days, and subscriptions that cancelled within 60 days. Schema pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "MySQL schema for a gym: members, visits, memberships, payments. I want: members who have not visited in 45 days, visits per member per month, and revenue by plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "BigQuery export of our app events (user_id, event_name, timestamp, properties). Need a weekly retention table and the funnel from signup to first purchase.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "SQL Server tables for a clinic booking system: patients, appointments, providers, cancellations. I need no-show rate by provider by month. Do not expose patient names.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "SQL",
+      "sql query",
+      "write SQL",
+      "database query",
+      "BigQuery",
+      "postgres",
+      "data query"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "csv-data-analysis",
+    "title": "Data analysis of a CSV with findings",
+    "summary": "Paste a CSV and your questions. You get calculated findings, tables and what to do about them.",
+    "area": "product",
+    "deliverable": "A report with data checks, answers to each question with tables, trends and outliers, a short summary, caveats and a reproducible method (formulas or code) you can rerun.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "csv",
+        "label": "Data (CSV)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the header line and rows. Remove names and emails first.",
+        "max": 100000
+      },
+      {
+        "id": "questions",
+        "label": "Questions to answer",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "question_count",
+        "label": "Number of questions",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 3.",
+        "max": 20
+      },
+      {
+        "id": "columns",
+        "label": "What the columns mean",
+        "type": "longtext",
+        "required": false,
+        "help": "Units, codes and anything odd.",
+        "max": 3000
+      },
+      {
+        "id": "context",
+        "label": "Business context",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "method",
+        "label": "Method preferred",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Spreadsheet formulas",
+          "Python (pandas)",
+          "SQL",
+          "No preference"
+        ]
+      },
+      {
+        "id": "audience",
+        "label": "Who reads it?",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "All numbers are computed from the pasted data.",
+        "weight": 5,
+        "pass_rule": "Every figure in the report matches the CSV or follows from it by shown steps; no outside data or benchmark appears unless supplied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "data_checks",
+        "text": "The report checks the data first.",
+        "weight": 4,
+        "pass_rule": "It states row and column counts, missing values, duplicates and odd values it found, and says how it handled them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "answers_questions",
+        "text": "Each question is answered directly.",
+        "weight": 5,
+        "pass_rule": "Each question has a plain-words answer first, then the table or steps that support it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "caveats",
+        "text": "Limits are stated, and causes are not claimed from correlation.",
+        "weight": 4,
+        "pass_rule": "The report says what the data cannot show, and uses 'associated with' language unless the data proves cause.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "reproducible",
+        "text": "The method can be rerun.",
+        "weight": 3,
+        "pass_rule": "It gives formulas or code for each result, using the column names in the CSV.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "question_count",
+        "unit": "question",
+        "included": 3,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a data analyst. Analyse the CSV below to answer the questions given. First check the data (size, missing values, duplicates, odd values), then answer each question in plain words with supporting tables, note trends and outliers, state the limits of the data without claiming cause from correlation, and provide formulas or code so the results can be rerun. Compute figures only from the data provided.",
+    "not_for": [
+      "Invented or filled-in data",
+      "Re-identifying people in the data",
+      "Predictions sold as certain",
+      "Medical, legal or tax conclusions"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Sales export from my Shopify store, 2,300 rows over 12 months (CSV below). Which products and months make the money and which customers come back?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Staff overtime data for our warehouse: employee id, date, hours, shift, site. Which sites and shifts have the most overtime and is it getting worse?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Email campaign results, 40 sends with open rate, clicks, list size and subject length. What patterns can you find in what works? Be careful about how much the data proves.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Support tickets CSV: created, closed, category, channel, agent. Find where we are slow and which categories take the most agent time.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "data analysis",
+      "analyze csv",
+      "excel analysis",
+      "data insights",
+      "data report",
+      "pandas",
+      "spreadsheet analysis"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "kpi-dashboard-spec",
+    "title": "KPI and dashboard spec",
+    "summary": "Decide what to measure and how a dashboard should show it: metrics, definitions, data sources and layout.",
+    "area": "product",
+    "deliverable": "A spec with 8 to 15 metrics (definition, formula, source, owner, target field), the questions each answers, a dashboard layout in words, filters, alerts and data gaps.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "users",
+        "label": "Who will use the dashboard?",
+        "type": "list",
+        "required": true,
+        "max": 6
+      },
+      {
+        "id": "decisions",
+        "label": "Decisions it should help with",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "sources",
+        "label": "Data sources you have",
+        "type": "longtext",
+        "required": true,
+        "help": "Tools and tables, such as Shopify, Stripe, GA4, a database.",
+        "max": 2000
+      },
+      {
+        "id": "tool",
+        "label": "Dashboard tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Looker Studio",
+          "Power BI",
+          "Tableau",
+          "Metabase",
+          "Google Sheets",
+          "Not decided"
+        ]
+      },
+      {
+        "id": "current",
+        "label": "Metrics you track now",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "metric_count",
+        "label": "Number of metrics",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 10.",
+        "max": 30
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "The spec does not claim targets, benchmarks or data fields that are not in the brief.",
+        "weight": 5,
+        "pass_rule": "Targets are blank or marked 'to set'; every source field named exists in the brief's list of sources, otherwise marked as needed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "tied_to_decisions",
+        "text": "Each metric supports a named decision.",
+        "weight": 5,
+        "pass_rule": "Each metric lists the decision or question it serves, and metrics with none are cut.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "defined_exactly",
+        "text": "Each metric has an exact definition.",
+        "weight": 5,
+        "pass_rule": "Each metric has a formula, a time window, the source field, and what is included or excluded.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "layout_usable",
+        "text": "The layout puts the key numbers first.",
+        "weight": 3,
+        "pass_rule": "The layout lists at most 6 top-line numbers, then charts in an order that matches the users' questions.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "gaps_flagged",
+        "text": "Data gaps and risks are flagged.",
+        "weight": 3,
+        "pass_rule": "The spec lists metrics that cannot be built from current sources and what is needed to build them.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a business intelligence consultant. Write a KPI and dashboard spec for the business below. Choose 8 to 15 metrics that serve the stated decisions. For each give an exact definition, formula, time window, source, owner and a blank target. Describe the dashboard layout, filters and alerts, and list data gaps. Use only the data sources given and do not invent targets or benchmarks.",
+    "not_for": [
+      "Invented targets or benchmark figures",
+      "Tracking people in ways the buyer has no right to",
+      "Dashboards built to mislead investors or lenders"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I run an online store with Shopify and Meta Ads. I want one dashboard in Looker Studio that shows me if the business is healthy each Monday.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "SaaS startup, 400 customers, Stripe and Postgres. Founders want MRR, churn and activation on one board for the monthly investor update.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A 30-bed care home group needs a weekly manager dashboard from an Excel roster and incident log: staffing, overtime, incidents, occupancy.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our marketing agency runs ads for 25 clients. We need a team dashboard: spend, leads, cost per lead, and which accounts are off target. Data comes from Google Ads and HubSpot.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "KPI",
+      "dashboard",
+      "metrics",
+      "BI",
+      "analytics spec",
+      "Looker Studio",
+      "Power BI"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance analytics consultants average $68 an hour. Specs of about 2 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/analytics-consultant"
+      },
+      {
+        "note": "YunoJuno shows freelance data analysts average $68 an hour. Query and analysis jobs of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "website-wireframe-brief",
+    "title": "Website wireframe and design brief",
+    "summary": "A page-by-page plan for your website: what goes on each page, in what order, plus a brief a designer can build from.",
+    "area": "product",
+    "deliverable": "A site map, a text wireframe for each page (sections in order, content and purpose), navigation, key calls to action, a style direction and a designer brief with questions to settle.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "Main goal of the site",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Get enquiries",
+          "Sell online",
+          "Book appointments",
+          "Show a portfolio",
+          "Explain a product",
+          "Recruit or inform"
+        ]
+      },
+      {
+        "id": "pages",
+        "label": "Number of pages",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 5.",
+        "max": 30
+      },
+      {
+        "id": "audience",
+        "label": "Who visits?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "content",
+        "label": "Content you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "Text, services, prices, testimonials you may use.",
+        "max": 6000
+      },
+      {
+        "id": "examples",
+        "label": "Sites you like",
+        "type": "list",
+        "required": false,
+        "help": "Names or addresses, plus what you like.",
+        "max": 6
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Squarespace",
+          "WordPress",
+          "Webflow",
+          "Shopify",
+          "Custom build",
+          "Not decided"
+        ]
+      },
+      {
+        "id": "brand",
+        "label": "Brand notes",
+        "type": "text",
+        "required": false,
+        "help": "Colours, fonts, tone.",
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No invented testimonials, clients, awards, prices or statistics appear as site content.",
+        "weight": 5,
+        "pass_rule": "Any proof, price or number on a page comes from the brief; other slots are marked [add: ...].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "goal_led",
+        "text": "Every page leads toward the site goal.",
+        "weight": 5,
+        "pass_rule": "Each page lists one main action that matches the goal field, and the nav gives that action a clear place.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sections_ordered",
+        "text": "Pages are built in a sensible order of sections.",
+        "weight": 4,
+        "pass_rule": "Each wireframe lists sections top to bottom, each with its purpose and the content it holds; the most important section is within the first two.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "builder_ready",
+        "text": "A designer or builder can start from it.",
+        "weight": 3,
+        "pass_rule": "The brief names platform limits (if given), required content, mobile behaviour and at least 5 open questions.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "audience_fit",
+        "text": "The plan answers what this audience needs to decide.",
+        "weight": 3,
+        "pass_rule": "Each key page answers at least 3 questions the visitors would ask, taken from the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "pages",
+        "unit": "page",
+        "included": 5,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a UX strategist. Create a website plan for the business below: a site map, a text wireframe for each page listing sections top to bottom with purpose and content, navigation, calls to action tied to the stated goal, a style direction and a short brief a designer can build from, with open questions. Use only facts supplied; mark empty slots as placeholders and never invent testimonials, awards or numbers.",
+    "not_for": [
+      "Fake testimonials, clients or awards",
+      "Visual mock-ups or images (text only)",
+      "Sites for illegal or deceptive offers",
+      "Legal pages such as terms or privacy policies"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I am a wedding photographer in Austin. I want a 6 page Squarespace site that gets enquiries. I have 20 galleries and packages from $2,800. Likes: two photographer sites I linked.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Plumbing and heating company in Manchester, 8 staff. We need a new website to get more emergency call-outs and boiler service bookings. About 7 pages.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A nonprofit that runs coding clubs for girls in Lagos. We need a site to recruit volunteers, show impact and take donations. Webflow.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "B2B software for warehouses. Currently a single page. We need a proper site: product, pricing, customers, resources and a demo request. 9 pages.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "wireframe",
+      "website brief",
+      "design brief",
+      "site map",
+      "website planning",
+      "web design brief",
+      "page layout"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  },
+  {
+    "id": "qa-test-plan",
+    "title": "QA test plan",
+    "summary": "A test plan for a release or feature: what to test, how, in what order and what counts as ready.",
+    "area": "product",
+    "deliverable": "A test plan with scope, risks, test types, environments, entry and exit rules, test data needs, a schedule outline, roles and a list of areas to cover.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What is being tested?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "scope",
+        "label": "What is in and out of scope?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "platforms",
+        "label": "Platforms and browsers",
+        "type": "list",
+        "required": true,
+        "max": 12
+      },
+      {
+        "id": "team",
+        "label": "Who tests, and how many hours?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "release_date",
+        "label": "Release date",
+        "type": "text",
+        "required": false,
+        "max": 60
+      },
+      {
+        "id": "risks",
+        "label": "Known risks or past bugs",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "requirements",
+        "label": "Requirements or user stories",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste them; the plan covers these.",
+        "max": 15000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "The plan does not invent features, requirements or bug history.",
+        "weight": 5,
+        "pass_rule": "Every feature and risk named appears in the brief or is marked 'assumed, confirm'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "risk_based",
+        "text": "Testing effort follows risk.",
+        "weight": 5,
+        "pass_rule": "The plan ranks areas by risk using the brief, and gives more depth to the top 3.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "scope_clear",
+        "text": "Scope and exit rules are clear.",
+        "weight": 4,
+        "pass_rule": "In-scope and out-of-scope lists, entry criteria and exit criteria (with numbers such as 'no open critical bugs') are all present.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "covers_platforms",
+        "text": "The plan covers each platform listed.",
+        "weight": 3,
+        "pass_rule": "Each platform or browser in the brief appears in the environment table with what is tested on it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_resources",
+        "text": "The plan fits the team and date.",
+        "weight": 3,
+        "pass_rule": "Estimated test effort in hours is shown and is not more than the hours the team field allows, or the plan says what to cut.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a QA lead. Write a test plan for the product and scope below. Include objectives, in-scope and out-of-scope, risks ranked, test types, environments and platforms, test data, entry and exit criteria with measurable thresholds, roles, effort estimate against the team and date given, and a list of areas to cover. Use only facts in the brief and mark assumptions.",
+    "not_for": [
+      "Security or penetration testing of systems the buyer does not own",
+      "Compliance sign-off for medical, safety or financial systems",
+      "Invented defects or test results"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are releasing a new checkout flow for our Shopify Plus store in three weeks. Two testers part time. Chrome, Safari, iPhone, Android. Stories pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Mobile app for a car-sharing service: unlock by Bluetooth, payments, trip history. iOS and Android. Release in 6 weeks with one tester.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We are moving our hospital's staff rota tool to a new server. Need a test plan to make sure nothing breaks. Users: 400 staff, desktop browsers only.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A new B2B portal for invoice approval with roles (clerk, manager, finance). Integration with an ERP via API. Two QA engineers, 4 weeks.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "QA",
+      "test plan",
+      "quality assurance",
+      "software testing",
+      "release testing",
+      "UAT",
+      "test strategy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for QA planning work.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "qa-test-cases",
+    "title": "QA test cases",
+    "summary": "Step-by-step test cases for your feature, ready to run or paste into your test tool.",
+    "area": "product",
+    "deliverable": "A table of test cases with id, title, preconditions, steps, test data, expected result and priority, covering normal use, errors and edge cases, plus a CSV-ready version.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "feature",
+        "label": "Feature or requirements",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the user stories, spec or describe the flow.",
+        "max": 15000
+      },
+      {
+        "id": "features",
+        "label": "Number of features or flows",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 3.",
+        "max": 20
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Web",
+          "iOS",
+          "Android",
+          "Web and mobile",
+          "API",
+          "Desktop"
+        ]
+      },
+      {
+        "id": "roles",
+        "label": "User roles",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "rules",
+        "label": "Business rules and limits",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "tool",
+        "label": "Test tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Spreadsheet",
+          "Jira or Xray",
+          "TestRail",
+          "Notion",
+          "Other"
+        ]
+      },
+      {
+        "id": "style",
+        "label": "Case style",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Step by step",
+          "Given-When-Then"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Cases test only behaviour stated in the brief.",
+        "weight": 5,
+        "pass_rule": "Expected results come from the pasted requirements; guessed behaviour is marked 'confirm with product'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "traceable",
+        "text": "Each case traces to a requirement.",
+        "weight": 4,
+        "pass_rule": "Every case lists the requirement or rule it covers, and every requirement has at least one case.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "covers_negative",
+        "text": "Errors, limits and edge cases are included.",
+        "weight": 5,
+        "pass_rule": "For each feature, at least 40 percent of cases are negative, boundary or permission cases.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "runnable",
+        "text": "A tester can run each case without guessing.",
+        "weight": 5,
+        "pass_rule": "Each case has preconditions, numbered steps with concrete data and one expected result that can be seen.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "prioritised",
+        "text": "Cases are prioritised and importable.",
+        "weight": 2,
+        "pass_rule": "Each case has a priority, and a CSV block with the same columns is provided.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "features",
+        "unit": "feature",
+        "included": 3,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior QA engineer. Write test cases for the features below. For each case include id, title, requirement covered, preconditions, numbered steps with concrete test data, a single observable expected result and priority. Cover normal use, errors, boundaries and permissions, with at least 40 percent negative or edge cases. Use only behaviour stated in the brief, mark guesses, and add a CSV-ready version.",
+    "not_for": [
+      "Security attacks or exploit tests",
+      "Cases that need access to systems you do not own",
+      "Invented requirements or results",
+      "Safety-critical sign-off"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Test cases for login, password reset and two-factor login on our web app. Rules: 5 failed attempts lock for 15 minutes; reset links last 1 hour.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We are adding discount codes to checkout in our bakery shop. Rules: one code per order, percent or fixed, expiry dates, minimum spend. Web and mobile web.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "API test cases for a booking endpoint: create, update, cancel. Fields and rules are in the spec pasted below. We use Postman.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Expense claims in our finance app. Roles: employee, manager, finance. Claims over $500 need two approvals. Test cases for submit, approve, reject, and edit after rejection.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "test cases",
+      "QA",
+      "manual testing",
+      "test scripts",
+      "test scenarios",
+      "acceptance testing",
+      "TestRail"
+    ],
+    "demand_sources": [
+      {
+        "note": "Closest rate page we could open: YunoJuno shows freelance product managers average $77 an hour. We used it as a proxy for QA test case writing.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/product-manager"
+      }
+    ]
+  },
+  {
+    "id": "automation-workflow-spec",
+    "title": "Automation workflow spec (Zapier or Make)",
+    "summary": "A step-by-step build spec for an automation in Zapier or Make: triggers, steps, field mapping, errors and tests.",
+    "area": "product",
+    "deliverable": "A build spec with the goal, trigger, each step with app and action, field mapping tables, filters and branches, error handling, a test plan and an estimate of tasks or operations used per month.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "process",
+        "label": "What should the automation do?",
+        "type": "longtext",
+        "required": true,
+        "help": "Describe the process today, step by step.",
+        "max": 3000
+      },
+      {
+        "id": "tool",
+        "label": "Automation tool",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Zapier",
+          "Make",
+          "n8n",
+          "Not decided"
+        ]
+      },
+      {
+        "id": "apps",
+        "label": "Apps involved",
+        "type": "list",
+        "required": true,
+        "max": 10
+      },
+      {
+        "id": "volume",
+        "label": "Runs per month",
+        "type": "number",
+        "required": false,
+        "help": "Helps estimate cost.",
+        "max": 1000000
+      },
+      {
+        "id": "data",
+        "label": "Fields and sample data",
+        "type": "longtext",
+        "required": false,
+        "help": "Example records or form fields.",
+        "max": 5000
+      },
+      {
+        "id": "rules",
+        "label": "Rules and exceptions",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "plan",
+        "label": "Your plan level for each app",
+        "type": "text",
+        "required": false,
+        "help": "Some triggers need paid plans.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "The spec uses only apps, actions and fields that exist or were given.",
+        "weight": 5,
+        "pass_rule": "It names only triggers and actions that you can reasonably expect in the chosen tool and marks any it is unsure of as 'verify in the tool'; no field is made up.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable_steps",
+        "text": "Each step can be built as written.",
+        "weight": 5,
+        "pass_rule": "Every step names the app, the trigger or action, and the settings, with a mapping table from source field to target field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "handles_failure",
+        "text": "Failures and odd data are handled.",
+        "weight": 4,
+        "pass_rule": "The spec covers missing fields, duplicates and app errors, with what happens and who is told.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tested",
+        "text": "A test plan comes with it.",
+        "weight": 3,
+        "pass_rule": "It lists at least 5 test records including a normal one, an empty one and a duplicate, with the expected result for each.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "cost_view",
+        "text": "Likely usage and cost are estimated.",
+        "weight": 2,
+        "pass_rule": "It estimates tasks or operations per run and per month, and states that plan pricing must be checked.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an automation consultant. Write a build spec for the process below in the tool named. Give the goal, the trigger, each step with app, action and settings, field mapping tables, filters or branches, error handling, a test plan with sample records and an estimate of tasks or operations per month. Use only apps and fields given, and mark anything you cannot be sure the tool supports as 'verify in the tool'.",
+    "not_for": [
+      "Automations that scrape or message people without consent",
+      "Workflows that bypass security or app terms",
+      "Handling payment card data or health records without the buyer's compliance review",
+      "Building the automation itself (this is the spec)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "When someone fills in my Typeform enquiry, I want it added to a Google Sheet, a deal created in HubSpot and a Slack message sent to sales. Zapier. About 120 enquiries a month.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Shopify orders over $200 should create a task in Asana for a thank-you card and add the customer to a Mailchimp VIP list. Make. About 300 orders a month.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our recruiting team gets CVs by email. We want them saved in Google Drive, logged in Airtable and an acknowledgement sent. 400 emails a month.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "When a client signs a PandaDoc contract, create a project in Notion, an invoice in Xero, and a welcome email from Gmail. We sign about 15 a month.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "Zapier",
+      "Make",
+      "Integromat",
+      "automation",
+      "workflow automation",
+      "no-code",
+      "n8n"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance analytics consultants average $68 an hour. Specs of about 2 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/analytics-consultant"
+      }
+    ]
+  },
+  {
+    "id": "personas-journey-map",
+    "title": "User personas and journey map",
+    "summary": "Clear user personas and a journey map built from your customer facts, showing needs, pain points and chances to improve.",
+    "area": "product",
+    "deliverable": "3 to 4 personas (goals, needs, pain points, quotes marked as examples) and a journey map in a table with stages, actions, feelings, pain points and ideas, plus facts to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 36,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What is the product or service?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "customers",
+        "label": "What do you know about your customers?",
+        "type": "longtext",
+        "required": true,
+        "help": "Facts from sales, support, surveys, interviews. The more real facts, the better.",
+        "max": 10000
+      },
+      {
+        "id": "journey",
+        "label": "Which journey?",
+        "type": "text",
+        "required": true,
+        "help": "For example: from first visit to first order.",
+        "max": 300
+      },
+      {
+        "id": "personas",
+        "label": "Number of personas",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 3.",
+        "max": 6
+      },
+      {
+        "id": "channels",
+        "label": "Where do customers meet you?",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "pain",
+        "label": "Known pain points",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Personas and quotes do not present invented data as real.",
+        "weight": 5,
+        "pass_rule": "Every fact about a persona comes from the brief; invented names and example quotes are labelled 'example', and no statistics appear unless supplied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "The report says what it is built from and what it could not check.",
+        "weight": 4,
+        "pass_rule": "A short section says the work uses the buyer's inputs plus model knowledge with no live web access, and lists at least 3 specific items the buyer should verify.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "distinct_personas",
+        "text": "Personas differ in ways that change what you do.",
+        "weight": 4,
+        "pass_rule": "Each persona has different goals and at least one different need that leads to a different action, shown in the table.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "journey_stages",
+        "text": "The journey map has clear stages and moments of truth.",
+        "weight": 4,
+        "pass_rule": "It has 5 to 8 stages in order, each with actions, a pain point and an idea, and marks the 2 moments that matter most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ideas_actionable",
+        "text": "Ideas are specific to this business.",
+        "weight": 3,
+        "pass_rule": "At least 6 improvement ideas each name the stage and persona and use details from the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "personas",
+        "unit": "persona",
+        "included": 3,
+        "per_unit_usd": 30
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a UX researcher. From the customer facts below, write 3 to 4 distinct personas with goals, needs, pain points and behaviour, and a journey map for the stated journey as a table of stages, actions, thoughts and feelings, pain points and ideas. Base everything on the facts supplied, label invented names and example quotes as examples, never invent statistics, and list what to confirm with real customers.",
+    "not_for": [
+      "Invented statistics or fake research",
+      "Stereotypes based on race, religion, gender or age without evidence",
+      "Personas used to target vulnerable people unfairly"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We run a small online driving theory course. Learners are 17 to 25, many failing the test twice. I pasted support emails and survey notes. Persona and journey from first visit to passing.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Gym with 600 members. Staff say there are newcomers, regulars and people who stop coming. I have attendance patterns and exit survey notes. Map the first 90 days.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "B2B payroll software for small restaurants. Buyers are owners and bookkeepers. Notes from 8 sales calls are pasted. Journey from first demo to first payroll run.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A hospital's outpatient clinic wants to improve the journey from referral to first appointment. Patient comment cards and staff notes are pasted. Do not use any names.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "personas",
+      "user persona",
+      "customer journey",
+      "journey map",
+      "customer journey map",
+      "user research",
+      "experience map"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno shows freelance UX designers average $70 an hour. Reviews, briefs and copy of 1 to 3 hours are priced a little under that.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      }
+    ]
+  }
+]

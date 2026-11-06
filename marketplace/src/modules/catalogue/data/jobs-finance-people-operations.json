@@ -1,0 +1,4062 @@
+[
+  {
+    "id": "bank-transaction-categorisation",
+    "title": "Bank transaction categorisation",
+    "summary": "Your pasted bank CSV sorted into clear spending and income categories, with unclear lines flagged for you.",
+    "area": "finance",
+    "deliverable": "A table of every transaction with a category, a short reason for unclear ones, category totals that match the CSV, and a list of lines to check with your accountant.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "csv",
+        "label": "Bank CSV (pasted)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the rows with the header line. Remove account numbers first.",
+        "max": 60000
+      },
+      {
+        "id": "transaction_count",
+        "label": "Number of transactions",
+        "type": "number",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "business_type",
+        "label": "What does your business do?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "categories",
+        "label": "Categories you already use",
+        "type": "list",
+        "required": false,
+        "help": "Your accountant's chart of accounts, if you have one.",
+        "max": 60
+      },
+      {
+        "id": "period",
+        "label": "Period covered",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "known_vendors",
+        "label": "Notes on vendors",
+        "type": "longtext",
+        "required": false,
+        "help": "For example: Acme Ltd is our main supplier, and Zed is a personal expense.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "No transaction, amount, date or vendor appears that is not in the pasted CSV.",
+        "weight": 5,
+        "pass_rule": "Every row in the output matches a row in the CSV by date, description and amount; no extra rows or changed amounts.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "every_row_categorised",
+        "text": "Every transaction has a category or is flagged as unclear.",
+        "weight": 4,
+        "pass_rule": "The output row count equals the CSV row count; no row has an empty category.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "totals_add_up",
+        "text": "Category totals add up to the CSV totals.",
+        "weight": 5,
+        "pass_rule": "The sum of category totals for money in and money out equals the sums of the CSV columns, and the draft shows both sums.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_business",
+        "text": "Categories suit this kind of business and use the buyer's own list when given.",
+        "weight": 3,
+        "pass_rule": "If a category list is given, every category used comes from it; otherwise the categories are common small-business ones that fit the business type.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "unclear_flagged",
+        "text": "Doubtful lines are flagged with a short reason instead of guessed.",
+        "weight": 3,
+        "pass_rule": "Vague lines (cash withdrawals, transfers, unknown payees) are marked unclear with one sentence on why and a question to ask.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "transaction_count",
+        "unit": "transaction",
+        "included": 300,
+        "per_unit_usd": 0.08
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced bookkeeper. Categorise every transaction in the bank CSV below for a small business. Use the categories I list if I give any, otherwise common small-business categories. Output a markdown table with date, description, amount, category and a short note, then category totals that add up to the CSV totals. Flag anything unclear instead of guessing. Do not invent transactions. This is a working document for me and my accountant, not tax advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Bank logins, card numbers or account numbers pasted into the brief",
+      "Finished accounts or filed returns"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Here are 3 months of our bank CSV, about 240 lines. We run a two-chair barbershop in Leeds. I need each line sorted so my accountant can finish the year end quickly. Supplies, rent, card fees, wages and owner drawings are the main ones.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Coffee roaster selling online and at two markets. 410 transactions from our business account for last quarter. We use Square and Stripe, so deposits are lumpy. Please sort them into categories and flag anything odd.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our landscaping company paid a lot of fuel, subcontractors and equipment hire in June. About 180 lines. Some payments are to one person for both materials and labour. Flag those for me.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Small online tutoring business. 120 lines from my current account that mix business and personal spending. I need business items sorted and personal ones marked so I can separate them.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "bookkeeping",
+      "categorise transactions",
+      "bank statement",
+      "csv",
+      "expense categories",
+      "chart of accounts",
+      "reconcile"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "monthly-financial-summary",
+    "title": "Monthly financial summary",
+    "summary": "A plain-language summary of last month's figures that shows what changed and what to watch.",
+    "area": "finance",
+    "deliverable": "A one to two page summary with a results table, month-on-month and budget comparisons, the three biggest changes explained, cash position, and questions to raise with your accountant.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "figures",
+        "label": "This month's figures",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste your profit and loss, balance sheet or a simple list of income, costs and cash.",
+        "max": 20000
+      },
+      {
+        "id": "prior_figures",
+        "label": "Last month or last year's figures",
+        "type": "longtext",
+        "required": false,
+        "max": 20000
+      },
+      {
+        "id": "budget",
+        "label": "Budget or targets",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "comparison_months",
+        "label": "Months to compare",
+        "type": "number",
+        "required": false,
+        "help": "Months of history you are pasting in.",
+        "max": 12
+      },
+      {
+        "id": "business_type",
+        "label": "What does your business do?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "audience",
+        "label": "Who reads this?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Owner only",
+          "Business partners",
+          "Bank or lender",
+          "Board"
+        ]
+      },
+      {
+        "id": "events",
+        "label": "Things that happened this month",
+        "type": "longtext",
+        "required": false,
+        "help": "A big order, a price change, a late payment.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_figures",
+        "text": "Every figure comes from the pasted data or is worked out from it.",
+        "weight": 5,
+        "pass_rule": "Each number in the summary appears in the brief or is a stated calculation from it; no outside benchmarks or made-up causes presented as fact.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "arithmetic_correct",
+        "text": "Totals, differences and percentages are right.",
+        "weight": 5,
+        "pass_rule": "Spot-check every table: sums, differences and percent changes recompute correctly from the brief figures to within rounding.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_headline",
+        "text": "The first lines say how the month went in plain words.",
+        "weight": 4,
+        "pass_rule": "The opening gives profit or loss, cash movement and one-line verdict in under 60 words, without jargon.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "changes_explained",
+        "text": "The biggest changes are named, with causes only where the brief supports them.",
+        "weight": 3,
+        "pass_rule": "At least three biggest movements are listed; any cause given is in the brief or marked as a question to confirm.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "next_questions",
+        "text": "It ends with clear questions or watch items for the owner and accountant.",
+        "weight": 3,
+        "pass_rule": "A short list of 3 to 6 items, each tied to a number in the summary.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "comparison_months",
+        "unit": "extra month",
+        "included": 2,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a fractional finance lead writing for a small business owner. Using only the figures below, write a monthly financial summary: a short headline on how the month went, a results table with month-on-month and budget comparisons where data exists, the three biggest changes with likely causes only if the brief supports them, the cash position and a list of questions for the owner and accountant. Check that every total and percentage is correct. Do not invent numbers. This is not tax or accounting advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Preparing figures from scratch without source data",
+      "Statements presented as audited or reviewed"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Here is May's profit and loss for our 12-seat cafe in Portland: sales $38,400, cost of goods $13,100, wages $15,800, rent $4,200, other $3,900. April sales were $35,100. Please summarise for me and my business partner.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We run a small web agency. March invoiced $52k, costs $41k, but cash in the bank fell by $9k because two clients paid late. I need a summary for our monthly partner call. Figures attached below.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Dental practice with two chairs. Monthly figures: patient income $71,500, lab fees $9,800, staff $34,000, rent and utilities $8,900, supplies $6,100. Last year same month income was $64,300. Target was $70,000.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Subscription box company, 1,900 subscribers. Revenue $61k this month vs $58k last, but returns rose. I need a plain summary for our bank lender with the figures I paste.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "monthly report",
+      "management accounts",
+      "financial summary",
+      "profit and loss",
+      "p&l commentary",
+      "cash position",
+      "kpi report"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "thirteen-week-cash-flow-forecast",
+    "title": "13-week cash flow forecast",
+    "summary": "A week-by-week forecast of cash coming in and going out for the next 13 weeks, with the low points marked.",
+    "area": "finance",
+    "deliverable": "A 13-week table of opening cash, receipts, payments and closing cash, the assumptions behind each line, the weeks that look tight, and options to close any gap.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "opening_cash",
+        "label": "Cash in the bank today",
+        "type": "number",
+        "required": true,
+        "max": 100000000
+      },
+      {
+        "id": "receipts",
+        "label": "Money you expect in",
+        "type": "longtext",
+        "required": true,
+        "help": "Unpaid invoices with due dates, regular sales, loans, other money in.",
+        "max": 10000
+      },
+      {
+        "id": "payments",
+        "label": "Money going out",
+        "type": "longtext",
+        "required": true,
+        "help": "Rent, wages, suppliers, loan payments, tax bills already set by your accountant.",
+        "max": 10000
+      },
+      {
+        "id": "recurring_lines",
+        "label": "Number of income and cost lines",
+        "type": "number",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "start_date",
+        "label": "First week starts on",
+        "type": "text",
+        "required": true,
+        "max": 50
+      },
+      {
+        "id": "minimum_cash",
+        "label": "Cash level you never want to go below",
+        "type": "number",
+        "required": false,
+        "max": 100000000
+      },
+      {
+        "id": "risks",
+        "label": "What could go wrong",
+        "type": "longtext",
+        "required": false,
+        "help": "Slow payers, a seasonal dip, a big order.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_cash",
+        "text": "Every amount and date comes from the brief or is a stated assumption.",
+        "weight": 5,
+        "pass_rule": "Each receipt and payment line traces to the brief; anything assumed is labelled as an assumption with its reason.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "balances_roll",
+        "text": "Opening plus receipts minus payments equals closing cash every week, and each opening equals the last closing.",
+        "weight": 5,
+        "pass_rule": "Recompute all 13 weeks; closing cash and carry-forward match, and totals of rows equal totals of columns.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "thirteen_weeks",
+        "text": "The table covers exactly 13 consecutive weeks from the start date.",
+        "weight": 3,
+        "pass_rule": "13 columns or rows with correct week-start dates, no gaps.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tight_weeks",
+        "text": "Weeks below the minimum cash level are marked clearly.",
+        "weight": 4,
+        "pass_rule": "Any week where closing cash is below the minimum, or below zero if none given, is flagged with the size of the gap.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "options_practical",
+        "text": "Options to fix a gap are practical and tied to the figures.",
+        "weight": 3,
+        "pass_rule": "At least two options (chase invoice X, delay payment Y) name a real line from the brief and its effect on the low week.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 499,
+      "size": {
+        "field": "recurring_lines",
+        "unit": "extra line",
+        "included": 20,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a fractional CFO. Build a 13-week cash flow forecast from the figures below, as a markdown table with one row per week: opening cash, receipts by source, payments by type, net movement and closing cash. List the assumptions behind each line, flag any week where cash falls below the minimum I set, and suggest practical ways to close any gap. Make sure each week opens with the prior week's close and every total adds up. Use only the figures I give. Not tax or investment advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Investment advice or promises of returns",
+      "Forecasts to raise money from investors presented as audited",
+      "Promises that the forecast will come true"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 9-person marketing studio. Cash today is $46,000. Payroll is $28k on the 15th and 30th. Rent $6,500 on the 1st. Seven invoices out totalling $61k, due between 10 and 40 days from now. I want to know if we get tight in the next quarter.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Furniture maker, seasonal. We have $18,200 in the bank, a loan payment of $1,400 a month, timber supplier bills averaging $7k every other week, and customer deposits that come in lumps. Please build the 13-week view and flag the low weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Plumbing company with 6 vans. Opening cash $31,500. Fuel and van leases about $9k a month, wages $19k every two weeks. We bill commercial clients at 45 days and they often pay late. Help me see when a bridge loan might be needed.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Online fitness studio. $12,000 cash, membership income about $22k a month paid by card, coaches paid weekly $4k, software $2,100 a month. I plan to buy $15k of camera gear in week 6. Can I afford it?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "cash flow forecast",
+      "13 week cash flow",
+      "cash runway",
+      "liquidity forecast",
+      "cash planning",
+      "weekly forecast",
+      "cash gap"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "annual-budget-plan",
+    "title": "Annual budget",
+    "summary": "A month-by-month budget for the year built from your past figures and plans.",
+    "area": "finance",
+    "deliverable": "A 12-month budget table of income and costs, the assumptions behind each line, a summary of profit by quarter, and a simple way to compare actuals to budget each month.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "history",
+        "label": "Last year's income and costs",
+        "type": "longtext",
+        "required": true,
+        "help": "Monthly totals by line if you have them, otherwise yearly totals.",
+        "max": 20000
+      },
+      {
+        "id": "plans",
+        "label": "Plans for the year",
+        "type": "longtext",
+        "required": true,
+        "help": "New hires, price changes, new products, big purchases.",
+        "max": 4000
+      },
+      {
+        "id": "budget_lines",
+        "label": "Number of budget lines",
+        "type": "number",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "growth_target",
+        "label": "Sales target",
+        "type": "text",
+        "required": false,
+        "help": "A figure or a percent increase.",
+        "max": 200
+      },
+      {
+        "id": "year_start",
+        "label": "Budget year starts",
+        "type": "text",
+        "required": true,
+        "max": 50
+      },
+      {
+        "id": "seasonality",
+        "label": "Busy and quiet months",
+        "type": "text",
+        "required": false,
+        "max": 500
+      },
+      {
+        "id": "currency",
+        "label": "Currency",
+        "type": "text",
+        "required": false,
+        "max": 20
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_baseline",
+        "text": "Starting figures come from the brief; every change is an explained assumption.",
+        "weight": 5,
+        "pass_rule": "Each line's base value matches the brief; each increase or decrease is labelled with its reason and a number from the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "totals_correct",
+        "text": "Monthly, quarterly and yearly totals add up.",
+        "weight": 5,
+        "pass_rule": "Recompute every column and row total, plus profit as income minus costs; all match.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "assumptions_visible",
+        "text": "Each major line shows how it was built.",
+        "weight": 4,
+        "pass_rule": "Each line above 10% of total income or costs has a one-line assumption stated beside it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "seasonality_reflected",
+        "text": "Busy and quiet months show in the numbers.",
+        "weight": 3,
+        "pass_rule": "Monthly income pattern follows the history or seasonality note, not a flat split, unless the brief shows a flat pattern.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tracking_method",
+        "text": "It gives a simple way to compare actuals to budget.",
+        "weight": 3,
+        "pass_rule": "Includes an actual and variance column layout or a short monthly review checklist.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "budget_lines",
+        "unit": "extra line",
+        "included": 25,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a financial planner for small businesses. Build a 12-month budget from the history and plans below. Give a markdown table of income and cost lines by month with quarterly and yearly totals, a profit line, a one-line assumption for each major line, and a simple actual-versus-budget layout for monthly tracking. Reflect seasonality when the history shows it. Use only the figures I provide and label every assumption. Check that all totals add up. Not tax advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Investment advice or promises of returns",
+      "Budgets for public bodies or grant reporting that need a funder's format"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our veterinary clinic did $812k last year. We plan to hire a second vet in April at $95k and raise prices 4% in July. I have yearly totals only for rent, drugs and wages. Please build a monthly budget for next year.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Independent bookshop. Last year sales were $240k, with 35% in November and December. Cost of goods runs 58%. Rent is $3,100 a month. We want to add an events programme and budget $6k for it.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Craft brewery planning a new canning line costing $48,000, financed over 4 years. Sales last year $690k. Please budget the year including the loan repayments.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Freelance design collective with 4 members. Revenue last year $310k. We want a 10% rise, a shared tool budget and a reserve fund of 3 months of costs. Build the budget.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "budget",
+      "annual budget",
+      "operating budget",
+      "forecast",
+      "budget template",
+      "financial plan",
+      "budget vs actual"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "pricing-model",
+    "title": "Pricing model and options",
+    "summary": "A worked pricing model showing costs, margins and two or three price options for your product or service.",
+    "area": "finance",
+    "deliverable": "A cost breakdown, margin and break-even table for each price option, a recommended option with reasons, and notes on what to test first.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "offer",
+        "label": "What are you pricing?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "costs",
+        "label": "Your costs",
+        "type": "longtext",
+        "required": true,
+        "help": "Materials, labour hours and pay rate, software, fees, shipping, overhead share.",
+        "max": 6000
+      },
+      {
+        "id": "products",
+        "label": "Number of products or packages",
+        "type": "number",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "current_price",
+        "label": "Current price",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "competitors",
+        "label": "Competitor prices you know",
+        "type": "list",
+        "required": false,
+        "help": "Only prices you have seen yourself.",
+        "max": 15
+      },
+      {
+        "id": "goal",
+        "label": "Main goal",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Higher profit per sale",
+          "More customers",
+          "Cover rising costs",
+          "Launch a new product"
+        ]
+      },
+      {
+        "id": "volume",
+        "label": "Sales per month",
+        "type": "number",
+        "required": false,
+        "max": 10000000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_market_data",
+        "text": "No competitor prices, market rates or customer data appear that are not in the brief.",
+        "weight": 5,
+        "pass_rule": "Every competitor price or market figure matches the brief; unknowns are listed as things to check.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "math_correct",
+        "text": "Costs, margins and break-even figures are calculated correctly.",
+        "weight": 5,
+        "pass_rule": "Recompute margin percent, profit per unit and break-even volume for each option from the brief costs; all match within rounding.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "options_distinct",
+        "text": "Two or three price options differ in a way the owner can understand.",
+        "weight": 3,
+        "pass_rule": "Each option has a clear idea behind it (for example, cost-plus, value-based, tiered) and a different price.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "recommendation_reasoned",
+        "text": "One option is recommended with reasons tied to the buyer's goal.",
+        "weight": 4,
+        "pass_rule": "The recommendation names the goal and two reasons using figures from the model.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "test_plan",
+        "text": "It suggests a small, safe way to test the price.",
+        "weight": 3,
+        "pass_rule": "A short test plan with what to change, how long, and what result would count as a win.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "products",
+        "unit": "extra product",
+        "included": 3,
+        "per_unit_usd": 30
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a pricing consultant for small businesses. From the details below, build a pricing model: a full cost breakdown per unit, then two or three price options with margin, profit per unit and break-even volume for each, and a recommended option tied to my goal. Do not invent competitor prices or customer data; list unknowns as things to check. Recalculate all margins and break-even figures before answering. Suggest a small test I can run. Not financial or legal advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Price-fixing with competitors or advice on breaking pricing laws",
+      "Guarantees of sales or profit"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "I make hand-poured candles. Materials plus jar cost $4.10, labour about 20 minutes at $18/hour, packaging $0.90, and Etsy takes about 10%. I sell at $24. Should I raise it? I sell around 300 a month.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We are a two-person bookkeeping firm charging $350 a month per client for up to 100 transactions. Our time per client averages 5 hours. I want three package tiers and to know the best price for each.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Launching a meal-prep delivery for office teams in Austin. Food cost per meal $4.60, packing $0.70, delivery $2.10 per drop, 10 meals per drop. What price per meal and what minimum order?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Driving instructor with a 6-car school. Car costs, insurance and instructor pay come to about $31 per lesson hour. We charge $55. Competitors charge $50 to $70 as far as I can tell. Should we sell lesson bundles?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "pricing strategy",
+      "price model",
+      "margin",
+      "break even",
+      "price increase",
+      "package pricing",
+      "unit economics"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "investor-update",
+    "title": "Investor update",
+    "summary": "A clear monthly or quarterly update for your investors, advisers or lenders, built from your own numbers.",
+    "area": "finance",
+    "deliverable": "A one to two page update with headline results, key numbers table, wins, problems, cash and runway, and specific asks, ready to paste into an email.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "period",
+        "label": "Period covered",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "metrics",
+        "label": "Your numbers",
+        "type": "longtext",
+        "required": true,
+        "help": "Revenue, customers, cash, costs, plus last period for comparison.",
+        "max": 8000
+      },
+      {
+        "id": "highlights",
+        "label": "What went well",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "problems",
+        "label": "What went wrong or is hard",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "asks",
+        "label": "What you want help with",
+        "type": "list",
+        "required": false,
+        "help": "Introductions, hires, advice.",
+        "max": 8
+      },
+      {
+        "id": "readers",
+        "label": "Who reads it?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Angel investors",
+          "Venture investors",
+          "Family and friends",
+          "Lender or bank",
+          "Advisory board"
+        ]
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Direct and brief",
+          "Warm and personal",
+          "Formal"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_results",
+        "text": "No figure, customer name, deal or milestone appears that is not in the brief.",
+        "weight": 5,
+        "pass_rule": "Every number, name and claim in the update matches the brief; nothing is rounded up or implied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "numbers_consistent",
+        "text": "Comparisons, growth rates and runway are calculated correctly.",
+        "weight": 5,
+        "pass_rule": "Recompute every percent change and any runway or burn figure from the brief; all match within rounding.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "bad_news_honest",
+        "text": "Problems in the brief appear plainly, not buried.",
+        "weight": 4,
+        "pass_rule": "Each problem in the brief is named in its own line or section with what is being done; none is missing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "headline_first",
+        "text": "The first three lines give the main result and the main worry.",
+        "weight": 3,
+        "pass_rule": "The opening states one result with a number and one concern in under 70 words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "specific_asks",
+        "text": "Asks are specific and easy to act on.",
+        "weight": 3,
+        "pass_rule": "Each ask names who or what is needed and by when; no vague asks like 'any help'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are the founder of a small company writing an investor update. Using only the information below, write a concise update: a headline paragraph, a key numbers table with change from last period, wins, problems stated honestly, cash and runway, and specific asks. Calculate all percentages and runway carefully. Do not invent customers, numbers or milestones. Match the tone requested. This is a business update, not investment advice and not an offer of securities.",
+    "not_for": [
+      "Investment advice or promises of returns",
+      "Offers or promotion of securities, or forward-looking promises of returns",
+      "Hiding or spinning material problems from investors",
+      "Tax filing, tax advice, audit work or any other regulated financial advice"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 6-person SaaS for plumbers. September: MRR $41.2k (August $37.8k), 14 new customers, 3 churned, cash $212k, burn $38k a month. We lost our best salesperson. Need the update for our 5 angel investors. Ask: introductions to trade associations.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Q3 update for our advisory board. Our community bakery cooperative opened a second site. Sales were $182k vs $161k in Q2. Opening cost $48k, over budget by $9k because of an oven repair. We want advice on staffing.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Hardware startup making soil sensors. Shipped 220 units this month, up from 150. Component price rose 12%, gross margin fell from 41% to 36%. Cash $96k, burn $27k. Investors are three friends and a family member.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Bank lender update for our fish restaurant. Revenue for the quarter $284k (flat), cost of food up 8%, one chef left. Loan covenant needs us to keep cash above $40k. Cash is $52k. Please write the quarterly note.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "investor update",
+      "shareholder update",
+      "monthly update",
+      "lender update",
+      "startup update",
+      "founder update",
+      "board update"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "financial-model-writeup",
+    "title": "Financial model write-up",
+    "summary": "A plain-language explanation of your spreadsheet model: what it assumes, what it shows and where it is weak.",
+    "area": "finance",
+    "deliverable": "A guide to the model with assumptions table, how the numbers flow, results in plain words, sensitivity notes, known limits and open questions to settle with your accountant.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "model_contents",
+        "label": "Model contents",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the key tabs as text or tables: assumptions, income, costs, outputs.",
+        "max": 40000
+      },
+      {
+        "id": "model_purpose",
+        "label": "What is the model for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Fundraising",
+          "Loan application",
+          "Internal planning",
+          "Pricing decision",
+          "Buying or selling a business"
+        ]
+      },
+      {
+        "id": "model_tabs",
+        "label": "Number of tabs",
+        "type": "number",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "readers",
+        "label": "Who will read the write-up?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "known_issues",
+        "label": "Parts you are unsure about",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "period",
+        "label": "Years or months modelled",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_assumptions",
+        "text": "Every assumption and result quoted comes from the pasted model.",
+        "weight": 5,
+        "pass_rule": "Each number in the write-up matches a cell or line in the pasted model; no outside market data added as fact.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "flow_checks",
+        "text": "It checks the model's own arithmetic and reports any breaks.",
+        "weight": 5,
+        "pass_rule": "The draft recomputes at least the totals, profit lines and any balance or cash roll-forward, and states each break with the location.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "assumptions_table",
+        "text": "Key assumptions are listed in one table with their effect.",
+        "weight": 4,
+        "pass_rule": "A table of at least the five assumptions with biggest effect, each with value and what it drives.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_results",
+        "text": "Results are explained so a non-accountant understands them.",
+        "weight": 3,
+        "pass_rule": "No undefined jargon; each key result has one plain sentence on what it means.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "limits_stated",
+        "text": "Weak spots and open questions are stated.",
+        "weight": 3,
+        "pass_rule": "At least three limits or questions tied to real lines in the model, including how sensitive results are to the top assumption.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 399,
+      "size": {
+        "field": "model_tabs",
+        "unit": "extra tab",
+        "included": 3,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a financial analyst. Read the spreadsheet model I pasted and write a plain-language guide for the reader I name. Include the purpose, a table of key assumptions, how the numbers flow between parts, the main results in plain words, which assumptions the results are most sensitive to, any arithmetic errors or inconsistencies you find, and open questions. Quote only numbers in the model. Do not invent market data. This is a working document, not investment, tax or audit advice.",
+    "not_for": [
+      "Investment advice or promises of returns",
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Building the model itself or changing its numbers",
+      "Opinions that a model is accurate or audited"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We built a 3-year model for a bank loan to buy a second coffee roaster. Tabs: sales, costs, loan schedule, cash. I want a write-up the loan officer can read in ten minutes. Model text pasted below.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Seed-stage app. Our model has user growth, conversion, costs and a 24-month cash forecast. A potential investor asked us to 'walk through the assumptions'. Please write the walk-through. I worry the churn assumption is too low.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Family manufacturing firm considering selling. Our accountant made a 5-year projection and I can't follow it. Explain it in plain words for the three siblings who own it.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Pricing model for our new training course: three price tiers, student numbers and costs. I need a write-up for my business partner who dislikes spreadsheets.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "financial model",
+      "model documentation",
+      "assumptions",
+      "projection",
+      "explain spreadsheet",
+      "forecast notes",
+      "model review"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "collections-email-sequence",
+    "title": "Late payment email sequence",
+    "summary": "A set of polite, firm emails that chase late invoices from the first reminder to the final notice.",
+    "area": "finance",
+    "deliverable": "Four to six emails with subject lines and send timing, a short phone script, and a plain checklist for when to stop and ask a professional.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "What does your business sell?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "terms",
+        "label": "Your payment terms",
+        "type": "text",
+        "required": true,
+        "help": "For example: net 30, 50% upfront.",
+        "max": 300
+      },
+      {
+        "id": "customer_type",
+        "label": "Who are you chasing?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Business customers",
+          "Consumers",
+          "Both"
+        ]
+      },
+      {
+        "id": "late_fee",
+        "label": "Late fee or interest you may charge",
+        "type": "text",
+        "required": false,
+        "help": "Only if it is in your contract.",
+        "max": 300
+      },
+      {
+        "id": "relationship",
+        "label": "How much do you want to keep the customer?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Very much",
+          "Somewhat",
+          "Not important"
+        ]
+      },
+      {
+        "id": "payment_link",
+        "label": "How can they pay?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "sender",
+        "label": "Who signs the emails?",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Friendly",
+          "Neutral",
+          "Firm"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_terms",
+        "text": "No fees, dates, legal threats or contract terms appear that are not in the brief.",
+        "weight": 5,
+        "pass_rule": "Every fee, interest rate, date and consequence named in the emails is in the brief; no references to laws, courts or credit reporting unless the brief states them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "escalating_tone",
+        "text": "Tone moves from friendly to firm across the sequence without insulting the customer.",
+        "weight": 4,
+        "pass_rule": "Email 1 is courteous and assumes an oversight; the last is clear about next steps; no insults, shaming or threats.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_ask",
+        "text": "Each email states what is owed, by when and how to pay.",
+        "weight": 4,
+        "pass_rule": "Every email names a placeholder for invoice number, amount and due date, and one clear action.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "timing_given",
+        "text": "Send timing is given for each email.",
+        "weight": 3,
+        "pass_rule": "Each email shows the days relative to the due date.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "stop_point",
+        "text": "It says when to stop emailing and get professional help.",
+        "weight": 3,
+        "pass_rule": "A checklist names points such as dispute, bankruptcy notice or amounts above a size, and points the reader to a lawyer or collections professional.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 149,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an accounts receivable specialist. Write a sequence of 4 to 6 emails for a small business to chase a late invoice, from a friendly first reminder to a firm final notice. Include subject lines, send timing in days from the due date, placeholders for invoice number, amount and due date, and a short phone script. Use only the payment terms and fees I give. Do not threaten legal action or add fees I did not state. Keep it polite. Add a note on when to get professional help. This is not legal advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Threats, harassment or false claims of legal action",
+      "Debt collection for consumers on behalf of others",
+      "Hiding the real amount owed"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a freelance video editing studio. Terms are net 15. A corporate client owes us $4,800, now 12 days late. We want to keep working with them. Need a gentle sequence that gets firmer.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our cleaning company bills offices monthly, net 30. Three clients are always late. We charge a 1.5% monthly late fee in our contract. Please write emails that use it politely.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "I run an after-school music school. Parents pay by term. Some haven't paid and the term started 3 weeks ago. Write emails that are kind but clear. Pay link is on our website.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Wholesale bakery supplying cafes. Invoices are net 14. One cafe owes $2,300 and has stopped replying. We want to keep them but need the money. Include a call script.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "late payment",
+      "invoice reminder",
+      "dunning",
+      "collections",
+      "overdue invoice",
+      "chase payment",
+      "payment reminder email"
+    ],
+    "demand_sources": [
+      {
+        "note": "Fractional CFO pricing guide: $2,000 to $5,000 a month for small businesses, with a 13-week cash forecast and monthly reporting package described as standard deliverables.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "expense-policy",
+    "title": "Expense policy",
+    "summary": "A plain expense policy that tells staff what they can claim, how to claim it and who approves.",
+    "area": "finance",
+    "deliverable": "A two to four page policy with covered and not-covered items, limits, approval steps, receipt rules, a claim form outline and a one-page staff summary.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "Size, locations, how staff work.",
+        "max": 1500
+      },
+      {
+        "id": "team_size",
+        "label": "Number of staff",
+        "type": "number",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "expense_types",
+        "label": "Expenses staff have",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Travel",
+          "Meals",
+          "Hotels",
+          "Software",
+          "Home office",
+          "Client gifts",
+          "Training",
+          "Phone and internet",
+          "Mileage"
+        ]
+      },
+      {
+        "id": "limits",
+        "label": "Limits you want",
+        "type": "longtext",
+        "required": false,
+        "help": "Daily meal limit, travel class, approval above a set amount.",
+        "max": 2000
+      },
+      {
+        "id": "approvers",
+        "label": "Who approves claims?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "payback_time",
+        "label": "How fast do you pay claims?",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "country",
+        "label": "Country",
+        "type": "text",
+        "required": true,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_limits",
+        "text": "Limits, rates and rules match the brief; no amount is invented.",
+        "weight": 5,
+        "pass_rule": "Every limit, rate and deadline in the policy is in the brief or shown as a placeholder for the owner to set.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_expense_types",
+        "text": "Every expense type the buyer chose has a rule.",
+        "weight": 4,
+        "pass_rule": "Each selected expense type has covered items, a limit or placeholder, and proof needed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_steps",
+        "text": "The claim and approval steps are clear and in order.",
+        "weight": 4,
+        "pass_rule": "A numbered process shows who does what, in what time, and what happens if a claim is rejected.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tax_and_law_flag",
+        "text": "It tells the owner to check tax and local rules with their accountant and does not give tax advice.",
+        "weight": 3,
+        "pass_rule": "A short note says rules on tax treatment and mileage rates vary by country and should be confirmed; no tax rules asserted.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "staff_summary",
+        "text": "A one-page summary staff can read quickly is included.",
+        "weight": 3,
+        "pass_rule": "A short summary of 10 or fewer bullet points in plain words appears at the end.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 49,
+      "max_usd": 179,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations manager at a small business. Write an employee expense policy from the details below. Cover each expense type I list, with what is and is not covered, limits (use my limits or leave clear placeholders), receipt rules, who approves, how to claim and how fast claims are paid. Add a claim form outline and a one-page staff summary in plain words. Do not invent limits or tax rules; tell the owner to confirm tax treatment with their accountant. This is not legal or tax advice.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Legal advice or a legal opinion",
+      "Policies meant to hide personal spending as business costs",
+      "Rules that treat staff unequally for protected reasons"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 22-person architecture firm in Toronto. Staff travel to sites by car and train, buy software, and occasionally take clients to lunch. Directors approve anything over $200. We pay claims on the 25th each month.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Remote-first startup with 14 people across 5 countries. Expenses: co-working desks, home office equipment, travel to an annual meetup. Team leads approve. Staff are confused about what they can buy.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Small chain of 4 gyms with 40 staff. Managers buy cleaning supplies and small repairs. Trainers go on courses. No policy exists, and receipts are a mess.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Charity with 9 staff and volunteers who claim mileage and lunches at events. Treasurer approves. Trustees want a clear policy for next audit season.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "expense policy",
+      "reimbursement policy",
+      "travel policy",
+      "expense claims",
+      "company card policy",
+      "spending policy",
+      "receipts"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "job-description",
+    "title": "Job description",
+    "summary": "A clear job description and ad that attracts the right candidates and describes the role honestly.",
+    "area": "people",
+    "deliverable": "A role summary, responsibilities, must-have and nice-to-have skills, pay and benefits section from your details, and a short job ad version for posting.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "role_title",
+        "label": "Job title",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "company",
+        "label": "About your company",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "duties",
+        "label": "What will the person do?",
+        "type": "longtext",
+        "required": true,
+        "help": "The real day-to-day tasks, even if rough.",
+        "max": 3000
+      },
+      {
+        "id": "must_haves",
+        "label": "Skills or experience truly needed",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "pay",
+        "label": "Pay range and benefits",
+        "type": "text",
+        "required": false,
+        "help": "Pay ranges are required in many places.",
+        "max": 500
+      },
+      {
+        "id": "work_mode",
+        "label": "Where do they work?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "On site",
+          "Hybrid",
+          "Remote"
+        ]
+      },
+      {
+        "id": "roles",
+        "label": "Number of roles",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "location",
+        "label": "Location",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_perks",
+        "text": "No pay, benefit, qualification or company fact appears that is not in the brief.",
+        "weight": 5,
+        "pass_rule": "Every salary, benefit, tool and company claim matches the brief; if no pay was given the draft leaves a placeholder.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_biased_language",
+        "text": "Wording does not exclude people for reasons such as age, sex, race or disability.",
+        "weight": 5,
+        "pass_rule": "No phrases like 'young', 'digital native', 'recent graduate', 'native speaker' or gendered job titles; requirements relate to the work.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "real_duties",
+        "text": "Duties are specific, honest and in order of importance.",
+        "weight": 4,
+        "pass_rule": "Each duty starts with a verb, matches the brief and shows how the week will look; no filler like 'other duties' as the main item.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "must_vs_nice",
+        "text": "Must-haves and nice-to-haves are split and kept short.",
+        "weight": 3,
+        "pass_rule": "No more than 6 must-haves; degree or years of experience appear only if the brief states they are needed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ad_version",
+        "text": "A short, plain ad version is included.",
+        "weight": 3,
+        "pass_rule": "An ad of 150 to 250 words opens with the role and why it matters, and has one way to apply.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 39,
+      "min_usd": 29,
+      "max_usd": 129,
+      "size": {
+        "field": "roles",
+        "unit": "extra role",
+        "included": 1,
+        "per_unit_usd": 29
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced recruiter. Write a job description and a short job ad for the role below. Include a role summary, responsibilities in order of importance, must-have and nice-to-have skills, pay and benefits only as given in the brief, and how to apply. Use plain, inclusive language that does not exclude people by age, sex, race, disability or similar. Do not invent perks, pay or company facts. This is a draft for the hiring manager to check, not legal advice.",
+    "not_for": [
+      "Discriminatory requirements or coded language",
+      "Legal advice or a legal opinion",
+      "Deciding which candidate to hire",
+      "Invented pay or benefits"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We need an office manager for our 18-person accounting firm in Denver. Handle reception, supplies, vendors, travel booking and some HR paperwork. Hybrid 4 days in office. Pay $52k to $60k plus health cover.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Part-time bookkeeper for a family-run garden centre, 15 hours a week. Must know Xero. Invoices, supplier payments, payroll input. Remote is fine. £22 to £26 an hour.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Customer support agent for a Shopify skincare brand. Weekdays, answers email and chat, handles returns, flags product complaints. Fully remote, US time zones. $19 to $22 an hour.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Warehouse team lead for a small furniture importer. Manage 6 staff, schedule deliveries, check inventory, keep the loading area safe. On site, early shift.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "job description",
+      "job ad",
+      "job posting",
+      "role description",
+      "hiring",
+      "position description",
+      "recruitment ad"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "interview-kit-scorecard",
+    "title": "Interview kit with scorecard",
+    "summary": "A set of interview questions and a scoring sheet so every candidate for a role is judged the same way.",
+    "area": "people",
+    "deliverable": "Role success criteria, 8 to 12 structured questions with what good and weak answers look like, a 1 to 5 scorecard, follow-up probes and a short note on fair interviewing.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "role",
+        "label": "Role and level",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "job_description",
+        "label": "Job description or main duties",
+        "type": "longtext",
+        "required": true,
+        "max": 4000
+      },
+      {
+        "id": "must_haves",
+        "label": "What matters most for success",
+        "type": "list",
+        "required": true,
+        "help": "Three to six things.",
+        "max": 8
+      },
+      {
+        "id": "interview_rounds",
+        "label": "Number of interview rounds",
+        "type": "number",
+        "required": false,
+        "max": 5
+      },
+      {
+        "id": "interview_length",
+        "label": "Minutes per interview",
+        "type": "number",
+        "required": false,
+        "max": 180
+      },
+      {
+        "id": "company_values",
+        "label": "Company values to check",
+        "type": "list",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "work_sample",
+        "label": "Work sample or task to include",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "No",
+          "Yes, short task",
+          "Yes, paid trial"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_requirements",
+        "text": "Requirements and company facts come from the brief only.",
+        "weight": 5,
+        "pass_rule": "No skill, tool, qualification or company fact appears that is not in the brief or clearly derived from its duties.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fair_questions",
+        "text": "No question asks about protected traits or family plans, and scoring does not rely on them.",
+        "weight": 5,
+        "pass_rule": "No question or scoring note refers to age, sex, race, religion, health, disability, pregnancy, marital status or family plans; the kit includes the same questions for every candidate.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "anchored_scores",
+        "text": "Each question has clear examples of weak, fair and strong answers.",
+        "weight": 4,
+        "pass_rule": "Every question lists what a 1, 3 and 5 answer looks like in concrete terms drawn from the role.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "matches_priorities",
+        "text": "Questions map to the priorities the buyer listed.",
+        "weight": 3,
+        "pass_rule": "Each listed priority is tested by at least one question, and the scorecard weights match them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_time",
+        "text": "The kit fits the interview length.",
+        "weight": 2,
+        "pass_rule": "Number of questions times a realistic time per question fits within the stated minutes, with time for the candidate's questions.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "size": {
+        "field": "interview_rounds",
+        "unit": "extra round",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced hiring consultant. Create a structured interview kit for the role below. Include what success looks like in the first year, 8 to 12 questions tied to the priorities I list, probe questions, what weak, fair and strong answers look like, a 1 to 5 scorecard with weights, and a short fair-interviewing note. Do not ask about age, family, health or other protected traits. Use only the role details I give. This is a hiring aid; people make the hiring decision. Not legal advice.",
+    "not_for": [
+      "Deciding who to hire, reject or fire (people make those decisions)",
+      "Criteria that discriminate by age, sex, race, religion, disability or other protected traits",
+      "Legal advice or a legal opinion",
+      "Screening out candidates by AI score alone"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Hiring a first sales development rep for our B2B logistics software company. 45-minute interviews, two rounds. We care about resilience, curiosity and how they handle cold rejection. Include a role-play task.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Looking for a head chef for our 40-seat restaurant. Needs to manage costs, train junior cooks and keep a clean kitchen. One 60-minute interview plus a tasting trial. Please build the kit.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Customer success manager for a 30-person HR software company. Key things: empathy, clear writing, handling angry customers, renewals. Two rounds, 45 minutes each.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Hiring a maths teacher for our small independent school. Interview with the head and a panel. We value classroom management, kindness and explaining difficult ideas simply.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "interview questions",
+      "interview scorecard",
+      "structured interview",
+      "hiring kit",
+      "candidate evaluation",
+      "behavioural interview",
+      "interview guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "onboarding-plan",
+    "title": "New hire onboarding plan",
+    "summary": "A 30-60-90 day plan that gets a new hire working with confidence, with a checklist for the manager.",
+    "area": "people",
+    "deliverable": "A day-one checklist, week-one schedule, 30-60-90 day goals, who to meet, a manager checklist and check-in questions.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "role",
+        "label": "Role",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "company",
+        "label": "About your team and tools",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "work_mode",
+        "label": "Where do they work?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "On site",
+          "Hybrid",
+          "Remote"
+        ]
+      },
+      {
+        "id": "start_goals",
+        "label": "What should they achieve by day 90?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "people_to_meet",
+        "label": "People they should meet",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "tools",
+        "label": "Tools and accounts they need",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "experience",
+        "label": "Their experience level",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Junior",
+          "Mid-level",
+          "Senior",
+          "Manager"
+        ]
+      },
+      {
+        "id": "training",
+        "label": "Existing training or documents",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_company_facts",
+        "text": "Names, tools, policies and goals come from the brief; gaps are marked.",
+        "weight": 5,
+        "pass_rule": "No tool, person, policy or target appears that is not in the brief; unknowns appear as clear placeholders for the manager.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "phased_goals",
+        "text": "Goals build over 30, 60 and 90 days.",
+        "weight": 4,
+        "pass_rule": "Each phase has 3 to 5 goals, each with a way to check it is done, and goals get harder in order.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "first_week_detail",
+        "text": "The first day and week are planned in detail.",
+        "weight": 4,
+        "pass_rule": "Day one lists tasks, people and setup in time order; week one has a daily outline.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "manager_part",
+        "text": "The manager has a checklist and check-in questions.",
+        "weight": 3,
+        "pass_rule": "Includes dated manager tasks (before day one, week one, each month) and at least five check-in questions.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_mode",
+        "text": "The plan fits where and how they work.",
+        "weight": 2,
+        "pass_rule": "Remote or hybrid plans include video meet-ups and how to reach people; on-site plans include a desk and a building tour step.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an HR business partner. Write a 30-60-90 day onboarding plan for a new hire using only the details below. Include a pre-start checklist, day-one schedule, week-one outline, goals for each phase with how to tell they are done, who they meet, tools to set up, a manager checklist and check-in questions. Fit the plan to where they work. Do not invent people, tools or policies; leave placeholders for gaps. This is a draft for the manager, not legal advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Deciding who to hire, reject or fire (people make those decisions)",
+      "Plans that hide a probation or performance process",
+      "Employment contracts"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A new marketing coordinator starts on 2 Dec at our 25-person outdoor gear company in Boulder. Hybrid. She will run social, email and event promotion. Manager is Priya. Tools: Slack, HubSpot, Canva.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We hired a senior electrician to join our team of 8. First week is mostly safety training and shadowing. By day 90 he should lead small jobs alone. Need a plan for his manager.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Fully remote customer support rep joining our SaaS team in Manila. Needs to learn the product, ticket tool Zendesk and escalation rules. Wants a clear 90 day path.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "New practice manager at our 5-dentist clinic. She comes from a retail background, so the clinical systems and patient flow will be new.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "onboarding",
+      "new hire plan",
+      "30 60 90",
+      "first week",
+      "orientation",
+      "employee onboarding",
+      "induction"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "handbook-section",
+    "title": "Employee handbook section",
+    "summary": "A plain-language draft of one handbook section, such as time off, remote work or conduct, for you to check with a professional.",
+    "area": "people",
+    "deliverable": "One handbook section of 400 to 900 words in plain language, a short summary box for staff, a list of choices you must make, and flags where local law may apply.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "Which section?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Time off and holidays",
+          "Sick leave",
+          "Remote and hybrid work",
+          "Code of conduct",
+          "Social media use",
+          "Expenses and equipment",
+          "Working hours and breaks",
+          "Dress code",
+          "Other"
+        ]
+      },
+      {
+        "id": "your_rules",
+        "label": "Your rules and numbers",
+        "type": "longtext",
+        "required": true,
+        "help": "Days off, notice, limits, anything already decided.",
+        "max": 3000
+      },
+      {
+        "id": "country_region",
+        "label": "Country and state or region",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "team_size",
+        "label": "Number of staff",
+        "type": "number",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "sections",
+        "label": "Number of sections",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "existing_text",
+        "label": "Existing policy text",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Warm and plain",
+          "Neutral",
+          "Formal"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_rules",
+        "text": "Every rule, number and benefit comes from the brief or is a clear placeholder.",
+        "weight": 5,
+        "pass_rule": "No day count, notice period, pay rate or legal requirement is stated unless in the brief; choices not made are listed as decisions needed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "legal_flags",
+        "text": "It does not give legal advice and flags where local law matters.",
+        "weight": 5,
+        "pass_rule": "A note says the draft is not legal advice, names the country or region, and lists topics where law usually sets minimums to check; it asserts no specific law.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Staff can read it once and understand it.",
+        "weight": 3,
+        "pass_rule": "Average sentence under 20 words, no legal Latin or jargon, with examples of how rules work.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "decisions_listed",
+        "text": "Open choices are listed for the owner.",
+        "weight": 3,
+        "pass_rule": "A list of decisions needed, each with options, appears at the end.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "summary_box",
+        "text": "A short summary box for staff is included.",
+        "weight": 2,
+        "pass_rule": "A box of five or fewer bullets summarises the key rules.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "sections",
+        "unit": "extra section",
+        "included": 1,
+        "per_unit_usd": 59
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an HR writer who drafts employee handbooks in plain language. Draft the handbook section requested below, using only the rules I give. Write for staff with short sentences and examples. Add a summary box. List the decisions I still need to make. Do not state specific laws or numbers I did not provide; instead flag where local law usually sets minimum standards for my region and say to check with an employment lawyer. This is a draft, not legal advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Disciplinary or dismissal wording for a named person",
+      "Policies that treat staff unequally for protected reasons"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Time off section for our 12-person design studio in Austin, Texas. We give 15 days paid time off, plus 9 public holidays, and let people carry over 5 days. Ask for two weeks' notice for long trips.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Remote work policy for a 40-person software company in Dublin. People may work from home 3 days a week. We pay a €30 monthly allowance for internet. Core hours 10 to 3.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Code of conduct for our 25-person café group. We want it to cover respect between staff, treating customers fairly, drinking on shift and phones.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Social media section for a small law-adjacent paralegal firm. Staff may use personal accounts but cannot discuss clients or the firm's cases.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "employee handbook",
+      "staff handbook",
+      "hr policy",
+      "time off policy",
+      "remote work policy",
+      "code of conduct",
+      "company policies"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "performance-review-template",
+    "title": "Performance review template",
+    "summary": "A review form and guide for one role or the whole team, with fair questions and clear rating levels.",
+    "area": "people",
+    "deliverable": "A review form with rating levels defined in words, self-review and manager questions, a goal-setting section, a manager guide and a meeting agenda.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "roles",
+        "label": "Roles covered",
+        "type": "list",
+        "required": true,
+        "max": 10
+      },
+      {
+        "id": "company",
+        "label": "About your company and values",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "cycle",
+        "label": "How often?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Yearly",
+          "Twice a year",
+          "Quarterly"
+        ]
+      },
+      {
+        "id": "rating_scale",
+        "label": "Rating scale",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "3 levels",
+          "4 levels",
+          "5 levels",
+          "No ratings"
+        ]
+      },
+      {
+        "id": "competencies",
+        "label": "Things you want to review",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "pay_link",
+        "label": "Is pay tied to the rating?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Yes",
+          "No",
+          "Not decided"
+        ]
+      },
+      {
+        "id": "team_size",
+        "label": "Number of staff",
+        "type": "number",
+        "required": false,
+        "max": 5000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_company_facts",
+        "text": "Values, competencies and policies come from the brief.",
+        "weight": 5,
+        "pass_rule": "No value, competency, pay rule or tool is named that is not in the brief or clearly generic.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "behaviour_anchors",
+        "text": "Each rating level is defined by what the person does.",
+        "weight": 4,
+        "pass_rule": "Every competency has a description for each rating level that refers to observable work, not traits like 'positive attitude'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_wording",
+        "text": "Questions avoid bias and personal traits.",
+        "weight": 5,
+        "pass_rule": "No question or rating text refers to age, sex, race, health, family or personality traits; all roles get the same structure.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "manager_guide",
+        "text": "It helps managers run a fair review.",
+        "weight": 3,
+        "pass_rule": "A guide covers evidence gathering, avoiding recent-event bias and giving written examples, in at least five steps.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "goals_and_next_steps",
+        "text": "It ends with goals, support needed and next steps.",
+        "weight": 3,
+        "pass_rule": "Includes a section for goals with measures, training needed, and dates.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 49,
+      "max_usd": 179,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an HR consultant. Create a performance review template for the roles below. Include a form with competencies and rating levels defined by observable behaviours, self-review and manager questions, a goals section, a manager guide to run fair reviews, and a meeting agenda. Avoid questions on personal traits, age, health, family or other protected topics. Use my values and details only. This is a template, not legal advice. Employment decisions stay with people.",
+    "not_for": [
+      "Deciding who to hire, reject or fire (people make those decisions)",
+      "Criteria that discriminate by age, sex, race, religion, disability or other protected traits",
+      "Legal advice or a legal opinion",
+      "Scoring or ranking real named employees"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 30-person engineering consultancy. We review twice a year. Roles: junior engineer, senior engineer, project manager. We want ratings on 4 levels and a section for client feedback.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A retail chain with 12 shops. Reviews for shop assistants and shop managers. Yearly. We would like to avoid numbers and use words. Values: friendly, honest, tidy.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Small nonprofit with 8 staff. No ratings, only conversations and goals. Quarterly check-ins. Please keep it simple and kind.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Marketing agency, 20 people. Reviews are tied to pay rises. Roles: designer, copywriter, account manager. Want clear levels so pay talks are less awkward.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "performance review",
+      "appraisal",
+      "review form",
+      "employee evaluation",
+      "360 feedback",
+      "annual review",
+      "check-in template"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "recruiting-outreach-messages",
+    "title": "Recruiting outreach messages",
+    "summary": "A short set of messages to reach good candidates on LinkedIn or by email, with follow-ups.",
+    "area": "people",
+    "deliverable": "A first message, two follow-ups, a reply to common questions, a referral request and two subject lines, all in your voice and ready to send.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "role",
+        "label": "Role you are hiring for",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "company",
+        "label": "About your company",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "pitch",
+        "label": "Why would a good person want this job?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "candidate_profile",
+        "label": "Who are you trying to reach?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "channel",
+        "label": "Where will you send them?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "LinkedIn",
+          "Email",
+          "Both"
+        ]
+      },
+      {
+        "id": "pay_info",
+        "label": "Pay range",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "sender",
+        "label": "Who is the sender?",
+        "type": "text",
+        "required": true,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_claims",
+        "text": "Pay, perks, company facts and personal details are not invented.",
+        "weight": 5,
+        "pass_rule": "Every claim about the role, pay or company matches the brief; messages use placeholders for the candidate's name and details, never made-up facts about them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "personal_not_spam",
+        "text": "Messages feel personal, short and respectful.",
+        "weight": 4,
+        "pass_rule": "First message under 120 words, has a placeholder for one personal detail, and one clear and easy next step.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_targeting",
+        "text": "Messages do not target or exclude people by protected traits.",
+        "weight": 4,
+        "pass_rule": "No wording suggests age, sex, race or similar preferences.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "honest_pitch",
+        "text": "The pitch is specific and honest about the job.",
+        "weight": 3,
+        "pass_rule": "At least two concrete reasons from the brief; no vague claims like 'exciting opportunity' as the main reason.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "follow_up_pace",
+        "text": "Follow-ups add something new and stop politely.",
+        "weight": 3,
+        "pass_rule": "Each follow-up gives new information and the last is a polite close; the draft sets timing between messages.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 129,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a recruiter writing outreach to passive candidates. Write a first message, two follow-ups, a reply to common questions, a referral request and two subject lines for the role below. Keep messages short, honest and personal with placeholders for each person's name and a specific detail. Use only the pay and company facts I give. Do not target by age, sex or other protected traits. Not legal advice.",
+    "not_for": [
+      "Criteria that discriminate by age, sex, race, religion, disability or other protected traits",
+      "Fake job posts or misleading offers",
+      "Scraping or mass spam",
+      "Impersonating a real recruiter or company"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Hiring a senior Rails developer for our remote insurance software team. Pay $140k to $165k. We offer a four-day week and no meetings on Wednesdays. Reach people on LinkedIn.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We run a physiotherapy clinic and need a second physio. Beautiful new clinic, friendly team, mentorship. Pay £42k to £48k. Reach by email, mostly recent graduates and people changing jobs.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our electric bike company needs a production planner. Small team, big impact, based in Rotterdam. We want to reach people from car factories.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Hiring volunteer coordinator for a food bank. Part-time, $26 an hour. Candidates are people from community groups and schools.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "recruiting message",
+      "linkedin outreach",
+      "candidate outreach",
+      "sourcing",
+      "cold email recruiter",
+      "talent outreach",
+      "headhunter message"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "training-plan-course-outline",
+    "title": "Training plan and course outline",
+    "summary": "A training plan or course outline for your team, with goals, lessons, exercises and ways to check learning.",
+    "area": "people",
+    "deliverable": "Learning goals, a module-by-module outline with timings, exercises, a short quiz or task for each module, materials list and ways to measure whether it worked.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "What should people learn?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "audience",
+        "label": "Who is the training for?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "goal",
+        "label": "What should they be able to do after?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "format",
+        "label": "How is it taught?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Live in person",
+          "Live online",
+          "Self-paced",
+          "Mixed"
+        ]
+      },
+      {
+        "id": "total_time",
+        "label": "Total time available",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "modules",
+        "label": "Number of modules",
+        "type": "number",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "source_material",
+        "label": "Material you already have",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "current_level",
+        "label": "What they know now",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "Facts, rules and figures in lessons come from the brief or are common knowledge.",
+        "weight": 5,
+        "pass_rule": "No made-up statistics, laws, product features or sources; anything uncertain is marked for the trainer to check.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "measurable_goals",
+        "text": "Each module has goals that can be tested.",
+        "weight": 4,
+        "pass_rule": "Every module has 1 to 3 goals that start with a verb like 'explain', 'complete' or 'build' and a matching exercise or check.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "time_fits",
+        "text": "Module timings fit the time available.",
+        "weight": 4,
+        "pass_rule": "The sum of module times is at or under the total time given, with breaks included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "active_learning",
+        "text": "People practise, not only listen.",
+        "weight": 3,
+        "pass_rule": "At least half of each module's time is exercises, discussion or practice.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "measures_results",
+        "text": "It says how to tell whether the training worked.",
+        "weight": 3,
+        "pass_rule": "Includes before-and-after checks and one on-the-job measure tied to the goal.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "modules",
+        "unit": "extra module",
+        "included": 5,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an instructional designer. Create a training plan and course outline for the topic and audience below. Include learning goals that can be tested, a module outline with timings that fit the time available, exercises, a short quiz or task for each module, a materials list and how to measure whether the training worked. Use the source material if I give it. Do not invent statistics, laws or product features. Not legal or compliance advice.",
+    "not_for": [
+      "Mandatory safety or legal compliance training that needs certified content",
+      "Legal advice or a legal opinion",
+      "Medical or clinical training content"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A half-day course for new supervisors at our 80-person factory on giving feedback, running short team meetings and handling conflict. In person, 4 hours. Ten supervisors.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Self-paced course for our sales team on using our CRM properly. Most people are mid-level. Total about 3 hours spread over 2 weeks. Topics: lead entry, pipeline stages, reporting.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Workshop series for volunteers at a hospice on listening skills and boundaries. Three sessions of 90 minutes, live online.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Customer service refresher for a regional bank's front desk, 6 hours across two days. Topics: tone, complaints, recognising vulnerable customers.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "training plan",
+      "course outline",
+      "curriculum",
+      "workshop",
+      "learning plan",
+      "lesson plan",
+      "staff training"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "values-culture-document",
+    "title": "Values and culture document",
+    "summary": "A short document that names what your team values, shows what it looks like day to day and helps with hiring and decisions.",
+    "area": "people",
+    "deliverable": "Four to six values with a one-line meaning, real behaviours, examples of what it is not, how to use them in hiring and reviews, and a one-page summary.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "company",
+        "label": "About your company",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "stories",
+        "label": "Stories of the best and worst moments",
+        "type": "longtext",
+        "required": true,
+        "help": "Real examples of when the team was at its best, or when things went wrong.",
+        "max": 4000
+      },
+      {
+        "id": "team_size",
+        "label": "Number of people",
+        "type": "number",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "existing_values",
+        "label": "Values or words you already use",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "founder_views",
+        "label": "What matters most to you as the owner?",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "use",
+        "label": "How will you use it?",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Hiring",
+          "Reviews",
+          "Onboarding",
+          "Website",
+          "Decisions"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_culture",
+        "text": "Values and examples come from the buyer's stories and words.",
+        "weight": 5,
+        "pass_rule": "Each value links to a story or statement in the brief; no culture claims, awards or survey results are invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "behaviours_observable",
+        "text": "Each value has behaviours someone can see.",
+        "weight": 4,
+        "pass_rule": "Every value has at least three behaviours described as actions, plus one 'this is not' example.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "not_generic",
+        "text": "Values are specific to this company, not stock words.",
+        "weight": 3,
+        "pass_rule": "Not more than one value is a generic word (such as 'integrity') unless it is tied to a company example.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_hiring_use",
+        "text": "Advice for hiring uses the values fairly.",
+        "weight": 4,
+        "pass_rule": "Hiring guidance uses behaviours and questions, avoids 'culture fit' based on background, and warns against excluding by protected traits.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "short_summary",
+        "text": "It includes a one-page summary the team can pin up.",
+        "weight": 2,
+        "pass_rule": "A summary of under 200 words lists each value with its one-line meaning.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an organisational culture consultant. Using only the company details and stories below, write a values and culture document: four to six values, each with a one-line meaning, behaviours people can see, an example of what it is not, and how to use it in hiring, reviews and decisions. Make the values specific to this company, not stock words. Do not invent survey results or claims. For hiring, use behaviours and avoid 'culture fit' based on background. Not legal advice.",
+    "not_for": [
+      "Criteria that discriminate by age, sex, race, religion, disability or other protected traits",
+      "Deciding who to hire, reject or fire (people make those decisions)",
+      "Invented employee testimonials or survey results",
+      "Legal advice or a legal opinion"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 14-person landscaping business. The best day was when the whole crew stayed late to fix a client's flooded garden for free. The worst was when two foremen blamed each other for a missed job. We want values for hiring.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A 40-person software team. Everyone is remote. We value writing things down, saying what we don't know and helping each other. I need a clear culture doc to give new hires.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Family-run care home with 35 staff. Our founder cares about dignity, patience and honesty with families. We lost several staff last year and want to be clearer about expectations.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Small brewery, 9 people. We are friendly but sloppy about deadlines. I want a culture document that keeps the fun but sets standards.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "company values",
+      "culture document",
+      "core values",
+      "mission and values",
+      "culture deck",
+      "team principles",
+      "employer brand"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "standard-operating-procedure",
+    "title": "Standard operating procedure (SOP)",
+    "summary": "A step-by-step written procedure for one task, so anyone on your team can do it the same way.",
+    "area": "operations",
+    "deliverable": "A one to three page SOP with purpose, who does it, tools needed, numbered steps, checks, common mistakes, what to do when things go wrong and a version box.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "task",
+        "label": "Which task or process?",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "how_it_works",
+        "label": "How it is done today",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste notes, a transcript, a voice memo or rough steps.",
+        "max": 12000
+      },
+      {
+        "id": "who_does_it",
+        "label": "Who does it, and who checks it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "tools",
+        "label": "Tools and systems used",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "procedures",
+        "label": "Number of procedures",
+        "type": "number",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "risks",
+        "label": "What goes wrong most often",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "audience_level",
+        "label": "Reader's experience",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Brand new",
+          "Some experience",
+          "Experienced"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_steps",
+        "text": "Every step, tool, name and rule comes from the brief; gaps are marked.",
+        "weight": 5,
+        "pass_rule": "No step, system, deadline, person or rule appears that is not in the brief; missing details appear as marked questions.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "steps_actionable",
+        "text": "Each step is one clear action a new person can do.",
+        "weight": 4,
+        "pass_rule": "Steps are numbered, start with a verb, hold one action each, and name the tool or screen where relevant.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "checks_and_exceptions",
+        "text": "It includes checks and what to do when something goes wrong.",
+        "weight": 4,
+        "pass_rule": "At least three checkpoints or 'done when' lines and an exceptions list with who to ask.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "order_complete",
+        "text": "Steps are in the order they happen, with no jumps.",
+        "weight": 3,
+        "pass_rule": "Following the steps in order gets from the stated start to the stated finish without needing facts that are not in the document.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "document_control",
+        "text": "Owner, version and date fields are included.",
+        "weight": 2,
+        "pass_rule": "A box with owner, version, date and review date appears at the top or end.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "procedures",
+        "unit": "extra procedure",
+        "included": 1,
+        "per_unit_usd": 55
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations specialist. Turn the notes below into a standard operating procedure. Include purpose, scope, who does it, tools, numbered steps (one action each, starting with a verb), checkpoints, common mistakes, what to do when things go wrong and a version box. Use only what I give; mark any missing details as questions for me. Write for a person who has never done the task. This is not legal or compliance advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Safety-critical, medical or regulated procedures that need expert sign-off",
+      "Invented steps for tasks the buyer did not describe"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "How we onboard a new bakery wholesale customer: send price list, take first order, set up invoice terms, add to the delivery route sheet. I've pasted my rough notes. Need a clean SOP for my new assistant.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Opening and closing checklist for our dental front desk. Includes reception system start, insurance checks, cash drawer and locking up. Notes pasted below.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our process for handling a customer return in our online shoe shop: check the policy, issue a label, inspect the shoes, refund or exchange, restock. We use Shopify and ShipStation.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Monthly payroll process in our 20-person firm. I send hours to the accountant on the 22nd, review the payslips on the 26th, approve payment by the 27th. Please write it as an SOP for my replacement.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "sop",
+      "standard operating procedure",
+      "process documentation",
+      "how-to guide",
+      "procedure",
+      "checklist",
+      "work instructions"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ]
+  },
+  {
+    "id": "process-map-steps",
+    "title": "Process map written as steps",
+    "summary": "A clear map of how work moves through your business, written as steps, owners, decisions and handoffs.",
+    "area": "operations",
+    "deliverable": "A step table with owner, action, input, output and time, decision points, handoffs, a text flow diagram, and three places to improve.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "process_name",
+        "label": "Process name",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "description",
+        "label": "How the work happens today",
+        "type": "longtext",
+        "required": true,
+        "help": "From the trigger to the finished result. Rough notes are fine.",
+        "max": 12000
+      },
+      {
+        "id": "people",
+        "label": "People or teams involved",
+        "type": "list",
+        "required": true,
+        "max": 15
+      },
+      {
+        "id": "step_count",
+        "label": "About how many steps",
+        "type": "number",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "pain_points",
+        "label": "Where it gets stuck",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "tools",
+        "label": "Tools used",
+        "type": "list",
+        "required": false,
+        "max": 20
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_steps",
+        "text": "Steps, owners, times and tools come from the brief.",
+        "weight": 5,
+        "pass_rule": "Every step, role, system and duration appears in the brief; unknowns are marked as questions.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "owners_and_handoffs",
+        "text": "Every step has an owner and handoffs are clear.",
+        "weight": 4,
+        "pass_rule": "Each step lists one owner; each change of owner is marked as a handoff with what is passed on.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "decisions_shown",
+        "text": "Decision points and their outcomes are shown.",
+        "weight": 4,
+        "pass_rule": "Each yes/no or choice point lists the options and which step follows each; no dead ends.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "text_diagram",
+        "text": "A readable text flow diagram matches the step table.",
+        "weight": 3,
+        "pass_rule": "The flow diagram lists the same steps in the same order as the table and shows loops and branches.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "improvement_ideas",
+        "text": "Improvement ideas are tied to real steps.",
+        "weight": 3,
+        "pass_rule": "Three ideas, each naming the step, the problem in the brief and the change proposed.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 199,
+      "size": {
+        "field": "step_count",
+        "unit": "step",
+        "included": 15,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a process improvement analyst. Map the process described below as steps. Give a table with step number, owner, action, input, output and time; mark decision points with their outcomes and handoffs between people; add a simple text flow diagram that matches the table; and suggest three improvements tied to specific steps and the problems I describe. Use only what I give; list unknowns as questions. Do not invent steps or timings.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Redesigning regulated clinical or safety processes",
+      "Invented timings or system names"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Map how an event booking goes through our small wedding venue: enquiry, tour, deposit, menu choice, final numbers, event day, final invoice. Three people are involved: Anna, Rob and the chef.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our claims process at an independent insurance broker. Client calls, we log it, send forms, wait for the insurer, update the client. Things get stuck waiting for documents.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "How a custom order moves through our woodworking shop from quote to delivery. Sales, design, cutting, finishing, delivery. We often miss dates at finishing.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "The way our nonprofit processes donations and thank-you letters. Online donations come in through one system and cheques arrive by post. Two volunteers and one staff member are involved.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "process map",
+      "workflow",
+      "flowchart",
+      "process mapping",
+      "business process",
+      "swimlane",
+      "value stream"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ]
+  },
+  {
+    "id": "vendor-comparison",
+    "title": "Vendor comparison from quotes",
+    "summary": "A side-by-side comparison of the vendor quotes you collected, with total costs, gaps and a clear recommendation.",
+    "area": "operations",
+    "deliverable": "A comparison table of price, terms and features, true total cost over the contract, scoring against your needs, risks and questions for each vendor, and a recommendation.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "need",
+        "label": "What are you buying and why?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "quotes",
+        "label": "Quotes or proposals (pasted)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the text of each quote. Remove private details.",
+        "max": 40000
+      },
+      {
+        "id": "vendor_count",
+        "label": "Number of vendors",
+        "type": "number",
+        "required": true,
+        "max": 10
+      },
+      {
+        "id": "must_haves",
+        "label": "Must-have requirements",
+        "type": "list",
+        "required": true,
+        "max": 15
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "contract_length",
+        "label": "Contract length you want",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "weights",
+        "label": "What matters most",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Price",
+          "Quality",
+          "Speed",
+          "Support",
+          "Flexibility",
+          "Reputation"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_terms",
+        "text": "Prices, features and terms come from the quotes; nothing is guessed.",
+        "weight": 5,
+        "pass_rule": "Every price, feature, date and term matches the pasted quotes; missing items are marked 'not stated'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "total_cost_math",
+        "text": "Total costs over the contract are calculated correctly and show setup and extras.",
+        "weight": 5,
+        "pass_rule": "Recompute each vendor's total cost from the quote lines including one-off fees, recurring fees and stated discounts; all match.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "must_haves_checked",
+        "text": "Each vendor is checked against every must-have.",
+        "weight": 4,
+        "pass_rule": "A grid shows meets, partly or not stated for each must-have and vendor.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "risks_and_questions",
+        "text": "Risks and questions to ask are listed per vendor.",
+        "weight": 3,
+        "pass_rule": "Each vendor has at least two questions based on gaps or unclear terms in its own quote.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "recommendation_reasoned",
+        "text": "The recommendation is clear and tied to the buyer's priorities.",
+        "weight": 3,
+        "pass_rule": "One option is recommended, with two reasons from the comparison and one condition to confirm first.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "vendor_count",
+        "unit": "extra vendor",
+        "included": 3,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a procurement analyst. Compare the vendor quotes pasted below for a small business. Give a table of price, terms and features; calculate true total cost over the contract including one-off fees; check each vendor against my must-haves; list risks and questions to ask each vendor; and recommend one option based on my priorities. Use only the quotes. Mark anything missing as 'not stated'. Do not invent prices or reviews. Not legal advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Choosing vendors by outside reviews or ratings not supplied",
+      "Negotiating on the buyer's behalf",
+      "Invented market prices"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We need a new phone and video system for 25 staff. I pasted quotes from three providers. Priorities: reliability and a fixed monthly cost. Contract no longer than 2 years.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Choosing a commercial cleaning company for our two clinics. Four quotes pasted. Must have insurance, police-checked staff and flexible hours. Budget $2,400 a month.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Printer fleet lease quotes from three vendors for our law office. Cost per page and service contracts differ and I can't compare them.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "We are picking a payroll provider. Two quotes and one price list pasted. Must handle 40 staff, holiday pay and an accountant export.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "vendor comparison",
+      "supplier comparison",
+      "quote comparison",
+      "procurement",
+      "compare quotes",
+      "vendor selection",
+      "bid comparison"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "meeting-notes-to-action-plan",
+    "title": "Meeting notes to action plan",
+    "summary": "Your messy meeting notes or transcript turned into decisions, owners, deadlines and a follow-up message.",
+    "area": "operations",
+    "deliverable": "A short summary, list of decisions, an action table with owner and due date, open questions, risks, and a ready-to-send follow-up message.",
+    "format": "markdown",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "notes",
+        "label": "Notes or transcript",
+        "type": "longtext",
+        "required": true,
+        "max": 60000
+      },
+      {
+        "id": "attendees",
+        "label": "Who was there",
+        "type": "list",
+        "required": true,
+        "max": 30
+      },
+      {
+        "id": "meeting_goal",
+        "label": "What was the meeting for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "meetings",
+        "label": "Number of meetings",
+        "type": "number",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "meeting_date",
+        "label": "Meeting date",
+        "type": "text",
+        "required": false,
+        "max": 50
+      },
+      {
+        "id": "deadline_rules",
+        "label": "Default due dates",
+        "type": "text",
+        "required": false,
+        "help": "For example: anything without a date is due in one week.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_decisions",
+        "text": "Decisions, owners and dates come from the notes; nothing is made up.",
+        "weight": 5,
+        "pass_rule": "Every decision, owner and due date is in the notes or follows the buyer's default rule; unclear items appear as open questions, not as decisions.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "actions_complete",
+        "text": "Every action has an owner, a clear task and a due date.",
+        "weight": 5,
+        "pass_rule": "Each action row has owner, verb-led task and date; items missing an owner or date are marked 'needs owner' or 'needs date'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "nothing_missed",
+        "text": "All decisions and actions in the notes appear.",
+        "weight": 3,
+        "pass_rule": "A check of the notes finds no decision or commitment missing from the output.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "open_questions",
+        "text": "Unresolved points are listed apart from decisions.",
+        "weight": 2,
+        "pass_rule": "Open questions and disagreements are in their own list with who needs to answer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "follow_up_message",
+        "text": "A short follow-up message is included.",
+        "weight": 2,
+        "pass_rule": "A message under 200 words lists decisions and actions with owners and dates and is ready to send.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 39,
+      "min_usd": 29,
+      "max_usd": 129,
+      "size": {
+        "field": "meetings",
+        "unit": "extra meeting",
+        "included": 1,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an executive assistant. Read the meeting notes below and produce a short summary, a list of decisions, an action table with owner, task and due date, a list of open questions and risks, and a short follow-up message to send to attendees. Use only what is in the notes. If an owner or date is missing, say 'needs owner' or 'needs date' instead of guessing. Do not invent decisions.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Recordings or notes captured without consent",
+      "Making decisions the meeting did not make"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Transcript of our 50-minute weekly team meeting at a 12-person marketing agency. Attendees: Dana, Luis, Priya, Tom. Please pull out the actions and send me a follow-up email. Anything without a date should be due Friday.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Board meeting notes for our community garden trust. Seven trustees. Decisions on the shed repair, the summer fete and the budget. The notes are messy bullets.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Customer call notes from a sales meeting with a prospective client: they want a pilot, need security answers, and will decide in March. Make an action plan for our side.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Kickoff meeting for our website rebuild. Four from our team and two from the agency. Notes are voice-to-text and contain mistakes.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "meeting notes",
+      "action items",
+      "meeting minutes",
+      "follow up",
+      "transcript summary",
+      "action plan",
+      "meeting summary"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance SOP and operation manual listing: $100 per SOP, one revision, one week; process flowchart available with it.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ]
+  },
+  {
+    "id": "project-plan",
+    "title": "Project plan",
+    "summary": "A plan for one project with phases, tasks, owners, dates, risks and a simple way to track progress.",
+    "area": "operations",
+    "deliverable": "Goal and scope, a phase and task table with owners and dates, dependencies, a milestone list, risks with fixes, a budget view if given, and a weekly status template.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "project",
+        "label": "What is the project?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "deadline",
+        "label": "Deadline or launch date",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "team",
+        "label": "People and roles",
+        "type": "list",
+        "required": true,
+        "max": 20
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "task_count",
+        "label": "Rough number of tasks",
+        "type": "number",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "constraints",
+        "label": "Fixed dates and limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Things that cannot move, like a trade show date.",
+        "max": 2000
+      },
+      {
+        "id": "known_risks",
+        "label": "Known risks",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "start_date",
+        "label": "Start date",
+        "type": "text",
+        "required": false,
+        "max": 50
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_facts",
+        "text": "People, dates, budgets and constraints come from the brief.",
+        "weight": 5,
+        "pass_rule": "No person, date, cost or tool appears that is not in the brief; unknowns are marked as assumptions.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "dates_work",
+        "text": "Task dates fit the start, the deadline and the fixed dates.",
+        "weight": 5,
+        "pass_rule": "No task ends after the deadline; dependent tasks start after their predecessors; fixed dates in the brief are respected.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "owners_assigned",
+        "text": "Every task has one owner from the team list.",
+        "weight": 3,
+        "pass_rule": "Each task names one person or role from the brief; no task lacks an owner.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "risks_with_fixes",
+        "text": "Risks are listed with a response.",
+        "weight": 3,
+        "pass_rule": "At least five risks, each with likelihood, effect and a named action; known risks in the brief appear.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tracking",
+        "text": "It includes a simple way to track progress.",
+        "weight": 2,
+        "pass_rule": "A weekly status template with progress, blockers and next steps appears.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "task_count",
+        "unit": "task",
+        "included": 30,
+        "per_unit_usd": 1.5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced project manager. Create a project plan from the details below: goal and scope, phases and tasks with owners and dates that fit the deadline, dependencies, milestones, risks with responses, a budget view if I gave a budget, and a weekly status template. Use only the people, dates and budget I give; mark any assumption clearly. Check that no task ends after the deadline or starts before its predecessor.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Construction or engineering plans that need licensed review",
+      "Guarantees that dates will be met"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are launching a new online shop for our pottery studio in 10 weeks, before the holiday season. Team: me, my sister who does photos, and a freelance developer. Budget $6,000.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Moving our 15-person office to a new building over a weekend on 17 March. Lease ends 31 March. Need a plan including IT, furniture, address changes and staff communications.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Run a two-day conference for 120 people in June. Small team of three plus volunteers. Budget $40,000. Venue is booked. Need the plan from now.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Rolling out a new booking system across our 4 salons in 8 weeks. Staff training and data migration are the worry.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "project plan",
+      "project schedule",
+      "gantt",
+      "launch plan",
+      "timeline",
+      "work breakdown",
+      "project timeline"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "okr-set",
+    "title": "OKR set for a team or company",
+    "summary": "A focused set of objectives and key results for the quarter or year, with measures you can track.",
+    "area": "operations",
+    "deliverable": "Three to five objectives, two to four measurable key results each with a start and target, initiatives, owners, a check-in rhythm and a scoring guide.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business and team",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "period",
+        "label": "Period",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Quarter",
+          "Half year",
+          "Year"
+        ]
+      },
+      {
+        "id": "priorities",
+        "label": "Your top priorities",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "current_numbers",
+        "label": "Your current numbers",
+        "type": "longtext",
+        "required": true,
+        "help": "Sales, customers, delivery times, churn, whatever you track.",
+        "max": 5000
+      },
+      {
+        "id": "team",
+        "label": "Teams or owners",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "last_period",
+        "label": "What happened last period",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "level",
+        "label": "Level",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Company",
+          "Team",
+          "Both"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_baselines",
+        "text": "Starting numbers come from the brief; no baseline is invented.",
+        "weight": 5,
+        "pass_rule": "Every start value is in the brief; where none was given the key result starts with 'measure baseline' instead of a made-up number.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "measurable_krs",
+        "text": "Every key result is a number with a start, target and date.",
+        "weight": 5,
+        "pass_rule": "Each key result has a metric, start value, target value and end date, and is not an activity such as 'launch' or 'improve'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "few_and_focused",
+        "text": "The set is small and ties to the stated priorities.",
+        "weight": 3,
+        "pass_rule": "Three to five objectives, each linked to a priority from the brief, with no more than four key results each.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ambitious_but_possible",
+        "text": "Targets stretch but are believable given the numbers.",
+        "weight": 3,
+        "pass_rule": "Targets are within a stated range of recent trend or have a reason given in a sentence.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "rhythm",
+        "text": "It sets out how to check in and score.",
+        "weight": 2,
+        "pass_rule": "Includes weekly check-in questions and a scoring guide from 0 to 1.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 229,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operating coach who sets OKRs for small businesses. From the details below, write 3 to 5 objectives with 2 to 4 measurable key results each (metric, start value, target, date), the initiatives that support them, owners, a check-in rhythm and a scoring guide. Use only the numbers I give; where I give none, make the first key result 'measure the baseline'. Keep it focused and tied to my priorities.",
+    "not_for": [
+      "Tax filing, tax advice, audit work or any other regulated financial advice",
+      "Targets that reward unsafe or unethical behaviour",
+      "Individual performance ratings of named staff"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 20-person e-commerce company selling pet supplies. Q1 priorities: improve repeat purchases, cut shipping delays, and launch a subscription. Repeat rate is 22%, average delivery is 5.4 days, and we have no subscription yet.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A regional food bank. Next year we want to serve more families, recruit volunteers and cut food waste. This year: 3,100 families a month, 140 volunteers, 11% waste.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Small IT support firm with 9 staff. Goals this quarter: reduce response times, win more managed-service contracts and train the team on cloud tools. Response time averages 6.5 hours. 31 contracts now.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our boutique gym has 340 members and 18% monthly churn. We want to cut churn, fill off-peak classes and open a second studio next year.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "okr",
+      "objectives and key results",
+      "goals",
+      "quarterly goals",
+      "kpi",
+      "goal setting",
+      "company goals"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR cost guide: custom employee handbooks up to $5,000 (average $1,250 to draft), HR consultant hourly rates of $100 to $175.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "rfp-draft",
+    "title": "RFP draft",
+    "summary": "A request for proposal you can send to suppliers, with your needs, scoring rules and dates set out clearly.",
+    "area": "operations",
+    "deliverable": "An RFP with background, scope, requirements, questions for vendors, response format, timeline, scoring method and terms placeholders, ready for you to check.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "organisation",
+        "label": "About your organisation",
+        "type": "longtext",
+        "required": true,
+        "max": 2500
+      },
+      {
+        "id": "what_you_need",
+        "label": "What do you want to buy?",
+        "type": "longtext",
+        "required": true,
+        "max": 5000
+      },
+      {
+        "id": "requirements",
+        "label": "Number of requirements",
+        "type": "number",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "budget",
+        "label": "Budget range",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "timeline",
+        "label": "Key dates",
+        "type": "longtext",
+        "required": true,
+        "help": "When responses are due, when you decide, when work starts.",
+        "max": 1000
+      },
+      {
+        "id": "must_haves",
+        "label": "Must-have requirements",
+        "type": "list",
+        "required": true,
+        "max": 30
+      },
+      {
+        "id": "scoring",
+        "label": "What matters in choosing",
+        "type": "text",
+        "required": false,
+        "help": "For example: price 40%, quality 30%.",
+        "max": 400
+      },
+      {
+        "id": "rules",
+        "label": "Procurement rules you must follow",
+        "type": "longtext",
+        "required": false,
+        "help": "Public bodies often have set rules.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_terms",
+        "text": "Dates, budgets, legal terms and requirements come from the brief or are placeholders.",
+        "weight": 5,
+        "pass_rule": "No date, budget, contract term, law or standard appears unless in the brief; those items are marked as placeholders to confirm.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "clear_requirements",
+        "text": "Requirements are specific and testable, and must-haves are separate.",
+        "weight": 4,
+        "pass_rule": "Each requirement says what is needed in a way a vendor could answer yes or no, and must-haves are labelled.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_scoring",
+        "text": "Scoring weights are stated and add up to 100.",
+        "weight": 4,
+        "pass_rule": "A scoring table shows criteria, weights and a scale; weights sum to 100 percent.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "response_format",
+        "text": "Vendors know exactly how and when to respond.",
+        "weight": 3,
+        "pass_rule": "Includes a response format, a question deadline, a submission date and contact placeholder.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "legal_flag",
+        "text": "It flags that terms and procurement rules need a lawyer or procurement officer.",
+        "weight": 4,
+        "pass_rule": "A note says contract terms and any public procurement rules must be checked; no specific legal text is asserted as required.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 499,
+      "size": {
+        "field": "requirements",
+        "unit": "extra requirement",
+        "included": 20,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a procurement specialist. Draft a request for proposal for the purchase below. Include background, scope, numbered requirements (must-have and nice-to-have), questions for vendors, response format, timeline, a scoring table whose weights sum to 100, and placeholders for contract terms. Use only the details I give; mark everything else as a placeholder. Do not invent dates, budgets or legal clauses. Note that a lawyer or procurement officer should review it. Not legal advice.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Rigging bids for a chosen vendor",
+      "Public procurement documents that need legal sign-off to be valid"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our school district wants a new student information system. 6 schools, 3,200 students. Needs: attendance, grades, parent portal. Responses due 15 January, decision by 1 March, start in August.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "RFP for web design and build of a new site for our regional theatre. Budget $25,000 to $40,000. Needs: ticketing integration, events calendar, accessibility, training for staff.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We are a 60-bed care home looking for a catering supplier for 3 meals a day with special diets. Contract of 3 years. Need food safety evidence and menus.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Managed IT services for a 45-person engineering firm. Includes helpdesk, backups and security monitoring. We want proposals within 4 weeks.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "rfp",
+      "request for proposal",
+      "tender",
+      "rfq",
+      "procurement document",
+      "bid request",
+      "vendor selection"
+    ],
+    "demand_sources": [
+      {
+        "note": "Grant writer fee guide: $500 to $1,500 for a simple proposal, $1,500 to $5,000 for a standard one, $50 to $125 an hour.",
+        "url": "https://www.grantwatch.com/grantnews/how-much-do-grant-writers-charge/"
+      }
+    ]
+  },
+  {
+    "id": "grant-application-draft",
+    "title": "Grant application draft",
+    "summary": "A first draft of a grant application written from the funder's questions and your project facts.",
+    "area": "operations",
+    "deliverable": "Answers to each funder question within word limits, a needs statement, outcomes, a budget narrative and a checklist of evidence and attachments to gather.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "funder_questions",
+        "label": "Funder's questions and limits",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the questions with word limits and scoring rules.",
+        "max": 20000
+      },
+      {
+        "id": "project",
+        "label": "Your project and organisation",
+        "type": "longtext",
+        "required": true,
+        "max": 8000
+      },
+      {
+        "id": "budget",
+        "label": "Project budget",
+        "type": "longtext",
+        "required": true,
+        "max": 4000
+      },
+      {
+        "id": "evidence",
+        "label": "Evidence you have",
+        "type": "longtext",
+        "required": false,
+        "help": "Numbers, reports, letters of support.",
+        "max": 6000
+      },
+      {
+        "id": "word_limit_total",
+        "label": "Total words allowed",
+        "type": "number",
+        "required": false,
+        "max": 20000
+      },
+      {
+        "id": "deadline",
+        "label": "Deadline",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "past_funding",
+        "label": "Past funding or results",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "no_invented_evidence",
+        "text": "Statistics, results, partners and quotes come from the brief only.",
+        "weight": 5,
+        "pass_rule": "Every number, outcome, partner name and quote matches the brief; evidence gaps are marked 'add evidence' instead of filled.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "answers_every_question",
+        "text": "Every funder question is answered within its word limit.",
+        "weight": 5,
+        "pass_rule": "Each question has an answer, and no answer exceeds its stated limit.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "budget_adds_up",
+        "text": "The budget narrative matches the budget and the numbers add up.",
+        "weight": 4,
+        "pass_rule": "Totals and percentages in the narrative recompute from the pasted budget; costs are explained line by line.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_scoring",
+        "text": "Answers speak to the funder's scoring criteria.",
+        "weight": 3,
+        "pass_rule": "Each scoring criterion in the brief is addressed by a named part of the answers.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "evidence_checklist",
+        "text": "A checklist lists the evidence and attachments to gather.",
+        "weight": 3,
+        "pass_rule": "Includes missing evidence, attachments and sign-offs with due dates before the deadline.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 249,
+      "min_usd": 149,
+      "max_usd": 799,
+      "size": {
+        "field": "word_limit_total",
+        "unit": "word",
+        "included": 2500,
+        "per_unit_usd": 0.1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced grant writer. Using the funder's questions and my project details below, write a first draft application: an answer to each question within its word limit, a needs statement, measurable outcomes, a budget narrative that matches my budget, and a checklist of evidence and attachments still needed. Use only the facts I give. Where evidence is missing write 'add evidence'. Do not invent statistics, partners or quotes. Check word counts and budget totals.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Grant success guarantees or success-fee deals",
+      "Invented partners, letters of support or statistics",
+      "Applications that misstate eligibility"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Youth football club applying to our county's community fund for $12,000 to buy kit and pay for coach training. Eight questions with 250 word limits each. 160 children, 60% from low-income homes. Deadline in 3 weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A small bakery cooperative applying for a regional food innovation grant of £20,000 to buy an energy-saving oven. Funder wants jobs created, carbon saved and match funding. Questions pasted below.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Library friends group applying for lottery funding to add a children's reading room. Budget £34,500. Funder scores need, fit and value for money.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Refugee language classes run by volunteers. We want a foundation grant of $30,000 for two paid teachers. We have attendance data and learner stories.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "grant application",
+      "grant writing",
+      "funding proposal",
+      "foundation grant",
+      "nonprofit grant",
+      "grant proposal",
+      "application draft"
+    ],
+    "demand_sources": [
+      {
+        "note": "Grant writer fee guide: $500 to $1,500 for a simple proposal, $1,500 to $5,000 for a standard one, $50 to $125 an hour.",
+        "url": "https://www.grantwatch.com/grantnews/how-much-do-grant-writers-charge/"
+      }
+    ]
+  }
+]

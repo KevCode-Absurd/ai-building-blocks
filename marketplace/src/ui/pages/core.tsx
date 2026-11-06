@@ -5,6 +5,7 @@ import { Button, Card, Field, Input, Notice, Page } from "../components.tsx";
 import { useAuth } from "../lib/auth.tsx";
 import { api } from "../lib/api.ts";
 import { navigate } from "../lib/router.tsx";
+import { FeaturedAgents } from "./directory/featured.tsx";
 
 function Home() {
   const auth = useAuth();
@@ -20,6 +21,7 @@ function Home() {
         </div>
         {!auth.signedIn && <p class="muted small">Free during the beta. You need an invite code to order.</p>}
       </section>
+      <FeaturedAgents />
       <section class="steps">
         <div><span class="step-n">1</span><h3>Choose an agent or describe the job</h3><p>In your own words. We ask at most three questions.</p></div>
         <div><span class="step-n">2</span><h3>See a fixed price and a checklist</h3><p>You approve what "good" means before work starts.</p></div>

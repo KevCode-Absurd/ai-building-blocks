@@ -1,0 +1,85 @@
+/* Intake pages: /new and /requests/:id. Tokens from styles.css only; mobile first. */
+.intake-narrow { max-width: 720px; }
+.intake-narrow.stack { gap: 20px; }
+
+/* Agent card */
+.intake-hire { margin-bottom: 20px; display: grid; gap: 16px; }
+.intake-agent { display: flex; gap: 14px; align-items: center; }
+.intake-agent-text { display: grid; gap: 2px; min-width: 0; }
+.intake-agent-text strong { font-size: 18px; }
+.intake-face { flex: none; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--intake-accent, var(--text)) 22%, var(--panel)); border: 1px solid var(--line); }
+.intake-face img { width: 100%; height: 100%; object-fit: cover; }
+.intake-face-letter { font-weight: 700; font-size: 22px; color: var(--text); }
+.intake-outcomes { display: grid; gap: 8px; }
+
+/* Option pills: outcome chips, choice and multichoice answers */
+.intake-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.intake-option { font: inherit; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px;
+  border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--text); cursor: pointer; text-align: left; }
+.intake-option:hover { border-color: var(--text); }
+.intake-option-on { border-color: var(--text); background: var(--btn); color: var(--btn-text); }
+.intake-option input { accent-color: var(--text); margin: 0; }
+.intake-option-on input { accent-color: var(--btn-text); }
+.intake-option:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+.intake-choices { border: 0; padding: 0; margin: 0 0 16px; min-width: 0; }
+.intake-choices legend { padding: 0; margin-bottom: 8px; display: grid; gap: 2px; }
+.intake-q-label { color: var(--muted); font-size: 13px; font-family: var(--mono); }
+.field .intake-q-label { margin-top: -4px; }
+
+/* The big request box */
+.intake-form { display: grid; gap: 4px; }
+.intake-big-label { font-size: 20px; }
+.intake-big { min-height: 180px; font-size: 17px; }
+.intake-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px; }
+.intake-actions .btn { min-width: 160px; }
+.intake-picker { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 12px 16px; margin-bottom: 12px; }
+.intake-picker summary { cursor: pointer; font-weight: 600; min-height: 28px; }
+.intake-picker[open] summary { margin-bottom: 8px; }
+.intake-chosen { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
+.intake-jobline { margin: 0; color: var(--text-2); }
+.intake-link { font: inherit; background: none; border: 0; padding: 0; color: var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+/* Job type lists */
+.intake-jobs { display: grid; gap: 16px; }
+.intake-job-group h3 { font-size: 13px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 8px; }
+.intake-job-grid, .intake-alts { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); margin-bottom: 12px; }
+.intake-job { font: inherit; text-align: left; display: grid; gap: 2px; padding: 10px 12px; min-height: 44px; border: 1px solid var(--line-2); border-radius: var(--radius);
+  background: var(--panel); color: var(--text); cursor: pointer; }
+.intake-job:hover:not(:disabled) { border-color: var(--text); }
+.intake-job:disabled { opacity: .6; cursor: wait; }
+.intake-job-on { border-color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
+.intake-job-title { font-weight: 600; }
+.intake-job-meta { font-size: 14px; color: var(--muted); }
+
+/* What you asked for */
+.intake-words { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 12px 16px; }
+.intake-words summary { cursor: pointer; font-weight: 600; }
+.intake-quote { white-space: pre-wrap; overflow-wrap: anywhere; margin: 12px 0; padding: 0 0 0 14px; border-left: 3px solid var(--line-2); color: var(--text-2); max-height: 320px; overflow-y: auto; }
+.intake-sub { font-size: 16px; margin: 16px 0 8px; }
+.intake-details { margin: 0; display: grid; gap: 8px; }
+.intake-details div { display: grid; gap: 2px; }
+.intake-details dt { font-size: 13px; color: var(--muted); }
+.intake-details dd { margin: 0; overflow-wrap: anywhere; }
+
+/* Quote */
+.intake-quote-card { display: grid; gap: 12px; border-color: var(--text); box-shadow: var(--hard); }
+.intake-price { display: grid; gap: 2px; }
+.intake-price-amount { font-size: clamp(36px, 9vw, 48px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+.intake-price-note { color: var(--muted); font-size: 14px; }
+.intake-ready { margin: 0; }
+.intake-rush { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; min-height: 44px; border: 1px solid var(--line-2); border-radius: var(--radius); cursor: pointer; background: var(--panel-2); }
+.intake-rush input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--text); flex: none; }
+.intake-breakdown summary { cursor: pointer; color: var(--text-2); }
+.intake-breakdown ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; font-size: 14px; }
+.intake-breakdown li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.intake-breakdown li span:last-child { font-family: var(--mono); white-space: nowrap; }
+.intake-checklist { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.intake-checklist .badge { margin-left: 4px; vertical-align: 1px; }
+.intake-order { display: grid; gap: 8px; justify-items: start; margin-top: 4px; }
+.intake-order .btn { width: 100%; max-width: 360px; min-height: 48px; }
+
+@media (max-width: 480px) {
+  .intake-actions .btn { width: 100%; }
+  .intake-job-grid, .intake-alts { grid-template-columns: 1fr; }
+}

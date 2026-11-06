@@ -31,7 +31,7 @@ export function errorResponse(status: number, code: string, message: string): Re
   return json({ error: { code, message } }, status);
 }
 
-export type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+export type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE" | "OPTIONS";
 
 export interface Ctx {
   req: Request;

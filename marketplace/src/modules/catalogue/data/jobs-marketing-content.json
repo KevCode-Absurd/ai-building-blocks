@@ -1,0 +1,4445 @@
+[
+  {
+    "format": "markdown",
+    "id": "paid-ads-copy-set",
+    "title": "Paid ads copy set",
+    "area": "marketing",
+    "summary": "A set of ready-to-paste ads for Google, Meta or LinkedIn, with several angles to test.",
+    "deliverable": "Headlines, descriptions and primary text for the chosen platform, grouped by angle, with character counts and a short note on what each angle tests.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "platform",
+        "label": "Where will the ads run?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Google search",
+          "Meta (Facebook and Instagram)",
+          "LinkedIn",
+          "TikTok",
+          "YouTube"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "What are you advertising?",
+        "type": "longtext",
+        "required": true,
+        "help": "The product or offer, price, and any deal.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should people do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Buy",
+          "Book a call",
+          "Sign up",
+          "Request a quote",
+          "Visit a store"
+        ]
+      },
+      {
+        "id": "angles",
+        "label": "Number of angles to test",
+        "type": "number",
+        "required": false,
+        "help": "An angle is one reason to click, such as price or speed.",
+        "max": 10
+      },
+      {
+        "id": "search_terms",
+        "label": "Search terms to target",
+        "type": "list",
+        "required": false,
+        "help": "For Google ads.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "platform_fit",
+        "text": "Each ad follows the length limits and style of its platform.",
+        "weight": 4,
+        "pass_rule": "Google headlines are 30 characters or fewer and descriptions 90 or fewer; Meta and LinkedIn text respects the stated limits. Counts are shown and correct.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "distinct_angles",
+        "text": "The set tests clearly different reasons to click, not the same line reworded.",
+        "weight": 4,
+        "pass_rule": "At least three angles are named, and a reader can tell each apart by its main benefit or hook. No two ads share the same opening claim.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "offer_and_cta",
+        "text": "Every ad names the offer and asks for the action the buyer chose.",
+        "weight": 4,
+        "pass_rule": "Each ad group states the offer or benefit and a call to action that matches the goal field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, price, discount, review, award or guarantee appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "policy_safe",
+        "text": "The ads avoid claims that platforms reject or that mislead.",
+        "weight": 3,
+        "pass_rule": "No guaranteed results, before-and-after claims, lines that call out personal traits (such as 'Are you struggling with...'), all-caps shouting or false urgency.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "angles",
+        "unit": "angle",
+        "included": 3,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior paid-media copywriter. Write ad copy for the platform(s) and offer in the brief. Produce three to five distinct angles (for example price, speed, proof, convenience). For each angle give headlines and descriptions or primary text that respect the platform character limits, and show the character count. Match the call to action to the stated goal. Use only facts in the brief; do not invent prices, discounts, reviews or guarantees. Avoid claims that ad policies reject. End with a one-line note on what each angle tests.",
+    "not_for": [
+      "Fake reviews, invented discounts or false scarcity",
+      "Ads for regulated offers (loans, investments, medical treatments) that need legal sign-off",
+      "Image or video creative, or setting up and running the ad account"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I run a plumbing company in Leeds. I want Google search ads for emergency boiler repair. We answer calls within 30 minutes and charge a fixed 89 pounds call-out. Goal is phone calls."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Meta ads for our online yoga studio. 12 pounds a month, first 14 days free, 40 live classes a week. Audience: women 30 to 55 who work from home. Goal: start the free trial."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "LinkedIn ads for our payroll software for firms with 20 to 200 staff. We want demo bookings. Our selling points are one-click holiday pay and UK tax filing built in. No customer names allowed."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We are a food bank charity running a Facebook campaign before winter. Goal: monthly donors. One donation of 10 dollars feeds a family for a day, according to our annual report. Keep it respectful, no guilt."
+      }
+    ],
+    "keywords": [
+      "ad copy",
+      "google ads",
+      "facebook ads",
+      "meta ads",
+      "ppc",
+      "linkedin ads",
+      "headlines",
+      "ad text"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "landing-page-copy",
+    "title": "Landing page copy",
+    "area": "marketing",
+    "summary": "Copy for one landing page that turns visitors into sign-ups, bookings or sales.",
+    "deliverable": "Headline, subhead, 3 to 7 sections, proof points, FAQ and calls to action, with notes on section order, ready to paste into your page builder.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What are you selling?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should visitors do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Sign up",
+          "Buy",
+          "Book a call",
+          "Join a waitlist",
+          "Request a quote"
+        ]
+      },
+      {
+        "id": "price_info",
+        "label": "Price and offer",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, reviews, logos or awards we may quote.",
+        "max": 10
+      },
+      {
+        "id": "objections",
+        "label": "Doubts buyers have",
+        "type": "list",
+        "required": false,
+        "help": "What makes people hesitate?",
+        "max": 8
+      },
+      {
+        "id": "sections",
+        "label": "Number of sections",
+        "type": "number",
+        "required": false,
+        "max": 12
+      },
+      {
+        "id": "traffic",
+        "label": "Where do visitors come from?",
+        "type": "text",
+        "required": false,
+        "help": "An ad, search or email. Helps match the message.",
+        "max": 200
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_offer",
+        "text": "A first-time visitor understands what is offered and for whom within the first screen.",
+        "weight": 5,
+        "pass_rule": "The headline and subhead together name the product type, the audience and the main benefit.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "one_action",
+        "text": "Every section leads to the one action the buyer chose.",
+        "weight": 4,
+        "pass_rule": "There is one primary call to action, repeated at least twice, matching the goal field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No number, review, customer name, award or logo appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "objections",
+        "text": "The main doubts of this audience are answered.",
+        "weight": 3,
+        "pass_rule": "At least three likely doubts are answered in the sections or the FAQ, including price or effort if known.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain, specific words with no filler or buzzwords.",
+        "weight": 3,
+        "pass_rule": "No headline or button over 12 words; none of 'unlock', 'revolutionize', 'seamless', 'game-changing' or 'cutting-edge'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "sections",
+        "unit": "section",
+        "included": 5,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a skilled conversion copywriter. Write landing page copy for the product in the brief. Include a headline, subhead, 3 to 5 sections in a sensible order (problem, solution, how it works, proof, price or offer), an FAQ that answers the buyer's likely doubts, and calls to action that match the stated goal. Lead with the benefit to this audience in plain words. Use only facts and proof given in the brief; never invent numbers, reviews or logos. Output in markdown with a label for each section.",
+    "not_for": [
+      "Fake reviews or invented testimonials",
+      "Claims about health, money or legal results the buyer cannot prove",
+      "Page design, code or building the page"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We sell a $29/month scheduling app for dog groomers. Most are one-person shops booking by text message. We want them to start a free trial."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Bookkeeping service for Shopify stores doing $20k to $200k a month. Flat fee from $300 a month. Goal: book a 20-minute call."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "A refillable deodorant brand selling direct. 4.7 stars from 2,100 reviews. We want first-time buyers to order the starter kit."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Waitlist page for a bilingual English and Spanish tutoring app for parents of 8 to 12 year olds, launching in March."
+      }
+    ],
+    "keywords": [
+      "landing page",
+      "sales page",
+      "conversion copy",
+      "lead page",
+      "homepage copy",
+      "squeeze page",
+      "web copy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "promotional-email",
+    "title": "Promotional email",
+    "area": "marketing",
+    "summary": "One marketing email for a sale, launch, event or announcement, with subject line options.",
+    "deliverable": "Five subject lines with preview text, the full email body with one clear button, and a short plain-text version.",
+    "turnaround_hours": 12,
+    "spec_fields": [
+      {
+        "id": "purpose",
+        "label": "What is the email for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Sale or discount",
+          "New product or service",
+          "Event or webinar",
+          "Announcement",
+          "Re-engage old customers",
+          "Other"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "Details of the offer",
+        "type": "longtext",
+        "required": true,
+        "help": "What, price, dates, and any limits.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "cta",
+        "label": "What should readers click?",
+        "type": "text",
+        "required": true,
+        "help": "The action, for example 'Book a table'.",
+        "max": 200
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Short (under 120 words)",
+          "Medium (120 to 250 words)",
+          "Long (250 to 400 words)"
+        ]
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "subject_lines",
+        "text": "Subject lines are clear, varied and honest.",
+        "weight": 3,
+        "pass_rule": "Five subject lines are given, each under 60 characters, using at least three different approaches, and none promises something the email does not deliver.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "single_cta",
+        "text": "The email has one main action and says it plainly.",
+        "weight": 4,
+        "pass_rule": "There is one primary call to action matching the brief, shown as a button line and once in the text; no competing links.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "offer_clear",
+        "text": "The reader knows the offer, the dates and any limits early.",
+        "weight": 4,
+        "pass_rule": "The offer and every date or limit in the brief appear in the first two paragraphs and match the brief exactly.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No discount, price, date, deadline, stock level or testimonial appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "voice_and_length",
+        "text": "The email reads like the business and fits the chosen length.",
+        "weight": 3,
+        "pass_rule": "Word count falls inside the chosen range and the tone matches the voice notes; no spam trigger lines like 'ACT NOW!!!' or 'free money'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 129,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an email marketer who writes for small businesses. Write one promotional email from the brief. Give five subject lines with preview text, then the full email: a short opening that gets to the point, the offer with its dates and limits, a single clear call to action, and a sign-off. Match the voice notes and the length requested. Use only facts in the brief and never invent discounts, deadlines or reviews. Add a short plain-text version.",
+    "not_for": [
+      "Fake urgency or countdowns that are not real",
+      "Bulk email to people who did not agree to hear from you",
+      "Cold sales outreach (see the sales jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Our pizza restaurant in Austin is running a Tuesday deal: any large pizza and a pitcher of soda for 18 dollars, only on Tuesdays in November. Email our 3,000-person list."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Dental clinic. We now offer Saturday appointments from 9 to 1. Tell existing patients and ask them to book online. Friendly, not salesy."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Online course for beginner photographers, 149 dollars, doors open Monday and close Friday at midnight. Past students gave permission to say '1,200 students so far'."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Garden centre spring open day on 12 April, free tree sapling for the first 100 visitors, live music at noon. Audience: local gardeners."
+      }
+    ],
+    "keywords": [
+      "promo email",
+      "newsletter email",
+      "sale email",
+      "launch email",
+      "email blast",
+      "announcement email",
+      "subject line"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "email-sequence",
+    "title": "Email sequence",
+    "area": "marketing",
+    "summary": "A short series of emails that welcomes new subscribers, nurtures leads or wins back customers.",
+    "deliverable": "A sequence map with send timing, then every email in full with subject line, preview text, body and one call to action.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "sequence_type",
+        "label": "Type of sequence",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Welcome",
+          "Nurture leads",
+          "Onboarding",
+          "Abandoned cart",
+          "Win back",
+          "Course or free trial"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "emails",
+        "label": "Number of emails",
+        "type": "number",
+        "required": true,
+        "max": 10
+      },
+      {
+        "id": "goal",
+        "label": "What should the reader do by the end?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "trigger",
+        "label": "What starts the sequence?",
+        "type": "text",
+        "required": false,
+        "help": "For example: joins the list, starts a trial.",
+        "max": 200
+      },
+      {
+        "id": "offer",
+        "label": "Offer or product to lead to",
+        "type": "longtext",
+        "required": false,
+        "max": 1500
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_arc",
+        "text": "The emails build step by step toward the goal.",
+        "weight": 4,
+        "pass_rule": "Each email has a stated job in the sequence map, the order makes sense, and the last email asks for the goal action.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "one_job_each",
+        "text": "Each email has one idea and one action.",
+        "weight": 4,
+        "pass_rule": "Every email contains exactly one primary call to action and covers one main idea.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "timing_and_subjects",
+        "text": "Send timing and subject lines are given and are sensible.",
+        "weight": 3,
+        "pass_rule": "The map gives a send delay for each email, and each email has a subject line under 60 characters and preview text.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, price, testimonial, customer name, deadline or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "value_before_ask",
+        "text": "Early emails help the reader before asking for anything.",
+        "weight": 3,
+        "pass_rule": "At least half of the emails give useful advice, a story or a how-to with no sales ask beyond a soft link.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 599,
+      "size": {
+        "field": "emails",
+        "unit": "email",
+        "included": 5,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a lifecycle email marketer. Design and write an email sequence from the brief. First give a sequence map: for each email its job, send timing and subject line. Then write every email in full: subject line, preview text, body and one call to action. Give value before asking, build toward the goal, and make the last email ask for it clearly. Match the voice notes. Use only facts in the brief; never invent testimonials, statistics or deadlines.",
+    "not_for": [
+      "Fake urgency, countdown timers that reset, or invented scarcity",
+      "Cold outreach to people who did not opt in",
+      "Setting up the emails in an email tool"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Welcome sequence of 5 emails for our bakery's newsletter. New subscribers get a free recipe PDF. We want them to order a cake box online within 30 days."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Abandoned cart series (3 emails) for a store selling hand-poured candles. Free shipping over 40 dollars. Do not offer discounts."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Onboarding emails for a 14-day free trial of our invoicing software for freelancers. The key moments are: send first invoice, connect bank, upgrade by day 14. Plans cost 12 dollars a month."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Win-back sequence for a gym that lost members. 4 emails. Offer: one free personal training session. Be warm and not guilt-based."
+      }
+    ],
+    "keywords": [
+      "email sequence",
+      "drip campaign",
+      "welcome series",
+      "nurture emails",
+      "onboarding emails",
+      "automation emails",
+      "autoresponder",
+      "abandoned cart"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "marketing-plan",
+    "title": "90-day marketing plan",
+    "area": "marketing",
+    "summary": "A clear 90-day plan: what to do, in what order, with what budget, and how to tell it is working.",
+    "deliverable": "A written plan with goals, target customer, 3 to 5 chosen channels with reasons, week-by-week actions for 90 days, a budget split, and the numbers to track.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "Main goal for the next 90 days",
+        "type": "text",
+        "required": true,
+        "help": "For example: 20 new leads a month.",
+        "max": 300
+      },
+      {
+        "id": "budget",
+        "label": "Monthly budget",
+        "type": "number",
+        "required": true,
+        "help": "Ads and tools together, in your own currency. Use 0 if none.",
+        "max": 1000000
+      },
+      {
+        "id": "team",
+        "label": "Who will do the work?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Just me",
+          "Me and one helper",
+          "Small team",
+          "Agency or freelancers"
+        ]
+      },
+      {
+        "id": "channels_now",
+        "label": "What do you do today?",
+        "type": "longtext",
+        "required": false,
+        "help": "Channels you use and what has or has not worked.",
+        "max": 1500
+      },
+      {
+        "id": "numbers",
+        "label": "Current numbers",
+        "type": "list",
+        "required": false,
+        "help": "Traffic, leads, sales, email list size.",
+        "max": 12
+      },
+      {
+        "id": "competitors",
+        "label": "Main competitors",
+        "type": "list",
+        "required": false,
+        "max": 8
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_budget_and_team",
+        "text": "The plan can be done with the stated budget and people.",
+        "weight": 5,
+        "pass_rule": "Total planned spend is at or under the budget, and the weekly workload is realistic for the team size given.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "reasoned_channels",
+        "text": "Each chosen channel has a reason tied to the audience and goal.",
+        "weight": 4,
+        "pass_rule": "3 to 5 channels are chosen, each with a stated reason, and at least one common channel is ruled out with a reason.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "week_by_week",
+        "text": "The plan says what to do each week.",
+        "weight": 4,
+        "pass_rule": "Actions are listed for each of the 12 or 13 weeks, each with who does it (you, helper, freelancer) and a clear output.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No market figure, benchmark, conversion rate, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "measurable",
+        "text": "Success is measured with a few numbers and targets.",
+        "weight": 3,
+        "pass_rule": "Three to six metrics are named with a starting value (from the brief, or marked 'unknown') and a 90-day target tied to the goal.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a fractional chief marketing officer for small businesses. Using the brief, write a 90-day marketing plan. Include: the goal restated; who the target customer is and what they care about; three to five channels chosen for this budget and team, with a reason for each and one popular channel you are skipping and why; a week-by-week action list for 12 weeks; a budget split by channel; and three to six metrics with targets. Keep the plan realistic for the team size. Do not invent market statistics, benchmarks or competitor facts; where data is missing, say what to measure first.",
+    "not_for": [
+      "Guaranteed growth or revenue forecasts",
+      "Financial, legal or tax advice",
+      "Running the campaigns or buying ads"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I own a three-van carpet cleaning business in Phoenix. About 70 jobs a month, mostly from word of mouth. Want to double bookings by spring. Budget 800 dollars a month. It's just me and my office manager."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "B2B SaaS for dental practices (practice management tool, 49 dollars per chair per month). 1 founder, 1 part-time marketer. Budget 3,000 a month. Goal: 30 demo requests a month."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Independent bookshop and cafe in Dublin. Want to grow events and cafe sales. We have 2,400 email subscribers and 6,000 Instagram followers. Budget 400 euros a month."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Form-filling help service for international students (not legal advice). Need more consultations. 1,500 dollars a month budget, 2 staff."
+      }
+    ],
+    "keywords": [
+      "marketing plan",
+      "marketing strategy",
+      "90 day plan",
+      "go to market",
+      "growth plan",
+      "channel plan",
+      "marketing roadmap"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "seo-content-plan",
+    "title": "SEO content plan",
+    "area": "marketing",
+    "summary": "A list of the pages and articles your site should publish, ranked by what to write first.",
+    "deliverable": "A plan of 15 to 40 topics, each with a target search phrase, the reader's goal, page type, a short outline, and a priority order, built from the keyword data and site details you supply.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "site",
+        "label": "Your website address",
+        "type": "url",
+        "required": true
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should search visitors do?",
+        "type": "text",
+        "required": true,
+        "help": "For example: book a quote, buy, join the list.",
+        "max": 300
+      },
+      {
+        "id": "keyword_data",
+        "label": "Keyword list or export",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste terms and volumes from your SEO tool, Search Console or a spreadsheet. We cannot look up live data.",
+        "max": 12000
+      },
+      {
+        "id": "existing_pages",
+        "label": "Pages you already have",
+        "type": "list",
+        "required": false,
+        "help": "Page titles or addresses.",
+        "max": 60
+      },
+      {
+        "id": "competitors",
+        "label": "Competitor sites",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "topics",
+        "label": "Number of topics",
+        "type": "number",
+        "required": false,
+        "max": 60
+      },
+      {
+        "id": "local",
+        "label": "Local area served",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "uses_supplied_data",
+        "text": "Topics and priorities come from the data supplied, with gaps stated.",
+        "weight": 5,
+        "pass_rule": "Every search volume or difficulty figure quoted appears in the supplied data; where no data was given, the plan says so and does not show numbers.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "intent_match",
+        "text": "Each topic matches what the searcher wants and the page type fits.",
+        "weight": 4,
+        "pass_rule": "Each topic names the searcher's goal and a page type (guide, service page, comparison, FAQ) that fits that goal.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "business_fit",
+        "text": "Topics lead toward what the business sells.",
+        "weight": 4,
+        "pass_rule": "Each topic states how it connects to the offer or goal, and at least a third of topics are close to buying.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_priority",
+        "text": "The plan says what to write first and why.",
+        "weight": 3,
+        "pass_rule": "Topics are ranked, the top five have a stated reason, and the plan avoids duplicate pages for the same phrase.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No search volume, ranking position, traffic estimate, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "topics",
+        "unit": "topic",
+        "included": 20,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an SEO content strategist. Using the business details and any keyword data in the brief, build a content plan of the requested number of topics. For each topic give the target search phrase, the searcher's goal, the best page type, a three to five bullet outline, how it supports the business goal, and a priority rank. Group topics into clusters and avoid two pages targeting the same phrase. Use only numbers present in the supplied data. If no data is supplied, say volumes are unknown and rank by relevance to buyers. Never promise rankings.",
+    "not_for": [
+      "Guaranteed rankings or traffic",
+      "Buying links or any spam tactic",
+      "Live keyword lookups, rank tracking or reading your analytics account"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Roofing company in Tampa, site is tampa-roofpros.example. We want more calls for roof repair and replacement. We have 8 pages. Here is a list of 40 search phrases from our SEO tool with monthly volumes (pasted below)."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "We sell project management software for architecture firms. Our blog has 6 posts. We want trial sign-ups. No keyword data, but our main competitors are Procore and Monday. Need 25 topics."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Vegan bakery with an online shop in Manchester. We want to rank for gluten-free cakes and wedding cakes. We have 12 products and no blog. Budget is tight so please prioritise."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Private physiotherapy clinic, three locations in Perth. Want new patient bookings. Please keep health claims safe and general. 30 topics, local focus."
+      }
+    ],
+    "keywords": [
+      "seo plan",
+      "content plan",
+      "keyword research",
+      "topic cluster",
+      "content strategy",
+      "blog topics",
+      "seo strategy",
+      "content calendar seo"
+    ],
+    "demand_sources": [
+      {
+        "note": "SEO audit pricing guide: freelancer or small-agency lite audits cost $500-2,500, small sites under 20 pages about $500-1,000, freelancer hourly rates $50-150.",
+        "url": "https://www.eesel.ai/blog/how-much-does-an-seo-audit-cost"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "seo-audit-report",
+    "title": "SEO audit from your data",
+    "area": "marketing",
+    "summary": "A plain-language SEO check of your site, based on the pages, exports and notes you give us.",
+    "deliverable": "A report listing the issues found in the material you supply, ranked by impact and effort, with the exact fix for each and a 30-day action list.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "site",
+        "label": "Your website address",
+        "type": "url",
+        "required": true
+      },
+      {
+        "id": "goal",
+        "label": "What should the site achieve?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "pages",
+        "label": "Page text, titles and descriptions",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the text of key pages, or a crawl export of titles, descriptions, headings and status codes.",
+        "max": 20000
+      },
+      {
+        "id": "search_data",
+        "label": "Search Console or keyword data",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste queries, clicks and impressions if you have them.",
+        "max": 12000
+      },
+      {
+        "id": "platform",
+        "label": "What is the site built on?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "WordPress",
+          "Shopify",
+          "Wix",
+          "Squarespace",
+          "Webflow",
+          "Custom",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "competitors",
+        "label": "Competitor sites",
+        "type": "list",
+        "required": false,
+        "max": 5
+      },
+      {
+        "id": "local",
+        "label": "Local area served",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "concerns",
+        "label": "What worries you?",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "only_what_supplied",
+        "text": "Findings are tied to the material supplied, and limits are stated.",
+        "weight": 5,
+        "pass_rule": "Each finding quotes or points to a page, title or data row from the supplied material; the report names what it could not check (speed, backlinks, live rankings) and does not guess at them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "specific_fixes",
+        "text": "Each issue has a specific fix.",
+        "weight": 4,
+        "pass_rule": "For each issue the report gives the page, the current text or setting, and the replacement text or the exact change.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ranked",
+        "text": "Issues are ranked by impact and effort.",
+        "weight": 4,
+        "pass_rule": "Issues are grouped as high, medium or low priority with a stated reason, and a 30-day action list orders them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_language",
+        "text": "A non-expert owner can follow it.",
+        "weight": 3,
+        "pass_rule": "Technical terms are explained in a few words on first use; no sentence runs over 25 words in the summary.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No score, ranking, traffic figure, backlink count, speed result or competitor fact appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an SEO consultant. Review the pages, exports and notes in the brief and write an audit report for a business owner. Cover titles and descriptions, headings, page content and intent match, internal links, duplicate or thin pages, local signals if relevant, and any issues visible in the supplied data. For every issue quote the page and current text, say why it matters, and give the fix, such as a rewritten title. Rank issues by impact and effort and end with a 30-day action list. Say clearly what you could not check, such as site speed, backlinks and live rankings. Do not invent scores or numbers.",
+    "not_for": [
+      "Technical checks that need live crawling, speed tests or backlink tools",
+      "Guaranteed rankings",
+      "Paid links or other spam tactics"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Our law-office-adjacent notary service in Denver gets almost no calls from Google. Here is a crawl export of our 14 pages (titles, descriptions, H1s). Please tell us what is wrong and how to fix it."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Shopify store for handmade leather bags. Traffic dropped after we moved our collections. I pasted our Search Console queries for the last 3 months and the text of our top 5 pages."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "WordPress site for a three-dentist practice in Calgary. I pasted all page titles and meta descriptions. We want more new-patient bookings for Invisalign and implants. No health promises please."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Small recruitment agency in Lagos. Our job pages seem not to appear on Google. Here are 20 URLs with titles and the text of our home page and services page."
+      }
+    ],
+    "keywords": [
+      "seo audit",
+      "site audit",
+      "website review",
+      "seo check",
+      "on-page seo",
+      "seo report",
+      "technical seo",
+      "google ranking"
+    ],
+    "demand_sources": [
+      {
+        "note": "SEO audit pricing guide: freelancer or small-agency lite audits cost $500-2,500, small sites under 20 pages about $500-1,000, freelancer hourly rates $50-150.",
+        "url": "https://www.eesel.ai/blog/how-much-does-an-seo-audit-cost"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "social-media-calendar",
+    "title": "Social media calendar",
+    "area": "marketing",
+    "summary": "A month of planned posts with ready-to-use captions, hashtags and ideas for the pictures or videos.",
+    "deliverable": "A 30-day calendar table (date, platform, post type, topic) plus the full caption for each post, hashtags and a short note on what image or clip to use.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "platforms",
+        "label": "Which platforms?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Instagram",
+          "Facebook",
+          "LinkedIn",
+          "TikTok",
+          "X",
+          "Pinterest",
+          "YouTube Shorts"
+        ]
+      },
+      {
+        "id": "posts",
+        "label": "Number of posts",
+        "type": "number",
+        "required": true,
+        "help": "Total for the month.",
+        "max": 60
+      },
+      {
+        "id": "month",
+        "label": "Month and year",
+        "type": "text",
+        "required": true,
+        "help": "For example: March 2027.",
+        "max": 40
+      },
+      {
+        "id": "goals",
+        "label": "Goals for the month",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "dates",
+        "label": "Dates, events and offers to include",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "mix_and_rhythm",
+        "text": "The month has a sensible mix and spread of post types.",
+        "weight": 4,
+        "pass_rule": "Posts are spread across the month, no more than three promotional posts in a row, and at least three post types (tips, behind the scenes, offers, stories, questions) appear.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "platform_native",
+        "text": "Captions suit each platform.",
+        "weight": 3,
+        "pass_rule": "Each caption fits its platform's norms and length, and hashtags are used in a count that suits the platform.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "uses_dates_and_offers",
+        "text": "Every date, event and offer from the brief is placed on the calendar.",
+        "weight": 4,
+        "pass_rule": "Each item in the dates field appears on the right date, and no unlisted event or holiday is treated as a business event.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No offer, price, review, event, statistic or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_post",
+        "text": "Each post can be used without more writing.",
+        "weight": 4,
+        "pass_rule": "Every calendar row has a complete caption, a call to action where fitting, hashtags where fitting, and a visual note.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "posts",
+        "unit": "post",
+        "included": 30,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a social media manager. Build a month-long content calendar from the brief. Give a table with date, platform, post type and topic. Then write the full caption for every post, with hashtags and a short note on the image or video to shoot. Mix tips, behind-the-scenes, offers, stories and questions, and avoid more than three sales posts in a row. Place every date and offer given in the brief. Match the voice notes and each platform's style. Use only facts from the brief; never invent offers, reviews or events.",
+    "not_for": [
+      "Posting to your accounts or scheduling",
+      "Fake engagement, bought followers or invented reviews",
+      "Images, graphics or video files"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Instagram and Facebook calendar for our family-run pizzeria in Chicago for 30 days. We want more dine-in on weeknights. Events: trivia night every Wednesday, 2-for-1 slices on Mondays."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "LinkedIn calendar (12 posts) for a cybersecurity consultancy aimed at small accounting firms. Goal: inbound enquiries. Voice: calm, practical, no scare tactics."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Nonprofit animal shelter. 20 posts across Facebook and Instagram for April. Adoption day on April 20 and a fundraiser on April 27. We can share names of 5 pets currently available (listed)."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Boutique gym in Toronto, TikTok and Instagram, 24 posts for January. New Year membership offer: 50 dollars off joining until January 31. Friendly, not shame-based."
+      }
+    ],
+    "keywords": [
+      "social media calendar",
+      "content calendar",
+      "social media posts",
+      "instagram posts",
+      "monthly social plan",
+      "social captions",
+      "posting schedule",
+      "social media manager"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "social-post-pack",
+    "title": "Social post pack",
+    "area": "marketing",
+    "summary": "A batch of ready-to-post captions on one topic, launch or campaign.",
+    "deliverable": "Ten posts by default, each with caption, hashtags and a suggested image or clip idea, written for the platforms you choose.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "What are the posts about?",
+        "type": "longtext",
+        "required": true,
+        "help": "A product, launch, event, or theme.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "platforms",
+        "label": "Which platforms?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Instagram",
+          "Facebook",
+          "LinkedIn",
+          "TikTok",
+          "X",
+          "Pinterest"
+        ]
+      },
+      {
+        "id": "posts",
+        "label": "Number of posts",
+        "type": "number",
+        "required": true,
+        "max": 40
+      },
+      {
+        "id": "goal",
+        "label": "What should people do?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "varied",
+        "text": "The posts are different from each other.",
+        "weight": 4,
+        "pass_rule": "No two posts share the same hook or structure, and at least three formats appear (question, tip, story, offer, list).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "platform_native",
+        "text": "Captions suit each platform.",
+        "weight": 3,
+        "pass_rule": "Length, tone and hashtag use match the named platform for each post.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_action",
+        "text": "Posts that need an action ask for the right one.",
+        "weight": 3,
+        "pass_rule": "Offer or launch posts include a call to action that matches the goal field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No offer, price, review, statistic or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "on_topic_voice",
+        "text": "Posts stay on topic and sound like the business.",
+        "weight": 3,
+        "pass_rule": "Every post ties to the topic given and the tone matches the voice notes; no hashtag spam over 8 tags.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 35,
+      "max_usd": 199,
+      "size": {
+        "field": "posts",
+        "unit": "post",
+        "included": 10,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a social media copywriter. Write the requested number of distinct posts about the topic in the brief, for the platforms named. For each post give the caption, hashtags suited to the platform, and a one-line idea for the image or video. Vary the hooks and formats (question, tip, story, offer, list). Match the voice notes and the goal. Use only facts in the brief; never invent offers, prices, reviews or statistics.",
+    "not_for": [
+      "Posting or scheduling for you",
+      "Fake reviews, fake engagement or impersonating people",
+      "Graphic design or video editing"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "10 Instagram posts to announce our new cold brew coffee subscription (22 dollars a bag, delivered every 2 weeks). Audience: office workers in Seattle."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "8 LinkedIn posts promoting our free 30-minute cash flow check for small builders. We are an accounting firm. Plain, helpful tone."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Facebook posts for a community theatre's spring show, 'Little Shop of Horrors', April 3 to 12, tickets 15 dollars, 10 for students. We want to fill the 120-seat hall."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "TikTok and Instagram captions for a mobile dog-washing van in Brisbane. Prices from 55 dollars. Fun voice, no fake before-and-after claims."
+      }
+    ],
+    "keywords": [
+      "social posts",
+      "instagram captions",
+      "linkedin posts",
+      "facebook posts",
+      "tiktok captions",
+      "post ideas",
+      "social copy",
+      "hashtags"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "positioning-messaging",
+    "title": "Positioning and messaging guide",
+    "area": "marketing",
+    "summary": "A short guide that says who you serve, why you are different, and the words to use everywhere.",
+    "deliverable": "A positioning statement, value proposition, three to five message pillars with proof, a tagline shortlist, an elevator pitch, and example copy for a homepage hero and an email intro.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "alternatives",
+        "label": "What do customers use instead of you?",
+        "type": "list",
+        "required": true,
+        "help": "Competitors, spreadsheets, doing nothing.",
+        "max": 8
+      },
+      {
+        "id": "strengths",
+        "label": "What are you better at?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "customer_words",
+        "label": "Words customers use",
+        "type": "list",
+        "required": false,
+        "help": "Quotes from reviews, calls or emails.",
+        "max": 15
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "max": 12
+      },
+      {
+        "id": "current_copy",
+        "label": "Current website or pitch text",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "specific_audience",
+        "text": "The positioning names a specific customer and the problem they have.",
+        "weight": 4,
+        "pass_rule": "The positioning statement names who the customer is, what they need and the main alternative, in a form a stranger could repeat.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_difference",
+        "text": "The difference is something the buyer can actually claim.",
+        "weight": 5,
+        "pass_rule": "Every claimed difference is supported by the strengths or proof in the brief; claims like 'best' or 'only' appear only if the brief supports them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "pillars_with_proof",
+        "text": "Message pillars each carry proof or an example.",
+        "weight": 3,
+        "pass_rule": "Three to five pillars, each with a proof point taken from the brief and a plain-word version a customer would say.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, customer quote, award, competitor fact or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_examples",
+        "text": "The guide shows the words in use.",
+        "weight": 3,
+        "pass_rule": "Example hero copy, an elevator pitch of under 40 words and an email intro are included and follow the pillars.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 499,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a brand strategist. From the brief, write a positioning and messaging guide. Include: a positioning statement (for who, the need, the alternative, why us); a one-sentence value proposition; three to five message pillars each with a proof point from the brief; five tagline options; an elevator pitch under 40 words; and sample homepage hero copy and an email intro that use the pillars. Prefer the words customers use. Only claim differences the brief supports; do not invent statistics, quotes or competitor facts.",
+    "not_for": [
+      "Logos, naming legal checks or trademark advice",
+      "Claims of being 'best' or 'only' without proof",
+      "Competitor smear or false comparisons"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We run a 6-person IT support firm for dental offices in Ohio. Customers compare us to the big national IT companies. We answer within 15 minutes and fix computers on site. We sound the same as everyone."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Early-stage app that turns voice notes into invoices for tradespeople. Competitors are QuickBooks and Jobber. Customers tell us, 'I hate doing paperwork at night.'"
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Family-owned olive oil importer selling to restaurants in Melbourne. Single-estate oils from one Greek village. Chefs buy from big distributors now."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Freelance bookkeeping collective, 5 people, serving creative agencies in London. We want to stop competing on price."
+      }
+    ],
+    "keywords": [
+      "positioning",
+      "messaging",
+      "value proposition",
+      "brand messaging",
+      "tagline",
+      "unique selling point",
+      "brand strategy",
+      "elevator pitch"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "product-launch-plan",
+    "title": "Product launch plan",
+    "area": "marketing",
+    "summary": "A step-by-step plan for launching a product, service or offer, from two weeks before to two weeks after.",
+    "deliverable": "A launch plan with goal, audience, key message, a dated task list by week, channel actions, draft announcement copy for the main channels, and the numbers to check afterwards.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "product",
+        "label": "What are you launching?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "launch_date",
+        "label": "Launch date",
+        "type": "text",
+        "required": true,
+        "max": 60
+      },
+      {
+        "id": "goal",
+        "label": "Launch goal",
+        "type": "text",
+        "required": true,
+        "help": "For example: 200 sign-ups in the first week.",
+        "max": 300
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "number",
+        "required": false,
+        "help": "Total, in your own currency. Use 0 if none.",
+        "max": 1000000
+      },
+      {
+        "id": "assets",
+        "label": "What you already have",
+        "type": "list",
+        "required": false,
+        "help": "Email list size, social followers, press contacts, partners.",
+        "max": 12
+      },
+      {
+        "id": "team",
+        "label": "Who is helping?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Just me",
+          "Me and one helper",
+          "Small team",
+          "Agency or freelancers"
+        ]
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "dated_and_doable",
+        "text": "Tasks have dates and fit the team and budget.",
+        "weight": 5,
+        "pass_rule": "Every task is tied to a week or date relative to launch, and total effort and spend are realistic for the team and budget stated.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "uses_own_assets",
+        "text": "The plan uses what the buyer already has before asking for new things.",
+        "weight": 3,
+        "pass_rule": "The assets listed in the brief appear in the plan with a specific use for each.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "announcement_copy",
+        "text": "Draft announcement copy is included for the main channels.",
+        "weight": 4,
+        "pass_rule": "At least an email, a social post and a short site or press blurb are drafted and match the key message and the launch date.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, benchmark, press contact, partner, price or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "measure_after",
+        "text": "The plan says how to judge the launch.",
+        "weight": 3,
+        "pass_rule": "Three to five numbers are named with targets that tie to the stated goal, and a review date after launch is set.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 179,
+      "min_usd": 119,
+      "max_usd": 499,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a go-to-market lead for small companies. Write a launch plan from the brief. Include: goal, audience and the one-sentence key message; a week-by-week task list from two weeks before launch to two weeks after, with an owner type for each task; channel actions using the assets the buyer already has; a budget split if a budget is given; draft copy for the launch email, one social post and a short announcement blurb; and three to five metrics with targets and a review date. Keep it realistic for the team size. Use only facts in the brief and do not invent statistics, partners or press contacts.",
+    "not_for": [
+      "Guaranteed sales or press coverage",
+      "Regulated product claims (health, money, legal) that need expert sign-off",
+      "Running the launch, buying ads or sending emails"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We are launching a hot sauce subscription box on March 15. 900 people on our email list, 4,000 Instagram followers, 2,000 dollars budget. It's me and a part-time friend."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Launch of our new spring semester online coding course for adults changing careers. Starts June 3, 99 seats, 450 dollars each. We have a 6,000-person email list from a free workshop."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Launching a coworking space in a converted mill in Leeds, opening 1 October. 60 desks. Local freelancers and small startups. 3,000 pounds for launch, two staff."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "We are releasing version 2 of our open-source invoicing tool for small shops. Release date in 3 weeks. Mostly developers and tech-minded owners. No budget, community-led."
+      }
+    ],
+    "keywords": [
+      "launch plan",
+      "product launch",
+      "go to market",
+      "launch strategy",
+      "announcement plan",
+      "new product marketing",
+      "launch checklist"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "competitor-teardown",
+    "title": "Competitor teardown",
+    "area": "marketing",
+    "summary": "A side-by-side review of your competitors' messaging, offers and pages, with gaps you can use.",
+    "deliverable": "A report on up to five competitors covering positioning, offers, pricing shown, proof, strengths and weak spots, a comparison table, and five specific moves for you.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors to review",
+        "type": "list",
+        "required": true,
+        "help": "Names or website addresses.",
+        "max": 6
+      },
+      {
+        "id": "competitor_material",
+        "label": "Competitor pages or notes",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the text of their home, pricing and about pages, ads or emails. We cannot browse live sites.",
+        "max": 30000
+      },
+      {
+        "id": "your_material",
+        "label": "Your own page text",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "goal",
+        "label": "What do you want to decide?",
+        "type": "text",
+        "required": true,
+        "help": "For example: how to price, what to say on our homepage.",
+        "max": 300
+      },
+      {
+        "id": "audience",
+        "label": "Who you both sell to",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "grounded_in_material",
+        "text": "Every claim about a competitor comes from the material supplied.",
+        "weight": 5,
+        "pass_rule": "Each statement about a competitor's price, feature, claim or message can be matched to the pasted material; items not found are marked 'not shown'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "comparison_table",
+        "text": "A clear side-by-side table is included.",
+        "weight": 3,
+        "pass_rule": "A table covers each competitor and the buyer on the same rows (audience, offer, price shown, proof, main message).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "gaps_found",
+        "text": "The report finds real gaps and weak spots.",
+        "weight": 4,
+        "pass_rule": "At least three gaps or weak spots are named, each tied to a quote or fact from the material.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "actionable_moves",
+        "text": "The report ends with moves the buyer can act on.",
+        "weight": 4,
+        "pass_rule": "Five specific moves are given, each linked to a finding and to the stated decision goal.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No price, feature, revenue, customer count, ad spend or traffic figure appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 179,
+      "min_usd": 119,
+      "max_usd": 449,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a competitive analyst for small businesses. Using only the pasted competitor material and the buyer's own details, write a competitor teardown. For each competitor summarise who they target, their offer, prices shown, proof they use, main message, strengths and weak spots, quoting short phrases as evidence. Add a side-by-side table including the buyer. Name at least three gaps and end with five specific moves tied to the decision the buyer wants to make. Mark anything not in the material as 'not shown'. Do not guess revenue, traffic, ad spend or customer numbers.",
+    "not_for": [
+      "Live browsing, scraping or tracking competitors' traffic",
+      "Defaming competitors or making false comparisons",
+      "Using confidential or stolen competitor information"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I run a mobile car-detailing business in Atlanta. Here is text from three local competitors' sites and their pricing pages. I want to know how to price my packages and what to say differently."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our HR software is aimed at companies with under 50 staff. Competitors: BambooHR, Gusto and Rippling. I pasted their home and pricing pages. How do we stand out on our homepage?"
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Coffee roaster selling subscriptions. Two competitors pasted. We want to know what offers, free shipping rules and guarantees they use so we can decide our subscription terms."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Boutique accounting firm for e-commerce sellers. I pasted four rival firms' services pages. Need to see what they promise and what nobody mentions."
+      }
+    ],
+    "keywords": [
+      "competitor analysis",
+      "competitor teardown",
+      "competitive research",
+      "market comparison",
+      "swot",
+      "competitor review",
+      "benchmark competitors"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "customer-persona-pack",
+    "title": "Customer persona pack",
+    "area": "marketing",
+    "summary": "Clear profiles of your best customer types, built from your own customer notes and data.",
+    "deliverable": "Two to four personas, each with goals, frustrations, buying triggers, objections, the words they use, where to reach them, and message ideas, plus a short guide to using them.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "customer_data",
+        "label": "Customer facts and notes",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste survey answers, review text, call notes, order data or sales notes. More real detail gives better personas.",
+        "max": 20000
+      },
+      {
+        "id": "best_customers",
+        "label": "Who are your best customers?",
+        "type": "text",
+        "required": true,
+        "max": 500
+      },
+      {
+        "id": "personas",
+        "label": "Number of personas",
+        "type": "number",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "channels",
+        "label": "Where do you sell and market?",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "use",
+        "label": "How will you use them?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Website copy",
+          "Ads",
+          "Email",
+          "Product ideas",
+          "Sales team",
+          "General"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "from_the_data",
+        "text": "Each persona detail traces to the customer material supplied.",
+        "weight": 5,
+        "pass_rule": "Details such as goals, frustrations and quotes appear in the supplied material; any assumption is labelled 'assumed' and kept to a short list.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "distinct_personas",
+        "text": "The personas are clearly different from each other.",
+        "weight": 4,
+        "pass_rule": "Each persona differs in need or buying trigger, and the pack says which is the main one.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "customer_words",
+        "text": "The personas use real customer wording.",
+        "weight": 3,
+        "pass_rule": "Each persona includes at least two phrases taken from the supplied material, shown in quotes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "usable",
+        "text": "The pack tells the buyer how to use it.",
+        "weight": 3,
+        "pass_rule": "Each persona has message ideas and channels, and the pack ends with a short guide matching the use field.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No age, income, statistic, survey result, quote or named person appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 399,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer research analyst. From the customer material in the brief, build two to four personas. For each give a short name label, who they are, goals, frustrations, what triggers a purchase, objections, the exact phrases they use (quote from the material), where to reach them, and message ideas. Say which persona is the main one. Mark any assumption clearly as assumed and keep assumptions few. Do not invent ages, incomes, quotes or statistics that are not in the material. End with a short guide on how to use the personas.",
+    "not_for": [
+      "Invented demographics or fake customer quotes",
+      "Targeting by sensitive traits such as health, religion or ethnicity",
+      "Collecting customer data or running surveys"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "We are a meal-prep delivery company in Denver. I pasted 60 recent reviews and 15 support emails. Please build personas so we can fix our website copy."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Our product is a bookkeeping app for self-employed tradespeople. Here are notes from 12 customer calls and our onboarding survey answers."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Independent veterinary clinic. Pasted: 40 Google reviews and appointment-type counts. Want personas for our new-client emails. Keep it respectful about pets and owners."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "B2B training firm selling leadership workshops. I pasted notes from 8 won deals and 5 lost deals. Two or three personas for buyers please."
+      }
+    ],
+    "keywords": [
+      "customer persona",
+      "buyer persona",
+      "ideal customer profile",
+      "icp",
+      "audience profile",
+      "customer avatar",
+      "target audience"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "webinar-event-promotion-pack",
+    "title": "Webinar or event promotion pack",
+    "area": "marketing",
+    "summary": "All the words you need to fill a webinar, workshop or event: invites, reminders, social posts and a sign-up page.",
+    "deliverable": "Sign-up page copy, three invite emails, two reminder emails, a follow-up email, and six social posts with dates counted back from the event.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "event",
+        "label": "Event name and topic",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "details",
+        "label": "Date, time, place, length, price",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "speakers",
+        "label": "Speakers or hosts",
+        "type": "list",
+        "required": false,
+        "help": "Names and one line about each, as you want them shown.",
+        "max": 6
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "takeaways",
+        "label": "What will people learn or get?",
+        "type": "list",
+        "required": true,
+        "max": 8
+      },
+      {
+        "id": "goal",
+        "label": "Goal",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Sign-ups",
+          "Ticket sales",
+          "Attendance",
+          "Leads for a later offer"
+        ]
+      },
+      {
+        "id": "next_offer",
+        "label": "What do you offer afterwards?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "details_correct",
+        "text": "Date, time, place and price are right everywhere.",
+        "weight": 5,
+        "pass_rule": "Every mention of date, time, place, length and price matches the brief; no other time zone or detail is added.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "full_set",
+        "text": "Every piece in the deliverable is present.",
+        "weight": 3,
+        "pass_rule": "Sign-up copy, three invites, two reminders, one follow-up and six social posts are all present.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_reason_to_come",
+        "text": "Copy shows what people gain, in specifics.",
+        "weight": 4,
+        "pass_rule": "The takeaways from the brief are used as concrete reasons in the page and invites, not vague promises.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No speaker credential, attendee number, testimonial, bonus or guest appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "timeline",
+        "text": "Sending dates are counted back from the event.",
+        "weight": 3,
+        "pass_rule": "Each email and post has a send date or day offset relative to the event date and they do not fall on or after the event unless it is the follow-up.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 299,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an event marketer. Write a promotion pack for the event in the brief: sign-up page copy (headline, what you will learn, who it is for, speaker section, call to action, short FAQ); three invite emails with subject lines; two reminder emails; one follow-up email for attendees and no-shows; and six social posts. Give a send date or day offset counted back from the event. Keep date, time, place and price exactly as in the brief. Use only speaker details given. Do not invent testimonials, attendee numbers or bonuses.",
+    "not_for": [
+      "Fake attendee counts or invented speaker credentials",
+      "Running the event or setting up the webinar tool",
+      "Bulk email to people who did not opt in"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Free 45-minute webinar 'How to price your handmade products' on 20 February at 6pm GMT, hosted by me (Etsy coach). Goal: sign-ups, then pitch my 79 pound course."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "In-person workshop for local restaurant owners about cutting food waste, 9 March 10am at the Riverside Library meeting room. Free, run by our city council. Goal: attendance."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Paid ticket (35 dollars) evening of live jazz and wine tasting at our vineyard on 14 June. 80 seats. Goal: ticket sales."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Webinar for HR managers: 'Writing job ads that attract more applicants', 30 minutes, 12 noon Eastern on 4 April. Speaker is our head of recruiting, Dana Wu. Goal: demo requests after."
+      }
+    ],
+    "keywords": [
+      "webinar promotion",
+      "event marketing",
+      "event invite",
+      "webinar emails",
+      "workshop promotion",
+      "event copy",
+      "reminder emails",
+      "registration page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "seo-blog-post",
+    "title": "SEO blog post",
+    "area": "content",
+    "summary": "One search-friendly article that answers what your buyers type into Google.",
+    "deliverable": "A 1,000 to 2,000 word article with title, meta description, headings, internal link suggestions and a call to action, ready to publish.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "Topic or search phrase",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "words",
+        "label": "Length in words",
+        "type": "number",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do after?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "sources",
+        "label": "Facts and sources to use",
+        "type": "longtext",
+        "required": false,
+        "help": "Data, quotes, links or notes we may use. Without these, the article stays general.",
+        "max": 8000
+      },
+      {
+        "id": "links",
+        "label": "Pages on your site to link to",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "extra_terms",
+        "label": "Related search phrases",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_the_search",
+        "text": "The article answers the search quickly and completely.",
+        "weight": 5,
+        "pass_rule": "The main question is answered in the first 150 words and the headings cover the other questions a searcher likely has.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "structure_and_seo",
+        "text": "Title, meta description and headings are set up for search.",
+        "weight": 3,
+        "pass_rule": "There is a title under 60 characters with the main phrase, a meta description under 160 characters, and clear H2 headings; the main phrase is not stuffed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, study, quote, price, law or source appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "useful_specifics",
+        "text": "The article has real, specific help, not filler.",
+        "weight": 4,
+        "pass_rule": "It includes concrete steps, examples or numbers from the brief; no paragraph opens with an empty line like 'In today's fast-paced world'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_business",
+        "text": "The article suits the buyer's audience and leads to their offer.",
+        "weight": 3,
+        "pass_rule": "The tone matches the audience, internal links use the pages listed (if any), and a call to action matches the goal.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "words",
+        "unit": "word",
+        "included": 1200,
+        "per_unit_usd": 0.05
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced SEO content writer. Write a complete article for the topic and audience in the brief. Give a title under 60 characters, a meta description under 160 characters, and an introduction that answers the main question quickly. Use clear H2 and H3 headings that cover related questions searchers have. Include concrete steps and examples, and a short conclusion with a call to action. Suggest internal links from the list given. Use only facts and sources in the brief; if you need a statistic that was not provided, leave it out or say it needs a source. Avoid filler openings and keyword stuffing.",
+    "not_for": [
+      "Medical, legal or financial advice presented as fact",
+      "Invented statistics, studies or expert quotes",
+      "Plagiarised or spun text, or posting to your site"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Article for our plumbing company: 'How to tell if your water heater needs replacing'. Readers are homeowners in Dallas. We offer free quotes. About 1,500 words."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Blog post for our project management software: 'How to run a weekly team meeting that takes 15 minutes'. Readers are managers at small agencies. Link to our free template page."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Post for a pet food brand: 'Transitioning your puppy to adult food'. Keep to general, safe guidance and tell readers to ask their vet. 1,200 words."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Article for a UK accounting firm: 'What expenses can a sole trader claim?'. Do not give personal tax advice, link to HMRC pages we list below, 1,400 words."
+      }
+    ],
+    "keywords": [
+      "blog post",
+      "seo article",
+      "article writing",
+      "blog writing",
+      "content writing",
+      "website article",
+      "1000 word article"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "long-form-guide",
+    "title": "Long-form guide or ebook",
+    "area": "content",
+    "summary": "A complete how-to guide or short ebook on your topic, written to build trust and win leads.",
+    "deliverable": "A 2,500 to 6,000 word guide with title, contents list, chapters, practical steps, a checklist and a closing call to action, ready to design into a PDF.",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "Guide topic",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "purpose",
+        "label": "What is it for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Lead magnet",
+          "Customer education",
+          "Sales support",
+          "Thought leadership"
+        ]
+      },
+      {
+        "id": "words",
+        "label": "Length in words",
+        "type": "number",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "outline",
+        "label": "Chapters you want",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "sources",
+        "label": "Facts, data and expertise to use",
+        "type": "longtext",
+        "required": false,
+        "help": "Notes, interview text, your own know-how, links. This is what makes the guide yours.",
+        "max": 12000
+      },
+      {
+        "id": "cta",
+        "label": "What should readers do at the end?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "complete_for_reader",
+        "text": "The guide takes a beginner from problem to result.",
+        "weight": 4,
+        "pass_rule": "Chapters cover the whole path the audience needs, in order, and each chapter ends with a clear step or takeaway.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "practical",
+        "text": "It gives steps, examples and a checklist the reader can use today.",
+        "weight": 4,
+        "pass_rule": "Each chapter contains at least one concrete step or example, and a checklist or summary of steps is included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, study, quote, law, price or source appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buyer_expertise",
+        "text": "It reflects what the buyer actually knows and sells.",
+        "weight": 3,
+        "pass_rule": "The brief's notes, examples or know-how appear in the text, and the closing call to action matches the purpose.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "readable",
+        "text": "Plain, well-organised and the right length.",
+        "weight": 3,
+        "pass_rule": "Word count is within 15 percent of the target, headings are clear, and most sentences are under 25 words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "words",
+        "unit": "word",
+        "included": 3000,
+        "per_unit_usd": 0.05
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an expert content writer. Write a complete guide on the topic in the brief for the stated audience and purpose. Give a title, a short contents list, an introduction that says who it is for and what they will be able to do, chapters in a logical order each with practical steps and examples, a checklist, and a closing call to action. Hit the target length. Draw on the notes and sources in the brief. Do not invent statistics, studies, quotes or legal claims; if a fact needs a source, flag it. Use plain language and short sentences.",
+    "not_for": [
+      "Medical, legal or financial advice stated as fact",
+      "Invented research or expert quotes",
+      "Page layout, graphics or PDF design"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "A 3,000-word guide called 'The first-time home seller's checklist' for our real estate agency in Raleigh. Lead magnet, readers give their email to download. I'll paste my own checklist notes."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Ebook for small bakeries: 'How to start selling wholesale to cafes'. About 4,000 words. We sell packaging and want readers to request a free sample pack."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Guide for new parents from our sleep consultant business: 'Gentle bedtime routines for babies 6 to 12 months'. General tips only, tell readers to talk to their paediatrician for medical concerns. About 2,500 words."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Thought leadership paper for a freight forwarder: 'A shipper's guide to customs paperwork'. Readers are small importers. I'll provide our internal checklist; no legal advice, point to official sources."
+      }
+    ],
+    "keywords": [
+      "ebook",
+      "guide",
+      "lead magnet",
+      "long form content",
+      "how-to guide",
+      "pdf guide",
+      "playbook",
+      "whitepaper lite"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "newsletter-edition",
+    "title": "Newsletter edition",
+    "area": "content",
+    "summary": "One ready-to-send issue of your email newsletter, in your voice, built from your news and ideas.",
+    "deliverable": "Subject line options, preview text, and the full issue with an opening, two to four sections and a clear call to action, in markdown.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "newsletter",
+        "label": "Newsletter name and who reads it",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "items",
+        "label": "What goes in this issue",
+        "type": "longtext",
+        "required": true,
+        "help": "News, offers, tips, links, stories. Paste raw notes.",
+        "max": 6000
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Short (200 to 300 words)",
+          "Medium (400 to 600 words)",
+          "Long (700 to 1,000 words)"
+        ]
+      },
+      {
+        "id": "past_issue",
+        "label": "A past issue as a style guide",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      }
+    ],
+    "rubric": [
+      {
+        "id": "uses_given_items",
+        "text": "Every item from the brief is used and nothing new is added as fact.",
+        "weight": 5,
+        "pass_rule": "Each item in the brief appears in the issue, and details like dates, prices and names match the brief exactly.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "subject_and_open",
+        "text": "Subject lines and the opening make people want to read.",
+        "weight": 3,
+        "pass_rule": "Three subject lines under 60 characters are offered, and the opening gets to the point in two sentences or fewer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "scannable",
+        "text": "The issue is easy to scan.",
+        "weight": 3,
+        "pass_rule": "Sections have short headings, paragraphs are four sentences or fewer, and links or buttons are clearly labelled.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "voice_match",
+        "text": "It sounds like the newsletter.",
+        "weight": 3,
+        "pass_rule": "Tone follows the voice notes or past issue, and the length falls inside the chosen range.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, quote, offer, event or customer name appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a newsletter editor for small businesses. Turn the notes in the brief into one ready-to-send issue. Give three subject lines with preview text. Write a short, warm opening, then two to four sections with clear headings, each built only from the items supplied, and end with a single call to action that matches the goal. Match the voice notes or the past issue and the requested length. Keep paragraphs short. Do not add facts, offers, dates or quotes that are not in the brief.",
+    "not_for": [
+      "Sending to people who did not subscribe",
+      "Invented news, offers or quotes",
+      "Email design, list management or sending"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Monthly newsletter for our independent garden centre. This month: spring bulbs 20 percent off until the 30th, a Saturday composting talk at 10am, and a tip on planting sweet peas. About 400 words."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Weekly note from our CPA firm to small business owners. This week: new mileage rates (I will paste the official figures), a reminder that Q2 estimated taxes are due June 15, and a team member spotlight."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Newsletter for a children's swimming school. Items: new Saturday classes, a parent tip about goggles, and the summer gala on 15 July. Warm and reassuring."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Our nonprofit's quarterly update to donors. Items: 3 stories (notes pasted), financial summary line 'programs received 82 percent of spending', and a year-end giving ask."
+      }
+    ],
+    "keywords": [
+      "newsletter",
+      "email newsletter",
+      "monthly newsletter",
+      "newsletter writing",
+      "client update",
+      "subscriber email",
+      "company newsletter"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelance writer advice page on pricing a business newsletter: a client budget of about $500-750 per issue is discussed as typical, with about 10 hours of work.",
+        "url": "https://wellfedwriter.com/reader-questions/how-do-i-know-what-to-charge-for-a-newsletter/"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "case-study",
+    "title": "Customer case study",
+    "area": "content",
+    "summary": "A clear story of how a customer got a result, built from your notes and their own words.",
+    "deliverable": "A 600 to 1,200 word case study with headline, snapshot box, challenge, solution, results, pull quotes and call to action, using only the facts you supply.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "customer",
+        "label": "Customer name and what they do",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "challenge",
+        "label": "Their problem before",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "solution",
+        "label": "What you did or sold them",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "results",
+        "label": "Results with numbers",
+        "type": "list",
+        "required": true,
+        "help": "Only numbers you can back up.",
+        "max": 10
+      },
+      {
+        "id": "quotes",
+        "label": "Quotes you may use",
+        "type": "list",
+        "required": false,
+        "help": "Exact words the customer approved.",
+        "max": 6
+      },
+      {
+        "id": "interview",
+        "label": "Interview notes or transcript",
+        "type": "longtext",
+        "required": false,
+        "max": 12000
+      },
+      {
+        "id": "approved",
+        "label": "Is the customer okay with this being published?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Yes, named",
+          "Yes, but anonymous",
+          "Not yet asked"
+        ]
+      },
+      {
+        "id": "cta",
+        "label": "What should readers do next?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "real_results_only",
+        "text": "Every number, quote and outcome comes from the brief and is unchanged.",
+        "weight": 5,
+        "pass_rule": "All figures, quotes and results match the brief exactly; no new percentage, time saving, dollar figure or quote is added, and quotes are not reworded.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "story_arc",
+        "text": "It tells a story: problem, what was done, result.",
+        "weight": 4,
+        "pass_rule": "The text has a clear challenge, a solution section describing what was done, and a results section; results come after the story and are not buried.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "scannable_snapshot",
+        "text": "A short snapshot lets skimmers get the point.",
+        "weight": 3,
+        "pass_rule": "A snapshot box lists customer, problem, solution and top results in under 80 words, and headings are clear.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_credit",
+        "text": "The customer is the hero and credit is fair.",
+        "weight": 3,
+        "pass_rule": "The customer's choices and effort are shown, claims about the buyer's product stay within the results given, and approval status is respected (anonymous means no identifying details).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "call_to_action",
+        "text": "It ends with a relevant next step.",
+        "weight": 2,
+        "pass_rule": "A call to action related to the case appears at the end and matches the cta field if given.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a B2B case study writer. Using only the facts, numbers and quotes in the brief, write a case study of 600 to 1,200 words. Include a headline that leads with the result, a short snapshot box (customer, challenge, solution, results), then sections for the challenge, the solution and the results, with the approved quotes placed where they help. End with a call to action. Keep every number and quote exactly as given. If the customer is anonymous, remove names and identifying details. Do not add percentages, savings or quotes that are not supplied.",
+    "not_for": [
+      "Invented customers, results or quotes",
+      "Publishing a named case study without the customer's approval",
+      "Claims about health, income or legal outcomes the buyer cannot prove"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Case study for our landscaping firm about a dental office in Boise. Before: weeds and drainage problems. We redesigned the front beds. Results: water bill down 30 percent (their number), 4 new patient mentions of the garden. Quote: 'It finally looks like a place people want to visit.'"
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "SaaS case study. Customer: a 40-person logistics company. They were doing dispatch in spreadsheets. After 2 months with us: 3 hours a day saved on scheduling, late deliveries cut from 14 to 6 a month. Interview notes pasted below."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Case study for a physiotherapy clinic about a runner returning to a marathon. She has agreed to be named (Priya S.). Keep it to what she said; no medical promises."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Anonymous case study for our cybersecurity consultancy about a regional charity that had a phishing incident. Describe what we did to help and what changed. Do not identify them."
+      }
+    ],
+    "keywords": [
+      "case study",
+      "customer story",
+      "success story",
+      "client story",
+      "testimonial story",
+      "customer success",
+      "b2b case study"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "website-page-copy",
+    "title": "Website page copy",
+    "area": "content",
+    "summary": "Clear copy for core website pages such as home, about and services, in your voice.",
+    "deliverable": "Finished copy for each page you choose: headings, body text, buttons, plus page title and meta description, with notes on how to lay each page out.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "pages",
+        "label": "Which pages?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Home",
+          "About",
+          "Services",
+          "Pricing",
+          "Contact",
+          "Individual service page",
+          "FAQ",
+          "Team"
+        ]
+      },
+      {
+        "id": "page_count",
+        "label": "Number of pages",
+        "type": "number",
+        "required": true,
+        "max": 12
+      },
+      {
+        "id": "goal",
+        "label": "What should visitors do?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "services",
+        "label": "Services or products with details",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "story",
+        "label": "Your story and team notes",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "current_copy",
+        "label": "Current website text",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_in_five_seconds",
+        "text": "Each page says what you do and for whom at the top.",
+        "weight": 4,
+        "pass_rule": "Every page opens with a heading and line that state the offer or topic and the audience.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "matches_goal",
+        "text": "Each page leads to the chosen action.",
+        "weight": 4,
+        "pass_rule": "Each page has a call to action that matches the goal field and appears at least twice on the home and service pages.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No year founded, team size, qualification, award, client, price or testimonial appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "about_page_human",
+        "text": "About and story pages sound like real people and give a reason to trust.",
+        "weight": 3,
+        "pass_rule": "The about copy uses story and facts from the brief, speaks about the customer's needs, and avoids empty phrases like 'passionate about excellence'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "seo_basics",
+        "text": "Each page has a title, meta description and clear headings.",
+        "weight": 3,
+        "pass_rule": "Each page includes a title under 60 characters, a meta description under 160 characters and H1 and H2 headings.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 69,
+      "max_usd": 999,
+      "size": {
+        "field": "page_count",
+        "unit": "page",
+        "included": 1,
+        "per_unit_usd": 80
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a website copywriter. Write copy for the pages named in the brief. For each page give page title, meta description, an H1, supporting headings, body text, and call-to-action buttons that fit the goal. Lead with what the business does and for whom. Use the story, services and facts supplied and keep the voice notes. For the about page, tell the real story with specifics, not slogans. Do not invent founding dates, team members, awards, clients or testimonials. Add a short layout note per page.",
+    "not_for": [
+      "Fake testimonials, awards or credentials",
+      "Legal pages such as terms and privacy policies",
+      "Web design, building pages or product listings (see the store listing jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Home, About and Services pages for a two-person electrician business in Cork. Founded by brothers Sean and Liam in 2014. Residential rewiring, EV chargers, fault finding. Goal: phone the office."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "About page for my solo accounting practice for freelancers. I used to work at a Big Four firm for 8 years and left to help individuals. I want it to feel warm, not stiff."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Services page for a family law mediation service. Three services: separation mediation, parenting plans, financial mediation. Calm tone. No promises about outcomes."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Home page for a nonprofit that runs free coding classes for teens in Detroit. Goal: get volunteers and donors. Founded 2019, 6 classes a week, notes pasted."
+      }
+    ],
+    "keywords": [
+      "website copy",
+      "about page",
+      "home page copy",
+      "services page",
+      "web content",
+      "about us page",
+      "website text",
+      "page copy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "video-script",
+    "title": "Video script",
+    "area": "content",
+    "summary": "A script for a short explainer, promo, social video or YouTube video, with a shot list.",
+    "deliverable": "A scene-by-scene script with spoken lines, on-screen text and a simple shot list, timed to the length you pick.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "video_type",
+        "label": "Type of video",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Explainer",
+          "Product demo",
+          "Brand story",
+          "Social short (under 60 seconds)",
+          "YouTube tutorial",
+          "Testimonial interview questions",
+          "Ad"
+        ]
+      },
+      {
+        "id": "topic",
+        "label": "What is the video about?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "minutes",
+        "label": "Length in minutes",
+        "type": "number",
+        "required": true,
+        "help": "About 140 spoken words per minute.",
+        "max": 20
+      },
+      {
+        "id": "goal",
+        "label": "What should viewers do?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "speaker",
+        "label": "Who speaks?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Voiceover",
+          "Founder on camera",
+          "Staff member",
+          "Customer",
+          "Two presenters"
+        ]
+      },
+      {
+        "id": "sources",
+        "label": "Facts and notes",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "hook_early",
+        "text": "The first 10 seconds give a reason to keep watching.",
+        "weight": 4,
+        "pass_rule": "The opening lines name the viewer's problem or promise within the first 25 words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "timed_to_length",
+        "text": "The script fits the target length.",
+        "weight": 4,
+        "pass_rule": "Spoken word count is within 15 percent of 140 words per minute times the chosen minutes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "speakable",
+        "text": "It sounds natural out loud.",
+        "weight": 3,
+        "pass_rule": "Lines are short, written as speech, with few sentences over 20 words, and no stage directions mixed into spoken lines.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, number, quote or result comes from the brief or files.",
+        "weight": 5,
+        "pass_rule": "No statistic, customer quote, price, award or result appears unless it is in the brief or the supplied files. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "visuals_and_cta",
+        "text": "Every scene has on-screen visuals and the ending asks for the action.",
+        "weight": 3,
+        "pass_rule": "Each scene lists a visual or on-screen text, the shot list is present, and the last scene has a call to action matching the goal.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "minutes",
+        "unit": "minute",
+        "included": 2,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a video scriptwriter. Write a script for the video described in the brief, timed to the requested length at about 140 spoken words per minute. Use a two-column or labelled format with spoken lines, on-screen text and visual notes per scene, and a short shot list at the end. Open with a hook in the first 10 seconds, keep lines short and natural, and close with a call to action matching the goal. Use only facts in the brief; do not invent statistics, customer quotes or prices.",
+    "not_for": [
+      "Recording, voiceover, animation or editing",
+      "Impersonating real people or inventing their quotes",
+      "Deceptive ads or unproven claims"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "A 90-second explainer for our app that lets restaurants take table bookings by text. Voiceover with screen recordings. Goal: start the 14-day trial."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "YouTube tutorial (6 minutes) for my channel about how to repot a monstera plant. Friendly, on camera, for beginner plant owners."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "30-second Instagram Reel for our family bakery in Melbourne, showing sourdough being made at 4am. Founder Marta talks to camera. Goal: visit the shop this weekend."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "A 3-minute brand story video for a nonprofit that provides free wheelchairs to children. Facts: 4,800 chairs delivered since 2012 (from our annual report). Respectful tone."
+      }
+    ],
+    "keywords": [
+      "video script",
+      "explainer script",
+      "youtube script",
+      "promo video script",
+      "reel script",
+      "tiktok script",
+      "video copy",
+      "storyboard"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      },
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "podcast-show-notes",
+    "title": "Podcast show notes",
+    "area": "content",
+    "summary": "Show notes, a summary and chapter list for one podcast or video episode, from your transcript.",
+    "deliverable": "Episode title options, a short and a long summary, bullet takeaways, timestamped chapters, notable quotes, links mentioned and a call to action, from the transcript you paste.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "show",
+        "label": "Show name and who listens",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "transcript",
+        "label": "Transcript",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the full transcript. Timestamps help us build chapters.",
+        "max": 60000
+      },
+      {
+        "id": "guest",
+        "label": "Guest name and bio",
+        "type": "text",
+        "required": false,
+        "help": "As you want it shown.",
+        "max": 500
+      },
+      {
+        "id": "links",
+        "label": "Links to include",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "cta",
+        "label": "What should listeners do?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "length",
+        "label": "Detail level",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Basic",
+          "Standard",
+          "Full (with blog-style summary)"
+        ]
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "true_to_transcript",
+        "text": "Everything in the notes comes from the transcript.",
+        "weight": 5,
+        "pass_rule": "Every claim, name, number and quote can be found in the transcript; quotes are word-for-word.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "chapters_accurate",
+        "text": "Chapters point to the right parts.",
+        "weight": 3,
+        "pass_rule": "If timestamps exist in the transcript, each chapter timestamp matches where its topic starts; if none exist, chapters are labelled by order and no times are invented.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "takeaways",
+        "text": "Takeaways are useful on their own.",
+        "weight": 4,
+        "pass_rule": "Three to seven takeaways each state a specific idea from the episode, not a vague theme.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "search_friendly_titles",
+        "text": "Titles and summary suit search and humans.",
+        "weight": 3,
+        "pass_rule": "Three title options under 70 characters are given, and the summary names the topic and guest early.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "complete_package",
+        "text": "All parts of the deliverable are present and links are used as given.",
+        "weight": 3,
+        "pass_rule": "Titles, short and long summary, takeaways, chapters, quotes and a call to action are present, and no link is added that was not provided.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 39,
+      "min_usd": 29,
+      "max_usd": 119,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a podcast producer. From the transcript in the brief write show notes: three episode title options, a two-sentence summary, a longer summary of about 200 words, five to seven takeaways, timestamped chapters (only use timestamps that appear in the transcript), three word-for-word quotes, a guest bio if supplied, the links supplied, and a call to action. Be accurate to the transcript. Do not add facts, links or timestamps that are not in the material.",
+    "not_for": [
+      "Transcribing audio (supply the text)",
+      "Inventing quotes or guest credentials",
+      "Audio or video editing"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Weekly podcast for new landscapers called 'Mow Money'. Transcript pasted below, 38 minutes. Guest is Tom Reyes of Reyes Lawn Care. Goal: get listeners to join our free Facebook group."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Video interview with a local councillor for our community radio show. Transcript with timestamps below. We need show notes for our website and YouTube description."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Episode 42 of our HR podcast about handling remote work requests. Transcript pasted. Guest bio: Alisha Khan, employment adviser. Premium notes with a 500-word summary."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Short 12-minute solo episode from a financial coach about building a first emergency fund. Keep notes general, no investment advice, transcript pasted."
+      }
+    ],
+    "keywords": [
+      "show notes",
+      "podcast summary",
+      "episode notes",
+      "chapter markers",
+      "transcript summary",
+      "podcast description",
+      "youtube description"
+    ],
+    "demand_sources": [
+      {
+        "note": "Freelancer listing for podcast show notes: basic notes $60-100 and premium notes $100-150 per episode depending on length, with summary, talking points, quotes and keywords.",
+        "url": "https://contra.com/s/ooRY7vcc-podcast-show-notes"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "linkedin-post-pack",
+    "title": "LinkedIn post pack",
+    "area": "content",
+    "summary": "A batch of LinkedIn posts in your own voice, built from your stories and know-how.",
+    "deliverable": "Eight posts by default, each with a hook, body and closing line, plus a posting order and one suggested comment to start discussion.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "who",
+        "label": "Whose profile is it?",
+        "type": "text",
+        "required": true,
+        "help": "Name, role, company.",
+        "max": 300
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What do you want from LinkedIn?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Leads",
+          "Hiring",
+          "Authority",
+          "Network growth",
+          "Event promotion"
+        ]
+      },
+      {
+        "id": "posts",
+        "label": "Number of posts",
+        "type": "number",
+        "required": true,
+        "max": 30
+      },
+      {
+        "id": "material",
+        "label": "Stories, opinions and topics",
+        "type": "longtext",
+        "required": true,
+        "help": "Raw notes, past wins, lessons, rants, questions you get. This is the source of the posts.",
+        "max": 10000
+      },
+      {
+        "id": "sample_posts",
+        "label": "Past posts you like",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "facts",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, prices, quotes, awards. Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "only_real_stories",
+        "text": "Stories and results come from the material given.",
+        "weight": 5,
+        "pass_rule": "No story, client, number or result appears that is not in the material; anecdotes are not invented or embellished.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "hooks",
+        "text": "Each post opens with a clear first line.",
+        "weight": 4,
+        "pass_rule": "Each post has a first line under 15 words that names the topic or tension, and no two posts open the same way.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "voice",
+        "text": "They sound like the person, not a brand.",
+        "weight": 3,
+        "pass_rule": "Posts are written in first person, follow the voice notes or samples, and avoid hype openers like 'I'm thrilled to announce'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "variety",
+        "text": "The pack has a mix of post types.",
+        "weight": 3,
+        "pass_rule": "At least three types are used (story, lesson, opinion, how-to, question) and the posts are scannable with short lines.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_goal",
+        "text": "The pack serves the chosen goal.",
+        "weight": 3,
+        "pass_rule": "Posts connect to the goal field, at most one in four is a direct promotion, and no hashtag stuffing (3 tags or fewer).",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "posts",
+        "unit": "post",
+        "included": 8,
+        "per_unit_usd": 9
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a LinkedIn ghostwriter. From the profile details and raw material in the brief, write the requested number of posts in first person. Give each a strong first line under 15 words, short paragraphs and a closing line or question. Mix post types: story, lesson, opinion, how-to, question. Match the voice notes and sample posts. Use only stories, numbers and claims in the material; do not invent clients, results or anecdotes. Keep promotion to one post in four at most and limit hashtags to three. Suggest a posting order.",
+    "not_for": [
+      "Posting for you or running your account",
+      "Impersonating someone without their consent",
+      "Fake engagement, invented stories or results"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "I'm a commercial cleaner with 12 staff in Birmingham. I want 8 LinkedIn posts to win office-manager clients. My notes: lessons from 10 years, why we use background-checked staff, one story about a client's flooded office."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Founder of a 5-person cybersecurity startup. Posts on why small firms get hacked. I will paste a few real incidents (anonymous) and my opinions. Voice: blunt but kind."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "I'm a physiotherapist opening my own clinic in Calgary. I want to build trust with local employers. 6 posts. General workplace posture tips only, no medical claims."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "HR consultant. 10 posts about hiring mistakes small firms make. Notes pasted from my past client work, all anonymised. Goal: consulting enquiries."
+      }
+    ],
+    "keywords": [
+      "linkedin posts",
+      "linkedin content",
+      "ghostwriting",
+      "thought leadership posts",
+      "linkedin ghostwriter",
+      "social posts b2b",
+      "personal brand"
+    ],
+    "demand_sources": [
+      {
+        "note": "LinkedIn ghostwriting rate guide: $50-150 per post for generalists, $200-350 for niche writers, $400-500 for proven writers; 4-post starter packages $750-1,200.",
+        "url": "https://dev.to/edward_berg_49b842f7dac9e/linkedin-ghostwriting-rates-in-2026-what-to-charge-and-how-to-land-clients-who-actually-pay-it-5f8"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "press-release",
+    "title": "Press release",
+    "area": "content",
+    "summary": "A news-style press release for an announcement, ready to send to local or trade media.",
+    "deliverable": "A 350 to 500 word press release with headline, subhead, dateline, body, a quote, boilerplate and contact block, plus a two-line email pitch.",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "announcement",
+        "label": "What is the news?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "company",
+        "label": "Company and what it does",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "date_place",
+        "label": "Date and place",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "quote_from",
+        "label": "Who can be quoted and what they said",
+        "type": "longtext",
+        "required": true,
+        "help": "Give the exact words, or notes and say it is okay to polish them.",
+        "max": 1500
+      },
+      {
+        "id": "facts",
+        "label": "Key facts and numbers",
+        "type": "list",
+        "required": true,
+        "max": 12
+      },
+      {
+        "id": "contact",
+        "label": "Contact for media",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "target_media",
+        "label": "Who should receive it?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "facts_only",
+        "text": "All facts, figures and quotes come from the brief.",
+        "weight": 5,
+        "pass_rule": "Every date, number, name and claim appears in the brief; the quote uses only words or ideas the buyer supplied and attributes them to the right person.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "news_first",
+        "text": "The most newsworthy point is in the headline and first paragraph.",
+        "weight": 4,
+        "pass_rule": "The headline and first paragraph answer who, what, when, where and why in plain words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "press_format",
+        "text": "It follows press release format.",
+        "weight": 3,
+        "pass_rule": "It includes headline, dateline, body, quote, boilerplate, contact block and an end marker, in that standard order.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_hype",
+        "text": "Tone is factual, not an advert.",
+        "weight": 3,
+        "pass_rule": "No superlatives like 'revolutionary', 'world-class' or 'best-in-class' unless backed by a fact in the brief; sentences stay under 30 words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "pitch_note",
+        "text": "A short pitch email is included.",
+        "weight": 2,
+        "pass_rule": "A pitch of two or three lines for a journalist is included and names why the story matters to their readers.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 49,
+      "max_usd": 199,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a PR writer. Write a press release from the brief, 350 to 500 words, in standard format: headline, subhead, dateline, body with the key news in the first paragraph, one quote attributed to the person supplied, boilerplate about the company, media contact block and the end marker. Keep to a factual tone with no hype. Use only facts, numbers and quote content in the brief. Add a short email pitch for journalists. Do not invent statistics, partners or awards.",
+    "not_for": [
+      "Distributing the release or contacting journalists",
+      "Invented quotes, awards or statistics",
+      "Announcements that mislead, or crisis statements that need legal review"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Press release: our family bakery 'Daily Crumb' in Salem is opening a second shop on Main Street on June 1. Owner Rosa Martinez says it is a dream coming true. We will hire 8 people. Send to local papers."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "We are a SaaS company that just raised a 2 million dollar seed round led by Northgate Ventures. CEO Ben Ito will provide the quote. Customers are independent pharmacies. Trade media."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Charity 5K run, 21 September in Riverside Park, raising money for a children's hospital ward. 600 runners signed up so far (our count). Director's quote notes pasted."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Our architecture studio won a regional award for a school redesign. Award name and date: 'Northwest Design Awards 2026, Education category'. Principal's quote notes pasted."
+      }
+    ],
+    "keywords": [
+      "press release",
+      "news release",
+      "media announcement",
+      "pr writing",
+      "announcement release",
+      "funding announcement",
+      "launch press release"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "white-paper",
+    "title": "White paper",
+    "area": "content",
+    "summary": "A well-argued report that shows you understand your customers' problem and how to solve it.",
+    "deliverable": "A 2,000 to 4,000 word white paper with executive summary, problem, analysis, recommended approach, an example and next steps, with every claim tied to the sources you supply.",
+    "turnaround_hours": 96,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "Topic and main argument",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 1500
+      },
+      {
+        "id": "sources",
+        "label": "Sources, data and expert notes",
+        "type": "longtext",
+        "required": true,
+        "help": "Studies, links, internal data, interview notes. We cannot look up new research.",
+        "max": 30000
+      },
+      {
+        "id": "words",
+        "label": "Length in words",
+        "type": "number",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "purpose",
+        "label": "What is it for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Generate leads",
+          "Support sales",
+          "Thought leadership",
+          "Investor or partner"
+        ]
+      },
+      {
+        "id": "cta",
+        "label": "Closing call to action",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "claims_sourced",
+        "text": "Each factual claim ties to a supplied source.",
+        "weight": 5,
+        "pass_rule": "Statistics, research claims and quotes are traceable to the supplied sources, which are named in the text or a reference list; unsupported points are marked as opinion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "clear_argument",
+        "text": "One argument runs through the paper.",
+        "weight": 4,
+        "pass_rule": "The executive summary states a thesis, each section supports it, and the conclusion returns to it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "useful_framework",
+        "text": "It gives readers something to use.",
+        "weight": 3,
+        "pass_rule": "A framework, checklist or step list is included that the audience can apply.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tone_for_buyer",
+        "text": "Tone suits a business reader and is not a sales brochure.",
+        "weight": 3,
+        "pass_rule": "Product mentions are limited to the recommendation and next steps sections, and the language is plain and specific.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "length_and_form",
+        "text": "It has the right length and structure.",
+        "weight": 3,
+        "pass_rule": "Word count is within 15 percent of target and it has an executive summary, headings, and a references or sources list.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 299,
+      "min_usd": 199,
+      "max_usd": 899,
+      "size": {
+        "field": "words",
+        "unit": "word",
+        "included": 2500,
+        "per_unit_usd": 0.08
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a B2B content strategist who writes white papers. From the brief and the sources supplied, write a white paper: an executive summary, the problem and why it matters, analysis, a recommended approach with a simple framework or checklist, one worked example, and next steps. Keep one argument running through. Cite only the supplied sources and name them; mark any opinion as opinion. Do not invent statistics, studies or quotes. Keep the tone helpful and plain, with product mentions only near the end. Include a sources list.",
+    "not_for": [
+      "Invented research, statistics or expert quotes",
+      "Medical, legal or investment advice as fact",
+      "Graphic design and layout"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "White paper for our cold-chain logistics company: 'Cutting food waste in regional grocery supply'. Audience: grocery chain operations managers. I will paste three industry reports and our internal delivery data."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "3,000-word paper for our cybersecurity consultancy: 'A practical security baseline for 50-person firms'. Sources pasted include two government guides. Goal: generate leads."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "Paper for a solar installer on 'What commercial property owners should know before installing solar'. Sources: our own project notes and links to two public energy agency pages. No savings guarantees."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Thought leadership paper for an education software firm about reducing teacher paperwork. Pasted: interview notes from 6 teachers (anonymous) and a survey summary."
+      }
+    ],
+    "keywords": [
+      "white paper",
+      "whitepaper",
+      "industry report",
+      "b2b report",
+      "thought leadership",
+      "research paper",
+      "gated content"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriting rate page with ranges: blog post $250-800, 4-5 email sequence $500-5,000, ad copy $100-1,000, case study $1,200-2,000, white paper $2,000-10,000, press release $500-1,000, video script under 5 min $500-1,500.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  },
+  {
+    "format": "markdown",
+    "id": "content-repurposing-pack",
+    "title": "Content repurposing pack",
+    "area": "content",
+    "summary": "Turn one article, talk or webinar into a week of posts, emails and short pieces.",
+    "deliverable": "From your source piece: a newsletter version, five social posts, a LinkedIn article outline, three short quotes or pull-outs, a short video script and a two-week posting plan.",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "source",
+        "label": "Source content",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste an article, transcript, talk notes or webinar text.",
+        "max": 40000
+      },
+      {
+        "id": "source_link",
+        "label": "Link to the original",
+        "type": "url",
+        "required": false
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "channels",
+        "label": "Where will it be used?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Newsletter",
+          "LinkedIn",
+          "Instagram",
+          "Facebook",
+          "X",
+          "Short video",
+          "Blog summary"
+        ]
+      },
+      {
+        "id": "goal",
+        "label": "What should people do?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "posts",
+        "label": "Number of social posts",
+        "type": "number",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "faithful",
+        "text": "Every piece stays true to the source.",
+        "weight": 5,
+        "pass_rule": "Every claim, number and quote in the new pieces appears in the source; nothing is added or exaggerated.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "channel_fit",
+        "text": "Each piece suits its channel.",
+        "weight": 4,
+        "pass_rule": "Length, structure and tone match each chosen channel, and each piece stands alone without needing the source.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "different_angles",
+        "text": "The pieces take different angles, not copies.",
+        "weight": 4,
+        "pass_rule": "Social posts use different points from the source, and no two share the same opening line.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "complete_pack",
+        "text": "All requested parts are present with a plan.",
+        "weight": 3,
+        "pass_rule": "Each part in the deliverable is present for the chosen channels, and the posting plan assigns each piece to a day.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "cta_and_link",
+        "text": "Pieces point back to the source or the goal.",
+        "weight": 2,
+        "pass_rule": "Pieces include the call to action or link where it fits, using only the link supplied.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "posts",
+        "unit": "post",
+        "included": 5,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a content marketer who repurposes material. From the source content in the brief, create: a newsletter version, social posts for each chosen channel using different angles, a LinkedIn article outline, three pull quotes taken word-for-word from the source, a 60-second video script, and a two-week posting plan assigning each piece to a day. Keep every fact and quote true to the source. Match the voice notes, and add the call to action or link where it fits. Do not add claims that the source does not make.",
+    "not_for": [
+      "Repurposing content you do not own or have rights to",
+      "Adding invented claims, statistics or quotes",
+      "Posting or scheduling"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "visibility": "public",
+        "text": "Here is a 1,800-word article from our accounting blog on year-end tax prep for freelancers. Make it into a newsletter, LinkedIn posts and a short video script. Goal: book a consult."
+      },
+      {
+        "id": "pub_2",
+        "visibility": "public",
+        "text": "Transcript of our 40-minute webinar about onboarding new nurses (I own a staffing agency). Need LinkedIn posts, email and a few quotes. Audience: hospital HR managers."
+      },
+      {
+        "id": "hid_1",
+        "visibility": "hidden",
+        "text": "We ran a talk on composting at the library. My speaker notes are pasted. Need a Facebook post series and a newsletter blurb for the local gardening club."
+      },
+      {
+        "id": "hid_2",
+        "visibility": "hidden",
+        "text": "Founder letter (1,200 words) on why we left venture capital to bootstrap. Turn it into X threads, a LinkedIn post and an email. Voice: honest and dry."
+      }
+    ],
+    "keywords": [
+      "repurpose content",
+      "content repurposing",
+      "blog to social",
+      "webinar to posts",
+      "content recycling",
+      "content atomization",
+      "turn article into posts"
+    ],
+    "demand_sources": [
+      {
+        "note": "Social media pricing guide: audit $500-2,000, strategy $800-5,000, content calendar about $800 a month, 30 basic posts $800-1,500, copywriting only $15-50 per post, landing page optimisation $500-1,500.",
+        "url": "https://socialrails.com/blog/how-to-price-social-media-services"
+      },
+      {
+        "note": "Rate guide listing mid-level freelance prices by project: blog post $200-500, landing page $800-2,000, 5-7 email sequence $600-1,800, ad copy set $400-1,200, case study or white paper $1,500-4,000, 2-3 minute video script $400-900.",
+        "url": "https://stealthagents.com/blog/cost-of-hiring-a-copywriter-2026"
+      }
+    ]
+  }
+]

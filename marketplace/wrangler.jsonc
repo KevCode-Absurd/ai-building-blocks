@@ -64,7 +64,9 @@
       ],
       "workflows": [
         { "name": "ai-blocks-agents-staging-job-run", "binding": "JOB_RUN", "class_name": "JobRunWorkflow" }
-      ]
+      ],
+      // Cloudflare Email Service. Sends fail softly (logged, never thrown) until useaiblocks.com is onboarded for sending.
+      "send_email": [{ "name": "EMAIL" }]
     },
     "production": {
       "name": "ai-blocks-agents",
@@ -89,7 +91,8 @@
       ],
       "workflows": [
         { "name": "ai-blocks-agents-job-run", "binding": "JOB_RUN", "class_name": "JobRunWorkflow" }
-      ]
+      ],
+      "send_email": [{ "name": "EMAIL" }]
     }
   }
 }

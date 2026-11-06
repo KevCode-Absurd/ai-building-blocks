@@ -28,9 +28,14 @@ export async function authenticate(req: Request, env: Env): Promise<AuthUser | n
   const m = /^Bearer (\S{10,16384})$/.exec(header);
   if (!m) return null;
   const token = m[1];
-  for (const verify of verifiers) {
-    const user = await verify(token, env).catch(() => null);
-    if (user) return user;
+  // Tokens issued to buyers' AI apps (MCP OAuth) sign in on /mcp only. On /api they are ignored, so an app can never
+  // reach staff, studio, expert or browser-only routes, whatever its owner's roles are.
+  const path = new URL(req.url).pathname;
+  if (path === "/mcp" || path.startsWith("/mcp/")) {
+    for (const verify of verifiers) {
+      const user = await verify(token, env).catch(() => null);
+      if (user) return user;
+    }
   }
   return verifyClerkSession(token, env);
 }

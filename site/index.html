@@ -67,6 +67,11 @@
       #app-loader:has(> .page-shell) .boot-loading { justify-items: start; }
       #app-loader:has(> .page-shell) .boot-brand { display: none; }
       #app-loader:has(> .page-shell) .boot-recovery { margin: 24px 0 0; text-align: left; }
+      /* The cover's heading and opening line are the largest text on a phone. Painted first in a fallback font, the app's
+         later paint in Space Grotesk counted as the page's main paint (Lighthouse LCP 3 to 7 s on item pages). As for the
+         home hero (tools/lib/home-initial-shell.mjs), wait briefly for the preloaded face instead: same file, no extra download. */
+      @font-face { font-family: "AI Blocks Shell"; font-style: normal; font-weight: 300 700; font-display: block; src: url(/fonts/space-grotesk.woff2) format("woff2"); }
+      #app-loader .page-shell .page-shell-h1, #app-loader .page-shell .bp-sub { font-family: "AI Blocks Shell", "Space Grotesk", ui-sans-serif, system-ui, sans-serif; }
       @media (prefers-reduced-motion: reduce) { html[data-boot] #app-loader { transition: none; } .boot-progress { animation: none; } }
     </style>
     <script>

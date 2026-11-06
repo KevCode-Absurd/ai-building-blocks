@@ -77,6 +77,31 @@ for (const mobile of [false, true]) {
  });
 }
 
+// When the app is ready before the browser's first frame (fast connection, cached code), it used to replace the
+// loading cover unseen, so the app's paint became the page's main paint and Lighthouse timed mobile LCP after every
+// script (3 to 7 s on item pages). Holding the page's stylesheet recreates that order in the production build.
+test('@mobile an item page paints its cover first and keeps it as the main paint when the app is ready early', async ({page}) => {
+  await page.setViewportSize({width: 412, height: 823});
+  await page.route('**/api/**', r => r.fulfill({status: 401, json: {error: 'Local read-only fixture'}}));
+  await page.route(/\/assets\/main-[\w-]+\.css$/, async r => { await new Promise(resolve => setTimeout(resolve, 1200)); await r.continue(); });
+  await page.addInitScript(() => {
+    const log: {t: number; what: string}[] = (window as any).__paintLog = [];
+    new PerformanceObserver(l => { for (const e of l.getEntries()) log.push({t: e.startTime, what: e.name}); }).observe({type: 'paint', buffered: true});
+    new PerformanceObserver(l => { for (const e of l.getEntries()) log.push({t: e.startTime, what: 'lcp ' + ((e as any).element?.closest('#app-loader') ? 'cover' : 'page')}); }).observe({type: 'largest-contentful-paint', buffered: true});
+    document.addEventListener('abb:ready', () => log.push({t: performance.now(), what: 'ready'}));
+  });
+  await page.goto('/skills/product-description-writer');
+  await expect(page.locator('html')).toHaveAttribute('data-boot', 'ready', {timeout: 15000});
+  await page.waitForTimeout(800);
+  const log: {t: number; what: string}[] = await page.evaluate(() => (window as any).__paintLog);
+  const fcp = log.find(e => e.what === 'first-contentful-paint'), ready = log.find(e => e.what === 'ready');
+  const lcp = log.filter(e => e.what.startsWith('lcp '));
+  expect(fcp, JSON.stringify(log)).toBeTruthy();
+  expect(ready!.t, 'the cover paints before the app takes over').toBeGreaterThanOrEqual(fcp!.t);
+  expect(lcp.at(-1)?.what, 'the cover stays the largest paint').toBe('lcp cover');
+  await expect(page.locator('#root .bp-sub')).toBeVisible();
+});
+
 for(const mobile of [false,true]){
  test((mobile?'@mobile ':'')+'public skill header opens before its item download and stays mounted when data arrives',async({page})=>{
   if(mobile)await page.setViewportSize({width:412,height:823});

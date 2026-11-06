@@ -36,6 +36,7 @@ import CopyableTask from "./CopyableTask";
 import BlockHeader from "./BlockHeader";
 import ItemMainAction from "./ItemMainAction";
 import ItemVotes from "./ItemVotes";
+import { announceReady } from "./StartupReady";
 import SimilarItems, { SkipLine, type NotForLink, type SiblingRow } from "./SimilarItems";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -289,7 +290,7 @@ export default function BlockPage({ c, slug, toast, toBuilder, embedded = false,
     return () => { active = false; };
   }, [slug, reload, onPageLoaded, embedded]);
   // Lift the startup cover once the page text is in (or failed), not before: the header grows when it arrives.
-  useLayoutEffect(() => { if (!embedded && page !== undefined) document.dispatchEvent(new Event("abb:ready")); }, [page, embedded]);
+  useLayoutEffect(() => { if (!embedded && page !== undefined) announceReady(); }, [page, embedded]);
   useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, [b]);
 
   if (!b) {

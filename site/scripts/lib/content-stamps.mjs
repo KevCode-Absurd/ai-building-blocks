@@ -22,7 +22,9 @@ export const SITE_CHROME = /<header\b[^>]*\bdata-prerendered-nav\b[^>]*>[\s\S]*?
 /** Content, not a new asset filename, stylesheet, loader script, the loading cover's picture of the page, the
  *  site-wide menu and footer, or the stamp itself. */
 export function canonicalHtml(html) {
-  return withoutPageShell(html).replace(SITE_CHROME, '').replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
+  return withoutPageShell(html).replace(SITE_CHROME, '')
+    // An item page's no-script copy of its stylesheet link (tools/lib/item-first-paint.mjs) is loading, not content.
+    .replace(/<noscript data-item-full-css>[\s\S]*?<\/noscript>/gi, '').replace(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi, (_all, attributes, body) =>
     /\btype\s*=\s*["']application\/ld\+json["']/i.test(attributes)
       ? `<script type="application/ld+json">${stableJson(withoutModifiedDates(JSON.parse(body)))}</script>` : '')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style\s*>/gi, '')

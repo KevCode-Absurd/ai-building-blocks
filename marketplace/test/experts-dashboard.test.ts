@@ -1,4 +1,4 @@
-// Experts module: the approved expert's dashboard (agents, jobs, buyer edits, win rates, work value) and persona sync.
+// Experts module: the approved expert's dashboard (agents, jobs, buyer edits, win rates) and persona sync. No prices: hiring is free.
 import { test, mock } from "node:test";
 import assert from "node:assert/strict";
 
@@ -130,7 +130,7 @@ test("dashboard numbers on seeded data", async () => {
   assert.equal(d.totals.ratings, 2);
   assert.equal(d.totals.avg_rating, 4);
   assert.equal(d.totals.revision_requests, 1);
-  assert.equal(d.totals.accepted_value_cents, 14900 + 19900 + 12900);
+  assert.equal("accepted_value_cents" in d.totals, false);
 
   const lp = d.agents.find((a: { id: string }) => a.id === "agt_lp");
   const blog = d.agents.find((a: { id: string }) => a.id === "agt_blog");
@@ -142,7 +142,7 @@ test("dashboard numbers on seeded data", async () => {
   assert.equal(lp.stats.rejected, 1);
   assert.equal(Math.round(lp.stats.acceptance_rate * 1000), 667);
   assert.equal(lp.stats.avg_rating, 4);
-  assert.equal(lp.stats.accepted_value_cents, 34800);
+  assert.equal("accepted_value_cents" in lp.stats, false);
   assert.deepEqual(lp.win_rate, { tests: 4, judgments: 12, agent_wins: 3, baseline_wins: 1, ties: 0, rate: 0.75 });
   assert.equal(blog.status, "testing");
   assert.equal(blog.stats.jobs, 1);
@@ -174,13 +174,9 @@ test("dashboard numbers on seeded data", async () => {
   assert.equal(fb("dec_3").edits, null);
   assert.equal(fb("dec_4").failed_checks[0].text, RUBRIC[1]!.text);
 
-  // Work value: accepted job prices and the estimated share at the founding rate, labelled as an estimate.
-  assert.equal(d.work_value.estimate, true);
-  assert.equal(d.work_value.accepted_jobs, 3);
-  assert.equal(d.work_value.accepted_value_cents, 47700);
-  assert.equal(d.work_value.rate, 0.75);
-  assert.equal(d.work_value.estimated_share_cents, 35775);
-  assert.match(d.work_value.note, /not live yet/);
+  // Jobs have no price for buyers, so the dashboard shows no job prices and no estimated earnings from them.
+  assert.equal(d.work_value, undefined);
+  assert.ok(d.jobs.every((j: Record<string, unknown>) => !("price_cents" in j) && !("currency" in j)));
 });
 
 test("the dashboard still loads when win rates are not available", async () => {

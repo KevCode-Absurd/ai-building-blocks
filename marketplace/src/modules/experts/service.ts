@@ -10,11 +10,12 @@ import { notify } from "../../core/email.ts";
 import { getJobType } from "../catalogue/index.ts";
 import { notifyOps } from "../ops/service.ts";
 import { winRates } from "../evaluation/service.ts";
+import { learnableDecisionIds } from "../delivery/consent.ts";
 import { foundingAgreement, type Agreement } from "./agreement.ts";
 import { parseApplication, type ValidApplication } from "./schema.ts";
 
 /** The founding-expert agreement version experts accept. The text is a draft until counsel replaces it. */
-export const AGREEMENT_VERSION = "founding-draft-1";
+export const AGREEMENT_VERSION = "founding-draft-2";
 
 /** The first 100 approved experts are founding experts. */
 export const FOUNDING_LIMIT = 100;
@@ -229,7 +230,7 @@ const CANNOT: Record<string, string> = {
   "rejected>paused": "This application is rejected, so there is nothing to pause.",
 };
 
-/** Ops decision. Approving the first 100 sets founding = 1 (75% founding rate when payments go live). Emails the expert. */
+/** Ops decision. Approving the first 100 sets founding = 1 (75% founding rate if paid work is added later). Emails the expert. */
 export async function reviewApplication(env: Env, input: { expertId: string; decision: "approve" | "reject" | "pause"; note: string; actor: string }): Promise<ExpertRow> {
   const to = DECISION_STATUS[input.decision];
   if (!to) return fail(400, "invalid_decision", "Choose approve, reject or pause.");
@@ -288,8 +289,8 @@ function reviewNotice(row: ExpertRow, decision: "approve" | "reject" | "pause", 
   const noteLine = note ? `\n\nNote from our team: ${note}` : "";
   if (decision === "approve") {
     const rate = row.founding
-      ? `You are one of our first ${FOUNDING_LIMIT} experts, so you get the ${Math.round(FOUNDING_RATE * 100)}% founding rate when payments go live.`
-      : `When payments go live, you earn ${Math.round(STANDARD_RATE * 100)}% of the net amount from jobs your agents do.`;
+      ? `You are one of our first ${FOUNDING_LIMIT} experts. Hiring is free for buyers right now. If we add paid work later, you get the ${Math.round(FOUNDING_RATE * 100)}% founding rate.`
+      : `Hiring is free for buyers right now. If we add paid work later, you earn ${Math.round(STANDARD_RATE * 100)}% of the net amount from jobs your agents do.`;
     return {
       userId: row.user_id, kind: "expert.approved", link: "/studio",
       subject: "You are approved as an AI Blocks expert",
@@ -444,7 +445,7 @@ export async function listApplications(env: Env, filter: { status?: string; area
 // ---------- Expert dashboard ----------
 
 export interface WinRateView { tests: number; judgments: number; agent_wins: number; baseline_wins: number; ties: number; rate: number | null }
-export interface AgentStats { jobs: number; accepted: number; rejected: number; revision_requests: number; ratings: number; avg_rating: number | null; acceptance_rate: number | null; accepted_value_cents: number }
+export interface AgentStats { jobs: number; accepted: number; rejected: number; revision_requests: number; ratings: number; avg_rating: number | null; acceptance_rate: number | null }
 
 export interface ExpertDashboard {
   expert: { id: string; display_name: string; founding: boolean; rate: number };
@@ -458,7 +459,7 @@ export interface ExpertDashboard {
   jobs: {
     id: string; title: string; job_type_id: string | null; job_type_title: string; agent_id: string; agent_name: string; agent_version: number | null;
     status: string; outcome: "accepted" | "auto_accepted" | "rejected" | "open" | "stopped"; rating: number | null; revisions_used: number;
-    price_cents: number | null; currency: string; created_at: string; delivered_at: string | null; accepted_at: string | null;
+    created_at: string; delivered_at: string | null; accepted_at: string | null;
   }[];
   feedback: {
     id: string; job_id: string; job_title: string; agent_id: string; kind: "accept" | "revise" | "reject";
@@ -467,10 +468,9 @@ export interface ExpertDashboard {
   }[];
   totals: AgentStats & { agents: number; live_agents: number };
   win_rates_available: boolean;
-  work_value: { estimate: true; currency: "usd"; accepted_jobs: number; accepted_value_cents: number; rate: number; estimated_share_cents: number; note: string };
 }
 
-const emptyStats = (): AgentStats => ({ jobs: 0, accepted: 0, rejected: 0, revision_requests: 0, ratings: 0, avg_rating: null, acceptance_rate: null, accepted_value_cents: 0 });
+const emptyStats = (): AgentStats => ({ jobs: 0, accepted: 0, rejected: 0, revision_requests: 0, ratings: 0, avg_rating: null, acceptance_rate: null });
 
 function finishStats(s: AgentStats, ratingSum: number): AgentStats {
   const decided = s.accepted + s.rejected;
@@ -517,17 +517,16 @@ export async function expertDashboard(env: Env, expertId: string): Promise<Exper
   const versions = await all<{ agent_id: string; version: number; status: string; changelog: string; created_at: string; published_at: string | null }>(db,
     `SELECT v.agent_id, v.version, v.status, v.changelog, v.created_at, v.published_at FROM agent_versions v JOIN agents a ON a.id = v.agent_id
      WHERE a.expert_id = ? ORDER BY v.agent_id, v.version DESC`, expertId);
-  const jobs = await all<{ id: string; title: string; job_type_id: string | null; status: string; price_cents: number | null; currency: string; agent_id: string; agent_version: number | null; revisions_used: number; org_id: string; created_at: string; delivered_at: string | null; accepted_at: string | null }>(db,
-    `SELECT j.id, j.title, j.job_type_id, j.status, j.price_cents, j.currency, j.agent_id, j.agent_version, j.revisions_used, j.org_id, j.created_at, j.delivered_at, j.accepted_at
+  const jobs = await all<{ id: string; title: string; job_type_id: string | null; status: string; agent_id: string; agent_version: number | null; revisions_used: number; org_id: string; created_at: string; delivered_at: string | null; accepted_at: string | null }>(db,
+    `SELECT j.id, j.title, j.job_type_id, j.status, j.agent_id, j.agent_version, j.revisions_used, j.org_id, j.created_at, j.delivered_at, j.accepted_at
      FROM jobs j JOIN agents a ON a.id = j.agent_id WHERE a.expert_id = ? ORDER BY j.created_at DESC`, expertId);
   const decisions = await all<{ id: string; job_id: string; kind: "accept" | "revise" | "reject" | "auto_accept"; reasons: string; failed_criteria: string; edits: string | null; rating: number | null; created_at: string; org_id: string }>(db,
     `SELECT d.id, d.job_id, d.kind, d.reasons, d.failed_criteria, d.edits, d.rating, d.created_at, j.org_id
      FROM decisions d JOIN jobs j ON j.id = d.job_id JOIN agents a ON a.id = j.agent_id
      WHERE a.expert_id = ? ORDER BY d.created_at DESC, d.id DESC`, expertId);
-  // Buyer edits are shown only when the buyer's org agreed that its edits may be learned from.
-  const sharing = new Set((await all<{ owner_id: string }>(db,
-    `SELECT owner_id FROM consents WHERE owner_kind = 'org' AND scope = 'learn_from_edits' AND granted = 1
-     AND owner_id IN (SELECT DISTINCT j.org_id FROM jobs j JOIN agents a ON a.id = j.agent_id WHERE a.expert_id = ?)`, expertId)).map(r => r.owner_id));
+  // Buyer edits are shown only when the buyer agreed that those edits may be used to improve the agent
+  // (the decision's own choice, else the org's choice, else no: see src/modules/delivery/consent.ts).
+  const sharing = await learnableDecisionIds(env, decisions.filter(d => !!d.edits).map(d => d.id));
   const rubricRows = await all<{ job_id: string; criteria: string }>(db,
     "SELECT r.job_id, r.criteria FROM rubrics r JOIN jobs j ON j.id = r.job_id JOIN agents a ON a.id = j.agent_id WHERE a.expert_id = ?", expertId);
   const rubricText = new Map(rubricRows.map(r => [r.job_id, new Map(parseJson<RubricCriterion[]>(r.criteria, []).map(c => [c.id, c.text]))]));
@@ -550,7 +549,7 @@ export async function expertDashboard(env: Env, expertId: string): Promise<Exper
     const entry = entryFor(j.agent_id);
     for (const s of [entry.s, total.s]) {
       s.jobs++;
-      if (j.status === "accepted") { s.accepted++; s.accepted_value_cents += j.price_cents ?? 0; }
+      if (j.status === "accepted") s.accepted++;
       if (j.status === "rejected") s.rejected++;
       s.revision_requests += ds.filter(d => d.kind === "revise").length;
     }
@@ -567,7 +566,7 @@ export async function expertDashboard(env: Env, expertId: string): Promise<Exper
       id: j.id, title: j.title || jobTypeTitle || "Untitled job", job_type_id: j.job_type_id, job_type_title: jobTypeTitle,
       agent_id: j.agent_id, agent_name: agentName.get(j.agent_id) ?? "", agent_version: j.agent_version,
       status: j.status, outcome, rating: ds.find(d => d.rating !== null)?.rating ?? null, revisions_used: j.revisions_used,
-      price_cents: j.price_cents, currency: j.currency, created_at: j.created_at, delivered_at: j.delivered_at, accepted_at: j.accepted_at,
+      created_at: j.created_at, delivered_at: j.delivered_at, accepted_at: j.accepted_at,
     };
   });
 
@@ -577,7 +576,7 @@ export async function expertDashboard(env: Env, expertId: string): Promise<Exper
     .slice(0, 100)
     .map(d => {
       const job = jobById.get(d.job_id)!;
-      const shared = sharing.has(d.org_id);
+      const shared = sharing.has(d.id);
       const texts = rubricText.get(d.job_id);
       return {
         id: d.id, job_id: d.job_id, job_title: job.title, agent_id: job.agent_id,
@@ -615,14 +614,5 @@ export async function expertDashboard(env: Env, expertId: string): Promise<Exper
     feedback,
     totals,
     win_rates_available: wins.ok,
-    work_value: {
-      estimate: true,
-      currency: "usd",
-      accepted_jobs: totals.accepted,
-      accepted_value_cents: totals.accepted_value_cents,
-      rate,
-      estimated_share_cents: Math.round(totals.accepted_value_cents * rate),
-      note: `An estimate only. Payouts are not live yet, so nothing has been paid. This uses the full job price. Your real share will be ${Math.round(rate * 100)}% of the net amount, so it may be lower.`,
-    },
   };
 }

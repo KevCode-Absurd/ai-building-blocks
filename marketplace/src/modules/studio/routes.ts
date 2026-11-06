@@ -1,13 +1,14 @@
 // API routes for the studio module. Paths and owners are listed in ARCHITECTURE.md.
 // Every /api/studio/* route is for an approved expert's own agents only: anyone else's agent is a 404.
-// The two ops routes (live, retire) are for the AI Blocks team and work on any agent.
+// The three ops routes (live, retire, unretire) are for the AI Blocks team and work on any agent.
 import { json, int, str, type Ctx, type Route } from "../../core/http.ts";
 import { requireApprovedExpert, requireOps } from "../../core/access.ts";
 import type { Env } from "../../env.ts";
 import {
   addExample, addMark, answerInterview, buildVersion, createStudioAgent, decideSuggestion, draftPlaybook, getStudio, getVersion,
-  listMyAgents, makeMarkupDraft, publishVersion, removeExample, removeMark, runTestBench, saveEdit, savePlaybook, setAgentLive, setAgentStatus,
+  listMyAgents, makeMarkupDraft, publishVersion, removeExample, removeMark, runTestBench, saveEdit, savePlaybook, setAgentLive, setAgentStatus, unretireAgent,
 } from "./service.ts";
+import { importPackRoute } from "./import.ts";
 
 type Body = Record<string, unknown>;
 
@@ -34,6 +35,8 @@ export const routes: Route[] = [
       return json({ agent: await createStudioAgent(ctx.env, { expert: a.expert, actor: a.user.id, jobTypeId, name }) }, 201);
     },
   },
+  // Start an agent from a trained pack: body is the zip (application/zip, max 2 MB). See import.ts.
+  { method: "POST", path: "/api/studio/import", handler: importPackRoute },
   {
     method: "GET", path: "/api/studio/agents/:id", handler: async ctx => {
       const e = await expert(ctx);
@@ -163,6 +166,15 @@ export const routes: Route[] = [
       const body = await ctx.body<Body>();
       await setAgentStatus(ctx.env, { agentId: ctx.params.id, status: "retired", actor: a.user.id, reason: str(body.reason, "a reason", { min: 3, max: 500 }) });
       return json({ ok: true });
+    },
+  },
+  {
+    method: "POST", path: "/api/studio/agents/:id/unretire", handler: async ctx => {
+      const a = await requireOps(ctx);
+      const body = await ctx.body<Body>();
+      const reason = str(body.reason, "a note", { max: 500, optional: true });
+      const res = await unretireAgent(ctx.env, { agentId: ctx.params.id, actor: a.user.id, reason });
+      return json({ ok: true, ...res });
     },
   },
 ];

@@ -1,0 +1,21 @@
+/* In-app messages: the header bell and /notifications. Tokens from src/ui/styles.css only; classes start with .dlv- */
+
+/* Header bell. It sits just before the menu button, so it takes the menu's push to the right (the same pattern as
+   .site-sign-in + .site-menu in styles.css) and pulls in close to it. Round and outlined like the header's buttons. */
+.dlv-bell { position: relative; display: inline-grid; place-items: center; width: 44px; height: 44px; flex: none; margin-left: auto; margin-right: -16px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--line-2); color: var(--muted); text-decoration: none; background: transparent; }
+.dlv-bell + .site-menu { margin-left: 0; }
+.dlv-bell:hover, .dlv-bell[aria-current="page"] { color: var(--text); box-shadow: inset 0 0 0 1.5px var(--text); }
+.dlv-bell-on { color: var(--text); }
+@media (max-width: 560px) { .dlv-bell { margin-right: 0; } }
+.dlv-bell-count { position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; display: inline-grid; place-items: center; border-radius: 10px; background: var(--info); color: var(--panel); font-size: 12px; font-weight: 700; line-height: 1; border: 2px solid var(--bg); }
+
+/* Message list */
+.dlv-msgs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dlv-msg { display: grid; gap: 6px; padding: 14px 16px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: var(--radius); min-width: 0; }
+.dlv-msg-new { border-left-color: var(--info); background: color-mix(in srgb, var(--info-bg) 45%, var(--panel)); }
+.dlv-msg-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.dlv-msg-subject { font-size: 16px; overflow-wrap: anywhere; }
+.dlv-msg:not(.dlv-msg-new) .dlv-msg-subject { font-weight: 500; }
+.dlv-msg-text { margin: 0; color: var(--text-2); font-size: 15px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.dlv-msg-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; color: var(--muted); font-size: 14px; }
+.dlv-msg-open { font-weight: 600; color: var(--text); }

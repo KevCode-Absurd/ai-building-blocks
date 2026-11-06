@@ -11,7 +11,8 @@ test("health and config are public", async () => {
   const t = await testEnv();
   assert.equal((await t.api("GET", "/api/health")).status, 200);
   const cfg = await t.api("GET", "/api/config");
-  assert.equal(cfg.body.betaMode, "invite");
+  assert.equal(cfg.body.inviteOnly, true);
+  assert.equal((await (await testEnv({ INVITE_ONLY: "false" })).api("GET", "/api/config")).body.inviteOnly, false);
 });
 
 test("unknown API paths return JSON 404, wrong methods 405", async () => {

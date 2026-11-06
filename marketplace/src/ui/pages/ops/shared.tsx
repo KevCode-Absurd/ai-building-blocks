@@ -8,7 +8,9 @@ import type { JobFlag } from "../../../modules/ops/types.ts";
 
 const SECTIONS = [
   { href: "/ops", label: "Work" },
+  { href: "/ops/problems", label: "Problem reports" },
   { href: "/ops/agents", label: "Agents" },
+  { href: "/ops/review", label: "Quality" },
   { href: "/ops/experts", label: "Experts" },
   { href: "/ops/beta", label: "Invites and staff" },
   { href: "/ops/costs", label: "Costs" },
@@ -25,7 +27,7 @@ export function OpsNav() {
 }
 
 export const STATUS_WORDS: Record<JobStatus, string> = {
-  draft: "Draft", quoted: "Quoted", confirmed: "Ordered", running: "Running", checking: "Checking",
+  draft: "Draft", quoted: "Plan ready", confirmed: "Started", running: "Running", checking: "Checking",
   in_review: "Waiting for your OK", delivered: "With the buyer", revising: "Revising", accepted: "Accepted",
   rejected: "Rejected", disputed: "Disputed", failed: "Failed", cancelled: "Cancelled",
 };

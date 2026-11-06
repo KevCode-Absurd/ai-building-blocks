@@ -9,7 +9,7 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:10:13.786Z"
   },
-  "spent_usd": 4.342025,
+  "spent_usd": 7.20148,
   "achieng-content-strategy": {
     "sha256": "cdbf62328530e34274fd6540619171144daa5628682630d5ebec8bc0360954fa",
     "model": "gpt-image-2.5-flare",
@@ -25,11 +25,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:54:12.603Z"
   },
-  "derek-pitch-decks": {
-    "sha256": "35fc9ee5d0b0bab1a417725e89ab353269aaa5f4f19c465f671b4bf17cc9ac23",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:54:13.053Z"
-  },
   "bradley-sales-decks": {
     "sha256": "703442644e283e92115c2dfe9ef189c863ff86c20a8ba78758bd7630db0f4ee2",
     "model": "gpt-image-2.5-flare",
@@ -44,16 +39,6 @@
     "sha256": "c26875b05ff5e76d401da5d02c23cacaa63da55884e6caa48009c8ea308fe666",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:54:25.669Z"
-  },
-  "bayu-affiliates": {
-    "sha256": "c0a305c9e1f31c5d5863dd7ed8384f26e43eb7e89f6c0303274e871def319d41",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:54:26.245Z"
-  },
-  "duc-app-store": {
-    "sha256": "b04d30cdc9824e825da7e4a3731ffc4645f851202a6c774015aeb18f7fdbad77",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:54:26.703Z"
   },
   "citlali-print-copy": {
     "sha256": "66b954986a033b76446466fb4e9c3ad814acaaa7312b60494949288f73926f12",
@@ -105,11 +90,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:54:55.969Z"
   },
-  "cody-marketing-automation": {
-    "sha256": "369d67796726e27959d8483acaa897f6218e5cf69b0bd8ef7b91882fdaffde6a",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:55:04.269Z"
-  },
   "curtis-podcast-guesting": {
     "sha256": "1565ff2c814a2fd7a2da0ee7989da67c8a799fd55002a91d4200e9a9464d850c",
     "model": "gpt-image-2.5-flare",
@@ -120,20 +100,10 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:55:08.813Z"
   },
-  "amaru-cold-calls": {
-    "sha256": "4c3fa5d302fb110c781f6180cab3fae45d9e0aebef4c108857a9e80263ac7153",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:55:10.050Z"
-  },
   "bethany-lead-scoring": {
     "sha256": "2ea306e18dad7c50fcd5d80225c595127c1afec49b314eacaddda457668a571d",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:55:13.616Z"
-  },
-  "chunhua-sales-playbooks": {
-    "sha256": "1271a3de72232a0433bc43fc7c48c65e73d7d056deff7d1d2ea145c350e0c057",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:55:16.885Z"
   },
   "farhan-commission-plans": {
     "sha256": "4ab76d538f4fed2837bd1f0b9a2a046433cbdc86affa4b7a2e958688f5ec45f0",
@@ -169,11 +139,6 @@
     "sha256": "5fa10c09c76f05db93412e8e9805ccd8eb73e0cf1c1c8d4b79a8f1a766fcee1d",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:55:32.400Z"
-  },
-  "bryce-reddit-communities": {
-    "sha256": "d0d8e4c5d3b796f0148be2f56b1cb9d425ce37b0b61480227c522de9b8987d55",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:55:35.070Z"
   },
   "gemma-crowdfunding": {
     "sha256": "5467b9cac9a2d309a5fbd75b8cad74c5dc09fe653638faf5ba9b8a0eaebec0d3",
@@ -240,11 +205,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:56:13.151Z"
   },
-  "lacey-journeys": {
-    "sha256": "fc893515216819cda975bd7b97eeadc801f7b3e23cdbc8b837793ca7e74d274a",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:56:13.671Z"
-  },
   "jerome-investoroutreach": {
     "sha256": "07c477b068a02a3c81fb46d928835c72c092094924999797fba068e7d5a241b3",
     "model": "gpt-image-2.5-flare",
@@ -254,11 +214,6 @@
     "sha256": "ab18da36cd079aab1030acdbfc8e54f8ee83fc1911533b3643ad8e2d312d0684",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:56:22.636Z"
-  },
-  "iain-segments": {
-    "sha256": "829c1f27a954494db39334e7aafcb3d02693aeb7130027315bc73ed2dde23bd3",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:56:23.389Z"
   },
   "mladen-wordpress": {
     "sha256": "ef1e8127db42adb81a19d85a2185f705b8c5cba4a5836d300ed59cb80c80c39d",
@@ -274,11 +229,6 @@
     "sha256": "96e5348d3b4b7de7b5f1d2730e450f3e823ff3b85883fd0b8d339e9650df3a17",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:56:29.251Z"
-  },
-  "kristen-emailhtml": {
-    "sha256": "a5da598b21362c7444e7604f768f1f1f0e59af0cade93bf238ce2d74e0a88e40",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:56:38.250Z"
   },
   "kagiso-python": {
     "sha256": "1743ddda2b0ce53f76338cec263111822ee424e8c15f2fb7608ae73d31e81737",
@@ -305,11 +255,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:56:51.544Z"
   },
-  "jared-officeit": {
-    "sha256": "89107b5d718cd8ac7988ec9816d35246d4a971055d36b3648c65c4d27def4c19",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:56:52.894Z"
-  },
   "halyna-cybersecurity": {
     "sha256": "ec91ef8e497aac1676f82b21bf5181681a63360a7740f0d170a4da14fcf097a2",
     "model": "gpt-image-2.5-flare",
@@ -334,11 +279,6 @@
     "sha256": "f532fad26ccf303ce3a07fb28a9b1fbfabfcbff3b371487e80d3efb1d351806a",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:57:05.328Z"
-  },
-  "jeremy-navigation": {
-    "sha256": "727769fab99ac124cbf95666f1106ed7fde2dfb859352867ddaaa0921a2b53d0",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:57:06.289Z"
   },
   "monique-membership": {
     "sha256": "24dbf2f9b647e821d1fb78cc5316e36e302194b3784406ac7c8e246189d96a7d",
@@ -420,11 +360,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:57:44.867Z"
   },
-  "stacy-skillsmatrix": {
-    "sha256": "6cf2ac9f9e4127dcc55a3bf507d83921f0727a5578921cc1bc80ee81fbd90c83",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:57:50.020Z"
-  },
   "yvonne-quality": {
     "sha256": "b7a678a73e11e94f0b99610be0731efc251d06addbb6c693d12818472bf8245e",
     "model": "gpt-image-2.5-flare",
@@ -439,16 +374,6 @@
     "sha256": "c6557f935644ed4a03e91ea01de774c9f51ece8bcbc810e73256092bbdbe7174",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:57:57.211Z"
-  },
-  "quang-contracts": {
-    "sha256": "ae11c7460e31a91c0d4f2d7c18afc9a44b42dd1b4a2ef2e7a7ac01a14718a908",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:57:58.635Z"
-  },
-  "thanakorn-delivery": {
-    "sha256": "c3242e500cef1eca7f47b86fa5356a0f0a7672277e979283933ba298da5244ff",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:58:04.962Z"
   },
   "wayne-continuity": {
     "sha256": "87207e8692ebc0a59f3cfcf42572589460371cf1d70e5d9b176acbb94255eeb7",
@@ -520,11 +445,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:58:43.184Z"
   },
-  "raymond-businesssale": {
-    "sha256": "b5a3eca006199d8559eec9269071c05e3355782cbf34ba6648437670d88d8281",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:58:46.310Z"
-  },
   "poppy-sustainability": {
     "sha256": "d8e2b9f2f7b742f5a4481fd29d8924e21c9838d681ea762782a2ca0c87ebd0e6",
     "model": "gpt-image-2.5-flare",
@@ -545,11 +465,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:58:56.331Z"
   },
-  "reece-financemodel": {
-    "sha256": "580c5b554af9e3e84f79280b01501d78abd92ee98a4ebdbe3708547506f8f1b1",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:00.278Z"
-  },
   "paloma-investorupdate": {
     "sha256": "b60c23168f2b6c288fe717b9cdfa5bc3809bdc624557d21fdc64a487d6b25c37",
     "model": "gpt-image-2.5-flare",
@@ -560,40 +475,20 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:01.898Z"
   },
-  "abbie-expenses": {
-    "sha256": "e9ed16cb4a6babc7442c77f87ba3c4f030dc40ccc3c85ecd3f1cbe7328ef6775",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:09.343Z"
-  },
   "odette-payables": {
     "sha256": "493e828e30325d5af22503781c05e36374a13b97b37eaa458fbb8ad4f7c1a082",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:12.362Z"
-  },
-  "qadir-cfo": {
-    "sha256": "d25befe6c92517ec4dcd4f359a33a495b9c32559d344702f4f0479aa9856ac50",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:12.641Z"
   },
   "nisha-saasmetrics": {
     "sha256": "bb2a2719a8de1b50545216a4b3f716dc90e7018ac5a408e997e7df6c28f9d38e",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:14.314Z"
   },
-  "patrick-margins": {
-    "sha256": "23cb5bfbd7274c4d29b820bb28e67b8161d2abf0577eddf5d0cda530720f5ef5",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:15.369Z"
-  },
   "osman-subscriptionpricing": {
     "sha256": "a916faf77995b82a92c50e51e31d3deb60fafd342e26d41ad566ee3e46eb1c1b",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:21.612Z"
-  },
-  "randall-taxprep": {
-    "sha256": "e145f9bbc68d5fbbdc342acf4cb63405895369db0c47bf3c46594c780f657058",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:23.596Z"
   },
   "orla-nonprofit": {
     "sha256": "93e4ad78c286a455f9b49fd2ce67760c0febf406105bfc8866f9443f80195954",
@@ -610,11 +505,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:28.650Z"
   },
-  "philippa-kpireports": {
-    "sha256": "334363ae136f29b376c043580c02ee3c5dbed60407dda96ba3da250d41b0d32d",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:34.218Z"
-  },
   "reginald-controls": {
     "sha256": "be255b8458abcf237515efc595973a8ab15367cf2e05d55e076bb968a4bf2d45",
     "model": "gpt-image-2.5-flare",
@@ -624,11 +514,6 @@
     "sha256": "fc97854ddc27ae0e3deb6025060b13b6cdc9571c7d702ab65135935b16206307",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:39.839Z"
-  },
-  "natalie-recruiter": {
-    "sha256": "bc4462e19f62832de828e2369fd5e6b80b9f7c63e7eb390aa522d4c160632bff",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:41.662Z"
   },
   "regina-debtplan": {
     "sha256": "f69062db55fe3275514085a3f0bf7501cd9b6dabbf1942a69cb7bcdf4006ce11",
@@ -659,11 +544,6 @@
     "sha256": "00e059f5d0c5568d2a9f030c6100c5926a04e38b896e7732744ae071c2574fb1",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T11:59:54.309Z"
-  },
-  "pilar-performance": {
-    "sha256": "0544805a7caadbcb73980d61c2c44d8df507d6a42152cd07f57555e7a2dbab87",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T11:59:57.857Z"
   },
   "reza-peopleops": {
     "sha256": "ed00b327999b7aa739f64af818730ceb879b74c6902f3fdd278e287c1a3f5f71",
@@ -705,25 +585,10 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:00:20.064Z"
   },
-  "parisa-payrollcheck": {
-    "sha256": "7ff3bca37f29f69b5dbb657dc642fe6864e1d04113ce3dc1a16f0a0b72587119",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:00:22.193Z"
-  },
-  "robin-firsthire": {
-    "sha256": "9bb6370ffcce8f0943a934a35963ee4965aad46f5fc71374b08782fe2c569725",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:00:22.267Z"
-  },
   "danielle-seo": {
     "sha256": "66a7c2c88551944fddd1abf5d7fc35ae02bc191a8c6659c4887a772c32e88800",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:00:27.872Z"
-  },
-  "brandon-google-ads": {
-    "sha256": "85c076d3588507d2b1c3d088903e28c6ebb99e12f74d6ac11ac3279d87b12a26",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:00:33.824Z"
   },
   "bianca-meta-ads": {
     "sha256": "9828a277fb6c63e95a0ea88fe574e79c668bb27808919c2d8801ee62058b0233",
@@ -755,11 +620,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:00:48.379Z"
   },
-  "delaney-social-media": {
-    "sha256": "900ac5371fa4d17bafb47ef54a8b370a89e43e1dc77f29e96633d76c1524f086",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:00:49.359Z"
-  },
   "brittany-image-ads": {
     "sha256": "9af4d52982dca5b88071ff0da81d04384f7920d7e6fb8119b4e472acf2e6fd47",
     "model": "gpt-image-2.5-flare",
@@ -789,16 +649,6 @@
     "sha256": "584321bf5a738c6af0bd3b79dfb8f31b6706d23d67fb304d8261880f285711e4",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:01:04.163Z"
-  },
-  "amber-lead-funnels": {
-    "sha256": "f565b3029b1c5fca431ef64cd3550eeded260d5c1c709b1e5be064c6b490f8fe",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:01:10.922Z"
-  },
-  "callum-short-video": {
-    "sha256": "95680830ca40e01f197fe617a76fc2f4593f92bb241c565779f89e2c39f7c260",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:01:15.558Z"
   },
   "corey-saas-growth": {
     "sha256": "bc76b152a6bd2455a56a1c491eb9de48bb3b2d84226290b73c3bd58b65a78d39",
@@ -839,11 +689,6 @@
     "sha256": "ad03ec2f85aa80e4bf393c678848172231b3a58d197ad3b66bb88f5c7cf6df42",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:01:33.531Z"
-  },
-  "dustin-webinar-events": {
-    "sha256": "48875e554ed67ee1d802d19f9edacae49857d82c4d81ce27ff5c54d7d45655ee",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:01:37.031Z"
   },
   "chelsea-creator-partnerships": {
     "sha256": "1e365bd6b52b612250d98208d06996c8c2d03892702de183411ae83daf08124b",
@@ -955,11 +800,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:02:39.237Z"
   },
-  "simon-sops": {
-    "sha256": "d418feb6a9702aa20a11c1536bdcf636b5dcef09ebf6a139435b663a8bd9cfa1",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:02:39.671Z"
-  },
   "dario-community": {
     "sha256": "ee5c86d2d7a5efd82f48ddd9831be7abff79aef5915ec95e5879dfb6068aea45",
     "model": "gpt-image-2.5-flare",
@@ -974,11 +814,6 @@
     "sha256": "b17bf2fd9770177c6b036d03d2f7cbb906dd4a20d4578e826d9a42d679e783ae",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:02:51.463Z"
-  },
-  "winnie-admin": {
-    "sha256": "5a6789d41f0c27516f829be18bcc7344ef5f7f64819535fa52378ebf7f637b8c",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:02:53.286Z"
   },
   "tamsin-okrs": {
     "sha256": "d5abcbff6e938ebed2b777b89e6f775c5f3b6259e333b891534669d44830e1a9",
@@ -1000,11 +835,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:03:06.179Z"
   },
-  "takumi-continuity": {
-    "sha256": "575a8cc176d4eef2dcd2c71f7b2b05474779d545d7656f898f3a341a49e9e1ba",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:03:07.061Z"
-  },
   "thandi-automation": {
     "sha256": "65ae0edf937086a0d921ea9972cfcb50e9055faf1b9f4f4771f84acef7fb7a16",
     "model": "gpt-image-2.5-flare",
@@ -1025,11 +855,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:03:17.851Z"
   },
-  "warren-law-intake": {
-    "sha256": "c33c99ebc851d6908ef482aeffaeb5a79c729acf84243421d85899e810392bf5",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:03:20.322Z"
-  },
   "zola-fitness": {
     "sha256": "82e9321462f94428eca7e72211e8ebd8c5cf3f1ca4e1d94de06d9a58b26beea7",
     "model": "gpt-image-2.5-flare",
@@ -1039,11 +864,6 @@
     "sha256": "d5963b5d85ea51ff9b2e0206734fdd5642f203c12c5c522cbe793c99e3398b77",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:03:24.605Z"
-  },
-  "shannon-salon": {
-    "sha256": "59fe47b29d48e927814d8583b462f60d6bd67434cde7db4d4e3975fe97cdeff9",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:03:28.520Z"
   },
   "teodor-tutoring": {
     "sha256": "0a33d98ec53121a17fc2936046de148f15508421d4ebc4e2aa5799b108175cdb",
@@ -1059,16 +879,6 @@
     "sha256": "64848d92fb1f09bc694293b17cb975994d4a390e231ade4420b7304319081f44",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:03:36.542Z"
-  },
-  "stuart-accounting-firm": {
-    "sha256": "554085d8180fdfe821ab7ba941932090b235841e1fb60652af48c154304cf1bf",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:03:36.575Z"
-  },
-  "tabitha-insurance": {
-    "sha256": "3ab37c762ef402a79fdf6212059730faba4e4751ff155d7f87f267ebaf7f7a76",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:03:40.344Z"
   },
   "walt-autoshop": {
     "sha256": "efee1b6c51f9aa9e990d5e7ab1fbcb1fe3022cce6eb4e24330e8c377c5ddf95b",
@@ -1170,11 +980,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:04:37.788Z"
   },
-  "malcolm-culture-research": {
-    "sha256": "fb1d1d0d60f567e364dde69108f9012ccfb322519167aab090cfc09fb5a4a3dc",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:04:39.129Z"
-  },
   "lorraine-paper-review": {
     "sha256": "db883c17c323f065b2f70ab295d08195bd316f621a17fb64c02813d1e0fc771b",
     "model": "gpt-image-2.5-flare",
@@ -1190,25 +995,10 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:04:49.877Z"
   },
-  "lindsay-product-management": {
-    "sha256": "bdeaaf7426ec8f434c7ae6e3cf1c1e92c793ae2ce5a294d30ff1e721f8e3372e",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:04:49.933Z"
-  },
   "jenna-ux-writing": {
     "sha256": "197f9f4ae20315489ccd890c8023982dadbaea13e67f4c896ea2470b75c26723",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:04:52.739Z"
-  },
-  "jamie-ux-review": {
-    "sha256": "003d5209ca720b4cf118e66039dda63bab6e6335172603d21757076ce0867a5f",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:04:55.177Z"
-  },
-  "joel-qa-testing": {
-    "sha256": "0a160195f444be0e0d26b8701fcd9cdd02b207fbd5fa453c9b7896752471b0b7",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:04:57.401Z"
   },
   "marlon-api-docs": {
     "sha256": "61cddc9a4ac6694e1d32511ac6008764b5f20d7ff887e45084db5e0a001319a7",
@@ -1219,11 +1009,6 @@
     "sha256": "c7562381a3cf909d2688ab2af3b8fd6854aee2031d8fcc873854ba7d94e4aaa4",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:05:03.434Z"
-  },
-  "kelsey-data-analysis": {
-    "sha256": "3c9815fd153ec3441d018b70ad0fe19ac50dfa3ae71720ba2e52100732a10a4c",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:05.627Z"
   },
   "lee-spreadsheet-help": {
     "sha256": "d5e7349e9b2a4dfb2ad5da3c1c1a3e00456596f4974f847eb4deaaa18438c2c2",
@@ -1240,16 +1025,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:05:16.654Z"
   },
-  "magnus-software-architecture": {
-    "sha256": "cfb45805c3899f6778b8f9485d0eff1b0305ae93b36eae43e606c70ec30bf11b",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:16.829Z"
-  },
-  "jorge-code-review": {
-    "sha256": "37428830a1f141c7d5b220dff4bce8690850b934671ad0c9b49eb2b791f8b056",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:19.598Z"
-  },
   "limor-codebase-guide": {
     "sha256": "bbb99ce74467d21aa24ab951392cdfd41f28ab7a7582a0c5119c4f817d9f3c30",
     "model": "gpt-image-2.5-flare",
@@ -1259,11 +1034,6 @@
     "sha256": "9f212ba175e68cc47d4e696a817325cbe19135b0166a3532b0eecd888406091f",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:05:25.075Z"
-  },
-  "jason-page-speed": {
-    "sha256": "508acfc5865da091eea18c7a0fefaa00c6ca2eac35c4428fb781ed5ce83330ed",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:29.455Z"
   },
   "melanie-accessibility-audit": {
     "sha256": "1d3480a50260e1001eb4a02fcc3b9019c1eded00deb5990db2c117e09a9fb2f5",
@@ -1280,25 +1050,10 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:05:35.856Z"
   },
-  "jarek-data-privacy": {
-    "sha256": "ce9e18c7f9cdd12997806eeae2b784e5240d0455c795d913726425dfe18dc06b",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:38.291Z"
-  },
   "makena-incident-reports": {
     "sha256": "40a14d5a65affa7d6d03c064a9b3194a93d590f596fcb75e7a5c1d46dd7f7341",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:05:42.177Z"
-  },
-  "mitchell-cloud-costs": {
-    "sha256": "2faecc5bbc902cc8796f3a586c75db138dd03e39b9c8405cee59645e45745c9d",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:43.184Z"
-  },
-  "lamar-release-notes": {
-    "sha256": "27e97109253c3b264906924f02c46a6c0ad1ed2dad2b2dddce22d9166dfb098b",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:05:46.088Z"
   },
   "kiara-prompt-design": {
     "sha256": "8e2750cc64a61141a18dc51f39a4206fb7c5f94f062a72a39007dbadb59d4b71",
@@ -1340,16 +1095,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:06:09.660Z"
   },
-  "grant-deal-strategy": {
-    "sha256": "53d57e3f7d9bfe15c8140f6c5f9359f8006200f34df63d1ee94750b7626b23ac",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:10.760Z"
-  },
-  "fiona-nurture": {
-    "sha256": "efb7b83b5dd20084806fd57be7970885f0494b9af3f85ea0905729ee609bd2a6",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:12.263Z"
-  },
   "esme-first-customers": {
     "sha256": "4a5da155d1a8c51d52c78d459741d022f90540b2213cf86823d6f3c56b608679",
     "model": "gpt-image-2.5-flare",
@@ -1370,30 +1115,10 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:06:29.182Z"
   },
-  "heather-partners": {
-    "sha256": "dd94793d863f7e8c2b07262ee793e5609387c78e6a76b4b340a56f900034cc33",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:30.541Z"
-  },
-  "dean-wholesale": {
-    "sha256": "27618ae302909a14ff7ab7ce9cdec7d922824e5cdbd07d5e4f81af56e7cc39f8",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:34.906Z"
-  },
   "hyejin-returns": {
     "sha256": "99b474202d8b759d17e6b0ba7cdf65007b9b79232aab7886f2f299fad3e3ad07",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:06:34.908Z"
-  },
-  "elif-inbox": {
-    "sha256": "ac8fd4819ca4f6853f1d249986d0ff88c25ca608e0f6e48a63d81e6d2ca0dec3",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:35.922Z"
-  },
-  "gary-escalations": {
-    "sha256": "92a4e56b5ffd0b4e381deb60e19bcd046b7005085e22044abbde0fc00b7871ed",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:42.450Z"
   },
   "ellis-macros": {
     "sha256": "023db18cc7cc8133ff3712c104cb2a9cc9c6e44013ea2b6eb583902148b4c357",
@@ -1405,11 +1130,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:06:47.561Z"
   },
-  "freya-onboarding": {
-    "sha256": "2d83dd49a083f8e9d30036a00d24dd3ed8ed29d93a637fe27e89e4613fc8a090",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:48.099Z"
-  },
   "hallie-support-insights": {
     "sha256": "5ca2448caf8606b1093feaa95f86dff47f11e94c31433989049ac3b93367c8a8",
     "model": "gpt-image-2.5-flare",
@@ -1419,16 +1139,6 @@
     "sha256": "51cf2565189feef9b6ce08992e34d50afe0ff18f3e6e185dceb11e91a9ca043a",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:06:55.017Z"
-  },
-  "imogen-social-replies": {
-    "sha256": "7d7bda09a3f8b233ee1d7a992f37515742a12d786497720d95743c25671750ff",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:06:57.594Z"
-  },
-  "ewan-conversion": {
-    "sha256": "cce6be523a1d7991e06f68b1e84cb076d0912e5efe4c51cd16bd805aadeed426",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:07:01.132Z"
   },
   "faye-product-pages": {
     "sha256": "f9581ddadb0142eb3e497f7099c827d7ee6ecf53e84efe9929049b64521ab46c",
@@ -1465,11 +1175,6 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:07:14.486Z"
   },
-  "florian-store-launch": {
-    "sha256": "269cd44ed670702d00415700e7dd57fa6eeef49500541d48461a23803dbd7b60",
-    "model": "gpt-image-2.5-flare",
-    "created": "2026-11-06T12:07:22.890Z"
-  },
   "ingrid-store-search": {
     "sha256": "5194f54d4efba86ee214caa1a07dff2ed665cbd7cd8982fe98f65cea1f7140a7",
     "model": "gpt-image-2.5-flare",
@@ -1505,9 +1210,1329 @@
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:09:28.607Z"
   },
-  "erica-renewals": {
+  "marisol-expenses": {
+    "sha256": "e9ed16cb4a6babc7442c77f87ba3c4f030dc40ccc3c85ecd3f1cbe7328ef6775",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:09.343Z"
+  },
+  "sunil-cold-calls": {
+    "sha256": "4c3fa5d302fb110c781f6180cab3fae45d9e0aebef4c108857a9e80263ac7153",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:55:10.050Z"
+  },
+  "pooja-lead-funnels": {
+    "sha256": "f565b3029b1c5fca431ef64cd3550eeded260d5c1c709b1e5be064c6b490f8fe",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:01:10.922Z"
+  },
+  "varun-affiliates": {
+    "sha256": "c0a305c9e1f31c5d5863dd7ed8384f26e43eb7e89f6c0303274e871def319d41",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:54:26.245Z"
+  },
+  "nikhil-google-ads": {
+    "sha256": "85c076d3588507d2b1c3d088903e28c6ebb99e12f74d6ac11ac3279d87b12a26",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:00:33.824Z"
+  },
+  "mateo-reddit-communities": {
+    "sha256": "d0d8e4c5d3b796f0148be2f56b1cb9d425ce37b0b61480227c522de9b8987d55",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:55:35.070Z"
+  },
+  "emilio-short-video": {
+    "sha256": "95680830ca40e01f197fe617a76fc2f4593f92bb241c565779f89e2c39f7c260",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:01:15.558Z"
+  },
+  "silvia-sales-playbooks": {
+    "sha256": "1271a3de72232a0433bc43fc7c48c65e73d7d056deff7d1d2ea145c350e0c057",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:55:16.885Z"
+  },
+  "siddharth-marketing-automation": {
+    "sha256": "369d67796726e27959d8483acaa897f6218e5cf69b0bd8ef7b91882fdaffde6a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:55:04.269Z"
+  },
+  "rodrigo-wholesale": {
+    "sha256": "27618ae302909a14ff7ab7ce9cdec7d922824e5cdbd07d5e4f81af56e7cc39f8",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:34.906Z"
+  },
+  "ximena-social-media": {
+    "sha256": "900ac5371fa4d17bafb47ef54a8b370a89e43e1dc77f29e96633d76c1524f086",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:00:49.359Z"
+  },
+  "kunal-pitch-decks": {
+    "sha256": "35fc9ee5d0b0bab1a417725e89ab353269aaa5f4f19c465f671b4bf17cc9ac23",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:54:13.053Z"
+  },
+  "paolo-app-store": {
+    "sha256": "b04d30cdc9824e825da7e4a3731ffc4645f851202a6c774015aeb18f7fdbad77",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:54:26.703Z"
+  },
+  "pradeep-webinar-events": {
+    "sha256": "48875e554ed67ee1d802d19f9edacae49857d82c4d81ce27ff5c54d7d45655ee",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:01:37.031Z"
+  },
+  "araceli-inbox": {
+    "sha256": "ac8fd4819ca4f6853f1d249986d0ff88c25ca608e0f6e48a63d81e6d2ca0dec3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:35.922Z"
+  },
+  "kavitha-renewals": {
     "sha256": "146fcf394db4c58c5413b5ab381a3f299870862f3f04913fbffc77ecbdc4e81c",
     "model": "gpt-image-2.5-flare",
     "created": "2026-11-06T12:09:31.173Z"
+  },
+  "imran-conversion": {
+    "sha256": "cce6be523a1d7991e06f68b1e84cb076d0912e5efe4c51cd16bd805aadeed426",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:07:01.132Z"
+  },
+  "yesenia-nurture": {
+    "sha256": "efb7b83b5dd20084806fd57be7970885f0494b9af3f85ea0905729ee609bd2a6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:12.263Z"
+  },
+  "javier-store-launch": {
+    "sha256": "269cd44ed670702d00415700e7dd57fa6eeef49500541d48461a23803dbd7b60",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:07:22.890Z"
+  },
+  "imani-onboarding": {
+    "sha256": "2d83dd49a083f8e9d30036a00d24dd3ed8ed29d93a637fe27e89e4613fc8a090",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:48.099Z"
+  },
+  "samir-escalations": {
+    "sha256": "92a4e56b5ffd0b4e381deb60e19bcd046b7005085e22044abbde0fc00b7871ed",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:42.450Z"
+  },
+  "vikram-deal-strategy": {
+    "sha256": "53d57e3f7d9bfe15c8140f6c5f9359f8006200f34df63d1ee94750b7626b23ac",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:10.760Z"
+  },
+  "rekha-partners": {
+    "sha256": "dd94793d863f7e8c2b07262ee793e5609387c78e6a76b4b340a56f900034cc33",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:30.541Z"
+  },
+  "desmond-segments": {
+    "sha256": "829c1f27a954494db39334e7aafcb3d02693aeb7130027315bc73ed2dde23bd3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:56:23.389Z"
+  },
+  "aaliyah-social-replies": {
+    "sha256": "7d7bda09a3f8b233ee1d7a992f37515742a12d786497720d95743c25671750ff",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:06:57.594Z"
+  },
+  "rahul-ux-review": {
+    "sha256": "003d5209ca720b4cf118e66039dda63bab6e6335172603d21757076ce0867a5f",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:04:55.177Z"
+  },
+  "arnel-officeit": {
+    "sha256": "89107b5d718cd8ac7988ec9816d35246d4a971055d36b3648c65c4d27def4c19",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:56:52.894Z"
+  },
+  "farid-data-privacy": {
+    "sha256": "ce9e18c7f9cdd12997806eeae2b784e5240d0455c795d913726425dfe18dc06b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:38.291Z"
+  },
+  "ernesto-page-speed": {
+    "sha256": "508acfc5865da091eea18c7a0fefaa00c6ca2eac35c4428fb781ed5ce83330ed",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:29.455Z"
+  },
+  "ryota-navigation": {
+    "sha256": "727769fab99ac124cbf95666f1106ed7fde2dfb859352867ddaaa0921a2b53d0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:57:06.289Z"
+  },
+  "navid-qa-testing": {
+    "sha256": "0a160195f444be0e0d26b8701fcd9cdd02b207fbd5fa453c9b7896752471b0b7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:04:57.401Z"
+  },
+  "darius-code-review": {
+    "sha256": "37428830a1f141c7d5b220dff4bce8690850b934671ad0c9b49eb2b791f8b056",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:19.598Z"
+  },
+  "valeria-data-analysis": {
+    "sha256": "3c9815fd153ec3441d018b70ad0fe19ac50dfa3ae71720ba2e52100732a10a4c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:05.627Z"
+  },
+  "minji-emailhtml": {
+    "sha256": "a5da598b21362c7444e7604f768f1f1f0e59af0cade93bf238ce2d74e0a88e40",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:56:38.250Z"
+  },
+  "alejandra-journeys": {
+    "sha256": "fc893515216819cda975bd7b97eeadc801f7b3e23cdbc8b837793ca7e74d274a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:56:13.671Z"
+  },
+  "kamran-release-notes": {
+    "sha256": "27e97109253c3b264906924f02c46a6c0ad1ed2dad2b2dddce22d9166dfb098b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:46.088Z"
+  },
+  "neha-product-management": {
+    "sha256": "bdeaaf7426ec8f434c7ae6e3cf1c1e92c793ae2ce5a294d30ff1e721f8e3372e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:04:49.933Z"
+  },
+  "venkat-software-architecture": {
+    "sha256": "cfb45805c3899f6778b8f9485d0eff1b0305ae93b36eae43e606c70ec30bf11b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:16.829Z"
+  },
+  "anand-culture-research": {
+    "sha256": "fb1d1d0d60f567e364dde69108f9012ccfb322519167aab090cfc09fb5a4a3dc",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:04:39.129Z"
+  },
+  "arturo-cloud-costs": {
+    "sha256": "2faecc5bbc902cc8796f3a586c75db138dd03e39b9c8405cee59645e45745c9d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:05:43.184Z"
+  },
+  "anjali-recruiter": {
+    "sha256": "bc4462e19f62832de828e2369fd5e6b80b9f7c63e7eb390aa522d4c160632bff",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:41.662Z"
+  },
+  "lakshmi-payrollcheck": {
+    "sha256": "7ff3bca37f29f69b5dbb657dc642fe6864e1d04113ce3dc1a16f0a0b72587119",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:00:22.193Z"
+  },
+  "karthik-margins": {
+    "sha256": "23cb5bfbd7274c4d29b820bb28e67b8161d2abf0577eddf5d0cda530720f5ef5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:15.369Z"
+  },
+  "shalini-kpireports": {
+    "sha256": "334363ae136f29b376c043580c02ee3c5dbed60407dda96ba3da250d41b0d32d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:34.218Z"
+  },
+  "yolanda-performance": {
+    "sha256": "0544805a7caadbcb73980d61c2c44d8df507d6a42152cd07f57555e7a2dbab87",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:57.857Z"
+  },
+  "vernon-cfo": {
+    "sha256": "d25befe6c92517ec4dcd4f359a33a495b9c32559d344702f4f0479aa9856ac50",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:12.641Z"
+  },
+  "armando-contracts": {
+    "sha256": "ae11c7460e31a91c0d4f2d7c18afc9a44b42dd1b4a2ef2e7a7ac01a14718a908",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:57:58.635Z"
+  },
+  "ramesh-taxprep": {
+    "sha256": "e145f9bbc68d5fbbdc342acf4cb63405895369db0c47bf3c46594c780f657058",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:23.596Z"
+  },
+  "weiming-businesssale": {
+    "sha256": "b5a3eca006199d8559eec9269071c05e3355782cbf34ba6648437670d88d8281",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:58:46.310Z"
+  },
+  "aditya-financemodel": {
+    "sha256": "580c5b554af9e3e84f79280b01501d78abd92ee98a4ebdbe3708547506f8f1b1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:59:00.278Z"
+  },
+  "kiran-firsthire": {
+    "sha256": "9bb6370ffcce8f0943a934a35963ee4965aad46f5fc71374b08782fe2c569725",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:00:22.267Z"
+  },
+  "lorena-salon": {
+    "sha256": "59fe47b29d48e927814d8583b462f60d6bd67434cde7db4d4e3975fe97cdeff9",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:03:28.520Z"
+  },
+  "faisal-sops": {
+    "sha256": "d418feb6a9702aa20a11c1536bdcf636b5dcef09ebf6a139435b663a8bd9cfa1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:02:39.671Z"
+  },
+  "ji-young-skillsmatrix": {
+    "sha256": "6cf2ac9f9e4127dcc55a3bf507d83921f0727a5578921cc1bc80ee81fbd90c83",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:57:50.020Z"
+  },
+  "gaurav-accounting-firm": {
+    "sha256": "554085d8180fdfe821ab7ba941932090b235841e1fb60652af48c154304cf1bf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:03:36.575Z"
+  },
+  "graciela-insurance": {
+    "sha256": "3ab37c762ef402a79fdf6212059730faba4e4751ff155d7f87f267ebaf7f7a76",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:03:40.344Z"
+  },
+  "owen-continuity": {
+    "sha256": "575a8cc176d4eef2dcd2c71f7b2b05474779d545d7656f898f3a341a49e9e1ba",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:03:07.061Z"
+  },
+  "vivek-delivery": {
+    "sha256": "c3242e500cef1eca7f47b86fa5356a0f0a7672277e979283933ba298da5244ff",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T11:58:04.962Z"
+  },
+  "sanjay-law-intake": {
+    "sha256": "c33c99ebc851d6908ef482aeffaeb5a79c729acf84243421d85899e810392bf5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:03:20.322Z"
+  },
+  "haruka-admin": {
+    "sha256": "5a6789d41f0c27516f829be18bcc7344ef5f7f64819535fa52378ebf7f637b8c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T12:02:53.286Z"
+  },
+  "chidi-mobile-screens": {
+    "sha256": "44544d5df07306c4fe8b35458376fdd40abe51a11b25d85e24b3eed4dde7c5ff",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:01:47.697Z"
+  },
+  "dmitri-api-endpoints": {
+    "sha256": "0b1f29d0a2121164aa486a8ad37095c41cfc1f64b3e2f4a686d97562dda26aa6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:01:48.517Z"
+  },
+  "brooke-ui-components": {
+    "sha256": "eeaa559497e94abfe5a6d692a21664269e2ea87b874b0aff1a23a8452bd088ac",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:01:48.862Z"
+  },
+  "carys-wp-plugins": {
+    "sha256": "44557146702bda0b1ebf946b532e9236d0b41f521df4ca8384f36f5a4e04d487",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:01:50.865Z"
+  },
+  "dagny-test-writer": {
+    "sha256": "b058ae3a1d262d3263d2dee728139410a4c514304658a34533cfa0c4a6ac4a66",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:01:59.891Z"
+  },
+  "earl-debugger": {
+    "sha256": "1f46100894b4afdc0b2ab17468496ee41c82b3ab98429caff847d40334ebd5c1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:01.409Z"
+  },
+  "bart-legacy-refactor": {
+    "sha256": "a5e202934696d8849ad78443ec6d5e304d9fa4d69e9a4240bfab708d7ea4272e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:10.357Z"
+  },
+  "anil-query-speed": {
+    "sha256": "d67a7738a6eb9a8f57805f6c76ac7563e3c3a2752200dc513e5394e0eebfe1cf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:15.339Z"
+  },
+  "anton-docker-ci": {
+    "sha256": "3b3dc93ecc17af746d21a8b3a95395e303b918cb9802ae6e6530b4b890dfd56c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:16.959Z"
+  },
+  "asel-system-architect": {
+    "sha256": "a289f6883f8276ec8d81764a53f816a715416cb04309d55f6e1cddcbc74e6533",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:17.392Z"
+  },
+  "dale-shell-scripts": {
+    "sha256": "354af02aa2b0f781db3b205791c8c1e11798ad2cfd4fcede1198c6cef92b7c21",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:25.452Z"
+  },
+  "carol-excel-vba": {
+    "sha256": "3dc0f502b6725c1f34a18bac8be9ea8ef849cdbdc6e3e73719f905b6540c783a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:29.586Z"
+  },
+  "eunji-regex": {
+    "sha256": "9700175d774b24f1979fc1fb976e0bfd81a1439430ba549d1e956cc005b2148a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:30.650Z"
+  },
+  "diego-integrations": {
+    "sha256": "c55c0cc340a01592300b6beed70781db12efc8370764aaa7dd1fbba57cad02c3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:31.207Z"
+  },
+  "ezra-browser-extensions": {
+    "sha256": "251d13893df349b9ef9fd9c5cb398b712dd8e3c61042e1e7a46aca316c525963",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:40.688Z"
+  },
+  "delroy-secure-code": {
+    "sha256": "172f6392076d19b86d4316bf72ed26af11593af757153bbb82e5c47c5daf5c7d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:43.616Z"
+  },
+  "aoife-accessible-code": {
+    "sha256": "15dea06c628309b2a6d628d37bbe0d0ab98b615d44d155dc0fe3ed08fcb0c865",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:44.593Z"
+  },
+  "destiny-landing-pages": {
+    "sha256": "b93bac8f6a395bc6d84d68784bf62fb44d9d6b1459b4b79929ae166cf778b6e5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:45.229Z"
+  },
+  "eleanor-dev-docs": {
+    "sha256": "d23a30b9ddc63bd990eb448cb29461e430e1ea2b2f840c826aa5fed12e60115e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:54.236Z"
+  },
+  "daisuke-upgrades": {
+    "sha256": "24b69e0b19aa82ef266035836f0095957d3c1230d7243959ae1bb2ab4e252e0e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:57.297Z"
+  },
+  "catalina-nocode-automation": {
+    "sha256": "3f326aa036cadd59dcb384b887a9605a095f04c2353a94ffa2dac6fd3dd8deaa",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:02:59.984Z"
+  },
+  "amira-ai-features": {
+    "sha256": "c2dccff317debdbe1ccee147fc14af3ad066e692ce455e4f5b0abba6a42913c1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:00.300Z"
+  },
+  "clive-maker-projects": {
+    "sha256": "71d853f00113f4b08d7d197a4703bac0471e94f95d80dc3a90ab095757ec4f20",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:08.213Z"
+  },
+  "chloe-unity-scripts": {
+    "sha256": "6846c14acc987586ea8684e05c9c2f9dd30f308a24ce00dde9cb089818c196a0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:11.613Z"
+  },
+  "mehdi-traction-general": {
+    "sha256": "04b5b4fe8c14385b301943dd9dd217e4597c4ba10e185761a9a439501ec1a934",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:12.826Z"
+  },
+  "rhys-traction-saas": {
+    "sha256": "e174184221f54360826b9e5a45af308c68d6a64adc0ef990782f1e4dee16b1c8",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:16.229Z"
+  },
+  "bonnie-traction-local": {
+    "sha256": "e5b2dd7804859b78185dbea2e833c6dd74358f3089c36c58e5d48707a8cd3bc7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:20.363Z"
+  },
+  "camille-traction-ecommerce": {
+    "sha256": "44764e706a45753f23a0faf04c2a01f91c967ec452e7ddb324bfa979e2a584bd",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:24.411Z"
+  },
+  "delia-traction-coaching": {
+    "sha256": "26cf0d19470f7fa5d698e7b0d1e7db24d5a46f803cbcc25f6950a92c660b3f93",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:03:27.015Z"
+  },
+  "esperanza-db-schema": {
+    "sha256": "619ecd0a1a63521efe4fca43cd40a3f7d7ca3bbb1bcd88eb22a8cce172573cd9",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:04:06.856Z"
+  },
+  "hamza-customer-notices": {
+    "sha256": "13636738746d85b49d57fb6992c3943c81c7e4ce7d0a63b5e3357e0b3792d941",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:23.283Z"
+  },
+  "mercedes-cancel-save": {
+    "sha256": "1f89539ca42cc0d8787b8568a45d09b888f06bdb7cf9f40579df1a826bae1c5a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:24.670Z"
+  },
+  "gethin-aftercare-packs": {
+    "sha256": "39a9dbfe7a4b08a806a159d0a4eafbd6c7de435ce6e671b18b191ffcea8b7717",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:24.893Z"
+  },
+  "doreen-support-ops": {
+    "sha256": "1d7f98593b5b16e34f4a052d5c31f18c512a63068da3a3188c6827ae72d7d155",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:25.717Z"
+  },
+  "adaeze-whatsapp-support": {
+    "sha256": "8a934779c3b144cb429b689910d95e7f675749929048402cd5b25b8a6692bde4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:36.974Z"
+  },
+  "tobias-service-levels": {
+    "sha256": "8695ba9c8f358241662933f662676ab7d6f2e11ffffbd67b3d86666e22c824e2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:37.449Z"
+  },
+  "sung-min-chat-flows": {
+    "sha256": "111ce53c85ea674977e73907ce200c0921d59287db78bb992e4c69fa802743c7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:39.948Z"
+  },
+  "bernadette-moderation": {
+    "sha256": "f47427038c136671838d64e349927411df43ce26b7c17aaea26096f5a5e2fae2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:39.983Z"
+  },
+  "rashid-carrier-claims": {
+    "sha256": "701cbba7209d3c58c700fbb6bbe6b9b6819dae80d38cd4d7b24c1e0dabde5237",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:50.225Z"
+  },
+  "piotr-order-desk": {
+    "sha256": "21cd17af9bbbbaaf8fbbc274dd62c2833b3a453bc7f85033db5e219e2ddff95c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:50.816Z"
+  },
+  "gregory-territories": {
+    "sha256": "de3a460da5abf604d53c3814aeba3783481ca39ddc194f84617b73abf81670a1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:51.362Z"
+  },
+  "tyler-inbound-leads": {
+    "sha256": "5d960110edaf332c8ca4ab6552b9e9e9535682d8ef3189e6d25789c923b21a7e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:06:55.457Z"
+  },
+  "jolene-sponsorship": {
+    "sha256": "5cefce13a702a178c3fe2f762f14bedf4d7328fc218de167631ed33e7a0fd395",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:04.589Z"
+  },
+  "hank-service-plans": {
+    "sha256": "e38a26194d930b324ebfb2d3353556c983299793bb8115c48a35d69fa6067d4e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:04.755Z"
+  },
+  "thulani-crm-setup": {
+    "sha256": "18031eba0c701b48f4a6e6e1b88d86d50368d9bc51a38d10e897768fe79f125d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:04.772Z"
+  },
+  "bilge-presales": {
+    "sha256": "0e222561d0b5b9cf4121c0d851a43b418c6473ee0bab32f232aef70a6891ec8e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:09.132Z"
+  },
+  "carlton-commercial-accounts": {
+    "sha256": "fca173edb2a26ffbc3baf510b5be0f865ca745b100e7effb767d079c96d9c5df",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:18.446Z"
+  },
+  "rosalind-major-gifts": {
+    "sha256": "aba1be7f7f95483281d832c49a0cdb69992b2390b63502fd04dea59029e58fee",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:20.732Z"
+  },
+  "henrik-spec-sheets": {
+    "sha256": "8dc90438b3ffba59e5d8c1df7383e5b5db4e0001dd95ddd5bf3dd9ab0bdd0613",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:20.852Z"
+  },
+  "ricardo-buyer-progress": {
+    "sha256": "5a92bdd84dee5b03195e543d635a4223cfbbab86ceda33cf927d6f70a0f92ec0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:25.416Z"
+  },
+  "jonah-customer-discovery": {
+    "sha256": "7e6b521e713b31063c02194899a3b0aa8d588691d152641f5249c2507d2107d9",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:31.109Z"
+  },
+  "shanice-marketplace-service": {
+    "sha256": "134ffc11d0f03ebdb3d1185b84240359101220f854c9f94e4a2f7be7981b6f7e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:34.924Z"
+  },
+  "neville-bid-no-bid": {
+    "sha256": "f16ead2cec7341d58cd4e5cb8566a6f3762c5559f39b110197841cdc9a7201a4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:35.428Z"
+  },
+  "pamela-practice-ops": {
+    "sha256": "402e39baca6d0994646eb13a164db8e9aa8bc7a1cd196a1e1abd29e40d2d2d2b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:40.626Z"
+  },
+  "charmaine-transactions": {
+    "sha256": "896a120f99bbfa8f7ab584c8b64c0744b641ecd1c432f577d30a33980d6cc0e5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:07:45.854Z"
+  },
+  "harriet-abtests": {
+    "sha256": "4f0dfdae3a995e1e135055f5214cc231d1eb0f00b5bc810d7c39c37ae6c94d51",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:18.738Z"
+  },
+  "gustavo-dashboards": {
+    "sha256": "71f94c255da2c16b13bc71cd4afef4614dc6eede3f5f3e4a472949ea1f658224",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:18.747Z"
+  },
+  "frank-salesforecast": {
+    "sha256": "f7a9cfa8e7b9bbb0f8b1bca68dfa4569916e92de1465b2d394bffc9e56d220c5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:19.475Z"
+  },
+  "hyun-woo-retention": {
+    "sha256": "86b32cf90df9fb9e81d11d6563ad299597efcdc9ff9642e90f7f799c3851e04e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:19.854Z"
+  },
+  "joaquin-priceeffect": {
+    "sha256": "b38defdd84a8da10aa34b257ec633e39e352e28d0960cf5f9361e9af90a11fae",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:31.368Z"
+  },
+  "kalpana-demand": {
+    "sha256": "55c5b8ab6cf94d759fd02cc2aa70f73fe1ad5538309613aaffa7d710efddedbd",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:32.184Z"
+  },
+  "janelle-variance": {
+    "sha256": "86a9990a47a0806bb4fc437e00725787fc967f3f8901b34139a0e3346c50f371",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:32.264Z"
+  },
+  "felix-ga4": {
+    "sha256": "1ffe0c69dfe4fb403e1a2197da9aaaf688ef3c902fe7142e8d9e17d7b93a2faa",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:35.042Z"
+  },
+  "ilse-kpitree": {
+    "sha256": "7f8e924f5092abca86fe753026e2e993aeff2f528f0d11a8469913405d6cfb62",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:45.078Z"
+  },
+  "kendra-attribution": {
+    "sha256": "0f8a8d7fc3ccfd90b013841ba1f47e04fed8c4ff1effcdc7f8d8ef3cac0eeaf8",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:45.930Z"
+  },
+  "folake-dataquality": {
+    "sha256": "11670ebb8cf1f6c54c36766ea194a046062b1b417c4545c22a263ba2bd3335fe",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:47.202Z"
+  },
+  "fergus-datadictionary": {
+    "sha256": "6febfd946ff9128bb16ab9d3c56ba2adad318bbacb7aa6793e43fa1216b32835",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:47.636Z"
+  },
+  "glenys-pivots": {
+    "sha256": "746bf604ebc5b916cf5b2cf81b242e01defc8d05706e27613a7779f59b034f68",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:08:59.422Z"
+  },
+  "katya-charts": {
+    "sha256": "616a382b704da206ed2babccc3bc008dc08cc5bdf9408cde0cb9340bf3b0b989",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:00.313Z"
+  },
+  "haruto-powerquery": {
+    "sha256": "c5838f2966fc3292989c11bc1de14c11b9d452eb9792c8e7f2fe77718a314812",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:00.486Z"
+  },
+  "kurt-calculators": {
+    "sha256": "2c0ba6230b19aff88374d6e526f498c6bb1b5ccc07106798c62407b56ddf4d63",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:03.695Z"
+  },
+  "heidi-clubdata": {
+    "sha256": "d6d187f747192f3d80b1df36bc51e24e27ec711dfdb4e5493647b7697f9b2560",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:12.731Z"
+  },
+  "kwame-benchmarks": {
+    "sha256": "d26416c60bf86a96722d61e0fa6202fcf4c024f78ea4cc42dc23ced44205c68e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:14.680Z"
+  },
+  "ishaan-customgpt": {
+    "sha256": "8cb139227c7a231f204f6e98ff446269b5310b996563d03ad50822f15543e88a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:14.697Z"
+  },
+  "glenn-aiworkflow": {
+    "sha256": "37a535337ca4ee59c45ff8e4f586fb34fff6d5d459c011961f97e96adc2b719c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:18.537Z"
+  },
+  "jihan-knowledgebase": {
+    "sha256": "8f89864f73a3b96061c2c3235d6828c9472a822338f1e6010fec1007931f4d0b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:26.548Z"
+  },
+  "keith-airules": {
+    "sha256": "d028b927d5dda75f29da6429e98548fe55160aca885c775365275cc78dfea960",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:28.298Z"
+  },
+  "jamal-extraction": {
+    "sha256": "d5b04dd3c3974196b6dee98212b1afb59215a46b53151972c1537f7c470d0ffb",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:30.282Z"
+  },
+  "kalani-modelexplainer": {
+    "sha256": "305b99d0d61c6859a7e9bd1733cae61c01be7d9d958d7b7bf09a66ecdc0089be",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:31.751Z"
+  },
+  "hazel-testdata": {
+    "sha256": "beca57e395bcf80cf4959cb8a75c3bdaa0baac86c151a07bc45ad5ca39e37d45",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:40.366Z"
+  },
+  "loretta-cs-training": {
+    "sha256": "e22e9d2be8896e35d3999d2b3a1ecfa93f2559f7bf77696d5fc4394e9d29aa35",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:41.746Z"
+  },
+  "rupert-it-helpdesk": {
+    "sha256": "97bece03bc190bec50987aa20e6a6d7e21a9ce22a988fd504cfcc54b23e0acf3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:44.673Z"
+  },
+  "colin-workspace-planner": {
+    "sha256": "5aa3d21d7d388b27b4c9e822fc740f7c3f74cfd9f448d6107b71152fb441cc42",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:47.018Z"
+  },
+  "hilary-easy-read": {
+    "sha256": "17ef2c47c022530ab060d6b4073b3a39e7a6eeb26f9c391e338db6e6f4642b74",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:53.631Z"
+  },
+  "thiago-customer-academy": {
+    "sha256": "b753886a8906a901fd0eb173707c9baaa44c999e40d3f3e0364ed44d9cc0203a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:55.301Z"
+  },
+  "darnell-sales-training": {
+    "sha256": "3c852b38e54e9fa3682033d124938a720b8bec8590ec2cd51d4291a6b4e627da",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:09:57.245Z"
+  },
+  "gordon-toolbox-talks": {
+    "sha256": "d35d5958c836e43a5c4073d302a11f6888c6a322909d62d956f2206780e1996d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:00.578Z"
+  },
+  "sian-apprentices": {
+    "sha256": "5c0e0bb9d959317f717a63dfa95534b8f96e7ca08e458a9ba2cf849d8635f9b4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:06.321Z"
+  },
+  "ngozi-learning-support": {
+    "sha256": "355751c05f152269cec021759a2a0dca105a7dd1eaaf302df91f02f4349065ab",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:08.545Z"
+  },
+  "svetlana-scope-sequence": {
+    "sha256": "be7a829b1090486fc9246256a0bd23db8a4d54cfda27ec94652f8ed9914b4002",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:11.850Z"
+  },
+  "declan-coaching-sessions": {
+    "sha256": "c4b66e920832f9a8bb44f4825ab5474abc0ea2a02c68c21b4273b6c5b4ec539a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:14.192Z"
+  },
+  "maureen-software-rollout": {
+    "sha256": "0804979cd916c99f95336eddd311d24929720e862b61ab4760e139eded5f8943",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:19.341Z"
+  },
+  "jun-ai-skills": {
+    "sha256": "5d9807f6cc49285a66be7babb84a85e16c449b61f7845559af168c342273a071",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:24.292Z"
+  },
+  "anneliese-ld-plan": {
+    "sha256": "0054876b663fd33cfbc4480a26ad9398c36fa53247dc074d0e21fbc3b1d88ef8",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:24.330Z"
+  },
+  "constance-mentoring": {
+    "sha256": "3487132863dce5702f2cb126e62ec58cf959cc72ec1ac9b4abaa5688377fbca3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:27.544Z"
+  },
+  "lucinda-branching-scenarios": {
+    "sha256": "0153d41797932a2699ae97e3b3e27328c1bfecae7fc33d733f768b206b665b8f",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:34.728Z"
+  },
+  "ekow-member-education": {
+    "sha256": "f4471f9483c073b72c63813fd38adf22694fe6d21fca2cd74d323d487890f935",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:37.829Z"
+  },
+  "rochelle-retention": {
+    "sha256": "43874d7ce08152135446198878fca4a05945185ff7f3840996be00e9e7644b59",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:39.704Z"
+  },
+  "farzana-wellbeing": {
+    "sha256": "f462f2df279a774556b7a5745ab8202a3851301e73b81f29cdf9aaa5a062937e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:43.019Z"
+  },
+  "mattias-seasonal-hiring": {
+    "sha256": "6db3eed3fb21310ba3b847e4c865e8c7488d72687e9a5ee59610f05170919893",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:47.868Z"
+  },
+  "abimbola-internships": {
+    "sha256": "87f110115c3354cb0517c2b4c47a6ae49af04a35c1d4ac773f1c936afdf6c3bf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:49.824Z"
+  },
+  "benedikt-org-design": {
+    "sha256": "fde5293c552bb46e6ca5729ba660dd4d76ea7a0a1163d2680e3fa02f14bbf626",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:53.012Z"
+  },
+  "rebecca-internal-comms": {
+    "sha256": "50b5472982b98480915102f39aad16f75483bb7886ff3b485b228658b684e818",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:10:56.659Z"
+  },
+  "tamara-hiring-process": {
+    "sha256": "4b6b581667407a5f8a8de184282242c5e4f12bacb7d33396580a2ff194548bb0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:11:01.617Z"
+  },
+  "ignacio-hiring-scorecards": {
+    "sha256": "56a955172d976715c89f539f640c20bef983cbd1fd2e2940ff6c2715a584e131",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:11:03.775Z"
+  },
+  "brett-meta-store-ads": {
+    "sha256": "08a19c440ce843175d230f42d5ac0ec8e36dc6b011f331bdfca0b6d4dc382e87",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:35.792Z"
+  },
+  "agata-product-feeds": {
+    "sha256": "250f17cb8db971c741282b850d250f901b7a6d3709d2a3c01cf0f612508130fb",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:36.167Z"
+  },
+  "skye-tiktok-ads": {
+    "sha256": "f2c2e1e59f9d2cd315cc7dc21dc9070c42aa9808fad66e19a1795b06068d4cae",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:37.037Z"
+  },
+  "khoa-amazon-ppc": {
+    "sha256": "ffe6500624a0e984157d5e3aad453a821dd14eca6bce599cd64da26293aae83d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:37.040Z"
+  },
+  "dominic-warehouse-ops": {
+    "sha256": "662f00c60afea5ae52516bd6053fdcbdb21e4872a930c75d5cda9d4608d0cc69",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:48.852Z"
+  },
+  "imelda-merchandising": {
+    "sha256": "66af770b8d3f069ab55202733679fcc64928fc0b38966a31398be756e8ae1116",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:50.132Z"
+  },
+  "selim-delivery-apps": {
+    "sha256": "79657fca353cce78f4fbcaf5fafc9cf52a2147d53381fb4a9c333f7e466263a7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:51.263Z"
+  },
+  "tilly-digital-products": {
+    "sha256": "2b4cc832c2cb82d3ef3ddb9279838669577c2eee4a48685f4f2be1548aa3d626",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:22:52.230Z"
+  },
+  "efrain-meta-lead-ads": {
+    "sha256": "c0ff4385e87726aa4959b147ce093915e2f084343e6748287c70bc59309b4d8d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:03.995Z"
+  },
+  "sigrid-b2b-geo": {
+    "sha256": "f7167e66c324f22f0e82e3337f2a0ba74e4747d5ab15b369f7cdfc8f002fe414",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:05.610Z"
+  },
+  "lindiwe-local-aeo": {
+    "sha256": "f70c7a5dfaaf426b0f29bf0b8f56c274c8d0de85ced6502331b40d5434a0b2f6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:05.935Z"
+  },
+  "wyatt-local-google-ads": {
+    "sha256": "5448d8edf4e6086f3fa1ff05c73980202d0755d2e74c684c1add16c9e54fa92d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:07.459Z"
+  },
+  "courtney-local-seo": {
+    "sha256": "1833c6c555b84410546d58a443e74f135198a64a5f8d9b92e64b65d59fbe4c3a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:18.024Z"
+  },
+  "eloise-site-builders": {
+    "sha256": "9db3572e0b90092dd2979c46e358b022e6c11fc0fa55b1c2ce839917c411efd6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:18.963Z"
+  },
+  "tevita-video-edits": {
+    "sha256": "5b1ee97da379bf6a83c20c5d8d8f1fc9537f52680f230091f4868ef6c90a8ed6",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:19.121Z"
+  },
+  "chae-won-ui-design": {
+    "sha256": "d2ed8343dcc1a08e6e022406b0b8ae977ef02f89523c31cc8f3e86197aa4e3e0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:23.865Z"
+  },
+  "sebastian-brand-guidelines": {
+    "sha256": "82345b76042219aa44a46989b71add045e9445a0a6b473451621a7dee5d538c5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:32.530Z"
+  },
+  "ramona-business-forms": {
+    "sha256": "0ae17cd433d911382b88dc1caf169187093709d3b2024fec00fd5bf667e9c6ba",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:32.764Z"
+  },
+  "nasrin-tech-packs": {
+    "sha256": "a84f69665185ca0075403e2466ecb70bfa2d0573072c999bcfdeb52b801d3ddd",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:32.910Z"
+  },
+  "takeshi-product-development": {
+    "sha256": "c0c920d80c2506d6a6f4183a8d61f597c8c9967489b9c6c5b08279e94727f916",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:38.669Z"
+  },
+  "grady-home-services": {
+    "sha256": "41d32334e2d195f6eea923710b67c3a9d20e197c5f7a170af761846fed3fc032",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:44.836Z"
+  },
+  "rocio-tour-scripts": {
+    "sha256": "15f996faa7fcbb9f329ff8bd5d69861f1d4715aa067690892d166847a85bbd9b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:45.951Z"
+  },
+  "brody-van-livery": {
+    "sha256": "6c277afb0ba02d2786fb2c0e0d4e469b2cbe84bda7c1e20e696617ca08a0ea37",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:46.247Z"
+  },
+  "roberta-direct-mail": {
+    "sha256": "7d150864923d70b0cabb97955795d65156b42ccc2435a4e9bd8547a2eb4659a7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:52.328Z"
+  },
+  "esi-funding-prospects": {
+    "sha256": "c431df2106a8ef667b4a960fd6e634739cf15004fd1fe1ff1e82a526414e845d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:57.812Z"
+  },
+  "nikolai-store-migration": {
+    "sha256": "4d3d8300f868c8efba996f85d9dfc88115921dcefc332b03c9bbea286669ec71",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:23:59.668Z"
+  },
+  "fabienne-mystery-shopping": {
+    "sha256": "547d51d4f11e294de9de1974303a24c8b645c7be51993df1337dd41fceddcbc2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:03.334Z"
+  },
+  "anwar-pricing-research": {
+    "sha256": "a528344f924db935a75a41106d2d0a918bca0e77d44b6e56d16e6cc22d6eb7a2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:06.028Z"
+  },
+  "dolores-program-evaluation": {
+    "sha256": "e2d2a80dfbaac493fec99b561f57ee6ae3d0598c92dd998c9ca25908a901183c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:12.120Z"
+  },
+  "zeynep-focus-groups": {
+    "sha256": "405ab8e9c2abba9ab63f9a332bc200a3b413b09e7c0a4217c6c8edfd59c41809",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:12.580Z"
+  },
+  "cheryl-market-analysis": {
+    "sha256": "72f2c6bc1a4dea2989c87d5ae81d34fffce3919a52cb3e3c14972d1c340dfccf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:16.627Z"
+  },
+  "giulia-taste-tests": {
+    "sha256": "d28da68017780625f33aad9ec9a17c2ed080bab6e3d1894c96a6c127766910a1",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:20.316Z"
+  },
+  "lars-export-markets": {
+    "sha256": "1c4b36d8c330810a16987c86b6327e4fbc6987b50de3792bc7002c8e153f0fbf",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:24.950Z"
+  },
+  "marjorie-data-entry": {
+    "sha256": "ea975db96f7b9bda5fb66e517964851e95568192b04db44aac6993118db10c2d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:26.649Z"
+  },
+  "trang-data-migration": {
+    "sha256": "3a34c4c5e2977a829ee5a1224657485139e39e7e733dc6cc3d49d210a628a232",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:30.480Z"
+  },
+  "ilya-data-pipelines": {
+    "sha256": "0af935442f3347e7505bfee41fdc3889783caffbbd2d02350f0f47d4c9ae0199",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:33.588Z"
+  },
+  "joyce-capacity": {
+    "sha256": "24c7f2c504b0e9105b526bad7d9bd7e123678d7d3ee2108a8a867ab7574b3b55",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:37.490Z"
+  },
+  "muriel-donor-data": {
+    "sha256": "8983a218a6fc9c8d2ae9a7da412aaf0acb428f45f1ce3d82ccc0ed5de6cd791e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:40.481Z"
+  },
+  "hayden-no-code-apps": {
+    "sha256": "796e2d9c6462af36b80efdfaf9f2b2fa11bc9c2581c4eab3e927e0a172a6869a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:44.804Z"
+  },
+  "lionel-maintenance": {
+    "sha256": "f9709e962f828c218e8e3ce8930c605f281e73380eeac7ba7f69ec103446b977",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:50.342Z"
+  },
+  "clifford-business-systems": {
+    "sha256": "25c5021e8c1ecdc4bfcf0f3c1ea18037d78d8ea690dbf4b8272b611d8437751c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:55.545Z"
+  },
+  "babajide-power-platform": {
+    "sha256": "8ee0633572c837676a3233e21c7d5d7bce7d03bd4aa6b66dfe25adf3943fac67",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:24:58.998Z"
+  },
+  "deirdre-bottlenecks": {
+    "sha256": "9ea8a3d056bdf4f5f2b0ee5558bb9f5c8cb98c22de0a50b43281410d2e698652",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:00.051Z"
+  },
+  "radhika-services-profit": {
+    "sha256": "9ecfc544e1ac8156a47298e711eecca7300748a6840123eceefa3ed8876d3300",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:04.477Z"
+  },
+  "duane-construction-wip": {
+    "sha256": "a2448eed116218947f09d551cd6f8e4f2ae3f44391566a63ddff7f1a0ba84abd",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:10.653Z"
+  },
+  "moira-credit-terms": {
+    "sha256": "035be527b436855de45519dc326527c1053e9a5fecae952dee750fa956f9978a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:13.411Z"
+  },
+  "oskar-business-cases": {
+    "sha256": "82ddf4e20771b6b44aefdc48e3e0b3111bd5634e8c64f042dd5fc1eaf441176f",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:14.802Z"
+  },
+  "emeka-energy-costs": {
+    "sha256": "df6f44e06035ebe9de1104e838c2f43516d01e66572e5a560435a2c0a8687afc",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:18.518Z"
+  },
+  "nolan-wireframes": {
+    "sha256": "22d1f15c178372b4dd9ea472626f7516d7da96e95a6fab1e3bafe7ef9151cd23",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:26.617Z"
+  },
+  "judith-profit-allocation": {
+    "sha256": "3683df229d2777483ac6c4f7dded44ff492ff8e787564d0cbabd4dbd5ad0904b",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:26.809Z"
+  },
+  "mariam-impact-reports": {
+    "sha256": "527ba28d93abcfc5fa8c7a20535eb3a3d165bfa3ab3fe1f734a6b4bc577dcf48",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:27.559Z"
+  },
+  "renata-brand-identity": {
+    "sha256": "cb2ff91333e21d0f780626bddbf55b07b9473ab2e48bf579fad07a57d67512b5",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:30.795Z"
+  },
+  "lavanya-ai-images": {
+    "sha256": "066aa15e9748ae6c66408497f2450a991019f7a88413ec1f7ce7f9e142c12258",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:40.812Z"
+  },
+  "min-jun-design-tokens": {
+    "sha256": "a12bc69775b09be5b5a715d2aaa605700ad38aadc4e9182b1e8e1f3749a21f02",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:41.795Z"
+  },
+  "octavio-storyboards": {
+    "sha256": "640f0fd9d85b98d7b1bb3899e3388534a8c7292a37378f1dea585c0e32319cc0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:42.084Z"
+  },
+  "ryo-motion": {
+    "sha256": "32f0875aaf3d8d81249e7233043624f945798c0abd8c5c3bc0cf105a5e098a63",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:48.536Z"
+  },
+  "phoebe-captions": {
+    "sha256": "20530eb4acca99ed8350279cd626751a23af3338e0e6212d122293b8ed5f4131",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:53.675Z"
+  },
+  "malik-audio-ads": {
+    "sha256": "19bbc089f2c9148d8549dc414ae8194d5bfdccf93b7966d02a65b33512edc655",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:54.695Z"
+  },
+  "marsha-jingles": {
+    "sha256": "fbe16c1ce7cbb97cf26dd8104be6b362b4a57ec965038a49eca366bbd441b274",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:25:56.211Z"
+  },
+  "lloyd-print-layout": {
+    "sha256": "70bb4ab7b488c87839d128340e153297058748b7bcc463e0c73ef97d895591ba",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:02.568Z"
+  },
+  "martin-event-signage": {
+    "sha256": "8c0d280419354d7cc43683f729fcb78e4a68905f133b904346a3d8b70b78b9ca",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:07.215Z"
+  },
+  "noor-packaging-layout": {
+    "sha256": "72cd079cca5cbe82d29530ae078f7d33542d5071f7628d8e794b7d42da1a2b1c",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:07.674Z"
+  },
+  "rania-menu-design": {
+    "sha256": "3167a4fdff7bc73c95c1a701290887dd8f62103b6c1bc56573d04dd234511b72",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:09.322Z"
+  },
+  "penny-book-covers": {
+    "sha256": "d782823e57d316d35d8de8ba3df36c57c2eed2e2efdc2b4e8c393cd72cf914e2",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:16.257Z"
+  },
+  "lorenzo-merch": {
+    "sha256": "3245c8dec1878c2c59fd35805ec4e5af0e7c624d2b6e1ee2ccbe98f6a92d095d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:19.856Z"
+  },
+  "mirela-displays": {
+    "sha256": "b0332e44283d875b517840bd65d75e6e4ac79b889417fb74f437d0c7100eff23",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:22.191Z"
+  },
+  "nkechi-interiors": {
+    "sha256": "512ba51047e7b95b2b5e64e2ab4b39a3bd994ac1c4f7ef5531ecd80ee900ee5d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:24.414Z"
+  },
+  "rory-slide-design": {
+    "sha256": "a53279648a4c73f8dbead393e0b590be535a54ad5999fba746df645bca2615a3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:29.995Z"
+  },
+  "linh-infographics": {
+    "sha256": "e9ff921e72a44d25cf6e27a8cc5431d73b5abdb0188569c1fb6b206a755485af",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:32.457Z"
+  },
+  "riley-carousels": {
+    "sha256": "dd5d9b948145e0e64de5546fa90f101b20333ce708054e586f16834e58e6d725",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:35.384Z"
+  },
+  "miles-thumbnails": {
+    "sha256": "5c85f498cbb7a300787272d009f9314ebcc445ae9e37f59eb22b923601da2938",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:38.364Z"
+  },
+  "lauren-workbooks": {
+    "sha256": "20e308f83e554e4c2359fd56e333dff59823e702283798fc50fd7ef9e50fd56e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:43.550Z"
+  },
+  "nora-alt-text": {
+    "sha256": "938cd769b3efc7c4dd57d8a2fab02231ec7e1ad6d1ea8482b4d011a07afe5b46",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:45.294Z"
+  },
+  "ondrej-illustration-briefs": {
+    "sha256": "704c15863b407da6c1aa7c7bc719ba6e45e941b6f8eb3b13344c5f885ab6328f",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:54.984Z"
+  },
+  "sharon-lesson-plans": {
+    "sha256": "b0c5240ba3801c8f72a7895d0d40c8a72a4cff8ad36243584743de7c01774b23",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:56.085Z"
+  },
+  "lwazi-photo-style": {
+    "sha256": "f32d8ec7f3e4a320a76f747a5b6f8de90139a6d43426a7eb7445348841b48a01",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:56.142Z"
+  },
+  "tomasz-assessments": {
+    "sha256": "2094e813194aa2cd60ed663447391a7783d6bba6bbebf9394d7a6666617f09fd",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:26:58.813Z"
+  },
+  "wendell-staff-training": {
+    "sha256": "185c4e4822b7327ec60efa6e6dd28be7226d78c3b99d6b1f0a6fc672a73d0d03",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:06.257Z"
+  },
+  "sophie-study-notes": {
+    "sha256": "de91bc5d0382b40c354310a9e48de21e034394b579e8fb14266fe456f9282d91",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:09.003Z"
+  },
+  "wanjiru-onboarding": {
+    "sha256": "140a3ea2e9314d5b736cb0c87d218388f3aff5629ff1ca2652d378608e954722",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:09.928Z"
+  },
+  "uchenna-workshops": {
+    "sha256": "bcbebe2394d7a4e726fabfa82c346862f0e94cb99c35949aa6aab8e13de9abdc",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:10.810Z"
+  },
+  "rosemary-coaching-plans": {
+    "sha256": "780d1588afb64ad7bdb1574946dbe1739810f8c7254aae16c34cafdd4ec500ca",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:20.410Z"
+  },
+  "pranav-training-videos": {
+    "sha256": "face5f1d4dc852dffed5fa11ce036779335cd0c3ca4274eba13d32229d2ebd34",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:22.994Z"
+  },
+  "caleb-email-courses": {
+    "sha256": "df4935b479900f915c32c4b7c597ef8253698a99ffed85382ec8d35baab01f26",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:24.563Z"
+  },
+  "xin-flashcards": {
+    "sha256": "08f59af32bb9ee55c46aa1892c3742f946048eef22d2d3e37725493ed337c1d3",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:31.549Z"
+  },
+  "wade-exam-practice": {
+    "sha256": "d25eccca72f9a6aa21309e1ec9da8356e681e70c4d6a1373d3e9b279b58e43e7",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:34.022Z"
+  },
+  "steven-resumes": {
+    "sha256": "0ff91c967509f2c621fd662b3e9e9636bf2dbb5d589f3eba89a724df02c12584",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:38.667Z"
+  },
+  "zainab-interview-prep": {
+    "sha256": "1514475457c23fb9a6adeffc8e846d5be18a0fd8a8b58c573368d2216b2d6db0",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:43.451Z"
+  },
+  "seo-yeon-elearning": {
+    "sha256": "08a96cfebd1467c9d63e26c5aea0e0727e4528ac5c44cb05636b21e492ca7490",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:43.460Z"
+  },
+  "usha-hr-specialist": {
+    "sha256": "21637f1e1fa02056bd09e22dad99aea970bf3842b48508022f4a5a6746bdcd78",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:46.933Z"
+  },
+  "tessa-profiles": {
+    "sha256": "aa47779de58e4d9d2a679c47fe25598dc4422b94f3d8691f22cfbece02e3e69d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:52.507Z"
+  },
+  "ursula-book-blurbs": {
+    "sha256": "6a921077736d0f837ec88b9df48bbaf72f66bf4be818b3f4fd27f3ca0e2d2c9e",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:57.000Z"
+  },
+  "wiremu-speeches": {
+    "sha256": "46d6a79cc3d0df902c8a022621e105a37b1bc1abe1af1efaa840627f2bccaf98",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:57.806Z"
+  },
+  "thuy-recipes": {
+    "sha256": "580030b2bb4514288a9045a19e23f2296d786e5975fdec99860e357258cedaad",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:27:57.809Z"
+  },
+  "viktor-paper-summaries": {
+    "sha256": "2d13e44cef18429af440770e08058f7e693229f55448fff5be1fbe5cfcc2e697",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:28:06.492Z"
+  },
+  "trudy-complaint-letters": {
+    "sha256": "fc5c4889520d2350b11c92a6cf1fe5c3bdc4661ed490e2f601de1fa6a7eb350a",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:28:09.086Z"
+  },
+  "yaw-freelance-bids": {
+    "sha256": "e2ccfadca797ba56eac8527f76a291ab8e881dc3fc5782c5297cb1383a722f58",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:28:11.792Z"
+  },
+  "todd-renovation-quotes": {
+    "sha256": "9bdb7f6d1829853b0bb6a15013ab1cdd0e2dc386ea5a5f549c95dc28ae345db8",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:28:11.879Z"
+  },
+  "spencer-club-members": {
+    "sha256": "36672c0d675aab8e268b85da376fc857ece1b44d307a10a9f5f4a08addf68fe4",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:28:18.729Z"
+  },
+  "yadira-language-practice": {
+    "sha256": "056150c9bbebefa5af2ad956ef76c98ffabd710ea69153a3d77850e8f92a5d5d",
+    "model": "gpt-image-2.5-flare",
+    "created": "2026-11-06T15:31:52.755Z"
   }
 }

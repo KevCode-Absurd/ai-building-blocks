@@ -19,20 +19,25 @@ export function useLocation(): { path: string; query: URLSearchParams } {
   return { path: location.pathname.replace(/\/+$/, "") || "/", query: new URLSearchParams(location.search) };
 }
 
+/** ":name" matches one path segment. A last "*name" matches the rest of the path, slashes included
+ *  ("/agents/:id/files/*path"). A value that is not valid percent-encoding matches nothing. */
 export function matchPath(pattern: string, path: string): Record<string, string> | null {
   const keys: string[] = [];
-  const re = new RegExp("^" + pattern.replace(/\/+$/, "").replace(/:([a-zA-Z_]+)/g, (_m, k) => { keys.push(k); return "([^/]+)"; }) + "/?$");
+  const re = new RegExp("^" + pattern.replace(/\/+$/, "")
+    .replace(/:([a-zA-Z_]+)/g, (_m, k) => { keys.push(k); return "([^/]+)"; })
+    .replace(/\*([a-zA-Z_]+)$/, (_m, k) => { keys.push(k); return "(.+)"; }) + "/?$");
   const m = re.exec(path === "/" ? "/" : path);
   if (!m) return null;
-  return Object.fromEntries(keys.map((k, i) => [k, decodeURIComponent(m[i + 1])]));
+  try { return Object.fromEntries(keys.map((k, i) => [k, decodeURIComponent(m[i + 1])])); } catch { return null; }
 }
 
-export function Link(props: { href: string; children: ComponentChildren; class?: string; "aria-current"?: JSX.AriaAttributes["aria-current"] }) {
+export function Link(props: { href: string; children: ComponentChildren; class?: string; "aria-current"?: JSX.AriaAttributes["aria-current"]; "aria-label"?: string; onClick?: (e: MouseEvent) => void }) {
   const external = /^https?:/.test(props.href);
   return (
-    <a href={props.href} class={props.class} aria-current={props["aria-current"]}
+    <a href={props.href} class={props.class} aria-current={props["aria-current"]} aria-label={props["aria-label"]}
       onClick={(e: MouseEvent) => {
-        if (external || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        props.onClick?.(e);
+        if (e.defaultPrevented || external || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
         e.preventDefault();
         navigate(props.href);
       }}>

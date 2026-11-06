@@ -12,7 +12,7 @@ import type { Env } from "../../env.ts";
 import type { Ctx } from "../../core/http.ts";
 import { fail, json } from "../../core/http.ts";
 import { registerTokenVerifier, type AuthUser } from "../../core/auth.ts";
-import { account } from "../../core/access.ts";
+import { account, hostedJobs } from "../../core/access.ts";
 import { all, first, nowIso, parseJson, sha256Hex } from "../../core/db.ts";
 import { eventStatement, recordEvent } from "../../core/events.ts";
 import { SCOPES, SCOPE_WORDS, requireBrowserSession, type Scope } from "./service.ts";
@@ -61,7 +61,7 @@ export const CORS_HEADERS: Record<string, string> = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "GET, POST, OPTIONS",
   "access-control-allow-headers": "authorization, content-type, mcp-protocol-version, mcp-session-id, last-event-id",
-  "access-control-expose-headers": "www-authenticate, mcp-session-id",
+  "access-control-expose-headers": "www-authenticate, mcp-session-id, retry-after",
   "access-control-max-age": "600",
 };
 const NO_STORE = { "cache-control": "no-store", pragma: "no-cache", "x-content-type-options": "nosniff", "referrer-policy": "no-referrer" };
@@ -117,13 +117,58 @@ function clientIdFrom(req: Request, params: Record<string, string>): string {
 
 const LOOPBACK = new Set(["localhost", "127.0.0.1", "[::1]"]);
 
-/** https, or http on localhost / 127.0.0.1 / [::1] for apps running on the buyer's computer. Exact URIs only. */
+/**
+ * Desktop AI apps that sign in through their own link type but not in the reverse-domain form RFC 8252 7.1 asks
+ * for. Add an app here only once its callback is known, such as cursor://anysphere.cursor-mcp/oauth/callback.
+ */
+export const KNOWN_APP_SCHEMES = new Set(["cursor", "vscode", "vscode-insiders", "windsurf", "zed"]);
+
+/** Never a redirect target, whatever an app registers: script, inline content, local files and browser internals. */
+const BLOCKED_SCHEMES = new Set([
+  "javascript", "data", "file", "vbscript", "blob", "about", "filesystem", "view-source", "jar", "ftp", "ws", "wss",
+  "mailto", "tel", "sms", "intent", "chrome", "chrome-extension", "moz-extension", "safari-extension", "ms-browser-extension", "edge",
+]);
+
+/** A private-use scheme based on a domain name, written in reverse (RFC 8252 7.1), such as com.example.app. */
+const REVERSE_DOMAIN = /^[a-z][a-z0-9-]*(?:\.[a-z0-9][a-z0-9-]*)+$/;
+
+export type RedirectKind = "web" | "local" | "app";
+
+/** What kind of place a redirect URI sends the person back to. Call only on a URI that passed redirectProblem. */
+export function redirectKind(url: URL): RedirectKind {
+  if (url.protocol === "https:" || url.protocol === "http:") return LOOPBACK.has(url.hostname) ? "local" : "web";
+  return "app";
+}
+
+/** What the consent and Connect pages show: claude.ai, localhost:33418, or cursor:// for an app's own link type. */
+export function redirectTarget(raw: string): { kind: RedirectKind; label: string } {
+  let url: URL;
+  try { url = new URL(raw); } catch { return { kind: "web", label: "" }; }
+  const kind = redirectKind(url);
+  if (kind !== "app") return { kind, label: url.host };
+  return { kind, label: raw.slice(url.protocol.length, url.protocol.length + 2) === "//" ? `${url.protocol}//` : url.protocol };
+}
+
+/**
+ * Allowed: https; http on localhost / 127.0.0.1 / [::1] for apps on the buyer's computer; and, for desktop apps,
+ * a private-use scheme (RFC 8252 7.1): reverse-domain (com.example.app:/callback) or a known app (cursor://...).
+ * Exact URIs only: no wildcards, no # part, no password, no code/state/iss/error already in the query.
+ */
 export function redirectProblem(raw: unknown): string | null {
   if (typeof raw !== "string" || !raw || raw.length > 2000) return "Each redirect URI must be text, up to 2,000 characters.";
+  if (/[\x00-\x20\x7f\\]/.test(raw)) return "A redirect URI cannot contain spaces, control characters or backslashes.";
   let url: URL;
   try { url = new URL(raw); } catch { return "Each redirect URI must be a full address."; }
-  const local = url.protocol === "http:" && LOOPBACK.has(url.hostname);
-  if (url.protocol !== "https:" && !local) return "Use an https redirect URI, or http on localhost or 127.0.0.1 for an app on your computer.";
+  const scheme = url.protocol.slice(0, -1);
+  if (scheme === "http" && !LOOPBACK.has(url.hostname)) return "Use https for a website. Plain http works only on localhost, 127.0.0.1 or [::1], for an app on your computer.";
+  if (scheme !== "https" && scheme !== "http") {
+    if (BLOCKED_SCHEMES.has(scheme)) return `A ${scheme}: address cannot be a redirect URI. Use https, a localhost address, or your app's own link type.`;
+    if (!REVERSE_DOMAIN.test(scheme) && !KNOWN_APP_SCHEMES.has(scheme)) {
+      return "An app's own link type must be based on a domain name you own, written in reverse, such as com.example.app:/callback (RFC 8252). Or use https, or http on localhost.";
+    }
+    // scheme:/path or scheme://host/path, not an opaque scheme:text.
+    if (!url.host && !url.pathname.startsWith("/")) return "Write an app redirect URI with a path, such as com.example.app:/callback.";
+  }
   if (url.username || url.password || raw.includes("#") || raw.includes("*")) return "A redirect URI cannot hold a password, a # part or a wildcard.";
   if (["code", "state", "iss", "error"].some(k => url.searchParams.has(k))) return "A redirect URI cannot already contain code, state, iss or error.";
   return null;
@@ -165,7 +210,7 @@ export function protectedResourceMetadata(env: Env) {
     authorization_servers: [env.APP_ORIGIN],
     scopes_supported: [...SCOPES],
     bearer_methods_supported: ["header"],
-    resource_name: "AI Blocks Agents",
+    resource_name: "AI Blocks",
     resource_documentation: `${env.APP_ORIGIN}/connect`,
   };
 }
@@ -208,7 +253,7 @@ export function register(ctx: Ctx): Promise<Response> {
       db.prepare("INSERT INTO mcp_clients (client_id, client_name, redirect_uris, created_at) SELECT ?, ?, ?, ? WHERE (SELECT COUNT(*) FROM mcp_clients) < ?")
         .bind(client.client_id, client.client_name, JSON.stringify(client.redirect_uris), now, MAX_CLIENTS),
       db.prepare("INSERT INTO events (at, actor, actor_kind, entity, entity_id, type, data) SELECT ?, 'system', 'system', 'mcp_client', ?, 'mcp.client_registered', ? WHERE changes() = 1")
-        .bind(now, client.client_id, JSON.stringify({ client_name: client.client_name, redirect_hosts: client.redirect_uris.map(u => new URL(u).host) })),
+        .bind(now, client.client_id, JSON.stringify({ client_name: client.client_name, redirect_hosts: client.redirect_uris.map(u => redirectTarget(u).label) })),
     ]);
     if (!res[0]?.meta?.changes) oauthFail(503, "temporarily_unavailable", "We cannot register more apps right now. Try again later.");
     return machineJson(201, {
@@ -282,13 +327,20 @@ export async function getAuthRequest(ctx: Ctx): Promise<Response> {
     "SELECT r.*, c.client_name FROM mcp_auth_requests r JOIN mcp_clients c ON c.client_id = r.client_id WHERE r.id = ? AND r.expires_at > ?", ctx.params.id, nowIso());
   if (!row) return fail(404, "request_expired", REQUEST_GONE);
   const scopes = scopeList(row.scope);
+  const target = redirectTarget(row.redirect_uri);
   return json({
     request_id: row.id,
     client_name: row.client_name,
-    redirect_host: new URL(row.redirect_uri).host,
+    // Where the person is sent after they choose. Apps on the computer can claim local and app links, so the page shows the full address.
+    redirect_host: target.label,
+    redirect_kind: target.kind,
+    redirect_uri: row.redirect_uri,
     scopes: scopes.map(s => ({ id: s, ...SCOPE_WORDS[s] })),
-    asks_to_order: scopes.includes("marketplace:order"),
-    beta_access: a.betaAccess,
+    // Starting jobs here is offered only while jobs run on AI Blocks (HOSTED_JOBS "on").
+    asks_to_order: scopes.includes("marketplace:order") && hostedJobs(ctx.env),
+    // False only while INVITE_ONLY is "true" and this person has no invite code yet, or while jobs do not run here.
+    can_hire: a.betaAccess && a.hostedJobs,
+    hosted_jobs: hostedJobs(ctx.env),
     expires_at: row.expires_at,
   });
 }
@@ -311,7 +363,8 @@ export async function approve(ctx: Ctx): Promise<Response> {
     await recordEvent(db, { actor: a.user.id, actorKind: "user", entity: "mcp_client", entityId: req.client_id, type: "mcp.connection_denied", data: { client_name: clientName } });
     return json({ redirect_url: backToClient(env, req.redirect_uri, { error: "access_denied", error_description: "The person said no.", state: req.state }) });
   }
-  const scope = body.allow_order === false ? "marketplace:read" : req.scope;
+  // While jobs do not run here, a connection never gets the scope to start them.
+  const scope = body.allow_order === false || !hostedJobs(env) ? "marketplace:read" : req.scope;
   const code = randomHex(32);
   await db.batch([
     db.prepare("INSERT INTO mcp_codes (code_hash, client_id, user_id, redirect_uri, scope, code_challenge, resource, created_at, expires_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
@@ -464,7 +517,7 @@ export async function listConnections(ctx: Ctx): Promise<Response> {
     connections: rows.map(r => ({
       id: r.id,
       client_name: r.client_name,
-      redirect_host: (() => { try { return new URL(parseJson<string[]>(r.redirect_uris, [])[0] ?? "").host; } catch { return ""; } })(),
+      redirect_host: redirectTarget(parseJson<string[]>(r.redirect_uris, [])[0] ?? "").label,
       scopes: scopeList(r.scope).map(s => ({ id: s, ...SCOPE_WORDS[s] })),
       created_at: r.created_at,
       last_used_at: r.last_used_at,

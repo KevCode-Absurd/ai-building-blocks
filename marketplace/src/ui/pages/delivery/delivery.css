@@ -98,4 +98,15 @@
 .dlv-facts dd { margin: 0; overflow-wrap: anywhere; }
 .dlv-request { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; color: var(--text-2); margin: 8px 0 0; }
 
+/* Sharing edits: the box on the accept and revise forms, the line on each decision, the card on /jobs */
+.dlv-share { margin: 0 0 16px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel-2); }
+.dlv-share .dlv-tick { padding: 0; }
+.dlv-share-help { margin: 6px 0 0 30px; font-size: 14px; color: var(--muted); }
+.dlv-shared-line { font-size: 14px; color: var(--muted); }
+.dlv-shared-line .dlv-link { padding: 0; font-size: 14px; }
+.dlv-sharing p { color: var(--text-2); font-size: 15px; }
+.dlv-sharing .dlv-sharing-note { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+.dlv-after-list { margin-top: 24px; max-width: 720px; }
+@media (max-width: 560px) { .dlv-share-help { margin-left: 0; } }
+
 @media (prefers-reduced-motion: reduce) { .dlv-card { transition: none; } }

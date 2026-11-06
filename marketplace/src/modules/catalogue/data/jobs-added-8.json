@@ -1,0 +1,2890 @@
+[
+  {
+    "id": "lesson-plan-and-class-materials",
+    "title": "Lesson plan, worksheets or practice set",
+    "summary": "A lesson plan, a short run of lessons, worksheets, a language practice set or role-play cards, built from your topic, class and lesson time.",
+    "area": "learning",
+    "deliverable": "The piece you choose, ready to teach: a one-line aim, timed steps saying what the teacher does and what learners do, a check for understanding and support and stretch tasks; or worksheets, practice sets or role-play cards with full answer keys. A materials list and facts to check come at the end.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "One lesson plan",
+          "A run of lessons for one unit",
+          "Worksheet with answer key",
+          "Homework or practice set",
+          "Language practice set (words, dialogue, drills)",
+          "Role-play or scenario cards",
+          "Cover lesson a substitute can run",
+          "Tutoring session plan for one learner"
+        ]
+      },
+      {
+        "id": "lesson_count",
+        "label": "How many lessons or sheets?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A run of four lessons counts as four.",
+        "max": 6
+      },
+      {
+        "id": "subject_topic",
+        "label": "Subject and topic",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "learners",
+        "label": "Who are the learners?",
+        "type": "longtext",
+        "required": true,
+        "help": "Age or year group, class size, what they know now and any needs to plan for.",
+        "max": 1500
+      },
+      {
+        "id": "aim",
+        "label": "What should learners be able to do by the end?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "minutes",
+        "label": "How long is each lesson, in minutes?",
+        "type": "number",
+        "required": true,
+        "max": 240
+      },
+      {
+        "id": "curriculum",
+        "label": "Curriculum, syllabus or exam board points to cover",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the wording you must match.",
+        "max": 4000
+      },
+      {
+        "id": "source_material",
+        "label": "Your notes, textbook pages or past plans",
+        "type": "longtext",
+        "required": false,
+        "max": 12000
+      },
+      {
+        "id": "resources",
+        "label": "Rooms, kit and tech you have",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "level",
+        "label": "Language level",
+        "type": "text",
+        "required": false,
+        "help": "For language sets, for example CEFR A2 or beginner Spanish.",
+        "max": 100
+      },
+      {
+        "id": "template",
+        "label": "Your school's lesson plan template",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "The draft is the piece the buyer chose, for the learners and aim in the brief.",
+        "weight": 4,
+        "pass_rule": "The aim is stated in one sentence that matches the brief; a lesson plan has a starter, main tasks, a check for understanding and a close; a run of lessons has one plan per lesson asked for; worksheets, practice sets and cards have the number of items the brief asks for, or at least 10 when it gives none.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_content",
+        "text": "Curriculum points, quotes, figures and sources come from the brief, and subject facts are correct for the level.",
+        "weight": 5,
+        "pass_rule": "Every curriculum code, exam board point, quotation, date and statistic appears in the brief or is a well-known fact for the subject; no textbook, website or resource is cited that the brief did not give; facts the teacher should confirm are marked [check].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "timed_and_complete",
+        "text": "Timings add up and every task has what the teacher needs to run it.",
+        "weight": 4,
+        "pass_rule": "Step timings for each lesson add up to the minutes in the brief, within 5 minutes; every task says what learners do, what the teacher does and what it needs; every worksheet, practice set or card set has a full answer key or model answers; there are no 'add activity here' gaps.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_for_learners",
+        "text": "Instructions are plain enough for the learners named.",
+        "weight": 3,
+        "pass_rule": "Learner-facing instructions start with a verb and are mostly under 15 words; the reading level suits the age or language level in the brief; new terms are explained the first time they appear.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "checks_and_levels",
+        "text": "Learning is checked, and the lesson works for different levels.",
+        "weight": 4,
+        "pass_rule": "Each lesson has at least one check for understanding tied to the aim, with what a good answer looks like; there is support for learners who struggle and a stretch task for those who finish early; drills and worksheet questions go from easier to harder.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "lesson_count",
+        "unit": "lesson or sheet",
+        "included": 1,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced teacher and curriculum planner. Write the lesson plan (or worksheet, practice set or role-play cards) described below for the learners I describe. State the aim in one sentence. Give a starter, main tasks and a close with timings that add up to my lesson length, and say what the teacher does and what learners do at each step. Add at least one check for understanding, support for learners who struggle and a stretch task. For worksheets and practice sets, include a full answer key. Use my curriculum wording and material where I give it, and do not invent curriculum codes, quotes or sources. List the materials needed and mark anything I should check.",
+    "not_for": [
+      "Diagnosing learning needs, or special education or medical advice",
+      "Homework, coursework or exam answers for a student to hand in as their own",
+      "Pupils' names, grades or personal details beyond what you choose to paste",
+      "Copying long passages from textbooks or published schemes",
+      "Promises of grades or exam results",
+      "Full e-learning or training module builds (see the training module job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_history",
+        "text": "One 50-minute lesson for a Year 8 class of 28 on the causes of the Great Fire of London. Most read at age level; three have EAL support and one needs large print. By the end they should explain three causes and rank them. We have a projector and mini whiteboards.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_spanish",
+        "text": "Language practice set for adult beginners in Spanish, CEFR A1, evening class of 12. Topic: ordering food and drink in a cafe. 90 minutes. I need 20 words with examples, a short dialogue, two drills and a role-play, all with answers.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_fractions",
+        "text": "A run of four 45-minute maths lessons on equivalent fractions for a Grade 4 class of 24 in Ohio. Standards 4.NF.A.1 and 4.NF.A.2, wording pasted. Learners can find halves and quarters but mix up bigger and smaller denominators. We have fraction strips.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_cover",
+        "text": "Cover lesson for my Year 10 English class (AQA GCSE) while I am off on Thursday. 60 minutes on Act 1 Scene 5 of Romeo and Juliet. The cover teacher is not an English specialist. Students have the text. I need a worksheet with answers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_tutoring",
+        "text": "Tutoring session plan for one 14-year-old learner, 60 minutes online, on solving two-step linear equations. She gets the steps but loses track of negative signs. I want a warm-up, guided practice, 12 independent questions and an exit ticket, with answers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_water_cycle",
+        "text": "Worksheet with answer key for a Grade 6 science class on the water cycle, at three levels of difficulty with 12 questions each. Use the textbook notes I pasted. Two learners read well below grade level.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "lesson plan",
+      "lesson planning",
+      "scheme of work",
+      "unit plan",
+      "worksheet",
+      "answer key",
+      "homework sheet",
+      "cover lesson",
+      "substitute lesson plan",
+      "sub plan",
+      "tutoring plan",
+      "language practice",
+      "esl worksheet",
+      "role-play cards",
+      "differentiation",
+      "exit ticket"
+    ],
+    "demand_sources": [
+      {
+        "note": "AITSL's teacher workforce data: 40% of full-time classroom teachers in Australia report spending 10 or more hours a week on lesson planning.",
+        "url": "https://www.aitsl.edu.au/resources/in-brief-teacher-duties"
+      }
+    ]
+  },
+  {
+    "id": "quiz-test-and-marking-guide",
+    "title": "Quiz, test or practice exam with answer key",
+    "summary": "A quiz, test, practice exam, question bank or marking rubric built from your material, with an answer key, explanations and a marking guide.",
+    "area": "learning",
+    "deliverable": "Questions from your material in the formats you pick, each tagged to a topic or goal; a learner copy; an answer key with a reason for each answer and why each wrong option is wrong; model answers and mark points for written questions or a level-by-level rubric; a table of topics and marks; and a CSV or GIFT import file if you ask.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Classroom or training quiz",
+          "End-of-unit or end-of-course test",
+          "Practice exam for a certification",
+          "Question bank sorted by topic",
+          "Knowledge check for an SOP or e-learning module",
+          "Marking rubric for an essay, project or task",
+          "Level or placement test"
+        ]
+      },
+      {
+        "id": "question_count",
+        "label": "How many questions?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 20. For a marking rubric only, enter 1.",
+        "max": 40
+      },
+      {
+        "id": "material",
+        "label": "The material to test",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the notes, SOP, chapter, syllabus or exam outline. Questions come only from this.",
+        "max": 30000
+      },
+      {
+        "id": "learners",
+        "label": "Who takes it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "formats",
+        "label": "Question formats",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Multiple choice",
+          "True or false",
+          "Short answer",
+          "Fill the gap",
+          "Matching",
+          "Scenario questions",
+          "Long answer or essay",
+          "Calculation"
+        ]
+      },
+      {
+        "id": "goals",
+        "label": "Learning goals or exam topics, with weights",
+        "type": "longtext",
+        "required": false,
+        "help": "For example the exam outline's domains and their percentages.",
+        "max": 3000
+      },
+      {
+        "id": "difficulty",
+        "label": "Difficulty",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Mostly easy",
+          "Mixed",
+          "Mostly hard"
+        ]
+      },
+      {
+        "id": "pass_mark",
+        "label": "Pass mark or grade bands",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "export",
+        "label": "Do you need an import file?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "No, just the document",
+          "CSV for a spreadsheet or quiz tool",
+          "GIFT text for Moodle and similar tools"
+        ]
+      },
+      {
+        "id": "avoid",
+        "label": "Topics or question styles to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "matches_request",
+        "text": "Count, formats, topics and difficulty match the brief.",
+        "weight": 4,
+        "pass_rule": "The number of questions equals the brief's count; only the formats asked for are used; a table shows each topic or goal with its question count and marks, and where the brief gives topic weights the counts match them within one question.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "from_material_only",
+        "text": "Every question and answer can be traced to the buyer's material.",
+        "weight": 5,
+        "pass_rule": "Each question in the key names the section, heading or step of the pasted material it tests; no question tests a fact, rule or figure that is absent from the material; no question is copied from, or said to be from, a real exam paper.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "answers_correct",
+        "text": "Every question has one correct, defensible answer, and the key is complete.",
+        "weight": 5,
+        "pass_rule": "Each question has an answer in the key with a one-line reason; multiple choice has exactly one correct option unless the item says 'choose two'; each wrong option has a short note on why it is wrong; written questions have a model answer and mark points that add up to the marks shown.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fair_questions",
+        "text": "Questions are clear and fair, with no tricks.",
+        "weight": 4,
+        "pass_rule": "Question stems are mostly under 30 words and ask one thing; there are no double negatives; options are similar in length and style; 'all of the above' and 'none of the above' are not used; no question gives away the answer to another.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "It is ready to hand out or import.",
+        "weight": 3,
+        "pass_rule": "A learner copy without answers comes before the key; marks and a pass mark or grade bands appear when the brief gives them; any import file asked for is complete in a code block, one entry per question, with no missing fields; a rubric has levels with a description and a short example for each.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "question_count",
+        "unit": "question",
+        "included": 20,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an assessment writer. Write the quiz or test below from my material only. Use the number and formats of questions I ask for and spread them across my topics, matching any weights I give. Give a learner copy first, then an answer key with the correct answer, a one-line reason and why each wrong option is wrong. For written questions, give a model answer and mark points. Add a table of topics and marks. Make every question clear and fair: one thing per question, no double negatives, no 'all of the above'. Do not use questions from real exams. If I ask for a CSV or GIFT file, give it complete in a code block.",
+    "not_for": [
+      "Real or leaked exam questions, or recreating a live exam paper",
+      "Taking a test or exam for someone, or answers to graded work",
+      "Questions on topics that are not in the material you paste",
+      "Grading named students' work or making pass or fail decisions about people",
+      "Accredited or regulated certification exams that need official sign-off",
+      "Medical, legal or safety-critical competence tests used as the only check"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_sop_quiz",
+        "text": "20-question quiz for new staff at Little Owl Bakery on our oven safety and cleaning SOP (pasted). Mostly multiple choice, a few true or false. Pass mark 16. I also need a CSV I can load into our quiz tool.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_rubric",
+        "text": "Marking rubric for a Year 11 persuasive speech task: 4 levels across content, structure, delivery and language, out of 20 marks. The task sheet is pasted. Include a short example of what each level sounds like.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_practice_exam",
+        "text": "Practice exam with 40 questions for our team studying for an internal product certification. Our study guide (pasted) has 5 domains: setup 20%, billing 25%, reports 20%, users 15%, troubleshooting 20%. Mixed difficulty, with an explanation for every option.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_course_test",
+        "text": "End-of-course test for our 2-day first-line manager course. 25 questions: 15 multiple choice, 5 scenario and 5 short answer. Course notes pasted. The managers are not used to tests, so keep the wording friendly.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_placement",
+        "text": "Placement test for adult English learners joining our evening school: 30 questions from A1 to B2 so we can sort them into three classes. Our level descriptors are pasted. GIFT format for Moodle, please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_bank",
+        "text": "Question bank of 30 questions on chapter 4 (pasted) of our warehouse induction handbook, covering goods-in checks and stock labels, sorted by topic for our LMS. Supervisors will also watch each person do the task.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "quiz",
+      "quiz questions",
+      "test questions",
+      "answer key",
+      "mark scheme",
+      "marking rubric",
+      "grading rubric",
+      "practice exam",
+      "mock exam",
+      "question bank",
+      "knowledge check",
+      "multiple choice questions",
+      "mcq",
+      "assessment",
+      "placement test",
+      "gift format",
+      "moodle quiz",
+      "exam prep"
+    ],
+    "demand_sources": [
+      {
+        "note": "AITSL's teacher workforce data: 24% of secondary teachers in Australia spend 10 or more hours a week marking and assessing.",
+        "url": "https://www.aitsl.edu.au/resources/in-brief-teacher-duties"
+      },
+      {
+        "note": "Pearson VUE says it delivers more than 19 million certification and licensure exams every year.",
+        "url": "https://www.pearsonvue.com/us/en/about/news/highlights/pearson-vues-innovative-solutions-revolutionize-t.html"
+      }
+    ]
+  },
+  {
+    "id": "study-notes-and-flashcards",
+    "title": "Study guide, revision notes or flashcards",
+    "summary": "Revision notes, a study guide, a one-page summary, a revision timetable or a flashcard deck for Anki or Quizlet, made only from the material you paste.",
+    "area": "learning",
+    "deliverable": "The study aid you choose: revision notes with key terms and worked examples; a study guide with self-test questions; a one-page summary or formula sheet; a day-by-day timetable to your exam; a glossary; or a flashcard deck as an import-ready CSV or Quizlet text with tags, plus short import steps.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Revision notes",
+          "Study guide with self-test questions",
+          "One-page summary or formula sheet",
+          "Revision timetable to an exam date",
+          "Glossary of key terms",
+          "Flashcard deck for Anki (CSV)",
+          "Cloze (fill the gap) cards for Anki",
+          "Flashcards to paste into Quizlet",
+          "Check and fix my existing deck"
+        ]
+      },
+      {
+        "id": "thousand_words",
+        "label": "How long is your material, in thousands of words?",
+        "type": "number",
+        "required": true,
+        "help": "For example 8 for about 8,000 words. Base price covers up to 5.",
+        "max": 20
+      },
+      {
+        "id": "material",
+        "label": "Paste your material",
+        "type": "longtext",
+        "required": true,
+        "help": "Lecture notes, a chapter you own, a syllabus, your own notes or your current deck.",
+        "max": 120000
+      },
+      {
+        "id": "learner",
+        "label": "Who is studying, and for what?",
+        "type": "text",
+        "required": true,
+        "help": "For example: Year 12 biology, mock exam on 12 May.",
+        "max": 300
+      },
+      {
+        "id": "exam_date",
+        "label": "Exam date and study time per day",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "card_count",
+        "label": "How many flashcards?",
+        "type": "number",
+        "required": false,
+        "help": "Up to 150. Leave blank and we write about one card per key fact.",
+        "max": 150
+      },
+      {
+        "id": "card_style",
+        "label": "Card styles",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Question and answer",
+          "Term and definition",
+          "Cloze (fill the gap)",
+          "Reverse cards (both ways)",
+          "Example sentence cards for languages"
+        ]
+      },
+      {
+        "id": "tags",
+        "label": "Tags or deck names to use",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "focus",
+        "label": "Topics to focus on, or what you keep getting wrong",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "language",
+        "label": "Language of the notes",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_aid",
+        "text": "The draft is the study aid the buyer chose, sized to the brief.",
+        "weight": 4,
+        "pass_rule": "Notes and guides use the material's topics as headings in its order; a summary sheet fits on one page (about 500 words or one table); a timetable covers every day from the start date to the exam date given; a deck has the card count asked for within 5%, or about one card per key fact when none is given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "material_only",
+        "text": "Every note, card and answer comes from the buyer's material, and none contradicts it.",
+        "weight": 5,
+        "pass_rule": "Each fact, definition, formula, date and example appears in or follows directly from the pasted material; anything added from outside is marked [not in your notes]; no card or note contradicts the material.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "import_ready",
+        "text": "Files import cleanly and notes have no gaps.",
+        "weight": 4,
+        "pass_rule": "Any deck is in one code block with a header line or a note naming the fields and the separator; every row has the same number of fields; commas or tabs inside text are quoted or avoided; cloze cards use {{c1::...}} syntax; tags have no spaces; no front or back is empty; notes have no 'see textbook' gaps.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "built_for_memory",
+        "text": "Cards and notes are built for memory: one idea each, short and testable.",
+        "weight": 4,
+        "pass_rule": "Each card asks for one fact with an answer under 20 words; lists of more than 3 items are split across cards; notes use short bullets, bold key terms and at least one worked example or self-test question per main topic.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words at the learner's level.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 20 words; technical terms from the material are kept but explained once in plain words; import steps are 5 or fewer.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "thousand_words",
+        "unit": "1,000 words",
+        "included": 5,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a study coach. Using only the material I paste, make the study aid I ask for. For revision notes, keep my topics in order, use short bullets, bold key terms and add a worked example or self-test question for each topic. For flashcards, write one fact per card with short answers and give the deck as a CSV in a code block with a header row (Front, Back, Tags), ready to import into Anki. Use {{c1::...}} for cloze cards. For a timetable, cover every day to my exam and bring each topic back at least twice. Do not add facts that are not in my material; mark anything you add as [not in your notes]. Add short steps for importing the file.",
+    "not_for": [
+      "Doing graded homework, coursework or exams for a student",
+      "Copying a whole textbook or paid course into notes or cards",
+      "Material you have no right to use, such as leaked exam papers",
+      "Medical, legal or financial advice drawn from the notes",
+      "Finding or adding material from the web: only what you paste is used",
+      "Uploading decks to your account or syncing them for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_anki",
+        "text": "Flashcard deck for Anki from my anatomy lecture notes on the bones of the hand and wrist (pasted, about 3,000 words). 80 cards, question and answer plus some cloze. Tag by lecture: L5 and L6. My exam is on 3 June.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_history_notes",
+        "text": "Revision notes and a one-page summary from my GCSE History notes on the Cold War 1945 to 1962 (pasted, about 7,000 words). I keep mixing up the dates and causes of the two Berlin crises.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_timetable",
+        "text": "Revision timetable for my CIMA exam on 20 March. I can study 2 hours on weekdays and 5 hours on Saturdays from 1 February. Syllabus areas and weights are pasted. I am weakest on variance analysis.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_japanese",
+        "text": "Vocabulary deck for Japanese: 120 words from my class list (pasted with readings and meanings), cards both ways, with the example sentence from my list where I gave one. For Anki, tagged by unit.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_quizlet_fix",
+        "text": "Check and fix my Quizlet set of real estate licence terms (pasted, 95 cards). Some cards have two facts and some answers are wrong compared to my course notes (also pasted). Give me the fixed set to paste back in and a list of changes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_study_guide",
+        "text": "Study guide for a first-year sociology module: 4 topics from my reading notes (pasted, about 9,000 words), with key terms and 5 self-test questions per topic with answers.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "flashcards",
+      "anki deck",
+      "anki csv",
+      "quizlet",
+      "cloze cards",
+      "revision notes",
+      "study guide",
+      "study notes",
+      "summary sheet",
+      "cheat sheet",
+      "formula sheet",
+      "revision timetable",
+      "study plan",
+      "glossary",
+      "exam revision",
+      "spaced repetition"
+    ],
+    "demand_sources": [
+      {
+        "note": "A 2021 Association for Psychological Science convention poster on how students use digital flashcards, noting that free premade sets vary widely in accuracy.",
+        "url": "https://www.psychologicalscience.org/conventions/archive/2021icps/paper/35838/"
+      },
+      {
+        "note": "A summary of flashcard research: studies find 40% to 70% of college students use flashcards, and Quizlet reports over 60 million users.",
+        "url": "https://studycardsai.com/blog/flashcard-statistics"
+      }
+    ]
+  },
+  {
+    "id": "training-module-content",
+    "title": "Training module or e-learning lesson, written in full",
+    "summary": "One module of training written in full: an e-learning storyboard, self-paced lesson pages, a staff module from your SOP, scenarios, a sign-off form or an onboarding learning path.",
+    "area": "learning",
+    "deliverable": "Learning goals, then the piece you choose, from your material: a screen-by-screen storyboard with on-screen text, narration, visuals and interactions; lesson pages; a staff module with demo steps, practice and a trainer guide; branching scenarios; a sign-off and observation form; or a week-by-week learning path. Ends with a knowledge check and facts to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "E-learning storyboard (screen by screen)",
+          "Self-paced lesson pages for your course platform",
+          "Staff training module from an SOP",
+          "Branching scenario practice",
+          "Practice tasks and role-plays for one skill",
+          "Competency sign-off checklist and observation form",
+          "Onboarding learning path for one role",
+          "Trainer guide for an existing module"
+        ]
+      },
+      {
+        "id": "modules",
+        "label": "How many modules?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one module of up to about 30 minutes of learning.",
+        "max": 3
+      },
+      {
+        "id": "topic",
+        "label": "Topic of the module",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "learners",
+        "label": "Who are the learners?",
+        "type": "longtext",
+        "required": true,
+        "help": "Their role, what they know now and where they will learn: at a desk, on the shop floor or on a phone.",
+        "max": 1500
+      },
+      {
+        "id": "goals",
+        "label": "What must they be able to do after?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "material",
+        "label": "Your SOP, notes, slides or policy text",
+        "type": "longtext",
+        "required": true,
+        "help": "We teach only what is in here.",
+        "max": 40000
+      },
+      {
+        "id": "tool",
+        "label": "Where will it be built or taught?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Articulate Rise or Storyline",
+          "Your course platform or LMS",
+          "PowerPoint or Google Slides",
+          "In person on the job",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "minutes",
+        "label": "Learning time per module, in minutes",
+        "type": "number",
+        "required": false,
+        "max": 120
+      },
+      {
+        "id": "mistakes",
+        "label": "Common mistakes people make",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "sign_off",
+        "label": "Who signs people off, and what counts as competent?",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "role_details",
+        "label": "For a learning path: weeks available, people to shadow and tools",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "tone",
+        "label": "Tone and brand words",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece_in_full",
+        "text": "The draft is the piece the buyer chose, written in full.",
+        "weight": 4,
+        "pass_rule": "A storyboard has a numbered row per screen with on-screen text, narration, visual and interaction; lesson pages are finished text; a staff module has demo steps, practice tasks and a trainer guide; scenarios have 3 or more decision points with consequences; a sign-off form has observable steps and a pass line; a learning path covers each week; no 'add content here' gaps.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "taught_from_material",
+        "text": "Steps, rules, figures and policy points come only from the buyer's material.",
+        "weight": 5,
+        "pass_rule": "Every step, rule, number, product name and policy point appears in the pasted material, in the same order where order matters; anything beyond it is marked [confirm with your team]; safety warnings in the material appear word for word where they apply.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "goals_practised_checked",
+        "text": "Each goal is taught, practised and checked.",
+        "weight": 4,
+        "pass_rule": "There are 2 to 5 goals that start with an action verb; each goal maps to at least one screen, page or task where learners practise it and to at least one knowledge check question or observed task; the check has an answer key.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "learner_ready",
+        "text": "Plain, learner-facing words that fit the time and place.",
+        "weight": 3,
+        "pass_rule": "On-screen text blocks are under 60 words; narration is in short sentences written to be read aloud; the module's estimated time is stated and is within the minutes in the brief; jargon from the material is explained the first time.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "practice_heavy",
+        "text": "Learners do things, not only read.",
+        "weight": 3,
+        "pass_rule": "At least a third of screens, pages or tasks ask the learner to choose, try, sort, answer or do a real task; feedback for each choice says why it is right or wrong.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 599,
+      "size": {
+        "field": "modules",
+        "unit": "module",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an instructional designer. Build the training module below from my material only. Start with 2 to 5 learning goals that begin with an action verb. Then write the module in full. For a storyboard, give one numbered row per screen with on-screen text, narration, visual and interaction. For lesson pages, give the finished text. For a staff module, give demo steps, practice tasks and a trainer guide. Make at least a third of it practice with feedback that explains why. End with a knowledge check and answer key, and a list of anything I need to confirm. Do not add steps, rules or figures that are not in my material, and keep any safety warning word for word.",
+    "not_for": [
+      "Building, uploading or publishing the module in your authoring tool or LMS",
+      "Safety-critical, clinical or regulated training without sign-off from your expert",
+      "Accredited or legal compliance training presented as approved",
+      "Graphics, voiceover, video or SCORM files (you get the words and build notes)",
+      "Judging or rating named staff for pay, discipline or firing",
+      "A course outline only (see the training plan and course outline job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_storyboard",
+        "text": "E-learning storyboard for Rise: a 20-minute module for new call centre agents at Brightline Energy on taking a meter reading by phone. Our SOP is pasted. Goals: confirm the customer's identity with our 3 checks, log the reading, and spot a reading that looks wrong.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_sop_module",
+        "text": "Staff training module from our closing-down SOP for Pickle & Rye deli (pasted). New part-time staff are trained on the job by shift leads. I need demo steps, 3 practice tasks, a trainer guide and a sign-off checklist.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_learning_path",
+        "text": "Onboarding learning path for new junior bookkeepers at our 12-person firm. 4 weeks. They shadow Priya in week 1, use Xero and Dext, and should run a client's monthly bank reconciliation alone by week 4. Our process notes are pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_branching",
+        "text": "Branching scenario for retail staff on handling a refund without a receipt. Our refund policy is pasted. 3 to 4 decision points, one good path and two poor paths, with feedback at each step.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_lesson_pages",
+        "text": "Self-paced lesson pages for module 2 of our volunteer course at Riverside Food Bank: sorting and storing donations. Our volunteer handbook section is pasted. 15 minutes, simple words; many volunteers read English as a second language.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_signoff",
+        "text": "Competency sign-off checklist and observation form for opening the till and cashing up at our garden centre, based on our pasted SOP. Supervisors watch each new cashier twice before they work alone.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "e-learning",
+      "elearning storyboard",
+      "articulate rise",
+      "storyline storyboard",
+      "lesson pages",
+      "training module",
+      "staff training",
+      "sop training",
+      "branching scenario",
+      "scenario-based learning",
+      "competency checklist",
+      "sign-off checklist",
+      "onboarding curriculum",
+      "learning path",
+      "new hire training",
+      "trainer guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "Christy Tucker's instructional design rate guide: experienced freelance instructional designers charge about $60 to $150 an hour, and the average US federal contract ceiling rate is $113 an hour.",
+        "url": "https://christytuckerlearning.com/instructional-design-hourly-rates-and-salary/"
+      }
+    ]
+  },
+  {
+    "id": "workshop-or-coaching-session-plan",
+    "title": "Workshop, training session or coaching programme plan",
+    "summary": "A timed plan and facilitator guide for a workshop or live training session, or a coaching programme with session plans, worksheets and tasks between sessions.",
+    "area": "learning",
+    "deliverable": "A minute-by-minute agenda with outcomes, exercises and breaks; facilitator notes with the words to say and how to run each exercise; materials, room or online board set-up; worksheets written in full; and the close and follow-up. Coaching programmes get a plan per session with opening and closing questions, a tool, a worksheet and a task between sessions.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Half-day or full-day workshop",
+          "Short team workshop (60 to 120 minutes)",
+          "Online workshop with a whiteboard layout",
+          "Planning or strategy session for a team",
+          "Train-the-trainer session",
+          "Coaching programme (several sessions)",
+          "One coaching session plan",
+          "Group coaching session"
+        ]
+      },
+      {
+        "id": "sessions",
+        "label": "How many sessions?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A six-session coaching programme counts as six.",
+        "max": 8
+      },
+      {
+        "id": "purpose",
+        "label": "What is it for, and what should people leave with?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "people",
+        "label": "Who will be there?",
+        "type": "longtext",
+        "required": true,
+        "help": "How many, their roles, how well they know each other, and any tension or needs to plan for.",
+        "max": 1500
+      },
+      {
+        "id": "minutes",
+        "label": "Length of each session, in minutes",
+        "type": "number",
+        "required": true,
+        "max": 480
+      },
+      {
+        "id": "setting",
+        "label": "Where will it happen?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "In a room",
+          "Online (Zoom, Teams or similar)",
+          "Mixed: some in the room, some online",
+          "One to one"
+        ]
+      },
+      {
+        "id": "content",
+        "label": "Content, notes or decisions it must cover",
+        "type": "longtext",
+        "required": false,
+        "max": 12000
+      },
+      {
+        "id": "facilitator",
+        "label": "Who runs it, and how experienced are they?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "tools",
+        "label": "Tools you have",
+        "type": "text",
+        "required": false,
+        "help": "For example Miro, Mural, flip charts, sticky notes or breakout rooms.",
+        "max": 300
+      },
+      {
+        "id": "coaching_approach",
+        "label": "For coaching: your approach or tools",
+        "type": "text",
+        "required": false,
+        "help": "For example GROW, strengths cards or a values exercise.",
+        "max": 400
+      },
+      {
+        "id": "avoid",
+        "label": "Things to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_purpose",
+        "text": "The plan serves the purpose, people and setting in the brief.",
+        "weight": 4,
+        "pass_rule": "The draft opens with the purpose and 2 to 4 outcomes people leave with, matching the brief; each agenda block names the outcome it serves; exercises suit the setting (breakout rooms or board frames online, room layout in person); a coaching programme has one plan per session asked for.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "brief_content_only",
+        "text": "Content, decisions and facts come from the brief, and nothing about the group is invented.",
+        "weight": 5,
+        "pass_rule": "Every topic, figure, decision, name and past event in the draft appears in the brief; no participant story, conflict or result is made up; examples the facilitator must supply are marked [add your example].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "timed_and_runnable",
+        "text": "Timings add up and a facilitator could run it from the page.",
+        "weight": 5,
+        "pass_rule": "Block timings for each session add up to its length within 5 minutes, with a break in any session over 90 minutes; each exercise has numbered steps, the instruction to say aloud, timing, group size and what gets captured; materials and set-up are listed; worksheets are written in full.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "people_do_the_work",
+        "text": "Participants spend most of the time doing, not listening.",
+        "weight": 3,
+        "pass_rule": "At least half of each session's minutes are exercises, discussion, practice or reflection; no talk or presentation block runs longer than 15 minutes without an activity.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_and_plain",
+        "text": "Plain words, an inclusive set-up and clear limits for coaching.",
+        "weight": 3,
+        "pass_rule": "Instructions are mostly under 20 words; there is an opening with ground rules or a check-in; quieter people get a write-first or pairs option; coaching plans stay on goals and actions and say when to refer someone to a counsellor or other professional.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "sessions",
+        "unit": "session",
+        "included": 1,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced workshop facilitator and coach. Design the session below. Start with the purpose and 2 to 4 outcomes people leave with. Give a minute-by-minute agenda whose timings add up to my length, with breaks. For each exercise, give numbered steps, the words to say, timing, group size and what gets captured. At least half the time should be people doing, not listening, and no talk should run over 15 minutes. List materials and set-up, write any worksheets in full and end with a close and follow-up. For coaching, give a plan per session with opening and closing questions, one tool and a task between sessions. Use only the content I give and mark where I must add my own examples.",
+    "not_for": [
+      "Therapy, counselling, trauma work or mental health treatment",
+      "Medical, legal or financial advice inside the session or the coaching",
+      "Running, recording or leading the session for you",
+      "Mediating serious disputes, grievances or harassment cases",
+      "Booking rooms, sending invites or setting up your online tools",
+      "Logistics and run sheets for big events (see the event plan job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_away_day",
+        "text": "Half-day workshop (3.5 hours, in a room) for the 9-person leadership team of Harbour Lane Dental to agree three priorities for next year. They tend to talk over each other. I will run it myself. We have flip charts and sticky notes. Last year's plan is pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_online",
+        "text": "Online 90-minute workshop on Zoom with Miro for 24 volunteers at Greenway Trust to map every step from sign-up to first shift and find where people drop out. Breakout rooms available. I need the Miro board layout and facilitator notes.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_coaching",
+        "text": "A six-session career coaching programme, 60 minutes each, one to one on video, for mid-career people moving into project management. I use the GROW model. Each session needs a plan, a one-page worksheet and a task between sessions.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_trainer",
+        "text": "One 75-minute train-the-trainer session for 6 shift leads who will deliver our new till training. Content is pasted. They are confident on the tills but have never trained anyone.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_group_coaching",
+        "text": "Group coaching session, 90 minutes online, for 8 new freelance designers on setting boundaries with clients. I want an opening check-in, one main exercise, a peer coaching round and a commitment at the end.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_retro",
+        "text": "Two-hour retrospective workshop for a 12-person software team after a late product launch. Notes and timeline pasted. People are tired and a bit tense. Mixed: 8 in the room, 4 online.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "workshop plan",
+      "workshop agenda",
+      "facilitator guide",
+      "facilitation plan",
+      "training session plan",
+      "miro board",
+      "strategy session",
+      "away day agenda",
+      "retrospective",
+      "train the trainer",
+      "coaching programme",
+      "coaching session plan",
+      "group coaching",
+      "coaching worksheet",
+      "team workshop",
+      "icebreaker"
+    ],
+    "demand_sources": [
+      {
+        "note": "IT Jobs Watch: 1,996 UK contract jobs cited workshop facilitation in the six months to 6 November 2026, at a median day rate of £525.",
+        "url": "https://www.itjobswatch.co.uk/contracts/uk/workshop%20facilitation.do"
+      },
+      {
+        "note": "Erickson Coaching's summary of the 2025 ICF Global Coaching Study: a record 122,974 coaches worldwide and about $5.34 billion in annual coaching revenue.",
+        "url": "https://www.erickson.edu/resources/the-state-of-the-coaching-profession"
+      }
+    ]
+  },
+  {
+    "id": "email-or-text-micro-course",
+    "title": "Email or text micro-course",
+    "summary": "A short course sent as emails, texts or chat messages: one small lesson and one task at a time, for customers, subscribers, members or staff.",
+    "area": "learning",
+    "deliverable": "A course map with the goal, send days and the one skill each lesson builds; a welcome; every lesson in full with subject line, preview text, a lesson under 350 words, one task and a quick check; and a wrap-up. Text, WhatsApp or chat app lessons fit one message each.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What kind of course?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Email course for your subscribers or leads",
+          "Email course for new customers",
+          "Staff tips series by email",
+          "Member or student course by email",
+          "Text or WhatsApp lessons",
+          "Lessons for a chat app such as Slack or Teams"
+        ]
+      },
+      {
+        "id": "lessons",
+        "label": "How many lessons?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers five. The welcome and wrap-up are included.",
+        "max": 12
+      },
+      {
+        "id": "topic",
+        "label": "What is the course about?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "learners",
+        "label": "Who will take it?",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "goal",
+        "label": "What should people be able to do by the last lesson?",
+        "type": "longtext",
+        "required": true,
+        "max": 1000
+      },
+      {
+        "id": "material",
+        "label": "Your notes, guide or content to teach from",
+        "type": "longtext",
+        "required": false,
+        "max": 20000
+      },
+      {
+        "id": "schedule",
+        "label": "How often to send",
+        "type": "text",
+        "required": false,
+        "help": "For example daily for 7 days, or every Monday.",
+        "max": 200
+      },
+      {
+        "id": "next_step",
+        "label": "What should people do after the course?",
+        "type": "text",
+        "required": false,
+        "help": "For example book a call or try a feature.",
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "limits",
+        "label": "Length or character limits",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "course_shape",
+        "text": "The course has the lessons asked for, one skill each, building to the goal.",
+        "weight": 4,
+        "pass_rule": "A course map lists every lesson with its one skill and send day; the lesson count equals the brief's; each lesson builds on the one before; the last lesson ties back to the goal in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_facts_only",
+        "text": "Teaching points, figures, offers and stories come only from the brief.",
+        "weight": 5,
+        "pass_rule": "Every fact, number, product feature, offer and example appears in the brief or its material; no testimonial, result or statistic is invented; anything the buyer must add is a [placeholder].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "lessons_complete",
+        "text": "Every lesson is complete and ready to send.",
+        "weight": 4,
+        "pass_rule": "Each email has a subject line under 60 characters, preview text, the lesson, one task and a quick check or reflection question; each text or chat message fits the limit given, or 320 characters if none; the welcome and wrap-up are included; nothing says 'add lesson here'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "small_and_doable",
+        "text": "Each lesson is short, teaches one idea and asks for one small action.",
+        "weight": 4,
+        "pass_rule": "Each lesson body is under 350 words or the brief's limit; each task takes 10 minutes or less and can be done the same day; no lesson teaches more than one new idea.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_honest",
+        "text": "Plain, warm words and honest selling.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 20 words; there is at most one call to action per lesson; there is no fake urgency, countdown or promise of income or health results; marketing courses note where the unsubscribe or stop wording goes.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 399,
+      "size": {
+        "field": "lessons",
+        "unit": "lesson",
+        "included": 5,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a teacher who writes email courses. Write the course below as a series of short lessons. Start with a course map: each lesson's one skill and send day. Then write a welcome, every lesson and a wrap-up. Each lesson has a subject line under 60 characters, preview text, a lesson under 350 words that teaches one idea, one task the reader can do in 10 minutes, and a quick check question. For text or chat messages, keep each under 320 characters. Use only my material and facts. Use at most one call to action per lesson, with no fake urgency or income claims.",
+    "not_for": [
+      "Sending to people who did not sign up or agree to hear from you",
+      "Setting up the emails or messages in your email or chat tool",
+      "Promises of income, health or other results",
+      "Lessons that give medical, legal or financial advice",
+      "Sales-only email sequences (see the email sequence job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_customer_course",
+        "text": "A 7-day email course for new owners of the Crumbly bread machine on baking a good first loaf. Our manual and tips are pasted. Daily sends. After day 7 we want them to join our free online baking class.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_staff_tips",
+        "text": "Staff tips series for our 40 retail staff at Fernwood Outdoor: 8 weekly emails on helping customers choose hiking boots, from our fitting guide (pasted). Short and friendly, with one tip and one thing to try on shift each week.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_whatsapp",
+        "text": "WhatsApp lessons for parents in our reading programme: 10 messages over 5 weeks, each with one simple at-home reading activity for children aged 5 to 7. Max 300 characters each. Our activity sheet is pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_landlords",
+        "text": "A 5-lesson email course for small landlords on keeping good records of repairs, from our guide (pasted). It ends with an invite to try our app's free plan. No legal advice.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_slack",
+        "text": "Slack lessons for our new managers: 6 short lessons, one a week, on running a good one-to-one, from our managers' guide (pasted). Each must fit in one Slack message and end with a question they reply to in the thread.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "email course",
+      "email mini course",
+      "free email course",
+      "drip course",
+      "micro-learning",
+      "microlearning",
+      "daily lessons",
+      "lesson emails",
+      "staff tips emails",
+      "whatsapp lessons",
+      "text message course",
+      "sms course",
+      "slack lessons",
+      "onboarding email course",
+      "lead magnet course"
+    ],
+    "demand_sources": [
+      {
+        "note": "eLearning Industry's microlearning statistics: short courses report average completion rates around 80%, against about 20% for long-form modules.",
+        "url": "https://elearningindustry.com/microlearning-statistics"
+      }
+    ]
+  },
+  {
+    "id": "training-video-script",
+    "title": "Training or how-to video script with captions",
+    "summary": "A script for a training, how-to or screen-recording video, with what to show at each step, on-screen text and a captions file built from the narration.",
+    "area": "learning",
+    "deliverable": "For each video: the goal; a two-column script with narration beside what is on screen, one step per scene, matched to your procedure or software, with start times; on-screen text and callouts; a list of screens or shots to record; 3 check questions; and an SRT captions file built from the narration when you ask.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What kind of video?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Software how-to (screen recording)",
+          "Procedure or task demo filmed on the job",
+          "Short training video series",
+          "Customer tutorial for your product",
+          "Welcome or induction video",
+          "Safety briefing from your approved content"
+        ]
+      },
+      {
+        "id": "videos",
+        "label": "How many videos?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 3
+      },
+      {
+        "id": "total_minutes",
+        "label": "Total minutes across all videos",
+        "type": "number",
+        "required": true,
+        "help": "Up to 15. Videos of 2 to 6 minutes work best.",
+        "max": 15
+      },
+      {
+        "id": "procedure",
+        "label": "The steps, SOP or notes to teach",
+        "type": "longtext",
+        "required": true,
+        "help": "Name the exact buttons, menus, tools or parts.",
+        "max": 20000
+      },
+      {
+        "id": "learners",
+        "label": "Who will watch it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should viewers be able to do after?",
+        "type": "text",
+        "required": true,
+        "max": 500
+      },
+      {
+        "id": "presenter",
+        "label": "Who speaks?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Voiceover only",
+          "Presenter on camera",
+          "Staff member on the job",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "captions",
+        "label": "Do you need a captions file?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Yes, an SRT file",
+          "No"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Recording or editing tool",
+        "type": "text",
+        "required": false,
+        "help": "For example Loom, Camtasia, Descript or a phone.",
+        "max": 200
+      },
+      {
+        "id": "brand_words",
+        "label": "Words and names to use or avoid",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_video",
+        "text": "The script fits the video type, viewers and goal in the brief.",
+        "weight": 4,
+        "pass_rule": "Each video states its goal in one sentence that matches the brief; the number of videos matches; a software how-to names the screen and click for each step; a filmed demo names the action and the camera view; the check questions test the goal.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "procedure_exact",
+        "text": "Steps, button names and warnings match the buyer's procedure exactly.",
+        "weight": 5,
+        "pass_rule": "Every step appears in the pasted procedure, in the same order; button, menu, tool and part names are spelled as in the brief; no step, shortcut, setting or warning is added; safety warnings in the material are said and shown before the step they apply to.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "timed_and_complete",
+        "text": "Timings fit and every part is complete, including captions when asked for.",
+        "weight": 4,
+        "pass_rule": "Each scene has a start time; narration at about 150 words a minute fits the total minutes within 10%; every scene has narration and an on-screen entry; an SRT file, when asked for, is in a code block with numbered cues, HH:MM:SS,mmm --> HH:MM:SS,mmm times in order, no cue over 2 lines of 42 characters, and text matching the narration.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "easy_to_follow",
+        "text": "Easy to follow on screen.",
+        "weight": 3,
+        "pass_rule": "Each scene shows one step; callouts are under 8 words; narration sentences are mostly under 18 words and speak to the viewer as 'you'; the video says what viewers will learn within its first 15 seconds.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words a new user understands.",
+        "weight": 3,
+        "pass_rule": "Jargon is explained once; steps start with a verb; there is no sales talk inside instructions; 3 check questions with answers follow each video.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 399,
+      "size": {
+        "field": "videos",
+        "unit": "video",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a training video scriptwriter. Write a script for the video below from my steps only. Give the goal, then a two-column table with narration in one column and what is on screen (screen, click, callout or camera view) in the other, one step per scene, with start times. Keep narration to about 150 words a minute so it fits my length. Use my exact button and menu names, and say and show any warning before the step it covers. Add a list of screens or shots to record and 3 check questions with answers. If I ask for captions, give a complete SRT file from the narration with correct times and no more than 2 lines of 42 characters per cue.",
+    "not_for": [
+      "Filming, recording, voiceover or editing the video",
+      "New safety instructions or warnings that your expert has not approved",
+      "Steps for software or machines you have not described",
+      "Medical or clinical procedure training",
+      "Marketing, promo or ad videos (see the video script job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_software",
+        "text": "A 4-minute screen recording for our clinic's reception staff on rescheduling an appointment in Cliniko. The steps are pasted with exact button names. Voiceover only. I need an SRT captions file too.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_series",
+        "text": "A short training video series for new staff at Corner Crust Pizza: 3 videos of about 3 minutes on making the dough, stretching a base, and topping to spec. Our SOP is pasted. Filmed on a phone with our head chef on camera.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_tutorial",
+        "text": "A 5-minute customer tutorial showing new users of our invoicing app InvoiceNest how to set up their first recurring invoice. Steps and screen names are pasted. We need a captions file.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_welcome",
+        "text": "Welcome video for new volunteers at Hillside Community Garden, 3 minutes, presented by our coordinator Dana. Key points are pasted: where to sign in, the tool shed rules and who to ask for help.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_warehouse",
+        "text": "Procedure demo for warehouse pickers on scanning and picking an order with the handheld scanner, 6 minutes. Our SOP is pasted, with the warning about using the step ladder that our safety lead approved.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "training video script",
+      "how-to video script",
+      "tutorial script",
+      "screen recording script",
+      "loom script",
+      "camtasia script",
+      "software training video",
+      "procedure video",
+      "demo video script",
+      "srt captions",
+      "subtitles file",
+      "induction video",
+      "welcome video script",
+      "video series"
+    ],
+    "demand_sources": [
+      {
+        "note": "TechSmith's 2026 video statistics: 83% of people prefer video over audio or text, and only 16% of learners say they watched a video because they were required to.",
+        "url": "https://www.techsmith.com/blog/video-statistics/"
+      }
+    ]
+  },
+  {
+    "id": "job-application-pack",
+    "title": "CV, cover letter or interview prep pack",
+    "summary": "Your CV rewritten or tailored to one job, a cover letter, application answers, a LinkedIn profile for your search, or interview prep built from your real experience.",
+    "area": "people",
+    "deliverable": "The pieces you choose, from your real history only: a CV with a short summary and results-first bullets matched to the job ad; a one-page cover letter; application or selection criteria answers within word limits; a job-search LinkedIn profile; or interview prep with likely questions, answers from your stories and questions to ask. Plus a gap list.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "CV or resume rewrite",
+          "CV tailored to one job ad",
+          "Cover letter for one job",
+          "Application form or selection criteria answers",
+          "LinkedIn profile for your job search",
+          "Interview prep sheet with answers from your experience",
+          "Mock interview script with notes",
+          "Pay and offer conversation script",
+          "Thank-you and follow-up messages after an interview"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A CV and a cover letter count as two.",
+        "max": 4
+      },
+      {
+        "id": "history",
+        "label": "Your current CV or work history",
+        "type": "longtext",
+        "required": true,
+        "help": "Roles, dates, what you did and results with numbers. Leave out your home address and ID numbers.",
+        "max": 15000
+      },
+      {
+        "id": "target",
+        "label": "The job you want",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the job ad, or describe the kind of role and sector.",
+        "max": 8000
+      },
+      {
+        "id": "region",
+        "label": "Where are you applying?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "US or Canada",
+          "UK or Ireland",
+          "Australia or New Zealand",
+          "Europe",
+          "Asia",
+          "Middle East or Africa",
+          "Other"
+        ]
+      },
+      {
+        "id": "stories",
+        "label": "Stories or wins to use",
+        "type": "longtext",
+        "required": false,
+        "help": "For interview prep: times you solved a problem, led something or got a result.",
+        "max": 6000
+      },
+      {
+        "id": "questions",
+        "label": "Application questions and word limits",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "worries",
+        "label": "Anything you are worried about",
+        "type": "text",
+        "required": false,
+        "help": "For example a career gap, a change of field or a short stay in one job.",
+        "max": 600
+      },
+      {
+        "id": "offer_details",
+        "label": "For a pay conversation: the offer and what you want",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "style",
+        "label": "Tone and length",
+        "type": "text",
+        "required": false,
+        "help": "For example two pages, plain and confident.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "aimed_at_the_job",
+        "text": "The pieces are the ones asked for, aimed at the target job.",
+        "weight": 4,
+        "pass_rule": "Each piece chosen is present; a tailored CV or cover letter uses at least 5 skills or key words from the pasted job ad, each backed by an item from the buyer's history; interview prep has at least 12 likely questions for the role; application answers follow the questions in order and show word counts within the limits.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "true_to_history",
+        "text": "Every job, date, skill, qualification and number comes from the buyer's history.",
+        "weight": 5,
+        "pass_rule": "Every employer, title, date, qualification, tool, figure and achievement appears in the brief; nothing is inflated or added; missing numbers are shown as [add a number] or listed in a gap list; interview answers use only the buyer's stories.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "format_fits",
+        "text": "Layout and length suit the region and the piece.",
+        "weight": 4,
+        "pass_rule": "A CV has a contact line with placeholders, a 3 to 4 line summary, roles in reverse date order and bullets that start with a verb; it is 2 pages or less unless the brief says otherwise; there is no photo, age or marital status for US, Canada, UK, Ireland, Australia or New Zealand; a cover letter is under 400 words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "results_shown",
+        "text": "Achievements are shown as results, not duties.",
+        "weight": 4,
+        "pass_rule": "At least half of CV bullets include a result, number or scope from the brief; interview answers follow situation, task, action, result and each is under 250 words; the cover letter names one or two specific results tied to the job's needs.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_honest",
+        "text": "Plain, confident words with no clichés or tricks.",
+        "weight": 3,
+        "pass_rule": "No phrases such as 'results-driven', 'team player' or 'go-getter'; sentences are mostly under 25 words; a pay script stays polite and honest and mentions no other offer the brief does not give; worries in the brief get an honest line, not a cover-up.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 29
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful CV writer and interview coach. Using only my real history, write the pieces I ask for. For a CV: a 3 to 4 line summary, roles in reverse date order, bullets that start with a verb and show results with my numbers, and skills that match the job ad. Keep it to 2 pages and follow the norms for the country I am applying in. For a cover letter: under 400 words, linking one or two of my results to what the job needs. For interview prep: 12 or more likely questions with answers built from my stories using situation, task, action, result, plus questions I can ask. Do not invent jobs, dates, skills or numbers; list the gaps for me to fill.",
+    "not_for": [
+      "Inventing jobs, degrees, licences, dates or results",
+      "Immigration, visa or work permit advice",
+      "Employment law advice, such as on contracts, dismissal or discrimination",
+      "Applying for jobs, messaging recruiters or logging in to job sites for you",
+      "Taking aptitude tests, assessments or coding tests for you",
+      "ID numbers, home addresses or your referees' private details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_cv_rewrite",
+        "text": "Rewrite my CV for UK retail management jobs. I have been an assistant store manager at a garden centre for 4 years and a supervisor at a supermarket for 3 years before that. Current CV pasted. I grew plant sales 18% last spring and cut staff turnover. Two pages, plain and confident.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_career_change",
+        "text": "Cover letter and tailored resume for a junior data analyst job at a US nonprofit (ad pasted). I am moving from teaching maths for 6 years. I finished a data analytics certificate in 2025 and built two projects in SQL and Tableau, details pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_interview",
+        "text": "Interview prep for a nurse unit manager interview next Tuesday. The job description and my stories are pasted. I am worried about questions on managing a poor performer. I want likely questions, answers from my stories and questions to ask the panel.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_criteria",
+        "text": "Answers to 5 selection criteria for an Australian state government project officer role, 300 words each (criteria pasted). My history and examples are pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_pay_call",
+        "text": "I got an offer for a marketing coordinator job at $58,000. I hoped for $63,000. They also offered 15 days of leave. I want a short, polite script for the pay call and a follow-up email.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_linkedin",
+        "text": "LinkedIn profile for my job search: I am a warehouse team leader looking for operations supervisor roles in the Midlands. My CV is pasted. I need a headline, an About section and experience entries.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "cv writing",
+      "resume writing",
+      "resume rewrite",
+      "cv rewrite",
+      "tailored cv",
+      "cover letter",
+      "application letter",
+      "selection criteria",
+      "key selection criteria",
+      "job application",
+      "interview prep",
+      "interview questions",
+      "star answers",
+      "mock interview",
+      "salary negotiation script",
+      "thank you email after interview",
+      "linkedin profile job search",
+      "career change cv"
+    ],
+    "demand_sources": [
+      {
+        "note": "TopResume's 2026 price guide: professional resume writing for candidates with 10 to 15 years of experience costs about $200 to $400.",
+        "url": "https://topresume.com/career-advice/how-much-does-a-professional-resume-writing-service-cost"
+      },
+      {
+        "note": "The UK National Careers Service publishes guidance on what to put in each section of a CV and why to tailor it to every job.",
+        "url": "https://nationalcareers.service.gov.uk/careers-advice/cv-sections"
+      }
+    ]
+  },
+  {
+    "id": "formal-letter-or-complaint",
+    "title": "Formal letter: complaint, request, reference or resignation",
+    "summary": "One clear letter or email for a situation that matters: a complaint, a refund or bill dispute, a request to a landlord or council, a reference, a resignation or a pay request.",
+    "area": "operations",
+    "deliverable": "A ready-to-send letter in your voice: subject line, the facts in date order, what you want and by when, the evidence you attach and a calm close. Plus an email or web form version under 200 words, a follow-up letter for when nobody replies, and a list of facts to check before sending.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What letter do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Complaint to a company",
+          "Refund, repair or replacement request",
+          "Dispute a bill or charge",
+          "Letter to a landlord, letting agent or building manager",
+          "Letter to a council, school or public body",
+          "Escalation to a complaints team or ombudsman",
+          "Letter to a contractor or supplier about a problem",
+          "Resignation letter",
+          "Reference or recommendation letter",
+          "Pay rise, promotion or flexible working request",
+          "Thank-you, apology or goodwill letter"
+        ]
+      },
+      {
+        "id": "letters",
+        "label": "How many letters?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one letter with its email version and follow-up.",
+        "max": 5
+      },
+      {
+        "id": "situation",
+        "label": "What happened?",
+        "type": "longtext",
+        "required": true,
+        "help": "Dates, names, order or account references (not card numbers), what was said and what you have tried.",
+        "max": 8000
+      },
+      {
+        "id": "outcome",
+        "label": "What do you want to happen?",
+        "type": "text",
+        "required": true,
+        "max": 500
+      },
+      {
+        "id": "recipient",
+        "label": "Who is it to?",
+        "type": "text",
+        "required": true,
+        "help": "Name, role and organisation if you know them.",
+        "max": 300
+      },
+      {
+        "id": "evidence",
+        "label": "Documents or photos you can attach",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "rules",
+        "label": "Policies, terms or rules you want to quote",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the wording. We quote only what you give us.",
+        "max": 6000
+      },
+      {
+        "id": "deadline",
+        "label": "Any deadline or reply date",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Polite and firm",
+          "Warm and friendly",
+          "Formal",
+          "Short and direct"
+        ]
+      },
+      {
+        "id": "sender",
+        "label": "Who is signing it?",
+        "type": "text",
+        "required": false,
+        "help": "Your name and role. Add your address yourself before sending.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_ask",
+        "text": "The letter is the type asked for and asks clearly for the outcome.",
+        "weight": 4,
+        "pass_rule": "The outcome from the brief is stated in the first or second paragraph with a reply date (the brief's, or a [date] placeholder); the letter is addressed to the recipient given; an email or web form version under 200 words and a follow-up letter are included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "facts_only",
+        "text": "Dates, amounts, names and what was said come only from the brief.",
+        "weight": 5,
+        "pass_rule": "Every date, amount, reference number, name, quote and event appears in the brief; events are in date order; nothing is exaggerated; details to confirm are marked [check]; no card number, password or ID number appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_legal_claims",
+        "text": "No legal advice, and no rights or laws the brief did not supply.",
+        "weight": 5,
+        "pass_rule": "The letter does not say what a law says, name an act or regulation, or threaten legal action unless the brief supplied that wording or asked for it; policies are quoted only from pasted text; a resignation or reference makes no judgment on legal rights such as notice or pay; where money or a dispute is involved, one line suggests checking rights with an advice service.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_send",
+        "text": "It is complete and ready to send.",
+        "weight": 3,
+        "pass_rule": "Subject line, greeting, body, close and sign-off are present; addresses and signatures are [placeholders]; attachments are listed by name; a list of facts to confirm ends the draft.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "calm_and_plain",
+        "text": "Calm, plain words a busy reader acts on.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 20 words; paragraphs are 4 lines or fewer; there are no insults, sarcasm or ALL CAPS; a reference letter gives specific examples from the brief instead of general praise.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 39,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "letters",
+        "unit": "letter",
+        "included": 1,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a calm, clear letter writer. Write the letter below for me. Put the facts in date order, say clearly what I want and by when, list what I am attaching and end politely. Use only the facts I give, and do not add legal claims or name any laws unless I paste the wording. Keep sentences short and the tone polite but firm, with no sarcasm. Then give a short email version under 200 words, a follow-up letter to send if there is no reply in 14 days, and a list of details I should check before sending.",
+    "not_for": [
+      "Legal advice, legal threats or court and tribunal papers",
+      "Letters that make false claims, threaten or harass anyone",
+      "Immigration, tax or benefits advice",
+      "Formal legal notices such as eviction notices or letters before action",
+      "Sending the letter or contacting anyone for you",
+      "Card numbers, passwords, bank details or ID numbers in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_complaint",
+        "text": "Complaint to Northgate Appliances. I bought a washing machine on 3 August for £429 (order NG-55821). It leaked on 2 September. An engineer came on 10 September and said a part was on order. Nothing since, after 4 calls. I want a replacement or a full refund within 14 days. I have the receipt and photos.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_letting_agent",
+        "text": "Letter to my letting agent, Parkside Lettings, about damp and mould in the back bedroom of 12 Elm Row, first reported by email on 6 October. They said a contractor would come within a week. No one has come. I want a visit date in writing by 1 December.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_reference",
+        "text": "Reference letter for my former cafe assistant, Leah Moore, who worked for me from March 2023 to August 2026. She trained 4 new staff, ran the till alone at weekends and was never late. She is applying for a hotel reception job.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_gym",
+        "text": "Dispute a charge from my gym, FitBox. I cancelled on 30 June by email (copy pasted) and they charged me £34.99 on 1 July and 1 August. I want both refunded and written confirmation that the membership is closed.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_resignation",
+        "text": "Resignation letter to my manager, Craig, at Lowe & Sons builders' merchant. I am leaving my job as yard supervisor after 6 years. My contract says one month's notice. My last day is 31 December. I want to thank them and offer to help train my replacement.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_pay_rise",
+        "text": "Pay rise request to my manager. I have been an office coordinator for 2 years on £27,500. Since March I have taken on payroll admin and supplier invoices from a colleague who left. I want to ask for £31,000 and a review meeting this month.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "complaint letter",
+      "letter of complaint",
+      "refund request letter",
+      "dispute a charge",
+      "billing dispute letter",
+      "letter to landlord",
+      "repair request letter",
+      "letter to council",
+      "ombudsman complaint",
+      "escalation letter",
+      "resignation letter",
+      "reference letter",
+      "recommendation letter",
+      "pay rise request",
+      "salary increase letter",
+      "flexible working request",
+      "formal letter",
+      "follow-up letter"
+    ],
+    "demand_sources": [
+      {
+        "note": "The US Federal Trade Commission publishes a sample customer complaint letter, advising consumers to set out the facts, the fix they want and their next step.",
+        "url": "https://consumer.ftc.gov/articles/sample-customer-complaint-letter"
+      },
+      {
+        "note": "Acas, the UK workplace advice service, offers employees a free resignation letter template to copy or download.",
+        "url": "https://www.acas.org.uk/resignation-letter-template"
+      }
+    ]
+  },
+  {
+    "id": "personal-speech-or-tribute",
+    "title": "Speech, toast, eulogy or written tribute",
+    "summary": "A speech or toast for a wedding, birthday, retirement or leaving do, a eulogy, or a written tribute or obituary, built from your stories and timed to your slot.",
+    "area": "content",
+    "deliverable": "A speech in your voice, timed to your minutes: an opening, two or three of your stories, what you want to say, and a toast or close. Plus a delivery version with pause marks and cue lines, a few tips on pace, and a list of names and facts to check. Written tributes come at the length you need.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Wedding speech (best man, maid of honour, parent or couple)",
+          "Wedding vows",
+          "Eulogy or memorial speech",
+          "Retirement or leaving speech",
+          "Birthday or anniversary toast",
+          "Award thank-you or acceptance speech",
+          "Graduation or prize-day speech",
+          "Obituary or written tribute",
+          "Polish a speech you have written"
+        ]
+      },
+      {
+        "id": "speeches",
+        "label": "How many speeches or tributes?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 3
+      },
+      {
+        "id": "minutes",
+        "label": "How long can you speak, in minutes?",
+        "type": "number",
+        "required": true,
+        "help": "For a written tribute, enter 0 and give a word limit below.",
+        "max": 20
+      },
+      {
+        "id": "who",
+        "label": "Who is it about, and who are you to them?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "stories",
+        "label": "Your stories, memories and facts",
+        "type": "longtext",
+        "required": true,
+        "help": "Names, how you met, funny or touching moments, what they love. Real detail makes the speech.",
+        "max": 10000
+      },
+      {
+        "id": "audience",
+        "label": "Who will be listening?",
+        "type": "text",
+        "required": true,
+        "help": "For example 120 guests, mostly family, some children.",
+        "max": 300
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Warm and funny",
+          "Mostly heartfelt",
+          "Light and short",
+          "Formal",
+          "A mix of laughter and tears"
+        ]
+      },
+      {
+        "id": "avoid",
+        "label": "Topics, names or jokes to avoid",
+        "type": "longtext",
+        "required": false,
+        "help": "For example exes, health, money or anything private.",
+        "max": 1500
+      },
+      {
+        "id": "must_include",
+        "label": "People to thank or lines to include",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "draft",
+        "label": "Your draft, if you have one",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "word_limit",
+        "label": "Word limit for a written tribute",
+        "type": "number",
+        "required": false,
+        "max": 1500
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_occasion",
+        "text": "The speech fits the occasion, the speaker's role and the tone asked for.",
+        "weight": 4,
+        "pass_rule": "The opening names the occasion and the speaker's link to the person; the tone chosen is used; a wedding speech ends with a toast, a eulogy with a farewell or reflection, a leaving speech with thanks and good wishes; everyone in 'must include' is named.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_stories_only",
+        "text": "Every story, name, date and detail comes from the brief.",
+        "weight": 5,
+        "pass_rule": "Each story, name, place, date, quote and fact appears in the brief; no story, joke about a real person or private detail is invented; anything to confirm is marked [check]; nothing on the avoid list appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_time",
+        "text": "It fits the time or word limit.",
+        "weight": 4,
+        "pass_rule": "The word count and minutes are stated at the top, and at about 130 spoken words a minute the speech is within 10% of the minutes given; a written tribute is within its word limit; speeches include a delivery version with [pause] marks and short cue lines.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "kind_and_safe",
+        "text": "Humour is kind and the speech is safe for everyone in the room.",
+        "weight": 4,
+        "pass_rule": "There are no jokes about exes, weight, health, money troubles, drinking or sex; any teasing is followed by warmth; nothing would embarrass the person in front of children or older relatives named in the audience; a eulogy is gentle and leaves out cause-of-death detail unless the brief asks for it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sounds_spoken",
+        "text": "It sounds like a person talking.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 18 words; contractions are used; there are no clichés such as 'without further ado' or 'tie the knot'; the speech does not open with a dictionary definition.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "speeches",
+        "unit": "speech",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a speechwriter for weddings, birthdays, retirements and funerals. Write the speech below in my voice, using only the stories and facts I give. Fit it to my time at about 130 spoken words a minute and put the word count at the top. Open with who I am to the person, tell two or three of my stories, say what they mean to me, and end with a toast or a warm close. Keep the humour kind and safe for everyone in the room, and leave out anything on my avoid list. Then give a delivery version with pause marks and short cue lines, and a few tips on pace.",
+    "not_for": [
+      "Inventing stories, quotes or private details about real people",
+      "Jokes that put down the couple, the person or any guest",
+      "Choosing religious readings or rites (you choose and add those)",
+      "Delivering, recording or coaching the speech live",
+      "Business talks, pitches or launch remarks (see the talk, pitch or demo script job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_best_man",
+        "text": "Best man speech for my brother Tom's wedding to Aisling on 14 June. 5 minutes, 110 guests. Stories: he got us lost on a Lake District walk in 2015, he taught me to drive in his old Fiesta, and he learned to cook risotto for Aisling's birthday. Warm and funny. Avoid his ex and the stag do.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_eulogy",
+        "text": "Eulogy for my grandmother, June Patterson, who died at 91. 6 minutes. She was a school dinner lady for 30 years, grew sweet peas, cheated at cards and knitted a jumper for every grandchild. I will read it at the crematorium. Mostly heartfelt, with a little laughter.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_retirement",
+        "text": "Retirement speech for our colleague Dennis after 32 years at Hartley Print. 4 minutes, from me as his manager. He trained every apprentice, once fixed the old press with a coat hanger, and never missed Friday cake. About 40 staff and his family will be there.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_mother_bride",
+        "text": "Mother of the bride speech, 4 minutes, for my daughter Kezia's wedding to Sam. I am nervous. Stories: she ran a lemonade stand at 8 and gave the money to the cat shelter, and she met Sam on a rained-off camping trip. Light and short.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_obituary",
+        "text": "Obituary for the local paper, 300 words, for my father, Graham Okafor, 78, a retired bus driver and Sunday league football referee. Born in 1948, married Ruth in 1972, three children and five grandchildren. More facts pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_polish",
+        "text": "Polish my maid of honour speech (draft pasted). It runs about 8 minutes and needs to be 5. Keep the story about our flat in Leeds. Cut the inside jokes nobody else will get.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "wedding speech",
+      "best man speech",
+      "maid of honour speech",
+      "father of the bride speech",
+      "mother of the bride speech",
+      "wedding toast",
+      "wedding vows",
+      "eulogy",
+      "memorial speech",
+      "funeral speech",
+      "retirement speech",
+      "leaving speech",
+      "birthday toast",
+      "anniversary speech",
+      "obituary",
+      "tribute",
+      "speech writer"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK speechwriter Allspeeches Great and Small charges £399 for a bespoke wedding speech and £399 for a eulogy.",
+        "url": "https://allspeechesgreatandsmall.com/pricing"
+      },
+      {
+        "note": "Contra's speechwriter hiring page lists people giving wedding toasts, eulogies and retirement tributes among common clients.",
+        "url": "https://contra.com/hire/speech-writers"
+      }
+    ]
+  },
+  {
+    "id": "recipe-cards-and-recipe-edits",
+    "title": "Recipe cards, recipe edits or a recipe post",
+    "summary": "Recipes written up clearly from your notes: recipe cards, scaled or converted recipes, standard recipes for your kitchen team, meal kit cards or a recipe blog post.",
+    "area": "content",
+    "deliverable": "Each recipe in a clear layout: name, yield, times, equipment, ingredients in order of use with exact amounts, and numbered steps with times, temperatures and doneness cues; scaled or converted amounts with the maths shown; kitchen versions with portions and plating; or a blog post with headnote, tips and FAQs. Plus things to test or confirm.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Recipe cards from my notes",
+          "Scale a recipe up or down",
+          "Convert between cups and grams or °F and °C",
+          "Standard recipes for my kitchen team",
+          "Recipe blog post with headnote and tips",
+          "Meal kit or product recipe card",
+          "Cookbook chapter recipes",
+          "Check and fix my recipes"
+        ]
+      },
+      {
+        "id": "recipes",
+        "label": "How many recipes?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers three.",
+        "max": 10
+      },
+      {
+        "id": "notes",
+        "label": "Your recipes or notes",
+        "type": "longtext",
+        "required": true,
+        "help": "Amounts, steps, times and temperatures as you make them. Rough notes are fine.",
+        "max": 20000
+      },
+      {
+        "id": "reader",
+        "label": "Who will cook from it?",
+        "type": "text",
+        "required": true,
+        "help": "For example home cooks, kitchen staff or meal kit customers.",
+        "max": 300
+      },
+      {
+        "id": "units",
+        "label": "Units to use",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Metric (grams, ml, °C)",
+          "US cups and ounces (°F)",
+          "Both"
+        ]
+      },
+      {
+        "id": "yield_target",
+        "label": "Target yield or portions for scaling",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "equipment",
+        "label": "Equipment your cooks have",
+        "type": "text",
+        "required": false,
+        "help": "For example a fan oven, a 30-litre mixer or an air fryer.",
+        "max": 300
+      },
+      {
+        "id": "allergens",
+        "label": "Allergen and dietary facts you have checked",
+        "type": "longtext",
+        "required": false,
+        "help": "We copy these exactly. We do not decide what is safe.",
+        "max": 2000
+      },
+      {
+        "id": "style",
+        "label": "House style or voice",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "search_phrase",
+        "label": "For blog posts: main search phrase",
+        "type": "text",
+        "required": false,
+        "max": 120
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_format",
+        "text": "Each recipe is in the format asked for, with every standard part.",
+        "weight": 4,
+        "pass_rule": "Each recipe has a name, yield, prep and cook time, equipment, an ingredient list and numbered method; kitchen versions add portion size and plating notes; blog posts add a headnote under 120 words and tips; the recipe count matches the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_recipe_only",
+        "text": "Ingredients, amounts, times and temperatures come from the buyer's notes, and no health or safety claim is added.",
+        "weight": 5,
+        "pass_rule": "Every ingredient, amount, time and temperature appears in the notes or follows from scaling or conversion that is shown; no ingredient is added or swapped without a [suggested] label; no health, nutrition or 'free-from' claim appears unless the brief gives it word for word; unclear amounts are marked [check].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "maths_right",
+        "text": "Scaling and conversions are correct and shown.",
+        "weight": 4,
+        "pass_rule": "Scaled amounts equal the original times the stated factor, rounded to measurable amounts; conversions use standard factors (such as 1 cup of water is about 240 ml and 180 °C is about 350 °F) and note when weight per cup varies by ingredient; the factor and rounding rule are stated at the top; salt, yeast, timings and pan size are flagged when scaling.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "cookable_steps",
+        "text": "A cook can follow the method without guessing.",
+        "weight": 4,
+        "pass_rule": "Ingredients are listed in the order used; each step has one or two actions and a time or a doneness cue such as colour, texture or temperature; oven temperature and pan size are stated; storage and reheating notes are included when the notes give them.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain kitchen words.",
+        "weight": 3,
+        "pass_rule": "Steps start with a verb; sentences are mostly under 20 words; less common terms such as fold or blind bake are explained once; no hype words such as 'perfect' or 'best ever'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "recipes",
+        "unit": "recipe",
+        "included": 3,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a recipe editor. Write up the recipes below from my notes in a clear, standard layout: name, yield, prep and cook time, equipment, ingredients in order of use with exact amounts in the units I ask for, and numbered steps with times, temperatures and doneness cues. If I ask you to scale or convert, show the factor and keep the maths right, and flag salt, yeast, timings and pan size. Do not add or swap ingredients without labelling them as suggestions, and do not make health, nutrition or allergen claims I have not given. List anything I should test or check.",
+    "not_for": [
+      "Nutrition analysis, diet plans, or health and medical claims",
+      "Allergen, food safety or food labelling sign-off",
+      "Recipes copied from cookbooks, websites or other cooks",
+      "Food photography or styling",
+      "Menu costing and prices (see the costing, margin and break-even job)",
+      "Home canning or preserving methods that need tested safety times"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_bakery_cards",
+        "text": "Write up 3 of my bakery's recipes as cards for our website: cardamom buns, brown butter blondies and a sourdough focaccia. My rough notes with weights are pasted. Metric and US cups, for home bakers.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_scale",
+        "text": "Scale our tomato soup from 4 litres to 20 litres for a new 30-litre kettle, and our scone recipe from 12 scones to 60. Our kitchen recipes are pasted. Metric. Show the maths.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_kitchen_cards",
+        "text": "Standard recipe cards for our 6 cafe brunch dishes so all 4 cooks make them the same. Notes, portion sizes and plating described in words are pasted, with the allergen list we have checked.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_blog_post",
+        "text": "Recipe blog post for my one-pan lemon orzo with chicken. My notes are pasted. Main search phrase: one pan lemon orzo. Include a headnote, tips and 4 FAQs. US cups.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_meal_kit",
+        "text": "Meal kit recipe cards for 5 of our Spice Route kits, front and back, 8 steps at most each. Notes and kit contents are pasted. Customers have one pan and an oven.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_fix",
+        "text": "Check and fix my 4 recipes (pasted). Testers said the method for the pie is confusing and the cookie amounts look wrong since I converted them to cups.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "recipe writing",
+      "recipe card",
+      "recipe template",
+      "recipe editor",
+      "scale a recipe",
+      "recipe scaling",
+      "recipe conversion",
+      "cups to grams",
+      "standard recipe",
+      "kitchen recipe cards",
+      "food blog recipe post",
+      "meal kit recipe card",
+      "cookbook recipes",
+      "recipe write-up",
+      "recipe testing notes"
+    ],
+    "demand_sources": [
+      {
+        "note": "Kristin Donnelly's survey of 50 recipe developers: half charge at least $250 per recipe without a photo, and testers charge about $100 to $150 per test.",
+        "url": "https://kristindonnelly.squarespace.com/journal/2022/11/19/what-to-charge-for-recipe-development-and-testing"
+      }
+    ]
+  },
+  {
+    "id": "book-description-and-author-copy",
+    "title": "Book description, back cover blurb or author bio",
+    "summary": "The words that sell your book: a back cover blurb, an online store description, taglines, a series page, an author bio or text for store page extras.",
+    "area": "marketing",
+    "deliverable": "Copy from your book's facts, at the length each place needs: a back cover blurb of 150 to 200 words; an online description with a hook line and short paragraphs; three taglines; an author bio in three lengths; a series page; or store page extra text. Two versions of the main piece and a list of claims to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Back cover blurb",
+          "Online store book description",
+          "Taglines and a one-line pitch",
+          "Author bio in three lengths",
+          "Series description page",
+          "Store page extra content text",
+          "Query letter pitch paragraph for agents",
+          "Full set for one book (blurb, description, taglines, bio)"
+        ]
+      },
+      {
+        "id": "books",
+        "label": "How many books?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 5
+      },
+      {
+        "id": "book_facts",
+        "label": "About the book",
+        "type": "longtext",
+        "required": true,
+        "help": "Title, genre, length, main characters or topic, setting, the main problem and the stakes. A synopsis is ideal.",
+        "max": 10000
+      },
+      {
+        "id": "readers",
+        "label": "Who reads books like this?",
+        "type": "text",
+        "required": true,
+        "help": "For example fans of cosy village mysteries.",
+        "max": 300
+      },
+      {
+        "id": "comparable",
+        "label": "Books or authors yours is like",
+        "type": "list",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "proof",
+        "label": "Reviews, quotes or awards you may use",
+        "type": "list",
+        "required": false,
+        "help": "Only real ones you have permission to use.",
+        "max": 10
+      },
+      {
+        "id": "author_facts",
+        "label": "About you, for a bio",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "where",
+        "label": "Where will it appear?",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Back cover",
+          "Amazon or another online store",
+          "Your website",
+          "Goodreads",
+          "Press or event listing",
+          "Retailer catalogue"
+        ]
+      },
+      {
+        "id": "secrets",
+        "label": "What must stay secret?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current blurb or description",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_lengths",
+        "text": "Each piece asked for is there, at the right length.",
+        "weight": 4,
+        "pass_rule": "A back cover blurb is 150 to 200 words; an online description opens with a one-line hook and is 150 to 300 words; there are at least three taglines, each under 15 words; a bio comes in about 25, 75 and 150 words; two versions of the main piece are given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "book_facts_only",
+        "text": "Every plot point, claim, review and credential comes from the brief.",
+        "weight": 5,
+        "pass_rule": "Each character, event, setting, topic, review quote, award, sales figure and author credential appears in the brief; 'bestselling' or 'award-winning' is used only if the brief says so; comparable titles are only those the brief lists.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "hooks_without_spoilers",
+        "text": "It hooks readers of the genre without giving away the ending.",
+        "weight": 4,
+        "pass_rule": "Nothing listed as secret appears; fiction copy names the main character, the problem and the stakes and stops before the climax; nonfiction copy names the reader's problem and what the book helps them do; the tone matches the genre in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_paste",
+        "text": "Ready to paste into the place it will appear.",
+        "weight": 3,
+        "pass_rule": "Online descriptions use paragraphs of 1 to 3 sentences and note which line to bold; there is no HTML unless the brief asks for it; a series page lists the books in the reading order given; a query paragraph is under 250 words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "vivid_and_plain",
+        "text": "Clear, vivid words without clichés.",
+        "weight": 3,
+        "pass_rule": "No phrases such as 'a rollercoaster ride', 'unputdownable', 'you won't be able to put it down' or 'in a world where'; sentences are mostly under 22 words; questions are used no more than twice.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "books",
+        "unit": "book",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a book marketing copywriter. Using only the facts I give about my book, write the pieces I ask for: a back cover blurb of 150 to 200 words, an online store description with a one-line hook and short paragraphs, three taglines under 15 words, and an author bio in short, medium and long versions. For fiction, name the main character, the problem and the stakes, but do not give away the ending or anything I mark as secret. For nonfiction, name the reader's problem and what the book helps them do. Do not call the book bestselling or award-winning unless I say so, and do not invent reviews.",
+    "not_for": [
+      "Fake reviews, invented praise or false bestseller claims",
+      "Writing, editing or ghostwriting the book itself",
+      "Cover design, formatting or uploading to stores",
+      "Sending queries to agents or pitches for you",
+      "Book launch campaigns and ads (see the email sequence and paid ads jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_cosy_mystery",
+        "text": "Back cover blurb and Amazon description for my cosy mystery The Marmalade Murders, book 1. Retired teacher Bea Lyle finds the jam judge dead at the village show in Little Hartwell, and her niece is the main suspect. 72,000 words. Readers: fans of M.C. Beaton. Synopsis pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_nonfiction",
+        "text": "Online description and taglines for my nonfiction book Cash Calm, a plain guide to running the money side of a one-person business. 180 pages. Readers: new freelancers. I am a bookkeeper with 15 years of experience.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_bio",
+        "text": "Author bio in three lengths. I write fantasy for teens, I taught secondary English for 12 years, I live in Cardiff with two dogs, and my first book, The Glass Tide, came out in March.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_series",
+        "text": "Series page for my 4-book space opera series The Drift. Book order and one-line summaries are pasted. Readers like The Expanse. Keep the twist in book 3 secret.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_picture_book",
+        "text": "Full set for my picture book Otto Can't Sleep: back cover text under 60 words for parents, a store description, taglines and a bio. Ages 3 to 5. Facts pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_rewrite",
+        "text": "Rewrite my current Amazon description (pasted). It is one long paragraph that gives away the ending. Second-chance romance set in a Cornish bakery.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "book blurb",
+      "back cover copy",
+      "book description",
+      "amazon book description",
+      "kdp description",
+      "author bio",
+      "series page",
+      "book tagline",
+      "logline",
+      "query letter",
+      "book marketing copy",
+      "self publishing",
+      "indie author",
+      "novel blurb",
+      "nonfiction book description"
+    ],
+    "demand_sources": [
+      {
+        "note": "Writer's Weekly's author services marketplace sells back cover copy for $150 and book descriptions at $3 per book page.",
+        "url": "https://marketplace.writersweekly.com/?p=1272"
+      }
+    ]
+  },
+  {
+    "id": "freelance-profile-and-bid-replies",
+    "title": "Freelance profile, service listing or bid replies",
+    "summary": "Your profile on a freelance marketplace, service listings with packages, or short replies to job posts, all written from your real skills, work and prices.",
+    "area": "sales",
+    "deliverable": "A profile with a headline, an overview that opens with the client's problem, skills and portfolio blurbs; or service listings with a title, description, three packages with clear limits and FAQs; or bid replies, each written for one pasted job post with one matching proof point and a question; or a reusable bid template library.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Marketplace profile (Upwork, Fiverr, Malt, PeoplePerHour or similar)",
+          "Service or gig listings with packages",
+          "Replies to job posts I paste",
+          "Bid template library for my common jobs",
+          "Portfolio project blurbs",
+          "Messages after a job: review request and repeat work"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Each profile, listing, bid reply or blurb counts as one. Base price covers three.",
+        "max": 12
+      },
+      {
+        "id": "platform",
+        "label": "Which platform?",
+        "type": "text",
+        "required": true,
+        "help": "Name it, with any length limits you know.",
+        "max": 200
+      },
+      {
+        "id": "skills_work",
+        "label": "Your skills, past work and results",
+        "type": "longtext",
+        "required": true,
+        "help": "Real projects, clients you may name, tools and numbers.",
+        "max": 10000
+      },
+      {
+        "id": "clients",
+        "label": "Clients you want",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "job_posts",
+        "label": "Job posts to reply to",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste each post. Remove the client's personal details.",
+        "max": 15000
+      },
+      {
+        "id": "prices",
+        "label": "Your prices or rates",
+        "type": "text",
+        "required": false,
+        "help": "We use your prices. We do not set them.",
+        "max": 400
+      },
+      {
+        "id": "proof",
+        "label": "Reviews or results you may quote",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "limits",
+        "label": "What you do not do",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_pieces",
+        "text": "Each piece asked for is there and fits the platform.",
+        "weight": 4,
+        "pass_rule": "The piece count matches the brief; a profile has a headline under 70 characters, an overview and a skills list; listings have a title, description, three packages with what is included, delivery time and revisions, and FAQs; each bid reply is matched by name or number to one pasted job post; platform limits given in the brief are met.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_work_only",
+        "text": "Every skill, client, result, review and price comes from the brief.",
+        "weight": 5,
+        "pass_rule": "Each client name, project, tool, number, review and price appears in the brief; no badge, rating, certification or years of experience is added; package prices are the buyer's or [your price].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "client_first_bids",
+        "text": "Bids answer the client's post, not a generic pitch.",
+        "weight": 4,
+        "pass_rule": "Each bid's first line refers to a specific detail in that job post; each bid has one proof point from the brief that fits the post, a short first step and one question; bids are under 150 words unless the brief sets another limit; no two bids share the same opening line.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "honest_terms",
+        "text": "Scope and limits are clear and honest.",
+        "weight": 3,
+        "pass_rule": "Packages state what is not included and how many revisions; there is no promise of rankings, sales or results the brief does not support; nothing asks the client to pay or talk off the platform.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain, confident words a busy client can scan fast.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 20 words; no 'hard-working', 'expert in everything' or similar filler; paragraphs are short; profiles and listings describe the problem in the client's words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 3,
+        "per_unit_usd": 12
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a successful freelancer who writes profiles and proposals. Using only my real skills, work and prices, write the pieces I ask for on the platform I name. For a profile: a headline under 70 characters, an overview that starts with the client's problem, a skills list and short portfolio blurbs. For listings: a title, a description, three packages with what is included, what is not, delivery time and revisions, and FAQs. For bid replies: one per job post, under 150 words, starting with a detail from that post, with one matching proof point, a first step and one question. Do not add ratings, badges, clients or results I did not give, and never suggest working or paying off the platform.",
+    "not_for": [
+      "Fake reviews, ratings, badges or invented clients",
+      "Getting round platform rules, fees or payments",
+      "Sending bids or logging in to your account",
+      "Setting your prices for you (packages are built around your prices)",
+      "Bulk copy-and-paste bids for posts nobody has read"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_upwork",
+        "text": "Upwork profile and 3 bid templates. I am a bookkeeper using Xero and QuickBooks, 8 years, mostly cafes and salons. I cleaned up 14 months of books for a salon in 3 weeks. I want monthly clients in the UK. My rate is £35 an hour.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_fiverr",
+        "text": "Two Fiverr gig listings with 3 packages each: logo design, and brand kits for small food businesses. My past work and prices are pasted. I do not do websites or print setup.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_bids",
+        "text": "Replies to these 5 job posts (pasted) for a WordPress developer. My work: 40 WordPress sites, WooCommerce stores and speed fixes, with examples and results pasted. Keep each reply under 120 words.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_portfolio",
+        "text": "Portfolio blurbs for 6 projects on my Contra profile: product photography for 6 small brands. Facts and results for each are pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_template_library",
+        "text": "Bid template library for my Spanish to English translation work. 6 templates for my common jobs: website pages, brochures, app text, subtitles, product listings and urgent jobs. My background and rates are pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_after_job",
+        "text": "Messages after a job on PeoplePerHour: a review request and a repeat-work message for 4 recent clients. What I did for each is pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "upwork profile",
+      "fiverr gig",
+      "gig description",
+      "freelance profile",
+      "upwork proposal",
+      "bid writing",
+      "upwork cover letter",
+      "proposal template",
+      "peopleperhour",
+      "malt profile",
+      "contra profile",
+      "freelance packages",
+      "portfolio description",
+      "freelancer bio",
+      "job post reply"
+    ],
+    "demand_sources": [
+      {
+        "note": "MBO Partners' State of Independence research reports a record 74.9 million Americans earning income independently.",
+        "url": "https://www.mbopartners.com/state-of-independence/"
+      }
+    ]
+  }
+]

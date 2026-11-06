@@ -1,0 +1,213 @@
+[
+  {
+    "id": "branching-scenario-script",
+    "title": "Branching scenario script for practice",
+    "summary": "A choose-your-path practice scenario for one hard conversation or decision, with feedback for every choice, a map of all paths and build notes for your tool.",
+    "area": "learning",
+    "deliverable": "Learning goals; a cast and setting; a script of numbered scenes with 3 to 6 decision points, 2 to 4 choices each, a consequence and feedback for every choice and an ending for every path; a Mermaid map of all paths; a score or debrief guide; and build notes for Twine, Rise, Storyline or live role-play.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Hard conversation for managers or staff",
+          "Customer service or complaint call",
+          "Sales or discovery call",
+          "Safety or rule-following decision on the job",
+          "Data, privacy or AI safe-use decision",
+          "Turn my linear role-play into a branching scenario",
+          "Twine (Twee) file of a scenario I already have"
+        ]
+      },
+      {
+        "id": "scenarios",
+        "label": "How many scenarios?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 4
+      },
+      {
+        "id": "situation",
+        "label": "The situation to practise",
+        "type": "longtext",
+        "required": true,
+        "help": "Who is involved, what has happened and what a good outcome looks like.",
+        "max": 4000
+      },
+      {
+        "id": "learners",
+        "label": "Who are the learners?",
+        "type": "text",
+        "required": true,
+        "help": "Their role, how experienced they are and where they will take it.",
+        "max": 400
+      },
+      {
+        "id": "material",
+        "label": "Your rules, policy or method",
+        "type": "longtext",
+        "required": false,
+        "help": "The steps, policy wording or approach the right answers must follow. Paste your current script if converting one.",
+        "max": 20000
+      },
+      {
+        "id": "mistakes",
+        "label": "Common mistakes people make",
+        "type": "longtext",
+        "required": false,
+        "help": "These become the tempting wrong choices.",
+        "max": 3000
+      },
+      {
+        "id": "tool",
+        "label": "Where will it run?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Twine",
+          "Articulate Storyline",
+          "Articulate Rise",
+          "Another authoring tool",
+          "PowerPoint or Google Slides",
+          "Live role-play with a facilitator",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "length",
+        "label": "How long should one play-through take?",
+        "type": "text",
+        "required": false,
+        "help": "For example 10 minutes.",
+        "max": 100
+      },
+      {
+        "id": "tone",
+        "label": "Tone and setting details",
+        "type": "text",
+        "required": false,
+        "help": "Names to use or avoid, workplace setting, how formal the talk is.",
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "full_branching_script",
+        "text": "The scenario is complete, with real choices and an ending on every path.",
+        "weight": 5,
+        "pass_rule": "Each scenario has 3 to 6 decision points with 2 to 4 choices each; every choice leads to a named scene or ending; no path stops without an ending; scene and choice ids in the script match the Mermaid map exactly.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "follows_buyer_material",
+        "text": "Right answers follow the buyer's own rules, policy or method.",
+        "weight": 5,
+        "pass_rule": "Every step, rule or policy point that makes a choice right or wrong appears in the brief's material or situation; anything added is marked [confirm with your team]; no legal, medical or HR rulings are given as fact.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "feedback_every_choice",
+        "text": "Every choice has a realistic consequence and feedback that explains why.",
+        "weight": 4,
+        "pass_rule": "Each choice shows what the other person says or does next and a one to three sentence feedback note naming the skill or rule involved; wrong choices are tempting mistakes from the brief or common practice, not silly options.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_playable",
+        "text": "Lines sound like real speech and screens are short.",
+        "weight": 3,
+        "pass_rule": "Dialogue lines are under 40 words and written as people talk; each scene is under 120 words; the stated play time fits the length in the brief; terms such as node or passage are explained once.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "build_and_debrief",
+        "text": "It can be built in the named tool and debriefed afterwards.",
+        "weight": 4,
+        "pass_rule": "Build notes match the tool in the brief (valid Twee passage syntax for Twine, slide and trigger notes for Storyline, block notes for Rise, or facilitator cues for live role-play); a score or debrief guide lists the 3 to 5 points to discuss.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "scenarios",
+        "unit": "extra scenario",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an instructional designer who writes branching practice scenarios. From the situation, learners, rules and common mistakes I give, write one choose-your-path scenario. Set out 2 to 4 learning goals, then numbered scenes with 3 to 6 decision points. Give each decision 2 to 4 realistic choices, including the tempting mistakes I listed. For every choice, write what the other person says or does next and short feedback that says why it was a good or poor move, using only my rules. Make sure every path reaches an ending. Add a Mermaid flowchart whose ids match the scene ids, a short debrief guide, and build notes for the tool I name (valid Twee if it is Twine). Keep dialogue short and natural, and mark anything not in my material as [confirm with your team].",
+    "not_for": [
+      "Building or publishing the scenario inside your authoring tool or LMS",
+      "Legal, medical or HR rulings written into the right answers",
+      "Scenarios that mock or stereotype real groups of people",
+      "Real names or personal details of staff or customers",
+      "Filmed video production or voice recording",
+      "A whole course or module (see the training module content job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "New team leaders at our call centre need to practise telling an agent their sick days have reached our review trigger. Our absence policy steps are pasted. The agent gets upset and mentions a family problem. 10 minutes, built in Articulate Rise.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Turn our linear role-play for handling a customer who wants a refund outside our 30-day window into a branching scenario. Our refund rules and the current script are pasted. We run it live in training with a facilitator.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A scenario for warehouse pickers: a colleague asks you to skip the forklift exclusion zone to save time on a busy shift. Our site rules are pasted. Make it playable in Twine and give us the Twee file.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our office staff keep pasting client data into free AI tools. Write a branching scenario where someone is under deadline pressure and decides what to do with a client spreadsheet. Our AI rules are pasted. Storyline build notes please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Sales discovery call practice for new reps at our accounting software company. The buyer is a busy practice owner who says 'just send me pricing'. Our discovery questions are pasted. Two scenarios, 8 minutes each.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "branching scenario",
+      "scenario-based learning",
+      "choose your own path training",
+      "twine",
+      "twee",
+      "articulate storyline",
+      "articulate rise",
+      "role-play practice",
+      "decision tree training",
+      "soft skills elearning",
+      "hard conversation practice",
+      "interactive scenario"
+    ],
+    "demand_sources": [
+      {
+        "note": "The US Bureau of Labor Statistics projects employment of training and development specialists to grow 11% from 2025 to 2035, with about 46,000 openings a year.",
+        "url": "https://www.bls.gov/ooh/business-and-financial/training-and-development-specialists.htm"
+      },
+      {
+        "note": "eLearning Industry's guide says branching scenarios give learners practical experience and can be built on a tight budget with templates and freelancers.",
+        "url": "https://elearningindustry.com/top-tips-creating-branching-scenarios-budget"
+      }
+    ]
+  }
+]

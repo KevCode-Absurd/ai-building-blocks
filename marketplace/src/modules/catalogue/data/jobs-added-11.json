@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "product-feed-audit-and-fix-file",
+    "title": "Product feed audit with a fix file",
+    "summary": "Your Google Merchant Center or Meta catalogue feed checked from your exports, with each disapproval explained and a CSV of fixes ready to upload as a supplemental feed.",
+    "area": "ecommerce",
+    "deliverable": "A fix list ranked by how many products each issue blocks, with cause, fix and where to make it; title and attribute rules with before and after rows; a supplemental feed CSV for the rows you paste; and feed rule steps for your feed tool. Anything the export cannot settle is marked for you to check.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full feed audit with a fix list",
+          "Fix list from Merchant Center diagnostics",
+          "Title and attribute rewrite rules",
+          "Supplemental feed CSV for missing attributes",
+          "Feed rules spec for your feed tool",
+          "Meta catalogue feed check",
+          "Feed for a new channel (Microsoft, Pinterest, TikTok)"
+        ]
+      },
+      {
+        "id": "rows",
+        "label": "How many product rows do you paste?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 50 rows, up to 200. Rules from the sample apply to the rest of your feed.",
+        "max": 200
+      },
+      {
+        "id": "feed_export",
+        "label": "Feed export or sample rows (CSV)",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the header row and the product rows. Remove cost prices if you prefer.",
+        "max": 60000
+      },
+      {
+        "id": "diagnostics",
+        "label": "Diagnostics or disapproval export",
+        "type": "longtext",
+        "required": false,
+        "help": "From Merchant Center or Commerce Manager: issue, attribute, item IDs and counts.",
+        "max": 30000
+      },
+      {
+        "id": "channels",
+        "label": "Channels",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Google Shopping",
+          "Meta catalogue",
+          "Microsoft Shopping",
+          "Pinterest",
+          "TikTok catalogue"
+        ]
+      },
+      {
+        "id": "platform",
+        "label": "Store platform",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Shopify",
+          "WooCommerce",
+          "BigCommerce",
+          "Magento",
+          "Squarespace or Wix",
+          "Other"
+        ]
+      },
+      {
+        "id": "feed_tool",
+        "label": "Feed app or tool",
+        "type": "text",
+        "required": false,
+        "help": "Such as the Shopify Google & YouTube app, DataFeedWatch, Channable or none.",
+        "max": 200
+      },
+      {
+        "id": "countries",
+        "label": "Countries and currency you sell in",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "title_rules",
+        "label": "Title style or words you must keep",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "ranked_fixes",
+        "text": "Every issue is listed, explained and ranked.",
+        "weight": 5,
+        "pass_rule": "Each issue type in the diagnostics or found in the sample rows appears once with the number of items affected, the cause, the fix and where to make it (store data, feed tool or supplemental feed); issues are ranked by items affected.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_data",
+        "text": "Only the buyer's product data is used.",
+        "weight": 5,
+        "pass_rule": "Every GTIN, brand, size, colour, material, price and ID in the fix file comes from the brief's rows; missing values are left blank and listed, never guessed; no identifier is made up; sale or shipping details appear only if the brief's data shows them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "valid_file",
+        "text": "The fix file is valid and ready to upload.",
+        "weight": 5,
+        "pass_rule": "The supplemental feed is one CSV code block with a header row of attribute names the named channel accepts (such as id, title, gtin, color, size), one row per product, consistent quoting, and IDs that match the brief's rows exactly.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "rules_carry_over",
+        "text": "Rules carry over to the rest of the feed.",
+        "weight": 4,
+        "pass_rule": "Title and attribute rules state a pattern (such as Brand + Product type + Key attribute + Size + Colour), give at least 3 before-and-after examples from the brief's rows, and say how to set them up in the named feed tool or store.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Feed terms such as GTIN, MPN and supplemental feed are explained once; steps are numbered; policy points are stated as general guidance with a note to check the channel's current policy; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "rows",
+        "unit": "row",
+        "included": 50,
+        "per_unit_usd": 1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce product feed specialist. From the feed rows and diagnostics below, list every issue once with the number of products affected, the cause, the fix and where to make it (store data, feed tool or a supplemental feed), ranked by products affected. Write title and attribute rules as a pattern per product type with at least three before-and-after examples from my rows. Then give a supplemental feed as one CSV code block with valid attribute names for my channel, one row per product, IDs matching my rows exactly, and only values found in my data; leave unknowns blank and list them. Never invent GTINs, brands or sizes. Explain feed terms once and note that channel policies change, so I should check the current rules.",
+    "not_for": [
+      "Logging in to Merchant Center, Commerce Manager or your store",
+      "Inventing GTINs, brands or product facts",
+      "Suspension appeals or ways round a channel's product policy",
+      "Running or changing your ad campaigns (see the single channel growth plan job)",
+      "Your store's own category tree and filters (see the store catalogue structure job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_diag",
+        "text": "Merchant Center diagnostics export pasted for Little Fern Knits (Shopify, Google & YouTube app). 412 products, 96 disapproved: 61 missing GTIN, 22 image too small, 13 price mismatch. 80 sample rows pasted. Give me a ranked fix list and a supplemental feed for the GTIN items where our rows show a barcode.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_titles",
+        "text": "Our 1,800 car parts have titles like 'BRK-PAD-0441'. A sample of 60 rows is pasted with brand, part type, fitment (make, model, years) and position. Write title rules for Google Shopping and rewrite the 60 rows as a CSV. Feed tool: DataFeedWatch.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_meta",
+        "text": "Meta catalogue for Ember & Ash hot sauce: 24 products with variants. Commerce Manager says 9 items are rejected and 15 are missing recommended fields. Export pasted. What do we fix first?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_apparel",
+        "text": "Women's clothing store on WooCommerce selling in the UK and Ireland. 150 sample rows pasted. Sizes and colours are only inside the title, and gender and age group are missing. Give me rules and a supplemental feed with color, size, gender and age_group for these rows.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_pinterest",
+        "text": "We run Google Shopping already and want to send the same 300-product feed to Pinterest. Header and 40 rows pasted. What changes? Give me a mapping table and a test CSV for the 40 rows.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_price",
+        "text": "13 items show a price mismatch from the page crawl in Merchant Center. The rows and the prices we see on the store are pasted. We run sales with compare-at prices in Shopify. What is the likely cause and the fix?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "product feed",
+      "google merchant center",
+      "merchant center errors",
+      "disapproved products",
+      "feed audit",
+      "shopping feed",
+      "supplemental feed",
+      "gtin",
+      "missing gtin",
+      "feed rules",
+      "meta catalogue",
+      "catalog feed",
+      "product titles",
+      "feed optimisation",
+      "datafeedwatch",
+      "channable",
+      "price mismatch"
+    ],
+    "demand_sources": [
+      {
+        "note": "US Census Bureau: online retail sales were $340.2 billion in Q2 2026, 17.1% of all retail sales.",
+        "url": "https://www.census.gov/retail/ecommerce.html"
+      },
+      {
+        "note": "Upwork's 2026 fastest-growing skills list, reported by Staffing Industry Analysts, shows e-commerce management up 130%.",
+        "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
+      }
+    ]
+  },
+  {
+    "id": "ai-answer-visibility-check",
+    "title": "AI answer visibility check and fix plan",
+    "summary": "A question set and tracking sheet to see whether ChatGPT, Gemini, Perplexity and Google's AI Overviews name your business, plus a plan to fix what they get wrong.",
+    "area": "marketing",
+    "deliverable": "Buyer questions to ask each AI tool, a tracking sheet (CSV) and a run guide; a read of any answers you paste; a fact fix list across your site and listings; a plan for answer-first pages AI tools can quote; and, if asked, a map of the sources they cite. You run the checks; nobody can promise a ranking.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Question set and tracking sheet",
+          "Read-out of answers you collected",
+          "Fact consistency fix list (site, listings, directories)",
+          "Answer-first service and FAQ page plan",
+          "Comparison and alternatives page plan",
+          "Map of sources AI tools cite in your field",
+          "Light version of all of the above"
+        ]
+      },
+      {
+        "id": "questions_count",
+        "label": "How many buyer questions to track?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 20, up to 50.",
+        "max": 50
+      },
+      {
+        "id": "business",
+        "label": "Your business: what you sell, where and to whom",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "questions",
+        "label": "Questions buyers ask",
+        "type": "list",
+        "required": false,
+        "help": "In their words, such as 'best emergency plumber in Leeds' or 'X vs Y for small teams'.",
+        "max": 50
+      },
+      {
+        "id": "facts",
+        "label": "Your facts as they should appear",
+        "type": "longtext",
+        "required": false,
+        "help": "Name, address, phone, hours, services, prices you publish, and awards you can show.",
+        "max": 4000
+      },
+      {
+        "id": "answers",
+        "label": "AI answers you collected",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the question, the tool, the date and the answer text, with any cited links.",
+        "max": 40000
+      },
+      {
+        "id": "listings",
+        "label": "Your listings and key pages",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the text of your Google Business Profile, directory entries and key pages.",
+        "max": 20000
+      },
+      {
+        "id": "competitors",
+        "label": "Competitors buyers compare you with",
+        "type": "list",
+        "required": false,
+        "max": 10
+      },
+      {
+        "id": "market",
+        "label": "Market",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Local service area",
+          "One country",
+          "Several countries"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_questions",
+        "text": "The question set covers how buyers really ask.",
+        "weight": 4,
+        "pass_rule": "The question set has the number of questions in the brief, grouped by intent (best, near me, comparison, price, how to choose), each in a buyer's words; the tracking sheet is a CSV code block with date, tool, question, named or not, position, facts correct and sources cited.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_results",
+        "text": "No invented answers, rankings or facts.",
+        "weight": 5,
+        "pass_rule": "Every statement about what an AI tool says quotes an answer pasted in the brief with its tool and date; with no answers pasted, the draft makes no claim about current visibility; business facts come only from the brief; nothing promises that a tool will name the business.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "specific_fixes",
+        "text": "Fixes are specific and tied to evidence.",
+        "weight": 5,
+        "pass_rule": "Each fix names the page or listing, the field or sentence to change, the correct value from the brief and the reason (mismatch, missing fact, no direct answer); fixes are ranked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_methods",
+        "text": "Only honest methods.",
+        "weight": 4,
+        "pass_rule": "The plan uses accurate facts, answer-first pages, structured data and real listings or reviews; it has no fake reviews, paid mentions passed off as independent, hidden text or invented awards; review and listing steps are marked as the buyer's to carry out.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Terms such as AI Overviews, citation and schema are explained once; steps are numbered; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "questions_count",
+        "unit": "question",
+        "included": 20,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an AI search visibility specialist. Write a set of buyer questions in buyers' own words, grouped by intent, for my business, and a tracking sheet as a CSV code block (date, tool, question, named or not, position, facts correct, sources cited) with a short guide so I can ask each AI tool the same way every month. If I paste AI answers, read them and quote each with its tool and date; if I paste none, make no claim about my current visibility. Compare my facts across my site and listings and list every mismatch with the exact fix. Plan answer-first pages that state the answer in the first two sentences, using only my facts. Use honest methods only, mark review and listing steps as mine to do, and never promise that a tool will name my business.",
+    "not_for": [
+      "Running the AI checks for you or logging in to your accounts",
+      "Guarantees that any AI tool will name or recommend you",
+      "Fake reviews, planted posts or paid mentions passed off as independent",
+      "Medical, legal or financial claims you cannot back",
+      "A full SEO audit from crawl data (see the SEO audit job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_plumber",
+        "text": "Harbourside Plumbing, emergency and boiler work in Bristol, 6 engineers. 20 questions please, such as 'best emergency plumber Bristol'. Our facts, Google Business Profile text and 3 directory listings are pasted. Our phone number is different on one directory.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_saas",
+        "text": "Plotline, project software for architecture firms. We want to track 30 buying questions like 'best project management for architects' and 'Plotline vs Monograph'. Competitors listed. We sell in the US and UK.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_readout",
+        "text": "We asked ChatGPT, Gemini and Perplexity 15 questions on 3 October and pasted every answer. Our clinic, Brightsmile Dental in Leeds, appears in 4. Two answers give our old address. What do we fix first?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_pages",
+        "text": "Plan 10 answer-first service and FAQ pages for Greenway Pest Control in Kent: wasps, mice, rats, bedbugs and moles. Our facts, from-prices and service areas are pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_sources",
+        "text": "Which kinds of pages do AI tools cite for 'best payroll software for small UK firms'? We pasted 12 answers with their cited links. Give us an honest plan to be listed where we fit. We're Tidal Payroll.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_moved",
+        "text": "Our cafe, Corner Table, moved in March. The text of our website, Google profile and 5 listings is pasted. Give us a fact consistency fix list with the exact wording for each.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ai search",
+      "aeo",
+      "geo",
+      "answer engine optimisation",
+      "generative engine optimisation",
+      "chatgpt visibility",
+      "ai overviews",
+      "perplexity",
+      "gemini",
+      "llm visibility",
+      "ai citations",
+      "brand in ai answers",
+      "local ai search",
+      "faq pages",
+      "nap consistency",
+      "ai answer tracking"
+    ],
+    "demand_sources": [
+      {
+        "note": "Pew Research Center found Google users clicked a regular search result in 8% of visits when an AI summary appeared, against 15% when none appeared.",
+        "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+      }
+    ]
+  },
+  {
+    "id": "video-edit-plan-from-transcript",
+    "title": "Video edit plan from your transcript",
+    "summary": "A cut plan for a recorded talk, interview, podcast or webinar: timecoded edits, short clips with hooks, captions, B-roll and music notes, and chapters.",
+    "area": "design",
+    "deliverable": "An edit decision list with in and out timecodes, what to keep, cut or tighten and why; a clip list with in and out points, length, hook text and on-screen text; B-roll, pacing and music cues by timecode; chapters and a description; and an SRT per clip if asked. Built from your timed transcript and notes only.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Edit decision list for the full video",
+          "Short clips with hooks (Reels, Shorts, TikTok)",
+          "Tighten a long talk or webinar",
+          "Podcast video edit plan",
+          "Interview or testimonial cut",
+          "Chapters, title and description",
+          "Full plan: edit list, clips, captions and chapters"
+        ]
+      },
+      {
+        "id": "minutes",
+        "label": "Length of the recording in minutes",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 30 minutes, up to 60. For longer recordings, send parts.",
+        "max": 60
+      },
+      {
+        "id": "transcript",
+        "label": "Timed transcript",
+        "type": "longtext",
+        "required": true,
+        "help": "From Descript, Riverside, YouTube, Otter or similar, with timestamps. We cannot watch the video.",
+        "max": 60000
+      },
+      {
+        "id": "goal",
+        "label": "Where it will go and what viewers should do",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "clips",
+        "label": "How many short clips?",
+        "type": "number",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "shot_notes",
+        "label": "Shot and footage notes",
+        "type": "longtext",
+        "required": false,
+        "help": "Cameras, angles, B-roll you have, slides shown, and known mistakes.",
+        "max": 6000
+      },
+      {
+        "id": "tool",
+        "label": "Editing app",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "CapCut",
+          "Premiere Pro",
+          "Descript",
+          "DaVinci Resolve",
+          "Final Cut Pro",
+          "Riverside",
+          "Other"
+        ]
+      },
+      {
+        "id": "target_length",
+        "label": "Target length for the main edit",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "style",
+        "label": "Caption, brand and music style",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "timecodes_from_source",
+        "text": "Every timecode comes from the transcript.",
+        "weight": 5,
+        "pass_rule": "Every in and out point uses timestamps in the brief's transcript, or falls between two of them and is marked approximate; clip lengths are stated and match their in and out points; the draft says it worked from the transcript and notes, not from watching the video.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "faithful",
+        "text": "Speakers' words and meaning are kept.",
+        "weight": 5,
+        "pass_rule": "Clips and captions quote the transcript's words; hook text and titles claim nothing the speakers did not say; no planned cut joins phrases in a way that changes a speaker's meaning, such as dropping a 'not' or a condition.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "editor_ready",
+        "text": "An editor can cut it without guessing.",
+        "weight": 4,
+        "pass_rule": "The edit list is a table with number, in, out, action and reason; each clip has in, out, length, hook text, on-screen text and aspect ratio; B-roll and music cues name the timecode; any SRT is valid with numbered cues and HH:MM:SS,mmm times relative to the clip.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clips_stand_alone",
+        "text": "Clips stand alone and hook fast.",
+        "weight": 4,
+        "pass_rule": "Each clip starts on a line that makes sense without context, makes its point in the first 3 seconds or carries a hook line on screen, ends on a complete thought and fits the platform length named.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Plain notes.",
+        "weight": 3,
+        "pass_rule": "Editing terms such as J-cut or B-roll are explained once; notes are short; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "minutes",
+        "unit": "minute",
+        "included": 30,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a video editor planning a cut from a timed transcript, without seeing the video. Say that at the top. Build an edit decision list as a table (number, in, out, keep, cut or tighten, reason) using only timestamps in my transcript, and never join phrases in a way that changes what someone meant. Find the short clips I ask for: each starts on a line that makes sense alone, makes its point in the first 3 seconds, ends on a full thought, and fits the platform; give in, out, length, hook text, on-screen text and aspect ratio. Add B-roll, pacing and music cues by timecode using only footage I list. Write chapters with timestamps and a short description. If I ask for captions, give a valid SRT per clip with clip-relative times.",
+    "not_for": [
+      "Watching or editing video files (we work from your timed transcript and notes)",
+      "Transcribing audio (paste a timed transcript)",
+      "Deepfakes, voice cloning or changing what someone said",
+      "Clips of people, footage or music you have no rights to use",
+      "Storyboards for videos not yet filmed (see the storyboard job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_webinar",
+        "text": "Timed transcript of our 52-minute webinar 'Pricing for florists' pasted from Descript. Speakers Dana and Joe. I want a 20-minute tightened version for YouTube, 8 short clips for Reels, chapters and a description. We edit in Descript.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_podcast",
+        "text": "Podcast 'Second Shift', episode 41, 38 minutes, two cameras (host and guest). Riverside transcript pasted. Plan the video edit and 6 vertical clips with hook text. Our captions are yellow on black in Montserrat.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_testimonial",
+        "text": "Raw 24-minute customer interview for Birchwood Kitchens. Transcript pasted. Cut a 90-second testimonial and three 20-second clips. B-roll we have: the kitchen before and after, fitting day, and the family at the table.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_talk",
+        "text": "My 18-minute conference talk on cash flow for cafes, transcript with timestamps pasted. I stumble twice and repeat one story. Give me an edit list for a clean 14-minute version and chapters for YouTube.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_stream",
+        "text": "Live stream, 60 minutes, transcript pasted. Find the 10 best clips for TikTok and Shorts, under 45 seconds each, with hook text and an SRT for each clip.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_qa",
+        "text": "Recorded Q&A from our yoga teacher training, 30 minutes, transcript pasted. 5 clips that each answer one common question, with the question as on-screen text. No health claims beyond what the teacher said.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "video editor",
+      "edit decision list",
+      "edl",
+      "video edit plan",
+      "clip finder",
+      "short clips",
+      "reels clips",
+      "youtube shorts",
+      "podcast clips",
+      "webinar edit",
+      "talk edit",
+      "chapters",
+      "timestamps",
+      "b-roll notes",
+      "capcut",
+      "descript",
+      "repurpose video"
+    ],
+    "demand_sources": [
+      {
+        "note": "Upwork's 2026 skills lists, reported by Staffing Industry Analysts, put video editing among the most in-demand design skills and AI video generation and editing as the fastest growing, up 329%.",
+        "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
+      }
+    ]
+  },
+  {
+    "id": "business-form-design",
+    "title": "Printable or online business form",
+    "summary": "A job sheet, order form, inspection form, intake or feedback form people fill in right first time: printable HTML or a field list for Google Forms, Jotform or Typeform.",
+    "area": "design",
+    "deliverable": "The form's purpose, sections and every field with label, type, options, required or optional, check rule and help text. Printable forms come as one complete HTML file with print CSS. Online forms come as a build table for your tool. Redesigns get before and after notes and a short list of how to check the form.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Printable form (HTML and CSS)",
+          "Online form field list (Google Forms, Jotform, Typeform, Microsoft Forms)",
+          "Form redesign with before and after notes",
+          "Job sheet or work order",
+          "Order or booking form",
+          "Inspection or check form",
+          "Customer intake or feedback form",
+          "Set of related forms"
+        ]
+      },
+      {
+        "id": "forms",
+        "label": "How many forms?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to 5.",
+        "max": 5
+      },
+      {
+        "id": "purpose",
+        "label": "What the form is for and who fills it in",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "fields",
+        "label": "What you need to capture, or your current form",
+        "type": "longtext",
+        "required": true,
+        "help": "List the information, or paste the text of the form you use now.",
+        "max": 10000
+      },
+      {
+        "id": "where",
+        "label": "How it is filled in",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Printed and filled by hand",
+          "On a tablet or phone",
+          "On a computer",
+          "Both print and online"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Form tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Google Forms",
+          "Jotform",
+          "Typeform",
+          "Microsoft Forms",
+          "Tally",
+          "HTML page",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "layout",
+        "label": "Paper size and brand",
+        "type": "text",
+        "required": false,
+        "help": "Such as A4, logo top left, colours #1565C0 and #FFFFFF.",
+        "max": 300
+      },
+      {
+        "id": "rules",
+        "label": "Checks and rules",
+        "type": "text",
+        "required": false,
+        "help": "Such as job number format, minimum order or required photos.",
+        "max": 800
+      }
+    ],
+    "rubric": [
+      {
+        "id": "all_fields",
+        "text": "Every piece of information in the brief has a field.",
+        "weight": 5,
+        "pass_rule": "Each item the brief says to capture maps to a field with label, type, options, required or optional and a check rule; fields are grouped in the order the person fills them in.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "only_what_is_needed",
+        "text": "Only what the business needs, and nothing invented.",
+        "weight": 5,
+        "pass_rule": "No field asks for card numbers, passwords, health, ID or bank details unless the brief gives a reason; legal, consent or terms text appears only as a marked placeholder such as [your approved wording]; names, prices and codes come from the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "works_as_built",
+        "text": "The form works as delivered.",
+        "weight": 5,
+        "pass_rule": "A printable form is one complete HTML file with CSS in a style block, an @page rule with paper size and margins, writing spaces at least 8 mm tall, and no outside files except a marked logo placeholder; an online form is a build table using only field types the named tool offers.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "easy_to_fill",
+        "text": "Easy to fill in right the first time.",
+        "weight": 4,
+        "pass_rule": "Each label is a plain question or noun; help text appears where mistakes are likely; repeated answers use tick boxes or lists instead of free text; a short 'how to check this form' list is included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Labels and notes use plain words; any form term such as validation or conditional logic is explained once; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "forms",
+        "unit": "form",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a business forms designer. Design the form below so people fill it in right the first time. List every field in the order it is filled in, with label, type, options, required or optional, check rule and help text, and cut anything the business does not need. Never ask for card numbers, passwords, health, ID or bank details unless I give a reason, and leave any legal or consent text as [your approved wording]. For a printable form, give one complete HTML file with CSS in a style block, an @page rule for the paper size, writing spaces at least 8 mm tall and a logo placeholder. For an online form, give a build table using field types my tool offers, with any show-if rules. Add a short list of how to check the form.",
+    "not_for": [
+      "Legal terms, consent wording or contracts (we leave a marked space for your approved text)",
+      "Forms that collect card numbers, passwords or bank logins",
+      "Medical, legal or government forms that need an expert or an official layout",
+      "Building the form in your account or connecting it to other apps",
+      "Checklists and scorecards with nothing to fill in (see the checklist and job aid job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_jobsheet",
+        "text": "A4 job sheet for Brightline Plumbing engineers: customer, address, job number (BL-0000), arrival and finish times, work done, parts used (up to 8 lines), photos taken (tick), customer signature. Printed in pads. Blue #1565C0 logo top left.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_order",
+        "text": "Online wholesale order form in Jotform for Kettle & Crumb: cafe name, delivery day (Tuesday to Saturday), 14 products with pack sizes (list pasted), minimum order £60 and notes. It must stop orders under the minimum.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_redesign",
+        "text": "Our client intake form for Fernway Physio (pasted) comes back half-filled. Redesign it for Google Forms with before and after notes. The health questions stay exactly as our physios wrote them; we just want it easier to complete.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_vans",
+        "text": "Weekly van inspection form for Pedal & Pine's 3 delivery vans: tyres, lights, mirrors, fluids, damage, mileage, driver name and date. Printed and kept in the van. A5 portrait.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_feedback",
+        "text": "Feedback form for our cooking classes at Little Kitchen: 6 questions, a 1 to 5 rating and a 'may we quote you' tick box. Filled on a tablet at the door, in Typeform.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_set",
+        "text": "Three related forms for Sunny Days Childminding: an enquiry form, a booking form and a printable daily handover sheet for parents. Our facts and what each must capture are pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "form design",
+      "printable form",
+      "job sheet",
+      "work order form",
+      "order form",
+      "inspection form",
+      "intake form",
+      "feedback form",
+      "google forms",
+      "jotform",
+      "typeform",
+      "form fields",
+      "html form",
+      "fillable form",
+      "booking form"
+    ],
+    "demand_sources": [
+      {
+        "note": "Upwork's 2026 skills lists, reported by Staffing Industry Analysts, put data entry among the most in-demand admin support skills.",
+        "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
+      },
+      {
+        "note": "YunoJuno rate data: freelance graphic designers average $57 an hour (about £348 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/graphic-designer"
+      }
+    ]
+  },
+  {
+    "id": "product-tech-pack",
+    "title": "Product tech pack for a factory",
+    "summary": "A tech pack a factory can quote and sample from: a garment, bag or simple physical product with measurements, materials, construction, grading and a quote request.",
+    "area": "design",
+    "deliverable": "A written flat sketch brief, measurement chart with how to measure and tolerances, grading table, bill of materials with trims, labels and packing, construction notes, colourways, a request-for-quote email and a sample review sheet. Values you have not given are marked [to confirm], never guessed.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Garment tech pack",
+          "Bag or accessory tech pack",
+          "Simple physical product spec sheet",
+          "Measurement chart and size grading only",
+          "Bill of materials only",
+          "Factory quote request and sample review sheet",
+          "Update a tech pack after a sample"
+        ]
+      },
+      {
+        "id": "styles",
+        "label": "How many styles or products?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to 4.",
+        "max": 4
+      },
+      {
+        "id": "product",
+        "label": "The product: what it is, who it is for, how it should look and work",
+        "type": "longtext",
+        "required": true,
+        "max": 6000
+      },
+      {
+        "id": "measurements",
+        "label": "Measurements you have",
+        "type": "longtext",
+        "required": false,
+        "help": "From a sample you like or your pattern maker. Say the unit.",
+        "max": 6000
+      },
+      {
+        "id": "materials",
+        "label": "Materials, trims and labels",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "sizes",
+        "label": "Size range and base size",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "quantity",
+        "label": "First order quantity and target cost",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "factory",
+        "label": "Factory or country, if known",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "sample_notes",
+        "label": "Notes from a sample or your current tech pack",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "complete_pack",
+        "text": "Every section a factory needs is present.",
+        "weight": 5,
+        "pass_rule": "For the piece chosen the draft has: a flat sketch brief (front and back described), a measurement chart with points of measure, how to measure and tolerances, a grading table, a bill of materials (item, material, colour, size, placement, quantity), construction notes, colourways, labels and packing, and the quote request.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_specs",
+        "text": "No invented measurements, materials or claims.",
+        "weight": 5,
+        "pass_rule": "Every measurement, fabric, composition, weight and supplier comes from the brief or is marked [to confirm]; grading increments are labelled as suggestions to confirm with a pattern maker; no certification, fibre or origin claim appears unless the brief gives it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "consistent_numbers",
+        "text": "Numbers are consistent and usable.",
+        "weight": 4,
+        "pass_rule": "One unit is stated and used throughout; every point of measure in the grading table appears in the measurement chart with a tolerance; size columns match the brief's size range.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "factory_ready",
+        "text": "A factory can quote and sample from it.",
+        "weight": 4,
+        "pass_rule": "The quote request lists quantity, target cost if given, sizes, colours, sample needs and questions (minimum order, lead time, sample cost); the sample review sheet has columns for spec, measured, difference and pass or fail.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Terms such as point of measure, BOM, MOQ and grading are explained once; notes are short; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "styles",
+        "unit": "style",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a garment technologist and product developer. Write a tech pack a factory can quote and sample from for the product below. Include a written flat sketch brief (front and back), a measurement chart with points of measure, how to measure each one and tolerances, a grading table across my sizes, a bill of materials (item, material, colour, size, placement, quantity), construction notes, colourways, labels and packing, a request-for-quote email with questions on minimum order, lead time and sample cost, and a sample review sheet. Use one unit throughout. Use only the measurements and materials I give; mark anything else [to confirm] and label grading increments as suggestions. Make no fibre, origin or certification claim I did not give.",
+    "not_for": [
+      "Drawing flat sketches or CAD files (you get a written sketch brief)",
+      "Pattern making or grading signed off by a pattern maker",
+      "Safety, flammability, children's product or labelling law sign-off",
+      "Finding or vetting factories (see the vendor comparison job)",
+      "Copying another brand's product"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_hoodie",
+        "text": "Tech pack for one heavyweight hoodie for our podcast merch, sizes S to XXL, base size M. Measurements from a sample we like are pasted in cm. 400 gsm cotton fleece, kangaroo pocket, no drawcord, woven neck label and a care label. First order 150 units.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_tote",
+        "text": "Bag tech pack for Totewell: a canvas tote 38 x 42 x 10 cm with an inside zip pocket and 70 cm handles. 12 oz cotton canvas, 2 colourways, 500 units. We have a factory contact and need a quote request email.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_polo",
+        "text": "Polo shirt for our 40 cafe staff at Olive & Oak: sizes XS to 3XL, embroidered logo on the left chest 60 mm wide, colour olive #6B7B3A. We need the measurement chart, grading and a quote request.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_update",
+        "text": "The first sample of our kids' raincoat came back. Notes pasted: sleeves 2 cm short in size 6, pocket flap too small, the zip pull scratches. Update the tech pack (pasted) and write the sample comments for the factory.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_stand",
+        "text": "Spec sheet for a wooden phone stand from our workshop design: oak, 120 x 80 x 70 mm, 3 angle slots and felt pads. 300 units from a small joinery. The design is described in words.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_bom",
+        "text": "Bill of materials for our 3 leggings styles: fabric, waistband elastic, thread, care label, size label, hang tag and polybag. Details pasted. Sizes XS to XL.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "tech pack",
+      "garment tech pack",
+      "spec sheet",
+      "measurement chart",
+      "size grading",
+      "bill of materials",
+      "bom",
+      "factory rfq",
+      "request for quote",
+      "sample review",
+      "apparel production",
+      "manufacturer brief",
+      "product specification",
+      "points of measure",
+      "merch production"
+    ],
+    "demand_sources": [
+      {
+        "note": "O*NET: fashion designers write specifications such as colour schemes, construction, material types and accessory needs; 32,700 were employed in the US in 2025, with a median wage of $38.92 an hour.",
+        "url": "https://www.onetonline.org/link/summary/27-1022.00"
+      },
+      {
+        "note": "Upwork's 2026 skills lists, reported by Staffing Industry Analysts, put product and industrial design among the most in-demand design skills.",
+        "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
+      }
+    ]
+  },
+  {
+    "id": "tour-and-audio-guide-script",
+    "title": "Tour or audio guide script",
+    "summary": "A walking tour, tasting, site tour or audio guide scripted stop by stop, with stories from your sources, timings, directions and notes for guides.",
+    "area": "content",
+    "deliverable": "A route and stop list with timings, then for each stop: where to stand, what to point at, the script in a speaking voice, a story from your sources, a question for the group and the walk to the next stop. Audio guides get a numbered track list with lengths. Plus guide notes and a short listing blurb.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Walking tour script",
+          "Audio guide script with track list",
+          "Tasting tour of a winery, brewery or farm",
+          "Museum, gallery or heritage site tour",
+          "Factory or workshop tour",
+          "Guide training notes for an existing tour",
+          "Kids' or family version of a tour"
+        ]
+      },
+      {
+        "id": "stops",
+        "label": "How many stops or tracks?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 10, up to 30.",
+        "max": 30
+      },
+      {
+        "id": "length",
+        "label": "Total tour length",
+        "type": "text",
+        "required": true,
+        "help": "Such as 90 minutes, or 2 to 3 minutes per audio track.",
+        "max": 100
+      },
+      {
+        "id": "sources",
+        "label": "Your facts and stories",
+        "type": "longtext",
+        "required": true,
+        "help": "History, people, dates and stories from sources you trust. We use only these.",
+        "max": 40000
+      },
+      {
+        "id": "route",
+        "label": "Route and stops in order",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "audience",
+        "label": "Who joins the tour",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "Tone and guide style",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "access",
+        "label": "Access, safety and timing notes",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "language",
+        "label": "Language",
+        "type": "text",
+        "required": false,
+        "help": "We write in one language and add notes for translators.",
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "every_stop",
+        "text": "Every stop is scripted in order and the tour fits its time.",
+        "weight": 4,
+        "pass_rule": "The stop count matches the brief; each stop has where to stand, what to look at, the script, timing and the walk to the next stop; stop times plus walking times add up to the total length within 10%.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sourced",
+        "text": "Only the buyer's facts and stories.",
+        "weight": 5,
+        "pass_rule": "Every date, name, number and story comes from the brief's sources; anything uncertain in the sources is told as uncertain ('said to be'); there are no invented legends, quotes or history; claims about food or drink stay within the brief's facts.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "speakable",
+        "text": "Written to be spoken.",
+        "weight": 4,
+        "pass_rule": "Script lines are short and spoken, at about 130 to 150 words a minute for the time given; each stop opens by pointing at something the group can see; audio tracks state their length and word count.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "practical_safe",
+        "text": "Practical for guides and safe for groups.",
+        "weight": 4,
+        "pass_rule": "Guide notes cover the meeting point, timings, rest or toilet stops if given, access and crossing warnings from the brief, a wet-weather or shorter route, and what to do if the group runs late.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Scripts and notes use plain words for the audience named; any specialist term is explained in the script; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "stops",
+        "unit": "stop",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a tour guide and script writer. Write the tour below stop by stop using only my sources. First give the route with minutes at each stop and walking minutes between, adding up to my total length. For each stop, say where to stand and what to point at, then write the script in a speaking voice at about 130 to 150 words a minute, with one story from my sources, one question for the group and the walk to the next stop. Tell anything uncertain as uncertain and invent no legends, quotes or dates. For an audio guide, number the tracks and give each a length and word count. Add guide notes: meeting point, timings, access and safety notes from my brief, a wet-weather or shorter route, and what to do if the group runs late.",
+    "not_for": [
+      "Researching history from sources you have not given",
+      "Recording audio or building an audio guide app",
+      "Health claims about food or drink, or alcohol content for under-age groups",
+      "Safety plans for risky activities that need licensed review",
+      "Day-by-day travel itineraries (see the customer guide or itinerary job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_walk",
+        "text": "90-minute walking tour of Bath's Georgian streets for Lantern Walks, 9 stops, route pasted. Our guide's research notes are pasted with sources. Adults, mostly visitors. Warm and a little funny, no ghost stories.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_winery",
+        "text": "Tasting tour of Hollow Ridge Vineyard: 6 stops from the vines to the cellar to the tasting room, 75 minutes. Our winemaker's notes on the site, grapes and methods are pasted. Groups of up to 14 adults.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_audio",
+        "text": "Audio guide for the Millbrook Mill Museum: 15 tracks of 2 to 3 minutes each, for one narrator. The curator's notes are pasted. Families visit most. Track list with lengths, please.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_factory",
+        "text": "Factory tour of the Ember & Ash hot sauce kitchen, 40 minutes, 5 stops. Facts pasted. Hairnets and closed shoes are required. Script for the two staff who lead it.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_kids",
+        "text": "Kids' version, ages 7 to 11, of our 60-minute castle tour with 8 stops. The adult script and sources are pasted. More questions, fewer dates.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_training",
+        "text": "Guide training notes for our existing food tour (script pasted): timings, how to handle late bookers, questions about allergies and what to do in heavy rain.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "tour script",
+      "walking tour script",
+      "audio guide",
+      "audio tour",
+      "museum audio guide",
+      "tour guide notes",
+      "winery tour",
+      "brewery tour",
+      "factory tour",
+      "heritage tour",
+      "tour commentary",
+      "stop by stop",
+      "guided tour",
+      "tour training"
+    ],
+    "demand_sources": [
+      {
+        "note": "O*NET: 62,200 tour guides and escorts were employed in the US in 2025, with faster than average growth expected to 2035; tasks include planning tours and commentary.",
+        "url": "https://www.onetonline.org/link/summary/39-7011.00"
+      }
+    ]
+  }
+]

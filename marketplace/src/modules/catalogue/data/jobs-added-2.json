@@ -1,0 +1,3948 @@
+[
+  {
+    "id": "short-business-copy",
+    "title": "Short copy: brochure, flyer, menu, bio or listing",
+    "summary": "Finished copy for one short piece: a brochure, flyer, mailer, sign, pack, sell sheet, menu or service list, press kit, bio, profile, listing or story.",
+    "area": "content",
+    "deliverable": "Copy written to the format and space you give, panel by panel, side by side or item by item: headline, body, proof, offer and call to action, with image, QR code or reply-tracking notes. Bios come in three lengths. Two headline options and a list of facts to confirm.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece_type",
+        "label": "Which piece do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Brochure or venue sales pack",
+          "Flyer, poster or direct mail postcard or letter",
+          "Shop signs: window, A-board, shelf and counter",
+          "Pack copy or unboxing insert cards",
+          "One-pager or sell sheet",
+          "Menu, service menu or class list",
+          "Press kit or one-sheet (artist, release, speaker, podcast guest)",
+          "Bio in three lengths",
+          "Social media or LinkedIn profile",
+          "Property or holiday let listing",
+          "Project, staff or customer stories",
+          "Founder or brand story"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to six per job. Each extra flyer, listing, story or product pack is one more. A menu or list of up to 30 items is one piece.",
+        "max": 6
+      },
+      {
+        "id": "size_limits",
+        "label": "Size, panels or character limits",
+        "type": "text",
+        "required": false,
+        "help": "For example: tri-fold, 6 panels; A5 flyer; Instagram bio 150 characters; 250 words.",
+        "max": 300
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, who buys it and where you work.",
+        "max": 2000
+      },
+      {
+        "id": "facts",
+        "label": "The facts, items and prices to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Dishes, services, rooms, products, dates, prices, contact details. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "goal",
+        "label": "What should readers do next?",
+        "type": "text",
+        "required": false,
+        "help": "Call, book, visit, order, scan the QR code.",
+        "max": 300
+      },
+      {
+        "id": "proof",
+        "label": "Quotes, reviews or awards we may use",
+        "type": "list",
+        "required": false,
+        "help": "Only these will be quoted.",
+        "max": 15
+      },
+      {
+        "id": "current_copy",
+        "label": "Your current version",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "Every piece and every item asked for is there, laid out the way the format works.",
+        "weight": 5,
+        "pass_rule": "The draft has the number of pieces in the brief, labels each panel, side, section or item, and covers every dish, service, room, project or person the brief lists. Missing details are shown as [placeholders], not dropped.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Nothing is made up: every fact, price, name, quote or result comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, date, capacity, ingredient, award, credential, review, quote, client name or result appears unless it is in the brief. Any invented item fails this criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_space",
+        "text": "The copy fits the size and limits given.",
+        "weight": 4,
+        "pass_rule": "Where the brief gives a word count, character limit, panel count or size, each part stays within it and counts are shown for limited fields. Bios come in about 50, 150 and 400 words unless the brief asks for other lengths.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "offer_and_next_step",
+        "text": "Each piece says who it is for, what is on offer and what to do next.",
+        "weight": 4,
+        "pass_rule": "Each piece (not each menu item) names the subject or offer and its reader from the brief, ends with a call to action or contact line that matches the goal, and two headline or title options are given wherever the piece has a headline.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_in_voice",
+        "text": "Short, plain sentences in the buyer's voice, with no filler.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, there are no empty phrases such as 'world-class' or 'passionate about excellence', and the tone matches any voice notes or sample in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 299,
+      "size": {
+        "field": "piece_count",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a copywriter for small businesses. Write the short piece described below (for example a brochure, flyer, postcard, shop sign set, pack copy, sell sheet, menu, press kit, bio, profile, listing or story). Lay it out the way the format works: panel by panel for a brochure, front and back for a postcard or pack, item by item for a menu or service list, section by section for a one-sheet or profile. Give a headline, body, proof and a clear call to action, and add short image or layout notes. Keep to any size or character limits and show counts. For bios, give about 50, 150 and 400 word versions. Offer two headline options. Use only the facts, prices and quotes I give and mark anything missing as a [placeholder]. End with a list of facts to confirm.",
+    "not_for": [
+      "Design, layout or print-ready files",
+      "Invented reviews, awards, credentials, quotes or prices",
+      "Health, eco, safety or legal claims you cannot prove, or medical, legal or financial advice",
+      "Legal sign-off on food labels, allergens or packaging rules",
+      "Long brochures over 8 pages or whole websites (see the website page copy job)",
+      "Ads or emails (see the paid ads copy set and email jobs)",
+      "Posting to your profiles or listing sites, or logging in to them",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Tri-fold brochure (6 panels) for Harbourside Physio in Whitby. Services: sports massage, back pain clinic, post-surgery rehab. Sessions 45 minutes, 55 pounds. Open Monday to Saturday, 8am to 7pm, 14 Quay Street. Audience: adults 40 to 70 with aches and stiffness. Goal: call 01947 600 112 to book.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Menu descriptions for Little Fig, a 30-seat brunch cafe. 14 dishes and 6 drinks (list pasted with ingredients and prices). We bake our own sourdough and use eggs from Hollins Farm two miles away. Want each description under 20 words plus one header line about us. Warm, a bit cheeky.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Three bios for our folk duo The Marsh Hens: 50, 150 and 400 words, plus a one-line listing description. We formed in 2019 in Norwich, released two EPs (Low Tide 2021, Salt Roads 2024), played Cambridge Folk Festival 2025. Quotes from BBC Radio Norfolk we may use are pasted. Voice: plain, a little dry.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A5 flyer and a direct mail postcard for Greenleaf Lawn Care. Offer: first spring cut free when you book 10 cuts from 28 dollars each, areas 98101 to 98109 only, ends 30 April. Audience: homeowners with small yards. Add a QR code note and a way to track replies (use code SPRING10).",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Airbnb listing title and description for our cabin 'Pine Hollow' near Asheville. Sleeps 4, 2 bedrooms, wood stove, hot tub, 12 minutes to downtown, gravel road (4x4 not needed). House rules: no parties, no pets, quiet after 10pm. Title max 50 characters.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "LinkedIn profile rewrite for me, Priya Nair, a freelance payroll consultant for UK firms with 10 to 80 staff. 11 years at two payroll bureaus, CIPP qualified. Goal: get enquiries from finance managers. Need headline (220 characters max), about section and experience bullets. Current profile pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "brochure copy",
+      "flyer copy",
+      "postcard",
+      "direct mail",
+      "menu descriptions",
+      "service menu",
+      "class descriptions",
+      "sell sheet",
+      "one pager",
+      "press kit",
+      "artist bio",
+      "speaker bio",
+      "linkedin profile",
+      "instagram bio",
+      "listing description",
+      "airbnb listing",
+      "packaging copy",
+      "signage copy",
+      "founder story",
+      "staff stories",
+      "portfolio write-ups"
+    ],
+    "demand_sources": [
+      {
+        "note": "Talo's brochure cost guide says professional writers charge $200 to $500 to write the copy for a flyer or brochure, since most firms write their own.",
+        "url": "https://talo.com/costs/brochure-design-costs"
+      },
+      {
+        "note": "Copywriting rate guide lists brochure or flyer copy at $300 to $1,500 a project, varying with page count and design work.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "periodic-kpi-report",
+    "title": "Weekly or monthly KPI report from your numbers",
+    "summary": "A short report from the numbers you supply: what changed, why it matters and what to decide, for owners, boards, funders, landlords or clients.",
+    "area": "operations",
+    "deliverable": "A one to two page report: a five-line summary; your key numbers against last period and target; a red, amber or green status and a plain comment on each; what moved and why; top risks; and three actions or decisions. Adds a simple forecast, agenda or board questions if you ask.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "report_type",
+        "label": "Which report do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Business KPI report",
+          "Board, partner or trustee finance pack",
+          "Weekly leadership or operations review",
+          "Marketing report",
+          "Revenue or subscription (MRR) report",
+          "Hiring progress report",
+          "Customer support report",
+          "Customer score (NPS or CSAT) report",
+          "Financial health check or ratio sheet",
+          "Property owner report",
+          "Bookings and occupancy review",
+          "Volunteer hours and impact report"
+        ]
+      },
+      {
+        "id": "period",
+        "label": "Which period does it cover?",
+        "type": "text",
+        "required": true,
+        "help": "For example: October 2026, or the week of 3 November.",
+        "max": 100
+      },
+      {
+        "id": "numbers",
+        "label": "Your numbers",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste figures or an export for this period and the last one. Add last year if you have it.",
+        "max": 30000
+      },
+      {
+        "id": "metric_count",
+        "label": "How many numbers to report on?",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers up to 10.",
+        "max": 30
+      },
+      {
+        "id": "targets",
+        "label": "Targets or budget",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "notes",
+        "label": "What happened this period",
+        "type": "longtext",
+        "required": false,
+        "help": "Events, problems, launches, staff changes. We only give causes you tell us.",
+        "max": 4000
+      },
+      {
+        "id": "readers",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "help": "Owner, board, partners, funder, landlord, client.",
+        "max": 200
+      },
+      {
+        "id": "extras",
+        "label": "Anything to add?",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "A simple forecast for next period",
+          "A meeting agenda",
+          "Questions the board should ask",
+          "Stories or quotes I supply"
+        ]
+      },
+      {
+        "id": "template",
+        "label": "Your template or headings",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste it if a funder, board or client needs a set layout.",
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "numbers_trace",
+        "text": "Every figure comes from the brief or is worked out from it, and the sums are right.",
+        "weight": 5,
+        "pass_rule": "Each number appears in the brief or is a sum, difference, percentage or ratio of numbers in it. Recompute three changes against last period; they match. No target, benchmark or industry average appears unless the brief gives it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "right_report",
+        "text": "It is the report type asked for, for the period and readers named.",
+        "weight": 4,
+        "pass_rule": "The title names the period and report type; the report covers the numbers the brief marks as key, each shown with this period, last period and target when given; any extras ticked in the brief are included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "status_and_comment",
+        "text": "Each key number has a status and a plain comment on what moved and why.",
+        "weight": 4,
+        "pass_rule": "Each key number has red, amber or green with the rule used (for example below target) and a one or two sentence comment. Causes come from the brief's notes or are labelled as possible causes to check.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "risks_and_actions",
+        "text": "It ends with the top risks and three actions or decisions tied to the numbers.",
+        "weight": 4,
+        "pass_rule": "There are three actions or decisions (or the number asked for), each naming the number it addresses and an owner or next step, plus up to three risks drawn from the figures or notes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "short_and_plain",
+        "text": "Short, plain and quick to read.",
+        "weight": 3,
+        "pass_rule": "Opens with a summary of three to five lines; the main text is under about 900 words excluding tables; terms such as MRR, NPS or occupancy are explained on first use.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "size": {
+        "field": "metric_count",
+        "unit": "extra number",
+        "included": 10,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a business analyst who writes short reports for owners and boards. Turn the numbers below into a one to two page report for the period and readers I name. Start with a five-line summary. Then show each key number for this period, last period and target if I gave one, with the change, a red, amber or green status (say the rule you used) and a one or two sentence comment. Explain what moved and why, using only causes from my notes; mark other causes as possibilities to check. List the top risks and finish with three actions or decisions, each tied to a number. Use only my figures, check every sum, and do not add targets or benchmarks I did not give. Explain any abbreviation on first use. Not tax or investment advice.",
+    "not_for": [
+      "Audited, reviewed or official financial statements",
+      "Tax, investment or other regulated financial advice",
+      "Invented targets, benchmarks or causes",
+      "Reports meant to mislead investors, lenders, funders or owners",
+      "Funder narrative reports written mostly as prose (see the grant application job)",
+      "Building a live dashboard (see the KPI and dashboard spec job)",
+      "Logging in to your accounting, sales, booking or support systems; paste or attach exports instead",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Monthly KPI report for October 2026 for the two owners of Copper Kettle Coffee (3 cafes). Numbers pasted: sales by cafe, transactions, average spend, staff cost %, waste %, for September and October, plus targets (staff cost under 32%, waste under 4%). Notes: Leeds cafe closed 4 days for a broken espresso machine.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Weekly marketing report for week of 3 November. Spend 1,240 dollars (target 1,200), leads 61 (last week 48, target 60), cost per lead, email list 3,880 (+112), webinar sign-ups 140. We changed the Meta ad image on Tuesday. Readers: me and my sales lead. Three actions please.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Board finance report for our charity, Riverside Food Share, for Q3. Income 84,300 pounds vs budget 90,000, spend 79,100 vs 81,500, cash 61,200, unrestricted reserves 38,000 (policy says 3 months of costs, about 27,000). Add the three questions the trustees should ask.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Monthly owner report for 22 Ashgrove Road, a 6-flat building I manage. October rent due 7,650 dollars, collected 6,900 (flat 4 paid 750 late on 9 Nov). Repairs: boiler service 320, gutter clean 180. Flat 2 vacant since 15 Oct, two viewings booked. Owner wants next steps too.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Support report for October for our SaaS. Tickets 1,214 (Sept 1,030), first reply median 3h10m (target 2h), repeat contacts 14%, top reasons pasted with counts (billing 312, login 201, export bug 188). The export bug shipped 2 Oct and was fixed 17 Oct. Reader: CEO.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Subscription revenue report for September and October. Export pasted with MRR start 41,200, new 3,900, expansion 1,150, contraction 600, churned 2,450 for October and the same lines for September. Explain MRR in plain words for our two investors and add a simple forecast for November.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "kpi report",
+      "monthly report",
+      "weekly report",
+      "board pack",
+      "board report",
+      "management report",
+      "operations review",
+      "marketing report",
+      "mrr report",
+      "support report",
+      "nps report",
+      "owner report",
+      "occupancy report",
+      "impact report",
+      "financial health check",
+      "ratio analysis",
+      "red amber green",
+      "executive summary"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra listing for monthly management reporting with KPI tracking, variance commentary and recommended actions, starting at $1,500 a month.",
+        "url": "https://contra.com/s/YXql7EWP-fpanda-and-monthly-management-reporting"
+      },
+      {
+        "note": "Fractional CFO guide: a board or lender package with a one-page KPI dashboard and a short narrative is a standard deliverable in a $2,000 to $5,000 a month retainer.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "weighted-scorecard",
+    "title": "Weighted scorecard for options or a list",
+    "summary": "Clear criteria with weights, then your options (sites, markets, ideas, channels, a tender) or your list (leads, accounts, investors, shows) scored and ranked.",
+    "area": "research",
+    "deliverable": "The criteria and weights with reasons; must-haves as pass or fail gates; every option or row scored with the reason and missing data flagged; tiers or a ranked list with cut-off rules and deadlines in date order when you give them; a recommended pick, runner-up and a cheap way to check the pick; and a blank sheet to score new items.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "list_type",
+        "label": "What are you scoring?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Leads, accounts or investors to score and tier",
+          "Scoring rules only, for a list I will score later",
+          "Link, podcast or media targets",
+          "Locations or sites",
+          "Markets or customer segments to target first",
+          "Product ideas",
+          "Marketing channels",
+          "Bid or no-bid on one tender",
+          "Awards or events to enter",
+          "Tasks to automate",
+          "Risks or assumptions in an idea",
+          "Something else (say what below)"
+        ]
+      },
+      {
+        "id": "item_count",
+        "label": "How many options or rows?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 50. Up to 150 per job. A one-tender check counts as 1.",
+        "max": 150
+      },
+      {
+        "id": "items",
+        "label": "Your options or list",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the list or CSV with the facts you have about each. Remove personal emails and phone numbers.",
+        "max": 100000
+      },
+      {
+        "id": "goal",
+        "label": "What are you trying to decide?",
+        "type": "longtext",
+        "required": true,
+        "help": "The goal, budget and time frame.",
+        "max": 2000
+      },
+      {
+        "id": "must_haves",
+        "label": "Must-haves and deal-breakers",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "criteria",
+        "label": "Criteria you already use",
+        "type": "list",
+        "required": false,
+        "help": "We will add weights and reasons.",
+        "max": 15
+      },
+      {
+        "id": "tiers",
+        "label": "How should results be grouped?",
+        "type": "text",
+        "required": false,
+        "help": "For example A, B and C, or pitch, maybe and skip.",
+        "max": 200
+      },
+      {
+        "id": "context",
+        "label": "About your business",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "criteria_weighted",
+        "text": "Clear criteria with weights that add up, each with a reason.",
+        "weight": 4,
+        "pass_rule": "Lists 4 to 8 criteria, each with a weight and a one-line reason tied to the goal; weights add to 100 percent (or the stated total); must-haves from the brief are pass or fail gates, not weights.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "every_item_scored",
+        "text": "Every option or row is scored and placed, with a reason.",
+        "weight": 5,
+        "pass_rule": "The number of scored items equals the number in the brief; each has a score per criterion or a total, a short reason (or a reason code with a key for lists over 30 rows), and a tier or rank; rows missing key data are flagged, not guessed. For scoring rules only, the rules are tested on two examples.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Scores rest only on facts in the brief.",
+        "weight": 5,
+        "pass_rule": "No fact about an option (size, price, audience, traffic, funding stage, foot traffic, rival) appears unless it is in the brief; where data is missing the score is marked unknown or neutral and the gap is named.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "maths_and_pick",
+        "text": "Totals add up and the pick follows from the scores.",
+        "weight": 4,
+        "pass_rule": "Recompute three weighted totals; they match the weights and scores. Tier cut-offs are written as numbers. The pick and any runner-up are the top scorers, or the reason to differ is stated (for one option, a go or no-go against the cut-off), and a cheap check of the pick is given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "reusable_and_plain",
+        "text": "Plain words and a sheet the buyer can reuse.",
+        "weight": 3,
+        "pass_rule": "Includes a blank scoring sheet with criteria, weights and a scale that says what each score means (for example 1 to 5), so a new item can be scored the same way; no unexplained jargon.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "size": {
+        "field": "item_count",
+        "unit": "extra row or option",
+        "included": 50,
+        "per_unit_usd": 0.5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a business analyst. Build a weighted scorecard for the options or list below. First set 4 to 8 criteria that fit my goal, give each a weight (adding to 100 percent) and a one-line reason, and treat my must-haves as pass or fail gates. Then score every option or row on each criterion with a short reason, using only the facts I give; mark missing data as unknown instead of guessing. Show the weighted totals, sort the items into tiers with number cut-offs, and name a recommended pick, a runner-up and a cheap way to check the pick before I commit. Finish with a blank scoring sheet and a scale that says what each score means. Do not score people on protected traits. Not investment advice.",
+    "not_for": [
+      "Scoring people by age, sex, race, religion, disability or other protected traits",
+      "Buying, scraping or enriching lists",
+      "Facts about options that you do not supply, such as live traffic or footfall data",
+      "Investment advice or picking stocks, funds or deals to invest in",
+      "Legal advice on tenders or contracts",
+      "Side-by-side tool or supplier quotes (see the vendor comparison job)",
+      "Logging in to your CRM or other tools; paste or attach the list instead",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We make accounting software for vets. Score and tier our list of 140 vet practices (CSV pasted: practice, town, vets on staff, number of sites, current software, last contact). Must-have: 3 or more vets. Tiers A, B, C so our two reps know who to call first.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Pick the best of 4 sites for a second bakery. Facts pasted for each: rent, size, parking spaces, distance to our first shop, nearby schools and offices, rivals on the same street, lease length. Budget for rent is 3,500 dollars a month max. We sell mostly breakfast and lunch.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Score 9 product ideas for our pet supply shop: margin, cost to make, demand signals we have (search notes and customer asks pasted), risk and fit with our brand. Top three please and a cheap test for the winner.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Bid or no-bid on a council tender to run grounds maintenance for 14 schools, 3-year contract worth about 420,000 pounds. Tender summary pasted. We have 9 staff, 4 vans, and have done 2 school contracts before. Deadline 28 November. Our rule: no bid if it needs more than 2 new hires.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Score 60 podcasts we found for a guest spot for our founder (sheet pasted: show, topic, episodes, last episode date, guest style, rough audience if known). We sell HR software to firms of 50 to 500 staff. Group them into pitch now, pitch later, skip.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Investor criteria for our pre-seed raise of 600,000 dollars for a construction safety app, then score our list of 35 angels and funds (pasted with stage, cheque size, sectors, location, notes). We want UK or Ireland based, cheques of 25k to 150k.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "scorecard",
+      "decision matrix",
+      "weighted scoring",
+      "lead scoring",
+      "lead list",
+      "account tiers",
+      "abm tiers",
+      "investor list",
+      "location comparison",
+      "site selection",
+      "market selection",
+      "segment selection",
+      "product ideas",
+      "idea scoring",
+      "channel selection",
+      "bid no bid",
+      "tender decision",
+      "podcast list",
+      "link prospects",
+      "awards list",
+      "automation candidates",
+      "risk ranking",
+      "prioritise options"
+    ],
+    "demand_sources": [
+      {
+        "note": "SBA guide tells new owners to weigh customers, operating costs, zoning, taxes and incentives when they choose where to locate a business.",
+        "url": "https://www.sba.gov/business-guide/launch-your-business/pick-your-business-location"
+      },
+      {
+        "note": "Agency service page selling custom lead scoring models that score leads on fit with the ideal customer profile so sales teams know who to call first.",
+        "url": "https://www.teknicks.com/services/systems-technology/lead-scoring/"
+      }
+    ]
+  },
+  {
+    "id": "offer-package-or-programme-design",
+    "title": "Offer, package or referral programme design",
+    "summary": "A clear offer, good-better-best packages, a membership or subscription, bundles, crowdfunding rewards, or a referral, affiliate, partner or VIP programme.",
+    "area": "marketing",
+    "deliverable": "Who it is for; what is and is not included; tiers or options with plain names and prices; limits, perks or rewards; rules and payout terms; the maths, with worked examples, showing each tier or reward makes money; a one-page terms summary; and page text or invite messages, launch steps and a test to run.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "design_type",
+        "label": "What do you want designed?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "One clear offer",
+          "Offers for different buyer types",
+          "Entry, core and premium offer ladder",
+          "Good-better-best packages or plan tiers",
+          "Usage-based or per-seat pricing",
+          "Membership or subscription offer",
+          "Pilot or trial offer for early customers",
+          "Bundles and add-ons",
+          "Crowdfunding reward tiers",
+          "Customer referral scheme",
+          "Affiliate, partner or reseller programme",
+          "VIP or loyalty programme"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "What you sell now",
+        "type": "longtext",
+        "required": true,
+        "help": "Products or services, current prices and what each includes.",
+        "max": 5000
+      },
+      {
+        "id": "costs",
+        "label": "Your costs and margins",
+        "type": "longtext",
+        "required": true,
+        "help": "Cost to deliver each item, fees, shipping, staff time. We check every tier makes money.",
+        "max": 5000
+      },
+      {
+        "id": "buyers",
+        "label": "Who buys and what they want",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "goal",
+        "label": "What should this offer do?",
+        "type": "text",
+        "required": true,
+        "help": "For example: raise order value, fill quiet days, get 50 new customers.",
+        "max": 300
+      },
+      {
+        "id": "limits",
+        "label": "What you can and cannot offer",
+        "type": "longtext",
+        "required": false,
+        "help": "Capacity, the biggest discount you allow, perks you can afford.",
+        "max": 2000
+      },
+      {
+        "id": "rules",
+        "label": "Rules you must follow",
+        "type": "text",
+        "required": false,
+        "help": "Platform rules, industry rules, partner terms.",
+        "max": 600
+      },
+      {
+        "id": "rivals",
+        "label": "Rival prices and offers you know",
+        "type": "longtext",
+        "required": false,
+        "help": "Only these will be used.",
+        "max": 3000
+      },
+      {
+        "id": "show_where",
+        "label": "Where will you show it?",
+        "type": "text",
+        "required": false,
+        "help": "Website, pricing page, shop, sales calls, campaign page.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_brief",
+        "text": "It designs the offer or programme chosen, for the buyers and goal in the brief.",
+        "weight": 4,
+        "pass_rule": "Names who each tier or option is for using buyer types from the brief, says what each includes and does not include, and links the design to the stated goal.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "numbers_work",
+        "text": "The maths shows each tier, bundle or reward makes money using the buyer's costs.",
+        "weight": 5,
+        "pass_rule": "For each tier, bundle, reward or commission the draft shows price, the costs from the brief and the margin. Recompute two lines; they match. For rewards and commissions the cost per new sale is shown, and any option that loses money is flagged.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "No made-up costs, prices, rival offers, demand or results.",
+        "weight": 5,
+        "pass_rule": "Every cost, price, fee rate and rival price is from the brief or clearly labelled as an assumption to confirm; no sign-up, conversion or uplift figure is stated as fact or promised.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "clear_rules",
+        "text": "Rules, limits and terms are spelled out.",
+        "weight": 4,
+        "pass_rule": "Includes limits (caps, revisions, usage, payout timing, expiry, who qualifies) and a one-page plain terms summary; nothing is promised as unlimited beyond the capacity the brief gives.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_and_plain",
+        "text": "Plain names and honest presentation.",
+        "weight": 3,
+        "pass_rule": "Tier names and page text use plain words; no fake urgency, hidden fees, fake 'was' prices, or rewards that depend mainly on recruiting other recruiters.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an offer and pricing strategist for small businesses. Design the offer, package set or programme described below. Say who each option is for, what it includes and leaves out, and give plain names and prices. For programmes such as referral, affiliate, partner, VIP or crowdfunding rewards, set the rewards, who qualifies, limits, payout timing and fraud rules. Using only my costs, show the maths for each tier or reward: price, costs and margin, and the cost per new sale. Flag anything that loses money. Add a one-page plain terms summary, short page text, launch steps and one test to run. Use only facts I give; label anything assumed. No fake urgency, hidden fees or pyramid-style rewards. Not legal or tax advice.",
+    "not_for": [
+      "Price-fixing with rivals, or deceptive pricing",
+      "Legal contracts, terms of service or partner agreements (you get a plain summary for your lawyer)",
+      "Tax, VAT or other regulated financial advice",
+      "Pyramid or misleading reward schemes",
+      "Rewards for reviews where platform rules or law ban them",
+      "Full research into rival prices (see the pricing research job)",
+      "Setting up the offer in your shop, billing or affiliate software, or logging in to it",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Good-better-best packages for my wedding photography. Now I sell one package at 2,400 dollars (8 hours, 400 photos, online gallery). Costs: second shooter 350, album 280 at cost, editing about 20 hours. Couples want smaller weekday options too. Goal: raise average booking to 2,800.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A refer-a-friend scheme for Spark Bright Cleaning. Average regular client pays 85 pounds a fortnight, gross margin 38%. We lose about 1 in 5 new clients in the first two months. Want rewards for both sides, limits, fraud rules and the ask messages after the third clean.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Membership offer for our climbing gym. Now day passes are 18 dollars and a 10-pass is 150. 1,100 visits a month, 60% weekday evenings. Staff cost per extra member is near zero, but we are full on Saturdays. Want one to three levels with limits and a check the numbers add up.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Affiliate programme for our 49 dollar online course on bookkeeping for freelancers. Course fee after payment fees: 46.80. Refund rate 6%. We want bloggers and accountants to promote it. Need commission rate with maths, cookie window, payout rules, approval rules and a one-page terms summary.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Bundles and add-ons for our candle shop. 12 scents, 3 sizes (costs and prices pasted). Average order 34 pounds, shipping costs us 4.20 per order. Free shipping over 40. Goal: get average order over 45. Need five bundles with price, margin, page text and where to show each.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Crowdfunding reward tiers for a foldable bike pannier. Unit cost 31 dollars at 1,000 units, 24 at 3,000. Platform fee 5% plus 3% card fees. Shipping US 9, EU 16. Target 60,000 dollars. Want 5 to 8 tiers with early bird limits and add-ons, all making money after fees.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "offer design",
+      "irresistible offer",
+      "packages",
+      "pricing tiers",
+      "good better best",
+      "service packages",
+      "membership offer",
+      "subscription offer",
+      "pilot offer",
+      "bundles",
+      "add-ons",
+      "referral program",
+      "refer a friend",
+      "affiliate program",
+      "partner program",
+      "reseller program",
+      "vip program",
+      "loyalty program",
+      "crowdfunding rewards",
+      "kickstarter tiers",
+      "pricing page",
+      "per seat pricing",
+      "usage based pricing"
+    ],
+    "demand_sources": [
+      {
+        "note": "Mercury's guide to pricing a consulting business explains flat, tiered and retainer packages and says each needs a clear scope, exclusions and payment terms.",
+        "url": "https://mercury.com/blog/pricing-strategy-consulting"
+      },
+      {
+        "note": "Constant Contact survey of 854 consumer-facing small businesses, reported by Fox Business: 82% said new customers find them through referrals.",
+        "url": "https://www.foxbusiness.com/features/survey-small-businesses-say-customer-loyalty-is-key"
+      }
+    ]
+  },
+  {
+    "id": "deal-account-or-negotiation-plan",
+    "title": "Plan for one deal, key account or negotiation",
+    "summary": "A plan for one live deal, key account, renewal, at-risk customer, stuck case, or a negotiation with a buyer, supplier or lender, with the messages to send.",
+    "area": "sales",
+    "deliverable": "The situation; who is involved, what each likely cares about, who sways whom and who you have not met; risks; your goal, walk-away point and what you can trade; their likely position; a dated action plan or shared close plan with owners; growth ideas for key accounts; and the messages for each step, with a point-by-point reply to their terms.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "plan_type",
+        "label": "What do you need a plan for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Win plan for a live deal",
+          "Shared close plan with the buyer",
+          "Restart a stalled deal",
+          "Key account or success plan",
+          "Save an at-risk customer",
+          "Renewal plan for a customer",
+          "Negotiation with a buyer",
+          "Counter-offer reply to their terms",
+          "Supplier price talk or contract renewal",
+          "Talk with your lender",
+          "Payment plan for a customer who owes you",
+          "Stuck customer issue"
+        ]
+      },
+      {
+        "id": "account_count",
+        "label": "How many deals or accounts?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to five per job. A batch of renewals counts each customer.",
+        "max": 5
+      },
+      {
+        "id": "situation",
+        "label": "What is happening",
+        "type": "longtext",
+        "required": true,
+        "help": "History, recent emails or call notes, what has been said so far.",
+        "max": 15000
+      },
+      {
+        "id": "people",
+        "label": "The people involved",
+        "type": "longtext",
+        "required": true,
+        "help": "Names or roles, what each does, and what you know about each.",
+        "max": 4000
+      },
+      {
+        "id": "numbers",
+        "label": "The numbers and terms on the table",
+        "type": "longtext",
+        "required": true,
+        "help": "Price, volume, contract length, amount owed, current terms.",
+        "max": 4000
+      },
+      {
+        "id": "goal",
+        "label": "What would a good outcome be?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "limits",
+        "label": "What you can and cannot offer",
+        "type": "longtext",
+        "required": false,
+        "help": "Your walk-away point and things you could give.",
+        "max": 3000
+      },
+      {
+        "id": "their_terms",
+        "label": "Their latest offer or message",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "dates",
+        "label": "Key dates",
+        "type": "text",
+        "required": false,
+        "help": "Deadlines, renewal date, board meeting, quarter end.",
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "How you like to come across",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "uses_only_brief",
+        "text": "Every person, number, date and term comes from the brief, and the numbers add up.",
+        "weight": 5,
+        "pass_rule": "No name, role, price, discount, date, contract term or fact about the other side appears unless the brief gives it; guesses about what someone cares about are labelled 'likely' and tied to a note; any payment schedule adds up to the amount in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "position_clear",
+        "text": "Goal, walk-away point and possible trades are stated.",
+        "weight": 4,
+        "pass_rule": "States the goal, a walk-away or fallback (from the brief, or marked for the buyer to set), and at least three trades or offers ranked by cost to give and value to the other side, all inside the limits in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "dated_actions",
+        "text": "A dated action plan with owners.",
+        "weight": 5,
+        "pass_rule": "Lists next steps in order, each with an owner (name or role from the brief) and a date or week, ending at the outcome in the brief; every date falls before any deadline the brief gives.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "messages_ready",
+        "text": "Messages or talking points are ready to send or say.",
+        "weight": 4,
+        "pass_rule": "Each step that involves contact has a message or talking points under 150 words for the right person, using the plan's numbers; for counter-offers every term in their message gets a reply.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_and_plain",
+        "text": "Honest tactics and plain words.",
+        "weight": 3,
+        "pass_rule": "No false deadlines, bluffs about rival offers the brief does not mention, threats or pressure; plain words; for each account in a batch the plan is clearly separated.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "account_count",
+        "unit": "extra deal or account",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a deal and negotiation coach for small businesses. Using only my notes below, write a plan for this one deal, account, renewal, at-risk customer, stuck issue or negotiation. Sum up the situation. Map the people involved and what each likely cares about, marking guesses as likely. List the risks. State my goal, my walk-away point and at least three things I could trade, ranked by what they cost me and what they are worth to the other side. Describe their likely position. Give a dated action plan with an owner for each step, ending at the outcome I want, and write the message or talking points for each step. If I pasted their terms, reply to each point. Keep every number and date from my notes, check any payment schedule adds up, and use honest tactics only. Not legal or financial advice.",
+    "not_for": [
+      "Negotiating, calling or sending messages for you",
+      "Deceptive, high-pressure or threatening tactics",
+      "Legal advice on contracts, debt recovery or insolvency",
+      "Regulated advice on loans, insurance, debt or investments",
+      "A general price-talk or objection guide for all deals (see the objection handling guide job)",
+      "Logging in to your CRM, inbox or bank; paste notes instead",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Win plan for a 38,000 dollar a year deal with Halden Logistics for our route planning software. Champion: Maria (ops manager). Their CFO, Dan, has not joined a call. IT wants a security review. They are also trialling a rival. Notes from 4 calls pasted. Goal: signed by 15 December.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Supplier price talk. Our flour supplier, Millbrook, wants a 12% rise from January. We buy about 9 tonnes a month at 640 pounds a tonne, on 30-day terms, 4 years with them. A rival quoted 655 a tonne but needs 60-day notice to switch. Want a plan, a walk-away point and an opening email.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Save plan for our biggest client, Tilly's Garden Centres (3 sites, 2,100 dollars a month for our marketing retainer). Their new marketing head, Owen, said results are 'flat' and the contract ends 31 January. Results pasted. We can offer a free month of extra ads or a cheaper plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Renewal plans for 4 customers whose contracts end in Q1 (details pasted: plan, price, usage, last support issue, contacts). Customer 3 had a 2-day outage in August. We want to raise prices 6% where usage is up. Timeline from 90 days out and messages for each step.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "A customer, Bayview Dental, owes us 7,200 dollars across three invoices for cleaning services, now 75 days late. The practice manager says cash is tight after a flood. We could accept 6 monthly payments. Need a kind payment plan offer with dates and what happens if a date is missed.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Counter-offer reply. Buyer at Norcross Hotels sent their terms for 140 bed frames: 18% discount, 90-day payment, free delivery to 5 sites, penalty of 2% per late week. Our list price is 310 each, we can do 8% off and 45 days. Their message is pasted. Reply point by point and plan the next call.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "deal plan",
+      "deal strategy",
+      "win plan",
+      "mutual action plan",
+      "close plan",
+      "stalled deal",
+      "stakeholder map",
+      "account plan",
+      "key account",
+      "customer success plan",
+      "save plan",
+      "at risk customer",
+      "renewal plan",
+      "negotiation plan",
+      "negotiation prep",
+      "counter offer",
+      "supplier negotiation",
+      "price increase",
+      "lender meeting",
+      "payment plan",
+      "escalation plan",
+      "walk away point"
+    ],
+    "demand_sources": [
+      {
+        "note": "Consulting cost guide: small businesses pay on average $2,500 to $7,500 per consulting project, with boutique firms charging up to $300 an hour.",
+        "url": "https://breakthrough3x.com/resources/how-much-do-business-growth-consultants-cost-a-breakdown-by-business-size-and-service-type"
+      }
+    ]
+  },
+  {
+    "id": "single-channel-growth-plan",
+    "title": "Plan for one marketing channel, paid or organic",
+    "summary": "A plan for one channel: Google, Meta, LinkedIn or TikTok ads, TikTok Shop, Pinterest, YouTube, email, Reddit, your own community, Amazon or AI search.",
+    "area": "marketing",
+    "deliverable": "Channel goal and fit; set-up in the channel's own structure (campaigns, ad groups and keywords, audiences, boards, series or a send calendar); budget split; week-by-week or month-by-month actions; content or creative needs; a launch checklist; the numbers to track; and the first tests.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "channel",
+        "label": "Which channel?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Google search ads",
+          "Google Shopping or Performance Max",
+          "Meta ads (Facebook and Instagram), including retargeting",
+          "LinkedIn ads",
+          "TikTok ads or TikTok Shop",
+          "Pinterest",
+          "YouTube",
+          "Email",
+          "Reddit or other online communities",
+          "Your own community (launch or relaunch)",
+          "Amazon",
+          "AI search (being named by AI assistants)"
+        ]
+      },
+      {
+        "id": "plan_length",
+        "label": "How long should the plan run?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "30 days",
+          "90 days",
+          "6 months"
+        ]
+      },
+      {
+        "id": "offer",
+        "label": "What you sell and the price",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "buyers",
+        "label": "Who buys",
+        "type": "longtext",
+        "required": true,
+        "help": "Who they are, what they want, and the words they use.",
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "Main goal",
+        "type": "text",
+        "required": true,
+        "help": "For example: 40 leads a month, 15 sales a week, 1,000 subscribers.",
+        "max": 300
+      },
+      {
+        "id": "budget",
+        "label": "Budget and time",
+        "type": "text",
+        "required": true,
+        "help": "Ad spend per month, and hours per week you or your team can give.",
+        "max": 300
+      },
+      {
+        "id": "results",
+        "label": "Current results or exports",
+        "type": "longtext",
+        "required": false,
+        "help": "Past campaigns, search terms, list size, open rates, sales.",
+        "max": 20000
+      },
+      {
+        "id": "products",
+        "label": "Products, prices and margins",
+        "type": "longtext",
+        "required": false,
+        "help": "Needed for Shopping, Amazon and TikTok Shop plans.",
+        "max": 15000
+      },
+      {
+        "id": "assets",
+        "label": "What you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "Videos, photos, reviews, articles, a list, a community space.",
+        "max": 2000
+      },
+      {
+        "id": "avoid",
+        "label": "Rules or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "channel_native",
+        "text": "The set-up uses the chosen channel's own building blocks.",
+        "weight": 5,
+        "pass_rule": "The plan covers only the chosen channel and uses its structure: campaigns, ad groups, keywords with match types and negatives for Google search; campaigns, audiences and creative tests for Meta, LinkedIn or TikTok; boards and pin themes for Pinterest; series and upload rhythm for YouTube; a dated send calendar for email.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "budget_fits",
+        "text": "Budget split and workload fit the budget and time in the brief.",
+        "weight": 4,
+        "pass_rule": "The budget split adds up to the stated monthly budget (recompute it), daily or weekly amounts are shown, and organic tasks fit the hours per week the brief gives.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "No made-up results, prices or product facts.",
+        "weight": 5,
+        "pass_rule": "No cost per click, conversion rate, reach, review count or sales figure is stated as the buyer's or promised; any general benchmark is labelled as a rough starting point; product facts and prices come from the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "actions_and_measures",
+        "text": "Dated actions, a launch checklist, numbers to track and first tests.",
+        "weight": 4,
+        "pass_rule": "Actions are dated across the full plan length chosen; there is a launch checklist, 3 to 6 numbers to track with when to check them, and at least two tests with the result that means keep or stop.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "rules_safe_plain",
+        "text": "Follows platform rules and uses plain words.",
+        "weight": 3,
+        "pass_rule": "No fake engagement, bought or rewarded reviews, spam posting or targeting by sensitive traits; terms such as ROAS, CPA or match type are explained on first use.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a growth marketer who plans one channel at a time for small businesses. Write a plan for the single channel and time frame below. Say why the channel fits my offer and buyers and what success looks like. Lay out the set-up in the channel's own structure: for search ads, campaigns, ad groups, keywords with match types and negatives; for social ads, campaigns, audiences and creative tests; for Pinterest, boards and pin themes; for YouTube, series and upload rhythm; for email, a dated send calendar with goal, segment and subject idea; for communities, where to post, how often and the mix of helpful replies to your own links. Split my budget and check it adds up, give dated week-by-week or month-by-month actions, list the content or creative I need, add a launch checklist, the numbers to track and two first tests. Use only my facts and label any benchmark as rough. Follow platform rules. Do not promise results.",
+    "not_for": [
+      "Setting up, running or managing the account for you",
+      "Guaranteed results, rankings or sales",
+      "Spam, fake engagement, bought or rewarded reviews, or breaking platform rules",
+      "Ads for loans, investments or health treatments without your own compliance review; no legal or financial advice",
+      "Multi-channel marketing plans (see the 90-day marketing plan job)",
+      "Finished ad copy (see the paid ads copy set job)",
+      "Logging in to your ad, shop or email accounts; paste exports instead",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Google search ads plan for 90 days for Ridgeway Roofing in Columbus, Ohio. Services: roof repair, full replacement (average job 11,500 dollars), gutter work. Budget 2,500 dollars a month. Goal: 30 quote requests a month. Last year's search terms report pasted. Owner has 2 hours a week.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Pinterest plan for 6 months for our printable planner shop (42 products, 4 to 12 dollars). Sales mostly from Etsy, 60% in August to January. I can spend 4 hours a week, no ad budget yet. Goal: 2,000 monthly outbound clicks.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Email plan for 90 days for Bramble & Bean, a coffee subscription. List 6,400 (3,100 subscribers, 3,300 never bought). Open rate 41%, click 2.8%. We launch a holiday gift box on 20 November and a new Colombian roast in January. I can send 2 emails a week.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "LinkedIn ads plan for 30 days. We sell compliance software for UK care homes, average deal 9,600 pounds a year. Buyers: care home owners and registered managers, groups of 3 to 30 homes. Budget 3,000 pounds a month. We have a webinar recording and two case studies.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Reddit participation plan for 30 days for our budgeting app. I want to help people in personal finance and frugal living communities without getting banned. Me and one teammate, 30 minutes a day each. We have 14 how-to articles on our blog.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "90-day Amazon launch plan for our silicone baking mats, 2-pack at 19.99 dollars, cost landed 4.10, Amazon fees about 6.80. 800 units in stock. Ad budget 1,500 dollars for the first month then 900. We have 12 photos and no reviews yet.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "google ads plan",
+      "ppc plan",
+      "search campaign",
+      "meta ads plan",
+      "facebook ads plan",
+      "retargeting",
+      "linkedin ads",
+      "tiktok ads",
+      "tiktok shop",
+      "pinterest marketing",
+      "youtube strategy",
+      "email marketing plan",
+      "reddit marketing",
+      "community plan",
+      "amazon launch",
+      "shopping campaign",
+      "performance max",
+      "ai search",
+      "channel plan",
+      "marketing channel"
+    ],
+    "demand_sources": [
+      {
+        "note": "PPC set-up cost guide: independent specialists typically charge $800 to $2,500 to set up a campaign, and agencies $2,000 to $5,000.",
+        "url": "https://clicksgeek.com/ppc-campaign-setup-cost/"
+      }
+    ]
+  },
+  {
+    "id": "rota-schedule-or-calendar",
+    "title": "Staff rota, schedule or recurring task calendar",
+    "summary": "A weekly rota, staffing by hour, a team capacity plan, a production or trade schedule, a 12-month calendar of tasks and deadlines, or your own week.",
+    "area": "operations",
+    "deliverable": "A schedule built from your people, demand and rules: shifts with hours and breaks, staff needed by hour, hours booked against capacity, jobs or trades in order with dates, materials and permits to confirm and the critical path, or tasks and deadlines with owners by month. Plus the gaps, clashes and options to fix them.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "schedule_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Weekly staff rota",
+          "Staffing levels by hour",
+          "Team capacity plan (hours booked and free)",
+          "Production schedule or capacity check",
+          "Two-week look-ahead for trades",
+          "Build schedule with trades in order",
+          "12-month board or governance calendar",
+          "Yearly admin and deadline calendar",
+          "Recurring tasks calendar (weekly to yearly)",
+          "My own week in time blocks"
+        ]
+      },
+      {
+        "id": "people_count",
+        "label": "How many people, lines or trades?",
+        "type": "number",
+        "required": true,
+        "help": "Staff on the rota, team members, work stations or trades. Base price covers up to 15. Up to 40 per job.",
+        "max": 40
+      },
+      {
+        "id": "period",
+        "label": "Dates the schedule covers",
+        "type": "text",
+        "required": true,
+        "help": "For example: week of 10 November, or January to December 2027.",
+        "max": 200
+      },
+      {
+        "id": "people",
+        "label": "Who is available",
+        "type": "longtext",
+        "required": true,
+        "help": "First names or roles, contracted hours, days off, skills. No other personal details.",
+        "max": 8000
+      },
+      {
+        "id": "work",
+        "label": "The work or demand to cover",
+        "type": "longtext",
+        "required": true,
+        "help": "Sales or footfall by hour, orders with due dates, tasks with durations, meetings, to-dos.",
+        "max": 20000
+      },
+      {
+        "id": "rules",
+        "label": "Your rules",
+        "type": "longtext",
+        "required": false,
+        "help": "Most hours per person, breaks, least staff on shift, who must approve what.",
+        "max": 3000
+      },
+      {
+        "id": "fixed_dates",
+        "label": "Fixed dates and deadlines",
+        "type": "longtext",
+        "required": false,
+        "help": "Filing dates, renewals, deliveries, inspections. Only dates you give will be used.",
+        "max": 5000
+      },
+      {
+        "id": "layout",
+        "label": "How should it be laid out?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Table by day",
+          "Table by person",
+          "Calendar by month",
+          "Task list ready for a Gantt chart"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_demand",
+        "text": "The schedule covers all the work or demand in the brief for the whole period.",
+        "weight": 5,
+        "pass_rule": "Every day, week or month in the period appears; every order, task, deadline or staffing need in the brief is placed; each slot meets the least cover the brief sets, or the gap is listed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "rules_respected",
+        "text": "No one is booked against their availability or the brief's rules.",
+        "weight": 5,
+        "pass_rule": "Check each person: no shift outside their stated availability, hours per person are totalled and within any limit in the brief, breaks follow the brief's rules, no one is in two places at once, and task order respects stated links between tasks.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_dates",
+        "text": "Only the buyer's people, dates and durations.",
+        "weight": 5,
+        "pass_rule": "No staff name, filing date, legal deadline, duration or order appears unless the brief gives it; any assumed task length is labelled as an assumption.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "gaps_flagged",
+        "text": "Gaps, clashes and risks are listed with options.",
+        "weight": 4,
+        "pass_rule": "A section lists each unfilled shift, over-capacity week, clash, bottleneck or late order, with at least one option for each (swap, extra hours the brief allows, move a date, reorder work).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "usable_layout",
+        "text": "Easy to read and copy into a spreadsheet.",
+        "weight": 3,
+        "pass_rule": "Uses tables with clear headers (day, time, name or task, owner), a totals row or column where hours apply, plain words and a short key for any codes.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 199,
+      "size": {
+        "field": "people_count",
+        "unit": "extra person or line",
+        "included": 15,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations planner. Build the schedule described below using only the people, availability, demand, tasks, rules and dates I give. For a rota, list each shift with name, start and end time, breaks and total hours per person. For staffing levels, give people needed for each hour of each day. For capacity, show hours booked against hours free by person and week. For production or building work, put jobs or trades in order with durations, links between tasks, key dates and the critical path. For calendars, list each task or deadline by month with an owner. Check that no one works outside their availability or my rules and that totals add up. Then list every gap, clash or late item with an option to fix it. Use clear tables. Do not add dates or legal deadlines I did not give. Not legal advice on working time.",
+    "not_for": [
+      "Legal advice on working time, breaks, minimum wage or other employment law",
+      "Building schedules that need engineering or safety sign-off",
+      "Pay, hiring or disciplinary decisions",
+      "Deadlines from laws or rules you have not supplied",
+      "Team event and recognition ideas (see the volunteer or staff recognition programme job)",
+      "Logging in to your rota, calendar or project software; paste or attach exports instead",
+      "Staff personal data beyond first names, roles and availability",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Weekly rota for Nonna's Kitchen, week of 17 November. 11 staff (names, roles, contracted hours and days off pasted). Open Tue to Sun, 11am to 10pm. Need 2 chefs and 3 front of house at lunch, 3 chefs and 5 front of house from 6pm. Rules: 30-minute break after 6 hours, no more than 45 hours a week.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "12-month governance calendar for our charity for 2027. Board meets quarterly, finance committee every two months. Accounts year end 31 March, our accountant needs papers by 30 June. AGM in September. Policy reviews: safeguarding (May), finance (July), data (November). Chair: Ruth, Treasurer: Tomas.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Team capacity plan for the next 6 weeks for our 7-person design agency. Each person's weekly hours and booked projects pasted (hours per week per project). Two new projects may start on 1 December: website rebuild (120 hours) and brand refresh (60 hours). Can we take both?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Production schedule for 2 weeks from 10 November for our small furniture workshop. Orders pasted (14 orders, due dates, items, hours per stage: cutting, assembly, finishing). Stations: 1 saw, 2 benches, 1 spray booth, each 8 hours a day, Monday to Friday. Which orders will be late?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Build schedule for a kitchen and bathroom refit at 9 Elm Close, start 5 January. Trades and durations pasted: strip out 3 days, plumber first fix 2, electrician first fix 2, plaster 3, drying 5, kitchen fit 4, tiler 4, second fix 2 each, decorator 3. Plasterer only free from 14 January.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Plan my week of 10 November in time blocks. My calendar (9 meetings pasted) and 23 to-dos with rough times. I run a 12-person accounting firm. Must protect Thursday afternoon for client reviews. Tell me what to drop or hand to my assistant, Jo.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "staff rota",
+      "shift schedule",
+      "work schedule",
+      "staffing levels",
+      "labour planning",
+      "capacity plan",
+      "resource plan",
+      "production schedule",
+      "capacity check",
+      "bottleneck",
+      "construction schedule",
+      "build programme",
+      "look ahead",
+      "gantt",
+      "critical path",
+      "governance calendar",
+      "board calendar",
+      "compliance calendar",
+      "admin calendar",
+      "recurring tasks",
+      "time blocking",
+      "weekly plan"
+    ],
+    "demand_sources": [
+      {
+        "note": "TimeForge survey: the average restaurant, bar or club manager spends 2.64 hours every week making the staff schedule, and more when using spreadsheets.",
+        "url": "https://timeforge.com/blog/restaurant-scheduling-statistics-1/"
+      }
+    ]
+  },
+  {
+    "id": "books-and-billing-setup",
+    "title": "Bookkeeping and billing set-up",
+    "summary": "The pieces to set up tidy books and billing: chart of accounts, bank rules, software checklist, profit tracking, invoice template, terms, billing rules and routines.",
+    "area": "finance",
+    "deliverable": "The pieces you choose, built for your business: accounts with codes, use notes and examples; bank feed rules for regular payees; a software set-up checklist; tracking by service or site; an invoice template with a filled example; payment terms wording; billing schedules and recurring rules with worked examples; and step-by-step processes and routines.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "main_piece",
+        "label": "Which piece do you need most?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Chart of accounts",
+          "Bank feed rules",
+          "Software set-up checklist",
+          "Profit tracking by service, site or project",
+          "Weekly and monthly books routine",
+          "Monthly expenses and receipts routine",
+          "Invoice template",
+          "Payment terms wording",
+          "Billing schedule for a project or retainer",
+          "Recurring billing rules",
+          "Billing process from work done to invoice sent",
+          "Bills-to-payment process for your team"
+        ]
+      },
+      {
+        "id": "other_pieces",
+        "label": "Other pieces to include",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Chart of accounts",
+          "Bank feed rules",
+          "Software set-up checklist",
+          "Profit tracking by service, site or project",
+          "Weekly and monthly books routine",
+          "Monthly expenses and receipts routine",
+          "Invoice template",
+          "Payment terms wording",
+          "Billing schedule for a project or retainer",
+          "Recurring billing rules",
+          "Billing process from work done to invoice sent",
+          "Bills-to-payment process for your team"
+        ]
+      },
+      {
+        "id": "piece_count",
+        "label": "How many pieces in total?",
+        "type": "number",
+        "required": true,
+        "help": "Count the main piece plus any others. Base price covers two. Up to six per job.",
+        "max": 6
+      },
+      {
+        "id": "business",
+        "label": "What the business sells and how",
+        "type": "longtext",
+        "required": true,
+        "help": "Services or products, sites, staff, how customers pay.",
+        "max": 4000
+      },
+      {
+        "id": "software",
+        "label": "Accounting and billing software",
+        "type": "text",
+        "required": true,
+        "help": "For example QuickBooks Online, Xero, FreeAgent, Stripe, or none yet.",
+        "max": 200
+      },
+      {
+        "id": "bank_sample",
+        "label": "Sample bank export",
+        "type": "longtext",
+        "required": false,
+        "help": "One or two months of transactions. Remove account and card numbers first.",
+        "max": 40000
+      },
+      {
+        "id": "payees",
+        "label": "Regular payees and payers",
+        "type": "list",
+        "required": false,
+        "max": 60
+      },
+      {
+        "id": "billing",
+        "label": "How you bill clients now",
+        "type": "longtext",
+        "required": false,
+        "help": "Deposits, retainers, milestones, prices, current terms.",
+        "max": 4000
+      },
+      {
+        "id": "team",
+        "label": "Who does what",
+        "type": "text",
+        "required": false,
+        "help": "Who approves bills, sends invoices and chases payment.",
+        "max": 400
+      },
+      {
+        "id": "accountant_notes",
+        "label": "Notes from your accountant",
+        "type": "longtext",
+        "required": false,
+        "help": "Tax registration, codes or settings they asked for.",
+        "max": 3000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "pieces_delivered",
+        "text": "Every piece asked for is there, complete and ready to use.",
+        "weight": 5,
+        "pass_rule": "Each chosen piece has its own heading: accounts have code, name, type, use note and two examples; bank rules have payee, match text and account; the invoice template has every field and a filled example; schedules have dates, amounts and triggers; processes have numbered steps, owner and timing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_this_business",
+        "text": "Built for this business, not a generic list.",
+        "weight": 4,
+        "pass_rule": "Account names, tracking categories, rules and examples use the services, sites, payees and billing methods in the brief; accounts for activities the brief does not mention are left out or marked optional.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_tax_or_invented",
+        "text": "No tax settings chosen and no invented facts.",
+        "weight": 5,
+        "pass_rule": "Tax rates, tax codes, registration status and filing dates are left as items to confirm with the accountant unless the brief gives them; no payee, amount, price or term appears unless it is in the brief or marked as an example.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "numbers_consistent",
+        "text": "Amounts and dates add up.",
+        "weight": 4,
+        "pass_rule": "Billing schedules add up to the contract total in the brief; worked examples for part months, upgrades and refunds show the maths and recompute correctly; the invoice example totals add up.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Plain words an owner can follow.",
+        "weight": 3,
+        "pass_rule": "Steps are numbered and short (most under 25 words); any accounting term such as reconcile, accrual or liability is explained in a few words; routines say how long each step takes.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "piece_count",
+        "unit": "extra piece",
+        "included": 2,
+        "per_unit_usd": 29
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a bookkeeper who sets up small businesses. Build the pieces I ask for below, made for my business and software. For a chart of accounts, give each account a code, name, type, a plain use note and two examples. For bank feed rules, give a table of payee, the text to match and the account. For a software set-up checklist, cover opening balances, bank links, invoice settings and user access, and list tax settings as items to confirm with my accountant. For profit tracking, give classes or tags with naming rules. For billing, give an invoice template with a filled-in example, plain payment terms wording, schedules with dates, amounts and triggers, and recurring billing rules with worked examples. For processes and routines, give numbered steps with who does what and how long it takes. Use only my facts, check all sums, and never choose tax rates or codes. Not tax or legal advice.",
+    "not_for": [
+      "Tax filing, tax advice or choosing tax rates and codes",
+      "Logging in to your accounting software, billing tool or bank",
+      "Legal advice on contract terms, late fees or late payment law",
+      "Audit, assurance or other regulated accounting work",
+      "Catching up or cleaning up past books (see the bank transaction categorisation job)",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Chart of accounts and bank feed rules for my new dog grooming salon in Bristol. Sole trader, opened in September, using Xero. Income: grooming, nail clips, retail shampoo. Costs: rent 1,100 pounds, products, card fees, insurance, van. Two months of bank export pasted (account numbers removed).",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Invoice template, payment terms wording and a billing schedule for my web design studio. Projects average 9,000 dollars: 40% deposit, 40% at design sign-off, 20% at launch. Clients pay late about 1 in 3 times. I use QuickBooks Online. Want terms I can check with my accountant.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Profit tracking for our 3 physio clinics (Northside, Harbour, Westgate) plus a weekly and monthly books routine for me, the owner. We use QuickBooks. I want to see profit by clinic and by service (physio, massage, classes). Bookkeeper comes in monthly.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Recurring billing rules for our meal prep subscription: weekly boxes billed every Monday, plans 59, 79 and 99 dollars. People join mid-week, upgrade, pause for holidays and get refunds for missed deliveries. Card payments fail about 4% of the time. Worked example for each case please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Bills-to-payment process for our 25-person construction firm. Office manager Lena enters bills, owner Mike pays. Problems: duplicate supplier payments twice this year, no approval for purchases over 2,000. We use Xero and a shared inbox for bills. Want limits that need a second person.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Full set-up for my new business: chart of accounts, software set-up checklist, bank rules and a 15-minute monthly expenses routine. I'm a freelance video editor in Toronto, using FreeAgent, registered for GST/HST last month. Regular payees pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "chart of accounts",
+      "bookkeeping setup",
+      "quickbooks setup",
+      "xero setup",
+      "bank rules",
+      "bank feed rules",
+      "accounting software setup",
+      "tracking categories",
+      "classes",
+      "invoice template",
+      "payment terms",
+      "billing schedule",
+      "milestone billing",
+      "recurring billing",
+      "billing process",
+      "accounts payable process",
+      "bill approval",
+      "bookkeeping routine",
+      "expense routine",
+      "month end checklist"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra listing from a certified QuickBooks Online ProAdvisor selling set-up: a custom chart of accounts, starting balances and bank links, from $30 an hour.",
+        "url": "https://contra.com/s/UM3ZXWmW-quick-books-online-qbo-setup"
+      }
+    ]
+  },
+  {
+    "id": "content-pillars-and-idea-plan",
+    "title": "Content pillars and idea plan",
+    "summary": "Content pillars, themes and a dated calendar of ideas for one channel or season, with working titles and hooks, sized to the time your team has.",
+    "area": "content",
+    "deliverable": "Three to five pillars; a posting rhythm; dated ideas by week with working title, hook, format, pillar, owner and the reason each should work; search phrases, or board names and descriptions, where they matter; and seasonal dates. About 20 to 40 ideas for three months. Longer plans add themes and ideas month by month.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "channel",
+        "label": "Which channel or plan?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Instagram or Facebook",
+          "TikTok or short video",
+          "YouTube",
+          "Pinterest",
+          "LinkedIn",
+          "Blog or website articles",
+          "Email newsletter",
+          "Podcast season",
+          "Member or community programme",
+          "Season or holiday plan across channels",
+          "Editorial calendar across channels"
+        ]
+      },
+      {
+        "id": "months",
+        "label": "How many months?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 3 months.",
+        "max": 12
+      },
+      {
+        "id": "start",
+        "label": "Start date",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "business",
+        "label": "Your business, offer and buyers",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "goal",
+        "label": "What should the content do?",
+        "type": "text",
+        "required": true,
+        "help": "For example: book consultations, grow the list, sell the spring range.",
+        "max": 300
+      },
+      {
+        "id": "capacity",
+        "label": "Time your team has",
+        "type": "text",
+        "required": true,
+        "help": "For example: 2 posts a week, about 3 hours, one person.",
+        "max": 300
+      },
+      {
+        "id": "past",
+        "label": "What has worked before",
+        "type": "longtext",
+        "required": false,
+        "help": "Top posts, videos or emails and their results.",
+        "max": 4000
+      },
+      {
+        "id": "dates",
+        "label": "Seasonal dates, launches and events",
+        "type": "list",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "search_words",
+        "label": "Words your buyers use or search for",
+        "type": "list",
+        "required": false,
+        "help": "Only these are used as search phrases; others are marked as ideas to check.",
+        "max": 40
+      },
+      {
+        "id": "avoid",
+        "label": "Topics or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "pillars_fit_goal",
+        "text": "Three to five pillars, each tied to the goal and audience.",
+        "weight": 4,
+        "pass_rule": "Lists 3 to 5 pillars, each with a one-line purpose that names the audience or goal from the brief; every idea is tagged to one pillar.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sized_to_capacity",
+        "text": "The calendar fits the time frame and the team's time.",
+        "weight": 5,
+        "pass_rule": "Covers every week of the period asked from the start date (month by month after the first three months); ideas per week match the stated rhythm and the team time in the brief; a three-month plan has at least 20 dated ideas.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ideas_specific",
+        "text": "Each idea is specific, with a working title, a hook and a reason.",
+        "weight": 5,
+        "pass_rule": "Every idea has a working title, a one-line hook and a reason it should work tied to the audience or a search phrase; no two ideas share a title or angle; no fillers such as 'Motivation Monday post'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Uses only the buyer's facts and dates.",
+        "weight": 5,
+        "pass_rule": "No product, price, event, guest name, customer story, statistic or search volume appears unless it is in the brief; dates are from the brief or fixed public holidays; search phrases not in the brief are marked as ideas to check.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_plain",
+        "text": "Easy to use as a working calendar.",
+        "weight": 3,
+        "pass_rule": "A dated table with week, pillar, format, channel, owner and status columns; plain words; it can be used without finished captions.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "months",
+        "unit": "extra month",
+        "included": 3,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a content strategist for small businesses. Plan content for the channel or season below. Set three to five content pillars, each with a one-line purpose tied to my goal and audience. Set a posting rhythm that fits the time my team has. Then give a dated calendar, week by week from my start date, with about 20 to 40 ideas for three months: a working title, a one-line hook, the format, the pillar, the owner and why each idea should work. Add search phrases or board names where they matter, using my buyers' words and marking any others as ideas to check. Include my seasonal dates and launches. Use only facts I give, with no made-up stories, guests or statistics. Lay it out as a table I can work from. Do not write finished posts or captions.",
+    "not_for": [
+      "Finished posts and captions (see the social media calendar and social post pack jobs)",
+      "Posting or scheduling for you, or logging in to your accounts",
+      "Guaranteed reach, views or rankings",
+      "Health, legal or financial advice presented as content ideas without your expert review",
+      "Shot lists and scripts for each video (see the video script job)",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Instagram plan for 3 months from 1 December for Fern & Stone, a garden design studio in Surrey. Goal: book 10 design consultations for spring. I can post 3 times a week, about 4 hours total. Best posts so far: before-and-after reels and plant combos (stats pasted).",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "YouTube plan for 6 months for my channel about fixing old sewing machines (2,300 subscribers). One long video a week plus 2 Shorts. Viewers search things like 'Singer 99k timing', 'sewing machine skipping stitches'. Goal: sell my 39 dollar repair course.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Podcast season plan, 10 episodes from February, for 'Small Farm Money', a show for farmers selling direct. Guests we could pitch: a cheese maker, a farm shop owner and a farm accountant we know. Releases every two weeks. Goal: more sign-ups to our farm business course.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Seasonal plan for Lent and Easter 2027 across notices, email, Facebook and the screens at St Aidan's Church. Dates: Ash Wednesday 10 February, Easter Sunday 28 March. Events pasted (soup lunches, Holy Week services, children's trail). Team: one office manager, 3 hours a week.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "12-month 'what's ready' calendar for Hilltop Farm Shop: crops and products by month pasted, plus open days in May and October and pumpkin picking in late October. Ideas for posts, email topics and shop displays. I can do 2 posts and 1 email a week.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Pinterest board map and idea plan for 3 months for our handmade ceramic tableware shop. 60 products, best sellers are speckled mugs and pasta bowls. Buyers search words like 'rustic dinnerware', 'wedding registry ideas'. Goal: 1,500 monthly clicks to the shop. 5 pins a week.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "content plan",
+      "content pillars",
+      "content calendar",
+      "editorial calendar",
+      "content ideas",
+      "instagram content plan",
+      "youtube content plan",
+      "video ideas",
+      "pinterest boards",
+      "pinterest keywords",
+      "podcast season plan",
+      "episode ideas",
+      "newsletter plan",
+      "blog calendar",
+      "seasonal content",
+      "holiday content",
+      "church communications",
+      "member calendar",
+      "content strategy"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance content strategists average $64 an hour, or about 385 pounds a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/content-strategist"
+      }
+    ]
+  },
+  {
+    "id": "software-scope-priorities-estimate",
+    "title": "Software scope, priorities and estimate",
+    "summary": "A work breakdown and estimate with ranges, a check of a quote, scope options by budget, a re-forecast, a first-version scope, a ranked backlog or bug list, or a roadmap.",
+    "area": "product",
+    "deliverable": "Features split into tasks with low, likely and high hours, assumptions and contingency; or a quote checked line by line; or scope options by budget; or a re-forecast; or a first-version scope with what it must prove; or a backlog or bug list scored and ranked; or a quarterly roadmap and a rule for new requests.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "job_kind",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Work breakdown and estimate",
+          "Check a quote you received",
+          "Scope options to fit a budget",
+          "Re-forecast a project in progress",
+          "First-version (MVP) scope",
+          "Prioritised backlog",
+          "Bug list triage",
+          "Quarterly roadmap",
+          "Rule for screening new requests"
+        ]
+      },
+      {
+        "id": "item_count",
+        "label": "How many features, items or bugs?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 30. Up to 100 per job.",
+        "max": 100
+      },
+      {
+        "id": "items",
+        "label": "Your feature list, brief, backlog or bug list",
+        "type": "longtext",
+        "required": true,
+        "max": 40000
+      },
+      {
+        "id": "product",
+        "label": "What the product is and who uses it",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "quote",
+        "label": "The quote you received",
+        "type": "longtext",
+        "required": false,
+        "max": 15000
+      },
+      {
+        "id": "progress",
+        "label": "Work done and hours so far",
+        "type": "longtext",
+        "required": false,
+        "help": "For a re-forecast: tasks done, hours used, what is left.",
+        "max": 15000
+      },
+      {
+        "id": "rate",
+        "label": "Hourly or day rate to use",
+        "type": "text",
+        "required": false,
+        "help": "Costs use this rate. Without one, effort is shown in hours only.",
+        "max": 100
+      },
+      {
+        "id": "budget_deadline",
+        "label": "Budget and deadline",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "goals",
+        "label": "Business goals for this work",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "team",
+        "label": "Who will build it",
+        "type": "text",
+        "required": false,
+        "help": "In-house, agency or freelancer, and team size.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_choice",
+        "text": "Delivers the piece chosen, covering every item in the brief.",
+        "weight": 4,
+        "pass_rule": "Every feature in the brief is split into tasks for estimates; every line in a quote is reviewed; every backlog item or bug is scored and ranked; a roadmap has 3 to 6 bets, each with goal, reason, effort and what will not be done.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ranges_and_assumptions",
+        "text": "Estimates are ranges with stated assumptions, not promises.",
+        "weight": 5,
+        "pass_rule": "Every hour, cost or effort figure has low, likely and high values (or a stated effort scale), the assumptions behind it are listed, a contingency line is included, and the draft says dates and costs are not guaranteed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "No made-up requirements, rates or facts.",
+        "weight": 5,
+        "pass_rule": "No feature, integration, user number, rate, hours worked or deadline appears unless it is in the brief or marked as an assumption; costs use the rate in the brief or are shown in hours only.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "maths_and_logic",
+        "text": "Totals add up and rankings follow the scoring.",
+        "weight": 4,
+        "pass_rule": "Recompute two totals: task hours sum to feature totals and the project total, and cost equals hours times the given rate; ranked lists follow their scores, and any override is explained.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_decisions",
+        "text": "Plain words and clear next decisions.",
+        "weight": 3,
+        "pass_rule": "Technical terms are explained in a few words; the draft ends with a short list of what is in, out and later, or the questions to ask the developer before signing.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "item_count",
+        "unit": "extra item",
+        "included": 30,
+        "per_unit_usd": 2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a software project lead who helps small businesses scope and price work. Using only my list and notes below, do the job I chose. For an estimate, split each feature into tasks across design, build, testing and launch, with low, likely and high hours, the assumptions behind them and a contingency line, and cost them at my rate (or show hours only). For a quote check, go through each line and flag vague, missing or out-of-line work with questions to ask. For budget options, give two or three versions with what each includes, its range and what I give up. For a re-forecast, show work done, work left and a new range for cost and finish date. For a backlog, bug list or roadmap, score each item on value, effort and risk, show the scoring and rank them. Check every total. Say clearly that dates and costs are not guaranteed. Explain technical terms in plain words.",
+    "not_for": [
+      "Guarantees that dates or costs will be met",
+      "Choosing, hiring or negotiating with a developer for you",
+      "Legal review of development contracts or IP terms",
+      "Security, privacy or compliance sign-off",
+      "Invented requirements, user numbers or rates",
+      "Writing code or full specs (see the product requirements doc and user stories jobs)",
+      "Access to your code, issue tracker or project tools; paste the list instead",
+      "Passwords, API keys or customer data in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Work breakdown and estimate for a booking app for our 4 dog grooming salons: customer booking, reminders by text, deposits by card, staff calendar, admin reports. 18 features listed. We will hire a freelancer at 85 dollars an hour. Budget 40,000, want launch by May.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Check this quote from an agency: 62,000 pounds for a customer portal with login, invoices, document upload and chat, 14 weeks. Quote pasted (9 lines). Our brief to them is pasted too. What is vague or missing and what should I ask before signing?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Prioritise our backlog of 46 items for our scheduling SaaS (pasted with notes and rough sizes). Goals this quarter: cut churn from 4.1% to 3% a month and win 2 enterprise trials. Team: 3 developers. Want value, effort and risk scores and a top ten.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Re-forecast our inventory system project. Original estimate 900 hours, 12 weeks. We are in week 8, 640 hours used. Task list with status pasted (31 tasks). Developer rate 70 dollars an hour. New ask from the warehouse team: barcode scanning. When will we really finish and at what cost?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "First-version scope for a marketplace that matches home cooks with office lunch orders in Austin. Our long list of 35 features is pasted. Budget 25,000 dollars. What is in, out and later, and what must version 1 prove to keep going?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Triage this list of 58 bug reports from our app (pasted: title, steps, device, how many users reported it). Merge duplicates, rank by how bad and how many users, and suggest the fix order for our 2 developers next sprint.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "software estimate",
+      "project estimate",
+      "work breakdown",
+      "wbs",
+      "development quote",
+      "quote review",
+      "scope options",
+      "mvp scope",
+      "first version",
+      "reforecast",
+      "backlog prioritisation",
+      "prioritize backlog",
+      "rice scoring",
+      "bug triage",
+      "product roadmap",
+      "quarterly roadmap",
+      "feature requests",
+      "app cost",
+      "how long will it take"
+    ],
+    "demand_sources": [
+      {
+        "note": "Guide to software discovery costs for business apps: scoping, user stories and a firm estimate take 3 to 6 weeks and 5 to 12% of the build budget, most often 6,000 to 9,000 euros.",
+        "url": "https://kolonell.com/en/blog/discovery-phase-cost-custom-business-app-2026"
+      }
+    ]
+  },
+  {
+    "id": "quality-and-safety-paperwork",
+    "title": "Quality or health and safety paperwork drafts",
+    "summary": "Drafts of quality (ISO 9001 style) or workplace safety paperwork: gap review, manual, audits, forms, check plans, risk assessments, checklists, induction and toolbox talks.",
+    "area": "operations",
+    "deliverable": "Documents that match how you work: a clause-by-clause gap review, quality policy and manual, audit plan and checklists, nonconformance and corrective action forms, product check plans, risk assessments, inspection checklists, an incident form and log, a safety induction or five toolbox talks. Each is marked as a draft for a competent person to check.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "main_document",
+        "label": "Which document do you need most?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "ISO 9001 gap review",
+          "Quality policy and manual",
+          "Internal audit plan and checklists",
+          "Nonconformance and corrective action forms",
+          "Product quality check plan",
+          "Risk assessment for a task or area",
+          "Daily and weekly inspection checklists",
+          "Incident and near-miss form and log",
+          "Safety induction for new starters",
+          "Five toolbox talks"
+        ]
+      },
+      {
+        "id": "other_documents",
+        "label": "Other documents in the set",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "ISO 9001 gap review",
+          "Quality policy and manual",
+          "Internal audit plan and checklists",
+          "Nonconformance and corrective action forms",
+          "Product quality check plan",
+          "Risk assessment for a task or area",
+          "Daily and weekly inspection checklists",
+          "Incident and near-miss form and log",
+          "Safety induction for new starters",
+          "Five toolbox talks"
+        ]
+      },
+      {
+        "id": "document_count",
+        "label": "How many documents in total?",
+        "type": "number",
+        "required": true,
+        "help": "Each form, checklist set, assessment, manual or set of five talks counts as one. Base price covers two. Up to five per job.",
+        "max": 5
+      },
+      {
+        "id": "business",
+        "label": "What you do and where",
+        "type": "longtext",
+        "required": true,
+        "help": "Products or services, sites, team size, shifts.",
+        "max": 3000
+      },
+      {
+        "id": "country",
+        "label": "Country or region",
+        "type": "text",
+        "required": true,
+        "help": "So we can mark which local rules to check. This is not legal advice.",
+        "max": 100
+      },
+      {
+        "id": "processes",
+        "label": "Your processes, tasks and equipment",
+        "type": "longtext",
+        "required": true,
+        "help": "Main steps from order to delivery, tasks on site, machines and tools.",
+        "max": 10000
+      },
+      {
+        "id": "hazards",
+        "label": "Hazards or quality problems you know of",
+        "type": "longtext",
+        "required": false,
+        "help": "Past incidents, near misses, complaints, returns.",
+        "max": 4000
+      },
+      {
+        "id": "current_docs",
+        "label": "Documents you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste them or list their names.",
+        "max": 20000
+      },
+      {
+        "id": "roles",
+        "label": "Who is responsible for what",
+        "type": "text",
+        "required": false,
+        "help": "For example: Sam is quality lead, Priya is first aider.",
+        "max": 500
+      },
+      {
+        "id": "specs",
+        "label": "Product specs, limits and sample sizes",
+        "type": "longtext",
+        "required": false,
+        "help": "For product check plans. Only limits you give are used.",
+        "max": 5000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "matches_how_they_work",
+        "text": "Documents fit this business's real processes, sites and roles.",
+        "weight": 5,
+        "pass_rule": "Each document names processes, tasks, equipment, sites or roles from the brief, with no generic sections for activities the brief does not mention; a gap review lists, for each clause, what the brief says exists and what is missing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_usable",
+        "text": "Each document is complete and ready to fill in or use.",
+        "weight": 4,
+        "pass_rule": "Forms have every field with space to write; checklists have items, what good looks like and the action on a fail; risk assessments have hazard, who is at risk, current controls, extra controls, owner, date and a rating scale; talks have key points, a question and a sign-off sheet.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "No invented limits, laws, deadlines or incidents.",
+        "weight": 5,
+        "pass_rule": "No tolerance, sample size, legal reporting deadline, regulation name, certificate or past incident appears unless it is in the brief; such items are left as marked blanks or 'to confirm' notes.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "marked_for_checking",
+        "text": "Every document is marked as a draft for a competent person to check.",
+        "weight": 5,
+        "pass_rule": "Each document carries a draft label and a line naming who must review and sign it (for example the safety or quality lead from the brief); nothing claims the business is compliant or certified.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_for_workers",
+        "text": "Plain words a new worker can follow.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words, steps are numbered, terms such as nonconformance or corrective action are explained once, and each toolbox talk can be read aloud in about five minutes.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "document_count",
+        "unit": "extra document",
+        "included": 2,
+        "per_unit_usd": 29
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a quality and health and safety adviser for small businesses. Draft the documents I ask for below, written to match my processes, sites, equipment and roles. For a gap review, go clause by clause through ISO 9001 and say what I have, what is missing and what would close each gap. For a quality manual, write a short policy, scope, process map and pointers to procedures. For audits, give a yearly plan and a checklist per process with evidence to look for. For forms and logs, include every field. For risk assessments, list hazards, who is at risk, current and extra controls, owner, date and a rating scale. For checklists, say what good looks like and what to do on a fail. For an induction or toolbox talks, keep it short and plain with a sign-off sheet. Use only my facts; leave limits, legal deadlines and rule names as blanks to confirm. Mark every document as a draft for a competent person to check. Not legal advice.",
+    "not_for": [
+      "Certification, or a promise of passing an audit or inspection",
+      "Sign-off by a competent health and safety or quality person",
+      "High-risk work such as asbestos, confined spaces, electrical systems or work at height plans",
+      "Fire risk assessments, first-aid training or medical advice",
+      "Legal advice on health and safety or product safety law",
+      "Site visits, or logging in to your systems",
+      "Names or health details of injured people in the brief",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "ISO 9001 gap review and a quality manual for Precision Grind Ltd, a 22-person machine shop in Sheffield making shafts and bushes for pump makers. We have a work instructions folder, calibration records and a complaints log but no internal audits. Main customer wants us certified by next autumn.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Risk assessment and daily inspection checklists for our garden centre's loading yard in Ohio: forklift (1), pallet racking, customers' cars nearby, staff lifting compost bags (25 kg). Two near misses with the forklift this year. Yard lead: Carla.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Five toolbox talks for our 9-person roofing crew: ladders, roof edges, manual handling, hot weather, cutting tiles (dust). Each about five minutes with a question to ask and a sign-off sheet. We work on houses, not commercial jobs. UK based.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Product quality check plan for our small bakery wholesale line (sourdough loaves and brownies for 14 cafes). Specs pasted: loaf weight 800 g plus or minus 20 g, brownie 75 g, bake temps. Checks at goods-in (flour, eggs, chocolate), during baking and before dispatch. What to do if a batch fails.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Safety induction and an incident and near-miss form and log for our 3-site cleaning company in Melbourne, Australia. 40 cleaners, many part-time, working in offices after hours. Chemicals list pasted. Office manager Dev handles reports. Mark what we must check against local rules.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Nonconformance report, corrective action form with root cause steps, and a log for our electronics assembly firm (12 staff). Last month we shipped 60 boards with a reversed capacitor. We want every case tracked to closure. Quality lead: Mei.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "iso 9001",
+      "quality manual",
+      "gap analysis",
+      "internal audit checklist",
+      "corrective action",
+      "nonconformance report",
+      "quality control checklist",
+      "qc plan",
+      "risk assessment",
+      "safety checklist",
+      "inspection checklist",
+      "incident report form",
+      "near miss form",
+      "safety induction",
+      "toolbox talks",
+      "health and safety documents",
+      "workplace safety",
+      "quality procedures"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Health and Safety Executive: employers must by law identify hazards, judge the risk and control it, and HSE gives simpler steps for small, low-risk businesses.",
+        "url": "https://www.hse.gov.uk/simple-health-safety/risk/index.htm"
+      },
+      {
+        "note": "ISO 9001 cost guide for firms with 1 to 50 staff: documentation costs about $1,500 to $3,000 and optional consultants $1,500 to $20,000.",
+        "url": "https://www.9001simplified.com/learn/iso-9001-certification-cost.php"
+      }
+    ]
+  },
+  {
+    "id": "customer-segments-from-orders",
+    "title": "Customer segments from your order or customer export",
+    "summary": "Your customers grouped from your export (RFM segments, tiers, churn or health), with a plain profile of each group, the slipping customers and an action for each group.",
+    "area": "ecommerce",
+    "deliverable": "Segment rules with the cut-offs used; a profile of each segment (size, share of revenue, order value, timing, top products); a repeat or churn view by start month; good customers who are slipping, ranked; actions with the revenue at stake; and spreadsheet formulas to score every customer.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "segment_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "RFM segments for a shop",
+          "Good customers who are slipping",
+          "Repeat purchase view by first-order month",
+          "Subscription churn by group",
+          "Customer tiers with service levels",
+          "Customer health and risk report",
+          "Email list segments"
+        ]
+      },
+      {
+        "id": "customer_count",
+        "label": "How many customers in the export?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 500. Paste up to about 2,000.",
+        "max": 2000
+      },
+      {
+        "id": "data",
+        "label": "Your export",
+        "type": "longtext",
+        "required": true,
+        "help": "One row per order or per customer: customer ID, dates, amounts. Remove names, emails and addresses first.",
+        "max": 100000
+      },
+      {
+        "id": "columns",
+        "label": "What the columns mean",
+        "type": "longtext",
+        "required": false,
+        "help": "Plans, sources, usage fields, codes.",
+        "max": 3000
+      },
+      {
+        "id": "business",
+        "label": "What you sell and how often people buy",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "What will you do with the segments?",
+        "type": "text",
+        "required": false,
+        "help": "For example: win back lapsed buyers, plan VIP perks, cut churn.",
+        "max": 300
+      },
+      {
+        "id": "offers",
+        "label": "Offers and tools you can use",
+        "type": "text",
+        "required": false,
+        "help": "Discounts you allow, email or SMS, account manager time.",
+        "max": 400
+      },
+      {
+        "id": "as_of",
+        "label": "Date to measure from",
+        "type": "text",
+        "required": false,
+        "help": "Usually the date of the export.",
+        "max": 50
+      }
+    ],
+    "rubric": [
+      {
+        "id": "computed_from_data",
+        "text": "Every figure is worked out from the export.",
+        "weight": 5,
+        "pass_rule": "Segment sizes, revenue shares, order values, churn and repeat rates come from the data or from shown steps; counts across segments add up to the total customers; no outside benchmark appears unless the brief gives one.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "rules_stated",
+        "text": "Segment rules and cut-offs are written so anyone can apply them.",
+        "weight": 4,
+        "pass_rule": "Each segment has a written rule with number cut-offs (for example last order within 60 days and 3 or more orders) and the date measured from; spreadsheet formulas or code that apply the rules to every row use the export's column names.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "profiles_and_slipping",
+        "text": "Each segment has a profile, and slipping customers are named by ID.",
+        "weight": 4,
+        "pass_rule": "Each segment shows size, share of revenue, average order value and typical timing (and top products if the data has them); a list of slipping or at-risk customers gives ID, the signal behind it (such as past spend and last order or activity date), ranked by past spend or risk.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "actions_with_stakes",
+        "text": "Each segment gets an action and the revenue at stake.",
+        "weight": 4,
+        "pass_rule": "Every segment has one or two actions (offer, message theme, service level or stop) within the offers in the brief, and the revenue at stake is worked out from the data; the draft says which segment to act on first.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "careful_and_plain",
+        "text": "Plain words, honest limits and no sensitive targeting.",
+        "weight": 3,
+        "pass_rule": "Terms such as RFM, cohort and churn are explained; the draft says what the data cannot show (for example why people left) and does not group customers by health, religion, ethnicity or other sensitive traits.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 299,
+      "size": {
+        "field": "customer_count",
+        "unit": "extra customer",
+        "included": 500,
+        "per_unit_usd": 0.05
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer analytics specialist for small online shops and subscription businesses. Using only the export below, group my customers. Work out recency, frequency and spend (or the churn, plan and usage fields I give) as of the date I name, set clear segment rules with number cut-offs, and count customers and revenue in each segment. Profile each segment: size, share of revenue, average order value, typical timing and top products if the data has them. Show a repeat purchase or churn table by first-order or sign-up month. List good past customers who have gone quiet, by customer ID, ranked by what they used to spend. Give one or two actions per segment with the revenue at stake and say which to do first. Add spreadsheet formulas that apply the rules to every row. Check that counts add up, state the limits of the data, and do not segment by sensitive traits.",
+    "not_for": [
+      "Targeting by health, religion, ethnicity or other sensitive traits",
+      "Re-identifying anonymised customers",
+      "Sending messages to customers for you",
+      "Using personal data you have no right to use",
+      "Exports with names, emails, addresses, card numbers or passwords",
+      "Logging in to your shop, billing or CRM; paste or attach the export instead",
+      "Legal advice on privacy or marketing consent rules",
+      "Very large exports over about 2,000 rows (see the CSV data analysis job for code you can run)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "RFM segments for our tea shop. Shopify order export pasted: 1,840 orders from 612 customers over 2 years (customer ID, order date, total, products). Measure from 1 November 2026. We want to know who our best customers are, who is slipping, and what to send each group. We can offer up to 15% off.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Subscription churn by group for our meal kit. Export of 940 subscribers pasted: ID, start month, plan (2, 3 or 4 meals), source (Instagram, referral, Google), status, cancel date. Which groups leave fastest and what could we try?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Repeat purchase view by first-order month for our skincare brand, plus the good customers who are slipping. Order export of 1,200 rows from 480 customers pasted. Most products run out in about 6 to 8 weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Customer tiers with service levels for our IT support firm. 85 business clients pasted: ID, monthly fee, tickets last 6 months, years with us, contract end. Our 4 engineers cannot give everyone the same attention. Want rules for gold, silver, bronze and what each gets.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Customer health report for our 140 software customers. Data pasted: ID, plan, seats paid, seats active, logins last 30 days, support tickets, NPS score where given, renewal date. Sort by risk, show the signal behind each score and one next action.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Email list segments from fields we already have for our garden supply store: 2,000 customers pasted with ID, last order date, order count, total spend, categories bought (seeds, tools, furniture), postcode area. Want 4 to 6 segments with a rule and a message theme each.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "rfm analysis",
+      "customer segmentation",
+      "customer segments",
+      "best customers",
+      "at risk customers",
+      "lapsed customers",
+      "cohort analysis",
+      "repeat purchase rate",
+      "churn analysis",
+      "subscription churn",
+      "customer tiers",
+      "customer health score",
+      "email segmentation",
+      "vip customers",
+      "customer lifetime value",
+      "shopify customers"
+    ],
+    "demand_sources": [
+      {
+        "note": "Shopify guide explains how online stores use RFM scores to choose who to contact, win back customers who are drifting away and reward loyal buyers.",
+        "url": "https://www.shopify.com/blog/rfm-analysis"
+      },
+      {
+        "note": "YunoJuno rate data: freelance data analysts average $68 an hour.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "page-conversion-review",
+    "title": "Conversion review of one page with rewrites",
+    "summary": "A section-by-section review of one landing, home, product, service or store page, with ranked fixes and three rewritten top screens to test.",
+    "area": "marketing",
+    "deliverable": "A read of your page against your buyer, offer and goal; a match check with the ad, email or positioning that sends people there; what is missing or unclear in each section; up to ten fixes ranked by effort and payback; and three rewritten top screens (headline, subhead, bullets, button and proof line).",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "page_type",
+        "label": "Which page?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Landing page",
+          "Home page",
+          "Product page",
+          "Store front page",
+          "Service or sales page",
+          "Pricing or sign-up page"
+        ]
+      },
+      {
+        "id": "page_count",
+        "label": "How many pages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one page. Up to two per job.",
+        "max": 2
+      },
+      {
+        "id": "page_text",
+        "label": "Page text, top to bottom",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste every section in order, or attach screenshots. Note where images, buttons and forms sit.",
+        "max": 20000
+      },
+      {
+        "id": "offer",
+        "label": "Your offer and price",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "buyer",
+        "label": "Who the page is for",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "goal",
+        "label": "What should visitors do?",
+        "type": "text",
+        "required": true,
+        "help": "Buy, book a call, start a trial, request a quote.",
+        "max": 200
+      },
+      {
+        "id": "traffic_source",
+        "label": "The ad, email or post that sends people here",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "results",
+        "label": "Results so far",
+        "type": "text",
+        "required": false,
+        "help": "Visitors, conversion rate, bounce rate, sales.",
+        "max": 400
+      },
+      {
+        "id": "positioning",
+        "label": "Positioning or messaging notes",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "proof",
+        "label": "Proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Reviews, numbers, logos, awards. Only these will be used.",
+        "max": 15
+      }
+    ],
+    "rubric": [
+      {
+        "id": "section_by_section",
+        "text": "Reviews every section of the page in order.",
+        "weight": 4,
+        "pass_rule": "Each section of the pasted page is named in order with what works, what is missing or unclear, and why it matters for the buyer and goal in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ranked_fixes",
+        "text": "Fixes are specific and ranked by effort and payback.",
+        "weight": 5,
+        "pass_rule": "Up to ten fixes, each naming the exact line or section, the change, an effort rating and a payback rating, sorted so low-effort, high-payback fixes come first.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "top_screen_versions",
+        "text": "Three rewritten top screens, each a real alternative.",
+        "weight": 4,
+        "pass_rule": "Three versions, each with headline, subhead, three bullets or a short paragraph, button text and a proof line, and the visitor mindset it targets; each button matches the goal.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_proof",
+        "text": "No made-up proof, numbers or claims.",
+        "weight": 5,
+        "pass_rule": "No review, rating, customer count, award, guarantee, result or conversion lift appears unless it is in the brief; where proof is missing the draft says what to collect instead.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "match_and_plain",
+        "text": "Checks message match and keeps the copy plain.",
+        "weight": 3,
+        "pass_rule": "When an ad, email or positioning notes are given, their main promise is compared with the page headline and the gaps closed with line-level edits; copy avoids hype words such as 'revolutionary' or 'best-in-class'.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "page_count",
+        "unit": "extra page",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a conversion copywriter. Review the page below for the buyer, offer and goal I give. Go section by section in order: what works, what is missing or unclear, and why it matters. If I give the ad, email or positioning notes that send people to the page, compare their main promise with the page and suggest line-level edits to close the gaps. List up to ten fixes, each naming the exact line or section and the change, rated for effort and payback, with the easy, high-payback fixes first. Then write three versions of the top screen (headline, subhead, three bullets, button text and a proof line), each aimed at a different visitor mindset. Use only proof I supply; if proof is missing, say what to collect. No invented reviews, numbers or guarantees, and no hype words.",
+    "not_for": [
+      "Building, coding or testing the page",
+      "Page speed, tracking or technical SEO checks (see the SEO audit job)",
+      "Fake reviews, invented proof or false urgency",
+      "Guaranteed conversion rates",
+      "Legal advice on accessibility or compliance, or health, money or legal claims on the page without your own review",
+      "Whole-shop or multi-channel message audits",
+      "Logging in to your site, shop or analytics; paste the page instead",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Review our landing page for a 29 dollar a month bookkeeping app for hairdressers. Page text pasted (7 sections). Traffic comes from a Meta ad that says 'Do your books in 10 minutes a week'. 2,400 visitors last month, 1.1% start a free trial. Goal: start the 14-day trial.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Product page review for our best-selling linen duvet cover (149 pounds, double). Page text and screenshot notes pasted. Reviews we can use: 4.7 stars from 212 reviews. People add to cart but many leave at the price. Rewrite the top screen with two other versions to test.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Home page check against our positioning for Clearwater Accounting, a 6-person firm for dentists and vets. Positioning notes pasted: 'accountants who only serve clinics'. Home page text pasted. Goal: book a 20-minute call. Line-by-line check and rewrites for weak lines.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Sales page review for my 6-week group coaching programme for new managers, 690 dollars. Page text pasted (long, 11 sections). Email that sends people there pasted. 380 visitors, 6 sales. No testimonials yet, only 2 quotes from a pilot group I can use.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Review the store front page for Kiln & Co, a small ceramics shop. Text and layout notes pasted. Visitors come from Instagram. Goal: shop the new autumn collection. Proof we may use: featured in Homes & Gardens online, May 2026.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "landing page audit",
+      "landing page review",
+      "cro audit",
+      "conversion review",
+      "page teardown",
+      "hero section",
+      "above the fold",
+      "homepage review",
+      "product page audit",
+      "sales page review",
+      "message match",
+      "conversion rate",
+      "headline rewrite",
+      "store page",
+      "shopify page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Landing page audit cost guide: a one-off expert teardown costs a few hundred dollars, while retainers with testing run into the thousands.",
+        "url": "https://landingdoctors.com/guides/landing-page-audit-cost"
+      }
+    ]
+  },
+  {
+    "id": "volunteer-or-recognition-programme",
+    "title": "Volunteer or staff recognition programme pack",
+    "summary": "The documents to run a volunteer programme or a staff recognition programme: roles or criteria, recruitment or nomination steps, guides, a budget and the messages.",
+    "area": "people",
+    "deliverable": "The parts you pick: volunteer role descriptions, a recruitment pack, a welcome and induction pack and a yearly thank-and-keep plan; or a recognition programme, a manager guide with twenty message starters, award criteria with a nomination form and fair selection steps, and a budget at three levels.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "programme",
+        "label": "Which programme?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Volunteer programme",
+          "Staff recognition programme"
+        ]
+      },
+      {
+        "id": "parts",
+        "label": "Which parts do you need?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Volunteer role descriptions",
+          "Volunteer recruitment pack",
+          "Volunteer welcome and induction pack",
+          "Plan to thank and keep volunteers",
+          "Staff recognition programme design",
+          "Recognition guide for managers",
+          "Award criteria and nomination form",
+          "Recognition budget at three levels"
+        ]
+      },
+      {
+        "id": "part_count",
+        "label": "How many parts?",
+        "type": "number",
+        "required": true,
+        "help": "Count the parts you ticked. Base price covers two. Up to four per job.",
+        "max": 4
+      },
+      {
+        "id": "organisation",
+        "label": "Your organisation",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, where, how many staff or volunteers.",
+        "max": 3000
+      },
+      {
+        "id": "roles",
+        "label": "Roles or teams",
+        "type": "longtext",
+        "required": true,
+        "help": "Volunteer roles with tasks and hours, or the teams to recognise.",
+        "max": 5000
+      },
+      {
+        "id": "goals",
+        "label": "What the programme should achieve",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "text",
+        "required": false,
+        "help": "Per person per year, or a total.",
+        "max": 200
+      },
+      {
+        "id": "current",
+        "label": "What you do now",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "rules",
+        "label": "Rules and points to confirm",
+        "type": "longtext",
+        "required": false,
+        "help": "Safeguarding, checks, expenses, gift rules. We list these to confirm, not as advice.",
+        "max": 3000
+      },
+      {
+        "id": "contacts",
+        "label": "Who runs it",
+        "type": "text",
+        "required": false,
+        "help": "Roles or first names: coordinator, managers, panel.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "parts_complete",
+        "text": "Every part asked for is complete and ready to use.",
+        "weight": 5,
+        "pass_rule": "Each ticked part is present: role descriptions have tasks, time asked, skills, training, who they report to and what they get; recruitment has a web call, social post, flyer text and sign-up reply; induction has welcome letter, first-day checklist, rules, contacts and FAQ; guides have twenty message starters; awards have criteria and a nomination form.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "Uses only the organisation's facts.",
+        "weight": 5,
+        "pass_rule": "No role, number of volunteers, budget figure, policy, safeguarding rule, contact name or award history appears unless it is in the brief; safeguarding and legal points are listed as items to confirm.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fair_and_safe",
+        "text": "Rules are fair, open and safe.",
+        "weight": 4,
+        "pass_rule": "Award criteria are behaviours or results anyone in the role could show; nomination and selection involve more than one person; no rule favours or excludes people by protected traits; volunteer roles avoid paid-job words such as 'contract', 'wages' or 'disciplinary'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "owners_timing_costs",
+        "text": "Each part says who does what, when, and at what cost.",
+        "weight": 4,
+        "pass_rule": "Each part names an owner by role from the brief and timing (first day, monthly, yearly); any budget gives cost per person per year at three levels with what each buys, and totals equal cost per person times the headcount in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_warm",
+        "text": "Plain, warm words people will read.",
+        "weight": 3,
+        "pass_rule": "Short sentences and no HR jargon; letters and message starters name a specific action or contribution and are under 100 words each; each role description fits on about one page.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "part_count",
+        "unit": "extra part",
+        "included": 2,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a volunteer and staff engagement adviser. Write the parts of the programme I tick below, for my organisation. For volunteers: one-page role descriptions (tasks, time asked, skills, training, who they report to, what they get), a recruitment pack (web call, short social post, flyer text and a reply to new sign-ups), a welcome and induction pack (welcome letter, first-day checklist, key rules, contacts, FAQ, and safeguarding points to confirm), and a yearly plan to thank and keep volunteers with a message for each moment. For staff recognition: a programme with peer thanks, manager praise, milestones and any awards, clear rules and who decides; a manager guide with twenty message starters; fair award criteria with a nomination form and selection steps; and a cost plan at three budget levels. Use only my facts, keep rules fair to everyone, and write in plain, warm words. Not legal advice.",
+    "not_for": [
+      "Legal advice on volunteer or employment status, or employment law rulings",
+      "Safeguarding policies or background checks that need expert sign-off",
+      "Picking award winners or judging named people",
+      "Rewards or rules that treat people unequally for protected reasons",
+      "Tax advice on gifts, vouchers or benefits",
+      "Sending messages or posting the call for volunteers for you",
+      "Paid job descriptions (see the job description job)",
+      "Personal data about volunteers or staff beyond first names and roles; no passwords in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Volunteer role descriptions and a recruitment pack for Eastside Community Pantry. Roles: warehouse sorter (Tue and Thu mornings, 3 hours), delivery driver (own car, Saturday), front desk greeter (weekday afternoons). We need 25 more volunteers by January. Coordinator: Alicia. Volunteers must be 16 or over.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Staff recognition programme design and a manager guide for our 60-person logistics company (3 depots). Budget about 120 dollars per person per year. Today we only do a Christmas party. Managers are not used to giving praise. We want peer thanks and service milestones at 1, 3, 5 and 10 years.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Welcome and induction pack plus a plan to thank and keep volunteers for Riverbank Museum. 48 volunteers, mostly retired, guiding tours and helping in the archive. We lost 11 volunteers last year. Safeguarding: school groups visit weekly. Volunteer manager: Hugh.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Award criteria and a nomination form for our hospital trust's catering team awards (4 categories: going the extra mile, teamwork, patient care, newcomer of the year). 140 staff on shifts. Last year people said the same managers' favourites always won. Fair selection steps please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Recognition budget at three levels for our 18-person accounting firm, plus a recognition guide for our 4 managers. Today we spend nothing apart from birthday cakes. Partners would consider 50, 150 or 300 pounds per person per year.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "volunteer programme",
+      "volunteer role description",
+      "volunteer recruitment",
+      "volunteer induction",
+      "volunteer handbook",
+      "volunteer retention",
+      "volunteer thank you",
+      "staff recognition",
+      "employee recognition program",
+      "employee awards",
+      "award criteria",
+      "nomination form",
+      "recognition budget",
+      "manager praise",
+      "service awards",
+      "employee appreciation"
+    ],
+    "demand_sources": [
+      {
+        "note": "Gallup: employees who do not feel recognised are twice as likely to say they will quit within a year, and only one in three US workers strongly agree they got praise for good work in the past week.",
+        "url": "https://www.gallup.com/workplace/236441/employee-recognition-low-cost-high-impact.aspx"
+      },
+      {
+        "note": "NCVO Time Well Spent 2023: volunteers likely to keep volunteering fell from 80% to 77%, and 26% now say it feels too much like paid work.",
+        "url": "https://www.ncvo.org.uk/news-and-insights/news-index/key-findings-from-time-well-spent-2023/"
+      }
+    ]
+  },
+  {
+    "id": "retention-and-winback-plan",
+    "title": "Retention and win-back plan",
+    "summary": "A plan to keep members, subscribers or clients and win back lapsed ones: where people leave, warning signs, the journey, a fair cancel and pause flow, and the messages.",
+    "area": "marketing",
+    "deliverable": "Where people leave, from your data; warning signs and actions for quiet customers; a journey from joining or first order to renewal with the message for each step; a cancel flow with pause, skip or swap and an easy exit; win-back, reactivation and referral messages with who to contact first; a follow-up plan for unhappy customers; and the numbers to track.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "focus",
+        "label": "What do you need most?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full retention plan for members or subscribers",
+          "Member journey from joining to renewal",
+          "Churn check: where people leave",
+          "Cancel and pause flow",
+          "First order to repeat buyer",
+          "Win-back messages for lapsed customers",
+          "Past client reactivation and referral asks",
+          "Follow-up plan for unhappy customers"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "What you sell and how people pay",
+        "type": "longtext",
+        "required": true,
+        "help": "Membership, subscription, repeat orders or services, with prices.",
+        "max": 3000
+      },
+      {
+        "id": "data",
+        "label": "Your customer numbers",
+        "type": "longtext",
+        "required": true,
+        "help": "Joins and cancels by month, visits, repeat orders, survey scores, or an export without names and emails. Rough numbers help.",
+        "max": 40000
+      },
+      {
+        "id": "reasons",
+        "label": "Why people leave or complain",
+        "type": "longtext",
+        "required": false,
+        "help": "Cancel reasons, survey comments, what staff hear.",
+        "max": 5000
+      },
+      {
+        "id": "journey",
+        "label": "Your current journey and messages",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "offers",
+        "label": "What you can offer",
+        "type": "longtext",
+        "required": false,
+        "help": "Pause, skip, swap, a free month, a discount, a referral reward. Only these are used.",
+        "max": 2000
+      },
+      {
+        "id": "channels",
+        "label": "How you can reach people",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Email",
+          "Text message",
+          "In-app",
+          "Phone call",
+          "Letter or card",
+          "WhatsApp"
+        ]
+      },
+      {
+        "id": "past_clients",
+        "label": "Past clients or contacts",
+        "type": "longtext",
+        "required": false,
+        "help": "For reactivation: when they last bought, what, and how you know them. First names or IDs only.",
+        "max": 8000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "uses_their_data",
+        "text": "Where people leave is read from the buyer's data.",
+        "weight": 4,
+        "pass_rule": "Names the points where people leave or go quiet using figures from the brief (counts or rates with the sum shown), or says which data is missing; warning signs use behaviours the brief says it can track.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "Only the buyer's numbers, offers and reasons.",
+        "weight": 5,
+        "pass_rule": "No churn rate, cancel reason, discount, offer, customer name or result appears unless it is in the brief; any expected effect is labelled as a guess, not promised.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fair_exit",
+        "text": "Cancel and pause paths are honest and easy.",
+        "weight": 5,
+        "pass_rule": "Any cancel flow offers pause, skip or swap once and then lets the person cancel in no more than two more steps; there are no guilt-trip lines, hidden buttons or false deadlines; messages go only to people who have not opted out.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "messages_ready",
+        "text": "Messages are written, timed and ready to use.",
+        "weight": 4,
+        "pass_rule": "Each step in the journey or win-back sequence has timing (for example day 30, 60, 90), channel and a message under 120 words with one clear ask; unhappy-customer follow-ups say who replies and how fast.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "measures_plain",
+        "text": "Numbers to track, in plain words.",
+        "weight": 3,
+        "pass_rule": "Lists 3 to 6 numbers to track with how to work each out (for example cancels in the month divided by members at the start of the month); plain words throughout.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a retention marketer for small membership, subscription and service businesses. Using only my numbers and notes below, write a plan to keep customers and win back lapsed ones. Show where people leave or go quiet from my data, the warning signs I can track, and what to do for quiet customers. Map the journey from joining or first order to renewal, with the message for each step. Design a fair cancel flow that offers pause, skip or swap once and then lets people leave easily. Write win-back messages (for example at 30, 60 and 90 days), past-client reactivation and referral asks with who to contact first, and a follow-up plan for unhappy customers saying who replies and how fast. List 3 to 6 numbers to track and how to work them out. Use only my offers, no guilt trips or false deadlines, and only message people who agreed to hear from me.",
+    "not_for": [
+      "Dark patterns that make cancelling hard",
+      "Messages to people who opted out or never agreed to hear from you",
+      "Sending the messages for you, or logging in to your email, CRM or billing tools",
+      "Guaranteed cuts in churn",
+      "Legal advice on consumer, subscription or privacy law",
+      "Full email flows built in your email tool (see the post-purchase email flow job)",
+      "Customer emails, phone numbers, card numbers or passwords in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Full retention plan for Peak Pilates (2 studios, 610 members, 89 dollars a month). Joins and cancels by month for 18 months pasted. Most cancels happen in months 2 to 4. Cancel reasons: cost 34%, schedule 28%, moved 12%, other. We can offer a pause up to 2 months and a 49 dollar off-peak plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Win-back messages for gym members who have not visited in 30, 60 and 90 days. Kind, no guilt. We have 140 lapsed members right now (export of member ID and last visit pasted). We can offer a free personal training session. Email and text.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Cancel and pause flow for our coffee subscription (18 pounds a delivery, every 2 or 4 weeks). 9% of subscribers cancel each month. Top reasons pasted: too much coffee, price, want to try other roasters. We can offer skip, pause up to 3 months, swap roast, or switch to every 6 weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Past client reactivation and referral asks for my bookkeeping practice. 38 past clients over 5 years (pasted: first name, business type, last worked together, why we stopped). Many stopped in 2023 when I raised prices. I want messages that do not feel desperate and a short list of who to contact first.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Follow-up plan for unhappy customers from our NPS survey for our pool cleaning service. Last quarter: 312 replies, 41 detractors, 77 passives. Comments pasted. Team: owner Rosa and office lead Ben. Who follows up, how fast, message drafts and how to log fixes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "First order to repeat buyer plan for our natural dog treats shop. 62% of customers only buy once. A bag lasts about 4 weeks. Data pasted: first order month, repeat orders by week. We can offer 10% off a second order and a subscribe-and-save at 15% off. Email and text.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "retention plan",
+      "churn reduction",
+      "customer retention",
+      "member retention",
+      "cancel flow",
+      "pause subscription",
+      "win back",
+      "winback emails",
+      "lapsed customers",
+      "reactivation",
+      "past clients",
+      "referral ask",
+      "member journey",
+      "repeat purchase",
+      "subscription churn",
+      "nps follow up",
+      "detractors",
+      "close the loop"
+    ],
+    "demand_sources": [
+      {
+        "note": "Stripe guide: monthly churn of about 3 to 7% is seen as acceptable for subscription software that serves small businesses, and high churn hurts revenue and growth.",
+        "url": "https://stripe.com/resources/more/retention-rate-vs-churn-rate-what-businesses-need-to-know"
+      },
+      {
+        "note": "Recurly guidance: brands that offer a pause before cancel saw the strongest engagement and loyalty, since many cancellations are only a need for a break.",
+        "url": "https://docs.recurly.com/recurly-subscriptions/docs/navigate-retain-subscription-pause-why-it-matters"
+      }
+    ]
+  },
+  {
+    "id": "pay-bands-and-commission-plan",
+    "title": "Pay bands, benefits or sales commission plan",
+    "summary": "Pay bands and a fair-pay check for your roles, benefit options by budget, or a sales commission plan with a payout model, a plain plan document or a review of your current plan.",
+    "area": "people",
+    "deliverable": "Levels and pay ranges from the data you give, with rules for moving within a range; a fair-pay check that flags gaps to explain; benefits at three budget levels. Or a commission plan with quota, rates, accelerators and clawbacks, payouts at 50, 100 and 150 percent of quota, a plain plan document, or a review of your plan.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "plan_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Pay bands for your roles",
+          "Fair-pay check across similar roles",
+          "Benefits options at three budgets",
+          "Commission plan for one sales role",
+          "Payout model at 50, 100 and 150 percent of quota",
+          "Plain plan document for your sales team",
+          "Review of your current commission plan"
+        ]
+      },
+      {
+        "id": "role_count",
+        "label": "How many roles?",
+        "type": "number",
+        "required": true,
+        "help": "Roles or job levels to cover. Base price covers up to 10. A commission plan for one role counts as 1.",
+        "max": 60
+      },
+      {
+        "id": "roles",
+        "label": "Roles and current pay",
+        "type": "longtext",
+        "required": true,
+        "help": "Role, level, pay, hours and location. Use role titles or codes, not names.",
+        "max": 20000
+      },
+      {
+        "id": "country",
+        "label": "Country or state",
+        "type": "text",
+        "required": true,
+        "help": "So we can list local rules to check. This is not legal advice.",
+        "max": 100
+      },
+      {
+        "id": "pay_data",
+        "label": "Pay data you trust",
+        "type": "longtext",
+        "required": false,
+        "help": "Survey ranges or job ads you have collected. We do not add market data.",
+        "max": 10000
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "text",
+        "required": false,
+        "help": "Total pay or benefits budget, or cost of sales you can afford.",
+        "max": 300
+      },
+      {
+        "id": "benefits",
+        "label": "Current benefits and their cost",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "sales_numbers",
+        "label": "Sales numbers",
+        "type": "longtext",
+        "required": false,
+        "help": "For commission: deal sizes, sales cycle, quotas, last year's revenue and payouts.",
+        "max": 10000
+      },
+      {
+        "id": "current_plan",
+        "label": "Your current commission plan",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "goals",
+        "label": "What pay should reward",
+        "type": "text",
+        "required": false,
+        "help": "For example: new customers, renewals, margin, skills.",
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "built_from_their_data",
+        "text": "Every pay figure comes from the buyer's data.",
+        "weight": 5,
+        "pass_rule": "Each range, salary, rate, quota and payout is from the brief or worked out from it with the steps shown; no market pay figure, benchmark or 'typical' rate appears unless the brief supplies it; missing data is listed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "structure_complete",
+        "text": "The plan has every part it needs.",
+        "weight": 4,
+        "pass_rule": "Pay bands have levels, minimum, midpoint and maximum and a rule for moving within a range; commission plans state base and variable split, quota, rates, accelerators, any cap, clawbacks and payment timing, each with a reason; benefits show three budget levels with cost per person.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "maths_checks",
+        "text": "Scenarios and totals recompute.",
+        "weight": 5,
+        "pass_rule": "Recompute: payouts at 50, 100 and 150 percent of quota match the rates when a commission plan or model is asked for; band midpoints match the stated minimum and maximum; total cost equals cost per person times headcount.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fair_pay_flags",
+        "text": "Gaps are flagged for explanation, without legal rulings.",
+        "weight": 4,
+        "pass_rule": "Pay differences between similar roles and levels are listed with the size of the gap and a question to answer; the draft does not rule on whether a gap is lawful and uses no protected trait unless the brief supplies it for a fair-pay check.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_examples",
+        "text": "Plain words and worked examples.",
+        "weight": 3,
+        "pass_rule": "At least two worked examples use numbers from the brief (a rep's quarter, or a move within a band), and terms such as accelerator, clawback or midpoint are explained in a few words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 399,
+      "size": {
+        "field": "role_count",
+        "unit": "extra role",
+        "included": 10,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a reward and sales compensation adviser for small businesses. Using only the roles, pay, budget and sales numbers I give, do the job I chose. For pay bands, set levels with minimum, midpoint and maximum, say which of my data each range comes from, and give rules for moving within a range. For a fair-pay check, compare pay across similar roles and levels and flag gaps that need an explanation, without ruling on whether they are lawful. For benefits, give options at three budget levels with cost per person. For commission, set base and variable split, quota, rates, accelerators, any cap, clawbacks and payment timing with a reason for each, show what a rep earns and what it costs me at 50, 100 and 150 percent of quota, and write a plain plan document with worked examples and edge cases such as split deals, refunds and leavers. Check every sum and do not add market pay data I did not give. Not legal, tax or payroll advice.",
+    "not_for": [
+      "Legal advice on equal pay, pay transparency or employment law",
+      "Payroll, tax or pension calculations",
+      "Pay decisions about named people",
+      "Market pay data you do not supply",
+      "Tax advice on benefits, or regulated advice on pensions or insurance",
+      "Logging in to payroll or HR systems; paste anonymised data instead",
+      "Names, ID numbers, bank details or passwords in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Pay bands for our 34-person software company in Denver, Colorado (14 roles, pasted with current pay by role code and level). We must post pay ranges in job ads. Pay data we trust: two salary surveys we bought (ranges pasted). Budget for raises next year: 4% of payroll.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Commission plan for one account executive role. Deals average 18,000 dollars a year, 60-day sales cycle. Target revenue per rep 600,000 a year. Base now 70,000. Last year's payouts pasted. We want to reward new customers more than renewals and claw back if a customer cancels in 90 days.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Benefits options at three budgets for our 22-person design agency in Manchester. Today: 25 days holiday, a pension at the legal minimum, free fruit. Budget options: 500, 1,200 or 2,000 pounds per person per year. Staff survey comments pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Review our current commission plan. 5 sales reps, plan pasted (flat 8% of revenue, no cap, paid when invoiced). Last year's payouts and revenue by rep pasted. Problems: reps discount heavily at quarter end and chase small deals. Three changes and their effect please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Fair-pay check across our warehouse and office roles, 48 staff, data pasted by role code, level, hours, pay and gender (we include gender so we can check gaps). Flag gaps that need an explanation. We are in Ontario.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Plain plan document for our 6 sales reps from our new plan (pasted). Must cover how they earn, two worked examples, split deals between two reps, refunds, leavers mid-quarter, and who to ask. Short and readable.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "pay bands",
+      "salary bands",
+      "salary ranges",
+      "pay structure",
+      "pay equity",
+      "pay gap check",
+      "fair pay",
+      "benefits plan",
+      "employee benefits",
+      "commission plan",
+      "sales compensation",
+      "commission structure",
+      "quota",
+      "accelerators",
+      "clawback",
+      "payout model",
+      "comp plan document",
+      "commission plan review"
+    ],
+    "demand_sources": [
+      {
+        "note": "SHRM on sales pay at small firms: a survey of 600 salespeople found only 6% were extremely satisfied with their plans; they most wanted plans that are fair, reachable and easy to understand.",
+        "url": "https://www.shrm.org/resourcesandtools/hr-topics/compensation/pages/hr-sales-comp-small-firms.aspx"
+      },
+      {
+        "note": "Paycor tracker of state pay transparency laws: states including Colorado, New York (4 or more staff) and New Jersey (10 or more) require pay ranges in job ads.",
+        "url": "https://www.paycor.com/resource-center/articles/pay-transparency-laws-by-state/"
+      }
+    ]
+  },
+  {
+    "id": "lead-magnet-funnel-plan",
+    "title": "Lead magnet and funnel plan with copy",
+    "summary": "A free offer that fits your buyer, the path from sign-up to first sale, and the copy for the sign-up page, follow-up emails and first paid step.",
+    "area": "marketing",
+    "deliverable": "Three lead magnet ideas scored for fit, with the best one outlined (or written in full if short); a funnel map in words with the goal and exit for each step; sign-up page text; three to five follow-up emails; the first paid step; and for quizzes or workshops, the questions, results and emails or the outline and reminders.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "funnel_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Pick and outline a lead magnet",
+          "Full funnel: free offer, page, emails and first paid step",
+          "Quiz funnel",
+          "Free workshop or webinar funnel",
+          "Funnel map only"
+        ]
+      },
+      {
+        "id": "buyer",
+        "label": "Who you want to attract",
+        "type": "longtext",
+        "required": true,
+        "help": "Who they are and the problem they want solved.",
+        "max": 2000
+      },
+      {
+        "id": "offer",
+        "label": "Your main offer and price",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "giveaway",
+        "label": "What you could give away",
+        "type": "longtext",
+        "required": false,
+        "help": "Know-how, templates, a checklist, a short call, a sample.",
+        "max": 2000
+      },
+      {
+        "id": "current",
+        "label": "Your current sign-up flow and results",
+        "type": "longtext",
+        "required": false,
+        "help": "Pages, emails, list size, sign-up and sales rates.",
+        "max": 4000
+      },
+      {
+        "id": "proof",
+        "label": "Proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Results, quotes, numbers. Only these will be used.",
+        "max": 10
+      },
+      {
+        "id": "tools",
+        "label": "Email and page tools you use",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a sample of your writing.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Claims or words to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "magnet_fits_buyer",
+        "text": "The free offer solves one real part of the buyer's problem and leads to the paid offer.",
+        "weight": 4,
+        "pass_rule": "Names the free offer, why it fits the buyer's problem from the brief and how it leads to the main offer; when asked to pick one, three ideas are scored on the same criteria before the choice.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "funnel_map_complete",
+        "text": "Each step has a goal and an exit.",
+        "weight": 4,
+        "pass_rule": "The map lists every step in order (page, thank-you step, each email, offer) and gives each a goal, the action wanted and what happens if the person does not act.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "copy_ready",
+        "text": "Page text and emails are written and ready to paste.",
+        "weight": 5,
+        "pass_rule": "The sign-up page has headline, bullets, form ask and button; there are 3 to 5 follow-up emails, each with subject line, body under 200 words and one call to action; quizzes add questions, result types and a result page and email per result; workshops add a timed outline and reminder emails.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "No made-up proof, results, numbers or scarcity.",
+        "weight": 5,
+        "pass_rule": "No testimonial, result, subscriber count, price, deadline or limited number appears unless it is in the brief; no fake countdowns or 'only 3 left' lines.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_opt_in",
+        "text": "Plain words and opt-in respected.",
+        "weight": 3,
+        "pass_rule": "Copy uses plain words and short sentences; the sign-up page says what people will get by email; nothing suggests emailing people who did not sign up.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a funnel strategist and copywriter for small businesses. Using only my facts below, plan a lead magnet and funnel. Give three free-offer ideas scored on fit with my buyer's problem, speed to use, link to my main offer and effort to make, and outline the best one (write it in full if it is a short checklist or one-page guide). Map the funnel in words: sign-up page, thank-you step, each email and the offer, with the goal and the exit for each step. Write the sign-up page text, three to five follow-up emails with subject lines, and a small first paid step that leads to my main offer. For a quiz, write the questions, result types and a result page and email per result. For a free workshop, write a timed outline, the sign-up page and reminder emails, with a soft offer at the end. No invented proof, fake urgency or false scarcity.",
+    "not_for": [
+      "Building pages, quizzes or automations in your tools, or logging in to them",
+      "Fake urgency or invented scarcity",
+      "Emailing people who did not opt in",
+      "Guaranteed lead or sales numbers",
+      "Health, money or legal promises that need regulated advice",
+      "Long lead magnets such as an ebook or course (see the long-form guide job)",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Pick and outline a lead magnet for my bookkeeping service for UK tradespeople (electricians, plumbers). They hate paperwork and fear the tax return. Main offer: 95 pounds a month bookkeeping. I could give away my receipt-sorting system and a list of costs they can claim. Score three ideas.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Full funnel for my interior design e-course 'Small Rooms, Big Ideas' (149 dollars). Buyers: renters in small flats. Current flow: Instagram bio link straight to the sales page, 0.6% buy. I want a free offer, sign-up page, 4 emails and a small paid first step at about 19 dollars.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Quiz funnel for our running shoe shop: 'Which trail shoe suits you?'. 6 to 8 questions, 4 result types (we stock 14 trail shoes, list pasted), a result page and a follow-up email for each. Goal: book a free gait check in store.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Free 45-minute workshop funnel for my coaching for new team leads in hospitality. Teach one thing: running a 10-minute pre-shift briefing. Sign-up page, 3 reminder emails, outline with timings, and a soft offer at the end for my 6-week programme (450 pounds).",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Funnel map only for our B2B cleaning company. We get website visitors from Google but few quote requests. Steps today: home page, quote form, nothing else. Map a better path with a free offer (maybe a cleaning checklist for office managers), the goal and exit for each step.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "lead magnet",
+      "freebie",
+      "opt-in",
+      "lead funnel",
+      "sales funnel",
+      "funnel map",
+      "email funnel",
+      "quiz funnel",
+      "webinar funnel",
+      "workshop funnel",
+      "tripwire",
+      "landing page",
+      "welcome emails",
+      "list building",
+      "lead generation"
+    ],
+    "demand_sources": [
+      {
+        "note": "AWAI article on funnel pricing: copywriters charged $5,000 to $10,000 for a basic funnel of lead magnet, offer page, upsell and follow-up emails (2015 figures).",
+        "url": "https://awai.com/2015/06/how-much-should-you-charge-a-client-for-a-funnel"
+      },
+      {
+        "note": "2026 email copywriter rate guide: welcome emails $50 to $150 each, nurture emails $75 to $200, and $400 to $600 for a starter five-email welcome sequence.",
+        "url": "https://www.biztoolkit.co/post/freelance-email-copywriter-rates-in-2026-per-email-per-campaign"
+      }
+    ]
+  },
+  {
+    "id": "book-proposal-and-outline",
+    "title": "Book proposal, chapter outline or sample chapter",
+    "summary": "A nonfiction book proposal for agents or publishers, a chapter-by-chapter outline, or one chapter drafted from your notes in your voice.",
+    "area": "content",
+    "deliverable": "A proposal with overview, the reader, comparable titles you name, your platform, chapter summaries and a marketing plan; or title options, the book's promise and an outline of 10 to 14 chapters with purpose, key points and stories; or a 3,000 to 5,000 word chapter in your voice with claims needing a source flagged.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "document",
+        "label": "Which document do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Book proposal",
+          "Chapter-by-chapter outline",
+          "One sample chapter"
+        ]
+      },
+      {
+        "id": "document_count",
+        "label": "How many documents?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to two per job. A proposal plus a sample chapter counts as two.",
+        "max": 2
+      },
+      {
+        "id": "idea",
+        "label": "Your book idea and its promise to readers",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "reader",
+        "label": "Who the book is for",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "notes",
+        "label": "Your notes, stories or transcripts",
+        "type": "longtext",
+        "required": true,
+        "help": "Talks, posts, client stories, interview transcripts. Stories used come only from here.",
+        "max": 60000
+      },
+      {
+        "id": "comps",
+        "label": "Comparable titles",
+        "type": "list",
+        "required": false,
+        "help": "Title, author and year. We only use the ones you give.",
+        "max": 10
+      },
+      {
+        "id": "platform",
+        "label": "Your platform",
+        "type": "longtext",
+        "required": false,
+        "help": "List size, followers, talks, clients, media. Only these numbers are used.",
+        "max": 3000
+      },
+      {
+        "id": "guidelines",
+        "label": "Agent or publisher guidelines",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "chapter",
+        "label": "Which chapter to draft, and length",
+        "type": "text",
+        "required": false,
+        "help": "For a sample chapter. Default is about 4,000 words.",
+        "max": 300
+      },
+      {
+        "id": "voice",
+        "label": "A sample of your writing",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_document_complete",
+        "text": "The document has every part its type needs.",
+        "weight": 5,
+        "pass_rule": "A proposal has overview, the reader, comparable titles, author platform, a summary for every chapter and a marketing plan (or follows the guidelines in the brief); an outline has title options, the promise and 10 to 14 chapters each with purpose, key points, stories and a link to the next; a chapter is 3,000 to 5,000 words or the length asked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented",
+        "text": "No made-up stories, studies, quotes, comparable titles or platform numbers.",
+        "weight": 5,
+        "pass_rule": "Every story, client example, statistic, study, quote, comparable title and follower or sales number is from the brief; claims that need a source are marked [source needed]; no sales figures are given for comparable titles unless supplied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "in_their_voice",
+        "text": "It sounds like the author.",
+        "weight": 4,
+        "pass_rule": "Uses the author's own phrases and stories from the notes, keeps first person if the notes use it, matches any writing sample, and avoids filler such as 'in today's fast-paced world'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_promise_structure",
+        "text": "A clear promise and a logical flow.",
+        "weight": 4,
+        "pass_rule": "States the book's promise to the reader in one or two sentences near the start; each chapter or section builds on the one before; no point is repeated across two chapters.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_readable",
+        "text": "Plain, readable prose.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 25 words, jargon is explained, and headings make the structure clear at a glance.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "document_count",
+        "unit": "extra document",
+        "included": 1,
+        "per_unit_usd": 149
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a nonfiction book coach and ghostwriter. Using only my idea, notes, comparable titles and platform below, write the document I chose. For a book proposal, write an overview with the book's promise, who the reader is, the comparable titles I name and how my book differs, my platform with only the numbers I give, a summary for every chapter and a marketing plan, following any agent or publisher guidelines I paste. For an outline, give title options, the core promise and 10 to 14 chapters, each with its purpose, key points, the stories from my notes to use and how it leads to the next. For a sample chapter, write 3,000 to 5,000 words in my voice from my notes. Do not invent stories, studies, quotes, comparable titles or numbers, and mark any claim that needs a source as [source needed]. Keep the prose plain and readable.",
+    "not_for": [
+      "Finding an agent or publisher, or sending queries for you",
+      "Writing a whole book in one job",
+      "Invented stories, studies, quotes, comparable titles or sales figures",
+      "Medical, legal or financial advice stated as fact without your expert review",
+      "Novels and other fiction",
+      "Editing, formatting, cover design or publishing",
+      "Passwords, logins, card numbers or bank details in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Book proposal for 'The Quiet Shop', a book for independent retailers on growing without discounting. I have run a hardware store in Vermont for 22 years and write a newsletter with 8,400 subscribers. Comparable titles I chose: 'Profit First' (Michalowicz, 2014) and 'The E-Myth Revisited' (Gerber, 1995). Notes and 14 newsletter essays pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Chapter-by-chapter outline for a book on hiring your first five employees, for owners of trades businesses. Transcripts of 6 talks I gave and 30 client stories (anonymised) pasted. Reader: plumbers, electricians and builders with 1 to 3 staff.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Sample chapter, chapter 3 'The 20-minute weekly money meeting', about 4,000 words, for my book on money habits for creative freelancers. My notes, two podcast transcripts and a writing sample pasted. First person, warm and direct. Flag anything that needs a source.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Proposal plus sample chapter (2 documents) for a book about running a calm restaurant kitchen, by me, a chef-owner of two restaurants in Leeds. Agent guidelines pasted (proposal under 30 pages, sample chapter required). Platform: 31,000 Instagram followers, regular BBC Radio Leeds guest. Notes pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "book proposal",
+      "nonfiction book proposal",
+      "book outline",
+      "chapter outline",
+      "sample chapter",
+      "ghostwriter",
+      "business book",
+      "book coach",
+      "write a book",
+      "literary agent",
+      "publisher submission",
+      "chapter draft"
+    ],
+    "demand_sources": [
+      {
+        "note": "Reedsy's guide to ghostwriting costs says a book proposal costs between $1,000 and $10,000.",
+        "url": "https://reedsy.com/blog/how-much-does-it-cost-to-hire-a-ghostwriter/"
+      },
+      {
+        "note": "Freelance Writer Search: ASJA members report average fees of $5,000 to $20,000 for book proposals.",
+        "url": "https://www.freelancewritersearch.com/working-with-writers/setting-fees.php"
+      }
+    ]
+  }
+]

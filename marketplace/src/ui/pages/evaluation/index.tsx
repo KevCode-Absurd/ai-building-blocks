@@ -95,7 +95,7 @@ function Review() {
               </div>
               <Card title="Which draft is better?" class="eval-decide">
                 <Field label="Why? (optional)" help="One line is enough. It helps us improve the agents." id="eval-reason">
-                  <TextArea id="eval-reason" rows={3} maxLength={2000} value={reason} onValue={setReason} placeholder="For example: B answers the price question and A does not." />
+                  <TextArea id="eval-reason" rows={3} maxLength={2000} value={reason} onValue={setReason} placeholder="For example: B answers the buyer's main question and A does not." />
                 </Field>
                 <div class="eval-actions">
                   <Button onClick={() => choose(pair, "a")} busy={busy === "a"} disabled={locked}>A is better</Button>

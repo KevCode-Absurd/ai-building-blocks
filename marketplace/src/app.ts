@@ -7,10 +7,12 @@ import "./modules/fakes.ts";
 
 const compiled = compile([...coreRoutes, ...moduleRoutes]);
 const API_PREFIXES = ["/api/", "/mcp", "/oauth/", "/.well-known/"];
+/** Files the Worker writes outside /api: an agent's personality, /agents/<id>/soul.md (also in wrangler.jsonc run_worker_first). */
+const WORKER_FILES = /^\/agents\/[^/]+\/soul\.md$/;
 
 export async function handleFetch(req: Request, env: Env, exec: ExecutionContext): Promise<Response> {
   const url = new URL(req.url);
-  if (API_PREFIXES.some(p => url.pathname === p.replace(/\/$/, "") || url.pathname.startsWith(p))) {
+  if (API_PREFIXES.some(p => url.pathname === p.replace(/\/$/, "") || url.pathname.startsWith(p)) || WORKER_FILES.test(url.pathname)) {
     const res = await dispatch(compiled, req, env, exec);
     return res ?? errorResponse(404, "not_found", "There is nothing at this address.");
   }

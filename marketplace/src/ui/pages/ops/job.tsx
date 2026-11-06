@@ -2,7 +2,7 @@
 import { useState } from "preact/hooks";
 import type { ComponentChildren } from "preact";
 import { Badge, Button, Card, Field, Loaded, Markdown, Notice, Page, Select, Table, Tabs, TextArea, useLoad } from "../../components.tsx";
-import { api, money, when } from "../../lib/api.ts";
+import { api, when } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import type { DraftView, JobRecord, RunView, ScoreView } from "../../../modules/ops/types.ts";
 import { Bar, FlagBadges, OpsNav, STATUS_WORDS, StatusBadge, errorText, usd, words } from "./shared.tsx";
@@ -42,9 +42,8 @@ function Overview(props: { r: JobRecord }) {
           ["Buyer", job.buyer_email ?? job.buyer_id],
           ["Job type", job.job_type_title ?? "No job type yet"],
           ["Agent", agent ? `${agent.persona_name ?? agent.name}, version ${job.agent_version ?? agent.live_version ?? "?"} (${words(agent.status)})` : job.agent_id ?? "Not picked yet"],
-          ["Price", job.price_cents !== null ? `${money(job.price_cents)} (not charged)` : "Not quoted yet"],
           ["Revisions used", `${job.revisions_used} of ${job.revisions_allowed}`],
-          ["Ordered from", words(job.source)],
+          ["Started from", words(job.source)],
           ["Created", when(job.created_at)],
           ["Due", when(job.due_at)],
           ["Delivered", when(job.delivered_at)],
@@ -79,7 +78,7 @@ function Overview(props: { r: JobRecord }) {
               </li>
             ))}
           </ol>
-        ) : <p class="muted">No checklist yet. It is written with the quote.</p>}
+        ) : <p class="muted">No checklist yet. It is written with the plan.</p>}
       </Card>
     </div>
   );

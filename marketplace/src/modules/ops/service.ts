@@ -1,5 +1,5 @@
 // Ops console services. Owner: ops module.
-// notifyOps alerts the team; gateMetrics computes the week-6 beta gate numbers shown on /ops.
+// notifyOps alerts the team; gateMetrics computes the week-6 invite gate numbers shown on /ops.
 import type { Env } from "../../env.ts";
 import { all, first } from "../../core/db.ts";
 import { notify } from "../../core/email.ts";
@@ -10,6 +10,7 @@ import { notify } from "../../core/email.ts";
  */
 export const neighbours = {
   delivery: () => import("../delivery/service.ts"),
+  problems: () => import("../delivery/problems.ts"),
   runner: () => import("../runner/service.ts"),
   directory: () => import("../directory/service.ts"),
   evaluation: () => import("../evaluation/service.ts"),
@@ -85,13 +86,13 @@ export function median(values: number[]): number | null {
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
 }
 
-/** The week-6 beta gate: 50 experts, 100 jobs, 65% blind wins, 30% repeat buyers within 30 days. */
+/** The week-6 invite gate: 50 experts, 100 jobs, 65% blind wins, 30% repeat buyers within 30 days. */
 export async function gateMetrics(env: Env): Promise<GateMetrics> {
   const db = env.DB;
 
   const experts = await first<{ n: number }>(db, "SELECT COUNT(*) AS n FROM experts WHERE status = 'approved'");
 
-  // Payments are on hold, so the jobs target counts accepted jobs. Delivered = ever shown to the buyer.
+  // Hiring is free, so the jobs target counts accepted jobs. Delivered = ever shown to the buyer.
   const jobs = await first<{ delivered: number | null; accepted: number | null }>(db, `
     SELECT
       SUM(CASE WHEN j.delivered_at IS NOT NULL OR j.status IN ('delivered', 'accepted')

@@ -49,7 +49,12 @@ export async function testEnv(overrides: Partial<Env> = {}, opts: { catalogue?: 
     APP_ORIGIN: "https://agents.test",
     CLERK_PUBLISHABLE_KEY: "pk_test_ZXhhbXBsZS5jbGVyay5hY2NvdW50cy5kZXYk",
     AUTH_TEST_MODE: "true",
-    BETA_MODE: "invite",
+    // Every real environment has INVITE_ONLY "false". Tests default to "true" so the invite gate stays covered;
+    // tests of open hiring pass { INVITE_ONLY: "false" }.
+    INVITE_ONLY: "true",
+    // Every real environment has HOSTED_JOBS "off". Tests default to "on" so the hosted job flow stays covered;
+    // tests of the own-AI mode pass { HOSTED_JOBS: "off" }.
+    HOSTED_JOBS: "on",
     MODEL_MODE: "fake",
     RELEASE_REVIEW: "required",
     DAILY_MODEL_CAP_USD: "5",

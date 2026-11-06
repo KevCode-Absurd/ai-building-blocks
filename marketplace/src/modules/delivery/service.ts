@@ -13,6 +13,7 @@ import { getJobType } from "../catalogue/index.ts";
 import { startJobRun } from "../runner/service.ts";
 import { notifyOps } from "../ops/service.ts";
 import { editsRecord, summarizeDiff, type StoredEdits } from "./diff.ts";
+import { decisionChoices, decisionConsentStatement, learnDefault } from "./consent.ts";
 
 /** A delivered draft is accepted for the buyer after this many days without a decision. */
 export const AUTO_ACCEPT_DAYS = 5;
@@ -35,7 +36,7 @@ interface PersonaRow { id: string; name: string; title: string; profile: string 
 
 async function loadJob(env: Env, jobId: string): Promise<JobRow> {
   const job = await getJob(env, jobId);
-  if (!job) return fail(404, "job_not_found", "We could not find that job.");
+  if (!job) return fail(404, "job_not_found", "We could not find that job. Open My jobs to see the jobs on your account.");
   return job;
 }
 
@@ -43,7 +44,7 @@ export async function latestReleasedDraft(env: Env, jobId: string): Promise<Draf
   return first<DraftRow>(env.DB, "SELECT * FROM drafts WHERE job_id = ? AND released_at IS NOT NULL ORDER BY released_at DESC, version DESC LIMIT 1", jobId);
 }
 
-/** The job's frozen checklist: the rubrics row, else the quote's copy, else the job type's template. */
+/** The job's frozen checklist: the rubrics row, else the plan's copy (jobs.quote), else the job type's template. */
 export async function rubricFor(env: Env, job: JobRow): Promise<RubricCriterion[]> {
   const row = await first<{ criteria: string }>(env.DB, "SELECT criteria FROM rubrics WHERE job_id = ?", job.id);
   const fromRow = parseJson<RubricCriterion[]>(row?.criteria, []);
@@ -80,11 +81,24 @@ function pickCriteria(ids: string[] | undefined, criteria: RubricCriterion[]): R
 }
 
 function decisionStatement(db: D1Database, d: {
-  jobId: string; draftId: string; kind: DecisionRow["kind"]; reasons?: string; failedCriteria?: string[];
+  id?: string; jobId: string; draftId: string; kind: DecisionRow["kind"]; reasons?: string; failedCriteria?: string[];
   edits?: StoredEdits | null; rating?: number | null; createdBy: string; at: string;
 }): D1PreparedStatement {
   return db.prepare("INSERT INTO decisions (id, job_id, draft_id, kind, reasons, failed_criteria, edits, rating, created_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
-    .bind(newId("dec"), d.jobId, d.draftId, d.kind, d.reasons ?? "", JSON.stringify(d.failedCriteria ?? []), d.edits ? JSON.stringify(d.edits) : null, d.rating ?? null, d.createdBy, d.at);
+    .bind(d.id ?? newId("dec"), d.jobId, d.draftId, d.kind, d.reasons ?? "", JSON.stringify(d.failedCriteria ?? []), d.edits ? JSON.stringify(d.edits) : null, d.rating ?? null, d.createdBy, d.at);
+}
+
+/**
+ * The decision row and, when the buyer edited the text, their choice about those edits (consent.ts).
+ * shareEdits is the buyer's tick; when they were not asked (another surface), the org's choice applies, else no.
+ */
+async function decisionWithConsent(env: Env, job: JobRow, d: Parameters<typeof decisionStatement>[1], shareEdits: boolean | undefined): Promise<{ statements: D1PreparedStatement[]; shared: boolean | null }> {
+  const id = d.id ?? newId("dec");
+  const statements = [decisionStatement(env.DB, { ...d, id })];
+  if (!d.edits) return { statements, shared: null };
+  const shared = shareEdits ?? await learnDefault(env, job.org_id);
+  statements.push(decisionConsentStatement(env.DB, { decisionId: id, jobId: job.id, orgId: job.org_id, granted: shared, by: d.createdBy, at: d.at }));
+  return { statements, shared };
 }
 
 const errText = (err: unknown) => (err instanceof Error ? err.message : String(err)).slice(0, 300);
@@ -137,7 +151,7 @@ export async function releaseDraft(env: Env, input: { jobId: string; draftId: st
     text: [
       revised ? `${agent} made the changes you asked for.` : `${agent} finished your draft.`,
       "Open it to read it. Then accept it, ask for changes or reject it.",
-      `If you do nothing, we accept it for you in ${AUTO_ACCEPT_DAYS} days. Nothing is charged during the beta.`,
+      `If you do nothing, we accept it for you in ${AUTO_ACCEPT_DAYS} days.`,
     ].join(" "),
   });
   return updated;
@@ -145,8 +159,11 @@ export async function releaseDraft(env: Env, input: { jobId: string; draftId: st
 
 // ---------- Buyer decisions ----------
 
-/** The buyer accepts. Optional edited version is stored as a diff (with consent rules applied to its later use). */
-export async function acceptJob(env: Env, input: { jobId: string; userId: string; rating?: number; note?: string; editedContent?: string; actorKind?: ActorKind }): Promise<JobRow> {
+/**
+ * The buyer accepts. An edited version is stored as a diff. shareEdits is the buyer's choice about reusing those
+ * edits to improve the agent (default: the org's choice, else no). See consent.ts.
+ */
+export async function acceptJob(env: Env, input: { jobId: string; userId: string; rating?: number; note?: string; editedContent?: string; shareEdits?: boolean; actorKind?: ActorKind }): Promise<JobRow> {
   const job = await loadJob(env, input.jobId);
   mustBeDelivered(job);
   const draft = await latestReleasedDraft(env, job.id);
@@ -154,11 +171,13 @@ export async function acceptJob(env: Env, input: { jobId: string; userId: string
   const rating = checkRating(input.rating);
   const edits = editsRecord(draft.id, draft.content, input.editedContent);
   const now = nowIso();
+  const decision = await decisionWithConsent(env, job,
+    { jobId: job.id, draftId: draft.id, kind: "accept", reasons: input.note?.trim() ?? "", edits, rating, createdBy: input.userId, at: now }, input.shareEdits);
   return transitionJob(env, {
     jobId: job.id, to: "accepted", actor: input.userId, actorKind: input.actorKind ?? "user",
-    data: { draftId: draft.id, rating, edited: !!edits },
+    data: { draftId: draft.id, rating, edited: !!edits, ...(decision.shared === null ? {} : { share_edits: decision.shared }) },
     set: { accepted_at: now },
-    also: [decisionStatement(env.DB, { jobId: job.id, draftId: draft.id, kind: "accept", reasons: input.note?.trim() ?? "", edits, rating, createdBy: input.userId, at: now })],
+    also: decision.statements,
   });
 }
 
@@ -176,8 +195,11 @@ export function revisionFeedback(input: { reasons: string; failed: RubricCriteri
   return parts.join("\n\n");
 }
 
-/** The buyer asks for changes (max revisions_allowed). Moves to revising and starts a revision run with the reasons. */
-export async function requestRevision(env: Env, input: { jobId: string; userId: string; reasons: string; failedCriteria: string[]; editedContent?: string; actorKind?: ActorKind }): Promise<JobRow> {
+/**
+ * The buyer asks for changes (max revisions_allowed). Moves to revising and starts a revision run with the reasons.
+ * The revision always uses the buyer's edits (it is their own job); shareEdits only covers use beyond this job.
+ */
+export async function requestRevision(env: Env, input: { jobId: string; userId: string; reasons: string; failedCriteria: string[]; editedContent?: string; shareEdits?: boolean; actorKind?: ActorKind }): Promise<JobRow> {
   const job = await loadJob(env, input.jobId);
   mustBeDelivered(job);
   if (job.revisions_used >= job.revisions_allowed) {
@@ -193,11 +215,13 @@ export async function requestRevision(env: Env, input: { jobId: string; userId: 
   const feedback = revisionFeedback({ reasons, failed, edits, round, allowed: job.revisions_allowed });
   const actorKind = input.actorKind ?? "user";
   const now = nowIso();
+  const decision = await decisionWithConsent(env, job,
+    { jobId: job.id, draftId: draft.id, kind: "revise", reasons, failedCriteria: failed.map(c => c.id), edits, createdBy: input.userId, at: now }, input.shareEdits);
   const updated = await transitionJob(env, {
     jobId: job.id, to: "revising", actor: input.userId, actorKind,
-    data: { draftId: draft.id, round, failedCriteria: failed.map(c => c.id), edited: !!edits },
+    data: { draftId: draft.id, round, failedCriteria: failed.map(c => c.id), edited: !!edits, ...(decision.shared === null ? {} : { share_edits: decision.shared }) },
     set: { revisions_used: round },
-    also: [decisionStatement(env.DB, { jobId: job.id, draftId: draft.id, kind: "revise", reasons, failedCriteria: failed.map(c => c.id), edits, createdBy: input.userId, at: now })],
+    also: decision.statements,
   });
   try {
     await startJobRun(env, { jobId: job.id, actor: input.userId, actorKind, kind: "revision", feedback });
@@ -214,7 +238,7 @@ export async function requestRevision(env: Env, input: { jobId: string; userId: 
   return (await getJob(env, job.id)) ?? updated;
 }
 
-/** The buyer rejects the work. Ops is alerted; payments are on hold so there is nothing to refund yet. */
+/** The buyer rejects the work. Ops is alerted and follows up. Hiring is free, so no money is involved. */
 export async function rejectJob(env: Env, input: { jobId: string; userId: string; reasons: string; failedCriteria: string[]; actorKind?: ActorKind }): Promise<JobRow> {
   const job = await loadJob(env, input.jobId);
   mustBeDelivered(job);
@@ -305,13 +329,13 @@ function personaBrief(p: PersonaRow | null): PersonaBrief | null {
   };
 }
 
-/** Where a buyer opens a job: unfinished orders go back to the intake page. */
+/** Where a buyer opens a job: requests not started yet go back to the request page. */
 export const jobHref = (job: { id: string; status: JobStatus }) => (job.status === "draft" || job.status === "quoted" ? `/requests/${job.id}` : `/jobs/${job.id}`);
 
 export interface JobListItem {
   id: string; title: string; status: JobStatus; statusLabel: string; needsYou: boolean; href: string;
   persona: PersonaBrief | null; jobType: { id: string; title: string } | null;
-  priceCents: number | null; currency: string; createdAt: string; updatedAt: string;
+  createdAt: string; updatedAt: string;
 }
 
 /** Jobs in every org the user belongs to, newest first. */
@@ -328,7 +352,7 @@ export async function listJobsForUser(env: Env, userId: string, limit = 200): Pr
       needsYou: r.status === "delivered" || r.status === "draft" || r.status === "quoted", href: jobHref(r),
       persona: personaBrief(r.p_id ? { id: r.p_id, name: r.p_name ?? "", title: r.p_title ?? "", profile: r.p_profile ?? "{}" } : null),
       jobType: jt ? { id: jt.id, title: jt.title } : null,
-      priceCents: r.price_cents, currency: r.currency, createdAt: r.created_at, updatedAt: r.updated_at,
+      createdAt: r.created_at, updatedAt: r.updated_at,
     };
   });
 }
@@ -337,8 +361,8 @@ export interface TimelineItem { at: string; type: string; label: string }
 
 function timelineLabel(status: string, from: string, actorKind: string, data: Record<string, unknown>): string | null {
   switch (status) {
-    case "quoted": return "Quote ready";
-    case "confirmed": return "You ordered";
+    case "quoted": return "Plan ready";
+    case "confirmed": return "You started the job";
     case "running": return from === "revising" ? "Changes started" : from === "confirmed" ? "Work started" : "Work started again";
     case "checking": return "Checking the draft";
     case "in_review": return "Final check by our team";
@@ -391,21 +415,21 @@ export interface NextStep { title: string; text: string }
 export function nextStep(job: JobRow, agent: string): NextStep {
   const work = getJobType(job.job_type_id)?.title.toLowerCase() ?? "job";
   switch (job.status) {
-    case "draft": return { title: "Your order is not finished", text: "Answer the questions and confirm the quote to start the work." };
-    case "quoted": return { title: "Your quote is ready", text: "Check the price and the checklist, then confirm to start the work." };
+    case "draft": return { title: "Your request is not finished", text: "Answer the questions, then check the plan and start the job." };
+    case "quoted": return { title: "Your plan is ready", text: "Check what you will get, by when, and the checklist. Then start the job." };
     case "confirmed": return { title: `${agent} is about to start`, text: "Work starts in a moment. This page updates by itself." };
     case "running": return job.revisions_used > 0
       ? { title: `${agent} is making your changes`, text: "When the new draft is done, we check it against your checklist. We email you when it is ready." }
       : { title: `${agent} is working on your ${work}`, text: "When the draft is done, we check it against your checklist. We email you when it is ready." };
     case "checking": return { title: "We are checking the draft", text: `Each item on your checklist gets a pass or a fail. If something fails, ${agent} fixes it before you see it.` };
-    case "in_review": return { title: "Our team is giving it a final look", text: "During the beta, a person on our team reads every draft before you see it. We email you when it is ready." };
+    case "in_review": return { title: "Our team is giving it a final look", text: "A person on our team reads every draft before you see it. We email you when it is ready." };
     case "delivered": return { title: "Your draft is ready", text: "Read it, then accept it, ask for changes or reject it." };
     case "revising": return { title: "Your changes are on the way", text: `${agent} starts on them in a moment. This page updates by itself.` };
     case "accepted": return { title: "Done", text: "This job is finished. You can copy or download the work any time." };
-    case "rejected": return { title: "You rejected this work", text: "Our team will look at what went wrong and get back to you. Nothing was charged." };
+    case "rejected": return { title: "You rejected this work", text: "Our team will look at what went wrong and get back to you by email." };
     case "disputed": return { title: "Our team is looking into it", text: "We got your report, so we will not accept the work for you. We will get back to you by email." };
     case "failed": return { title: "Your job is delayed", text: "Something went wrong on our side. Our team knows and will get it moving again." };
-    case "cancelled": return { title: "This job was cancelled", text: "Nothing was charged." };
+    case "cancelled": return { title: "This job was cancelled", text: "No more work will happen on it. You can start a new job any time." };
   }
 }
 
@@ -413,19 +437,44 @@ const DECISION_LABELS: Record<DecisionRow["kind"], string> = {
   accept: "You accepted the work", revise: "You asked for changes", reject: "You rejected the work", auto_accept: `Accepted for you after ${AUTO_ACCEPT_DAYS} days`,
 };
 
+/**
+ * How ops settled a problem report, in the buyer's words. "credit" is only on old reports (before hiring was free);
+ * ops can no longer pick it, and the buyer just sees that the job was closed.
+ */
+export const PROBLEM_OUTCOME_LABELS: Record<StoredProblemOutcome, string> = {
+  rerun: "We are redoing the work",
+  accept: "We marked the job as done",
+  credit: "We closed the job",
+  cancel: "We cancelled the job",
+  close: "We closed your report",
+};
+
+/** What ops can decide for a problem report today. */
+export type ProblemOutcome = "rerun" | "accept" | "cancel" | "close";
+/** What a problem_reports row may hold, including the retired "credit" outcome. */
+export type StoredProblemOutcome = ProblemOutcome | "credit";
+
+interface ProblemRowLite {
+  id: string; reasons: string; status: "open" | "resolved"; created_at: string; resolved_at: string | null;
+  outcome: StoredProblemOutcome | null; resolution_note: string | null;
+}
+
 /** Everything the buyer's job page shows. Only released drafts; check results as pass marks only. */
 export async function buyerJobView(env: Env, job: JobRow) {
   const db = env.DB;
-  const [persona, criteria, draftRows, decisionRows, events, brief] = await Promise.all([
+  const [persona, criteria, draftRows, decisionRows, events, brief, sharing, shareDefault, problemRows] = await Promise.all([
     personaFor(env, job.persona_id),
     rubricFor(env, job),
     all<DraftRow>(db, "SELECT * FROM drafts WHERE job_id = ? AND released_at IS NOT NULL ORDER BY released_at, version", job.id),
     all<DecisionRow>(db, "SELECT * FROM decisions WHERE job_id = ? ORDER BY created_at, rowid", job.id),
     eventsFor(db, "job", job.id),
     first<{ request_text: string }>(db, "SELECT request_text FROM briefs WHERE job_id = ?", job.id),
+    decisionChoices(env, job.id),
+    learnDefault(env, job.org_id),
+    all<ProblemRowLite>(db, "SELECT id, reasons, status, created_at, resolved_at, outcome, resolution_note FROM problem_reports WHERE job_id = ? ORDER BY created_at, rowid", job.id),
   ]);
   const jt = getJobType(job.job_type_id);
-  const quote = parseJson<Partial<Quote>>(job.quote, {});
+  const plan = parseJson<Partial<Quote>>(job.quote, {});
   const drafts = await Promise.all(draftRows.map(async d => ({
     id: d.id, version: d.version, format: d.format, content: d.content, releasedAt: d.released_at, check: await latestCheck(env, d.id),
   })));
@@ -441,7 +490,6 @@ export async function buyerJobView(env: Env, job: JobRow) {
       id: job.id, title: job.title?.trim() || jt?.title || "Untitled job", status: job.status, statusLabel: STATUS_LABELS[job.status],
       working: WORKING_STATUSES.includes(job.status),
       jobTypeId: job.job_type_id, personaId: job.persona_id,
-      priceCents: job.price_cents, currency: job.currency, paymentStatus: job.payment_status,
       turnaroundHours: job.turnaround_hours, dueAt: job.due_at,
       createdAt: job.created_at, updatedAt: job.updated_at, deliveredAt: job.delivered_at, autoAcceptAt: job.auto_accept_at, acceptedAt: job.accepted_at,
       revisionsUsed: job.revisions_used, revisionsAllowed: job.revisions_allowed,
@@ -449,8 +497,9 @@ export async function buyerJobView(env: Env, job: JobRow) {
     persona: agent,
     jobType: jt ? { id: jt.id, title: jt.title, deliverable: jt.deliverable } : null,
     request: brief?.request_text ?? null,
-    quote: typeof quote.price_cents === "number"
-      ? { priceCents: quote.price_cents, breakdown: Array.isArray(quote.breakdown) ? quote.breakdown : [], turnaroundHours: quote.turnaround_hours ?? null, rush: !!quote.rush }
+    /** The plan the buyer started: how long it takes and whether they chose faster delivery. Never a price. */
+    plan: plan.expires_at || typeof plan.turnaround_hours === "number"
+      ? { turnaroundHours: typeof plan.turnaround_hours === "number" ? plan.turnaround_hours : job.turnaround_hours, faster: plan.rush === true }
       : null,
     criteria: criteria.map(c => ({ id: c.id, text: c.text, critical: !!c.critical, source: c.source })),
     timeline: buyerTimeline(events),
@@ -461,8 +510,19 @@ export async function buyerJobView(env: Env, job: JobRow) {
         id: d.id, kind: d.kind, label: DECISION_LABELS[d.kind], rating: d.rating, reasons: d.reasons,
         failedCriteria: parseJson<string[]>(d.failed_criteria, []), edited: !!edits,
         editStats: edits ? { added: edits.added, removed: edits.removed } : null, createdAt: d.created_at,
+        /** Only for decisions with edits: may these edits be used to improve the agent? */
+        shareEdits: edits ? sharing.get(d.id) === true : null,
       };
     }),
+    /** What the "use my edits" box starts as on this job (the org's choice, else off). */
+    shareEditsDefault: shareDefault,
+    problems: problemRows.map(r => ({
+      id: r.id, reasons: r.reasons, status: r.status, createdAt: r.created_at, resolvedAt: r.resolved_at,
+      // An old "credit" report closed the job, so buyers see it as a cancel: no money words.
+      outcome: (r.outcome === "credit" ? "cancel" : r.outcome) as ProblemOutcome | null,
+      outcomeLabel: r.outcome ? PROBLEM_OUTCOME_LABELS[r.outcome] : null,
+      note: r.resolution_note,
+    })),
     revisionsLeft,
     next: nextStep(job, agent?.name ?? "Your agent"),
     actions: { accept: delivered, revise: delivered && revisionsLeft > 0, reject: delivered, report: delivered },

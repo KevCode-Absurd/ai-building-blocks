@@ -7,6 +7,7 @@ import { OpsAgents } from "./agents.tsx";
 import { OpsExperts } from "./experts.tsx";
 import { OpsBeta } from "./beta.tsx";
 import { OpsCosts } from "./costs.tsx";
+import { OpsReview } from "./review.tsx";
 
 export const pages: PageDef[] = [
   { path: "/ops", access: "ops", component: OpsHome },
@@ -15,6 +16,7 @@ export const pages: PageDef[] = [
   { path: "/ops/experts", access: "ops", component: OpsExperts },
   { path: "/ops/beta", access: "ops", component: OpsBeta },
   { path: "/ops/costs", access: "ops", component: OpsCosts },
+  { path: "/ops/review", access: "ops", component: OpsReview },
 ];
 
 export const nav: NavItem[] = [

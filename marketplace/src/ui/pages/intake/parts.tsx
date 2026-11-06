@@ -2,21 +2,23 @@
 import { useState } from "preact/hooks";
 import type { ComponentChildren } from "preact";
 import type { RequestQuestion, RequestView } from "../../../modules/intake/views.ts";
+import { Notice } from "../../components.tsx";
 
 export type { RequestQuestion, RequestView };
 
-/** One job type as GET /api/catalogue lists it. */
-export interface JobSummary { id: string; title: string; summary: string; area: string; deliverable: string; turnaround_hours: number; price_from_usd: number; price_base_usd: number }
+/** One job type as GET /api/catalogue lists it. Hiring is free, so there is no price. */
+export interface JobSummary { id: string; title: string; summary: string; area: string; deliverable: string; turnaround_hours: number }
 
 /** The parts of GET /api/agents/:id this page uses (the directory module owns the full shape). */
 export interface AgentInfo {
   id: string; name: string; title: string; tagline?: string; portrait?: string; accent?: string;
-  outcomes?: { id: string; title: string; deliverable?: string; job_type_id: string | null; job?: { price_from_usd?: number; turnaround_hours?: number } | null }[];
+  outcomes?: { id: string; title: string; deliverable?: string; job_type_id: string | null; job?: { turnaround_hours?: number } | null }[];
 }
 
 export const AREA_LABELS: Record<string, string> = {
   marketing: "Marketing", content: "Content", sales: "Sales", ecommerce: "Ecommerce", "customer-support": "Customer support",
   research: "Research", finance: "Finance", people: "People and HR", operations: "Operations", product: "Product",
+  engineering: "Code and engineering", data: "Data and AI", design: "Design and media", learning: "Training and teaching",
 };
 export const areaLabel = (area: string) => AREA_LABELS[area] ?? area;
 
@@ -26,8 +28,6 @@ export function turnaround(hours: number): string {
   const days = Math.round(hours / 24);
   return `${days} day${days === 1 ? "" : "s"}`;
 }
-
-export const usd = (n: number) => `$${n.toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
 
 const HEX = /^#[0-9a-f]{6}$/i;
 
@@ -41,6 +41,16 @@ export function AgentFace(props: { name: string; portrait?: string; accent?: str
         ? <img src={props.portrait} alt="" width={56} height={56} loading="lazy" decoding="async" onError={() => setFailed(true)} />
         : <span class="intake-face-letter">{props.name.slice(0, 1).toUpperCase()}</span>}
     </span>
+  );
+}
+
+/** The daily job limit was reached: why there is a limit, then the server's message (the limit and when to come back). */
+export function DailyLimitNotice(props: { message: string }) {
+  return (
+    <Notice tone="warn" title="You have reached today's limit">
+      <p class="intake-limit-why">Hiring is free, so each person can start a few jobs a day.</p>
+      <p class="intake-limit-when">{props.message}</p>
+    </Notice>
   );
 }
 
@@ -74,7 +84,7 @@ export function JobTypeList(props: { jobs: JobSummary[]; value: string | null; o
               <button type="button" class={`intake-job${props.value === j.id ? " intake-job-on" : ""}`} aria-pressed={props.value === j.id}
                 disabled={props.busy} onClick={() => props.onPick(j.id)}>
                 <span class="intake-job-title">{j.title}</span>
-                <span class="intake-job-meta">From {usd(j.price_from_usd)} · {turnaround(j.turnaround_hours)}</span>
+                <span class="intake-job-meta">Ready in about {turnaround(j.turnaround_hours)}</span>
               </button>
             ))}
           </div>

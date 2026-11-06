@@ -1,5 +1,6 @@
 // Model prompts for intake. The buyer's words go inside tags so the fakes (and reviewers of the logs) can find them.
 import type { JobType, RubricCriterion } from "../../core/types.ts";
+import { buyerWords } from "../catalogue/index.ts";
 import { IN_REQUEST } from "./spec.ts";
 
 export const TAGS = { request: "buyer_request", menu: "job_menu", fields: "form_fields", goals: "buyer_goals", checklist: "current_checklist", job: "job_type" } as const;
@@ -72,7 +73,7 @@ export const EXTRACT_SCHEMA = {
 };
 
 export function extractPrompt(jt: JobType, request: string): string {
-  const fields = jt.spec_fields.map(f => ({ id: f.id, label: f.label, type: f.type, required: f.required, ...(f.help ? { help: f.help } : {}), ...(f.options ? { options: f.options } : {}), ...(f.max ? { max: f.max } : {}) }));
+  const fields = jt.spec_fields.map(f => ({ id: f.id, label: f.label, type: f.type, required: f.required, ...(f.help ? { help: buyerWords(f.help) } : {}), ...(f.options ? { options: f.options } : {}), ...(f.max ? { max: f.max } : {}) }));
   return [
     wrap(TAGS.job, `${jt.id}: ${jt.title}. ${jt.summary}`),
     wrap(TAGS.fields, JSON.stringify(fields, null, 1)),

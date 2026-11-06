@@ -8,10 +8,15 @@ import { useAuth } from "../../lib/auth.tsx";
 interface AuthRequest {
   request_id: string;
   client_name: string;
+  /** claude.ai for a website, localhost:33418 for an app on this computer, cursor:// for an app's own link type. */
   redirect_host: string;
+  redirect_kind?: "web" | "local" | "app";
+  redirect_uri?: string;
   scopes: { id: string; label: string; detail: string }[];
   asks_to_order: boolean;
-  beta_access: boolean;
+  can_hire: boolean;
+  /** Jobs run on AI Blocks (HOSTED_JOBS "on"). Off, a connection only finds and loads agents. */
+  hosted_jobs?: boolean;
   expires_at: string;
 }
 
@@ -21,12 +26,38 @@ const ERRORS: Record<string, string> = {
   invalid_request: "This sign-in link is not complete. Go back to your AI app and try connecting again.",
 };
 
+/** Where the person goes after they choose, in words. */
+function destination(req: AuthRequest): string {
+  if (req.redirect_kind === "app") return `the app on your computer that opens ${req.redirect_host} links`;
+  if (req.redirect_kind === "local") return `an app on your computer (${req.redirect_host})`;
+  return req.redirect_host;
+}
+
 function Problem(props: { message: string }) {
   return (
     <Page title="We could not connect this app">
       <Notice tone="warn">{props.message}</Notice>
       <p><Button kind="secondary" href="/connect">See how to connect</Button></p>
     </Page>
+  );
+}
+
+/** The full address the app gets the answer at. Apps on the computer can claim local and app links, so show all of it. */
+function Destination(props: { req: AuthRequest }) {
+  const { req } = props;
+  return (
+    <div class="mcp-destination">
+      <p class="small"><strong>After you choose, we send you to:</strong></p>
+      <code class="mcp-redirect">{req.redirect_uri ?? req.redirect_host}</code>
+      {req.redirect_kind === "app" && (
+        <Notice tone="warn" title="Check this is your app">
+          This is a {req.redirect_host} link. It opens an app on your computer, not a website. Any app you installed can ask to open links like this. Only approve if you just started connecting from {req.client_name} yourself.
+        </Notice>
+      )}
+      {req.redirect_kind === "local" && (
+        <p class="muted small">This address is on your own computer, where {req.client_name} waits for the answer. Only approve if you just started connecting from it yourself.</p>
+      )}
+    </div>
   );
 }
 
@@ -49,12 +80,21 @@ function Decide(props: { req: AuthRequest }) {
     }
   };
 
-  if (leaving) return <Page title="Sending you back"><p class="lede">Going back to {req.redirect_host}. You can close this tab if nothing happens.</p></Page>;
+  if (leaving) {
+    return (
+      <Page title="Sending you back">
+        <p class="lede">Going back to {destination(req)}.</p>
+        {req.redirect_kind === "app"
+          ? <p class="muted">Your browser may ask if it can open the app. Say yes. You can close this tab once the app opens.</p>
+          : <p class="muted">You can close this tab if nothing happens.</p>}
+      </Page>
+    );
+  }
 
   const read = req.scopes.find(s => s.id === "marketplace:read");
   const order = req.scopes.find(s => s.id === "marketplace:order");
   return (
-    <Page title={`Connect ${req.client_name} to AI Blocks`} intro={`${req.client_name} wants to use AI Blocks Agents for you. After you choose, you go back to ${req.redirect_host}.`}>
+    <Page title={`Connect ${req.client_name} to AI Blocks`} intro={`${req.client_name} wants to find and load AI Blocks agents for you. After you choose, you go back to ${destination(req)}.`}>
       <div class="mcp-consent stack">
         {error && <Notice tone="bad">{error}</Notice>}
         <Card title="It will be able to">
@@ -64,15 +104,16 @@ function Decide(props: { req: AuthRequest }) {
               <li>
                 <label class="mcp-check">
                   <input type="checkbox" checked={allowOrder} onChange={e => setAllowOrder((e.target as HTMLInputElement).checked)} />
-                  <span><strong>Let it place orders.</strong> {order.detail} We tell your AI to ask you first every time.</span>
+                  <span><strong>Let it start jobs.</strong> {order.detail} We tell your AI to ask you first every time.</span>
                 </label>
               </li>
             )}
           </ul>
-          <p class="muted small">It cannot charge you (nothing is charged in the beta), see anyone else's jobs or change your account. You can disconnect it at any time on the Connect your AI page.</p>
+          <p class="muted small">Agents are free. It cannot see anyone else's work or change your account. You can disconnect it at any time on the Connect your AI page.</p>
         </Card>
-        {!req.beta_access && (
-          <Notice tone="info" title="You can browse now">To order work, you need an invite code. <a href="/invite?next=/connect">Enter your invite code</a> after you connect.</Notice>
+        <Destination req={req} />
+        {req.hosted_jobs && !req.can_hire && (
+          <Notice tone="info" title="You can browse now">Hiring needs an invite code right now. <a href="/invite?next=/connect">Enter your invite code</a> after you connect.</Notice>
         )}
         <p class="muted small">Signed in as {auth.me?.user.email ?? auth.displayName}. Only approve if you just asked {req.client_name} to connect to AI Blocks.</p>
         <div class="row">

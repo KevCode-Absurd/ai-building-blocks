@@ -5,11 +5,11 @@
 //   2 Examples       past work (brief, audience, result) with a rights confirmation; private, never shown to buyers
 //   3 Mark up        a plain-AI draft of a public sample brief; the expert marks what they would never ship, and why
 //   4 Build          playbook + examples + markup -> AgentPackage, saved as a new draft agent_versions row
-//   5 Test bench     the draft next to plain AI on the public sample briefs; edits -> suggested rules -> approve/decline
+//   5 Test bench     the draft next to plain AI on the public sample briefs, judged pair by pair; edits -> suggested rules -> approve/decline
 //   6 Publish        the version becomes 'published' (immutable) and the agent 'testing'; ops puts it live
 import { z } from "zod";
 import type { Env } from "../../env.ts";
-import type { AgentPackage, JobType } from "../../core/types.ts";
+import type { AgentPackage, JobType, RubricCriterion } from "../../core/types.ts";
 import type { ExpertRow } from "../../core/access.ts";
 import { all, first, newId, nowIso, parseJson, sha256Hex, stableJson, today } from "../../core/db.ts";
 import { eventStatement, type ActorKind } from "../../core/events.ts";
@@ -18,6 +18,7 @@ import { callModel, parseModelJson, type ModelRequest } from "../../core/models.
 import { notify } from "../../core/email.ts";
 import { getJobType } from "../catalogue/index.ts";
 import { runAgentOnBrief, runBaseline } from "../runner/service.ts";
+import { compareWithBaseline } from "../evaluation/service.ts";
 import { notifyOps } from "../ops/service.ts";
 import { questionBank, FOLLOW_UP_HINTS } from "./questions.ts";
 import { copiedExamples, looksLikeSecret, mergeRules, normalizePackage, packageJsonSchema, validateAgentPackage, withRuleBlock } from "./package.ts";
@@ -67,6 +68,8 @@ interface MarkRow { id: string; agent_id: string; draft_id: string | null; brief
 interface TestRow {
   id: string; agent_id: string; version: number; bench_id: string; brief_id: string; brief: string; agent_run_id: string | null; agent_draft_id: string | null;
   baseline_run_id: string | null; baseline_draft_id: string | null; status: "done" | "failed"; error: string | null; created_by: string; created_at: string;
+  /** JSON StoredVerdict (migration 0011), or null. */
+  verdict: string | null;
 }
 interface EditRow { id: string; agent_id: string; test_id: string; version: number; original: string; edited: string; reason: string; created_by: string; created_at: string }
 interface SuggestionRow { id: string; agent_id: string; edit_id: string | null; target: "style_rules" | "checklist"; text: string; why: string; status: "proposed" | "approved" | "declined"; decided_by: string | null; decided_at: string | null; applied_version: number | null; created_at: string }
@@ -88,11 +91,22 @@ export interface InterviewView {
 export interface ExampleView { id: string; title: string; brief: string; audience: string; result: string; notes: string; rights: Rights; rightsConfirmedAt: string; chars: number; createdAt: string }
 export interface MarkView { id: string; passage: string; reason: string; createdAt: string }
 export interface VersionView { version: number; status: "draft" | "published"; sha256: string; changelog: string; createdAt: string; publishedAt: string | null; tests: { done: number; failed: number; lastRunAt: string | null } }
+/**
+ * How a bench draft did against the plain-AI draft. done: evaluation's pairwise judge ran in both orders (a tie when the
+ * orders disagree). skipped: not compared, because today's AI limit was reached or the judge gave no usable answer.
+ */
+export type BenchVerdict =
+  | { status: "done"; winner: "agent" | "baseline" | "tie"; reasons: string; judgeModel: string | null; avoidedProvider: string | null; at: string }
+  | { status: "skipped"; code: "daily_limit" | "judge_failed"; at: string };
+/** Bench drafts against plain AI: judged pairs and the outcomes; skipped = pairs that could not be compared. */
+export interface BenchScore { judged: number; agentWins: number; baselineWins: number; ties: number; skipped: number }
 export interface TestView {
   id: string; benchId: string; briefId: string; brief: string; status: "done" | "failed"; error: string | null; createdAt: string;
   agentDraft: string | null; baselineDraft: string | null;
+  verdict: BenchVerdict | null;
   edits: { id: string; edited: string; reason: string; createdAt: string }[];
 }
+export interface BenchView { version: number; tests: TestView[]; earlierRuns: number; vsPlainAi: BenchScore }
 export interface SuggestionView { id: string; target: "style_rules" | "checklist"; text: string; why: string; status: "proposed" | "approved" | "declined"; appliedVersion: number | null; createdAt: string; editId: string | null }
 export interface StepView { id: StepId; done: boolean }
 export interface AgentSummary {
@@ -111,7 +125,7 @@ export interface StudioDetail {
   markup: { briefId: string | null; brief: string | null; draft: string | null; madeAt: string | null; marks: MarkView[] };
   versions: VersionView[];
   latest: { version: number; status: "draft" | "published"; sha256: string; package: AgentPackage } | null;
-  bench: { version: number; tests: TestView[]; earlierRuns: number } | null;
+  bench: BenchView | null;
   suggestions: SuggestionView[];
 }
 
@@ -191,9 +205,10 @@ async function testCounts(env: Env, agentId: string, version: number) {
 }
 
 async function stepStatus(env: Env, agent: AgentRow, studio: StudioRow | null, jt: JobType | null): Promise<StepView[]> {
-  const c = await first<{ examples: number; marks: number; versions: number; published: number; tested: number }>(env.DB, `SELECT
+  const c = await first<{ examples: number; marks: number; versions: number; published: number; tested: number; imported: number }>(env.DB, `SELECT
       (SELECT COUNT(*) FROM studio_examples WHERE agent_id = ?1) AS examples,
       (SELECT COUNT(*) FROM studio_marks WHERE agent_id = ?1) AS marks,
+      (SELECT COUNT(*) FROM studio_pack_imports WHERE agent_id = ?1) AS imported,
       (SELECT COUNT(*) FROM agent_versions WHERE agent_id = ?1) AS versions,
       (SELECT COUNT(*) FROM agent_versions WHERE agent_id = ?1 AND status = 'published') AS published,
       (SELECT COUNT(*) FROM studio_tests t WHERE t.agent_id = ?1 AND t.status = 'done'
@@ -204,10 +219,13 @@ async function stepStatus(env: Env, agent: AgentRow, studio: StudioRow | null, j
     const have = new Set(answered.map(a => a.question_id));
     interviewDone = questionBank(jt).filter(q => q.required).every(q => have.has(q.id));
   } else if (studio?.playbook.trim()) interviewDone = true;
+  // A trained pack (studio/import.ts) stands in for two steps: its soul, personality, knowledge and playbook for the
+  // interview, and its "Rules I learned" (from test rounds against plain AI) for the marked passages.
+  const imported = (c?.imported ?? 0) > 0 && !!studio?.playbook.trim();
   return [
-    { id: "interview", done: interviewDone },
+    { id: "interview", done: interviewDone || imported },
     { id: "examples", done: (c?.examples ?? 0) > 0 },
-    { id: "markup", done: (c?.marks ?? 0) > 0 },
+    { id: "markup", done: (c?.marks ?? 0) > 0 || imported },
     { id: "build", done: (c?.versions ?? 0) > 0 },
     { id: "test", done: (c?.tested ?? 0) > 0 || (c?.published ?? 0) > 0 },
     { id: "publish", done: (c?.published ?? 0) > 0 },
@@ -544,10 +562,14 @@ export async function buildVersion(env: Env, input: { expertId: string; actor: s
     all<MarkRow>(env.DB, "SELECT * FROM studio_marks WHERE agent_id = ? ORDER BY created_at", agent.id),
     all<SuggestionRow>(env.DB, "SELECT * FROM studio_suggestions WHERE agent_id = ? AND status = 'approved' ORDER BY decided_at, created_at", agent.id),
   ]);
+  // An agent started from a trained pack, with the expert's own playbook, may build without studio examples or marked
+  // passages: the pack's examples and "Rules I learned" stand in for them. The test bench and ops review still apply.
+  const fromPack = studio.playbook_source === "expert"
+    && !!(await first<{ n: number }>(env.DB, "SELECT 1 AS n FROM studio_pack_imports WHERE agent_id = ? LIMIT 1", agent.id));
   const missing: string[] = [];
   if (!studio.playbook.trim()) missing.push("your playbook (step 1)");
-  if (!examples.length) missing.push("at least one example of your work (step 2)");
-  if (!marks.length) missing.push("at least one marked passage (step 3)");
+  if (!examples.length && !fromPack) missing.push("at least one example of your work (step 2)");
+  if (!marks.length && !fromPack) missing.push("at least one marked passage (step 3)");
   if (missing.length) return fail(409, "not_ready", `Before you build, add ${listWords(missing)}.`);
   const changelogIn = str(input.changelog, "what changed", { max: 500, optional: true });
   await dailyLimit(env, agent.id, "agent.version_built", LIMITS.perDay.build, "You have built this agent many times today. Try again tomorrow.");
@@ -621,30 +643,83 @@ export async function getVersion(env: Env, input: { expertId: string; agentId: s
 
 // ---------- Step 5: test bench ----------
 
-async function benchState(env: Env, agentId: string, version: number): Promise<{ version: number; tests: TestView[]; earlierRuns: number }> {
+async function benchState(env: Env, agentId: string, version: number): Promise<BenchView> {
   const latest = await first<{ bench_id: string }>(env.DB, "SELECT bench_id FROM studio_tests WHERE agent_id = ? AND version = ? ORDER BY created_at DESC, rowid DESC LIMIT 1", agentId, version);
-  if (!latest) return { version, tests: [], earlierRuns: 0 };
+  if (!latest) return { version, tests: [], earlierRuns: 0, vsPlainAi: tallyVerdicts([]) };
   const rows = await all<TestRow & { agent_content: string | null; baseline_content: string | null }>(env.DB,
     `SELECT t.*, a.content AS agent_content, b.content AS baseline_content FROM studio_tests t
      LEFT JOIN drafts a ON a.id = t.agent_draft_id LEFT JOIN drafts b ON b.id = t.baseline_draft_id
      WHERE t.agent_id = ? AND t.bench_id = ? ORDER BY t.rowid`, agentId, latest.bench_id);
   const edits = await all<EditRow>(env.DB, `SELECT * FROM studio_edits WHERE test_id IN (SELECT id FROM studio_tests WHERE bench_id = ?) ORDER BY created_at`, latest.bench_id);
   const runs = (await first<{ n: number }>(env.DB, "SELECT COUNT(DISTINCT bench_id) AS n FROM studio_tests WHERE agent_id = ? AND version = ?", agentId, version))!.n;
+  const verdicts = rows.map(r => readVerdict(r.verdict));
   return {
     version, earlierRuns: Math.max(0, runs - 1),
-    tests: rows.map(r => ({
+    tests: rows.map((r, i) => ({
       id: r.id, benchId: r.bench_id, briefId: r.brief_id, brief: r.brief, status: r.status, error: r.error, createdAt: r.created_at,
       agentDraft: r.agent_content, baselineDraft: r.baseline_content,
+      verdict: r.status === "done" ? verdictView(verdicts[i]) : null,
       edits: edits.filter(e => e.test_id === r.id).map(e => ({ id: e.id, edited: e.edited, reason: e.reason, createdAt: e.created_at })),
     })),
+    vsPlainAi: tallyVerdicts(rows.map((r, i) => (r.status === "done" ? verdicts[i] : null))),
   };
+}
+
+// The verdict as stored in studio_tests.verdict (snake_case, see migrations/0011_studio_bench_verdict.sql).
+type StoredVerdict =
+  | { status: "done"; winner: "agent" | "baseline" | "tie"; reasons: string; judge_model: string | null; avoided_provider: string | null; at: string }
+  | { status: "skipped"; code: "daily_limit" | "judge_failed"; at: string };
+
+function readVerdict(json: string | null): StoredVerdict | null {
+  const v = parseJson<Partial<StoredVerdict> | null>(json, null);
+  if (!v || typeof v !== "object") return null;
+  if (v.status === "done" && (v.winner === "agent" || v.winner === "baseline" || v.winner === "tie")) return v as StoredVerdict;
+  if (v.status === "skipped") return { status: "skipped", code: v.code === "daily_limit" ? "daily_limit" : "judge_failed", at: String(v.at ?? "") };
+  return null;
+}
+
+function verdictView(v: StoredVerdict | null): BenchVerdict | null {
+  if (!v) return null;
+  if (v.status === "skipped") return v;
+  return { status: "done", winner: v.winner, reasons: v.reasons ?? "", judgeModel: v.judge_model ?? null, avoidedProvider: v.avoided_provider ?? null, at: v.at };
+}
+
+function tallyVerdicts(list: (StoredVerdict | null)[]): BenchScore {
+  const done = list.filter((v): v is Extract<StoredVerdict, { status: "done" }> => v?.status === "done");
+  return {
+    judged: done.length,
+    agentWins: done.filter(v => v.winner === "agent").length,
+    baselineWins: done.filter(v => v.winner === "baseline").length,
+    ties: done.filter(v => v.winner === "tie").length,
+    skipped: list.filter(v => v?.status === "skipped").length,
+  };
+}
+
+/**
+ * Judge one bench pair with evaluation's pairwise judge: both orders, a tie when they disagree, and a judge from a
+ * different provider than the one that wrote the agent's draft (compareWithBaseline reads it from the run's model calls).
+ * Every judge call goes through callModel, so the daily AI limit applies. Never throws: a problem means "not compared".
+ */
+async function judgeBenchPair(env: Env, input: { agentDraftId: string; baselineDraftId: string; brief: string; rubric: RubricCriterion[] }): Promise<StoredVerdict> {
+  const at = nowIso();
+  try {
+    const res = await compareWithBaseline(env, { agentDraftId: input.agentDraftId, baselineDraftId: input.baselineDraftId, rubric: input.rubric, brief: input.brief });
+    const score = await first<{ judge_model: string | null; result: string }>(env.DB,
+      "SELECT judge_model, result FROM scores WHERE draft_id = ? AND judge = 'baseline' ORDER BY created_at DESC, rowid DESC LIMIT 1", input.agentDraftId);
+    const avoided = parseJson<{ avoided_provider?: string | null }>(score?.result, {}).avoided_provider ?? null;
+    return { status: "done", winner: res.winner, reasons: (res.reasons ?? "").slice(0, 2000), judge_model: score?.judge_model ?? null, avoided_provider: avoided, at };
+  } catch (err) {
+    const capped = err instanceof HttpError && err.code === "model_cap_reached";
+    if (!capped) console.error("studio_bench_judge_failed", err instanceof Error ? err.message : String(err));
+    return { status: "skipped", code: capped ? "daily_limit" : "judge_failed", at };
+  }
 }
 
 const runError = (r: PromiseSettledResult<unknown>) => r.status === "rejected"
   ? (r.reason instanceof HttpError ? r.reason.message : "This run did not finish. Try the test bench again in a few minutes.")
   : null;
 
-export async function runTestBench(env: Env, input: { expertId: string; actor: string; agentId: string; version?: number }): Promise<{ version: number; tests: TestView[]; earlierRuns: number }> {
+export async function runTestBench(env: Env, input: { expertId: string; actor: string; agentId: string; version?: number }): Promise<BenchView> {
   const { agent } = await ownedAgent(env, input.expertId, input.agentId);
   const jt = jobTypeOf(agent);
   const row = input.version
@@ -671,20 +746,32 @@ export async function runTestBench(env: Env, input: { expertId: string; actor: s
       error,
     };
   }));
+  // Each finished pair is judged against plain AI. A judge problem never fails the bench: the pair shows "not compared".
+  const verdicts = await Promise.all(results.map(r => r.agent && r.baseline && !r.error
+    ? judgeBenchPair(env, { agentDraftId: r.agent.draftId, baselineDraftId: r.baseline.draftId, brief: r.brief.text, rubric: jt.rubric })
+    : Promise.resolve(null)));
   const db = env.DB, now = nowIso();
   const done = results.filter(r => !r.error).length;
-  const statements = results.map(r => db.prepare("INSERT INTO studio_tests (id, agent_id, version, bench_id, brief_id, brief, agent_run_id, agent_draft_id, baseline_run_id, baseline_draft_id, status, error, created_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
-    .bind(newId("test"), agent.id, row.version, benchId, r.brief.id, r.brief.text, r.agent?.runId ?? null, r.agent?.draftId ?? null, r.baseline?.runId ?? null, r.baseline?.draftId ?? null, r.error ? "failed" : "done", r.error, input.actor, now));
+  const score = tallyVerdicts(verdicts);
+  const statements = results.map((r, i) => db.prepare("INSERT INTO studio_tests (id, agent_id, version, bench_id, brief_id, brief, agent_run_id, agent_draft_id, baseline_run_id, baseline_draft_id, status, error, created_by, created_at, verdict) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+    .bind(newId("test"), agent.id, row.version, benchId, r.brief.id, r.brief.text, r.agent?.runId ?? null, r.agent?.draftId ?? null, r.baseline?.runId ?? null, r.baseline?.draftId ?? null, r.error ? "failed" : "done", r.error, input.actor, now,
+      verdicts[i] ? JSON.stringify(verdicts[i]) : null));
   await db.batch([
     ...statements,
-    eventStatement(db, { actor: input.actor, actorKind: EXPERT, entity: "agent", entityId: agent.id, type: "studio.test_bench_run", data: { version: row.version, bench_id: benchId, briefs: briefs.map(b => b.id), done, failed: results.length - done } }, now),
+    eventStatement(db, { actor: input.actor, actorKind: EXPERT, entity: "agent", entityId: agent.id, type: "studio.test_bench_run", data: {
+      version: row.version, bench_id: benchId, briefs: briefs.map(b => b.id), done, failed: results.length - done,
+      vs_plain_ai: { judged: score.judged, agent_wins: score.agentWins, baseline_wins: score.baselineWins, ties: score.ties, skipped: score.skipped },
+    } }, now),
   ]);
   // Record the results on the version while it is a draft. Published versions never change.
   if (row.status === "draft") {
     const counts = await testCounts(env, agent.id, row.version);
-    const briefIds = (await all<{ brief_id: string }>(env.DB, "SELECT DISTINCT brief_id FROM studio_tests WHERE agent_id = ? AND version = ? AND status = 'done'", agent.id, row.version)).map(r => r.brief_id);
+    const doneRows = await all<{ brief_id: string; verdict: string | null }>(env.DB, "SELECT brief_id, verdict FROM studio_tests WHERE agent_id = ? AND version = ? AND status = 'done'", agent.id, row.version);
+    const briefIds = [...new Set(doneRows.map(r => r.brief_id))];
+    const totals = tallyVerdicts(doneRows.map(r => readVerdict(r.verdict)));
+    const vsPlainAi = { judged: totals.judged, agent_wins: totals.agentWins, baseline_wins: totals.baselineWins, ties: totals.ties, skipped: totals.skipped };
     await db.prepare("UPDATE agent_versions SET test_results = ? WHERE agent_id = ? AND version = ? AND status = 'draft'")
-      .bind(JSON.stringify({ studio: { runs: counts.done, failed: counts.failed, brief_ids: briefIds, last_run_at: counts.lastRunAt } }), agent.id, row.version).run();
+      .bind(JSON.stringify({ studio: { runs: counts.done, failed: counts.failed, brief_ids: briefIds, last_run_at: counts.lastRunAt, vs_plain_ai: vsPlainAi } }), agent.id, row.version).run();
   }
   if (!done) return fail(502, "test_bench_failed", results[0]?.error ?? "The test bench could not run just now. Try again in a few minutes.");
   return benchState(env, agent.id, row.version);
@@ -791,11 +878,25 @@ export async function publishVersion(env: Env, input: { expertId: string; actor:
     text: `${agent.name} (${agent.job_type_id}) has a new published version ${v.version}. Check it, then put it live from the ops agents page.`,
     link: "/ops/agents",
   });
+  if (to !== agent.status) await syncPersona(env, agent, input.actor, EXPERT);
   const updated = (await first<AgentRow>(env.DB, "SELECT * FROM agents WHERE id = ?", agent.id))!;
   return summarize(env, updated, studio);
 }
 
-// ---------- Ops: live and status ----------
+// ---------- Ops: live, retire and un-retire ----------
+
+const opsKind = (actor: string): ActorKind => (actor === "system" ? "system" : "ops");
+
+/**
+ * An expert has one active agent per job type (createStudioAgent enforces it). Bringing back a retired agent must not
+ * make a second one, so this is a 409 when the expert has built another agent for the same job since.
+ */
+async function noOtherActiveAgent(env: Env, agent: AgentRow): Promise<void> {
+  if (agent.kind !== "expert" || !agent.expert_id) return;
+  const other = await first<{ id: string; name: string }>(env.DB,
+    "SELECT id, name FROM agents WHERE expert_id = ? AND job_type_id = ? AND status != 'retired' AND id != ? LIMIT 1", agent.expert_id, agent.job_type_id, agent.id);
+  if (other) fail(409, "agent_exists", `This expert has another agent for this job: ${other.name}. Retire that one first, then bring this one back.`);
+}
 
 /** Ops (or later, automated certification) puts a published version live; the previous live version stays traceable. */
 export async function setAgentLive(env: Env, input: { agentId: string; version: number; actor: string }): Promise<void> {
@@ -805,19 +906,20 @@ export async function setAgentLive(env: Env, input: { agentId: string; version: 
   if (!v) return fail(404, "version_not_found", "We could not find that version of the agent.");
   if (v.status !== "published") return fail(409, "version_not_published", "Only a published version can go live. The expert must publish it first.");
   if (agent.status === "live" && agent.live_version === v.version) return;
+  if (agent.status === "retired") await noOtherActiveAgent(env, agent);
   const db = env.DB, now = nowIso();
   await db.batch([
     db.prepare("UPDATE agents SET status = 'live', live_version = ?, updated_at = ? WHERE id = ?").bind(v.version, now, agent.id),
-    eventStatement(db, { actor: input.actor, actorKind: input.actor === "system" ? "system" : "ops", entity: "agent", entityId: agent.id, type: "agent.live", data: { version: v.version, previous_version: agent.live_version, previous_status: agent.status } }, now),
+    eventStatement(db, { actor: input.actor, actorKind: opsKind(input.actor), entity: "agent", entityId: agent.id, type: "agent.live", data: { version: v.version, previous_version: agent.live_version, previous_status: agent.status } }, now),
   ]);
   await tellExpert(env, agent, {
     kind: "agent.live",
     subject: `${agent.name} is live`,
     text: `Version ${v.version} of ${agent.name} is now live. Buyers who hire for this job can be matched with it.`,
-  });
+  }, input.actor);
 }
 
-/** Take an agent out of matching (status retired or back to testing). */
+/** Take an agent out of matching (status retired or back to testing). Retiring keeps every version, run and job. */
 export async function setAgentStatus(env: Env, input: { agentId: string; status: "testing" | "retired"; actor: string; reason: string }): Promise<void> {
   const agent = await first<AgentRow>(env.DB, "SELECT * FROM agents WHERE id = ?", input.agentId);
   if (!agent) return fail(404, "agent_not_found", "We could not find that agent.");
@@ -827,20 +929,55 @@ export async function setAgentStatus(env: Env, input: { agentId: string; status:
   const db = env.DB, now = nowIso();
   await db.batch([
     db.prepare("UPDATE agents SET status = ?, updated_at = ? WHERE id = ?").bind(status, now, agent.id),
-    eventStatement(db, { actor: input.actor, actorKind: input.actor === "system" ? "system" : "ops", entity: "agent", entityId: agent.id, type: status === "retired" ? "agent.retired" : "agent.status_changed", data: { from: agent.status, to: status, reason, live_version: agent.live_version } }, now),
+    eventStatement(db, { actor: input.actor, actorKind: opsKind(input.actor), entity: "agent", entityId: agent.id, type: status === "retired" ? "agent.retired" : "agent.status_changed", data: { from: agent.status, to: status, reason, live_version: agent.live_version } }, now),
   ]);
   await tellExpert(env, agent, status === "retired"
     ? { kind: "agent.retired", subject: `${agent.name} was taken off the marketplace`, text: `We took ${agent.name} off the marketplace, so buyers are no longer matched with it. Reason: ${reason}` }
-    : { kind: "agent.testing", subject: `${agent.name} is back in testing`, text: `We moved ${agent.name} back to testing, so buyers are not matched with it for now. Reason: ${reason}` });
+    : { kind: "agent.testing", subject: `${agent.name} is back in testing`, text: `We moved ${agent.name} back to testing, so buyers are not matched with it for now. Reason: ${reason}` },
+  input.actor);
 }
 
-async function tellExpert(env: Env, agent: AgentRow, notice: { kind: string; subject: string; text: string }): Promise<void> {
+/**
+ * Bring a retired agent back. With a published live version it goes straight back to live on that version; otherwise
+ * it goes back to draft, so the expert can publish again and ops can check it. Versions, runs and events are untouched.
+ */
+export async function unretireAgent(env: Env, input: { agentId: string; actor: string; reason?: string }): Promise<{ status: "live" | "draft"; liveVersion: number | null }> {
+  const agent = await first<AgentRow>(env.DB, "SELECT * FROM agents WHERE id = ?", input.agentId);
+  if (!agent) return fail(404, "agent_not_found", "We could not find that agent.");
+  if (agent.status !== "retired") return fail(409, "not_retired", `This agent is ${agent.status}, not retired, so there is nothing to bring back.`);
+  const reason = input.reason ? str(input.reason, "a note", { max: 500, optional: true }) : "";
+  await noOtherActiveAgent(env, agent);
+  const liveRow = agent.live_version === null ? null
+    : await first<{ version: number }>(env.DB, "SELECT version FROM agent_versions WHERE agent_id = ? AND version = ? AND status = 'published'", agent.id, agent.live_version);
+  const to: "live" | "draft" = liveRow ? "live" : "draft";
+  const db = env.DB, now = nowIso();
+  const res = await db.batch([
+    db.prepare("UPDATE agents SET status = ?, updated_at = ? WHERE id = ? AND status = 'retired'").bind(to, now, agent.id),
+    db.prepare("INSERT INTO events (at, actor, actor_kind, entity, entity_id, type, data) SELECT ?, ?, ?, 'agent', ?, 'agent.unretired', ? WHERE changes() = 1")
+      .bind(now, input.actor, opsKind(input.actor), agent.id, JSON.stringify({ from: "retired", to, live_version: agent.live_version, reason })),
+  ]);
+  if (!res[0]?.meta?.changes) return fail(409, "not_retired", "Someone changed this agent a moment ago. Reload the page.");
+  await tellExpert(env, agent, to === "live"
+    ? { kind: "agent.unretired", subject: `${agent.name} is back on the marketplace`, text: `We brought ${agent.name} back. Version ${agent.live_version} is live again, so buyers can be matched with it.` }
+    : { kind: "agent.unretired", subject: `${agent.name} is back in your studio`, text: `We brought ${agent.name} back to your studio as a draft. It is not live. Test it and publish a version, and we will check it before it goes live.` },
+  input.actor);
+  return { status: to, liveVersion: to === "live" ? agent.live_version : null };
+}
+
+/**
+ * Refresh the expert's public persona now (outcomes follow live agents) instead of waiting for the 15-minute cron.
+ * Runs after every agent status change. Loaded at call time to keep studio and experts free of an import cycle.
+ */
+async function syncPersona(env: Env, agent: AgentRow, actor = "system", actorKind?: ActorKind): Promise<void> {
   if (agent.kind !== "expert" || !agent.expert_id) return;
-  // Refresh the expert's public persona now (outcomes follow live agents) instead of waiting for the 15-minute cron.
-  // Loaded at call time to keep studio and experts free of an import cycle.
   await import("../experts/service.ts")
-    .then(m => m.syncExpertPersona(env, agent.expert_id!))
+    .then(m => m.syncExpertPersona(env, agent.expert_id!, actor, actorKind ?? opsKind(actor)))
     .catch(err => console.error("studio_persona_sync_failed", err instanceof Error ? err.message : String(err)));
+}
+
+async function tellExpert(env: Env, agent: AgentRow, notice: { kind: string; subject: string; text: string }, actor = "system"): Promise<void> {
+  if (agent.kind !== "expert" || !agent.expert_id) return;
+  await syncPersona(env, agent, actor);
   const expert = await first<{ user_id: string }>(env.DB, "SELECT user_id FROM experts WHERE id = ?", agent.expert_id);
   if (!expert) return;
   await notify(env, { userId: expert.user_id, ...notice, link: `/studio/agents/${agent.id}` }).catch(err => console.error("studio_notify_failed", err instanceof Error ? err.message : String(err)));

@@ -165,7 +165,7 @@ test("queues group jobs and put the most urgent first", async () => {
   assert.equal(byId.job_r1.buyer_email, "user_buyer@example.com");
   assert.equal(byId.job_r1.persona_name, "Nova");
   assert.equal(byId.job_r1.job_type_title, "SEO blog post");
-  assert.equal(byId.job_r1.price_cents, 12900);
+  assert.equal("price_cents" in byId.job_r1, false, "ops lists show no buyer price");
   assert.ok(byId.job_r1.age_hours >= 0);
 
   const review = await t.api("GET", "/api/ops/jobs?queue=review", { user: OPS });
@@ -303,6 +303,7 @@ test("cancel stops the job, closes open runs, tells the buyer and refuses final 
   assert.equal(notes.length, 1);
   assert.equal(notes[0].kind, "job.cancelled");
   assert.match(notes[0].body_text, /Grooming article/);
+  assert.doesNotMatch(`${notes[0].subject} ${notes[0].body_text}`, /\$|price|charg|refund|credit|beta/i, "hiring is free: no money words");
   assert.equal(notes[0].link, "https://agents.test/jobs/job_1");
 
   assert.equal((await t.api("POST", "/api/ops/jobs/job_1/cancel", { user: OPS, body: { reason: "again" } })).status, 409);

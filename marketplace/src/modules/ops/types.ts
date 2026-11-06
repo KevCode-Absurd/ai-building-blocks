@@ -22,8 +22,6 @@ export interface JobSummary {
   job_type_title: string | null;
   agent_id: string | null;
   agent_version: number | null;
-  price_cents: number | null;
-  currency: string;
   revisions_used: number;
   flags: JobFlag[];
   cost_usd: number;
@@ -114,6 +112,27 @@ export interface AgentSummary {
   win_rate: number | null;
   blind_tests: number;
   updated_at: string;
+}
+
+/** One row of blind-test results (same shape as evaluation's WinRate, with a label to show). */
+export interface WinRateView {
+  key: string; label: string; tests: number; judgments: number; agentWins: number; baselineWins: number; ties: number;
+  /** Agent wins out of tests with a clear winner (ties left out). */
+  winRate: number | null;
+}
+export interface PassRateView { checks: number; passed: number; rate: number | null }
+
+/** /ops/review: blind tests against plain AI, reviewer work, and how often job drafts pass the checks. */
+export interface ReviewReport {
+  /** The invite gate's blind win-rate target. */
+  target: number;
+  overall: WinRateView;
+  byAgent: (WinRateView & { agent_id: string; version: number | null })[];
+  byJobType: (WinRateView & { rubric: PassRateView | null; policy: PassRateView | null })[];
+  /** How often the AI pairwise judge picked the same winner as the reviewers. */
+  agreement: { tests: number; agree: number; rate: number | null };
+  queue: { open: number; closed: number; judgments: number; openJudgments: number; stillNeeded: number; reviewers: number; oldestOpenAt: string | null };
+  checks: { rubric: PassRateView & { averageScore: number | null }; policy: PassRateView; drafts: number; allPassed: number; allRate: number | null };
 }
 
 export interface CostReport {

@@ -1,7 +1,7 @@
-// /ops: the beta gate numbers and the work queues.
+// /ops: the invite gate numbers and the work queues.
 import { useState } from "preact/hooks";
 import { Badge, Button, Card, Empty, Input, Loaded, Notice, Page, Select, useLoad } from "../../components.tsx";
-import { api, money } from "../../lib/api.ts";
+import { api } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import { JOB_STATUSES } from "../../../core/types.ts";
 import type { GateMetrics } from "../../../modules/ops/service.ts";
@@ -23,8 +23,8 @@ function Tile(props: { label: string; value: string; target: string; progress: n
 function GatePanel() {
   const state = useLoad(() => api<GateMetrics>("/api/ops/gate"), []);
   return (
-    <Card title="Beta gate" class="ops-section">
-      <p class="muted small">The week 6 targets. We move past the beta when all four are met.</p>
+    <Card title="Invite gate" class="ops-section">
+      <p class="muted small">The week 6 targets. We move past the invite stage when all four are met.</p>
       <Loaded state={state}>
         {g => {
           const rate = (v: number | null, t: number) => (v === null ? 0 : v / t);
@@ -35,13 +35,13 @@ function GatePanel() {
                   progress={g.experts.approved / g.experts.target} met={g.experts.approved >= g.experts.target} />
                 <Tile label="Accepted jobs" value={String(g.jobs.accepted)} target={String(g.jobs.target)}
                   progress={g.jobs.accepted / g.jobs.target} met={g.jobs.accepted >= g.jobs.target}
-                  note={`${g.jobs.delivered} delivered so far. Payments are on hold, so we count accepted jobs.`} />
+                  note={`${g.jobs.delivered} delivered so far. Hiring is free, so we count accepted jobs.`} />
                 <Tile label="Blind test wins" value={pct(g.blindWinRate.value)} empty={g.blindWinRate.value === null} target={pct(g.blindWinRate.target)}
                   progress={rate(g.blindWinRate.value, g.blindWinRate.target)} met={g.blindWinRate.value !== null && g.blindWinRate.value >= g.blindWinRate.target}
                   note={`Agent against plain AI, from ${g.blindWinRate.tests} finished tests.`} />
                 <Tile label="Repeat buyers" value={pct(g.repeatBuyers.value)} empty={g.repeatBuyers.value === null} target={pct(g.repeatBuyers.target)}
                   progress={rate(g.repeatBuyers.value, g.repeatBuyers.target)} met={g.repeatBuyers.value !== null && g.repeatBuyers.value >= g.repeatBuyers.target}
-                  note={`Ordered again within 30 days, out of ${g.repeatBuyers.buyers} buyers.`} />
+                  note={`Hired again within 30 days, out of ${g.repeatBuyers.buyers} buyers.`} />
               </div>
               <dl class="ops-secondary">
                 <div><dt>Accepted with no changes</dt><dd>{pct(g.firstPassAcceptance)}</dd></div>
@@ -62,7 +62,6 @@ export function JobItem(props: { job: JobSummary }) {
     j.buyer_email ?? j.buyer_id,
     j.persona_name,
     j.job_type_title ?? "No job type",
-    j.price_cents !== null ? money(j.price_cents) : null,
     `${hoursText(j.age_hours)} old`,
     j.status !== "accepted" && j.status !== "cancelled" && j.waiting_hours >= 1 ? `no change for ${hoursText(j.waiting_hours)}` : null,
   ].filter(Boolean);
@@ -152,7 +151,7 @@ function OpsHome() {
           <SearchResults q={search.q} status={search.status} />
         </>
         : <Queues />}
-      <Notice tone="info">Payments are on hold during the beta. Prices are recorded, but nothing is charged.</Notice>
+      <Notice tone="info">Hiring is free for buyers. Jobs have no price; the costs on these pages are our own model costs.</Notice>
     </Page>
   );
 }

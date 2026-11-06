@@ -4,7 +4,7 @@ import type { ComponentChildren } from "preact";
 import { Badge, Button, Card, Field, Input, Markdown, Notice, Select, Table, TextArea } from "../../components.tsx";
 import { api, when } from "../../lib/api.ts";
 import type { AgentPackage } from "../../../core/types.ts";
-import type { InterviewQuestionView, StepId, StudioDetail, SuggestionView, TestView } from "../../../modules/studio/service.ts";
+import type { BenchScore, BenchVerdict, InterviewQuestionView, StepId, StudioDetail, SuggestionView, TestView } from "../../../modules/studio/service.ts";
 
 export interface StepProps { d: StudioDetail; reload: () => void; base: string; goTo: (s: StepId) => void; setBenchVersion: (v: string) => void }
 
@@ -374,6 +374,57 @@ export function BuildStep({ d, reload, base, goTo }: StepProps) {
 
 // ---------- 5 Test bench ----------
 
+const NOT_COMPARED: Record<"daily_limit" | "judge_failed" | "old", string> = {
+  daily_limit: "We hit today's limit for AI work, so this pair was not compared. Run the test bench again tomorrow to compare it.",
+  judge_failed: "The judge did not give a clear answer this time. Run the test bench again to compare this pair.",
+  old: "This run is from before we compared drafts. Run the test bench again to see how your agent does against plain AI.",
+};
+
+/** One pair's result against plain AI: a badge, a line about what it means, and the judge's reasons. */
+function Verdict(props: { verdict: BenchVerdict | null }) {
+  const v = props.verdict;
+  if (!v || v.status === "skipped") {
+    return (
+      <div class="studio-verdict">
+        <Badge>Not compared</Badge>
+        <span class="small muted studio-verdict-text">{NOT_COMPARED[v ? v.code : "old"]}</span>
+      </div>
+    );
+  }
+  const badge = v.winner === "agent" ? <Badge tone="good">Beat plain AI</Badge>
+    : v.winner === "baseline" ? <Badge tone="warn">Plain AI did better</Badge>
+    : <Badge>About the same</Badge>;
+  return (
+    <div class="studio-verdict">
+      {badge}
+      <span class="small muted studio-verdict-text">
+        Another AI judged the two drafts twice, once in each order. If its two answers differ, the pair counts as about the same.
+        {v.avoidedProvider ? " The judge comes from a different AI company than the one that wrote your draft." : ""}
+      </span>
+      {v.reasons && <details class="studio-verdict-why"><summary>Why</summary><p class="small studio-pre">{v.reasons}</p></details>}
+    </div>
+  );
+}
+
+function BenchSummary(props: { score: BenchScore; total: number }) {
+  const s = props.score;
+  if (!s.judged) {
+    if (!s.skipped) return null;
+    return <Notice tone="info" title="Not compared with plain AI">{plural(s.skipped, "pair was", "pairs were")} not compared this time. Each one below says why.</Notice>;
+  }
+  const tone = s.agentWins > s.baselineWins ? "good" : s.baselineWins > s.agentWins ? "warn" : "info";
+  const parts = [
+    s.baselineWins ? `Plain AI did better on ${s.baselineWins}.` : "",
+    s.ties ? `${plural(s.ties, "pair was", "pairs were")} about the same.` : "",
+    s.skipped ? `${plural(s.skipped, "pair was", "pairs were")} not compared.` : "",
+  ].filter(Boolean).join(" ");
+  return (
+    <Notice tone={tone} title={`Your agent beat plain AI on ${s.agentWins} of ${props.total} sample ${props.total === 1 ? "brief" : "briefs"}`}>
+      {parts || "Your agent's draft was better every time."} {s.baselineWins ? "Read why below, then edit those drafts so your agent learns." : ""}
+    </Notice>
+  );
+}
+
 function EditDraft(props: { t: TestView; base: string; reload: () => void; onSuggested: (s: SuggestionView[], notice: string | null) => void }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState(props.t.agentDraft ?? "");
@@ -446,13 +497,13 @@ export function TestStep({ d, reload, base, goTo, setBenchVersion }: StepProps) 
             <Select id="tb-version" value={version} onValue={switchVersion} options={d.versions.map(v => ({ value: String(v.version), label: `Version ${v.version} (${v.status === "published" ? "published" : "draft"})` }))} />
           </Field>
         )}
-        <p>Your agent and plain AI each write a draft for {plural(Math.min(briefCount, 3), "sample brief")}. You see them side by side.</p>
+        <p>Your agent and plain AI each write a draft for {plural(Math.min(briefCount, 3), "sample brief")}. You see them side by side. Then another AI compares each pair and says which draft is better.</p>
         <Err error={act.error} />
         <Button busy={act.busy} onClick={() => act.run(async () => {
           await api(`${base}/test`, { body: { version: Number(version) } });
           setFresh(null); setBenchVersion(version); reload();
         })}>Run version {version}</Button>
-        <p class="small muted">This takes 1 to 3 minutes. You can run it 6 times a day.</p>
+        <p class="small muted">This takes 2 to 4 minutes. You can run it 6 times a day.</p>
       </Card>
 
       {fresh?.notice && <Notice tone="warn">{fresh.notice}</Notice>}
@@ -461,10 +512,13 @@ export function TestStep({ d, reload, base, goTo, setBenchVersion }: StepProps) 
       {bench && bench.tests.length > 0 && (
         <>
           <p class="small muted">Version {bench.version}, run {when(bench.tests[0].createdAt)}.{bench.earlierRuns ? ` ${plural(bench.earlierRuns, "earlier run")} not shown.` : ""}</p>
+          <BenchSummary score={bench.vsPlainAi} total={bench.tests.filter(t => t.status === "done").length} />
           {bench.tests.map((t, i) => (
             <Card title={`Sample brief ${i + 1}`} class="studio-test">
               <p class="studio-pre small">{t.brief}</p>
               {t.status === "failed" ? <Notice tone="bad">{t.error ?? "This run did not finish."}</Notice> : (
+                <>
+                <Verdict verdict={t.verdict} />
                 <div class="studio-side">
                   <section>
                     <h3 class="studio-sub">Your agent</h3>
@@ -477,6 +531,7 @@ export function TestStep({ d, reload, base, goTo, setBenchVersion }: StepProps) 
                     <div class="studio-draft-box">{t.baselineDraft ? <Markdown text={t.baselineDraft} /> : <p class="muted">No draft.</p>}</div>
                   </section>
                 </div>
+                </>
               )}
             </Card>
           ))}

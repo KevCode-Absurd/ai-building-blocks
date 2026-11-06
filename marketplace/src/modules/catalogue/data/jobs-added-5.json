@@ -1,0 +1,2510 @@
+[
+  {
+    "id": "app-feature-code",
+    "title": "Code for one app feature or small build",
+    "summary": "Complete, runnable code for one feature: an API endpoint, a UI component, a mobile screen, a WordPress plugin, a browser extension, a landing page, a game script or a device program.",
+    "area": "engineering",
+    "deliverable": "A file tree and every file in full, the language, framework and package versions, setup and run commands, tests or a manual test script with expected results, the names to confirm in the docs, and notes on limits and what to change for your setup.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What should we build?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Back-end API endpoint or route",
+          "Front-end component (React, Vue or Svelte)",
+          "Mobile app screen (React Native or Flutter)",
+          "WordPress plugin, block or shortcode",
+          "Browser extension",
+          "Landing page or one-page site",
+          "Game script (Unity C# or Godot)",
+          "Arduino, ESP32 or Raspberry Pi program",
+          "Other small feature"
+        ]
+      },
+      {
+        "id": "feature",
+        "label": "What must it do?",
+        "type": "longtext",
+        "required": true,
+        "help": "Inputs, what the user sees or sends, what should happen and what comes out. List the edge cases you know about.",
+        "max": 4000
+      },
+      {
+        "id": "stack",
+        "label": "Language, framework and versions",
+        "type": "text",
+        "required": true,
+        "help": "For example Node 22 with Express 5, Python 3.12 with FastAPI, React 19 with Vite, Flutter 3.24, Unity 6 or WordPress 6.8 on PHP 8.2.",
+        "max": 300
+      },
+      {
+        "id": "files",
+        "label": "How many files do you expect?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 3 files. One draft holds about 600 lines of code, so split bigger builds into several orders.",
+        "max": 6
+      },
+      {
+        "id": "existing_code",
+        "label": "Code it must fit with",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste related files, types, models or a folder tree. Replace keys and passwords with XXXX.",
+        "max": 40000
+      },
+      {
+        "id": "data_shapes",
+        "label": "Data shapes and sample data",
+        "type": "longtext",
+        "required": false,
+        "help": "Request and response examples, table columns, props or a few sample rows (made-up is fine).",
+        "max": 8000
+      },
+      {
+        "id": "design",
+        "label": "Look and behaviour",
+        "type": "longtext",
+        "required": false,
+        "help": "Describe the screen, colours, states (loading, empty, error) and devices. Describe images in words.",
+        "max": 4000
+      },
+      {
+        "id": "tests",
+        "label": "Tests to include",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Automated tests in the usual tool for my stack",
+          "A manual test script only",
+          "Both"
+        ]
+      },
+      {
+        "id": "hardware",
+        "label": "Board, parts and wiring (device programs only)",
+        "type": "text",
+        "required": false,
+        "help": "Board model, sensors, pins and power supply.",
+        "max": 400
+      },
+      {
+        "id": "limits",
+        "label": "Rules and limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Packages you can or cannot use, browsers or devices to support, style rules and hosting.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "builds_the_feature",
+        "text": "The code does each thing the brief asks, as the piece chosen, on the stack named.",
+        "weight": 5,
+        "pass_rule": "Each requirement and edge case in the brief maps to a named function, component, route or block in the draft; the draft states the language, framework and versions, and they match the brief or are labelled as the chosen default where the brief left them open.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_apis",
+        "text": "Only real, named packages and only the buyer's names are used, with no secrets.",
+        "weight": 5,
+        "pass_rule": "Every package appears in an install command or manifest with a version or range; a 'names to confirm' table lists any function, hook, setting or endpoint the draft relies on from outside packages; table, field, route and file names come from the brief or are marked placeholders; no real key, token or password appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_runnable",
+        "text": "Every file is complete and the buyer can run it from the steps given.",
+        "weight": 5,
+        "pass_rule": "A file tree lists every file and each file is shown in full, with no '...', 'TODO' or 'add your logic here'; numbered steps cover install, configuration with placeholder values and the run command; at least one automated test or a manual test script gives inputs and expected results.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Comments and setup notes are short and plain.",
+        "weight": 3,
+        "pass_rule": "Each file opens with a one-line comment on what it does; main blocks have a comment; setup steps are one action each; any term outside the buyer's stack is explained the first time.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "handles_real_use",
+        "text": "The feature handles bad input, failures and empty states safely.",
+        "weight": 4,
+        "pass_rule": "The code handles invalid or missing input, a failed network, file or device call, and the empty or loading state where there is a screen; user input is checked before use; secrets come from environment variables or a settings store; anything that deletes, sends or charges has a confirm step or test mode.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "files",
+        "unit": "file",
+        "included": 3,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior developer who builds small features for small businesses. Build the one feature described below on the stack and versions I name. Start with a file tree, then give every file in full: no '...', no TODOs. Name every package with a version in an install command. Do not use functions, hooks or endpoints you are not sure exist; list any outside names I should confirm in the docs. Use only the table, field, route and file names I give and mark anything else as a placeholder. Read secrets from environment variables. Handle bad input, failed calls and empty or loading states. Add numbered setup and run steps and either automated tests in the usual tool for my stack or a manual test script with expected results. Comment each main block in plain words.",
+    "not_for": [
+      "Whole apps or many features at once (one feature per order)",
+      "Logging in to, deploying to or running code on your systems",
+      "Real keys, tokens or passwords in the brief or code (use placeholders such as XXXX)",
+      "Card payment handling, medical or safety-critical software, or mains-voltage wiring",
+      "Scraping, cheat tools, malware or getting round an app's terms",
+      "Code for systems you do not own or have no right to change",
+      "A short script or snippet for one task (see the script, snippet or fix job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Back-end endpoint for Bramble Yoga Studio. Python 3.12 with FastAPI 0.115 and SQLAlchemy 2 on Postgres. POST /bookings takes class_id, member_email and a seat count, checks the class is not full (classes table has capacity, bookings table has class_id and seats), saves the booking and returns the seats left. Two people booking the last seat at once must not both succeed. Include pytest tests.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "React 19 + TypeScript component for our tile shop's quote tool: a room size calculator. Inputs: length and width in metres, tile size picked from 30x30, 60x60 or 60x120 cm, and a waste allowance (default 10%). Shows boxes needed (each box covers 1.44 m2) and total price from a price-per-box prop. Must work on phones and show a friendly error for empty or negative inputs. Vitest tests please.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "One-page site for Harbour Light Pilates, plain HTML and CSS with no build step, hosted on Netlify. Sections: hero with 'Book a free class', class times table (Mon/Wed 6pm, Sat 9am), teacher bio, prices (drop-in £14, 10 classes £120), and a contact form using Netlify Forms. Colours #1D3557 and #F1FAEE. Must pass basic accessibility checks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "WordPress 6.8 on PHP 8.2. A small plugin for Copperleaf Bakery that adds a [daily_specials] shortcode. Staff add specials as a custom post type 'Special' with a price field and a 'show on' date. The shortcode lists today's specials with prices, or 'No specials today'. Must escape output and work with our Astra child theme.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Flutter 3.24 screen for Pawsome Walks' dog walker app: 'Today's walks' list from a JSON endpoint /api/walks/today (sample response pasted). Each card shows dog name, owner address and time slot, with a button to mark picked up. Needs pull to refresh, an empty state and an offline error message. Use the http package, no state management library.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "ESP32 with a DS18B20 temperature probe in each of our 2 shop fridges (pins 4 and 5), Arduino IDE 2.3. Log the temperature every 5 minutes to a microSD card as CSV and light a red LED on pin 13 if either reads above 5C for 15 minutes. USB powered. This is a backup to our paper log, not a replacement.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "feature build",
+      "api endpoint",
+      "fastapi",
+      "express route",
+      "react component",
+      "vue component",
+      "flutter screen",
+      "react native screen",
+      "wordpress plugin",
+      "shortcode",
+      "browser extension",
+      "chrome extension",
+      "landing page code",
+      "unity script",
+      "arduino code",
+      "raspberry pi script",
+      "full code",
+      "small app feature"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's 2026 software engineering rate report lists JavaScript, React, TypeScript, Node.js, Python, AWS, HTML5, PHP, Docker and CSS as the ten most in-demand skills.",
+        "url": "https://www.yunojuno.com/freelancer-rates-report/developer"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists front-end engineers at an average of $77 an hour, about £466 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/frontend-developer"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists mobile engineers at an average of $76 an hour, about £463 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/mobile-app-developer"
+      }
+    ]
+  },
+  {
+    "id": "api-integration-code",
+    "title": "API, webhook or payment integration code",
+    "summary": "Code that connects your app to another service: a webhook receiver, an API client, a payment flow in test mode, a sync job, a chat bot or a code step for Zapier, Make or n8n.",
+    "area": "engineering",
+    "deliverable": "Complete code for the integration with signature checks, retries, duplicate protection and logging; keys as environment variable placeholders; a local test using the provider's test mode or sample payloads; a table of endpoint and field names to confirm; and a go-live checklist you carry out yourself.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What should it connect?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Webhook receiver for events from a service",
+          "API client that reads or sends data",
+          "Payment checkout or subscription flow (test mode)",
+          "Sync job between two tools",
+          "Chat bot for Slack, Discord or Teams",
+          "Code step inside Zapier, Make or n8n",
+          "Email or SMS sending through a provider's API",
+          "Other integration"
+        ]
+      },
+      {
+        "id": "services",
+        "label": "Services involved",
+        "type": "list",
+        "required": true,
+        "help": "For example Stripe, Shopify, HubSpot, Twilio or Slack. Add the API version if you know it.",
+        "max": 4
+      },
+      {
+        "id": "flow",
+        "label": "What should happen?",
+        "type": "longtext",
+        "required": true,
+        "help": "What starts it, what data moves, where it goes and what counts as done.",
+        "max": 4000
+      },
+      {
+        "id": "stack",
+        "label": "Your language, framework and hosting",
+        "type": "text",
+        "required": true,
+        "help": "For example Node 22 on Cloudflare Workers, Python 3.12 on Render, PHP 8.3 with Laravel 11.",
+        "max": 300
+      },
+      {
+        "id": "payloads",
+        "label": "Sample payloads or API responses",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste examples from the provider's docs or your logs with personal data and keys replaced.",
+        "max": 20000
+      },
+      {
+        "id": "existing_code",
+        "label": "Code it must fit with",
+        "type": "longtext",
+        "required": false,
+        "help": "Replace keys and passwords with XXXX.",
+        "max": 30000
+      },
+      {
+        "id": "volume",
+        "label": "How often and how many?",
+        "type": "text",
+        "required": false,
+        "help": "For example 200 orders a day, or every 15 minutes.",
+        "max": 300
+      },
+      {
+        "id": "failure_rules",
+        "label": "What to do when it fails",
+        "type": "longtext",
+        "required": false,
+        "help": "Who should hear about it, whether to retry, and what must never happen twice.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "connects_as_asked",
+        "text": "The code carries out each step of the flow in the brief.",
+        "weight": 4,
+        "pass_rule": "Each step in the brief's flow maps to a named function or handler; the services and any API or SDK versions in the brief are used and stated; the trigger and the 'done' result match the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_endpoints",
+        "text": "Endpoints, events and fields come from the brief or are flagged to confirm, and no live secret appears.",
+        "weight": 5,
+        "pass_rule": "Every endpoint, event name, header and field either appears in the brief's payloads or flow, or is listed in a 'names to confirm in the provider's docs' table with the SDK or API version; keys are read from environment variable placeholders; no live key, token, password or card number appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_testable",
+        "text": "The code is complete and can be tested locally without live money or messages.",
+        "weight": 5,
+        "pass_rule": "Every file is shown in full with install and run commands and the language version; a local test uses the provider's test mode, a CLI that replays events, or the sample payloads from the brief, with the expected log or result; no '...' or placeholder logic.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "safe_by_default",
+        "text": "Signatures, retries and duplicates are handled, and nothing goes live by accident.",
+        "weight": 4,
+        "pass_rule": "Webhook code checks the signature or shared secret before acting; a stored event or request id stops the same event running twice; failed calls retry a set number of times, then log and alert; payment code uses test keys and the provider's hosted page or element to collect card details; going live is left to the buyer as a checklist.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_steps",
+        "text": "Setup and go-live steps are plain and in order.",
+        "weight": 3,
+        "pass_rule": "A short summary of how data flows opens the draft; setup steps are numbered with one action each; each environment variable is listed by name with where to find its value; jargon such as idempotency is explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 179,
+      "min_usd": 99,
+      "max_usd": 499,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior integration developer. Write the code for the integration below on my stack. Give every file in full with install and run commands. For webhooks, verify the provider's signature before doing anything, store the event id so the same event never runs twice, and return the right status code fast. Retry failed outbound calls a limited number of times with backoff, then log and alert. Read every key from an environment variable placeholder and use test mode keys only. Never collect or store card numbers: use the provider's hosted checkout or element. Use only endpoints, events and fields from my samples, and list any other names I must confirm in the provider's docs. Add a local test with the sample payloads or the provider's test tools, the expected result, and a go-live checklist that I carry out myself.",
+    "not_for": [
+      "Collecting, storing or logging raw card numbers (use the provider's hosted checkout)",
+      "Live keys, tokens or passwords in the brief (use test keys and placeholders)",
+      "Logging in to your accounts, dashboards or servers",
+      "Scraping, or using an API against its terms or rate limits",
+      "Payouts, refunds or money transfers that run without a person approving them",
+      "Integrations with accounts or systems you do not own"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Stripe webhook for Fernhill Pottery Classes. Node 22 with Express 5 on Render. When checkout.session.completed arrives, mark the booking paid in our Postgres bookings table (columns id, stripe_session_id, status) and send a confirmation email through Postmark. Stripe sometimes resends events and we once emailed a customer three times. Test mode only; sample event JSON pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Slack bot for our 6-person web agency, Python 3.12 with Bolt for Python. A /timeoff command opens a form (dates, reason), posts the request in #leave for approval with Approve and Decline buttons, and DMs the requester the answer. Runs on a small VPS. No database yet; a JSON file is fine for now.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Code step in Zapier (JavaScript) for Tidewater Kayak Hire. Input is a Typeform webhook with answers in an array (sample pasted). Output should be clean fields: name, email, phone in E.164 for the UK, hire date as YYYY-MM-DD and number of kayaks as a number. If the phone is invalid, output phone_ok=false so the Zap can branch.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Sync new Shopify orders for Rivet Leather Co. into Airtable every 15 minutes. Python 3.11 as a cron job on our Linux box. Use the Shopify Admin GraphQL API (we are on 2025-01) and the Airtable REST API. Orders table fields: Order Number, Customer, Total, Items, Status. Must not create duplicates if a run is retried. Sample order JSON pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Twilio SMS reminders for Northside Dental's appointment system, Laravel 11 on PHP 8.3. A daily job at 9am texts patients with appointments tomorrow (appointments table pasted, phone column already E.164). Patients can reply STOP. Log each send and never text the same patient twice for one appointment. Use the Twilio PHP SDK.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "webhook",
+      "stripe webhook",
+      "api integration",
+      "api client",
+      "payment integration",
+      "stripe test mode",
+      "shopify api",
+      "airtable api",
+      "slack bot",
+      "discord bot",
+      "zapier code step",
+      "n8n code node",
+      "twilio sms",
+      "sync job",
+      "idempotency",
+      "retries"
+    ],
+    "demand_sources": [
+      {
+        "note": "Postman's 2025 State of the API report (5,700+ respondents): 69% spend 10 or more hours a week on API work, and half use webhooks.",
+        "url": "https://www.postman.com/state-of-api/"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists back-end engineers at an average of $61 an hour, about £368 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/backend-developer"
+      }
+    ]
+  },
+  {
+    "id": "automated-tests-for-code",
+    "title": "Automated tests for code you paste",
+    "summary": "Unit, API, component or end-to-end tests for your code, written for your test tool, covering the cases that matter most.",
+    "area": "engineering",
+    "deliverable": "A table of cases mapped to the behaviour each checks, complete test files for your tool (such as pytest, Jest, Vitest, PHPUnit, Playwright or Cypress), fixtures and mocks, the commands to run them, the expected result, and the gaps that are still not covered.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What tests do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Unit tests for functions or classes",
+          "API or integration tests",
+          "End-to-end browser tests",
+          "Tests that pin current behaviour before a refactor",
+          "Component tests for a UI",
+          "Test data, fixtures and mocks",
+          "A starter test setup for a project with no tests"
+        ]
+      },
+      {
+        "id": "code",
+        "label": "The code to test",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the files. Replace keys and passwords with XXXX.",
+        "max": 40000
+      },
+      {
+        "id": "behaviour",
+        "label": "What the code should do",
+        "type": "longtext",
+        "required": true,
+        "help": "Rules, examples and known bugs. For browser tests, the steps a user takes and what they should see.",
+        "max": 4000
+      },
+      {
+        "id": "stack",
+        "label": "Language, framework and test tool",
+        "type": "text",
+        "required": true,
+        "help": "For example Python 3.12 with pytest 8, TypeScript with Vitest 3, Laravel 11 with Pest, or Playwright.",
+        "max": 300
+      },
+      {
+        "id": "lines",
+        "label": "About how many lines of code to test?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 300 lines. One draft holds tests for about 1,500 lines; split bigger jobs.",
+        "max": 1500
+      },
+      {
+        "id": "page_details",
+        "label": "Page details for browser tests",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the HTML or list buttons, labels and test ids, plus a local or staging URL.",
+        "max": 15000
+      },
+      {
+        "id": "existing_tests",
+        "label": "Tests you have now",
+        "type": "longtext",
+        "required": false,
+        "max": 15000
+      },
+      {
+        "id": "where_run",
+        "label": "Where the tests run",
+        "type": "text",
+        "required": false,
+        "help": "Your laptop, GitHub Actions, GitLab CI or similar.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_behaviour",
+        "text": "Tests check the behaviour the brief describes, including errors and edge cases.",
+        "weight": 5,
+        "pass_rule": "A case table maps each rule or example in the brief to at least one named test; each main function or flow has at least one error case and one edge case (empty, boundary or repeated input); known bugs from the brief have a test labelled as expected to fail until fixed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tests_real_code",
+        "text": "Tests call the buyer's real functions, routes and page elements.",
+        "weight": 5,
+        "pass_rule": "Every function, class, route, selector and file path a test uses appears in the pasted code or brief, or is a marked placeholder; no test asserts behaviour the brief or code does not support; mocks replace only outside services and each mock is named.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "runnable",
+        "text": "Test files are complete and run with one stated command.",
+        "weight": 5,
+        "pass_rule": "The test tool and version are named; each test file is complete with imports and setup; install and run commands are given; the expected outcome (tests passing and any expected failures) is stated; browser tests point only at local or staging URLs.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "stable_tests",
+        "text": "Tests are easy to read and do not fail for the wrong reasons.",
+        "weight": 3,
+        "pass_rule": "Each test name says the behaviour in plain words; one behaviour per test; browser tests wait for elements or responses instead of fixed sleeps; time and random values are fixed or frozen; tests do not depend on running order.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_summary",
+        "text": "A short summary says what is covered and what is not.",
+        "weight": 3,
+        "pass_rule": "The draft opens with five lines or fewer on what the tests cover; a 'not covered' list names the remaining gaps; jargon such as fixture or mock is explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 449,
+      "size": {
+        "field": "lines",
+        "unit": "line",
+        "included": 300,
+        "per_unit_usd": 0.15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a test automation engineer. Write automated tests for the code below using the test tool and version I name. First give a table of cases that maps each rule or example I gave to a test, including error cases and edge cases such as empty, boundary and repeated input. Then give complete test files with imports, fixtures and mocks for outside services only. Call only functions, routes and selectors that exist in my code. For browser tests, wait for elements instead of sleeping and use my local or staging URL. Freeze time and random values. Give the install and run commands, the expected result, and a list of what is still not covered. If a known bug exists, write a test that should fail until it is fixed and label it.",
+    "not_for": [
+      "Load, stress or security attack testing",
+      "Running the tests or reaching your live site",
+      "Tests against production systems or real customer data",
+      "Testing systems you do not own",
+      "Manual test case tables only (see the QA test cases job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "pytest 8 tests for our pricing module (Python 3.12, 180 lines pasted) at Greenbox Veg Delivery. Rules: boxes are £18, £24 or £32; 10% off for weekly subscribers; free delivery over £30 after discount; postcode areas outside our list raise ValueError. We think the discount is applied after delivery is added, which is wrong.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Playwright tests (TypeScript) for the booking flow on our staging site https://staging.rowanphysio.test. Steps: pick a service, pick a date, pick a time, enter name and email, confirm, see 'Booking confirmed'. Also test that a past date cannot be picked and that the email field rejects 'abc'. HTML of the three pages pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We are about to refactor a 400-line Node 20 module that builds the data for our invoice PDFs (no tests today). Please write Jest tests that pin what it does now, including rounding and VAT lines, so we can refactor safely. Sample inputs and outputs pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Vue 3.5 component tests with Vitest and Vue Test Utils for our SearchFilter.vue (pasted). It emits 'update' with the selected filters, debounces typing by 300ms, and shows 'No results' when the results prop is empty.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Laravel 11 feature tests with Pest for our API routes /api/orders (index, store, show). Only logged-in staff may create orders; customers can see only their own. Controller, routes and policy pasted. Use the database factories we already have.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "unit tests",
+      "pytest",
+      "jest",
+      "vitest",
+      "phpunit",
+      "pest",
+      "playwright",
+      "cypress",
+      "end to end tests",
+      "e2e tests",
+      "integration tests",
+      "test coverage",
+      "characterization tests",
+      "component tests",
+      "mocks",
+      "fixtures"
+    ],
+    "demand_sources": [
+      {
+        "note": "US Bureau of Labor Statistics: 187,600 quality assurance analysts and testers worked in the US in 2025, with a median pay of $104,300.",
+        "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+      },
+      {
+        "note": "Postman's 2025 State of the API report: testing is the most common API activity (81%), ahead of developing (73%) and documenting (58%).",
+        "url": "https://www.postman.com/state-of-api/"
+      }
+    ]
+  },
+  {
+    "id": "bug-diagnosis-and-fix",
+    "title": "Bug diagnosis and fix from your error",
+    "summary": "Send the error, log or wrong result and the code involved. You get the likely cause, the fixed code and a test that proves it.",
+    "area": "engineering",
+    "deliverable": "What the error means in plain words, likely causes ranked with the evidence for each, the corrected code in full for each changed function or file with changed lines marked, a test or steps that show the bug and confirm the fix, and what to log or check next if the first fix does not work.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "symptom",
+        "label": "What is going wrong?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "It crashes or shows an error",
+          "It gives the wrong result",
+          "It works on my machine but fails on the server or in CI",
+          "It is slow or hangs",
+          "It fails only sometimes",
+          "It will not build, install or start",
+          "A device, game or add-on misbehaves"
+        ]
+      },
+      {
+        "id": "error",
+        "label": "Error message, log or stack trace",
+        "type": "longtext",
+        "required": true,
+        "help": "Copy the exact text. Remove keys, passwords and customer data.",
+        "max": 20000
+      },
+      {
+        "id": "code",
+        "label": "The code involved",
+        "type": "longtext",
+        "required": true,
+        "help": "The file or functions named in the error, plus anything that calls them.",
+        "max": 40000
+      },
+      {
+        "id": "stack",
+        "label": "Language, framework, versions and where it runs",
+        "type": "text",
+        "required": true,
+        "help": "For example Node 20 on Vercel, Python 3.11 on Windows 11, Unity 2022.3, Excel 365 VBA.",
+        "max": 300
+      },
+      {
+        "id": "expected",
+        "label": "What should happen, and what happens instead?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "lines",
+        "label": "About how many lines of code are you sending?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 400 lines.",
+        "max": 3000
+      },
+      {
+        "id": "started",
+        "label": "When it started and what changed",
+        "type": "longtext",
+        "required": false,
+        "help": "Updates, deploys, new data or new devices.",
+        "max": 2000
+      },
+      {
+        "id": "tried",
+        "label": "What you have tried",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "explains_the_error",
+        "text": "The error is explained in plain words and traced to where it starts.",
+        "weight": 4,
+        "pass_rule": "The draft quotes the key line of the error or log from the brief and says what it means in plain words; it names the file and line, or function, where the problem starts, as shown in the pasted code or trace.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "evidence_based_cause",
+        "text": "Likely causes come from the evidence the buyer sent.",
+        "weight": 5,
+        "pass_rule": "Each likely cause cites a line of the pasted code, log or brief; causes are ranked from most to least likely; a cause that depends on code, settings or versions not in the brief is listed as a question to check; the draft does not claim the fix was run.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_fix",
+        "text": "The fix is complete code that drops in.",
+        "weight": 5,
+        "pass_rule": "Each changed function or file is shown in full with changed lines marked by comments; the language and version are stated; no new library is added unless named with a version and install command; the fix addresses the top-ranked cause.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "proves_the_fix",
+        "text": "A test or steps show the bug and confirm the fix.",
+        "weight": 4,
+        "pass_rule": "A test or numbered steps with input and expected result would fail before the fix and pass after it; a fallback section says what to log or check next if the fix does not work.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_safe",
+        "text": "The answer is plain and risky steps are safe.",
+        "weight": 3,
+        "pass_rule": "A summary of three lines or fewer opens the draft; any step that deletes data, resets a database, clears a cache in production or force-pushes has a backup step first; jargon is explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "lines",
+        "unit": "line",
+        "included": 400,
+        "per_unit_usd": 0.1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a calm senior developer who is good at debugging. Here is my error message or log, the code involved, my versions and what should happen. Quote the key line of the error and explain it in plain words. Find where it starts in my code. List the likely causes from most to least likely, citing the lines of my code or log that point to each. Give the fixed code in full for each function or file you change, with the changed lines marked. Add a test or steps that fail before the fix and pass after. If the fix might not work, tell me what to log or check next. Do not assume code or settings I did not show you; list those as questions. Add a backup step before anything that deletes or resets data.",
+    "not_for": [
+      "Logging in to your servers, accounts or devices",
+      "Fixing systems you do not own",
+      "Breaking licence checks, copy protection or anti-cheat",
+      "Recovering data from failed disks or deleted databases",
+      "Live incident control while your site is down (see the runbook job)",
+      "Real keys, passwords or customer data in logs (remove them first)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our Next.js 15 site for Lantern Lane Books builds locally but fails on Vercel with 'Error: Dynamic server usage: Route /events couldn't be rendered statically because it used cookies'. The page reads a cookie for the reader's chosen shop. Page file and layout pasted (120 lines). It started after we added the shop picker.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Python 3.11 script on Windows that merges our 12 branch sales CSVs crashes with 'UnicodeDecodeError: utf-8 codec can't decode byte 0xa3 in position 40'. Only happens with the Leeds file. Script pasted (90 lines). We think it is the pound sign.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Excel 365 VBA macro that copies the 'Orders' rows marked Shipped to the 'Archive' sheet skips every second row. Macro pasted (45 lines). We have 300 rows a week and staff run it on Fridays.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Unity 2022.3 LTS. Our player sometimes falls through the floor after a respawn, about 1 in 20 times. PlayerController.cs and Respawn.cs pasted (260 lines). Rigidbody with interpolation on; floor is a mesh collider. No errors in the console.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our Laravel 10 queue worker for Kestrel Couriers stops processing every few hours with 'Allowed memory size of 134217728 bytes exhausted' in storage/logs. The job builds a PDF label per parcel. Job class and log excerpt pasted. Runs under Supervisor on Ubuntu 22.04.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "bug fix",
+      "debugging",
+      "error message",
+      "stack trace",
+      "crash",
+      "exception",
+      "works locally fails in production",
+      "build error",
+      "memory leak",
+      "slow code",
+      "intermittent bug",
+      "fix my code",
+      "traceback",
+      "log error"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
+      },
+      {
+        "note": "Stack Overflow's 2025 Developer Survey: more developers distrust the accuracy of AI tools (46%) than trust it (33%).",
+        "url": "https://survey.stackoverflow.co/2025/ai"
+      }
+    ]
+  },
+  {
+    "id": "refactor-one-file",
+    "title": "Refactor of one file or module",
+    "summary": "One messy file or module rewritten so it is easier to read and change, with the same behaviour, proven by tests.",
+    "area": "engineering",
+    "deliverable": "The refactored file or files in full, a table mapping old functions to new ones, tests that pin the current behaviour, the order to apply the change in small commits, and a list of anything that now behaves differently on purpose.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "goal",
+        "label": "What kind of refactor?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Clean up without changing behaviour",
+          "Split a large file into smaller modules",
+          "Convert JavaScript to TypeScript",
+          "Replace jQuery with plain JavaScript",
+          "Move to newer language syntax",
+          "Remove duplicated code",
+          "Clean up a recorded or copied macro",
+          "Class components to hooks, or Vue Options to Composition API"
+        ]
+      },
+      {
+        "id": "code",
+        "label": "The file or module",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste it in full. Replace keys and passwords with XXXX.",
+        "max": 50000
+      },
+      {
+        "id": "lines",
+        "label": "How many lines?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 300 lines. One draft holds a refactor of up to about 800 lines; split bigger files.",
+        "max": 800
+      },
+      {
+        "id": "stack",
+        "label": "Language and versions",
+        "type": "text",
+        "required": true,
+        "help": "For example PHP 8.2, TypeScript 5.6, Python 3.12, Excel 365 VBA, C# in Unity 6.",
+        "max": 300
+      },
+      {
+        "id": "purpose",
+        "label": "What the code does and who uses it",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "must_keep",
+        "label": "What must not change",
+        "type": "longtext",
+        "required": false,
+        "help": "Public function names, outputs, file formats, URLs or settings other code depends on.",
+        "max": 2000
+      },
+      {
+        "id": "tests",
+        "label": "Tests you have now",
+        "type": "text",
+        "required": false,
+        "max": 500
+      },
+      {
+        "id": "pain",
+        "label": "What hurts today",
+        "type": "longtext",
+        "required": false,
+        "help": "Bugs that keep coming back, parts nobody dares touch, slow parts.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "refactor_as_asked",
+        "text": "The refactor is the kind chosen and touches only the pasted code.",
+        "weight": 4,
+        "pass_rule": "The draft states the refactor goal from the brief; every change belongs to that goal; nothing outside the pasted file or module is rewritten; each pain point in the brief is answered or listed as out of scope.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "same_behaviour",
+        "text": "Behaviour stays the same unless the brief asks otherwise.",
+        "weight": 5,
+        "pass_rule": "Every public function, export, input and output of the original still exists with the same name and result, or appears in a 'behaviour changes' table with the reason; each 'must not change' item from the brief is confirmed by name.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_files",
+        "text": "The refactored code is complete and runs.",
+        "weight": 5,
+        "pass_rule": "Each new or changed file is shown in full with no '...' or omitted sections; the file tree and imports match; the language and version are stated; no new dependency is added unless named with a version and install command.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "pinned_by_tests",
+        "text": "Tests pin current behaviour and the change lands in small steps.",
+        "weight": 4,
+        "pass_rule": "Tests, or a script with inputs and expected outputs, are given that should pass on both the old and the new code; the commit order has at least three small steps, each ending with the tests passing.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clearer_code",
+        "text": "The new code is easier to read, and the draft shows how.",
+        "weight": 3,
+        "pass_rule": "An old-to-new mapping table is given; long functions are split into named functions; names say what they hold or do; a before-and-after summary uses counts taken from the two versions of the code.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 89,
+      "max_usd": 449,
+      "size": {
+        "field": "lines",
+        "unit": "line",
+        "included": 300,
+        "per_unit_usd": 0.2
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior developer who refactors legacy code safely. Refactor the file below for the goal I chose, without changing what it does. Keep every public function name, input and output, and confirm each item on my 'must not change' list. First write tests or a script with inputs and expected outputs that pin the current behaviour. Then give the refactored file or files in full, with no gaps. Add a table that maps old functions to new ones, a list of any behaviour that changes on purpose and why, and a commit plan in at least three small steps that each end with tests passing. Do not add new libraries unless you name the version and why.",
+    "not_for": [
+      "Rewriting a whole app or many files at once",
+      "Adding new features during the refactor (order a feature build separately)",
+      "Running your code or test suite",
+      "Code you do not own or have no right to change",
+      "Hiding or obscuring what code does"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our 620-line orders.php from 2014 (PHP 8.2 now) for Fennel & Fig Catering mixes SQL, HTML and email sending in one file. Split it into a small data class, a mailer function and a template, keeping the same URL and form fields. mysqli calls should become prepared statements. No tests today.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Convert our 280-line cart.js (jQuery 3.6) on the Shopify-free site for Blue Door Candles to plain modern JavaScript. It adds items, updates totals and saves the cart in localStorage. Same DOM ids and classes must keep working because our CSS depends on them.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Excel 365 recorded macro (210 lines, pasted) that formats our weekly stock report: lots of Select and Activate, hard-coded ranges A1:K412. Clean it up so it works for any number of rows and runs faster. The output layout must look the same.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "React 18 class component ProductGallery.jsx (340 lines) for our furniture shop. Convert to a function component with hooks and TypeScript 5.6. Props and the swipe behaviour must stay the same. We have two Jest tests (pasted).",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "refactor",
+      "legacy code",
+      "clean up code",
+      "split file",
+      "javascript to typescript",
+      "jquery to vanilla js",
+      "class to hooks",
+      "vue composition api",
+      "technical debt",
+      "spaghetti code",
+      "modernise code",
+      "vba cleanup",
+      "code smells"
+    ],
+    "demand_sources": [
+      {
+        "note": "Stack Overflow's 2024 Developer Survey: technical debt is the top frustration at work, picked by 62.4% of professional developers.",
+        "url": "https://survey.stackoverflow.co/2024/professional-developers"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
+      }
+    ]
+  },
+  {
+    "id": "database-schema-and-migration",
+    "title": "Database schema, migration or index plan",
+    "summary": "A database design, a safe migration, ORM models, seed data or an index plan for slow queries, written for your database and version.",
+    "area": "engineering",
+    "deliverable": "SQL or ORM files in full for your database and version, a text diagram of tables and links, up and down migrations, seed data where asked, an index plan tied to your queries or EXPLAIN output, checks to run before and after, and a backup and rollback step for any change to live data.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "New schema from your requirements",
+          "Migration to change an existing schema",
+          "Index and query speed plan",
+          "ORM models (Prisma, Django, SQLAlchemy, Eloquent or ActiveRecord)",
+          "Seed or test data script",
+          "Move data from an old layout to a new one"
+        ]
+      },
+      {
+        "id": "database",
+        "label": "Database",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "PostgreSQL",
+          "MySQL or MariaDB",
+          "SQLite",
+          "SQL Server",
+          "Supabase (Postgres)",
+          "Other"
+        ]
+      },
+      {
+        "id": "version",
+        "label": "Database version and ORM or framework",
+        "type": "text",
+        "required": true,
+        "help": "For example PostgreSQL 16 with Prisma 6, or MySQL 8.0 with Laravel 11.",
+        "max": 300
+      },
+      {
+        "id": "requirements",
+        "label": "What the data must support",
+        "type": "longtext",
+        "required": true,
+        "help": "What you store, how things relate, rules (unique, required) and the questions you ask of the data.",
+        "max": 6000
+      },
+      {
+        "id": "tables",
+        "label": "How many tables are involved?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 8 tables.",
+        "max": 25
+      },
+      {
+        "id": "current_schema",
+        "label": "Current schema",
+        "type": "longtext",
+        "required": false,
+        "help": "CREATE TABLE statements, ORM models or a table list. No customer data.",
+        "max": 40000
+      },
+      {
+        "id": "queries",
+        "label": "Slow queries and EXPLAIN output",
+        "type": "longtext",
+        "required": false,
+        "max": 20000
+      },
+      {
+        "id": "data_size",
+        "label": "Rows and growth",
+        "type": "text",
+        "required": false,
+        "help": "For example 2 million orders, 5,000 new a day.",
+        "max": 300
+      },
+      {
+        "id": "downtime",
+        "label": "Downtime you can accept",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_the_need",
+        "text": "The design covers every requirement in the brief.",
+        "weight": 4,
+        "pass_rule": "Each requirement and data question in the brief maps to a table, column, constraint, index or query in the draft; unique and required rules from the brief appear as constraints.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grounded_schema",
+        "text": "Existing tables and numbers come from the buyer's material.",
+        "weight": 5,
+        "pass_rule": "Every table and column described as existing appears in the brief's schema; new ones are labelled new; each index cites the query or EXPLAIN line it helps; no row counts, timings or speed-ups are claimed beyond what the brief gives.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "runnable_sql",
+        "text": "SQL and migration files run on the named database.",
+        "weight": 5,
+        "pass_rule": "Files are complete and use syntax for the named database and version; each migration has an up and a down, or says why it cannot be undone; constraint, index and foreign key names are given; ORM code names the ORM version.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "safe_migration",
+        "text": "Changes to live data are safe.",
+        "weight": 4,
+        "pass_rule": "Any step that drops, renames or rewrites a column or table has a backup step, a check query before and after, and a rollback; for large tables (from the brief's row counts) the draft notes locking and uses a lower-lock method where the database supports one.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_design",
+        "text": "The design is easy to follow.",
+        "weight": 3,
+        "pass_rule": "A text diagram shows tables and links; each table has a one-line purpose; terms such as foreign key or index are explained once in plain words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 449,
+      "size": {
+        "field": "tables",
+        "unit": "table",
+        "included": 8,
+        "per_unit_usd": 9
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a database engineer. Using only my requirements, schema and queries, write what I asked for on my database and version. Start with a short text diagram of the tables and how they link. Give complete SQL or ORM files: tables, keys, constraints and indexes with names. Each migration needs an up and a down. For any change to live data, add a backup step, a check query before and after, and a rollback, and warn about table locks on large tables. For index plans, tie each index to the query or EXPLAIN line it helps and do not promise speed-ups. Label new tables and columns as new. Explain terms like foreign key once in plain words.",
+    "not_for": [
+      "Running SQL on your database or connecting to it",
+      "Real customer or personal data in the brief (use made-up rows)",
+      "Database design sign-off for regulated health or payment data",
+      "Recovering lost or corrupted data",
+      "Report queries only (see the SQL queries job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "New Postgres 16 schema with Prisma 6 for Cobble & Clay, a pottery studio. We sell class packs (5 or 10 classes, expire after 6 months), members book classes with a capacity of 8, can cancel up to 24 hours before, and teachers run classes. We need to see a member's remaining classes and each class's waitlist.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our MySQL 8.0 orders table (CREATE TABLE pasted, 3.2 million rows) has a single 'address' text column. Migrate to a separate addresses table with street, city, postcode and country, keep old orders linked, and do it without locking checkout for long. We can accept 5 minutes of downtime at 3am.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Our PostgreSQL 15 dashboard query for Lime Street Gyms takes 9 seconds. Query and EXPLAIN ANALYZE output pasted, plus the 5 tables involved. payments has 4 million rows. Which indexes should we add, and should we rewrite anything?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Django 5.1 models for a small repair shop: customers, devices, repair jobs with status history, parts used and invoices. A job can have many parts; a part can be on many jobs. Include a seed data script with 10 made-up customers.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "database schema",
+      "database design",
+      "migration",
+      "schema change",
+      "erd",
+      "prisma schema",
+      "django models",
+      "sqlalchemy models",
+      "eloquent migration",
+      "index",
+      "slow query",
+      "explain analyze",
+      "postgres",
+      "mysql",
+      "seed data"
+    ],
+    "demand_sources": [
+      {
+        "note": "Stack Overflow's 2025 Developer Survey: 55.6% of respondents use PostgreSQL and 40.5% use MySQL.",
+        "url": "https://survey.stackoverflow.co/2025/technology"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists back-end engineers at an average of $61 an hour, about £368 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/backend-developer"
+      }
+    ]
+  },
+  {
+    "id": "ci-docker-infra-config",
+    "title": "CI, Docker or infrastructure config files",
+    "summary": "Config files that build, test and ship your code: Dockerfiles, Compose, CI pipelines, Terraform, hosting and web server configs.",
+    "area": "engineering",
+    "deliverable": "Each config file in full with comments and where it goes, commands to check it locally (such as docker build, a lint step or terraform plan), secrets as named placeholders, what each part may cost or risk, and how to roll back or remove it.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What config do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Dockerfile",
+          "Docker Compose for local development",
+          "CI pipeline (GitHub Actions, GitLab CI or Bitbucket)",
+          "Terraform or OpenTofu files",
+          "Hosting config (Fly.io, Render, Railway, Vercel, Netlify or Cloudflare)",
+          "Kubernetes manifests or Helm values",
+          "Web server config (Nginx, Caddy or Apache)",
+          "Linting, formatting and pre-commit setup"
+        ]
+      },
+      {
+        "id": "app",
+        "label": "What the app is and how it runs today",
+        "type": "longtext",
+        "required": true,
+        "help": "Language and versions, how you start it, ports, build steps, database and files it writes.",
+        "max": 4000
+      },
+      {
+        "id": "target",
+        "label": "Where it should run",
+        "type": "text",
+        "required": true,
+        "help": "For example GitHub Actions to AWS ECS, a Hetzner VPS with Docker, or Vercel.",
+        "max": 300
+      },
+      {
+        "id": "files",
+        "label": "How many config files?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 2 files.",
+        "max": 6
+      },
+      {
+        "id": "existing",
+        "label": "Current configs and dependency file",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste package.json, requirements.txt, current Dockerfile or pipeline. Replace secrets with XXXX.",
+        "max": 30000
+      },
+      {
+        "id": "secrets",
+        "label": "Secrets and settings it needs (names only)",
+        "type": "list",
+        "required": false,
+        "help": "For example DATABASE_URL or STRIPE_SECRET_KEY. Never the values.",
+        "max": 15
+      },
+      {
+        "id": "errors",
+        "label": "Errors from a failed build or run",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "limits",
+        "label": "Budget, size and rules",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "config_as_asked",
+        "text": "The config does what the brief asks for the target named.",
+        "weight": 4,
+        "pass_rule": "Each build, test, deploy or serve step in the brief maps to a stage, job, resource or block; the target platform and versions match the brief; any error from the brief is explained and fixed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_settings",
+        "text": "Images, actions and resources are real, pinned and named from the brief.",
+        "weight": 5,
+        "pass_rule": "Every base image, CI action, provider and resource type is named with a version or tag (no 'latest' unless the brief asks); app names, ports, paths and commands come from the brief or are marked placeholders; secrets are referenced by name only and never given a value.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_checkable",
+        "text": "Files are complete and can be checked before anything goes live.",
+        "weight": 5,
+        "pass_rule": "Each file is shown in full and says where it goes; commands to validate it locally are given (for example docker build, docker compose config, terraform validate and plan, or the linter) with what success looks like; no step changes live infrastructure without a plan or preview step first.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "safe_defaults",
+        "text": "Configs follow safe defaults and flag cost.",
+        "weight": 4,
+        "pass_rule": "Containers run as a non-root user where the image allows; versions are pinned; no secret is baked into an image, file or log; CI permissions are the least needed; resources that cost money or are public are flagged with the reason; a rollback or remove step is given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_comments",
+        "text": "Comments make each block clear to a non-expert.",
+        "weight": 3,
+        "pass_rule": "Each file has a header comment and each block a short comment; a summary of five lines or fewer opens the draft; terms such as build stage or state file are explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 399,
+      "size": {
+        "field": "files",
+        "unit": "file",
+        "included": 2,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a DevOps engineer who sets up small teams. Write the config files I need for my app and target. Give each file in full with a comment on each block and where the file goes. Pin every image, action and provider to a version, never 'latest'. Use only the app names, ports, paths and commands I gave and mark anything else as a placeholder. Refer to secrets by name only. Use safe defaults: a non-root user in containers, least CI permissions, no secrets baked into images or logs. Give the commands to check the files locally, such as docker build or terraform plan, and what success looks like. Flag anything that costs money or is public, and give a rollback or remove step.",
+    "not_for": [
+      "Applying changes to your cloud account, servers or CI for you",
+      "Real secrets, keys or passwords (names only)",
+      "Security certification or compliance sign-off",
+      "Crypto mining, spam, or getting round a host's terms",
+      "Release and rollback checklists without config files (see the runbook job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Dockerfile and docker-compose.yml for local development of our Django 5.1 app (Python 3.12) with Postgres 16 and Redis 7, for Quillfeather Tutors. Dev team of three on Mac and Windows. Hot reload for code, a named volume for the database, and a one-line command to run tests. requirements.txt pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "GitHub Actions pipeline for our Node 22 + Vite React app for Saltmarsh Surf School: install with npm ci, lint, run Vitest, build, and deploy the dist folder to Cloudflare Pages on pushes to main only. Pull requests should run checks but not deploy. Secret names: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Terraform 1.9 for AWS: one S3 bucket for nightly database backups from our Hetzner server for Orchard Accounting, with versioning, a 90-day expiry rule, no public access, and an IAM user that can only upload. Region eu-west-2. Remote state not set up yet.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Nginx config for a Ubuntu 24.04 VPS serving our Laravel 11 app (PHP 8.3-FPM) at app.brightpath.test and a static marketing site at the root domain. HTTPS with Let's Encrypt certificates already issued by certbot, gzip, security headers, and 20 MB upload limit for the app only.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "dockerfile",
+      "docker compose",
+      "github actions",
+      "gitlab ci",
+      "bitbucket pipelines",
+      "ci pipeline",
+      "cd pipeline",
+      "terraform",
+      "opentofu",
+      "infrastructure as code",
+      "nginx config",
+      "caddyfile",
+      "kubernetes manifest",
+      "helm values",
+      "pre-commit",
+      "fly.io config"
+    ],
+    "demand_sources": [
+      {
+        "note": "Stack Overflow's 2025 Developer Survey: 71.1% of respondents use Docker and 17.8% use Terraform.",
+        "url": "https://survey.stackoverflow.co/2025/technology"
+      },
+      {
+        "note": "Postman's 2025 State of the API report: 75% of teams use CI/CD pipelines, and GitHub Actions leads at 54%.",
+        "url": "https://www.postman.com/state-of-api/"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists DevOps engineers at an average of $100 an hour, about £607 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/devops-engineer"
+      }
+    ]
+  },
+  {
+    "id": "readme-and-developer-docs",
+    "title": "README, setup guide or code docs",
+    "summary": "Docs that help the next developer: a README, setup guide, docstrings, contributing guide, decision record, env reference or wiring guide, from your code.",
+    "area": "engineering",
+    "deliverable": "Markdown docs or commented code built from your files: what the project does, how to install, configure and run it, the commands that exist, environment variables by name, folder layout, how to test and deploy, known problems, and open questions where your material is silent.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What docs do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "README for a project",
+          "Setup and install guide",
+          "Docstrings and comments for a file",
+          "Contributing guide",
+          "Architecture decision record",
+          "Environment variables reference",
+          "Handover notes for the next developer",
+          "Wiring and setup guide for a hardware project",
+          "WordPress plugin readme.txt"
+        ]
+      },
+      {
+        "id": "material",
+        "label": "Your code, scripts and config",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the package file, scripts, folder tree, main files and any old docs. Remove keys and passwords.",
+        "max": 80000
+      },
+      {
+        "id": "project",
+        "label": "What the project is and who reads the docs",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "docs",
+        "label": "How many documents?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A README plus a contributing guide counts as two.",
+        "max": 5
+      },
+      {
+        "id": "stack",
+        "label": "Language, framework and versions",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "known_issues",
+        "label": "Known problems and gotchas",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "style",
+        "label": "Style or template to follow",
+        "type": "text",
+        "required": false,
+        "help": "For example Google style docstrings, or your company README template.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_doc",
+        "text": "The docs are the piece chosen, for the reader named.",
+        "weight": 4,
+        "pass_rule": "The draft is the document type chosen in the brief; it is written for the reader the brief names; every section the brief asks for is present.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grounded_in_code",
+        "text": "Every command, setting and file named comes from the material.",
+        "weight": 5,
+        "pass_rule": "Each command, script name, environment variable, port, path and version in the docs appears in the material; anything needed but not shown is marked [to confirm] or listed under open questions; no feature is described that the material does not show; no secret value appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_steps",
+        "text": "A new developer can follow the steps in order.",
+        "weight": 4,
+        "pass_rule": "Prerequisites with versions come first; install and run steps are numbered, one action each, with the exact command in a code block and what success looks like; a troubleshooting part covers each known issue from the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fits_the_format",
+        "text": "The docs follow the usual format for the piece chosen.",
+        "weight": 4,
+        "pass_rule": "A README opens with one paragraph on what the project does and for whom; docstrings use the language's usual style (for example Google style for Python, JSDoc, PHPDoc or XML docs for C#) and leave the code itself unchanged; a decision record has context, options, decision and consequences; a WordPress readme.txt has the standard header fields and sections.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words and short sections.",
+        "weight": 3,
+        "pass_rule": "Sentences are short; each section has one job; jargon is explained once; headings work as a table of contents.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "docs",
+        "unit": "document",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a technical writer who documents small codebases. Using only the code, scripts and config I paste, write the document I chose for the reader I name. List prerequisites with versions first, then numbered install and run steps with exact commands in code blocks and what success looks like. Name environment variables without values. Describe only features and commands that appear in my material, mark anything else [to confirm], and end with open questions. Add troubleshooting for the known issues I list. For docstrings, use the usual style for my language and do not change the code itself. Keep sentences short and explain jargon once.",
+    "not_for": [
+      "API reference from an OpenAPI spec (see the API documentation job)",
+      "Customer help centre articles",
+      "Documenting code or systems you do not own",
+      "Real keys, passwords or private URLs in the docs",
+      "Release notes for customers (see the release notes job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "README for our open-source Laravel package that syncs Xero invoices to a local table, for other small agencies. composer.json, config file, service provider, the artisan command and our old one-paragraph README pasted. Readers are PHP developers. Mention it needs a Xero app you create yourself.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Google style docstrings and short comments for our 380-line Python 3.12 file that calculates delivery rounds for Hilltop Dairy (pasted). Do not change any code. The next developer starts in two weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Handover notes for the freelancer taking over our Node 20 booking app for Wren & Willow Spa. Folder tree, package.json, .env.example, Procfile and the deploy script pasted. Known issue: the reminder job double-sends if the server restarts at 8am.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Wiring and setup guide for our shop door counter: Raspberry Pi 4, a PIR sensor on GPIO 17, Python 3.11 script (pasted) that logs to a CSV and a cron entry. Readers are our shop managers, not developers. 2 documents: the guide and a README for the code.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "readme",
+      "documentation",
+      "setup guide",
+      "install guide",
+      "docstrings",
+      "code comments",
+      "contributing guide",
+      "adr",
+      "architecture decision record",
+      "env variables",
+      "handover notes",
+      "developer docs",
+      "readme.txt",
+      "wiring guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "A UK freelance technical writer's price page shows £420 a day, with short user guides costing about £2,000.",
+        "url": "https://www.straygoat.co.uk/technical-writing-prices"
+      },
+      {
+        "note": "Postman's 2025 State of the API report: 58% of respondents document APIs as part of their work, after testing and developing.",
+        "url": "https://www.postman.com/state-of-api/"
+      }
+    ]
+  },
+  {
+    "id": "upgrade-or-migration-plan",
+    "title": "Framework, language or platform upgrade plan",
+    "summary": "A step-by-step plan to upgrade a framework or language version, replace a dead library or move platforms, with code changes for your files.",
+    "area": "engineering",
+    "deliverable": "Your current and target versions, the breaking changes that touch your pasted code with before-and-after code, an ordered plan in small steps with a check after each, test and rollback steps, an effort size for each step, the top risks, and what to confirm in the official upgrade guide.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "move",
+        "label": "What are you moving?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Framework major version (Laravel, Django, Rails, React, Next.js, Vue)",
+          "Language version (PHP, Python, Node.js, Java or .NET)",
+          "Mobile framework (React Native or Flutter)",
+          "Replace an old or unmaintained library",
+          "Browser extension Manifest V2 to V3",
+          "Move to a new host or platform",
+          "Move from one database to another",
+          "CMS or plugin major version",
+          "Game engine version (Unity or Godot)"
+        ]
+      },
+      {
+        "id": "from_to",
+        "label": "From which version to which?",
+        "type": "text",
+        "required": true,
+        "help": "For example Laravel 8 to 12, PHP 7.4 to 8.3, Vue 2.7 to 3.5.",
+        "max": 200
+      },
+      {
+        "id": "deps",
+        "label": "Dependency file and versions",
+        "type": "longtext",
+        "required": true,
+        "help": "package.json, composer.json, requirements.txt, Gemfile, pubspec.yaml or similar.",
+        "max": 30000
+      },
+      {
+        "id": "code_samples",
+        "label": "Code that may break",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste files that use old features: routes, models, components, config.",
+        "max": 40000
+      },
+      {
+        "id": "codebase_size",
+        "label": "Size of the codebase and team",
+        "type": "text",
+        "required": true,
+        "help": "Rough files and lines, number of developers and tests today.",
+        "max": 400
+      },
+      {
+        "id": "deadline",
+        "label": "Deadline or reason",
+        "type": "text",
+        "required": false,
+        "help": "For example the host drops PHP 7.4 in March.",
+        "max": 300
+      },
+      {
+        "id": "hosting",
+        "label": "Hosting and environments",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "plan_for_this_move",
+        "text": "The plan covers the move and versions in the brief.",
+        "weight": 4,
+        "pass_rule": "The draft states the from and to versions from the brief; every dependency in the pasted file that needs a change is listed with its current version and target version or 'check'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tied_to_their_code",
+        "text": "Breaking changes are tied to the buyer's own files.",
+        "weight": 5,
+        "pass_rule": "Each breaking change either cites a file, line or dependency from the brief or is listed under 'check in your code' with a search term to find it; before-and-after code uses only code from the brief; dates and version facts not in the brief are marked 'confirm in the official upgrade guide'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ordered_safe_steps",
+        "text": "The upgrade goes in small steps, each with a check and a way back.",
+        "weight": 5,
+        "pass_rule": "Steps are numbered and each is small enough for one commit or deploy; each ends with a check (tests, build or smoke test); a branch, backup and rollback step comes before production; a jump of more than one major version goes through the versions in between or explains why not.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "effort_and_risk",
+        "text": "Effort and risk are honest.",
+        "weight": 4,
+        "pass_rule": "Each step has an effort size (small, medium, large); at least three risks are named with a way to reduce each; the plan never promises zero downtime or a fixed finish date.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_plan",
+        "text": "A manager can follow the plan.",
+        "weight": 3,
+        "pass_rule": "A summary of five lines or fewer opens the draft with the total effort range; technical terms are explained once; code changes sit under the step they belong to.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 89,
+      "max_usd": 449,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior developer who plans upgrades for small teams. Using my dependency file and code samples, plan the move from my current version to my target. List each dependency that must change with its current and target version. For each breaking change, point to the file or line in my code it affects, or tell me what to search for; show before-and-after code using my code only. Give a numbered plan in small steps, each with a check such as tests or a build, plus a branch, backup and rollback before production. Go through versions in between when I skip more than one major version. Size each step small, medium or large, name the top risks and how to reduce them, and mark facts I should confirm in the official upgrade guide.",
+    "not_for": [
+      "Doing the upgrade on your systems or repository",
+      "Upgrades of systems you do not own or have no licence for",
+      "Promises of zero downtime or fixed finish dates",
+      "Security or compliance sign-off after the move",
+      "A full rewrite in a new language (ask for a technical design document)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Laravel 8 to Laravel 12 for our booking app at Thornbury Tennis Club, PHP 7.4 to 8.3. composer.json, routes/web.php, two controllers and our auth setup (laravel/ui) pasted. About 120 PHP files, one developer, 30 feature tests. Our host drops PHP 7.4 at the end of March.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our Chrome extension for Little Ledger (pastes invoice data into our web app) still uses Manifest V2: manifest.json, background.js with webRequest blocking, and a popup pasted. Plan the move to Manifest V3 with the code changes.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Vue 2.7 to Vue 3.5 for our customer portal at Copperpot Energy. package.json pasted (Vuex 3, vue-router 3, Vuetify 2, 14 other packages) and three components that use filters and $listeners. 60 components, 2 developers, Cypress tests for the main flows.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "React Native 0.71 to 0.76 for the Muddy Paws grooming app (iOS and Android). package.json pasted with 28 packages including react-native-maps and a payment SDK. App store release planned in 8 weeks. Two developers, no automated tests.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "upgrade plan",
+      "framework upgrade",
+      "laravel upgrade",
+      "django upgrade",
+      "react upgrade",
+      "vue 3 migration",
+      "php upgrade",
+      "python upgrade",
+      "node upgrade",
+      "react native upgrade",
+      "manifest v3",
+      "unity upgrade",
+      "breaking changes",
+      "end of life",
+      "migration plan",
+      "dependency update"
+    ],
+    "demand_sources": [
+      {
+        "note": "PHP's official support table: each branch gets two years of active support and two years of security fixes, then reaches end of life, so sites must upgrade on a schedule.",
+        "url": "https://www.php.net/supported-versions.php"
+      },
+      {
+        "note": "Node.js release page: most past major versions are end of life, and it says production apps should only use Active LTS or Maintenance LTS releases.",
+        "url": "https://nodejs.org/en/about/previous-releases"
+      }
+    ]
+  },
+  {
+    "id": "regex-and-text-parser",
+    "title": "Regex, parser or validation rules",
+    "summary": "A regular expression, a small parser for logs or exports, or input validation rules, tested against your own examples.",
+    "area": "engineering",
+    "deliverable": "The pattern or parser in your flavour and language, a part-by-part explanation, a test table of strings that should and should not match with the result for each, a complete code snippet that uses it, and the edge cases it will miss.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Regular expression for a pattern",
+          "Parser for a log, export or text file",
+          "Validation rules for form or API input",
+          "Find-and-replace recipe for an editor or spreadsheet",
+          "Pull fields out of emails or PDF text",
+          "Explain or fix a regex I have"
+        ]
+      },
+      {
+        "id": "flavour",
+        "label": "Where will it run?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "JavaScript",
+          "Python",
+          "PHP (PCRE)",
+          "Java or .NET",
+          "Excel, Google Sheets or Airtable",
+          "grep, sed or awk",
+          "VS Code or another editor",
+          "Other"
+        ]
+      },
+      {
+        "id": "rule",
+        "label": "The rule in your words",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "should_match",
+        "label": "Examples that should match or be pulled out",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste real lines with personal data swapped for made-up values.",
+        "max": 10000
+      },
+      {
+        "id": "should_not",
+        "label": "Examples that should not match",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      },
+      {
+        "id": "existing",
+        "label": "Your current pattern or code",
+        "type": "longtext",
+        "required": false,
+        "max": 5000
+      },
+      {
+        "id": "patterns",
+        "label": "How many patterns or parsers?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 10
+      }
+    ],
+    "rubric": [
+      {
+        "id": "matches_the_rule",
+        "text": "The pattern or parser does what the rule says.",
+        "weight": 4,
+        "pass_rule": "The draft restates the rule from the brief; each part of the rule maps to a part of the pattern or parser; a fix to an existing pattern says what was wrong with it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tested_on_their_examples",
+        "text": "Every example from the brief is tested and the results are honest.",
+        "weight": 5,
+        "pass_rule": "A test table lists every example from the brief (should and should not match) plus at least five edge cases, each with the expected result; results are consistent with the pattern as written; any example the pattern gets wrong is flagged, not hidden.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "right_flavour",
+        "text": "The pattern works where it will run.",
+        "weight": 5,
+        "pass_rule": "The draft names the flavour; it uses only syntax that flavour supports and escapes characters as that language needs inside a string; spreadsheet answers use real function names for the named tool; the code snippet is complete with imports and a run command.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "explained",
+        "text": "Each part of the pattern is explained.",
+        "weight": 3,
+        "pass_rule": "A table or list explains each token or group in plain words; a short note says how to change the pattern if the rule changes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_and_honest",
+        "text": "Limits and risks are stated.",
+        "weight": 4,
+        "pass_rule": "Known misses are listed; nested repeats that can hang on long input are avoided or flagged; validation advice says a pattern alone does not make input safe for SQL or HTML and names the safe method (parameterised queries, escaping).",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "patterns",
+        "unit": "pattern",
+        "included": 1,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a regex expert. Write a regular expression or small parser for the rule below, in the flavour I name. Explain each part in plain words. Test it in a table against every example I gave, both should and should not match, plus at least five edge cases, with the expected result for each, and flag any example it gets wrong. Use only syntax my flavour supports and escape it correctly for my language. Give a complete code snippet that uses it, with imports. Avoid patterns that can hang on long input. List what it will miss, and remind me that a pattern alone does not make input safe for SQL or HTML.",
+    "not_for": [
+      "Scraping websites or harvesting emails or phone numbers",
+      "Parsing data you have no right to use",
+      "Getting round spam filters or content checks",
+      "Full clean-up of a contact list (see the clean-up and import check job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Regex in JavaScript to check UK postcodes in our checkout for Hedgerow Hampers. Must accept upper or lower case, with or without the space (SW1A 1AA, sw1a1aa, M1 1AE, B33 8TH) and reject 'ABC 123' and 'SW1A 1A'. We will also format it with a space before saving.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Python 3.12 parser for our Nginx access logs (12 sample lines pasted). Pull out IP, time, method, path, status and response time, skip health checks to /ping, and write a CSV. Some lines have a '-' for response time.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Google Sheets formula with REGEXEXTRACT to pull the order number from our supplier email subjects in column B, like 'Order #A-10442 shipped' or 'RE: order A10442 delay'. Output should always be A-10442 style.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Explain and fix this regex from our old PHP 8.2 form (pasted). It should allow names with apostrophes and hyphens (O'Neill, Anne-Marie, Zoë) but blocks Zoë and lets '----' through.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "grep and sed recipe to find every hard-coded http:// link in our 400 HTML files and change them to https:// except links to localhost. Ubuntu 22.04, GNU sed. Show me a dry run first.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "regex",
+      "regular expression",
+      "regexextract",
+      "pattern match",
+      "validation",
+      "parse log",
+      "text parser",
+      "find and replace",
+      "sed",
+      "grep",
+      "awk",
+      "extract data from text",
+      "postcode regex",
+      "email regex"
+    ],
+    "demand_sources": [
+      {
+        "note": "Microsoft added REGEXTEST, REGEXEXTRACT and REGEXREPLACE to Excel, describing regex as commonly used for string searching and text parsing.",
+        "url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/new-regular-expression-regex-functions-in-excel/4226334"
+      }
+    ]
+  },
+  {
+    "id": "security-hardening-code",
+    "title": "Security hardening code or config",
+    "summary": "Defensive code and settings for an app you own: security headers, input checks, rate limits, safe uploads, sessions, secrets and dependency updates.",
+    "area": "engineering",
+    "deliverable": "The code or config in full for your stack, what each change protects against in plain words, tests that show each protection works against your local or staging app, a rollout that starts in report-only or soft mode where possible, and a list of what this does not cover.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What should we harden?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Security headers and Content Security Policy",
+          "Input validation and output escaping",
+          "Rate limits and login lockout",
+          "Safe file uploads",
+          "Password hashing, sessions and cookies",
+          "Move secrets out of code",
+          "Dependency update plan for known-vulnerable packages",
+          "Logging and alerts for suspicious activity"
+        ]
+      },
+      {
+        "id": "stack",
+        "label": "Language, framework, versions and hosting",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "code",
+        "label": "The code or config to harden",
+        "type": "longtext",
+        "required": true,
+        "help": "Replace real keys and passwords with XXXX.",
+        "max": 40000
+      },
+      {
+        "id": "context",
+        "label": "What the app does and who uses it",
+        "type": "longtext",
+        "required": true,
+        "help": "Logged-in users, admins, public forms, file types and traffic.",
+        "max": 3000
+      },
+      {
+        "id": "findings",
+        "label": "Scanner or review findings you have",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste npm audit, Dependabot, pip-audit or review notes.",
+        "max": 15000
+      },
+      {
+        "id": "must_work",
+        "label": "What must keep working",
+        "type": "longtext",
+        "required": false,
+        "help": "Third-party scripts, embeds, browsers, single sign-on.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "hardens_as_asked",
+        "text": "The changes cover the piece chosen for this app.",
+        "weight": 4,
+        "pass_rule": "Each change belongs to the piece chosen and touches code or config from the brief; each 'must keep working' item is checked by name; each finding pasted in the brief is fixed or explained.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grounded_findings",
+        "text": "Every change points to the buyer's code or findings.",
+        "weight": 5,
+        "pass_rule": "Each change cites a line, setting or dependency from the pasted material; dependency fixes use package names and versions from the brief and say to confirm the patched version in the advisory; no weakness is claimed that the material does not show.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_tested",
+        "text": "Code is complete and each protection can be tested.",
+        "weight": 5,
+        "pass_rule": "Full code or config is given for each change with the language and versions; each change has a test (for example a request that should now be rejected, or a header check) with the expected result, run against local or staging only.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "defensive_and_safe_rollout",
+        "text": "Defensive only, and safe to roll out.",
+        "weight": 4,
+        "pass_rule": "No exploit code, attack payload lists or steps to attack other systems; changes that can block real users (CSP, rate limits, lockout) start in report-only or a soft mode with a way to switch off; passwords are hashed with a named slow algorithm such as Argon2id or bcrypt.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_limits",
+        "text": "Plain words and honest limits.",
+        "weight": 3,
+        "pass_rule": "Each change says in one or two sentences what it protects against; a 'not covered' list is present; the draft never says the app is secure, compliant or certified.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an application security engineer who writes defensive code. For the app and code below, write the hardening changes I chose. Point each change at a line, setting or dependency in my material and do not claim weaknesses you cannot see. Give the full code or config for my stack and versions. For each change, say in plain words what it protects against and give a test against my local or staging app with the expected result. Roll out risky changes such as CSP, rate limits and lockouts in report-only or soft mode first, with a way to switch them off. Hash passwords with Argon2id or bcrypt. Do not write exploit code or attack steps. End with what this does not cover, and never say the app is now secure.",
+    "not_for": [
+      "Penetration testing, scanning or attacking any system",
+      "Exploit code or attack tools",
+      "Systems you do not own or have no permission to change",
+      "Security certification, compliance sign-off or a promise the app is secure",
+      "Real secrets, keys or passwords in the brief",
+      "A review without code changes (see the code review job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Security headers and a Content Security Policy for our Express 5 app (Node 22) for Bright Acre Lettings. We embed Google Maps, Stripe.js and a Hotjar script. Current server.js pasted. Start in report-only so we do not break the map.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Rate limiting and login lockout for our Flask 3 app (Python 3.12) for a small members' club, 900 members. Login route pasted. Lock for 15 minutes after 5 failed tries per account and limit per IP, without letting someone lock out a member on purpose forever. We run on one server, Redis available.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Safe file uploads in our Laravel 11 app: tenants upload ID scans and payslips (PDF, JPG, PNG, max 10 MB). Current controller pasted saves to public/uploads with the original name. Move to private storage, check type and size, rename files, and serve them only to the right landlord.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "npm audit output pasted for our Next.js 14 site (34 findings, 3 high). Plan which packages to update in what order, with the commands and what to test after each, without breaking the build. package.json pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "security hardening",
+      "content security policy",
+      "csp",
+      "security headers",
+      "helmet",
+      "input validation",
+      "xss protection",
+      "csrf",
+      "rate limiting",
+      "login lockout",
+      "file upload security",
+      "password hashing",
+      "argon2",
+      "secrets management",
+      "npm audit",
+      "dependabot"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Cyber Security Breaches Survey 2025/2026: 46% of small businesses identified a breach or attack in the last 12 months.",
+        "url": "https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026"
+      },
+      {
+        "note": "OWASP calls its Top 10 (2025 edition) the reference standard for the most critical web application security risks and a standard awareness document for developers.",
+        "url": "https://owasp.org/www-project-top-ten/"
+      }
+    ]
+  },
+  {
+    "id": "accessible-code-fixes",
+    "title": "Accessibility fixes in your code",
+    "summary": "Your component, page or app screen rewritten so keyboard, screen reader and low-vision users can use it, with each change mapped to WCAG.",
+    "area": "engineering",
+    "deliverable": "The fixed code in full, a table of each change with the WCAG 2.2 success criterion it meets, a manual test script for keyboard and screen reader checks, an automated check you can add (such as axe), and anything that needs a design or content decision.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What should we fix?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "A component or page you paste",
+          "Forms with labels and error messages",
+          "Keyboard and focus (menus, modals, tabs)",
+          "Screen reader names, roles and landmarks",
+          "Colour contrast fixes in CSS",
+          "Accessible data table or chart",
+          "Mobile app screen (React Native or Flutter)",
+          "Fix list from an audit turned into code"
+        ]
+      },
+      {
+        "id": "code",
+        "label": "The code to fix",
+        "type": "longtext",
+        "required": true,
+        "help": "HTML, CSS, JSX, Vue, Liquid or app screen code.",
+        "max": 40000
+      },
+      {
+        "id": "stack",
+        "label": "Framework and versions",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "components",
+        "label": "How many components or pages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 8
+      },
+      {
+        "id": "problems",
+        "label": "Problems you know about",
+        "type": "longtext",
+        "required": false,
+        "help": "Audit findings, user complaints or tool results.",
+        "max": 8000
+      },
+      {
+        "id": "standard",
+        "label": "Standard to meet",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "WCAG 2.2 AA",
+          "WCAG 2.1 AA",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "brand",
+        "label": "Colours and design rules that must stay",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fixes_what_was_asked",
+        "text": "Each known problem and each issue found in the pasted code is fixed.",
+        "weight": 4,
+        "pass_rule": "Each problem in the brief and each issue the draft lists has a fix in the code; the piece chosen in the brief is covered; anything left needs a design or content decision and is listed as such.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_issues_mapped",
+        "text": "Each fix points to real code and a real WCAG criterion.",
+        "weight": 5,
+        "pass_rule": "Each change row names the element from the pasted code and a WCAG success criterion by number and name (for example 1.4.3 Contrast (Minimum)); contrast fixes give old and new colour values with the ratio; no issue is listed that is not in the pasted code.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_code",
+        "text": "The fixed code is complete and keeps working.",
+        "weight": 5,
+        "pass_rule": "Fixed files are shown in full with no gaps; existing behaviour, props and class names stay unless the change table says why; native HTML elements are used before ARIA; no overlay widget is suggested.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "testable",
+        "text": "The buyer can check each fix.",
+        "weight": 4,
+        "pass_rule": "A manual test script gives keyboard steps (Tab, Shift+Tab, Enter, Space, Escape and arrow keys where used) and screen reader checks with the expected result; at least one automated check is given with the tool and version.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_honest",
+        "text": "Plain words, and no compliance claims.",
+        "weight": 3,
+        "pass_rule": "Each change is explained in one plain sentence; jargon such as focus trap is explained once; the draft never says the site is compliant or certified.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "components",
+        "unit": "component",
+        "included": 1,
+        "per_unit_usd": 45
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an accessibility engineer. Fix the code below so keyboard, screen reader and low-vision users can use it. Give the fixed code in full. Prefer native HTML elements to ARIA, and keep existing props, classes and behaviour unless you say why. Add a table with each change, the element it touches and the WCAG 2.2 success criterion it meets by number and name; for contrast, give old and new colours and the ratio. Write a manual test script with keyboard steps and screen reader checks and the expected result, plus one automated check I can add, such as axe with its version. List anything that needs a design or content decision. Do not suggest overlay widgets and do not claim the site is compliant.",
+    "not_for": [
+      "Accessibility certification, VPAT sign-off or legal compliance claims",
+      "Testing your live site with assistive technology for you",
+      "Overlay widgets that claim to fix everything",
+      "An audit report without code (see the website accessibility audit job)",
+      "PDF or document fixes"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our React 19 modal for booking a table at Saffron Yard (pasted, 140 lines) cannot be closed with Escape, focus goes behind it, and screen readers do not announce the title. Fix it without adding a new library if possible.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Contact form on our Shopify Dawn 15 theme (Liquid and CSS pasted) for Kelp & Co. Placeholders are used instead of labels, errors show only in red, and the submit button is grey #9AA0A6 on white. Brand colours #0B6E4F and #FFFFFF must stay.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Vue 3 dropdown navigation menu (pasted) for a dental group's site opens on hover only. Make it work with keyboard and screen readers, keeping the same look. WCAG 2.2 AA.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our audit from an agency lists 9 issues on the pricing page (pasted) for a SaaS called ShiftNest. Turn the fix list into code: the comparison table, toggle switch, tooltips and the FAQ accordion. HTML and CSS pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "accessibility fixes",
+      "wcag",
+      "wcag 2.2",
+      "aria",
+      "keyboard navigation",
+      "focus trap",
+      "screen reader",
+      "colour contrast",
+      "accessible forms",
+      "alt text",
+      "axe",
+      "a11y",
+      "accessible modal",
+      "accessible menu"
+    ],
+    "demand_sources": [
+      {
+        "note": "WebAIM Million 2026: 95.9% of the top one million home pages had detectable WCAG 2 failures, led by low-contrast text, missing alt text and missing form labels.",
+        "url": "https://webaim.org/projects/million/"
+      }
+    ]
+  },
+  {
+    "id": "ai-feature-code",
+    "title": "Code for an AI feature that calls a model",
+    "summary": "Working code that calls an AI model from your app, with the prompt: extraction, chat, answers from your documents, tool calls or batch jobs.",
+    "area": "engineering",
+    "deliverable": "Complete code with the prompt in its own file or constant, the model name as a setting, output checked against a schema, timeouts, retries and a spending cap, logging without personal data, a small test set with expected results and a script to run it, and run steps.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What should the code do?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Call a model from my app for one task",
+          "Pull structured data out of text or documents",
+          "Chat assistant with my rules",
+          "Answers from my documents (retrieval)",
+          "Tool or function calling",
+          "Batch job over a spreadsheet or CSV",
+          "Add guardrails, logging and cost limits to my AI code",
+          "Evaluation script for my prompts"
+        ]
+      },
+      {
+        "id": "task",
+        "label": "What should the AI do?",
+        "type": "longtext",
+        "required": true,
+        "help": "Inputs, the output you want, who sees it and what it must never do.",
+        "max": 4000
+      },
+      {
+        "id": "provider",
+        "label": "Model provider, SDK and model",
+        "type": "text",
+        "required": true,
+        "help": "For example the OpenAI Python SDK, the Anthropic TypeScript SDK or a local model through Ollama, and the model you use. Say if you are not sure.",
+        "max": 300
+      },
+      {
+        "id": "stack",
+        "label": "Your language, framework and hosting",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "examples",
+        "label": "Sample inputs and good outputs",
+        "type": "longtext",
+        "required": false,
+        "help": "5 to 20 real or made-up examples. Remove personal data.",
+        "max": 20000
+      },
+      {
+        "id": "existing_code",
+        "label": "Code it must fit with",
+        "type": "longtext",
+        "required": false,
+        "help": "Replace keys with XXXX.",
+        "max": 30000
+      },
+      {
+        "id": "limits",
+        "label": "Cost, speed and privacy limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Budget a month, longest wait you accept, data that must not leave your system.",
+        "max": 2000
+      },
+      {
+        "id": "volume",
+        "label": "How many calls a day?",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "does_the_task",
+        "text": "The code does the AI task in the brief.",
+        "weight": 4,
+        "pass_rule": "The prompt and code cover each input, output and 'must never' rule in the brief; the output format matches what the brief asks for; the piece chosen is delivered.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_sdk_calls",
+        "text": "Only real SDK calls, the model is a setting, and keys stay out of code.",
+        "weight": 5,
+        "pass_rule": "The SDK and its version appear in an install command; calls use that SDK or plain HTTP to an endpoint the brief names, and any method the draft is unsure of is listed in a 'confirm in the SDK docs' table; the model name is read from a setting holding the buyer's model or a placeholder; API keys come from environment variables.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_runnable",
+        "text": "Code and tests are complete and runnable.",
+        "weight": 5,
+        "pass_rule": "Every file is shown in full with run steps; a test set of at least five cases (from the brief's examples where given) has expected results and a script that runs them and reports pass or fail; no '...' or placeholder logic.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "safe_ai_use",
+        "text": "The feature fails safely and protects users.",
+        "weight": 4,
+        "pass_rule": "Model output is checked against a schema or rules before use, with a fallback when it fails; timeouts, a retry limit and a spending or call cap are set; user text is kept apart from instructions; personal data is not logged; nothing that sends, deletes or pays runs without a person confirming.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Plain notes on cost, limits and how to change the prompt.",
+        "weight": 3,
+        "pass_rule": "A short summary opens the draft; the cost note uses the brief's volume or a formula with placeholders, not invented prices; how to edit the prompt and rerun the tests is explained in numbered steps.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 499,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an engineer who builds AI features into small business apps. Write complete code for the AI task below using the SDK I name. Keep the prompt in its own file or constant and the model name in a setting with my model or a placeholder. Read the API key from an environment variable. Check the model's output against a schema before using it, with a fallback. Set timeouts, a retry limit and a cap on calls or spending. Keep user text apart from your instructions and do not log personal data. Never let the model send, delete or pay without a person confirming. Use only SDK methods you are sure of and list any I should confirm in the docs. Add at least five test cases with expected results and a script that runs them, plus run steps.",
+    "not_for": [
+      "Training or fine-tuning models",
+      "Getting round a model provider's safety rules or terms",
+      "Legal, medical or financial advice built into the answers",
+      "Real API keys or personal data in the brief",
+      "Bots that pretend to be a person",
+      "Prompt tuning without code (see the AI prompt or chatbot test and tune job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Python 3.12 script for Oakridge Plumbing that reads job notes from our CSV export (sample pasted, 8 rows) and uses the OpenAI Python SDK to pull out job type, parts used, hours and whether a follow-up visit is needed, as JSON. Write the results to a new CSV. Flag rows where the model is unsure. About 300 rows a week.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A FastAPI endpoint that answers staff questions from our 40-page employee handbook (Markdown files) for a small hotel group, using the Anthropic Python SDK and simple retrieval with no vector database (we have under 100 pages). It must say 'I could not find that in the handbook' instead of guessing, and cite the section.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Node 22 + TypeScript. Add guardrails to our support reply drafter (code pasted): it calls a model with the customer's email and our policy text. We need output checks, a monthly spend cap, prompt-injection protection for customer text, and logging without email addresses.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Evaluation script for our product description prompt for Marigold Tea Co. 20 examples of input notes and approved descriptions pasted. Score new outputs for length (80 to 120 words), banned claims (no health claims) and tone, and print a pass rate. Python 3.12, local model through Ollama.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ai feature",
+      "llm integration",
+      "openai api",
+      "anthropic api",
+      "claude api",
+      "gpt api",
+      "structured output",
+      "json extraction",
+      "rag",
+      "retrieval",
+      "chatbot code",
+      "function calling",
+      "tool calling",
+      "ai guardrails",
+      "prompt injection",
+      "llm evaluation"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists AI engineers at an average of $70 an hour, about £427 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ai-engineer"
+      },
+      {
+        "note": "Stack Overflow's 2025 Developer Survey (49,000+ responses): 84% of developers use or plan to use AI tools in their work.",
+        "url": "https://survey.stackoverflow.co/2025/"
+      }
+    ]
+  }
+]

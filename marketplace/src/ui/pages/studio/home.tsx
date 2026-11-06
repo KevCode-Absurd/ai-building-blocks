@@ -5,6 +5,7 @@ import { api, when } from "../../lib/api.ts";
 import { navigate } from "../../lib/router.tsx";
 import type { AgentSummary } from "../../../modules/studio/service.ts";
 import { GUIDE, STATUS } from "./guide.ts";
+import { UploadPack } from "./upload.tsx";
 
 interface ListResponse { agents: AgentSummary[]; jobTypes: { id: string; title: string; summary: string; taken: boolean }[] }
 
@@ -77,6 +78,7 @@ export function StudioHome() {
               ? <div class="grid">{data.agents.map(a => <AgentCard a={a} />)}</div>
               : <Empty title="No agents yet">Start with the job you know best. The studio walks you through 6 steps.</Empty>}
             <NewAgent jobTypes={data.jobTypes} />
+            <UploadPack jobTypes={data.jobTypes} onDone={state.reload} />
             <Card title="How it works" class="studio-how">
               <ol class="studio-how-list">
                 {Object.values(GUIDE).map(g => <li><strong>{g.title}.</strong> {g.todo} <span class="muted">{g.time}</span></li>)}

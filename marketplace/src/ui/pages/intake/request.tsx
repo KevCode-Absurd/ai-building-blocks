@@ -1,11 +1,20 @@
-// /requests/:id: answer the questions, see the fixed price and the checklist, then order.
+// /requests/:id: answer the questions, check the plan (what the agent delivers, by when, and the checklist), then
+// start the job. Hiring is free, so there is no price anywhere on this page.
 import { useEffect, useState } from "preact/hooks";
 import { Badge, Button, Card, Notice, Page, Spinner, useLoad } from "../../components.tsx";
-import { api, money, when } from "../../lib/api.ts";
+import { api, ApiError, when } from "../../lib/api.ts";
 import { navigate } from "../../lib/router.tsx";
-import { JobTypeList, QuestionInput, showValue, turnaround, type AnswerValue, type JobSummary, type RequestView } from "./parts.tsx";
+import { DailyLimitNotice, JobTypeList, QuestionInput, showValue, turnaround, type AnswerValue, type JobSummary, type RequestView } from "./parts.tsx";
 
 const OPEN = new Set(["draft", "quoted"]);
+
+/** One line at the top of the page: where the visitor is and what happens here. */
+function context(v: RequestView): string {
+  const who = v.persona ? `This is your request to ${v.persona.name}, ${v.persona.title}.` : "This is your request.";
+  if (v.status === "quoted") return `${who} Check the plan, then start the job.`;
+  if (v.open_request) return `${who} Pick the job that fits best, or wait for our team to reply.`;
+  return `${who} Answer the questions, check the plan, then start the job.`;
+}
 
 export function RequestPage(props: { params: Record<string, string> }) {
   const id = props.params.id;
@@ -13,49 +22,66 @@ export function RequestPage(props: { params: Record<string, string> }) {
   const [view, setView] = useState<RequestView | null>(null);
   useEffect(() => { setView(loaded.data); }, [loaded.data]);
   const v = view ?? loaded.data;
-  const ordered = !!v && !OPEN.has(v.status);
-  useEffect(() => { if (v && ordered) navigate(v.job_url, { replace: true }); }, [ordered]);
+  const started = !!v && !OPEN.has(v.status) && v.status !== "cancelled";
+  useEffect(() => { if (v && started) navigate(v.job_url, { replace: true }); }, [started]);
 
   if (loaded.error) {
-    return <Page title="Your request"><Notice tone="bad">{loaded.error}</Notice><Button href="/new">Start a new request</Button></Page>;
+    return (
+      <Page title="Request not found" intro="We could not open this request. It may belong to another account, or the link may be wrong.">
+        <Notice tone="bad">{loaded.error}</Notice>
+        <div class="row"><Button href="/new">Start a new request</Button><Button kind="secondary" href="/jobs">See my jobs</Button></div>
+      </Page>
+    );
   }
   if (!v) return <Page title="Your request"><Spinner /></Page>;
-  if (ordered) return <Page title={v.title || "Your job"}><Notice tone="good">This job is ordered.</Notice><Button href={v.job_url}>Open the job</Button></Page>;
+  if (v.status === "cancelled") {
+    return (
+      <Page title={v.title || "Your request"} intro="This request is closed. Nothing more will happen with it.">
+        <div class="row"><Button href="/new">Start a new request</Button><Button kind="secondary" href="/agents">Browse agents</Button></div>
+      </Page>
+    );
+  }
+  if (started) return <Page title={v.title || "Your job"} intro="This job has started. Follow it on the job page."><Button href={v.job_url}>Open the job</Button></Page>;
   return <RequestBody key={v.id} view={v} onView={setView} />;
 }
 
-type Busy = null | "answer" | "quote" | "rush" | "goals" | "order" | "job";
+type Busy = null | "answer" | "plan" | "faster" | "goals" | "start" | "job";
 
 function RequestBody(props: { view: RequestView; onView: (v: RequestView) => void }) {
   const v = props.view;
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
-  const [goals, setGoals] = useState(v.quote?.goals ?? v.goals ?? "");
+  const [goals, setGoals] = useState(v.plan?.goals ?? v.goals ?? "");
   const [busy, setBusy] = useState<Busy>(null);
   const [error, setError] = useState<string | null>(null);
+  const [limited, setLimited] = useState<string | null>(null);
   const [pickJob, setPickJob] = useState(false);
 
   async function run(kind: Busy, work: () => Promise<void>) {
-    setBusy(kind); setError(null);
-    try { await work(); } catch (err) { setError(err instanceof Error ? err.message : "Something went wrong. Try again."); } finally { setBusy(null); }
+    setBusy(kind); setError(null); setLimited(null);
+    try { await work(); }
+    catch (err) {
+      if (err instanceof ApiError && err.code === "daily_limit") setLimited(err.message);
+      else setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
+    } finally { setBusy(null); }
   }
 
   const post = (path: string, body: unknown) => api<{ request: RequestView }>(`/api/requests/${v.id}/${path}`, { body }).then(r => r.request);
-  const quote = (rush: boolean, g: string) => post("quote", { rush, goals: g }).then(props.onView);
+  const plan = (faster: boolean, g: string) => post("plan", { faster, goals: g }).then(props.onView);
 
   function submitAnswers(e: Event) {
     e.preventDefault();
     const errs: Record<string, string> = {};
     for (const q of v.questions) {
       const a = answers[q.field_id];
-      if (a === undefined || (Array.isArray(a) ? a.length === 0 : !a.trim())) errs[q.field_id] = "Answer this to get your price.";
+      if (a === undefined || (Array.isArray(a) ? a.length === 0 : !a.trim())) errs[q.field_id] = "Answer this to see the plan.";
     }
     setFieldErrors(errs);
     if (Object.keys(errs).length) return;
     void run("answer", async () => {
       const next = await post("answers", { answers });
       props.onView(next);
-      if (next.ready) await quote(false, goals);
+      if (next.ready) await plan(false, goals);
     });
   }
 
@@ -64,20 +90,20 @@ function RequestBody(props: { view: RequestView; onView: (v: RequestView) => voi
     setAnswers({}); setFieldErrors({}); setPickJob(false);
   });
 
-  const order = () => run("order", async () => {
-    const res = await api<{ next: string }>(`/api/requests/${v.id}/confirm`, { body: {} });
+  const start = () => run("start", async () => {
+    const res = await api<{ next: string }>(`/api/requests/${v.id}/start`, { body: {} });
     navigate(res.next);
   });
 
   return (
-    <Page title={v.job_type?.title ?? "Your request"} intro={v.persona ? `With ${v.persona.name}, ${v.persona.title}` : undefined}>
+    <Page title={v.job_type?.title ?? "Your request"} intro={context(v)}>
       <div class="intake-narrow stack">
         {error && <Notice tone="bad">{error}</Notice>}
 
         {v.open_request ? (
           <Notice tone="info" title="A person will look at this">
             <p>We could not match your request to one of our jobs. Our team will read it and get back to you.</p>
-            <p>If one of these fits, pick it to get a price now.</p>
+            <p>If one of these fits, pick it to see the plan now.</p>
           </Notice>
         ) : (
           <p class="intake-jobline">
@@ -97,24 +123,35 @@ function RequestBody(props: { view: RequestView; onView: (v: RequestView) => voi
                 <QuestionInput q={q} value={answers[q.field_id]} error={fieldErrors[q.field_id]}
                   onValue={val => { setAnswers({ ...answers, [q.field_id]: val }); if (fieldErrors[q.field_id]) setFieldErrors({ ...fieldErrors, [q.field_id]: "" }); }} />
               ))}
-              <Button type="submit" busy={busy === "answer"}>Get my quote</Button>
+              <Button type="submit" busy={busy === "answer"}>See the plan</Button>
             </form>
           </Card>
         )}
 
-        {v.status === "draft" && v.ready && (
-          <Card title="Ready for a price">
-            <p>We have what we need. Your price is fixed before any work starts.</p>
-            <Button busy={busy === "quote"} onClick={() => run("quote", () => quote(false, goals))}>Get my quote</Button>
+        {v.status === "draft" && v.ready && (v.expired_plan ? (
+          <Card title="Your plan timed out">
+            <p>
+              You did not start this job within 7 days, so we closed the plan{v.expired_plan.expired_at ? ` on ${when(v.expired_plan.expired_at)}` : ""}.
+              We kept your answers and your goals.
+            </p>
+            <p>Check the plan again, then start the job.</p>
+            {/* No faster value: the new plan keeps the faster-delivery choice from the old one. */}
+            <Button busy={busy === "plan"} onClick={() => run("plan", () => post("plan", { goals }).then(props.onView))}>Check the plan again</Button>
           </Card>
-        )}
+        ) : (
+          <Card title="Ready for the plan">
+            <p>We have what we need. See what the agent will deliver and when, then start the job.</p>
+            <Button busy={busy === "plan"} onClick={() => run("plan", () => plan(false, goals))}>See the plan</Button>
+          </Card>
+        ))}
 
-        {v.status === "quoted" && v.quote && (
-          <QuoteCard view={v} goals={goals} onGoals={setGoals} busy={busy}
-            onRush={rush => run("rush", () => quote(rush, v.quote!.goals))}
-            onRequote={() => run("goals", () => quote(v.quote!.rush, goals))}
-            onOrder={order} />
+        {v.status === "quoted" && v.plan && (
+          <PlanCard view={v} goals={goals} onGoals={setGoals} busy={busy} limited={limited}
+            onFaster={faster => run("faster", () => plan(faster, v.plan!.goals))}
+            onReplan={() => run("goals", () => plan(v.plan!.faster, goals))}
+            onStart={start} />
         )}
+        {v.status !== "quoted" && limited && <DailyLimitNotice message={limited} />}
       </div>
     </Page>
   );
@@ -164,44 +201,39 @@ function YourWords(props: { view: RequestView }) {
   );
 }
 
-function QuoteCard(props: {
-  view: RequestView; goals: string; busy: Busy; onGoals: (g: string) => void;
-  onRush: (rush: boolean) => void; onRequote: () => void; onOrder: () => void;
+/** The plan: what you get, when it is ready, faster delivery, the checklist, your goals, and one button to start. */
+function PlanCard(props: {
+  view: RequestView; goals: string; busy: Busy; limited: string | null; onGoals: (g: string) => void;
+  onFaster: (faster: boolean) => void; onReplan: () => void; onStart: () => void;
 }) {
   const v = props.view;
-  const q = v.quote!;
-  const r = q.rush_option;
-  const goalsChanged = props.goals.trim() !== q.goals.trim();
+  const p = v.plan!;
+  const other = p.faster_option;
+  const goalsChanged = props.goals.trim() !== p.goals.trim();
+  const who = v.persona?.name;
   return (
-    <Card class="intake-quote-card">
-      <div class="intake-price">
-        <span class="intake-price-amount">{money(q.price_cents)}</span>
-        <span class="intake-price-note">Fixed price. Free during the beta, so nothing is charged.</span>
-      </div>
-      <p class="intake-ready">Ready in <strong>{turnaround(q.turnaround_hours)}</strong> after you order.</p>
+    <Card class="intake-plan-card" title={who ? `${who}'s plan` : "The plan"}>
+      <dl class="intake-plan">
+        {p.deliverable && <div><dt>What you get</dt><dd>{p.deliverable}</dd></div>}
+        <div><dt>When it is ready</dt><dd>In about <strong>{turnaround(p.turnaround_hours)}</strong> after you start{p.faster ? ", with faster delivery" : ""}.</dd></div>
+        <div><dt>Changes</dt><dd>After delivery you can ask for changes up to {v.revisions_allowed} times.</dd></div>
+      </dl>
 
-      {r && (
+      {other && (
         <label class="intake-rush">
-          <input type="checkbox" checked={q.rush} disabled={props.busy !== null} onChange={() => props.onRush(!q.rush)} />
+          <input type="checkbox" checked={p.faster} disabled={props.busy !== null} onChange={() => props.onFaster(!p.faster)} />
           <span>
-            {q.rush
-              ? <>Rush is on. Turn it off to wait {turnaround(r.turnaround_hours)} and pay {money(r.price_cents)}.</>
-              : <>Rush: ready in {turnaround(r.turnaround_hours)} for {money(r.price_cents)}.</>}
+            {p.faster
+              ? <>Faster delivery is on. Turn it off to take the usual {turnaround(other.turnaround_hours)}.</>
+              : <>Faster delivery: ready in about {turnaround(other.turnaround_hours)} instead of {turnaround(p.turnaround_hours)}.</>}
           </span>
         </label>
       )}
 
-      <details class="intake-breakdown">
-        <summary>How we worked out the price</summary>
-        <ul>
-          {q.breakdown.map(b => <li><span>{b.label}</span><span>{b.cents < 0 ? `-${money(-b.cents)}` : money(b.cents)}</span></li>)}
-        </ul>
-      </details>
-
       <h3 class="intake-sub">What good looks like</h3>
       <p class="muted small">Every draft is checked against this list before you see it.</p>
       <ul class="intake-checklist">
-        {q.checklist.map(c => <li>{c.text} {c.source === "buyer" && <Badge tone="info">Your goal</Badge>}</li>)}
+        {p.checklist.map(c => <li>{c.text} {c.source === "buyer" && <Badge tone="info">Your goal</Badge>}</li>)}
       </ul>
 
       <label class="field" for="intake-goals">
@@ -211,18 +243,20 @@ function QuoteCard(props: {
           onInput={e => props.onGoals((e.target as HTMLTextAreaElement).value)} />
         <span class="field-help">We add up to three of your goals to the list above.</span>
       </label>
-      {goalsChanged && <Button kind="secondary" busy={props.busy === "goals"} disabled={props.busy !== null} onClick={props.onRequote}>Update my quote</Button>}
+      {goalsChanged && <Button kind="secondary" busy={props.busy === "goals"} disabled={props.busy !== null} onClick={props.onReplan}>Add my goals to the plan</Button>}
 
-      {q.expired ? (
-        <Notice tone="warn" title="This quote has expired">
-          <p>Get a new quote to see the current price.</p>
-          <Button busy={props.busy === "goals"} onClick={props.onRequote}>Get a new quote</Button>
+      {props.limited && <DailyLimitNotice message={props.limited} />}
+
+      {p.expired ? (
+        <Notice tone="warn" title="This plan timed out">
+          <p>You did not start it within 7 days. Check the plan again, then start the job.</p>
+          <Button busy={props.busy === "goals"} onClick={props.onReplan}>Check the plan again</Button>
         </Notice>
       ) : (
         <div class="intake-order">
-          <Button busy={props.busy === "order"} disabled={props.busy !== null || goalsChanged} onClick={props.onOrder}>Order now, free during the beta</Button>
-          {goalsChanged && <span class="small muted">Update your quote first, so the list includes your goals.</span>}
-          <span class="small muted">This price holds until {when(q.expires_at)}. After delivery you can ask for changes up to {v.revisions_allowed} times.</span>
+          <Button busy={props.busy === "start"} disabled={props.busy !== null || goalsChanged} onClick={props.onStart}>{who ? `Start with ${who}` : "Start the job"}</Button>
+          {goalsChanged && <span class="small muted">Add your goals to the plan first, so the list includes them.</span>}
+          <span class="small muted">Hiring is free. This plan stays open until {when(p.expires_at)}.</span>
         </div>
       )}
     </Card>

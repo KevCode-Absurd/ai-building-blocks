@@ -3,6 +3,14 @@
   // Environments: top level = local dev (`npm run worker:dev`), "staging" = agents-staging.useaiblocks.com,
   // "production" = agents.useaiblocks.com. Bindings and vars are not inherited by environments, so each repeats them.
   // Staging runs live models (approved 6 Nov 2026) under its caps: $10 a day, $2 a job.
+  // Provider balances are prepaid (6 Nov 2026: Anthropic about $28, DeepSeek about $15, Gemini about $60), so
+  // HOSTED_JOBS "off" (owner, 6 Nov): we do not run agents on our model keys for visitors. Agents are free downloads,
+  // also served through the API and the MCP connector, and they run on the visitor's own AI. Only the AI Blocks team
+  // can start jobs here (to test agents). "on" opens hiring on the site again, on our keys and under the caps below.
+  // WEB_SEARCH_MAX_USES: most web searches one job step may run (Anthropic web search, $10 per 1,000 plus the pages as
+  // input tokens; counted in each provider budget and the job cap). "0" turns web search off: off along with hosted jobs.
+  // PROVIDER_BUDGETS_USD caps each provider's total spend per environment, leaving headroom for local tests. Production caps (owner, 6 Nov): Anthropic $20, Gemini $40, DeepSeek $13.
+  // Production also caps $8 a day and runs the plain-AI baseline on a quarter of jobs to stretch the balances.
   // Secrets (set with `npx wrangler secret put NAME --env <env>`, never committed):
   //   ANTHROPIC_API_KEY, GEMINI_API_KEY, DEEPSEEK_API_KEY  model providers for text (OPENAI_API_KEY only if
   //                                                      "openai" is added to MODEL_PROVIDERS; OpenAI is for images only today)
@@ -17,7 +25,7 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*", "/mcp", "/mcp/*", "/oauth/*", "/.well-known/*"]
+    "run_worker_first": ["/api/*", "/mcp", "/mcp/*", "/oauth/*", "/.well-known/*", "/agents/*/soul.md"]
   },
   "observability": { "enabled": true, "head_sampling_rate": 1, "logs": { "enabled": true, "invocation_logs": false } },
   "triggers": { "crons": ["*/15 * * * *"] },
@@ -28,12 +36,16 @@
     "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
     "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
     "OPS_USER_IDS": "",
-    "BETA_MODE": "invite",
+    "INVITE_ONLY": "false",
+    "HOSTED_JOBS": "off",
+    "DAILY_JOBS_PER_USER": "0",
     "MODEL_MODE": "fake",
     "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
     "RELEASE_REVIEW": "required",
     "DAILY_MODEL_CAP_USD": "5",
     "JOB_COST_CAP_USD": "2",
+    "WEB_SEARCH_MAX_USES": "0",
+    "PROVIDER_BUDGETS_USD": "anthropic:3,gemini:5,deepseek:2",
     "BASELINE_SAMPLE_RATE": "1",
     "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
     "EMAIL_REPLY_TO": "hello@useaiblocks.com"
@@ -54,13 +66,17 @@
         "APP_ORIGIN": "https://agents-staging.useaiblocks.com",
         "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
         "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
-        "OPS_USER_IDS": "",
-        "BETA_MODE": "invite",
+        "OPS_USER_IDS": "user_3L2usz5B7TaRAhWim6s5SyCcNfK",
+        "INVITE_ONLY": "false",
+        "HOSTED_JOBS": "off",
+        "DAILY_JOBS_PER_USER": "0",
         "MODEL_MODE": "live",
         "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
         "RELEASE_REVIEW": "required",
         "DAILY_MODEL_CAP_USD": "10",
         "JOB_COST_CAP_USD": "2",
+        "WEB_SEARCH_MAX_USES": "0",
+        "PROVIDER_BUDGETS_USD": "anthropic:3,gemini:5,deepseek:2",
         "BASELINE_SAMPLE_RATE": "1",
         "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
         "EMAIL_REPLY_TO": "hello@useaiblocks.com"
@@ -83,14 +99,18 @@
         "APP_ORIGIN": "https://agents.useaiblocks.com",
         "CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsudXNlYWlibG9ja3MuY29tJA",
         "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
-        "OPS_USER_IDS": "",
-        "BETA_MODE": "invite",
+        "OPS_USER_IDS": "user_3L2usz5B7TaRAhWim6s5SyCcNfK",
+        "INVITE_ONLY": "false",
+        "HOSTED_JOBS": "off",
+        "DAILY_JOBS_PER_USER": "0",
         "MODEL_MODE": "live",
         "MODEL_PROVIDERS": "anthropic,gemini,deepseek",
         "RELEASE_REVIEW": "required",
-        "DAILY_MODEL_CAP_USD": "25",
-        "JOB_COST_CAP_USD": "3",
-        "BASELINE_SAMPLE_RATE": "1",
+        "DAILY_MODEL_CAP_USD": "8",
+        "JOB_COST_CAP_USD": "2",
+        "WEB_SEARCH_MAX_USES": "0",
+        "PROVIDER_BUDGETS_USD": "anthropic:20,gemini:40,deepseek:13",
+        "BASELINE_SAMPLE_RATE": "0.25",
         "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
         "EMAIL_REPLY_TO": "hello@useaiblocks.com"
       },

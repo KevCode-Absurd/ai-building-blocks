@@ -6,7 +6,7 @@ import type { ActorKind } from "../../core/events.ts";
 import { eventStatement, recordEvent } from "../../core/events.ts";
 import { all, first, newId, nowIso, parseJson, run, sha256Hex } from "../../core/db.ts";
 import { getJob, STATUS_LABELS, transitionJob } from "../../core/jobs.ts";
-import { callModel, ModelError, type ModelResponse, type Provider } from "../../core/models.ts";
+import { callModel, ModelError, type ModelResponse, type Provider, type WebSource } from "../../core/models.ts";
 import { fail, HttpError } from "../../core/http.ts";
 import { getJobType, listJobTypes } from "../catalogue/index.ts";
 import { housePersonas } from "../directory/index.ts";
@@ -344,14 +344,22 @@ function describeError(err: unknown): { code: string; message: string } {
 async function executeSteps(env: Env, r: RunRow, pkg: AgentPackage, ctx: PromptContext): Promise<{ content: string; provider: Provider | undefined }> {
   const db = env.DB;
   const cap = costCapMicro(env);
-  const done = await all<{ seq: number; step_id: string; output: string | null; provider: Provider | null }>(db,
-    "SELECT seq, step_id, output, provider FROM run_steps WHERE run_id = ? AND status = 'succeeded'", r.id);
-  const outputs: Record<string, string> = {};
+  const done = await all<{ seq: number; step_id: string; output: string | null; provider: Provider | null; sources: string | null }>(db,
+    "SELECT seq, step_id, output, provider, sources FROM run_steps WHERE run_id = ? AND status = 'succeeded'", r.id);
+  // outputs feed later steps' prompts (with the pages each step cited); raw holds each step's own reply.
+  const outputs: Record<string, string> = {}, raw: Record<string, string> = {};
+  const cited: WebSource[] = [];
+  const keep = (stepId: string, output: string, sources: WebSource[]) => {
+    raw[stepId] = output;
+    outputs[stepId] = sources.length ? `${output}\n\n${citedNote(sources)}` : output;
+    for (const s of sources) if (!cited.some(c => c.url === s.url)) cited.push(s);
+  };
+  const searches = webSearchUses(env);
   let writer: Provider | undefined;
   for (let i = 0; i < pkg.steps.length; i++) {
     const step = pkg.steps[i], seq = i + 1;
     const prior = done.find(d => d.seq === seq && d.step_id === step.id);
-    if (prior) { outputs[step.id] = prior.output ?? ""; writer = prior.provider ?? writer; continue; }
+    if (prior) { keep(step.id, prior.output ?? "", parseJson<WebSource[]>(prior.sources, [])); writer = prior.provider ?? writer; continue; }
     if (await spentMicro(env, r) >= cap) {
       throw new RunStop("job_cost_cap", "This job reached its spending limit for AI work, so the agent stopped.");
     }
@@ -362,6 +370,7 @@ async function executeSteps(env: Env, r: RunRow, pkg: AgentPackage, ctx: PromptC
       res = await callModel(env, {
         purpose: `runner.step.${step.id}`, tier: step.tier, system: pkg.skill.instructions, prompt,
         json: step.output === "json", maxTokens: step.max_tokens, jobId: r.job_id ?? undefined, runId: r.id,
+        ...(step.output !== "json" && searches ? { webSearch: searches } : {}),
       });
     } catch (err) {
       const billed = err instanceof ModelError ? err.costMicroUsd : 0;
@@ -374,19 +383,40 @@ async function executeSteps(env: Env, r: RunRow, pkg: AgentPackage, ctx: PromptC
       throw err;
     }
     const output = step.output === "json" && res.data !== undefined ? JSON.stringify(res.data) : res.text;
+    const sources = res.sources ?? [];
     await db.batch([
-      db.prepare("UPDATE run_steps SET status = 'succeeded', provider = ?, model = ?, input_tokens = ?, output_tokens = ?, cost_micro_usd = ?, output = ?, finished_at = ? WHERE run_id = ? AND seq = ?")
-        .bind(res.provider, res.model, res.inputTokens, res.outputTokens, res.costMicroUsd, output, nowIso(), r.id, seq),
+      db.prepare("UPDATE run_steps SET status = 'succeeded', provider = ?, model = ?, input_tokens = ?, output_tokens = ?, cost_micro_usd = ?, output = ?, sources = ?, finished_at = ? WHERE run_id = ? AND seq = ?")
+        .bind(res.provider, res.model, res.inputTokens, res.outputTokens, res.costMicroUsd, output, sources.length ? JSON.stringify(sources) : null, nowIso(), r.id, seq),
       db.prepare("UPDATE runs SET input_tokens = input_tokens + ?, output_tokens = output_tokens + ?, cost_micro_usd = cost_micro_usd + ? WHERE id = ?")
         .bind(res.inputTokens, res.outputTokens, res.costMicroUsd, r.id),
     ]);
-    outputs[step.id] = output;
+    keep(step.id, output, sources);
     writer = res.provider;
   }
   const last = pkg.steps[pkg.steps.length - 1];
-  const content = cleanDraft(outputs[last.id] ?? "");
-  if (!content) throw new RunStop("empty_draft", "The agent finished without writing a draft.");
-  return { content, provider: writer };
+  const draft = cleanDraft(raw[last.id] ?? "");
+  if (!draft) throw new RunStop("empty_draft", "The agent finished without writing a draft.");
+  return { content: last.output === "json" ? draft : withSources(draft, cited), provider: writer };
+}
+
+/** WEB_SEARCH_MAX_USES: the most web searches one text step may run. "0" or unset = no web search. */
+export function webSearchUses(env: Env): number {
+  const n = Number(env.WEB_SEARCH_MAX_USES ?? "0");
+  return Number.isFinite(n) && n > 0 ? Math.min(20, Math.floor(n)) : 0;
+}
+
+/** Handed to later steps with a step's output, so they can cite the same pages. */
+function citedNote(sources: WebSource[]): string {
+  return `Pages this step cited:\n${sources.map(s => `- ${s.title}: ${s.url}`).join("\n")}`;
+}
+
+/** The draft plus a "Sources from web search" list: every cited page the text does not already link. The search
+ *  provider's terms require showing the sources with the text, and buyers should be able to check them. */
+export function withSources(content: string, sources: WebSource[]): string {
+  const fresh = sources.filter(s => !content.includes(s.url));
+  if (!fresh.length) return content;
+  const link = (s: WebSource) => `- [${s.title.replace(/[[\]]/g, "")}](${s.url.replace(/\(/g, "%28").replace(/\)/g, "%29")})`;
+  return `${content}\n\n## Sources from web search\n\n${fresh.map(link).join("\n")}`;
 }
 
 /** Strip a code fence wrapped around the whole reply. */
@@ -521,7 +551,12 @@ export async function runBaseline(env: Env, input: { jobTypeId: string; brief: s
     const started = nowIso();
     let res: ModelResponse;
     try {
-      res = await callModel(env, { purpose: "runner.baseline", tier: "standard", system: jobType.baseline_prompt, prompt, maxTokens: isLongJob(jobType) ? 12000 : 6000, jobId: input.jobId, runId: r.id });
+      // Same web search as the agent gets, so the comparison is fair.
+      const searches = webSearchUses(env);
+      res = await callModel(env, {
+        purpose: "runner.baseline", tier: "standard", system: jobType.baseline_prompt, prompt, maxTokens: isLongJob(jobType) ? 12000 : 6000, jobId: input.jobId, runId: r.id,
+        ...(searches ? { webSearch: searches } : {}),
+      });
     } catch (err) {
       const billed = err instanceof ModelError ? err.costMicroUsd : 0;
       await env.DB.batch([
@@ -531,10 +566,12 @@ export async function runBaseline(env: Env, input: { jobTypeId: string; brief: s
       ]);
       throw err;
     }
-    const content = cleanDraft(res.text);
+    const text = cleanDraft(res.text);
+    const sources = res.sources ?? [];
+    const content = text ? withSources(text, sources) : "";
     await env.DB.batch([
-      env.DB.prepare("INSERT INTO run_steps (run_id, seq, step_id, provider, model, status, input_tokens, output_tokens, cost_micro_usd, output, started_at, finished_at) VALUES (?, 1, 'baseline', ?, ?, 'succeeded', ?, ?, ?, ?, ?, ?)")
-        .bind(r.id, res.provider, res.model, res.inputTokens, res.outputTokens, res.costMicroUsd, content, started, nowIso()),
+      env.DB.prepare("INSERT INTO run_steps (run_id, seq, step_id, provider, model, status, input_tokens, output_tokens, cost_micro_usd, output, sources, started_at, finished_at) VALUES (?, 1, 'baseline', ?, ?, 'succeeded', ?, ?, ?, ?, ?, ?, ?)")
+        .bind(r.id, res.provider, res.model, res.inputTokens, res.outputTokens, res.costMicroUsd, text, sources.length ? JSON.stringify(sources) : null, started, nowIso()),
       env.DB.prepare("UPDATE runs SET input_tokens = input_tokens + ?, output_tokens = output_tokens + ?, cost_micro_usd = cost_micro_usd + ? WHERE id = ?")
         .bind(res.inputTokens, res.outputTokens, res.costMicroUsd, r.id),
     ]);

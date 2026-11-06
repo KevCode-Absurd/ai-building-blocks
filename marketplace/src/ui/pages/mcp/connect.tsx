@@ -1,4 +1,5 @@
-// /connect: how to add AI Blocks Agents to Claude, ChatGPT or another AI app, and the buyer's connected apps.
+// /connect: how to connect Claude, ChatGPT or another AI app to AI Blocks and load agents there, the public API, and
+// the person's connected apps. Agents run on the person's own AI; AI Blocks runs no work for them.
 import { useState } from "preact/hooks";
 import { Badge, Button, Card, Loaded, Notice, Page, useLoad } from "../../components.tsx";
 import { api, when } from "../../lib/api.ts";
@@ -65,7 +66,7 @@ export function Connect() {
   const auth = useAuth();
   const address = `${location.origin}/mcp`;
   return (
-    <Page title="Connect your AI" intro="Hire AI Blocks agents from inside Claude, ChatGPT or another AI app you already use. Ask in your chat, and your AI shows you the price, the progress and the finished work.">
+    <Page title="Connect your AI" intro="Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.">
       <div class="stack">
         <Card title="1. Copy this address">
           <CopyAddress address={address} />
@@ -79,7 +80,7 @@ export function Connect() {
               <Steps items={[
                 "In Claude, open Settings, then Connectors.",
                 "Choose Add custom connector.",
-                "Name it AI Blocks Agents and paste the address.",
+                "Name it AI Blocks agents and paste the address.",
                 "Choose Connect. Sign in to AI Blocks, then choose Approve.",
               ]} />
               <p class="muted small">On a Team or Enterprise plan, an owner may need to add the connector first.</p>
@@ -89,48 +90,56 @@ export function Connect() {
               <Steps items={[
                 "In ChatGPT, open Settings, then Apps (it may say Apps & Connectors).",
                 "If there is no way to add your own, turn on developer mode in the advanced settings there.",
-                "Create a new app or connector. Name it AI Blocks Agents, paste the address and pick OAuth for sign-in.",
+                "Create a new app or connector. Name it AI Blocks agents, paste the address and pick OAuth for sign-in.",
                 "Sign in to AI Blocks, then choose Approve.",
               ]} />
               <p class="muted small">Some ChatGPT plans do not let you add your own apps yet.</p>
             </section>
             <section>
-              <h3>Other AI apps</h3>
+              <h3>Cursor and other apps</h3>
               <p>Any app that can add a remote MCP server with sign-in can use the same address. MCP is the standard way AI apps connect to other services.</p>
+              <p class="muted small">In Cursor, add the address as a remote MCP server in its settings. Cursor opens your browser to sign in, then asks to open Cursor again.</p>
             </section>
           </div>
         </Card>
 
-        <Card title="3. Ask for work">
+        <Card title="3. Ask for an agent">
           <ul class="mcp-examples">
-            <li>"Ask Nova for a 1,500 word article about how often to groom a dog."</li>
-            <li>"Which AI Blocks agents can write a landing page?"</li>
-            <li>"What is the status of my article?"</li>
-            <li>"Show me the finished draft, then ask for a shorter intro."</li>
+            <li>"Find an AI Blocks agent who can plan my SEO."</li>
+            <li>"Load Danielle from AI Blocks and plan my next blog post with her."</li>
+            <li>"Which AI Blocks agents help with payroll?"</li>
+            <li>"Open Danielle's knowledge file and check my draft against it."</li>
           </ul>
-          <p class="muted">Before any order, your AI gets the fixed price and the checklist the work is judged on. We tell it to ask you before it orders.</p>
+          <p class="muted">Your AI loads the agent's instructions, personality, method and rules for your tools. The agent reads first, and asks before it drafts or publishes anything in your tools.</p>
         </Card>
 
         <div class="mcp-two">
           <Card title="What the connection can do">
             <ul class="mcp-list">
-              <li>Show you the agents and the jobs they do.</li>
-              <li>Describe a job, answer the agent's questions and get a fixed price.</li>
-              <li>Place the order, if you allowed ordering when you connected.</li>
-              <li>Check progress, and show you the finished work once it passes its final check.</li>
-              <li>Accept the work, or ask for changes (up to 2 rounds).</li>
+              <li>Show you the agents and what each one delivers.</li>
+              <li>Load an agent into your chat, with its method, knowledge, skills and prompts.</li>
+              <li>Give you the free download of any agent.</li>
             </ul>
           </Card>
           <Card title="What it cannot do">
             <ul class="mcp-list">
-              <li>Charge you. Payments are on hold in the beta, so nothing is charged.</li>
-              <li>Show you work before it passes its final check.</li>
-              <li>Reject work. Do that on the job's page here.</li>
-              <li>See anyone else's jobs or change your account.</li>
-              <li>Order without beta access. You need an invite code to order. You can browse without one.</li>
+              <li>Run work on AI Blocks. The agent works in your AI, on your own plan.</li>
+              <li>See your chats, your files or your other accounts.</li>
+              <li>Change your AI Blocks account.</li>
             </ul>
           </Card>
         </div>
+
+        <Card title="Use the API">
+          <p>Building your own tool? Every agent is public, so you need no key. Send a GET request to:</p>
+          <dl class="mcp-api">
+            <dt><code>{location.origin}/api/agents?q=seo</code></dt><dd>Find agents. You can also filter with <code>area</code> or <code>role</code>.</dd>
+            <dt><code>{location.origin}/api/agents/&lt;agent-id&gt;</code></dt><dd>One agent's profile.</dd>
+            <dt><code>{location.origin}/packs/&lt;agent-id&gt;/files.json</code></dt><dd>Every file in the agent's pack, with a link to each one.</dd>
+            <dt><code>{location.origin}/packs/&lt;agent-id&gt;.zip</code></dt><dd>The whole agent as one download.</dd>
+          </dl>
+          <p class="muted small">Agents are free to use and change, including in your own work, but not to sell or resell.</p>
+        </Card>
 
         {auth.signedIn ? <Connections /> : (
           <Notice title="Disconnect at any time">Sign in here to see the AI apps you connected and turn any of them off. You can also remove the connector in your AI app.</Notice>

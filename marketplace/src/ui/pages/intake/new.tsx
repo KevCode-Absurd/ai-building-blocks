@@ -1,13 +1,13 @@
 // /new: the buyer describes a job in their own words, for a chosen agent (?persona=) or for anyone.
-// ?job=<job type id> picks the outcome; ?text= fills the box.
+// ?job=<job type id> picks the outcome; ?text= fills the box. Hiring is free: no prices here.
 import { useState } from "preact/hooks";
 import { Button, Card, Notice, Page, Spinner, useLoad } from "../../components.tsx";
 import { api, ApiError } from "../../lib/api.ts";
 import { navigate } from "../../lib/router.tsx";
-import { AgentCard, JobTypeList, turnaround, usd, type AgentInfo, type JobSummary, type RequestView } from "./parts.tsx";
+import { AgentCard, DailyLimitNotice, JobTypeList, turnaround, type AgentInfo, type JobSummary, type RequestView } from "./parts.tsx";
 
 /** The parts of GET /api/catalogue/:id this page uses. */
-interface JobDetail { id: string; title: string; summary: string; deliverable: string; turnaround_hours: number; price: { min_usd: number }; sample_briefs: { text: string }[] }
+interface JobDetail { id: string; title: string; summary: string; deliverable: string; turnaround_hours: number; sample_briefs: { text: string }[] }
 
 const MIN_TEXT = 10;
 
@@ -24,6 +24,7 @@ export function NewRequestPage(props: { query: URLSearchParams }) {
   const [pickerOpen, setPickerOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [limited, setLimited] = useState<string | null>(null);
 
   const agentState = useLoad(() => personaId
     ? maybe(() => api<{ agent: AgentInfo }>(`/api/agents/${encodeURIComponent(personaId)}`).then(r => r.agent))
@@ -37,14 +38,14 @@ export function NewRequestPage(props: { query: URLSearchParams }) {
   const agentMissing = !!agentState.data?.missing;
   const job = jobState.data?.value ?? null;
   const jobMissing = !!jobState.data?.missing;
-  const pricedOutcomes = (agent?.outcomes ?? []).filter(o => o.job_type_id);
+  const outcomes = (agent?.outcomes ?? []).filter(o => o.job_type_id);
   const sample = job?.sample_briefs?.[0]?.text;
   const placeholder = sample ? `For example: ${sample}` : "Say what you need, who it is for, and any facts, numbers or links we should use.";
 
   async function submit(e: Event) {
     e.preventDefault();
     if (text.trim().length < MIN_TEXT) { setError("Tell us a little more: what you need, who it is for, and any facts we should use."); return; }
-    setBusy(true); setError(null);
+    setBusy(true); setError(null); setLimited(null);
     try {
       const body: Record<string, string> = { text };
       if (jobId && !jobMissing) body.jobTypeId = jobId;
@@ -52,13 +53,16 @@ export function NewRequestPage(props: { query: URLSearchParams }) {
       const res = await api<{ request: RequestView }>("/api/requests", { body });
       navigate(`/requests/${res.request.id}`);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
+      if (err instanceof ApiError && err.code === "daily_limit") setLimited(err.message);
+      else setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
       setBusy(false);
     }
   }
 
   const title = agent ? `Hire ${agent.name}` : "Describe your job";
-  const intro = agent ? undefined : "Say what you need in your own words. We match it to the right agent and ask at most three questions. You see a fixed price before any work starts.";
+  const intro = agent
+    ? `Tell ${agent.name} what you need. You answer at most three questions, check the plan, then start. Hiring is free.`
+    : "Say what you need in your own words. We match it to the right agent and ask at most three questions. Then you check the plan and start. Hiring is free.";
 
   return (
     <Page title={title} intro={intro}>
@@ -67,11 +71,11 @@ export function NewRequestPage(props: { query: URLSearchParams }) {
         {agent && (
           <Card class="intake-hire">
             <AgentCard agent={agent} />
-            {pricedOutcomes.length > 0 && (
+            {outcomes.length > 0 && (
               <div class="intake-outcomes" role="group" aria-label={`What you want from ${agent.name}`}>
                 <span class="field-label">What do you want from {agent.name}?</span>
                 <div class="intake-options">
-                  {pricedOutcomes.map(o => (
+                  {outcomes.map(o => (
                     <button type="button" class={`intake-option${jobId === o.job_type_id ? " intake-option-on" : ""}`} aria-pressed={jobId === o.job_type_id} onClick={() => setJobId(o.job_type_id)}>
                       {o.title}
                     </button>
@@ -111,9 +115,10 @@ export function NewRequestPage(props: { query: URLSearchParams }) {
           )}
 
           {error && <Notice tone="bad">{error}</Notice>}
+          {limited && <DailyLimitNotice message={limited} />}
           <div class="intake-actions">
             <Button type="submit" busy={busy}>Continue</Button>
-            <span class="muted small">Free during the beta. You see a fixed price before any work starts.</span>
+            <span class="muted small">Free to hire. You see the plan before any work starts.</span>
           </div>
         </form>
       </div>
@@ -125,7 +130,7 @@ function JobLine(props: { job: JobDetail }) {
   const j = props.job;
   return (
     <p class="intake-jobline small">
-      <strong>{j.title}</strong> · from {usd(j.price.min_usd)} · ready in {turnaround(j.turnaround_hours)}
+      <strong>{j.title}</strong> · ready in about {turnaround(j.turnaround_hours)}
       <br /><span class="muted">You get: {j.deliverable}</span>
     </p>
   );

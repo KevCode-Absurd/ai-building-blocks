@@ -8,8 +8,9 @@ import { fail } from "./http.ts";
 
 /**
  * draft      intake in progress (questions may be open)
- * quoted     price and rubric shown; waiting for the buyer to confirm
- * confirmed  buyer ordered (payments are on hold: nothing is charged yet)
+ * quoted     the plan is shown (what the agent delivers, by when, and the checklist); waiting for the buyer to start
+ *            it. Hiring is free: no price is set, and payment_status stays "not_required".
+ * confirmed  the buyer started the job
  * running    an agent run is in progress
  * checking   automated checks are scoring the draft
  * in_review  ops must approve the draft before the buyer sees it (RELEASE_REVIEW=required)
@@ -86,8 +87,8 @@ export async function transitionJob(env: Env, input: TransitionInput): Promise<J
 /** Statuses a buyer sees in plain words. */
 export const STATUS_LABELS: Record<JobStatus, string> = {
   draft: "Needs details",
-  quoted: "Quote ready",
-  confirmed: "Ordered",
+  quoted: "Plan ready",
+  confirmed: "Started",
   running: "In progress",
   checking: "Being checked",
   in_review: "Final check",

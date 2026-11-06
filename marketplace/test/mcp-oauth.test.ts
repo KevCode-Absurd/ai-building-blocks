@@ -172,9 +172,17 @@ test("the consent page data names the app, its redirect host and the scopes in p
   assert.equal(req.body.client_name, "Claude");
   assert.equal(req.body.redirect_host, "claude.ai");
   assert.equal(req.body.asks_to_order, true);
-  assert.equal(req.body.beta_access, false);
+  assert.equal(req.body.can_hire, false, "INVITE_ONLY is on in tests and this person has no invite code");
   assert.deepEqual(req.body.scopes.map((s: any) => s.id), ["marketplace:read", "marketplace:order"]);
   assert.ok(req.body.scopes.every((s: any) => s.label && s.detail));
+  // Hiring is free: the consent words never mention money or a beta.
+  for (const s of req.body.scopes) assert.doesNotMatch(`${s.label} ${s.detail}`, /\$|price|quote|charge|beta|order/i);
+  // With open hiring (every real environment), anyone signed in can hire.
+  const open = await testEnv({ INVITE_ONLY: "false" });
+  const reg2 = await register(open);
+  const auth2 = await open.api("GET", authorizePath({ response_type: "code", client_id: reg2.body.client_id, redirect_uri: CLAUDE_REDIRECT, code_challenge: challenge, code_challenge_method: "S256", state: "s" }));
+  const id2 = new URL(auth2.res.headers.get("location")!).searchParams.get("request")!;
+  assert.equal((await open.api("GET", `/api/oauth/requests/${id2}`, { user: "user_buyer" })).body.can_hire, true);
   assert.equal((await t.api("GET", "/api/oauth/requests/oar_nope", { user: "user_buyer" })).status, 404);
 });
 
@@ -220,6 +228,93 @@ test("a local app may use any port on its loopback redirect", async () => {
   assert.ok(new URL(auth.res.headers.get("location")!).searchParams.get("request"));
   const otherPath = await t.api("GET", authorizePath({ response_type: "code", client_id: reg.body.client_id, redirect_uri: "http://127.0.0.1:51234/other", code_challenge: challenge, code_challenge_method: "S256" }));
   assert.equal(new URL(otherPath.res.headers.get("location")!).searchParams.get("error"), "bad_redirect");
+});
+
+const CURSOR_REDIRECT = "cursor://anysphere.cursor-mcp/oauth/callback";
+
+test("desktop apps may register their own link type (RFC 8252), never script, data or file addresses", async () => {
+  const t = await testEnv();
+  for (const uri of [CURSOR_REDIRECT, "com.example.app:/oauth2redirect", "com.example.app://callback", "vscode://vscode.github-authentication/did-authenticate", "io.github.someone.tool:/cb?x=1"]) {
+    const res = await register(t, [uri]);
+    assert.equal(res.status, 201, `${uri}: ${JSON.stringify(res.body)}`);
+    assert.deepEqual(res.body.redirect_uris, [uri]);
+  }
+  const bad = [
+    "javascript:alert(1)", "JavaScript:alert(1)", "data:text/html,<script>alert(1)</script>", "file:///etc/passwd", "vbscript:msgbox(1)",
+    "chrome-extension://abcdef/cb", "ftp://example.com/cb", "myapp:/callback", "com.example.app:callback", "cursor://user:pw@anysphere.cursor-mcp/cb",
+    "cursor://anysphere.cursor-mcp/cb#frag", "com.example.app:/cb?state=1", "http://claude.ai/cb", "https://claude.ai/a b", "https://claude.ai\\@evil.example/cb",
+  ];
+  for (const uri of bad) {
+    const res = await register(t, [uri]);
+    assert.equal(res.status, 400, uri);
+    assert.equal(res.body.error, "invalid_redirect_uri", uri);
+    assert.ok(res.body.error_description, uri);
+  }
+  assert.match((await register(t, ["javascript:alert(1)"])).body.error_description, /javascript: address cannot be a redirect URI/);
+  assert.match((await register(t, ["myapp:/callback"])).body.error_description, /domain name you own, written in reverse, such as com\.example\.app:\/callback/);
+  assert.match((await register(t, ["http://claude.ai/cb"])).body.error_description, /Use https for a website/);
+  // One bad address refuses the whole registration.
+  const before = (await t.sql("SELECT COUNT(*) AS n FROM mcp_clients"))[0].n;
+  assert.equal((await register(t, [CLAUDE_REDIRECT, "data:text/html,hi"])).status, 400);
+  assert.equal((await t.sql("SELECT COUNT(*) AS n FROM mcp_clients"))[0].n, before);
+  const [event] = await t.sql("SELECT data FROM events WHERE entity = 'mcp_client' AND entity_id = (SELECT client_id FROM mcp_clients WHERE redirect_uris = ?)", JSON.stringify([CURSOR_REDIRECT]));
+  assert.deepEqual(JSON.parse(event.data).redirect_hosts, ["cursor://"]);
+});
+
+test("a desktop app with its own link type connects end to end, with exact matching only", async () => {
+  const t = await testEnv();
+  const flow = await connect(t, { redirect: CURSOR_REDIRECT });
+  assert.equal(flow.tokens.status, 200, JSON.stringify(flow.tokens.body));
+  assert.equal(`${flow.back.protocol}//${flow.back.host}${flow.back.pathname}`, CURSOR_REDIRECT);
+  assert.match(flow.back.searchParams.get("code")!, /^[a-f0-9]{64}$/);
+  assert.equal(flow.back.searchParams.get("state"), "st-123");
+  assert.equal(flow.back.searchParams.get("iss"), ORIGIN);
+  assert.equal((await mcpCall(t, { headers: { authorization: `Bearer ${flow.tokens.body.access_token}` } })).status, 200);
+
+  // No loopback-style relaxing: another path, host or app is refused before anything is stored.
+  const reg = await register(t, [CURSOR_REDIRECT]);
+  const { challenge } = await pkce();
+  const pending = (await t.sql("SELECT COUNT(*) AS n FROM mcp_auth_requests"))[0].n;
+  for (const other of ["cursor://anysphere.cursor-mcp/oauth/other", "cursor://evil.example/oauth/callback", "vscode://anysphere.cursor-mcp/oauth/callback", "CURSOR://anysphere.cursor-mcp/oauth/callback"]) {
+    const auth = await t.api("GET", authorizePath({ response_type: "code", client_id: reg.body.client_id, redirect_uri: other, code_challenge: challenge, code_challenge_method: "S256" }));
+    assert.equal(auth.status, 302, other);
+    const location = new URL(auth.res.headers.get("location")!);
+    assert.equal(location.origin + location.pathname, `${ORIGIN}/oauth/consent`, other);
+    assert.equal(location.searchParams.get("error"), "bad_redirect", other);
+  }
+  assert.equal((await t.sql("SELECT COUNT(*) AS n FROM mcp_auth_requests"))[0].n, pending);
+
+  // The reverse-domain form with a single slash works too.
+  const reverse = await connect(t, { redirect: "com.example.app:/oauth2redirect" });
+  assert.equal(reverse.tokens.status, 200);
+  assert.equal(reverse.back.protocol, "com.example.app:");
+  assert.equal(reverse.back.pathname, "/oauth2redirect");
+  assert.ok(reverse.back.searchParams.get("code"));
+
+  // The Connect page names the link type instead of a host.
+  const list = await t.api("GET", "/api/oauth/connections", { user: "user_buyer" });
+  assert.deepEqual(list.body.connections.map((c: any) => c.redirect_host).sort(), ["com.example.app:", "cursor://"]);
+});
+
+test("the consent page data shows where the person is sent: a website, a local app or an app link", async () => {
+  const t = await testEnv();
+  const cases: [string, string, string][] = [
+    [CLAUDE_REDIRECT, "web", "claude.ai"],
+    ["http://127.0.0.1:33418/callback", "local", "127.0.0.1:33418"],
+    [CURSOR_REDIRECT, "app", "cursor://"],
+    ["com.example.app:/oauth2redirect", "app", "com.example.app:"],
+  ];
+  for (const [uri, kind, host] of cases) {
+    const reg = await register(t, [uri]);
+    const { challenge } = await pkce();
+    const auth = await t.api("GET", authorizePath({ response_type: "code", client_id: reg.body.client_id, redirect_uri: uri, code_challenge: challenge, code_challenge_method: "S256" }));
+    const requestId = new URL(auth.res.headers.get("location")!).searchParams.get("request")!;
+    const req = await t.api("GET", `/api/oauth/requests/${requestId}`, { user: "user_buyer" });
+    assert.equal(req.status, 200, uri);
+    assert.equal(req.body.redirect_kind, kind, uri);
+    assert.equal(req.body.redirect_host, host, uri);
+    assert.equal(req.body.redirect_uri, uri);
+  }
 });
 
 test("a wrong PKCE verifier is rejected and a reused code turns the connection off", async () => {

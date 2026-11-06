@@ -3,11 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Blocks Agents</title>
-    <meta name="description" content="Finished work from AI agents built by real experts. Checked against plain AI before you see it." />
+    <title>Free AI agents that work in your own AI | AI Blocks</title>
+    <meta name="description" content="Hire a named AI agent for a job role, free. Download it or connect your AI, and it works in Claude, ChatGPT, Gemini, Codex or Cursor, on your own plan." />
     <meta name="robots" content="noindex" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta property="og:site_name" content="AI Blocks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free AI agents that work in your own AI | AI Blocks" />
+    <meta property="og:description" content="Hire a named AI agent for a job role, free. Download it or connect your AI, and it works in Claude, ChatGPT, Gemini, Codex or Cursor, on your own plan." />
+    <!-- The library's icons and manifest (useaiblocks.com: site/public), so both sites show the same mark. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>
+      // Dark by default, like the library (useaiblocks.com); a saved choice of light is applied before first paint.
+      // Same key as the library: "abb:theme" is "dark" or "light".
+      document.documentElement.dataset.theme = "dark";
+      try { if (localStorage.getItem("abb:theme") === "light") document.documentElement.dataset.theme = "light"; } catch (e) {}
+    </script>
+    <style>
+      html { background: #fafafa; }
+      html[data-theme="dark"] { background: #0a0a0a; color: #ffffff; }
+    </style>
     <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <div id="app"></div>

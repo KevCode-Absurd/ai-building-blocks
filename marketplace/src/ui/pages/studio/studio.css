@@ -83,3 +83,17 @@
 .studio-suggestion { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; display: grid; gap: 8px; }
 .studio-suggestion p { margin: 0; }
 .studio-suggestion .badge { justify-self: start; }
+.studio-verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 12px; }
+.studio-verdict .badge { flex: none; }
+.studio-verdict-text { flex: 1 1 240px; min-width: 0; }
+.studio-verdict-why { flex-basis: 100%; }
+.studio-verdict-why summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+.studio-verdict-why p { margin: 6px 0 0; }
+
+/* /studio: "Upload a trained pack" */
+.studio-upload .studio-check { margin-top: 0; }
+.studio-upload-file { padding: 8px; }
+.studio-upload-file::file-selector-button { margin-right: 12px; padding: 6px 14px; border: 0; border-radius: 999px; background: var(--btn-2); color: var(--text); font: inherit; font-size: 14px; cursor: pointer; }
+.studio-upload-warnings { margin: 6px 0 8px; padding-left: 20px; display: grid; gap: 4px; }
+.studio-upload-next { margin: 4px 0 0; font-weight: 600; }
+.studio-upload-note { margin: 12px 0 0; }

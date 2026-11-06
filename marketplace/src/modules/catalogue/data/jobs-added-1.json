@@ -1,0 +1,3707 @@
+[
+  {
+    "id": "customer-message-set",
+    "title": "Customer message set for one journey",
+    "summary": "Texts, emails or app messages for one customer journey: bookings, reminders, renewals, orders, updates, enquiry replies, review asks or follow-ups.",
+    "area": "customer-support",
+    "deliverable": "A message map with the trigger, audience, timing, channel, link and stop rule for each message. Every message in your voice and within channel limits, with fill-in fields and opt-out wording where needed. Two versions of the key messages. Review and testimonial asks add a counter script, a short question list and a tracker layout.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "journey",
+        "label": "Which journey do you need messages for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Bookings, reminders and no-shows",
+          "Welcome and aftercare",
+          "Rebooking, recall or service due",
+          "Renewal or reorder reminders",
+          "Orders, delivery and delays",
+          "Guest stay messages",
+          "Notices and policy reminders",
+          "Update templates (daily, visit or project stage)",
+          "Review or testimonial requests",
+          "Follow-up after an event or job",
+          "Enquiry replies and follow-ups",
+          "App push and in-app messages"
+        ]
+      },
+      {
+        "id": "message_count",
+        "label": "How many messages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 10. Two versions of the same message count as one.",
+        "max": 60
+      },
+      {
+        "id": "channels",
+        "label": "Which channels?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Text (SMS)",
+          "Email",
+          "WhatsApp",
+          "App push",
+          "In-app banner or pop-up",
+          "Website banner or auto-reply",
+          "Printed card",
+          "In person (spoken script)"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and customers",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who your customers are and how they book or buy.",
+        "max": 1500
+      },
+      {
+        "id": "moments",
+        "label": "Moments to cover",
+        "type": "list",
+        "required": false,
+        "help": "For example 48 hours before, 2 hours before, after a no-show. Leave blank and we will suggest them.",
+        "max": 20
+      },
+      {
+        "id": "facts",
+        "label": "Facts, policies and offers to use",
+        "type": "longtext",
+        "required": true,
+        "help": "Prices, deposits, opening hours, links, cancellation rules, offers and dates. Only these will be used.",
+        "max": 5000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "help": "A few words, or paste a message you have sent before.",
+        "max": 800
+      },
+      {
+        "id": "limits",
+        "label": "Length limits",
+        "type": "text",
+        "required": false,
+        "help": "For example one text (160 characters) or your app's push limits.",
+        "max": 300
+      },
+      {
+        "id": "consent",
+        "label": "How customers agreed to hear from you",
+        "type": "text",
+        "required": false,
+        "help": "For example a ticked box at booking. It helps us add the right opt-out wording.",
+        "max": 300
+      },
+      {
+        "id": "avoid",
+        "label": "Words or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_journey",
+        "text": "Every moment the brief asks for has a message, in the chosen journey, channels and count.",
+        "weight": 4,
+        "pass_rule": "Each moment or trigger named in the brief has at least one message; the number of messages matches the count asked for; every message names one of the channels chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Every price, date, policy, name, link and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, fee, deposit, date, time, discount, address, staff name, review or result appears unless the brief gives it; unknown details are fill-in fields in square brackets such as [date] or [link]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The map and every message are finished and ready to load into a tool.",
+        "weight": 4,
+        "pass_rule": "Each message is final text, not notes; the map gives trigger, audience, timing, channel and stop rule for every message; key messages have two versions; fill-in fields are marked the same way throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_short",
+        "text": "Messages are short, plain and in the buyer's voice, with one clear next step.",
+        "weight": 3,
+        "pass_rule": "Texts are 160 characters or fewer, or within the limit in the brief, with counts shown; sentences are under 20 words; no all-caps or jargon; each message asks for one action at most.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "consent_and_rules",
+        "text": "Messages respect consent, privacy and review platform rules.",
+        "weight": 4,
+        "pass_rule": "Marketing texts and emails carry opt-out wording; no false urgency; review asks go to all customers, not only happy ones, and offer no reward; no message shares private health, legal or money details or gives that kind of advice.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "message_count",
+        "unit": "message",
+        "included": 10,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer messaging specialist for small businesses. Write a set of customer messages for the journey and channels below. First give a message map as a table: message name, trigger, who gets it, when it sends, channel, the link or screen it opens, and when it stops. Then write every message in my voice, within the channel's length limits (show the character count for texts and push notifications), with fill-in fields in square brackets for anything I have not given. Give two versions of the most important messages so I can test them. Add opt-out wording to marketing messages. Use only the facts, prices and policies I give; do not invent dates, fees, names or reviews. Review requests must go to every customer and must not offer rewards.",
+    "not_for": [
+      "Marketing campaigns or newsletters (see the email sequence jobs)",
+      "Messages to people who did not agree to hear from you",
+      "Review gating, paying for reviews or fake reviews",
+      "Medical, legal or financial advice inside the messages",
+      "Legal notices such as eviction, debt or formal rent demands",
+      "Setting up or sending the messages in your tools",
+      "Passwords, card numbers or patient records in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Bloom & Blade, a two-chair hair salon in Bristol. We want texts for bookings: a confirmation, a reminder 48 hours before, one 2 hours before, a reschedule note and a thank-you. Cancellations need 24 hours' notice or we keep the £15 deposit. Book online at bloomandblade.co.uk/book. Friendly, short, no emojis.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Harbor Paws, a vet clinic in Portland, Maine. We need email and text reminders for vaccines: due in 30 days, due this week, two weeks overdue, and the annual check-up. Phone (207) 555-0148, book at harborpaws.vet/book. No medical advice in the messages, just that it is time and how to book.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Crumb Theory bakery ships cakes across the UK. Write order emails: confirmation, dispatched, delayed (weather or courier), and arrived with storage tips. Our cakes keep 3 days in an airtight tin and 2 months frozen. Orders before 2pm ship the same day, Monday to Thursday. 6 messages in total.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Stridely is a running app. We need 20 push notifications: 8 for onboarding in week one, 6 to bring back users who have not logged a run in 10 days, and 6 for streaks. Push titles max 40 characters, body max 110. Each should say which screen it opens: Home, Log Run, Plans or Streaks. Two versions of the first three.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Northfield Insurance Agency, 4 agents in Ohio. A renewal reminder series for home and auto policies: email at 60 days, email and text at 30 days, text at 7 days. Tell clients what to check (address, drivers, mileage) and to call (614) 555-0123. Do not mention rates or give coverage advice. Sign off as 'The Northfield team'.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "appointment reminders",
+      "booking confirmation",
+      "text message templates",
+      "sms reminders",
+      "no-show messages",
+      "renewal reminders",
+      "reorder emails",
+      "order emails",
+      "push notifications",
+      "review request",
+      "welcome message",
+      "follow-up messages",
+      "enquiry reply",
+      "client update emails",
+      "customer messages"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      },
+      {
+        "note": "University of Kentucky pilot: of 577 patients sent a text reminder 24 hours ahead, 39% confirmed and 82% of those came; the author estimated a 1:6 return.",
+        "url": "https://uknowledge.uky.edu/dnp_etds/82"
+      }
+    ]
+  },
+  {
+    "id": "code-for-one-task",
+    "title": "Script, snippet or fix for one task",
+    "summary": "Working code for one job: an Apps Script or Python script, a Shopify, WordPress or front-end snippet, an HTML email template, a CI config, or a fix.",
+    "area": "product",
+    "deliverable": "Commented code for your platform, where it goes, step-by-step setup and permissions, and a test with sample data or on a copy. Risky changes get a dry run and a way to undo. Fixes explain the likely cause and show the corrected code or settings.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "kind",
+        "label": "What kind of code do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Google Sheets or Apps Script",
+          "Python script",
+          "Shopify theme code (Liquid, CSS)",
+          "WordPress code or settings",
+          "Front-end code (HTML, CSS, JavaScript or React)",
+          "HTML email template",
+          "Build and deploy pipeline config",
+          "Other small script"
+        ]
+      },
+      {
+        "id": "job",
+        "label": "New code or a fix?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Write new code",
+          "Fix code that breaks or is slow",
+          "Change code I already have"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many scripts, snippets or templates?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A related set, such as four email templates, counts as four.",
+        "max": 10
+      },
+      {
+        "id": "task",
+        "label": "What must it do?",
+        "type": "longtext",
+        "required": true,
+        "help": "In plain steps: what goes in, what should happen and what should come out.",
+        "max": 4000
+      },
+      {
+        "id": "platform",
+        "label": "Platform and versions",
+        "type": "text",
+        "required": true,
+        "help": "For example Google Workspace, Python 3.12 on Windows, Shopify Dawn 15, WordPress 6.6, Klaviyo or GitHub Actions.",
+        "max": 300
+      },
+      {
+        "id": "current_code",
+        "label": "Current code",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the code to fix or change. Replace any keys or passwords with XXXX.",
+        "max": 40000
+      },
+      {
+        "id": "errors",
+        "label": "Error messages or logs",
+        "type": "longtext",
+        "required": false,
+        "help": "Copy the exact text. Describe screenshots in words.",
+        "max": 8000
+      },
+      {
+        "id": "sample_data",
+        "label": "Sample data",
+        "type": "longtext",
+        "required": false,
+        "help": "A few rows, or made-up rows in the same layout as the real thing.",
+        "max": 8000
+      },
+      {
+        "id": "limits",
+        "label": "Rules and limits",
+        "type": "text",
+        "required": false,
+        "help": "Things it must not change, browsers or inboxes to support, how often it runs.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "does_the_task",
+        "text": "The code does each thing the brief asks, on the platform named.",
+        "weight": 5,
+        "pass_rule": "Each requirement in the brief maps to a named function, block or setting in the draft; the draft states the platform and version it targets and they match the brief; for fixes, the error from the brief is explained and the changed lines are marked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_details",
+        "text": "Every name in the code comes from the brief or is a marked placeholder, and no real secret appears.",
+        "weight": 5,
+        "pass_rule": "Every sheet, column, file, field, table, URL or setting name comes from the brief or is a clearly marked placeholder such as YOUR_SHEET_NAME; no real key, token or password appears; secrets are read from a placeholder or a settings store.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_and_testable",
+        "text": "The code is complete, with where it goes, setup steps and a test.",
+        "weight": 4,
+        "pass_rule": "Full code or exact setting values with no '...' gaps or 'add your logic here'; it says which file or place each piece goes; setup and permission steps are numbered; a test with sample data or on a copy gives the expected result.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_steps",
+        "text": "Comments and setup steps are plain enough for a non-developer.",
+        "weight": 3,
+        "pass_rule": "Each main block of code has a comment; setup steps are one action each; any technical term is explained the first time; no step says only 'configure as needed'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_to_try",
+        "text": "Risky changes are safe to try and easy to undo.",
+        "weight": 4,
+        "pass_rule": "Any code that deletes, overwrites, sends messages or changes live data has a dry run, a backup step or a test on a copy first, plus how to undo or switch it off; read-only code says it is read-only.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 399,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior developer who helps small businesses. Write (or fix) the code for the one task below on the platform and version I name. Give the complete code with comments, say exactly which file or place it goes, list the setup and permission steps in order, and show how to test it with sample data or on a copy before using it for real. If the code deletes, overwrites, sends messages or changes live data, add a dry-run mode or a backup step and explain how to undo it. For a fix, explain the likely cause from my error message and show the corrected lines. Use only the names, fields and files I give, use placeholders for anything else, and never put real keys or passwords in the code.",
+    "not_for": [
+      "Logging in to, deploying to or running code on your systems",
+      "Real keys, tokens or passwords in the brief or code (use placeholders)",
+      "Scraping, spam or getting round an app's terms or limits",
+      "Code for systems you do not own or have no right to change",
+      "Payment code that handles card numbers, or medical or safety-critical software",
+      "Whole apps or many features at once (one task per script)",
+      "A review of code without new code (see the code review job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Google Sheets for Pine & Pour coffee cart. Our 'Orders' tab gets rows from a Google Form. I want an Apps Script that runs every Monday at 7am, totals last week's orders by drink from column C (drink) and column E (price), writes the summary to a 'Weekly' tab and emails it to owner@pineandpour.com. I need a way to switch it off.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Shopify store Little Fern Knits on the Dawn 15 theme. I want a size chart to show under the Add to cart button on product pages, pulled from a product metafield called custom.size_chart (rich text). If the field is empty, show nothing. Please say which file to edit and how to test on a duplicate theme.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "We need 4 transactional email templates (order confirmation, shipped, refund issued, receipt) in one shared style for Klaviyo, for our candle shop Wick & Wander. Colours #2F3E46 and #F4E9DC, logo at the top, 600px wide, must work in Gmail and Outlook. Use Klaviyo merge tags for first name, order number and items.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Python 3.11 on Windows 11. Every month I get 40 to 60 supplier invoices as PDFs in C:\\Invoices\\Inbox with random names. I want a script that renames each to SupplierName_YYYY-MM-DD_Amount.pdf using the text inside and moves it into a folder per supplier. Show me what it will do before it changes anything. Sample PDF text pasted below.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "WordPress 6.6 site for Oakline Physio. Since Monday our contact form (WPForms Lite) says sent but nothing arrives at info@oaklinephysio.com. We use WP Mail SMTP with Google Workspace. Error log line: 'SMTP Error: Could not authenticate.' What is the likely cause and exactly which settings should I change?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "apps script",
+      "google sheets script",
+      "python script",
+      "shopify liquid",
+      "shopify snippet",
+      "wordpress fix",
+      "html email template",
+      "css fix",
+      "react component",
+      "github actions",
+      "ci config",
+      "script fix",
+      "automation script",
+      "bug fix",
+      "code snippet"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
+      }
+    ]
+  },
+  {
+    "id": "notes-to-minutes-and-updates",
+    "title": "Minutes, updates or reviews from your notes",
+    "summary": "Your notes or transcript turned into an agenda, formal minutes, an action log, a status or client update, a site report, a case summary or a lessons review.",
+    "area": "operations",
+    "deliverable": "The document you choose, true to your notes: an agenda with timings and papers; minutes with attendance, decisions and actions; an action log with owners, dates and status; an update with done, next, blocked and decisions needed; or a report or blameless review with timeline, causes and actions.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "doc_type",
+        "label": "What should we make from your notes?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Meeting or board agenda",
+          "Formal minutes",
+          "Action and decision log",
+          "Status update (done, next, blocked)",
+          "Client, seller or stakeholder update",
+          "Daily or weekly site report",
+          "Case summary for your records",
+          "Lessons, launch or quarter review",
+          "Incident report"
+        ]
+      },
+      {
+        "id": "notes",
+        "label": "Your notes, transcript or logs",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste them as they are. Only include what people agreed could be noted.",
+        "max": 60000
+      },
+      {
+        "id": "note_sets",
+        "label": "How many meetings, days or sets of notes?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. An action log built from four meetings counts as four.",
+        "max": 20
+      },
+      {
+        "id": "readers",
+        "label": "Who will read it?",
+        "type": "text",
+        "required": true,
+        "help": "For example the board, a client, a home seller or your team.",
+        "max": 200
+      },
+      {
+        "id": "details",
+        "label": "Meeting or project details",
+        "type": "longtext",
+        "required": false,
+        "help": "Date, place, who attended, who chaired, quorum rule, project name.",
+        "max": 2000
+      },
+      {
+        "id": "template",
+        "label": "Template or past example to follow",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "rules",
+        "label": "Rules or style to follow",
+        "type": "text",
+        "required": false,
+        "help": "Board rules, client reporting terms or house style.",
+        "max": 600
+      },
+      {
+        "id": "period",
+        "label": "Period covered or next meeting date",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_document",
+        "text": "The draft is the document type chosen, with that type's parts.",
+        "weight": 4,
+        "pass_rule": "Agenda: timed items, each with a lead and an aim or paper. Minutes: attendance, decisions and actions. Action log: owner, due date and status per item. Update: done, next, blocked and decisions needed. Report, case summary or review: timeline or progress, issues or causes, and next steps.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "true_to_notes",
+        "text": "Every decision, action, name, date and figure comes from the notes.",
+        "weight": 5,
+        "pass_rule": "No decision, action, owner, date, number, attendee or quote appears that the notes do not contain; gaps are marked [to confirm]; nothing the notes record as discussion is written up as a decision. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "actions_trackable",
+        "text": "Every action and open item can be followed up.",
+        "weight": 4,
+        "pass_rule": "Each action has an owner and due date from the notes, or is flagged 'no owner' or 'no date'; items past their date are marked overdue where the notes give dates; the document is finished text, ready to send or file.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_for_readers",
+        "text": "Written in plain words for the readers named in the brief.",
+        "weight": 3,
+        "pass_rule": "Sentences are short; acronyms are spelled out once; the most important decision or status is in the first three lines; an update or report fits on about one page.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "neutral_record",
+        "text": "A fair, neutral record that does not blame or rate people.",
+        "weight": 3,
+        "pass_rule": "Discussions are summarised without opinions on who was right; reviews and incident reports put causes in steps, tools and systems, not personal fault; no criticism of a named person appears unless the notes record it as an agreed fact.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "note_sets",
+        "unit": "set",
+        "included": 1,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced company secretary and project coordinator. Turn the notes below into the document I name, for the readers I name. Stay faithful to the notes: do not add decisions, actions, names, dates or numbers that are not there, and mark gaps as [to confirm]. For minutes, include attendance, a short summary of each item, the decisions made and the actions. For an action log, give each action an owner, due date and status, and flag any with no owner or date. For an update, use done, next, blocked and decisions needed. For a review or incident report, give a timeline, causes in terms of steps and systems rather than blame, and actions with owners. Write in plain words and keep updates to about one page.",
+    "not_for": [
+      "Notes or recordings made without people's consent",
+      "Recording decisions the meeting did not make",
+      "Legal advice on governance, company law or contracts",
+      "Judging or rating named people, such as staff reviews, student reports or candidate scores",
+      "HR investigation or disciplinary records",
+      "Logging in to your meeting, project or ticket tools",
+      "A quick action plan from one meeting (see meeting notes to action plan)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Formal minutes for the Riverside Community Garden board meeting on 3 March. Present: Ana Ruiz (chair), Tom Becker, Priya Shah, Leo Grant. Apologies: Mia Cole. Quorum is 3. Transcript pasted (45 minutes). They approved the £2,400 shed quote from Hartley Joinery and agreed Tom will draft the volunteer rota by 20 March.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Weekly client update for Brightside Bathrooms on the Kerr house job, for the homeowner Jenny Kerr. My notes: tiling 80% done, plumber back Thursday, vanity unit delayed by the supplier to the 14th, need Jenny to choose a grout colour by Wednesday. Next week: finish tiling, fit the shower screen.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Action log from our last four Monday team meetings at Copperleaf Studio (4 sets of notes pasted). Pull out every action, who owns it and its date, mark what is overdue as of 10 June, and flag anything with no owner.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Blameless incident report. Our booking site for Tidewater Kayaks was down for 3 hours on Saturday 12 July. Timeline from our Slack notes pasted: 9:05 card payments failing, 9:40 found an expired SSL certificate on the payments subdomain, 11:50 renewed and back up. 38 bookings missed, we phoned 21 customers. Readers: our 5 staff.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Daily site report for Mason & Doyle Builders, job at 14 Elm Road, 9 May. Voice note transcript pasted: rain until 10am, 6 on site (2 bricklayers, 2 labourers, electrician, me), first-floor blockwork 60% done, 3 pallets of blocks delivered at 8am, missing scaffold tie on the north side fixed by 1pm, building inspector visit at 2pm passed. Photos to attach: north wall, delivery.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "meeting minutes",
+      "board minutes",
+      "agenda",
+      "action log",
+      "action tracker",
+      "status update",
+      "client update",
+      "progress report",
+      "site report",
+      "incident report",
+      "postmortem",
+      "retrospective",
+      "case summary",
+      "project update",
+      "minutes from transcript"
+    ],
+    "demand_sources": [
+      {
+        "note": "A UK charity hiring a freelance minute taker pays £150 per board meeting at £30 an hour: about five hours, two in the meeting and three writing up the minutes.",
+        "url": "https://www.artinhealthcare.org.uk/2025/08/12/job-opportunity-freelance-minute-taker/"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists project managers at an average of $64 an hour, about £388 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/project-manager"
+      }
+    ]
+  },
+  {
+    "id": "financial-model-with-scenarios",
+    "title": "Financial model with scenarios: forecast, deal or round",
+    "summary": "A model with side-by-side cases: a 3-year forecast, budget versions, a rental deal, a hiring plan, a debt payoff plan, or a cap table and funding round.",
+    "area": "finance",
+    "deliverable": "An inputs table with the source of each figure and how sure it is; monthly or yearly workings; best, base and worst (or your own) cases side by side; key results such as profit, cash low point, runway, yield, interest or ownership; every formula written out; and a plain summary with ranked questions for your accountant, lender or lawyer.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "model_type",
+        "label": "What kind of model do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "3-year forecast for a business",
+          "Budget in versions (plan, cautious, stretch)",
+          "Updated forecast for the rest of the year",
+          "Hiring plan and people costs",
+          "Cash buffer for quiet months",
+          "Rental property deal",
+          "Debt list and payoff plan",
+          "Cap table and funding round"
+        ]
+      },
+      {
+        "id": "cases",
+        "label": "How many cases to compare?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers three, such as best, base and worst, or three deals. Enter 1 for a single plan.",
+        "max": 8
+      },
+      {
+        "id": "figures",
+        "label": "Your figures",
+        "type": "longtext",
+        "required": true,
+        "help": "Sales, costs, cash and loans, or deal costs, or share records. Paste tables as they are. No account numbers.",
+        "max": 40000
+      },
+      {
+        "id": "plans",
+        "label": "What you plan or expect",
+        "type": "longtext",
+        "required": true,
+        "help": "Hires, price changes, growth, the property you are weighing, or the round terms.",
+        "max": 6000
+      },
+      {
+        "id": "case_changes",
+        "label": "What should change between cases?",
+        "type": "longtext",
+        "required": false,
+        "help": "For example sales 20% lower, rates up 2 points, a grant not renewed or a bigger option pool.",
+        "max": 3000
+      },
+      {
+        "id": "period",
+        "label": "Start month and how far ahead",
+        "type": "text",
+        "required": true,
+        "help": "For example January 2027 for 36 months.",
+        "max": 100
+      },
+      {
+        "id": "currency",
+        "label": "Currency",
+        "type": "text",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "outputs",
+        "label": "Results you care about most",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Profit",
+          "Cash low point",
+          "Runway",
+          "Break-even",
+          "Yield and return",
+          "Interest paid and payoff date",
+          "Ownership after the round"
+        ]
+      },
+      {
+        "id": "questions",
+        "label": "Questions you want answered",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_the_brief",
+        "text": "The model is the type chosen, with the cases, time span and results the brief asks for.",
+        "weight": 4,
+        "pass_rule": "The number of cases matches the brief (three if none given); cases sit side by side with the results listed in the brief, or profit and cash low point if none are listed; the time span matches the brief; an updated forecast marks what changed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_figures_only",
+        "text": "Every input comes from the brief or is a labelled assumption.",
+        "weight": 5,
+        "pass_rule": "An inputs table lists each input with its source, 'from brief' or 'assumption' with a reason, and how sure it is; no rate, price, growth figure, valuation or cost is used in the workings unless it is in that table. Any unlisted input fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_workings",
+        "text": "The workings are complete enough to rebuild in a spreadsheet.",
+        "weight": 4,
+        "pass_rule": "Period-by-period workings cover the full time span with no 'and so on' gaps; every formula is written out, for example 'Closing cash = opening cash + money in - money out'; each case uses the same layout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "maths_checks",
+        "text": "The sums are right.",
+        "weight": 5,
+        "pass_rule": "Recompute at least three rows: totals add up; each period opens with the last period's closing figure; loan balances fall by the principal paid; ownership after a round totals 100%; results in the summary match the tables.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_summary_no_advice",
+        "text": "A plain summary explains the results without telling the buyer what to do.",
+        "weight": 4,
+        "pass_rule": "A summary of ten lines or fewer gives the key result for each case and at least three questions for an accountant, lender or lawyer, ranked by how much they could change the result; no sentence says to buy, borrow, invest or accept terms; results are called estimates.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "cases",
+        "unit": "case",
+        "included": 3,
+        "per_unit_usd": 30
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a fractional CFO who builds simple, honest spreadsheet models for small businesses. Using only my figures below, build the model I describe as markdown tables I can paste into a spreadsheet. Start with an inputs table that shows where each number came from (my figures, or an assumption with your reason) and how sure we are. Then show the monthly or yearly workings for the full period, with every formula written out. Compare the cases I ask for side by side (best, base and worst if I do not say) on the results that matter: profit, cash low point, runway, yield, interest or ownership. Check that every total adds up and that ownership totals 100%. End with a plain summary and a ranked list of questions to take to my accountant, lender or lawyer. Do not recommend whether to buy, borrow or invest. This is not financial, tax or legal advice.",
+    "not_for": [
+      "Investment, mortgage, securities or other regulated financial advice",
+      "Telling you whether to buy, borrow, invest or accept a deal",
+      "Tax or legal advice, including how to read SAFE or share terms",
+      "Valuing a business or setting a share price",
+      "Forecasts presented as audited, certain or guaranteed",
+      "Bank or broker logins, or full account numbers in the brief",
+      "Live links to your accounting software or spreadsheets",
+      "A 13-week cash forecast (see the 13-week cash flow forecast job)",
+      "A write-up of a model you already have (see the financial model write-up job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Three-year model for Loop Laundry, a laundromat we plan to open in Austin in March 2027. Fit-out $185,000, paid with $60,000 of our savings and a $125,000 SBA loan at 10.5% over 10 years. 32 washers at $4.50 a load; we expect 4 loads per machine per day at first, rising to 9 by month 12. Rent $7,800 a month, utilities about $3,900, part-time attendants at $16 an hour for 60 hours a week. Best, base and worst cases. When does cash run lowest?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Rental deal check. 2-bed flat in Leeds, asking £165,000. 25% deposit, interest-only mortgage at 5.2%, buying costs £6,800, rent £950 a month, letting agent 12%, service charge £1,400 a year, insurance £220. Stress test: rate at 6.5%, two empty months a year, and a £4,000 repair. Show gross and net yield, cash-on-cash return and break-even rent.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Cap table and seed round for Fieldnote (software). Founders: Maya 4,500,000 shares, Jon 3,500,000. Option pool 1,000,000 with 300,000 granted. One SAFE of $250,000 at a $6M post-money cap. New round: $1.5M at a $9M pre-money valuation, with the pool topped up to 10% after the round. Show before and after and what each founder owns. Compare with an $8M pre-money.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our charity, Hearth Youth Club, has a £312,000 budget for 2027. £95,000 of it is a council grant that may not be renewed in April. Build plan, cautious (grant lost from April) and stretch (new £40,000 trust grant from July) versions month by month, showing where cash dips and what cuts or income would close the gap. Budget lines pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Debt payoff plan for Delgado Landscaping. Business card $14,200 at 24.9%, minimum $430; equipment loan $22,000 at 8.9%, $610 a month, ends August 2029; line of credit $9,500 at 12%, interest only. We can put $2,500 a month in total toward debt. Compare highest-rate-first and smallest-balance-first, with payoff dates and total interest for each.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "financial model",
+      "3 year forecast",
+      "scenario analysis",
+      "best base worst case",
+      "budget scenarios",
+      "reforecast",
+      "rental property analysis",
+      "cap table",
+      "funding round model",
+      "dilution",
+      "safe conversion",
+      "hiring plan",
+      "debt payoff plan",
+      "startup model",
+      "projections"
+    ],
+    "demand_sources": [
+      {
+        "note": "A fractional CFO guide puts small-business retainers at $2,000 to $5,000 a month and lists a driver-based operating model and what-if questions on price and volume as core work.",
+        "url": "https://beancount.io/blog/2026/08/12/fractional-cfo-services-small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "batch-reply-drafts",
+    "title": "Draft replies to a batch of reviews or messages",
+    "summary": "One draft reply for each review, comment, email, return or claim you paste in, in your voice, with risky ones held for your decision.",
+    "area": "customer-support",
+    "deliverable": "A reply per item that answers its points, follows your policy, gives a next step and promises nothing you have not approved; an urgency order for inboxes; public and private versions for bad reviews; and a hold list of items that need your decision, with the reason for each.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "source",
+        "label": "What are the replies for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Online reviews",
+          "One serious complaint or bad review",
+          "Emails in your inbox",
+          "Return and refund requests",
+          "Warranty claims",
+          "Social comments and DMs",
+          "Community or group posts"
+        ]
+      },
+      {
+        "id": "item_count",
+        "label": "How many items?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 10 reviews, emails or comments.",
+        "max": 150
+      },
+      {
+        "id": "items",
+        "label": "Paste the reviews, messages or comments",
+        "type": "longtext",
+        "required": true,
+        "help": "Number each one. Remove card numbers, passwords and health details.",
+        "max": 60000
+      },
+      {
+        "id": "business",
+        "label": "Your business and what you sell",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "policies",
+        "label": "Your policies",
+        "type": "longtext",
+        "required": false,
+        "help": "Returns, refunds, warranty, delivery times and what staff may offer.",
+        "max": 6000
+      },
+      {
+        "id": "offers",
+        "label": "What you can offer to put things right",
+        "type": "text",
+        "required": false,
+        "help": "For example a free redo or 10% off the next visit. Nothing else will be offered.",
+        "max": 500
+      },
+      {
+        "id": "voice",
+        "label": "Your voice and sign-off",
+        "type": "text",
+        "required": false,
+        "help": "A few words or a past reply, and the name to sign with.",
+        "max": 800
+      },
+      {
+        "id": "where",
+        "label": "Where the replies will go",
+        "type": "text",
+        "required": false,
+        "help": "For example Google, Tripadvisor, Etsy, email or Instagram.",
+        "max": 200
+      },
+      {
+        "id": "never_say",
+        "label": "Things never to say",
+        "type": "text",
+        "required": false,
+        "help": "For example never confirm that someone was a patient.",
+        "max": 500
+      }
+    ],
+    "rubric": [
+      {
+        "id": "one_reply_each",
+        "text": "There is one reply for every item, and each answers that item's own points.",
+        "weight": 4,
+        "pass_rule": "The number of replies equals the number of items, in the same order and numbering; each reply mentions at least one specific detail from its item; no two replies share the same body text.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "facts_and_promises",
+        "text": "Replies use only the buyer's facts and promise nothing the buyer has not approved.",
+        "weight": 5,
+        "pass_rule": "No refund, discount, free item, date, staff name, cause or fix appears unless the brief's policies, offers or the item itself gives it; items that need an offer outside policy go on the hold list instead of getting a promise. Any invented promise fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_send",
+        "text": "Every reply is finished and the hold list is clear.",
+        "weight": 4,
+        "pass_rule": "Each reply is final text with a sign-off; risky items (legal threats, safety, health, abuse, refunds outside policy) are marked HOLD with the reason and the decision needed; inbox batches are ordered by urgency; bad reviews have a public and a private version.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "calm_plain_voice",
+        "text": "Short, calm and kind replies in the buyer's voice.",
+        "weight": 3,
+        "pass_rule": "Public review replies are under 120 words; no blame, sarcasm or arguing; plain words; the same stock sentence is not used in more than three replies.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "privacy_safe",
+        "text": "Replies protect privacy and follow review rules.",
+        "weight": 4,
+        "pass_rule": "No public reply shares order, health, address or account details or confirms someone was a patient or client; no reply asks a reviewer to change or remove a review or offers a reward for it; private matters move to a named private channel.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 249,
+      "size": {
+        "field": "item_count",
+        "unit": "item",
+        "included": 10,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a customer care lead for a small business. Below is a batch of reviews or messages, numbered. Write one reply for each, in my voice, in the same order. Each reply should answer that person's actual points, follow my policies, give a clear next step and promise nothing I have not approved. Keep public review replies under 120 words, calm and kind, and never share private details or confirm someone was a customer or patient. For bad reviews, give a short public reply and a private message. For an inbox, sort the emails by urgency first. Put anything risky (legal threats, safety, health, refunds outside policy) on a hold list with the reason and the decision I need to make, instead of answering it.",
+    "not_for": [
+      "Posting or sending the replies for you",
+      "Replies to legal claims, solicitor letters or regulator complaints",
+      "Confirming that someone is a patient or client",
+      "Fake reviews, or replies posing as customers",
+      "Asking people to change or remove reviews, or paying for reviews",
+      "Card numbers, passwords or health records in the brief",
+      "Reusable templates (see the review response and canned reply jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "12 Google reviews for Casa Lupe, a Mexican restaurant in San Diego, pasted and numbered. 9 are 4 or 5 stars. Review 4 says the carnitas were cold and the wait was 50 minutes; review 9 says a server was rude. We can offer a free appetizer on the next visit. Sign as Lupe, owner. Warm, short, a little playful.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "18 customer emails from this week for Northbay Bikes, an online bike parts shop. Returns are allowed within 30 days if unused, and we pay return postage only for faulty items. We dispatch in 2 working days. Sort by urgency, draft replies, and hold anything that mentions a chargeback or an injury.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "One bad Tripadvisor review for Gull Cottage B&B: the guest says the room smelled damp and we 'ignored' them. Our notes: they told us at 10pm, we offered another room which they turned down, and the dehumidifier was fixed the next morning. Write a calm public reply and a private email. We can offer 20% off a future stay.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "15 warranty claims for Ember Grills, pasted. Our warranty: burners 5 years, igniters 1 year, rust on the outer shell is not covered, proof of purchase needed. Approve, decline or ask for evidence for each, with the reason and next step. Flag any where our rules do not clearly say.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "10 Google reviews for Bright Smile Dental Studio, pasted. Never confirm that a reviewer is our patient or mention any treatment. Two reviews complain about billing; point them to our practice manager, Dana, on (312) 555-0190.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "review replies",
+      "respond to reviews",
+      "google review response",
+      "bad review reply",
+      "customer email replies",
+      "inbox replies",
+      "return request replies",
+      "warranty claim replies",
+      "comment replies",
+      "dm replies",
+      "complaint reply",
+      "reply drafts"
+    ],
+    "demand_sources": [
+      {
+        "note": "A 2026 review statistics roundup citing BrightLocal says 89% of consumers expect owners to respond to reviews, 81% expect a reply within a week and 50% are put off by canned replies.",
+        "url": "https://www.socialpilot.co/reviews/online-review-statistics"
+      },
+      {
+        "note": "Google's Business Profile help explains how owners reply to reviews and says helpful, positive replies show customers you are responsive.",
+        "url": "https://support.google.com/business/answer/3474050"
+      }
+    ]
+  },
+  {
+    "id": "one-page-rules-or-policy",
+    "title": "One-page rules, terms or policy sheet",
+    "summary": "Plain rules on one page: staff AI use, security and access, contractors, approvals, rotas, community, remote work, discounts, stays, customer terms or service levels.",
+    "area": "operations",
+    "deliverable": "Who it applies to; the rules as short do's and don'ts or a table, each with its reason; limits and approvers; how to ask for an exception; what happens when a rule is broken; a review date; and a short summary for staff or customers (for a community, a welcome post and joining message).",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "What are the rules for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Staff use of AI tools",
+          "Staff security and access",
+          "Contractors and freelancers",
+          "Spending approvals and sign-off",
+          "Rotas, time off and swaps",
+          "Community or comment rules",
+          "Remote working agreement",
+          "Discount rules",
+          "Booking and stay rules",
+          "Customer terms summary",
+          "Service levels and inbox rules",
+          "Committee terms of reference"
+        ]
+      },
+      {
+        "id": "sheets",
+        "label": "How many rule sheets?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one sheet on one topic.",
+        "max": 5
+      },
+      {
+        "id": "readers",
+        "label": "Who will read it?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Staff",
+          "Contractors",
+          "Customers",
+          "Members of a group or community",
+          "Board or committee"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and team",
+        "type": "text",
+        "required": true,
+        "help": "What you do, how many people and where you work.",
+        "max": 500
+      },
+      {
+        "id": "current_practice",
+        "label": "How things work now",
+        "type": "longtext",
+        "required": true,
+        "help": "What people do today and what has gone wrong.",
+        "max": 5000
+      },
+      {
+        "id": "must_cover",
+        "label": "Points the rules must cover",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "limits",
+        "label": "Limits, amounts and approvers",
+        "type": "longtext",
+        "required": false,
+        "help": "Spending limits, discount floors, response times, deposits and who approves.",
+        "max": 3000
+      },
+      {
+        "id": "existing_text",
+        "label": "Policy text you already have",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      },
+      {
+        "id": "tone",
+        "label": "Tone",
+        "type": "text",
+        "required": false,
+        "help": "For example friendly and firm.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_the_brief",
+        "text": "The sheet covers the topic and every point the brief lists.",
+        "weight": 4,
+        "pass_rule": "Each 'must cover' point and each limit or approver in the brief appears as a rule or table row; the sheet says who it applies to, matching the readers in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_terms_only",
+        "text": "Limits, amounts, times, names and terms come from the brief.",
+        "weight": 5,
+        "pass_rule": "No spending limit, discount, fee, deposit, response time, notice period, job title, tool or law appears unless the brief gives it; gaps are shown as [to decide] for the owner. Any invented term fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "complete_sheet",
+        "text": "The sheet has every standard part and fits on one page.",
+        "weight": 4,
+        "pass_rule": "It has who it applies to, the rules, limits and approvers, how to ask for an exception, what happens if a rule is broken, a review date and a two-to-four line summary; the main body is under 600 words per sheet.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_rules",
+        "text": "Rules are short do's and don'ts anyone can follow.",
+        "weight": 3,
+        "pass_rule": "Each rule is one sentence under 25 words that starts with an action word such as Do, Never, Ask or Tell; no legal phrases like 'hereinafter' or 'notwithstanding'; each rule has a short reason.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fair_not_legal",
+        "text": "Rules are fair, and the sheet does not pose as legal advice.",
+        "weight": 4,
+        "pass_rule": "No rule treats people differently by age, sex, race, religion, disability, pregnancy or another protected trait; the sheet does not claim to meet a law or be legally binding; customer terms and contractor sheets carry a line to check them with a lawyer.",
+        "critical": true,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "sheets",
+        "unit": "sheet",
+        "included": 1,
+        "per_unit_usd": 35
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations manager who writes clear one-page policies for small businesses. Write a one-page rules sheet on the topic below for the readers I name. Include: who it applies to; the rules as short do's and don'ts or a table, each with a one-line reason; limits and who approves; how to ask for an exception; what happens if a rule is broken; a review date; and a two-to-four line summary. Use only the limits, amounts, times and names I give, and mark anything I have not decided as [to decide]. Keep it under 600 words, in plain words. Do not present it as legal advice, and do not treat people differently for protected reasons.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Full terms of service, privacy policies or contracts",
+      "Employment law rulings, such as pay, dismissal or leave rights",
+      "Rules that treat people unequally for protected reasons",
+      "Passwords or access codes in the sheet",
+      "Setting up access or security settings in your tools",
+      "Full employee handbooks (see the handbook section job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Staff AI-use rules for Fernhill Accounting, 9 staff in Manchester. People already use ChatGPT for emails. Client names, payroll data and tax IDs must never go in. A second person must check any AI output before it goes to a client. Allowed tool: Microsoft Copilot under our company account only. Ask Rachel, the practice manager, for exceptions. Friendly but firm.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Plain booking and cancellation terms for Still Water Yoga. Classes are $22, or a pack of 10 for $190 that expires after 6 months. Cancel at least 12 hours before or the class is used. Private sessions need a $40 deposit, refunded if you cancel 48 hours before. Customers should be able to read it in a minute.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Spending approval rules for Greenway Landscaping, 14 staff. Crew leads can spend up to $250 on materials without asking; up to $2,000 needs Maria (ops manager); over $2,000 or any new supplier needs Dan (owner). Two people must check any payment to a new bank account. Card receipts go in the shared folder within 3 days.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Rota rules for The Copper Kettle café, 11 part-time staff. The rota is posted every Thursday for the week after next. Time off requests at least 2 weeks ahead, to Sam in the staff WhatsApp group. Swaps are fine if both people agree and Sam OKs it. At least one first-aider on every shift.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Community rules for the Oak & Ember Home Cooks Facebook group, 4,200 members. No selling without admin OK, no medical diet claims, be kind, and recipes must credit the source. First break: post removed and a warning; second: muted for 7 days; third: removed from the group. Also a welcome post for new members.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ai policy",
+      "acceptable use policy",
+      "staff rules",
+      "security policy",
+      "contractor policy",
+      "approval policy",
+      "spending limits",
+      "rota rules",
+      "community guidelines",
+      "remote work agreement",
+      "discount policy",
+      "booking terms",
+      "cancellation policy",
+      "service levels",
+      "terms of reference"
+    ],
+    "demand_sources": [
+      {
+        "note": "The FTC's Cybersecurity for Small Business guidance tells owners to have written policies covering basic security, give copies to employees and train staff on a regular schedule.",
+        "url": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity"
+      },
+      {
+        "note": "The SBA's cybersecurity guide tells small businesses to give each employee a separate account, limit access to what each person needs and train staff to spot phishing.",
+        "url": "https://www.sba.gov/business-guide/manage-your-business/strengthen-your-cybersecurity"
+      }
+    ]
+  },
+  {
+    "id": "technical-design-document",
+    "title": "Technical design, architecture review or code guide",
+    "summary": "A written technical document: a design doc, architecture or API review, technology choice, data model, integration plan, codebase guide or build plan.",
+    "area": "product",
+    "deliverable": "Goals, options compared on cost, skills, risk and fit, the chosen design, data model, interfaces and a build order; or a review with strengths, weak points and a ranked fix list (API reviews add test cases); or a guide to folders, main flows, data and fragile parts, with a first-week plan.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "doc_type",
+        "label": "What document do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Design doc for a new project or feature",
+          "Review of your current architecture",
+          "Technology choice with trade-offs",
+          "Data model and API outline",
+          "API design or API docs review",
+          "Plan to connect two tools or an AI assistant",
+          "Guide to your codebase",
+          "Risk notes on an inherited project",
+          "First-week plan for a new developer",
+          "Data dictionary from your schema",
+          "Front-end build plan or component spec"
+        ]
+      },
+      {
+        "id": "documents",
+        "label": "How many documents?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A codebase guide plus a first-week plan counts as two.",
+        "max": 4
+      },
+      {
+        "id": "goal",
+        "label": "What are you building or deciding?",
+        "type": "longtext",
+        "required": true,
+        "max": 4000
+      },
+      {
+        "id": "material",
+        "label": "Your code, spec, schema or diagrams",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the parts that matter, or describe diagrams in words. Remove keys, passwords and customer data.",
+        "max": 80000
+      },
+      {
+        "id": "stack",
+        "label": "Current stack and hosting",
+        "type": "text",
+        "required": true,
+        "help": "For example Next.js on Vercel, Postgres on Supabase, Stripe.",
+        "max": 400
+      },
+      {
+        "id": "team",
+        "label": "Team size and skills",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "limits",
+        "label": "Limits",
+        "type": "longtext",
+        "required": false,
+        "help": "Budget, deadline, expected users or data size, and rules you must follow.",
+        "max": 2000
+      },
+      {
+        "id": "options",
+        "label": "Options you want compared",
+        "type": "list",
+        "required": false,
+        "max": 4
+      },
+      {
+        "id": "readers",
+        "label": "Who will read it?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Developers",
+          "Founders or managers",
+          "Both"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_the_question",
+        "text": "The document is the type chosen and answers the question in the brief.",
+        "weight": 4,
+        "pass_rule": "The first section restates the decision or question from the brief; the type's core parts are present: design (goals, options, chosen design, data model, interfaces, risks, build order); review (strengths, weak points, ranked fixes); guide (folders, main flows, data, fragile parts); comparison (two to four options).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grounded_in_material",
+        "text": "Everything said about the current system comes from the material supplied.",
+        "weight": 5,
+        "pass_rule": "Every file, table, endpoint, service, version and number described as existing appears in the brief or material; new parts are labelled 'proposed'; unknowns are listed as open questions. Any component described as existing but absent from the material fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "actionable",
+        "text": "Recommendations are specific enough to act on.",
+        "weight": 4,
+        "pass_rule": "Each recommendation or fix names the file, component or endpoint it touches, an effort size (small, medium, large) and its place in the order; a design has a build order of at least three steps; a comparison ends with a pick and why, tied to the brief's limits.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_structure",
+        "text": "Clear headings and plain words a manager can follow.",
+        "weight": 3,
+        "pass_rule": "A summary of five lines or fewer opens the document; each technical term is explained once; diagrams are given as simple text diagrams or plain descriptions; headings follow the parts of the chosen type.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_tradeoffs",
+        "text": "Trade-offs and risks are honest and tied to the buyer's limits.",
+        "weight": 4,
+        "pass_rule": "At least three risks or trade-offs are named, each with its effect and a way to reduce it; choices are checked against the budget, team skills and scale in the brief; the document never claims a design is secure, compliant or certified.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "documents",
+        "unit": "document",
+        "included": 1,
+        "per_unit_usd": 99
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior software architect who writes clear documents for small teams. Using only the material below, write the document I ask for. Start with a five-line summary. For a design doc: goals, two or three options compared on cost, skills, risk and fit, the chosen design, data model, interfaces or endpoints, risks and a build order. For a review: strengths, weak points, scaling and cost risks, and a ranked fix list with the effort for each. For a codebase guide: folders, main flows, key files, data, how to run it and the fragile parts, plus a first-week plan for a new developer if I ask. Describe only what is in my material as existing, label anything new as proposed, and list unknowns as open questions. Explain technical terms once in plain words.",
+    "not_for": [
+      "Security or penetration testing",
+      "Sign-off for regulated, medical, payment or safety-critical systems",
+      "Logging in to your repositories, servers or cloud accounts (paste the material instead)",
+      "Documenting systems you do not own or have no right to share",
+      "Describing parts of your system that your material does not show",
+      "Writing the code itself (see the script, snippet or fix job)",
+      "Line-by-line review of a code change (see the code review job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Design doc for adding online ordering to Kettlebell Kitchen, our meal-prep business. Today: a Webflow site and a Google Sheet for orders. Customers should pick a weekly plan, pay by Stripe and choose delivery days; 300 to 500 orders a week. One part-time developer who knows JavaScript. Tool budget under $150 a month. Compare a small Next.js app on Supabase with a no-code tool like Softr.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Guide to our codebase for a new developer starting Monday. It is a Django 4.2 app for Parcel Pals, a local courier. Folder tree, settings.py, models.py and the three main views pasted. Explain the folders, how a delivery moves through the system, where data lives and the fragile parts, plus a day-by-day first-week plan. 2 documents.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Review our architecture. Tally Tutor runs on one $40 DigitalOcean droplet: a Node 18 API, Postgres on the same box, nightly cron backups to the same disk, and images stored on the server. 2,000 active students, growing 15% a month. Diagram described below. What are the weak points and what should we fix first?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Data dictionary from our MySQL schema (CREATE TABLE statements for 14 tables pasted) for Blue Fern Clinics' booking system. A plain description of each table and column, the keys, common joins and traps. Do not include any patient data.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Plan for letting our AI assistant look up order status in our Shopify store through an MCP-style connection. Which data and actions to expose, who can trigger them, permissions, rate limits, error handling and test steps. Store: Whisker & Wool, 1,200 orders a month. Read-only access only.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "technical design document",
+      "design doc",
+      "architecture review",
+      "tech stack choice",
+      "data model",
+      "api design review",
+      "integration plan",
+      "mcp integration",
+      "codebase documentation",
+      "developer onboarding",
+      "data dictionary",
+      "component spec",
+      "frontend build plan",
+      "system design"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists solution architects at an average of $105 an hour, about £636 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/solution-architect"
+      }
+    ]
+  },
+  {
+    "id": "code-review-with-fixes",
+    "title": "Code, query or spreadsheet review with fixes",
+    "summary": "A review of code you own: a pull request, AI-written code, a SQL query, theme files, a spreadsheet or an automation, with a fix for each problem.",
+    "area": "product",
+    "deliverable": "Findings tied to exact lines, cells or steps (bugs, security gaps, misplaced secrets, weak error handling, made-up functions, slow parts, silent failures), each with severity and the fix; tests that prove the fixes; and, as needed, a safe refactor order, replies to review comments or a rollback plan.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "review_type",
+        "label": "What should we review?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Pull request or code change",
+          "AI-written code",
+          "Security check of code or an API you own",
+          "Secrets and keys clean-up",
+          "Plan to refactor messy code",
+          "Answers to review comments",
+          "A proposed bug fix",
+          "Shopify theme changes",
+          "SQL query",
+          "Spreadsheet before you share it",
+          "Automation or workflow"
+        ]
+      },
+      {
+        "id": "lines",
+        "label": "About how many lines of code?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 500 lines. For one spreadsheet or one automation, enter 500.",
+        "max": 5000
+      },
+      {
+        "id": "code",
+        "label": "The code, diff, query, formulas or workflow steps",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste it here. Replace real keys and passwords with XXXX.",
+        "max": 100000
+      },
+      {
+        "id": "purpose",
+        "label": "What should it do?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "language",
+        "label": "Language, platform and versions",
+        "type": "text",
+        "required": true,
+        "help": "For example Python 3.12, Shopify Dawn 15, PostgreSQL 16, Google Sheets or Zapier.",
+        "max": 300
+      },
+      {
+        "id": "concerns",
+        "label": "What worries you",
+        "type": "longtext",
+        "required": false,
+        "help": "Bugs you have seen, slow parts, things you are unsure about.",
+        "max": 3000
+      },
+      {
+        "id": "comments",
+        "label": "Reviewer comments or bug report",
+        "type": "longtext",
+        "required": false,
+        "max": 8000
+      },
+      {
+        "id": "tests",
+        "label": "How it is tested now",
+        "type": "text",
+        "required": false,
+        "max": 500
+      }
+    ],
+    "rubric": [
+      {
+        "id": "reviews_what_was_asked",
+        "text": "The review covers the pasted code and every concern in the brief.",
+        "weight": 4,
+        "pass_rule": "Findings refer to the pasted code by line, cell, function or step; each concern and reviewer comment in the brief gets an answer; a refactor plan gives ordered steps; a fix check compares the fix with the bug report; an automation check adds a rollback plan.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_findings_only",
+        "text": "Every finding points to something really in the pasted code.",
+        "weight": 5,
+        "pass_rule": "Each finding quotes or names a line, cell, function or step that appears in the pasted material; no finding cites code, files or settings that are not in the brief; suspected issues outside the paste are listed as questions. Any made-up finding fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fixes_with_tests",
+        "text": "Each finding comes with a fix and a way to prove it.",
+        "weight": 4,
+        "pass_rule": "Each must-fix finding has corrected code or a precise change, plus a test (input and expected result) that would catch the problem; findings have a severity (high, medium, low) and are sorted by it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_findings",
+        "text": "Findings are short and plain.",
+        "weight": 3,
+        "pass_rule": "A summary of the top three issues opens the review; each finding states the problem, why it matters and the fix in three sentences or fewer; jargon is explained the first time.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safety_checked",
+        "text": "Security gaps and risky behaviour are caught and handled safely.",
+        "weight": 4,
+        "pass_rule": "The review states whether it found exposed secrets, unchecked input, missing permission checks, silent failures and destructive steps without a backup; any real secret is flagged to be replaced and not repeated in full; no exploit code or attack steps are given.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 499,
+      "size": {
+        "field": "lines",
+        "unit": "line",
+        "included": 500,
+        "per_unit_usd": 0.12
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior engineer doing a careful review of code I own. Review the code, query, spreadsheet formulas or workflow steps below against what it should do. List findings tied to exact lines, cells or steps: bugs, security gaps, keys or passwords in the wrong place, weak error handling, functions that do not exist, slow parts and silent failures. Give each a severity (high, medium, low), sort by severity, and for each must-fix item give the corrected code and a test that proves the fix. Answer each reviewer comment I include. Start with the top three issues in plain words. Only comment on what is in the paste; list anything else as a question. Do not write exploit code.",
+    "not_for": [
+      "Attacks, exploit code or testing systems you do not own",
+      "Running code on live systems or logging in to your accounts",
+      "Security certification, audits or compliance sign-off",
+      "Access to private repositories (paste the code instead)",
+      "Real keys or passwords in the paste (replace them with XXXX)",
+      "Writing new features (see the script, snippet or fix job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Review a pull request for Snapdragon Florist's order system: 340 lines of Python (Flask) that add discount codes at checkout. Diff pasted. I am worried a code could be used twice and that the total can go below zero. Our only tests are manual.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Check this Google Sheet before I send it to my bank: a 24-month cash plan for Tumble Tots Play Café with 9 tabs. Formulas from the Summary and Cash tabs pasted as text. Look for broken formulas, typed-in numbers that should be formulas, wrong ranges and unclear labels.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_3",
+        "text": "Our PostgreSQL 15 query for the gym chain's monthly revenue report takes 40 seconds (60 lines, pasted). Tables: members, payments, plans, locations. Please make it faster and correct; I think refunds are being counted twice.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "I used ChatGPT to write a Node.js script (about 220 lines, pasted) that copies new Shopify orders for Rivet Leather Co. into Airtable every 15 minutes. Check it for bugs, made-up functions, missing error handling and anything that could create duplicates. The Shopify token was in the code as a string; I replaced it with XXXX here.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our Zapier automation for Wildflower Weddings: new form entry, then create the client in HoneyBook, send a welcome email, add a row to a Google Sheet and post in Slack. Steps and filters pasted. Last month two couples got the welcome email twice and one got none. Find the causes, fix them and give a rollback plan.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "code review",
+      "pull request review",
+      "ai code check",
+      "security review",
+      "secrets check",
+      "refactor plan",
+      "sql query review",
+      "query optimization",
+      "spreadsheet check",
+      "formula errors",
+      "shopify theme review",
+      "automation check",
+      "zapier review",
+      "bug fix review"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists software engineers at an average of $88 an hour, about £531 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/software-engineer"
+      }
+    ]
+  },
+  {
+    "id": "operations-manual-or-role-guide",
+    "title": "Operations manual chapters or role handover guide",
+    "summary": "Chapters for your operations manual, service standards, a plan for your SOP library, or a guide, cover plan or handover pack for one role.",
+    "area": "operations",
+    "deliverable": "A manual outline or finished chapters with steps, standards and checks; brand and service standards with pass and fail examples; an SOP library plan; or a role guide, cover plan or handover pack with recurring tasks, open work, contacts, calendar, where files live, cover and key-person risks.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Operations manual outline",
+          "Operations manual chapters",
+          "Brand and service standards",
+          "Plan for your SOP library",
+          "Day-one pack for a new team member",
+          "Role guide for one job",
+          "Handover pack for one role",
+          "Absence cover plan",
+          "Key-person risk list and handover plan",
+          "Staff selling guide"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many chapters or roles?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one chapter, one role or one outline.",
+        "max": 10
+      },
+      {
+        "id": "how_it_works",
+        "label": "How the business or role works",
+        "type": "longtext",
+        "required": true,
+        "help": "Daily work, sites, team, customers, suppliers and tools, in your own words.",
+        "max": 20000
+      },
+      {
+        "id": "existing",
+        "label": "Existing SOPs, standards or notes",
+        "type": "longtext",
+        "required": false,
+        "max": 30000
+      },
+      {
+        "id": "role_details",
+        "label": "For a role: tasks, open work, contacts and calendar",
+        "type": "longtext",
+        "required": false,
+        "help": "Say where files and logins are kept. Never include passwords.",
+        "max": 10000
+      },
+      {
+        "id": "standards",
+        "label": "Standards staff must keep",
+        "type": "list",
+        "required": false,
+        "max": 30
+      },
+      {
+        "id": "readers",
+        "label": "Who will use it?",
+        "type": "text",
+        "required": false,
+        "help": "For example new franchise owners, shift leads or the person covering.",
+        "max": 300
+      },
+      {
+        "id": "tools",
+        "label": "Tools and systems you use",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "start_date",
+        "label": "When the handover or leave starts",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "The draft is the piece chosen, with that piece's parts.",
+        "weight": 4,
+        "pass_rule": "Outline: chapter list with what each must cover. Chapters: steps, standards and checks. Standards: rules with pass and fail examples. Library plan: list, order, owner, review date, folders and naming rules. Role, cover or handover: recurring tasks, open work, contacts, calendar, file locations and cover.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "from_buyer_notes",
+        "text": "Steps, standards, names and tools come from the buyer's notes.",
+        "weight": 5,
+        "pass_rule": "No step, standard, supplier, contact, tool, time or number appears unless the brief gives it; missing details are marked [owner to fill in]; nothing is called a legal or safety requirement unless the brief says so. Any invented step fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_secrets",
+        "text": "No passwords or login details appear anywhere.",
+        "weight": 5,
+        "pass_rule": "No password, PIN, door code, key, token or full account number appears; logins are described only by where they are kept, for example 'in the password manager, ask the owner'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_without_asking",
+        "text": "A new or covering person could use it without asking.",
+        "weight": 4,
+        "pass_rule": "Each task says who, when, how and where; recurring tasks have a frequency; each chapter ends with a check or sign-off; open work in a handover has a status and a next step.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_steps",
+        "text": "Plain, numbered steps.",
+        "weight": 3,
+        "pass_rule": "Steps are numbered, one action each and under 25 words; headings are clear; words special to the business are explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 599,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations consultant who writes manuals and handover documents for small businesses. Using only my notes below, write the piece I ask for. For a manual outline, list the chapters and what each must cover. For chapters, write numbered steps, standards and a check at the end of each. For service standards, give each rule with a pass and a fail example. For a role guide or handover pack, list recurring tasks with how often, open work with status and next step, contacts, the calendar, where files live, who covers what, and the tasks only one person knows. Never include passwords or codes; say only where logins are kept. Mark anything missing as [owner to fill in]. Use plain words and short steps.",
+    "not_for": [
+      "Passwords, door codes or logins in the document",
+      "Safety-critical or regulated procedures that need expert sign-off",
+      "Legal advice on franchise agreements or employment contracts",
+      "Invented steps or standards the business does not use",
+      "Staff performance reviews or judging named people",
+      "A single procedure (see the SOP job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Outline plus the first two chapters of an operations manual for Saffron Street Kitchen, 3 sites, planning to franchise. Notes pasted on opening and closing, food storage, cash-up and the staff rota. Readers: new franchise owners. 3 pieces (the outline counts as one).",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Handover pack for our office manager, Helen, who leaves on 30 April after 8 years at Clarke & Sons Plumbing. Notes pasted on her weekly tasks (payroll prep, supplier orders, van MOTs, insurance renewals), open items, key contacts, the yearly calendar and where files live. Logins are in 1Password; do not list them.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Brand and service standards for Oat & Anchor coffee shops (4 sites). Greet within 30 seconds, name on every cup, tables wiped within 5 minutes of guests leaving, aprons over black tops, chalkboard updated by 8am. Give a pass and a fail example for each.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Key-person risk list and handover plan. At Hollow Tree Print Studio, only Raj knows how to calibrate the large-format printer, run our Etsy order export and update the quarterly VAT spreadsheet. Raj starts 6 weeks of paternity leave on 1 June. Plan who learns what, a practice run and the risks.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Staff selling guide for Pebble & Pine, a gift shop with 5 staff. Best sellers: candles ($28), local honey ($12), linen tea towels ($18). Add-ons we suggest: honey with tea towels, gift wrap for $4. Include how to greet, what to ask, handling 'just looking', and a five-minute morning briefing.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "operations manual",
+      "franchise manual",
+      "brand standards",
+      "service standards",
+      "sop library",
+      "handover pack",
+      "handover document",
+      "role guide",
+      "absence cover plan",
+      "key person risk",
+      "onboarding pack",
+      "staff selling guide",
+      "process documentation"
+    ],
+    "demand_sources": [
+      {
+        "note": "A Contra freelancer offers standard operating procedures, user guides and operations manuals at $100 per document with one revision, plus a $500-a-month document management service.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ]
+  },
+  {
+    "id": "release-and-incident-runbook",
+    "title": "Release, go-live or incident runbook",
+    "summary": "A step-by-step runbook or checklist for a deployment, go-live, rollback, site update, app store release or repeat incident, built from your stack and process.",
+    "area": "product",
+    "deliverable": "Before, during and after steps with owners, timings, checks and stop rules; the rollback trigger and exact rollback steps; smoke and regression checks ranked by risk; a launch security checklist where asked; who to call, by role; and how to tell users.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "runbook_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Deployment checklist",
+          "Rollback plan for one release",
+          "Go-live runbook for a new site or app",
+          "Environment and server set-up checklist",
+          "Pre-release readiness check",
+          "Mobile app store release plan",
+          "WordPress update plan",
+          "Runbook for a repeat incident",
+          "Launch security checklist",
+          "Regression checklist"
+        ]
+      },
+      {
+        "id": "runbooks",
+        "label": "How many runbooks or checklists?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one.",
+        "max": 5
+      },
+      {
+        "id": "stack",
+        "label": "Your stack and hosting",
+        "type": "longtext",
+        "required": true,
+        "help": "Languages, framework, hosting, database, DNS and CI tools, with versions if you know them.",
+        "max": 3000
+      },
+      {
+        "id": "process",
+        "label": "How you release or respond now",
+        "type": "longtext",
+        "required": true,
+        "help": "Today's steps, who does them and what went wrong before.",
+        "max": 6000
+      },
+      {
+        "id": "change",
+        "label": "The change, launch or incident",
+        "type": "longtext",
+        "required": false,
+        "help": "What is being released, or the symptoms and timeline of the incident.",
+        "max": 6000
+      },
+      {
+        "id": "environments",
+        "label": "Environments",
+        "type": "text",
+        "required": false,
+        "help": "For example local, staging and live.",
+        "max": 300
+      },
+      {
+        "id": "team",
+        "label": "Team roles",
+        "type": "list",
+        "required": false,
+        "help": "Who deploys, who approves and who is on call. Roles are enough.",
+        "max": 15
+      },
+      {
+        "id": "window",
+        "label": "Release date and time window",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "users",
+        "label": "Who must be told and how",
+        "type": "text",
+        "required": false,
+        "help": "For example customers by email and staff on Slack.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_the_change",
+        "text": "The runbook is the type chosen and built for the stack and change in the brief.",
+        "weight": 4,
+        "pass_rule": "Steps name the tools, hosts, environments and roles from the brief; the type's parts are present: before, during and after steps (deploy, go-live, update), trigger and steps (rollback), symptoms, checks, fixes and escalation (incident), or checks ranked by risk (checklists).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "grounded_names",
+        "text": "Systems, commands and people come from the brief or are marked placeholders.",
+        "weight": 5,
+        "pass_rule": "No server, service, tool, command, version or person appears that the brief does not give, except marked placeholders such as <APP_NAME>; no real secret or key appears; unknowns are listed as questions. Any invented system fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "stop_and_rollback",
+        "text": "Every risky step has a check, a stop rule and a way back.",
+        "weight": 5,
+        "pass_rule": "Each step that changes code, data, DNS or settings has a check that shows it worked and a stop or go rule; a backup is confirmed before the first change; deploy, go-live, update and rollback runbooks give a rollback trigger and ordered rollback steps, including the database where relevant.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_under_pressure",
+        "text": "Someone under pressure can follow it step by step.",
+        "weight": 4,
+        "pass_rule": "Steps are numbered with an owner role and a time or order; each has an expected result; who to call is listed by role; how and when to tell users is included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_steps",
+        "text": "Plain, short steps and tick boxes.",
+        "weight": 3,
+        "pass_rule": "One action per step, under 25 words; technical terms are explained once; checklists use tick boxes; an opening line says when to use the runbook.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 399,
+      "size": {
+        "field": "runbooks",
+        "unit": "runbook",
+        "included": 1,
+        "per_unit_usd": 59
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a DevOps lead who writes runbooks for small teams. Using my stack and current process below, write the runbook or checklist I ask for. Give numbered before, during and after steps, each with an owner role, a time or order, the expected result, a check that it worked and a stop-or-go rule. Confirm a backup before the first change. Include the rollback trigger and the exact rollback steps, including the database where relevant. Add smoke and regression checks ranked by risk, who to call by role, and how and when to tell users. For an incident runbook, give symptoms, checks, fixes and when to escalate. Use only the tools and systems I name, mark anything else as a placeholder, and never include real keys or passwords.",
+    "not_for": [
+      "Running the deployment or logging in to your servers",
+      "Security or penetration testing",
+      "Real secrets, keys or passwords in the runbook",
+      "Compliance sign-off for medical, safety or financial systems",
+      "Writing the code or pipeline config (see the script, snippet or fix job)",
+      "A write-up of what happened in an incident (see the minutes, updates or reviews job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Go-live runbook for the new Juniper Dental website on Saturday 8 March, 7am to 10am. Moving from Wix to WordPress on SiteGround. DNS is at GoDaddy, and email stays on Google Workspace, so the MX records must not change. Team: me (owner), our freelance developer Kai, and our receptionist, who tests the booking form. Include the rollback trigger.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "WordPress update plan for Hilltop Outfitters' WooCommerce shop: WordPress 6.2 to 6.6, WooCommerce 7.9 to 9.1, 18 plugins (list pasted), Astra theme with a child theme. Hosted on WP Engine with a staging site. What order, what to test after each step, and how to roll back.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Deployment checklist for Ledgerly, our invoicing app: Rails 7 on Heroku, Postgres, Sidekiq, GitHub Actions for tests. We deploy on Tuesdays. Last month a migration locked the invoices table for 4 minutes. Team: 2 developers and a support lead who tells customers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Runbook for the next time our Shopify store's product feed to Google Merchant Center fails. It has happened 3 times: products disapproved for missing GTINs after an app update. The feed app is Simprosys. Symptoms, checks, fixes, and who to call (me, our assistant Rosa, the app's support team).",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "deployment checklist",
+      "release checklist",
+      "rollback plan",
+      "go-live runbook",
+      "launch checklist",
+      "runbook",
+      "incident runbook",
+      "wordpress update plan",
+      "app store release",
+      "environment setup",
+      "regression checklist",
+      "security checklist",
+      "devops"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists DevOps engineers at an average of $100 an hour, about £607 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/devops-engineer"
+      }
+    ]
+  },
+  {
+    "id": "event-plan-and-run-sheet",
+    "title": "Event plan and run sheet",
+    "summary": "A plan and minute-by-minute run sheet for one event: a party, launch, pop-up, market stall, in-store event, webinar, trade show booth, LIVE sale or wedding day.",
+    "area": "operations",
+    "deliverable": "A plan with the goal, budget lines, a countdown with owners, and supplier, stock and kit lists. Layout notes, a staff rota, risks with backups and how to count results. A minute-by-minute run sheet from set-up to pack-down. Any extras you tick, such as a booth opener or a stock and float sheet.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "event_type",
+        "label": "What kind of event?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Party, launch or community event",
+          "Pop-up shop or market stall",
+          "In-store event",
+          "Workshop or class",
+          "Webinar",
+          "Trade show booth",
+          "LIVE selling session",
+          "Wedding or private event (your part)",
+          "Other event"
+        ]
+      },
+      {
+        "id": "events",
+        "label": "How many separate events?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one event. The same market every week counts as one.",
+        "max": 6
+      },
+      {
+        "id": "details",
+        "label": "Date, place, times and audience",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "goal",
+        "label": "What should the event achieve?",
+        "type": "text",
+        "required": true,
+        "help": "For example 60 sign-ups, $3,000 in sales or 40 booth leads.",
+        "max": 300
+      },
+      {
+        "id": "budget",
+        "label": "Budget",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "products",
+        "label": "What you sell or show",
+        "type": "longtext",
+        "required": false,
+        "help": "Products, prices and past sales per event, if you have them.",
+        "max": 4000
+      },
+      {
+        "id": "team",
+        "label": "Your team and suppliers",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "space",
+        "label": "The space",
+        "type": "text",
+        "required": false,
+        "help": "Room or stall size, tables, power, Wi-Fi and parking.",
+        "max": 500
+      },
+      {
+        "id": "extras",
+        "label": "Extra parts you want",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Layout plan",
+          "Stock list and cash float",
+          "Staff rota and kit list",
+          "Booth opener, questions and lead fields",
+          "Product order and talking points",
+          "Talk outline and slide list",
+          "Short invite text",
+          "What you need from clients or other vendors"
+        ]
+      },
+      {
+        "id": "past_results",
+        "label": "Past results",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_the_event",
+        "text": "The plan fits the event in the brief and includes every extra part asked for.",
+        "weight": 4,
+        "pass_rule": "Date, place, times, audience and goal match the brief; every extra part ticked in the brief has its own section; the run sheet runs from set-up to pack-down.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_facts",
+        "text": "Budget, prices, suppliers, people and past results come from the brief.",
+        "weight": 5,
+        "pass_rule": "No supplier, venue detail, price, budget amount, attendance figure or person appears that the brief does not give; estimates such as stock counts show the brief figures they are worked from; gaps are marked [to confirm]. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plan_complete",
+        "text": "The plan has goal, budget, countdown, lists, risks and results.",
+        "weight": 4,
+        "pass_rule": "Budget lines add up to no more than the budget when one is given; a countdown timeline has owners and dates; supplier and kit lists are included; at least three risks each have a backup; two or more ways to count results are named.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "run_sheet_usable",
+        "text": "The run sheet is minute-by-minute, with owners.",
+        "weight": 4,
+        "pass_rule": "Run sheet rows have a clock time, task, owner and notes; times are in order with no gap over 30 minutes while the event is open; set-up and pack-down are included.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_printable",
+        "text": "Plain, easy to scan and easy to print.",
+        "weight": 3,
+        "pass_rule": "Tables and checklists with lines under 20 words; no jargon; the run sheet can be printed and followed on the day without the rest of the plan.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "events",
+        "unit": "event",
+        "included": 1,
+        "per_unit_usd": 59
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced event planner for small businesses. Plan the event below and write a minute-by-minute run sheet. The plan should give the goal, budget lines that stay within my budget, a countdown timeline with owners and dates, supplier, stock and kit lists, layout notes, a staff rota, at least three risks with a backup for each, and how we will count results. The run sheet should list clock time, task, owner and notes from set-up to pack-down. Add any extra parts I ask for. Use only my budget, prices, suppliers, people and past results; show how any estimate is worked out and mark gaps as [to confirm]. Use tables and checklists I can print.",
+    "not_for": [
+      "Booking venues, suppliers or staff for you",
+      "Safety plans for large public events that need licensed review",
+      "Licences, permits or legal advice on events, alcohol or food",
+      "Full promotion campaigns (see the webinar or event promotion pack)",
+      "Guarantees of attendance or sales",
+      "Taking payments or selling tickets for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Pop-up stall plan for Juniper Jars (homemade jams and chutneys) at Ashford Farmers Market, Saturday 14 June, 8am to 2pm. 3m x 3m pitch, one table provided, no power. At past markets we sold about 70 jars; jars are £5 or 3 for £13. Two of us. We bring a card reader and cash. Include a layout, stock list and cash float.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Trade show booth plan for Fieldpoint Surveys at the Midwest Builders Expo in Columbus, 3 to 4 October, 10x10 booth. Goal: 80 qualified leads from builders with 10 or more staff. Budget $6,500 including the $3,200 booth fee. Three staff. Need a 20-second opener, qualifying questions, lead capture fields and a staff rota.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Run sheet for a 45-minute TikTok LIVE for Glowberry Skincare, Thursday 7pm. Products in order: cleanser $18, vitamin C serum $32, night cream $28, and a bundle of all three for $65 during the LIVE only. Host Mia, with Ali on comments. Include offer timing, talking points and a host checklist.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "In-store late opening at Little Folio bookshop, Friday 5 December, 6 to 9pm, with a signing by local writer Sam Okafor. Budget £400. Mulled apple juice and mince pies from Crumbs Bakery next door. We expect 40 to 60 guests. Need a plan, run sheet, a short invite for our 900-person email list and how to count results.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "event plan",
+      "run sheet",
+      "event timeline",
+      "pop-up shop plan",
+      "market stall",
+      "trade show booth",
+      "booth plan",
+      "webinar plan",
+      "live selling",
+      "in-store event",
+      "launch party",
+      "wedding day timeline",
+      "event checklist",
+      "event budget"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists events managers at an average of $62 an hour, about £375 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/events-manager"
+      }
+    ]
+  },
+  {
+    "id": "brand-name-tagline-voice",
+    "title": "Brand names, taglines or voice guide",
+    "summary": "A naming shortlist, name screening, product naming system, tagline set, brand voice guide or one-file brand brief, built from your positioning and your own words.",
+    "area": "marketing",
+    "deliverable": "Names: 40 ideas across five styles cut to a shortlist of 8, each with meaning, risks and the checks to run. Taglines: 20 options by angle with the top five explained. Voice: traits with do and don't examples, words to use and avoid, and rewrites of your copy. Or a one-file brand brief.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Name ideas for a business or product",
+          "Screening of names you like",
+          "Naming system for a product range",
+          "Taglines",
+          "Brand voice guide",
+          "Product or support voice and terms guide",
+          "One-file brand brief"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, such as names or a voice guide. Names plus taglines counts as two.",
+        "max": 4
+      },
+      {
+        "id": "what",
+        "label": "What the business or product is",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "buyers",
+        "label": "Who buys it",
+        "type": "text",
+        "required": true,
+        "max": 500
+      },
+      {
+        "id": "positioning",
+        "label": "What makes you different",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "rivals",
+        "label": "Rivals and their names or taglines",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "samples",
+        "label": "Samples of your writing",
+        "type": "longtext",
+        "required": false,
+        "help": "Website text, emails or posts. Needed for a voice guide or brand brief.",
+        "max": 20000
+      },
+      {
+        "id": "likes",
+        "label": "Names, words or styles you like or dislike",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "names_to_screen",
+        "label": "Names to screen",
+        "type": "list",
+        "required": false,
+        "help": "For a screening, list your top names.",
+        "max": 15
+      },
+      {
+        "id": "markets",
+        "label": "Markets and languages to check",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "delivers_piece",
+        "text": "The draft is the piece chosen, in the amounts promised.",
+        "weight": 4,
+        "pass_rule": "Names: at least 40 ideas across five named styles, cut to a shortlist of 8. Taglines: at least 20 across four or more angles, with the top five explained. Screening: every name the brief lists is checked. Voice guide: three to five traits, each with do and don't examples. Brand brief: facts, buyers, products, claims and tone.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "from_buyer_material",
+        "text": "Facts, claims and voice examples come from the buyer's brief and writing.",
+        "weight": 5,
+        "pass_rule": "No product fact, award, customer count, result or promise appears in a rationale, tagline, brief or example unless the brief gives it; voice traits and rewrites are built from the buyer's own samples. Any invented claim fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "choice_ready",
+        "text": "Each option comes with what the buyer needs to choose.",
+        "weight": 4,
+        "pass_rule": "Each shortlisted name and top tagline has its meaning, its fit with the positioning and at least one risk; name drafts list the checks still to run (trademark, domain, social handles) as checks, not results; voice guides include words to use and avoid.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_sayable",
+        "text": "Clear, short and easy to say.",
+        "weight": 3,
+        "pass_rule": "Explanations are one or two plain sentences; each shortlisted name has a say-it-aloud and spelling note; the guide avoids jargon such as 'synergy' or 'best-in-class'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "original_no_legal_claims",
+        "text": "Options are original and make no legal or unproven claims.",
+        "weight": 4,
+        "pass_rule": "No name or tagline copies or closely echoes a rival named in the brief; the draft never says a name is available, cleared or safe to trademark; taglines do not claim 'best', 'number one' or guaranteed results unless the brief proves it.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 449,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 79
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a brand strategist and namer. Using only what I tell you about my business, buyers, rivals and positioning, create the piece I ask for. For names: 40 ideas across five styles (descriptive, invented, metaphor, compound, founder or place), then a shortlist of 8 with the meaning, fit, risks, a say-it-aloud note and the checks I still need to run (trademark, domain, social handles). For taglines: 20 options across different angles with the top five explained. For a voice guide: three to five traits with do and don't examples, words to use and avoid, and rewrites of my own copy. Do not copy or echo my rivals, do not claim a name is available or safe to trademark, and do not invent facts or awards.",
+    "not_for": [
+      "Trademark searches, clearance or legal advice",
+      "Domain or social handle availability checks",
+      "Logos, colours or visual identity",
+      "Copying a rival's name, slogan or voice",
+      "Full website or ad copy (see the website page copy and paid ads jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Name ideas for a new mobile dog grooming van in Brighton. Owner Kate has 12 years of grooming experience. Calm, no cages, one dog at a time, eco shampoos. Buyers: busy owners and older dogs who hate salons. Rivals: Pampered Paws and The Dog House Brighton. I like short, warm names, not puns.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Brand voice guide for Northwind Cycles, a bike repair shop in Duluth. Website text and five past Instagram captions pasted. We want to sound like a friendly neighbour who knows bikes, not a sports brand. Include words to use and avoid, and rewrite the intro of our About page.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Taglines for Plotline, a garden design studio in Melbourne for small city courtyards. Positioning: big ideas for small spaces, low-water native plants, design to planting in 6 weeks. Rivals' taglines: 'Gardens for life' and 'Design. Build. Grow.' 20 options.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Screen our top 4 names for a herbal tea brand selling in the UK, France and Germany: Brewhaven, Leafly, Tisanea, Calma Cup. Check spelling, sound, meaning in French and German, and confusion with rivals Pukka and Teapigs. List the checks to run before we commit.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Naming system for Steady Socks: 4 lines (running, hiking, office, kids), each in 3 thicknesses. Current names are a mess (list pasted). Give naming rules, new names for the current items and 5 examples for future ones.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "business name ideas",
+      "brand name",
+      "product name",
+      "naming",
+      "name shortlist",
+      "tagline",
+      "slogan",
+      "brand voice guide",
+      "tone of voice",
+      "style guide",
+      "brand brief",
+      "naming system",
+      "name screening"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists brand strategists at an average of $81 an hour, about £494 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/brand-strategist"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists copywriters at an average of $67 an hour, about £408 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/copywriter"
+      }
+    ]
+  },
+  {
+    "id": "shoot-brief-and-shot-list",
+    "title": "Photo or video shoot brief and shot list",
+    "summary": "A brief, shot list and day plan for a product photo shoot, product video, batch of short videos, founder ad shoot, creator video or animation.",
+    "area": "content",
+    "deliverable": "Goal and look; must-have shots by product and angle with purpose, background, props and crop; a scene list or storyboard with on-screen text and timing; a shoot day schedule and packing list; sizes per channel; and short script lines where needed.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "shoot_type",
+        "label": "What are you planning?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Product photo shoot",
+          "Product video (demo or unboxing)",
+          "Batch of short videos in one day",
+          "Founder or creator ad shoot",
+          "Brief for a creator or influencer",
+          "Storyboard for an animator"
+        ]
+      },
+      {
+        "id": "items",
+        "label": "How many products or videos?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 10.",
+        "max": 60
+      },
+      {
+        "id": "products",
+        "label": "Products or topics",
+        "type": "longtext",
+        "required": true,
+        "help": "Names, colours, sizes and what matters most about each.",
+        "max": 6000
+      },
+      {
+        "id": "channels",
+        "label": "Where will the photos or videos be used?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Your website or shop",
+          "Amazon or other marketplaces",
+          "Instagram",
+          "TikTok",
+          "Facebook",
+          "YouTube",
+          "Email",
+          "Print"
+        ]
+      },
+      {
+        "id": "look",
+        "label": "Look and feel",
+        "type": "longtext",
+        "required": false,
+        "help": "Brand colours, mood and references you like. Describe them in words.",
+        "max": 2000
+      },
+      {
+        "id": "logistics",
+        "label": "Budget, date and location",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "crew",
+        "label": "Who is shooting",
+        "type": "text",
+        "required": false,
+        "help": "For example yourself on a phone, a photographer or a creator.",
+        "max": 300
+      },
+      {
+        "id": "must_haves",
+        "label": "Must-have shots",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "scripts",
+        "label": "Do you need short script lines?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "rules",
+        "label": "Brand or platform rules",
+        "type": "text",
+        "required": false,
+        "help": "For example a white background for Amazon main images, or words a creator must not say.",
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_every_item",
+        "text": "Every product or video in the brief has its shots or scenes.",
+        "weight": 4,
+        "pass_rule": "Each product or video named in the brief appears with at least two shots or scenes; every must-have shot in the brief is included; each shot is tagged to a channel chosen in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_facts_only",
+        "text": "Products, claims, people and places come from the brief.",
+        "weight": 5,
+        "pass_rule": "No product feature, claim, price, model, location or result appears that the brief does not give; script lines and on-screen text state only facts in the brief; gaps are marked [to confirm]. Any invented claim fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "shoot_day_ready",
+        "text": "A crew could shoot from it without more questions.",
+        "weight": 4,
+        "pass_rule": "Each shot lists the angle or shot size, background, props and crop or ratio; a day schedule gives time blocks and set changes; a packing or prop list is included; video scenes give length and on-screen text.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_on_set",
+        "text": "Plain and easy to scan on set.",
+        "weight": 3,
+        "pass_rule": "The shot list is a numbered table; each description is under 20 words; photo terms such as 'flat lay' or 'B-roll' are explained once.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "purpose_and_rules",
+        "text": "Each shot has a purpose, and rules and disclosure are respected.",
+        "weight": 4,
+        "pass_rule": "Every shot or scene says what it is for (main image, detail, lifestyle, ad hook); sizes are given per channel; creator briefs include paid-partnership wording such as #ad; nothing asks to copy another brand's shoot.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "items",
+        "unit": "item",
+        "included": 10,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a creative producer who plans product shoots for small brands. Using my products and channels below, write a shoot brief and shot list. Include the goal and look; every shot by product and angle with its purpose, background, props and crop or ratio, tagged to the channel it is for; a scene list or storyboard with on-screen text and timing for any video; a shoot day schedule with time blocks and set changes; a packing and prop list; and short script lines if I ask for them. For a creator brief, add dos and don'ts and #ad disclosure wording. Use only the product facts I give, and do not copy another brand's shoot.",
+    "not_for": [
+      "Taking photos, filming or editing",
+      "Model releases, location permits or legal consent forms",
+      "Copying another brand's shoot or images",
+      "Health or results claims in scripts that the brief cannot prove",
+      "Full scripts for videos over a minute long (see the video script job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Product photo shot list for Tallow & Thyme, handmade soaps. 12 soaps and 3 gift boxes, for our Shopify store, Etsy and Instagram. Look: warm natural light, linen and wood, sage green accents. I am shooting myself with a Sony a6400 at home on one Saturday. Must-haves: a white-background main image for each, one lather shot, one gift box flat lay.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "One-day plan to film 10 short TikTok and Reels videos for Spindle Coffee Roasters. Topics: how we roast, three brewing tips, a customer favourite (Ethiopia Guji, $19), behind the scenes and packing orders. Shot on an iPhone 15 by me and my barista Leo. Short script lines please.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Creator brief for 3 TikTok creators reviewing our Quill Notebook (dot grid, $24, recycled paper, lies flat). One video each, 30 to 45 seconds, posted between 1 and 15 May. They must disclose the paid partnership and must not call it 'eco-friendly'; they can say recycled paper. Key points: lies flat, no bleed with gel pens.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Storyboard for a 60-second animated explainer for Tidy Tenant, an app that lets renters report repairs with photos. Scenes: the problem (a leak, no reply), reporting in 3 taps, the landlord gets an alert, fixed and rated. On-screen text and timing for each scene. Our colours are navy and coral.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "shot list",
+      "photo shoot brief",
+      "product photography",
+      "photographer brief",
+      "video shoot plan",
+      "product video brief",
+      "storyboard",
+      "creator brief",
+      "influencer brief",
+      "ugc brief",
+      "shoot schedule",
+      "content day plan"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists photographers at an average of $78 an hour, about £475 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/photographer"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists art directors at an average of $67 an hour, about £409 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
+      }
+    ]
+  },
+  {
+    "id": "business-sale-numbers-review",
+    "title": "Business sale or purchase numbers review",
+    "summary": "A review of a small business's numbers before a sale or purchase: adjusted profit, red flags, documents to gather, a readiness score and a fix plan.",
+    "area": "finance",
+    "deliverable": "The parts you pick: a draft add-back and adjusted profit schedule with the evidence needed; a red-flag report (customer concentration, falling margin, debts, cash gaps); a document or request list; a scored readiness review; a cash estimate for after the purchase; and a month-by-month fix plan.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "side",
+        "label": "Are you selling or buying?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Selling my business",
+          "Buying a business"
+        ]
+      },
+      {
+        "id": "parts",
+        "label": "Which parts do you need?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Adjusted profit and add-backs",
+          "Red-flag report",
+          "Document or request list",
+          "Readiness review with scores",
+          "Cash needed after purchase",
+          "Month-by-month fix plan"
+        ]
+      },
+      {
+        "id": "years",
+        "label": "How many years of figures?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers three years.",
+        "max": 6
+      },
+      {
+        "id": "financials",
+        "label": "Profit and loss statements and balance sheets",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the tables as they are. Remove bank account numbers.",
+        "max": 60000
+      },
+      {
+        "id": "business_notes",
+        "label": "About the business",
+        "type": "longtext",
+        "required": true,
+        "help": "What it does, staff, key contracts, systems and what the owner does each week.",
+        "max": 6000
+      },
+      {
+        "id": "sales_by_customer",
+        "label": "Sales by customer",
+        "type": "longtext",
+        "required": false,
+        "help": "Top customers and what each spent each year.",
+        "max": 10000
+      },
+      {
+        "id": "owner_costs",
+        "label": "Owner pay and one-off costs",
+        "type": "longtext",
+        "required": false,
+        "help": "Owner salary, personal costs run through the business, and one-off repairs or legal bills.",
+        "max": 4000
+      },
+      {
+        "id": "deal_notes",
+        "label": "Deal details",
+        "type": "longtext",
+        "required": false,
+        "help": "Asking price, timing and what is included.",
+        "max": 3000
+      },
+      {
+        "id": "concerns",
+        "label": "What worries you most",
+        "type": "text",
+        "required": false,
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_parts",
+        "text": "Every part picked in the brief is delivered, for the right side of the deal.",
+        "weight": 4,
+        "pass_rule": "Each part picked in the brief has its own section; seller drafts focus on preparing the business and buyer drafts on checking it; the years covered match the figures given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "figures_trace",
+        "text": "Every figure traces to the statements or notes, and every adjustment names its evidence.",
+        "weight": 5,
+        "pass_rule": "Each add-back or adjustment names the line and amount from the brief and the evidence needed to prove it, such as an invoice or payroll record; no revenue, margin, debt or customer figure appears that the brief does not contain; estimates show how they were worked out. Any invented figure fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "maths_right",
+        "text": "Adjusted profit, shares and ratios are worked correctly.",
+        "weight": 5,
+        "pass_rule": "For each year, reported profit plus the listed add-backs equals the adjusted profit shown; customer shares are worked from the sales given; each red flag quotes the figures behind it; readiness scores use the scale stated in the draft.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_lists",
+        "text": "Lists and plans are ready to use.",
+        "weight": 4,
+        "pass_rule": "Request or document lists are numbered and grouped by area, with what is held, what is missing and who owns it; red flags are ranked; a fix plan gives month, owner and action; the draft ends with questions for the accountant, lawyer or broker.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_no_valuation",
+        "text": "Plain words, and no valuation or price advice.",
+        "weight": 4,
+        "pass_rule": "Terms such as add-back, working capital and customer concentration are explained once; the draft gives no business value, multiple or price advice; it says adjusted profit is a draft for an accountant to check.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 199,
+      "min_usd": 129,
+      "max_usd": 599,
+      "size": {
+        "field": "years",
+        "unit": "year",
+        "included": 3,
+        "per_unit_usd": 40
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an experienced small-business M&A analyst. Using only the statements and notes below, review the numbers for the sale or purchase I describe and produce the parts I pick. For adjusted profit, list each add-back with the line, the amount and the evidence needed, and show that reported profit plus add-backs equals adjusted profit for each year. For red flags, check customer concentration, falling margins, rising debts and cash gaps, quoting the figures. For a request list, number the documents by area and say what is held and what is missing. For readiness, score finances, customers, staff, owner reliance, contracts, systems and records, and rank the fixes. Explain terms in plain words. Do not value the business or advise on price; this is a draft for my accountant and lawyer to check.",
+    "not_for": [
+      "Valuing the business or advising on price",
+      "Legal, tax or formal due diligence sign-off",
+      "Formal quality-of-earnings reports for lenders or investors",
+      "Investment or other regulated financial advice",
+      "Bank logins, full account numbers or staff personal records in the brief",
+      "Live access to your accounting software"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Selling my landscaping company, Evergreen Grounds, in about 18 months. 3 years of P&Ls and balance sheets pasted. Revenue went $1.12M, $1.24M, $1.31M. I pay myself $140k and run my truck and phone through the business. 9 staff. Our biggest customer, a property manager, is about 30% of sales. I want add-backs, a readiness score and a 12-month fix plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "I am buying Corner Cup, a café in Leeds, asking £185,000. The seller's last 3 years of accounts are pasted. Turnover £412k, £398k, £376k. The owner works 6 days a week. I need red flags, a list of documents to ask the seller for, and how much cash I will need for the first 6 months after taking over.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We are selling Brightline Signs, a sign maker with 14 staff. 2 years of figures pasted. One-off costs: £22k for a lawsuit settled in 2025 and a £9k roof repair. My wife is on payroll at £18k but does not work in the business. Draft the add-back schedule with the evidence needed for each, and the document index buyers will ask for.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Thinking of buying a dental lab, Precision Smiles Lab, asking $640k. 3 years of P&Ls, balance sheets and sales by customer pasted. The top 2 dentists are 55% of sales. The owner is the only technician who does implant work. Red-flag report and a ranked list of questions to ask the seller.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "sell my business",
+      "buy a business",
+      "add-backs",
+      "adjusted ebitda",
+      "sde",
+      "quality of earnings",
+      "due diligence checklist",
+      "red flags",
+      "data room index",
+      "exit planning",
+      "sale readiness",
+      "working capital",
+      "business acquisition"
+    ],
+    "demand_sources": [
+      {
+        "note": "The SBA's guide to selling a business tells owners to value it, list all assets, liabilities and inventory, and keep records for three to seven years after the sale.",
+        "url": "https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business"
+      },
+      {
+        "note": "A small-deal advisory firm says a quality of earnings report usually costs $5,000 to $50,000, and $5,000 to $15,000 for businesses valued under $5 million.",
+        "url": "https://webacquisition.com/quality-of-earnings-qoe-report-cost/"
+      },
+      {
+        "note": "SMB.co says a quality of earnings review for a small business can cost $10,000 to $30,000, depending on size and complexity.",
+        "url": "https://smb.co/blog/what-is-a-quality-of-earnings-qofe-report-and-do-you-need-one"
+      }
+    ]
+  },
+  {
+    "id": "ad-creative-concept-batch",
+    "title": "Ad creative concepts and briefs",
+    "summary": "A batch of image or video ad concepts and creative briefs, with hooks and angles to test, ready for a designer or video editor.",
+    "area": "marketing",
+    "deliverable": "Each concept with the angle, hook, picture or scene idea, headline, supporting line, on-screen text, offer, call to action, layout notes and sizes, plus a note on what it tests. Remixes of a winning ad change one thing each; test briefs are ranked by likely payback.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "batch_type",
+        "label": "What kind of batch?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Image ad concepts",
+          "Video ad concepts",
+          "Offer-led ads",
+          "Remixes of a winning ad",
+          "Test briefs from rival ads you paste",
+          "Shoppable video briefs (TikTok Shop)"
+        ]
+      },
+      {
+        "id": "concepts",
+        "label": "How many concepts?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 8.",
+        "max": 30
+      },
+      {
+        "id": "offer",
+        "label": "Your offer",
+        "type": "longtext",
+        "required": true,
+        "help": "Product or service, price, any deal and its end date.",
+        "max": 2000
+      },
+      {
+        "id": "audience",
+        "label": "Who you want to reach",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "platforms",
+        "label": "Where will the ads run?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Meta (Facebook and Instagram)",
+          "TikTok",
+          "YouTube",
+          "Pinterest",
+          "LinkedIn",
+          "Snapchat",
+          "Google display"
+        ]
+      },
+      {
+        "id": "proof",
+        "label": "Proof you can use",
+        "type": "list",
+        "required": false,
+        "help": "Reviews, numbers, awards and guarantees. Only these will be used.",
+        "max": 15
+      },
+      {
+        "id": "past_ads",
+        "label": "Past ads and results",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the winning ad for remixes, or rival ads for test briefs, with any results.",
+        "max": 8000
+      },
+      {
+        "id": "margin",
+        "label": "Your margin or lowest price you can take",
+        "type": "text",
+        "required": false,
+        "help": "Used to check offer ads.",
+        "max": 300
+      },
+      {
+        "id": "brand_rules",
+        "label": "Brand rules and words to avoid",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "formats",
+        "label": "Formats",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Single image",
+          "Carousel",
+          "Short video",
+          "Stories or Reels"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_batch",
+        "text": "The batch matches the type, count and platforms in the brief.",
+        "weight": 4,
+        "pass_rule": "The number of concepts equals the count in the brief (8 if none given); each is labelled with platform and format; remixes each change exactly one named element of the winning ad; test briefs are ranked with a reason for the order.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "proof_from_brief",
+        "text": "Every claim, number, review and offer comes from the brief.",
+        "weight": 5,
+        "pass_rule": "No price, discount, deadline, statistic, review quote, award, guarantee or result appears unless the brief gives it; offer ads use only the deal in the brief and show it fits the margin given. Any invented item fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "designer_ready",
+        "text": "A designer or editor could make each concept without asking.",
+        "weight": 4,
+        "pass_rule": "Each concept has angle, hook, picture or scene idea, headline, supporting line, on-screen text, call to action and sizes or ratios; video concepts give the first three seconds and the scene order; shoppable briefs say when to pin the product.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "clear_distinct",
+        "text": "Concepts are plain and clearly different.",
+        "weight": 3,
+        "pass_rule": "Headlines and on-screen text are under 10 words each; no two concepts share the same angle and hook; each concept has a one-line note on what it tests.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "policy_safe",
+        "text": "Concepts avoid misleading or policy-breaking ideas.",
+        "weight": 4,
+        "pass_rule": "No false scarcity or fake countdowns, no before-and-after body claims, no lines that call out personal traits such as 'Are you overweight?', no fake reviews and no copying of a rival's ad; regulated offers carry a note to get a compliance check.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "concepts",
+        "unit": "concept",
+        "included": 8,
+        "per_unit_usd": 10
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a performance creative strategist. Write a batch of ad concepts for my offer and platforms below. For each concept give the angle, the hook (first line or first three seconds), the picture or scene idea, headline, supporting line, on-screen text, call to action, layout notes and the sizes or ratios needed, plus one line on what the concept tests. Make every concept clearly different. If I paste a winning ad, make versions that each change one thing. If I paste rival ads, turn them into test briefs ranked by likely payback without copying them. Use only the prices, deals, reviews and numbers I give; no fake scarcity, fake reviews or before-and-after claims.",
+    "not_for": [
+      "Making images, video files or edits",
+      "Fake reviews, invented discounts or false scarcity",
+      "Ads for regulated offers (loans, investments, health treatments) without your compliance review",
+      "Copying a rival's ads",
+      "Setting up or running your ad account",
+      "Ready-to-paste text for search ads (see the paid ads copy set)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "8 image ad concepts on Meta for Hearth & Hound, a dog bed brand. Orthopedic memory foam bed, $129, washable cover, 100-night trial. Audience: US owners of older or large dogs. Proof: 4.8 stars from 2,140 reviews on our site. Brand: warm, no cartoon dogs.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Remix our best Facebook ad for Kinfolk Meal Kits (pasted: photo of a family at dinner, headline 'Dinner sorted in 20 minutes', 3.1% click rate). 6 versions that each change one thing. Offer: $35 off the first box, ends 30 November.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "10 shoppable TikTok Shop video briefs for Lumi Lash Serum ($26). Show the product, the hook, what to film, on-screen text and when to pin the product link. Proof we can use: 'clinically tested for sensitive eyes', from our lab report. No before-and-after claims.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Rival ads from 3 meal-prep companies in Toronto are pasted. Turn them into 6 test briefs for our brand, Fuel Box ($11.99 a meal, local chef, delivered Sunday), ranked by likely payback, each with the angle, hook and the proof we can truthfully use. We have 312 Google reviews at 4.7 stars.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ad creative",
+      "ad concepts",
+      "creative brief",
+      "image ads",
+      "video ad ideas",
+      "ad hooks",
+      "ugc ad brief",
+      "facebook ad creative",
+      "tiktok ads",
+      "shoppable video",
+      "ad testing",
+      "ad remix",
+      "creative testing"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists creative directors at an average of $78 an hour, about £475 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/creative-director"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists art directors at an average of $67 an hour, about £409 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
+      }
+    ]
+  },
+  {
+    "id": "accountant-records-pack",
+    "title": "Year-end or expense records pack for your accountant",
+    "summary": "Your income, expenses and receipts sorted into a tidy pack for your bookkeeper or accountant, with gaps and questions listed.",
+    "area": "finance",
+    "deliverable": "A sheet of every transaction or expense with date, payee, amount, category and a receipt flag; totals by group; a document checklist with where to find each item; missing receipts and answers; and a ranked list of questions for your accountant with the figures behind each.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "pack_type",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Year-end pack for your accountant",
+          "Expenses sorted for your bookkeeper",
+          "Expense report for one trip or project",
+          "Document checklist and questions only"
+        ]
+      },
+      {
+        "id": "transactions",
+        "label": "About how many transactions or expense lines?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 400. Enter 0 for a checklist only.",
+        "max": 5000
+      },
+      {
+        "id": "records",
+        "label": "Bank or card exports, receipt lists and sales summaries",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste CSV text. Remove full account and card numbers. For a checklist only, describe your income and costs.",
+        "max": 100000
+      },
+      {
+        "id": "period",
+        "label": "Year, trip or project dates",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "id": "business",
+        "label": "Your business and how it is set up",
+        "type": "text",
+        "required": true,
+        "help": "For example sole trader, partnership, limited company or LLC, and the country you are in.",
+        "max": 500
+      },
+      {
+        "id": "categories",
+        "label": "Categories your accountant uses",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "receipts",
+        "label": "Receipts you have",
+        "type": "longtext",
+        "required": false,
+        "help": "A list of receipts, or say which lines have one.",
+        "max": 20000
+      },
+      {
+        "id": "notes",
+        "label": "Notes on unusual items",
+        "type": "longtext",
+        "required": false,
+        "help": "Personal spending, loans, equipment bought, money moved between accounts.",
+        "max": 3000
+      },
+      {
+        "id": "deadline",
+        "label": "When your accountant needs it",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_pack",
+        "text": "The pack is the type chosen and covers the whole period.",
+        "weight": 4,
+        "pass_rule": "Every line in the pasted records for the period is in the sheet or listed as left out with a reason; a year-end pack has the sheet, totals, checklist, missing items and questions; a trip or project report is grouped by day or category with totals.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "figures_match",
+        "text": "Amounts, dates and payees match the records exactly.",
+        "weight": 5,
+        "pass_rule": "Where records are pasted, five spot-checked lines match the brief on date, payee and amount; group totals add up to the sheet total; the sheet total equals the sum of the pasted lines; nothing is added that the records do not show. Any mismatch fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_tax_calls",
+        "text": "The pack sorts and asks; it does not decide tax.",
+        "weight": 5,
+        "pass_rule": "No line is labelled deductible, allowable, claimable or tax-free; mixed personal use, equipment, loans and transfers go to the questions list instead of being decided; the draft says it is not tax advice.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "gaps_listed",
+        "text": "Missing receipts and open questions are listed so they can be fixed.",
+        "weight": 4,
+        "pass_rule": "Each line with no receipt or unclear purpose is flagged with a one-line question; questions are ranked, with the amount behind each; the document checklist says where to find each item.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_summary",
+        "text": "Plain labels and a short summary.",
+        "weight": 3,
+        "pass_rule": "Categories use plain names or the accountant's own names from the brief; a summary of five lines or fewer gives totals and the number of open items; accounting terms are explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 399,
+      "size": {
+        "field": "transactions",
+        "unit": "transaction",
+        "included": 400,
+        "per_unit_usd": 0.08
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful bookkeeper preparing records for an accountant. Using only the bank or card exports and notes below, build a records pack for the period I name. List every transaction or expense with date, payee, amount, a plain category and whether a receipt exists; total each category and check that the totals match the records. Flag every line with no receipt or an unclear business purpose with a one-line question. Give a checklist of the documents my accountant will need and where I can find each. End with a ranked list of questions for my accountant, each with the amount behind it. Do not decide what is deductible or give tax advice; put unclear items in the questions list.",
+    "not_for": [
+      "Tax filing, tax advice or deciding what is deductible",
+      "Finished accounts, tax returns or payroll",
+      "Bank logins, full account or card numbers in the brief",
+      "Hiding personal spending as business costs",
+      "Live links to your bank or accounting software",
+      "Categorising bank lines only (see the bank transaction categorisation job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Year-end pack for my accountant. I am a sole trader wedding photographer in Bristol, tax year 6 April 2025 to 5 April 2026. Business bank CSV (612 lines) and my card CSV pasted. I bought a new camera body (£2,150) and a laptop I also use at home. Receipt list pasted. My accountant wants it by 31 May.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Expense report for a 4-day trade show trip to Las Vegas, 12 to 15 March, for Coastline Surf Supply LLC. 38 card lines pasted, with receipts for most. Group by day and category, with totals and the receipts I still need.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Sort 9 months of expenses for my bookkeeper. Tilly's Tutoring Ltd, UK. 420 lines from Monzo Business pasted. Some are personal (I sometimes use the wrong card); I have marked the ones I know with a *. Use my bookkeeper's categories (pasted).",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Just the document checklist and accountant questions. I am a US freelance web developer with a single-member LLC in Colorado, for 2026. Income from 6 clients, some paid through Stripe and PayPal. I set up a home office in June and bought a car I use partly for work. What do I need to gather and what should I ask?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "year end accounts",
+      "records for accountant",
+      "tax records",
+      "expense report",
+      "receipts",
+      "missing receipts",
+      "bookkeeping cleanup",
+      "expense sorting",
+      "document checklist",
+      "accountant questions",
+      "tax prep",
+      "self employed records"
+    ],
+    "demand_sources": [
+      {
+        "note": "The IRS tells small businesses to keep records and the supporting documents their purchases, sales and payroll create, for as long as needed to prove income or deductions.",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+      },
+      {
+        "note": "GOV.UK says sole traders and business partners must keep records of business income and expenses for their tax returns.",
+        "url": "https://www.gov.uk/self-employed-records"
+      }
+    ]
+  },
+  {
+    "id": "talk-pitch-or-demo-script",
+    "title": "Talk, pitch or demo script",
+    "summary": "A spoken script for a talk, short pitch, launch or award remarks, product demo, venue tour or screen-recorded walkthrough, timed and written to sound natural.",
+    "area": "content",
+    "deliverable": "An opening, story, key points and close timed to your length; speaker notes; answers to the questions you will most likely face; and for demos and tours, the order of what to show or click, talking points and a same-day follow-up message.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "script_type",
+        "label": "What will you be giving?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "A talk (10 to 20 minutes)",
+          "A short pitch (60 seconds and 3 minutes)",
+          "Remarks for a launch, award or event",
+          "A live product demo for a buyer",
+          "A venue or site tour",
+          "A screen-recorded demo walkthrough"
+        ]
+      },
+      {
+        "id": "minutes",
+        "label": "How many minutes?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 20 minutes of speaking.",
+        "max": 60
+      },
+      {
+        "id": "occasion",
+        "label": "The event or meeting",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "audience",
+        "label": "Who will be listening",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "story",
+        "label": "Your story, facts and key points",
+        "type": "longtext",
+        "required": true,
+        "help": "Real examples, numbers and names you are happy to share. Only these will be used.",
+        "max": 8000
+      },
+      {
+        "id": "product",
+        "label": "Product or venue details",
+        "type": "longtext",
+        "required": false,
+        "help": "For demos and tours: features, screens or rooms, and prices.",
+        "max": 6000
+      },
+      {
+        "id": "listener_problems",
+        "label": "The listener's problems or questions",
+        "type": "longtext",
+        "required": false,
+        "help": "For a demo, what this buyer needs to solve.",
+        "max": 3000
+      },
+      {
+        "id": "goal",
+        "label": "What should listeners do afterwards?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "speaker",
+        "label": "Who is speaking and how they talk",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "avoid",
+        "label": "Topics or claims to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_type_and_length",
+        "text": "The script is the type and length the brief asks for.",
+        "weight": 4,
+        "pass_rule": "The draft shows its word count and the timing per section; at about 140 spoken words a minute the total is within 15% of the length in the brief; pitches give both a 60-second and a 3-minute version; demos and tours give the order of what to show or click.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "real_story_only",
+        "text": "Stories, numbers, names and results come from the brief.",
+        "weight": 5,
+        "pass_rule": "No story, customer, statistic, award, quote, credential or result appears that the brief does not give; gaps are marked with placeholders such as [customer name]. Any invented story or figure fails.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_rehearse",
+        "text": "Ready to rehearse from start to finish.",
+        "weight": 4,
+        "pass_rule": "The draft has a spoken opening, main points, a close with a call to action, and speaker notes; talks, pitches and live demos answer at least five likely questions (three for remarks); demos and tours add a same-day follow-up message.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "sounds_spoken",
+        "text": "Written to be said out loud.",
+        "weight": 3,
+        "pass_rule": "Most sentences are under 20 words; plain words and contractions; no sentence lists more than three items; stage directions are in brackets, apart from the spoken lines.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_on_goal",
+        "text": "Persuasive without deceptive claims, and every part serves the goal.",
+        "weight": 4,
+        "pass_rule": "No promised results, false urgency or claims the brief does not support; the close asks for the action named in the brief; a demo opens with the buyer's problems from the brief before showing features.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "minutes",
+        "unit": "minute",
+        "included": 20,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a speechwriter and sales coach. Write a spoken script for the talk, pitch, remarks, demo or tour described below, timed to the length I give at about 140 words a minute. Include a strong opening, my real story, three key points, a clear close that asks for the action I want, and speaker notes in brackets. For a pitch, give a 60-second and a 3-minute version. For a demo or tour, start from the listener's problems, give the order of what to show or click with talking points, and write a same-day follow-up message. Add answers to the five questions I am most likely to get. Use only the stories, numbers and names I give. Write it to be said out loud: short sentences, plain words.",
+    "not_for": [
+      "Recording, voiceover or video editing",
+      "Invented stories, results or credentials",
+      "Deceptive sales claims or false urgency",
+      "Slides or slide design",
+      "Video scripts with shot lists (see the video script job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "A 15-minute talk at the Kent Small Business Expo about how I turned my failing bakery around. Real case: Rise & Shine Bakery was losing £1,800 a month in early 2024; I cut the menu from 40 items to 14, started pre-orders, and we were profitable by October. Audience: 120 local owners. I want them to join my free monthly meetup.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A 60-second and a 3-minute pitch for Patchwork Pantry, a community fridge network, to a council funding panel. 11 fridges, 4,300 kg of food saved last year, 60 volunteers. We are asking for £18,000 to add 5 fridges. Include answers to the five questions they will most likely ask.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "20-minute demo script for Gantry, our job scheduling software for HVAC firms, for Polar Air, a company with 25 technicians. Their problems: double bookings, techs calling the office for job details, invoices sent days late. Show drag-and-drop scheduling, mobile job sheets and sending the invoice from the van. Price $39 per tech per month.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Venue tour script for The Granary Barn wedding venue: courtyard, barn (150 seated), garden ceremony spot, bridal suite and kitchen. Couples usually ask about rain plans, the 11pm curfew and supplier rules. Plus a same-day follow-up email. Our coordinator Ellie gives the tours.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "talk script",
+      "speech writing",
+      "keynote",
+      "pitch script",
+      "elevator pitch",
+      "funding pitch",
+      "award speech",
+      "product demo script",
+      "sales demo",
+      "venue tour script",
+      "demo video script",
+      "presentation script"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's speech writer listings include a fundraising speech service at $375 and a writer and ghostwriter at $38 an hour.",
+        "url": "https://contra.com/hire/speech-writers"
+      }
+    ]
+  },
+  {
+    "id": "email-deliverability-fix",
+    "title": "Email deliverability check and fix plan",
+    "summary": "Your sender records, warm-up, list hygiene and recent sending results checked, with the exact fixes to get your emails back into the inbox.",
+    "area": "marketing",
+    "deliverable": "Your SPF, DKIM, DMARC and return-path records checked from what you paste, with the corrected record for each; a DMARC rollout plan; a warm-up schedule; a read of your last 60 days of results with a pause-and-restart plan; list cleaning and sunset rules; and a consent checklist.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "focus",
+        "label": "What do you need most?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Set up or fix SPF, DKIM and DMARC",
+          "Warm-up plan for a new domain or IP",
+          "Recovery plan after landing in spam",
+          "List cleaning and sunset rules",
+          "Full check of all of the above"
+        ]
+      },
+      {
+        "id": "domains",
+        "label": "How many sending domains?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one domain.",
+        "max": 5
+      },
+      {
+        "id": "dns_records",
+        "label": "Your DNS records",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the SPF, DKIM, DMARC and return-path records as they appear in your DNS settings.",
+        "max": 8000
+      },
+      {
+        "id": "platform",
+        "label": "Sending platform",
+        "type": "text",
+        "required": true,
+        "help": "For example Mailchimp, Klaviyo, Google Workspace or SendGrid.",
+        "max": 200
+      },
+      {
+        "id": "volumes",
+        "label": "How much you send",
+        "type": "text",
+        "required": true,
+        "help": "Emails per day or week, list size and any big sends coming up.",
+        "max": 400
+      },
+      {
+        "id": "results",
+        "label": "Recent sending results",
+        "type": "longtext",
+        "required": false,
+        "help": "The last 60 days of bounce, complaint, open and click rates per send, and any Postmaster Tools data.",
+        "max": 20000
+      },
+      {
+        "id": "signup",
+        "label": "How people join your list",
+        "type": "longtext",
+        "required": false,
+        "help": "Forms, checkout boxes and imports. Say if any contacts were bought or scraped.",
+        "max": 2000
+      },
+      {
+        "id": "problem",
+        "label": "What went wrong and when",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "dns_host",
+        "label": "Where your DNS is managed",
+        "type": "text",
+        "required": false,
+        "help": "For example GoDaddy, Cloudflare or Namecheap.",
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_focus",
+        "text": "The plan covers the focus chosen, for each domain in the brief.",
+        "weight": 4,
+        "pass_rule": "Each domain has the sections for the chosen focus: record checks and fixes; a day-by-day warm-up table; a read of the results with a pause-and-restart plan; or cleaning rules and a sunset flow. A full check has all four plus a consent checklist.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "from_the_paste",
+        "text": "Record checks and results use only what the buyer pasted.",
+        "weight": 5,
+        "pass_rule": "Each record verdict quotes the pasted record; each fix shows the full corrected record with the buyer's own domain and platform, with placeholders only for values the brief lacks, such as a DKIM key; rates and volumes quoted match the brief; records not pasted are marked 'not provided'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "sound_safe_fixes",
+        "text": "Fixes are sound and roll out safely.",
+        "weight": 5,
+        "pass_rule": "Each domain keeps one SPF record and the draft counts its DNS lookups against the limit of 10; DMARC starts at p=none with a report address, with steps and timing to move to quarantine and reject; warm-up volumes rise in steps with a slow-down rule; no advice to buy lists, rotate domains or hide content.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "steps_and_checks",
+        "text": "The buyer can make each change and see that it worked.",
+        "weight": 4,
+        "pass_rule": "Each fix has numbered steps for the named platform or DNS host, the order to do them in, and a check to confirm it worked, such as a test send or a record lookup; the numbers to watch have stated limits, such as a complaint rate to stay under.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_terms",
+        "text": "Plain words, with each term explained.",
+        "weight": 3,
+        "pass_rule": "SPF, DKIM, DMARC, bounce rate and complaint rate are each explained in one plain sentence; a summary of the top three fixes comes first; steps are one action each.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "domains",
+        "unit": "domain",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an email deliverability specialist. Using the DNS records, platform, volumes and sending results I paste below, check my setup and write a fix plan. Check each SPF, DKIM, DMARC and return-path record against what my platform needs and show the full corrected record. Give a DMARC rollout plan from p=none to quarantine and reject, with timing. If I need it, give a day-by-day warm-up schedule starting with my most engaged contacts, a read of my last 60 days of results with a pause-and-restart plan, list cleaning rules and a sunset flow, and a consent checklist. Give numbered steps and a way to check each fix worked. Use only what I paste; do not suggest buying lists or tricks to get past spam filters.",
+    "not_for": [
+      "Changing your DNS or email settings for you",
+      "Sending to bought, rented or scraped lists",
+      "Tricks to get past spam filters, such as hidden text or rotating domains",
+      "Legal advice on email consent laws such as CAN-SPAM or GDPR",
+      "Logins to your DNS host or email platform",
+      "Writing the emails themselves (see the email sequence jobs)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our Klaviyo emails for Saltwater Candle Co. started going to spam in Gmail 3 weeks ago. Domain saltwatercandle.com, DNS at Cloudflare. SPF, DKIM and DMARC records pasted. We send 3 campaigns a week to 18,000 contacts. Last 60 days of results pasted: opens fell from 38% to 19%, and the complaint rate hit 0.4% on two sends. Full check please.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "New sending domain mail.ridgelineroofing.com for Mailchimp. We plan to email 6,500 past customers starting next month. DNS at GoDaddy. The records we added are pasted. Check them and give me a warm-up plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We use Google Workspace and HubSpot at Larkspur Recruiting. Our SPF record (pasted) has includes for Google, HubSpot, Zendesk, Mailgun and an old Constant Contact one. No DMARC yet. 2 domains: larkspurrecruit.com and larkspur.co.uk. Fix the records and give a DMARC rollout plan.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "List cleaning rules and a sunset flow for Bramble Books, 14,000 subscribers on Mailchimp. About 5,200 have not opened in 12 months. Some contacts came from a 2019 trade show list. Our sign-up form text is pasted.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "email deliverability",
+      "emails going to spam",
+      "spf record",
+      "dkim",
+      "dmarc",
+      "domain warm up",
+      "ip warm up",
+      "inbox placement",
+      "list cleaning",
+      "sunset policy",
+      "bounce rate",
+      "spam complaints",
+      "sender reputation",
+      "gmail bulk sender"
+    ],
+    "demand_sources": [
+      {
+        "note": "Google's email sender guidelines require anyone sending over 5,000 messages a day to Gmail to set up SPF, DKIM and DMARC, offer one-click unsubscribe and keep spam rates below 0.30%.",
+        "url": "https://support.google.com/a/answer/81126"
+      },
+      {
+        "note": "Yahoo's sender requirements ask bulk senders for SPF and DKIM, a DMARC policy of at least p=none, one-click unsubscribe honoured within 2 days and a spam rate below 0.3%.",
+        "url": "https://senders.yahooinc.com/best-practices/"
+      }
+    ]
+  }
+]

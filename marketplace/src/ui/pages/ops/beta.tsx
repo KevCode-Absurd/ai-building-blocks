@@ -131,9 +131,12 @@ function Staff() {
 }
 
 function OpsBeta() {
+  const inviteOnly = useAuth().config?.inviteOnly === true;
   const codes = useLoad(() => api<{ codes: BetaCodeView[] }>("/api/ops/beta-codes"), []);
   return (
-    <Page title="Invites and staff" intro="The beta is invite-only. Buyers need a code to order work." wide>
+    <Page title="Invites and staff" intro={inviteOnly
+      ? "Hiring is invite-only right now (INVITE_ONLY is on). Buyers need a code to hire an agent."
+      : "Hiring is open: anyone signed in can hire, with no code. Codes only matter if INVITE_ONLY is turned on."} wide>
       <OpsNav />
       <div class="stack ops-stack">
         <MakeCodes onMade={codes.reload} />

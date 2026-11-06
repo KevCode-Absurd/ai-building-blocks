@@ -4,8 +4,10 @@ import type { NavItem, PageDef } from "../types.ts";
 import type { BuyerJobView, JobListItem, PersonaBrief } from "../../../modules/delivery/service.ts";
 import type { JobStatus } from "../../../core/types.ts";
 import { Badge, Button, Card, Empty, Field, Loaded, Markdown, Notice, Page, Spinner, TextArea, useLoad } from "../../components.tsx";
-import { api, money, when } from "../../lib/api.ts";
+import { api, when } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
+import { NotificationsPage } from "./notifications.tsx";
+import { OpsProblems } from "../ops/problems.tsx";
 import "./delivery.css";
 
 type Tone = "neutral" | "good" | "warn" | "bad" | "info";
@@ -42,17 +44,81 @@ function Portrait(props: { persona: PersonaBrief | null; size: number }) {
 
 const agentLine = (p: PersonaBrief | null) => (p ? `${p.name}, ${p.title}` : "AI Blocks agent");
 
+// ---------- Learning from your edits ----------
+
+type EditSharing = { share: boolean; chosen: boolean; updatedAt: string | null };
+
+/** The org-wide choice, on /jobs. Off stops every past edit too; on is the starting point for new edits. */
+function EditSharingCard() {
+  const state = useLoad(() => api<EditSharing>("/api/settings/edit-sharing"), []);
+  const [now, setNow] = useState<EditSharing | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [said, setSaid] = useState<string | null>(null);
+  const v = now ?? state.data;
+  const change = async (share: boolean) => {
+    setBusy(true); setError(null); setSaid(null);
+    try {
+      const res = await api<EditSharing & { stopped: number }>("/api/settings/edit-sharing", { body: { share } });
+      setNow(res);
+      setSaid(share ? "Saved. New edits start as shared. You can untick the box on any job." : "Saved. We will not share any of your edits, old or new.");
+    } catch (err) { setError(err instanceof Error ? err.message : "Something went wrong. Try again."); }
+    finally { setBusy(false); }
+  };
+  return (
+    <Card title="Your edits" class="dlv-sharing">
+      <p>When you accept a draft or ask for changes, you can edit the text yourself. We keep a record of the lines you changed, and we always use it to finish that job.</p>
+      <Loaded state={state}>
+        {() => v && (
+          <>
+            <p><strong>{v.share ? "Right now: you share your edits to help improve agents." : "Right now: your edits stay with each job."}</strong>{" "}
+              {v.share
+                ? "The people who build each agent can read the lines you changed and use them to make it better for other buyers. They do not see your name or email."
+                : "We do not share them unless you tick the box on a job."}
+            </p>
+            <Button small kind="secondary" busy={busy} onClick={() => void change(!v.share)}>{v.share ? "Stop sharing my edits" : "Share my edits by default"}</Button>
+            <p class="muted small dlv-sharing-note">
+              {v.share
+                ? "Turning this off also stops sharing the edits you shared before."
+                : "Turning this on covers new edits only. Each job page shows the choice for its edits, and you can change it there."}
+            </p>
+          </>
+        )}
+      </Loaded>
+      {said && <p class="small" role="status">{said}</p>}
+      {error && <Notice tone="bad">{error}</Notice>}
+    </Card>
+  );
+}
+
+/** The "use my edits" box on the accept and revise forms. Shown only once the buyer has changed the text. */
+function ShareEdits(props: { agent: string; value: boolean; onValue: (v: boolean) => void }) {
+  return (
+    <div class="dlv-share">
+      <label class="dlv-tick">
+        <input type="checkbox" checked={props.value} onChange={e => props.onValue((e.target as HTMLInputElement).checked)} />
+        <span><strong>Share my edits to help improve {props.agent}</strong> (optional)</span>
+      </label>
+      <p class="dlv-share-help">
+        We keep the lines you removed and the lines you added, and we always use them to finish this job.
+        If you tick this box, the people who build {props.agent} can also read those lines and use them to make the agent better for other buyers.
+        They do not see your name or email. You can change this later on this page.
+      </p>
+    </div>
+  );
+}
+
 // ---------- /jobs ----------
 
 function JobsList() {
   const state = useLoad(() => api<{ jobs: JobListItem[] }>("/api/jobs"), []);
   return (
-    <Page title="My jobs" intro="Every job you ordered, newest first. Open one to read the draft and decide what happens next."
+    <Page title="My jobs" intro="Every job you started, newest first. Open one to read the draft and decide what happens next."
       actions={<Button kind="secondary" href="/agents">Hire an agent</Button>}>
       <Loaded state={state}>
         {data => data.jobs.length === 0 ? (
           <Empty title="No jobs yet" action={<Button href="/agents">Meet the agents</Button>}>
-            Pick an agent and tell them what you need. Your jobs show up here, and each draft appears when it is ready.
+            This is where your jobs will live. Pick an agent and tell them what you need. Hiring is free, and each draft shows up here when it is ready.
           </Empty>
         ) : (
           <div class="dlv-list">
@@ -67,7 +133,7 @@ function JobsList() {
                   <p class="dlv-card-meta">{agentLine(j.persona)}{j.jobType && j.jobType.title !== j.title ? ` · ${j.jobType.title}` : ""}</p>
                   <p class="dlv-card-meta muted">
                     {j.needsYou && <span class="dlv-needs">{j.status === "delivered" ? "Waiting for your decision · " : "Waiting for you · "}</span>}
-                    Updated {when(j.updatedAt)}{j.priceCents !== null ? ` · ${money(j.priceCents)}` : ""}
+                    Updated {when(j.updatedAt)}
                   </p>
                 </div>
               </Link>
@@ -75,6 +141,7 @@ function JobsList() {
           </div>
         )}
       </Loaded>
+      <div class="dlv-after-list"><EditSharingCard /></div>
     </Page>
   );
 }
@@ -109,7 +176,7 @@ function useJob(id: string) {
   return { ...state, set: (data: View) => setState({ data, error: null, stale: false }) };
 }
 
-const STEPS = ["Ordered", "Working", "Checking", "Final check", "Ready for you", "Done"];
+const STEPS = ["Started", "Working", "Checking", "Final check", "Ready for you", "Done"];
 
 function stepIndex(status: JobStatus): number {
   switch (status) {
@@ -244,7 +311,7 @@ function EditBox(props: { summary: string; help: string; original: string; value
 function useSend(jobId: string, onDone: (v: View) => void) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const send = async (action: "accept" | "revise" | "reject" | "report", body: Record<string, unknown>) => {
+  const send = async (action: "accept" | "revise" | "reject" | "report" | `decisions/${string}/share-edits`, body: Record<string, unknown>) => {
     setBusy(true); setError(null);
     try { onDone(await api<View>(`/api/jobs/${encodeURIComponent(jobId)}/${action}`, { body })); }
     catch (err) { setError(err instanceof Error ? err.message : "Something went wrong. Try again."); }
@@ -257,11 +324,13 @@ function AcceptForm(props: { view: View; draft: DraftView; onDone: (v: View) => 
   const [rating, setRating] = useState(0);
   const [note, setNote] = useState("");
   const [edited, setEdited] = useState(props.draft.content);
+  const [share, setShare] = useState(props.view.shareEditsDefault);
   const { busy, error, send } = useSend(props.view.job.id, props.onDone);
+  const changed = edited !== props.draft.content;
   return (
     <form onSubmit={e => {
       e.preventDefault();
-      void send("accept", { rating, note, editedContent: edited !== props.draft.content ? edited : undefined });
+      void send("accept", { rating, note, editedContent: changed ? edited : undefined, shareEdits: changed ? share : undefined });
     }}>
       <fieldset class="dlv-fieldset">
         <legend>How good is it?</legend>
@@ -278,6 +347,7 @@ function AcceptForm(props: { view: View; draft: DraftView; onDone: (v: View) => 
       </Field>
       <EditBox id="dlv-accept-edit" summary="I changed the text myself (optional)" help="Paste or edit your final version. We save only what you changed."
         original={props.draft.content} value={edited} onValue={setEdited} />
+      {changed && <ShareEdits agent={props.view.persona?.name ?? "this agent"} value={share} onValue={setShare} />}
       {error && <Notice tone="bad">{error}</Notice>}
       <Button type="submit" busy={busy} disabled={!rating}>Accept the work</Button>
       {!rating && <p class="muted small">Pick 1 to 5 stars to accept.</p>}
@@ -290,7 +360,9 @@ function ReviseForm(props: { view: View; draft: DraftView; onDone: (v: View) => 
   const [reasons, setReasons] = useState("");
   const [failed, setFailed] = useState<string[]>([]);
   const [edited, setEdited] = useState(props.draft.content);
+  const [share, setShare] = useState(v.shareEditsDefault);
   const { busy, error, send } = useSend(v.job.id, props.onDone);
+  const changed = edited !== props.draft.content;
   if (v.revisionsLeft <= 0) {
     return <Notice tone="warn" title="No revisions left">You used all {v.job.revisionsAllowed} revisions on this job. Accept the work, or reject it and our team will follow up.</Notice>;
   }
@@ -298,15 +370,16 @@ function ReviseForm(props: { view: View; draft: DraftView; onDone: (v: View) => 
   return (
     <form onSubmit={e => {
       e.preventDefault();
-      void send("revise", { reasons, failedCriteria: failed, editedContent: edited !== props.draft.content ? edited : undefined });
+      void send("revise", { reasons, failedCriteria: failed, editedContent: changed ? edited : undefined, shareEdits: changed ? share : undefined });
     }}>
       <p class="dlv-left">You have {v.revisionsLeft} of {v.job.revisionsAllowed} revisions left. {props.view.persona?.name ?? "The agent"} starts on your changes right away.</p>
-      <Field label="What should change?" id="dlv-reasons" help="Be specific. For example: make the headline shorter and use our price, $29 a month.">
+      <Field label="What should change?" id="dlv-reasons" help="Be specific. For example: make the headline shorter and name our town.">
         <TextArea id="dlv-reasons" rows={4} value={reasons} onValue={setReasons} maxLength={4000} />
       </Field>
       <Ticks legend="Tick the checklist items that are not met" criteria={v.criteria} value={failed} onValue={setFailed} />
       <EditBox id="dlv-revise-edit" summary="Edit the text yourself (optional)" help="The agent keeps your edits and works from them."
         original={props.draft.content} value={edited} onValue={setEdited} />
+      {changed && <ShareEdits agent={v.persona?.name ?? "this agent"} value={share} onValue={setShare} />}
       {error && <Notice tone="bad">{error}</Notice>}
       <Button type="submit" busy={busy} disabled={!ready}>Ask for changes</Button>
       {!ready && <p class="muted small">Say what should change, or tick at least one checklist item.</p>}
@@ -324,7 +397,7 @@ function RejectForm(props: { view: View; onDone: (v: View) => void }) {
       if (!confirm("Reject this work? You cannot undo this.")) return;
       void send("reject", { reasons, failedCriteria: failed });
     }}>
-      <Notice tone="info">Nothing was charged, so there is nothing to refund. Our team reads every rejection and gets back to you.</Notice>
+      <Notice tone="info">Our team reads every rejection and gets back to you by email.</Notice>
       <Field label="Why are you rejecting it?" id="dlv-reject">
         <TextArea id="dlv-reject" rows={4} value={reasons} onValue={setReasons} maxLength={4000} />
       </Field>
@@ -382,7 +455,23 @@ function ReportProblem(props: { view: View; onDone: (v: View) => void }) {
   );
 }
 
-function Decisions(props: { view: View }) {
+/** The choice for one decision's edits, with a button to change it. */
+function SharedLine(props: { view: View; decision: View["decisions"][number]; onDone: (v: View) => void }) {
+  const d = props.decision;
+  const { busy, error, send } = useSend(props.view.job.id, props.onDone);
+  if (d.shareEdits === null) return null;
+  return (
+    <div class="dlv-shared-line">
+      <span>{d.shareEdits ? "You shared these edits to help improve the agent." : "These edits stay with this job."}</span>{" "}
+      <button type="button" class="dlv-link" disabled={busy} onClick={() => void send(`decisions/${encodeURIComponent(d.id)}/share-edits`, { share: !d.shareEdits })}>
+        {busy ? "Saving..." : d.shareEdits ? "Stop sharing" : "Share them"}
+      </button>
+      {error && <Notice tone="bad">{error}</Notice>}
+    </div>
+  );
+}
+
+function Decisions(props: { view: View; onDone: (v: View) => void }) {
   const byId = new Map(props.view.criteria.map(c => [c.id, c.text]));
   if (!props.view.decisions.length) return null;
   return (
@@ -396,6 +485,25 @@ function Decisions(props: { view: View }) {
             {d.reasons && <p class="dlv-quote">{d.reasons}</p>}
             {d.failedCriteria.length > 0 && <p class="dlv-quote muted">Not met: {d.failedCriteria.map(id => byId.get(id) ?? id).join("; ")}</p>}
             {d.editStats && <p class="dlv-quote muted">You changed the text ({d.editStats.removed} lines out, {d.editStats.added} lines in).</p>}
+            <SharedLine view={props.view} decision={d} onDone={props.onDone} />
+          </li>
+        ))}
+      </ul>
+    </Card>
+  );
+}
+
+function Problems(props: { view: View }) {
+  if (!props.view.problems.length) return null;
+  return (
+    <Card title="Problems you reported">
+      <ul class="dlv-decisions">
+        {props.view.problems.map(p => (
+          <li>
+            <strong>{p.status === "open" ? "Our team is looking into it" : p.outcomeLabel ?? "Closed"}</strong>
+            <span class="dlv-when">Reported {when(p.createdAt)}{p.resolvedAt ? ` · closed ${when(p.resolvedAt)}` : ""}</span>
+            <p class="dlv-quote">{p.reasons}</p>
+            {p.note && <p class="dlv-quote muted">Our note: {p.note}</p>}
           </li>
         ))}
       </ul>
@@ -421,8 +529,8 @@ function Details(props: { view: View }) {
       <dl class="dlv-facts">
         <dt>Agent</dt><dd>{agentLine(props.view.persona)}</dd>
         {props.view.jobType && <><dt>Job</dt><dd>{props.view.jobType.title}</dd></>}
-        {j.priceCents !== null && <><dt>Price</dt><dd>{money(j.priceCents)}. Nothing is charged during the beta.</dd></>}
-        <dt>Ordered</dt><dd>{when(j.createdAt)}</dd>
+        {props.view.plan?.faster && <><dt>Delivery</dt><dd>Faster delivery</dd></>}
+        <dt>Started</dt><dd>{when(j.createdAt)}</dd>
         <dt>Revisions</dt><dd>{j.revisionsUsed} of {j.revisionsAllowed} used</dd>
       </dl>
       {props.view.request && (
@@ -440,7 +548,14 @@ function JobPage(props: { params: Record<string, string> }) {
   const [index, setIndex] = useState(-1);
   const count = job.data?.drafts.length ?? 0;
   useEffect(() => { setIndex(count - 1); }, [count]);
-  if (job.error) return <Page title="Job"><Notice tone="bad">{job.error}</Notice><Button href="/jobs">Back to my jobs</Button></Page>;
+  if (job.error) {
+    return (
+      <Page title="We could not open this job" intro="This page shows one of your jobs: the draft, the checklist and what happens next.">
+        <Notice tone="bad">{job.error}</Notice>
+        <Button href="/jobs">See my jobs</Button>
+      </Page>
+    );
+  }
   if (!job.data) return <main class="page"><Spinner /></main>;
   const v = job.data, j = v.job;
   const i = index >= 0 && index < count ? index : count - 1;
@@ -450,7 +565,7 @@ function JobPage(props: { params: Record<string, string> }) {
     <Page title={j.title} intro={agentLine(v.persona)}
       actions={<div class="dlv-head-actions">
         <StatusBadge status={j.status} label={j.statusLabel} />
-        <Button small kind="secondary" href={v.orderAgain}>Order again</Button>
+        <Button small kind="secondary" href={v.orderAgain}>Hire again</Button>
       </div>}>
       {job.stale && <Notice tone="warn">We could not refresh this page. We will try again in a few seconds.</Notice>}
       <Card class="dlv-status">
@@ -464,9 +579,9 @@ function JobPage(props: { params: Record<string, string> }) {
       </Card>
       <Progress status={j.status} />
       {(j.status === "draft" || j.status === "quoted") && (
-        <Notice tone="info" title="Your order is not finished">
-          <p>Finish the questions and confirm the quote to start the work.</p>
-          <Button small href={`/requests/${j.id}`}>Finish your order</Button>
+        <Notice tone="info" title="Your request is not finished">
+          <p>Answer the questions, check the plan, then start the job.</p>
+          <Button small href={`/requests/${j.id}`}>Finish your request</Button>
         </Notice>
       )}
       <div class="split">
@@ -475,11 +590,12 @@ function JobPage(props: { params: Record<string, string> }) {
             : j.working ? <Card><p class="muted" style={{ margin: 0 }}>The draft shows here when it is ready. We email you too.</p></Card> : null}
           {v.actions.accept && latest && <Decide view={v} draft={latest} onDone={job.set} />}
           {v.actions.report && <ReportProblem view={v} onDone={job.set} />}
-          {j.status === "accepted" && <p class="muted small">Need something else? <Link href={v.orderAgain}>Order again</Link> or <Link href="/agents">hire another agent</Link>.</p>}
+          {j.status === "accepted" && <p class="muted small">Need something else? <Link href={v.orderAgain}>Hire again</Link> or <Link href="/agents">hire another agent</Link>.</p>}
         </div>
         <aside class="stack dlv-col">
           <Checklist criteria={v.criteria} check={draft?.check ?? null} />
-          <Decisions view={v} />
+          <Problems view={v} />
+          <Decisions view={v} onDone={job.set} />
           <Timeline view={v} />
           <Details view={v} />
         </aside>
@@ -491,8 +607,11 @@ function JobPage(props: { params: Record<string, string> }) {
 export const pages: PageDef[] = [
   { path: "/jobs", access: "buyer", component: JobsList },
   { path: "/jobs/:id", access: "buyer", component: JobPage },
+  { path: "/notifications", access: "signed-in", component: NotificationsPage },
+  // The ops problem reports page lives with the ops pages but is built and registered by the delivery module.
+  { path: "/ops/problems", access: "ops", component: OpsProblems },
 ];
 
 export const nav: NavItem[] = [
-  { label: "My jobs", href: "/jobs", group: "main", order: 30, show: me => !!me },
+  { label: "My jobs", href: "/jobs", group: "main", order: 30, show: me => !!me?.hostedJobs },
 ];

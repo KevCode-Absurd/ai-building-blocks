@@ -1,4 +1,4 @@
-// Studio with the runner mocked: mark-up drafts, compile, test bench, suggested rules, publish, and ops live/retire.
+// Studio with the runner mocked: mark-up drafts, compile, test bench (judged against plain AI), suggested rules, publish, and ops live/retire.
 import { test, mock } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -28,6 +28,11 @@ async function writeDraft(env: Env, kind: "test" | "baseline", agentId: string |
   const runId = `run_mock${++n}`, draftId = `drf_mock${n}`, now = new Date().toISOString();
   await env.DB.prepare("INSERT INTO runs (id, kind, agent_id, agent_version, status, input, created_at) VALUES (?, ?, ?, ?, 'succeeded', '{}', ?)").bind(runId, kind, agentId, version, now).run();
   await env.DB.prepare("INSERT INTO drafts (id, job_id, run_id, version, content, format, fingerprint, created_at) VALUES (?, NULL, ?, 1, ?, 'markdown', ?, ?)").bind(draftId, runId, content, `fp${n}`, now).run();
+  // The agent's writer, as the runner logs it: the bench judge must come from another provider.
+  if (kind === "test") {
+    await env.DB.prepare("INSERT INTO model_calls (id, day, purpose, run_id, provider, model, cost_micro_usd, ok, created_at) VALUES (?, ?, 'runner.step.write', ?, 'anthropic', 'claude-sonnet-5-5', 0, 1, ?)")
+      .bind(`mc_${runId}`, now.slice(0, 10), runId, now).run();
+  }
   return { runId, draftId };
 }
 
@@ -55,6 +60,8 @@ const { fakePackage } = await import("../src/modules/studio/fakes.ts");
 const { registerFake } = await import("../src/core/models.ts");
 const { readData } = await import("../src/modules/studio/prompts.ts");
 const { sha256Hex, stableJson } = await import("../src/core/db.ts");
+const { HttpError } = await import("../src/core/http.ts");
+const { extractTag } = await import("../src/modules/evaluation/prompts.ts");
 
 const PUBLIC = LANDING_PAGE.sample_briefs.filter(b => b.visibility === "public").map(b => b.text);
 const HIDDEN = LANDING_PAGE.sample_briefs.filter(b => b.visibility === "hidden").map(b => b.text);
@@ -313,4 +320,106 @@ test("going live and retiring are for ops only, and write events", async () => {
   await setAgentStatus(t.env, { agentId, status: "testing", actor: "user_ops", reason: "Second look after fixes." });
   assert.equal((await t.sql("SELECT status FROM agents WHERE id = ?", agentId))[0].status, "testing");
   assert.ok((await t.sql("SELECT 1 FROM events WHERE type = 'agent.status_changed' AND entity_id = ?", agentId)).length);
+});
+
+// ---------- Test bench against plain AI ----------
+
+const isAgentDraft = (text: string | null) => !!text && text.includes("Book a call with us");
+
+test("each bench draft is judged against plain AI, by a judge from another provider", async () => {
+  const t = await testEnv();
+  const agentId = await setup(t);
+  const base = await ready(t, agentId);
+  await t.api("POST", `${base}/build`, { user: "user_pia", body: {} });
+
+  // The judge prefers the agent on the dog groomer brief and plain AI on the bookkeeping one.
+  const seen: { avoid: unknown; brief: string }[] = [];
+  registerFake("evaluation.pairwise", req => {
+    const brief = extractTag(req.prompt, "brief") ?? "";
+    seen.push({ avoid: req.avoidProvider, brief });
+    const agentIsA = isAgentDraft(extractTag(req.prompt, "draft_a"));
+    const agentWins = brief.includes("dog groomers");
+    return { data: { winner: agentWins === agentIsA ? "A" : "B", reason: agentWins ? "It names the offer and the next step." : "It is shorter and clearer." } };
+  });
+
+  const res = await t.api("POST", `${base}/test`, { user: "user_pia", body: {} });
+  assert.equal(res.status, 200, JSON.stringify(res.body));
+  const bench = res.body.bench;
+  const byBrief = (needle: string) => bench.tests.find((x: any) => x.brief.includes(needle));
+  assert.equal(byBrief("dog groomers").verdict.status, "done");
+  assert.equal(byBrief("dog groomers").verdict.winner, "agent");
+  assert.equal(byBrief("Bookkeeping").verdict.winner, "baseline");
+  assert.match(byBrief("dog groomers").verdict.reasons, /names the offer/);
+  assert.deepEqual(bench.vsPlainAi, { judged: 2, agentWins: 1, baselineWins: 1, ties: 0, skipped: 0 });
+
+  // Two orders per pair, and never the writer's provider.
+  assert.equal(seen.length, 4);
+  assert.ok(seen.every(s => s.avoid === "anthropic"), "the agent's drafts were written by anthropic, so the judge avoids it");
+  for (const x of bench.tests) {
+    assert.equal(x.verdict.avoidedProvider, "anthropic");
+    assert.equal(x.verdict.judgeModel, "fake:fake-1");
+  }
+  assert.ok(seen.every(s => PUBLIC.some(b => s.brief.includes(b))), "the judge sees the sample brief");
+
+  // Evaluation keeps its own record; the bench keeps the verdict, the version and the event get the totals.
+  const scores = await t.sql("SELECT s.passed, s.result FROM scores s JOIN studio_tests st ON st.agent_draft_id = s.draft_id WHERE s.judge = 'baseline' AND st.agent_id = ?", agentId);
+  assert.equal(scores.length, 2);
+  const [v] = await t.sql("SELECT test_results FROM agent_versions WHERE agent_id = ? AND version = 1", agentId);
+  assert.deepEqual(JSON.parse(v.test_results).studio.vs_plain_ai, { judged: 2, agent_wins: 1, baseline_wins: 1, ties: 0, skipped: 0 });
+  const [ev] = await t.sql("SELECT data FROM events WHERE type = 'studio.test_bench_run' AND entity_id = ? ORDER BY seq DESC LIMIT 1", agentId);
+  assert.deepEqual(JSON.parse(ev.data).vs_plain_ai, { judged: 2, agent_wins: 1, baseline_wins: 1, ties: 0, skipped: 0 });
+  const detail = (await t.api("GET", base, { user: "user_pia" })).body;
+  assert.deepEqual(detail.bench.tests.map((x: any) => x.verdict.winner).sort(), ["agent", "baseline"], "the verdicts are saved with the bench");
+
+  // When the two orders disagree, the pair is a tie.
+  registerFake("evaluation.pairwise", () => ({ data: { winner: "A", reason: "The first one." } }));
+  const tied = await t.api("POST", `${base}/test`, { user: "user_pia", body: {} });
+  assert.deepEqual(tied.body.bench.tests.map((x: any) => x.verdict.winner), ["tie", "tie"]);
+  assert.deepEqual(tied.body.bench.vsPlainAi, { judged: 2, agentWins: 0, baselineWins: 0, ties: 2, skipped: 0 });
+});
+
+test("the daily AI limit or a broken judge never fails the bench", async () => {
+  const t = await testEnv();
+  const agentId = await setup(t);
+  const base = await ready(t, agentId);
+  await t.api("POST", `${base}/build`, { user: "user_pia", body: {} });
+
+  // callModel throws model_cap_reached when today's spend is at DAILY_MODEL_CAP_USD: the pairs are left uncompared.
+  let judgeCalls = 0;
+  registerFake("evaluation.pairwise", () => {
+    judgeCalls++;
+    throw new HttpError(503, "model_cap_reached", "We have reached today's limit for AI work.");
+  });
+  const capped = await t.api("POST", `${base}/test`, { user: "user_pia", body: {} });
+  assert.equal(capped.status, 200, JSON.stringify(capped.body));
+  assert.deepEqual(capped.body.bench.tests.map((x: any) => [x.status, x.verdict.status, x.verdict.code]), [["done", "skipped", "daily_limit"], ["done", "skipped", "daily_limit"]]);
+  assert.deepEqual(capped.body.bench.vsPlainAi, { judged: 0, agentWins: 0, baselineWins: 0, ties: 0, skipped: 2 });
+  assert.ok(capped.body.bench.tests.every((x: any) => isAgentDraft(x.agentDraft) && x.baselineDraft), "the drafts are still shown");
+  assert.equal(judgeCalls, 4);
+
+  // A judge that never gives a usable answer (one retry each) is "not compared" too. A failed run is not judged at all.
+  judgeCalls = 0;
+  registerFake("evaluation.pairwise", () => { judgeCalls++; return { data: { winner: "the second one", reason: "" } }; });
+  failAgentOnBrief = PUBLIC[1];
+  const broken = await t.api("POST", `${base}/test`, { user: "user_pia", body: {} });
+  failAgentOnBrief = null;
+  assert.equal(broken.status, 200);
+  const [ok, failed] = broken.body.bench.tests;
+  assert.deepEqual([ok.status, ok.verdict.status, ok.verdict.code], ["done", "skipped", "judge_failed"]);
+  assert.deepEqual([failed.status, failed.verdict], ["failed", null]);
+  assert.equal(judgeCalls, 4, "two orders, each tried twice, for the one finished pair");
+  assert.equal((await t.sql("SELECT COUNT(*) AS n FROM scores WHERE judge = 'baseline'"))[0].n, 0);
+});
+
+test("bench runs from before judging show as not compared", async () => {
+  const t = await testEnv();
+  const agentId = await setup(t);
+  const base = await ready(t, agentId);
+  await t.api("POST", `${base}/build`, { user: "user_pia", body: {} });
+  await t.api("POST", `${base}/test`, { user: "user_pia", body: {} });
+  await t.sql("UPDATE studio_tests SET verdict = NULL WHERE agent_id = ?", agentId);
+  const d = (await t.api("GET", base, { user: "user_pia" })).body;
+  assert.deepEqual(d.bench.tests.map((x: any) => x.verdict), [null, null]);
+  assert.deepEqual(d.bench.vsPlainAi, { judged: 0, agentWins: 0, baselineWins: 0, ties: 0, skipped: 0 });
+  await assert.rejects(t.sql("UPDATE studio_tests SET verdict = 'not json' WHERE agent_id = ?", agentId), /CHECK constraint/);
 });

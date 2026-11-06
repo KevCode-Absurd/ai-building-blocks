@@ -1,0 +1,192 @@
+[
+  {
+    "id": "capability-statement-and-prequal-pack",
+    "title": "Capability statement or supplier pre-qualification pack",
+    "summary": "A one-page capability statement, or the facts, documents and past-work examples a buyer's supplier form asks for, built from your own records.",
+    "area": "sales",
+    "deliverable": "A one-page capability statement (what you do, core services, why choose you, past work, company facts and contact), or a pre-qualification pack: a document checklist with who holds each item and its status, a company fact sheet, past-work examples in the usual format, and the gaps to close before you apply.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "One-page capability statement",
+          "Capability statement for one buyer type or sector",
+          "Supplier pre-qualification document checklist",
+          "Company fact sheet for supplier forms and portals",
+          "Past work examples written for buyers",
+          "Full pack: statement, checklist, fact sheet and examples"
+        ]
+      },
+      {
+        "id": "company",
+        "label": "What your business does and for whom",
+        "type": "longtext",
+        "required": true,
+        "help": "Services, areas you cover, team size, years trading, equipment and the kind of sites you work on.",
+        "max": 4000
+      },
+      {
+        "id": "records",
+        "label": "Facts you can prove",
+        "type": "longtext",
+        "required": true,
+        "help": "Registrations, licences, insurance cover, accreditations, policies and codes (such as NAICS or CAGE), with dates. Only what you hold now.",
+        "max": 6000
+      },
+      {
+        "id": "buyers",
+        "label": "Who you are selling to",
+        "type": "text",
+        "required": true,
+        "help": "For example property managers, building contractors, schools, councils or federal agencies.",
+        "max": 300
+      },
+      {
+        "id": "versions",
+        "label": "How many versions?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A statement tailored for two buyer types counts as two.",
+        "max": 4
+      },
+      {
+        "id": "past_work",
+        "label": "Past jobs to use as examples",
+        "type": "longtext",
+        "required": false,
+        "help": "Client type, what you did, size, dates and result, and whether the client agreed to be named or give a reference.",
+        "max": 6000
+      },
+      {
+        "id": "buyer_form",
+        "label": "The buyer's form or document list",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the questions or required documents from a supplier form, portal or tender.",
+        "max": 15000
+      },
+      {
+        "id": "contact",
+        "label": "Contact details to show",
+        "type": "text",
+        "required": false,
+        "help": "Name, role, email, phone and website. Leave blank for placeholders.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "The draft is the piece chosen, shaped for the buyers named.",
+        "weight": 4,
+        "pass_rule": "The piece chosen is delivered with its core parts: a statement has what you do, core services, why choose you, past work, company facts and contact; a checklist lists each document with holder and status; a fact sheet is a table; each past-work example has client type, scope, size, dates and result.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "only_real_facts",
+        "text": "Every licence, code, insurance detail, certification and past job comes from the brief.",
+        "weight": 5,
+        "pass_rule": "Each registration, code, accreditation, insurance detail, date, staff number and past job appears in the brief; anything buyers usually ask for that the brief lacks is listed as a gap or [placeholder], never filled in; a client is named only where the brief says they agreed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "one_page_fit",
+        "text": "A capability statement fits one page and reads fast.",
+        "weight": 4,
+        "pass_rule": "A capability statement is 250 to 450 words in labelled blocks; core services are a list of 3 to 8 items; each 'why choose us' point names a fact from the brief; contact details sit together in one block.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "The pack is ready to act on.",
+        "weight": 4,
+        "pass_rule": "Checklists give each document with who holds it, any expiry or renewal date from the brief, and a status (have, need, expired); gaps are ordered by what would stop an application first; past-work examples follow the buyer's form where one is pasted.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain, confident words with no hype.",
+        "weight": 3,
+        "pass_rule": "Sentences are short; words such as 'leading', 'best' or 'unrivalled' appear only where the brief proves them; terms from the buyer's form are kept and explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "versions",
+        "unit": "version",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You help small service firms win contracts with businesses and public bodies. Using only the facts I give you, write the piece I chose. A capability statement fits one page: what we do, three to eight core services, why choose us (each point backed by a fact I gave), past work, company facts such as registrations and codes, and contact details. A pre-qualification pack lists every document a buyer usually asks for, who holds it, its expiry date and whether we have it, plus a company fact sheet and past-work examples with client type, scope, size, dates and result. Never invent licences, insurance, accreditations or past jobs; list missing items as gaps in the order they would block an application. Name clients only where I say they agreed.",
+    "not_for": [
+      "Legal review of tender terms, contracts or liability clauses",
+      "Claiming licences, insurance, accreditations or past work you do not have",
+      "Registering on supplier portals or submitting forms for you",
+      "Answering every question in a full tender (see the application, tender or questionnaire job)",
+      "Design or print-ready files (you get the text and a layout note)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "One-page capability statement for BrightLine Commercial Cleaning, 22 staff, covering offices and medical waiting rooms across two counties. We hold public liability and employer's liability cover, a waste carrier licence and ISO 9001 since 2021. Past work: three office blocks for one property manager (they agreed to be named), a school contract for four years. Buyers: property managers and facilities teams.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Supplier pre-qualification checklist for a regional housing association's approved contractor list. We are a 9-person electrical contractor. Their document list is pasted (insurance, health and safety policy, accreditations, three references, accounts). Tell us what we have, what we are missing and what to do first.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Capability statement for federal buyers for Ridgeback Fence & Gate, a small fencing installer. NAICS 238990, CAGE code and SAM registration details pasted. Past jobs: perimeter fencing at a county fairground and two warehouse yards. Two versions: one for federal agencies, one for general contractors.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Full pack for Northfield Signs, a 6-person sign maker selling to shopping centre managers and builders. Company facts, our insurance and two safety accreditations with expiry dates pasted. Five past jobs with notes on which clients will give references.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "capability statement",
+      "capabilities statement",
+      "pqq",
+      "pre-qualification questionnaire",
+      "supplier pre-qualification",
+      "selection questionnaire",
+      "approved contractor list",
+      "vendor registration",
+      "company fact sheet",
+      "past performance",
+      "commercial contracts",
+      "facilities contracts",
+      "supplier onboarding pack"
+    ],
+    "demand_sources": [
+      {
+        "note": "The Small Business Development Center at Tampa Bay calls a capability statement a resume for your company and a key marketing tool for reaching federal buyers.",
+        "url": "https://sbdctampabay.com/capability-statement-essential-small-businesses-working-federal-government/"
+      },
+      {
+        "note": "UK Cabinet Office guidance (PPN 03/24, 2024): supplier selection asks for organisation details, financial standing, insurance and usually three past contract examples with references.",
+        "url": "https://www.gov.uk/government/publications/ppn-0324-standard-selection-questionnaire-sq/annex-a-guidance-on-the-selection-stage-process-including-standard-selection-questions-pcr-2015-html"
+      }
+    ]
+  }
+]

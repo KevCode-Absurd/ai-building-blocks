@@ -1,0 +1,3768 @@
+[
+  {
+    "id": "tracker-register-or-workspace",
+    "title": "Tracker, register or workspace design",
+    "summary": "A ready-to-use tracker, log or register, or a plan for Airtable, Notion, your CRM or a shared drive. You get the fields, formulas, rules and a short guide.",
+    "area": "operations",
+    "deliverable": "A build sheet tab by tab or table by table: each field with its type and allowed values, formulas with a worked example, links, views and simple automations, naming and update rules, checks, rows filled from your data and a one-page guide on who updates what. For a messy set-up: what to merge, rename or archive, ranked, and the import order.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "New spreadsheet or tracker",
+          "Log or register (shifts, delays, devices, documents, data)",
+          "Formulas for a sheet you already have",
+          "Handover plan for a workbook",
+          "Airtable base design",
+          "Notion workspace plan",
+          "Move from spreadsheets to Airtable or Notion",
+          "Review of a messy workspace",
+          "CRM fields, pick lists and stage rules",
+          "Shared drive folders and file names",
+          "One-page team guide for a workspace"
+        ]
+      },
+      {
+        "id": "purpose",
+        "label": "What must it track, and who uses it?",
+        "type": "longtext",
+        "required": true,
+        "help": "The work it supports, who adds data, who reads it and how often.",
+        "max": 3000
+      },
+      {
+        "id": "tool",
+        "label": "Which tool will you use?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Google Sheets",
+          "Microsoft Excel",
+          "Airtable",
+          "Notion",
+          "HubSpot",
+          "Pipedrive",
+          "Salesforce",
+          "Zoho CRM",
+          "Google Drive",
+          "SharePoint or OneDrive",
+          "Other or not sure"
+        ]
+      },
+      {
+        "id": "designs",
+        "label": "How many separate trackers, bases or workspaces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 10
+      },
+      {
+        "id": "current_setup",
+        "label": "Your current sheet, base, CRM or folders",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste column headers, field lists, a few rows or the folder tree. Remove any passwords.",
+        "max": 20000
+      },
+      {
+        "id": "data",
+        "label": "Rows to fill in",
+        "type": "longtext",
+        "required": false,
+        "help": "Your list of contractors, devices, grants, jobs or records. Up to 200 rows.",
+        "max": 30000
+      },
+      {
+        "id": "calculations",
+        "label": "What must it work out?",
+        "type": "longtext",
+        "required": false,
+        "help": "Totals, hours, cost, margin, days left, money remaining, warnings.",
+        "max": 2000
+      },
+      {
+        "id": "rules",
+        "label": "Rules it must follow",
+        "type": "longtext",
+        "required": false,
+        "help": "Required fields, approvals, review dates and names you already use.",
+        "max": 2000
+      },
+      {
+        "id": "owners",
+        "label": "Who updates it and who owns it",
+        "type": "text",
+        "required": false,
+        "help": "Roles are fine, such as manager or bookkeeper.",
+        "max": 400
+      },
+      {
+        "id": "problems",
+        "label": "What goes wrong today",
+        "type": "longtext",
+        "required": false,
+        "help": "For a review or a move: duplicates, broken links, things people cannot find.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "Delivers the piece chosen, built for the tool named, and covers everything the brief asks it to track.",
+        "weight": 5,
+        "pass_rule": "The draft uses the chosen tool's own terms (tabs and cells for a sheet; tables, fields and views for Airtable; databases and properties for Notion; fields and stages for a CRM; folders for a drive) and every item the brief says to track or fix appears in it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fields_and_formulas",
+        "text": "Every field has a type and allowed values, and every calculation is written out.",
+        "weight": 5,
+        "pass_rule": "Each tab or table lists its fields with a type (text, number, date, pick list, link) and the allowed values for pick lists; each calculation shows the exact formula or rollup and one worked example; a folder plan gives an example name for every naming rule.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_data",
+        "text": "Uses only the buyer's facts: no made-up names, rates, dates or records.",
+        "weight": 5,
+        "pass_rule": "Every name, rate, date, amount and filled-in row comes from the brief; any sample row the draft adds is labelled 'example'; no password, card number or login appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_run",
+        "text": "It is complete enough to build and use on day one, with rules and a short guide.",
+        "weight": 4,
+        "pass_rule": "The draft includes who updates what and how often, naming and change rules, and at least two checks (such as required fields, a total that must match, or a date warning); a review or move lists steps in order with a check after each step.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Clear, plain words a busy owner can follow.",
+        "weight": 3,
+        "pass_rule": "Tab, field and folder names are short and plain; instructions are numbered steps of under 25 words each; terms like rollup or lookup are explained the first time they appear.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "designs",
+        "unit": "design",
+        "included": 1,
+        "per_unit_usd": 45
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations and spreadsheet specialist. Design the tracker, register or workspace described below for the tool I name (Google Sheets, Excel, Airtable, Notion, a CRM or a shared drive). Lay it out tab by tab or table by table: each field with its type and allowed values, every formula written out with a worked example, links between tables, views for each role, simple automations and naming rules. For a register, add the rules for adding, changing, approving, reviewing and archiving entries. Add checks that catch mistakes. Fill in rows only from the data I give and label any sample row as an example. If I ask for a review or a move off spreadsheets, list what to merge, rename, archive or rebuild, ranked by how much time it wastes, then the import order and the checks after import. End with a one-page guide on who updates what and how often. Do not invent names, numbers or records, and never include passwords.",
+    "not_for": [
+      "Building it inside your account, or logging in to your tools",
+      "Passwords, card numbers or login details in the brief or the tracker",
+      "Legal or privacy sign-off on what data you may keep",
+      "Tax, accounting or payroll advice",
+      "Tracking people in ways you have no right to",
+      "Filled-in risk assessments where we judge the risks for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_cafe_rota",
+        "text": "Rota template in Google Sheets for Bean There, a cafe in Bristol. 9 staff in 3 roles: barista, kitchen and front of house. Shifts are 7:00 to 15:00 and 11:00 to 19:00, Monday to Sunday. Hourly pay: barista £12.60, kitchen £13.10, front £12.21. I want hours and wage cost per day and per week, and a warning if anyone goes over 40 hours. The manager fills it in every Thursday.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_airtable_events",
+        "text": "Airtable base for Fernhill Events, a 6-person wedding planning firm. We plan about 40 weddings a year and track them in 5 spreadsheets: clients, venues, suppliers, payments and timelines. Headers for each are pasted below. Planners need a 'my weddings' view. The owner needs a view of payments due this month. We would like a reminder when a supplier deposit is due in 7 days.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_job_cost",
+        "text": "Job cost sheet in Excel for Calder Joinery, 4 joiners. Each job has a quote, labour hours at £28 an hour, materials and subcontractors. I want cost to date, margin in pounds and percent, and a red flag when cost passes 80% of the quote. We run about 12 jobs at a time.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_device_register",
+        "text": "Device and software register in Excel for Hale & Co Accountants, 14 staff. Pasted list: 14 Dell laptops with serial numbers and purchase dates, 9 iPhones, Microsoft 365 Business Standard (14 seats, renews 1 March), Xero (monthly), Adobe Acrobat (3 seats, renews 12 June). We need owner, serial, purchase date, warranty end, renewal date and status. No passwords.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_notion_cleanup",
+        "text": "Our Notion is a mess. Brightside Physio has 3 clinics and 22 staff. There are about 140 pages, 3 different 'SOPs' databases, a 'Policies' page that repeats half of them, and old meeting notes from 2023. The page tree is pasted below. Tell us what to merge, rename or archive, ranked, and give a one-page team guide on where things live.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_grant_tracker",
+        "text": "Grant tracker in Google Sheets for Riverside Food Share, a small charity. Four grants: Lottery £25,000 for staff costs until March 2027; County Council £8,000 for van fuel and repairs; Smith Trust £5,000 unrestricted; Rotary £2,000 for fridges only. Spending to date is pasted below by month. I need spent and remaining per grant and a warning at 80% spent.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_hubspot_fields",
+        "text": "HubSpot clean-up plan for Northgate Roofing. We have 63 contact properties, including 4 different 'Lead source' fields and 2 'Job type' fields. Deal stages are New, Quoted, Follow up, Won and Lost, but people skip Quoted. Property list pasted. We want which fields to keep, merge or drop, pick list values, and stage entry and exit rules.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "tracker",
+      "spreadsheet template",
+      "google sheets",
+      "excel template",
+      "airtable base",
+      "notion workspace",
+      "register",
+      "log template",
+      "rota template",
+      "job cost sheet",
+      "grant tracker",
+      "asset register",
+      "crm clean up",
+      "pipeline stages",
+      "formula help",
+      "folder structure",
+      "file naming",
+      "workspace cleanup",
+      "spreadsheet design"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's Airtable hiring page (2026) quotes $50 to $150 an hour and $500 to $2,000 for a basic base, with CRM, project and inventory tracking as common projects.",
+        "url": "https://contra.com/hire/airtable-experts"
+      },
+      {
+        "note": "Contra's Notion hiring page (2026) puts small Notion projects at $200 to $500, with workspace design, project workspaces and templates among common jobs.",
+        "url": "https://contra.com/hire/notion.so-experts"
+      },
+      {
+        "note": "Airtable's community jobs board holds over 1,000 posts, many from small firms asking for help to design, audit or clean up their bases.",
+        "url": "https://community.airtable.com/jobs-board-16"
+      }
+    ]
+  },
+  {
+    "id": "draft-review-ranked-fixes",
+    "title": "Review of your draft with ranked fixes",
+    "summary": "An expert read of your deck, plan, proposal, copy, survey, lesson, paper or help docs. You get ranked fixes based on what your reader needs.",
+    "area": "content",
+    "deliverable": "A review tied to your text: a verdict on each slide, section, goal or question; gaps, weak claims, risky promises and numbers that do not match, each quoted with its fix and ranked by impact; a check against any rules you paste; rewrites of the weakest parts (the whole text if under 500 words); and the questions your reader will ask.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "draft_type",
+        "label": "What should we review?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Pitch deck",
+          "Business plan",
+          "Sales proposal",
+          "Marketing plan or goals (OKRs)",
+          "Ad, website or brand copy",
+          "Brochure, flyer or packaging",
+          "Press release or news story",
+          "Survey or questionnaire",
+          "Lesson or training material",
+          "Research paper or long report",
+          "Help centre or product docs",
+          "Marketing claims against your evidence"
+        ]
+      },
+      {
+        "id": "draft",
+        "label": "Paste the draft",
+        "type": "longtext",
+        "required": true,
+        "help": "The full text. For a deck, paste each slide's text in order. For packaging, every panel.",
+        "max": 40000
+      },
+      {
+        "id": "reader",
+        "label": "Who reads it, and what should it get them to do?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "words",
+        "label": "About how many words is the draft?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 5,000 words or a 20-slide deck.",
+        "max": 60000
+      },
+      {
+        "id": "criteria",
+        "label": "Rules or criteria to check it against",
+        "type": "longtext",
+        "required": false,
+        "help": "A brief, voice guide, platform or journal rules, buyer requirements, or new release notes for docs.",
+        "max": 15000
+      },
+      {
+        "id": "evidence",
+        "label": "Proof behind your claims",
+        "type": "longtext",
+        "required": false,
+        "help": "For a claims check: test results, certificates, data or sources for each claim.",
+        "max": 15000
+      },
+      {
+        "id": "reader_questions",
+        "label": "Questions or tickets from readers",
+        "type": "longtext",
+        "required": false,
+        "help": "For help docs: common tickets or search terms that show what is missing.",
+        "max": 10000
+      },
+      {
+        "id": "worries",
+        "label": "What worries you about it",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "whole_draft_checked",
+        "text": "Reviews the whole draft for the stated reader and checks every rule or criterion supplied.",
+        "weight": 5,
+        "pass_rule": "Every slide, section, goal or question gets a short verdict (works, weak or missing), and every rule or criterion pasted in the brief is listed as met, partly met or not met with its place in the draft; with no criteria given, the review states what the reader needs and checks against that.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "quoted_ranked_fixes",
+        "text": "Each issue quotes the draft and gives a specific fix, and fixes are ranked by impact.",
+        "weight": 5,
+        "pass_rule": "Each issue names the slide, section or line and quotes it, then gives a concrete fix or new wording; issues are in priority order with a one-line reason tied to the reader, and the top three to five are marked. Advice with no quote does not count.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_new_facts",
+        "text": "The review adds no facts: no new numbers, results, sources or claims.",
+        "weight": 5,
+        "pass_rule": "Rewrites use only facts found in the draft or brief; where a fix needs a fact the buyer must supply, the draft shows a placeholder such as [add figure]; no claim is called proven, legal or compliant.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "rewrites_and_questions",
+        "text": "Ready-to-paste rewrites of the weakest parts, and the questions the reader will ask.",
+        "weight": 4,
+        "pass_rule": "At least three weak parts are rewritten in full (or the whole text if it is under 500 words), and at least five questions the stated reader is likely to ask are listed.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_fair",
+        "text": "Frank, fair and in plain words.",
+        "weight": 3,
+        "pass_rule": "Each issue is stated in one or two short sentences without jargon, and the review quotes at least two things that work well, not only problems.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "words",
+        "unit": "word",
+        "included": 5000,
+        "per_unit_usd": 0.012
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior editor and reviewer. Review the draft below for the reader and goal I describe. Give a short verdict on every slide, section, goal or question. List the gaps, weak or risky claims, unclear parts and numbers that do not match, quoting each one and giving a specific fix, ranked by how much it matters to the reader. Check the draft against any rules or criteria I paste and mark each as met, partly met or not met. For a pitch deck or business plan, check it against the questions investors or lenders usually ask and show how the plan could fail using its own numbers. For a research paper, include a summary, strengths, main concerns, smaller points and a recommendation. Rewrite the three weakest parts in full (or the whole text if it is under 500 words) and list the questions the reader will ask. Point out what works too. Do not add facts, numbers or sources that are not in the draft or brief, and do not say any claim is legal or compliant.",
+    "not_for": [
+      "Legal or regulatory sign-off on claims, labels or contracts",
+      "Rewriting a long piece from scratch",
+      "Fact-checking against sources you did not supply",
+      "Coursework, theses or exams to be graded as your own work",
+      "Replies to journal reviewers written for you",
+      "Reviews of charts or designs from images alone",
+      "Medical, legal or financial advice on the content"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_seed_deck",
+        "text": "Review our 14-slide seed deck for Tallyroo, an app that helps cafes track food waste. We are raising $600,000. Slide text is pasted below. Traction: 31 paying cafes at $49 a month, 4% monthly churn. Readers are angel investors in food tech. I worry the market slide and the team slide are weak.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_flyer",
+        "text": "Check our A5 flyer for Greenway Window Cleaning before we print 5,000. Text pasted below: the front has a headline, 6 bullet points and a phone number; the back has prices for 3 house sizes. Reader: homeowners who pick it up from the doormat. Does it pass a 3-second look?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_survey",
+        "text": "Review our 18-question parent survey for Little Sprouts Nursery (64 families). Questions pasted below. We want to know why parents choose us and what to improve before fees go up in January. I think some questions push people towards an answer.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_proposal",
+        "text": "Check my proposal to Hartley Logistics for a new staff intranet before I send it on Friday. Their brief (pasted) asks for: launch in 12 weeks, single sign-on, 3 training sessions, a fixed price and a named project lead. My draft proposal is pasted too, about 2,400 words. Our price is £18,500.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_green_claims",
+        "text": "Check the claims on our website and labels for Wild Thistle Soap Co. Claims: '100% natural', 'plastic-free packaging', 'carbon neutral since 2024', 'kind to sensitive skin'. Our evidence is pasted: the ingredient list (it includes a synthetic fragrance), a supplier note on paper wrap with a plastic window, and no carbon audit. Which claims does our evidence support, and what safer wording can we use?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_okrs",
+        "text": "Review our Q1 goals for Bramble & Co, a 12-person design studio. 4 objectives and 11 key results are pasted below. Some say 'improve client happiness' with no number. Mark each one clear, vague or not measurable, and rewrite the weak ones using only figures we already track (listed below).",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "draft review",
+      "feedback on my draft",
+      "pitch deck review",
+      "business plan review",
+      "proposal review",
+      "copy review",
+      "brand voice check",
+      "flyer review",
+      "packaging review",
+      "survey review",
+      "lesson review",
+      "peer review",
+      "developmental edit",
+      "manuscript critique",
+      "help centre audit",
+      "claims check",
+      "green claims",
+      "ad policy check",
+      "okr review",
+      "editing feedback"
+    ],
+    "demand_sources": [
+      {
+        "note": "Editorial Freelancers Association 2026 rate chart: developmental editing of business and marketing writing at $60 to $75 an hour, and manuscript assessment at $40 to $54 an hour.",
+        "url": "https://www.the-efa.org/rates/"
+      }
+    ]
+  },
+  {
+    "id": "checklist-scorecard-job-aid",
+    "title": "Checklist set, scorecard or one-page job aid",
+    "summary": "Tick-box checklists, a scorecard for reviews or site visits, or a one-page job aid. Built from how your business really works.",
+    "area": "operations",
+    "deliverable": "Checklists by area, stage or day with each item, owner, timing, what good looks like, what to do on a fail and sign-off lines; or a scorecard with weighted criteria, a scoring guide with an example for each score and a follow-up form; or a one-page guide to keep at the station or desk.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Opening and closing checklists",
+          "Cleaning checklists by room or area",
+          "One-page station or desk guide",
+          "New starter, leaver or contractor checklists",
+          "New site, project or job stage checklist",
+          "Month-end or routine admin checklist",
+          "Customer onboarding or job handover checklist",
+          "One-page checklist from an SOP or training",
+          "Site visit or audit scorecard",
+          "Call, support or quality scorecard",
+          "Sample or supplier check scorecard",
+          "Client guide for what to do after an incident"
+        ]
+      },
+      {
+        "id": "work",
+        "label": "Describe the work, area or role",
+        "type": "longtext",
+        "required": true,
+        "help": "What happens, in what order, who does it and when. Paste your SOP or notes.",
+        "max": 15000
+      },
+      {
+        "id": "count",
+        "label": "How many checklists, guides or scorecards?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 5.",
+        "max": 30
+      },
+      {
+        "id": "standards",
+        "label": "What good looks like",
+        "type": "longtext",
+        "required": false,
+        "help": "Your standards, limits and targets, such as fridges at 5°C or below, or reply within 2 hours.",
+        "max": 4000
+      },
+      {
+        "id": "tools",
+        "label": "Tools, products or systems used",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "roles",
+        "label": "Who does it and who signs off",
+        "type": "text",
+        "required": false,
+        "help": "Roles are fine, such as shift lead or manager.",
+        "max": 400
+      },
+      {
+        "id": "fail_actions",
+        "label": "What to do when a check fails",
+        "type": "longtext",
+        "required": false,
+        "help": "Who to tell, what to fix and what to write down.",
+        "max": 2000
+      },
+      {
+        "id": "scoring",
+        "label": "For a scorecard: what to score and what matters most",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "format",
+        "label": "How will it be used?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Printed on paper",
+          "On a phone or tablet",
+          "In a spreadsheet",
+          "In a checklist app"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_brief",
+        "text": "Covers every area, stage, role or task named in the brief, in the order the work happens.",
+        "weight": 5,
+        "pass_rule": "Each area, stage or role in the brief has its own checklist or section, items follow the order of the work described, and nothing the brief lists is missing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "tickable_items",
+        "text": "Every item is one action someone can tick, with an owner and a time; scorecards are weighted with a scoring guide.",
+        "weight": 5,
+        "pass_rule": "Each item starts with a verb, holds one action and shows who does it and when (time, day or stage); each checklist ends with a sign-off line; for a scorecard, each line has a weight and a scoring guide with an example for each score.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_steps",
+        "text": "Steps, limits and standards come from the buyer, and anything added is marked as a suggestion.",
+        "weight": 5,
+        "pass_rule": "Every temperature, time limit, product, tool and standard appears in the brief; any step not in the brief is marked 'suggested' so the owner can approve it; no legal or safety rule is stated as required.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "fail_and_format",
+        "text": "It says what to do when a check fails and fits the way it will be used.",
+        "weight": 4,
+        "pass_rule": "Each checklist or scorecard says what to do on a fail (who to tell, what to fix, what to record); any one-page guide or checklist has about 25 items or fewer; a scorecard includes a follow-up action form with dates.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Short, plain words a new starter can follow.",
+        "weight": 3,
+        "pass_rule": "Items are under 15 words each, use everyday words, and explain any term a new starter would not know.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "count",
+        "unit": "checklist",
+        "included": 5,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations manager who writes checklists and scorecards. From my notes below, build the checklists, scorecard or one-page guide I ask for, split by area, stage or day. Each item is one action that starts with a verb, with who does it, when, and what good looks like. Add what to do when a check fails and a sign-off line. For a scorecard, give weighted criteria, a scoring guide with an example for each score and a short follow-up action form. Keep one-page guides to one page. Use only my steps, products and standards, and mark anything you add as 'suggested' so I can approve it. Do not state legal or safety rules as required.",
+    "not_for": [
+      "Safety-critical, medical or regulated procedures that need an expert to sign them off",
+      "Legal, food safety or health and safety compliance sign-off",
+      "Legal, payroll or tax steps for taking on your first employee",
+      "Scoring named staff for pay, discipline or firing decisions",
+      "Driver route planning or stop order",
+      "Insurance, legal or claims advice for your clients"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_pub_open_close",
+        "text": "Opening and closing checklists for The Fox & Anchor, a pub with a 40-cover kitchen. Areas: kitchen, bar, floor and cellar. Notes pasted below: fridges must read 5°C or below, hot hold 63°C or above, cellar 11 to 13°C, tills counted by the duty manager. We open at 11:00 and last orders are 22:45. Printed on clipboards. The duty manager signs off.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_cleaner_lists",
+        "text": "Room-by-room checklists for Sparkle Lane Cleaning, 11 cleaners doing homes and small offices. Rooms: kitchen, bathroom, bedroom, living room and office. Products we use: Method all-purpose spray, Viakal for limescale, microfibre cloths colour-coded red for toilets and blue for surfaces. Cleaners must take 3 photos at the end. Used on their phones.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_qa_scorecard",
+        "text": "Support QA scorecard for Pebble Pet Food's 5-person email team. We care most about: the right answer from our policy, tone, solving it in one reply, and correct tagging. Refund rule: refunds under £30 need no approval. I want weights, a scoring guide and a pass and fail example for each line.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_site_scorecard",
+        "text": "Site visit scorecard for Crumb & Co Bakeries, 6 shops. Area managers visit monthly. Score: window display, full range out by 9am, cleanliness, staff uniform, till and cash paperwork, and the waste log. Cleanliness and paperwork matter most. We need a follow-up action form with dates.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_month_end",
+        "text": "Month-end checklist for Orchard Dental (2 practices). Tools: Xero, Dentally, Dext and a Lloyds bank feed. Our bookkeeper Sam and practice manager Priya share the work. Steps from my notes are pasted below, about 22 tasks. The close should finish by working day 5.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_starter_leaver",
+        "text": "IT checklists for new starters and leavers at Marsh Lane Architects, 18 staff. We use Microsoft 365, Autodesk licences (12 seats), a Synology file server, door fobs and Dell laptops. Our IT is an outside firm, Bytecare. Notes pasted. We need day-one and last-day lists with owners.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "checklist",
+      "opening and closing checklist",
+      "cleaning checklist",
+      "job aid",
+      "station guide",
+      "scorecard",
+      "site audit",
+      "qa scorecard",
+      "call scorecard",
+      "onboarding checklist",
+      "offboarding checklist",
+      "month end checklist",
+      "handover checklist",
+      "sop checklist",
+      "quick reference guide",
+      "sample check"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Food Standards Agency guidance (Safer food, better business) asks small food businesses to write down their safe methods and keep daily records in a diary for inspectors.",
+        "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb"
+      },
+      {
+        "note": "Contra listing that sells written SOPs, user guides and operation manuals at $100 each, a sign that small firms pay for written procedures.",
+        "url": "https://contra.com/s/A6oEvErs-standard-operating-procedures-user-guides-operation-manuals"
+      }
+    ]
+  },
+  {
+    "id": "it-security-continuity-plan",
+    "title": "IT, security and continuity check with a plan",
+    "summary": "A plain check of your IT, cyber security or backup set-up, with the biggest gaps ranked. Plus a step-by-step plan for when things go wrong.",
+    "area": "operations",
+    "deliverable": "Your answers scored against a small-business baseline with the biggest gaps; a 90-day fix or set-up plan with owners and your costs; backup and recovery order; app, plugin and access clean-up; and plans for hacks, outages or a crisis with roles, first-hour steps, contacts, ready messages and a practice exercise.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Cyber security check and 90-day plan",
+          "What-to-do-if-hacked plan",
+          "Backup, file storage and weak-point review",
+          "IT set-up for a new or moving office",
+          "Business impact review of your key work",
+          "Business continuity plan for your top risks",
+          "IT and data recovery order",
+          "Emergency contacts and ready messages",
+          "One-hour practice exercise",
+          "Crisis plan with roles and ready statements",
+          "App, plugin and access clean-up",
+          "Online store security and fake orders"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, your sites and hours, and the work that must not stop.",
+        "max": 4000
+      },
+      {
+        "id": "staff",
+        "label": "Number of staff",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 50.",
+        "max": 5000
+      },
+      {
+        "id": "have_now",
+        "label": "Which of these do you have today?",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Two-step login on email",
+          "Password manager",
+          "Automatic updates on all devices",
+          "Antivirus on all computers",
+          "Backups you have test-restored",
+          "Off-site or cloud backup",
+          "Staff scam training",
+          "Separate admin accounts",
+          "Encrypted laptops and phones",
+          "Written incident plan",
+          "Cyber insurance",
+          "Own login for each person"
+        ]
+      },
+      {
+        "id": "systems",
+        "label": "Devices, accounts, apps and plugins",
+        "type": "longtext",
+        "required": false,
+        "help": "List each one with who uses it and what it does. Never include passwords.",
+        "max": 15000
+      },
+      {
+        "id": "backups",
+        "label": "How you back up today",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "key_work",
+        "label": "Key work and suppliers",
+        "type": "longtext",
+        "required": false,
+        "help": "What must keep running, how long it can stop, what a lost day costs, and who you rely on.",
+        "max": 5000
+      },
+      {
+        "id": "people",
+        "label": "Who does what",
+        "type": "longtext",
+        "required": false,
+        "help": "Owner, IT person or provider, and a backup for each role. Roles are fine.",
+        "max": 2000
+      },
+      {
+        "id": "past_problems",
+        "label": "Past problems or worries",
+        "type": "longtext",
+        "required": false,
+        "help": "Scam emails, outages, lost laptops, fake orders.",
+        "max": 3000
+      },
+      {
+        "id": "platform",
+        "label": "Website or store platform",
+        "type": "text",
+        "required": false,
+        "help": "Such as Shopify, WooCommerce or WordPress.",
+        "max": 200
+      },
+      {
+        "id": "budget",
+        "label": "Budget for fixes",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "Delivers the piece chosen and covers every system, activity or risk named in the brief.",
+        "weight": 5,
+        "pass_rule": "The draft matches the chosen option, and every device, account, app, supplier, key activity or risk listed in the brief appears in it at least once.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ranked_and_owned",
+        "text": "Gaps, fixes and steps are in a clear order, each with a reason, an owner and a time frame.",
+        "weight": 5,
+        "pass_rule": "Findings or steps are listed in priority or time order; each has a one-line reason it matters, an owner role from the brief and a time frame (such as week 1 to 2); for a check, the top three gaps are marked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_facts",
+        "text": "Uses only the buyer's facts: no made-up systems, contacts, costs or incidents.",
+        "weight": 5,
+        "pass_rule": "Every system, supplier, contact, cost and past incident comes from the brief; costs not given are left as a blank to fill; no password, card number or login appears in the draft.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_under_stress",
+        "text": "Plans work under stress, with first steps, who to call and ready messages; checks end in a dated action list.",
+        "weight": 4,
+        "pass_rule": "Any response, continuity, recovery or crisis plan starts with numbered first-hour steps and a who-to-call list using roles from the brief; any check, review or clean-up ends with a dated action list; points an IT person must confirm are marked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_no_claims",
+        "text": "Plain words, and no claim of legal, certified or insured compliance.",
+        "weight": 3,
+        "pass_rule": "Technical terms are explained in a few words the first time (such as two-step login); the draft does not say the business is compliant, certified or covered by insurance, and tells the owner to check breach reporting duties with a lawyer or regulator.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "staff",
+        "unit": "staff member",
+        "included": 50,
+        "per_unit_usd": 1.5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an IT and business continuity adviser for small businesses. Using only the facts below, produce the piece I ask for. For a security check, score my answers against a simple small-business baseline (two-step login, updates, backups, antivirus, scam training, access) and rank the biggest gaps with why each matters, then give a 90-day plan with owners, effort and my costs. For a hacked, outage, continuity or crisis plan, start with numbered first-hour steps, who to call, what to save, who decides and who speaks, ready messages for staff, customers and suppliers, and the steps back to normal. For a recovery order, list systems and data in the order to restore, with target times and where backups are. For a clean-up, say keep, limit or remove for each app, plugin or access, with the risk. For a practice exercise, write a timed scenario with questions for each role and a review form. Mark what my IT person must confirm. Do not invent systems, costs or contacts, never include passwords, and do not claim I am compliant or certified.",
+    "not_for": [
+      "Penetration testing, scans or logging in to your systems",
+      "Incident forensics or recovering hacked accounts for you",
+      "Passwords, card numbers or login details in your brief",
+      "Security certification, Cyber Essentials or insurance sign-off",
+      "Legal advice on breach reporting or data protection law",
+      "Live monitoring, or changing settings in your accounts for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_dental_check",
+        "text": "Cyber security check for Elm Street Dental, 14 staff, one practice. We use Microsoft 365 email (no two-step login yet), Dentally in the cloud, 9 Windows PCs, 2 shared reception logins, and a Synology box backed up to USB every Friday (never test-restored). A receptionist clicked a fake invoice email in June. Our IT is a local firm, PCFix, on call. Budget about £1,500.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_bakery_continuity",
+        "text": "Business continuity plan for Hearth Bakery: 2 bakeries and 4 shops, 38 staff. Key work: overnight baking (cannot stop more than 1 night), wholesale deliveries to 22 cafes by 7am, and card payments in shops. Top worries: oven breakdown, power cut, flour supplier failing, the head baker off sick, card machines down. A lost wholesale day costs about £3,200.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_shop_fake_orders",
+        "text": "Our Shopify store, Little Loom Yarns, got 140 fake orders in one night last week, all £1 to £3 with different cards. 3 staff have admin access and we have 19 apps installed (list pasted). We want a store security checklist, which apps to remove, and a plan to stop card testing.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_hacked_plan",
+        "text": "What-to-do-if-hacked plan for Ridley & Shaw Accountants, 9 staff. Google Workspace email, Xero, Dext, client files in Google Drive, MacBook laptops. IT support is a freelancer, Tom, who works Monday to Thursday. We hold client bank details. One page please, with who to call and what to tell clients.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_wp_plugins",
+        "text": "Plugin clean-up review for our WordPress site, Coast Path Holidays. 34 plugins installed (list pasted with versions and last update dates); 6 have not updated in over 2 years, and we have 3 different SEO plugins and 2 page builders. Bookings go through the WP Booking plugin. Which should we keep, replace or remove, and in what order?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_office_move",
+        "text": "IT set-up plan for Stonegate Recruitment moving into a new office on 3 February. 16 staff, 12 laptops, 4 new desktops to buy, 1 printer and VoIP phones from RingCentral. The landlord gives us a 500 Mbps line. Quotes we have: wifi kit £1,240, cabling £860. We need the order of work, owners and a budget sheet.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "cyber security check",
+      "it audit",
+      "security plan",
+      "incident response plan",
+      "hacked plan",
+      "business continuity plan",
+      "disaster recovery",
+      "backup plan",
+      "impact analysis",
+      "tabletop exercise",
+      "crisis plan",
+      "emergency contacts",
+      "access review",
+      "plugin audit",
+      "shopify security",
+      "card testing",
+      "fake orders",
+      "office it setup"
+    ],
+    "demand_sources": [
+      {
+        "note": "UK Cyber Security Breaches Survey 2025/2026: 46% of small businesses found a breach or attack in the last 12 months, and only 44% have a continuity plan that covers cyber.",
+        "url": "https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026"
+      },
+      {
+        "note": "UK National Cyber Security Centre guide for small organisations on backups, protecting devices and accounts, and spotting scams.",
+        "url": "https://www.ncsc.gov.uk/collection/small-business-guide"
+      }
+    ]
+  },
+  {
+    "id": "evidence-review-from-sources",
+    "title": "Literature review, cited report or fact check",
+    "summary": "A review, report, short answer, history or fact check built only from the sources you give us. Every claim points to its source.",
+    "area": "research",
+    "deliverable": "Sources grouped by theme with findings compared and conflicts explained; an evidence table or annotated list; a cited report, short answer or one-page brief with the answer first and its limits; a claim-by-claim check with status and the backing passage; or a history with each fact tied to a source. Every claim is referenced.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Literature review on one question",
+          "Evidence table of your sources",
+          "Annotated source list or source notes",
+          "Report on conflicting findings",
+          "Cited report from your notes and sources",
+          "Short cited answer to one question",
+          "One-page brief of a long report",
+          "Claim-by-claim fact check of a document",
+          "Source quality review",
+          "Company history from your documents",
+          "Heritage story with each fact marked"
+        ]
+      },
+      {
+        "id": "question",
+        "label": "Your question, or what the piece is for",
+        "type": "longtext",
+        "required": true,
+        "max": 1500
+      },
+      {
+        "id": "sources",
+        "label": "Paste your sources",
+        "type": "longtext",
+        "required": true,
+        "help": "Full text or long extracts. Number each one and add its title, author, date and where it came from.",
+        "max": 150000
+      },
+      {
+        "id": "source_count",
+        "label": "How many sources?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 20.",
+        "max": 200
+      },
+      {
+        "id": "draft",
+        "label": "Document to fact check",
+        "type": "longtext",
+        "required": false,
+        "help": "For a fact check: the text with the claims.",
+        "max": 30000
+      },
+      {
+        "id": "reader",
+        "label": "Who will read it",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "length",
+        "label": "Length",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "One page",
+          "1 to 2 pages",
+          "2 to 4 pages",
+          "4 to 8 pages",
+          "5 to 10 pages"
+        ]
+      },
+      {
+        "id": "reference_style",
+        "label": "Reference style",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Numbers in brackets [1]",
+          "Author and year (APA)",
+          "Harvard",
+          "Footnotes",
+          "No preference"
+        ]
+      },
+      {
+        "id": "focus",
+        "label": "Anything to focus on or leave out",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "answers_question",
+        "text": "Delivers the chosen piece and answers the buyer's question.",
+        "weight": 4,
+        "pass_rule": "The draft is in the format chosen (review, table, list, report, answer, brief, fact check or history), stays on the question in the brief, and where the format has an answer it states it in the first section.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "every_claim_cited",
+        "text": "Every claim is tied to a supplied source the reader can find.",
+        "weight": 5,
+        "pass_rule": "Each factual sentence carries a reference to a numbered or named source from the brief, with a page, section or short quote where the source has one; no reference points to a source the brief does not contain.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "nothing_from_outside",
+        "text": "Nothing comes from outside the supplied sources, and gaps are said plainly.",
+        "weight": 5,
+        "pass_rule": "No study, statistic, date, name or quote appears that is not in the supplied sources or brief; where the sources do not answer something, the draft says so instead of filling the gap; a heritage story marks each fact as sourced, family story or not confirmed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "weighs_evidence",
+        "text": "It weighs the evidence: strength, limits and conflicts are shown.",
+        "weight": 4,
+        "pass_rule": "The draft names at least one limit of the evidence (such as a small sample, old data or a one-sided source); where sources disagree it puts their claims or figures side by side and says which is more reliable and why; a fact check gives each claim a status (supported, partly, not supported, not found).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Clear, plain words for the stated reader.",
+        "weight": 3,
+        "pass_rule": "Sentences are mostly under 22 words, technical terms are explained once, and summaries lead with the answer before the detail.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 499,
+      "size": {
+        "field": "source_count",
+        "unit": "source",
+        "included": 20,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful researcher and fact checker. Using only the sources I paste below, produce the piece I ask for: a literature review grouped by theme, an evidence table (question, method, sample, finding, weak points), an annotated list, a report on conflicting findings, a cited report or short answer with the answer first, a one-page brief, a claim-by-claim fact check, a source quality review or a history. Reference every factual sentence to a numbered source, with a page or short quote where possible. Compare findings, explain where sources disagree and which is more reliable, and state the limits of the evidence. For a fact check, give each claim a status (supported, partly supported, not supported, not found), the passage that backs it and safer wording. Do not use any outside knowledge, do not invent citations, and say plainly when the sources do not answer something.",
+    "not_for": [
+      "Live web research, or finding sources for you",
+      "Medical, legal or investment conclusions or advice",
+      "Made-up citations, or sources we have not been given",
+      "Coursework, theses or exams to be graded as your own work",
+      "Go or stop calls from sales or survey data (see the data analysis of a CSV job)",
+      "Copying long passages of someone else's work into your piece"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_four_day_week",
+        "text": "Literature review for Northfield Housing Trust (120 staff): does a four-day week keep output the same? I have pasted 14 sources: 6 trial reports, 5 journal papers and 3 news articles, each numbered with date and author. Reader: our board, who are not researchers. 4 to 6 pages, answer first, with the limits.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_fact_check",
+        "text": "Fact check our blog post 'Why sourdough is easier to digest' (1,100 words, pasted) for Rise & Crumb Bakery. Our 7 sources are pasted and numbered. List every checkable claim, whether the sources support it, the passage that backs it, and safer wording where they do not.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_company_history",
+        "text": "A 3-page history of Pennick & Sons, a family hardware shop in Truro. I have pasted 23 numbered items: a 1952 lease, newspaper cuttings from 1961 and 1987, letters, my grandfather's notes and a 2003 council award. I want a timeline and a story, with each fact tied to an item. Some dates in the cuttings and the notes do not match.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_evidence_table",
+        "text": "Evidence table for our care home group on falls prevention for people over 80. 11 study summaries pasted and numbered. Columns: question, method, sample size, finding, weak points. Then a half-page note on where they disagree. This is for our quality lead, not clinical advice.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_one_page",
+        "text": "One-page brief of the 46-page 'High Street Footfall 2026' report (pasted) for the owner of Cobble Lane Books. She has two minutes. The answer, three reasons and one next step, all with page numbers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_heritage",
+        "text": "Heritage story for the 'Our story' page of Blackwater Distillery. Sources pasted: an 1898 excise licence, 2 local history society articles, a family letter from 1920, and my aunt's memories written down in 2019. Mark every fact as sourced, family story or not confirmed. About 600 words.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "literature review",
+      "evidence review",
+      "fact check",
+      "fact checking",
+      "cited report",
+      "research summary",
+      "annotated bibliography",
+      "evidence table",
+      "source review",
+      "cited answer",
+      "company history",
+      "heritage story",
+      "research brief",
+      "report summary",
+      "conflicting research"
+    ],
+    "demand_sources": [
+      {
+        "note": "Editorial Freelancers Association 2026 rate chart lists research at $47.50 to $60 an hour and fact-checking at $50 to $60 an hour as paid freelance services.",
+        "url": "https://www.the-efa.org/rates/"
+      }
+    ]
+  },
+  {
+    "id": "website-audit-fix-list",
+    "title": "Website accessibility, speed or design audit",
+    "summary": "We check a page or site for accessibility, speed, design or menus. You get a ranked list of fixes for your developer.",
+    "area": "product",
+    "deliverable": "Issues found in the code, reports or descriptions you supply, checked against WCAG, Core Web Vitals or your design rules and ranked by who they affect and gain per hour, each with the fix and a way to check it; developer tickets with acceptance criteria; alt text where needed; and a recurring check or before-and-after benchmark plan.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Accessibility audit (WCAG)",
+          "Accessibility fix tickets for developers",
+          "Alt text and captions pack",
+          "Recurring accessibility or design check plan",
+          "Page speed diagnosis and fixes",
+          "Image and font plan",
+          "WordPress speed clean-up plan",
+          "Core Web Vitals read-out for search pages",
+          "Before-and-after speed benchmark plan",
+          "Design consistency audit",
+          "Design handoff check",
+          "Navigation and menu label audit"
+        ]
+      },
+      {
+        "id": "pages",
+        "label": "Pages or flows to check",
+        "type": "longtext",
+        "required": true,
+        "help": "Links and what each page is for. For a flow, list the steps in order.",
+        "max": 4000
+      },
+      {
+        "id": "page_count",
+        "label": "Number of pages or flows",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 20
+      },
+      {
+        "id": "code",
+        "label": "Page HTML, CSS or design tokens",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the HTML or CSS of each page, or your colour, font and spacing tokens.",
+        "max": 80000
+      },
+      {
+        "id": "reports",
+        "label": "Reports you exported",
+        "type": "longtext",
+        "required": false,
+        "help": "Lighthouse, PageSpeed, Search Console, an accessibility checker, or analytics.",
+        "max": 80000
+      },
+      {
+        "id": "screens",
+        "label": "Describe what is on screen",
+        "type": "longtext",
+        "required": false,
+        "help": "Layout, menus, buttons, states, and what each image shows.",
+        "max": 15000
+      },
+      {
+        "id": "platform",
+        "label": "Platform and theme",
+        "type": "text",
+        "required": false,
+        "help": "Such as WordPress with Astra, Shopify Dawn or Webflow.",
+        "max": 200
+      },
+      {
+        "id": "plugins",
+        "label": "Plugins, apps or scripts installed",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "traffic",
+        "label": "Visits or search clicks by page",
+        "type": "longtext",
+        "required": false,
+        "help": "From your analytics or Search Console.",
+        "max": 15000
+      },
+      {
+        "id": "standard",
+        "label": "Standard to check against",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "WCAG 2.2 AA",
+          "WCAG 2.1 AA",
+          "Core Web Vitals",
+          "Our design rules",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "users",
+        "label": "Who uses the site",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "evidence_based",
+        "text": "Every issue points to something in the supplied code, report or description.",
+        "weight": 5,
+        "pass_rule": "Each issue quotes the element, line, metric value or report row it comes from; no score, metric, traffic figure or user complaint appears that is not in the brief; the draft says what it could not check without live testing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "rule_named",
+        "text": "Covers the chosen piece and names the rule or metric behind each issue.",
+        "weight": 4,
+        "pass_rule": "The draft matches the chosen option; accessibility issues cite the WCAG success criterion number, speed issues cite the metric (LCP, INP, CLS) or report line, and design or navigation issues cite the rule or label they break.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ranked_by_gain",
+        "text": "Issues are ranked by who they affect and the gain for the effort.",
+        "weight": 5,
+        "pass_rule": "Issues are in priority order, each with a severity or expected gain and an effort size (under 1 hour, half a day, or more), and the top five are marked.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fix_and_check",
+        "text": "Each issue has a specific fix and a way to check it is done.",
+        "weight": 4,
+        "pass_rule": "Every issue gives the change to make, with code, a setting or new wording where it applies, and a check such as 'Tab reaches the button' or 'LCP under 2.5 s in a new Lighthouse run'; tickets have acceptance criteria.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words an owner can follow, with detail a developer can use.",
+        "weight": 3,
+        "pass_rule": "Each issue opens with one plain sentence on who it affects; terms like LCP or ARIA are explained the first time; developer detail sits under that sentence.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 449,
+      "size": {
+        "field": "page_count",
+        "unit": "page",
+        "included": 1,
+        "per_unit_usd": 45
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior web auditor covering accessibility, page speed, design systems and navigation. Audit the page or flow below using only the code, exported reports and descriptions I give. Check against the standard I name (WCAG 2.2 AA, Core Web Vitals or my design rules). For each issue, quote the element, line or report value, name the WCAG criterion or metric, say who it affects, give a specific fix with code or settings, and a way to check it is done. Rank issues by impact and effort and mark the top five. Turn them into developer tickets with acceptance criteria if I ask. Write alt text only for images I describe. For a design audit, list the colours, fonts, buttons and spacing in use and propose one set. For navigation, find dead ends, buried pages, duplicate links and confusing labels. Say what you could not check without live testing, and do not invent scores, traffic or user complaints.",
+    "not_for": [
+      "Accessibility certification, VPAT sign-off or legal compliance claims",
+      "Live crawling, scanning or testing your site from outside",
+      "Changing your site, theme or plugins for you",
+      "Security testing",
+      "Logins or passwords for your site or hosting",
+      "A full usability review of a page (see the UX review of a page or flow job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_a11y_booking",
+        "text": "Accessibility audit of the booking flow for Pinewood Physio (3 steps: choose a service, pick a time, pay). HTML of each step pasted, plus an axe export with 37 issues. WCAG 2.2 AA. Some patients use screen readers and many are over 65.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_wp_speed",
+        "text": "WordPress speed clean-up for Bloom Hair Studio. Astra theme, 27 plugins (list pasted), and a PageSpeed report for the home page pasted: mobile score 31, LCP 6.8 s, CLS 0.24. The hero image is a 4.2 MB JPEG. Which changes first, and in what safe order?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_store_speed",
+        "text": "Speed fix list for our Shopify store Fernway Outdoor (Dawn theme, 16 apps). Lighthouse exports for the home page, a collection page and a product page are pasted. Rank fixes by gain per hour of work for our part-time developer.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_cwv_readout",
+        "text": "Core Web Vitals read-out for Holloway Estate Agents. Our Search Console export (pasted) shows 412 poor URLs on mobile, mostly property pages. Search clicks by page are pasted too. Which slow templates actually get search traffic? Add a short ticket list for our developer.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_design_audit",
+        "text": "Design consistency audit of our web app, Ledgerly. CSS pasted from 3 screens: we found 14 greys, 5 blues, 9 button styles and 3 fonts. We want a list of what is in use and a proposed single set of colours, type sizes, spacing and buttons.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_nav_audit",
+        "text": "Navigation audit for Marlow Community Trust's site, 64 pages. Menu and page list pasted, plus analytics for the top 30 pages and on-site search terms. Visitors say they cannot find volunteering. Rank dead ends, buried pages, duplicate links and confusing labels, and suggest clearer labels.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "accessibility audit",
+      "wcag audit",
+      "ada website",
+      "alt text",
+      "page speed",
+      "core web vitals",
+      "site speed",
+      "lighthouse report",
+      "wordpress speed",
+      "shopify speed",
+      "image optimisation",
+      "design system audit",
+      "design handoff",
+      "navigation audit",
+      "menu labels",
+      "website audit"
+    ],
+    "demand_sources": [
+      {
+        "note": "WebAIM Million 2026: 95.9% of the top one million home pages had detectable WCAG 2 failures, about 56 errors per page, led by low-contrast text and missing alt text.",
+        "url": "https://webaim.org/projects/million/"
+      },
+      {
+        "note": "Google Search Central says it highly recommends site owners achieve good Core Web Vitals for success with Search.",
+        "url": "https://developers.google.com/search/docs/appearance/core-web-vitals"
+      }
+    ]
+  },
+  {
+    "id": "slide-deck-and-carousel-text",
+    "title": "Slide deck or carousel: story and slide text",
+    "summary": "The story and text for a pitch, sales, training or results deck, or a social carousel. Built slide by slide from your notes and numbers.",
+    "area": "content",
+    "deliverable": "The story order, then for each slide a headline, body text, a visual or chart note and speaker notes. Carousels get a hook slide, body slides, a call to action and a caption. Training decks get practice tasks; rewrites, cuts and industry versions get notes on what moved and why. Ready to drop into your design tool.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Investor pitch deck",
+          "Short teaser deck from your full deck",
+          "Sales deck for one buyer type",
+          "Industry versions of your deck",
+          "Rewrite of your current deck",
+          "Training deck from your procedure",
+          "Monthly or results update deck",
+          "Deck from a report or spreadsheet",
+          "Customer quarterly review deck",
+          "Instagram carousels",
+          "LinkedIn document carousel"
+        ]
+      },
+      {
+        "id": "audience",
+        "label": "Who is it for, and what should they do after?",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "material",
+        "label": "Your notes, numbers or current deck",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste notes, figures, the report, the procedure, or each current slide's text.",
+        "max": 60000
+      },
+      {
+        "id": "slides",
+        "label": "Total number of slides",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 12. For several carousels, add up all their slides.",
+        "max": 100
+      },
+      {
+        "id": "proof",
+        "label": "Facts and proof we may use",
+        "type": "list",
+        "required": false,
+        "help": "Numbers, customers you may name, quotes, awards. Only these are used.",
+        "max": 30
+      },
+      {
+        "id": "ask",
+        "label": "Your ask or next step",
+        "type": "text",
+        "required": false,
+        "help": "Such as raise $500k, book a demo, or renew for a year.",
+        "max": 300
+      },
+      {
+        "id": "industries",
+        "label": "Industries for versions",
+        "type": "list",
+        "required": false,
+        "help": "Up to three.",
+        "max": 3
+      },
+      {
+        "id": "tool",
+        "label": "Where will you build it?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "PowerPoint",
+          "Google Slides",
+          "Keynote",
+          "Canva",
+          "Figma",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "avoid",
+        "label": "Things not to say",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "one_story",
+        "text": "The slides tell one clear story for the stated audience and end on the ask.",
+        "weight": 4,
+        "pass_rule": "The draft opens with the story order; the slide count matches the brief within one slide; the last content slide states the ask or next step from the brief; versions, cuts and rewrites include a note on what changed and why.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "every_slide_ready",
+        "text": "Every slide is ready to build: headline, body text, visual or chart note, and speaker notes.",
+        "weight": 5,
+        "pass_rule": "Each deck slide has all four parts and each headline states one message in 12 words or fewer; each carousel has a hook slide, body slides, a call-to-action slide and a caption; a training deck has a practice task per section.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_numbers",
+        "text": "No invented numbers, traction, customers or quotes.",
+        "weight": 5,
+        "pass_rule": "Every figure, customer name, logo, quote and result comes from the brief; chart notes use only the brief's numbers; missing facts appear as a placeholder like [add monthly revenue], never a made-up figure.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "glanceable_text",
+        "text": "Slide text is short enough to take in at a glance.",
+        "weight": 4,
+        "pass_rule": "Body text is 40 words or fewer per deck slide and 25 or fewer per carousel slide, in bullets or short lines, with the detail moved to speaker notes or the caption.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_specific",
+        "text": "Plain, specific words with no hype.",
+        "weight": 3,
+        "pass_rule": "No unexplained jargon and no empty hype such as 'revolutionary', 'game-changing' or 'world-class' unless quoted from the brief; each claim is specific to the business.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 399,
+      "size": {
+        "field": "slides",
+        "unit": "slide",
+        "included": 12,
+        "per_unit_usd": 5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a presentation writer who builds decks and carousels from a client's notes. Write the deck or carousel I ask for, for the audience and goal below. First give the story order in a few lines. Then, for each slide, write a headline that states one message (12 words or fewer), short body text (40 words or fewer), a note on the visual or chart using only my numbers, and speaker notes. For carousels, write a hook slide, body slides, a call-to-action slide and a caption. For a training deck, add one practice task per section. For a rewrite, a shorter cut or industry versions, note what moved, what was cut and why. End on my ask. Use only the facts and numbers I give, and put [placeholders] where something is missing. No hype words.",
+    "not_for": [
+      "Slide design, layouts, images or files (you get text and notes for your design tool)",
+      "Invented numbers, traction, logos or customer names",
+      "Securities offering documents or promises of investment returns",
+      "Claims about health, money or legal results you cannot prove",
+      "A review of a deck you already have (see the review of your draft with ranked fixes job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_seed_deck",
+        "text": "12-slide investor deck for Shelfwise, software that tells small grocers what to reorder. Raising $750,000 pre-seed. Notes pasted: 18 shops paying $89 a month, a pilot cut waste 22% at Patel's Grocers (we may name them), 2 founders: an ex-supermarket buyer and an engineer. Ask: $750k for 18 months. Audience: angels and pre-seed funds.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_sales_deck",
+        "text": "10-slide sales deck for Kettle & Crumb Wholesale, selling pastries to independent cafes. Buyer: cafe owners with 1 to 3 sites. Facts: next-morning delivery by 7am in Leeds and York, minimum order £60, 31 cafes supplied, frozen bake-off range with 4-minute bake times. Next step: book a free tasting box.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_ig_carousels",
+        "text": "Five Instagram carousels for Coastline Physio, 7 slides each. Topics: desk neck pain, runner's knee, posture myths, when to see a physio, and what happens at your first visit. Facts pasted from our physios. No health claims beyond what they wrote. Call to action: book online. Total 35 slides.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_training_deck",
+        "text": "Training deck for new cleaners at Bright Nest Cleaning from our SOP (pasted, 9 sections). About 16 slides with speaker notes and one practice task per section. Audience: new starters on day one, some with English as a second language.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_qbr",
+        "text": "Quarterly review deck for our client Hollin Garden Centres, from Leafline Marketing. Q3 numbers pasted: 41,200 website sessions (up 12%), 1,380 online orders, cost per order £6.40, and 2 issues (a late product feed and a broken voucher code). Our plan for Q4 is pasted. 8 slides with talking points.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_deck_rewrite",
+        "text": "Rewrite our 15-slide deck for Tidal Payroll. It lists features slide after slide. Current slide text pasted. Rebuild it around outcomes for UK firms with 20 to 200 staff: fewer payroll errors, time saved, HMRC filing built in. Use only the proof we listed. Give a note per slide on what moved and why.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "pitch deck",
+      "investor deck",
+      "sales deck",
+      "slide text",
+      "presentation outline",
+      "training deck",
+      "teaser deck",
+      "deck rewrite",
+      "qbr deck",
+      "monthly update deck",
+      "carousel",
+      "instagram carousel",
+      "linkedin carousel",
+      "slide copy",
+      "speaker notes"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's pitch deck hiring page: freelance designers charge $50 to $200 an hour, and most deck projects take 20 to 30 hours, or $1,000 to $6,000 in total.",
+        "url": "https://contra.com/hire/pitch-deck-designers"
+      },
+      {
+        "note": "YunoJuno rate data: freelance presentation designers average $65 an hour.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/presentation-designer"
+      }
+    ]
+  },
+  {
+    "id": "contract-or-regulation-summary",
+    "title": "Plain-words summary of a contract, rule or tender",
+    "summary": "What a contract, loan offer, rule or tender really says, in plain words. With key dates, duties and questions for your lawyer.",
+    "area": "operations",
+    "deliverable": "A one to two page plain summary (who does what, money, length, ending, risks, anything unusual); a table of dates, payments, duties and deadlines with clause or section numbers; a side-by-side of two versions; a renewal tracker; a duties or tender checklist with a go or no-go view; and ranked questions for your lawyer or lender.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Plain summary of a contract",
+          "Table of key dates, payments and duties",
+          "Questions for your lawyer",
+          "Compare two versions or two offers",
+          "Renewal and notice date tracker",
+          "Plain summary of a regulation or rule",
+          "What changed in a new version of a rule",
+          "Checklist of duties under a rule",
+          "Loan offer in plain words",
+          "Tender or RFP requirements checklist"
+        ]
+      },
+      {
+        "id": "document",
+        "label": "Paste the full text",
+        "type": "longtext",
+        "required": true,
+        "help": "The whole contract, offer, rule or tender, with its clause or section numbers.",
+        "max": 150000
+      },
+      {
+        "id": "pages",
+        "label": "Total pages",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 40 pages across all documents.",
+        "max": 600
+      },
+      {
+        "id": "second_document",
+        "label": "Second version or offer to compare",
+        "type": "longtext",
+        "required": false,
+        "max": 150000
+      },
+      {
+        "id": "your_side",
+        "label": "Which side are you on?",
+        "type": "text",
+        "required": false,
+        "help": "Such as the customer, supplier, tenant or borrower.",
+        "max": 200
+      },
+      {
+        "id": "concerns",
+        "label": "What you need to know",
+        "type": "longtext",
+        "required": false,
+        "help": "Your worries, or the points that matter most to you.",
+        "max": 3000
+      },
+      {
+        "id": "key_date",
+        "label": "Start date or today's date",
+        "type": "text",
+        "required": false,
+        "help": "So we can work out the last day to act.",
+        "max": 100
+      },
+      {
+        "id": "region",
+        "label": "Country and state or region",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "about_you",
+        "label": "For a tender: about your business",
+        "type": "longtext",
+        "required": false,
+        "help": "Size, services and past work, so we can give a go or no-go view.",
+        "max": 4000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_what_matters",
+        "text": "Delivers the chosen piece and covers every part of the document that matters for it.",
+        "weight": 5,
+        "pass_rule": "The draft matches the chosen option; a contract summary covers who does what, money, length, ending, liability and anything unusual; a rule summary covers who it applies to, duties, dates and penalties; a tender checklist lists every must-do, deadline, format rule and scoring criterion.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "tied_to_text",
+        "text": "Every point is tied to a clause or section and matches the text exactly.",
+        "weight": 5,
+        "pass_rule": "Each point or table row gives its clause, section or page number, and its figures, dates and duties match the pasted text; nothing is stated that the document does not say.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "explains_not_advises",
+        "text": "It explains and does not advise: no legal opinion and no 'sign' or 'don't sign'.",
+        "weight": 4,
+        "pass_rule": "The draft says it is not legal advice, does not tell the buyer whether to sign or borrow, does not state what the law requires beyond the pasted text, and turns unclear or one-sided points into questions for a lawyer or lender.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "dates_and_questions",
+        "text": "Dates and deadlines are pulled out so the buyer can act, with ranked questions.",
+        "weight": 4,
+        "pass_rule": "A table lists every date, notice period, renewal and payment found, with the last day to act worked out where the brief gives a start or today's date; ranked questions, most important first, close the draft.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words a non-lawyer understands.",
+        "weight": 3,
+        "pass_rule": "Each point is one or two short sentences in everyday words; legal terms such as indemnity or covenant are explained in brackets the first time.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "pages",
+        "unit": "page",
+        "included": 40,
+        "per_unit_usd": 1.5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful contract and regulation reader who explains documents to small business owners. Read the full text below and produce the piece I ask for. Summarise in plain words who does what, money, length, how it ends, liability, risks and anything unusual (or, for a rule: who it covers, what it requires, dates and penalties). Give every point its clause or section number. Make a table of every date, notice period, renewal, payment and duty, and work out the last day to act from the date I give. If I paste two versions, compare them side by side. For a loan offer, cover the rate, fees, security, covenants and penalties. For a tender, list every must-do, deadline, format rule and scoring criterion, with a go or no-go view based on what I tell you about my business. End with ranked questions for my lawyer or lender. Do not give legal advice, do not tell me whether to sign, and do not state anything the text does not say.",
+    "not_for": [
+      "Legal advice or a legal opinion",
+      "Telling you whether to sign a contract or take a loan",
+      "Regulated financial advice on loans or credit",
+      "Looking up laws or rules you have not pasted",
+      "Documents you are not allowed to share",
+      "Negotiating terms or writing new clauses for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_lease",
+        "text": "Plain summary of the 5-year lease for our bakery unit, Unit 4 Mill Yard, Hebden Bridge. 31 pages pasted. We are the tenant. Rent is £14,400 a year with a review in year 3. I want to know about repairs, the break clause, service charges, and what happens if we want to leave early. Start date 1 March 2026.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_loan",
+        "text": "Loan offer in plain words for Greenhill Garage: £60,000 over 5 years from Northbank. 12 pages pasted. Tell me the rate, all fees, security, covenants, early repayment charges and what counts as a default, plus questions to ask the lender.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_compare",
+        "text": "Compare two cleaning supplier contracts for Oakwood Care Homes (4 homes): Brightway (18 pages) and CleanCo (22 pages), both pasted. Side by side on price, minimum term, notice, price rises, service levels, liability and ending early. We are the customer.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_tender",
+        "text": "Requirements checklist for a council tender: grounds maintenance for 14 parks, 3-year contract. 46 pages pasted. Bids are due 9 January 2027 at noon. We are Fieldcraft Landscapes, 12 staff, 3 vans, with council work for 2 schools now. Every must-do, format rule and scoring criterion, and a go or no-go view.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_reg_change",
+        "text": "What changed in the new version of our local street trading rules? Old and new policies from Westbrook District Council are pasted (19 and 24 pages). We run 2 coffee carts. Old rule, new rule and what it means for us, side by side, with section numbers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_renewals",
+        "text": "Renewal and notice tracker for Lumen Dental. 7 contracts pasted: phone system, X-ray servicing, waste collection, practice software, card machine, cleaning and alarm monitoring. For each: start, end, auto-renewal, notice period and the last day to give notice. Today is 6 November 2026.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "contract summary",
+      "plain english contract",
+      "contract review",
+      "lease summary",
+      "key terms",
+      "renewal tracker",
+      "notice period",
+      "contract comparison",
+      "loan terms",
+      "loan offer",
+      "regulation summary",
+      "compliance checklist",
+      "tender checklist",
+      "rfp requirements",
+      "lawyer questions"
+    ],
+    "demand_sources": [
+      {
+        "note": "Adobe survey (January 2025) of 274 US small business owners: 62% admitted signing contracts without knowing the details.",
+        "url": "https://blog.adobe.com/en/publish/2025/02/04/top-5-takeaways-from-new-contracts-survey-most-people-sign-before-they-read"
+      }
+    ]
+  },
+  {
+    "id": "store-sales-report",
+    "title": "Store sales report from your Shopify or POS export",
+    "summary": "A weekly or monthly report from your store, marketplace or till export: sales, channels, products, returns and what changed.",
+    "area": "ecommerce",
+    "deliverable": "Key numbers (sales, orders, average order, conversion, returns, fees, net sales, payouts) against the last period, by channel and product; top and bottom sellers; return reasons and their cost; what drove any dip or spike; and three actions. Event reviews add profit and busy hours.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Weekly store numbers",
+          "Monthly store report",
+          "Sales by channel",
+          "Product and collection sales",
+          "Why sales dipped or spiked",
+          "Returns and refunds review",
+          "Monthly sales summary for your bookkeeper",
+          "TikTok Shop weekly review",
+          "Pop-up or market event review"
+        ]
+      },
+      {
+        "id": "exports",
+        "label": "Paste your exports",
+        "type": "longtext",
+        "required": true,
+        "help": "Orders, sales, returns, payouts or analytics, as CSV or tables. Remove card numbers and customer emails.",
+        "max": 150000
+      },
+      {
+        "id": "period",
+        "label": "Period to report on",
+        "type": "text",
+        "required": true,
+        "help": "Such as 2 to 8 November 2026, or October 2026.",
+        "max": 100
+      },
+      {
+        "id": "channels",
+        "label": "Number of stores or sales channels",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 3.",
+        "max": 20
+      },
+      {
+        "id": "compare",
+        "label": "Compare with",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Previous period",
+          "Same period last year",
+          "Both",
+          "No comparison"
+        ]
+      },
+      {
+        "id": "platforms",
+        "label": "Where you sell",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Shopify",
+          "WooCommerce",
+          "Etsy",
+          "Amazon",
+          "eBay",
+          "TikTok Shop",
+          "Square",
+          "Shopify POS",
+          "Other till or POS",
+          "Market or pop-up"
+        ]
+      },
+      {
+        "id": "targets",
+        "label": "Targets or goals",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "costs",
+        "label": "Product costs and fees",
+        "type": "longtext",
+        "required": false,
+        "help": "For profit: cost per item, stall fee, staff cost.",
+        "max": 6000
+      },
+      {
+        "id": "events",
+        "label": "What happened in the period",
+        "type": "longtext",
+        "required": false,
+        "help": "Sales, ads, stock-outs, site changes, holidays, bad weather.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "numbers_add_up",
+        "text": "Every number is worked out correctly from the exports.",
+        "weight": 5,
+        "pass_rule": "Totals, averages, rates and changes can be recomputed from the pasted data (spot-check three): average order is sales divided by orders, conversion is orders divided by sessions, change is (now minus before) divided by before; each table states its period.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_sales",
+        "text": "No invented or estimated figures.",
+        "weight": 5,
+        "pass_rule": "Every figure comes from, or is calculated from, the exports; a measure the data cannot support (such as conversion with no session data) is marked 'not in your data' rather than estimated; nothing is forecast as certain.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_report",
+        "text": "Covers the chosen report for the stated period and comparison.",
+        "weight": 4,
+        "pass_rule": "The draft states the period and the comparison, and includes every measure the option needs: share by channel for a channel report, top and bottom sellers for a product report, reasons and cost for a returns review, profit and busy hours for an event review.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "explains_and_acts",
+        "text": "It explains what changed and ends with three actions.",
+        "weight": 4,
+        "pass_rule": "The draft names the biggest change and the driver the data shows (orders, conversion, order value, a product or a channel), and lists exactly three actions, each tied to a number in the report.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_tables",
+        "text": "Plain words and tidy tables an owner can read in five minutes.",
+        "weight": 3,
+        "pass_rule": "A summary of five lines or fewer comes first; tables have clear column names and units; terms like AOV are spelled out the first time.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "channels",
+        "unit": "channel",
+        "included": 3,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an ecommerce analyst. Using only the exports below, write the store report I ask for, for the period I give, compared with the period I choose. Start with a five-line summary. Then show sales, orders, average order value, conversion (only if session data is included), returns, fees, net sales and payouts, by channel and by product, with the change against the comparison period. List top and bottom sellers, return reasons and what they cost, and explain any dip or spike by checking orders, traffic, conversion and order value in turn. For a market or pop-up event, add costs, profit and busy hours. End with exactly three actions tied to the numbers. Show how key figures were worked out. Do not estimate anything the data does not contain, and say so where a number is missing. This is not bookkeeping or tax advice.",
+    "not_for": [
+      "Bookkeeping entries, tax figures or VAT returns",
+      "Logging in to your store, marketplace or ad accounts",
+      "Invented or estimated sales",
+      "Forecasts sold as certain",
+      "Card numbers or customer emails in your exports"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_weekly_candles",
+        "text": "Weekly numbers for Wick & Wander Candles (Shopify). The orders export and Shopify analytics for 3 to 9 November and the week before are pasted. 212 orders this week. I want sales, orders, sessions, conversion, average order, returning buyers and returns against last week, and three actions.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_tiktok_shop",
+        "text": "Weekly TikTok Shop review for Glow Theory skincare. Shop export pasted for 27 October to 2 November: sales by product, by video and by LIVE. We ran 3 LIVEs and posted 14 videos. What should we cut, what should we repeat, and three actions.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_market_stall",
+        "text": "Sales review of our stall at the Harrogate Christmas Market (4 days) for Fettle Pottery. Square card reader export and our cash count sheets pasted. Stall fee £480, 2 staff at £12.50 an hour for 32 hours each, cost per item listed. Sales, cost, profit, best sellers, busy hours and three changes for next year.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_bookkeeper_summary",
+        "text": "Monthly sales summary for our bookkeeper for October 2026. Sunny Paws Treats sells on Shopify, Etsy and Amazon. Exports pasted for each: gross sales, discounts, refunds, fees and payouts. One page by channel, ready for her to book.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_returns",
+        "text": "Returns and refunds review for Kinfolk Knitwear, September and October 2026. Returns export pasted: 186 returns with product, size, reason and refund amount. Customer IDs, not names. Return reasons by product, the cost of returns, repeat returners and three fixes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_sales_dip",
+        "text": "Sales at Brew Haus Coffee (Shopify) fell 31% in October against September. The orders export, sessions by source and our ad spend by week are pasted. We changed our theme on 6 October. Which moved: traffic, conversion or order value, and why?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "shopify report",
+      "store report",
+      "weekly sales report",
+      "monthly sales report",
+      "ecommerce kpi",
+      "sales by channel",
+      "product performance",
+      "returns report",
+      "refund analysis",
+      "sales dip",
+      "tiktok shop review",
+      "etsy sales",
+      "pos report",
+      "market stall sales",
+      "sales summary"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance data analysts average $68 an hour (£410 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "hiring-kit-for-one-role",
+    "title": "Hiring plan, criteria and candidate messages",
+    "summary": "A hiring kit for one role: plan and search brief, screening criteria, interview plan, comparison sheet, candidate replies and an offer letter.",
+    "area": "people",
+    "deliverable": "Role brief and outcomes at 30, 90 and 180 days; channels, search terms and timeline; job-related screening criteria with evidence; interview rounds with scripts; a finalist comparison sheet from your interview notes; replies and kind decline notes by stage; and an offer letter draft or a check against what you agreed.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "kit",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full kit for one role, from plan to offer",
+          "Hiring plan and search brief",
+          "Role outcomes and screening criteria",
+          "Interview plan and finalist comparison sheet",
+          "Candidate replies and decline notes",
+          "Offer letter draft or check"
+        ]
+      },
+      {
+        "id": "role",
+        "label": "Job title and team",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "id": "role_details",
+        "label": "About the role",
+        "type": "longtext",
+        "required": true,
+        "help": "What the person will do, who they report to, must-have skills, and what success looks like.",
+        "max": 6000
+      },
+      {
+        "id": "roles",
+        "label": "Number of roles",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1 role.",
+        "max": 10
+      },
+      {
+        "id": "pay_terms",
+        "label": "Pay and terms you have set",
+        "type": "longtext",
+        "required": false,
+        "help": "Pay range, hours, place or remote, start date, probation, benefits. We use only these.",
+        "max": 3000
+      },
+      {
+        "id": "process",
+        "label": "Your hiring process",
+        "type": "longtext",
+        "required": false,
+        "help": "Where you post, the stages, who interviews and your timeline.",
+        "max": 3000
+      },
+      {
+        "id": "candidate_notes",
+        "label": "Interview notes and scores",
+        "type": "longtext",
+        "required": false,
+        "help": "For a comparison sheet: each finalist's scores and notes. Use initials, not full names.",
+        "max": 15000
+      },
+      {
+        "id": "agreed_terms",
+        "label": "What you agreed with the candidate",
+        "type": "longtext",
+        "required": false,
+        "help": "For an offer letter or a check.",
+        "max": 3000
+      },
+      {
+        "id": "offer_letter",
+        "label": "Offer letter to check",
+        "type": "longtext",
+        "required": false,
+        "max": 15000
+      },
+      {
+        "id": "region",
+        "label": "Country and state or region",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "voice",
+        "label": "Tone",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Warm and plain",
+          "Neutral",
+          "Formal"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_kit",
+        "text": "Delivers every part of the chosen option for the role in the brief.",
+        "weight": 5,
+        "pass_rule": "Each part named in the chosen option is present and specific to the role in the brief; a full kit has role outcomes at 30, 90 and 180 days, channels, search terms and a timeline, screening criteria, interview rounds with scripts, a comparison sheet, replies and decline notes, and an offer letter draft.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "job_related_fair",
+        "text": "Criteria and questions are job-related and fair, and nothing picks or ranks candidates.",
+        "weight": 5,
+        "pass_rule": "Every screening criterion and interview question ties to a task or outcome in the brief and states the evidence that counts; none touches age, family, health, religion, nationality or other protected traits; no part ranks candidates or says who to hire.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_terms",
+        "text": "Pay, terms and candidate facts come only from the brief.",
+        "weight": 5,
+        "pass_rule": "No salary, benefit, start date, probation length or candidate detail appears unless it is in the brief; gaps are shown as [to confirm]; in an offer check, each mismatch quotes both the letter and the agreed terms.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_send",
+        "text": "Messages and templates are ready to send.",
+        "weight": 4,
+        "pass_rule": "Each candidate message has a subject line, is under 150 words and has only clearly marked fields such as [first name]; decline notes exist for each stage named in the brief or the option (application, screen, interview).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_kind",
+        "text": "Plain, kind words.",
+        "weight": 3,
+        "pass_rule": "Short sentences and everyday words; decline notes thank the candidate and give a clear outcome without false promises; the offer letter says it is a draft to check with an employment adviser.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "roles",
+        "unit": "role",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an in-house recruiter for small businesses. Build the hiring material I ask for, for the role below. A full kit has: a role brief with outcomes at 30, 90 and 180 days; where to find people, search terms and a short outreach message; a timeline; screening criteria tied to the job, with what counts as evidence; interview rounds with who takes part, topics, timings and an opening and closing script; a finalist comparison sheet laid out from my interview notes; replies to common candidate questions and kind decline notes for each stage; and an offer letter draft, or a check of my letter against what we agreed. Use only the pay and terms I give and mark anything missing as [to confirm]. Keep every criterion job-related and avoid anything touching age, family, health, religion or other protected traits. Do not rank candidates or say who to hire. The offer letter is a draft to check with an employment adviser.",
+    "not_for": [
+      "Deciding who to hire or reject",
+      "Screening or ranking candidates by AI score",
+      "Criteria that screen people out by age, sex, race, religion, disability or other protected traits",
+      "Employment contracts, legal review of terms or immigration advice",
+      "Employment law rulings, such as on pay, notice or dismissal",
+      "Posting jobs or contacting candidates for you",
+      "A job post on its own (see the job description job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_head_baker",
+        "text": "Full hiring kit for a head baker at Loaf & Ladder, 2 bakeries in Sheffield, 19 staff. Reports to the owner. Must run the night shift of 4 bakers, plan production for 2 shops and 15 cafes, and cut waste. Pay £34,000 to £37,000, 4 nights a week, start in February. We post on Indeed and local Facebook groups. The owner and production manager interview.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_decline_notes",
+        "text": "Candidate replies and decline notes for Brightwire Electrical (11 staff). We are hiring an apprentice electrician and got 64 applications. We need replies to questions on pay (£8.50 an hour, rising each year), college days and start date, plus kind decline notes for after the application, the phone screen and the interview.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_support_tech",
+        "text": "Hiring plan and search brief for a first-line IT support technician at Northpoint IT, a managed service provider with 23 staff in Leeds. Hybrid, 3 days in the office. £26,000 to £29,000. Must have 1 year of helpdesk work and Microsoft 365 admin. We want to hire within 8 weeks.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_comparison",
+        "text": "Finalist comparison sheet for an account manager role at Fable & Fern Marketing. 3 finalists (J.T., R.M. and S.K.). Scores from 2 interviews and a written task against our 5 criteria, plus interviewer notes, are pasted. Lay it out fairly, flag gaps, and do not pick for us.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_offer_check",
+        "text": "Check our offer letter for a dental receptionist at Riverside Dental against what we agreed: £24,500 a year, 37.5 hours, Monday to Friday 8:15 to 4:45, start 5 January 2027, 3-month probation, 28 days holiday including bank holidays. The draft letter is pasted. List anything that does not match, is unclear or is missing.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_coordinator",
+        "text": "Full kit for a programme coordinator at Hopewell Youth Trust (charity, 9 staff). The role runs after-school clubs for 120 young people across 3 sites. Pay £27,500, 4 days a week, needs a DBS check. Interviews by the CEO and a trustee, plus a young people's panel.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "hiring plan",
+      "recruiting plan",
+      "search brief",
+      "screening criteria",
+      "interview plan",
+      "interview process",
+      "candidate comparison",
+      "role scorecard",
+      "30 60 90",
+      "decline email",
+      "rejection letter",
+      "candidate replies",
+      "offer letter",
+      "offer letter check",
+      "hiring kit"
+    ],
+    "demand_sources": [
+      {
+        "note": "HR outsourcing cost guide: outsourced recruiting usually costs 15% to 30% of first-year pay; this provider charges clients $125 an hour for recruiting help.",
+        "url": "https://www.completepayrollsolutions.com/blog/hr-outsourcing-cost"
+      }
+    ]
+  },
+  {
+    "id": "phone-and-chat-scripts",
+    "title": "Phone menu, greetings and call or chat scripts",
+    "summary": "Your phone menu, greetings, voicemail and hold messages. Plus front-desk, payment and live chat scripts written from your policies.",
+    "area": "customer-support",
+    "deliverable": "A menu tree with every prompt and route; timed greetings, holiday, closed and voicemail scripts; hold messages; call scripts with branches for top call reasons, transfers and a clean close; front-desk answers from your policies; chat openers, handoffs and sign-offs; a calm payment call script; and a recording brief for your voice artist.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Phone menu with every prompt",
+          "Greetings, voicemail and after-hours messages",
+          "On-hold messages",
+          "Inbound call script for your team",
+          "Recording brief for your voice artist",
+          "Full phone line pack (menu, greetings, hold and brief)",
+          "Front-desk FAQ and call scripts",
+          "Live chat openers, handoffs and sign-offs",
+          "Payment chase call script"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, who calls or chats, your team and departments.",
+        "max": 4000
+      },
+      {
+        "id": "sets",
+        "label": "How many phone lines or script sets?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 10
+      },
+      {
+        "id": "hours",
+        "label": "Opening hours and holidays",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "call_reasons",
+        "label": "Top reasons people call or chat",
+        "type": "list",
+        "required": false,
+        "max": 15
+      },
+      {
+        "id": "policies",
+        "label": "Policies and facts to use",
+        "type": "longtext",
+        "required": false,
+        "help": "Prices, fees, cancellations, payment terms, emergencies. Only these are used.",
+        "max": 8000
+      },
+      {
+        "id": "routing",
+        "label": "Who takes which calls",
+        "type": "longtext",
+        "required": false,
+        "help": "Departments, extensions or roles, and what happens after hours.",
+        "max": 2000
+      },
+      {
+        "id": "system",
+        "label": "Phone or chat system",
+        "type": "text",
+        "required": false,
+        "help": "Such as RingCentral, 3CX, Intercom or Tidio.",
+        "max": 200
+      },
+      {
+        "id": "say_carefully",
+        "label": "Names and words to say with care",
+        "type": "longtext",
+        "required": false,
+        "help": "Business, staff or place names, and how to say them.",
+        "max": 1000
+      },
+      {
+        "id": "invoice_facts",
+        "label": "For a payment call: the invoice facts",
+        "type": "longtext",
+        "required": false,
+        "help": "Amount, due date and what you can offer, such as a payment plan. Use the invoice number, not card details.",
+        "max": 2000
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_piece",
+        "text": "Covers the chosen piece and every call reason, department and time named in the brief.",
+        "weight": 5,
+        "pass_rule": "Each call reason, department, opening time and holiday from the brief appears; a phone menu shows every option, where it routes and what happens if the caller presses nothing; a call script has a branch for each top reason.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "easy_to_say",
+        "text": "Scripts are short and easy to say and to hear.",
+        "weight": 5,
+        "pass_rule": "Each recorded message is timed and under 30 seconds (about 75 words) unless the brief asks for longer; menus offer 5 or fewer options per level and say the option before the number ('For bookings, press 1').",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_policy",
+        "text": "Every price, policy, hour and name comes from the brief, and no advice is given on calls.",
+        "weight": 5,
+        "pass_rule": "No hour, fee, policy, staff name or promise appears unless it is in the brief; missing facts are shown as [placeholder]; scripts give no medical, legal or financial advice and pass such calls to the right person.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "Ready to record or use, with clean handoffs and closes.",
+        "weight": 4,
+        "pass_rule": "Each script ends with a clear close or next step; each handoff says who to transfer to and what to say if no one answers; anything to be recorded has a recording order or file list.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_respectful",
+        "text": "Plain, warm and respectful words.",
+        "weight": 3,
+        "pass_rule": "Sentences are short and sound natural spoken aloud; payment call scripts stay calm, with no threats, blame or pressure, and offer only the options listed in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "sets",
+        "unit": "script set",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a phone and chat script writer for small businesses. Using only the facts below, write the scripts I ask for. A phone menu shows every option, the exact words of each prompt, where it routes and what happens if a caller presses nothing; say the option before the number and keep to five options per level. Greetings, holiday, closed, busy and voicemail messages are each under 30 seconds, with timings. Write six to eight hold messages with useful facts. Call scripts cover the greeting, checks, a branch for each top call reason, transfer and callback wording and a clean close. Front-desk answers come only from my policies. Chat scripts cover openers, wait messages, handoffs and sign-offs. A payment call stays calm, uses no threats and offers only the options I list. Add a recording brief with tone, pace, how to say names and numbers, and file names. Do not invent hours, prices or policies, and give no medical, legal or financial advice.",
+    "not_for": [
+      "Setting up or changing your phone or chat system",
+      "Robocalls or auto-diallers that skip consent rules",
+      "Medical, legal or financial advice on calls",
+      "Threats, pressure or false claims in payment calls",
+      "Voice recordings (you get scripts and a brief for your voice artist)",
+      "Card numbers or passwords in your brief",
+      "A full help centre FAQ page (see the customer support FAQ page job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_plumber_menu",
+        "text": "Phone menu and greetings for Rapid Flow Plumbing, 8 engineers in Derby. Options: emergency leak or no heating (goes to the on-call mobile 24/7), book a service, quotes, invoices, and everything else. Hours Monday to Friday 8 to 6, Saturday 9 to 1. Closed 25 and 26 December. Fixed call-out £89.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_vet_faq",
+        "text": "Front-desk FAQ and phone script for Willowbank Vets, 2 clinics. Policies pasted: opening hours, out-of-hours emergencies go to our partner clinic on 01632 960112, payment due at the visit, 24 hours' notice to cancel or a £25 fee. Staff must not give medical advice on the phone and should book or pass to a vet.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_hold_messages",
+        "text": "Six to eight on-hold messages for Castle Hill Dental. Facts we can use: evening clinic on Thursdays until 8pm, hygienist visits £58, online booking on our website, Denplan accepted, new patient check-up £65. Calm, friendly tone.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_chase_script",
+        "text": "Payment chase call script for Inkwell Print Co. Invoice 2291 for £1,840 is 30 days overdue; the customer is a local estate agent. We can offer 2 payments over 4 weeks. Calm, no threats. We need an opening, questions, answers to common excuses and how to agree a date.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_live_chat",
+        "text": "Live chat scripts for Nibble & Co pet food (online store, Tidio chat). Greetings, wait messages when busy, a handoff to a person, an after-hours message (chat is staffed 9 to 5 on weekdays) and sign-offs. Facts: free delivery over £35, and subscriptions can be paused online.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_voice_brief",
+        "text": "Recording brief for our voice artist for Penrhos Garden Centre's new phone line. The menu and greetings are written (pasted). Welsh place names: Penrhos, Llanfair and Cwm Rhondda, with how we say them. File names must match our 3CX prompts. Warm, unhurried tone.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ivr script",
+      "phone menu",
+      "phone greeting",
+      "voicemail script",
+      "on hold messages",
+      "call script",
+      "front desk script",
+      "receptionist script",
+      "live chat scripts",
+      "payment call script",
+      "collections call",
+      "after hours message",
+      "auto attendant",
+      "voice over brief"
+    ],
+    "demand_sources": [
+      {
+        "note": "On-hold message provider selling a 4-minute, 500-word custom script and recording for $99 to $149.99, and claiming 90% of callers hang up within 40 seconds of silence.",
+        "url": "https://dynamicmediamusic.com/message-on-hold/"
+      }
+    ]
+  },
+  {
+    "id": "crm-pipeline-and-win-loss-review",
+    "title": "Sales pipeline or win-loss review from your CRM",
+    "summary": "Your CRM export read for deals at risk, stage drop-off, a forecast with ranges, why sales dropped, or why you win, lose and churn.",
+    "area": "sales",
+    "deliverable": "Stage counts, stale deals and slipped dates; conversion and time by stage with the biggest leak; a best, likely and worst forecast with assumptions; the driver behind a drop; loss, win and cancellation reasons grouped with counts, value and short quotes; price versus value evidence; and playbook changes with owners.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Weekly pipeline review",
+          "Where deals drop out",
+          "Sales forecast with ranges",
+          "Why sales dropped",
+          "Why you lose deals",
+          "Why you win deals",
+          "Why customers cancel",
+          "Price or value problem check",
+          "Full win-loss review with playbook changes"
+        ]
+      },
+      {
+        "id": "export",
+        "label": "Paste your CRM export",
+        "type": "longtext",
+        "required": true,
+        "help": "Deals or customers with stage, dates, value, owner, and loss or cancel notes. Remove emails and phone numbers.",
+        "max": 150000
+      },
+      {
+        "id": "deals",
+        "label": "Number of deals or customers in the export",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 1,000.",
+        "max": 50000
+      },
+      {
+        "id": "export_date",
+        "label": "Date of the export",
+        "type": "text",
+        "required": false,
+        "help": "So we can spot stale deals and slipped dates.",
+        "max": 100
+      },
+      {
+        "id": "crm",
+        "label": "Which CRM?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "HubSpot",
+          "Pipedrive",
+          "Salesforce",
+          "Zoho CRM",
+          "Close",
+          "Spreadsheet",
+          "Other"
+        ]
+      },
+      {
+        "id": "stages",
+        "label": "Your pipeline stages",
+        "type": "longtext",
+        "required": false,
+        "help": "In order, with what each one means.",
+        "max": 2000
+      },
+      {
+        "id": "period",
+        "label": "Period to cover",
+        "type": "text",
+        "required": false,
+        "help": "Such as Q3 2026, or the last 12 months.",
+        "max": 100
+      },
+      {
+        "id": "target",
+        "label": "Target or quota",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "changes",
+        "label": "What changed recently",
+        "type": "longtext",
+        "required": false,
+        "help": "New prices, a new rep, a big client lost, a new product.",
+        "max": 2000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "numbers_trace",
+        "text": "Counts, rates and values are worked out correctly from the export.",
+        "weight": 5,
+        "pass_rule": "Stage counts, conversion and win rates, average deal size and cycle length can be recomputed from the pasted data (spot-check three); each rate shows its count, such as '12 of 40 (30%)'.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_deals",
+        "text": "Uses only the export: no invented deals, reasons or quotes, and no rating of named reps.",
+        "weight": 5,
+        "pass_rule": "Every deal, reason, quote and number comes from the export or brief; loss reasons are grouped from the notes as written, with short quotes copied exactly; no named rep is scored or ranked.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_piece",
+        "text": "Delivers the chosen analysis for the stated period.",
+        "weight": 4,
+        "pass_rule": "The draft matches the option chosen: a pipeline review lists stale deals and slipped dates deal by deal; a forecast gives best, likely and worst cases, each with its assumptions; a win, loss or churn review groups reasons with counts and value.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "actions_owned",
+        "text": "It ends with specific actions, each with an owner.",
+        "weight": 4,
+        "pass_rule": "At least three actions or playbook changes, each tied to a finding and a number in the draft, with an owner role and a date or week.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_hedged",
+        "text": "Plain words, with limits stated honestly.",
+        "weight": 3,
+        "pass_rule": "A summary of five lines or fewer comes first; groups of fewer than 20 deals are flagged as weak evidence; the forecast says it is an estimate, not a promise.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 399,
+      "size": {
+        "field": "deals",
+        "unit": "deal",
+        "included": 1000,
+        "per_unit_usd": 0.05
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a sales operations analyst. Using only the CRM export below, produce the review I ask for. For a pipeline review: stage counts, stale deals, slipped close dates and three actions for the week. For drop-off: conversion and time in each stage and the biggest leak, with likely causes to check. For a forecast: best, likely and worst cases with the assumptions stated. For a sales drop: check deal volume, win rate, deal size and cycle length to find which moved. For win, loss or cancellation reviews: group the reasons from the notes into themes with counts, value and short exact quotes, compare by deal size, and say whether price or value is the real issue. End with specific playbook changes, each with an owner. Show the counts behind every rate, flag small samples, and do not invent deals, reasons or quotes. Do not rate named reps.",
+    "not_for": [
+      "Logging in to your CRM or changing it for you",
+      "Rating named reps for pay, discipline or firing",
+      "Forecasts sold as certain, or shown to investors as audited figures",
+      "Invented deal data or customer quotes",
+      "Customer emails, phone numbers or card details in the export",
+      "Interviewing your buyers for you",
+      "Cleaning up CRM fields and stages (see the tracker, register or workspace design job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_pipeline_review",
+        "text": "Weekly pipeline review for Clearline IT Services. Pipedrive export pasted: 86 open deals with stage, value, owner, expected close date and last activity date. Export date 6 November 2026. Stages: Lead, Discovery, Proposal, Negotiation, Won, Lost. One page with stale deals, slipped dates and three actions.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_loss_review",
+        "text": "Why are we losing deals? Fernbank Signs, HubSpot export of 214 closed deals from the last 12 months, 131 lost, with loss reason and notes. Average deal £2,800. Group the reasons, show counts and value, quote the notes, and tell us whether it is price or value.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_forecast",
+        "text": "Q1 2027 forecast for Halcyon Software. Pipeline export pasted: 58 deals with stage, value and close date. Win rates by stage over the last 4 quarters are in a second table. Target £420,000. Best, likely and worst case with assumptions.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_churn",
+        "text": "Why do customers cancel? Pocket Gym app: 1,340 cancellations exported from our billing system with plan, months active and the free-text reason. Group and count the reasons, mark the ones we could prevent, and suggest changes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_sales_drop",
+        "text": "New business at Brightside Uniforms dropped from £96,000 in Q2 to £61,000 in Q3. Salesforce export of all 2026 opportunities pasted. We raised prices 8% on 1 July and one rep left in August. Which moved: volume, win rate, deal size or cycle length?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "pipeline review",
+      "sales pipeline",
+      "deal review",
+      "funnel analysis",
+      "stage conversion",
+      "sales forecast",
+      "forecast ranges",
+      "sales drop",
+      "win loss analysis",
+      "loss reasons",
+      "churn analysis",
+      "cancellation reasons",
+      "price objection",
+      "sales playbook",
+      "crm report",
+      "hubspot report"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's HubSpot hiring page: freelancers charge $75 to $300 an hour, with sales pipeline set-up, deal stages and sales reports among common jobs.",
+        "url": "https://contra.com/hire/hubspot-freelancers"
+      }
+    ]
+  },
+  {
+    "id": "announcement-or-public-statement",
+    "title": "Customer announcement or public statement",
+    "summary": "A clear message about one change or event, such as a price rise, new billing, a partner launch, an outage or a crisis. In every version you need.",
+    "area": "marketing",
+    "deliverable": "The main message: what changed or happened, why, who it affects, what to do and when you will update. Versions for email, social, staff, key accounts and partners. Holding replies, a short FAQ and a fact sheet, all with the same facts. Launches can add a news release and a how-to-join page.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "topic",
+        "label": "What is the announcement about?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Price rise",
+          "Billing or payment terms change",
+          "Partner launch or new partner program",
+          "Outage or service incident update",
+          "Crisis or live issue response pack",
+          "Holding replies for complaints or rumours",
+          "Other change, such as hours, location or policy"
+        ]
+      },
+      {
+        "id": "facts",
+        "label": "The confirmed facts",
+        "type": "longtext",
+        "required": true,
+        "help": "What changed or happened, dates, who is affected and what you are doing. Confirmed facts only.",
+        "max": 8000
+      },
+      {
+        "id": "audiences",
+        "label": "Who needs a version?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Customers by email",
+          "Key accounts",
+          "Social media",
+          "Staff",
+          "Partners",
+          "Website notice",
+          "Text message",
+          "Media"
+        ]
+      },
+      {
+        "id": "announcements",
+        "label": "How many announcements?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 10
+      },
+      {
+        "id": "customer_options",
+        "label": "What customers can do",
+        "type": "longtext",
+        "required": false,
+        "help": "Such as keep the old price until a date, cancel, get a refund or call us.",
+        "max": 2000
+      },
+      {
+        "id": "cannot_say",
+        "label": "What you cannot or will not say",
+        "type": "longtext",
+        "required": false,
+        "help": "Legal, partner or privacy limits, and any wording you must use.",
+        "max": 3000
+      },
+      {
+        "id": "next_update",
+        "label": "When you will next update",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "partner_details",
+        "label": "For a partner launch",
+        "type": "longtext",
+        "required": false,
+        "help": "Partner name, quotes both sides approved, how to join and the terms.",
+        "max": 4000
+      },
+      {
+        "id": "voice",
+        "label": "Your voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "core_message",
+        "text": "Each version says what changed or happened, why, who it affects, what to do, and when.",
+        "weight": 5,
+        "pass_rule": "The main message contains all five points using facts from the brief, and each audience ticked in the brief has its own version.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "matching_facts",
+        "text": "All versions match: the same dates, numbers and promises everywhere.",
+        "weight": 5,
+        "pass_rule": "Every date, price, percentage and promise is the same in every version and in the fact sheet; no version promises anything the main message does not.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "nothing_added_or_spun",
+        "text": "Nothing is added or spun: only confirmed facts, and unknowns are said plainly.",
+        "weight": 5,
+        "pass_rule": "No cause, number, quote, partner benefit or fix appears that is not in the brief; for an incident, unknowns are stated as not yet known, with the update time; no admission of fault for injury or safety is added.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_use",
+        "text": "Each version fits its channel and is ready to send.",
+        "weight": 4,
+        "pass_rule": "Email versions have a subject line; social versions fit their platform's length; holding replies are under 50 words; an FAQ of at least five questions is included, and a launch has a fact sheet.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_honest",
+        "text": "Plain, calm and honest tone.",
+        "weight": 3,
+        "pass_rule": "Short sentences, no jargon, and no spin such as 'exciting news' for a price rise or 'minor issue' for an outage unless the brief says so; any apology is clear and specific.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "announcements",
+        "unit": "announcement",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a communications writer for small businesses. Using only the confirmed facts below, write one clear announcement: what changed or happened, why, who it affects, what they should do, and when we will update. Then write a version for each audience I list (email with a subject line, social posts that fit the platform, a staff note, key accounts, partners, a website notice), short holding replies for comments, a fact sheet and an FAQ of at least five questions. For a launch, add a news release version and, for a partner program, a how-to-join page. Keep every date, price and promise the same in every version. For an incident, say plainly what we do not know yet and when we will update. Be calm and honest: no spin, no blame and no admission of fault for injury or safety. Do not add causes, numbers, quotes or promises I did not give. This is not legal advice.",
+    "not_for": [
+      "Legal advice, or statements that need a lawyer's review before release",
+      "Hiding or spinning facts customers need to know",
+      "Admitting fault for injury or safety issues without approval",
+      "Sending the message or contacting media for you",
+      "Press releases on their own (see the press release job)",
+      "Regulator notices, such as data breach reports"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_gym_price",
+        "text": "Price rise announcement for Ironside Gym, 1,100 members. The monthly price goes from £32 to £36 on 1 February 2027, our first rise since 2023. Reasons: higher energy bills and new rowing machines. Members who pay for a year before 31 January keep £32 for 12 months. Versions: email, Instagram post, a poster for reception and staff talking points.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_outage",
+        "text": "Customer update about an outage at Bookly, our booking app for salons. On 4 November from 9:10 to 11:45 GMT, salons could not take online bookings. Cause: a failed database update, now rolled back. No data was lost. 380 salons were affected. We are adding a check before updates. Email, a status page note and social replies. Next update 8 November.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_deposits",
+        "text": "Billing change note for Sugar Arch Cakes. From 1 January 2027, custom cake orders need a 30% deposit at booking, with the rest due 7 days before the event. Deposits are refundable up to 14 days before. An email to past customers who opted in, a website notice and a 5-question FAQ.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_partner_launch",
+        "text": "Partner launch pack: Hopscotch Brewery and the Northern Fire pizza van launch 'Pizza Fridays' at the taproom from 5 December, every Friday 5 to 10pm. Both owners approved the quotes pasted. A news release, a partner-ready version, 3 social posts and a fact sheet with matching facts.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_rumour",
+        "text": "Holding replies for Harbour Kitchen. A Facebook post claims 6 people got food poisoning after eating here on Saturday. The council's environmental health team visited on Monday and we passed with no actions (we have the letter). We know of no confirmed illness. We want calm public replies and a private message to the poster, with no blame and no admission.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_reseller",
+        "text": "Launch pack for the new reseller program at Tallyho Labels. Resellers get 20% off list price, a minimum first order of £250 and free samples. They join through a form on our site. An announcement email to trade customers, a how-to-join page and a short FAQ.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "price increase email",
+      "price rise letter",
+      "customer announcement",
+      "billing change notice",
+      "outage notice",
+      "incident update",
+      "crisis statement",
+      "holding statement",
+      "public statement",
+      "partner announcement",
+      "partner launch",
+      "reseller program launch",
+      "customer notice",
+      "service update"
+    ],
+    "demand_sources": [
+      {
+        "note": "Rosen Group 2025 survey of 1,000 US small business owners: about 78% have no formal crisis communications plan.",
+        "url": "https://www.odwyerpr.com/story/public/22839/2025-04-09/pr-firm-news-rosen-group-finds-small-biz-lack-crisis.html"
+      }
+    ]
+  },
+  {
+    "id": "shipping-and-delivery-cost-review",
+    "title": "Shipping and delivery cost review with rate table",
+    "summary": "Find out what shipping or local delivery really costs you. Get a rate table, delivery zones, a free shipping threshold and fixes.",
+    "area": "ecommerce",
+    "deliverable": "Cost per order or drop by zone, weight, service and box; surcharges found; your order mix priced on each rate card you share; better box sizes; a checkout rate table; local delivery zones with days, fees and cut-offs; a free shipping threshold to test; and savings ranked by money per month.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Shipping cost review from your invoices",
+          "Carrier and service comparison",
+          "Shipping rate table for your checkout",
+          "Box size and packaging fixes",
+          "Free shipping threshold",
+          "Local delivery zones, days and fees",
+          "Local delivery cost per drop",
+          "Full review using all the data you have"
+        ]
+      },
+      {
+        "id": "shipping_data",
+        "label": "Paste shipping invoices or exports",
+        "type": "longtext",
+        "required": true,
+        "help": "Each shipment: date, zone or postcode, weight, box size, service, cost and surcharges. For local delivery, your runs and drops.",
+        "max": 150000
+      },
+      {
+        "id": "months",
+        "label": "Months of data",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 3 months.",
+        "max": 24
+      },
+      {
+        "id": "rate_cards",
+        "label": "Carrier rate cards",
+        "type": "longtext",
+        "required": false,
+        "help": "Each carrier's rates by zone and weight, as you have them.",
+        "max": 40000
+      },
+      {
+        "id": "orders",
+        "label": "Order values and what customers paid for shipping",
+        "type": "longtext",
+        "required": false,
+        "help": "For a checkout rate table or a free shipping threshold.",
+        "max": 60000
+      },
+      {
+        "id": "products_boxes",
+        "label": "Products and box sizes",
+        "type": "longtext",
+        "required": false,
+        "help": "Item sizes and weights, and the boxes you stock with their cost.",
+        "max": 15000
+      },
+      {
+        "id": "delivery_costs",
+        "label": "Local delivery costs",
+        "type": "longtext",
+        "required": false,
+        "help": "Driver pay per hour, fuel, van costs, drops per run and the areas you serve.",
+        "max": 6000
+      },
+      {
+        "id": "current_charges",
+        "label": "What you charge for shipping now",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "margin",
+        "label": "Average margin or product cost",
+        "type": "text",
+        "required": false,
+        "help": "To test a free shipping threshold.",
+        "max": 300
+      },
+      {
+        "id": "promise",
+        "label": "Delivery times you promise",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "maths_correct",
+        "text": "Costs and rates are worked out correctly from the data.",
+        "weight": 5,
+        "pass_rule": "Cost per order or per drop, averages by zone and weight band, and savings can be recomputed from the pasted data (spot-check three); billed weight uses the size rule given in the brief, or the draft states the rule it assumed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "only_your_rates",
+        "text": "Uses only the buyer's invoices, rate cards and costs.",
+        "weight": 5,
+        "pass_rule": "No carrier rate, surcharge, fuel price or delivery time appears unless it is in the brief; anything assumed, such as a typical box cost, is labelled 'assumption'; no live or current rates are claimed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_piece",
+        "text": "Delivers the chosen piece in a usable table.",
+        "weight": 4,
+        "pass_rule": "The draft matches the option: a cost review breaks cost down by zone, weight, service and box; a rate table or zone plan gives each zone or band a price, and a zone plan also gives days, minimum order and cut-off; a threshold gives one figure to test and how to read the result.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ranked_savings",
+        "text": "Savings and fixes are ranked by money saved.",
+        "weight": 4,
+        "pass_rule": "At least three fixes or savings are listed in order of money saved per month, each with the sum shown and the first step to take.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_tables",
+        "text": "Plain words and clear tables.",
+        "weight": 3,
+        "pass_rule": "A summary of five lines or fewer comes first; tables show units (kg or lb, and the currency); terms like dimensional weight are explained the first time.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "months",
+        "unit": "month",
+        "included": 3,
+        "per_unit_usd": 20
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a shipping and fulfilment cost analyst for small online and local businesses. Using only my invoices, rate cards, order data and costs below, produce the piece I ask for. Work out cost per order (or per drop for local delivery) by zone, weight band, service and box, and list surcharges. Price my real order mix on each rate card I share and find the cheapest mix that keeps my delivery promise. Flag products shipped in boxes too big for them and what the billed weight costs. Build a checkout rate table by zone and weight that covers costs and compare it with what I charge now. For a free shipping threshold, give one figure to test, the margin check and how to read the result. For local delivery, set zones with days, fees, minimum order and cut-off, and show which zones lose money. Rank savings by money per month and show the sums. Label any assumption, and do not use rates I have not given.",
+    "not_for": [
+      "Negotiating with carriers for you",
+      "Customs, duty or tax advice",
+      "Live rate lookups, or logging in to carrier accounts",
+      "Route planning or travel times that need live maps or traffic",
+      "Savings promised from rates you have not shared"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_tea_shop",
+        "text": "Shipping cost review for Leafhouse Tea (Shopify, UK). 3 months of Royal Mail and Evri invoices pasted: 2,140 parcels. Rate cards for both pasted. Most orders weigh 250 g to 1 kg. We charge £3.95 flat. Where are we losing money and what should we change?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_free_threshold",
+        "text": "Free shipping threshold for Moss & Mineral skincare (US). Order export for 3 months pasted: average order $41, and shipping costs us about $7.20 an order (USPS Ground Advantage invoices pasted). Gross margin 68%. We charge $6.95. What threshold should we test, and how do we read the result?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_delivery_zones",
+        "text": "Delivery zones for Oak & Iron Furniture, local delivery from our Leicester workshop with 2 vans. The postcodes we deliver to are pasted with drops per month. Driver £14 an hour, a run takes 6 hours, fuel about £48 a run, van lease £420 a month each. We charge £35 everywhere. Zones with days, fees, minimum order and cut-off, and which areas lose money.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_carrier_compare",
+        "text": "Carrier comparison for Copper Kettle Coffee Roasters (US). 3 months of UPS Ground invoices pasted (1,620 shipments, 1 to 5 lb). We also have USPS and FedEx rate cards for our account (pasted). We promise delivery in 5 days. Price our real mix on each and find the cheapest mix that keeps the promise.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_boxes",
+        "text": "Box size fixes for Kiln Room Ceramics. Product sizes and weights are pasted (38 items), plus the 4 box sizes we stock and their cost. 3 months of DPD invoices show many parcels billed on size, not weight. Which products ship in boxes that are too big, what does it cost us, and which boxes should we stock instead?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_florist_drops",
+        "text": "Cost per drop for Petal Lane Florist. 2 drivers, 3 months of delivery runs pasted (date, area, drops). Driver pay £12.80 an hour, van costs £610 a month, fuel receipts pasted. We charge £6.50 in town and £9.50 for villages. Which areas lose money?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "shipping costs",
+      "shipping cost analysis",
+      "carrier comparison",
+      "shipping rates",
+      "checkout shipping rates",
+      "free shipping threshold",
+      "packaging",
+      "box sizes",
+      "dimensional weight",
+      "delivery zones",
+      "local delivery fees",
+      "cost per drop",
+      "fulfilment costs",
+      "royal mail",
+      "ups rates",
+      "usps rates"
+    ],
+    "demand_sources": [
+      {
+        "note": "Baymard Institute survey of US online shoppers: leaving aside 'just browsing', the top reason for abandoning checkout is extra costs (shipping, tax, fees) being too high, at 40%.",
+        "url": "https://baymard.com/lists/cart-abandonment-rate"
+      }
+    ]
+  },
+  {
+    "id": "local-promotion-campaign",
+    "title": "Local business promotion campaign pack",
+    "summary": "One promotion for a local business, with every message. Fill quiet nights, launch a menu, or run a seasonal offer, intro offer or member challenge.",
+    "area": "marketing",
+    "deliverable": "The offer with price and an honest end date (or up to three ideas for slow days, then a full pack for the best); a profit or food cost check; a dated plan; copy for each channel you use (posts, an email or text to regulars, a landing page or menu blurb, a flyer, window or in-venue signs); and one number to measure. Intro offers add follow-up emails.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "promo_type",
+        "label": "What kind of promotion?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Fill your quiet nights or days",
+          "New menu or dish launch",
+          "Seasonal offer",
+          "Intro or trial offer for new customers",
+          "Member or customer challenge",
+          "Other one-off promotion"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "About your business",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, where you are, who your regulars are, and your busy and quiet times.",
+        "max": 4000
+      },
+      {
+        "id": "dates",
+        "label": "When it runs",
+        "type": "text",
+        "required": true,
+        "help": "Start and end dates, or the slow days to fill.",
+        "max": 300
+      },
+      {
+        "id": "channels",
+        "label": "Where will you promote it?",
+        "type": "multichoice",
+        "required": true,
+        "options": [
+          "Instagram",
+          "Facebook",
+          "TikTok",
+          "Email to regulars",
+          "Text message to regulars",
+          "Google Business Profile",
+          "Website or landing page",
+          "Flyer or poster",
+          "Window or in-venue signs",
+          "Menu or table card"
+        ]
+      },
+      {
+        "id": "campaigns",
+        "label": "Number of campaigns",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 6
+      },
+      {
+        "id": "offer",
+        "label": "Offer ideas, prices and costs",
+        "type": "longtext",
+        "required": false,
+        "help": "Your offer or ideas, the normal price, the offer price, and what each item or session costs you.",
+        "max": 4000
+      },
+      {
+        "id": "opt_in",
+        "label": "Have your email or text contacts agreed to get offers?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Yes, they opted in",
+          "Some of them",
+          "No or not sure"
+        ]
+      },
+      {
+        "id": "goal",
+        "label": "What counts as success",
+        "type": "text",
+        "required": false,
+        "help": "Such as 30 extra covers on Tuesdays, or 20 new members.",
+        "max": 300
+      },
+      {
+        "id": "rules",
+        "label": "Rules to follow",
+        "type": "text",
+        "required": false,
+        "help": "Licensing, alcohol, brand or landlord rules.",
+        "max": 600
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_offer",
+        "text": "One clear offer with price, what is included, who it is for and an honest end date.",
+        "weight": 5,
+        "pass_rule": "The pack states the offer in one line with the normal and offer price from the brief, what is and is not included, and a real end date or limit from the brief; for a quiet-days plan, up to three ideas come first and one is picked with a reason.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "profit_check",
+        "text": "The offer is checked against cost so it does not lose money.",
+        "weight": 4,
+        "pass_rule": "A short sum shows the cost per sale (food or service cost from the brief), the offer price and the margin left; if costs are missing, the draft says so and shows the break-even sum with [placeholders].",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "nothing_fake",
+        "text": "Nothing fake: no made-up prices, 'was' prices, scarcity, reviews or results.",
+        "weight": 5,
+        "pass_rule": "Every price, date, limit, review and claim comes from the brief; no 'only 3 left', 'was' price or countdown appears unless the brief states it is true; texts and emails go only to contacts the brief says opted in.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "channel_ready",
+        "text": "Copy for every chosen channel, ready to post, with a dated plan and one measure.",
+        "weight": 4,
+        "pass_rule": "Each channel ticked in the brief has its own copy that fits it (signs under 15 words, texts under 160 characters with an opt-out, posts with a call to action), a dated plan is included, and one number to measure is named.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_local",
+        "text": "Plain, friendly words that sound like a local business.",
+        "weight": 3,
+        "pass_rule": "Short sentences, no hype words such as 'unmissable' or 'epic' unless they match the brief's voice, and each piece gives the business name, place and how to book or buy.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "campaigns",
+        "unit": "campaign",
+        "included": 1,
+        "per_unit_usd": 59
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a marketer for local businesses such as restaurants, cafes, salons, gyms, groomers and trades. Plan one promotion from the details below. For quiet days, suggest up to three offers or events, pick the best and say why. State the offer in one line with the normal and offer price, what is included and an honest end date. Check it will not lose money using my costs, and show the sum. Give a dated plan, then ready-to-use copy for each channel I tick: social posts, an email or text to regulars who opted in (with an opt-out), a landing page or menu blurb, a flyer, and short window or in-venue signs. For an intro or trial offer, add up to three follow-up emails for people who sign up. For a member challenge, give the weekly plan, weekly messages and a prize idea if I have none. Name one number to measure. Use only my prices and facts. No fake 'was' prices, false scarcity, made-up reviews or results claims.",
+    "not_for": [
+      "Fake discounts, fake 'was' prices or false scarcity",
+      "Texts or emails to people who did not opt in",
+      "Running ads or posting for you",
+      "Online shop sales (see the promotion plan for an online shop job)",
+      "Health, weight loss or results claims you cannot prove",
+      "Legal advice on prize draws, competitions or alcohol offers"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_quiet_tuesdays",
+        "text": "Fill our quiet Tuesdays at Nonna Rosa, a 60-cover Italian restaurant in Chester. Tuesdays do about 18 covers. Ideas: pasta and a glass of wine for £16, a quiz night, or kids eat free. Food cost on pasta dishes is about £3.40. 1,900 people on our email list opted in. Instagram, email and a window sign. Goal: 40 covers.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_window_spring",
+        "text": "Spring offer for Clearview Window Cleaning, Northampton. A gutter clear and window clean for £95 instead of the usual £120, booked by 31 March 2027. 3-bed semis only. An email to 640 past customers who opted in, a text, a flyer for 3,000 doors and a Facebook post.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_intro_yoga",
+        "text": "Intro offer for Still Point Yoga, Bath: 3 classes for £20, new students only, used within 14 days, until 28 February. A normal drop-in is £14. Landing page text, three emails for people who sign up, and two Instagram posts.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_dog_groomer",
+        "text": "Christmas campaign for Fluff & Fold Dog Grooming. Christmas slots fill up, so we need bookings by 1 December. A festive groom with a bandana for £48 (the normal groom is £42, and the bandana costs us £1.20). Posts, two emails to opted-in clients and a sign for the door.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_gym_challenge",
+        "text": "4-week member challenge for Forge Fitness, 340 members. Goal: get lapsed members back in January. Members who log 12 classes in 4 weeks win a free month (worth £45). Weekly messages, posts and a poster. No weight loss claims.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_menu_launch",
+        "text": "New brunch menu launch at The Copper Pot cafe on Saturday 17 January. 6 new dishes (list and prices pasted). Instagram posts, a short email to our 820 opted-in regulars, a menu blurb and a table card.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "local promotion",
+      "restaurant promotion",
+      "quiet night offer",
+      "seasonal campaign",
+      "seasonal offer",
+      "intro offer",
+      "trial offer",
+      "gym challenge",
+      "menu launch",
+      "salon promotion",
+      "local marketing",
+      "promo campaign",
+      "flyer copy",
+      "window sign",
+      "offer copy"
+    ],
+    "demand_sources": [
+      {
+        "note": "Constant Contact Q1 2026 report on 1,500+ small business owners: 74% plan to spend more time on marketing and 68% expect to raise marketing budgets in 2026.",
+        "url": "https://retail-insider.com/retail-insider/2026/02/small-businesses-double-down-for-2026-majority-plan-to-increase-marketing-budgets-to-combat-inflation-constant-contact/"
+      },
+      {
+        "note": "Nettl Pulse 2026 survey of 223 UK businesses: lack of time is the most common barrier to marketing, named by 25.5%.",
+        "url": "https://www.nettl.com/uk/pulse/"
+      }
+    ]
+  },
+  {
+    "id": "comparison-page-copy",
+    "title": "Honest comparison page or battlecard",
+    "summary": "A fair page that compares you with a rival or your whole field. Or a sourced table, or a battlecard your sales team can use on calls.",
+    "area": "content",
+    "deliverable": "Page copy built on real differences. A fair table where every rival fact has a source and date. Where you win and where you do not, a pick for each type of buyer, an FAQ and a call to action. Battlecards give where you win and lose, honest answers to rival claims and questions to ask.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Alternative page for people leaving a rival",
+          "Best-of page for your category",
+          "Why-switch page",
+          "You versus one rival page",
+          "Comparison table with sources",
+          "Sales battlecard against one rival"
+        ]
+      },
+      {
+        "id": "your_product",
+        "label": "Your product facts",
+        "type": "longtext",
+        "required": true,
+        "help": "What it does, prices and plans, limits, who it suits and who it does not.",
+        "max": 8000
+      },
+      {
+        "id": "rivals",
+        "label": "Rival facts with sources",
+        "type": "longtext",
+        "required": true,
+        "help": "For each rival: the facts, the page or price list they came from, and the date you checked.",
+        "max": 30000
+      },
+      {
+        "id": "pieces",
+        "label": "How many pages or battlecards?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 10
+      },
+      {
+        "id": "switch_reasons",
+        "label": "Why customers switch to you or leave",
+        "type": "longtext",
+        "required": false,
+        "help": "In their words. Only quotes you have permission to use.",
+        "max": 6000
+      },
+      {
+        "id": "buyer_types",
+        "label": "Buyer types to give a pick for",
+        "type": "list",
+        "required": false,
+        "max": 6
+      },
+      {
+        "id": "search_phrase",
+        "label": "Search phrase for the page",
+        "type": "text",
+        "required": false,
+        "help": "Such as 'Brand X alternative' or 'best payroll app for cafes'.",
+        "max": 200
+      },
+      {
+        "id": "rival_claims",
+        "label": "For a battlecard: what rivals say about you",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "naming_rules",
+        "label": "Rules on naming rivals",
+        "type": "text",
+        "required": false,
+        "help": "Anything your brand or legal rules say.",
+        "max": 600
+      },
+      {
+        "id": "voice",
+        "label": "Tone and voice",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fair_both_ways",
+        "text": "Fair and honest: it says where the buyer's product wins and where it does not.",
+        "weight": 5,
+        "pass_rule": "The draft names at least two areas where a rival is better or a better fit, as well as where the buyer's product wins, and gives a pick for each buyer type with a reason; no rival is described with insults or guesses.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "sourced_facts",
+        "text": "Every rival fact has a source and date from the brief.",
+        "weight": 5,
+        "pass_rule": "Each rival fact or table cell cites a source and date given in the brief; facts with no source are left out or marked 'not confirmed'; no quote appears unless the brief supplies it with permission.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "covers_piece",
+        "text": "Delivers the chosen page or battlecard in full.",
+        "weight": 4,
+        "pass_rule": "A page has a headline, intro, comparison table, sections by buyer need, a pick per buyer type, an FAQ and a call to action; a battlecard has where we win, where we lose, answers to rival claims and questions to ask the buyer.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_publish",
+        "text": "Ready to publish or to use on a call.",
+        "weight": 3,
+        "pass_rule": "Page copy includes a title tag under 60 characters and a meta description under 160, using the search phrase if one is given; battlecard lines are under 25 words each so they can be read during a call.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words, with no hype.",
+        "weight": 3,
+        "pass_rule": "Short sentences; features are explained by what they do for the buyer; no superlatives such as 'best' or 'fastest' unless backed by a sourced fact in the brief.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 349,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 69
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a fair-minded comparison page writer. Using only my product facts and the sourced rival facts below, write the page or battlecard I ask for. Build it on real differences. Include a comparison table where every rival fact shows its source and date, say clearly where the rival is better as well as where we win, and give a pick for each buyer type with a reason. A page needs a headline, an intro, the table, sections by buyer need, an FAQ, a call to action, a title tag under 60 characters and a meta description under 160. A why-switch page uses only the customer quotes I give. A battlecard needs where we win, where we lose, honest answers to rival claims and questions to ask the buyer. Leave out any rival fact with no source. No insults, guesses, made-up quotes or unsupported superlatives.",
+    "not_for": [
+      "False or unsourced claims about competitors",
+      "Live browsing or checking of rival sites",
+      "Using a rival's brand to mislead or pose as them",
+      "Invented quotes, reviews or customer names",
+      "Legal review of comparative advertising claims",
+      "Full competitor research (see the competitor analysis job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_alternative_page",
+        "text": "Alternative page for people leaving Slotwise, a booking app for salons. Our app, Chairly: £19 a month flat, no booking fees, takes deposits, no marketplace. Slotwise facts from their pricing page, checked 2 November 2026 (pasted): £29 a month plus 2% per booking, a marketplace listing, and 24/7 phone support (we only offer email support). Search phrase: 'Slotwise alternative'.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_best_of",
+        "text": "Best-of page: 'Best invoicing apps for UK sole traders'. We make Tallyho Invoice. Facts for us and 4 rivals are pasted, each with a source link and the date checked. Buyer types: tradespeople, freelancers and small shops. Be fair: one rival is better for VAT-registered firms.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_battlecard",
+        "text": "Sales battlecard against Ridgeback CRM for our reps at Fieldnote CRM. Their pricing and feature page facts are pasted with dates. Claims their reps make about us: 'no mobile app' (false since May 2026) and 'hard to set up' (we offer free onboarding). Where we lose: fewer integrations (38 against their 120).",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_switch_page",
+        "text": "Why-switch page for Brightbooks, a bookkeeping service. 6 customer quotes we have permission to use, with first names and business type. Main reasons: a fixed monthly fee, the same bookkeeper every month, and replies within 1 working day. No rival names. About 900 words.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_table",
+        "text": "Comparison table of 3 payroll providers for small UK cafes, for the blog at Counter Culture Accounting. Facts pasted for each with source and date: monthly price, price per employee, pension auto-enrolment, HMRC filing, an app for staff, and contract length.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "comparison page",
+      "alternative page",
+      "vs page",
+      "competitor comparison",
+      "best of page",
+      "comparison table",
+      "why switch",
+      "switching page",
+      "battlecard",
+      "competitive battlecard",
+      "competitor page copy",
+      "seo comparison page"
+    ],
+    "demand_sources": [
+      {
+        "note": "Copywriting rate guide: an SEO content page costs $300 to $1,200 and a sales or landing page $3,500 or more.",
+        "url": "https://talo.com/costs/copywriting-rates"
+      }
+    ]
+  },
+  {
+    "id": "career-ladder-and-skills-matrix",
+    "title": "Career ladder and skills matrix",
+    "summary": "A skills matrix, career ladder, promotion rules and skills gap report for your team. So people grow based on clear evidence.",
+    "area": "people",
+    "deliverable": "The skills each role needs with a 1 to 4 scale and clear meanings; levels from entry to senior with scope, skills and examples; promotion criteria with the evidence needed and who decides; a gap report from your ratings; and six-month development plans per person.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Skills matrix for your team",
+          "Career ladder for one job family",
+          "Promotion criteria and process",
+          "Skills gap report from your ratings",
+          "Development plans for named people",
+          "Full set: matrix, ladder, criteria, gaps and plans"
+        ]
+      },
+      {
+        "id": "roles",
+        "label": "Roles in scope",
+        "type": "longtext",
+        "required": true,
+        "help": "Job titles and what each does. Paste job descriptions if you have them.",
+        "max": 15000
+      },
+      {
+        "id": "families",
+        "label": "Number of job families",
+        "type": "number",
+        "required": true,
+        "help": "A job family is a group of related roles, such as kitchen or sales. Base price covers 1.",
+        "max": 10
+      },
+      {
+        "id": "team",
+        "label": "Team size and structure",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "good_looks_like",
+        "label": "What good looks like",
+        "type": "longtext",
+        "required": false,
+        "help": "Skills, behaviours and results you value at each level.",
+        "max": 6000
+      },
+      {
+        "id": "levels",
+        "label": "Levels you want",
+        "type": "text",
+        "required": false,
+        "help": "Such as Junior, Mid, Senior and Lead.",
+        "max": 200
+      },
+      {
+        "id": "ratings",
+        "label": "Skill ratings you have",
+        "type": "longtext",
+        "required": false,
+        "help": "For a gap report or plans: each person's ratings. Initials are fine.",
+        "max": 20000
+      },
+      {
+        "id": "promotion_now",
+        "label": "How promotion works today",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "person_goals",
+        "label": "For development plans: each person's goals",
+        "type": "longtext",
+        "required": false,
+        "max": 6000
+      },
+      {
+        "id": "pay_bands",
+        "label": "Pay bands to show",
+        "type": "text",
+        "required": false,
+        "help": "Only if you want them shown. We do not set pay.",
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_roles",
+        "text": "Delivers the chosen piece for every role and person in scope.",
+        "weight": 5,
+        "pass_rule": "Each role or job family in the brief appears; a matrix covers every role's skills; a ladder covers every level asked for; a plan exists for each named person in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "clear_levels",
+        "text": "Levels and ratings are clear and based on what people do.",
+        "weight": 5,
+        "pass_rule": "The 1 to 4 scale, or each level, has a plain meaning and at least one example of work that shows it; each step up differs in scope or skill, not just 'more'; promotion criteria name the evidence needed and who decides.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "only_your_facts_fair",
+        "text": "Uses only the buyer's roles and ratings, and stays fair.",
+        "weight": 5,
+        "pass_rule": "No role, rating, person or pay figure appears unless it is in the brief; no criterion uses age, gender, health or other protected traits, or time served as the only test; nothing says who should be promoted, paid more or let go.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_tools",
+        "text": "Ready to use, with a rating sheet, ranked fixes or dated goals.",
+        "weight": 4,
+        "pass_rule": "A matrix comes with a blank rating sheet for people and managers; a gap report lists skills held by only one person and ranked fixes; each development plan has two or three goals, on-the-job steps and how progress is shown by a date.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words staff can read.",
+        "weight": 3,
+        "pass_rule": "Each skill and level is described in one or two short sentences, with no HR jargon such as 'competency taxonomy' left unexplained.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "families",
+        "unit": "job family",
+        "included": 1,
+        "per_unit_usd": 79
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a people and talent adviser for small businesses. Using only the roles, standards and ratings below, build what I ask for. A skills matrix lists the skills each role needs with a 1 to 4 scale, a plain meaning for each score and an example, plus a blank sheet for people and managers to rate. A career ladder sets levels from entry to senior with scope, skills, behaviours and examples, so each step up is clear. Promotion criteria say what evidence is needed, who decides and how often, with a simple form. A gap report shows team strengths, thin spots and skills only one person holds, with ranked fixes. Development plans give each named person two or three six-month skill goals, how to build them on the job and how to show progress. Keep everything job-related and fair, avoid protected traits, and do not say who should be promoted or paid more.",
+    "not_for": [
+      "Deciding who to promote, hire, pay more or let go",
+      "Criteria that discriminate by age, sex, race, religion, disability or other protected traits",
+      "Legal advice or employment law rulings",
+      "Pay decisions or salary benchmarks for named people",
+      "Performance reviews of named staff (see the performance review template job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_agency_ladder",
+        "text": "Career ladder for the design team at Northlight Studio, a 22-person agency. Roles: junior designer, designer, senior designer and design lead. Job descriptions pasted. We value client work, craft, mentoring and owning projects. 4 levels. Promotions now happen when someone asks, and it feels unfair.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_kitchen_matrix",
+        "text": "Skills matrix for the kitchen at Saltmarsh Kitchen & Bar: commis, chef de partie, sous chef and head chef (9 people). Skills to cover: sections, prep, allergens, ordering, costing and training others. A 1 to 4 scale with examples, and a sheet for chefs and the head chef to rate.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_promotion",
+        "text": "Promotion criteria and process for Cartwright & Lowe Accountants, 31 staff. Levels: trainee, semi-senior, senior and manager. Evidence we want: exam progress, client feedback, quality of files, and coaching juniors. Reviews twice a year, and partners decide. A simple form too.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_gap_report",
+        "text": "Skills gap report for the support team at Tessellate Software, 8 people. Ratings for 14 skills from our matrix are pasted (initials only). Show strengths, thin spots and skills only one person holds, with ranked fixes. Our only billing expert leaves in March.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_dev_plans",
+        "text": "Six-month development plans for 4 people at Greenacre Garden Centre: A.P. (plant area lead), D.S. (cafe supervisor), M.R. (tills) and J.K. (online orders). Their ratings and own goals are pasted. Two or three goals each, how to build them on the job, and how to show progress by June.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "career ladder",
+      "career path",
+      "career framework",
+      "skills matrix",
+      "competency matrix",
+      "promotion criteria",
+      "job levels",
+      "skills gap analysis",
+      "development plan",
+      "idp",
+      "progression framework",
+      "levelling guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "Salary.com sells career framework consulting to set out job levels, functions and families as a roadmap for career conversations.",
+        "url": "https://www.salary.com/business/services/consulting/career-frameworks"
+      },
+      {
+        "note": "QuickBooks guide for small businesses: career ladders set the skills, scope and pay range for each level and bring structure to promotions and pay decisions.",
+        "url": "https://quickbooks.intuit.com/r/payroll/career-ladders/"
+      }
+    ]
+  }
+]

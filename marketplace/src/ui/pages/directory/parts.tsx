@@ -1,4 +1,5 @@
 // Pieces shared by the directory pages: portraits with a fallback, agent cards, hire links.
+// Agents run in people's own AI, so "Hire" leads to the agent's download and connect section (#dir-pack).
 import { useState } from "preact/hooks";
 import type { AgentCard as AgentCardData } from "../../../modules/directory/views.ts";
 import { Button } from "../../components.tsx";
@@ -11,19 +12,22 @@ export interface AgentList {
   total: number;
   area: string | null;
   q: string;
+  /** With ?role=: the job role the list is for. */
+  role: { id: string; name: string; department: string; summary: string } | null;
   areas: { id: string; label: string; count: number }[];
   agents: AgentCardData[];
 }
 
-/** /new with the agent (and a job type or the buyer's words) filled in. */
-export function hireHref(personaId: string, opts: { job?: string | null; text?: string | null } = {}): string {
-  const q = new URLSearchParams({ persona: personaId });
-  if (opts.job) q.set("job", opts.job);
-  if (opts.text) q.set("text", opts.text);
-  return `/new?${q}`;
+/** GET /api/agents?featured=N: a few agents from different areas, and how many live agents there are in all. */
+export interface FeaturedList {
+  total: number;
+  agents: AgentCardData[];
 }
 
-export const usd = (n: number) => `$${n.toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+/** The agent's profile, at the section to download it or load it into your own AI. */
+export function hireHref(personaId: string): string {
+  return `/agents/${encodeURIComponent(personaId)}#dir-pack`;
+}
 
 /** "1 day", "3 days", "12 hours": how long a job takes, rounded the way people say it. */
 export function turnaround(hours: number): string {
@@ -83,6 +87,7 @@ export function AgentCard(props: { agent: AgentCardData; compact?: boolean; head
       <div class="dir-card-head">
         <H class="dir-card-name"><Link href={profile}>{a.name}</Link></H>
         <p class="dir-card-title">{a.title}</p>
+        {a.mega && <p class="dir-card-team">Leads a team of {a.mega.team_size}</p>}
       </div>
       <p class="dir-card-tagline">{a.tagline}</p>
       {!props.compact && a.outcomes.length > 0 && (
@@ -91,7 +96,7 @@ export function AgentCard(props: { agent: AgentCardData; compact?: boolean; head
         </ul>
       )}
       <div class="dir-card-foot">
-        <p class="dir-card-price">{a.price_from_usd !== null ? <>From <b>{usd(a.price_from_usd)}</b></> : "Fixed price before you start"}</p>
+        <p class="dir-card-meta">{a.area_label}</p>
         <div class="dir-card-actions">
           <Button href={hireHref(a.id)} small>Hire {a.name}</Button>
           <Link href={profile} class="dir-card-more">About {a.name}</Link>
@@ -106,17 +111,17 @@ export function CardSkeletons(props: { count: number }) {
   return <>{Array.from({ length: props.count }, () => <div class="dir-card dir-card-skeleton" aria-hidden="true"><div class="dir-portrait" /><span /><span /><span /></div>)}</>;
 }
 
-/** The four steps of a hire, the same everywhere. */
+/** The four steps of a hire, the same everywhere. The agent works in the person's own AI. */
 export function HowHiringWorks(props: { name?: string }) {
-  const who = props.name ?? "The agent";
+  const who = props.name ?? "the agent", Who = props.name ?? "The agent";
   return (
     <section class="dir-how" aria-labelledby="dir-how-title">
       <h2 id="dir-how-title">How hiring works</h2>
       <ol class="dir-how-steps">
-        <li><span class="step-n">1</span><h3>Describe the job</h3><p>In your own words. {who} asks at most three questions.</p></li>
-        <li><span class="step-n">2</span><h3>Approve a fixed price and checklist</h3><p>You see the price and what "good" means before work starts.</p></li>
-        <li><span class="step-n">3</span><h3>Get checked work</h3><p>Every draft is checked against your checklist before you see it.</p></li>
-        <li><span class="step-n">4</span><h3>Ask for up to two changes</h3><p>Then accept it. Free during the beta.</p></li>
+        <li><span class="step-n">1</span><h3>Add {who} to your AI</h3><p>Download the files, or connect your AI and load {who} in your chat. It is free.</p></li>
+        <li><span class="step-n">2</span><h3>Say what you need</h3><p>In your own words. {Who} asks only for what is missing.</p></li>
+        <li><span class="step-n">3</span><h3>Choose what {who} can touch</h3><p>Reading is the default. Drafting or publishing in your tools needs your yes, within your limits, and every action is logged.</p></li>
+        <li><span class="step-n">4</span><h3>Check the work</h3><p>{Who} checks it against a checklist before handing it over. It all runs on your own AI plan.</p></li>
       </ol>
     </section>
   );

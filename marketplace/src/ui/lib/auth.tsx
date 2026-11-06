@@ -10,10 +10,12 @@ export interface Me {
   orgId: string;
   roles: { ops: boolean; reviewer: boolean };
   betaAccess: boolean;
+  /** May start jobs that run on AI Blocks: ops only while HOSTED_JOBS is off. */
+  hostedJobs: boolean;
   expert: { id: string; status: "applied" | "approved" | "rejected" | "paused"; displayName: string; founding: boolean } | null;
 }
 
-export interface AppConfig { clerkPublishableKey: string; env: string; betaMode: "invite" | "open"; libraryUrl: string }
+export interface AppConfig { clerkPublishableKey: string; env: string; inviteOnly: boolean; hostedJobs?: boolean; libraryUrl: string }
 
 interface AuthState {
   loaded: boolean;
@@ -22,7 +24,8 @@ interface AuthState {
   me: Me | null;
   displayName: string;
   getToken(): Promise<string | null>;
-  openSignIn(): void;
+  /** Sends the visitor to sign in (Clerk's own page), then back to `next` (a path on this site; default: here). */
+  openSignIn(next?: string, opts?: { signUp?: boolean }): void;
   signOut(): Promise<void>;
   refreshMe(): Promise<void>;
   /** Local dev only. */
@@ -30,13 +33,32 @@ interface AuthState {
 }
 
 const AuthContext = createContext<AuthState | null>(null);
+
+/** A path on this site to come back to after sign-in. Anything else (another site, "//host", a backslash trick)
+ *  becomes "/", and so does the sign-in page itself, so it never loops. */
+export function safeNext(raw: string | null | undefined): string {
+  const next = (raw ?? "").trim();
+  if (!next.startsWith("/") || next.startsWith("//") || next.includes("\\") || /[\u0000-\u001f]/.test(next)) return "/";
+  if (next === "/sign-in" || next.startsWith("/sign-in?") || next.startsWith("/sign-in/")) return "/";
+  return next;
+}
+
+/** The sign-in page, set to come back to `next` (default: the page the visitor is on now). */
+export function signInHref(next?: string): string {
+  const here = typeof location === "undefined" ? "/" : location.pathname === "/sign-in" ? safeNext(new URLSearchParams(location.search).get("next")) : location.pathname + location.search;
+  const target = safeNext(next ?? here);
+  return target === "/" ? "/sign-in" : `/sign-in?next=${encodeURIComponent(target)}`;
+}
 const DEMO_KEY = "agents.demoUser";
 
+// The no-rhc build is Clerk's headless client: it has no UI components (openSignIn would throw "Clerk was not loaded
+// with Ui components"). Sign-in and sign-up happen on Clerk's own pages, as on the library (useaiblocks.com), and come
+// back to the page the visitor was on.
 let clerkPromise: Promise<Clerk> | null = null;
 function loadClerk(key: string): Promise<Clerk> {
   clerkPromise ??= import("@clerk/clerk-js/no-rhc").then(async ({ Clerk }) => {
     const clerk = new Clerk(key);
-    await clerk.load({ appearance: { variables: { colorPrimary: "#0a0a0a", fontFamily: "Space Grotesk, system-ui, sans-serif", borderRadius: "4px" } } });
+    await clerk.load();
     return clerk;
   });
   return clerkPromise;
@@ -96,9 +118,15 @@ export function AuthProvider(props: { children: ComponentChildren }) {
   const state: AuthState = {
     loaded, config, signedIn, me, displayName: name,
     getToken: () => tokenGetter(),
-    openSignIn: () => {
-      if (config?.env === "local") { const id = prompt("Demo user id (local only)", "user_demo") ?? ""; if (id) state.demoSignIn!(id); return; }
-      clerk?.openSignIn({ fallbackRedirectUrl: location.href });
+    openSignIn: (next?: string, opts?: { signUp?: boolean }) => {
+      const back = new URL(next === undefined ? location.pathname + location.search : safeNext(next), location.origin).href;
+      if (config?.env === "local") {
+        const id = prompt("Demo user id (local only)", "user_demo") ?? "";
+        if (id) { state.demoSignIn!(id); if (back !== location.href) location.assign(back); }
+        return;
+      }
+      const urls = { signInForceRedirectUrl: back, signUpForceRedirectUrl: back };
+      void (opts?.signUp ? clerk?.redirectToSignUp(urls) : clerk?.redirectToSignIn(urls));
     },
     signOut: async () => {
       if (config?.env === "local") { localStorage.removeItem(DEMO_KEY); demoUser = null; setSignedIn(false); setMe(null); return; }

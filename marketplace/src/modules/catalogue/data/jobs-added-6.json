@@ -1,0 +1,2213 @@
+[
+  {
+    "id": "experiment-results-readout",
+    "title": "A/B test or experiment results readout",
+    "summary": "Paste the results of a finished or running test. You get each rate, the lift, how sure you can be and a clear call, with every sum shown.",
+    "area": "data",
+    "deliverable": "Set-up checks (traffic split, test length, mid-test changes); each version's rate with the counts behind it; the lift with a 95% range; a p-value with the working shown; a plain call (ship, keep running, stop or rerun); segment notes with caveats; and the next test to run.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "test_type",
+        "label": "What kind of test is it?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Website or landing page A/B test",
+          "Email subject or content test",
+          "Ad or creative test",
+          "Price or offer test",
+          "Test with 3 to 5 versions",
+          "Holdout or regional lift test",
+          "Before-and-after change with no control group",
+          "Check of a test that is still running"
+        ]
+      },
+      {
+        "id": "results",
+        "label": "Your results",
+        "type": "longtext",
+        "required": true,
+        "help": "For each version: visitors, sends or clicks, and conversions. Totals are enough; daily rows help.",
+        "max": 20000
+      },
+      {
+        "id": "variants",
+        "label": "How many versions, including the original?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 2.",
+        "max": 5
+      },
+      {
+        "id": "metric",
+        "label": "What counts as a win?",
+        "type": "text",
+        "required": true,
+        "help": "The one main number, such as orders per visitor or clicks per send.",
+        "max": 300
+      },
+      {
+        "id": "setup",
+        "label": "How the test ran",
+        "type": "longtext",
+        "required": false,
+        "help": "Dates, planned split, tool used and anything changed mid-test.",
+        "max": 3000
+      },
+      {
+        "id": "min_effect",
+        "label": "Smallest change worth acting on",
+        "type": "text",
+        "required": false,
+        "help": "For example a 10% lift in bookings.",
+        "max": 200
+      },
+      {
+        "id": "value",
+        "label": "Value of one conversion",
+        "type": "text",
+        "required": false,
+        "help": "Average order value or margin, if you want the money at stake.",
+        "max": 300
+      },
+      {
+        "id": "segments",
+        "label": "Results by group",
+        "type": "longtext",
+        "required": false,
+        "help": "Counts by device, new or returning, or channel. Optional.",
+        "max": 8000
+      },
+      {
+        "id": "decision",
+        "label": "What will you decide?",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "clear_call",
+        "text": "The readout opens with a clear call on the decision in the brief.",
+        "weight": 5,
+        "pass_rule": "The first section gives one call (ship, keep running, stop or rerun) tied to the main metric named in the brief, with the one or two numbers that drive it.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "figures_from_counts",
+        "text": "Every count and rate comes from the pasted results, with the sum shown.",
+        "weight": 5,
+        "pass_rule": "Each rate is written as numerator over denominator from the brief (for example 212 / 4,980 = 4.26%); no visitor, conversion or revenue figure appears that is not in the brief or derived from it by shown steps.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "sound_test",
+        "text": "The statistical test fits the data and is shown in full.",
+        "weight": 5,
+        "pass_rule": "The draft names the method (such as a two-proportion z-test or chi-square), writes the formula, plugs in the brief's numbers and states the p-value and a 95% interval for the difference; with 3 or more versions it applies a named correction for many comparisons.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "checks_and_limits",
+        "text": "Set-up problems and limits are named before the call is trusted.",
+        "weight": 4,
+        "pass_rule": "The draft checks the actual split against the planned split, the test length against full weeks and any mid-test change in the brief; a before-and-after test is said not to prove cause; segment results are labelled as ideas to test.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_next",
+        "text": "A non-statistician can read it and knows what to do next.",
+        "weight": 3,
+        "pass_rule": "Each term (p-value, interval, lift, power) is explained in one plain sentence the first time it appears; the draft ends with a next step and, for an unfinished test, the extra visitors or days needed with the working.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "size": {
+        "field": "variants",
+        "unit": "extra version",
+        "included": 2,
+        "per_unit_usd": 25
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful analyst who reads A/B test results for small businesses. Using only the counts I paste, work out each version's conversion rate (show numerator and denominator), the absolute and relative lift, a 95% confidence interval for the difference and a p-value from a two-proportion z-test (or chi-square for more than two versions, with a correction for many comparisons). Show every formula with my numbers plugged in. Before the verdict, check whether the traffic split matches the plan, whether the test ran full weeks and whether anything changed mid-test. Then give a plain call: ship, keep running, stop or rerun, and, if the test is not finished, how many more visitors are needed. Explain each statistical term in one plain sentence. Treat segment differences as ideas to test, not proof.",
+    "not_for": [
+      "Running the test, or logging in to your testing, ad or analytics tools",
+      "Results you have not pasted, such as a live dashboard",
+      "Medical, clinical or drug trials",
+      "Promising that a winning version will keep winning",
+      "Tests that deceived or pressured people",
+      "Planning a new test from scratch (see the test or research plan job)",
+      "Customer names, emails or other personal data in the results"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Landing page test for Harbour Lane Dental's free whitening consult. Version A (current) had 3,412 visitors and 96 bookings. Version B (shorter form, team photo) had 3,388 visitors and 131 bookings. It ran 14 days on a 50/50 split in VWO. Is B a real winner? A booking is worth about $180 to us.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Subject line test for our bakery newsletter, Crumb & Co. A: 'This week's bakes' sent to 2,150, 602 opens, 88 clicks. B: 'Sourdough is back (finally)' sent to 2,160, 711 opens, 121 clicks. We care about clicks. Which won and by how much?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Shopify product page test with three versions over 21 days in Shoplift. Original: 9,820 sessions, 284 orders. Version 2 (reviews moved up): 9,760 sessions, 301 orders. Version 3 (free shipping banner): 9,901 sessions, 333 orders. The split was meant to be equal. Mobile and desktop counts are below. Which, if any, should we keep?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "We changed our gym's joining page on 1 March without a split test. February: 1,240 visits, 37 sign-ups. March: 1,310 visits, 52 sign-ups. We also ran a radio ad in March. Did the new page work?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Our Google Ads test is 6 days in. Ad A: 1,050 clicks, 21 leads. Ad B: 1,020 clicks, 29 leads. My boss wants to stop now and pick B. We want to spot a 25% lift. Should we stop?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "a/b test results",
+      "ab test analysis",
+      "split test",
+      "statistical significance",
+      "p-value",
+      "confidence interval",
+      "conversion lift",
+      "experiment readout",
+      "email test results",
+      "landing page test",
+      "test winner",
+      "chi-square",
+      "sample ratio mismatch",
+      "holdout test",
+      "lift test"
+    ],
+    "demand_sources": [
+      {
+        "note": "Twine's guide to freelance CRO rates says agency rates on Clutch span about $25 to $199 an hour, and that a CRO rate covers designing tests, monitoring them and reporting results.",
+        "url": "https://www.twine.net/blog/freelance-cro-expert-hourly-rates/"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists data scientists at an average of $75 an hour, about £455 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-scientist"
+      }
+    ]
+  },
+  {
+    "id": "forecast-from-history",
+    "title": "Sales, demand or bookings forecast from your history",
+    "summary": "A forecast for the weeks or months ahead built from the history you paste, with low, likely and high ranges and the formulas to update it.",
+    "area": "data",
+    "deliverable": "A data check; the pattern found (trend, season, one-offs); the method chosen and why; a forecast table by period and series with low, likely and high values; an accuracy test on your own past periods; spreadsheet formulas to roll it forward; and the assumptions to watch.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "forecast_type",
+        "label": "What do you want to forecast?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Monthly sales or revenue",
+          "Weekly sales",
+          "Units by product (demand)",
+          "Demand for a new product from similar ones",
+          "Bookings, covers or visits by day or week",
+          "Members, sign-ups or enrolments",
+          "Calls, tickets or orders to handle",
+          "Check of a forecast you already made"
+        ]
+      },
+      {
+        "id": "history",
+        "label": "Your history",
+        "type": "longtext",
+        "required": true,
+        "help": "One row per period: date and value, per series. Up to 3 years of months or 2 years of weeks. Totals, not raw orders.",
+        "max": 40000
+      },
+      {
+        "id": "series_count",
+        "label": "How many separate series (products, sites or lines)?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 5.",
+        "max": 40
+      },
+      {
+        "id": "horizon",
+        "label": "How far ahead?",
+        "type": "text",
+        "required": true,
+        "help": "For example the next 6 months or 12 weeks.",
+        "max": 100
+      },
+      {
+        "id": "known_events",
+        "label": "Known events, past and planned",
+        "type": "longtext",
+        "required": false,
+        "help": "Closures, stockouts, big one-off orders, promotions, price changes, new sites, holidays.",
+        "max": 4000
+      },
+      {
+        "id": "method",
+        "label": "Method you prefer",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Simple and easy to explain",
+          "Seasonal method (Holt-Winters or Excel FORECAST.ETS)",
+          "Match the method I use now",
+          "No preference"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Where will you update it?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Excel",
+          "Google Sheets",
+          "Python",
+          "No preference"
+        ]
+      },
+      {
+        "id": "use",
+        "label": "What is the forecast for?",
+        "type": "text",
+        "required": false,
+        "help": "Stock buying, staffing, cash or targets.",
+        "max": 300
+      },
+      {
+        "id": "existing_forecast",
+        "label": "Your current forecast, if you want it checked",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "forecast_table",
+        "text": "A forecast table covers every series and period the brief asks for.",
+        "weight": 5,
+        "pass_rule": "The table has one row per period across the full horizon in the brief, for every series named, with low, likely and high values; any totals add up across series.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "history_only",
+        "text": "The forecast is built only from the pasted history and the events the buyer listed.",
+        "weight": 5,
+        "pass_rule": "Every input figure traces to the brief; each growth rate, seasonal index or adjustment is worked out from the history with the sum shown, or comes from an event the buyer listed; no outside market figures appear.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "method_tested",
+        "text": "The method is named, shown step by step and tested on past data.",
+        "weight": 5,
+        "pass_rule": "The draft names the method and why it fits, shows how at least one forecast value was worked out from the history, and reports an accuracy check (such as average miss or MAPE) on held-back past periods with the numbers used.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "formulas_to_update",
+        "text": "The buyer can roll the forecast forward without help.",
+        "weight": 4,
+        "pass_rule": "Formulas or code are written out for the tool in the brief (Excel and Google Sheets if none is named), using the layout of the pasted history, with a note on which cells to update each period.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_ranges",
+        "text": "Ranges and limits are plain and honest.",
+        "weight": 3,
+        "pass_rule": "The draft says how the low and high values were set, names the two or three assumptions most likely to break, and says plainly when history is too short for a seasonal method (for example under 24 months of monthly data).",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "series_count",
+        "unit": "extra series",
+        "included": 5,
+        "per_unit_usd": 10
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a forecasting analyst for a small business. Using only the history I paste, check it for gaps and one-offs, describe the trend and seasonal pattern, and pick a simple method that fits (seasonal naive, moving average, trend with a seasonal index, or Holt-Winters / Excel FORECAST.ETS), saying why. Test the method on the last few periods I gave you and report the average miss. Then give a forecast table for every series over the horizon I name, with low, likely and high values and how the range was set. Treat known events as separate, labelled adjustments. Show how one value was worked out, write the spreadsheet formulas to roll it forward, and list the assumptions most likely to break. Do not use outside figures or invent growth rates.",
+    "not_for": [
+      "Investment, lending or other regulated financial advice",
+      "Forecasts presented as certain or guaranteed",
+      "Stock market, crypto or betting predictions",
+      "Raw order files with customer details (send totals per period)",
+      "Logging in to your shop, till or accounting system",
+      "Reorder points and cash for stock orders (see the stock reorder and cash plan job)",
+      "A full business model with costs and cash (see the financial model job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Monthly sales for our two garden centres (Oakfield and Riverside), January 2023 to September 2026, pasted below. Forecast October 2026 to March 2027 for each site. Oakfield was closed for 3 weeks in February 2024 for a roof repair. We use Excel.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Weekly covers for Basil & Brine restaurant for the last 104 weeks. We need the next 12 weeks to plan staff. We close Christmas week, and we raised prices 8% in June.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Units sold per month for our 12 best-selling candles at Wick & Wander, January 2024 to October 2026. Forecast monthly units for November 2026 to April 2027. Q4 is huge for us. Three scents ran out in May 2025 after a supplier change.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Here is the forecast my manager made for 2026 bookings at our dog daycare and the actual bookings for January to August. How good was it, and what should September to December look like instead?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Swim school enrolments per term for the last 9 terms are below. Forecast the next 3 terms. I know 9 data points is not much.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "sales forecast",
+      "demand forecast",
+      "forecast next month",
+      "seasonal forecast",
+      "holt-winters",
+      "forecast.ets",
+      "moving average",
+      "bookings forecast",
+      "units forecast",
+      "staffing forecast",
+      "forecast accuracy",
+      "mape",
+      "time series",
+      "revenue projection",
+      "new product forecast"
+    ],
+    "demand_sources": [
+      {
+        "note": "Shopify's guide to demand forecasting says forecasting helps retailers reduce risk across inventory, product launches, staffing, marketing and budgeting, and lists trend projection among the main methods.",
+        "url": "https://www.shopify.com/blog/demand-forecasting"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists data scientists at an average of $75 an hour, about £455 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-scientist"
+      }
+    ]
+  },
+  {
+    "id": "dashboard-build-sheet",
+    "title": "Dashboard build sheet with measures written out",
+    "summary": "A build sheet for one dashboard in Power BI, Looker Studio, Metabase, Tableau or a spreadsheet: data set-up, every measure written out, each chart, filters and layout.",
+    "area": "data",
+    "deliverable": "Data sources and joins; a field list; every measure or calculated field written in your tool's formula language with a worked check; a chart-by-chart spec with fields, filters and sort; a page layout grid; refresh and access notes; and a test list against source totals. Reviews get ranked fixes.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full build sheet for a new dashboard",
+          "Measures or calculated fields only",
+          "Data model and joins for a dashboard",
+          "Review of a dashboard you have, with fixes",
+          "Rebuild a spreadsheet dashboard in a BI tool",
+          "Page layout and chart list only"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Which tool?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Power BI",
+          "Looker Studio",
+          "Metabase",
+          "Tableau",
+          "Google Sheets",
+          "Excel",
+          "Other or not sure"
+        ]
+      },
+      {
+        "id": "pages",
+        "label": "How many dashboard pages?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 2.",
+        "max": 6
+      },
+      {
+        "id": "purpose",
+        "label": "Who uses it, and what must it answer?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "data_layout",
+        "label": "Your tables and columns",
+        "type": "longtext",
+        "required": true,
+        "help": "Column names and types, plus 5 to 10 sample rows per table. Made-up rows are fine.",
+        "max": 30000
+      },
+      {
+        "id": "metrics",
+        "label": "Metrics and how you count them",
+        "type": "longtext",
+        "required": false,
+        "help": "Definitions you already use, targets, and rules such as how refunds count.",
+        "max": 5000
+      },
+      {
+        "id": "current",
+        "label": "Your current dashboard or formulas",
+        "type": "longtext",
+        "required": false,
+        "help": "For a review or rebuild: describe each chart or paste the measures and formulas.",
+        "max": 20000
+      },
+      {
+        "id": "filters",
+        "label": "Filters people need",
+        "type": "text",
+        "required": false,
+        "help": "Date, site, channel, rep.",
+        "max": 400
+      },
+      {
+        "id": "limits",
+        "label": "Licence, refresh and access limits",
+        "type": "text",
+        "required": false,
+        "help": "For example Power BI Pro, daily refresh, managers see only their own site.",
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_purpose",
+        "text": "The sheet covers each page, chart and measure the brief needs.",
+        "weight": 5,
+        "pass_rule": "Every question in the brief's purpose maps to at least one named chart or measure; the page count matches the brief; each chart lists its type, fields, filters and sort.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_fields_only",
+        "text": "Every table, column and metric comes from the brief or is a marked placeholder.",
+        "weight": 5,
+        "pass_rule": "All table and column names used in measures appear in the brief's data layout or are marked placeholders such as [YourDateColumn]; no target, benchmark or sample figure appears unless the buyer gave it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "measures_complete",
+        "text": "Measures are complete and written for the named tool.",
+        "weight": 5,
+        "pass_rule": "Each measure or calculated field is given in full in the tool's own syntax (DAX for Power BI, Looker Studio calculated fields, Metabase custom expressions or SQL, Tableau calculations, or sheet formulas) with no gaps; at least one measure is checked by hand against the sample rows.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_build_steps",
+        "text": "A non-specialist can follow the build in order.",
+        "weight": 3,
+        "pass_rule": "Build steps are numbered, one action each, in build order (data, model, measures, visuals, filters, sharing); terms such as relationship, measure or blend are explained once.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tested_and_access",
+        "text": "The sheet says how to check the numbers and who sees what.",
+        "weight": 4,
+        "pass_rule": "A test list compares at least three dashboard numbers with a source total; refresh timing and any access rules from the brief are covered; a review ranks its fixes by impact with the corrected measure for each.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 149,
+      "min_usd": 99,
+      "max_usd": 449,
+      "size": {
+        "field": "pages",
+        "unit": "extra page",
+        "included": 2,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a BI developer who builds dashboards for small businesses. From the tables, columns and sample rows I give, write a build sheet for my dashboard in the tool I name. Cover the data sources and how the tables join, every measure or calculated field written in full in that tool's syntax (DAX for Power BI, calculated fields for Looker Studio, custom expressions or SQL for Metabase), a chart-by-chart list with chart type, fields, filters and sort, a page layout, refresh and sharing notes, and a test list that compares dashboard numbers with source totals. Use only my column names and mark anything else as a placeholder. Work one measure through by hand on my sample rows to show it is right. Explain any BI term once in plain words.",
+    "not_for": [
+      "Logging in to, building in or publishing from your BI tool or database",
+      "Passwords, connection strings or API keys in the brief (use placeholders)",
+      "Choosing which KPIs matter from scratch (see the KPI and dashboard spec job)",
+      "Dashboards meant to mislead owners, lenders or investors",
+      "Tracking staff in ways you have no right to",
+      "Real customer names or emails in sample rows",
+      "Setting up live data feeds or scheduled refresh for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Power BI Pro. Our cleaning company, Brightway, exports three tables from our job system: Jobs (job_id, date, client_id, crew, hours, price), Clients (client_id, area, type) and Costs (date, crew, wages, supplies). We want 2 pages: weekly revenue and margin by crew and area, and repeat clients. Sample rows below.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Looker Studio on a Google Sheet of our Shopify orders plus a GA4 export. One page for the owner: sales, orders, average order value, conversion rate and top 10 products, with a date filter and a channel filter. Please write the calculated fields.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Metabase on our Postgres database for a tutoring marketplace. Tables: sessions, tutors, students, payments (schema pasted). We need 3 pages: bookings, tutor hours used against hours offered, and refunds. Give the SQL questions and custom expressions.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Here are the DAX measures and visuals in our current Power BI sales report. Our 'YTD Sales' number does not match our accounts and the report takes 40 seconds to load. Review it and give fixes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Our café group runs its numbers in an Excel dashboard with 14 tabs. Rebuild it as one Power BI page. The tab layout and formulas are pasted below.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "power bi dashboard",
+      "dax measures",
+      "looker studio dashboard",
+      "metabase dashboard",
+      "tableau dashboard",
+      "calculated fields",
+      "dashboard build",
+      "data model",
+      "dashboard review",
+      "google data studio",
+      "excel dashboard",
+      "report design",
+      "bi developer",
+      "dashboard spec"
+    ],
+    "demand_sources": [
+      {
+        "note": "A 2026 hiring guide to Power BI developer costs puts freelance Power BI consultants at about $25 to $55 an hour, and works out a 40-hour assignment at about $1,800.",
+        "url": "https://www.hireinsouth.com/post/power-bi-developer-cost"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists analytics consultants at an average of $68 an hour, about £413 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/analytics-consultant"
+      }
+    ]
+  },
+  {
+    "id": "measurement-and-tracking-plan",
+    "title": "Analytics tracking plan: GA4 events, UTMs or attribution",
+    "summary": "A written plan for what your site or app should track and how: GA4 or product events, UTM naming rules, or a plain guide to how your channels get credit.",
+    "area": "data",
+    "deliverable": "An event table (name, trigger, parameters, where it fires, who builds it) with key events marked; UTM naming rules with a builder sheet layout and filled example links; a plain attribution guide matching each report to a decision; a test checklist; and a gap list from any set-up you paste.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "GA4 event and key event plan for a website",
+          "Online store tracking plan (product view to purchase)",
+          "Product or app event plan (PostHog, Mixpanel, Amplitude)",
+          "UTM naming rules and builder sheet",
+          "Attribution guide for your channels",
+          "Check of your current tracking set-up",
+          "Full plan: events, UTMs and attribution"
+        ]
+      },
+      {
+        "id": "site",
+        "label": "Your site or app and what counts as success",
+        "type": "longtext",
+        "required": true,
+        "help": "Main pages or screens, forms, checkout, sign-up, calls, bookings.",
+        "max": 4000
+      },
+      {
+        "id": "platform",
+        "label": "Platform and tools",
+        "type": "text",
+        "required": true,
+        "help": "For example Shopify with GA4 and Google Tag Manager, or WordPress with the Meta pixel.",
+        "max": 300
+      },
+      {
+        "id": "channels",
+        "label": "Marketing channels you use",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "current_setup",
+        "label": "Current set-up or export",
+        "type": "longtext",
+        "required": false,
+        "help": "Event list, tag names, a GA4 events export, channel numbers or your UTM links. No logins.",
+        "max": 30000
+      },
+      {
+        "id": "events_count",
+        "label": "About how many events to plan?",
+        "type": "number",
+        "required": false,
+        "help": "Base price covers 20.",
+        "max": 60
+      },
+      {
+        "id": "questions",
+        "label": "Questions the data must answer",
+        "type": "longtext",
+        "required": false,
+        "max": 2000
+      },
+      {
+        "id": "consent",
+        "label": "Cookie or consent banner you use",
+        "type": "text",
+        "required": false,
+        "help": "We plan around it. This is not legal advice.",
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_goals",
+        "text": "The plan covers every success action and channel in the brief.",
+        "weight": 5,
+        "pass_rule": "Each success action in the brief has a named event or key event; each channel listed has UTM values or an attribution note; the piece chosen is delivered in full.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_setup_only",
+        "text": "Pages, tools and tags come from the brief, and no live data is claimed.",
+        "weight": 5,
+        "pass_rule": "Every page, form, tool and existing tag named comes from the brief or is a marked placeholder; the draft never claims to have seen live analytics; no traffic or conversion figures appear unless the buyer pasted them.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable_events",
+        "text": "Each event and link rule can be built exactly as written.",
+        "weight": 5,
+        "pass_rule": "Every event row has a consistent name (such as snake_case under 40 characters), a trigger, parameters with example values and where it fires; GA4 recommended names (such as purchase, generate_lead, sign_up) are used where they fit; UTM rules give allowed values and at least five filled example links.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_explained",
+        "text": "An owner can follow the plan.",
+        "weight": 3,
+        "pass_rule": "Terms such as event, parameter, key event, UTM and attribution model are explained once in plain words; the plan says who builds each part (owner, developer or agency).",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tested_and_private",
+        "text": "It says how to test the tracking and keeps personal data out.",
+        "weight": 4,
+        "pass_rule": "A test checklist says how to confirm each event fires (such as GA4 DebugView or Tag Assistant) and what should appear; no event sends names, emails or phone numbers as parameters; consent handling is noted where the brief names a banner.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "events_count",
+        "unit": "extra event",
+        "included": 20,
+        "per_unit_usd": 3
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a web analytics specialist who sets up tracking for small businesses. From my site description, tools and current set-up, write a tracking plan. List each event in a table with its name (snake_case, using GA4 recommended names where they fit), trigger, parameters with example values and where it fires, and mark the key events. Write UTM naming rules with allowed values for source, medium and campaign, filled example links for my channels and a simple builder sheet layout. If I ask about attribution, explain in plain words how each common model gives credit and which report to use for which decision. End with a test checklist (DebugView or Tag Assistant) and never send personal data such as emails as event parameters. Use only my pages and tools, and do not claim to see my live data.",
+    "not_for": [
+      "Logging in to GA4, Tag Manager, your site or ad accounts, or installing tags for you",
+      "Legal advice on cookies, consent or privacy law",
+      "Tracking that collects names, emails or health details, or fingerprints visitors",
+      "Reports from live data you have not pasted",
+      "Tracking on sites or apps you do not own",
+      "Reading your ad results (see the ads or channel performance review job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Shopify store for Little Fern Knits with GA4 through the Google & YouTube app and the Meta pixel. We want to see which channel brings buyers and where people drop between product view and purchase. We use Instagram, Pinterest, Klaviyo email and Google Ads. Please write the event plan and UTM rules.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our accountancy firm's WordPress site has a contact form, a 'book a call' Calendly link and a phone number. GA4 is installed but only shows page views. What should we track, and how do we set it up in Google Tag Manager?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "B2B scheduling app for physio clinics, built in React, using PostHog. Plan the product events from sign-up to first booking made, with the properties to send. Our current 40 events are pasted below and they are a mess.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our marketing team spells UTMs ten different ways (fb, facebook, Facebook-Ads). Here are the 60 links we used last quarter. Write the rules and show how each link should have been tagged.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "We run Google Ads, Meta ads and a newsletter for our furniture shop. Last month Google Ads reported 120 sales, Meta 95 and GA4 140 sales in total. Explain in plain words why they disagree and which numbers to trust for which decision.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ga4 setup",
+      "ga4 events",
+      "tracking plan",
+      "google tag manager",
+      "utm parameters",
+      "utm naming",
+      "campaign tracking",
+      "conversion tracking",
+      "key events",
+      "ecommerce tracking",
+      "attribution model",
+      "marketing attribution",
+      "posthog events",
+      "mixpanel tracking plan",
+      "measurement plan"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's page for hiring Google Analytics experts quotes $500 to $2,000 for basic set-up projects and $75 to $150 an hour for experienced specialists, with GA4 set-up, event tracking and conversion tracking named as common projects.",
+        "url": "https://contra.com/hire/google-analytics-experts"
+      },
+      {
+        "note": "Google Analytics Help explains how to add UTM parameters to links so owners can see which campaigns send traffic, with best practices and a URL builder.",
+        "url": "https://support.google.com/analytics/answer/10917952"
+      }
+    ]
+  },
+  {
+    "id": "metric-definitions-and-data-dictionary",
+    "title": "Metric definitions, KPI tree or data dictionary",
+    "summary": "Clear written definitions for your numbers and data: a KPI tree from goal to drivers, a metric sheet, a data dictionary, a glossary or data quality checks.",
+    "area": "data",
+    "deliverable": "KPI tree: the goal split into drivers with the formula linking each level. Metrics: plain meaning, exact formula, window, filters, edge cases, source and owner. Dictionary: each column with type, allowed values, example and owner. Quality rules: each check as a formula or SQL with a pass condition and fix step.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "KPI tree from one goal down to drivers",
+          "Metric definitions sheet",
+          "Data dictionary for your files or tables",
+          "Business glossary for your team",
+          "Check for numbers counted two ways",
+          "Data quality rules and checks",
+          "Field definitions for extracted or imported data",
+          "Full set: tree, definitions and dictionary"
+        ]
+      },
+      {
+        "id": "business",
+        "label": "Your business and the goal",
+        "type": "longtext",
+        "required": true,
+        "help": "What you sell, how you earn, and the goal or decisions these numbers support.",
+        "max": 3000
+      },
+      {
+        "id": "material",
+        "label": "Your columns, metrics or reports",
+        "type": "longtext",
+        "required": true,
+        "help": "Column lists with sample rows, the metric names and formulas you use now, or reports described in words.",
+        "max": 40000
+      },
+      {
+        "id": "item_count",
+        "label": "How many metrics, terms or columns?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 40.",
+        "max": 200
+      },
+      {
+        "id": "tools",
+        "label": "Where the data lives",
+        "type": "text",
+        "required": false,
+        "help": "Spreadsheets, Shopify, HubSpot, Xero, a database.",
+        "max": 300
+      },
+      {
+        "id": "conflicts",
+        "label": "Where numbers disagree today",
+        "type": "longtext",
+        "required": false,
+        "max": 4000
+      },
+      {
+        "id": "owners",
+        "label": "Who owns which data",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "format",
+        "label": "Format you want",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Markdown tables",
+          "CSV to paste into a sheet",
+          "Both"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_complete",
+        "text": "The chosen piece is complete for every item in the brief.",
+        "weight": 5,
+        "pass_rule": "Every metric, term or column the brief lists appears once with all fields filled or marked 'buyer to confirm'; a KPI tree links each driver to its parent with a formula.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_terms_only",
+        "text": "Definitions use only the buyer's columns, systems and rules.",
+        "weight": 5,
+        "pass_rule": "Every column, table and system named comes from the brief; where the brief does not settle a rule (such as whether refunds reduce revenue) the draft asks it as a question with a recommended answer instead of deciding silently; no targets or benchmarks are invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "exact_and_testable",
+        "text": "Each definition is exact enough that two people get the same number.",
+        "weight": 5,
+        "pass_rule": "Each metric has a formula on named columns, a time window, filters and how edge cases are handled (refunds, test orders, duplicates, time zones); each quality rule is a sheet formula or SQL check with a pass condition.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Anyone on the team can read it.",
+        "weight": 3,
+        "pass_rule": "Each item has a one-sentence plain meaning with no unexplained jargon; one naming pattern is stated at the top and used throughout.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "conflicts_and_gaps",
+        "text": "Clashes and gaps are surfaced with a fix.",
+        "weight": 4,
+        "pass_rule": "Any metric counted two ways in the brief is shown side by side with the difference explained and one definition recommended; the draft lists items with no owner or no source.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "item_count",
+        "unit": "extra item",
+        "included": 40,
+        "per_unit_usd": 1.5
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an analytics lead who writes clear metric definitions for small businesses. From my business description and the columns, reports and metric names I give, produce the piece I ask for: a KPI tree (goal down to drivers, with the formula linking each level); a metric definitions sheet (name, plain meaning, exact formula on my columns, time window, filters, edge cases such as refunds and test orders, source and owner); a data dictionary (column, type, allowed values, example, owner, notes); or data quality checks written as sheet formulas or SQL with pass conditions. Use only my column names and systems. Where a rule is not settled, ask it as a question with a recommended answer rather than deciding. List any number counted two ways today and recommend one definition.",
+    "not_for": [
+      "Logging in to your systems or databases",
+      "Targets or benchmarks you have not given",
+      "Legal advice on what data you may keep",
+      "Real customer records in samples (use made-up or masked rows)",
+      "Building the dashboard itself (see the dashboard build sheet job)",
+      "A developer data model for a new app (see the technical design job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our tea subscription business, Leaf & Ladle, argues about 'active subscribers' every month. Finance counts anyone billed; marketing counts anyone not cancelled. Our Recharge export columns and both teams' formulas are pasted. Write one set of definitions for our 15 core metrics.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Build a KPI tree for our goal of $1.2M revenue next year at our 3-location physio clinic. Drivers we track: new patients, visits per patient, price per visit and cancellations. The column list from our booking system is below.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We have 4 exports (Shopify orders, Klaviyo profiles, Gorgias tickets and ShipBob shipments), 92 columns in all, pasted with 5 sample rows each. Write a data dictionary so our new analyst knows what each field means.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our HubSpot deal data keeps going wrong: missing close dates, deal values of 0 and duplicate companies. Columns pasted. Write quality rules we can check every Monday in Google Sheets.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "We are a charity running 5 food banks. Funders ask for 'people helped' and every site counts it differently; each site's method is pasted. Give us one definition and a glossary for our 20 reporting terms.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "metric definitions",
+      "kpi tree",
+      "driver tree",
+      "data dictionary",
+      "business glossary",
+      "data catalogue",
+      "kpi definitions",
+      "single source of truth",
+      "data quality rules",
+      "data validation checks",
+      "metrics glossary",
+      "north star metric",
+      "metric tree",
+      "column definitions"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists business analysts at an average of $81 an hour, about £492 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/business-analyst"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists data engineers at an average of $91 an hour, about £552 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-engineer"
+      }
+    ]
+  },
+  {
+    "id": "chart-specs-and-review",
+    "title": "Chart picks with ready specs, or a chart review",
+    "summary": "The right chart for each point you want to make, written as ready Vega-Lite or Chart.js specs or Excel steps, or a review of charts you already have.",
+    "area": "data",
+    "deliverable": "For each message: the chart type and why, the data it uses, a complete spec (Vega-Lite JSON, Chart.js config or Excel and Sheets steps), a title that states the finding, labels, colours and a short text summary for screen readers. Reviews rank each chart's problems and give a fixed version.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Chart picks with Vega-Lite specs",
+          "Chart picks with Chart.js configs",
+          "Chart picks with Excel or Google Sheets steps",
+          "Review of charts you already have, with fixes",
+          "Chart style guide for your reports",
+          "Text summaries and alt text for your charts"
+        ]
+      },
+      {
+        "id": "chart_count",
+        "label": "How many charts?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 4.",
+        "max": 12
+      },
+      {
+        "id": "data",
+        "label": "Your data",
+        "type": "longtext",
+        "required": true,
+        "help": "The summary tables behind the charts, with column names. Up to about 500 rows in all.",
+        "max": 20000
+      },
+      {
+        "id": "messages",
+        "label": "What each chart should show",
+        "type": "longtext",
+        "required": true,
+        "help": "One line per chart: the point you want readers to take away.",
+        "max": 3000
+      },
+      {
+        "id": "audience",
+        "label": "Who will see it, and where?",
+        "type": "text",
+        "required": false,
+        "help": "Board pack, website, slide, printed report or social post.",
+        "max": 300
+      },
+      {
+        "id": "brand",
+        "label": "Colours and fonts",
+        "type": "text",
+        "required": false,
+        "help": "Hex codes if you have them.",
+        "max": 300
+      },
+      {
+        "id": "current_charts",
+        "label": "Current charts, for a review",
+        "type": "longtext",
+        "required": false,
+        "help": "Describe each chart or paste its spec.",
+        "max": 10000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "chart_fits_message",
+        "text": "Each message gets a chart type that fits it, with a reason.",
+        "weight": 5,
+        "pass_rule": "Every message in the brief has one chart with its type and a one-line reason tied to the comparison (change over time, ranking, part of a whole, relationship or spread); no pie chart has more than 5 parts and no 3D chart is used.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_data_only",
+        "text": "Charts use only the pasted data.",
+        "weight": 5,
+        "pass_rule": "Every value in the specs or inline tables appears in the brief or comes from a shown sum; field names match the brief's columns; no figures are added to fill gaps or improve the look.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "specs_valid",
+        "text": "Specs are complete and would render as given.",
+        "weight": 5,
+        "pass_rule": "Each Vega-Lite spec is complete JSON with $schema, data, mark and encoding with field types; each Chart.js config has type, data and options; Excel or Sheets steps are numbered with menu names; the library version is stated; there are no '...' gaps.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "readable_labels",
+        "text": "Titles and labels say the point in plain words.",
+        "weight": 3,
+        "pass_rule": "Each chart has a title that states the finding, axes labelled with units, bar axes that start at zero, no more than 6 colours, and a one or two sentence text summary for screen readers.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_and_accessible",
+        "text": "Charts do not mislead and work for colour-blind readers.",
+        "weight": 4,
+        "pass_rule": "No truncated bar axis, unflagged dual axis or cherry-picked date range; colours come from a colour-blind safe set or direct labels are used as well as colour; a review lists each problem with why it misleads and the fix.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "chart_count",
+        "unit": "extra chart",
+        "included": 4,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a data visualisation designer. For each message I list, choose the chart type that shows it best and say why, then write a complete, valid spec I can render: Vega-Lite JSON (with $schema, inline data from my table, mark and encoding with field types) or a Chart.js config, or numbered Excel or Google Sheets steps if I ask. Give each chart a title that states the finding, labelled axes with units, a colour-blind safe palette and a one or two sentence text summary for screen readers. Use only my data and column names. Avoid truncated bar axes, 3D charts and pies with many slices. If I paste existing charts, list each problem, why it misleads or confuses, and the fixed version.",
+    "not_for": [
+      "Charts that hide or distort what the data shows",
+      "Data you have not pasted, or figures added to fill gaps",
+      "Full interactive dashboards (see the dashboard build sheet job)",
+      "Finished image files or animated graphics (you get specs and steps)",
+      "Real personal data in chart labels"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Annual report for Riverside Community Pantry. Data below: households served by month for 2024 and 2025, share of visits by weekday, and volunteers by age band. 4 charts in Vega-Lite for our website, in our green #2E7D32 and grey.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our monthly sales deck has a pie chart with 11 product lines and a 3D bar chart of sales by rep. Both specs and the data are pasted. Make them clearer and tell us why.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "I teach Excel to small business owners. Give me 6 chart picks with Excel steps from this sample sales table (region, month, product, units, revenue) for a lesson on choosing the right chart.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Chart.js 4 configs for our SaaS customer portal: usage per week, seats used against seats bought, and tickets by status. Sample data pasted. They need to work in dark mode.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Write a one-page chart style guide for our consultancy's client reports: which chart for which job, colours (#1B3A5C, #F2A541 and grey), fonts, titles and number formats.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "chart design",
+      "which chart",
+      "vega-lite",
+      "chart.js",
+      "data visualisation",
+      "data visualization",
+      "excel charts",
+      "chart review",
+      "graph design",
+      "waterfall chart",
+      "accessible charts",
+      "chart alt text",
+      "chart style guide",
+      "colour blind safe"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's page for hiring freelance data visualisation designers says they choose chart types, design dashboards and interactive visuals, and make infographics on a project or contract basis.",
+        "url": "https://yunojuno.com/sub-disciplines/data-visualisation-designer"
+      }
+    ]
+  },
+  {
+    "id": "worked-analysis-from-data",
+    "title": "Worked analysis of your data, with every sum shown",
+    "summary": "One named analysis of the data you paste, such as a retention cohort table, a price change effect, a change breakdown or a benchmark check, with every figure worked out.",
+    "area": "data",
+    "deliverable": "A data check with row counts; the standard table for the analysis (cohort grid, price and volume table, price-volume-mix bridge, benchmark gap table, pivot summaries or pattern table); the working for each key figure; a plain answer first; what the data cannot prove; and formulas or SQL to redo it.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "analysis",
+        "label": "Which analysis do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Retention cohort table by start month",
+          "Churn rate and time to cancel by group",
+          "Effect of a past price change (elasticity)",
+          "Promotion or discount lift and payback",
+          "Why a number changed: price, volume and mix",
+          "Your numbers against public figures you paste",
+          "Pivot summaries and cross-tabs",
+          "Busy days, hours and seasons",
+          "What sells together (product pairs)"
+        ]
+      },
+      {
+        "id": "data",
+        "label": "Your data",
+        "type": "longtext",
+        "required": true,
+        "help": "CSV with a header row, up to 1,000 rows, or tables you have already totalled. Remove names and emails first.",
+        "max": 50000
+      },
+      {
+        "id": "row_count",
+        "label": "How many rows?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 300. Bigger files: total them by month or group first.",
+        "max": 1000
+      },
+      {
+        "id": "question",
+        "label": "What do you want to know?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "columns",
+        "label": "What the columns mean",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "reference",
+        "label": "Public figures or earlier results to compare",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste the figures with their source, year and link. We use only what you paste.",
+        "max": 10000
+      },
+      {
+        "id": "events",
+        "label": "What changed, and when",
+        "type": "longtext",
+        "required": false,
+        "help": "Price changes, promotions, new products, closures, stockouts.",
+        "max": 2000
+      },
+      {
+        "id": "tool",
+        "label": "Tool for the redo steps",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Excel",
+          "Google Sheets",
+          "SQL",
+          "Python (pandas)",
+          "No preference"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "analysis_delivered",
+        "text": "The chosen analysis is delivered as its standard table and answers the question.",
+        "weight": 5,
+        "pass_rule": "The draft contains the table that analysis needs (for example a cohort grid of start months against months since start, a price-volume-mix bridge that adds up to the total change, or a gap table with one row per pasted benchmark) and opens with a plain answer to the brief's question.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "every_figure_worked",
+        "text": "Each figure comes from the pasted data, with the working shown.",
+        "weight": 5,
+        "pass_rule": "Each key figure shows its inputs and sum (for example '118 of 410 March customers bought again in month 3 = 28.8%'); table totals reconcile to the counts in the data check; no outside number appears except benchmark figures the buyer pasted, each with its stated source.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "data_checked",
+        "text": "The data is checked before it is used.",
+        "weight": 4,
+        "pass_rule": "The draft states the rows and columns read, the date range, missing or odd values and duplicates found, and what was set aside and why, with counts.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "honest_limits",
+        "text": "Limits and causes are handled honestly.",
+        "weight": 4,
+        "pass_rule": "The draft says what the data cannot show, uses 'linked with' rather than 'caused' unless a controlled comparison exists, flags groups too small to trust (such as under 30), and for a price or promotion effect names the other changes in the same period.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "redo_steps",
+        "text": "The buyer can redo every table.",
+        "weight": 3,
+        "pass_rule": "Formulas, a pivot set-up or code are given for the tool in the brief (Excel if none is named), using the pasted column names, for each table in the draft.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 349,
+      "size": {
+        "field": "row_count",
+        "unit": "extra row",
+        "included": 300,
+        "per_unit_usd": 0.1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful analyst. Run the one analysis I name on the data I paste: a retention cohort table, churn by group, the effect of a past price change, promotion lift and payback, a price-volume-mix breakdown of a change, a comparison with public figures I paste, pivot summaries, time patterns, or product pairs bought together. First check the data (rows, date range, missing values, duplicates) and say what you set aside. Build the standard table for that analysis, show the working for each key figure with my numbers, and answer my question in plain words first. Say what the data cannot prove, flag small groups and do not claim cause from a pattern. Use only figures I give, and write formulas or code so I can redo every table.",
+    "not_for": [
+      "Data you have not pasted, or files over about 1,000 rows (total them first, or see the CSV data analysis job)",
+      "Re-identifying people in the data",
+      "Investment, tax or other regulated advice",
+      "Looking up benchmarks for you (paste the public figures you want compared)",
+      "Predictions sold as certain",
+      "Names, emails, card numbers or health data in the file"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Member sign-ups and cancellations for FitFoundry gym, January 2025 to October 2026, one row per member: join month, cancel month or blank, and plan. Build a retention cohort table and tell me which plan keeps people longest.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "We raised the price of our 500g granola from $8.50 to $9.75 on 1 June. Weekly units and prices for 30 weeks before and after are pasted, plus our two other flavours that did not change price. Did demand drop, and by how much?",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Gross margin at our 4 bike shops fell from 41% to 36% this quarter. Sales and cost by shop and product category for both quarters are pasted. How much of the drop is price, volume and mix?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our dental practice's monthly numbers are pasted, with a table from the 2025 ADA Health Policy Institute survey and its link. How do we compare on visits per hygienist, no-show rate and new patients per month?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Here are 640 orders from our Etsy shop, with order id and items. Which items are bought together most often, and which bundles should we try?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "cohort analysis",
+      "retention table",
+      "churn analysis",
+      "price elasticity",
+      "promotion lift",
+      "discount analysis",
+      "price volume mix",
+      "variance bridge",
+      "benchmark analysis",
+      "pivot table",
+      "cross tab",
+      "seasonality",
+      "basket analysis",
+      "bought together",
+      "sales patterns"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists data analysts at an average of $68 an hour, about £410 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/data-analyst"
+      }
+    ]
+  },
+  {
+    "id": "ai-assistant-setup-pack",
+    "title": "Custom AI assistant set-up pack",
+    "summary": "What you need to set up one custom assistant (a custom GPT, Claude Project, Gemini Gem or Copilot agent): instructions, knowledge files, an extraction prompt or a test set.",
+    "area": "data",
+    "deliverable": "Copy-ready instructions (users, tasks, refusals, hand-offs, tone, what to do when unsure) within your tool's limits; your material rewritten as titled, tagged one-topic chunks; conversation starters; an extraction prompt with a valid JSON schema where asked; a 15 to 25 question test set with expected answers; and numbered set-up steps.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full set-up for one assistant",
+          "Instructions only",
+          "Knowledge files split and tagged for search",
+          "Extraction prompt with a JSON schema",
+          "Conversation flows for your top questions",
+          "Fix an assistant that gives wrong answers"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Which tool?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "ChatGPT custom GPT",
+          "Claude Project",
+          "Gemini Gem",
+          "Microsoft Copilot agent",
+          "A chatbot platform (say which below)",
+          "API with my own code",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "assistants",
+        "label": "How many assistants or prompts?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 5
+      },
+      {
+        "id": "purpose",
+        "label": "What should it do, and for whom?",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "source_material",
+        "label": "Your source material",
+        "type": "longtext",
+        "required": true,
+        "help": "FAQs, policies, price lists, guides, sample documents or sample emails. Remove personal data first.",
+        "max": 60000
+      },
+      {
+        "id": "rules",
+        "label": "Rules it must follow",
+        "type": "longtext",
+        "required": false,
+        "help": "Topics to refuse, when to hand off to a person, tone, words to avoid.",
+        "max": 5000
+      },
+      {
+        "id": "current_instructions",
+        "label": "Current instructions and bad answers, for a fix",
+        "type": "longtext",
+        "required": false,
+        "max": 15000
+      },
+      {
+        "id": "output_fields",
+        "label": "Fields to extract, for an extraction prompt",
+        "type": "longtext",
+        "required": false,
+        "help": "Field names, types, formats and an example of each.",
+        "max": 4000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_purpose",
+        "text": "The pack sets up the assistant the brief describes.",
+        "weight": 5,
+        "pass_rule": "The instructions name the users, the tasks it does, what it refuses and when it hands off, matching the brief's purpose and rules; the chosen piece is delivered in full.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_material_only",
+        "text": "Answers and knowledge come only from the buyer's material.",
+        "weight": 5,
+        "pass_rule": "Every fact in the instructions, knowledge chunks and expected test answers traces to the brief's source material; the instructions tell the assistant to say it does not know when the material does not cover a question; no prices, policies or claims are added.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "works_in_tool",
+        "text": "It fits the named tool and its formats are valid.",
+        "weight": 5,
+        "pass_rule": "The draft states the tool and the limit that matters most (such as instruction length) and stays within it or says to check it; each knowledge chunk has a title, tags and one topic; any JSON schema is valid JSON with types and required fields, and a filled example output matches it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_setup",
+        "text": "An owner can set it up from the draft.",
+        "weight": 3,
+        "pass_rule": "Set-up steps are numbered with one action each; the instructions sit in one copy-ready block; terms such as knowledge file, chunk and schema are explained once.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "tested_and_safe",
+        "text": "There is a test set, and the assistant stays within safe limits.",
+        "weight": 4,
+        "pass_rule": "A test set has at least 15 questions, including at least 3 off-topic or unsafe ones and 2 that need a hand-off, each with the expected answer or behaviour; the instructions bar legal, medical and financial advice, pretending to be a person and sharing personal data.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 129,
+      "min_usd": 79,
+      "max_usd": 449,
+      "size": {
+        "field": "assistants",
+        "unit": "extra assistant or prompt",
+        "included": 1,
+        "per_unit_usd": 79
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a prompt engineer who sets up custom AI assistants for small businesses. Using only my source material and rules, write a set-up pack for the tool I name: copy-ready instructions (who it serves, what it does, what it refuses, when it hands off to a person, its tone, and to say it does not know when the material does not cover a question) kept within the tool's instruction limit; my material rewritten as knowledge files in short titled chunks with tags, one topic each; four conversation starters; an extraction prompt with a valid JSON schema and a filled example if I ask; and a test set of 15 to 25 questions with expected answers, including off-topic, unsafe and hand-off cases. Add numbered set-up steps. Do not add facts that are not in my material.",
+    "not_for": [
+      "Logging in to your AI tool or building the assistant in your account",
+      "API keys, passwords or customer personal data in the brief",
+      "Assistants that give legal, medical, tax or financial advice",
+      "Bots that pretend to be a person or hide that they are AI",
+      "Jailbreaks or getting round an AI tool's rules",
+      "Training or fine-tuning a model",
+      "Checking a live bot's transcripts at scale (see the AI prompt or chatbot test job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Set up a custom GPT for the 4 staff at Spoke & Gear bike shop. It answers questions about our service menu, warranty rules and booking policy, all pasted below with our price list. It must never quote a price that is not on the list, and it should send warranty disputes to the manager.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "A Claude Project for our 2-person bookkeeping firm to draft client emails in our voice. Here are 10 past emails, our fee sheet and our 'never say' list.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "We get 200 supplier invoices a month as PDFs. Write an extraction prompt and JSON schema to pull supplier name, invoice number, invoice date, due date, line items, VAT and total. Three sample invoice texts are pasted. It must return null, not guess, when a field is missing.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our Gemini Gem for the front desk at Maple Vet keeps telling clients we are open on Sundays. Our current instructions, 8 bad answers, and our real hours and policies are pasted. Please fix it.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Turn our 45-page employee handbook (pasted) into knowledge files for a Copilot agent that staff can ask questions. Split it into chunks with titles and tags, and write 20 test questions with expected answers.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "custom gpt",
+      "gpt instructions",
+      "claude project",
+      "gemini gem",
+      "copilot agent",
+      "ai assistant setup",
+      "system prompt",
+      "knowledge files",
+      "rag",
+      "chunking",
+      "json schema",
+      "data extraction prompt",
+      "conversation starters",
+      "assistant test set",
+      "prompt engineering"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno's freelancer rate guide lists prompt engineers at an average of $107 an hour, about £650 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/prompt-engineer"
+      },
+      {
+        "note": "Contra's page for hiring ChatGPT experts lists a 'Custom OpenAI Assistant with Vector Database' service at $550 among its top services.",
+        "url": "https://contra.com/hire/chatgpt-experts"
+      }
+    ]
+  },
+  {
+    "id": "ai-workflow-plan",
+    "title": "AI workflow plan with human checks",
+    "summary": "Where AI can help in your team's work, and how: a map of tasks, one workflow redesigned with AI steps and human checks, a tool comparison, a pilot plan or review, or a risk check.",
+    "area": "data",
+    "deliverable": "Your tasks scored for AI fit, time at stake and risk; or one workflow step by step marking AI, tool and person steps, with the full prompt, inputs, outputs and a named human check at each risky point; failure handling; a tool comparison on the same criteria; pilot measures with go, change or stop rules; and what data must never go in.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Map of tasks where AI could help",
+          "One workflow redesigned with AI steps and human checks",
+          "Comparison of AI tools you are weighing",
+          "Pilot plan with measures and stop rules",
+          "Review of a pilot you ran",
+          "Data and risk check for one AI use"
+        ]
+      },
+      {
+        "id": "team",
+        "label": "Your business and team",
+        "type": "longtext",
+        "required": true,
+        "help": "What you do, team size and the tools you already pay for.",
+        "max": 3000
+      },
+      {
+        "id": "work",
+        "label": "The work today",
+        "type": "longtext",
+        "required": true,
+        "help": "Tasks or steps, who does them, how long they take, how often, and where mistakes happen.",
+        "max": 12000
+      },
+      {
+        "id": "workflows",
+        "label": "How many workflows or tool comparisons?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 5
+      },
+      {
+        "id": "data_types",
+        "label": "What data the work touches",
+        "type": "text",
+        "required": false,
+        "help": "For example customer emails, invoices, staff records or health notes.",
+        "max": 400
+      },
+      {
+        "id": "tools",
+        "label": "AI tools you use or are weighing",
+        "type": "list",
+        "required": false,
+        "max": 8
+      },
+      {
+        "id": "pilot_results",
+        "label": "Pilot results, for a review",
+        "type": "longtext",
+        "required": false,
+        "help": "Times, error counts and staff notes.",
+        "max": 10000
+      },
+      {
+        "id": "limits",
+        "label": "Budget and limits",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "piece_covers_work",
+        "text": "The chosen piece covers all the work in the brief.",
+        "weight": 5,
+        "pass_rule": "Every task or step in the brief appears in the map or workflow; each AI step names its input, output and tool type; a tool comparison scores every tool listed on the same criteria.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "buyer_facts_only",
+        "text": "Times, costs and tool features come from the brief or are marked as estimates.",
+        "weight": 5,
+        "pass_rule": "Task times, volumes, prices and tool features are taken from the brief or labelled 'estimate' or 'check with vendor'; no saving, price or feature is stated as fact without a source in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "human_checks",
+        "text": "Every risky step has a named human check.",
+        "weight": 5,
+        "pass_rule": "Each step that sends a message, moves money, changes records or prices, or makes a decision about a person has a named person who checks it and what they look for; the plan lists what data must never go into an AI tool, given the data types in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_and_doable",
+        "text": "A small team can follow it.",
+        "weight": 3,
+        "pass_rule": "Steps are numbered with one action each; every AI prompt is written in full; jargon such as LLM or RAG is avoided or explained once.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "measured",
+        "text": "Success can be measured.",
+        "weight": 4,
+        "pass_rule": "The draft sets a before measure and a target for time, errors or cost per task, how to record them for 2 to 4 weeks, and go, change or stop rules; a pilot review compares the pasted results with those rules and shows the sums.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "workflows",
+        "unit": "extra workflow",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an operations consultant who helps small teams use AI safely. From my description of the work, produce the piece I ask for: a map of tasks scored for AI fit, time saved and risk; one workflow redesigned step by step showing which steps AI does, which a tool does and which a person does, with the full prompt for each AI step and a named human check wherever a step sends a message, moves money, changes records or decides about a person; a comparison of the AI tools I list on the same criteria; or a pilot plan with before measures, targets and go or stop rules. Use only my times, volumes and tools, and mark any estimate. Say what data must never go into an AI tool.",
+    "not_for": [
+      "Fully automatic decisions about hiring, pay, credit, health or legal matters",
+      "Logging in to your tools or building the automation for you",
+      "Legal advice on AI or data protection law",
+      "Promises of time or money saved",
+      "Feeding customer or staff personal data into tools without a check",
+      "The build spec for one automation (see the automation workflow spec job)",
+      "Staff AI rules on their own (see the one-page rules or policy job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are a 5-person estate agency. Map where AI could save time: writing listings, replying to enquiries, chasing viewing feedback and weekly landlord reports. Rough times per task are below. We already pay for Microsoft 365.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Redesign how our accounts assistant handles about 300 supplier invoices a month, with AI reading the PDFs and her checking. Today's steps and the errors we see are pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Compare ChatGPT Team, Claude Team and Microsoft Copilot for our 12-person marketing agency. We care about client data, shared prompt libraries and cost. Our notes on each are pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "We ran a 3-week pilot using AI to draft replies to customer emails at our online plant shop. Times per reply before and after, 14 errors found and staff comments are pasted. Should we keep it?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Our lettings agency wants AI to summarise calls with tenants into notes on our system. What data risks are there, and what checks would we need before we try it?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ai workflow",
+      "ai automation plan",
+      "where to use ai",
+      "ai use cases",
+      "human in the loop",
+      "ai pilot",
+      "ai tool comparison",
+      "chatgpt for business",
+      "copilot rollout",
+      "ai process design",
+      "ai risk check",
+      "ai adoption",
+      "workflow redesign",
+      "ai time savings"
+    ],
+    "demand_sources": [
+      {
+        "note": "The U.S. Chamber of Commerce's Empowering Small Business report says 58% of small businesses self-identified as using generative AI.",
+        "url": "https://www.uschamber.com/technology/empowering-small-business-the-impact-of-technology-on-u-s-small-business"
+      },
+      {
+        "note": "The U.S. Census Bureau reported in May 2026 that less than 20% of firms with four or fewer employees use AI, against 37% of firms with 250 or more.",
+        "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
+      }
+    ]
+  },
+  {
+    "id": "model-or-claim-review",
+    "title": "Plain review of a model, AI score or data claim",
+    "summary": "What a model, score, AI accuracy claim or statistic really tells you, in plain words, checked against the numbers you paste, with the questions to ask before you rely on it.",
+    "area": "data",
+    "deliverable": "A plain answer on whether you can rely on it; how the model or claim works; the figures you pasted recomputed (accuracy, precision, recall, false alarms, base rate) with the sums; what it would do on your real volume and what mistakes would cost; weak points and fairness risks; and the questions to ask the vendor or analyst.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Plain explainer of a model or score you use",
+          "Check of a model's results table",
+          "Check of a vendor's AI accuracy claims",
+          "Check of a statistic or chart in a report",
+          "Questions to ask before you buy an AI or data tool",
+          "Simple scoring rule you can use instead of a model"
+        ]
+      },
+      {
+        "id": "material",
+        "label": "The model, results or claim",
+        "type": "longtext",
+        "required": true,
+        "help": "Vendor pages, a results table such as a confusion matrix, a report extract or a model description.",
+        "max": 30000
+      },
+      {
+        "id": "decision",
+        "label": "What decision rests on it?",
+        "type": "longtext",
+        "required": true,
+        "max": 2000
+      },
+      {
+        "id": "items",
+        "label": "How many models or claims?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 1.",
+        "max": 5
+      },
+      {
+        "id": "costs",
+        "label": "Cost of a wrong call",
+        "type": "text",
+        "required": false,
+        "help": "For example a missed fraud order costs $120 and a false alarm costs 5 minutes.",
+        "max": 400
+      },
+      {
+        "id": "volume",
+        "label": "Your real volume",
+        "type": "text",
+        "required": false,
+        "help": "For example 3,000 orders a month or 400 leads a week.",
+        "max": 200
+      },
+      {
+        "id": "data_used",
+        "label": "What data it uses, if known",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "readers",
+        "label": "Who will read the review?",
+        "type": "text",
+        "required": false,
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "plain_answer_first",
+        "text": "It explains the model or claim and says what it means for the decision.",
+        "weight": 5,
+        "pass_rule": "The draft opens with a two to four sentence plain answer on whether the buyer can rely on it for the decision in the brief (rely, rely with a check, or do not rely), then explains how it works in plain words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "figures_recomputed",
+        "text": "Every metric is recomputed from the pasted figures, with the working.",
+        "weight": 5,
+        "pass_rule": "Accuracy, precision, recall, false alarm or error figures are recalculated from the counts in the brief with the sums shown; where a claim gives no counts, the draft says it cannot be checked and names the data needed; no performance figure is invented.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "real_world_effect",
+        "text": "The numbers are turned into the buyer's real-world effect.",
+        "weight": 4,
+        "pass_rule": "The draft works through what the model would do on a batch the size of the buyer's real volume (or 1,000 cases if none is given), using the base rate, and prices the mistakes with the buyer's costs where given.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "A non-technical owner can follow it.",
+        "weight": 3,
+        "pass_rule": "Each technical term is defined in one plain sentence when first used; there is a short summary the reader can act on.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "risks_and_questions",
+        "text": "Weak points, fairness and next questions are named.",
+        "weight": 4,
+        "pass_rule": "The draft lists at least three specific weak points (such as test data unlike the buyer's, small samples, drift or leakage); where the model scores people it checks results by group if the data allows; it ends with at least five questions for the vendor or analyst.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "items",
+        "unit": "extra model or claim",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a data scientist who explains models to non-technical business owners. Read the model description, results table or claim I paste and tell me in plain words whether I can rely on it for my decision. Recalculate any accuracy, precision, recall or error figures from the counts given and show the sums; if no counts are given, say the claim cannot be checked and what to ask for. Work through what it would do on a batch the size of my real volume, using the base rate and my cost of each kind of mistake. List the weak points (test data unlike mine, small samples, drift, leakage) and any risk of unfair impact on groups of people. End with the questions I should ask the vendor or analyst. Define each technical term once.",
+    "not_for": [
+      "Building, training or tuning a model",
+      "Legal advice on AI rules, discrimination or data protection law",
+      "Making credit, insurance, health or hiring decisions",
+      "Checking claims without the material pasted in the brief",
+      "Investment advice or judging a trading model",
+      "Testing a chatbot's answers (see the AI prompt or chatbot test job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "Our Shopify fraud app says it is '98% accurate'. Last month it flagged 64 of our 3,100 orders. We checked them: 9 were really fraud, and 4 fraud orders got through unflagged. A chargeback costs us about $85 and a wrongly cancelled order loses about $40 profit. Is it any good?",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Our CRM gives every lead a score from 0 to 100, and our reps do not trust it. The vendor's help page on how the score works is pasted. Explain it in plain words and tell us what to check.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "A vendor wants to sell us an AI tool that predicts which gym members will cancel. Their pitch deck claims '85% precision'. The deck text is pasted. What should we ask before we buy?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "Our analyst's report says customers who use our app 'are 3x more likely to renew, so the app causes loyalty'. The table behind it is pasted. Is that right?",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "Our bookkeeper built a spreadsheet model that predicts which invoices will be paid late. A results table for 400 invoices (predicted late or on time against what happened) is pasted. How good is it, and should we start chasing based on it?",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "explain machine learning model",
+      "ai accuracy claim",
+      "model evaluation",
+      "confusion matrix",
+      "precision and recall",
+      "lead score explained",
+      "churn prediction model",
+      "fraud score",
+      "vendor ai claims",
+      "model review",
+      "false positives",
+      "base rate",
+      "ai due diligence",
+      "statistics check"
+    ],
+    "demand_sources": [
+      {
+        "note": "The FTC's Operation AI Comply took action against five businesses that exaggerated their AI capabilities or sold AI tools that could be used to deceive consumers.",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes"
+      },
+      {
+        "note": "NIST's AI Risk Management Framework is a voluntary framework to help organisations manage the risks of AI systems they design, use or evaluate.",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "note": "YunoJuno's freelancer rate guide lists machine learning engineers at an average of $62 an hour, about £375 a day.",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/machine-learning-engineer"
+      }
+    ]
+  },
+  {
+    "id": "sample-dataset",
+    "title": "Sample, test or demo dataset (CSV, JSON or SQL)",
+    "summary": "Made-up data built to your columns and rules, for testing an import or app, a demo, a class exercise or a dashboard mock-up. Every row is fictional and labelled as sample data.",
+    "area": "data",
+    "deliverable": "A spec table (columns, types, allowed values, rules, links between tables); every made-up row as CSV, JSON or SQL INSERT statements; edge-case rows listed with what each should trigger; check totals; and numbered steps to load it into your tool.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "purpose",
+        "label": "What is the data for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Testing an import or a form",
+          "Demo data for an app or dashboard",
+          "Training or class exercise",
+          "Seed data for a new database",
+          "Edge cases and bad rows for testing",
+          "Practice inputs for an AI or chatbot test"
+        ]
+      },
+      {
+        "id": "format",
+        "label": "Format",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "CSV",
+          "JSON",
+          "SQL INSERT statements",
+          "Markdown table"
+        ]
+      },
+      {
+        "id": "columns",
+        "label": "Columns, types and rules",
+        "type": "longtext",
+        "required": true,
+        "help": "Field names, types, allowed values, ranges and how tables link. Paste a template header if you have one.",
+        "max": 10000
+      },
+      {
+        "id": "row_count",
+        "label": "How many rows in all?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 100. Up to 300 fit in one delivery.",
+        "max": 300
+      },
+      {
+        "id": "patterns",
+        "label": "Patterns the data should show",
+        "type": "longtext",
+        "required": false,
+        "help": "For example busier Saturdays, 20% repeat buyers or a dip in week 5.",
+        "max": 3000
+      },
+      {
+        "id": "edge_cases",
+        "label": "Bad or tricky rows to include",
+        "type": "longtext",
+        "required": false,
+        "max": 3000
+      },
+      {
+        "id": "locale",
+        "label": "Country and formats",
+        "type": "text",
+        "required": false,
+        "help": "Date, currency and phone formats.",
+        "max": 100
+      },
+      {
+        "id": "database",
+        "label": "Database or tool it goes into",
+        "type": "text",
+        "required": false,
+        "help": "For example PostgreSQL 16, MySQL 8, a Shopify or HubSpot import.",
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "matches_spec",
+        "text": "The data follows every column, type, rule and row count in the brief.",
+        "weight": 5,
+        "pass_rule": "Every column in the brief appears with its stated type and allowed values; the row count matches the brief; keys link correctly across tables; patterns asked for show up in the check totals.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "fictional_and_safe",
+        "text": "No real people, real contact details or real payment data.",
+        "weight": 5,
+        "pass_rule": "Names are plainly made up; emails use example.com, example.org or example.net; phone numbers use ranges set aside for fiction or are marked fake; no real card, bank or ID numbers appear (only published test card numbers if the brief asks); the data is labelled as sample data at the top.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "loads_as_given",
+        "text": "The output is complete and loads as given.",
+        "weight": 5,
+        "pass_rule": "CSV has one header row and the same number of fields on every row, with quotes where needed; JSON parses with no comments or trailing commas; SQL names the database and version and puts CREATE TABLE before the INSERTs; there are no '...' gaps or 'more rows here' notes.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "The notes are short and clear.",
+        "weight": 3,
+        "pass_rule": "A short spec table lists each column with its rule; numbered steps say how to load the data in the tool named in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "useful_edge_cases",
+        "text": "Edge cases are labelled with what should happen.",
+        "weight": 4,
+        "pass_rule": "When the data is for testing, at least 10% of rows (or the rows the brief lists) are edge cases such as blanks, wrong formats, duplicates, long text and odd characters, each listed with its row id and expected result; check totals (rows per value, sums) are given.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 199,
+      "size": {
+        "field": "row_count",
+        "unit": "extra row",
+        "included": 100,
+        "per_unit_usd": 0.15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a test data engineer. Create a made-up dataset to my columns, types and rules in the format I name (CSV, JSON, or SQL INSERT statements with CREATE TABLE first). Match the row count exactly, keep keys consistent across tables, and build in the patterns I describe. Use clearly made-up names, example.com emails and fake phone numbers, never real people, card numbers or ID numbers. If the data is for testing, include labelled edge-case rows (blanks, bad formats, duplicates, very long text, odd characters) and list what each should trigger. Put a 'sample data' label at the top, a short column spec table, check totals, and numbered steps to load it. Give every row, with no gaps or 'more rows' notes.",
+    "not_for": [
+      "Data that copies or could identify real people or customers",
+      "Fake reviews, survey answers or records presented as real",
+      "Real card numbers, bank details or ID numbers (published test card numbers only)",
+      "Data meant to deceive buyers, lenders, auditors or researchers",
+      "More than 300 rows in one delivery (ask for a generator script with the code job)",
+      "Loading the data into your systems for you"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_1",
+        "text": "We are testing our HubSpot contact import. Columns: first name, last name, email, UK phone, company, lifecycle stage (lead, MQL, SQL, customer) and created date. 150 rows as CSV, with 20 bad rows: missing emails, duplicates, phone numbers in odd formats and names in all caps.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_2",
+        "text": "Demo data for a Looker Studio dashboard for a made-up bakery chain with 3 shops and 6 products: daily sales by shop and product for 2 weeks, busier on Saturdays. CSV, about 250 rows.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_1",
+        "text": "Seed data for our PostgreSQL 16 app. Tables customers, orders and order_items, schema pasted. 30 customers, 80 orders and 180 order items, with foreign keys that match. SQL INSERT statements please.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_2",
+        "text": "I teach a beginners' Excel class at the library. Make a 100-row 'Sunny Days Ice Cream' sales table with a few messy bits (extra spaces, mixed date formats, one duplicate) so students can practise cleaning and pivot tables, and give me the answer totals.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_3",
+        "text": "JSON test cases for our restaurant booking form: 60 entries with name, email, party size (1 to 12), date and notes, including 15 that should fail validation and why.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "test data",
+      "sample data",
+      "dummy data",
+      "mock data",
+      "demo dataset",
+      "seed data",
+      "synthetic data",
+      "fake data for testing",
+      "csv test file",
+      "json test data",
+      "sql insert statements",
+      "edge cases",
+      "import test file",
+      "practice dataset"
+    ],
+    "demand_sources": [
+      {
+        "note": "Mockaroo, a popular test data tool, says it lets people generate up to 1,000 rows of realistic test data in CSV, JSON, SQL and Excel formats, with paid plans for larger volumes.",
+        "url": "https://www.mockaroo.com/"
+      }
+    ]
+  }
+]

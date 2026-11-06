@@ -5,6 +5,7 @@ import { AREAS, type Persona, type PersonaProfile } from "../../core/types.ts";
 import { all, first, nowIso, parseJson, sha256Hex, stableJson } from "../../core/db.ts";
 import { eventStatement } from "../../core/events.ts";
 import { housePersonas } from "./index.ts";
+import { getRole } from "./roles.ts";
 
 export interface PersonaRow {
   id: string; kind: "house" | "expert"; expert_id: string | null; name: string; title: string; tagline: string; area: string;
@@ -26,11 +27,33 @@ const SLUG = /^[a-z][a-z0-9-]{2,59}$/;
 const BATCH = 80;
 
 export function rowToPersona(row: PersonaRow): Persona {
+  const extra = row.kind === "house" ? houseExtras(row.id) : undefined;
   return {
     id: row.id, kind: row.kind, expert_id: row.expert_id, name: row.name, title: row.title, tagline: row.tagline,
-    area: row.area as Persona["area"], profile: { ...emptyProfile(row.id), ...parseJson<Partial<PersonaProfile>>(row.profile, {}) },
+    area: row.area as Persona["area"], ...(extra?.role ? { role: extra.role } : {}), ...(extra?.mega ? { mega: extra.mega } : {}),
+    profile: { ...emptyProfile(row.id), ...parseJson<Partial<PersonaProfile>>(row.profile, {}) },
     status: row.status, sort: row.sort,
   };
+}
+
+type HouseExtras = Pick<Persona, "role" | "mega">;
+let extrasIndex: { list: Persona[]; byId: Map<string, HouseExtras> } | null = null;
+
+/**
+ * A house persona's job role and mega settings, from the data files. The personas table has no columns for them, so
+ * a seeded row gets them here; they follow the data files on every deploy, with no reseed. Expert personas have neither.
+ */
+export function houseExtras(id: string): HouseExtras | undefined {
+  const list = housePersonas();
+  if (!extrasIndex || extrasIndex.list !== list) {
+    extrasIndex = { list, byId: new Map(list.filter(p => p.role || p.mega).map(p => [p.id, { role: p.role, mega: p.mega }])) };
+  }
+  return extrasIndex.byId.get(id);
+}
+
+/** A house persona's job role id, from the data files (see houseExtras). */
+export function houseRoleId(id: string): string | undefined {
+  return houseExtras(id)?.role;
 }
 
 function emptyProfile(id: string): PersonaProfile {
@@ -119,12 +142,18 @@ export function searchTerms(q: string | undefined): string[] {
 }
 
 /**
- * How well a persona matches: 0 = every word is in the name or title, 1 = also using the tagline,
- * 2 = also using outcome titles, -1 = no match. No words: everyone is 0.
+ * How well a persona matches: 0 = every word is in the name, title or job role name, 1 = also using the tagline and
+ * the role's aliases (the words people search for, such as "keyword research"), 2 = also using outcome titles,
+ * -1 = no match. No words: everyone is 0.
  */
 export function searchRank(p: Persona, terms: string[]): number {
   if (!terms.length) return 0;
-  const fields = [fold(`${p.name} ${p.title}`), fold(p.tagline), fold((p.profile?.outcomes ?? []).map(o => o.title).join(" \u0001 "))];
+  const role = getRole(p.role);
+  const fields = [
+    fold([`${p.name} ${p.title}`, role?.name ?? ""].join(" \u0001 ")),
+    fold([p.tagline, ...(role?.aliases ?? [])].join(" \u0001 ")),
+    fold((p.profile?.outcomes ?? []).map(o => o.title).join(" \u0001 ")),
+  ];
   let text = "";
   for (let rank = 0; rank < fields.length; rank++) {
     text += ` \u0001 ${fields[rank]}`;
@@ -133,7 +162,7 @@ export function searchRank(p: Persona, terms: string[]): number {
   return -1;
 }
 
-/** True when every search word appears in the name, title, tagline or an outcome title. */
+/** True when every search word appears in the name, title, job role (name or aliases), tagline or an outcome title. */
 export function matchesSearch(p: Persona, terms: string[]): boolean {
   return searchRank(p, terms) >= 0;
 }
@@ -149,7 +178,7 @@ export function searchPersonas(list: Persona[], q: string | undefined): Persona[
     .sort((a, b) => a.rank - b.rank || byOrder(a.p, b.p)).map(x => x.p);
 }
 
-/** Live personas of both kinds, in display order. area filters exactly; every word of q must match the name, title, tagline or an outcome title. */
+/** Live personas of both kinds, in display order. area filters exactly; every word of q must match the name, title, job role, tagline or an outcome title. */
 export async function listPersonas(env: Env, filter?: { area?: string; q?: string }): Promise<Persona[]> {
   const area = filter?.area || undefined;
   const rows = area

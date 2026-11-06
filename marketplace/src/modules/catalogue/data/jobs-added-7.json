@@ -1,0 +1,2716 @@
+[
+  {
+    "id": "visual-identity-and-design-tokens",
+    "title": "Visual identity brief, palette or design tokens",
+    "summary": "A logo design brief, a colour palette with hex codes, a font pairing, a full visual identity brief, or your palette turned into design tokens and CSS.",
+    "area": "design",
+    "deliverable": "The piece you choose, from your brand facts. Logo briefs give the idea, must-haves, formats and checks for judging drafts. Palettes give hex codes, colour roles, text pairs with contrast ratios and rules. Type pairings name real fonts with weights and sizes. Tokens come as complete JSON, CSS or Tailwind code with an example of use.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Logo design brief for a designer",
+          "Colour palette with hex codes and contrast",
+          "Font pairing and type scale",
+          "Full visual identity brief",
+          "Brand refresh brief from your current look",
+          "Design tokens as JSON",
+          "CSS variables or Tailwind theme",
+          "Dark mode colours from your light palette"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one. A palette plus its CSS file counts as two.",
+        "max": 4
+      },
+      {
+        "id": "business",
+        "label": "Your business, what you sell and who buys",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "personality",
+        "label": "Three to five words for how the brand should feel",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "current_assets",
+        "label": "Current colours, fonts, logo or CSS",
+        "type": "longtext",
+        "required": false,
+        "help": "Paste hex codes, font names or CSS, or describe your current logo in words.",
+        "max": 20000
+      },
+      {
+        "id": "uses",
+        "label": "Where the brand will appear",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Website or app",
+          "Print and packaging",
+          "Signs and shopfront",
+          "Social media",
+          "Vans or uniforms",
+          "Slides and documents"
+        ]
+      },
+      {
+        "id": "likes",
+        "label": "Looks you like and do not like",
+        "type": "text",
+        "required": false,
+        "help": "Describe brands or styles in words. We take qualities from them, never copy them.",
+        "max": 600
+      },
+      {
+        "id": "constraints",
+        "label": "Must keep or must avoid",
+        "type": "text",
+        "required": false,
+        "help": "Such as keep our green #2E7D32, no serif fonts, must work in one colour.",
+        "max": 600
+      },
+      {
+        "id": "tech",
+        "label": "For tokens: your stack and tools",
+        "type": "text",
+        "required": false,
+        "help": "Such as plain CSS, Tailwind 4, Figma variables or Style Dictionary.",
+        "max": 200
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "The draft delivers the piece chosen, for the stated business and uses.",
+        "weight": 4,
+        "pass_rule": "The draft's sections match the piece chosen in the brief and name the business and uses from the brief; a logo or identity brief covers the idea, must-haves, formats and how drafts will be judged; a refresh brief says what stays and what changes.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_facts",
+        "text": "Only the buyer's facts and assets are used, and no brand is copied.",
+        "weight": 5,
+        "pass_rule": "Every keep or avoid rule and every current colour or font named in the brief is honoured; no fact about the business is added; liked brands appear only as qualities; no rival's logo, name or look is copied.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "exact_values",
+        "text": "Colours, fonts and code are exact and usable as given.",
+        "weight": 5,
+        "pass_rule": "Every colour is a 6-digit hex code with a named role; each text-on-background pair is listed with a contrast ratio and an AA pass or fail, and no failing pair is used for body text; fonts are real named families with weights; token or CSS output is one complete code block with valid syntax, no '...' gaps, and the format or version named.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "plain_rules",
+        "text": "Usage rules are plain and easy to follow.",
+        "weight": 3,
+        "pass_rule": "Each usage rule is one short sentence a non-designer can follow, such as which colour goes on buttons; design terms such as kerning or tokens are explained the first time; no hype words.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "judgeable",
+        "text": "The buyer gets a way to judge and use the work.",
+        "weight": 4,
+        "pass_rule": "Logo and identity briefs list at least 4 checks for judging drafts (such as works in one colour and at 16 pixels); palettes and type pairings give do and don't examples; token output shows one example of use in code.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 399,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 59
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior brand designer. Using only the facts below, write the piece I choose: a logo design brief, a colour palette, a font pairing and type scale, a full visual identity brief, or design tokens. For a logo brief, give the idea in one line, the logo type, must-haves, every place and size it must work, file formats and at least four checks for judging drafts. For a palette, give 5 to 8 colours as hex codes with a role each, list each text-on-background pair with its contrast ratio and WCAG AA result, and add do and don't rules. For type, name real font families with weights and sizes for web and print. For tokens, write one complete code block in the format I name (JSON, CSS variables or Tailwind) with primitive and semantic layers, dark mode if asked, and one example of use. Keep every colour or font I say must stay. Describe brands I like as qualities and never copy them. Use plain words.",
+    "not_for": [
+      "Drawing logos or making image files (you get a brief, values or code)",
+      "Trademark searches, clearance or legal advice",
+      "Copying another brand's logo, colours or look",
+      "Names, taglines or a brand voice guide (see the brand names, taglines or voice guide job)",
+      "A full component library or app code (see the script, snippet or fix job)",
+      "Logins to your Figma, website or code repository"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_logo",
+        "text": "Logo design brief for Crumb & Kettle, a family bakery in Leeds opening a second shop in March. The logo must work on brown paper bags, a painted shop sign, a rubber stamp for boxes and Instagram. Feel: warm, honest, a little old-fashioned. Keep our mustard yellow #E3A62F. No cartoon wheat sheaves please.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_palette",
+        "text": "Colour palette for Harbour Lane Physio's website and printed leaflets. Our current navy #1B4F72 stays. We want calm and friendly, not clinical, with a warm accent for buttons. Body text must pass WCAG AA. Leaflets are printed at a local shop.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_tokens",
+        "text": "Turn our colours into design tokens. Plotline is a project tool built with React and plain CSS. Our 14 hex colours, 3 font sizes and spacing values are pasted from our stylesheet. We want W3C-format JSON with primitive and semantic layers, a CSS variables file and dark mode values. That is 2 pieces.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_type",
+        "text": "Font pairing and type scale for Moss & Mortar, a garden design studio. Website on Squarespace, proposals in Google Docs and a printed price list. Feel: calm, crafted, modern. Free fonts only. We need a font with clear numbers for prices.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_identity",
+        "text": "Full visual identity brief for Little Lanterns, a nursery for 40 children aged 0 to 5 in Bristol. Used on signs, staff tops, a parent app, letters and social media. Parents call us cosy and safe. Our current logo is a hand-drawn orange lantern (described below). We want a refresh, not a total change.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_tailwind",
+        "text": "Tailwind 4 theme for Juniper Clinic's booking site. Brand colours #0F766E teal, #F59E0B amber and #1F2937 for text. Fonts Inter and Fraunces. We need colour scales, spacing, radius and shadow, plus dark mode. Show how a primary button uses it.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "logo brief",
+      "logo design brief",
+      "brand identity",
+      "visual identity",
+      "colour palette",
+      "color palette",
+      "hex codes",
+      "brand colours",
+      "font pairing",
+      "typography",
+      "type scale",
+      "brand refresh",
+      "design tokens",
+      "css variables",
+      "tailwind theme",
+      "dark mode colours",
+      "brand guidelines",
+      "style guide"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's logo designer hiring page says fixed logo design projects typically range from $500 to $5,000, with hourly rates of $75 to $200.",
+        "url": "https://contra.com/hire/logo-designers"
+      },
+      {
+        "note": "YunoJuno rate data: freelance UI designers average $69 an hour (about £419 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ui-designer"
+      }
+    ]
+  },
+  {
+    "id": "app-screen-wireframe-spec",
+    "title": "Screen-by-screen wireframe spec for an app or flow",
+    "summary": "A text wireframe for each screen of your app, web app or key flow, with layout, components, exact words, states and what each tap does.",
+    "area": "design",
+    "deliverable": "A screen list and flow map, then for each screen: its job, layout zones top to bottom, every component with its exact words, the empty, loading, error and success states, what each tap does, and mobile and desktop notes. Component sheets add sizes, spacing and states. Ends with open questions and a build order.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Mobile app screens",
+          "Web app or dashboard screens",
+          "One flow (sign-up, booking or checkout)",
+          "Onboarding screens",
+          "Settings or account area",
+          "Component spec sheet (buttons, forms, cards)"
+        ]
+      },
+      {
+        "id": "product",
+        "label": "What the product does and who uses it",
+        "type": "longtext",
+        "required": true,
+        "max": 4000
+      },
+      {
+        "id": "screens",
+        "label": "Screens or steps to cover",
+        "type": "list",
+        "required": true,
+        "help": "One per line, such as Sign up, Choose plan, Pay. For a component sheet, list the components.",
+        "max": 20
+      },
+      {
+        "id": "screen_count",
+        "label": "How many screens or components?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 6, up to 15. The states of a screen are part of that screen.",
+        "max": 15
+      },
+      {
+        "id": "platform",
+        "label": "Platform",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "iPhone and Android app",
+          "Web, mobile first",
+          "Web, desktop first",
+          "Tablet",
+          "Not decided"
+        ]
+      },
+      {
+        "id": "rules",
+        "label": "Business rules and data",
+        "type": "longtext",
+        "required": false,
+        "help": "What users enter, limits, prices, plan names, who can see what and what happens on errors.",
+        "max": 8000
+      },
+      {
+        "id": "design_system",
+        "label": "Design system or UI kit you use",
+        "type": "text",
+        "required": false,
+        "help": "Such as Material 3, Apple's guidelines, Tailwind UI, shadcn/ui or your own.",
+        "max": 300
+      },
+      {
+        "id": "current",
+        "label": "Your current screens or copy",
+        "type": "longtext",
+        "required": false,
+        "help": "Describe screens in words or paste their text. We cannot read screenshots.",
+        "max": 10000
+      },
+      {
+        "id": "voice",
+        "label": "Tone for on-screen words",
+        "type": "text",
+        "required": false,
+        "max": 300
+      }
+    ],
+    "rubric": [
+      {
+        "id": "every_screen",
+        "text": "Every screen or step in the brief is specified, in flow order.",
+        "weight": 5,
+        "pass_rule": "Each screen or component named in the brief has its own section, in the order of the flow map; the count matches the brief; each screen section states the screen's one job and what the user does next.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "no_invented_rules",
+        "text": "Only the buyer's product facts and rules are used.",
+        "weight": 5,
+        "pass_rule": "Prices, limits, fields, plan names and business rules come from the brief; anything missing is a marked open question or placeholder such as [max file size?], never an invented rule; there are no dark patterns such as pre-ticked paid extras or a hidden cancel option.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable",
+        "text": "Each screen can be built without guessing.",
+        "weight": 5,
+        "pass_rule": "Each screen lists layout zones top to bottom, each component with its exact on-screen words, what each button or link does, and empty, loading, error and success states wherever the screen shows data or takes input; component specs give sizes, spacing and states.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "usable_flow",
+        "text": "The flow is easy to use and accessible.",
+        "weight": 4,
+        "pass_rule": "Each screen has one main action; touch targets of at least 44 points (48 dp on Android) are noted; every form field has a visible label, not only placeholder text; error messages say how to fix the problem; an open questions list and build order close the draft.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Notes and on-screen words are plain.",
+        "weight": 3,
+        "pass_rule": "Notes use short sentences; buttons start with a verb; design terms such as modal or toast are explained the first time; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 139,
+      "min_usd": 89,
+      "max_usd": 449,
+      "size": {
+        "field": "screen_count",
+        "unit": "screen",
+        "included": 6,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a senior product designer. Write a text wireframe spec for the screens or flow below. First give a screen list and a flow map with the main path and branches. Then, for each screen, give its one job, its layout zones from top to bottom, every component with its exact on-screen words, what each button or link does, and the empty, loading, error and success states. Add notes for mobile and desktop, touch targets of at least 44 points, visible labels on every field, and errors that say how to fix the problem. For a component sheet, give each component's sizes, spacing and states. Use only the rules, prices and limits I give and list anything missing as an open question. No dark patterns. End with open questions and a suggested build order.",
+    "not_for": [
+      "Visual mock-ups, Figma files or images (you get a text spec)",
+      "Writing the app code (see the script, snippet or fix job)",
+      "Website page plans and site maps (see the website wireframe and design brief job)",
+      "Dark patterns such as hidden cancel buttons or pre-ticked paid extras",
+      "Usability testing with real people",
+      "Logins to your app, design files or analytics"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_booking",
+        "text": "Booking flow for the Fernhill Dog Walks app (iPhone and Android). Steps: choose a dog, choose a walk (30 minutes for $18 or 60 minutes for $30), choose a time slot, confirm and pay with the card on file. Rules: bookings close 12 hours before, and a walk takes at most 3 dogs. Spec each screen, including what happens if no slots are free or the card fails.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_dashboard",
+        "text": "Web dashboard for Tally Tutors, desktop first. Tutors log sessions and see their monthly pay. 5 screens: log in, today, log a session, monthly summary and settings. We use shadcn/ui. Students' names must never appear on the monthly summary. Pay is $32 an hour, paid on the 5th.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_components",
+        "text": "Component spec sheet for Larder, a recipe app. Components: primary button, secondary button, text input, search bar, recipe card, tag chip, toast and bottom sheet. We follow Material 3. Colours #2E7D32 and #FFF8E1. Give sizes, spacing, states and the words each one uses.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_onboarding",
+        "text": "Onboarding for Steady, a habit app for shift workers. 4 screens: welcome, pick your shift pattern (days, nights or rotating), pick up to 3 habits from a list of 12, and turn on reminders. It must still work if the user says no to notifications. Friendly, short words.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_checkout",
+        "text": "Checkout flow for Bramble Box, a monthly snack box sold on our own website, mobile first. Steps: box size (small £14 or large £22), delivery date, address, payment and confirmation. Promo codes are allowed. The renewal date and how to cancel must show before payment.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_settings",
+        "text": "Settings area for the Cobalt Invoices web app: profile, business details, invoice defaults (currency, due days, tax label), team members with owner and staff roles, and delete account. Only owners can delete the account. 6 screens with error and confirm states.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "wireframe",
+      "wireframes",
+      "app wireframe",
+      "screen spec",
+      "ux spec",
+      "flow spec",
+      "user flow",
+      "screen by screen",
+      "onboarding screens",
+      "checkout flow",
+      "sign up flow",
+      "dashboard layout",
+      "component spec",
+      "ui spec",
+      "empty states",
+      "mobile app design",
+      "app layout",
+      "design handoff"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance UX designers average $70 an hour (about £423 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ux-designer"
+      },
+      {
+        "note": "YunoJuno rate data: freelance UI designers average $69 an hour (about £419 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/ui-designer"
+      }
+    ]
+  },
+  {
+    "id": "ai-image-prompt-set",
+    "title": "AI image prompt set for your brand or products",
+    "summary": "Ready-to-paste prompts for Midjourney, ChatGPT, Gemini, Ideogram, Firefly, Flux or Stable Diffusion: product scenes, brand images, posts, characters, covers or edits.",
+    "area": "design",
+    "deliverable": "A shared style block, then a table of prompts with what each image is for, its aspect ratio, the full prompt in your tool's syntax, what to keep out and the settings. Plus a consistency plan for series and characters, fix prompts for common faults and a checklist to run before you use any image.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "use",
+        "label": "What are the images for?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Product scenes and lifestyle shots",
+          "Brand and website images",
+          "Social post images",
+          "Ad image variants",
+          "Blog and article headers",
+          "Characters or mascot in many poses",
+          "Thumbnail backgrounds",
+          "Book cover or poster art",
+          "Patterns, textures and backgrounds",
+          "Edit prompts for an image you have",
+          "Concept images for a room or display"
+        ]
+      },
+      {
+        "id": "tool",
+        "label": "Which AI image tool?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Midjourney",
+          "ChatGPT image",
+          "Google Gemini image",
+          "Ideogram",
+          "Adobe Firefly",
+          "Flux",
+          "Stable Diffusion",
+          "Canva text to image",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "prompts",
+        "label": "How many prompts?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 12, up to 40.",
+        "max": 40
+      },
+      {
+        "id": "subject",
+        "label": "What should the images show?",
+        "type": "longtext",
+        "required": true,
+        "help": "Products, scenes, settings and people types. Describe products exactly: colour, material, shape, size and label.",
+        "max": 6000
+      },
+      {
+        "id": "brand_look",
+        "label": "Brand colours and look",
+        "type": "text",
+        "required": false,
+        "help": "Hex codes, mood words and photo or illustration style.",
+        "max": 600
+      },
+      {
+        "id": "sizes",
+        "label": "Sizes",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Square 1:1",
+          "Portrait 4:5",
+          "Story 9:16",
+          "Landscape 16:9",
+          "Wide 3:2",
+          "Pinterest 2:3"
+        ]
+      },
+      {
+        "id": "text_in_image",
+        "label": "Text in the image?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "No text in the image",
+          "Short text in the image",
+          "Leave space for text added later"
+        ]
+      },
+      {
+        "id": "references",
+        "label": "Reference images you can attach",
+        "type": "text",
+        "required": false,
+        "help": "Describe photos of your product or style you can upload to the tool.",
+        "max": 600
+      },
+      {
+        "id": "avoid",
+        "label": "Things to keep out",
+        "type": "text",
+        "required": false,
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_use",
+        "text": "The prompts serve the stated use, tool and sizes.",
+        "weight": 4,
+        "pass_rule": "The prompt count matches the brief; each row names its use and an aspect ratio from the brief (or a stated default); the syntax fits the tool named, such as --ar and --no for Midjourney or full sentences for ChatGPT image.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_facts",
+        "text": "Product and brand details come from the brief, with no real people, artists or brands.",
+        "weight": 5,
+        "pass_rule": "Product colour, material, shape and label match the brief in every prompt; no living artist, real person, celebrity, trademark or other brand's logo is named; no claim about the product is added.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "ready_to_paste",
+        "text": "Each prompt is complete and ready to paste.",
+        "weight": 5,
+        "pass_rule": "Each prompt states subject, setting, composition or camera angle, lighting, style and colour, with no gaps left except marked names; a shared style block or seed and reference note keeps the set consistent; at least 3 fix or edit prompts cover common faults.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_honest",
+        "text": "The images will not mislead anyone or break platform rules.",
+        "weight": 4,
+        "pass_rule": "The draft tells the buyer to check every product image against the real product before using it in a listing or ad, to label AI images where a platform asks, and keeps out real people, children, medical images and before-and-after claims.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes and settings are explained in plain words.",
+        "weight": 3,
+        "pass_rule": "Each tool setting or term (such as stylize, seed or negative prompt) is explained in one line the first time; instructions are numbered steps; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "prompts",
+        "unit": "prompt",
+        "included": 12,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an expert at prompting AI image tools. Write a set of ready-to-paste prompts for the tool, use and sizes below. Start with a shared style block (medium, light, colour, lens or angle, mood) and reuse it so the set matches. For each prompt, give the use, the aspect ratio, the full prompt in the tool's syntax (for Midjourney use --ar and --no; for ChatGPT image use full sentences), what to keep out, and any settings. Describe the product exactly as I describe it. Do not name living artists, real people, celebrities or other brands. Add a consistency note for series and characters, at least three fix prompts for common faults, and a checklist to compare each image with the real product before use.",
+    "not_for": [
+      "Making the images for you",
+      "Images of real people, celebrities or children",
+      "Prompts in the style of a named living artist, or with other brands' logos or characters",
+      "AI product images that change how the product really looks",
+      "Before-and-after, medical or results images",
+      "Fake reviews, fake screenshots or images meant to deceive"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_candles",
+        "text": "15 Midjourney prompts for Wick & Wander soy candles: 8 oz amber glass jars, cork lids, plain kraft labels with a black line drawing of a fern. Scenes: reading nook, bath edge, dinner table and a rainy windowsill. Sizes 4:5 and 9:16. Warm, soft evening light. Leave space at the top for text.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_mascot",
+        "text": "10 ChatGPT image prompts for Pip, the mascot of Little Ripples Swim School: a small round otter in a red swim cap, flat cartoon style, our blue #1E88E5. Poses: waving, diving, holding a certificate, cheering and floating on its back. Plain white background so we can cut it out.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_blog",
+        "text": "12 blog header prompts in Ideogram for Ledgerly, bookkeeping software for cleaning businesses. Topics pasted, such as pricing a deep clean and hiring your first cleaner. One style: flat illustration in muted teal #0B6E4F and sand #F2C14E. 16:9. No text in the images.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_sauce",
+        "text": "20 Firefly prompts for Ember & Ash hot sauce: 150 ml glass bottles with a black label and a red wax seal. Scenes: barbecue, tacos, a dark wood board with chillies, smoke. Sizes 1:1 and 4:5. We sell on Amazon, so the bottle must look exactly like the real one.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_edit",
+        "text": "Edit prompts for ChatGPT image. I have 8 photos of our hand-thrown mugs on a messy kitchen counter. I want the background swapped for a clean pale stone surface with soft window light, and the mug left untouched. Give me the prompts and the steps.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_room",
+        "text": "Concept image prompts in Midjourney for our cafe refresh at Corner Table: 8 x 5 m room, counter on the left, forest green and cream, oak tables, pendant lights and plants. 6 views. We want to see the idea before we spend £3,500.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "ai image prompts",
+      "midjourney prompts",
+      "chatgpt image prompts",
+      "dall-e prompts",
+      "gpt image",
+      "gemini image",
+      "ideogram prompts",
+      "firefly prompts",
+      "flux prompts",
+      "stable diffusion prompts",
+      "product scene prompts",
+      "ai product photos",
+      "ai mascot",
+      "consistent character",
+      "prompt set",
+      "image prompts",
+      "ai art prompts",
+      "negative prompt"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's Midjourney hiring page lists typical project rates of $150 to $500 for single image generation, up to $2,000 to $5,000 for full visual campaigns.",
+        "url": "https://contra.com/hire/midjourney-experts"
+      },
+      {
+        "note": "YunoJuno rate data: freelance prompt engineers average $107 an hour (about £650 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/prompt-engineer"
+      }
+    ]
+  },
+  {
+    "id": "storyboard-and-shot-table",
+    "title": "Storyboard and shot table for a video or animation",
+    "summary": "A frame-by-frame storyboard in words for a live-action video, animated explainer, motion graphics, logo animation, short vertical video or AI video shots.",
+    "area": "design",
+    "deliverable": "A shot table with shot number, timecode, length, what we see, camera or motion, on-screen text, voiceover or sound, and the cut to the next shot. Motion pieces add keyframes, timing and easing. AI video shots add a full prompt per shot. Plus a style note, an asset list and a check that the timing adds up.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Live-action video storyboard",
+          "Animated explainer storyboard",
+          "Motion graphics or kinetic text",
+          "Logo animation (sting)",
+          "Short vertical video (Reels, TikTok, Shorts)",
+          "Lower thirds, titles and end card pack",
+          "AI video shot prompts (Sora, Veo, Runway, Kling)",
+          "Animated social post or GIF"
+        ]
+      },
+      {
+        "id": "seconds",
+        "label": "Total length in seconds",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers up to 60 seconds, up to 180. For a titles pack, add up the time each title is on screen.",
+        "max": 180
+      },
+      {
+        "id": "script",
+        "label": "Script, voiceover or idea",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the script or voiceover. If you have none, describe the idea and the key message.",
+        "max": 8000
+      },
+      {
+        "id": "goal",
+        "label": "Where it will run and what viewers should do",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "aspect",
+        "label": "Shape",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "9:16 vertical",
+          "16:9 landscape",
+          "1:1 square",
+          "4:5 portrait",
+          "Several"
+        ]
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours, fonts and look",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "assets",
+        "label": "What you already have",
+        "type": "longtext",
+        "required": false,
+        "help": "Footage, product photos, logo files, music, locations and people who can appear.",
+        "max": 3000
+      },
+      {
+        "id": "tool",
+        "label": "Editing or animation tool",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "After Effects",
+          "Premiere Pro",
+          "CapCut",
+          "Canva",
+          "DaVinci Resolve",
+          "Final Cut Pro",
+          "An AI video tool",
+          "My editor or animator will choose"
+        ]
+      },
+      {
+        "id": "avoid",
+        "label": "Things to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "matches_script",
+        "text": "The storyboard follows the brief's script and length.",
+        "weight": 4,
+        "pass_rule": "Every line of the brief's script or voiceover appears in the audio column, in order; the sum of shot lengths equals the brief's length within 2 seconds; the draft states the aspect ratio and, for motion pieces, the frame rate.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_facts",
+        "text": "Only the buyer's facts, assets and claims are used.",
+        "weight": 5,
+        "pass_rule": "Product details, claims, prices, people and places come from the brief; shots that need things the buyer has not listed are marked [needs: ...]; no real person, brand, film character or music is used unless the brief says the buyer has rights to it.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "every_shot_ready",
+        "text": "Every shot can be made without guessing.",
+        "weight": 5,
+        "pass_rule": "Each row has shot number, timecode, length, what we see, camera or motion, on-screen text (or 'none'), audio and transition; motion rows add keyframe timing and easing; AI video rows add a full prompt with subject, action, camera move, lighting and style; an asset list closes the draft.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "readable_text",
+        "text": "On-screen text can be read in time and sits in safe areas.",
+        "weight": 3,
+        "pass_rule": "By the timecodes given, each on-screen text line stays up at least 1 second plus about a third of a second per word; text and key action sit inside safe zones, which are named for vertical video.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes are plain and short.",
+        "weight": 3,
+        "pass_rule": "Camera and motion terms (such as dolly, ease-in or match cut) are explained on first use or in a short glossary; notes are short; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 299,
+      "size": {
+        "field": "seconds",
+        "unit": "second",
+        "included": 60,
+        "per_unit_usd": 1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a storyboard artist and motion designer. Turn the script or idea below into a storyboard in words for the length and shape I give. Check the words fit the time at about 2.5 words a second and say what to cut if not. Give a shot table with: shot number, timecode, length, what we see, shot size and camera or motion, on-screen text, voiceover or sound, and the cut to the next shot. For motion graphics and logo animations, add keyframes with timing in seconds and frames and the easing. For AI video tools, add a full prompt per shot with subject, action, camera move, lighting and style. Keep on-screen text short and inside safe zones. Use only the people, products and footage I have, and mark anything else [needs: ...]. End with the total time, a style note, an asset list and a short glossary of camera terms.",
+    "not_for": [
+      "Filming, drawing frames, animating or editing",
+      "Writing a full script from nothing (see the video script job)",
+      "Shoot day schedules, packing lists and product shot lists (see the photo or video shoot brief job)",
+      "Real people, brands, film characters or music you have no rights to use",
+      "AI video of real people or anything made to deceive",
+      "Health or results claims the brief cannot prove"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_reel",
+        "text": "45-second Instagram Reel for Hollow Oak Bakery: a sourdough loaf from dough to first slice. We film on an iPhone 15 in our kitchen at 5am, one baker on camera (hands only). Voiceover script pasted, 105 words. End card: order by Thursday for Saturday pickup. 9:16.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_explainer",
+        "text": "90-second animated explainer for Ledgerly, bookkeeping software for cleaning businesses. Voiceover script pasted (210 words). Brand colours #0B6E4F and #F2C14E, font Nunito. Our animator uses After Effects. We need a storyboard with style frame notes and an asset list.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_logo",
+        "text": "3-second logo animation for Brightline Plumbing at the start of our YouTube videos. The logo is a blue water drop #1565C0 beside the word Brightline in bold. We want a drop and splash feel with a short sound. Our editor uses Premiere Pro, 25 fps, 16:9.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_ai_video",
+        "text": "AI video shot prompts for a 20-second teaser for Saltmarsh Swim, an outdoor sea pool. Shots: dawn over the pool, swimmers in caps, steam rising off the water, a towel on a bench, the pool gate opening. Tool: Runway. 9:16. No close-up faces. On-screen text pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_kinetic",
+        "text": "30-second kinetic text video for Wren Florist's Mother's Day sale. Voiceover pasted (70 words). Pink #E91E63 and cream #FFF8F0, font Playfair Display. 9:16 for Reels, built in CapCut. Orders close 8 March.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_titles",
+        "text": "Lower thirds, title cards and an end card for our 12-part YouTube course, Garden in a Weekend. Host name: Ade Bello. Brand green #33691E, font Montserrat. 16:9, 30 fps, built in DaVinci Resolve. Each lower third stays up 5 seconds.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "storyboard",
+      "shot list",
+      "shot table",
+      "video storyboard",
+      "animation storyboard",
+      "explainer storyboard",
+      "motion graphics",
+      "kinetic typography",
+      "logo animation",
+      "logo sting",
+      "lower thirds",
+      "end card",
+      "reels storyboard",
+      "tiktok storyboard",
+      "ai video prompts",
+      "sora prompts",
+      "runway prompts",
+      "veo prompts"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance storyboard artists average $61 an hour (about £373 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/storyboard-artist"
+      },
+      {
+        "note": "YunoJuno rate data: freelance motion graphics designers average $64 an hour (about £385 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/motion-graphics-designer"
+      }
+    ]
+  },
+  {
+    "id": "captions-subtitles-and-alt-text",
+    "title": "Captions, subtitles, alt text or audio description",
+    "summary": "Accessible text for your media: SRT or VTT caption files from your transcript, translated subtitles, burned-in caption text, alt text for images or an audio description script.",
+    "area": "design",
+    "deliverable": "Caption and subtitle files as one complete SRT or WebVTT code block, timed from your transcript, with short lines and speaker and sound labels. Alt text comes as a table with one row per image, plus long descriptions for charts. Audio description gives timed lines for gaps in speech. Ends with a list of words to check.",
+    "format": "markdown",
+    "turnaround_hours": 72,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "SRT caption file",
+          "WebVTT caption file",
+          "Clean-up of auto-captions",
+          "Translated subtitles (SRT or VTT)",
+          "Burned-in caption text for short videos",
+          "Alt text for a batch of images",
+          "Long descriptions for charts and infographics",
+          "Audio description script",
+          "Clean transcript for publishing"
+        ]
+      },
+      {
+        "id": "units",
+        "label": "Minutes of video, or number of images",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 5 minutes or 5 images. Up to 20 minutes of video or 40 images.",
+        "max": 40
+      },
+      {
+        "id": "source",
+        "label": "Transcript, caption file or image list",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste a timed transcript or caption file. For alt text, list each image with what it shows and where it is used.",
+        "max": 60000
+      },
+      {
+        "id": "language",
+        "label": "Language, and target language for translations",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "speakers",
+        "label": "Speaker names",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "line_style",
+        "label": "Caption line style",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Standard (42 characters a line, 2 lines)",
+          "Broadcast (32 characters a line)",
+          "Short social (a few words at a time)",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "edits",
+        "label": "How close to the words?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Keep every word (verbatim)",
+          "Remove filler words like um and uh",
+          "Light clean-up for reading"
+        ]
+      },
+      {
+        "id": "context",
+        "label": "Where it will be used",
+        "type": "text",
+        "required": false,
+        "help": "Such as YouTube, your website player, Instagram, a PDF report or product pages.",
+        "max": 400
+      },
+      {
+        "id": "terms",
+        "label": "Names and terms to spell right",
+        "type": "list",
+        "required": false,
+        "max": 40
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_format",
+        "text": "The file or table is in the format asked for and is valid.",
+        "weight": 5,
+        "pass_rule": "SRT cues are numbered from 1 with HH:MM:SS,mmm --> HH:MM:SS,mmm times; VTT starts with WEBVTT and uses HH:MM:SS.mmm; cues run in order and do not overlap; the whole caption file sits in one code block; alt text is a table with one row per image in the brief.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "faithful",
+        "text": "The words match the source and nothing is added.",
+        "weight": 5,
+        "pass_rule": "Caption text matches the transcript's words in order, with filler removed only if the brief allows; timings come from the brief's timestamps, or the draft states at the top that they are estimated and how; alt text describes only what the brief says each image shows; translations keep the meaning and flag any phrase that was changed.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "readable",
+        "text": "Captions and alt text are easy to read.",
+        "weight": 4,
+        "pass_rule": "No cue has more than 2 lines and lines keep to the chosen length; each cue stays up at least 1 second; speaker changes and key sounds are labelled, such as [music]; alt text is under 125 characters unless a long description was asked for and does not start with 'image of'.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "complete",
+        "text": "All of the source is covered.",
+        "weight": 4,
+        "pass_rule": "The last cue ends within 5 seconds of the last timestamp in the brief; every image listed has a row; decorative images are marked with empty alt text; audio description lines fit the gaps stated in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes are plain and short.",
+        "weight": 3,
+        "pass_rule": "Any notes or checklists use plain words; the draft ends with a short list of names or words to check; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 49,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "units",
+        "unit": "minute or image",
+        "included": 5,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a professional captioner and accessibility writer. From the transcript, caption file or image list below, make the piece I choose. For SRT, number cues from 1 and use HH:MM:SS,mmm --> HH:MM:SS,mmm; for WebVTT, start with WEBVTT and use HH:MM:SS.mmm. Keep timings from my timestamps; if there are none, say the timings are estimated and how. Keep cues 1 to 7 seconds long, no more than 2 lines, within the line length I choose, broken at natural points. Label speaker changes and key sounds. Keep the speaker's words and only remove filler if I allow it. Put the whole file in one code block. For alt text, give a table with one row per image: short alt text under 125 characters that says what matters in that place, or empty alt text for decorative images, plus long descriptions for charts using only my data. For audio description, write short present-tense lines that fit the gaps in speech. End with a list of words to check.",
+    "not_for": [
+      "Transcribing audio or video files (paste a transcript or auto-captions)",
+      "Describing images we cannot see: describe each image in words",
+      "Certified, legal or court transcripts and sworn translations",
+      "Accessibility certification, VPAT sign-off or legal compliance claims",
+      "Uploading files to your channel, player or website",
+      "Videos longer than 20 minutes in one order"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_webinar",
+        "text": "Clean up the auto-caption SRT from our 14-minute webinar 'Pricing for florists' (pasted). Speakers: Dana Hale and Joe Price. It spells ranunculus wrong all the way through. Keep the timings, 42 characters a line, 2 lines max, and add speaker names when they change.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_vtt",
+        "text": "WebVTT file for a 4-minute product video on our website for Hearth & Loom throws. Timed transcript pasted, one speaker, Mina. Add [music] at the start and end. Standard line length.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_alt",
+        "text": "Alt text for 30 product photos for Hearth & Loom on Shopify. For each I've listed the file name, product, colour, pattern and what is in the shot (on a sofa, folded, close-up of the fringe). 6 are mood shots with no product focus.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_translate",
+        "text": "Spanish subtitles for Mexico for a 6-minute English product video for Cast & Crumb cast-iron pans. English SRT pasted. Keep the timings. Note: 'seasoning' means the baked-on oil coating, not spice.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_reels",
+        "text": "Burned-in caption text for 3 Reels, 40 seconds each, for Pawsome Grooming. Timed transcripts pasted. Short social style, 2 to 4 words at a time, with one key word per line marked to highlight in our orange #FF8A65.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_charts",
+        "text": "Alt text and long descriptions for 6 charts in Hope Street Food Bank's 2025 annual report PDF. The data for each chart is pasted: meals by month, families by area, volunteer hours, and more.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_audio_desc",
+        "text": "Audio description script for our 60-second brand video for Saltmarsh Swim. Timed transcript pasted with the gaps in speech marked, and each shot described in words.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "captions",
+      "subtitles",
+      "srt file",
+      "vtt file",
+      "webvtt",
+      "closed captions",
+      "subtitle file",
+      "caption file",
+      "fix auto captions",
+      "translated subtitles",
+      "burned in captions",
+      "alt text",
+      "image descriptions",
+      "audio description",
+      "transcript clean up",
+      "accessible video",
+      "chart descriptions",
+      "accessibility"
+    ],
+    "demand_sources": [
+      {
+        "note": "W3C's Web Accessibility Initiative explains that captions give people who are Deaf or hard of hearing access to video, and help people who take in text more easily than audio.",
+        "url": "https://www.w3.org/WAI/media/av/captions/"
+      },
+      {
+        "note": "W3C's images tutorial says images must have text alternatives that describe the information or function they represent.",
+        "url": "https://www.w3.org/WAI/tutorials/images/"
+      },
+      {
+        "note": "The US Justice Department's web guidance tells businesses to give images text alternatives and to make videos accessible with accurate, synchronised captions.",
+        "url": "https://www.ada.gov/resources/web-guidance/"
+      }
+    ]
+  },
+  {
+    "id": "audio-script-and-jingle",
+    "title": "Audio ad, voiceover script or jingle",
+    "summary": "Words for the ear: radio and streaming audio ads, podcast ad reads, video voiceovers, original jingle lyrics, a sonic logo brief, podcast intros or in-store announcements.",
+    "area": "design",
+    "deliverable": "Scripts timed to your length with word counts, music and sound cues, voice direction and a pronunciation guide. Jingles get original lyrics with syllable counts, rhyme scheme, tempo and a melody guide in words. Sonic logos get a brief for your composer. Ends with a recording brief and any claims to check.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Radio ad",
+          "Streaming audio ad (Spotify, podcasts)",
+          "Podcast host-read ad",
+          "Voiceover script for a video",
+          "Jingle lyrics with a melody guide",
+          "Sonic logo brief (2 to 5 seconds)",
+          "Podcast intro and outro",
+          "In-store or venue announcements",
+          "Voice casting and direction brief"
+        ]
+      },
+      {
+        "id": "spots",
+        "label": "How many scripts or versions?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 3. A 30-second and a 15-second cut of one ad count as 2.",
+        "max": 10
+      },
+      {
+        "id": "seconds",
+        "label": "Length of each, in seconds",
+        "type": "number",
+        "required": true,
+        "max": 120
+      },
+      {
+        "id": "business",
+        "label": "Your business, offer and listeners",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "message",
+        "label": "The one thing listeners must remember",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "cta",
+        "label": "What listeners should do",
+        "type": "text",
+        "required": false,
+        "help": "Such as visit a short web address, call a number or come in this weekend.",
+        "max": 300
+      },
+      {
+        "id": "required_lines",
+        "label": "Lines you must include word for word",
+        "type": "text",
+        "required": false,
+        "help": "Such as offer terms, end dates or licence numbers.",
+        "max": 600
+      },
+      {
+        "id": "pronounce",
+        "label": "Names and how to say them",
+        "type": "list",
+        "required": false,
+        "max": 20
+      },
+      {
+        "id": "sound",
+        "label": "Voice and music feel",
+        "type": "text",
+        "required": false,
+        "help": "Such as a warm female voice, upbeat acoustic guitar, no shouting.",
+        "max": 400
+      },
+      {
+        "id": "avoid",
+        "label": "Things to avoid",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "timed",
+        "text": "Each script fits its length when read aloud.",
+        "weight": 5,
+        "pass_rule": "Each script states its length and word count, and the spoken words fit a read rate of 2 to 2.5 words a second, less where music or sound effects take time (for example 60 to 75 words for 30 seconds); jingles give syllable counts per line and the number of bars or beats.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "own_facts",
+        "text": "Only the buyer's facts are used, and nothing copies real songs.",
+        "weight": 5,
+        "pass_rule": "Offer, prices, dates, addresses and claims come from the brief; required lines appear word for word; lyrics are original and do not reuse or parody known songs, slogans or melodies; no sound-alike of a named artist is asked for.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "production_ready",
+        "text": "A voice artist and producer can record it as given.",
+        "weight": 4,
+        "pass_rule": "Each script has voice direction, music and sound cues in brackets at the right lines, and a pronunciation guide for names; jingle and sonic logo briefs give tempo in BPM, mood, instruments and a melody shape in words; a recording brief closes the draft.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "ear_friendly",
+        "text": "It is written for the ear.",
+        "weight": 4,
+        "pass_rule": "Sentences are short; in spots of 30 seconds or more the key message and call to action are each said at least twice; web addresses and phone numbers are written the way they are spoken.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_honest",
+        "text": "Plain, honest words.",
+        "weight": 3,
+        "pass_rule": "No false urgency or claims the brief cannot back; no hype words; any regulated lines (such as finance or health) are flagged for the buyer to check.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "spots",
+        "unit": "script",
+        "included": 3,
+        "per_unit_usd": 19
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a radio copywriter and jingle writer. Write the audio piece I choose for the length and number of versions below. Fit the words to the time at about 2 to 2.5 words a second, less with music, and state the word count for each script. Open with something the ear catches in 3 seconds. Say the key message and the call to action at least twice in spots of 30 seconds or more. Write numbers and web addresses as they are spoken. Put music and sound cues and voice direction in brackets, and add a pronunciation guide. For jingles, write original lyrics with syllable counts per line, the rhyme scheme, tempo in BPM, mood, instruments and the melody shape in words, and never reuse or imitate a real song. For a sonic logo, give the length, note shape, instruments, mood and where it plays. Include my required lines word for word. Use only my facts and add no false urgency. End with a recording brief.",
+    "not_for": [
+      "Recording, voicing, composing or mixing audio",
+      "Booking airtime or podcast sponsorships",
+      "Lyrics or tunes that copy, parody or sound like real songs or artists",
+      "Ads for loans, investments or health treatments without your compliance check",
+      "False urgency, fake offers or claims you cannot back",
+      "Phone menus and hold messages (see the phone menu and call scripts job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_radio",
+        "text": "Mitchell's Tyres & Brakes in Dayton, Ohio. Spring offer: free brake check and 10% off brake pads until April 30. Call 937-555-0142 or drive in on Wayne Avenue, Monday to Saturday. A 30-second and a 60-second radio ad. Friendly local voice, not shouty.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_jingle",
+        "text": "A 30-second radio jingle and a 5-second tag for Nonna Rosa's Pizza in Swindon. We deliver till midnight, phone 01793 555 210. Fun, singable, a little retro. Original lyrics only, plus a melody guide for our composer.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_host_read",
+        "text": "Podcast host-read ad for Hearth Seeds on a gardening show. Code GROW15 gives 15% off a first order at hearthseeds.com. Our seeds are open-pollinated and packed in paper. 60 and 30 second versions that sound like the host talking, plus talking points.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_sonic",
+        "text": "Sonic logo brief for Tidewell, a sleep app. 3 seconds, played at app start and at the end of our video ads. Calm, soft, hopeful. No bells or chimes. It must sound good on phone speakers.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_vo",
+        "text": "Voiceover script for our 75-second brand video for Saltmarsh Swim (shot list pasted with timings). One calm voice. Mention: open all year, 7am to 7pm, adults £6, under 16s £3. End on 'Book a swim at saltmarshswim.co.uk'.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_store",
+        "text": "In-store announcements for Greenbank Garden Centre: 6 short messages for our speakers (cafe closing in 30 minutes, bulbs 3 for £10, plant doctor at 2pm on Saturdays, lost child point at the tills, car park closing, loyalty card sign-up). 15 to 20 seconds each.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "radio ad",
+      "radio script",
+      "audio ad",
+      "spotify ad",
+      "podcast ad read",
+      "host read ad",
+      "voiceover script",
+      "voice over script",
+      "jingle",
+      "jingle lyrics",
+      "sonic logo",
+      "audio logo",
+      "podcast intro",
+      "podcast outro",
+      "in-store announcements",
+      "pa announcements",
+      "voice direction",
+      "audio branding"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance sound designers average $76 an hour (about £461 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/sound-designer"
+      },
+      {
+        "note": "Contra's voice over hiring page lists freelance voice artists for businesses, with top profiles showing 11 to 12 repeat hires each.",
+        "url": "https://contra.com/hire/voice-over-artists"
+      }
+    ]
+  },
+  {
+    "id": "print-layout-spec",
+    "title": "Print layout spec: flyer, sign, pack, menu or cover",
+    "summary": "A layout your designer, printer or Canva session can build: flyers, posters, banners, event signs, packaging panels, labels, menus, book covers, cards and merch prints.",
+    "area": "design",
+    "deliverable": "For each piece: trim size, bleed and safe area, colour mode and material; zones in reading order with every line of your copy placed; type sizes for the viewing distance; image and logo spots and marked spaces for barcodes or required marks; build notes for your tool; and a print file checklist. Sign packs add a sign schedule.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Flyer or poster",
+          "Banner or roll-up stand",
+          "Event signage and wayfinding pack",
+          "Shop window and in-store signs",
+          "Packaging panels and dieline text",
+          "Labels and stickers",
+          "Restaurant or service menu",
+          "Book cover (front, spine, back)",
+          "Business cards and stationery",
+          "Merch print spec (T-shirt, tote, stickers)",
+          "Postcard or direct mail piece",
+          "Vehicle wrap or van livery"
+        ]
+      },
+      {
+        "id": "items",
+        "label": "How many pieces, panels or signs?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 3, up to 25. Both sides of one flyer count as one. Each sign in a pack counts as one.",
+        "max": 25
+      },
+      {
+        "id": "copy",
+        "label": "All the words that must appear",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the copy. We place it as given and mark any suggested change.",
+        "max": 12000
+      },
+      {
+        "id": "sizes",
+        "label": "Sizes, if you know them",
+        "type": "text",
+        "required": false,
+        "help": "Such as A5, 18 x 24 in, a 6 x 9 in book or an 85 x 55 mm card. Or tell us where it goes.",
+        "max": 400
+      },
+      {
+        "id": "details",
+        "label": "Extra details",
+        "type": "longtext",
+        "required": false,
+        "help": "Book page count and paper, pack or label sizes, fold type, garment colours or the venue layout.",
+        "max": 1500
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours, fonts and logo",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "viewing",
+        "label": "Where it is seen and from how far",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "printer",
+        "label": "Printer or print service",
+        "type": "text",
+        "required": false,
+        "help": "Such as a local print shop, Vistaprint, Printful, KDP or IngramSpark.",
+        "max": 200
+      },
+      {
+        "id": "tool",
+        "label": "Where will it be built?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Canva",
+          "Adobe InDesign",
+          "Adobe Illustrator",
+          "Affinity Publisher",
+          "Figma",
+          "My printer's online editor",
+          "A designer will build it"
+        ]
+      },
+      {
+        "id": "must_include",
+        "label": "Marks to leave space for",
+        "type": "text",
+        "required": false,
+        "help": "Such as a barcode, logos, recycling or allergen info. You supply and check the real artwork.",
+        "max": 600
+      },
+      {
+        "id": "budget",
+        "label": "Print budget",
+        "type": "text",
+        "required": false,
+        "max": 100
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_pieces",
+        "text": "Each piece in the brief is covered at the right size.",
+        "weight": 4,
+        "pass_rule": "Each piece, panel or sign in the brief has its own section; each states the trim size with units, bleed (such as 3 mm or 0.125 in) and safe area; book covers state the spine width from the page count or mark it [check your printer's spine calculator].",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "copy_untouched",
+        "text": "The buyer's copy is used as given and nothing is invented.",
+        "weight": 5,
+        "pass_rule": "Every line of copy from the brief is placed, and none is reworded unless marked as a suggestion; no new claims, prices, certification marks, recycling or allergen symbols are added; barcodes, legal and required marks are marked spaces for the buyer to supply and check.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable",
+        "text": "A designer or printer can build it without guessing.",
+        "weight": 5,
+        "pass_rule": "Each piece lists zones in reading order with the copy in each, type sizes in points with the largest and smallest stated, colours as hex with CMYK or Pantone noted for print, image and logo positions, and a build note for the named tool; a print checklist covers 300 dpi images, colour mode, bleed, fonts embedded or outlined and file type.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "readable",
+        "text": "Each piece is readable at its size and distance.",
+        "weight": 4,
+        "pass_rule": "Headline sizes are set for the viewing distance stated, using a stated rule such as about 1 inch of letter height per 10 feet; body text on handheld print is at least 8 pt; any low-contrast text and background pair is flagged.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes are plain.",
+        "weight": 3,
+        "pass_rule": "Print terms such as bleed, trim and CMYK are explained once; notes are short and numbered; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 349,
+      "size": {
+        "field": "items",
+        "unit": "piece",
+        "included": 3,
+        "per_unit_usd": 15
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a print designer and artworker. Lay out the print pieces below so a designer, printer or Canva user can build them without guessing. For each piece, give the trim size with units, bleed and safe area, fold lines, colour mode and material. List zones in reading order and place every line of my copy without rewording it; mark any suggested change. Give type sizes in points for the viewing distance, image and logo positions, and marked spaces for barcodes and required marks that I must supply and check. Give colours as hex and note CMYK or Pantone. For book covers, work out the spine from the page count or say to use the printer's calculator. For sign packs, give a sign schedule with location, words, size, material and quantity. End with build notes for my tool and a printer checklist: 300 dpi images, CMYK, bleed, fonts embedded or outlined and file type. Add no new claims.",
+    "not_for": [
+      "Print-ready files, artwork or ordering print for you",
+      "Legal or regulatory sign-off on labels, allergens, health or safety signs",
+      "Fire exit and safety signs that need your venue's safety lead",
+      "Writing new copy from scratch (see the short copy job)",
+      "Copying another brand's packaging, cover or look",
+      "Structural packaging or dieline engineering"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_flyer",
+        "text": "A5 flyer, both sides, for Ironbark Gym's open day on Saturday 12 April, 9am to 1pm: free taster classes and 30% off the joining fee on the day. Copy pasted. Printing with Vistaprint, built in Canva. Colours black and #F4511E orange, font Oswald. Handed out at school gates.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_pouch",
+        "text": "Panel layout for a 120 x 190 mm stand-up pouch for Saffron Steps chai, 4 flavours. Front and back copy pasted. We need a layout system where only the colour band changes per flavour, and space for barcode, net weight, an allergen box and a recycling mark. Digital pouch printer, CMYK plus white.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_signs",
+        "text": "Signage pack for Hilltop Makers Market: 40 stalls in a school hall and playground, 2,000 visitors on 7 June. Signs for the car park, entrance, toilets, cafe, first aid and a map board, plus stall numbers 1 to 40. Print budget £400. Correx boards and A-frames. Copy for each sign pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_menu",
+        "text": "A4 double-sided laminated menu for Olive & Oak cafe: 32 items across breakfast, lunch, drinks and cakes, pasted with prices. We want the brunch boards and smoothies seen first. Colours olive #6B7B3A and cream. Built in Canva, printed at a local shop.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_cover",
+        "text": "Full paperback cover for 'Murder at the Marmalade Fair' by Jane Pike: 6 x 9 in, 284 pages, cream paper, KDP. Blurb and author bio pasted. The illustration will be a village fair scene. We need the front, spine and back layout with type sizes.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_merch",
+        "text": "Merch print spec for The Low Tides band: 2 T-shirt designs (front chest and full back) and a tote, screen printed, 2 ink colours at most, on black and natural garments. Artwork described below. Local printer, 150 items in total.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_cards",
+        "text": "Business cards, letterhead and compliment slips for Northgate Surveyors. Cards 85 x 55 mm double-sided, A4 letterhead and DL slips. Colours #1A3A5F and #E8A33D, font Lato. Names and titles for 3 staff pasted. Printing at a local litho printer.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "flyer layout",
+      "poster layout",
+      "print layout",
+      "banner design",
+      "roll up banner",
+      "event signage",
+      "wayfinding signs",
+      "shop signs",
+      "packaging layout",
+      "dieline",
+      "label layout",
+      "menu layout",
+      "menu design",
+      "book cover layout",
+      "kdp cover",
+      "business card design",
+      "t-shirt print spec",
+      "sticker print",
+      "print ready checklist",
+      "bleed and trim"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance artworkers average $53 an hour (about £319 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/artworker"
+      },
+      {
+        "note": "YunoJuno rate data: freelance graphic designers average $57 an hour (about £348 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/graphic-designer"
+      },
+      {
+        "note": "Contra's packaging designer page puts basic packaging design projects at $500 to $2,500, and dieline creation or changes at $250 to $1,000.",
+        "url": "https://contra.com/hire/packaging-designers"
+      }
+    ]
+  },
+  {
+    "id": "display-and-space-plan",
+    "title": "Window, display or room layout plan",
+    "summary": "A plan for a shop window, in-store display, market stall, trade show stand look or photo corner, or a small room refresh for a cafe, salon, studio, office or holiday let.",
+    "area": "design",
+    "deliverable": "A layout with measurements as a top-down zone map and a placement table; where each product, prop, fixture and sign goes and at what height; colour and lighting notes; a shopping list within budget; build and take-down steps with times; safety and access checks; and a refresh calendar if asked.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Shop window display",
+          "In-store display or shelf plan",
+          "Market stall or pop-up display",
+          "Trade show stand look",
+          "Seasonal display calendar",
+          "Cafe, salon or studio refresh plan",
+          "Small office or workroom layout",
+          "Photo or content corner",
+          "Holiday let room styling"
+        ]
+      },
+      {
+        "id": "areas",
+        "label": "How many displays or rooms?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to 6. A calendar of 12 window themes counts as 3.",
+        "max": 6
+      },
+      {
+        "id": "space",
+        "label": "The space and its measurements",
+        "type": "longtext",
+        "required": true,
+        "help": "Width, depth and height, doors, windows, sockets, fixtures you have and what cannot move.",
+        "max": 4000
+      },
+      {
+        "id": "items",
+        "label": "What goes in it",
+        "type": "longtext",
+        "required": true,
+        "help": "Products to show, stock levels, and furniture or props you own.",
+        "max": 6000
+      },
+      {
+        "id": "goal",
+        "label": "What the space should do",
+        "type": "text",
+        "required": true,
+        "help": "Such as draw people in from the street, sell the new range or seat 20.",
+        "max": 400
+      },
+      {
+        "id": "budget",
+        "label": "Budget for new items",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours and look",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "dates",
+        "label": "Season, event or dates",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "rules",
+        "label": "Landlord, venue or market rules",
+        "type": "text",
+        "required": false,
+        "max": 600
+      }
+    ],
+    "rubric": [
+      {
+        "id": "fits_space",
+        "text": "The plan fits the stated space.",
+        "weight": 5,
+        "pass_rule": "Every placement gives a position and size that fits within the measurements in the brief; doors, sockets and fixed items from the brief are respected; walkways where the public walks stay at least 90 cm (36 in) wide; where a measurement is missing, the draft says what to measure instead of guessing.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "own_items",
+        "text": "The buyer's products, props and budget are used.",
+        "weight": 5,
+        "pass_rule": "Products and props come from the brief; new items appear in a shopping list with quantities and budget lines or [price to check]; the total does not go over the stated budget; no supplier brand is presented as required.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable",
+        "text": "Someone can set it up from the plan alone.",
+        "weight": 4,
+        "pass_rule": "The draft includes a top-down zone map in text, a placement table (item, position, height, facing), lighting notes, where sign text goes, and numbered build and take-down steps with time estimates.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "safe_access",
+        "text": "The plan is safe and accessible.",
+        "weight": 4,
+        "pass_rule": "The draft checks fire exits, trip hazards, stable stacking, heat from lights and reach heights; nothing blocks an exit or a required sign; any electrical or structural work is marked for a qualified trades person.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_reasons",
+        "text": "Plain words with a reason for each main choice.",
+        "weight": 3,
+        "pass_rule": "Each main choice has a one-line reason tied to the goal, such as best sellers at eye level; display terms are explained; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "areas",
+        "unit": "display or room",
+        "included": 1,
+        "per_unit_usd": 49
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a visual merchandiser and small-space interior planner. Plan the display or room below so it fits the measurements I give and meets my goal. Give a top-down zone map in text, a placement table (item, position, height, facing) with measurements, and the reason for each main choice. Keep walkways at least 90 cm (36 in) wide where the public walks and never block a door or exit. Use the products and props I own first, then list new items with quantities and budget lines that stay within my budget. Add lighting and colour notes, numbered build and take-down steps with time estimates, and safety checks for stable stacking, trip hazards, heat from lights and reach heights. Mark anything electrical or structural for a qualified trades person. If a measurement is missing, say what to measure instead of guessing.",
+    "not_for": [
+      "Building, electrical, plumbing or structural work (we mark what needs a qualified trades person)",
+      "Planning permission, building regulations or fire safety sign-off",
+      "Buying, delivering or installing items for you",
+      "Store planograms across many branches",
+      "Event run sheets and staffing (see the event plan and run sheet job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_window",
+        "text": "Autumn window for The Reading Nook bookshop: 2.4 m wide, 0.9 m deep and 2.1 m high, with a 20 cm step up. 12 featured books, two wooden crates and a string of warm fairy lights we own. Budget £150 for new props. Goal: get people walking to the station to stop and come in. Up for October.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_salon",
+        "text": "Refresh plan for Velvet & Vine salon, 6 x 4 m: 3 styling chairs, a wash basin on the back wall that can't move, a window at the front and one door. It feels dark and cramped. Budget £2,000. We want it brighter, with room for a small retail shelf of hair products.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_stall",
+        "text": "Market stall display for Wild Fern Silver jewellery: a 1.8 x 0.75 m table under a 3 x 3 m gazebo at an outdoor Sunday market. 60 rings, 30 necklaces and 20 pairs of earrings. The busts and trays we own are listed. Budget £60. It all has to pack into one car.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_cafe",
+        "text": "Corner Table cafe, 8 x 5 m, counter along the left wall, two windows on the street side and the door in one corner. We seat 14 now and want 20 without it feeling squashed, with room for a pram and a wheelchair. Budget £3,500. Colours forest green and cream.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_tables",
+        "text": "Gift shop entrance: 3 round tables 90 cm across and one wall shelf 1.2 m wide. Push our new candle range (6 scents, 3 sizes each) and Christmas cards in November. Budget £80. Stock levels pasted.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_calendar",
+        "text": "A year of window themes for Pedal & Pine bike shop, window 3 m wide and 1.2 m deep. Our big sales dates are pasted: spring service month, kids' bikes in summer and Black Friday. We reuse props where we can. Budget £100 a month.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_let",
+        "text": "Styling plan for a one-bed holiday let in a converted barn: living room 5 x 4 m and bedroom 3.5 x 3 m, with window positions pasted. We own the sofa, bed and dining table. Budget £900 to get it photo-ready for listings in March.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "window display",
+      "shop window",
+      "visual merchandising",
+      "display plan",
+      "in-store display",
+      "shelf plan",
+      "planogram",
+      "market stall display",
+      "pop-up display",
+      "trade show stand",
+      "booth design",
+      "interior refresh",
+      "salon layout",
+      "cafe layout",
+      "office layout",
+      "room layout",
+      "holiday let styling",
+      "photo corner"
+    ],
+    "demand_sources": [
+      {
+        "note": "O*NET lists 164,800 merchandise displayers and window trimmers in the US in 2025, who plan store window and in-store displays; median wage $18.94 an hour.",
+        "url": "https://www.onetonline.org/link/summary/27-1026.00"
+      },
+      {
+        "note": "US Bureau of Labor Statistics: about 97,100 interior designer jobs in 2025, with median pay of $67,190 a year.",
+        "url": "https://www.bls.gov/ooh/arts-and-design/interior-designers.htm"
+      }
+    ]
+  },
+  {
+    "id": "document-and-slide-layout",
+    "title": "Layout spec for a deck, report, PDF or infographic",
+    "summary": "A page-by-page or slide-by-slide layout for a slide template, your current deck, a talk, a report, workbook, lead magnet, ebook, media kit or infographic.",
+    "area": "design",
+    "deliverable": "A style system (page size, grid, type scale, colour roles in hex, image and icon rules), then a layout row for each page or slide: layout type, zones, your text placed, the visual or chart spec and build notes. Infographics add a section flow and reading path. Ends with a build checklist for your tool.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Slide template and master layouts",
+          "Layout for your existing deck",
+          "Conference or webinar slides (visual first)",
+          "Report or annual review layout",
+          "Workbook or worksheet PDF",
+          "Lead magnet or checklist PDF",
+          "Ebook interior layout",
+          "Media kit or rate card",
+          "Portfolio or case study pages",
+          "Infographic (one long page)",
+          "Infographic set for social"
+        ]
+      },
+      {
+        "id": "pages",
+        "label": "How many pages or slides?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 12, up to 30.",
+        "max": 30
+      },
+      {
+        "id": "content",
+        "label": "Your text, numbers or current deck",
+        "type": "longtext",
+        "required": true,
+        "help": "Paste the text of each page or slide, or the whole document.",
+        "max": 50000
+      },
+      {
+        "id": "reader",
+        "label": "Who reads it, where and on what",
+        "type": "text",
+        "required": true,
+        "help": "Such as investors on a laptop, a room with a projector, or printed at home.",
+        "max": 400
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours, fonts and logo",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "tool",
+        "label": "Where will you build it?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "PowerPoint",
+          "Google Slides",
+          "Keynote",
+          "Canva",
+          "Adobe InDesign",
+          "Figma",
+          "Word or Google Docs",
+          "Not sure"
+        ]
+      },
+      {
+        "id": "size",
+        "label": "Page or slide size",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "16:9 slides",
+          "4:3 slides",
+          "A4 portrait",
+          "US Letter portrait",
+          "Square 1080 x 1080",
+          "Portrait 1080 x 1350",
+          "Long scroll, 1080 wide"
+        ]
+      },
+      {
+        "id": "data",
+        "label": "Numbers for charts",
+        "type": "longtext",
+        "required": false,
+        "max": 10000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "covers_all",
+        "text": "Every page or slide is laid out, in order.",
+        "weight": 4,
+        "pass_rule": "The page or slide count matches the brief within one; each page or slide has a layout row; all content from the brief is placed or listed as cut with a reason.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_content",
+        "text": "Only the buyer's text and numbers are used.",
+        "weight": 5,
+        "pass_rule": "Text is placed as given or shortened with the cut words moved to notes; every chart uses only numbers from the brief and names its chart type; no invented statistics, partners, audience figures, logos or quotes.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable",
+        "text": "It can be built in the named tool without guessing.",
+        "weight": 5,
+        "pass_rule": "The draft states page size, margins, grid columns, a type scale in points with font names, and colour roles in hex; each page or slide row gives layout type, zones with content, the visual or chart spec and image notes; a build checklist closes the draft.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "readable",
+        "text": "Easy to read where it will be used.",
+        "weight": 4,
+        "pass_rule": "Presented slide body text is at least 24 pt and print or PDF body text at least 10 pt; each slide or page carries one main message; text colour pairs are named for contrast; infographics include a reading path and alt text.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes are plain.",
+        "weight": 3,
+        "pass_rule": "Layout terms such as grid, gutter or master slide are explained once; notes are short; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 119,
+      "min_usd": 69,
+      "max_usd": 399,
+      "size": {
+        "field": "pages",
+        "unit": "page or slide",
+        "included": 12,
+        "per_unit_usd": 6
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a presentation and layout designer. Lay out the deck, document or infographic below so it can be built in my tool without guessing. First set the system: page or slide size, margins and grid, a type scale in points with font names (presented slide body text at least 24 pt, print at least 10 pt), colour roles in hex, and image and icon rules. Then give one layout row per page or slide: layout type, zones and the content in each, the visual or chart spec using only my numbers, and what moves to speaker notes. Keep one main message per slide or page. Choose charts by purpose: bar to compare, line for change over time, one big number for a single fact. For infographics, give a section flow, a reading path and alt text. Place all my content or list what you cut and why. Invent no numbers, logos or partners. End with a build checklist.",
+    "not_for": [
+      "Building the slide, PDF or image file for you",
+      "Writing a deck's story and slide text from rough notes (see the slide deck or carousel job)",
+      "Invented numbers, logos, partners or audience figures",
+      "Interactive dashboards or live data (see the KPI and dashboard spec job)",
+      "Flyers, covers and other print pieces (see the print layout spec job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_deck",
+        "text": "Lay out my 18-slide talk for a regional hospitality conference (slide text pasted). 25-minute slot, a big room with a projector, Google Slides. It's too wordy. Keep my points, one message per slide, and move the detail to speaker notes. Colours #1A3A5F and #E8A33D.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_infographic",
+        "text": "One long infographic of Hope Street Food Bank's 2025 results for our website, 1080 px wide: 41,300 meals, 1,120 families, 86 volunteers, 9 partner shops, 62% more referrals than 2024, and meals by month (pasted). Built in Canva. Brand green #2E7D32.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_workbook",
+        "text": "12-page printable workbook for my 6-week time management course for freelancers (text pasted): reflection prompts and a weekly tracker. People print at home on US Letter, so keep it light on ink. Canva. Colours #2A9D8F and #E9C46A, fonts Poppins and Lora.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_template",
+        "text": "16:9 PowerPoint template spec for Northgate Surveyors, 12 staff: title, section, agenda, two-column, chart, photo, quote, team and closing slides. Colours #1A3A5F and #E8A33D, font Lato. It must work for site reports with lots of photos.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_media_kit",
+        "text": "4-page A4 media kit for my baking Instagram @crumbsandcocoa: 48,200 followers, 71% women aged 25 to 44, average Reel views 18,000, past partners Millbrook Flour and Pantry Tin, and my rates (pasted). Built in Canva.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_report",
+        "text": "8-page annual review for Riverside Youth Football Club, for sponsors and parents, as an A4 PDF. Text and numbers pasted: 312 players, 22 teams, 41 volunteer coaches and £18,400 raised. The photos we have are described. InDesign.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_lead",
+        "text": "6-page lead magnet PDF for Fernway Physio, '7 desk stretches for neck pain'. Text and stretch steps pasted, approved by our physios. Mostly read on phones. Cover, intro, 7 stretches and a booking page. Canva, A4 portrait.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "slide design",
+      "slide layout",
+      "presentation design",
+      "deck design",
+      "slide template",
+      "powerpoint template",
+      "google slides template",
+      "infographic",
+      "infographic design",
+      "workbook design",
+      "lead magnet design",
+      "ebook layout",
+      "pdf layout",
+      "media kit",
+      "rate card",
+      "report layout",
+      "annual report design",
+      "canva layout"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance presentation designers average $65 an hour (about £393 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/presentation-designer"
+      },
+      {
+        "note": "Contra's infographic designer page says simple infographics typically cost $500 to $1,500, and complex ones $2,000 to $5,000 or more.",
+        "url": "https://contra.com/hire/infographic-designers"
+      }
+    ]
+  },
+  {
+    "id": "social-graphics-spec",
+    "title": "Social graphics, carousel and thumbnail layouts",
+    "summary": "Layouts to build in Canva or Figma: carousel slide designs, YouTube thumbnail concepts, story and Reel covers, quote cards, Pinterest pins, banners, a template kit or a screen menu.",
+    "area": "design",
+    "deliverable": "For each graphic: the platform size in pixels, safe zones, a layout in words with positions, the exact words with character counts, fonts and sizes, colours in hex, image or photo direction and build notes. Carousels get a hook and a call-to-action slide. Thumbnails come as 3 concepts per video with a test note. Kits add rules for reuse.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Carousel slide designs",
+          "YouTube thumbnail concepts",
+          "Story and Reel cover templates",
+          "Quote and tip card templates",
+          "Pinterest pin templates",
+          "Profile banners and highlight covers",
+          "Social template kit for your brand",
+          "Promo or launch graphic set",
+          "Menu or price board for screens"
+        ]
+      },
+      {
+        "id": "graphics",
+        "label": "How many graphics, slides or thumbnails?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 10, up to 40. A 7-slide carousel counts as 7. Each video's 3 thumbnail concepts count as 3.",
+        "max": 40
+      },
+      {
+        "id": "content",
+        "label": "What each graphic must say or show",
+        "type": "longtext",
+        "required": true,
+        "help": "Post text, video titles, quotes, offers or carousel slide text.",
+        "max": 20000
+      },
+      {
+        "id": "platforms",
+        "label": "Platforms",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Instagram",
+          "TikTok",
+          "YouTube",
+          "LinkedIn",
+          "Facebook",
+          "Pinterest",
+          "X",
+          "Threads"
+        ]
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours and fonts",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "photos",
+        "label": "Photos or footage you have",
+        "type": "text",
+        "required": false,
+        "max": 600
+      },
+      {
+        "id": "audience",
+        "label": "Who should stop scrolling",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "tool",
+        "label": "Where will you build them?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Canva",
+          "Figma",
+          "Adobe Express",
+          "Photoshop",
+          "CapCut",
+          "Not sure"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_sizes",
+        "text": "Each graphic is set up for its platform.",
+        "weight": 4,
+        "pass_rule": "Each graphic states its pixel size and aspect ratio for the platform (such as 1080 x 1350 for an Instagram portrait post or 1280 x 720 for a YouTube thumbnail) and its safe zone; the number of graphics matches the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_content",
+        "text": "The buyer's words, photos and facts are used.",
+        "weight": 5,
+        "pass_rule": "Words on each graphic come from the brief or are shortened from it with the change noted; no new claims, prices, results or quotes; images named are ones the buyer has or are marked [stock or AI image: ...]; thumbnails promise nothing the video title or brief does not deliver.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "buildable",
+        "text": "Each graphic can be built without guessing.",
+        "weight": 5,
+        "pass_rule": "Each graphic has a layout in words with positions (such as top third or left half), the exact text with a character count, font and size, hex colours and image direction; carousels have a hook slide and a last slide with the call to action; thumbnails give 3 distinct concepts per video with a note on which to test first.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "glanceable",
+        "text": "Readable on a phone at a glance.",
+        "weight": 4,
+        "pass_rule": "Thumbnail text is 4 words or fewer; carousel slide text is 25 words or fewer; text sits outside platform buttons and overlays; the text and background colours have strong contrast and are named.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Notes are plain.",
+        "weight": 3,
+        "pass_rule": "Build notes are short numbered steps; design terms such as safe zone are explained once; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 79,
+      "min_usd": 49,
+      "max_usd": 249,
+      "size": {
+        "field": "graphics",
+        "unit": "graphic",
+        "included": 10,
+        "per_unit_usd": 4
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a social media designer. Lay out the graphics below so I can build them in my tool without guessing. For each graphic, give the platform size in pixels and aspect ratio, the safe zone, a layout in words with positions, the exact words with a character count, fonts and sizes, colours in hex, and the image or photo to use. Carousels need a hook slide, one point per slide and a call-to-action slide, with 25 words or fewer per slide. YouTube thumbnails need 3 distinct concepts per video at 1280 x 720, with 4 words or fewer, a clear focal point, the bottom right kept clear, and a note on which to test first. Template kits need rules for fixed and editable parts. Use only my words and facts, and mark any image I do not have as [stock or AI image]. Do not promise more than the video or post delivers.",
+    "not_for": [
+      "Making the image files or posting them for you",
+      "Ad creative and ad tests (see the ad creative concepts job)",
+      "Clickbait thumbnails that promise what the video does not show",
+      "Other creators' faces, brands or copyrighted characters",
+      "Fake stats, reviews or before-and-after claims",
+      "Writing a carousel's story from rough notes (see the slide deck or carousel job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_carousel",
+        "text": "7-slide Instagram carousel for Pawsome Grooming: '5 signs your dog needs a groom'. Our tips are pasted. Brand colours #FF8A65 and #263238, font Poppins. Photos of 4 dogs we groomed, with their owners' OK. Built in Canva, 1080 x 1350.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_thumbs",
+        "text": "Thumbnail concepts for my channel Fix It With Femi (home repair how-tos, 8,400 subscribers). Next 3 videos: fixing a running toilet, patching a hole in drywall and silencing a squeaky door. Titles pasted. I shoot my own face shots. 3 concepts each, built in Canva.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_kit",
+        "text": "Social template kit for Fernway Physio: tip post, quote card, myth vs fact, weekly class timetable, story cover and a promo post, for Instagram and LinkedIn. Colours #00897B and #FFF3E0, fonts Montserrat and Open Sans. Brand notes pasted.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_pins",
+        "text": "10 Pinterest pin templates for Moss & Mortar's garden design blog posts (titles pasted). 1000 x 1500. We have our own garden photos. Colours #556B2F and #F5F0E1. Text must be readable on a phone.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_menu_screen",
+        "text": "Menu screens for the 2 TVs above the counter at Olive & Oak cafe, 1920 x 1080: breakfast, lunch, drinks and cakes, with items and prices pasted. Screens rotate every 10 seconds and must be readable from 4 metres.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_launch",
+        "text": "Book launch graphics for 'Murder at the Marmalade Fair' by Jane Pike: an Instagram post and story, a Facebook cover and a newsletter header. Cover art described. Launch date 3 October, KDP paperback and ebook.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_linkedin",
+        "text": "10-slide LinkedIn document carousel from our blog post 'How we cut quote times from 5 days to 1' at Birchwood Kitchens (post pasted). Brand navy #1F3A5F. Built in Figma.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "carousel design",
+      "instagram carousel design",
+      "linkedin carousel",
+      "youtube thumbnail",
+      "thumbnail ideas",
+      "thumbnail design",
+      "social media templates",
+      "canva templates",
+      "quote cards",
+      "story covers",
+      "highlight covers",
+      "pinterest pin design",
+      "profile banner",
+      "social graphics",
+      "post design",
+      "template kit",
+      "menu board screen",
+      "social media design"
+    ],
+    "demand_sources": [
+      {
+        "note": "Contra's thumbnail designer page lists services such as 10 YouTube thumbnails for $300 and thumbnail designers at $50 an hour.",
+        "url": "https://contra.com/hire/thumbnail-designers"
+      },
+      {
+        "note": "YunoJuno rate data: freelance digital designers average $63 an hour (about £380 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/digital-designer"
+      }
+    ]
+  },
+  {
+    "id": "photo-style-and-edit-spec",
+    "title": "Photo style guide, set-up or edit spec",
+    "summary": "Rules and recipes for your photos: a brand photo style guide, a phone or home studio set-up, a Lightroom or Snapseed edit recipe, a retouch brief or an image spec sheet per channel.",
+    "area": "design",
+    "deliverable": "The piece you choose. Style guides give mood, light, colour, backgrounds, angles and do and don't pairs in words. Set-up plans give a kit list within budget, a light layout with distances, exact phone or camera settings and test shots. Edit recipes give a table of slider values. Retouch briefs and spec sheets give sizes, file names and checks.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Brand photo style guide",
+          "Phone or home studio set-up plan",
+          "Edit recipe (Lightroom, Snapseed, VSCO)",
+          "Retouch brief for an editor",
+          "Batch edit spec for product photos",
+          "Image size and file spec per channel",
+          "Headshot or team photo guide"
+        ]
+      },
+      {
+        "id": "pieces",
+        "label": "How many pieces?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers one, up to 4. A set-up plan plus an edit recipe counts as two.",
+        "max": 4
+      },
+      {
+        "id": "business",
+        "label": "What you sell and where the photos are used",
+        "type": "longtext",
+        "required": true,
+        "max": 3000
+      },
+      {
+        "id": "current",
+        "label": "Your current photos, described",
+        "type": "longtext",
+        "required": false,
+        "help": "What works and what does not: light, colour, background, sharpness.",
+        "max": 4000
+      },
+      {
+        "id": "gear",
+        "label": "Camera, phone and kit you have",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "space",
+        "label": "Where you shoot and the light there",
+        "type": "text",
+        "required": false,
+        "help": "Such as a kitchen table by a north-facing window.",
+        "max": 400
+      },
+      {
+        "id": "budget",
+        "label": "Budget for kit",
+        "type": "text",
+        "required": false,
+        "max": 100
+      },
+      {
+        "id": "channels",
+        "label": "Where the photos go",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Own website or shop",
+          "Shopify",
+          "Amazon",
+          "Etsy",
+          "eBay",
+          "Instagram",
+          "TikTok",
+          "Pinterest",
+          "Print"
+        ]
+      },
+      {
+        "id": "look",
+        "label": "The look you want",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_piece",
+        "text": "The draft delivers the piece chosen, for the stated products and channels.",
+        "weight": 4,
+        "pass_rule": "The draft's sections match the piece chosen in the brief; it names the products and every channel from the brief; a style guide includes at least 4 do and don't pairs.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "own_facts",
+        "text": "The buyer's gear, space, budget and products are used.",
+        "weight": 5,
+        "pass_rule": "Kit lists start with the gear named in the brief and stay within the budget, with new items given as types rather than required brands and priced as [check price] if no budget is given; marketplace image rules are stated as general guidance with a note to check the current rules; no claims about the products are added.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "exact_settings",
+        "text": "Settings and sizes are given as exact numbers.",
+        "weight": 5,
+        "pass_rule": "Set-up plans give phone or camera settings as values (such as ISO, shutter speed, white balance in kelvin or a named preset) and light positions with distances; edit recipes give a table of slider names and values in order; spec sheets give pixel sizes, ratios, file type and a file naming pattern.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "testable",
+        "text": "There is a way to check results.",
+        "weight": 4,
+        "pass_rule": "The draft includes test shots or a before-and-after checklist with at least 4 checks, such as colour matches the product in hand, white backgrounds are white, no blown highlights and edges are sharp.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_notes",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Photo terms such as white balance or diffuser are explained once; steps are numbered and one action each; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 69,
+      "min_usd": 39,
+      "max_usd": 249,
+      "size": {
+        "field": "pieces",
+        "unit": "piece",
+        "included": 1,
+        "per_unit_usd": 39
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a product photographer and photo editor who teaches small sellers. Write the piece I choose. For a style guide, describe the look in words (light, background, colour, angles, props, crop, mood) with do and don't pairs. For a set-up plan, start with the gear I own, add only what fits my budget as item types, place the light with distances, give exact phone or camera settings (focus and exposure lock, ISO, shutter speed, aperture, white balance in kelvin) and list test shots. For an edit recipe, give a table of slider names and values in order, and how to save and batch apply it. For a spec sheet, give pixel sizes, ratios, background rules (marketplace rules change, so say to check the current ones) and a file naming pattern. Add at least four checks, such as colours match the real product. Never suggest edits that change how the product really looks.",
+    "not_for": [
+      "Taking, editing or retouching your photos",
+      "Edits that change a product's real colour, size or condition",
+      "Buying kit or booking a photographer for you",
+      "Shoot day shot lists and schedules (see the photo or video shoot brief job)",
+      "Model releases, licences or legal consent forms"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_rings",
+        "text": "Set-up plan and a Lightroom mobile edit recipe for Wild Fern Silver, handmade silver rings sold on Etsy. I shoot on an iPhone 14 at my kitchen table next to a north-facing window. Photos look grey and the silver looks dull. Budget $120 for kit. That's 2 pieces.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_style",
+        "text": "Photo style guide for Ember & Ash, 5 hot sauces in 150 ml bottles. Our freelancer's shots and our own phone shots must match. Look: moody, dark wood, warm light, chillies and smoke. Used on Shopify, Instagram and Amazon.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_spec",
+        "text": "Image size and file spec sheet for Little Fern Knits: our Shopify store on the Dawn theme, Etsy, Instagram and Pinterest. 120 products with 4 to 6 photos each. We want one naming pattern and the right crop for each place.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_retouch",
+        "text": "Retouch brief for a freelance editor: 300 photos of our ceramic tableware from a studio shoot for Kiln & Clay. White background, keep the glaze speckles, remove dust and fingerprints, soft shadow under each piece. Sizes for Shopify and Amazon.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_team",
+        "text": "Headshot guide for Northgate Surveyors' 12 staff, shot by our office manager on a Canon EOS R50 in our meeting room (one window, white walls). We want one consistent look for the website and LinkedIn.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_batch",
+        "text": "Batch edit spec for 80 product photos of Totewell cotton tote bags in 6 colours, shot on a white paper sweep with two LED panels. Colours must match the real fabric. Output for Shopify at 2048 x 2048 and for Etsy.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "photo style guide",
+      "product photo setup",
+      "home photo studio",
+      "phone photography",
+      "lightroom preset",
+      "edit recipe",
+      "snapseed",
+      "photo editing guide",
+      "retouch brief",
+      "retouching",
+      "image specs",
+      "image sizes",
+      "amazon image requirements",
+      "etsy photo size",
+      "product photography",
+      "white background photos",
+      "headshot guide",
+      "batch editing"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance retouchers average $59 an hour (about £358 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/retoucher"
+      },
+      {
+        "note": "YunoJuno rate data: freelance photographers average $78 an hour (about £475 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/photographer"
+      }
+    ]
+  },
+  {
+    "id": "illustration-and-artwork-brief",
+    "title": "Brief for an illustrator, artist or mascot",
+    "summary": "A brief an illustrator can quote from and draw to: spot illustrations, a mascot or character sheet, icons, picture book art, a book cover, a mural, a pattern, stickers or merch art.",
+    "area": "design",
+    "deliverable": "The goal, audience and style in words; a numbered list of pieces with subject, scene or pose, composition, colours in hex, sizes and file formats; character sheets with views, expressions and poses; spread-by-spread notes for books; rights questions to agree; rounds from sketch to final; and checks for judging each round.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Spot illustration set for a website",
+          "Mascot or character design sheet",
+          "Icon set brief",
+          "Children's book or picture book illustration brief",
+          "Book cover artwork brief",
+          "Mural or wall art brief",
+          "Pattern or textile design brief",
+          "Sticker or emoji pack brief",
+          "Merch artwork brief",
+          "Editorial or blog illustration series"
+        ]
+      },
+      {
+        "id": "items",
+        "label": "How many illustrations, icons or spreads?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 8, up to 32. A character sheet counts as 4.",
+        "max": 32
+      },
+      {
+        "id": "subject",
+        "label": "What the art is for and what it should show",
+        "type": "longtext",
+        "required": true,
+        "max": 8000
+      },
+      {
+        "id": "audience",
+        "label": "Who will see it",
+        "type": "text",
+        "required": true,
+        "max": 300
+      },
+      {
+        "id": "style",
+        "label": "Style in words",
+        "type": "text",
+        "required": false,
+        "help": "Such as flat shapes with thick outlines, or soft watercolour. Please name no living artist.",
+        "max": 600
+      },
+      {
+        "id": "brand",
+        "label": "Brand colours",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "uses",
+        "label": "Where it will be used",
+        "type": "multichoice",
+        "required": false,
+        "options": [
+          "Website",
+          "Print",
+          "Packaging",
+          "Merch",
+          "Social media",
+          "Animation",
+          "Book"
+        ]
+      },
+      {
+        "id": "dates_budget",
+        "label": "Dates and budget",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "story",
+        "label": "Manuscript or page text",
+        "type": "longtext",
+        "required": false,
+        "help": "For books, paste the text by page or spread.",
+        "max": 20000
+      }
+    ],
+    "rubric": [
+      {
+        "id": "complete_list",
+        "text": "Every piece is listed and numbered.",
+        "weight": 4,
+        "pass_rule": "The number of pieces matches the brief; each piece has a number, subject and where it is used; picture book briefs cover every spread in the brief.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "original_own_facts",
+        "text": "Original style and only the buyer's facts.",
+        "weight": 5,
+        "pass_rule": "The style is described in words with no living artist's name, existing character or other brand's art; subjects, text and characters come from the brief; nothing assumes rights the buyer has not stated.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "drawable",
+        "text": "An illustrator can quote and draw from it.",
+        "weight": 5,
+        "pass_rule": "Each piece has subject, scene or pose, composition, colours in hex, final size or ratio and file formats (such as SVG, or PNG at 300 dpi); a character sheet lists turnaround views and at least 4 expressions and 4 poses; icon briefs give the grid, stroke weight and corner rules.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "rights_rounds",
+        "text": "Rights and approval rounds are clear.",
+        "weight": 4,
+        "pass_rule": "The draft lists rights questions to agree (where it is used, for how long, edits, exclusivity, source files and credit), names sketch, colour and final rounds, and gives at least 4 checks for judging each round.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "plain_words",
+        "text": "Plain words.",
+        "weight": 3,
+        "pass_rule": "Art terms such as turnaround or spot illustration are explained once; sentences are short; no hype words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 89,
+      "min_usd": 49,
+      "max_usd": 299,
+      "size": {
+        "field": "items",
+        "unit": "piece",
+        "included": 8,
+        "per_unit_usd": 8
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are an art director who briefs illustrators. Write a brief an illustrator can quote from and draw to, for the piece below. Give the goal in one line, the audience, and the style in plain words (shapes, line, texture, colour, mood) without naming any living artist or existing character. List every piece with a number, subject, scene or pose, composition, where it is used, final size or ratio and file formats. For mascots and characters, give personality, shapes, colours in hex, turnaround views, at least four expressions and four poses. For icons, give the grid, stroke weight and corner rules. For picture books, go spread by spread with the text, what we see and where the words sit. Add rights questions to agree (uses, term, edits, exclusivity, source files, credit), rounds from sketch to final, and at least four checks for judging each round. Use only my facts.",
+    "not_for": [
+      "Drawing, painting or making the artwork",
+      "Briefs to copy a living artist's style or existing characters",
+      "Legal contracts or licences (you get the rights questions to agree)",
+      "Prompts for AI image tools (see the AI image prompt set job)",
+      "Logo design briefs (see the visual identity brief job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_mascot",
+        "text": "Mascot brief for Sparkle Bay Car Wash, used on signs, loyalty cards, the website and social posts. We like the idea of a friendly seal. Colours #0277BD and #FFEB3B. Kids and parents are our main customers. Budget about £600 for a freelance illustrator.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_spots",
+        "text": "8 spot illustrations for Ledgerly's website (bookkeeping software for cleaning businesses): hero, 4 feature sections, pricing, sign-up and a 404 page. Flat and friendly, people with simple faces. Colours #0B6E4F and #F2C14E. SVG for web.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_book",
+        "text": "Illustration brief for my picture book 'Mo and the Moon Kite': 32 pages, 13 spreads plus the cover. Text pasted by spread. Characters: Mo, a 6-year-old girl, and her grandad. Soft, warm style. 8.5 x 8.5 in, printed with IngramSpark.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_icons",
+        "text": "Icon set brief for Steady, a habit app: 24 icons, such as water, walk, sleep, stretch and read, plus app actions like add, edit and remind. 24 px grid, outline style, to sit well beside Material Symbols.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_mural",
+        "text": "Mural brief for the back wall of Corner Table cafe, 4.2 m wide by 2.6 m high, painted by hand. Themes: our street's market history, plants, people sharing food. Forest green and cream with one warm accent. Budget £1,800.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_stickers",
+        "text": "Sticker pack brief for our podcast 'Second Shift', where nurses talk about night shifts: 8 die-cut stickers, 2 to 3 inches, with phrases we've pasted and simple characters. Fun but kind, never mocking patients.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_cover_art",
+        "text": "Cover artwork brief for a cozy mystery, 'Murder at the Marmalade Fair' by Jane Pike: a village fair at dusk, a ginger cat and jars of marmalade on a stall. Full wrap for a 6 x 9 in paperback, with space for the title at the top. Budget $500.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "illustration brief",
+      "illustrator brief",
+      "mascot design",
+      "character design brief",
+      "character sheet",
+      "icon set",
+      "icon design brief",
+      "picture book illustration",
+      "children's book illustrator",
+      "book cover art",
+      "mural design",
+      "pattern design",
+      "textile design",
+      "sticker design",
+      "emoji pack",
+      "merch artwork",
+      "spot illustrations",
+      "art brief"
+    ],
+    "demand_sources": [
+      {
+        "note": "YunoJuno rate data: freelance illustrators average $59 an hour (about £359 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/illustrator"
+      },
+      {
+        "note": "YunoJuno rate data: freelance art directors average $67 an hour (about £409 a day).",
+        "url": "https://www.yunojuno.com/freelancer-rates-job-role/art-director"
+      }
+    ]
+  }
+]

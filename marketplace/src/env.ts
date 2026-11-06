@@ -21,14 +21,24 @@ export interface Env {
   CLERK_SECRET_KEY?: string;
   /** Comma-separated Clerk user ids with full ops access. */
   OPS_USER_IDS?: string;
-  /** "invite": buyers need a redeemed beta code; "open": anyone signed in. */
-  BETA_MODE?: "invite" | "open";
+  /** "true": buyers need a redeemed invite code to hire. "false" (the default, and every environment today): anyone
+   *  signed in can hire, with no code. */
+  INVITE_ONLY?: "true" | "false";
+  /** "on": anyone signed in can hire an agent here, and the job runs on our model keys. "off" or unset (every
+   *  environment today): agents run in people's own AI (download, API, MCP), and only ops can start jobs here. */
+  HOSTED_JOBS?: "on" | "off";
+  /** Optional: jobs one person can start in any 24 hours. "0" or unset = no limit (the default everywhere). */
+  DAILY_JOBS_PER_USER?: string;
   /** "fake": deterministic stand-in model replies (tests, local demo); "live": real providers. */
   MODEL_MODE?: "fake" | "live";
   /** "required": ops approves every draft before the buyer sees it (the beta default). */
   RELEASE_REVIEW?: "required" | "off";
   DAILY_MODEL_CAP_USD?: string;
   JOB_COST_CAP_USD?: string;
+  /** Most web searches one job step may run (runner/service.ts webSearchUses). "0" or unset = no web search. */
+  WEB_SEARCH_MAX_USES?: string;
+  /** Total spend allowed per provider in this environment, e.g. "anthropic:20,gemini:48,deepseek:11" (core/models.ts). */
+  PROVIDER_BUDGETS_USD?: string;
   /** Share of jobs (0 to 1) that also get a plain-AI baseline comparison. */
   BASELINE_SAMPLE_RATE?: string;
   EMAIL_FROM?: string;

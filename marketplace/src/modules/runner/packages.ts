@@ -1,6 +1,6 @@
 // House agent packages: plan -> draft -> check and fix, compiled from a persona's method (or a strong generic method)
 // and the job type's deliverable, rubric and limits. Pure and deterministic: same inputs, same package, same sha256.
-import type { AgentPackage, AgentStep, Area, JobType, Persona, RubricCriterion, SpecField } from "../../core/types.ts";
+import type { AgentPackage, AgentStep, Area, JobType, Persona, PersonaSoul, RubricCriterion, SpecField } from "../../core/types.ts";
 import { sha256Hex, stableJson } from "../../core/db.ts";
 
 /** Plain-writing rules every house agent follows (AI Blocks style: grade 8 to 9, specific, no hype). */
@@ -55,6 +55,10 @@ const AREA_TIPS: Record<Area, string> = {
   people: "Be fair, specific and lawful. Write so the person on the other side knows exactly what is expected of them.",
   operations: "Make every step something a person can do, with an owner and a clear finish line.",
   product: "Be exact. Name the user, the problem and how anyone can tell the work is done.",
+  engineering: "Write code that runs as given: complete files or functions, the language and versions stated, no invented APIs or libraries, and short notes on how to run and test it.",
+  data: "Show your working on the buyer's own data. Say what each number means, how it was computed and what the data cannot tell you.",
+  design: "Be specific enough that a designer, editor or tool can make it without guessing: sizes, order, words on screen and the reason for each choice.",
+  learning: "Start from what the learner can already do and what they must be able to do at the end. Check each part against that goal.",
 };
 
 /** A strong generic method for a job type when no persona wrote one. */
@@ -198,6 +202,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
   if (persona) {
     if (persona.profile.capabilities.length) sections.push(`## What you work with\n${persona.profile.capabilities.map(c => `- ${c}`).join("\n")}`);
     if (persona.profile.good_at.length) sections.push(`## Good at\n${persona.profile.good_at.map(c => `- ${c}`).join("\n")}`);
+    if (persona.profile.soul) sections.push(`## Who you are\n${soulBrief(persona.profile.soul)}`);
   }
   sections.push(
     `## Not part of this job\n${notFor.map(n => `- ${n}`).join("\n") || "- (nothing listed)"}\n\nIf the request asks for any of these, do the rest of the job, leave that part out, and say so in one plain line at the end.`,
@@ -214,6 +219,7 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
     { path: "reference/spec-fields.md", content: `# Details the buyer can give\n\n${specFieldsMarkdown(jobType.spec_fields)}\n` },
   ];
   if (persona) files.push({ path: "reference/persona.md", content: `# ${persona.name}, ${persona.title}\n\n${persona.tagline}\n\n${persona.profile.bio}\n\n## Method\n\n${method}\n` });
+  if (persona?.profile.soul) files.push({ path: "reference/soul.md", content: `# ${persona.name}, ${persona.title}\n\n${soulBrief(persona.profile.soul)}\n` });
 
   return {
     schema: "ai-blocks-agent/1",
@@ -232,7 +238,26 @@ export function buildHousePackage(persona: Persona | null, jobType: JobType): Ag
   };
 }
 
-function specFieldsMarkdown(fields: SpecField[]): string {
+/**
+ * The persona's character (its soul) as instructions. It shapes how the agent thinks about the job, the choices it
+ * makes and the voice of its own notes to the buyer. It never changes the facts, the rubric or the tone the buyer
+ * asked for in the deliverable itself.
+ */
+function soulBrief(soul: PersonaSoul): string {
+  return [
+    soul.essence,
+    `How you think: ${soul.temperament}`,
+    `How you talk to the buyer: ${soul.voice}`,
+    `What you care about:\n${soul.values.map(v => `- ${v}`).join("\n")}`,
+    `Your working habits:\n${soul.quirks.map(q => `- ${q}`).join("\n")}`,
+    `When the brief is thin or you disagree: ${soul.pushback}`,
+    `Outside work: ${soul.off_hours}`,
+    "Let this character show in your judgment, in the choices you make and in any short note to the buyer. In the deliverable itself, follow the tone the buyer asked for and the writing rules. Your character never changes the facts or the checklist.",
+  ].join("\n\n");
+}
+
+/** Exported for agent packs (packs/build.ts): a job type's details as a list the agent asks for. */
+export function specFieldsMarkdown(fields: SpecField[]): string {
   return fields.map(f => `- ${f.id} (${f.label})${f.required ? ", required" : ""}${f.help ? `: ${f.help}` : ""}`).join("\n") || "(none)";
 }
 

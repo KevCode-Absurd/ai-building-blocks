@@ -151,7 +151,7 @@ test("area chips stay put while searching, with zero counts for areas the search
   assert.equal(res.body.total, 1);
 });
 
-test("GET /api/agents returns public cards with three outcomes, a from price and area counts", async () => {
+test("GET /api/agents returns public cards with three outcomes, a turnaround and area counts, never a price", async () => {
   const t = await testEnv();
   await seedPersonas(t.env, "user_ops");
   const res = await t.api("GET", "/api/agents");
@@ -160,10 +160,11 @@ test("GET /api/agents returns public cards with three outcomes, a from price and
   assert.equal(res.body.total, 3);
   assert.deepEqual(res.body.areas, [{ id: "marketing", label: "Marketing", count: 2 }, { id: "content", label: "Content", count: 1 }]);
   const nova = res.body.agents.find((a: any) => a.id === "nova-seo");
-  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "id", "kind", "name", "outcomes", "portrait", "price_from_usd", "tagline", "title"]);
+  assert.deepEqual(Object.keys(nova).sort(), ["accent", "area", "area_label", "id", "kind", "mega", "name", "outcomes", "portrait", "ready_in_hours", "role", "tagline", "title"]);
   assert.deepEqual(nova.outcomes, ["An article that ranks for one search", "A landing page that converts search visitors"]);
-  assert.equal(nova.price_from_usd, 89); // lowest min price: seo-blog-post 89 vs landing-page-copy 99
-  assert.equal(res.body.agents.find((a: any) => a.id === "leo-ads").price_from_usd, 99);
+  assert.equal(nova.ready_in_hours, 24); // the quickest job type behind an outcome
+  // Hiring is free: no price, in any form, in the list.
+  assert.doesNotMatch(JSON.stringify(res.body), /price|\$\d|_usd|cents/i);
 
   const filtered = await t.api("GET", "/api/agents?area=content&q=article");
   assert.deepEqual(filtered.body.agents.map((a: any) => a.id), ["ada-content"]);
@@ -175,16 +176,16 @@ test("GET /api/agents returns public cards with three outcomes, a from price and
   assert.equal(bad.body.error.code, "unknown_area");
 });
 
-test("an outcome with no job type has no price, and an agent with none has no from price", async () => {
+test("an outcome with no job type has no job, and an agent with none has no turnaround", async () => {
   const t = await testEnv();
   setPersonasForTests([{ ...ADA, profile: { ...ADA.profile, outcomes: [ADA.profile.outcomes[1]] } }]);
   const card = (await t.api("GET", "/api/agents")).body.agents[0];
-  assert.equal(card.price_from_usd, null);
+  assert.equal(card.ready_in_hours, null);
   const prof = (await t.api("GET", "/api/agents/ada-content")).body.agent;
   assert.deepEqual(prof.outcomes, [{ id: "newsletter", title: "A monthly newsletter issue", deliverable: "One newsletter issue with a subject line and three short sections.", job_type_id: null, job: null }]);
 });
 
-test("GET /api/agents/:id hides method and source_roles and joins prices from job types", async () => {
+test("GET /api/agents/:id hides method and source_roles, joins job types, and never shows a price", async () => {
   const t = await testEnv();
   await seedPersonas(t.env, "user_ops");
   const res = await t.api("GET", "/api/agents/ada-content");
@@ -200,13 +201,14 @@ test("GET /api/agents/:id hides method and source_roles and joins prices from jo
   assert.deepEqual(a.capabilities, NOVA.profile.capabilities);
   assert.deepEqual(a.good_at, NOVA.profile.good_at);
   assert.deepEqual(a.not_for, NOVA.profile.not_for);
-  assert.equal(a.price_from_usd, 89);
+  assert.doesNotMatch(text, /price|\$\d|_usd|cents/i);
+  assert.equal(a.soul, null); // Nova's fixture has no soul yet
   const [article, newsletter] = a.outcomes;
   assert.equal(article.job_type_id, "seo-blog-post");
   assert.equal(article.deliverable, "A 1,500 word article with headings and a meta description.");
   assert.deepEqual(
-    { from: article.job.price_from_usd, base: article.job.price_base_usd, hours: article.job.turnaround_hours, deliverable: article.job.deliverable },
-    { from: 89, base: 129, hours: 24, deliverable: "A 1,200 to 2,000 word article with title, meta description, headings and internal link suggestions." },
+    { hours: article.job.turnaround_hours, deliverable: article.job.deliverable, keys: Object.keys(article.job).sort() },
+    { hours: 24, deliverable: "A 1,200 to 2,000 word article with title, meta description, headings and internal link suggestions.", keys: ["area", "deliverable", "id", "summary", "title", "turnaround_hours"] },
   );
   assert.equal(newsletter.job, null);
   // The bakery request fits the article outcome, so it opens with that job type.
@@ -235,7 +237,7 @@ test("before the first seed, pages read house personas straight from the data", 
   assert.deepEqual(list.body.agents.map((a: any) => a.id), ["leo-ads", "nova-seo"]);
   const one = await t.api("GET", "/api/agents/nova-seo");
   assert.equal(one.status, 200);
-  assert.equal(one.body.agent.outcomes[0].job.price_from_usd, 89);
+  assert.equal(one.body.agent.outcomes[0].job.turnaround_hours, 24);
   assert.ok(!("method" in one.body.agent));
 
   // A live expert persona shows alongside the data before seeding; a hidden one does not.

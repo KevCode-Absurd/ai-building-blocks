@@ -4,7 +4,7 @@
 /** Business areas used to group job types. Buyers come from every industry; areas are the kind of work. */
 export const AREAS = [
   "marketing", "content", "sales", "ecommerce", "customer-support", "research",
-  "finance", "people", "operations", "product",
+  "finance", "people", "operations", "product", "engineering", "data", "design", "learning",
 ] as const;
 export type Area = (typeof AREAS)[number];
 
@@ -112,6 +112,38 @@ export interface PersonaProfile {
   look: string;
   method: string;               // how this agent works (markdown); becomes the agent package instructions
   source_roles: string[];       // library role or item ids it was built from
+  /** The agent's character (its soul.md): how it thinks, talks and works. Shapes its messages and approach, never the facts. */
+  soul?: PersonaSoul;
+  /** How the agent writes (its personality.md, with soul.voice). Shapes wording and layout, never the facts. */
+  style?: PersonaStyle;
+}
+
+export interface PersonaStyle {
+  tone: string;                 // how my writing sounds
+  sentences: string;            // sentence length and rhythm
+  formatting: string;           // how I lay out a deliverable: headings, tables, lists, length
+  signature_moves: string[];    // 2 to 4 writing habits that are mine
+  words_i_use: string[];        // 3 to 8 words or short phrases I reach for
+  words_i_avoid: string[];      // 3 to 8 words or phrases I never write
+  sample_opening: string;       // my first reply to a new client, as I would write it
+  sample_feedback: string;      // how I tell a client that something will not work, as I would write it
+}
+
+export interface PersonaSoul {
+  essence: string;              // one sentence: who this person is
+  temperament: string;          // 2 or 3 sentences: how they think and react
+  voice: string;                // how they talk to clients, with a short example line in quotes
+  values: string[];             // 2 to 4 things they care about in the work
+  quirks: string[];             // 2 to 4 specific working habits
+  pushback: string;             // how they handle a thin brief or a request they disagree with
+  off_hours: string;            // one line: an interest outside work that shows up in how they work
+}
+
+export const MEGA_VARIANTS = ["general", "saas", "ecommerce", "local", "coaching"] as const;
+export type MegaVariant = (typeof MEGA_VARIANTS)[number];
+export interface PersonaMega {
+  kit: "traction";              // packs/mega/traction/
+  variant: MegaVariant;         // the kind of business this agent is tailored to
 }
 
 export interface Persona {
@@ -119,9 +151,14 @@ export interface Persona {
   kind: "house" | "expert";
   expert_id?: string | null;
   name: string;                 // a short, friendly first name, unique on the platform
-  title: string;                // "SEO strategist"
+  title: string;                // the job role, as on a job board: "SEO specialist"
   tagline: string;              // one line, outcome first
   area: Area;
+  /** Job role id (directory/data/roles.json). Agents in one role share its researched knowledge, tools and skills. */
+  role?: string;
+  /** A mega agent: one person who leads a team of channel specialists from a mega kit (packs/mega/<kit>/), tailored to
+   *  one kind of business. Mega agents sit outside the main roster count. */
+  mega?: PersonaMega;
   profile: PersonaProfile;
   status: "live" | "hidden";
   sort: number;

@@ -104,6 +104,7 @@ test("release moves the job to delivered, sets the times, marks the draft and no
   assert.equal(n.to_email, "user_buyer@example.com");
   assert.equal(n.status, "skipped"); // no EMAIL binding in tests
   assert.match(n.body_text, /Nova finished your draft/);
+  assert.doesNotMatch(`${n.subject} ${n.body_text}`, /\$|price|cents|charg|refund|credit|quote|beta|payment/i, "no money or beta words in the delivery message");
   // safe to repeat, and only from checking or in_review
   assert.equal((await delivery.releaseDraft(t.env, { jobId, draftId, actor: "user_ops", actorKind: "ops" })).status, "delivered");
   const running = await seedJob(t, { status: "running" });
@@ -323,7 +324,11 @@ test("the buyer view shows released drafts with pass marks only, the timeline an
   assert.deepEqual(v.actions, { accept: true, revise: true, reject: true, report: true });
   assert.equal(v.revisionsLeft, 2);
   assert.equal(v.orderAgain, "/new?persona=nova-seo&job=landing-page-copy");
-  assert.equal(v.quote.priceCents, 14900);
+  // Old jobs may still have a price in the database; buyers never see it. Hiring is free.
+  assert.equal(v.quote, undefined);
+  assert.deepEqual(v.plan, { turnaroundHours: 24, faster: false });
+  for (const key of ["priceCents", "currency", "paymentStatus"]) assert.equal(key in v.job, false, key);
+  assert.doesNotMatch(JSON.stringify({ ...v, drafts: undefined, request: undefined }), /\$|price|cents|charg|refund|credit|quote|beta|payment/i);
   assert.equal(v.request, "Landing page for my grooming app.");
 });
 
@@ -342,7 +347,8 @@ test("job list: newest first, plain labels, persona and job type", async () => {
   assert.equal(top.href, `/jobs/${recent.jobId}`);
   assert.equal(top.persona.name, "Nova");
   assert.equal(top.jobType.title, "Landing page copy");
-  assert.equal(top.priceCents, 14900);
+  assert.equal("priceCents" in top, false, "the jobs list shows no price");
+  assert.doesNotMatch(JSON.stringify(res.body.jobs), /\$|price|cents|charg|refund|credit|quote|beta|payment/i);
   assert.equal(res.body.jobs[1].statusLabel, "Final check");
 });
 

@@ -6,14 +6,15 @@
   "description": "AI Blocks marketplace: finished work from expert AI agents, at agents.useaiblocks.com",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/mega-team.mjs && vite build && node scripts/build-packs.mjs",
+    "packs:lock": "node scripts/build-packs.mjs --lock",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --test --experimental-test-module-mocks --test-reporter=spec \"test/**/*.test.ts\"",
-    "worker:dev": "vite build && wrangler dev --port 5290",
+    "worker:dev": "npm run build && wrangler dev --port 5290",
     "db:migrate:staging": "wrangler d1 migrations apply ai-blocks-agents-staging --remote --env staging",
     "db:migrate:production": "wrangler d1 migrations apply ai-blocks-agents --remote --env production",
-    "deploy:staging": "npm run typecheck && npm test && vite build && wrangler deploy --env staging",
-    "deploy:production": "npm run typecheck && npm test && vite build && wrangler deploy --env production"
+    "deploy:staging": "npm run typecheck && npm test && npm run build && wrangler deploy --env staging",
+    "deploy:production": "npm run typecheck && npm test && npm run build && wrangler deploy --env production"
   },
   "dependencies": {
     "@clerk/backend": "3.26.1",

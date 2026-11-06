@@ -51,6 +51,9 @@ test("the agreement is a public, clearly marked draft with the business plan ter
   for (const needle of [/keep ownership of your method and your examples/, /run your agent for buyers/, /details taken out/, /70% of the net amount/, /first 100 approved experts/, /75%/, /confidential/, /within 7 days/]) {
     assert.match(text, needle);
   }
+  // Hiring is free: the draft never promises that buyers pay or mentions a beta.
+  assert.match(text, /Hiring is free for buyers right now/);
+  assert.doesNotMatch(`${a.draft_notice} ${text}`, /when payments go live|during the beta/i);
 });
 
 test("applications are validated with plain messages and nothing is saved on a bad one", async () => {
@@ -237,6 +240,8 @@ test("approving creates a hidden expert persona and emails the expert", async ()
   const mail = await t.sql("SELECT subject, body_text, link FROM notifications WHERE user_id = 'user_persona' AND kind = 'expert.approved'");
   assert.equal(mail.length, 1);
   assert.match(mail[0].body_text, /75% founding rate/);
+  assert.match(mail[0].body_text, /Hiring is free for buyers right now/);
+  assert.doesNotMatch(mail[0].body_text, /when payments go live|beta/i);
   assert.match(mail[0].link, /\/studio$/);
 
   assert.equal((await t.api("GET", "/api/me", { user: "user_persona" })).body.expert.founding, true);

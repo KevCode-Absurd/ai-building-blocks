@@ -10,5 +10,5 @@ export const pages: PageDef[] = [
 ];
 
 export const nav: NavItem[] = [
-  { label: "New job", href: "/new", group: "main", order: 20 },
+  { label: "Describe a job", href: "/new", group: "main", order: 20, show: me => !!me?.hostedJobs },
 ];

@@ -1,4 +1,4 @@
-// /ops/agents: every agent, with filters, Go live / Retire (studio endpoints) and the Seed agents button.
+// /ops/agents: every agent, with filters, Go live / Retire / Bring back (studio endpoints) and the Seed agents button.
 import { useState } from "preact/hooks";
 import { Badge, Button, Input, Loaded, Notice, Page, Select, Table, useLoad } from "../../components.tsx";
 import { ApiError, api } from "../../lib/api.ts";
@@ -9,31 +9,53 @@ const STATUS_TONE = { live: "good", testing: "info", draft: "neutral", retired: 
 
 function AgentActions(props: { agent: AgentSummary; onDone: (message: string) => void; onError: (err: unknown) => void }) {
   const a = props.agent;
-  const [retiring, setRetiring] = useState(false);
+  const [confirming, setConfirming] = useState<"retire" | "unretire" | null>(null);
   const [reason, setReason] = useState("");
   const [busy, setBusy] = useState(false);
-  const call = async (path: string, body: unknown, message: string) => {
+  const call = async <T,>(path: string, body: unknown, message: (res: T) => string) => {
     setBusy(true);
-    try { await api(`/api/studio/agents/${encodeURIComponent(a.id)}/${path}`, { body }); props.onDone(message); setRetiring(false); }
-    catch (err) { props.onError(err); } finally { setBusy(false); }
+    try {
+      const res = await api<T>(`/api/studio/agents/${encodeURIComponent(a.id)}/${path}`, { body });
+      props.onDone(message(res)); setConfirming(null); setReason("");
+    } catch (err) { props.onError(err); } finally { setBusy(false); }
   };
   const name = a.persona_name ?? a.name;
-  if (retiring) {
+  const cancel = () => { setConfirming(null); setReason(""); };
+  if (confirming === "retire") {
     return (
       <div class="ops-inline-confirm">
         <Input value={reason} onValue={setReason} placeholder="Why retire it?" aria-label={`Why retire ${name}?`} maxLength={500} />
+        <p class="ops-meta">Buyers stop being matched to it. Its versions and past jobs stay.</p>
         <div class="row">
-          <Button small kind="danger" busy={busy} disabled={reason.trim().length < 3} onClick={() => call("retire", { reason }, `${name} is retired. Buyers will not be matched to it.`)}>Yes, retire</Button>
-          <Button small kind="ghost" onClick={() => setRetiring(false)}>Keep it</Button>
+          <Button small kind="danger" busy={busy} disabled={reason.trim().length < 3} onClick={() => call("retire", { reason: reason.trim() }, () => `${name} is retired. Buyers will not be matched to it.`)}>Yes, retire</Button>
+          <Button small kind="ghost" onClick={cancel}>Keep it</Button>
         </div>
       </div>
     );
   }
+  if (confirming === "unretire") {
+    return (
+      <div class="ops-inline-confirm">
+        <p class="ops-meta">{a.live_version
+          ? `It goes back to live on version ${a.live_version}, and buyers can be matched to it again.`
+          : "It has no live version, so it goes back to draft. Buyers are not matched to it until a version goes live."}</p>
+        <Input value={reason} onValue={setReason} placeholder="Note (optional)" aria-label={`Why bring back ${name}?`} maxLength={500} />
+        <div class="row">
+          <Button small busy={busy} onClick={() => call<{ status: "live" | "draft"; liveVersion: number | null }>("unretire", { reason: reason.trim() || undefined },
+            res => res.status === "live" ? `${name} is back and live on version ${res.liveVersion}.` : `${name} is back as a draft. It is not live.`)}>Yes, bring it back</Button>
+          <Button small kind="ghost" onClick={cancel}>Keep it retired</Button>
+        </div>
+      </div>
+    );
+  }
+  if (a.status === "retired") {
+    return <div class="row"><Button small kind="secondary" onClick={() => setConfirming("unretire")}>Bring back</Button></div>;
+  }
   const goLiveVersion = a.latest_version && (a.status !== "live" || a.latest_version !== a.live_version) ? a.latest_version : null;
   return (
     <div class="row">
-      {goLiveVersion && <Button small busy={busy} onClick={() => call("live", { version: goLiveVersion }, `${name} version ${goLiveVersion} is live.`)}>Go live (v{goLiveVersion})</Button>}
-      {a.status !== "retired" && <Button small kind="secondary" onClick={() => setRetiring(true)}>Retire</Button>}
+      {goLiveVersion && <Button small busy={busy} onClick={() => call("live", { version: goLiveVersion }, () => `${name} version ${goLiveVersion} is live.`)}>Go live (v{goLiveVersion})</Button>}
+      <Button small kind="secondary" onClick={() => setConfirming("retire")}>Retire</Button>
     </div>
   );
 }

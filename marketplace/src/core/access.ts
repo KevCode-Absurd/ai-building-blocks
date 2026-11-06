@@ -1,4 +1,4 @@
-// Accounts and permissions: users, personal orgs, staff roles, beta access and expert status.
+// Accounts and permissions: users, personal orgs, staff roles, hiring access and expert status.
 import type { Env } from "../env.ts";
 import type { Ctx } from "./http.ts";
 import { fail } from "./http.ts";
@@ -19,11 +19,25 @@ export interface Account {
   orgId: string;            // the user's personal org
   ops: boolean;
   reviewer: boolean;        // ops are reviewers too
-  betaAccess: boolean;      // can order jobs
+  /** Can hire agents. True for everyone signed in unless INVITE_ONLY is "true"; then it needs a redeemed invite code. */
+  betaAccess: boolean;
+  /** May start jobs that run here, on our model keys: everyone while HOSTED_JOBS is "on", else ops only. */
+  hostedJobs: boolean;
   expert: ExpertRow | null;
 }
 
 const opsIds = (env: Env) => (env.OPS_USER_IDS ?? "").split(",").map(s => s.trim()).filter(Boolean);
+
+/** Hiring is open to anyone signed in unless INVITE_ONLY is exactly "true". */
+export const inviteOnly = (env: Env) => env.INVITE_ONLY === "true";
+
+/** Jobs run on this site (on our model keys) only when HOSTED_JOBS is exactly "on". Off, agents run in people's own
+ *  AI: the free download, the API and the MCP connector. */
+export const hostedJobs = (env: Env) => env.HOSTED_JOBS === "on";
+
+/** What a visitor is told when they try to start a job while hosted jobs are off. */
+export const runsInYourAi = (env: Env) =>
+  `Our agents work in your own AI, so we do not run jobs on this site. Download the agent from its page, or connect your AI at ${env.APP_ORIGIN}/connect and load the agent there.`;
 
 /** Creates the user row and personal org on first sign-in; refreshes last_seen and email afterwards. */
 export async function ensureAccount(env: Env, auth: AuthUser): Promise<Account> {
@@ -53,7 +67,8 @@ export async function ensureAccount(env: Env, auth: AuthUser): Promise<Account> 
   return {
     user, auth, orgId: org!.org_id, ops,
     reviewer: ops || staffRoles.has("reviewer"),
-    betaAccess: ops || env.BETA_MODE === "open" || user.beta_access === 1,
+    betaAccess: ops || !inviteOnly(env) || user.beta_access === 1,
+    hostedJobs: ops || hostedJobs(env),
     expert,
   };
 }
@@ -74,10 +89,12 @@ export async function requireReviewer(ctx: Ctx): Promise<Account> {
   return a;
 }
 
-/** Buyers need beta access while BETA_MODE is "invite". */
+/** Starting a job here: ops only while HOSTED_JOBS is off. Then, unless INVITE_ONLY is "true" (buyers need a redeemed
+ *  invite code), anyone signed in. */
 export async function requireBuyer(ctx: Ctx): Promise<Account> {
   const a = await account(ctx);
-  if (!a.betaAccess) fail(403, "beta_access_required", "The beta is invite-only for now. Enter your invite code to order work.");
+  if (!a.hostedJobs) fail(403, "runs_in_your_ai", runsInYourAi(ctx.env));
+  if (!a.betaAccess) fail(403, "beta_access_required", "Hiring needs an invite code right now. Enter your code to hire an agent.");
   return a;
 }
 

@@ -5,7 +5,7 @@ import type { Me } from "../lib/auth.tsx";
  * access: who may open the page.
  *   public     anyone
  *   signed-in  any signed-in person
- *   buyer      signed in with beta access (ordering work)
+ *   buyer      signed in and able to hire (an invite code too, only while INVITE_ONLY is "true")
  *   expert     approved expert
  *   reviewer   reviewer or ops
  *   ops        AI Blocks team

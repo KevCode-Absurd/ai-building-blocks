@@ -1671,7 +1671,7 @@
   {
     "id": "marketplace-listing-copy",
     "title": "Marketplace listing copy",
-    "summary": "Title, bullets, description and search terms for a listing on Amazon, Etsy or Shopify.",
+    "summary": "Title, bullets, description and search terms for listings on Amazon, Etsy, Shopify, eBay, Walmart or TikTok Shop.",
     "area": "ecommerce",
     "deliverable": "For each listing: a title, five bullets or highlights, a description, search terms or tags, and a list of questions about missing facts. Written to the rules of the chosen marketplace.",
     "format": "markdown",
@@ -1687,7 +1687,8 @@
           "Etsy",
           "Shopify",
           "eBay",
-          "Walmart Marketplace"
+          "Walmart Marketplace",
+          "TikTok Shop"
         ]
       },
       {
@@ -1827,7 +1828,10 @@
       "product title",
       "bullet points",
       "etsy tags",
-      "shopify product page"
+      "shopify product page",
+      "ebay listing",
+      "walmart listing",
+      "tiktok shop listing"
     ],
     "demand_sources": [
       {

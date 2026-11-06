@@ -1,0 +1,403 @@
+[
+  {
+    "id": "structured-data-from-documents",
+    "title": "Import-ready CSV from pasted documents",
+    "summary": "Invoices, receipts, forms, business cards, order emails or price lists you paste, typed into clean rows ready to import, with every unclear value flagged.",
+    "area": "data",
+    "deliverable": "A CSV in a code block with one row per record and the columns you need; a field map to your import template; an exceptions list of unreadable, missing or doubtful values with the source text; and a short entry rules sheet so staff can do the next batch the same way.",
+    "format": "markdown",
+    "turnaround_hours": 24,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What are you turning into rows?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Supplier invoices or receipts",
+          "Customer or order emails",
+          "Business cards or email signatures",
+          "Paper or PDF forms and applications",
+          "Product spec sheets or price lists",
+          "Survey or feedback forms typed up",
+          "Timesheets or delivery notes",
+          "Something else (say what below)"
+        ]
+      },
+      {
+        "id": "records",
+        "label": "How many records (rows)?",
+        "type": "number",
+        "required": true,
+        "help": "Base price covers 50. Up to 120 per order.",
+        "max": 120
+      },
+      {
+        "id": "documents",
+        "label": "Paste the documents' text",
+        "type": "longtext",
+        "required": true,
+        "help": "Copy the text from each document and separate them with a line of dashes. Remove card and bank numbers first.",
+        "max": 60000
+      },
+      {
+        "id": "columns",
+        "label": "Columns you need, in order",
+        "type": "longtext",
+        "required": true,
+        "help": "Or paste your import template's header row.",
+        "max": 3000
+      },
+      {
+        "id": "target",
+        "label": "Where will you import it?",
+        "type": "text",
+        "required": false,
+        "help": "For example Xero, HubSpot, Shopify or a Google Sheet.",
+        "max": 200
+      },
+      {
+        "id": "formats",
+        "label": "Formats to use",
+        "type": "text",
+        "required": false,
+        "help": "Date format, decimal separator, currency, phone format and units.",
+        "max": 400
+      },
+      {
+        "id": "rules",
+        "label": "Rules for tricky values",
+        "type": "longtext",
+        "required": false,
+        "help": "For example what to do when a card shows two phone numbers.",
+        "max": 2000
+      },
+      {
+        "id": "duplicates",
+        "label": "What should happen to duplicates?",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "Flag and remove",
+          "Flag only",
+          "Keep them all"
+        ]
+      },
+      {
+        "id": "separator",
+        "label": "File type",
+        "type": "choice",
+        "required": false,
+        "options": [
+          "CSV (comma)",
+          "CSV (semicolon)",
+          "Tab-separated"
+        ]
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_rows_and_columns",
+        "text": "One row per record, with exactly the columns asked for, in order.",
+        "weight": 4,
+        "pass_rule": "The header row matches the brief's columns or template in order; the row count equals the records pasted minus any duplicates removed, and removed duplicates are listed; the draft states documents in, rows out and exceptions at the top.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "copied_not_guessed",
+        "text": "Every value is copied from the pasted documents, never guessed.",
+        "weight": 5,
+        "pass_rule": "Each name, number, date, amount and code in the CSV appears in the pasted text, changed only by the format rules in the brief; unreadable or missing values are left blank and listed as exceptions; no total, tax figure or code is calculated unless the brief asks and the sum is shown.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "imports_cleanly",
+        "text": "The file imports cleanly.",
+        "weight": 5,
+        "pass_rule": "The CSV is in one code block; every row has the same number of fields as the header; fields with commas, quotes or line breaks are wrapped in double quotes; dates and numbers use one format throughout, stated above the file; no card number, bank detail or password appears.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "exceptions_visible",
+        "text": "Every doubt is visible and easy to fix.",
+        "weight": 4,
+        "pass_rule": "An exceptions table lists each blank or doubtful value with its row, column, the source text and the reason (unreadable, missing, two values, out of range); each duplicate found is listed with the row it matches.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "repeatable_rules",
+        "text": "Someone else can do the next batch the same way.",
+        "weight": 3,
+        "pass_rule": "A field map shows each column, where it comes from in the document and its format rule; an entry rules sheet of 10 lines or fewer covers the tricky cases met in this batch; sentences are mostly under 20 words.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 59,
+      "min_usd": 29,
+      "max_usd": 199,
+      "size": {
+        "field": "records",
+        "unit": "record",
+        "included": 50,
+        "per_unit_usd": 1
+      },
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a careful data entry specialist. Turn the documents I paste into a CSV with exactly the columns I list, one row per record. Copy every value from the documents and never guess. Use one date and number format throughout and say which above the file. Leave any value you cannot read or find blank and list it in an exceptions table with the row, column, source text and reason. Wrap any field that contains a comma in double quotes. Give the CSV in one code block, then a field map and a short set of entry rules for next time. Leave out card numbers and bank details.",
+    "not_for": [
+      "Card numbers, bank details, passwords or ID numbers in the documents (remove them first)",
+      "Images, scans or handwriting you cannot paste as text",
+      "Logging in to your systems or doing the import for you",
+      "Bookkeeping choices such as which account or tax code a cost belongs to",
+      "Scraping websites or copying data you have no right to use",
+      "Cleaning an existing export (see the clean-up and import check job)"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_invoices",
+        "text": "Turn these 38 supplier invoices (text pasted) for Brook Lane Cafe into a CSV for a Xero bills import: ContactName, InvoiceNumber, InvoiceDate, DueDate, Description, Quantity, UnitAmount. Dates as DD/MM/YYYY. Leave tax codes blank for our bookkeeper.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_cards",
+        "text": "I typed up 64 business cards from a trade show (pasted). I need a HubSpot contacts CSV: first name, last name, company, job title, email, phone, website and notes. Flag any card with two emails.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_forms",
+        "text": "Our 45 volunteer application forms came in by email (text pasted). Make a sheet with name, email, phone, days available, skills and whether they ticked the photo consent box. Leave the health questions out.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_orders",
+        "text": "Order emails from our wholesale customers for October, 52 emails pasted. One row per order line: order date, shop name, product code, product name, quantity and requested delivery date. Our product list with codes is pasted too.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_price_lists",
+        "text": "Price lists from 3 suppliers are pasted, about 90 products. Columns: supplier, product name, pack size, unit, price per pack and price per unit. Each supplier writes pack sizes differently.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_timesheets",
+        "text": "Typed timesheets for 12 cleaners over two weeks are pasted. One row per shift: name, date, site, start, finish and break minutes. Flag any shift over 10 hours.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "data entry",
+      "csv from invoices",
+      "invoice data entry",
+      "business cards to csv",
+      "form to spreadsheet",
+      "pdf to csv",
+      "order entry",
+      "import template",
+      "xero import",
+      "hubspot import",
+      "contacts csv",
+      "typing up forms",
+      "spreadsheet data entry",
+      "data capture"
+    ],
+    "demand_sources": [
+      {
+        "note": "Upwork marketplace data reported by Staffing Industry Analysts ranks data entry second among the most in-demand admin support skills in 2025.",
+        "url": "https://www.staffingindustry.com/news/global-daily-news/fastest-growing-work-categories-include-coding-and-web-development"
+      }
+    ]
+  },
+  {
+    "id": "cash-allocation-plan",
+    "title": "Cash allocation plan with target percentages",
+    "summary": "A plan to split each deposit into set shares for profit, owner's pay, tax set-aside and running costs, with targets, a step-up plan and a twice-monthly worksheet.",
+    "area": "finance",
+    "deliverable": "Where your money goes today as shares of real revenue; target shares for profit, owner's pay, tax set-aside and running costs with a quarter-by-quarter step-up; a simple account set-up to discuss with your bank; a twice-monthly allocation worksheet with formulas; a quarterly profit check; and questions for your accountant.",
+    "format": "markdown",
+    "turnaround_hours": 48,
+    "spec_fields": [
+      {
+        "id": "piece",
+        "label": "What do you need?",
+        "type": "choice",
+        "required": true,
+        "options": [
+          "Full plan: today, targets, accounts and routine",
+          "Where my money goes today",
+          "Target percentages and a step-up plan",
+          "Account set-up to discuss with my bank",
+          "Twice-monthly allocation worksheet",
+          "Quarterly profit and owner's pay check"
+        ]
+      },
+      {
+        "id": "figures",
+        "label": "Your last 12 months of figures",
+        "type": "longtext",
+        "required": true,
+        "help": "Sales, materials and subcontractors, wages, owner's pay, tax paid or set aside, and running costs. A profit and loss report is ideal.",
+        "max": 15000
+      },
+      {
+        "id": "business",
+        "label": "What the business does, and how many people work in it",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "cash_now",
+        "label": "Cash in the bank today, and any debts or overdraft",
+        "type": "text",
+        "required": true,
+        "max": 400
+      },
+      {
+        "id": "owner_pay",
+        "label": "What owners take now, and what they need",
+        "type": "text",
+        "required": false,
+        "max": 300
+      },
+      {
+        "id": "accounts_now",
+        "label": "How many bank accounts you have now",
+        "type": "text",
+        "required": false,
+        "max": 200
+      },
+      {
+        "id": "income_pattern",
+        "label": "When money comes in",
+        "type": "text",
+        "required": false,
+        "help": "For example daily card takings, or 20 invoices paid each month.",
+        "max": 300
+      },
+      {
+        "id": "goals",
+        "label": "What you want to change",
+        "type": "text",
+        "required": false,
+        "max": 400
+      },
+      {
+        "id": "accountant_notes",
+        "label": "What your accountant has said about tax to set aside",
+        "type": "text",
+        "required": false,
+        "max": 400
+      }
+    ],
+    "rubric": [
+      {
+        "id": "right_pieces",
+        "text": "The plan has the pieces the buyer chose, built on their figures.",
+        "weight": 4,
+        "pass_rule": "Each chosen piece is present; the 'today' view shows each share as a percentage of real revenue (sales minus materials and subcontractors) with the sums shown; the worksheet has the allocation dates and a row per account.",
+        "critical": false,
+        "source": "template"
+      },
+      {
+        "id": "figures_from_brief",
+        "text": "Every figure comes from the buyer's numbers, and targets are labelled as targets.",
+        "weight": 5,
+        "pass_rule": "Each figure appears in the brief or is worked from it with the sum shown; target percentages are labelled as targets with a one-line reason; no bank, account product, interest rate or fee is named or assumed; anything missing is a [placeholder].",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "maths_adds_up",
+        "text": "Shares and amounts add up.",
+        "weight": 4,
+        "pass_rule": "Shares in each plan add up to 100% of real revenue; worksheet formulas or worked examples give amounts that match the shares; the step-up moves each share by no more than 3 points a quarter, from today's level towards the target.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "no_tax_or_investment_rulings",
+        "text": "No tax or investment rulings; the accountant decides tax.",
+        "weight": 5,
+        "pass_rule": "The tax set-aside uses the accountant's figure from the brief or is marked [confirm with your accountant]; nothing says how much tax is due, which costs are deductible, or what to invest in; the plan ends with questions for the accountant.",
+        "critical": true,
+        "source": "template"
+      },
+      {
+        "id": "routine_is_simple",
+        "text": "A routine an owner can follow in 20 minutes.",
+        "weight": 3,
+        "pass_rule": "The twice-monthly routine has 8 steps or fewer, one action each; sentences are mostly under 20 words; terms such as real revenue are explained once.",
+        "critical": false,
+        "source": "template"
+      }
+    ],
+    "price": {
+      "base_usd": 99,
+      "min_usd": 59,
+      "max_usd": 249,
+      "rush_multiplier": 1.5
+    },
+    "baseline_prompt": "You are a small business advisor. Using my last 12 months of figures, show where my money goes today as percentages of real revenue (sales minus materials and subcontractors). Then set target shares for profit, owner's pay, tax set-aside and running costs, with a plan to step up to them a few points each quarter. Suggest a simple set of bank accounts to discuss with my bank, a twice-monthly allocation worksheet with formulas and a quarterly profit check. Show every sum and make the shares add up to 100%. Do not tell me how much tax I owe or how to invest; mark the tax share for my accountant to confirm, and end with questions for my accountant.",
+    "not_for": [
+      "Tax advice, tax returns or how much tax you owe",
+      "Investment advice or where to put spare cash",
+      "Opening, moving or logging in to bank accounts for you",
+      "Loan, debt or insolvency advice",
+      "Forecasts for lenders or investors (see the cash flow forecast and financial model jobs)",
+      "Bank details, card numbers or passwords in the brief"
+    ],
+    "sample_briefs": [
+      {
+        "id": "pub_electrician",
+        "text": "I run a 3-person electrical firm. Last year: sales £412,000, materials £148,000, subcontractors £36,000, wages £96,000, other costs £71,000, and I took £48,000. Tax was a scramble in January. Cash today is £9,500. I want profit set aside properly.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_studio",
+        "text": "Design studio with two partners. Our 12-month profit and loss is pasted. We pay ourselves at random and never keep any profit. Our accountant says to keep 25% of profit for tax. We want the full plan and a twice-monthly sheet.",
+        "visibility": "public"
+      },
+      {
+        "id": "pub_salon",
+        "text": "Hair salon with 4 chairs and daily card takings. Figures pasted. We have a £3,000 overdraft that never clears. Show me where the money goes now and a gentle step-up plan.",
+        "visibility": "public"
+      },
+      {
+        "id": "hid_quarterly",
+        "text": "We've done allocations for two quarters. Account balances and transfers are pasted. Build the quarterly check: what to take as a profit payout, what to leave, and whether to change the shares.",
+        "visibility": "hidden"
+      },
+      {
+        "id": "hid_shop",
+        "text": "Online shop: sales $680,000, product costs $310,000, other figures pasted. I have one business account. Suggest an account set-up I can ask my bank about and a worksheet for the 10th and 25th.",
+        "visibility": "hidden"
+      }
+    ],
+    "keywords": [
+      "cash allocation",
+      "profit first",
+      "allocation percentages",
+      "owner's pay",
+      "tax set aside",
+      "bank account structure",
+      "pay yourself first",
+      "profit account",
+      "cash management",
+      "real revenue",
+      "twice monthly allocation",
+      "small business cash"
+    ],
+    "demand_sources": [
+      {
+        "note": "The Profit First author's site says over 175,000 companies have put its percentage-based cash allocation system in place.",
+        "url": "https://www.mikemichalowicz.com/profit-first/"
+      }
+    ]
+  }
+]

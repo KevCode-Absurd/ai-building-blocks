@@ -15,6 +15,14 @@
 .mcp-scopes { list-style: none; padding-left: 0; }
 .mcp-check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
 .mcp-check input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--text); flex: none; }
+.mcp-destination { display: grid; gap: 8px; }
+.mcp-destination p { margin: 0; }
+.mcp-redirect { display: block; padding: 8px 10px; background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); overflow-wrap: anywhere; word-break: break-all; }
 @media (max-width: 480px) {
   .mcp-address { flex-direction: column; }
 }
+
+/* The API list on /connect: each address on its own line, then what it returns. */
+.mcp-api { margin: 12px 0; display: grid; gap: 4px; }
+.mcp-api dt { margin-top: 8px; overflow-wrap: anywhere; }
+.mcp-api dd { margin: 0; color: var(--muted); }

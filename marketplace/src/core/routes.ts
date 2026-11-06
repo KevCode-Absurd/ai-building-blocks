@@ -1,6 +1,6 @@
-// Core API: health, public config, the signed-in account, and beta invite codes.
+// Core API: health, public config, the signed-in account, and invite codes (used only while INVITE_ONLY is "true").
 import { json, fail, str, type Route } from "./http.ts";
-import { account } from "./access.ts";
+import { account, hostedJobs, inviteOnly } from "./access.ts";
 import { first, nowIso } from "./db.ts";
 import { eventStatement } from "./events.ts";
 
@@ -11,7 +11,8 @@ export const coreRoutes: Route[] = [
     method: "GET", path: "/api/config", handler: ctx => json({
       clerkPublishableKey: ctx.env.CLERK_PUBLISHABLE_KEY,
       env: ctx.env.APP_ENV,
-      betaMode: ctx.env.BETA_MODE ?? "invite",
+      inviteOnly: inviteOnly(ctx.env),
+      hostedJobs: hostedJobs(ctx.env),
       libraryUrl: "https://useaiblocks.com",
     }),
   },
@@ -24,6 +25,7 @@ export const coreRoutes: Route[] = [
         orgId: a.orgId,
         roles: { ops: a.ops, reviewer: a.reviewer },
         betaAccess: a.betaAccess,
+        hostedJobs: a.hostedJobs,
         expert: a.expert ? { id: a.expert.id, status: a.expert.status, displayName: a.expert.display_name, founding: !!a.expert.founding } : null,
       });
     },

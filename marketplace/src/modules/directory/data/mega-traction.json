@@ -1,0 +1,120 @@
+{
+  "kit": "traction",
+  "source": "packs/mega/traction",
+  "channels": [
+    {
+      "id": "creators-and-newsletters",
+      "name": "Creators, newsletters and podcasts in your niche",
+      "book_chapter": "Targeting blogs",
+      "job": "Hand me work when the client's buyers follow niche newsletters, podcasts or creators: I build a creator shortlist, draft outreach and sponsor briefs, design a cheap test and read the results. At level 3 I send outreach within the client's caps; payments need a new yes."
+    },
+    {
+      "id": "publicity",
+      "name": "Publicity: press and journalists",
+      "book_chapter": "Publicity",
+      "job": "Hand me work when the client has a real story for press: a launch, data, a timely angle or an expert founder. I find the right reporters, draft pitches and a press kit, plan expert-source replies and read the results. At level 3 I send approved pitches within caps."
+    },
+    {
+      "id": "unconventional-pr",
+      "name": "Unconventional PR: stunts and customer appreciation",
+      "book_chapter": "Unconventional PR",
+      "job": "Hand me work when the client needs attention without an ad budget: I design stunts that make the product's point and customer-appreciation tests with a holdout group, check the risks and rules, and read the results. At level 3 I act within caps; stunts need a new yes."
+    },
+    {
+      "id": "search-ads",
+      "name": "Search ads (Google, Bing, and ads in AI answers where they exist)",
+      "book_chapter": "Search engine marketing",
+      "job": "Hand me search ads work for the traction test: Google, Microsoft and AI-answer ads (Google AI Overviews and AI Mode, Copilot, ChatGPT where sold). I size demand, plan a capped test, draft keywords and ads, and read results. At level 3 I launch within the client's caps."
+    },
+    {
+      "id": "social-and-display-ads",
+      "name": "Social and display ads (Meta, TikTok, LinkedIn, Reddit, YouTube, display)",
+      "book_chapter": "Social and display ads",
+      "job": "Hand me paid social and display tests: Meta, TikTok, LinkedIn, Reddit, YouTube and Google display. I size budgets to learning thresholds, draft concepts, audiences and a capped plan, and read results against the shop or CRM. At level 3 I launch within the client's caps."
+    },
+    {
+      "id": "offline-ads",
+      "name": "Offline ads (print, radio, TV, outdoor, direct mail)",
+      "book_chapter": "Offline ads",
+      "job": "Hand me offline ad tests: direct mail and door drops, local print, radio and streaming audio, outdoor and TV. I pick one placement, design tracking and a holdout, draft the copy and brief, and read the response. At level 3 I book self-serve placements within the cap."
+    },
+    {
+      "id": "seo-aeo-geo",
+      "name": "SEO plus AI answers (AEO and GEO)",
+      "book_chapter": "Search engine optimisation",
+      "job": "Hand me search and AI-answer work: baselines from Search Console and GA4, page-two and long-tail page tests, share-of-answers checks in ChatGPT, AI Mode and Perplexity, and fixing wrong facts. At level 3 I publish page changes within the client's limits."
+    },
+    {
+      "id": "content-marketing",
+      "name": "Content marketing",
+      "book_chapter": "Content marketing",
+      "job": "Hand me content work: picking topics from real customer questions, briefing and drafting pieces, finding guest-post outlets, planning distribution and measuring which pieces bring leads. At level 3 I publish, pitch and post within the client's limits and log every action."
+    },
+    {
+      "id": "email-marketing",
+      "name": "Email marketing",
+      "book_chapter": "Email marketing",
+      "job": "Hand me email work: checking consent and sender rules (Gmail, Yahoo, Microsoft; US, UK, EU), writing sign-up offers, welcome and onboarding sequences, and reading clicks, complaints and sales. At level 3 I send within the client's caps; list imports need a new yes."
+    },
+    {
+      "id": "viral-and-referral",
+      "name": "Viral loops and referral programmes",
+      "book_chapter": "Viral marketing",
+      "job": "Hand me viral and referral work: measuring word of mouth, designing two-sided rewards and share loops, working out the viral coefficient and cycle time, and checking reward and consent rules. At level 3 I launch and message within the client's caps; payouts need a new yes."
+    },
+    {
+      "id": "engineering-as-marketing",
+      "name": "Free tools as marketing (calculators, templates, widgets, small apps)",
+      "book_chapter": "Engineering as marketing",
+      "job": "Hand me free-tool work: picking, specifying and testing a calculator, template, grader, quiz, browser extension or small app that brings in buyers, and saying whether it can be built without code. At level 3 I build and publish within the client's limits."
+    },
+    {
+      "id": "business-development",
+      "name": "Partnerships and business development",
+      "book_chapter": "Business development",
+      "job": "Hand me partnership work: finding partners who already reach the client's buyers, drafting pitches and simple terms, planning co-marketing, integrations, referral swaps or account mapping, and tracking partner-sourced customers. At level 3 I send approved outreach within the client's caps."
+    },
+    {
+      "id": "sales",
+      "name": "Sales (outbound and founder-led)",
+      "book_chapter": "Sales",
+      "job": "Hand me founder-led and outbound sales work: target lists, hand-written cold emails and LinkedIn notes within US, UK and EU rules, call scripts, follow-ups and pipeline numbers. I check deliverability and consent rules first. At level 3 I send email within the client's caps."
+    },
+    {
+      "id": "affiliate-programs",
+      "name": "Affiliate and creator commission programmes",
+      "book_chapter": "Affiliate programs",
+      "job": "Hand me affiliate and creator commission work: a commission the economics can carry, first partners and pitches, terms and disclosure rules, and whether partner sales are new. At level 3 I send pitches and approve partners within the client's caps, and log every action."
+    },
+    {
+      "id": "existing-platforms",
+      "name": "Existing platforms (app stores, marketplaces, Google Business Profile, AI assistant and plug-in stores)",
+      "book_chapter": "Existing platforms",
+      "job": "Hand me work on platforms that already hold the buyers: app stores, Amazon, Etsy and eBay, the Shopify App Store, Google Business Profile, and AI assistant directories (ChatGPT, Claude). I audit listings, plan store tests and pilots, and draft copy. At level 3 I update listings within caps."
+    },
+    {
+      "id": "trade-shows",
+      "name": "Trade shows",
+      "book_chapter": "Trade shows",
+      "job": "Hand me work when the client's buyers, retailers or partners gather at industry shows or fairs: I pick shows, plan a cheap first test, draft meeting requests and follow-ups, check lead-data rules and read the results. At level 3 I send messages within caps."
+    },
+    {
+      "id": "offline-events",
+      "name": "Offline events (meetups, workshops, pop-ups)",
+      "book_chapter": "Offline events",
+      "job": "Hand me work when meeting buyers face to face could build trust or a community: I design meetups, workshops, co-hosted events and pop-ups, plan promotion and follow-up, check local event rules and read the results. At level 3 I publish and invite within caps."
+    },
+    {
+      "id": "speaking-engagements",
+      "name": "Speaking, podcast guesting and webinars",
+      "book_chapter": "Speaking engagements",
+      "job": "Hand me work when the founder or expert can win buyers by being heard: talks, podcast guest spots, webinars and live streams. I find stages, shape the talk, draft pitches and the offer, and read the results. At level 3 I send approved pitches within the client's limits."
+    },
+    {
+      "id": "community-building",
+      "name": "Community building (forums, Discord, Slack, Reddit, groups)",
+      "book_chapter": "Community building",
+      "job": "Hand me community work: finding the Reddit, Discord, Slack, Facebook and forum spaces where buyers talk, reading each one's self-promotion rules, drafting helpful posts and replies, and planning the client's own community. At level 3 I post from the client's accounts within their limits."
+    }
+  ]
+}

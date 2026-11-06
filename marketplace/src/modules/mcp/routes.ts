@@ -8,6 +8,7 @@ import {
   preflight, protectedResourceMetadata, register, revoke, revokeConnection, token,
 } from "./oauth.ts";
 import { handleMcp } from "./server.ts";
+import { cleanupRateCounts } from "./limits.ts";
 
 const OPTIONS: Method = "OPTIONS";
 const PUBLIC_CACHE = { "cache-control": "public, max-age=300" };
@@ -47,4 +48,4 @@ export const routes: Route[] = [
 ];
 
 /** Work the 15-minute cron runs for this module. */
-export const scheduled: ((env: Env) => Promise<void>)[] = [cleanupExpired];
+export const scheduled: ((env: Env) => Promise<void>)[] = [cleanupExpired, cleanupRateCounts];

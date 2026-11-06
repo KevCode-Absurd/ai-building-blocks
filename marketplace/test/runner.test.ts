@@ -122,6 +122,26 @@ test("house packages are deterministic and built from the persona's method", asy
   }
 });
 
+test("a persona's soul goes into its instructions and a soul.md file, without overriding facts or tone", async () => {
+  const soul = {
+    essence: "A former bike mechanic who treats every page like a gear train.",
+    temperament: "Patient and exact. I check each part before I move on.",
+    voice: "Plain and friendly. \"Here's the one change that matters most.\"",
+    values: ["Pages that load fast", "One clear next step"],
+    quirks: ["I read the page out loud", "I write the button last"],
+    pushback: "If the brief has no proof, I say so and leave a placeholder instead of guessing.",
+    off_hours: "I fix old bikes on Sundays, so I like parts that fit without forcing.",
+  };
+  const withSoul = { ...structuredClone(NOVA), profile: { ...structuredClone(NOVA.profile), soul } };
+  const pkg = packages.buildHousePackage(withSoul, LANDING_PAGE);
+  assert.match(pkg.skill.instructions, /## Who you are\nA former bike mechanic/);
+  assert.ok(pkg.skill.instructions.includes(soul.pushback));
+  assert.match(pkg.skill.instructions, /never changes the facts or the checklist/);
+  assert.ok(pkg.files.some(f => f.path === "reference/soul.md" && f.content.includes(soul.off_hours)));
+  assert.notEqual(await packages.packageSha(pkg), await packages.packageSha(packages.buildHousePackage(NOVA, LANDING_PAGE)));
+  assert.ok(!packages.buildHousePackage(NOVA, LANDING_PAGE).skill.instructions.includes("## Who you are"), "no soul, no section");
+});
+
 test("generic house packages use a strong generic method; long jobs draft on the premium tier", async () => {
   const generic = packages.buildHousePackage(null, LANDING_PAGE);
   assert.ok(!generic.skill.instructions.includes(NOVA.profile.method));
@@ -552,4 +572,37 @@ test("runs that never finish are failed by the sweep, and ops hears about it", a
   assert.equal((await t.sql("SELECT status FROM runs WHERE id = ?", runId))[0].status, "failed");
   assert.equal(await status(t, jobId), "failed");
   assert.equal(calls.ops.at(-1).kind, "job_run_failed");
+});
+
+// ---------- Web search ----------
+
+test("web search: text steps may search; cited pages reach later steps and the draft's sources list", async () => {
+  const t = await setup({ WEB_SEARCH_MAX_USES: "4" });
+  const page = { url: "https://www.ftc.gov/business-guidance/resources/example", title: "FTC guidance" };
+  const seen: { id: string; webSearch?: number; prompt: string }[] = [];
+  registerFake("runner.step.plan", req => { seen.push({ id: "plan", webSearch: req.webSearch, prompt: req.prompt }); return { text: "Plan: lead with the free trial.", sources: [page] }; });
+  registerFake("runner.step.draft", req => { seen.push({ id: "draft", webSearch: req.webSearch, prompt: req.prompt }); return { text: "# Book more grooms\n\nStart your free trial." }; });
+  registerFake("runner.step.check_and_fix", req => { seen.push({ id: "check", webSearch: req.webSearch, prompt: req.prompt }); return { text: "# Book more grooms\n\nStart your free trial today." }; });
+  const jobId = await makeJob(t);
+  const { runId } = await runner.startJobRun(t.env, { jobId, actor: "user_buyer", actorKind: "user" });
+  const { draftId } = await runner.executeRun(t.env, runId);
+
+  assert.deepEqual(seen.map(s => [s.id, s.webSearch]), [["plan", 4], ["draft", 4], ["check", 4]]);
+  assert.ok(seen[1].prompt.includes(`Pages this step cited:\n- FTC guidance: ${page.url}`), "the draft step can cite the plan's pages");
+  const [plan] = await t.sql("SELECT sources FROM run_steps WHERE run_id = ? AND step_id = 'plan'", runId);
+  assert.deepEqual(JSON.parse(plan.sources), [page]);
+  const [draft] = await t.sql("SELECT content FROM drafts WHERE id = ?", draftId);
+  assert.equal(draft.content, `# Book more grooms\n\nStart your free trial today.\n\n## Sources from web search\n\n- [FTC guidance](${page.url})`);
+});
+
+test("web search is off unless WEB_SEARCH_MAX_USES is set; the sources list skips pages the text already links", () => {
+  assert.equal(runner.webSearchUses({} as Env), 0);
+  assert.equal(runner.webSearchUses({ WEB_SEARCH_MAX_USES: "0" } as Env), 0);
+  assert.equal(runner.webSearchUses({ WEB_SEARCH_MAX_USES: "five" } as Env), 0);
+  assert.equal(runner.webSearchUses({ WEB_SEARCH_MAX_USES: "5" } as Env), 5);
+  assert.equal(runner.webSearchUses({ WEB_SEARCH_MAX_USES: "500" } as Env), 20);
+  const a = { url: "https://a.example/x", title: "A [draft]" }, b = { url: "https://b.example/p_(1)", title: "B" };
+  assert.equal(runner.withSources("Text citing https://a.example/x.", [a]), "Text citing https://a.example/x.");
+  assert.equal(runner.withSources("Text.", [a, b]), "Text.\n\n## Sources from web search\n\n- [A draft](https://a.example/x)\n- [B](https://b.example/p_%281%29)");
+  assert.equal(runner.withSources("Text.", []), "Text.");
 });

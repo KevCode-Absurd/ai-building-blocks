@@ -1,6 +1,6 @@
 // /expert: the expert's status page. Before approval it says what happens next; once approved it is the dashboard.
 import { Badge, Button, Card, Empty, Notice, Page, Spinner, Table, useLoad, Loaded } from "../../components.tsx";
-import { api, money, when } from "../../lib/api.ts";
+import { api, when } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import {
   AGENT_STATUS, AREA_LABELS, JOB_STATUS_LABELS, WhatNext, canApplyAgain, firstName, longDate, pct,
@@ -34,8 +34,8 @@ function Invitation(props: { me: ExpertMe }) {
           <p>Your dashboard shows each job your agent does, how buyers rated it, and how it did against plain AI.</p>
         </Card>
         <Card>
-          <h3>A founding rate</h3>
-          <p>Payments are on hold during the beta. When they go live, you earn 70% of the net amount from each job. The first {f.limit} approved experts get 75%.</p>
+          <h3>Be a founding expert</h3>
+          <p>The first {f.limit} approved experts are founding experts. Hiring is free for buyers right now, so your agent can get real jobs and ratings from day one.</p>
           <p class="muted small">{f.left > 0 ? `${f.left} of ${f.limit} founding spots are left.` : `All ${f.limit} founding spots are taken.`}</p>
         </Card>
       </div>
@@ -96,8 +96,8 @@ function Dashboard(props: { expert: ExpertView }) {
     <Page wide title="Expert dashboard" intro="How your agents are doing with buyers."
       actions={<Button href="/studio">Build an agent</Button>}>
       <p class="row exp-badges">
-        {e.founding ? <Badge tone="good">Founding expert · 75% rate</Badge> : <Badge>Expert · 70% rate</Badge>}
-        <span class="muted small">Payouts are not live yet.</span>
+        {e.founding ? <Badge tone="good">Founding expert</Badge> : <Badge>Expert</Badge>}
+        <span class="muted small">Hiring is free for buyers right now.</span>
       </p>
       <Loaded state={state}>{d => <DashboardBody d={d} />}</Loaded>
     </Page>
@@ -124,7 +124,6 @@ function DashboardBody(props: { d: ExpertDashboard }) {
         <Stat label="Jobs handled" value={String(t.jobs)} sub={`${t.revision_requests} ${t.revision_requests === 1 ? "change" : "changes"} asked for`} />
         <Stat label="Accepted" value={pct(t.acceptance_rate)} sub={finished ? `${t.accepted} of ${finished} finished jobs` : "No finished jobs yet"} />
         <Stat label="Average rating" value={t.avg_rating === null ? "–" : `${t.avg_rating} / 5`} sub={`${t.ratings} ${t.ratings === 1 ? "rating" : "ratings"}`} />
-        <Stat label="Estimated work value" value={money(d.work_value.estimated_share_cents)} sub="An estimate. Not paid yet." />
       </div>
 
       {persona && (
@@ -169,7 +168,7 @@ function DashboardBody(props: { d: ExpertDashboard }) {
       <Card title="Jobs your agents handled">
         <Table
           empty="No jobs yet. Jobs show here once buyers hire one of your live agents."
-          head={["Job", "Agent", "Status", "Rating", "Price", "Started"]}
+          head={["Job", "Agent", "Status", "Rating", "Started"]}
           rows={d.jobs.map(j => {
             const o = OUTCOME[j.outcome] ?? OUTCOME.open!;
             return [
@@ -177,7 +176,6 @@ function DashboardBody(props: { d: ExpertDashboard }) {
               <span>{j.agent_name}{j.agent_version ? <span class="muted small"> v{j.agent_version}</span> : null}</span>,
               <Badge tone={o.tone}>{o.label ?? JOB_STATUS_LABELS[j.status] ?? j.status}</Badge>,
               j.rating === null ? "–" : `${j.rating} / 5`,
-              j.price_cents === null ? "–" : money(j.price_cents),
               when(j.created_at),
             ];
           })}
@@ -192,14 +190,6 @@ function DashboardBody(props: { d: ExpertDashboard }) {
         )}
       </Card>
 
-      <Card title="Estimated work value">
-        <p class="exp-big">{money(d.work_value.estimated_share_cents)}</p>
-        <p>
-          {d.work_value.accepted_jobs} accepted {d.work_value.accepted_jobs === 1 ? "job" : "jobs"}, worth {money(d.work_value.accepted_value_cents)} in job prices.
-          At your {pct(d.work_value.rate)} rate, your share would be about {money(d.work_value.estimated_share_cents)}.
-        </p>
-        <Notice tone="warn" title="Not paid yet">{d.work_value.note}</Notice>
-      </Card>
     </div>
   );
 }

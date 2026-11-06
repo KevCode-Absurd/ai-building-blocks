@@ -3,7 +3,7 @@ import { fail, int, json, oneOf, str, type Route } from "../../core/http.ts";
 import type { Env } from "../../env.ts";
 import { requireOps } from "../../core/access.ts";
 import { gateMetrics } from "./service.ts";
-import { costReport, jobRecord, jobSummary, listAgents, listJobSummaries } from "./queries.ts";
+import { costReport, jobRecord, jobSummary, listAgents, listJobSummaries, reviewReport } from "./queries.ts";
 import {
   addNote, assignAgent, cancelJob, changeStaff, createBetaCodes, listBetaCodes, listStaff, parseExpiry, releaseJob, rerunJob, resolveJob, seedAll,
   seedIfContentChanged,
@@ -155,6 +155,13 @@ export const routes: Route[] = [
       const p = ctx.url.searchParams;
       const agents = await listAgents(ctx.env, { status: p.get("status") ?? undefined, kind: p.get("kind") ?? undefined, job_type: p.get("job_type") ?? undefined, q: p.get("q") ?? undefined });
       return json({ agents });
+    },
+  },
+
+  {
+    method: "GET", path: "/api/ops/review", handler: async ctx => {
+      await requireOps(ctx);
+      return json(await reviewReport(ctx.env));
     },
   },
 

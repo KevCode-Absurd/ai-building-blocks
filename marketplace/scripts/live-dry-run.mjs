@@ -1,6 +1,6 @@
 // Live dry run: one whole hire with real AI models, in memory, nothing deployed or emailed.
 // Seeds the real agents and job menu into a throwaway database, then a buyer hires an agent:
-// request -> quote -> confirm -> run (draft, self-checks, rubric judge) -> ops release -> buyer sees the delivery.
+// request -> plan -> start -> run (draft, self-checks, rubric judge) -> ops release -> buyer sees the delivery.
 //
 //   node --experimental-test-module-mocks scripts/live-dry-run.mjs --agent <persona-id> --job <job-type-id> --brief "..." [--out dir]
 //
@@ -55,9 +55,9 @@ if (!r.ready) {
   const answers = Object.fromEntries((r.questions ?? []).map(q => [q.field ?? q.id, q.options?.[0] ?? "Use your best judgement from the brief."]));
   r = step("buyer answers the questions", await t.api("POST", `/api/requests/${r.id}/answers`, { user: BUYER, body: { answers } })).request;
 }
-const quoted = step("quote", await t.api("POST", `/api/requests/${r.id}/quote`, { user: BUYER, body: {} })).request;
-console.log(`     price $${(quoted.quote.price_cents / 100).toFixed(2)}, ${quoted.quote.turnaround_hours}h, ${quoted.quote.checklist.length} checks`);
-const confirmed = step("buyer confirms; the run starts", await t.api("POST", `/api/requests/${r.id}/confirm`, { user: BUYER, body: {} }));
+const planned = step("plan", await t.api("POST", `/api/requests/${r.id}/plan`, { user: BUYER, body: {} })).request;
+console.log(`     ready in about ${planned.plan.turnaround_hours}h, ${planned.plan.checklist.length} checks (hiring is free: no price)`);
+const confirmed = step("buyer starts the job; the run starts", await t.api("POST", `/api/requests/${r.id}/start`, { user: BUYER, body: {} }));
 await t.settle();
 const jobId = confirmed.job.id;
 const [job] = await t.sql("SELECT status FROM jobs WHERE id = ?", jobId);

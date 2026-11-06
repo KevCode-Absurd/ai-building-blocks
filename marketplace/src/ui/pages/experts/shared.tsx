@@ -28,10 +28,14 @@ export const AREA_LABELS: Record<Area, string> = {
   people: "People and hiring",
   operations: "Operations",
   product: "Product",
+  engineering: "Code and engineering",
+  data: "Data and AI",
+  design: "Design and media",
+  learning: "Training and teaching",
 };
 
 export const JOB_STATUS_LABELS: Record<string, string> = {
-  draft: "Not started", quoted: "Quoted", confirmed: "Starting", running: "Being written", checking: "Being checked",
+  draft: "Not started", quoted: "Plan ready", confirmed: "Starting", running: "Being written", checking: "Being checked",
   in_review: "With our team", delivered: "With the buyer", revising: "Being revised", accepted: "Accepted",
   rejected: "Rejected", disputed: "Disputed", failed: "Failed", cancelled: "Cancelled",
 };

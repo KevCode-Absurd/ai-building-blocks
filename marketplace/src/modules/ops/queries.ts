@@ -1,4 +1,4 @@
-// Read side of the ops console: job queues, the full job record, agents and model spend.
+// Read side of the ops console: job queues, the full job record, agents, review results and model spend.
 import type { Env } from "../../env.ts";
 import type { JobRow, JobStatus, RubricCriterion } from "../../core/types.ts";
 import { JOB_STATUSES } from "../../core/types.ts";
@@ -6,8 +6,8 @@ import { TRANSITIONS } from "../../core/jobs.ts";
 import { all, first, parseJson, today } from "../../core/db.ts";
 import { getJobType } from "../catalogue/index.ts";
 import type { WinRate } from "../evaluation/service.ts";
-import { neighbours } from "./service.ts";
-import type { AgentOption, AgentSummary, CostReport, DraftView, JobFlag, JobRecord, JobSummary, Queue, RunView } from "./types.ts";
+import { GATE_TARGETS, neighbours } from "./service.ts";
+import type { AgentOption, AgentSummary, CostReport, DraftView, JobFlag, JobRecord, JobSummary, Queue, ReviewReport, RunView, WinRateView } from "./types.ts";
 import { QUEUES } from "./types.ts";
 
 const usd = (micro: number | null | undefined) => Math.round((micro ?? 0) / 100) / 10_000;
@@ -67,7 +67,7 @@ function toSummary(env: Env, row: SummaryRow, now: number): JobSummary {
     buyer_id: row.created_by, buyer_email: row.buyer_email, persona_id: row.persona_id, persona_name: row.persona_name,
     job_type_id: row.job_type_id, job_type_title: getJobType(row.job_type_id)?.title ?? null,
     agent_id: row.agent_id, agent_version: row.agent_version,
-    price_cents: row.price_cents, currency: row.currency, revisions_used: row.revisions_used, flags,
+    revisions_used: row.revisions_used, flags,
     cost_usd: usd(row.cost_micro), age_hours: hoursSince(row.created_at, now), waiting_hours: hoursSince(row.updated_at, now),
     due_at: row.due_at, created_at: row.created_at, updated_at: row.updated_at,
   };
@@ -303,6 +303,42 @@ export async function listAgents(env: Env, filter: AgentFilter = {}): Promise<Ag
     ...rateFor(r.id),
     updated_at: r.updated_at,
   }));
+}
+
+/** Blind-test results (overall, by agent, by job type), the reviewers' queue and check pass rates, for /ops/review. */
+export async function reviewReport(env: Env): Promise<ReviewReport> {
+  const evaluation = await neighbours.evaluation();
+  const [stats, queue, checks] = await Promise.all([evaluation.reviewStats(env), evaluation.blindTestQueue(env), evaluation.checkPassRates(env)]);
+  const empty = (key: string, label: string): WinRateView => ({ key, label, tests: 0, judgments: 0, agentWins: 0, baselineWins: 0, ties: 0, winRate: null });
+  const view = (r: WinRate & { label?: string }): WinRateView => ({
+    key: r.key, label: r.label ?? r.key, tests: r.tests, judgments: r.judgments, agentWins: r.agentWins, baselineWins: r.baselineWins, ties: r.ties, winRate: r.winRate,
+  });
+
+  const checksByType = new Map(checks.byJobType.map(c => [c.key, c]));
+  const typeKeys = [...new Set([...stats.byJobType.map(r => r.key), ...checks.byJobType.map(c => c.key)])];
+  const byJobType = typeKeys.map(key => {
+    const rate = stats.byJobType.find(r => r.key === key);
+    const c = checksByType.get(key);
+    return {
+      ...(rate ? view(rate) : empty(key, c?.label ?? getJobType(key)?.title ?? key)),
+      rubric: c && c.rubric.checks ? c.rubric : null,
+      policy: c && c.policy.checks ? c.policy : null,
+    };
+  }).sort((a, b) => b.tests - a.tests || (b.rubric?.checks ?? 0) - (a.rubric?.checks ?? 0) || a.label.localeCompare(b.label));
+
+  return {
+    target: GATE_TARGETS.blindWinRate,
+    overall: view({ ...(stats.all ?? empty("all", "All")), label: "All agents" }),
+    byAgent: stats.byAgent.map(r => {
+      const cut = r.key.lastIndexOf(":");
+      const version = cut > 0 ? Number(r.key.slice(cut + 1)) : NaN;
+      return { ...view(r), agent_id: cut > 0 ? r.key.slice(0, cut) : r.key, version: Number.isFinite(version) && version > 0 ? version : null };
+    }),
+    byJobType,
+    agreement: stats.agreement,
+    queue,
+    checks: { rubric: checks.rubric, policy: checks.policy, drafts: checks.drafts, allPassed: checks.allPassed, allRate: checks.allRate },
+  };
 }
 
 /** Model spend for the last 30 days: by day, by purpose and the costliest jobs, plus today against DAILY_MODEL_CAP_USD. */

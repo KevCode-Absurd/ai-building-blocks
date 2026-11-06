@@ -66,7 +66,7 @@ export async function cancelJob(env: Env, input: { jobId: string; reason: string
   });
   if (input.notifyBuyer !== false) {
     await tellBuyer(env, job, "job.cancelled", "Your job was cancelled",
-      `We cancelled ${jobName(job)}. Nothing was charged. If you have questions, contact us at useaiblocks.com/support.`);
+      `We cancelled ${jobName(job)}. You can start a new job any time. If you have questions, contact us at useaiblocks.com/support.`);
   }
   return updated;
 }
@@ -134,6 +134,9 @@ export async function resolveJob(env: Env, input: { jobId: string; outcome: "acc
   }
   const note = await addNote(env, { jobId: job.id, body: `Decision (${input.outcome}): ${input.note}`, actor: input.actor });
   await recordEvent(env.DB, { actor: input.actor, actorKind: "ops", entity: "job", entityId: job.id, type: "ops.resolved", data: { outcome: input.outcome, from: job.status, note_id: note.id, run_id: result.runId ?? null } });
+  // The job is settled, so the buyer's problem report (if any) closes too instead of waiting at /ops/problems.
+  try { await (await neighbours.problems()).closeReportsForJob(env, { jobId: job.id, outcome: input.outcome, note: input.note, actor: input.actor }); }
+  catch (err) { console.error("ops_close_problem_reports_failed", job.id, errText(err)); }
   return result;
 }
 
@@ -197,7 +200,7 @@ export async function changeStaff(env: Env, input: { action: "add" | "remove"; r
   if (input.userId) user = await first<{ id: string }>(env.DB, "SELECT id FROM users WHERE id = ?", input.userId);
   else if (input.email) user = await first<{ id: string }>(env.DB, "SELECT id FROM users WHERE lower(email) = lower(?) ORDER BY created_at LIMIT 1", input.email);
   else fail(400, "invalid_input", "Fill in an email or a user id.");
-  if (!user) return fail(404, "user_not_found", "We could not find that person. Ask them to sign in to AI Blocks Agents once, then try again.");
+  if (!user) return fail(404, "user_not_found", "We could not find that person. Ask them to sign in to AI Blocks once, then try again.");
   if (input.action === "remove" && input.role === "ops" && user.id === input.actor) fail(400, "cannot_remove_self", "You cannot remove your own ops access. Ask another team member to do it.");
   const db = env.DB, now = nowIso();
   const change = input.action === "add"

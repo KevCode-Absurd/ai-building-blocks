@@ -1,0 +1,16 @@
+/* /ops/problems (delivery module). Tokens from src/ui/styles.css only; classes start with .dlv-prb */
+.dlv-prb-list { margin-top: 16px; }
+.dlv-prb { display: grid; gap: 8px; min-width: 0; }
+.dlv-prb .ops-meta { margin: 0; }
+.dlv-prb-quote { margin: 4px 0; padding: 10px 14px; border-left: 3px solid var(--warn); background: var(--warn-bg); color: var(--text); white-space: pre-wrap; overflow-wrap: anywhere; border-radius: 0 var(--radius) var(--radius) 0; }
+.dlv-prb-form { display: grid; gap: 12px; margin-top: 4px; }
+.dlv-prb-form .btn { justify-self: start; }
+.dlv-prb-outcomes { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 8px; }
+.dlv-prb-outcomes legend { font-weight: 600; font-size: 15px; margin-bottom: 4px; padding: 0; }
+.dlv-prb-outcome { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: start; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; }
+.dlv-prb-outcome:hover { border-color: var(--line-2); }
+.dlv-prb-outcome:has(input:checked) { border-color: var(--text); background: var(--panel-2); }
+.dlv-prb-outcome input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--text); }
+.dlv-prb-outcome > span { display: grid; gap: 2px; }
+.dlv-prb-result p { margin: 0 0 6px; }
+.dlv-prb-note { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text-2); }

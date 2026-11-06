@@ -1,0 +1,2225 @@
+[
+  {
+    "id": "seo-specialist",
+    "name": "SEO specialist",
+    "department": "marketing",
+    "summary": "Gets a business's pages found in Google and other search engines. Finds what buyers search for, fixes what stops pages ranking and plans the pages to write next.",
+    "aliases": [
+      "seo",
+      "search engine optimisation",
+      "seo consultant",
+      "seo manager",
+      "organic search",
+      "technical seo",
+      "keyword research",
+      "local seo"
+    ]
+  },
+  {
+    "id": "aeo-geo-specialist",
+    "name": "AEO and GEO specialist",
+    "department": "marketing",
+    "summary": "Helps a business show up in AI answers from ChatGPT, Google AI Overviews, Perplexity and similar tools. Shapes pages and facts so AI tools can find, trust and cite them.",
+    "aliases": [
+      "aeo",
+      "geo",
+      "answer engine optimisation",
+      "generative engine optimisation",
+      "ai search optimisation",
+      "llm seo",
+      "ai overviews"
+    ]
+  },
+  {
+    "id": "link-building-specialist",
+    "name": "Link building specialist",
+    "department": "marketing",
+    "summary": "Earns links and mentions from other sites through stories, data and outreach that editors want. Reports which links were won and what they are worth.",
+    "aliases": [
+      "link building",
+      "digital pr",
+      "backlinks",
+      "outreach seo",
+      "off-page seo",
+      "guest posts"
+    ]
+  },
+  {
+    "id": "google-ads-media-buyer",
+    "name": "Google Ads media buyer",
+    "department": "marketing",
+    "summary": "Plans, runs and improves Google Ads: search, shopping, Performance Max and YouTube. Picks keywords and bids, writes ads and cuts wasted spend.",
+    "aliases": [
+      "google ads",
+      "ppc",
+      "paid search",
+      "sem",
+      "adwords",
+      "performance max",
+      "google shopping ads",
+      "ppc specialist"
+    ]
+  },
+  {
+    "id": "meta-media-buyer",
+    "name": "Meta ads media buyer",
+    "department": "marketing",
+    "summary": "Plans, runs and improves paid ads on Facebook and Instagram. Sets up campaigns, tests creative and moves budget to what brings sales or leads.",
+    "aliases": [
+      "facebook ads",
+      "instagram ads",
+      "meta ads",
+      "paid social",
+      "media buyer",
+      "facebook ads manager",
+      "advantage+"
+    ]
+  },
+  {
+    "id": "linkedin-ads-specialist",
+    "name": "LinkedIn ads specialist",
+    "department": "marketing",
+    "summary": "Runs LinkedIn ad campaigns aimed at the right job titles and companies. Builds lead forms and follow-up that suit B2B deals.",
+    "aliases": [
+      "linkedin ads",
+      "linkedin advertising",
+      "b2b paid social",
+      "campaign manager",
+      "linkedin lead gen forms"
+    ]
+  },
+  {
+    "id": "ad-creative-strategist",
+    "name": "Ad creative strategist",
+    "department": "marketing",
+    "summary": "Comes up with the ad ideas, hooks, scripts and copy that paid campaigns run on. Plans fair creative tests and studies rival ads for fresh angles.",
+    "aliases": [
+      "creative strategist",
+      "ad creative",
+      "ugc scripts",
+      "ad copywriter",
+      "creative testing",
+      "ad concepts",
+      "paid social creative"
+    ]
+  },
+  {
+    "id": "social-media-manager",
+    "name": "Social media manager",
+    "department": "marketing",
+    "summary": "Plans and writes a business's posts, captions and short videos, and answers comments and messages. Keeps a steady schedule that sounds like the business.",
+    "aliases": [
+      "social media marketing",
+      "smm",
+      "instagram manager",
+      "tiktok marketing",
+      "content calendar",
+      "social media marketer",
+      "reels",
+      "community replies"
+    ]
+  },
+  {
+    "id": "pinterest-marketer",
+    "name": "Pinterest marketing specialist",
+    "department": "marketing",
+    "summary": "Grows traffic from Pinterest with keyword-led boards, pins and seasonal timing. Turns product and blog images into pins that keep working for months.",
+    "aliases": [
+      "pinterest marketing",
+      "pinterest manager",
+      "pinterest seo",
+      "pin design",
+      "pinterest strategy"
+    ]
+  },
+  {
+    "id": "youtube-strategist",
+    "name": "YouTube channel strategist",
+    "department": "marketing",
+    "summary": "Grows a business's YouTube channel with a content plan, search-led titles, scripts and thumbnails. Reads channel analytics to keep viewers watching.",
+    "aliases": [
+      "youtube growth",
+      "youtube manager",
+      "youtube seo",
+      "video scriptwriter",
+      "thumbnail designer",
+      "youtube strategist"
+    ]
+  },
+  {
+    "id": "email-marketing-specialist",
+    "name": "Email marketing specialist",
+    "department": "marketing",
+    "summary": "Plans and writes a business's newsletters, campaigns and email sequences. Keeps the list healthy and emails landing in the inbox, not spam.",
+    "aliases": [
+      "email marketing",
+      "newsletter",
+      "mailchimp",
+      "email campaigns",
+      "email automation",
+      "deliverability",
+      "email copywriter",
+      "html email"
+    ]
+  },
+  {
+    "id": "lifecycle-marketer",
+    "name": "Retention and lifecycle marketer",
+    "department": "marketing",
+    "summary": "Brings customers back to buy again with email and SMS flows, subscriptions and loyalty perks. Measures repeat purchase and fixes the points where customers drift away.",
+    "aliases": [
+      "klaviyo",
+      "retention marketing",
+      "lifecycle marketing",
+      "sms marketing",
+      "email flows",
+      "loyalty programme",
+      "subscription retention"
+    ]
+  },
+  {
+    "id": "mobile-app-marketer",
+    "name": "Mobile app marketer",
+    "department": "marketing",
+    "summary": "Gets an app found in the App Store and Google Play and keeps users coming back. Writes store listings, push messages and in-app prompts.",
+    "aliases": [
+      "aso",
+      "app store optimisation",
+      "app marketing",
+      "push notifications",
+      "in-app messaging",
+      "mobile growth"
+    ]
+  },
+  {
+    "id": "conversion-copywriter",
+    "name": "Conversion copywriter",
+    "department": "marketing",
+    "summary": "Writes the words that turn visitors into buyers: landing pages, sales pages, emails and ads. Starts from customer research and tests what works.",
+    "aliases": [
+      "copywriter",
+      "sales copy",
+      "landing page copy",
+      "direct response copywriter",
+      "website copy",
+      "email copywriter",
+      "sales page",
+      "funnel copy"
+    ]
+  },
+  {
+    "id": "cro-specialist",
+    "name": "CRO specialist",
+    "department": "marketing",
+    "summary": "Finds why visitors leave a site or store without buying and ranks the fixes. Plans A/B tests and reads the results honestly.",
+    "aliases": [
+      "conversion rate optimisation",
+      "cro",
+      "a/b testing",
+      "landing page optimisation",
+      "experimentation",
+      "split testing"
+    ]
+  },
+  {
+    "id": "product-marketing-manager",
+    "name": "Product marketing manager",
+    "department": "marketing",
+    "summary": "Decides how a product is positioned, what it says and how it launches. Writes the message sheet and launch plan the rest of the team works from.",
+    "aliases": [
+      "pmm",
+      "positioning",
+      "messaging",
+      "product launch",
+      "go-to-market",
+      "launch plan"
+    ]
+  },
+  {
+    "id": "brand-strategist",
+    "name": "Brand strategist",
+    "department": "marketing",
+    "summary": "Shapes how a brand sounds and what it is called. Writes voice guides, names and taglines with a clear reason behind each choice.",
+    "aliases": [
+      "brand strategy",
+      "brand voice",
+      "tone of voice",
+      "naming",
+      "tagline",
+      "brand guidelines"
+    ]
+  },
+  {
+    "id": "growth-marketer",
+    "name": "Growth marketer",
+    "department": "marketing",
+    "summary": "Picks the one or two channels most likely to win customers and runs cheap tests to prove it. Turns a sprawling plan into a 90-day list of actions.",
+    "aliases": [
+      "growth hacker",
+      "marketing strategist",
+      "fractional cmo",
+      "go-to-market",
+      "marketing plan",
+      "startup marketing",
+      "saas marketing"
+    ]
+  },
+  {
+    "id": "demand-generation-manager",
+    "name": "B2B demand generation manager",
+    "department": "marketing",
+    "summary": "Fills a B2B sales pipeline with the right accounts through targeted plays, webinars and events. Works with sales on one shared target list.",
+    "aliases": [
+      "demand gen",
+      "abm",
+      "account-based marketing",
+      "b2b marketing",
+      "webinar marketing",
+      "pipeline marketing"
+    ]
+  },
+  {
+    "id": "reputation-manager",
+    "name": "Online reputation manager",
+    "department": "marketing",
+    "summary": "Replies to reviews safely, earns more good ones the honest way and turns happy customers into proof. Spots repeat complaints before they spread.",
+    "aliases": [
+      "review management",
+      "online reviews",
+      "reputation management",
+      "testimonials",
+      "google reviews",
+      "customer advocacy"
+    ]
+  },
+  {
+    "id": "community-manager",
+    "name": "Community manager",
+    "department": "marketing",
+    "summary": "Builds and runs a community or paid membership that people join, use and stay in. Writes the welcomes, prompts and house rules, and takes part in outside communities honestly.",
+    "aliases": [
+      "community management",
+      "online community",
+      "discord",
+      "reddit marketing",
+      "membership site",
+      "facebook groups"
+    ]
+  },
+  {
+    "id": "affiliate-influencer-manager",
+    "name": "Affiliate and influencer marketing manager",
+    "department": "marketing",
+    "summary": "Finds creators and affiliates who fit the brand, briefs them and sets fair rewards. Keeps disclosure rules and payouts in order.",
+    "aliases": [
+      "influencer marketing",
+      "affiliate marketing",
+      "creator partnerships",
+      "ugc creators",
+      "referral programme",
+      "affiliate manager"
+    ]
+  },
+  {
+    "id": "pr-specialist",
+    "name": "PR specialist",
+    "department": "marketing",
+    "summary": "Gets a business talked about in the press, on podcasts and at events, and helps it respond well when things go wrong. Writes releases, pitches and statements.",
+    "aliases": [
+      "public relations",
+      "press release",
+      "publicist",
+      "media relations",
+      "crisis communications",
+      "podcast booking",
+      "pr consultant"
+    ]
+  },
+  {
+    "id": "marketing-analyst",
+    "name": "Marketing analyst",
+    "department": "marketing",
+    "summary": "Sets up tracking and reports so the business knows which marketing earns sales. Explains channel results in plain words and tests the ones in doubt.",
+    "aliases": [
+      "marketing analytics",
+      "ga4",
+      "google analytics",
+      "attribution",
+      "utm",
+      "tag manager",
+      "marketing reporting"
+    ]
+  },
+  {
+    "id": "local-marketing-specialist",
+    "name": "Local marketing specialist",
+    "department": "marketing",
+    "summary": "Brings nearby customers through the door for local service businesses: map listings, reviews, local offers and posts. Knows the rhythm of a local trade's busy and quiet months.",
+    "aliases": [
+      "local marketing",
+      "google business profile",
+      "local seo",
+      "small business marketing",
+      "neighbourhood marketing",
+      "salon marketing",
+      "gym marketing"
+    ]
+  },
+  {
+    "id": "hospitality-marketer",
+    "name": "Hospitality marketing manager",
+    "department": "marketing",
+    "summary": "Fills tables, taprooms and events for restaurants, cafes, bars and drinks makers. Writes menus, offers and posts that sound like the place.",
+    "aliases": [
+      "restaurant marketing",
+      "hospitality marketing",
+      "bar marketing",
+      "brewery marketing",
+      "winery marketing",
+      "cafe marketing"
+    ]
+  },
+  {
+    "id": "professional-services-marketer",
+    "name": "Professional services marketer",
+    "department": "marketing",
+    "summary": "Wins clients for firms that sell expertise: accountants, lawyers, insurers, coaches and design studios. Builds trust with clear pages, intake and client updates that respect each profession's rules.",
+    "aliases": [
+      "law firm marketing",
+      "accounting firm marketing",
+      "legal marketing",
+      "coach marketing",
+      "consultant marketing",
+      "insurance marketing"
+    ]
+  },
+  {
+    "id": "crowdfunding-manager",
+    "name": "Crowdfunding campaign manager",
+    "department": "marketing",
+    "summary": "Plans a Kickstarter or Indiegogo campaign from the pre-launch list to the final push. Sets the goal, prices the rewards and writes the page and updates.",
+    "aliases": [
+      "kickstarter",
+      "indiegogo",
+      "crowdfunding",
+      "pre-launch",
+      "backer updates"
+    ]
+  },
+  {
+    "id": "fundraising-specialist",
+    "name": "Fundraising and grants specialist",
+    "department": "marketing",
+    "summary": "Raises money for charities and community groups through appeals, donor care and grant applications. Answers every funder question with the group's own facts.",
+    "aliases": [
+      "grant writer",
+      "fundraiser",
+      "development officer",
+      "donor appeals",
+      "nonprofit fundraising",
+      "grant applications",
+      "bid writing"
+    ]
+  },
+  {
+    "id": "content-marketer",
+    "name": "Content marketer",
+    "department": "content",
+    "summary": "Plans and makes the articles, guides, newsletters and posts that bring in and keep the right readers. Ties each piece to a business goal and measures it.",
+    "aliases": [
+      "content marketing",
+      "content strategist",
+      "content writer",
+      "blog writer",
+      "editorial calendar",
+      "content manager",
+      "article writer",
+      "case study writer"
+    ]
+  },
+  {
+    "id": "ghostwriter",
+    "name": "Ghostwriter",
+    "department": "content",
+    "summary": "Writes in a founder's or expert's own voice: posts, articles and books under their name. Turns notes and voice memos into a clear point of view.",
+    "aliases": [
+      "ghostwriting",
+      "linkedin ghostwriter",
+      "thought leadership",
+      "book ghostwriter",
+      "executive writer",
+      "founder content"
+    ]
+  },
+  {
+    "id": "speechwriter",
+    "name": "Speechwriter",
+    "department": "content",
+    "summary": "Writes talks, pitches, toasts and eulogies built around real stories and timed to the minute. Adds delivery notes so the speaker sounds natural.",
+    "aliases": [
+      "speech writer",
+      "wedding speech",
+      "eulogy",
+      "keynote",
+      "talk writing",
+      "toast"
+    ]
+  },
+  {
+    "id": "advertising-copywriter",
+    "name": "Advertising copywriter",
+    "department": "content",
+    "summary": "Writes short, memorable copy for print, outdoor, radio, podcasts, jingles, direct mail, book covers and ad lines. Makes one idea land in a second or two.",
+    "aliases": [
+      "copywriter",
+      "radio ad",
+      "print copy",
+      "brochure copy",
+      "jingle",
+      "book blurb",
+      "flyer copy"
+    ]
+  },
+  {
+    "id": "ecommerce-copywriter",
+    "name": "Ecommerce copywriter",
+    "department": "content",
+    "summary": "Writes product titles, descriptions and collection pages that help shoppers choose and help search find them. Keeps claims true to the label.",
+    "aliases": [
+      "product descriptions",
+      "product copywriter",
+      "listing copy",
+      "shopify copywriter",
+      "amazon listing copy",
+      "collection pages"
+    ]
+  },
+  {
+    "id": "technical-writer",
+    "name": "Technical writer",
+    "department": "content",
+    "summary": "Writes the help pages, manuals, API docs and READMEs people follow step by step. Turns what experts know into instructions that work the first time.",
+    "aliases": [
+      "technical writing",
+      "documentation",
+      "help centre",
+      "user manual",
+      "api docs",
+      "knowledge base",
+      "readme"
+    ]
+  },
+  {
+    "id": "editor",
+    "name": "Editor and proofreader",
+    "department": "content",
+    "summary": "Makes a draft clearer, shorter and free of errors while keeping the writer's voice. Gives structural feedback on long or academic work.",
+    "aliases": [
+      "proofreader",
+      "copy editor",
+      "editing",
+      "academic editor",
+      "line editor",
+      "proofreading"
+    ]
+  },
+  {
+    "id": "translator",
+    "name": "Translator",
+    "department": "content",
+    "summary": "Turns web pages, product copy and video captions into another language so they read as if written locally. Flags what a native speaker should check.",
+    "aliases": [
+      "translation",
+      "localisation",
+      "subtitles",
+      "captions",
+      "transcreation",
+      "srt files"
+    ]
+  },
+  {
+    "id": "podcast-producer",
+    "name": "Podcast producer",
+    "department": "content",
+    "summary": "Plans podcast episodes, writes show notes and picks clips that grow the show. Turns an hour of talk into outputs people find and share.",
+    "aliases": [
+      "podcast",
+      "show notes",
+      "podcast editor",
+      "podcast manager",
+      "episode planning"
+    ]
+  },
+  {
+    "id": "communications-coordinator",
+    "name": "Communications coordinator",
+    "department": "content",
+    "summary": "Writes the newsletters, notices and welcome messages for schools, churches, nurseries and community groups. Keeps a warm, clear voice for parents and members.",
+    "aliases": [
+      "church communications",
+      "school newsletter",
+      "parent communications",
+      "communications officer",
+      "newsletter",
+      "community notices"
+    ]
+  },
+  {
+    "id": "recipe-developer",
+    "name": "Recipe developer",
+    "department": "content",
+    "summary": "Turns rough cooking notes into clear, scaled recipe cards, blog posts and cookbook plans. Gets conversions, timings and doneness cues right.",
+    "aliases": [
+      "recipe writer",
+      "food writer",
+      "recipe testing",
+      "cookbook",
+      "standard recipe cards"
+    ]
+  },
+  {
+    "id": "sdr",
+    "name": "Sales development representative (SDR)",
+    "department": "sales",
+    "summary": "Finds and researches the right prospects, then opens conversations by email and phone. Books meetings for the person who closes.",
+    "aliases": [
+      "sdr",
+      "bdr",
+      "lead generation",
+      "cold email",
+      "cold calling",
+      "appointment setter",
+      "prospecting",
+      "outbound sales"
+    ]
+  },
+  {
+    "id": "sales-enablement-specialist",
+    "name": "Sales enablement specialist",
+    "department": "sales",
+    "summary": "Gives a sales team the decks, playbooks, call coaching and deal plans it needs to win. Turns the best rep's habits into something everyone can follow.",
+    "aliases": [
+      "sales enablement",
+      "sales playbook",
+      "sales coach",
+      "sales deck",
+      "negotiation",
+      "battlecard",
+      "sales training"
+    ]
+  },
+  {
+    "id": "revops-specialist",
+    "name": "Revenue operations (RevOps) specialist",
+    "department": "sales",
+    "summary": "Keeps the CRM clean, the pipeline honest and marketing and sales working from the same rules. Finds where deals stall and why they are won or lost.",
+    "aliases": [
+      "revops",
+      "sales operations",
+      "crm admin",
+      "hubspot",
+      "salesforce",
+      "pipeline analysis",
+      "marketing automation",
+      "lead scoring"
+    ]
+  },
+  {
+    "id": "proposal-writer",
+    "name": "Proposal and bid writer",
+    "department": "sales",
+    "summary": "Writes proposals, tender answers and bids that match what the buyer asked for. Makes scope and price easy to say yes to.",
+    "aliases": [
+      "proposal writer",
+      "rfp",
+      "tender writer",
+      "bid writer",
+      "upwork proposals",
+      "statement of work"
+    ]
+  },
+  {
+    "id": "sales-coordinator",
+    "name": "Sales coordinator",
+    "department": "sales",
+    "summary": "Answers enquiries fast, sends clear packages and proposals and follows up until the date is booked. Works for venues, wedding suppliers, studios, travel agents and estate agents.",
+    "aliases": [
+      "inside sales",
+      "bookings coordinator",
+      "enquiry management",
+      "client coordinator",
+      "sales assistant",
+      "lead follow-up"
+    ]
+  },
+  {
+    "id": "channel-sales-manager",
+    "name": "Channel and wholesale sales manager",
+    "department": "sales",
+    "summary": "Wins and keeps the shops, distributors, resellers and partners who sell for the business. Sets terms and margins that work for both sides.",
+    "aliases": [
+      "wholesale",
+      "channel partners",
+      "reseller programme",
+      "stockists",
+      "partner manager",
+      "distribution"
+    ]
+  },
+  {
+    "id": "retail-manager",
+    "name": "Retail store manager",
+    "department": "sales",
+    "summary": "Brings more people into an independent shop, pop-up or market stall and helps them spend more once inside. Plans promotions, stock, staffing and the till report review.",
+    "aliases": [
+      "retail marketing",
+      "shop manager",
+      "pop-up shop",
+      "market stall",
+      "in-store promotions",
+      "retail sales"
+    ]
+  },
+  {
+    "id": "customer-support-specialist",
+    "name": "Customer support specialist",
+    "department": "customer-support",
+    "summary": "Answers customer emails and messages clearly and kindly, including returns, refunds and warranty claims. Keeps every reply true to the business's own policy.",
+    "aliases": [
+      "customer service",
+      "customer support",
+      "support agent",
+      "help desk",
+      "returns",
+      "refunds",
+      "zendesk",
+      "gorgias"
+    ]
+  },
+  {
+    "id": "support-operations-manager",
+    "name": "Customer support operations manager",
+    "department": "customer-support",
+    "summary": "Sets up how a support team works: quality reviews, escalation rules and reports on what customers keep asking. Turns ticket data into fixes for the rest of the business.",
+    "aliases": [
+      "support manager",
+      "support qa",
+      "escalations",
+      "voice of customer",
+      "ticket analysis",
+      "service levels"
+    ]
+  },
+  {
+    "id": "customer-success-manager",
+    "name": "Customer success manager",
+    "department": "customer-support",
+    "summary": "Gets new customers to their first win fast, spots the ones about to leave and grows the ones who stay. Runs onboarding, check-ins and renewals.",
+    "aliases": [
+      "customer success",
+      "csm",
+      "account manager",
+      "client onboarding",
+      "renewals",
+      "churn reduction",
+      "customer retention"
+    ]
+  },
+  {
+    "id": "front-desk-coordinator",
+    "name": "Front desk coordinator",
+    "department": "customer-support",
+    "summary": "Handles the booking messages, reminders, phone scripts and front-desk answers for clinics, salons and studios. Cuts no-shows and keeps callers and clients calm.",
+    "aliases": [
+      "receptionist",
+      "virtual receptionist",
+      "patient coordinator",
+      "appointment setting",
+      "no-shows",
+      "ivr",
+      "medical receptionist"
+    ]
+  },
+  {
+    "id": "ecommerce-manager",
+    "name": "Ecommerce manager",
+    "department": "ecommerce",
+    "summary": "Runs the shop side of an online store: catalogue structure, filters, bundles and order value. Makes it easy for shoppers to find and add more to the basket.",
+    "aliases": [
+      "ecommerce manager",
+      "online store manager",
+      "merchandising",
+      "catalogue management",
+      "average order value",
+      "bundles"
+    ]
+  },
+  {
+    "id": "shopify-specialist",
+    "name": "Shopify specialist",
+    "department": "ecommerce",
+    "summary": "Sets up, changes and checks Shopify stores: theme edits, sections and launch checks. Makes small changes safely without piling on apps.",
+    "aliases": [
+      "shopify expert",
+      "shopify developer",
+      "liquid",
+      "shopify theme",
+      "shopify store setup",
+      "online store 2.0"
+    ]
+  },
+  {
+    "id": "amazon-marketplace-manager",
+    "name": "Amazon marketplace manager",
+    "department": "ecommerce",
+    "summary": "Lists, launches and grows products on Amazon. Picks products worth selling, writes listings and keeps the account healthy.",
+    "aliases": [
+      "amazon seller",
+      "amazon fba",
+      "amazon account manager",
+      "amazon listing",
+      "seller central",
+      "product research",
+      "amazon va"
+    ]
+  },
+  {
+    "id": "marketplace-manager",
+    "name": "Online marketplace manager",
+    "department": "ecommerce",
+    "summary": "Lists and sells on marketplaces beyond the brand's own store, such as eBay, Walmart and overseas sites. Maps product data to each marketplace's rules.",
+    "aliases": [
+      "ebay",
+      "walmart marketplace",
+      "multichannel selling",
+      "cross-border ecommerce",
+      "marketplace listings",
+      "international ecommerce"
+    ]
+  },
+  {
+    "id": "etsy-shop-manager",
+    "name": "Etsy shop manager",
+    "department": "ecommerce",
+    "summary": "Runs an Etsy shop's listings, tags, sections and shop settings so buyers find and choose it. Knows Etsy's own search and rules.",
+    "aliases": [
+      "etsy seo",
+      "etsy tags",
+      "etsy listings",
+      "etsy shop",
+      "handmade shop",
+      "print on demand"
+    ]
+  },
+  {
+    "id": "tiktok-shop-manager",
+    "name": "TikTok Shop manager",
+    "department": "ecommerce",
+    "summary": "Launches and runs a TikTok Shop: product picks, listings, LIVE selling and shoppable videos. Checks margin after platform fees.",
+    "aliases": [
+      "tiktok shop",
+      "live selling",
+      "social commerce",
+      "shoppable video",
+      "tiktok seller"
+    ]
+  },
+  {
+    "id": "ecommerce-analyst",
+    "name": "Ecommerce analyst",
+    "department": "ecommerce",
+    "summary": "Turns store, analytics and order exports into a weekly report and customer segments. Explains sales dips and spikes in plain words.",
+    "aliases": [
+      "ecommerce analytics",
+      "shopify reports",
+      "rfm",
+      "customer segmentation",
+      "store kpis",
+      "sales reporting"
+    ]
+  },
+  {
+    "id": "graphic-designer",
+    "name": "Graphic designer",
+    "department": "design",
+    "summary": "Lays out flyers, signs, menus, merch and social graphics with the right sizes, type and print specs. Makes one message readable at a glance.",
+    "aliases": [
+      "graphic design",
+      "canva designer",
+      "flyer design",
+      "print design",
+      "social media graphics",
+      "merch design",
+      "signage"
+    ]
+  },
+  {
+    "id": "presentation-designer",
+    "name": "Presentation and layout designer",
+    "department": "design",
+    "summary": "Designs slide decks, workbooks, ebooks and book covers that are easy to follow and build. Sets up templates a team can reuse.",
+    "aliases": [
+      "presentation design",
+      "powerpoint designer",
+      "pitch deck design",
+      "layout designer",
+      "ebook design",
+      "book cover design",
+      "google slides"
+    ]
+  },
+  {
+    "id": "brand-designer",
+    "name": "Brand identity designer",
+    "department": "design",
+    "summary": "Sets the look of a brand: logo direction, colours, type and illustration style. Writes briefs other designers and illustrators can build from.",
+    "aliases": [
+      "logo design",
+      "brand identity",
+      "visual identity",
+      "brand guidelines",
+      "art direction",
+      "mascot design"
+    ]
+  },
+  {
+    "id": "packaging-designer",
+    "name": "Packaging designer",
+    "department": "design",
+    "summary": "Plans packs and labels panel by panel, with copy that sells from the shelf and the required details in the right place. Gets files ready for the printer.",
+    "aliases": [
+      "packaging design",
+      "label design",
+      "dieline",
+      "on-pack copy",
+      "product label",
+      "packaging copy"
+    ]
+  },
+  {
+    "id": "video-producer",
+    "name": "Video producer",
+    "department": "design",
+    "summary": "Takes a video from script to storyboard to motion plan so it can be filmed or animated. Specs every shot and frame for the person who builds it.",
+    "aliases": [
+      "video production",
+      "explainer video",
+      "animation",
+      "storyboard",
+      "motion graphics",
+      "video script"
+    ]
+  },
+  {
+    "id": "ux-designer",
+    "name": "UX designer",
+    "department": "design",
+    "summary": "Plans screens, menus and words so people can find things and finish tasks. Tests flows with real users before anything is built.",
+    "aliases": [
+      "ux design",
+      "wireframes",
+      "user research",
+      "usability testing",
+      "information architecture",
+      "ux writer",
+      "microcopy"
+    ]
+  },
+  {
+    "id": "design-systems-designer",
+    "name": "Design systems designer",
+    "department": "design",
+    "summary": "Keeps a product's screens consistent with shared tokens, components and rules. Writes specs developers can build from.",
+    "aliases": [
+      "design system",
+      "design tokens",
+      "component library",
+      "ui kit",
+      "tailwind theme",
+      "figma variables"
+    ]
+  },
+  {
+    "id": "interior-designer",
+    "name": "Interior designer",
+    "department": "design",
+    "summary": "Plans layouts, lighting, colour and displays for small shops, cafes, salons and holiday lets on a tight budget. Makes spaces people want to step into.",
+    "aliases": [
+      "interior design",
+      "visual merchandising",
+      "shop window display",
+      "space planning",
+      "retail display",
+      "room styling"
+    ]
+  },
+  {
+    "id": "product-photographer",
+    "name": "Product photographer",
+    "department": "design",
+    "summary": "Plans product shoots and sets the photo style, lighting and edit look so every image matches. Writes shot lists and specs for each sales channel.",
+    "aliases": [
+      "product photography",
+      "ecommerce photography",
+      "shot list",
+      "photo editing",
+      "photo style guide",
+      "amazon images"
+    ]
+  },
+  {
+    "id": "bookkeeper",
+    "name": "Bookkeeper",
+    "department": "finance",
+    "summary": "Keeps the books tidy: matches bank lines, sorts expenses, reconciles payouts and gets records ready for the accountant. Leaves a clear trail of every change.",
+    "aliases": [
+      "bookkeeping",
+      "quickbooks",
+      "xero",
+      "reconciliation",
+      "catch-up bookkeeping",
+      "expenses",
+      "chart of accounts"
+    ]
+  },
+  {
+    "id": "fpa-analyst",
+    "name": "FP&A analyst",
+    "department": "finance",
+    "summary": "Builds budgets, forecasts and financial models and explains why the numbers moved. Shows the owner where cash will be and which inputs matter most.",
+    "aliases": [
+      "fp&a",
+      "financial planning",
+      "budgeting",
+      "forecasting",
+      "financial model",
+      "cash flow forecast",
+      "saas metrics",
+      "variance analysis"
+    ]
+  },
+  {
+    "id": "management-accountant",
+    "name": "Management accountant",
+    "department": "finance",
+    "summary": "Closes the month, produces management accounts and shows which products and jobs really make money. Checks the controls that stop money going missing.",
+    "aliases": [
+      "management accounts",
+      "month-end close",
+      "cost accounting",
+      "job costing",
+      "margin analysis",
+      "internal controls",
+      "nonprofit finance"
+    ]
+  },
+  {
+    "id": "fractional-cfo",
+    "name": "Fractional CFO",
+    "department": "finance",
+    "summary": "Gives a growing business a finance leader's view part time: health checks, debt, big money decisions and getting ready to buy or sell a business. Points to qualified advisers where the law requires one.",
+    "aliases": [
+      "part-time cfo",
+      "finance director",
+      "outsourced cfo",
+      "exit planning",
+      "due diligence",
+      "business debt",
+      "financial strategy"
+    ]
+  },
+  {
+    "id": "ap-ar-specialist",
+    "name": "Accounts payable and receivable specialist",
+    "department": "finance",
+    "summary": "Gets invoices out right, gets them paid on time and checks supplier bills before they are paid. Keeps chasing polite and payments safe.",
+    "aliases": [
+      "accounts payable",
+      "accounts receivable",
+      "credit control",
+      "invoice chasing",
+      "billing",
+      "collections",
+      "ap/ar"
+    ]
+  },
+  {
+    "id": "startup-fundraising-consultant",
+    "name": "Startup fundraising consultant",
+    "department": "finance",
+    "summary": "Helps founders raise investment: the pitch deck, the investor list, the cap table and the updates investors read. Keeps every claim tied to the numbers.",
+    "aliases": [
+      "pitch deck",
+      "fundraising",
+      "investor relations",
+      "cap table",
+      "seed round",
+      "investor outreach",
+      "investor update"
+    ]
+  },
+  {
+    "id": "pricing-strategist",
+    "name": "Pricing strategist",
+    "department": "finance",
+    "summary": "Sets prices, tiers and offers from costs, rivals and what buyers value, with the maths shown. Plans safe price tests and reads what past changes did.",
+    "aliases": [
+      "pricing",
+      "pricing strategy",
+      "price increase",
+      "saas pricing",
+      "offer design",
+      "packaging tiers",
+      "discounts"
+    ]
+  },
+  {
+    "id": "small-business-advisor",
+    "name": "Small business advisor",
+    "department": "finance",
+    "summary": "Helps owners and freelancers set up and plan the business: business plans for lenders and grants, rates, packages and client process. Says when to see an accountant or lawyer.",
+    "aliases": [
+      "business plan writer",
+      "business consultant",
+      "small business coach",
+      "freelance setup",
+      "business plan",
+      "startup advisor"
+    ]
+  },
+  {
+    "id": "hr-specialist",
+    "name": "HR specialist",
+    "department": "people",
+    "summary": "Helps a small business hire, onboard and look after its people with clear policies, job posts and templates. Gives general good practice and says when to ask an employment lawyer.",
+    "aliases": [
+      "hr",
+      "human resources",
+      "people operations",
+      "hr generalist",
+      "hr manager",
+      "onboarding",
+      "employee handbook",
+      "performance reviews"
+    ]
+  },
+  {
+    "id": "recruiter",
+    "name": "Recruiter",
+    "department": "people",
+    "summary": "Finds, screens and hires the right people: job posts, outreach, interview kits and offers. Keeps hiring fair and based on evidence.",
+    "aliases": [
+      "recruitment",
+      "talent acquisition",
+      "sourcing",
+      "job ads",
+      "hiring",
+      "interview questions",
+      "employer brand",
+      "staffing agency"
+    ]
+  },
+  {
+    "id": "payroll-compensation-specialist",
+    "name": "Payroll and compensation specialist",
+    "department": "people",
+    "summary": "Checks payroll before it runs and designs fair pay bands, benefits and commission plans. Shows the maths so people can see why they are paid what they are.",
+    "aliases": [
+      "payroll",
+      "compensation",
+      "pay bands",
+      "benefits",
+      "commission plan",
+      "salary benchmarking",
+      "payroll checks"
+    ]
+  },
+  {
+    "id": "employee-engagement-specialist",
+    "name": "Employee engagement specialist",
+    "department": "people",
+    "summary": "Finds out how staff really feel and turns it into actions: surveys, recognition, culture and clear staff messages. Closes the loop so people trust the process.",
+    "aliases": [
+      "employee engagement",
+      "staff survey",
+      "internal communications",
+      "company culture",
+      "recognition",
+      "change communications"
+    ]
+  },
+  {
+    "id": "workforce-planner",
+    "name": "Workforce planner",
+    "department": "people",
+    "summary": "Plans who works when, what each hire costs and how freelancers fit in. Builds fair rotas and hiring plans that the budget can carry.",
+    "aliases": [
+      "rota",
+      "shift scheduling",
+      "workforce planning",
+      "headcount planning",
+      "staff scheduling",
+      "contractor management"
+    ]
+  },
+  {
+    "id": "career-coach",
+    "name": "Career coach",
+    "department": "people",
+    "summary": "Helps people land the next job: CVs, LinkedIn profiles, interview practice and the pay talk. Builds every answer from the person's own stories.",
+    "aliases": [
+      "resume writer",
+      "cv writer",
+      "interview coach",
+      "linkedin profile",
+      "job search",
+      "cover letter",
+      "personal branding"
+    ]
+  },
+  {
+    "id": "membership-volunteer-coordinator",
+    "name": "Membership and volunteer coordinator",
+    "department": "people",
+    "summary": "Recruits, welcomes and keeps members and volunteers for clubs and charities. Writes the renewals, AGM papers, rules and thank-yous.",
+    "aliases": [
+      "volunteer coordinator",
+      "membership secretary",
+      "club secretary",
+      "agm",
+      "volunteer management",
+      "member renewals"
+    ]
+  },
+  {
+    "id": "learning-development-specialist",
+    "name": "Learning and development (L&D) specialist",
+    "department": "learning",
+    "summary": "Turns what the best people know into training staff can run, from first-week learning paths to workshops and skills frameworks. Checks the training changed how work gets done.",
+    "aliases": [
+      "l&d",
+      "corporate trainer",
+      "training specialist",
+      "staff training",
+      "workshop facilitator",
+      "skills matrix",
+      "onboarding training"
+    ]
+  },
+  {
+    "id": "instructional-designer",
+    "name": "Instructional designer",
+    "department": "learning",
+    "summary": "Designs online courses, e-learning modules, email courses and training videos that people finish. Plans each lesson back from what the learner must be able to do.",
+    "aliases": [
+      "instructional design",
+      "e-learning",
+      "online course",
+      "articulate rise",
+      "course creator",
+      "lms content",
+      "training video"
+    ]
+  },
+  {
+    "id": "curriculum-developer",
+    "name": "Curriculum developer",
+    "department": "learning",
+    "summary": "Writes lesson plans, worksheets, quizzes and mark schemes teachers and trainers can use straight away. Matches every task to the curriculum or syllabus.",
+    "aliases": [
+      "lesson plans",
+      "curriculum design",
+      "assessment design",
+      "worksheets",
+      "quiz writer",
+      "mark scheme",
+      "rubrics"
+    ]
+  },
+  {
+    "id": "tutor",
+    "name": "Tutor",
+    "department": "learning",
+    "summary": "Helps learners revise, practise and pass: notes, flashcards, practice exams and language drills. Works only from the learner's own course material.",
+    "aliases": [
+      "tutoring",
+      "exam prep",
+      "test prep",
+      "revision",
+      "language tutor",
+      "flashcards",
+      "study coach"
+    ]
+  },
+  {
+    "id": "leadership-coach",
+    "name": "Executive and leadership coach",
+    "department": "learning",
+    "summary": "Coaches leaders and new managers through one-on-ones, hard conversations and growth plans. Designs coaching programmes with work between sessions.",
+    "aliases": [
+      "executive coach",
+      "leadership coach",
+      "management coaching",
+      "manager training",
+      "business coach",
+      "one-on-ones"
+    ]
+  },
+  {
+    "id": "operations-manager",
+    "name": "Operations manager",
+    "department": "operations",
+    "summary": "Keeps a small business running smoothly: clear processes, written SOPs, weekly reviews and manuals that let a second site run like the first.",
+    "aliases": [
+      "operations",
+      "ops manager",
+      "sop writer",
+      "process improvement",
+      "business process",
+      "operations manual",
+      "franchise operations"
+    ]
+  },
+  {
+    "id": "chief-of-staff",
+    "name": "Chief of staff",
+    "department": "operations",
+    "summary": "Helps a founder decide and follow through: decision briefs, goals, board updates and the monthly rhythm. Cuts ten priorities to three.",
+    "aliases": [
+      "chief of staff",
+      "okrs",
+      "strategy",
+      "board updates",
+      "business planning",
+      "goal setting"
+    ]
+  },
+  {
+    "id": "executive-assistant",
+    "name": "Executive assistant",
+    "department": "operations",
+    "summary": "Takes admin off an owner's plate: inbox replies, meeting notes, letters, filing and follow-ups. Drafts everything for approval in the owner's tone.",
+    "aliases": [
+      "virtual assistant",
+      "va",
+      "personal assistant",
+      "admin assistant",
+      "office administrator",
+      "minute taker",
+      "inbox management"
+    ]
+  },
+  {
+    "id": "procurement-specialist",
+    "name": "Procurement specialist",
+    "department": "operations",
+    "summary": "Finds and compares suppliers, cuts running costs and prepares for price talks. Puts messy quotes on one basis so the real cost shows.",
+    "aliases": [
+      "procurement",
+      "purchasing",
+      "sourcing agent",
+      "supplier negotiation",
+      "vendor selection",
+      "cost reduction"
+    ]
+  },
+  {
+    "id": "compliance-specialist",
+    "name": "Compliance specialist",
+    "department": "operations",
+    "summary": "Turns long rules, contracts and privacy duties into plain summaries, checklists and calendars. Keeps board records in order and lists the questions to take to a lawyer.",
+    "aliases": [
+      "compliance",
+      "gdpr",
+      "data privacy",
+      "contract summary",
+      "company secretary",
+      "governance",
+      "regulatory"
+    ]
+  },
+  {
+    "id": "qhse-manager",
+    "name": "QHSE manager",
+    "department": "operations",
+    "summary": "Writes the quality, health and safety, continuity and sustainability documents a small firm needs, built from how it really works. Gets ready for audits and customer questionnaires.",
+    "aliases": [
+      "iso 9001",
+      "health and safety",
+      "quality manager",
+      "risk assessment",
+      "business continuity",
+      "esg",
+      "sustainability report"
+    ]
+  },
+  {
+    "id": "restaurant-manager",
+    "name": "Restaurant manager",
+    "department": "operations",
+    "summary": "Keeps service smooth and food cost in line with checklists, prep lists, station guides and costed recipes. Shows which dishes earn their place.",
+    "aliases": [
+      "restaurant operations",
+      "kitchen manager",
+      "food cost",
+      "menu costing",
+      "prep lists",
+      "hospitality operations"
+    ]
+  },
+  {
+    "id": "construction-project-coordinator",
+    "name": "Construction project coordinator",
+    "department": "operations",
+    "summary": "Plans build schedules, writes site reports and compares builders' quotes like for like. Keeps clients updated and a clear record of delays.",
+    "aliases": [
+      "construction coordinator",
+      "site manager",
+      "renovation",
+      "build schedule",
+      "quote comparison",
+      "construction estimator"
+    ]
+  },
+  {
+    "id": "field-service-coordinator",
+    "name": "Field service coordinator",
+    "department": "operations",
+    "summary": "Runs the office side of trades and home services: quotes, job checklists, reminders and customer messages. Stops arguments about what was included.",
+    "aliases": [
+      "trades office manager",
+      "quotes",
+      "estimates",
+      "job scheduling",
+      "service advisor",
+      "cleaning business",
+      "home services"
+    ]
+  },
+  {
+    "id": "property-manager",
+    "name": "Property manager",
+    "department": "operations",
+    "summary": "Looks after rental property for small landlords: tenant notices, maintenance logs, owner reports and the numbers on new deals.",
+    "aliases": [
+      "property management",
+      "landlord",
+      "letting agent",
+      "rental property",
+      "tenant communications",
+      "buy to let"
+    ]
+  },
+  {
+    "id": "short-term-rental-manager",
+    "name": "Short-term rental manager",
+    "department": "operations",
+    "summary": "Fills more nights at better rates for holiday lets and small hotels, and keeps guests happy with clear messages and house guides.",
+    "aliases": [
+      "airbnb host",
+      "vacation rental",
+      "holiday let",
+      "short-term rental",
+      "dynamic pricing",
+      "guest communication"
+    ]
+  },
+  {
+    "id": "project-manager",
+    "name": "Project manager",
+    "department": "operations",
+    "summary": "Turns a goal into a plan with owners, dates, estimates and risks, then keeps it on track. Writes status updates non-experts can follow.",
+    "aliases": [
+      "project management",
+      "project coordinator",
+      "technical project manager",
+      "agency project manager",
+      "scope",
+      "estimates"
+    ]
+  },
+  {
+    "id": "supply-chain-planner",
+    "name": "Supply chain planner",
+    "department": "operations",
+    "summary": "Forecasts demand and plans stock and production so best sellers stay in stock without tying up cash. Shows reorder points and the cost of each order.",
+    "aliases": [
+      "inventory planning",
+      "demand planning",
+      "production planning",
+      "stock control",
+      "reorder points",
+      "mrp"
+    ]
+  },
+  {
+    "id": "logistics-coordinator",
+    "name": "Logistics and fulfilment coordinator",
+    "department": "operations",
+    "summary": "Gets orders out on time for less: shipping costs, carriers, delivery routes and late or lost parcels. Plans for peak season before it hits.",
+    "aliases": [
+      "logistics",
+      "fulfilment",
+      "shipping",
+      "3pl",
+      "delivery routes",
+      "carrier claims",
+      "order management"
+    ]
+  },
+  {
+    "id": "it-administrator",
+    "name": "IT administrator",
+    "department": "operations",
+    "summary": "Sets up and looks after a small office's devices, accounts, backups and server chores. Writes scripts that are safe to run twice.",
+    "aliases": [
+      "it support",
+      "sysadmin",
+      "microsoft 365",
+      "google workspace",
+      "office it",
+      "backups",
+      "powershell"
+    ]
+  },
+  {
+    "id": "cybersecurity-specialist",
+    "name": "Cybersecurity specialist",
+    "department": "operations",
+    "summary": "Puts a plain security plan in place for a small business or online store: logins, staff habits, fraud checks and what to do if hit.",
+    "aliases": [
+      "cybersecurity",
+      "it security",
+      "phishing",
+      "fraud prevention",
+      "cyber essentials",
+      "store security"
+    ]
+  },
+  {
+    "id": "automation-specialist",
+    "name": "Automation specialist",
+    "department": "operations",
+    "summary": "Automates the copy-and-paste work between a business's tools with Zapier, Make, n8n, Airtable, Notion or short scripts. Makes automations fail loudly, not silently.",
+    "aliases": [
+      "zapier",
+      "make.com",
+      "n8n",
+      "workflow automation",
+      "no-code",
+      "airtable",
+      "notion",
+      "python scripts"
+    ]
+  },
+  {
+    "id": "event-manager",
+    "name": "Event manager",
+    "department": "operations",
+    "summary": "Plans events and trade shows from budget to run sheet and makes sure every lead or guest is followed up.",
+    "aliases": [
+      "event planner",
+      "event management",
+      "trade shows",
+      "conference planning",
+      "run sheet",
+      "exhibitions"
+    ]
+  },
+  {
+    "id": "product-manager",
+    "name": "Product manager",
+    "department": "product",
+    "summary": "Cuts an idea to a small first version, decides what to build next and writes the spec the team builds from. Says no to the rest, with reasons.",
+    "aliases": [
+      "product management",
+      "prd",
+      "roadmap",
+      "user stories",
+      "product owner",
+      "backlog prioritisation"
+    ]
+  },
+  {
+    "id": "frontend-developer",
+    "name": "Front-end developer",
+    "department": "engineering",
+    "summary": "Builds the parts of a website or web app people see and click, so they work on every screen. Handles every state, from loading to error.",
+    "aliases": [
+      "frontend developer",
+      "react developer",
+      "web developer",
+      "html css",
+      "javascript",
+      "landing page developer",
+      "chrome extension"
+    ]
+  },
+  {
+    "id": "backend-developer",
+    "name": "Back-end developer",
+    "department": "engineering",
+    "summary": "Builds the APIs, webhooks and integrations behind an app so data stays correct. Makes sure payments never charge twice and events are never lost.",
+    "aliases": [
+      "backend developer",
+      "api developer",
+      "node.js",
+      "python developer",
+      "integrations",
+      "webhooks",
+      "stripe integration"
+    ]
+  },
+  {
+    "id": "wordpress-developer",
+    "name": "WordPress developer",
+    "department": "engineering",
+    "summary": "Fixes, builds and updates WordPress sites and small plugins safely. Finds why a site broke and keeps it working after updates.",
+    "aliases": [
+      "wordpress",
+      "wordpress plugin",
+      "woocommerce",
+      "php developer",
+      "wordpress fix",
+      "elementor"
+    ]
+  },
+  {
+    "id": "mobile-app-developer",
+    "name": "Mobile app developer",
+    "department": "engineering",
+    "summary": "Builds and fixes iOS and Android app screens in React Native or Flutter. Handles loading, empty and offline states and older phones.",
+    "aliases": [
+      "mobile developer",
+      "react native",
+      "flutter",
+      "ios developer",
+      "android developer",
+      "app developer"
+    ]
+  },
+  {
+    "id": "qa-engineer",
+    "name": "QA engineer",
+    "department": "engineering",
+    "summary": "Writes the tests and test plans that catch bugs before customers do, and bug reports developers can act on.",
+    "aliases": [
+      "qa",
+      "software testing",
+      "test automation",
+      "playwright",
+      "manual testing",
+      "bug reports"
+    ]
+  },
+  {
+    "id": "software-engineer",
+    "name": "Software engineer",
+    "department": "engineering",
+    "summary": "Keeps existing software healthy: debugs errors, reviews code, refactors old files and plans upgrades. Explains an unfamiliar codebase to the next person.",
+    "aliases": [
+      "software developer",
+      "debugging",
+      "code review",
+      "refactoring",
+      "legacy code",
+      "framework upgrade",
+      "bug fix"
+    ]
+  },
+  {
+    "id": "database-engineer",
+    "name": "Database engineer",
+    "department": "engineering",
+    "summary": "Designs database tables and safe migrations, writes the queries a business needs and speeds up the slow ones.",
+    "aliases": [
+      "database",
+      "sql",
+      "postgresql",
+      "mysql",
+      "query optimisation",
+      "database design",
+      "dba"
+    ]
+  },
+  {
+    "id": "devops-engineer",
+    "name": "DevOps engineer",
+    "department": "engineering",
+    "summary": "Makes releases boring: pipelines, containers, deploy checklists, cloud costs and incident write-ups. Turns manual deploy steps into something repeatable.",
+    "aliases": [
+      "devops",
+      "ci/cd",
+      "docker",
+      "github actions",
+      "cloud costs",
+      "release management",
+      "incident postmortem"
+    ]
+  },
+  {
+    "id": "system-architect",
+    "name": "System architect",
+    "department": "engineering",
+    "summary": "Designs how a software system fits together so it stays reliable, secure and affordable as it grows. Writes the design, the trade-offs and the plan to build it.",
+    "aliases": [
+      "software architect",
+      "solutions architect",
+      "technical architect",
+      "system design",
+      "cloud architect",
+      "architecture review"
+    ]
+  },
+  {
+    "id": "application-security-engineer",
+    "name": "Application security engineer",
+    "department": "engineering",
+    "summary": "Checks a business's own code and settings for common security gaps and writes the fixes with tests. Readies small apps for a customer's security questions.",
+    "aliases": [
+      "appsec",
+      "secure code review",
+      "owasp",
+      "security headers",
+      "penetration test prep",
+      "dependency audit"
+    ]
+  },
+  {
+    "id": "accessibility-specialist",
+    "name": "Accessibility specialist",
+    "department": "engineering",
+    "summary": "Finds and fixes the barriers that stop disabled people using a site, app or document. Writes code fixes, audits and alt text to WCAG.",
+    "aliases": [
+      "accessibility",
+      "wcag",
+      "a11y",
+      "ada compliance",
+      "alt text",
+      "screen reader testing"
+    ]
+  },
+  {
+    "id": "ai-engineer",
+    "name": "AI engineer",
+    "department": "engineering",
+    "summary": "Builds AI features into an app: the code, prompts, tests and spending limits. Makes the feature say it does not know instead of guessing.",
+    "aliases": [
+      "ai developer",
+      "llm engineer",
+      "openai api",
+      "rag",
+      "ai features",
+      "ai integration",
+      "llm app"
+    ]
+  },
+  {
+    "id": "embedded-developer",
+    "name": "Embedded systems developer",
+    "department": "engineering",
+    "summary": "Writes code and wiring notes for small gadgets on Arduino, ESP32 and Raspberry Pi, such as sensors, counters and displays.",
+    "aliases": [
+      "arduino",
+      "esp32",
+      "raspberry pi",
+      "iot",
+      "embedded",
+      "microcontroller"
+    ]
+  },
+  {
+    "id": "game-developer",
+    "name": "Game developer",
+    "department": "engineering",
+    "summary": "Writes game code for small studios in Unity: movement, menus, saves and game rules, with tests. Fixes physics and timing bugs.",
+    "aliases": [
+      "unity developer",
+      "game programmer",
+      "c# unity",
+      "indie games",
+      "game development"
+    ]
+  },
+  {
+    "id": "prompt-engineer",
+    "name": "Prompt engineer",
+    "department": "data",
+    "summary": "Writes and tests prompts that get reliable results from AI tools, from pulling data out of documents to brand-safe images.",
+    "aliases": [
+      "prompt engineering",
+      "prompt design",
+      "ai prompts",
+      "midjourney prompts",
+      "data extraction",
+      "json schema"
+    ]
+  },
+  {
+    "id": "chatbot-specialist",
+    "name": "AI chatbot specialist",
+    "department": "data",
+    "summary": "Sets up custom GPTs and support bots with the right knowledge, rules and hand-offs, then tests their answers. Keeps the bot from making things up.",
+    "aliases": [
+      "chatbot",
+      "custom gpt",
+      "claude project",
+      "ai assistant",
+      "knowledge base",
+      "support bot",
+      "conversational ai"
+    ]
+  },
+  {
+    "id": "ai-consultant",
+    "name": "AI consultant",
+    "department": "data",
+    "summary": "Works out where AI fits in a team's work, which tools to use and what rules keep data safe. Starts with a small, measured pilot.",
+    "aliases": [
+      "ai consultant",
+      "ai adoption",
+      "ai strategy",
+      "ai policy",
+      "ai governance",
+      "ai automation",
+      "ai training"
+    ]
+  },
+  {
+    "id": "spreadsheet-specialist",
+    "name": "Excel and Google Sheets specialist",
+    "department": "data",
+    "summary": "Builds, fixes and automates the spreadsheets a business runs on: formulas, calculators, macros and scripts. Makes sheets safe for non-experts to use.",
+    "aliases": [
+      "excel expert",
+      "google sheets",
+      "vba",
+      "apps script",
+      "spreadsheet",
+      "excel formulas",
+      "macros"
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "name": "Data analyst",
+    "department": "data",
+    "summary": "Cleans and joins messy exports, then finds the answer and explains it plainly. Shows the working and says when the data is too thin.",
+    "aliases": [
+      "data analysis",
+      "data cleaning",
+      "power query",
+      "excel analysis",
+      "forecasting",
+      "benchmarking",
+      "reporting"
+    ]
+  },
+  {
+    "id": "product-analyst",
+    "name": "Product analyst",
+    "department": "data",
+    "summary": "Shows where users drop off, how long customers stay and which groups come back. Plans the tracking and tests to fix the biggest leak.",
+    "aliases": [
+      "product analytics",
+      "funnel analysis",
+      "retention",
+      "cohort analysis",
+      "mixpanel",
+      "churn analysis"
+    ]
+  },
+  {
+    "id": "bi-analyst",
+    "name": "Business intelligence (BI) analyst",
+    "department": "data",
+    "summary": "Picks the few numbers that matter, defines them exactly and builds the dashboards and reports people use to decide.",
+    "aliases": [
+      "bi developer",
+      "power bi",
+      "looker studio",
+      "dashboard",
+      "kpi",
+      "reporting analyst",
+      "tableau"
+    ]
+  },
+  {
+    "id": "data-visualisation-specialist",
+    "name": "Data visualisation specialist",
+    "department": "data",
+    "summary": "Turns numbers into charts, infographics and slides that make one clear point without misleading anyone.",
+    "aliases": [
+      "data visualisation",
+      "charts",
+      "infographic",
+      "data storytelling",
+      "dashboard design",
+      "chart design"
+    ]
+  },
+  {
+    "id": "data-quality-analyst",
+    "name": "Data quality and governance analyst",
+    "department": "data",
+    "summary": "Writes the data dictionary, quality checks and test data that keep reports trustworthy. Makes sure everyone knows what each column means.",
+    "aliases": [
+      "data quality",
+      "data governance",
+      "data dictionary",
+      "data steward",
+      "test data",
+      "data validation"
+    ]
+  },
+  {
+    "id": "data-scientist",
+    "name": "Data scientist",
+    "department": "data",
+    "summary": "Checks whether numbers, models and AI accuracy claims really show what people think. Picks the right test and explains uncertainty in plain words.",
+    "aliases": [
+      "data science",
+      "statistics",
+      "statistician",
+      "machine learning",
+      "model evaluation",
+      "hypothesis testing"
+    ]
+  },
+  {
+    "id": "market-research-analyst",
+    "name": "Market research analyst",
+    "department": "research",
+    "summary": "Sizes a market, maps rivals and segments and tests whether an idea will sell before money is spent. Keeps facts and guesses apart.",
+    "aliases": [
+      "market research",
+      "competitor analysis",
+      "market sizing",
+      "segmentation",
+      "idea validation",
+      "location analysis"
+    ]
+  },
+  {
+    "id": "customer-insights-researcher",
+    "name": "Customer insights researcher",
+    "department": "research",
+    "summary": "Finds out what customers need and how they talk, from interviews, surveys, reviews and social mentions. Turns it into words and fixes the business can use.",
+    "aliases": [
+      "customer research",
+      "user interviews",
+      "survey design",
+      "review analysis",
+      "social listening",
+      "voice of customer",
+      "consumer insights"
+    ]
+  },
+  {
+    "id": "cx-manager",
+    "name": "Customer experience (CX) manager",
+    "department": "research",
+    "summary": "Maps every step customers take, measures how they feel and fixes where they get stuck. Runs NPS as a programme, not a one-off.",
+    "aliases": [
+      "customer experience",
+      "cx",
+      "service blueprint",
+      "nps",
+      "service design",
+      "behavioural design",
+      "customer satisfaction",
+      "customer journey mapping"
+    ]
+  },
+  {
+    "id": "research-assistant",
+    "name": "Research assistant",
+    "department": "research",
+    "summary": "Reads the papers, records and sources you give, checks the facts and writes a clear, cited answer. Marks where the evidence is strong or weak.",
+    "aliases": [
+      "research assistant",
+      "literature review",
+      "fact checking",
+      "desk research",
+      "science writer",
+      "historical research"
+    ]
+  },
+  {
+    "id": "sponsorship-manager",
+    "name": "Sponsorship manager",
+    "department": "sales",
+    "summary": "Sells sponsorship packages for events, clubs, charities, podcasts and newsletters. Builds the deck and tiers, finds sponsors and keeps them happy so they renew.",
+    "aliases": [
+      "sponsorship sales",
+      "sponsorship manager",
+      "event sponsorship",
+      "club sponsorship",
+      "partnership sales",
+      "media kit"
+    ]
+  },
+  {
+    "id": "sales-engineer",
+    "name": "Sales engineer",
+    "department": "sales",
+    "summary": "Runs the technical side of a sale: demos built on the buyer's needs, pilots with agreed success measures and answers to technical objections.",
+    "aliases": [
+      "sales engineer",
+      "solutions consultant",
+      "pre-sales",
+      "presales consultant",
+      "solutions engineer",
+      "technical sales",
+      "demo"
+    ]
+  },
+  {
+    "id": "business-development-manager",
+    "name": "Business development manager",
+    "department": "sales",
+    "summary": "Opens new commercial accounts and partnerships: target lists, capability statements, introductions and pre-qualification packs.",
+    "aliases": [
+      "business development",
+      "bdm",
+      "commercial accounts",
+      "new business",
+      "capability statement",
+      "b2b sales",
+      "partnerships"
+    ]
+  },
+  {
+    "id": "tiktok-ads-media-buyer",
+    "name": "TikTok ads media buyer",
+    "department": "marketing",
+    "summary": "Plans, runs and improves paid TikTok campaigns and Spark Ads. Briefs creators, tests hooks and moves budget to what sells.",
+    "aliases": [
+      "tiktok ads",
+      "tiktok ads manager",
+      "spark ads",
+      "tiktok advertising",
+      "tiktok media buyer",
+      "paid tiktok"
+    ]
+  },
+  {
+    "id": "amazon-ppc-specialist",
+    "name": "Amazon PPC specialist",
+    "department": "ecommerce",
+    "summary": "Runs Amazon Ads (Sponsored Products, Brands and Display). Harvests search terms, sets negatives and judges ACoS against each product's margin.",
+    "aliases": [
+      "amazon ppc",
+      "amazon ads",
+      "sponsored products",
+      "acos",
+      "amazon advertising",
+      "sponsored brands",
+      "tacos"
+    ]
+  },
+  {
+    "id": "website-designer",
+    "name": "Website designer (Squarespace, Wix, Webflow)",
+    "department": "design",
+    "summary": "Plans and designs small business websites in site builders: page list, section layouts, style settings, CMS set-up and launch checks.",
+    "aliases": [
+      "website designer",
+      "web designer",
+      "squarespace",
+      "wix",
+      "webflow",
+      "site builder",
+      "website design"
+    ]
+  },
+  {
+    "id": "video-editor",
+    "name": "Video editor",
+    "department": "design",
+    "summary": "Plans the cut of short and long videos from transcripts and shot notes: edit decision lists, clips, captions and pacing notes for the editing tool.",
+    "aliases": [
+      "video editor",
+      "video editing",
+      "short form video editor",
+      "reels editor",
+      "podcast video editor",
+      "premiere",
+      "capcut",
+      "descript"
+    ]
+  },
+  {
+    "id": "ui-designer",
+    "name": "UI designer",
+    "department": "design",
+    "summary": "Specifies the visual design of app and web screens: type scale, spacing, colour, components and states, ready for Figma or code.",
+    "aliases": [
+      "ui designer",
+      "ui design",
+      "visual design",
+      "figma",
+      "interface design",
+      "app ui"
+    ]
+  },
+  {
+    "id": "no-code-app-developer",
+    "name": "No-code app developer (Bubble, Glide, Softr)",
+    "department": "engineering",
+    "summary": "Designs client portals and internal tools on no-code platforms: data model, pages, user roles and privacy rules.",
+    "aliases": [
+      "no-code developer",
+      "bubble developer",
+      "glide",
+      "softr",
+      "client portal",
+      "internal tool",
+      "low-code"
+    ]
+  },
+  {
+    "id": "data-engineer",
+    "name": "Data engineer",
+    "department": "data",
+    "summary": "Moves data from a firm's tools into one place: pipeline specs, tested models and run books for failed or late loads.",
+    "aliases": [
+      "data engineer",
+      "etl",
+      "data pipeline",
+      "dbt",
+      "data warehouse",
+      "bigquery",
+      "postgres"
+    ]
+  },
+  {
+    "id": "data-entry-specialist",
+    "name": "Data entry specialist",
+    "department": "data",
+    "summary": "Turns invoices, forms, cards and documents into clean, import-ready rows, with an exceptions list for anything unclear.",
+    "aliases": [
+      "data entry",
+      "data entry clerk",
+      "pdf to excel",
+      "data capture",
+      "form processing",
+      "copy typing"
+    ]
+  },
+  {
+    "id": "evaluation-specialist",
+    "name": "Monitoring and evaluation specialist",
+    "department": "research",
+    "summary": "Shows what a programme changed: logic models, outcome measures, survey instruments and honest evaluation reports for funders.",
+    "aliases": [
+      "program evaluation",
+      "programme evaluation",
+      "m&e",
+      "impact measurement",
+      "theory of change",
+      "logic model",
+      "outcomes measurement"
+    ]
+  },
+  {
+    "id": "sports-coach",
+    "name": "Sports coach",
+    "department": "learning",
+    "summary": "Plans coaching sessions, drills and season plans for clubs and academies, with progress records and messages for players and parents.",
+    "aliases": [
+      "sports coach",
+      "coaching sessions",
+      "training drills",
+      "season plan",
+      "academy coach",
+      "swim coach"
+    ]
+  },
+  {
+    "id": "organisation-development-specialist",
+    "name": "Organisation design specialist",
+    "department": "people",
+    "summary": "Redesigns structure as a firm grows: org chart options, decision rights, role profiles and a transition plan.",
+    "aliases": [
+      "org design",
+      "organisational design",
+      "organisation development",
+      "od specialist",
+      "restructure",
+      "org chart",
+      "raci"
+    ]
+  },
+  {
+    "id": "internal-communications-specialist",
+    "name": "Internal communications specialist",
+    "department": "people",
+    "summary": "Runs a firm's regular internal communication: staff newsletter, leadership updates, intranet pages and a comms calendar.",
+    "aliases": [
+      "internal communications",
+      "internal comms",
+      "employee communications",
+      "staff newsletter",
+      "intranet",
+      "town hall"
+    ]
+  },
+  {
+    "id": "facilities-maintenance-coordinator",
+    "name": "Facilities and maintenance coordinator",
+    "department": "operations",
+    "summary": "Keeps equipment, vehicles and buildings working: asset registers, preventive maintenance schedules, check sheets and work orders.",
+    "aliases": [
+      "facilities coordinator",
+      "maintenance planner",
+      "fleet manager",
+      "preventive maintenance",
+      "asset register",
+      "facilities manager"
+    ]
+  },
+  {
+    "id": "practice-manager",
+    "name": "Practice manager",
+    "department": "operations",
+    "summary": "Runs the admin side of dental, physio, vet and therapy practices: front-desk and patient flow, appointment books, recalls, rotas and KPIs. No clinical or legal advice.",
+    "aliases": [
+      "practice manager",
+      "dental practice manager",
+      "clinic manager",
+      "vet practice manager",
+      "medical office manager",
+      "clinic administrator"
+    ]
+  },
+  {
+    "id": "real-estate-transaction-coordinator",
+    "name": "Real estate transaction coordinator",
+    "department": "operations",
+    "summary": "Tracks deadlines and paperwork from accepted offer to completion and keeps every party updated. Gives no legal advice and points to the broker or lawyer.",
+    "aliases": [
+      "transaction coordinator",
+      "tc",
+      "real estate coordinator",
+      "closing coordinator",
+      "escrow coordinator",
+      "conveyancing tracker"
+    ]
+  },
+  {
+    "id": "physical-product-developer",
+    "name": "Product development specialist (physical goods)",
+    "department": "product",
+    "summary": "Takes a physical product from idea to factory-ready: requirements, prototypes, tech packs, manufacturer briefs and cost of goods.",
+    "aliases": [
+      "product developer",
+      "tech pack",
+      "industrial design brief",
+      "prototype",
+      "manufacturer brief",
+      "apparel technical designer",
+      "product spec"
+    ]
+  }
+]

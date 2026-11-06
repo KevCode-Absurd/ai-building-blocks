@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 import { Link } from "./lib/router.tsx";
 
 export function Page(props: { title: string; intro?: ComponentChildren; actions?: ComponentChildren; children: ComponentChildren; wide?: boolean }) {
-  useEffect(() => { document.title = `${props.title} · AI Blocks Agents`; }, [props.title]);
+  useEffect(() => { document.title = `${props.title} · AI Blocks`; }, [props.title]);
   return (
     <main class={`page${props.wide ? " page-wide" : ""}`}>
       <header class="page-head">
@@ -22,8 +22,11 @@ export function Page(props: { title: string; intro?: ComponentChildren; actions?
 }
 
 type ButtonProps = { children: ComponentChildren; onClick?: () => void; href?: string; kind?: "primary" | "secondary" | "ghost" | "danger"; disabled?: boolean; busy?: boolean; type?: "button" | "submit"; small?: boolean };
+/** The library's button classes (site/src/styles.css): primary is btn-primary, secondary the outlined btn-line,
+ *  ghost btn-ghost, small btn-sm. Danger is the agents site's own outlined red button. */
+const BUTTON_KIND = { primary: "btn-primary", secondary: "btn-line", ghost: "btn-ghost", danger: "btn-danger" } as const;
 export function Button(p: ButtonProps) {
-  const cls = `btn btn-${p.kind ?? "primary"}${p.small ? " btn-small" : ""}`;
+  const cls = `btn ${BUTTON_KIND[p.kind ?? "primary"]}${p.small ? " btn-sm" : ""}`;
   if (p.href) return <Link href={p.href} class={cls}>{p.children}</Link>;
   return <button type={p.type ?? "button"} class={cls} disabled={p.disabled || p.busy} aria-busy={p.busy} onClick={p.onClick}>{p.busy ? "Working..." : p.children}</button>;
 }
@@ -130,7 +133,93 @@ export function Loaded<T>(props: { state: { data: T | null; error: string | null
   return <>{props.state.data !== null && props.children(props.state.data)}</>;
 }
 
-export function Logo(props: { size?: number }) {
-  const s = props.size ?? 24;
-  return <img src="/logo.svg" alt="" width={s} height={s} class="brand-logo" />;
+// ---------- The library's logo, theme switch and arrow (site/src/ui.tsx) ----------
+
+/** The mark: a round world of blocks, like the globe of 0s and 1s on the library's home page. Lit and faint blocks
+ *  alternate, like bits. */
+const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
+function Mark() {
+  return (
+    <>
+      {GLOBE.flatMap((row, y) => [...row].map((c, x) => c === "." ? null : (
+        <rect key={`${x}-${y}`} x={x * 3.4 + 0.3} y={y * 3.4 + 0.3} width="2.9" height="2.9" fill="currentColor" opacity={c === "+" ? 0.32 : undefined} />
+      )))}
+    </>
+  );
+}
+
+// What the blocks build, on a 6 by 6 grid, top row first. Each one goes up from the bottom, a block at a time.
+const BUILDS: string[][] = [
+  ["..##..", ".####.", "######", ".####.", ".#.##.", ".#.##."], // house
+  ["..##..", ".####.", ".#..#.", ".####.", "######", "#.##.#"], // rocket
+  ["..##..", ".####.", "######", ".####.", "..##..", "..##.."], // tree
+  [".####.", "#.##.#", "######", ".####.", ".#..#.", ".#..#."], // robot
+  [".#..#.", "######", "######", ".####.", "..##..", "......"], // heart
+  ["#.#..#", "######", ".####.", ".#..#.", ".####.", ".####."], // castle
+];
+const cellsOf = (rows: string[]) => {
+  const out: [number, number][] = [];
+  for (let y = rows.length - 1; y >= 0; y--) for (let x = 0; x < 6; x++) if (rows[y][x] === "#") out.push([x, y]);
+  return out;
+};
+const BUILT = BUILDS.map(cellsOf);
+
+/** The library's animated logo (site/src/ui.tsx before it was made still). It shows the mark, then stacks blocks
+ *  into a house, a rocket, a tree, a robot, a heart and a castle, and comes back to the mark. Still for anyone who
+ *  asks for reduced motion. Sized by CSS (.brand svg). */
+export function Logo() {
+  const [frame, setFrame] = useState({ build: -1, n: 0, clearing: false });
+  useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    let t: number;
+    const step = (f: typeof frame) => {
+      setFrame(f);
+      let next: typeof frame, wait: number;
+      if (f.build === -1) { next = { build: 0, n: 0, clearing: false }; wait = 3200; }
+      else if (f.clearing) { next = { build: f.build + 1 < BUILT.length ? f.build + 1 : -1, n: 0, clearing: false }; wait = 380; }
+      else if (f.n < BUILT[f.build].length) { next = { ...f, n: f.n + 1 }; wait = 70; }
+      else { next = { ...f, clearing: true }; wait = 1500; }
+      t = window.setTimeout(() => step(next), wait);
+    };
+    step({ build: -1, n: 0, clearing: false });
+    return () => window.clearTimeout(t);
+  }, []);
+  const { build, n, clearing } = frame;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" class={`logo${build >= 0 ? " building" : ""}${clearing ? " clearing" : ""}`} data-testid="logo">
+      {build < 0 ? <Mark /> : BUILT[build].slice(0, n).map(([x, y]) => (
+        <rect key={`${build}-${x}-${y}`} class="drop" x={x * 4 + 0.3} y={y * 4 + 0.3} width="3.4" height="3.4" fill="currentColor" />
+      ))}
+    </svg>
+  );
+}
+
+export const ArrowIcon = (props: { size?: number }) => {
+  const size = props.size ?? 14;
+  return <svg width={size} height={size} viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>;
+};
+const SunIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.5" /><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+);
+const MoonIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+);
+
+/** The library's theme switch. Dark by default (index.html applies a saved choice of light before first paint);
+ *  the choice is kept under the library's key, "abb:theme", so both sites agree. */
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<"dark" | "light">(() => (document.documentElement.dataset.theme === "dark" ? "dark" : "light"));
+  const next = theme === "dark" ? "light" : "dark";
+  return (
+    <button
+      type="button" class="icon-btn" aria-label={`Switch to ${next} mode`} title={`Switch to ${next} mode`} data-testid="theme-toggle"
+      onClick={() => {
+        document.documentElement.dataset.theme = next;
+        try { localStorage.setItem("abb:theme", next); } catch { /* private mode: still switches for this visit */ }
+        setTheme(next);
+      }}
+    >
+      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+    </button>
+  );
 }

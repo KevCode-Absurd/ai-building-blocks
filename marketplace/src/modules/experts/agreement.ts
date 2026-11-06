@@ -16,7 +16,7 @@ export function foundingAgreement(version: string, rates: { standard: number; fo
     version,
     status: "draft",
     title: "Founding expert agreement (draft)",
-    draft_notice: "This is a draft in plain words. A lawyer will review it before payouts start, and the final wording may change. Payments are on hold during the beta, so nothing is paid out yet.",
+    draft_notice: "This is a draft in plain words. A lawyer will review it before any payouts start, and the final wording may change. Hiring is free for buyers right now, so there is nothing to pay out.",
     sections: [
       {
         id: "ownership",
@@ -31,7 +31,7 @@ export function foundingAgreement(version: string, rates: { standard: number; fo
       {
         id: "earnings",
         heading: "What you earn",
-        body: `When payments go live, you earn ${pct(rates.standard)} of the net amount from jobs on the platform. The first ${rates.foundingLimit} approved experts get a founding rate of ${pct(rates.founding)}.`,
+        body: `Hiring is free for buyers right now, so there is no pay yet. If we add paid work later, you earn ${pct(rates.standard)} of the net amount from jobs on the platform. The first ${rates.foundingLimit} approved experts get a founding rate of ${pct(rates.founding)}.`,
       },
       {
         id: "confidential",

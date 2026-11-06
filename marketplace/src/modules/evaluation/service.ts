@@ -560,3 +560,86 @@ export async function reviewStats(env: Env) {
     closed: Number(counts?.closed ?? 0),
   };
 }
+
+// ---------- Review numbers for the ops console (/ops/review) ----------
+
+export interface PassRate { checks: number; passed: number; rate: number | null }
+export interface CheckPassRates {
+  /** Rubric judge rows on job drafts. averageScore = mean weighted score (0 to 1). */
+  rubric: PassRate & { averageScore: number | null };
+  /** Policy rows (rules plus the model claim check) on job drafts. */
+  policy: PassRate;
+  /** Job drafts that have both checks, and how many passed both (a draft with several checks must pass all of them). */
+  drafts: number;
+  allPassed: number;
+  allRate: number | null;
+  byJobType: { key: string; label: string; rubric: PassRate; policy: PassRate }[];
+}
+
+const shareOf = (part: number, whole: number) => (whole > 0 ? Math.round((part / whole) * 10_000) / 10_000 : null);
+const passRate = (checks: number, passed: number): PassRate => ({ checks, passed, rate: shareOf(passed, checks) });
+
+/** How often job drafts pass the rubric judge and the policy check. Drafts with no job (studio bench, baselines) are left out. */
+export async function checkPassRates(env: Env): Promise<CheckPassRates> {
+  const rows = await all<{ judge: "rubric" | "policy"; job_type_id: string | null; checks: number; passed: number | null; score_sum: number | null; scored: number }>(env.DB,
+    "SELECT s.judge, j.job_type_id, COUNT(*) AS checks, SUM(s.passed) AS passed, SUM(s.score) AS score_sum, COUNT(s.score) AS scored " +
+    "FROM scores s JOIN drafts d ON d.id = s.draft_id JOIN jobs j ON j.id = d.job_id " +
+    "WHERE s.judge IN ('rubric', 'policy') GROUP BY s.judge, j.job_type_id");
+  const sum = (judge: "rubric" | "policy", pick: (r: (typeof rows)[number]) => number) => rows.filter(r => r.judge === judge).reduce((n, r) => n + pick(r), 0);
+  const scored = sum("rubric", r => Number(r.scored ?? 0));
+  const both = await first<{ drafts: number; all_passed: number | null }>(env.DB,
+    "SELECT COUNT(*) AS drafts, SUM(CASE WHEN r_ok = 1 AND p_ok = 1 THEN 1 ELSE 0 END) AS all_passed FROM (" +
+    "SELECT s.draft_id, MIN(CASE WHEN s.judge = 'rubric' THEN s.passed END) AS r_ok, MIN(CASE WHEN s.judge = 'policy' THEN s.passed END) AS p_ok " +
+    "FROM scores s JOIN drafts d ON d.id = s.draft_id WHERE d.job_id IS NOT NULL AND s.judge IN ('rubric', 'policy') GROUP BY s.draft_id" +
+    ") WHERE r_ok IS NOT NULL AND p_ok IS NOT NULL");
+  const keys = [...new Set(rows.map(r => r.job_type_id ?? "unknown"))];
+  const groupRate = (key: string, judge: "rubric" | "policy") => {
+    const g = rows.filter(r => (r.job_type_id ?? "unknown") === key && r.judge === judge);
+    return passRate(g.reduce((n, r) => n + Number(r.checks), 0), g.reduce((n, r) => n + Number(r.passed ?? 0), 0));
+  };
+  const drafts = Number(both?.drafts ?? 0), allPassed = Number(both?.all_passed ?? 0);
+  return {
+    rubric: {
+      ...passRate(sum("rubric", r => Number(r.checks)), sum("rubric", r => Number(r.passed ?? 0))),
+      averageScore: scored ? Math.round((sum("rubric", r => Number(r.score_sum ?? 0)) / scored) * 10_000) / 10_000 : null,
+    },
+    policy: passRate(sum("policy", r => Number(r.checks)), sum("policy", r => Number(r.passed ?? 0))),
+    drafts, allPassed, allRate: shareOf(allPassed, drafts),
+    byJobType: keys
+      .map(key => ({ key, label: getJobType(key)?.title ?? key, rubric: groupRate(key, "rubric"), policy: groupRate(key, "policy") }))
+      .sort((a, b) => b.rubric.checks + b.policy.checks - (a.rubric.checks + a.policy.checks) || a.key.localeCompare(b.key)),
+  };
+}
+
+export interface BlindTestQueue {
+  open: number;
+  closed: number;
+  /** Every reviewer pick so far, on open and closed tests. */
+  judgments: number;
+  openJudgments: number;
+  /** Picks still needed before every open test closes. */
+  stillNeeded: number;
+  reviewers: number;
+  oldestOpenAt: string | null;
+}
+
+/** Blind tests waiting for reviewers, and how many picks people have made. */
+export async function blindTestQueue(env: Env): Promise<BlindTestQueue> {
+  const tests = await first<{ open: number; closed: number; oldest: string | null; still_needed: number | null }>(env.DB,
+    "SELECT COALESCE(SUM(CASE WHEN t.status = 'open' THEN 1 ELSE 0 END), 0) AS open, COALESCE(SUM(CASE WHEN t.status = 'closed' THEN 1 ELSE 0 END), 0) AS closed, " +
+    "MIN(CASE WHEN t.status = 'open' THEN t.created_at END) AS oldest, " +
+    "SUM(CASE WHEN t.status = 'open' THEN MAX(0, t.judgments_needed - (SELECT COUNT(*) FROM blind_judgments j WHERE j.test_id = t.id)) ELSE 0 END) AS still_needed " +
+    "FROM blind_tests t");
+  const picks = await first<{ n: number; open_n: number | null; reviewers: number }>(env.DB,
+    "SELECT COUNT(*) AS n, SUM(CASE WHEN t.status = 'open' THEN 1 ELSE 0 END) AS open_n, COUNT(DISTINCT j.reviewer_id) AS reviewers " +
+    "FROM blind_judgments j JOIN blind_tests t ON t.id = j.test_id");
+  return {
+    open: Number(tests?.open ?? 0),
+    closed: Number(tests?.closed ?? 0),
+    judgments: Number(picks?.n ?? 0),
+    openJudgments: Number(picks?.open_n ?? 0),
+    stillNeeded: Number(tests?.still_needed ?? 0),
+    reviewers: Number(picks?.reviewers ?? 0),
+    oldestOpenAt: tests?.oldest ?? null,
+  };
+}

@@ -1,18 +1,23 @@
-// Intake and quote (the dispatcher, first version). Owner: intake module.
-// Buyer's words -> job type -> spec -> at most three questions -> rubric -> fixed price -> confirmed order.
+// Intake and the plan (the dispatcher, first version). Owner: intake module.
+// Buyer's words -> job type -> spec -> at most three questions -> rubric -> plan -> started job.
+// Hiring is free: a plan says what the agent delivers, by when, and the checklist. It never sets a price
+// (jobs.price_cents stays NULL, payment_status "not_required"). Internally the plan step is still the "quoted"
+// status and the jobs.quote column, and the 15-minute cron still closes plans nobody started within 7 days.
 import { z } from "zod";
 import type { Env } from "../../env.ts";
 import type { ClarifyingQuestion, JobRow, JobType, Quote, RubricCriterion } from "../../core/types.ts";
 import type { ActorKind } from "../../core/events.ts";
 import { eventStatement, recordEvent } from "../../core/events.ts";
-import { addHours, first, newId, nowIso, parseJson, stableJson } from "../../core/db.ts";
-import { fail } from "../../core/http.ts";
+import { addHours, all, first, newId, nowIso, parseJson, stableJson } from "../../core/db.ts";
+import { fail, HttpError } from "../../core/http.ts";
 import { getJob, transitionJob } from "../../core/jobs.ts";
+import { notify } from "../../core/email.ts";
 import { callModel, parseModelJson } from "../../core/models.ts";
 import { CATALOGUE_VERSION, getJobType, listJobTypes } from "../catalogue/index.ts";
 import { notifyOps } from "../ops/service.ts";
 import { startJobRun } from "../runner/service.ts";
-import { priceFor } from "./pricing.ts";
+import { planFor } from "./plan.ts";
+import { checkDailyJobs } from "./limits.ts";
 import { CLASSIFY_SCHEMA, CLASSIFY_SYSTEM, EXTRACT_SCHEMA, EXTRACT_SYSTEM, RUBRIC_SCHEMA, RUBRIC_SYSTEM, classifyPrompt, extractPrompt, rubricPrompt } from "./prompts.ts";
 import { buildQuestions, isEmpty, jobTitle, normaliseValue, openTitle, type Spec } from "./spec.ts";
 
@@ -35,22 +40,31 @@ export interface IntakeState {
   job: JobRow;
   classification: Classification;
   spec: Record<string, unknown>;
-  questions: ClarifyingQuestion[];   // still unanswered; empty = ready to quote
+  questions: ClarifyingQuestion[];   // still unanswered; empty = ready for the plan
   ready: boolean;
   /** The buyer's words, verbatim. */
   requestText?: string;
-  /** The buyer's goals from the last quote ("anything else that matters?"). */
+  /** The buyer's goals from the last plan ("anything else that matters?"). */
   goals?: string;
-  /** Whether the last quote was a rush quote. */
+  /** Whether the last plan had faster delivery. */
   rush?: boolean;
+  /** Set when the job is back in draft because its last plan timed out (the 15-minute cron). */
+  expiredQuote?: { expiredAt: string | null } | null;
 }
 
-/** The quote JSON stored on jobs.quote: the shared Quote plus the goals it was built from. */
+/**
+ * The plan JSON stored on jobs.quote: the shared Quote shape plus the goals it was built from. Hiring is free, so
+ * price_cents is always 0 and breakdown is empty; nothing reads them.
+ */
 export type StoredQuote = Quote & { goals: string };
+
+/** What a draft job keeps on jobs.quote after its plan timed out: the buyer's choices and when it timed out. */
+interface ExpiredMark { expired?: { expired_at: string | null } }
 
 /** Below this the request goes to the ops queue as an open request. */
 export const CONFIDENCE_MIN = 0.55;
 export const MAX_BUYER_CRITERIA = 3;
+/** How long a plan stays open before the cron closes it. */
 export const QUOTE_VALID_HOURS = 7 * 24;
 const MIN_TEXT = 10;
 const MAX_TEXT = 60000;
@@ -207,9 +221,13 @@ export async function rubricFromGoals(env: Env, jt: JobType, goals: string, jobI
 
 // ---------- Service functions ----------
 
-/** Start from the buyer's own words. Creates a draft job and its brief (request_text kept verbatim). */
-export async function startRequest(env: Env, input: { orgId: string; userId: string; text: string; source?: "web" | "mcp" | "api" | "ops"; jobTypeId?: string; personaId?: string }): Promise<IntakeState> {
+/**
+ * Start from the buyer's own words. Creates a draft job and its brief (request_text kept verbatim).
+ * Refused with 429 "daily_limit" when the person has already started their jobs for the day (ops pass ignoreDailyLimit).
+ */
+export async function startRequest(env: Env, input: { orgId: string; userId: string; text: string; source?: "web" | "mcp" | "api" | "ops"; jobTypeId?: string; personaId?: string; ignoreDailyLimit?: boolean }): Promise<IntakeState> {
   const text = checkText(input.text);
+  if (!input.ignoreDailyLimit) await checkDailyJobs(env, input.userId, { saved: false });
   const source = input.source ?? "web";
   const actorKind = actorFor(source);
   const persona = input.personaId ? await livePersona(env, input.personaId) : null;
@@ -254,7 +272,7 @@ export async function startRequest(env: Env, input: { orgId: string; userId: str
   return getIntake(env, jobId);
 }
 
-/** Current intake state for a draft or quoted job. */
+/** Current intake state for a draft job or one with its plan ready. */
 export async function getIntake(env: Env, jobId: string): Promise<IntakeState> {
   const job = await mustJob(env, jobId);
   const brief = await mustBrief(env, jobId);
@@ -264,20 +282,28 @@ export async function getIntake(env: Env, jobId: string): Promise<IntakeState> {
   const jt = getJobType(job.job_type_id);
   const asked = parseJson<ClarifyingQuestion[]>(brief.questions, []);
   const questions = jt ? asked.filter(q => isEmpty(spec[q.field_id])) : [];
-  const quote = parseJson<Partial<StoredQuote>>(job.quote, {});
+  const quote = parseJson<Partial<StoredQuote> & ExpiredMark>(job.quote, {});
+  const expired = job.status === "draft" && quote.expired && typeof quote.expired === "object" ? quote.expired : null;
   return {
     job, classification, spec, questions, ready: !!jt && questions.length === 0,
     requestText: brief.request_text, goals: typeof quote.goals === "string" ? quote.goals : "", rush: quote.rush === true,
+    expiredQuote: expired ? { expiredAt: typeof expired.expired_at === "string" ? expired.expired_at : null } : null,
   };
 }
 
-/** What a quoted job keeps of its quote when it goes back to draft: the buyer's last rush and goals choices. */
+/** What a job with a plan keeps of it when it goes back to draft: the buyer's last faster-delivery and goals choices. */
 function keptChoices(job: JobRow): string {
   const q = parseJson<Partial<StoredQuote>>(job.quote, {});
   return JSON.stringify({ goals: typeof q.goals === "string" ? q.goals : "", rush: q.rush === true });
 }
 
 const backToDraft = (job: JobRow) => ({ price_cents: null, quote_expires_at: null, turnaround_hours: null, quote: keptChoices(job) });
+
+/** Like keptChoices, plus a note that the plan timed out, so the request page can say so. A new plan replaces it. */
+function expiredChoices(job: JobRow): string {
+  const expired: ExpiredMark["expired"] = { expired_at: job.quote_expires_at };
+  return JSON.stringify({ ...parseJson<Record<string, unknown>>(keptChoices(job), {}), expired });
+}
 
 /** Point the request at a (different) job type: read the spec again for it and ask its questions. Answers start over. */
 async function setJobType(env: Env, job: JobRow, brief: BriefRow, jt: JobType, actor: string, actorKind: ActorKind): Promise<void> {
@@ -314,7 +340,7 @@ async function setJobType(env: Env, job: JobRow, brief: BriefRow, jt: JobType, a
 export async function answerQuestions(env: Env, input: { jobId: string; userId: string; answers: Record<string, unknown>; jobTypeId?: string; actorKind?: ActorKind }): Promise<IntakeState> {
   const actorKind = input.actorKind ?? "user";
   let job = await mustJob(env, input.jobId);
-  if (job.status !== "draft" && job.status !== "quoted") fail(409, "request_locked", "This job is already ordered, so its details are fixed. Open the job page to follow it.");
+  if (job.status !== "draft" && job.status !== "quoted") fail(409, "request_locked", "This job has started, so its details are fixed. Open the job page to follow it.");
   let brief = await mustBrief(env, job.id);
 
   if (input.jobTypeId && input.jobTypeId !== job.job_type_id) {
@@ -352,7 +378,7 @@ export async function answerQuestions(env: Env, input: { jobId: string; userId: 
   const briefUpdate = db.prepare("UPDATE briefs SET spec = ?, answers = ?, updated_at = ? WHERE job_id = ?").bind(JSON.stringify(spec), JSON.stringify(merged), now, job.id);
   const answered = eventStatement(db, { actor: input.userId, actorKind, entity: "job", entityId: job.id, type: "job.answered", data: { fields: Object.keys(clean) } }, now);
   if (job.status === "quoted") {
-    // New details can change the price or the checklist, so the quote is built again.
+    // New details can change the plan or the checklist, so the plan is built again.
     await transitionJob(env, {
       jobId: job.id, to: "draft", actor: input.userId, actorKind, data: { reason: "details_changed", fields: Object.keys(clean) },
       set: backToDraft(job), also: [briefUpdate, answered],
@@ -363,38 +389,43 @@ export async function answerQuestions(env: Env, input: { jobId: string; userId: 
   return getIntake(env, job.id);
 }
 
-/** Write the rubric (5 template criteria + up to 3 from the buyer's goals) and price it. Moves draft -> quoted. */
+/**
+ * Write the rubric (5 template criteria + up to 3 from the buyer's goals) and the plan: turnaround, faster delivery
+ * (rush) and when the plan times out. Moves draft -> quoted. No price is set: hiring is free.
+ */
 export async function quoteJob(env: Env, input: { jobId: string; userId: string; rush?: boolean; goals?: string; actorKind?: ActorKind }): Promise<{ job: JobRow; quote: Quote }> {
   const actorKind = input.actorKind ?? "user";
   const state = await getIntake(env, input.jobId);
   const job = state.job;
-  if (job.status !== "draft" && job.status !== "quoted") fail(409, "already_ordered", "This job is already ordered. Open the job page to follow it.");
+  if (job.status !== "draft" && job.status !== "quoted") fail(409, "already_ordered", "This job has already started. Open the job page to follow it.");
   const jt = getJobType(job.job_type_id);
   if (!jt) return fail(409, "job_type_needed", "We need to match your request to a job first. Pick the job that fits best, or wait for our team to get back to you.");
-  if (state.questions.length) fail(409, "questions_open", "Answer the questions first, then get your quote.");
+  if (state.questions.length) fail(409, "questions_open", "Answer the questions first. Then you will see the plan.");
 
   const lastGoals = state.goals ?? "";
   const goals = input.goals === undefined ? lastGoals : checkGoals(input.goals);
   const rushWanted = input.rush === undefined ? state.rush === true : input.rush === true;
   const existing = await first<{ criteria: string; frozen_at: string | null }>(env.DB, "SELECT criteria, frozen_at FROM rubrics WHERE job_id = ?", job.id);
-  if (existing?.frozen_at) fail(409, "record_locked", "This checklist is locked because the job was ordered.");
-  // Same goals as last time (a rush toggle, say): keep the buyer criteria instead of asking the model again.
+  if (existing?.frozen_at) fail(409, "record_locked", "This checklist is locked because the job has started.");
+  // Same goals as last time (a faster-delivery toggle, say): keep the buyer criteria instead of asking the model again.
   const buyerCriteria = existing && goals && goals === lastGoals
     ? parseJson<RubricCriterion[]>(existing.criteria, []).filter(c => c.source === "buyer").slice(0, MAX_BUYER_CRITERIA)
     : await rubricFromGoals(env, jt, goals, job.id);
   const criteria: RubricCriterion[] = [...jt.rubric.map(c => ({ ...c, source: "template" as const })), ...buyerCriteria];
 
-  const price = priceFor(jt, state.spec, rushWanted);
+  const plan = planFor(jt, rushWanted);
   const now = nowIso();
+  // The shared Quote shape needs price fields: hiring is free, so they are always 0 and empty, and never shown.
   const quote: StoredQuote = {
-    job_type_id: jt.id, catalogue_version: CATALOGUE_VERSION, price_cents: price.price_cents, currency: "usd", breakdown: price.breakdown,
-    turnaround_hours: price.turnaround_hours, rush: price.rush, expires_at: addHours(now, QUOTE_VALID_HOURS), rubric: criteria, spec: state.spec, goals,
+    job_type_id: jt.id, catalogue_version: CATALOGUE_VERSION, price_cents: 0, currency: "usd", breakdown: [],
+    turnaround_hours: plan.turnaround_hours, rush: plan.faster, expires_at: addHours(now, QUOTE_VALID_HOURS), rubric: criteria, spec: state.spec, goals,
   };
+  // price_cents is never set: it stays NULL on new jobs.
   const set: Record<string, string | number | null> = {
-    quote: JSON.stringify(quote), price_cents: quote.price_cents, title: jobTitle(jt, state.spec), turnaround_hours: quote.turnaround_hours,
+    quote: JSON.stringify(quote), title: jobTitle(jt, state.spec), turnaround_hours: quote.turnaround_hours,
     catalogue_version: CATALOGUE_VERSION, quote_expires_at: quote.expires_at,
   };
-  const eventData = { price_cents: quote.price_cents, rush: quote.rush, turnaround_hours: quote.turnaround_hours, buyer_criteria: buyerCriteria.length };
+  const eventData = { rush: quote.rush, turnaround_hours: quote.turnaround_hours, buyer_criteria: buyerCriteria.length };
   const db = env.DB;
   const upsertRubric = (afterUpdate: boolean) => db.prepare(
     `INSERT INTO rubrics (job_id, criteria, frozen_at, created_at, updated_at) ${afterUpdate ? "SELECT ?, ?, NULL, ?, ? WHERE changes() = 1" : "VALUES (?, ?, NULL, ?, ?)"} ` +
@@ -405,7 +436,7 @@ export async function quoteJob(env: Env, input: { jobId: string; userId: string;
     const updated = await transitionJob(env, { jobId: job.id, to: "quoted", actor: input.userId, actorKind, data: eventData, set, also: [upsertRubric(false)] });
     return { job: updated, quote };
   }
-  // Already quoted: a new price (rush toggle, new goals) without a status change.
+  // The plan is already shown: a new plan (faster delivery toggle, new goals) without a status change.
   const cols = Object.keys(set);
   const res = await db.batch([
     db.prepare(`UPDATE jobs SET ${cols.map(c => `${c} = ?`).join(", ")}, updated_at = ? WHERE id = ? AND status = 'quoted'`).bind(...cols.map(c => set[c]), now, job.id),
@@ -417,24 +448,75 @@ export async function quoteJob(env: Env, input: { jobId: string; userId: string;
   return { job: (await getJob(env, job.id))!, quote };
 }
 
-/** The buyer orders the quoted job: freezes the rubric, moves quoted -> confirmed, then starts the run (runner.startJobRun). */
-export async function confirmOrder(env: Env, input: { jobId: string; userId: string; actorKind?: ActorKind }): Promise<JobRow> {
+// ---------- Plans that time out (15-minute cron) ----------
+
+/** What the buyer reads when their plan times out. */
+export function quoteExpiredMessage(title: string): { subject: string; text: string } {
+  const name = title.trim() || "your job";
+  return {
+    subject: `Your plan for ${name} timed out`,
+    text: [
+      `You did not start ${name} within ${QUOTE_VALID_HOURS / 24} days, so we closed the plan.`,
+      "Open it to check the plan again and start it in one click. We kept your answers and your goals.",
+    ].join(" "),
+  };
+}
+
+/**
+ * Jobs whose plan has timed out go back to draft: the same move as changing a detail on a job with a plan
+ * (quoted -> draft, expiry cleared, the buyer's goals and faster-delivery choice kept). confirmOrder already refuses a
+ * plan that timed out; this makes the job show the right state everywhere and tells the buyer. Jobs in any other
+ * state are never touched. Returns how many plans timed out.
+ */
+export async function expireQuotes(env: Env, now = nowIso()): Promise<number> {
+  const due = await all<JobRow>(env.DB,
+    "SELECT * FROM jobs WHERE status = 'quoted' AND quote_expires_at IS NOT NULL AND quote_expires_at <= ? ORDER BY quote_expires_at, id LIMIT 200", now);
+  let expired = 0;
+  for (const row of due) {
+    try {
+      // Read the job again right before the move: a start or a fresh plan in the meantime keeps it as it is.
+      const job = await getJob(env, row.id);
+      if (!job || job.status !== "quoted" || !job.quote_expires_at || job.quote_expires_at > now) continue;
+      await transitionJob(env, {
+        jobId: job.id, to: "draft", actor: "system", actorKind: "system",
+        data: { reason: "quote_expired", expired_at: job.quote_expires_at },
+        set: { ...backToDraft(job), quote: expiredChoices(job) },
+      });
+      expired++;
+      const message = quoteExpiredMessage(job.title);
+      try { await notify(env, { userId: job.created_by, kind: "job.quote_expired", subject: message.subject, text: message.text, link: `/requests/${job.id}` }); }
+      catch (err) { console.error("intake_quote_expired_notice_failed", job.id, errorText(err)); }
+    } catch (err) {
+      // A buyer starting or asking for the plan at the same moment wins; anything else is logged and tried again next run.
+      if (!(err instanceof HttpError && err.status === 409)) console.error("intake_quote_expiry_failed", row.id, errorText(err));
+    }
+  }
+  return expired;
+}
+
+/**
+ * The buyer starts the job from its plan: freezes the rubric, moves quoted -> confirmed, then starts the run
+ * (runner.startJobRun). Refused with 429 "daily_limit" when the job's creator has started their jobs for the day
+ * (ops pass ignoreDailyLimit). A job that has already started is returned as it is, never blocked.
+ */
+export async function confirmOrder(env: Env, input: { jobId: string; userId: string; actorKind?: ActorKind; ignoreDailyLimit?: boolean }): Promise<JobRow> {
   const actorKind = input.actorKind ?? "user";
   const job = await mustJob(env, input.jobId);
-  if (job.status === "draft") fail(409, "quote_needed", "Get your quote first, then order.");
-  if (job.status === "cancelled") fail(409, "job_cancelled", "This job was cancelled. Start a new request to order again.");
-  // Ordered already (a second click, say): nothing more to do.
+  if (job.status === "draft") fail(409, "quote_needed", "Check the plan first, then start the job.");
+  if (job.status === "cancelled") fail(409, "job_cancelled", "This job was cancelled. Start a new request to hire again.");
+  // Started already (a second click, say): nothing more to do.
   if (job.status !== "quoted") return job;
   const now = nowIso();
-  if (!job.quote_expires_at || job.quote_expires_at <= now) fail(409, "quote_expired", "This quote has expired. Get a new quote to see the current price, then order.");
+  if (!job.quote_expires_at || job.quote_expires_at <= now) fail(409, "quote_expired", "This plan timed out. Check it again, then start the job.");
   const rubric = await first<{ job_id: string }>(env.DB, "SELECT job_id FROM rubrics WHERE job_id = ?", job.id);
-  if (!rubric) fail(409, "quote_needed", "Get a new quote, then order.");
+  if (!rubric) fail(409, "quote_needed", "Check the plan again, then start the job.");
+  if (!input.ignoreDailyLimit) await checkDailyJobs(env, job.created_by, { saved: true });
 
   const hours = job.turnaround_hours ?? getJobType(job.job_type_id)?.turnaround_hours ?? 48;
   const dueAt = addHours(now, hours);
   const confirmed = await transitionJob(env, {
     jobId: job.id, to: "confirmed", actor: input.userId, actorKind,
-    data: { price_cents: job.price_cents, due_at: dueAt, payment: "not_required", rubric_frozen: true },
+    data: { due_at: dueAt, payment: "not_required", rubric_frozen: true },
     set: { due_at: dueAt },
     also: [env.DB.prepare("UPDATE rubrics SET frozen_at = ?, updated_at = ? WHERE job_id = ? AND frozen_at IS NULL").bind(now, now, job.id)],
   });
@@ -442,12 +524,12 @@ export async function confirmOrder(env: Env, input: { jobId: string; userId: str
   try {
     await startJobRun(env, { jobId: job.id, actor: input.userId, actorKind, kind: "job" });
   } catch (err) {
-    // The order stands; ops starts the run by hand.
+    // The start stands; ops starts the run by hand.
     await recordEvent(env.DB, { actor: "system", actorKind: "system", entity: "job", entityId: job.id, type: "job.start_failed", data: { error: errorText(err) } });
     await alertOps(env, {
       kind: "job.start_failed",
       subject: `A confirmed job did not start: ${confirmed.title || job.id}`,
-      text: `The buyer ordered this job, but the agent run did not start (${errorText(err)}). The job is still confirmed. Start it from the ops page.`,
+      text: `The buyer started this job, but the agent run did not start (${errorText(err)}). The job is still confirmed. Start it from the ops page.`,
       link: `/ops/jobs/${job.id}`,
     });
   }

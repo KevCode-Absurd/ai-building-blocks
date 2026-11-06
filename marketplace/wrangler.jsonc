@@ -2,6 +2,7 @@
   // AI Blocks marketplace Worker. Separate from the library site (site/), with its own databases and deploys.
   // Environments: top level = local dev (`npm run worker:dev`), "staging" = agents-staging.useaiblocks.com,
   // "production" = agents.useaiblocks.com. Bindings and vars are not inherited by environments, so each repeats them.
+  // Staging runs live models (approved 6 Nov 2026) under its caps: $10 a day, $2 a job.
   // Secrets (set with `npx wrangler secret put NAME --env <env>`, never committed):
   //   ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY  model providers
   //   CLERK_SECRET_KEY                                   optional: verified emails from Clerk
@@ -32,7 +33,8 @@
     "DAILY_MODEL_CAP_USD": "5",
     "JOB_COST_CAP_USD": "2",
     "BASELINE_SAMPLE_RATE": "1",
-    "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+    "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
+    "EMAIL_REPLY_TO": "hello@useaiblocks.com"
   },
   "d1_databases": [
     { "binding": "DB", "database_name": "ai-blocks-agents-staging", "database_id": "25100c22-e873-43dc-a2c5-29ff348e9d72", "migrations_dir": "migrations" }
@@ -52,12 +54,13 @@
         "CLERK_JWT_KEY": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsuu77u/zLVZv5hd1sKCa\nC/tdQwy95iFfK3eIngXGnhUXcfaQa6vMZbv+0kzlTerLylTr3pSDXrIYNkb6fsr3\nPpsz5mtBTa70Fm6iRCj4GznCYOVRHExcHdqJB1XJ3E6MoFH76ALB5HFvD1G7K9Av\nQ/qsjMNd1SsEtaHoA0TCyZbN7Et6zbnRKXD8hR92tuOYsJIPJEzwng1BAKKD3oZq\nzi6uLcM/ZOdzEQkOEpziHCzDsiRlpiy8zobDpKb5q8B0KmK6IAdNBcD4886V3oQM\n1Sln8REjPtYjZRwY01E18SbkSkRrdgbf+4DxxCq9SIh6CfjBhzpgyq83nX+LVX3M\nQwIDAQAB\n-----END PUBLIC KEY-----",
         "OPS_USER_IDS": "",
         "BETA_MODE": "invite",
-        "MODEL_MODE": "fake",
+        "MODEL_MODE": "live",
         "RELEASE_REVIEW": "required",
         "DAILY_MODEL_CAP_USD": "10",
         "JOB_COST_CAP_USD": "2",
         "BASELINE_SAMPLE_RATE": "1",
-        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
+        "EMAIL_REPLY_TO": "hello@useaiblocks.com"
       },
       "d1_databases": [
         { "binding": "DB", "database_name": "ai-blocks-agents-staging", "database_id": "25100c22-e873-43dc-a2c5-29ff348e9d72", "migrations_dir": "migrations" }
@@ -84,7 +87,8 @@
         "DAILY_MODEL_CAP_USD": "25",
         "JOB_COST_CAP_USD": "3",
         "BASELINE_SAMPLE_RATE": "1",
-        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>"
+        "EMAIL_FROM": "AI Blocks <agents@useaiblocks.com>",
+        "EMAIL_REPLY_TO": "hello@useaiblocks.com"
       },
       "d1_databases": [
         { "binding": "DB", "database_name": "ai-blocks-agents", "database_id": "6d94173d-626a-4749-8f54-5ea10300d485", "migrations_dir": "migrations" }

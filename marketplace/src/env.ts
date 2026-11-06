@@ -32,6 +32,8 @@ export interface Env {
   /** Share of jobs (0 to 1) that also get a plain-AI baseline comparison. */
   BASELINE_SAMPLE_RATE?: string;
   EMAIL_FROM?: string;
+  /** Where replies go. The sender address has no inbox; replies should reach the team's Google Workspace inbox. */
+  EMAIL_REPLY_TO?: string;
 
   ANTHROPIC_API_KEY?: string;
   OPENAI_API_KEY?: string;

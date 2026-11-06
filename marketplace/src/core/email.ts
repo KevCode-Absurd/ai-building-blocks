@@ -49,10 +49,12 @@ export async function sendEmail(env: Env, to: string, subject: string, text: str
   const recipient = parseAddress(to);
   if (!recipient) throw new Error("That email address is not valid.");
   const cleanSubject = subject.replace(/[\r\n]+/g, " ").trim().slice(0, 200) || "A message from AI Blocks";
+  const replyTo = env.EMAIL_REPLY_TO ? parseAddress(env.EMAIL_REPLY_TO) : null;
   try {
     await env.EMAIL.send({
       to: recipient.email,
       from: from.name ? { name: from.name, email: from.email } : from.email,
+      ...(replyTo ? { replyTo: replyTo.email } : {}),
       subject: cleanSubject,
       text,
       html: textToHtml(text),

@@ -3480,7 +3480,7 @@
       ],
       "accent": "#F3A712",
       "portrait": "/agents/behrouz-translation.webp",
-      "look": "A man in his early forties of Iranian descent, olive skin, short dark hair with grey at the temples, a neat beard, a soft blue shirt with a scarf, holding two small flags on sticks, thoughtful warm smile.",
+      "look": "A man in his early forties of Iranian descent, olive skin, short dark hair with grey at the temples, a neat beard, a soft blue shirt with a scarf, holding a small open dictionary and a blank speech-bubble card, thoughtful warm smile.",
       "method": "1. Get the source text, the target language and country, the reader and the tone.\n2. Build a glossary first. Decide which terms stay in English, which are translated, and the form of address.\n3. Translate for meaning, then adapt: examples, idioms, humour, units, dates, currency, spelling variant.\n4. Check claims against local rules. Flag anything legal or medical.\n5. Keep length close to the original when text must fit a layout. Flag where it will not.\n6. Add notes where a choice was made, so a native reviewer can check quickly.\n7. For voiceover, read for natural speech and mark pauses.\nState clearly that final review by a native speaker is advised for important text.",
       "source_roles": [
         "language-translator",

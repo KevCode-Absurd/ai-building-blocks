@@ -133,3 +133,11 @@ test("text helpers escape HTML and cut at a word", () => {
   const cut = clip("one two three four five six seven", 20);
   assert.ok(cut.length <= 20 && cut.endsWith("…"), cut);
 });
+
+test("every role page title fits in 65 characters", async () => {
+  const { roleTitle } = await import("../src/modules/directory/titles.ts");
+  const { listRoles } = await import("../src/modules/directory/roles.ts");
+  const long = listRoles().map(r => roleTitle(r.name)).filter(t => t.length > 65);
+  assert.deepEqual(long, []);
+  assert.equal(roleTitle("Bookkeeper"), "Bookkeeper AI agents, free | AI Blocks");
+});

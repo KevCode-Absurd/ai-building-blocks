@@ -12,4 +12,11 @@ export function agentTitle(name: string, title: string): string {
   return long.length <= 65 ? long : `${name}, ${title}${SITE_SUFFIX}`;
 }
 
-export const roleTitle = (roleName: string) => `${roleName} AI agents, free${SITE_SUFFIX}`;
+/** "Bookkeeper AI agents, free | AI Blocks". Long role names drop ", free", then any brackets, to stay within 65. */
+export function roleTitle(roleName: string): string {
+  const full = `${roleName} AI agents, free${SITE_SUFFIX}`;
+  if (full.length <= 65) return full;
+  const plain = `${roleName} AI agents${SITE_SUFFIX}`;
+  if (plain.length <= 65) return plain;
+  return `${roleName.replace(/\s*\([^)]*\)/g, "")} AI agents${SITE_SUFFIX}`;
+}

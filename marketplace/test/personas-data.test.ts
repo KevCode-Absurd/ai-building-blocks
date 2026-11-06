@@ -22,3 +22,25 @@ test("persona data files are valid", () => {
     }
   }
 });
+
+const CATALOGUE = path.join(DATA, "..", "..", "catalogue", "data");
+const personaFiles = () => readdirSync(DATA).filter(f => /^personas-.*\.json$/.test(f));
+
+test("every outcome's job_type_id is a real job type", () => {
+  const jobIds = new Set(readdirSync(CATALOGUE).filter(f => f.endsWith(".json"))
+    .flatMap(f => JSON.parse(readFileSync(path.join(CATALOGUE, f), "utf8")).map((jt: { id: string }) => jt.id)));
+  for (const file of personaFiles()) {
+    for (const p of JSON.parse(readFileSync(path.join(DATA, file), "utf8"))) {
+      for (const o of p.profile.outcomes) {
+        if (o.job_type_id) assert.ok(jobIds.has(o.job_type_id), `${file} ${p.id} ${o.id}: no job type "${o.job_type_id}"`);
+      }
+    }
+  }
+});
+
+test("every persona and job type file is loaded by its module", () => {
+  const dirIndex = readFileSync(path.join(DATA, "..", "index.ts"), "utf8");
+  for (const file of personaFiles()) assert.ok(dirIndex.includes(`./data/${file}`), `directory/index.ts does not import ${file}`);
+  const catIndex = readFileSync(path.join(CATALOGUE, "..", "index.ts"), "utf8");
+  for (const file of readdirSync(CATALOGUE).filter(f => f.endsWith(".json"))) assert.ok(catIndex.includes(`./data/${file}`), `catalogue/index.ts does not import ${file}`);
+});

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "AI Risk Management Framework",
+    "publisher": "US National Institute of Standards and Technology (NIST)",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI RMF 1.0 released 26 January 2023 for voluntary use; functions Govern, Map, Measure, Manage; companion Playbook; Generative AI Profile (NIST AI 600-1) released 26 July 2024 to help identify generative AI risks and suggest actions; the framework is being revised as part of the White House AI Action Plan (no date given); concept note for a critical infrastructure profile on 7 April 2026."
+  },
+  {
+    "n": 2,
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (10 July 2025)",
+    "publisher": "METR",
+    "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 16 experienced open-source developers, 246 real issues randomly assigned; with AI allowed, tasks took 19% longer; developers expected a 24% speed-up and afterwards still believed AI had sped them up by about 20%; the page now flags these results as out of date and links to the February 2026 update."
+  },
+  {
+    "n": 3,
+    "title": "Generative AI at Work (NBER Working Paper 31161; Erik Brynjolfsson, Danielle Li, Lindsey R. Raymond; April 2023, revised November 2023)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w31161",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 5,179 customer support agents; about 14% more issues resolved per hour with an AI assistant; 34% for novice and low-skilled workers; minimal effect for experienced, highly skilled workers; better customer sentiment and retention."
+  },
+  {
+    "n": 4,
+    "title": "We are Changing our Developer Productivity Experiment Design (24 February 2026)",
+    "publisher": "METR",
+    "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Early-2025 study: AI made experienced developers' tasks 19% longer. Late-2025 follow-up (57 developers, 800+ tasks): estimates of 18% and 4% less time with wide confidence intervals; METR calls the new data an unreliable signal because many developers refused to work without AI."
+  },
+  {
+    "n": 5,
+    "title": "AI at Work Is Here. Now Comes the Hard Part (2024 Work Trend Index, 8 May 2024)",
+    "publisher": "Microsoft WorkLab",
+    "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Survey of 31,000 knowledge workers in 31 markets (Feb to Mar 2024): 75% use generative AI at work; 78% of AI users bring their own AI tools; 39% of AI users received AI training from their company; 66% of leaders would not hire someone without AI skills."
+  },
+  {
+    "n": 6,
+    "title": "Building Effective Agents (Erik S. and Barry Zhang, 19 December 2024)",
+    "publisher": "Anthropic Engineering",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Workflows follow predefined paths, agents direct their own steps; start with the simplest solution; patterns: prompt chaining, routing, parallelisation, orchestrator-workers, evaluator-optimizer; human checkpoints, stopping conditions and sandbox testing."
+  },
+  {
+    "n": 7,
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ten 2025 risks, from LLM01 Prompt Injection and LLM02 Sensitive Information Disclosure to LLM06 Excessive Agency, LLM09 Misinformation and LLM10 Unbounded Consumption."
+  },
+  {
+    "n": 8,
+    "title": "AI Act: regulatory framework for AI (last updated 19 October 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Risk tiers; timeline (in force 1 Aug 2024; prohibitions and AI literacy 2 Feb 2025; general-purpose AI 2 Aug 2025; general application and transparency rules August 2026; Annex III high-risk 2 Dec 2027; product-embedded high-risk 2 Aug 2028); AI Omnibus in force 27 July 2026; SME simplifications extended to small mid-caps; Code of Practice on marking and labelling AI-generated content."
+  },
+  {
+    "n": 9,
+    "title": "AI Act, Article 4: AI literacy (consolidated text as at 27 July 2026)",
+    "publisher": "AI Act Service Desk (European Commission)",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Providers and deployers take measures to support AI literacy of staff and others using AI on their behalf, suited to their knowledge and the context; no specific level guaranteed; Commission and member states support this, especially for SMEs; marked as amended by the Omnibus."
+  },
+  {
+    "n": 10,
+    "title": "AI Literacy - Questions & Answers (last updated 20 October 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Example of staff using ChatGPT to write advertising text or translate: they should be told about risks such as hallucination; no certificate required; an internal record of training is optional; national supervision from 2 August 2026; the Omnibus kept the obligation without a mandated level."
+  },
+  {
+    "n": 11,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "AI Act Service Desk (European Commission)",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chatbots must be designed so people know they are dealing with AI; deployers must disclose deepfakes and AI-generated text published to inform the public on matters of public interest, unless a person reviewed it and someone holds editorial responsibility; disclosure at first interaction, accessible."
+  },
+  {
+    "n": 12,
+    "title": "Data controller or data processor (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-controller-data-processor_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Controller decides purposes and means; processor acts on instructions; a contract must govern the relationship and cover instructions, confidentiality, security, sub-processor approval, help with rights and breaches, deletion or return at the end, and audits."
+  },
+  {
+    "n": 13,
+    "title": "A pro-innovation approach to AI regulation: government response (6 February 2024)",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/consultations/ai-regulation-a-pro-innovation-approach-policy-proposals/outcome/a-pro-innovation-approach-to-ai-regulation-government-response",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five cross-sector principles applied by existing regulators; no new AI regulator; possible future binding rules only for developers of the most capable general-purpose AI."
+  },
+  {
+    "n": 14,
+    "title": "Artificial Intelligence Playbook for the UK Government (10 February 2025)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ten principles for using AI, from knowing what AI is and its limits to meaningful human control, using the right tool for the job and having the right assurance in place; written for civil servants; expands on the January 2024 generative AI framework."
+  },
+  {
+    "n": 15,
+    "title": "Guidance on AI and data protection: About this guidance",
+    "publisher": "Information Commissioner's Office (UK)",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/",
+    "checked": "2026-11-06",
+    "supports": "The ICO site blocks automated fetching (HTTP 403); confirmed by a WebSearch result showing this exact page. The guidance explains how UK data protection law applies to AI that processes personal data; it is not a statutory code and is structured around the data protection principles."
+  },
+  {
+    "n": 16,
+    "title": "Data (Use and Access) Act factsheet: UK GDPR and DPA (27 June 2025)",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-uk-gdpr-and-dpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. New UK GDPR Articles 22A to 22D allow solely automated significant decisions with safeguards: telling people, letting them make representations, obtain human intervention and challenge the decision; recognised legitimate interests; the factsheet is not legal advice."
+  },
+  {
+    "n": 17,
+    "title": "Data (Use and Access) Act 2025: plans for commencement (updated 12 October 2026)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Commencement in stages; regulations of 5 February 2026 brought in most of the Part 5 data protection provisions; further stages to 30 September 2026; the page does not name the automated decision-making section."
+  },
+  {
+    "n": 18,
+    "title": "AI Management Essentials tool (consultation, 6 November 2024)",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/consultations/ai-management-essentials-tool",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A self-assessment tool for responsible AI management, aimed especially at start-ups and SMEs that develop or use AI; consultation 6 Nov 2024 to 29 Jan 2025; government response published 6 February 2026."
+  },
+  {
+    "n": 19,
+    "title": "Guidelines for secure AI system development (27 November 2023)",
+    "publisher": "UK National Cyber Security Centre",
+    "url": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four areas: secure design, development, deployment, and operation and maintenance; applies to those using hosted models or external APIs; asks managers and risk owners to read it."
+  },
+  {
+    "n": 20,
+    "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes (25 September 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Operation AI Comply; the FTC chair said there is no AI exemption from the laws on the books; cases included an AI fake-review tool and an overstated 'AI lawyer' service."
+  },
+  {
+    "n": 21,
+    "title": "How your data is used to improve model performance",
+    "publisher": "OpenAI",
+    "url": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+    "checked": "2026-11-06",
+    "supports": "openai.com returns HTTP 403 to automated fetching; confirmed by a WebSearch result showing this exact page. Personal ChatGPT conversations may be used to train models unless the user opts out; business plans and the API are not used for training by default unless the organisation opts in."
+  },
+  {
+    "n": 22,
+    "title": "ChatGPT pricing",
+    "publisher": "OpenAI",
+    "url": "https://chatgpt.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plans: Free, Go, Plus and Pro for individuals; Business (from 2 users) and Enterprise for organisations; Edu; training use marked 'Opt-out available' for Free, Go, Plus and Pro."
+  },
+  {
+    "n": 23,
+    "title": "Your data (API data controls)",
+    "publisher": "OpenAI developer documentation",
+    "url": "https://developers.openai.com/api/docs/guides/your-data",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Since 1 March 2023 API data is not used for training unless the customer opts in; abuse monitoring logs kept up to 30 days; Zero Data Retention by approval; regional data residency options."
+  },
+  {
+    "n": 24,
+    "title": "Is my data used for model training? (commercial products; updated 18 August 2026)",
+    "publisher": "Anthropic Privacy Center",
+    "url": "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For Claude for Work (Team, Enterprise) and the API, inputs and outputs are not used for training by default; explicit feedback such as thumbs up or down may be used and is kept up to 5 years; owners can turn off the 'Rate chats' setting."
+  },
+  {
+    "n": 25,
+    "title": "Is my data used for model training? (consumer plans; updated 16 March 2026)",
+    "publisher": "Anthropic Privacy Center",
+    "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For Free, Pro and Max accounts, chats may be used to improve models if the user opts in through a privacy setting, or if flagged for safety review; incognito chats are not used."
+  },
+  {
+    "n": 26,
+    "title": "Claude pricing",
+    "publisher": "Anthropic",
+    "url": "https://claude.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Individual plans Free, Pro, Max and Ultra; Team and Enterprise plans; SSO and connector admin controls on Team; audit logs, compliance API and custom retention on Enterprise; Team and Enterprise content not used for training by default."
+  },
+  {
+    "n": 27,
+    "title": "Data, Privacy, and Security for Microsoft Copilot (updated 4 November 2026)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prompts, responses and Microsoft Graph data are not used to train foundation models; Copilot only surfaces data the user can at least view, so permissions matter; EU Data Boundary, with Anthropic models currently excluded from it; Purview retention; outputs not guaranteed factual."
+  },
+  {
+    "n": 28,
+    "title": "What is Microsoft Copilot? (updated 5 November 2026)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/copilot/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Copilot Chat (Basic) is included with eligible Microsoft 365 licences and uses web data plus content you provide; Microsoft 365 Copilot (Premium) is a paid add-on grounded in work data through Microsoft Graph; enterprise data protection with Entra sign-in; admin Copilot controls and usage reports."
+  },
+  {
+    "n": 29,
+    "title": "Generative AI in Google Workspace Privacy Hub (updated 6 October 2026)",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/gemini/generative-ai-in-google-workspace-privacy-hub",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Customer data is not used to train models or human-reviewed outside the domain without permission; Gemini only retrieves content the user can already access; certifications including ISO 42001; some products such as Gemini Notebook are outside the certifications."
+  },
+  {
+    "n": 30,
+    "title": "Compare Flexible Pricing Plan Options",
+    "publisher": "Google Workspace",
+    "url": "https://workspace.google.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Business Base includes Gemini chat only; Business Starter adds Gemini in Gmail with limited in-app features; Business Standard includes Gemini across Gmail, Docs, Sheets, Slides, Drive, Meet and Chat."
+  }
+]

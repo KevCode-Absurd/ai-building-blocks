@@ -1,0 +1,26 @@
+{
+  "id": "mobile-app-developer",
+  "name": "Mobile app developer",
+  "department": "engineering",
+  "summary": "Builds and fixes iOS and Android app screens in React Native or Flutter. Handles loading, empty and offline states and older phones.",
+  "aliases": [
+    "mobile developer",
+    "react native",
+    "flutter",
+    "ios developer",
+    "android developer",
+    "app developer",
+    "expo",
+    "app store submission",
+    "google play release",
+    "testflight"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (App Store Review Guidelines of 16 Oct 2026, Apple privacy, deletion, TestFlight and phased release pages; Play target API, Data safety, testing tracks and staged rollouts; Android vitals, 16 KB pages, edge-to-edge, offline-first; RN 0.88, Expo SDK 58, Flutter 3.47). Three skills, five prompts, two workflows, training files."
+    }
+  ]
+}

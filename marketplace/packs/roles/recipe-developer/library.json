@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "standards-sheet-writer",
+    "name": "Repeatable standards sheet writer",
+    "why": "A one-page sheet of checkable standards, the companion to a kitchen standard recipe card so every cook plates it the same way."
+  },
+  {
+    "slug": "restaurant-portion-cost-builder",
+    "name": "Restaurant portion cost builder",
+    "why": "Costs a batch and a portion from the weights on a finished kitchen recipe card."
+  },
+  {
+    "slug": "connect-production-yield-to-mix-contribution",
+    "name": "Connect production yield to mix contribution",
+    "why": "Turns measured batch yield into cost per good unit, useful when a scaled-up bakery recipe goes into production."
+  },
+  {
+    "slug": "blog-post-publish-check-loop",
+    "name": "Blog post publish check loop",
+    "why": "Checks a finished recipe post's claims and plain wording before it goes live."
+  },
+  {
+    "slug": "customer-question-keyword-finder",
+    "name": "Customer question keyword finder",
+    "why": "Turns reader comments and questions into the FAQ section of a recipe post."
+  },
+  {
+    "slug": "store-blog-plan-builder",
+    "name": "Store blog plan builder",
+    "why": "Plans a run of recipe posts for a food shop or brand that point readers to its products."
+  },
+  {
+    "slug": "build-a-brand-file-and-style-guide-from-scratch",
+    "name": "Build a brand file and style guide from scratch",
+    "why": "Sets the voice rules that sit beside the recipe house style sheet for a food brand or blog."
+  }
+]

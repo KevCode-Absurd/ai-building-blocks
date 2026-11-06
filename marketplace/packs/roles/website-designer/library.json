@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "page-tree-url-sketcher",
+    "name": "Page tree and URL sketcher",
+    "why": "Plans the page tree and URLs before building, the same first step as the site build sheet skill."
+  },
+  {
+    "slug": "website-quality-keeper",
+    "name": "Website quality keeper",
+    "why": "A weekly check of what got slower or harder to find, which fits the monthly site care workflow."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Ranks accessibility gaps each quarter and re-checks last quarter's fixes, extending the accessibility quick pass."
+  },
+  {
+    "slug": "font-pair-shortlist-maker",
+    "name": "Font pair shortlist maker",
+    "why": "Gives three headline and body font pairs with sizes and spacing for the style settings table."
+  },
+  {
+    "slug": "landing-page-design-planner",
+    "name": "Landing page design planner",
+    "why": "Turns copy and brand into page directions and a section plan when one page needs extra design thought."
+  },
+  {
+    "slug": "customer-hero-message-writer",
+    "name": "Customer-hero message writer",
+    "why": "Writes the one-line message for the first screen, so the home page says what the business does."
+  },
+  {
+    "slug": "click-choice-clarity-checker",
+    "name": "Click choice clarity checker",
+    "why": "Rates menu and button labels for clarity before they go into the build sheet."
+  },
+  {
+    "slug": "mood-colour-palette-planner",
+    "name": "Mood colour palette planner",
+    "why": "Plans a small colour palette to check for contrast before setting site styles."
+  },
+  {
+    "slug": "small-usability-test-planner",
+    "name": "Small usability test planner",
+    "why": "Plans a short test with real people on the preview site before launch."
+  },
+  {
+    "slug": "domain-and-certificate-watch-checker",
+    "name": "Domain and certificate watch checker",
+    "why": "Checks domains for leftover records and weak registrar access, useful before and after a domain move."
+  },
+  {
+    "slug": "monthly-search-console-keeper",
+    "name": "Monthly Search Console keeper",
+    "why": "Reads the monthly Search Console export to see which pages to push or fix after launch."
+  },
+  {
+    "slug": "prepare-your-first-freelance-project-quote",
+    "name": "Prepare your first freelance project quote",
+    "why": "Turns a website brief into a quote with a clear scope, for designers pricing a site build."
+  }
+]

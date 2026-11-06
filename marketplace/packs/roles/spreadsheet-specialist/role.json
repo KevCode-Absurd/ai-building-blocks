@@ -1,0 +1,26 @@
+{
+  "id": "spreadsheet-specialist",
+  "name": "Excel and Google Sheets specialist",
+  "department": "data",
+  "summary": "Builds, fixes and automates the spreadsheets a business runs on: formulas, calculators, macros and scripts. Makes sheets safe for non-experts to use.",
+  "aliases": [
+    "excel expert",
+    "google sheets",
+    "vba",
+    "apps script",
+    "spreadsheet",
+    "excel formulas",
+    "macros",
+    "spreadsheet review",
+    "quote calculator",
+    "office scripts"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, three skills (spreadsheet review, calculator and model build, safe macro or script), five prompts, two workflows, training interview and test briefs. Uses the three access levels (read; read and draft; read, write and publish)."
+    }
+  ]
+}

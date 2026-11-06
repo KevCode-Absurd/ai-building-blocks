@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "give-developers-a-complete-component-brief",
+    "name": "Give developers a complete component brief",
+    "why": "Turns source files into a brief with variants, states, accessible behaviour and design tokens, the input the component build skill needs."
+  },
+  {
+    "slug": "design-handoff-completeness-assistant",
+    "name": "Design handoff completeness assistant",
+    "why": "Finds the states and variants a design forgot before any code is written, matching the every-state rule."
+  },
+  {
+    "slug": "static-html-landing-page-builder",
+    "name": "Static HTML landing page builder",
+    "why": "Turns checked copy and layout into plain HTML and CSS with accessible forms and hosting steps, like the one-file landing page prompt."
+  },
+  {
+    "slug": "landing-page-design-planner",
+    "name": "Landing page design planner",
+    "why": "Gives three on-brand design directions and a build brief to code from."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Ranks accessibility gaps each quarter and checks last quarter's fixes, a longer-running version of the accessibility fix pass."
+  },
+  {
+    "slug": "monthly-design-system-keeper",
+    "name": "Monthly design system keeper",
+    "why": "Finds drift from design rules and checks contrast in the code each month, so components stay consistent."
+  },
+  {
+    "slug": "website-quality-keeper",
+    "name": "Website quality keeper",
+    "why": "Weekly check of what got slower or harder to find, feeding the monthly speed and accessibility workflow."
+  },
+  {
+    "slug": "find-what-is-slow-fix-it-and-show-the-numbers",
+    "name": "Find what is slow, fix it and show the numbers",
+    "why": "Ranks the cause of slowness, fixes it and shows before-and-after timings in a pull request, the same evidence habit as the page speed skill."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves a rendering or state bug before fixing it and hands over a reviewable pull request."
+  },
+  {
+    "slug": "pull-request-reviewer",
+    "name": "Pull request reviewer",
+    "why": "A second review of front-end pull requests before the client merges them."
+  },
+  {
+    "slug": "ai-code-change-steps",
+    "name": "Make a code change in small tested steps with AI",
+    "why": "Splits a UI change into small tested steps with rules for an AI coding helper, useful for larger refactors."
+  }
+]

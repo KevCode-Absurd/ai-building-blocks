@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Replies to each new batch of guest reviews and holds the risky ones for the host, the same rule as the review steps in the reviews and guest issues skill."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "A one-off version of the review reply prompt for a backlog of reviews, with risky ones flagged."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a reply to an unhappy guest for refunds or promises the host has not approved."
+  },
+  {
+    "slug": "refund-request-reply-writer",
+    "name": "Refund request reply writer",
+    "why": "Writes a clear yes, partial or no reply to a refund request once the host has chosen an option."
+  },
+  {
+    "slug": "hotel-channel-revenue-reconciler",
+    "name": "Hotel channel revenue reconciler",
+    "why": "Reconciles nights and revenue by booking channel after commission, the channel step of the booking review skill for small hotels."
+  },
+  {
+    "slug": "prepare-a-hotel-group-booking-handover",
+    "name": "Prepare a hotel group booking handover",
+    "why": "Hands over a confirmed group booking with deposits, requests and key dates for staff."
+  },
+  {
+    "slug": "explain-service-booking-terms-to-customers",
+    "name": "Explain service booking terms to customers",
+    "why": "Turns the cancellation policy and house rules into plain words for the listing and messages."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Checks the deepest discount the margin allows, matching the floor check on stacked discounts."
+  },
+  {
+    "slug": "price-test-keeper",
+    "name": "Price test keeper",
+    "why": "Plans one undoable price test and reads the result, like the test-and-review step for nightly rates."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Turns real guest questions into an FAQ for a direct booking site, alongside the house guide."
+  },
+  {
+    "slug": "self-assessment-tax-return-checklist",
+    "name": "Self-assessment tax return checklist",
+    "why": "Lists the records a UK host gathers and the questions for their accountant now holiday lets are taxed under normal landlord rules."
+  }
+]

@@ -194,6 +194,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const index = filesIndex(pack);
   assert.equal(index.files.length, pack.files.length);
   assert.ok(index.files.every(f => f.purpose.length > 5 && f.bytes > 0 && f.kind));
+  assert.deepEqual(index.knowledge, pack.manifest.knowledge, "files.json carries the whole knowledge record, so the profile can say when it was checked");
 });
 
 test("agent pack: a persona without a soul still gets soul.md, and style sections appear when the persona has them", async () => {

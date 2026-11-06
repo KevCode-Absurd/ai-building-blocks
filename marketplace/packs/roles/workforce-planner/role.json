@@ -1,0 +1,26 @@
+{
+  "id": "workforce-planner",
+  "name": "Workforce planner",
+  "department": "people",
+  "summary": "Plans who works when, what each hire costs and how freelancers fit in. Builds fair rotas and hiring plans that the budget can carry.",
+  "aliases": [
+    "rota",
+    "shift scheduling",
+    "workforce planning",
+    "headcount planning",
+    "staff scheduling",
+    "contractor management",
+    "rostering",
+    "capacity planning",
+    "seasonal staffing",
+    "hiring plan"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (US FLSA, Oregon and Seattle scheduling laws, GOV.UK working time, EU directives, India, Canada and Australia pointers), four skills (staffing from demand, fair rota and rules check, headcount plan and cost, contractors and seasonal staff), six prompts, three workflows. Publishing a rota or changing hours needs a fresh yes."
+    }
+  ]
+}

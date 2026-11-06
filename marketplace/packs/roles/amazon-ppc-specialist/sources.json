@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Sponsored Products",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Cost-per-click ads for single listings in and alongside shopping results and on product pages, plus some off-Amazon placements; image or video; no monthly or upfront fees; daily budgets are not paced through the day; eligibility (Professional sellers, vendors, KDP authors, agencies; Featured Offer; no adult, used, refurbished or closed-category products); video claim of +67% CTR and +9% conversion rate (Amazon internal data, US, June 2026); case studies Made for Locs and Marvis."
+  },
+  {
+    "n": 2,
+    "title": "Sponsored Brands",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-brands",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Video, image and collection formats linking to a Brand Store or detail page; CPC or vCPM billing; reserve share of voice; Brand Registry needed for sellers; audience bid adjustments; new-to-brand metrics with a 12-month look-back; ad review up to 72 hours; Loftie case study (ROAS 5.66, ACOS 17.68%, agency-provided US data)."
+  },
+  {
+    "n": 3,
+    "title": "Sponsored Display is now known as display ads",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-display",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Notice that Sponsored Display is now called display ads; existing Sponsored Display campaigns keep running and are reached through Display, Video and Audio campaigns in Amazon Ads Agent. The page carries no date."
+  },
+  {
+    "n": 4,
+    "title": "Display ads",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/products/display-ads",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Display ads run on and off Amazon; self-service buying on CPC or vCPM with no minimum; managed service typically has a minimum spend that varies by country; Sponsored Display is now part of display ads in Amazon Ads Agent."
+  },
+  {
+    "n": 5,
+    "title": "What is Amazon Ads Agent?",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/adtech-solutions/amazon-ads-agent",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Amazon Ads Agent combines the ads console and Amazon DSP into one buying surface; existing campaigns, reporting and settings carried over; natural-language help with set-up and optimisation; sponsored ads on CPC with no minimum spend; mentions the Amazon Ads MCP Server. No launch date on the page."
+  },
+  {
+    "n": 6,
+    "title": "Campaign Manager beta: one command center for every campaign",
+    "publisher": "Amazon Ads (unBoxed 2025)",
+    "url": "https://advertising.amazon.com/resources/whats-new/unboxed-2025-campaign-manager",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Announced 10 Nov 2025: one AI-assisted workspace for sponsored ads and Amazon DSP, beta for selected advertisers; Ads Agent supports bulk bid changes; early testers using smart search cut bid optimisation workflow time by 26% (Amazon claim)."
+  },
+  {
+    "n": 7,
+    "title": "Boost advertising efficiency with Ads Agent",
+    "publisher": "Amazon Ads (unBoxed 2025)",
+    "url": "https://advertising.amazon.com/resources/whats-new/unboxed-2025-introducing-ads-agent",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Announced 11 Nov 2025 for Amazon DSP and Amazon Marketing Cloud; campaigns built from an uploaded media plan launch only after the advertiser reviews and approves them."
+  },
+  {
+    "n": 8,
+    "title": "Sponsored Products prompts and Sponsored Brands prompts",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/resources/whats-new/unboxed-2025-sponsored-products-and-sponsored-brands-prompts",
+    "checked": "2026-11-06",
+    "supports": "Fetched. AI prompts added to existing campaigns in shopping results and on detail pages, sometimes opening Rufus; campaigns enrolled automatically; prompts can be paused; billed under CPC settings; US only; open beta Nov 2025, announced 10 Mar 2026, generally available in the US 25 Mar 2026; Prompts report."
+  },
+  {
+    "n": 9,
+    "title": "Introducing the Amazon Ads MCP Server (open beta)",
+    "publisher": "Amazon Ads (2 Feb 2026)",
+    "url": "https://advertising.amazon.com/library/news/amazon-ads-mcp-server-open-beta",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Open beta from 2 Feb 2026 for Amazon Ads partners with active API credentials; lets AI agents create, update or delete campaigns, run reports, manage account settings and see billing data; works with Claude, ChatGPT and Gemini; docs link."
+  },
+  {
+    "n": 10,
+    "title": "The biggest moments from unBoxed Toronto 2026",
+    "publisher": "Amazon Ads (25 Mar 2026)",
+    "url": "https://advertising.amazon.com/library/news/unboxed-toronto-2026",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Published 25 Mar 2026: Ads Agent closed-beta users (Sep to Oct 2025) saw a median 18% lower CPM and 16% lower CPA; AI-curated Sponsored Brands collections drove 2.5x more unique products purchased in beta; reserve share of voice described. Amazon's own claims."
+  },
+  {
+    "n": 11,
+    "title": "A guide to targeting with Sponsored Products",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Four automatic targeting groups; keyword rules (not case-sensitive, up to 10 words and 80 characters, letters, numbers and spaces only); how broad, phrase and exact match; category refinements; negative keywords and negative products at campaign or ad group level; negative phrase and exact recommended; judge a term after at least 20 clicks before making it negative; let negatives run two weeks or more; run an automatic campaign about two weeks before manual; bid highest on exact; targeting type cannot be changed after launch; up to 1,000 products per ad group."
+  },
+  {
+    "n": 12,
+    "title": "Best practices for your Sponsored Products ads",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/sponsored-products-best-practices",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Three bidding strategies (dynamic up and down, dynamic down only, fixed); placement adjustments for top of search, rest of search and product pages of up to 900%; final CPC never above the maximum adjusted bid; start at 10 USD a day; raise budgets that run out; search term report shows terms with at least one click; group products by category and price; Featured Offer and stock needed; advertise products with five or more reviews and 3.5 stars or more; portfolios; check twice a week in the first week."
+  },
+  {
+    "n": 13,
+    "title": "Author's guide to Sponsored Products",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/authors-guide-to-sponsored-products",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Dynamic bids up and down raise bids by up to 100% for top of the first page of results and up to 50% for other placements; down only lowers bids when a sale is less likely; fixed bids are never changed; daily budget averaged over the month; TACOS as ad spend over total sales; reports created from the measurement and reporting tab in Amazon Ads Agent."
+  },
+  {
+    "n": 14,
+    "title": "Understanding sponsored ads",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/basics-of-success-sponsored-ads",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Recommended minimum daily budgets by country (US 10 USD, UK 10 GBP, Germany, France, Italy, Spain, Netherlands and Ireland 10 EUR); target at least 30 keywords; start with broad match and move top search terms to phrase or exact; separate campaigns per product group, each with an automatic and a manual campaign; no end date; Sponsored Products report list."
+  },
+  {
+    "n": 15,
+    "title": "3 steps to help start or improve your keyword strategy",
+    "publisher": "Amazon Ads (blog)",
+    "url": "https://advertising.amazon.com/blog/how-to-start-and-improve-your-keyword-strategy",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Roles of broad, phrase and exact match; negative keyword examples ('cheap' for a luxury product); use search term report queries that do not convert as negatives; at least 25 keywords; wait about two weeks before optimising; campaigns running 12 months continuously averaged 11.2% higher ROAS than in their first month (Amazon internal data, worldwide, 1 Jun 2019 to 30 Jul 2021)."
+  },
+  {
+    "n": 16,
+    "title": "Sponsored Brands for authors",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/sponsored-brand-authors",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sponsored Brands match types (broad, phrase, exact with close variants such as plurals); automated bidding adjusts bids for placements below top of search and does not apply to video; without it, raise the base bid by a percentage for top of search and rest of search; lifetime budget minimum 100 USD and not paced."
+  },
+  {
+    "n": 17,
+    "title": "What is ACOS? Advertising cost of sales",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/acos-advertising-cost-of-sales",
+    "checked": "2026-11-06",
+    "supports": "Fetched. ACOS = ad spend divided by ad revenue x 100; ROAS is its inverse; ACOS must stay below profit margin to stay profitable; break-even ACOS ties to margin; no fixed 'good ACOS'; new campaigns often show high ACOS; use other measures too."
+  },
+  {
+    "n": 18,
+    "title": "Launching new products and ASINs with Amazon Ads",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/intermediate-and-advanced-new-asin-playbook",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Check detail pages, stock and price before launch; run automatic and manual campaigns together; start from the suggested bid; add Sponsored Brands once Sponsored Products is live; brand owners using Sponsored Brands saw 23% higher sales after 13 weeks (Amazon internal data, Jan 2025)."
+  },
+  {
+    "n": 19,
+    "title": "Amazon Ads frequently asked questions",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/resources/faq",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Minimum daily budget 1.00 USD for Sponsored Products and Sponsored Brands; credit limit steps from 50 to 500 USD; Sponsored Brands daily or lifetime budget cannot be switched; broad, phrase and exact match; negative phrase and negative exact; last-touch attribution; Sponsored Brands search term report; Brand Registry needed for Sponsored Brands sellers."
+  },
+  {
+    "n": 20,
+    "title": "Ad specs and policies",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/resources/ad-specs",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Index of Amazon Ads policy pages, including Amazon Ads Guidelines and Acceptance Policies, Sponsored ads guidelines and acceptance policies, book advertising policies and brand usage guidelines; specs aligned with the Coalition for Better Ads standards. The individual policy pages did not return text to an automated fetch on 2026-11-06, so their rules are not summarised in this kit."
+  },
+  {
+    "n": 21,
+    "title": "Additional Terms and Conditions (product terms)",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/legal/product-terms",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Last updated 11 Sep 2026. Sponsored Brands reserve share of voice: delivery not guaranteed, a suitable ad must be linked within 14 days, and a campaign cannot be changed or cancelled once it starts."
+  },
+  {
+    "n": 22,
+    "title": "Advertise on Amazon (Sell on Amazon)",
+    "publisher": "Amazon",
+    "url": "https://sell.amazon.com/advertising",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sponsored Products needs a Professional selling plan and a Featured Offer; Sponsored Brands, display ads and Brand Stores need Brand Registry; new seller ad credits; Amazon's claim of 34% more sales growth four weeks after starting Sponsored Products (1 Sep 2023 to 31 Aug 2024, 21 marketplaces)."
+  },
+  {
+    "n": 23,
+    "title": "Advertising budget guide",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/advertising-budget",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Budget planning and monitoring advice; JLab case study: from early 2023, over three months, JLab cut bids 50% on its seven highest-spending branded keywords and cut ad budget 30% while product page traffic held steady; worked example of ROAS 5 and ACOS 20%."
+  },
+  {
+    "n": 24,
+    "title": "Budget rules",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/budget-rules",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Schedule-based rules raise budgets for events or date ranges; performance-based rules raise budgets when a campaign meets a threshold such as ROAS, CTR or conversion rate."
+  },
+  {
+    "n": 25,
+    "title": "Understanding your reports (book advertising)",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/book-advertising-reporting/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sponsored Products reports: targeting, search term, advertised product, campaign, placement, performance over time and search term impression share; Sponsored Brands reports include keyword placement, search terms and attributed purchases; reports created in Amazon Ads Agent."
+  },
+  {
+    "n": 26,
+    "title": "Cost-per-click guide",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/cost-per-click",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Final CPC is set by an auction on the adjusted bid plus other factors; maximum CPC includes the base bid plus adjustments such as dynamic bidding; review match types and negatives after about two weeks."
+  },
+  {
+    "n": 27,
+    "title": "Advertising FAQs: a guide for small business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Ads must be truthful and not deceptive; advertisers need proof before an ad runs; health claims need competent and reliable scientific evidence; comparative ads allowed if truthful; endorsements must be honest and material connections disclosed. Dated April 2001, edited January 2025."
+  },
+  {
+    "n": 28,
+    "title": "CAP Code section 3: misleading advertising",
+    "publisher": "Committee of Advertising Practice / Advertising Standards Authority (UK)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html",
+    "checked": "2026-11-06",
+    "supports": "Fetched. UK rules: documentary evidence for objective claims before publishing (3.7); price statements must not mislead (3.17 onward); 'free' rules (3.23 onward); unqualified superlatives treated as comparisons; comparisons with competitors must be fair and verifiable. No version date shown on the page."
+  },
+  {
+    "n": 29,
+    "title": "Unfair Commercial Practices Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/unfair-commercial-practices-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The UCPD is the EU's general law against misleading and aggressive business-to-consumer practices; guidance adopted 17 Dec 2021; Directive (EU) 2024/825 on the green transition applies from 27 Sep 2026."
+  }
+]

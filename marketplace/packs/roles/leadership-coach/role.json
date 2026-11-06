@@ -1,0 +1,26 @@
+{
+  "id": "leadership-coach",
+  "name": "Executive and leadership coach",
+  "department": "learning",
+  "summary": "Coaches leaders and new managers through one-on-ones, hard conversations and growth plans. Designs coaching programmes with work between sessions.",
+  "aliases": [
+    "executive coach",
+    "leadership coach",
+    "management coaching",
+    "manager training",
+    "business coach",
+    "one-on-ones",
+    "mentoring programme",
+    "new manager coach",
+    "feedback coaching",
+    "mentoring"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 sources, coaching ethics and when to refer, official help lines for the US, UK, India, Canada and Australia, four skills (coaching programme, hard conversation, one-on-one system, mentoring programme), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "Obviously Awesome (book page)",
+    "publisher": "April Dunford (author's own site)",
+    "url": "https://www.aprildunford.com/obviously-awesome",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book and its updated, expanded edition; the method breaks positioning into five components, finds a product's unique value, chooses the market to position in (three styles) and uses trends"
+  },
+  {
+    "n": 2,
+    "title": "The Four Dimensions of Tone of Voice (Kate Moran, 17 July 2016, reviewed 16 August 2023)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/tone-of-voice-dimensions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four tone scales (formal or casual, serious or funny, respectful or irreverent, matter-of-fact or enthusiastic); choose a tone profile, add tone and anti-tone words, test with users, vary tone by context"
+  },
+  {
+    "n": 3,
+    "title": "The Impact of Tone of Voice on Users' Brand Perception (Kate Moran, 7 August 2016, reviewed 30 January 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/tone-voice-users/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Study of 100 US adults rating paired samples: casual, conversational, moderately enthusiastic tone scored best; bank example differences; trust explained 52% of variance in desirability; a playful insurer was rated less trustworthy; small US-only sample with fictional brands"
+  },
+  {
+    "n": 4,
+    "title": "Voice and Tone (Mailchimp Content Style Guide)",
+    "publisher": "Mailchimp (Intuit)",
+    "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Voice stays the same while tone adapts to the reader's situation and feelings; Mailchimp's four voice traits; clarity before humour"
+  },
+  {
+    "n": 5,
+    "title": "Tone of voice",
+    "publisher": "Monzo",
+    "url": "https://monzo.com/tone-of-voice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Monzo's three writing principles, plain-language rules, say-this-not-that examples, and a table that sets how much of each principle each channel gets"
+  },
+  {
+    "n": 6,
+    "title": "Microsoft's brand voice: above all, simple and human",
+    "publisher": "Microsoft Writing Style Guide (Microsoft Learn)",
+    "url": "https://learn.microsoft.com/en-us/style-guide/brand-voice-above-all-simple-human",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Message (what) versus voice (how); voice constant, tone adapts; three voice principles and style tips"
+  },
+  {
+    "n": 7,
+    "title": "A to Z style guide",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain English is mandatory on GOV.UK; a words-to-avoid list with replacements (for example 'deliver' and 'going forward')"
+  },
+  {
+    "n": 8,
+    "title": "Igor naming agency (home page and naming guide link)",
+    "publisher": "Igor International",
+    "url": "https://www.igorinternational.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four name categories (functional, invented, experiential, evocative) with examples; link to the free Igor Naming Guide (PDF not opened)"
+  },
+  {
+    "n": 9,
+    "title": "Hello, My Name Is Awesome (book page)",
+    "publisher": "Eat My Words (Alexandra Watkins)",
+    "url": "https://eatmywords.com/brand-names-book/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book's author, Alexandra Watkins, and that it is an updated how-to guide for creating brand names"
+  },
+  {
+    "n": 10,
+    "title": "Strong trademarks",
+    "publisher": "U.S. Patent and Trademark Office",
+    "url": "https://www.uspto.gov/trademarks/basics/strong-trademarks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The strength scale from fanciful and arbitrary through suggestive to descriptive and generic, with examples; strongest marks are easiest to register and defend; consider whether people can remember, say and spell a mark and whether it offends in translation"
+  },
+  {
+    "n": 11,
+    "title": "Choose your business name",
+    "publisher": "U.S. Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/launch-your-business/choose-your-business-name",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four separate name registrations in the US: entity name (state), trademark (federal), DBA (no legal protection, may be required) and domain name; check names against the USPTO database"
+  },
+  {
+    "n": 12,
+    "title": "Incorporation and names (guidance, last updated 19 October 2026)",
+    "publisher": "Companies House (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/incorporation-and-names/incorporation-and-names",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK company name rules: 'same as' names, 'too like' changes ordered within 12 months of registration, opportunistic registration complaints to the Company Names Tribunal, sensitive words needing approval, offensive names; advice to search the trade marks register separately"
+  },
+  {
+    "n": 13,
+    "title": "Registration Data Access Protocol (RDAP)",
+    "publisher": "ICANN",
+    "url": "https://www.icann.org/rdap",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RDAP was created to replace WHOIS for domain registration data; since 28 January 2025 gTLD registries and registrars are no longer required to provide WHOIS, with exceptions the page names; ICANN Lookup link"
+  },
+  {
+    "n": 14,
+    "title": "The Facebook Company Is Now Meta (28 October 2021, updated 7 November 2022)",
+    "publisher": "Meta",
+    "url": "https://about.fb.com/news/2021/10/facebook-company-is-now-meta/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The company renamed itself Meta to bring its apps under one company brand, kept its corporate structure, named its apps as continuing, and planned to trade as MVRS from 1 December 2021"
+  },
+  {
+    "n": 15,
+    "title": "2015 Founders' Letter (Alphabet)",
+    "publisher": "Alphabet Inc.",
+    "url": "https://abc.xyz/investor/founders-letters/2015/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Alphabet replaced Google Inc. as the listed company, with Google as a slimmed-down subsidiary and other businesses run separately; the two stated meanings behind the name"
+  },
+  {
+    "n": 16,
+    "title": "Books (Ehrenberg-Bass Institute)",
+    "publisher": "Ehrenberg-Bass Institute for Marketing Science, University of South Australia",
+    "url": "https://marketingscience.info/learn-with-us/books",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How Brands Grow (Sharp, 2010), How Brands Grow Part 2 revised (Romaniuk and Sharp, 2021, with a B2B chapter), Building Distinctive Brand Assets (Romaniuk, 2018), Better Brand Health (Romaniuk, 2023, including Mental Availability)"
+  },
+  {
+    "n": 17,
+    "title": "The 95-5 Rule",
+    "publisher": "LinkedIn B2B Institute (with the Ehrenberg-Bass Institute)",
+    "url": "https://business.linkedin.com/marketing-solutions/b2b-institute/b2b-research/trends/95-5-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. About 95% of potential B2B buyers are out of market at any time; purchase-cycle examples (computers every 4 years for 75% of companies, banks every 5 years for 80%); linking the brand to category entry points before buyers enter the market; 96% of B2B marketers expected the main effect within 2 weeks"
+  },
+  {
+    "n": 18,
+    "title": "The Long and the Short of It (Les Binet and Peter Field)",
+    "publisher": "IPA (Institute of Practitioners in Advertising)",
+    "url": "https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The report's authors and its subject: the tension between short-term response activity and long-term brand building, and the risk of judging marketing by very short-term online metrics. The summary page gives no figures"
+  },
+  {
+    "n": 19,
+    "title": "StoryBrand",
+    "publisher": "StoryBrand (Donald Miller)",
+    "url": "https://storybrand.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. StoryBrand's view that a confusing message costs sales; clarify the message, use it across channels, then measure; the customer as the hero"
+  },
+  {
+    "n": 20,
+    "title": "FTC Policy Statement Regarding Advertising Substantiation (23 November 1984)",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Advertisers need a reasonable basis for objective claims before making them; claims that state a level of proof (such as 'tests prove') need that level"
+  },
+  {
+    "n": 21,
+    "title": "CAP Code section 3: Misleading advertising",
+    "publisher": "Advertising Standards Authority / Committee of Advertising Practice (UK)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule 3.7 documentary evidence before publishing objective claims; 3.2 obvious exaggeration allowed if not materially misleading; 3.32 to 3.34 comparisons; unqualified superlatives treated as comparative claims"
+  },
+  {
+    "n": 22,
+    "title": "Green Claims Code: environmental claims on goods and services (20 September 2021)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims/environmental-claims-on-goods-and-services",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six principles for environmental claims; broad terms such as green, sustainable or eco-friendly suggest the whole product or business has a positive or no negative impact and need explaining and evidence"
+  },
+  {
+    "n": 23,
+    "title": "Sustainable consumption (consumer rights)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/sustainable-consumption_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive (EU) 2024/825 on empowering consumers for the green transition: adopted 28 February 2024, transposition by 27 March 2026, in application since 27 September 2026, strengthening rules against greenwashing and early obsolescence. Specific banned practices not shown on this page"
+  },
+  {
+    "n": 24,
+    "title": "Lyssna pricing and plans",
+    "publisher": "Lyssna",
+    "url": "https://www.lyssna.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free plan exists; test types include five second tests (first impressions of designs or messaging), preference tests, first click tests and surveys"
+  }
+]

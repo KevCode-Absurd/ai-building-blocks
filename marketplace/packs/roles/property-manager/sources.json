@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Renters' Rights Act: an overview for landlords",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/guidance/renters-rights-act-an-overview-for-landlords",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 1 May 2026, England. Assured periodic tenancies replace ASTs; Information Sheet by 31 May 2026; no rent before the agreement is signed; no discrimination against people with children or on benefits; pet requests refused only for a valid reason; adverts show an asking rent and bidding is illegal; rent increases by Form 4A with at least 2 months' notice, once a year, challengeable above open market rent; section 21 abolished; section 8 notice usually 4 months, shorter for some grounds; selling or moving-in ground not in the first 12 months; arrears ground mandatory at 3 months' rent owed; deposit must be protected or returned before possession; rent repayment orders up to 2 years' rent."
+  },
+  {
+    "n": 2,
+    "title": "Renting is changing: guide for landlords",
+    "publisher": "UK Government housing campaign (housinghub.campaign.gov.uk)",
+    "url": "https://housinghub.campaign.gov.uk/renting-is-changing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated government campaign page linked from GOV.UK. Changes took effect 1 May 2026; rent in advance limited to one month; tenants give two months' notice; written information duties; database rollout from 15 December 2026 starting in the West Midlands; ombudsman, Awaab's Law and Decent Homes Standard for private renting 'in the future'."
+  },
+  {
+    "n": 3,
+    "title": "Implementing the Renters' Rights Act 2025: our roadmap for reforming the private rented sector",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/publications/renters-rights-act-2025-implementation-roadmap/implementing-the-renters-rights-act-2025-our-roadmap-for-reforming-the-private-rented-sector",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 13 November 2025. Phase 1 on 1 May 2026; database from late 2026; landlord ombudsman membership expected 2028; Decent Homes Standard for private renting proposed for 2035 or 2037 and not confirmed; Awaab's Law for private renting date to be confirmed; council investigatory powers from 27 December 2025; maximum civil penalty rises from 30,000 to 40,000 pounds from 1 May 2026."
+  },
+  {
+    "n": 4,
+    "title": "Register your rental property service: guidance for landlords",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/guidance/register-your-rental-property-service-guidance-for-landlords",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 29 October 2026. Regional three-month registration windows from 15 December 2026 (West Midlands) to 14 November 2027 (South West), London 15 July to 14 October 2027; fee 65 pounds per property per year, pro-rated during rollout; penalties up to 7,000 pounds for not registering and up to 40,000 pounds for false information or repeated breaches; the landlord starts registration; agents can add tenancy and safety information; further information due within 28 days."
+  },
+  {
+    "n": 5,
+    "title": "Extending Awaab's Law to private rented tenancies and to licences (consultation)",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/consultations/extending-awaabs-law-to-private-rented-tenancies-and-to-licences",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 9 October 2026, closes 18 December 2026. Awaab's Law for private renting is a proposal under consultation, not yet in force, with no start date."
+  },
+  {
+    "n": 6,
+    "title": "Assured tenancy forms",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/assured-tenancy-forms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 30 April 2026. Prescribed forms for private assured tenancies from 1 May 2026, including Form 3A (section 8 notice) and Form 4A (new rent); do not change the wording; notices served before 1 May 2026 need a court claim by the earlier of the notice's validity or 31 July 2026."
+  },
+  {
+    "n": 7,
+    "title": "Evicting tenants (England)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/evicting-tenants",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Assured periodic tenancies: section 8 notice, then a standard possession order, then a warrant for bailiffs; harassment and illegal eviction can be criminal offences; separate guidance for Wales, Scotland and Northern Ireland."
+  },
+  {
+    "n": 8,
+    "title": "Tenancy deposit protection",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/tenancy-deposit-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Three government-backed schemes in England and Wales; protect within 30 days of receiving the deposit; return within 10 days of agreeing the amount; disputed money stays protected until resolved; holding deposits need protection once the person becomes a tenant; deposits on assured periodic tenancies must be protected."
+  },
+  {
+    "n": 9,
+    "title": "Tenancy deposit protection: information landlords must give tenants",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/tenancy-deposit-protection/information-landlords-must-give-tenants",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Information due within 30 days of receiving the deposit: address, amount, how it is protected, scheme and dispute service contacts, landlord or agent contacts, any third-party payer, reasons for keeping money, how to get it back, what to do if the landlord can't be reached or there is a dispute."
+  },
+  {
+    "n": 10,
+    "title": "Tenant Fees Act 2019: guidance (withdrawn)",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/publications/tenant-fees-act-2019-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2019 guidance on permitted payments and deposit caps was withdrawn on 8 May 2026 and points to the Renters' Rights Act guidance. Used only to say the old guidance is out of date; no deposit cap is stated in this kit."
+  },
+  {
+    "n": 11,
+    "title": "Renting out your property: landlord responsibilities",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/renting-out-a-property/landlord-responsibilities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Keep the home safe and free from health hazards; gas and electrical safety; EPC; deposit protection; Right to Rent checks in England; smoke and carbon monoxide alarms; council HHSRS enforcement notices; mortgage lender permission."
+  },
+  {
+    "n": 12,
+    "title": "Renting out your property: making repairs",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/renting-out-a-property/making-repairs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Landlord repairs structure, sanitary fittings, heating and hot water; at least 24 hours' notice to enter, immediate access in emergencies; tenants can claim in small claims for repairs under 5,000 pounds or ask the council for an HHSRS inspection; rent abatement for disruptive works."
+  },
+  {
+    "n": 13,
+    "title": "Private renting: your landlord's safety responsibilities",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/private-renting/your-landlords-safety-responsibilities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Annual gas safety check by a Gas Safe registered engineer; copy of the record before move-in or within 28 days of the check; smoke alarm on each storey; carbon monoxide alarm in rooms with a solid fuel appliance; escape routes and fire-safe furniture."
+  },
+  {
+    "n": 14,
+    "title": "Electrical safety standards in the private rented sector: guidance",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/publications/electrical-safety-standards-in-the-private-rented-sector-guidance-for-landlords-tenants-and-local-authorities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 1 November 2025, England. Electrics checked at least every 5 years by a properly qualified person; tenants given proof of inspection and testing."
+  },
+  {
+    "n": 15,
+    "title": "Check your tenant's right to rent",
+    "publisher": "GOV.UK (Home Office)",
+    "url": "https://www.gov.uk/check-tenant-right-to-rent-documents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. England only; check all adults aged 18 and over before a new tenancy, not only people you suspect; time-limited permission checked within 28 days before the start; exempt accommodation list; page notes rules changing on 1 May 2026."
+  },
+  {
+    "n": 16,
+    "title": "Landlord registration (Scotland)",
+    "publisher": "mygov.scot (Scottish Government)",
+    "url": "https://www.mygov.scot/landlord-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 1 April 2025. Register before letting; renew every 3 years; letting unregistered is a criminal offence with fines up to 50,000 pounds; adverts show the registration number and EPC rating. Used as the 'other UK nations differ' example."
+  },
+  {
+    "n": 17,
+    "title": "The Fair Housing Act",
+    "publisher": "US Department of Justice, Civil Rights Division",
+    "url": "https://www.justice.gov/crt/fair-housing-act-1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 22 June 2023. Protected characteristics (race, color, religion, sex, national origin, familial status, disability); covers landlords; complaints to HUD or court. Used because hud.gov returned 403 to WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "42 U.S. Code 3604: discrimination in the sale or rental of housing",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/uscode/text/42/3604",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Statute text: refusing, unequal terms, discriminatory notices and adverts (3604(c)), false unavailability, and disability rules including reasonable modifications and reasonable accommodations (3604(f)(3))."
+  },
+  {
+    "n": 19,
+    "title": "42 U.S. Code 3603: effective dates and exemptions",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/uscode/text/42/3603",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Exemptions for some owner-rented single-family homes and owner-occupied buildings of up to four units; the advertising rule in 3604(c) still applies to both."
+  },
+  {
+    "n": 20,
+    "title": "Using consumer reports: what landlords need to know",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-landlords-need-know",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; guidance dated July 2023. Permissible purpose; adverse action notice required even if the report played a small part, with the reporting company's contact details, a statement it did not decide, and the right to dispute and get a free report within 60 days; credit score disclosure; secure disposal; blanket criminal-record bans may breach the Fair Housing Act."
+  },
+  {
+    "n": 21,
+    "title": "Real estate disclosures about potential lead hazards",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/lead/real-estate-disclosure",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 27 May 2026. Housing built before 1978: pamphlet, known information, records and a Lead Warning Statement before the lease is signed; keep signed copies 3 years; exemptions include leases of 100 days or less and zero-bedroom units without young children."
+  },
+  {
+    "n": 22,
+    "title": "Residential Tenants' Rights Guide",
+    "publisher": "New York State Office of the Attorney General",
+    "url": "https://ag.ny.gov/publications/residential-tenants-rights-guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; guide date not shown. New York example of state rules: deposit up to one month's rent, returned within 14 days with an itemised statement; 30, 60 or 90 days' notice of large rent increases or non-renewal by length of tenancy; late fee only after 5 days and capped at 50 dollars or 5%, whichever is less."
+  },
+  {
+    "n": 23,
+    "title": "Topic no. 414, Rental income and expenses",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/taxtopics/tc414",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 24 September 2026. Advance rent is income when received; a kept security deposit is income; repairs versus improvements; Schedule E reporting."
+  },
+  {
+    "n": 24,
+    "title": "Buildium pricing",
+    "publisher": "Buildium",
+    "url": "https://www.buildium.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plans Essential, Growth and Premium; 14-day free trial; Open API on Premium; AI features (Lumina); no MCP server mentioned."
+  },
+  {
+    "n": 25,
+    "title": "AppFolio pricing",
+    "publisher": "AppFolio",
+    "url": "https://www.appfolio.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plans Core (50-unit minimum), Plus and Max; Realm-X AI; read-only API on Plus and read/write API on Max; no MCP server mentioned."
+  },
+  {
+    "n": 26,
+    "title": "Landlord Studio pricing",
+    "publisher": "Landlord Studio",
+    "url": "https://www.landlordstudio.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free Go plan and paid Pro and Pro Plus; US and UK; rent collection, maintenance tracking and screening (tenant pays on Go); Xero and bank feeds on paid plans; no API or MCP mentioned."
+  },
+  {
+    "n": 27,
+    "title": "TurboTenant pricing",
+    "publisher": "TurboTenant",
+    "url": "https://www.turbotenant.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free, Essentials and Pro self-management plans plus a managed service; applicants pay screening fees by default; rent payments, applications, leases and maintenance requests; no API or MCP mentioned."
+  }
+]

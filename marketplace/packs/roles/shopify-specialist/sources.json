@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "JSON templates",
+    "publisher": "Shopify (shopify.dev)",
+    "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. JSON templates list the sections a page renders; up to 25 sections per template, up to 50 blocks per section, up to 1,000 JSON templates per theme"
+  },
+  {
+    "n": 2,
+    "title": "Horizon: 10 new free themes by Shopify",
+    "publisher": "Shopify Changelog",
+    "url": "https://changelog.shopify.com/posts/horizon-10-new-free-themes-by-shopify",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 21 May 2025: Horizon is a set of 10 free Shopify themes built with theme blocks"
+  },
+  {
+    "n": 3,
+    "title": "Editing theme code",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Duplicate the theme before editing; the per-file Timeline restores whole files only, has finite history, no history for assets and cannot recover deleted files; code changes that conflict with a theme update are removed in the updated copy"
+  },
+  {
+    "n": 4,
+    "title": "Performance best practices for Shopify themes",
+    "publisher": "Shopify (shopify.dev)",
+    "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. image_url and image_tag, fetchpriority on the LCP image, never lazy-load the LCP image, defer scripts, preload only one or two resources, avoid apps that game Lighthouse, Theme Check flags heavy bundles, Theme Store Lighthouse score of 60"
+  },
+  {
+    "n": 5,
+    "title": "Audit and remove third-party scripts",
+    "publisher": "Shopify (shopify.dev)",
+    "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance/audit-remove-third-party-scripts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to inventory scripts, that uninstalling an app does not always remove its theme code, and where leftover code hides (layout/theme.liquid, snippets, render and include tags, page source)"
+  },
+  {
+    "n": 6,
+    "title": "Apps in the online store",
+    "publisher": "Shopify (shopify.dev)",
+    "url": "https://shopify.dev/docs/apps/build/online-store",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Theme app extensions do not edit theme code and are required for new App Store apps; leftover code takes a theme off its upgrade path; script tags cannot be created or updated after 1 October 2026 and stop being added to storefronts on 1 March 2027"
+  },
+  {
+    "n": 7,
+    "title": "Theme Store requirements",
+    "publisher": "Shopify (shopify.dev)",
+    "url": "https://shopify.dev/docs/storefronts/themes/store/requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Theme Store minimum average Lighthouse scores (performance 60, accessibility 90) on home, collection and product pages, contrast ratios and a 24 by 24 CSS pixel touch target"
+  },
+  {
+    "n": 8,
+    "title": "Web performance dashboard",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-dashboard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The admin report shows LCP, INP and CLS from real visits over 30 days at the 75th percentile, with thresholds, annotations for app installs and theme changes, a delay of up to 36 hours and 90 days of history"
+  },
+  {
+    "n": 9,
+    "title": "Web Vitals",
+    "publisher": "Google (web.dev)",
+    "url": "https://web.dev/articles/vitals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Core Web Vitals and their good thresholds (LCP 2.5 s, INP 200 ms, CLS 0.1) at the 75th percentile; INP replaced FID in 2024"
+  },
+  {
+    "n": 10,
+    "title": "Collaborator accounts",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/your-account/users/security/collaborator-accounts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four-digit request code, roles with only the needed permissions, no Administrator role for collaborators, two-step authentication, expiry after 90 days without a login, permanent removal"
+  },
+  {
+    "n": 11,
+    "title": "Store permissions",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/your-account/users/roles/permissions/store-permissions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Themes permission includes changing and publishing themes; Edit code is separate; many permissions such as Orders and Products have view-only options"
+  },
+  {
+    "n": 12,
+    "title": "Authorizing access for AI tools",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/authorizing-access",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI tool connectors get read-only or write access, are capped by the approving user's permissions, cannot be reduced after approval without reinstalling, and are revoked by uninstalling; lists supported AI tools"
+  },
+  {
+    "n": 13,
+    "title": "Adding store policies",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/checkout-settings/refund-privacy-tos",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Policy types (return, privacy, terms, shipping, legal notice, contact, subscription), automated policies, links in the checkout footer, the merchant's responsibility for accuracy"
+  },
+  {
+    "n": 14,
+    "title": "Preparing to launch your store",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-prepare-for-launch",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Test orders, Shopify Payments test mode, preview, plan, store address and payment method required before launch, removing the password page"
+  },
+  {
+    "n": 15,
+    "title": "Metafields",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/custom-data/metafields",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Metafields extend Shopify's data model; definitions add validated fields; themes with dynamic sources connect them in the theme editor, vintage themes need code"
+  },
+  {
+    "n": 16,
+    "title": "Shopify Scripts will be deprecated on June 30, 2026",
+    "publisher": "Shopify (shopify.dev changelog)",
+    "url": "https://shopify.dev/changelog/posts/shopify-scripts-will-be-deprecated-on-june-30-2026",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scripts could not be edited or published after 15 April 2026 and stopped running on 30 June 2026; Shopify Functions replace them"
+  },
+  {
+    "n": 17,
+    "title": "Upgrading to checkout extensibility",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/checkout-upgrade",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Additional scripts became view-only on 28 August 2025; non-Plus stores had until 26 August 2026 to upgrade Thank you and Order status pages"
+  },
+  {
+    "n": 18,
+    "title": "Schedule and test storefront changes with Rollouts",
+    "publisher": "Shopify Changelog",
+    "url": "https://changelog.shopify.com/posts/schedule-and-test-storefront-changes-with-rollouts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 31 March 2026: schedule theme changes, end dates that revert a promotion, A/B tests against the current theme; Basic plan and above, market targeting on Advanced and Plus"
+  },
+  {
+    "n": 19,
+    "title": "European Price Indication Directive",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/compliance/legal/pricing-indication-directive",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EEA price reductions must show the lowest price in the previous 30 days or more; compare-at price use, per-market display settings, metafields or theme statements for frequent discounts"
+  },
+  {
+    "n": 20,
+    "title": "Customer privacy settings",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings/privacy-settings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automated privacy settings on new stores, cookie banner for UK and EEA visitors with opt-in consent, data sharing opt-out page, privacy policy needed first, third-party banner regions must match"
+  },
+  {
+    "n": 21,
+    "title": "A new era for inclusion begins: the EAA enters into force",
+    "publisher": "AccessibleEU (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 27 June 2025: from 28 June 2025 the European Accessibility Act requires accessible e-commerce platforms, among other products and services"
+  },
+  {
+    "n": 22,
+    "title": "Providing clear and accurate information about prices: summary (CMA209)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 7 January 2026: total price including unavoidable fees, how to show delivery charges, drip pricing is illegal, fines up to 10% of turnover or £300,000, whichever is greater"
+  },
+  {
+    "n": 23,
+    "title": "Guidance on Web Accessibility and the ADA",
+    "publisher": "US Department of Justice (ADA.gov)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 18 March 2022: the ADA applies to the web offerings of businesses open to the public; no detailed technical regulation; WCAG named as helpful guidance"
+  },
+  {
+    "n": 24,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. W3C Recommendation, version dated 12 December 2024; contrast minimum 4.5:1 for text and 3:1 for large text"
+  },
+  {
+    "n": 25,
+    "title": "Cart abandonment rate statistics",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Average documented cart abandonment of 70.22% across 50 studies (2006 to 2025), reasons for abandoning checkout, and Baymard's estimate of conversion gains from fixing checkout usability"
+  },
+  {
+    "n": 26,
+    "title": "UX Guidelines for Ecommerce Product Pages (Katie Sherwin, 2019)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ecommerce-product-pages/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Product pages must answer shoppers' questions: front-loaded descriptions, several images, full price and shipping details, consistent options, honest reviews, stock status and clear add-to-cart feedback"
+  },
+  {
+    "n": 27,
+    "title": "Shopify Editions Summer '25",
+    "publisher": "Shopify",
+    "url": "https://www.shopify.com/editions/summer2025",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Horizon themes built on theme blocks, AI Generate blocks and themes, theme editor changes, Sidekick, the Shopify.dev MCP server and Storefront MCP"
+  },
+  {
+    "n": 28,
+    "title": "Vodafone: a 31% improvement in LCP increased sales by 8%",
+    "publisher": "Google (web.dev case study)",
+    "url": "https://web.dev/case-studies/vodafone",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 17 March 2021: an A/B test where the faster page (31% better LCP) had 8% more sales, 15% better lead-to-visit and 11% better cart-to-visit rates"
+  },
+  {
+    "n": 29,
+    "title": "Milliseconds make millions",
+    "publisher": "Google (web.dev case study)",
+    "url": "https://web.dev/case-studies/milliseconds-make-millions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Study commissioned by Google, run by 55 and Deloitte on 37 brand sites at the end of 2019: a 0.1 second mobile speed improvement was associated with 8.4% more retail conversions"
+  },
+  {
+    "n": 30,
+    "title": "Gymshark customer story, by Nick Winkler",
+    "publisher": "Shopify (Shopify Plus blog, vendor-published)",
+    "url": "https://www.shopify.com/enterprise/blog/gymshark-global-multi-channel",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vendor-published account, updated 29 August 2018: Gymshark's earlier site was offline for about eight hours on Black Friday, an estimated $143,000 in lost sales, blamed on a bug in an app the company was not using; the move to Shopify"
+  }
+]

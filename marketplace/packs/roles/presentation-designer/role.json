@@ -1,0 +1,26 @@
+{
+  "id": "presentation-designer",
+  "name": "Presentation and layout designer",
+  "department": "design",
+  "summary": "Designs slide decks, workbooks, ebooks and book covers that are easy to follow and build. Sets up templates a team can reuse.",
+  "aliases": [
+    "presentation design",
+    "powerpoint designer",
+    "pitch deck design",
+    "layout designer",
+    "ebook design",
+    "book cover design",
+    "google slides",
+    "slide template",
+    "workbook design",
+    "form design"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: canon (Duarte, Reynolds, Alley, Tufte, Mayer, Minto, FT Visual Vocabulary, Jarrett), slide set-up and accessibility, workbooks and media kits, KDP and IngramSpark cover specs, AI cover art disclosure, form design, and Canva and Figma connectors, with 29 checked sources."
+    }
+  ]
+}

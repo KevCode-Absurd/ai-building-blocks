@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Scores how far a survey can be trusted before you act on it, a useful check before writing the evaluation report."
+  },
+  {
+    "slug": "check-a-marketing-survey-before-sending-it",
+    "name": "Check a marketing survey before sending it",
+    "why": "A bias review and pretest plan for any survey; the same checks apply to before-and-after programme surveys."
+  },
+  {
+    "slug": "prepare-a-survey-findings-briefing",
+    "name": "Prepare a survey findings briefing",
+    "why": "A checked findings table with honest sampling caveats, matching the report skill's \"how sure\" line."
+  },
+  {
+    "slug": "nonprofit-program-outcome-planner",
+    "name": "Nonprofit program outcome planner",
+    "why": "Turns activities and a goal into a logic model with assumptions to check, the first step of the logic model skill."
+  },
+  {
+    "slug": "nonprofit-program-measurement-planner",
+    "name": "Nonprofit program measurement planner",
+    "why": "Picks measures, targets and dates and reports results with limits, alongside the measures and data plan skill."
+  },
+  {
+    "slug": "sample-size-planner",
+    "name": "Sample size planner",
+    "why": "Works out how many people a comparison design would need, useful when a board asks for a trial."
+  },
+  {
+    "slug": "input-metric-picker",
+    "name": "Input metric picker",
+    "why": "Separates the measures a team controls from the outcomes it reports, helpful when splitting monitoring from outcome measures."
+  },
+  {
+    "slug": "check-training-transfer-after-a-course",
+    "name": "Check training transfer after a course",
+    "why": "Checks whether a course changed real work, for programmes that train staff or volunteers."
+  },
+  {
+    "slug": "grant-spending-evidence-review-assistant",
+    "name": "Grant spending evidence review assistant",
+    "why": "Checks grant spending against award rules, the money side of the same funder report."
+  },
+  {
+    "slug": "prepare-a-grant-spending-evidence-pack",
+    "name": "Prepare a grant spending evidence pack",
+    "why": "Builds the reconciled spending table and evidence gaps to send with the funder summary."
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "The Four Big Risks",
+    "publisher": "Silicon Valley Product Group (Marty Cagan)",
+    "url": "https://www.svpg.com/four-big-risks/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Value, usability, feasibility and business viability risks, and who owns each; dated 4 Dec 2017."
+  },
+  {
+    "n": 2,
+    "title": "Opportunity Solution Trees: Visualize Your Discovery to Stay Aligned and Drive Outcomes",
+    "publisher": "Product Talk (Teresa Torres)",
+    "url": "https://www.producttalk.org/opportunity-solution-trees/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Outcome, opportunities, solutions and assumption tests; at least three solutions per target opportunity; weekly interviews; revise the opportunity space every three to four interviews; product trio; dated 6 Dec 2023."
+  },
+  {
+    "n": 3,
+    "title": "RICE: Simple prioritization for product managers",
+    "publisher": "Intercom (Sean McBride)",
+    "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reach, Impact (3, 2, 1, 0.5, 0.25), Confidence (100, 80, 50%), Effort in person-months; scores are a guide, not a rule; dated 5 Jan 2018."
+  },
+  {
+    "n": 4,
+    "title": "Shape Up, Chapter 1: Introduction",
+    "publisher": "Basecamp (Ryan Singer)",
+    "url": "https://basecamp.com/shapeup/0.3-chapter-01",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six-week cycles, two-week cool-down, appetite instead of estimates, shaping, the betting table and the circuit breaker."
+  },
+  {
+    "n": 5,
+    "title": "User Stories",
+    "publisher": "Mountain Goat Software (Mike Cohn)",
+    "url": "https://www.mountaingoatsoftware.com/agile/user-stories",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Story template as a thinking aid; conditions of satisfaction understood before a sprint; a story fits in one sprint; epics split later; anyone can write stories; a story is a placeholder for a conversation."
+  },
+  {
+    "n": 6,
+    "title": "INVEST in Good Stories, and SMART Tasks",
+    "publisher": "XP123 (Bill Wake)",
+    "url": "https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Independent, Negotiable, Valuable, Estimable, Small, Testable; first published 17 Aug 2003."
+  },
+  {
+    "n": 7,
+    "title": "Measuring the User Experience on a Large Scale: User-Centered Metrics for Web Applications (CHI 2010)",
+    "publisher": "Google Research (Rodden, Hutchinson, Fu)",
+    "url": "https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36299.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and read as text). HEART categories; not every category for every product; engagement per user rather than totals; Gmail metric of active users visiting on five or more days a week; the goals, signals, metrics process."
+  },
+  {
+    "n": 8,
+    "title": "How the discovery phase works",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Do not build in discovery; typically around 4 to 8 weeks; stopping is not failure; know how success will be measured before alpha; updated 21 Jun 2021."
+  },
+  {
+    "n": 9,
+    "title": "Diagnosing Sample Ratio Mismatch in A/B Testing",
+    "publisher": "Microsoft Research (Experimentation Platform)",
+    "url": "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SRM definition and causes; chi-square test with p < 0.0005; about 6% of Microsoft A/B tests and about 10% of LinkedIn triggered tests affected; MSN carousel result reversed; dated 14 Sep 2020."
+  },
+  {
+    "n": 10,
+    "title": "Statistics overview",
+    "publisher": "GrowthBook Docs",
+    "url": "https://docs.growthbook.io/statistics/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bayesian engine by default, frequentist option; chance to win at 95%; CUPED; sequential testing; checks for SRM, guardrail metrics and minimum data; stopping early can still inflate false positives."
+  },
+  {
+    "n": 11,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In force 1 Aug 2024, applicable 2 Aug 2026; prohibitions and AI literacy 2 Feb 2025; GPAI 2 Aug 2025; transparency Aug 2026; high-risk Annex III 2 Dec 2027 and Annex I 2 Aug 2028 after the AI Omnibus (in force 27 Jul 2026); four risk levels; updated 19 Oct 2026."
+  },
+  {
+    "n": 12,
+    "title": "Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "European Commission AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Duties to tell people they are interacting with AI, mark synthetic content in a machine-readable way, inform people about emotion recognition, disclose deepfakes and certain public-interest text; at the latest at first interaction; consolidated text as at 27 Jul 2026."
+  },
+  {
+    "n": 13,
+    "title": "Transparency obligations under Article 50 AI Act (FAQ)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Provider and deployer roles; notice at the start of the first interaction; applies from 2 Aug 2026, with systems already on the market given until 2 Dec 2026 for marking only; Code of Practice assessed adequate; fines up to EUR 15 million or 3%; updated 24 Jul 2026."
+  },
+  {
+    "n": 14,
+    "title": "AI Risk Management Framework",
+    "publisher": "U.S. National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI RMF 1.0 released 26 Jan 2023 for voluntary use; Govern, Map, Measure, Manage; Generative AI Profile (NIST AI 600-1) 26 Jul 2024; being revised under the White House AI Action Plan."
+  },
+  {
+    "n": 15,
+    "title": "AI RMF 1.0, Section 3: AI Risks and Trustworthiness",
+    "publisher": "NIST Trustworthy and Responsible AI Resource Center",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The seven characteristics of trustworthy AI and the trade-offs between them."
+  },
+  {
+    "n": 16,
+    "title": "Introduction to AI assurance",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/publications/introduction-to-ai-assurance/introduction-to-ai-assurance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK principles-based approach with five principles applied by existing regulators; assurance techniques such as risk and impact assessment, bias audit and performance testing; published 12 Feb 2024."
+  },
+  {
+    "n": 17,
+    "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Operation AI Comply, 25 Sep 2024; DoNotPay \"robot lawyer\" claims not tested; Rytr review generator; existing law applies to AI claims."
+  },
+  {
+    "n": 18,
+    "title": "Data protection under GDPR",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/dealing-with-customers/data-protection/data-protection-gdpr/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data protection by design and by default; impact assessment for high-risk processing; six lawful bases; telling people how data is used; last checked 5 Aug 2026."
+  },
+  {
+    "n": 19,
+    "title": "Getting started with the Atlassian Rovo MCP server",
+    "publisher": "Atlassian Support",
+    "url": "https://support.atlassian.com/rovo/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jira, Confluence and other Atlassian apps through MCP; OAuth 2.1 respecting existing permissions; create and update work items and pages; v1 usage moves to v2 from 1 Mar 2027; calls use Rovo credits; least privilege advised."
+  },
+  {
+    "n": 20,
+    "title": "Linear MCP server",
+    "publisher": "Linear Docs",
+    "url": "https://linear.app/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hosted MCP server for issues, projects and comments; OAuth 2.1; read-only endpoint or read scope available."
+  },
+  {
+    "n": 21,
+    "title": "GitHub MCP Server",
+    "publisher": "GitHub",
+    "url": "https://github.com/github/github-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official server, remote or local; toolsets for issues, pull requests, projects and actions; read-only flag; OAuth or a token set in the environment."
+  },
+  {
+    "n": 22,
+    "title": "Notion MCP",
+    "publisher": "Notion Developers",
+    "url": "https://developers.notion.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hosted MCP to search a workspace, create and edit pages and manage databases; admins manage MCP clients."
+  },
+  {
+    "n": 23,
+    "title": "Amplitude MCP Server",
+    "publisher": "Amplitude Docs",
+    "url": "https://amplitude.com/docs/amplitude-ai/amplitude-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Query analytics and experiment results, edit charts and dashboards; OAuth with per-project MCP read and write roles; two-step delete confirmation; Enterprise, or Plus as an add-on; updated 4 Nov 2026."
+  },
+  {
+    "n": 24,
+    "title": "PostHog MCP server",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/model-context-protocol",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free hosted MCP endpoint for feature flags, experiments, errors and queries; some AI tools billed separately."
+  },
+  {
+    "n": 25,
+    "title": "Jira Product Discovery",
+    "publisher": "Atlassian",
+    "url": "https://www.atlassian.com/software/jira/product-discovery",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ideas and insights in one place, prioritisation fields, shareable roadmaps, links to Jira delivery work; free sign-up offered."
+  },
+  {
+    "n": 26,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote server recommended; reads design context; writing to the canvas in beta, free during beta then usage-based."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "shopify-specialist",
+  "name": "Shopify specialist",
+  "department": "ecommerce",
+  "summary": "Sets up, changes and checks Shopify stores: theme edits, sections and launch checks. Makes small changes safely without piling on apps.",
+  "aliases": [
+    "shopify expert",
+    "shopify developer",
+    "liquid",
+    "shopify theme",
+    "shopify store setup",
+    "online store 2.0",
+    "shopify sections",
+    "shopify launch checklist",
+    "shopify speed fixes",
+    "shopify metafields"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: theme architecture and safe editing, speed and Core Web Vitals, app code clean-up, access levels 1 to 3 per tool (read, draft, publish within limits), launch and sale-day checks, checkout and Scripts deadlines, and US, UK and EU rules on prices, cookies and accessibility, with 30 checked sources."
+    }
+  ]
+}

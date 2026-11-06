@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Certified Tester Foundation Level (CTFL) v4.0",
+    "publisher": "ISTQB",
+    "url": "https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The common certification syllabus (labelled v4.0.1 for download): testing principles, test levels and types, test techniques, risk management, benefits and risks of automation; exam of 40 questions, pass mark 26, 60 minutes."
+  },
+  {
+    "n": 2,
+    "title": "The seven basic principles of the context-driven school",
+    "publisher": "Cem Kaner and James Bach (context-driven-testing.com)",
+    "url": "https://context-driven-testing.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The context-driven principles (value of a practice depends on its context; no best practice everywhere; testing is skilled, judgement-based work), credited to Kaner, Bach and Pettichord."
+  },
+  {
+    "n": 3,
+    "title": "Testing vs. Checking",
+    "publisher": "Michael Bolton, DevelopSense (29 August 2009)",
+    "url": "https://www.developsense.com/blog/2009/08/testing-vs-checking/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The distinction between checking (confirming what we believe, machine-decidable pass or fail) and testing (exploring to find new information, needing human judgement); later refined with James Bach."
+  },
+  {
+    "n": 4,
+    "title": "Test Pyramid",
+    "publisher": "Martin Fowler (1 May 2012)",
+    "url": "https://martinfowler.com/bliki/TestPyramid.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Mike Cohn's test automation pyramid (Succeeding with Agile, 2009): many more low-level tests than UI tests; UI-driven tests are brittle, expensive to write and slow."
+  },
+  {
+    "n": 5,
+    "title": "The Testing Trophy and Testing Classifications",
+    "publisher": "Kent C. Dodds (3 June 2021)",
+    "url": "https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The testing trophy (static, unit, integration, end to end), first shared February 2018, and the advice to write mostly integration tests."
+  },
+  {
+    "n": 6,
+    "title": "Eradicating Non-Determinism in Tests",
+    "publisher": "Martin Fowler (14 April 2011)",
+    "url": "https://martinfowler.com/articles/nonDeterminism.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Quarantining non-deterministic tests with a limit; causes (isolation, asynchronous behaviour, remote services, time, resource leaks); never use bare sleeps; wrap the system clock."
+  },
+  {
+    "n": 7,
+    "title": "An Empirical Analysis of Flaky Tests (FSE 2014)",
+    "publisher": "Qingzhou Luo, Farah Hariri, Lamyaa Eloussi and Darko Marinov, University of Illinois",
+    "url": "https://mir.cs.illinois.edu/lamyaa/publications/fse14.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF), text read locally. 201 flaky-test fix commits from 51 Apache projects; of 161 categorised, Async Wait 45%, Concurrency 20%, Test Order Dependency 12%; 78% flaky from when first written; 54% of Async Wait fixed by waiting for the condition; 74% of order-dependency fixed by cleaning shared state."
+  },
+  {
+    "n": 8,
+    "title": "Bug Writing Guidelines",
+    "publisher": "Mozilla (Bugzilla)",
+    "url": "https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps to reproduce as the most important part; one issue per report; search for duplicates; a clear unique summary; expected and actual results; facts kept apart from guesses."
+  },
+  {
+    "n": 9,
+    "title": "Defect severity",
+    "publisher": "Mozilla (Firefox source docs)",
+    "url": "https://firefox-source-docs.mozilla.org/bug-mgmt/guides/severity.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A worked severity scale (S1 to S4, N/A) kept separate from priority, with examples such as crashes with data loss at S1."
+  },
+  {
+    "n": 10,
+    "title": "Best Practices",
+    "publisher": "Playwright (Microsoft)",
+    "url": "https://playwright.dev/docs/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Test user-visible behaviour, isolate tests, do not test third-party sites (mock them), prefer role locators, web-first assertions, traces on first retry in CI, lint for missing awaits, keep Playwright up to date."
+  },
+  {
+    "n": 11,
+    "title": "Release notes",
+    "publisher": "Playwright (Microsoft)",
+    "url": "https://playwright.dev/docs/release-notes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest version 1.65 as of 6 Nov 2026 (page shows no dates): Bun support, failures reporter, Node.js 20 no longer tested; 1.64 added --shuffle; 1.63 added test locks; 1.56 introduced Playwright Test Agents."
+  },
+  {
+    "n": 12,
+    "title": "Retries",
+    "publisher": "Playwright (Microsoft)",
+    "url": "https://playwright.dev/docs/test-retries",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Playwright's passed, flaky (failed then passed on retry) and failed categories, and how retries are configured."
+  },
+  {
+    "n": 13,
+    "title": "API testing",
+    "publisher": "Playwright (Microsoft)",
+    "url": "https://playwright.dev/docs/api-testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. APIRequestContext for testing a server API, preparing server state before a UI test and checking server-side results after browser actions."
+  },
+  {
+    "n": 14,
+    "title": "Accessibility testing",
+    "publisher": "Playwright (Microsoft)",
+    "url": "https://playwright.dev/docs/accessibility-testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Running axe through @axe-core/playwright; automated scans find only some problems and many need manual testing; its example tags stop at WCAG 2.1 AA."
+  },
+  {
+    "n": 15,
+    "title": "Changelog",
+    "publisher": "Cypress",
+    "url": "https://docs.cypress.io/app/references/changelog",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cypress 16.2.1 released 28 Oct 2026; 16.2.0 (13 Oct 2026) added cy.getByRole(); 16.0.0 (1 Sep 2026) dropped Node.js 20 and 25 and removed Cypress.env() and cy.exec()."
+  },
+  {
+    "n": 16,
+    "title": "Best Practices",
+    "publisher": "Cypress",
+    "url": "https://docs.cypress.io/app/core-concepts/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. data-* selectors, test only sites you control, tests that pass alone, clean state before tests, no fixed cy.wait(Number), set state with cy.request(), set a baseUrl."
+  },
+  {
+    "n": 17,
+    "title": "Test Retries",
+    "publisher": "Cypress",
+    "url": "https://docs.cypress.io/app/guides/test-retries",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Retries off by default (runMode and openMode both 0); Cypress Cloud marks tests that retried then passed as flaky and shows a flake rate."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Pact",
+    "publisher": "Pact Foundation",
+    "url": "https://docs.pact.io/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Consumer-driven contract testing for HTTP and message integrations, checking services work together without deploying them all; calls traditional integration tests expensive and brittle."
+  },
+  {
+    "n": 19,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. W3C Recommendation, dated version 12 December 2024; levels A, AA and AAA; 4.1.1 Parsing removed; conformance applies to full pages and complete processes; 2.5.8 target size of 24 by 24 CSS pixels at AA."
+  },
+  {
+    "n": 20,
+    "title": "What's New in WCAG 2.2",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The nine success criteria added in WCAG 2.2 and their levels."
+  },
+  {
+    "n": 21,
+    "title": "Evaluating Web Accessibility Overview",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/test-evaluate/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No tool alone can determine whether a site meets accessibility standards; Easy Checks, WCAG-EM and involving disabled users."
+  },
+  {
+    "n": 22,
+    "title": "Easy Checks: A First Review of Web Accessibility",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ten quick manual checks (page title, alt text, headings, contrast, resize text, keyboard and focus, forms and errors, moving content, multimedia, basic structure)."
+  },
+  {
+    "n": 23,
+    "title": "axe-core README",
+    "publisher": "Deque Systems (GitHub)",
+    "url": "https://github.com/dequelabs/axe-core",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deque's own claim that axe finds on average 57% of WCAG issues automatically; rules for WCAG 2.0, 2.1 and 2.2 at A, AA and AAA; aims for zero false positives; Mozilla Public License 2.0."
+  },
+  {
+    "n": 24,
+    "title": "axe-core API documentation",
+    "publisher": "Deque Systems (GitHub)",
+    "url": "https://github.com/dequelabs/axe-core/blob/develop/doc/API.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule tags including wcag22aa and best-practice; 'incomplete' results that need manual review."
+  },
+  {
+    "n": 25,
+    "title": "What we found when we tested tools on the world's least-accessible webpage",
+    "publisher": "Government Digital Service, Accessibility in government blog (Mehmet Duran, 24 February 2017)",
+    "url": "https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A page with 143 failures run through 10 free tools: together they found 71%, 29% were missed by every tool, the best single tool found 37% (41% counting manual prompts) and the weakest 17%."
+  },
+  {
+    "n": 26,
+    "title": "Testing for accessibility",
+    "publisher": "GOV.UK Service Manual (updated 29 October 2024)",
+    "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service/testing-for-accessibility",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK government services meet WCAG 2.2 AA as a minimum; automated tools (axe, WAVE, ARC Toolkit, SiteImprove) miss issues; manual checks, assistive technology testing and an audit before public beta."
+  },
+  {
+    "n": 27,
+    "title": "DORA's software delivery performance metrics",
+    "publisher": "DORA (Google Cloud)",
+    "url": "https://dora.dev/guides/dora-metrics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definitions of change fail rate and deployment rework rate, alongside the throughput metrics."
+  },
+  {
+    "n": 28,
+    "title": "Testing (sandboxes and test cards)",
+    "publisher": "Stripe",
+    "url": "https://docs.stripe.com/testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sandboxes and test cards that move no money; do not use real card details; card state can carry between tests, so use a different test card for each independent end-to-end scenario."
+  },
+  {
+    "n": 29,
+    "title": "Final Notice: TSB Bank plc (20 December 2022)",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/publication/final-notices/tsb-bank-plc-2022.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF), text read locally. FCA penalty of £29.75 million (£42.50 million before the settlement discount); testing ran late, ran in parallel or changed scope, and concluded the day before the decision to migrate; reduced non-functional testing scope decided outside governance; a separate PRA penalty."
+  },
+  {
+    "n": 30,
+    "title": "Falcon Content Update: Preliminary Post Incident Report",
+    "publisher": "CrowdStrike",
+    "url": "https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A bug in the Content Validator let a faulty template instance pass on 19 July 2024; CrowdStrike committed to more test types and a staggered, canary-first rollout."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "AI Risk Management Framework",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI RMF 1.0 released 26 January 2023 for voluntary use; four functions Govern, Map, Measure, Manage; Generative AI Profile (NIST-AI-600-1) released 26 July 2024; AI RMF 1.0 being revised as part of the White House AI Action Plan; critical infrastructure profile concept note 7 April 2026."
+  },
+  {
+    "n": 2,
+    "title": "AI RMF 1.0: characteristics of trustworthy AI",
+    "publisher": "NIST Trustworthy and Responsible AI Resource Center",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Seven characteristics of trustworthy AI; accuracy measured with false positive and false negative rates on realistic test sets, possibly by segment; three bias categories (systemic, computational and statistical, human-cognitive) that can occur without intent; trade-offs between characteristics are context value choices."
+  },
+  {
+    "n": 3,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 19 October 2026. In force 1 Aug 2024; bans and AI literacy 2 Feb 2025; generally applicable 2 Aug 2026; AI Omnibus in force 27 Jul 2026 moving high-risk rules to 2 Dec 2027 (Annex III) and 2 Aug 2028 (Annex I); four risk levels; high-risk examples (credit scoring, recruitment, education) and obligations."
+  },
+  {
+    "n": 4,
+    "title": "AI literacy - Questions & Answers",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 20 October 2026. Article 4 applies to providers and deployers from 2 Feb 2025, supervised and enforced by national authorities from 2 Aug 2026; no specific level mandated; no certificate required; internal records suffice."
+  },
+  {
+    "n": 5,
+    "title": "Introduction to AI assurance",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/government/publications/introduction-to-ai-assurance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 12 February 2024 by DSIT; explains how AI assurance techniques support safe and responsible development and deployment, within the wider AI governance landscape."
+  },
+  {
+    "n": 6,
+    "title": "Portfolio of AI assurance techniques",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/guidance/cdei-portfolio-of-ai-assurance-techniques",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 7 June 2023; case studies mapped to the white paper principles; techniques: impact assessment, impact evaluation, bias audit, compliance audit, certification, conformity assessment, performance testing, formal verification."
+  },
+  {
+    "n": 7,
+    "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 25 September 2024, Operation AI Comply, five actions; DoNotPay had not tested its output against a human lawyer's and agreed to pay $193,000; chair's statement that there is no AI exemption from existing law."
+  },
+  {
+    "n": 8,
+    "title": "29 CFR 1607.4 - Information on impact",
+    "publisher": "Legal Information Institute, Cornell Law School (copy of the eCFR text)",
+    "url": "https://www.law.cornell.edu/cfr/text/29/1607.4",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (eCFR redirected to a bot check, which was not bypassed; this is a copy of the regulation text). Four-fifths rule: a selection rate below 80% of the highest group's is generally regarded as evidence of adverse impact; smaller differences may count if significant; larger may not with small numbers."
+  },
+  {
+    "n": 9,
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "publisher": "NYC Department of Consumer and Worker Protection",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Local Law 144 of 2021: no AEDT use without a bias audit within one year before use, public audit information and notices to candidates; enforcement began 5 July 2023."
+  },
+  {
+    "n": 10,
+    "title": "Classification: Accuracy, recall, precision, and related metrics",
+    "publisher": "Google for Developers, Machine Learning Crash Course",
+    "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definitions of accuracy, recall, false positive rate and precision; accuracy misleading on imbalanced data (99% example at 1% positives); which metric to prefer by error cost; threshold trade-off."
+  },
+  {
+    "n": 11,
+    "title": "Metrics and scoring: quantifying the quality of predictions",
+    "publisher": "scikit-learn 1.9.1 documentation",
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Choose a strictly consistent scoring function; balanced accuracy; precision and recall formulas; ROC AUC; average precision baseline equals the share of positives; dummy estimators as baselines."
+  },
+  {
+    "n": 12,
+    "title": "Probability calibration",
+    "publisher": "scikit-learn 1.9.1 documentation",
+    "url": "https://scikit-learn.org/stable/modules/calibration.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of calibration; calibration curves; Brier score mixes calibration and discrimination; sigmoid vs isotonic, isotonic as good or better with about 1,000 or more samples; typical calibration of logistic regression, naive Bayes, random forests and SVMs."
+  },
+  {
+    "n": 13,
+    "title": "Cross-validation: evaluating estimator performance",
+    "publisher": "scikit-learn 1.9.1 documentation",
+    "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hold out a test set; k-fold; stratified folds and the note that stratification can understate fold variance; GroupKFold for grouped samples; TimeSeriesSplit for time-ordered data; shuffling harms non-i.i.d. data."
+  },
+  {
+    "n": 14,
+    "title": "Common pitfalls and recommended practices",
+    "publisher": "scikit-learn 1.9.1 documentation",
+    "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data leakage definition; split first, fit on training only, use pipelines; leaky feature selection gives 0.76 test accuracy on random data where 0.5 is correct; controlling randomness with random_state."
+  },
+  {
+    "n": 15,
+    "title": "Leakage and the Reproducibility Crisis in ML-based Science",
+    "publisher": "Sayash Kapoor and Arvind Narayanan, Princeton University",
+    "url": "https://reproducible.cs.princeton.edu/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Patterns, 2023; leakage errors found in 41 papers across 30 fields, affecting 648 papers; leakage types; model info sheets proposal."
+  },
+  {
+    "n": 16,
+    "title": "Rules of Machine Learning: Best Practices for ML Engineering",
+    "publisher": "Google for Developers (Martin Zinkevich)",
+    "url": "https://developers.google.com/machine-learning/guides/rules-of-ml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule 1, do not be afraid to launch without machine learning; Rule 2, design and implement metrics first; Rule 3, move from complex heuristics to ML; training-serving skew rules."
+  },
+  {
+    "n": 17,
+    "title": "Hidden Technical Debt in Machine Learning Systems",
+    "publisher": "NeurIPS Proceedings (D. Sculley et al., NIPS 2015)",
+    "url": "https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ML systems incur ongoing maintenance costs; risk factors include boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues and changes in the external world."
+  },
+  {
+    "n": 18,
+    "title": "Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead",
+    "publisher": "arXiv (Cynthia Rudin; Nature Machine Intelligence, 2019)",
+    "url": "https://arxiv.org/abs/1811.10154",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Argues for inherently interpretable models instead of post-hoc explanations of black boxes in high-stakes decisions."
+  },
+  {
+    "n": 19,
+    "title": "Model Cards for Model Reporting",
+    "publisher": "arXiv (Margaret Mitchell et al.; FAT* 2019)",
+    "url": "https://arxiv.org/abs/1810.03993",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Short documents accompanying trained models, stating intended use and benchmarked performance across groups and conditions, and how evaluation was done."
+  },
+  {
+    "n": 20,
+    "title": "Datasheets for Datasets",
+    "publisher": "arXiv (Timnit Gebru et al.; Communications of the ACM, 2021)",
+    "url": "https://arxiv.org/abs/1803.09010",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Proposes that every dataset ship with a datasheet recording its motivation, composition, collection process and recommended uses."
+  },
+  {
+    "n": 21,
+    "title": "Inherent Trade-Offs in the Fair Determination of Risk Scores",
+    "publisher": "arXiv (Jon Kleinberg, Sendhil Mullainathan, Manish Raghavan; ITCS 2017)",
+    "url": "https://arxiv.org/abs/1609.05807",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Three fairness conditions for risk scores cannot all be satisfied simultaneously except in highly constrained special cases."
+  },
+  {
+    "n": 22,
+    "title": "Common fairness metrics",
+    "publisher": "Fairlearn documentation (0.16 development version)",
+    "url": "https://fairlearn.org/main/user_guide/assessment/common_fairness_metrics.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Demographic parity difference and ratio; equalized odds; cautions that passing a metric does not make a system fair, small subgroups are unreliable, multiple comparisons raise false findings, and against applying the four-fifths rule in most cases."
+  },
+  {
+    "n": 23,
+    "title": "How Not To Run an A/B Test",
+    "publisher": "Evan Miller (author's site)",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 18 April 2010. Peeking and stopping at the first 5% significance reading gave a 26.1% false positive rate in his simulation; fix sample size in advance, or use sequential or Bayesian designs; rule of thumb n = 16 sigma^2 / delta^2 with sigma^2 = p(1 - p)."
+  },
+  {
+    "n": 24,
+    "title": "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments: A Taxonomy and Rules of Thumb for Practitioners",
+    "publisher": "Microsoft Research (Aleksander Fabijan et al., KDD 2019)",
+    "url": "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Defines sample ratio mismatch as an observed split different from the expected one, a symptom of data quality issues; ignoring it can make a bad change look good or the reverse."
+  },
+  {
+    "n": 25,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 7.3.3 Comparisons based on data from two processes",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc33.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Two-proportion z-test with pooled proportion for reasonably large samples; Fisher's exact test for small samples."
+  },
+  {
+    "n": 26,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 7.2.4.2 Sample sizes required",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc242.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sample size formulas for testing a proportion from alpha, beta and the change to detect; Fleiss, Levin and Paik continuity correction; worked example of about 102, or 112 with correction."
+  },
+  {
+    "n": 27,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 7.1.4 What are confidence intervals?",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Confidence intervals and their link to hypothesis tests; meaning of a 95% interval under repeated sampling; wider intervals when sigma is estimated."
+  },
+  {
+    "n": 28,
+    "title": "Misuse of p-values",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Misuse_of_p-values",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary citing Wasserstein and Lazar (2016), The American Statistician 70(2): a p-value is not the probability the null is true or that results arose by chance alone; 0.05 is a convention; p-values do not measure effect size. Used because the ASA PDF and journal page could not be read."
+  },
+  {
+    "n": 29,
+    "title": "Causal Inference: What If",
+    "publisher": "Miguel A. Hernán and James M. Robins (author's site)",
+    "url": "https://miguelhernan.org/whatifbook",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chapman & Hall/CRC, 2020; free to download; causal inference without models, with models, and from longitudinal data."
+  },
+  {
+    "n": 30,
+    "title": "Statistics overview",
+    "publisher": "GrowthBook documentation",
+    "url": "https://docs.growthbook.io/statistics/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bayesian engine by default and a frequentist engine with sequential testing and CUPED; sample ratio mismatch check; multiple testing corrections in the frequentist engine; open source under MIT."
+  }
+]

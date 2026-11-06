@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Publication 15 (2026), (Circular E), Employer’s Tax Guide",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/publications/p15",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For use in 2026. Supplemental wage withholding 22%, 37% above $1 million; employment tax records kept at least 4 years; Form 941 due 30 April, 31 July, 31 October, 31 January; Social Security 6.2% each to $184,500, Medicare 1.45% each, no cap; new deductions for qualified tips and qualified overtime."
+  },
+  {
+    "n": 2,
+    "title": "General Instructions for Forms W-2 and W-3 (2026)",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/instructions/iw2w3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Box 12 code TT for qualified overtime compensation and code TP for cash tips; box 14 split into 14a and 14b; 2026 forms due 1 February 2027."
+  },
+  {
+    "n": 3,
+    "title": "Overtime Pay",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/overtime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unless exempt, covered employees receive at least one and one-half times their regular rate for hours over 40 in a workweek."
+  },
+  {
+    "n": 4,
+    "title": "Earnings thresholds for the Executive, Administrative, and Professional exemption",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/overtime/salary-levels",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current standard salary level $684 a week ($35,568 a year); highly compensated employee total annual compensation $107,432. The page gives no effective date."
+  },
+  {
+    "n": 5,
+    "title": "Fact Sheet #56C: Bonuses under the Fair Labor Standards Act",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/fact-sheets/56c-bonuses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revised December 2019. Non-discretionary bonuses (production, quality, attendance, safety) are included in the regular rate; discretionary bonuses and gifts excluded; regular rate applies whether pay is hourly, piece rate, salary or commission."
+  },
+  {
+    "n": 6,
+    "title": "Fact Sheet #21: Recordkeeping Requirements under the FLSA",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revised July 2008. The 14 records for each non-exempt worker; payroll records kept 3 years; time cards, wage rate tables and schedules kept 2 years; no particular timekeeping method required."
+  },
+  {
+    "n": 7,
+    "title": "Fact Sheet #22: Hours Worked under the FLSA",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revised July 2008. Rest periods of usually 20 minutes or less count as hours worked; bona fide meal periods (usually 30 minutes or more) need not be paid if the employee is completely relieved; work suffered or permitted must be paid."
+  },
+  {
+    "n": 8,
+    "title": "State Payday Requirements",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/state/payday",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Table of state pay frequency rules, last revised 1 January 2023; advises consulting the state labor office for official information."
+  },
+  {
+    "n": 9,
+    "title": "State Minimum Wage Laws",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/minimum-wage/state",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 5 November 2026. Federal minimum wage $7.25 an hour; state rates such as California $16.90 and Washington $17.13."
+  },
+  {
+    "n": 10,
+    "title": "Equal Pay/Compensation Discrimination",
+    "publisher": "US Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/equal-paycompensation-discrimination",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Equal Pay Act: equal pay for substantially equal work judged by job content; pay includes salary, overtime, bonuses, stock options, profit-sharing and benefits; no lowering pay to close a gap; Title VII and ADA (15+ employees) and ADEA (20+) cover pay discrimination."
+  },
+  {
+    "n": 11,
+    "title": "Occupational Employment and Wage Statistics (OEWS)",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/oes/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Annual wage estimates for about 830 occupations by nation, state and area; latest May 2025 data in a release dated 15 May 2026."
+  },
+  {
+    "n": 12,
+    "title": "Employer Costs for Employee Compensation, June 2026",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/news.release/ecec.nr0.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 9 September 2026. Private industry: $46.89 total compensation per hour worked, wages $32.82, benefits $14.07, benefits 30.0% of total."
+  },
+  {
+    "n": 13,
+    "title": "Running payroll: Reporting to HMRC (FPS)",
+    "publisher": "GOV.UK (HM Revenue & Customs)",
+    "url": "https://www.gov.uk/running-payroll/reporting-to-hmrc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Full Payment Submission on or before payday; Employer Payment Summary by the 19th; pay HMRC by the 22nd (19th by post); new tax year reports not before March."
+  },
+  {
+    "n": 14,
+    "title": "National Minimum Wage and National Living Wage rates",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/national-minimum-wage-rates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From April 2026: £12.71 (21 and over), £10.85 (18 to 20), £8.00 (under 18 and apprentice); April 2025 rates; April 2027 rates listed as £13.21, £11.27 and £8.31."
+  },
+  {
+    "n": 15,
+    "title": "PAYE and payroll for employers: Keeping records",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/paye-for-employers/keeping-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Keep payroll records for 3 years from the end of the tax year; penalty up to £3,000; minimum wage and holiday records have separate requirements."
+  },
+  {
+    "n": 16,
+    "title": "Statutory Sick Pay (SSP): employer guide",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/employers-sick-pay",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SSP is £123.25 a week or 80% of average weekly earnings, whichever is lower, paid for up to 28 weeks."
+  },
+  {
+    "n": 17,
+    "title": "Plan to Make Work Pay and Employment Rights Act: timeline update",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 5 November 2026. SSP changes 6 April 2026 (lower earnings limit and waiting period removed); Fair Work Agency 7 April 2026; tipping law and unfair dismissal qualifying period of six months from 1 January 2027; later 2027 measures; dates subject to Parliament."
+  },
+  {
+    "n": 18,
+    "title": "Workplace pensions: What you, your employer and the government pay",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-pensions/what-you-your-employer-and-the-government-pay",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automatic enrolment minimum 8% total, employer at least 3%, from April 2019; on earnings between £6,240 and £50,270; earnings include bonuses, commission and overtime."
+  },
+  {
+    "n": 19,
+    "title": "Gender pay gap reporting: guidance for employers",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/gender-pay-gap-reporting-guidance-for-employers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employers with 250 or more employees on the snapshot date report and publish within a year; last updated 21 May 2026 to refer to sex rather than gender after a Supreme Court ruling; action plan guidance linked 7 April 2026."
+  },
+  {
+    "n": 20,
+    "title": "Employee earnings in the UK: 2026",
+    "publisher": "Office for National Statistics",
+    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/latest",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 22 October 2026 (ASHE, provisional, April 2026). Median full-time gross weekly earnings £811.20, up 5.8% (2.7% after CPIH); earnings by occupation and region."
+  },
+  {
+    "n": 21,
+    "title": "EU action for equal pay (Pay Transparency Directive)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/gender-equality/equal-pay/eu-action-equal-pay_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive (EU) 2023/970: pay information before employment; ban on asking salary history; right to request average pay by sex for equal work or work of equal value; reporting for employers with 100+ employees; transposition by 7 June 2026. Cited here because EUR-Lex returned an empty page to automated fetching."
+  },
+  {
+    "n": 22,
+    "title": "EU Pay Transparency Directive 2026: employer compliance (law-firm summary)",
+    "publisher": "Lewis Silkin",
+    "url": "https://www.lewissilkin.com/en/insights/2026/07/01/eu-pay-transparency-directive-2026-employer-compliance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Law-firm summary dated 1 July 2026, used under Decision 9 because the official text could not be fetched: Italy, Lithuania, Malta and Slovakia fully transposed; first reports from larger employers in June 2027; joint pay assessment where an unjustified gap of at least 5% is not remedied."
+  },
+  {
+    "n": 23,
+    "title": "Payroll",
+    "publisher": "Canada Revenue Agency (Canada.ca)",
+    "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page details dated 2026-02-16. Official Canadian employer payroll pages: CPP, EI and income tax deductions, remitting, T4 slips. Listed as the source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 24,
+    "title": "Employees’ Provident Fund Organisation",
+    "publisher": "EPFO, Ministry of Labour & Employment, Government of India",
+    "url": "https://www.epfo.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official site for provident fund registration, monthly electronic challan cum return and employer services. Listed as a source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 25,
+    "title": "Income Tax Department e-filing portal",
+    "publisher": "Income Tax Department, Ministry of Finance, Government of India",
+    "url": "https://www.incometax.gov.in/iec/foportal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official portal including TDS/TCS statements and TAN services for deductors. Listed as a source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 26,
+    "title": "Employees (pay and conditions, records)",
+    "publisher": "business.gov.au (Commonwealth of Australia)",
+    "url": "https://business.gov.au/people/pay-and-conditions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Australian Government employer hub: wages, leave and allowances, employee records to keep (payslips, timesheets, rosters), PAYG withholding registration. Listed as the source to check in Australia, alongside the ATO and Fair Work Ombudsman, whose sites block automated fetches; no detail given in the kit."
+  },
+  {
+    "n": 27,
+    "title": "Performance Pay and Productivity (Lazear, NBER Working Paper 5672, 1996)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w5672",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Moving from hourly wages to piece rates at a large auto glass company raised productivity by about 20% to 36%; about half of the gain was passed to workers; theory predicts a more able workforce."
+  },
+  {
+    "n": 28,
+    "title": "Equilibrium Effects of Pay Transparency (Cullen and Pakzad-Hurson, NBER Working Paper 28903)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w28903",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Issued June 2021, revised August 2022. US state laws protecting the right to discuss pay led wages to fall about 2%; mechanism is reduced individual bargaining power; muted where pay is posted or collectively bargained."
+  },
+  {
+    "n": 29,
+    "title": "Inequality at Work: The Effect of Peer Salaries on Job Satisfaction (Card, Mas, Moretti and Saez, NBER Working Paper 16396)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w16396",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Issued September 2010, revised December 2011. Employees paid below the median who learned peer pay reported lower satisfaction and more job search; those above the median showed no gain."
+  },
+  {
+    "n": 30,
+    "title": "Do Firms Respond to Gender Pay Gap Transparency? (Bennedsen, Simintzi, Tsoutsoura and Wolfenzon, NBER Working Paper 25435)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w25435",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Issued January 2019, revised April 2020; published in the Journal of Finance (2022). A 2006 Danish disclosure law cut the gender pay gap by about two percentage points (13%), mainly by slowing male wage growth; no effect on profitability."
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Model for Improvement",
+    "publisher": "Institute for Healthcare Improvement",
+    "url": "https://www.ihi.org/library/model-for-improvement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The model, developed by Associates in Process Improvement, has three questions (aim, measures, changes) and uses Plan-Do-Study-Act cycles to test changes on a small scale before spreading them. No page date shown."
+  },
+  {
+    "n": 2,
+    "title": "User security roles",
+    "publisher": "Cliniko Help Centre",
+    "url": "https://help.cliniko.com/en/articles/1087327-user-security-roles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article dated 30 Sep 2026. Six roles: Scheduler (bookings, basic patient details, SMS; no financials, treatment notes or completed forms), Receptionist (adds invoices and payments), Power receptionist (also deletes patients, archives invoices), Practitioner, Bookkeeper (exports financial data), Administrator (nearly everything; Cliniko advises not giving it to just anyone)."
+  },
+  {
+    "n": 3,
+    "title": "Virtual reception and Cliniko: a guide for practice owners",
+    "publisher": "Cliniko Help Centre",
+    "url": "https://help.cliniko.com/en/articles/4509349-virtual-reception-cliniko-a-guide-for-practice-owners",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 8 Mar 2024. Each outside receptionist needs their own login; shared logins are not safe for patient health data; sharing a two-factor code is not allowed; choose Scheduler, Receptionist or Power receptionist by need."
+  },
+  {
+    "n": 4,
+    "title": "Staff Access Levels",
+    "publisher": "Jane App Guide",
+    "url": "https://jane.app/guide/staff-access-levels",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No page date beyond 2026 copyright. Levels from No Access to Account Owner; Front Desk collects payments, adds adjustments and writes off invoices; Access Billing and Access Charts switches; Account Owner authorises data exports or transfers."
+  },
+  {
+    "n": 5,
+    "title": "Set up patient recalls",
+    "publisher": "Cliniko Help Centre",
+    "url": "https://help.cliniko.com/en/articles/8410284-set-up-patient-recalls",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 20 Sep 2024. Only Administrators and Power receptionists create recall types (1 to 100 days, weeks or months); most users apply recalls; Reports > Recalls with a Recalled tick; follow-up contact is manual."
+  },
+  {
+    "n": 6,
+    "title": "How to create a new recall automation workflow",
+    "publisher": "Dentally Help Centre",
+    "url": "https://help.dentally.com/en/articles/3563915-how-to-create-a-new-recall-automation-workflow",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 24 Aug 2026. Workflows by recall type with stages; each stage has an interval and a first and fallback template (SMS, email or letter); new workflows are inactive by default."
+  },
+  {
+    "n": 7,
+    "title": "How to set a patient's recall preferences",
+    "publisher": "Dentally Help Centre",
+    "url": "https://help.dentally.com/en/articles/3563875-how-to-set-a-patient-s-recall-preferences",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 24 Aug 2026. Separate dentist and hygienist recall intervals and the recall method are set in the Clinical section of the patient record; due dates update automatically unless edited."
+  },
+  {
+    "n": 8,
+    "title": "Recall (Open Dental Manual v24.4)",
+    "publisher": "Open Dental Software",
+    "url": "https://www.opendental.com/manual/recall.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recall types set a default interval that can be changed per patient; completing a trigger procedure sets the next due date; status best updated on the Recall List; recalls can be disabled until a date or until a family balance drops below an amount. No page date."
+  },
+  {
+    "n": 9,
+    "title": "Return Visit Reminders",
+    "publisher": "Jane App Guide",
+    "url": "https://jane.app/guide/return-visit-reminders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Staff set a suggested date and reminder date; Email (Auto) sends at 7am on the reminder date, only if no visit is booked; manual email and phone lists; automatic email on the Thrive plan. No page date."
+  },
+  {
+    "n": 10,
+    "title": "Email and SMS Reminders",
+    "publisher": "Jane App Guide",
+    "url": "https://jane.app/guide/email-sms-reminders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reminders set in hours or days before; email on all plans; SMS only on Legacy, Practice or Thrive and in select regions; patients must consent before SMS; Do Not Text option. No page date."
+  },
+  {
+    "n": 11,
+    "title": "Using Automatic Wait List Notifications",
+    "publisher": "Jane App Guide",
+    "url": "https://jane.app/guide/using-automatic-wait-list-notifications",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Triggered by a cancellation, deletion or move; buffer of 15 minutes if the slot is within 24 hours, 2 hours if later; exclusive access period for notified clients; Thrive or Legacy plans only. No page date."
+  },
+  {
+    "n": 12,
+    "title": "US Insurance Billing Training (category)",
+    "publisher": "Jane App Guide",
+    "url": "https://jane.app/guide/category/us-insurance-billing-training",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps from adding insurers and CPT rates, codes on visits, claim submission folders and EDI submission, rejections, posting insurer responses and EOBs, resubmissions, to the accounts receivable report."
+  },
+  {
+    "n": 13,
+    "title": "Understanding costs in advance: good faith estimates",
+    "publisher": "Centers for Medicare and Medicaid Services",
+    "url": "https://www.cms.gov/medical-bill-rights/help/guides/good-faith-estimate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page modified 5 Oct 2026. Uninsured or self-pay patients get an estimate; booked 3 to 9 business days ahead: within 1 business day; 10 or more: within 3 business days; on request: within 3 business days; each provider or facility gives its own."
+  },
+  {
+    "n": 14,
+    "title": "45 CFR 164.502: Uses and disclosures of protected health information, general rules",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/45/164.502",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the official HHS and eCFR pages block automated reading (HTTP 403 or a redirect to an unblock page), so this copy is used instead. Minimum necessary standard and its exceptions (treatment disclosures to a provider, disclosures to the individual, authorisations, required by law); disclosure to a business associate needs documented satisfactory assurance in a written contract."
+  },
+  {
+    "n": 15,
+    "title": "45 CFR 164.524: Access of individuals to protected health information",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/45/164.524",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the official HHS and eCFR pages block automated reading (HTTP 403 or a redirect to an unblock page), so this copy is used instead. Act on an access request within 30 days, one extension of up to 30 days with a written reason given within the first 30 days; reasonable cost-based fee limited to labour, supplies, postage and an agreed summary."
+  },
+  {
+    "n": 16,
+    "title": "45 CFR 164.404: Notification to individuals",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/45/164.404",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the official HHS and eCFR pages block automated reading (HTTP 403 or a redirect to an unblock page), so this copy is used instead. Breach notice without unreasonable delay and no later than 60 calendar days after discovery; discovery is the first day known or that would have been known with reasonable diligence; five content items; plain language."
+  },
+  {
+    "n": 17,
+    "title": "45 CFR 164.530: Administrative requirements",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/45/164.530",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the official HHS and eCFR pages block automated reading (HTTP 403 or a redirect to an unblock page), so this copy is used instead. Privacy official and contact person; training of workforce, new members within a reasonable period and after material changes; safeguards; complaints process with records; sanctions; policies; documentation kept six years."
+  },
+  {
+    "n": 18,
+    "title": "45 CFR 164.308: Administrative safeguards",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/45/164.308",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the official HHS and eCFR pages block automated reading (HTTP 403 or a redirect to an unblock page), so this copy is used instead. Security management process: risk analysis, risk management, sanction policy and information system activity review; security awareness training including password management and log-in monitoring."
+  },
+  {
+    "n": 19,
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read in parts). Art 9(1) health is special category; 9(2)(h) and 9(3) health care under professional secrecy; Art 12(3) one month, extendable by two months with notice in the first month; Art 28(3) processor contract; Art 33(1) 72 hours to the supervisory authority; Art 34 tell people when high risk; Art 35(3)(b) DPIA for large-scale special category data."
+  },
+  {
+    "n": 20,
+    "title": "Data (Use and Access) Act 2025 factsheet: UK GDPR and DPA",
+    "publisher": "Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-uk-gdpr-and-dpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 27 Jun 2025. Subject access: the clock can stop while the controller seeks clarification; searches must be reasonable and proportionate; Section 72 amends UK GDPR Articles 9(2)(g) and 9(5). Factsheet only, not legal advice."
+  },
+  {
+    "n": 21,
+    "title": "Data (Use and Access) Act 2025: plans for commencement",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most Part 5 data protection provisions in force 5 Feb 2026; the duty for controllers to handle data protection complaints was expected about 12 months after Royal Assent (19 Jun 2025), with no commencement regulation listed when checked."
+  },
+  {
+    "n": 22,
+    "title": "About us",
+    "publisher": "Care Quality Commission",
+    "url": "https://www.cqc.org.uk/about-us",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CQC is the independent regulator of health and adult social care in England: registers providers, monitors, inspects and rates services, takes action. Its regulation and guidance pages returned HTTP 403 to automated reading on 6 Nov 2026."
+  },
+  {
+    "n": 23,
+    "title": "Data Security and Protection Toolkit",
+    "publisher": "NHS England",
+    "url": "https://www.dsptoolkit.nhs.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Self-assessment against the National Data Guardian standards; all organisations with access to NHS patient data and systems must use it; 2026-27 version 9 outcomes, assertions and evidence items published 2 Oct 2026."
+  },
+  {
+    "n": 24,
+    "title": "Standards for the dental team",
+    "publisher": "General Dental Council",
+    "url": "https://www.gdc-uk.org/standards-guidance/standards-and-guidance/standards-for-the-dental-team",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Documents effective from 30 Sep 2013 (PDF updated 28 Jun 2019); requirement 6.6.11 asks managers to display GDC registration and the nine principles where patients can see them."
+  },
+  {
+    "n": 25,
+    "title": "Veterinary services market for pets review (case page)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/cma-cases/veterinary-services-market-for-pets-review",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 15 Oct 2026. Final report 24 Mar 2026; Order and RCVS undertakings published 22 Sep 2026; case closed 22 Sep 2026; first phase for larger businesses from 23 Dec 2026; smaller businesses get longer."
+  },
+  {
+    "n": 26,
+    "title": "Small veterinary businesses: complying with the CMA's Order",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/small-veterinary-businesses-complying-with-the-cmas-order",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 13 Oct 2026, updated 15 Oct 2026. Businesses with 14 or fewer practices; price list (36 Schedule 1 services); written estimate at 500 pounds incl. VAT with 20% still to come; re-estimate at 20% or 500 pounds rise; prescription fee caps 21.40 and 12.70 pounds incl. VAT to 31 Mar 2028; complaints 10 working days, 5 working days, 8 weeks; RCVS details by 30 Nov 2026; deadline table (after 22 Mar 2027 and 22 Sep 2027); report non-compliance within 14 days."
+  },
+  {
+    "n": 27,
+    "title": "CMA concludes market investigation with major reforms to veterinary sector",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/cma-concludes-market-investigation-with-major-reforms-to-veterinary-sector",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Press notice for the final report, 24 Mar 2026. Fewer than 40% of practices publish prices online; 29% of owners given non-routine price information got it in writing; six large groups named (CVS, IVC, Linnaeus, Medivet, Pets at Home, VetPartners); fee caps then stated as 21 and 12.50 pounds."
+  },
+  {
+    "n": 28,
+    "title": "Rest breaks at work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/rest-breaks-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. One uninterrupted 20-minute break when working more than 6 hours; 11 hours rest between working days; 24 hours a week or 48 hours a fortnight; contracts may give more."
+  },
+  {
+    "n": 29,
+    "title": "Overtime Pay",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/overtime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Non-exempt employees get at least 1.5 times the regular rate for hours over 40 in a workweek; workweek is a fixed 168-hour period; no averaging across weeks; no extra federal pay for weekends as such. No page date."
+  }
+]

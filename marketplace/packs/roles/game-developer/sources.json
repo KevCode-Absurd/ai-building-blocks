@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Unity 6",
+    "publisher": "Unity Technologies",
+    "url": "https://unity.com/releases/unity-6",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unity 6.3 LTS supported until December 2027 and Unity 6.0 LTS through October 2026, each with an extra year for Enterprise and Industry; Unity 6.2 named as a Supported Update release; no runtime fee for games made with Unity 6."
+  },
+  {
+    "n": 2,
+    "title": "Pricing updates",
+    "publisher": "Unity Technologies",
+    "url": "https://unity.com/products/pricing-updates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Runtime Fee cancelled on 12 September 2024; Unity Personal for up to $200,000 in revenue and funding from 17 October 2024 with Unity 6; splash screen optional with Unity 6 Personal; Pro required above $200,000 from 1 January 2025; price rise for Pro and Enterprise from 12 January 2026 (price figures not used)."
+  },
+  {
+    "n": 3,
+    "title": "Fixed updates",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/scripting/managing-time-and-frame-rate/fixed-updates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (redirected from docs.unity3d.com; the current manual is Unity 6.6, 6000.6). Fixed timestep set in Time.fixedDeltaTime or the Time window; physics runs at a fixed interval; with a 0.02 timestep at about 128 fps each frame has one fixed update or none; with 0.01 at about 38 to 40 fps there are two or three per frame; FixedUpdate is for physics code such as forces; a lower timestep costs more CPU; a maximum timestep limits catch-up."
+  },
+  {
+    "n": 4,
+    "title": "Event function execution order",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/scripting/managing-update-order/execution-order",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Physics step runs directly after FixedUpdate in the default simulation mode; WaitForFixedUpdate resumes at the end of the fixed step and WaitForEndOfFrame at the end of the frame; order of the same event across GameObjects is not guaranteed, so use Script Execution Order; the Built-in Render Pipeline is deprecated and supported through Unity 6.7 LTS."
+  },
+  {
+    "n": 5,
+    "title": "Event functions",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/scripting/managing-update-order/event-functions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. All Awake calls finish before the first Start; Update runs before rendering and animation; FixedUpdate runs just before each physics update and gives more accurate physics; LateUpdate runs after all Update and FixedUpdate calls and animation, for cameras; OnMouse callbacks need the legacy Input Manager, which is no longer recommended; OnGUI is legacy."
+  },
+  {
+    "n": 6,
+    "title": "Rigidbody interpolation",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/physics-section/physics-overview/rigidbody/rigidbody-interpolation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jitter appears when physics updates run slower than the frame rate, most visibly on a body the camera follows; Interpolate (one physics step of lag) and Extrapolate (can overshoot); default None; use only if jitter shows; with either on, direct transform changes need Physics.SyncTransforms."
+  },
+  {
+    "n": 7,
+    "title": "Continuous collision detection",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/physics-section/physics-overview/collision-section/collision-detection/continuous",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CCD predicts collisions between physics steps as a safety net for colliders passing through each other; more accurate but costlier than discrete; Continuous, Continuous Dynamic (sweep-based) and Continuous Speculative; supports Box, Sphere and Capsule colliders; not always physically accurate."
+  },
+  {
+    "n": 8,
+    "title": "ScriptableObject",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/scripting/get-started/fundamental-unity-types/class-scriptable-object",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ScriptableObjects are data assets, not components; share data between objects to avoid copies; CreateAssetMenu attribute; script edits in Edit mode need EditorUtility.SetDirty to persist; in a standalone Player saved data can only be read from the assets."
+  },
+  {
+    "n": 9,
+    "title": "Application.persistentDataPath",
+    "publisher": "Unity Scripting Reference (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/script-reference/unityengine/application/persistentdatapath",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A directory for data kept between runs; example paths per platform; desktop paths include company and product name, so renaming moves saves; mobile path includes a GUID from the bundle identifier, so keep it the same across updates; files on iOS and Android are not erased by app updates; the page lists 6000.3 as the LTS."
+  },
+  {
+    "n": 10,
+    "title": "Smart merge",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/get-started/project-configuration/version-control/smart-merge",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UnityYAMLMerge merges .unity, .prefab and .meta files semantically; needed when two people change the same scene or prefab in parallel; Git configuration through a merge tool entry; tool locations per operating system; merge rules file."
+  },
+  {
+    "n": 11,
+    "title": "Test Framework (core package)",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/packages-list/packages-all/pack-core/com-unity-test-framework",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Test framework for running Edit mode and Play mode tests; core packages are fixed to a single version matching the Editor version."
+  },
+  {
+    "n": 12,
+    "title": "Input System (package)",
+    "publisher": "Unity Manual (Unity 6.6)",
+    "url": "https://docs.unity.com/en-us/engine/current/manual/packages-list/packages-all/pack-safe/com-unity-inputsystem",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A more extensible and customisable alternative to the classic UnityEngine.Input system; package version 1.20.1 released for Unity 6000.6."
+  },
+  {
+    "n": 13,
+    "title": "Idle and physics processing",
+    "publisher": "Godot Engine documentation (4.7 stable)",
+    "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/idle_and_physics_processing.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stable docs are for Godot 4.7; _process runs every drawn frame and varies with frame rate; _physics_process runs before each physics step, 60 times per second by default (Project Settings, Physics, Common, Physics Fps); multiply by delta; physics-body movement goes in _physics_process."
+  },
+  {
+    "n": 14,
+    "title": "License",
+    "publisher": "Godot Engine",
+    "url": "https://godotengine.org/license/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Godot is MIT licensed; you own your games; shipping the engine with a game counts as redistribution and needs the copyright notice and licence text, for example in the credits; third-party parts listed in COPYRIGHT.txt."
+  },
+  {
+    "n": 15,
+    "title": "Actor ticking in Unreal Engine",
+    "publisher": "Epic Games Developer documentation (Unreal Engine 5.8)",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/actor-ticking-in-unreal-engine",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page is for Unreal Engine 5.8; tick groups TG_PrePhysics, TG_DuringPhysics, TG_PostPhysics and TG_PostUpdateWork in order; bCanEverTick in the constructor; SetActorTickEnabled at runtime; tick prerequisites; actors tick once per frame unless a minimum interval is set."
+  },
+  {
+    "n": 16,
+    "title": "Steam Direct fee",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. $100 USD (or equivalent) per new app, not refundable but recoupable once the product reaches $1,000 adjusted gross revenue; paid during onboarding by a user with Admin permissions."
+  },
+  {
+    "n": 17,
+    "title": "Review process",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/store/review_process",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Store page and build are each reviewed before release, typically in 3 to 5 business days; submit at least 7 business days ahead; screenshots must show gameplay; the build must start on every listed operating system and include every listed feature; in-game transactions must use Steam Wallet; approval is a one-time step."
+  },
+  {
+    "n": 18,
+    "title": "Coming Soon",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/store/coming_soon",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. New products need a Coming Soon page live at least two weeks before release; review request at least 7 business days before the page should go live; wishlisters get an email at release; the page activates the Community Hub."
+  },
+  {
+    "n": 19,
+    "title": "Content Survey",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/gettingstarted/contentsurvey",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The survey is completed before store page and build review; General Content answers generate regional ratings shown on the store page; official ratings can be entered separately; mature content disclosure; Generative AI section covers pre-generated and live-generated content, with guardrails needed for live generation; locked answers change only through Steam Support."
+  },
+  {
+    "n": 20,
+    "title": "Uploading to Steam",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/sdk/uploading",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SteamPipe ContentBuilder and steamcmd run_app_build; Preview builds output only logs; a dedicated build account with Edit App Metadata and Publish App Changes To Steam permissions; SetLive can set a beta branch live but the default branch can't be set live automatically; setting a build live on a released app needs a phone number or the Steam Mobile App, and a 3-day wait after security changes."
+  },
+  {
+    "n": 21,
+    "title": "Steam Cloud",
+    "publisher": "Steamworks Documentation, Valve",
+    "url": "https://partner.steamgames.com/doc/features/cloud",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steam Cloud API versus Steam Auto-Cloud; per-user, per-game byte and file quotas you set; 100 MB per write call; smaller files work better; split state by how often it changes; avoid machine-specific settings; make paths unique per user; default cross-platform setting recommended; test with developer-only cloud support."
+  },
+  {
+    "n": 22,
+    "title": "Participating storefronts",
+    "publisher": "International Age Rating Coalition (IARC)",
+    "url": "https://globalratings.com/storefronts/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Storefronts listed: Epic Games, Facebook Gaming, Fortnite, Google Play, Luna, Meta Horizon, Microsoft, Nintendo, One Store, Pico, Sony PlayStation and YouTube Playables; regional ratings shown include ACB, ClassInd, ESRB, PEGI, USK and others. Steam and the Apple App Store are not listed."
+  },
+  {
+    "n": 23,
+    "title": "Content ratings",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9898843",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Every app needs an IARC content rating from the Play Console questionnaire; apps without one are removed; retake the questionnaire when content or features change the answers; misrepresentation can mean removal or suspension; ads must not be much more mature than the app; appeals go to the rating authority."
+  },
+  {
+    "n": 24,
+    "title": "What do the labels mean?",
+    "publisher": "PEGI",
+    "url": "https://pegi.info/what-do-the-labels-mean",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PEGI 3, 7, 12, 16 and 18 and content descriptors; the In-game purchases descriptor and the paid random items notice; since June 2026, games with paid random items are rated PEGI 16 (PEGI 18 for social casino), time-limited offers PEGI 12 (PEGI 7 with spending off by default in parental controls), pressure-to-play rewards PEGI 7 or 12, unrestricted communication PEGI 18; NFTs required to play PEGI 18."
+  },
+  {
+    "n": 25,
+    "title": "Ratings guide",
+    "publisher": "Entertainment Software Rating Board (ESRB)",
+    "url": "https://www.esrb.org/ratings-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Categories E, E10+, T, M, AO and RP; content descriptors; interactive elements including In-Game Purchases and In-Game Purchases (Includes Random Items), which covers purchases with real money or with in-game currency bought with real money; interactive elements don't affect the rating."
+  },
+  {
+    "n": 26,
+    "title": "App Review Guidelines",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/review/guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Last Updated 16 October 2026). 3.1.1: apps offering loot boxes or other paid randomised virtual items must disclose the odds of each item type before purchase."
+  },
+  {
+    "n": 27,
+    "title": "Payments (Monetization and Ads policy)",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9858738",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 7: apps and games offering randomised virtual items from a purchase, including loot boxes, must clearly disclose the odds in advance of and close to the purchase; Google Play billing for digital goods with listed exceptions; virtual currency only usable in the app or game it was bought for."
+  },
+  {
+    "n": 28,
+    "title": "Government response to the call for evidence on loot boxes in video games",
+    "publisher": "UK Department for Digital, Culture, Media and Sport",
+    "url": "https://www.gov.uk/government/consultations/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 18 July 2022; no change to the Gambling Act 2005 at that time; industry-led protections preferred, including that under-18s should not buy loot boxes unless a parent or guardian enables it, better age assurance, spending controls and transparent information; research found an association with harms but no proven causal link."
+  },
+  {
+    "n": 29,
+    "title": "MEPs call for better protection of gamers and their data",
+    "publisher": "European Parliament",
+    "url": "https://www.europarl.europa.eu/news/en/press-room/20230113IPR66646/meps-call-for-better-protection-of-gamers-and-their-data",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Report adopted 18 January 2023 by 577 votes to 56 with 15 abstentions; calls for parental tools, clearer labelling of in-game purchase policies possibly modelled on PEGI (used in 38 countries), protection of minors from prompts to make in-game purchases, and design that avoids feeding addiction."
+  },
+  {
+    "n": 30,
+    "title": "Fortnite Video Game Maker Epic Games to Pay More Than Half a Billion Dollars over FTC Allegations",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/12/fortnite-video-game-maker-epic-games-pay-more-half-billion-dollars-over-ftc-allegations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 19 December 2022: $275 million COPPA penalty and $245 million refunds; alleged dark patterns in button layout causing unwanted purchases; children could buy currency without consent until 2018; voice and text chat on by default; order bars charging without affirmative consent."
+  }
+]

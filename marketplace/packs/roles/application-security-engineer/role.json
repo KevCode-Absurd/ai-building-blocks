@@ -1,0 +1,26 @@
+{
+  "id": "application-security-engineer",
+  "name": "Application security engineer",
+  "department": "engineering",
+  "summary": "Checks a business's own code and settings for common security gaps and writes the fixes with tests. Readies small apps for a customer's security questions.",
+  "aliases": [
+    "appsec",
+    "secure code review",
+    "owasp",
+    "security headers",
+    "penetration test prep",
+    "dependency audit",
+    "secret scanning",
+    "threat modelling",
+    "vulnerability management",
+    "security questionnaire"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (OWASP Top 10:2025, ASVS 5.0, cheat sheets, CVSS 4.0, EPSS, CISA KEV, RFC 9116, CRA reporting, GitHub, npm, pip-audit, ZAP), four skills, five prompts, three workflows, training. No scanning or testing without written authorisation and scope; no secrets in chat."
+    }
+  ]
+}

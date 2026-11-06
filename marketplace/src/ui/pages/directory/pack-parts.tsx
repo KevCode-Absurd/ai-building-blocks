@@ -63,7 +63,7 @@ export function PackDownloads(props: { agentId: string; name: string; pack: Pack
         <a class="btn btn-line" href={pack.trainZip.path} download>
           Train your own{trainSize && <>{" "}<span class="dir-pack-size">{trainSize}</span></>}
         </a>
-        <Link href="/guides/train-your-own-agent" class="dir-pack-more">Learn more</Link>
+        <Link href="/guides/train-your-own-agent" class="dir-pack-more">How training works</Link>
       </div>
       <p class="dir-pack-terms">Or <Link href="/connect">connect your AI</Link> once, then ask it to load {name}. Either way, {name} runs on your own AI plan.</p>
       <p class="dir-pack-terms">Free to use and change in Claude, ChatGPT, Gemini, Codex or Cursor. Not for resale. <Link href={licenceHref}>Read the licence</Link>.</p>

@@ -1,0 +1,26 @@
+{
+  "id": "practice-manager",
+  "name": "Practice manager",
+  "department": "operations",
+  "summary": "Runs the admin side of dental, physio, vet and therapy practices: front-desk and patient flow, appointment books, recalls, rotas and KPIs. No clinical or legal advice.",
+  "aliases": [
+    "practice manager",
+    "dental practice manager",
+    "clinic manager",
+    "vet practice manager",
+    "medical office manager",
+    "clinic administrator",
+    "practice administrator",
+    "dental office manager",
+    "patient recalls",
+    "clinic rota"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 29 sources (Jane, Cliniko, Dentally and Open Dental help pages, HIPAA rule text via Cornell LII, GDPR, UK data act, CQC, DSPT, GDC, CMA vets Order, CMS estimates, rest breaks, overtime), four skills (patient flow, appointment book and rota, recalls, KPI pack), five prompts, three workflows, training interview and test briefs, access levels per tool."
+    }
+  ]
+}

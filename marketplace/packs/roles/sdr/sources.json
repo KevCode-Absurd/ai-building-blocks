@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "No exception for business-to-business email; accurate headers; subject lines that match the content; clear notice that the message is an ad; a valid physical postal address; a clear opt-out; opt-outs honoured within 10 business days and the opt-out working for at least 30 days after sending; no fee or extra details to opt out; the company promoted stays liable when it hires a sender; penalties up to $53,088 per email. Guide dated August 2023, edited January 2024. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "Complying with the Telemarketing Sales Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/complying-telemarketing-sales-rule",
+    "checked": "2026-11-06",
+    "supports": "Most business-to-business calls are exempt, except calls selling nondurable office or cleaning supplies and calls asking employees to buy for their own use; calls to homes only between 8 a.m. and 9 p.m. local time without consent; scrub against the National Registry at least every 31 days; abandoned call safe harbor (connect within two seconds of the greeting, no more than three percent abandoned per campaign or 30 days, ring 15 seconds or four rings); caller ID must be sent; records kept for two years. Opened with WebFetch (read in two parts)."
+  },
+  {
+    "n": 3,
+    "title": "Q&A for Telemarketers & Sellers About DNC Provisions in TSR",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/qa-telemarketers-sellers-about-dnc-provisions-tsr",
+    "checked": "2026-11-06",
+    "supports": "Most calls soliciting sales to businesses are exempt from the Do Not Call provisions; lists synchronised with the registry at least every 31 days; company-specific do-not-call requests must be honoured, with fines up to $53,088 per call; established business relationship lasts 18 months after a purchase and three months after an inquiry; data for up to five area codes free, fees per extra area code from 1 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "FCC Makes AI-Generated Voices in Robocalls Illegal (news release)",
+    "publisher": "US Federal Communications Commission",
+    "url": "https://docs.fcc.gov/public/attachments/DOC-400393A1.txt",
+    "checked": "2026-11-06",
+    "supports": "8 February 2024: unanimous Declaratory Ruling that AI-generated voices in calls are 'artificial' under the TCPA, effective immediately; telemarketers need prior express written consent before robocalls, and the same applies to AI voices. Opened with WebFetch (fcc.gov web pages block fetches; this is the FCC's own text file of the release)."
+  },
+  {
+    "n": 5,
+    "title": "Business-to-business marketing (Guide to PECR)",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/",
+    "checked": "2026-11-06",
+    "supports": "Corporate subscribers (companies, LLPs, Scottish partnerships, some government bodies) can be sent marketing emails and texts without consent; sole traders and some partnerships count as individual subscribers and need consent or the soft opt-in; the ICO advises honouring a company's opt-out; live calls to numbers on the TPS or CTPS need specific consent, so screen both; automated calls need consent. ico.org.uk blocks automated fetches; confirmed by a WebSearch result showing this exact page."
+  },
+  {
+    "n": 6,
+    "title": "How do we comply with the rules on live marketing calls?",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-live-calls/how-do-we-comply-with-the-rules-on-live-marketing-calls/",
+    "checked": "2026-11-06",
+    "supports": "The ICO's guidance page on live marketing calls under PECR, including screening against the TPS and CTPS and keeping your own do-not-call list. ico.org.uk blocks automated fetches; confirmed by a WebSearch result showing this exact page."
+  },
+  {
+    "n": 7,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Published 27 June 2025: calls and communications now count whether or not they reach the recipient, so an infringement can happen even if a call does not connect; soft opt-in extended to charities; changes commence in stages with dates set in commencement regulations. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Data (Use and Access) Act factsheet: Information Commissioner's Office",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-ico",
+    "checked": "2026-11-06",
+    "supports": "The Act aligns PECR enforcement sanctions (powers and fines) with the Data Protection Act 2018. No fine figures on the page. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Directive 2002/58/EC (ePrivacy Directive), consolidated text of 19 December 2009",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2002/58/2009-12-19/eng",
+    "checked": "2026-11-06",
+    "supports": "Article 13: automated calling, fax and email marketing need the prior consent of subscribers or users; soft opt-in for a company's own similar products with a free, easy objection in every message; for other unsolicited marketing each member state chooses consent or opt-out; protection of legal persons (companies) left to national law. EUR-Lex returns empty pages to automated fetches; confirmed by a WebSearch result showing this exact page."
+  },
+  {
+    "n": 10,
+    "title": "Can data received from a third party be used for marketing?",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/can-data-received-third-party-be-used-marketing_en",
+    "checked": "2026-11-06",
+    "supports": "A company receiving a contact list must be able to show the data was obtained in line with the GDPR and may be used for advertising; keep the list up to date; never send ads to people who objected; tell people at the latest at first contact that you hold their data; individuals have a right to object; email marketing must also follow the ePrivacy Directive. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Email sender guidelines",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://support.google.com/a/answer/81126",
+    "checked": "2026-11-06",
+    "supports": "From 1 February 2024 all senders to Gmail need SPF or DKIM, valid forward and reverse DNS, TLS and a spam rate below 0.3% in Postmaster Tools; senders of 5,000 or more messages a day also need SPF, DKIM and DMARC, From-domain alignment and one-click unsubscribe (List-Unsubscribe and List-Unsubscribe-Post headers) plus a visible unsubscribe link; aim to stay below 0.1%. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Sender Best Practices",
+    "publisher": "Yahoo Sender Hub",
+    "url": "https://senders.yahooinc.com/best-practices/",
+    "checked": "2026-11-06",
+    "supports": "Standards in force from February 2024: all senders authenticate with SPF or DKIM and keep complaints under 0.3%; bulk senders use SPF and DKIM, publish DMARC (at least p=none), support one-click unsubscribe and honour unsubscribes within 2 days. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "Strengthening Email Ecosystem: Outlook's New Requirements for High-Volume Senders",
+    "publisher": "Microsoft Defender for Office 365 Blog (Microsoft Tech Community)",
+    "url": "https://techcommunity.microsoft.com/blog/microsoft-defender-for-office-365-blog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730",
+    "checked": "2026-11-06",
+    "supports": "Domains sending more than 5,000 emails a day to Outlook.com, Hotmail and Live addresses must pass SPF and DKIM and publish an aligned DMARC policy (at least p=none); from 5 May 2025 non-compliant mail goes to Junk, with rejection to follow later; working unsubscribe links recommended. Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "RFC 8058: Signaling One-Click Functionality for List Email Headers",
+    "publisher": "RFC Editor (IETF)",
+    "url": "https://www.rfc-editor.org/rfc/rfc8058",
+    "checked": "2026-11-06",
+    "supports": "January 2017 standard for one-click unsubscribe: a List-Unsubscribe header with an HTTPS link plus List-Unsubscribe-Post: List-Unsubscribe=One-Click, both covered by a valid DKIM signature. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Prohibited software and extensions",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a1341387",
+    "checked": "2026-11-06",
+    "supports": "LinkedIn does not permit third-party software, bots or browser extensions that scrape, change how the site looks or automate activity; accounts using them may be restricted or shut down. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "User Agreement",
+    "publisher": "LinkedIn",
+    "url": "https://www.linkedin.com/legal/user-agreement",
+    "checked": "2026-11-06",
+    "supports": "Effective 3 November 2025. Section 8.2 bans scraping or copying profiles and data, bots or unauthorised automated access, automation to add or download contacts, automated sending of messages, sharing logins and bypassing use limits. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "The Short Life of Online Sales Leads (Oldroyd, McElheran and Elkington, Harvard Business Review, March 2011)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+    "checked": "2026-11-06",
+    "supports": "Most companies do not respond to online sales enquiries nearly fast enough; among companies that responded within 30 days, the average response took 42 hours; a related study covered 1.25 million leads at 29 B2C and 13 B2B companies. Introduction opened with WebFetch; the 42-hour figure and study size confirmed by a WebSearch result showing this page."
+  },
+  {
+    "n": 18,
+    "title": "SPIN Selling",
+    "publisher": "Huthwaite International",
+    "url": "https://www.huthwaiteinternational.com/spin-selling",
+    "checked": "2026-11-06",
+    "supports": "SPIN Selling is built on observation of more than 35,000 business-to-business sales interactions and moves sellers from persuading to helping buyers find their own needs. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Fanatical Prospecting",
+    "publisher": "Sales Gravy (Jeb Blount)",
+    "url": "https://www.salesgravy.com/fanatical-prospecting/",
+    "checked": "2026-11-06",
+    "supports": "Jeb Blount's premise that the number one reason for failure in sales is an empty pipeline; consistent prospecting habits; prospecting across phone, email, video, text, LinkedIn and in person; time and pipeline discipline. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Essential cold calling tips: 17 proven techniques for success",
+    "publisher": "Gong (vendor blog)",
+    "url": "https://www.gong.io/blog/cold-calling-tips/",
+    "checked": "2026-11-06",
+    "supports": "Vendor analysis of recorded cold calls (published May 2018, last modified 4 March 2026; the analysis itself is undated and gives 100,000+ and 90,380 calls in different places): stating the reason for the call raised success 2.1 times; 'Did I catch you at a bad time?' had a 0.9% success rate and made booking 40% less likely; successful calls were almost twice as long; prospect monologues averaged 3.5 seconds on successful calls against 8 seconds on unsuccessful ones. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "SDR Metrics & Compensation Report (2025)",
+    "publisher": "The Bridge Group",
+    "url": "https://blog.bridgegroupinc.com/sdr-metrics-report",
+    "checked": "2026-11-06",
+    "supports": "The Bridge Group's 10th biennial study of the SDR role, data collected in 2025 from 351 B2B companies, covering ramp and retention, metrics and quota, and compensation; detailed figures are in the full report, not on the page. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "State of Sales report",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/resources/research-reports/state-of-sales/",
+    "checked": "2026-11-06",
+    "supports": "Nine in 10 sales teams use AI agents or expect to within two years. The page does not state the edition year or sample size. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Understand the lead scoring tool",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool",
+    "checked": "2026-11-06",
+    "supports": "Page dated 2 September 2026: engagement, fit and combined scores; point rules that add or subtract; score limits and score decay; combined labels A1 to C3 (letter for fit, number for engagement); Professional or Enterprise subscriptions; AI-built scores need Marketing Hub Enterprise and at least 50 contacts (25 converted, 25 not). Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "HubSpot's remote MCP server gives MCP-compatible AI tools access to CRM data, with read and write access to contacts, companies, deals and engagements (calls, emails, meetings, notes, tasks) and read-only access to users, owners and campaigns. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "Find and update company information (search the register)",
+    "publisher": "Companies House, GOV.UK",
+    "url": "https://find-and-update.company-information.service.gov.uk/",
+    "checked": "2026-11-06",
+    "supports": "Search UK companies by name or number, search officers and disqualified directors, and view company data and document images. Opened with WebFetch."
+  },
+  {
+    "n": 26,
+    "title": "EDGAR Full Text Search",
+    "publisher": "US Securities and Exchange Commission",
+    "url": "https://www.sec.gov/edgar/search/",
+    "checked": "2026-11-06",
+    "supports": "Full-text search of electronic filings since 2001, by words, company, ticker, filing type, date and location, with CSV export. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Claude's Gmail, Calendar and Drive connectors can search and read email, draft, send, reply and forward, and create calendar events; sending, replying and forwarding ask for approval by default, and Team and Enterprise owners decide whether members can turn that off. Opened with WebFetch."
+  }
+]

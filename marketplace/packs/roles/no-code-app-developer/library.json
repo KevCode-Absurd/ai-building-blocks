@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "threat-list-maker",
+    "name": "Threat list maker",
+    "why": "Ranks the likeliest attacks on an app before the roles and privacy rules are set."
+  },
+  {
+    "slug": "prepare-new-data-use-review-for-signoff",
+    "name": "Prepare a new data use for review",
+    "why": "Runs a privacy assessment of a new use of customer data before a portal goes live."
+  },
+  {
+    "slug": "quarterly-compliance-readiness-keeper",
+    "name": "Quarterly compliance readiness keeper",
+    "why": "Tracks GDPR readiness gaps each quarter, alongside the monthly access and usage review."
+  },
+  {
+    "slug": "check-a-prototype-before-user-testing",
+    "name": "Check a prototype before user testing",
+    "why": "Finds test blockers and neutral task wording before the client tries the test version."
+  },
+  {
+    "slug": "small-usability-test-planner",
+    "name": "Small usability test planner",
+    "why": "Plans a short test with real staff or clients on the test version before launch."
+  },
+  {
+    "slug": "error-message-rewriter",
+    "name": "Error message rewriter",
+    "why": "Rewrites error states in plain words, for the error state on every page card."
+  },
+  {
+    "slug": "design-handoff-completeness-assistant",
+    "name": "Design handoff completeness assistant",
+    "why": "Finds missing states and variants before a builder starts, like the page spec's empty, loading and error checks."
+  },
+  {
+    "slug": "mvp-experiment-planner",
+    "name": "MVP experiment planner",
+    "why": "Plans the smallest test of an app idea before a full build."
+  },
+  {
+    "slug": "check-a-spreadsheet-before-sharing-the-results",
+    "name": "Check a spreadsheet before sharing the results",
+    "why": "Finds broken formulas and wrong totals in a sheet before it becomes an app's data source."
+  },
+  {
+    "slug": "excel-handover-guide-writer",
+    "name": "Excel workbook handover writer",
+    "why": "Writes a handover for a workbook's next owner, useful when a sheet stays part of the app."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a restore test so the backup behind a live data import is proven first."
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Understanding the Trust Equation",
+    "publisher": "Trusted Advisor Associates",
+    "url": "https://trustedadvisor.com/why-trust-matters/understanding-trust/understanding-the-trust-equation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Trust equation: credibility, reliability and intimacy over self-orientation; first appeared in The Trusted Advisor (2000), co-written by Charles H. Green"
+  },
+  {
+    "n": 2,
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. E-E-A-T; trust matters most; YMYL topics (health, financial stability, safety) get more weight; accurate bylines; fabricated creators and false credentials are deception"
+  },
+  {
+    "n": 3,
+    "title": "How consumers are choosing legal services (Tracker Survey 2026)",
+    "publisher": "Legal Services Consumer Panel",
+    "url": "https://www.legalservicesconsumerpanel.org.uk/wp-content/uploads/2026/07/26.07.06-How-consumers-are-choosing-legal-services-report-2026-FINAL.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). 3,802 legal service users in England and Wales, surveyed 23 February to 13 April 2026: 42% shopped around; price (57%) and reputation (52%) most compared; 21% had used the provider before, 18% chose on a recommendation; 91% said a regulated provider was important; 74% found cost information easy to find, 56% found complaints and insurance information easy"
+  },
+  {
+    "n": 4,
+    "title": "Legal services market study",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/cma-cases/legal-services-market-study",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final report 15 December 2016 found competition for individual consumers and small businesses not working well and called for greater transparency"
+  },
+  {
+    "n": 5,
+    "title": "California Rule of Professional Conduct 7.1 and executive summary",
+    "publisher": "The State Bar of California",
+    "url": "https://www.calbar.ca.gov/Portals/0/documents/rules/Rule_7.1-Exec_Summary-Redline.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). Rule effective 1 November 2018: no false or misleading communications; truthful but misleading statements; guarantees of results; past results and testimonials can create unjustified expectations; unsubstantiated comparisons. The summary describes the ABA Model Rules framework (7.1 general, 7.2 advertising, 7.3 direct contact, 7.4 specialisation, 7.5 firm names). Used because americanbar.org blocks automated reading"
+  },
+  {
+    "n": 6,
+    "title": "SRA Code of Conduct for Solicitors, RELs and RFLs",
+    "publisher": "Solicitors Regulation Authority",
+    "url": "https://www.sra.org.uk/solicitors/standards-regulations/code-conduct-solicitors/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Version in effect from 11 April 2025: 8.7 best possible information on pricing; 8.8 publicity accurate and not misleading; 8.9 no unsolicited approaches to members of the public except current or former clients"
+  },
+  {
+    "n": 7,
+    "title": "SRA Transparency Rules",
+    "publisher": "Solicitors Regulation Authority",
+    "url": "https://www.sra.org.uk/solicitors/standards-regulations/transparency-rules/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In effect from 11 April 2025: price information for listed services (e.g. residential conveyancing, uncontested probate, employment tribunal claims, debt recovery); complaints procedure; SRA number and digital badge on the website"
+  },
+  {
+    "n": 8,
+    "title": "Model Code of Conduct for European Lawyers (2021)",
+    "publisher": "Council of Bars and Law Societies of Europe (CCBE)",
+    "url": "https://www.ccbe.eu/fileadmin/speciality_distribution/public/documents/DEONTOLOGY/DEON_CoC/EN_DEONTO_2021_Model_Code.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). Adopted 8 October 2021; a model for member bars, not a uniform enforceable code; the separate CCBE Code of Conduct covers cross-border practice"
+  },
+  {
+    "n": 9,
+    "title": "ICAEW Code of Ethics",
+    "publisher": "ICAEW",
+    "url": "https://www.icaew.com/technical/trust-and-ethics/ethics/code-of-ethics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest version came into force on 1 July 2026; links to the 2026 code"
+  },
+  {
+    "n": 10,
+    "title": "ICAEW Code of Ethics 2026 (PDF)",
+    "publisher": "ICAEW",
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/ethics/code-of-ethics/icaew-code-of-ethics-2026.ashx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). R115.2: marketing must not bring the profession into disrepute; be honest and truthful; no exaggerated claims; no disparaging references or unsubstantiated comparisons; consult the professional body if in doubt. R115.3: no promotion that amounts to harassment"
+  },
+  {
+    "n": 11,
+    "title": "The IESBA Code",
+    "publisher": "International Ethics Standards Board for Accountants",
+    "url": "https://www.ethicsboard.org/iesba-code",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. International code used in more than 130 jurisdictions; five fundamental principles including professional behaviour"
+  },
+  {
+    "n": 12,
+    "title": "2026 Handbook of the International Code of Ethics for Professional Accountants",
+    "publisher": "International Ethics Standards Board for Accountants",
+    "url": "https://www.ethicsboard.org/publications/2026-handbook-international-code-ethics-professional-accountants",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current edition published 24 September 2026; downloads need a sign-in"
+  },
+  {
+    "n": 13,
+    "title": "ACCA Rulebook",
+    "publisher": "ACCA",
+    "url": "https://www.accaglobal.com/gb/en/about-us/regulation/rulebook.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current edition 1 January 2026; includes the Code of Ethics and Conduct"
+  },
+  {
+    "n": 14,
+    "title": "Circular 230 information for tax professionals",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/tax-professionals/circular-230-tax-professionals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rules for practice before the IRS covering attorneys, CPAs and enrolled agents; page reviewed 28 May 2026"
+  },
+  {
+    "n": 15,
+    "title": "Unfair Trade Practices Act (Model 880)",
+    "publisher": "National Association of Insurance Commissioners",
+    "url": "https://content.naic.org/sites/default/files/model-law-880.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). Spring 2024 printing of a model act that states may adopt or modify; bans misrepresenting policy benefits, terms or names and untrue, deceptive or misleading insurance advertising in any medium"
+  },
+  {
+    "n": 16,
+    "title": "Financial promotions and adverts",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/firms/financial-promotions-adverts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. All financial promotions must be clear, fair and not misleading in any media; insurance (home, motor, travel) is covered; links to ICOBS; updated 28 May 2024"
+  },
+  {
+    "n": 17,
+    "title": "FG24/1: Finalised guidance on financial promotions on social media",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/publications/finalised-guidance/fg24-1-finalised-guidance-financial-promotions-social-media",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 26 March 2024; promotions on social media must be fair, clear and not misleading and give a balanced picture; unauthorised people promoting without approval may commit a criminal offence; covers influencers"
+  },
+  {
+    "n": 18,
+    "title": "Consumer Duty",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/firms/consumer-duty",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Duty sets high standards of protection for retail consumers across financial services and asks firms to put customers' needs first"
+  },
+  {
+    "n": 19,
+    "title": "Insurance Distribution Directive (IDD)",
+    "publisher": "European Insurance and Occupational Pensions Authority",
+    "url": "https://www.eiopa.europa.eu/browse/regulation-and-policy/insurance-distribution-directive-idd_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive (EU) 2016/97 regulates how insurance is designed and distributed; pre-contract information including the IPID; conduct and transparency rules; minimum harmonising, so member states may add rules"
+  },
+  {
+    "n": 20,
+    "title": "The Architects Code: Standards of professional conduct and practice",
+    "publisher": "Architects Registration Board",
+    "url": "https://arb.org.uk/architect-information/architects-code-standards-of-conduct-and-practice/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2025 Code is in effect and replaced the 2017 version; Standard 1 is honesty and integrity"
+  },
+  {
+    "n": 21,
+    "title": "The Architects Code of Conduct and Practice 2025 (PDF)",
+    "publisher": "Architects Registration Board",
+    "url": "https://arb.org.uk/wp-content/uploads/The-Architects-Code-of-Conduct-and-Practice.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). Standard 1.2: architects promote their services responsibly and accurately"
+  },
+  {
+    "n": 22,
+    "title": "Who can use the title architect",
+    "publisher": "Architects Registration Board",
+    "url": "https://arb.org.uk/public-information/before-hiring-an-architect/who-can-use-the-title-architect/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Only people on the Architects Register may use the title; anyone may provide architectural services; terms like architectural consultant are not protected; over 42,000 registered architects"
+  },
+  {
+    "n": 23,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guides revised 2023; material connections must be disclosed clearly; a testimonial showing better-than-usual results needs the generally expected results; endorsements must reflect honest experience"
+  },
+  {
+    "n": 24,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In effect from 21 October 2024; bans fake reviews and testimonials, incentives conditioned on positive or negative reviews, undisclosed insider reviews, company-controlled 'independent' review sites and review suppression"
+  },
+  {
+    "n": 25,
+    "title": "Fake engagement policy",
+    "publisher": "Google (Maps user contributed content policy)",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No incentives for reviews; no conflict-of-interest reviews from owners or staff; no discouraging negative reviews or selectively asking for positive ones; asking for genuine reviews without incentives is allowed"
+  },
+  {
+    "n": 26,
+    "title": "The CAP Code (UK Code of Non-broadcast Advertising and Direct and Promotional Marketing)",
+    "publisher": "Advertising Standards Authority and CAP",
+    "url": "https://www.asa.org.uk/codes-and-rulings/advertising-codes/non-broadcast-code.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ASA enforces the code; Section 3 covers misleading advertising, including substantiation, comparisons and testimonials"
+  },
+  {
+    "n": 27,
+    "title": "Influencers' guide to making clear that ads are ads",
+    "publisher": "Advertising Standards Authority and CAP (UK)",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fourth edition dated 23 October 2026, made with the CMA; adds fake reviews and the DMCC Act"
+  },
+  {
+    "n": 28,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CMA guidance on unfair commercial practices under the DMCC Act 2024, published 4 April 2025 and updated 18 November 2025; separate CMA guidance covers fake reviews (CMA208) and price transparency (CMA209)"
+  }
+]

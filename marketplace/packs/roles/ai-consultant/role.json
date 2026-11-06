@@ -1,0 +1,26 @@
+{
+  "id": "ai-consultant",
+  "name": "AI consultant",
+  "department": "data",
+  "summary": "Works out where AI fits in a team's work, which tools to use and what rules keep data safe. Starts with a small, measured pilot.",
+  "aliases": [
+    "ai consultant",
+    "ai adoption",
+    "ai strategy",
+    "ai policy",
+    "ai governance",
+    "ai automation",
+    "ai training",
+    "ai acceptable use policy",
+    "ai readiness",
+    "generative ai advisor"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (EU AI Act after the AI Omnibus, NIST AI RMF, UK guidance and data protection, vendor data-use terms dated 6 Nov 2026, adoption research), four skills (task map and pilot, AI use policy and register, workflow redesign, skills workshop), six prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

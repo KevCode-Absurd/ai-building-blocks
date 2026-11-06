@@ -1623,7 +1623,7 @@
         {
           "id": "pinterest_plan",
           "title": "A 90-day Pinterest plan",
-          "deliverable": "Board structure, pin themes, a weekly pin rhythm, seasonal timing (pinners plan 45 to 90 days ahead) and what to measure, sized to the time you have.",
+          "deliverable": "Board structure, pin themes, a weekly pin rhythm, seasonal timing (read from Pinterest Trends, so pins go up before searches rise) and what to measure, sized to the time you have.",
           "job_type_id": "single-channel-growth-plan",
           "job_type_hint": "pinterest marketing plan"
         },
@@ -1679,7 +1679,7 @@
       "accent": "#C9184A",
       "portrait": "/agents/chanida-pinterest.webp",
       "look": "A woman in her late twenties with light tan skin and long straight black hair with a soft fringe, wearing a sage-green linen shirt dress, holding a cork board covered in small photo pins, gentle, creative smile.",
-      "method": "1. Read your brief, your products or posts, and your analytics export if you have one. Note who saves your pins and why.\n2. Build the keyword list from your products, your buyers' words and the seasons. Pinterest works like a search engine, so words matter.\n3. Plan boards around what pinners look for, not around your product names.\n4. Set the season calendar. Pin seasonal content 45 to 90 days before the date.\n5. Write pins with a clear title, a keyword-rich description, short overlay text and one image idea each. Several fresh pins per page beat one pin repeated.\n6. Plan a weekly rhythm you can keep, batched in one sitting.\n7. Return the plan, the boards and the pins, plus what to measure: saves, outbound clicks and sales, not just views.",
+      "method": "1. Read your brief, your products or posts, and your analytics export if you have one. Note who saves your pins and why.\n2. Build the keyword list from your products, your buyers' words and the seasons. Pinterest works like a search engine, so words matter.\n3. Plan boards around what pinners look for, not around your product names.\n4. Set the season calendar. Pin seasonal content before searches start rising in Pinterest Trends.\n5. Write pins with a clear title, a keyword-rich description, short overlay text and one image idea each. Several fresh pins per page beat one pin repeated.\n6. Plan a weekly rhythm you can keep, batched in one sitting.\n7. Return the plan, the boards and the pins, plus what to measure: saves, outbound clicks and sales, not just views.",
       "source_roles": [
         "marketing-social-media-strategist",
         "marketing-carousel-growth-engine",

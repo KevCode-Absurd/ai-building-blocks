@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "construction-variation-review-assistant",
+    "name": "Construction variation review assistant",
+    "why": "Checks a variation request against the signed contract and prices without approving it, the same stance as the change log in the RFIs and changes skill."
+  },
+  {
+    "slug": "prepare-a-construction-variation-decision",
+    "name": "Prepare a construction variation decision",
+    "why": "A clause map, cost check and decision brief for one variation, for the client's fresh yes in the change and payment workflow."
+  },
+  {
+    "slug": "prepare-a-construction-defects-handover",
+    "name": "Prepare a construction defects handover",
+    "why": "A defects register with owners and closure evidence, for the snagging and handover stage after the programme ends."
+  },
+  {
+    "slug": "weekly-project-delay-evidence-assistant",
+    "name": "Weekly project delay evidence assistant",
+    "why": "A weekly delay trend brief, a useful second look at the delay log before the client report."
+  },
+  {
+    "slug": "trace-why-work-keeps-missing-deadlines",
+    "name": "Trace why work keeps missing deadlines",
+    "why": "Finds repeated causes of slips from records, like reading the reasons for missed look-ahead tasks."
+  },
+  {
+    "slug": "weekly-status-update-writer",
+    "name": "Weekly status update writer",
+    "why": "A one-page done, stuck and needed update, a quick base for the weekly client report."
+  },
+  {
+    "slug": "weekly-meeting-actions-keeper",
+    "name": "Weekly meeting actions keeper",
+    "why": "Minutes and open actions for the weekly site or progress meeting."
+  },
+  {
+    "slug": "supplier-quote-table-builder",
+    "name": "Supplier quote table builder",
+    "why": "Puts two or more supplier quotes in one table, handy for materials alongside the builder quote check."
+  },
+  {
+    "slug": "check-capacity-before-promising-a-delivery-date",
+    "name": "Check capacity before promising a delivery date",
+    "why": "Checks crew capacity and date options before a builder promises a start or finish date."
+  },
+  {
+    "slug": "construction-funding-draw-planner",
+    "name": "Construction funding draw planner",
+    "why": "Plans how build costs are funded across periods, for clients with a construction loan who need the payment timeline."
+  },
+  {
+    "slug": "construction-funding-evidence-reviewer",
+    "name": "Construction funding evidence reviewer",
+    "why": "Rechecks draws and remaining funding when build costs or dates change after a delay."
+  },
+  {
+    "slug": "compare-facilities-service-contract-options",
+    "name": "Compare facilities service contract options",
+    "why": "Side-by-side contractor proposals with plain-words terms, the same method as the quote check, for shop and office owners."
+  }
+]

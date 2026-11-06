@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "Measuring Your Net Promoter Score",
+    "publisher": "Bain & Company (netpromotersystem.com)",
+    "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The likelihood-to-recommend question on a 0 to 10 scale; promoters 9 to 10, passives 7 to 8, detractors 0 to 6; NPS is the percentage of promoters minus the percentage of detractors; can be tracked by product, store, segment, region or team; trademarks held by Bain & Company, NICE Systems and Fred Reichheld. Vendor page; growth claims on it are not used."
+  },
+  {
+    "n": 2,
+    "title": "Three Types of Net Promoter Scores",
+    "publisher": "Bain & Company (netpromotersystem.com)",
+    "url": "https://www.netpromotersystem.com/about/three-types-of-net-promoter-scores/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Competitive benchmark NPS (double-blind, third party), relationship NPS (no trigger, once or twice a year) and experience NPS (triggered by an action, for immediate service recovery); survey a customer no more than once every three months; relationship and experience scores feed closed-loop follow-up; do not compare relationship and experience scores directly."
+  },
+  {
+    "n": 3,
+    "title": "The One Number You Need to Grow (Frederick F. Reichheld, Harvard Business Review, December 2003)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2003/12/the-one-number-you-need-to-grow",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (paywalled; summary and opening only). Author Fred Reichheld of Bain & Company; December 2003; argues companies spend heavily on complex satisfaction measures while measuring the wrong thing."
+  },
+  {
+    "n": 4,
+    "title": "Stop Trying to Delight Your Customers (Matthew Dixon, Karen Freeman and Nick Toman, Harvard Business Review, July-August 2010)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2010/07/stop-trying-to-delight-your-customers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (paywalled; opening only). Authors and issue date; questions the belief that companies must delight customers, noting that customers rarely choose a company because of over-the-top service. The effort argument beyond the opening is not visible on the page and is not cited from it."
+  },
+  {
+    "n": 5,
+    "title": "Net Promoter Score: What a Customer-Relations Metric Can Tell You About Your User Experience (Therese Fessenden, 21 June 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/nps-ux/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. NPS shows how an experience is perceived, not why; scale use differs by culture (net-negative scores in Japan and South Korea even for liked companies); it measures stated intent; binning discards information; small samples are unreliable; weak for detecting small design changes; can be gamed once it becomes a target; pair with behaviour measures and follow-up questions and report a margin of error."
+  },
+  {
+    "n": 6,
+    "title": "Measuring user satisfaction (Service Manual, updated 19 February 2021)",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Collect feedback at the end of the service and at every end point, provide in-service feedback, record where users drop out, measure assisted channels such as phone; include an open question on how to improve; look for statistically significant patterns; combine satisfaction with feedback, drop-out points and analytics; test changes and keep monitoring."
+  },
+  {
+    "n": 7,
+    "title": "UK Customer Satisfaction Index (July 2026)",
+    "publisher": "The Institute of Customer Service",
+    "url": "https://www.instituteofcustomerservice.com/research-insight/uk-customer-satisfaction-index/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. July 2026 UKCSI 78.3 out of 100, up 1 point on a year earlier and 0.1 on January 2026; 59,500 responses from an online panel; banks and building societies highest sector at 82.0; five dimensions (experience, complaints handling, customer ethos, emotional connection, ethics); customers rate experiences from the previous three months."
+  },
+  {
+    "n": 8,
+    "title": "UX Mapping Methods Compared: A Cheat Sheet (Sarah Gibbons, 5 November 2017)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ux-mapping-cheat-sheet/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four mapping methods compared: empathy map (one user type, not sequential), what this kit calls a customer path map (one persona's steps, thoughts and emotions toward a goal with a product or service; the article uses the field's usual name), experience map (general behaviour, product-agnostic) and service blueprint (the provider's people, props and processes behind each touchpoint); combinations are usually most useful."
+  },
+  {
+    "n": 9,
+    "title": "Service Blueprints: Definition (Sarah Gibbons, 27 August 2017, reviewed 15 July 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/service-blueprints-definition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Blueprint lanes: customer actions, frontstage, backstage, supporting processes and evidence; lines of interaction, visibility and internal interaction; optional time, policy, employee emotion and metrics; one blueprint per scenario; best for complex services with many touchpoints or several departments."
+  },
+  {
+    "n": 10,
+    "title": "Service Design 101 (Sarah Gibbons, 9 July 2017)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/service-design-101/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Service design organises people, props and processes; frontstage elements customers see and backstage policies, systems and infrastructure they do not; backstage processes shape the customer experience; information given to one agent should be available to every agent."
+  },
+  {
+    "n": 11,
+    "title": "Designing Services That Deliver (G. Lynn Shostack, Harvard Business Review, January 1984)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/1984/01/designing-services-that-deliver",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (paywalled; opening only). Author was a senior vice president at Bankers Trust; January 1984; opens with everyday service failures such as a laundry returning a shirt with a broken button and an ATM that swallows a card."
+  },
+  {
+    "n": 12,
+    "title": "EAST: Four simple ways to apply behavioural insights (first published 2014, updated 16 December 2024)",
+    "publisher": "The Behavioural Insights Team",
+    "url": "https://www.bi.team/publications/east-four-simple-ways-to-apply-behavioural-insights/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Behaviour change is more likely when the desired behaviour is made Easy, Attractive, Social and Timely; published by BIT (part of Nesta) in 2014 and revised in December 2024."
+  },
+  {
+    "n": 13,
+    "title": "MRS Code of Conduct 2023",
+    "publisher": "Market Research Society (UK)",
+    "url": "https://www.mrs.org.uk/pdf/MRS-code-of-conduct-2023.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PDF text extracted locally. Rule 28 on fit-for-purpose, unbiased data collection; rule 29 requires telling participants about recording, monitoring or observation at recruitment and at the start, and its comment says mystery shopping can only be recorded in own-organisation mystery shopping where staff have been told; points to an MRS guideline on conducting mystery shopping."
+  },
+  {
+    "n": 14,
+    "title": "How to complain (consumers)",
+    "publisher": "Financial Ombudsman Service (UK)",
+    "url": "https://www.financial-ombudsman.org.uk/consumers/how-to-complain",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). Complain to the business first; most complaints allow up to 8 weeks, fraud and scams, payment services and e-money 15 days; bring the complaint to the ombudsman within 6 months of the final response, or when the business runs out of time; the service is free."
+  },
+  {
+    "n": 15,
+    "title": "How to settle complaints (for businesses)",
+    "publisher": "Financial Ombudsman Service (UK)",
+    "url": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). FCA-regulated businesses follow the DISP rules; prompt written acknowledgement, or a summary resolution if settled within 3 business days; a final response summarises the complaint, owns mistakes, gives the decision and reasons, says whether time limits are waived (DISP 1 Annex 3R wording), gives the ombudsman's details and the consumer leaflet, and the six-month referral right; keep the customer informed; consider the Consumer Duty."
+  },
+  {
+    "n": 16,
+    "title": "Time limits for businesses",
+    "publisher": "Financial Ombudsman Service (UK)",
+    "url": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/time-limits-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). 15 days for fraud and scams and for payment services and e-money; 8 weeks for most other complaints; if time runs out, send a final response or explain the delay, give referral rights and the leaflet; consumers usually have 6 years to complain, or 3 years from awareness, and 6 months after a final response; proactive settlement within 14 days of an investigation starting."
+  },
+  {
+    "n": 17,
+    "title": "Consumer Duty",
+    "publisher": "Financial Conduct Authority (UK)",
+    "url": "https://www.fca.org.uk/firms/consumer-duty",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date; latest publication listed 29 October 2026). The Duty sets high standards of protection for retail consumers across financial services and requires firms to put customers' needs first; links to the final rules and recent publications, including one on customers in vulnerable circumstances at payments firms (17 September 2026)."
+  },
+  {
+    "n": 18,
+    "title": "Learn how the complaint process works (last modified 5 October 2026)",
+    "publisher": "Consumer Financial Protection Bureau (US)",
+    "url": "https://www.consumerfinance.gov/complaint/process/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CFPB routes complaints to companies; companies generally respond within 15 days, and in some cases give a final response within 60 days; complaints are published in the public Consumer Complaint Database without directly identifying details; consumers have 60 days to give feedback; complaints are shared with other agencies."
+  },
+  {
+    "n": 19,
+    "title": "Chatbots in consumer finance (6 June 2023, page modified 24 October 2024)",
+    "publisher": "Consumer Financial Protection Bureau (US)",
+    "url": "https://www.consumerfinance.gov/data-research/research-reports/chatbots-in-consumer-finance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Customers expect timely, straightforward answers whatever the technology; firms are likely to shift support toward AI tools; deficient chatbots that prevent access to live, human support can lead to law violations and lower service quality."
+  },
+  {
+    "n": 20,
+    "title": "Alternative dispute resolution for consumers",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/resolve-your-consumer-complaint/alternative-dispute-resolution-consumers_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). ADR settles complaints out of court through impartial bodies (mediation, ombudsmen, arbitration, complaints boards); lists of bodies by country; the Commission proposed on 17 October 2023 to amend the ADR Directive and repeal the ODR Regulation, and a discontinuation document for the ODR platform is dated 19 December 2024."
+  },
+  {
+    "n": 21,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (text based on the consolidated version as at 27 July 2026). Article 50(1): providers must design AI systems that interact directly with people so they are informed they are dealing with an AI, unless obvious to a reasonably well-informed person; 50(3) emotion recognition notice by deployers; 50(5) information at the latest at the first interaction, clear, distinguishable and accessible."
+  },
+  {
+    "n": 22,
+    "title": "Transparency obligations under Article 50 of the AI Act (questions and answers, updated 24 July 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chatbots, AI agents and avatars are examples; four cumulative criteria for direct interaction; the obvious exception is read restrictively; notice from the start of the first interaction; provider and deployer defined; Article 50 applies from 2 August 2026, with a transition to 2 December 2026 only for the marking duty in 50(2)."
+  },
+  {
+    "n": 23,
+    "title": "AI Act, Article 113: Entry into force and application",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The general application date is 2 August 2026; Chapter IV (Article 50) is not among the exceptions, and the amendment tags on the page do not affect it."
+  },
+  {
+    "n": 24,
+    "title": "Complying with consumer law when using AI agents (updated 30 October 2026)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents/complying-with-consumer-law-when-using-ai-agents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Businesses are responsible for what their AI agents do, even if a third party supplied them; agents must not mislead on prices, products or consumer rights; label AI agents where it could affect decisions and do not imply a real person; test before deployment and keep a human in the loop; breaches can lead to fines of up to 10% of worldwide turnover and compensation."
+  },
+  {
+    "n": 25,
+    "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes (25 September 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Operation AI Comply: the FTC chair said using AI tools to trick, mislead or defraud people is illegal and there is no AI exemption from existing law; five actions including DoNotPay ($193,000 proposed settlement) and Rytr (AI-generated fake reviews)."
+  },
+  {
+    "n": 26,
+    "title": "Klarna AI assistant handles two-thirds of customer service chats in its first month (27 February 2024)",
+    "publisher": "Klarna",
+    "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Company's own claims, with no method given: 2.3 million conversations in about a month, two-thirds of its service chats, work equal to about 700 full-time agents, satisfaction on a par with human agents, repeat inquiries down 25%, resolution time from 11 minutes to under 2, 23 markets and more than 35 languages."
+  }
+]

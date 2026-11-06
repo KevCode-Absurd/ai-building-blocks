@@ -1,0 +1,26 @@
+{
+  "id": "sales-engineer",
+  "name": "Sales engineer",
+  "department": "sales",
+  "summary": "Runs the technical side of a sale: demos built on the buyer's needs, pilots with agreed success measures and answers to technical objections.",
+  "aliases": [
+    "sales engineer",
+    "solutions consultant",
+    "pre-sales",
+    "presales consultant",
+    "solutions engineer",
+    "technical sales",
+    "demo",
+    "proof of concept",
+    "security questionnaire",
+    "rfp technical response"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 27 checked sources on demos, pilots, RFPs, security questionnaires (CSA CAIQ v4.1 and STAR, SOC 2, ISO/IEC 27001 via BSI, Cyber Essentials, FedRAMP), EU supplier rules (NIS2, DORA, GDPR Article 28), claims rules and CRM connectors. Four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Runs a go or no-go check, sets the version and changelog, plans the rollback and checks the live site, the same path as the release checklist skill."
+  },
+  {
+    "slug": "release-day-rollback-planner",
+    "name": "Release day rollback planner",
+    "why": "Rates release risk and writes the pause points and way back, a quick start for a rollback plan."
+  },
+  {
+    "slug": "release-a-new-version-and-prove-it-is-live",
+    "name": "Release a new version and prove it is live",
+    "why": "Takes a project to a version, changelog, go or no-go call and live deploy with proof, useful for teams new to repeatable releases."
+  },
+  {
+    "slug": "check-a-release-and-its-docs",
+    "name": "Check a release and its docs",
+    "why": "Finds test gaps and stale docs before release, the readiness check behind good release notes."
+  },
+  {
+    "slug": "deploy-worker-to-render-builder-prompt",
+    "name": "Deploy Worker to Render coding prompt",
+    "why": "Plans a Render config with secret names, startup checks and a rollback step, a common small-team hosting path."
+  },
+  {
+    "slug": "cut-ci-cost-without-weakening-checks",
+    "name": "Cut CI cost without weakening checks",
+    "why": "Trims GitHub workflow cost and fixes permissions without dropping checks, a companion to the pipeline skill."
+  },
+  {
+    "slug": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+    "name": "Find leaked keys, secure them and check your live site",
+    "why": "Finds committed keys, plans rotation and moves secrets to safe storage, the first job after a pipeline secret leak."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Checks packages and leaked keys weekly with a safe upgrade order, keeping pinned versions current."
+  },
+  {
+    "slug": "monthly-cloud-and-ai-bill-keeper",
+    "name": "Monthly cloud and AI bill keeper",
+    "why": "Compares each month's cloud and AI bill with the last and suggests caps, matching the monthly cost check workflow."
+  },
+  {
+    "slug": "review-aws-cost-and-resilience",
+    "name": "Review AWS cost and resilience",
+    "why": "Weighs AWS savings against resilience, a deeper companion to the cloud cost review skill."
+  },
+  {
+    "slug": "review-azure-cost-and-resilience",
+    "name": "Review Azure cost and resilience",
+    "why": "Maps Azure resources with current price estimates and resilience risks for Azure clients."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a safe restore test with an evidence log, the proof a backup works before any migration."
+  },
+  {
+    "slug": "investigate-an-aws-service-incident",
+    "name": "Investigate an AWS service incident",
+    "why": "Gathers log evidence for an incident window on AWS, raw material for the incident timeline."
+  },
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "Turns an incident timeline into a blameless report, a safer procedure and tracked actions, like the after-an-outage workflow."
+  },
+  {
+    "slug": "prepare-a-service-outage-communication-pack",
+    "name": "Prepare a service outage communication pack",
+    "why": "Drafts the first notice, updates and all-clear from confirmed facts, alongside the customer incident update prompt."
+  }
+]

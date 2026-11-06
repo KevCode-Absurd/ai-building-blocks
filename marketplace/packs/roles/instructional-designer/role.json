@@ -1,0 +1,26 @@
+{
+  "id": "instructional-designer",
+  "name": "Instructional designer",
+  "department": "learning",
+  "summary": "Designs online courses, e-learning modules, email courses and training videos that people finish. Plans each lesson back from what the learner must be able to do.",
+  "aliases": [
+    "instructional design",
+    "e-learning",
+    "online course",
+    "articulate rise",
+    "course creator",
+    "lms content",
+    "training video",
+    "e-learning storyboard",
+    "branching scenario",
+    "SCORM course"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 checked sources (instructional design and multimedia research, SCORM, xAPI and cmi5, Twine and Mermaid for branching scenarios, WCAG 2.2 from W3C, US, UK and EU accessibility rules, captions, email course rules, EU AI transparency), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

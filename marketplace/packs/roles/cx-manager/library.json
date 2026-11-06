@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "monthly-customer-voice-keeper",
+    "name": "Monthly customer voice keeper",
+    "why": "Checks each month's new reviews for buyer words and doubts, a steady input to the voice of the customer programme."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Scores how far a survey can be trusted before acting on it, matching the base-first reading in the survey programme skill."
+  },
+  {
+    "slug": "check-a-marketing-survey-before-sending-it",
+    "name": "Check a marketing survey before sending it",
+    "why": "Catches leading and confusing questions before a survey goes out, the step before publishing at level 3."
+  },
+  {
+    "slug": "prepare-a-survey-findings-briefing",
+    "name": "Prepare a survey findings briefing",
+    "why": "Turns survey results into a short briefing, a companion to the quarterly CX report prompt."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Finds promises a reply cannot back and defensive lines, a useful check on any formal complaint reply draft before approval."
+  },
+  {
+    "slug": "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+    "name": "Get a stuck customer issue unstuck and close the loop",
+    "why": "Builds the facts, an escalation brief and a reply for one stuck case, the individual side of closing the loop."
+  },
+  {
+    "slug": "hard-to-use-thing-diagnoser",
+    "name": "Hard-to-use thing diagnoser",
+    "why": "Finds why people keep getting something wrong and the smallest fix, close to the behaviour barrier diagnosis skill."
+  },
+  {
+    "slug": "make-every-touchpoint-say-the-same-thing",
+    "name": "Make every touchpoint say the same thing",
+    "why": "Ranks where touchpoints disagree, the clash check in the touchpoint inventory prompt."
+  },
+  {
+    "slug": "customer-onboarding-keeper",
+    "name": "Customer onboarding keeper",
+    "why": "Watches which onboarding step loses new customers each week, a live feed for the customer path map."
+  },
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Finds wrong answers in support bot chats against approved help text, part of the AI disclosure and quality check."
+  },
+  {
+    "slug": "interview-customers-and-map-what-they-hire-you-to-do",
+    "name": "Interview customers and map what they hire you to do",
+    "why": "Gathers interview evidence about what customers are trying to get done, the evidence a customer path map needs."
+  },
+  {
+    "slug": "plan-assumption-tests",
+    "name": "Turn your plan into guesses and test them with customers",
+    "why": "Turns assumptions into small tests, the same discipline as writing every behaviour change idea as a test."
+  }
+]

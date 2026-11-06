@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "monthly-freelancer-books-closer",
+    "name": "Monthly freelancer books closer",
+    "why": "Runs a monthly close for a freelancer: sorted transactions, a budget check and the tax set aside, matching the month-end close workflow."
+  },
+  {
+    "slug": "monthly-profit-close",
+    "name": "Monthly profit close",
+    "why": "Turns the month's reconciled sales and costs into a profit and loss set against last month, the last step of month-end close."
+  },
+  {
+    "slug": "expense-report-builder",
+    "name": "Expense report builder",
+    "why": "Builds an expense report from receipts with a reason for each line and gaps to fix, like the expense sort prompt."
+  },
+  {
+    "slug": "find-duplicate-and-unused-business-subscriptions",
+    "name": "Find duplicate and unused business subscriptions",
+    "why": "Finds the subscription leaks the transaction categorisation skill flags and lists renewals to act on."
+  },
+  {
+    "slug": "check-supplier-invoices-before-approval",
+    "name": "Check supplier invoices before approval",
+    "why": "Matches supplier invoices before payment, a simple control against duplicate payments and payment diversion."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Reconciles two tables on matching keys, useful for bank-to-ledger and payout-to-deposit matching in a spreadsheet."
+  },
+  {
+    "slug": "weekly-invoice-and-cash-chaser",
+    "name": "Weekly invoice and cash chaser",
+    "why": "Keeps money owed to the business moving each week with reminders for the owner to send."
+  },
+  {
+    "slug": "tax-set-aside-planner",
+    "name": "Tax set-aside planner",
+    "why": "Turns the accountant's quoted rate into a set-aside rule, the same approach as the tax set-aside prompt."
+  },
+  {
+    "slug": "self-assessment-tax-return-checklist",
+    "name": "Self-assessment tax return checklist",
+    "why": "Lists the records and questions a UK sole trader gathers for the accountant, a companion to the year-end handover."
+  },
+  {
+    "slug": "build-a-monthly-p-and-l-and-know-your-real-margin",
+    "name": "Build a monthly P&L and know your real margin",
+    "why": "Builds a monthly profit and loss with true unit costs for sellers whose payouts the payout reconciliation skill has cleaned."
+  }
+]

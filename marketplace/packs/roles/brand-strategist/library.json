@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "name-and-position-a-new-brand",
+    "name": "Name and position a new brand",
+    "why": "A guided run from positioning to a name, the same order as the position-name-and-voice workflow."
+  },
+  {
+    "slug": "position-name-launch",
+    "name": "Choose a position, check a name stretch, launch with press",
+    "why": "Picks a position, tests whether a name can stretch and plans the launch."
+  },
+  {
+    "slug": "one-word-positioning",
+    "name": "Pick the one word to own in your customers' minds",
+    "why": "Narrows positioning to the one idea to own, in line with the canon here."
+  },
+  {
+    "slug": "positioning-statement-writer",
+    "name": "Positioning statement writer",
+    "why": "Writes one positioning line from buyer evidence and rivals, with the proof it needs."
+  },
+  {
+    "slug": "store-name-generator",
+    "name": "Store name generator",
+    "why": "Generates a long list and a shortlist with a checklist to clear each name, for shops."
+  },
+  {
+    "slug": "store-name-tester",
+    "name": "Store name tester",
+    "why": "Scores names with keep, fix or drop calls before a domain or logo is bought."
+  },
+  {
+    "slug": "brand-name-stretch-checker",
+    "name": "Brand name stretch checker",
+    "why": "Checks whether a brand name can cover a new product, a key naming-system question."
+  },
+  {
+    "slug": "store-brand-architecture-planner",
+    "name": "Store brand architecture planner",
+    "why": "Decides whether a new range gets its own name and sets a naming rule, like the product-naming-system prompt."
+  },
+  {
+    "slug": "store-rebrand-planner",
+    "name": "Store rebrand planner",
+    "why": "Scores whether to keep, tweak or change a name and plans the change."
+  },
+  {
+    "slug": "write-a-voice-guide-from-your-documents-and-check-copy",
+    "name": "Write a voice guide from your documents and check copy",
+    "why": "Builds a voice guide from the client's own writing and checks copy against it, as the voice skills here do."
+  },
+  {
+    "slug": "brand-voice-reviewer",
+    "name": "Brand voice reviewer",
+    "why": "Fixes only the lines that slip and rechecks, the same rule as the voice-and-message-check skill."
+  },
+  {
+    "slug": "make-every-touchpoint-say-the-same-thing",
+    "name": "Make every touchpoint say the same thing",
+    "why": "Aligns the site, emails, social and sales material to one message."
+  },
+  {
+    "slug": "brand-file-from-website",
+    "name": "Build a brand file and brand guide from your website",
+    "why": "Turns a website into a brand file any writer or AI can use, like the brand-fact-file prompt."
+  },
+  {
+    "slug": "company-mantra-writer",
+    "name": "Company mantra writer",
+    "why": "Writes a two-to-four-word internal mantra with a pick, useful next to taglines."
+  },
+  {
+    "slug": "fresh-line-rewriter",
+    "name": "Fresh line rewriter",
+    "why": "Rewrites lines that sound like every rival's, checked with a swap test."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Guidance for Industry: Food Labeling Guide (landing page)",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-food-labeling-guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guide last revised January 2013, page content current as of 15 Jan 2025; allergen and nutrition chapters under revision; FDA does not pre-approve labels."
+  },
+  {
+    "n": 2,
+    "title": "A Food Labeling Guide (full PDF)",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/media/81606/download",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and read as text). PDP and information panel definitions; identity and net quantity on the PDP; 1/16 inch minimum type; no intervening material (a UPC barcode counts); net quantity in the bottom 30% of the PDP in metric and US units; PDP area rules and the net quantity type-size table."
+  },
+  {
+    "n": 3,
+    "title": "Food Allergies",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nine major food allergens, sesame added by the FASTER Act from 1 Jan 2023; declare in parentheses or a Contains statement; content current as of 11 Mar 2026."
+  },
+  {
+    "n": 4,
+    "title": "Front-of-Package Nutrition Labeling",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/front-package-nutrition-labeling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Proposed (not final) Nutrition Info box rating saturated fat, sodium and added sugars; comment period extended to 15 Jul 2025; content current as of 8 May 2025."
+  },
+  {
+    "n": 5,
+    "title": "Use of the \"Healthy\" Claim on Food Labeling",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/use-healthy-claim-food-labeling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final rule announced 19 Dec 2024; a \"healthy\" symbol still in development; content current as of 16 Jan 2025."
+  },
+  {
+    "n": 6,
+    "title": "Fair Packaging and Labeling Act",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/statutes/fair-packaging-labeling-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. FPLA labels must show net contents, identity of the commodity, and name and place of business; FTC coverage excludes food, drugs, devices and cosmetics."
+  },
+  {
+    "n": 7,
+    "title": "Green Guides (16 CFR Part 260)",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/green-guides",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guides for environmental marketing claims; most recent version listed is from October 2012."
+  },
+  {
+    "n": 8,
+    "title": "Packaging EPR (SB 54)",
+    "publisher": "CalRecycle (California)",
+    "url": "https://calrecycle.ca.gov/packaging/packaging-epr/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SB 54 packaging EPR in force; Circular Action Alliance approved as producer responsibility organisation and submitted its plan on 13 Oct 2026; covered material categories list due for update by 1 Jan 2027."
+  },
+  {
+    "n": 9,
+    "title": "Food labelling: giving food information to consumers",
+    "publisher": "GOV.UK (Defra)",
+    "url": "https://www.gov.uk/guidance/food-labelling-giving-food-information-to-consumers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK mandatory information on prepacked food; minimum x-height 1.2 mm (0.9 mm if largest surface under 80 cm2); name, net quantity and alcohol in the same field of vision; Northern Ireland follows EU rules; updated 20 Sep 2022."
+  },
+  {
+    "n": 10,
+    "title": "Food information: net quantity labelling",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/food-information-to-consumers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Metric units, imperial no more prominent; drained net weight; same field of vision as the name; multipack format; e-mark voluntary; updated 8 Jul 2021."
+  },
+  {
+    "n": 11,
+    "title": "Packaged goods: weights and measures regulations",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/packaged-goods-weights-and-measures-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The three packers rules; the e-mark is voluntary and still recognised after 1 Jan 2021; updated 20 Sep 2024."
+  },
+  {
+    "n": 12,
+    "title": "Allergen guidance for food businesses",
+    "publisher": "GOV.UK (Food Standards Agency)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 14 allergens; allergens emphasised every time they appear in the ingredients list; PPDS labels need a full ingredients list with allergens emphasised; updated 17 Jul 2026."
+  },
+  {
+    "n": 13,
+    "title": "Food labelling: general rules",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-requirements/food-labelling/general-rules/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU mandatory particulars; x-height 1.2 mm (0.9 mm under 80 cm2); packs under 10 cm2 need four items; allergens emphasised; last checked 13 Jul 2026."
+  },
+  {
+    "n": 14,
+    "title": "Food information to consumers: legislation",
+    "publisher": "European Commission (DG SANTE)",
+    "url": "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/food-information-consumers-legislation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation 1169/2011 applied from 13 Dec 2014, nutrition from 13 Dec 2016; planned revision (front-of-pack nutrition, origin, date marking, alcohol); factsheets Feb 2026."
+  },
+  {
+    "n": 15,
+    "title": "Using the e-mark on prepackaged products",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-rules-compliance/general-product-compliance/emark/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Voluntary e-mark for 5 g/ml to 10 kg/l; placed next to the quantity, at least 3 mm high; last checked 12 Oct 2026."
+  },
+  {
+    "n": 16,
+    "title": "Packaging waste",
+    "publisher": "European Commission (DG Environment)",
+    "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PPWR is Regulation (EU) 2025/40, in force 11 Feb 2025, applies from 12 Aug 2026; all packaging recyclable by 2030; PFAS limits in food-contact packaging; FAQ Aug 2026 and guidelines Mar 2026."
+  },
+  {
+    "n": 17,
+    "title": "Packaging and Packaging Waste Regulation: implementation",
+    "publisher": "European Commission (Green Forum)",
+    "url": "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PPWR timeline: implementing acts on harmonised labels due 12 Aug 2026 (Art. 12(6), 13(2)); design-for-recycling criteria 1 Jan 2028; empty space ratio methodology 12 Feb 2028."
+  },
+  {
+    "n": 18,
+    "title": "Extended producer responsibility for packaging: small businesses",
+    "publisher": "European Commission (DG Environment)",
+    "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/extended-producer-responsibility-packaging-small-businesses_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Producers under 10 tonnes a year may get lighter conditions; register where packaging becomes waste; authorised representative rule applies since Aug 2026, suspension for small businesses proposed; platforms will ask for registration numbers once registers exist."
+  },
+  {
+    "n": 19,
+    "title": "Facts about the new EU rules on packaging and packaging waste",
+    "publisher": "European Commission (DG Environment)",
+    "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/facts-about-new-eu-rules-packaging-and-packaging-waste_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. New labels with sorting information; unnecessary single-use packaging banned in 2030; 90% separate collection of single-use plastic and metal drinks containers by 2029; online shops to cut empty space."
+  },
+  {
+    "n": 20,
+    "title": "Extended producer responsibility for packaging: who is affected and what to do",
+    "publisher": "GOV.UK (Defra)",
+    "url": "https://www.gov.uk/guidance/extended-producer-responsibility-for-packaging-who-is-affected-and-what-to-do",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Obligated if UK-established, over 25 tonnes and turnover of GBP 1 million or more; large producers over 50 tonnes and GBP 2 million; large producer duties; records kept 7 years; updated 19 Aug 2026."
+  },
+  {
+    "n": 21,
+    "title": "EPR for packaging: what you must do as a small producer",
+    "publisher": "GOV.UK (Defra)",
+    "url": "https://www.gov.uk/guidance/epr-for-packaging-what-you-must-do-as-a-small-producer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Small producers register and report each year by 1 April; no waste disposal fees or PRNs; only a director, company secretary, partner or LLP member can create the account; updated 22 Oct 2026."
+  },
+  {
+    "n": 22,
+    "title": "Recyclability assessment methodology: how to assess your packaging waste",
+    "publisher": "GOV.UK (Defra)",
+    "url": "https://www.gov.uk/guidance/recycling-assessment-methodology-how-to-assess-your-packaging-waste",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Red, amber and green ratings across 8 material categories; large producers from 1 Jan 2025; the rating affects the disposal fee; automatic red cases; updated 4 Sep 2025."
+  },
+  {
+    "n": 23,
+    "title": "EPR for packaging: how to assess household and non-household packaging",
+    "publisher": "GOV.UK (Defra)",
+    "url": "https://www.gov.uk/guidance/extended-producer-responsibility-for-packaging-how-to-assess-household-and-non-household-packaging",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Primary and shipment packaging count as household unless conditions are met; evidence kept 7 years; labelling alone is not evidence; updated 5 Aug 2025."
+  },
+  {
+    "n": 24,
+    "title": "How our labels work",
+    "publisher": "OPRL (On-Pack Recycling Label)",
+    "url": "https://oprl.org.uk/what-we-do/how-the-scheme-works/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Binary Recycle and Do Not Recycle labels in line with ISO 14021; 75% and 50% local authority collection thresholds; Check Home Collections; multi-component labels; labels made in the members-only tool."
+  },
+  {
+    "n": 25,
+    "title": "How2Recycle",
+    "publisher": "How2Recycle",
+    "url": "https://how2recycle.info/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On-pack label with Widely Recyclable, Check Locally, Store Drop-off (US only) and Not Yet Recyclable; US and Canada; membership; new Pro Label announced without dates."
+  },
+  {
+    "n": 26,
+    "title": "Artwork Tips & Tricks",
+    "publisher": "Packlane",
+    "url": "https://packlane.com/support/artwork-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dieline templates; 300 PPI; CMYK; 100% black for text and scannable codes; rich black for large solids; vector formats; inside print files; proof within 24 hours, auto-approved on the fourth business day."
+  },
+  {
+    "n": 27,
+    "title": "Artwork Support",
+    "publisher": "ePac Flexible Packaging",
+    "url": "https://epacflexibles.com/artwork-support/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Separate artwork, dieline and white layers; outline text; embed images; CMYK; overprint; supply a white layer; barcode black on white; Canva files not accepted as final artwork; 0.125 inch bleed per side."
+  },
+  {
+    "n": 28,
+    "title": "Barcode placement and printing guidelines",
+    "publisher": "GS1 US",
+    "url": "https://www.gs1us.org/upcs-barcodes-prefixes/how-to-use-your-upc-barcodes/place-barcodes-on-products",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Barcode on the back, lower right; away from edges; quiet zones; do not scale existing art; black on white; avoid red bars; single ink."
+  },
+  {
+    "n": 29,
+    "title": "How to Get a UPC Barcode",
+    "publisher": "GS1 US",
+    "url": "https://www.gs1us.org/upcs-barcodes-prefixes/how-to-get-a-upc-barcode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. License a single GTIN or a company prefix; every variation needs its own barcode (3 sizes x 3 colours = 9)."
+  },
+  {
+    "n": 30,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Canva MCP lets an AI assistant create, edit and search designs, use brand kits and templates, export PDF and other formats, resize and comment."
+  }
+]

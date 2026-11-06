@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Optimizing your website for generative AI features on Google Search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "checked": "2026-11-06",
+    "supports": "AI features use core ranking and the Search index with query fan-out; AEO and GEO are SEO to Google; myths (no llms.txt, special markup, chunking, AI rewriting, inauthentic mentions or special schema needed); page-per-fan-out-query is scaled content abuse; eligibility needs the Search Console inclusion setting; caution about third-party tools"
+  },
+  {
+    "n": 2,
+    "title": "A new resource for optimizing for generative AI in Google Search (15 May 2026)",
+    "publisher": "Google Search Central blog, John Mueller",
+    "url": "https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing",
+    "checked": "2026-11-06",
+    "supports": "Publication date and scope of Google's generative AI optimisation guide"
+  },
+  {
+    "n": 3,
+    "title": "AI features and your website",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "checked": "2026-11-06",
+    "supports": "How AI Overviews and AI Mode pick links (query fan-out, different models), eligibility, no extra requirements, preview controls (nosnippet, data-nosnippet, max-snippet, noindex), traffic counted in the Web search type"
+  },
+  {
+    "n": 4,
+    "title": "Search generative AI control in Search Console",
+    "publisher": "Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/16908024",
+    "checked": "2026-11-06",
+    "supports": "Include or Exclude setting for AI Overviews, AI Mode and Discover AI features; Include is the default; exclusion in 1 to 2 days; no effect on other ranking or on training; live for all sites by 31 August 2026"
+  },
+  {
+    "n": 5,
+    "title": "Generative AI performance report (Search)",
+    "publisher": "Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/16984139",
+    "checked": "2026-11-06",
+    "supports": "Impressions-only report for AI Overviews and AI Mode with pages, countries, devices and dates; 1,000-row limit; Labs excluded; rolled out to all sites by 31 August 2026"
+  },
+  {
+    "n": 6,
+    "title": "Google's common crawlers (Google-Extended)",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+    "checked": "2026-11-06",
+    "supports": "Google-Extended controls Gemini training and grounding in Gemini Apps and Vertex AI; no effect on Search inclusion or ranking; robots.txt token only"
+  },
+  {
+    "n": 7,
+    "title": "Supporting a shared AI training control for websites (30 October 2026)",
+    "publisher": "Google Search Central blog, John Mueller",
+    "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+    "checked": "2026-11-06",
+    "supports": "Google plans to honour the IETF AIPREF training-preference token in robots.txt in 2027; treated as a Google-Extended disallow when Google-Extended is not named; allowing Google-Extended keeps Gemini Apps grounding eligibility"
+  },
+  {
+    "n": 8,
+    "title": "Google Search's guidance on using third-party SEO tools, services, and advice",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/third-party-seo",
+    "checked": "2026-11-06",
+    "supports": "No tool has access to Google's internal ranking data; be wary of tools promising AI search results; Search Console is the first-party source"
+  },
+  {
+    "n": 9,
+    "title": "Organization structured data",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "checked": "2026-11-06",
+    "supports": "Organization markup helps Google tell an organisation apart; recommended properties (name, url, logo, sameAs, address, identifiers); no required properties; place on home or About page"
+  },
+  {
+    "n": 10,
+    "title": "[GA4] Default channel group",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9756891",
+    "checked": "2026-11-06",
+    "supports": "AI Assistant default channel (medium ai-assistant) listing ChatGPT, Gemini, Deepseek, Copilot and Grok; AI Overviews and AI Mode stay in Organic Search"
+  },
+  {
+    "n": 11,
+    "title": "Overview of OpenAI crawlers",
+    "publisher": "OpenAI",
+    "url": "https://developers.openai.com/api/docs/bots",
+    "checked": "2026-11-06",
+    "supports": "OAI-SearchBot, GPTBot, ChatGPT-User and OAI-AdsBot: what each does, robots.txt effects, about 24 hours to take effect, published IP lists"
+  },
+  {
+    "n": 12,
+    "title": "Publishers and developers FAQ",
+    "publisher": "OpenAI Help Center (confirmed by search result; the page blocks automated fetches)",
+    "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq",
+    "checked": "2026-11-06",
+    "supports": "Any public site can appear in ChatGPT search; do not block OAI-SearchBot; ChatGPT adds utm_source=chatgpt.com to referral links"
+  },
+  {
+    "n": 13,
+    "title": "Where ChatGPT search results come from: Google, Bing, Web IQ and 8+ providers (September 2026)",
+    "publisher": "Peec AI research docs",
+    "url": "https://docs.peec.ai/research/chatgpt-search-result-providers",
+    "checked": "2026-11-06",
+    "supports": "Vendor analysis inferring that ChatGPT uses its own index plus at least eight outside providers (including Microsoft Web IQ, Google results via scrapers, Yelp and Tripadvisor); Bing mainly in Deep Research; stated confidence levels and conflict of interest"
+  },
+  {
+    "n": 14,
+    "title": "Perplexity crawlers",
+    "publisher": "Perplexity",
+    "url": "https://docs.perplexity.ai/guides/bots",
+    "checked": "2026-11-06",
+    "supports": "PerplexityBot for search results, not training; Perplexity-User for user requests, generally ignores robots.txt; up to 24 hours to take effect; IP lists"
+  },
+  {
+    "n": 15,
+    "title": "How does Perplexity work?",
+    "publisher": "Perplexity Help Center",
+    "url": "https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work",
+    "checked": "2026-11-06",
+    "supports": "Real-time web search with numbered citations; no published ranking criteria for sources"
+  },
+  {
+    "n": 16,
+    "title": "Perplexity is using stealth, undeclared crawlers to evade website no-crawl directives (4 August 2025)",
+    "publisher": "Cloudflare blog",
+    "url": "https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/",
+    "checked": "2026-11-06",
+    "supports": "Test showing undeclared crawling after blocks; request volumes; Cloudflare de-listed Perplexity as a verified bot; ChatGPT-User respected the block in the same test"
+  },
+  {
+    "n": 17,
+    "title": "Does Anthropic crawl data from the web, and how can site owners block the crawler?",
+    "publisher": "Anthropic (Claude Help Center)",
+    "url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+    "checked": "2026-11-06",
+    "supports": "ClaudeBot, Claude-User and Claude-SearchBot and the effect of blocking each; robots.txt and Crawl-delay honoured; IP blocking not advised; general no-AI-training signal honoured"
+  },
+  {
+    "n": 18,
+    "title": "Introducing AI Performance in Bing Webmaster Tools Public Preview (10 February 2026)",
+    "publisher": "Microsoft Bing Webmaster blog",
+    "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+    "checked": "2026-11-06",
+    "supports": "Citation reporting for Copilot, Bing AI summaries and partners (total citations, cited pages, grounding queries, page-level counts) and Microsoft's advice for earning citations, including IndexNow and Bing Places"
+  },
+  {
+    "n": 19,
+    "title": "Optimizing your content for inclusion in AI search answers (8 October 2025)",
+    "publisher": "Microsoft Advertising blog, Krishna Madhavan (Microsoft Bing)",
+    "url": "https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers",
+    "checked": "2026-11-06",
+    "supports": "How Microsoft's AI systems break pages into pieces and choose them; structure advice; mistakes such as answers hidden in tabs, PDFs or images; no guarantee of selection"
+  },
+  {
+    "n": 20,
+    "title": "Announcing new options for webmasters to control usage of their content in Bing Chat (22 September 2023)",
+    "publisher": "Microsoft Bing Webmaster blog",
+    "url": "https://blogs.bing.com/webmaster/september-2023/Announcing-new-options-for-webmasters-to-control-usage-of-their-content-in-Bing-Chat",
+    "checked": "2026-11-06",
+    "supports": "NOCACHE and NOARCHIVE meta tags and their effect on Bing chat answers and AI training; pages stay in Bing search results"
+  },
+  {
+    "n": 21,
+    "title": "The /llms.txt file",
+    "publisher": "llmstxt.org (Jeremy Howard)",
+    "url": "https://llmstxt.org/",
+    "checked": "2026-11-06",
+    "supports": "llms.txt proposed on 3 September 2024; format; aimed at inference-time use; described as a proposal open to input, not a formal standard"
+  },
+  {
+    "n": 22,
+    "title": "We Analyzed 137K Sites: 97% of llms.txt Files Never Get Read (15 June 2026)",
+    "publisher": "Ahrefs, Louise Linehan",
+    "url": "https://ahrefs.com/blog/llmstxt-study/",
+    "checked": "2026-11-06",
+    "supports": "28% of 137,210 sites had a valid llms.txt (upper bound); 97% of those got no requests in May 2026; bot shares and caveats"
+  },
+  {
+    "n": 23,
+    "title": "llms.txt shows no clear effect on AI citations, based on 300k domains (20 November 2025)",
+    "publisher": "Search Engine Journal, Matt G. Southern (reporting SE Ranking's study)",
+    "url": "https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/",
+    "checked": "2026-11-06",
+    "supports": "About 10% adoption across roughly 300,000 domains and no measurable link between llms.txt and AI citation frequency"
+  },
+  {
+    "n": 24,
+    "title": "GEO: Generative Engine Optimization (Aggarwal et al., KDD 2024)",
+    "publisher": "arXiv 2311.09735",
+    "url": "https://arxiv.org/abs/2311.09735",
+    "checked": "2026-11-06",
+    "supports": "The GEO framework and GEO-bench; adding quotations, statistics and citations raised source visibility by up to about 40% in tests; keyword stuffing did not help; results vary by domain"
+  },
+  {
+    "n": 25,
+    "title": "Generative Engine Optimization: How to Dominate AI Search (Chen, Wang, Chen and Koudas, September 2025)",
+    "publisher": "arXiv 2509.08919 (University of Toronto)",
+    "url": "https://arxiv.org/abs/2509.08919",
+    "checked": "2026-11-06",
+    "supports": "AI search engines favour earned (third-party) media over brand-owned and social content more than Google does; engines differ in diversity, freshness and phrasing sensitivity"
+  },
+  {
+    "n": 26,
+    "title": "Google users are less likely to click on links when an AI summary appears in the results (22 July 2025)",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+    "checked": "2026-11-06",
+    "supports": "March 2025 browsing data from 900 US adults: share of searches with AI summaries, click rates with and without summaries, query length effect, most-cited sources"
+  },
+  {
+    "n": 27,
+    "title": "Update: 38% of AI Overview Citations Pull From The Top 10 (2 March 2026)",
+    "publisher": "Ahrefs, Louise Linehan",
+    "url": "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+    "checked": "2026-11-06",
+    "supports": "37.9% of AI Overview cited URLs also ranked in the top 10 for the query (863,000 SERPs), down from about 76% in July 2025, with method caveats"
+  },
+  {
+    "n": 28,
+    "title": "An Analysis of AI Overview Brand Visibility Factors (75K Brands Studied) (26 May 2025)",
+    "publisher": "Ahrefs, Louise Linehan",
+    "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+    "checked": "2026-11-06",
+    "supports": "Branded web mentions correlated most with AI Overview brand visibility (0.664), well above backlinks (0.218); correlation only"
+  },
+  {
+    "n": 29,
+    "title": "AIO Impact on Google CTR: September 2025 Update (4 November 2025)",
+    "publisher": "Seer Interactive",
+    "url": "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-september-2025-update",
+    "checked": "2026-11-06",
+    "supports": "Organic CTR on AI Overview queries fell 61% from June 2024 to September 2025; brands cited in the AI Overview had higher organic and paid CTR than uncited ones; no proof of cause"
+  },
+  {
+    "n": 30,
+    "title": "AI recommendations change with nearly every query: SparkToro (30 January 2026)",
+    "publisher": "Search Engine Journal, Matt G. Southern (reporting SparkToro and Gumshoe research)",
+    "url": "https://www.searchenginejournal.com/ai-recommendations-change-with-nearly-every-query-sparktoro/566242/",
+    "checked": "2026-11-06",
+    "supports": "2,961 runs of 12 prompts on ChatGPT, Claude and Google AI returned the same brand list less than 1 in 100 times; appearance rate across runs steadier than order; conflict-of-interest note"
+  }
+]

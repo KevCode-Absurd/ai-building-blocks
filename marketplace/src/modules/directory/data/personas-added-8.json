@@ -3054,7 +3054,7 @@
       "not_for": [
         "Clinical, medical or veterinary advice or decisions",
         "Legal, regulatory or employment law rulings",
-        "Handling real patient records (use made-up examples)"
+        "Patient records pasted into chat (I work in your practice system with the access you grant)"
       ],
       "samples": [
         {

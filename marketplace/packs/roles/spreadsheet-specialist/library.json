@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "excel-handover-guide-writer",
+    "name": "Excel workbook handover writer",
+    "why": "Writes a handover guide with inputs, formulas, update steps and risks, the same job as the handover notes prompt."
+  },
+  {
+    "slug": "excel-input-form-builder",
+    "name": "Excel input form builder",
+    "why": "Builds an input form with allowed values, matching the validation and protection steps in the calculator skill."
+  },
+  {
+    "slug": "excel-workbook-change-reviewer",
+    "name": "Excel workbook change reviewer",
+    "why": "Compares an old and revised workbook for changed values and formulas, a useful add-on to the spreadsheet review."
+  },
+  {
+    "slug": "excel-monthly-rollup-builder",
+    "name": "Excel monthly rollup builder",
+    "why": "Turns dated records into a monthly summary, a common build for this role."
+  },
+  {
+    "slug": "excel-pivot-refresh-planner",
+    "name": "Excel PivotTable refresh planner",
+    "why": "Plans PivotTable refresh order and sources, so reports built on tables stay right as data grows."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Joins and reconciles two tables, the check to run when two sheets disagree."
+  },
+  {
+    "slug": "excel-powerpoint-number-checker",
+    "name": "Excel to PowerPoint number checker",
+    "why": "Checks that numbers on slides match the workbook, a last step before a sheet's results go to a board."
+  },
+  {
+    "slug": "excel-print-layout-fixer",
+    "name": "Excel print layout fixer",
+    "why": "Fixes print layouts so quote and report outputs print cleanly for customers."
+  },
+  {
+    "slug": "hourly-rate-calculator",
+    "name": "Hourly rate calculator",
+    "why": "Works out hourly and day rates from pay, costs and billable hours, a ready example of a calculator build."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Cost per sellable unit and margin from a quote and freight, another calculator pattern this role builds."
+  },
+  {
+    "slug": "weekly-numbers-sheet-designer",
+    "name": "Weekly numbers sheet designer",
+    "why": "Designs a one-page weekly numbers sheet, a simple tracker build to hand to an owner."
+  }
+]

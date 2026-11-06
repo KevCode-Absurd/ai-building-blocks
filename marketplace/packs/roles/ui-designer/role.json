@@ -1,0 +1,26 @@
+{
+  "id": "ui-designer",
+  "name": "UI designer",
+  "department": "design",
+  "summary": "Specifies the visual design of app and web screens: type scale, spacing, colour, components and states, ready for Figma or code.",
+  "aliases": [
+    "ui designer",
+    "ui design",
+    "visual design",
+    "figma",
+    "interface design",
+    "app ui",
+    "dark mode design",
+    "type scale",
+    "contrast check",
+    "component style sheet"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (WCAG 2.2 and Understanding notes, WCAG 3 draft status, Apple HIG pages with change-log dates including Liquid Glass, Material 3 and Expressive in Compose, the European Accessibility Act on EUR-Lex, ADA and UK pointers), four skills, five prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

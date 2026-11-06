@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "idea-validation-analyst",
+    "name": "Idea validation analyst",
+    "why": "Picks the riskiest guess in an idea, plans the test, reads the result and calls keep, change or stop, the same loop as the idea validation test skill."
+  },
+  {
+    "slug": "idea-market-test",
+    "name": "Test if your idea can own its market",
+    "why": "Gives an honest market size and a go, fix or stop call, a quick companion to the market sizing skill."
+  },
+  {
+    "slug": "customer-discovery-plan",
+    "name": "Customer discovery interview planner",
+    "why": "Lists the guesses in an idea, who to talk to and questions that test them, the first step before any survey."
+  },
+  {
+    "slug": "customer-interview-questions",
+    "name": "Customer interview question writer",
+    "why": "Fixes draft interview questions so they ask about real past behaviour, matching the interview guide prompt."
+  },
+  {
+    "slug": "interview-fact-sorter",
+    "name": "Interview fact sorter",
+    "why": "Separates facts from praise and ideas in interview notes, so findings rest on what people did, not what they said they would do."
+  },
+  {
+    "slug": "customer-interview-program-keeper",
+    "name": "Customer interview program keeper",
+    "why": "Tracks buyer patterns across interview rounds and says when to stop, the practical side of interview saturation."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Scores how far survey answers can be trusted and flags weak questions, the same checks as the survey design and analysis skill."
+  },
+  {
+    "slug": "say-do-gap-checker",
+    "name": "Say-do gap checker",
+    "why": "Compares what survey answers claim with what behaviour shows and suggests a behaviour test, useful after any stated-preference survey."
+  },
+  {
+    "slug": "price-test-keeper",
+    "name": "Price test keeper",
+    "why": "Plans one reversible live price test and reads the result, the step that confirms a Van Westendorp or Gabor-Granger range."
+  },
+  {
+    "slug": "buyer-identity-segment-finder",
+    "name": "Buyer identity segment finder",
+    "why": "Groups buyers from reviews and survey answers and sizes each group, a starting point for the segment map prompt."
+  },
+  {
+    "slug": "competitor-white-space-mapper",
+    "name": "Competitor white space mapper",
+    "why": "Builds a grid of where no rival is strong, the gap-finding step of the competitor research skill."
+  },
+  {
+    "slug": "monthly-competitor-watcher",
+    "name": "Monthly competitor watcher",
+    "why": "Logs what rivals changed this month and the moves worth answering, the core of the monthly market and competitor watch workflow."
+  },
+  {
+    "slug": "quarterly-battle-card-keeper",
+    "name": "Quarterly battle card keeper",
+    "why": "Refreshes a card for each rival from won and lost deals, turning competitor research into answers the sales team can use."
+  }
+]

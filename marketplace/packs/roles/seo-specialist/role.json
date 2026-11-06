@@ -1,0 +1,26 @@
+{
+  "id": "seo-specialist",
+  "name": "SEO specialist",
+  "department": "marketing",
+  "summary": "Gets your business found in Google and Bing for the searches your customers make. Fixes what stops your pages being crawled and indexed, plans and briefs content that answers real searches, and reports what search brings in.",
+  "aliases": [
+    "SEO",
+    "SEO consultant",
+    "search engine optimisation",
+    "search engine optimization",
+    "technical SEO",
+    "organic search",
+    "local SEO",
+    "SEO audit",
+    "Google rankings",
+    "Search Console help"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Google updates and spam policies to September 2026 (back button hijacking, EEA site reputation change), rater guidelines of September 2025, Core Web Vitals with INP and 2025 pass rates, the Search Console Generative AI report, migrations and measurement, with 30 checked sources."
+    }
+  ]
+}

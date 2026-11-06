@@ -1,0 +1,26 @@
+{
+  "id": "data-engineer",
+  "name": "Data engineer",
+  "department": "data",
+  "summary": "Moves data from a firm's tools into one place: pipeline specs, tested models and run books for failed or late loads.",
+  "aliases": [
+    "data engineer",
+    "etl",
+    "data pipeline",
+    "dbt",
+    "data warehouse",
+    "bigquery",
+    "postgres",
+    "snowflake",
+    "airflow",
+    "elt"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (dbt v1.12 and v2.0, Airflow 3.4, Dagster, BigQuery, Snowflake, Fivetran, Airbyte, Open Data Contract Standard, Google SRE Workbook, PHE 2020 case, GDPR). Four skills, five prompts, three workflows, training. Dropping or overwriting data and raising warehouse spend need a fresh yes."
+    }
+  ]
+}

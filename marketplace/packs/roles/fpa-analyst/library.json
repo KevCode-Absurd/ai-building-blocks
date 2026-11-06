@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "monthly-budget-versus-actual-keeper",
+    "name": "Monthly budget versus actual keeper",
+    "why": "Runs the monthly budget versus actual check with causes and cash levers, the core of the monthly performance review."
+  },
+  {
+    "slug": "explain-a-department-budget-overrun",
+    "name": "Explain a department budget overrun",
+    "why": "A reconciled variance report with options for the budget owner, matching the variance analysis skill."
+  },
+  {
+    "slug": "forecast-your-startup-runway-and-prepare-a-finance-pack",
+    "name": "Forecast your startup runway and prepare a finance pack",
+    "why": "Builds a multi-year model with a cash-out date and ranges, like the driver-based model skill for early companies."
+  },
+  {
+    "slug": "plan-a-year-of-hiring-and-what-it-will-cost",
+    "name": "Plan a year of hiring and what it will cost",
+    "why": "Turns a hiring plan into a monthly people-cost budget, a key input to the annual budget cycle."
+  },
+  {
+    "slug": "bad-year-plan-stress-tester",
+    "name": "Bad year plan stress tester",
+    "why": "Tests a budget against bad-year cases to find the breaking point, extending the cautious scenario."
+  },
+  {
+    "slug": "treasury-forecast-backtest-checker",
+    "name": "Treasury forecast backtest checker",
+    "why": "Backtests a cash forecast against what happened, the step that improves the 13-week forecast each month."
+  },
+  {
+    "slug": "prepare-a-seasonal-cash-buffer",
+    "name": "Prepare a seasonal cash buffer",
+    "why": "A dated cash forecast with a downside case for seasonal businesses, a companion to the 13-week cash forecast."
+  },
+  {
+    "slug": "weekly-saas-numbers-keeper",
+    "name": "Weekly SaaS numbers keeper",
+    "why": "Keeps recurring revenue, churn and payback current each week between monthly SaaS metrics packs."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Finds where subscribers leave and whether last month's fix worked, following the cohort step of the SaaS metrics pack."
+  },
+  {
+    "slug": "cac-payback-checker",
+    "name": "CAC payback checker",
+    "why": "Checks cost to win a customer against margin and payback, like the unit economics prompt."
+  },
+  {
+    "slug": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "name": "Build a weekly KPI report with a forecast and dashboard",
+    "why": "Builds a rerunnable KPI report with a trend and forecast, extending the monthly one-page review."
+  },
+  {
+    "slug": "cash-versus-earnings-checker",
+    "name": "Cash versus earnings checker",
+    "why": "Puts free cash flow beside earnings to explain why profit and cash differ, a common owner question."
+  }
+]

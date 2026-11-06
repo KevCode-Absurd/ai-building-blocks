@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "sales-call-prep-assistant",
+    "name": "Sales call prep assistant",
+    "why": "Builds a one-page call plan from past notes and a follow-up draft after the call, the same flow as the discovery call plan prompt."
+  },
+  {
+    "slug": "sales-call-question-planner",
+    "name": "Sales call question planner",
+    "why": "Plans problem, cost and value questions for a call, a quick way to fill the question bank in a play card."
+  },
+  {
+    "slug": "objection-answer-sheet-writer",
+    "name": "Objection answer sheet writer",
+    "why": "Turns buyers' doubts into honest answers with a question back, ready for the objections section of a playbook."
+  },
+  {
+    "slug": "monthly-lost-deal-reviewer",
+    "name": "Monthly lost deal reviewer",
+    "why": "Reviews lost deals each month for the real reasons, feeding the quarterly playbook and battlecard refresh."
+  },
+  {
+    "slug": "rival-gap-message-writer",
+    "name": "Rival gap message writer",
+    "why": "Writes messages from proven strengths against a rival's public weak spots, with evidence, matching the honest battlecard rules."
+  },
+  {
+    "slug": "rival-weakness-message-finder",
+    "name": "Rival weakness message finder",
+    "why": "Finds a rival's weak spot that matches a real strength and that buyers can check, useful for the 'where we win' section."
+  },
+  {
+    "slug": "recall-quiz-writer",
+    "name": "Recall quiz writer",
+    "why": "Turns lesson notes into recall quizzes with a repeat plan, the quizzing step in the 30-day onboarding plan."
+  },
+  {
+    "slug": "sales-agent-training-planner",
+    "name": "Sales agent training planner",
+    "why": "Plans a short course for people who will sell a product, a lighter start for the onboarding and certification skill."
+  },
+  {
+    "slug": "turn-a-recorded-call-into-notes-a-follow-up-and-coaching",
+    "name": "Turn a recorded call into notes, a follow-up and coaching",
+    "why": "Turns a consented call recording into notes, a follow-up and coaching points, a companion to the call coaching skill."
+  },
+  {
+    "slug": "negotiation-call-prep-planner",
+    "name": "Negotiation call prep planner",
+    "why": "Plans a hard negotiation call with an opening, questions and facts to learn first, alongside the negotiation plan prompt."
+  },
+  {
+    "slug": "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+    "name": "Negotiate from the weaker side and still get fair terms",
+    "why": "A full play for negotiating with a bigger buyer or supplier, for teams that sell into large accounts."
+  },
+  {
+    "slug": "audit-to-sales-presentation-planner",
+    "name": "Audit-to-sales presentation planner",
+    "why": "Turns findings about a prospect into a ten-slide pitch with proof and a clear ask, a worked example of the problem-first deck."
+  },
+  {
+    "slug": "proof-backed-sales-copy-writer",
+    "name": "Evidence-based sales copy writer",
+    "why": "Puts proof beside every claim in sales copy, the same evidence bar this kit sets for decks and sell sheets."
+  }
+]

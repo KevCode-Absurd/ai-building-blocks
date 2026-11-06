@@ -1,0 +1,26 @@
+{
+  "id": "product-marketing-manager",
+  "name": "Product marketing manager",
+  "department": "marketing",
+  "summary": "Decides how a product is positioned, what it says and how it launches. Writes the message sheet and launch plan the rest of the team works from.",
+  "aliases": [
+    "pmm",
+    "positioning",
+    "messaging",
+    "product launch",
+    "go-to-market",
+    "launch plan",
+    "competitor comparison",
+    "pricing page",
+    "message sheet",
+    "product marketer"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: positioning canon, message sheets, rival maps, launch tiers and handoffs, pricing pages, and US, UK and EU rules on comparative, savings and price claims (FTC, CAP Code and ASA rulings, CMA, EU), with 25 checked sources. Naming a competitor in public needs a fresh yes."
+    }
+  ]
+}

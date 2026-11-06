@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Circular 33: Works Not Protected by Copyright",
+    "publisher": "US Copyright Office",
+    "url": "https://www.copyright.gov/circs/circ33.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch and read with pdftotext. Revised 03/2021. A mere listing of ingredients or simple set of directions is uncopyrightable; a recipe that creatively explains or depicts how or why may be; registration covers text and photos, not the ingredient list, process or dish; Pie in the Sky and caesar dressing examples."
+  },
+  {
+    "n": 2,
+    "title": "What Does Copyright Protect? (FAQ)",
+    "publisher": "US Copyright Office",
+    "url": "https://www.copyright.gov/help/faq/faq-protect.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ingredient lists not protected; substantial literary expression or a compilation such as a cookbook may be; do not register secret ingredients because applications are public; ideas, methods, names and titles not protected by copyright."
+  },
+  {
+    "n": 3,
+    "title": "How copyright protects your work",
+    "publisher": "GOV.UK (Intellectual Property Office)",
+    "url": "https://www.gov.uk/copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK copyright covers original literary and artistic works including photography; protection is automatic with no application or fee; there is no register of copyright works in the UK."
+  },
+  {
+    "n": 4,
+    "title": "Metric Kitchen: Cooking Measurement Equivalencies",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "url": "https://www.nist.gov/pml/owm/metric-si/metric-kitchen/metric-kitchen-cooking-measurement-equivalencies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Approximate equivalents: 1 tsp 5 mL, 1 tbsp 15 mL, 1 fl oz 30 mL, 1 cup 240 mL, 1 pint 480 mL, 1 quart 950 mL, 1 oz 28 g, 1 lb 454 g; updated 29 Apr 2026."
+  },
+  {
+    "n": 5,
+    "title": "Metric Kitchen: Culinary Measurement Tips",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "url": "https://www.nist.gov/pml/owm/metric-si/metric-kitchen/metric-kitchen-culinary-measurement-tips",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Weigh rather than scoop; wrong cup type is a common error; read liquids at eye level; density matters (points to NIST SP 430); check a thermometer in boiling water; high altitude, canning and candy need adjustments; updated 29 Apr 2026."
+  },
+  {
+    "n": 6,
+    "title": "Metric Kitchen: Culinary Temperature",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "url": "https://www.nist.gov/pml/owm/metric-si/metric-kitchen/metric-kitchen-culinary-temperature",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Approximate C and F ranges for oven words (moderate 180 to 190C, 350 to 375F); ovens vary; safe minimum internal temperatures in Celsius (62.8C plus 3-minute rest for whole cuts, 71.1C ground meat and egg dishes, 73.9C poultry and leftovers); updated 29 Apr 2026."
+  },
+  {
+    "n": 7,
+    "title": "Guidance for Industry: Guidelines for Determining Metric Equivalents of Household Measures",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-guidelines-determining-metric-equivalents-household-measures",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For nutrition labelling: 1 cup = 240 mL, 1 tbsp = 15 mL, 1 tsp = 5 mL, 1 fl oz = 30 mL, 1 oz = 28 g; guidance dated October 1993, marked final."
+  },
+  {
+    "n": 8,
+    "title": "Baker's Percentage",
+    "publisher": "King Arthur Baking Company",
+    "url": "https://www.kingarthurbaking.com/pro/reference/bakers-percentage",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Flour is always 100%; other ingredients as percent of flour weight; hydration; scaling by adding percentages and dividing target dough weight to get the formula conversion factor. Vendor reference page, undated."
+  },
+  {
+    "n": 9,
+    "title": "Safe Food Handling",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/buy-store-serve-safe-food/safe-food-handling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Safe minimum internal temperatures (145F plus 3-minute rest for whole cuts, 160F ground meat and egg dishes, 165F poultry, leftovers and casseroles, fin fish 145F or opaque); fridge 40F or below; 2-hour rule (1 hour above 90F); page current as of 5 Mar 2024."
+  },
+  {
+    "n": 10,
+    "title": "Safer food, better business for caterers (full pack, PDF)",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://assets.publishing.service.gov.uk/media/69c5247ecdfd19de13d0f6ca/sfbb-caterers-pack-fixed_0_3.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch and read with pdftotext. Probe check at the thickest part; time and temperature pairs from 60C for 45 minutes to 80C for 6 seconds; hot holding 63C or above; chilled 8C or below; PPDS labelling required since October 2021."
+  },
+  {
+    "n": 11,
+    "title": "Allergen guidance for food businesses",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 14 allergens; PPDS label must show the name and full ingredients with allergens emphasised; free-from claims need strict controls; vegan meals may contain traces of animal allergens. Guidance updated 17 Jul 2026 (publication page)."
+  },
+  {
+    "n": 12,
+    "title": "Food Allergies",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nine major food allergens including sesame; FASTER Act signed 23 Apr 2021, effective 1 Jan 2023; page current as of 3 Nov 2026."
+  },
+  {
+    "n": 13,
+    "title": "Regulation (EU) No 1169/2011 on the provision of food information to consumers",
+    "publisher": "EUR-Lex (Publications Office of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Annex II list of 14; Article 21 allergen emphasis; Article 30 mandatory nutrition declaration (energy, fat, saturates, carbohydrate, sugars, protein, salt); Annex V point 19 exemption for small quantities supplied directly; Article 55 dates."
+  },
+  {
+    "n": 14,
+    "title": "Changes to the Nutrition Facts Label",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/changes-nutrition-facts-label",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Added sugars; vitamin D and potassium required; serving sizes updated; dual-column labels; compliance 1 Jan 2020 ($10 million or more in food sales) and 1 Jan 2021 (smaller)."
+  },
+  {
+    "n": 15,
+    "title": "Small Business Nutrition Labeling Exemption",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/labeling-nutrition-guidance-documents-regulatory-information/small-business-nutrition-labeling-exemption",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Low-volume exemption: fewer than 100 FTE employees and fewer than 100,000 units a year, annual notice; products with nutrition claims do not qualify; retailer exemptions; web notices through FDA Industry Systems from 5 Oct 2026; page current as of 5 Oct 2026."
+  },
+  {
+    "n": 16,
+    "title": "Menu Labeling Requirements",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/menu-labeling-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chains of 20 or more locations show calories on menus and boards and give written nutrition information on request; compliance 7 May 2018; page current as of 13 Dec 2023."
+  },
+  {
+    "n": 17,
+    "title": "Use of the \"Healthy\" Claim on Food Labeling",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/use-healthy-claim-food-labeling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final rule announced 19 Dec 2024; criteria based on food group equivalents and limits on added sugars, sodium and saturated fat, tied to the RACC; symbol not finalised; page current as of 16 Jan 2025. Effective and compliance dates not on the page."
+  },
+  {
+    "n": 18,
+    "title": "Technical guidance on nutrition labelling (PDF)",
+    "publisher": "Department of Health and Social Care (GOV.UK)",
+    "url": "https://assets.publishing.service.gov.uk/media/5a8010d8e5274a2e87db7a62/Nutrition_Technical_Guidance.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch and read with pdftotext. Order energy, fat, saturates, carbohydrate, sugars, protein, salt; per 100 g or 100 ml; Annex V point 19 read as micro businesses and local by county plus neighbouring counties or 30 miles; values from analysis, calculation or established data such as CoFID. Publication page last updated 3 Mar 2017."
+  },
+  {
+    "n": 19,
+    "title": "Food labelling: giving food information to consumers",
+    "publisher": "Defra and Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/food-labelling-giving-food-information-to-consumers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nutrition labelling compulsory on most prepacked foods since December 2016; QUID rules; applies to Great Britain; Northern Ireland follows EU rules; last updated 20 Sep 2022."
+  },
+  {
+    "n": 20,
+    "title": "Great Britain nutrition and health claims (NHC) register",
+    "publisher": "Department of Health and Social Care (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/great-britain-nutrition-and-health-claims-nhc-register",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Only authorised claims in the GB NHC register may be used in Great Britain; applies to England, Scotland and Wales; last updated 19 May 2026."
+  },
+  {
+    "n": 21,
+    "title": "Nutrition and health claims",
+    "publisher": "European Commission (Food Safety)",
+    "url": "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/nutrition-and-health-claims_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EC) 1924/2006 applies since 1 Jul 2007; claims must be clear, accurate and evidence-based; misleading claims prohibited; EU Register of claims."
+  },
+  {
+    "n": 22,
+    "title": "Composition of foods integrated dataset (CoFID)",
+    "publisher": "Public Health England (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. McCance and Widdowson's nutrient data on the UK food supply as one dataset; last updated 19 Mar 2021."
+  },
+  {
+    "n": 23,
+    "title": "FoodData Central",
+    "publisher": "US Department of Agriculture, Agricultural Research Service",
+    "url": "https://fdc.nal.usda.gov/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. USDA food composition database with Foundation Foods (updated April and October), SR Legacy (final 2018), FNDDS, Experimental and Branded Foods; public domain under CC0; API available."
+  },
+  {
+    "n": 24,
+    "title": "Recipe (Recipe, HowTo, ItemList) structured data",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/recipe",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Required name and image; recommended properties including recipeIngredient, recipeInstructions, times, recipeYield, nutrition.calories (needs recipeYield), aggregateRating, video; no step numbers in recipeInstructions; ItemList for carousels."
+  },
+  {
+    "n": 25,
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. People-first content; first-hand experience; no preferred word count; Who, How and Why questions including disclosing AI use where readers would wonder."
+  },
+  {
+    "n": 26,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Disclose free products, payment, free meals and affiliate commissions; clearly and in the post near the recommendation, not only in a bio or footer; platform tools may not be enough."
+  },
+  {
+    "n": 27,
+    "title": "Influencers' guide (summary page)",
+    "publisher": "Advertising Standards Authority and CAP",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fourth edition, page dated 23 Oct 2026; developed with the CMA; covers when content must be labelled as an ad, affiliate links and fake reviews after the DMCC Act. Summary page only; the full PDF was not read."
+  }
+]

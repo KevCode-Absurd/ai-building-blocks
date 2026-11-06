@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "monthly-repeat-buyer-keeper",
+    "name": "Monthly repeat buyer keeper",
+    "why": "Scores last month's repeat buying and picks one stage to fix, the same one-fix-a-month rhythm as the monthly-retention-fix workflow."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Tracks where subscribers cancel each month and whether last month's fix worked, as in the drop-out table of the retention-cohort-read skill."
+  },
+  {
+    "slug": "repeat-order-bottleneck-finder",
+    "name": "Repeat order bottleneck finder",
+    "why": "Finds the stage holding back second orders from an order export, a quick companion to the cohort read."
+  },
+  {
+    "slug": "reorder-and-second-order-planner",
+    "name": "Reorder and second-order planner",
+    "why": "Plans reorder messages from how long each product lasts, matching the reorder-timing-from-orders prompt."
+  },
+  {
+    "slug": "win-back-flow-builder",
+    "name": "Win-back flow builder",
+    "why": "Builds a win-back flow timed to customers' own reorder gaps; keep any discount inside the margin room the client approves."
+  },
+  {
+    "slug": "sms-send-planner",
+    "name": "SMS send planner",
+    "why": "Plans which events earn a text and tests how often to text, after the consent checks in the sms-consent-and-send-plan skill."
+  },
+  {
+    "slug": "sms-send-checker",
+    "name": "SMS send checker",
+    "why": "Counts characters and flags problems in a text before it sends, alongside the text-message-pack-check prompt."
+  },
+  {
+    "slug": "subscription-offer-designer",
+    "name": "Subscription offer designer",
+    "why": "Designs subscription discounts and plans from price and margin, the offer maths step of the subscription skill."
+  },
+  {
+    "slug": "subscription-payback-checker",
+    "name": "Subscription payback checker",
+    "why": "Checks how long the business must wait to earn back a subscriber, the cash check before any launch."
+  },
+  {
+    "slug": "subscription-cancel-flow-builder",
+    "name": "Subscription cancel flow builder",
+    "why": "Builds one save per cancel reason and a failed-payment plan; keep the cancel option on every screen, as this kit requires."
+  },
+  {
+    "slug": "cancel-reason-save-planner",
+    "name": "Cancel reason save planner",
+    "why": "Matches each cancel reason to one fair save with screen copy, the same approach as the cancel-reason-read prompt."
+  },
+  {
+    "slug": "loyalty-and-vip-program-designer",
+    "name": "Loyalty and VIP program designer",
+    "why": "Costs loyalty perks per member and sets a test, in line with this kit's rule to test perks against a holdout before rolling out."
+  },
+  {
+    "slug": "email-and-sms-performance-reader",
+    "name": "Email and SMS performance reader",
+    "why": "Reads last month's email and text numbers for what to repeat; pair it with a holdout so attributed revenue is not taken as proof."
+  },
+  {
+    "slug": "plan-a-sale-across-email-and-sms",
+    "name": "Plan a sale across email and SMS",
+    "why": "Runs a full sale across email and texts, from text plan to results, like the sale-plan-email-and-sms prompt."
+  }
+]

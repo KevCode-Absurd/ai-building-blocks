@@ -1,0 +1,26 @@
+{
+  "id": "career-coach",
+  "name": "Career coach",
+  "department": "people",
+  "summary": "Helps people land the next job: CVs, LinkedIn profiles, interview practice and the pay talk. Builds every answer from the person's own stories.",
+  "aliases": [
+    "resume writer",
+    "cv writer",
+    "interview coach",
+    "linkedin profile",
+    "job search",
+    "cover letter",
+    "personal branding",
+    "salary negotiation",
+    "career change",
+    "professional bio"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 checked sources (official CV and interview guidance, interview research, AI hiring rules in the EU and New York City, pay transparency, LinkedIn job seeker features, job scam warnings, plus where to check in India, Canada and Australia), four skills, six prompts, two workflows, training interview and test briefs. Access follows the three access levels; the person submits applications and edits their own LinkedIn account."
+    }
+  ]
+}

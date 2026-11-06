@@ -1,0 +1,26 @@
+{
+  "id": "prompt-engineer",
+  "name": "Prompt engineer",
+  "department": "data",
+  "summary": "Writes and tests prompts that get reliable results from AI tools, from pulling data out of documents to brand-safe images.",
+  "aliases": [
+    "prompt engineering",
+    "prompt design",
+    "ai prompts",
+    "midjourney prompts",
+    "data extraction",
+    "json schema",
+    "prompt testing",
+    "system prompt",
+    "ai image prompts",
+    "prompt injection"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, model and API facts dated and taken only from Anthropic, OpenAI and Google docs, prompt injection from OWASP; four skills (prompt writing, extraction prompt and schema, test set and fix, image and video prompt sets); six prompts; two workflows; training interview and test briefs."
+    }
+  ]
+}

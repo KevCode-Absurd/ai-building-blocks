@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Runs a quarterly gap check with fixes ranked and statement notes kept current, the same loop as the quarterly accessibility check workflow."
+  },
+  {
+    "slug": "website-quality-keeper",
+    "name": "Website quality keeper",
+    "why": "A weekly site check that catches pages that got harder to use between quarterly accessibility checks."
+  },
+  {
+    "slug": "powerpoint-accessibility-reviewer",
+    "name": "PowerPoint accessibility reviewer",
+    "why": "Fixes slide titles, reading order and alt text in decks, the slide version of the accessible documents skill."
+  },
+  {
+    "slug": "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+    "name": "Prepare a PowerPoint deck for presenting and sharing",
+    "why": "Takes a deck from draft to a shareable file, with the accessibility steps a client can run before sending."
+  },
+  {
+    "slug": "error-message-rewriter",
+    "name": "Error message rewriter",
+    "why": "Rewrites form errors in plain words with what to do next, a common audit fix for forms."
+  },
+  {
+    "slug": "give-developers-a-complete-component-brief",
+    "name": "Give developers a complete component brief",
+    "why": "Writes a component brief with every state, where the keyboard and screen reader behaviour from the component fixes skill belongs."
+  },
+  {
+    "slug": "store-image-prep-checker",
+    "name": "Store image prep checker",
+    "why": "Prepares shop images before upload, including alt text, to pair with the alt text batch prompt."
+  },
+  {
+    "slug": "branded-video-captions",
+    "name": "Video caption maker in your brand font",
+    "why": "Builds timed captions and a subtitle file for video ads, the captions step in the media descriptions skill."
+  },
+  {
+    "slug": "new-screen-design-reviewer",
+    "name": "New screen design reviewer",
+    "why": "Checks new screens before they ship, the right moment to catch focus, contrast and label problems."
+  },
+  {
+    "slug": "check-a-prototype-before-user-testing",
+    "name": "Check a prototype before user testing",
+    "why": "Gets a prototype ready for sessions, including sessions with assistive technology users."
+  }
+]

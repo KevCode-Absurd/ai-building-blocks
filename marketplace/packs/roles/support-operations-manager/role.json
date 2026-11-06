@@ -1,0 +1,26 @@
+{
+  "id": "support-operations-manager",
+  "name": "Customer support operations manager",
+  "department": "customer-support",
+  "summary": "Sets up how a support team works: quality reviews, escalation rules and reports on what customers keep asking. Turns ticket data into fixes for the rest of the business.",
+  "aliases": [
+    "support manager",
+    "support qa",
+    "escalations",
+    "voice of customer",
+    "ticket analysis",
+    "service levels",
+    "help desk setup",
+    "sla",
+    "support staffing",
+    "support metrics"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 checked sources (Zendesk, Freshdesk and Intercom docs on routing, SLAs, automations, staffing, QA and help centres; AI disclosure under EU AI Act Article 50 and CMA guidance; complaint deadlines; data deletion), four skills, six prompts, three workflows, training interview and test briefs, with access levels 1 to 3."
+    }
+  ]
+}

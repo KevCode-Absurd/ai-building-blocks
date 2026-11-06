@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "shopify-theme-code-writer",
+    "name": "Shopify theme code writer",
+    "why": "Writes installable section code for a named theme, matching this kit's theme-section-builder skill."
+  },
+  {
+    "slug": "leftover-app-code-finder",
+    "name": "Leftover app code finder",
+    "why": "Finds scripts and snippets left by removed apps and the lines to delete."
+  },
+  {
+    "slug": "hero-image-loading-fixer",
+    "name": "Hero image loading fixer",
+    "why": "Sets the top image to load first with code, the most common LCP fix on Shopify themes."
+  },
+  {
+    "slug": "theme-script-and-style-loader",
+    "name": "Theme script and style loader",
+    "why": "Defers or delays scripts in theme.liquid and unblocks styles and fonts."
+  },
+  {
+    "slug": "app-script-auditor",
+    "name": "App script auditor",
+    "why": "Marks each app keep, remove or delay from the app list and a speed report."
+  },
+  {
+    "slug": "speed-fix-ranker",
+    "name": "Speed fix ranker",
+    "why": "Ranks speed fixes by orders gained per hour of work, the payback order used here."
+  },
+  {
+    "slug": "store-speed-report-reader",
+    "name": "Store speed report reader",
+    "why": "Reads a PageSpeed report into field results per page and three fixes."
+  },
+  {
+    "slug": "monthly-store-speed-keeper",
+    "name": "Monthly store speed keeper",
+    "why": "Runs the monthly comparison of speed reports and new app scripts."
+  },
+  {
+    "slug": "pre-launch-store-checker",
+    "name": "Pre-launch store checker",
+    "why": "Checks go-live readiness and re-checks after each fix until a clear go or no-go."
+  },
+  {
+    "slug": "speed-budget-and-sale-check",
+    "name": "Speed budget and sale check",
+    "why": "Sets a speed budget, test routine and pre-sale checklist before a big sale."
+  },
+  {
+    "slug": "shopify-store-setup-planner",
+    "name": "Shopify store setup planner",
+    "why": "Plans payments, domain and build order for a new store before the page plan."
+  },
+  {
+    "slug": "shopify-theme-picker",
+    "name": "Shopify theme picker",
+    "why": "Shortlists themes against the store's must-haves before any custom code is planned."
+  },
+  {
+    "slug": "shopify-markets-setup-planner",
+    "name": "Shopify Markets setup planner",
+    "why": "Plans market groups, currencies, languages and tax settings for stores selling abroad."
+  },
+  {
+    "slug": "shopify-landing-page-builder",
+    "name": "Shopify landing page builder",
+    "why": "Turns finished page copy into Shopify files with install steps."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Ranks accessibility gaps each quarter and checks last quarter's fixes."
+  }
+]

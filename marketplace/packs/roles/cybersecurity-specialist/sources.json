@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Cybersecurity Framework",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "url": "https://www.nist.gov/cyberframework",
+    "checked": "2026-11-06",
+    "supports": "CSF hub with profiles, quick-start guides and informative references; 'Celebrating Two Years of CSF 2.0' on 24 February 2026; final CSF 2.0 Informative References Quick-Start Guide (SP 1347); no CSF 2.1 announced. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "NIST releases version 2.0 of landmark Cybersecurity Framework",
+    "publisher": "NIST",
+    "url": "https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework",
+    "checked": "2026-11-06",
+    "supports": "Released 26 February 2024; six functions with the new Govern function; scope widened to all organisations from small schools and nonprofits to large firms; quick-start guides for small businesses and others; reference catalogue mapping to more than 50 documents. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "Quick-Start Guides (CSF 2.0)",
+    "publisher": "NIST",
+    "url": "https://www.nist.gov/quick-start-guides",
+    "checked": "2026-11-06",
+    "supports": "CSF 2.0 quick-start guides including Small Business (SP 1300), Organizational Profiles (SP 1301), Tiers (SP 1302), Enterprise Risk Management (SP 1303) and Cybersecurity Supply Chain Risk Management (SP 1305). Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management, a CSF 2.0 Community Profile",
+    "publisher": "NIST Computer Security Resource Center",
+    "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "checked": "2026-11-06",
+    "supports": "Published April 2025; builds incident response into cybersecurity risk management using CSF 2.0; supersedes SP 800-61 Rev. 2 (August 2012). Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "IR 8286 Rev. 1: Integrating Cybersecurity and Enterprise Risk Management (ERM)",
+    "publisher": "NIST Computer Security Resource Center",
+    "url": "https://csrc.nist.gov/pubs/ir/8286/r1/final",
+    "checked": "2026-11-06",
+    "supports": "Published 18 December 2025, superseding IR 8286 (October 2020); guidance on using risk registers to record cybersecurity risk and roll it up to enterprise risk management; companion IR 8286C Rev. 1 on integrating registers. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "SP 800-50 Rev. 1: Building a Cybersecurity and Privacy Learning Program",
+    "publisher": "NIST Computer Security Resource Center",
+    "url": "https://csrc.nist.gov/pubs/sp/800/50/r1/final",
+    "checked": "2026-11-06",
+    "supports": "Published September 2024; life-cycle approach to awareness, training and education for organisations large and small; goal of behaviour change and a security culture; metrics for improvement; supersedes SP 800-50 (2003) and SP 800-16 (1998). Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Small Business Cybersecurity Corner",
+    "publisher": "NIST",
+    "url": "https://www.nist.gov/itl/smallbusinesscyber",
+    "checked": "2026-11-06",
+    "supports": "Free small business guidance by topic (ransomware, phishing, MFA, supply chain, solopreneurs) and the Small Business Cybersecurity Support Programs Finder published 5 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Phishing Guidance: Stopping the Attack Cycle at Phase One",
+    "publisher": "CISA, NSA, FBI and MS-ISAC",
+    "url": "https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one",
+    "checked": "2026-11-06",
+    "supports": "Joint guide published 18 October 2023 (PDF updated March 2025) on common phishing techniques, for network defenders, software makers and, in a dedicated section, small and medium-sized businesses. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Secure Our World",
+    "publisher": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "url": "https://www.cisa.gov/secure-our-world",
+    "checked": "2026-11-06",
+    "supports": "Four core steps for everyone (avoid and report phishing, strong passwords, MFA and a password manager, update software); small business resources; Cybersecurity Awareness Month 2026 toolkit. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "Cyber Hygiene Services",
+    "publisher": "CISA",
+    "url": "https://www.cisa.gov/cyber-hygiene-services",
+    "checked": "2026-11-06",
+    "supports": "No-cost vulnerability scanning of internet-facing assets and web application scanning for US government bodies and public and private critical infrastructure organisations; started by the organisation's own email request. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Scattered Spider (advisory AA23-320A)",
+    "publisher": "CISA, FBI and partners including the UK NCSC",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a",
+    "checked": "2026-11-06",
+    "supports": "Published 16 November 2023, revised 29 July 2025: help desk social engineering to reset passwords or move MFA, impersonating IT staff, SIM swapping, MFA fatigue, voice phishing; mitigations include phishing-resistant MFA (FIDO/WebAuthn or PKI), offline encrypted tested backups and application allowlisting. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Phishing attacks: defending your organisation",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/guidance/phishing",
+    "checked": "2026-11-06",
+    "supports": "Four layers of defence; DMARC, SPF and DKIM; verify payment changes by a second channel; training as one layer; no blame and easy reporting; simulations criticised as a primary defence, check with HR before any sanction, reward reporting. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "Model Context Protocol (MCP)",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Official Stripe MCP server at mcp.stripe.com with OAuth or agent API keys; refunds marked for human confirmation in the Dashboard; from December 2026 the server stops accepting full-access secret keys and restricted keys without the Agent tag (migrate by 30 November 2026); advice to turn on tool approval and beware prompt injection. Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "Small Business Guide: Response and Recovery",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/collection/small-business-guidance--response-and-recovery",
+    "checked": "2026-11-06",
+    "supports": "Definition of a cyber incident; for a live attack call 0300 123 2040 (24/7), reports go to the Report Fraud Analysis Service; report significant attacks to the NCSC; free Cyber Action Toolkit for sole traders and small businesses. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Cyber Essentials: overview",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "checked": "2026-11-06",
+    "supports": "Five technical controls; Cyber Essentials Plus adds independent testing; certification through IASME, from £320 plus VAT by size; organisations under £20m turnover certifying the whole organisation get cyber liability insurance with incident response support. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "Reporting a scam email",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/collection/phishing-scams/report-scam-email",
+    "checked": "2026-11-06",
+    "supports": "Forward suspicious emails to the NCSC, do not click links, report suspicious websites by form; 454.8k scam URLs removed as of July 2026. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "Exercise in a Box",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/information/exercise-in-a-box",
+    "checked": "2026-11-06",
+    "supports": "Free online exercises for small and medium organisations: micro and tabletop exercises, 20 exercises across 12 topics including ransomware, phishing, supply chain and passwords. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "Incident affecting ASOS customers",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/news/incident-affecting-asos-customers",
+    "checked": "2026-11-06",
+    "supports": "Published 6 October 2026: some ASOS customers received an unauthorised push notification; ASOS said names and contact details were accessed and did not believe card data or passwords were affected; customers told to assume they are affected and watch for scam messages. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "When cyber attacks happen: helping organisations recover",
+    "publisher": "UK National Cyber Security Centre (NCSC blog)",
+    "url": "https://www.ncsc.gov.uk/blogs/when-cyber-attacks-happen-helping-organisations-recover",
+    "checked": "2026-11-06",
+    "supports": "Published 28 July 2026: response and recovery in three stages (first hours and days, a recovery programme to minimum viable operations, longer-term rebuild); use an NCSC-assured incident response firm; practise failover, shutdown and restart, and rebuilding from backups. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Cyber security breaches survey 2025/2026",
+    "publisher": "Department for Science, Innovation and Technology (GOV.UK, official statistics)",
+    "url": "https://www.gov.uk/government/statistics/cyber-security-breaches-survey-20252026/cyber-security-breaches-survey-20252026",
+    "checked": "2026-11-06",
+    "supports": "Published 30 April 2026; fieldwork August to December 2025; 2,112 businesses and 1,085 charities: 43% of businesses and 28% of charities had a breach or attack in 12 months; phishing 38% of businesses; formal incident response plan 25%; risk assessment 30%; board member responsible 31%; Cyber Essentials held by 5%; prompted awareness 17%; any cyber insurance 47%. Opened with WebFetch (two reads)."
+  },
+  {
+    "n": 21,
+    "title": "Internet Crime Report 2025",
+    "publisher": "FBI Internet Crime Complaint Center (IC3)",
+    "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+    "checked": "2026-11-06",
+    "supports": "1,008,597 complaints and $20.877 billion reported losses in 2025; business email compromise losses $3,046,598,558; more than 3,600 ransomware complaints; businesses reported over $30 million in BEC losses involving AI. PDF downloaded via WebFetch and converted to text."
+  },
+  {
+    "n": 22,
+    "title": "Cybersecurity for Small Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity",
+    "checked": "2026-11-06",
+    "supports": "Dated September 2025: basics, NIST CSF functions, email authentication (SPF, DKIM, DMARC), vendor security, cyber insurance, phishing, ransomware, business email imposters and tech support scams; reporting routes ReportFraud.ftc.gov and IC3.gov. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "FTC Safeguards Rule: What Your Business Needs to Know",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+    "checked": "2026-11-06",
+    "supports": "Covers non-bank financial institutions such as tax preparers and mortgage brokers; written security programme with a Qualified Individual, written risk assessment, MFA, training, written incident response plan; some provisions do not apply under 5,000 consumers; notify the FTC within 30 days of discovering a notification event affecting 500 or more consumers, in effect since May 2024. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "NIS2 Directive: securing network and information systems",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive",
+    "checked": "2026-11-06",
+    "supports": "Transposition deadline 17 October 2024; 18 sectors; rules apply mainly to medium and large entities; management can be held accountable; targeted amendments proposed 20 January 2026, estimated to ease compliance for 28,700 companies including 6,200 micro and small; page updated 2 July 2026. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "Data breaches (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-breaches_en",
+    "checked": "2026-11-06",
+    "supports": "Notify the data protection authority within 72 hours of becoming aware unless the breach is unlikely to pose a risk; tell individuals without undue delay if high risk; record every breach; processors notify controllers without undue delay. Opened with WebFetch."
+  },
+  {
+    "n": 26,
+    "title": "FAQ clarifies new SAQ A eligibility criteria for e-commerce merchants",
+    "publisher": "PCI Security Standards Council (blog)",
+    "url": "https://blog.pcisecuritystandards.org/faq-clarifies-new-saq-a-eligibility-criteria-for-e-commerce-merchants",
+    "checked": "2026-11-06",
+    "supports": "Posted 28 February 2025: from 1 April 2025, merchants that embed a provider's payment page or form must confirm their site is not susceptible to script attacks, using techniques such as requirements 6.4.3 and 11.6.1 or written confirmation from a PCI DSS compliant provider (FAQ 1588); redirect and fully outsourced merchants are outside this criterion. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "Protect yourself from card testing",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/disputes/prevention/card-testing",
+    "checked": "2026-11-06",
+    "supports": "How card testing works; signs (spike in failed payments and 402 errors, small payments with nonsense names); refund fraudulent payments to avoid disputes; CAPTCHA, login before payment, rate limits, Radar rules; keep secret keys safe. Opened with WebFetch."
+  },
+  {
+    "n": 28,
+    "title": "Fraud analysis",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/orders/fraud-analysis",
+    "checked": "2026-11-06",
+    "supports": "Low, medium or high fraud recommendations; indicators on Basic and higher, recommendations on Grow and higher or with Shopify Payments; manual capture to review before taking payment; temporary IP blocklist after many orders or failed payments from one IP. Opened with WebFetch."
+  },
+  {
+    "n": 29,
+    "title": "Card testing",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/payments/shopify-payments/fraud-prevention/card-testing",
+    "checked": "2026-11-06",
+    "supports": "Card testing runs many small payment attempts or saves cards without buying; Shopify Payments has card testing protection at checkout; cancel high-risk orders before fulfilment (a bank can still file a chargeback), manual capture, Shopify Flow, AVS and CVV filters and the Fraud Control app. Opened with WebFetch."
+  },
+  {
+    "n": 30,
+    "title": "Two-step authentication",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/your-account/account-security/two-step-authentication",
+    "checked": "2026-11-06",
+    "supports": "Authenticator app or security key; SMS cannot be set up as a new method; staff set up their own two-step authentication and owners cannot turn it on for them, except Shopify Plus, which can require a secure sign-in method. Opened with WebFetch."
+  }
+]

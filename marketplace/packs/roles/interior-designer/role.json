@@ -1,0 +1,26 @@
+{
+  "id": "interior-designer",
+  "name": "Interior designer",
+  "department": "design",
+  "summary": "Plans layouts, lighting, colour and displays for small shops, cafes, salons and holiday lets on a tight budget. Makes spaces people want to step into.",
+  "aliases": [
+    "interior design",
+    "visual merchandising",
+    "shop window display",
+    "space planning",
+    "retail display",
+    "room styling",
+    "cafe layout",
+    "lighting plan",
+    "holiday let styling",
+    "shop refit"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: space planning with ADA 2010 Standards and UK Approved Document M clearances, OSHA and UK fire safety basics, layered lighting with HSE HSG38, colour contrast, window and display plans, holiday let fire safety, furniture recalls, SketchUp and floor plan tools, budgets and order of work, when to ask building control, and access levels 1 to 3, with 27 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CAN-SPAM covers all commercial email including B2B; honour opt-outs within 10 business days; penalty up to $53,088 per email (January 2024 figure). The guide addresses email only and says nothing about text messages."
+  },
+  {
+    "n": 2,
+    "title": "47 CFR 64.1200, Delivery restrictions (copy of the regulation text)",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/47/64.1200",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A secondary copy of the regulation, used because the official eCFR page redirects automated requests to a block page. Prior express written consent for automated telemarketing calls and texts to mobiles and its definition; revocation by any reasonable means including STOP, QUIT, END, REVOKE, OPT OUT, CANCEL, UNSUBSCRIBE, honoured within 10 business days; one confirmation text, presumed within consent if sent within five minutes; no telephone solicitations before 8 a.m. or after 9 p.m. local time; do-not-call rules extend to wireless numbers. The page links an amendment published at 91 FR 67219 on 26 Oct 2026 that could not be opened."
+  },
+  {
+    "n": 3,
+    "title": "Rules and Regulations Implementing the TCPA, Report and Order and FNPRM (FCC 24-24)",
+    "publisher": "Federal Communications Commission",
+    "url": "https://docs.fcc.gov/public/attachments/FCC-24-24A1.txt",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 15 Feb 2024, released 16 Feb 2024. Revocation in any reasonable manner; per se reasonable reply words; no exclusive revocation method; senders that cannot take replies must say so and offer other ways; honour within 10 business days; one confirmation text without marketing; revocation by text also covers calls."
+  },
+  {
+    "n": 4,
+    "title": "April 11 SMS opt-out compliance change",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/35575786638107",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 7 Jul 2025). Vendor summary: the FCC opt-out rules took effect 11 April 2025; Klaviyo added REVOKE and OPT OUT keywords and on-by-default unsubscribe detection for US numbers."
+  },
+  {
+    "n": 5,
+    "title": "Understanding US SMS compliance laws",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/360035055312",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 10 Sep 2026). Vendor summary: express written consent covering recurring marketing; email consent is not SMS consent and vice versa; consent cannot be shared across brands; identify the company; opt-outs by any channel within 10 business days; some states have stricter hours; CTIA has no legal power but carriers can suspend; SHAFT content restricted; $500 per violation, up to three times for knowing or wilful violations."
+  },
+  {
+    "n": 6,
+    "title": "Understanding State Laws Limiting Frequency of Marketing Text Messages",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/44447515845019",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 15 Jan 2026). Vendor summary: Florida, Oklahoma, Oregon and Maryland limit promotional texts to 3 per recipient in a rolling 24 hours, counting campaigns and flows; transactional texts excluded. No effective dates given."
+  },
+  {
+    "n": 7,
+    "title": "Understanding US guidelines for SMS cart abandonment flows",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/4404189657755",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 23 Jul 2025). Carrier rules as summarised by Klaviyo: double opt-in before cart texts; one SMS per recipient in the flow; sent within 48 hours; sign-up wording must mention cart reminders; no payment taken by text."
+  },
+  {
+    "n": 8,
+    "title": "Understanding SMS consent collection",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/360035056972",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 21 Oct 2026). SMS consent collected separately from email, optional, never a condition of purchase; disclosure above the checkbox; double opt-in recommended; purchased or lead-generation lists not valid consent; resubscribe rules for STOP on toll-free numbers."
+  },
+  {
+    "n": 9,
+    "title": "A2P 10DLC",
+    "publisher": "Twilio Docs",
+    "url": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dateModified 2026-10-30). Anyone sending application-to-person SMS or MMS over a US 10-digit long code must register a Brand and a Campaign describing purpose, opt-in, opt-out and help; unregistered traffic incurs extra carrier fees; toll-free and short codes are separate routes."
+  },
+  {
+    "n": 10,
+    "title": "Messaging Policy",
+    "publisher": "Twilio",
+    "url": "https://www.twilio.com/en-us/legal/messaging-policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Apr 2026). Consent per sender and per subject; promotional messages need prior express written consent; keep proof; first message includes Reply STOP or similar; one confirmation after opt-out; identify the sender; no snowshoeing."
+  },
+  {
+    "n": 11,
+    "title": "Marketing and advertising: the law, Direct marketing",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/marketing-advertising-law/direct-marketing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). UK marketing emails and texts need permission; recipients must be able to opt out, for example by texting STOP to a short number; messages must show who you are and that you are selling."
+  },
+  {
+    "n": 12,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations",
+    "publisher": "Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 27 Jun 2025). Charity soft opt-in for marketing emails and texts, extending the existing rule for similar goods and services sold to customers; opt-out at collection and later; communications count even if they do not connect; commencement in stages."
+  },
+  {
+    "n": 13,
+    "title": "Understanding how UK GDPR and PECR affect SMS",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/4404064992155",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 6 Oct 2025). Vendor summary used because the ICO site blocks automated fetches: active opt-in, separate per channel, not a condition of service; identify the sender by branded sender ID or name prefix; opt-out in every text; branded sender IDs cannot receive replies so need an unsubscribe link; keep consent records."
+  },
+  {
+    "n": 14,
+    "title": "Data protection and online privacy",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked by the EU on 05/08/2026). EU marketing emails need prior opt-in; a company may email its own customers about similar products; people can object at any time and the company must stop. The page covers email only."
+  },
+  {
+    "n": 15,
+    "title": "Consent under GDPR: when to act and what to do (summary)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/2026-04/edpb-summary-consent_en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PDF text extracted locally (dated April 2026). Four elements of valid consent (freely given, specific, informed, unambiguous); separate consents per purpose; silence, pre-ticked boxes or inactivity are not consent; withdrawing must be as easy as giving."
+  },
+  {
+    "n": 16,
+    "title": "La prospection commerciale par SMS/MMS",
+    "publisher": "Commission nationale de l’informatique et des libertés (CNIL)",
+    "url": "https://www.cnil.fr/fr/la-prospection-commerciale-par-sms-mms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 10 Jun 2026, in French). SMS marketing to individuals needs prior consent by a positive act; the customer exception covers only similar products from the same company after a real sale, not account creation alone; free and simple objection; each message must identify the sender."
+  },
+  {
+    "n": 17,
+    "title": "Understanding how GDPR affects SMS in Europe",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/18410569130779",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 1 Sep 2025). Vendor summary: double opt-in preferred in Germany, Austria and Switzerland; HELP and STOP plus local-language keywords such as HILFE and STOPP; quiet hours vary by country; France stricter (before 8 a.m., after 10 p.m., Sundays and public holidays), enforced by carriers."
+  },
+  {
+    "n": 18,
+    "title": "SMS marketing benchmarks",
+    "publisher": "Klaviyo",
+    "url": "https://www.klaviyo.com/products/sms-marketing/benchmarks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026 data from over 183,000 Klaviyo customers: campaign click rate 5.6% (top 10% 10.44%), flow 9.65% (top 10% 16.6%); order rate campaigns 0.27% (0.61%), flows 1.9% (3.92%). No data period stated."
+  },
+  {
+    "n": 19,
+    "title": "Email marketing benchmarks",
+    "publisher": "Klaviyo",
+    "url": "https://www.klaviyo.com/products/email-marketing/benchmarks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026: campaign click rate 1.69%, flow 5.58%; flows nearly 41% of email revenue from 5.3% of sends. The industry order-rate table conflicts with the page’s own flow claim, so only click rates are used."
+  },
+  {
+    "n": 20,
+    "title": "Understanding Klaviyo message attribution",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/1260804504250",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 10 Mar 2026). Last-touch attribution by default; 5-day lookback windows for email opens, email clicks and SMS clicks on new accounts; purchases outside the window not credited."
+  },
+  {
+    "n": 21,
+    "title": "Getting started with global holdout groups",
+    "publisher": "Klaviyo Help Center",
+    "url": "https://help.klaviyo.com/hc/en-us/articles/18138290642971",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 23 Sep 2025). Holdout groups withhold marketing to measure incremental lift; at least 400,000 profiles needed; about 5% suggested; run about 3 months; transactional flows exempt."
+  },
+  {
+    "n": 22,
+    "title": "Prescription for cutting costs",
+    "publisher": "Bain & Company",
+    "url": "https://www.bain.com/insights/prescription-for-cutting-costs-bain-brief/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fred Reichheld, 25 Oct 2001: building loyal relationships with the best customers is the biggest chance to contain costs; small gains in retention produce large profit increases. No exact figure on the page."
+  },
+  {
+    "n": 23,
+    "title": "\"Counting Your Customers\" the Easy Way: An Alternative to the Pareto/NBD Model",
+    "publisher": "Bruce Hardie (author’s site)",
+    "url": "https://www.brucehardie.com/papers/018/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fader, Hardie and Lee, Marketing Science 24(2), Spring 2005: the BG/NBD model predicts future buying for lifetime value work and can be fitted in Excel."
+  },
+  {
+    "n": 24,
+    "title": "Books",
+    "publisher": "Ehrenberg-Bass Institute for Marketing Science",
+    "url": "https://marketingscience.info/learn-with-us/books",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Byron Sharp, How Brands Grow (Oxford University Press, 2010), based on decades of research into laws of buying and brand performance."
+  },
+  {
+    "n": 25,
+    "title": "Negative Option Rule",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Click-to-cancel final rule announced 16 Oct 2024; 12 Feb 2026 Federal Register notice revising the rule to conform to federal court decisions; advance notice of proposed rulemaking published 13 Mar 2026, docket FTC-2026-0265."
+  },
+  {
+    "n": 26,
+    "title": "Attorney General Bonta issues consumer alert on California’s Automatic Renewal Law",
+    "publisher": "California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-california%E2%80%99s-automatic-renewal-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Alert of 4 Sep 2025 on the law as amended from 1 Jul 2025: express affirmative consent; online cancellation if enrolled online; yearly reminder; notice 7 to 30 days before an accepted fee change; notice 3 to 21 days before a trial longer than 31 days ends."
+  },
+  {
+    "n": 27,
+    "title": "Consultation on the implementation of the new subscription contracts regime",
+    "publisher": "Department for Business and Trade (GOV.UK)",
+    "url": "https://www.gov.uk/government/consultations/consultation-on-the-implementation-of-the-new-subscription-contracts-regime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Consultation 18 Nov 2024 to 10 Feb 2025; government response added 2 Apr 2026; secondary legislation to follow on clearer pre-contract information, reminders before renewals and straightforward ways to cancel; no start date on the page."
+  },
+  {
+    "n": 28,
+    "title": "Shopify Subscriptions: customer experience",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/purchase-options/subscriptions/shopify-subscriptions/customer-experience",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Customers can pause, skip or cancel from the Subscriptions tab of their customer account; Shopify Subscriptions emails customers 3 days before each recurring order is charged."
+  },
+  {
+    "n": 29,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207/unfair-commercial-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first 100,000 characters read). Guidance under the DMCC Act 2024, first published 4 Apr 2025, updated 18 Nov 2025: banned practice 7, falsely stating a product is available only for a limited time (resetting countdown example); misleading pop-up example on sales numbers; onerous or disproportionate steps to use rights as an aggressive practice, with a multi-click termination example."
+  },
+  {
+    "n": 30,
+    "title": "Unfair commercial practices",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-commercial-practices/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked by the EU on 28/04/2026). Misleading by action or omission is prohibited; claiming an offer is limited in time when it is not is unfair, with the example of a 24-hour discount that reappeared a week later."
+  }
+]

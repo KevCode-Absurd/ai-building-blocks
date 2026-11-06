@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "prepare-a-grant-spending-evidence-pack",
+    "name": "Prepare a grant spending evidence pack",
+    "why": "Builds the reconciled spending table and evidence gaps a funder report needs."
+  },
+  {
+    "slug": "grant-spending-evidence-review-assistant",
+    "name": "Grant spending evidence review assistant",
+    "why": "Checks grant spending against the award rules and budget before a report goes in."
+  },
+  {
+    "slug": "grant-restrictions-cash-reconciler",
+    "name": "Grant restrictions cash reconciler",
+    "why": "Splits bank cash into restricted grant money and free cash, so appeals never spend restricted funds twice."
+  },
+  {
+    "slug": "hand-over-a-restricted-fund-program",
+    "name": "Hand over a restricted fund program",
+    "why": "Keeps a restricted fund's rules and open decisions intact when a project changes hands."
+  },
+  {
+    "slug": "honest-appreciation-note-writer",
+    "name": "Honest appreciation note writer",
+    "why": "Writes a thank-you with one true detail and no ask, the core of donor stewardship."
+  },
+  {
+    "slug": "prepare-a-useful-customer-newsletter-issue",
+    "name": "Prepare a useful customer newsletter issue",
+    "why": "A starting point for supporter newsletters and impact updates with a pre-send checklist."
+  },
+  {
+    "slug": "plan-an-event-follow-up-that-earns-a-reply",
+    "name": "Plan an event follow up that earns a reply",
+    "why": "Turns gala or open-day notes into follow-ups grouped by what each guest asked for."
+  },
+  {
+    "slug": "direct-mail-package-reviewer",
+    "name": "Direct mail package reviewer",
+    "why": "Checks a postal appeal's envelope line and letter before it prints."
+  },
+  {
+    "slug": "story-email-writer",
+    "name": "Story email writer",
+    "why": "Drafts story-led emails from one true story, useful for the lead-in and update emails of an appeal."
+  },
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "Gets event and collection volunteers briefed on roles and rules before they fundraise."
+  }
+]

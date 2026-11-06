@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "[GA4] Event collection limits",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9267744",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no page date shown. No limit on distinct event names for web streams, 500 per app user for app streams; 25 parameters per event; event and parameter names 40 characters; parameter values 100 characters (page_location 1,000); 25 user properties; User-ID 256 characters."
+  },
+  {
+    "n": 2,
+    "title": "[GA4] Recommended events",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9267735",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommended event names for all properties (sign_up, login, search, share, generate_lead and others) and for online sales (view_item, add_to_cart, begin_checkout, purchase, refund and others); they are not sent automatically and should carry the prescribed parameters."
+  },
+  {
+    "n": 3,
+    "title": "[GA4] Analytics 360 versus standard properties",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/11202874",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard vs 360 limits: 25 vs 100 parameters per event; 50 vs 125 event-scoped custom dimensions; 30 vs 50 key events; retention up to 14 vs 50 months; BigQuery daily export 1M events vs billions; 360 billing starts with a 360 contract."
+  },
+  {
+    "n": 4,
+    "title": "[GA4] Funnel exploration",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9327974",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open vs closed funnels; up to 10 steps; 'directly' vs 'indirectly followed by'; Within time limit per step; breakdown by first value; next action shows top 5; trended funnel; users counted for their first sequence in the date range."
+  },
+  {
+    "n": 5,
+    "title": "[GA4] Cohort exploration",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9670133",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Inclusion and return criteria; daily, weekly (Sunday to Saturday) and monthly granularity; standard, rolling and cumulative calculations; maximum 60 cohorts; breakdown shows top 15 values; thresholding on demographic dimensions."
+  },
+  {
+    "n": 6,
+    "title": "[GA4] Data retention",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/7667196",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard properties keep user-level and event data for 2 or 14 months; 360 can keep event data 26, 38 or 50 months; the setting affects only explorations and funnel reports; shortening removes data at the next monthly deletion; 24-hour delay before a change applies."
+  },
+  {
+    "n": 7,
+    "title": "Best practices to avoid sending Personally Identifiable Information (PII)",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/6366371",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google forbids sending data it could use or recognise as PII; URLs, titles, search terms, custom dimensions, campaign parameters and User-ID are higher risk; data redaction removes emails on a best-effort basis (web streams); no location finer than 1 square mile."
+  },
+  {
+    "n": 8,
+    "title": "[GA4] BigQuery Export",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9358801",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard properties have a daily export limit of 1 million events; streaming export is best-effort with no completeness SLO; Fresh Daily is 360 only; query events_YYYYMMDD rather than the intraday table; exports can go to the free BigQuery sandbox within its limits."
+  },
+  {
+    "n": 9,
+    "title": "Consent mode overview",
+    "publisher": "Google for Developers, Tag Platform",
+    "url": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no date shown. Consent types ad_storage, ad_user_data, ad_personalization and analytics_storage; basic mode blocks tags until consent; advanced mode sends cookieless pings when consent is denied; behavioural modelling needs a data threshold."
+  },
+  {
+    "n": 10,
+    "title": "Google Analytics MCP server (googleanalytics/google-analytics-mcp)",
+    "publisher": "Google Analytics on GitHub",
+    "url": "https://github.com/googleanalytics/google-analytics-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server under the googleanalytics GitHub organisation using the Admin and Data APIs; read-only by default with the analytics.readonly scope; run_report and run_funnel_report tools; write tools (annotations, custom dimensions, key events) only with --allow-write and analytics.edit. No version or date shown."
+  },
+  {
+    "n": 11,
+    "title": "Data planning playbook",
+    "publisher": "Amplitude Docs",
+    "url": "https://amplitude.com/docs/data/data-planning-playbook",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Taxonomy built in three steps from business objectives to user actions to events; event names are case-sensitive ('Song Played' vs 'song played'); one consistent syntax; one event with a property beats near-duplicate events; same property on every funnel step; event vs user properties."
+  },
+  {
+    "n": 12,
+    "title": "Build a funnel analysis",
+    "publisher": "Amplitude Docs",
+    "url": "https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-build",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Step order options: this order, any order and exact order (no other events between steps); exclusion of users who did an event between steps; segments apply to the starting event."
+  },
+  {
+    "n": 13,
+    "title": "Interpret your retention analysis",
+    "publisher": "Amplitude Docs",
+    "url": "https://amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-interpret",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. N-day (Return On), unbounded (Return On or After) and bracket (custom) retention; unbounded sits higher than N-day; day 0 is the start day at 100%; days can be 24-hour windows or calendar dates; up to 100 brackets."
+  },
+  {
+    "n": 14,
+    "title": "Amplitude MCP server",
+    "publisher": "Amplitude Docs",
+    "url": "https://amplitude.com/docs/amplitude-ai/amplitude-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OAuth over streamable HTTP; US and EU server URLs; reads and queries charts, funnels and retention; can create and edit charts, dashboards, cohorts, flags and taxonomy (deletes need two-step confirmation); per-project Use MCP (read) and (write) permissions; Enterprise included, Plus add-on, not on Free or Growth."
+  },
+  {
+    "n": 15,
+    "title": "Create a tracking plan",
+    "publisher": "Mixpanel Docs",
+    "url": "https://docs.mixpanel.com/docs/tracking-best-practices/tracking-plan",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A tracking plan is a living source of truth; method: define and prioritise KPIs, map each KPI to user flows, translate flows into events and properties; warns against tracking every possible action; templates by industry."
+  },
+  {
+    "n": 16,
+    "title": "Funnels: advanced",
+    "publisher": "Mixpanel Docs",
+    "url": "https://docs.mixpanel.com/docs/reports/funnels/funnels-advanced",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Default conversion window 7 days, maximum 366 days; uniques, totals and sessions counting; specific or any order; hold up to 3 properties constant; exclusion steps cannot be first or last; default evaluates only the first entry, optimised re-entry evaluates all."
+  },
+  {
+    "n": 17,
+    "title": "Retention",
+    "publisher": "Mixpanel Docs",
+    "url": "https://docs.mixpanel.com/docs/reports/retention",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 'On or After' is the default retention criterion, 'On' is stricter; rolling vs calendar day buckets; incomplete buckets marked with an asterisk; averages weighted and use completed periods only; day reports limited to 60 days; frequency view."
+  },
+  {
+    "n": 18,
+    "title": "Mixpanel MCP Server",
+    "publisher": "Mixpanel Docs",
+    "url": "https://docs.mixpanel.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OAuth sign-in and beta service accounts; US, EU and India endpoints; runs insights, funnels, flows and retention and can create and edit dashboards and Lexicon; not read-only; changes recorded in the audit log; enabled by default only for free and growth accounts created after 1 Aug 2026, otherwise an admin enables it; 600 requests per hour per user."
+  },
+  {
+    "n": 19,
+    "title": "Product analytics best practices",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/product-analytics/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lowercase snake_case, category:object_action names with present-tense verbs; is_/has_ booleans; no values in names; version events when flows change; consistent IDs and identify() timing; backend tracking for critical numbers; reverse proxy; out-of-order events; filter internal users."
+  },
+  {
+    "n": 20,
+    "title": "Funnels",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/product-analytics/funnels",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sequential, strict and any-order steps; conversion window; exclusion steps remove users from the whole funnel; breakdown attribution first touchpoint by default; correlation analysis; time to convert; trends with 'Hide incomplete periods'."
+  },
+  {
+    "n": 21,
+    "title": "Retention",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/product-analytics/retention",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Start and return events; recurring, first time and first ever occurrence; 'On' is the default returning criterion, 'On or after' is cumulative; weighted mean by default; percentages relative to period 0 by default or to the previous period."
+  },
+  {
+    "n": 22,
+    "title": "Experiments",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/experiments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Experiments are backed by feature flags that randomise users and record exposure; Bayesian or frequentist statistics; funnel, mean or ratio metrics from existing events; managed in the app, through an MCP client or the API."
+  },
+  {
+    "n": 23,
+    "title": "Data Collection Best Practices (Tracking Plan)",
+    "publisher": "Twilio Segment Docs",
+    "url": "https://www.twilio.com/docs/segment/protocols/tracking-plan/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (the segment.com copy returned 403 and was not bypassed). Object Action naming; Title Case event names and snake_case properties; never create event names or property keys dynamically; put detail in properties (Workspace Created with account_tier); start small and tie events to objectives."
+  },
+  {
+    "n": 24,
+    "title": "How Not To Run an A/B Test",
+    "publisher": "Evan Miller (author's site)",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 18 April 2010, calculator added May 2013. Stopping at the first significant reading gave 26.1% false positives in his simulation; fix the sample size in advance or use sequential or Bayesian designs; rule of thumb n = 16 sigma squared over delta squared."
+  },
+  {
+    "n": 25,
+    "title": "Diagnosing Sample Ratio Mismatch in A/B Testing",
+    "publisher": "Microsoft Research, Experimentation Platform",
+    "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 14 September 2020 (Fabijan and others). About 6% of Microsoft A/B tests have an SRM; chi-square test with a p-value threshold of 0.0005; causes at assignment, execution, log processing, analysis and experimenter stages; do not trust results until the cause is fixed."
+  },
+  {
+    "n": 26,
+    "title": "Organ donor registrations: trialling different approaches",
+    "publisher": "GOV.UK (Cabinet Office, Behavioural Insights Team, DHSC, DVLA, NHS Blood and Transplant)",
+    "url": "https://www.gov.uk/government/publications/organ-donor-registrations-trialling-different-approaches",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 24 December 2013. The linked PDF was read as text: eight variants for five weeks, 1,085,322 people observed; reciprocity message best; group photo variant lowered sign-ups; 1,203 more registrations than control during the trial, about 96,000 a year estimated."
+  },
+  {
+    "n": 27,
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 5(1)(b) purpose limitation, 5(1)(c) data minimisation ('adequate, relevant and limited to what is necessary'), 5(1)(e) storage limitation; Recital 78 lists minimising processing among data protection by design and by default measures."
+  },
+  {
+    "n": 28,
+    "title": "Sheet n°16: Use analytics on your websites and applications",
+    "publisher": "CNIL (French data protection authority)",
+    "url": "https://www.cnil.fr/en/sheet-ndeg16-use-analytics-your-websites-and-applications",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 11 June 2020. Analytics trackers need consent unless exempt; exemption conditions include audience measurement and A/B testing only, no cross-referencing, one publisher, last byte of IP removed, 13-month tracer lifetime; most large analytics offerings do not qualify; rules vary by EU country."
+  },
+  {
+    "n": 29,
+    "title": "FTC Enforcement Action to Bar GoodRx from Sharing Consumers' Sensitive Health Info for Advertising",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 1 February 2023: GoodRx shared medications and health conditions with Facebook, Google, Criteo and others since at least 2017; $1.5 million civil penalty under the Health Breach Notification Rule; proposed order bans health data sharing for advertising and sets retention limits."
+  },
+  {
+    "n": 30,
+    "title": "Model Context Protocol (MCP)",
+    "publisher": "PostHog Docs",
+    "url": "https://posthog.com/docs/model-context-protocol",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hosted server at mcp.posthog.com; routes to the US or EU region by login; covers analytics queries, SQL, feature flags, experiments and error tracking; free to call, but some tools use LLMs billed as PostHog AI spend. The page does not describe a read-only mode."
+  }
+]

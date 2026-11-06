@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "How to Raise Money (Paul Graham, September 2013)",
+    "publisher": "Paul Graham (author's site)",
+    "url": "https://paulgraham.com/fr.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Raise only when the money helps and investors will back you; be in fundraising mode fully or not at all; warm introductions; treat maybe as no until committed; talk to investors in parallel ordered by expected value; judge by actions; close committed money; avoid investors who won't lead; don't optimise for valuation; plan for different raise sizes."
+  },
+  {
+    "n": 2,
+    "title": "Default Alive or Default Dead? (Paul Graham, October 2015)",
+    "publisher": "Paul Graham (author's site)",
+    "url": "https://paulgraham.com/aord.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A startup is default alive if current spending and revenue growth reach profitability before cash runs out; founders should know which they are; hiring too fast is a leading cause of death for funded startups."
+  },
+  {
+    "n": 3,
+    "title": "Writing a Business Plan",
+    "publisher": "Sequoia Capital",
+    "url": "https://sequoiacap.com/article/writing-a-business-plan/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sequoia's outline: company purpose, problem, solution, why now, market potential, competition or alternatives, business model, team, financials, vision. Publication date not confirmed."
+  },
+  {
+    "n": 4,
+    "title": "Y Combinator documents: the SAFE",
+    "publisher": "Y Combinator",
+    "url": "https://www.ycombinator.com/documents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. YC created the SAFE in 2013 and made the post-money SAFE its standard in 2018; US forms: valuation cap with no discount, discount only, and uncapped MFN; an optional pro rata side letter; separate forms for Canada, Cayman Islands and Singapore, with advice to consult a lawyer licensed in that country."
+  },
+  {
+    "n": 5,
+    "title": "Post-Money SAFE User Guide",
+    "publisher": "Y Combinator",
+    "url": "https://bookface-static.ycombinator.com/assets/ycdc/SAFE%20User%20Guide-a47c6588327d73aa2799e61ed7c2cae9f1a0ee9acfa9c43b62039dc06e715832.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). Ownership sold on a post-money cap is the purchase amount divided by the post-money valuation cap; the cap is post all SAFE money and the existing options and pool, but not post the priced round money or the new pool; SAFE holders are diluted by the priced round; YC recommends keeping an accurate cap table of how SAFEs will convert; worked examples."
+  },
+  {
+    "n": 6,
+    "title": "Model Legal Documents",
+    "publisher": "National Venture Capital Association (NVCA)",
+    "url": "https://nvca.org/model-legal-documents/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Model financing documents with update dates: certificate of incorporation, stock purchase agreement and investors' rights agreement (October 2025), voting agreement (June 2026), right of first refusal and co-sale agreement (April 2026); intended as a starting point only and not legal advice."
+  },
+  {
+    "n": 7,
+    "title": "Q3 2026 PitchBook-NVCA Venture Monitor (data as of 30 September 2026)",
+    "publisher": "PitchBook and National Venture Capital Association",
+    "url": "https://nvca.org/wp-content/uploads/2026/10/Q3-2026-PitchBook-NVCA-Venture-Monitor.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). US data: AI accounted for 82.7% of 2026 deal value through Q3; Q3 deal value 98.4 billion dollars across an estimated 5,012 deals; deals of 100 million dollars or more were about 5% of Q3 deal count but 75% of Q3 deal value; through Q3, 34.3 billion dollars went into an estimated 8,625 first-time financings, above 2021's full-year record of 8,507."
+  },
+  {
+    "n": 8,
+    "title": "Exempt offerings",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 26 January 2026). The SEC's overview of exemptions: Rule 506(b), Rule 506(c), Rule 504 (up to 10 million dollars in 12 months), Regulation Crowdfunding (up to 5 million dollars through a registered broker-dealer or funding portal), Regulation A, intrastate offerings and Rule 701; Form D is filed on EDGAR within 15 days after the first sale."
+  },
+  {
+    "n": 9,
+    "title": "Private placements: Rule 506(b)",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/private-placements-rule-506b",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 21 September 2026). The SEC's description: no general solicitation or advertising; unlimited accredited investors; up to 35 non-accredited investors in any 90-day period, who must be sophisticated and receive disclosure; restricted securities; Form D; bad actor disqualification."
+  },
+  {
+    "n": 10,
+    "title": "General solicitation: Rule 506(c)",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/general-solicitation-rule-506c",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 17 March 2026). The SEC's description: issuers may broadly solicit and advertise if all purchasers are accredited investors and the issuer takes reasonable steps to verify that status; restricted securities; Form D; states may require notice filings."
+  },
+  {
+    "n": 11,
+    "title": "Filing a Form D notice",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/filing-form-d-notice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 17 March 2026). Form D is due within 15 days after the first sale (when the first investor is irrevocably committed), filed online through EDGAR; new filers need a Form ID; no SEC filing fee."
+  },
+  {
+    "n": 12,
+    "title": "Regulation Crowdfunding",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 24 April 2025). Up to 5 million dollars in 12 months; transactions online through an SEC-registered broker-dealer or funding portal; limits on how much non-accredited investors can invest; securities generally cannot be resold for one year; bad actor rules."
+  },
+  {
+    "n": 13,
+    "title": "EDGAR Full Text Search",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/edgar/search/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free search of the full text of electronic SEC filings since 2001, by keyword, company, person and filing type."
+  },
+  {
+    "n": 14,
+    "title": "Theranos, CEO Holmes, and Former President Balwani Charged With Massive Fraud (press release 2018-41, 14 March 2018)",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/news/press-release/2018-41",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The SEC charged that Theranos raised more than 700 million dollars from investors through false or misleading statements about its technology, business and financial performance, including projecting over 100 million dollars of 2014 revenue when actual 2014 revenue was a little over 100,000 dollars."
+  },
+  {
+    "n": 15,
+    "title": "Financial promotions and adverts",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/firms/financial-promotions-adverts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 28 May 2024). Financial promotions can be websites or social media posts; all must be clear, fair and not misleading; the FCA's Perimeter Guidance (PERG 8) holds the legal definition."
+  },
+  {
+    "n": 16,
+    "title": "Approving financial promotions",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/firms/financial-promotions-and-adverts/approving-financial-promotions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 28 May 2024). Under section 21 of FSMA a person must not communicate an invitation or inducement to engage in investment activity unless they are authorised, the promotion is approved by a suitably authorised approver, or an exemption in the Financial Promotion Order 2005 applies; approving firms need FCA permission."
+  },
+  {
+    "n": 17,
+    "title": "Venture capital schemes: apply to use the Seed Enterprise Investment Scheme",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/guidance/venture-capital-schemes-apply-to-use-the-seed-enterprise-investment-scheme",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 25 May 2023). SEIS gives tax reliefs to individual investors in new shares of early companies; a company can raise up to 250,000 pounds under SEIS including other de minimis aid in three years; gross assets up to 350,000 pounds and fewer than 25 full-time equivalent employees when shares are issued; advance assurance from HMRC is optional."
+  },
+  {
+    "n": 18,
+    "title": "Crowdfunding",
+    "publisher": "European Commission (Directorate-General for Financial Stability, Financial Services and Capital Markets Union)",
+    "url": "https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/financial-markets/crowdfunding_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The European Crowdfunding Service Providers Regulation applied from 10 November 2021; existing platforms had until 10 November 2023 to be authorised; authorised platforms can passport across the EU. No page date shown."
+  },
+  {
+    "n": 19,
+    "title": "Investment services and crowdfunding",
+    "publisher": "European Securities and Markets Authority (ESMA)",
+    "url": "https://www.esma.europa.eu/esmas-activities/investors-and-issuers/investment-services-and-crowdfunding",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EU) 2020/1503 sets uniform EU rules for investment-based and lending-based crowdfunding; the project owner prepares a key investment information sheet that the platform gives to prospective investors; platforms run a knowledge test and a loss simulation for non-sophisticated investors."
+  },
+  {
+    "n": 20,
+    "title": "Listing Act",
+    "publisher": "European Securities and Markets Authority (ESMA)",
+    "url": "https://www.esma.europa.eu/esmas-activities/listing-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Listing Act amends the Prospectus Regulation, the Market Abuse Regulation and MiFIR/MiFID II; Regulation (EU) 2024/2809 and Directives (EU) 2024/2810 and 2024/2811 were published in the Official Journal on 14 November 2024."
+  },
+  {
+    "n": 21,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business (August 2023, edited January 2024)",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The law makes no exception for business-to-business email; accurate headers, honest subject lines, a valid postal address and opt-outs honoured within 10 business days; penalties up to 53,088 dollars per violating email."
+  },
+  {
+    "n": 22,
+    "title": "Review of the Federal Reserve's Supervision and Regulation of Silicon Valley Bank (28 April 2023)",
+    "publisher": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). SVB's clients were concentrated in venture-backed technology and life sciences companies; about 94% of deposits were uninsured at year-end 2022; over 40 billion dollars left on 9 March 2023 and over 100 billion dollars more was expected the next day; the bank was closed on 10 March 2023."
+  },
+  {
+    "n": 23,
+    "title": "Understanding Deposit Insurance",
+    "publisher": "Federal Deposit Insurance Corporation",
+    "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last updated 1 April 2024). Deposits are insured to 250,000 dollars per depositor, per ownership category, at each insured bank; corporate accounts are a separate category."
+  },
+  {
+    "n": 24,
+    "title": "Pulley pricing (shutdown notice)",
+    "publisher": "Pulley",
+    "url": "https://pulley.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The vendor's own page states that Pulley is shutting down on 12/8/26 (8 December 2026 in US date format) and points to its FAQ and support email."
+  },
+  {
+    "n": 25,
+    "title": "Franchise tax calculation (Authorized Shares and Assumed Par Value Capital methods)",
+    "publisher": "Delaware Division of Corporations",
+    "url": "https://corp.delaware.gov/frtaxcalc/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Delaware corporations can calculate franchise tax by the Authorized Shares Method or the Assumed Par Value Capital Method and should use the method that gives the lesser tax; both have a 200,000 dollar maximum."
+  },
+  {
+    "n": 26,
+    "title": "Securities and Exchange Board of India",
+    "publisher": "SEBI",
+    "url": "https://www.sebi.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official site of India's securities regulator: where to check rules for raising capital and for funds."
+  },
+  {
+    "n": 27,
+    "title": "Startup India",
+    "publisher": "Department for Promotion of Industry and Internal Trade, Government of India",
+    "url": "https://www.startupindia.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official portal for DPIIT startup recognition and government funding schemes such as the Startup India Seed Fund Scheme and the Fund of Funds that invests through SEBI-registered funds."
+  },
+  {
+    "n": 28,
+    "title": "Private and early stage businesses",
+    "publisher": "British Columbia Securities Commission",
+    "url": "https://www.bcsc.bc.ca/industry/issuer-regulation/raising-capital/private-early-stage-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In Canada an issuer must file a prospectus or rely on an exemption; common exemptions under National Instrument 45-106 include private issuer, accredited investor, family, friends and business associates, and start-up crowdfunding; most require a report of exempt distribution. Provincial regulator; check your own province's regulator."
+  },
+  {
+    "n": 29,
+    "title": "Fundraising",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "url": "https://asic.gov.au/regulatory-resources/fundraising/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ASIC administers Chapter 6D of the Corporations Act 2001 on raising funds by issuing securities, with guidance on disclosure documents and advertising and cold-calling restrictions. No page date shown."
+  },
+  {
+    "n": 30,
+    "title": "Crowd-sourced funding",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "url": "https://asic.gov.au/regulatory-resources/financial-services/crowd-sourced-funding/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eligible companies can raise through a crowd-sourced funding platform run by an intermediary holding an Australian financial services licence authorised for CSF. No page date shown."
+  }
+]

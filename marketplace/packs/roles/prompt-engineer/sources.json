@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Prompting best practices",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+    "checked": "2026-11-06",
+    "supports": "Anthropic's guidance for current Claude models (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 and others): be clear and direct, explain why, 3 to 5 relevant and varied examples in example tags, consistent XML tags, a role in the system prompt, long documents at the top and the question at the end (up to 30% better in Anthropic's tests), quote-first grounding, say what to do rather than what not to do, prefilled final assistant turns not supported from Claude 4.6 models onward (400 error), adaptive thinking and effort. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "Models overview",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "checked": "2026-11-06",
+    "supports": "Current Claude models and IDs as of 6 November 2026: claude-fable-5-1, claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5; start with Opus 5.5; Haiku 5.5 for high-volume classification, extraction and routing; 1M-token context and 128K output; every model ID is a pinned snapshot; retirement not before September or October 2027; prices per million tokens. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "Structured outputs",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+    "checked": "2026-11-06",
+    "supports": "Claude structured outputs are generally available through output_config.format (JSON schema) and strict tool use; unsupported schema features (numeric ranges, string length limits, minItems above 1, recursive schemas, additionalProperties other than false) return a 400 error; refusals and max_tokens cut-offs can still break the schema. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "Mitigate jailbreaks and prompt injections",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+    "checked": "2026-11-06",
+    "supports": "Direct and indirect prompt injection as separate threat models; screening input with a small model and a structured verdict; putting untrusted content only in tool results, labelling its source, stating the policy in the system prompt, JSON-encoding untrusted strings, least privilege, screening tool output, red-teaming your own agent, and ongoing monitoring. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "Define success criteria and build evaluations",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+    "checked": "2026-11-06",
+    "supports": "Success criteria that are specific, measurable, achievable and relevant; task-specific test sets with edge cases; automate grading where possible; prefer many automatically graded cases to a few hand-graded ones; grading by exact match, similarity, or a separate model with a rubric. Opened with WebFetch (first part of the page)."
+  },
+  {
+    "n": 6,
+    "title": "Reduce hallucinations",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+    "checked": "2026-11-06",
+    "supports": "Let the model say it does not know; extract word-for-word quotes first on long documents; make each claim cite a quote and remove claims without one; best-of-N comparison; restrict answers to supplied documents; these reduce but do not remove hallucinations. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Prompt engineering",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+    "checked": "2026-11-06",
+    "supports": "OpenAI's guide as of 6 November 2026: instructions and developer messages take priority over user input; Markdown headers and XML tags; developer message sections (identity, instructions, examples, context); varied few-shot examples; static content first for caching; pin model snapshots and build evals; reasoning models take high-level goals while GPT models need precise instructions; gpt-6-astra as the default; reusable prompt objects deprecated, with v1/prompts shutting down on 30 November 2026. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Models",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/models",
+    "checked": "2026-11-06",
+    "supports": "OpenAI models as of 6 November 2026: gpt-6-astra, gpt-6.1-sol, gpt-6.1-terra and gpt-6-luna, each with a 1.05M-token context window and 128K output, with prices; image models GPT-Image-2.6 and GPT-Image-2.5 (Sunburst and Flare). Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Structured model outputs",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+    "checked": "2026-11-06",
+    "supports": "Structured Outputs with json_schema and strict true; JSON mode guarantees only valid JSON; every field must be required, with optional values as a null union; additionalProperties false; root must be an object; up to 5,000 properties, 10 nesting levels and 1,000 enum values; supported and unsupported keywords; refusals appear in a separate refusal field. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "Image generation",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/image-generation",
+    "checked": "2026-11-06",
+    "supports": "OpenAI image models gpt-image-2.5-sunburst and gpt-image-2.5-flare plus 2.6 variants; Image API generate and edit endpoints; recommended sizes; quality settings; masks are prompt-based and approximate; for edits say what changes and what stays; limitations (up to 2 minutes for complex prompts, imprecise text placement, recurring characters and brand elements may drift, hard layout control); moderation settings. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Video generation with Sora",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/video-generation",
+    "checked": "2026-11-06",
+    "supports": "The Sora 2 models and Videos API were shut down on 24 September 2026 with no one-to-one replacement; the guide is kept for reference; past prompting advice (shot type, subject, action, setting, lighting, camera movement) and restrictions (no real people, no copyrighted characters or music, input images with faces rejected). Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Prompt design strategies",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/prompting-strategies",
+    "checked": "2026-11-06",
+    "supports": "Google recommends always including few-shot examples, formatted identically and varied, without so many that the model overfits; constraints, response format and prefixes; breaking tasks into chained prompts; for Gemini 4 and Gemini 3.6 or later, custom temperature, top_p and top_k are ignored and will cause errors in a future release; for Gemini 3, put critical instructions first and long-context questions at the end. Opened with WebFetch (ai.google.dev/gemini-api/docs/prompting-strategies redirects here)."
+  },
+  {
+    "n": 13,
+    "title": "Structured output",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/structured-output",
+    "checked": "2026-11-06",
+    "supports": "Gemini JSON output with a schema; supported keywords (enum, format, minimum, maximum, items, minItems, maxItems); minLength, maxLength, uniqueItems and some others silently ignored; valid JSON does not mean correct values, so validate in code. Opened with WebFetch (ai.google.dev path redirects here)."
+  },
+  {
+    "n": 14,
+    "title": "Gemini models",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/models",
+    "checked": "2026-11-06",
+    "supports": "Gemini models as of 6 November 2026: gemini-4-argon, gemini-3.8-flash, gemini-3.6-flash, gemini-3.5-flash-lite and others; image models gemini-nano-banana-2.1, gemini-3.1-flash-image and gemini-3-pro-image; video model gemini-omni-1.2-flash; gemini-2.5-flash and gemini-2.5-pro deprecated and routed to newer models from 1 December 2026. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Image generation (Nano Banana)",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/image-generation",
+    "checked": "2026-11-06",
+    "supports": "Nano Banana 2.1 as the main image model; up to 14 reference images (10 object, 4 character) on 2.1 and 3.1 Flash; Pro takes 6 object, 5 character and 3 style references; best practices (be specific, give context and intent, iterate, step-by-step, semantic negative prompts, camera terms); edits that keep everything else the same; generate text first, then the image; all images carry a SynthID watermark. Opened with WebFetch (read in three parts)."
+  },
+  {
+    "n": 16,
+    "title": "Video generation",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/video",
+    "checked": "2026-11-06",
+    "supports": "Gemini Omni Flash (gemini-omni-1.2-flash) makes 3 to 15 second videos with native audio, keeps characters consistent across up to 6 reference images and supports multi-turn edits; Veo 3.1 preview models were scheduled to shut down on 22 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-06",
+    "supports": "The ten 2025 risks: prompt injection, sensitive information disclosure, supply chain, data and model poisoning, improper output handling, excessive agency, system prompt leakage, vector and embedding weaknesses, misinformation, unbounded consumption. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "LLM01:2025 Prompt Injection",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "checked": "2026-11-06",
+    "supports": "Definition of direct and indirect prompt injection, multimodal injection; mitigations (constrain behaviour, define and validate output formats in code, filter input and output, least privilege, human approval for high-risk actions, separate and label untrusted content, adversarial testing); RAG and fine-tuning do not fully fix it and foolproof prevention is unclear. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "LLM07:2025 System Prompt Leakage",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/",
+    "checked": "2026-11-06",
+    "supports": "A system prompt is not a secret or a security control; keep credentials, roles and permission rules out of it; enforce important behaviour and authorisation outside the model. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "LLM Prompt Injection Prevention Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Attack types (direct, indirect via pages, documents, emails and code comments, encoding and invisible text, multilingual, typoglycemia, best-of-N, HTML and Markdown injection, RAG poisoning, agent tool manipulation) and layered defences; input filters and labels are not a boundary on their own; no single control is enough. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "The lethal trifecta for AI agents (16 June 2025)",
+    "publisher": "Simon Willison's Weblog",
+    "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+    "checked": "2026-11-06",
+    "supports": "An agent that combines private data, exposure to untrusted content and a way to send data out can be tricked into leaking data; avoid combining all three. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (2022)",
+    "publisher": "Jason Wei, Xuezhi Wang, Dale Schuurmans et al., arXiv",
+    "url": "https://arxiv.org/abs/2201.11903",
+    "checked": "2026-11-06",
+    "supports": "Worked examples that show intermediate reasoning steps improve multi-step problem solving in sufficiently large models; eight such examples gave a 540B model state-of-the-art results on GSM8K. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Language Models are Few-Shot Learners (2020)",
+    "publisher": "Tom B. Brown, Benjamin Mann, Nick Ryder et al., arXiv",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "checked": "2026-11-06",
+    "supports": "GPT-3 (175B) showed that a large model can do new tasks from a few examples in the prompt without retraining, sometimes near fine-tuned results. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "Lost in the Middle: How Language Models Use Long Contexts (2023, TACL)",
+    "publisher": "Nelson F. Liu, Kevin Lin, John Hewitt et al., arXiv",
+    "url": "https://arxiv.org/abs/2307.03172",
+    "checked": "2026-11-06",
+    "supports": "Models used information best when it sat at the start or end of a long input and worse when it sat in the middle, even models built for long contexts. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques (2024, revised 2025)",
+    "publisher": "Sander Schulhoff, Michael Ilie et al., arXiv",
+    "url": "https://arxiv.org/abs/2406.06608",
+    "checked": "2026-11-06",
+    "supports": "A survey that defines 33 vocabulary terms and a taxonomy of 58 text prompting techniques and 40 for other modalities. Opened with WebFetch."
+  },
+  {
+    "n": 26,
+    "title": "JSON Schema specification",
+    "publisher": "JSON Schema (json-schema.org)",
+    "url": "https://json-schema.org/specification",
+    "checked": "2026-11-06",
+    "supports": "The current JSON Schema version is 2020-12, published as Core and Validation. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "AI Act, Article 50: Transparency obligations",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Providers of systems that generate synthetic images, video, audio or text must mark outputs in a machine-readable way; deployers who publish deepfake images, audio or video must disclose that they are AI-generated or manipulated, with a lighter rule for evidently artistic, satirical or fictional work. Opened with WebFetch."
+  },
+  {
+    "n": 28,
+    "title": "AI Act, Article 113: Entry into force and application",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+    "checked": "2026-11-06",
+    "supports": "The AI Act applies generally from 2 August 2026, with listed earlier and later dates for some chapters; Article 50 is not among the exceptions. Opened with WebFetch."
+  },
+  {
+    "n": 29,
+    "title": "CAP Code, Section 3: Misleading advertising",
+    "publisher": "Advertising Standards Authority / Committee of Advertising Practice (UK)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html",
+    "checked": "2026-11-06",
+    "supports": "UK rule 3.1: marketing must not materially mislead; rule 3.11: no exaggerating a product's capability or performance; the ASA judges the overall impression an ad creates. Opened with WebFetch."
+  },
+  {
+    "n": 30,
+    "title": "Advertising FAQs: A Guide for Small Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "US ads must be truthful, not misleading and backed by evidence before they run; the FTC looks at words, phrases and pictures to judge what an ad conveys. Opened with WebFetch."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "C4 model: Diagrams",
+    "publisher": "Simon Brown, c4model.com",
+    "url": "https://c4model.com/diagrams",
+    "checked": "2026-11-06",
+    "supports": "The four core C4 diagrams (system context, container, component, code) and three supporting diagrams (system landscape, dynamic, deployment); system context and container diagrams are enough for most teams; skip levels that add no value."
+  },
+  {
+    "n": 2,
+    "title": "C4 model: Container",
+    "publisher": "Simon Brown, c4model.com",
+    "url": "https://c4model.com/abstractions/container",
+    "checked": "2026-11-06",
+    "supports": "A C4 container is an application or data store that must run for the system to work (not a Docker container); examples include web apps, serverless functions, databases and blob stores."
+  },
+  {
+    "n": 3,
+    "title": "Documenting Architecture Decisions (15 November 2011)",
+    "publisher": "Michael Nygard, Cognitect blog",
+    "url": "https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+    "checked": "2026-11-06",
+    "supports": "The architecture decision record format (title, context, decision, status, consequences); store ADRs in the repo, number them, never reuse numbers, mark replaced decisions as superseded; keep each to one or two pages."
+  },
+  {
+    "n": 4,
+    "title": "arc42 overview",
+    "publisher": "arc42 (Gernot Starke and Peter Hruschka)",
+    "url": "https://arc42.org/overview",
+    "checked": "2026-11-06",
+    "supports": "The 12 sections of the arc42 architecture documentation template; free and open, CC BY-SA 4.0."
+  },
+  {
+    "n": 5,
+    "title": "AWS Well-Architected Framework: The pillars of the framework",
+    "publisher": "Amazon Web Services",
+    "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html",
+    "checked": "2026-11-06",
+    "supports": "The six AWS pillars: operational excellence, security, reliability, performance efficiency, cost optimization and sustainability."
+  },
+  {
+    "n": 6,
+    "title": "Azure Well-Architected Framework",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/",
+    "checked": "2026-11-06",
+    "supports": "The five Azure pillars (reliability, security, cost optimization, operational excellence, performance efficiency), workload guides including SaaS, service guides and an assessment tool; page dated 11 September 2026."
+  },
+  {
+    "n": 7,
+    "title": "Google Cloud Well-Architected Framework",
+    "publisher": "Google Cloud",
+    "url": "https://docs.cloud.google.com/architecture/framework",
+    "checked": "2026-11-06",
+    "supports": "Google's six pillars (operational excellence; security, privacy and compliance; reliability; cost optimization; performance optimization; sustainability) and cross-pillar perspectives such as AI and ML."
+  },
+  {
+    "n": 8,
+    "title": "The Twelve-Factor App",
+    "publisher": "Adam Wiggins, 12factor.net",
+    "url": "https://12factor.net/",
+    "checked": "2026-11-06",
+    "supports": "The twelve factors for building deployable web services, from one codebase and config in the environment to stateless processes, disposability, dev/prod parity, logs as event streams and one-off admin processes."
+  },
+  {
+    "n": 9,
+    "title": "Site Reliability Engineering, chapter 4: Service Level Objectives",
+    "publisher": "Google (sre.google)",
+    "url": "https://sre.google/sre-book/service-level-objectives/",
+    "checked": "2026-11-06",
+    "supports": "Definitions of SLI, SLO and SLA; choose a few indicators users care about; use percentiles rather than averages; do not set targets from current performance; keep few SLOs; keep a tighter internal target; error budgets."
+  },
+  {
+    "n": 10,
+    "title": "Site Reliability Engineering, chapter 3: Embracing Risk",
+    "publisher": "Google (sre.google)",
+    "url": "https://sre.google/sre-book/embracing-risk/",
+    "checked": "2026-11-06",
+    "supports": "Each extra nine of availability costs more; request-success availability (a 99.99% target on 2.5 million requests a day allows about 250 failures); factors for setting targets; how error budgets balance release speed and reliability."
+  },
+  {
+    "n": 11,
+    "title": "MonolithFirst (3 June 2015)",
+    "publisher": "Martin Fowler, martinfowler.com",
+    "url": "https://martinfowler.com/bliki/MonolithFirst.html",
+    "checked": "2026-11-06",
+    "supports": "Most successful microservice systems started as a monolith that was split later; systems built as microservices from scratch often ran into trouble; boundaries are hard to get right early; modular monolith and gradual extraction options."
+  },
+  {
+    "n": 12,
+    "title": "BoundedContext (15 January 2014)",
+    "publisher": "Martin Fowler, martinfowler.com",
+    "url": "https://martinfowler.com/bliki/BoundedContext.html",
+    "checked": "2026-11-06",
+    "supports": "Bounded contexts from Eric Evans's Domain-Driven Design: split a large domain into parts with their own consistent model and language; context maps show the relationships."
+  },
+  {
+    "n": 13,
+    "title": "StranglerFigApplication (updated 22 August 2024)",
+    "publisher": "Martin Fowler, martinfowler.com",
+    "url": "https://martinfowler.com/bliki/StranglerFigApplication.html",
+    "checked": "2026-11-06",
+    "supports": "Replace a legacy system gradually by building new parts alongside it; seams and transitional architecture; why gradual replacement is less risky than a big-bang rewrite."
+  },
+  {
+    "n": 14,
+    "title": "Designing Data-Intensive Applications, 2nd edition (24 March 2026)",
+    "publisher": "Martin Kleppmann, martin.kleppmann.com",
+    "url": "https://martin.kleppmann.com/2026/03/24/designing-data-intensive-applications-2e.html",
+    "checked": "2026-11-06",
+    "supports": "The second edition by Martin Kleppmann and Chris Riccomini (O'Reilly, March 2026) updates the first edition with cloud services and newer data systems."
+  },
+  {
+    "n": 15,
+    "title": "Please stop calling databases CP or AP (11 May 2015)",
+    "publisher": "Martin Kleppmann, martin.kleppmann.com",
+    "url": "https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html",
+    "checked": "2026-11-06",
+    "supports": "CAP uses narrow definitions and ignores latency and most faults; reason with specific consistency models, latency and operability instead of CP/AP labels."
+  },
+  {
+    "n": 16,
+    "title": "Amazon SQS standard queues",
+    "publisher": "Amazon Web Services",
+    "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html",
+    "checked": "2026-11-06",
+    "supports": "Standard queues give at-least-once delivery; messages can be delivered more than once and occasionally out of order; use cases for decoupling background work."
+  },
+  {
+    "n": 17,
+    "title": "Amazon SQS message quotas",
+    "publisher": "Amazon Web Services",
+    "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/quotas-messages.html",
+    "checked": "2026-11-06",
+    "supports": "SQS limits as of November 2026: maximum message size 1 MiB, retention 4 days by default and 14 days maximum, visibility timeout 30 seconds default and 12 hours maximum, FIFO throughput per partition."
+  },
+  {
+    "n": 18,
+    "title": "Making retries safe with idempotent APIs",
+    "publisher": "Amazon Builders' Library (Malcolm Featonby)",
+    "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "checked": "2026-11-06",
+    "supports": "Retries need idempotent operations; use a caller-supplied request token stored atomically with the work; return a semantically equivalent response for repeats; reject reused tokens with different parameters."
+  },
+  {
+    "n": 19,
+    "title": "Pattern: Transactional outbox",
+    "publisher": "Chris Richardson, microservices.io",
+    "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+    "checked": "2026-11-06",
+    "supports": "Write outgoing messages to an outbox table in the same transaction as the data change, then relay them; avoids two-phase commit; consumers must be idempotent because messages can repeat."
+  },
+  {
+    "n": 20,
+    "title": "Cache-Aside pattern",
+    "publisher": "Microsoft Learn, Azure Architecture Center",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside",
+    "checked": "2026-11-06",
+    "supports": "How cache-aside works; expiry, eviction, priming and consistency trade-offs; update the store before invalidating the cache; do not cache sensitive data; when not to use it."
+  },
+  {
+    "n": 21,
+    "title": "Tenancy models for a multitenant solution",
+    "publisher": "Microsoft Learn, Azure Architecture Center",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/tenancy-models",
+    "checked": "2026-11-06",
+    "supports": "Defining a tenant (B2B and B2C); isolation as a spectrum; automated single-tenant, fully multitenant, vertically and horizontally partitioned models with their benefits and risks; noisy neighbours; test isolation."
+  },
+  {
+    "n": 22,
+    "title": "FinOps Phases",
+    "publisher": "FinOps Foundation",
+    "url": "https://www.finops.org/framework/phases/",
+    "checked": "2026-11-06",
+    "supports": "The FinOps cycle of Inform, Optimize and Operate. Site blocks automated fetching; page confirmed through search results."
+  },
+  {
+    "n": 23,
+    "title": "New - AWS Public IPv4 Address Charge + Public IP Insights (28 July 2023)",
+    "publisher": "AWS News Blog",
+    "url": "https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/",
+    "checked": "2026-11-06",
+    "supports": "From 1 February 2024, AWS charges $0.005 per hour for every public IPv4 address, in use or idle; free tier of 750 hours a month for the first 12 months on EC2."
+  },
+  {
+    "n": 24,
+    "title": "Threat Modeling Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "The four threat modelling questions; data flow diagrams with trust boundaries; STRIDE categories and the property each violates; responses (mitigate, eliminate, transfer, accept); review and validation; threat model early and keep it current."
+  },
+  {
+    "n": 25,
+    "title": "Threats: Microsoft Threat Modeling Tool (STRIDE model)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+    "checked": "2026-11-06",
+    "supports": "Definitions of the six STRIDE categories: spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege."
+  },
+  {
+    "n": 26,
+    "title": "OWASP Top 10:2025",
+    "publisher": "OWASP Foundation",
+    "url": "https://top10.owasp.org/2025",
+    "checked": "2026-11-06",
+    "supports": "The 2025 list: A01 Broken Access Control, A02 Security Misconfiguration, A03 Software Supply Chain Failures, A04 Cryptographic Failures, A05 Injection, A06 Insecure Design, A07 Authentication Failures, A08 Software or Data Integrity Failures, A09 Security Logging and Alerting Failures, A10 Mishandling of Exceptional Conditions."
+  },
+  {
+    "n": 27,
+    "title": "C4 Diagrams (Mermaid syntax)",
+    "publisher": "Mermaid",
+    "url": "https://mermaid.js.org/syntax/c4.html",
+    "checked": "2026-11-06",
+    "supports": "Mermaid supports C4Context, C4Container, C4Component, C4Dynamic and C4Deployment; element and relationship syntax; layout is not automatic; sprites, tags, links and legends are not supported yet (docs version 12.3.0)."
+  },
+  {
+    "n": 28,
+    "title": "DORA's software delivery performance metrics",
+    "publisher": "DORA (dora.dev)",
+    "url": "https://dora.dev/guides/dora-metrics/",
+    "checked": "2026-11-06",
+    "supports": "Five metrics in two groups: throughput (change lead time, deployment frequency, failed deployment recovery time) and instability (change fail rate, deployment rework rate); page updated 5 January 2026."
+  },
+  {
+    "n": 29,
+    "title": "Conway's Law",
+    "publisher": "Mel Conway, melconway.com",
+    "url": "https://www.melconway.com/Home/Conways_Law.html",
+    "checked": "2026-11-06",
+    "supports": "Systems tend to mirror the communication structure of the group that designs them; from How Do Committees Invent? (Datamation, April 1968)."
+  },
+  {
+    "n": 30,
+    "title": "Architecture Tradeoff Analysis Method collection",
+    "publisher": "Software Engineering Institute, Carnegie Mellon University",
+    "url": "https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
+    "checked": "2026-11-06",
+    "supports": "ATAM evaluates an architecture against quality attribute goals; outputs include a utility tree, scenarios, risks and non-risks, sensitivity points and trade-off points."
+  }
+]

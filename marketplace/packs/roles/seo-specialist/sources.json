@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Google Search Status Dashboard: ranking incident history",
+    "publisher": "Google",
+    "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
+    "checked": "2026-11-06",
+    "supports": "Start dates of every core, spam and Discover update from March 2024 to September 2026"
+  },
+  {
+    "n": 2,
+    "title": "Spam policies for Google web search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-06",
+    "supports": "The full list of spam policies, what counts as link spam, scaled content abuse, expired domain abuse, site reputation abuse, and that paid links need rel sponsored or nofollow"
+  },
+  {
+    "n": 3,
+    "title": "New ways we're tackling spammy, low-quality content on Search (with 26 April 2024 update)",
+    "publisher": "Google (The Keyword blog), Elizabeth Tucker",
+    "url": "https://blog.google/products/search/google-search-update-march-2024/",
+    "checked": "2026-11-06",
+    "supports": "March 2024 core update and three new spam policies; expected 40% and reported 45% cut in low-quality, unoriginal content; site reputation abuse enforcement from 5 May 2024"
+  },
+  {
+    "n": 4,
+    "title": "A guide to Google Search ranking systems",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+    "checked": "2026-11-06",
+    "supports": "Named ranking systems; helpful content system folded into core ranking in March 2024 and listed as retired; PageRank still part of core systems"
+  },
+  {
+    "n": 5,
+    "title": "Updating our site reputation abuse policy (19 November 2024)",
+    "publisher": "Google Search Central blog, Chris Nelson",
+    "url": "https://developers.google.com/search/blog/2024/11/site-reputation-abuse",
+    "checked": "2026-11-06",
+    "supports": "Site reputation abuse applies even when the host site has first-party involvement or oversight"
+  },
+  {
+    "n": 6,
+    "title": "Update to the Site Reputation Policy (28 August 2026)",
+    "publisher": "Google Search Central blog, Search Quality team",
+    "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
+    "checked": "2026-11-06",
+    "supports": "From 30 August 2026, different enforcement inside the EEA (affected sections ranked separately) versus manual actions outside it"
+  },
+  {
+    "n": 7,
+    "title": "Introducing a new spam policy for back button hijacking (13 April 2026)",
+    "publisher": "Google Search Central blog",
+    "url": "https://developers.google.com/search/blog/2026/04/back-button-hijacking",
+    "checked": "2026-11-06",
+    "supports": "Back button hijacking added to the malicious practices policy, enforced from 15 June 2026; check ad and script libraries"
+  },
+  {
+    "n": 8,
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "checked": "2026-11-06",
+    "supports": "Self-assessment questions, Who/How/Why test, E-E-A-T not a ranking factor with trust most important, warning signs of search-first content, raters do not set rankings"
+  },
+  {
+    "n": 9,
+    "title": "Search Quality Evaluator Guidelines (edition dated 11 September 2025)",
+    "publisher": "Google",
+    "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf",
+    "checked": "2026-11-06",
+    "supports": "Current edition date; trust at the centre of E-E-A-T; YMYL; Lowest rating for scaled, copied or AI-made content with no added value"
+  },
+  {
+    "n": 10,
+    "title": "Google Search's guidance about AI-generated content (8 February 2023)",
+    "publisher": "Google Search Central blog, Danny Sullivan and Chris Nelson",
+    "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+    "checked": "2026-11-06",
+    "supports": "Quality is rewarded however content is made; automation mainly to manipulate rankings is spam; bylines and AI disclosure advice"
+  },
+  {
+    "n": 11,
+    "title": "Search Engine Optimization (SEO) Starter Guide",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "checked": "2026-11-06",
+    "supports": "Things not to focus on (meta keywords, word count, keywords in domains, heading order, duplicate content penalty, E-E-A-T as a factor) and how long changes take to show"
+  },
+  {
+    "n": 12,
+    "title": "2024 Google Search documentation leak",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/2024_Google_Search_documentation_leak",
+    "checked": "2026-11-06",
+    "supports": "Dates and people behind the May 2024 Content Warehouse API leak, Google's confirmation and caution, NavBoost click signals, and the limits of what the leak shows"
+  },
+  {
+    "n": 13,
+    "title": "Web Vitals",
+    "publisher": "web.dev (Google Chrome team)",
+    "url": "https://web.dev/articles/vitals",
+    "checked": "2026-11-06",
+    "supports": "The three Core Web Vitals, good thresholds, 75th percentile rule, INP became stable in 2024 replacing FID"
+  },
+  {
+    "n": 14,
+    "title": "Interaction to Next Paint (INP)",
+    "publisher": "web.dev (Google Chrome team)",
+    "url": "https://web.dev/articles/inp",
+    "checked": "2026-11-06",
+    "supports": "INP thresholds: good at 200 ms or less, poor above 500 ms; what INP measures"
+  },
+  {
+    "n": 15,
+    "title": "Understanding page experience in Google Search results",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/page-experience",
+    "checked": "2026-11-06",
+    "supports": "Relevance comes first; page experience helps when many results are similar; no single page experience signal"
+  },
+  {
+    "n": 16,
+    "title": "Web Almanac 2025: Performance chapter",
+    "publisher": "HTTP Archive",
+    "url": "https://almanac.httparchive.org/en/2025/performance",
+    "checked": "2026-11-06",
+    "supports": "Share of mobile and desktop origins passing Core Web Vitals, LCP, INP and CLS in July 2025 field data"
+  },
+  {
+    "n": 17,
+    "title": "How to specify a canonical URL with rel=\"canonical\" and other methods",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "checked": "2026-11-06",
+    "supports": "Strength of canonical signals, Google chooses the canonical, mistakes to avoid (robots.txt or noindex for canonicals, mixed signals, relative URLs)"
+  },
+  {
+    "n": 18,
+    "title": "General structured data guidelines",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "checked": "2026-11-06",
+    "supports": "JSON-LD recommended, mark up visible content only, no guarantee of rich results, manual actions for spammy markup"
+  },
+  {
+    "n": 19,
+    "title": "Changes to HowTo and FAQ rich results (8 August 2023, updated 14 September 2023)",
+    "publisher": "Google Search Central blog",
+    "url": "https://developers.google.com/search/blog/2023/08/howto-faq-changes",
+    "checked": "2026-11-06",
+    "supports": "FAQ rich results limited to well-known government and health sites; HowTo rich results deprecated"
+  },
+  {
+    "n": 20,
+    "title": "Simplifying the search results page (12 June 2025)",
+    "publisher": "Google Search Central blog, Henry Hsu",
+    "url": "https://developers.google.com/search/blog/2025/06/simplifying-search-results",
+    "checked": "2026-11-06",
+    "supports": "Seven structured data features phased out in 2025, with no ranking effect"
+  },
+  {
+    "n": 21,
+    "title": "Site moves with URL changes",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+    "checked": "2026-11-06",
+    "supports": "Migration steps: URL mapping, 301 or 308 redirects, no chains, keep redirects at least a year, Change of Address tool, sitemaps, expected fluctuation, monitoring"
+  },
+  {
+    "n": 22,
+    "title": "Link best practices for Google",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "checked": "2026-11-06",
+    "supports": "Crawlable links, anchor text, internal linking, rel nofollow, sponsored and ugc"
+  },
+  {
+    "n": 23,
+    "title": "Large site owner's guide to managing your crawl budget",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget",
+    "checked": "2026-11-06",
+    "supports": "Which sites need to think about crawl budget (rough size thresholds) and what to do"
+  },
+  {
+    "n": 24,
+    "title": "Tips to improve your local ranking on Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7091",
+    "checked": "2026-11-06",
+    "supports": "Local ranking based on relevance, distance and prominence; reviews and links feed prominence; no paying for local rank"
+  },
+  {
+    "n": 25,
+    "title": "What are impressions, position, and clicks?",
+    "publisher": "Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/7042828",
+    "checked": "2026-11-06",
+    "supports": "How position is calculated; AI Overview takes one position shared by its links; AI Overview and AI Mode clicks count as clicks; Labs data excluded"
+  },
+  {
+    "n": 26,
+    "title": "Performance report (Search results): Troubleshooting data discrepancies",
+    "publisher": "Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/17010575",
+    "checked": "2026-11-06",
+    "supports": "1,000-row table limit, anonymised queries, 2 to 3 day lag, Pacific Time, why Search Console differs from Analytics"
+  },
+  {
+    "n": 27,
+    "title": "[GA4] Search Console integration",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10737381",
+    "checked": "2026-11-06",
+    "supports": "How to link Search Console to GA4, the two reports it adds, 16-month limit, about 48 hours' delay, link limits"
+  },
+  {
+    "n": 28,
+    "title": "Generative AI performance report (Search)",
+    "publisher": "Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/16984139",
+    "checked": "2026-11-06",
+    "supports": "Search Console report of impressions in AI Overviews and AI Mode, its dimensions and limits, rolled out to all sites by 31 August 2026"
+  },
+  {
+    "n": 29,
+    "title": "AI features and your website",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "checked": "2026-11-06",
+    "supports": "How AI Overviews and AI Mode choose links (query fan-out), eligibility, no special optimisation, preview controls, traffic reported under the Web search type"
+  },
+  {
+    "n": 30,
+    "title": "Update: AI Overviews Reduce Clicks by 58% (4 February 2026)",
+    "publisher": "Ahrefs, Ryan Law",
+    "url": "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+    "checked": "2026-11-06",
+    "supports": "Correlation between AI Overviews and lower click-through rate for the top result, December 2023 versus December 2025, 300,000 keywords, desktop only"
+  }
+]

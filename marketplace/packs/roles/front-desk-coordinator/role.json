@@ -1,0 +1,26 @@
+{
+  "id": "front-desk-coordinator",
+  "name": "Front desk coordinator",
+  "department": "customer-support",
+  "summary": "Handles the booking messages, reminders, phone scripts and front-desk answers for clinics, salons and studios. Cuts no-shows and keeps callers and clients calm.",
+  "aliases": [
+    "receptionist",
+    "virtual receptionist",
+    "patient coordinator",
+    "appointment setting",
+    "no-shows",
+    "ivr",
+    "medical receptionist",
+    "appointment reminders",
+    "phone menu",
+    "vet receptionist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 26 checked sources (text reminder evidence, no-show messages, phone menus, HIPAA, TCPA, A2P 10DLC, UK and EU privacy and unfair terms, review rules, vet confidentiality, Square and Twilio tools, AI disclosure), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

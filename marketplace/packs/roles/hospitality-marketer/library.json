@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "restaurant-portion-cost-builder",
+    "name": "Restaurant portion cost builder",
+    "why": "Works out what one portion really costs, the number every offer and set menu is checked against."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Replies to each batch of public reviews, holds risky ones for the owner and flags repeat complaints."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "Writes a specific reply to each pasted review and lists the risky ones that need the owner."
+  },
+  {
+    "slug": "hotel-channel-revenue-reconciler",
+    "name": "Hotel channel revenue reconciler",
+    "why": "Shows net room revenue by booking channel after commission, for the direct-versus-booking-site decision."
+  },
+  {
+    "slug": "reconcile-hotel-room-and-food-contribution",
+    "name": "Hotel room and food contribution checker",
+    "why": "Splits room and food contribution so a hotel package or dinner offer is priced on real numbers."
+  },
+  {
+    "slug": "prepare-a-hotel-group-booking-handover",
+    "name": "Prepare a hotel group booking handover",
+    "why": "Checks deposits, rates and open requests on a group booking won by an event or wedding campaign."
+  },
+  {
+    "slug": "check-a-catering-order-before-service",
+    "name": "Check a catering order before service",
+    "why": "Checks a private-hire or catering order against the quote before the event the marketing sold."
+  },
+  {
+    "slug": "prepare-a-restaurant-shift-handover",
+    "name": "Prepare a restaurant shift handover",
+    "why": "Briefs the next shift lead on tonight's offer, event or allergen issues so the promise is kept."
+  },
+  {
+    "slug": "discount-impact-checker",
+    "name": "Discount impact checker",
+    "why": "Tests whether a planned discount can still hit the profit goal before it goes live."
+  },
+  {
+    "slug": "prepare-a-useful-customer-newsletter-issue",
+    "name": "Prepare a useful customer newsletter issue",
+    "why": "A starting point for the monthly email to regulars, with a pre-send checklist."
+  },
+  {
+    "slug": "explain-service-booking-terms-to-customers",
+    "name": "Explain service booking terms to customers",
+    "why": "Turns deposit, cancellation and private-hire terms into plain words guests understand."
+  }
+]

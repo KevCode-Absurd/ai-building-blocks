@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Replies to each new batch of reviews and holds the risky ones, matching the review steps in the customer messages skill."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "A one-off version of the review reply prompt, with risky reviews flagged for the owner."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a complaint reply for promises the owner has not approved before it gets the owner's yes."
+  },
+  {
+    "slug": "prepare-a-construction-variation-decision",
+    "name": "Prepare a construction variation decision",
+    "why": "Checks a change against the signed scope and prices, like the change-note step in the quote skill, for larger building jobs."
+  },
+  {
+    "slug": "prepare-a-client-scope-change-brief",
+    "name": "Prepare a client scope change brief",
+    "why": "Sets out options and a reply when a customer asks for work outside the quoted scope."
+  },
+  {
+    "slug": "client-scope-decision-review-assistant",
+    "name": "Client scope decision review assistant",
+    "why": "Keeps requested extras marked as proposed until the customer accepts, the same rule as the change note."
+  },
+  {
+    "slug": "check-capacity-before-promising-a-delivery-date",
+    "name": "Check capacity before promising a delivery date",
+    "why": "Checks the team's real hours before a start date is promised, like step 2 of the scheduling skill."
+  },
+  {
+    "slug": "explain-appointment-no-show-patterns",
+    "name": "Explain appointment no show patterns",
+    "why": "Finds which days, times or job types get missed, to tune reminders and booking rules."
+  },
+  {
+    "slug": "property-maintenance-evidence-review-assistant",
+    "name": "Property maintenance evidence review assistant",
+    "why": "Turns open repair tickets and access notes into a handover, useful for trades serving landlords and property managers."
+  },
+  {
+    "slug": "weekly-invoice-and-cash-chaser",
+    "name": "Weekly invoice and cash chaser",
+    "why": "Finds late payers each week and drafts reminders for the owner to approve, the step after a job is invoiced."
+  },
+  {
+    "slug": "post-sale-follow-up-planner",
+    "name": "Post-sale follow-up planner",
+    "why": "A thank-you and contact schedule after a job, a starting point for maintenance plan and repeat-visit reminders."
+  }
+]

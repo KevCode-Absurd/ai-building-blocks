@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "powerpoint-chart-data-rebuilder",
+    "name": "PowerPoint editable chart rebuilder",
+    "why": "Turns picture charts in a deck into editable PowerPoint charts with every value checked against the source, the same tie-out the chart review skill asks for."
+  },
+  {
+    "slug": "excel-powerpoint-number-checker",
+    "name": "Excel to PowerPoint number checker",
+    "why": "Checks that every number on the slides matches the workbook, a useful last step before a results deck goes out."
+  },
+  {
+    "slug": "build-a-monthly-excel-and-powerpoint-update",
+    "name": "Build a monthly Excel and PowerPoint update",
+    "why": "Builds the monthly workbook and update deck that the monthly report chart refresh workflow keeps consistent."
+  },
+  {
+    "slug": "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+    "name": "Prepare a PowerPoint deck for presenting and sharing",
+    "why": "Adds speaker notes, an accessibility review and a handout to a finished results deck."
+  },
+  {
+    "slug": "write-design-rules-check-colours-and-hand-developers-a-spec",
+    "name": "Write design rules, check colours and hand developers a spec",
+    "why": "Checks colours for contrast and writes design tokens, a good partner when a chart palette must join a site's design system."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Applies the same layout, text check and contrast check that a one-page infographic needs."
+  },
+  {
+    "slug": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "name": "Build a weekly KPI report with a forecast and dashboard",
+    "why": "Produces the rerunnable report and trend that a chart set or results deck is built from."
+  },
+  {
+    "slug": "agency-engineering-data-visualization-engineer",
+    "name": "Honest chart design agent",
+    "why": "Picks a chart and checks it does not mislead, with axes, colours and a pass or fail check, close to the chart pick and review skills."
+  },
+  {
+    "slug": "colour-contrast-checker",
+    "name": "Colour contrast checker",
+    "why": "Checks colour pairs in light and dark themes and suggests the nearest passing colours, as the palette skill needs."
+  },
+  {
+    "slug": "infographic-maker",
+    "name": "Infographic maker",
+    "why": "Drafts an infographic layout from content, a starting point the infographic layout skill then checks for honesty and access."
+  },
+  {
+    "slug": "data-story-writer",
+    "name": "Data story writer",
+    "why": "Writes the point, the proof and the next step around a set of numbers, the words that go with a results deck."
+  }
+]

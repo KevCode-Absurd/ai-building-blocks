@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "explain-appointment-no-show-patterns",
+    "name": "Explain appointment no show patterns",
+    "why": "Turns a de-identified booking export into a no-show pattern summary, a first input to the monthly KPI pack."
+  },
+  {
+    "slug": "measure-a-clinic-administrative-queue",
+    "name": "Measure a clinic administrative queue",
+    "why": "Maps where repeat admin tasks such as records requests or referral letters wait, matching the patient flow and records request work."
+  },
+  {
+    "slug": "document-a-clinic-appointment-intake-process",
+    "name": "Document a clinic appointment intake process",
+    "why": "Writes the intake procedure for desk staff, a companion to the front desk procedures skill."
+  },
+  {
+    "slug": "check-a-clinic-service-information-page",
+    "name": "Check a clinic service information page",
+    "why": "Checks a clinic service page against approved facts, useful when publishing price lists and fee information."
+  },
+  {
+    "slug": "referral-administration-evidence-review-assistant",
+    "name": "Clinic referral handover reviewer",
+    "why": "Reviews referral handovers so nothing waits unowned, the same discipline as the records request log."
+  },
+  {
+    "slug": "prepare-a-referral-administration-handover",
+    "name": "Prepare a referral administration handover",
+    "why": "Hands over open referral admin to the next person with owners and dates, for leave and staff changes."
+  },
+  {
+    "slug": "clinic-claims-collections-bridge",
+    "name": "Clinic claims collections bridge",
+    "why": "Rolls claims receivable forward and matches insurer payments to the bank using totals only, for the receivables line of the KPI pack."
+  },
+  {
+    "slug": "reconcile-clinic-remittances-to-settlement-cash",
+    "name": "Clinic claim cash reconciliation checker",
+    "why": "Matches claim remittances to cash received without patient details, so the owner sees what money actually arrived."
+  },
+  {
+    "slug": "process-doc-freshness-keeper",
+    "name": "Process doc freshness keeper",
+    "why": "Finds stale or ownerless procedures each month, keeping front desk procedures current."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a draft complaint reply for promises the practice cannot keep, before the owner signs it."
+  },
+  {
+    "slug": "input-metric-picker",
+    "name": "Input metric picker",
+    "why": "Picks the input measures the desk can control, such as next bookings made at check-out, behind the KPIs the owner watches."
+  }
+]

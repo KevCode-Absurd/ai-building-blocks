@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Audio requirements",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/893-audio-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RSS feed audio MP3 or AAC, AAC strongly recommended; bit rate ranges by mono or stereo and sample rate; loudness around -16 dB LKFS with +/-1 dB tolerance; true peak at or below -1 dBFS; measured per ITU-R BS.1770-5; apply loudness before encoding; WAV, FLAC or MP3 for subscriber audio, single-channel WAV or FLAC rejected; chapters recommended"
+  },
+  {
+    "n": 2,
+    "title": "Podcast RSS feed requirements",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/823-podcast-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Feed must follow RSS 2.0, be public and not password-protected, include itunes and content namespaces; hosting must allow HEAD and byte-range requests; unique enclosure with URL, length and type; GUID unique and never changes; ASCII URLs and file names; RFC 2822 dates; escaping special characters"
+  },
+  {
+    "n": 3,
+    "title": "Apple Podcasts Content Guidelines",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/891-content-and-subscription-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Metadata must represent content accurately; no search manipulation; impersonation rules; creators using AI for audio or video, including synthetic voices, AI hosts and replicas of real people, must disclose it prominently in content and metadata; AI must not mislead; rights to all content; explicit tag; editorial must greatly exceed advertising; ads must follow the law"
+  },
+  {
+    "n": 4,
+    "title": "Transcripts on Apple Podcasts",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/5316-transcripts-on-apple-podcasts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automatic transcripts after publishing; creators can supply VTT or SRT through the RSS transcript tag; VTT can name speakers; quality standards; episodes over 10 hours may not be transcribed; supported languages; labels for automatic and provided transcripts; none for episodes only in private feeds"
+  },
+  {
+    "n": 5,
+    "title": "Chapters on Apple Podcasts",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/5482-using-chapters-on-apple-podcasts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automatic chapters from iOS 26.2 for English full and bonus episodes of 10 minutes or more; own chapters in the description from 00:00:00 with at least three, through the podcast:chapters tag, or in MP4 or ID3 metadata; best practice of three or more chapters, no more than six per hour, each at least two minutes, titles under 45 characters and fewer than five words"
+  },
+  {
+    "n": 6,
+    "title": "How to set the order of podcast episodes",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/3143-how-to-set-the-order-of-podcast-episodes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Episodic versus serial show types; seasons; episode numbers belong in metadata fields or RSS tags, not titles; how trailers and bonus episodes are placed"
+  },
+  {
+    "n": 7,
+    "title": "Make the next great podcast trailer",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/869-featured-make-the-next-great-podcast-trailer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Three kinds of trailer; keep trailers to two minutes or less; a four-part outline ending with when new episodes arrive and a reminder to follow"
+  },
+  {
+    "n": 8,
+    "title": "Search on Apple Podcasts",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/3686-search-on-apple-podcasts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search ranking draws on metadata, popularity and engagement; ratings and reviews are not used in Search ranking; distinctive names; avoid emojis and repeated episode titles; promote at launch"
+  },
+  {
+    "n": 9,
+    "title": "Analytics",
+    "publisher": "Apple Podcasts for Creators",
+    "url": "https://podcasters.apple.com/support/5392-listener-analytics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definitions of listeners, engaged listeners (at least 20 minutes or 40% of an episode), plays, time listened, average consumption and followers; data shows only with at least five unique listeners; default 60-day range"
+  },
+  {
+    "n": 10,
+    "title": "Episode chapters",
+    "publisher": "Spotify for Creators",
+    "url": "https://support.spotify.com/us/creators/article/episode-chapters/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automatic chapters (English only, not all shows); manual chapters as timestamps in the description, first at 00:00, at least 3 chapters, at least 30 seconds apart, plain-text titles, titles under 40 characters recommended; Podlove chapters in RSS for shows hosted elsewhere; AI chapter hooks can be turned off"
+  },
+  {
+    "n": 11,
+    "title": "Managing episode transcripts on Spotify",
+    "publisher": "Spotify for Creators",
+    "url": "https://support.spotify.com/us/creators/article/managing-episode-transcripts-on-spotify/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Some shows get automatic transcripts; edit by downloading the VTT and re-uploading; own VTT or SRT up to 5MB with timestamps; turning on automatic transcripts replaces an uploaded one; option to distribute transcripts by RSS"
+  },
+  {
+    "n": 12,
+    "title": "Video specs",
+    "publisher": "Spotify for Creators",
+    "url": "https://support.spotify.com/us/creators/article/video-specs/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Video podcast specs: MP4 recommended, H.264 or H.265, 1080p or higher recommended, 16:9 recommended with no added borders, 24 to 60 fps, AAC-LC audio at 128 kbps or more in stereo, file under 10 GB recommended (up to 60 GB), under 4 hours recommended (up to 12)"
+  },
+  {
+    "n": 13,
+    "title": "Spotify for Creators community guidelines",
+    "publisher": "Spotify for Creators",
+    "url": "https://support.spotify.com/us/creators/article/spotify-for-creators-community-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Impersonation intended or likely to deceive is not allowed; content provided without rightsholder permission may be removed; samples should be cleared; spam rules; policies may change"
+  },
+  {
+    "n": 14,
+    "title": "Podcasts on YouTube delivered by RSS feed (help article 13525207)",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/13525207",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. YouTube makes videos from RSS episodes using show art as a static image; new episodes upload automatically and first as private; edits and re-uploaded audio do not sync; no < > or HTML in titles and descriptions; podcast content cannot contain advertisements, and branded content, sponsorships or endorsements must be declared; ownership verified by a code sent to the feed email; select countries only"
+  },
+  {
+    "n": 15,
+    "title": "Disclosing use of altered or synthetic content",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/14328491",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Realistic altered or synthetic content must be disclosed under AI use in YouTube Studio, such as making a real person appear to say something they did not; cloning your own voice for voice-overs or dubs and AI help with scripts or titles are listed as not needing disclosure"
+  },
+  {
+    "n": 16,
+    "title": "Celebrating 1 billion monthly podcast users on YouTube (26 Feb 2025)",
+    "publisher": "YouTube Official Blog",
+    "url": "https://blog.youtube/news-and-events/1-billion-monthly-podcast-users/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. More than 1 billion monthly active viewers of podcast content on YouTube as of January 2025; over 400 million hours of podcasts watched monthly on living-room devices in 2024; YouTube citing Edison Research as the most used US podcast service"
+  },
+  {
+    "n": 17,
+    "title": "FTC Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Paid hosts giving positive opinions are endorsers; disclose payment the audience would not expect, at the start of a segment and when products are endorsed, in plain words rather than vague ones; an audible endorsement needs at least an audible disclosure; you cannot describe experience with a product you have not tried; Guides revised in 2023"
+  },
+  {
+    "n": 18,
+    "title": "CAP Code section 2: Recognition of marketing communications",
+    "publisher": "Committees of Advertising Practice (ASA)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/02.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule 2.1 marketing must be obviously identifiable; rule 2.3 commercial intent must be made clear; rule 2.4 advertorials labelled; rules 2.3 and 2.4 reflect DMCCA Schedule 20 prohibited practices"
+  },
+  {
+    "n": 19,
+    "title": "Influencer Legal Hub",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/influencer-legal-hub_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Advertising, brand partnerships, paid content and affiliate marketing must be disclosed; Unfair Commercial Practices Directive and Digital Services Act listed; the hub lists national guidance, including a Norwegian Consumer Authority guideline on marketing in podcasts"
+  },
+  {
+    "n": 20,
+    "title": "AI Act Article 50: Transparency obligations",
+    "publisher": "AI Act Service Desk, European Commission",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deployers must disclose audio, image or video deepfakes; for evidently artistic, creative, satirical or fictional work, disclose the existence of generated content without hampering the work; providers mark synthetic output in a machine-readable way; information given at first exposure"
+  },
+  {
+    "n": 21,
+    "title": "AI Act Article 113: Entry into force and application",
+    "publisher": "AI Act Service Desk, European Commission",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. General application date of 2 August 2026, which covers Article 50 (Chapter IV is not among the listed exceptions, so this is read from the structure); page based on the consolidated text as at 27 July 2026 with Digital Omnibus amendments marked"
+  },
+  {
+    "n": 22,
+    "title": "Professional Voice Cloning",
+    "publisher": "ElevenLabs documentation",
+    "url": "https://elevenlabs.io/docs/product-guides/voices/voice-cloning/professional-voice-cloning",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Professional voice clones are for your own voice only, confirmed by a voice verification step; the FAQ says you cannot clone someone else's voice even with their consent; samples must be one speaking voice. The page header carries instructions aimed at AI agents (fetch llms.txt), which were not followed"
+  },
+  {
+    "n": 23,
+    "title": "Engage: musicians",
+    "publisher": "US Copyright Office",
+    "url": "https://www.copyright.gov/engage/musicians/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A recording can contain two works, the musical work and the sound recording, commonly owned and licensed separately; use needs public domain status, permission or licence, or an exception such as fair use; no set minimum amount; failing to reach the owner is not permission; publishers and performing rights organisations often handle licensing"
+  },
+  {
+    "n": 24,
+    "title": "About CC licenses",
+    "publisher": "Creative Commons",
+    "url": "https://creativecommons.org/share-your-work/cclicenses/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six licences, all needing credit; NC allows noncommercial use only; ND allows no adaptations; SA requires adaptations under the same terms"
+  },
+  {
+    "n": 25,
+    "title": "Understanding SC 1.2.1: Audio-only and Video-only (Prerecorded)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level A: prerecorded audio-only content needs a text alternative such as a transcript, unless it is a labelled media alternative for text; a transcript records what is said, who says it and significant sounds; page updated 6 Sep 2026"
+  },
+  {
+    "n": 26,
+    "title": "R 128: Loudness normalisation and permitted maximum level of audio signals",
+    "publisher": "European Broadcasting Union",
+    "url": "https://tech.ebu.ch/publications/r128",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Broadcast programme loudness target of -23 LUFS; version 5.0 published 21 Nov 2023"
+  },
+  {
+    "n": 27,
+    "title": "RSS 2.0 Specification",
+    "publisher": "RSS Advisory Board",
+    "url": "https://www.rssboard.org/rss-specification",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Version 2.0.11 (30 Mar 2009), frozen; required channel elements title, link and description; enclosure needs url, length and type; guid and isPermaLink; pubDate in RFC 822 format"
+  },
+  {
+    "n": 28,
+    "title": "podcast:transcript tag",
+    "publisher": "Podcasting 2.0 (Podcast Index namespace)",
+    "url": "https://podcasting2.org/docs/podcast-namespace/tags/transcript",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Transcript tag under item with required url and type, optional language and rel=captions; formats VTT, SRT, JSON, HTML and plain text; several tags allowed per episode"
+  },
+  {
+    "n": 29,
+    "title": "Podcast Measurement Technical Guidelines",
+    "publisher": "IAB Tech Lab",
+    "url": "https://iabtechlab.com/standards/podcast-measurement-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Version 2.3 released September 2026, page updated 29 Sep 2026; podcast measurement is based on server logs; a compliance programme lets companies show they follow the guidelines"
+  },
+  {
+    "n": 30,
+    "title": "Podcasts as a source of news and information (18 Apr 2023)",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/journalism/2023/04/18/podcasts-as-a-source-of-news-and-information/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. About half of US adults listened to a podcast in the past year; survey of 5,132 US adults on the American Trends Panel, 5 to 11 Dec 2022; comedy, entertainment and politics the most common topics"
+  }
+]

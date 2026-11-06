@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "build-a-clear-sponsorship-decision-brief",
+    "name": "Build a clear sponsorship decision brief",
+    "why": "Shows how a sponsor judges a deal (cost, audience fit, a capped pilot), so pitches answer those questions first."
+  },
+  {
+    "slug": "build-a-prospect-list-rank-it-and-send-first-messages",
+    "name": "Build a prospect list, rank it and send first messages",
+    "why": "Ranks prospects and writes checked first messages, the shape of a sponsor first wave."
+  },
+  {
+    "slug": "cold-outreach-batch-runner",
+    "name": "Cold outreach batch runner",
+    "why": "Runs each weekly batch of sponsor pitches from last batch's results, for the client to approve and send."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Gives every follow-up a new reason, one ask and a stop rule."
+  },
+  {
+    "slug": "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+    "name": "Turn a sales call into a checked proposal",
+    "why": "Turns a sponsor call into a follow-up, a costed proposal and a dated plan to signature."
+  },
+  {
+    "slug": "pitch-deck-checker-10-20-30",
+    "name": "Pitch deck 10/20/30 checker",
+    "why": "Checks a sponsorship deck for length, talk time and readable slides."
+  },
+  {
+    "slug": "write-a-short-pitch-and-fix-it-after-every-no",
+    "name": "Write a short pitch and fix it after every no",
+    "why": "Sharpens the pitch after each sponsor says no, with the hard objections answered."
+  },
+  {
+    "slug": "prepare-a-partner-launch-announcement-pack",
+    "name": "Prepare a partner launch announcement pack",
+    "why": "Gets both brands saying the same thing when a new sponsor is announced, with an approval tracker."
+  },
+  {
+    "slug": "plan-an-event-follow-up-that-earns-a-reply",
+    "name": "Plan an event follow up that earns a reply",
+    "why": "Turns event notes into sponsor and guest follow-ups, with every promise tracked."
+  },
+  {
+    "slug": "monthly-renewal-watcher",
+    "name": "Monthly renewal watcher",
+    "why": "Lists contracts up for renewal in the next 90 days with a plan for each call, useful for sponsor renewals."
+  },
+  {
+    "slug": "honest-appreciation-note-writer",
+    "name": "Honest appreciation note writer",
+    "why": "Writes a sponsor thank-you with one true detail and no ask."
+  }
+]

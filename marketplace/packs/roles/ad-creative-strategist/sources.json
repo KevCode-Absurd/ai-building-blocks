@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Breakthrough Advertising (Eugene Schwartz, 1966; current hardcover reprint)",
+    "publisher": "Titans Marketing (Brian Kurtz), the book's rights holder",
+    "url": "https://breakthroughadvertisingbook.com/",
+    "checked": "2026-11-07",
+    "supports": "The book and its 1966 text; dominant desire, channelling existing desire, and segmenting by awareness and market sophistication, summarised in the canon"
+  },
+  {
+    "n": 2,
+    "title": "Books (How Brands Grow, How Brands Grow Part 2, Building Distinctive Brand Assets)",
+    "publisher": "Ehrenberg-Bass Institute for Marketing Science",
+    "url": "https://marketingscience.info/learn-with-us/books",
+    "checked": "2026-11-07",
+    "supports": "Byron Sharp, How Brands Grow (Oxford University Press, 2010); Romaniuk and Sharp, How Brands Grow Part 2 revised (OUP, 2021); Jenni Romaniuk, Building Distinctive Brand Assets (OUP, 2018), covering taglines, jingles and characters as brand cues"
+  },
+  {
+    "n": 3,
+    "title": "The next chapter for The Long and The Short of It (13 September 2023)",
+    "publisher": "IPA (Institute of Practitioners in Advertising)",
+    "url": "https://ipa.co.uk/knowledge/ipa-blog/the-next-chapter-for-the-long-and-the-short-of-it/",
+    "checked": "2026-11-07",
+    "supports": "Binet and Field's 2013 finding of a roughly 60:40 brand-to-activation split, about 62:38 in the 2018 follow-up, and the warning about over-reliance on short-term metrics"
+  },
+  {
+    "n": 4,
+    "title": "A Slice of Lemon: a summary of Lemon by Orlando Wood",
+    "publisher": "IPA and System1 Group (PDF summary)",
+    "url": "https://ipa.co.uk/media/8040/ipa_a_slice_of_lemon_presentation.pdf",
+    "checked": "2026-11-07",
+    "supports": "Lemon published by the IPA in October 2019; analysis of 620 Coronation Street break ads from 2004 to 2018; left-brain and right-brain ad features; argument that flat, left-brained ads are less effective, based on System1 data"
+  },
+  {
+    "n": 5,
+    "title": "YouTube ABCDs: video ad best practices (Ariane Le Port, April 2022)",
+    "publisher": "Think with Google",
+    "url": "https://business.google.com/en-all/think/future-of-marketing/youtube-video-ad-creative/",
+    "checked": "2026-11-07",
+    "supports": "Attention, Branding, Connection, Direction; YouTube described as almost entirely sound-on; average 30% lift in short-term sales likelihood and 17% in long-term brand contribution (Google/Kantar Link AI, 2021)"
+  },
+  {
+    "n": 6,
+    "title": "When it comes to advertising effectiveness, what is key? (October 2017)",
+    "publisher": "Nielsen",
+    "url": "https://www.nielsen.com/insights/2017/when-it-comes-to-advertising-effectiveness-what-is-key/",
+    "checked": "2026-11-07",
+    "supports": "Project Apollo (2006): 65% of a brand's sales lift from advertising came from creative; NCSolutions analysis of nearly 500 FMCG campaigns (2016 to Q1 2017): media's share of the effect rose to 36% from 15% over 11 years"
+  },
+  {
+    "n": 7,
+    "title": "How Not To Run an A/B Test (18 April 2010, updated 2013)",
+    "publisher": "Evan Miller",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-07",
+    "supports": "Peeking inflates false positives (26.1% in the worked example where 5% was intended); fix the sample size in advance; rule of thumb n = 16 sigma squared over delta squared"
+  },
+  {
+    "n": 8,
+    "title": "Split testing (Marketing API guide)",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/guides/split-testing/",
+    "checked": "2026-11-07",
+    "supports": "Split tests and the Creative Test type (2 to 7 creative variants, one ad per cell); no audience overlap between cells; test one variable; set the confidence level before the test; example windows of 7 and 14 days"
+  },
+  {
+    "n": 9,
+    "title": "Meta Andromeda: supercharging Advantage+ automation with the next-gen personalized ads retrieval engine (2 December 2024)",
+    "publisher": "Engineering at Meta",
+    "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
+    "checked": "2026-11-07",
+    "supports": "Retrieval narrows tens of millions of ad candidates to a few thousand; Meta expects creative volume to grow with generative AI; Meta's own figures of +6% recall and +8% ads quality on selected segments"
+  },
+  {
+    "n": 10,
+    "title": "AI innovation in Meta's ads ranking driving advertiser performance (27 March 2025)",
+    "publisher": "Meta for Business",
+    "url": "https://www.facebook.com/business/news/ai-innovation-in-metas-ads-ranking-driving-advertiser-performance",
+    "checked": "2026-11-07",
+    "supports": "As advertisers upload more creatives for a diversification strategy, Andromeda picks the right creative for each person; 8% increase in ads quality; GEM's Reels launch raised conversions by up to 5% (Meta's figures)"
+  },
+  {
+    "n": 11,
+    "title": "Creative fatigue recommendations in Meta Ads Manager",
+    "publisher": "Meta Business Help Center",
+    "url": "https://www.facebook.com/business/help/1346816142327858",
+    "checked": "2026-11-07",
+    "supports": "Meta's Help Center does not render for automated fetches; confirmed by a WebSearch result showing this exact page. Creative fatigue is when an audience has seen the same creative too many times, and Ads Manager gives recommendations for it"
+  },
+  {
+    "n": 12,
+    "title": "Instagram Reels ad specs (Meta Ads Guide)",
+    "publisher": "Meta for Business",
+    "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+    "checked": "2026-11-07",
+    "supports": "9:16 at 1440 x 2560; keep 14% of the top, 35% of the bottom and 6% of each side free of text, logos and key elements; captions recommended; sound strongly recommended; original or royalty-free audio"
+  },
+  {
+    "n": 13,
+    "title": "Facebook Feed video ad specs (Meta Ads Guide)",
+    "publisher": "Meta for Business",
+    "url": "https://www.facebook.com/business/ads-guide/update/video",
+    "checked": "2026-11-07",
+    "supports": "4:5 at 1440 x 1800; primary text 50 to 150 characters and headline 27 characters; captions and sound optional but recommended"
+  },
+  {
+    "n": 14,
+    "title": "Meta Advertising Standards",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/policies/ad-standards/",
+    "checked": "2026-11-07",
+    "supports": "Policy structure (prohibited practices, restricted goods, objectionable content, IP, political ads, EU DSA transparency); review typically within 24 hours; appeals through Account Quality"
+  },
+  {
+    "n": 15,
+    "title": "Health and wellness (Advertising Standards; version of 23 July 2026)",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/",
+    "checked": "2026-11-07",
+    "supports": "Weight-loss and cosmetic procedure ads targeted 18+; no side-by-side weight-loss transformations; no close-ups pinching fat; no negative self-perception; rules on before-and-after for cosmetic procedures"
+  },
+  {
+    "n": 16,
+    "title": "Privacy violations and personal attributes (Advertising Standards)",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/",
+    "checked": "2026-11-07",
+    "supports": "Ads must not assert or imply personal attributes (health, finances, religion, sexual orientation and others), with acceptable and unacceptable copy examples"
+  },
+  {
+    "n": 17,
+    "title": "Ad Library tools (updated 24 August 2023)",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/researchtools/ad-library-tools/",
+    "checked": "2026-11-07",
+    "supports": "The Ad Library holds all active ads; social issue, election and political ads kept 7 years; EU-delivered ads archived for one year after last impression; paid partnership branded content; Ad Library API"
+  },
+  {
+    "n": 18,
+    "title": "About video ad formats",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2375464",
+    "checked": "2026-11-07",
+    "supports": "Skippable in-stream can be skipped after 5 seconds; bumpers up to 6 seconds; non-skippable 15 to 60 seconds by subtype; Shorts ads under 60 seconds recommended; Views renamed TrueView views as of October 2025"
+  },
+  {
+    "n": 19,
+    "title": "About YouTube ads and view metrics",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2375431?hl=en",
+    "checked": "2026-11-07",
+    "supports": "A TrueView view counts at 30 seconds or the end (or a click); bumpers and non-skippable ads do not count views; view rate is views over impressions, about 10 to 15% called average for in-stream; quartile metrics are directional"
+  },
+  {
+    "n": 20,
+    "title": "Google Ads policies (overview)",
+    "publisher": "Google Advertising Policies Help",
+    "url": "https://support.google.com/adspolicy/answer/6008942",
+    "checked": "2026-11-07",
+    "supports": "Four policy areas: prohibited content, prohibited practices, restricted content and features, editorial and technical; examples of generic and gimmicky ad text"
+  },
+  {
+    "n": 21,
+    "title": "Misrepresentation",
+    "publisher": "Google Advertising Policies Help",
+    "url": "https://support.google.com/adspolicy/answer/6020955",
+    "checked": "2026-11-07",
+    "supports": "Sub-policies including unreliable claims, clickbait that uses negative life events, misleading ad design, manipulated media, dishonest pricing and unavailable offers"
+  },
+  {
+    "n": 22,
+    "title": "TikTok Auction In-Feed Ads (specifications)",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads?redirected=1",
+    "checked": "2026-11-07",
+    "supports": "TikTok blocks automated fetches; confirmed by WebSearch results showing this exact page. Vertical 9:16 recommended at 540 x 960 or more; 16:9 and 1:1 accepted; up to 4 caption lines shown; safe zone depends on dimension, caption length and add-ons, with downloadable safe-zone files"
+  },
+  {
+    "n": 23,
+    "title": "Video Advertising Guide for Small Businesses",
+    "publisher": "TikTok for Business",
+    "url": "https://ads.tiktok.com/business/en-US/guides/video-advertising-guide",
+    "checked": "2026-11-07",
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. TikTok recommends videos up to 60 seconds and says 21 to 34 seconds performs best (TikTok's own claim)"
+  },
+  {
+    "n": 24,
+    "title": "Pinterest product specs",
+    "publisher": "Pinterest Help",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-product-specs",
+    "checked": "2026-11-07",
+    "supports": "2:3 (1000 x 1500) recommended; titles up to 100 characters with the first 40 shown in feeds; descriptions hidden in feeds; video 4 seconds to 15 minutes, 6 to 15 seconds recommended"
+  },
+  {
+    "n": 25,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-07",
+    "supports": "Endorsements must reflect honest experience; disclosures go in the video itself, near the endorsement, audible and visible; description-only or end-of-video disclosures unlikely to work; results claims read as typical"
+  },
+  {
+    "n": 26,
+    "title": "FTC announces final rule banning fake reviews and testimonials (14 August 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-07",
+    "supports": "Bans fake testimonials including AI-generated ones attributed to people who do not exist or had no experience, undisclosed insider endorsements and fake social indicators; civil penalties for knowing violations"
+  },
+  {
+    "n": 27,
+    "title": "Beauty and cosmetics: the use of production techniques (18 August 2025)",
+    "publisher": "ASA and CAP (UK)",
+    "url": "https://www.asa.org.uk/advice-online/cosmetics-the-use-of-production-techniques.html",
+    "checked": "2026-11-07",
+    "supports": "Filters and retouching must not exaggerate what a product can do; disclaimers do not cure a misleading image; before-and-after images must be representative; keep records of techniques used"
+  },
+  {
+    "n": 28,
+    "title": "The (mis)use of social media beauty filters when advertising cosmetic products (11 February 2021)",
+    "publisher": "ASA (UK)",
+    "url": "https://www.asa.org.uk/news/the-mis-use-of-social-media-beauty-filters-when-advertising-cosmetic-products.html",
+    "checked": "2026-11-07",
+    "supports": "Rulings against Skinny Tan and We Are Luxe (Tanologist) Instagram Stories in which filters darkened influencers' skin, exaggerating the tanning products' effect; the advertiser is responsible"
+  },
+  {
+    "n": 29,
+    "title": "The Digital Services Act (last update 1 October 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+    "checked": "2026-11-07",
+    "supports": "Ads must be labelled and show who placed them and why they are shown; very large platforms keep public ad repositories; no ads based on sensitive data; no targeted ads to children; dark patterns banned"
+  },
+  {
+    "n": 30,
+    "title": "AI Act (regulatory framework for AI)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-07",
+    "supports": "AI Act transparency rules come into effect in August 2026; deepfakes and certain AI-generated content must be clearly labelled; voluntary Code of Practice on marking and labelling AI content; guidelines dated 20 July 2026"
+  }
+]

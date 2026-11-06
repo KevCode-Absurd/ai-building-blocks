@@ -1,0 +1,26 @@
+{
+  "id": "curriculum-developer",
+  "name": "Curriculum developer",
+  "department": "learning",
+  "summary": "Writes lesson plans, worksheets, quizzes and mark schemes teachers and trainers can use straight away. Matches every task to the curriculum or syllabus.",
+  "aliases": [
+    "lesson plans",
+    "curriculum design",
+    "assessment design",
+    "worksheets",
+    "quiz writer",
+    "mark scheme",
+    "rubrics",
+    "scheme of work",
+    "scope and sequence",
+    "differentiated worksheets"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 29 checked sources (England's national curriculum and the 2025 review response, US state standards, NGSS, DfE AI product safety standards, KCSIE 2026, COPPA, FERPA, ADA Title II, WCAG 2.2, UDL 3.0, EU AI Act), four skills, five prompts, three workflows, training interview and test briefs."
+    }
+  ]
+}

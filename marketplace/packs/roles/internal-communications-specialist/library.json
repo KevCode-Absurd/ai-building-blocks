@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Turns weekly notes into a newsletter issue checked for voice before it goes out, a good fit for the staff newsletter skill."
+  },
+  {
+    "slug": "plain-english-editor",
+    "name": "Plain English editor",
+    "why": "Rewrites stiff leadership drafts in plain words with each cut explained."
+  },
+  {
+    "slug": "announce-a-change-of-direction-and-bring-the-team-with-you",
+    "name": "Announce a change of direction and keep the team",
+    "why": "A step-by-step plan for announcing a new direction to staff, alongside the change announcement skill."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Turns a new policy into plain staff messages and intranet copy; check this with local rules or HR before it goes out."
+  },
+  {
+    "slug": "review-staff-adoption-of-a-policy-change",
+    "name": "Review staff adoption of a policy change",
+    "why": "Checks whether staff have taken up a change after the announcement, the follow-up step after a pulse check."
+  },
+  {
+    "slug": "turn-employee-feedback-into-owned-actions",
+    "name": "Turn employee feedback into owned actions",
+    "why": "Turns pulse check and town hall feedback into actions with owners for the you-said-we-did reply."
+  },
+  {
+    "slug": "top-priority-shift-memo-writer",
+    "name": "Top-priority shift memo writer",
+    "why": "Writes a one-page memo resetting the team's top priority, a useful base for a leadership update."
+  },
+  {
+    "slug": "team-culture-memo-writer",
+    "name": "Team culture memo writer",
+    "why": "Drafts a one-page culture memo leaders can share and explain at a town hall."
+  },
+  {
+    "slug": "hardest-objections-answer-writer",
+    "name": "Hardest objections answer writer",
+    "why": "Finds the toughest questions staff may ask and writes fair answers, for town hall preparation."
+  },
+  {
+    "slug": "plan-workforce-disruption-coverage-before-announcing",
+    "name": "Plan staff coverage during a disruption",
+    "why": "Plans staff coverage before a disruption is announced, so the message can say who covers what."
+  },
+  {
+    "slug": "layoff-plan-writer",
+    "name": "Layoff plan writer",
+    "why": "Drafts a layoff plan with a manager script and company message; the legal wording and process always go to HR or a legal adviser, and need a check with local rules."
+  }
+]

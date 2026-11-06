@@ -1,0 +1,26 @@
+{
+  "id": "employee-engagement-specialist",
+  "name": "Employee engagement specialist",
+  "department": "people",
+  "summary": "Finds out how staff really feel and turns it into actions: surveys, recognition, culture and clear staff messages. Closes the loop so people trust the process.",
+  "aliases": [
+    "employee engagement",
+    "staff survey",
+    "internal communications",
+    "company culture",
+    "recognition",
+    "change communications",
+    "pulse survey",
+    "employee wellbeing",
+    "staff retention",
+    "employee experience"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 28 sources (survey privacy thresholds, GDPR and California staff data, EU AI Act, gift tax pointers, stress and wellbeing guidance, help lines, India, Canada and Australia sources), four skills, five prompts, two workflows, training interview and test briefs. Identifying survey data stays in the client's tools."
+    }
+  ]
+}

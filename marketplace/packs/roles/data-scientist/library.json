@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "experiment-readout-desk",
+    "name": "Experiment readout desk",
+    "why": "Checks an A/B test plan before launch and reads the result with a confidence range when it ends."
+  },
+  {
+    "slug": "test-result-trust-checker",
+    "name": "Test result trust checker",
+    "why": "Turns a finished test into a lift range, its money value and one ship call."
+  },
+  {
+    "slug": "ab-test-traffic-checker",
+    "name": "A/B test traffic checker",
+    "why": "Quick check of whether traffic is enough for a test, and how many weeks it needs."
+  },
+  {
+    "slug": "holdout-test-planner",
+    "name": "Holdout test planner",
+    "why": "Plans a holdout to see whether a channel or email really adds sales, with a read-out table."
+  },
+  {
+    "slug": "incrementality-test-planner",
+    "name": "Incrementality test planner",
+    "why": "Sizes a test of whether ad spend causes sales, with a cut, hold or scale rule."
+  },
+  {
+    "slug": "fraud-rules-setter",
+    "name": "Fraud rules setter",
+    "why": "Simple fraud rules by risk level, the plain alternative to judge a fraud model against."
+  },
+  {
+    "slug": "prepare-an-ai-pilot-go-decision",
+    "name": "Prepare an AI pilot go decision",
+    "why": "Checks AI pilot results against the baseline and a go or stop checklist."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Scores how far survey answers can be trusted before anyone acts on them."
+  },
+  {
+    "slug": "document-a-dataset-analysis-for-reproduction",
+    "name": "Document a dataset analysis for reproduction",
+    "why": "Writes down data, method and unsupported claims so another person can repeat the analysis."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Monthly churn check that shows whether last month's fix worked, a common score to validate."
+  },
+  {
+    "slug": "decision-bias-pileup-checker",
+    "name": "Decision bias pile-up checker",
+    "why": "Names the pressures bending a decision before a result is acted on."
+  }
+]

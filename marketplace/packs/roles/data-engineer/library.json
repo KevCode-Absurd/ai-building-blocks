@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "agency-engineering-data-engineer",
+    "name": "Data Engineer agent",
+    "why": "Designs a pipeline with raw, cleaned and report-ready layers, quality checks, freshness targets and alerts, the same shape as the pipeline spec skill."
+  },
+  {
+    "slug": "data-warehouse-query-reviewer",
+    "name": "Data warehouse query reviewer",
+    "why": "Reviews warehouse SQL for join and privacy errors with a read-only plan, a useful check on models before they ship."
+  },
+  {
+    "slug": "align-recurring-report-metric-definitions",
+    "name": "Align recurring report metric definitions",
+    "why": "Produces a metric difference table and reconciled examples, the starting point when two reports disagree."
+  },
+  {
+    "slug": "report-definition-drift-review-assistant",
+    "name": "Report definition drift review assistant",
+    "why": "Finds where a recurring report's definition changed, which explains many 'numbers don't match' tickets."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Joins two tables on a key and reports unmatched rows, the same tie-out habit the reconciliation skill uses."
+  },
+  {
+    "slug": "data-file-clean-up-loop",
+    "name": "Data file clean-up loop",
+    "why": "Fixes and re-checks a messy file until it passes and saves the rules, handy for sources that arrive as files."
+  },
+  {
+    "slug": "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+    "name": "Define your metrics once and write a weekly update",
+    "why": "Writes the metric definitions the marts must produce, so models and reports agree."
+  },
+  {
+    "slug": "agent-database-setup-planner",
+    "name": "Agent database setup planner",
+    "why": "Plans a schema, migration steps, access rules and a staging test, useful when the destination is Postgres."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a safe restore test, the habit behind checking time travel and copies before any overwrite."
+  },
+  {
+    "slug": "recovery-rehearsal-evidence-assistant",
+    "name": "Recovery rehearsal evidence assistant",
+    "why": "Checks restore evidence against recovery targets, a companion to the run book workflow."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Gives a go or no-go, changelog and rollback plan before each release, the same gate as the pipeline change workflow."
+  },
+  {
+    "slug": "process-doc-freshness-keeper",
+    "name": "Process doc freshness keeper",
+    "why": "Finds stale or ownerless process docs each month, which keeps run books current."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "Checks platform numbers against store totals each month, the tie-out that catches broken ad and analytics sources."
+  }
+]

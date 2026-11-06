@@ -1,0 +1,26 @@
+{
+  "id": "research-assistant",
+  "name": "Research assistant",
+  "department": "research",
+  "summary": "Reads the papers, records and sources you give, checks the facts and writes a clear, cited answer. Marks where the evidence is strong or weak.",
+  "aliases": [
+    "research assistant",
+    "literature review",
+    "fact checking",
+    "desk research",
+    "science writer",
+    "historical research",
+    "source checking",
+    "citation check",
+    "evidence summary",
+    "paper summary"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: source checking (SIFT, lateral reading, claim status), study strength and plain summaries (GRADE wording, absolute vs relative risk, p-values), literature searches with or without web search, reference and retraction checks via DOI and Crossref, quoting limits in the US and UK, history and cultural briefs, access levels 1 to 3, with 29 checked sources."
+    }
+  ]
+}

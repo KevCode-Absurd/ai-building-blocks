@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "16 CFR Part 233, Guides Against Deceptive Pricing (CFR 2024 edition)",
+    "publisher": "US Government Publishing Office (govinfo), for the Federal Trade Commission",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title16-vol1/pdf/CFR-2024-title16-vol1-part233.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF, read in full; source 32 FR 15534, 8 Nov 1967). 233.1 former price must be bona fide, openly and actively offered for a reasonably substantial period in the recent regular course of business; trivial \"Sale\" reductions mislead; 233.2 comparisons with prices elsewhere and comparable value; 233.3 list prices need substantial sales; 233.4 free and BOGO terms clear, no raised regular price or cut quantity or quality; 233.5 limited offers must be limited, advance sales need a good-faith planned rise"
+  },
+  {
+    "n": 2,
+    "title": "Advertising FAQ's: A Guide for Small Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; April 2001, edited January 2025. Same truthfulness standards for price comparisons and sale prices, pointing to the Guides Against Deceptive Pricing; for free offers tied to a purchase the regular price should not rise and key terms are disclosed near the price; bait advertising illegal"
+  },
+  {
+    "n": 3,
+    "title": "Rule on Unfair or Deceptive Fees: Frequently Asked Questions",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/rule-unfair-or-deceptive-fees-frequently-asked-questions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated May 2025. 16 CFR Part 464 in force 12 May 2025; covers live-event tickets and short-term lodging; total price including known mandatory fees shown upfront and more prominently; government charges, shipping and optional add-ons may be excluded but disclosed before payment"
+  },
+  {
+    "n": 4,
+    "title": "Hidden fees (SB 478, the Honest Pricing Law)",
+    "publisher": "California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/hiddenfees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Effective 1 July 2024 (Civil Code 1770(a)(29)); advertised prices must include all mandatory fees except government taxes and fees and reasonable shipping; covers most consumer goods and services; exceptions for optional fees, contingent fees, some restaurant charges, tips and some card fees"
+  },
+  {
+    "n": 5,
+    "title": "Price Fixing (Guide to Antitrust Laws: Dealings with Competitors)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-competitors/price-fixing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Agreements among competitors to raise, lower, maintain or stabilise prices, including discounts and shipping fees, almost always illegal; agreements may be informal or inferred from conduct; independent matching is lawful; criminal penalties up to ten years and fines up to $1 million for individuals and $100 million for companies or twice the gain or loss"
+  },
+  {
+    "n": 6,
+    "title": "Price Indication Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/price-indication-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 6a on price reductions added by Directive 2019/2161 (adopted 27 Nov 2019), applying from 28 May 2022; Commission guidance adopted 17 Dec 2021 covering perishable goods, new arrivals and progressive reductions"
+  },
+  {
+    "n": 7,
+    "title": "Press release No 152/24: Judgment in Case C-330/23, Aldi Süd",
+    "publisher": "Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240152en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF, read in full); 26 Sep 2024. Percentage reductions and price highlight claims must be measured from the lowest price applied in a period of at least 30 days before the reduction; banana example shown as -23% at the 30-day lowest price"
+  },
+  {
+    "n": 8,
+    "title": "Consumer Rights Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Information rules for distance contracts; pre-ticked boxes for extra payments prohibited; 2021 guidance lists personalised prices among its topics; Directive 2019/2161 applied from 28 May 2022"
+  },
+  {
+    "n": 9,
+    "title": "Pricing and payments",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last checked by the publisher 27 Jan 2026. Total price including taxes and charges shown clearly; extra paid services need consent and a pre-ticked box is not consent; card surcharges banned with limited exceptions"
+  },
+  {
+    "n": 10,
+    "title": "Review of EU consumer law",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/review-eu-consumer-law_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Digital Fairness Act \"currently under preparation\", targeting dark patterns, addictive design, unfair personalisation practices, influencer marketing, unfair practices related to the marketing of the price and digital contracts; fitness check published October 2024"
+  },
+  {
+    "n": 11,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch, with the linked HTML guidance. Published 4 Apr 2025, updated 18 Nov 2025; DMCC Act guidance; banned practices include bait pricing, falsely limited-time offers, false market conditions and false \"free\"; a false specific price advantage misleads; links the 2023 urgency and price reduction advice"
+  },
+  {
+    "n": 12,
+    "title": "Providing clear and accurate information about prices: summary (CMA209)",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; guidance published 18 Nov 2025, summary updated 7 Jan 2026. Total price in the invitation to purchase; drip pricing prohibited; from prices include mandatory charges; delivery, per-transaction fees and periodic pricing rules; fines up to 10% of turnover or £300,000, whichever is greater"
+  },
+  {
+    "n": 13,
+    "title": "Urgency claims and price reduction claims: compliance advice for online businesses (open letter and examples)",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://assets.publishing.service.gov.uk/media/64232b153d885d000cdadd30/OCA_business_open_letter_FINAL.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF, read in full); 29 Mar 2023. Comparison price must be a genuine, realistic usual selling price the business can demonstrate; misleading examples: short time at the higher price, few sales, flip-flopping, lower prices since, short-lived hikes, old prices, hidden conditions; review claims before A/B tests; refers to the CTSI Guidance for Traders on Pricing Practices"
+  },
+  {
+    "n": 14,
+    "title": "CMA fines firms £6 million for misleading sales tactics",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://www.gov.uk/government/news/cma-fines-firms-6-million-for-misleading-sales-tactics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 14 Oct 2026. Wayfair £4.8 million (false time-limited deals), Appliances Direct £1.2 million, Gold's Gym £45,000 (joining fee left out of the total); 40% settlement discount; DMCC fines up to 10% of global turnover or £300,000"
+  },
+  {
+    "n": 15,
+    "title": "Open letter to online retailers: including mandatory delivery fees in the total price",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 2 Nov 2026. Mandatory delivery included in the total at every stage; drip pricing enforced against four businesses with fines over £5.1 million and refunds over £1.35 million"
+  },
+  {
+    "n": 16,
+    "title": "Microsoft in court for allegedly misleading millions of Australians over Microsoft 365 subscriptions",
+    "publisher": "Australian Competition and Consumer Commission",
+    "url": "https://www.accc.gov.au/media-release/microsoft-in-court-for-allegedly-misleading-millions-of-australians-over-microsoft-365-subscriptions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 27 Oct 2025. Allegations, Federal Court: subscribers told to accept Copilot and pay more or cancel; Classic plan at the old price not mentioned; Personal +45% (A$109 to A$159), Family +29% (A$139 to A$179); about 2.7 million affected"
+  },
+  {
+    "n": 17,
+    "title": "Slack's Fair Billing Policy",
+    "publisher": "Slack",
+    "url": "https://slack.com/help/articles/218915077-Slacks-Fair-Billing-Policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no policy date shown). Billing for active members only; members inactive more than 28 days are not billed and the unused period is credited; credits cannot be refunded"
+  },
+  {
+    "n": 18,
+    "title": "Recurring pricing models",
+    "publisher": "Stripe",
+    "url": "https://docs.stripe.com/products-prices/pricing-models",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Flat rate, per-seat, tiered (volume or graduated) and usage-based models (fixed fee and overage, pay as you go, credit burndown)"
+  },
+  {
+    "n": 19,
+    "title": "Manage products and prices",
+    "publisher": "Stripe",
+    "url": "https://docs.stripe.com/products-prices/manage-prices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A price's amount cannot be changed; create a new price, switch and archive the old; existing subscriptions on archived prices stay active until cancelled; lookup keys let a site render the current price; graduated and volume pricing explained"
+  },
+  {
+    "n": 20,
+    "title": "Sale pricing",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/details/product-pricing/sale-pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Compare-at price must be higher than the price to show a sale; only the sale price shows at checkout; theme controls display"
+  },
+  {
+    "n": 21,
+    "title": "Principles of Economics 3e, 5.1 Price Elasticity of Demand and Price Elasticity of Supply",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-economics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Midpoint method for percentage changes; elasticity as percentage change in quantity over percentage change in price; elastic above 1, inelastic below 1, unitary at 1; worked examples of 0.45 and 1.47 on one curve"
+  },
+  {
+    "n": 22,
+    "title": "Van Westendorp Pricing Model: Definition, How It Works, Examples, and More",
+    "publisher": "Sawtooth Software",
+    "url": "https://sawtoothsoftware.com/resources/blog/posts/van-westendorp-pricing-sensitivity-meter",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 5 Mar 2024. Developed by Peter Van Westendorp in the 1970s; four questions; acceptable range between marginal cheapness and marginal expensiveness; limits: no competitive context, no volume prediction without an extension, ignores cost and margin; conjoint suits many features"
+  },
+  {
+    "n": 23,
+    "title": "The Good-Better-Best Approach to Pricing",
+    "publisher": "Harvard Business Review (Rafi Mohammed)",
+    "url": "https://hbr.org/2018/09/the-good-better-best-approach-to-pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (introduction only; rest paywalled); September-October 2018 issue. Discounts attract price-sensitive buyers while high-end buyers get no reason to spend more; tiers address both; Allstate research example"
+  },
+  {
+    "n": 24,
+    "title": "Price displays",
+    "publisher": "Australian Competition and Consumer Commission",
+    "url": "https://www.accc.gov.au/business/pricing/price-displays",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Australian guidance on displaying total prices, surcharges and drip pricing; listed as the source to check, with no detail given in this kit"
+  },
+  {
+    "n": 25,
+    "title": "Deceptive marketing practices",
+    "publisher": "Competition Bureau Canada",
+    "url": "https://competition-bureau.canada.ca/deceptive-marketing-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Canadian guidance on false or misleading advertising under the Competition Act; listed as the source to check, with no detail given in this kit"
+  },
+  {
+    "n": 26,
+    "title": "National Consumer Helpline",
+    "publisher": "Department of Consumer Affairs, Government of India",
+    "url": "https://consumerhelpline.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official consumer portal run by the Department of Consumer Affairs; listed as the starting point to check Indian consumer rules. The Department's main site (consumeraffairs.nic.in) refused connection on 6 Nov 2026"
+  }
+]

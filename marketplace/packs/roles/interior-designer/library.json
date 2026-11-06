@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "mood-colour-palette-planner",
+    "name": "Mood colour palette planner",
+    "why": "Plans a palette of five colours or fewer, each with one job, a good start for the main, secondary and accent scheme in the lighting and colour plan."
+  },
+  {
+    "slug": "design-brief-rules-writer",
+    "name": "Design brief rules writer",
+    "why": "Turns a loose request into a brief with a few firm limits, the same first step as the measure-and-brief prompt."
+  },
+  {
+    "slug": "wayfinding-sign-planner",
+    "name": "Wayfinding sign planner",
+    "why": "Plans signs a first-time visitor can follow, useful when a new layout changes the route to the counter, toilet or exit."
+  },
+  {
+    "slug": "marketing-image-prompt-writer",
+    "name": "Marketing image prompt writer",
+    "why": "Writes a single image prompt with size and file name, a partner to the concept image prompts for showing a planned look."
+  },
+  {
+    "slug": "product-photo-shoot-planner",
+    "name": "Product photo shoot planner",
+    "why": "Plans matching product photos, the next step after setting up a photo or content corner."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Builds a window poster whose key facts read from a distance, for the sign spots in a window plan."
+  },
+  {
+    "slug": "type-led-poster-planner",
+    "name": "Type-led poster planner",
+    "why": "Plans a type-only sign that reads from far away, for windows without good product photos."
+  },
+  {
+    "slug": "prepare-a-community-event-access-plan",
+    "name": "Prepare a community event access plan",
+    "why": "Plans access from arrival to exit, a useful check when a shop or cafe rearranges its space for an event."
+  }
+]

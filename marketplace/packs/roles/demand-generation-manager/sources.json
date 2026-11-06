@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "The 95-5 Rule",
+    "publisher": "LinkedIn B2B Institute",
+    "url": "https://business.linkedin.com/marketing-solutions/b2b-institute/b2b-research/trends/95-5-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated (footer 2025). About 95% of potential B2B buyers are out of market at any time; purchase-cycle examples (computers about every 4 years, banks about every 5); work with the Ehrenberg-Bass Institute; 96% of surveyed B2B marketers expected the main effect within two weeks, which the page calls a myth."
+  },
+  {
+    "n": 2,
+    "title": "The B2B Effectiveness Code",
+    "publisher": "LinkedIn B2B Institute, with WARC and Lions",
+    "url": "https://business.linkedin.com/advertise/resources/b2b-institute/the-b2b-effectiveness-code",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated (footer 2025). Study of B2B creativity and effectiveness from 2010 to 2021; ladder of effects from response trigger and lead generator to sale closer, fame maker, brand builder and strategic asset."
+  },
+  {
+    "n": 3,
+    "title": "Predictions 2027: AI Takes Over Business Buying, But Humans Retain Control (Barry Vasudevan)",
+    "publisher": "Forrester",
+    "url": "https://www.forrester.com/blogs/predictions-2027-ai-takes-over-business-buying-but-humans-retain-control/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 28 Oct 2026. Prediction: agentic buying in 75% of B2B purchases by 2027; buyers double human interactions to validate AI recommendations; 82% of buyers said their purchase included AI functionality (Forrester 2026 survey); buying teams grew from 8 to 13 (no sample stated). The page also carries promotional 'Ask AI' prompts, which were ignored."
+  },
+  {
+    "n": 4,
+    "title": "Targeting options for LinkedIn Ads",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a424655",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Minimum audience of 300 member accounts per ad set; company and contact list uploads (Matched Audiences); company, job function and seniority attributes; reach for some options including Matched Audiences may be limited in the EEA and Switzerland; Member Groups not available there."
+  },
+  {
+    "n": 5,
+    "title": "LinkedIn buyer groups",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a7437052",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated days before the check. Buyer groups audience built by LinkedIn models from profile and relationship signals; 56 product categories; no A/B testing; predictive audiences disabled when on; saved buyer group audiences shareable across ad accounts but company list segments are not."
+  },
+  {
+    "n": 6,
+    "title": "Create an event audience (Matched Audiences)",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a421211",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Retarget people by engagement with a LinkedIn Event: selected to attend, registered and attended, registered but did not attend, engaged but did not register; audience must match at least 300 members; Page and ad account roles needed."
+  },
+  {
+    "n": 7,
+    "title": "Lead Gen Forms Privacy Policy",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a420012",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about 11 months before the check. Privacy policy URL required; describe how leads will be used; up to five disclosure checkboxes, optional or required; no default consent checkbox for EU members since 21 April 2020."
+  },
+  {
+    "n": 8,
+    "title": "Data collection and retention for Lead Gen Forms",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a7478965",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Sponsored, Event and Candidate interest leads kept 365 days; Company Page, product and LinkedIn Landing Page leads 90 days; advertisers may not request sensitive data; use of form data subject to the member's agreement and applicable law."
+  },
+  {
+    "n": 9,
+    "title": "LinkedIn conversion attribution model",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a426349",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about a year before the check. Last-touch attribution for most conversion types; options to credit each ad set or only the last ad set; some conversions measured with modelling for privacy."
+  },
+  {
+    "n": 10,
+    "title": "LinkedIn conversion window",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a426359",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about two months before the check. Click and view windows of 1, 7, 30 or 90 days; default 90-day click and 90-day view; 180 or 365 days for some lead and purchase categories sent by Conversions API or CSV."
+  },
+  {
+    "n": 11,
+    "title": "LinkedIn Conversions API",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a1655394",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about three months before the check. Server-side online and offline conversions including phone sales and in-person event leads; partner or direct setup; email hashed with SHA-256; data deleted after 180 days except aggregate reporting; deduplication with the Insight Tag."
+  },
+  {
+    "n": 12,
+    "title": "Revenue Attribution Report in Business Manager",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a1459789",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about seven months before the check. Links CRM data from Salesforce, Dynamics 365 or HubSpot to LinkedIn ad activity; impression-based or engagement-based; member or company level; metrics include pipeline, revenue won, win rate and days to close."
+  },
+  {
+    "n": 13,
+    "title": "Create and host LinkedIn Live: access criteria",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a568503",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated about a year before the check. More than 150 followers or connections, account at least 30 days old, good standing, no application; a third-party streaming tool is required."
+  },
+  {
+    "n": 14,
+    "title": "Snowflake customer story (Thought Leader Ads for Dev Day)",
+    "publisher": "LinkedIn Marketing Solutions",
+    "url": "https://business.linkedin.com/advertise/customer-stories/snowflake",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vendor case study, undated; event in 2024. Thought Leader Ads as the only tactic for Snowflake's first Dev Day; 21.2% CTR; 64 sign-ups; registrations from 40 target accounts; earlier Data Cloud Summit test 5.6% CTR, 2.7x single image ads."
+  },
+  {
+    "n": 15,
+    "title": "360Suite customer story (Event Ads and LinkedIn Live)",
+    "publisher": "LinkedIn Marketing Solutions",
+    "url": "https://business.linkedin.com/advertise/customer-stories/360suite",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vendor case study, undated. Software firm of 50 to 100 staff; virtual events on LinkedIn Live promoted with Event Ads, retargeting and Lead Gen Forms; more than 2,000 registrations and 632 SQLs in six weeks; $19 per registration."
+  },
+  {
+    "n": 16,
+    "title": "Understand the lead scoring tool",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 2 Sep 2026. Fit, engagement and combined scores for contacts and companies; negative points; score and group limits; decay every 1, 3, 6 or 12 months; Professional or Enterprise needed; AI scoring needs Marketing Hub Enterprise and 50 contacts (25 converted, 25 not)."
+  },
+  {
+    "n": 17,
+    "title": "Use lifecycle stages",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/use-lifecycle-stages",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 17 Jul 2026. Default stages Subscriber to Evangelist plus Other; automatic updates only move forward; MQL qualified by marketing, SQL by sales; lead status sub-stages."
+  },
+  {
+    "n": 18,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated (footer 2026). Remote MCP server at mcp.hubspot.com with OAuth; read and write for CRM objects such as contacts, companies and deals; campaigns, pages and blog posts read-only; no access to custom sensitive data properties."
+  },
+  {
+    "n": 19,
+    "title": "[GA4] Get started with attribution",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Three models: data-driven attribution, paid and organic last click, Google paid channels last click; first click, linear, time decay and position-based removed November 2023; direct visits get no credit unless the whole path is direct."
+  },
+  {
+    "n": 20,
+    "title": "2026 Webinar Benchmarks",
+    "publisher": "Livestorm",
+    "url": "https://livestorm.co/webinar-benchmark-report-2026",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 1 Sep 2026. 33,786 sessions in 2025 from 3,199 organisations; show-up rate 47.7%; 175 registrants and 83 attendees on average; 68 minutes; 26 minutes watched; 49.7% of registrations in the final 7 days, 15.3% on the day; Tuesday highest show-up; public replays about 3.7x the views of gated."
+  },
+  {
+    "n": 21,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. August 2023, edited January 2024. No exception for B2B email; accurate headers; honest subject; ad disclosure; postal address; opt-out honoured within 10 business days and working for 30 days; up to $53,088 per violating email; seller and sender can both be liable."
+  },
+  {
+    "n": 22,
+    "title": "Frequently Asked Questions (CCPA)",
+    "publisher": "California Privacy Protection Agency",
+    "url": "https://cppa.ca.gov/faq.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. The CCPA exemptions for employee and business-to-business data expired on 31 December 2022; coverage thresholds include $26.625 million gross revenue from 1 January 2025."
+  },
+  {
+    "n": 23,
+    "title": "Marketing and advertising: the law - Direct marketing",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/marketing-advertising-law/direct-marketing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Marketing emails and texts to individual customers need permission; every message must offer an easy opt-out; screen calls against the Telephone Preference Service; bought lists must be checked with the supplier."
+  },
+  {
+    "n": 24,
+    "title": "Data (Use and Access) Act factsheet: Privacy and Electronic Communications Regulations",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 27 June 2025. Calls and communications count whether or not they reach the recipient; charity soft opt-in; new cookie exceptions; measures commence in stages."
+  },
+  {
+    "n": 25,
+    "title": "Can data received from a third party be used for marketing?",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/can-data-received-third-party-be-used-marketing_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. List supplier must show GDPR-compliant collection and permission for advertising; consent must have covered passing data on; tell people at the first communication; exclude objectors; ePrivacy Directive Article 13 for email."
+  },
+  {
+    "n": 26,
+    "title": "Legal grounds for processing data",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Six legal grounds; legitimate interests can cover direct marketing after checking the person's rights and informing them; direct marketing list rules; special category data such as health."
+  },
+  {
+    "n": 27,
+    "title": "La prospection commerciale par courrier électronique, SMS-MMS et automate d'appel",
+    "publisher": "CNIL (France)",
+    "url": "https://www.cnil.fr/fr/la-prospection-commerciale-par-courrier-electronique",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (French; summarised in English). Dated 10 June 2026. B2B email prospecting allowed without prior consent when it relates to the recipient's profession, provided the person was informed and can object; generic addresses such as contact@ fall outside these rules; consumers need prior consent."
+  },
+  {
+    "n": 28,
+    "title": "Canada's anti-spam legislation, consolidated Act E-1.6 (sections 10 to 11)",
+    "publisher": "Justice Laws Website, Government of Canada",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/E-1.6/page-2.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Implied consent: existing business relationship (two years for purchases and contracts, six months for inquiries), published or disclosed addresses with no statement refusing messages and relevance to the person's role; unsubscribe within 10 business days."
+  },
+  {
+    "n": 29,
+    "title": "Canada's anti-spam legislation, consolidated Act E-1.6 (section 20, administrative monetary penalties)",
+    "publisher": "Justice Laws Website, Government of Canada",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/E-1.6/page-3.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Maximum penalty of $1,000,000 for an individual and $10,000,000 for any other person."
+  },
+  {
+    "n": 30,
+    "title": "Electronic Commerce Protection Regulations (SOR/2013-221)",
+    "publisher": "Justice Laws Website, Government of Canada",
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-221/page-1.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last amended 15 Jan 2015. Section 3(a)(ii): messages to an employee or representative of another organisation are exempt where the organisations have a relationship and the message concerns the recipient organisation's activities."
+  }
+]

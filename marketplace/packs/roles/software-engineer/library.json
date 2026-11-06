@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "pull-request-reviewer",
+    "name": "Pull request reviewer",
+    "why": "Rates risk and ranks findings on each new pull request, then posts the review only after you say yes, the same flow as the code review skill."
+  },
+  {
+    "slug": "review-a-pull-request-fix-the-comments-and-sign-off",
+    "name": "Review a pull request, fix the comments and sign off",
+    "why": "Takes a review through to fixed comments and a one-page sign-off, for when the author needs help addressing review comments."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause before any fix and ends in a minimal pull request, matching the bug diagnosis skill."
+  },
+  {
+    "slug": "turn-a-bug-report-into-proof",
+    "name": "Turn a bug report into proof",
+    "why": "Turns a vague bug report into a repeatable case and the missing tests, the first half of debugging."
+  },
+  {
+    "slug": "prepare-private-bug-evidence-for-developers",
+    "name": "Private bug evidence assistant",
+    "why": "Helps non-developers turn rough notes and screenshots into a bug report with private data removed."
+  },
+  {
+    "slug": "test-failure-repair-loop",
+    "name": "Test failure repair loop",
+    "why": "Fixes a red test suite in capped rounds, re-checking each time, useful after an upgrade step."
+  },
+  {
+    "slug": "ai-code-change-steps",
+    "name": "Make a code change in small tested steps with AI",
+    "why": "Splits a change into small tested steps with rules for an AI coding helper, the same small-step habit as safe refactoring."
+  },
+  {
+    "slug": "monthly-tech-debt-keeper",
+    "name": "Monthly tech debt keeper",
+    "why": "Finds new debt each month and ranks the next small fixes, feeding the codebase health check."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Tracks dependency and security changes weekly with an upgrade order, the early warning for the upgrade plan skill."
+  },
+  {
+    "slug": "write-docs-a-new-developer-can-follow-on-day-one",
+    "name": "Write docs a new developer can follow on day one",
+    "why": "Produces an architecture read, README and quickstart, the written side of the codebase map prompt."
+  },
+  {
+    "slug": "monthly-developer-docs-keeper",
+    "name": "Monthly developer docs keeper",
+    "why": "Keeps developer docs current after changes, so onboarding notes do not go stale."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "A go or no-go, changelog and rollback plan before each release, the last step after an upgrade or fix."
+  },
+  {
+    "slug": "make-your-repo-agent-ready",
+    "name": "Make your repo agent ready",
+    "why": "Scores how ready a repository is for AI coding helpers, useful before letting AI write changes for review."
+  }
+]

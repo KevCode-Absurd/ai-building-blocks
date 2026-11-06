@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "new-screen-design-reviewer",
+    "name": "New screen design reviewer",
+    "why": "Checks each new screen against your own design rules and ranks fixes, a repeatable version of the before-and-after review."
+  },
+  {
+    "slug": "write-design-rules-check-colours-and-hand-developers-a-spec",
+    "name": "Write design rules, check colours and hand developers a spec",
+    "why": "Runs from design rules to contrast-checked colours to a developer spec, the same path as the screen design to handoff workflow."
+  },
+  {
+    "slug": "borrow-a-look-you-like-and-plan-a-readable-page",
+    "name": "Borrow a look you like and plan a readable page",
+    "why": "Turns designs a client likes into a grid and type plan with checked colours, a good start before setting foundations."
+  },
+  {
+    "slug": "landing-page-design-planner",
+    "name": "Landing page design planner",
+    "why": "Plans three design directions from page copy and brand assets with a build brief, for marketing pages rather than app screens."
+  },
+  {
+    "slug": "give-developers-a-complete-component-brief",
+    "name": "Give developers a complete component brief",
+    "why": "Specifies one component's variants, states and tokens for build, a deeper version of the states matrix prompt."
+  },
+  {
+    "slug": "design-handoff-completeness-assistant",
+    "name": "Design handoff completeness assistant",
+    "why": "Finds missing states and variants in a changed component before developers start."
+  },
+  {
+    "slug": "layout-default-breaker",
+    "name": "Layout default breaker",
+    "why": "Finds layout choices inherited from a template and offers hand-made alternatives, useful when a screen looks generic."
+  },
+  {
+    "slug": "mood-colour-palette-planner",
+    "name": "Mood colour palette planner",
+    "why": "Builds a small palette where each colour has one job, a useful input before naming colour roles."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Rechecks accessibility gaps and contrast each quarter, a follow-up to the contrast and dark mode check."
+  },
+  {
+    "slug": "check-a-translated-interface-still-makes-sense",
+    "name": "Check a translated interface still makes sense",
+    "why": "Flags translated text that may not fit the layout, so screen specs can plan for longer strings."
+  }
+]

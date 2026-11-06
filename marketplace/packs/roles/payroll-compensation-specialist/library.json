@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "check-payroll-inputs-before-the-cut-off",
+    "name": "Check payroll inputs before the cut off",
+    "why": "The same pre-payroll check as the payroll input pre-check skill: missing approvals, double-counted hours and rate changes, with questions for HR."
+  },
+  {
+    "slug": "first-employee-payroll-setup-planner",
+    "name": "First-employee payroll set-up planner",
+    "why": "A dated payroll set-up plan and accountant questions for a business hiring its first employee, before the pre-check cycle starts."
+  },
+  {
+    "slug": "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+    "name": "Set fair pay bands and a pay and benefits plan",
+    "why": "Market ranges, pay bands and a bonus and benefits plan, matching the pay bands skill and the benefits prompt."
+  },
+  {
+    "slug": "pay-raise-case-builder",
+    "name": "Pay raise case builder",
+    "why": "Builds a raise case, script and replies, the same job as the pay raise case prompt."
+  },
+  {
+    "slug": "prepare-a-fair-promotion-discussion",
+    "name": "Prepare a fair promotion discussion",
+    "why": "Matches work evidence to promotion criteria, the step behind moving someone between levels."
+  },
+  {
+    "slug": "sales-pay-plan-checker",
+    "name": "Sales pay plan checker",
+    "why": "Checks what a commission plan rewards and ignores against churn by rep, as in a commission plan review."
+  },
+  {
+    "slug": "incentive-checker",
+    "name": "Incentive checker",
+    "why": "Finds where a pay plan pulls the wrong way, the test every commission or bonus plan should pass."
+  },
+  {
+    "slug": "sales-team-hiring-pay",
+    "name": "Hire, pay and measure a sales team on what works",
+    "why": "Links hiring, the pay plan check and early success signs for a growing sales team."
+  },
+  {
+    "slug": "recognition-plan-designer",
+    "name": "Recognition plan designer",
+    "why": "Non-cash recognition to sit alongside pay, useful when the budget for raises is tight."
+  },
+  {
+    "slug": "review-employee-data-access-before-a-change",
+    "name": "Review employee data access before a change",
+    "why": "Checks who can see pay and personal data before connecting a new payroll or HR tool."
+  }
+]

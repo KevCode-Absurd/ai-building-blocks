@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "knock-on-effects-tracer",
+    "name": "Knock-on effects tracer",
+    "why": "Traces what a planned structure change causes next and the signs to watch, a check before choosing an option."
+  },
+  {
+    "slug": "problem-first-job-description-writer",
+    "name": "Problem-first job description writer",
+    "why": "Writes a role around the problem it must solve, the same habit as the role profiles in the options skill."
+  },
+  {
+    "slug": "quarterly-headcount-plan-keeper",
+    "name": "Quarterly headcount plan keeper",
+    "why": "Checks the headcount plan against hires and exits, an input to the current structure map."
+  },
+  {
+    "slug": "decision-checklist-keeper",
+    "name": "Decision checklist keeper",
+    "why": "Checks a big decision before it is made, useful when leaders choose between org design options."
+  },
+  {
+    "slug": "define-a-customer-support-escalation-agreement",
+    "name": "Define a customer support escalation agreement",
+    "why": "Writes down who handles a stuck issue and when it moves up, a worked example of decision rights."
+  },
+  {
+    "slug": "plan-coverage-for-a-critical-role",
+    "name": "Plan coverage for a critical role",
+    "why": "Makes sure each critical task has a backup, a risk check during a transition."
+  },
+  {
+    "slug": "one-on-one-meeting-planner",
+    "name": "One-on-one meeting planner",
+    "why": "Sets up regular one-to-ones, which matter when spans widen after a redesign."
+  },
+  {
+    "slug": "new-leader-first-message-writer",
+    "name": "New leader first message writer",
+    "why": "A first message for a leader taking on a new or merged team after the change."
+  },
+  {
+    "slug": "power-and-fear-map-builder",
+    "name": "Power and fear map builder",
+    "why": "Maps who holds influence and what they fear, useful for the stakeholder step of a transition plan."
+  },
+  {
+    "slug": "employee-feedback-action-review-assistant",
+    "name": "Employee feedback action review assistant",
+    "why": "Tracks actions agreed after staff feedback, with small groups kept private, for the after-change check."
+  }
+]

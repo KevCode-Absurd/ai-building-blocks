@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "weekly-product-funnel-watcher",
+    "name": "Weekly product funnel watcher",
+    "why": "Finds the funnel step that lost the most each week and one experiment to run, the same loop as the funnel drop-off skill."
+  },
+  {
+    "slug": "set-up-product-tracking-and-build-a-retention-dashboard",
+    "name": "Set up product tracking and build a retention dashboard",
+    "why": "Goes from an event plan to a retention grid and dashboard, matching the tracking plan and retention cohort skills."
+  },
+  {
+    "slug": "find-where-new-users-leave-and-prove-the-fix-works",
+    "name": "Find where new users leave and prove the fix works",
+    "why": "Finds the biggest leak and plans a test of the fix, the core of this role's funnel and test plan work."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "Catches broken events and double counts each month, the check the tracking plan workflow runs after release."
+  },
+  {
+    "slug": "cohort-funnel-reader",
+    "name": "Cohort funnel reader",
+    "why": "Reads results by join date to see where each group drops off, the cohort side of funnel and retention work."
+  },
+  {
+    "slug": "customer-onboarding-keeper",
+    "name": "Customer onboarding keeper",
+    "why": "Tracks where each week's new customers stall in their first 30 days, an onboarding funnel and cohort view."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Shows where subscribers leave and whether last month's fix worked, the retention analyst's monthly question."
+  },
+  {
+    "slug": "subscription-churn-audit",
+    "name": "Subscription churn audit",
+    "why": "A deeper churn review for subscription businesses, useful alongside the retention cohort skill."
+  },
+  {
+    "slug": "repeat-order-bottleneck-finder",
+    "name": "Repeat order bottleneck finder",
+    "why": "Finds where first-time buyers fail to come back, the repeat purchase view for online shops."
+  },
+  {
+    "slug": "first-use-gap-checker",
+    "name": "First-use gap checker",
+    "why": "Looks at the first-use experience where activation drop-offs usually start."
+  },
+  {
+    "slug": "experiment-readout-desk",
+    "name": "Experiment readout desk",
+    "why": "Checks a test plan before launch and reads the result after, the companion to the test plan skill."
+  },
+  {
+    "slug": "ab-test-traffic-checker",
+    "name": "A/B test traffic checker",
+    "why": "Checks whether a test split matches the plan, the sample ratio check this kit insists on."
+  },
+  {
+    "slug": "test-result-trust-checker",
+    "name": "Test result trust checker",
+    "why": "Says whether to trust a finished test and gives the lift as a range before anyone ships."
+  }
+]

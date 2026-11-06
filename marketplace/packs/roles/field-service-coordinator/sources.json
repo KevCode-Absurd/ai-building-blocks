@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Assessment and Visit Reminders",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/assessment-and-visit-reminders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; article last updated 22 Oct 2026. Automatic or manual reminders before visits; send at a set time or relative to the visit; rescheduling cancels old reminders; text reminders only in the US, UK and Canada to mobiles with messages switched on; 160-character limit with no emoji or links; clients confirm through a Client Hub link or by replying; on select plans."
+  },
+  {
+    "n": 2,
+    "title": "Automations",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/automations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 28 Oct 2026. Quote follow-ups (up to two reminders, timed in days after sending, up to 90 days, same channel as the quote); invoice follow-ups after the due date; Jobber AI auto-drafting quotes from new requests for review; high-value quote alerts; follow-ups on the Connect plan and up."
+  },
+  {
+    "n": 3,
+    "title": "Checklists",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/checklists",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 30 Oct 2026. Checklists built from sections and questions (including image upload and signature); attach to assessments, jobs or single visits; required questions can still be left blank when a visit is completed; completed checklists emailed to clients as a PDF; select plans."
+  },
+  {
+    "n": 4,
+    "title": "Route Optimization | New Schedule",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/route-optimization-new-schedule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 31 Jul 2026. Reorders anytime visits only, using driving distance; up to 7 days per run; admins on Jobber.com; first and last stops can be fixed; Connect, Grow and Plus plans."
+  },
+  {
+    "n": 5,
+    "title": "Job Follow-ups",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/job-follow-ups",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Follow-up emails after a job closes, with an optional 0 to 10 feedback survey; email only; clients can be opted out; select plans."
+  },
+  {
+    "n": 6,
+    "title": "Register your dedicated phone number",
+    "publisher": "Jobber Help Center",
+    "url": "https://help.getjobber.com/en/articles/register-your-dedicated-phone-number",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 28 Oct 2026. US carriers require businesses to register a number used for two-way texting; approval can take up to 3 weeks; web forms need consent wording; terms must say how customers opt out of texts."
+  },
+  {
+    "n": 7,
+    "title": "Set up arrival windows",
+    "publisher": "ServiceTitan Help Center",
+    "url": "https://help.servicetitan.com/docs/set-up-arrival-windows.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published and updated 15 Oct 2026. An arrival window is the time range promised to the customer; presets by business unit; required for new and rescheduled jobs when Capacity Planning is on; lets the company track on-time arrival."
+  },
+  {
+    "n": 8,
+    "title": "Day-of-dispatching: A Dispatcher's Guide in ServiceTitan Max",
+    "publisher": "ServiceTitan Help Center",
+    "url": "https://help.servicetitan.com/docs/day-of-dispatching-in-servicetitan-max.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 15 Oct 2026. Dispatch Pro in Auto Mode runs every 10 minutes in business hours; jobs it cannot place appear with a reason; it reschedules only within the arrival window or business hours; the dispatcher keeps the final decision."
+  },
+  {
+    "n": 9,
+    "title": "Plan Your Team's Capacity",
+    "publisher": "ServiceTitan Help Center",
+    "url": "https://help.servicetitan.com/docs/plan-your-teams-capacity.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 15 Oct 2026. Capacity planning matches technician time to booked work; Adaptive Capacity uses shifts, skills, zones and business units; booking staff see only slots an eligible technician can take."
+  },
+  {
+    "n": 10,
+    "title": "Grow Recurring Revenue with Memberships",
+    "publisher": "ServiceTitan Help Center",
+    "url": "https://help.servicetitan.com/docs/grow-recurring-revenue-with-memberships.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 15 Oct 2026. Membership types set duration, price, discounts and included recurring services; billing runs in daily batches; auto-renewal; recurring service events are generated automatically and booked into jobs by staff; separate workflow for commercial service agreements."
+  },
+  {
+    "n": 11,
+    "title": "Customer Notifications Overview",
+    "publisher": "Housecall Pro Help Center",
+    "url": "https://help.housecallpro.com/en/articles/357613-customer-notifications-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Notification types: job or estimate scheduled (text and email), On My Way (text), job finished (text), review request (Reviews app); texts are not sent to landlines; notifications are switched off per customer or per job."
+  },
+  {
+    "n": 12,
+    "title": "Checklists Overview",
+    "publisher": "Housecall Pro Help Center",
+    "url": "https://help.housecallpro.com/en/articles/9528709-checklists-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 15 Jul 2026. Required checklist items must be completed before a job or estimate can be marked finished; item types include pass/flag/fail and photo upload; checklists can be added automatically by job template."
+  },
+  {
+    "n": 13,
+    "title": "How to Sell A Service Plan",
+    "publisher": "Housecall Pro Help Center",
+    "url": "https://help.housecallpro.com/en/articles/2921514-how-to-sell-a-service-plan",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 3 Sep 2026. Plans offered from an estimate, job or customer profile; customer accepts by email and pays by card, or staff accept on their behalf; visit months fill in from the start date and visit count."
+  },
+  {
+    "n": 14,
+    "title": "Service Plan Renewals",
+    "publisher": "Housecall Pro Help Center",
+    "url": "https://help.housecallpro.com/en/articles/6879916-service-plan-renewals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 21 Jul 2026. Only plans with an end date can renew; renewal reminders create draft renewals that stay pending until accepted; payment is not taken automatically; reminder lead times from 1 to 60 days before expiry."
+  },
+  {
+    "n": 15,
+    "title": "The Psychology of Waiting Lines",
+    "publisher": "David Maister (author's site)",
+    "url": "https://davidmaister.com/articles/the-psychology-of-waiting-lines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Maister (1985): uncertain and unexplained waits feel longer than known and explained ones; anxiety lengthens waits; unfair waits feel longer; satisfaction as perception minus expectation."
+  },
+  {
+    "n": 16,
+    "title": "Service Blueprints: Definition",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/service-blueprints-definition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; Sarah Gibbons, 2017, reviewed 15 Jul 2026. Service blueprint layers: customer actions, frontstage, backstage, support processes and evidence; lines of interaction and visibility; used to find root causes of poor service across teams."
+  },
+  {
+    "n": 17,
+    "title": "Buyer's Remorse: The FTC's Cooling-Off Rule May Help",
+    "publisher": "US Federal Trade Commission (consumer advice)",
+    "url": "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated Sep 2025. Three business days to cancel covered sales at home ($25 or more) or temporary locations ($130 or more); seller must give notice and two cancellation forms; exemptions include emergencies and repairs or maintenance the buyer asked for, but extra purchases beyond the request are covered."
+  },
+  {
+    "n": 18,
+    "title": "Cancelling a service you've arranged",
+    "publisher": "Citizens Advice (UK national charity; summary)",
+    "url": "https://www.citizensadvice.org.uk/consumer/changed-your-mind/cancelling-a-service-youve-arranged/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated (2026 copyright). Labelled a summary: legislation.gov.uk returned empty pages to WebFetch. In England, services arranged online, by phone or away from the trader's premises costing 42 pounds or more carry at least 14 days to cancel; services the customer asked to start in that period can be charged up to cancellation."
+  },
+  {
+    "n": 19,
+    "title": "Returns: cancelling a purchase",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last checked by the EU 28 Apr 2026. 14-day right of withdrawal for distance and off-premises contracts; for services it runs from the contract date; urgent repair and maintenance contracts are excluded; fully delivered services are excluded if the consumer agreed to an immediate start and acknowledged losing the right."
+  },
+  {
+    "n": 20,
+    "title": "If you're unhappy about poor service",
+    "publisher": "Citizens Advice (UK national charity; summary)",
+    "url": "https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/complain-about-a-service/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Labelled a summary of the Consumer Rights Act 2015: services must be carried out with reasonable care and skill; the trader is first offered the chance to redo the work, otherwise a discount; claims possible for up to 6 years in England, Wales and Northern Ireland, 5 in Scotland."
+  },
+  {
+    "n": 21,
+    "title": "Businessperson's Guide to Federal Warranty Law",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; guide dated Dec 2006, tie-in and e-warranty parts updated Mar 2018. Written warranties are optional; on products over $10 they must be titled full or limited; pre-sale availability rules over $15; tie-in conditions generally banned; the Act covers written warranties on consumer goods, not services."
+  },
+  {
+    "n": 22,
+    "title": "Guarantees and returns",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last checked by the EU 5 Oct 2026. Legal guarantee of at least 2 years on goods; defects showing within 1 year presumed present at delivery (some countries 2 years); repair or replacement first, then a price cut or refund."
+  },
+  {
+    "n": 23,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; Nov 2024 guidance; rule effective 21 Oct 2024. Bans fake reviews, incentives conditioned on positive sentiment, undisclosed insider reviews and review suppression by threats or false accusations; asking only happy customers is not banned by the rule itself but may break the FTC Act."
+  },
+  {
+    "n": 24,
+    "title": "Short guide for businesses publishing consumer reviews and complying with consumer protection law",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/fake-reviews/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 4 Apr 2025. Fake reviews, concealed incentivised reviews and false or misleading review information are banned; businesses must not write or commission fake reviews."
+  },
+  {
+    "n": 25,
+    "title": "Prohibited and restricted content (Maps user contributed content policy)",
+    "publisher": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Businesses may not offer incentives for reviews, discourage negative reviews or selectively ask for positive ones; staff review quotas are not allowed; genuine reviews may be encouraged."
+  },
+  {
+    "n": 26,
+    "title": "Read and reply to reviews",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474050",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Verified businesses can reply; replies are checked against content policies (usually within 10 minutes, up to 30 days); replies are public and the reviewer is notified and can change the review."
+  },
+  {
+    "n": 27,
+    "title": "Write It Right: A Guide for Automotive Repair Dealers",
+    "publisher": "California Bureau of Automotive Repair",
+    "url": "https://www.bar.ca.gov/wir",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated Jan 2026. California only: a written estimate and the customer's authorisation before work; revised work order and documented approval (date, time, name, number) before extra work; itemised invoice; replaced parts returned on request."
+  },
+  {
+    "n": 28,
+    "title": "Housecall Pro pricing",
+    "publisher": "Housecall Pro",
+    "url": "https://www.housecallpro.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plans named Basic, Essentials and Max; 14-day free trial, no free plan; Max includes open API access and Zapier; CSR AI is an add-on; every plan lists AI team members. Prices deliberately not recorded."
+  }
+]

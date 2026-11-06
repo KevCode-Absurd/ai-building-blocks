@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "product-tech-pack-writer",
+    "name": "Product tech pack writer",
+    "why": "Turns product photos and ideas into a factory-ready tech pack with exact measures, a quick start before the apparel tech pack skill."
+  },
+  {
+    "slug": "product-bill-of-materials-builder",
+    "name": "Product bill of materials builder",
+    "why": "Builds a cost sheet by part with price-break questions, feeding the cost of goods lines in the quote comparison."
+  },
+  {
+    "slug": "supplier-quote-request-writer",
+    "name": "Supplier quote request writer",
+    "why": "Writes a quote request in the maker's terms, matching step 1 of the RFQ pack skill."
+  },
+  {
+    "slug": "compare-supplier-prices-on-the-same-basis",
+    "name": "Compare supplier prices on the same basis",
+    "why": "Normalises quotes on units, currency and delivery terms, the same rule the quote comparison skill follows."
+  },
+  {
+    "slug": "supplier-quote-table-builder",
+    "name": "Supplier quote table builder",
+    "why": "Puts two or more pasted quotes in one table with the cash each needs, a quick version of the cost per unit prompt."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Adds freight to a quote to get cost per sellable unit and margin, the last step of landed cost."
+  },
+  {
+    "slug": "factory-shortlist-vetter",
+    "name": "Supplier shortlist vetter",
+    "why": "Scores factory answers against your spec and flags red flags before you send a full quote pack."
+  },
+  {
+    "slug": "product-sample-approval-loop",
+    "name": "Product sample approval loop",
+    "why": "Checks each sample against the tech pack, writes factory fixes and stops at three rounds, matching the sample round workflow."
+  },
+  {
+    "slug": "sample-approval-gatekeeper",
+    "name": "Sample approval gatekeeper",
+    "why": "Gives a line-by-line pass or fail of a sample against the tech pack, a second check before approval."
+  },
+  {
+    "slug": "pre-shipment-inspection-brief-writer",
+    "name": "Pre-shipment inspection brief writer",
+    "why": "Writes the inspector's brief and a pass rule for the first batch, the step after an approved sample."
+  },
+  {
+    "slug": "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+    "name": "Get a product made right, from tech pack to shipment",
+    "why": "Runs the whole path from tech pack to inspected shipment, a longer version of the idea to factory-ready workflow."
+  },
+  {
+    "slug": "factory-price-break-negotiator",
+    "name": "Factory price-break negotiator",
+    "why": "Plans asks and give-backs for price breaks once quotes are compared, before the client decides."
+  }
+]

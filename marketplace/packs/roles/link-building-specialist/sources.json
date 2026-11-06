@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Spam policies for Google web search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The link spam examples (buying or selling links that pass ranking credit, excessive exchanges, automated links, paid articles with followed links, optimised anchors in guest posts and press releases, low-quality directories, widget and footer links); paid links are fine when qualified with nofollow or sponsored; site reputation abuse and what is not abuse; expired domain abuse; different effects inside and outside the EEA."
+  },
+  {
+    "n": 2,
+    "title": "Qualify your outbound links to Google",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. rel=\"sponsored\" for ads and paid placements, rel=\"ugc\" for user-generated content, rel=\"nofollow\" as the fallback; values can be combined."
+  },
+  {
+    "n": 3,
+    "title": "Evolving \"nofollow\": new ways to identify the nature of links",
+    "publisher": "Google Search Central Blog (September 2019)",
+    "url": "https://developers.google.com/search/blog/2019/09/evolving-nofollow-new-ways-to-identify",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. sponsored and ugc introduced; all three values treated as hints; nofollow a hint for crawling and indexing from 1 March 2020; no need to change existing nofollow links."
+  },
+  {
+    "n": 4,
+    "title": "A reminder on qualifying links and our link spam update",
+    "publisher": "Google Search Central Blog (26 July 2021)",
+    "url": "https://developers.google.com/search/blog/2021/07/link-tagging-and-link-spam-update",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Affiliate links should carry rel=\"sponsored\"; sponsored and guest posts need qualified links; sites that don't may face manual or algorithmic actions; the 2021 link spam update nullifies link spam."
+  },
+  {
+    "n": 5,
+    "title": "December 2022 link spam update",
+    "publisher": "Google Search Central Blog (December 2022)",
+    "url": "https://developers.google.com/search/blog/2022/12/december-22-link-spam-update",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SpamBrain detects sites buying links and sites used to pass outgoing links; neutralised links lose the credit they passed."
+  },
+  {
+    "n": 6,
+    "title": "A reminder about links in large-scale article campaigns",
+    "publisher": "Google Search Central Blog (May 2017)",
+    "url": "https://developers.google.com/search/blog/2017/05/a-reminder-about-links-in-large-scale",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guest and contributor articles are fine when they inform readers, not when the main aim is building links at scale; warning signs include keyword-rich links and articles spread across many sites."
+  },
+  {
+    "n": 7,
+    "title": "Updating our site reputation abuse policy",
+    "publisher": "Google Search Central Blog (19 November 2024)",
+    "url": "https://developers.google.com/search/blog/2024/11/site-reputation-abuse",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. First-party involvement or oversight does not change the third-party nature of content placed to exploit a host's ranking signals; FAQ added 6 December 2024 on freelance content."
+  },
+  {
+    "n": 8,
+    "title": "An update on our site reputation policy in the EEA",
+    "publisher": "Google Search Central Blog (28 August 2026)",
+    "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 30 August 2026, inside the EEA affected sections may be separated to rank on their own rather than demoted by a manual action; outside the EEA manual actions still apply; follows discussion with the European Commission."
+  },
+  {
+    "n": 9,
+    "title": "A guide to Google Search ranking systems",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Link analysis systems and PageRank remain among core ranking systems, much evolved; SpamBrain and other spam detection systems."
+  },
+  {
+    "n": 10,
+    "title": "Link best practices for Google",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Descriptive, concise anchor text without keyword stuffing; linking out is normal; paid links marked sponsored or nofollow; ugc for forums."
+  },
+  {
+    "n": 11,
+    "title": "Google Search Status Dashboard: ranking incident history",
+    "publisher": "Google",
+    "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026 spam updates from 24 March, 24 June, 18 August and 24 September; core updates from 27 March and 21 May 2026; 2025 updates."
+  },
+  {
+    "n": 12,
+    "title": "Disavow links to your site",
+    "publisher": "Google Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/2648487",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Disavow only with a considerable number of spammy links that caused or will likely cause a manual action and could not be removed; most sites will not need it; file format and limits; an upload replaces the list."
+  },
+  {
+    "n": 13,
+    "title": "Manual Actions report",
+    "publisher": "Google Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/9044175",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unnatural links to and from your site; remove links first, disavow only what can't be removed, don't disavow natural links; reconsideration through Request Review with documentation."
+  },
+  {
+    "n": 14,
+    "title": "Links report",
+    "publisher": "Google Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/9049606",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Top linked pages, top linking sites and top linking text; a sample, not every link; tables up to 1,000 rows, exports up to 100,000; does not show whether a link is nofollow."
+  },
+  {
+    "n": 15,
+    "title": "Tips to improve your local ranking on Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7091",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Local results depend on relevance, distance and prominence; prominence includes how many websites link to the business and reviews; no way to pay for better local ranking."
+  },
+  {
+    "n": 16,
+    "title": "Create an alert",
+    "publisher": "Google Search Help",
+    "url": "https://support.google.com/websearch/answer/4815696",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to set Google Alerts for a name or topic, with frequency, sources, language, region and delivery options."
+  },
+  {
+    "n": 17,
+    "title": "Using the Wayback Machine",
+    "publisher": "Internet Archive Help Center",
+    "url": "https://help.archive.org/help/using-the-wayback-machine/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to look up archived captures of a URL, used to see what a dead page once said before suggesting a replacement."
+  },
+  {
+    "n": 18,
+    "title": "Native Advertising: A Guide for Businesses",
+    "publisher": "US Federal Trade Commission (December 2015)",
+    "url": "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Paid content must be clearly identifiable as advertising; labels such as \"Ad\" or \"Sponsored Advertising Content\"; \"Promoted\" is ambiguous; logos alone not enough; disclosure in front of or above the headline."
+  },
+  {
+    "n": 19,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Material connections, including free products given to bloggers, must be disclosed clearly and conspicuously, close to the endorsement; guides revised in 2023; the guides themselves are not law but explain the FTC Act."
+  },
+  {
+    "n": 20,
+    "title": "Lord & Taylor, LLC, In the Matter of",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3181-lord-taylor-llc-matter",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lord & Taylor settled FTC charges that it deceived consumers through a paid article in an online fashion magazine and paid Instagram posts by 50 'fashion influencers'; proposed consent order March 2016, final order 23 May 2016."
+  },
+  {
+    "n": 21,
+    "title": "Recognising ads: Advertisement features",
+    "publisher": "ASA and CAP (UK), AdviceOnline (23 March 2023)",
+    "url": "https://www.asa.org.uk/advice-online/recognising-ads-advertisement-features.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Payment or another reciprocal arrangement brings consumer protection law into play, and brand control brings the CAP Code; \"Advertisement Feature\" or \"Ad\" upfront is acceptable; \"Sponsored\" is not recommended."
+  },
+  {
+    "n": 22,
+    "title": "Unfair Commercial Practices Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/unfair-commercial-practices-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The EU directive on misleading and aggressive marketing, and the Commission's guidance notice of 17 December 2021, which covers influencer marketing and endorsements."
+  },
+  {
+    "n": 23,
+    "title": "Process personal data lawfully (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/process-personal-data-lawfully_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Legitimate interest as a legal basis needs a real interest, necessity and a balance with people's rights and reasonable expectations; marketing relies on consent or legitimate interest."
+  },
+  {
+    "n": 24,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No exception for business-to-business email; accurate headers and subject lines, a postal address, and opt-outs honoured within 10 business days for commercial messages."
+  },
+  {
+    "n": 25,
+    "title": "Domain Rating (DR): what it is and how to use it",
+    "publisher": "Ahrefs",
+    "url": "https://ahrefs.com/blog/domain-rating/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DR is Ahrefs' own 0 to 100 logarithmic score of a site's backlink strength, not a Google metric; nofollow links don't count; it can be inflated by spam and can drop without lost links."
+  },
+  {
+    "n": 26,
+    "title": "Link Building Case Study: How I Increased My Search Traffic by 110% in 14 Days",
+    "publisher": "Brian Dean, Backlinko (updated 20 June 2024)",
+    "url": "https://backlinko.com/skyscraper-technique",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Skyscraper Technique (find link-worthy content, make something better, contact sites that linked to similar content); self-reported 2013 outreach of 160 emails earning 17 links."
+  },
+  {
+    "n": 27,
+    "title": "The decay and fall of guest blogging for SEO",
+    "publisher": "Matt Cutts (20 January 2014)",
+    "url": "https://www.mattcutts.com/blog/guest-blogging/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guest blogging for links had become too spammy, while guest posts for exposure and branding still have value. His About page (also opened) says he headed Google's webspam team for many years."
+  },
+  {
+    "n": 28,
+    "title": "Help a Reporter (HARO)",
+    "publisher": "Help a Reporter Out",
+    "url": "https://www.helpareporter.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A journalist request service, shown as powered by Featured; sources can subscribe free to daily media queries."
+  }
+]

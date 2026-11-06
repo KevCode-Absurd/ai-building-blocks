@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "monthly-design-system-keeper",
+    "name": "Monthly design system keeper",
+    "why": "Finds drift from your design rules in code each month and checks contrast when colours move, the same job as the monthly health check workflow."
+  },
+  {
+    "slug": "prepare-a-design-system-migration",
+    "name": "Prepare a design system migration",
+    "why": "Builds the change inventory, replacement rules and staged rollout that the release and migration skill asks for."
+  },
+  {
+    "slug": "give-developers-a-complete-component-brief",
+    "name": "Give developers a complete component brief",
+    "why": "Turns one component design into variants, every state, keyboard rules and tokens, like the component spec skill."
+  },
+  {
+    "slug": "design-handoff-completeness-assistant",
+    "name": "Design handoff completeness assistant",
+    "why": "Finds states and variants missing from a changed component before build, matching the handoff completeness prompt."
+  },
+  {
+    "slug": "write-design-rules-check-colours-and-hand-developers-a-spec",
+    "name": "Write design rules, check colours and hand developers a spec",
+    "why": "Takes a brief through design rules, contrast-checked colours and tokens to a developer spec, a lighter version of the starter system workflow."
+  },
+  {
+    "slug": "new-screen-design-reviewer",
+    "name": "New screen design reviewer",
+    "why": "Checks each new screen against your own design rules, a quick way for product teams to stay inside the system between monthly checks."
+  },
+  {
+    "slug": "visual-system-rules-writer",
+    "name": "Visual system rules writer",
+    "why": "Writes firm colour, type and grid rules from a brand's feeling, a useful input before tokens are named."
+  },
+  {
+    "slug": "build-a-brand-file-and-style-guide-from-scratch",
+    "name": "Build a brand file and style guide from scratch",
+    "why": "Produces the brand rules and style guide a token set is built from, for teams with no brand sheet yet."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "it-administrator",
+  "name": "IT administrator",
+  "department": "operations",
+  "summary": "Sets up and looks after a small office's devices, accounts, backups and server chores. Writes scripts that are safe to run twice.",
+  "aliases": [
+    "it support",
+    "sysadmin",
+    "microsoft 365",
+    "google workspace",
+    "office it",
+    "backups",
+    "powershell",
+    "systems administrator",
+    "help desk",
+    "it admin"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge from Microsoft, Google, CISA, NCSC Cyber Essentials v3.3, ENISA and NIST with 29 sources; four skills (tenant security baseline, starters and leavers, backup and restore plan, safe admin scripts); six prompts; two workflows; training interview and test briefs."
+    }
+  ]
+}

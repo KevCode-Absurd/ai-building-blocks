@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "tune-a-prompt-with-real-tests-then-ship-it-with-versions",
+    "name": "Tune a prompt with real tests, then keep versions",
+    "why": "Scores a prompt against your test cases and keeps versions, the same loop as the prompt test set and tuning skill."
+  },
+  {
+    "slug": "prompt-and-skill-tuner",
+    "name": "Prompt and skill tuner",
+    "why": "Tests, fixes and re-tests a prompt in capped rounds until the checks pass, useful for quick tuning between health checks."
+  },
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Turns redacted bot chats and approved help text into wrong-answer findings and retest cases, a good start for fixing an inventing chatbot."
+  },
+  {
+    "slug": "check-an-ai-app-improvement",
+    "name": "Check an AI app improvement",
+    "why": "Sets evaluation criteria for a proposed change to an AI app before it ships, matching the change-one-thing rule."
+  },
+  {
+    "slug": "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+    "name": "Harden an AI app against hijacked prompts and runaway bills",
+    "why": "Adds injection defences, tests and spending caps to existing AI code, the core of the guardrails and launch review skill."
+  },
+  {
+    "slug": "track-agent-injection-controls-and-retest-evidence",
+    "name": "Agent injection evidence review assistant",
+    "why": "Writes safe prompt injection test cases and keeps retest records, run only with the owner's written approval."
+  },
+  {
+    "slug": "review-an-agent-before-launch",
+    "name": "Review an agent before launch",
+    "why": "Reviews tool access and risks in an agent's code and design before launch, for agents with tools or MCP servers."
+  },
+  {
+    "slug": "your-agent-s-first-ai-call-implementation-planner",
+    "name": "Agent AI call cost tracker builder",
+    "why": "Plans a wrapper that checks the budget before each AI call and records tokens and cost, the spending cap step of the feature build."
+  },
+  {
+    "slug": "execution-policies-and-budget-enforcement-implementation-planner",
+    "name": "Agent spending cap builder",
+    "why": "Builds budget reservation rules and hard stops in code, for features where a provider spend limit is not enough."
+  },
+  {
+    "slug": "turn-an-api-into-a-safe-mcp-server-others-can-install",
+    "name": "Turn an API into a safe, installable MCP server",
+    "why": "Builds an MCP server with sign-in and a security check, following the MCP consent and token rules in the role knowledge."
+  },
+  {
+    "slug": "verify-an-mcp-server-release",
+    "name": "Verify an MCP server release",
+    "why": "Checks an MCP server's code and access risks before a release, a second pair of eyes on any server you connect an agent to."
+  },
+  {
+    "slug": "ai-pilot-evaluation-review-assistant",
+    "name": "AI pilot evaluation review assistant",
+    "why": "Turns pilot results into an evidence brief and a go or stop result, useful when an owner asks whether the feature worked."
+  }
+]

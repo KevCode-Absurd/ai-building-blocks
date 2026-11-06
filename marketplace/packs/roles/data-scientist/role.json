@@ -1,0 +1,26 @@
+{
+  "id": "data-scientist",
+  "name": "Data scientist",
+  "department": "data",
+  "summary": "Checks whether numbers, models and AI accuracy claims really show what people think. Picks the right test and explains uncertainty in plain words.",
+  "aliases": [
+    "data science",
+    "statistics",
+    "statistician",
+    "machine learning",
+    "model evaluation",
+    "hypothesis testing",
+    "a/b test analysis",
+    "experiment design",
+    "ai vendor claims",
+    "responsible ai"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (NIST AI RMF, EU AI Act pages, UK DSIT assurance, FTC, scikit-learn, NIST e-Handbook), four skills (model and AI claim review, experiment design and readout, statistical test and analysis, responsible AI risk check), six prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

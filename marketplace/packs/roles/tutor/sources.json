@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "Improving Students' Learning With Effective Learning Techniques (Dunlosky, Rawson, Marsh, Nathan and Willingham, Psychological Science in the Public Interest, 2013)",
+    "publisher": "Association for Psychological Science",
+    "url": "https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html",
+    "checked": "2026-11-06",
+    "supports": "Review of 10 commonly used learning techniques: practice testing and distributed practice rated high utility; underlining, rereading and mnemonic devices rated low. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "Principles of Instruction: Research-Based Strategies That All Teachers Should Know (Barak Rosenshine, American Educator, Spring 2012)",
+    "publisher": "American Federation of Teachers",
+    "url": "https://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+    "checked": "2026-11-06",
+    "supports": "Ten principles: daily review, small steps with practice, many questions, models and worked examples, guided practice, checking understanding, a high success rate, scaffolds, independent practice, weekly and monthly review; the optimal success rate appears to be about 80 percent; most effective teachers' classes answered 82 percent correctly against 73 percent. PDF opened and converted to text."
+  },
+  {
+    "n": 3,
+    "title": "The Impressive Effects of Tutoring on PreK-12 Learning: A Systematic Review and Meta-Analysis of the Experimental Evidence (Nickow, Oreopoulos and Quan, NBER Working Paper 27476, July 2020)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w27476",
+    "checked": "2026-11-06",
+    "supports": "Pooled effect of tutoring 0.37 standard deviations; teacher and paraprofessional tutoring shows larger effects than nonprofessional and parent tutoring; effects strongest in earlier grades; tutoring during school tends to beat after-school tutoring. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "Two-Sigma Tutoring: Separating Science Fiction from Science Fact (Paul T. von Hippel, Education Next, Spring 2024)",
+    "publisher": "Education Next",
+    "url": "https://www.educationnext.org/two-sigma-tutoring-separating-science-fiction-from-science-fact/",
+    "checked": "2026-11-06",
+    "supports": "Bloom's 1984 two-sigma figure rested mainly on two small, three-week dissertations; roughly half the effect came from testing and feedback; 96 randomised studies average 0.37 SD (Nickow et al.); privately bought tutoring in large districts showed little benefit (0.06 SD in Chicago, Heinrich et al. 2014); about one third of a standard deviation is a realistic target; warns AI tools that do students' work can raise short-term grades while undermining learning. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "Effective learning: Twenty rules of formulating knowledge (Piotr Wozniak, 1999)",
+    "publisher": "SuperMemo",
+    "url": "https://www.supermemo.com/en/blog/twenty-rules-of-formulating-knowledge",
+    "checked": "2026-11-06",
+    "supports": "The 20 rules, including do not learn if you do not understand, learn before you memorise, the minimum information principle, cloze deletion, avoid sets, avoid enumerations, combat interference, optimise wording, provide sources and prioritise. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "Importing text files",
+    "publisher": "Anki Manual",
+    "url": "https://docs.ankiweb.net/importing/text-files.html",
+    "checked": "2026-11-06",
+    "supports": "Plain UTF-8 text, one note per line, comma, semicolon, tab or other separators; quote fields that contain the separator or line breaks; file headers from Anki 2.1.54 such as #separator:, #html:, #tags:, #deck:, #notetype: and #tags column:N; space-separated tags; the first field decides duplicates. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Deck Options (FSRS section)",
+    "publisher": "Anki Manual",
+    "url": "https://docs.ankiweb.net/deck-options.html",
+    "checked": "2026-11-06",
+    "supports": "FSRS is an alternative scheduler to the legacy SM-2; desired retention defaults to 90% and is the most important FSRS setting; optimising parameters once a month is enough; supported in Anki 23.10, AnkiMobile 23.10 and AnkiWeb. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Anki: powerful, intelligent flashcards (download page)",
+    "publisher": "AnkiWeb",
+    "url": "https://apps.ankiweb.net/",
+    "checked": "2026-11-06",
+    "supports": "The computer version is free on all major platforms; AnkiDroid is free; purchases (such as AnkiMobile) fund development; current version shown as 26.09.4. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Creating sets by importing content",
+    "publisher": "Quizlet Help Center",
+    "url": "https://help.quizlet.com/hc/en-us/articles/360029977151-Creating-sets-by-importing-content",
+    "checked": "2026-11-06",
+    "supports": "Separate term and definition with a comma, tab or dash; separate rows with a semicolon or a new line; each row becomes a card; import is available on the website only. help.quizlet.com blocks automated fetches; confirmed by a WebSearch result showing this exact page."
+  },
+  {
+    "n": 10,
+    "title": "Global scale - Table 1 (CEFR 3.3): Common Reference levels",
+    "publisher": "Council of Europe",
+    "url": "https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale",
+    "checked": "2026-11-06",
+    "supports": "Six levels, A1 to C2, in three bands: Basic User, Independent User and Proficient User, described by can-do statements. coe.int blocks automated fetches; confirmed by a WebSearch result showing this exact page."
+  },
+  {
+    "n": 11,
+    "title": "International language standards (CEFR)",
+    "publisher": "Cambridge English",
+    "url": "https://www.cambridgeenglish.org/exams-and-tests/cefr/",
+    "checked": "2026-11-06",
+    "supports": "The CEFR is an international standard for describing language ability on a six-point scale from A1 (beginners) to C2 (mastered). Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "How Large a Vocabulary Is Needed For Reading and Listening? (I.S.P. Nation, Canadian Modern Language Review 63(1), 2006)",
+    "publisher": "Victoria University of Wellington (author's publications page)",
+    "url": "https://www.wgtn.ac.nz/lals/resources/paul-nations-resources/paul-nations-publications/publications/documents/2006-How-large-a-vocab.pdf",
+    "checked": "2026-11-06",
+    "supports": "If 98% coverage is needed for unassisted comprehension, readers need 8,000 to 9,000 word families for written text and 6,000 to 7,000 for spoken text. PDF opened and converted to text."
+  },
+  {
+    "n": 13,
+    "title": "The Four Strands (I.S.P. Nation, Innovation in Language Learning and Teaching 1(1), 2007)",
+    "publisher": "Victoria University of Wellington (author's publications page)",
+    "url": "https://www.wgtn.ac.nz/lals/resources/paul-nations-resources/paul-nations-publications/publications/documents/2007-Four-strands.pdf",
+    "checked": "2026-11-06",
+    "supports": "A well-designed language course balances meaning-focused input, meaning-focused output, language-focused learning and fluency development, with roughly equal time for each; fluency work uses no unknown vocabulary and pushes for speed. PDF opened and converted to text."
+  },
+  {
+    "n": 14,
+    "title": "The Fundamental Values of Academic Integrity",
+    "publisher": "International Center for Academic Integrity",
+    "url": "https://academicintegrity.org/resources/fundamental-values",
+    "checked": "2026-11-06",
+    "supports": "Academic integrity as a commitment to six values: honesty, trust, fairness, respect, responsibility and courage. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Contracting to Cheat in Higher Education: How to Address Essay Mills and Contract Cheating (third edition, 2022)",
+    "publisher": "Quality Assurance Agency for Higher Education (QAA)",
+    "url": "https://www.qaa.ac.uk/docs/qaa/guidance/contracting-to-cheat-in-higher-education-third-edition.pdf",
+    "checked": "2026-11-06",
+    "supports": "Contract cheating is a third party completing work a student submits as their own where that is not permitted, including friends or family and not always paid; since April 2022 the Skills and Post-16 Education Act 2022 makes it an offence to provide, arrange or advertise commercial contract cheating services for students in England, without criminalising students; Ireland, Australia and New Zealand have also legislated. PDF opened and converted to text."
+  },
+  {
+    "n": 16,
+    "title": "Test policies",
+    "publisher": "CompTIA",
+    "url": "https://www.comptia.org/testing/testing-policies-procedures/test-policies",
+    "checked": "2026-11-06",
+    "supports": "CompTIA publishes an Unauthorized Training Materials policy defining such materials and the consequences of using them, a Candidate Agreement, an exam security hotline and sanctions for exam security violations. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "Keeping children safe during community activities, after-school clubs and tuition",
+    "publisher": "GOV.UK, Department for Education",
+    "url": "https://www.gov.uk/government/publications/keeping-children-safe-in-out-of-school-settings-code-of-practice",
+    "checked": "2026-11-06",
+    "supports": "Non-statutory safeguarding guidance for England for providers of out-of-school settings, including private tuition; first published 21 October 2020, last updated 9 February 2026; free e-learning, leaflets and posters. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "After-school clubs, community activities and tuition: safeguarding guidance for providers (PDF)",
+    "publisher": "GOV.UK, Department for Education",
+    "url": "https://assets.publishing.service.gov.uk/media/6986066acfe7ccf77efbc75b/After-school_clubs__community_activities__and_tuition_-_Safeguarding_guidance_for_providers.pdf",
+    "checked": "2026-11-06",
+    "supports": "Child protection and staff behaviour policies, a designated safeguarding lead, a named contact for parents; lone providers give parents the local children's services or NSPCC helpline details; allegations reported to the LADO and police; private tutors who work alone should get written parental consent, meet the family and share their child protection policy; unsupervised work with children is likely regulated activity; from 2026 self-employed people in regulated activity can apply for an Enhanced with Barred Lists DBS check themselves (document history 2 February 2026); online risks: content, contact, conduct and commercialisation; CEOP reporting. PDF opened and converted to text."
+  },
+  {
+    "n": 19,
+    "title": "Generative artificial intelligence (AI) in education",
+    "publisher": "GOV.UK, Department for Education",
+    "url": "https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education/generative-artificial-intelligence-ai-in-education",
+    "checked": "2026-11-06",
+    "supports": "Last updated 12 August 2025: cautious approach to pupil use; schools and awarding organisations must take reasonable steps to prevent AI-related malpractice, with JCQ guidance covering AI misuse in assessments; personal data should not be used in generative AI tools; pupils' work not used to train AI without permission; comply with age restrictions set by AI tools. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Generative AI: product safety standards",
+    "publisher": "GOV.UK, Department for Education",
+    "url": "https://www.gov.uk/government/publications/generative-ai-product-safety-standards/generative-ai-product-safety-standards",
+    "checked": "2026-11-06",
+    "supports": "Last updated 19 January 2026: products should not give final answers or full solutions by default but reveal help gradually after a genuine attempt; should not be anthropomorphised or claim feelings; should signpost distress and alert the designated safeguarding lead; should avoid sycophancy, flattery and pressure; should keep logs and filter harmful content. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Complying with COPPA: Frequently Asked Questions",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions",
+    "checked": "2026-11-06",
+    "supports": "COPPA covers operators of websites and online services directed to children under 13, or with actual knowledge they collect personal information from them; verifiable parental consent before collection, with listed methods; the COPPA Rule was amended on 22 April 2025. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "AI used in education institutions, such as scoring exams, is high-risk; the AI Omnibus entered into force on 27 July 2026 and Annex III high-risk rules (including education) now apply from 2 December 2027. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Guidance for generative AI in education and research",
+    "publisher": "UNESCO",
+    "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research",
+    "checked": "2026-11-06",
+    "supports": "Published 7 September 2023, updated 16 January 2026; calls for data privacy protection, an age limit for independent conversations with generative AI platforms (no specific age on the page), and a human-centred, age-appropriate approach to validating tools. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "New Gemini app tools to help students learn, understand and study even better (Jennifer Shen)",
+    "publisher": "Google (The Keyword blog)",
+    "url": "https://blog.google/products/gemini/new-gemini-tools-students-august-2025/",
+    "checked": "2026-11-06",
+    "supports": "6 August 2025: Guided Learning mode in the Gemini app breaks problems into steps, adapts explanations and explains the how and why rather than giving quick answers. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "Introducing Claude for Education",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/news/introducing-claude-for-education",
+    "checked": "2026-11-06",
+    "supports": "2 April 2025: learning mode guides students' reasoning instead of giving answers, using Socratic questions and asking how they would approach a problem. Opened with WebFetch."
+  }
+]

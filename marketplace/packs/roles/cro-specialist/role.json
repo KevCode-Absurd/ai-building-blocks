@@ -1,0 +1,26 @@
+{
+  "id": "cro-specialist",
+  "name": "CRO specialist",
+  "department": "marketing",
+  "summary": "Finds why visitors leave a site or store without buying and ranks the fixes. Plans A/B tests and reads the results honestly.",
+  "aliases": [
+    "conversion rate optimisation",
+    "cro",
+    "a/b testing",
+    "landing page optimisation",
+    "experimentation",
+    "split testing",
+    "conversion rate optimization",
+    "experimentation analyst",
+    "ab test analysis",
+    "checkout optimisation"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: conversion research, prioritising fixes, test design and sample size credited to Miller, Kohavi and Microsoft ExP, sample ratio checks, readouts with NIST methods, SEO-safe testing, Baymard and Core Web Vitals figures, and consent for analytics and session recording (EDPB, CNIL, UK DUAA, CCPA, GA4 consent mode, Clarity), with four skills, five prompts, two workflows and 29 checked sources."
+    }
+  ]
+}

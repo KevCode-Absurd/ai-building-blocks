@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "STAR Level 1 Security Questionnaire (CAIQ v4.1)",
+    "publisher": "Cloud Security Alliance",
+    "url": "https://cloudsecurityalliance.org/artifacts/star-level-1-security-questionnaire-caiq-v4",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The CAIQ is a set of yes or no questions that document which security controls exist in IaaS, PaaS and SaaS services; current version CAIQ v4.1, dated 27 January 2026; answers help show compliance with the Cloud Controls Matrix; it is the document submitted to the STAR Registry for Level 1; downloadable without an account."
+  },
+  {
+    "n": 2,
+    "title": "Cloud Controls Matrix (CCM)",
+    "publisher": "Cloud Security Alliance",
+    "url": "https://cloudsecurityalliance.org/research/cloud-controls-matrix",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CCM v4.1 is combined with the CAIQ; 197 control objectives in 17 domains; shows which party in the cloud supply chain should run each control; free for internal use, with a licence needed to customise it, use it in commercial products or use it in consulting projects."
+  },
+  {
+    "n": 3,
+    "title": "Security, Trust, Assurance and Risk (STAR) program",
+    "publisher": "Cloud Security Alliance",
+    "url": "https://cloudsecurityalliance.org/star",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. STAR Level 1 is a self-assessment (a CAIQ submission); Level 2 pairs the CAIQ with ISO/IEC 27001 certification, a SOC 2 attestation or C-STAR; STAR for AI uses an AI-CAIQ, with Level 2 routes through ISO/IEC 27001, ISO/IEC 42001 or SOC 2; AI Controls Matrix release dated 22 June 2026; 4,119 registry listings and 2,907 organisations shown (count date not stated)."
+  },
+  {
+    "n": 4,
+    "title": "STAR Registry",
+    "publisher": "Cloud Security Alliance",
+    "url": "https://cloudsecurityalliance.org/star/registry",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Public registry of organisations' cloud and AI assurance entries: 2,907 organisations; STAR Level 1 2,796, Level 2 416, STAR for AI Level 1 102, Level 2 6; entries are marked current, expiring soon, expired or deprecated."
+  },
+  {
+    "n": 5,
+    "title": "SOC 2: SOC for Service Organizations, Trust Services Criteria",
+    "publisher": "AICPA & CIMA",
+    "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CPAs provide SOC reports on the risks of outsourcing to a service organisation; the five categories are security, availability, processing integrity, confidentiality and privacy; exposure drafts of the proposed 2027 SOC 2 Trust Services Criteria and Description Criteria dated 26 October 2026; undated notice that the AICPA is looking into allegations about a compliance vendor's practices and urges careful evaluation of SOC services."
+  },
+  {
+    "n": 6,
+    "title": "SOC 3: SOC for Service Organizations, Trust Services Criteria for General Use Report",
+    "publisher": "AICPA & CIMA",
+    "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SOC 3 reports cover the same Trust Services Criteria as SOC 2 with less detail, so they are general use reports that can be freely distributed."
+  },
+  {
+    "n": 7,
+    "title": "SOC 2 Reporting on an Examination of Controls at a Service Organization (guide)",
+    "publisher": "AICPA & CIMA",
+    "url": "https://www.aicpa-cima.com/cpe-learning/publication/soc-2-reporting-on-an-examination-of-controls-at-a-service-organization-relevant-to-security-availability-processing-integrity-confidentiality-or-privacy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guide updated as of 15 October 2022; customers and business partners often request a SOC 2 report from a service organisation."
+  },
+  {
+    "n": 8,
+    "title": "Ethics Staff Insights: business arrangements with SOC tool providers",
+    "publisher": "AICPA & CIMA",
+    "url": "https://www.aicpa-cima.com/resources/article/esi-soc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 13 April 2026. Business arrangements between CPA firms and SOC 2 tool providers are increasing and can threaten compliance with the Code of Professional Conduct, including independence and objectivity."
+  },
+  {
+    "n": 9,
+    "title": "ISO/IEC 27001 Information Security Management System",
+    "publisher": "BSI (the UK national standards body)",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-iec-27001-information-security-management-system/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch, used because iso.org returned HTTP 403 to every automated fetch on 6 November 2026. ISO/IEC 27001 is the information security management system standard, risk-based; certification needs Clauses 4 to 10 met and a two-stage audit; resources refer to the 2022 edition."
+  },
+  {
+    "n": 10,
+    "title": "Cyber Essentials overview",
+    "publisher": "National Cyber Security Centre (UK)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Government-backed scheme based on five technical controls (firewalls, secure configuration, security update management, user access control, malware protection); Cyber Essentials Plus adds independent technical testing; IASME is the delivery partner and runs certification."
+  },
+  {
+    "n": 11,
+    "title": "FedRAMP Marketplace and news",
+    "publisher": "FedRAMP (US General Services Administration)",
+    "url": "https://www.fedramp.gov/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Marketplace is a searchable list of FedRAMP certified cloud services, authorising agencies and assessors; 557 certified services, 37 of them through 20x; 20x Pilot certifications shown separately since 21 October 2026; post of 2 November 2026 on the first full 20x Class C certification; Consolidated Rules for 2026 (CR26)."
+  },
+  {
+    "n": 12,
+    "title": "Directive (EU) 2022/2555 (NIS2 Directive)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 21(2)(d): measures must cover supply chain security, including security aspects of relationships with direct suppliers and service providers; Article 21(3): entities consider each direct supplier's vulnerabilities, product quality and cybersecurity practices including secure development; Article 41: member states apply their measures from 18 October 2024."
+  },
+  {
+    "n": 13,
+    "title": "Regulation (EU) 2022/2554 (Digital Operational Resilience Act, DORA)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 30(2): minimum contract contents for ICT services to financial entities (service description and subcontracting conditions, service and data locations, data protection, access and return of data, service levels, incident assistance, cooperation with authorities, termination rights, participation in security awareness training); Article 64: applies from 17 January 2025."
+  },
+  {
+    "n": 14,
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 28(1): controllers use only processors giving sufficient guarantees; Article 28(3)(a) to (h): required contract terms including documented instructions, confidentiality, Article 32 security, sub-processor conditions, return or deletion, and information and audits; Article 32(1): measures such as encryption, resilience, restoring access and regular testing."
+  },
+  {
+    "n": 15,
+    "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Press release of 25 September 2024 on Operation AI Comply: five actions, including DoNotPay, marketed as a robot lawyer; the FTC chair said there is no AI exemption from existing laws."
+  },
+  {
+    "n": 16,
+    "title": "FTC Policy Statement Regarding Advertising Substantiation",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Statement of 23 November 1984: advertisers need a reasonable basis for objective claims before making them; a claim such as 'tests prove' needs at least that level of support."
+  },
+  {
+    "n": 17,
+    "title": "Directive 2006/114/EC concerning misleading and comparative advertising",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2006/114/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In force; protects traders against misleading advertising; Article 4 conditions for comparative advertising: not misleading, same need, objective comparison of material, relevant, verifiable and representative features, no denigration, no confusion."
+  },
+  {
+    "n": 18,
+    "title": "CAP Code section 3: Misleading advertising",
+    "publisher": "Advertising Standards Authority (UK)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule 3.7: hold documentary evidence for objective claims before a marketing communication is distributed; rules 3.33 to 3.35 on comparisons with identifiable competitors. The page text is written about consumers and does not state its business-to-business scope."
+  },
+  {
+    "n": 19,
+    "title": "Great Demo!",
+    "publisher": "Peter Cohan (author's own site)",
+    "url": "https://greatdemo.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Great Demo! method: open with the customer's situation and the value at the start, tie each illustration to what the audience sees, how it solves their problem and the value of the change, and focus on what the customer needs."
+  },
+  {
+    "n": 20,
+    "title": "Talk-to-listen ratio analysis",
+    "publisher": "Gong",
+    "url": "https://www.gong.io/blog/talk-to-listen-conversion-ratio/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 21 August 2025, modified 4 March 2026: 326,000 sales calls of 10 minutes or more; sellers talked 60% on average, 57% in won deals and 62% in lost deals; won deals averaged 15 to 16 questions per call and lost deals about 20. Vendor data."
+  },
+  {
+    "n": 21,
+    "title": "RFP Response Trends and Benchmarks 2026",
+    "publisher": "Loopio, with APMP",
+    "url": "https://loopio.com/trends-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (summary page; full report gated). Seventh annual report, 1,500+ companies: average 166 RFPs submitted a year; 92% of software teams use AI in their RFP process. Vendor survey, self-reported."
+  },
+  {
+    "n": 22,
+    "title": "Loopio MCP server",
+    "publisher": "Loopio",
+    "url": "https://loopio.com/platform/integrations/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lets Claude, ChatGPT or a custom MCP client search approved library content, review projects and draft answers; available on any Loopio plan; answers are reviewed and approved by a person before use."
+  },
+  {
+    "n": 23,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote MCP server with read and write access to contacts, companies, deals, quotes, line items, products and engagements (calls, emails, meetings, notes, tasks); access set by a user-level app's scopes; an account admin connects first."
+  },
+  {
+    "n": 24,
+    "title": "Set up and manage object pipelines",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 29 September 2026. Each deal stage carries a win probability used for weighted amounts; conditional stage properties can be required before a record enters a stage; pipeline rules can control editing and require approval."
+  },
+  {
+    "n": 25,
+    "title": "Understand HubSpot CPQ",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/cpq/understand-hubspot-cpq",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 12 October 2026. CPQ is available with Revenue Hub Professional and Enterprise; quote approvals are standard or advanced; advanced approvals (Enterprise) route on discounts, amounts and term lengths; quote rules can warn or block publishing."
+  },
+  {
+    "n": 26,
+    "title": "Salesforce DX MCP server end of life (forcedotcom/mcp issue 46)",
+    "publisher": "Salesforce, on GitHub",
+    "url": "https://github.com/forcedotcom/mcp/issues/46",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Salesforce DX local MCP server reached end of life on 2 November 2026 and its repositories are archived; Salesforce says its tooling is now delivered as skills (forcedotcom/sf-skills)."
+  },
+  {
+    "n": 27,
+    "title": "Sales Cloud pricing",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/sales/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists a Free Suite and paid editions (Starter Suite, Pro Suite, Core, Advanced, Max), most with free trials, and Agentforce for Sales as an add-on. Salesforce Help pages did not load for automated checks on 6 November 2026."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. W3C Recommendation of 12 December 2024. SC 1.4.3 (AA): text needs 4.5:1, large text 3:1, large text being at least 18 point or 14 point bold. SC 1.1.1 (A): non-text content needs a text alternative that serves the same purpose. Contrast ratio formula (L1 + 0.05) / (L2 + 0.05)."
+  },
+  {
+    "n": 2,
+    "title": "Understanding Success Criterion 1.4.11: Non-text Contrast",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA: parts of graphics required to understand the content need 3:1 against adjacent colours; 3:1 is not rounded; lines in line graphs need 3:1 against the background; pie slices need to be told apart unless values are shown in text; not required when text labels or a table convey the same information."
+  },
+  {
+    "n": 3,
+    "title": "Understanding Success Criterion 1.4.1: Use of Color",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level A: colour is not the only visual means of conveying information. Techniques G111 (colour and pattern) and G14 (information also in text); failure F13 covers charts that use colour alone."
+  },
+  {
+    "n": 4,
+    "title": "Complex Images (Images Tutorial)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 8 April 2026). Charts need a two-part text alternative: short alt text that names the image and points to a long description; long description available to everyone, for example in a figure with figcaption; aria-describedby reads as one paragraph and loses tables and headings."
+  },
+  {
+    "n": 5,
+    "title": "Data visualizations (U.S. Web Design System)",
+    "publisher": "U.S. General Services Administration",
+    "url": "https://designsystem.digital.gov/components/data-visualizations/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pair charts with a plain-text summary of the message and a screen-reader data table; use colour sparingly and meet contrast; use dash styles or textured fills where high contrast is not possible; do not require hover to understand the message; prefer common chart types; manual testing needed."
+  },
+  {
+    "n": 6,
+    "title": "Data visualisation: charts",
+    "publisher": "UK Government Analysis Function",
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 19 May 2022). Write the message first; match chart to relationship; bar axes must start at zero; rank bars unless natural order; pie charts only for five or fewer parts with a meaningful total; dual axes generally not recommended; avoid 3D; label directly instead of legends; headline title plus formal subtitle; light gridlines, about ten at most."
+  },
+  {
+    "n": 7,
+    "title": "Data visualisation: colours",
+    "publisher": "UK Government Analysis Function",
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 23 November 2021, updated 12 February 2026 with revised sequential palette). Accessible categorical palette with hex codes, four series recommended; sequential and focus palettes; line charts with more than two series cannot meet 3:1 with a palette; text alternative for every chart."
+  },
+  {
+    "n": 8,
+    "title": "Visual Vocabulary (chart-doctor repository)",
+    "publisher": "Financial Times Visual Journalism Team (GitHub)",
+    "url": "https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. FT poster and site for choosing chart types, used in newsroom chart-literacy training; categories deviation, correlation, ranking, distribution, change over time, part-to-whole, magnitude, spatial and flow; inspired by Schwabish and Ribecca's Graphic Continuum. Undated."
+  },
+  {
+    "n": 9,
+    "title": "Fundamentals of Data Visualization: The principle of proportional ink",
+    "publisher": "Claus O. Wilke (author's site; O'Reilly book manuscript)",
+    "url": "https://clauswilke.com/dataviz/proportional-ink.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shaded areas must be proportional to the values they show; bars on a linear scale start at 0, on a log scale at 1; area charts face the same rule; dots encode by position only."
+  },
+  {
+    "n": 10,
+    "title": "Fundamentals of Data Visualization: Common pitfalls of color use",
+    "publisher": "Claus O. Wilke (author's site; O'Reilly book manuscript)",
+    "url": "https://clauswilke.com/dataviz/color-pitfalls.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Qualitative colours work best for about three to five categories and become a burden past eight to ten; Okabe-Ito palette has eight colours; rainbow scales are non-monotonic; about 8% of males and 0.5% of females have colour-vision deficiency; check figures with a CVD simulator."
+  },
+  {
+    "n": 11,
+    "title": "Why not to use two axes, and what to use instead",
+    "publisher": "Datawrapper blog (Lisa Charlotte Muth)",
+    "url": "https://www.datawrapper.de/blog/dualaxis/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 8 May 2018; July 2026 edit notes Datawrapper now lets Business plan users build dual-axis charts. Dual-axis scales are arbitrary and mislead; alternatives: side-by-side charts, indexed charts, labelling the main series, connected scatterplots."
+  },
+  {
+    "n": 12,
+    "title": "What to consider when visualizing data for colorblind readers (part 1)",
+    "publisher": "Datawrapper blog (Lisa Charlotte Muth)",
+    "url": "https://www.datawrapper.de/blog/colorblindness-part1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 17 June 2020. Avoid red-green pairs of similar brightness; red does not stand out as a warning for red-green colour-blind readers; test for both red-blindness and green-blindness."
+  },
+  {
+    "n": 13,
+    "title": "ColorBrewer 2.0: color advice for cartography",
+    "publisher": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University",
+    "url": "https://colorbrewer2.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Palette types sequential, diverging and qualitative; filters for colour-blind safe, print friendly and photocopy safe schemes."
+  },
+  {
+    "n": 14,
+    "title": "Choosing Colormaps in Matplotlib",
+    "publisher": "Matplotlib development team",
+    "url": "https://matplotlib.org/stable/users/explain/colors/colormaps.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Perceptually uniform sequential maps (viridis, cividis and others) have lightness that rises steadily; people read lightness changes better than hue changes; jet, hsv and turbo are poor for general data; avoid maps with both red and green; check greyscale printing."
+  },
+  {
+    "n": 15,
+    "title": "Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people",
+    "publisher": "Masataka Okabe and Kei Ito (Jikei Medical School and University of Tokyo)",
+    "url": "https://jfly.uni-koeln.de/color/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 20 November 2002, modified 2008. Origin of the colour-blind friendly palette (vermilion, bluish green, reddish purple, sky blue, blue, yellow, orange); advises against pure red for colour-blind readers."
+  },
+  {
+    "n": 16,
+    "title": "Color Blindness",
+    "publisher": "National Eye Institute (US National Institutes of Health)",
+    "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 5 November 2025). About 1 in 12 men have colour vision deficiency; red-green is the most common type."
+  },
+  {
+    "n": 17,
+    "title": "Vega-Lite documentation: Scale",
+    "publisher": "Vega project (University of Washington Interactive Data Lab and contributors)",
+    "url": "https://vega.github.io/vega-lite/docs/scale.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. scale.zero defaults to true for unbinned quantitative x and y with no custom domain; default colour ranges: tableau10 for nominal, blues for ordinal, yellowgreenblue for rect heatmaps; schemes from d3-scale-chromatic and ColorBrewer."
+  },
+  {
+    "n": 18,
+    "title": "Vega-Lite documentation: Encoding (description channel)",
+    "publisher": "Vega project",
+    "url": "https://vega.github.io/vega-lite/docs/encoding.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The description channel sets an aria-label on marks in SVG output only; descriptions are generated by default; config.aria false or mark.aria false turns them off."
+  },
+  {
+    "n": 19,
+    "title": "Vega-Lite documentation: View specification",
+    "publisher": "Vega project",
+    "url": "https://vega.github.io/vega-lite/docs/spec.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommended $schema https://vega.github.io/schema/vega-lite/v6.json enables validation and autocomplete; top-level description property is for commenting."
+  },
+  {
+    "n": 20,
+    "title": "Vega-Lite releases",
+    "publisher": "Vega project (GitHub)",
+    "url": "https://github.com/vega/vega-lite/releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest release v6.5.0 (changelog dated 8 October 2026), the npm latest tag on 6 November 2026; v6.0.x releases from March 2025."
+  },
+  {
+    "n": 21,
+    "title": "Chart.js documentation: Accessibility",
+    "publisher": "Chart.js",
+    "url": "https://www.chartjs.org/docs/latest/general/accessibility.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chart.js draws on canvas, which screen readers cannot read; add role=\"img\" and an aria-label, or fallback content inside the canvas tags; avoid generic fallback text."
+  },
+  {
+    "n": 22,
+    "title": "Chart.js releases",
+    "publisher": "Chart.js (GitHub)",
+    "url": "https://github.com/chartjs/Chart.js/releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest release v4.6.1, also the npm latest tag on 6 November 2026."
+  },
+  {
+    "n": 23,
+    "title": "Everything you need to know to write effective alt text",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/everything-you-need-to-know-to-write-effective-alt-text-df98f884-ca3d-456c-807b-1a1fa82f5dc2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For charts, alt text gives the information the chart conveys, such as the key takeaway, not just its type and topic; usually a sentence or two; mark purely decorative visuals as decorative. Undated."
+  },
+  {
+    "n": 24,
+    "title": "bbplot: R package for BBC-style graphics",
+    "publisher": "BBC (GitHub)",
+    "url": "https://github.com/bbc/bbplot",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. BBC News data team's package: bbc_style() applies the house style; finalise_plot() left-aligns title and subtitle, adds the source and saves to publication size (default 640 by 450 pixels); linked R cookbook. Undated."
+  },
+  {
+    "n": 25,
+    "title": "Flourish pricing",
+    "publisher": "Flourish (Canva UK Operations Ltd)",
+    "url": "https://flourish.studio/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free plan publishes and embeds publicly with attribution; unpublished projects stay private; Presenter included with Canva Business or Enterprise; Publisher and Enterprise by contract; Flourish is a Canva brand."
+  },
+  {
+    "n": 26,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Canva's remote MCP server lets AI assistants create designs, edit them, search designs and folders, use brand kits and templates, export (PDF, PNG, PPTX and others) and add comments. Undated."
+  },
+  {
+    "n": 27,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote server recommended; reading design context on all plans; writing to the canvas outside drafts needs the remote server and a Full seat, free during beta and later usage-based; desktop server needs a Dev or Full seat on a paid plan. Undated."
+  },
+  {
+    "n": 28,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 30 September 2024). UK public sector websites and apps should meet WCAG 2.2 AA and publish an accessibility statement; regulations in force since 23 September 2018."
+  },
+  {
+    "n": 29,
+    "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+    "publisher": "U.S. Department of Justice (ADA.gov)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ADA Title II rule adopts WCAG 2.1 AA for state and local government web content and apps; an interim final rule published 20 April 2026 moved compliance to 26 April 2027 (50,000 or more people) and 26 April 2028 (smaller entities and special districts)."
+  },
+  {
+    "n": 30,
+    "title": "A new era for inclusion begins: the European Accessibility Act enters into force",
+    "publisher": "AccessibleEU Centre (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 27 June 2025). From 28 June 2025 the European Accessibility Act requires products and services such as e-commerce platforms, online banking, e-books and transport websites and apps to be accessible."
+  }
+]

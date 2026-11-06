@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "thumbnail-and-title-planner",
+    "name": "Thumbnail and title planner",
+    "why": "Writes title and thumbnail pairs before the shoot that change one thing each, the same test discipline as the title-and-thumbnail-concepts skill."
+  },
+  {
+    "slug": "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
+    "name": "Pick a title and thumbnail, then fix where viewers leave",
+    "why": "Chains the promise and the retention fix in one run, like the title skill followed by the retention-dip-rewrite prompt."
+  },
+  {
+    "slug": "cut-chapter-and-clip-a-long-video-into-five-shorts",
+    "name": "Cut, chapter and clip a long video into five shorts",
+    "why": "Turns a transcript into a cut list, chapters and five Shorts with new first lines, a fuller version of the long-video-to-shorts prompt."
+  },
+  {
+    "slug": "cut-a-raw-recording-and-get-chapters-and-short-clips",
+    "name": "Cut a raw recording and get chapters and short clips",
+    "why": "Starts from a raw recording and returns chapters and clips, useful in step 6 of the weekly video cycle."
+  },
+  {
+    "slug": "founder-video-series-planner",
+    "name": "Founder video series planner",
+    "why": "Plans a weekly series from real buyer questions with a one-phone setup, matching the series step of the channel plan skill."
+  },
+  {
+    "slug": "founder-video-month",
+    "name": "Plan a month of founder videos and edit the first",
+    "why": "A month of founder episodes plus a first script and edit plan, for clients whose channel is built around the owner."
+  },
+  {
+    "slug": "video-opening-line-batch-writer",
+    "name": "Video opening line batch writer",
+    "why": "Ten opening lines and first pictures for Shorts, to pair with the long-video-to-shorts prompt."
+  },
+  {
+    "slug": "monthly-content-repurposer",
+    "name": "Monthly content repurposer",
+    "why": "Turns last month's best pieces into posts, emails and clips, so a strong video works beyond YouTube."
+  },
+  {
+    "slug": "social-video-edit-planner",
+    "name": "Social video edit planner",
+    "why": "A timed cut list, captions and cover from the client's own clips, for Shorts made outside a long video."
+  }
+]

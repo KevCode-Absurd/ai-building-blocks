@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "meta-ads-weekly-account-keeper",
+    "name": "Meta Ads weekly account keeper",
+    "why": "Runs the weekly routine from your exports: a true-return check, a scale-or-hold call and a change list to approve."
+  },
+  {
+    "slug": "meta-ads-30-check-account-auditor",
+    "name": "Meta Ads 30-check account auditor",
+    "why": "A scored audit across tracking, creative, structure and audiences, to pair with the account audit skill."
+  },
+  {
+    "slug": "meta-server-tracking-checker",
+    "name": "Meta server tracking checker",
+    "why": "Picks the right server route and checks for double counting, the first thing to fix before any spend decision."
+  },
+  {
+    "slug": "meta-concept-diversity-test-planner",
+    "name": "Meta concept diversity test planner",
+    "why": "Sorts your ads into concept types, spots gaps and tired ads, and plans the next creative test round."
+  },
+  {
+    "slug": "ad-fatigue-watcher",
+    "name": "Ad fatigue watcher",
+    "why": "Catches tired ads early twice a week and writes a brief for each replacement."
+  },
+  {
+    "slug": "ad-test-sprint-runner",
+    "name": "Ad test sprint runner",
+    "why": "Plans each test round, reads it when it ends and plans the next, so testing never stalls."
+  },
+  {
+    "slug": "meta-account-structure-planner",
+    "name": "Meta account structure planner",
+    "why": "Lays out a simple campaign and ad set structure with budgets that can get through learning."
+  },
+  {
+    "slug": "meta-delivery-troubleshooter",
+    "name": "Meta delivery troubleshooter",
+    "why": "Finds where delivery is failing when ads will not spend or results suddenly stop."
+  },
+  {
+    "slug": "platform-roas-reality-check",
+    "name": "Platform ROAS reality check",
+    "why": "Compares Meta's reported ROAS with your store totals to give a truer return before you scale."
+  },
+  {
+    "slug": "break-even-roas-and-cpa-calculator",
+    "name": "Break-even ROAS and CPA calculator",
+    "why": "Works out the most you can pay per sale from price and margin, the number every decision is judged against."
+  },
+  {
+    "slug": "meta-ads-compliance-checker",
+    "name": "Meta ads compliance checker",
+    "why": "Checks an ad against Meta's ad rules before launch and rewrites risky lines."
+  },
+  {
+    "slug": "creative-hit-rate-planner",
+    "name": "Creative hit rate planner",
+    "why": "Measures how many new concepts beat your profit line, so you know how much creative to make."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check across analytics and ad platforms that catches broken tracking and double counts."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "translator",
+  "name": "Translator",
+  "department": "content",
+  "summary": "Turns web pages, product copy and video captions into another language so they read as if written locally. Flags what a native speaker should check.",
+  "aliases": [
+    "translation",
+    "localisation",
+    "subtitles",
+    "captions",
+    "transcreation",
+    "srt files",
+    "localization",
+    "machine translation post-editing",
+    "website translation",
+    "translation glossary"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: translation canon, briefs, glossaries and translation memory, machine translation post-editing, locale formats, hreflang, subtitles, quality checks, EU AI Act labelling for translated text, and where to get certified translations in the US, UK and EU, with 30 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "A blameless incident report, a safer procedure draft and tracked prevention actions, matching steps 6 and 7 of the incident skill."
+  },
+  {
+    "slug": "prepare-a-supplier-corrective-action-review",
+    "name": "Prepare a supplier corrective action review",
+    "why": "Checks a supplier's corrective action reply against inspection evidence, for the external provider part of an ISO 9001 system."
+  },
+  {
+    "slug": "supplier-correction-evidence-review-assistant",
+    "name": "Supplier correction evidence review assistant",
+    "why": "Tracks supplier corrective action evidence against your acceptance standard over time."
+  },
+  {
+    "slug": "pre-shipment-inspection-brief-writer",
+    "name": "Pre-shipment inspection brief writer",
+    "why": "An inspector's checklist and pass or reject rule for goods from a factory, a quality control for bought-in products."
+  },
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "An induction procedure with sign-offs and supervised practice, a close cousin of the safety induction prompt."
+  },
+  {
+    "slug": "recall-quiz-writer",
+    "name": "Recall quiz writer",
+    "why": "Turns talk notes into a short recall quiz, useful for the quick check after each toolbox talk."
+  },
+  {
+    "slug": "prepare-a-service-outage-communication-pack",
+    "name": "Prepare a service outage communication pack",
+    "why": "First notice, updates and all-clear messages for an outage, for the message pack in a continuity plan."
+  },
+  {
+    "slug": "plan-workforce-disruption-coverage-before-announcing",
+    "name": "Plan staff coverage during a disruption",
+    "why": "Coverage options, escalation roles and messages when staff can't get to work, a continuity scenario."
+  },
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Evidence-based questionnaire answers with an evidence index, the same method as the QHSE questionnaire prompt."
+  },
+  {
+    "slug": "decision-checklist-builder",
+    "name": "Decision checklist builder",
+    "why": "Builds a short checklist for a decision you keep making, handy for reportability and stop-work decision aids."
+  }
+]

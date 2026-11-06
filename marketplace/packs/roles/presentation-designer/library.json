@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+    "name": "Prepare a PowerPoint deck for presenting and sharing",
+    "why": "Finishes a deck with speaker notes, an accessibility review and a handout, the same end point as this kit's deck workflow."
+  },
+  {
+    "slug": "turn-a-report-into-an-editable-briefing-deck",
+    "name": "Turn a report into an editable briefing deck",
+    "why": "Builds an editable deck from a report with slide text checked against the source, so no number is invented."
+  },
+  {
+    "slug": "turn-a-messy-spreadsheet-into-a-clean-slide-deck",
+    "name": "Turn a messy spreadsheet into a clean slide deck",
+    "why": "Cleans the data first, then writes the story and slides, useful before the chart choice prompt."
+  },
+  {
+    "slug": "powerpoint-template-populator",
+    "name": "PowerPoint template populator",
+    "why": "Fills a team's PowerPoint template with approved text and data while keeping its layouts, after the template skill sets them up."
+  },
+  {
+    "slug": "powerpoint-slide-size-converter",
+    "name": "PowerPoint slide size converter",
+    "why": "Moves an old 4:3 deck to 16:9 without stretched images, a common first job before a redesign."
+  },
+  {
+    "slug": "powerpoint-chart-data-rebuilder",
+    "name": "PowerPoint editable chart rebuilder",
+    "why": "Rebuilds pasted chart pictures as editable charts, so they can follow the template's chart rules."
+  },
+  {
+    "slug": "pitch-deck-checker-10-20-30",
+    "name": "Pitch deck 10/20/30 checker",
+    "why": "Scores a pitch deck on slide count, time and type size, a quick check alongside the deck layout plan."
+  },
+  {
+    "slug": "prepare-a-webinar-people-can-follow",
+    "name": "Prepare a webinar people can follow",
+    "why": "Plans a teaching webinar and its slide brief, for talks where the deck has to teach one clear result."
+  },
+  {
+    "slug": "page-grid-and-type-planner",
+    "name": "Page grid and type planner",
+    "why": "Plans margins, columns and a type list for reports and printed pages, the base of a workbook style system."
+  },
+  {
+    "slug": "font-pair-shortlist-maker",
+    "name": "Font pair shortlist maker",
+    "why": "Shortlists headline and body font pairs with sizes, a quick start for a type scale."
+  },
+  {
+    "slug": "layout-default-breaker",
+    "name": "Layout default breaker",
+    "why": "Finds the layout choices software made by default on a page, cover or slide and offers hand-made alternatives."
+  },
+  {
+    "slug": "make-a-long-form-easier-to-finish",
+    "name": "Make a long form easier to finish",
+    "why": "Cuts a long web form to the fields that matter and tests the flow, the online side of the form skill."
+  },
+  {
+    "slug": "coupon-and-form-fixer",
+    "name": "Coupon and form fixer",
+    "why": "Fixes a sign-up or reply form so it asks only what is needed, a small version of a form redesign."
+  },
+  {
+    "slug": "pick-a-lead-magnet-then-build-its-path-and-page",
+    "name": "Pick a lead magnet, then build its path and page",
+    "why": "Chooses the lead magnet and its sign-up path before the workbook or checklist is laid out."
+  },
+  {
+    "slug": "pack-and-thumbnail-glance-tester",
+    "name": "Pack and thumbnail glance tester",
+    "why": "A 3-second glance test at small size, the same check a book cover needs in an online store."
+  }
+]

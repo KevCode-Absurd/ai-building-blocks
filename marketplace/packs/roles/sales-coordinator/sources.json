@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "HoneyBook: client relationship platform for small businesses",
+    "publisher": "HoneyBook",
+    "url": "https://www.honeybook.com/",
+    "checked": "2026-11-06",
+    "supports": "Lead forms that capture inquiries, a pipeline from inquiry to project milestones, proposals, contracts and invoices sent together with online payments, a scheduler, automations, questionnaires and a client portal, AI email drafts and a meeting notetaker; aimed at photographers, venues, event planners, designers and home and real estate professionals; available in the US, Canada, UK and Australia. Vendor homepage. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "Tripleseat: event management software for restaurants, hotels and venues",
+    "publisher": "Tripleseat",
+    "url": "https://tripleseat.com/",
+    "checked": "2026-11-06",
+    "supports": "Captures and routes event inquiries (Inquiry Inbox), proposals, contracts and BEOs, payments, floor plans, a guest portal and a venue marketplace; vendor claims use by more than 20,000 venues and operation since 2008. Vendor homepage. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Anthropic (Claude Help Center)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Claude's Gmail connector can search, read, draft, send, reply and forward; by default Claude asks for approval before each of these actions, and Team and Enterprise owners decide whether members may skip that; the Calendar connector can create and update events and find availability; owners must enable connectors on Team and Enterprise plans. Page marked 'Updated this week'. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "HubSpot publishes a remote MCP server for CRM access and a local developer MCP server; the page lists read and write access to contacts, companies, deals, tickets, products, orders, line items, invoices, quotes and engagements, while its FAQ mentions read-only access to standard records; connection by OAuth with an admin connecting first. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "State of Sales Report",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/resources/research-reports/state-of-sales/",
+    "checked": "2026-11-06",
+    "supports": "Nine in ten sales teams use AI agents or expect to within two years; teams deploy agents across the sales process from planning to quoting. Vendor survey page with no stated edition, sample or date. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "Deduplication of records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/deduplication-of-records",
+    "checked": "2026-11-06",
+    "supports": "Contacts are deduplicated by email and companies by primary domain; imports update matching records and rows with no unique identifier import as new records; companies created through the API are not deduplicated by domain; up to ten custom properties per object can require unique values; Record ID can match records on import. Last updated 2 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Set up and customize pipelines",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines",
+    "checked": "2026-11-06",
+    "supports": "Separate pipelines are recommended only when processes have different stages; each deal stage carries a probability used for weighted amounts; reporting needs both Won and Lost stages; conditional stage rules can make properties required before a record is created in or moved to a stage; custom pipelines need Starter or above. Last updated 29 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Principles of the GDPR",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en",
+    "checked": "2026-11-06",
+    "supports": "Personal data must be accurate and kept up to date, and corrected or deleted without delay when wrong; it must be stored for the shortest time possible, and organisations should set time limits to erase or review it. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Use legacy quotes",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/quotes/use-quotes",
+    "checked": "2026-11-06",
+    "supports": "The legacy quotes tool is no longer available to new users; a default expiration period can be set; optional approvals require quotes to be approved before they reach the buyer (Sales Hub Enterprise); e-signatures draw on a pooled monthly limit; a setting lets buyers pay quotes before signing; published quotes do not update when branding changes. Last updated 24 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "QuickBooks Online pricing",
+    "publisher": "Intuit QuickBooks",
+    "url": "https://quickbooks.intuit.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "QuickBooks lists a Free plan plus Simple Start, Essentials, Plus and Advanced, with a 30-day free trial; the Free plan's invoicing lets users see estimate status and convert estimates into invoices. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Xero pricing plans (US)",
+    "publisher": "Xero",
+    "url": "https://www.xero.com/us/pricing-plans/",
+    "checked": "2026-11-06",
+    "supports": "Xero has no free plan; its Early, Growing and Established plans all include sending quotes. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "15 U.S. Code 7001: General rule of validity (ESIGN Act)",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/uscode/text/15/7001",
+    "checked": "2026-11-06",
+    "supports": "A signature, contract or record in interstate or foreign commerce may not be denied legal effect solely because it is electronic; where a law requires written information to a consumer, electronic delivery needs the consumer's affirmative consent after set disclosures. Statute text. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "Providing clear and accurate information about prices: summary (CMA209)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Invitations to purchase must show the total price; mandatory fees and charges should normally be in the headline total and showing them separately will not normally be enough; drip pricing is prohibited, with fines up to 10% of turnover or GBP 300,000, whichever is greater; 'from' prices must include mandatory charges such as a flat booking fee (photography example); local charges such as resort fees are included, with pay-now and pay-locally amounts beside the total; where the total depends on the customer's needs, give what is needed to work it out. Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "Price transparency (CMA209)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209",
+    "checked": "2026-11-06",
+    "supports": "CMA guidance on price transparency under the unfair commercial practices law, covering mandatory fees, drip pricing and partitioned pricing; published 18 November 2025, summary added 7 January 2026. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207",
+    "checked": "2026-11-06",
+    "supports": "CMA guidance on business-to-consumer conduct prohibited under the Digital Markets, Competition and Consumers Act 2024; published 4 April 2025, updated 18 November 2025. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "Rule on Unfair or Deceptive Fees: Frequently Asked Questions",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/rule-unfair-or-deceptive-fees-frequently-asked-questions",
+    "checked": "2026-11-06",
+    "supports": "Effective 12 May 2025; covers live-event tickets and short-term lodging (hotels, motels, inns, vacation rentals), including third-party sellers and travel agents, and protects business as well as individual buyers; any price shown must disclose the total including known mandatory fees, more prominently than other pricing; only government charges, shipping and optional add-ons may be left out, disclosed before payment; fee names must be truthful. Page dated May 2025. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "Returns and cancellations (right of withdrawal)",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "EU consumers can cancel distance and off-premises contracts within 14 days without a reason; for services the period runs from the day the contract is agreed; exceptions include plane and train tickets, concert tickets, hotel bookings, car rental and catering services for specific dates, made-to-order goods and services fully delivered after the customer agreed to start. Last checked 28 April 2026. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "Online and distance selling for businesses",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/online-and-distance-selling-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "UK businesses must tell customers they can cancel within 14 days; if not told, customers can cancel for up to 12 months more; listed exemptions include goods and services of GBP 42 or less, package holidays and passenger travel tickets; information required before an order includes business details, full price with taxes, payment and cancellation terms and deposit conditions, given on paper or in a form the customer can keep, plus a copy of the contract. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Package travel",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/travel/holidays/package-travel/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "A package combines two or more types of travel service for the same trip under one contract or in linked ways (one point of sale, inclusive price, advertised as a package, linked online booking within 24 hours); information required before booking includes the total price, payment terms and passport and visa requirements, plus a standard EU form; price rises only for specific costs, if the contract allows, and not later than 20 days before the trip; over 8% the traveller may end the contract without a fee; insolvency protection applies. Last checked 11 May 2026. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "What does ATOL protection mean?",
+    "publisher": "UK Civil Aviation Authority (ATOL)",
+    "url": "https://www.atol.org/about-atol/what-does-atol-protection-mean/",
+    "checked": "2026-11-06",
+    "supports": "ATOL is financial protection, not insurance, for package trips that include a flight and for flights sold as ATOL protected; the customer should receive an ATOL Certificate naming the ATOL holder, including when booking through a travel agent. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Estate Agency Team",
+    "publisher": "National Trading Standards (UK)",
+    "url": "https://www.nationaltradingstandards.uk/work-areas/estate-agency-team/",
+    "checked": "2026-11-06",
+    "supports": "The team enforces the Estate Agents Act 1979 and the Tenant Fees Act 2019; it published an opinion on 5 May 2022 that 'price on application' property listings were unlawful, and a statement on conditional selling on 15 July 2025. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "National Trading Standards publishes guidance on Part A material information for property listings",
+    "publisher": "National Trading Standards (UK)",
+    "url": "https://www.nationaltradingstandards.uk/news/national-trading-standards-publishes-guidance-on-part-a-material-information-for-property-listings",
+    "checked": "2026-11-06",
+    "supports": "Part A material information for all property listings: price or rent, council tax band (rates in Northern Ireland) and, for sales, tenure; Rightmove, Zoopla, OnTheMarket and PropertyPal added fields and flag listings that leave them empty; published 12 July 2022; Parts B and C to cover utilities and other matters. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Material information",
+    "publisher": "National Trading Standards (UK)",
+    "url": "https://www.nationaltradingstandards.uk/work-areas/estate-agency-team/material-information/",
+    "checked": "2026-11-06",
+    "supports": "Notes that the Ministry of Housing, Communities and Local Government announced in June 2026 its intention to introduce homebuying sales packs as part of wider reforms. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "The Fair Housing Act",
+    "publisher": "US Department of Justice, Civil Rights Division",
+    "url": "https://www.justice.gov/crt/fair-housing-act-1",
+    "checked": "2026-11-06",
+    "supports": "The Fair Housing Act bars discrimination by housing providers including real estate companies, covering steering and misleading information about availability; protected characteristics are race or color, religion, sex, national origin, familial status and disability. Updated 22 June 2023. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "Highlights from the Profile of Home Buyers and Sellers",
+    "publisher": "National Association of Realtors",
+    "url": "https://www.nar.realtor/research-and-statistics/research-reports/highlights-from-the-profile-of-home-buyers-and-sellers",
+    "checked": "2026-11-06",
+    "supports": "2026 edition covering US transactions from July 2025 to June 2026: 92% of sellers used an agent; 22% of buyers were first-time buyers; published yearly since 1981. Trade body survey. Opened with WebFetch."
+  },
+  {
+    "n": 26,
+    "title": "Incoterms rules",
+    "publisher": "International Chamber of Commerce",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/",
+    "checked": "2026-11-06",
+    "supports": "Incoterms 2020 is the current edition, in force since 1 January 2020, with eleven three-letter trade terms that set out the tasks, costs and risks of delivering goods from seller to buyer; first published 1936. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "X12 transaction sets",
+    "publisher": "X12",
+    "url": "https://x12.org/products/transaction-sets",
+    "checked": "2026-11-06",
+    "supports": "Standard EDI documents: 850 Purchase Order, 855 Purchase Order Acknowledgment, 856 Ship Notice/Manifest, 860 Purchase Order Change Request (buyer initiated), 865 Purchase Order Change Acknowledgment/Request (seller initiated) and 810 Invoice. Opened with WebFetch."
+  }
+]

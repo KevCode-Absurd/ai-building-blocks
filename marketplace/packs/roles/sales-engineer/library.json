@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Maps each questionnaire item to evidence and lists open questions, the same method as the security-questionnaire-and-rfp-answers skill."
+  },
+  {
+    "slug": "prepare-evidence-for-a-compliance-review",
+    "name": "Prepare evidence for a compliance review",
+    "why": "Builds an evidence index and gap list, useful before a buyer's security review or when the answer bank needs current proof."
+  },
+  {
+    "slug": "track-promises-made-to-pilot-customers",
+    "name": "Track promises made to pilot customers",
+    "why": "Keeps a register of what each pilot customer was promised, with owners and proof, to back the pilot plan and hand-off."
+  },
+  {
+    "slug": "prepare-an-ai-pilot-go-decision",
+    "name": "Prepare an AI pilot go decision",
+    "why": "Checks pilot results against a baseline and a go or stop checklist, a close match for the pilot readout."
+  },
+  {
+    "slug": "objection-answer-sheet-writer",
+    "name": "Objection answer sheet writer",
+    "why": "Turns the doubts buyers raise into an answer sheet; pair it with the honest technical answers in the objection skill."
+  },
+  {
+    "slug": "hardest-objections-answer-writer",
+    "name": "Hardest objections answer writer",
+    "why": "Finds the toughest objections to a pitch before the buyer's technical lead does."
+  },
+  {
+    "slug": "sales-call-question-planner",
+    "name": "Sales call question planner",
+    "why": "Plans discovery questions that fill the gaps the discovery-gap-check prompt finds."
+  },
+  {
+    "slug": "sales-call-prep-assistant",
+    "name": "Sales call prep assistant",
+    "why": "A one-page plan from the last call's notes, handy before a technical session or pilot check-in."
+  },
+  {
+    "slug": "honest-persuasion-editor",
+    "name": "Honest persuasion editor",
+    "why": "Checks sales copy for made-up proof and fake urgency, the same claims discipline this kit asks for."
+  },
+  {
+    "slug": "quarterly-battle-card-keeper",
+    "name": "Quarterly battle card keeper",
+    "why": "Refreshes battle cards from won and lost deals so technical comparisons with rivals stay true."
+  },
+  {
+    "slug": "monthly-lost-deal-reviewer",
+    "name": "Monthly lost deal reviewer",
+    "why": "Finds why deals were really lost, including technical reasons, to improve demos and objection answers."
+  }
+]

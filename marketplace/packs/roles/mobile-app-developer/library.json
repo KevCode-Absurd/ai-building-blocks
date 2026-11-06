@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "new-screen-design-reviewer",
+    "name": "New screen design reviewer",
+    "why": "Checks a new screen against the team's own design rules before it ships, a useful second look after the screen build skill."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Keeps accessibility checks and re-checks on a schedule, the same habit the accessibility pass applies to app screens."
+  },
+  {
+    "slug": "error-message-rewriter",
+    "name": "Error message rewriter",
+    "why": "Rewrites error messages in plain words with a next step, ready for the error and offline states in a screen's state table."
+  },
+  {
+    "slug": "bug-evidence-plan-writer",
+    "name": "Bug evidence plan writer",
+    "why": "Ranks likely causes with one quick check each before code changes, the same order the crash triage prompt follows."
+  },
+  {
+    "slug": "prepare-private-bug-evidence-for-developers",
+    "name": "Private bug evidence assistant",
+    "why": "Turns a tester's notes and screenshots into a bug report with personal data masked, useful for TestFlight and internal test feedback."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause before fixing and ends in a small pull request, the right path for a screen that crashes or looks wrong."
+  },
+  {
+    "slug": "test-failure-repair-loop",
+    "name": "Test failure repair loop",
+    "why": "Fixes a failing test suite in capped rounds without loosening tests, handy after a React Native or Flutter upgrade."
+  },
+  {
+    "slug": "launch-a-feature-through-a-beta-and-read-the-numbers",
+    "name": "Launch a feature through a beta and read the numbers",
+    "why": "Plans a beta with metrics set in advance and release notes, a good fit for TestFlight and Play testing tracks."
+  },
+  {
+    "slug": "release-day-rollback-planner",
+    "name": "Release day rollback planner",
+    "why": "Writes the checks, pause points and way back for a release, the thinking behind a halt rule for a staged rollout."
+  },
+  {
+    "slug": "check-a-release-and-its-docs",
+    "name": "Check a release and its docs",
+    "why": "Finds test gaps and stale help pages before a release, so store notes and in-app help match the new version."
+  },
+  {
+    "slug": "weekly-product-feedback-triager",
+    "name": "Weekly product feedback triager",
+    "why": "Tallies and rules on feature requests each week, useful for sorting app store reviews and tester feedback."
+  },
+  {
+    "slug": "connect-code-to-supabase-builder-prompt",
+    "name": "Connect Code to Supabase coding prompt",
+    "why": "Connects an app back end to Supabase with scoped access and safe secrets, a common data source for small apps."
+  },
+  {
+    "slug": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+    "name": "Find leaked keys, secure them and check your live site",
+    "why": "Finds keys committed to a repo and moves them to safe storage, for when an API key ended up in app code or a build config."
+  }
+]

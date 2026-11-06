@@ -1,0 +1,26 @@
+{
+  "id": "affiliate-influencer-manager",
+  "name": "Affiliate and influencer marketing manager",
+  "department": "marketing",
+  "summary": "Finds creators and affiliates who fit the brand, briefs them and sets fair rewards. Keeps disclosure rules and payouts in order.",
+  "aliases": [
+    "influencer marketing",
+    "affiliate marketing",
+    "creator partnerships",
+    "ugc creators",
+    "referral programme",
+    "affiliate manager",
+    "influencer manager",
+    "refer a friend",
+    "product gifting",
+    "partner programme"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: reward maths, tracking and terms, Awin, impact.com, Amazon Associates and payout tool rules, creator fit, outreach, gifting and briefs, endorsement disclosure from the FTC, ASA, CMA and EU, contracts and payouts kept with the client, access levels 1 to 3, four skills, five prompts, two workflows and 30 checked sources."
+    }
+  ]
+}

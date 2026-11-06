@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "OKR meaning, definition and examples",
+    "publisher": "What Matters (John Doerr)",
+    "url": "https://www.whatmatters.com/faqs/okr-meaning-definition-example",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OKRs come from Andy Grove at Intel, grew out of Drucker's management by objectives, and were brought to Google by John Doerr in 1999; quarterly cycles and separation from pay; one objective with three to five key results; key results are met or not met; committed versus aspirational OKRs."
+  },
+  {
+    "n": 2,
+    "title": "Guide: Set goals with OKRs",
+    "publisher": "Google re:Work",
+    "url": "https://rework.withgoogle.com/intl/en/guides/set-goals-with-okrs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Archived guide first published 2016: three to five objectives with about three key results each; grading 0.0 to 1.0 with an average of 0.6 to 0.7 as the aim for ambitious goals; OKRs are public inside the company and are not employee evaluations."
+  },
+  {
+    "n": 3,
+    "title": "Amazon 2015 letter to shareholders (Exhibit 99.1)",
+    "publisher": "Amazon.com, Inc. via SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Type 1 decisions (one-way doors, irreversible, decide slowly and with consultation) versus Type 2 decisions (two-way doors, reversible, decide fast by a small group); large firms wrongly apply the heavy process to Type 2 decisions."
+  },
+  {
+    "n": 4,
+    "title": "2016 Letter to Amazon Shareholders",
+    "publisher": "Amazon (aboutamazon.com)",
+    "url": "https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most decisions should be made with about 70% of the information you wish you had; disagree and commit; recognise and correct bad decisions fast; escalate true misalignment early rather than deciding by exhaustion."
+  },
+  {
+    "n": 5,
+    "title": "2017 Letter to Shareholders",
+    "publisher": "Amazon (aboutamazon.com)",
+    "url": "https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Amazon uses narrative six-page memos instead of slides, read silently at the start of meetings; a great memo takes a week or more of writing, review and rewriting; high standards are teachable and domain-specific."
+  },
+  {
+    "n": 6,
+    "title": "Netflix culture memo",
+    "publisher": "Netflix",
+    "url": "https://jobs.netflix.com/culture",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no last-updated date shown). One informed captain per significant decision; captains farm for dissent and weigh views by expertise; disagree then commit; managers give context rather than control; memos open to comment."
+  },
+  {
+    "n": 7,
+    "title": "DACI: a decision-making framework (Team Playbook)",
+    "publisher": "Atlassian",
+    "url": "https://www.atlassian.com/team-playbook/plays/daci",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Driver, Approver (one person), Contributors (voice, no vote) and Informed; eight steps; decision document fields (background, data, factors, options with pros, cons and cost, action items, outcome); 15 minutes prep, 60 minutes run, 3 to 6 people; record the decision for later teams."
+  },
+  {
+    "n": 8,
+    "title": "RAPID: Bain's tool to clarify decision accountability",
+    "publisher": "Bain & Company",
+    "url": "https://www.bain.com/insights/rapid-tool-to-clarify-decision-accountability/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page dated 13 October 2023. Recommend, Agree, Perform, Input and Decide roles; one recommender and ideally one decider; Agree used sparingly for mandatory constraints; start with high-value or frequent decisions."
+  },
+  {
+    "n": 9,
+    "title": "Architectural Decision Records (ADR)",
+    "publisher": "adr.github.io",
+    "url": "https://adr.github.io/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A decision record captures one decision with its reasons, trade-offs and consequences; the collection of records is the decision log; Michael Nygard's 2011 post popularised the practice; use extends beyond software."
+  },
+  {
+    "n": 10,
+    "title": "Shape Up, chapter 8: The Betting Table",
+    "publisher": "Basecamp (37signals)",
+    "url": "https://basecamp.com/shapeup/2.2-chapter-08",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six-week cycles followed by a two-week cool-down; a short betting-table meeting of the CEO, CTO, a senior programmer and a product strategist; no backlog, only a few shaped pitches; a circuit breaker stops unfinished projects at cycle end by default."
+  },
+  {
+    "n": 11,
+    "title": "The Level 10 Meeting",
+    "publisher": "EOS Worldwide",
+    "url": "https://www.eosworldwide.com/blog/level-10-meeting",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). A 90-minute weekly leadership meeting, same day and time, fixed agenda: segue, scorecard, rock review, headlines, to-do list (5 minutes each), 60 minutes to identify, discuss and solve issues, conclude and rate; Rocks are 90-day priorities."
+  },
+  {
+    "n": 12,
+    "title": "Scaling Up",
+    "publisher": "Scaling Up (Verne Harnish)",
+    "url": "https://scalingup.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The method's four decisions (people, strategy, execution, cash) and its one-page tools, including the One-Page Strategic Plan. The page does not set out meeting cadences, so the kit makes no claim about them."
+  },
+  {
+    "n": 13,
+    "title": "Steven Rogelberg",
+    "publisher": "Steven G. Rogelberg",
+    "url": "https://www.stevenrogelberg.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Author of The Surprising Science of Meetings (press coverage from 2019) and Glad We Met (on one-on-ones); meetings can be made more efficient and inclusive with research, and you control the meetings you run."
+  },
+  {
+    "n": 14,
+    "title": "Default Alive or Default Dead?",
+    "publisher": "Paul Graham",
+    "url": "https://paulgraham.com/aord.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; essay dated October 2015. Default alive means reaching profit on the cash left if costs stay flat and revenue keeps its recent growth; ask the question early; keep a written plan B; hiring too fast is a common killer."
+  },
+  {
+    "n": 15,
+    "title": "Breaking down the infinite workday (Work Trend Index special report)",
+    "publisher": "Microsoft WorkLab",
+    "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 17 June 2025, Microsoft 365 telemetry to 15 Feb 2025, EU and education tenants excluded. 57% of meetings ad hoc (60% in the method note); meetings after 8 pm up 16% year on year; half of meetings fall 9-11 am and 1-3 pm; PowerPoint edits jump 122% in the last 10 minutes before a meeting."
+  },
+  {
+    "n": 16,
+    "title": "Viva Goals retirement",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/viva/goals/goals-retirement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Microsoft Viva Goals, an OKR tool, was retired on 31 December 2025, with no new features after 5 December 2024 and data export by API, Excel or PowerPoint advised before retirement."
+  },
+  {
+    "n": 17,
+    "title": "Delegate and collaborate on email",
+    "publisher": "Google Gmail Help",
+    "url": "https://support.google.com/mail/answer/138350",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A Gmail delegate can read, send and delete mail but not change the password or chat; mail they send shows their own address; up to 10 delegates on personal and 1,000 on work accounts; a work account's admin must allow delegation."
+  },
+  {
+    "n": 18,
+    "title": "Allow someone else to manage your mail and calendar",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Outlook delegate permissions Reviewer, Author and Editor; Author and Editor can send on behalf; send as can only be set by an admin; needs a Microsoft 365 or Exchange Online work or school account."
+  },
+  {
+    "n": 19,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page said updated this week). Gmail, Calendar and Drive connectors read, draft and act; Gmail send, reply and forward and Drive share, move and trash ask for approval by default; on Team and Enterprise plans owners enable connectors and decide whether members may skip approval."
+  },
+  {
+    "n": 20,
+    "title": "Slack MCP server",
+    "publisher": "Slack developer docs",
+    "url": "https://docs.slack.dev/ai/mcp-server/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no release date shown). Slack's own MCP server can search messages and files, read channels and threads, send, schedule and draft messages, and work with canvases and lists; OAuth with user-token scopes; workspace admins approve clients; activity appears in audit logs."
+  },
+  {
+    "n": 21,
+    "title": "Notion MCP overview",
+    "publisher": "Notion developers",
+    "url": "https://developers.notion.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Notion's MCP server lets an AI assistant search a workspace, create and edit pages and manage databases and trackers; admins can manage MCP clients. The page header carries a line aimed at AI agents, which was treated as page content."
+  },
+  {
+    "n": 22,
+    "title": "Using Asana's MCP server",
+    "publisher": "Asana developers",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Asana's MCP server at the v2 URL uses OAuth, reads work and creates and manages tasks and projects; the beta SSE URL was due to shut on 11 May 2026; Enterprise+ admins can allow or block MCP clients."
+  },
+  {
+    "n": 23,
+    "title": "Get started with the Atlassian MCP server",
+    "publisher": "Atlassian Support",
+    "url": "https://support.atlassian.com/rovo/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Covers Jira, Confluence, Goals, Projects, Loom and more; OAuth 2.1; respects existing permissions; can create and update work items and pages; calls use Rovo credits; v1 usage moves to v2 tools on 1 March 2027. The page includes a setup prompt for users to paste into an agent, treated as page content."
+  },
+  {
+    "n": 24,
+    "title": "UK Corporate Governance Code",
+    "publisher": "Financial Reporting Council",
+    "url": "https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/uk-corporate-governance-code/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2024 Code (22 January 2024) applies to financial years from 1 January 2025 for companies in the commercial companies and closed-ended funds categories, with Provision 29 on internal controls from 1 January 2026; comply or explain; private companies are outside it, but large private companies must report governance and may use the Wates Principles."
+  },
+  {
+    "n": 25,
+    "title": "Running a limited company: company and accounting records",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/running-a-limited-company/company-and-accounting-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK companies must keep records of shareholders and the results of shareholder votes and resolutions, among others, and keep records for six years from the end of the financial year they relate to, longer in some cases."
+  }
+]

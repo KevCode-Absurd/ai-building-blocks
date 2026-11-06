@@ -258,7 +258,7 @@ async function buildOne(persona) {
     ...(agent.manifest.mega ? { mega: agent.manifest.mega } : {}),
     version: agent.manifest.version,
     updated: agent.manifest.updated,
-    knowledge: agent.manifest.knowledge.status,
+    knowledge: agent.manifest.knowledge,
     files: agent.files.length,
     files_url: `/packs/${persona.id}/files.json`,
     agent_zip: zips.zip,

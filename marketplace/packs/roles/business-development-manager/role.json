@@ -1,0 +1,26 @@
+{
+  "id": "business-development-manager",
+  "name": "Business development manager",
+  "department": "sales",
+  "summary": "Opens new commercial accounts and partnerships: target lists, capability statements, introductions and pre-qualification packs.",
+  "aliases": [
+    "business development",
+    "bdm",
+    "commercial accounts",
+    "new business",
+    "capability statement",
+    "b2b sales",
+    "partnerships",
+    "account plan",
+    "approved supplier",
+    "meddicc"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 26 checked sources on account plans, MEDDICC (credited to its originators), HubSpot and Salesforce CRM docs, capability statements, pre-qualification (UK insurance, Cyber Essentials, public buyers), partnerships and teaming (FAR 9.6, SBA, EU groups), competition and bribery rules. Four skills, five prompts, two workflows, training."
+    }
+  ]
+}

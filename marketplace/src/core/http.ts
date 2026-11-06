@@ -21,6 +21,8 @@ const SECURITY_HEADERS: Record<string, string> = {
   "cache-control": "no-store",
   "x-content-type-options": "nosniff",
   "referrer-policy": "strict-origin-when-cross-origin",
+  // Crawlers may read the public agent data to draw the pages (robots.txt allows it), but never list the JSON itself.
+  "x-robots-tag": "noindex",
 };
 
 export function json(data: unknown, status = 200, headers: Record<string, string> = {}): Response {

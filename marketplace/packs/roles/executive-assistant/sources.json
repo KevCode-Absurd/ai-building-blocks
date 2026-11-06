@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "What is GTD?",
+    "publisher": "David Allen Company (Getting Things Done)",
+    "url": "https://gettingthingsdone.com/what-is-gtd/",
+    "checked": "2026-11-06",
+    "supports": "David Allen's five steps: capture, clarify (decide if actionable, define the next action and project), organize, reflect (review frequently), engage."
+  },
+  {
+    "n": 2,
+    "title": "Maker's Schedule, Manager's Schedule",
+    "publisher": "Paul Graham (author's site)",
+    "url": "https://paulgraham.com/makersschedule.html",
+    "checked": "2026-11-06",
+    "supports": "July 2009 essay: makers need half-day blocks, managers work in hourly slots; one meeting can break a maker's afternoon; cluster meetings at the end of the day (office hours)."
+  },
+  {
+    "n": 3,
+    "title": "Books",
+    "publisher": "Cal Newport (author's site)",
+    "url": "https://calnewport.com/books/",
+    "checked": "2026-11-06",
+    "supports": "Deep Work (2016), A World Without Email (2021) on communication overload, Slow Productivity (2024), and the Time-Block Planner."
+  },
+  {
+    "n": 4,
+    "title": "Steven Rogelberg",
+    "publisher": "Steven G. Rogelberg (author's site)",
+    "url": "https://www.stevenrogelberg.com/",
+    "checked": "2026-11-06",
+    "supports": "Author of The Surprising Science of Meetings and Glad We Met (one-on-one meetings); evidence-based approach to making meetings efficient, engaging and inclusive."
+  },
+  {
+    "n": 5,
+    "title": "2017 Letter to Shareholders",
+    "publisher": "Amazon",
+    "url": "https://www.aboutamazon.com/news/company-news/2017-letter-to-shareholders",
+    "checked": "2026-11-06",
+    "supports": "Amazon uses narratively structured six-page memos instead of slides, read silently at the start of each meeting; a great memo may take a week or more and is rewritten with colleagues' help."
+  },
+  {
+    "n": 6,
+    "title": "Breaking down the infinite workday (Work Trend Index special report)",
+    "publisher": "Microsoft WorkLab",
+    "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday",
+    "checked": "2026-11-06",
+    "supports": "17 June 2025; Microsoft 365 telemetry to 15 February 2025 plus a 31,000-person survey: 117 emails a day, most skimmed in under 60 seconds; 153 Teams messages a weekday; an interruption every 2 minutes in core hours; meetings after 8 pm up 16%; 57% of meetings ad hoc."
+  },
+  {
+    "n": 7,
+    "title": "Plain language guide",
+    "publisher": "Digital.gov (U.S. General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language",
+    "checked": "2026-11-06",
+    "supports": "Official US plain language guidance: principles, writing for your audience, the Plain Writing Act of 2010, designing and testing for understanding."
+  },
+  {
+    "n": 8,
+    "title": "Voice and tone",
+    "publisher": "Mailchimp Content Style Guide",
+    "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+    "checked": "2026-11-06",
+    "supports": "Voice stays the same while tone changes with the reader and situation; consider the reader's state of mind; clarity over entertainment."
+  },
+  {
+    "n": 9,
+    "title": "Delegate and collaborate on email",
+    "publisher": "Gmail Help (Google)",
+    "url": "https://support.google.com/mail/answer/138350",
+    "checked": "2026-11-06",
+    "supports": "Delegates can read, send and delete mail but cannot change the password or account settings or chat; up to 10 delegates on personal accounts and 1,000 on work accounts; admin must allow it; sent mail shows the delegate's address."
+  },
+  {
+    "n": 10,
+    "title": "Allow someone else to manage your mail and calendar",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926",
+    "checked": "2026-11-06",
+    "supports": "Outlook delegate levels Reviewer, Author and Editor; scope from calendar only to the whole mailbox; send as can only be set by an admin; work or school accounts only; delegates can use Copilot on items they can access."
+  },
+  {
+    "n": 11,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Gmail, Google Calendar and Google Drive connectors: search, read and draft; sending, sharing, moving and trashing need approval by default; existing Google permissions apply; Team and Enterprise owners must enable them."
+  },
+  {
+    "n": 12,
+    "title": "Take notes for me in Google Meet",
+    "publisher": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/14754931",
+    "checked": "2026-11-06",
+    "supports": "AI notes saved to the organiser's Drive and attached to the Calendar event; all participants are notified; host controls; eight spoken languages, one per meeting; summaries may be incomplete or inaccurate; needs an eligible Workspace edition or Google AI plan."
+  },
+  {
+    "n": 13,
+    "title": "Using Meeting Summary with Zoom AI",
+    "publisher": "Zoom Support",
+    "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058013",
+    "checked": "2026-11-06",
+    "supports": "Host or co-host starts the AI meeting summary on eligible paid plans; an icon shows AI features are active; summaries go by email to those the host chooses and appear in Zoom Hub. No date on the page."
+  },
+  {
+    "n": 14,
+    "title": "2025 IC3 Annual Report (Internet Crime Report)",
+    "publisher": "FBI Internet Crime Complaint Center",
+    "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+    "checked": "2026-11-06",
+    "supports": "2025: 1,008,597 complaints and $20.877 billion reported losses; business email compromise losses $3,046,598,558 (2024: $2,770,151,146); over $30 million in BEC losses involved AI; April 2025 case where an Oregon city office's $6 million wire was recalled. PDF opened and converted to text."
+  },
+  {
+    "n": 15,
+    "title": "Avoiding and Reporting Gift Card Scams",
+    "publisher": "U.S. Federal Trade Commission (Consumer Advice)",
+    "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams",
+    "checked": "2026-11-06",
+    "supports": "No real business or government agency will ever tell you to buy a gift card to pay them; contact the card company fast and report at ReportFraud.ftc.gov. Dated July 2023."
+  },
+  {
+    "n": 16,
+    "title": "How long should I keep records?",
+    "publisher": "U.S. Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+    "checked": "2026-11-06",
+    "supports": "General 3-year rule, 6 and 7-year cases, employment tax records at least 4 years, indefinitely if no return filed; page reviewed 30 June 2026."
+  },
+  {
+    "n": 17,
+    "title": "Running a limited company: company and accounting records",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/running-a-limited-company/company-and-accounting-records",
+    "checked": "2026-11-06",
+    "supports": "UK companies keep records about the company (shareholders, votes and resolutions) and accounting records, generally for 6 years from the end of the last financial year they relate to, longer in some cases."
+  },
+  {
+    "n": 18,
+    "title": "Foreign travel advice",
+    "publisher": "GOV.UK (Foreign, Commonwealth and Development Office)",
+    "url": "https://www.gov.uk/foreign-travel-advice",
+    "checked": "2026-11-06",
+    "supports": "Country-by-country advice on entry requirements, safety and security, health and local laws for about 226 destinations, with email alerts."
+  },
+  {
+    "n": 19,
+    "title": "Apply for an electronic travel authorisation (ETA)",
+    "publisher": "GOV.UK (UK Visas and Immigration)",
+    "url": "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta",
+    "checked": "2026-11-06",
+    "supports": "Most visitors from Europe, the USA, Australia, Canada and certain other countries need an ETA instead of a visa, including transit through UK border control; each traveller needs one; British and Irish passport holders do not."
+  },
+  {
+    "n": 20,
+    "title": "Using Credit Cards and Disputing Charges",
+    "publisher": "U.S. Federal Trade Commission (Consumer Advice)",
+    "url": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges",
+    "checked": "2026-11-06",
+    "supports": "Fair Credit Billing Act: dispute letter must reach the card issuer within 60 days after the first bill showing the error; issuer acknowledges within 30 days and resolves within 90 days; write to the billing-inquiries address. Dated May 2022."
+  },
+  {
+    "n": 21,
+    "title": "How to complain",
+    "publisher": "Financial Ombudsman Service (UK)",
+    "url": "https://www.financial-ombudsman.org.uk/consumers/how-to-complain",
+    "checked": "2026-11-06",
+    "supports": "Complain to the financial business first; it has up to 8 weeks for a final response (15 days for payment services and e-money); bring the complaint to the ombudsman within 6 months of the final response; free."
+  },
+  {
+    "n": 22,
+    "title": "Accepting returns and giving refunds",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+    "checked": "2026-11-06",
+    "supports": "UK: faulty goods must be refunded, repaired or replaced; 6-month presumption; up to 6 years to claim (5 in Scotland); online purchases can be cancelled within 14 days of receipt, refund within 14 days of getting the item back."
+  },
+  {
+    "n": 23,
+    "title": "Guarantees and returns: legal guarantee",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "EU minimum 2-year legal guarantee; repair or replacement first, then refund; defects within 1 year (2 in some countries) presumed present at delivery; commercial guarantees cannot reduce legal rights. Last checked by the EU 5 October 2026."
+  },
+  {
+    "n": 24,
+    "title": "Cancelling or returning goods bought online",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "EU 14-day cooling-off period for distance purchases from delivery (goods) or contract (services); exceptions such as personalised or perishable goods and dated tickets; who pays return postage. Last checked by the EU 28 April 2026."
+  }
+]

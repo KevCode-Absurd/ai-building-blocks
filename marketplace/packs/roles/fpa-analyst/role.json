@@ -1,0 +1,26 @@
+{
+  "id": "fpa-analyst",
+  "name": "FP&A analyst",
+  "department": "finance",
+  "summary": "Builds budgets, forecasts and financial models and explains why the numbers moved. Shows the owner where cash will be and which inputs matter most.",
+  "aliases": [
+    "fp&a",
+    "financial planning",
+    "budgeting",
+    "forecasting",
+    "financial model",
+    "cash flow forecast",
+    "saas metrics",
+    "variance analysis",
+    "13-week cash forecast",
+    "budget vs actual"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 sources (US, UK and EU reporting changes, plus official sources for India, Canada and Australia), four skills (13-week cash forecast, variance analysis, driver-based model, SaaS metrics pack), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "traction-public-relations",
+    "name": "Press outreach experiment planner",
+    "why": "Plans a small press outreach test with a reporter list, one pitch, cost caps and stop rules, for a first try at earned media."
+  },
+  {
+    "slug": "publicity-first-launch-planner",
+    "name": "Publicity-first launch planner",
+    "why": "Plans a launch that earns press before ad spend, which pairs with the news announcement workflow here."
+  },
+  {
+    "slug": "prepare-a-partner-launch-announcement-pack",
+    "name": "Prepare a partner launch announcement pack",
+    "why": "Builds the release, partner version, social posts and fact sheet with matching facts for a partnership launch."
+  },
+  {
+    "slug": "journalist-query-answer-writer",
+    "name": "Journalist query answer writer",
+    "why": "Answers reporters' source requests with real expertise, a quick way for an expert to get quoted."
+  },
+  {
+    "slug": "hard-questions-faq-writer",
+    "name": "Hard questions FAQ writer",
+    "why": "Turns a press release into the hard questions reporters will ask, with graded answers, for spokesperson prep."
+  },
+  {
+    "slug": "crisis-response-planner",
+    "name": "Crisis response planner",
+    "why": "Plans the first 30 days after a defect, complaint or failure: who to tell, who investigates and what to promise."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a reply to an angry customer for promises you can't keep and defensive lines before it goes out."
+  },
+  {
+    "slug": "message-stickiness-rewriter",
+    "name": "Message stickiness rewriter",
+    "why": "Sharpens a key message or pitch line so reporters and audiences remember it."
+  },
+  {
+    "slug": "fact-vs-opinion-sorter",
+    "name": "Fact and opinion sorter",
+    "why": "Sorts a draft release or statement into fact, inference and opinion, so you know which lines need proof."
+  },
+  {
+    "slug": "talk-tension-planner",
+    "name": "Talk tension planner",
+    "why": "Reorders a talk outline so the room knows the stakes in the first minute, for booked speaking slots."
+  },
+  {
+    "slug": "podcast-show-notes-writer",
+    "name": "Podcast show notes writer",
+    "why": "Turns a guest appearance transcript into show notes and links the client can share after the episode."
+  },
+  {
+    "slug": "ai-citation-source-finder",
+    "name": "AI citation source finder",
+    "why": "Finds the sites AI tools cite for your buyers' questions, a new kind of media list for earned coverage."
+  }
+]

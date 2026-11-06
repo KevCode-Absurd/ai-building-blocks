@@ -1,0 +1,26 @@
+{
+  "id": "growth-marketer",
+  "name": "Growth marketer",
+  "department": "marketing",
+  "summary": "Picks the one or two channels most likely to win customers and runs cheap tests to prove it. Turns a sprawling plan into a 90-day list of actions.",
+  "aliases": [
+    "growth hacker",
+    "marketing strategist",
+    "fractional cmo",
+    "go-to-market",
+    "marketing plan",
+    "startup marketing",
+    "saas marketing",
+    "growth lead",
+    "head of growth",
+    "growth experiments"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: growth canon, funnels and activation, retention cohorts, unit economics and allowable CAC, experiment design and readouts, measurement and attribution in GA4 with US, UK and EU consent rules, incrementality, and the weekly growth review, with 29 checked sources. Channel playbooks stay in the Traction mega pack and are referenced, not repeated."
+    }
+  ]
+}

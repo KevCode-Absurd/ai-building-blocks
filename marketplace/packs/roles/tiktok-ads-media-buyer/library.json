@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "tiktok-ads-weekly-account-keeper",
+    "name": "TikTok Ads weekly account keeper",
+    "why": "Runs the weekly TikTok review from your export: each ad called keep, fix or stop."
+  },
+  {
+    "slug": "weekly-video-ad-batch-maker",
+    "name": "Weekly video ad batch maker",
+    "why": "Makes a weekly batch of video ad scripts from last week's results."
+  },
+  {
+    "slug": "five-tactic-ad-hook-writer",
+    "name": "Five-tactic ad hook writer",
+    "why": "Writes ranked hooks for the first seconds of each ad, ready for a hook test."
+  },
+  {
+    "slug": "short-video-hook-writer",
+    "name": "Short video hook writer",
+    "why": "More opening lines for short vertical video, to widen the hook bank."
+  },
+  {
+    "slug": "five-part-creator-ad-script-writer",
+    "name": "Five-part creator ad script writer",
+    "why": "Turns a creator brief into a timed script from hook to call to action."
+  },
+  {
+    "slug": "creator-ad-roster-builder",
+    "name": "Creator ad roster builder",
+    "why": "Plans a roster of creators for Spark Ads, with a brief and flat pay rule."
+  },
+  {
+    "slug": "creator-pay-planner",
+    "name": "Creator pay planner",
+    "why": "Works out a fair fee for a creator post, for the client to approve and pay."
+  },
+  {
+    "slug": "organic-post-to-ad-promoter",
+    "name": "Organic post to ad promoter",
+    "why": "Picks which organic posts are worth promoting as ads, the starting point for Spark Ads."
+  },
+  {
+    "slug": "ad-test-budget-calculator",
+    "name": "Ad test budget calculator",
+    "why": "Sets daily spend and how much to spend before judging a hook test."
+  },
+  {
+    "slug": "creative-test-reader",
+    "name": "Creative test reader",
+    "why": "Reads test results by ad and flags false winners before budget moves."
+  },
+  {
+    "slug": "ad-fatigue-watcher",
+    "name": "Ad fatigue watcher",
+    "why": "Catches tired ads early so fresh hooks are briefed in time."
+  },
+  {
+    "slug": "gmv-max-campaign-setup-planner",
+    "name": "GMV Max campaign setup planner",
+    "why": "Plans a GMV Max set-up for brands that sell through TikTok Shop."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check that catches broken Pixel or Events API set-ups and double counts."
+  }
+]

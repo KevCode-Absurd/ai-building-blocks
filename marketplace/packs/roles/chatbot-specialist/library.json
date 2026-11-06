@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Marks a bot's answers against approved help text and turns failures into retest cases, the same loop as the chatbot test and review skill."
+  },
+  {
+    "slug": "track-agent-injection-controls-and-retest-evidence",
+    "name": "Agent injection evidence review assistant",
+    "why": "Safe prompt injection test cases and a control gap list, run only with the owner's written approval, matching this role's injection rules."
+  },
+  {
+    "slug": "monthly-help-centre-keeper",
+    "name": "Monthly help centre keeper",
+    "why": "Finds questions the help pages miss each month, which keeps the bot's knowledge base current."
+  },
+  {
+    "slug": "help-article-from-ticket-writer",
+    "name": "Help article writer from support tickets",
+    "why": "Turns solved tickets into short articles in customers' words, ready to become bot knowledge entries."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Builds a question-and-answer page from real customer questions, a good source document for a support bot."
+  },
+  {
+    "slug": "clear-your-support-inbox-and-turn-fixes-into-help-pages",
+    "name": "Clear your support inbox and turn fixes into help pages",
+    "why": "Sorts open tickets and writes help pages from the fixes, the groundwork before a bot is launched."
+  },
+  {
+    "slug": "check-an-ai-app-improvement",
+    "name": "Check an AI app improvement",
+    "why": "Sets evaluation criteria before and after a change, the habit of retesting after every instruction or knowledge change."
+  },
+  {
+    "slug": "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+    "name": "Harden an AI app against hijacked prompts and runaway bills",
+    "why": "Defences and tests against hidden instructions and spending spikes for a bot built in code."
+  },
+  {
+    "slug": "workflow-diagram-and-change-planner",
+    "name": "Workflow diagram and change planner",
+    "why": "Draws a process as a diagram and checks each hand-off, useful for mapping bot-to-person hand-overs."
+  },
+  {
+    "slug": "customer-question-keyword-finder",
+    "name": "Customer question keyword finder",
+    "why": "Pulls the questions customers really ask from reviews and tickets, the starting list for bot intents."
+  },
+  {
+    "slug": "answer-first-page-rewriter",
+    "name": "Answer-first page rewriter",
+    "why": "Rewrites pages answer first and flags facts without a source, the same shape as a good knowledge entry."
+  }
+]

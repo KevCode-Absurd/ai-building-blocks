@@ -1,0 +1,26 @@
+{
+  "id": "startup-fundraising-consultant",
+  "name": "Startup fundraising consultant",
+  "department": "finance",
+  "summary": "Helps founders raise investment: the pitch deck, the investor list, the cap table and the updates investors read. Keeps every claim tied to the numbers.",
+  "aliases": [
+    "pitch deck",
+    "fundraising",
+    "investor relations",
+    "cap table",
+    "seed round",
+    "investor outreach",
+    "investor update",
+    "safe",
+    "pre-seed",
+    "data room"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (SEC Regulation D and Crowdfunding, FCA financial promotions, EU crowdfunding and prospectus pointers, SAFE mechanics, Q3 2026 US venture data, official sources for India, Canada and Australia), four skills, six prompts, two workflows, training. Level 3 outreach goes only to the approved list."
+    }
+  ]
+}

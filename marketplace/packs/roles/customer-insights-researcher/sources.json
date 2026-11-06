@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "MRS Code of Conduct 2023 (in effect 15 May 2023)",
+    "publisher": "Market Research Society (UK)",
+    "url": "https://www.mrs.org.uk/pdf/MRS-code-of-conduct-2023.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). Child defined as under 16; responsible adult permission verified and recorded (rules 16 to 22); vulnerable people (23, 24); no client goods or vouchers as research incentives and incentive terms stated (25, 26); tell participants about recording and observation at recruitment and at the start (29); information needed for permission and informed consent (30, 31); observers (39 to 41); re-contact only with permission (43, 44); retention communicated (47); anonymity and small-sample identification risks (49 to 51); passing complaints back on request (52)."
+  },
+  {
+    "n": 2,
+    "title": "ICC/ESOMAR International Code on Market, Opinion and Social Research and Data Analytics (2025)",
+    "publisher": "ICC and ESOMAR",
+    "url": "https://standards.esomar.org/assets/documents/icc-esomar-code-2025.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). Definitions (child 12 and under, young person 13 to 17, passive data collection, synthetic persona); Art. 1 right to decline and separate consent for non-research follow-up; Art. 2 parental consent and age check before other data; Art. 3 data minimisation; Art. 4 identify yourself, notify synthetic personas at the start, ask before re-contact, state retention, allow withdrawal; Art. 6 no personal data to clients without consent, privacy notice, deductive disclosure, cross-border transfers."
+  },
+  {
+    "n": 3,
+    "title": "Code of Standards and Ethics for Market Research and Data Analytics (updated September 2026)",
+    "publisher": "Insights Association (US)",
+    "url": "https://www.insightsassociation.org/About-Us/Code-of-Standards",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Voluntary, informed consent; passive collection with consent where feasible; incentives only to encourage participation; children's consent set by applicable law with verifiable parental consent where required; data minimisation and security; research kept apart from marketing; disclose an AI chatbot or avatar at the start; keep AI-generated data apart; participants may stop at any time."
+  },
+  {
+    "n": 4,
+    "title": "SME data protection guide: Process personal data lawfully",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/process-personal-data-lawfully_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six legal bases; consent must be freely given, specific, informed and unambiguous, by a clear affirmative act, with no pre-ticked boxes, and as easy to withdraw as to give; sensitive data (health, ethnic origin, beliefs, sex life and others) is prohibited unless an exception such as explicit consent applies."
+  },
+  {
+    "n": 5,
+    "title": "Principles of the GDPR",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Collect only what the purpose needs; research reuse presumed compatible with safeguards; keep data for the shortest time and set erase or review limits; tell people who you are, purposes, categories, legal basis, retention, recipients, transfers outside the EU, their rights and right to complain, in clear plain language."
+  },
+  {
+    "n": 6,
+    "title": "Data protection explained",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Seven GDPR principles; personal data includes pseudonymised data that can be re-identified; individuals' rights (informed, access, rectification, erasure, restriction, portability, objection, automated decisions); controller and processor roles."
+  },
+  {
+    "n": 7,
+    "title": "Data protection",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/data-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK data protection principles; more sensitive information with stronger protection (race, ethnic background, political opinions, religious beliefs, trade union membership, genetics, biometrics for ID, health, sex life or orientation); criminal data separate; the ICO regulates."
+  },
+  {
+    "n": 8,
+    "title": "Data (Use and Access) Act 2025: data protection and privacy changes (published 27 June 2025)",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Royal Assent 19 June 2025; new recognised legitimate interests ground (crime prevention, safeguarding, emergencies and others); scientific research may include commercial research; consent can cover broad areas of related research with safeguards; some low-risk cookies without consent; organisations must handle data protection complaints."
+  },
+  {
+    "n": 9,
+    "title": "Data (Use and Access) Act 2025: plans for commencement (updated 12 October 2026)",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Main Part 5 data protection changes took effect on 5 February 2026; the complaints provisions (section 103) were left to a later stage expected about 12 months after Royal Assent; the page lists no commencement regulation for them."
+  },
+  {
+    "n": 10,
+    "title": "California Consumer Privacy Act (CCPA) (updated 28 August 2026)",
+    "publisher": "State of California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to for-profit businesses meeting thresholds (over $25 million revenue, 100,000+ California consumers or households, or 50%+ revenue from selling data); rights to know, delete, opt out of sale or sharing, correct and limit sensitive data; notice at collection; enforced by the Attorney General and the California Privacy Protection Agency."
+  },
+  {
+    "n": 11,
+    "title": "18 U.S. Code 2511, Interception and disclosure of wire, oral, or electronic communications prohibited",
+    "publisher": "Legal Information Institute, Cornell Law School (statute text)",
+    "url": "https://www.law.cornell.edu/uscode/text/18/2511",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 2511(2)(d): under federal law a person who is a party to a communication, or has one party's prior consent, may record it unless the purpose is a criminal or tortious act. Federal statute text hosted by a university law library (a secondary host of the official text); it does not cover state law."
+  },
+  {
+    "n": 12,
+    "title": "Children's Online Privacy Protection Rule (COPPA)",
+    "publisher": "Federal Trade Commission (US)",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to operators of sites and online services directed to children under 13, or with actual knowledge they collect personal information from a child under 13; amended rule text published April 2025."
+  },
+  {
+    "n": 13,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "European Commission AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI systems that interact directly with people must be designed so people are told they are dealing with an AI, unless obvious, at the latest at the first interaction. The page notes amendments by the Digital Omnibus on AI (paragraph 7); it does not show the application date."
+  },
+  {
+    "n": 14,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers (November 2024)",
+    "publisher": "Federal Trade Commission (US)",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule in effect 21 October 2024; bans fake reviews, incentives conditioned on sentiment, undisclosed insider reviews, review suppression by threats or false accusations, fake independent review sites and fake social influence indicators; incentives allowed if not tied to sentiment but should be disclosed; review gating not banned by the rule but may breach the FTC Act; civil penalties for knowing violations."
+  },
+  {
+    "n": 15,
+    "title": "Short guide for businesses publishing consumer reviews and complying with consumer protection law (4 April 2025)",
+    "publisher": "Competition and Markets Authority (UK)",
+    "url": "https://www.gov.uk/government/publications/fake-reviews/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Banned: fake reviews, concealed incentivised reviews, and false or misleading review information; traders who publish reviews must take reasonable and proportionate steps (policy, risk assessment, detection, investigation, action) and stay responsible when using a third party."
+  },
+  {
+    "n": 16,
+    "title": "Unfair Commercial Practices Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/unfair-commercial-practices-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive (EU) 2019/2161 amended the UCPD and applied from 28 May 2022; the Commission's UCPD guidance covers consumer reviews and endorsements; a consolidated text is linked. The page does not set out the review rules themselves."
+  },
+  {
+    "n": 17,
+    "title": "Maps user-contributed content policy: prohibited and restricted content",
+    "publisher": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fake engagement is removed; merchants may not offer payment, discounts or free goods for reviews or for changing a negative one, may not selectively solicit positive reviews or discourage negative ones, and may ask real customers for reviews without incentives."
+  },
+  {
+    "n": 18,
+    "title": "Guidelines for Businesses (version 7.3, September 2026)",
+    "publisher": "Trustpilot",
+    "url": "https://corporate.trustpilot.com/legal/for-businesses/guidelines-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Invite customers the same way and at the same point whatever their experience; selective invitations, incentives for reviews, asking for only positive reviews, inviting family, staff or shareholders, and collecting reviews on business devices are prohibited."
+  },
+  {
+    "n": 19,
+    "title": "Meta Content Library and Content Library API",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/researchtools/meta-content-library",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Public content from Facebook, Instagram, Threads (web tool) and WhatsApp Channels, for researchers at academic or not-for-profit organisations with scientific or public-interest research as a core purpose; profile thresholds such as 100+ followers; no fees."
+  },
+  {
+    "n": 20,
+    "title": "User Interviews 101 (Maria Rosala and Kara Pernice, 17 September 2023, reviewed 15 July 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/user-interviews/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Interviews are good for experiences, pain points, motivations and mental models; they collect self-reported behaviour subject to faulty recall, missing detail and social-desirability bias; set specific goals, pilot the guide, use screeners, ask about specific past events, avoid leading questions, probe with follow-ups."
+  },
+  {
+    "n": 21,
+    "title": "Affinity Diagramming (Rachel Krause and Kara Pernice, 26 April 2024, reviewed 7 August 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/affinity-diagram/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Write notes independently for a short timed window (typically 5 to 10 minutes), cluster by content before naming themes, include outliers and opposing views, do not force notes into clusters, prioritise with dot voting, name an owner for follow-up; better as a team exercise."
+  },
+  {
+    "n": 22,
+    "title": "The Use and Misuse of Focus Groups (Jakob Nielsen, 1 January 1997)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/focus-groups/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Focus groups suit spontaneous reactions, needs and group dynamics, not usability or actual behaviour; typically 6 to 9 people for about 2 hours with a moderator who keeps one person from dominating; run more than one group."
+  },
+  {
+    "n": 23,
+    "title": "Diary Studies: Understanding Long-Term User Behavior and Experiences (Kim Flaherty, 29 March 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/diary-studies/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Diary studies capture behaviour over time in context; event-, interval- and signal-based logging; over-recruit for dropouts; about 5 to 12 participants for small discovery work; review entries as they arrive; incentives higher than for single sessions, around 40 US dollars per hour of expected time for a general US sample, paid in instalments."
+  },
+  {
+    "n": 24,
+    "title": "Doing reflexive thematic analysis (Virginia Braun and Victoria Clarke)",
+    "publisher": "Braun and Clarke (authors' own site)",
+    "url": "https://www.thematicanalysis.net/doing-reflexive-ta/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six phases: familiarising, coding, generating initial themes, developing and reviewing themes, refining, defining and naming themes, writing up; phases are tools, not rigid rules; analysis is recursive; a theme is a pattern of shared meaning around a central idea."
+  },
+  {
+    "n": 25,
+    "title": "Measuring Your Net Promoter Score",
+    "publisher": "Bain & Company (Net Promoter System)",
+    "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The likelihood-to-recommend question on a 0 to 10 scale; 9 to 10 promoters, 7 to 8 passives, 0 to 6 detractors; NPS is percent promoters minus percent detractors; trademarks held by Bain, NICE Systems and Fred Reichheld."
+  },
+  {
+    "n": 26,
+    "title": "The One Number You Need to Grow (Frederick F. Reichheld, December 2003)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2003/12/the-one-number-you-need-to-grow",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reichheld's December 2003 HBR article arguing that companies spend heavily on complex satisfaction measures but measure the wrong thing, framed around customer loyalty."
+  },
+  {
+    "n": 27,
+    "title": "Opportunity Solution Trees (Teresa Torres)",
+    "publisher": "Product Talk (Teresa Torres's own site)",
+    "url": "https://www.producttalk.org/opportunity-solution-trees/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tree with outcome, opportunities, solutions and assumption tests; interview week over week; revisit the opportunity space every three to four interviews; story-based interviewing collects specific stories about past behaviour; author of Continuous Discovery Habits."
+  },
+  {
+    "n": 28,
+    "title": "Careless Whisper: Speech-to-Text Hallucination Harms (Koenecke and others, arXiv 2402.08021, revised 3 May 2024)",
+    "publisher": "arXiv",
+    "url": "https://arxiv.org/abs/2402.08021",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. About 1% of Whisper transcriptions in the study contained whole hallucinated phrases or sentences; about 38% of hallucinations included explicit harms; more common for speakers with aphasia and longer pauses."
+  },
+  {
+    "n": 29,
+    "title": "Prolific pricing",
+    "publisher": "Prolific",
+    "url": "https://www.prolific.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommends paying participants at least 9 pounds or 12 US dollars per hour, with a platform minimum of 6 pounds or 8 US dollars per hour (as of November 2026); pay-as-you-go platform model and managed services; no free plan listed."
+  }
+]

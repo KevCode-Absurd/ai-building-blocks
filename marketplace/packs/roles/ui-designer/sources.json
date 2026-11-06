@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation (dated version 12 December 2024)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current dated Recommendation of 12 December 2024; large-scale text is at least 18 point, or 14 point bold."
+  },
+  {
+    "n": 2,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum) (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 4.5:1 for text, 3:1 for large text; 1 pt = 1.333 px so 14 pt is about 18.5 px and 18 pt is 24 px; ratios not rounded (4.499:1 fails); exceptions for incidental text, logotypes and inactive components; relative luminance formula; range 1:1 to 21:1."
+  },
+  {
+    "n": 3,
+    "title": "Understanding Success Criterion 1.4.11: Non-text Contrast (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 3:1 for visual information that identifies components and their states and for meaningful graphics; input borders when they are the only boundary; icons that identify controls; focus indicators; inactive components exempt; hover indicators need not meet 3:1 but must not reduce contrast."
+  },
+  {
+    "n": 4,
+    "title": "Understanding Success Criterion 1.4.1: Use of Color (updated 16 September 2025)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level A: colour is not the only visual means of conveying information or distinguishing elements; sufficient technique G183 uses 3:1 between inline link text and surrounding text."
+  },
+  {
+    "n": 5,
+    "title": "Understanding Success Criterion 1.4.12: Text Spacing (updated 1 October 2025)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA: no loss of content when users set line height 1.5 times the font size, paragraph spacing 2 times, letter spacing 0.12 times and word spacing 0.16 times."
+  },
+  {
+    "n": 6,
+    "title": "Understanding Success Criterion 1.4.10: Reflow (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA: content works at 320 CSS pixels wide without two-way scrolling (equal to 1280 px at 400% zoom); exceptions for content that needs two dimensions, such as maps, data tables and toolbars."
+  },
+  {
+    "n": 7,
+    "title": "Understanding Success Criterion 2.4.11: Focus Not Obscured (Minimum) (updated 15 June 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA: a focused component must not be entirely hidden by author content such as sticky headers, footers, cookie banners or non-modal dialogs; scroll padding helps."
+  },
+  {
+    "n": 8,
+    "title": "Understanding Success Criterion 2.4.13: Focus Appearance (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AAA: focus indicator area at least a 2 CSS pixel thick perimeter of the component, with 3:1 contrast between focused and unfocused states; Focus Visible (2.4.7, AA) requires a visible indicator."
+  },
+  {
+    "n": 9,
+    "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum) (updated 2 November 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA: pointer targets at least 24 by 24 CSS pixels, with five exceptions: spacing (24 px circle test), equivalent, inline, user agent control, essential."
+  },
+  {
+    "n": 10,
+    "title": "W3C Accessibility Guidelines (WCAG) 3.0, Working Draft (10 September 2026)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/wcag-3.0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Working Draft dated 10 September 2026; several years of work remain; states WCAG 3 does not replace WCAG 2; its contrast algorithm is yet to be determined."
+  },
+  {
+    "n": 11,
+    "title": "The WebAIM Million: 2026 report (updated 30 March 2026)",
+    "publisher": "WebAIM",
+    "url": "https://webaim.org/projects/million/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. February 2026 data: low-contrast text on 83.9% of home pages (79.1% in 2025), an average of 34 distinct low-contrast instances per page; 95.9% had detected WCAG failures."
+  },
+  {
+    "n": 12,
+    "title": "Human Interface Guidelines: Typography (change log entry 16 December 2025)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; the page renders with JavaScript, so the text was read from Apple's own data file for this page (developer.apple.com/tutorials/data/design/human-interface-guidelines/typography.json). Default and minimum text sizes per platform (iOS and iPadOS 17 pt and 11 pt); avoid Ultralight, Thin and Light weights; SF and New York; Dynamic Type and testing at the largest size."
+  },
+  {
+    "n": 13,
+    "title": "Human Interface Guidelines: Color (change log entry 16 December 2025)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's data file for this page (color.json). Do not rely on colour alone; light, dark and increased-contrast variants for custom colours; use system colours by role and do not hard-code their values; Liquid Glass takes colour from content and tint is used sparingly; Display P3 with sRGB fallbacks."
+  },
+  {
+    "n": 14,
+    "title": "Human Interface Guidelines: Dark Mode (change log entry 6 August 2024)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's data file for this page (dark-mode.json). No app-only appearance setting; dark colours are not simple inversions; 4.5:1 minimum and aim for 7:1 for custom colours, especially small text; dimmer base and brighter foreground backgrounds; test with Increase Contrast and Reduce Transparency."
+  },
+  {
+    "n": 15,
+    "title": "Human Interface Guidelines: Accessibility (change log entry 9 June 2025)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's data file for this page (accessibility.json). WCAG AA contrast (4.5:1 up to 17 pt, 3:1 at 18 pt or bold); default and minimum control sizes (iOS 44 by 44 pt and 28 by 28 pt); spacing of about 12 pt around bezelled and 24 pt around unbezelled controls; Reduce Motion guidance; mentions APCA as an alternative."
+  },
+  {
+    "n": 16,
+    "title": "Human Interface Guidelines: Materials (Liquid Glass) (change log entries 9 June 2025 and 9 September 2025)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's data file for this page (materials.json). Liquid Glass for the controls and navigation layer, not the content layer; regular and clear variants; a 35% dark dimming layer under clear glass on bright content; use sparingly on custom controls; appearance changes with Reduce Transparency and Increase Contrast."
+  },
+  {
+    "n": 17,
+    "title": "Human Interface Guidelines: Layout (change log entry 9 September 2026)",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's data file for this page (layout.json). Order by importance, group with space or containers, separate controls from content with Liquid Glass and scroll edge effects, respect safe areas, support Dynamic Type, design by size class; change log updated 9 September 2026."
+  },
+  {
+    "n": 18,
+    "title": "Material Design 3 in Compose",
+    "publisher": "Android Developers (Google)",
+    "url": "https://developer.android.com/develop/ui/compose/designsystems/material3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Material 3 Expressive as an expansion of M3; theming by colour scheme, typography and shapes; five key colours with 13-tone palettes; colour roles such as primary, on-primary and primary-container; 15-style type scale (display, headline, title, body, label) with default sizes; shape scale; tonal elevation; use on-colours on their matching colours for contrast."
+  },
+  {
+    "n": 19,
+    "title": "Compose Material 3 release notes (latest update 4 November 2026)",
+    "publisher": "Android Developers (Google)",
+    "url": "https://developer.android.com/jetpack/androidx/releases/compose-material3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stable 1.4.0; 1.5.0-rc01 on 4 November 2026; expressive APIs promoted or graduated from experimental across 1.5.0 alphas between April and July 2026."
+  },
+  {
+    "n": 20,
+    "title": "Expressive Design: Google's UX Research (no date shown; tied to Google I/O 2025)",
+    "publisher": "Google Design",
+    "url": "https://design.google/library/expressive-material-design-google-research",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 46 studies with more than 18,000 participants; key elements spotted up to four times faster in expressive designs across 10 apps; usability dropped when designs broke familiar patterns; a strong minority preferred calmer designs; Google's own research on its own system."
+  },
+  {
+    "n": 21,
+    "title": "Make apps more accessible",
+    "publisher": "Android Developers (Google)",
+    "url": "https://developer.android.com/guide/topics/ui/accessibility/apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Touch targets of at least 48 by 48 dp; text contrast 4.5:1 below 18 sp (or bold below 14 sp), 3:1 otherwise; describe a control's purpose, not its look."
+  },
+  {
+    "n": 22,
+    "title": "Directive (EU) 2019/882 on the accessibility requirements for products and services (European Accessibility Act)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies from 28 June 2025 (Article 31); microenterprises providing services exempt (Article 4(5)), defined as fewer than 10 persons and turnover or balance sheet not over EUR 2 million (Article 3(23)); disproportionate burden assessment kept for five years (Article 14); presumption of conformity with harmonised standards (Article 15); transitional period to 28 June 2030 (Article 32); websites and apps must meet the four principles also used by WCAG (Annex I)."
+  },
+  {
+    "n": 23,
+    "title": "Guidance on Web Accessibility and the ADA (18 March 2022)",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ADA applies to the web offerings of businesses open to the public; no regulation sets detailed technical standards for them; WCAG and Section 508 named as helpful guidance."
+  },
+  {
+    "n": 24,
+    "title": "Understanding accessibility requirements for public sector bodies (updated 30 September 2024)",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector websites and apps must meet WCAG 2.2 AA and publish an accessibility statement; all UK service providers must make reasonable adjustments under the Equality Act 2010."
+  },
+  {
+    "n": 25,
+    "title": "Guide to Dev Mode",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Inspect, ready for dev status, annotations for specs, compare changes, Code Connect; Professional and higher plans."
+  },
+  {
+    "n": 26,
+    "title": "Overview of variables, collections, and modes",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/14506821864087",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Variables store reusable values; modes such as light and dark switch values by context; aliases to variables of the same type."
+  },
+  {
+    "n": 27,
+    "title": "Visual Hierarchy in UX: Definition (Kelley Gordon, 17 January 2021)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visual hierarchy orders elements by intended importance; tools are colour and contrast, scale (no more than three sizes recommended) and grouping; the squint test to check it."
+  },
+  {
+    "n": 28,
+    "title": "Line length (Butterick's Practical Typography)",
+    "publisher": "Matthew Butterick (author's own site)",
+    "url": "https://practicaltypography.com/line-length.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Average line length of 45 to 90 characters including spaces; longer lines make it harder to find the next line."
+  },
+  {
+    "n": 29,
+    "title": "More Meaningful Typography (Tim Brown, 3 May 2011)",
+    "publisher": "A List Apart",
+    "url": "https://alistapart.com/article/more-meaningful-typography/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A modular scale is a series of sizes from a ratio and a base value such as body text size; a tool for decisions, not a rule."
+  },
+  {
+    "n": 30,
+    "title": "prefers-color-scheme (last modified 4 August 2026)",
+    "publisher": "MDN Web Docs (Mozilla)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Media feature for the user's light or dark preference from the OS or browser; Baseline widely available since January 2020."
+  }
+]

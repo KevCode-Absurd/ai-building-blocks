@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "role-task-breakdown-for-ai-help",
+    "name": "Role task breakdown for AI help",
+    "why": "Breaks a job into tasks and shows where AI can help with a person in charge, the first step of the task map skill."
+  },
+  {
+    "slug": "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+    "name": "Give AI tasks and keep what the job quietly does",
+    "why": "Finds what each task quietly protects before handing it to AI, matching the intake question about judgement and care."
+  },
+  {
+    "slug": "ai-fit-problem-checker",
+    "name": "AI-fit problem checker",
+    "why": "Tests whether AI fits a problem at all and suggests a small first proof, before any pilot is planned."
+  },
+  {
+    "slug": "ai-tool-picker",
+    "name": "AI tool picker",
+    "why": "Matches a job to the type of AI tool that fits, the same tool-type-first approach as the task map."
+  },
+  {
+    "slug": "prepare-an-ai-pilot-go-decision",
+    "name": "Prepare an AI pilot go decision",
+    "why": "Turns pilot results into a go or stop decision, alongside the pilot results review prompt."
+  },
+  {
+    "slug": "ai-pilot-evaluation-review-assistant",
+    "name": "AI pilot evaluation review assistant",
+    "why": "A repeatable agent for reviewing pilot evidence against agreed criteria."
+  },
+  {
+    "slug": "tune-a-prompt-with-real-tests-then-ship-it-with-versions",
+    "name": "Tune a prompt with real tests, then keep versions",
+    "why": "Tests prompts against real cases and keeps versions, the method behind the team prompt library."
+  },
+  {
+    "slug": "rough-prompt-rebuilder",
+    "name": "Rough prompt rebuilder",
+    "why": "A quick way for trainees to turn a weak prompt into a clear one during workshop practice rounds."
+  },
+  {
+    "slug": "automation-flow-sketcher",
+    "name": "Automation flow sketcher",
+    "why": "Turns a repeated task into a Zapier or Make plan with failure handling, a starting point for the workflow redesign skill."
+  },
+  {
+    "slug": "check-a-new-automation-before-relying-on-it",
+    "name": "Check a new automation before relying on it",
+    "why": "Tests a new automation before it goes live, the step before turning on a workflow at level 3."
+  },
+  {
+    "slug": "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+    "name": "Harden an AI app against hijacked prompts and runaway bills",
+    "why": "Covers prompt injection defences and spending caps for teams building their own AI tools."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Helps roll out the AI use policy in plain words staff will read."
+  },
+  {
+    "slug": "training-handout-writer",
+    "name": "Training handout writer",
+    "why": "Turns workshop notes into a one-page desk handout with steps and common mistakes."
+  },
+  {
+    "slug": "check-training-transfer-after-a-course",
+    "name": "Check training transfer after a course",
+    "why": "Checks whether people use what they learned, matching the skills check a month after the workshop."
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "Coaching and mentoring factsheet",
+    "publisher": "CIPD",
+    "url": "https://www.cipd.org/uk/knowledge/factsheets/coaching-mentoring-factsheet/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Coaching and mentoring as development through one-to-one conversations; coaching as a skilled, non-directive activity; mentoring as a longer relationship with a more experienced colleague; line managers as coaches and the power issue; check readiness; set confidentiality and information-flow rules between coachee, coach, manager and HR; coaching supervision as quality assurance. Visible date 11 Aug 2025 (metadata also shows 29 Dec 2022)."
+  },
+  {
+    "n": 2,
+    "title": "Global Code of Ethics for coaches, mentors and supervisors",
+    "publisher": "Global Code of Ethics (EMCC Global, Association for Coaching and 10 other bodies)",
+    "url": "https://www.globalcodeofethics.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A guidance document, not legally binding; first published 2016; Version 4 (2025) updated December 2025; signed by 12 bodies including EMCC Global, the Association for Coaching and APECS; separate guidance on technology and AI. The code text itself is a download and was not read."
+  },
+  {
+    "n": 3,
+    "title": "The effects of feedback interventions on performance: a historical review, a meta-analysis, and a preliminary feedback intervention theory (Kluger and DeNisi, Psychological Bulletin 119(2), 1996)",
+    "publisher": "Hebrew University of Jerusalem research portal",
+    "url": "https://cris.huji.ac.il/en/publications/the-effects-of-feedback-interventions-on-performance-a-historical/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 607 effect sizes from 23,663 observations; average d = .41; over one third of feedback interventions decreased performance; feedback works less well as attention moves from the task to the self."
+  },
+  {
+    "n": 4,
+    "title": "Performance management: could do better? (evidence review)",
+    "publisher": "CIPD",
+    "url": "https://www.cipd.org/en/knowledge/evidence-reviews/what-works-in-performance-management/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 6 Dec 2016. Specific, challenging goals work for simple tasks, less for complex ones; feedback is needed for goals to work; whether people see appraisal as fair and useful matters; keep development conversations separate from pay and promotion decisions."
+  },
+  {
+    "n": 5,
+    "title": "Closing the gap between intent vs. impact: the SBII feedback model",
+    "publisher": "Center for Creative Leadership",
+    "url": "https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Situation-Behavior-Impact feedback (situation, observable behaviour, impact) and the added Intent step that asks what the person was trying to do. Published 19 Aug 2025."
+  },
+  {
+    "n": 6,
+    "title": "The feedback equation (Lara Hogan, 2018)",
+    "publisher": "Lara Hogan (author's own site)",
+    "url": "https://larahogan.me/blog/feedback-equation/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Observation, impact, then a genuine question or a request; choose the impact the recipient cares about; people jump to requests too fast. First published 15 July 2018."
+  },
+  {
+    "n": 7,
+    "title": "Our approach: Radical Candor",
+    "publisher": "Radical Candor (Kim Scott's company)",
+    "url": "https://www.radicalcandor.com/our-approach/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Two dimensions (care personally, challenge directly), four quadrants (radical candor, ruinous empathy, obnoxious aggression, manipulative insincerity) described as behaviours, not personality types; order: ask for feedback, give specific praise, then kind and clear criticism."
+  },
+  {
+    "n": 8,
+    "title": "Coaching as a developmental intervention in organisations: a systematic review of its effectiveness and the mechanisms underlying it (Grover and Furnham, PLOS ONE, 2016)",
+    "publisher": "PLOS ONE",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159137",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Coaching benefits organisations but evidence is thin (small samples, self-report, retrospective designs); client readiness and the relationship as factors; internal vs external coach evidence weak. Reports Theeboom et al. effect sizes (.43 coping to .74 self-regulation; performance .60, .19 after removing one study) and Jones et al. (.26 skills, .46 affective, 1.15 individual-level). The original meta-analyses blocked fetching."
+  },
+  {
+    "n": 9,
+    "title": "Does mentoring matter? A multidisciplinary meta-analysis comparing mentored and non-mentored individuals (Eby, Allen, Evans, Ng and DuBois, Journal of Vocational Behavior 72(2), 2008)",
+    "publisher": "Europe PMC (record for PMID 19343074, PMC2352144)",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=PMCID:PMC2352144&resultType=core&format=json",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Europe PMC record with abstract; the PMC and PubMed pages showed a browser check). Mentoring linked to better outcomes across behaviour, attitudes, health, relationships, motivation and career; effects generally small; workplace and academic mentoring larger than youth mentoring."
+  },
+  {
+    "n": 10,
+    "title": "EMCC Global",
+    "publisher": "EMCC Global",
+    "url": "https://www.emccglobal.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Began in 1992 as the European Mentoring Centre, renamed EMCC Global in 2023; not-for-profit registered in Belgium; accreditation for coaches, mentors, supervisors, team coaches and programmes; links the Global Code of Ethics."
+  },
+  {
+    "n": 11,
+    "title": "1-1 (GitLab Handbook)",
+    "publisher": "GitLab",
+    "url": "https://handbook.gitlab.com/handbook/leadership/1-1/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; body text read from the handbook's public source file on gitlab.com. The 1-1 belongs to the direct report; private shared agenda doc filled 24 hours ahead; at least weekly with at least two live 1-1s a month; manager talks about 20% of the time; fallback questions; monthly career conversations. Undated."
+  },
+  {
+    "n": 12,
+    "title": "State of the Global Workplace (2026 report, 2025 data)",
+    "publisher": "Gallup",
+    "url": "https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Global engagement 20% in 2025; manager engagement 22%, down from 27% in 2024; many managers lack coaching training; 263,810 respondents (141,444 employed) in 2025."
+  },
+  {
+    "n": 13,
+    "title": "Where to get urgent help for mental health",
+    "publisher": "NHS (England)",
+    "url": "https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. NHS 111 (mental health option) or online; 999 or A&E if life is at risk; Samaritans 116 123. Last reviewed 23 Oct 2026."
+  },
+  {
+    "n": 14,
+    "title": "Find NHS Talking Therapies for anxiety and depression",
+    "publisher": "NHS (England)",
+    "url": "https://www.nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adults in England can refer themselves without a diagnosis; covers anxiety, depression and related problems. Last reviewed 14 Feb 2025."
+  },
+  {
+    "n": 15,
+    "title": "Help for mental illnesses",
+    "publisher": "National Institute of Mental Health (US)",
+    "url": "https://www.nimh.nih.gov/health/find-help",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Call 911 in a life-threatening situation; call or text 988 in distress; FindTreatment.gov; start with a primary care provider. Last reviewed April 2026."
+  },
+  {
+    "n": 16,
+    "title": "988 Suicide & Crisis Lifeline",
+    "publisher": "988 Lifeline (US)",
+    "url": "https://988lifeline.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Call or text 988 or chat online; free, confidential, 24/7."
+  },
+  {
+    "n": 17,
+    "title": "Management Standards for work-related stress",
+    "publisher": "Health and Safety Executive (UK)",
+    "url": "https://www.hse.gov.uk/stress/standards/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. HSE's Management Standards approach to work-related stress, with a preparation stage and five steps. Last updated 13 Jan 2025."
+  },
+  {
+    "n": 18,
+    "title": "Supporting mental health at work",
+    "publisher": "Acas (UK)",
+    "url": "https://www.acas.org.uk/supporting-mental-health-workplace",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Managers should check in regularly and act early without assuming; agree adjustments with the worker; employers must make reasonable adjustments for disabled workers and must not discriminate. Last updated 16 Jan 2025."
+  },
+  {
+    "n": 19,
+    "title": "Harassment",
+    "publisher": "US Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/harassment",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What makes harassment unlawful; employer liability for supervisors and co-workers; 180-day deadline to file a charge, which state law may extend."
+  },
+  {
+    "n": 20,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Emotion recognition in workplaces and education banned from 2 Feb 2025; AI for employment and worker management is high-risk, with duties from 2 Dec 2027 after the AI Omnibus (in force 27 Jul 2026). Page updated 19 Oct 2026."
+  },
+  {
+    "n": 21,
+    "title": "NIMHANS: Tele MANAS services",
+    "publisher": "National Institute of Mental Health and Neuro Sciences (India)",
+    "url": "https://nimhans.ac.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists Tele-MANAS, India's National Tele Mental Health Programme, on 14416 and 1800 891 4416. Official India source for mental health help; the Tele-MANAS site itself failed a certificate check."
+  },
+  {
+    "n": 22,
+    "title": "9-8-8: Suicide Crisis Helpline",
+    "publisher": "9-8-8 (Canada)",
+    "url": "https://988.ca/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Call or text 9-8-8, 24 hours a day; call 9-1-1 if safety is at risk; footer names the Public Health Agency of Canada. Official Canada source for crisis help."
+  },
+  {
+    "n": 23,
+    "title": "Canadian Human Rights Commission",
+    "publisher": "Government of Canada",
+    "url": "https://www.chrc-ccdp.gc.ca/en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Canada's national human rights institution; discrimination and harassment guidance for individuals and organisations; points to provincial and territorial human rights agencies. Modified 5 Nov 2026. Official Canada source for workplace rules; no detail given in the kit."
+  },
+  {
+    "n": 24,
+    "title": "Mental health: psychological health and safety",
+    "publisher": "Canadian Centre for Occupational Health and Safety (CCOHS)",
+    "url": "https://www.ccohs.ca/topics/wellness/mentalhealth/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Psychological health and safety at work, psychosocial hazards, programme checklist and courses. Official Canada source to check; no detail given in the kit."
+  },
+  {
+    "n": 25,
+    "title": "Mental health helplines",
+    "publisher": "healthdirect Australia (government-funded)",
+    "url": "https://www.healthdirect.gov.au/mental-health-helplines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lifeline 13 11 14 (also text and chat), Beyond Blue 1300 22 4636, Suicide Call Back Service 1300 659 467, and 000 in a crisis. Last reviewed Nov 2025. Official Australia source for mental health help."
+  }
+]

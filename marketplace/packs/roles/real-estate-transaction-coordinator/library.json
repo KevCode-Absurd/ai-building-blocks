@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "executive-action-register",
+    "name": "Action item tracker",
+    "why": "Turns email threads into one register with owners, due dates and source links, the same shape as the deal tracker when a file starts from a messy inbox."
+  },
+  {
+    "slug": "weekly-status-update-writer",
+    "name": "Weekly status update writer",
+    "why": "Writes a one-page status report with risks and decisions needed, useful for the agent's Monday pipeline review."
+  },
+  {
+    "slug": "executive-due-task-drafts",
+    "name": "Due task follow up drafter",
+    "why": "Turns due tasks into follow-up drafts that show missing facts, matching the chase step for outstanding documents."
+  },
+  {
+    "slug": "staff-phishing-rules-briefer",
+    "name": "Staff phishing rules briefer",
+    "why": "Builds a phishing rule sheet and a short drill for the office, reinforcing the wire-safety rules every coordinator and agent follows."
+  },
+  {
+    "slug": "extract-a-scanned-document-and-verify-key-facts",
+    "name": "Extract a scanned document and verify key facts",
+    "why": "Pulls dates and names from a scanned contract with page numbers and uncertain readings, a first pass before the key dates table."
+  },
+  {
+    "slug": "dull-update-email-rewriter",
+    "name": "Dull update email rewriter",
+    "why": "Sharpens a flat update so buyers and sellers read it, useful when templates start to feel routine."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a reply to an unhappy client for promises nobody has approved, before the agent gives the fresh yes."
+  },
+  {
+    "slug": "handover-note-writer",
+    "name": "Handover note writer",
+    "why": "Writes a note the next coordinator can act on from day one when a file changes hands mid-deal."
+  },
+  {
+    "slug": "prepare-questions-for-a-property-viewing",
+    "name": "Prepare questions for a property viewing",
+    "why": "Builds a buyer's viewing questions, a helpful extra for buyer-side agents before an offer is made."
+  },
+  {
+    "slug": "trace-why-work-keeps-missing-deadlines",
+    "name": "Trace why work keeps missing deadlines",
+    "why": "Maps where repeated work waits and why deadlines slip, for a brokerage whose files keep running late."
+  }
+]

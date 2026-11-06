@@ -1,0 +1,26 @@
+{
+  "id": "physical-product-developer",
+  "name": "Product development specialist (physical goods)",
+  "department": "product",
+  "summary": "Takes a physical product from idea to factory-ready: requirements, prototypes, tech packs, manufacturer briefs and cost of goods.",
+  "aliases": [
+    "product developer",
+    "tech pack",
+    "industrial design brief",
+    "prototype",
+    "manufacturer brief",
+    "apparel technical designer",
+    "product spec",
+    "design for manufacture",
+    "cost of goods",
+    "factory quote"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 29 sources (EU GPSR, product liability, CE marking; UK OPSS and UKCA; US CPSC certificates, labs and duty to report; ICC Incoterms; tariff tools; textile labels; DFM guides), four skills, five prompts, two workflows, training. Level 3 covers routine supplier messages within limits; purchase orders, supplier contracts and binding quotes need a fresh yes; tooling payments stay with the client."
+    }
+  ]
+}

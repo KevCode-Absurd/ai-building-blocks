@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "bug-evidence-plan-writer",
+    "name": "Bug evidence plan writer",
+    "why": "Ranks suspects with one check each before any code changes, the same order the game bug diagnosis skill follows for physics and timing bugs."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause before fixing and ends in a small pull request, the right path for a mechanic that breaks at some frame rates."
+  },
+  {
+    "slug": "turn-a-bug-report-into-proof",
+    "name": "Turn a bug report into proof",
+    "why": "Turns a player or tester report into a repeatable case and missing tests, useful during a Steam public beta."
+  },
+  {
+    "slug": "prepare-private-bug-evidence-for-developers",
+    "name": "Private bug evidence assistant",
+    "why": "Turns rough play test notes and screenshots into a developer-ready issue with personal data masked."
+  },
+  {
+    "slug": "test-list-writer",
+    "name": "Test list writer",
+    "why": "Lists the cases to test, smallest first, before writing a mechanic or a save upgrade."
+  },
+  {
+    "slug": "test-failure-repair-loop",
+    "name": "Test failure repair loop",
+    "why": "Fixes a failing test suite in capped rounds without loosening tests, handy after a Unity version upgrade."
+  },
+  {
+    "slug": "ai-code-change-steps",
+    "name": "Make a code change in small tested steps with AI",
+    "why": "Splits a change into small tested steps with rules for the AI helper, the same pattern the MonoBehaviour split prompt uses."
+  },
+  {
+    "slug": "function-purity-refactor-planner",
+    "name": "Function purity refactor planner",
+    "why": "Pulls game rules out of hidden state into functions that depend only on inputs, which makes them testable in Edit Mode."
+  },
+  {
+    "slug": "fragile-code-spotter",
+    "name": "Fragile code spotter",
+    "why": "Finds the few real risks in code an AI wrote fast, a useful pass over generated Unity scripts."
+  },
+  {
+    "slug": "pull-request-reviewer",
+    "name": "Pull request reviewer",
+    "why": "Rates risk and ranks findings on each pull request, a second look before a mechanic is merged."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Gives a go or no-go, changelog and rollback plan before each build goes to players."
+  },
+  {
+    "slug": "release-day-rollback-planner",
+    "name": "Release day rollback planner",
+    "why": "Plans the checks and the fallback build for release day, matching the default branch step of the Steam workflow."
+  },
+  {
+    "slug": "small-usability-test-planner",
+    "name": "Small usability test planner",
+    "why": "Plans a short, structured play test with tasks and a fix list, useful for menus and onboarding levels."
+  }
+]

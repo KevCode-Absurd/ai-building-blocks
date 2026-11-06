@@ -1,0 +1,26 @@
+{
+  "id": "etsy-shop-manager",
+  "name": "Etsy shop manager",
+  "department": "ecommerce",
+  "summary": "Runs an Etsy shop's listings, tags, sections and shop settings so buyers find and choose it. Knows Etsy's own search and rules.",
+  "aliases": [
+    "etsy seo",
+    "etsy tags",
+    "etsy listings",
+    "etsy shop",
+    "handmade shop",
+    "print on demand",
+    "etsy ads",
+    "etsy shop audit",
+    "etsy shipping profiles",
+    "creativity standards"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release from Etsy's Help Center (etsy.com/legal and the Seller Handbook blocked fetching): Creativity Standards, partners and AI disclosure, titles, tags, attributes, search visibility checks, Marketplace Insights, shipping and processing, service standards, Etsy Ads and Offsite Ads, Shared access, and EU, GB and US product safety duties; 30 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "ad-angle-planner",
+    "name": "Ad angle planner",
+    "why": "Picks one awareness level and market stage before writing, the same first rung of the planning ladder used in this kit."
+  },
+  {
+    "slug": "seven-bucket-ad-concept-brainstormer",
+    "name": "Seven-bucket ad concept brainstormer",
+    "why": "Generates concepts in distinct groups and ranks the top eight, which keeps a batch from being variants of one idea."
+  },
+  {
+    "slug": "ad-concept-matrix-builder",
+    "name": "Ad concept matrix builder",
+    "why": "Turns reviews and product facts into buyer situations with angles and offers in test order."
+  },
+  {
+    "slug": "five-tactic-ad-hook-writer",
+    "name": "Five-tactic ad hook writer",
+    "why": "Writes ranked hooks from approved claims, with filming notes, for the hook bank step."
+  },
+  {
+    "slug": "twelve-pattern-static-ad-brief-maker",
+    "name": "Twelve-pattern static ad brief maker",
+    "why": "Gives static concepts a copy, layout and image brief a designer can build, matched to buyer stage and proof."
+  },
+  {
+    "slug": "static-ad-critic",
+    "name": "Static ad critic",
+    "why": "Scores a finished static ad before spend and suggests two headline rewrites."
+  },
+  {
+    "slug": "sound-off-commercial-checker",
+    "name": "Sound-off commercial checker",
+    "why": "Checks that a video script still sells with the sound off, one of this kit's quality-bar checks."
+  },
+  {
+    "slug": "video-ad-production-plan-builder",
+    "name": "Video ad production plan builder",
+    "why": "Turns an approved script into a timed shot table and edit handoff."
+  },
+  {
+    "slug": "competitor-ad-theme-and-gap-mapper",
+    "name": "Competitor ad theme and gap mapper",
+    "why": "Sorts rival Meta ads into themes and ranks open lanes, the core of the competitor teardown skill."
+  },
+  {
+    "slug": "ad-library-teardown-counter",
+    "name": "Ad library teardown counter",
+    "why": "Counts a rival's Ad Library ads by format, age and awareness stage to find long runners and gaps."
+  },
+  {
+    "slug": "creative-test-reader",
+    "name": "Creative test reader",
+    "why": "Reads a pasted ad export into keep, leave or replace calls and flags false winners."
+  },
+  {
+    "slug": "video-hook-and-hold-matrix-reviewer",
+    "name": "Video hook and hold matrix reviewer",
+    "why": "Places video ads on a hook and hold grid from view counts, matching this kit's attention-to-result reading order."
+  },
+  {
+    "slug": "ad-test-sprint-runner",
+    "name": "Ad test sprint runner",
+    "why": "Plans and reads test rounds and stops after three rounds without a winner, like the weekly creative sprint workflow."
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "PMBOK Guide (Eighth Edition page)",
+    "publisher": "Project Management Institute",
+    "url": "https://www.pmi.org/standards/pmbok",
+    "checked": "2026-11-06",
+    "supports": "pmi.org blocks automated fetches, so this page was confirmed by a WebSearch result showing it as the PMBOK Guide 8 page. Supports: the Eighth Edition is PMI's current guide, published in November 2025, built on principles and performance domains with processes included. Counts of principles and domains are from search summaries; check the guide."
+  },
+  {
+    "n": 2,
+    "title": "Manifesto for Agile Software Development",
+    "publisher": "agilemanifesto.org",
+    "url": "https://agilemanifesto.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2001 manifesto's four value statements (people over process, working results over documents, collaboration over contract negotiation, responding to change over following a plan)."
+  },
+  {
+    "n": 3,
+    "title": "The 2020 Scrum Guide",
+    "publisher": "Ken Schwaber and Jeff Sutherland (scrumguides.org)",
+    "url": "https://scrumguides.org/scrum-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scrum accountabilities, events, artifacts and commitments; Sprints of one month or less; no mention of story points or velocity."
+  },
+  {
+    "n": 4,
+    "title": "The Official Guide to The Kanban Method",
+    "publisher": "Kanban University",
+    "url": "https://kanban.university/kanban-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visualize, limit WIP, manage flow, explicit policies, feedback loops, improve by experiment."
+  },
+  {
+    "n": 5,
+    "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
+    "publisher": "Ryan Singer, Basecamp (37signals)",
+    "url": "https://basecamp.com/shapeup",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Appetite instead of estimates, six-week cycles, two-week cool-down, shaping, betting table, circuit breaker, hill charts; book readable free online."
+  },
+  {
+    "n": 6,
+    "title": "GAO Schedule Assessment Guide: Best Practices for Project Schedules (GAO-16-89G)",
+    "publisher": "US Government Accountability Office",
+    "url": "https://www.gao.gov/products/gao-16-89g",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ten best practices for reliable project schedules; schedule risk analysis; released December 2015."
+  },
+  {
+    "n": 7,
+    "title": "Cost Estimating and Assessment Guide (GAO-20-195G)",
+    "publisher": "US Government Accountability Office",
+    "url": "https://www.gao.gov/products/gao-20-195g",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Estimating process from purpose and scope through work breakdown structure, ground rules and assumptions, risk and sensitivity analysis, documentation and updating with actuals; March 2020."
+  },
+  {
+    "n": 8,
+    "title": "Government Functional Standard GovS 002: Project delivery",
+    "publisher": "UK Government (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/project-delivery-functional-standard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GovS 002 version 2.1 (17 September 2025) for portfolios, programmes and projects in UK government; governance roles mandatory."
+  },
+  {
+    "n": 9,
+    "title": "Agile delivery",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/agile-delivery",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Phases of an agile project: discovery, alpha, beta, live and retirement."
+  },
+  {
+    "n": 10,
+    "title": "How the discovery phase works",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Discovery learns about users, constraints and success measures before building; around 4 to 8 weeks is typical; do not start building in discovery."
+  },
+  {
+    "n": 11,
+    "title": "What You Should Know About Megaprojects, and Why: An Overview",
+    "publisher": "Bent Flyvbjerg (arXiv:1409.0003)",
+    "url": "https://arxiv.org/abs/1409.0003",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The iron law of megaprojects: over budget, over time, over and over again."
+  },
+  {
+    "n": 12,
+    "title": "The Empirical Reality of IT Project Cost Overruns: Discovering A Power-Law Distribution",
+    "publisher": "Flyvbjerg, Budzier, Lee, Keil, Lunn and Bester (arXiv:2210.01573; Journal of Management Information Systems, 2022)",
+    "url": "https://arxiv.org/abs/2210.01573",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sample of 5,392 IT projects; cost overruns follow a fat-tailed distribution with a small number of extreme overruns."
+  },
+  {
+    "n": 13,
+    "title": "Project Management Specialists: Occupational Outlook Handbook",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Median pay $102,320 (May 2025); 1,094,300 jobs (2025); projected growth 7 percent (2025-35); about 76,500 openings a year."
+  },
+  {
+    "n": 14,
+    "title": "Site moves with URL changes",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. URL mapping, server-side permanent redirects (301 or 308), short redirect chains, keep redirects at least a year, Change of Address tool for domain moves only, temporary ranking changes."
+  },
+  {
+    "n": 15,
+    "title": "Redirects and Google Search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Permanent versus temporary redirects and how Google treats each; server-side redirects are the most reliable; JavaScript redirects only as a last resort."
+  },
+  {
+    "n": 16,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "World Wide Web Consortium (W3C)",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 W3C Recommendation of 12 December 2024; levels A, AA and AAA; nine new success criteria and one removed compared with 2.1."
+  },
+  {
+    "n": 17,
+    "title": "Services, goods and their digital accessibility",
+    "publisher": "European Union (Your Europe)",
+    "url": "https://europa.eu/youreurope/business/selling-in-eu/selling-goods-services/accessibility/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU accessibility requirements apply to products and services placed on the market after 28 June 2025, including online shops; service businesses with fewer than 10 employees and under EUR 2 million turnover are exempt; disproportionate burden claims."
+  },
+  {
+    "n": 18,
+    "title": "Guidance on Web Accessibility and the ADA",
+    "publisher": "US Department of Justice (ADA.gov)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ADA Title III applies to businesses' web offerings; DOJ has no detailed technical standard for businesses and points to WCAG as helpful guidance; dated 18 March 2022."
+  },
+  {
+    "n": 19,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "UK Government (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector sites must meet WCAG 2.2 AA; all UK service providers must make reasonable adjustments under the Equality Act 2010. Updated 30 September 2024."
+  },
+  {
+    "n": 20,
+    "title": "Using Asana's MCP Server",
+    "publisher": "Asana",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Asana MCP V2 with OAuth; create and manage tasks and projects, reports and summaries; older beta endpoint deprecated; admin controls. Updated 20 February 2026."
+  },
+  {
+    "n": 21,
+    "title": "Get started with the Atlassian MCP server",
+    "publisher": "Atlassian",
+    "url": "https://support.atlassian.com/rovo/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rovo MCP server for Jira, Confluence and more; OAuth 2.1; follows existing permissions; create and update work items and pages; draws on Rovo credits."
+  },
+  {
+    "n": 22,
+    "title": "MCP server",
+    "publisher": "Linear",
+    "url": "https://linear.app/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Linear's hosted MCP server finds, creates and updates issues, projects and comments; a read-only endpoint exists; OAuth 2.1."
+  },
+  {
+    "n": 23,
+    "title": "monday.com MCP integration",
+    "publisher": "monday.com",
+    "url": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Beta MCP integration run locally with an API token; creates items and boards and updates statuses, dates and assignments."
+  },
+  {
+    "n": 24,
+    "title": "Notion MCP overview",
+    "publisher": "Notion",
+    "url": "https://developers.notion.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Notion MCP searches the workspace, creates and edits pages and manages databases such as project trackers."
+  },
+  {
+    "n": 25,
+    "title": "Miro's MCP Server",
+    "publisher": "Miro",
+    "url": "https://developers.miro.com/docs/miro-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official MCP server on all Miro plans; OAuth 2.1; respects board permissions; reads boards and generates diagrams. Updated 8 October 2026."
+  },
+  {
+    "n": 26,
+    "title": "Smartsheet pricing",
+    "publisher": "Smartsheet",
+    "url": "https://www.smartsheet.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Smartsheet has a free trial and paid plans; MCP-enabled connections to an organisation's AI assistants are listed on the Business plan."
+  },
+  {
+    "n": 27,
+    "title": "ClickUp pricing",
+    "publisher": "ClickUp",
+    "url": "https://clickup.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ClickUp has a Free Forever plan and paid plans, with daily MCP call limits that rise by plan."
+  }
+]

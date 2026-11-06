@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Marketing objectives available for your ad sets",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a424570",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 1 year ago\". Objectives by tier: brand awareness (reach); website visits, engagement, video views; lead generation, website conversions, job applicants, talent leads. Talent leads needs an active Recruiter contract. Lead generation defaults to the leads goal without a Conversions API integration."
+  },
+  {
+    "n": 2,
+    "title": "Understanding ad set settings in Campaign Manager",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a423332",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Ad sets in one campaign share objective type, bid strategy, optimisation goal, budget type and (with Dynamic Group Budget) schedule; objective and ad format cannot change after launch; flexible ads mix formats; LinkedIn Audience Network placement."
+  },
+  {
+    "n": 3,
+    "title": "Campaign and ad set bidding strategies",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a421112",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Maximum delivery (all objectives, charged by impressions, no cap, learning phase), cost cap (awareness, website visits, engagement, video views, lead generation), manual bidding (all objectives; CPC, CPM, CPV or CPS); accelerated delivery rolling out gradually."
+  },
+  {
+    "n": 4,
+    "title": "Targeting options for LinkedIn Ads",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a424655",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 1 week ago\". Location, profile language, company, demographics, education, job experience (title, function, seniority, skills, years), interests and traits, predictive and Matched Audiences, Auto-Targeting; minimum 300 member accounts per ad set; selection limits."
+  },
+  {
+    "n": 5,
+    "title": "Target audience size best practices",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a423690",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 1 year ago\". Minimum 300 members, LinkedIn suggests at least 50,000; Sponsored Content and Sponsored Messaging at least 300,000; start broad then narrow with demographic reporting; lookalike audiences discontinued 29 February 2024; Matched Audience size limited in the EEA and Switzerland because only opted-in members are matched."
+  },
+  {
+    "n": 6,
+    "title": "LinkedIn predictive audiences",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a1631056",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Sources: Lead Gen Forms, contact or company lists (300 to 300,000 rows), conversions, retargeting (over 300 members); one source type each; refreshes daily; up to five days to reach full size; Audience Expansion off; up to 200 per ad account."
+  },
+  {
+    "n": 7,
+    "title": "LinkedIn buyer groups",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a7437052",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 4 days ago\". AI-built audience of the people who make buying decisions together, across 56 product categories; predictive audiences disabled when on; A/B testing not available, compare with one or two similar past ad sets instead."
+  },
+  {
+    "n": 8,
+    "title": "LinkedIn Ads and discrimination",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a416948",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 8 months ago\". Advertisers of employment, housing, education or credit ads certify no discrimination before gender targeting; age targeting certification; no age targeting for talent leads or job ads; no under-18 ranges; groups can be included but not excluded and are unavailable in the Designated Countries (EU, EEA, Switzerland)."
+  },
+  {
+    "n": 9,
+    "title": "Lead generation ad objective",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a422440",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Pre-filled Lead Gen Forms; formats single image, carousel, video, event, document, message, conversation; qualified leads ad sets limited to single image, carousel, video, event and document; goals qualified leads, leads, clicks, impressions."
+  },
+  {
+    "n": 10,
+    "title": "Qualified leads optimization goal",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a6553958",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Needs qualified-lead conversions from the Conversions API or CRM Sync, one source only; recommends five or more qualified leads within two weeks; data shared within 30 days; two-week learning phase; cost per qualified lead may fall while cost per lead rises."
+  },
+  {
+    "n": 11,
+    "title": "Create a Lead Gen Form: best practices",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a421181",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Use three to four fields, maximum 12; say how and when you will contact leads; LinkedIn does not deliver content for you, so put an ungated link in the thank-you message; Lead Gen Form ads bought on CPC or CPM, cost per lead not available."
+  },
+  {
+    "n": 12,
+    "title": "Lead Gen Form specifications",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a423364",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Headline 60 characters, details 160, privacy text 2,000, up to five disclosure checkboxes of 500 characters, confirmation message 300; up to 12 fields including up to three custom questions of 100 characters; up to 20 hidden fields."
+  },
+  {
+    "n": 13,
+    "title": "Document ads",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a737898",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 2 weeks ago\". Document ads for awareness, engagement, lead generation, website visits and conversions; can be gated with a Lead Gen Form after a chosen number of preview pages; single-page documents cannot be gated; downloads arrive as PDF."
+  },
+  {
+    "n": 14,
+    "title": "LinkedIn Insight Tag FAQs",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a427660",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 6 months ago\". Tag collects URL, referrer, IP address (truncated or hashed), user agent and timestamp; direct identifiers removed within seven days, pseudonymised data deleted within 180 days; enhanced matching hashes emails on the site; also receives Microsoft UET data (EEA and Switzerland excluded); do not install on pages that collect sensitive health or financial data."
+  },
+  {
+    "n": 15,
+    "title": "LinkedIn Conversions API",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a1655394",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 3 months ago\". Server-side online and offline conversions; partner (for example Google Tag Manager, HubSpot, Salesforce Data 360, Segment, Zapier) or direct build of about two to four weeks; email hashed with SHA-256; same event from tag and API counted once; data deleted after 180 days; advertiser must hold the permissions to share data."
+  },
+  {
+    "n": 16,
+    "title": "Conversions FAQ (LinkedIn Marketing API)",
+    "publisher": "Microsoft Learn (LinkedIn developer docs)",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/conversions/conversions-faq",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ms.date 16 September 2026. Send events in real time or within a day; up to 72 hours to show in reports; attribution up to 180 days, with 180 or 365-day windows for lead, qualified lead and purchase types; supported identifiers; send hashed email plus the LinkedIn click ID (li_fat_id) for best matching; lowercase emails before hashing; li_fat_id mapping kept 365 days; direct build one to two weeks."
+  },
+  {
+    "n": 17,
+    "title": "Deduplication (LinkedIn Marketing API)",
+    "publisher": "Microsoft Learn (LinkedIn developer docs)",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ms.date 21 September 2023, file updated 29 August 2025. Recommends a redundant browser and server set-up; one conversion rule per source; pass the same eventId; LinkedIn discards the Conversions API copy and counts the Insight Tag one; check the conversion breakdown; Google Tag Manager template supports the Event ID field."
+  },
+  {
+    "n": 18,
+    "title": "LinkedIn conversion window",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a426359",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 2 months ago\". Click and view windows of 1, 7, 30 or 90 days; default and recommended 90-day click and 90-day view; 180 or 365 days for some lead and purchase types sent by Conversions API or CSV; event registration windows changed in April 2025."
+  },
+  {
+    "n": 19,
+    "title": "LinkedIn conversion attribution model",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a426349",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 1 year ago\". Last-touch model; \"Last touch - Each ad set\" or \"Last touch - Last ad set\"; repeat conversions in the window count once; some conversions measured with predictive models or on-device tracking for privacy."
+  },
+  {
+    "n": 20,
+    "title": "Revenue Attribution Report in Business Manager",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a1459789",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 7 months ago\". Connects Salesforce, Dynamics 365 or HubSpot; impression-based or engagement-based models; member or company level; revenue won, return on ad spend, pipeline, opportunities, win rate, average days to close."
+  },
+  {
+    "n": 21,
+    "title": "Get started with your Measurement Insights page",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a7136241",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 4 weeks ago\". Measure, Insights page: conversion paths, companies funnel from impressions to closed won, pipeline metrics via CRM Sync, top audiences, cost per result benchmarks against peers or own account over 90 days; data can take 48 hours; revenue metrics use a 180-day window."
+  },
+  {
+    "n": 22,
+    "title": "User roles and permissions in Campaign Manager",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a425731",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page said \"last updated 1 year ago\". Billing admin, account manager, campaign manager, creative manager and viewer, and what each can do; creating ads, downloading leads and some audiences also need LinkedIn Page permissions."
+  },
+  {
+    "n": 23,
+    "title": "LinkedIn Advertising Policies",
+    "publisher": "LinkedIn (legal)",
+    "url": "https://www.linkedin.com/legal/ads-policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last revised 18 November 2025. Review usually within 24 hours; prohibited content including political ads; restricted alcohol, dating, financial services (UK ads from FCA-authorised advertisers), crypto and medical; no targeting on sensitive data; display URL must match destination domain; tracking cookies need full disclosure and consent; editorial rules."
+  },
+  {
+    "n": 24,
+    "title": "LinkedIn Ads Agreement",
+    "publisher": "LinkedIn (legal)",
+    "url": "https://www.linkedin.com/legal/sas-terms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 3 November 2025. Advertiser is controller; no targeting on sensitive data; Insight Tag needs prominent notice and valid consent where law requires; Matched Audiences need notice and consent where required; each Lead Gen Form must link a privacy policy, may not ask for sensitive data, opt-outs honoured promptly, form data available for one year and may not be sold."
+  },
+  {
+    "n": 25,
+    "title": "The 95-5 Rule",
+    "publisher": "LinkedIn B2B Institute",
+    "url": "https://business.linkedin.com/marketing-solutions/b2b-institute/b2b-research/trends/95-5-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated (footer 2025). About 95% of potential B2B buyers are out of market at any time; examples of long purchase cycles from How B2B Brands Grow with the Ehrenberg-Bass Institute; 96% of surveyed B2B marketers expected effects within two weeks."
+  },
+  {
+    "n": 26,
+    "title": "5 Principles of Growth in B2B Marketing (Les Binet and Peter Field)",
+    "publisher": "LinkedIn B2B Institute",
+    "url": "https://business.linkedin.com/advertise/resources/b2b-institute/b2b-research/marketing-as-growth",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated (footer 2025). Five principles from IPA Databank B2B cases 1998 to 2018: share of voice, balance brand and activation (page shows a roughly even split), expand the customer base, mental availability, emotion."
+  },
+  {
+    "n": 27,
+    "title": "LinkedIn shares tips on Thought Leader ads",
+    "publisher": "Social Media Today (trade summary)",
+    "url": "https://www.socialmediatoday.com/news/linkedin-shares-tips-on-thought-leader-ads/830359/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 14 September 2026, Andrew Hutchinson. Trade summary, used because no LinkedIn help page for this format was found: Thought Leader Ads opened to any member's posts in March 2025 and to event posts in August 2025."
+  },
+  {
+    "n": 28,
+    "title": "Guidelines 2/2023 on Technical Scope of Art. 5(3) of ePrivacy Directive, Version 2.0",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/documents/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and text extracted). Adopted 7 October 2024. Tracking pixels and tracking links fall under Art. 5(3) (paras 47 to 51); IP-only tracking can too (paras 54 to 55); hashed identifiers collected by client-side code are covered (paras 61 to 63); applicability does not always mean consent is needed (para 56)."
+  },
+  {
+    "n": 29,
+    "title": "Report of the work undertaken by the Cookie Banner Taskforce",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and text extracted). Adopted 17 January 2023. No consent-requiring cookies before a positive action (para 7); most authorities see no reject option as an infringement (para 8); pre-ticked boxes invalid (para 10); legitimate interest cannot justify placing cookies (para 24); misclassified essential cookies (para 26)."
+  },
+  {
+    "n": 30,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations",
+    "publisher": "GOV.UK (DSIT and DCMS)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 27 June 2025. Revised PECR regulation 6 keeps the ban on storing or accessing information on a device unless an exception applies; consent and strictly necessary kept; new exception for statistics on how an online service is used, to improve it; changes commence in stages. Used because ico.org.uk returns HTTP 403 to automated fetches."
+  }
+]

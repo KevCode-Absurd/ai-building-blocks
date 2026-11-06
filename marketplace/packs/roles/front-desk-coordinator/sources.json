@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "Mobile phone text messaging reminders for attendance at healthcare appointments",
+    "publisher": "Cochrane (Gurol-Urganci, de Jongh, Vodopivec-Jamsek, Atun, Car)",
+    "url": "https://www.cochrane.org/evidence/CD007458_mobile-phone-text-messaging-reminders-attendance-healthcare-appointments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Review published 5 December 2013: 8 randomised trials, 6,615 participants. Text reminders vs none: attendance RR 1.14 (95% CI 1.03 to 1.26), 78.6% vs 67.8%, moderate-quality evidence. Text vs phone call reminders: RR 0.99, 78.6% vs 80.3%; two studies found cost per attendance 55% and 65% lower for texts."
+  },
+  {
+    "n": 2,
+    "title": "Stating Appointment Costs in SMS Reminders Reduces Missed Hospital Appointments: Findings from Two Randomised Controlled Trials",
+    "publisher": "PLOS ONE (Hallsworth, Berry, Sanders, Sallis, King, Vlaev, Darzi)",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137306",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. September 2015; Barts Health NHS Trust outpatients; about 10,000 participants per trial. Missed appointments 11.1% with the existing reminder vs 8.4% with a message stating the specific cost to the NHS; replicated at 8.2%; general cost 9.9% and empathy 10.7% messages did worse; single site, reminders five days ahead."
+  },
+  {
+    "n": 3,
+    "title": "EAST: Four simple ways to apply behavioural insights",
+    "publisher": "Behavioural Insights Team",
+    "url": "https://www.bi.team/publications/east-four-simple-ways-to-apply-behavioural-insights/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Framework first published in 2014 and revised in 2024: make the desired behaviour Easy, Attractive, Social and Timely."
+  },
+  {
+    "n": 4,
+    "title": "Union Square Hospitality Group home page",
+    "publisher": "Union Square Hospitality Group",
+    "url": "https://www.ushg.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The company names Enlightened Hospitality as the heart of everything it does and seeks people who combine emotional hospitality with technical excellence."
+  },
+  {
+    "n": 5,
+    "title": "May health care providers leave messages for patients at their homes? (FAQ 198)",
+    "publisher": "US Department of Health and Human Services",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/faq/198/may-health-care-providers-leave-messages/index.html",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. The Privacy Rule does not stop providers leaving appointment messages on answering machines or with a family member; keep the message to the provider's name, number and what is needed to confirm, and use professional judgement; reasonable requests for confidential communications must be accommodated."
+  },
+  {
+    "n": 6,
+    "title": "Are appointment reminders allowed under the HIPAA Privacy Rule without authorizations? (FAQ 286)",
+    "publisher": "US Department of Health and Human Services",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/faq/286/are-appointment-reminders-allowed-under-hipaa-without-authorization/index.html",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. Appointment reminders are part of treatment and can be sent without a patient's written authorisation."
+  },
+  {
+    "n": 7,
+    "title": "Dental Practice Pays $10,000 to Settle Social Media Disclosures of Patients' Protected Health Information",
+    "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/agreements/elite/index.html",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. Elite Dental Associates, Dallas, paid $10,000 (announced October 2019) after replying to Yelp reviews with patients' names and health details; it had no social media disclosure policy; corrective action included policies, a privacy notice, training and breach notices."
+  },
+  {
+    "n": 8,
+    "title": "Business Associate Contracts (sample business associate agreement provisions)",
+    "publisher": "US Department of Health and Human Services",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. A covered entity needs a written business associate contract with a vendor that handles protected health information for it; HHS publishes sample provisions that may not be enough for state law."
+  },
+  {
+    "n": 9,
+    "title": "47 CFR 64.1200 Delivery restrictions",
+    "publisher": "Legal Information Institute, Cornell Law School (reproduces the federal regulation)",
+    "url": "https://www.law.cornell.edu/cfr/text/47/64.1200",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; used because eCFR redirects automated readers. (a)(9)(iv) healthcare exemption: appointment and exam reminders and similar messages to the wireless number the patient gave, free to the patient, provider named, texts 160 characters or less, voice one minute or less, one a day and three a week, no marketing or billing, STOP opt-out honoured immediately. (a)(10) revocation by any reasonable means honoured within ten business days; (a)(12) one confirmation text. Lists an amendment at 91 FR 67219 (26 October 2026)."
+  },
+  {
+    "n": 10,
+    "title": "A2P 10DLC",
+    "publisher": "Twilio Docs",
+    "url": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Anyone sending application-to-person SMS or MMS over a US 10-digit long code must register a Brand and a Campaign describing the purpose, opt-in, opt-out and help; unregistered traffic gets more filtering and extra carrier fees."
+  },
+  {
+    "n": 11,
+    "title": "Identify direct marketing",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/direct-marketing-guidance/identify-direct-marketing/",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. Service messages such as appointment confirmations and reminders are not direct marketing if they contain no promotion; a hospital appointment text is a service message; adding promotional content makes a message marketing."
+  },
+  {
+    "n": 12,
+    "title": "Data protection basics (EDPB data protection guide for small business)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-protection-basics_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Health is a special category of personal data; processing it is generally prohibited except in specific cases such as explicit consent; data minimisation means processing only what the purpose needs."
+  },
+  {
+    "n": 13,
+    "title": "Prohibited and restricted content (Maps user-generated content policy)",
+    "publisher": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Businesses may not offer incentives for reviews, discourage or prohibit negative reviews, or selectively ask only happy customers; no staff review quotas or requests for specific content; conflict-of-interest reviews are banned."
+  },
+  {
+    "n": 14,
+    "title": "Read and reply to reviews",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474050",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verified businesses can reply to reviews; replies are public once approved, show as the business, notify the reviewer and can be edited or deleted."
+  },
+  {
+    "n": 15,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 14 August 2024 rule bans fake reviews and testimonials, incentives conditioned on sentiment, undisclosed insider reviews and review suppression through threats."
+  },
+  {
+    "n": 16,
+    "title": "Supporting Guidance 14: Client confidentiality",
+    "publisher": "Royal College of Veterinary Surgeons",
+    "url": "https://www.rcvs.org.uk/setting-standards/advice-and-guidance/code-of-professional-conduct-for-veterinary-surgeons/supporting-guidance/client-confidentiality/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 25 January 2023. Vets and vet nurses should not normally disclose client or animal information to third parties; the duty extends to support staff; disclosure with consent, for animal welfare or public interest, or by law, limited to the minimum and documented."
+  },
+  {
+    "n": 17,
+    "title": "Health Products Compliance Guidance",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Health-related claims need competent and reliable scientific evidence; testimonials showing results better than typical are likely deceptive and need a clear statement of typical results; 'results not typical' does not cure it."
+  },
+  {
+    "n": 18,
+    "title": "Manage booking cancellations and prepayment policies",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/5493-set-a-custom-cancellation-policy-with-square-appointments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cancellation policy shown in online booking and confirmation emails; cut-off from one hour to two weeks; options for no requirement, full prepayment or holding a card for no-shows; flat, per-service or percentage fees; fee chargeable up to 14 days after the appointment; needs Square Appointments Plus or Premium."
+  },
+  {
+    "n": 19,
+    "title": "Square MCP Server",
+    "publisher": "Square Developer",
+    "url": "https://developer.squareup.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Square MCP server in beta at mcp.squareup.com with OAuth and chosen scopes; covers the Square API (customers, orders, items named); local server can be set to read-only; Square advises testing in a sandbox first."
+  },
+  {
+    "n": 20,
+    "title": "Twilio Studio",
+    "publisher": "Twilio Docs",
+    "url": "https://www.twilio.com/docs/studio",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visual low-code builder for communication flows, with phone trees (IVR) as a listed use and a tutorial for building an IVR."
+  },
+  {
+    "n": 21,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Gmail read, draft and send with approval before sending by default; Calendar view, create, update and delete events and find availability; organisation owners control the connectors."
+  },
+  {
+    "n": 22,
+    "title": "Article 50: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+    "publisher": "EU Artificial Intelligence Act (artificialintelligenceact.eu)",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI systems that interact directly with people must tell them they are dealing with AI unless obvious; Article 50 applies from 2 August 2026."
+  },
+  {
+    "n": 23,
+    "title": "Unfair contract terms guidance (CMA37)",
+    "publisher": "GOV.UK (Competition and Markets Authority)",
+    "url": "https://www.gov.uk/government/publications/unfair-contract-terms-cma37",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CMA guidance on unfair terms under the Consumer Rights Act 2015; last updated 22 July 2026."
+  },
+  {
+    "n": 24,
+    "title": "Unfair contract terms",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-contract-terms/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Terms must be fair and plain; unfair terms do not bind consumers; examples include a high fixed fee found unfair and a 30% deposit kept on cancellation with no matching duty on the seller, refunded after advice."
+  },
+  {
+    "n": 25,
+    "title": "Interactive Voice Recognition (IVR) Guidelines",
+    "publisher": "Missouri Office of Administration",
+    "url": "https://oa.mo.gov/sites/default/files/CC-Access-InteractiveVoiceRecognition-IVR-Guidelines112806.pdf",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); document confirmed by WebSearch showing this exact file. Public-sector guideline recommending a maximum of five menu items, because callers cannot see the list and must hold it in memory."
+  },
+  {
+    "n": 26,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Primary purpose decides whether an email is commercial or transactional; promotional email needs an opt-out honoured within 10 business days, a postal address and honest subject lines; penalties up to $53,088 per email."
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "turn-employee-feedback-into-owned-actions",
+    "name": "Turn employee feedback into owned actions",
+    "why": "Comment themes, owned actions and a reply to staff with small groups kept private, matching steps 4 to 6 of the survey skill."
+  },
+  {
+    "slug": "employee-feedback-action-review-assistant",
+    "name": "Employee feedback action review assistant",
+    "why": "Tracks the actions agreed after a survey and drafts the staff update, the monthly step of the survey to action cycle."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Checks how far a survey can be trusted before acting on it, a useful test before the read-out."
+  },
+  {
+    "slug": "prepare-a-survey-findings-briefing",
+    "name": "Prepare a survey findings briefing",
+    "why": "A checked findings table and honest caveats for the owner or board briefing after a staff survey."
+  },
+  {
+    "slug": "recognition-plan-designer",
+    "name": "Recognition plan designer",
+    "why": "A goal-based recognition scheme to compare with the four-layer recognition programme skill."
+  },
+  {
+    "slug": "key-moment-designer",
+    "name": "Key moment designer",
+    "why": "Plans one memorable team event with owners, dates and costs, for the bigger moments in the team calendar."
+  },
+  {
+    "slug": "write-your-team-culture-memo-and-make-it-real-in-daily-habits",
+    "name": "Write a culture memo your team lives by",
+    "why": "The full culture memo and daily habits workflow behind the culture memo prompt."
+  },
+  {
+    "slug": "team-culture-memo-writer",
+    "name": "Team culture memo writer",
+    "why": "A one-page culture memo with decision and feedback rules, a quick start for the culture work."
+  },
+  {
+    "slug": "announce-a-change-of-direction-and-bring-the-team-with-you",
+    "name": "Announce a change of direction and keep the team",
+    "why": "Hard-news messaging for a change of direction, alongside the change announcement prompt."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Turns an approved policy into a plain explanation, announcement and rollout list."
+  },
+  {
+    "slug": "review-staff-adoption-of-a-policy-change",
+    "name": "Review staff adoption of a policy change",
+    "why": "The 30-day check on whether a change landed, with small groups kept private."
+  },
+  {
+    "slug": "new-hire-onboarding-keeper",
+    "name": "New hire onboarding keeper",
+    "why": "Runs the first 90 days with weekly progress calls, pairing with the onboarding check-in prompt."
+  },
+  {
+    "slug": "review-employee-data-access-before-a-change",
+    "name": "Review employee data access before a change",
+    "why": "Checks who can see staff data before a new survey or HR tool goes live."
+  }
+]

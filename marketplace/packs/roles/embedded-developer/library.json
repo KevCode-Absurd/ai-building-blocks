@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "bug-evidence-plan-writer",
+    "name": "Bug evidence plan writer",
+    "why": "Ranks suspects with a check for each before anything changes, the same order as the device fault diagnosis skill."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause, makes the smallest fix and opens a pull request, which is how firmware fixes reach the repo at level 2."
+  },
+  {
+    "slug": "write-docs-a-new-developer-can-follow-on-day-one",
+    "name": "Write docs a new developer can follow on day one",
+    "why": "Turns a project into a README and a first-run test, a fuller version of the wiring guide prompt for larger firmware repos."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Tracks new versions and security fixes week by week, useful for keeping cores, SDKs and libraries inside their support periods."
+  },
+  {
+    "slug": "test-failure-repair-loop",
+    "name": "Test failure repair loop",
+    "why": "Works through failing host-side tests in capped rounds, for firmware projects that unit-test their logic off the board."
+  },
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "Writes the blameless report and prevention actions after a bad update or a fleet outage."
+  },
+  {
+    "slug": "agency-engineering-embedded-firmware-engineer",
+    "name": "Embedded Firmware Engineer agent",
+    "why": "Plans tasks, pin maps, memory limits and failure handling for ESP32, STM32 or Nordic chips, a second view for larger RTOS projects."
+  },
+  {
+    "slug": "agency-engineering-iot-fleet-engineer",
+    "name": "IoT Fleet Engineer agent",
+    "why": "Plans fleet updates with test stages, rollback and health checks, matching the staged firmware rollout workflow."
+  },
+  {
+    "slug": "firmware-update-recovery-rehearsal",
+    "name": "Firmware update recovery rehearsal",
+    "why": "Rehearses update failures and recovery before a gated rollout, the readiness step before customer waves."
+  },
+  {
+    "slug": "circuit-design-verification-planner",
+    "name": "Check a circuit and its evidence",
+    "why": "Checks part limits with worst-case sums and keeps predicted and measured results apart, for wiring that goes beyond a simple pin table."
+  }
+]

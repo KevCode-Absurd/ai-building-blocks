@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "standardize-repair-work-order-intake",
+    "name": "Standardize repair work order intake",
+    "why": "Turns sample work orders into one intake procedure with missing-field checks, matching the work order log skill."
+  },
+  {
+    "slug": "prepare-a-property-maintenance-handover",
+    "name": "Prepare a property maintenance handover",
+    "why": "Hands over open repair jobs with access notes and overdue decisions when the maintenance lead changes."
+  },
+  {
+    "slug": "property-maintenance-evidence-review-assistant",
+    "name": "Property maintenance evidence review assistant",
+    "why": "Checks that repairs count as done only when a record says so, the same rule as closing work orders with evidence."
+  },
+  {
+    "slug": "compare-facilities-service-contract-options",
+    "name": "Compare facilities service contract options",
+    "why": "Compares contractor proposals for cost, start-up, exit and service duties, with questions for a qualified reviewer."
+  },
+  {
+    "slug": "monthly-contractor-roster-keeper",
+    "name": "Monthly contractor roster keeper",
+    "why": "Checks contractor invoices against what was agreed each month, a companion to the contractor job workflow."
+  },
+  {
+    "slug": "monthly-contract-renewal-keeper",
+    "name": "Monthly contract renewal keeper",
+    "why": "Keeps a renewal calendar for service contracts and catches notice dates, alongside the compliance calendar."
+  },
+  {
+    "slug": "fleet-replacement-cash-comparer",
+    "name": "Fleet replacement cash comparer",
+    "why": "Builds the cash schedule for replacing a vehicle against keeping it, the money side of a repair or replace review."
+  },
+  {
+    "slug": "compare-transport-cash-and-fleet-replacement",
+    "name": "Compare transport cash and fleet replacement",
+    "why": "Works out what a loaded trip earns, then compares keeping and replacing a truck on the same workload."
+  },
+  {
+    "slug": "process-doc-freshness-keeper",
+    "name": "Process doc freshness keeper",
+    "why": "Finds stale or ownerless check sheets and procedures each month so the checks people use stay current."
+  },
+  {
+    "slug": "crisis-response-planner",
+    "name": "Crisis response planner",
+    "why": "Plans the first 30 days after a failure: who to tell, who investigates and what to fix, useful after a major breakdown."
+  }
+]

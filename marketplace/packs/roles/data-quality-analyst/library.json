@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "data-file-clean-up-loop",
+    "name": "Data file clean-up loop",
+    "why": "Fixes a messy file in rounds, re-checking until it passes and saving the rules for the next export, the same check-then-fix loop as the rules skill."
+  },
+  {
+    "slug": "validate-lab-data-before-system-import",
+    "name": "Prepare lab data for a checked import",
+    "why": "Maps exports to a target schema and returns an import exception list, a worked example of a pre-import check."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Joins two tables on a key and lists unmatched rows and duplicate keys, the 'linked' and 'unique' rule groups in a workbook."
+  },
+  {
+    "slug": "excel-input-form-builder",
+    "name": "Excel input form builder",
+    "why": "Builds an entry form with dropdowns and duplicate checks, so new data comes in clean instead of being fixed later."
+  },
+  {
+    "slug": "check-a-spreadsheet-before-sharing-the-results",
+    "name": "Check a spreadsheet before sharing the results",
+    "why": "Finds broken formulas and wrong totals before a sheet goes out, a companion to the weekly data quality check."
+  },
+  {
+    "slug": "align-recurring-report-metric-definitions",
+    "name": "Align recurring report metric definitions",
+    "why": "Explains why two reports disagree on one metric, useful when a glossary term means different things to different teams."
+  },
+  {
+    "slug": "document-a-dataset-analysis-for-reproduction",
+    "name": "Document a dataset analysis for reproduction",
+    "why": "Writes a data inventory and method so someone else can repeat the work, close to the lineage notes in the dictionary skill."
+  },
+  {
+    "slug": "agent-database-migration-planner",
+    "name": "Agent database migration planner",
+    "why": "Plans a change that keeps existing data, with staging checks and recovery steps, for moves that end in a database."
+  },
+  {
+    "slug": "launch-readiness-seam-checker",
+    "name": "Launch readiness seam checker",
+    "why": "Checks the joins between parts of a migration or launch and plans a run-through, a second view on the cut-over checklist."
+  },
+  {
+    "slug": "monthly-catalogue-clean-up-keeper",
+    "name": "Monthly catalogue clean-up keeper",
+    "why": "Finds missing costs, clashing SKUs and hidden products each month, a ready-made quality routine for shop product data."
+  },
+  {
+    "slug": "warehouse-count-discrepancy-review-assistant",
+    "name": "Warehouse count discrepancy review assistant",
+    "why": "Splits stock count differences into timing, unit and count errors, the root-cause habit applied to inventory data."
+  }
+]

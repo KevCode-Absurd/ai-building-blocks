@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "flashcard-maker",
+    "name": "Flashcard maker",
+    "why": "Quick one-question, one-answer cards from pasted notes, a lighter start before the full deck builder."
+  },
+  {
+    "slug": "recall-quiz-writer",
+    "name": "Recall quiz writer",
+    "why": "A low-stakes recall quiz at three levels from lesson notes, the self-test habit this kit builds into every session."
+  },
+  {
+    "slug": "choose-a-study-plan-you-can-keep",
+    "name": "Choose a study plan you can keep",
+    "why": "Turns a goal, a date and weekly hours into a study roadmap with recall checks, like the revision timetable."
+  },
+  {
+    "slug": "get-a-stuck-learner-moving-again",
+    "name": "Get a stuck learner moving again",
+    "why": "Diagnosis, one-step hints and a task ladder for a learner who is stuck, matching the hint ladder prompt."
+  },
+  {
+    "slug": "build-a-practice-plan-from-common-mistakes",
+    "name": "Build a practice plan from common mistakes",
+    "why": "Maps a learner's wrong answers and builds practice on the top mistakes after a practice exam."
+  },
+  {
+    "slug": "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+    "name": "Build a lesson from explanation to practice and a quiz",
+    "why": "For tutors planning a full lesson: explanation, worked example, practice and a quiz in the order this kit uses."
+  },
+  {
+    "slug": "turn-a-worked-example-into-independent-practice",
+    "name": "Turn a worked example into independent practice",
+    "why": "Moves a learner from a worked example to solving alone, the step after the hint ladder."
+  },
+  {
+    "slug": "study-plan-progress-review-assistant",
+    "name": "Study plan progress review assistant",
+    "why": "Reviews progress against a study plan and adjusts practice, like the weekly check-in in the exam countdown."
+  },
+  {
+    "slug": "write-a-thinking-task-english-learners-can-do",
+    "name": "Write a thinking task English learners can do",
+    "why": "Adds a thinking task at the right language level, useful alongside the language practice set."
+  },
+  {
+    "slug": "small-working-example-explainer",
+    "name": "Small working example explainer",
+    "why": "Finds the smallest example that shows how something works, for topics learners find abstract."
+  }
+]

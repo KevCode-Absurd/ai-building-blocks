@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "align-recurring-report-metric-definitions",
+    "name": "Align recurring report metric definitions",
+    "why": "Compares how recurring reports define the same metric and produces one agreed definition, the core of the metric definition sheet skill."
+  },
+  {
+    "slug": "report-definition-drift-review-assistant",
+    "name": "Report definition drift review assistant",
+    "why": "Finds where a report's metric definition quietly changed, which the quarterly dashboard health check looks for."
+  },
+  {
+    "slug": "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+    "name": "Define your metrics once and write a weekly update",
+    "why": "Metric definitions plus a plain weekly update, a close match to the KPI report pack skill."
+  },
+  {
+    "slug": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "name": "Build a weekly KPI report with a forecast and dashboard",
+    "why": "A rerunnable KPI report and shareable dashboard, useful once the metric cards are agreed."
+  },
+  {
+    "slug": "input-metric-picker",
+    "name": "Input metric picker",
+    "why": "Picks the input metrics a team controls, which become the lower levels of a KPI tree."
+  },
+  {
+    "slug": "vanity-metric-fixer",
+    "name": "Vanity metric fixer",
+    "why": "Swaps counts that only go up for rates you can act on, the same check as the vanity-target mistake in the knowledge file."
+  },
+  {
+    "slug": "marketing-scorecard-builder",
+    "name": "Marketing scorecard builder",
+    "why": "Puts slow and fast marketing measures side by side with what each answers, a ready scorecard for one department."
+  },
+  {
+    "slug": "set-up-product-tracking-and-build-a-retention-dashboard",
+    "name": "Set up product tracking and build a retention dashboard",
+    "why": "Plans the events first and the dashboard second, the order this role insists on."
+  },
+  {
+    "slug": "new-customer-profit-dashboard-builder",
+    "name": "New-customer profit dashboard builder",
+    "why": "A worked example of a small-business dashboard with every formula written out, in Google Sheets."
+  },
+  {
+    "slug": "excel-pivot-refresh-planner",
+    "name": "Excel PivotTable refresh planner",
+    "why": "Checks a PivotTable refresh before sharing, for clients whose reporting still lives in Excel."
+  },
+  {
+    "slug": "business-tenet-scorecard-writer",
+    "name": "Business tenet scorecard writer",
+    "why": "Ties principles to measurable checks, helpful when a client's goals are still vague."
+  }
+]

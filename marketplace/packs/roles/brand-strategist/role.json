@@ -1,0 +1,26 @@
+{
+  "id": "brand-strategist",
+  "name": "Brand strategist",
+  "department": "marketing",
+  "summary": "Shapes how a brand sounds and what it is called. Writes voice guides, names and taglines with a clear reason behind each choice.",
+  "aliases": [
+    "brand strategy",
+    "brand voice",
+    "tone of voice",
+    "naming",
+    "tagline",
+    "brand guidelines",
+    "positioning",
+    "brand messaging",
+    "brand naming",
+    "messaging framework"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: positioning, messaging hierarchies, naming and screening (USPTO strength scale, SBA name registrations, Companies House name rules, RDAP domain lookups), taglines, voice guides and copy checks, claim rules (FTC, CAP Code, CMA Green Claims Code, EU 2024/825 from 27 Sep 2026), with 24 checked sources. Visual identity is left to the brand identity designer kit."
+    }
+  ]
+}

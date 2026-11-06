@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "threat-list-maker",
+    "name": "Threat list maker",
+    "why": "A quick way to rank the likeliest attacks on an app before running the full threat model skill."
+  },
+  {
+    "slug": "write-docs-a-new-developer-can-follow-on-day-one",
+    "name": "Write docs a new developer can follow on day one",
+    "why": "Produces an architecture read and a README with decisions, the same habits as design docs and ADRs."
+  },
+  {
+    "slug": "workflow-diagram-and-change-planner",
+    "name": "Workflow diagram and change planner",
+    "why": "Draws a process as a diagram and checks each hand-off, useful for key flows in a design doc."
+  },
+  {
+    "slug": "the-job-queue-where-agents-actually-run-implementation-planner",
+    "name": "Recoverable agent job queue builder",
+    "why": "Plans a queue with capped retries, no repeated paid work and lost-job recovery, matching the queue and idempotency rules."
+  },
+  {
+    "slug": "agent-database-migration-planner",
+    "name": "Agent database migration planner",
+    "why": "Plans a schema change with staging checks, release order and recovery steps."
+  },
+  {
+    "slug": "review-aws-cost-and-resilience",
+    "name": "Review AWS cost and resilience",
+    "why": "Weighs AWS savings against resilience, a deeper version of the cost and reliability passes in the architecture review."
+  },
+  {
+    "slug": "review-azure-cost-and-resilience",
+    "name": "Review Azure cost and resilience",
+    "why": "The same cost and resilience review for Azure workloads."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a safe restore test, the evidence behind any recovery target in a design."
+  },
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "Turns an incident timeline into a blameless report and prevention actions that feed the quarterly health check."
+  },
+  {
+    "slug": "monthly-tech-debt-keeper",
+    "name": "Monthly tech debt keeper",
+    "why": "Tracks new debt and ranks small fixes each month, alongside the risks and technical debt section of a design."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Keeps dependencies current, which supports the software supply chain item in the OWASP Top 10:2025."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Go or no-go, rollback plan and live check for each release, the operational side of a design."
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "one-goal-marketing-plan-builder",
+    "name": "One-goal marketing plan builder",
+    "why": "Turns a vague result into a number with a date, works back to the volumes needed and schedules tests with stop dates, like the goal-to-growth-model prompt."
+  },
+  {
+    "slug": "traction-channel-ranker",
+    "name": "Traction channel test picker",
+    "why": "Ranks channels and picks the tests to run first, the Bullseye step the growth leads run from the Traction pack."
+  },
+  {
+    "slug": "growth-idea-ranker",
+    "name": "Growth idea ranker",
+    "why": "Scores ideas for impact, confidence and ease and picks the first three to test, as in the growth-experiment-design skill."
+  },
+  {
+    "slug": "product-market-fit-checker",
+    "name": "Product-market fit checker",
+    "why": "Looks for signs that customers pull rather than you push, before any growth spend."
+  },
+  {
+    "slug": "cohort-funnel-reader",
+    "name": "Cohort funnel reader",
+    "why": "Reads results by join week or month and flags groups too small to trust, the core of the funnel-and-retention-diagnosis skill."
+  },
+  {
+    "slug": "input-metric-picker",
+    "name": "Input metric picker",
+    "why": "Finds the controllable inputs behind each output metric, for a short weekly scoreboard."
+  },
+  {
+    "slug": "cac-payback-checker",
+    "name": "CAC payback checker",
+    "why": "Checks CAC against gross profit over 30, 90 and 180 days and sets target, ceiling and floor CAC, matching the unit-economics-and-cac-limit skill."
+  },
+  {
+    "slug": "set-your-cac-limit-and-test-what-ads-really-add",
+    "name": "Set your CAC limit and test what ads add",
+    "why": "Pairs a CAC limit with a test of what ads really added, the incrementality step in the measurement skill."
+  },
+  {
+    "slug": "ab-test-traffic-checker",
+    "name": "A/B test traffic checker",
+    "why": "Sizes a fair test from your traffic and says how many weeks it needs, or that it is not feasible."
+  },
+  {
+    "slug": "experiment-readout-desk",
+    "name": "Experiment readout desk",
+    "why": "Checks a test plan before launch and gives a verdict with confidence after, for the weekly growth review."
+  },
+  {
+    "slug": "channel-decay-checker",
+    "name": "Channel decay checker",
+    "why": "Finds where a channel began to fade and tests likely causes, the Law of Shitty Clickthroughs in practice."
+  },
+  {
+    "slug": "weekly-product-funnel-watcher",
+    "name": "Weekly product funnel watcher",
+    "why": "Reads the funnel and each sign-up week every Monday and tells a real move from a normal swing."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Shows where subscribers leave each month and whether last month's fix worked, for retention work."
+  },
+  {
+    "slug": "monthly-channel-budget-reviewer",
+    "name": "Monthly channel budget reviewer",
+    "why": "Sets what each ad platform claims against what the store really took, as in the attribution reconciliation prompt."
+  },
+  {
+    "slug": "interview-customers-and-map-what-they-hire-you-to-do",
+    "name": "Interview customers and map what they hire you to do",
+    "why": "Runs customer interviews and maps the job buyers hire you for, before choosing a first segment."
+  }
+]

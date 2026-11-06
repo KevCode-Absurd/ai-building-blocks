@@ -1,0 +1,26 @@
+{
+  "id": "qhse-manager",
+  "name": "QHSE manager",
+  "department": "operations",
+  "summary": "Writes the quality, health and safety, continuity and sustainability documents a small firm needs, built from how it really works. Gets ready for audits and customer questionnaires.",
+  "aliases": [
+    "iso 9001",
+    "health and safety",
+    "quality manager",
+    "risk assessment",
+    "business continuity",
+    "esg",
+    "sustainability report",
+    "iso 14001",
+    "iso 45001",
+    "incident reporting"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (ISO 9001:2026, 14001:2026, 45001 and 22301 via BSI, HSE and OSHA risk and incident rules, RIDDOR and OSHA recordkeeping, emission factors, EU reporting, green claims, continuity), four skills, six prompts, three workflows, training interview and test briefs. Regulator reports and stop-work calls are prepared at level 2 for the client."
+    }
+  ]
+}

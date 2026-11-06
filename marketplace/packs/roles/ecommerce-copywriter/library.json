@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "product-page-doubt-mapper",
+    "name": "Product page doubt mapper",
+    "why": "Turns buyers' doubts into page sections, each tied to real proof, which matches the fact-sheet-first method here."
+  },
+  {
+    "slug": "product-page-section-planner",
+    "name": "Product page section planner",
+    "why": "Plans the sections and settings a product page needs to answer shopper questions."
+  },
+  {
+    "slug": "ai-ready-product-page-editor",
+    "name": "AI-ready product page editor",
+    "why": "Pulls a product page into facts, a spec table and FAQs, the same building blocks as the product copy sheet."
+  },
+  {
+    "slug": "product-page-seo-builder",
+    "name": "Product page SEO builder",
+    "why": "Covers page layout, copy, image names and markup for one product and one search term."
+  },
+  {
+    "slug": "shopping-feed-title-writer",
+    "name": "Shopping feed title writer",
+    "why": "Writes search-led feed titles and descriptions, for the Google feed surface in this kit."
+  },
+  {
+    "slug": "collection-page-planner",
+    "name": "Collection page planner",
+    "why": "Plans a set of collection pages, each aimed at one search, before the collection copy is written."
+  },
+  {
+    "slug": "plan-collection-pages-that-rank-for-buying-searches",
+    "name": "Plan collection pages that rank for buying searches",
+    "why": "A full run from keyword export to collection page plan and written page copy."
+  },
+  {
+    "slug": "amazon-listing-first-draft-writer",
+    "name": "Amazon listing first draft writer",
+    "why": "Title, bullets and backend keywords for Amazon, where this kit points to marketplace rules instead of repeating them."
+  },
+  {
+    "slug": "monthly-review-proof-keeper",
+    "name": "Monthly review proof keeper",
+    "why": "Keeps approved review quotes checked and linked to claims, in line with the review rules here."
+  },
+  {
+    "slug": "claim-and-proof-matcher",
+    "name": "Claim evidence checker",
+    "why": "A second check on which claims are supported and which go too far before copy ships."
+  },
+  {
+    "slug": "anti-ai-slop-copy-editor",
+    "name": "Anti-AI-slop copy editor",
+    "why": "Fixes machine-sounding lines in AI-drafted product copy, a common failure this kit warns about."
+  },
+  {
+    "slug": "monthly-catalogue-clean-up-keeper",
+    "name": "Monthly catalogue clean-up keeper",
+    "why": "Finds missing fields, clashing SKUs and hidden products each month, alongside the catalogue copy clean-up."
+  }
+]

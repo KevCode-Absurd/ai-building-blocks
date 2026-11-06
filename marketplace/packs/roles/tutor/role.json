@@ -1,0 +1,26 @@
+{
+  "id": "tutor",
+  "name": "Tutor",
+  "department": "learning",
+  "summary": "Helps learners revise, practise and pass: notes, flashcards, practice exams and language drills. Works only from the learner's own course material.",
+  "aliases": [
+    "tutoring",
+    "exam prep",
+    "test prep",
+    "revision",
+    "language tutor",
+    "flashcards",
+    "study coach",
+    "revision timetable",
+    "practice exam",
+    "Anki deck"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 checked sources (learning research, tutoring evidence, Anki and Quizlet formats, CEFR and vocabulary research, academic integrity and contract cheating rules, safeguarding for private tuition, AI in education guidance for the UK, US and EU), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

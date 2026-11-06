@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "product-and-variant-setup-planner",
+    "name": "Product and variant setup planner",
+    "why": "Builds product types, a variant table and a fill-in checklist, the starting point for the catalogue structure skill."
+  },
+  {
+    "slug": "monthly-catalogue-clean-up-keeper",
+    "name": "Monthly catalogue clean-up keeper",
+    "why": "Finds missing costs, clashing SKUs and hidden products each month, as part of keeping the catalogue tidy."
+  },
+  {
+    "slug": "merchant-center-feed-health-checker",
+    "name": "Merchant Center feed health checker",
+    "why": "Ranks Merchant Center problems by lost sales, the same first step as the product feed fix skill."
+  },
+  {
+    "slug": "merchant-center-suspension-checker",
+    "name": "Merchant Center suspension checker",
+    "why": "For account-level warnings and suspensions, which this kit says to stop and escalate."
+  },
+  {
+    "slug": "build-the-shopping-feed-auditor-builder-prompt",
+    "name": "Shopping feed audit coding prompt",
+    "why": "A coding brief for a script that checks a Shopping feed for missing fields and gaps at scale."
+  },
+  {
+    "slug": "shopping-feed-title-writer",
+    "name": "Shopping feed title writer",
+    "why": "Writes search-led feed titles from products and converting search terms, to pair with the title patterns here."
+  },
+  {
+    "slug": "retail-markdown-stock-reconciler",
+    "name": "Retail markdown stock reconciler",
+    "why": "Checks a marked-down batch: units sold and left, contribution and cash recovered against cost."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Finds the deepest discount the margin allows before a sale or price change is approved."
+  },
+  {
+    "slug": "order-threshold-planner",
+    "name": "Order threshold planner",
+    "why": "Sets free delivery and bundle thresholds at real order peaks, as in the bundles and order value skill."
+  },
+  {
+    "slug": "raise-order-value-with-bundles-and-add-ons-you-can-check",
+    "name": "Raise order value with bundles and add-ons you can check",
+    "why": "A full run from sales export to threshold, bundles and an after-sale offer that keeps profit."
+  },
+  {
+    "slug": "bundle-and-quantity-break-builder",
+    "name": "Bundle and quantity-break builder",
+    "why": "Builds bundle tiers and price lines for a hero product, with cost and price inputs."
+  },
+  {
+    "slug": "cart-and-checkout-upsell-planner",
+    "name": "Cart and checkout upsell planner",
+    "why": "Ranks cart and checkout add-ons by profit per order, one offer per slot."
+  },
+  {
+    "slug": "etsy-shop-opening-planner",
+    "name": "Etsy shop opening planner",
+    "why": "Plans an Etsy shop's listings, photos, price check and launch, for digital product sellers starting out."
+  }
+]

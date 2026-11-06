@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "About keyword matching options",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/7478529",
+    "checked": "2026-11-06",
+    "supports": "Broad, phrase and exact match as they work now; broad match may use other signals; Google's advice to pair broad match with Smart Bidding; duplicate keywords"
+  },
+  {
+    "n": 2,
+    "title": "How AI Max for Search campaigns works",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/15910187",
+    "checked": "2026-11-06",
+    "supports": "AI Max is a layer inside Search campaigns: search term matching, text customisation, final URL expansion, locations of interest, brand and URL controls, AI Max reporting; weak when budget-limited; tracking template caution"
+  },
+  {
+    "n": 3,
+    "title": "Get greater control and smarter optimization with AI Max as it expands globally (10 September 2025)",
+    "publisher": "Google Ads and Commerce blog",
+    "url": "https://blog.google/products/ads-commerce/google-ai-max-expands-globally/",
+    "checked": "2026-11-06",
+    "supports": "AI Max for Search available to all advertisers globally from 10 September 2025, still in beta; one-click experiments; text guidelines"
+  },
+  {
+    "n": 4,
+    "title": "Apply brand exclusions to Performance Max or Search campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/14505308",
+    "checked": "2026-11-06",
+    "supports": "Brand exclusions cover Search, Shopping and YouTube search inventory in Performance Max; option to allow Shopping ads on excluded brands; Search brand exclusions moving into AI Max from 27 May 2025"
+  },
+  {
+    "n": 5,
+    "title": "About the search terms report",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2472708",
+    "checked": "2026-11-06",
+    "supports": "What the report shows; low-volume terms withheld for privacy; match type column; search terms insights use the last 56 days"
+  },
+  {
+    "n": 6,
+    "title": "About negative keywords",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2453972",
+    "checked": "2026-11-06",
+    "supports": "Negative broad, phrase and exact; negatives do not match close variants; account-level negatives apply to Search and Shopping; terms after the 16th word"
+  },
+  {
+    "n": 7,
+    "title": "Negative keywords in Performance Max campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/15726455",
+    "checked": "2026-11-06",
+    "supports": "Campaign-level negatives and lists in Performance Max apply to Search and Shopping inventory only; account-level negatives also apply"
+  },
+  {
+    "n": 8,
+    "title": "About Performance Max campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/10724817",
+    "checked": "2026-11-06",
+    "supports": "Channels covered, asset groups, audience signals, search themes (same priority as phrase and broad keywords), final URL expansion, brand exclusions, conversion goal requirement"
+  },
+  {
+    "n": 9,
+    "title": "About the channel performance report",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/16260130",
+    "checked": "2026-11-06",
+    "supports": "Channel performance reporting for Performance Max and Demand Gen; statuses; how to read a channel with no spend"
+  },
+  {
+    "n": 10,
+    "title": "Google Ads Highlights of 2025 (8 December 2025)",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/16756291",
+    "checked": "2026-11-06",
+    "supports": "2025 changes: Performance Max search terms and asset reporting, campaign negatives up to 10,000, search themes raised to 50 per asset group, Demand Gen controls, Meridian, Data Manager, lower conversion lift thresholds"
+  },
+  {
+    "n": 11,
+    "title": "About Target CPA bidding",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6268632",
+    "checked": "2026-11-06",
+    "supports": "How Target CPA works, recommended targets from the last 30 days, evaluate on 30+ conversions, too-low targets lose conversions, renaming from June 2026"
+  },
+  {
+    "n": 12,
+    "title": "About Target ROAS bidding",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6268637",
+    "checked": "2026-11-06",
+    "supports": "ROAS formula, conversion value requirement, minimum conversions by campaign type (15 in 30 days for Search and Shopping), high targets limit traffic, 1 to 2 conversion cycles to take effect"
+  },
+  {
+    "n": 13,
+    "title": "Changes to target based bid strategies",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/17061251",
+    "checked": "2026-11-06",
+    "supports": "From 17 August 2026, budget-limited Target CPA and Target ROAS campaigns deliver closer to the stated target; affected campaign types; Google's suggested options"
+  },
+  {
+    "n": 14,
+    "title": "About Smart Bidding Exploration",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/15489627",
+    "checked": "2026-11-06",
+    "supports": "Opt-in flexible Target ROAS to find new searches within existing targeting; not for budget-constrained campaigns; turn on at least 6 weeks before peak"
+  },
+  {
+    "n": 15,
+    "title": "About responsive search ads",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/7684791",
+    "checked": "2026-11-06",
+    "supports": "Up to 15 headlines (30 characters) and 4 descriptions (90 characters); pinning effects; at least 2 RSAs per ad group; Google internal results from August 2025"
+  },
+  {
+    "n": 16,
+    "title": "About Ad Strength for responsive search ads",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/9921843",
+    "checked": "2026-11-06",
+    "supports": "Ad Strength ratings; not used for Ad Rank, Quality Score or auction wins; avoid pinning unless necessary"
+  },
+  {
+    "n": 17,
+    "title": "About Quality Score for Search campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6167118",
+    "checked": "2026-11-06",
+    "supports": "1 to 10 diagnostic; expected CTR, ad relevance, landing page experience; not an auction input or a KPI"
+  },
+  {
+    "n": 18,
+    "title": "Ad Rank: Definition",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/1752122",
+    "checked": "2026-11-06",
+    "supports": "Ad Rank factors: bid, ad and landing page quality, thresholds, competition, search context, expected impact of assets; a better ad can outrank a higher bid"
+  },
+  {
+    "n": 19,
+    "title": "About overdelivery and your average daily budget",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2375423",
+    "checked": "2026-11-06",
+    "supports": "Campaigns can spend up to twice the average daily budget on a day; monthly charges capped at 30.4 times the daily budget"
+  },
+  {
+    "n": 20,
+    "title": "About custom experiments",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/10683687",
+    "checked": "2026-11-06",
+    "supports": "Supported campaign types; 50/50 split controls eligibility, not equal spend; allow 7 to 14 days to stabilise; apply or convert results"
+  },
+  {
+    "n": 21,
+    "title": "About enhanced conversions",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/9888656",
+    "checked": "2026-11-06",
+    "supports": "Enhanced conversions for web and for leads; SHA-256 hashing of first-party data; setup through the Google tag, tag gateway or server-side Tag Manager"
+  },
+  {
+    "n": 22,
+    "title": "Consent mode (Google tag platform developer guide)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "checked": "2026-11-06",
+    "supports": "The four consent types (ad_storage, analytics_storage, ad_user_data, ad_personalization); basic versus advanced consent mode and modelling; advertiser responsible for consent"
+  },
+  {
+    "n": 23,
+    "title": "About enhanced conversions for leads",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/15713840",
+    "checked": "2026-11-06",
+    "supports": "How enhanced conversions for leads works; Data Manager; web and leads settings combining (April 2026); offline uploads moving to the Data Manager API from 15 June 2026; keep sending GCLIDs"
+  },
+  {
+    "n": 24,
+    "title": "About primary and secondary conversion actions",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/11461796",
+    "checked": "2026-11-06",
+    "supports": "Primary actions fill the Conversions column and drive bidding; secondary actions are observation only; changes can trigger up to 7 days of learning"
+  },
+  {
+    "n": 25,
+    "title": "About attribution models",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6259715",
+    "checked": "2026-11-06",
+    "supports": "First click, linear, time decay and position-based models no longer supported; DDA is the default; last click remains; the model affects bidding"
+  },
+  {
+    "n": 26,
+    "title": "About Demand Gen campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/13695777",
+    "checked": "2026-11-06",
+    "supports": "Channels (YouTube incl. Shorts, Discover, Gmail, Maps, Display Network); lookalike segments; daily budget of at least 10 times target CPA; Display campaigns moving into Demand Gen from June 2026"
+  },
+  {
+    "n": 27,
+    "title": "Product data specification",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/7052112",
+    "checked": "2026-11-06",
+    "supports": "Required product attributes and limits (title 150 characters, id 50, description 5,000); GTIN guidance; price and availability must match the landing page; 500 x 500 minimum image size from 31 January 2027"
+  },
+  {
+    "n": 28,
+    "title": "About Shopping ads",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/2454022",
+    "checked": "2026-11-06",
+    "supports": "Shopping ads use Merchant Center product data, not keywords; product groups; where they appear; bidding options"
+  },
+  {
+    "n": 29,
+    "title": "Consumer Heterogeneity and Paid Search Effectiveness: A Large Scale Field Experiment (NBER Working Paper 20171, May 2014)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w20171",
+    "checked": "2026-11-06",
+    "supports": "Blake, Nosko and Tadelis: eBay's brand keyword ads showed no measurable short-term benefit; non-brand ads mainly moved new and infrequent buyers; experimental returns far below non-experimental estimates"
+  },
+  {
+    "n": 30,
+    "title": "Search Advertising Benchmarks for Every Industry, 2026 data (updated 1 June 2026)",
+    "publisher": "LocaliQ",
+    "url": "https://localiq.com/blog/search-advertising-benchmarks/",
+    "checked": "2026-11-06",
+    "supports": "All-industry search advertising averages for 2026: CPC, CTR, conversion rate and cost per lead"
+  }
+]

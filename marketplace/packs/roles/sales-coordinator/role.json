@@ -1,0 +1,26 @@
+{
+  "id": "sales-coordinator",
+  "name": "Sales coordinator",
+  "department": "sales",
+  "summary": "Answers enquiries fast, sends clear packages and proposals and follows up until the date is booked. Works for venues, wedding suppliers, studios, travel agents and estate agents.",
+  "aliases": [
+    "inside sales",
+    "bookings coordinator",
+    "enquiry management",
+    "client coordinator",
+    "sales assistant",
+    "lead follow-up",
+    "order desk",
+    "quotes and proposals",
+    "crm hygiene",
+    "sales support"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 checked sources (UK and US total-price rules, EU and UK cancellation rights, package travel and ATOL, UK property listing and US fair housing rules, CRM duplicates and pipelines, quotes, e-signatures, EDI and Incoterms), four skills, five prompts, three workflows, training interview and test briefs."
+    }
+  ]
+}

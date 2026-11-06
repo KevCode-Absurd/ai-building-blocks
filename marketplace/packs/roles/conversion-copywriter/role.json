@@ -1,0 +1,25 @@
+{
+  "id": "conversion-copywriter",
+  "name": "Conversion copywriter",
+  "department": "marketing",
+  "summary": "Writes the words on your pages, emails and ads that get people to act: book, buy, sign up or reply. Starts from what your customers already say, backs every claim with proof, and tests the result.",
+  "aliases": [
+    "copywriter",
+    "landing page copywriter",
+    "sales page writer",
+    "direct response copywriter",
+    "email copywriter",
+    "website copywriter",
+    "CRO copywriter",
+    "sales copy",
+    "conversion copy"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: canon, research method, page structure by awareness, offers, proof, testing, and US and UK rules on fake reviews, urgency and dark patterns, with 30 checked sources."
+    }
+  ]
+}

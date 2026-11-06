@@ -1,0 +1,26 @@
+{
+  "id": "video-producer",
+  "name": "Video producer",
+  "department": "design",
+  "summary": "Takes a video from script to storyboard to motion plan so it can be filmed or animated. Specs every shot and frame for the person who builds it.",
+  "aliases": [
+    "video production",
+    "explainer video",
+    "animation",
+    "storyboard",
+    "motion graphics",
+    "video script",
+    "shot list",
+    "kinetic typography",
+    "logo animation",
+    "video brief"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: two-column scripts, storyboards and shot tables, shoot plans, motion and title specs, on-screen text timing from published subtitle standards, safe areas, loudness, captions, flashing limits, dated YouTube, Shorts, Instagram Reels and LinkedIn video specs, music and footage licensing basics for the US, UK and EU, AI disclosure rules, and access levels 1 to 3 for editing, review and publishing tools, with 30 checked sources."
+    }
+  ]
+}

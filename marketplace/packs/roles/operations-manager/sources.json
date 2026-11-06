@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Toyota Production System",
+    "publisher": "Toyota Motor Corporation",
+    "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. TPS built on removing waste; its two pillars, jidoka and just-in-time; kaizen against muda, mura and muri; Taiichi Ohno's role."
+  },
+  {
+    "n": 2,
+    "title": "5 Whys - What is it?",
+    "publisher": "Lean Enterprise Institute",
+    "url": "https://www.lean.org/lexicon-terms/5-whys/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five whys as root-cause practice; the number five is illustrative; fixing only the visible failure lets the problem come back; Ohno's machine example."
+  },
+  {
+    "n": 3,
+    "title": "Standardized Work",
+    "publisher": "Lean Enterprise Institute",
+    "url": "https://www.lean.org/lexicon-terms/standardized-work/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standardized work's three elements (takt time, work sequence, standard inventory) and its role as the baseline for kaizen."
+  },
+  {
+    "n": 4,
+    "title": "Value Stream Mapping Overview",
+    "publisher": "Lean Enterprise Institute",
+    "url": "https://www.lean.org/lexicon-terms/value-stream-mapping/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Value-stream mapping of material and information flow, current and future state maps, Learning to See workbook."
+  },
+  {
+    "n": 5,
+    "title": "Plan, Do, Check, Act (PDCA) - A Resource Guide",
+    "publisher": "Lean Enterprise Institute",
+    "url": "https://www.lean.org/lexicon-terms/pdca/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PDCA steps; origins in Shewhart's cycle and Deming's 1950s teaching in Japan; PDSA variant."
+  },
+  {
+    "n": 6,
+    "title": "Five Focusing Steps, a Process of On-Going Improvement",
+    "publisher": "Theory of Constraints Institute",
+    "url": "https://www.tocinstitute.org/five-focusing-steps.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Goldratt's five focusing steps: identify the constraint, exploit it, subordinate the rest to it, add capacity to it, and prevent inertia."
+  },
+  {
+    "n": 7,
+    "title": "The Official Guide to The Kanban Method",
+    "publisher": "Kanban University",
+    "url": "https://kanban.university/kanban-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Kanban general practices: visualize, limit WIP, manage flow, explicit policies, feedback loops, improve by experiment; start with what you do now."
+  },
+  {
+    "n": 8,
+    "title": "The Checklist Manifesto",
+    "publisher": "Atul Gawande (author's site)",
+    "url": "https://atulgawande.com/book/the-checklist-manifesto/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Errors of ignorance versus ineptitude; checklists as the remedy for complexity; examples from aviation, building and surgery."
+  },
+  {
+    "n": 9,
+    "title": "Safe surgery",
+    "publisher": "World Health Organization",
+    "url": "https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WHO states its Surgical Safety Checklist has been shown to cut complications and mortality by over 30 percent."
+  },
+  {
+    "n": 10,
+    "title": "About the Business Process Model and Notation Specification Version 2.0.2",
+    "publisher": "Object Management Group",
+    "url": "https://www.omg.org/spec/BPMN/2.0.2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. BPMN 2.0.2 (January 2014) as the standard flowchart notation for business processes."
+  },
+  {
+    "n": 11,
+    "title": "ISO 9001:2026 has been published: what changes for your organization?",
+    "publisher": "DEKRA (certification body; summary, because iso.org blocks automated fetches)",
+    "url": "https://www.dekra.nl/en/prepare-your-organization-for-iso-9001-2026",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Secondary summary: ISO 9001:2026 published 16 September 2026, replaces ISO 9001:2015, three-year transition, more weight on quality culture and on opportunities as well as risks."
+  },
+  {
+    "n": 12,
+    "title": "Risk assessment: Steps needed to manage risk",
+    "publisher": "Health and Safety Executive (UK)",
+    "url": "https://www.hse.gov.uk/simple-health-safety/risk/steps-needed-to-manage-risk.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK employers with 5 or more people must record significant findings of their risk assessment; paperwork is not the priority, controlling risk is."
+  },
+  {
+    "n": 13,
+    "title": "Safety Management - A safe workplace is sound business",
+    "publisher": "Occupational Safety and Health Administration (US)",
+    "url": "https://www.osha.gov/safety-management",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OSHA's Recommended Practices for Safety and Health Programs for small and medium businesses and their seven core elements."
+  },
+  {
+    "n": 14,
+    "title": "Directive 89/391/EEC - OSH \"Framework Directive\"",
+    "publisher": "European Agency for Safety and Health at Work (EU-OSHA)",
+    "url": "https://osha.europa.eu/en/legislation/directives/the-osh-framework-directive/1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU employers must evaluate risks, consult and train workers, and plan for emergencies under the 1989 Framework Directive."
+  },
+  {
+    "n": 15,
+    "title": "Safer food, better business (SFBB)",
+    "publisher": "Food Standards Agency, on GOV.UK",
+    "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SFBB food safety management packs for small food businesses in England and Wales, with daily diary records; published 5 June 2025."
+  },
+  {
+    "n": 16,
+    "title": "FDA Food Code",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2026 Food Code is the latest full edition; it is a model that local, state, tribal and federal regulators adopt. Page current as of 22 October 2026."
+  },
+  {
+    "n": 17,
+    "title": "Food hygiene",
+    "publisher": "European Commission",
+    "url": "https://food.ec.europa.eu/food-safety/biological-safety/food-hygiene_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EC) 852/2004 on food hygiene applies to all food business operators and has applied since 1 January 2006, with flexibility for some small establishments."
+  },
+  {
+    "n": 18,
+    "title": "Franchise Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/franchise-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Franchise Rule (16 CFR Parts 436 and 437) requires a disclosure document with 23 items; July 2024 FTC actions."
+  },
+  {
+    "n": 19,
+    "title": "Franchise Rule Compliance Guide (May 2008)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/system/files/documents/plain-language/bus70-franchise-rule-compliance-guide.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text read locally). Disclosure document at least 14 calendar days before signing or paying; Item 11 asks for the operating manual's table of contents."
+  },
+  {
+    "n": 20,
+    "title": "Top Executives: Occupational Outlook Handbook",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/management/top-executives.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. General and operations managers: median pay $105,770 (May 2025), about 3.6 million jobs (2025), projected growth 5 percent (2025-35)."
+  },
+  {
+    "n": 21,
+    "title": "Notion MCP overview",
+    "publisher": "Notion",
+    "url": "https://developers.notion.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Notion MCP lets AI assistants search the workspace, create and edit pages and manage databases; admins can manage MCP clients."
+  },
+  {
+    "n": 22,
+    "title": "Using Asana's MCP Server",
+    "publisher": "Asana",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Asana MCP V2 endpoint with OAuth; create and manage tasks and projects; older beta endpoint deprecated; admin app controls. Page updated 20 February 2026."
+  },
+  {
+    "n": 23,
+    "title": "Get started with the Atlassian MCP server",
+    "publisher": "Atlassian",
+    "url": "https://support.atlassian.com/rovo/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rovo MCP server for Jira, Confluence and other Atlassian apps; OAuth 2.1; actions follow the user's existing permissions; usage draws on Rovo credits."
+  },
+  {
+    "n": 24,
+    "title": "monday.com MCP integration",
+    "publisher": "monday.com",
+    "url": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. monday.com MCP is in beta, runs locally with the client's API token and can create items and boards and update columns."
+  },
+  {
+    "n": 25,
+    "title": "Miro's MCP Server",
+    "publisher": "Miro",
+    "url": "https://developers.miro.com/docs/miro-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Miro's official MCP server works on all plans, uses OAuth 2.1, respects board permissions and can read boards and generate diagrams. Page updated 8 October 2026."
+  },
+  {
+    "n": 26,
+    "title": "Zapier MCP",
+    "publisher": "Zapier",
+    "url": "https://zapier.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Zapier MCP connects AI tools to 9,000+ apps; each tool call uses two tasks from the plan's quota; users control which apps and actions an agent can use."
+  },
+  {
+    "n": 27,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Anthropic (Claude Help Center)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Claude's Gmail, Calendar and Drive connectors; each action needs the user's approval by default; Team and Enterprise owners enable them."
+  },
+  {
+    "n": 28,
+    "title": "Scribe pricing",
+    "publisher": "Scribe",
+    "url": "https://scribe.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scribe's free Basic plan captures web processes into how-to guides through browser extensions; desktop capture and exports are paid."
+  },
+  {
+    "n": 29,
+    "title": "Trainual pricing",
+    "publisher": "Trainual",
+    "url": "https://www.trainual.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Trainual is paid (no free plan listed) and lists an MCP server for custom AI agents on higher-tier plans."
+  }
+]

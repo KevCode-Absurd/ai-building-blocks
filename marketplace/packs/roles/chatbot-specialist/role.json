@@ -1,0 +1,26 @@
+{
+  "id": "chatbot-specialist",
+  "name": "AI chatbot specialist",
+  "department": "data",
+  "summary": "Sets up custom GPTs and support bots with the right knowledge, rules and hand-offs, then tests their answers. Keeps the bot from making things up.",
+  "aliases": [
+    "chatbot",
+    "custom gpt",
+    "claude project",
+    "ai assistant",
+    "knowledge base",
+    "support bot",
+    "conversational ai",
+    "conversation designer",
+    "chatbot testing",
+    "gemini gem"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: role knowledge with 29 sources covering conversation design, knowledge bases, hand-over to people, testing, AI disclosure (EU AI Act Article 50, UK CMA guidance, US state laws) and data protection; four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

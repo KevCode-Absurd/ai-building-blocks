@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Vitals",
+    "publisher": "Google, web.dev",
+    "url": "https://web.dev/articles/vitals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The three Core Web Vitals (LCP, INP, CLS) and their good thresholds (2.5 s, 200 ms, 0.1) measured at the 75th percentile of page loads, split by mobile and desktop; page updated 31 October 2024."
+  },
+  {
+    "n": 2,
+    "title": "Interaction to Next Paint (INP)",
+    "publisher": "Google, web.dev",
+    "url": "https://web.dev/articles/inp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. INP observes all clicks, taps and key presses in a visit; good is 200 ms or less, poor is above 500 ms; field and lab measurement notes; page updated 2 September 2025."
+  },
+  {
+    "n": 3,
+    "title": "Interaction to Next Paint becomes a Core Web Vital on March 12",
+    "publisher": "Google, web.dev (Jeremy Wagner and Rick Viscomi)",
+    "url": "https://web.dev/blog/inp-cwv-march-12",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. INP replaced First Input Delay as a Core Web Vital on 12 March 2024."
+  },
+  {
+    "n": 4,
+    "title": "Optimize Largest Contentful Paint",
+    "publisher": "Google, web.dev",
+    "url": "https://web.dev/articles/optimize-lcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The four LCP subparts; never lazy-load the LCP image; make it discoverable in HTML; fetchpriority high on one or two images only; reduce render-blocking CSS and long tasks; page updated 31 March 2025."
+  },
+  {
+    "n": 5,
+    "title": "Browser-level image lazy loading for the web",
+    "publisher": "Google, web.dev",
+    "url": "https://web.dev/articles/browser-level-image-lazy-loading",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Browser support for loading=lazy; do not lazy-load images visible on load, especially the LCP image; add width and height to every image to avoid layout shift."
+  },
+  {
+    "n": 6,
+    "title": "About PageSpeed Insights",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/speed/docs/insights/v5/about",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Field data from the Chrome UX Report over a trailing 28 days versus Lighthouse lab data; how the Core Web Vitals assessment passes; why lab results vary between runs."
+  },
+  {
+    "n": 7,
+    "title": "Vodafone: A 31% improvement in LCP increased sales by 8%",
+    "publisher": "Google, web.dev case study",
+    "url": "https://web.dev/case-studies/vodafone",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vodafone's A/B test on a landing page (published 17 March 2021): LCP 5.7 s versus 8.3 s, a 31% improvement, with 8% more sales; method used paid traffic split 50/50."
+  },
+  {
+    "n": 8,
+    "title": "Web Almanac 2025: Page Weight",
+    "publisher": "HTTP Archive",
+    "url": "https://almanac.httparchive.org/en/2025/page-weight",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Median page weight about 2,164 KB mobile and 2,412 KB desktop; median JavaScript about 646 KB mobile; median images about 911 KB mobile; chapter published 15 January 2026."
+  },
+  {
+    "n": 9,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current dated Recommendation 12 December 2024; contrast 4.5:1 and 3:1; non-text contrast 3:1; reflow at 320 CSS px; Focus Not Obscured (Minimum); Target Size (Minimum) 24 by 24 CSS px with exceptions; Accessible Authentication (Minimum)."
+  },
+  {
+    "n": 10,
+    "title": "What's New in WCAG 2.2",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 became a W3C Recommendation on 5 October 2023; the nine new success criteria and their levels; 4.1.1 Parsing removed as obsolete."
+  },
+  {
+    "n": 11,
+    "title": "ARIA Authoring Practices Guide: Read Me First",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No ARIA is better than bad ARIA; a role is a promise that the matching keyboard behaviour is built; ARIA adds no browser behaviour; test with real assistive technology."
+  },
+  {
+    "n": 12,
+    "title": "ARIA Authoring Practices Guide: Dialog (Modal) Pattern",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Modal dialog keyboard behaviour (Tab wraps inside, Escape closes) and focus management: move focus in on open, return it to the opener on close."
+  },
+  {
+    "n": 13,
+    "title": "<dialog>: The Dialog element",
+    "publisher": "MDN Web Docs (Mozilla)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. showModal() makes the rest of the page inert, closes on Escape and moves focus inside; closedby attribute; Baseline widely available, working across browsers since March 2022."
+  },
+  {
+    "n": 14,
+    "title": "The WebAIM Million: 2026 report",
+    "publisher": "WebAIM, Utah State University",
+    "url": "https://webaim.org/projects/million/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. February 2026 analysis of one million home pages: 95.9% with detected WCAG failures, 56.1 errors per page on average; most common failures and their shares; pages with ARIA averaged more errors (59.1 vs 42); page updated 30 March 2026."
+  },
+  {
+    "n": 15,
+    "title": "Directive (EU) 2019/882 on the accessibility requirements for products and services (European Accessibility Act)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "EUR-Lex returned an empty page to WebFetch; confirmed by a WebSearch result showing this exact page and its official summary. Requirements apply from 28 June 2025; services covered include e-commerce; microenterprises providing services are excluded; transition periods to 28 June 2030."
+  },
+  {
+    "n": 16,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector websites and apps must meet WCAG 2.2 AA; all UK service providers must make reasonable adjustments under the Equality Act 2010; page updated 30 September 2024."
+  },
+  {
+    "n": 17,
+    "title": "Guidance on Web Accessibility and the ADA",
+    "publisher": "U.S. Department of Justice, ADA.gov",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ADA applies to goods and services offered on the web by public accommodations; no regulation sets detailed technical standards for them; WCAG and Section 508 as helpful guidance; guidance dated 18 March 2022; separate state and local government rule published 24 April 2024."
+  },
+  {
+    "n": 18,
+    "title": "Baseline",
+    "publisher": "Google, web.dev (defined by the W3C WebDX Community Group)",
+    "url": "https://web.dev/baseline",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definitions of newly available and widely available (30 months later); the core browser set of Chrome, Edge, Firefox and Safari on desktop and mobile; monthly digests."
+  },
+  {
+    "n": 19,
+    "title": "React Versions",
+    "publisher": "Meta, react.dev",
+    "url": "https://react.dev/versions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. React 19 released 5 December 2024; 19.1 March 2025; 19.2 1 October 2025; 19.3 9 September 2026 (latest); React Compiler 1.0 on 7 October 2025."
+  },
+  {
+    "n": 20,
+    "title": "You Might Not Need an Effect",
+    "publisher": "Meta, react.dev",
+    "url": "https://react.dev/learn/you-might-not-need-an-effect",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Compute derived values during render; handle user actions in event handlers; reset state with a key; use effects to sync with external systems; avoid chains of effects."
+  },
+  {
+    "n": 21,
+    "title": "Composition API FAQ",
+    "publisher": "Vue.js",
+    "url": "https://vuejs.org/guide/extras/composition-api-faq",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What the Composition API is, its benefits (logic reuse, organisation, TypeScript inference) and that the Options API is not deprecated."
+  },
+  {
+    "n": 22,
+    "title": "Vue 2 End of Life",
+    "publisher": "Vue.js",
+    "url": "https://v2.vuejs.org/lts/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vue 2 reached end of life on 31 December 2023 and no longer receives security or browser compatibility fixes."
+  },
+  {
+    "n": 23,
+    "title": "Guiding Principles",
+    "publisher": "Testing Library",
+    "url": "https://testing-library.com/docs/guiding-principles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tests should resemble the way software is used; work with DOM nodes rather than component instances."
+  },
+  {
+    "n": 24,
+    "title": "Cross Site Scripting Prevention Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Frameworks escape by default; escape hatches such as dangerouslySetInnerHTML; context-specific encoding; safe sinks such as textContent; sanitise HTML with DOMPurify; React 19 blocks javascript: URLs; CSP as defence in depth."
+  },
+  {
+    "n": 25,
+    "title": "Manifest V2 support timeline",
+    "publisher": "Google, Chrome for Developers",
+    "url": "https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chrome 138 disabled Manifest V2 extensions for all users; Chrome 139 removed the enterprise policy; all remaining V2 extensions removed from the Chrome Web Store on 31 August 2026."
+  },
+  {
+    "n": 26,
+    "title": "The activeTab permission",
+    "publisher": "Google, Chrome for Developers",
+    "url": "https://developer.chrome.com/docs/extensions/develop/concepts/activeTab",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. activeTab grants temporary access to the current tab after a user gesture, shows no install warning and ends when the tab navigates or closes."
+  },
+  {
+    "n": 27,
+    "title": "Chrome Web Store Program Policies",
+    "publisher": "Google, Chrome for Developers",
+    "url": "https://developer.chrome.com/docs/webstore/program-policies/policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Single purpose; request the narrowest permissions; no remotely hosted code in Manifest V3; limited use of user data; privacy policy and disclosure when handling user data."
+  },
+  {
+    "n": 28,
+    "title": "Manifest V3 migration guide",
+    "publisher": "Mozilla, Firefox Extension Workshop",
+    "url": "https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Manifest V3 generally available from Firefox 109; Firefox uses event-driven background scripts, not service workers; from Firefox 127 host permissions are shown and granted at install but users can revoke them."
+  },
+  {
+    "n": 29,
+    "title": "Responsive Web Design",
+    "publisher": "Ethan Marcotte, A List Apart",
+    "url": "https://alistapart.com/article/responsive-web-design/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 25 May 2010; names fluid grids, flexible images and media queries as the three ingredients of responsive web design."
+  },
+  {
+    "n": 30,
+    "title": "Atomic Design, Chapter 2: Atomic Design Methodology",
+    "publisher": "Brad Frost, atomicdesign.bradfrost.com",
+    "url": "https://atomicdesign.bradfrost.com/chapter-2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The five stages of atomic design: atoms, molecules, organisms, templates and pages; book dated 2016."
+  }
+]

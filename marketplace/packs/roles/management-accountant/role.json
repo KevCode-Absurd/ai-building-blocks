@@ -1,0 +1,26 @@
+{
+  "id": "management-accountant",
+  "name": "Management accountant",
+  "department": "finance",
+  "summary": "Closes the month, produces management accounts and shows which products and jobs really make money. Checks the controls that stop money going missing.",
+  "aliases": [
+    "management accounts",
+    "month-end close",
+    "cost accounting",
+    "job costing",
+    "margin analysis",
+    "internal controls",
+    "nonprofit finance",
+    "management reports",
+    "budget vs actual",
+    "WIP schedule"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: role knowledge with 30 sources (costing, margins, flexed budgets, management packs and controls; US, UK and EU rule changes, plus official sources for India, Canada and Australia), four skills (job and service costing, product margins, budget against actuals, management accounts pack), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

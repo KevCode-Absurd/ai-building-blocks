@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "Product image requirements (Seller Forums post)",
+    "publisher": "Amazon Seller Central forums",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/13af96ea-6b07-4bf9-8dbe-a13292c2e3b1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Staff forum post by the account TaylorR_Amazon, undated (shown as about 11 months old, so roughly late 2025), cited under Decision 14 because Seller Central help pages need a login: main image on pure white (RGB 255,255,255); product fills 85% or more; at least 1,000 pixels on the longest side for zoom; JPEG, TIFF or PNG; RGB or CMYK; file name includes the product identifier; no added text, graphics or watermarks; the actual product, no illustrations; no props not included. Nothing on AI. Least sure source in this kit."
+  },
+  {
+    "n": 2,
+    "title": "Product media types",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/product-media/product-media-types",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). PNG suggested, then JPEG, with TIFF, BMP, GIF, SVG, HEIC and WebP accepted; files under 20 MB; up to 5000 x 5000 pixels or 25 megapixels; 2048 x 2048 suggested for square product images; consistent aspect ratio on collection pages."
+  },
+  {
+    "n": 3,
+    "title": "Media generation",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/ai-powered-tools/media-generation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). AI file editor: replace a background with a colour or transparency, change background, setting, lighting or style from a prompt, extend a canvas; output about 1 megapixel; an invisible watermark that cannot be removed; Save as new keeps a separate file; Basic plan and up."
+  },
+  {
+    "n": 4,
+    "title": "AI-powered tools",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/shopify-magic",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists AI image tools (colour background, prompt-based image changes, the Tinker app) and cautions that AI outputs can contain errors, so sellers should review anything a tool creates or changes."
+  },
+  {
+    "n": 5,
+    "title": "Image link [image_link]",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324350",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. At least 500 x 500 pixels for all products from 31 Jan 2027; 1500 x 1500 recommended; up to 64 megapixels and 16 MB; JPEG, WebP, PNG, GIF, BMP, TIFF; no promotional overlays, watermarks, added logos, placeholders, borders; product fills 75% to 90%; one variant per image; generative AI images must keep metadata such as IPTC DigitalSourceType, including Product Studio images."
+  },
+  {
+    "n": 6,
+    "title": "Additional image link [additional_image_link]",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324370",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 10 additional images (angles, in use, parts, bundles); same 500 x 500 minimum from 31 Jan 2027; undersized images not shown but product not disapproved; AI metadata must be kept."
+  },
+  {
+    "n": 7,
+    "title": "Lifestyle image link [lifestyle_image_link]",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/9103186",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 5 lifestyle images in real-world settings for free listings; at least 600 x 600 pixels; no promotional text, logos or padding; AI metadata must be kept; a changed image needs a new URL, and re-using the same URL can take up to 6 weeks to update."
+  },
+  {
+    "n": 8,
+    "title": "Automatic image improvements",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/9242973",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. When switched on, Merchant Center tries to remove promotional text, watermarks, overlays and logos from flagged images; turned off by default; set under Products, Automations."
+  },
+  {
+    "n": 9,
+    "title": "Requirements and Best Practices for Images in Your Etsy Shop",
+    "publisher": "Etsy Help Center",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015663347",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). At least 2000 pixels each side recommended; first photo at least 635 pixels, landscape or square; at least one unedited photo of the actual item against a real background; AI and other edits allowed for lighting, colour, cropping and backgrounds but not to hide flaws or misrepresent; suggests noting edits in the listing description."
+  },
+  {
+    "n": 10,
+    "title": "Digital Source Type vocabulary",
+    "publisher": "IPTC",
+    "url": "https://cv.iptc.org/newscodes/digitalsourcetype/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (latest concept change 2024-10-23). Terms including digitalCapture, compositeWithTrainedAlgorithmicMedia (edited using generative AI, such as inpainting or outpainting), trainedAlgorithmicMedia (created using generative AI), compositeSynthetic, algorithmicallyEnhanced (sharpening, noise reduction) and humanEdits."
+  },
+  {
+    "n": 11,
+    "title": "C2PA: Coalition for Content Provenance and Authenticity",
+    "publisher": "C2PA",
+    "url": "https://c2pa.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open technical standard, Content Credentials, to establish the origin and edits of digital content; specification 2.3 linked; steering committee includes Adobe, Amazon, BBC, Google, Meta, Microsoft, OpenAI, Publicis Groupe, Sony, TikTok and Truepic."
+  },
+  {
+    "n": 12,
+    "title": "Article 50: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+    "publisher": "EU Artificial Intelligence Act website (artificialintelligenceact.eu)",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An unofficial reproduction of the Act, used because EUR-Lex returned no text to WebFetch. Providers mark synthetic image output machine-readably, except assistive standard editing that does not substantially alter input; deployers disclose deep fakes (content resembling existing persons, objects, places or events that would falsely appear authentic); applies from 2 Aug 2026."
+  },
+  {
+    "n": 13,
+    "title": "Advertising FAQs: A Guide for Small Business",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (April 2001, edited January 2025). Ads must be truthful and not deceptive; a reasonable basis is needed before the ad runs; express and implied claims; the FTC reads ads in context, including words, phrases and pictures."
+  },
+  {
+    "n": 14,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207/unfair-commercial-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first 100,000 characters read). Guidance under the DMCC Act 2024, first published 4 Apr 2025, updated 18 Nov 2025: misleading actions judged on the overall presentation of a practice, even when individual statements are true."
+  },
+  {
+    "n": 15,
+    "title": "Unfair commercial practices",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-commercial-practices/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked by the EU on 28/04/2026). EU consumers are protected from practices that mislead by action (false information) or omission (leaving out important information)."
+  },
+  {
+    "n": 16,
+    "title": "Copyright Office Releases Part 2 of Artificial Intelligence Report (NewsNet 1060)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 29 Jan 2025: the mere provision of prompts is not enough for protection; human expressive elements perceptible in the output, or creative arrangements or modifications of it, can be protected; AI assistance does not bar protection of human work."
+  },
+  {
+    "n": 17,
+    "title": "Circular 30: Works Made for Hire",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/circs/circ30.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PDF text extracted locally (revised 08/2024). A work is made for hire only when made by an employee within the scope of employment, or when specially ordered or commissioned in one of nine categories with a written agreement signed by both parties; then the hiring party is the author and owner."
+  },
+  {
+    "n": 18,
+    "title": "License and sell your copyright",
+    "publisher": "Intellectual Property Office (GOV.UK)",
+    "url": "https://www.gov.uk/copyright/license-and-sell-your-copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A copyright owner can license use of a work or sell or transfer the copyright; a sale or transfer needs a signed document (an assignment)."
+  },
+  {
+    "n": 19,
+    "title": "Images Tutorial",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 8 Apr 2026). Informative images need a short text alternative; decorative images get empty alt text; images of text repeat the words; complex images need a full text version."
+  },
+  {
+    "n": 20,
+    "title": "CSS Color Module Level 4",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/css-color-4/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Candidate Recommendation Draft, 3 Nov 2026). Section 3.5: untagged images, with no colour profile, must be treated as sRGB."
+  },
+  {
+    "n": 21,
+    "title": "Photos as Web Content",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/photos-as-web-content/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jakob Nielsen, 31 Oct 2010, last reviewed 13 Aug 2026: users study information-carrying images such as product photos and ignore decorative stock photos; enlarged product photos should be at least twice as big as the original."
+  },
+  {
+    "n": 22,
+    "title": "UX Guidelines for Ecommerce Product Pages",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ecommerce-product-pages/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Katie Sherwin, 24 Nov 2019: one product view is rarely enough; shoppers value multiple views, close-up detail and the product in use; an enlarged view is a must-have."
+  },
+  {
+    "n": 23,
+    "title": "Product Page UX: All Products Need at Least One ‘In Scale’ Image (28% Get It Wrong)",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/blog/in-scale-product-images",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Christian Holst, 30 May 2017: 42% of users tried to judge product size from images; 28% of 60 large ecommerce sites had no in-scale images; cut-out images alone led to wrong size conclusions."
+  },
+  {
+    "n": 24,
+    "title": "25% of E-Commerce Sites Don’t Have Product Images with Sufficient Resolution or Level of Zoom",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/blog/ensure-sufficient-image-resolution-and-zoom",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Edward Scott, 2 Apr 2020: 56% of users first explored images on product pages; 25% of sites had images that did not support visual exploration, 14% low resolution, 11% insufficient zoom."
+  },
+  {
+    "n": 25,
+    "title": "Light — Science & Magic: An Introduction to Photographic Lighting (6th edition)",
+    "publisher": "Routledge",
+    "url": "https://www.routledge.com/Light-Science-and-Magic-An-Introduction-to-Photographic-Lighting/Hunter-Biver-Fuqua/p/book/9780367860271",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hunter, Biver, Fuqua and Reid, 2021: theory and practice of photographic lighting; diffuse and direct reflection and the family of angles; lighting surfaces, metal, glass, liquids, white-on-white and black-on-black subjects."
+  }
+]

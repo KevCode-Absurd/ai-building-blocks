@@ -1,0 +1,26 @@
+{
+  "id": "brand-designer",
+  "name": "Brand identity designer",
+  "department": "design",
+  "summary": "Sets the look of a brand: logo direction, colours, type and illustration style. Writes briefs other designers and illustrators can build from.",
+  "aliases": [
+    "logo design",
+    "brand identity",
+    "visual identity",
+    "brand guidelines",
+    "art direction",
+    "mascot design",
+    "logo brief",
+    "colour palette",
+    "brand book",
+    "icon set"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: identity discovery, logo briefs and small-size tests, logo rules from real public brand guides, colour roles and contrast pairs, font licences for logos, design tokens in the W3C community format, favicon and app store icon specs, mascot, icon and illustration briefs, commissioning and ownership basics, trademark search pointers for the USPTO, UK IPO, EU and WIPO, AI-made artwork rules, and access levels 1 to 3 for Figma, Canva and brand portals, with 30 checked sources."
+    }
+  ]
+}

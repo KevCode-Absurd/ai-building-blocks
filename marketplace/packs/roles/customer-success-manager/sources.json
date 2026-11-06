@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Understanding Your Customer's Desired Outcome",
+    "publisher": "Sixteen Ventures (Lincoln Murphy)",
+    "url": "https://sixteenventures.com/customer-success-desired-outcome",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article dated 4 August 2014. Customer success is when customers achieve their Desired Outcome through their interactions with the company; Desired Outcome has two parts, the Customer Goal and the Appropriate Experience, and 'appropriate' depends on the customer's expectations."
+  },
+  {
+    "n": 2,
+    "title": "The Ten Laws of Customer Success",
+    "publisher": "Gainsight (Dan Steinman)",
+    "url": "https://www.gainsight.com/blog/the-ten-laws-of-customer-success/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Post dated 21 September 2015 by Dan Steinman. Names laws including a top-down, company-wide commitment, sell to the right customer, and obsessively improve time to value. The page does not list all ten."
+  },
+  {
+    "n": 3,
+    "title": "Prescription for cutting costs",
+    "publisher": "Bain & Company (Fred Reichheld)",
+    "url": "https://www.bain.com/insights/prescription-for-cutting-costs-bain-brief/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bain brief dated 25 October 2001 by Fred Reichheld arguing that small increases in customer retention translate into big boosts to profits. The page gives no exact figure."
+  },
+  {
+    "n": 4,
+    "title": "The Value of Keeping the Right Customers",
+    "publisher": "Harvard Business Review (Amy Gallo)",
+    "url": "https://hbr.org/2014/10/the-value-of-keeping-the-right-customers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 29 October 2014. Acquiring a new customer is 5 to 25 times more expensive than retaining one (varies by study and industry, source not named); cites Reichheld's research that raising retention by 5% raises profits by 25% to 95%."
+  },
+  {
+    "n": 5,
+    "title": "Measuring Your Net Promoter Score",
+    "publisher": "Bain & Company (Net Promoter System)",
+    "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. NPS question on a 0 to 10 scale; promoters 9 to 10, passives 7 to 8, detractors 0 to 6; NPS is the share of promoters minus the share of detractors."
+  },
+  {
+    "n": 6,
+    "title": "Stop Trying to Delight Your Customers",
+    "publisher": "Harvard Business Review (Matthew Dixon, Karen Freeman, Nick Toman)",
+    "url": "https://hbr.org/2010/07/stop-trying-to-delight-your-customers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (opening and summary only). July-August 2010 article questioning the belief that companies must delight customers; few customers choose a company mainly because of exceptional service."
+  },
+  {
+    "n": 7,
+    "title": "SaaS Retention Report",
+    "publisher": "ChartMogul",
+    "url": "https://chartmogul.com/reports/saas-retention-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 1 November 2023 (Sid Jain), data mainly from 2022, over 2,100 SaaS businesses. Top-quartile net revenue retention 109.3% for ARPA over $500 a month vs 65.1% under $10; 41.1% vs 2.7% of companies above 100% NRR; top-quartile gross revenue retention 90%+ for ARPA over $500; top-quartile customer retention 85.7% vs 63.1%."
+  },
+  {
+    "n": 8,
+    "title": "Churn rate benchmarks",
+    "publisher": "Recurly",
+    "url": "https://recurly.com/research/churn-rate-benchmarks/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. July 2026 Recurly network data: overall churn 3.60%, split 2.34% voluntary and 1.25% involuntary; industry medians for SaaS, ecommerce, education and others. The page labels the period inconsistently and gives no sample size."
+  },
+  {
+    "n": 9,
+    "title": "Add a cancellation page to the customer portal",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/customer-management/cancellation-page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Customer portal cancellation is on by default; optional cancellation reason list (too expensive, missing features, found an alternative, no longer needed, service, ease of use, quality, other); optional retention coupon to deflect cancellations."
+  },
+  {
+    "n": 10,
+    "title": "Automate payment retries",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/billing/revenue-recovery/smart-retries",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Smart Retries choose retry times; new accounts default to up to 8 retries within 2 weeks; policy windows from 1 week to 2 months; hard declines need a new payment method; after retries the subscription can be cancelled, marked unpaid, left past due or paused."
+  },
+  {
+    "n": 11,
+    "title": "Use the customer success workspace",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/customer-success/use-the-customer-success-workspace",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 19 March 2026. Service Hub Professional or Enterprise with a seat; health scores tailored to the business with At-risk, Neutral and Healthy statuses; alerts on health changes expire after 14 days."
+  },
+  {
+    "n": 12,
+    "title": "Negative Option Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Click-to-cancel final rule announced 16 October 2024; 12 February 2026 Federal Register notice revised the rule to conform to federal court decisions; advance notice of proposed rulemaking on negative option marketing announced 11 March 2026 (docket FTC-2026-0265)."
+  },
+  {
+    "n": 13,
+    "title": "Attorney General Bonta Issues Consumer Alert on California's Automatic Renewal Law",
+    "publisher": "California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-california%E2%80%99s-automatic-renewal-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 4 September 2025 alert on the law as amended from 1 July 2025: express affirmative consent; cancel online if enrolled online; annual reminder; notice 7 to 30 days before an accepted fee increase; notice 3 to 21 days before a trial over 31 days ends; notice 15 to 45 days before renewal for terms of one year or more."
+  },
+  {
+    "n": 14,
+    "title": "FTC Secures Historic $2.5 Billion Settlement Against Amazon",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 25 September 2025: $1 billion civil penalty and $1.5 billion redress for about 35 million consumers over alleged Prime enrolment without consent and a hard cancellation process (FTC Act and ROSCA); Amazon must offer a clear decline button, disclose material terms and provide easy cancellation by the same method as sign-up."
+  },
+  {
+    "n": 15,
+    "title": "Consultation on the implementation of the new subscription contracts regime",
+    "publisher": "GOV.UK (Department for Business and Trade)",
+    "url": "https://www.gov.uk/government/consultations/consultation-on-the-implementation-of-the-new-subscription-contracts-regime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Consultation ran 18 November 2024 to 10 February 2025; government response published 2 April 2026; secondary legislation to follow on clearer pre-contract information, reminders before renewals and straightforward ways to cancel. No start date on the page."
+  },
+  {
+    "n": 16,
+    "title": "DMCCA subscription contracts regime: preparing for the new restrictions",
+    "publisher": "DWF (law-firm summary)",
+    "url": "https://dwfgroup.com/en/news-and-insights/insights/2026/10/dmcca-subscription-contracts-regime-preparing-for-the-new-restrictions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Law-firm summary dated 22 October 2026, used because GOV.UK gives no date: the regime is expected from January 2027; secondary legislation and guidance not yet published; duties cover pre-contract information, renewal reminders, a 14-day cooling-off period and ease of exit."
+  },
+  {
+    "n": 17,
+    "title": "World Consumer Rights Day (Part 3): Mandatory Withdrawal Button Coming June 2026",
+    "publisher": "William Fry (law-firm summary)",
+    "url": "https://www.williamfry.com/?p=159557",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Law-firm summary dated 19 March 2026, used because the EUR-Lex page returned no text: Directive 2023/2673 adds Article 11a to the Consumer Rights Directive; applies from 19 June 2026; online distance contracts; a function labelled 'withdraw from contract here' or equivalent, a confirm step, and an acknowledgement on a durable medium."
+  },
+  {
+    "n": 18,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Primary purpose decides commercial vs transactional or relationship messages (changes to an account or membership, warranty information); commercial email needs accurate headers, honest subject lines, a postal address and an opt-out honoured within 10 business days; penalties up to $53,088 per email."
+  },
+  {
+    "n": 19,
+    "title": "Identify direct marketing",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/direct-marketing-guidance/identify-direct-marketing/",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. Service messages sent for administrative or customer service purposes with no promotion are not direct marketing; any promotional element makes the message direct marketing; a neutral tone does not change that."
+  },
+  {
+    "n": 20,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 14 August 2024 rule bans fake reviews and testimonials, incentives conditioned on sentiment, undisclosed insider reviews, misleading company-controlled review sites and review suppression; civil penalties for knowing violations."
+  },
+  {
+    "n": 21,
+    "title": "Article 50: Transparency Obligations for Providers and Deployers of Certain AI Systems",
+    "publisher": "EU Artificial Intelligence Act (artificialintelligenceact.eu)",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI systems that interact directly with people must be designed so people are told they are dealing with AI unless it is obvious; Article 50 applies from 2 August 2026."
+  },
+  {
+    "n": 22,
+    "title": "Model Context Protocol (MCP)",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Stripe MCP server at mcp.stripe.com with OAuth or agent API keys; read and write API tools including subscriptions, invoices, coupons and refunds; creating a refund needs human confirmation in the Dashboard; keys without the Agent tag stop working from December 2026 (migrate by 30 November 2026)."
+  },
+  {
+    "n": 23,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote MCP server at mcp.hubspot.com using OAuth through a user-level app; CRM objects such as contacts, companies, deals, tickets, notes and tasks; the page contradicts itself on whether write access is available."
+  },
+  {
+    "n": 24,
+    "title": "Intercom MCP server",
+    "publisher": "Intercom Developers",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reads conversations, contacts, companies and help articles; can add internal notes and create or update help articles; cannot send customer-visible replies; US and EU regions only; OAuth recommended."
+  },
+  {
+    "n": 25,
+    "title": "Use Google Workspace connectors",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Gmail search, read, draft, send, reply and forward, with approval before sending by default; Calendar view, create, update and delete events and find availability; Team and Enterprise owners enable connectors and control send approvals."
+  },
+  {
+    "n": 26,
+    "title": "Unfair contract terms",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-contract-terms/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard terms must be fair and in plain, understandable language; ambiguity is read in the consumer's favour; unfair terms do not bind consumers; one-sided cancellation and one-sided changes to contracts are among the potentially unfair terms listed."
+  },
+  {
+    "n": 27,
+    "title": "Unfair contract terms guidance (CMA37)",
+    "publisher": "GOV.UK (Competition and Markets Authority)",
+    "url": "https://www.gov.uk/government/publications/unfair-contract-terms-cma37",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CMA guidance on unfair terms under the Consumer Rights Act 2015; first published 31 July 2015, last updated 22 July 2026 after a January 2026 consultation on revised guidance."
+  },
+  {
+    "n": 28,
+    "title": "Bill Text - AB-2863 Automatic renewal and continuous service offers",
+    "publisher": "California Legislative Information",
+    "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240AB2863",
+    "checked": "2026-11-06",
+    "supports": "Site blocks fetches (403); page confirmed by WebSearch showing this exact page. Chaptered 2024 amendments to the Automatic Renewal Law: a business may present a discount or retention offer to an online canceller only while a prominent click-to-cancel link or button stays displayed; a phone canceller who says cancel must have the cancellation processed promptly; applies to contracts entered, amended or extended on or after 1 July 2025."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "build-a-prospect-list-rank-it-and-send-first-messages",
+    "name": "Build a prospect list, rank it and send first messages",
+    "why": "A ready workflow from ideal customer to a ranked list and checked first messages, matching the outbound campaign workflow."
+  },
+  {
+    "slug": "cold-outreach-batch-runner",
+    "name": "Cold outreach batch runner",
+    "why": "Runs cold email in checked batches and learns from the last batch's results, like the weekly review step."
+  },
+  {
+    "slug": "cold-call-script-writer",
+    "name": "Cold call script writer",
+    "why": "A quick cold call script with opener, questions, brush-off replies and voicemail, a lighter version of the call script skill."
+  },
+  {
+    "slug": "cold-email-claim-checker",
+    "name": "Cold email claim checker",
+    "why": "Tests every claim in a cold email against the prospect's own page before it goes out."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Turns one email into follow-ups with a new reason each time and a stop rule, the same rule this kit uses."
+  },
+  {
+    "slug": "lead-grader",
+    "name": "Lead grader",
+    "why": "Grades prospects A, B or C by how soon they need to act, a fast first pass before full scoring."
+  },
+  {
+    "slug": "prospecting-block-planner",
+    "name": "Prospecting block planner",
+    "why": "Protects a daily call block with quick research and one reason to call each lead."
+  },
+  {
+    "slug": "sales-call-prep-assistant",
+    "name": "Sales call prep assistant",
+    "why": "Builds a one-page call plan from past notes, a close cousin of the account research brief."
+  },
+  {
+    "slug": "prepare-an-enterprise-account-plan",
+    "name": "Prepare an enterprise account plan",
+    "why": "Maps buyer roles and deal risks for a large account once a meeting turns into a real opportunity."
+  },
+  {
+    "slug": "objection-answer-sheet-writer",
+    "name": "Objection answer sheet writer",
+    "why": "Builds an answer sheet for buyer doubts, useful alongside the reply and brush-off scripts."
+  },
+  {
+    "slug": "lead-nurture-follow-up",
+    "name": "Offer useful information first and follow up with stalled leads",
+    "why": "For C-tier and quiet leads: an information offer and follow-ups instead of more cold touches."
+  }
+]

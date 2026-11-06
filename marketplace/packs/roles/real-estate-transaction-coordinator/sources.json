@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "TILA-RESPA integrated disclosures (TRID)",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/compliance/compliance-resources/mortgage-resources/tila-respa-integrated-disclosures/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page last modified 17 Dec 2024. CFPB's industry resources for the TRID rule: Small Entity Compliance Guide version 5.2 and the guide to the Loan Estimate and Closing Disclosure forms version 2.1; 17 Dec 2024 final rule on residential PACE transactions with model forms."
+  },
+  {
+    "n": 2,
+    "title": "Regulation Z, 12 CFR 1026.19: Certain mortgage and variable-rate transactions",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/19/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read across three page offsets; the eCFR copy redirected to an unblock page). Loan Estimate delivered or mailed within three business days of application; consummation not before the seventh business day after delivery or mailing. Closing Disclosure received no later than three business days before consummation; disclosures not given in person treated as received three business days after delivery or mailing. A new three-business-day wait only if the APR becomes inaccurate, the loan product changes, or a prepayment penalty is added; other changes corrected at or before consummation."
+  },
+  {
+    "n": 3,
+    "title": "Closing Disclosure explainer",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lenders must provide the Closing Disclosure three business days before the scheduled closing; compare loan terms, amount, rate, monthly payment, closing costs and cash to close with the Loan Estimate; ask the lender why anything changed."
+  },
+  {
+    "n": 4,
+    "title": "Get ready to close",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ordered closing steps after an accepted offer: submit documents to the lender, home inspection, homeowner's insurance, title insurance and other closing services, revised Loan Estimates, review documents, close, after closing. No typical time frames given."
+  },
+  {
+    "n": 5,
+    "title": "Review documents before closing",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/review-documents-before-closing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Contact the lender or closing agent at least a week ahead to learn how the Closing Disclosure will arrive; request the promissory note, mortgage or deed of trust and deed early; scammers may pose as the real estate or settlement agent and suggest last-minute changes to wiring instructions."
+  },
+  {
+    "n": 6,
+    "title": "Close the deal",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/close-the-deal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Do a final walk-through before signing; do not sign blank documents or anything that differs from the agreed deal; changed loan terms may bring a new Closing Disclosure and, in limited cases, a new three-day review."
+  },
+  {
+    "n": 7,
+    "title": "Shop for title insurance and other closing services",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/close/shop-for-title-insurance-and-other-closing-services/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most lenders require a lender's title policy; an owner's policy is optional; in most of the country a settlement agent from a title company runs the closing, in Western states an escrow agent, and some states in the Northeast and South require a closing attorney from each side; services in section C of the Loan Estimate can be shopped for."
+  },
+  {
+    "n": 8,
+    "title": "Beware of mortgage closing scams",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/owning-a-home/beware-mortgage-closing-scams/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page modified 16 Jun 2026. Scammers target homebuyers days before closing."
+  },
+  {
+    "n": 9,
+    "title": "Mortgage closing scams: how to protect yourself and your closing funds (archived)",
+    "publisher": "Consumer Financial Protection Bureau",
+    "url": "https://www.consumerfinance.gov/archive/blog/mortgage-closing-scams-how-protect-yourself-and-your-closing-funds/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; posted 3 June 2019, marked archived, page modified 25 June 2026. Scammers compromise real estate professionals' email and send spoofed wiring instructions; pick two trusted contacts and agree payment steps in person or by phone; verify account details by a number agreed in advance; never follow instructions in an email; do not email financial information; if targeted, ask the bank for a wire recall at once and file at ic3.gov."
+  },
+  {
+    "n": 10,
+    "title": "Business Email Compromise",
+    "publisher": "FBI Internet Crime Complaint Center (IC3)",
+    "url": "https://www.ic3.gov/CrimeInfo/BEC",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. BEC targets people transferring funds by compromising legitimate email accounts; verify account-change requests through secondary channels; if a victim, contact the originating bank as soon as fraud is recognised to request a recall or reversal and a Hold Harmless Letter or Letter of Indemnity, then file at ic3.gov with full banking details. fbi.gov's BEC page returned HTTP 403."
+  },
+  {
+    "n": 11,
+    "title": "2025 IC3 Annual Report",
+    "publisher": "FBI Internet Crime Complaint Center (IC3)",
+    "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text extracted locally). 2025: 1,008,597 complaints and $20.877bn losses; Business Email Compromise 24,768 complaints and $3,046,598,558 losses; Real Estate crime type (investment, rental or timeshare fraud) 12,368 complaints and $275,110,419 losses; Recovery Asset Team's Financial Fraud Kill Chain 3,900 incidents, $679,013,183 frozen, 58% success rate; August 2025 case of homebuyers emailed by impostors of their attorneys, a wire of over $449,000 frozen in full at the recipient bank."
+  },
+  {
+    "n": 12,
+    "title": "Protect Your Property from Illegal Sales Through Parcel Owner Impersonation (I-061626-PSA)",
+    "publisher": "FBI Internet Crime Complaint Center (IC3)",
+    "url": "https://www.ic3.gov/PSA/2026/PSA260616",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PSA dated 16 June 2026. Impostors pose as owners of vacant land to sell it; red flags for agents and title companies: seller only uses email, text or internet phone and avoids meeting, pushes a fast closing below market value, knows little about the property, wants proceeds wired to an account in another name or abroad, or offers deeds notarised abroad."
+  },
+  {
+    "n": 13,
+    "title": "Wire fraud (topic page)",
+    "publisher": "American Land Title Association",
+    "url": "https://www.alta.org/topics/wire-fraud",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ALTA's Outgoing Wire Preparation Checklist has three parts: identify the source of the wiring instructions, verify instructions received by email or from anyone other than the payee, and confirm delivery; ALTA publishes a Rapid Response Plan for wire fraud incidents and consumer materials urging buyers and sellers to verify and report."
+  },
+  {
+    "n": 14,
+    "title": "ALTA Title & Settlement Agent Best Practices",
+    "publisher": "American Land Title Association",
+    "url": "https://www.alta.org/policies-and-standards/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Best Practices 5.0 Framework and Assessment Procedures dated 10-08-2026 and marked new; version 4.0 materials still listed; some documents members-only."
+  },
+  {
+    "n": 15,
+    "title": "Real Estate Disclosures about Potential Lead Hazards",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/lead/real-estate-disclosure",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 27 May 2026. For pre-1978 housing sales: disclose known lead-based paint and hazards, give available records and the EPA pamphlet before the contract is signed, include a Lead Warning Statement, give the buyer a 10-day inspection opportunity (changeable or waivable in writing), keep signed copies 3 years; agents must tell sellers of their duties and share responsibility."
+  },
+  {
+    "n": 16,
+    "title": "Consumer guide: written buyer agreements",
+    "publisher": "National Association of REALTORS",
+    "url": "https://www.nar.realtor/the-facts/consumer-guide-written-buyer-agreements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 17 August 2024, buyers working with a REALTOR sign a written buyer agreement before touring a home, in person or virtually; compensation must be clearly stated (not open-ended or a range) and is negotiable."
+  },
+  {
+    "n": 17,
+    "title": "Residential Real Estate Rule",
+    "publisher": "Financial Crimes Enforcement Network (FinCEN)",
+    "url": "https://www.fincen.gov/rre",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 19 March 2026 the US District Court for the Eastern District of Texas issued an order vacating the Residential Real Estate Rule; FinCEN and the Department of Justice appealed; while the order stands, reporting persons need not file Real Estate Reports."
+  },
+  {
+    "n": 18,
+    "title": "Selling a home: offers and negotiations",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/selling-a-home/offers-negotiations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An offer is not legally binding in England and Wales until contracts are exchanged; the property is not sold until written contracts are exchanged; the estate agent must tell the seller about any offers."
+  },
+  {
+    "n": 19,
+    "title": "Selling a home: transferring ownership (conveyancing)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/selling-a-home/transferring-ownership-conveyancing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The seller's solicitor or conveyancer drafts the contract and answers the buyer's solicitor's questions; exchange makes the agreement legally binding; at completion the buyer's solicitor transfers the money and the seller's solicitor pays off the mortgage and fees."
+  },
+  {
+    "n": 20,
+    "title": "How to buy a home (HTML guide)",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/publications/how-to-buy-a-home/how-to-buy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 7 May 2019, last updated 6 September 2019, England and Wales. Offers can be renegotiated up to exchange; legal representative organises searches; consider a survey; buildings insurance needed from exchange; deposit paid at exchange; completion often 2 to 4 weeks after exchange; keys often handed over around lunchtime; ownership registered with HM Land Registry after completion."
+  },
+  {
+    "n": 21,
+    "title": "Stamp Duty Land Tax",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/stamp-duty-land-tax",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Send the SDLT return to HMRC and pay within 14 days of completion, or face penalties and interest; the solicitor, agent or conveyancer usually does this; Scotland has Land and Buildings Transaction Tax and Wales Land Transaction Tax."
+  },
+  {
+    "n": 22,
+    "title": "Home Buying and Selling Reform Roadmap",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/consultations/home-buying-and-selling-reform/outcome/home-buying-and-selling-reform-roadmap",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 19 June 2026. Around 120 days on average from accepted offer to completion; around one in 3 transactions fall through; plans for sales packs before listing and binding conditional contracts by future legislation; a non-statutory Code of Practice for agents due in 2026."
+  },
+  {
+    "n": 23,
+    "title": "Protect your land and property from fraud",
+    "publisher": "GOV.UK (HM Land Registry)",
+    "url": "https://www.gov.uk/protect-land-property-from-fraud",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Higher risk if the property is empty, rented out, not mortgaged, the owner lives abroad or it is unregistered; free Property Alert for up to 10 properties; restrictions by form RQ, RQCO or RX1; report suspected fraud to HM Land Registry and to Report Fraud."
+  },
+  {
+    "n": 24,
+    "title": "Home Report",
+    "publisher": "mygov.scot",
+    "url": "https://www.mygov.scot/buy-home/home-report",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In Scotland the seller or selling agent must give a Home Report within nine days of a request; it has a single survey and valuation, a property questionnaire and an energy report; some homes are exempt."
+  },
+  {
+    "n": 25,
+    "title": "Buying a home",
+    "publisher": "mygov.scot",
+    "url": "https://www.mygov.scot/buying-a-home",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most Scottish homes are sold by blind bidding over or around a minimum price; the process runs through the Home Report, making an offer, conveyancing after missives, and settlement."
+  },
+  {
+    "n": 26,
+    "title": "Docusign for Real Estate",
+    "publisher": "Docusign",
+    "url": "https://www.docusign.com/solutions/industries/real-estate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. eSignature and transaction management for agents and brokerages, with state and local association forms and autofill; Real Estate plans and a REALTORS plan (paid; free trial); links to pricing. Docusign's support centre did not load for fetching on 6 Nov 2026."
+  },
+  {
+    "n": 27,
+    "title": "Docusign Rooms for Real Estate",
+    "publisher": "Docusign",
+    "url": "https://www.docusign.com/products/rooms-for-real-estate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Brokerage transaction templates with due dates, reminders and notifications; task lists; a custom approval process and audit trails; association, MLS and brokerage forms; integrations including Lone Wolf and zipForm Plus."
+  },
+  {
+    "n": 28,
+    "title": "eSignature concepts: recipients",
+    "publisher": "Docusign Developer Center",
+    "url": "https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/recipients/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recipient types include signer, carbon copy, certified delivery (needs to view), agent, editor, intermediary, witness and notary; routing order sets when each recipient acts; recipient authentication options include access code, phone, ID verification and knowledge-based checks."
+  },
+  {
+    "n": 29,
+    "title": "dotloop Public API Version 2",
+    "publisher": "dotloop (dotloop GitHub organisation)",
+    "url": "https://dotloop.github.io/public-api/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 2026-09-17. Loops, loop details (address, dates, financials), participants, folders, document upload, read-only task lists and templates, contacts and webhooks; OAuth 2.0 with write scopes for changes; 100 requests per minute per user. dotloop's help centre (401) and website (403) blocked fetching."
+  },
+  {
+    "n": 30,
+    "title": "SkySlope",
+    "publisher": "SkySlope",
+    "url": "https://skyslope.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Brokerage transaction platform with smart checklists and automated audits, DigiSign e-signatures, pre-loaded MLS and association forms, Offers, a transaction coordination service (SkyTC) and Breeze disclosures; no API or MCP server mentioned on the page."
+  }
+]

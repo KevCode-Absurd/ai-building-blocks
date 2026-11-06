@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "usability-heuristic-reviewer",
+    "name": "Usability heuristic reviewer",
+    "why": "Checks a page or form against ten usability rules and ranks fixes by harm, the same method as the usability review skill."
+  },
+  {
+    "slug": "page-usability-review",
+    "name": "Review a page's ease of use, then plan a test",
+    "why": "Pairs a quick review with a one-morning test plan, matching the review-then-test order in this role."
+  },
+  {
+    "slug": "small-usability-test-planner",
+    "name": "Small usability test planner",
+    "why": "Writes tasks, a read-aloud script and a fix list for a small test, like the usability test plan prompt."
+  },
+  {
+    "slug": "check-a-prototype-before-user-testing",
+    "name": "Check a prototype before user testing",
+    "why": "Finds gaps and dead ends in a prototype before sessions, so a test finds the deeper problems."
+  },
+  {
+    "slug": "error-message-rewriter",
+    "name": "Error message rewriter",
+    "why": "Rewrites error messages to say what went wrong and what to do next, the core of the microcopy skill."
+  },
+  {
+    "slug": "write-helpful-error-and-empty-states",
+    "name": "Write helpful error and empty states",
+    "why": "Covers the error and empty states the wireframe spec and microcopy skills insist on."
+  },
+  {
+    "slug": "make-a-long-form-easier-to-finish",
+    "name": "Make a long form easier to finish",
+    "why": "Cuts and restructures long forms, useful for sign-up and checkout flows with too many fields."
+  },
+  {
+    "slug": "turn-a-design-review-into-fixes",
+    "name": "Turn a design review into fixes",
+    "why": "Turns review comments into numbered tasks with owners and done-when, the hand-over step after a review."
+  },
+  {
+    "slug": "give-developers-a-complete-component-brief",
+    "name": "Give developers a complete component brief",
+    "why": "Specifies components with states and words for a developer, alongside a text wireframe spec."
+  },
+  {
+    "slug": "new-screen-design-reviewer",
+    "name": "New screen design reviewer",
+    "why": "Checks each new screen against your own design rules before it ships, a lighter repeatable review."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Re-checks accessibility gaps each quarter and keeps statement notes current, after the quick check finds the first issues."
+  },
+  {
+    "slug": "find-where-new-users-leave-and-prove-the-fix-works",
+    "name": "Find where new users leave and prove the fix works",
+    "why": "Finds the biggest drop-off from your numbers and plans a test of the fix, a good input to a usability review."
+  }
+]

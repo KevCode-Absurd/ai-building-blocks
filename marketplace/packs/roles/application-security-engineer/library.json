@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "diff-security-skimmer",
+    "name": "Diff security skimmer",
+    "why": "Ranks security risks in only the changed lines of a pull request, a quick first pass before the full secure code review."
+  },
+  {
+    "slug": "threat-list-maker",
+    "name": "Threat list maker",
+    "why": "Turns a description of how an app works into ranked likely attacks with one way to reduce each, a fast start for the threat model prompt."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Tracks what is new, open or fixed in dependencies each week with an upgrade order, a lighter cadence of the monthly sweep."
+  },
+  {
+    "slug": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+    "name": "Find leaked keys, secure them and check your live site",
+    "why": "Finds leaked keys, plans rotation and moves secrets to safe storage, and stops if ownership of the live site cannot be confirmed."
+  },
+  {
+    "slug": "fix-api-security-gaps-with-tests-and-a-clear-pull-request",
+    "name": "Fix API security gaps with tests and a pull request",
+    "why": "Fixes sign-in, access and input gaps in API code with a test for each fix, the same shape as the code review findings."
+  },
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Drafts sourced questionnaire answers with an evidence index and open questions, a companion to the customer review workflow."
+  },
+  {
+    "slug": "quarterly-compliance-readiness-keeper",
+    "name": "Quarterly compliance readiness keeper",
+    "why": "Checks SOC 2, ISO 27001 or GDPR readiness each quarter, for clients whose customers ask for a framework beyond ASVS."
+  },
+  {
+    "slug": "connect-code-to-supabase-builder-prompt",
+    "name": "Connect Code to Supabase coding prompt",
+    "why": "Connects an app to Supabase with scoped access and safe secrets, a safe pattern to point developers to."
+  },
+  {
+    "slug": "store-sign-in-security-checker",
+    "name": "Sign-in security checker",
+    "why": "Ranks gaps in how staff and customers sign in to a store and drafts a password and second-step policy."
+  },
+  {
+    "slug": "turn-an-api-into-a-safe-mcp-server-others-can-install",
+    "name": "Turn an API into a safe, installable MCP server",
+    "why": "Builds an MCP server with sign-in and a security check, useful when a client's app exposes tools to AI agents."
+  }
+]

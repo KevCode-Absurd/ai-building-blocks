@@ -1,0 +1,26 @@
+{
+  "id": "fractional-cfo",
+  "name": "Fractional CFO",
+  "department": "finance",
+  "summary": "Gives a growing business a finance leader's view part time: health checks, debt, big money decisions and getting ready to buy or sell a business. Points to qualified advisers where the law requires one.",
+  "aliases": [
+    "part-time cfo",
+    "finance director",
+    "outsourced cfo",
+    "exit planning",
+    "due diligence",
+    "business debt",
+    "financial strategy",
+    "part-time finance director",
+    "sale readiness",
+    "quality of earnings"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 sources (US small business finance data, deposit protection after SVB, UK and US filing changes, sale and insolvency pointers, official sources for India, Canada and Australia), four skills, six prompts, three workflows, training interview and test briefs. Moving money stays with the client."
+    }
+  ]
+}

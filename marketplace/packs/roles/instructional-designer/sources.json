@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "W3C Recommendation, current version dated 12 December 2024; four principles; levels A, AA, AAA; criteria new in 2.2 (2.4.11 Focus Not Obscured (Minimum) AA, 2.5.7 Dragging Movements AA, 2.5.8 Target Size (Minimum) AA, 3.2.6 Consistent Help A, 3.3.7 Redundant Entry A, 3.3.8 Accessible Authentication (Minimum) AA, plus AAA criteria); 4.1.1 Parsing obsolete and removed; 1.2.2 Captions (Prerecorded) A; 1.4.3 contrast 4.5:1 and 3:1 for large text; 2.1.1 Keyboard; 2.2.1 Timing Adjustable (turn off, adjust to ten times, or extend with 20 seconds' warning). Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "WCAG 2 Overview",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+    "checked": "2026-11-06",
+    "supports": "WCAG 2.0 (11 Dec 2008), 2.1 (5 Jun 2018), 2.2 (5 Oct 2023, updated 12 Dec 2024); W3C encourages using the latest version; content conforming to 2.2 also conforms to 2.1 and 2.0; WCAG 2.2 approved as ISO/IEC 40500:2025; WCAG 3 an early draft; page updated 17 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Level AA: pointer targets at least 24 by 24 CSS pixels, with exceptions for spacing, an equivalent control, inline targets, user agent control and essential presentation. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "Understanding Success Criterion 1.2.5: Audio Description (Prerecorded)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html",
+    "checked": "2026-11-06",
+    "supports": "Level AA requires audio description for prerecorded video in synchronised media; 1.2.3 (Level A) allows audio description or a full text alternative; no extra description is needed when all important visual information is already in the audio. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "Making Audio and Video Media Accessible",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/media/av/",
+    "checked": "2026-11-06",
+    "supports": "Captions, transcripts (descriptive transcripts needed for people who are Deaf and blind), audio description and sign language; plan accessibility from the start; integrated description written into the script before filming; keep background audio low; updated 17 September 2024. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "An alt Decision Tree",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+    "checked": "2026-11-06",
+    "supports": "Empty alt for decorative or redundant images; alt states the function for links and buttons; brief description for informative images; text in images included in alt unless present nearby; complex images such as charts get their information elsewhere on the page; updated 13 May 2024. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "ADA Title II rule on web content and mobile app accessibility (fact sheet)",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "ADA Title II rule published 24 April 2024 adopts WCAG 2.1 Level AA for state and local government web content and mobile apps, including content provided through contractors and third parties; an interim final rule of 20 April 2026 extended compliance dates to 26 April 2027 (population 50,000 or more) and 26 April 2028 (smaller governments and special districts). Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Settlement Agreement between the United States of America and edX Inc. (DJ 202-36-255)",
+    "publisher": "US Department of Justice (ADA.gov archive)",
+    "url": "https://archive.ada.gov/edx_sa.htm",
+    "checked": "2026-11-06",
+    "supports": "Effective 2 April 2015 for four years; WCAG 2.0 AA as the minimum for edX.org, its mobile apps and learning platform within 18 months; authoring system must let course creators make conforming content; accessibility coordinator within 30 days; best-practice guidance for course creators within 90 days; content providers certify each course against a development checklist; staff training within 180 days and annually. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "European Accessibility Act",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+    "checked": "2026-11-06",
+    "supports": "Products and services covered include computers and operating systems, smartphones, e-books, e-commerce, banking services, transport services and audiovisual media services; e-learning is not listed as a covered service. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "Directive (EU) 2019/882 on the accessibility requirements for products and services",
+    "publisher": "EUR-Lex (Publications Office of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+    "checked": "2026-11-06",
+    "supports": "Article 31: Member States apply the measures from 28 June 2025; Article 4(5) holds an exemption for microenterprises providing services (conditions not read). Only a summary page was readable. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Accessibility requirements for public sector websites and apps",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "UK public sector websites and apps should meet WCAG 2.2 AA and publish an accessibility statement; intranets and extranets covered; pre-recorded audio and video published before 23 September 2020 exempt; GDS monitors and the EHRC and ECNI enforce; page updated 30 September 2024. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "SCORM Explained",
+    "publisher": "Rustici Software (scorm.com)",
+    "url": "https://scorm.com/scorm-explained/",
+    "checked": "2026-11-06",
+    "supports": "SCORM is a reference model covering content packaging (an imsmanifest XML file) and run-time communication between content and the LMS (bookmarking, score, completion); SCORM 1.2 most widely adopted; SCORM 2004 adds sequencing and navigation; LMSs interpret the specification differently. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "SCORM Versions",
+    "publisher": "Rustici Software (scorm.com)",
+    "url": "https://scorm.com/scorm-explained/business-of-scorm/scorm-versions/",
+    "checked": "2026-11-06",
+    "supports": "SCORM 1.2 (October 2001) the most widely adopted; SCORM 2004 2nd edition (July 2004), 3rd edition (October 2006, the most used 2004 edition), 4th edition (March 2009, more sequencing options). Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "What is xAPI (the Experience API)?",
+    "publisher": "Rustici Software (xapi.com)",
+    "url": "https://xapi.com/overview/",
+    "checked": "2026-11-06",
+    "supports": "xAPI records activities online and offline as actor, verb, object statements sent to a Learning Record Store; an IEEE approved standard (IEEE 9274.1.1-2023); covers mobile, simulations, games, real-world and offline learning; tracking not tied to an LMS. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "cmi5",
+    "publisher": "Rustici Software (xapi.com)",
+    "url": "https://xapi.com/cmi5/",
+    "checked": "2026-11-06",
+    "supports": "cmi5 is an xAPI profile that adds rules for how an LMS launches, authorises and tracks xAPI content and for course structure; released 2016; presented as a successor to SCORM. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "xAPI-Spec repository",
+    "publisher": "Advanced Distributed Learning (ADL) Initiative, GitHub",
+    "url": "https://github.com/adlnet/xAPI-Spec",
+    "checked": "2026-11-06",
+    "supports": "The repository holds xAPI 1.0.3; the README states the current version of the specification is xAPI 2.0, hosted with IEEE, and that no next version is planned. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "SCORM Cloud",
+    "publisher": "Rustici Software",
+    "url": "https://rusticisoftware.com/products/scorm-cloud/",
+    "checked": "2026-11-06",
+    "supports": "Hosted service to upload, preview, debug and report on SCORM, AICC, xAPI, cmi5 and LTI content; does not test strict technical conformance; free trial plan with unlimited testing. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "TalentLMS pricing",
+    "publisher": "Epignosis (TalentLMS)",
+    "url": "https://www.talentlms.com/prices",
+    "checked": "2026-11-06",
+    "supports": "Free plan with no time limit; all plans list SCORM 1.2, Tin Can (xAPI) and cmi5; API and LTI 1.3 integrations; no MCP server mentioned. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Articulate 360 pricing",
+    "publisher": "Articulate",
+    "url": "https://articulate.com/360/pricing",
+    "checked": "2026-11-06",
+    "supports": "As of November 2026 the Articulate 360 AI subscription includes Rise and Storyline; per-seat annual subscription; 14-day free trial. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Twine",
+    "publisher": "Interactive Fiction Technology Foundation (twinery.org)",
+    "url": "https://twinery.org/",
+    "checked": "2026-11-06",
+    "supports": "Open-source tool for interactive, nonlinear stories; version 2.12.1 released 6 October 2026; story formats Chapbook, Harlowe, Snowman and SugarCube; publishes to HTML; work made with it is free to use, including commercially. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Twee 3 Specification (v3.0.2)",
+    "publisher": "Interactive Fiction Technology Foundation, GitHub",
+    "url": "https://github.com/iftechfoundation/twine-specs/blob/master/twee-3-specification.md",
+    "checked": "2026-11-06",
+    "supports": "Twee files use .tw or .twee and UTF-8; passage header ':: Name [tags] {metadata}'; StoryTitle and StoryData passages (ifid required, format, format-version, start); passage names should be unique and avoid [, ] and |. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "Flowcharts - Basic Syntax",
+    "publisher": "Mermaid",
+    "url": "https://mermaid.js.org/syntax/flowchart.html",
+    "checked": "2026-11-06",
+    "supports": "Mermaid 12.3.0 docs: 'flowchart TD' or 'LR'; node ids with labels; rhombus {text} for decisions; labelled links 'A -->|text| B'; quotes for special characters; lowercase 'end' breaks a flowchart; a leading 'o' or 'x' after a link creates circle or cross edges. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Gagne's Nine Events of Instruction",
+    "publisher": "Northern Illinois University Center for Innovative Teaching and Learning",
+    "url": "https://www.niu.edu/citl/resources/guides/instructional-guide/gagnes-nine-events-of-instruction.shtml",
+    "checked": "2026-11-06",
+    "supports": "Nine events (gain attention, inform of objectives, stimulate recall, present content, provide guidance, elicit performance, provide feedback, assess performance, enhance retention and transfer), adapted from Gagne, Briggs and Wager, Principles of Instructional Design (4th ed., 1992); guide dated 2020. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "Richard E. Mayer, faculty page",
+    "publisher": "University of California, Santa Barbara, Department of Psychological and Brain Sciences",
+    "url": "https://www.psych.ucsb.edu/people/faculty/richard-mayer",
+    "checked": "2026-11-06",
+    "supports": "Mayer's research on learning from words and pictures; more than 100 experimental tests over two decades produced 12 research-based principles for designing online learning; books include Multimedia Learning and e-Learning and the Science of Instruction (4th ed., 2016, with Ruth Clark). Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "How Video Production Affects Student Engagement: An Empirical Study of MOOC Videos (Guo, Kim and Rubin, L@S 2014)",
+    "publisher": "Philip Guo (author's site, UC San Diego)",
+    "url": "https://pg.ucsd.edu/publications/edX-MOOC-video-production-and-engagement_LAS-2014.pdf",
+    "checked": "2026-11-06",
+    "supports": "6.9 million video sessions across four edX courses; median engagement time at most 6 minutes regardless of video length; viewers often watched less than half of videos over 9 minutes; tutorial videos watched for 2 to 3 minutes; speaking rates 48 to 254 words a minute (mean 156); recommendation to plan videos in chunks under 6 minutes; edX producers had urged that before the study. PDF saved by WebFetch and converted to text."
+  },
+  {
+    "n": 26,
+    "title": "English (USA) Timed Text Style Guide",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+    "checked": "2026-11-06",
+    "supports": "42 characters per line, at most 2 lines, reading speed up to 20 characters per second for adult programmes; speaker IDs and sound effects in square brackets for SDH; last change log entry 19 December 2025. Used as a reference style, not a legal rule. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "WebVTT: The Web Video Text Tracks Format",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/webvtt1/",
+    "checked": "2026-11-06",
+    "supports": "W3C Candidate Recommendation Draft dated 20 May 2026; files are UTF-8, start with 'WEBVTT', and hold cues with 'start --> end' timings in hh:mm:ss.ttt (hours optional). Opened with WebFetch."
+  },
+  {
+    "n": 28,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Truthful headers, honest subject lines, ad disclosure, a valid postal address, a clear opt-out honoured within 10 business days; transactional or relationship messages largely exempt; penalties up to $53,088 per email (figure updated January 2024). Opened with WebFetch."
+  },
+  {
+    "n": 29,
+    "title": "AI Act (Regulatory framework on AI)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Transparency rules (tell people they are dealing with a chatbot, make generative AI content identifiable, label deepfakes) take effect in August 2026; the AI Omnibus entered into force on 27 July 2026 and moved high-risk rules for Annex III uses to 2 December 2027; AI literacy duties applied from 2 February 2025; page updated 19 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 30,
+    "title": "Improving Your Test Questions",
+    "publisher": "University of Illinois Urbana-Champaign, Center for Innovation in Teaching and Learning",
+    "url": "https://citl.illinois.edu/citl-101/measurement-evaluation/exam-scoring/improving-your-test-questions",
+    "checked": "2026-11-06",
+    "supports": "Multiple-choice guidance: stem as one clear question, plausible distractors, parallel and mutually exclusive options of similar length, one best answer, sparing use of negatives and 'all/none of the above', correct answers spread across positions, at least four alternatives suggested. Opened with WebFetch."
+  }
+]

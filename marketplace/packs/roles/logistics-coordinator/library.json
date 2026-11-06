@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "daily-order-and-shipping-watcher",
+    "name": "Daily order and shipping watcher",
+    "why": "Finds late and stuck orders each morning and holds risky ones only on the owner's yes, the same job as the daily exception watch workflow."
+  },
+  {
+    "slug": "delivery-update-flow-builder",
+    "name": "Delivery update flow builder",
+    "why": "Builds the tracking updates and delay script that sit behind the delay and lost parcel message set."
+  },
+  {
+    "slug": "shipping-rate-planner",
+    "name": "Shipping rate planner",
+    "why": "Turns parcel costs into checkout zones, rates and a free-shipping line, the last step of the shipping cost review."
+  },
+  {
+    "slug": "order-threshold-planner",
+    "name": "Order threshold planner",
+    "why": "Sets free-shipping thresholds at real order peaks, to pair with the checkout rate table."
+  },
+  {
+    "slug": "3pl-bid-and-agreement-builder",
+    "name": "3PL bid and agreement builder",
+    "why": "Writes the request for pricing to send before the 3PL quote comparison prompt can put quotes side by side."
+  },
+  {
+    "slug": "3pl-bill-auditor",
+    "name": "3PL bill auditor",
+    "why": "Checks a 3PL bill against the rates and orders, part of the monthly cost and claims review."
+  },
+  {
+    "slug": "compare-freight-quotes-with-all-charges",
+    "name": "Compare freight quotes with all charges",
+    "why": "Compares freight quotes for one shipment with every charge counted, for pallet and import moves."
+  },
+  {
+    "slug": "landed-cost-allocator",
+    "name": "Landed cost allocator",
+    "why": "Spreads freight, duty and supplier costs to a true cost per unit, the sheet the customs prep skill builds."
+  },
+  {
+    "slug": "inbound-shipment-tracker-builder",
+    "name": "Inbound shipment tracker builder",
+    "why": "A shared tracker for purchase orders and freight coming in, plus the warehouse notice."
+  },
+  {
+    "slug": "monthly-returns-and-refunds-reviewer",
+    "name": "Monthly returns and refunds reviewer",
+    "why": "Finds the products driving returns and what returns cost, to feed the returns bench SOP."
+  },
+  {
+    "slug": "returns-policy-designer",
+    "name": "Returns policy designer",
+    "why": "Sets refund timing and keep-it rules from returns data, which the returns bench then follows."
+  },
+  {
+    "slug": "support-capacity-planner",
+    "name": "Support capacity planner",
+    "why": "Works out support hours and hiring dates for peak from ticket data, like step 3 of the peak season plan."
+  },
+  {
+    "slug": "freight-trip-contribution-builder",
+    "name": "Freight trip contribution builder",
+    "why": "Works out what one delivery trip earns after fuel, driver and running costs, a deeper version of the cost per drop check."
+  },
+  {
+    "slug": "amazon-reimbursement-claim-finder",
+    "name": "Amazon reimbursement claim finder",
+    "why": "Finds lost and damaged stock Amazon may owe for, the marketplace side of carrier claims; each claim still needs the client's yes."
+  }
+]

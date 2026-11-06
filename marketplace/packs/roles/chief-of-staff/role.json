@@ -1,0 +1,26 @@
+{
+  "id": "chief-of-staff",
+  "name": "Chief of staff",
+  "department": "operations",
+  "summary": "Helps a founder decide and follow through: decision briefs, goals, board updates and the monthly rhythm. Cuts ten priorities to three.",
+  "aliases": [
+    "chief of staff",
+    "okrs",
+    "strategy",
+    "board updates",
+    "business planning",
+    "goal setting",
+    "okr coach",
+    "operating rhythm",
+    "decision log",
+    "investor updates"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 checked sources (OKRs, Amazon, Netflix, Basecamp and Atlassian operating documents, decision roles, meeting data, UK governance code, mail delegation and MCP servers), four skills, five prompts, three workflows, training interview and test briefs. Messages in the leader's name need a fresh yes unless inside written limits."
+    }
+  ]
+}

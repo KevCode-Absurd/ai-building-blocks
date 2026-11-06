@@ -57,6 +57,14 @@ test("an agent's page has its own head tags, plain content and the profile data"
   assert.ok(html.indexOf('id="boot"') > html.indexOf("<body>") && html.indexOf('id="boot"') < html.indexOf("</body>"), "boot data is in the body, read by the deferred app script");
 });
 
+test("the home page carries the featured agents, so the strip paints without moving the page", async () => {
+  const t = await testEnv(PROD);
+  const html = String((await t.api("GET", "/")).body);
+  const boot = JSON.parse(html.match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)![1]);
+  const api = await t.api("GET", "/api/agents?featured=6");
+  assert.deepEqual(boot["/api/agents?featured=6"], api.body, "the page carries what the strip asks for");
+});
+
 test("outside production every page says noindex, and robots.txt disallows everything", async () => {
   const t = await testEnv({ ASSETS });
   const page = await t.api("GET", `/agents/${agent.id}`);
@@ -97,7 +105,10 @@ test("production robots.txt points to the sitemap, which lists pages, roles and 
   const t = await testEnv(PROD);
   const robots = await t.api("GET", "/robots.txt");
   assert.match(robots.body, /Disallow: \/api\//);
+  assert.match(robots.body, /^Allow: \/api\/agents$/m, "crawlers may load the agent data the pages draw from");
   assert.match(robots.body, /Sitemap: https:\/\/agents\.test\/sitemap\.xml/);
+  const data = await t.api("GET", `/api/agents/${agent.id}`);
+  assert.equal(data.res.headers.get("x-robots-tag"), "noindex", "the JSON itself is never listed");
   const map = await t.api("GET", "/sitemap.xml");
   assert.equal(map.status, 200);
   assert.match(map.res.headers.get("content-type") ?? "", /application\/xml/);

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Toward a Science of Translating (Eugene A. Nida, 1964)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL1230976W",
+    "checked": "2026-11-06",
+    "supports": "Bibliographic record (Brill, 1964; subjects: translating, Bible translating); source of the formal and dynamic equivalence ideas summarised in the canon"
+  },
+  {
+    "n": 2,
+    "title": "Translating as a Purposeful Activity: Functionalist Approaches Explained (Christiane Nord, 1997)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL2261872W",
+    "checked": "2026-11-06",
+    "supports": "Bibliographic record (St. Jerome, 1997; later Taylor & Francis edition); the functionalist, purpose-first approach summarised in the canon"
+  },
+  {
+    "n": 3,
+    "title": "The Translator's Invisibility: A History of Translation (Lawrence Venuti, 1995)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL1836772W",
+    "checked": "2026-11-06",
+    "supports": "Bibliographic record (Routledge, 1995); source of the domestication and foreignisation ideas summarised in the canon"
+  },
+  {
+    "n": 4,
+    "title": "Global communications - Microsoft Writing Style Guide",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/style-guide/global-communications/",
+    "checked": "2026-11-06",
+    "supports": "Definitions: translation changes the language and is often automated; localization adapts content to a locale's language, cultural and political expectations and is done by people who know the culture (page updated 15 Oct 2026)"
+  },
+  {
+    "n": 5,
+    "title": "Microsoft Localization Style Guides",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/globalization/reference/microsoft-style-guides",
+    "checked": "2026-11-06",
+    "supports": "Free per-language style guides covering localization guidelines, language style and usage, and market-specific data formats, for about 100 languages and variants"
+  },
+  {
+    "n": 6,
+    "title": "Localization vs. Internationalization",
+    "publisher": "W3C Internationalization",
+    "url": "https://www.w3.org/International/questions/qa-i18n",
+    "checked": "2026-11-06",
+    "supports": "What localization adapts (number, date and time formats, currency, sorting, symbols, colours, culturally sensitive text and images, legal requirements) and how internationalization makes it possible"
+  },
+  {
+    "n": 7,
+    "title": "Language tags in HTML and XML",
+    "publisher": "W3C Internationalization",
+    "url": "https://www.w3.org/International/articles/language-tags/",
+    "checked": "2026-11-06",
+    "supports": "BCP 47 language tags (RFC 5646), subtag order, advice to keep tags short, examples zh-Hans, es-419, en-GB"
+  },
+  {
+    "n": 8,
+    "title": "Unicode CLDR Project",
+    "publisher": "Unicode Consortium",
+    "url": "https://cldr.unicode.org/",
+    "checked": "2026-11-06",
+    "supports": "CLDR supplies date, number, currency and unit formats, sorting and plural rules used by operating systems, browsers and languages; CLDR 49 released 2026-10-22"
+  },
+  {
+    "n": 9,
+    "title": "Language Plural Rules (CLDR charts)",
+    "publisher": "Unicode Consortium",
+    "url": "https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html",
+    "checked": "2026-11-06",
+    "supports": "Cardinal plural categories: English one/other; French one/many/other; Polish and Russian one/few/many/other; Arabic six categories; Japanese other only"
+  },
+  {
+    "n": 10,
+    "title": "Intl.NumberFormat",
+    "publisher": "MDN Web Docs (Mozilla)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
+    "checked": "2026-11-06",
+    "supports": "Same number formatted by locale: de-DE 123.456,789; en-IN 1,23,456.789 (lakh grouping); yen shown with no minor unit (page modified 10 Jul 2025)"
+  },
+  {
+    "n": 11,
+    "title": "Personal names around the world",
+    "publisher": "W3C Internationalization",
+    "url": "https://www.w3.org/International/questions/qa-personal-names",
+    "checked": "2026-11-06",
+    "supports": "Name order varies, some people have no family name, avoid 'first name' and 'last name' labels, allow long names and Unicode"
+  },
+  {
+    "n": 12,
+    "title": "Structural markup and right-to-left text in HTML",
+    "publisher": "W3C Internationalization",
+    "url": "https://www.w3.org/International/questions/qa-html-dir",
+    "checked": "2026-11-06",
+    "supports": "Set dir=\"rtl\" on the html element, not in CSS; use logical start and end values; dir=\"auto\" and bdi for user text"
+  },
+  {
+    "n": 13,
+    "title": "Tell Google about localized versions of your page",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+    "checked": "2026-11-06",
+    "supports": "hreflang by HTML, HTTP header or sitemap; every version lists itself and the others; x-default; ISO 639-1 and ISO 3166-1 alpha-2 codes; es-419 not supported; reserved codes such as UK have no effect"
+  },
+  {
+    "n": 14,
+    "title": "Managing multi-regional and multilingual sites",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+    "checked": "2026-11-06",
+    "supports": "Google reads language from visible content, not lang attributes; one language per page; avoid automatic redirects by language; URL structure options; URL parameters not recommended"
+  },
+  {
+    "n": 15,
+    "title": "Spam policies for Google web search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-06",
+    "supports": "Scaled content abuse includes generating many pages by automated transformations such as translating scraped content that gives users little value"
+  },
+  {
+    "n": 16,
+    "title": "Glossaries (DeepL API reference)",
+    "publisher": "DeepL",
+    "url": "https://developers.deepl.com/docs/api-reference/glossaries",
+    "checked": "2026-11-06",
+    "supports": "Glossaries from TSV or CSV term pairs, v3 multilingual glossaries, limits (10 MiB per glossary, 1024 bytes per entry, 1000 glossaries per account)"
+  },
+  {
+    "n": 17,
+    "title": "Create and use glossaries (Cloud Translation Advanced)",
+    "publisher": "Google Cloud",
+    "url": "https://docs.cloud.google.com/translate/docs/advanced/glossary",
+    "checked": "2026-11-06",
+    "supports": "Unidirectional (TSV, CSV, TMX) and equivalent-term-set glossaries; size limits; case-sensitive matching; contextual glossary translation only with Translation LLM; glossaries are not versioned, so keep the source files"
+  },
+  {
+    "n": 18,
+    "title": "Translation Memory",
+    "publisher": "Crowdin Support",
+    "url": "https://support.crowdin.com/translation-memory/",
+    "checked": "2026-11-06",
+    "supports": "How a translation memory stores segments, Perfect, 100% and fuzzy matches, TMX/XLSX/CSV import and export up to 200 MB, auto-translation via TM using only 100% and Perfect matches"
+  },
+  {
+    "n": 19,
+    "title": "XLIFF Version 2.1 (OASIS Standard)",
+    "publisher": "OASIS",
+    "url": "https://docs.oasis-open.org/xliff/xliff-core/v2.1/xliff-core-v2.1.html",
+    "checked": "2026-11-06",
+    "supports": "XLIFF 2.1 (OASIS Standard, 13 February 2018) carries localizable content between tools in the localization process"
+  },
+  {
+    "n": 20,
+    "title": "MQM (Multidimensional Quality Metrics)",
+    "publisher": "MQM Council",
+    "url": "https://themqm.org/",
+    "checked": "2026-11-06",
+    "supports": "Analytic translation quality evaluation with a shared error typology (accuracy, fluency, terminology, style and more), severities and scores; aligned with ISO 5060"
+  },
+  {
+    "n": 21,
+    "title": "Findings of the WMT25 General Machine Translation Shared Task: Time to Stop Evaluating on Easy Test Sets (Kocmi et al., 2025)",
+    "publisher": "Association for Computational Linguistics (WMT 2025)",
+    "url": "https://aclanthology.org/2025.wmt-1.22/",
+    "checked": "2026-11-06",
+    "supports": "Nov 2025 results: 30 language pairs, 60 systems, human evaluation on half; best system in the top cluster for 14 of 16 pairs; human references in the winning cluster for 6 of 15; automatic metrics biased; weaknesses with terminology, non-standard input, gender and low-resource languages (PDF read)"
+  },
+  {
+    "n": 22,
+    "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+    "checked": "2026-11-06",
+    "supports": "Commission guidelines on AI Act Article 50, published 20 July 2026 and updated 5 November 2026; the transparency obligations apply from 2 August 2026"
+  },
+  {
+    "n": 23,
+    "title": "Labelling AI-Generated Content: What Article 50 of the AI Act Actually Requires of Translation (MQM RFC-1)",
+    "publisher": "MQM Council (summary, not the official text)",
+    "url": "https://themqm.org/news/eu-ai-act-article-50-labelling-translated-content/",
+    "checked": "2026-11-06",
+    "supports": "Secondary summary dated 2 Aug 2026, used because the Commission landing page does not show the detail: machine translation treated as editing for the provider marking duty; deployer label for public-interest text unless human review and editorial responsibility; each translated version needs its own review"
+  },
+  {
+    "n": 24,
+    "title": "Content Guidelines (AI-generated content)",
+    "publisher": "Amazon Kindle Direct Publishing",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G200672390",
+    "checked": "2026-11-06",
+    "supports": "Authors must disclose AI-generated content, including translations created by an AI tool, even if edited afterwards; AI-assisted work need not be disclosed"
+  },
+  {
+    "n": 25,
+    "title": "Tips for Filing Forms by Mail",
+    "publisher": "U.S. Citizenship and Immigration Services",
+    "url": "https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail",
+    "checked": "2026-11-06",
+    "supports": "Foreign-language documents need a complete English translation certified as complete and accurate, with the translator's certification of competence (page updated 10 Jul 2026)"
+  },
+  {
+    "n": 26,
+    "title": "Certifying a document",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/certifying-a-document",
+    "checked": "2026-11-06",
+    "supports": "For documents not in English or Welsh, the translator confirms in writing that it is a true and accurate translation, with the date, full name and contact details"
+  },
+  {
+    "n": 27,
+    "title": "Guidance on Certified Translations",
+    "publisher": "Chartered Institute of Linguists (CIOL)",
+    "url": "https://www.ciol.org.uk/guidance-certified-translations",
+    "checked": "2026-11-06",
+    "supports": "What a UK certified translation certificate contains; use a qualified translator or company affiliated to CIOL, ITI or ATC; public registers to find one"
+  },
+  {
+    "n": 28,
+    "title": "Getting your public documents accepted in the EU",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/family/couple/getting-public-documents-accepted/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Multilingual standard forms can replace translations of covered public documents; a certified translation may be asked for only exceptionally; no apostille for covered documents (page last checked 17 Feb 2026)"
+  },
+  {
+    "n": 29,
+    "title": "English (USA) Timed Text Style Guide",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+    "checked": "2026-11-06",
+    "supports": "English subtitles: 42 characters per line; reading speed up to 20 characters per second for adult and 17 for children's programmes"
+  },
+  {
+    "n": 30,
+    "title": "Timed Text Style Guide: General Requirements",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "checked": "2026-11-06",
+    "supports": "Two lines maximum per subtitle; minimum duration five-sixths of a second; maximum seven seconds per subtitle event"
+  }
+]

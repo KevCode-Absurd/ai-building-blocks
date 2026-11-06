@@ -9,9 +9,9 @@ import type { Env } from "./env.ts";
 import { AREAS } from "./core/types.ts";
 import { getRole, listRoles } from "./modules/directory/roles.ts";
 import { listPersonas } from "./modules/directory/service.ts";
-import { agentPayload } from "./modules/directory/routes.ts";
+import { agentPayload, featuredPayload, HOME_FEATURED } from "./modules/directory/routes.ts";
 import { areaLabel } from "./modules/directory/views.ts";
-import { AGENTS_TITLE, agentTitle, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
+import { AGENTS_TITLE, agentTitle, CONNECT_TITLE, GUIDES_TITLE, roleTitle, SITE_SUFFIX } from "./modules/directory/titles.ts";
 import type { Persona } from "./core/types.ts";
 
 /** The how-to guides (src/ui/content/guides). Titles match each file's first heading (test/pages.test.ts checks). */
@@ -102,7 +102,8 @@ const notFound = (): PageView => ({
 });
 
 async function homePage(env: Env): Promise<PageView> {
-  const count = (await listPersonas(env)).length;
+  const everyone = await listPersonas(env);
+  const count = everyone.length;
   const origin = originOf(env);
   return {
     status: 200, index: true, path: "/", title: HOME_TITLE, description: HOME_DESCRIPTION,
@@ -111,6 +112,7 @@ async function homePage(env: Env): Promise<PageView> {
         potentialAction: { "@type": "SearchAction", target: `${origin}/agents?q={search_term_string}`, "query-input": "required name=search_term_string" } },
     ],
     body: `<h1>Hire an AI agent. It works in your own AI.</h1><p>${count} named AI agents, each hired for a job role: SEO, sales, bookkeeping, support and more. Every agent is free. Download one, or connect your AI and load it there. It works on your own AI plan.</p><p><a href="/agents">Meet the agents</a> · <a href="/connect">Connect your AI</a> · <a href="/guides">Read the guides</a></p>`,
+    boot: { [`/api/agents?featured=${HOME_FEATURED}`]: featuredPayload(everyone, HOME_FEATURED) },
   };
 }
 
@@ -166,7 +168,7 @@ async function agentPage(env: Env, id: string): Promise<PageView> {
 function guidesPage(): PageView {
   return {
     status: 200, index: true, path: "/guides",
-    title: `Guides to free AI agent packs | ${SITE}`,
+    title: GUIDES_TITLE,
     description: "How to load a free AI Blocks agent into the AI you use, and how to train your own version of an agent.",
     body: `<h1>Guides</h1><ul>${GUIDES.map(g => `<li><a href="/guides/${g.slug}">${esc(g.title)}</a>: ${esc(g.description)}</li>`).join("")}</ul>`,
   };
@@ -185,7 +187,7 @@ function guidePage(slug: string): PageView {
 function connectPage(): PageView {
   return {
     status: 200, index: true, path: "/connect",
-    title: `Connect your AI to free AI agents | ${SITE}`,
+    title: CONNECT_TITLE,
     description: "Add AI Blocks to Claude, ChatGPT or another AI app once, then ask it to find an agent and load it into your chat. Free, on your own AI plan.",
     body: `<h1>Connect your AI</h1><p>Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.</p><p>Developers can read every agent through the public API: <a href="/api/agents">/api/agents</a> and <a href="/packs/index.json">/packs/index.json</a>.</p>`,
   };
@@ -297,7 +299,9 @@ export function robotsTxt(env: Env): Response {
   if (!isProduction(env)) return text("# Not the live site: nothing here should be indexed.\nUser-agent: *\nDisallow: /\n", "text/plain");
   const origin = originOf(env);
   const blocked = ["/api/", "/oauth/", "/mcp", "/ops", "/studio", "/jobs", "/requests/", "/review", "/new", "/invite", "/notifications", "/sign-in", "/expert$", "/experts/", "/*.zip$"];
-  return text(`User-agent: *\n${blocked.map(p => `Disallow: ${p}`).join("\n")}\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`, "text/plain");
+  // The public pages load these two while they draw, so a crawler that runs the app needs them (the longer rule wins).
+  const allowed = ["/api/agents", "/api/config"];
+  return text(`User-agent: *\n${blocked.map(p => `Disallow: ${p}`).join("\n")}\n${allowed.map(p => `Allow: ${p}`).join("\n")}\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`, "text/plain");
 }
 
 export async function sitemapXml(env: Env): Promise<Response> {

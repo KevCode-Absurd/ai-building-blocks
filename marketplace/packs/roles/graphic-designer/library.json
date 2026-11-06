@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "design-brief-rules-writer",
+    "name": "Design brief rules writer",
+    "why": "Writes a tight design brief with clear limits, the same first step as this kit's brief and copy deck skill."
+  },
+  {
+    "slug": "one-symbol-concept-finder",
+    "name": "One-symbol concept finder",
+    "why": "Finds the one idea a poster or cover should carry, which keeps the Level 1 message single."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "A guided run from source files to a poster layout, checked text and an export checklist."
+  },
+  {
+    "slug": "type-led-poster-planner",
+    "name": "Type-led poster planner",
+    "why": "Plans a type-only poster that reads from far away, for jobs with no usable photos."
+  },
+  {
+    "slug": "page-grid-and-type-planner",
+    "name": "Page grid and type planner",
+    "why": "Builds the grid, short type list and white-space plan that the print layout spec starts from."
+  },
+  {
+    "slug": "plain-page-type-checker",
+    "name": "Plain page type checker",
+    "why": "A second check on type size, spacing and line length for where the piece is read."
+  },
+  {
+    "slug": "font-pair-shortlist-maker",
+    "name": "Font pair shortlist maker",
+    "why": "Three font pairs with sizes and line spacing, for clients with no brand fonts yet."
+  },
+  {
+    "slug": "mood-colour-palette-planner",
+    "name": "Mood colour palette planner",
+    "why": "A small palette with one job per colour, ready for the contrast check."
+  },
+  {
+    "slug": "visual-system-rules-writer",
+    "name": "Visual system rules writer",
+    "why": "Firm colour, type and grid rules, the base for a reusable social or print template kit."
+  },
+  {
+    "slug": "layout-default-breaker",
+    "name": "Layout default breaker",
+    "why": "Spots the layout choices a template made for you and offers hand-made alternatives."
+  },
+  {
+    "slug": "wayfinding-sign-planner",
+    "name": "Wayfinding sign planner",
+    "why": "Plans every decision point and sign for a venue, alongside the sign schedule prompt."
+  },
+  {
+    "slug": "story-carousel-ad-writer",
+    "name": "Story carousel ad writer",
+    "why": "Card-by-card words and pictures for a carousel, the content side of the social graphics spec."
+  },
+  {
+    "slug": "reusable-reel-cover-recipe-builder",
+    "name": "Reusable Reel cover recipe builder",
+    "why": "A repeatable Reel cover style from a portrait, title and brand rules, for a consistent feed."
+  }
+]

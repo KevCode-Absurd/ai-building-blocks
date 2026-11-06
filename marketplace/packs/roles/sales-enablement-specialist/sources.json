@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "What is Demand-Side Sales?",
+    "publisher": "The Re-Wired Group",
+    "url": "https://therewiredgroup.com/learn/demand-side-sales-101-stop-selling-and-help-your-customers-make-progress/",
+    "checked": "2026-11-06",
+    "supports": "Demand-side selling starts from the buyer's struggle and the progress they want rather than product features; struggling moments; the four forces of push, pull, anxiety and habit; a buying timeline of first thought, passive looking, active looking, deciding, onboarding and ongoing use; names the book Demand-Side Sales 101: Stop Selling and Help Your Customers Make Progress. Undated article signed Bob. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "The Re-Wired Group",
+    "publisher": "The Re-Wired Group",
+    "url": "https://therewiredgroup.com/",
+    "checked": "2026-11-06",
+    "supports": "Bob Moesta is listed as CEO and founder and Greg Engle as a founding partner; the firm uses a Jobs to be Done method. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "What is BATNA? How to Find Your Best Alternative to a Negotiated Agreement",
+    "publisher": "Program on Negotiation, Harvard Law School",
+    "url": "https://www.pon.harvard.edu/daily/batna/translate-your-batna-to-the-current-deal/",
+    "checked": "2026-11-06",
+    "supports": "BATNA means best alternative to a negotiated agreement, what you will do if no deal is reached; credits Roger Fisher, William Ury and Bruce Patton's Getting to Yes; translate the alternative into the same terms as the offer, use realistic alternatives and reassess as facts change. Article by Guhan Subramanian dated 30 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "The Kirkpatrick Model",
+    "publisher": "Kirkpatrick Partners",
+    "url": "https://www.kirkpatrickpartners.com/the-kirkpatrick-model/",
+    "checked": "2026-11-06",
+    "supports": "Four levels of training evaluation (reaction, learning, behavior, results), created by Donald Kirkpatrick in the 1950s; advises starting from level 4 results and measuring behavior soon after training. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "Organizing Instruction and Study to Improve Student Learning (practice guide)",
+    "publisher": "US Institute of Education Sciences, What Works Clearinghouse",
+    "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+    "checked": "2026-11-06",
+    "supports": "September 2007 practice guide, panel chaired by Harold Pashler: space learning over time (moderate evidence); use quizzes to re-expose learners to key content (strong evidence); ask deep explanatory questions (strong evidence). Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "Replication and Analysis of Ebbinghaus' Forgetting Curve",
+    "publisher": "PLOS ONE (Murre and Dros, 2015)",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0120644",
+    "checked": "2026-11-06",
+    "supports": "Successful replication of Ebbinghaus's forgetting curve using the savings method; single subject, about 70 hours over roughly 75 days; authors list caveats including one participant and a compressed schedule. Peer-reviewed. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Mastering the talk-to-listen ratio in sales calls",
+    "publisher": "Gong",
+    "url": "https://www.gong.io/blog/talk-to-listen-conversion-ratio/",
+    "checked": "2026-11-06",
+    "supports": "2025 analysis of 326,000 sales calls of 10 minutes or more: sellers talked 60% on average; 57% in won deals and 62% in lost deals; low performers swung from 54% (won) to 64% (lost); won deals averaged 15 to 16 questions and lost deals about 20; long seller monologues were more common in lost deals; a 2016 post had cited 43% talk time. Published 21 August 2025, modified 4 March 2026. Vendor data. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "State of Sales Report",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/resources/research-reports/state-of-sales/",
+    "checked": "2026-11-06",
+    "supports": "Nine in ten sales teams use AI agents or expect to within two years. Vendor survey page with no stated edition, sample or date. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "HubSpot publishes a remote MCP server for CRM access; the page lists read and write access to contacts, companies, deals and engagements (calls, emails, meetings, notes, tasks), while its FAQ mentions read-only access to standard records; OAuth connection. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "Set up and customize pipelines",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines",
+    "checked": "2026-11-06",
+    "supports": "Each deal stage carries a probability; conditional stage rules can make properties required before a deal enters a stage; separate pipelines only when stages differ. Last updated 29 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "FTC Policy Statement Regarding Advertising Substantiation",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation",
+    "checked": "2026-11-06",
+    "supports": "Advertisers need a reasonable basis for objective claims before making them; a claim that signals a level of support, such as 'tests prove', needs at least that level. Issued 23 November 1984. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "CAP Code, Section 3: Misleading advertising",
+    "publisher": "Advertising Standards Authority / CAP (UK)",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/03.html",
+    "checked": "2026-11-06",
+    "supports": "Rule 3.7: hold documentary evidence for objective claims before publishing; rules 3.33 to 3.35: comparisons with identifiable competitors must compare products meeting the same need, objectively compare material, relevant, verifiable and representative features, and not create confusion; rule 3.41: no denigration of competitors; rule 3.44: no fake reviews. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "NIST Special Publication 811: Guide for the Use of the International System of Units (SI)",
+    "publisher": "US National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/pml/special-publication-811",
+    "checked": "2026-11-06",
+    "supports": "2008 edition by Thompson and Taylor with chapters on rules and style for unit symbols, values of quantities and unit names; not updated for the SI changes of 20 May 2019, for which NIST points to SP 330 (2019). Page updated 8 December 2025. Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "Statement of Policy Regarding Comparative Advertising",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/statement-policy-regarding-comparative-advertising",
+    "checked": "2026-11-06",
+    "supports": "The FTC supports truthful, non-deceptive comparisons that name competitors, with a clear basis for comparison; truthful disparagement is allowed; comparative claims are judged like other claims. Issued 13 August 1979. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Dealings with competitors",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-competitors",
+    "checked": "2026-11-06",
+    "supports": "Price fixing, bid rigging and market division between competitors are treated as always illegal; risk arises when competitors stop acting independently. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "Price discrimination: Robinson-Patman violations",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/price-discrimination-robinson-patman-violations",
+    "checked": "2026-11-06",
+    "supports": "Price differences between competing buyers of goods (not services) of like grade and quality can break the Robinson-Patman Act when they may harm competition; defences include cost justification and meeting a competitor's price in good faith; allowances and services must be offered on proportionally equal terms. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "18 U.S. Code 2511: Interception and disclosure of wire, oral, or electronic communications prohibited",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/uscode/text/18/2511",
+    "checked": "2026-11-06",
+    "supports": "Under 2511(2)(d), federal law allows a person who is a party to a call, or who has one party's prior consent, to record it, unless done for a criminal or tortious purpose. Statute text. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "RCW 9.73.030: Intercepting, recording, or divulging private communication",
+    "publisher": "Washington State Legislature",
+    "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030",
+    "checked": "2026-11-06",
+    "supports": "Washington requires the consent of all parties to record private communications; consent counts as obtained when one party announces the recording to all others in a reasonably effective way and the announcement is itself recorded. Statute text. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Florida Statutes 934.03: Interception and disclosure of wire, oral, or electronic communications prohibited",
+    "publisher": "Florida Legislature",
+    "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0934/Sections/0934.03.html",
+    "checked": "2026-11-06",
+    "supports": "Under 934.03(2)(d), interception is lawful when all parties to the communication have given prior consent. 2026 Florida Statutes. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "What are the call recording laws?",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/calling/what-are-the-call-recording-laws",
+    "checked": "2026-11-06",
+    "supports": "Describes one-party and all-party consent jurisdictions and says EU rules generally require consent from all parties (vendor summary); HubSpot calling records and transcribes calls by default, with exemptions by region, number or team; a consent message plays to inbound callers before a rep answers; recommends asking for consent by policy and seeking legal counsel. Last updated 14 September 2026. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Manage Teams recording policies for meetings and events",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/meeting-recording",
+    "checked": "2026-11-06",
+    "supports": "Admins control who can record; an ExplicitRecordingConsent policy setting requires participants to give explicit consent before they are recorded or transcribed; recordings are stored in OneDrive or SharePoint with permissions; external participants cannot record except through compliance recording. Page dated 6 July 2026. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "Record a video meeting",
+    "publisher": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/9308681",
+    "checked": "2026-11-06",
+    "supports": "Participants are notified when recording starts and stops; an administrator can require explicit consent before Record, Transcribe or note-taking features start (off by default); recordings save to the organizer's Drive; recording is limited to listed Workspace editions. Undated help page. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "Legal grounds for processing data",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en",
+    "checked": "2026-11-06",
+    "supports": "The six GDPR legal grounds; valid consent must be freely given, informed, specific, clear and as easy to withdraw as to give; consent is not freely given where there is a clear imbalance such as employer and employee; legitimate interests need a check that people's rights are not seriously affected. Undated page. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Prohibited practices include emotion recognition in workplaces and education institutions, applying since 2 February 2025; transparency obligations apply from August 2026; high-risk rules for Annex III areas including employment apply from 2 December 2027 after the AI Omnibus, in force since 27 July 2026. Page updated 19 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "New York Civil Rights Law 52-c*2: Employers engaged in electronic monitoring; prior notice required",
+    "publisher": "New York State Senate",
+    "url": "https://www.nysenate.gov/legislation/laws/CVR/52-C*2",
+    "checked": "2026-11-06",
+    "supports": "Employers with a place of business in New York that monitor employees' phone calls, email or internet use must give prior written notice on hiring, get an acknowledgment and post the notice; enforced by the attorney general with civil penalties of USD 500, 1,000 and 3,000 for first, second and later offences. Most recent revision dated 13 May 2022. Opened with WebFetch."
+  }
+]

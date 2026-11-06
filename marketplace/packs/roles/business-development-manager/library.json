@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "capability-pitch-letter-writer",
+    "name": "Capability pitch letter writer",
+    "why": "Turns what the firm can do into a short pitch letter where every line can be shown, a companion to the capability statement."
+  },
+  {
+    "slug": "prepare-an-enterprise-account-plan",
+    "name": "Prepare an enterprise account plan",
+    "why": "Maps buyer roles and deal risks for a target account, the same ground as the account plan skill."
+  },
+  {
+    "slug": "traction-business-development",
+    "name": "Partnership experiment planner",
+    "why": "Plans a small, capped partnership test with measures and a stop rule before a bigger commitment."
+  },
+  {
+    "slug": "cold-email-claim-checker",
+    "name": "Cold email claim checker",
+    "why": "Checks each claim in an intro email against the facts before it goes to a buyer."
+  },
+  {
+    "slug": "cold-outreach-batch-runner",
+    "name": "Cold outreach batch runner",
+    "why": "Runs intro emails in checked weekly batches and learns from the last batch, like the weekly cycle in the campaign workflow."
+  },
+  {
+    "slug": "stranger-first-message-writer",
+    "name": "Stranger first-message writer",
+    "why": "Writes a first email or call opening a busy buyer can read in seconds."
+  },
+  {
+    "slug": "sales-call-question-planner",
+    "name": "Sales call question planner",
+    "why": "Plans questions for first meetings and site walks from what you already know about the buyer."
+  },
+  {
+    "slug": "problem-cost-question-writer",
+    "name": "Problem cost question writer",
+    "why": "Writes questions that surface what a buyer's problem costs them, the Metrics and Pain in MEDDICC."
+  },
+  {
+    "slug": "stalled-deal-revival-desk",
+    "name": "Stalled deal revival desk",
+    "why": "Finds why a quiet deal stalled and what to send next, a follow-on to the MEDDICC review."
+  },
+  {
+    "slug": "deal-win-reason-finder",
+    "name": "Deal win reason finder",
+    "why": "Finds why buyers really choose the firm, which feeds the rules for a good account and the why-choose-us facts."
+  },
+  {
+    "slug": "elevator-pitch-writer",
+    "name": "Elevator pitch writer",
+    "why": "Short spoken versions of the capability statement for site visits and networking."
+  }
+]

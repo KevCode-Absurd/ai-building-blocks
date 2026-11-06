@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 4 Oct 2026). Level AA ratios of 4.5:1 for normal text and 3:1 for large text; large text is 18 pt, or 14 pt bold; ratios are not rounded; logotypes and incidental text are exempt but brand guidelines do not exempt other text; the contrast formula and the 1:1 to 21:1 range"
+  },
+  {
+    "n": 2,
+    "title": "Understanding Success Criterion 1.4.11: Non-text Contrast",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 3:1 for icons, chart lines and other graphics needed to understand content, and for controls; exceptions for decorative graphics, logos, photos and flags, and graphics whose information is also given as text"
+  },
+  {
+    "n": 3,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. W3C Recommendation dated 12 December 2024; 1.4.1 Use of Color (colour must not be the only visual means of conveying information); 1.4.6 Contrast (Enhanced) at 7:1 and 4.5:1; 1.4.12 Text Spacing values"
+  },
+  {
+    "n": 4,
+    "title": "Images Tutorial",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 8 Apr 2026). How to write text alternatives for informative, decorative, functional and complex images and images of text; alt text depends on context"
+  },
+  {
+    "n": 5,
+    "title": "Guide to the ADA Accessibility Standards, Chapter 7: Signs",
+    "publisher": "U.S. Access Board",
+    "url": "https://www.access-board.gov/ada/guides/chapter-7-signs/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (guide dated August 2022). Minimum visual character heights by mounting height and viewing distance; light-on-dark or dark-on-light contrast with no set minimum; non-glare finish; no italic, script or decorative letters; which signs need raised characters and braille; tactile sign mounting at 48 to 60 inches; 6-inch pictogram field"
+  },
+  {
+    "n": 6,
+    "title": "Color Blindness",
+    "publisher": "National Eye Institute (US National Institutes of Health)",
+    "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 5 Nov 2025). About 1 in 12 men have colour vision deficiency; red-green is the most common type"
+  },
+  {
+    "n": 7,
+    "title": "A new era for inclusion begins: the European Accessibility Act enters into force",
+    "publisher": "AccessibleEU (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 27 Jun 2025). European Accessibility Act requirements apply from 28 June 2025 and cover e-commerce, e-books, banking, transport and other products and services"
+  },
+  {
+    "n": 8,
+    "title": "Accessible communication formats",
+    "publisher": "GOV.UK (Disability Unit)",
+    "url": "https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 17 Jun 2026). Large print means 16 point and above; 50 to 65 characters per line and never more than 80; cut text before cutting type size; do not make large print by enlarging on a photocopier"
+  },
+  {
+    "n": 9,
+    "title": "Butterick's Practical Typography: Summary of key rules",
+    "publisher": "Matthew Butterick (author's own site, 2nd edition)",
+    "url": "https://practicaltypography.com/summary-of-key-rules.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; author and edition confirmed on the site's home page. 10 to 12 point body text in print and 15 to 25 pixels on the web; line spacing 120 to 145% of the point size; 45 to 90 characters per line; capitals for less than one line; no underlining; centred text used sparingly"
+  },
+  {
+    "n": 10,
+    "title": "Visual Hierarchy in UX: Definition (Kelley Gordon, 17 Jan 2021)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/visual-hierarchy-ux-definition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hierarchy comes from colour and contrast, scale and grouping; suggests no more than three type sizes; proximity, white space and common regions make groups; the squint or blur test"
+  },
+  {
+    "n": 11,
+    "title": "Interaction of Color, 50th Anniversary Edition (Josef Albers)",
+    "publisher": "Yale University Press",
+    "url": "https://yalebooks.yale.edu/book/9780300179354/interaction-of-color/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book, first published 1963, 50th anniversary edition 2013; teaches through colour studies how colours interact and how we perceive them"
+  },
+  {
+    "n": 12,
+    "title": "The Non-Designer's Design Book, 4th Edition (Robin Williams)",
+    "publisher": "Peachpit Press",
+    "url": "https://www.peachpit.com/store/non-designers-design-book-9780133966152",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 4th edition published 19 Nov 2014; chapters on proximity, alignment, repetition and contrast"
+  },
+  {
+    "n": 13,
+    "title": "Instagram Help Center: photo resolution and aspect ratios (article 1631821640426723; descriptive title)",
+    "publisher": "Instagram Help Center (Meta)",
+    "url": "https://www.facebook.com/help/instagram/1631821640426723",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (the help.instagram.com copy of the same article loads no text for the fetch tool). Widths from 320 to 1080 pixels; aspect ratios from 1.91:1 to 4:5; portrait 1080 x 1350; landscape 1080 x 566; other ratios are cropped"
+  },
+  {
+    "n": 14,
+    "title": "Meta Ads Guide: Instagram Stories image ad specs",
+    "publisher": "Meta",
+    "url": "https://www.facebook.com/business/ads-guide/update/image/instagram-story",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). 9:16 ratio, 1440 x 2560 recommended; keep about 14% at the top, 35% at the bottom and 6% at each side free of text and logos; minimum width 500 pixels"
+  },
+  {
+    "n": 15,
+    "title": "Pinterest product specs",
+    "publisher": "Pinterest Business Help Center",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-product-specs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Standard Pins at 2:3 or 1000 x 1500 pixels, taller Pins may be cut off in feeds; PNG or JPEG; carousel Pins of 2 to 5 images at 1:1 or 2:3"
+  },
+  {
+    "n": 16,
+    "title": "Set Trim Size, Bleed, and Margins",
+    "publisher": "Amazon Kindle Direct Publishing Help",
+    "url": "https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. One printer's published bleed rule: 0.125 in (3.2 mm) past the trim on the top, bottom and outside edges; minimum outside margins of 0.25 in without bleed and 0.375 in with bleed; gutter grows with page count"
+  },
+  {
+    "n": 17,
+    "title": "Domestic Mail Manual 101: Physical Standards for Commercial Letters, Flats and Parcels (section 6.2.2, postcard dimensions)",
+    "publisher": "United States Postal Service (Postal Explorer)",
+    "url": "https://pe.usps.com/text/dmm300/101.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Card-price postcards must be rectangular, at least 5 x 3.5 in and 0.007 in thick, and at most 6 x 4.25 in and 0.016 in thick"
+  },
+  {
+    "n": 18,
+    "title": "How to prepare perfect print files for print-on-demand (Marianna Zvaigzne, 28 Jul 2025)",
+    "publisher": "Printful",
+    "url": "https://www.printful.com/blog/everything-you-need-to-know-to-prepare-the-perfect-printfile",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Printful's own file rules: 150 to 300 DPI with 150 as its usual target and 300 for small detailed items; PNG or JPEG, PNG only for embroidery; sRGB rather than CMYK files; transparent backgrounds; a 12 x 16 in t-shirt print area (15 x 18 in on some DTG products); white underbase on non-white garments"
+  },
+  {
+    "n": 19,
+    "title": "DTG vs. screen printing (Maisha Rachmat, 23 Sep 2026)",
+    "publisher": "Printful",
+    "url": "https://www.printful.com/blog/dtg-vs-screen-printing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vendor guide: screen printing needs one screen per colour and vendors usually cap designs at about nine colours; thin lines can clog; typical minimums of 5 to 100 units and Printful's from 500; DTG has no minimum and handles gradients; screen prints usually last longer; Printful's own wash-durability claim for DTG"
+  },
+  {
+    "n": 20,
+    "title": "Color matching guide for print-on-demand products (Una Savčenko, 12 Jun 2024)",
+    "publisher": "Printful",
+    "url": "https://www.printful.com/blog/color-matching-guide-print-on-demand/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RGB covers more colours than CMYK so neons and very saturated shades shift in print; fabric weave changes how colour looks; order samples and print a swatch sheet before selling"
+  },
+  {
+    "n": 21,
+    "title": "Copyright vs trademark: What every creator needs to know (Andris Mucenieks, 20 Jan 2026)",
+    "publisher": "Printful",
+    "url": "https://www.printful.com/blog/copyright-and-trademark-printing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Other businesses' logos, names, slogans, characters and song lyrics need permission; credit does not replace permission; use public domain or licensed material"
+  },
+  {
+    "n": 22,
+    "title": "SIL Open Font License",
+    "publisher": "SIL International (openfontlicense.org)",
+    "url": "https://openfontlicense.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OFL 1.1 (text dated 26 Feb 2007; FAQ update 7, Nov 2023): fonts may be used in posters, artwork, logos and websites with no acknowledgement required; fonts may be modified and redistributed; Reserved Font Names"
+  },
+  {
+    "n": 23,
+    "title": "Copyright Office Releases Part 2 of Artificial Intelligence Report (NewsNet 1060, 29 Jan 2025)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prompts alone do not make an AI output protectable; human expressive inputs, selection and arrangement, and real modifications can be"
+  },
+  {
+    "n": 24,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "AI Act Service Desk (European Commission)",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Providers must mark synthetic images, audio, video and text in a machine-readable way; deployers must disclose deepfakes; lighter disclosure for evidently artistic, creative or satirical work; exception for human-reviewed text with editorial responsibility"
+  },
+  {
+    "n": 25,
+    "title": "AI Act, Article 113: Entry into force and application",
+    "publisher": "AI Act Service Desk (European Commission)",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The general application date of 2 August 2026, which covers Article 50; the page marks Digital Omnibus changes to other dates but not to this one"
+  },
+  {
+    "n": 26,
+    "title": "Allergen guidance for food businesses",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 17 Jul 2026). The 14 allergens; for non-prepacked food, allergen information may be given verbally if a clearly visible written notice says how to get it; prepacked for direct sale food needs a full ingredients list with allergens emphasised"
+  },
+  {
+    "n": 27,
+    "title": "Menu Labeling Requirements",
+    "publisher": "U.S. Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/menu-labeling-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (content current as of 13 Dec 2023). Chains with 20 or more locations show calories on menus and menu boards, plus a 2,000-calorie statement and a statement that written nutrition information is available; compliance date 7 May 2018"
+  },
+  {
+    "n": 28,
+    "title": "Food information to consumers: legislation",
+    "publisher": "European Commission, Food Safety",
+    "url": "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/food-information-consumers-legislation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EU) 1169/2011 applied from 13 December 2014 and requires allergen information for non-prepacked food, including in restaurants and cafes"
+  },
+  {
+    "n": 29,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Canva's official remote MCP server lets an AI assistant generate and edit designs, search designs and folders, use assets, brand kits and templates, export to PDF, PNG, JPG, PPTX and MP4, resize and comment. Its access page (also opened) says each user signs in individually and edits are limited to designs that user can edit"
+  },
+  {
+    "n": 30,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Figma's MCP server gives AI agents design context (frames, variables, components) and can write to the canvas in beta; the remote server is recommended; seat and plan requirements"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "data-file-clean-up-loop",
+    "name": "Data file clean-up loop",
+    "why": "Fixes and re-checks a messy file until it passes and saves the rules, the same habit as the profiling and clean-up skill."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Joins two tables on a key and reconciles the rows, covering the join counts and unmatched keys this role always reports."
+  },
+  {
+    "slug": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "name": "Build a weekly KPI report with a forecast and dashboard",
+    "why": "A rerunnable weekly report with a trend and forecast, a close match to the monthly report refresh workflow."
+  },
+  {
+    "slug": "prepare-a-survey-findings-briefing",
+    "name": "Prepare a survey findings briefing",
+    "why": "Turns survey results into a checked findings table with sampling caveats, like the survey read-out prompt."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Scores how far survey answers can be trusted before they go into a brief."
+  },
+  {
+    "slug": "cohort-funnel-reader",
+    "name": "Cohort funnel reader",
+    "why": "Reads results by join date to see where each group drops off, the cohort side of the insight brief skill."
+  },
+  {
+    "slug": "findings-and-guesses-separator",
+    "name": "Findings and guesses separator",
+    "why": "Sorts every line of an analysis into proven, likely or guess, a useful last check before sending a brief."
+  },
+  {
+    "slug": "plan-what-to-make-each-week-from-your-past-sales",
+    "name": "Plan what to make each week from your past sales",
+    "why": "Puts a sales forecast to work in a weekly production plan, a next step after the forecast skill."
+  },
+  {
+    "slug": "report-definition-drift-review-assistant",
+    "name": "Report definition drift review assistant",
+    "why": "Finds where a recurring report's metric definition changed, a common cause of numbers that suddenly jump."
+  },
+  {
+    "slug": "vanity-metric-fixer",
+    "name": "Vanity metric fixer",
+    "why": "Replaces numbers that look good but explain nothing with per-customer measures that show cause."
+  },
+  {
+    "slug": "weekly-numbers-sheet-designer",
+    "name": "Weekly numbers sheet designer",
+    "why": "Designs a one-page sheet of the few numbers an owner should watch each week."
+  }
+]

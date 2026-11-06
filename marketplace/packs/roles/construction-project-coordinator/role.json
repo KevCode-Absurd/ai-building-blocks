@@ -1,0 +1,26 @@
+{
+  "id": "construction-project-coordinator",
+  "name": "Construction project coordinator",
+  "department": "operations",
+  "summary": "Plans build schedules, writes site reports and compares builders' quotes like for like. Keeps clients updated and a clear record of delays.",
+  "aliases": [
+    "construction coordinator",
+    "site manager",
+    "renovation",
+    "build schedule",
+    "quote comparison",
+    "construction estimator",
+    "daily site report",
+    "rfi",
+    "submittals",
+    "look-ahead schedule"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 checked sources (HSE CDM 2015, EU site directive, OSHA construction pages, UK building control and permits, AIA, JCT, NEC and SCL documents, Procore tools, homeowner guidance), four skills, five prompts, three workflows, training interview and test briefs. Change orders, payment applications and contract changes need a fresh yes; money stays with the client."
+    }
+  ]
+}

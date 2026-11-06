@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "The Five Competitive Forces That Shape Strategy (Michael E. Porter, January 2008)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Competition is wider than direct rivals: customers, suppliers, potential entrants and substitutes, together with rivals, set an industry's structure and profit potential."
+  },
+  {
+    "n": 2,
+    "title": "Know Your Customers' \"Jobs to Be Done\" (Christensen, Hall, Dillon and Duncan, September 2016)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Innovation is less of a gamble when firms understand the job customers are trying to get done, rather than product features or the customer data they already hold."
+  },
+  {
+    "n": 3,
+    "title": "Rediscovering Market Segmentation (Daniel Yankelovich and David Meer, February 2006)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2006/02/rediscovering-market-segmentation",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Segmentation had narrowed into psychographic profiling for advertising; its real purpose is to find customers whose behaviour can be changed or whose needs are unmet, using what predicts buying."
+  },
+  {
+    "n": 4,
+    "title": "The Mom Test (Rob Fitzpatrick)",
+    "publisher": "Rob Fitzpatrick (author's site)",
+    "url": "https://www.momtestbook.com/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The author's page for the book: a practical guide to getting honest learning from customer conversations when people are being polite rather than truthful, and to judging whether a prospect will actually buy."
+  },
+  {
+    "n": 5,
+    "title": "ICC/ESOMAR International Code on Market, Opinion and Social Research and Data Analytics (updated July 2025)",
+    "publisher": "ICC and ESOMAR",
+    "url": "https://standards.esomar.org/assets/documents/icc-esomar-code-2025.pdf",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (PDF text extracted). Five fundamental principles; Art. 1 duty of care and keeping research apart from non-research activity with separate consent; Art. 2 children; Art. 3 data minimisation; Art. 4 primary data collection, including notifying a synthetic persona at the start; Art. 5 secondary data; Art. 6 deductive disclosure; Art. 7 fit for purpose, telling clients when AI or synthetic data is used and the extent of human oversight; Art. 9 publishing findings."
+  },
+  {
+    "n": 6,
+    "title": "MRS Code of Conduct (2023)",
+    "publisher": "Market Research Society (UK)",
+    "url": "https://www.mrs.org.uk/standards/code-of-conduct",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The 2023 Code came into effect on 15 May 2023 and applied to all members and company partners from 14 August 2023; changes include more focus on participant wellbeing and clearer reporting of representative samples such as \"Nat Rep\" with the sampling parameters used."
+  },
+  {
+    "n": 7,
+    "title": "Code of Standards and Ethics for Market Research and Data Analytics (updated September 2026)",
+    "publisher": "Insights Association (US)",
+    "url": "https://www.insightsassociation.org/About-Us/Code-of-Standards",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Research kept separate from advertising and direct marketing; tell participants at the start if an AI chatbot or avatar collecting data could be mistaken for a human; disclose AI tools used; distinguish synthetic or AI-generated data from data from real people; extra care and verifiable consent for children."
+  },
+  {
+    "n": 8,
+    "title": "IA's Code In Action: Synthetic Participants in Market Research (Scott Swigart, 16 September 2024)",
+    "publisher": "Insights Association (US)",
+    "url": "https://www.insightsassociation.org/News-Updates/Articles/ArticleID/1430/IA-39-s-Code-In-Action-Synthetic-Participants-in-Market-Research",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Synthetic participants are AI models built on real research data; use should be fully disclosed with their limits and method; anonymise data before it goes to an AI; the author calls them experimental."
+  },
+  {
+    "n": 9,
+    "title": "AAPOR Code: Disclosure Standards",
+    "publisher": "American Association for Public Opinion Research",
+    "url": "https://aapor.org/standards-and-ethics/disclosure-standards/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Items to disclose: sponsor and who conducted the work, question wording, population, sample design (probability or not, frame, quotas, incentives), mode, dates, sample sizes and precision, weighting, quality checks and limitations; margin of error for probability samples; precision for non-probability samples only with the model and assumptions explained."
+  },
+  {
+    "n": 10,
+    "title": "Writing Survey Questions",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/writing-survey-questions/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Open versus closed questions; question order effects; agree-disagree items invite acquiescence bias and forced choices are preferred; avoid double-barrelled questions; response order effects and randomising unordered lists; pretesting with pilots and cognitive interviews."
+  },
+  {
+    "n": 11,
+    "title": "Online opt-in polls can produce misleading results, especially for young people and Hispanic adults (5 March 2024)",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/short-reads/2024/03/05/online-opt-in-polls-can-produce-misleading-results-especially-for-young-people-and-hispanic-adults/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Bogus respondents in opt-in samples inflate rare attitudes and behaviours; in a February 2022 test 12% of opt-in adults under 30 claimed a licence to operate a nuclear submarine, a share that rounds to 0% in reality; probability panels showed very few such answers."
+  },
+  {
+    "n": 12,
+    "title": "Understanding the margin of error in election polls (8 September 2016)",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/short-reads/2016/09/08/understanding-the-margin-of-error-in-election-polls/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. A simple random sample of 1,067 gives about plus or minus 3 points at 95% confidence; weighted polls have larger margins; subgroups have much larger margins; the margin on a difference is roughly twice as large; the margin covers sampling error only."
+  },
+  {
+    "n": 13,
+    "title": "Sample sizes for saturation in qualitative research: A systematic review of empirical tests (Hennink and Kaiser, Social Science & Medicine, 2022)",
+    "publisher": "PubMed (US National Library of Medicine)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34785096/",
+    "checked": "2026-11-07",
+    "supports": "Fetch blocked by a cookie wall; confirmed by a WebSearch result showing this exact page. 23 articles reviewed; studies reached saturation within 9 to 17 interviews or 4 to 8 focus groups, particularly with relatively homogeneous populations and narrowly defined objectives; Soc Sci Med 2022;292:114523."
+  },
+  {
+    "n": 14,
+    "title": "Van Westendorp Pricing Sensitivity Meter (blog post)",
+    "publisher": "Sawtooth Software",
+    "url": "https://sawtoothsoftware.com/resources/blog/posts/van-westendorp-pricing-sensitivity-meter",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Developed by Peter van Westendorp in the 1970s; four price questions (too cheap, a bargain, getting expensive, too expensive); range read from crossing cumulative curves; limits: ignores competitive context, does not predict volume, weak theory behind the crossing points; the Newton-Miller-Smith extension (1993) adds purchase intent."
+  },
+  {
+    "n": 15,
+    "title": "The top reasons startups fail (5 March 2026)",
+    "publisher": "CB Insights",
+    "url": "https://www.cbinsights.com/research/report/startup-failure-reasons-top/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Post-mortems of 431 VC-backed companies that shut down since 2023, with reasons found for 385; 70% ran out of cash (usually the final cause, not the root); 43% poor product-market fit; reasons overlap."
+  },
+  {
+    "n": 16,
+    "title": "County Business Patterns (CBP)",
+    "publisher": "US Census Bureau",
+    "url": "https://www.census.gov/programs-surveys/cbp.html",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (page revised 5 August 2026). Annual data on establishments with paid employees by NAICS industry and geography: establishments, employment in the week of 12 March, first-quarter and annual payroll; latest data year 2023."
+  },
+  {
+    "n": 17,
+    "title": "Nonemployer Statistics (NES)",
+    "publisher": "US Census Bureau",
+    "url": "https://www.census.gov/programs-surveys/nonemployer-statistics.html",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (page revised 29 September 2026). Annual counts and receipts of US businesses with no paid employees, by industry and geography; latest data year 2024."
+  },
+  {
+    "n": 18,
+    "title": "Consumer Expenditure Surveys",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/cex/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The only federal household survey covering the full range of consumer spending and income; 2025 annual release dated 29 October 2026 reports average consumer unit spending of $81,905, up 4.3% on 2024; tables by demographics and geography."
+  },
+  {
+    "n": 19,
+    "title": "American Community Survey (ACS)",
+    "publisher": "US Census Bureau",
+    "url": "https://www.census.gov/programs-surveys/acs",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Ongoing household survey since 2005 covering more than 40 topics (income, housing, employment, commuting); 2025 1-year estimates released in late October 2026; 2020-2024 5-year files available."
+  },
+  {
+    "n": 20,
+    "title": "Family spending in the UK: April 2024 to March 2025 (released 11 June 2026)",
+    "publisher": "Office for National Statistics (UK)",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/familyspendingintheuk/latest",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Average weekly household spending was 676.60 pounds in the year ending March 2025, a nominal rise of 53.30 pounds (9%); based on the Living Costs and Food Survey; figures are means."
+  },
+  {
+    "n": 21,
+    "title": "Structural business statistics",
+    "publisher": "Eurostat (European Commission)",
+    "url": "https://ec.europa.eu/eurostat/web/structural-business-statistics",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. EU statistics on the structure, activity and performance of businesses by NACE activity, with good coverage across enterprise size classes; a 30 September 2026 news item reported EU business value added for 2024."
+  },
+  {
+    "n": 22,
+    "title": "Country Commercial Guides",
+    "publisher": "International Trade Administration (US Department of Commerce)",
+    "url": "https://www.trade.gov/country-commercial-guides",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Reports on a country's market conditions, opportunities, regulations and business customs, prepared by US embassy staff from Commerce, State and other agencies."
+  },
+  {
+    "n": 23,
+    "title": "Access2Markets",
+    "publisher": "European Commission",
+    "url": "https://trade.ec.europa.eu/access-to-markets/en/home",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The Commission's trade portal: My Trade Assistant for the conditions to trade a product (including rules of origin), EU trade agreements and statistics, a single entry point to report trade barriers, and an SME corner for exporters."
+  },
+  {
+    "n": 24,
+    "title": "Market guides",
+    "publisher": "Business.gov.uk (UK Government)",
+    "url": "https://www.business.gov.uk/markets/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Country-by-country export guides covering doing business, tax rates and import regulations, filterable by sector, region or trading bloc; www.great.gov.uk/markets/ now redirects here (HTTP 301 seen when checked)."
+  },
+  {
+    "n": 25,
+    "title": "Data protection explained",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/data-protection-explained_en",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The GDPR principles organisations must follow when processing personal data: lawfulness, fairness and transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality; accountability."
+  },
+  {
+    "n": 26,
+    "title": "Trade secrets",
+    "publisher": "European Commission",
+    "url": "https://single-market-economy.ec.europa.eu/industry/strategy/intellectual-property/trade-secrets_en",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Directive (EU) 2016/943 protects confidential business information against unlawful acquisition, use and disclosure, with civil remedies; reverse engineering and parallel innovation stay lawful; acquisition by illicit means such as unauthorised access or breach of contract is unlawful."
+  },
+  {
+    "n": 27,
+    "title": "Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule",
+    "publisher": "Federal Trade Commission (US)",
+    "url": "https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Sellers need a reasonable basis for any shipping time; with no time stated, ship within 30 days (50 for credit applications); delays require an option to cancel for a prompt refund; dry-testing products not yet available is allowed only under specific conditions, such as disclosing that the product is planned and not implying shipment."
+  },
+  {
+    "n": 28,
+    "title": "Providing clear and accurate information about prices: summary (CMA209, updated 7 January 2026)",
+    "publisher": "Competition and Markets Authority (UK)",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Mandatory fees and taxes belong in the headline price; drip pricing is described as illegal, with penalties up to 10% of turnover or 300,000 pounds, whichever is greater; optional extras may be shown separately but clearly."
+  },
+  {
+    "n": 29,
+    "title": "The Fair Housing Act (updated 22 June 2023)",
+    "publisher": "US Department of Justice, Civil Rights Division",
+    "url": "https://www.justice.gov/crt/fair-housing-act-1",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The Act bars housing discrimination based on race or colour, religion, sex, national origin, familial status and disability; it covers steering home seekers to areas based on race and giving false information about availability."
+  }
+]

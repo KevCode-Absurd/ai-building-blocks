@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "build-a-talk-around-one-real-case",
+    "name": "Build a talk around one real case",
+    "why": "The full method behind the talk or pitch script skill: one true case, three points and one ask."
+  },
+  {
+    "slug": "write-a-short-pitch-and-fix-it-after-every-no",
+    "name": "Write a short pitch and fix it after every no",
+    "why": "Pairs with the pitch path of the talk skill when a founder needs a 60-second and a 3-minute pitch, then a fix after feedback."
+  },
+  {
+    "slug": "pitch-revision-log",
+    "name": "Pitch revision log",
+    "why": "Turns the reasons investors or buyers gave for saying no into a ranked fix list, as the pitch fix job needs."
+  },
+  {
+    "slug": "elevator-pitch-writer",
+    "name": "Elevator pitch writer",
+    "why": "Gives 10, 30 and 60 second versions of what the speaker does, useful as the opening of a longer talk."
+  },
+  {
+    "slug": "funny-speech-planner",
+    "name": "Funny speech planner",
+    "why": "Builds a toast or wedding speech from one true story with the pause marked, alongside the humour safety check prompt."
+  },
+  {
+    "slug": "read-aloud-speech-shaper",
+    "name": "Read-aloud speech shaper",
+    "why": "Shapes notes into a speech made to be heard, with breath marks, which suits eulogies and tributes."
+  },
+  {
+    "slug": "witty-line-punch-up",
+    "name": "Witty line punch-up",
+    "why": "Adds two or three sharp, true lines to a toast or speech without turning the rest into a stand-up set."
+  },
+  {
+    "slug": "lesson-talk-writer",
+    "name": "Lesson talk writer",
+    "why": "Turns a speaker's own stories into a short talk with repeatable lessons, for graduations, awards and leaving speeches."
+  },
+  {
+    "slug": "launch-talk-writer",
+    "name": "Launch talk writer",
+    "why": "Writes a timed two-minute launch talk with one story and a demo, a common remarks job."
+  },
+  {
+    "slug": "hostile-room-speech-planner",
+    "name": "Hostile-room speech planner",
+    "why": "Plans a speech for a room that disagrees, which the test briefs include."
+  },
+  {
+    "slug": "talk-tension-planner",
+    "name": "Talk tension planner",
+    "why": "Reorders a talk so the room knows the stakes in the first minute, a quick fix for flat openings."
+  },
+  {
+    "slug": "figures-to-plain-pictures-writer",
+    "name": "Figures to plain pictures writer",
+    "why": "Turns the numbers in a talk into comparisons a listening room can picture, as the writing-for-the-ear rules ask."
+  },
+  {
+    "slug": "powerpoint-speaker-note-builder",
+    "name": "PowerPoint speaker notes builder",
+    "why": "Builds speaker notes and a timing plan inside a deck, ready for Presenter View during rehearsal."
+  }
+]

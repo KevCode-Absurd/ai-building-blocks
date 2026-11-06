@@ -1,0 +1,26 @@
+{
+  "id": "youtube-strategist",
+  "name": "YouTube channel strategist",
+  "department": "marketing",
+  "summary": "Grows a business's YouTube channel with a content plan, search-led titles, scripts and thumbnails. Reads channel analytics to keep viewers watching.",
+  "aliases": [
+    "youtube growth",
+    "youtube manager",
+    "youtube seo",
+    "video scriptwriter",
+    "thumbnail designer",
+    "youtube strategist",
+    "youtube channel strategy",
+    "youtube analytics",
+    "youtube titles",
+    "youtube thumbnails"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: how YouTube recommends and ranks, channel plans, topic research, titles and thumbnails with Test and compare, retention scripts, analytics reading, Partner Program and policy rules, made for kids, sponsorship and AI disclosure in the US, UK and EU, access levels 1 to 3 for YouTube Studio, four skills, five prompts, two workflows and 30 checked sources."
+    }
+  ]
+}

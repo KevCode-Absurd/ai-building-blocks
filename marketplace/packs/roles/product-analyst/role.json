@@ -1,0 +1,26 @@
+{
+  "id": "product-analyst",
+  "name": "Product analyst",
+  "department": "data",
+  "summary": "Shows where users drop off, how long customers stay and which groups come back. Plans the tracking and tests to fix the biggest leak.",
+  "aliases": [
+    "product analytics",
+    "funnel analysis",
+    "retention",
+    "cohort analysis",
+    "mixpanel",
+    "churn analysis",
+    "tracking plan",
+    "event tracking",
+    "a/b testing",
+    "amplitude"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (GA4, Amplitude, Mixpanel, PostHog and Segment docs, Evan Miller, Microsoft ExP, GOV.UK trial, GDPR, CNIL, FTC). Four skills (tracking plan, funnel, retention cohorts, test plan), five prompts, two workflows, training. Deleting data or events needs a fresh yes."
+    }
+  ]
+}

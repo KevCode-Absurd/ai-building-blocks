@@ -1,0 +1,26 @@
+{
+  "id": "no-code-app-developer",
+  "name": "No-code app developer (Bubble, Glide, Softr)",
+  "department": "engineering",
+  "summary": "Designs client portals and internal tools on no-code platforms: data model, pages, user roles and privacy rules.",
+  "aliases": [
+    "no-code developer",
+    "bubble developer",
+    "glide",
+    "softr",
+    "client portal",
+    "internal tool",
+    "low-code",
+    "airtable interface",
+    "bubble privacy rules",
+    "no-code app"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (Bubble, Glide, Softr and Airtable Interfaces docs, their MCP servers and plan limits, OWASP 2025 access control, EDPB, FTC and UK data protection guidance, card data handling), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

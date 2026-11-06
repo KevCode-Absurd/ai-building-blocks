@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "practice-session-minute-planner",
+    "name": "Practice session minute planner",
+    "why": "Breaks one skill into timed 5 to 12 minute blocks with what to watch for and what to say, a quick start before the full session plan builder."
+  },
+  {
+    "slug": "skill-breakdown-teaching-planner",
+    "name": "Skill breakdown teaching planner",
+    "why": "Splits a sport skill into learning steps with a common mistake and a self-check for each, useful when writing coaching points."
+  },
+  {
+    "slug": "check-a-lesson-before-teaching-it",
+    "name": "Check a lesson before teaching it",
+    "why": "Checks a planned session for overload and adds quick checks of understanding, a second pair of eyes before a volunteer runs it."
+  },
+  {
+    "slug": "adapt-a-lesson-for-different-access-needs",
+    "name": "Adapt a lesson for different access needs",
+    "why": "Finds what blocks players with access needs and offers other ways to take part, alongside the easier and harder drill versions."
+  },
+  {
+    "slug": "task-rubric-drafter",
+    "name": "Task rubric drafter",
+    "why": "Drafts clear level wording for each skill, a starting point for the progress sheet levels."
+  },
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "Turns the club's roles and safeguarding rules into an induction checklist with sign-offs for new volunteer coaches."
+  },
+  {
+    "slug": "volunteer-induction-evidence-review-assistant",
+    "name": "Volunteer induction evidence review assistant",
+    "why": "Checks each volunteer's induction records against their role and lists gaps; a named person still signs off, as the handbook expects."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Explains a new club policy, such as a concussion or messaging rule, in plain words to volunteer coaches."
+  },
+  {
+    "slug": "feedback-conversation-planner",
+    "name": "Feedback conversation planner",
+    "why": "Plans a calm, specific conversation with a parent helper or assistant coach about a problem at training."
+  },
+  {
+    "slug": "dull-update-email-rewriter",
+    "name": "Dull update email rewriter",
+    "why": "Sharpens a flat club update so parents read it and act, for newsletters beyond the standard messages."
+  }
+]

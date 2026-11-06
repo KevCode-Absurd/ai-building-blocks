@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Berkshire Hathaway shareholder letter, 1986 (Warren Buffett)",
+    "publisher": "Berkshire Hathaway",
+    "url": "https://www.berkshirehathaway.com/letters/1986.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Buffett's definition of owner earnings: reported earnings plus depreciation, depletion, amortisation and certain other non-cash charges, less the average yearly capital spending needed to keep competitive position and unit volume (and any extra working capital); GAAP earnings can overstate owner earnings; the Scott Fetzer example after purchase accounting write-ups; maintenance spending is a judgement call."
+  },
+  {
+    "n": 2,
+    "title": "2026 Report on Employer Firms: Findings from the 2025 Small Business Credit Survey (released 3 March 2026)",
+    "publisher": "Federal Reserve Banks (Small Business Credit Survey)",
+    "url": "https://www.fedsmallbusiness.org/reports/survey/2026/2026-report-on-employer-firms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 6,525 responses fielded 3 September to 14 November 2025; 60% of firms applied for financing in the prior 12 months; 42% of applicants received the full amount, 36% some or most, 22% none; top reasons were operating expenses (56%) and expansion (46%); 31% had no outstanding debt; 59% of firms with debt used a personal guarantee; rising costs were the most common challenge and more than four in ten cited tariff-related costs."
+  },
+  {
+    "n": 3,
+    "title": "Intuit Introduces Ground-Breaking Virtual Team of AI Agents to Fuel Growth for Businesses (1 July 2025)",
+    "publisher": "Intuit (investor relations press release)",
+    "url": "https://investors.intuit.com/news-events/press-releases/detail/1258/intuit-introduces-ground-breaking-virtual-team-of-ai-agents-to-fuel-growth-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Intuit announced AI agents for QuickBooks, including a Finance agent for reporting, KPI analysis, scenario planning and forecasting, a Payments agent and an Accounting agent."
+  },
+  {
+    "n": 4,
+    "title": "xero-mcp-server (GitHub repository)",
+    "publisher": "Xero (XeroAPI GitHub organisation)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Xero's MCP server offers read tools for profit and loss, balance sheet, trial balance and aged receivables and payables, plus write tools; custom connections created from 29 April 2026 use granular scopes."
+  },
+  {
+    "n": 5,
+    "title": "quickbooks-online-mcp-server (GitHub repository)",
+    "publisher": "Intuit GitHub organisation",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eleven reports including balance sheet, profit and loss, cash flow, general ledger and aged receivables and payables; write, update and delete tools can be switched off with settings; the README recommends starting in a sandbox and says it is based on Intuit's server."
+  },
+  {
+    "n": 6,
+    "title": "7(a) loans",
+    "publisher": "U.S. Small Business Administration",
+    "url": "https://www.sba.gov/funding-programs/loans/7a-loans",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SBA guarantees loans made by lenders rather than lending directly; maximum 7(a) loan 5 million dollars; uses include working capital, refinancing debt, equipment, real estate and changes of ownership. No page date shown."
+  },
+  {
+    "n": 7,
+    "title": "Close or sell your business",
+    "publisher": "U.S. Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Set a value before marketing (income, market and asset approaches); do not leave out assets or liabilities; a sales agreement reviewed by an attorney, listing broker fees; keep tax and employment records three to seven years after closing. No page date shown."
+  },
+  {
+    "n": 8,
+    "title": "About Form 8594, Asset Acquisition Statement under Section 1060",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/forms-pubs/about-form-8594",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 30 March 2026). Form 8594 reports the sale of a group of assets making up a trade or business where goodwill or going concern value attaches; both seller and buyer file it."
+  },
+  {
+    "n": 9,
+    "title": "Business Asset Disposal Relief",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/business-asset-disposal-relief",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The relief lowers Capital Gains Tax when selling all or part of a business; the rate was 10% for disposals on or before 5 April 2025, 14% from 6 April 2025 to 5 April 2026 and 18% from 6 April 2026."
+  },
+  {
+    "n": 10,
+    "title": "Review of the Federal Reserve's Supervision and Regulation of Silicon Valley Bank (28 April 2023)",
+    "publisher": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). About 94% of SVB's deposits were uninsured at year-end 2022; the bank lost over 40 billion dollars of deposits on 9 March 2023 and management expected over 100 billion dollars more the next day, roughly 85% of its deposit base; it was closed on 10 March 2023; its clients were concentrated in venture-backed technology and life sciences companies."
+  },
+  {
+    "n": 11,
+    "title": "Understanding Deposit Insurance",
+    "publisher": "Federal Deposit Insurance Corporation",
+    "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last updated 1 April 2024). Deposits are insured to 250,000 dollars per depositor, per ownership category, at each insured bank; corporation, partnership and unincorporated association accounts are a separate ownership category."
+  },
+  {
+    "n": 12,
+    "title": "Banks and building societies: what we cover",
+    "publisher": "Financial Services Compensation Scheme (FSCS)",
+    "url": "https://www.fscs.org.uk/what-we-cover/banks-building-societies/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For firms that failed after 30 November 2025 the protection limit is 120,000 pounds per eligible person per bank, building society or credit union, up from 85,000 pounds (30 January 2017 to 30 November 2025); limited companies and other businesses can be eligible."
+  },
+  {
+    "n": 13,
+    "title": "Deposit guarantee schemes",
+    "publisher": "European Commission (Directorate-General for Financial Stability, Financial Services and Capital Markets Union)",
+    "url": "https://finance.ec.europa.eu/banking/banking-regulation/deposit-guarantee-schemes_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last updated 17 July 2026). EU law guarantees deposits up to 100,000 euros."
+  },
+  {
+    "n": 14,
+    "title": "Verifying your identity for Companies House",
+    "publisher": "GOV.UK (Companies House)",
+    "url": "https://www.gov.uk/guidance/verifying-your-identity-for-companies-house",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 1 June 2026). Identity verification is a legal requirement (update of 18 November 2025) for directors, people with significant control and others; existing directors give their personal code with the company's next confirmation statement; people with significant control have a 14-day window."
+  },
+  {
+    "n": 15,
+    "title": "Beneficial Ownership Information Reporting",
+    "publisher": "Financial Crimes Enforcement Network (FinCEN), U.S. Treasury",
+    "url": "https://www.fincen.gov/boi",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (alert dated 11 August 2026). U.S. companies are exempt from beneficial ownership reporting under a final rule effective 14 August 2026; foreign reporting companies that do not qualify for an exemption may still need to report."
+  },
+  {
+    "n": 16,
+    "title": "SME definition",
+    "publisher": "European Commission (Internal Market, Industry, Entrepreneurship and SMEs)",
+    "url": "https://single-market-economy.ec.europa.eu/smes/sme-fundamentals/sme-definition_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Under Recommendation 2003/361, a medium-sized enterprise has fewer than 250 staff and turnover up to 50 million euros or a balance sheet up to 43 million euros; small under 50 staff and up to 10 million euros; micro under 10 staff and up to 2 million euros; group data may count."
+  },
+  {
+    "n": 17,
+    "title": "Director information hub: Director duties upon insolvency (5 October 2023)",
+    "publisher": "GOV.UK (The Insolvency Service)",
+    "url": "https://www.gov.uk/guidance/director-information-hub-director-duties-upon-insolvency",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Once a company is insolvent, directors' priorities shift to creditors: protect assets, treat creditors equally and avoid worsening their position; consider advice from an insolvency practitioner; personal liability risks include wrongful trading, fraudulent trading and misfeasance."
+  },
+  {
+    "n": 18,
+    "title": "If you cannot pay your tax bill on time",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/difficulties-paying-hmrc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. If a business cannot pay in full it may be able to set up a payment plan in instalments; HMRC checks the plan is affordable and otherwise asks for the full amount."
+  },
+  {
+    "n": 19,
+    "title": "Payment plans installment agreements",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/payments/payment-plans-installment-agreements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 13 August 2026). Short-term plans pay in full within 180 days or less; long-term installment agreements pay monthly and carry setup fees for businesses; penalties and interest keep accruing until paid."
+  },
+  {
+    "n": 20,
+    "title": "Business Debtline",
+    "publisher": "Business Debtline (Money Advice Trust)",
+    "url": "https://businessdebtline.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A free, independent debt advice charity for self-employed people and small businesses, run by the Money Advice Trust."
+  },
+  {
+    "n": 21,
+    "title": "The Institute of Chartered Accountants of India",
+    "publisher": "ICAI",
+    "url": "https://www.icai.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official site of the Institute of Chartered Accountants of India: where to check Indian accounting standards and find a chartered accountant."
+  },
+  {
+    "n": 22,
+    "title": "Income Tax Department e-filing portal",
+    "publisher": "Income Tax Department, Government of India",
+    "url": "https://www.incometax.gov.in/iec/foportal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official e-filing portal of India's Income Tax Department: where to check income tax rules and dates."
+  },
+  {
+    "n": 23,
+    "title": "Insolvency and Bankruptcy Board of India",
+    "publisher": "IBBI",
+    "url": "https://ibbi.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official site of the Insolvency and Bankruptcy Board of India, with the legal framework and registers of insolvency professionals."
+  },
+  {
+    "n": 24,
+    "title": "Canada Revenue Agency (CRA)",
+    "publisher": "Government of Canada",
+    "url": "https://www.canada.ca/en/revenue-agency.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (date modified 10 February 2026). Official home of the Canada Revenue Agency: where to check Canadian tax rules and payment arrangements."
+  },
+  {
+    "n": 25,
+    "title": "Office of the Superintendent of Bankruptcy",
+    "publisher": "Innovation, Science and Economic Development Canada",
+    "url": "https://ised-isde.canada.ca/site/office-superintendent-bankruptcy/en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (date modified 19 December 2025). The OSB administers the Bankruptcy and Insolvency Act and licenses insolvency professionals in Canada."
+  },
+  {
+    "n": 26,
+    "title": "Insolvency",
+    "publisher": "Australian Securities and Investments Commission (ASIC)",
+    "url": "https://asic.gov.au/regulatory-resources/insolvency/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ASIC's insolvency guidance: options for insolvent companies, including small business restructuring and voluntary administration, and a section for directors. No page date shown."
+  },
+  {
+    "n": 27,
+    "title": "Finance",
+    "publisher": "business.gov.au (Australian Government)",
+    "url": "https://business.gov.au/finance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Australian Government business finance guidance: cash flow, funding and loans, tax, yearly financial tasks and financial trouble. No page date shown."
+  }
+]

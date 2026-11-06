@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "amazon-monthly-account-keeper",
+    "name": "Amazon monthly account keeper",
+    "why": "An agent that runs the monthly routine in this kit: margins checked, restock sized and refund claims found from your reports."
+  },
+  {
+    "slug": "amazon-product-viability-scorer",
+    "name": "Amazon product viability scorer",
+    "why": "A second, independent score for a product idea with a go or no-go, to compare with the research skill here."
+  },
+  {
+    "slug": "star-rating-review-miner",
+    "name": "Star-rating review miner",
+    "why": "Mines rivals' reviews by star rating for product gaps and buyer phrases, the core of review complaint mining."
+  },
+  {
+    "slug": "amazon-search-gap-finder",
+    "name": "Amazon search gap finder",
+    "why": "Finds product ideas people search for that page one misses, a starting list for product research."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Works out cost per sellable unit from a supplier quote and freight, the input every margin sheet needs."
+  },
+  {
+    "slug": "amazon-fee-and-margin-checker",
+    "name": "Amazon fee and margin checker",
+    "why": "Profit per unit after all Amazon fees, to cross-check the unit profit prompt."
+  },
+  {
+    "slug": "amazon-unit-profit-checker",
+    "name": "Amazon unit profit checker",
+    "why": "A quick prompt for profit per unit and break-even ad cost when you already know the fees."
+  },
+  {
+    "slug": "amazon-brand-registry-planner",
+    "name": "Amazon brand registry planner",
+    "why": "Plans the trademark and Brand Registry pack that A+, Vine, Brand Analytics and experiments depend on."
+  },
+  {
+    "slug": "amazon-keyword-picker",
+    "name": "Amazon keyword picker",
+    "why": "Sorts a keyword export into title, bullet and search-term phrases before the listing is written."
+  },
+  {
+    "slug": "amazon-listing-first-draft-writer",
+    "name": "Amazon listing first draft writer",
+    "why": "A fast first draft of title, bullets and search terms to run through the listing rule check."
+  },
+  {
+    "slug": "amazon-launch-week-planner",
+    "name": "Amazon launch week planner",
+    "why": "A dated pre-launch and launch-day plan with honest review steps, for the first weeks of the 90-day plan."
+  },
+  {
+    "slug": "amazon-ppc-launch-builder",
+    "name": "Amazon PPC launch builder",
+    "why": "Builds the first automatic, keyword and competitor campaigns with bids and negatives for a launch."
+  },
+  {
+    "slug": "amazon-inbound-stock-planner",
+    "name": "Amazon inbound stock planner",
+    "why": "Sizes how much stock to send and when, to avoid stock-outs and low-inventory-level fees."
+  },
+  {
+    "slug": "amazon-reimbursement-claim-finder",
+    "name": "Amazon reimbursement claim finder",
+    "why": "Scans shipment and fee reports for claims to file, alongside the claim pack prompt."
+  },
+  {
+    "slug": "supplier-quote-request-writer",
+    "name": "Supplier quote request writer",
+    "why": "Turns buyer complaints into a quote request a factory understands, the step after finding a real gap."
+  }
+]

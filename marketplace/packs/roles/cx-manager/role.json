@@ -1,0 +1,26 @@
+{
+  "id": "cx-manager",
+  "name": "Customer experience (CX) manager",
+  "department": "research",
+  "summary": "Maps every step customers take, measures how they feel and fixes where they get stuck. Runs NPS as a programme, not a one-off.",
+  "aliases": [
+    "customer experience",
+    "cx",
+    "service blueprint",
+    "nps",
+    "service design",
+    "behavioural design",
+    "customer satisfaction",
+    "cjm",
+    "voice of the customer",
+    "mystery shopping"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: NPS, CSAT and effort programmes (Reichheld, Dixon, Freeman and Toman credited), closing the loop, customer path maps and service blueprints, MRS mystery shopping rules, EAST, UK FCA/FOS and US CFPB complaint clocks, EU AI Act Article 50, CMA and FTC AI rules. Four skills, six prompts, two workflows, training files; 26 checked sources."
+    }
+  ]
+}

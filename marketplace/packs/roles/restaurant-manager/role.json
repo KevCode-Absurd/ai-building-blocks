@@ -1,0 +1,26 @@
+{
+  "id": "restaurant-manager",
+  "name": "Restaurant manager",
+  "department": "operations",
+  "summary": "Keeps service smooth and food cost in line with checklists, prep lists, station guides and costed recipes. Shows which dishes earn their place.",
+  "aliases": [
+    "restaurant operations",
+    "kitchen manager",
+    "food cost",
+    "menu costing",
+    "prep lists",
+    "hospitality operations",
+    "food cost controller",
+    "menu engineering",
+    "kitchen checklists",
+    "cafe manager"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (FSA, FDA Food Code and allergens, EU 1169/2011, Square, Toast, Google, FTC, CMA, working time rules), four skills, five prompts, three workflows, training interview and test briefs, and access levels per tool. Stock orders and supplier contracts need a fresh yes each time."
+    }
+  ]
+}

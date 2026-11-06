@@ -1,0 +1,26 @@
+{
+  "id": "automation-specialist",
+  "name": "Automation specialist",
+  "department": "operations",
+  "summary": "Automates the copy-and-paste work between a business's tools with Zapier, Make, n8n, Airtable, Notion or short scripts. Makes automations fail loudly, not silently.",
+  "aliases": [
+    "zapier",
+    "make.com",
+    "n8n",
+    "workflow automation",
+    "no-code",
+    "airtable",
+    "notion",
+    "python scripts",
+    "power automate",
+    "zapier expert"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, three skills (automation build spec, automation review and fix, Airtable and Notion workspace design), five prompts, two workflows, training interview and test briefs. Uses the three access levels (read; read and draft; read, write and publish)."
+    }
+  ]
+}

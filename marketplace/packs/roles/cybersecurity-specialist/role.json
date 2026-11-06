@@ -1,0 +1,26 @@
+{
+  "id": "cybersecurity-specialist",
+  "name": "Cybersecurity specialist",
+  "department": "operations",
+  "summary": "Puts a plain security plan in place for a small business or online store: logins, staff habits, fraud checks and what to do if hit.",
+  "aliases": [
+    "cybersecurity",
+    "it security",
+    "phishing",
+    "fraud prevention",
+    "cyber essentials",
+    "store security",
+    "incident response",
+    "security awareness training",
+    "card testing",
+    "nist csf"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 checked sources (NIST CSF 2.0, SP 800-61r3, IR 8286r1 and SP 800-50r1, CISA and NCSC phishing, incident and Cyber Essentials guidance, UK breaches survey 2025/26, FBI IC3 2025, FTC, NIS2, GDPR breach rules, PCI DSS, Shopify and Stripe fraud docs), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

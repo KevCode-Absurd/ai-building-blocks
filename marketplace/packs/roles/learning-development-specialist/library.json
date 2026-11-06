@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "check-training-transfer-after-a-course",
+    "name": "Check training transfer after a course",
+    "why": "Compares real work after a course with the skills taught, the Level 3 behaviour check this kit asks for in every evaluation plan."
+  },
+  {
+    "slug": "build-a-practical-manager-training-session",
+    "name": "Build a practical manager training session",
+    "why": "A timed manager session built around practice, with the behaviours to look for afterwards, matching the kit's practice-first design rule."
+  },
+  {
+    "slug": "write-a-procedure-test-it-and-build-a-training-deck",
+    "name": "Write a procedure, test it and build a training deck",
+    "why": "For clients with no SOP yet: write and test the procedure first, then train from it with the SOP to on-the-job training skill."
+  },
+  {
+    "slug": "training-handout-writer",
+    "name": "Training handout writer",
+    "why": "A one-page handout with steps and common mistakes, the job aid every programme in this kit leaves behind."
+  },
+  {
+    "slug": "new-hire-onboarding-keeper",
+    "name": "New hire onboarding keeper",
+    "why": "Plans a new hire's first 90 days and checks progress weekly, a companion to the onboarding learning path prompt."
+  },
+  {
+    "slug": "skill-breakdown-teaching-planner",
+    "name": "Skill breakdown teaching planner",
+    "why": "Breaks one skill into steps with a common mistake and self-check each, the same breakdown used for on-the-job demonstrations."
+  },
+  {
+    "slug": "practice-session-minute-planner",
+    "name": "Practice session minute planner",
+    "why": "Plans a practice session minute by minute with a coach card, useful for short floor sessions run by shift leads."
+  },
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "An induction procedure with sign-offs and supervised practice, the same pattern as the kit's sign-off forms, for charities and volunteer teams."
+  },
+  {
+    "slug": "process-doc-freshness-keeper",
+    "name": "Process doc freshness keeper",
+    "why": "Finds stale or ownerless SOPs each month, so training is never built from an out-of-date procedure."
+  },
+  {
+    "slug": "survey-answer-truth-checker",
+    "name": "Survey answer truth checker",
+    "why": "Checks how far a needs survey can be trusted before its numbers go into a training needs analysis."
+  },
+  {
+    "slug": "five-whys-session-planner",
+    "name": "Five whys session planner",
+    "why": "A no-blame session plan for finding the cause of a failure, useful when deciding whether a problem is a training problem at all."
+  }
+]

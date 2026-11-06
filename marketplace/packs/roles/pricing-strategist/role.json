@@ -1,0 +1,26 @@
+{
+  "id": "pricing-strategist",
+  "name": "Pricing strategist",
+  "department": "finance",
+  "summary": "Sets prices, tiers and offers from costs, rivals and what buyers value, with the maths shown. Plans safe price tests and reads what past changes did.",
+  "aliases": [
+    "pricing",
+    "pricing strategy",
+    "price increase",
+    "saas pricing",
+    "offer design",
+    "packaging tiers",
+    "discounts",
+    "value-based pricing",
+    "price testing",
+    "good better best"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: cost floor, rivals and buyer value, tiers and value metrics, discount rules, price tests and readouts, price rises for existing customers (fresh yes each time), US, UK and EU rules on was prices, drip pricing and fees, access levels 1 to 3, four skills, five prompts, two workflows and 26 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "conversion-research-planner",
+    "name": "Conversion research planner",
+    "why": "Sets the research order (where, what, why) before any test, matching the conversion-research-audit skill."
+  },
+  {
+    "slug": "sales-funnel-drop-off-finder",
+    "name": "Sales funnel drop-off finder",
+    "why": "Finds the worst drop-off step from pasted step numbers and screenshots, the first move in a research sprint."
+  },
+  {
+    "slug": "store-page-conversion-reader",
+    "name": "Store page conversion reader",
+    "why": "Reads GA4 exports into conversion by channel and page and the worst funnel drop, for store clients."
+  },
+  {
+    "slug": "heatmap-and-recording-reader",
+    "name": "Heatmap and recording reader",
+    "why": "Turns heatmap and recording notes into friction findings and test ideas, once consent and masking are checked."
+  },
+  {
+    "slug": "product-page-doubt-mapper",
+    "name": "Product page doubt mapper",
+    "why": "Maps what buyers doubt to page sections backed by real proof, for product-page fixes."
+  },
+  {
+    "slug": "product-page-screenshot-auditor",
+    "name": "Product page screenshot auditor",
+    "why": "Quick read of what blocks shoppers from product page screenshots when there is no analytics access."
+  },
+  {
+    "slug": "payments-and-checkout-settings-checker",
+    "name": "Payments and checkout settings checker",
+    "why": "Checks payment and checkout settings for risks and friction, a common source of clear fix-now bugs."
+  },
+  {
+    "slug": "ab-test-traffic-checker",
+    "name": "A/B test traffic checker",
+    "why": "Works out test size and weeks needed from visits and orders, to say early whether a test is feasible."
+  },
+  {
+    "slug": "one-change-experiment-planner",
+    "name": "One-change experiment planner",
+    "why": "Plans a test that changes one thing and says what each result means, alongside the test-design skill."
+  },
+  {
+    "slug": "experiment-readout-desk",
+    "name": "Experiment readout desk",
+    "why": "Checks each test before it starts and gives an honest verdict when it ends, with the lesson saved to the log."
+  },
+  {
+    "slug": "weekly-product-funnel-watcher",
+    "name": "Weekly product funnel watcher",
+    "why": "Weekly read of product events for the step that lost the most and one experiment to run, for software clients."
+  },
+  {
+    "slug": "landing-page-fix-loop",
+    "name": "Landing page fix loop",
+    "why": "Audits a landing page, rewrites what fails and checks again, for pages too low in traffic to test."
+  }
+]

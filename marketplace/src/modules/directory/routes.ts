@@ -33,6 +33,13 @@ export async function agentPayload(env: Env, id: string) {
   return { agent: agentProfile(persona), related: relatedAgents(persona, neighbours).map(agentCard) };
 }
 
+/** What /api/agents?featured=N returns. The home page (src/pages.ts) sends it inside the HTML for N = HOME_FEATURED,
+ *  so the strip paints with real cards and nothing moves when they arrive. total counts every live agent. */
+export const HOME_FEATURED = 6;
+export function featuredPayload(everyone: Awaited<ReturnType<typeof listPersonas>>, n: number) {
+  return { total: everyone.length, agents: pickFeatured(everyone, n).map(agentCard) };
+}
+
 export const routes: Route[] = [
   {
     method: "GET", path: "/api/agents", handler: async ctx => {
@@ -43,7 +50,7 @@ export const routes: Route[] = [
       if (featured !== null) {
         const n = Number(featured);
         if (!Number.isInteger(n) || n < 1 || n > MAX_FEATURED) return fail(400, "invalid_featured", `Ask for 1 to ${MAX_FEATURED} featured agents.`);
-        return json({ total: everyone.length, agents: pickFeatured(everyone, n).map(agentCard) }, 200, PUBLIC_CACHE);
+        return json(featuredPayload(everyone, n), 200, PUBLIC_CACHE);
       }
 
       const area = ctx.url.searchParams.get("area")?.trim() || "";

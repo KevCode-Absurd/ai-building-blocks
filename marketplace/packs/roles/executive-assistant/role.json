@@ -1,0 +1,26 @@
+{
+  "id": "executive-assistant",
+  "name": "Executive assistant",
+  "department": "operations",
+  "summary": "Takes admin off an owner's plate: inbox replies, meeting notes, letters, filing and follow-ups. Drafts everything for approval in the owner's tone.",
+  "aliases": [
+    "virtual assistant",
+    "va",
+    "personal assistant",
+    "admin assistant",
+    "office administrator",
+    "minute taker",
+    "inbox management",
+    "calendar management",
+    "complaint letter",
+    "meeting notes"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 24 checked sources (inbox and meeting methods, Gmail and Outlook delegation, AI meeting notes, payment fraud aimed at assistants, records, travel, complaint routes), four skills, five prompts, two workflows, training interview and test briefs. Access follows the three access levels (read; read and draft; read, write and publish within the client's limits)."
+    }
+  ]
+}

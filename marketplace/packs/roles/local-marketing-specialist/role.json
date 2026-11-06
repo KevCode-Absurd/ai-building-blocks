@@ -1,0 +1,26 @@
+{
+  "id": "local-marketing-specialist",
+  "name": "Local marketing specialist",
+  "department": "marketing",
+  "summary": "Brings nearby customers through the door for local service businesses: map listings, reviews, local offers and posts. Knows the rhythm of a local trade's busy and quiet months.",
+  "aliases": [
+    "local marketing",
+    "google business profile",
+    "local seo",
+    "small business marketing",
+    "neighbourhood marketing",
+    "salon marketing",
+    "gym marketing",
+    "google maps marketing",
+    "local services ads",
+    "review management"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: Google Business Profile rules and features (dated, from Google's help pages), local ranking, service and area pages, honest review requests and replies under Google, Yelp, US, UK and EU rules, Local Services Ads leads and the Google Verified badge, local lead tracking and seasonal offers, with 30 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "game-developer",
+  "name": "Game developer",
+  "department": "engineering",
+  "summary": "Writes game code for small studios in Unity: movement, menus, saves and game rules, with tests. Fixes physics and timing bugs.",
+  "aliases": [
+    "unity developer",
+    "game programmer",
+    "c# unity",
+    "indie games",
+    "game development",
+    "godot",
+    "unreal engine",
+    "steam release",
+    "game save system",
+    "loot box rules"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (Unity 6.6 manual, Unity 6.3 LTS and pricing; Godot 4.7 and Unreal 5.8 docs; Steamworks fee, review, Coming Soon, Content Survey, uploads and Cloud; IARC, Play content ratings, PEGI June 2026 rules, ESRB; Apple and Play loot box odds; UK, EU and FTC action). Four skills, five prompts, two workflows, training files."
+    }
+  ]
+}

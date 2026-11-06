@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "check-your-strategy-then-turn-it-into-a-90-day-plan",
+    "name": "Check your strategy, then turn it into a 90-day plan",
+    "why": "Turns a checked strategy into a 90-day plan with owners, the same shape as the plan that ends every health check."
+  },
+  {
+    "slug": "prepare-a-board-decision-brief",
+    "name": "Prepare a board decision brief",
+    "why": "An evidence-backed brief for a decision due, a companion to the big decision memo prompt."
+  },
+  {
+    "slug": "fleet-replacement-cash-comparer",
+    "name": "Fleet replacement cash comparer",
+    "why": "A cash schedule for replacing or keeping a vehicle, the classic lease-or-buy decision memo."
+  },
+  {
+    "slug": "cash-lever-ranker",
+    "name": "Cash lever ranker",
+    "why": "Ranks the changes that free the most cash, useful when the health check rates the cash cycle amber or red."
+  },
+  {
+    "slug": "debt-maturity-funding-ladder",
+    "name": "Debt maturity funding ladder",
+    "why": "Rolls cash through upcoming debt maturities to find the biggest gap, extending the debt map."
+  },
+  {
+    "slug": "debt-service-covenant-headroom-checker",
+    "name": "Debt service covenant headroom checker",
+    "why": "Shows headroom over a debt service covenant in each test period, the covenant step of the debt map and monthly cycle."
+  },
+  {
+    "slug": "refinancing-payoff-revision-assistant",
+    "name": "Refinancing payoff revision assistant",
+    "why": "Checks a refinancing raises enough to repay the old loan, useful when a new loan offer replaces existing debt."
+  },
+  {
+    "slug": "deal-ebitda-addback-checker",
+    "name": "Deal EBITDA addback checker",
+    "why": "Applies an agreed addback cap to EBITDA, a check alongside the quality of earnings review."
+  },
+  {
+    "slug": "prepare-a-due-diligence-document-index",
+    "name": "Prepare a due diligence document index",
+    "why": "Builds a versioned document index and request coverage map, the data room step of sale preparation and buy-side diligence."
+  },
+  {
+    "slug": "working-capital-true-up-checker",
+    "name": "Working capital true-up checker",
+    "why": "Works out who pays whom when final working capital differs from the peg after a sale."
+  },
+  {
+    "slug": "reconcile-seller-closing-cash",
+    "name": "Reconcile seller closing cash",
+    "why": "Shows what a seller has received, what is held back and what is still owed after completion."
+  }
+]

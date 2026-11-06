@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "extract-a-scanned-document-and-verify-key-facts",
+    "name": "Extract a scanned document and verify key facts",
+    "why": "Pulls facts from a scan and checks each against the page with uncertain readings flagged, the same habit as the OCR-against-the-original prompt."
+  },
+  {
+    "slug": "data-file-clean-up-loop",
+    "name": "Data file clean-up loop",
+    "why": "Cleans a messy export in rounds and saves the rules for next time, useful when a batch arrives as a bad export rather than documents."
+  },
+  {
+    "slug": "check-supplier-invoices-before-approval",
+    "name": "Check supplier invoices before approval",
+    "why": "Matches entered invoices to purchase orders and receipts after the bills import, the step a bookkeeper runs before anyone pays."
+  },
+  {
+    "slug": "recurring-invoice-exception-review-assistant",
+    "name": "Recurring invoice exception review assistant",
+    "why": "Checks each new invoice batch for duplicates, wrong sums and missing receipts and keeps an exception ledger, matching the exceptions-first way of working."
+  },
+  {
+    "slug": "prepare-expenses-for-your-bookkeeper",
+    "name": "Prepare expenses for your bookkeeper",
+    "why": "Sorts receipts into the bookkeeper's approved categories and lists missing receipts, for clients whose batch is expenses rather than supplier bills."
+  },
+  {
+    "slug": "expense-report-builder",
+    "name": "Expense report builder",
+    "why": "Turns pasted receipts into an expense report with gaps listed, a small version of the documents-to-import-file skill."
+  },
+  {
+    "slug": "excel-input-form-builder",
+    "name": "Excel input form builder",
+    "why": "Builds an Excel entry form with dropdowns and duplicate checks from field rules, the build step after the rules sheet."
+  },
+  {
+    "slug": "prepare-an-excel-input-workbook-for-handover",
+    "name": "Prepare an Excel input workbook for handover",
+    "why": "Produces a checked input workbook and a guide from field rules, for handing a validated entry sheet to a team."
+  },
+  {
+    "slug": "validate-lab-data-before-system-import",
+    "name": "Prepare lab data for a checked import",
+    "why": "Maps exports to a target schema with an import exception list, the same pre-import discipline applied to instrument data."
+  },
+  {
+    "slug": "check-a-spreadsheet-before-sharing-the-results",
+    "name": "Check a spreadsheet before sharing the results",
+    "why": "Traces totals back to source before anyone relies on a sheet, a companion to control totals and spot checks."
+  },
+  {
+    "slug": "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+    "name": "Set up a documentation system and write procedures that pass",
+    "why": "Turns the one-page entry rules into a tested written procedure when a team needs more than a rules sheet."
+  }
+]

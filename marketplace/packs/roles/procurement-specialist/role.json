@@ -1,0 +1,26 @@
+{
+  "id": "procurement-specialist",
+  "name": "Procurement specialist",
+  "department": "operations",
+  "summary": "Finds and compares suppliers, cuts running costs and prepares for price talks. Puts messy quotes on one basis so the real cost shows.",
+  "aliases": [
+    "procurement",
+    "purchasing",
+    "sourcing agent",
+    "supplier negotiation",
+    "vendor selection",
+    "cost reduction",
+    "request for quotation",
+    "supplier vetting",
+    "public tenders",
+    "spend analysis"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources, four skills (sourcing plan and RFQ, quote levelling and scoring, supplier due diligence with OFAC, UK and EU sanctions checks, negotiation and contract terms), six prompts, two workflows. Awards, signing and new payees need a fresh yes; money stays with the client."
+    }
+  ]
+}

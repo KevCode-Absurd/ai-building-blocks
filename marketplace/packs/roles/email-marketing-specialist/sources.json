@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Email sender guidelines",
+    "publisher": "Google (Gmail Help)",
+    "url": "https://support.google.com/a/answer/81126",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Requirements for all senders (SPF or DKIM, forward and reverse DNS, TLS, RFC 5322, spam rate below 0.3%) and for bulk senders over 5,000 messages a day to Gmail (SPF and DKIM, DMARC, alignment, one-click unsubscribe plus a visible link); keep spam rate below 0.1%; DKIM key length; effective 1 February 2024"
+  },
+  {
+    "n": 2,
+    "title": "Email sender guidelines FAQ",
+    "publisher": "Google (Gmail Help)",
+    "url": "https://support.google.com/a/answer/14229414",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Enforcement ramp-up from November 2025 with temporary (4.7.x) and permanent (5.7.x) rejections; bulk sender status is permanent and counts subdomains together; spam rate above 0.3% removes mitigation until 7 days below; one-click unsubscribe applies to marketing mail and must use RFC 8058 headers; honour unsubscribes within 48 hours; June 2024 one-click deadline"
+  },
+  {
+    "n": 3,
+    "title": "Postmaster Tools dashboards",
+    "publisher": "Google (Gmail Help)",
+    "url": "https://support.google.com/mail/answer/14668346?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The dashboards (compliance status, spam rate, reputation, feedback loop, authentication, encryption, delivery errors), which checks apply to all senders and to bulk senders, and that low-volume days may show no data"
+  },
+  {
+    "n": 4,
+    "title": "Learn about the deprecation of the old Postmaster Tools interface",
+    "publisher": "Google (Gmail Help)",
+    "url": "https://support.google.com/mail/answer/16594218?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Postmaster Tools v2 (launched 2024), retirement of the Domain and IP Reputation dashboards in favour of a new Reputation dashboard, the postponed deprecation of the old interface, and the v1 to v2 API move"
+  },
+  {
+    "n": 5,
+    "title": "Recommended DMARC rollout",
+    "publisher": "Google Workspace Knowledge Center",
+    "url": "https://knowledge.workspace.google.com/admin/security/recommended-dmarc-rollout",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Set up SPF and DKIM 48 hours before DMARC; start at p=none for a week and read aggregate reports daily; move to quarantine for a small share and raise it; reject is optional and riskier"
+  },
+  {
+    "n": 6,
+    "title": "Set up BIMI",
+    "publisher": "Google Workspace Knowledge Center",
+    "url": "https://knowledge.workspace.google.com/admin/security/set-up-bimi",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Gmail BIMI needs DMARC at quarantine or reject, a VMC (trademarked logo) or CMC, an SVG logo in a PEM file; VMC senders get a checkmark; the page makes no deliverability claim"
+  },
+  {
+    "n": 7,
+    "title": "Sender Best Practices",
+    "publisher": "Yahoo Sender Hub",
+    "url": "https://senders.yahooinc.com/best-practices/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Yahoo requirements for all senders and bulk senders: SPF and DKIM, DMARC at p=none or stricter that passes, alignment, one-click unsubscribe (RFC 8058 POST highly recommended), visible unsubscribe link, honour unsubscribes within 2 days, spam rate below 0.3%; recommends confirmed opt-in and no purchased lists; February 2024 start"
+  },
+  {
+    "n": 8,
+    "title": "Policies, Practices, and Guidelines (Outlook.com postmaster)",
+    "publisher": "Microsoft",
+    "url": "https://substrate.office.com/ip-domain-management-snds/Postmaster/Policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Outlook.com requirements for domains sending more than 5,000 emails a day (SPF, DKIM, DMARC at least p=none, aligned), effective 5 May 2025; non-compliant mail goes to Junk and may be rejected with 550 5.7.515; JMRP and SNDS; do not retry after 5xx errors"
+  },
+  {
+    "n": 9,
+    "title": "Strengthening Email Ecosystem: Outlook's New Requirements for High-Volume Senders",
+    "publisher": "Microsoft Tech Community (Microsoft Defender for Office 365 blog)",
+    "url": "https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Announcement dated 2 April 2025 (updated late April 2025): covers outlook.com, hotmail.com and live.com; recommended practices (valid From and Reply-To, working unsubscribe, list hygiene, honest subject lines); Junk routing from 5 May 2025 with rejection to follow"
+  },
+  {
+    "n": 10,
+    "title": "Postmaster information for iCloud Mail",
+    "publisher": "Apple Support",
+    "url": "https://support.apple.com/en-us/102322",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. iCloud Mail bulk sender rules (explicit opt-in only, no purchased or appended lists, working unsubscribe, ARC on forwarded mail, reverse DNS, separate marketing and transactional streams, remove inactive subscribers); non-compliant bulk mail is rejected; no allow list and no feedback loop; published 25 February 2025"
+  },
+  {
+    "n": 11,
+    "title": "Mail Privacy Protection and Privacy",
+    "publisher": "Apple",
+    "url": "https://www.apple.com/legal/privacy/data/en/mail-privacy-protection/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Protect Mail Activity downloads remote content in the background by default whether or not the person opens the email, and hides the IP address through two relays, which is why opens are unreliable"
+  },
+  {
+    "n": 12,
+    "title": "RFC 8058: Signaling One-Click Functionality for List Email Headers",
+    "publisher": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc8058.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The List-Unsubscribe-Post: List-Unsubscribe=One-Click header, the HTTPS URI, the DKIM signature that must cover both headers, and no redirects (January 2017)"
+  },
+  {
+    "n": 13,
+    "title": "RFC 9989: Domain-Based Message Authentication, Reporting, and Conformance (DMARC)",
+    "publisher": "IETF Datatracker",
+    "url": "https://datatracker.ietf.org/doc/rfc9989/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DMARC became a Proposed Standard in May 2026 and obsoletes RFC 7489 and RFC 9091; DNS tree walk replaces the Public Suffix List; np and t tags; pct tag removed"
+  },
+  {
+    "n": 14,
+    "title": "M3AAWG Sender Best Common Practices, Version 4.0 (updated August 2026)",
+    "publisher": "Messaging, Malware and Mobile Anti-Abuse Working Group (M3AAWG)",
+    "url": "https://www.m3aawg.org/sites/default/files/doc_files/m3aawg-sender-best-common-practices-aug-27-2026.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted locally). Three opt-in levels with confirmed opt-in as best, keeping consent records, secondary purposes must be opt-in, telling people the frequency and type of mail, domain warming (start low and slow, about six weeks on average), list bombing, unsubscribe without login and without delay"
+  },
+  {
+    "n": 15,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. US rules: accurate headers, honest subject lines, identify the message as an ad, postal address, clear opt-out, honour opt-outs within 10 business days, opt-out must work for 30 days, liability for others sending for you, the primary purpose test, and the per-email penalty figure shown on the page"
+  },
+  {
+    "n": 16,
+    "title": "Electronic mail marketing (Guide to PECR)",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. UK rules: specific consent for marketing email to individuals, the soft opt-in conditions for existing customers, no third-party list meets the soft opt-in, corporate subscribers need no consent but must get identification and an opt-out, sole traders treated as individuals"
+  },
+  {
+    "n": 17,
+    "title": "The charitable purpose soft opt-in",
+    "publisher": "UK Information Commissioner's Office",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/the-charitable-purpose-soft-opt-in/",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. The new soft opt-in for charities from the Data (Use and Access) Act 2025, commenced 5 February 2026, for contact details obtained on or after that date"
+  },
+  {
+    "n": 18,
+    "title": "The Data (Use and Access) Act 2025 (Commencement No. 6 and Transitional and Saving Provisions) Regulations 2026, regulation 2",
+    "publisher": "legislation.gov.uk (UK Government)",
+    "url": "https://www.legislation.gov.uk/uksi/2026/82/regulation/2/made",
+    "checked": "2026-11-06",
+    "supports": "The page returned no readable text to WebFetch; confirmed by a WebSearch result showing this exact page. S.I. 2026/82, made 29 January 2026, brings most of the Act's changes to UK GDPR, PECR and the DPA 2018 into force on 5 February 2026"
+  },
+  {
+    "n": 19,
+    "title": "Direct marketing guidance: enforcement",
+    "publisher": "UK Information Commissioner's Office (ICO Welsh-language site)",
+    "url": "https://cy.ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/direct-marketing-guidance/enforcement",
+    "checked": "2026-11-06",
+    "supports": "Confirmed by a WebSearch result showing this exact page (not opened). States the higher PECR maximum penalty of £17.5 million or 4% of global turnover and notes the guidance is under review after the Data (Use and Access) Act 2025; law-firm summaries say the same"
+  },
+  {
+    "n": 20,
+    "title": "Data protection and online privacy",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked by the EU on 05/08/2026). In the EU, people must opt in to marketing emails; opting out is not enough; a company you buy from may email you about its own similar products; you can object at any time and it must stop"
+  },
+  {
+    "n": 21,
+    "title": "Guidelines 05/2020 on consent under Regulation 2016/679",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The EDPB's consent guidelines, adopted 4 May 2020, the reference for what valid GDPR consent requires"
+  },
+  {
+    "n": 22,
+    "title": "Email Marketing Benchmarks and Statistics by Industry",
+    "publisher": "Mailchimp (Intuit)",
+    "url": "https://mailchimp.com/resources/email-marketing-benchmarks/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Averages for all users (open 35.63%, click 2.62%, unsubscribe 0.22%) from data as of December 2023, campaigns sent to 1,000 or more subscribers, with an Apple MPP caveat; the page's FAQ gives slightly different overall figures"
+  },
+  {
+    "n": 23,
+    "title": "2026 Email Marketing Benchmarks by Industry",
+    "publisher": "Klaviyo",
+    "url": "https://www.klaviyo.com/products/email-marketing/benchmarks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From over 183,000 Klaviyo customers: campaign click rate 1.69% (top 10%: 3.38%), flow click rate 5.58% (top 10%: 10.48%), campaign open rate 31%, flow open rate 32.2%; no data period or metric definitions given"
+  },
+  {
+    "n": 24,
+    "title": "Permission Marketing (blog post, 31 January 2008)",
+    "publisher": "Seth Godin (Seth's Blog)",
+    "url": "https://seths.blog/2008/01/permission-mark/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Godin's own definition: permission is the privilege, not the right, of sending anticipated, personal and relevant messages; real permission is explicit; keep the promise. Source of the idea in his book Permission Marketing (Simon & Schuster, 1999)"
+  },
+  {
+    "n": 25,
+    "title": "Email Marketing Rules (Chad S. White's site)",
+    "publisher": "Chad S. White",
+    "url": "https://www.emailmarketingrules.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The author's site for Email Marketing Rules, 4th edition, with his writing on permission, deliverability and sender reputation, metrics, the law, and targeting and automation"
+  },
+  {
+    "n": 26,
+    "title": "Holistic Email Marketing: the book",
+    "publisher": "Kath Pay (Holistic Email Marketing)",
+    "url": "https://www.holisticemailmarketing.com/email-marketing-consultant/kath-pay-email-marketing-strategist/holistic-email-marketing-the-book/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Kath Pay's book (second edition): treat email as marketing, Helpful Marketing, customer-focused messages, a scientific method for testing, and metrics beyond opens and clicks; Highly Commended at the 2021 Business Book Awards"
+  },
+  {
+    "n": 27,
+    "title": "Can I email: support tables for HTML and CSS in emails",
+    "publisher": "Can I email (Tilt Studio and contributors)",
+    "url": "https://www.caniemail.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Community-maintained support tables for HTML and CSS features across email clients (Apple Mail, Gmail, Outlook, Yahoo and others), used to check a feature before relying on it"
+  },
+  {
+    "n": 28,
+    "title": "Stages of migration to new Outlook for Windows",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/outlook/get-started/guide-product-availability",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 23 February 2026). The opt-in, opt-out and cutover stages for new Outlook for Windows, 12 months' notice before each later stage, and classic Outlook supported until at least 2029"
+  }
+]

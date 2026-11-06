@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "ISO 9001 Quality Management Systems",
+    "publisher": "BSI (British Standards Institution, the UK national standards body)",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-9001-quality-management-systems/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Banner: ISO 9001:2026 published and available; certification requires clauses 4 to 10 (context, leadership, planning, support, operation, performance evaluation, improvement). No transition deadline on the page. Used because iso.org blocks automated reading."
+  },
+  {
+    "n": 2,
+    "title": "ISO 9001:2026 key changes and guidance",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards-services/iso-9001-2026-key-changes-and-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. New edition published September 2026; clause-by-clause changes (climate and sustainability in context, ethics and quality culture, risk and opportunity separated, data in performance evaluation, new Annex A). No transition deadline stated."
+  },
+  {
+    "n": 3,
+    "title": "ISO 14001 key changes and guidance",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards-services/iso-14001-key-changes-and-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ISO 14001:2026 published April 2026; life cycle perspective, planning for change, all potential emergencies, defined objectives for each internal audit, more specific management review inputs. No transition dates stated."
+  },
+  {
+    "n": 4,
+    "title": "ISO 45001 Occupational Health and Safety",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-45001-occupational-health-and-safety/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revision of ISO 45001 in progress, publication expected in 2027; SSIP section refers to ISO 45001:2018; replaced OHSAS 18001; clauses 4 to 10."
+  },
+  {
+    "n": 5,
+    "title": "ISO 22301 Business Continuity Management",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/en-GB/products-and-services/standards/iso-22301-business-continuity-management/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ISO 22301 requirements: business impact analysis and risk assessment, resources, continuity plans and procedures, Plan-Do-Check-Act cycle."
+  },
+  {
+    "n": 6,
+    "title": "Hydraulics Online underpin customer trust with ISO 9001 certification (case study)",
+    "publisher": "BSI",
+    "url": "https://www.bsigroup.com/en-GB/insights-and-media/insights/case-studies/hydraulics-online-underpin-customer-trust-with-iso-9001-certification/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Real business: seven-person hydraulic equipment supplier in Cheshire, certified to ISO 9001:2015 by BSI since 2014; due diligence and competing with larger firms; Export Champion since 2019; 2024 awards. Undated page; a vendor case study."
+  },
+  {
+    "n": 7,
+    "title": "Risk assessment: steps needed to manage risk (updated 16 October 2026)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/simple-health-safety/risk/steps-needed-to-manage-risk.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five steps; reasonably practicable; record significant findings with 5 or more employees; do not rely on paperwork, control risks in practice."
+  },
+  {
+    "n": 8,
+    "title": "Hierarchy of Controls (updated 28 October 2026)",
+    "publisher": "NIOSH, Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/niosh/hierarchy-of-controls/about/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Elimination, substitution, engineering, administrative, PPE in order of general effectiveness; do not rely on PPE alone when better options exist."
+  },
+  {
+    "n": 9,
+    "title": "Recommended Practices for Safety and Health Programs",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/safety-management",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Seven core elements for small and medium businesses; proactive hazard finding beats reacting after injury."
+  },
+  {
+    "n": 10,
+    "title": "Directive 89/391/EEC, the OSH Framework Directive",
+    "publisher": "European Agency for Safety and Health at Work (EU-OSHA)",
+    "url": "https://osha.europa.eu/en/legislation/directives/the-osh-framework-directive/1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employer duties: evaluate all risks, prevention, consult and train workers, emergency measures, list of occupational accidents and reports to authorities. Used because EUR-Lex blocks automated reading."
+  },
+  {
+    "n": 11,
+    "title": "Green Guides (16 CFR Part 260)",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/green-guides",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. FTC guidance on substantiating and qualifying environmental marketing claims; revised version issued October 2012. The page did not show the status of the review begun in December 2022."
+  },
+  {
+    "n": 12,
+    "title": "Types of reportable incidents (updated 12 October 2026)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/riddor/types-of-reportable-incidents.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RIDDOR reportable deaths (including within 365 days), specified injuries, over-7-day incapacitation, non-workers taken to hospital for treatment, occupational diseases, dangerous occurrences, gas incidents; over-3-day injuries recorded in the accident book only."
+  },
+  {
+    "n": 13,
+    "title": "When do I need to report an incident? (updated 11 February 2025)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/riddor/when-do-i-report.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deaths and specified injuries without delay, phone allowed, report received within 10 days; over-7-day injuries within 15 days; diseases on diagnosis; dangerous occurrences without delay."
+  },
+  {
+    "n": 14,
+    "title": "Who should report under RIDDOR (updated 7 May 2026)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/riddor/reporting/who-should-report.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Responsible persons: employers, some self-employed people, and people in control of premises for members of the public and dangerous occurrences."
+  },
+  {
+    "n": 15,
+    "title": "HSG245 Investigating accidents and incidents (2004)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/pubns/books/hsg245.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Workbook for employers, unions, safety representatives and professionals; four steps: gather information, analyse, identify risk control measures, action plan and implementation."
+  },
+  {
+    "n": 16,
+    "title": "Report a fatality or severe injury",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/report",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fatality within 8 hours; in-patient hospitalisation, amputation or loss of an eye within 24 hours; how to report; state plan requirements may differ."
+  },
+  {
+    "n": 17,
+    "title": "Injury and illness recordkeeping requirements",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/recordkeeping",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Many employers with more than 10 employees keep Forms 300, 300A and 301; certain industries partially exempt; electronic submission through the ITA, deadline 2 March."
+  },
+  {
+    "n": 18,
+    "title": "29 CFR 1904.29, Forms",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.29",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Record each case within seven calendar days; privacy concern cases recorded as 'privacy case' with a separate confidential list. Used because eCFR blocks automated reading."
+  },
+  {
+    "n": 19,
+    "title": "29 CFR 1904.32, Annual summary",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.32",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Post the summary no later than 1 February until 30 April; certified by a company executive."
+  },
+  {
+    "n": 20,
+    "title": "29 CFR 1904.33, Retention and updating",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.33",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Keep the 300 log, 300A summary and 301 reports for five years following the end of the calendar year they cover."
+  },
+  {
+    "n": 21,
+    "title": "29 CFR 1904.35, Employee involvement",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.35",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A reasonable procedure for prompt and accurate injury reporting; tell employees how to report and of their right to report; no retaliation; employee access to records."
+  },
+  {
+    "n": 22,
+    "title": "Workers' right to refuse dangerous work",
+    "publisher": "Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/workers/right-to-refuse",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Conditions under which US workers may refuse work posing a risk of death or serious physical harm; what to do first; 30 days to report retaliation."
+  },
+  {
+    "n": 23,
+    "title": "Construction and landscaping company fined after worker falls through fragile barn roof (5 November 2026)",
+    "publisher": "HSE press office",
+    "url": "https://press.hse.gov.uk/2026/11/05/construction-and-landscaping-company-fined-after-worker-falls-through-fragile-barn-roof/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Real business: AJ Riley Landscapes and Building Limited, Caton, Lancashire; fall of about 10 metres on 24 February 2025; work not properly planned, workers not trained in the risk assessment's controls; fined £20,000 plus £4,955 costs on 3 November 2026."
+  },
+  {
+    "n": 24,
+    "title": "Media company fined and director sentenced after employee suffers life-changing injuries during filming inside a moving vehicle (15 October 2026)",
+    "publisher": "HSE press office",
+    "url": "https://press.hse.gov.uk/2026/10/15/media-company-fined-and-director-sentenced-after-employee-suffers-life-changing-injuries-during-filming-inside-a-moving-vehicle/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Real business: Superhub Ltd, Paignton; no risk assessment for the filming activity; fined £45,000 plus £3,000 costs; director given 16 months suspended for 2 years; sentenced 14 October."
+  },
+  {
+    "n": 25,
+    "title": "Corporate Standard",
+    "publisher": "GHG Protocol",
+    "url": "https://ghgprotocol.org/corporate-standard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Corporate GHG inventory standard covering seven gases, updated 2015 with Scope 2 Guidance; scope 2 is purchased electricity, steam, heat and cooling; separate Scope 3 Standard for the value chain."
+  },
+  {
+    "n": 26,
+    "title": "Government conversion factors for company reporting of greenhouse gas emissions",
+    "publisher": "GOV.UK (Department for Energy Security and Net Zero)",
+    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest set: conversion factors 2026 (published 11 June 2026 per update history; page date shows 31 July 2026); scopes 1, 2 and 3 calculated separately; updated annually; spend-based methods give rough estimates and must be stated."
+  },
+  {
+    "n": 27,
+    "title": "GHG Emission Factors Hub (2025 edition, page updated 12 January 2026)",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/climateleadership/ghg-emission-factors-hub",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Default emission factors for organisational GHG reporting; 2025 Hub released January 2025; earlier versions archived."
+  },
+  {
+    "n": 28,
+    "title": "Corporate sustainability reporting (updated 3 July 2026)",
+    "publisher": "European Commission",
+    "url": "https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/company-reporting-and-auditing/company-reporting/corporate-sustainability-reporting_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CSRD status: Omnibus proposal to limit to largest companies (more than 1,000 employees), political agreement 9 December 2025; stop-the-clock; VSME recommendation 30 July 2025; delegated acts adopted 3 July 2026. Final thresholds not given on the page."
+  },
+  {
+    "n": 29,
+    "title": "Green claims code: environmental claims on goods and services (20 September 2021)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims/environmental-claims-on-goods-and-services",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six principles for environmental claims."
+  },
+  {
+    "n": 30,
+    "title": "Business continuity planning (updated 25 March 2026)",
+    "publisher": "Ready.gov (US Federal Emergency Management Agency)",
+    "url": "https://www.ready.gov/business/emergency-plans/continuity-planning",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six-step planning process (prepare, define objectives, identify risks and impacts, develop strategies, define teams and tasks, test); the Business Continuity Planning Suite is no longer supported for download."
+  }
+]

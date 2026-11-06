@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Maintenance of work equipment",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/work-equipment-machinery/maintenance.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 19 Nov 2024. Planned preventive maintenance makes equipment more reliable, cuts breakdowns and finds faults early; use the maker's instructions; schedule into downtime; a maintenance log, where one exists, is kept up to date (PUWER); isolate, lock off, release stored energy; permit-to-work for high-risk equipment; competent people only."
+  },
+  {
+    "n": 2,
+    "title": "About Maintenance Plans",
+    "publisher": "MaintainX Help Center",
+    "url": "https://help.getmaintainx.com/about-maintenance-plans",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Time-based, usage (meter) and combined triggers, whichever comes first; fixed intervals (suggested for maker, warranty or regulatory schedules) vs floating intervals from completion; nested tasks; generated work orders are typed Preventive. No page date."
+  },
+  {
+    "n": 3,
+    "title": "About Work Requests",
+    "publisher": "MaintainX Help Center",
+    "url": "https://help.getmaintainx.com/about-work-requests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Requester users submit requests in the app; anyone with a request portal link or QR code can submit without an account; requests can be routed to teams; administrators approve or decline; approved requests become work orders. No page date."
+  },
+  {
+    "n": 4,
+    "title": "About Users and Teams",
+    "publisher": "MaintainX Help Center",
+    "url": "https://help.getmaintainx.com/about-users-and-teams",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Default roles: Requester, Full User, Administrator and Operator (Premium and Enterprise, daily work order quota); custom roles where the plan supports it. No page date."
+  },
+  {
+    "n": 5,
+    "title": "How to Create PM Schedules",
+    "publisher": "UpKeep Help Center",
+    "url": "https://help.onupkeep.com/en/articles/9535110-how-to-create-pm-schedules",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 17 Nov 2025. Time-based, meter-based, condition-based and hybrid triggers; calendar options (every N days, weeks, months, set weekdays, position in month, yearly); work orders created a set time before due; start date required, blank end date runs on."
+  },
+  {
+    "n": 6,
+    "title": "Service Reminders Overview",
+    "publisher": "Fleetio Help Center",
+    "url": "https://help.fleetio.com/en_US/service-reminders-schedules/service-reminders-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reminders use time, a primary meter and optional secondary meter, due on whichever comes first; Due Soon thresholds trigger notifications; a reminder resolves when its task is recorded on a completed work order or service entry; snoozing. No page date."
+  },
+  {
+    "n": 7,
+    "title": "Legionnaires' disease: what you must do",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/legionnaires/what-you-must-do/index.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 25 Nov 2024. Employers and those in control of premises, including landlords, must identify and assess sources of risk, manage, prevent or control the risk, and keep records; HSWA, MHSWR, COSHH and ACOP L8."
+  },
+  {
+    "n": 8,
+    "title": "Legionella risk in water systems",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/legionnaires/workplace-risks.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 30 Sep 2024. Water at 20 to 45 C, storage or recirculation, deposits (rust, sludge, scale, biofilm) and aerosols create foreseeable risk; every system needs a risk assessment, reviewed regularly."
+  },
+  {
+    "n": 9,
+    "title": "Testing and monitoring your water system for legionella",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/legionnaires/testing-monitoring-water-system.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 30 Sep 2024. Open systems such as cooling towers tested at least quarterly; hot and cold systems usually not tested microbiologically unless the control regime is in doubt; sampling to BS 7592; UKAS-accredited laboratory."
+  },
+  {
+    "n": 10,
+    "title": "Legionella and landlords' responsibilities",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/legionnaires/legionella-landlords-responsibilities.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 30 Sep 2024. Simple controls; calorifier at 60 C; vacant property outlets used at least weekly; temperature checks are the reliable method; no legionella test certificate required; recording duty applies to employers with 5 or more staff."
+  },
+  {
+    "n": 11,
+    "title": "L8: Legionnaires' disease. The control of legionella bacteria in water systems",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/pubns/books/l8.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 7 Aug 2025. Fourth edition 2013; ACOP status for risk assessment, the appointed responsible person, the control scheme, review of control measures and duties of suppliers; technical guidance moved to HSG274."
+  },
+  {
+    "n": 12,
+    "title": "HSG274 Part 2: The control of legionella bacteria in hot and cold water systems",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/pubns/priced/hsg274part2.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF, text extracted locally). Second edition 2024, Part 2 not revised. Table 2.1: calorifier flow at or above 60 C, return not below 50 C; hot sentinels 50 C within one minute (55 C healthcare); cold sentinels below 20 C within two minutes; infrequently used outlets flushed weekly or per risk assessment; para 2.63 far sentinel loops monitored monthly."
+  },
+  {
+    "n": 13,
+    "title": "The legionella outbreak in Barrow",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/legionnaires/barrow.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 4 Aug 2026. August 2002 outbreak at a council-owned arts and leisure facility in Barrow-in-Furness town centre: 7 members of the public died and 180 suffered ill health."
+  },
+  {
+    "n": 14,
+    "title": "Legionella Water Management Program Toolkit",
+    "publisher": "US Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/control-legionella/php/toolkit/wmp-toolkit.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 15 Mar 2024. Practical guide for building owners and managers; water management programs are an industry standard for many US buildings; worksheet to identify buildings with increased risk."
+  },
+  {
+    "n": 15,
+    "title": "Directive (EU) 2020/2184 on the quality of water intended for human consumption",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2020/2184/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read in parts). Legionella parametric value below 1,000 CFU/l (Annex I Part D); monitoring may focus on priority premises (Art 10); first risk assessment of domestic distribution systems by 12 Jan 2029 (Art 7(6)); transposition by 12 Jan 2023 (Art 24)."
+  },
+  {
+    "n": 16,
+    "title": "Fire safety in the workplace: who is responsible",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-fire-safety-your-responsibilities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The responsible person includes employers, owners, landlords, occupiers and facilities or building managers; several must cooperate; fines or prison for failures; Scotland and Northern Ireland have different rules."
+  },
+  {
+    "n": 17,
+    "title": "Fire safety in the workplace: fire risk assessments",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-fire-safety-your-responsibilities/fire-risk-assessments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five steps; written record of the assessment; regular review; appoint a competent person if lacking expertise or time; guides by premises type."
+  },
+  {
+    "n": 18,
+    "title": "Fire safety in the workplace: equipment, drills and training",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-fire-safety-your-responsibilities/fire-safety-equipment-drills-and-training",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Detection and warning system; equipment installed, tested and maintained; regular checks of alarms and emergency lighting with faults recorded, escape routes and exits; at least one fire drill per year, results recorded."
+  },
+  {
+    "n": 19,
+    "title": "29 CFR 1910.157: Portable fire extinguishers",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.157",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visual inspection monthly; annual maintenance check with the date recorded and kept one year after the last entry or the life of the shell, whichever is shorter; hydrostatic testing intervals in Table L-1."
+  },
+  {
+    "n": 20,
+    "title": "Portable appliance testing: frequently asked questions",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/electricity/faq-portable-appliance-testing.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 16 Apr 2025. Annual PAT is not a legal requirement; the duty is to maintain equipment to prevent danger; frequency is risk-based; records and labels optional; low-risk premises often need only user checks and visual inspections."
+  },
+  {
+    "n": 21,
+    "title": "29 CFR 1910.147: The control of hazardous energy (lockout/tagout)",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.147",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Written energy control procedures; periodic inspection of each procedure at least annually, certified; outside personnel: host and contractor employers inform each other of their lockout procedures."
+  },
+  {
+    "n": 22,
+    "title": "29 CFR 1910.178: Powered industrial trucks",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.178",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. (q)(7) examined before being placed in service, at least daily, or after each shift if used round the clock; defects affecting safety keep the truck out of service and are reported and corrected; (q)(1) unsafe trucks removed from service."
+  },
+  {
+    "n": 23,
+    "title": "Directive 2009/104/EC: use of work equipment",
+    "publisher": "European Agency for Safety and Health at Work (EU-OSHA)",
+    "url": "https://osha.europa.eu/en/legislation/directives/3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest update 11 Aug 2021. Adequate maintenance through the working life; inspections by competent persons after installation and periodically; results recorded and kept."
+  },
+  {
+    "n": 24,
+    "title": "Guide to maintaining roadworthiness: commercial goods and passenger carrying vehicles",
+    "publisher": "Driver and Vehicle Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read in parts). Guide first published 22 Apr 2014, updated 28 Apr 2025. At least one walkaround check in every 24 hours in service; nil defect reports good practice; safety inspections typically 4 to 13 weeks; records kept at least 15 months; out-of-scope light vehicles should still have a maintenance regime."
+  },
+  {
+    "n": 25,
+    "title": "49 CFR 396.11: Driver vehicle inspection reports",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/cfr/text/49/396.11",
+    "checked": "2026-11-06",
+    "supports": "Cornell LII copy of the regulation text, opened with WebFetch; the FMCSA page returned HTTP 403 and eCFR redirects to an unblock page. Report at the end of each day's work on each vehicle; not required when no defect is found; repair and certification before the vehicle runs again; keep three months."
+  },
+  {
+    "n": 26,
+    "title": "Using contractors: a brief guide (INDG368 rev1)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/pubns/indg368.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF, text extracted locally). Published June 2012. Identify the job, select a suitable contractor (questions on management, subcontractors, record, policy and risk assessments when 5 or more employees, qualifications, Employers' Liability insurance), assess risks together, information, cooperate, consult workforce, manage and supervise, review. Still cites CDM 2007."
+  },
+  {
+    "n": 27,
+    "title": "CDM 2015: commercial clients",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/commercial-clients.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 12 Jan 2026. Client arrangements; principal designer and principal contractor where more than one contractor; pre-construction information; construction phase plan; health and safety file; notifiable if over 30 working days with more than 20 workers at once, or over 500 person-days."
+  },
+  {
+    "n": 28,
+    "title": "Duty to manage asbestos in buildings",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/asbestos/duty/index.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 1 Mar 2021. Dutyholder for non-domestic premises and common parts; presume suspect materials contain asbestos; register; risk assessment; management plan reviewed at least every 12 months; give information to anyone who may disturb it, including maintenance workers."
+  },
+  {
+    "n": 29,
+    "title": "Multi-Employer Citation Policy (CPL 2-0.124)",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/enforcement/directives/cpl-02-00-124",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Effective 10 Dec 1999. Creating, exposing, correcting and controlling employers; a controlling employer takes reasonable care to prevent and detect violations, with inspection frequency matched to the contractor's record."
+  },
+  {
+    "n": 30,
+    "title": "Gas safety for employers",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/gas/employers.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 1 Mar 2021. In homes and workplaces such as shops, restaurants, schools and hospitals only a Gas Safe registered engineer may install, maintain or repair gas appliances and pipework; employers check registration; maintain pipework, appliances and flues regularly per maker; no set frequency given."
+  }
+]

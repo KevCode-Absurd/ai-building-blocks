@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "tailor-a-job-application-to-real-evidence",
+    "name": "Tailor a job application to real evidence",
+    "why": "Matches a resume to a job post using only what the person really did, the same rule as the tailored CV skill."
+  },
+  {
+    "slug": "job-application-evidence-review-assistant",
+    "name": "Job application evidence review assistant",
+    "why": "Checks every claim in a tailored resume and answers against the person's record before they apply."
+  },
+  {
+    "slug": "elevator-pitch-writer",
+    "name": "Elevator pitch writer",
+    "why": "Writes 10, 30 and 60 second pitches, a starting point for 'Tell me about yourself' and networking."
+  },
+  {
+    "slug": "negotiation-call-prep-planner",
+    "name": "Negotiation call prep planner",
+    "why": "Plans a hard call with an opening and questions, useful before the offer and pay talk."
+  },
+  {
+    "slug": "pay-raise-case-builder",
+    "name": "Pay raise case builder",
+    "why": "Builds the case and script for a pay rise from the person's results, matching the offer and pay talk skill."
+  },
+  {
+    "slug": "honest-appreciation-note-writer",
+    "name": "Honest appreciation note writer",
+    "why": "Writes a short, specific thank-you note from meeting notes, for after interviews and networking calls."
+  },
+  {
+    "slug": "resignation-letter-writer",
+    "name": "Resignation letter writer",
+    "why": "Writes a short resignation letter, what to say first and a handover list once a new offer is in writing."
+  },
+  {
+    "slug": "job-exit-plan-writer",
+    "name": "Job exit plan writer",
+    "why": "Plans leaving a job to go out on your own: notice letter, who to tell first and an income check."
+  },
+  {
+    "slug": "leave-job-own-income",
+    "name": "Leave a steady job and earn from your own work",
+    "why": "A full run for people moving from a salary to their own clients, often paired with a freelance profile."
+  },
+  {
+    "slug": "x-and-linkedin-post-pair-writer",
+    "name": "X and LinkedIn post pair writer",
+    "why": "Turns one idea into a LinkedIn post that sounds like the person, after the profile is rewritten."
+  },
+  {
+    "slug": "first-impression-plan",
+    "name": "Make a strong first impression and build the relationship",
+    "why": "Prepares a brief and plan before meeting someone new, useful for networking conversations during a search."
+  }
+]

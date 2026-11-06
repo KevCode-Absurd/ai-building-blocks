@@ -1,0 +1,26 @@
+{
+  "id": "editor",
+  "name": "Editor and proofreader",
+  "department": "content",
+  "summary": "Makes a draft clearer, shorter and free of errors while keeping the writer's voice. Gives structural feedback on long or academic work.",
+  "aliases": [
+    "proofreader",
+    "copy editor",
+    "editing",
+    "academic editor",
+    "line editor",
+    "proofreading",
+    "developmental editor",
+    "plain language editor",
+    "manuscript editor",
+    "peer review"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 sources (style guides credited by name, plain language standards from GOV.UK and digital.gov, journal AI rules), four skills (copy edit and proofread, plain language rewrite, structural edit, academic paper review), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "frontend-developer",
+  "name": "Front-end developer",
+  "department": "engineering",
+  "summary": "Builds the parts of a website or web app people see and click, so they work on every screen. Handles every state, from loading to error.",
+  "aliases": [
+    "frontend developer",
+    "react developer",
+    "web developer",
+    "html css",
+    "javascript",
+    "landing page developer",
+    "chrome extension",
+    "vue developer",
+    "page speed",
+    "web accessibility"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (Core Web Vitals, WCAG 2.2, ARIA patterns, React 19.3, Vue 3, Manifest V3, regional accessibility rules), four skills (component build, page speed diagnosis, accessibility fix pass, browser extension build), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

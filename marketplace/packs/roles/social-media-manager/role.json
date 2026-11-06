@@ -1,0 +1,26 @@
+{
+  "id": "social-media-manager",
+  "name": "Social media manager",
+  "department": "marketing",
+  "summary": "Plans and writes a business's posts, captions and short videos, and answers comments and messages. Keeps a steady schedule that sounds like the business.",
+  "aliases": [
+    "social media marketing",
+    "smm",
+    "instagram manager",
+    "tiktok marketing",
+    "content calendar",
+    "social media marketer",
+    "reels",
+    "community replies",
+    "community manager",
+    "short-form video"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: how Instagram, Facebook, Threads, TikTok, YouTube Shorts, LinkedIn and X rank posts as of Nov 2026 from the platforms' own pages, originality rules, ad and AI disclosure in the US, UK and EU, four skills (content plan, platform-native posts, short video scripts, comment and message replies), six prompts, three workflows and training material, with 29 checked sources. The agent drafts; the client posts."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "channel-sales-manager",
+  "name": "Channel and wholesale sales manager",
+  "department": "sales",
+  "summary": "Wins and keeps the shops, distributors, resellers and partners who sell for the business. Sets terms and margins that work for both sides.",
+  "aliases": [
+    "wholesale",
+    "channel partners",
+    "reseller programme",
+    "stockists",
+    "partner manager",
+    "distribution",
+    "partner program",
+    "deal registration",
+    "referral partners",
+    "line sheet"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 23 checked sources (FTC, DOJ and CMA guidance and cases on resale prices, Robinson-Patman, EU vertical rules, HubSpot, Xero, Microsoft and AWS partner programmes, Shopify B2B, partner disclosure, late payment), four skills, six prompts, two workflows, training interview and test briefs, with access levels 1 to 3."
+    }
+  ]
+}

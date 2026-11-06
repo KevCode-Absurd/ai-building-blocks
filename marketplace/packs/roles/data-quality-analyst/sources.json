@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "The Government Data Quality Framework",
+    "publisher": "UK Government (Government Data Quality Hub), GOV.UK",
+    "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 3 December 2020. Six core dimensions from DAMA UK (completeness, uniqueness, consistency, timeliness, validity, accuracy), said to be not prescriptive; five principles (commit to data quality, know your users and their needs, assess quality throughout the lifecycle, communicate quality clearly, anticipate changes affecting quality); six lifecycle stages; action plans; root cause analysis to fix issues at source; fit for purpose depends on intended use."
+  },
+  {
+    "n": 2,
+    "title": "Data protection basics (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-protection-basics_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The six GDPR principles for small businesses, including accuracy: personal data must be accurate and kept up to date, and inaccurate personal data must be rectified or erased. Undated page."
+  },
+  {
+    "n": 3,
+    "title": "Principles of the GDPR",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Accuracy: personal data must be accurate and up to date given the purposes, and inaccurate data rectified or deleted without delay; example of a recruitment office keeping CVs for 10 years that must keep them updated; legal references Article 5(1)(d) and Recital 39."
+  },
+  {
+    "n": 4,
+    "title": "Data protection",
+    "publisher": "UK Government, GOV.UK",
+    "url": "https://www.gov.uk/data-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK data protection principles, including that personal data must be 'accurate and, where necessary, kept up to date'; people's rights include having incorrect data updated. Undated page."
+  },
+  {
+    "n": 5,
+    "title": "California Consumer Privacy Act (CCPA)",
+    "publisher": "State of California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 28 August 2026. Right to correct inaccurate personal information added by the CPRA, effective 1 January 2023; businesses offer at least two submission methods (online-only businesses an email address), respond within 45 calendar days, extendable by 45 days with notice, and verify identity; some grounds to deny."
+  },
+  {
+    "n": 6,
+    "title": "EDPB adopts pseudonymisation guidelines and paves the way to improve cooperation with competition authorities",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/news/news/2025/edpb-adopts-pseudonymisation-guidelines-and-paves-way-improve-cooperation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. News item dated 17 January 2025: Guidelines 01/2025 adopted for consultation; pseudonymised data remains personal data when it can be linked back to a person with additional information."
+  },
+  {
+    "n": 7,
+    "title": "Add data tests to your DAG",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/build/data-tests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 16 September 2026. A data test is a select query that returns failing rows (zero rows passes); generic tests unique, not_null, accepted_values, relationships; singular tests; severity warn or error with warn_if and error_if thresholds; store_failures saves failing rows to dbt_test__audit by default; YAML key data_tests with tests as an alias; arguments property from v1.10.5 and required in v2; version selector lists v2, v1, 1.13 beta, 1.12, 1.11."
+  },
+  {
+    "n": 8,
+    "title": "Unit tests",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/build/unit-tests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 14 September 2026. Unit tests from dbt v1.8 check SQL logic on small static inputs before the model is built; recommended for complex logic, reported bugs, edge cases, refactors and high-criticality models; run in development or CI; worked email-validation example."
+  },
+  {
+    "n": 9,
+    "title": "Model contracts",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/mesh/govern/model-contracts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A contract guarantees column names and data types, optionally constraints; preflight check at build time, model does not build on mismatch; supported on table, incremental and view (views without constraints); primary_key, foreign_key and unique are usually not enforced in cloud warehouses, not_null is most often enforced, Postgres enforces all it supports; breaking-change errors; adopt once a model's structure has stabilised."
+  },
+  {
+    "n": 10,
+    "title": "Source freshness",
+    "publisher": "dbt Labs",
+    "url": "https://docs.getdbt.com/docs/deploy/source-freshness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 6 October 2026. dbt build does not include freshness checks; run dbt source freshness as a step (first to gate models, or last or separate to avoid blocking); run freshness checks at least twice as often as the tightest SLA (for example every 30 minutes for a 1-hour SLA)."
+  },
+  {
+    "n": 11,
+    "title": "Expectation (GX glossary)",
+    "publisher": "Great Expectations",
+    "url": "https://docs.greatexpectations.io/docs/reference/learn/terms/expectation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An Expectation is a verifiable assertion about data, grouped into Expectation Suites; over 50 built-in, such as expect_column_values_to_not_be_null and expect_column_values_to_be_unique; Checkpoints run suites in production. This page documents GX 0.18.21, marked no longer actively maintained; the docs point to GX Core 1.24.1 as latest."
+  },
+  {
+    "n": 12,
+    "title": "Soda documentation",
+    "publisher": "Soda",
+    "url": "https://docs.soda.io/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Soda docs organised as Find, Understand, Fix; data contracts and a contract language; reconciliation checks such as row_count_diff between a warehouse table and its source; Soda Cloud, Soda CLI, Soda Core path, Soda MCP and an RCA agent. The page carries an 'Agent Instructions' section aimed at AI agents, which was not followed."
+  },
+  {
+    "n": 13,
+    "title": "Open Data Contract Standard: Data Quality",
+    "publisher": "Bitol project",
+    "url": "https://bitol-io.github.io/open-data-contract-standard/latest/data-quality/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule types text, library (default), sql and custom (for engines such as Soda or Great Expectations); library metrics nullValues, missingValues, invalidValues, duplicateValues, rowCount; operators mustBe, mustBeGreaterThan, mustBeBetween and others; dimensions accuracy, completeness, conformity, consistency, coverage, timeliness, uniqueness; severity and schedule fields."
+  },
+  {
+    "n": 14,
+    "title": "Open Data Contract Standard (GitHub repository)",
+    "publisher": "Bitol project",
+    "url": "https://github.com/bitol-io/open-data-contract-standard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current version v3.2.0 (no release date shown); Apache 2.0 licence; citation lists LF AI & Data Foundation; a standard structure for data contracts between producers and consumers with schema, data quality, SLA and ownership sections."
+  },
+  {
+    "n": 15,
+    "title": "Clustering in depth",
+    "publisher": "OpenRefine",
+    "url": "https://openrefine.org/docs/technical-reference/clustering-in-depth",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 17 January 2025. Key collision methods (fingerprint steps, n-gram fingerprint with false positives at small n, phonetic methods such as Metaphone3, Cologne, Daitch-Mokotoff, Beider-Morse) and nearest neighbour methods (Levenshtein, PPM as a last resort) with blocking (default 6 characters); clustering is syntactic only; fingerprinting can merge values where accents carry meaning."
+  },
+  {
+    "n": 16,
+    "title": "Splink: fast, accurate and scalable probabilistic data linkage",
+    "publisher": "UK Ministry of Justice Analytical Services",
+    "url": "https://moj-analytical-services.github.io/splink/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Python package for probabilistic record linkage and de-duplication using the Fellegi-Sunter model with term frequency adjustments; DuckDB, Spark and PostgreSQL backends; project claim of linking a million records on a laptop in about a minute; Splink 5 released; users include ONS, NHS England and the Australian Bureau of Statistics."
+  },
+  {
+    "n": 17,
+    "title": "Using the data profiling tools (Power Query)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/data-profiling-tools",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page dated 28 August 2025. Column quality (valid, error, empty, unknown, unexpected error), column distribution (distinct versus unique), column profile; profiling runs on the first 1,000 rows by default and can be switched to the entire data set."
+  },
+  {
+    "n": 18,
+    "title": "Filter for unique values or remove duplicate values",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/filter-for-unique-values-or-remove-duplicate-values-ccf664b0-81d6-449b-bbe1-8daaec1e83c2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remove Duplicates permanently deletes rows, keeps the first occurrence, and compares displayed values (3/8/2006 and Mar 8, 2006 count as unique); copy the data or filter for unique values first; highlight duplicates with conditional formatting or a COUNTIF rule."
+  },
+  {
+    "n": 19,
+    "title": "Create an in-cell dropdown list",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/186103",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Sheets dropdown validation from a range or typed values; by default entries not on the list are rejected; Advanced options can switch to 'Show a warning'."
+  },
+  {
+    "n": 20,
+    "title": "Deduplication of records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/deduplication-of-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Contacts deduplicated by email and companies by primary domain; companies created through the API are not deduplicated by domain; Record ID in imports updates existing records and rows without one create new records; up to ten unique-value properties per object, not enforced on forms."
+  },
+  {
+    "n": 21,
+    "title": "Merge records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/merge-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 5 September 2026. Merge needs the Merge permission or Super Admin; primary record's property values are kept and empty ones filled from the secondary; associations and activities combined; merges fail when combined merge count reaches 250; 'It's not possible to unmerge records.'"
+  },
+  {
+    "n": 22,
+    "title": "Manage duplicate records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/manage-duplicate-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 23 October 2026. Duplicate manager on Professional or Enterprise tiers, up to 10,000 pairs individually; bulk management, custom rules and the audit log need Data Hub Professional (30,000 pairs) or Enterprise (100,000 pairs); pairs compared daily on default properties; merges cannot be reversed; rejected pairs can be undone within 14 days; tool named Data Quality under Data Management."
+  },
+  {
+    "n": 23,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote HubSpot MCP server (mcp.hubspot.com) with OAuth through a user-level app; read and write for contacts, companies, deals, tickets and other CRM objects; read-only for users, owners, campaigns and content; sensitive data properties not accessible; no launch or GA date shown."
+  },
+  {
+    "n": 24,
+    "title": "dbt-mcp",
+    "publisher": "dbt Labs (GitHub)",
+    "url": "https://github.com/dbt-labs/dbt-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server in the dbt-labs organisation for dbt Core, Fusion and Platform, Apache-2.0; discovery, semantic layer, SQL and dbt CLI tools; README warns that CLI tools such as build, run and test could modify models, sources and warehouse objects."
+  },
+  {
+    "n": 25,
+    "title": "PHE statement on delayed reporting of COVID-19 cases",
+    "publisher": "Public Health England, GOV.UK",
+    "url": "https://www.gov.uk/government/news/phe-statement-on-delayed-reporting-of-covid-19-cases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 4 October 2020. A fault in the automated data load left 15,841 cases out of daily figures (25 September to 2 October); some files were larger than the maximum size the load process could handle; fix by splitting large files and an end-to-end review. The page does not name Excel, so the kit does not."
+  },
+  {
+    "n": 26,
+    "title": "Federal Reserve Board fines Citigroup $60.6 million for violating 2020 enforcement action",
+    "publisher": "Board of Governors of the Federal Reserve System",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20240710a.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 10 July 2024: $60.6 million penalty because Citigroup made insufficient progress remediating data quality management problems and lacked compensating controls; coordinated with the OCC, penalties totalling about $135.6 million."
+  },
+  {
+    "n": 27,
+    "title": "RFC 2606: Reserved Top Level DNS Names",
+    "publisher": "IETF (RFC Editor)",
+    "url": "https://www.rfc-editor.org/rfc/rfc2606",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. June 1999, BCP 32: reserves .test, .example, .invalid and .localhost, and example.com, example.net and example.org for examples."
+  },
+  {
+    "n": 28,
+    "title": "Telephone numbers for drama",
+    "publisher": "Ofcom",
+    "url": "https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/numbers-for-drama",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page updated 11 May 2023. UK ranges set aside for drama, such as 07700 900000 to 900999 (mobile), 020 7946 0000 to 0999 (London) and 01632 960000 to 960999 (no area code); not allocated to providers."
+  },
+  {
+    "n": 29,
+    "title": "Testing (test card numbers)",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Don't use real card details; the Stripe Services Agreement prohibits testing in live mode with real payment details; use test API keys and test cards such as 4242 4242 4242 4242; PaymentMethods such as pm_card_visa preferred in code."
+  },
+  {
+    "n": 30,
+    "title": "Faker documentation",
+    "publisher": "Faker (open-source project)",
+    "url": "https://faker.readthedocs.io/en/master/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Python package for fake data with locales (falls back to en_US); Faker.seed and seed_instance give repeatable output for the same version, so pin the version when tests hardcode values; unique values; docs show version 40.44.0."
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "MEDDIC, MEDDICC and MEDDPICC explained",
+    "publisher": "MEDDICC (meddicc.com)",
+    "url": "https://meddicc.com/meddpicc-sales-methodology-and-process",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no author or date shown). MEDDIC was created at PTC in 1996 by Dick Dunkel, with Jack Napoli also credited; MEDDIC is Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion; MEDDICC adds Competition; MEDDPICC adds Paper Process and uses Implicate the Pain; presented as a way to qualify deals early and a common language for deal health. Site of a MEDDICC training business."
+  },
+  {
+    "n": 2,
+    "title": "MEDDICC: The definitive guide to MEDDPICC (book page)",
+    "publisher": "MEDDICC (meddicc.com)",
+    "url": "https://meddicc.com/meddicc-the-book",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Book by Andy Whyte; the page names Dick Dunkel as co-creator of the original MEDDIC methodology. Publication year not stated on the page."
+  },
+  {
+    "n": 3,
+    "title": "Set up and manage object pipelines",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 29 September 2026. Each deal stage has a win probability used for weighted amounts; conditional stage properties can be made required before a record is created in or moved to a stage; pipeline rules can control editing and require approval; custom pipeline limits by subscription (Starter 15, Professional 100 or 350, Enterprise 350, free tools none)."
+  },
+  {
+    "n": 4,
+    "title": "Associate records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/associate-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 16 September 2026. Association labels describe how records relate (examples given: manager, advisor) and need a Professional or Enterprise subscription; the default Primary label marks a contact's primary company."
+  },
+  {
+    "n": 5,
+    "title": "Create and send quotes",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/quotes/create-and-send-quotes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 28 October 2026. Creating quotes needs Revenue Hub Professional or Enterprise and a Revenue Hub seat; quotes that need approval move to Pending approval until approvers act; e-signature is the default acceptance method; a default expiration period can be set."
+  },
+  {
+    "n": 6,
+    "title": "Understand HubSpot CPQ",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/cpq/understand-hubspot-cpq",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 12 October 2026. CPQ is available with Revenue Hub Professional and Enterprise; standard and advanced quote approvals; advanced approvals (Enterprise) route on discounts, amounts and term lengths; quote rules can warn or block publishing."
+  },
+  {
+    "n": 7,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote MCP server with read and write access to contacts, companies, deals, quotes, line items and engagements (calls, emails, meetings, notes, tasks); users, owners and teams read-only; access set by a user-level app's scopes; an account admin connects first."
+  },
+  {
+    "n": 8,
+    "title": "Sales Cloud pricing",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/sales/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists a Free Suite and paid editions (Starter Suite, Pro Suite, Core, Advanced, Max), most with free trials, and Agentforce for Sales as an add-on; the page says it is subject to change. Salesforce Help pages (for example Account Plans) did not load for automated checks on 6 November 2026."
+  },
+  {
+    "n": 9,
+    "title": "Salesforce DX MCP server end of life (forcedotcom/mcp issue 46)",
+    "publisher": "Salesforce, on GitHub",
+    "url": "https://github.com/forcedotcom/mcp/issues/46",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Salesforce DX local MCP server reached end of life on 2 November 2026 and its repositories are archived; Salesforce says its tooling is now delivered as skills."
+  },
+  {
+    "n": 10,
+    "title": "Dealings with competitors",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-competitors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Many collaborations between competitors are lawful, including joint ventures; risk arises when they stop acting independently; price fixing, bid rigging and market or customer division are treated as always illegal."
+  },
+  {
+    "n": 11,
+    "title": "Horizontal agreements: guidance",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/guidance-on-horizontal-agreements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 16 August 2023; explains how the Chapter I prohibition of the Competition Act 1998 applies to agreements between actual or potential competitors, alongside the specialisation and R&D block exemptions."
+  },
+  {
+    "n": 12,
+    "title": "Horizontal block exemption regulations and guidelines",
+    "publisher": "European Commission, Directorate-General for Competition",
+    "url": "https://competition-policy.ec.europa.eu/antitrust-and-cartels/legislation/horizontal-block-exemptions_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revised R&D and specialisation block exemption regulations adopted 1 June 2023; revised Horizontal Guidelines published in the Official Journal on 21 July 2023."
+  },
+  {
+    "n": 13,
+    "title": "FAR Subpart 9.6: Contractor Team Arrangements",
+    "publisher": "Acquisition.gov",
+    "url": "https://www.acquisition.gov/far/subpart-9.6",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; FAC 2026-01, effective 13 March 2026. A team arrangement is a partnership or joint venture acting as prime, or a prime with agreed subcontractors; the government recognises arrangements when members and relationships are disclosed in the offer; the subpart does not authorise arrangements that break antitrust law."
+  },
+  {
+    "n": 14,
+    "title": "SBA Mentor-Protege Program",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/federal-contracting/contracting-assistance-programs/sba-mentor-protege-program",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A mentor and protege may form a joint venture to bid as a small business if the protege qualifies as small; the protege performs at least 40% of the joint venture's work; agreements last up to six years; processing takes about 105 days; the 8(a) and All Small programmes merged on 16 November 2020."
+  },
+  {
+    "n": 15,
+    "title": "How to win contracts",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/federal-contracting/contracting-guide/how-win-contracts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Marketing to government: learn what agencies or primes need and show how you meet it; agency small business offices (OSDBU or OSBP) and Procurement Center Representatives; SUBNet lists subcontracting opportunities from large primes."
+  },
+  {
+    "n": 16,
+    "title": "Basic requirements for federal contracting",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/federal-contracting/contracting-guide/basic-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Register in SAM to contract with the government; a UEI is a 12-character alphanumeric ID assigned at SAM registration; match services to NAICS codes (more than one allowed); SBA size standards per NAICS code."
+  },
+  {
+    "n": 17,
+    "title": "Directive 2014/24/EU on public procurement",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2014/24/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 19(2): groups of economic operators, including temporary associations, may take part and cannot be required to have a specific legal form to submit a tender; Article 19(3): a legal form may be required after award where needed for performance."
+  },
+  {
+    "n": 18,
+    "title": "Small and medium business hub",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/small-and-medium-business-hub",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 21 July 2026, when Crown Commercial Service references became Government Commercial Agency. Public notices are on Find a Tender, where suppliers register before bidding; government aims to pay 90% of invoices within 5 days and all within 30; since 1 September 2019, bidders for central government contracts over 5 million GBP a year must show they pay 95% of supply chain invoices within 60 days."
+  },
+  {
+    "n": 19,
+    "title": "Employers' liability insurance",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/employers-liability-insurance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employers need cover of at least 5 million GBP from an authorised insurer as soon as they employ someone (exemptions include employing only a close family member); fine of 2,500 GBP a day without proper cover and 1,000 GBP for not displaying the certificate, which may be shown electronically."
+  },
+  {
+    "n": 20,
+    "title": "Cyber Essentials overview",
+    "publisher": "National Cyber Security Centre (UK)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Government-recommended minimum standard based on five technical controls; Cyber Essentials Plus adds independent technical testing; IASME is the delivery partner and runs certification."
+  },
+  {
+    "n": 21,
+    "title": "Bribery Act 2010 guidance",
+    "publisher": "Ministry of Justice (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/bribery-act-2010-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 11 February 2012, updated 22 January 2025; section 7 offence of failing to prevent bribery by associated persons; adequate procedures are a defence; six principles: proportionality, top-level commitment, risk assessment, due diligence, communication and monitoring and review."
+  },
+  {
+    "n": 22,
+    "title": "Find and update company information",
+    "publisher": "Companies House (GOV.UK)",
+    "url": "https://find-and-update.company-information.service.gov.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search the register by company name, number or officer; view company data and document images; search for disqualified directors."
+  },
+  {
+    "n": 23,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No exception for business-to-business email; accurate headers, honest subject lines, ad disclosure, a postal address and an opt-out; opt-outs honoured within 10 business days; up to 53,088 USD per violating email; the sender stays responsible for email sent on its behalf."
+  },
+  {
+    "n": 24,
+    "title": "Marketing and advertising: the law (direct marketing)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/marketing-advertising-law/direct-marketing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Marketing messages must identify the sender and make clear they are selling; every marketing email needs an unsubscribe option; check the Telephone Preference Service before telesales calls; opting out must be easy."
+  },
+  {
+    "n": 25,
+    "title": "Directive 2002/58/EC (ePrivacy Directive), consolidated 19 December 2009",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2002/58/2009-12-19/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 13(1): prior consent for email marketing; 13(2): soft opt-in for a company's own similar products to existing customers; 13(5): protection of business (non-individual) subscribers is left to EU and national law."
+  },
+  {
+    "n": 26,
+    "title": "Talk-to-listen ratio analysis",
+    "publisher": "Gong",
+    "url": "https://www.gong.io/blog/talk-to-listen-conversion-ratio/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 21 August 2025, modified 4 March 2026: 326,000 sales calls of 10 minutes or more; sellers talked 60% on average, 57% in won deals and 62% in lost deals. Vendor data."
+  }
+]

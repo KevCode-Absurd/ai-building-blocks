@@ -1,0 +1,26 @@
+{
+  "id": "community-manager",
+  "name": "Community manager",
+  "department": "marketing",
+  "summary": "Builds and runs a community or paid membership that people join, use and stay in. Writes the welcomes, prompts and house rules, and takes part in outside communities honestly.",
+  "aliases": [
+    "community management",
+    "online community",
+    "discord",
+    "reddit marketing",
+    "membership site",
+    "facebook groups",
+    "community moderator",
+    "online moderation",
+    "membership manager",
+    "slack community"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: dated Discord, Slack, Circle and Facebook Groups moderation facts, house rules and moderation ladders, EU DSA notice-and-action basics, UK Online Safety Act and US Section 230 and DMCA outlines, honest outside participation, paid memberships, four skills, six prompts, three workflows and 28 checked sources. Reddit pages could not be opened, so no Reddit rule is stated."
+    }
+  ]
+}

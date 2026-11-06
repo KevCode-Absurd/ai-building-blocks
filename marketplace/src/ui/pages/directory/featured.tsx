@@ -6,13 +6,15 @@
 // from each area in a fixed order that leads with variety, so the strip shows code, data and design, not six marketers.
 import "./directory.css";
 import { useLoad } from "../../components.tsx";
-import { api } from "../../lib/api.ts";
+import { api, peekBoot } from "../../lib/api.ts";
 import { Link } from "../../lib/router.tsx";
 import { AgentCard, CardSkeletons, type FeaturedList } from "./parts.tsx";
 
 export function FeaturedAgents(props: { count?: number; title?: string }) {
   const count = Math.min(12, Math.max(1, props.count ?? 6));
-  const state = useLoad<FeaturedList>(() => api(`/api/agents?featured=${count}`), [count]);
+  // The home page carries the first answer (src/pages.ts), so the cards paint at once and the page doesn't shift.
+  const path = `/api/agents?featured=${count}`;
+  const state = useLoad<FeaturedList>(() => api(path), [count], peekBoot<FeaturedList>(path));
   // The home page should never break because of this strip: on an error it shows nothing.
   if (state.error) return null;
   const data = state.data;

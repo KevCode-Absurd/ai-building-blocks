@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "research-a-question-and-write-a-cited-report",
+    "name": "Research a question and write a fully cited report",
+    "why": "Takes one question through outline, sources, a cited report and a claim check, the same path as the evidence review sprint workflow."
+  },
+  {
+    "slug": "research-question-outliner",
+    "name": "Research question outliner",
+    "why": "Splits a big question into sub-questions, source types and search phrases, the framing step of the literature search and review skill."
+  },
+  {
+    "slug": "study-headline-claim-checker",
+    "name": "Study headline claim checker",
+    "why": "Checks a news claim about a study against what the study showed, a quick version of tracing a claim upstream."
+  },
+  {
+    "slug": "review-a-paper-and-write-a-fair-peer-review",
+    "name": "Check a paper's claims and write a fair peer review",
+    "why": "Checks a manuscript's claims and methods, a deeper companion to the paper summary and evidence strength skill."
+  },
+  {
+    "slug": "compare-conflicting-research-findings",
+    "name": "Compare conflicting research findings",
+    "why": "Builds a claims table and disagreement map across papers, matching the conflicting findings prompt."
+  },
+  {
+    "slug": "research-contradiction-review-assistant",
+    "name": "Research contradiction review assistant",
+    "why": "Puts disagreeing papers side by side and names the gaps that matter, useful when sources clash in a literature review."
+  },
+  {
+    "slug": "bibliography-revision-review-assistant",
+    "name": "Bibliography revision review assistant",
+    "why": "Matches in-text citations to the reference list and flags duplicates, the inventory step of the citation and reference check skill."
+  },
+  {
+    "slug": "source-note-summariser",
+    "name": "Source note summariser",
+    "why": "Pulls each claim, how well it is backed and the gaps from one source, a fast way to fill an evidence table row."
+  },
+  {
+    "slug": "fact-vs-opinion-sorter",
+    "name": "Fact and opinion sorter",
+    "why": "Sorts persuasive text into fact, inference and opinion, the first step of the claim and source check skill."
+  },
+  {
+    "slug": "claim-and-proof-matcher",
+    "name": "Claim evidence checker",
+    "why": "Checks marketing copy against the proof behind it and suggests safer wording, the business side of a pre-publication fact check."
+  },
+  {
+    "slug": "extract-a-scanned-document-and-verify-key-facts",
+    "name": "Extract a scanned document and verify key facts",
+    "why": "Reads scanned records into a fact table with page numbers, handy for old invoices and letters in a checked history."
+  },
+  {
+    "slug": "prepare-a-source-checked-research-talk",
+    "name": "Build a research talk from checked figures",
+    "why": "Turns a paper and its tables into slides and speaker notes with traceable figures, like the journal club briefing prompt."
+  },
+  {
+    "slug": "turn-saved-reading-into-notes-you-can-use",
+    "name": "Turn saved reading into notes you can use",
+    "why": "Turns a pile of saved sources into linked notes and a sourced answer, a light version of reading notes on a set of papers."
+  }
+]

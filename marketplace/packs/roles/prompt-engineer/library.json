@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "tune-a-prompt-with-real-tests-then-ship-it-with-versions",
+    "name": "Tune a prompt with real tests, then keep versions",
+    "why": "Turns a rough prompt into a clear version scored against your test cases, with versions kept, the same loop as the build, test and ship workflow."
+  },
+  {
+    "slug": "prompt-and-skill-tuner",
+    "name": "Prompt and skill tuner",
+    "why": "Tunes a prompt or skill against your own test cases one change per round, matching the test set and fix skill."
+  },
+  {
+    "slug": "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+    "name": "Harden an AI app against hijacked prompts and runaway bills",
+    "why": "Adds defences and tests against hidden instructions plus spending caps, the code side of the prompt injection review."
+  },
+  {
+    "slug": "track-agent-injection-controls-and-retest-evidence",
+    "name": "Agent injection evidence review assistant",
+    "why": "Writes safe injection test cases for your own agent and tracks retest evidence, run only with the owner's approval."
+  },
+  {
+    "slug": "extract-a-scanned-document-and-verify-key-facts",
+    "name": "Extract a scanned document and verify key facts",
+    "why": "Pulls facts from a scanned document and checks each against the page, a good companion to the extraction prompt and schema skill."
+  },
+  {
+    "slug": "product-image-spec-writer",
+    "name": "Product image spec writer",
+    "why": "Writes a sourced product truth sheet and lock lines for every image prompt, the first step of a product image prompt set."
+  },
+  {
+    "slug": "brand-to-image-prompt-compiler",
+    "name": "Brand-to-image prompt compiler",
+    "why": "Turns brand, scene and product details into one image prompt with a model pick, for single images outside a full set."
+  },
+  {
+    "slug": "accurate-product-image-ad-maker",
+    "name": "Accurate product image ad maker",
+    "why": "Writes an image prompt that keeps your real product and checks the result, matching the rule that images show the product as it is."
+  },
+  {
+    "slug": "image-ad-maker-with-exact-text",
+    "name": "Image ad maker with exact text",
+    "why": "Handles images that need word-perfect text, with a fix for each fault, for the text-in-image step."
+  },
+  {
+    "slug": "ad-image-generation-and-edit-planner",
+    "name": "Ad image generation and edit planner",
+    "why": "Plans a batch of ad images with settings, edit requests and a change log, useful once a prompt set is approved."
+  },
+  {
+    "slug": "old-vs-new-ad-prompt-scorer",
+    "name": "Old vs new ad prompt scorer",
+    "why": "Compares old and new ad prompts with a blind test, a quick way to settle which prompt is better."
+  }
+]

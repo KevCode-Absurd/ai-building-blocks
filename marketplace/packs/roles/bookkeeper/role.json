@@ -1,0 +1,26 @@
+{
+  "id": "bookkeeper",
+  "name": "Bookkeeper",
+  "department": "finance",
+  "summary": "Keeps the books tidy: matches bank lines, sorts expenses, reconciles payouts and gets records ready for the accountant. Leaves a clear trail of every change.",
+  "aliases": [
+    "bookkeeping",
+    "quickbooks",
+    "xero",
+    "reconciliation",
+    "catch-up bookkeeping",
+    "expenses",
+    "chart of accounts",
+    "bank reconciliation",
+    "month-end close",
+    "year-end records"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (US, UK and EU record rules, plus official sources for India, Canada and Australia), four skills (bank reconciliation, transaction categorisation, chart of accounts set-up, payout reconciliation), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

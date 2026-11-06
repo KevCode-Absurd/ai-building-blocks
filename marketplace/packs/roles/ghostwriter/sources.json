@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Politics and the English Language (George Orwell, Horizon, April 1946)",
+    "publisher": "The Orwell Foundation",
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The essay and its 1946 date; Orwell's six rules for plain writing, summarised in the canon"
+  },
+  {
+    "n": 2,
+    "title": "On Writing Well: An Informal Guide to Writing Nonfiction (William Zinsser, 1976)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL2742235W",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book, its author, its 1976 first publication and later HarperCollins editions; the ideas are summarised in my own words in the canon"
+  },
+  {
+    "n": 3,
+    "title": "The Sense of Style: The Thinking Person's Guide to Writing in the 21st Century (Steven Pinker, 2014)",
+    "publisher": "Steven Pinker (author's own site)",
+    "url": "https://stevenpinker.com/publications/sense-style-thinking-persons-guide-writing-21st-century",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book, its 2014 date and Penguin as publisher; classic style and the curse of knowledge are my summary of the book"
+  },
+  {
+    "n": 4,
+    "title": "The Pyramid Principle (Barbara Minto)",
+    "publisher": "Barbara Minto (author's own site)",
+    "url": "https://www.barbaraminto.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ideas grouped in a pyramid under a single point; the situation, complication, question introduction; the book written in 1987 and reissued in 2002"
+  },
+  {
+    "n": 5,
+    "title": "Voice and Tone (Mailchimp Content Style Guide)",
+    "publisher": "Mailchimp (Intuit)",
+    "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Voice stays the same while tone adapts to the reader's state; voice described as 'we are X but not Y' pairs"
+  },
+  {
+    "n": 6,
+    "title": "Andrew Crofts, ghostwriter",
+    "publisher": "Andrew Crofts (author's own site)",
+    "url": "https://www.andrewcrofts.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Crofts's books on the trade (Ghostwriting, A&C Black; Confessions of a Ghostwriter) and his long ghostwriting career"
+  },
+  {
+    "n": 7,
+    "title": "How Users Read on the Web (Jakob Nielsen, 30 September 1997)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 79% of test users scanned and 16% read word by word; concise, scannable and objective text together scored 124% better"
+  },
+  {
+    "n": 8,
+    "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (12 November 2017, reviewed 19 August 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The F-shaped scanning pattern (first found 2006), still seen on desktop and mobile; advice to put the key point first and start headings with the most informative words"
+  },
+  {
+    "n": 9,
+    "title": "Post and share updates",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a528176",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Posts up to 3,000 characters; drafts and scheduled posts; Page super and content admins can post for a Page; posting limits and reduced visibility for posting that looks inauthentic or automated"
+  },
+  {
+    "n": 10,
+    "title": "About LinkedIn",
+    "publisher": "LinkedIn",
+    "url": "https://about.linkedin.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. More than 1 billion members in more than 200 countries and territories"
+  },
+  {
+    "n": 11,
+    "title": "User Agreement (effective 3 November 2025)",
+    "publisher": "LinkedIn",
+    "url": "https://www.linkedin.com/legal/user-agreement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Members keep their password secret and do not share their account; no false identity; no bots or unauthorised automation that drives inauthentic engagement"
+  },
+  {
+    "n": 12,
+    "title": "Professional Community Policies",
+    "publisher": "LinkedIn",
+    "url": "https://www.linkedin.com/legal/professional-community-policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. True identity; no artificially increasing engagement or agreeing in advance to like or share each other's posts; no false or misleading content; disclosure of synthetic media and of endorsements made for personal benefit; no specific rule on ghostwritten or AI-written text"
+  },
+  {
+    "n": 13,
+    "title": "Share on LinkedIn (API documentation)",
+    "publisher": "Microsoft Learn (LinkedIn developer docs)",
+    "url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Apps post for a member only after the member signs in through OAuth and grants the w_member_social permission"
+  },
+  {
+    "n": 14,
+    "title": "Using LinkedIn with Buffer",
+    "publisher": "Buffer Help Center",
+    "url": "https://support.buffer.com/article/560-using-linkedin-with-buffer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Buffer schedules to LinkedIn personal profiles and Pages; the profile owner authorises the connection; only a Page Super Admin can connect a Page; 50 posts per 24 hours; no connections-only posts"
+  },
+  {
+    "n": 15,
+    "title": "Suggest edits in Google Docs",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/6033474",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Suggesting mode proposes changes without altering the text; the owner accepts or rejects; Commenter or Editor access is needed"
+  },
+  {
+    "n": 16,
+    "title": "Content Guidelines (AI-generated and AI-assisted content)",
+    "publisher": "Amazon Kindle Direct Publishing Help",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G200672390",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. KDP requires authors to tell it about AI-generated text, images or translations when publishing or republishing, even after substantial edits; AI-assisted content need not be disclosed"
+  },
+  {
+    "n": 17,
+    "title": "AI Best Practices for Authors (11 May 2026)",
+    "publisher": "The Authors Guild",
+    "url": "https://authorsguild.org/resource/ai-best-practices-for-authors/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Disclose AI-generated text to agents, publishers, readers and in copyright registration; originality warranties in book contracts; contracts with ghostwriters should bar more than de minimis AI text without written approval and require disclosure"
+  },
+  {
+    "n": 18,
+    "title": "Circular 30: Works Made for Hire",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/circs/circ30.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). The two routes to a work made for hire: an employee's work within the scope of employment, or a work in nine commissioned categories with a signed written agreement"
+  },
+  {
+    "n": 19,
+    "title": "Copyright and Artificial Intelligence (report series)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/ai/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Part 1 Digital Replicas (31 July 2024), Part 2 Copyrightability (29 January 2025), Part 3 Generative AI Training (pre-publication, 9 May 2025)"
+  },
+  {
+    "n": 20,
+    "title": "Copyright Office Releases Part 2 of Artificial Intelligence Report (NewsNet, 29 January 2025)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prompts alone do not make AI output protectable; human expressive input, creative arrangement or modification can be; AI assistance does not stop a human work being protected"
+  },
+  {
+    "n": 21,
+    "title": "Intellectual property and your work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/intellectual-property-an-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In the UK a freelancer usually owns the IP in commissioned work unless the contract gives the rights away; employees usually do not own work made for the employer"
+  },
+  {
+    "n": 22,
+    "title": "Copyright (Your Europe, business)",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. With few exceptions copyright is national law in each EU country; moral rights usually cover attribution and integrity"
+  },
+  {
+    "n": 23,
+    "title": "Article 50: Transparency obligations for providers and deployers of certain AI systems (consolidated text as at 27 July 2026)",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 50(4): AI-generated or manipulated text published to inform the public on matters of public interest must be disclosed, unless it had human review or editorial control and someone holds editorial responsibility"
+  },
+  {
+    "n": 24,
+    "title": "Timeline for the implementation of the EU AI Act",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 50 transparency rules apply from 2 August 2026; providers of content-generating systems already on the market get until 2 December 2026 for Article 50(2)"
+  },
+  {
+    "n": 25,
+    "title": "Defining the Role of Authors and Contributors (ICMJE Recommendations)",
+    "publisher": "International Committee of Medical Journal Editors",
+    "url": "https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The four authorship criteria; writing assistance is acknowledged, not given authorship; AI used for writing assistance is reported in the acknowledgments"
+  },
+  {
+    "n": 26,
+    "title": "Essay mills to be banned under plans to reform post-16 education (5 October 2021)",
+    "publisher": "GOV.UK, Department for Education",
+    "url": "https://www.gov.uk/government/news/essay-mills-to-be-banned-under-plans-to-reform-post-16-education",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The UK government's plan, in the Skills and Post-16 Education Bill, to make providing, arranging or advertising contract cheating services for gain a criminal offence for students in England, universities included"
+  },
+  {
+    "n": 27,
+    "title": "Disclosures 101 for Social Media Influencers (November 2019)",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Disclose any financial, employment, personal or family relationship with a brand; put the disclosure with the endorsement, hard to miss, in plain words; platform tools alone are not enough"
+  },
+  {
+    "n": 28,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials (14 August 2024)",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The rule bans fake reviews and testimonials, AI-generated ones included, undisclosed insider reviews and fake social media indicators; civil penalties for knowing violations"
+  },
+  {
+    "n": 29,
+    "title": "Influencers' guide to making clear that ads are ads (fourth edition, 23 October 2026)",
+    "publisher": "Advertising Standards Authority, with the Competition and Markets Authority",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK guidance on labelling paid and incentivised content, updated in 2026 for the Digital Markets, Competition and Consumers Act, fake reviews and CMA penalties"
+  },
+  {
+    "n": 30,
+    "title": "Public attitudes towards the use of AI in journalism (Digital News Report 2024, 17 June 2024)",
+    "publisher": "Reuters Institute for the Study of Journalism",
+    "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/public-attitudes-towards-use-ai-and-journalism",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Across the markets surveyed, 19% were comfortable with news made mostly by AI with human oversight and 36% with news made mostly by humans with some AI help"
+  }
+]

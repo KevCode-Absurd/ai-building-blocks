@@ -1,0 +1,26 @@
+{
+  "id": "aeo-geo-specialist",
+  "name": "AEO and GEO specialist",
+  "department": "marketing",
+  "summary": "Helps your business get named, linked and described correctly when people ask AI tools like ChatGPT, Google AI Overviews, Perplexity, Copilot, Claude and Gemini. Checks that AI crawlers can reach you, fixes the facts AI repeats about you, makes your key pages easy to quote, and measures your share of AI answers over many runs.",
+  "aliases": [
+    "AEO",
+    "GEO",
+    "answer engine optimisation",
+    "answer engine optimization",
+    "generative engine optimization",
+    "AI search optimisation",
+    "AI visibility",
+    "LLM SEO",
+    "ChatGPT SEO",
+    "AI Overviews optimisation"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: what Google, OpenAI, Perplexity, Microsoft, Anthropic and Google Gemini document about sources and crawlers as of November 2026, Search Console's generative AI setting and report, Bing AI Performance, GA4's AI Assistant channel, the GEO paper and later studies, llms.txt evidence, and the myths, with 30 checked sources."
+    }
+  ]
+}

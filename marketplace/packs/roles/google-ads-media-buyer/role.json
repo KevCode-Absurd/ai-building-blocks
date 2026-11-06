@@ -1,0 +1,25 @@
+{
+  "id": "google-ads-media-buyer",
+  "name": "Google Ads media buyer",
+  "department": "marketing",
+  "summary": "Runs your Google Ads so people already searching for what you sell find you at a price that pays. Checks your conversion tracking, cleans out wasted searches, picks the right bidding, and changes nothing without your yes.",
+  "aliases": [
+    "Google Ads specialist",
+    "PPC specialist",
+    "PPC manager",
+    "search ads manager",
+    "paid search specialist",
+    "Google Ads expert",
+    "Performance Max specialist",
+    "Google Shopping ads manager",
+    "SEM specialist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Ad Rank and Quality Score, match types and AI Max, search terms and negatives, RSAs, Performance Max, Demand Gen, Shopping and Merchant Center, Smart Bidding including the 17 August 2026 change, conversion tracking, enhanced conversions, consent mode, Data Manager, budgets and experiments, with 30 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "backend-developer",
+  "name": "Back-end developer",
+  "department": "engineering",
+  "summary": "Builds the APIs, webhooks and integrations behind an app so data stays correct. Makes sure payments never charge twice and events are never lost.",
+  "aliases": [
+    "backend developer",
+    "api developer",
+    "node.js",
+    "python developer",
+    "integrations",
+    "webhooks",
+    "stripe integration",
+    "integration developer",
+    "database migrations",
+    "idempotency"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (HTTP and IETF specs, OWASP API Top 10 2023, Stripe, Shopify and GitHub webhook docs, PostgreSQL 18 docs, PCI SAQ A and SCA rules, AWS retry guidance, GitLab's 2017 outage), four skills (API endpoint build, webhook receiver, safe database migration, third-party API client), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

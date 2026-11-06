@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Selling and supplying goods",
+    "publisher": "Business Companion (Chartered Trading Standards Institute, government-backed)",
+    "url": "https://www.businesscompanion.info/en/quick-guides/consumer-contracts/selling-and-supplying-goods",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed June 2026). Consumer Rights Act 2015 for England and Wales: goods must be of satisfactory quality, fit for purpose and as described; 30-day short-term right to reject (shorter for goods with a shorter expected life, such as highly perishable items); repair or replacement at no cost; final right to reject or price reduction; fault presumed present for six months; no deduction for use within six months (except motor vehicles); refund within 14 days of agreeing the consumer is entitled"
+  },
+  {
+    "n": 2,
+    "title": "Accepting returns and giving refunds",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). In-person sales: full refund if faulty, not as described or not fit for purpose; no legal refund for change of mind unless bought without seeing the item; returns within 6 months repaired or replaced unless the seller proves the fault was not there; up to 6 years to claim (5 in Scotland); sale items carry the same rights; a 'no refunds' sign is illegal. Distance sales: cancel within 14 days of receiving, refund within 14 days of getting the item back, standard delivery refunded"
+  },
+  {
+    "n": 3,
+    "title": "Writing a returns policy",
+    "publisher": "Business Companion (Chartered Trading Standards Institute, government-backed)",
+    "url": "https://www.businesscompanion.info/en/quick-guides/consumer-contracts/writing-a-returns-policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed September 2026). A goodwill policy can add to legal rights but not reduce them; conditions allowed on goodwill returns; suggested wording that the policy is in addition to legal rights; notices such as 'No refunds given', 'Goods can only be exchanged', 'Sold as seen' are likely to mislead and, under the DMCC Act 2024, a criminal offence; adding 'statutory rights unaffected' does not fix them; free guarantees must give name, address, cover, duration and how to claim"
+  },
+  {
+    "n": 4,
+    "title": "Guarantees and returns",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page 'last checked' 05/10/2026). EU legal guarantee of at least 2 years from receiving the goods; a defect that appears within 1 year is presumed present at delivery unless the seller proves otherwise (2 years in some EU countries); national law may give more"
+  },
+  {
+    "n": 5,
+    "title": "Returning goods and cancelling orders (right of withdrawal)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked 28/04/2026). 14-day right to cancel without reason applies to distance and off-premises contracts (online, phone, doorstep); exceptions include perishable, made-to-order and personalised goods and unsealed media; goods from private sellers are not covered"
+  },
+  {
+    "n": 6,
+    "title": "Businessperson's Guide to Federal Warranty Law",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (guide dated December 2006; tie-in section updated March 2018). No law requires a written warranty; written warranties on products over $10 must be titled full or limited; over $15, disclosure and pre-sale availability rules apply (retailers display or provide on request with signs); implied warranties come from state law; a seller offering a written warranty cannot disclaim implied warranties; some states do not allow 'as is' sales"
+  },
+  {
+    "n": 7,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207/unfair-commercial-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 18 November 2025). DMCC Act 2024 unfair commercial practice rules apply from 6 April 2025; 32 practices banned outright, including false limited-time claims, presenting legal rights as a special feature, unauthorised trust marks and fake or hidden incentivised reviews; a shelf price is an invitation to purchase; 'free' only if nothing beyond unavoidable costs is paid; misleading actions and omissions"
+  },
+  {
+    "n": 8,
+    "title": "Providing clear and accurate information about prices: summary (CMA209)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 7 January 2026). Invitations to purchase, including shop shelf prices, adverts and social posts, must show the total price including mandatory fees; hiding fees until later (drip pricing) is illegal; 'from' prices allowed if they include mandatory charges; fines up to 10% of turnover or £300,000, whichever is greater"
+  },
+  {
+    "n": 9,
+    "title": "Press release No 152/24: Judgment in Case C-330/23, Aldi Süd",
+    "publisher": "Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240152en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text read with pdftotext). 26 September 2024: a price reduction announced as a percentage or as a promotional 'price highlight' must be worked out from the lowest price the trader charged in a period of not less than 30 days before the reduction (Directive 98/6/EC as amended by 2019/2161); case brought by a German consumers' association over Aldi Süd brochure prices"
+  },
+  {
+    "n": 10,
+    "title": "Unfair Commercial Practices Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/unfair-commercial-practices-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2005 directive is the overarching EU law on unfair business-to-consumer practices; amended by Directive (EU) 2019/2161 (applied from 28 May 2022) and by Directive (EU) 2024/825 on empowering consumers for the green transition, which applies from 27 September 2026; Commission guidance notice of 17 December 2021"
+  },
+  {
+    "n": 11,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated November 2024). Rule effective 21 October 2024: bans fake reviews and testimonials, incentives conditioned on a positive or negative sentiment, undisclosed reviews by staff or close relatives, review suppression by threats or false accusations, and buying fake social media indicators; civil penalties for knowing violations"
+  },
+  {
+    "n": 12,
+    "title": "Williams-Sonoma Will Pay Record $3.17 Million Civil Penalty for Violating FTC Made in USA Order",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/04/williams-sonoma-will-pay-record-317-million-civil-penalty-violating-ftc-made-usa-order",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (26 April 2024). Products advertised as made in the USA were made in China and other countries; $3.175 million civil penalty, the largest in a Made in USA case; unqualified claims need all or virtually all of the product made in the US"
+  },
+  {
+    "n": 13,
+    "title": "£4.5 million fine for Fender for illegally preventing online price discounts",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/case-studies/45-million-fine-for-fender-for-illegally-preventing-online-price-discounts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 29 June 2020). Fender set minimum resale prices for guitars sold online from January 2013 to April 2018, enforced by threats to supply; £4.5 million CMA fine; retailers must be free to set their own prices and should refuse, report and take advice; resellers who go along can also face enforcement"
+  },
+  {
+    "n": 14,
+    "title": "Conduct, review, and approve inventory counts",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/8249-conduct-full-inventory-counts-with-square-for-retail",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no article date). Full counts verify all stock at a location; cycle counts audit a subset; Square recommends a cycle count for each variation at least every 90 days; counts done in the POS app by scanning, typing or prefilling by category, from several devices; full counts must be reviewed and approved; uncounted variations are set to zero on approval; approval is final; Square Plus and Premium"
+  },
+  {
+    "n": 15,
+    "title": "View stock adjustment history",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/6061-view-stock-adjustment-history-with-square-for-retail",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adjustment reasons include damaged, lost, theft, internal use, spoilage or waste, samples, vendor return, re-count, received, restocked and transferred, plus custom reasons; history filters by date, location, type and reason; CSV export with item, SKU, vendor, cost, location and adjustment type; Retail or Restaurants Plus or Premium"
+  },
+  {
+    "n": 16,
+    "title": "View sell-through reports",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/7809-sell-through-report-with-square-for-retail",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sell-through compares stock received with stock sold over a period; report shows sell-through, sales velocity and stock levels with CSV export; Square says 80% or above is generally excellent and below 40% is concerning, varying by industry and item type (vendor rule of thumb); needs Square for Retail Plus or Premium"
+  },
+  {
+    "n": 17,
+    "title": "Process card payments with offline mode",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/7777-process-card-payments-with-offline-mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (US article). Offline payments upload when the device reconnects; Square recommends uploading within 24 hours; pending payments expire after 72 hours and cannot be recovered; the seller bears expired, declined or disputed offline payments; sellers set a per-payment maximum; offline payments switched on automatically in April 2026 unless the seller opted out; some payment types are not supported offline"
+  },
+  {
+    "n": 18,
+    "title": "Square MCP Server",
+    "publisher": "Square Developer",
+    "url": "https://developer.squareup.com/docs/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Square MCP server, in beta; remote server hosted by Block at mcp.squareup.com with OAuth sign-in; remote access is to production data; a local server can run read-only (DISALLOW_WRITES) or against a sandbox; covers customers, orders, items and more across the Square API"
+  },
+  {
+    "n": 19,
+    "title": "Stock counts",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/inventory/inventory-counts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stock counts compare a physical count at a store location with on-hand quantities; staff count by scanner or by hand, and in the Shopify POS app at locations with POS Pro; a manager reviews and approves before levels change; each change is logged in adjustment history; managed under Inventory > Stock counts"
+  },
+  {
+    "n": 20,
+    "title": "Stocky",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/sell-in-person/shopify-pos/inventory-management/stocky",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stocky will no longer be available after 31 August 2026 and can no longer be installed; merchants should move to Shopify POS inventory management or admin inventory tracking; uninstalling may lose data"
+  },
+  {
+    "n": 21,
+    "title": "Performing inventory counts in Retail POS",
+    "publisher": "Lightspeed Retail (R-Series) Help Center",
+    "url": "https://retail-support.lightspeedhq.com/hc/en-us/articles/229129948-Performing-inventory-counts-in-Retail-POS",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Full and partial (spot) counts; scan, printed list or CSV import; uncounted items appear on a Missed list and must be counted or zeroed before reconciling; reconciling cannot be undone and the Shrinkage page shows stock lost; selling can continue with care; do not count stock reserved for special orders or layaways"
+  },
+  {
+    "n": 22,
+    "title": "National Retail Security Survey 2023",
+    "publisher": "National Retail Federation",
+    "url": "https://nrf.com/research/national-retail-security-survey-2023",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 26 September 2023). Average shrink rate 1.6% in FY2022, up from 1.4% in FY2021; $112.1 billion in shrink based on 2022 total retail sales"
+  },
+  {
+    "n": 23,
+    "title": "Crime in England and Wales: year ending June 2026",
+    "publisher": "Office for National Statistics",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/latest",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (released 22 October 2026). 519,516 police-recorded shoplifting offences in the year ending June 2026, a 2% fall from 530,336"
+  },
+  {
+    "n": 24,
+    "title": "Retail sales, Great Britain: September 2026",
+    "publisher": "Office for National Statistics",
+    "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/latest",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (released 23 October 2026). Sales volumes fell 0.4% in September 2026; online share of retail sales 28.8% in September 2026"
+  },
+  {
+    "n": 25,
+    "title": "Quarterly Retail E-Commerce Sales, 2nd Quarter 2026",
+    "publisher": "US Census Bureau",
+    "url": "https://www.census.gov/retail/ecommerce.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (released 18 August 2026). E-commerce was 17.1% of total US retail sales in Q2 2026, seasonally adjusted; Q3 2026 release due 19 November 2026"
+  },
+  {
+    "n": 26,
+    "title": "Rest breaks at work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/rest-breaks-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Workers on more than 6 hours a day get one uninterrupted 20-minute break, which need not be paid; 11 hours' rest between working days; 24 hours off each week or 48 hours each fortnight; separate young worker rules"
+  },
+  {
+    "n": 27,
+    "title": "Working Time Directive",
+    "publisher": "European Commission, Employment, Social Affairs and Inclusion",
+    "url": "https://employment-social-affairs.ec.europa.eu/policies-and-activities/rights-work/labour-law/working-conditions/working-time-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive 2003/88/EC minimums: average 48 hours a week including overtime; a break if on duty more than 6 hours; 11 consecutive hours' daily rest; 24 hours' weekly rest; at least 4 weeks' paid annual leave; national laws add detail"
+  },
+  {
+    "n": 28,
+    "title": "Breaks and Meal Periods",
+    "publisher": "US Department of Labor",
+    "url": "https://www.dol.gov/general/topic/workhours/breaks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Federal law does not require lunch or coffee breaks; short breaks of 5 to 20 minutes, if offered, are paid work time; bona fide meal periods of usually 30 minutes or more are not work time; links to state labour offices"
+  },
+  {
+    "n": 29,
+    "title": "Predictive Scheduling",
+    "publisher": "Oregon Bureau of Labor and Industries",
+    "url": "https://www.oregon.gov/boli/workers/pages/predictive-scheduling.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Covers retail, hospitality and food service employers with 500 or more employees worldwide; written schedule at least 14 calendar days ahead; no scheduling in the first 10 hours after a shift without consent, with time-and-a-half if worked. Shows that some US states and cities have scheduling laws"
+  },
+  {
+    "n": 30,
+    "title": "Street trading licence",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/street-trading-licence",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). England and Wales: you may need a licence from the local council to trade in the street; a pedlar's certificate may mean you do not; councils can refuse or limit days; trading without a licence or breaking conditions can bring a fine of up to £1,000"
+  }
+]

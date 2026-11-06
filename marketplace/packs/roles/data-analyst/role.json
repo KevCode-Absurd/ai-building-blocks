@@ -1,0 +1,26 @@
+{
+  "id": "data-analyst",
+  "name": "Data analyst",
+  "department": "data",
+  "summary": "Cleans and joins messy exports, then finds the answer and explains it plainly. Shows the working and says when the data is too thin.",
+  "aliases": [
+    "data analysis",
+    "data cleaning",
+    "power query",
+    "excel analysis",
+    "forecasting",
+    "benchmarking",
+    "reporting",
+    "survey analysis",
+    "sales forecast",
+    "insights report"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, three skills (data profiling and clean-up, insight brief from data, forecast from history), five prompts, two workflows, training interview and test briefs. Uses the three access levels (read; read and draft; read, write and publish)."
+    }
+  ]
+}

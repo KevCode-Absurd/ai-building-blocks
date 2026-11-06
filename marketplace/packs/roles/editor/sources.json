@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Professional Editorial Standards (2024 edition)",
+    "publisher": "Editors Canada",
+    "url": "https://www.editors.ca/hire/professional-editorial-standards",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The four stages of editing (structural, stylistic, copy editing, proofreading) as a professional body defines them; the 2024 edition replaced the 2016 edition."
+  },
+  {
+    "n": 2,
+    "title": "The Chicago Manual of Style Online",
+    "publisher": "University of Chicago Press",
+    "url": "https://www.chicagomanualofstyle.org/home.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The current edition is the 18th (copyright 2024); the online edition is offered by subscription with a free trial."
+  },
+  {
+    "n": 3,
+    "title": "A to Z style guide",
+    "publisher": "GOV.UK Content and publishing guidance (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK government house style: abbreviations without full stops, dates as 2 June, 'to' in ranges, sentence case, 'and' not '&', bullet rules, no italics, bold only for interface elements. The old gov.uk/guidance/style-guide URL now redirects here (seen 6 Nov 2026)."
+  },
+  {
+    "n": 4,
+    "title": "Use clear language",
+    "publisher": "GOV.UK Content and publishing guidance (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain English is mandatory on GOV.UK; split sentences over 25 words; no more than 5 sentences per paragraph; active voice; short words; watch -ion and -ment words; must, need and can; specialists prefer plain English too; 1 in 6 adults in England have very poor literacy skills."
+  },
+  {
+    "n": 5,
+    "title": "Write content to meet user needs",
+    "publisher": "GOV.UK Content and publishing guidance (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/meet-user-needs/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Identify the user need before writing; publish only what meets it; guidance should hold only what a person needs to finish the task."
+  },
+  {
+    "n": 6,
+    "title": "Welcome: Microsoft Writing Style Guide",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/style-guide/welcome/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The online guide replaces the Microsoft Manual of Style and covers voice, bias-free communication and global communication; page metadata shows an update on 15 October 2026."
+  },
+  {
+    "n": 7,
+    "title": "Top 10 tips for Microsoft style and voice",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fewer words, write like you speak, contractions, get to the point, sentence-style capitals, no end punctuation in headings, serial (Oxford) comma, one space after full stops, no spaces around em dashes, start with a verb and cut 'there is'."
+  },
+  {
+    "n": 8,
+    "title": "Google developer documentation style guide",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/style",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Order of precedence: project style, then this guide, then Merriam-Webster for spelling, Chicago (17th edition named) for non-technical style and Microsoft for technical style; it calls itself guidelines, not rules, and asks for consistency when departing from it."
+  },
+  {
+    "n": 9,
+    "title": "Interinstitutional Style Guide",
+    "publisher": "Publications Office of the European Union",
+    "url": "https://style-guide.europa.eu/en/home",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The EU's editorial conventions: legal act structure, conventions common to all languages, and English house rules (punctuation, spelling, numbers and dates, gender-neutral language)."
+  },
+  {
+    "n": 10,
+    "title": "Mailchimp Content Style Guide",
+    "publisher": "Mailchimp",
+    "url": "https://styleguide.mailchimp.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A real company's public house style guide covering voice and tone, grammar and mechanics, accessibility, legal content and a word list; licensed CC BY-NC 4.0; page shows copyright 2023."
+  },
+  {
+    "n": 11,
+    "title": "Plain language guide series",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four guides (principles, writing, design and testing for understanding); says the content is adapted from PlainLanguage.gov. The old plainlanguage.gov/guidelines URL redirects here (seen 6 Nov 2026)."
+  },
+  {
+    "n": 12,
+    "title": "Principles of plain language",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language/principles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain language means people can find, understand and use information; write for your audience; not dumbing down; references the Plain Writing Act of 2010."
+  },
+  {
+    "n": 13,
+    "title": "Writing for understanding",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language/writing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Active voice shows who does what; present tense; turn hidden verbs (nominalisations) back into verbs; shorter words and sections."
+  },
+  {
+    "n": 14,
+    "title": "Politics and the English Language (George Orwell, Horizon, April 1946)",
+    "publisher": "The Orwell Foundation",
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Orwell's six rules for clear writing, summarised in our own words in knowledge.md."
+  },
+  {
+    "n": 15,
+    "title": "How Users Read on the Web (Jakob Nielsen, 1997)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 79% of test users scanned and 16% read word by word; concise text 58%, scannable layout 47%, objective language 27% and all three 124% better usability than the promotional version. Dated 30 September 1997."
+  },
+  {
+    "n": 16,
+    "title": "PIAAC 2023 U.S. national results",
+    "publisher": "National Center for Education Statistics (US)",
+    "url": "https://nces.ed.gov/surveys/piaac/2023/national_results.asp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 28% of US adults aged 16 to 65 scored at Level 1 or below in literacy in 2023, up from 19% in 2017 (report NCES 2024-202)."
+  },
+  {
+    "n": 17,
+    "title": "Get your document's readability and level statistics",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/get-your-document-s-readability-and-level-statistics-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to show Flesch Reading Ease and Flesch-Kincaid Grade Level in Word; Microsoft suggests 60 to 70 reading ease and about grade 7.0 to 8.0 for most documents; both tests use sentence length and syllables per word."
+  },
+  {
+    "n": 18,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 is a W3C Recommendation dated 12 December 2024."
+  },
+  {
+    "n": 19,
+    "title": "Understanding Success Criterion 3.1.5: Reading Level",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SC 3.1.5 is Level AAA: text above lower secondary education level needs supplemental content or a simpler version; lower secondary means 7 to 9 years of school (UNESCO ISCED)."
+  },
+  {
+    "n": 20,
+    "title": "Inclusive language: words to use and avoid when writing about disability",
+    "publisher": "GOV.UK (Disability Unit)",
+    "url": "https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 'Disabled people' not 'the disabled'; avoid 'suffers from' and 'wheelchair-bound'; let people self-identify. Updated 17 June 2026."
+  },
+  {
+    "n": 21,
+    "title": "Track changes in Word",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Turning tracking on for everyone or only your own edits, locking tracking, accepting and rejecting changes, Simple Markup and All Markup views."
+  },
+  {
+    "n": 22,
+    "title": "Suggest edits in Google Docs",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/6033474",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Suggesting mode, explaining a change with a comment, accepting or rejecting one or all suggestions; people with comment or edit permission can suggest."
+  },
+  {
+    "n": 23,
+    "title": "Defining the Role of Authors and Contributors (ICMJE Recommendations)",
+    "publisher": "International Committee of Medical Journal Editors",
+    "url": "https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four authorship criteria; chatbots cannot be authors; disclose AI use (writing help in acknowledgments, analysis in methods); writing assistance, language editing and proofreading alone do not earn authorship and should be acknowledged. Page shows copyright 2026; no update date given."
+  },
+  {
+    "n": 24,
+    "title": "Generative AI policies for journals",
+    "publisher": "Elsevier",
+    "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. June 2026 update: declare AI use; basic grammar and spelling checks need no declaration but substantive rewriting does; AI cannot be an author; reviewers must not upload manuscripts to AI tools; rules on AI images."
+  },
+  {
+    "n": 25,
+    "title": "EQUATOR Network: Enhancing the QUAlity and Transparency Of health Research",
+    "publisher": "EQUATOR Network",
+    "url": "https://www.equator-network.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reporting guidelines by study type: CONSORT and SPIRIT (trials), STROBE (observational), PRISMA (systematic reviews), STARD, TRIPOD+AI, COREQ, SRQR, CARE, ARRIVE, SQUIRE, CHEERS."
+  },
+  {
+    "n": 26,
+    "title": "GPT detectors are biased against non-native English writers (Liang, Yuksekgonul, Mao, Wu and Zou, 2023)",
+    "publisher": "arXiv (published version in Patterns)",
+    "url": "https://arxiv.org/abs/2304.02819",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Detectors often misclassify non-native English writing as AI-generated while classifying native writing correctly; simple prompting can get round detectors."
+  },
+  {
+    "n": 27,
+    "title": "Suggested minimum rates",
+    "publisher": "Chartered Institute of Editing and Proofreading (CIEP)",
+    "url": "https://www.ciep.uk/resources/suggested-minimum-rates/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Suggested minimum hourly rates for 2026-27 from 1 March 2026: proofreading GBP 31.92, copyediting GBP 37.11, substantial editing, rewriting and development editing GBP 42.66, project management GBP 46.19."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "copy-research-file-builder",
+    "name": "Copy research file builder",
+    "why": "Sorts product material and past messages into research files before any copy is written."
+  },
+  {
+    "slug": "product-review-mining",
+    "name": "Mine your product's own words and find the shared want",
+    "why": "A guided run at message mining: phrases sorted for headlines and the one want buyers share."
+  },
+  {
+    "slug": "switch-story-mapper",
+    "name": "Switch story mapper",
+    "why": "Maps recent buyers' stories onto push, pull, anxiety and habit, the forces this kit uses for objections and email sequences."
+  },
+  {
+    "slug": "market-stage-reader",
+    "name": "Market stage reader",
+    "why": "Reads what buyers already know and how worn the category's claims are, then writes a headline brief."
+  },
+  {
+    "slug": "buyer-aware-headline",
+    "name": "Write a headline that fits what your buyers already know",
+    "why": "Stage-matched headlines with a promise check and a test plan, in line with the awareness rules here."
+  },
+  {
+    "slug": "ad-matched-landing-page-writer",
+    "name": "Ad-matched landing page writer",
+    "why": "Writes landing page copy that picks up where the ad left off, for message match."
+  },
+  {
+    "slug": "landing-page-auditor",
+    "name": "Landing page conversion review",
+    "why": "A second, independent review of a page's conversion problems ranked by impact."
+  },
+  {
+    "slug": "hardest-objections-answer-writer",
+    "name": "Hardest objections answer writer",
+    "why": "Finds the toughest objections and writes fair answers that admit their limits."
+  },
+  {
+    "slug": "claim-and-proof-matcher",
+    "name": "Claim evidence checker",
+    "why": "Checks which claims are supported and which go too far, before copy ships."
+  },
+  {
+    "slug": "guarantee-designer",
+    "name": "Guarantee designer",
+    "why": "Designs a guarantee that fits the business's risk, with the refund sums worked out."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Turns one email into follow-ups with a new reason each, one ask, timing and a stop rule."
+  },
+  {
+    "slug": "headline-test",
+    "name": "Write headlines and pick the winner with a small test",
+    "why": "Headline generation plus a small keyed test, for when a full A/B test is out of reach."
+  },
+  {
+    "slug": "ab-test-traffic-checker",
+    "name": "A/B test traffic checker",
+    "why": "Works out the test size and weeks needed, so tests are sized before launch."
+  },
+  {
+    "slug": "anti-ai-slop-copy-editor",
+    "name": "Anti-AI-slop copy editor",
+    "why": "Fixes machine-sounding lines in drafts, the main failure of AI-written copy."
+  }
+]

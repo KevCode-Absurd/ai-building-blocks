@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "About the learning phase",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/112167992830700",
+    "checked": "2026-11-06",
+    "supports": "Ad sets usually leave learning after about 50 results in the week after the last significant edit; Learning limited status; advice to avoid needless edits, high ad volumes and tiny or inflated budgets"
+  },
+  {
+    "n": 2,
+    "title": "Significant edits and learning phase",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/316478108955072",
+    "checked": "2026-11-06",
+    "supports": "Which edits restart learning (targeting, creative, optimisation event, new ad, bid strategy, pause of 7 days or more); budget and goal changes judged by size; campaign budget edits can reset several ad sets"
+  },
+  {
+    "n": 3,
+    "title": "About ad auctions",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/430291176997542",
+    "checked": "2026-11-06",
+    "supports": "Auction winner is the ad with the highest total value, built from bid, estimated action rate and ad quality; a more relevant ad can beat a higher bid; you are not charged more than your bid"
+  },
+  {
+    "n": 4,
+    "title": "How Meta's Ads System Matches Your Ad to the Right Person at the Right Time (28 October 2026)",
+    "publisher": "Meta for Business news",
+    "url": "https://www.facebook.com/business/news/how-metas-ads-system-matches-your-ad-to-the-right-person",
+    "checked": "2026-11-06",
+    "supports": "Current description of retrieval, ranking and the auction; ad quality includes the post-click experience and customer surveys; advice to choose the real goal, send conversion value, pick a measurement model, adopt Advantage+ as a whole, supply creative variety and test incrementality"
+  },
+  {
+    "n": 5,
+    "title": "AI Innovations in Meta's Ad Ranking Driving Advertiser Performance (27 March 2025)",
+    "publisher": "Meta for Business news",
+    "url": "https://www.facebook.com/business/news/ai-innovation-in-metas-ads-ranking-driving-advertiser-performance",
+    "checked": "2026-11-06",
+    "supports": "GEM, Lattice, Andromeda and sequence learning; Andromeda picks the right creative as advertisers upload more varied creative"
+  },
+  {
+    "n": 6,
+    "title": "Meta Andromeda: Supercharging Advantage+ automation with the next-gen personalized ads retrieval engine (2 December 2024)",
+    "publisher": "Engineering at Meta",
+    "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
+    "checked": "2026-11-06",
+    "supports": "Retrieval narrows tens of millions of ads to a few thousand per person; Meta expects creative volume to grow with generative AI"
+  },
+  {
+    "n": 7,
+    "title": "Advantage+ Campaign Experience for Sales, App, and Leads",
+    "publisher": "Meta for Developers (Marketing API docs)",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/advantage-campaigns",
+    "checked": "2026-11-06",
+    "supports": "The three levers (campaign budget, Advantage+ audience in at least one ad set, Advantage+ placements in all ad sets); multiple ad sets allowed; legacy ASC/AAC creation ends from v25.0; existing-customer budget cap replaced by two ad sets with spend limits; Special Ad Category campaigns may lose audience features"
+  },
+  {
+    "n": 8,
+    "title": "Robyn: open-source marketing mix modelling package",
+    "publisher": "Meta Marketing Science (GitHub, facebookexperimental)",
+    "url": "https://github.com/facebookexperimental/Robyn",
+    "checked": "2026-11-06",
+    "supports": "Robyn is Meta's open-source MMM toolkit (ridge regression, carryover and diminishing returns, budget allocation), MIT licence"
+  },
+  {
+    "n": 9,
+    "title": "Meta Advantage+ sales campaigns",
+    "publisher": "Meta for Business",
+    "url": "https://www.facebook.com/business/ads/meta-advantage-plus/sales-campaigns",
+    "checked": "2026-11-06",
+    "supports": "Full optimisation needs Advantage+ audience, campaign budget, placements and destination; Meta's own claim of 20% lower cost per result on average"
+  },
+  {
+    "n": 10,
+    "title": "More quality leads this Q5 with Meta's latest AI-enabled updates (30 October 2025)",
+    "publisher": "Meta for Business news",
+    "url": "https://www.facebook.com/business/news/more-quality-leads-this-q5-with-metas-latest-ai-enabled-updates",
+    "checked": "2026-11-06",
+    "supports": "Advantage+ leads campaigns available globally; one campaign can use website and instant forms; Conversions API for CRM via Zapier and Salesforce; SMS and work email verification; Meta-reported cost per lead figures"
+  },
+  {
+    "n": 11,
+    "title": "Bid Strategy",
+    "publisher": "Meta for Developers (Marketing API docs)",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/bidding/overview/bid-strategy",
+    "checked": "2026-11-06",
+    "supports": "Highest volume or value, cost cap, bid cap and ROAS goal: how each works, under-spend risk, cost cap not guaranteed, ROAS floor too high leads to under-delivery, 3-day minimum for some iOS campaigns"
+  },
+  {
+    "n": 12,
+    "title": "About managing ad volume",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/2720085414702598",
+    "checked": "2026-11-06",
+    "supports": "Too many ads means fewer leave learning; combine ad sets and use breakdowns; one ad can hold up to ten creative assets; dynamic creative limited for sales and app objectives from June 2024"
+  },
+  {
+    "n": 13,
+    "title": "About creative fatigue recommendations in Meta Ads Manager",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/1346816142327858",
+    "checked": "2026-11-06",
+    "supports": "Creative limited and Creative fatigue delivery statuses and their cost thresholds versus past ads; exposure counted across campaigns from the same Page; recommended fixes"
+  },
+  {
+    "n": 14,
+    "title": "About Advantage+ creative",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/297506218282224",
+    "checked": "2026-11-06",
+    "supports": "List of creative enhancements (several use generative AI), some on by default; AI info labels; regulated verticals and special ad categories may not get all generative features"
+  },
+  {
+    "n": 15,
+    "title": "Best practices for Conversions API to help improve ad performance",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/308855623839366",
+    "checked": "2026-11-06",
+    "supports": "Redundant pixel and Conversions API setup; aim for a 75% event coverage ratio; deduplicate; improve event match quality; send events in real time; obtain lawful consent"
+  },
+  {
+    "n": 16,
+    "title": "Best Practices - Conversions API",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Required parameters for web events; event match quality scored out of 10 for web events; only matched events used for attribution and optimisation; hashing; Test Events tool"
+  },
+  {
+    "n": 17,
+    "title": "Handling Duplicate Pixel and Conversions API Events",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events",
+    "checked": "2026-11-06",
+    "supports": "Deduplication by matching event name and event ID within 48 hours; fbp or external_id method needs the browser event first; same-source duplicates are not removed"
+  },
+  {
+    "n": 18,
+    "title": "About Meta's Aggregated Event Measurement",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/721422165168355",
+    "checked": "2026-11-06",
+    "supports": "Web events no longer need the eight-event priority list, value sets, the AEM tab or domain verification for event setup; Conversions API events may still be processed under AEM limits"
+  },
+  {
+    "n": 19,
+    "title": "About attribution models and attribution settings",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/460276478298895",
+    "checked": "2026-11-06",
+    "supports": "Standard, incremental and custom attribution models; standard windows: 1-day or 7-day click, 1-day view, 1-day engage-through; results from different models cannot be compared in one table"
+  },
+  {
+    "n": 20,
+    "title": "About incremental attribution",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/2366718460372682",
+    "checked": "2026-11-06",
+    "supports": "Incremental attribution optimises and reports on conversions a model predicts were caused by the ad"
+  },
+  {
+    "n": 21,
+    "title": "About A/B testing",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/1738164643098669",
+    "checked": "2026-11-06",
+    "supports": "A/B tests split the audience so nobody sees both versions; start from a hypothesis; same budget per cell; do not test by switching ad sets on and off"
+  },
+  {
+    "n": 22,
+    "title": "Facebook lift metrics glossary",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/1092662031214127",
+    "checked": "2026-11-06",
+    "supports": "Definitions of incremental conversions, scaled control, 90% credible interval, cost per incremental conversion, incrementality share and confidence"
+  },
+  {
+    "n": 23,
+    "title": "Special Ad Categories",
+    "publisher": "Meta for Developers (Marketing API docs)",
+    "url": "https://developers.facebook.com/docs/marketing-api/audiences/special-ad-category",
+    "checked": "2026-11-06",
+    "supports": "The four categories; FINANCIAL_PRODUCTS_SERVICES replaced CREDIT and became required for US-facing financial ads in January 2025; age, gender, location radius, detailed targeting and lookalike limits; political ads stopped in the EU from 6 October 2025"
+  },
+  {
+    "n": 24,
+    "title": "Introduction to the Advertising Standards",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/policies/ad-standards/",
+    "checked": "2026-11-06",
+    "supports": "Policy principles; review usually finishes within 24 hours; appeals through Account Quality; advertiser behaviour can restrict accounts"
+  },
+  {
+    "n": 25,
+    "title": "Introducing Meta Ads AI Connectors: Manage Your Meta Ads From the AI Tools You Already Use (29 April 2026, updated 16 July 2026)",
+    "publisher": "Meta for Business news",
+    "url": "https://www.facebook.com/business/news/meta-ads-ai-connectors",
+    "checked": "2026-11-06",
+    "supports": "Official ads MCP server and CLI in open beta; July 2026 rules that let full-control admins limit what AI agents can do"
+  },
+  {
+    "n": 26,
+    "title": "Manage ads from an AI agent with Meta ads AI connectors",
+    "publisher": "Meta Business Help Centre",
+    "url": "https://www.facebook.com/business/help/1456422242197840",
+    "checked": "2026-11-06",
+    "supports": "What the ads MCP server can do (reporting, drafts, A/B tests, lift studies, activity logs); how to block campaign creation or budget edits for agents in Business Suite settings"
+  },
+  {
+    "n": 27,
+    "title": "A Comparison of Approaches to Advertising Measurement: Evidence from Big Field Experiments at Facebook (Marketing Science, 2019)",
+    "publisher": "Kellogg School of Management, Northwestern University",
+    "url": "https://www.kellogg.northwestern.edu/academics-research/research/detail/2019/a-comparison-of-approaches-to-advertising-measurement-evidence-from/",
+    "checked": "2026-11-06",
+    "supports": "Gordon, Zettelmeyer, Bhargava and Chapsky: across 15 US experiments, observational methods often failed to match randomised results"
+  },
+  {
+    "n": 28,
+    "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing (2020)",
+    "publisher": "Kohavi, Tang and Xu; Cambridge University Press (book site)",
+    "url": "https://experimentguide.com/",
+    "checked": "2026-11-06",
+    "supports": "The standard reference for running and reading controlled experiments"
+  },
+  {
+    "n": 29,
+    "title": "The next chapter for 'The Long and The Short of It' (13 September 2023)",
+    "publisher": "IPA (Institute of Practitioners in Advertising)",
+    "url": "https://ipa.co.uk/knowledge/ipa-blog/the-next-chapter-for-the-long-and-the-short-of-it/",
+    "checked": "2026-11-06",
+    "supports": "Binet and Field's 2013 report and its 60:40 brand-to-activation finding; 62:38 in the 2018 follow-up; warning about short-termism"
+  },
+  {
+    "n": 30,
+    "title": "Facebook Advertising Benchmarks for 2026 (updated 23 September 2026)",
+    "publisher": "LocaliQ",
+    "url": "https://localiq.com/blog/facebook-advertising-benchmarks/",
+    "checked": "2026-11-06",
+    "supports": "All-industry averages for traffic and lead campaigns: CTR, CPC, conversion rate and cost per lead, with prior-year comparisons"
+  }
+]

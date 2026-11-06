@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Configure Security Defaults for Microsoft Entra ID",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults",
+    "checked": "2026-11-06",
+    "supports": "What security defaults enforce (MFA registration for all users, MFA for 16 admin roles on every sign-in, legacy authentication and device code flow blocked, MFA for Azure management); meant for free-tier tenants; on for new tenants created since 22 October 2019; 14-day registration grace removed 29 July 2024; device code flow blocked for new tenants from 1 July 2026; Conditional Access needs Entra ID P1; two cloud-only emergency access accounts recommended. Page updated 16 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "Plan for mandatory Microsoft Entra multifactor authentication (MFA)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-mandatory-multifactor-authentication",
+    "checked": "2026-11-06",
+    "supports": "Mandatory MFA for the Azure portal, Entra and Intune admin centers (from October 2024) and the Microsoft 365 admin center (from February 2025); Phase 2 from 1 October 2025 for Azure CLI, PowerShell and other tools on create, update and delete; no opt-out; emergency accounts also need MFA (passkey/FIDO2 or certificate advised); user accounts used for automation should move to workload identities. Page updated 6 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "About administrator roles in the Microsoft 365 admin center",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles",
+    "checked": "2026-11-06",
+    "supports": "Have as few Global Administrators as possible; assign the least permissive role (for example Password or Helpdesk Administrator for resets); require MFA for admins; keep a Privileged Authentication Administrator for lock-outs; Global Reader can view but not edit settings; User Administrator creates and disables accounts and assigns licences; partner delegated admin roles. Page dated 7 October 2026. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "Remove a former employee: Overview",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/remove-former-employee",
+    "checked": "2026-11-06",
+    "supports": "Microsoft's seven leaver steps (block sign-in, save mailbox, wipe and block mobile device, forward or convert mailbox, give access to OneDrive and Outlook data, remove licence, delete account); mailbox content kept 30 days after licence removal; deleted accounts restorable for 30 days; synced accounts must be deleted in on-premises Active Directory. Page dated 15 June 2026. Opened with WebFetch."
+  },
+  {
+    "n": 5,
+    "title": "Overview of Microsoft MCP Server for Enterprise",
+    "publisher": "Microsoft Learn (Microsoft Graph)",
+    "url": "https://learn.microsoft.com/en-us/graph/mcp-server/overview",
+    "checked": "2026-11-06",
+    "supports": "Microsoft's MCP server for AI agents to query Microsoft Entra directory data; in preview; read-only Graph calls that honour the signed-in user's roles and granted scopes; 100 calls per minute per user; no extra licence; usage visible in Microsoft Graph activity logs. Page updated 4 July 2026. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "Microsoft Graph PowerShell SDK overview",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/overview",
+    "checked": "2026-11-06",
+    "supports": "Microsoft Graph PowerShell replaces the Azure AD PowerShell and MSOnline modules; works with PowerShell 7 and Windows PowerShell 5.1; permissions are requested per need rather than pre-authorised. Page updated 15 June 2026. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Everything you wanted to know about ShouldProcess",
+    "publisher": "Microsoft Learn (PowerShell docs, originally by Kevin Marquette)",
+    "url": "https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-shouldprocess",
+    "checked": "2026-11-06",
+    "supports": "SupportsShouldProcess adds -WhatIf and -Confirm; call $PSCmdlet.ShouldProcess close to each change and once per item; ConfirmImpact High prompts by default; -WhatIf does not reliably pass into functions in other script modules, so pass it on explicitly; how to add -Force safely. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Robocopy",
+    "publisher": "Microsoft Learn (Windows Server commands)",
+    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy",
+    "checked": "2026-11-06",
+    "supports": "Robocopy /l lists without copying; /mir equals /e plus /purge and deletes destination files missing from the source; default retries are one million with a 30-second wait; exit codes of 8 or more mean at least one failure; Microsoft recommends a log file. Page dated 17 March 2025. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Windows 10 Home and Pro lifecycle",
+    "publisher": "Microsoft Learn (Lifecycle)",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+    "checked": "2026-11-06",
+    "supports": "Windows 10 Home and Pro reached end of support on 14 October 2025; version 22H2 was the final version. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "Security checklist for small businesses (1-100 users)",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/security/security-checklist-for-small-businesses-1-100-users",
+    "checked": "2026-11-06",
+    "supports": "Google's 14-item checklist for 1 to 100 users: unique passwords, 2-Step Verification for admins and key users, admin recovery info, backup codes, a second super admin, super admin reset details, no daily use of super admin, Chrome auto-update, enhanced pre-delivery scanning, extra malware and link screening, SPF, free/busy-only external calendar sharing, link sharing off for new files, warnings on external sharing. Updated 26 October 2026. Opened with WebFetch (support.google.com/a/answer/9211704 redirects here)."
+  },
+  {
+    "n": 11,
+    "title": "Security best practices for administrator accounts",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/users/security-best-practices-for-administrator-accounts",
+    "checked": "2026-11-06",
+    "supports": "More than one super admin, each a different person; a dedicated admin account plus a separate daily account; no shared admin credentials; 2SV on admin accounts with security keys as the most secure method and a spare key; printed backup codes; least-privilege roles; super admin self-recovery off by default for most new customers; admin email alerts; Advanced Protection Program. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Prebuilt administrator roles",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/users/prebuilt-administrator-roles",
+    "checked": "2026-11-06",
+    "supports": "Google's prebuilt admin roles: only Super Admins create and assign roles and restore deleted users; User Management Admin manages non-admin users and can be limited to organisational units; Help Desk Admin resets non-admin passwords; Services Admin changes service settings and devices; custom roles can grant specific privileges. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "Deploy 2-Step Verification",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/security/deploy-2-step-verification",
+    "checked": "2026-11-06",
+    "supports": "Google's 2SV rollout steps (notify, allow, enrol, track in the Security user report, enforce); new-user enrolment period from 1 day to 6 months; 'Only security key' now covers security keys and passkeys and needs admin-issued backup codes. Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "Delete or remove a user from your organization",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://knowledge.workspace.google.com/admin/users/delete-or-remove-a-user-from-your-organization",
+    "checked": "2026-11-06",
+    "supports": "Transfer Gmail, Drive, Calendar and other data before deleting; a deleted user can be restored within 20 days, after which the data is unrecoverable; shared drive files are not deleted; suspend or archive instead of deleting for temporary blocks or to keep data. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Configure the Google Workspace MCP servers",
+    "publisher": "Google for Developers (Google Workspace)",
+    "url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+    "checked": "2026-11-06",
+    "supports": "Google publishes MCP servers for Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, People API, Classroom and search, in the Workspace Developer Preview Program; OAuth 2.0 sign-in; no Admin console server is listed. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "Cyber Essentials",
+    "publisher": "CISA (US Cybersecurity and Infrastructure Security Agency)",
+    "url": "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+    "checked": "2026-11-06",
+    "supports": "CISA's guide for small business leaders: six elements (yourself, your staff, your systems, your surroundings, your data, your crisis response); automatic backups, MFA starting with privileged and remote users, automatic updates and replacing unsupported systems, least-privilege admin rights, policies for staff changes such as transfers and terminations. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "Secure Cloud Business Applications (SCuBA) Project",
+    "publisher": "CISA",
+    "url": "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
+    "checked": "2026-11-06",
+    "supports": "CISA secure configuration baselines for Microsoft 365 and Google Workspace (project started 2022); free assessment tools ScubaGear (Microsoft 365) and ScubaGoggles (Google Workspace) from 2023; CISA says all organisations can use SCuBA. Opened with WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "#StopRansomware Guide",
+    "publisher": "CISA",
+    "url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+    "checked": "2026-11-06",
+    "supports": "September 2023 guide: offline, encrypted backups tested regularly, golden images; phishing-resistant MFA for email, VPN and critical systems; patch internet-facing systems first, especially known exploited vulnerabilities; first response steps (identify and isolate affected systems, use out-of-band communication, power down only if a device cannot be disconnected). Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Known Exploited Vulnerabilities Catalog",
+    "publisher": "CISA",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "checked": "2026-11-06",
+    "supports": "CISA's list of vulnerabilities exploited in the wild, recommended as an input to patch prioritisation; available as CSV and JSON; 1,768 entries on 6 November 2026. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Cyber Essentials: overview",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "checked": "2026-11-06",
+    "supports": "Cyber Essentials is a UK government-backed scheme with five technical controls; Cyber Essentials Plus adds independent technical testing; IASME runs certification; free readiness tools and advice for small firms; UK firms under £20m turnover certifying the whole organisation get cyber liability insurance. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Cyber Essentials: resources",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/resources",
+    "checked": "2026-11-06",
+    "supports": "Requirements for IT Infrastructure v3.3 is the current version, effective from 27 April 2026; links to the requirements PDF, the Plus test specification and IASME's question set and readiness tool. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "Cyber Essentials: Requirements for IT Infrastructure v3.3 (April 2026)",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/sites/default/files/2026-11/Cyber-Essentials-Requirements-for-IT-Infrastructure-v3-3.pdf",
+    "checked": "2026-11-06",
+    "supports": "v3.3 changes (cloud services defined and always in scope, FIDO2 passkeys, backups emphasised); critical or high-risk updates (CVSS v3 7 or above) within 14 days; unsupported software removed; MFA wherever available and always for cloud services; separate admin accounts; account approval and removal; password options (MFA, 12+ characters, or 8+ with a deny list); throttling of 10 guesses in 5 minutes or lock after 10; device PIN at least 6; auto-run off; backups recommended but not a technical requirement. Opened with WebFetch; PDF text read locally."
+  },
+  {
+    "n": 23,
+    "title": "Small Business Guide: Cyber Security",
+    "publisher": "UK National Cyber Security Centre (NCSC)",
+    "url": "https://www.ncsc.gov.uk/collection/small-business-guide",
+    "checked": "2026-11-06",
+    "supports": "NCSC's guide for organisations with 0 to 49 staff, covering backups, protecting devices and accounts, and spotting scams; published 9 April 2026, reviewed 21 July 2026; links to a separate Response and Recover guide. Opened with WebFetch (introduction page only)."
+  },
+  {
+    "n": 24,
+    "title": "Offline backups in an online world (13 August 2019)",
+    "publisher": "UK National Cyber Security Centre (NCSC) blog",
+    "url": "https://www.ncsc.gov.uk/blog-post/offline-backups-in-an-online-world",
+    "checked": "2026-11-06",
+    "supports": "Keep at least one backup offline at any time; protect cloud backup accounts with MFA, limit backup clients and use versioning; the 3-2-1 rule (three copies, two devices, one offsite) does not by itself require an offline copy; test restores regularly. Opened with WebFetch."
+  },
+  {
+    "n": 25,
+    "title": "Cybersecurity guide for SMEs: 12 steps to securing your business (28 June 2021)",
+    "publisher": "ENISA (European Union Agency for Cybersecurity)",
+    "url": "https://www.enisa.europa.eu/publications/cybersecurity-guide-for-smes",
+    "checked": "2026-11-06",
+    "supports": "ENISA's 12 steps for SMEs, including management responsibility, training, third-party management, an incident response plan, passphrases of three or more random words, MFA and password managers, patching and automatic updates, mobile device management with remote wipe when employment ends, firewalls and remote access review, and backup rules (regular, automated, separate from production, encrypted, restore tested). Opened with WebFetch; the linked English PDF was read locally."
+  },
+  {
+    "n": 26,
+    "title": "NIST SP 800-63B-4: Authentication and Authenticator Management",
+    "publisher": "US National Institute of Standards and Technology",
+    "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "checked": "2026-11-06",
+    "supports": "Final revision 4 (published July 2025): single-factor passwords at least 15 characters, at least 8 when used with MFA; allow at least 64; no composition rules; no periodic forced changes, only on evidence of compromise; check new passwords against a blocklist; allow password managers and pasting; no security questions. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "Data protection guide for small business: data breaches",
+    "publisher": "European Data Protection Board (EDPB)",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-breaches_en",
+    "checked": "2026-11-06",
+    "supports": "Under the GDPR, controllers document every personal data breach, notify the data protection authority within 72 hours of becoming aware unless the breach is unlikely to result in a risk, and tell affected people without undue delay when the risk is high; processors tell the controller without undue delay. Opened with WebFetch."
+  },
+  {
+    "n": 28,
+    "title": "Data Breach Response: A Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business",
+    "checked": "2026-11-06",
+    "supports": "FTC steps after a breach: secure operations and preserve evidence, fix vulnerabilities including service provider access, then notify; all US states, DC, Puerto Rico and the Virgin Islands have breach notification laws. Opened with WebFetch."
+  },
+  {
+    "n": 29,
+    "title": "British Library cyber incident",
+    "publisher": "The British Library",
+    "url": "https://www.bl.uk/cyber-incident/",
+    "checked": "2026-11-06",
+    "supports": "The British Library suffered a cyber-attack in October 2023 that disrupted many services; some personal data was released online in November 2023; systems were badly damaged and a full rebuild of its technology infrastructure followed. Opened with WebFetch."
+  }
+]

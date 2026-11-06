@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Sanctions List Service",
+    "publisher": "US Department of the Treasury, Office of Foreign Assets Control",
+    "url": "https://ofac.treasury.gov/sanctions-list-service",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SDN list and consolidated non-SDN lists as downloadable data files; the Sanctions List Search tool uses fuzzy logic on its name field. No date shown on the page."
+  },
+  {
+    "n": 2,
+    "title": "Frequently Asked Questions: 50 Percent Rule (FAQs 398 to 402)",
+    "publisher": "US Department of the Treasury, Office of Foreign Assets Control",
+    "url": "https://ofac.treasury.gov/faqs/topic/1521",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Entities owned 50% or more by blocked persons are considered blocked even if not listed; ownership of several blocked persons is aggregated (two at 25% each); control alone does not block automatically; contracts signed by a blocked individual for a non-blocked entity should not be entered into."
+  },
+  {
+    "n": 3,
+    "title": "Recent action 9 October 2026: settlement with Pegasus Worldwide Logistics",
+    "publisher": "US Department of the Treasury, Office of Foreign Assets Control",
+    "url": "https://ofac.treasury.gov/recent-actions/20261009",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Freight forwarder settled for $175,015; between September 2023 and February 2024 it facilitated the import of a machine supplied by a designated company and failed to fully respond to a subpoena for six months; non-egregious, not voluntarily disclosed. Summary from the recent-actions page; the full enforcement release PDF was not read."
+  },
+  {
+    "n": 4,
+    "title": "The UK Sanctions List",
+    "publisher": "Foreign, Commonwealth & Development Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Only source for all UK sanctions designations; OFSI Consolidated List of Asset Freeze Targets closed on 28 January 2026; formats include CSV, XML and PDF; last updated 3 November 2026."
+  },
+  {
+    "n": 5,
+    "title": "UK financial sanctions general guidance",
+    "publisher": "Office of Financial Sanctions Implementation (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/financial-sanctions-general-guidance/uk-financial-sanctions-general-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Owned or controlled means more than 50% of shares or voting rights, or control by other means (section 4.1); such entities may not be listed but are still covered; a name match does not necessarily mean the listed person (2.2); relevant firms report as soon as practicable (5.1); breaches can lead to prosecution or a monetary penalty. Collection page last updated 12 May 2026."
+  },
+  {
+    "n": 6,
+    "title": "Overview of sanctions and related resources",
+    "publisher": "European Commission, DG FISMA",
+    "url": "https://finance.ec.europa.eu/eu-and-world/sanctions-restrictive-measures/overview-sanctions-and-related-resources_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Member states implement and enforce EU sanctions; DG FISMA keeps the consolidated financial sanctions list; the EU Sanctions Map shows all regimes; page dated 17 November 2025."
+  },
+  {
+    "n": 7,
+    "title": "EU Sanctions Helpdesk",
+    "publisher": "European Commission, DG FISMA",
+    "url": "https://eu-sanctions-compliance-helpdesk.europa.eu/index_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Resources and personalised help for small and medium-sized enterprises doing sanctions due diligence checks."
+  },
+  {
+    "n": 8,
+    "title": "Publish an annual modern slavery statement",
+    "publisher": "Home Office (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/publish-an-annual-modern-slavery-statement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to commercial organisations in the UK with turnover of £36 million or more; six recommended areas; board approval and director sign-off with name, title and date; homepage link; publish within 6 months of year end per statutory guidance; registry; future changes announced but not in effect. Last updated 25 April 2024."
+  },
+  {
+    "n": 9,
+    "title": "Slavery and human trafficking in supply chains: guidance for businesses (Transparency in supply chains: a practical guide)",
+    "publisher": "Home Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/transparency-in-supply-chains-a-practical-guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Statutory guidance under section 54 of the Modern Slavery Act 2015, last updated 1 December 2025; optional international reporting template developed with the Australian and Canadian governments."
+  },
+  {
+    "n": 10,
+    "title": "Uyghur Forced Labor Prevention Act",
+    "publisher": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/forced-labor/UFLPA",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rebuttable presumption for goods made wholly or partly in Xinjiang or by UFLPA Entity List entities, in effect from 21 June 2022; importer must show by clear and convincing evidence that no forced labour was used; due diligence and supply chain tracing. Last modified 14 September 2026."
+  },
+  {
+    "n": 11,
+    "title": "Corporate sustainability due diligence",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/business-economy-euro/doing-business-eu/sustainability-due-diligence-responsible-business/corporate-sustainability-due-diligence_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scope after Omnibus I: EU companies with at least 5,000 employees and EUR 1.5 billion net worldwide turnover; non-EU companies with EUR 1.5 billion net turnover in the EU; SMEs not covered; transposition by 26 July 2028, application from 26 July 2029; Directive (EU) 2026/470 in force 18 March 2026."
+  },
+  {
+    "n": 12,
+    "title": "Transforming public procurement",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/collections/transforming-public-procurement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Procurement Act 2023 came into force on 24 February 2025; new National Procurement Policy Statement laid 13 February 2025. Last updated 11 February 2026."
+  },
+  {
+    "n": 13,
+    "title": "Procurement Act 2023: guidance documents",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/collections/procurement-act-2023-guidance-documents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Central Digital Platform comprises an enhanced Find a Tender service and a new Supplier Information Service; guidance titles for exclusions, debarment, notices and payments compliance. Last updated 4 February 2026."
+  },
+  {
+    "n": 14,
+    "title": "Guidance: Thresholds (Procurement Act 2023)",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-thresholds-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Thresholds including VAT from 1 January 2026 to 31 December 2027: central government goods and services £135,018, sub-central £207,720, works £5,193,000; revised every two years."
+  },
+  {
+    "n": 15,
+    "title": "Guidance: Below-Threshold Contracts (Procurement Act 2023)",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/procurement-act-2023-guidance-documents-define-phase/guidance-below-threshold-contracts-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Contract details notice for contracts from £12,000 (central government) or £30,000 (other authorities) including VAT; no separate suitability stage for regulated below-threshold tenders, with exceptions; competitions may be reserved for SMEs and VCSEs or UK-based or local suppliers."
+  },
+  {
+    "n": 16,
+    "title": "Thresholds (public procurement)",
+    "publisher": "European Commission, DG GROW",
+    "url": "https://single-market-economy.ec.europa.eu/single-market/public-procurement/legal-rules-and-implementation/thresholds_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Thresholds for 2026-2027: central government supplies and services EUR 140,000; sub-central EUR 216,000; works EUR 5,404,000 (Regulation (EU) 2025/2152)."
+  },
+  {
+    "n": 17,
+    "title": "Basic requirements (federal contracting guide)",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/federal-contracting/contracting-guide/basic-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Register in SAM; 12-character Unique Entity ID; NAICS codes; size standards: most non-manufacturers under $7.5 million average annual receipts, most manufacturers 500 employees or fewer."
+  },
+  {
+    "n": 18,
+    "title": "Entity registration",
+    "publisher": "SAM.gov (US General Services Administration)",
+    "url": "https://sam.gov/content/entity-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Registration must be renewed every 365 days; a Unique Entity ID alone needs only legal business name and physical address."
+  },
+  {
+    "n": 19,
+    "title": "FAR 2.101 Definitions",
+    "publisher": "Acquisition.gov (US General Services Administration)",
+    "url": "https://www.acquisition.gov/far/2.101",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Micro-purchase threshold $15,000 and simplified acquisition threshold $350,000, with listed exceptions; FAC 2026-01, effective 13 March 2026."
+  },
+  {
+    "n": 20,
+    "title": "Purchasing Must Become Supply Management (Peter Kraljic, September 1983)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/1983/09/purchasing-must-become-supply-management",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title, author (McKinsey, Dusseldorf), date and opening argument that stable supply can no longer be assumed. Full article behind paywall; matrix detail taken from [21]."
+  },
+  {
+    "n": 21,
+    "title": "Kraljic matrix",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Kraljic_matrix",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary, used because the HBR article is paywalled: axes of profit impact and supply risk, four categories and approaches, and criticisms (misapplied to suppliers, static use, spend as proxy)."
+  },
+  {
+    "n": 22,
+    "title": "What is BATNA? How to Find Your Best Alternative to a Negotiated Agreement (Guhan Subramanian, 30 September 2026)",
+    "publisher": "Program on Negotiation, Harvard Law School",
+    "url": "https://www.pon.harvard.edu/daily/batna/translate-your-batna-to-the-current-deal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Defines BATNA, credits Fisher, Ury and Patton (Getting to Yes); advises realistic alternatives, comparing on equal terms and reassessing."
+  },
+  {
+    "n": 23,
+    "title": "Find and update company information",
+    "publisher": "Companies House (GOV.UK)",
+    "url": "https://find-and-update.company-information.service.gov.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search by company name, number or officer; view company data and document images; search for disqualified directors."
+  },
+  {
+    "n": 24,
+    "title": "Incoterms rules",
+    "publisher": "International Chamber of Commerce",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eleven three-letter trade terms; Incoterms 2020 in force since 1 January 2020 as the most recent version; they clarify tasks, costs and risks between sellers and buyers."
+  },
+  {
+    "n": 25,
+    "title": "Producer Price Indexes",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ppi/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final demand index rose 1.3% in September 2026 (seasonally adjusted) and 6.3% over 12 months; October 2026 data due 13 November 2026."
+  },
+  {
+    "n": 26,
+    "title": "Testing and certification",
+    "publisher": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. General Certificate of Conformity for general use products; children's products tested by a CPSC-accepted third-party lab; certificates accompany the shipment and go to retailers and distributors."
+  },
+  {
+    "n": 27,
+    "title": "Get a business energy contract",
+    "publisher": "Ofgem",
+    "url": "https://www.ofgem.gov.uk/your-energy-supply/how-manage-your-energy-supply/get-business-energy-contract",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deemed and out-of-contract rates usually higher; evergreen contracts roll over, usually for 12 months; microbusiness definition; 30-day cap on termination notice for evergreen contracts; renewal price information; brokers paid by suppliers must be in a redress scheme; no cooling-off period. No page date shown."
+  },
+  {
+    "n": 28,
+    "title": "Benchmark your building with Portfolio Manager",
+    "publisher": "ENERGY STAR (US Environmental Protection Agency)",
+    "url": "https://www.energystar.gov/buildings/benchmark",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Online benchmarking tool; 1 to 100 score, 50 is median, 75 or higher may qualify for certification; Canada's national benchmarking tool."
+  },
+  {
+    "n": 29,
+    "title": "xero-mcp-server",
+    "publisher": "Xero (GitHub, XeroAPI)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Xero MCP server tools include create-contact, update-contact, create-invoice, create-payment and create-bank-transaction; no purchase order tools listed."
+  },
+  {
+    "n": 30,
+    "title": "quickbooks-online-mcp-server",
+    "publisher": "Intuit (GitHub)",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tools to create, update and delete vendors, bills, bill payments and purchase orders; OAuth 2.0 sign-in."
+  }
+]

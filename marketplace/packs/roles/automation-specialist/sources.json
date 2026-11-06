@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "How is task usage measured in Zapier? (updated 5 November 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A task is any successful action; triggers, filters, paths, formatter, delay and storage steps use no tasks in Classic Zaps; Zapier MCP uses 2 tasks per successful call; from 1 December 2026 each completed Next Gen Zap run uses at least 1 task."
+  },
+  {
+    "n": 2,
+    "title": "How Zap triggers work (updated 29 May 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/8496244568589-How-Zap-triggers-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most triggers poll; instant triggers use webhooks; polling interval Free 15 minutes, Professional 2 minutes, Team and Enterprise 1 minute."
+  },
+  {
+    "n": 3,
+    "title": "Decide how your Zap handles errors with advanced settings (updated 29 May 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/14167175792909-Decide-how-your-Zap-handles-errors-with-advanced-settings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Autoreplay retries failed steps and is an account-wide setting on Professional plans and higher; Zapier pauses a Zap that errors on 95% or more of its runs in the last 7 days unless overridden."
+  },
+  {
+    "n": 4,
+    "title": "Set up custom error handling (updated 10 April 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/22495436062605-Set-up-custom-error-handling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Error handlers run an alternative path when a step errors; available on Professional, Team and Enterprise; Zapier sends no error notification email when an error handler runs."
+  },
+  {
+    "n": 5,
+    "title": "Using Code by Zapier (updated 13 July 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/45405528551181-Using-Code-by-Zapier",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. JavaScript (Node.js 22) and Python 3.13 only; standard run time 1 second Free, 30 seconds Professional and Team, 2 minutes Enterprise; 512 MB memory; Code by Zapier does not support storing secrets in code; use an API by Zapier connection."
+  },
+  {
+    "n": 6,
+    "title": "Trigger Zaps from webhooks (updated 29 May 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/8496288690317-Trigger-Zaps-from-webhooks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Webhooks by Zapier on Professional, Team and Enterprise, not Free; payload limit 10 MB (2 MB for Catch Raw Hook); active hooks always return 200; the unique URL is the only access control described."
+  },
+  {
+    "n": 7,
+    "title": "Request approval to keep your workflow running with Human in the Loop (updated 26 October 2026)",
+    "publisher": "Zapier Help Center",
+    "url": "https://help.zapier.com/hc/en-us/articles/38731463206029-Request-approval-to-keep-your-workflow-running-with-Human-in-the-Loop",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Request Approval pauses a Zap run for a reviewer to approve, decline or edit; timeout and reminder options; Professional, Team and Enterprise; cannot be inside or after a Looping step."
+  },
+  {
+    "n": 8,
+    "title": "Zapier MCP: your first MCP workflow",
+    "publisher": "Zapier developer docs",
+    "url": "https://docs.zapier.com/mcp/get-started/your-first-mcp-workflow",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Zapier auto-provisions a server with actions pre-enabled for connected apps; an agent can find and enable new actions during a request; two tasks per successful call; never share a connection token."
+  },
+  {
+    "n": 9,
+    "title": "Introducing credits: new billing unit live in Make",
+    "publisher": "Make Help Center",
+    "url": "https://help.make.com/introducing-credits-new-billing-unit-live-in-make",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page created 5 Aug 2025; a companion page gives 27 Aug 2025 as the effective date). Credits replaced operations, converted 1:1; by default 1 operation equals 1 credit; some AI modules use more."
+  },
+  {
+    "n": 10,
+    "title": "Error handlers",
+    "publisher": "Make Help Center",
+    "url": "https://help.make.com/error-handlers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five error handlers: Skip, Retry (stores incomplete executions), Resume, Commit, Rollback (only for modules that support transactions)."
+  },
+  {
+    "n": 11,
+    "title": "Fix errors and warnings",
+    "publisher": "Make Help Center",
+    "url": "https://help.make.com/fix-errors-and-warnings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Runs stop after 45 minutes (10 minutes on Free); without a Retry handler no automatic retries except built-in handling of connection and rate-limit errors; an error in the trigger deactivates the scenario."
+  },
+  {
+    "n": 12,
+    "title": "n8n Community License FAQ (Sustainable Use License)",
+    "publisher": "n8n docs",
+    "url": "https://docs.n8n.io/n8n-community-license/community-license/license-faq.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Self-hosted n8n may be used for internal business purposes; building workflows for clients on your own instance is allowed if clients cannot create or edit them; hosting n8n as a service where others build workflows is not."
+  },
+  {
+    "n": 13,
+    "title": "n8n plans and pricing",
+    "publisher": "n8n",
+    "url": "https://n8n.io/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An execution is a single run of the entire workflow, whatever the number of steps; cloud plan names Starter, Pro, Business and Enterprise."
+  },
+  {
+    "n": 14,
+    "title": "Handle errors gracefully",
+    "publisher": "n8n docs",
+    "url": "https://docs.n8n.io/build/flow-logic/handle-errors-gracefully.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Each workflow can set an error workflow that runs when an execution fails and must start with the Error Trigger node; the Stop and Error node forces an execution to fail."
+  },
+  {
+    "n": 15,
+    "title": "Human-in-the-loop for AI tool calls",
+    "publisher": "n8n docs",
+    "url": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An AI Agent pauses before calling a tool that needs review; the reviewer sees the tool and parameters; approve runs it, deny cancels it; channels include n8n Chat, Slack, Teams and Gmail."
+  },
+  {
+    "n": 16,
+    "title": "Limits of automated, scheduled, and instant flows",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-automate/limits-and-config",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 29 Oct 2026). 500 actions per workflow; run duration 30 days including pending approvals; run retention 30 days; minimum recurrence 60 seconds; continuously failing flows turned off after 14 days."
+  },
+  {
+    "n": 17,
+    "title": "Types of Power Automate licenses",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 22 Sep 2026). Power Automate Free is included with work or school accounts and limited to standard connectors; Premium adds premium and custom connectors; Process licences for flows and unattended bots."
+  },
+  {
+    "n": 18,
+    "title": "Manage data policies",
+    "publisher": "Microsoft Learn (Power Platform)",
+    "url": "https://learn.microsoft.com/en-us/power-platform/admin/prevent-data-loss",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 14 Aug 2026). Connectors sorted into Business, Non-business and Blocked groups; connectors in different groups cannot share data; blocked connectors cannot be used; admin roles needed to create policies."
+  },
+  {
+    "n": 19,
+    "title": "Get started with Power Automate approvals",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-automate/get-started-approvals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 29 Oct 2026). Approval types including everyone must approve, first to respond and sequential; approvals connector is standard; responses from Outlook, Teams or the action center."
+  },
+  {
+    "n": 20,
+    "title": "Getting started with Airtable automations",
+    "publisher": "Airtable Support",
+    "url": "https://support.airtable.com/articles/3669392397-getting-started-with-airtable-automations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Monthly run limits: Free 100, Team 25,000, Business 100,000, Enterprise Scale 500,000; failed and successful runs count; failure notifications go to the last user who turned the automation on."
+  },
+  {
+    "n": 21,
+    "title": "Database automations",
+    "publisher": "Notion Help Center",
+    "url": "https://www.notion.com/help/database-automations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Available on paid plans; Free plans can create Slack notification automations only; triggers and actions including send mail and send webhook; database automations cannot be triggered by other automations."
+  },
+  {
+    "n": 22,
+    "title": "Receive Stripe events in your webhook endpoint",
+    "publisher": "Stripe docs",
+    "url": "https://docs.stripe.com/webhooks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verify signatures with the raw body; return 2xx quickly; live-mode retries for up to three days; endpoints may receive the same event more than once, so log processed event IDs; order not guaranteed."
+  },
+  {
+    "n": 23,
+    "title": "Deliver webhooks through HTTPS",
+    "publisher": "Shopify developer docs",
+    "url": "https://shopify.dev/docs/apps/build/webhooks/subscribe/https",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. HMAC verification with X-Shopify-Hmac-SHA256; one-second connection and five-second total timeout; 8 retries over 4 hours; Admin API subscriptions deleted after 8 consecutive failures; dedupe with X-Shopify-Webhook-Id."
+  },
+  {
+    "n": 24,
+    "title": "Eliminating Toil (Site Reliability Engineering, chapter 5)",
+    "publisher": "Google, sre.google (Vivek Rau)",
+    "url": "https://sre.google/sre-book/eliminating-toil/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Toil is manual, repetitive, automatable, tactical work with no enduring value that grows with the service; Google aims to keep toil below 50% of each SRE's time."
+  },
+  {
+    "n": 25,
+    "title": "Toyota Production System",
+    "publisher": "Toyota Motor Corporation",
+    "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jidoka, automation with a human touch: machines stop when an abnormality occurs and the andon board alerts workers, so people need not watch machines."
+  },
+  {
+    "n": 26,
+    "title": "SEC Charges Knight Capital With Violations of Market Access Rule (press release 2013-222, 16 October 2013)",
+    "publisher": "US Securities and Exchange Commission",
+    "url": "https://www.sec.gov/news/press-release/2013-222",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Old unused code left in the router; incorrect deployment in late July 2012; on 1 August 2012 more than 4 million orders in 45 minutes and a loss of more than $460 million; 97 automated warning emails not acted on; inadequate deployment controls and incident procedures."
+  },
+  {
+    "n": 27,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Requirements including honest headers and subject lines, a physical postal address and an opt-out honoured within 10 business days; no exception for business-to-business email; penalties up to $53,088 per email."
+  },
+  {
+    "n": 28,
+    "title": "Data (Use and Access) Act factsheet: UK GDPR and DPA (27 June 2025)",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-uk-gdpr-and-dpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 80 replaces UK GDPR Article 22 with Articles 22A to 22D, a more permissive framework for solely automated decisions with safeguards (information, representations and challenge, human intervention); the Act comes into force in stages."
+  },
+  {
+    "n": 29,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations (27 June 2025)",
+    "publisher": "GOV.UK, Department for Science, Innovation and Technology",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The soft opt-in is extended to charities, so they can send marketing emails and texts to people who have shown interest in their work without explicit consent, with an opt-out."
+  },
+  {
+    "n": 30,
+    "title": "AI Act: regulatory framework for AI (last updated 19 October 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. People should be made aware when they interact with a machine such as a chatbot; transparency rules take effect in August 2026; the AI Omnibus entered into force on 27 July 2026 and moved high-risk dates to 2 December 2027 and 2 August 2028."
+  }
+]

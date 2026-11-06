@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "UX Guidelines for Ecommerce Product Pages (Katie Sherwin, 24 November 2019)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ecommerce-product-pages/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Study of 49 ecommerce sites; complete but concise descriptions about use, look and function; key points first; explain terms; consistency across variants; price including product-specific charges; reviewer details and review sorting"
+  },
+  {
+    "n": 2,
+    "title": "Product Page UX research and benchmark",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/research/product-page",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 344 benchmarked US and European sites; 51% mediocre or worse product page UX; 110+ product page guidelines"
+  },
+  {
+    "n": 3,
+    "title": "How Online Reviews Influence Sales (page dated 4 December 2025; findings first published 2017)",
+    "publisher": "Medill Spiegel Research Center, Northwestern University",
+    "url": "https://spiegel.medill.northwestern.edu/how-online-reviews-influence-sales/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Five reviews: purchase likelihood 270% greater than none; 190% lower-priced vs 380% higher-priced; peak at 4.0 to 4.7 stars; verified-buyer badge raises odds of purchase by 15%"
+  },
+  {
+    "n": 4,
+    "title": "Title [title] and structured title [structured_title] attribute",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324415",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 1 to 150 characters; shoppers often see the first 70 or fewer; key details first; variant details; bundles; no promotional text, price, shipping, company name, caps or symbols; AI-generated titles go in structured_title with trained_algorithmic_media; example title structures"
+  },
+  {
+    "n": 5,
+    "title": "Description [description] attribute",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324468",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Up to 5,000 characters; key details in the first 160 to 500; no promotional text, links, comparisons, category references, accessories or business policies; AI-generated descriptions go in structured_description"
+  },
+  {
+    "n": 6,
+    "title": "Google Search's guidance on using generative AI content on your website",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+    "checked": "2026-11-06",
+    "supports": "Fetched. AI content allowed if it meets Search Essentials; scaled content abuse policy; fact-check all AI content, including titles, meta descriptions, structured data and alt text; Merchant Center labelling of AI images, titles and descriptions"
+  },
+  {
+    "n": 7,
+    "title": "Influencing your title links in search results",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/title-link",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Descriptive, concise titles; avoid keyword stuffing and boilerplate; no length limit but truncated; Google may rewrite half-empty, inaccurate or boilerplate titles"
+  },
+  {
+    "n": 8,
+    "title": "Introduction to Product structured data",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/product",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Product snippets for pages that don't sell directly versus merchant listings for pages that sell, with shipping, availability, ratings and returns"
+  },
+  {
+    "n": 9,
+    "title": "Adding keywords to improve SEO",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Page title up to 70 characters, 60 to avoid shortening; meta description about 160; H1 built from the title field; at least 250 words of descriptive text; avoid copying manufacturer descriptions; readable alt text"
+  },
+  {
+    "n": 10,
+    "title": "Product descriptions with Shopify's AI tools",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/shopify-admin/productivity-tools/shopify-magic/product-descriptions",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sidekick writes product descriptions from the Generate text icon; AI outputs can contain errors, so review anything a tool creates or changes"
+  },
+  {
+    "n": 11,
+    "title": "An alt Decision Tree (updated 13 May 2024)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Informative, functional, decorative, complex and text images and the alt text each needs"
+  },
+  {
+    "n": 12,
+    "title": "Advertising FAQ's: A Guide for Small Business (April 2001, edited January 2025)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Reasonable basis means objective evidence; guarantees don't replace substantiation; health and safety claims need competent and reliable scientific evidence; price comparison and free offer standards"
+  },
+  {
+    "n": 13,
+    "title": "Complying with the Made in USA Standard (July 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard",
+    "checked": "2026-11-06",
+    "supports": "Fetched. All or virtually all standard; Labeling Rule (16 CFR 323) finalised 2021 covers labels and online or mail-order materials with a seal, mark, tag or stamp; civil penalties; qualified claims; Assembled in USA conditions"
+  },
+  {
+    "n": 14,
+    "title": "Made in USA Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/made-in-usa-rule",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 16 CFR Part 323; press release 1 July 2021 and Federal Register notice 14 July 2021; enforcement list including Williams-Sonoma and Kubota"
+  },
+  {
+    "n": 15,
+    "title": "Williams-Sonoma Will Pay Record $3.17 Million Civil Penalty for Violating FTC Made in USA Order (26 April 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/04/williams-sonoma-will-pay-record-317-million-civil-penalty-violating-ftc-made-usa-order",
+    "checked": "2026-11-06",
+    "supports": "Fetched. $3.175 million, largest Made in USA penalty; Pottery Barn Teen mattress pads described as crafted in America but made in China; breach of 2020 order"
+  },
+  {
+    "n": 16,
+    "title": "Threading Your Way Through the Labeling Requirements Under the Textile and Wool Acts (July 2014, edited 2020 and 2025)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/threading-your-way-through-labeling-requirements-under-textile-wool-acts",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Catalogue and internet descriptions must state made in USA, imported, or both, matching the label; fibre content in ads that mention a fibre"
+  },
+  {
+    "n": 17,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Guides revised in 2023; disclose free products, staff and family links; review gating, delaying negative reviews and five-star-first sorting can mislead; no discounts for positive reviews; typical results"
+  },
+  {
+    "n": 18,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers (November 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 16 CFR Part 465 effective 21 October 2024; bans on fake reviews, sentiment-conditioned incentives, undisclosed insider reviews, company-controlled review sites, suppression and fake social indicators; incentives allowed if not conditioned; civil penalties for knowing violations"
+  },
+  {
+    "n": 19,
+    "title": "Fashion Nova will pay $4.2 million as part of settlement of FTC allegations it blocked negative reviews (25 January 2022)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/01/fashion-nova-will-pay-42-million-part-settlement-ftc-allegations-it-blocked-negative-reviews",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Reviews under four stars held and never posted from late 2015 to November 2019; hundreds of thousands of reviews; $4.2 million"
+  },
+  {
+    "n": 20,
+    "title": "Green Guides (16 CFR Part 260)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/green-guides",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Citation; revised Green Guides announced 1 October 2012; general principles, how consumers read claims and how to qualify them"
+  },
+  {
+    "n": 21,
+    "title": "Questions and Answers on Directive (EU) 2024/825, empowering consumers for the green transition (September 2026)",
+    "publisher": "European Commission, DG Justice and Consumers",
+    "url": "https://commission.europa.eu/document/download/3c257883-bb2a-4dd9-a6dc-501d587bb34f_en?filename=faq-empowerting-consumers-gtd.pdf",
+    "checked": "2026-11-06",
+    "supports": "Fetched (PDF). Applies from 27 September 2026 including old stock; generic environmental claims and examples; recognised excellent environmental performance; specification on the same medium including online selling interface; sustainability labels; offset-based claims; brand and product names; organic terms"
+  },
+  {
+    "n": 22,
+    "title": "Green Claims Code: environmental claims on goods and services (20 September 2021)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/green-claims-code-making-environmental-claims/environmental-claims-on-goods-and-services",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The six principles for environmental claims"
+  },
+  {
+    "n": 23,
+    "title": "Press release No 152/24: Judgment in Case C-330/23, Aldi Süd (26 September 2024)",
+    "publisher": "Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240152en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Fetched (PDF). A reduction announced as a percentage or a promotional price statement must be based on the lowest price in a period not shorter than 30 days before the reduction"
+  },
+  {
+    "n": 24,
+    "title": "Price Indication Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/price-indication-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Selling and unit price rules; Article 6a on price reductions; Directive 2019/2161 adopted 27 November 2019, applying from 28 May 2022; Article 6a guidance adopted 17 December 2021"
+  },
+  {
+    "n": 25,
+    "title": "Short guide for businesses: publishing consumer reviews and complying with consumer protection law (CMA208, 4 April 2025)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/fake-reviews/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Bans on fake reviews, concealed incentivised reviews and false or misleading review information; policy, risk assessment, processes and reasonable and proportionate steps for review publishers"
+  },
+  {
+    "n": 26,
+    "title": "CMA fines firms £6 million for misleading sales tactics (14 October 2026)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/cma-fines-firms-6-million-for-misleading-sales-tactics",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Wayfair £4.8 million for false time-limited Daily Deals and Flash Deals; Appliances Direct and Gold's Gym; DMCC Act direct enforcement; false limited-time offers unfair in all circumstances"
+  },
+  {
+    "n": 27,
+    "title": "Open letter to online retailers: including mandatory delivery fees in the total price (2 November 2026)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price",
+    "checked": "2026-11-06",
+    "supports": "Fetched. First price seen should be the price paid; mandatory delivery in the total at every stage including product pages; optional charges not hidden behind links or drop-downs"
+  },
+  {
+    "n": 28,
+    "title": "Allergen guidance for food businesses (updated 17 July 2026)",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The 14 allergens; distance selling needs allergen information before purchase and at delivery; free-from claims need strict controls"
+  },
+  {
+    "n": 29,
+    "title": "Food Allergies: What You Need to Know (content current as of 3 November 2026)",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Nine major allergens; sesame from 1 January 2023 under the FASTER Act; declaration in brackets or a Contains statement; may-contain statements voluntary"
+  },
+  {
+    "n": 30,
+    "title": "Food labelling: general rules",
+    "publisher": "European Union, Your Europe (business)",
+    "url": "https://europa.eu/youreurope/business/product-requirements/food-labelling/general-rules/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Allergens emphasised in the ingredients list; contains statement where there is no ingredients list"
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Employee engagement and motivation factsheet (23 July 2025)",
+    "publisher": "CIPD",
+    "url": "https://www.cipd.org/en/knowledge/factsheets/engagement-factsheet/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No agreed definition (MacLeod counted over 50); Kahn and Schaufeli definitions; Utrecht Work Engagement Scale; MacLeod four enablers; composite scores hard to act on; mostly correlational evidence; pair surveys with focus groups."
+  },
+  {
+    "n": 2,
+    "title": "State of the Global Workplace (2026 report, 2025 data)",
+    "publisher": "Gallup",
+    "url": "https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Global engagement 20% in 2025 (peak 23% in 2022-2023); manager engagement 22% (27% in 2024, 31% in 2022); lower manager engagement explains most of the drop; 263,810 respondents, 141,444 employed."
+  },
+  {
+    "n": 3,
+    "title": "Writing survey questions",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/our-methods/u-s-surveys/writing-survey-questions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open vs closed questions, question order effects, acquiescence bias in agree-disagree items, double-barrelled questions, plain wording, pretesting."
+  },
+  {
+    "n": 4,
+    "title": "How Viva Glint protects your privacy (updated May 2026)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/viva/glint/setup/viva-glint-survey-privacy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Confidential vs identifiable surveys; minimum of three responses for a confidential survey; default statement promises groups of five or more and verbatim comments where at least 10 respond; raw-response export lets a limited number of people see identifiable answers. Vendor fact, recheck each refresh."
+  },
+  {
+    "n": 5,
+    "title": "NHS Staff Survey: FAQs",
+    "publisher": "NHS England Staff Survey Coordination Centre (Picker Institute Europe)",
+    "url": "https://www.nhsstaffsurveys.com/faqs/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Responses go to an independent contractor; employers get summary findings only; no results for any group with 9 or fewer responses; anonymised data published as official statistics. Home page describes it as one of the largest workforce surveys in the world."
+  },
+  {
+    "n": 6,
+    "title": "What is personal data?",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pseudonymised data that can re-identify a person is still personal data; data is anonymous only if anonymisation is irreversible."
+  },
+  {
+    "n": 7,
+    "title": "Data protection",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/data-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK GDPR and Data Protection Act 2018; data protection principles; sensitive data with stronger protection, including health, ethnic background, religious beliefs and trade union membership. Used because ico.org.uk blocks automated reading."
+  },
+  {
+    "n": 8,
+    "title": "Data protection basics (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of personal data with employee examples; special categories (health, sexual orientation, ethnic origin, beliefs, biometric and genetic data, trade union membership) generally prohibited unless specific conditions apply; consent must be freely given and can be withdrawn."
+  },
+  {
+    "n": 9,
+    "title": "Frequently asked questions (CCPA)",
+    "publisher": "California Privacy Protection Agency",
+    "url": "https://cppa.ca.gov/faq.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CCPA rights cover California residents who are employees or job applicants; employment exemptions expired 31 December 2022; CPRA amendments in effect 1 January 2023; automated decision-making rules for significant decisions including employment apply by 1 January 2027."
+  },
+  {
+    "n": 10,
+    "title": "AI Act: regulatory framework for AI (updated 19 October 2026)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Emotion recognition in workplaces is a prohibited practice since February 2025; AI for employment and management of workers is high-risk, with obligations from 2 December 2027 after the AI Omnibus (in force 27 July 2026)."
+  },
+  {
+    "n": 11,
+    "title": "Theory",
+    "publisher": "Center for Self-Determination Theory",
+    "url": "https://selfdeterminationtheory.org/theory/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Basic needs of autonomy, competence and relatedness; Cognitive Evaluation Theory names rewards and interpersonal controls as factors affecting intrinsic motivation."
+  },
+  {
+    "n": 12,
+    "title": "Expenses and benefits: trivial benefits",
+    "publisher": "GOV.UK (HMRC)",
+    "url": "https://www.gov.uk/expenses-and-benefits-trivial-benefits",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tax-free trivial benefit conditions: £50 or less, not cash or a cash voucher, not a reward for work, not in the contract; directors of close companies capped at £300 a tax year. Page shows no date."
+  },
+  {
+    "n": 13,
+    "title": "Publication 15-B (2026), Employer's Tax Guide to Fringe Benefits",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/publications/p15b",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cash and cash equivalents such as gift cards are never excludable de minimis benefits; employee achievement awards for length of service or safety must be tangible personal property; limits $400 (non-qualified) and $1,600 (qualified plan)."
+  },
+  {
+    "n": 14,
+    "title": "Onboarding New Employees: Maximizing Success (Talya N. Bauer, SHRM Foundation Effective Practice Guidelines, 2010), copy hosted by the University of Georgia",
+    "publisher": "SHRM Foundation",
+    "url": "https://studentaffairs.uga.edu/wp-content/uploads/2021/08/Onboarding-New-Employees.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text read from an extracted copy). Four Cs; check-in milestones at 30, 60, 90 and 120 days and up to one year; IBM example with first-month check-ins, a two-month check-in and full integration after one year. 2010 guidance."
+  },
+  {
+    "n": 15,
+    "title": "Work-related stress: causes (updated 4 June 2024)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/stress/causes.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six areas that can lead to work-related stress if not managed: demands, control, support, relationships, role and change."
+  },
+  {
+    "n": 16,
+    "title": "Management Standards for work-related stress (updated 13 January 2025)",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/stress/standards/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps: prepare, identify risk factors, who can be harmed and how, evaluate, record findings, monitor and review."
+  },
+  {
+    "n": 17,
+    "title": "Guidelines on mental health at work (28 September 2022)",
+    "publisher": "World Health Organization",
+    "url": "https://www.who.int/publications/i/item/9789240053052",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommendation areas: organisational interventions, manager training, worker training, individual interventions, return to work, gaining employment."
+  },
+  {
+    "n": 18,
+    "title": "Employee well-being outcomes from individual-level mental health interventions: cross-sectional evidence from the United Kingdom (William J. Fleming, Industrial Relations Journal 55(2), 2024), Crossref record",
+    "publisher": "Crossref (publisher: Wiley)",
+    "url": "https://api.crossref.org/works/10.1111/irj.12418",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Metadata and abstract: 46,336 workers in 233 UK organisations; participants in resilience training, mindfulness and wellbeing apps appear no better off. The Wiley article page returned 403 to automated reading, so the Crossref record (CC BY 4.0 abstract) was used."
+  },
+  {
+    "n": 19,
+    "title": "About Total Worker Health (updated 28 October 2026)",
+    "publisher": "NIOSH, Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/niosh/twh/about/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Total Worker Health combines protection from work hazards with health promotion and prioritises a hazard-free work environment and the conditions of work."
+  },
+  {
+    "n": 20,
+    "title": "Supporting mental health at work (updated 16 January 2025)",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/supporting-mental-health-workplace",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Check in regularly, avoid assumptions, agree adjustments; poor mental health may be a disability under the Equality Act 2010 if substantial and lasting or expected to last 12 months; reasonable adjustments."
+  },
+  {
+    "n": 21,
+    "title": "Where to get urgent help for mental health (reviewed 23 October 2026)",
+    "publisher": "NHS",
+    "url": "https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK urgent routes: 999 or A&E, NHS 111 mental health option, Samaritans 116 123."
+  },
+  {
+    "n": 22,
+    "title": "988 Suicide & Crisis Lifeline",
+    "publisher": "988 Lifeline",
+    "url": "https://988lifeline.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Call, text or chat 988, free and confidential, 24/7."
+  },
+  {
+    "n": 23,
+    "title": "NIMHANS: Tele MANAS services",
+    "publisher": "National Institute of Mental Health and Neuro Sciences",
+    "url": "https://nimhans.ac.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tele-MANAS national tele mental health programme numbers 14416 and 1800 891 4416. Listed as the source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 24,
+    "title": "Employers and employees (modified 22 July 2026)",
+    "publisher": "Office of the Privacy Commissioner of Canada",
+    "url": "https://www.priv.gc.ca/en/privacy-topics/employers-and-employees/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hub for employee records and privacy in the workplace guidance. Listed as the source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 25,
+    "title": "9-8-8: Suicide Crisis Helpline",
+    "publisher": "Public Health Agency of Canada",
+    "url": "https://988.ca/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Call or text 9-8-8, 24/7; 9-1-1 if safety is at risk."
+  },
+  {
+    "n": 26,
+    "title": "Mental health: psychological health and safety (modified 24 September 2026)",
+    "publisher": "Canadian Centre for Occupational Health and Safety",
+    "url": "https://www.ccohs.ca/topics/wellness/mentalhealth/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fact sheets on psychosocial risk factors, burnout and return to work. Listed as a source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 27,
+    "title": "Employment (your privacy rights)",
+    "publisher": "Office of the Australian Information Commissioner",
+    "url": "https://www.oaic.gov.au/privacy/your-privacy-rights/employment",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Private-sector employee records exemption where handling is directly related to the employment relationship. Listed as the source to check in Australia; no detail given in the kit."
+  },
+  {
+    "n": 28,
+    "title": "Mental health helplines (reviewed November 2025)",
+    "publisher": "healthdirect Australia",
+    "url": "https://www.healthdirect.gov.au/mental-health-helplines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 000 in a crisis; Lifeline 13 11 14; Beyond Blue and other helplines."
+  }
+]

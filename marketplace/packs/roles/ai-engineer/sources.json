@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Models overview",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current models Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 with API IDs, 1M-token context, 128K output, prices per million tokens, retirement not sooner than Sep-Oct 2027; every model ID is a pinned snapshot; Batch API 50% off; start with Opus 5.5; Haiku for high-volume classification, extraction and routing."
+  },
+  {
+    "n": 2,
+    "title": "Structured outputs",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. output_config.format json_schema and strict tool use; generally available with no beta header; unsupported schema features (numeric ranges, string length, recursion) return 400; refusals may not match the schema; max_tokens truncation can give invalid JSON; limits of 20 strict tools, 24 optional and 16 union-type parameters per request."
+  },
+  {
+    "n": 3,
+    "title": "Reduce hallucinations",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Allow the model to say it does not know; extract direct quotes first for long documents; cite a quote per claim and retract unsupported claims; restrict to supplied documents; best-of-N checks; techniques reduce but do not remove hallucinations."
+  },
+  {
+    "n": 4,
+    "title": "Prompt caching",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automatic or explicit cache breakpoints (up to 4); 5-minute default and 1-hour option; writes 1.25x or 2x, reads 0.1x base input (0.05x on Opus 5.5 and Sonnet 5.5, 0.025x on Fable 5.1); minimum 512 tokens on current models; changes to earlier content invalidate the cache."
+  },
+  {
+    "n": 5,
+    "title": "Rate limits",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/api/rate-limits",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Spend limits and rate limits; monthly tier caps Start $500, Build $1,000, Scale $200,000; at the tier cap requests return 429 with no retry-after until the next month; own limits per organisation or workspace; RPM, ITPM, OTPM limits; 429 with retry-after on rate limits."
+  },
+  {
+    "n": 6,
+    "title": "Create strong empirical evaluations",
+    "publisher": "Anthropic (Claude Developer Platform docs)",
+    "url": "https://platform.claude.com/docs/en/test-and-evaluate/develop-tests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Evals should be task-specific with edge cases, automated where possible, and favour volume of automatically graded cases; grading by exact match, similarity, ROUGE and model graders; use a different model to grade than the one that produced the output."
+  },
+  {
+    "n": 7,
+    "title": "Building effective agents",
+    "publisher": "Anthropic Engineering",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 19 December 2024. Workflows vs agents; start simple; five workflow patterns; frameworks can hide prompts; tool design and stopping conditions."
+  },
+  {
+    "n": 8,
+    "title": "Introducing Contextual Retrieval",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/news/contextual-retrieval",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 19 September 2024. Failed retrievals down 35% (contextual embeddings), 49% (plus contextual BM25) and 67% (plus reranking), measured as 1 minus recall@20; knowledge bases under about 200,000 tokens can go in the prompt with caching."
+  },
+  {
+    "n": 9,
+    "title": "Models",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/models",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Flagship models gpt-6-astra, gpt-6.1-sol, gpt-6.1-terra and gpt-6-luna with 1.05M-token context, 128K output and prices per million tokens; GPT-6 Astra suggested as the starting point."
+  },
+  {
+    "n": 10,
+    "title": "Structured model outputs",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. json_schema with strict true guarantees schema adherence, JSON mode only valid JSON; refusals appear as a refusal content part; responses can be incomplete at max_output_tokens."
+  },
+  {
+    "n": 11,
+    "title": "Batch API",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/batch",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Batch requests cost 50% less; 24-hour completion window; up to 50,000 requests and 200 MB per batch."
+  },
+  {
+    "n": 12,
+    "title": "Data controls in the OpenAI platform",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/your-data",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. API data not used for training by default since 1 March 2023; abuse-monitoring logs up to 30 days; Responses stored 30 days when store is true or omitted; Zero Data Retention needs approval; data residency regions include Europe and the UK."
+  },
+  {
+    "n": 13,
+    "title": "Prompt caching",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Caching automatic on supported models; minimum 1,024 tokens on GPT-5.6 and later; stable content first; reads 0.1x input rate on GPT-5.6 and later (0.05x on Sol and Terra); writes 1.25x (30 minutes) or 2.5x (12 hours)."
+  },
+  {
+    "n": 14,
+    "title": "Rate limits",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/guides/rate-limits",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RPM, RPD, TPM, TPD limits by tier; spend alerts and hard spend limits per organisation or project, hard limits return 429; backoff with jitter, Retry-After as minimum wait, cap attempts, do not retry quota or billing errors; failed requests count toward limits."
+  },
+  {
+    "n": 15,
+    "title": "Deprecations",
+    "publisher": "OpenAI (API docs)",
+    "url": "https://developers.openai.com/api/docs/deprecations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Notice of at least 6 months for generally available models, 3 months for specialised variants, about 2 weeks for previews; Evals platform, reusable prompts and Agent Builder close 30 November 2026 with Promptfoo suggested for evals; GPT-5 family snapshots shut down 11 December 2026."
+  },
+  {
+    "n": 16,
+    "title": "Gemini models",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/models",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (ai.google.dev now redirects here). Stable, preview, latest and experimental versions; previews retired with at least 2 weeks' notice; latest alias changes with 2 weeks' email notice; Gemini 2.5 Flash and 2.5 Pro deprecated and auto-routed to newer models from 1 December 2026."
+  },
+  {
+    "n": 17,
+    "title": "Gemini API Additional Terms of Service",
+    "publisher": "Google",
+    "url": "https://aistudio.google.com/docs/terms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Effective 23 March 2026. Unpaid services: content may be used to improve products and read by human reviewers, do not submit sensitive or personal information; paid services not used to improve products; apps for users in the EEA, Switzerland or UK may use only paid services."
+  },
+  {
+    "n": 18,
+    "title": "Structured outputs",
+    "publisher": "Google (Gemini API docs, AI Studio)",
+    "url": "https://aistudio.google.com/docs/structured-output",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. JSON response format with a schema; output is valid JSON but values are not guaranteed correct; some keywords such as minLength are not enforced; validate values in application code."
+  },
+  {
+    "n": 19,
+    "title": "Model Context Protocol specification (version 2026-07-28)",
+    "publisher": "Model Context Protocol",
+    "url": "https://modelcontextprotocol.io/specification/latest",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current schema version 2026-07-28; hosts, clients, servers; resources, prompts, tools, elicitation; user consent, data privacy and tool safety principles; hosts must get explicit consent before invoking any tool; tool annotations untrusted unless from a trusted server."
+  },
+  {
+    "n": 20,
+    "title": "Security Best Practices",
+    "publisher": "Model Context Protocol",
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/security_best_practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Confused deputy, token passthrough (servers must not accept tokens not issued to them), SSRF, state handle hijacking in the stateless protocol, local server compromise, scope minimisation."
+  },
+  {
+    "n": 21,
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ten 2025 risks LLM01 prompt injection to LLM10 unbounded consumption."
+  },
+  {
+    "n": 22,
+    "title": "LLM01:2025 Prompt Injection",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Direct and indirect injection; unclear whether fool-proof prevention exists; constrain behaviour, validate output formats, filter, least privilege, human approval, segregate external content, adversarial testing."
+  },
+  {
+    "n": 23,
+    "title": "LLM06:2025 Excessive Agency",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Excessive functionality, permissions and autonomy; limit and narrow tools, least privilege, user-scoped credentials, human approval for high-impact actions, authorisation enforced downstream."
+  },
+  {
+    "n": 24,
+    "title": "LLM10:2025 Unbounded Consumption",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Resource exhaustion, denial of wallet and model extraction; input size limits, rate limits and quotas, timeouts, monitoring for unusual use."
+  },
+  {
+    "n": 25,
+    "title": "AI Act",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 19 October 2026. In force 1 August 2024; generally applicable 2 August 2026; transparency rules (chatbot disclosure, AI content labelling) from August 2026; AI Omnibus in force 27 July 2026 moved high-risk rules to 2 December 2027 (Annex III) and 2 August 2028 (Annex I)."
+  },
+  {
+    "n": 26,
+    "title": "A pro-innovation approach to AI regulation: government response",
+    "publisher": "UK Government (DSIT), GOV.UK",
+    "url": "https://www.gov.uk/government/consultations/ai-regulation-a-pro-innovation-approach-policy-proposals/outcome/a-pro-innovation-approach-to-ai-regulation-government-response",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 6 February 2024. No single AI law; five cross-sector principles applied by existing regulators including the ICO, CMA, FCA and Ofcom."
+  },
+  {
+    "n": 27,
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)",
+    "publisher": "NIST",
+    "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 26 July 2024; voluntary companion to the AI RMF 1.0 for generative AI."
+  },
+  {
+    "n": 28,
+    "title": "Your AI Product Needs Evals",
+    "publisher": "Hamel Husain (author's site)",
+    "url": "https://hamel.dev/blog/posts/evals/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 29 March 2024. Three levels of evaluation (assertions, human and model review of traces, A/B tests); look at data constantly; Rechat case study."
+  },
+  {
+    "n": 29,
+    "title": "The lethal trifecta for AI agents",
+    "publisher": "Simon Willison (author's site)",
+    "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 16 June 2025. Private data, untrusted content and external communication together allow data theft; avoid combining all three; caution about guardrail products."
+  },
+  {
+    "n": 30,
+    "title": "Klarna AI assistant handles two-thirds of customer service chats in its first month",
+    "publisher": "Klarna (press release)",
+    "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 27 February 2024, company's own figures: 2.3 million conversations, two-thirds of chats, resolution under 2 minutes vs 11, 25% fewer repeat inquiries; powered by OpenAI."
+  }
+]

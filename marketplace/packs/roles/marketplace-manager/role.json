@@ -1,0 +1,26 @@
+{
+  "id": "marketplace-manager",
+  "name": "Online marketplace manager",
+  "department": "ecommerce",
+  "summary": "Lists and sells on marketplaces beyond the brand's own store, such as eBay, Walmart and overseas sites. Maps product data to each marketplace's rules.",
+  "aliases": [
+    "ebay",
+    "walmart marketplace",
+    "multichannel selling",
+    "cross-border ecommerce",
+    "marketplace listings",
+    "international ecommerce",
+    "ebay seller",
+    "bol and zalando",
+    "marketplace account health",
+    "delivery app menus"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: eBay, Walmart, bol, Zalando and Uber Eats fees and standards, listings and GPSR details, buyer claims and appeals, INFORM Act, EU DSA, DAC7, HMRC and 1099-K reporting, access levels 1 to 3 with bulk price changes and appeals needing a fresh yes, Amazon pointed to its own kit, 29 checked sources."
+    }
+  ]
+}

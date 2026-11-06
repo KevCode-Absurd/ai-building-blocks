@@ -1,0 +1,26 @@
+{
+  "id": "qa-engineer",
+  "name": "QA engineer",
+  "department": "engineering",
+  "summary": "Writes the tests and test plans that catch bugs before customers do, and bug reports developers can act on.",
+  "aliases": [
+    "qa",
+    "software testing",
+    "test automation",
+    "playwright",
+    "manual testing",
+    "bug reports",
+    "cypress",
+    "test plan",
+    "regression testing",
+    "accessibility testing"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (Playwright 1.65 and Cypress 16.2.1 docs, flaky test research, WCAG 2.2 with axe and manual checks, Mozilla bug guidelines, TSB and CrowdStrike cases), four skills (risk-based test plan, automated test suite, bug report and triage, accessibility test pass), six prompts, three workflows, training interview and test briefs."
+    }
+  ]
+}

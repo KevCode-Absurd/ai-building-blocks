@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "turn-a-bug-report-into-proof",
+    "name": "Turn a bug report into proof",
+    "why": "Turns a vague bug report into a repeatable case and the missing tests, the same start as the bug report and triage skill."
+  },
+  {
+    "slug": "prepare-private-bug-evidence-for-developers",
+    "name": "Private bug evidence assistant",
+    "why": "Helps owners who aren't developers turn notes and screenshots into a bug report with private data removed."
+  },
+  {
+    "slug": "bug-evidence-plan-writer",
+    "name": "Bug evidence plan writer",
+    "why": "Ranks likely causes with one check each before any code changes, useful when a bug won't reproduce."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Takes a reproduced bug through to a minimal fix with a regression test, the developer side of a bug report."
+  },
+  {
+    "slug": "test-failure-repair-loop",
+    "name": "Test failure repair loop",
+    "why": "Fixes a red test suite in capped rounds, re-checking each time, useful after a framework upgrade."
+  },
+  {
+    "slug": "check-a-release-and-its-docs",
+    "name": "Check a release and its docs",
+    "why": "Finds test gaps and stale docs in a release plan, a companion to the release sign-off workflow."
+  },
+  {
+    "slug": "release-day-rollback-planner",
+    "name": "Release day rollback planner",
+    "why": "Plans checks, steps and a rollback before shipping, so a failed smoke check has a ready answer."
+  },
+  {
+    "slug": "launch-readiness-seam-checker",
+    "name": "Launch readiness seam checker",
+    "why": "Checks the hand-offs between parts and teams before go-live, where integration bugs hide."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Re-checks accessibility each quarter and tracks last quarter's fixes, the repeat version of the accessibility test pass."
+  },
+  {
+    "slug": "website-quality-keeper",
+    "name": "Website quality keeper",
+    "why": "A weekly check of speed, access and indexing that shows what got worse since last run."
+  },
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Applies the same find-it, report-it, retest-it method to a support chatbot's wrong answers."
+  },
+  {
+    "slug": "pre-launch-store-checker",
+    "name": "Pre-launch store checker",
+    "why": "A launch checklist for online shops, covering the checkout and store settings a regression pass must not miss."
+  }
+]

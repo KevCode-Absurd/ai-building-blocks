@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Ranks your systems and writes a safe restore test with an evidence log, the same method as the backup and restore plan skill."
+  },
+  {
+    "slug": "recovery-rehearsal-evidence-assistant",
+    "name": "Recovery rehearsal evidence assistant",
+    "why": "Checks restore test results against your recovery targets and lists the gaps with owners, for the quarterly restore test."
+  },
+  {
+    "slug": "lock-down-your-store-logins-and-staff-against-takeover",
+    "name": "Lock down your store logins and staff against takeover",
+    "why": "Builds a sign-in policy, fix list and phishing rule sheet from your team and apps, a quick start before a full tenant baseline."
+  },
+  {
+    "slug": "store-sign-in-security-checker",
+    "name": "Sign-in security checker",
+    "why": "Scores how staff sign in and writes a one-page password and second-step policy, matching the MFA and password rules in this kit."
+  },
+  {
+    "slug": "staff-phishing-rules-briefer",
+    "name": "Staff phishing rules briefer",
+    "why": "Writes a staff phishing rule sheet and a ten-minute drill, useful alongside MFA rollout and the incident first-hour prompt."
+  },
+  {
+    "slug": "write-a-procedure-test-it-and-build-a-training-deck",
+    "name": "Write a procedure, test it and build a training deck",
+    "why": "Turns a process into a tested written procedure and a training deck, handy for runbooks and staff how-tos."
+  },
+  {
+    "slug": "slack-and-backup-planner",
+    "name": "Slack and backup planner",
+    "why": "Finds where one bad week would break the business and what backup to add first, a wider view before the backup plan."
+  }
+]

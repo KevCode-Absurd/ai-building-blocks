@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "The Magenta Book",
+    "publisher": "HM Treasury and the Evaluation Task Force (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/the-magenta-book",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Central government guidance on evaluation: first published 27 April 2011, last updated 15 May 2026; documents listed include the main guidance, Annex A on analytical methods, supplementary guides (handling complexity, realist evaluation, quality in qualitative evaluation), guidance on evaluating AI interventions (December 2024), and two annexes added 14 May 2026: Transparency in Government Evaluation Research and Test and Learn."
+  },
+  {
+    "n": 2,
+    "title": "Magenta Book: central government guidance on evaluation (HTML)",
+    "publisher": "HM Treasury (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/the-magenta-book/magenta-book-central-government-guidance-on-evaluation-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read in three parts). Process, impact and value-for-money evaluation and the question each asks; theory of change with assumptions and a negative programme theory; proportionality factors; experimental, quasi-experimental and theory-based approaches and when each fits; contribution analysis gives an evidenced line of reasoning, not proof; realist evaluation and process tracing; monitoring versus evaluation; baseline data collected early; anonymise at the first opportunity; Government Evaluation Registry from 1 April 2024 and pre-registration; informed consent, voluntary participation and the right to withdraw, extra care for vulnerable groups (section 5.10); presumption towards openness and not presenting findings as more definitive than the evidence allows (section 6.6). Page updated 15 May 2026."
+  },
+  {
+    "n": 3,
+    "title": "Review of the OECD DAC criteria for evaluating humanitarian action: a mapping of how the criteria have been applied",
+    "publisher": "ALNAP",
+    "url": "https://www.alnap.org/help-library/resources/review-of-the-oecd-dac-criteria-for-evaluating-humanitarian-action-a-mapping-of/",
+    "checked": "2026-11-06",
+    "supports": "Landing page opened with WebFetch; the linked PDF was fetched and its text extracted. Secondary summary used because oecd.org returned 403 to every automated fetch on 6 November 2026 (Decision 9). Published 29 August 2023. Restates the OECD DAC 2019 criteria and their questions and definitions (relevance, coherence, effectiveness, efficiency, impact, sustainability), that coherence was added in 2019, origins in the 1991 principles, the 2021 guidance Applying Evaluation Criteria Thoughtfully, and the two OECD principles for using the criteria (Box 3, citing OECD 2019)."
+  },
+  {
+    "n": 4,
+    "title": "Adapting the OECD criteria for the evaluation of humanitarian action (e-report)",
+    "publisher": "ALNAP",
+    "url": "https://www.alnap.org/help-library/resources/evaluation-criteria-guide-e-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 12 September 2025. Humanitarian adaptation lists seven criteria, adding coverage and inclusion and inter-connection; advises selecting and applying the criteria thoughtfully and by purpose."
+  },
+  {
+    "n": 5,
+    "title": "CDC Program Evaluation Framework",
+    "publisher": "US Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/evaluation/php/evaluation-framework/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page dated 20 August 2024 (MMWR volume 73, 2024). Six steps (assess the context, describe the program, focus the evaluation questions and design, gather credible evidence, generate and support conclusions, act on findings), five standards (relevance and utility, rigor, independence and objectivity, transparency, ethics) and three cross-cutting actions."
+  },
+  {
+    "n": 6,
+    "title": "What is Theory of Change?",
+    "publisher": "Center for Theory of Change",
+    "url": "https://www.theoryofchange.org/what-is-theory-of-change/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Defines theory of change as a description and illustration of how and why a desired change is expected to happen, focused on the missing middle; backwards mapping from long-term goals; outcomes framework of preconditions."
+  },
+  {
+    "n": 7,
+    "title": "Theory of change in ten steps",
+    "publisher": "NPC (New Philanthropy Capital)",
+    "url": "https://www.thinknpc.org/resource-hub/theory-of-change-in-ten-steps/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 9 October 2019. Ten steps from situation analysis to assumptions; common mistakes: too much detail, setting targets and measurement questions too early, burying mechanisms in assumptions."
+  },
+  {
+    "n": 8,
+    "title": "Results-Based Management for International Assistance Programming: a how-to guide",
+    "publisher": "Global Affairs Canada",
+    "url": "https://www.international.gc.ca/world-monde/funding-financement/results_based_management-gestion_axee_resultats-guide.aspx?lang=eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (read in parts). Updated June 2022. Theory of change as assumptions, risks and external factors linking activities to the ultimate outcome; logic model levels (outputs, immediate, intermediate and ultimate outcomes); indicators, baseline, targets and the performance measurement framework; indicator validity."
+  },
+  {
+    "n": 9,
+    "title": "Guiding Principles for Evaluators",
+    "publisher": "American Evaluation Association",
+    "url": "https://www.eval.org/About/Guiding-Principles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five principles (systematic inquiry, competence, integrity, respect for people, common good and equity), last updated 2025; informed consent and disclosure of conflicts of interest."
+  },
+  {
+    "n": 10,
+    "title": "UNEG Norms and Standards for Evaluation",
+    "publisher": "United Nations Evaluation Group",
+    "url": "https://www.unevaluation.org/uneg_publications/uneg-norms-and-standards-evaluation-un-system",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 2005, revised 2016; a new Norm 11 and standard on environmental and social impacts approved in February 2025."
+  },
+  {
+    "n": 11,
+    "title": "Writing survey questions",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/our-methods/u-s-surveys/writing-survey-questions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open versus closed questions (58% chose the economy when offered versus 35% who volunteered it, 2008 example); clear wording, no double-barrelled questions; acquiescence bias in agree or disagree items; order and response-order effects; pretesting; identical wording and context to measure change over time; mode changes can affect trends."
+  },
+  {
+    "n": 12,
+    "title": "Standard Definitions: final dispositions of case codes and outcome rates for surveys",
+    "publisher": "AAPOR",
+    "url": "https://aapor.org/standards-and-ethics/standard-definitions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tenth edition published 2023 (PDF dated March 2024); defines disposition codes and outcome rates, with a response rate calculator."
+  },
+  {
+    "n": 13,
+    "title": "Personal well-being user guidance",
+    "publisher": "Office for National Statistics",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/methodologies/personalwellbeingsurveyuserguide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 14 January 2025. The four personal well-being questions (ONS4), the 0 to 10 scale and the reporting thresholds (low 0 to 4, medium 5 to 6, high 7 to 8, very high 9 to 10; anxiety uses different bands)."
+  },
+  {
+    "n": 14,
+    "title": "Process personal data lawfully (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/process-personal-data-lawfully_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Six legal bases; valid consent is freely given, specific, informed and unambiguous and can be withdrawn as easily as given; employees are generally not in a position to consent freely to their employer."
+  },
+  {
+    "n": 15,
+    "title": "Data protection",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/data-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK data protection principles (fair, lawful, transparent; specific purposes; only what is needed; accurate; kept no longer than needed; secure) and stronger protection for sensitive categories such as health, ethnicity and religion."
+  },
+  {
+    "n": 16,
+    "title": "Data (Use and Access) Act 2025: data protection and privacy changes",
+    "publisher": "Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page dated 27 June 2025. Clarifies that scientific research may include commercial research and lets researchers seek consent for broad areas of related research."
+  },
+  {
+    "n": 17,
+    "title": "Data (Use and Access) Act 2025: plans for commencement",
+    "publisher": "Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most Part 5 data protection changes took effect on 5 February 2026; page updated 12 October 2026. The page does not give a separate date for the research provisions."
+  },
+  {
+    "n": 18,
+    "title": "What is the Protection of Pupil Rights Amendment (PPRA)?",
+    "publisher": "US Department of Education, Student Privacy Policy Office",
+    "url": "https://studentprivacy.ed.gov/faq/what-protection-pupil-rights-amendment-ppra",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PPRA covers surveys, analyses or evaluations given to students in programmes funded by the Department of Education that touch eight protected areas (including mental or psychological problems, sex behaviour, illegal behaviour, religion and income); general guidance under review, with a Dear Colleague letter dated 26 August 2026."
+  },
+  {
+    "n": 19,
+    "title": "Research ethics guidance",
+    "publisher": "Social Research Association",
+    "url": "https://the-sra.org.uk/SRA/Ethics/Research-ethics-guidance/SRA/Ethics/Research-Ethics-Guidance.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SRA Research Ethics guidance 2021 (February 2021) replaces the 2003 guidelines; aims include protecting research participants and complying with legislation."
+  },
+  {
+    "n": 20,
+    "title": "National evaluation of the Troubled Families Programme 2015 to 2020: findings",
+    "publisher": "Ministry of Housing, Communities and Local Government (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/national-evaluation-of-the-troubled-families-programme-2015-to-2020-findings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 19 March 2019: an overview policy report plus supporting reports (family outcomes datasets, case studies, staff surveys, follow-up family survey) and earlier findings from 2017 and 2018."
+  },
+  {
+    "n": 21,
+    "title": "National evaluation of the Troubled Families Programme 2015 to 2020: evaluation overview policy report",
+    "publisher": "Ministry of Housing, Communities and Local Government",
+    "url": "https://assets.publishing.service.gov.uk/media/5c90ab20e5274a47046f7b55/National_evaluation_of_the_Troubled_Families_Programme_2015_to_2020_evaluation_overview_policy_report.pdf",
+    "checked": "2026-11-06",
+    "supports": "PDF fetched with WebFetch and text extracted. March 2019. Matched comparison group results: children looked after 2.5% versus 1.7% (a 32% difference) at 19 to 24 months; adults in custody 1.6% versus 1.2%; juveniles in custody 0.8% versus 0.5%; Jobseeker's Allowance claims 10.5% versus 9.3%, no significant difference for Employment and Support Allowance. Caveats: the comparison group may also receive services; the family survey has no comparison group, so impact cannot be attributed; the first evaluation measured outcomes at 18 months."
+  },
+  {
+    "n": 22,
+    "title": "Better regulation: guidelines and toolbox",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-making-process/planning-and-proposing-law/better-regulation/better-regulation-guidelines-and-toolbox_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU guidelines dated 3 November 2021 and toolbox dated 1 December 2025, covering how existing EU laws and programmes are evaluated."
+  },
+  {
+    "n": 23,
+    "title": "Commonwealth Evaluation Toolkit",
+    "publisher": "Australian Centre for Evaluation, Australian Treasury",
+    "url": "https://evaluation.treasury.gov.au/toolkit/commonwealth-evaluation-toolkit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Australian government evaluation guidance (Resource Management Guide 130): early planning, monitoring, evaluation and learning across the policy cycle, fit-for-purpose approaches. Listed as the official Australian source to check."
+  },
+  {
+    "n": 24,
+    "title": "Evaluation in the Government of Canada",
+    "publisher": "Treasury Board of Canada Secretariat",
+    "url": "https://www.canada.ca/en/treasury-board-secretariat/services/audit-evaluation/evaluation-government-canada.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Policy on Results in effect since 1 July 2016, with the Directive on Results and Standards on Evaluation; guidance on theory-based approaches and rapid impact evaluation; page date 4 May 2026. Listed as the official Canadian source to check."
+  },
+  {
+    "n": 25,
+    "title": "Development Monitoring and Evaluation Office",
+    "publisher": "NITI Aayog, Government of India",
+    "url": "https://dmeo.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DMEO, an attached office of NITI Aayog formed in September 2015, monitors and evaluates Government of India programmes and publishes toolkits and the Output Outcome Monitoring Framework. Listed as the official Indian source to check."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "weekly-stock-and-cash-reorder-watcher",
+    "name": "Weekly stock and cash reorder watcher",
+    "why": "Turns weekly stock and sales into a reorder list checked against cash, the same job as the reorder step in the weekly trading review."
+  },
+  {
+    "slug": "retail-markdown-stock-reconciler",
+    "name": "Retail markdown stock reconciler",
+    "why": "Checks how much cash a marked-down batch recovered against its cost, to judge whether a clearance promotion worked."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Tests a planned sale or price change against the real margin and finds the deepest discount that keeps the floor."
+  },
+  {
+    "slug": "sale-price-wording-picker",
+    "name": "Sale price wording picker",
+    "why": "Picks clear sale price wording and does the discount sums for shelf talkers and window signs."
+  },
+  {
+    "slug": "discount-sanity-checker",
+    "name": "Discount sanity checker",
+    "why": "Checks that every price and offer a shopper sees agrees, so the sign, the till and the post tell the same story."
+  },
+  {
+    "slug": "price-ending-picker",
+    "name": "Price ending picker",
+    "why": "Chooses round or just-below price endings, which also shapes how much change a market float needs."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Builds a poster for an in-store event or market whose date, place and price read from a distance."
+  },
+  {
+    "slug": "traction-offline-events",
+    "name": "Customer event experiment planner",
+    "why": "Plans a small customer event as a test with a cost cap and a stop rule, a good partner to the in-store event prompt."
+  },
+  {
+    "slug": "build-a-vip-program-for-your-best-customers",
+    "name": "Build a VIP program for your best customers",
+    "why": "Finds the shop's best customers and designs perks and personal touches that bring them back."
+  },
+  {
+    "slug": "returns-policy-designer",
+    "name": "Returns policy designer",
+    "why": "Designs a goodwill returns policy; pair it with the price-and-returns-sign-check prompt so legal rights stay first."
+  },
+  {
+    "slug": "warehouse-count-discrepancy-review-assistant",
+    "name": "Warehouse count discrepancy review assistant",
+    "why": "Splits count variances into timing, unit and count errors, a useful second check before calling a gap shrink."
+  },
+  {
+    "slug": "shop-system-playbook",
+    "name": "Shop operations and expansion planner",
+    "why": "Writes standards and a manual from the best-run shop, for owners opening a second shop or a regular pop-up."
+  }
+]

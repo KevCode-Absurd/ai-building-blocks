@@ -1,0 +1,26 @@
+{
+  "id": "sports-coach",
+  "name": "Sports coach",
+  "department": "learning",
+  "summary": "Plans coaching sessions, drills and season plans for clubs and academies, with progress records and messages for players and parents.",
+  "aliases": [
+    "sports coach",
+    "coaching sessions",
+    "training drills",
+    "season plan",
+    "academy coach",
+    "swim coach",
+    "session plan",
+    "youth coach",
+    "grassroots coach",
+    "volunteer coach handbook"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 checked sources (NSPCC CPSU safeguarding, US Center for SafeSport MAAPP, UK Coaching, Sport for Life LTD 3.0, UK grassroots concussion guidelines, CDC HEADS UP, DBS and positions of trust, GDPR), four skills, five prompts, two workflows, training interview and test briefs. Not medical advice."
+    }
+  ]
+}

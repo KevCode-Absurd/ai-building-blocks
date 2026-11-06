@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "turn-a-spec-into-a-tested-service-with-api-docs",
+    "name": "Turn a spec into a tested service with API docs",
+    "why": "Takes a written spec to a working service with API tests and an API spec, the contract-first path of the endpoint build skill."
+  },
+  {
+    "slug": "build-first-api-endpoint-builder-prompt",
+    "name": "First API endpoint prompt for Next.js",
+    "why": "A gentle first endpoint for a founder or front-end developer who has never written server code."
+  },
+  {
+    "slug": "set-up-redis-bullmq-job-queue-builder-prompt",
+    "name": "Redis + BullMQ Job Queue coding prompt",
+    "why": "Sets up a job queue with retries and failed-job handling, the queue a webhook receiver hands its work to."
+  },
+  {
+    "slug": "the-job-queue-where-agents-actually-run-implementation-planner",
+    "name": "Recoverable agent job queue builder",
+    "why": "Plans a queue that survives crashes with no repeated paid work and capped retries, the same rules as safe webhook processing."
+  },
+  {
+    "slug": "wakeups-how-agents-alert-each-other-implementation-planner",
+    "name": "Agent wakeup and stale-claim builder",
+    "why": "Shows duplicate checks, leases and retries for event-driven flows, useful when designing dedupe stores."
+  },
+  {
+    "slug": "agent-database-migration-planner",
+    "name": "Agent database migration planner",
+    "why": "Plans a schema change that keeps existing data, with staging checks, release order and recovery steps, like the safe migration skill."
+  },
+  {
+    "slug": "connect-code-to-supabase-builder-prompt",
+    "name": "Connect Code to Supabase coding prompt",
+    "why": "Connects an app to Supabase with scoped access and safe secrets, a common database setup for small teams."
+  },
+  {
+    "slug": "stop-fake-orders-card-testing-and-bot-abuse",
+    "name": "Stop fake orders, card testing and bot abuse",
+    "why": "Covers fraud rules and bot limits for checkout, the business-flow side of the OWASP API6 risk."
+  },
+  {
+    "slug": "payments-and-checkout-settings-checker",
+    "name": "Payments and checkout settings checker",
+    "why": "Checks payment and checkout settings and ranks risks, a useful companion before a payment integration goes live."
+  },
+  {
+    "slug": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+    "name": "Find leaked keys, secure them and check your live site",
+    "why": "Finds leaked keys and moves secrets to safe storage, for when a live key was committed or pasted."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause before fixing and ends in a small pull request, the right path for an endpoint that errors or returns wrong data."
+  },
+  {
+    "slug": "launch-readiness-seam-checker",
+    "name": "Launch readiness seam checker",
+    "why": "Checks the joins between parts of a release or migration and builds a run-through plan, a second look before go-live."
+  }
+]

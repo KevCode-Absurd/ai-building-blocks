@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Versioning Policy",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/support/versioning/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Supported majors 14 to 18 (current minors 18.6, 17.11, 16.15, 15.19, 14.24); PostgreSQL 14 final release 12 November 2026; 18 supported to 14 November 2030; each major supported for 5 years; minor releases at least every three months; run the current minor."
+  },
+  {
+    "n": 2,
+    "title": "PostgreSQL 18.0 release notes",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/release/18.0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 25 September 2025: asynchronous I/O, B-tree skip scan, uuidv7(), virtual generated columns by default, EXPLAIN ANALYZE shows BUFFERS by default, pg_upgrade keeps planner statistics, NOT NULL constraints can be NOT VALID, temporal PRIMARY KEY and UNIQUE with WITHOUT OVERLAPS, OAuth authentication."
+  },
+  {
+    "n": 3,
+    "title": "PostgreSQL 18 documentation: Constraints",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CHECK must not reference other rows; NOT NULL is more efficient than CHECK IS NOT NULL; NULLs distinct in UNIQUE by default, NULLS NOT DISTINCT option; foreign key actions NO ACTION (default), RESTRICT, CASCADE, SET NULL, SET DEFAULT and how to choose; referencing columns are not indexed automatically; exclusion constraints."
+  },
+  {
+    "n": 4,
+    "title": "PostgreSQL 18 documentation: Multicolumn Indexes",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/indexes-multicolumn.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Leading columns matter most; skip scan can use the index without an equality on the leading column when it has few distinct values; up to 32 columns; more than three columns rarely helps. Docs mark 18 as current and note PostgreSQL 19 RC 1 released 15 October 2026."
+  },
+  {
+    "n": 5,
+    "title": "PostgreSQL 18 documentation: Partial Indexes",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/indexes-partial.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Partial indexes cover only rows matching a predicate; partial unique indexes enforce uniqueness on a subset; do not use many partial indexes in place of partitioning or a composite index."
+  },
+  {
+    "n": 6,
+    "title": "PostgreSQL 18 documentation: Index-Only Scans and Covering Indexes",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/indexes-index-only-scans.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. INCLUDE adds payload columns so queries can be answered from the index; pays off only when most pages are all-visible; wide payload columns bloat the index and can make inserts fail; uniqueness applies to key columns only."
+  },
+  {
+    "n": 7,
+    "title": "PostgreSQL 18 documentation: Using EXPLAIN",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/using-explain.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EXPLAIN shows estimated costs and rows; EXPLAIN ANALYZE executes the statement, so wrap data-changing statements in BEGIN and ROLLBACK; compare estimated and actual rows; per-loop figures; small-table plans do not carry over to large tables; BUFFERS on by default with ANALYZE."
+  },
+  {
+    "n": 8,
+    "title": "PostgreSQL 18 documentation: ALTER TABLE",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Default lock ACCESS EXCLUSIVE; ADD COLUMN with a non-volatile default does not rewrite the table, a volatile default does; type changes usually rewrite; ADD CONSTRAINT NOT VALID then VALIDATE CONSTRAINT takes only SHARE UPDATE EXCLUSIVE; SET NOT NULL can skip the scan when a valid CHECK proves no NULLs."
+  },
+  {
+    "n": 9,
+    "title": "PostgreSQL 18 documentation: pg_stat_statements",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/pgstatstatements.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tracks planning and execution statistics of all statements; needs shared_preload_libraries and a restart, then CREATE EXTENSION; columns calls, total_exec_time, mean_exec_time, rows, shared_blks_hit and read; constants normalised into one entry."
+  },
+  {
+    "n": 10,
+    "title": "PostgreSQL 18 documentation: SQL Dump",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/backup-dump.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. pg_dump takes a consistent snapshot and does not block readers or writers; one database at a time, roles and tablespaces need pg_dumpall; custom and directory formats with pg_restore; ON_ERROR_STOP or --single-transaction on restore; run ANALYZE after restoring."
+  },
+  {
+    "n": 11,
+    "title": "PostgreSQL 18 documentation: Continuous Archiving and Point-in-Time Recovery (PITR)",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/continuous-archiving.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Base backup plus WAL archive restores to any point after the backup; test the archive command first; monitor the archiver because a full pg_wal disk makes the server PANIC; incremental backups with pg_basebackup --incremental and pg_combinebackup, and you must track which earlier backups they need; verify data after recovery."
+  },
+  {
+    "n": 12,
+    "title": "Don't Do This",
+    "publisher": "PostgreSQL wiki (PostgreSQL community)",
+    "url": "https://wiki.postgresql.org/wiki/Don't_Do_This",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Use timestamptz for points in time, numeric not money, text with CHECK instead of char(n) or varchar(n) by default, identity columns instead of serial, NOT EXISTS instead of NOT IN, half-open ranges instead of BETWEEN for timestamps, lower-case names."
+  },
+  {
+    "n": 13,
+    "title": "MySQL 9.7 Reference Manual: MySQL Releases: Innovation and LTS",
+    "publisher": "Oracle (MySQL documentation)",
+    "url": "https://dev.mysql.com/doc/refman/9.7/en/mysql-releases.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. LTS series get 5 years premier plus 3 years extended support and only necessary fixes; Innovation releases are supported until the next one; 9.7 is the last sequentially numbered line and later releases use YY.M calendar versions; upgrades go 8.4 LTS to 9.7 LTS without skipping an LTS. The docs index lists 26.10, 26.7, 9.7, 8.4 and 8.0."
+  },
+  {
+    "n": 14,
+    "title": "MySQL 8.4 Reference Manual: Online DDL Operations",
+    "publisher": "Oracle (MySQL documentation)",
+    "url": "https://dev.mysql.com/doc/refman/8.4/en/innodb-online-ddl-operations.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. INSTANT is the default for adding or dropping columns in 8.4, at any position, with listed exceptions; 64 instant row versions per table in 8.4 (255 from 9.1.0); ADD INDEX with ALGORITHM=INPLACE, LOCK=NONE allows concurrent DML; changing a column's data type needs a table copy."
+  },
+  {
+    "n": 15,
+    "title": "MySQL 8.4 Reference Manual: EXPLAIN Statement",
+    "publisher": "Oracle (MySQL documentation)",
+    "url": "https://dev.mysql.com/doc/refman/8.4/en/explain.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EXPLAIN ANALYZE executes the statement and reports estimated cost and rows, time to first row, actual time, actual rows and loops in TREE format; supports SELECT, multi-table UPDATE and DELETE, and TABLE."
+  },
+  {
+    "n": 16,
+    "title": "MySQL 8.4 Reference Manual: FOREIGN KEY Constraints",
+    "publisher": "Oracle (MySQL documentation)",
+    "url": "https://dev.mysql.com/doc/refman/8.4/en/create-table-foreign-keys.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Foreign keys need InnoDB or NDB; NO ACTION is the default and equals RESTRICT in InnoDB; SET DEFAULT is rejected by InnoDB; MySQL creates an index on the referencing columns if none exists; re-enabling foreign_key_checks does not recheck rows loaded while it was off."
+  },
+  {
+    "n": 17,
+    "title": "MySQL 8.4 Reference Manual: Database Backup Methods",
+    "publisher": "Oracle (MySQL documentation)",
+    "url": "https://dev.mysql.com/doc/refman/8.4/en/backup-methods.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. mysqldump --single-transaction gives an online InnoDB backup with no table locks; copying table files does not work for InnoDB; incremental backups from binary logs, enabled by default in 8.4, restored by point-in-time recovery; MySQL Enterprise Backup is commercial; back up replicas to spare the source."
+  },
+  {
+    "n": 18,
+    "title": "SQLite Foreign Key Support",
+    "publisher": "SQLite",
+    "url": "https://www.sqlite.org/foreignkeys.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Foreign keys are off by default and must be enabled per connection with PRAGMA foreign_keys = ON; the pragma has no effect inside a multi-statement transaction; indexes on child keys are almost always beneficial."
+  },
+  {
+    "n": 19,
+    "title": "STRICT Tables",
+    "publisher": "SQLite",
+    "url": "https://www.sqlite.org/stricttables.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. STRICT tables, from SQLite 3.37.0 (27 November 2021), allow only INT, INTEGER, REAL, TEXT, BLOB and ANY and reject values that cannot be converted; ordinary tables use flexible type affinity."
+  },
+  {
+    "n": 20,
+    "title": "SQLite: ALTER TABLE",
+    "publisher": "SQLite",
+    "url": "https://www.sqlite.org/lang_altertable.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Supports RENAME TABLE, RENAME COLUMN, ADD COLUMN, DROP COLUMN, and ALTER COLUMN SET or DROP NOT NULL from 3.53.0 (9 April 2026); ADD COLUMN restrictions; the 12-step procedure for other changes, and the warning against renaming the old table first."
+  },
+  {
+    "n": 21,
+    "title": "Using the SQLite Online Backup API",
+    "publisher": "SQLite",
+    "url": "https://www.sqlite.org/backup.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Copying a live database file blocks writers and can leave a corrupt copy after a power or OS failure; the backup API copies incrementally; VACUUM INTO makes a copy of a live database; sqlite3_rsync copies to or from a remote system over SSH."
+  },
+  {
+    "n": 22,
+    "title": "PostgreSQL 18 documentation: CREATE INDEX",
+    "publisher": "PostgreSQL Global Development Group",
+    "url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A normal CREATE INDEX blocks writes but not reads until it finishes; CREATE INDEX CONCURRENTLY keeps the table writable but scans twice, takes longer, cannot run in a transaction block, and on failure leaves an INVALID index that still slows writes and must be dropped and rebuilt or reindexed concurrently."
+  },
+  {
+    "n": 23,
+    "title": "Django documentation: Migrations",
+    "publisher": "Django Software Foundation",
+    "url": "https://docs.djangoproject.com/en/stable/topics/migrations/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Django 6.1 docs). PostgreSQL and SQLite run migrations inside a transaction; MySQL has no transactions around schema changes, so a failed migration must be unpicked by hand; SQLite changes are emulated by rebuilding the table and are not advised for production."
+  },
+  {
+    "n": 24,
+    "title": "Django documentation: QuerySet API reference",
+    "publisher": "Django Software Foundation",
+    "url": "https://docs.djangoproject.com/en/stable/ref/models/querysets/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. select_related follows foreign keys and one-to-one links with a JOIN in the same query; prefetch_related runs one extra query per relationship for many-to-many and reverse links; both remove per-row queries."
+  },
+  {
+    "n": 25,
+    "title": "We need tool support for keyset pagination",
+    "publisher": "Markus Winand, Use The Index, Luke",
+    "url": "https://use-the-index-luke.com/no-offset",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OFFSET makes the database fetch and discard the skipped rows, so later pages get slower, and rows inserted between page loads cause duplicates; keyset (seek) paging filters after the last row seen and needs a definite sort order."
+  },
+  {
+    "n": 26,
+    "title": "Amazon RDS User Guide: Introduction to backups",
+    "publisher": "Amazon Web Services",
+    "url": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Automated backups snapshot the whole instance during the backup window and allow point-in-time recovery within the retention period; they are deleted with the instance unless Retain automated backups is chosen; manual snapshots survive deletion; up to 100 manual snapshots per Region."
+  },
+  {
+    "n": 27,
+    "title": "Supabase docs: Database Backups",
+    "publisher": "Supabase",
+    "url": "https://supabase.com/docs/guides/platform/backups",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Daily backups kept 7 days on Pro, 14 on Team, up to 30 on Enterprise; free projects should export their own; PITR add-on with a worst-case recovery point of two minutes replaces daily backups; Storage objects are not in database backups; restores make the project unavailable."
+  },
+  {
+    "n": 28,
+    "title": "PlanetScale docs: Safe migrations",
+    "publisher": "PlanetScale",
+    "url": "https://planetscale.com/docs/vitess/schema-changes/safe-migrations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Safe migrations block direct DDL on production branches; changes go through deploy requests; a ghost table syncs until the change is applied; schema revert keeps the old table for 30 minutes. Undated."
+  },
+  {
+    "n": 29,
+    "title": "Post-Incident Review on the Atlassian April 2022 outage",
+    "publisher": "Atlassian",
+    "url": "https://www.atlassian.com/engineering/post-incident-review-april-2022-outage",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 5 April 2022 a script run with site IDs instead of app IDs deleted 883 sites for 775 customers; some were down up to 14 days, all restored by 18 April; lessons included soft deletes everywhere and practised multi-site restores."
+  },
+  {
+    "n": 30,
+    "title": "Principles of the GDPR",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data minimisation, storage limitation (keep data no longer than needed, set time limits to erase or review), and integrity and confidentiality (appropriate security, access limited to those who need it)."
+  }
+]

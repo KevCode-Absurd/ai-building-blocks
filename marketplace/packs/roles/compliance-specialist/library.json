@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "quarterly-compliance-readiness-keeper",
+    "name": "Quarterly compliance readiness keeper",
+    "why": "Runs the quarterly gap check for a named framework, matching the quarterly compliance review workflow."
+  },
+  {
+    "slug": "compliance-evidence-request-assistant",
+    "name": "Compliance evidence request assistant",
+    "why": "Finds expired or missing evidence and drafts a request for each owner, as in step 5 of the audit evidence pack."
+  },
+  {
+    "slug": "prepare-evidence-for-a-compliance-review",
+    "name": "Prepare evidence for a compliance review",
+    "why": "Builds an evidence index and gap list before an auditor starts."
+  },
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Answers a customer's security questionnaire with sourced evidence instead of claims."
+  },
+  {
+    "slug": "plain-words-contract-summary",
+    "name": "Plain-words contract summary",
+    "why": "A quick version of the contract plain summary skill: what you owe, what they owe and the risky clauses."
+  },
+  {
+    "slug": "contract-intake-reviewer",
+    "name": "Contract intake reviewer",
+    "why": "Reviews each new contract with clauses to question; a lawyer still checks, as in the new vendor intake workflow."
+  },
+  {
+    "slug": "monthly-contract-renewal-keeper",
+    "name": "Monthly contract renewal keeper",
+    "why": "Keeps the renewal and notice dates from the contract tracker in front of the owner each month."
+  },
+  {
+    "slug": "prepare-a-contract-renewal-negotiation",
+    "name": "Prepare a contract renewal negotiation",
+    "why": "Turns a renewal date in the tracker into a notice plan and keep, renegotiate or replace options."
+  },
+  {
+    "slug": "rule-change-policy-keeper",
+    "name": "Rule change policy keeper",
+    "why": "Checks policies against a changed rule and drafts small redrafts, like the policy gap check prompt."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Explains an approved policy to staff in plain words once it is published."
+  },
+  {
+    "slug": "rough-notes-to-minutes-writer",
+    "name": "Rough notes to minutes writer",
+    "why": "Short minutes from rough notes for smaller meetings; formal board minutes use the board minutes prompt."
+  },
+  {
+    "slug": "prepare-a-board-decision-brief",
+    "name": "Prepare a board decision brief",
+    "why": "Prepares the evidence and options for a board decision before the meeting."
+  },
+  {
+    "slug": "review-employee-data-access-before-a-change",
+    "name": "Review employee data access before a change",
+    "why": "A who-can-see-what privacy review for staff data before an HR system change."
+  }
+]

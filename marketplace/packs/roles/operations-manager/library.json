@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+    "name": "Set up a documentation system and write procedures that pass",
+    "why": "A full documentation system with procedures and a check of each, matching the SOP writing skill and the library plan."
+  },
+  {
+    "slug": "process-doc-freshness-keeper",
+    "name": "Process doc freshness keeper",
+    "why": "Finds stale or ownerless SOPs each month, which keeps the review dates in the SOP skill honest."
+  },
+  {
+    "slug": "process-waste-finder",
+    "name": "Process waste finder",
+    "why": "Marks each step as value or waste, a quick first pass before the full process map."
+  },
+  {
+    "slug": "trace-why-work-keeps-missing-deadlines",
+    "name": "Trace why work keeps missing deadlines",
+    "why": "A delay map and causes backed by records, like the bottleneck skill's diagnosis steps."
+  },
+  {
+    "slug": "make-a-recurring-process-easier-to-hand-over",
+    "name": "Make a recurring process easier to hand over",
+    "why": "Builds a procedure, exception guide and handover note from a real run, like the hand-over prompt."
+  },
+  {
+    "slug": "hand-over-founder-dependent-operations",
+    "name": "Hand over founder dependent operations",
+    "why": "Finds work only the founder does and plans who takes it, the next step after the owner time audit."
+  },
+  {
+    "slug": "operations-manual-writer",
+    "name": "Operations manual writer",
+    "why": "Turns a standards sheet into job cards and a day-one trial sheet for the operations manual skill."
+  },
+  {
+    "slug": "shop-system-playbook",
+    "name": "Shop operations and expansion planner",
+    "why": "Written standards, a manual a stranger can follow and a go or no-go check before opening another site."
+  },
+  {
+    "slug": "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+    "name": "Define your metrics once and write a weekly update",
+    "why": "Fixes metric definitions and the weekly update format that the weekly ops review depends on."
+  },
+  {
+    "slug": "process-change-note-writer",
+    "name": "Process change note writer",
+    "why": "Tells the team what changes and from when after a trial is kept and the SOP is updated."
+  },
+  {
+    "slug": "process-and-meeting-cull-planner",
+    "name": "Process and meeting cull planner",
+    "why": "A keep, simplify or drop call on regular meetings, approvals and reports, useful before redesigning the weekly rhythm."
+  },
+  {
+    "slug": "weekly-time-audit-planner",
+    "name": "Weekly time audit planner",
+    "why": "Counts where last week's hours went, a lighter version of the owner time audit."
+  }
+]

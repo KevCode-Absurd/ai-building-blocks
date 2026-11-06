@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Google developer documentation style guide",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/style",
+    "checked": "2026-11-06",
+    "supports": "Editorial guidelines for developer documentation; the guide calls itself guidelines, not rules; project style comes first, then the guide, then other references. Credited by name; not reproduced"
+  },
+  {
+    "n": 2,
+    "title": "Procedures (Google developer documentation style guide)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/style/procedures",
+    "checked": "2026-11-06",
+    "supports": "Numbered steps, an introductory sentence, generally one action per step, location before action, results in a separate paragraph, optional steps marked, one keyboard-accessible method"
+  },
+  {
+    "n": 3,
+    "title": "API reference code comments (Google developer documentation style guide)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/style/api-reference-comments",
+    "checked": "2026-11-06",
+    "supports": "What to document for every public class and method (parameters, return values, exceptions, permissions), opening verbs, short code samples, deprecation notes that name the replacement"
+  },
+  {
+    "n": 4,
+    "title": "Welcome - Microsoft Writing Style Guide",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/style-guide/welcome/",
+    "checked": "2026-11-06",
+    "supports": "The online guide replaces the Microsoft Manual of Style and covers voice, bias-free and global communication (page updated 15 Oct 2026). Credited by name; not reproduced"
+  },
+  {
+    "n": 5,
+    "title": "Writing tips (global communications) - Microsoft Writing Style Guide",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/style-guide/global-communications/writing-tips",
+    "checked": "2026-11-06",
+    "supports": "Writing for readers whose first language is not English and for machine translation: short sentences, keep 'that' and articles, one word per concept, avoid idioms and modifier stacks"
+  },
+  {
+    "n": 6,
+    "title": "Plain language guide series",
+    "publisher": "Digital.gov (U.S. General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language",
+    "checked": "2026-11-06",
+    "supports": "US federal plain language guidance, successor to PlainLanguage.gov; the Plain Writing Act of 2010 requires public content written for its audience; write, design and test for understanding"
+  },
+  {
+    "n": 7,
+    "title": "Writing for understanding",
+    "publisher": "Digital.gov (U.S. General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language/writing",
+    "checked": "2026-11-06",
+    "supports": "Active voice makes clear who does what; present tense; avoid hidden verbs; shorter words and sections"
+  },
+  {
+    "n": 8,
+    "title": "Use clear language (Writing to GOV.UK standards)",
+    "publisher": "GOV.UK",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "checked": "2026-11-06",
+    "supports": "Split sentences over 25 words; paragraphs of five sentences or fewer; about 1 in 6 adults in England have very poor literacy; in one study 80% preferred clear English in legal documents; explain specialist terms"
+  },
+  {
+    "n": 9,
+    "title": "How to write clearly",
+    "publisher": "European Commission, Directorate-General for Translation (Publications Office of the EU)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/725b7eb0-d92e-11e5-8fea-01aa75ed71a1",
+    "checked": "2026-11-06",
+    "supports": "EU plain-writing guide (2015, available in 24 languages); think about the reader and the purpose; hints rather than rules"
+  },
+  {
+    "n": 10,
+    "title": "The Nurnberg Funnel: Designing Minimalist Instruction for Practical Computer Skill (John M. Carroll, 1990)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL4792482W",
+    "checked": "2026-11-06",
+    "supports": "Bibliographic record (MIT Press, 1990); source of the minimalist instruction ideas summarised in the canon"
+  },
+  {
+    "n": 11,
+    "title": "The map (Diátaxis)",
+    "publisher": "Diátaxis",
+    "url": "https://diataxis.fr/map/",
+    "checked": "2026-11-06",
+    "supports": "Four documentation types (tutorials, how-to guides, reference, explanation) placed on two dimensions: action or knowledge, and acquiring or applying skill"
+  },
+  {
+    "n": 12,
+    "title": "Colophon (Diátaxis)",
+    "publisher": "Diátaxis",
+    "url": "https://diataxis.fr/colophon/",
+    "checked": "2026-11-06",
+    "supports": "Diátaxis was created by Daniele Procida, with origins in his work at Divio (2014 to 2021); first aimed at software product documentation"
+  },
+  {
+    "n": 13,
+    "title": "Docs as Code",
+    "publisher": "Write the Docs",
+    "url": "https://www.writethedocs.org/guide/docs-as-code/",
+    "checked": "2026-11-06",
+    "supports": "Docs as code uses issue trackers, version control, plain-text markup, code review and automated tests; teams can block merges without docs; adoption talks from Google, Microsoft, AWS, GOV.UK GDS and others"
+  },
+  {
+    "n": 14,
+    "title": "github/docs: the open-source repo for docs.github.com",
+    "publisher": "GitHub",
+    "url": "https://github.com/github/docs",
+    "checked": "2026-11-06",
+    "supports": "GitHub's documentation is written in Markdown in a public repository, accepts outside contributions to content files, and licenses content under CC-BY-4.0"
+  },
+  {
+    "n": 15,
+    "title": "About READMEs",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes",
+    "checked": "2026-11-06",
+    "supports": "What a README usually covers (what, why, how to start, help, maintainers); where GitHub looks for it; content over 500 KiB is truncated; automatic outline from headings"
+  },
+  {
+    "n": 16,
+    "title": "OpenAPI Specification (latest: v3.2.1)",
+    "publisher": "OpenAPI Initiative",
+    "url": "https://spec.openapis.org/oas/latest.html",
+    "checked": "2026-11-06",
+    "supports": "OpenAPI 3.2.1 dated 10 September 2026; a language-agnostic description of HTTP APIs used to generate docs, clients, servers and tests; description fields support CommonMark"
+  },
+  {
+    "n": 17,
+    "title": "RFC 9457: Problem Details for HTTP APIs",
+    "publisher": "IETF (RFC Editor)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9457.html",
+    "checked": "2026-11-06",
+    "supports": "Standard machine-readable error format (July 2023, obsoletes RFC 7807): application/problem+json with type, status, title, detail and instance"
+  },
+  {
+    "n": 18,
+    "title": "AIP-193: Errors",
+    "publisher": "Google API Improvement Proposals",
+    "url": "https://google.aip.dev/193",
+    "checked": "2026-11-06",
+    "supports": "Error messages should help a technical user fix the problem; stable machine-readable reasons; links to troubleshooting docs; localized messages"
+  },
+  {
+    "n": 19,
+    "title": "General Product Safety Regulations 2005 (guidance)",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/government/publications/general-product-safety-regulations-2005",
+    "checked": "2026-11-06",
+    "supports": "Great Britain guidance for producers and distributors: consumer products must be safe in normal or reasonably foreseeable use; last updated 13 December 2024"
+  },
+  {
+    "n": 20,
+    "title": "Keep a Changelog 1.1.0",
+    "publisher": "keepachangelog.com",
+    "url": "https://keepachangelog.com/en/1.1.0/",
+    "checked": "2026-11-06",
+    "supports": "Changelogs are for humans; newest first; Added, Changed, Deprecated, Removed, Fixed, Security; an Unreleased section; YYYY-MM-DD dates; state whether Semantic Versioning is followed"
+  },
+  {
+    "n": 21,
+    "title": "PEP 257: Docstring Conventions",
+    "publisher": "Python Software Foundation (peps.python.org)",
+    "url": "https://peps.python.org/pep-0257/",
+    "checked": "2026-11-06",
+    "supports": "Docstring conventions: one-line summary in command form, blank line, detail; document arguments, return values, side effects, exceptions and restrictions"
+  },
+  {
+    "n": 22,
+    "title": "Documenting Architecture Decisions (Michael Nygard, 15 November 2011)",
+    "publisher": "Cognitect blog",
+    "url": "https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+    "checked": "2026-11-06",
+    "supports": "Architecture decision records: title, context, decision, status, consequences; numbered, kept in the repository, superseded rather than deleted, one or two pages"
+  },
+  {
+    "n": 23,
+    "title": "KCS v6 Practices Guide",
+    "publisher": "Consortium for Service Innovation",
+    "url": "https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide",
+    "checked": "2026-11-06",
+    "supports": "Knowledge-Centered Service: Solve Loop (capture, structure, reuse, improve) and Evolve Loop (content health, process integration, performance assessment, leadership); v6 released 21 April 2016, PDF updated 7 April 2025"
+  },
+  {
+    "n": 24,
+    "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+    "checked": "2026-11-06",
+    "supports": "F-pattern scanning when pages lack cues (research 2006, article 2017, reviewed 19 Aug 2026); fixes: key points first, headings that start with information-carrying words, lists, descriptive links"
+  },
+  {
+    "n": 25,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "W3C Recommendation (12 December 2024 version); 1.1.1 text alternatives (A); 2.4.6 headings and labels (AA); 3.1.5 reading level, lower secondary education (AAA); 3.3.2 labels or instructions (A)"
+  },
+  {
+    "n": 26,
+    "title": "General product compliance",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-rules-compliance/general-product-compliance/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Manufacturers draw up instructions and safety information in a language easily understood by consumers; importers and distributors check language requirements for the country of sale (page last checked 13 Jul 2026)"
+  },
+  {
+    "n": 27,
+    "title": "Machinery",
+    "publisher": "European Commission (Internal Market, Industry, Entrepreneurship and SMEs)",
+    "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en",
+    "checked": "2026-11-06",
+    "supports": "Machinery Regulation (EU) 2023/1230 applies from 20 January 2027 and clarifies when instructions for use can be supplied in digital form"
+  },
+  {
+    "n": 28,
+    "title": "2025 Stack Overflow Developer Survey: Developers",
+    "publisher": "Stack Overflow",
+    "url": "https://survey.stackoverflow.co/2025/developers",
+    "checked": "2026-11-06",
+    "supports": "67.8% of respondents to the learning question used technical documentation to learn to code in the past year; for learning AI coding, AI tools 52.5% and technical documentation 42.5%"
+  },
+  {
+    "n": 29,
+    "title": "2025 State of the API Report",
+    "publisher": "Postman",
+    "url": "https://www.postman.com/state-of-api/2025/",
+    "checked": "2026-11-06",
+    "supports": "Survey of over 5,700 developers, architects and executives: 55% struggle with inconsistent documentation; 41% use AI to generate API documentation; 24% design APIs with AI agents in mind"
+  },
+  {
+    "n": 30,
+    "title": "The /llms.txt file",
+    "publisher": "llmstxt.org (Jeremy Howard)",
+    "url": "https://llmstxt.org/",
+    "checked": "2026-11-06",
+    "supports": "A proposal (first published 3 Sep 2024, modified 10 Aug 2026), not a ratified standard, for a Markdown file at /llms.txt and .md page versions that help AI agents use a site"
+  }
+]

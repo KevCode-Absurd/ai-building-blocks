@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "cost-per-sellable-unit-finder",
+    "name": "Cost per sellable unit finder",
+    "why": "Turns a factory quote, freight, duty and fees into a real unit cost, the first input to the funding goal and every reward tier."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "A second check on landed cost per unit before the goal is set, useful when rewards ship from a factory abroad."
+  },
+  {
+    "slug": "product-bill-of-materials-builder",
+    "name": "Product bill of materials builder",
+    "why": "Breaks one factory quote into parts and price breaks, so the budget shows what changes if the campaign overfunds."
+  },
+  {
+    "slug": "supplier-quote-comparer",
+    "name": "Supplier quote comparer",
+    "why": "Compares factory quotes on price, minimum order and lead time, which sets the goal floor and the honest delivery date."
+  },
+  {
+    "slug": "factory-price-break-negotiator",
+    "name": "Factory price-break negotiator",
+    "why": "Plans the factory talk after funding, when the backer count is known and the order can be placed."
+  },
+  {
+    "slug": "shipping-rate-planner",
+    "name": "Shipping rate planner",
+    "why": "Builds shipping zones and rates by country, the part of reward pricing that most often loses money."
+  },
+  {
+    "slug": "product-margin-checker",
+    "name": "Product margin checker",
+    "why": "Checks margin and the most you can spend on ads per backer, before any paid launch push is planned."
+  },
+  {
+    "slug": "bundle-tier-layout-planner",
+    "name": "Bundle tier layout planner",
+    "why": "Lays out tiers so they are easy to compare, the same job as a clear reward table on a campaign page."
+  },
+  {
+    "slug": "launch-email-sequence-planner",
+    "name": "Launch email sequence planner",
+    "why": "A dated launch email plan with resends and a final close, which maps onto launch day and the final 48 hours."
+  },
+  {
+    "slug": "launch-teaser-to-preview-planner",
+    "name": "Launch teaser to preview planner",
+    "why": "Plans the teaser, preview and sign-up page that feed the pre-launch list before the campaign opens."
+  },
+  {
+    "slug": "idea-validation-analyst",
+    "name": "Idea validation analyst",
+    "why": "Tests whether people want the product before the client spends on a prototype shoot and page."
+  },
+  {
+    "slug": "say-do-gap-checker",
+    "name": "Say-do gap checker",
+    "why": "Checks survey answers against real behaviour, so a goal is not set on people who said yes but will not pledge."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "accessibility-specialist",
+  "name": "Accessibility specialist",
+  "department": "engineering",
+  "summary": "Finds and fixes the barriers that stop disabled people using a site, app or document. Writes code fixes, audits and alt text to WCAG.",
+  "aliases": [
+    "accessibility",
+    "wcag",
+    "a11y",
+    "ada compliance",
+    "alt text",
+    "screen reader testing",
+    "accessibility audit",
+    "accessible pdf",
+    "easy read",
+    "european accessibility act"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: WCAG 2.2 and WCAG-EM v2 audits with automated and manual checks, ADA Titles II and III, Section 508 and VPAT, the European Accessibility Act and EN 301 549 V4.1.1, UK public sector rules, statements, PDFs and Easy Read. Four skills, six prompts, two workflows, training files and access levels per tool; 30 checked sources."
+    }
+  ]
+}

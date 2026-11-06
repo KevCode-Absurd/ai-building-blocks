@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "customer-inbox-triage-and-reply-drafter",
+    "name": "Customer inbox triage and reply drafter",
+    "why": "Ranks a morning's enquiries and drafts a checked reply for each, the daily start of the enquiry-to-booking workflow."
+  },
+  {
+    "slug": "plan-an-event-follow-up-that-earns-a-reply",
+    "name": "Plan an event follow up that earns a reply",
+    "why": "Plans a follow-up after a tour, fair or event that gives the buyer a reason to answer, like the hold and quote follow-ups here."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Turns one message into follow-ups with a new reason each time and a stop rule, the same rule this kit uses for quiet quotes."
+  },
+  {
+    "slug": "lead-nurture-follow-up",
+    "name": "Offer useful information first and follow up with stalled leads",
+    "why": "A longer play for leads that stall after the first reply, built on giving something useful before asking again."
+  },
+  {
+    "slug": "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+    "name": "Turn a sales call into a checked proposal",
+    "why": "Turns call notes into a proposal with every claim checked and a plan to signature, a companion to the quote and proposal builder."
+  },
+  {
+    "slug": "prepare-your-first-freelance-project-quote",
+    "name": "Prepare your first freelance project quote",
+    "why": "A step-by-step quote for a creative or freelance project, useful for studios setting up their first rate card and quote layout."
+  },
+  {
+    "slug": "explain-service-booking-terms-to-customers",
+    "name": "Explain service booking terms to customers",
+    "why": "Turns approved booking terms into plain words for buyers, matching the kit's rule to summarise terms without interpreting them."
+  },
+  {
+    "slug": "prepare-a-hotel-group-booking-handover",
+    "name": "Prepare a hotel group booking handover",
+    "why": "A ready handover for a confirmed hotel group booking, the venue version of the order and booking handoff skill."
+  },
+  {
+    "slug": "handover-note-writer",
+    "name": "Handover note writer",
+    "why": "Turns a brain dump into a handover note that shows what is due and what breaks first, useful when a coordinator is away."
+  },
+  {
+    "slug": "weekly-sales-pipeline-reviewer",
+    "name": "Weekly sales pipeline reviewer",
+    "why": "Reviews a deal export each week for what changed and what to act on, a reporting partner to the CRM hygiene sweep."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a reply to an upset buyer for promises the business cannot keep, before the owner sends it."
+  },
+  {
+    "slug": "post-sale-follow-up-planner",
+    "name": "Post-sale follow-up planner",
+    "why": "Plans the thank-you, check-ins and review request after delivery, the step after the handoff closes."
+  },
+  {
+    "slug": "the-proposal-engine-agents-ask-permission-implementation-planner",
+    "name": "Agent action approval builder",
+    "why": "Plans how an agent asks a person to approve an action, the pattern behind the fresh yes for binding quotes and merges."
+  }
+]

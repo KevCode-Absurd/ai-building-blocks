@@ -1,0 +1,26 @@
+{
+  "id": "logistics-coordinator",
+  "name": "Logistics and fulfilment coordinator",
+  "department": "operations",
+  "summary": "Gets orders out on time for less: shipping costs, carriers, delivery routes and late or lost parcels. Plans for peak season before it hits.",
+  "aliases": [
+    "logistics",
+    "fulfilment",
+    "shipping",
+    "3pl",
+    "delivery routes",
+    "carrier claims",
+    "order management",
+    "fulfillment",
+    "incoterms",
+    "warehouse operations"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (ICC Incoterms, CBP, HMRC and EU customs pages, USPS, FTC and EU delivery rules), four skills (shipping cost review, carrier claims, delivery routes, international shipping prep), six prompts, three workflows, training interview and test briefs, and access levels per tool. Reviewed every 14 days while US and EU low-value import rules change."
+    }
+  ]
+}

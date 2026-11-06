@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "wholesale-margin-checker",
+    "name": "Wholesale margin checker",
+    "why": "Margin per unit after the retailer's cut, promos and freight, the first step of the wholesale terms skill."
+  },
+  {
+    "slug": "product-margin-checker",
+    "name": "Product margin checker",
+    "why": "True margin per product from every cost, the number a partner fee or discount must be worked out from."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Cost per sellable unit including freight, for imported lines before setting wholesale prices."
+  },
+  {
+    "slug": "partner-deal-terms-writer",
+    "name": "Franchise and reseller terms writer",
+    "why": "A one-page term sheet with duties, fees and exits, like the partner deal summary for the lawyer."
+  },
+  {
+    "slug": "retail-buyer-approach-planner",
+    "name": "Retail buyer approach planner",
+    "why": "Plans how to win a larger retailer's buyer and keep the shelf, beyond independent shops."
+  },
+  {
+    "slug": "send-reorder-emails-that-fit-each-buyer-then-read-results",
+    "name": "Send reorder emails that fit each buyer, then read results",
+    "why": "Timed reorder emails by buyer type and a read of results, matching the reorder and account plan skill."
+  },
+  {
+    "slug": "win-back-flow-builder",
+    "name": "Win-back flow builder",
+    "why": "A win-back sequence timed to how buyers actually reorder, for slowing and lapsed accounts."
+  },
+  {
+    "slug": "traction-trade-shows",
+    "name": "Trade show experiment planner",
+    "why": "Plans a trade show as a measured test, a common way to meet new shops and distributors."
+  },
+  {
+    "slug": "direct-selling-model-check",
+    "name": "Direct selling model check",
+    "why": "Compares selling direct with selling through channels by margin, before building a programme."
+  },
+  {
+    "slug": "build-a-developer-partner-program",
+    "name": "Build a developer partner program",
+    "why": "A partner programme for software platforms with developer partners, alongside the programme design skill."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Finds the deepest discount the margin allows, for checking reorder offers and partner discounts."
+  }
+]

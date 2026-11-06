@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "amazon-ppc-launch-builder",
+    "name": "Amazon PPC launch builder",
+    "why": "Plans auto, keyword and competitor campaigns with bids, negatives and a stop rule from your unit profit, the core of a launch build."
+  },
+  {
+    "slug": "amazon-unit-profit-checker",
+    "name": "Amazon unit profit checker",
+    "why": "Works out profit per unit and break-even ad cost from your price, landed cost and fees, before any ACOS is judged."
+  },
+  {
+    "slug": "amazon-fee-and-margin-checker",
+    "name": "Amazon fee and margin checker",
+    "why": "Lists every Amazon fee for a product and gives break-even ad cost, for products you haven't costed yet."
+  },
+  {
+    "slug": "amazon-keyword-picker",
+    "name": "Amazon keyword picker",
+    "why": "Filters keyword exports into phrases worth using, a good seed list for manual campaigns."
+  },
+  {
+    "slug": "amazon-launch-week-planner",
+    "name": "Amazon launch week planner",
+    "why": "Plans the weeks before a launch and the launch day, so the ad plan sits inside a full launch with honest review steps."
+  },
+  {
+    "slug": "amazon-monthly-account-keeper",
+    "name": "Amazon monthly account keeper",
+    "why": "Checks margins, stock and refund claims each month, the numbers the monthly margin review depends on."
+  },
+  {
+    "slug": "amazon-search-gap-finder",
+    "name": "Amazon search gap finder",
+    "why": "Finds searches page 1 doesn't serve well, which can become new keyword and product targeting tests."
+  },
+  {
+    "slug": "star-rating-review-miner",
+    "name": "Star-rating review miner",
+    "why": "Mines rival reviews for gaps and buyer phrases, useful for Sponsored Brands headlines and negative themes."
+  },
+  {
+    "slug": "platform-roas-reality-check",
+    "name": "Platform ROAS reality check",
+    "why": "Compares the return an ad platform reports with your store totals, the same habit as checking TACOS against ad-attributed sales."
+  },
+  {
+    "slug": "channel-budget-mix-planner",
+    "name": "Channel budget mix planner",
+    "why": "Helps decide how much of the total ad budget Amazon should get against other channels, before setting monthly caps."
+  }
+]

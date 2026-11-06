@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Write your business plan",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Traditional plans (sections: executive summary, company description, market analysis, organisation and management, service or product line, marketing and sales, funding request, financial projections with five-year forecasts) versus lean one-page plans with nine elements; lenders commonly ask for the traditional plan; match projections to the funding request."
+  },
+  {
+    "n": 2,
+    "title": "Write a business plan",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/write-business-plan",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A plan is usually needed for investment or a bank loan; free templates for a business plan and a cash flow forecast from Start Up Loans and The King's Trust."
+  },
+  {
+    "n": 3,
+    "title": "Calculate your startup costs",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. One-time versus ongoing costs; count at least one year of ongoing costs; break-even in units = fixed costs divided by (price minus variable cost per unit); split semi-variable costs; prepare a formal cost report for lenders."
+  },
+  {
+    "n": 4,
+    "title": "Microloans",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/funding-programs/loans/microloans",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Microloans up to 50,000 dollars (average about 13,000) through nonprofit intermediaries that make the credit decisions; maximum term seven years; uses include working capital and equipment, not existing debts or real estate."
+  },
+  {
+    "n": 5,
+    "title": "Cash Flows, Balances, and Buffer Days (1 September 2016)",
+    "publisher": "JPMorgan Chase Institute",
+    "url": "https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/report-cash-flows-balances-and-buffer-days",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 597,000 small businesses' transactions (Feb to Oct 2015): median cash buffer of 27 days; 25th percentile 13 days; median from 16 days in restaurants to 47 in real estate; labour-intensive industries 23 days on average versus 38 for capital-intensive."
+  },
+  {
+    "n": 6,
+    "title": "2026 Report on Employer Firms: Findings from the 2025 Small Business Credit Survey (3 March 2026)",
+    "publisher": "Federal Reserve Banks (Fed Small Business)",
+    "url": "https://www.fedsmallbusiness.org/reports/survey/2026/2026-report-on-employer-firms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 6,525 employer firms surveyed Sept to Nov 2025 (convenience sample): 77% reported rising costs or tariff costs; 60% applied for financing; of applicants 42% got the full amount and 22% none; most common reason was meeting operating expenses (56%)."
+  },
+  {
+    "n": 7,
+    "title": "Business Employment Dynamics, Table 7: Survival of private sector establishments by opening year",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/bdm/us_age_naics_00_table7.txt",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Of private sector establishments opened in the year to March 2015, 79.6% survived one year, 50.2% five years and 34.6% ten years (to March 2025)."
+  },
+  {
+    "n": 8,
+    "title": "Choose a business structure",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sole proprietorship, partnerships, LLC, C and S corporations, benefit corporation, nonprofit and cooperative, with liability and tax differences; converting later can have tax consequences; consulting business counsellors, attorneys and accountants can help."
+  },
+  {
+    "n": 9,
+    "title": "Register your business",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/launch-your-business/register-your-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Most US registration happens at state level (Secretary of State), with a registered agent in the state; DBA registration at state or local level; federal registration only for trade marks, tax-exempt status or an S corporation election; total cost usually under 300 dollars. Its BOI paragraph predates FinCEN's 2026 final rule."
+  },
+  {
+    "n": 10,
+    "title": "Beneficial Ownership Information Reporting",
+    "publisher": "Financial Crimes Enforcement Network (FinCEN)",
+    "url": "https://www.fincen.gov/boi",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final rule issued 11 August 2026, effective 14 August 2026: companies created in the US are exempt from BOI reporting and US persons need not be reported; under the March 2025 interim rule, foreign companies registered to do business in a US state reported within 30 days of registration (the August 2026 alert does not restate their duty)."
+  },
+  {
+    "n": 11,
+    "title": "Get an employer identification number (page reviewed 16 October 2026)",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EINs are free from the IRS (beware sites that charge); online application issues the EIN immediately; the responsible party's SSN or ITIN is needed; form the LLC or corporation with the state first."
+  },
+  {
+    "n": 12,
+    "title": "Apply for licenses and permits",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/launch-your-business/apply-licenses-permits",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Federal licences for activities such as alcohol, firearms, aviation, broadcasting and agriculture imports; state and local licences for many trades (construction, plumbing, restaurants, retail and others); track renewal dates."
+  },
+  {
+    "n": 13,
+    "title": "Estimated taxes (page updated 25 September 2026)",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sole proprietors, partners and S corporation shareholders who expect to owe 1,000 dollars or more generally pay estimated tax (corporations 500 dollars); Form 1040-ES; four payment periods; underpayment penalty and its safe harbours."
+  },
+  {
+    "n": 14,
+    "title": "Independent contractor (self-employed) or employee? (page updated 19 May 2026)",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Common law tests (behavioural control, financial control, relationship of the parties); document the factors; Form SS-8 for an IRS determination (can take six months or more); liability for employment taxes if misclassified."
+  },
+  {
+    "n": 15,
+    "title": "Hire and manage employees",
+    "publisher": "US Small Business Administration",
+    "url": "https://www.sba.gov/business-guide/manage-your-business/hire-manage-employees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps to hire: EIN, state and local tax IDs, employee or contractor decision, W-4, pay periods, payroll, records, quarterly and annual payroll tax reports; Form I-9; new-hire reporting to the state (example: within 20 days); workers' compensation; state unemployment insurance; labour law posters."
+  },
+  {
+    "n": 16,
+    "title": "Hiring employees (page updated 18 February 2026)",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/hiring-employees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verify work eligibility with Form I-9; record each employee's name and SSN for Form W-2 (an ITIN is not accepted in place of an SSN); keep a signed Form W-4 for withholding."
+  },
+  {
+    "n": 17,
+    "title": "Set up a business",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/set-up-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Choose sole trader, limited company or another structure; sole traders register for Self Assessment if they earn more than 1,000 pounds in a tax year; companies register before trading; records, tax (Income Tax, National Insurance, VAT, Corporation Tax) and insurance."
+  },
+  {
+    "n": 18,
+    "title": "Set up a private limited company",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/limited-company-formation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps: company type, at least one director, shareholders or guarantors, people with significant control (for example over 25% of shares or votes), memorandum and articles, records, name and trade mark checks, registered office and SIC code, register with Companies House, then Corporation Tax."
+  },
+  {
+    "n": 19,
+    "title": "Verifying your identity for Companies House (updated 1 June 2026)",
+    "publisher": "GOV.UK (Companies House)",
+    "url": "https://www.gov.uk/guidance/verifying-your-identity-for-companies-house",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Identity verification became a legal requirement on 18 November 2025 for directors and people with significant control; verify through GOV.UK One Login or an authorised corporate service provider; the personal code belongs to the person; failure may be an offence."
+  },
+  {
+    "n": 20,
+    "title": "Register for VAT",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/vat-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Register if taxable turnover for the last 12 months goes over 90,000 pounds (within 30 days of the end of that month), or if you expect to pass it in the next 30 days; voluntary registration is possible below it."
+  },
+  {
+    "n": 21,
+    "title": "Understanding off-payroll working (IR35) (updated 26 February 2026)",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/guidance/understanding-off-payroll-working-ir35",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The rules apply to workers who provide services through their own intermediary, usually a personal service company; medium and large clients (and the public sector) decide status, while for small private-sector clients the worker's intermediary decides; the CEST tool helps."
+  },
+  {
+    "n": 22,
+    "title": "Employing staff for the first time",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/employing-staff",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps: confirm employee status, check you can pay minimum wage, National Insurance, sick pay and pension costs, prepare the workplace, register with HMRC and set up PAYE, pension duties, Employers' Liability insurance."
+  },
+  {
+    "n": 23,
+    "title": "Check a job applicant's right to work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/check-job-applicant-right-to-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Check before employment starts (online share code, original documents, or an identity service provider); keep a copy and the check date for the employment and two years after."
+  },
+  {
+    "n": 24,
+    "title": "Employment contracts: written statement of employment particulars",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/employment-contracts-and-conditions/written-statement-of-employment-particulars",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employees and workers get the principal statement on the first day (pay, hours, holiday, place, start date, probation and more) and the wider statement within two months."
+  },
+  {
+    "n": 25,
+    "title": "Workplace pensions: what employers must do",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-pensions-employers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Duties start when the first member of staff starts; enrol staff aged 22 to State Pension age earning at least 10,000 pounds a year who usually work in the UK, and pay an employer contribution."
+  },
+  {
+    "n": 26,
+    "title": "Starting a business (Your Europe; last checked 31 August 2026)",
+    "publisher": "European Union",
+    "url": "https://europa.eu/youreurope/business/running-business/start-ups/starting-business/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU citizens can start a business in any EU country; EU targets of setup within 3 working days, under 100 euros, online, through one body; Points of Single Contact in each country; country-by-country requirements; VAT registration above national thresholds."
+  },
+  {
+    "n": 27,
+    "title": "Udyam Registration",
+    "publisher": "Ministry of Micro, Small and Medium Enterprises, Government of India",
+    "url": "https://udyamregistration.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. India's official MSME registration portal: free, paperless, self-declared; it warns that no other website or private agency is official. Listed as the official source to check, without detail."
+  },
+  {
+    "n": 28,
+    "title": "Starting a business (page details 31 July 2026)",
+    "publisher": "Government of Canada",
+    "url": "https://www.canada.ca/en/services/business/start.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Canadian guide: planning, business names, registering or incorporating, the CRA business number, permits and licences through BizPaL, support and free CRA tax help. Listed as the official source to check, without detail."
+  },
+  {
+    "n": 29,
+    "title": "Register for an Australian business number (ABN)",
+    "publisher": "Australian Government, business.gov.au",
+    "url": "https://business.gov.au/registrations/register-for-an-australian-business-number-abn",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. An ABN identifies a business to government and others; registering through the Australian Business Register is free; links to business name, company, GST, PAYG withholding and licence registrations. Listed as the official source to check, without detail."
+  },
+  {
+    "n": 30,
+    "title": "Choosing a tax professional (page updated 21 August 2026)",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/tax-professionals/choosing-a-tax-professional",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Preparers range from CPAs, enrolled agents and attorneys to people with no credential; the IRS Directory of Federal Tax Return Preparers with Credentials helps check; how to complain about misconduct."
+  }
+]

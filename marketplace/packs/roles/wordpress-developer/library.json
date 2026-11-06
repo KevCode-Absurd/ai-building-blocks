@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "speed-up-a-woocommerce-store-and-keep-it-fast",
+    "name": "Speed up a WooCommerce store and keep it fast",
+    "why": "Orders speed fixes for a WooCommerce shop from its PageSpeed report and sets a budget that keeps it fast after updates."
+  },
+  {
+    "slug": "self-hosted-store-speed-fixer",
+    "name": "Self-hosted store speed fixer",
+    "why": "Hosting, caching, plugin and image fixes in a safe order for a WooCommerce site."
+  },
+  {
+    "slug": "woocommerce-store-setup-planner",
+    "name": "WooCommerce store setup planner",
+    "why": "A build plan from hosting to the first test order, useful before custom plugin work starts."
+  },
+  {
+    "slug": "fix-a-bug-with-proof-and-a-clear-pull-request",
+    "name": "Fix a bug with proof and a clear pull request",
+    "why": "Proves the cause before any fix and hands over a minimal change, the same habit as the break-fix skill."
+  },
+  {
+    "slug": "weekly-dependency-and-security-sweep",
+    "name": "Weekly dependency and security sweep",
+    "why": "Tracks what is new, open or fixed each week with an upgrade order, matching the monthly maintenance workflow."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "A go or no-go, changelog and rollback plan before each plugin or site release."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a restore test so the backup behind every update plan is proven to work."
+  },
+  {
+    "slug": "threat-list-maker",
+    "name": "Threat list maker",
+    "why": "Ranks the likeliest attacks on a site or plugin before the security hardening pass."
+  },
+  {
+    "slug": "prepare-private-bug-evidence-for-developers",
+    "name": "Private bug evidence assistant",
+    "why": "Helps an owner turn rough notes and screenshots into a bug report with private data removed, the input the break-fix skill needs."
+  },
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "Turns a site outage or hack into a blameless report and prevention steps for the owner."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Keeps accessibility gaps ranked each quarter, useful for WooCommerce shops selling to EU consumers."
+  },
+  {
+    "slug": "website-quality-keeper",
+    "name": "Website quality keeper",
+    "why": "A weekly check of what got slower or harder to find after updates."
+  }
+]

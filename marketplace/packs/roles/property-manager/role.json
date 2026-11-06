@@ -1,0 +1,26 @@
+{
+  "id": "property-manager",
+  "name": "Property manager",
+  "department": "operations",
+  "summary": "Looks after rental property for small landlords: tenant notices, maintenance logs, owner reports and the numbers on new deals.",
+  "aliases": [
+    "property management",
+    "landlord",
+    "letting agent",
+    "rental property",
+    "tenant communications",
+    "buy to let",
+    "tenant screening",
+    "maintenance log",
+    "owner report",
+    "rental deal analysis"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 27 sources (GOV.UK Renters' Rights Act, deposit, safety and database pages; DOJ and statute text on fair housing; FTC, EPA, IRS), four skills (notices, maintenance, screening and tenancy files, owner reports and deal numbers), six prompts, three workflows, training files and access levels per tool."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "event-manager",
+  "name": "Event manager",
+  "department": "operations",
+  "summary": "Plans events and trade shows from budget to run sheet and makes sure every lead or guest is followed up.",
+  "aliases": [
+    "event planner",
+    "event management",
+    "trade shows",
+    "conference planning",
+    "run sheet",
+    "exhibitions",
+    "event budget",
+    "venue booking",
+    "trade show booth",
+    "accessible events"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: briefs, budgets and countdown timelines, venue and supplier contract terms, run sheets, UK licensing and Martyn's Law, accessibility (ADA, UK guidance, EU), allergens, attendee data and follow-up rules, trade shows and no-show data, 29 checked sources, 4 skills, 6 prompts, 3 workflows."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "weekly-stock-and-cash-reorder-watcher",
+    "name": "Weekly stock and cash reorder watcher",
+    "why": "The weekly watch list in agent form: what to reorder, what it costs and whether cash covers it."
+  },
+  {
+    "slug": "reorder-stock-before-you-run-out-and-track-the-shipment",
+    "name": "Reorder stock before you run out and track the shipment",
+    "why": "End-to-end reorder flow from reorder point to purchase order to tracking the shipment."
+  },
+  {
+    "slug": "set-your-order-size-and-split-it-across-suppliers",
+    "name": "Set your order size and split it across suppliers",
+    "why": "Order sizing with minimums and a split between a cheap slow supplier and a fast dear one."
+  },
+  {
+    "slug": "plan-the-cash-for-your-next-stock-order",
+    "name": "Plan the cash for your next stock order",
+    "why": "Turns a buy list into cash by week, deposits included, against the owner's floor."
+  },
+  {
+    "slug": "inventory-cash-planner",
+    "name": "Inventory cash planner",
+    "why": "Order dates, cash needed, the lowest cash point and a downside case from lead time and unit cost."
+  },
+  {
+    "slug": "supplier-quote-comparer",
+    "name": "Supplier quote comparer",
+    "why": "Puts price, minimum order, lead time and deposit risk side by side before a new supplier is chosen."
+  },
+  {
+    "slug": "supplier-quote-request-writer",
+    "name": "Supplier quote request writer",
+    "why": "Drafts a request for quotation in maker terms when a backup supplier is needed."
+  },
+  {
+    "slug": "supplier-payment-terms-planner",
+    "name": "Supplier terms and float planner",
+    "why": "Works out the cash float from payment terms and lead time, and which terms to ask for."
+  },
+  {
+    "slug": "product-bill-of-materials-builder",
+    "name": "Product bill of materials builder",
+    "why": "Builds a costed bill of materials by part, the base for unit cost and material planning."
+  },
+  {
+    "slug": "check-capacity-before-promising-a-delivery-date",
+    "name": "Check capacity before promising a delivery date",
+    "why": "Capacity view and date options with risks before a maker promises a delivery."
+  },
+  {
+    "slug": "amazon-inbound-stock-planner",
+    "name": "Amazon inbound stock planner",
+    "why": "Sizes and times stock sent to Amazon, where inbound lead time adds to supplier lead time."
+  },
+  {
+    "slug": "explain-a-warehouse-stock-count-variance",
+    "name": "Explain a warehouse stock count variance",
+    "why": "Separates timing, unit and count errors when stock on hand does not match the system."
+  },
+  {
+    "slug": "prepare-a-supplier-corrective-action-review",
+    "name": "Prepare a supplier corrective action review",
+    "why": "Checks a supplier's reply to a quality failure against goods-in evidence before a claim."
+  }
+]

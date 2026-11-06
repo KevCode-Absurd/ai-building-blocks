@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Late commercial payments: charging interest and debt recovery",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK: if no date is agreed, payment is late 30 days after the customer gets the invoice or the goods or service arrive, whichever is later; agreed payment dates usually within 30 days for public authorities and 60 days for business deals, longer only if fair to both businesses."
+  },
+  {
+    "n": 2,
+    "title": "Charging interest on a commercial debt",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK statutory interest on business-to-business debts is 8% plus the Bank of England base rate; a contract can set a different rate instead; to add interest, send a new invoice; worked example of daily interest."
+  },
+  {
+    "n": 3,
+    "title": "Claim debt recovery costs on late payments",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery/claim-debt-recovery-costs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK fixed sums per late payment: 40 pounds up to 999.99, 70 pounds from 1,000 to 9,999.99, 100 pounds from 10,000; charged once per payment; reasonable extra recovery costs can also be claimed."
+  },
+  {
+    "n": 4,
+    "title": "Invoicing and taking payment from customers: invoices, what they must include",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/invoicing-and-taking-payment-from-customers/invoices-what-they-must-include",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK invoice contents: unique reference number, seller and customer names and addresses, description, supply date, invoice date, amounts, VAT if relevant, total due; extra rules for sole traders and limited companies; VAT invoices need more."
+  },
+  {
+    "n": 5,
+    "title": "Late Payments Bill: what it could mean for your business",
+    "publisher": "Office of the Small Business Commissioner (UK)",
+    "url": "https://www.smallbusinesscommissioner.gov.uk/late-payments-bill-what-it-could-mean-for-your-business/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated 2026 page. Proposals: 60-day maximum terms for large businesses paying smaller suppliers, compulsory late payment interest at 8% above base rate, a time limit for raising invoice disputes, new Commissioner powers including fines, a ban on construction retentions; first reading in the Commons after the Lords; still progressing through Parliament; no commencement date."
+  },
+  {
+    "n": 6,
+    "title": "Check when businesses pay invoices",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/check-when-businesses-pay-invoices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search tool for payment practice reports. Large companies and LLPs (two of: 54 million pounds turnover, 27 million pounds balance sheet, 250 employees) report average time to pay and the share of payments not paid on time, at least twice a year."
+  },
+  {
+    "n": 7,
+    "title": "Promoting electronic invoicing across UK businesses and the public sector (consultation outcome)",
+    "publisher": "HM Revenue and Customs and HM Treasury (GOV.UK)",
+    "url": "https://www.gov.uk/government/consultations/promoting-electronic-invoicing-across-uk-businesses-and-the-public-sector",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Consultation 13 February to 7 May 2025; outcome published 26 November 2025: the UK will introduce mandatory e-invoicing for all VAT invoices from 2029, announced at Budget 2025; a roadmap is due at Budget 2026; no month given."
+  },
+  {
+    "n": 8,
+    "title": "Confirmation of Payee",
+    "publisher": "Pay.UK",
+    "url": "https://www.wearepay.uk/what-we-do/overlay-services/confirmation-of-payee/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Account name-checking service for UK domestic payments; launched 2020; over 300 organisations; more than 2 million checks a day; the Payment Systems Regulator mandated its expansion in 2024."
+  },
+  {
+    "n": 9,
+    "title": "Late payment (business)",
+    "publisher": "European Commission, Your Europe",
+    "url": "https://europa.eu/youreurope/business/finance-funding/making-receiving-payments/late-payment/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page last checked 5 August 2026. Interest runs from the day after the contractual due date; with no agreed date, 30 days after the invoice is received; flat 40 euro compensation per late invoice plus reasonable extra costs; statutory rates for 1 July to 31 December 2026 from 10.00% (Denmark, Sweden) to 14.50% (Romania); interest on the gross amount including VAT; not for consumer transactions."
+  },
+  {
+    "n": 10,
+    "title": "VAT in the Digital Age (ViDA)",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 11 March 2025, in force 14 April 2025; member states can introduce mandatory e-invoicing under conditions; digital reporting for cross-border B2B supplies from 1 July 2030."
+  },
+  {
+    "n": 11,
+    "title": "E-invoicing in Belgium",
+    "publisher": "FPS Finance, Belgium",
+    "url": "https://einvoice.belgium.be/en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Since 1 January 2026, structured e-invoices are required between businesses for all Belgian enterprises liable to VAT; a news item (18 December 2025) announced a tolerance period for the first three months of 2026."
+  },
+  {
+    "n": 12,
+    "title": "How to prepare for the e-invoicing obligation?",
+    "publisher": "Service Public Entreprendre (France)",
+    "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F39785?lang=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verified 7 August 2026. All companies must be able to receive e-invoices from 1 September 2026; large and mid-sized companies issue from 1 September 2026; SMEs and micro-businesses issue from 1 September 2027; through an approved platform (PA). Automatic translation; the French version governs."
+  },
+  {
+    "n": 13,
+    "title": "About Peppol",
+    "publisher": "OpenPeppol AISBL",
+    "url": "https://peppol.org/about/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Peppol is an interoperability framework for exchanging standard business documents such as e-invoices and e-orders over an open network; a four-corner model lets buyers and suppliers use any accredited service provider; OpenPeppol is a Belgian non-profit association."
+  },
+  {
+    "n": 14,
+    "title": "Business Email Compromise: The $55 Billion Scam (PSA I-091124-PSA)",
+    "publisher": "FBI Internet Crime Complaint Center",
+    "url": "https://www.ic3.gov/PSA/2024/PSA240911",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 11 September 2024. October 2013 to December 2023: 305,033 incidents and about 55.5 billion dollars exposed losses worldwide. Advice: verify account change requests through a second channel, check sender addresses for look-alike domains, review accounts, and if money is sent, call the bank at once to request a recall and report at ic3.gov."
+  },
+  {
+    "n": 15,
+    "title": "2025 IC3 Annual Report (Internet Crime Report)",
+    "publisher": "FBI Internet Crime Complaint Center",
+    "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PDF; text extracted with pdftotext. BEC reported losses 3,046,598,558 dollars in 2025 (2,770,151,146 in 2024); BEC defined as scams targeting businesses working with suppliers or regularly making wire transfers; Recovery Asset Team Financial Fraud Kill Chain 2025: 3,900 incidents, 1.16 billion dollars attempted theft, 679 million frozen, 58% success; contact the bank immediately."
+  },
+  {
+    "n": 16,
+    "title": "New rules",
+    "publisher": "Nacha",
+    "url": "https://www.nacha.org/newrules",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fraud monitoring phase 1 effective 20 March 2026 and phase 2 effective 19 June 2026 (practically 22 June 2026); two new standard Company Entry Descriptions from 20 March 2026; from 18 September 2026 non-Same Day ACH credits must be available at 9 a.m. local time on settlement date."
+  },
+  {
+    "n": 17,
+    "title": "Risk management topics: fraud monitoring phase 1",
+    "publisher": "Nacha",
+    "url": "https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Phase 1: all ODFIs, and non-consumer Originators, Third-Party Senders and Third-Party Service Providers with 2023 ACH origination volume of 6 million or more; phase 2 removes the threshold. Covered parties need risk-based processes to identify entries that are unauthorised or authorised under False Pretenses, reviewed at least annually."
+  },
+  {
+    "n": 18,
+    "title": "Debt collection FAQs",
+    "publisher": "Federal Trade Commission (US), Consumer Advice",
+    "url": "https://consumer.ftc.gov/articles/debt-collection-faqs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated March 2023. The Fair Debt Collection Practices Act covers personal and household debts, not business debts; debt collectors generally may not contact people before 8 a.m. or after 9 p.m., or call more than seven times in seven days about a debt."
+  },
+  {
+    "n": 19,
+    "title": "About Form W-9, Request for Taxpayer Identification Number and Certification",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/forms-pubs/about-form-w-9",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Form W-9 gives a correct taxpayer identification number to a person who must file an information return; current revision March 2024; page updated 27 June 2026."
+  },
+  {
+    "n": 20,
+    "title": "Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026)",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/instructions/i1099mec",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For tax years beginning after 2025 the Form 1099-NEC threshold for nonemployee compensation is 2,000 dollars, possibly adjusted for inflation from 2027; furnish to recipients and file with the IRS by 31 January."
+  },
+  {
+    "n": 21,
+    "title": "FAR 32.905 Payment documentation and process",
+    "publisher": "Acquisition.gov (US Federal Acquisition Regulation)",
+    "url": "https://www.acquisition.gov/far/32.905",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What a proper invoice must contain (name and address, invoice date and number, contract or order reference, description, quantity, unit price, payment terms, contact for defective invoices and more) and that payment is supported by a receiving report or other authorisation."
+  },
+  {
+    "n": 22,
+    "title": "Three-way matching definition",
+    "publisher": "AccountingTools (Steven Bragg)",
+    "url": "https://www.accountingtools.com/articles/what-is-three-way-matching.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 14 May 2026. Compare the supplier invoice with the purchase order and the receiving report before paying; prevents fraud and error; labour-intensive, can delay payment and miss discounts, uneconomical for small purchases; automated matching needs integrated systems and still flags exceptions."
+  },
+  {
+    "n": 23,
+    "title": "Positive pay",
+    "publisher": "AccountingTools (Steven Bragg)",
+    "url": "https://www.accountingtools.com/articles/positive-pay",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 1 March 2026. The company sends its bank a file of issued cheques (numbers, dates, amounts, sometimes payees); the bank holds presented cheques that do not match and asks the company."
+  },
+  {
+    "n": 24,
+    "title": "Report: 84% of fraudsters show at least one behavioral red flag (Occupational Fraud 2026: A Report to the Nations)",
+    "publisher": "Association of Certified Fraud Examiners",
+    "url": "https://www.acfe.com/about-the-acfe/newsroom-for-media/press-releases/press-release-detail?s=occupational-fraud-2026-a-report-to-the-nations-pr",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 12 May 2026: 2,402 cases in 143 countries; estimated 5% of revenue lost a year; median loss 104,000 dollars; median 12 months before detection; 43% found by tips, over half from employees; small businesses had the highest median losses."
+  },
+  {
+    "n": 25,
+    "title": "Fraud Risk Management Guide, Executive Summary",
+    "publisher": "COSO and ACFE",
+    "url": "https://www.coso.org/_files/ugd/3059fc_02c01fde6552479196535bcfee8ea60e.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PDF; text extracted with pdftotext. The 2013 COSO Internal Control framework has five components and 17 principles; principle 8 is considering the potential for fraud; smaller and owner-managed organisations can adapt the guide."
+  },
+  {
+    "n": 26,
+    "title": "United States Small Business Insights",
+    "publisher": "Xero",
+    "url": "https://www.xero.com/us/resources/small-business-insights/latest-united-states/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. September 2026 quarter: US small businesses waited 29.7 days on average to be paid (29.3 in June quarter) and were paid 8.6 days late (8.5); anonymised, aggregated Xero customer data."
+  },
+  {
+    "n": 27,
+    "title": "xero-mcp-server",
+    "publisher": "Xero (GitHub)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Read tools include list-invoices, list-contacts, list-payments, list-credit-notes, aged receivables and aged payables by contact; write tools include create-invoice, update-invoice (drafts only), create-payment, create and update credit notes; custom connections from 29 April 2026 use granular scopes."
+  },
+  {
+    "n": 28,
+    "title": "MSME Samadhaan, Delayed Payment Monitoring System",
+    "publisher": "Ministry of Micro, Small and Medium Enterprises, Government of India",
+    "url": "https://samadhaan.msme.gov.in/MyMsme/MSEFC/MSEFC_Welcome.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The official Indian portal for delayed payments to micro and small enterprises; it notes new applications now go to the MSME ODR portal. Listed as the source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 29,
+    "title": "Keeping records",
+    "publisher": "Canada Revenue Agency",
+    "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Modified 30 June 2026. The official Canadian page on business records, including invoices and supporting documents. Listed as the source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 30,
+    "title": "Payment Times Reporting Scheme",
+    "publisher": "Payment Times Reporting Regulator, Australian Government",
+    "url": "https://paymenttimes.gov.au/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The official Australian scheme on how quickly large businesses pay small business suppliers, with a public register of reports; changed in 2024. Listed as the source to check in Australia; no detail given in the kit."
+  }
+]

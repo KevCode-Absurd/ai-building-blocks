@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Incoterms rules",
+    "publisher": "International Chamber of Commerce (ICC)",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ICC first published Incoterms in 1936; Incoterms 2020 in force since 1 January 2020; eleven three-letter trade terms setting out tasks, costs and risks in delivering goods from seller to buyer; Incoterms is an ICC trademark with a usage policy. No next edition mentioned; an ICC site search on 6 Nov 2026 found nothing on one."
+  },
+  {
+    "n": 2,
+    "title": "Incoterms 2020",
+    "publisher": "International Chamber of Commerce (ICC)",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DPU replaced DAT and the destination can be any place; under DPU the seller unloads, under DAP it does not; FCA allows an on-board bill of lading at the buyer's request; CIP requires higher insurance cover (Institute Cargo Clauses A) than CIF (Clauses C by default)."
+  },
+  {
+    "n": 3,
+    "title": "Know Your Incoterms",
+    "publisher": "International Trade Administration, US Department of Commerce",
+    "url": "https://www.trade.gov/know-your-incoterms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Seven Incoterms 2020 rules for any mode (EXW, FCA, CPT, CIP, DAP, DPU, DDP) and four for sea and inland waterway (FAS, FOB, CFR, CIF); Incoterms do not set price, payment, transfer of title, customs documents, or liability for non-conforming goods and disputes."
+  },
+  {
+    "n": 4,
+    "title": "Tips for New Importers and Exporters",
+    "publisher": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/basic-import-export/importer-exporter-tips",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last modified 27 Aug 2024. The importer of record is responsible for correct entry documents and paying duties, even when a broker files; classify with the Harmonized Tariff Schedule; binding rulings can be requested under 19 CFR Part 177 and past rulings searched in CROSS; licensed brokers are not CBP staff."
+  },
+  {
+    "n": 5,
+    "title": "E-Commerce Frequently Asked Questions",
+    "publisher": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/basic-import-export/e-commerce/faqs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last modified 2 Sep 2026. De minimis suspension covers goods valued at $800 or less by any mode, including mail; such shipments now need formal or informal entry; informal entry generally allowed up to $2,500; all duties, taxes and fees apply; gift and personal-article exemptions unchanged; new mail informal entry process."
+  },
+  {
+    "n": 6,
+    "title": "E-Commerce",
+    "publisher": "US Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/basic-import-export/e-commerce",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last modified 4 Nov 2026. CBP moved the compliance date for new informal entry procedures for international mail from 22 Oct 2026 to 20 Jan 2027. Listed among the least sure facts: these dates have moved more than once."
+  },
+  {
+    "n": 7,
+    "title": "Finding commodity codes for imports or exports",
+    "publisher": "HM Revenue and Customs (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/finding-commodity-codes-for-imports-or-exports",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 22 Aug 2022. Commodity codes set duty and import VAT and show licences and preferences; only the first 6 digits are common worldwide; check codes supplied by overseas suppliers; use the online Trade Tariff (the tool itself blocked automated fetches)."
+  },
+  {
+    "n": 8,
+    "title": "Apply for an Advance Tariff Ruling",
+    "publisher": "HM Revenue and Customs (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/apply-for-an-advance-tariff-ruling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 2 Jun 2026. A legally binding HMRC decision on the commodity code for goods moving into or out of Great Britain, for the named holder only; apply before customs procedures are complete; replies in 30 to 120 days; Northern Ireland and EU trade use Binding Tariff Information instead."
+  },
+  {
+    "n": 9,
+    "title": "Import goods into the UK: step by step",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/import-goods-into-uk",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no date shown. EORI number starting GB (or XI for Northern Ireland); choose a customs agent or do it yourself; find the commodity code; value the goods; check licences; make the declaration; reclaim import VAT with the C79; keep records."
+  },
+  {
+    "n": 10,
+    "title": "VAT and overseas goods sold directly to customers in the UK",
+    "publisher": "HM Revenue and Customs (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/vat-and-overseas-goods-sold-directly-to-customers-in-the-uk",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 13 May 2022. For consignments of 135 pounds or less sent from outside the UK, UK VAT is charged at the point of sale; the limit applies to the whole consignment, not each item; low value consignment relief (15 pounds or less) removed."
+  },
+  {
+    "n": 11,
+    "title": "EU Customs Tariff (TARIC)",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. TARIC is a multilingual database of EU tariff, trade and agricultural measures (third-country duties, preferences, quotas, anti-dumping, prohibitions and restrictions); it does not hold national VAT or excise rates; link to the TARIC consultation tool."
+  },
+  {
+    "n": 12,
+    "title": "Tariff classification of goods",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/customs/common-customs-tariff-cct/tariff-classification-goods_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. The Combined Nomenclature is the EU's 8-digit coding built on the World Customs Organization's Harmonized System; the EBTI database holds all EU binding tariff information decisions."
+  },
+  {
+    "n": 13,
+    "title": "EU Customs Reform",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/customs/eu-customs-reform_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 150 euro customs duty exemption ended on 1 Jul 2026; a temporary 3 euro customs duty per item on low-value consignments applies from 1 Jul 2026 to 1 Jul 2028 (8 Jun 2026 news); a 2 euro Union handling fee on small parcels from 1 Nov 2026 (7 Oct 2026 news; unit not stated); non-EU platforms and sellers handle customs formalities and duty; reform adopted 16 Sep 2026, in force 21 Sep 2026; Data Hub mandatory for e-commerce from 1 Jul 2028."
+  },
+  {
+    "n": 14,
+    "title": "Domestic Claims",
+    "publisher": "United States Postal Service",
+    "url": "https://www.usps.com/help/claims.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sender or recipient may claim on insured mail; damaged or missing contents: file at once and no later than 60 days after mailing; lost items: from 15 to 60 days (Priority Mail Express from 7 days); proof of insurance, value and damage photos; keep the packaging; decisions usually in 5 to 10 days; appeal within 30 days."
+  },
+  {
+    "n": 15,
+    "title": "DMM 123 Priority Mail: Prices and Eligibility (dimensional weight)",
+    "publisher": "United States Postal Service, Domestic Mail Manual",
+    "url": "https://pe.usps.com/text/dmm300/123.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Priority Mail parcels over 1 cubic foot (1,728 cubic inches) to zones 1 to 9 are priced on the greater of actual and dimensional weight; dimensions rounded up, volume divided by 139 and rounded up; 0.785 factor for non-rectangular parcels; capped at the 70-pound price. Revision marker 7-12-26 (likely 12 Jul 2026)."
+  },
+  {
+    "n": 16,
+    "title": "Holiday Shipping Dates",
+    "publisher": "United States Postal Service",
+    "url": "https://www.usps.com/holiday/holiday-shipping-dates.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026 recommended send-by dates for delivery by 25 Dec in the contiguous US: Ground Advantage 17 Dec, Priority Mail 18 Dec, Priority Mail Express 19 Dec."
+  },
+  {
+    "n": 17,
+    "title": "Shipping Restricted, Hazardous and Perishable Mail",
+    "publisher": "United States Postal Service",
+    "url": "https://www.usps.com/ship/shipping-restrictions.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no effective date shown. Publication 52 is the reference; small consumer lithium batteries mailable under conditions; damaged or defective devices with lithium batteries go by ground only and must be marked; prohibited items include air bags, ammunition, explosives and gasoline; penalties for mailing hazardous items."
+  },
+  {
+    "n": 18,
+    "title": "49 U.S. Code 14706: Liability of carriers under receipts and bills of lading",
+    "publisher": "Legal Information Institute, Cornell Law School (text of the US Code)",
+    "url": "https://www.law.cornell.edu/uscode/text/49/14706",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Subsection (e): a carrier may not allow less than 9 months to file a claim or less than 2 years to bring a civil action, the 2 years running from written notice that the claim is disallowed. Statute text; not a ruling on any case."
+  },
+  {
+    "n": 19,
+    "title": "Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; guide dated Sep 2011, edited Jan 2025. Sellers need a reasonable basis for shipping claims; 30 days when no time is stated (50 with a credit application); delay notices with a free way to cancel; refunds within 7 working days or one billing cycle; shipped means placed in the carrier's possession."
+  },
+  {
+    "n": 20,
+    "title": "Shipping and delivery",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/shipping-delivery/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last checked by the EU 17 Aug 2026. Delivery within 30 days unless agreed otherwise; extra period then refund if still not delivered; the trader is responsible for damage from dispatch until the consumer receives the goods."
+  },
+  {
+    "n": 21,
+    "title": "If something you ordered hasn't been delivered",
+    "publisher": "Citizens Advice (UK national charity; summary)",
+    "url": "https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/if-something-you-ordered-hasnt-been-delivered/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page last reviewed 22 Nov 2018, so listed among the least sure. Labelled a summary of the Consumer Rights Act 2015 (legislation.gov.uk returned empty pages to WebFetch): the seller is responsible for delivery even when it uses a courier, unless the buyer agreed another delivery place."
+  },
+  {
+    "n": 22,
+    "title": "Online and distance selling for businesses",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/online-and-distance-selling-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no date shown. Deliver within 30 days unless agreed otherwise; customers may cancel up to 14 days after delivery; up to 12 months more if not told about the right."
+  },
+  {
+    "n": 23,
+    "title": "Drivers' hours: GB domestic rules",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/drivers-hours/gb-domestic-rules",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no date shown. Goods vehicle drivers under GB domestic rules: no more than 10 hours driving on public roads a day, 11 hours duty a day; hours recorded on a weekly record sheet or tachograph; some exemptions."
+  },
+  {
+    "n": 24,
+    "title": "Driving time and rest periods",
+    "publisher": "European Commission, Mobility and Transport",
+    "url": "https://transport.ec.europa.eu/transport-modes/road/social-provisions/driving-time-and-rest-periods_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation 561/2006: daily driving up to 9 hours (10 hours twice a week), 56 hours a week, 90 hours over two weeks; a 45-minute break after 4.5 hours, which can be split 15 plus 30; 11 hours daily rest."
+  },
+  {
+    "n": 25,
+    "title": "Vehicle Routing Problem",
+    "publisher": "Google OR-Tools documentation",
+    "url": "https://developers.google.com/optimization/routing/vrp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. The vehicle routing problem finds routes for several vehicles; with one vehicle it is the travelling salesperson problem; variants with vehicle capacity and time windows; minimising the longest route rather than total distance when all drops should finish early."
+  },
+  {
+    "n": 26,
+    "title": "The Bullwhip Effect in Supply Chains",
+    "publisher": "MIT Sloan Management Review",
+    "url": "https://sloanreview.mit.edu/article/the-bullwhip-effect-in-supply-chains/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (public excerpt only). Hau L. Lee, V. Padmanabhan and Seungjin Whang, Spring 1997: order swings grow larger the further they move up the supply chain, shown by Procter and Gamble's Pampers orders."
+  },
+  {
+    "n": 27,
+    "title": "Warehouse Science",
+    "publisher": "John J. Bartholdi III, Georgia Institute of Technology",
+    "url": "https://www.warehouse-science.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free textbook and tools on managing time and space in a warehouse: slotting fast movers in forward pick areas, order picking methods, pick paths and product affinity from sales history."
+  },
+  {
+    "n": 28,
+    "title": "Shippo MCP Server",
+    "publisher": "Shippo developer docs",
+    "url": "https://docs.goshippo.com/docs/guides_general/mcpserver/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; undated. Hosted MCP server at mcp.shippo.com; users sign in with their Shippo account; compares rates, buys labels, tracks parcels, validates addresses, builds customs declarations and runs batches. The page also held instructions addressed to AI agents, which were not followed."
+  },
+  {
+    "n": 29,
+    "title": "Logisticians: Occupational Outlook Handbook",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Median pay 82,320 dollars a year (May 2025); employment projected to grow 18 percent from 2025 to 2035; about 26,600 openings a year."
+  },
+  {
+    "n": 30,
+    "title": "2025 Retail Returns Landscape",
+    "publisher": "National Retail Federation with Happy Returns (a UPS company)",
+    "url": "https://nrf.com/research/2025-retail-returns-landscape",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 15 Oct 2025. Projected 849.9 billion dollars of US retail returns in 2025; an estimated 19.3 percent of online sales returned; 9 percent of returns judged fraudulent. Industry survey; sample size not shown on the page."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Filters vs. Facets: Definitions (Kathryn Whitenton, 16 March 2014)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/filters-vs-facets/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Difference between filters and faceted navigation; facets suit large varied content sets; every facet needs metadata on current and future content; extra options add interaction cost"
+  },
+  {
+    "n": 2,
+    "title": "Product Lists and Filtering UX research",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/research/ecommerce-product-lists",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 344 sites benchmarked; 36% with harmful flaws; average site needs 35 changes; 67-90% vs 17-33% abandonment; original study of 19 sites and 700+ issues"
+  },
+  {
+    "n": 3,
+    "title": "Help Google understand your ecommerce site structure",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Menus to categories to products; link to all products you want indexed; products only reachable by search may be missed; link best sellers from the home page; standard a href links"
+  },
+  {
+    "n": 4,
+    "title": "Managing crawling of faceted navigation URLs",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/crawling-managing-faceted-navigation",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Overcrawling risk; robots.txt, fragments, canonical and nofollow options; if indexed, & separator, consistent filter order and 404 for empty combinations"
+  },
+  {
+    "n": 5,
+    "title": "Product variant structured data (ProductGroup, Product)",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/product-variants",
+    "checked": "2026-11-06",
+    "supports": "Fetched. productGroupID, variesBy, hasVariant; single-page and multi-page variant URLs; one canonical URL for the group; unique ID per variant"
+  },
+  {
+    "n": 6,
+    "title": "Product category",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/details/product-category",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard Product Taxonomy; one category per product; AI category suggestion; category metafields; used for Shopify Tax, sales channels, filters and reports"
+  },
+  {
+    "n": 7,
+    "title": "Storefront filtering with Search & Discovery",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/online-store/search-and-discovery/filters",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard and custom filter sources; 25 filters per store; no filters on collections over 5,000 products; 100 values shown; value grouping; swatches need theme support"
+  },
+  {
+    "n": 8,
+    "title": "Product data specification",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/7052112",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Required attributes; brand, GTIN and MPN rules; item_group_id and apparel attributes for BR, FR, DE, JP, UK, US and free listings; is_bundle and multipack; product highlights; 500 x 500 image minimum enforced from 31 January 2027"
+  },
+  {
+    "n": 9,
+    "title": "GTIN [gtin] attribute",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324461",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Don't guess, invent or reuse GTINs; each variant its own GTIN; private label sends brand and MPN; omitting an existing GTIN can cause disapproval; accepted formats"
+  },
+  {
+    "n": 10,
+    "title": "Title [title] and structured title [structured_title] attribute",
+    "publisher": "Google Merchant Center Help",
+    "url": "https://support.google.com/merchants/answer/6324415",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 150-character limit; key details first; variant details; describe whole bundles; no promotional text; AI-generated titles use structured_title"
+  },
+  {
+    "n": 11,
+    "title": "Merchant API overview",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/merchant/api/overview",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Merchant API described as a redesign of the Content API for Shopping; v1 sub-APIs. The page gives no shutdown date for the Content API"
+  },
+  {
+    "n": 12,
+    "title": "Catalog fields (Commerce Platform)",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/commerce-platform/catalog/fields",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Required catalogue fields plus brand, GTIN or MPN; title up to 200 characters, 65 recommended; description up to 9,999 characters; item_group_id for variants, up to 100 characters"
+  },
+  {
+    "n": 13,
+    "title": "Inventory reports",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/inventory-reports",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sell-through formula over 30 days; days of inventory remaining from 28 days of sales; ABC analysis at 80/15/5% of revenue over 28 days; percent sold; month-end inventory value"
+  },
+  {
+    "n": 14,
+    "title": "Press release No 152/24: Judgment in Case C-330/23, Aldi Süd (26 September 2024)",
+    "publisher": "Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240152en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Fetched (PDF). Reductions as a percentage or promotional price statement must be based on the lowest price in a period not shorter than 30 days before the reduction; Aldi Süd banana example at -23%"
+  },
+  {
+    "n": 15,
+    "title": "Price Indication Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/price-indication-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Selling and unit prices; Article 6a on price reductions; Directive 2019/2161 adopted 27 November 2019 and applying from 28 May 2022; Article 6a guidance adopted 17 December 2021"
+  },
+  {
+    "n": 16,
+    "title": "Advertising FAQ's: A Guide for Small Business (April 2001, edited January 2025)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Same truthfulness standards for price comparisons and sale prices; refers to the Guides Against Deceptive Pricing; free offers; bait advertising"
+  },
+  {
+    "n": 17,
+    "title": "Unfair commercial practices (CMA207), published 4 April 2025, updated 18 November 2025",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207",
+    "checked": "2026-11-06",
+    "supports": "Fetched, with the linked HTML guidance. DMCC Act provisions apply to practices from 6 April 2025; false claims about a specific price advantage can mislead; falsely limited-time offers banned; drip pricing covered as an omission of material information"
+  },
+  {
+    "n": 18,
+    "title": "CMA fines firms £6 million for misleading sales tactics (14 October 2026)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/cma-fines-firms-6-million-for-misleading-sales-tactics",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Wayfair £4.8 million for false time-limited deals; Appliances Direct £1.2 million including automatic opt-in to paid extras; Gold's Gym joining fee; 40% settlement discount; DMCC Act section 230(2)"
+  },
+  {
+    "n": 19,
+    "title": "Providing clear and accurate information about prices: summary (CMA209), updated 7 January 2026",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Drip pricing illegal; mandatory fees and delivery in the total price; variable delivery; cheapest option shown until chosen; optional charges; fines up to 10% of turnover or £300,000"
+  },
+  {
+    "n": 20,
+    "title": "Open letter to online retailers: including mandatory delivery fees in the total price (2 November 2026)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Total including mandatory delivery at every stage; marketplaces; optional charges not hidden; four drip pricing enforcement cases with fines over £5.1 million and refunds over £1.35 million"
+  },
+  {
+    "n": 21,
+    "title": "CMA to boost consumer and business confidence as new consumer protection regime comes into force (7 April 2025)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/cma-to-boost-consumer-and-business-confidence-as-new-consumer-protection-regime-comes-into-force",
+    "checked": "2026-11-06",
+    "supports": "Fetched. DMCC consumer regime in force; CMA decides infringements directly; fines up to 10% of global turnover; fake reviews and drip pricing banned; first-year priorities"
+  },
+  {
+    "n": 22,
+    "title": "Trainline, Virgin Atlantic and RED Driving School investigated for drip pricing (19 August 2026)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/news/trainline-virgin-atlantic-and-red-driving-school-investigated-for-drip-pricing",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Investigations into mandatory fees left out of upfront prices; AA, BSM and StubHub UK already fined; no conclusions reached"
+  },
+  {
+    "n": 23,
+    "title": "Pricing and payments (last checked 27 January 2026)",
+    "publisher": "European Union, Your Europe (citizens)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Total price including taxes and charges up front; extra services need explicit consent; a pre-ticked box is not consent"
+  },
+  {
+    "n": 24,
+    "title": "Product bundles",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/bundles",
+    "checked": "2026-11-06",
+    "supports": "Fetched. A bundles app is needed; Online Store, Shop and POS; only fixed bundles on Google and YouTube; bundles commonly discounted"
+  },
+  {
+    "n": 25,
+    "title": "Cart abandonment rate statistics (updated 28 October 2026)",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 70.22% average of 50 studies 2006-2025; US checkout abandonment reasons: extra costs 40%, slow delivery 20%, couldn't see total up front 12%"
+  },
+  {
+    "n": 26,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers (November 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Rule effective 21 October 2024; bans fake reviews, sentiment-conditioned incentives and review suppression; businesses may organise reviews but not suppress them"
+  },
+  {
+    "n": 27,
+    "title": "Fashion Nova will pay $4.2 million as part of settlement of FTC allegations it blocked negative reviews (25 January 2022)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/01/fashion-nova-will-pay-42-million-part-settlement-ftc-allegations-it-blocked-negative-reviews",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Review management interface held reviews under four stars; not posted from late 2015 to November 2019; $4.2 million"
+  },
+  {
+    "n": 28,
+    "title": "Short guide for businesses: publishing consumer reviews and complying with consumer protection law (CMA208, 4 April 2025)",
+    "publisher": "UK Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/fake-reviews/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Fake and concealed incentivised reviews banned; review publishers need a policy, risk assessment and reasonable and proportionate steps"
+  },
+  {
+    "n": 29,
+    "title": "Returns: your rights when you buy online (last checked 28 April 2026)",
+    "publisher": "European Union, Your Europe (citizens)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 14-day right of withdrawal for online purchases; exception for digital content once download or streaming starts after express agreement"
+  },
+  {
+    "n": 30,
+    "title": "UX Guidelines for Ecommerce Product Pages (Katie Sherwin, 24 November 2019)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ecommerce-product-pages/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Consistent information across variants; shipping costs shown on the product page affect comparisons; price including product-specific charges"
+  }
+]

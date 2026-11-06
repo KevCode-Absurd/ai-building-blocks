@@ -1,0 +1,26 @@
+{
+  "id": "supply-chain-planner",
+  "name": "Supply chain planner",
+  "department": "operations",
+  "summary": "Forecasts demand and plans stock and production so best sellers stay in stock without tying up cash. Shows reorder points and the cost of each order.",
+  "aliases": [
+    "inventory planning",
+    "demand planning",
+    "production planning",
+    "stock control",
+    "reorder points",
+    "mrp",
+    "safety stock",
+    "purchase orders",
+    "demand forecast",
+    "supplier lead times"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 26 sources, four skills (demand forecast by product, reorder points and safety stock, purchase orders and supplier lead times, production and materials plan), five prompts, two workflows, training interview and test briefs. Level 3 covers placing purchase orders within the budget the client confirms; payments stay with the client."
+    }
+  ]
+}

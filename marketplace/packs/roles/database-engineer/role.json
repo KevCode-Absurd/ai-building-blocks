@@ -1,0 +1,26 @@
+{
+  "id": "database-engineer",
+  "name": "Database engineer",
+  "department": "engineering",
+  "summary": "Designs database tables and safe migrations, writes the queries a business needs and speeds up the slow ones.",
+  "aliases": [
+    "database",
+    "sql",
+    "postgresql",
+    "mysql",
+    "query optimisation",
+    "database design",
+    "dba",
+    "sqlite",
+    "database migrations",
+    "database backups"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (PostgreSQL 18, MySQL 8.4 and 9.7, SQLite and Django docs, AWS RDS, Supabase and PlanetScale backup and migration docs, Atlassian's 2022 outage review), four skills, five prompts, two workflows, training interview and test briefs. Production migrations and destructive changes need a tested backup and a fresh yes."
+    }
+  ]
+}

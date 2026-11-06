@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "New product title requirements effective January 21, 2025",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, EU)",
+    "url": "https://sellercentral-europe.amazon.com/seller-forums/discussions/t/3781c84d-4778-40fe-9dde-30039a0948f6",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Title rules from 21 Jan 2025: 200 characters including spaces for most categories, banned special characters unless part of the brand, no word more than twice. The Seller Central help page on title requirements sits behind a login, so this official announcement is cited instead."
+  },
+  {
+    "n": 2,
+    "title": "Listings Lounge: How to Get the Best Out of Your Bullet Points",
+    "publisher": "Amazon (Michelle_Amazon, Amazon Seller Forums)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/804d6a1c-d630-4879-b548-3235cad90940",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Amazon staff guidance: four to five bullets, under 1,000 characters across all bullets, most important first, no keyword stuffing in bullets (use the search terms field), some categories add attribute bullets automatically."
+  },
+  {
+    "n": 3,
+    "title": "Main product image requirements (Amazon staff post)",
+    "publisher": "Amazon (TaylorR_Amazon, Amazon Seller Forums)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/13af96ea-6b07-4bf9-8dbe-a13292c2e3b1",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Main image: pure white background (RGB 255,255,255), product fills at least 85% of the frame, at least 1,000 pixels on the longest side for zoom, no added text, graphics, watermarks, illustrations or props not included."
+  },
+  {
+    "n": 4,
+    "title": "How much does it cost to sell on Amazon?",
+    "publisher": "Amazon (Sell on Amazon, US)",
+    "url": "https://sell.amazon.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Individual and Professional selling plans; referral fee as a percentage of the total sale price or a per-item minimum, whichever is greater, varying by category; FBA costs estimated with the Revenue Calculator."
+  },
+  {
+    "n": 5,
+    "title": "Top tools and apps every Amazon seller should know",
+    "publisher": "Amazon (Sell on Amazon blog, 4 Nov 2024)",
+    "url": "https://sell.amazon.com/blog/seller-tools-guide",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Amazon's own tools (Automate Pricing, Manage All Inventory, FBA Inventory, Revenue Calculator usable without an account, Selling Partner Appstore) and the three self-serve ad types: Sponsored Products, Sponsored Brands, Sponsored Display."
+  },
+  {
+    "n": 6,
+    "title": "Update to US referral and Fulfillment by Amazon fees (2024 changes)",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, US)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/ce3a1455-3fdb-4317-991d-ca501f0a75a3",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Inbound placement service fee from 1 Mar 2024 (charged 45 days after receipt; a reduced fee or no fee depending on whether the shipment goes to one location or several); low-inventory-level fee from 1 Apr 2024 (avoid by holding more than four weeks of inventory relative to sales); returns processing fee extended to high-return-rate products from 1 Jun 2024; list of other annually updated FBA fees."
+  },
+  {
+    "n": 7,
+    "title": "2026 Updates to US Referral and Fulfillment by Amazon Fees",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, US)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/f3fa3211-820b-4e2e-a023-158a9cf55f99",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 2026 US changes effective 15 Jan 2026: FBA fees up an average of $0.08 per unit, no new FBA fee types, tools to preview the impact (Revenue Calculator, Fee and Economics Preview report, Profit Analytics dashboard)."
+  },
+  {
+    "n": 8,
+    "title": "Holiday 2026: Same fees, same eligibility, earlier deadlines",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, US)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/3e31fbb7-04e0-4ed4-873e-f74b1052e2ff",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Holiday peak fulfilment fees 15 Oct 2026 to 14 Jan 2027 (average $0.32 per unit above non-peak, plus the 3.5% fuel and logistics surcharge); deal fees ($100 upfront per promotion plus 1.5% of promotional sales, capped at $5,000); Black Friday inbound deadlines."
+  },
+  {
+    "n": 9,
+    "title": "Proactive reimbursements and updated claim windows for FBA lost and damaged inventory",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, US)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/d0fc997e-de50-4100-9803-76b7993b66df",
+    "checked": "2026-11-06",
+    "supports": "Fetched. From 15 Jan 2025 Amazon reimburses most items lost in its fulfilment centres without a claim; manual claim windows from 9 Jan 2025 (60 days for warehouse loss, 45 to 105 days for customer returns, 15 to 75 days for removals lost in transit, 60 days for other removals)."
+  },
+  {
+    "n": 10,
+    "title": "Update to the FBA lost and damaged inventory reimbursement policy (manufacturing cost)",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, served on the UK store)",
+    "url": "https://sellercentral-europe.amazon.com/seller-forums/discussions/t/a941ac02-d389-409a-9d62-00ab9db5bc4a",
+    "checked": "2026-11-06",
+    "supports": "Fetched. From 10 Mar 2025 items lost or damaged before a customer order are reimbursed at manufacturing cost (no shipping, duties or handling); sellers can enter their cost on the Manage Your Manufacturing Cost page, otherwise Amazon estimates it; after-order losses still use the sale price minus fees."
+  },
+  {
+    "n": 11,
+    "title": "Guide to FBA Inventory Reconciliation: What to Do When Units Go Missing",
+    "publisher": "Amazon (Bryce_Amazon, Amazon Seller Forums community manager post)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/fb93fb29-a506-4377-b503-3678ebf63179",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Inbound shipment reconciliation: only once the shipment is Closed, through the shipment's Contents tab; proof of ownership (supplier invoice, non-editable files, no pro forma) and proof of delivery; reconciliation usually takes 2 to 30 days."
+  },
+  {
+    "n": 12,
+    "title": "Stay in Control: A Seller's Guide to Account Health",
+    "publisher": "Amazon (Roberto_Amazon, Amazon Seller Forums)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/f360047c-af63-4910-a37a-e26df9b14b45",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Targets: order defect rate under 1%, late shipment rate under 4%, pre-fulfilment cancel rate under 2.5%, valid tracking rate above 95%; Account Health Rating 0 to 1,000 with Healthy, At Risk and Unhealthy bands; Account Health Assurance eligibility. The Seller Central help pages on these sit behind a login."
+  },
+  {
+    "n": 13,
+    "title": "Product Reviews Policy: What Every Seller Should Know",
+    "publisher": "Amazon (Joey_Amazon, Amazon Seller Forums)",
+    "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/9fab2fc9-b7dd-44b1-924c-77fb87462ac8",
+    "checked": "2026-11-06",
+    "supports": "Fetched. What Amazon prohibits (incentives for reviews, asking to change reviews, review clubs, reviews by staff or family, off-Amazon solicitation), what it allows (Request a Review button, Vine) and the sanctions."
+  },
+  {
+    "n": 14,
+    "title": "Amazon Vine",
+    "publisher": "Amazon (Sell on Amazon)",
+    "url": "https://sell.amazon.com/programs/vine",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Vine eligibility, up to 30 units per product, fee tiers per parent product by store (US, UK, EU), billing timing, cancellation rules, Amazon's claim of an average 30% sales lift (internal data)."
+  },
+  {
+    "n": 15,
+    "title": "Amazon Brand Registry",
+    "publisher": "Amazon (Sell on Amazon)",
+    "url": "https://sell.amazon.com/brand-registry",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Eligibility (registered or pending trademark, logo on product or packaging) and brand tools: A+ Content, Brand Analytics, Manage Your Experiments, Sponsored Brands, Brand Store, Vine credit, Project Zero, Transparency, IP Accelerator; Amazon's uplift claims."
+  },
+  {
+    "n": 16,
+    "title": "Test listing content with Manage Your Experiments",
+    "publisher": "Amazon (Sell on Amazon)",
+    "url": "https://sell.amazon.com/tools/manage-your-experiments",
+    "checked": "2026-11-06",
+    "supports": "Fetched. What can be tested, eligibility, run lengths (8 to 10 weeks recommended for a custom run, or run to significance), default auto-publishing of the winner, the Onkata one-word example."
+  },
+  {
+    "n": 17,
+    "title": "Product Opportunity Explorer",
+    "publisher": "Amazon (Sell on Amazon)",
+    "url": "https://sell.amazon.com/tools/product-opportunity-explorer",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Niches built from search terms and what shoppers click or buy; demand, competition, search volume, reviews, returns and pricing metrics; unmet demand view; Amazon's 2.5x claim and its stated basis."
+  },
+  {
+    "n": 18,
+    "title": "Amazon Brand Analytics",
+    "publisher": "Amazon (Sell on Amazon)",
+    "url": "https://sell.amazon.com/tools/amazon-brand-analytics",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Dashboards (Search Query Performance, Top Search Terms, Search Catalog Performance, Repeat Purchase Behavior, Market Basket Analysis, Demographics) and eligibility (Brand Representative on a registered brand)."
+  },
+  {
+    "n": 19,
+    "title": "What is advertising cost of sales (ACOS)? Calculation and tips",
+    "publisher": "Amazon Ads",
+    "url": "https://advertising.amazon.com/library/guides/acos-advertising-cost-of-sales",
+    "checked": "2026-11-06",
+    "supports": "Fetched. ACOS formula, ROAS as its inverse, keeping ACOS below profit margin to stay profitable, new campaigns often showing high ACOS."
+  },
+  {
+    "n": 20,
+    "title": "Introducing the Amazon Ads MCP Server (open beta)",
+    "publisher": "Amazon Ads (2 Feb 2026)",
+    "url": "https://advertising.amazon.com/library/news/amazon-ads-mcp-server-open-beta",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Official Amazon Ads MCP server in open beta for partners with Amazon Ads API credentials; agents can create, update or delete campaigns and see billing data."
+  },
+  {
+    "n": 21,
+    "title": "Amazon gives sellers an even smarter Seller Assistant and a new plugin for Amazon Quick and Anthropic's Claude",
+    "publisher": "Amazon (About Amazon)",
+    "url": "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude",
+    "checked": "2026-11-06",
+    "supports": "Fetched (page shows no date; it refers to an offer running to 31 Dec 2026). Seller Assistant workflows that only recommend or act after approval with an audit trail; the Amazon Selling Partner plugin, first in Amazon Quick and in beta with Claude for US stores, reads listings, metrics, inventory and sales and can act."
+  },
+  {
+    "n": 22,
+    "title": "Meet Alexa for Shopping, your personalized, agentic AI assistant on Amazon",
+    "publisher": "Amazon (About Amazon)",
+    "url": "https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant",
+    "checked": "2026-11-06",
+    "supports": "Fetched (page undated; image files and coverage point to May 2026). Alexa for Shopping brings Rufus and Alexa+ together for US shoppers, uses the catalogue, reviews and information from across the web, and can buy for the shopper."
+  },
+  {
+    "n": 23,
+    "title": "Amazon's AI Doesn't Read the Rankings",
+    "publisher": "Marketplace Pulse (Ben Donovan, 16 Jul 2026)",
+    "url": "https://www.marketplacepulse.com/articles/amazons-ai-doesnt-read-the-rankings",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Snapshot of 12,810 Alexa for Shopping (formerly Rufus) recommendations: 63.9% outside the organic top 10, 40.9% not on the visible results page, 14.3% sponsored; vendor data, one US account."
+  },
+  {
+    "n": 24,
+    "title": "A record number of independent sellers in Amazon's store surpassed $1 million in sales in 2025 (2025 Small Business Empowerment Report)",
+    "publisher": "Amazon (About Amazon)",
+    "url": "https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-empowerment-report",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 2025 figures: US independent sellers averaged more than $375,000 in annual sales, more than 75,000 sellers passed $1 million, sellers made more than 60% of sales in the store; named sellers GEN-Y Hitch and Purifyou; Seller Assistant usage."
+  },
+  {
+    "n": 25,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "US Federal Trade Commission (14 Aug 2024)",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The US rule on fake reviews: bans fake and AI-generated reviews, incentives conditioned on sentiment, undisclosed insider reviews and review suppression; civil penalties for knowing violations."
+  },
+  {
+    "n": 26,
+    "title": "FTC Brings First Case Challenging Fake Paid Reviews on an Independent Retail Website",
+    "publisher": "US Federal Trade Commission (26 Feb 2019)",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2019/02/ftc-brings-first-case-challenging-fake-paid-reviews-independent-retail-website",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Case study: Cure Encapsulations paid a website for fake five-star Amazon reviews; $12.8 million judgment suspended on payment of $50,000; required to tell Amazon which reviews were bought."
+  },
+  {
+    "n": 27,
+    "title": "What Third Party Sellers Need to Know About the INFORM Consumers Act",
+    "publisher": "US Federal Trade Commission (business guidance, Aug 2023, edited Jan 2025)",
+    "url": "https://www.ftc.gov/business-guidance/resources/what-third-party-sellers-need-know-about-inform-consumers-act",
+    "checked": "2026-11-06",
+    "supports": "Fetched. US high-volume seller thresholds (200 sales and $5,000 in any 12 months of the past 24), the bank, tax and contact details marketplaces must collect, the $20,000 disclosure threshold and annual certification."
+  },
+  {
+    "n": 28,
+    "title": "Amazon gives undertakings to CMA to curb fake reviews",
+    "publisher": "UK Competition and Markets Authority, gov.uk (6 Jun 2025)",
+    "url": "https://www.gov.uk/government/news/amazon-gives-undertakings-to-cma-to-curb-fake-reviews",
+    "checked": "2026-11-06",
+    "supports": "Fetched. UK: catalogue abuse defined, sellers can be banned for fake reviews or catalogue abuse, fake reviews banned under the DMCC Act regime from 6 Apr 2025, CMA fines up to 10% of global turnover."
+  },
+  {
+    "n": 29,
+    "title": "Prepare for the new General Product Safety Regulation",
+    "publisher": "Amazon (News_Amazon announcement, Amazon Seller Forums, EU)",
+    "url": "https://sellercentral-europe.amazon.com/seller-forums/discussions/t/70a277e7-da3a-402c-bf39-fad4ba1fcbbf",
+    "checked": "2026-11-06",
+    "supports": "Fetched. EU and Northern Ireland: from 13 Dec 2024 most non-food products need an EU Responsible Person, product labels with manufacturer and batch details and local-language warnings, and detail pages showing the Responsible Person, manufacturer, a product picture and safety information. The EU's own GPSR pages did not return readable text to the fetch tool."
+  },
+  {
+    "n": 30,
+    "title": "Know Your Customers' Jobs to Be Done (Christensen, Hall, Dillon and Duncan)",
+    "publisher": "Harvard Business Review (September 2016)",
+    "url": "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done",
+    "checked": "2026-11-06",
+    "supports": "Fetched (summary only; full text is paywalled). Authors, date and the core argument that products succeed when built around why customers choose, the basis for reading reviews by the job the buyer hired the product for."
+  }
+]

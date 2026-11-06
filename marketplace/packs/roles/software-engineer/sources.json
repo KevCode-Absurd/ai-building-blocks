@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "The Standard of Code Review",
+    "publisher": "Google Engineering Practices Documentation",
+    "url": "https://google.github.io/eng-practices/review/reviewer/standard.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Approve a change once it clearly improves overall code health even if imperfect; technical facts and data overrule opinions; the style guide is the authority on style; mark optional comments as Nit."
+  },
+  {
+    "n": 2,
+    "title": "Small CLs",
+    "publisher": "Google Engineering Practices Documentation",
+    "url": "https://google.github.io/eng-practices/review/developer/small-cls.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Benefits of small changes; about 100 lines usually reasonable and 1,000 usually too large, reviewer decides; separate refactorings from feature work; include tests."
+  },
+  {
+    "n": 3,
+    "title": "What to look for in a code review",
+    "publisher": "Google Engineering Practices Documentation",
+    "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Review design, functionality, complexity, tests, naming, comments, style, consistency, documentation, every line and context, and point out good things."
+  },
+  {
+    "n": 4,
+    "title": "Conventional Comments",
+    "publisher": "conventionalcomments.org",
+    "url": "https://conventionalcomments.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Comment labels (praise, nitpick, suggestion, issue, todo, question, thought, chore, note) and decorations (blocking, non-blocking, if-minor)."
+  },
+  {
+    "n": 5,
+    "title": "Refactoring",
+    "publisher": "Martin Fowler, refactoring.com",
+    "url": "https://refactoring.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Refactoring changes internal structure without changing external behaviour through small behaviour-preserving steps; second edition uses JavaScript examples."
+  },
+  {
+    "n": 6,
+    "title": "Strangler Fig",
+    "publisher": "Martin Fowler, martinfowler.com",
+    "url": "https://martinfowler.com/bliki/StranglerFigApplication.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Replace legacy systems gradually by growing a new system alongside, using seams and transitional architecture, rather than a big-bang rewrite; article dated 22 August 2024."
+  },
+  {
+    "n": 7,
+    "title": "Characterization Testing",
+    "publisher": "Michael Feathers (author's blog)",
+    "url": "https://michaelfeathers.silvrback.com/characterization-testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Characterization tests document a system's actual behaviour, not its intended behaviour, by recording what the code produces; post dated 8 August 2016."
+  },
+  {
+    "n": 8,
+    "title": "The Debugging Book: Introduction to Debugging",
+    "publisher": "Andreas Zeller, CISPA Helmholtz Center for Information Security",
+    "url": "https://www.debuggingbook.org/html/Intro_Debugging.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Debugging as the scientific method: hypothesis, prediction, experiment, observation, refinement until a diagnosis; page changed 15 October 2024."
+  },
+  {
+    "n": 9,
+    "title": "git-bisect documentation",
+    "publisher": "Git project, git-scm.com",
+    "url": "https://git-scm.com/docs/git-bisect",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Binary search between good and bad commits; git bisect run exit codes: 0 good, 1 to 127 except 125 bad, 125 skip."
+  },
+  {
+    "n": 10,
+    "title": "Semantic Versioning 2.0.0",
+    "publisher": "semver.org",
+    "url": "https://semver.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MAJOR for incompatible API changes, MINOR for compatible features, PATCH for compatible fixes; 0.y.z is initial development with no stability promise."
+  },
+  {
+    "n": 11,
+    "title": "Node.js Release Working Group: release schedule",
+    "publisher": "Node.js project, GitHub",
+    "url": "https://github.com/nodejs/Release",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Node 20 end of life 30 April 2026; Node 22 maintenance to 30 April 2027; Node 24 to 30 April 2028; Node 26 active LTS, end of life 30 April 2029; from Node 27 one release line a year with an alpha phase and every line promoted to LTS."
+  },
+  {
+    "n": 12,
+    "title": "Status of Python versions",
+    "publisher": "Python Developer's Guide",
+    "url": "https://devguide.python.org/versions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Python 3.9 end of life 31 October 2025; 3.10 end of life 1 October 2026; 3.15 first released 9 October 2026; support windows for 3.11 to 3.15."
+  },
+  {
+    "n": 13,
+    "title": "Supported Versions",
+    "publisher": "PHP Group, php.net",
+    "url": "https://www.php.net/supported-versions.php",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PHP 8.2 security fixes until 31 December 2026; 8.3 until 31 December 2027; 8.4 until 31 December 2028; 8.5 until 31 December 2029; two years active plus two years security support."
+  },
+  {
+    "n": 14,
+    "title": "Release Notes, Laravel 13.x",
+    "publisher": "Laravel",
+    "url": "https://laravel.com/docs/13.x/releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Support policy of 18 months bug fixes and 2 years security fixes; Laravel 13 released 17 March 2026 requiring PHP 8.3; Laravel 12 bug fixes until 13 August 2026 and security until 24 February 2027."
+  },
+  {
+    "n": 15,
+    "title": "DORA's software delivery performance metrics",
+    "publisher": "DORA (Google Cloud)",
+    "url": "https://dora.dev/guides/dora-metrics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five metrics: change lead time, deployment frequency, failed deployment recovery time (throughput), change fail rate, deployment rework rate (instability); advice against comparing very different teams; updated 5 January 2026."
+  },
+  {
+    "n": 16,
+    "title": "State of AI-assisted Software Development 2025",
+    "publisher": "DORA (Google Cloud)",
+    "url": "https://dora.dev/research/2025/dora-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2025 DORA report describes AI as an amplifier of an organisation's existing strengths and weaknesses; companion DORA AI Capabilities Model."
+  },
+  {
+    "n": 17,
+    "title": "OWASP Top 10:2025",
+    "publisher": "OWASP Foundation",
+    "url": "https://top10.owasp.org/2025",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (owasp.org/Top10/2025 redirects here). A01 Broken Access Control through A10 Mishandling of Exceptional Conditions, with A03 Software Supply Chain Failures and A05 Injection."
+  },
+  {
+    "n": 18,
+    "title": "Regular expression Denial of Service (ReDoS)",
+    "publisher": "OWASP Community",
+    "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Evil patterns have a repeated group containing repetition or overlapping alternation, such as (a+)+$; never build a regex from user input."
+  },
+  {
+    "n": 19,
+    "title": "Details of the Cloudflare outage on July 2, 2019",
+    "publisher": "Cloudflare blog",
+    "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A WAF rule regex caused catastrophic backtracking and CPU exhaustion, about 27 minutes of errors; remediation included staged rollouts, rule performance tests and a planned move to a regex engine with run-time guarantees."
+  },
+  {
+    "n": 20,
+    "title": "SEC Charges Knight Capital With Violations of Market Access Rule",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/newsroom/press-releases/2013-222",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 1 August 2012 a defective, unused function and an incorrect deployment led Knight's router to send more than 4 million orders in 45 minutes and lose more than $460 million; inadequate deployment and testing controls; $12 million penalty announced 16 October 2013."
+  },
+  {
+    "n": 21,
+    "title": "Upgrading GitHub from Rails 3.2 to 5.2",
+    "publisher": "GitHub Blog (Eileen M. Uchitelle)",
+    "url": "https://github.blog/engineering/upgrading-github-from-rails-3-2-to-5-2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The upgrade took about a year and a half; dual booting with two lockfiles let the team deploy continuously; one minor version at a time; lessons on upgrading early and incrementally; posted 28 September 2018."
+  },
+  {
+    "n": 22,
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "publisher": "METR",
+    "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Randomised trial with 16 developers and 246 issues: tasks took 19% longer with AI allowed, while developers believed they were faster; authors' caveats; page now marks results as outdated."
+  },
+  {
+    "n": 23,
+    "title": "We are Changing our Developer Productivity Experiment Design",
+    "publisher": "METR",
+    "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Late-2025 estimates of -18% and -4% task time (faster) with confidence intervals including zero; selection effects; METR calls it very weak evidence and is changing its study design."
+  },
+  {
+    "n": 24,
+    "title": "2025 Stack Overflow Developer Survey: AI",
+    "publisher": "Stack Overflow",
+    "url": "https://survey.stackoverflow.co/2025/ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 84% use or plan to use AI tools; 46% distrust versus 33% trust AI accuracy; 66% cite answers that are almost right but not quite as the top frustration."
+  },
+  {
+    "n": 25,
+    "title": "About protected branches",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Required approving reviews, dismissal of stale approvals, code owner review, required status checks, push restrictions; rulesets as an alternative."
+  },
+  {
+    "n": 26,
+    "title": "SP 800-218, Secure Software Development Framework (SSDF) Version 1.1",
+    "publisher": "U.S. National Institute of Standards and Technology",
+    "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SSDF version 1.1, published February 2022, a core set of high-level secure software development practices."
+  },
+  {
+    "n": 27,
+    "title": "Software Security Code of Practice",
+    "publisher": "GOV.UK (DSIT and DCMS, with the NCSC)",
+    "url": "https://www.gov.uk/government/publications/software-security-code-of-practice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A voluntary code with 14 principles for software vendors, first published 7 May 2025, updated 15 January 2026."
+  },
+  {
+    "n": 28,
+    "title": "Cyber Resilience Act",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Entered into force 10 December 2024; reporting obligations apply from 11 September 2026; main obligations from 11 December 2027; covers manufacturers of products with digital elements, including software."
+  },
+  {
+    "n": 29,
+    "title": "re: Regular expression operations",
+    "publisher": "Python documentation",
+    "url": "https://docs.python.org/3/library/re.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Named groups as (?P<name>...); atomic groups and possessive quantifiers added in 3.11; re.fullmatch; re.VERBOSE; raw strings."
+  },
+  {
+    "n": 30,
+    "title": "Regular expressions (JavaScript Guide)",
+    "publisher": "MDN Web Docs (Mozilla)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. JavaScript flags d, g, i, m, s, u, v and y; named groups (?<Name>x); lookbehind assertions."
+  }
+]

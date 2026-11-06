@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "prepare-a-small-team-offsite",
+    "name": "Prepare a small team offsite",
+    "why": "Checks whether an offsite is worth its cost and builds a decision-first agenda, a natural first step before the event brief and budget."
+  },
+  {
+    "slug": "prepare-a-community-event-access-plan",
+    "name": "Prepare a community event access plan",
+    "why": "Writes an arrival-to-exit access plan and the questions to send the venue, the hands-on side of the access checklist."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Makes a poster whose date, place and price can be read from a distance, checked against the event facts."
+  },
+  {
+    "slug": "plan-an-event-follow-up-that-earns-a-reply",
+    "name": "Plan an event follow up that earns a reply",
+    "why": "Groups follow-up drafts by what each person asked for and tracks every promise made on the day."
+  },
+  {
+    "slug": "build-a-clear-sponsorship-decision-brief",
+    "name": "Build a clear sponsorship decision brief",
+    "why": "Compares a sponsorship's cost and audience fit and proposes a capped pilot, matching the sponsorship step of the trade show plan."
+  },
+  {
+    "slug": "traction-trade-shows",
+    "name": "Trade show experiment planner",
+    "why": "Plans a small first trade show test with a cost cap and a continue or stop rule, before committing to a full stand."
+  },
+  {
+    "slug": "traction-offline-events",
+    "name": "Customer event experiment planner",
+    "why": "Plans a small customer event as a test, with cost cap, owner and stop rule."
+  },
+  {
+    "slug": "taster-event-planner",
+    "name": "Taster event planner",
+    "why": "Plans a one-day tasting event with costs, a sampling script and a pass rule, useful for food and drink clients."
+  },
+  {
+    "slug": "supplier-quote-table-builder",
+    "name": "Supplier quote table builder",
+    "why": "Puts supplier quotes in one table with cash up front and a go or walk call before any deposit is paid."
+  },
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "Turns volunteer roles and rules into an induction checklist, useful for community events run with volunteer crews."
+  },
+  {
+    "slug": "monthly-budget-versus-actual-keeper",
+    "name": "Monthly budget versus actual keeper",
+    "why": "Tracks budget against actual spend, the habit behind closing an event's books against its quotes."
+  }
+]

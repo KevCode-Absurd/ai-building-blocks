@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Beyond Budgeting at 25 (white paper, March 2023)",
+    "publisher": "Beyond Budgeting Institute (Bjarte Bogsnes)",
+    "url": "https://bbrt.org/wp-content/uploads/bb-white-paper.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). The Beyond Budgeting model was developed in 1998; its 12 principles, six on leadership and six on management processes, including relative targets, lean and unbiased forecasts, resources made available as needed, holistic performance evaluation and coordination around business rhythms rather than the calendar year."
+  },
+  {
+    "n": 2,
+    "title": "Corporate Budgeting Is Broken, Let's Fix It (Michael C. Jensen, November 2001)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2001/11/corporate-budgeting-is-broken-lets-fix-it",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jensen argues that budgeting pushes managers to set low targets and inflate results, penalises those who tell the truth and turns decisions into games."
+  },
+  {
+    "n": 3,
+    "title": "Zero-Based Budgeting Is Not a Wonder Diet for Companies (Daniel Mahler, June 2016)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2016/06/zero-based-budgeting-is-not-a-wonder-diet-for-companies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Zero-based budgeting requires each expense to be justified every budget period from demonstrable needs and costs, rather than starting from last year's budget."
+  },
+  {
+    "n": 4,
+    "title": "The Balanced Scorecard: Measures That Drive Performance (Robert S. Kaplan and David P. Norton, January to February 1992)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/1992/01/the-balanced-scorecard-measures-that-drive-performance-2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Authors and date of the balanced scorecard article; its argument that traditional financial measures alone can mislead on improvement and innovation."
+  },
+  {
+    "n": 5,
+    "title": "The FAST Standard",
+    "publisher": "FAST Standard Organisation",
+    "url": "https://www.fast-standard.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. FAST stands for Flexible, Appropriate, Structured and Transparent; a modelling standard maintained by a UK not-for-profit; the downloadable version is 02c, dated July 2019."
+  },
+  {
+    "n": 6,
+    "title": "Financial Modelling Code",
+    "publisher": "ICAEW",
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted; copyright ICAEW 2024). Separate inputs, calculations and outputs; logic flows from inputs to outputs; inputs marked by fill colour; consistent formulas; equality checks with a tolerance; a master check visible on every sheet; data validation; avoid hardcoding."
+  },
+  {
+    "n": 7,
+    "title": "SaaS Metrics 2.0: A Guide to Measuring and Improving What Matters",
+    "publisher": "David Skok, For Entrepreneurs",
+    "url": "https://www.forentrepreneurs.com/saas-metrics-2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rules of thumb from the author: the best SaaS businesses have LTV to CAC above 3; many recover CAC in 5 to 7 months, and beyond 12 months profitability is weak; net new MRR from new, expansion and churned MRR; negative churn."
+  },
+  {
+    "n": 8,
+    "title": "The Rule of 40% For a Healthy SaaS Company (3 February 2015)",
+    "publisher": "Brad Feld (author's blog)",
+    "url": "https://feld.com/archives/2015/02/rule-40-healthy-saas-company/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A SaaS company's growth rate plus profit margin should be at least 40%; growth measured as year-over-year MRR growth; EBITDA as the baseline profit measure."
+  },
+  {
+    "n": 9,
+    "title": "2025 B2B SaaS Retention Benchmarks (Research Brief 32)",
+    "publisher": "SaaS Capital",
+    "url": "https://www.saas-capital.com/wp-content/uploads/2025/09/RB32WS1-2025-B2B-SaaS-Retention-Benchmarks.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). 14th annual survey of more than 1,000 private B2B SaaS companies: median net revenue retention 101% and gross revenue retention 91%; month-to-month contracts 100% and 89%; multi-year contracts 103% and 94%; ACV above 250,000 dollars shows 95% median GRR; excludes companies under 1 million dollars ARR; NRR formula is December MRR from customers who were customers a year earlier divided by total MRR a year earlier, and GRR excludes upsells, cross-sells and price increases so cannot exceed 100%."
+  },
+  {
+    "n": 10,
+    "title": "Survey: Forecasting Services to Remain in Demand in 2021 (press release, 8 December 2020)",
+    "publisher": "Association for Financial Professionals",
+    "url": "https://www.financialprofessionals.org/about/learn-more/press-releases/Details/survey-forecasting-services-to-remain-in-demand-in-2021",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2020 AFP FP&A Survey (484 responses, August 2020): FP&A still spends half its forecast time gathering and preparing data, as a decade earlier; 23% of teams forecast daily or weekly and 56% monthly."
+  },
+  {
+    "n": 11,
+    "title": "Gartner Survey Shows Finance AI Adoption Remains Steady in 2025 (18 November 2025)",
+    "publisher": "Gartner",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-11-18-gartner-survey-shows-finance-ai-adoption-remains-steady-in-2025",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. 59% of finance leaders report using AI in finance (183 respondents), against 58% in 2024; top uses knowledge management 49%, accounts payable automation 37%, error and anomaly detection 34%."
+  },
+  {
+    "n": 12,
+    "title": "Billing analytics",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/billing/subscriptions/analytics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stripe's MRR is the monthly-normalised value of active and past-due subscriptions, excluding tax, free plans and metered products; trials excluded; cancelled or unpaid subscriptions count as churn; discount treatment is configurable; MRR movement and subscriber churn definitions; LTV as ARPU divided by churn rate; prebuilt reports use UTC so totals may differ from charts."
+  },
+  {
+    "n": 13,
+    "title": "IFRS 15 Revenue from Contracts with Customers",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. IFRS 15 applies from 1 January 2018; five steps from identifying the contract to recognising revenue as each performance obligation is satisfied; issued in May 2014 alongside FASB Topic 606."
+  },
+  {
+    "n": 14,
+    "title": "IFRS 18 Presentation and Disclosure in Financial Statements",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Issued April 2024, effective for annual periods beginning on or after 1 January 2027, replaces IAS 1; new subtotals for operating profit and profit before financing and income taxes; disclosure of management-defined performance measures."
+  },
+  {
+    "n": 15,
+    "title": "FRS 102 Explainer: a summary of the Periodic Review 2024 changes for financial statements users (June 2026)",
+    "publisher": "Financial Reporting Council (UK)",
+    "url": "https://www.frc.org.uk/docs/9461/html/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 30 June 2026). Most amendments apply to periods beginning on or after 1 January 2026; most leases move onto the lessee's balance sheet; rent expense falls while depreciation and interest rise; EBITDA and other key metrics may change; five-step revenue model."
+  },
+  {
+    "n": 16,
+    "title": "IFRS for SMEs Accounting Standard",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/ifrs-for-smes/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2025 edition (updated February 2025) is effective for periods beginning on or after 1 January 2027; early adoption allowed."
+  },
+  {
+    "n": 17,
+    "title": "Get started with Copilot in Excel",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/get-started-with-copilot-in-excel-d7110502-0334-4b4f-a175-a73abdfc118a",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Copilot in Excel can edit worksheets, create formulas, charts and PivotTables, import data from other workbooks and run in edit, plan and chat modes; it needs Copilot in the Microsoft 365 subscription; changes show live and the user stays in control."
+  },
+  {
+    "n": 18,
+    "title": "How to create a cash flow forecast in 4 steps",
+    "publisher": "British Business Bank",
+    "url": "https://www.british-business-bank.co.uk/business-guidance/guidance-articles/finance/how-to-create-a-cash-flow-forecast-in-4-steps",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. Plan at least as far ahead as the cash flow cycle; record sales when cash is expected in the bank; include non-sales receipts; carry a running total; a sustained negative balance signals a working capital need."
+  },
+  {
+    "n": 19,
+    "title": "Cash flow calculator",
+    "publisher": "BDC (Business Development Bank of Canada)",
+    "url": "https://www.bdc.ca/en/articles-tools/entrepreneur-toolkit/templates-business-guides/cash-flow-calculator",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A free Excel template from BDC, a federal Crown corporation, with a 13-week version for short-term planning and a 12-month version. Listed as a source to check in Canada."
+  },
+  {
+    "n": 20,
+    "title": "Cash flow",
+    "publisher": "business.gov.au (Australian Government)",
+    "url": "https://business.gov.au/finance/cash-flow",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Australian Government's small business pages on managing cash flow, with a cash flow statement template and guide. Listed as a source to check in Australia."
+  },
+  {
+    "n": 21,
+    "title": "quickbooks-online-mcp-server",
+    "publisher": "Intuit (GitHub)",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server for QuickBooks Online under Intuit's GitHub organisation with read-only reports (balance sheet, profit and loss, cash flow, trial balance, general ledger, aged receivables and payables); write, update and delete tools can be switched off with environment flags; sandbox first."
+  },
+  {
+    "n": 22,
+    "title": "xero-mcp-server",
+    "publisher": "Xero (XeroAPI on GitHub)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Xero's MCP server with read tools for profit and loss, balance sheet, trial balance, aged receivables and payables, invoices and bank transactions, plus write tools; connections made after 29 April 2026 use granular scopes."
+  },
+  {
+    "n": 23,
+    "title": "United States Small Business Insights",
+    "publisher": "Xero",
+    "url": "https://www.xero.com/us/resources/small-business-insights/latest-united-states/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. September 2026 quarter: US small businesses waited an average of 29.7 days to be paid and were paid 8.6 days late; Xero customer data."
+  },
+  {
+    "n": 24,
+    "title": "The Institute of Chartered Accountants of India",
+    "publisher": "ICAI",
+    "url": "https://www.icai.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ICAI publishes accounting and audit standards in India. Listed as a source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 25,
+    "title": "Income Tax Department e-filing portal",
+    "publisher": "Income Tax Department, Ministry of Finance, Government of India",
+    "url": "https://www.incometax.gov.in/iec/foportal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. India's official income tax portal. Listed as a source to check in India for tax rates used in forecasts; no detail given in the kit."
+  },
+  {
+    "n": 26,
+    "title": "Keeping records",
+    "publisher": "Canada Revenue Agency",
+    "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (modified 30 June 2026). The Canada Revenue Agency's business pages, the official tax source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 27,
+    "title": "Overview of record-keeping rules for business",
+    "publisher": "Australian Taxation Office",
+    "url": "https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/record-keeping-for-business/overview-of-record-keeping-rules-for-business",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. The Australian Taxation Office's business pages, the official tax source to check in Australia; no detail given in the kit."
+  }
+]

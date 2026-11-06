@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Get started with a Business Profile for your restaurant",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/14189260?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Restaurant features as of Nov 2026: menu editor, menu link and menu photos; Order with Google and preferred order provider; Reserve with Google bookings and waitlists; attributes; photos; posts; review replies; insights including menu clicks and bookings"
+  },
+  {
+    "n": 2,
+    "title": "About the menu editor",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/9455840",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Structured menus with sections, items, descriptions and prices; menu link set separately; AI menu creation from a photo or PDF is experimental and needs Google's Generative AI terms; Google may transcribe menus from the website (editable, opt-out); changes take 24 to 48 hours; multiple profiles need the API; outdated customer menu photos can be flagged"
+  },
+  {
+    "n": 3,
+    "title": "Reserve with Google for Business Profiles",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7475773",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Connect a booking provider from Bookings; providers show on the profile within a week; the provider may charge; waitlists are for restaurants and need a Reserve with Google provider; performance data is not available for custom links"
+  },
+  {
+    "n": 4,
+    "title": "Manage your hotel's details",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/9177958",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hotel prices and booking links come from Google Hotel Ads and free booking links; hotel class is set by Google; hotels cannot edit business hours; verified owners can edit amenities; attributes cannot be updated by spreadsheet upload"
+  },
+  {
+    "n": 5,
+    "title": "About hotel free booking links",
+    "publisher": "Google Hotel Center Help",
+    "url": "https://support.google.com/hotelprices/answer/10472393?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free booking links are unpaid, with no click cost, and bids do not affect their ranking; join through Hotel Center or a connectivity partner; ranking signals include the history of price accuracy"
+  },
+  {
+    "n": 6,
+    "title": "Price Accuracy Policy",
+    "publisher": "Google Hotel Center Help",
+    "url": "https://support.google.com/hotelprices/answer/6064419?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The booking page total must match Google's total for the chosen dates, room and guests, including all mandatory charges such as resort fees; optional extras not included by default; At Risk or Failed scores turn off ads and free booking links; persistent problems can suspend a hotel or account; appeals within six months"
+  },
+  {
+    "n": 7,
+    "title": "How we work",
+    "publisher": "Booking.com",
+    "url": "https://www.booking.com/content/how_we_work.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (version of 31 May 2025; a new version applies from 10 December 2026). Commission charged after the stay; Preferred Partner Programme pays higher commission; default sort factors include click-through, bookings, cancellations, review scores, price, commission and Genius or Preferred status; reviews only after a stay, accepted within three months of checkout, may stop showing after 36 months; properties may reply"
+  },
+  {
+    "n": 8,
+    "title": "Fake engagement policy",
+    "publisher": "Google Maps User Contributed Content Policy Help",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Businesses may ask for genuine reviews but may not offer incentives, discourage negative reviews, ask only satisfied customers, pressure customers on the premises, set staff quotas, ask for specific content, or post with a conflict of interest; violating content is removed and accounts can be restricted or terminated"
+  },
+  {
+    "n": 9,
+    "title": "Tips to get more reviews and reply to them",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474122",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ask with a link or QR code; incentives are strictly prohibited; replies should be short, specific, polite and not promotional; no private information or personal attacks; acknowledge real mistakes and move complex issues offline"
+  },
+  {
+    "n": 10,
+    "title": "Federal Trade Commission announces final rule banning fake reviews and testimonials",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Announced 14 August 2024: bans fake or AI-generated reviews, incentives conditioned on sentiment, undisclosed insider reviews, company-controlled review websites, review suppression by threats or intimidation, and fake social media indicators; civil penalties for knowing violators"
+  },
+  {
+    "n": 11,
+    "title": "Short guide for businesses publishing consumer reviews (CMA208)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/fake-reviews-cma208/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 4 April 2025). Bans fake reviews, concealed incentivised reviews, false or misleading review information and commissioning fake reviews; publishers need a policy, a risk assessment, detection processes and regular review"
+  },
+  {
+    "n": 12,
+    "title": "Unfair commercial practices",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-commercial-practices/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (checked by the EU 28/04/2026). Traders publishing reviews must say how they ensure reviews come from real consumers; altering reviews and paying for fake reviews or endorsements are prohibited"
+  },
+  {
+    "n": 13,
+    "title": "Rule on Unfair or Deceptive Fees: frequently asked questions",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/rule-unfair-or-deceptive-fees-frequently-asked-questions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (May 2025). Effective 12 May 2025 for live-event tickets and short-term lodging including hotels, vacation rentals, platforms and travel agents; total price including mandatory fees such as resort fees shown upfront and most prominently; only government charges, shipping and optional add-ons excluded; ads with a price must show the total; restaurants not mentioned"
+  },
+  {
+    "n": 14,
+    "title": "Providing clear and accurate information about prices: summary (CMA209)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (summary added 7 January 2026; guidance first published 18 November 2025). Invitations to purchase must show the total price including mandatory charges; optional charges disclosed but may be separate; from prices include mandatory charges; pay now and pay locally shown separately; fines up to 10% of turnover or GBP 300,000, whichever is greater"
+  },
+  {
+    "n": 15,
+    "title": "Price transparency (CMA209), full guidance PDF",
+    "publisher": "Competition and Markets Authority",
+    "url": "https://assets.publishing.service.gov.uk/media/6a3a92e333bc5beefd3c47b0/CMA209_Unfair_commercial_practices__price_transparency_13.2.26__2_.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted locally). Paragraph 4.4 lists mandatory charges including booking fees, routine cleaning fees, mandatory cover or service charges at a restaurant, and resort fees and local taxes payable at hotels; footnote 35: refundable hotel deposits or pre-authorisations are not mandatory charges"
+  },
+  {
+    "n": 16,
+    "title": "California's honest pricing law (SB 478): hidden fees",
+    "publisher": "California Attorney General",
+    "url": "https://oag.ca.gov/hiddenfees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In effect from 1 July 2024 and amended by SB 1524: restaurants and bars may charge mandatory fees if clearly and conspicuously displayed wherever prices appear; voluntary tips are not affected; government taxes, shipping and optional fees may be excluded"
+  },
+  {
+    "n": 17,
+    "title": "Pricing and payments",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (checked by the EU 27/01/2026). Consumers must be told the total price including all taxes and additional charges; paid extras need explicit opt-in, not pre-ticked boxes; limits on card surcharges"
+  },
+  {
+    "n": 18,
+    "title": "Distributing tips fairly: statutory code of practice",
+    "publisher": "Department for Business and Trade, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/distributing-tips-fairly-statutory-code-of-practice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 29 July 2024). The Employment (Allocation of Tips) Act 2023 in force from 1 October 2024: tips, gratuities and service charges passed to workers without deductions; England, Scotland and Wales"
+  },
+  {
+    "n": 19,
+    "title": "Allergen guidance for food businesses",
+    "publisher": "Food Standards Agency, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (publication page first published 2 April 2020, updated 17 July 2026). The 14 allergens; non-prepacked food: information for every item, written or verbal with a clearly visible written notice; written plus conversation is best practice; PPDS full ingredients label; distance selling before purchase and at delivery; free-from claims need strict controls"
+  },
+  {
+    "n": 20,
+    "title": "Food allergies: what you need to know",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (content current as of 11 March 2026). Nine major food allergens; sesame added by the FASTER Act effective 1 January 2023; FALCPA labelling does not cover food wrapped after the customer orders; enforcement excludes most unpackaged food-service food"
+  },
+  {
+    "n": 21,
+    "title": "Food information to consumers: legislation",
+    "publisher": "European Commission",
+    "url": "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/food-information-consumers-legislation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EU) No 1169/2011 requires allergen information for non-prepacked foods, including in restaurants and cafes; it applied from 13 December 2014"
+  },
+  {
+    "n": 22,
+    "title": "Menu labeling requirements",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/menu-labeling-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (content current as of 13 December 2023). Chains with 20 or more locations show calories on menus and menu boards, give written nutrition information on request with two required statements; compliance from 7 May 2018"
+  },
+  {
+    "n": 23,
+    "title": "Calorie labelling in the out of home sector",
+    "publisher": "UK Government, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/calorie-labelling-in-the-out-of-home-sector",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 17 September 2021). The Calorie Labelling (Out of Home Sector) (England) Regulations 2021 came into force on 6 April 2022; scope details are in the linked implementation guidance (not opened)"
+  },
+  {
+    "n": 24,
+    "title": "CAP Code section 18: Alcohol",
+    "publisher": "Advertising Standards Authority / CAP",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/18.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rules 18.1 to 18.24: no particular appeal to under-18s; media with over 25% under-18 audience excluded; people drinking must be and seem 25 or over; no social or sexual success, daring, driving or health claims; only low-alcohol, reduced alcohol and reduced energy nutrition claims; no strength emphasis; promotions must not encourage excessive drinking"
+  },
+  {
+    "n": 25,
+    "title": "Advertising FAQs (alcohol beverages)",
+    "publisher": "Alcohol and Tobacco Tax and Trade Bureau",
+    "url": "https://www.ttb.gov/faqs/alcohol?tid=8",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first 100,000 characters read). Ads include menus, wine cards, shelf talkers, websites, social media and paid influencer posts; mandatory responsible advertiser name and city and state or other contact, class or type, and alcohol content for spirits; clean with health language can mislead; listing retailers can raise tied-house issues; state rules also apply"
+  },
+  {
+    "n": 26,
+    "title": "Codes of practice",
+    "publisher": "The Portman Group",
+    "url": "https://www.portmangroup.org.uk/codes-of-practice/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Code of Practice on the Naming, Packaging and Promotion of Alcoholic Drinks, sixth edition (updated 2019; amended PDF 2023) covering naming, packaging, sponsorship, point of sale and merchandising; Sponsorship Code from 2014; applies to UK-targeted alcohol marketing not regulated by the ASA or Ofcom"
+  },
+  {
+    "n": 27,
+    "title": "Alcohol licensing",
+    "publisher": "UK Government, GOV.UK",
+    "url": "https://www.gov.uk/guidance/alcohol-licensing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 8 August 2025). Mandatory licensing conditions include a ban on irresponsible promotions, free drinking water, smaller measures, an age verification policy, and the 2014 ban on sales below duty plus VAT"
+  },
+  {
+    "n": 28,
+    "title": "Reviews, Reputation, and Revenue: The Case of Yelp.com (HBS Working Paper 12-016)",
+    "publisher": "Harvard Business School, via RePEc EconPapers",
+    "url": "https://econpapers.repec.org/RePEc:hbs:wpaper:12-016",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Michael Luca, September 2011, revised March 2016: a one-star increase in Yelp rating leads to a 5 to 9 percent revenue increase, driven by independent restaurants; no effect for chains"
+  },
+  {
+    "n": 29,
+    "title": "The Impact of Social Media on Lodging Performance",
+    "publisher": "Cornell University Center for Hospitality Research (eCommons)",
+    "url": "https://ecommons.cornell.edu/handle/1813/71194",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chris Anderson, 1 November 2012: a one-point rise on a five-point review scale lets a hotel raise price about 11.2% at the same occupancy (Travelocity data); a 1% higher reputation score goes with up to 0.89% ADR, 0.54% occupancy and 1.42% RevPAR (ReviewPro and STR data)"
+  }
+]

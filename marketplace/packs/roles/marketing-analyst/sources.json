@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "[GA4] Event naming rules",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/13316687",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Event and parameter names are case sensitive, start with a letter and use letters, numbers and underscores; reserved names and prefixes (_, firebase_, ga_, google_, gtag.)."
+  },
+  {
+    "n": 2,
+    "title": "[GA4] Event collection limits",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9267744",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Event and parameter names 40 characters; parameter values 100 (page_title 300, page_referrer 420, page_location 1,000); 25 parameters per event; 25 user properties; key events with names over 40 characters are not reported as key events."
+  },
+  {
+    "n": 3,
+    "title": "Recommended events (GA4 events reference)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/analytics/devguides/collection/ga4/reference/events",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommended event names for all businesses, online sales and lead generation (generate_lead, qualify_lead, working_lead, disqualify_lead, close_convert_lead, close_unconvert_lead); purchase needs transaction_id, value excluding shipping and tax, currency when value is set, and items."
+  },
+  {
+    "n": 4,
+    "title": "[GA4] About key events",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/13965727",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Key events defined; Google Ads conversions are created from key events and shared back to Analytics; from 15 June 2026 Consent Mode (in Google Ads) is the single control for Google Ads cookies and identifiers, replacing the Google signals setting for this purpose."
+  },
+  {
+    "n": 5,
+    "title": "[GA4] URL builders: Collect campaign data with custom URLs",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10917952",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Supported UTM parameters; always use utm_source, utm_medium and utm_campaign; utm_id and utm_source_platform recommended; utm_creative_format and utm_marketing_tactic not currently reported; values are case sensitive and lowercase is recommended; missing values show as (not set)."
+  },
+  {
+    "n": 6,
+    "title": "[GA4] Default channel group",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9756891",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Channel rules: paid regex ^(.*cp.*|ppc|retargeting|paid.*)$; Email, Referral, Affiliates, Display, Organic Social and Direct conditions; Unassigned when no rule matches; rules not case sensitive; AI Assistant channel (medium ai-assistant), excluding Google AI Overviews and AI Mode."
+  },
+  {
+    "n": 7,
+    "title": "[GA4] Identify unwanted referrals",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10327750",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Exclude domains such as payment processors from referral credit; up to 50 per web stream; Editor role; automatic self-referral detection for own domains and linked cross-domain visits."
+  },
+  {
+    "n": 8,
+    "title": "[GA4] Get started with attribution (attribution models)",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Three models (data-driven attribution, paid and organic last click, Google paid channels last click); first click, linear, time decay and position-based removed November 2023; how data-driven attribution compares exposed and similar holdback users; direct visits get no credit unless the whole path is direct."
+  },
+  {
+    "n": 9,
+    "title": "[GA4] Select attribution settings",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10597962",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reporting model changes apply to historical and future data; lookback 30 days by default (or 7) for first_visit and first_open, 90 days by default (or 30 or 60) for other key events, applied going forward; GA4 reports default to paid and organic channels, Google Ads reports to Google paid channels."
+  },
+  {
+    "n": 10,
+    "title": "[GA4] Data retention",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/7667196",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard properties keep user- and event-level data for 2 or 14 months; 360 adds 26, 38 or 50 months for event data; the setting affects explorations and funnel reports only."
+  },
+  {
+    "n": 11,
+    "title": "[GA4] BigQuery Export",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9358801",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Standard properties have a daily export limit of 1 million events; streaming export is best-effort; daily tables can update for up to two days; use the daily export for attribution; free BigQuery sandbox with charges beyond its limits."
+  },
+  {
+    "n": 12,
+    "title": "[GA4] Behavioral modeling for consent mode",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/11161109",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prerequisites: advanced consent mode, at least 1,000 events a day with analytics_storage denied for at least 7 days, and at least 1,000 daily users with consent granted on 7 of the previous 28 days; Blended reporting identity; modelled data not in BigQuery export or retention reports."
+  },
+  {
+    "n": 13,
+    "title": "Consent mode overview",
+    "publisher": "Google for Developers (Tag Platform)",
+    "url": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. The four consent types (ad_storage, analytics_storage, ad_user_data, ad_personalization); basic implementation blocks tags until consent; advanced sends cookieless pings while denied and allows advertiser-specific modelling."
+  },
+  {
+    "n": 14,
+    "title": "Data protection and online privacy (cookies)",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last checked by the EU 05/08/2026. Websites must get consent before installing cookies; exemptions for cookies used only to transmit a communication or strictly needed for a service the user requested."
+  },
+  {
+    "n": 15,
+    "title": "Data discrepancies: Factors and troubleshooting",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/7457111",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Why Google Ads and other tools differ: conversions reported on the ad interaction date, 24 to 48 hour sync, conversions up to 90 days after the click, lookback windows, count settings, primary and secondary actions, modelled cross-device, view-through outside the Conversions column, invalid traffic, Ads counting only its own interactions."
+  },
+  {
+    "n": 16,
+    "title": "About Conversion Lift",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/12003020",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. User-based and geography-based Conversion Lift; reported metrics such as incremental conversions, iCPA and iROAS; not available for all Google Ads accounts."
+  },
+  {
+    "n": 17,
+    "title": "Ads MCP server tools: A/B tests and conversion lift studies",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-tools-abtests-and-conversion-lift-studies.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Meta ads MCP server tools to create conversion lift studies and read their status and results, plus A/B test create, read and update tools and an eligibility check."
+  },
+  {
+    "n": 18,
+    "title": "Looker Studio is now Data Studio",
+    "publisher": "Google Cloud Blog",
+    "url": "https://cloud.google.com/blog/products/data-analytics/looker-studio-is-data-studio",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 11 April 2026. Looker Studio renamed Data Studio; free Data Studio and paid Data Studio Pro; existing reports and data sources moved over with no action."
+  },
+  {
+    "n": 19,
+    "title": "Incremental Clicks Impact of Search Advertising (Chan, Yuan, Koehler and Kumar, 2011)",
+    "publisher": "Google Research",
+    "url": "https://research.google/pubs/incremental-clicks-impact-of-search-advertising/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Over 400 search ads pause studies; on average 89% of paid clicks were not replaced by organic clicks when ads were paused; modelled estimate averaged across verticals."
+  },
+  {
+    "n": 20,
+    "title": "Measuring Ad Effectiveness Using Geo Experiments (Vaver and Koehler, 2011)",
+    "publisher": "Google Research",
+    "url": "https://research.google/pubs/measuring-ad-effectiveness-using-geo-experiments/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Geo experiments randomly assign non-overlapping regions to control or treatment; conceptually simple and easy to interpret."
+  },
+  {
+    "n": 21,
+    "title": "Inferring causal impact using Bayesian structural time-series models (Brodersen, Gallusser, Koehler, Remy and Scott, 2015)",
+    "publisher": "Google Research (Annals of Applied Statistics 9: 247-274)",
+    "url": "https://research.google/pubs/inferring-causal-impact-using-bayesian-structural-time-series-models/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CausalImpact: a state-space model that predicts the counterfactual from control time series (synthetic controls) when a randomised experiment is not available; R package."
+  },
+  {
+    "n": 22,
+    "title": "The Unfavorable Economics of Measuring the Returns to Advertising (Lewis and Rao, 2015)",
+    "publisher": "The Quarterly Journal of Economics 130(4): 1941-1973",
+    "url": "https://academic.oup.com/qje/article/130/4/1941/1916340",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Abstract read on the publisher page: 25 large field experiments; coefficient of variation of individual sales of about 10 is common; informative experiments can need more than 10 million person-weeks; median confidence interval on ROI over 100 percentage points wide."
+  },
+  {
+    "n": 23,
+    "title": "Close Enough? A Large-Scale Exploration of Non-Experimental Approaches to Advertising Measurement (Gordon, Moakler and Zettelmeyer)",
+    "publisher": "arXiv (2201.07055, revised October 2022)",
+    "url": "https://arxiv.org/abs/2201.07055",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 663 randomised experiments at Facebook; median experimental lifts 29%, 18% and 5% (upper, middle, lower funnel); double machine learning estimated 83%, 58%, 24% and stratified propensity score matching 173%, 176%, 64%."
+  },
+  {
+    "n": 24,
+    "title": "Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects (Jin, Wang, Sun, Chan and Koehler, 2017)",
+    "publisher": "Google Research",
+    "url": "https://research.google/pubs/bayesian-methods-for-media-mix-modeling-with-carryover-and-shape-effects/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MMM with carryover and diminishing-returns shape; Bayesian priors; with small samples priors drive the posterior and can bias estimates; optimal media mix has high variance."
+  },
+  {
+    "n": 25,
+    "title": "About the Meridian project",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/meridian/docs/basics/about-the-project",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Open-source Bayesian MMM for causal estimates; geo-level data; reach and frequency inputs; priors from business knowledge; controls such as Google Query Volume; outputs ROI, response curves and budget scenarios."
+  },
+  {
+    "n": 26,
+    "title": "ROI priors and calibration (Meridian)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/meridian/docs/advanced-modeling/roi-priors-and-calibration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated page. Turning experiments into ROI priors (CalibrationBuilder); MMM counterfactual is zero spend, so reduced-spend tests do not map directly; check prior against posterior."
+  },
+  {
+    "n": 27,
+    "title": "Analyst's Guide to MMM (Robyn)",
+    "publisher": "Meta Open Source",
+    "url": "https://facebookexperimental.github.io/Robyn/docs/analysts-guide-to-MMM/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Footer 2024. At least two years of weekly data (four to five if monthly); about one variable per ten observations; exposure over spend; geometric adstock ranges (TV 0.3-0.8, OOH/print/radio 0.1-0.4, digital 0-0.3); Hill saturation; ridge regression; NRMSE and DECOMP.RSSD; calibrate with lift tests; analyst selects the model."
+  },
+  {
+    "n": 28,
+    "title": "GeoLift (GitHub repository)",
+    "publisher": "Meta Open Source",
+    "url": "https://github.com/facebookincubator/GeoLift",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Geo-level lift measurement with synthetic control methods; market selection with power calculators; inference and plots; requires R 4.0 or newer."
+  },
+  {
+    "n": 29,
+    "title": "PyMC-Marketing",
+    "publisher": "PyMC Labs",
+    "url": "https://www.pymc-marketing.io/en/stable/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open-source (Apache-2.0) Python library: MMM with adstock, saturation, lift-test calibration and budget optimisation; customer lifetime value models."
+  },
+  {
+    "n": 30,
+    "title": "Google Analytics MCP server (GitHub repository)",
+    "publisher": "Google Analytics (googleanalytics on GitHub)",
+    "url": "https://github.com/googleanalytics/google-analytics-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server for Google Analytics APIs; reporting, funnel, realtime and admin read tools; write tools (property annotations, custom dimensions, key events) only with --allow-write and the analytics.edit scope; Apache-2.0."
+  }
+]

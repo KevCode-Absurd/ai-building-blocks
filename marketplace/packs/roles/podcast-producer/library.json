@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "podcast-show-notes-writer",
+    "name": "Podcast show notes writer",
+    "why": "Turns a transcript into a title, summary, key points, links and a call to action, the core of the show-notes-and-transcript skill."
+  },
+  {
+    "slug": "interview-transcript-trimmer",
+    "name": "Interview transcript trimmer",
+    "why": "Cuts a long interview transcript down to the passages worth using, in the speaker's own words, for picking best moments and clips."
+  },
+  {
+    "slug": "cut-a-raw-recording-and-get-chapters-and-short-clips",
+    "name": "Cut a raw recording and get chapters and short clips",
+    "why": "Gives a timed cut list, chapters and short clips from a raw recording, a good start before checking chapters against Apple and Spotify rules."
+  },
+  {
+    "slug": "cut-chapter-and-clip-a-long-video-into-five-shorts",
+    "name": "Cut, chapter and clip a long video into five shorts",
+    "why": "For video podcasts: a cut list, chapters and five short clips with new first lines from the recording transcript."
+  },
+  {
+    "slug": "video-audio-finishing-plan",
+    "name": "Video audio finishing plan",
+    "why": "Plans voice, music, effects, fades and mix checks, useful when briefing an editor before the loudness check."
+  },
+  {
+    "slug": "monthly-content-repurposer",
+    "name": "Monthly content repurposer",
+    "why": "Picks last month's best episodes and turns them into posts, emails and clips to approve, alongside the monthly show review."
+  },
+  {
+    "slug": "rough-text-to-article-tidier",
+    "name": "Rough text to article tidier",
+    "why": "Turns an episode transcript into a tidy article with headings, keeping the speakers' words, for a blog version of an episode."
+  },
+  {
+    "slug": "interview-question-set-maker",
+    "name": "Interview question set maker",
+    "why": "Builds structured question sets; adapt its method for guest questions with follow-ups in the episode plan."
+  },
+  {
+    "slug": "suno-song-and-music-bed-prompt-writer",
+    "name": "Suno song and music bed prompt writer",
+    "why": "Writes prompts for original intro music and beds; check the tool's licence terms and log the track in the rights log."
+  },
+  {
+    "slug": "elevenlabs-spoken-script-writer",
+    "name": "ElevenLabs spoken script writer",
+    "why": "Writes spoken scripts for AI voice-over; use only with voices the client owns or has written consent for, and disclose synthetic voices."
+  }
+]

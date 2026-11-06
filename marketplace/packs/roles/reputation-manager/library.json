@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Runs each new batch of public reviews: a checked reply for each, risky ones held for the owner and repeat complaints flagged, as in the weekly review desk."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "Writes a specific public reply to each pasted review and lists the risky ones, matching the review reply desk skill."
+  },
+  {
+    "slug": "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+    "name": "Reply to reviews safely and plan how to get more",
+    "why": "Combines themes, safe replies and an honest review ask plan in one run, a quick start for a new client."
+  },
+  {
+    "slug": "review-reason-spotter",
+    "name": "Review reason spotter",
+    "why": "Ranks why customers choose the business from 20 or more reviews, in their exact words, which feeds the praise side of the repeat complaint report."
+  },
+  {
+    "slug": "monthly-customer-voice-keeper",
+    "name": "Monthly customer voice keeper",
+    "why": "Turns each month's new reviews into new buyer words and doubts for the brand file, alongside the monthly reputation review."
+  },
+  {
+    "slug": "monthly-review-proof-keeper",
+    "name": "Monthly review proof keeper",
+    "why": "Keeps approved review quotes checked and linked to evidence, and lists gaps for the next request, like the proof bank here."
+  },
+  {
+    "slug": "testimonial-request-writer",
+    "name": "Testimonial request writer",
+    "why": "Writes a short testimonial request with three easy questions and a follow-up, the first step of the testimonial and consent library."
+  },
+  {
+    "slug": "turn-a-customer-interview-into-a-case-outline",
+    "name": "Turn a customer interview into a case outline",
+    "why": "Turns one customer interview into a case study outline, an evidence gap list and what the customer must approve before publishing."
+  },
+  {
+    "slug": "turn-reviews-into-a-checked-sales-video-and-cut-list",
+    "name": "Turn reviews into a checked sales video and cut list",
+    "why": "Builds a checked video script from product facts and reviews; use only quotes with permission on file."
+  },
+  {
+    "slug": "build-a-vip-program-for-your-best-customers",
+    "name": "Build a VIP program for your best customers",
+    "why": "Finds the best customers and plans personal touches, a source of advocates who can be asked for testimonials and references."
+  },
+  {
+    "slug": "crisis-response-planner",
+    "name": "Crisis response planner",
+    "why": "Plans the first 30 days after a defect, complaint or failure, for when a review spike comes from a real incident."
+  }
+]

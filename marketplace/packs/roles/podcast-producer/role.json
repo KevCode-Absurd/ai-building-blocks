@@ -1,0 +1,26 @@
+{
+  "id": "podcast-producer",
+  "name": "Podcast producer",
+  "department": "content",
+  "summary": "Plans podcast episodes, writes show notes and picks clips that grow the show. Turns an hour of talk into outputs people find and share.",
+  "aliases": [
+    "podcast",
+    "show notes",
+    "podcast editor",
+    "podcast manager",
+    "episode planning",
+    "podcast launch",
+    "guest booking",
+    "run sheet",
+    "podcast transcripts",
+    "podcast rss feed"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: show formats, episode outlines and run sheets, guest booking and release forms, Apple and Spotify audio, loudness, chapter and transcript rules (dated), RSS basics, YouTube RSS delivery, music rights, sponsor read disclosure for the US, UK and EU, AI voice and voice clone consent, access levels 1 to 3, and 30 checked sources."
+    }
+  ]
+}

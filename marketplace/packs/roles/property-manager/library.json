@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "prepare-a-property-maintenance-handover",
+    "name": "Prepare a property maintenance handover",
+    "why": "Turns open repairs into a job-by-job handover with access notes and overdue decisions, the same output as the repairs and compliance log skill when someone takes over."
+  },
+  {
+    "slug": "property-maintenance-evidence-review-assistant",
+    "name": "Property maintenance evidence review assistant",
+    "why": "Checks repair tickets and closure evidence, matching the 'close with evidence' step before a job leaves the log."
+  },
+  {
+    "slug": "payment-reminder-letter-writer",
+    "name": "Payment reminder letter writer",
+    "why": "Writes a reminder that keeps goodwill, a useful starting point for the friendly first rent reminder before any formal letter."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a reply to an unhappy tenant or owner for promises the landlord has not approved before it gets the landlord's yes."
+  },
+  {
+    "slug": "handover-note-writer",
+    "name": "Handover note writer",
+    "why": "Writes a note the next person can run from on day one, for when a landlord goes away or a portfolio changes hands."
+  },
+  {
+    "slug": "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+    "name": "Build a weekly KPI report with a forecast and dashboard",
+    "why": "A rerunnable report and dashboard for agents managing many owners, extending the monthly owner report."
+  },
+  {
+    "slug": "prepare-questions-for-a-property-viewing",
+    "name": "Prepare questions for a property viewing",
+    "why": "Builds the viewing brief that feeds the 'questions before an offer' step of the deal numbers skill."
+  },
+  {
+    "slug": "bad-year-plan-stress-tester",
+    "name": "Bad year plan stress tester",
+    "why": "Runs bad-year tests on a whole plan, a wider version of the four stress tests used on each rental deal."
+  },
+  {
+    "slug": "floating-rate-repricing-planner",
+    "name": "Floating rate repricing planner",
+    "why": "Shows the extra interest a rate rise adds loan by loan, useful for a landlord with several variable-rate mortgages."
+  },
+  {
+    "slug": "price-against-value-checker",
+    "name": "Price against value checker",
+    "why": "Sets a walk-away price against a value range, a companion to the deal worksheet before an offer."
+  },
+  {
+    "slug": "self-assessment-tax-return-checklist",
+    "name": "Self-assessment tax return checklist",
+    "why": "Lists the records a UK landlord gathers and the questions for their accountant, without giving tax rulings."
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "checked": "2026-11-06",
+    "supports": "Self-assessment questions; Who, How and Why; disclosing AI use; E-E-A-T, trust most important, not a direct ranking factor; YMYL"
+  },
+  {
+    "n": 2,
+    "title": "Spam policies for Google web search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-06",
+    "supports": "Definitions and examples of scaled content abuse, site reputation abuse and expired domain abuse"
+  },
+  {
+    "n": 3,
+    "title": "What web creators should know about our March 2024 core update and new spam policies (5 March 2024)",
+    "publisher": "Google Search Central Blog",
+    "url": "https://developers.google.com/search/blog/2024/03/core-update-spam-policies",
+    "checked": "2026-11-06",
+    "supports": "Date the three new spam policies were announced; site reputation abuse enforced from 5 May 2024"
+  },
+  {
+    "n": 4,
+    "title": "Google Search's guidance about AI-generated content (8 February 2023)",
+    "publisher": "Google Search Central Blog",
+    "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+    "checked": "2026-11-06",
+    "supports": "Appropriate AI use is allowed; quality over method; automation to manipulate rankings breaks spam policies; bylines and AI disclosure; do not list AI as author"
+  },
+  {
+    "n": 5,
+    "title": "AI features and your website",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "checked": "2026-11-06",
+    "supports": "AI Overviews and AI Mode: no extra requirements beyond indexing and snippet eligibility; traffic reported in Search Console under Web"
+  },
+  {
+    "n": 6,
+    "title": "Google Search Status Dashboard: ranking incident history",
+    "publisher": "Google",
+    "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
+    "checked": "2026-11-06",
+    "supports": "Dates of 2025 and 2026 core and spam updates"
+  },
+  {
+    "n": 7,
+    "title": "Google users are less likely to click on links when an AI summary appears in the results (22 July 2025)",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+    "checked": "2026-11-06",
+    "supports": "900 US adults, March 2025: 8% vs 15% clicks on traditional results with and without AI summary; 1% on summary links; 18% of searches had a summary; 26% vs 16% sessions ended"
+  },
+  {
+    "n": 8,
+    "title": "B2B Content Marketing Benchmarks, Budgets, and Trends: Outlook for 2025 (9 October 2024)",
+    "publisher": "Content Marketing Institute and MarketingProfs",
+    "url": "https://contentmarketinginstitute.com/b2b-research/b2b-content-marketing-trends-research-2025",
+    "checked": "2026-11-06",
+    "supports": "980 B2B respondents: strategy effectiveness and reasons it falls short; teams; budgets; AI use and trust; measurement problems; best content types and channels"
+  },
+  {
+    "n": 9,
+    "title": "New B2B research finds winning marketing teams are building fundamentals, not just playing with prompts (8 October 2025)",
+    "publisher": "Content Marketing Institute",
+    "url": "https://contentmarketinginstitute.com/press-room/new-b2b-research-finds-winning-marketing-teams-are-building-fundamentals-not-just-playing-with-prompts",
+    "checked": "2026-11-06",
+    "supports": "B2B Content and Marketing Trends: Insights for 2026: about 9 in 10 use AI to produce content, fewer than 4 in 10 say it improved performance; 2026 investment priorities"
+  },
+  {
+    "n": 10,
+    "title": "Blogging Statistics 2026: What 1,042 Content Marketers Told Us About What Works",
+    "publisher": "Orbit Media Studios",
+    "url": "https://www.orbitmedia.com/blog/blogging-statistics/",
+    "checked": "2026-11-06",
+    "supports": "About 14% report strong results (twelve-year low); near-universal AI use with no AI task linked to strong results; original research and formal editing linked to better results (site blocks automated fetching; confirmed in search results)"
+  },
+  {
+    "n": 11,
+    "title": "96.55% of Content Gets No Traffic From Google (Tim Soulo, 1 December 2023)",
+    "publisher": "Ahrefs",
+    "url": "https://ahrefs.com/blog/search-traffic-study/",
+    "checked": "2026-11-06",
+    "supports": "About 14 billion pages: 96.55% zero Google organic traffic, 1.94% get 1-10 visits; reasons: no demand, no backlinks, intent mismatch; estimate caveats"
+  },
+  {
+    "n": 12,
+    "title": "Topics, pillar pages, and subtopic keywords (updated 20 November 2025)",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/content-strategy/pillar-pages-topics-and-subtopics",
+    "checked": "2026-11-06",
+    "supports": "Definitions of topic, pillar page and cluster content; two-way linking; the tool itself does not change SEO"
+  },
+  {
+    "n": 13,
+    "title": "Performance report (Search results): Overview and basic setup",
+    "publisher": "Google Search Console Help",
+    "url": "https://support.google.com/webmasters/answer/7576553?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Clicks, impressions, CTR, average position; dimensions such as query, page, country, device"
+  },
+  {
+    "n": 14,
+    "title": "Mark events as key events",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/13128484?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Key events measure actions important to the business; difference from Google Ads conversions"
+  },
+  {
+    "n": 15,
+    "title": "Email sender guidelines",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://support.google.com/a/answer/81126?hl=en",
+    "checked": "2026-11-06",
+    "supports": "From 1 February 2024: SPF, DKIM, DMARC for bulk senders (over 5,000 a day to Gmail), one-click unsubscribe, spam rate below 0.3%"
+  },
+  {
+    "n": 16,
+    "title": "Protect email privacy in Mail on Mac",
+    "publisher": "Apple Support",
+    "url": "https://support.apple.com/guide/mail/protect-email-privacy-mlhlp1205/mac",
+    "checked": "2026-11-06",
+    "supports": "Mail Privacy Protection hides IP and downloads remote content in the background on arrival, hiding when and how often a message is opened"
+  },
+  {
+    "n": 17,
+    "title": "Everybody Writes: Your New and Improved Go-To Guide to Creating Ridiculously Good Content, 2nd Edition (Ann Handley, October 2022)",
+    "publisher": "Wiley",
+    "url": "https://www.wiley.com/en-us/Everybody+Writes%3A+Your+New+and+Improved+Go-To+Guide+to+Creating+Ridiculously+Good+Content%2C+2nd+Edition-p-9781119854166",
+    "checked": "2026-11-06",
+    "supports": "Handley's book on writing for content marketing: strategy, production, credibility, content types"
+  },
+  {
+    "n": 18,
+    "title": "Content Strategy for the Web, 2nd edition (Kristina Halvorson and Melissa Rach, 2012)",
+    "publisher": "Pearson (New Riders)",
+    "url": "https://www.pearson.com/us/higher-education/program/Halvorson-Content-Strategy-for-the-Web-2nd-Edition/PGM13941.html",
+    "checked": "2026-11-06",
+    "supports": "Treating content as a business asset and fitting content strategy into business strategy"
+  },
+  {
+    "n": 19,
+    "title": "They Ask, You Answer, 2nd Edition (Marcus Sheridan, 2019)",
+    "publisher": "Wiley",
+    "url": "https://www.wiley.com/en-us/They+Ask%2C+You+Answer%3A+A+Revolutionary+Approach+to+Inbound+Sales%2C+Content+Marketing%2C+and+Today%27s+Digital+Consumer%2C+2nd+Edition-p-9781119610144",
+    "checked": "2026-11-06",
+    "supports": "Answering buyers' questions honestly as a content strategy; the pool company story; source of the Big 5 topics"
+  },
+  {
+    "n": 20,
+    "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile) (Kara Pernice, 2017, reviewed 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+    "checked": "2026-11-06",
+    "supports": "Scanning patterns; put key points first; headings that start with the most informative words"
+  },
+  {
+    "n": 21,
+    "title": "How Users Read on the Web (Jakob Nielsen, 1997)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "checked": "2026-11-06",
+    "supports": "79% scanned, 16% read word by word; concise, scannable, objective writing measured better"
+  },
+  {
+    "n": 22,
+    "title": "Unpacking the Progress Making Forces Diagram (Jobs-to-be-Done Radio)",
+    "publisher": "Jobs to be Done / The Re-Wired Group",
+    "url": "https://jobstobedone.org/radio/unpacking-the-progress-making-forces-diagram/",
+    "checked": "2026-11-06",
+    "supports": "Moesta and Spiek's four forces: push, pull, anxiety, habit"
+  },
+  {
+    "n": 23,
+    "title": "7 copywriting research techniques conversion copywriters love (2022)",
+    "publisher": "Copyhackers",
+    "url": "https://copyhackers.com/2022/06/copywriting-research/",
+    "checked": "2026-11-06",
+    "supports": "Customer research methods: interviews, surveys, review mining, heatmaps, thank-you polls, analytics, competitor audits"
+  },
+  {
+    "n": 24,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides",
+    "checked": "2026-11-06",
+    "supports": "Disclosing material connections in creator and influencer content, in the content itself"
+  },
+  {
+    "n": 25,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials (14 August 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Ban on fake reviews and testimonials, including AI-generated ones"
+  }
+]

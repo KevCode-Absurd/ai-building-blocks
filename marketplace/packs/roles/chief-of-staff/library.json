@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "prepare-a-board-decision-brief",
+    "name": "Prepare a board decision brief",
+    "why": "An evidence map, a board update and a review rhythm from company facts, matching the board and investor update skill."
+  },
+  {
+    "slug": "quarterly-strategy-reviewer",
+    "name": "Quarterly strategy reviewer",
+    "why": "Keeps, cuts or changes last quarter's goals and sets dated results for the next, like the quarterly planning workflow."
+  },
+  {
+    "slug": "okr-goal-writer",
+    "name": "Objectives and key results writer",
+    "why": "A quick first draft of objectives with dated, numbered key results before the OKR skill checks baselines and owners."
+  },
+  {
+    "slug": "big-decisions-first-sorter",
+    "name": "Big decisions first sorter",
+    "why": "Sorts a messy plan's open questions so the few hard decisions get a brief, as in the ten-to-three prompt."
+  },
+  {
+    "slug": "decision-checklist-keeper",
+    "name": "Decision checklist keeper",
+    "why": "Records each big decision and how it turned out, the same habit as the decision log."
+  },
+  {
+    "slug": "weekly-meeting-actions-keeper",
+    "name": "Weekly meeting actions keeper",
+    "why": "Minutes, last week's open actions and the next agenda, for the weekly leadership meeting."
+  },
+  {
+    "slug": "executive-work-keeper",
+    "name": "Executive work follow up agent",
+    "why": "Tracks changed commitments and drafts follow-ups from the leader's notes, for the weekly rhythm."
+  },
+  {
+    "slug": "monthly-roles-and-goals-reviewer",
+    "name": "Monthly roles and goals reviewer",
+    "why": "Checks where the leader's month actually went against their goals, a useful input to the monthly review."
+  },
+  {
+    "slug": "weekly-priorities-plan",
+    "name": "Plan a week that puts what matters first",
+    "why": "Turns the quarter's priorities into a protected week, with a Friday review."
+  },
+  {
+    "slug": "prepare-a-small-team-offsite",
+    "name": "Prepare a small team offsite",
+    "why": "A decision-first agenda, pre-read request and action register for a planning day."
+  },
+  {
+    "slug": "team-goals-one-on-ones",
+    "name": "Set team goals, run one-on-ones and settle decisions",
+    "why": "Goals with key results, a one-on-one plan and a way to settle disputes, for leaders setting up their first rhythm."
+  },
+  {
+    "slug": "annual-letter-writer",
+    "name": "Annual letter writer",
+    "why": "A plain yearly letter to the team or owners with honest numbers, the long form of the investor update."
+  },
+  {
+    "slug": "bold-bet-downside-checker",
+    "name": "Bold bet downside checker",
+    "why": "Puts numbers on the worst case of a one-way-door decision before the brief recommends it."
+  }
+]

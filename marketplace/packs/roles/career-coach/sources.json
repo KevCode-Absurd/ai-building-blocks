@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "CV sections",
+    "publisher": "National Careers Service (England)",
+    "url": "https://nationalcareers.service.gov.uk/careers-advice/cv-sections",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sections: contact details, introduction, education, work history, references; tailor to the advert; leave out age, date of birth, marital status and nationality; clear font at size 11 or larger; work history most recent first with 2 to 3 lines using STAR."
+  },
+  {
+    "n": 2,
+    "title": "The STAR method",
+    "publisher": "National Careers Service (England)",
+    "url": "https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-method",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Situation, Task, Action (the steps you personally took), Result (outcome and what you learned); use examples from work, home or volunteering; keep them short; be ready for follow-up questions; link examples to the job description; usable in CVs, cover letters, forms and interviews."
+  },
+  {
+    "n": 3,
+    "title": "Interview advice",
+    "publisher": "National Careers Service (England)",
+    "url": "https://nationalcareers.service.gov.uk/careers-advice/interview-advice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prepare from the job description and STAR examples; confirm the format; prepare your own questions; if offered the job, ask for the offer in writing, confirm start date and notice, and tell the employer your salary expectations before accepting if not yet discussed; ask for feedback if unsuccessful."
+  },
+  {
+    "n": 4,
+    "title": "Create your Europass CV",
+    "publisher": "European Commission (Europass, DG Employment)",
+    "url": "https://europass.europa.eu/en/create-europass-cv",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Europass profile and CV builder in 31 languages; tips: match experience to the vacancy, tailor the About Me section, use clear language and action verbs, list recent experience first, explain long gaps, use a professional email address and add a professional photo."
+  },
+  {
+    "n": 5,
+    "title": "Guidance on candidates' AI usage: how to collaborate with Claude during our hiring process",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/candidate-ai-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A real employer policy: candidates may use AI to refine their own first draft of a resume and answers, not to invent experience; take-home tasks without AI unless allowed; AI encouraged for research and practice; live interviews without AI unless stated."
+  },
+  {
+    "n": 6,
+    "title": "Success Profiles",
+    "publisher": "Cabinet Office, UK Civil Service (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/success-profiles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five elements (behaviours, strengths, ability, experience, technical); not all apply to every role, so check the job description; behaviour examples by grade updated January 2025; first published 18 June 2018, last updated 29 January 2025."
+  },
+  {
+    "n": 7,
+    "title": "A guide to structured interviewing for better hiring practices",
+    "publisher": "Google re:Work",
+    "url": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated March 2026. Behavioural (\"Tell me about a time\") and hypothetical (\"What would you do if\") questions; answers graded on a shared rubric; Google found structured interview scores more predictive of performance than unstructured ones."
+  },
+  {
+    "n": 8,
+    "title": "Revisiting the design of selection systems in light of new findings regarding the validity of widely used predictors (Sackett, Zhang, Berry and Lievens, Industrial and Organizational Psychology 16(3), 2023)",
+    "publisher": "Cambridge University Press",
+    "url": "https://www.cambridge.org/core/journals/industrial-and-organizational-psychology/article/revisiting-the-design-of-selection-systems-in-light-of-new-findings-regarding-the-validity-of-widely-used-predictors/A20984B138319E3D432E643978BF026D",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Structured interviews have the highest mean operational validity of the predictors reviewed (.42), above general cognitive ability (.31), using estimates from Sackett et al. (2022)."
+  },
+  {
+    "n": 9,
+    "title": "BATNA (articles tagged BATNA)",
+    "publisher": "Program on Negotiation, Harvard Law School",
+    "url": "https://www.pon.harvard.edu/tag/batna/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. BATNA, the best alternative to a negotiated agreement, from Getting to Yes by Roger Fisher, William Ury and Bruce Patton; judge any offer against it; do not reveal a weak one; answer questions about alternatives honestly and briefly; in salary talks, assess your alternatives and use objective standards."
+  },
+  {
+    "n": 10,
+    "title": "Working Identity",
+    "publisher": "Herminia Ibarra (author site)",
+    "url": "https://herminiaibarra.com/working-identity/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Second, updated edition 2023, Harvard Business Review Press. Career change works by doing: experimenting with new activities, interacting in new networks and making sense of what emerges, rather than knowing first and acting after."
+  },
+  {
+    "n": 11,
+    "title": "What Color Is Your Parachute?",
+    "publisher": "Penguin Random House (book site)",
+    "url": "https://www.parachutebook.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Richard N. Bolles; popular for more than fifty years; a self-assessment exercise that clarifies seven key dimensions of the work a reader wants."
+  },
+  {
+    "n": 12,
+    "title": "CDI Code of Ethics",
+    "publisher": "Career Development Institute (UK)",
+    "url": "https://www.thecdi.net/about-us/cdi-code-of-ethics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Principles for career development professionals: equity, diversity and inclusion; accountability; autonomy (clients make their own decisions); confidentiality and its limits explained at the start; competence; duty of care; impartiality; transparency; trustworthiness; fitness to practise. Current document named 2024."
+  },
+  {
+    "n": 13,
+    "title": "Job Scams",
+    "publisher": "Federal Trade Commission (US), Consumer Advice",
+    "url": "https://consumer.ftc.gov/articles/job-scams",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated March 2023. Honest employers never charge for a job, training or starter kits; fake cheque and reshipping scams; honest placement firms are usually paid by the employer, so walk away from a coach or placement firm asking for an up-front fee; report at ReportFraud.ftc.gov."
+  },
+  {
+    "n": 14,
+    "title": "Search for jobs confidently and safely",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a9551007",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verification badges on profiles, company pages and job posts; signs of scams (payment requests, cheques, early requests for ID or bank details, passwords, pressure to move apps); do not share national ID, bank or card details or ID copies before a real offer; report and block."
+  },
+  {
+    "n": 15,
+    "title": "Let recruiters know you are open to work",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a507508",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open to Work visible to all members (adds the photo frame), to recruiters only (LinkedIn tries to hide it from Recruiter users at your company but cannot guarantee privacy), or only to you; job preferences; removed automatically if you stop answering recruiters."
+  },
+  {
+    "n": 16,
+    "title": "AI interviews in LinkedIn Hiring Pro",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a8330369",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Early-stage feature for a limited group of hirers: AI-led audio or video screening interviews with questions generated from the job description and edited by the hirer; recorded; each answer rated on match to the ideal answer, supporting detail and clarity, averaged to a 5-point rating; optional for candidates, who are not automatically disqualified for declining; practice interviews available; transcripts on request from the hirer; the hirer makes the decision."
+  },
+  {
+    "n": 17,
+    "title": "Add sections to your profile",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/1284",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Core profile sections include About, Education, Position, Services, Career break and Skills; recommended sections include Featured, Licenses and certifications, Projects and Recommendations."
+  },
+  {
+    "n": 18,
+    "title": "LinkedIn Skill Assessments",
+    "publisher": "LinkedIn Help",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a507663",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Skill Assessments are no longer available; members are told to tag skills to credentials, jobs, projects or education instead."
+  },
+  {
+    "n": 19,
+    "title": "Prohibited Employment Policies/Practices",
+    "publisher": "US Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/prohibited-employment-policiespractices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pre-employment questions should be limited to job qualifications; employers may not ask about disability before an offer; employers should not ask for photographs before an offer; questions revealing protected characteristics should generally be avoided."
+  },
+  {
+    "n": 20,
+    "title": "Pay Transparency",
+    "publisher": "New York State Department of Labor",
+    "url": "https://dol.ny.gov/pay-transparency",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Labor Law Section 194-B: employers with four or more employees must show a pay range (or hourly rate) and job description for advertised jobs, promotions and transfers, and say if commission-based; no retaliation against applicants or employees who ask; complaints to the Division of Labor Standards."
+  },
+  {
+    "n": 21,
+    "title": "EU Pay Transparency Directive: 2026 employer compliance (law-firm summary, 1 July 2026)",
+    "publisher": "Lewis Silkin LLP",
+    "url": "https://www.lewissilkin.com/en/insights/2026/07/01/eu-pay-transparency-directive-2026-employer-compliance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Secondary source, used because the official text on EUR-Lex renders empty to automated fetches and the Commission pages opened had no detail. Transposition deadline 7 June 2026; few member states had fully transposed; applicants get starting pay or a range early enough to negotiate; employers may not ask about pay history; first reports from larger employers expected June 2027."
+  },
+  {
+    "n": 22,
+    "title": "AI Act (regulatory framework for AI)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 19 October 2026. Emotion recognition in workplaces is a banned practice, applying since February 2025; AI for recruitment such as CV-sorting is high-risk, with strict obligations from 2 December 2027 after the AI Omnibus (in force 27 July 2026); transparency rules from August 2026."
+  },
+  {
+    "n": 23,
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "publisher": "NYC Department of Consumer and Worker Protection",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Local Law 144 of 2021: employers and agencies may use an AEDT only after a bias audit within one year, must publish a summary and give candidates notice 10 business days before use; enforced since 5 July 2023; candidates can complain to DCWP."
+  },
+  {
+    "n": 24,
+    "title": "Employee Tenure in 2026",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/news.release/tenure.nr0.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 24 September 2026: median tenure with current employer 4.1 years in January 2026; 3.0 years for ages 25 to 34; 9.6 years for ages 55 to 64."
+  },
+  {
+    "n": 25,
+    "title": "O*NET OnLine",
+    "publisher": "US Department of Labor, Employment and Training Administration (National Center for O*NET Development)",
+    "url": "https://www.onetonline.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Site updated 6 October 2026. Occupation descriptions with tasks, skills, work activities, technology and related data; crosswalks from military codes and other classifications; CC BY 4.0."
+  },
+  {
+    "n": 26,
+    "title": "Occupational Outlook Handbook",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Occupation profiles grouped into 24 categories with 2025 median pay, entry-level education, training and projected growth."
+  },
+  {
+    "n": 27,
+    "title": "Prove your right to work to an employer",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/prove-right-to-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. British and Irish citizens use a passport or other listed documents; others can give a share code from the online service or an eligible document, and the employer cannot refuse a document just because it is not a share code."
+  },
+  {
+    "n": 28,
+    "title": "National Career Service",
+    "publisher": "Ministry of Labour and Employment, Government of India",
+    "url": "https://www.ncs.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. India's official free career and job portal with job search, career counsellors and career tools. Listed as the source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 29,
+    "title": "Job Bank",
+    "publisher": "Government of Canada",
+    "url": "https://www.jobbank.gc.ca/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Canada's official job search, training and career planning service. Listed as the source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 30,
+    "title": "Looking for work",
+    "publisher": "myGov, Australian Government",
+    "url": "https://my.gov.au/en/services/work/looking-for-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Australia's official services page for job search, skills and training and self-employment support. Listed as the source to check in Australia; no detail given in the kit."
+  }
+]

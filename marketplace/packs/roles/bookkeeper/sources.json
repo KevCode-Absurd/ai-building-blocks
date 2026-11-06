@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "The earliest books on bookkeeping",
+    "publisher": "ICAEW Library",
+    "url": "https://www.icaew.com/library/library-collection/historical-accounting-literature/earliest-books-on-bookkeeping",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Luca Pacioli's Summa de Arithmetica (Venice, 1494) held the first printed explanation of double-entry bookkeeping, which described existing Venetian practice rather than inventing it, and shaped accounting texts for about two centuries."
+  },
+  {
+    "n": 2,
+    "title": "Publication 583, Starting a Business and Keeping Records (revised December 2024)",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/publications/p583",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Why records matter; supporting documents for gross receipts, inventory, expenses and assets; proof of payment alone does not prove a deductible cost; electronic storage rules; single-entry versus double-entry systems; cash versus accrual methods; books and tax return use the same method."
+  },
+  {
+    "n": 3,
+    "title": "How long should I keep records?",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 30 June 2026). Retention periods: 3 years generally; 7 years for bad debt or worthless securities claims; 6 years if income over 25% of gross was left out; indefinitely if no return or a fraudulent return; employment tax records at least 4 years."
+  },
+  {
+    "n": 4,
+    "title": "Profit First",
+    "publisher": "Mike Michalowicz (author's site)",
+    "url": "https://mikemichalowicz.com/profit-first/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The author's own description of Profit First: take a set percentage of each sales deposit as profit first, and allocate money across separate accounts for profit, expenses and tax."
+  },
+  {
+    "n": 5,
+    "title": "Fraud Risk Management Guide, Executive Summary",
+    "publisher": "COSO and ACFE",
+    "url": "https://www.coso.org/_files/ugd/3059fc_02c01fde6552479196535bcfee8ea60e.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). COSO's 2013 Internal Control framework has 17 principles under five components (control environment, risk assessment, control activities, information and communication, monitoring activities); principle 8 is considering the potential for fraud; smaller and owner-managed organisations can adapt the guide to their circumstances."
+  },
+  {
+    "n": 6,
+    "title": "Report: 84% of fraudsters show at least one behavioral red flag (Occupational Fraud 2026: A Report to the Nations)",
+    "publisher": "Association of Certified Fraud Examiners",
+    "url": "https://www.acfe.com/about-the-acfe/newsroom-for-media/press-releases/press-release-detail?s=occupational-fraud-2026-a-report-to-the-nations-pr",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 12 May 2026: 2,402 cases in 143 countries; estimated 5% of revenue lost to fraud a year; median loss per case $104,000; typical fraud lasted 12 months before detection; 43% detected by tips; smaller businesses had the highest median losses of any size group."
+  },
+  {
+    "n": 7,
+    "title": "Business records if you're self-employed",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/self-employed-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sole traders and partners keep records of business income and expenses; from the 2024 to 2025 tax year cash basis is the default and traditional accounting needs an opt-out."
+  },
+  {
+    "n": 8,
+    "title": "Business records if you're self-employed: how long to keep your records",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/self-employed-records/how-long-to-keep-your-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Keep records at least 5 years after the 31 January submission deadline of the tax year; shorter rule of 15 months after sending a return that is more than four years late."
+  },
+  {
+    "n": 9,
+    "title": "Running a limited company: company and accounting records",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/running-a-limited-company/company-and-accounting-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What accounting records a UK company keeps; keep them 6 years from the end of the last company financial year they relate to, longer in some cases; HMRC can fine the company 3,000 pounds or a director can be disqualified for not keeping them."
+  },
+  {
+    "n": 10,
+    "title": "Find out if and when you need to use Making Tax Digital for Income Tax",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 26 March 2026). Qualifying income over 50,000 pounds (2024 to 2025): from 6 April 2026; over 30,000 pounds (2025 to 2026): from 6 April 2027; over 20,000 pounds (2026 to 2027): from 6 April 2028; compatible software needed."
+  },
+  {
+    "n": 11,
+    "title": "Record keeping for VAT (VAT Notice 700/21)",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/guidance/record-keeping-for-vat-notice-70021",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 18 March 2024). Keep VAT records generally at least 6 years; Making Tax Digital needs digital records in functional compatible software; data must move by digital links, and copy and paste does not count as a digital link."
+  },
+  {
+    "n": 12,
+    "title": "Who needs to register for money laundering supervision",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/money-laundering-regulations-introduction",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 23 August 2023). HMRC supervises accountancy service providers not supervised by a professional body; the listed professional bodies include the Institute of Certified Bookkeepers and the Institute of Accountants and Bookkeepers."
+  },
+  {
+    "n": 13,
+    "title": "Reconcile an account in QuickBooks Online",
+    "publisher": "Intuit QuickBooks Help",
+    "url": "https://quickbooks.intuit.com/learn-support/en-us/banking-topics/reconcile-accounts-in-quickbooks-online/00/186470",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Enter statement ending date and balance, tick cleared items until the difference is 0.00; optional statement upload for AI-powered reconciliation; accepting an unexplained difference posts a journal entry, so talk to your accountant first; reconcile monthly; reports saved under History by account."
+  },
+  {
+    "n": 14,
+    "title": "Intuit Introduces Ground-Breaking Virtual Team of AI Agents to Fuel Growth for Businesses",
+    "publisher": "Intuit Inc. (investor relations)",
+    "url": "https://investors.intuit.com/news-events/press-releases/detail/1258/intuit-introduces-ground-breaking-virtual-team-of-ai-agents-to-fuel-growth-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 1 July 2025 Intuit began rolling out AI agents in QuickBooks Online in the US, including an Accounting Agent that automates bookkeeping and transaction categorisation and helps with reconciliation."
+  },
+  {
+    "n": 15,
+    "title": "What's new in Auto Bank Reconciliation",
+    "publisher": "Xero Blog",
+    "url": "https://blog.xero.com/product-updates/auto-bank-rec-updates/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (posted 14 August 2026, updated 19 August 2026). JAX-powered auto bank reconciliation is in beta, reconciles only when highly confident, shows how each line was matched (match, rule, memory, prediction or manual) and lets users filter and edit auto-reconciled items; over 100 million transactions reconciled."
+  },
+  {
+    "n": 16,
+    "title": "xero-mcp-server",
+    "publisher": "Xero (XeroAPI on GitHub)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Xero's MCP server: read tools (accounts, contacts, invoices, bank transactions, profit and loss, trial balance, balance sheet, aged receivables and payables) and write tools (create and update invoices, contacts, bank transactions, manual journals, payments); custom connection or bearer token; connections made after 29 April 2026 use granular scopes."
+  },
+  {
+    "n": 17,
+    "title": "quickbooks-online-mcp-server",
+    "publisher": "Intuit (GitHub)",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server for QuickBooks Online under Intuit's GitHub organisation: about 145 tools and 11 read-only reports; OAuth 2.0 via the Intuit Developer Portal; write, update and delete tools can be switched off with environment flags; sandbox recommended for first runs."
+  },
+  {
+    "n": 18,
+    "title": "Payout reconciliation report",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/reports/payout-reconciliation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The report matches each automatic payout to the payments, refunds, disputes and fees it settles; itemised CSV export; payouts are grouped by estimated arrival date, not bank posting date; instant payouts must be reconciled by the user; the Balance report suits manual payouts."
+  },
+  {
+    "n": 19,
+    "title": "Shopify Payments payouts",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Payouts go to a bank account or Shopify Balance; some countries have a minimum payout; payouts can be in a different currency from sales; the Shopify Payments activity report breaks down transactions, fees and payouts by date range and currency."
+  },
+  {
+    "n": 20,
+    "title": "Understanding your Form 1099-K",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 28 October 2026). Payment apps and marketplaces report on Form 1099-K when payments for goods or services exceed 20,000 dollars in more than 200 transactions; they may send forms below that; all business income must be reported whether or not a form arrives."
+  },
+  {
+    "n": 21,
+    "title": "Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026)",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/instructions/i1099mec",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. For tax years beginning after 2025 the threshold for nonemployee compensation on Form 1099-NEC (and 1099-MISC rents and other income) is 2,000 dollars, with possible inflation adjustment from 2027."
+  },
+  {
+    "n": 22,
+    "title": "PTIN requirements for tax return preparers",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/tax-professionals/ptin-requirements-for-tax-return-preparers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 29 October 2026). Anyone paid to prepare or help prepare federal tax returns must have a valid preparer tax identification number (PTIN)."
+  },
+  {
+    "n": 23,
+    "title": "VAT in the Digital Age (ViDA)",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ViDA adopted 11 March 2025, in force 14 April 2025; member states may require domestic e-invoicing under conditions; digital reporting for cross-border B2B supplies from 1 July 2030."
+  },
+  {
+    "n": 24,
+    "title": "How to prepare for the e-invoicing obligation?",
+    "publisher": "Entreprendre.Service-Public.gouv.fr (French government)",
+    "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F39785?lang=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (verified 7 August 2026). In France all companies must be able to receive e-invoices from 1 September 2026; large and mid-sized companies issue from 1 September 2026; SMEs and micro-businesses issue from 1 September 2027; invoices pass through an approved platform (plateforme agréée)."
+  },
+  {
+    "n": 25,
+    "title": "FRS 102 Explainer: a summary of the Periodic Review 2024 changes for financial statements users (June 2026)",
+    "publisher": "Financial Reporting Council (UK)",
+    "url": "https://www.frc.org.uk/docs/9461/html/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 30 June 2026). Most FRS 102 amendments apply to periods beginning on or after 1 January 2026: most leases move onto the lessee's balance sheet, rent expense falls while depreciation and interest rise, and a five-step model governs revenue from contracts with customers."
+  },
+  {
+    "n": 26,
+    "title": "United States Small Business Insights",
+    "publisher": "Xero",
+    "url": "https://www.xero.com/us/resources/small-business-insights/latest-united-states/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. September 2026 quarter: US small businesses waited an average of 29.7 days to be paid and were paid 8.6 days late; based on Xero customer data."
+  },
+  {
+    "n": 27,
+    "title": "Keeping records",
+    "publisher": "Canada Revenue Agency",
+    "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (modified 30 June 2026). The official Canadian page on business, GST/HST and payroll records, formats, backups and how long to keep them. Listed as the source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 28,
+    "title": "Overview of record-keeping rules for business",
+    "publisher": "Australian Taxation Office",
+    "url": "https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/record-keeping-for-business/overview-of-record-keeping-rules-for-business",
+    "checked": "2026-11-06",
+    "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. The official Australian record-keeping rules for business. Listed as the source to check in Australia; no detail given in the kit."
+  },
+  {
+    "n": 29,
+    "title": "Goods and Services Tax (GST) portal",
+    "publisher": "Government of India (GST Network)",
+    "url": "https://www.gst.gov.in/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. India's official GST portal for registration, returns, refunds and due dates. Listed as a source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 30,
+    "title": "Income Tax Department e-filing portal",
+    "publisher": "Income Tax Department, Ministry of Finance, Government of India",
+    "url": "https://www.incometax.gov.in/iec/foportal/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. India's official income tax portal. Listed as a source to check in India; no detail given in the kit."
+  }
+]

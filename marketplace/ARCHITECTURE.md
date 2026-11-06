@@ -141,9 +141,12 @@ While `HOSTED_JOBS` is off this is the ops-only test path; for everyone else a h
 social preview and structured data (SoftwareApplication and BreadcrumbList for agents, WebSite with search for the home
 page). Public pages also get a plain version inside `#app` for crawlers that don't run scripts; the app replaces it
 when it starts. An agent's profile carries its `/api/agents/:id` answer in `script#boot` (`peekBoot` in
-`ui/lib/api.ts`), so the profile draws without a spinner. Unknown addresses, agents and guides are real 404s.
-`/robots.txt`, `/sitemap.xml` (pages, role pages, every live house agent) and `/llms.txt` are generated. Only
-production (`APP_ENV` "production") is indexed; other environments say noindex and disallow everything.
+`ui/lib/api.ts`), so the profile draws without a spinner; the home page carries its featured strip
+(`/api/agents?featured=6`) the same way, so nothing shifts when the cards appear. Unknown addresses, agents and guides
+are real 404s. `/robots.txt`, `/sitemap.xml` (pages, role pages, every live house agent) and `/llms.txt` are
+generated. robots.txt blocks `/api/` except `/api/agents` and `/api/config`, which the public pages load while they
+draw; every API answer says `x-robots-tag: noindex`. Only production (`APP_ENV` "production") is indexed; other
+environments say noindex and disallow everything.
 
 ## UI map
 
@@ -241,7 +244,7 @@ not be `roles`, `jobs` or `index`. Public URLs (all under agents.useaiblocks.com
 | `/packs/roles/<role-id>/<path>` | Each ready role kit once, its files as they stand (role.json, knowledge.md, access.md, sources.json, library.json, skills/, prompts/, workflows/, training/), plus `sources.md` and `library.md` as the packs carry them |
 | `/packs/jobs/<skill-slug>/SKILL.md` | Each job skill once (`<job-type-id>`, or `<job-type-id>-job` when the role kit has a skill of that name) |
 | `/packs/mega/<kit>/<path>` | Each ready mega kit once, its files as they stand (kit.json, orchestrator.md, variants/, channels/, agents/<channel>.md, prompts/, workflows/, training/) |
-| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training or about. List files in the order given. |
+| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `knowledge` = `{ status: "ready" | "pending", updated, sources, review_every_days }` (packs built before 7 Nov 2026 say just `"ready"` or `"pending"`; the UI reads both). `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training or about. List files in the order given. |
 | `/packs/index.json` | `{ schema: "ai-blocks-pack-index/1", count, packs: [{ id, name, title, role, version, updated, knowledge, files, files_url, agent_zip: { url, bytes, version }, train_zip: { url, bytes, version } }] }` |
 | `/agents/<id>/soul.md` | The Worker's soul.md (same text as the pack's) |
 | `/guides/<slug>` | A browser-app page (SPA fallback, no Worker route) that renders `src/ui/content/guides/<slug>.md`, bundled at build time with a Vite `?raw` import (`src/ui/pages/directory/guides.tsx`; a new guide is listed in `GUIDES` there). Slugs: `train-your-own-agent` (the packs' `{{guide_url}}`), `use-an-agent-pack`. `/guides` lists them. |

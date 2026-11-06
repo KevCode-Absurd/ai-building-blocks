@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Design Systems 101 (Therese Fessenden, 11 April 2021, reviewed 27 August 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/design-systems-101/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A design system as a full set of standards with reusable components and patterns; style guide, component library and pattern library; a team of at least an interaction designer, a visual designer and a developer; worth it for years of repeatable work, not for a throwaway prototype; adopt, adapt or create."
+  },
+  {
+    "n": 2,
+    "title": "Atomic Design, chapter 2: Atomic design methodology (Brad Frost, 2016)",
+    "publisher": "Brad Frost (author's own site)",
+    "url": "https://atomicdesign.bradfrost.com/chapter-2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The five stages: atoms, molecules, organisms, templates and pages; book published 2016."
+  },
+  {
+    "n": 3,
+    "title": "Atomic Design, chapter 4: The atomic workflow (interface inventory) (Brad Frost, 2016)",
+    "publisher": "Brad Frost (author's own site)",
+    "url": "https://atomicdesign.bradfrost.com/chapter-4/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The interface inventory: screenshot one of each unique pattern by category with a cross-discipline group, time-boxed, then present, discuss names and decide keep, drop or merge; it makes inconsistency visible and wins support."
+  },
+  {
+    "n": 4,
+    "title": "Measuring the value of design systems (Clancy Slack, 19 December 2019)",
+    "publisher": "Figma blog",
+    "url": "https://www.figma.com/blog/measuring-the-value-of-design-systems/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Designers finished a task 34% faster with a relevant, up-to-date design system than with old files; each designer was their own control; sample size and significance not reported; author expects 34% is near the real-world maximum."
+  },
+  {
+    "n": 5,
+    "title": "Design Tokens Format Module 2025.10 (Final Community Group Report, 28 October 2025)",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/tr/2025.10/format/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stable report; .tokens or .tokens.json; $value, $type, $description, $extensions, $deprecated; group $type inheritance; $root; curly-brace aliases and $ref JSON Pointer; $extends; name rules (no $ at start, no braces or dots); types color, dimension (px or rem), fontFamily, fontWeight, duration (ms or s), cubicBezier, number, strokeStyle, border, transition, shadow, gradient, typography."
+  },
+  {
+    "n": 6,
+    "title": "Design Tokens Color Module 2025.10 (28 October 2025)",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/tr/2025.10/color/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A colour $value is an object with a required colorSpace and components, optional alpha (default 1) and an optional 6-digit hex fallback; 14 colour spaces including srgb, display-p3 and oklch."
+  },
+  {
+    "n": 7,
+    "title": "Design Tokens Resolver Module 2025.10 (28 October 2025)",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/TR/2025.10/resolver/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How tokens take different values by context (light and dark, sizes, accessibility modes): sets, modifiers with named contexts and a default, a resolution order where later items win, inputs that pick one context per modifier; .resolver.json files; a Community Group report, not a W3C Standard."
+  },
+  {
+    "n": 8,
+    "title": "Design Token Community Group (DTCG) support",
+    "publisher": "Style Dictionary (official documentation)",
+    "url": "https://styledictionary.com/info/dtcg/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. First-class DTCG support since version 4; full support for the 2025.10 format still in progress in version 5; a converter from v3 JSON to DTCG keys."
+  },
+  {
+    "n": 9,
+    "title": "Overview of variables, collections, and modes",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/14506821864087",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Six variable types: color, number, string, boolean, timing and easing; collections, groups and modes; aliases to a variable of the same type; up to 5,000 variables per collection; modes per collection depend on plan."
+  },
+  {
+    "n": 10,
+    "title": "Create and manage variables and collections",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/15145852043927",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Scoping for number, color and string variables; code syntax, one name each for Web, Android and iOS, shown in Dev Mode snippets; descriptions; hide from publishing; 5,000 variables per collection; deleting a collection deletes its variables."
+  },
+  {
+    "n": 11,
+    "title": "Modes for variables",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Auto mode inherits from the parent container; left-most mode is the default; import of design tokens as JSON in the DTCG format, with type limits (colour in sRGB or HSL, dimension in px, duration in s); export of variable modes to JSON."
+  },
+  {
+    "n": 12,
+    "title": "Extend a variable collection",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/36346281624471",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Extended collections for multi-brand systems inherit from a parent and override values; available on Education (K-12), Government and Enterprise plans; cannot add variables or modes or change scope in the extension."
+  },
+  {
+    "n": 13,
+    "title": "Compare Figma plans and features",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/360040328273",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Up to 10 modes per collection on Professional, up to 20 on Organization, unlimited with extended collections on Enterprise; design system analytics and branching on Organization and Enterprise; libraries, Dev Mode and Code Connect not on Starter."
+  },
+  {
+    "n": 14,
+    "title": "Explore component properties",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/5579474826519",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Boolean, instance swap, text, variant and slot properties; preferred instances; simplified instances deprecated from 23 March 2026, after which all properties and layers show by default; available on all plans with edit access."
+  },
+  {
+    "n": 15,
+    "title": "Publish a library",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/360025508373",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Publishing needs a paid plan and edit access; Starter cannot publish; add a description of changes; hide assets when publishing; Organization and Enterprise choose team or organization, Enterprise also workspaces; subscribers see a badge and review and accept updates."
+  },
+  {
+    "n": 16,
+    "title": "View and explore library analytics",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/360039238353",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Insertions and detaches by asset, team and file; Education (K-12), Organization, Government and Enterprise; updated daily; up to one year of data; style and variable tracking since 10 October 2024; nested components and drafts not counted; Library Analytics API on Enterprise only."
+  },
+  {
+    "n": 17,
+    "title": "Guide to branching",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/360063144053",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Branching and merging on Education (K-12), Organization, Government and Enterprise; Full seat to create a branch; request review, approve, merge; libraries publish only from the main file, so merge first."
+  },
+  {
+    "n": 18,
+    "title": "Guide to Dev Mode",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Inspect, ready for dev status (Completed status on Organization and Enterprise), annotations, compare changes, Code Connect, Figma for VS Code; Professional and higher plans."
+  },
+  {
+    "n": 19,
+    "title": "Variables in Dev Mode",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/27882809912471",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Variable details with alias chain, scope and code snippet; Dev Mode suggests matching variables when a raw value is used (exact value and scope match); detached variables show as raw values."
+  },
+  {
+    "n": 20,
+    "title": "Code Connect",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/23920389749655",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Links code components to Figma components for Dev Mode and the MCP server; Professional and higher with a Full or Dev seat; Professional limited to one active library and framework; UI and CLI set-ups; GitHub connection optional; template files recommended over framework parsers."
+  },
+  {
+    "n": 21,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Learn Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Remote server recommended, all plans eligible with a listed client; desktop server needs a Dev or Full seat on a paid plan; write to canvas needs the remote server and a Full seat outside drafts, free in beta then usage-based; supports Code Connect and variables in design context."
+  },
+  {
+    "n": 22,
+    "title": "Semantic Versioning 2.0.0",
+    "publisher": "semver.org (Tom Preston-Werner)",
+    "url": "https://semver.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MAJOR for breaking changes, MINOR for compatible additions or deprecations, PATCH for compatible fixes; deprecate in a minor release and keep it for at least one minor release before removing in a major; 0.y.z means anything may change."
+  },
+  {
+    "n": 23,
+    "title": "Contribution criteria",
+    "publisher": "GOV.UK Design System",
+    "url": "https://design-system.service.gov.uk/community/contribution-criteria/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Proposals must be useful and unique; before publishing, components must be usable (researched with a representative sample including disabled people), consistent and versatile (tested across browsers, assistive technologies and devices)."
+  },
+  {
+    "n": 24,
+    "title": "GOV.UK Frontend releases",
+    "publisher": "Government Digital Service (alphagov on GitHub)",
+    "url": "https://github.com/alphagov/govuk-frontend/releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest listed release v6.6.0 (15 October); release notes with breaking changes, new features, recommended changes and fixes; deprecations announced with the replacement and a note that removal comes in the next major version (examples in v6.0.0, v6.1.0, v6.2.0)."
+  },
+  {
+    "n": 25,
+    "title": "Design tokens explained",
+    "publisher": "Atlassian Design System",
+    "url": "https://atlassian.design/foundations/tokens/design-tokens",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tokens as a single source of truth for design decisions; names built from foundation, property and modifier (e.g. color.icon.success); themes such as light, dark and high contrast, plus non-colour themes like density and reduced motion."
+  },
+  {
+    "n": 26,
+    "title": "Migrate to tokens",
+    "publisher": "Atlassian Design System",
+    "url": "https://atlassian.design/foundations/tokens/migrate-to-tokens",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Order of work: designers move Figma styles to tokens, developers set up theming, update components, replace raw values using codemods that only suggest tokens and need manual review, then everyone tests before dark mode goes public."
+  },
+  {
+    "n": 27,
+    "title": "Automatic documentation and Storybook (Autodocs), Storybook 10.6 docs",
+    "publisher": "Storybook",
+    "url": "https://storybook.js.org/docs/writing-docs/autodocs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Autodocs builds a docs page per component from its stories via the autodocs tag; extend with MDX and Doc Blocks; docs version 10.6."
+  },
+  {
+    "n": 28,
+    "title": "Theme variables (Tailwind CSS v4.3 docs)",
+    "publisher": "Tailwind Labs",
+    "url": "https://tailwindcss.com/docs/theme",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Theme variables defined with @theme become CSS variables and utility classes; namespaces such as --color-*, --font-*, --text-*, --spacing, --radius-*, --breakpoint-*; replace a namespace with initial; @theme inline for variables that reference other variables; docs version 4.3."
+  },
+  {
+    "n": 29,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum) (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Text 4.5:1, large text (18 pt, or 14 pt bold) 3:1; ratios are not rounded, so 4.499:1 fails; exceptions for logotypes, decoration and inactive components; relative luminance formula."
+  },
+  {
+    "n": 30,
+    "title": "Understanding Success Criterion 1.4.11: Non-text Contrast (updated 4 October 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 3:1 for visual information needed to identify components and their states, and for meaningful graphics; covers input borders when they are the only boundary, icons and focus indicators; inactive components exempt; hover indicators do not need 3:1."
+  }
+]

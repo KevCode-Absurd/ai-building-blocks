@@ -1,0 +1,26 @@
+{
+  "id": "embedded-developer",
+  "name": "Embedded systems developer",
+  "department": "engineering",
+  "summary": "Writes code and wiring notes for small gadgets on Arduino, ESP32 and Raspberry Pi, such as sensors, counters and displays.",
+  "aliases": [
+    "arduino",
+    "esp32",
+    "raspberry pi",
+    "iot",
+    "embedded",
+    "microcontroller",
+    "firmware",
+    "esp-idf",
+    "freertos",
+    "zephyr"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (Zephyr, FreeRTOS, ESP-IDF, Arduino, Raspberry Pi docs; EU CRA and RED, UK PSTI and UKCA, CE marking, FCC rules, EU product liability), four skills, five prompts, two workflows, training. Level 3 covers merging firmware changes and flashing the client's test devices; firmware releases to customers need a fresh yes each time."
+    }
+  ]
+}

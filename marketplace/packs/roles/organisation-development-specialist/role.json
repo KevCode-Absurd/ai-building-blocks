@@ -1,0 +1,26 @@
+{
+  "id": "organisation-development-specialist",
+  "name": "Organisation design specialist",
+  "department": "people",
+  "summary": "Redesigns structure as a firm grows: org chart options, decision rights, role profiles and a transition plan.",
+  "aliases": [
+    "org design",
+    "organisational design",
+    "organisation development",
+    "od specialist",
+    "restructure",
+    "org chart",
+    "raci",
+    "decision rights",
+    "change management",
+    "team health check"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 29 checked sources (CIPD, Acas, GOV.UK, EU directives, US WARN, Galbraith, Team Topologies, Bain RAPID, Gallup spans, Google and Edmondson on team health, change models), four skills, six prompts, two workflows, training interview and test briefs. SHRM change toolkits did not open."
+    }
+  ]
+}

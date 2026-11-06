@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "store-security-checkup",
+    "name": "Store security checkup",
+    "why": "Ranks store security fixes with a score and a quarterly plan, a fast start before the store lockdown skill."
+  },
+  {
+    "slug": "lock-down-your-store-logins-and-staff-against-takeover",
+    "name": "Lock down your store logins and staff against takeover",
+    "why": "Builds a sign-in policy, fix list and phishing rule sheet for a store team, matching the logins-first step in the store skill."
+  },
+  {
+    "slug": "store-sign-in-security-checker",
+    "name": "Sign-in security checker",
+    "why": "Scores how staff and customers sign in and writes a password and second-step policy for the staff rules."
+  },
+  {
+    "slug": "cut-risky-apps-and-scripts-from-your-store",
+    "name": "Cut risky apps and scripts from your store",
+    "why": "Gives keep, swap or cut for each store app and ranks remaining scripts, the app review step in the store skill."
+  },
+  {
+    "slug": "stop-fake-orders-card-testing-and-bot-abuse",
+    "name": "Stop fake orders, card testing and bot abuse",
+    "why": "Writes fraud rules and a review routine from orders and payment set-up, for the card-testing response."
+  },
+  {
+    "slug": "fraud-rules-setter",
+    "name": "Fraud rules setter",
+    "why": "Turns order volume and payment set-up into fraud rules and a chargeback watch, a companion to the store fraud rules step."
+  },
+  {
+    "slug": "risky-order-rule-writer",
+    "name": "Risky order rule writer",
+    "why": "Writes rules by risk level from order and chargeback numbers, useful when tuning holds after a card-testing attack."
+  },
+  {
+    "slug": "quarterly-store-security-keeper",
+    "name": "Quarterly store security keeper",
+    "why": "Scores staff, apps and chargebacks against last quarter, the store part of the quarterly security review."
+  },
+  {
+    "slug": "staff-phishing-rules-briefer",
+    "name": "Staff phishing rules briefer",
+    "why": "Writes a one-page phishing rule sheet and a ten-minute drill, a short version of the awareness session skill."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Plans a safe restore test with an evidence log, the recovery check behind the incident plan."
+  },
+  {
+    "slug": "turn-an-incident-into-a-safer-procedure",
+    "name": "Turn an incident into a safer procedure",
+    "why": "Turns an incident timeline into a blameless report and a safer procedure, the step after an incident or tabletop."
+  },
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Answers a customer's security questionnaire with evidence, once the risk register and plan exist."
+  },
+  {
+    "slug": "find-leaked-keys-move-them-to-safe-storage-and-check-the-live-site",
+    "name": "Find leaked keys, secure them and check your live site",
+    "why": "Finds leaked keys in a project and plans rotation, for stores whose payment keys sit in theme code or repositories."
+  }
+]

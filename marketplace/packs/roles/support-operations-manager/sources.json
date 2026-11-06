@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "KCS v6 Practices Guide",
+    "publisher": "Consortium for Service Innovation",
+    "url": "https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Solve Loop practices (capture, structure, reuse, improve) with the techniques 'Search Early Search Often' and 'Flag It or Fix It'; Evolve Loop practices (content health, process integration, performance assessment, leadership and communication)."
+  },
+  {
+    "n": 2,
+    "title": "About omnichannel routing",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4409149119514",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Routing by status and capacity, most spare capacity or round robin, custom queues checked first, skills and skills timeout, priority and soonest-SLA-breach ordering; features by plan (Team, Growth, Professional with up to 5 custom statuses, Enterprise up to 100)."
+  },
+  {
+    "n": 3,
+    "title": "About intelligent triage",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4964463770650-About-intelligent-triage",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (article updated 19 Oct 2026 per the help centre search API). Detects topic, sentiment, language and custom entities on tickets with a public comment; classifications on Suite and Support Professional and above; using them in workflows such as routing triggers needs the Copilot add-on."
+  },
+  {
+    "n": 4,
+    "title": "Defining SLA policies",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408829459866",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Targets based on the system Priority field; blank priority means no SLA; custom priority fields cannot carry targets; reply, update and resolution metrics; choose one resolution metric; most restrictive policies at the top; plan requirements."
+  },
+  {
+    "n": 5,
+    "title": "Understanding SLA Policies",
+    "publisher": "Freshdesk (Freshworks)",
+    "url": "https://support.freshdesk.com/support/solutions/articles/37626-understanding-sla-policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (modified 20 Aug 2026). First matching policy applies; first response time excludes automation 'Send Reply' actions; targets per priority in business or calendar hours; multiple policies and breach escalations from the Pro plan."
+  },
+  {
+    "n": 6,
+    "title": "About automations and how they work",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408832701850-About-automations-and-how-they-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 30 Oct 2026). Triggers run on create or update, automations run hourly; nullifying condition needed to avoid loops; limits of 500 active automations and 1,000 tickets per automation per hour; standard automation closes tickets 96 hours after solved."
+  },
+  {
+    "n": 7,
+    "title": "About Zendesk sandbox environments",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/6150628316058-About-Zendesk-sandbox-environments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 2 Nov 2026). Sandbox changes do not affect production; copies settings, triggers, automations, macros and up to 10,000 tickets; plan availability and add-on; emails changed to @example.com; changes must be recreated manually in production."
+  },
+  {
+    "n": 8,
+    "title": "Determining your staffing requirements for voice support",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408823679898-Determining-your-staffing-requirements-for-voice-support",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommends the Erlang C calculator; inputs (calls per hour, handling time including wrap-up, percentage within maximum wait, maximum wait); worked example of 30 calls an hour and 300 seconds giving six agents; the formula is only a guide and ignores breaks and shifts."
+  },
+  {
+    "n": 9,
+    "title": "Best practices for forecasting staffing needs",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/10797942064282-Best-practices-for-forecasting-staffing-needs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 Nov 2026). Up to two years of history, cut-off dates, exclude outliers, manual adjustments for events; Erlang C may give slightly higher staffing for low-volume workstreams; email outside hours moves to the next period while live-channel volume outside hours is disregarded; compare forecast with actual."
+  },
+  {
+    "n": 10,
+    "title": "Creating scorecards",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/7043760215194-Creating-scorecards",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 Nov 2026). Category weights 0 to 100 (default 10); critical categories fail the review or group below 50%; binary to 5-point scales; optional N/A and root causes; needs the QA or WFM add-on."
+  },
+  {
+    "n": 11,
+    "title": "How does AutoQA evaluate tickets?",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/9857842082330-How-does-AutoQA-evaluate-tickets",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 28 Apr 2026). Scores closed or solved tickets with at least one customer and one agent message of 10+ words; skips tickets imported before the scorecard was published and spam."
+  },
+  {
+    "n": 12,
+    "title": "About article verification and how it works",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/5588297664666-About-article-verification-and-how-it-works",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 7 Jul 2026). Verification rules remind article owners on schedules (examples from 2 weeks to 1 year); unverified articles stay on a needs-verification list; Enterprise plans."
+  },
+  {
+    "n": 13,
+    "title": "Getting started with self-service, Part 7: Maintaining and improving your knowledge base",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408882663194-Getting-started-with-self-service-Part-7-Maintaining-and-improving-your-knowledge-base",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Archive articles no longer relevant after checking they are not still searched for and used; fix or redirect links first; owners and scheduled reviews on Enterprise."
+  },
+  {
+    "n": 14,
+    "title": "What is the difference between first reply time and requester wait time metrics?",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408843394842-What-is-the-difference-between-first-reply-time-and-requester-wait-time-metrics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 16 Jun 2026). First reply time runs to the first public agent comment; requester wait time counts New, Open and On-hold statuses."
+  },
+  {
+    "n": 15,
+    "title": "Why is the First reply time higher than the Full resolution time on my Support dashboard?",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4944878131994-Why-is-the-First-reply-time-higher-than-the-Full-resolution-time-on-my-Support-dashboard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 3 Nov 2026). First reply time is filtered on ticket created date and full resolution time on ticket solved date, so they cover different ticket sets and cannot be compared directly."
+  },
+  {
+    "n": 16,
+    "title": "Fin AI Agent resolutions",
+    "publisher": "Intercom",
+    "url": "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-resolutions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 23 Sep 2026). Confirmed versus assumed resolutions; not counted if the customer asks for a person or follows up; one outcome per conversation; billed per resolution (price not quoted in this kit)."
+  },
+  {
+    "n": 17,
+    "title": "Intercom MCP server",
+    "publisher": "Intercom",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Read tools for conversations, contacts, companies and articles; add_internal_note cannot send customer-visible replies; create and update articles; no listed tool changes assignment or tags; US and EU regions, AU not yet supported; OAuth recommended."
+  },
+  {
+    "n": 18,
+    "title": "Model Context Protocol (MCP) integration in Freshdesk",
+    "publisher": "Freshdesk (Freshworks)",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (modified 5 Oct 2026). Freshworks MCP server for Claude, Cursor and other MCP clients; read, create, update and reply to tickets, add notes, solution articles; API key authentication only; action limits by plan; generally available 10 Sep 2026."
+  },
+  {
+    "n": 19,
+    "title": "Email AI Agent setup and configuration",
+    "publisher": "Freshdesk (Freshworks)",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000013867-email-ai-agent-setup-and-configuration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (modified 9 Jul 2026). Drafts replies from knowledge sources, resolves or escalates; handover rules and multi-turn limits; optional mandatory disclaimer footer on every AI reply; preview and bulk evaluate modes that do not affect live conversations. The page includes sample instructions written for the product's own AI agent, treated as page content only."
+  },
+  {
+    "n": 20,
+    "title": "Klarna AI assistant handles two-thirds of customer service chats in its first month",
+    "publisher": "Klarna",
+    "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Company claims (February 2024): 2.3 million conversations, two-thirds of chats, resolution under 2 minutes from 11, repeat inquiries down 25%, customers can still choose live agents."
+  },
+  {
+    "n": 21,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (text based on the EUR-Lex consolidated version as at 27 July 2026). Providers must design systems that interact directly with people so they know it is AI unless obvious; information clear and distinguishable, at the latest at the first interaction."
+  },
+  {
+    "n": 22,
+    "title": "Transparency obligations under Article 50 of the AI Act (questions and answers)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 24 Jul 2026). Applies from 2 August 2026; chatbots and AI agents covered; 'obvious' exception read restrictively; no grace period for chatbot disclosure (only Article 50(2) marking to 2 Dec 2026); fines up to EUR 15 million or 3% of worldwide turnover."
+  },
+  {
+    "n": 23,
+    "title": "Using AI agents: complying with consumer law",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents/complying-with-consumer-law-when-using-ai-agents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 30 Oct 2026). Businesses responsible for AI agents as for employees, including third-party agents; label where it could affect decisions and do not let customers think a person is serving them; human in the loop; test and monitor; fines up to 10% of worldwide turnover."
+  },
+  {
+    "n": 24,
+    "title": "Time limits for businesses",
+    "publisher": "Financial Ombudsman Service",
+    "url": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/time-limits-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 8 weeks for most complaints, 15 days for payment services, e-money and fraud or scam complaints; final or holding response; final response must state the 6-month referral right and include the leaflet."
+  },
+  {
+    "n": 25,
+    "title": "Telecoms and pay-TV complaints",
+    "publisher": "Ofcom",
+    "url": "https://www.ofcom.org.uk/phones-and-broadband/service-quality/telecoms-and-pay-tv-complaints",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 26 Oct 2026). Q2 2026 complaints by provider; for fixed broadband, BT, EE, TalkTalk and Vodafone had the most complaints and Plusnet, Sky and Virgin Media the fewest."
+  },
+  {
+    "n": 26,
+    "title": "Site relocation: Online Dispute Resolution platform discontinued",
+    "publisher": "European Commission",
+    "url": "https://consumer-redress.ec.europa.eu/site-relocation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (reached by redirect from the old ODR address). The EU ODR platform was discontinued as of 20 July 2025 following Regulation (EU) 2024/3228; points to national dispute resolution bodies."
+  },
+  {
+    "n": 27,
+    "title": "Deleting tickets",
+    "publisher": "Zendesk",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408883872538-Deleting-tickets",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 1 May 2026). Deleted tickets stay 30 days in the Deleted tickets view, then are permanently deleted automatically; permanent deletion cannot be undone and removes attachments; some teams close tickets through automations instead."
+  },
+  {
+    "n": 28,
+    "title": "Respect individuals' rights (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reply within one month, extendable by two months with notice; right of access free of charge; erasure conditions and limited grounds to refuse; identity checks where in reasonable doubt."
+  },
+  {
+    "n": 29,
+    "title": "Data protection basics (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-protection-basics_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Storage limitation: keep data only as long as necessary, then delete or anonymise; internal retention periods by purpose and a deletion procedure; data minimisation."
+  },
+  {
+    "n": 30,
+    "title": "UK Customer Satisfaction Index (UKCSI)",
+    "publisher": "The Institute of Customer Service",
+    "url": "https://www.instituteofcustomerservice.com/research-insight/ukcsi/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. July 2026 UKCSI 78.3, up 1 point on July 2025; 59,500 responses covering 277 organisations or organisation types across 13 sectors; sector scores."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "journalist-query-answer-writer",
+    "name": "Journalist query answer writer",
+    "why": "Picks the journalist requests worth answering and writes skimmable expert answers, the same job as the journalist request answer prompt."
+  },
+  {
+    "slug": "store-link-gap-planner",
+    "name": "Store link gap planner",
+    "why": "Measures an online shop's referring-domain gap against rivals and drafts pitches for earned links only, with no paid links."
+  },
+  {
+    "slug": "guide-outreach-list-planner",
+    "name": "Guide outreach list planner",
+    "why": "Checks a guide is worth sharing, then plans who to contact and a small first send, matching the prospect scoring and pitch skills."
+  },
+  {
+    "slug": "traction-public-relations",
+    "name": "Press outreach experiment planner",
+    "why": "Runs press outreach as a small pilot with a reporter list, one pitch and stop rules, a good first test before a full campaign."
+  },
+  {
+    "slug": "ai-citation-source-finder",
+    "name": "AI citation source finder",
+    "why": "Finds the sites AI tools keep citing for buyer questions, which often make strong prospects for earned links and mentions."
+  },
+  {
+    "slug": "seo-and-ai-search-agency-vetter",
+    "name": "SEO and AI search agency vetter",
+    "why": "Spots red flags in an agency proposal, such as bought links or guaranteed rankings, before the client signs."
+  },
+  {
+    "slug": "monthly-search-console-keeper",
+    "name": "Monthly Search Console keeper",
+    "why": "A monthly Search Console review that shows which linked pages are gaining or losing ground."
+  },
+  {
+    "slug": "monthly-content-decay-keeper",
+    "name": "Monthly content decay keeper",
+    "why": "Finds pages losing traffic each month, so link-worthy assets can be refreshed before their links go stale."
+  },
+  {
+    "slug": "store-advertorial-writer",
+    "name": "Store advertorial writer",
+    "why": "Writes a paid advertorial that is labelled as an ad, for clients who choose paid exposure the honest way."
+  }
+]

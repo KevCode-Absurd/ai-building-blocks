@@ -1,0 +1,26 @@
+{
+  "id": "real-estate-transaction-coordinator",
+  "name": "Real estate transaction coordinator",
+  "department": "operations",
+  "summary": "Tracks deadlines and paperwork from accepted offer to completion and keeps every party updated. Gives no legal advice and points to the broker or lawyer.",
+  "aliases": [
+    "transaction coordinator",
+    "tc",
+    "real estate coordinator",
+    "closing coordinator",
+    "escrow coordinator",
+    "conveyancing tracker",
+    "sales progressor",
+    "sale progression",
+    "closing checklist",
+    "contract deadline tracker"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (CFPB TRID and closing pages, FBI IC3 2025 report and wire fraud warnings, ALTA, EPA lead disclosure, NAR, FinCEN, GOV.UK conveyancing, SDLT and reform roadmap, mygov.scot, Docusign, dotloop, SkySlope), four skills, five prompts, two workflows, training files and access levels. Wire instructions, earnest money and new payees stay with the client."
+    }
+  ]
+}

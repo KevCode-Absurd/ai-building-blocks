@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "clear-an-email-backlog-and-set-triage-rules-that-stick",
+    "name": "Clear an email backlog and set triage rules that stick",
+    "why": "A guided backlog clear-out with saved triage rules, matching the inbox skill's first run."
+  },
+  {
+    "slug": "prepare-your-executive-day",
+    "name": "Prepare your executive day",
+    "why": "Turns one day's calendar and open work into meeting briefs and an action list."
+  },
+  {
+    "slug": "executive-meeting-brief",
+    "name": "Executive meeting brief writer",
+    "why": "A sourced brief for one meeting, like the briefing note prompt."
+  },
+  {
+    "slug": "executive-daily-digest",
+    "name": "Executive daily briefing writer",
+    "why": "A dated daily brief from the calendar, actions and updates."
+  },
+  {
+    "slug": "executive-action-register",
+    "name": "Action item tracker",
+    "why": "One action list with owners and dates from notes and threads, the register the meeting skill keeps."
+  },
+  {
+    "slug": "executive-due-task-drafts",
+    "name": "Due task follow up drafter",
+    "why": "Follow-up drafts for tasks that are due, alongside the chase prompt."
+  },
+  {
+    "slug": "rough-notes-to-minutes-writer",
+    "name": "Rough notes to minutes writer",
+    "why": "Short minutes with decisions, owners and dates from rough notes."
+  },
+  {
+    "slug": "weekly-meeting-actions-keeper",
+    "name": "Weekly meeting actions keeper",
+    "why": "Minutes, last week's open actions and the next agenda for a recurring meeting."
+  },
+  {
+    "slug": "run-a-meeting-worth-holding-from-agenda-to-action-items",
+    "name": "Run a meeting worth holding, from agenda to action items",
+    "why": "Decides whether to hold a meeting, then builds the pre-read and the actions."
+  },
+  {
+    "slug": "meeting-to-written-update-converter",
+    "name": "Meeting to written update converter",
+    "why": "Replaces a status meeting with a written update when an agenda has no decisions."
+  },
+  {
+    "slug": "make-a-realistic-plan-for-a-busy-week",
+    "name": "Make a realistic plan for a busy week",
+    "why": "A fuller version of the weekly plan prompt, with hours that fit."
+  },
+  {
+    "slug": "turn-a-dispute-into-a-checked-demand-letter-draft",
+    "name": "Turn a dispute into a checked demand letter draft",
+    "why": "A fact sheet and dated timeline for a dispute, for use with the complaint letter skill and an adviser."
+  }
+]

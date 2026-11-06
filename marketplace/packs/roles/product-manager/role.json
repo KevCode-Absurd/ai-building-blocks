@@ -1,0 +1,26 @@
+{
+  "id": "product-manager",
+  "name": "Product manager",
+  "department": "product",
+  "summary": "Cuts an idea to a small first version, decides what to build next and writes the spec the team builds from. Says no to the rest, with reasons.",
+  "aliases": [
+    "product management",
+    "prd",
+    "roadmap",
+    "user stories",
+    "product owner",
+    "backlog prioritisation",
+    "mvp scope",
+    "product discovery",
+    "feature spec",
+    "experiment readout"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: discovery, problem briefs, first-version scope, PRDs and stories, RICE and roadmaps, HEART metrics, experiment readouts with SRM checks, EU AI Act Article 50, NIST AI RMF, UK AI assurance and FTC AI claims, Jira, Linear, GitHub, Notion, Amplitude and PostHog via MCP, access levels, 26 sources."
+    }
+  ]
+}

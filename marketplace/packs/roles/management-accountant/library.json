@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "service-utilization-margin-builder",
+    "name": "Service utilization margin builder",
+    "why": "Turns a month of paid hours into utilisation, revenue and delivery margin for a service team, the core of the job and service costing skill for agencies and consultancies."
+  },
+  {
+    "slug": "per-order-profit-calculator",
+    "name": "Per-order profit calculator",
+    "why": "Works out profit per order after every cost and the break-even, the same build-up the product margin skill uses for online sellers."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Checks a planned sale or price change against margin, matching the discount break-even step in the product margin skill."
+  },
+  {
+    "slug": "landed-cost-allocator",
+    "name": "Landed cost allocator",
+    "why": "Spreads freight, duty and supplier invoices into a true landed cost per unit, the first input to any product margin."
+  },
+  {
+    "slug": "restaurant-portion-cost-builder",
+    "name": "Restaurant portion cost builder",
+    "why": "Costs a dish per portion from real weights and prices, a worked example of unit costing for food businesses."
+  },
+  {
+    "slug": "manufacturing-yield-cost-bridge",
+    "name": "Manufacturing yield cost bridge",
+    "why": "Shows the true cost per good unit after yield loss and scrap, for makers whose standard cost ignores waste."
+  },
+  {
+    "slug": "monthly-budget-versus-actual-keeper",
+    "name": "Monthly budget versus actual keeper",
+    "why": "Runs the monthly comparison of spend against budget with reasons, a light version of the budget against actuals skill."
+  },
+  {
+    "slug": "explain-a-department-budget-overrun",
+    "name": "Explain a department budget overrun",
+    "why": "Builds a reconciled variance report and options for one budget owner, useful when one line in the management pack needs a deeper look."
+  },
+  {
+    "slug": "build-a-monthly-p-and-l-and-know-your-real-margin",
+    "name": "Build a monthly P&L and know your real margin",
+    "why": "Takes invoices and sales to true unit costs and a monthly profit and loss, a starting point for owners with no management pack yet."
+  },
+  {
+    "slug": "check-supplier-invoices-before-approval",
+    "name": "Check supplier invoices before approval",
+    "why": "Matches supplier invoices before payment, one of the cheap controls the money controls review recommends against duplicate and diverted payments."
+  },
+  {
+    "slug": "recurring-invoice-exception-review-assistant",
+    "name": "Recurring invoice exception review assistant",
+    "why": "Keeps a list of recurring invoice exceptions with evidence and an approval list, supporting the monthly controls spot check."
+  },
+  {
+    "slug": "grant-restrictions-cash-reconciler",
+    "name": "Grant restrictions cash reconciler",
+    "why": "Splits bank cash into restricted grant money and free cash, the check behind the nonprofit board finance report."
+  },
+  {
+    "slug": "prepare-a-grant-spending-evidence-pack",
+    "name": "Prepare a grant spending evidence pack",
+    "why": "Produces a reconciled grant spending table and evidence gaps for a funder, the follow-on to the grant tracker in the nonprofit prompt."
+  }
+]

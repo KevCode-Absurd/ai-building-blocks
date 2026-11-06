@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "build-an-outcome-based-roadmap-and-write-the-update",
+    "name": "Build an outcome-based roadmap and write the update",
+    "why": "Runs the roadmap and stakeholder update steps end to end."
+  },
+  {
+    "slug": "check-real-demand-for-your-idea-then-run-one-cheap-test",
+    "name": "Check demand for your idea, then run one cheap test",
+    "why": "The discovery step: evidence first, then one cheap test before any spec."
+  },
+  {
+    "slug": "set-a-six-week-product-bet-and-screen-requests-against-it",
+    "name": "Set a six-week product bet and screen requests against it",
+    "why": "Fixed-time bets and request screening, as in the prioritise-and-roadmap skill."
+  },
+  {
+    "slug": "smaller-product-launch",
+    "name": "Launch a smaller product on the date you set",
+    "why": "Cuts a launch to fit a date; pairs with the release and readout workflow."
+  },
+  {
+    "slug": "cut-your-product-line-to-the-few-that-pay-and-commit-the-team",
+    "name": "Cut your product line to the few that pay",
+    "why": "Applies the same must, later, never thinking to a whole product line."
+  },
+  {
+    "slug": "weekly-product-feedback-triager",
+    "name": "Weekly product feedback triager",
+    "why": "Turns weekly feedback into themes that feed problem briefs."
+  },
+  {
+    "slug": "yes-later-no-request-sorter",
+    "name": "Yes-later-no request sorter",
+    "why": "Sorts incoming requests into yes, later or no with reasons."
+  },
+  {
+    "slug": "feature-request-no-writer",
+    "name": "Feature request no writer",
+    "why": "Writes the kind reply that goes with a declined request."
+  },
+  {
+    "slug": "two-version-result-reader",
+    "name": "Two-version result reader",
+    "why": "Reads an A/B result; use with the experiment readout prompt's data checks."
+  },
+  {
+    "slug": "mvp-experiment-planner",
+    "name": "MVP experiment planner",
+    "why": "Plans the first-version test and its pass and fail results."
+  },
+  {
+    "slug": "customer-discovery-plan",
+    "name": "Customer discovery interview planner",
+    "why": "Plans discovery interviews before a problem brief."
+  },
+  {
+    "slug": "prepare-an-ai-pilot-go-decision",
+    "name": "Prepare an AI pilot go decision",
+    "why": "Checks an AI pilot's evidence before launch; pairs with the AI feature launch skill."
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "2010 ADA Standards for Accessible Design",
+    "publisher": "US Department of Justice, ADA.gov",
+    "url": "https://www.ada.gov/law-and-regs/design-standards/2010-stds/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (long page read in chunks). 403.5.1 accessible route clear width 36 in (915 mm), 32 in (815 mm) for up to 24 in (610 mm); 304.3 turning space 60 in (1525 mm) circle or T-shape; 305.3 clear floor space 30 x 48 in (760 x 1220 mm); 306.3 knee clearance; 307.2 protruding objects 4 in (100 mm) max between 27 and 80 in (685 and 2030 mm); 308.2.1 and 308.3.1 reach 48 in (1220 mm) high, 15 in (380 mm) low; 404.2.3 door clear width 32 in (815 mm); 225.2.2 self-service shelves on an accessible route, reach ranges not required; 226.1 at least 5% of dining and work surfaces comply; 902.3 dining and work surface tops 28 to 34 in (710 to 865 mm); 904.3 check-out counter 38 in (965 mm) max; 904.4 sales and service counters: a portion at least 36 in (915 mm) long and 36 in (915 mm) max high for a parallel approach, or 30 in (760 mm) long with knee space for a forward approach"
+  },
+  {
+    "n": 2,
+    "title": "ADA Update: A Primer for Small Business",
+    "publisher": "US Department of Justice, ADA.gov",
+    "url": "https://www.ada.gov/resources/title-iii-primer/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 28 February 2020). Existing businesses open to the public must remove barriers where readily achievable, judged by size and resources, as a continuing duty; alterations must be accessible to the maximum extent feasible, and work starting on or after 15 March 2012 uses the 2010 Standards; Disabled Access Credit for businesses with 30 or fewer full-time employees or $1 million or less revenue; deduction up to $15,000 a year for barrier removal"
+  },
+  {
+    "n": 3,
+    "title": "Access to and use of buildings: Approved Document M",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/government/publications/access-to-and-use-of-buildings-approved-document-m",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 1 October 2024). Statutory guidance for England; Volume 1 dwellings, Volume 2 buildings other than dwellings (2015 edition, 2020 amendment on Changing Places toilets, 2024 amendments incorporated 1 October 2024); Building Safety Regulator has kept it under review since April 2023"
+  },
+  {
+    "n": 4,
+    "title": "Approved Document M, Volume 2: Buildings other than dwellings (2015 edition incorporating 2020 and 2024 amendments)",
+    "publisher": "GOV.UK",
+    "url": "https://assets.publishing.service.gov.uk/media/66f6c5eec71e42688b65ee11/ADM__V2_with_2024_amendments.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and read with pdftotext). For use in England. Table 2 minimum effective clear door widths (new / existing): straight-on 800 / 750 mm; at right angles from a route at least 1500 mm wide 800 / 750 mm; from a route at least 1200 mm wide 825 / 775 mm; external doors used by the public 1000 / 775 mm. 3.6 reception counters: a section at least 1500 mm wide, surface no higher than 760 mm, knee recess at least 700 mm; manoeuvring space 1200 x 1800 mm with knee recess or 1400 x 2200 mm without. 3.14 corridors at least 1200 mm unobstructed, passing places 1800 mm. 4.16 refreshment facilities: part of a bar or serving counter no higher than 850 mm; all users reach all parts. 4.30 sockets 400 to 1000 mm, switches 400 to 1200 mm. 4.32 avoid glare and large repeating patterns. Visual contrast: light reflectance value difference over 30 points (20 where illuminance exceeds 200 lux). Meeting Part M does not by itself meet Equality Act 2010 duties; material alterations must not make a building less compliant"
+  },
+  {
+    "n": 5,
+    "title": "Fire safety: Approved Document B",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/fire-safety-approved-document-b",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 16 September 2026). Statutory fire safety guidance for buildings in England; Volume 1 dwellings, Volume 2 buildings other than dwellings; 2019 edition with later amendments, including amendments that withdraw the BS 476 national classes with a transition period (dates on the page were not clear to me)"
+  },
+  {
+    "n": 6,
+    "title": "Building regulations approval",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/building-regulations-approval",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Approval may be needed for many alterations, including replacing fuse boxes and connected electrics, installing plumbed bathrooms, changing electrics near a bath or shower, fixed air-conditioning and replacing windows and doors; check before you change a building; a competent person scheme installer removes the need to apply yourself; apply to the local authority building control or a registered building control approver; penalties for non-compliance"
+  },
+  {
+    "n": 7,
+    "title": "Fire safety in the workplace: who's responsible",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/workplace-fire-safety-your-responsibilities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Anyone with control of non-domestic premises (employer, owner, landlord, occupier) is the 'responsible person'; duties include a fire risk assessment reviewed regularly, fire safety measures, emergency plans and staff training; covers paying guest accommodation such as B&Bs and self-catering lets; new buildings and alterations must meet building regulations; fire and rescue authorities enforce; Scotland and Northern Ireland have different rules"
+  },
+  {
+    "n": 8,
+    "title": "Fire safety law and guidance documents for business",
+    "publisher": "GOV.UK (Home Office)",
+    "url": "https://www.gov.uk/government/collections/fire-safety-law-and-guidance-documents-for-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (collection updated 4 October 2023). Fire safety risk assessment guides by premises type: offices and shops (12 September 2023), small and medium places of assembly (28 August 2024), sleeping accommodation (12 September 2023); small paying guest accommodation guide listed under small premises"
+  },
+  {
+    "n": 9,
+    "title": "Making your small paying guest accommodation safe from fire (accessible version)",
+    "publisher": "GOV.UK (Home Office)",
+    "url": "https://www.gov.uk/government/publications/making-your-small-paying-guest-accommodation-safe-from-fire/making-your-small-paying-guest-accommodation-safe-from-fire-accessible",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 20 January 2025). For small B&Bs, guest houses and self-catering lets under the Regulatory Reform (Fire Safety) Order 2005: the responsible person must carry out and record a fire risk assessment, reviewed regularly; interlinked smoke alarms in circulation areas, living rooms and bedrooms and heat alarms in kitchens; escape routes kept clear and not used for storage; furniture and furnishings should meet the Furniture and Furnishings (Fire) (Safety) Regulations 1988, usually shown by a label; do not provide candles, tea lights or ethanol burners"
+  },
+  {
+    "n": 10,
+    "title": "29 CFR 1910.36: Design and construction requirements for exit routes",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.36",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Exit access at least 28 in (71.1 cm) wide at all points; exit route ceiling at least 7 ft 6 in; objects must not reduce the route below minimum width; exit doors open from inside without keys, tools or special knowledge; at least two exit routes unless one allows safe evacuation"
+  },
+  {
+    "n": 11,
+    "title": "29 CFR 1910.37: Maintenance, safeguards, and operational features for exit routes",
+    "publisher": "US Occupational Safety and Health Administration",
+    "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.37",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Exit routes free and unobstructed, with no materials or equipment placed in them; no highly flammable furnishings or decorations in routes; exit doors free of decorations or signs that obscure them; exits marked 'Exit' in letters at least 6 in high; doors that could be mistaken for exits marked 'Not an Exit' or by their use; routes adequately lit; routes kept available during repairs"
+  },
+  {
+    "n": 12,
+    "title": "Directive 89/654/EEC: workplace requirements",
+    "publisher": "European Agency for Safety and Health at Work (EU-OSHA)",
+    "url": "https://osha.europa.eu/en/legislation/directives/2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 19 March 2021). Directive of 30 November 1989 on minimum safety and health requirements for workplaces, the first individual directive under Framework Directive 89/391/EEC; annexes cover emergency routes and exits, traffic routes, and natural and artificial lighting; national laws give detail"
+  },
+  {
+    "n": 13,
+    "title": "Lighting at work (HSG38), second edition",
+    "publisher": "UK Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/pubns/priced/hsg38.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and read with pdftotext; published 1997, free download). Table of recommended average and minimum illuminance for health and safety: movement of people in corridors and circulation routes 20 / 5 lux; work needing limited perception of detail, such as kitchens, 100 / 50 lux; work needing perception of detail, such as offices, 200 / 100 lux; fine detail 500 / 200 lux; avoid large jumps between adjacent areas; glare guidance; points to the CIBSE Code for lighting for design detail"
+  },
+  {
+    "n": 14,
+    "title": "Duty to manage asbestos in buildings",
+    "publisher": "UK Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/asbestos/duty/index.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 1 March 2021). The dutyholder (owner, landlord or whoever is responsible for maintenance) must manage asbestos in all non-domestic premises, such as factories or shops, and the common parts of multi-occupancy domestic buildings, including arranging a survey and making a plan"
+  },
+  {
+    "n": 15,
+    "title": "Lead Renovation, Repair and Painting Program",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/lead/renovation-repair-and-painting-program",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 17 June 2026). Anyone paid to do work that disturbs paint in housing or child-occupied facilities (such as child care and preschools) built before 1978 must be EPA lead-safe certified, including sole traders, and follow lead-safe work practices; homeowners working on their own homes are generally not covered unless they rent out the home"
+  },
+  {
+    "n": 16,
+    "title": "Volatile Organic Compounds' Impact on Indoor Air Quality",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/indoor-air-quality-iaq/volatile-organic-compounds-impact-indoor-air-quality",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 23 June 2026). Paints, varnishes, strippers, building materials and furnishings release VOCs; increase ventilation when using such products, follow label precautions, buy only what you will use soon and dispose of leftovers safely"
+  },
+  {
+    "n": 17,
+    "title": "Product Safety Alerts, Reports and Recalls",
+    "publisher": "Office for Product Safety and Standards, GOV.UK",
+    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Searchable database of UK product safety alerts, reports and recalls (3,822 reports at the time), filterable by risk level, product category, measure and date, with email alerts; most recent entries dated 6 November 2026"
+  },
+  {
+    "n": 18,
+    "title": "Product Recall: Argos Habitat Eton Fabric Sofas and Footstools in Grey and Charcoal (2303-0003)",
+    "publisher": "Office for Product Safety and Standards, GOV.UK",
+    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-argos-habitat-eton-fabric-sofas-and-footstools-in-grey-and-charcoal-2303-0003",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (8 March 2023). Habitat Eton sofas and footstools sold by Argos from 1 February 2022 to 28 February 2023 recalled from end users; the fabric could catch fire and keep burning, failed BS 5852 and did not meet the Furniture and Furnishings (Fire) (Safety) Regulations 1988; risk level serious; notified by local authority Trading Standards"
+  },
+  {
+    "n": 19,
+    "title": "Clothing Storage Units",
+    "publisher": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Clothing-Storage-Units",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). STURDY Act rule (16 CFR part 1261) for free-standing clothing storage units at least 27 in tall, at least 30 lb and with at least 3.2 cubic feet of enclosed storage, made after 1 September 2023: stability tests, an anti-tip device in the box and warning labels; covers chests, dressers and armoires; excludes bookcases, office and dining furniture and built-in units"
+  },
+  {
+    "n": 20,
+    "title": "Recalls and Product Safety Warnings",
+    "publisher": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Recalls",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. US recall list with hazard, remedy and units; search filters include Furniture and 'Dressers, Desks, Chests and Buffets'; updated weekly, latest entries 5 November 2026"
+  },
+  {
+    "n": 21,
+    "title": "Product safety",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/business-economy-euro/product-safety-and-requirements/product-safety_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The General Product Safety Regulation aims to keep only safe products on the EU market; Safety Gate is the EU rapid alert system for dangerous non-food products, shared between the Commission and national authorities"
+  },
+  {
+    "n": 22,
+    "title": "Measuring Distance",
+    "publisher": "SketchUp Help (Trimble)",
+    "url": "https://help.sketchup.com/en/measuring-distance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 29 September 2026; desktop SketchUp). The Tape Measure tool measures distances, creates guide lines and guide points; entering a value after measuring prompts SketchUp to offer to resize the model"
+  },
+  {
+    "n": 23,
+    "title": "Importing and Using 2D Images",
+    "publisher": "SketchUp Help (Trimble)",
+    "url": "https://help.sketchup.com/en/sketchup/importing-and-using-2d-images",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 29 September 2026). Import an image as an image entity, a texture or a matched photo; trace over an imported floor plan in Top view with Parallel Projection to build a plan you can extrude into 3D"
+  },
+  {
+    "n": 24,
+    "title": "SketchUp Free",
+    "publisher": "SketchUp (Trimble)",
+    "url": "https://sketchup.trimble.com/en/plans-and-pricing/sketchup-free",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free web-based SketchUp with 10 GB of Trimble Connect storage, 3D Warehouse access, imports SKP, JPG and PNG and exports SKP, PNG and STL; the page does not state commercial-use terms"
+  },
+  {
+    "n": 25,
+    "title": "SketchUp plans and pricing",
+    "publisher": "SketchUp (Trimble)",
+    "url": "https://sketchup.trimble.com/en/plans-and-pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Paid plans Go (iPad and web), Pro (desktop modeller with LayOut for 2D documentation) and Studio (Windows only); SketchUp for Web included in all three; annual or monthly subscriptions"
+  },
+  {
+    "n": 26,
+    "title": "Floorplanner pricing",
+    "publisher": "Floorplanner",
+    "url": "https://floorplanner.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free account with up to 5 projects, watermarked standard-definition 2D and 3D exports; paid project upgrades by credits and subscriptions for higher-resolution exports"
+  },
+  {
+    "n": 27,
+    "title": "RoomSketcher pricing",
+    "publisher": "RoomSketcher",
+    "url": "https://www.roomsketcher.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free plan with 2D and 3D floor plans but no measurements, area calculator or Live 3D; Pro adds measurements, total area, print to scale and 3D photos (credit-based); Team adds users and collaboration"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "10 Usability Heuristics for User Interface Design (Jakob Nielsen, 1994, updated 30 January 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ten heuristics by name; first developed with Rolf Molich in 1990, published by Nielsen in 1994; page updated 30 January 2024."
+  },
+  {
+    "n": 2,
+    "title": "Severity Ratings for Usability Problems (Jakob Nielsen, 1 November 1994)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-to-rate-the-severity-of-usability-problems/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Severity combines frequency, impact and persistence, plus market impact; the 0 to 4 scale from not a problem to usability catastrophe."
+  },
+  {
+    "n": 3,
+    "title": "Why You Only Need to Test with 5 Users (Jakob Nielsen, 18 March 2000)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five users find about 85% of problems under a model where one user finds about 31%; run several small rounds; 3 to 4 users per group for two distinct groups; about 20 users for quantitative studies and about 15 for card sorting."
+  },
+  {
+    "n": 4,
+    "title": "Thinking Aloud: The #1 Usability Tool (Jakob Nielsen, 15 January 2012)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How a think-aloud test works, its low cost and flexibility, and its limits: no detailed statistics, unnatural for users, facilitator prompts can bias behaviour."
+  },
+  {
+    "n": 5,
+    "title": "Card Sorting: Uncover Users' Mental Models (Samhita Tankala and Katie Sherwin, 2 February 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/card-sorting-definition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open, closed and hybrid card sorts; at least 15 participants for qualitative and 30 to 50 for quantitative sorts; 30 to 50 cards; moderated versus unmoderated."
+  },
+  {
+    "n": 6,
+    "title": "Tree Testing: Fast, Iterative Evaluation of Menu Labels and Categories (Page Laubheimer, 6 August 2023, reviewed 19 August 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/tree-testing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tree testing evaluates a text-only hierarchy; card sorting generates it; success, directness and time on task; task wording that does not give away the answer; a warm-up task."
+  },
+  {
+    "n": 7,
+    "title": "Error-Message Guidelines (Tim Neusesser and Evan Sunwall, 14 May 2023)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/error-message-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Place errors near the problem, never by colour alone, plain language, specific cause, constructive fix, no blame or humour, keep the user's input."
+  },
+  {
+    "n": 8,
+    "title": "Synthetic Users: If, When, and How to Use AI-Generated Research (Maria Rosala and Kate Moran, 21 June 2024)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/synthetic-users/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI-generated users are useful for desk research, piloting guides and hypotheses; they idealise behaviour, give shallow insight and cannot validate concepts; supplement, never replace, real research."
+  },
+  {
+    "n": 9,
+    "title": "Don't Make Me Think, Revisited (Steve Krug, third edition, 2014)",
+    "publisher": "Steve Krug, sensible.com",
+    "url": "https://sensible.com/dont-make-me-think/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The third edition (New Riders, 2014) and the author's aim: usability work is valuable and much of it is not hard; principles extended to apps and other things people use."
+  },
+  {
+    "n": 10,
+    "title": "Measuring Usability with the System Usability Scale (SUS) (Jeff Sauro, 3 February 2011)",
+    "publisher": "MeasuringU",
+    "url": "https://measuringu.com/sus/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SUS created by John Brooke in 1986; 10 items; scoring to 0 to 100; average about 68 across about 500 studies; scores are percentiles, not percentages; use confidence intervals with small samples."
+  },
+  {
+    "n": 11,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation (dated version 12 December 2024)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current dated Recommendation 12 December 2024; contrast 4.5:1 for text and 3:1 for large text (1.4.3); reflow at 320 CSS pixels wide (1.4.10); Focus Not Obscured (Minimum)."
+  },
+  {
+    "n": 12,
+    "title": "What's New in WCAG 2.2",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 became a Recommendation on 5 October 2023; the nine new success criteria and their levels; 4.1.1 Parsing removed as obsolete."
+  },
+  {
+    "n": 13,
+    "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum) (updated 2 November 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pointer targets at least 24 by 24 CSS pixels, with five exceptions: spacing, equivalent, inline, user agent control, essential."
+  },
+  {
+    "n": 14,
+    "title": "Understanding Success Criterion 3.3.8: Accessible Authentication (Minimum) (updated 6 September 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No cognitive function test such as remembering a password or solving a puzzle at sign-in unless there is an alternative, a mechanism such as a password manager or paste, object recognition, or personal content."
+  },
+  {
+    "n": 15,
+    "title": "Easy Checks: A First Review of Web Accessibility (updated 9 August 2023)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ten quick checks (page title, alt text, headings, contrast, resize text, keyboard and focus, forms and errors, moving content, multimedia, structure); a page can pass them and still have barriers; judging alt text needs a person."
+  },
+  {
+    "n": 16,
+    "title": "The WebAIM Million: 2026 report on the accessibility of the top 1,000,000 home pages (updated 30 March 2026)",
+    "publisher": "WebAIM",
+    "url": "https://webaim.org/projects/million/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. February 2026 data: 95.9% of home pages had detected WCAG 2 failures, 56.1 errors per page; most common failures and their shares."
+  },
+  {
+    "n": 17,
+    "title": "Guidance on Web Accessibility and the ADA (18 March 2022)",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ADA applies to web offerings of businesses open to the public and of state and local governments; no regulation sets detailed technical standards for businesses; WCAG and Section 508 named as helpful guidance; banner noting the separate 2024 rule for governments."
+  },
+  {
+    "n": 18,
+    "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title II rule sets WCAG 2.1 Level AA; an Interim Final Rule of 20 April 2026 moved compliance to 26 April 2027 (50,000 people or more) and 26 April 2028 (smaller entities and special districts)."
+  },
+  {
+    "n": 19,
+    "title": "A new era for inclusion begins: the European Accessibility Act enters into force (27 June 2025)",
+    "publisher": "AccessibleEU Centre (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. European Accessibility Act requirements apply from 28 June 2025 and cover e-commerce, online banking, transport websites and apps, e-books, computers and smartphones, among others."
+  },
+  {
+    "n": 20,
+    "title": "Understanding accessibility requirements for public sector bodies (updated 30 September 2024)",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector websites and apps must meet WCAG 2.2 AA and publish an accessibility statement; all UK service providers must make reasonable adjustments under the Equality Act 2010 (Disability Discrimination Act 1995 in Northern Ireland)."
+  },
+  {
+    "n": 21,
+    "title": "Using moderated usability testing (updated 3 October 2017)",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recruit actual or likely users; realistic tasks that do not hint at the answer; a discussion guide; a note-taker per session; no more than six one-hour sessions a day with at least 15 minutes between them."
+  },
+  {
+    "n": 22,
+    "title": "Writing for user interfaces (updated 16 April 2018)",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/design/writing-for-user-interfaces",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Use users' own words, start with less content, front-load key words, link text that makes sense alone, no meaning by colour or position, sorry only when something serious has gone wrong, aim to be boring."
+  },
+  {
+    "n": 23,
+    "title": "Error message (component guidance)",
+    "publisher": "GOV.UK Design System",
+    "url": "https://design-system.service.gov.uk/components/error-message/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Show the error next to the question and in an error summary with the same words; say what happened and how to fix it; avoid blame words, please, sorry, valid or invalid, and oops; keep entered answers (change listed January 2024)."
+  },
+  {
+    "n": 24,
+    "title": "UI Design Dos and Don'ts",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/tips/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Controls at least 44 by 44 points so they can be tapped accurately; text at least 11 points; ample contrast."
+  },
+  {
+    "n": 25,
+    "title": "Make apps more accessible",
+    "publisher": "Android Developers (Google)",
+    "url": "https://developer.android.com/guide/topics/ui/accessibility/apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Touch targets of at least 48 by 48 dp; text contrast of 4.5:1 below 18sp (or 14sp bold), 3:1 otherwise; describe each control's purpose, not its look."
+  },
+  {
+    "n": 26,
+    "title": "The Digital Services Act (page updated 1 October 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists a ban on dark patterns: deceptive design such as aggressive pop-ups or confusing and misleading consent buttons is prohibited for online platforms."
+  },
+  {
+    "n": 27,
+    "title": "Review of EU consumer law (Digital Fairness Act and fitness check)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/review-eu-consumer-law_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Digital Fairness Act is under preparation and aims at dark patterns, addictive design, unfair personalisation, influencer marketing, price marketing and digital contracts; the fitness check report was published in October 2024."
+  },
+  {
+    "n": 28,
+    "title": "FTC Report Shows Rise in Sophisticated Dark Patterns Designed to Trick and Trap Consumers (15 September 2022)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The four dark pattern tactics in the FTC staff report: disguising ads, making cancellation hard, burying key terms and junk fees, tricking people into sharing data."
+  },
+  {
+    "n": 29,
+    "title": "Cart Abandonment Rate Statistics (updated 28 October 2026)",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Average documented cart abandonment 70.22% across 50 studies (2006 to 2025); checkout abandonment reasons among US shoppers, including extra costs 40%, forced account creation 18% and a long or complicated checkout 17%; sample size and year not shown on the page."
+  },
+  {
+    "n": 30,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Remote server recommended; agents can read design context and, in beta, write frames, components and variables to the canvas; writing outside your drafts needs a Full seat; canvas writing free during beta, later usage-based."
+  }
+]

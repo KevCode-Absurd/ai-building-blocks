@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+    "name": "Turn a sales call into a checked proposal",
+    "why": "Takes call notes to a checked proposal and a plan to signature, the same path as the client-proposal skill."
+  },
+  {
+    "slug": "prepare-a-vendor-security-questionnaire-response",
+    "name": "Prepare a vendor security questionnaire response",
+    "why": "Answers a security questionnaire from evidence with an evidence index and open questions, matching the confirmed, partial or gap method here."
+  },
+  {
+    "slug": "win-a-deal-against-a-named-rival",
+    "name": "Win a deal against a named rival",
+    "why": "Plans how to answer a known rival fairly, useful when setting win themes."
+  },
+  {
+    "slug": "capability-pitch-letter-writer",
+    "name": "Capability pitch letter writer",
+    "why": "Writes a capability letter where every line can be shown, for buyers who ask before a formal tender."
+  },
+  {
+    "slug": "hardest-objections-answer-writer",
+    "name": "Hardest objections answer writer",
+    "why": "Finds the toughest doubts about a bid and drafts fair answers with gaps shown, for Red team prep."
+  },
+  {
+    "slug": "prepare-your-first-freelance-project-quote",
+    "name": "Prepare your first freelance project quote",
+    "why": "Turns a project brief into a freelance quote with clear scope, price assumptions and contract risks to check."
+  },
+  {
+    "slug": "hourly-rate-calculator",
+    "name": "Hourly rate calculator",
+    "why": "Works out hourly, day and project prices from target pay and costs, so proposal options rest on the client's own numbers."
+  },
+  {
+    "slug": "value-ladder-planner",
+    "name": "Value ladder planner",
+    "why": "Lays out offers from a first step upward, a useful base for good, better and best packages."
+  },
+  {
+    "slug": "client-scope-decision-review-assistant",
+    "name": "Client scope decision review assistant",
+    "why": "Compares change requests with the signed scope, which keeps the not-included list honest after the win."
+  },
+  {
+    "slug": "contract-intake-reviewer",
+    "name": "Contract intake reviewer",
+    "why": "Rates a contract's clauses and drafts questions before signing; a lawyer still checks, as this kit advises."
+  },
+  {
+    "slug": "monthly-lost-deal-reviewer",
+    "name": "Monthly lost deal reviewer",
+    "why": "Finds why deals are lost and revises the pitch, the same loop as the debrief-and-lessons prompt."
+  },
+  {
+    "slug": "quarterly-client-rate-reviewer",
+    "name": "Quarterly client rate reviewer",
+    "why": "Shows each client's real hourly rate, so the next proposal prices from evidence."
+  }
+]

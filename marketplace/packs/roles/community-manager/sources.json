@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Discord Community Guidelines (effective 29 September 2025, last updated 29 August 2025)",
+    "publisher": "Discord",
+    "url": "https://discord.com/guidelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Age-restricted channel labels, bans on spam, self-bots and user-bots, artificially inflating membership or engagement, buying or selling servers, ban evasion; reports from users and moderators; Discord's range of enforcement actions."
+  },
+  {
+    "n": 2,
+    "title": "Discord Terms of Service (effective 29 September 2025)",
+    "publisher": "Discord",
+    "url": "https://discord.com/terms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Server owners and admins control permissions and extra rules but must follow Discord's policies; users are responsible for what they post; Discord may remove content and suspend accounts; enforcement can be appealed."
+  },
+  {
+    "n": 3,
+    "title": "Role of administrators and moderators on Discord (12 May 2022)",
+    "publisher": "Discord Safety Center",
+    "url": "https://discord.com/safety/360044103531-role-of-administrators-and-moderators-on-discord",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What admins and moderators do, and the advice that each server writes its own behaviour rules on top of Discord's guidelines."
+  },
+  {
+    "n": 4,
+    "title": "How we enforce our rules (12 May 2022)",
+    "publisher": "Discord Safety Center",
+    "url": "https://discord.com/safety/360044159011-what-actions-we-take",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Discord's own actions against users and servers, including blocking a server from inviting new members and removing a server."
+  },
+  {
+    "n": 5,
+    "title": "New anti-spam, raid and AutoMod safety update (21 September 2022)",
+    "publisher": "Discord blog",
+    "url": "https://discord.com/blog/new-anti-spam-raid-automod-safety-update",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AutoMod spam and mention-spam filters, the suspicious link filter on Community servers, Pause Invites and raid reports. Dated 2022; check current settings in the app."
+  },
+  {
+    "n": 6,
+    "title": "Feature limitations on the free version of Slack",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/help/articles/7050776459923-Feature-limitations-on-the-free-version-of-Slack",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page undated). Free plan: 90 days of message and file access, content older than one year deleted, 10 integrations, one-to-one huddles."
+  },
+  {
+    "n": 7,
+    "title": "Deactivate a member's account",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/help/articles/204475027-Deactivate-a-members-account",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page undated). Who can deactivate; the person is not notified; messages and files are kept; deactivation can be reversed; available on all plans."
+  },
+  {
+    "n": 8,
+    "title": "Slack MCP server",
+    "publisher": "Slack developer docs",
+    "url": "https://docs.slack.dev/ai/mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page undated). Slack publishes an official MCP server for search, reading and sending messages; workspace admins approve and manage MCP clients."
+  },
+  {
+    "n": 9,
+    "title": "Get to know content moderation (updated 30 June 2025)",
+    "publisher": "Circle Help Center",
+    "url": "https://help.circle.so/p/administration/moderation/get-to-know-content-moderation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reporting, a report threshold that hides content, automatic flagging (profanity filter, flagged members), the Reports queue, approve or reject, and reversible decisions."
+  },
+  {
+    "n": 10,
+    "title": "Explore the capabilities of a moderator (updated 18 December 2022)",
+    "publisher": "Circle Help Center",
+    "url": "https://help.circle.so/p/administration/moderation/explore-capabilities-of-a-moderator",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Moderators act only in assigned spaces; settings, analytics and billing stay with admins; space moderators can add and remove members in their spaces."
+  },
+  {
+    "n": 11,
+    "title": "Deactivate, delete, or ban members (updated October 2026)",
+    "publisher": "Circle Help Center",
+    "url": "https://help.circle.so/p/audience/member-management/removing-members-from-your-community",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Differences between deactivate (reversible, content stays), delete (permanent erase) and ban (permanent erase, IP block, lifting needs Circle support); members are not notified; actions appear in activity logs."
+  },
+  {
+    "n": 12,
+    "title": "Get to know the Circle MCP (updated October 2026)",
+    "publisher": "Circle Help Center",
+    "url": "https://help.circle.so/p/sso-and-integrations/api/get-to-know-the-circle-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Circle MCP: admins only, Business plan and higher, read-only or full access chosen at sign-in, OAuth connection, request limits."
+  },
+  {
+    "n": 13,
+    "title": "Manage people and content (Facebook Groups)",
+    "publisher": "Facebook Help Center",
+    "url": "https://www.facebook.com/help/1686671141596230?locale=en_US",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page undated). Group admin tools: Admin Assist, membership questions, preapprovals, tagging a rule in a post or comment, remove, ban, suspend and limit members."
+  },
+  {
+    "n": 14,
+    "title": "Digital Services Act: questions and answers (last updated 19 December 2025)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/digital-services-act-questions-and-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DSA applies to all regulated services from 17 February 2024; easy reporting of illegal content, prompt handling, telling both sides; statements of reasons; free internal complaints handled by qualified staff; out-of-court dispute settlement; lighter rules for small and micro firms."
+  },
+  {
+    "n": 15,
+    "title": "The Digital Services Act (policy page, last updated 1 October 2026)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Platforms must explain removals, let users appeal, offer easy reporting, and avoid deceptive dark-pattern designs; micro and small companies have lighter requirements."
+  },
+  {
+    "n": 16,
+    "title": "Online Safety Act: explainer (updated 24 April 2025)",
+    "publisher": "UK Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/online-safety-act-explainer/online-safety-act-explainer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Which services are in scope (including forums and small services, proportionately), key dates (illegal content duties from 17 March 2025; children's risk assessments by 24 July 2025), duties, and Ofcom fines."
+  },
+  {
+    "n": 17,
+    "title": "47 U.S. Code § 230: Protection for private blocking and screening of offensive material",
+    "publisher": "Legal Information Institute, Cornell Law School",
+    "url": "https://www.law.cornell.edu/uscode/text/47/230",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Text of Section 230(c)(1), (c)(2) good-faith removal, and the exceptions in 230(e)."
+  },
+  {
+    "n": 18,
+    "title": "Section 512 of Title 17: Resources on online service provider safe harbors and notice-and-takedown system",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/512/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Notice-and-takedown, counter-notices and the 10 to 14 business-day restore window, the designated agent and its three-year renewal, repeat-infringer policy."
+  },
+  {
+    "n": 19,
+    "title": "The Santa Clara Principles on Transparency and Accountability in Content Moderation (2.0, 2021)",
+    "publisher": "Santa Clara Principles coalition",
+    "url": "https://santaclaraprinciples.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Understandable rules, notice of what was actioned and why, appeal reviewed by someone not involved, telling users when automation is used."
+  },
+  {
+    "n": 20,
+    "title": "The 90-9-1 Rule for Participation Inequality in Social Media and Online Communities (Jakob Nielsen, 8 October 2006)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/participation-inequality/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 90-9-1 pattern, its caveats, and ways to shape participation (lower barriers, reward moderately, promote quality)."
+  },
+  {
+    "n": 21,
+    "title": "The Beginners' Guide To Community Management",
+    "publisher": "FeverBee (Richard Millington)",
+    "url": "https://www.feverbee.com/the-beginners-guide-to-community-management/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated; FeverBee founder Richard Millington named as contact). Four layers of a community (common interest, means of engagement, relationships, purpose); the community manager as host rather than broadcaster; daily tasks."
+  },
+  {
+    "n": 22,
+    "title": "Proving Community ROI",
+    "publisher": "FeverBee (Richard Millington)",
+    "url": "https://www.feverbee.com/roi/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Value framework: lifetime value, acquisition, cost reduction, efficiency and social return against technology, staff and process costs."
+  },
+  {
+    "n": 23,
+    "title": "2026 CMX Community Industry Report",
+    "publisher": "CMX",
+    "url": "https://www.cmxhub.com/community-industry-report",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Seventh annual report; lean teams, diverging budgets, lower confidence in proving ROI, 93% of community professionals using AI tools, up from 81% the year before."
+  },
+  {
+    "n": 24,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Guides revised 2023). Employees and owners disclose their connection in each post; disclosures sit in the endorsement itself; #ambassador alone is not enough; brands train and monitor ambassador programmes."
+  },
+  {
+    "n": 25,
+    "title": "Negative Option Rule",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The October 2024 click-to-cancel rule; a 12 February 2026 Federal Register notice revising the rule to conform to federal court decisions; an advance notice of proposed rulemaking announced 11 March 2026."
+  },
+  {
+    "n": 26,
+    "title": "Consultation on the implementation of the new subscription contracts regime (outcome added 2 April 2026)",
+    "publisher": "UK Department for Business and Trade (GOV.UK)",
+    "url": "https://www.gov.uk/government/consultations/consultation-on-the-implementation-of-the-new-subscription-contracts-regime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Topics consulted on (pre-contract information, reminders, cooling-off, exit); the government will bring forward secondary legislation; no commencement date on the page."
+  },
+  {
+    "n": 27,
+    "title": "CyberTipline report",
+    "publisher": "National Center for Missing & Exploited Children (NCMEC)",
+    "url": "https://report.cybertip.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The US place to report child sexual exploitation."
+  },
+  {
+    "n": 28,
+    "title": "Report child sexual abuse imagery (UK report)",
+    "publisher": "Internet Watch Foundation",
+    "url": "https://www.iwf.org.uk/en/uk-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Anonymous UK reporting of suspected child sexual abuse imagery, including AI-generated or drawn images."
+  }
+]

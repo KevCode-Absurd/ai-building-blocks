@@ -1,0 +1,26 @@
+{
+  "id": "ecommerce-copywriter",
+  "name": "Ecommerce copywriter",
+  "department": "content",
+  "summary": "Writes product titles, descriptions and collection pages that help shoppers choose and help search find them. Keeps claims true to the label.",
+  "aliases": [
+    "product descriptions",
+    "product copywriter",
+    "listing copy",
+    "shopify copywriter",
+    "amazon listing copy",
+    "collection pages",
+    "product description writer",
+    "category page copy",
+    "food product copywriter",
+    "shopping feed titles"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: fact sheets, titles by surface, descriptions, collection pages, AI drafts and Google's AI labels, claims kept to the label (FTC Made in USA, reviews and endorsements, EU green claims from 27 Sep 2026, EU 30-day prior price, UK DMCC fake reviews and urgency), food allergens in the UK, EU and US, with 30 checked sources."
+    }
+  ]
+}

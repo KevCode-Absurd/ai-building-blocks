@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Add data tests to your DAG",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/build/data-tests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data tests are SELECT queries that return failing rows; zero rows passes; singular and generic tests; built-in unique, not_null, accepted_values and relationships; severity warn or error with warn_if and error_if; store_failures writes failing rows to an audit schema; tests: is now an alias of data_tests:."
+  },
+  {
+    "n": 2,
+    "title": "Model contracts",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/mesh/govern/model-contracts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Enforced contracts need every column's name and data_type and fail the build on mismatch; supported on table, view (no constraints) and incremental with on_schema_change append_new_columns or fail; not_null is the constraint most often enforced, primary and foreign keys often only recorded on cloud warehouses; breaking changes listed."
+  },
+  {
+    "n": 3,
+    "title": "Configure incremental models",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/build/incremental-models",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. is_incremental() conditions; without unique_key most adapters append and duplicate; unique_key must be unique and not null; >= filter and lookback windows; --full-refresh drops and rebuilds; on_schema_change defaults to ignore; Snowflake notice of September 2026 for dbt-snowflake below 1.10.6."
+  },
+  {
+    "n": 4,
+    "title": "Add sources to your DAG (source freshness)",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/build/sources",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Freshness config with loaded_at_field and warn_after or error_after, inherited from source to table; freshness: null disables it; a filter limits the freshness query; in dbt v2 the command is dbt freshness --resource-type source and results go to target/freshness.json."
+  },
+  {
+    "n": 5,
+    "title": "Source freshness",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/deploy/source-freshness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. dbt build does not include freshness checks; a freshness run step fails and stops later steps when data is stale; run freshness jobs at least twice as often as the shortest SLA; Snowflake freshness uses LAST_ALTERED."
+  },
+  {
+    "n": 6,
+    "title": "Staging: preparing our atomic building blocks",
+    "publisher": "dbt Developer Hub (dbt Labs), best practice guide",
+    "url": "https://docs.getdbt.com/best-practices/how-we-structure/2-staging",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Folders by source system; stg_[source]__[entity]s naming; staging models are the only place source() is used, one per source table; renaming, type casting, basic computations and categorising only; no joins or aggregations; materialise as views; base models as the exception."
+  },
+  {
+    "n": 7,
+    "title": "Unit tests",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/build/unit-tests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Available from dbt v1.8; given and expect rows test SQL logic before the model is built; use for complex logic, edge cases and refactors; dbt Labs recommends running them only in development or CI; SQL models in the current project only."
+  },
+  {
+    "n": 8,
+    "title": "Add snapshots to your DAG",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/build/snapshots",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Snapshots implement type 2 slowly changing dimensions; YAML config from v1.9; timestamp strategy recommended, check strategy when no reliable updated_at; dbt_valid_from and dbt_valid_to; hard_deletes ignore, invalidate or new_record; snapshots ignore full_refresh so history is kept."
+  },
+  {
+    "n": 9,
+    "title": "About dbt versions",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/dbt-versions/core",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 23 October 2026. dbt v2.0 released 14 September 2026 (dbt v2 and dbt OSS distributions); v1.12 released 16 July 2026, active support to 15 July 2027; v1.11 critical support until 18 December 2026; each minor supported one year; v1.3 to v1.7 deprecated in the platform on 31 January 2027."
+  },
+  {
+    "n": 10,
+    "title": "About dbt MCP server",
+    "publisher": "dbt Developer Hub (dbt Labs)",
+    "url": "https://docs.getdbt.com/docs/dbt-ai/about-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Local server (uvx dbt-mcp) can run dbt run, build and test; remote server over HTTP cannot run CLI commands; tool groups for Semantic Layer, SQL, Discovery and Admin API; tools depend on plan; described as a read-only access layer that does not store production data."
+  },
+  {
+    "n": 11,
+    "title": "Best Practices",
+    "publisher": "Apache Airflow documentation (version 3.4.0)",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Treat tasks like database transactions; use UPSERT not INSERT on re-runs; read and write a specific partition keyed on data_interval_start; never use now() for critical computation; keep top-level DAG code light; XCom only for small messages; credentials in Connections or a secrets backend; test DAGs."
+  },
+  {
+    "n": 12,
+    "title": "Supported versions",
+    "publisher": "Apache Airflow documentation",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/installation/supported-versions.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Airflow 3 current at 3.4.0, first released 22 April 2025; Airflow 2 (last 2.11.2) reached end of life on 22 April 2026 after limited maintenance from 22 October 2025."
+  },
+  {
+    "n": 13,
+    "title": "DAG Runs",
+    "publisher": "Apache Airflow documentation",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Catchup is off by default; backfill from the UI or airflow backfill create with a reprocess behaviour and max active runs; trigger timetables such as @daily have equal data_interval_start and end, data-interval timetables cover a window; clearing a task re-runs it."
+  },
+  {
+    "n": 14,
+    "title": "Asset checks",
+    "publisher": "Dagster docs (version 1.12.8)",
+    "url": "https://dagster.io/docs/guides/test/asset-checks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (docs.dagster.io redirects here). Asset checks test one property of an asset; they run with jobs that target the asset or on their own schedule; a failed check does not stop downstream assets unless blocking=True."
+  },
+  {
+    "n": 15,
+    "title": "Estimate and control costs",
+    "publisher": "Google Cloud, BigQuery documentation",
+    "url": "https://docs.cloud.google.com/bigquery/docs/best-practices-costs",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no page date. Dry runs give an upper-bound estimate; maximum bytes billed fails a query without charge; custom daily quotas are a hard cap for on-demand; LIMIT does not reduce bytes read on non-clustered tables; preview tables instead of querying; Cloud Billing budgets and alerts."
+  },
+  {
+    "n": 16,
+    "title": "Data retention with time travel and fail-safe",
+    "publisher": "Google Cloud, BigQuery documentation",
+    "url": "https://docs.cloud.google.com/bigquery/docs/time-travel",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Time travel covers 7 days by default, configurable from 2 to 7 days; fail-safe keeps deleted data 7 more days, recoverable only through Cloud Customer Care; deleted tables restored with a table copy using a timestamp decorator; storage billing model affects cost."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to partitioned tables",
+    "publisher": "Google Cloud, BigQuery documentation",
+    "url": "https://docs.cloud.google.com/bigquery/docs/partitioned-tables",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Integer-range, time-unit column and ingestion-time partitioning; boundaries in UTC; partition expiration deletes whole partitions; prefer clustering when partitions would be small (roughly under 10 GB), filters span many columns or DML touches most partitions."
+  },
+  {
+    "n": 18,
+    "title": "Use the BigQuery MCP server",
+    "publisher": "Google Cloud, BigQuery documentation",
+    "url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tools list datasets and tables, get metadata, execute_sql and execute_sql_readonly; execute_sql is the only non-read-only tool; IAM deny policies can block it; queries cancelled after three minutes by default; results capped at 3,000 rows."
+  },
+  {
+    "n": 19,
+    "title": "Working with resource monitors",
+    "publisher": "Snowflake Documentation",
+    "url": "https://docs.snowflake.com/en/user-guide/resource-monitors",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Resource monitors track warehouse credits and can notify, suspend or suspend immediately at thresholds; only ACCOUNTADMIN creates them; they do not cover serverless features or AI services (use budgets); suspension can lag, so set buffer thresholds."
+  },
+  {
+    "n": 20,
+    "title": "Understanding & using Time Travel",
+    "publisher": "Snowflake Documentation",
+    "url": "https://docs.snowflake.com/en/user-guide/data-time-travel",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Default retention 1 day; Enterprise Edition allows 0 to 90 days for permanent objects; transient and temporary tables 0 or 1 day; AT and BEFORE clauses; UNDROP restores dropped objects; Fail-safe 7 days after Time Travel, recoverable only by Snowflake."
+  },
+  {
+    "n": 21,
+    "title": "Warehouse considerations",
+    "publisher": "Snowflake Documentation",
+    "url": "https://docs.snowflake.com/en/user-guide/warehouses-considerations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Set auto-suspend low (for example 5 or 10 minutes or less) and matched to gaps in the workload; 60-second minimum billing each time a warehouse starts, then per second; larger sizes are not always faster; test sizes with the same queries."
+  },
+  {
+    "n": 22,
+    "title": "Snowflake-managed MCP server",
+    "publisher": "Snowflake Documentation",
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Exposes Cortex Agents, Cortex Analyst, Cortex Search, SQL execution and custom tools; OAuth recommended; permission is granted per tool; the SQL tool's read_only option defaults to true; restrict OAuth to a dedicated MCP role."
+  },
+  {
+    "n": 23,
+    "title": "Open Data Contract Standard",
+    "publisher": "Bitol",
+    "url": "https://bitol-io.github.io/open-data-contract-standard/latest/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A YAML data contract with sections including fundamentals, schema, data quality, support and communication channels, pricing, team, roles, service-level agreement and servers; meant to be platform agnostic."
+  },
+  {
+    "n": 24,
+    "title": "bitol-io/open-data-contract-standard",
+    "publisher": "Bitol on GitHub",
+    "url": "https://github.com/bitol-io/open-data-contract-standard",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current version v3.2.0 (no release date shown); citation lists the LF AI & Data Foundation as the organisation."
+  },
+  {
+    "n": 25,
+    "title": "Data Processing Pipelines (Site Reliability Workbook)",
+    "publisher": "Google, sre.google",
+    "url": "https://sre.google/workbook/data-processing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pipeline SLOs for freshness, correctness, isolation and end-to-end; golden data; alerts linked to playbooks; stale data is almost always better than incorrect data; idempotent and two-phase mutations; Spotify event delivery case with timeliness, skewness and completeness SLOs."
+  },
+  {
+    "n": 26,
+    "title": "PHE statement on delayed reporting of COVID-19 cases",
+    "publisher": "GOV.UK, Public Health England",
+    "url": "https://www.gov.uk/government/news/phe-statement-on-delayed-reporting-of-covid-19-cases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 4 October 2020: 15,841 cases between 25 September and 2 October were left out of reported figures because some files exceeded the maximum file size the loading system could handle; fixed by splitting large files and an end-to-end review."
+  },
+  {
+    "n": 27,
+    "title": "Sync modes",
+    "publisher": "Fivetran Documentation",
+    "url": "https://fivetran.com/docs/core-concepts/sync-modes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Soft delete mode marks deleted source rows as deleted; live mode keeps an exact copy of the source table; history mode keeps every version of a row; live and history modes only for some connectors."
+  },
+  {
+    "n": 28,
+    "title": "Sync modes",
+    "publisher": "Airbyte Documentation",
+    "url": "https://docs.airbyte.com/platform/using-airbyte/core-concepts/sync-modes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Full refresh overwrite, full refresh append, incremental append, incremental append plus deduped (a deduplicated view on a primary key) and full refresh overwrite plus deduped; incremental reads use a cursor or change data capture."
+  },
+  {
+    "n": 29,
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 5(1)(c) data minimisation ('adequate, relevant and limited to what is necessary') and 5(1)(e) storage limitation (kept identifiable no longer than necessary)."
+  },
+  {
+    "n": 30,
+    "title": "Enable the BigQuery sandbox",
+    "publisher": "Google Cloud, BigQuery documentation",
+    "url": "https://docs.cloud.google.com/bigquery/docs/sandbox",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No credit card needed; 10 GiB storage (lifetime, not refunded on deletion) and 1 TiB of query processing a month; tables, views and partitions expire after 60 days; no streaming, DML or Data Transfer Service."
+  }
+]

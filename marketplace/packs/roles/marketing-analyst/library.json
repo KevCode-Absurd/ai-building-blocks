@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "set-up-tracking-you-can-trust-before-you-scale",
+    "name": "Set up tracking you can trust before scaling",
+    "why": "The full tracking clean-up run, from GA4 and Meta set-up to tagged links, matching the tracking launch and verify workflow."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check for broken events, double counts and untagged campaigns against store totals, the routine after a tracking launch."
+  },
+  {
+    "slug": "campaign-link-tracker",
+    "name": "Campaign link tracker",
+    "why": "Builds tagged campaign links for each channel, the hands-on side of the UTM rules."
+  },
+  {
+    "slug": "ai-traffic-tracking-setup",
+    "name": "AI traffic tracking set-up",
+    "why": "Adds a way to see visits and buyers that come from AI assistants, which click tracking often misses."
+  },
+  {
+    "slug": "shopify-google-conversion-tracking-builder",
+    "name": "Shopify Google tracking builder",
+    "why": "A step-by-step build and test list for purchase tracking on Shopify, so each purchase fires once."
+  },
+  {
+    "slug": "holdout-test-planner",
+    "name": "Holdout test planner",
+    "why": "Plans a holdout for a doubtful channel, the first step of the geo holdout lift test skill."
+  },
+  {
+    "slug": "incrementality-test-planner",
+    "name": "Incrementality test planner",
+    "why": "Sizes a lift test to the client's spend and regions, with a cut, hold or scale rule."
+  },
+  {
+    "slug": "test-result-trust-checker",
+    "name": "Test result trust checker",
+    "why": "Checks whether a finished test result can be trusted and gives the lift as a range."
+  },
+  {
+    "slug": "post-purchase-survey-reader",
+    "name": "Post-purchase survey reader",
+    "why": "Reads 'How did you hear about us?' answers next to spend, the self-reported signal in the attribution read."
+  },
+  {
+    "slug": "set-your-cac-limit-and-test-what-ads-really-add",
+    "name": "Set your CAC limit and test what ads add",
+    "why": "Combines a customer cost limit with a lift test and a budget split, as in the customer cost limit prompt and quarterly lift test."
+  },
+  {
+    "slug": "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+    "name": "Define your metrics once and write a weekly update",
+    "why": "Metric definitions plus a plain weekly update, the same approach as the weekly marketing report skill."
+  },
+  {
+    "slug": "align-recurring-report-metric-definitions",
+    "name": "Align recurring report metric definitions",
+    "why": "Finds why two reports show different numbers for the same metric and writes the agreed procedure."
+  },
+  {
+    "slug": "channel-budget-mix-planner",
+    "name": "Channel budget mix planner",
+    "why": "Turns channel results and margins into a budget split with test caps, the step after a lift test readout."
+  },
+  {
+    "slug": "vanity-metric-fixer",
+    "name": "Vanity metric fixer",
+    "why": "Swaps vanity numbers in a report for per-customer numbers an owner can act on."
+  }
+]

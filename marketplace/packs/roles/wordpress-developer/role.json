@@ -1,0 +1,26 @@
+{
+  "id": "wordpress-developer",
+  "name": "WordPress developer",
+  "department": "engineering",
+  "summary": "Fixes, builds and updates WordPress sites and small plugins safely. Finds why a site broke and keeps it working after updates.",
+  "aliases": [
+    "wordpress",
+    "wordpress plugin",
+    "woocommerce",
+    "php developer",
+    "wordpress fix",
+    "elementor",
+    "wordpress white screen",
+    "plugin conflict",
+    "wordpress maintenance",
+    "gutenberg block"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (WordPress 7.0 and 7.1, PHP support dates, the security APIs, debugging and recovery mode, block API v3 and the iframed editor, WooCommerce HPOS, Patchstack 2026 data, email sender rules, EU, UK and US accessibility guidance), four skills (break-fix diagnosis, safe update plan, custom plugin build, plugin security hardening), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

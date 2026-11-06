@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "Stop Trying to Delight Your Customers (Dixon, Freeman and Toman)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2010/07/stop-trying-to-delight-your-customers",
+    "checked": "2026-11-06",
+    "supports": "The July-August 2010 article by Matthew Dixon, Karen Freeman and Nick Toman questioning whether going beyond expectations wins loyalty; the effort argument is summarised from the article and the authors' later book. Full text is behind HBR's paywall; the page and bylines were opened."
+  },
+  {
+    "n": 2,
+    "title": "KCS v6 Practices Guide",
+    "publisher": "Consortium for Service Innovation",
+    "url": "https://library.serviceinnovation.org/KCS/KCS_v6/KCS_v6_Practices_Guide",
+    "checked": "2026-11-06",
+    "supports": "Knowledge-Centered Service: Solve Loop (capture, structure, reuse, improve; 'search early, search often') and Evolve Loop (content health, process integration, performance assessment, leadership); content standard; v6 released 21 April 2016."
+  },
+  {
+    "n": 3,
+    "title": "Measuring Your Net Promoter Score",
+    "publisher": "Bain & Company (Net Promoter System)",
+    "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/",
+    "checked": "2026-11-06",
+    "supports": "How NPS is calculated (0 to 10 scale; promoters 9-10 minus detractors 0-6); track by segment, product or team rather than one company figure. Vendor page; Bain co-owns the trademarks."
+  },
+  {
+    "n": 4,
+    "title": "Voice and tone",
+    "publisher": "Mailchimp Content Style Guide",
+    "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+    "checked": "2026-11-06",
+    "supports": "Voice stays the same while tone changes with the reader's situation; consider the reader's state of mind; plainspoken; humour only when it fits; clarity first."
+  },
+  {
+    "n": 5,
+    "title": "Using macros to update tickets",
+    "publisher": "Zendesk Help Center",
+    "url": "https://support.zendesk.com/hc/en-us/articles/4408887656602",
+    "checked": "2026-11-06",
+    "supports": "Macros are prepared responses or actions agents apply manually; they can set status, priority and assignee and insert placeholders such as the requester's first name; preview before applying."
+  },
+  {
+    "n": 6,
+    "title": "Intercom MCP server",
+    "publisher": "Intercom Developer Hub",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "checked": "2026-11-06",
+    "supports": "Intercom's hosted MCP server: search and fetch conversations and contacts, Help Center article tools; write actions limited to internal notes and articles, cannot send customer-visible replies; US and EU regions; OAuth or bearer token. No date on the page."
+  },
+  {
+    "n": 7,
+    "title": "Claude can now connect to your world (Integrations)",
+    "publisher": "Anthropic (Claude blog)",
+    "url": "https://claude.com/blog/integrations",
+    "checked": "2026-11-06",
+    "supports": "Integrations launched 1 May 2025 included Intercom, Square, PayPal, Zapier and Atlassian; Claude can use Intercom conversation history and user attributes to find patterns."
+  },
+  {
+    "n": 8,
+    "title": "Klarna AI assistant handles two-thirds of customer service chats in its first month",
+    "publisher": "Klarna",
+    "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+    "checked": "2026-11-06",
+    "supports": "27 February 2024 company claims: 2.3 million conversations, two-thirds of chats, work of 700 full-time agents, resolution under 2 minutes from 11, 25% fewer repeat inquiries, satisfaction on par with humans, 23 markets, 35+ languages, estimated $40 million profit improvement in 2024."
+  },
+  {
+    "n": 9,
+    "title": "Shipping and Returns",
+    "publisher": "Zappos",
+    "url": "https://www.zappos.com/c/shipping-and-returns",
+    "checked": "2026-11-06",
+    "supports": "Returns within 60 days in new condition, free US return shipping via UPS, original packaging and tags, final sale items excluded, restocking fee up to 50% for returns that break the rules, refund timing by payment method."
+  },
+  {
+    "n": 10,
+    "title": "Business Guide to the FTC's Mail, Internet, or Telephone Order Merchandise Rule",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule",
+    "checked": "2026-11-06",
+    "supports": "Ship within the stated time or 30 days; delay notices with the option to cancel; refunds within 7 working days (one billing cycle where the seller is the creditor). Guide dated September 2011, penalty amounts edited January 2025."
+  },
+  {
+    "n": 11,
+    "title": "Businessperson's Guide to Federal Warranty Law",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law",
+    "checked": "2026-11-06",
+    "supports": "Magnuson-Moss: written warranties on products over $10 titled full or limited; single clear document and pre-sale availability over $15; no tie-in conditions requiring specific brands of parts or service; written warranty means implied warranties cannot be disclaimed (limited warranty may limit their duration). Dated December 2006, updated March 2018."
+  },
+  {
+    "n": 12,
+    "title": "Negative Option Rule",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "checked": "2026-11-06",
+    "supports": "October 2024 click-to-cancel rule; 12 February 2026 Federal Register revision to conform the rule to federal court decisions; March 2026 advance notice seeking comment on new negative option rules."
+  },
+  {
+    "n": 13,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "14 August 2024: bans fake reviews, incentives conditioned on positive or negative sentiment, undisclosed insider reviews, review suppression by threats or intimidation, and fake social indicators."
+  },
+  {
+    "n": 14,
+    "title": "Fake engagement and rating manipulation policy",
+    "publisher": "Google Maps user contributed content policy",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-06",
+    "supports": "Merchants may not offer incentives for reviews, discourage or prohibit negative reviews, or selectively solicit positive reviews; they may ask for genuine reviews."
+  },
+  {
+    "n": 15,
+    "title": "Accepting returns and giving refunds",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+    "checked": "2026-11-06",
+    "supports": "UK: faulty, not as described or not working means a refund, repair or replacement; 6-month presumption the fault was there; up to 6 years to claim (5 in Scotland); online, phone and mail orders cancellable within 14 days of receipt, then 14 days to return, refund within 14 days of receiving the item, standard delivery refunded; 'no returns' signs are illegal."
+  },
+  {
+    "n": 16,
+    "title": "CMA to boost consumer and business confidence as new consumer protection regime comes into force",
+    "publisher": "UK Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/news/cma-to-boost-consumer-and-business-confidence-as-new-consumer-protection-regime-comes-into-force",
+    "checked": "2026-11-06",
+    "supports": "7 April 2025: CMA can decide breaches directly and fine up to 10% of global turnover; fake reviews and drip pricing explicitly banned; further consultation before enforcing newer subscription and fixed-term contract rules."
+  },
+  {
+    "n": 17,
+    "title": "Guarantees and returns: legal guarantee",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/guarantees-returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "EU minimum 2-year legal guarantee from receipt; repair or replacement free, then full or partial refund; defects within 1 year (2 in some countries) presumed present at delivery; commercial guarantees cannot reduce legal rights. Last checked by the EU 5 October 2026."
+  },
+  {
+    "n": 18,
+    "title": "Returning goods bought online (cooling-off period)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "EU 14-day cooling-off period from delivery for goods; exceptions such as personalised, perishable and dated services; buyer normally pays return postage unless told otherwise; trader pays for defective returns. Last checked by the EU 28 April 2026."
+  },
+  {
+    "n": 19,
+    "title": "EU AI Act, Article 50: Transparency obligations",
+    "publisher": "Future of Life Institute (artificialintelligenceact.eu explainer site)",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "AI systems that interact directly with people must tell them they are dealing with AI unless obvious, at the latest at first interaction; applies from 2 August 2026; marked as amended. Unofficial explainer."
+  },
+  {
+    "n": 20,
+    "title": "EU Digital Omnibus on AI enters into force (K&L Gates summary)",
+    "publisher": "National Law Review",
+    "url": "https://natlawreview.com/article/eu-digital-omnibus-ai-enters-force",
+    "checked": "2026-11-06",
+    "supports": "Law-firm summary: Regulation (EU) 2026/1744 in force 27 July 2026; transparency obligations, including disclosing AI interaction, continue from 2 August 2026; short grace period only for some machine-readable marking of generative AI already on the market."
+  },
+  {
+    "n": 21,
+    "title": "Respect individuals' rights (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en",
+    "checked": "2026-11-06",
+    "supports": "GDPR rights including access and erasure; reply within one month, extendable by two months for complex requests with notice; usually free; identity can be checked where there is reasonable doubt."
+  },
+  {
+    "n": 22,
+    "title": "Respond to disputes",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/disputes/responding",
+    "checked": "2026-11-06",
+    "supports": "Dispute response windows usually 7 to 21 days by card network; inquiries are a pre-dispute stage; the issuer has already refunded the cardholder; one chance to submit evidence; contacting the customer may resolve the complaint and lead them to withdraw; decisions can take up to 3 months."
+  },
+  {
+    "n": 23,
+    "title": "Returns and exchanges",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/returns",
+    "checked": "2026-11-06",
+    "supports": "Shopify admin returns and exchanges, optional return labels, refunds after inspection, self-serve return and cancellation requests from the order status page, and return rules that set eligibility and request windows."
+  },
+  {
+    "n": 24,
+    "title": "UK Customer Satisfaction Index (UKCSI)",
+    "publisher": "The Institute of Customer Service",
+    "url": "https://www.instituteofcustomerservice.com/research-insight/ukcsi/",
+    "checked": "2026-11-06",
+    "supports": "July 2026 UKCSI 78.3 out of 100, up 1 point on a year earlier and 0.1 on January 2026; complaint handling is one of five scored dimensions; 277 organisations or types scored."
+  },
+  {
+    "n": 25,
+    "title": "Global CX Trends 2026",
+    "publisher": "Zendesk",
+    "url": "https://cxtrends.zendesk.com/",
+    "checked": "2026-11-06",
+    "supports": "Vendor survey claims: 74% of customers find repeating their story frustrating; 88% expect faster responses than a year ago; 95% of consumers expect an explanation for AI-made decisions. No sample size or method shown on the page."
+  },
+  {
+    "n": 26,
+    "title": "Using Credit Cards and Disputing Charges",
+    "publisher": "U.S. Federal Trade Commission (Consumer Advice)",
+    "url": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges",
+    "checked": "2026-11-06",
+    "supports": "US customers can dispute billing errors such as goods not delivered within 60 days of the first bill showing the charge, and may raise quality disputes with the card issuer after trying the seller. Dated May 2022."
+  }
+]

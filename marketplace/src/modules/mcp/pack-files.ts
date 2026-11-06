@@ -8,7 +8,7 @@ export interface PackIndex {
   agent_id: string;
   version: string;
   updated: string;
-  knowledge: string;
+  knowledge: unknown; // { status, updated, sources, review_every_days } (older packs: "ready" or "pending")
   zip?: { url: string; bytes: number; version: string };
   train_zip?: { url: string; bytes: number; version: string };
   files: PackIndexFile[];

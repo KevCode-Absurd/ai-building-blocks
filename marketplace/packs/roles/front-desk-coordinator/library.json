@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "explain-appointment-no-show-patterns",
+    "name": "Explain appointment no show patterns",
+    "why": "Reconciles attendance records into a no-show pattern summary, the first step of the no-show plan."
+  },
+  {
+    "slug": "explain-service-booking-terms-to-customers",
+    "name": "Explain service booking terms to customers",
+    "why": "Turns booking terms into plain words, like the booking policy prompt."
+  },
+  {
+    "slug": "sms-send-checker",
+    "name": "SMS send checker",
+    "why": "Checks a reminder text and send plan for cost and rule flags before it goes out."
+  },
+  {
+    "slug": "document-a-clinic-appointment-intake-process",
+    "name": "Document a clinic appointment intake process",
+    "why": "Writes the intake procedure for desk staff, matching the front-desk FAQ and intake skill."
+  },
+  {
+    "slug": "check-a-clinic-service-information-page",
+    "name": "Check a clinic service information page",
+    "why": "Checks a clinic FAQ against approved service facts, so desk answers never drift from policy."
+  },
+  {
+    "slug": "measure-a-clinic-administrative-queue",
+    "name": "Measure a clinic administrative queue",
+    "why": "Finds the admin step that slows the desk, using deidentified records only."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Drafts checked replies to each batch of reviews and holds risky ones, as in the review replies skill."
+  },
+  {
+    "slug": "angry-customer-reply-writer",
+    "name": "Angry customer reply writer",
+    "why": "Helps with calm wording for an upset caller or client before the desk replies."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Turns the questions clients really ask into a web FAQ page."
+  },
+  {
+    "slug": "ad-script-read-aloud-editor",
+    "name": "Ad script read-aloud editor",
+    "why": "Finds lines that trip when spoken, useful for checking phone prompts and greetings before recording."
+  },
+  {
+    "slug": "elevenlabs-spoken-script-writer",
+    "name": "ElevenLabs spoken script writer",
+    "why": "Shapes greetings and hold messages with pacing cues when the business records them with a synthetic voice."
+  }
+]

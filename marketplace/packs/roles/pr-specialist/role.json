@@ -1,0 +1,26 @@
+{
+  "id": "pr-specialist",
+  "name": "PR specialist",
+  "department": "marketing",
+  "summary": "Gets a business talked about in the press, on podcasts and at events, and helps it respond well when things go wrong. Writes releases, pitches and statements.",
+  "aliases": [
+    "public relations",
+    "press release",
+    "publicist",
+    "media relations",
+    "crisis communications",
+    "podcast booking",
+    "pr consultant",
+    "press officer",
+    "award entries",
+    "music publicist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: newsworthiness, press releases, pitching to an approved media list, embargoes and exclusives, listed-company disclosure limits, awards, talks, podcasts and music press kits, crisis basics from CDC CERC with breach and recall duties, outcome-based measurement, and 25 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "audit-your-sites-seo-and-fix-titles-tags-and-markup-first",
+    "name": "Audit your site's SEO and fix what matters first",
+    "why": "A guided run of the audit-then-fix sequence in the technical-seo-audit skill: ranked audit, on-page fixes, new titles and tags, and schema markup."
+  },
+  {
+    "slug": "fix-a-drop-in-search-traffic-and-check-it-recovers",
+    "name": "Fix a drop in search traffic and check it recovers",
+    "why": "Turns a Search Console export into the pages that lost clicks, a ranked fix list and a recovery report, matching the search-traffic-drop-diagnosis skill."
+  },
+  {
+    "slug": "search-console-traffic-drop-diagnoser",
+    "name": "Search Console traffic drop diagnoser",
+    "why": "A focused step for finding which pages lost clicks and the likely cause from one export."
+  },
+  {
+    "slug": "search-console-quick-win-finder",
+    "name": "Search Console quick-win finder",
+    "why": "Finds pages in striking distance to push this month, the opportunity step of the monthly search review."
+  },
+  {
+    "slug": "monthly-search-console-keeper",
+    "name": "Monthly Search Console keeper",
+    "why": "An agent that runs the monthly review loop: pages to push, thin pages to fix and next posts to write."
+  },
+  {
+    "slug": "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+    "name": "Plan a topic cluster from keywords to briefs and links",
+    "why": "Goes from keyword research to a cluster plan, post briefs and internal links, the same path as the keyword-intent-map and seo-content-brief skills."
+  },
+  {
+    "slug": "write-a-post-that-beats-the-pages-ranking-today",
+    "name": "Write a post that beats the pages ranking today",
+    "why": "Builds a brief from the pages that rank, then a full post and page fixes, for when the client wants the writing done too."
+  },
+  {
+    "slug": "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+    "name": "Find old posts losing traffic and refresh or cut them",
+    "why": "The refresh, merge or cut decisions of the content-refresh-cycle workflow, with tracking."
+  },
+  {
+    "slug": "keyword-to-post-outline-writer",
+    "name": "Keyword to post outline writer",
+    "why": "A quick one-page outline with intent and headings when a full brief is more than the job needs."
+  },
+  {
+    "slug": "search-title-and-snippet-writer",
+    "name": "Search title and snippet writer",
+    "why": "Writes titles and descriptions within length limits, a companion to the title-and-meta-rewrite prompt."
+  },
+  {
+    "slug": "customer-question-keyword-finder",
+    "name": "Customer question keyword finder",
+    "why": "Pulls search questions from reviews, tickets and comments, the customer-language seed step of keyword research."
+  },
+  {
+    "slug": "store-seo-fix-prioritiser",
+    "name": "Store SEO fix prioritiser",
+    "why": "Ranks crawl-report fixes for online shops by sales at risk, with an ignore list."
+  },
+  {
+    "slug": "store-link-gap-planner",
+    "name": "Store link gap planner",
+    "why": "Finds earned-link targets against rivals and drafts pitch emails, for the link earning side of the role."
+  },
+  {
+    "slug": "domain-redirect-layout-planner",
+    "name": "Domain and redirect layout planner",
+    "why": "Plans the main address and redirects for several domains, useful at the start of a site migration."
+  },
+  {
+    "slug": "seo-worth-it-checker",
+    "name": "SEO worth-it checker",
+    "why": "Gives an honest go, go small or not-now call on SEO from margin, cash and hours, for clients who may not be ready."
+  }
+]

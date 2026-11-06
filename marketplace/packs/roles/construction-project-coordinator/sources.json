@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "The last planner system of production control (PhD thesis, 2000)",
+    "publisher": "Herman Glenn Ballard, University of Birmingham eTheses",
+    "url": "https://etheses.bham.ac.uk/id/eprint/4789/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (catalogue page and abstract). Last Planner aims to make plans reliable rather than only detect variances afterwards; the thesis sought to raise plan reliability above a 70% percent-plan-complete level, and the last case study reached the 90% target."
+  },
+  {
+    "n": 2,
+    "title": "Delay and Disruption Protocol, 2nd edition",
+    "publisher": "Society of Construction Law",
+    "url": "https://www.scl.org.uk/resources/delay-disruption-protocol",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 2nd edition (February 2017) guides parties on extensions of time and compensation for delay and disruption, and treats transparency of information and method as central to preventing and resolving disputes."
+  },
+  {
+    "n": 3,
+    "title": "List of all current AIA contract documents",
+    "publisher": "AIA Contract Documents",
+    "url": "https://learn.aiacontracts.com/articles/6150803-list-of-all-current-aia-contract-documents/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated article). Current editions: A201-2017 General Conditions, A101-2017, A105-2017 short form for small projects, G701-2017 Change Order, G714-2017 Construction Change Directive, G710-2017 Architect's Supplemental Instructions, G702-1992 and G703-1992 payment application and continuation sheet, G716-2004 Request for Information, G810-2001 Transmittal Letter."
+  },
+  {
+    "n": 4,
+    "title": "JCT Contracts",
+    "publisher": "Joint Contracts Tribunal",
+    "url": "https://www.jctltd.co.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The JCT 2024 Edition is current and sold alongside the 2016 Edition, which is being withdrawn; families include the Standard Building, Design and Build, Intermediate and Minor Works contracts."
+  },
+  {
+    "n": 5,
+    "title": "NEC Contracts",
+    "publisher": "NEC (Thomas Telford Ltd)",
+    "url": "https://www.neccontract.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. NEC4 suite, June 2017 edition revised January 2023, including the Engineering and Construction Contract. The site carries an AI usage restriction notice on NEC materials, so this kit names the edition only and summarises no NEC text."
+  },
+  {
+    "n": 6,
+    "title": "RFIs: A Contractor’s Guide to Requests for Information",
+    "publisher": "Procore (Hildy Medina and Julia Tell)",
+    "url": "https://www.procore.com/library/rfi-construction",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 3 October 2025. A good RFI asks one clear question with context, drawings or photos, a suggested answer and a response date; check the contract documents first; RFIs are not change orders. Reports a 2013 Navigant Consulting study giving average RFI reply times of 6.4 to 10 days by region and project size (vendor summary of a third-party study)."
+  },
+  {
+    "n": 7,
+    "title": "RFIs (Procore support)",
+    "publisher": "Procore",
+    "url": "https://support.procore.com/products/online/user-guide/project-level/rfi",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RFI manager role, ball in court, draft, open and closed statuses, official responses, links to change events and potential change orders; a Draft RFI Agent entered open beta on 23 September 2025."
+  },
+  {
+    "n": 8,
+    "title": "Submittals (Procore support)",
+    "publisher": "Procore",
+    "url": "https://support.procore.com/products/online/user-guide/project-level/submittals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Submittal log by specification division with attachments, submitter and approver workflow, ball in court, revisions, due dates calculated from the submit-by date (since 15 April 2024), and an AI-powered submittal generator added 17 March 2026."
+  },
+  {
+    "n": 9,
+    "title": "Daily Log (Procore support)",
+    "publisher": "Procore",
+    "url": "https://support.procore.com/products/online/user-guide/project-level/daily-log",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Daily log types include manpower, weather, equipment, deliveries, inspections, safety violations, accidents, delays, visitors, phone calls, notes and photos; logs can be marked complete and reopened by an admin; recent changes dated to 13 October 2026."
+  },
+  {
+    "n": 10,
+    "title": "Change Orders (Procore support)",
+    "publisher": "Procore",
+    "url": "https://support.procore.com/products/online/user-guide/project-level/change-orders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Commitment change orders (subcontracts and purchase orders) versus prime contract change orders (owner contract); tiers set on each contract; when the Change Events tool is on, a change event comes first; designated reviewers approve; DocuSign signature status shown."
+  },
+  {
+    "n": 11,
+    "title": "Procore AI",
+    "publisher": "Procore",
+    "url": "https://www.procore.com/ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no dates on page). Procore lists agents for deep search, submittal review, RFIs, daily logs and contract review, able to create or update records, with human sign-off, citations and inherited role permissions. No MCP server is mentioned."
+  },
+  {
+    "n": 12,
+    "title": "Summary of duties for CDM dutyholders",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/summary.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 7 November 2024. Duties of commercial and domestic clients, designers, principal designers, principal contractors, contractors and workers under CDM 2015; one person may hold more than one role if competent."
+  },
+  {
+    "n": 13,
+    "title": "Commercial clients: CDM 2015",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/commercial-clients.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 12 January 2026. Client duties: arrangements, time and resources, welfare, pre-construction information, construction phase plan before work starts, health and safety file; notifiable projects (over 30 working days with more than 20 workers at once, or over 500 person-days) are notified on form F10 and the notice displayed in the site office."
+  },
+  {
+    "n": 14,
+    "title": "Domestic clients: CDM 2015",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/domestic-clients.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 7 October 2025. A domestic client's duties pass to the contractor (single contractor) or principal contractor (several contractors), or to a principal designer by written agreement."
+  },
+  {
+    "n": 15,
+    "title": "Principal contractors: CDM 2015",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/principal-contractors.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 7 November 2024. Principal contractor prepares and reviews the construction phase plan, gives site inductions, provides welfare, coordinates contractors, consults workers and prevents unauthorised access."
+  },
+  {
+    "n": 16,
+    "title": "What you need to know if you are doing or having construction and building work carried out",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/construction/cdm/2015/buildingcontrol.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 14 May 2026. CDM 2015 applies to all construction work including domestic projects; work done as part of a business, such as by a landlord or developer, may make the client a commercial client; notification thresholds and form F10."
+  },
+  {
+    "n": 17,
+    "title": "Directive 92/57/EEC: temporary or mobile construction sites",
+    "publisher": "EU-OSHA",
+    "url": "https://osha.europa.eu/en/legislation/directives/15",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 13 June 2024. Safety and health coordinators where several firms work on site; a safety and health plan before work starts; prior notice to authorities above 30 working days with more than 20 workers at once, or 500 person-days; appointing a coordinator does not remove the client's responsibility."
+  },
+  {
+    "n": 18,
+    "title": "Construction Focus Four",
+    "publisher": "OSHA (US Department of Labor)",
+    "url": "https://www.osha.gov/training/outreach/construction/focus-four",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). OSHA's Focus Four construction hazards: falls, caught-in or -between, struck-by, and electrocution."
+  },
+  {
+    "n": 19,
+    "title": "Stop Falls: fall prevention campaign",
+    "publisher": "OSHA (US Department of Labor)",
+    "url": "https://www.osha.gov/stop-falls",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Falls are the leading cause of death in construction: 389 fatal falls to a lower level of 1,034 construction deaths in 2024 (BLS data); plan, provide, train; fall protection for work six feet or more above a lower level."
+  },
+  {
+    "n": 20,
+    "title": "Report a fatality or severe injury",
+    "publisher": "OSHA (US Department of Labor)",
+    "url": "https://www.osha.gov/report",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employers report a work-related fatality within 8 hours and an in-patient hospitalisation, amputation or loss of an eye within 24 hours, by phone to the area office, the 24-hour hotline or online."
+  },
+  {
+    "n": 21,
+    "title": "Injury and Illness Recordkeeping",
+    "publisher": "OSHA (US Department of Labor)",
+    "url": "https://www.osha.gov/recordkeeping",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Many employers with more than 10 employees keep OSHA 300, 300A and 301 records; establishments meeting size and industry criteria submit data yearly through the Injury Tracking Application between 2 January and 2 March."
+  },
+  {
+    "n": 22,
+    "title": "Top 10 Most Frequently Cited Standards",
+    "publisher": "OSHA (US Department of Labor)",
+    "url": "https://www.osha.gov/top10citedstandards",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 5 October 2026. Preliminary FY 2026 list (1 Oct 2025 to 31 Aug 2026): fall protection general requirements (1926.501) first; scaffolding, ladders, fall protection training and eye and face protection are the other construction standards in the top ten."
+  },
+  {
+    "n": 23,
+    "title": "Building regulations approval",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/building-regulations-approval",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. England and Wales: approval routes (council building control, registered building control approver, competent person scheme); higher-risk buildings (at least 7 storeys or 18 metres with two or more homes, hospitals, care homes) need Building Safety Regulator approval before work; Building Safety Levy may apply from 1 October 2026; separate from planning permission; Scotland and Northern Ireland differ."
+  },
+  {
+    "n": 24,
+    "title": "The Building Safety Act",
+    "publisher": "GOV.UK (Ministry of Housing, Communities and Local Government)",
+    "url": "https://www.gov.uk/guidance/the-building-safety-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 25 July 2022, later updated. Royal Assent 28 April 2022; principal designers and principal contractors manage building safety risks under the dutyholder regime; time limit for homeowner claims on sub-standard work rises from 6 to 15 years; new Building Safety Regulator."
+  },
+  {
+    "n": 25,
+    "title": "Party walls and building work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/party-walls-building-works",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. In England and Wales you must tell neighbours about work on or near a shared wall or boundary structure; party wall agreements are separate from planning permission and building regulations; Scotland differs."
+  },
+  {
+    "n": 26,
+    "title": "2011 changes to Part 2 of the Housing Grants, Construction and Regeneration Act 1996 (consultation)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/consultations/2011-changes-to-part-2-of-the-housing-grants-construction-and-regeneration-act-1996",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; published 24 October 2017, updated 26 February 2020. Part 2 of the Construction Act sets a construction payment and adjudication framework, which does not apply to residential occupiers."
+  },
+  {
+    "n": 27,
+    "title": "Before you get building work done",
+    "publisher": "Citizens Advice",
+    "url": "https://www.citizensadvice.org.uk/consumer/getting-home-improvements-done/before-you-get-building-work-done/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (England, undated). Get written quotes from at least three traders; a quote is a fixed price, an estimate is not; contract should cover timings, delays, rubbish and skips, materials, subcontractors and payments; pay in stages; avoid paying everything upfront and keep any deposit under 25%; 14-day cooling-off; check memberships, Gas Safe and registered electricians; planning and building regulations."
+  },
+  {
+    "n": 28,
+    "title": "If there's a problem with home improvements",
+    "publisher": "Citizens Advice",
+    "url": "https://www.citizensadvice.org.uk/consumer/getting-home-improvements-done/problem-with-home-improvements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (England, undated). Traders must use reasonable care and skill under the Consumer Rights Act 2015; gather evidence, raise with the trader, complain in writing, agree a timescale; quoted prices cannot rise without good reason; late work usually needs a second chance unless the date was essential; dangerous work steps."
+  },
+  {
+    "n": 29,
+    "title": "Buyer's Remorse: The FTC's Cooling-Off Rule May Help",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://consumer.ftc.gov/articles/buyers-remorse-ftcs-cooling-rule-may-help",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; article dated September 2025. Three business days to cancel certain sales made at home or a temporary location (home sales under $25 excluded); exclusions include emergencies and repairs the buyer asked for; seller must give cancellation forms; state laws may add protection."
+  },
+  {
+    "n": 30,
+    "title": "Work-related fatal injuries in Great Britain",
+    "publisher": "Health and Safety Executive",
+    "url": "https://www.hse.gov.uk/statistics/fatals-overview.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 30 June 2026. Provisional 2025/26: 126 workers killed; construction had the most deaths of any industry (25); falls from height were the most common cause (31); final figures due July 2027."
+  }
+]

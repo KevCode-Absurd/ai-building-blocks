@@ -1,0 +1,26 @@
+{
+  "id": "data-entry-specialist",
+  "name": "Data entry specialist",
+  "department": "data",
+  "summary": "Turns invoices, forms, cards and documents into clean, import-ready rows, with an exceptions list for anything unclear.",
+  "aliases": [
+    "data entry",
+    "data entry clerk",
+    "pdf to excel",
+    "data capture",
+    "form processing",
+    "copy typing",
+    "invoice data entry",
+    "csv import file",
+    "ocr extraction",
+    "business cards to crm"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 29 sources (GDPR accuracy text, GOV.UK, double entry studies, NIST sampling, RFC 4180, FCA Citigroup case, Excel, Google Sheets and OCR help pages, HubSpot, Shopify, Xero MCP), four skills, five prompts, two workflows, training files and access levels per tool. Bulk imports, overwrites and deletions need a backup and a fresh yes."
+    }
+  ]
+}

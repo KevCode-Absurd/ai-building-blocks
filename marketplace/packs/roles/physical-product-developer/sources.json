@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Regulation (EU) 2023/988 on general product safety, full text",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies from 13 Dec 2024 (Art 52); Art 9 internal risk analysis, technical documentation kept 10 years, type, batch or serial number, name and postal and electronic address; Art 16 an economic operator established in the EU must be responsible; Art 19 information required in online offers; Art 20 accidents notified through the Safety Business Gateway; Art 36 recall notices headed \"Product safety recall\"; Art 37 remedy choice of at least two of repair, replacement or refund."
+  },
+  {
+    "n": 2,
+    "title": "Product safety",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/business-economy-euro/product-safety-and-requirements/product-safety_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Describes the GPSR and Safety Gate, the EU rapid alert system for dangerous non-food products, with links to business obligations and online marketplace registration."
+  },
+  {
+    "n": 3,
+    "title": "CE marking",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-requirements/labels-markings/ce-marking/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 17 Jul 2026). CE marking only for products under EU rules that require it (examples include toys, electrical equipment, PPE); steps from requirements to declaration of conformity; notified body number next to the mark where third-party assessment is required; at least 5 mm; documents kept 10 years; must not be used where no EU rule requires it."
+  },
+  {
+    "n": 4,
+    "title": "Directive (EU) 2024/2853 on liability for defective products, full text",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2024/2853/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Art 4(1): product includes software, digital manufacturing files and raw materials; Art 8: when the manufacturer is outside the EU, the importer, authorised representative or fulfilment service provider can be liable; Art 21-22: old directive repealed with effect from 9 Dec 2026, still applying to products placed on the market before; national laws due by 9 Dec 2026."
+  },
+  {
+    "n": 5,
+    "title": "Textile labelling",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-requirements/labels-markings/textile-label/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 13 Jul 2026). Fibre composition label for products at least 80% textile fibres by weight; only fibre names in Annex I of the EU regulation; percentages in decreasing order; translated into the languages of each country of sale; non-textile parts of animal origin must be shown."
+  },
+  {
+    "n": 6,
+    "title": "EU Customs Tariff (TARIC)",
+    "publisher": "European Commission, Taxation and Customs Union",
+    "url": "https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. TARIC holds EU tariff measures, preferences, trade defence duties and import restrictions; it does not include national VAT or excise."
+  },
+  {
+    "n": 7,
+    "title": "Batteries",
+    "publisher": "European Commission, Environment",
+    "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Regulation (EU) 2023/1542 on batteries in force since 17 Aug 2023 and applying from 18 Feb 2024; covers portable and other battery categories across sustainability, safety, labelling, due diligence and end of life."
+  },
+  {
+    "n": 8,
+    "title": "General Product Safety Regulations 2005",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/government/publications/general-product-safety-regulations-2005",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Dec 2024). The 2005 regulations require consumer products to be safe in normal or reasonably foreseeable use and apply in England, Scotland and Wales; in Northern Ireland they were superseded on 13 Dec 2024 by the EU GPSR."
+  },
+  {
+    "n": 9,
+    "title": "Product safety for businesses: A to Z of industry guidance",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/product-safety-for-businesses-a-to-z-of-industry-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 2 Mar 2026). Product-specific guidance (electrical, radio, toys, cosmetics, furniture and more); general product safety applies where no specific regulation covers a product."
+  },
+  {
+    "n": 10,
+    "title": "Product Recalls and Alerts",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/product-recalls-and-alerts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 6 Oct 2026). OPSS publishes recalls, product safety reports and product safety alerts; a business that has placed an unsafe product on the market should notify its market surveillance authority."
+  },
+  {
+    "n": 11,
+    "title": "Using the UKCA marking",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/using-the-ukca-marking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 21 Aug 2026). Great Britain continues to recognise CE marking; UK approved bodies are accredited by UKAS and certify only for UKCA; UKCA may go on a label or accompanying document until 11pm on 31 Dec 2027; marks at least 5 mm; manufacturer and importer name and postal address; instructions in English."
+  },
+  {
+    "n": 12,
+    "title": "Placing manufactured goods on the market in Great Britain",
+    "publisher": "GOV.UK (Department for Business and Trade)",
+    "url": "https://www.gov.uk/guidance/placing-manufactured-goods-on-the-market-in-great-britain",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 17 May 2024). Covers about 19 product areas; on 24 Jan 2024 the government signalled continued CE recognition for a range of product regulations, and the 31 Dec 2024 end date was removed on 17 May 2024."
+  },
+  {
+    "n": 13,
+    "title": "Register a design",
+    "publisher": "GOV.UK (Intellectual Property Office)",
+    "url": "https://www.gov.uk/register-a-design",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A new design (shape, configuration, decoration, pattern) can be registered in the UK; renew every 5 years up to 25 years; the functionality of a design cannot be registered."
+  },
+  {
+    "n": 14,
+    "title": "Trade Tariff: look up commodity codes, duty and VAT rates",
+    "publisher": "GOV.UK (HM Revenue and Customs)",
+    "url": "https://www.gov.uk/trade-tariff",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Look up UK commodity codes, duty and VAT for imports and exports; gather product type, use, materials, production method and packaging first."
+  },
+  {
+    "n": 15,
+    "title": "Business and Manufacturing",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Hub linking testing and certification, CPSC-accepted labs, eFiling, the Regulatory Robot, small business resources, recall guidance, tracking labels and the online sellers' safety guide."
+  },
+  {
+    "n": 16,
+    "title": "General Use Products Certification and Testing",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Use-Products-Certification-and-Testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A General Certificate of Conformity is issued by the importer (or US manufacturer) for general use products subject to a CPSC rule, ban, standard or regulation, based on a test of each product or a reasonable testing program; it accompanies each shipment; from 8 Jul 2026 importers of most regulated products must eFile certificate data."
+  },
+  {
+    "n": 17,
+    "title": "Third Party Testing for Children's Products",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Third-Party-Testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Children's products need testing by a CPSC-accepted third-party lab and a Children's Product Certificate; more than 600 labs accepted worldwide; material changes need retesting; periodic testing for continued production; eFiling from 8 Jul 2026."
+  },
+  {
+    "n": 18,
+    "title": "Tracking Labels",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/tracking-label",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Children's products and their packaging carry permanent tracking information to the extent practicable: manufacturer or private labeler name, location and date of production, batch or run number."
+  },
+  {
+    "n": 19,
+    "title": "CPSC-Accepted Laboratories",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Lab-Accreditation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search tool for labs CPSC has accepted to perform specific tests for each children's product safety rule."
+  },
+  {
+    "n": 20,
+    "title": "Duty to Report to the CPSC: Your Rights and Responsibilities",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance/Duty-to-Report-to-the-CPSC-Your-Rights-and-Responsibilities/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Manufacturers, importers, distributors and retailers must report within 24 hours of obtaining reportable information about defects that could create a substantial product hazard, unreasonable risks of serious injury or death, or failure to meet a rule; up to 10 working days to investigate if unsure; \"when in doubt, report\"; failing to report can bring civil or criminal penalties."
+  },
+  {
+    "n": 21,
+    "title": "Regulatory Robot: Safer Products Start Here",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Regulatory-Robot/Safer-Products-Start-Here",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A question-led tool for new small businesses to find which CPSC requirements may apply to one product; basic guidance and a starting point, run separately for each product."
+  },
+  {
+    "n": 22,
+    "title": "Samsung Recalls Galaxy Note7 Smartphones Due to Serious Fire and Burn Hazards",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Recalls/2016/Samsung-Recalls-Galaxy-Note7-Smartphones",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recall of about 1 million units on 15 Sep 2016; battery could overheat and catch fire; 92 US reports of overheating including 26 burns and 55 property damage."
+  },
+  {
+    "n": 23,
+    "title": "Samsung Expands Recall of Galaxy Note7 Smartphones Based on Additional Incidents with Replacement Phones",
+    "publisher": "U.S. Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Recalls/2017/Samsung-Expands-Recall-of-Galaxy-Note7-Smartphones-Based-on-Additional-Incidents-with-Replacement-Phones",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 13 Oct 2016 the recall grew to about 1.9 million units including replacement phones; 96 US reports of overheating, 13 burns and 47 property damage."
+  },
+  {
+    "n": 24,
+    "title": "Threading Your Way Through the Labeling Requirements Under the Textile and Wool Acts",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/threading-your-way-through-labeling-requirements-under-textile-wool-acts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (guide dated July 2014). Labels show fibre content by generic name and percentage, country of origin and the company name or RN; care instructions are required by a separate FTC rule; country of origin inside the centre of the neck on garments with a neck; English required."
+  },
+  {
+    "n": 25,
+    "title": "Determining Duty Rates",
+    "publisher": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/programs-administration/determining-duty-rates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last modified 25 Nov 2024). The HTSUS lists duty rates; classification depends on details such as materials and origin; the USITC tariff database gives an approximate rate; CBP makes the final determination; binding rulings can be requested."
+  },
+  {
+    "n": 26,
+    "title": "Incoterms rules",
+    "publisher": "International Chamber of Commerce",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Incoterms 2020 is the most recent version, in force since 1 Jan 2020; eleven three-letter trade terms covering the tasks, costs and risks of delivery between seller and buyer; first published in 1936."
+  },
+  {
+    "n": 27,
+    "title": "Incoterms 2020",
+    "publisher": "International Chamber of Commerce",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DPU is the renamed DAT, and under DPU the seller unloads; CIP now requires higher insurance cover (Institute Cargo Clauses A or similar) while CIF keeps clauses C as default; FCA allows an on-board bill of lading; CIF is for sea transport."
+  },
+  {
+    "n": 28,
+    "title": "Solving Wall Thickness Issues in Molded Parts",
+    "publisher": "Protolabs (design tips)",
+    "url": "https://www.protolabs.com/resources/design-tips/solving-wall-thickness-issues-in-molded-parts/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Keep wall thickness consistent; thick sections cause sink, voids and warp; example wall ranges by resin (for example ABS about 1.1 to 3.6 mm); at least 0.5 degrees of draft on vertical faces, 1 degree where advised and up to 2 degrees for deep features. One supplier's process guidance."
+  },
+  {
+    "n": 29,
+    "title": "Sheet Metal Fabrication Design Guidelines",
+    "publisher": "Protolabs",
+    "url": "https://www.protolabs.com/services/sheet-metal-fabrication/design-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Flanges at least 4 times material thickness; features within about 4 times thickness of a bend may deform; bend angles held to plus or minus 1 degree; use the same bend radius throughout; tolerances grow across more bends. One supplier's process guidance."
+  }
+]

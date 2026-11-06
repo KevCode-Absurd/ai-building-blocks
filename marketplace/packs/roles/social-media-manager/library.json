@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "weekly-social-content-planner",
+    "name": "Weekly social content planner",
+    "why": "Plans next week's posts from last week's numbers with hooks checked, the same loop as the weekly social cycle in this kit."
+  },
+  {
+    "slug": "monthly-content-repurposer",
+    "name": "Monthly content repurposer",
+    "why": "Picks last month's best pieces and turns them into posts, emails and clips to approve, like the one-idea-many-platforms prompt at scale."
+  },
+  {
+    "slug": "x-and-linkedin-post-pair-writer",
+    "name": "X and LinkedIn post pair writer",
+    "why": "Writes separate X and LinkedIn versions of one idea, in line with the platform-native rule that posts are never pasted across."
+  },
+  {
+    "slug": "video-opening-line-batch-writer",
+    "name": "Video opening line batch writer",
+    "why": "Ten different video hooks and the two to film first, a companion to the video-hook-batch prompt."
+  },
+  {
+    "slug": "short-video-hook-writer",
+    "name": "Short video hook writer",
+    "why": "Hooks checked for length, reading level and first shot, matching the hook step in the short-video-scripts skill."
+  },
+  {
+    "slug": "short-video-format-picker",
+    "name": "Short video format picker",
+    "why": "Picks a repeatable video format for who is on camera, the first step of the short-video-scripts skill."
+  },
+  {
+    "slug": "social-video-edit-planner",
+    "name": "Social video edit planner",
+    "why": "Turns clips and an idea into a timed cut list, captions and a cover, for when the client has footage to edit."
+  },
+  {
+    "slug": "reusable-reel-cover-recipe-builder",
+    "name": "Reusable Reel cover recipe builder",
+    "why": "A repeatable cover style for Reels, so a batch shoot ends with a consistent grid."
+  },
+  {
+    "slug": "social-comment-and-reply-desk",
+    "name": "Social comment and reply desk",
+    "why": "Drafts replies that add something and collects repeat questions, the core of the comment-and-message-replies skill."
+  },
+  {
+    "slug": "weekly-community-keeper",
+    "name": "Weekly community keeper",
+    "why": "A weekly pass over community posts and questions with useful replies, for groups and communities as well as comments."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks every promise in a complaint reply before it goes out, the rule this kit sets for replies and holding statements."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Checked replies to public reviews with risky ones held, the same hold-for-a-person approach used for social comments."
+  },
+  {
+    "slug": "brand-social-account-checker",
+    "name": "Brand social account checker",
+    "why": "Scores accounts and posts against rules with a fix for each, useful before the monthly plan and review."
+  },
+  {
+    "slug": "influencer-gifting-planner",
+    "name": "Influencer gifting planner",
+    "why": "Plans gifting and tracking; pair it with the disclosure-and-claims-check prompt so every gifted post is labelled."
+  }
+]

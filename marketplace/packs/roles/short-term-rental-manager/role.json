@@ -1,0 +1,26 @@
+{
+  "id": "short-term-rental-manager",
+  "name": "Short-term rental manager",
+  "department": "operations",
+  "summary": "Fills more nights at better rates for holiday lets and small hotels, and keeps guests happy with clear messages and house guides.",
+  "aliases": [
+    "airbnb host",
+    "vacation rental",
+    "holiday let",
+    "short-term rental",
+    "dynamic pricing",
+    "guest communication",
+    "co-host",
+    "revenue management",
+    "house guide",
+    "turnover cleaning"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (Airbnb and Booking.com help and terms, EU Regulation 2024/1028, NYC and England rules, IRS and FTC), four skills (pricing and stay rules, booking review, guest messages and house guide, reviews and guest issues), six prompts, three workflows, training files and access levels per tool. Vrbo pages blocked fetching."
+    }
+  ]
+}

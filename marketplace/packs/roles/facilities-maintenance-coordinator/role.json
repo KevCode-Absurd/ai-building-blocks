@@ -1,0 +1,26 @@
+{
+  "id": "facilities-maintenance-coordinator",
+  "name": "Facilities and maintenance coordinator",
+  "department": "operations",
+  "summary": "Keeps equipment, vehicles and buildings working: asset registers, preventive maintenance schedules, check sheets and work orders.",
+  "aliases": [
+    "facilities coordinator",
+    "maintenance planner",
+    "fleet manager",
+    "preventive maintenance",
+    "asset register",
+    "facilities manager",
+    "work orders",
+    "cmms",
+    "fleet maintenance",
+    "legionella checks"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (HSE legionella, L8 and HSG274, GOV.UK fire safety, PUWER, PAT, contractors, CDM, asbestos, gas, OSHA, CDC, EU water and work equipment rules, DVSA and US driver reports, MaintainX, UpKeep and Fleetio help pages), four skills, five prompts, three workflows, training interview and test briefs, access levels per tool."
+    }
+  ]
+}

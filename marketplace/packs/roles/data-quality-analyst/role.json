@@ -1,0 +1,26 @@
+{
+  "id": "data-quality-analyst",
+  "name": "Data quality and governance analyst",
+  "department": "data",
+  "summary": "Writes the data dictionary, quality checks and test data that keep reports trustworthy. Makes sure everyone knows what each column means.",
+  "aliases": [
+    "data quality",
+    "data governance",
+    "data dictionary",
+    "data steward",
+    "test data",
+    "data validation",
+    "deduplication",
+    "data migration",
+    "data contracts",
+    "dbt tests"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (UK data quality framework, GDPR accuracy, CCPA right to correct, dbt, GX, Soda, ODCS, OpenRefine, Splink, HubSpot), four skills, five prompts, two workflows, training interview and test briefs. Merges, deletions and bulk updates need a backup and a fresh yes, even at level 3."
+    }
+  ]
+}

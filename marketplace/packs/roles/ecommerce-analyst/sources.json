@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Measure ecommerce (Google Analytics 4)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Ecommerce event order from view_item_list to purchase and refund; items array up to 200 elements; up to 27 custom item parameters; refund needs transaction_id, with item details recommended for item-level refund metrics. No updated date shown."
+  },
+  {
+    "n": 2,
+    "title": "Recommended events (GA4 events reference)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/analytics/devguides/collection/ga4/reference/events",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Purchase parameters: transaction_id and items required; value and currency (currency required when value is set); value is the sum of price times quantity, without shipping or tax."
+  },
+  {
+    "n": 3,
+    "title": "[GA4] Ecommerce purchases report",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/12924131",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Item revenue excludes tax and shipping; ecommerce events are not collected automatically; events missing required parameters become custom events; a Shopify store with Google Analytics set up collects add_to_cart, begin_checkout and purchase; some metrics only from 8 September 2022."
+  },
+  {
+    "n": 4,
+    "title": "[GA4] Cohort exploration",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9670133",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Inclusion and return criteria; weekly cohorts run Sunday to Saturday; standard, rolling and cumulative calculations; up to 60 cohorts; breakdowns show the top 15 values; based on device data only, User-ID not considered."
+  },
+  {
+    "n": 5,
+    "title": "[GA4] Data retention",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/7667196",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard properties keep user- and event-level data for 2 or 14 months; the setting affects explorations and funnel reports only, not standard reports; Large and XL properties limited to 2 months."
+  },
+  {
+    "n": 6,
+    "title": "[GA4] BigQuery Export",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9358801",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard properties: daily export limit of 1 million events; streaming export is best-effort; daily tables can be updated for up to two days and when Google reprocesses data; sandbox and charges."
+  },
+  {
+    "n": 7,
+    "title": "[GA4] Data thresholds",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/9383630",
+    "checked": "2026-11-06",
+    "supports": "Fetched. System-defined thresholds withhold data to stop identification of individuals, for example with demographics or search queries; they cannot be adjusted; a wider date range can help."
+  },
+  {
+    "n": 8,
+    "title": "[GA4] Get started with attribution",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Current models (\"data-driven attribution\", paid and organic last click, Google paid channels last click); first click, linear, time decay and position-based removed November 2023; direct visits get no credit unless the whole path is direct; DDA credit can change for up to 7 days."
+  },
+  {
+    "n": 9,
+    "title": "Consent mode overview",
+    "publisher": "Google for Developers (Tag Platform)",
+    "url": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Four consent types; basic mode blocks tags until consent; advanced mode sends cookieless pings while consent is denied, which allows more detailed modelling; what each denied type still sends."
+  },
+  {
+    "n": 10,
+    "title": "[GA4] Behavioral modeling for consent mode",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/11161109",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Eligibility: at least 1,000 events a day with analytics_storage denied for at least 7 days, and at least 1,000 daily users with it granted on at least 7 of the previous 28 days; not modelled: audiences, user explorer, cohort and user lifetime explorations, retention reports, predictive metrics and BigQuery export; Blended reporting identity needed."
+  },
+  {
+    "n": 11,
+    "title": "Google Analytics MCP server (GitHub repository)",
+    "publisher": "Google Analytics (GitHub)",
+    "url": "https://github.com/googleanalytics/google-analytics-mcp",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Report, funnel, realtime and admin tools; read-only by default; write tools (annotations, custom dimensions, key events) only with --allow-write and the analytics.edit scope."
+  },
+  {
+    "n": 12,
+    "title": "Customer reports (cohort analysis, RFM, predicted spend tier)",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/customers-reports",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Cohorts grouped by first order date, by week, month or quarter; metrics; projections need 24 months of data; RFM scores 1 to 5 relative to the store (5 = top 20%), FM = (F + M) / 2 rounded down, 11 groups; customer reports use each customer's whole order history."
+  },
+  {
+    "n": 13,
+    "title": "Behaviour reports (conversion funnel)",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Funnel steps (cart additions, reached checkout, completed checkout); open and closed funnels; session measurement rollout 21 to 23 September 2026 may change session metrics; session history starts 1 October 2022; bot filter."
+  },
+  {
+    "n": 14,
+    "title": "Finances report definitions",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/finances-report",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Gross sales, discounts, returns, net sales, shipping, taxes and total sales; returns recorded as negatives on the date processed; only net sales with cost recorded count toward gross profit."
+  },
+  {
+    "n": 15,
+    "title": "Marketing reports and attribution",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/marketing-reports",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Last non-direct click, last click, first click, any click (can exceed real orders) and linear; sessions end after 30 minutes; first-interaction referrer resets after 30 days; September 2026 change to include all traffic; 18 October 2026 referring channel value changes; sales show goods value, include canceled, pending and unpaid orders, exclude chargebacks."
+  },
+  {
+    "n": 16,
+    "title": "Analytics discrepancies",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/discrepancies",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Why Shopify and Google Analytics differ: reloads, bots, JavaScript and cookies, browser extensions, time zones and tracking methods; session measurement update in September 2026."
+  },
+  {
+    "n": 17,
+    "title": "Customer privacy settings (cookie banner)",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-privacy-settings/privacy-settings",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Banner regions (EEA and UK as examples) collect non-essential data only after consent, lowering session counts and conversion rates; banner off by default in regions like the US; Global Privacy Control opt-outs flagged."
+  },
+  {
+    "n": 18,
+    "title": "Pixels (customer events)",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/promoting-marketing/pixels/overview",
+    "checked": "2026-11-06",
+    "supports": "Fetched. App and custom pixels run in a sandbox and load on storefront, checkout, thank you and order status pages; in consent-required markets such as the EEA and UK they run only after visitors grant permission."
+  },
+  {
+    "n": 19,
+    "title": "Authorizing access for AI tools",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/ai-powered-tools/connecting-ai-tools/authorizing-access",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Official connectors for named AI tools; read-only or write access approved in the Shopify admin; access can be raised but not lowered without reinstalling; limited by the staff member's permissions."
+  },
+  {
+    "n": 20,
+    "title": "Google Analytics 4 (set up on Shopify)",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-4",
+    "checked": "2026-11-06",
+    "supports": "Fetched. GA4 is connected through the Google & YouTube app and Google's tag set-up; Universal Analytics stopped processing new data on 1 July 2023."
+  },
+  {
+    "n": 21,
+    "title": "\"Counting Your Customers\" the Easy Way: An Alternative to the Pareto/NBD Model (Fader, Hardie and Lee, Marketing Science, 2005)",
+    "publisher": "Bruce Hardie (author's site)",
+    "url": "https://www.brucehardie.com/papers/018/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Paper details and abstract: BG/NBD model for predicting repeat purchasing from recency and frequency, simpler to fit than Pareto/NBD, including in a spreadsheet."
+  },
+  {
+    "n": 22,
+    "title": "2024 Consumer Returns in the Retail Industry",
+    "publisher": "National Retail Federation and Happy Returns",
+    "url": "https://nrf.com/research/2024-consumer-returns-retail-industry",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Total returns projected at $890 billion in 2024; 93% of retailers surveyed call return fraud and abuse a significant issue; published 5 December 2024. Sample size not stated on the page."
+  },
+  {
+    "n": 23,
+    "title": "Cart abandonment rate statistics",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "checked": "2026-11-06",
+    "supports": "Fetched. 70.22% average of 50 studies (2006 to 2025); US checkout abandonment reasons: extra costs 40%, slow delivery 20%, distrust with card details 19%; updated 28 October 2026."
+  },
+  {
+    "n": 24,
+    "title": "Data protection and online privacy (cookies)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Sites must get consent before setting cookies, except those needed to transmit a communication or strictly needed for a service the user asked for; consent must be an opt-in."
+  },
+  {
+    "n": 25,
+    "title": "Data (Use and Access) Act 2025: data protection and privacy changes",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The Act allows some low-risk storage and access technologies without consent; changes commence in stages 2 to 12 months after Royal Assent on 19 June 2025; refers to the ICO for guidance."
+  },
+  {
+    "n": 26,
+    "title": "Private Browsing 2.0",
+    "publisher": "WebKit (Apple)",
+    "url": "https://webkit.org/blog/14794/private-browsing-2-0/",
+    "checked": "2026-11-06",
+    "supports": "Fetched (post dated 16 July 2024). Link Tracking Protection removes click-level tracking parameters in Private Browsing while campaign attribution parameters pass; available in all browsing if the user turns on advanced protection."
+  },
+  {
+    "n": 27,
+    "title": "Guarantees and returns (right of withdrawal)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last checked 28/04/2026). 14-day right to cancel online purchases, running from delivery for goods; listed exceptions."
+  },
+  {
+    "n": 28,
+    "title": "Accepting returns and giving refunds",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+    "checked": "2026-11-06",
+    "supports": "Fetched. UK online buyers have 14 days from receipt to cancel and another 14 days to return; refunds due within 14 days of receiving the returned item."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+    "name": "Plan a topic cluster from keywords to briefs and links",
+    "why": "A guided run from keyword research to a pillar and cluster plan, post briefs and internal links."
+  },
+  {
+    "slug": "customer-question-keyword-finder",
+    "name": "Customer question keyword finder",
+    "why": "Turns reviews, tickets and comments into the questions people search for, the starting point for topics here."
+  },
+  {
+    "slug": "keyword-to-post-outline-writer",
+    "name": "Keyword to post outline writer",
+    "why": "A quick one-page outline with intent and headings, for smaller pieces that do not need a full brief."
+  },
+  {
+    "slug": "search-title-and-snippet-writer",
+    "name": "Search title and snippet writer",
+    "why": "Writes search titles and descriptions within length limits, for the fix-the-click decision."
+  },
+  {
+    "slug": "zero-click-content-planner",
+    "name": "Zero-click content planner",
+    "why": "Plans content that helps buyers where they already are, for when AI answers and social keep people off your site."
+  },
+  {
+    "slug": "monthly-search-console-keeper",
+    "name": "Monthly Search Console keeper",
+    "why": "A monthly agent that reads the Search Console export and lists pages to push, thin pages to fix and next posts."
+  },
+  {
+    "slug": "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+    "name": "Find old posts losing traffic and refresh or cut them",
+    "why": "A full workflow for the refresh, merge or cut decisions in the quarterly review."
+  },
+  {
+    "slug": "monthly-content-decay-keeper",
+    "name": "Monthly content decay keeper",
+    "why": "Catches pages losing ground each month and drafts the fix for approval."
+  },
+  {
+    "slug": "monthly-content-repurposer",
+    "name": "Monthly content repurposer",
+    "why": "Picks last month's best pieces and turns them into posts, emails and clips to approve."
+  },
+  {
+    "slug": "x-and-linkedin-post-pair-writer",
+    "name": "X and LinkedIn post pair writer",
+    "why": "Writes channel-native social versions of one idea, as the repurposing workflow requires."
+  },
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Drafts, edits and checks each newsletter issue against the brand voice."
+  },
+  {
+    "slug": "help-article-from-ticket-writer",
+    "name": "Help article writer from support tickets",
+    "why": "Turns repeated support questions into short articles in the customer's words."
+  },
+  {
+    "slug": "anti-ai-slop-copy-editor",
+    "name": "Anti-AI-slop copy editor",
+    "why": "A second editing pass that fixes machine-sounding lines in AI-assisted drafts."
+  },
+  {
+    "slug": "traction-content-marketing",
+    "name": "Content growth experiment planner",
+    "why": "Plans a focused content growth test with costs and measures, for testing a new channel."
+  }
+]

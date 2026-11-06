@@ -1,0 +1,26 @@
+{
+  "id": "devops-engineer",
+  "name": "DevOps engineer",
+  "department": "engineering",
+  "summary": "Makes releases boring: pipelines, containers, deploy checklists, cloud costs and incident write-ups. Turns manual deploy steps into something repeatable.",
+  "aliases": [
+    "devops",
+    "ci/cd",
+    "docker",
+    "github actions",
+    "cloud costs",
+    "release management",
+    "incident postmortem",
+    "terraform",
+    "deployment checklist",
+    "site reliability"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources (DORA metrics, Google SRE incident and postmortem chapters, Docker and GitHub Actions security docs, the 2025 tj-actions alert, Terraform, AWS, Azure and Google Cloud budget docs, CrowdStrike 2024, AWS Oct 2025 and Cloudflare Nov 2025 incident reports, SEC, NIS2, UK NIS). Four skills, five prompts, three workflows, training files."
+    }
+  ]
+}

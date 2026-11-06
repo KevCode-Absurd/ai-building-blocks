@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Instagram Ranking Explained",
+    "publisher": "Instagram (Adam Mosseri), about.instagram.com",
+    "url": "https://about.instagram.com/blog/announcements/instagram-ranking-explained",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 31 May 2023: Instagram uses many ranking systems, not one; the signals for Feed, Stories, Explore and Reels in order of importance; Recommendation Guidelines and Account Status; reels that are low resolution, watermarked, muted, bordered, mostly text or reposted get less distribution"
+  },
+  {
+    "n": 2,
+    "title": "Tips for Improving Your Reach",
+    "publisher": "Instagram for Creators",
+    "url": "https://creators.instagram.com/blog/tips-for-improving-your-reach",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 31 May 2023 and still live: create original content; reels of 3 minutes or less can be recommended; use Collab posts; make captions, bios and hashtags searchable; less likely to recommend reposts, watermarked content and accounts that re-share others' content"
+  },
+  {
+    "n": 3,
+    "title": "Finding success on reels in 2025",
+    "publisher": "Instagram for Creators",
+    "url": "https://creators.instagram.com/blog/the-latest-with-instagram",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 21 January 2025: US creators can post reels up to 3 minutes and they can be recommended to non-followers; trial reels to test with non-followers first; audio on photos and carousels can place them in the Reels tab; the Edits app announced"
+  },
+  {
+    "n": 4,
+    "title": "2026: AI Drives Performance",
+    "publisher": "Meta Newsroom",
+    "url": "https://about.fb.com/news/2026/01/2026-ai-drives-performance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 28 January 2026, Meta's own figures for Q4 2025: original content up 10 percentage points in US Instagram recommendations, 75% of recommendations from original posts; 7% lift in views of organic Facebook feed and video posts from ranking changes; 20% more time spent on Threads; nearly 10% of daily Reels views from content made in Edits"
+  },
+  {
+    "n": 5,
+    "title": "Combating unoriginal content",
+    "publisher": "Meta for Creators (Facebook)",
+    "url": "https://creators.facebook.com/blog/combating-unoriginal-content",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 14 July 2025: accounts that repeatedly reuse others' content lose monetisation and distribution; duplicate videos get less reach; stitching clips or adding a watermark is not meaningful enhancement; captions with no links, minimal capitalisation and no more than five hashtags perform best"
+  },
+  {
+    "n": 6,
+    "title": "Rewarding Original Creators on Facebook",
+    "publisher": "Meta Newsroom",
+    "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 13 March 2026: Facebook prioritises original content in Feed and Reels; defines original; reaction, watch-along, stitched and lightly edited reposts are deprioritised; views and watch time of original Reels roughly doubled in H2 2025 versus H2 2024; originality decisions can be appealed"
+  },
+  {
+    "n": 7,
+    "title": "Types of content we demote",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/features/approach-to-ranking/types-of-content-we-demote/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 2 July 2025: Facebook Feed demotes clickbait links, engagement bait, fact-checked misinformation and content likely to violate Community Standards"
+  },
+  {
+    "n": 8,
+    "title": "Facebook Feed AI system card",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/features/explaining-ranking/fb-feed/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 6 October 2026: how Feed gathers posts, narrows them to about 500, predicts actions (scrolling past, engaging, opening, clicking a link and staying), varies content types, and the Following view and other user controls"
+  },
+  {
+    "n": 9,
+    "title": "Threads Feed AI system card",
+    "publisher": "Meta Transparency Center",
+    "url": "https://transparency.meta.com/features/explaining-ranking/ig-threads-feed/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 7 March 2025: Threads blends followed and recommended posts and predicts likes, scrolling past, profile taps, replies and time spent; users can switch to a chronological Following view"
+  },
+  {
+    "n": 10,
+    "title": "Our Approach to Labeling AI-Generated Content and Manipulated Media",
+    "publisher": "Meta Newsroom",
+    "url": "https://about.fb.com/news/2024/04/metas-approach-to-labeling-ai-generated-content-and-manipulated-media/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Announced 5 April 2024 with later updates: Meta labels AI-generated content when it detects industry signals or people disclose it; the label became \"AI info\" on 1 July 2024; edited-only content moved the label to the post menu on 12 September 2024"
+  },
+  {
+    "n": 11,
+    "title": "Introduction to the TikTok recommendation system",
+    "publisher": "TikTok (Safety Center)",
+    "url": "https://www.tiktok.com/safety/en/policies-and-engagement/recommendation-system",
+    "checked": "2026-11-06",
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. The For You feed gives each video a prediction score for how likely a person is to interact, runs a similarity check before recommending, and makes content unsuitable for a broad audience ineligible"
+  },
+  {
+    "n": 12,
+    "title": "TikTok originality policy",
+    "publisher": "TikTok Creator Academy",
+    "url": "https://www.tiktok.com/creator-academy/article/tiktok-originality-policy",
+    "checked": "2026-11-06",
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. Unoriginal content (copied, mostly repurposed without creative edits, or low-value compilations) may be removed from the For You feed and is ineligible for monetisation programs"
+  },
+  {
+    "n": 13,
+    "title": "Promoting a brand, product, or service",
+    "publisher": "TikTok Support",
+    "url": "https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/promoting-a-brand-product-or-service?lang=en",
+    "checked": "2026-11-06",
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. The commercial content disclosure setting: \"Your brand\" shows a Promotional content label and \"Branded content\" shows a Paid partnership label; the label cannot be changed after posting"
+  },
+  {
+    "n": 14,
+    "title": "Announcement from the new TikTok USDS Joint Venture LLC",
+    "publisher": "TikTok Newsroom",
+    "url": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+    "checked": "2026-11-06",
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. The US joint venture set up under the 25 September 2025 executive order, responsible for US user data, the app and the algorithm, and trust and safety; Oracle, Silver Lake and MGX as managing investors"
+  },
+  {
+    "n": 15,
+    "title": "Understand three-minute YouTube Shorts",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/15424877?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Square or vertical videos up to 3 minutes uploaded on or after 15 October 2024 are Shorts; Shorts over 1 minute with an active Content ID claim are blocked globally and not recommended; music limits"
+  },
+  {
+    "n": 16,
+    "title": "Recommendations (How YouTube Works)",
+    "publisher": "YouTube",
+    "url": "https://www.youtube.com/howyoutubeworks/product-features/recommendations/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. YouTube recommendations use viewing behaviour, likes, dislikes, subscriptions and feedback including satisfaction surveys, plus channel reputation and quality"
+  },
+  {
+    "n": 17,
+    "title": "Disclosing use of altered or synthetic content",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/14328491?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Creators must disclose realistic AI-generated or altered content in the upload settings; no disclosure needed for unrealistic content, minor edits or AI help with scripts and titles; labels; penalties for repeated non-disclosure"
+  },
+  {
+    "n": 18,
+    "title": "Engineering the next generation of LinkedIn's Feed",
+    "publisher": "LinkedIn Engineering Blog",
+    "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 12 March 2026: LLM-based retrieval matches posts to members by topic meaning; a sequence model over a member's past interactions predicts clicks, skips, long dwells, likes, comments and shares; posts can reach people beyond the poster's network and surface within minutes"
+  },
+  {
+    "n": 19,
+    "title": "LinkedIn Pages best practices",
+    "publisher": "LinkedIn Marketing Solutions",
+    "url": "https://business.linkedin.com/marketing-solutions/linkedin-pages/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. LinkedIn's own figures (undated): weekly posting doubles engagement; images about double comments; video 5 times and live video 24 times the engagement; complete Pages 30% more weekly views; use 3 to 5 hashtags; notify employees of key posts up to once a week"
+  },
+  {
+    "n": 20,
+    "title": "x-algorithm: algorithm powering the For You feed on X",
+    "publisher": "xai-org on GitHub",
+    "url": "https://github.com/xai-org/x-algorithm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. X's published ranking code: a transformer predicts the probability of likes, replies, reposts, quotes, shares, clicks, dwell and follows, and of negative actions (not interested, mute, block, report); weighted sum; out-of-network posts discounted; repeat authors decayed; updates from August to October 2026 aimed at time spent and read-through"
+  },
+  {
+    "n": 21,
+    "title": "Disclosures 101 for Social Media Influencers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. November 2019 guide: disclose any financial, employment, personal or family connection; make it hard to miss, in the post itself, in plain words such as ad or sponsored; in video say it and show it; platform tools may not be enough; never talk about products you have not tried"
+  },
+  {
+    "n": 22,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Announced 14 August 2024: bans fake reviews (including AI-generated ones) and buying or selling fake social media indicators such as bot followers or views used to misrepresent influence for a commercial purpose; civil penalties possible"
+  },
+  {
+    "n": 23,
+    "title": "Influencers' guide to making clear that ads are ads",
+    "publisher": "Advertising Standards Authority (with the CMA)",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fourth edition published 23 October 2026, written with the CMA: when content must be disclosed as advertising, payments and incentives, affiliate links, how to label, fake reviews and CMA powers under the DMCC Act"
+  },
+  {
+    "n": 24,
+    "title": "Influencer Legal Hub",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/influencer-legal-hub_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU consumer law requires advertising, brand partnerships and affiliate marketing to be disclosed; legal briefs including how to disclose on social media (October 2023); cites a 2025 study finding only 5.4% of influencer posts labelled as advertising"
+  },
+  {
+    "n": 25,
+    "title": "AI Act (regulatory framework for AI)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The AI Act's transparency rules come into effect in August 2026: deepfakes and certain AI-generated text on public-interest matters must be labelled; the voluntary Code of Practice on marking and labelling AI-generated content and the Commission's July 2026 guidelines; the AI Omnibus timeline"
+  },
+  {
+    "n": 26,
+    "title": "Social Media Fact Sheet",
+    "publisher": "Pew Research Center",
+    "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 19 October 2026 from a survey of 5,511 US adults (30 January to 18 June 2026): YouTube and Facebook are the most widely used platforms, at 84% and 70% of US adults"
+  },
+  {
+    "n": 27,
+    "title": "Contagious: Why Things Catch On (Jonah Berger)",
+    "publisher": "Jonah Berger (author's site)",
+    "url": "https://jonahberger.com/books/contagious/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The author's page for Contagious (Simon & Schuster, 2013): six principles that make things spread by word of mouth, summarised in the canon"
+  },
+  {
+    "n": 28,
+    "title": "The Long and the Short of It: Balancing Short and Long-Term Marketing Strategies (Les Binet and Peter Field)",
+    "publisher": "Institute of Practitioners in Advertising (IPA)",
+    "url": "https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The IPA report on the tension between short-term response activity and long-term brand building, and the risk of using very short-term online metrics as the main measure of success"
+  },
+  {
+    "n": 29,
+    "title": "Books (Gary Vaynerchuk)",
+    "publisher": "Gary Vaynerchuk (author's site)",
+    "url": "https://garyvaynerchuk.com/books/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists Jab, Jab, Jab, Right Hook (HarperBusiness, 2013), a social media marketing playbook on giving value before asking and fitting content to each platform"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "marketing-analyst",
+  "name": "Marketing analyst",
+  "department": "marketing",
+  "summary": "Sets up tracking and reports so the business knows which marketing earns sales. Explains channel results in plain words and tests the ones in doubt.",
+  "aliases": [
+    "marketing analytics",
+    "ga4",
+    "google analytics",
+    "attribution",
+    "utm",
+    "tag manager",
+    "marketing reporting",
+    "incrementality testing",
+    "media mix modelling",
+    "web analytics"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: GA4 tracking plans and UTM rules, attribution and why tools disagree, incrementality tests (holdout, geo, lift studies) and media mix models (Meridian, Robyn, PyMC-Marketing), weekly reporting, 30 checked sources, 4 skills, 6 prompts, 3 workflows."
+    }
+  ]
+}

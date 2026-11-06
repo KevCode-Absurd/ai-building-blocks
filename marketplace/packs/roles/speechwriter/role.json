@@ -1,0 +1,26 @@
+{
+  "id": "speechwriter",
+  "name": "Speechwriter",
+  "department": "content",
+  "summary": "Writes talks, pitches, toasts and eulogies built around real stories and timed to the minute. Adds delivery notes so the speaker sounds natural.",
+  "aliases": [
+    "speech writer",
+    "wedding speech",
+    "eulogy",
+    "keynote",
+    "talk writing",
+    "toast",
+    "best man speech",
+    "pitch script",
+    "conference talk",
+    "speaker notes"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: speech structure for personal and business speeches, writing for the ear from GOV.UK, Digital.gov and EU plain language guides, timing and rehearsal (speaking rate, Speaker Coach, presenter view), live captions and access (W3C, WCAG, ADA, GOV.UK, EAA), quotes and copyright, market rules for listed firms, access levels 1 to 3, and 24 checked sources."
+    }
+  ]
+}

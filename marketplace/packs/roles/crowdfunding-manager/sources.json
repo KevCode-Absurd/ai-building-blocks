@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "What are the fees?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236674-what-are-the-fees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 2 Sep 2026). 5% platform fee on successful projects; Stripe card processing of roughly 3-5%; no fees if the goal is not reached; in the Pledge Manager, 5% of funds except taxes, with card processing on the full payment including taxes."
+  },
+  {
+    "n": 2,
+    "title": "Why is funding all-or-nothing?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236582-why-is-funding-all-or-nothing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 2 Sep 2026). Creators set goal and deadline, campaigns run 1 to 60 days, both locked at launch; no cap on overfunding; backers can cancel until the end and are charged only if the campaign succeeds; Kickstarter frames backing as funding a creative process, not a store purchase."
+  },
+  {
+    "n": 3,
+    "title": "What is the maximum project duration?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236742-what-is-the-maximum-project-duration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Projects run from 1 to 60 days; Kickstarter recommends 30 days or less, saying shorter campaigns often have higher success rates and more urgency; the deadline cannot change after launch."
+  },
+  {
+    "n": 4,
+    "title": "How to set the right funding goal for your Kickstarter campaign",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236709-how-to-set-the-right-funding-goal-for-your-kickstarter-campaign",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). The goal is the amount needed to complete the project, covering production, materials, shipping and fees; check delivery at exactly 100% and regret at 90%; shipping charged at pledge counts toward the total; larger goals generally have lower success rates; funds are generally taxable, ask an accountant; the Funding Calculator in the project editor adds the 5% fee and roughly 5% processing."
+  },
+  {
+    "n": 5,
+    "title": "Setting up your project's pre-launch page",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236379-setting-up-your-project-s-pre-launch-page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Visitors click Notify me on launch; followers get an email at launch; pre-launch updates notify followers; follower count shows at 10 or more; launch is manual and cannot be scheduled; set up and share the page at least one week before launch."
+  },
+  {
+    "n": 6,
+    "title": "What are the rules for hardware and product design projects?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236428-what-are-the-rules-for-hardware-and-product-design-projects",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Hardware and product design projects must show a working prototype; photorealistic renderings are not permitted; creators must explain how the product will be made and whether they have made anything similar before."
+  },
+  {
+    "n": 7,
+    "title": "Can I use AI-generated content or create AI technology in my project?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236759-can-i-use-ai-generated-content-or-create-ai-technology-in-my-project",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Projects using AI tools must disclose which AI technology is used, how its output appears, and which parts are the creator's own work; projects building AI tools must list data sources and say whether consent and credit were handled."
+  },
+  {
+    "n": 8,
+    "title": "Can I edit my rewards after I've launched my project?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236617-can-i-edit-my-rewards-after-i-ve-launched-my-project",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). A tier or add-on that a backer has chosen generally cannot be changed: its estimated delivery date and existing shipping cannot be edited and items cannot be added; you can add shipping countries, raise quantity and add new tiers and add-ons while live; unbacked rewards can be edited or deleted."
+  },
+  {
+    "n": 9,
+    "title": "How do I add Late Pledges to my project?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236699-how-do-i-add-late-pledges-to-my-project",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Late Pledges let people back after the campaign at a separate late price per tier; Kickstarter suggests about 10% above the campaign price; must be enabled in draft or while live; same fees as campaign pledges; suggests ending them after 30 days with none."
+  },
+  {
+    "n": 10,
+    "title": "Pledge Over Time FAQ",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236386-pledge-over-time-faq",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page shows only 'updated over a week ago'). Backers pay in three equal payments, the first when the campaign succeeds and two monthly after; minimum pledges include USD 125, EUR 125, GBP 100, CAD 175 and AUD 200; creator enables it before launch; not available for Late Pledges; no extra fees; failed payments get 7 days (first charge) or 14 days (second and third) before the pledge is dropped."
+  },
+  {
+    "n": 11,
+    "title": "What is a creator obligated to do once their project is funded?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236551-what-is-a-creator-obligated-to-do-once-their-project-is-funded",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Creators must complete the project and deliver each reward as well as they can, be honest, post regular updates and tell backers promptly about delays; a creator who cannot finish must make every reasonable effort to reach a satisfying end for backers; refers to section 4 of the Terms of Use."
+  },
+  {
+    "n": 12,
+    "title": "What should I post an update about and how often?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236488-what-should-i-post-an-update-about-and-how-often",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Updates can cover anything about the project; the stated minimum is at least one update a month once funding is finished."
+  },
+  {
+    "n": 13,
+    "title": "Does Kickstarter issue refunds?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236553-does-kickstarter-issue-refunds",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Kickstarter does not issue refunds; creators issue them at their discretion and should tell backers; refunds go to the original card and can take up to 30 days to appear."
+  },
+  {
+    "n": 14,
+    "title": "What about marketing and promotion services that promise backers?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236419-what-about-marketing-and-promotion-services-that-promise-backers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). Kickstarter endorses no marketing services; inflating backer numbers or paying for fake backers can lead to suspension; self-funding is prohibited; describes the large-pledge-then-sales-pitch scam; advises against binding manufacturing contracts until the project has funded and the payout has arrived."
+  },
+  {
+    "n": 15,
+    "title": "Are creators based in the EU and UK responsible for VAT?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236684-are-creators-based-in-the-eu-and-uk-responsible-for-vat",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). In the Pledge Manager, Kickstarter collects VAT on items shipped to EU and UK backers where it is the deemed supplier or the creator authorises it; outside the Pledge Manager the creator is responsible; import duties are separate; Kickstarter says its tax services are not tax advice."
+  },
+  {
+    "n": 16,
+    "title": "Recent Changes to EU Import Duties",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236376-recent-changes-to-eu-import-duties",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). From 1 July 2026 the EU removed the duty exemption for goods under EUR 150 sent from outside the EU; a flat EUR 3 duty per item type applies until 1 July 2028; France and Italy add EUR 2 handling fees (from 1 March and 1 June 2026); DDP versus DDU; Kickstarter collects VAT for IOSS shipments but not duties."
+  },
+  {
+    "n": 17,
+    "title": "Is a project video required to launch?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236743-is-a-project-video-required-to-launch",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 6 Aug 2026). A project video is not required but projects with compelling videos tend to do much better (no figure given); upload formats include MOV and MP4 up to 5120 MB; an optional Discovery Mode video is vertical 9:16, about 60 to 90 seconds, real people with the product, captions advised, key content kept off the edges."
+  },
+  {
+    "n": 18,
+    "title": "Design for the Scroll: How to Make Your Kickstarter Page Easy to Understand",
+    "publisher": "Kickstarter (updates.kickstarter.com), Artem Stepanov",
+    "url": "https://updates.kickstarter.com/design-for-the-scroll-how-to-make-your-kickstarter-page-easy-to-understand/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 19 Oct 2026). Many visitors skim images, headings and captions first; test by scrolling without reading; headings that name the question each section answers; one job per image; rewards easy to compare; check the page on a phone; useful alt text. No statistics."
+  },
+  {
+    "n": 19,
+    "title": "What is the project collaborators tool and how do I use it?",
+    "publisher": "Kickstarter Help Center",
+    "url": "https://help.kickstarter.com/en-us/articles/16236794-what-is-the-project-collaborators-tool-and-how-do-i-use-it",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 17 Sep 2026). Collaborator permissions: edit project, manage community (post updates and comments, reply to messages), coordinate fulfilment, configure the Pledge Manager, analytics; collaborators cannot see detailed financial information, view payouts or issue refunds; they need their own Kickstarter account."
+  },
+  {
+    "n": 20,
+    "title": "Fees",
+    "publisher": "Indiegogo Knowledge Base",
+    "url": "https://help.indiegogo.com/article/596-fees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Oct 2026). 5% platform fee on crowdfunding; payment processing 3% plus a fixed 0.20 in the project currency per transaction; Pledge Manager and late pledges carry the same 5% plus processing with no setup fee; nothing is charged if the goal is not reached."
+  },
+  {
+    "n": 21,
+    "title": "What changed with the Platform Upgrade?",
+    "publisher": "Indiegogo Knowledge Base",
+    "url": "https://help.indiegogo.com/article/645-what-changed-with-the-platform-upgrade",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Oct 2026). Migration on 16 Oct 2025 to a platform powered by Gamefound technology; Flexible Funding no longer offered for new campaigns; InDemand renamed Late Pledge; Perks renamed Rewards; pre-launch reservations discontinued; new campaigns onboard with Adyen; two-step review (compliance and KYC); reward prices entered net of tax; end dates cannot change once live; optional tips go to the creator."
+  },
+  {
+    "n": 22,
+    "title": "General project settings",
+    "publisher": "Indiegogo Knowledge Base",
+    "url": "https://help.indiegogo.com/article/485-general-project-settings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Oct 2026). Campaign end can be 24 hours to 60 days after launch; Endgame resets a 10-minute timer when someone pledges in the final 10 minutes, once per backer; after approval the launch date can only move later."
+  },
+  {
+    "n": 23,
+    "title": "Launching crowdfunding campaign",
+    "publisher": "Indiegogo Knowledge Base",
+    "url": "https://help.indiegogo.com/article/486-launching-crowdfunding-campaign",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Oct 2026). Publish a preview, set a launch date at least 7 days after submitting for review, review usually takes up to 3 business days, and the campaign starts automatically at the launch date once approved."
+  },
+  {
+    "n": 24,
+    "title": "Order cancellation & Processing refunds",
+    "publisher": "Indiegogo Knowledge Base",
+    "url": "https://help.indiegogo.com/article/542-processing-refunds",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 13 Oct 2026). Creators cancel orders or correct overcharges to refund; an Apply processing fee option deducts the transaction fee; refunds handled outside Indiegogo must be returned manually."
+  },
+  {
+    "n": 25,
+    "title": "Crowdfunding Project Creator Settles FTC Charges of Deception",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2015/06/crowdfunding-project-creator-settles-ftc-charges-deception",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (press release 11 Jun 2015). Erik Chevalier raised more than 122,000 dollars from 1,246 backers for The Doom That Came to Atlantic City against a 35,000 dollar goal, cancelled after 14 months without rewards or refunds and spent most of the money on unrelated costs; the order bars him from misrepresenting campaigns and from failing to honour refund policies; a 111,793.71 dollar judgment was suspended."
+  },
+  {
+    "n": 26,
+    "title": "Regulation Crowdfunding",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/resources-small-businesses/exempt-offerings/regulation-crowdfunding",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last reviewed or updated 24 Apr 2025). Up to 5 million dollars in 12 months; online only through an SEC-registered broker-dealer or funding portal; limits on how much non-accredited investors can invest; disclosure filings; securities generally cannot be resold for one year."
+  },
+  {
+    "n": 27,
+    "title": "Funding Portals We Regulate",
+    "publisher": "FINRA",
+    "url": "https://www.finra.org/about/funding-portals-we-regulate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 20 Oct 2026). A crowdfunding intermediary must register with the SEC as a broker or funding portal and join FINRA; the page lists funding portal members with SEC file numbers and marks suspended portals."
+  },
+  {
+    "n": 28,
+    "title": "Crowdfunding",
+    "publisher": "Financial Conduct Authority (UK)",
+    "url": "https://www.fca.org.uk/consumers/crowdfunding",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 10 Jul 2026). Loan-based and investment-based crowdfunding are FCA-regulated and high-risk with no FSCS cover; donation-based and rewards-based or pre-payment crowdfunding are not FCA-regulated, though related payment services may be; contributors are unlikely to be protected if a project fails; use the FCA Firm Checker."
+  },
+  {
+    "n": 29,
+    "title": "Regulation (EU) 2020/1503 on European crowdfunding service providers for business",
+    "publisher": "EUR-Lex (Official Journal of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2020/1503/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 7 Oct 2020; covers lending-based and investment-based crowdfunding services; excludes offers above EUR 5,000,000 over 12 months; the project owner draws up a key investment information sheet for each offer; applies from 10 Nov 2021 (Article 51)."
+  },
+  {
+    "n": 30,
+    "title": "Regulation (EU) 2023/988 on general product safety",
+    "publisher": "EUR-Lex (Official Journal of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2023/988/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies from 13 Dec 2024 (Article 52); Article 19 requires online and distance sellers to show the manufacturer's name and contact details, the EU responsible person where the manufacturer is outside the EU, product identification with a picture, and warnings in the local language; Article 16 requires an economic operator established in the EU."
+  }
+]

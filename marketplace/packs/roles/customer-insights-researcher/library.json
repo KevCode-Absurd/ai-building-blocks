@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "customer-interview-request",
+    "name": "Customer conversation request writer",
+    "why": "Writes warm and cold invitations to talk, a starting point for the honest outreach in the interview recruiting and consent skill."
+  },
+  {
+    "slug": "buying-story-interview-guide",
+    "name": "Buying story interview guide",
+    "why": "A timeline script from first thought to first use, matching the story-based questions in the discussion guide prompt."
+  },
+  {
+    "slug": "interview-customers-and-map-what-they-hire-you-to-do",
+    "name": "Interview customers and map what they hire you to do",
+    "why": "Runs from interview questions to jobs and buyer profile, the same arc as the customer interview round workflow."
+  },
+  {
+    "slug": "customer-interview-notes",
+    "name": "Customer conversation notes sorter",
+    "why": "Separates facts from praise and feature ideas in raw notes, the did-versus-said step of the synthesis skill."
+  },
+  {
+    "slug": "interview-transcript-trimmer",
+    "name": "Interview transcript trimmer",
+    "why": "Cuts a long transcript down to the passages worth coding, useful before a big synthesis."
+  },
+  {
+    "slug": "build-a-buyer-profile-from-interviews-and-reviews",
+    "name": "Build a buyer profile from interviews and reviews",
+    "why": "Combines interviews and reviews into a job-based buyer profile and a writer's brief, an evidence-linked alternative to made-up personas."
+  },
+  {
+    "slug": "community-evidence-researcher",
+    "name": "Community evidence researcher",
+    "why": "Codes posts and comments into counted, sourced themes and says what the sample cannot show, the core of mention mining."
+  },
+  {
+    "slug": "monthly-customer-voice-keeper",
+    "name": "Monthly customer voice keeper",
+    "why": "Adds each month's new buyer words and doubts from reviews to a brand file, a light version of the monthly voice-of-customer workflow."
+  },
+  {
+    "slug": "weekly-product-feedback-triager",
+    "name": "Weekly product feedback triager",
+    "why": "Counts and sorts each week's feedback into yes, later or no, the fix-list end of feedback synthesis."
+  },
+  {
+    "slug": "find-a-product-idea-in-buyer-complaints-and-score-it",
+    "name": "Find a product idea in buyer complaints and score it",
+    "why": "Scores product ideas drawn from complaints, like the reach, pain and ease ranking in the review and mention mining skill."
+  },
+  {
+    "slug": "review-ad-copy",
+    "name": "Turn reviews into ad copy in your brand voice",
+    "why": "Turns mined buyer words into ad copy with a fact check, the next step after the customer words swipe file."
+  },
+  {
+    "slug": "taster-event-planner",
+    "name": "Taster event planner",
+    "why": "Plans a one-day tasting with taster cards and a decision rule, a quick start for the product trials part of the group sessions skill."
+  },
+  {
+    "slug": "check-a-marketing-survey-before-sending-it",
+    "name": "Check a marketing survey before sending it",
+    "why": "Reviews survey questions for bias and plans the analysis, a check to run on the feedback survey prompt before sending."
+  },
+  {
+    "slug": "prepare-a-survey-findings-briefing",
+    "name": "Prepare a survey findings briefing",
+    "why": "Turns survey results into a defensible briefing with sampling caveats, for NPS and feedback survey readouts."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "video-ad-shot-list-maker",
+    "name": "Video ad shot list maker",
+    "why": "Turns an approved script into timed shots and an edit list, the same move as this kit's storyboard and shoot plan skill."
+  },
+  {
+    "slug": "social-video-edit-planner",
+    "name": "Social video edit planner",
+    "why": "A timed cut list, captions, cover and export checks for one social video, for the edit after the shoot."
+  },
+  {
+    "slug": "video-ad-text-overlays",
+    "name": "On-screen text planner for video ads",
+    "why": "Places timed on-screen words clear of the app's buttons, a second check on the safe-zone and reading-time rules."
+  },
+  {
+    "slug": "storyboard-first-story-builder",
+    "name": "Storyboard-first story builder",
+    "why": "Builds a frame-by-frame story board from places and people, useful before a script exists."
+  },
+  {
+    "slug": "motion-graphics-build-plan",
+    "name": "Motion graphics video build planner",
+    "why": "Turns a motion graphics script into a build plan with every number and product shot checked."
+  },
+  {
+    "slug": "branded-video-captions",
+    "name": "Video caption maker in your brand font",
+    "why": "Timed caption groups and a subtitle file in the brand font, for the caption step of delivery."
+  },
+  {
+    "slug": "sound-off-commercial-checker",
+    "name": "Sound-off commercial checker",
+    "why": "Tests whether a script or storyboard still works with the sound off, as the decision rules ask."
+  },
+  {
+    "slug": "voice-over-stripping-test",
+    "name": "Voice-over stripping test",
+    "why": "Finds voiceover lines that only repeat the picture, the same check as the two-column script's picture column."
+  },
+  {
+    "slug": "video-audio-finishing-plan",
+    "name": "Video audio finishing plan",
+    "why": "A timed plan for voice, music, effects, fades and mix checks before delivery."
+  },
+  {
+    "slug": "thumbnail-and-title-planner",
+    "name": "Thumbnail and title planner",
+    "why": "Plans title and thumbnail pairs before the shoot, so the cover frame gets filmed."
+  },
+  {
+    "slug": "approved-plan-video-production-workflow",
+    "name": "Approved-plan video production workflow",
+    "why": "A step-by-step production run with approval stops, close to this kit's brief to delivered video workflow."
+  }
+]

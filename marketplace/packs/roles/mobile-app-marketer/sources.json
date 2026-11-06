@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "App Review Guidelines",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/review/guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Last Updated 16 October 2026, read at offset 100000). 2.3.7 accurate metadata, 30-character app names, no keyword stuffing; 2.3.3 screenshots show the app in use; 2.3.4 previews use screen captures only; 2.3.10 no other platforms in metadata; 3.1.1 odds for paid random items; 3.2.2(x) apps can't force ratings; Section 3 intro on manipulated reviews and charts; 4.5.4 marketing push needs explicit opt-in and an in-app opt-out; 5.6.1 use the provided review API, no custom review prompts, on-topic review replies; 5.6.3 discovery fraud."
+  },
+  {
+    "n": 2,
+    "title": "Creating your product page",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/product-page/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. App name and subtitle up to 30 characters; promotional text up to 170 characters, editable any time without a new version and with no effect on search ranking; keywords 100 characters, commas without spaces; keyword rules (no plurals of included words, category names, 'app', competitor names, trademarks); up to 10 screenshots and 3 app previews of up to 30 seconds; first one to three screenshots appear in search results without a preview; ratings influence search rank; review prompts up to three times in 365 days; description and subtitle change with a new version."
+  },
+  {
+    "n": 3,
+    "title": "Platform version information",
+    "publisher": "App Store Connect Help, Apple Developer",
+    "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Promotional text up to 170 characters without a new submission; description up to 4,000 characters, plain text; keywords up to 100 bytes; What's New up to 4,000 characters; up to three app previews per localization and device size."
+  },
+  {
+    "n": 4,
+    "title": "Overview of product page optimization",
+    "publisher": "App Store Connect Help, Apple Developer",
+    "url": "https://developer.apple.com/help/app-store-connect/create-product-page-optimization-tests/overview-of-product-page-optimization",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Test up to three icons, screenshots and previews; shown on iOS and iPadOS 15 or later; not available for custom product pages; app must be Ready for Distribution; roles Account Holder, Admin, App Manager or Marketing; a new app version released during a test can affect results; results judged by estimated conversion lift with confidence."
+  },
+  {
+    "n": 5,
+    "title": "Product page optimization",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/product-page-optimization/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to three treatments against the original; traffic share split across treatments; people see the same treatment throughout; tests run up to 90 days or until stopped; one test at a time; can't be changed once started; treatment metadata approved by App Review; tests without alternate icons can be submitted without a new app version; alternate icons must be in the binary; aim for at least 90% confidence; applying a treatment ends the test."
+  },
+  {
+    "n": 6,
+    "title": "Configure multiple product page versions",
+    "publisher": "App Store Connect Help, Apple Developer",
+    "url": "https://developer.apple.com/help/app-store-connect/create-custom-product-pages/configure-multiple-product-page-versions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 70 custom product pages; screenshots, previews, promotional text and keywords can differ; iOS and iPadOS 15 or later; pages must be approved; keywords come from the latest approved version and should be unique per page; deep links for iOS and iPadOS 18 or later; metrics appear after at least five first-time downloads; editing keeps the URL; roles Account Holder, Admin, App Manager or Marketing."
+  },
+  {
+    "n": 7,
+    "title": "Custom product pages",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/custom-product-pages/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 70 additional product page versions; metadata submitted for review independent of an app update; reached by unique URL, Apple Ads, search keywords and editorial placements; Apple's own figures: 2.5 percentage point average conversion increase and a 1.6% average conversion rate on default pages (no method given); vendor case figures for CBS Sports (20%) and State of Survival (33% conversion, 14% lower cost per install)."
+  },
+  {
+    "n": 8,
+    "title": "Overview of in-app events",
+    "publisher": "App Store Connect Help, Apple Developer",
+    "url": "https://developer.apple.com/help/app-store-connect/offer-in-app-events/overview-of-in-app-events",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Events appear on the product page, in search and in editorial and personalised placements on the App Store and Apple Games; event cards on iOS and iPadOS 15 or later; people can opt in to a notification when the event starts; roles Account Holder, Admin, App Manager or Marketing."
+  },
+  {
+    "n": 9,
+    "title": "In-app events",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/in-app-events/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 15 approved and 10 published events at a time; events last up to 31 days and can be promoted up to 14 days ahead; event name 30, short description 50, long description 120 characters; no specific prices in metadata; seven badges; submitted for review independent of an app version; universal link recommended; good and poor event candidates."
+  },
+  {
+    "n": 10,
+    "title": "Ads on the App Store",
+    "publisher": "Apple Ads",
+    "url": "https://ads.apple.com/app-store",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Placements on the Today tab, Search tab, search results and product pages; cost-per-tap pricing; Maximize Conversions and manual bidding for search results; ad creative from custom product pages and deep links; 100 USD credit for eligible new developers; vendor case figure for Rakuten (669% more first-time buyers from Search tab ads)."
+  },
+  {
+    "n": 11,
+    "title": "News and updates",
+    "publisher": "Apple Ads",
+    "url": "https://ads.apple.com/news",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Apple Search Ads renamed Apple Ads on 14 April 2025; AdAttributionKit registration announced 4 April 2025; more search results ads announced 17 December 2025 for early 2026; Maximize Conversions 25 February 2026; Insights 17 March 2026; own creative assets for Today tab and search results ads announced 8 June 2026 for later in 2026; up to 35 ad variations from custom product pages (26 January 2022); Fetch case study (51x downloads during the Super Bowl, 28 August 2025)."
+  },
+  {
+    "n": 12,
+    "title": "Search results ads",
+    "publisher": "Apple Ads Help",
+    "url": "https://ads.apple.com/app-store/help/ad-placements/0082-search-results",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ads can appear at the top of search results or further down; advertisers can't pick a position; relevance and bid decide whether an ad shows; ad variations from custom product pages; Maximize Conversions uses Search Match and is designed for post-launch campaigns; pre-order apps use the manual bid strategy."
+  },
+  {
+    "n": 13,
+    "title": "Ad attribution overview",
+    "publisher": "Apple Ads Help",
+    "url": "https://ads.apple.com/app-store/help/attribution/0094-ad-attribution-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AdServices attribution API for Apple Ads keeps data up to 21 days; AdAttributionKit (formerly SKAdNetwork) covers 77% of referral-based conversions to the App Store (App Store data, November 2024); Apple Ads registered with AdAttributionKit on 10 April 2025 starting with SKAdNetwork versions 1 to 3, with the AdAttributionKit API to follow at an unstated later date."
+  },
+  {
+    "n": 14,
+    "title": "AdAttributionKit",
+    "publisher": "Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/adattributionkit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; the HTML page renders with JavaScript, so the text was read from Apple's own documentation data file for the same page (developer.apple.com/tutorials/data/documentation/adattributionkit.json). Available from iOS and iPadOS 17.4; ad networks, publisher apps and advertised apps; three conversion windows; one winning postback and up to five nonwinning postbacks for installs; re-engagement postbacks; data tiers for crowd anonymity; no App Tracking Transparency prompt needed."
+  },
+  {
+    "n": 15,
+    "title": "SKAdNetwork",
+    "publisher": "Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/storekit/skadnetwork",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's documentation data file for the same page (developer.apple.com/tutorials/data/documentation/storekit/skadnetwork.json). Apple's note: use AdAttributionKit for app ad campaigns on the App Store and alternative marketplaces; from iOS 16.1, version 4 ads allow three conversion windows and up to three postbacks; no ATT needed."
+  },
+  {
+    "n": 16,
+    "title": "Asking permission to use notifications",
+    "publisher": "Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/usernotifications/asking-permission-to-use-notifications",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; text read from Apple's documentation data file for the same page. Ask in a context that shows why, not automatically at first launch; only the first request prompts; provisional authorization sends quiet trial notifications to Notification Center with Keep and Turn Off buttons."
+  },
+  {
+    "n": 17,
+    "title": "Create and set up your app",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Store listing limits: app name 30, short description 80, full description 4,000 characters; the store listing is shared across tracks; repetitive or irrelevant keywords can lead to suspension; a contact email is required and shown on the listing."
+  },
+  {
+    "n": 18,
+    "title": "Add preview assets to showcase your app",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9866151",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Icon 512 x 512; feature graphic 1024 x 500; up to 8 screenshots per device type; games need at least three 16:9 or 9:16 screenshots; tagline text under 20% of a screenshot; one YouTube preview video, first 30 seconds autoplay muted, mostly real app footage with core features in the first 10 seconds; alt text up to 140 characters; avoid words like Best, #1, Top, New, Free and calls to action like Download now."
+  },
+  {
+    "n": 19,
+    "title": "Metadata (Store Listing and Promotion policy)",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9898842",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title 30 characters or less; no emojis or repeated special characters in title, icon or developer name; no performance, ranking, price or promotion claims in those elements; no anonymous testimonials; no repetitive or unrelated keywords; screenshots and videos must show the real app."
+  },
+  {
+    "n": 20,
+    "title": "Run A/B tests on your store listing",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/12053285",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (same content as answer 6227309). One default graphics experiment or up to five localized experiments at once; up to two variants; icon, feature graphic, screenshots, and descriptions in localized tests; audience percentage, minimum detectable effect and confidence level settings; metrics are unique user install, open and pre-registration clicks; experiments stop after 6 months; published apps only; names up to 50 characters."
+  },
+  {
+    "n": 21,
+    "title": "Create custom store listings to tailor your listing for specific users",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9867158",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 50 custom store listings; audiences by country, pre-registration, churned, lapsed (28 days), buyer groups, lapsed buyers (180 days), ads traffic, search keywords and custom audiences; one listing per country at a time; unique URL parameter; name, icon, descriptions and graphics can differ; not auto-translated; ads-traffic listings show only on AdMob; must be reviewed before use as a Google Ads landing page."
+  },
+  {
+    "n": 22,
+    "title": "User Ratings, Reviews, and Installs",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9898684",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Play prohibits manipulating ratings, reviews or install counts, including incentives, forced or deceptive pop-ups, paid fake reviews and automated inflation; a notification offering a discount for a high rating is a listed violation."
+  },
+  {
+    "n": 23,
+    "title": "Ads (Monetization and Ads policy)",
+    "publisher": "Play Console Help, Google",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9857753",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ads must not mimic app features such as notifications; it must be clear which app serves an ad; unexpected full-screen interstitials and ones not closeable after 15 seconds are not allowed; ads only inside the app serving them."
+  },
+  {
+    "n": 24,
+    "title": "Notification runtime permission",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/develop/ui/views/notifications/notification-permission",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. POST_NOTIFICATIONS runtime permission from Android 13 (API level 33); notifications off by default for new installs; apps targeting 12L or lower lose control of when the dialog shows; ask after people know the app or from an action such as tapping a bell, following someone or ordering food; people can see daily notification counts and revoke the permission."
+  },
+  {
+    "n": 25,
+    "title": "Google Play In-App Review API",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/guide/playcore/in-app-review",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Time-bound quota on showing the review card, value not published; no button to trigger it; no questions before or during the card; show the card unchanged; ask after people have used the app enough."
+  },
+  {
+    "n": 26,
+    "title": "About App campaigns",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6247380",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Advertisers supply text, images, video and HTML5 assets plus a starting bid and budget; ads run across Google Search, Google Play, YouTube, the Display Network and Discover; subtypes for installs, engagement and pre-registration; app must be on Google Play or the App Store."
+  },
+  {
+    "n": 27,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Announced 14 August 2024; effective 60 days after Federal Register publication; bans fake reviews, incentives conditioned on sentiment, undisclosed insider reviews, company-controlled review sites posing as independent, review suppression and fake social media indicators; civil penalties for knowing violations."
+  },
+  {
+    "n": 28,
+    "title": "Fake reviews (CMA208)",
+    "publisher": "UK Competition and Markets Authority",
+    "url": "https://www.gov.uk/government/publications/fake-reviews-cma208",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CMA guidance on how businesses should comply with consumer protection law on consumer reviews, published 4 April 2025, after legislative changes introduced in April 2025."
+  },
+  {
+    "n": 29,
+    "title": "Sweeps",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/enforcement-consumer-protection/sweeps_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2021 online consumer reviews sweep: 223 websites checked; at least 55% potentially breached the Unfair Commercial Practices Directive; 176 did not say incentivised reviews were banned or how they were flagged; 2022 sweep on dark patterns."
+  }
+]

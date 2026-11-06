@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Replies to each new batch of public reviews, holds risky ones for the owner and flags repeat complaints, as in the weekly local routine."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "Writes a specific public reply to each review and lists the risky ones, matching the reply templates in the review skill."
+  },
+  {
+    "slug": "review-reason-spotter",
+    "name": "Review reason spotter",
+    "why": "Ranks why customers choose you from 20 or more reviews, with exact quotes, for profile text and service pages."
+  },
+  {
+    "slug": "testimonial-request-writer",
+    "name": "Testimonial request writer",
+    "why": "Asks past clients for website testimonials with their permission and without leading them, separate from Google review asks."
+  },
+  {
+    "slug": "one-goal-marketing-plan-builder",
+    "name": "One-goal marketing plan builder",
+    "why": "Turns 'more customers' into a number of booked jobs by a date and a calendar of tests, the start of the local 90-day plan."
+  },
+  {
+    "slug": "traction-search-engine-marketing",
+    "name": "Search ads experiment planner",
+    "why": "Plans a small, capped search ads test with a stop rule, before or alongside Local Services Ads."
+  },
+  {
+    "slug": "traction-offline-ads",
+    "name": "Offline ads experiment planner",
+    "why": "Plans one tracked postcard, flyer or local radio test with costs and a keep, change or stop rule."
+  },
+  {
+    "slug": "direct-mail-package-reviewer",
+    "name": "Direct mail package reviewer",
+    "why": "Checks a postcard or letter's offer, copy and look before it prints, for seasonal drops to one postcode."
+  },
+  {
+    "slug": "traction-offline-events",
+    "name": "Customer event experiment planner",
+    "why": "Plans an open day, workshop or pick-your-own event as a capped test with an owner and stop rule."
+  }
+]

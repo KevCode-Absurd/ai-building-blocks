@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Revisiting the design of selection systems in light of new findings regarding the validity of widely used predictors (Sackett, Zhang, Berry and Lievens, Industrial and Organizational Psychology 16, 2023)",
+    "publisher": "Cambridge University Press",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A20984B138319E3D432E643978BF026D/S175494262300024Xa.pdf/revisiting-the-design-of-selection-systems-in-light-of-new-findings-regarding-the-validity-of-widely-used-predictors.pdf",
+    "checked": "2026-11-06",
+    "supports": "Table 1 (from Sackett et al. 2022): structured interviews .42, job knowledge tests .40, empirically keyed biodata .38, work samples .33, cognitive ability .31 (later .23), integrity tests .31, assessment centres .29 (later .33), situational judgement tests .26, conscientiousness overall .21, unstructured interviews .19, years of job experience .07 (Schmidt and Hunter 1998 had .18); job-specific predictors fare better than general ones. PDF opened and converted to text."
+  },
+  {
+    "n": 2,
+    "title": "Daniel Kahneman: How companies can improve their hiring process",
+    "publisher": "Association for Psychological Science",
+    "url": "https://www.psychologicalscience.org/news/daniel-kahneman-how-companies-can-improve-their-hiring-process.html",
+    "checked": "2026-11-06",
+    "supports": "Kahneman's 1950s Israeli army interview: fixed criteria, questions that draw out facts, a separate score per criterion; interviewers' intuitive judgements improved once the structure was in place. Published 5 October 2021."
+  },
+  {
+    "n": 3,
+    "title": "Who: The A Method for Hiring",
+    "publisher": "ghSMART (book site)",
+    "url": "https://www.whothebook.com/",
+    "checked": "2026-11-06",
+    "supports": "The book by Geoff Smart and Randy Street (ghSMART) describing a four-step hiring method built from executive interviews."
+  },
+  {
+    "n": 4,
+    "title": "Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination (NBER Working Paper 9873)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w9873",
+    "checked": "2026-11-06",
+    "supports": "Fictitious CVs answering Boston and Chicago job ads: white-sounding names got 50% more callbacks; better CVs helped white names much more; employers listing Equal Opportunity Employer discriminated about as much. Working paper July 2003; American Economic Review 2004."
+  },
+  {
+    "n": 5,
+    "title": "Systemic Discrimination Among Large U.S. Employers (NBER Working Paper 29053)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w29053",
+    "checked": "2026-11-06",
+    "supports": "Over 83,000 fictitious applications to 108 large US employers: distinctively Black names cut employer contact by 2.1 percentage points; the top fifth of firms account for nearly half of lost contacts; gaps lower where recruiting is centralised. Quarterly Journal of Economics 2022."
+  },
+  {
+    "n": 6,
+    "title": "The Value of Hiring through Referrals (IZA Discussion Paper 7382)",
+    "publisher": "IZA Institute of Labor Economics",
+    "url": "https://www.iza.org/publications/dp/7382/the-value-of-hiring-through-referrals",
+    "checked": "2026-11-06",
+    "supports": "Burks, Cowgill, Hoffman and Housman (2013; QJE 2015): referred workers 10-30% less likely to quit, similar on common productivity measures, better on rare high-impact measures; advantage mostly from better job fit."
+  },
+  {
+    "n": 7,
+    "title": "Prohibited Employment Policies/Practices",
+    "publisher": "U.S. Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/prohibited-employment-policiespractices",
+    "checked": "2026-11-06",
+    "supports": "US protected characteristics; job ads must not show a preference or discourage (example: females or recent college graduates); word-of-mouth recruiting risk; tests must be job related; no pre-offer disability questions; do not ask for photos before an offer."
+  },
+  {
+    "n": 8,
+    "title": "iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit",
+    "publisher": "U.S. Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit",
+    "checked": "2026-11-06",
+    "supports": "11 September 2023: application software set to reject women 55 and over and men 60 and over; more than 200 applicants rejected; $365,000, training, new policy, no birth-date requests, at least five years of monitoring."
+  },
+  {
+    "n": 9,
+    "title": "Amazon scraps secret AI recruiting tool that showed bias against women (Reuters, republished)",
+    "publisher": "Euronews (Reuters copy)",
+    "url": "https://www.euronews.com/2018/10/10/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women",
+    "checked": "2026-11-06",
+    "supports": "Reuters, 10 October 2018: an experimental CV-rating engine trained on ten years of mostly male CVs penalised the word women's and two all-women's colleges; team disbanded early 2017; Amazon said recruiters never relied solely on its rankings. Reuters itself blocks automated fetching."
+  },
+  {
+    "n": 10,
+    "title": "Automated Employment Decision Tools (AEDT)",
+    "publisher": "NYC Department of Consumer and Worker Protection",
+    "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "checked": "2026-11-06",
+    "supports": "Local Law 144 of 2021: bias audit within one year before use, public summary of results, notice to candidates 10 business days before use; enforced from 5 July 2023; complaints route."
+  },
+  {
+    "n": 11,
+    "title": "EU AI Act, Annex III: High-risk AI systems",
+    "publisher": "Future of Life Institute (artificialintelligenceact.eu explainer site)",
+    "url": "https://artificialintelligenceact.eu/annex/3/",
+    "checked": "2026-11-06",
+    "supports": "Annex III point 4: AI for recruitment or selection (targeted job ads, filtering applications, evaluating candidates) and for decisions on terms, promotion, termination, task allocation and monitoring is high-risk. Unofficial explainer; EUR-Lex pages did not load for automated fetching."
+  },
+  {
+    "n": 12,
+    "title": "EU Digital Omnibus on AI enters into force (K&L Gates summary)",
+    "publisher": "National Law Review",
+    "url": "https://natlawreview.com/article/eu-digital-omnibus-ai-enters-force",
+    "checked": "2026-11-06",
+    "supports": "Law-firm summary: Regulation (EU) 2026/1744 published 24 July 2026, in force 27 July 2026; Annex III high-risk duties moved from 2 August 2026 to 2 December 2027; transparency duties continue from 2 August 2026."
+  },
+  {
+    "n": 13,
+    "title": "Illinois Postpones Proposed Regulations on AI in Employment (Ogletree Deakins summary)",
+    "publisher": "National Law Review",
+    "url": "https://natlawreview.com/article/illinois-postpones-proposed-regulations-ai-employment",
+    "checked": "2026-11-06",
+    "supports": "Law-firm summary, 4 June 2026: HB 3773 (Public Act 103-0804) in force 1 January 2026, bars discriminatory AI use in employment decisions and requires notice; IDHR published draft rules 15 May 2026 and withdrew them 2 June 2026. The Illinois General Assembly site refused the connection."
+  },
+  {
+    "n": 14,
+    "title": "Thinking of using AI to assist recruitment? Our key data protection considerations",
+    "publisher": "Information Commissioner's Office (UK)",
+    "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/11/thinking-of-using-ai-to-assist-recruitment-our-key-data-protection-considerations",
+    "checked": "2026-11-06",
+    "supports": "6 November 2024: questions to ask before buying an AI recruitment tool (DPIA, lawful basis, documented responsibilities and instructions, bias checks); audits found tools that let recruiters filter by protected characteristics, collected too much data or kept it indefinitely. Site blocks automated fetching; page confirmed in search results."
+  },
+  {
+    "n": 15,
+    "title": "Several States Enact Pay Transparency Laws: What Employers Need to Know in 2026",
+    "publisher": "Hunton Andrews Kurth",
+    "url": "https://www.hunton.com/hunton-retail-law-resource/several-states-enact-pay-transparency-laws-what-employers-need-to-know-in-2026",
+    "checked": "2026-11-06",
+    "supports": "Law-firm summary dated 16 December 2025: Colorado (2021), California (2023, good-faith pay scale definition from 1 January 2026), New Jersey 1 June 2025, Vermont 1 July 2025, Massachusetts 29 October 2025 (25+ employees), Delaware 26 September 2027, Washington cure period amendment."
+  },
+  {
+    "n": 16,
+    "title": "EU Pay Transparency Directive: 2026 employer compliance",
+    "publisher": "Lewis Silkin",
+    "url": "https://www.lewissilkin.com/en/insights/2026/07/01/eu-pay-transparency-directive-2026-employer-compliance",
+    "checked": "2026-11-06",
+    "supports": "Law-firm summary dated 1 July 2026: transposition deadline 7 June 2026; fully transposed only in Italy, Lithuania, Malta and Slovakia; applicants get starting pay or range early enough to negotiate; no pay history questions; first reports from larger employers June 2027."
+  },
+  {
+    "n": 17,
+    "title": "Salary Transparency Growth Slows, But Momentum Continues",
+    "publisher": "Indeed Hiring Lab",
+    "url": "https://hiringlab.indeed.com/2024/10/23/salary-transparency-growth-slows-but-momentum-continues/",
+    "checked": "2026-11-06",
+    "supports": "57.8% of US Indeed postings showed pay in September 2024, up from 52.2% a year earlier; New York postings 97.7%; growth slowing. By Daniel Culbertson, 23 October 2024."
+  },
+  {
+    "n": 18,
+    "title": "Transparent Salaries",
+    "publisher": "Buffer",
+    "url": "https://buffer.com/salaries",
+    "checked": "2026-11-06",
+    "supports": "Buffer has published its salary formula and every salary since 2013; benchmark by role, cost-of-living bands (two since February 2022), new salary system January 2024; principles transparent, simple, fair and generous."
+  },
+  {
+    "n": 19,
+    "title": "Job posting (JobPosting) structured data",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/job-posting",
+    "checked": "2026-11-06",
+    "supports": "Required properties (datePosted, description, hiringOrganization, jobLocation, title); baseSalary only from the employer; TELECOMMUTE only for fully remote jobs with applicantLocationRequirements; expired jobs must be removed or marked; no fees to applicants, real jobs only, one job per page."
+  },
+  {
+    "n": 20,
+    "title": "Hiring Assistant, LinkedIn's first AI agent for recruiters, to launch globally in English",
+    "publisher": "LinkedIn Pressroom",
+    "url": "https://news.linkedin.com/2025/hiring-assistant-globally-available",
+    "checked": "2026-11-06",
+    "supports": "3 September 2025: Hiring Assistant globally available in English by end of September 2025 after an October 2024 charter launch; early-adopter claims (4+ hours saved per role, 62% fewer profiles reviewed) are LinkedIn's own."
+  },
+  {
+    "n": 21,
+    "title": "Using Consumer Reports: What Employers Need to Know",
+    "publisher": "U.S. Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-employers-need-know",
+    "checked": "2026-11-06",
+    "supports": "FCRA steps for background checks: stand-alone written disclosure, written permission, certification, pre-adverse action notice with a copy of the report and summary of rights, adverse action notice; secure disposal. Guide dated October 2016."
+  },
+  {
+    "n": 22,
+    "title": "EEOC Votes to Rescind Enforcement Guidance on Arrest and Conviction Records",
+    "publisher": "U.S. Equal Employment Opportunity Commission",
+    "url": "https://www.eeoc.gov/newsroom/eeoc-votes-rescind-enforcement-guidance-arrest-and-conviction-records",
+    "checked": "2026-11-06",
+    "supports": "Release dated 29 October 2026: the 2012 guidance on arrest and conviction records is rescinded with immediate effect; Title VII still bars race and national origin discrimination, including proxies; the release does not address state or local laws."
+  },
+  {
+    "n": 23,
+    "title": "Job Scams",
+    "publisher": "U.S. Federal Trade Commission (Consumer Advice)",
+    "url": "https://consumer.ftc.gov/articles/job-scams",
+    "checked": "2026-11-06",
+    "supports": "Signs of job scams: paying for a job, starter kits or training; fake cheques; reshipping jobs; unsolicited offers; placement firms charging candidates up front. Article dated March 2023."
+  },
+  {
+    "n": 24,
+    "title": "Check a job applicant's right to work",
+    "publisher": "GOV.UK (Home Office)",
+    "url": "https://www.gov.uk/check-job-applicant-right-to-work",
+    "checked": "2026-11-06",
+    "supports": "UK checks before employment starts, by share code, identity service provider or manual document check; keep copies for the employment plus 2 years; civil penalties; must not discriminate by where someone is from."
+  },
+  {
+    "n": 25,
+    "title": "Form I-9, Employment Eligibility Verification",
+    "publisher": "U.S. Citizenship and Immigration Services",
+    "url": "https://www.uscis.gov/i-9",
+    "checked": "2026-11-06",
+    "supports": "Every US employer completes Form I-9 for every hire; current edition 01/20/25; electronic systems must move to the version expiring 05/31/2027 by 07/31/2026; page updated 3 June 2026."
+  },
+  {
+    "n": 26,
+    "title": "Employment agencies and businesses",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/employment-agencies-and-businesses",
+    "checked": "2026-11-06",
+    "supports": "UK agencies cannot charge work-seekers for finding work; key information document and written terms before looking for work; written statement on starting; pay temporary workers for all hours worked."
+  },
+  {
+    "n": 27,
+    "title": "Job Openings and Labor Turnover Summary (September 2026 data)",
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+    "checked": "2026-11-06",
+    "supports": "Released 3 November 2026: job openings 7.5 million (4.5%), hires 5.4 million (3.4%), quits rate 2.1%, layoffs and discharges rate 1.0% for September 2026."
+  },
+  {
+    "n": 28,
+    "title": "Implementation of the four Labour Codes (PIB release hosted by the Ministry of Labour and Employment)",
+    "publisher": "Ministry of Labour and Employment, Government of India",
+    "url": "https://labour.gov.in/sites/default/files/pib2200433.pdf",
+    "checked": "2026-11-06",
+    "supports": "Official source to check for India: the four Labour Codes in force from 21 November 2025. Site blocks automated fetching; page confirmed in search results."
+  },
+  {
+    "n": 29,
+    "title": "Canadian Human Rights Commission",
+    "publisher": "Government of Canada",
+    "url": "https://www.chrc-ccdp.gc.ca/en",
+    "checked": "2026-11-06",
+    "supports": "Official source to check for Canada on discrimination and accommodation; points users to provincial and territorial human rights agencies."
+  },
+  {
+    "n": 30,
+    "title": "Types of employees",
+    "publisher": "Fair Work Ombudsman (Australia)",
+    "url": "https://www.fairwork.gov.au/starting-employment/types-of-employees",
+    "checked": "2026-11-06",
+    "supports": "Official source to check for Australia when hiring (starting employment section). Site timed out for automated fetching; page confirmed in search results."
+  }
+]

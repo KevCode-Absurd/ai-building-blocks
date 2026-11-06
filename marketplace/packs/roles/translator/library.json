@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "check-a-translated-interface-still-makes-sense",
+    "name": "Check a translated interface still makes sense",
+    "why": "Reviews translated app screens string by string for lost meaning, broken placeholders and cut-off text, the same checks as the UI strings prompt."
+  },
+  {
+    "slug": "make-a-voiceover-and-ship-it-in-other-languages",
+    "name": "Make a voiceover and ship it in other languages",
+    "why": "Takes a script to a voiceover, dubbed versions and subtitles; pair it with the voiceover adaptation prompt so the translated script fits the timing first."
+  },
+  {
+    "slug": "branded-video-captions",
+    "name": "Video caption maker in your brand font",
+    "why": "Builds timed caption groups and a subtitle file for video ads, useful after the captions-and-subtitles skill has the text right."
+  },
+  {
+    "slug": "shopify-markets-setup-planner",
+    "name": "Shopify Markets setup planner",
+    "why": "Plans market groups, currencies and languages for a Shopify shop going abroad, the set-up step before translations go live."
+  },
+  {
+    "slug": "plain-english-editor",
+    "name": "Plain English editor",
+    "why": "Cleans up English source text before translation; clearer source gives cleaner machine and human translations."
+  },
+  {
+    "slug": "multi-language-site-planner",
+    "name": "Multi-language site planner",
+    "why": "Plans language URLs, hreflang, translation steps, currencies and right-to-left layouts, matching the new market website launch workflow."
+  },
+  {
+    "slug": "overseas-listing-localizer",
+    "name": "Overseas listing localizer",
+    "why": "Adapts product listings for other countries with local language, sizes and label reminders; run the locale format check on its output."
+  },
+  {
+    "slug": "check-translation-parity-across-three-languages",
+    "name": "Check translation parity across three languages",
+    "why": "Finds changed numbers, names, terms and quotes between language versions, a useful second check on long documents."
+  },
+  {
+    "slug": "app-translation-setup-helper",
+    "name": "App translation setup helper",
+    "why": "Finds hardcoded text and sets up locale files and right-to-left support, the groundwork that makes app translation possible."
+  },
+  {
+    "slug": "customer-support-message-translator",
+    "name": "Customer support message translator",
+    "why": "Translates incoming customer messages and drafts replies in the customer's language; use it with the business's glossary for consistent terms."
+  }
+]

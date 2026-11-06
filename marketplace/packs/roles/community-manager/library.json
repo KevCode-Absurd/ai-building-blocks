@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "weekly-community-keeper",
+    "name": "Weekly community keeper",
+    "why": "Runs the weekly reply pass: share community posts and questions, get useful replies and the repeat questions to answer once."
+  },
+  {
+    "slug": "social-comment-and-reply-desk",
+    "name": "Social comment and reply desk",
+    "why": "Drafts replies that add something, in the brand's voice, for comments on posts the community manager also covers."
+  },
+  {
+    "slug": "angry-customer-reply-writer",
+    "name": "Angry customer reply writer",
+    "why": "For a member complaint that turns heated: a reply that names the feeling, fixes what it can and promises nothing false."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks a draft reply to a member complaint for promises the owner has not agreed, before it is sent."
+  },
+  {
+    "slug": "community-evidence-researcher",
+    "name": "Community evidence researcher",
+    "why": "Turns a pile of community posts and comments into counted themes, with a clear note on what the sample cannot show."
+  },
+  {
+    "slug": "reddit-answer-planner",
+    "name": "Reddit answer planner",
+    "why": "Picks which Reddit threads a business can answer helpfully and what to say, for the outside-community-participation skill."
+  },
+  {
+    "slug": "traction-community-building",
+    "name": "Community growth experiment planner",
+    "why": "Plans one community growth test with its costs and measures, when the client wants to try a new channel for members."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Monthly read of paid-member cancellations: where members leave, whether last month's fix worked, and one fix to make."
+  },
+  {
+    "slug": "subscription-churn-audit",
+    "name": "Subscription churn audit",
+    "why": "A deeper one-off audit of where subscribers leave, for a membership that loses members after the first months."
+  },
+  {
+    "slug": "welcome-flow-builder",
+    "name": "Welcome flow builder",
+    "why": "Builds the welcome emails that go with a membership's joining steps, so email and community tell new members the same thing."
+  }
+]

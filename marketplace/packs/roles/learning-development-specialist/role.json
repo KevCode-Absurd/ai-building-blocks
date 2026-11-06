@@ -1,0 +1,26 @@
+{
+  "id": "learning-development-specialist",
+  "name": "Learning and development (L&D) specialist",
+  "department": "learning",
+  "summary": "Turns what the best people know into training staff can run, from first-week learning paths to workshops and skills frameworks. Checks the training changed how work gets done.",
+  "aliases": [
+    "l&d",
+    "corporate trainer",
+    "training specialist",
+    "staff training",
+    "workshop facilitator",
+    "skills matrix",
+    "onboarding training",
+    "training needs analysis",
+    "learning and development",
+    "apprentice coordinator"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 28 checked sources (Kirkpatrick four levels, Phillips ROI, LTEM, training science, onboarding, skills frameworks, UK and US apprenticeship rules, safety training duties, EU AI literacy), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "internal-communications-specialist",
+  "name": "Internal communications specialist",
+  "department": "people",
+  "summary": "Runs a firm's regular internal communication: staff newsletter, leadership updates, intranet pages and a comms calendar.",
+  "aliases": [
+    "internal communications",
+    "internal comms",
+    "employee communications",
+    "staff newsletter",
+    "intranet",
+    "town hall",
+    "change communications",
+    "all-hands",
+    "leadership update",
+    "employee newsletter"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: channel jobs, Slack, Microsoft Teams, Google Chat and SharePoint news features (Nov 2026), staff newsletters, leadership updates and town halls, change communications (Kotter, ADKAR, ACAS, EU and US notice rules), pulse checks, intranet page maps, IoIC IC Index and Gallup figures, access levels 1 to 3 with a fresh yes for all-staff sends, and 26 checked sources."
+    }
+  ]
+}

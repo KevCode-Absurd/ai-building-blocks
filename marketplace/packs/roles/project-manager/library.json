@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "weekly-status-update-writer",
+    "name": "Weekly status update writer",
+    "why": "A one-page done, stuck and needed update, the same shape as the weekly status update prompt."
+  },
+  {
+    "slug": "prepare-a-clear-client-project-kickoff",
+    "name": "Prepare a clear client project kickoff",
+    "why": "A one-page kickoff brief and action list with owners, matching the kickoff step of the goal to launch workflow."
+  },
+  {
+    "slug": "prepare-a-client-scope-change-brief",
+    "name": "Prepare a client scope change brief",
+    "why": "Compares a change request with the signed scope and drafts a reply, like the change request steps in the scope skill."
+  },
+  {
+    "slug": "client-scope-decision-review-assistant",
+    "name": "Client scope decision review assistant",
+    "why": "Keeps new work marked as proposed until the client accepts, which suits agencies running change control every week."
+  },
+  {
+    "slug": "check-capacity-before-promising-a-delivery-date",
+    "name": "Check capacity before promising a delivery date",
+    "why": "A capacity view and date options with risks before any promise, like the team capacity plan prompt."
+  },
+  {
+    "slug": "trace-why-work-keeps-missing-deadlines",
+    "name": "Trace why work keeps missing deadlines",
+    "why": "A delay map with causes from records, useful when re-planning a drifted project."
+  },
+  {
+    "slug": "weekly-project-delay-evidence-assistant",
+    "name": "Weekly project delay evidence assistant",
+    "why": "A weekly delay trend brief that feeds the risk check in weekly project control."
+  },
+  {
+    "slug": "launch-scope-halver",
+    "name": "Launch scope halver",
+    "why": "Keeps the date and halves the scope, one of the options when the critical path misses the deadline."
+  },
+  {
+    "slug": "prepare-your-first-freelance-project-quote",
+    "name": "Prepare your first freelance project quote",
+    "why": "Turns a website brief into a scoped quote, the supplier side of the estimate skill."
+  },
+  {
+    "slug": "domain-redirect-layout-planner",
+    "name": "Domain and redirect layout planner",
+    "why": "Plans the main domain and redirects, a companion to the redirect map in the website redesign skill."
+  },
+  {
+    "slug": "plan-a-vendor-change-without-losing-work",
+    "name": "Plan a vendor change without losing work",
+    "why": "An exit checklist and staged rollout with rollback for projects that switch software or suppliers."
+  },
+  {
+    "slug": "honest-project-review",
+    "name": "Run a project review where people tell the truth",
+    "why": "A blame-free review that turns lessons into rules, the fuller version of the wrap-up review prompt."
+  },
+  {
+    "slug": "turn-meetings-into-owned-actions",
+    "name": "Turn meetings into owned actions",
+    "why": "Action lists with owners and dates from meeting notes, which keep the plan and status updates current."
+  }
+]

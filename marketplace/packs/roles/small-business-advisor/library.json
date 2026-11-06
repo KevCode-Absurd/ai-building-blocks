@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "stress-test-a-business-plan-before-you-commit-money",
+    "name": "Stress test a business plan before you commit money",
+    "why": "Tests a plan's weak assumptions before money is committed, alongside the business-plan-send-ready-check prompt."
+  },
+  {
+    "slug": "size-a-market-and-separate-facts-from-guesses",
+    "name": "Size a market and separate the facts from the guesses",
+    "why": "Builds a sourced market section and keeps estimates labelled, the way the business plan skill requires."
+  },
+  {
+    "slug": "forecast-your-startup-runway-and-prepare-a-finance-pack",
+    "name": "Forecast your startup runway and prepare a finance pack",
+    "why": "A runway forecast and finance pack to attach to a lender or grant application."
+  },
+  {
+    "slug": "bad-year-break-even-tester",
+    "name": "Bad-year break-even tester",
+    "why": "Shows how much a bad year can take before the business stops earning, a sharper version of the break-even test cases."
+  },
+  {
+    "slug": "lean-year-cash-rules-writer",
+    "name": "Lean-year cash rules writer",
+    "why": "Writes the buffer size and red lines for thin months, to sit beside the 13-week forecast."
+  },
+  {
+    "slug": "tax-set-aside-planner",
+    "name": "Tax set-aside planner",
+    "why": "Turns the share your accountant gives into a set-aside rule and dates, the tax account in the allocation set-up."
+  },
+  {
+    "slug": "weekly-invoice-and-cash-chaser",
+    "name": "Weekly invoice and cash chaser",
+    "why": "Weekly check of open invoices with reminders you approve, the collect-sooner fix from the forecast."
+  },
+  {
+    "slug": "get-a-late-invoice-paid-and-keep-the-customer",
+    "name": "Get a late invoice paid and keep the customer",
+    "why": "A firm but friendly path for one late payer, matching the reminder sequence in the client process prompt."
+  },
+  {
+    "slug": "hourly-rate-calculator",
+    "name": "Hourly rate calculator",
+    "why": "Quick hourly, day and project rates from target pay, costs and billable hours, the first step of the freelance rate skill."
+  },
+  {
+    "slug": "client-fee-and-cap-setter",
+    "name": "Client fee and cap setter",
+    "why": "Sets a fee and a client limit from an income floor, useful when packaging retainer work."
+  },
+  {
+    "slug": "quarterly-client-rate-reviewer",
+    "name": "Quarterly client rate reviewer",
+    "why": "Finds each client's real hourly rate every quarter and who to raise, the follow-up to the rate worksheet."
+  },
+  {
+    "slug": "prepare-your-first-freelance-project-quote",
+    "name": "Prepare your first freelance project quote",
+    "why": "Turns a brief into a scoped quote with contract risks to check before sending; sending it as binding needs your yes."
+  },
+  {
+    "slug": "invoice-maker",
+    "name": "Invoice maker",
+    "why": "Lays out a clear, checked invoice for the last step of the client process."
+  },
+  {
+    "slug": "monthly-freelancer-books-closer",
+    "name": "Monthly freelancer books closer",
+    "why": "Monthly close for freelancers with a tax set-aside and a 90-day cash view, feeding the allocation routine."
+  },
+  {
+    "slug": "prepare-a-grant-spending-evidence-pack",
+    "name": "Prepare a grant spending evidence pack",
+    "why": "After a grant is awarded, gathers the spending evidence funders ask for, the last step of the loan-or-grant workflow."
+  }
+]

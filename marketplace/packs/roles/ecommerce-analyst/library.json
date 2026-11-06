@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "weekly-store-numbers-watcher",
+    "name": "Weekly store numbers watcher",
+    "why": "Runs the Monday check on Shopify and GA4 numbers: which to trust, what dropped and the funnel step to fix."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "Monthly hunt for broken tracking and double counts before they reach the weekly report."
+  },
+  {
+    "slug": "ga4-store-setup-checker",
+    "name": "GA4 store setup checker",
+    "why": "Checks a store's GA4 set-up for missing day-one settings and ecommerce events."
+  },
+  {
+    "slug": "weekly-product-funnel-watcher",
+    "name": "Weekly product funnel watcher",
+    "why": "Finds the funnel step that lost the most each week, for the conversion part of a sales-change check."
+  },
+  {
+    "slug": "monthly-repeat-buyer-keeper",
+    "name": "Monthly repeat buyer keeper",
+    "why": "Monthly repeat-purchase health from the order export, with the one stage to fix."
+  },
+  {
+    "slug": "repeat-order-bottleneck-finder",
+    "name": "Repeat order bottleneck finder",
+    "why": "One-off version of the repeat check: where customers stop coming back."
+  },
+  {
+    "slug": "best-and-worst-customer-profiler",
+    "name": "Best and worst customer profiler",
+    "why": "Profiles the best and worst buyers from orders and discounts, to sharpen RFM segment actions."
+  },
+  {
+    "slug": "store-ltv-payback-reader",
+    "name": "Store LTV and payback reader",
+    "why": "Reads first-order cohorts for repeat rate, lifetime value and payback on acquisition cost."
+  },
+  {
+    "slug": "daily-contribution-margin-tracker",
+    "name": "Daily contribution margin tracker",
+    "why": "A daily contribution margin sheet with a returns accrual, the daily version of the margin layers in this kit."
+  },
+  {
+    "slug": "monthly-returns-and-refunds-reviewer",
+    "name": "Monthly returns and refunds reviewer",
+    "why": "Monthly look at which products drive refunds, why, and what returns cost."
+  },
+  {
+    "slug": "discount-impact-checker",
+    "name": "Discount impact checker",
+    "why": "Checks what a discount does to margin before a promotion, alongside the margin and returns check."
+  },
+  {
+    "slug": "google-ads-purchase-tracking-checker",
+    "name": "Google Ads purchase tracking checker",
+    "why": "Catches double-counted purchase conversions that inflate channel tables."
+  }
+]

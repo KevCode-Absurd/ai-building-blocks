@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "Use lifecycle stages",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/use-lifecycle-stages",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 17 July 2026. Default lifecycle stages (Subscriber, Lead, Marketing Qualified Lead, Sales Qualified Lead, Opportunity, Customer, Evangelist, Other); automatic updates only move a record forward; imports, forms, the API and workflows cannot set an earlier stage until the value is cleared; stages can be customised."
+  },
+  {
+    "n": 2,
+    "title": "Understand the lead scoring tool",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 2 September 2026. Engagement, fit and combined scores; decay every 1, 3, 6 or 12 months, linear and per event; score and group limits; rules can subtract points; Marketing Hub or Sales Hub Professional or Enterprise; AI-built contact scores need Marketing Hub Enterprise and at least 50 contacts (25 converted, 25 not)."
+  },
+  {
+    "n": 3,
+    "title": "Set up and customize pipelines",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/object-settings/set-up-and-customize-pipelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 29 September 2026. Default sales pipeline has seven deal stages; each stage carries a win probability used for the weighted amount; include won and lost stages; conditional stage properties can be required on entry; separate pipelines only when processes differ; pipeline limits by subscription."
+  },
+  {
+    "n": 4,
+    "title": "Set up the forecast tool",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/forecast/set-up-the-forecast-tool",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 9 September 2026. Forecast categories Not forecasted, Pipeline, Best case, Commit and Closed won; submission status flags users who have not updated within a set number of days (default eight, up to 31); changing the forecast period resets goals and submissions; Sales Hub or Service Hub Professional or Enterprise."
+  },
+  {
+    "n": 5,
+    "title": "Deduplication of records",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/records/deduplication-of-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 2 October 2026. Contacts are deduplicated by email address and companies by primary domain; API-created companies are not matched by domain; record ID or unique-value properties can also deduplicate; the page does not say whether merges can be undone."
+  },
+  {
+    "n": 6,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote MCP server at mcp.hubspot.com with OAuth through a user-level app; lists read and write access to contacts, companies, deals, tickets, line items, quotes, invoices, subscriptions and engagements, and read-only access to owners, users and campaigns; sensitive data properties excluded; the page contradicts itself on write access (setup mentions read scopes)."
+  },
+  {
+    "n": 7,
+    "title": "Model Context Protocol (MCP)",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official server at mcp.stripe.com with OAuth or agent API keys; migrate by 30 November 2026, after which full-access secret keys and restricted keys without the Agent tag are refused; creating a refund needs human confirmation in the Dashboard and approvals expire after 24 hours; admins can turn MCP access on or off and revoke sessions."
+  },
+  {
+    "n": 8,
+    "title": "Billing analytics",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/billing/subscriptions/analytics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MRR is the monthly-normalised value of active and past_due subscriptions, excluding tax, free plans and metered products; cancelled or unpaid subscriptions count as churn; discount treatment and the active-subscriber start point are configurable; definitions of MRR growth, ARPU, subscriber churn rate, churned revenue and cohort retention."
+  },
+  {
+    "n": 9,
+    "title": "Prorations",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/billing/subscriptions/prorations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Price, quantity and item changes create prorations by default (create_prorations); negative prorations are not automatically refunded and positive ones are not billed at once; proration_behavior options create_prorations, always_invoice and none; preview with a preview invoice and a fixed proration date; risk of crediting unpaid time."
+  },
+  {
+    "n": 10,
+    "title": "Automate payment retries",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/billing/revenue-recovery/smart-retries",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Smart Retries is on by default for new accounts with up to 8 retries within 2 weeks; policy windows from 1 week to 2 months; hard declines need a new payment method; after the last retry the subscription is cancelled, marked unpaid, left past_due or paused, per settings."
+  },
+  {
+    "n": 11,
+    "title": "Refund and cancel payments",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/refunds",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Refunds go only to the original payment method; original processing fees are not returned; partial and multiple refunds up to the charge amount; credit usually appears 5 to 10 business days later; failed refunds can take up to 30 days to return; some card refunds can be cancelled for a short time; double-refund risk on bank debits under dispute."
+  },
+  {
+    "n": 12,
+    "title": "Respond to disputes",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/disputes/responding",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Response window usually 7 to 21 days by card network; missing it loses the dispute; only one chance to submit evidence and it cannot be edited; inquiries are a pre-dispute stage; contacting the customer may resolve the complaint; issuer decisions can take up to 3 months."
+  },
+  {
+    "n": 13,
+    "title": "Add a cancellation page to the customer portal",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/customer-management/cancellation-page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Portal cancellation is on by default; optional cancellation reason list (too expensive, need more features, found an alternative, no longer need it, customer service, ease of use, quality, other); reasons appear on the subscription, in Sigma and in the subscription.updated webhook; optional retention coupon."
+  },
+  {
+    "n": 14,
+    "title": "IFRS 15 Revenue from Contracts with Customers",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five steps from identifying the contract to recognising revenue as each performance obligation is satisfied; effective for periods beginning on or after 1 January 2018; issued in May 2014 alongside FASB Topic 606."
+  },
+  {
+    "n": 15,
+    "title": "The Bowtie",
+    "publisher": "Winning by Design",
+    "url": "https://winningbydesign.com/bowtie/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (author's own site). The Bowtie joins acquisition (Awareness, Education, Selection, Commit) and the post-sale side (Commit, Onboard, Impact, Expansion) into one system with shared language and metrics."
+  },
+  {
+    "n": 16,
+    "title": "The short life of online sales leads (Oldroyd, McElheran and Elkington, March 2011)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (summary only; full text paywalled). Authors, date and the finding that most companies do not respond to online enquiries nearly fast enough. No response-time multiples are visible on the page, so none are quoted."
+  },
+  {
+    "n": 17,
+    "title": "State of Sales report",
+    "publisher": "Salesforce",
+    "url": "https://www.salesforce.com/resources/research-reports/state-of-sales/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nine in 10 sales teams use AI agents or expect to within two years. The page does not state the edition year or sample size."
+  },
+  {
+    "n": 18,
+    "title": "CAN-SPAM Act: a compliance guide for business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Accurate headers, honest subject lines, ad identification, postal address and a clear opt-out; opt-outs honoured within 10 business days and the mechanism working for 30 days; no business-to-business exemption; primary purpose decides commercial vs transactional; penalties up to $53,088 per email."
+  },
+  {
+    "n": 19,
+    "title": "Email sender guidelines",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://support.google.com/a/answer/81126",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 1 February 2024 all senders need SPF or DKIM, reverse DNS, TLS and a spam rate below 0.3% (0.1% recommended); bulk senders of more than 5,000 messages a day to Gmail also need DMARC, alignment and one-click unsubscribe with a visible link."
+  },
+  {
+    "n": 20,
+    "title": "Can data received from a third party be used for marketing?",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/legal-grounds-processing-data/can-data-received-third-party-be-used-marketing_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A company using a bought or shared contact list must be able to show it was collected lawfully and may be used for advertising, keep it current, exclude people who objected, follow ePrivacy rules for email, and tell people at the latest at first contact."
+  },
+  {
+    "n": 21,
+    "title": "Guidelines 05/2020 on consent under Regulation 2016/679",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-052020-consent-under-regulation-2016679_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The EDPB's guidelines on consent as a legal basis under the GDPR, dated 4 May 2020, the reference for what valid consent requires on forms and lead capture."
+  },
+  {
+    "n": 22,
+    "title": "Respect individuals' rights (SME data protection guide)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eight GDPR rights including access, erasure and objection; respond within one month, extendable by two months for complex requests with notice; usually free; identity can be checked where there is reasonable doubt."
+  },
+  {
+    "n": 23,
+    "title": "Negative Option Rule",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/negative-option-rule",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Click-to-cancel final rule announced 16 October 2024 and published 15 November 2024; Federal Register notice of 12 February 2026 revising the rule to conform to federal court decisions; advance notice of proposed rulemaking announced 11 March 2026 and published 13 March 2026."
+  },
+  {
+    "n": 24,
+    "title": "Attorney General Bonta issues consumer alert on California's Automatic Renewal Law",
+    "publisher": "State of California Department of Justice",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-california%E2%80%99s-automatic-renewal-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Alert dated 4 September 2025 on the law as amended from 1 July 2025: clear consent before charging, online cancellation for online sign-ups without delaying steps, an annual reminder, and notice 7 to 30 days before an accepted fee increase."
+  },
+  {
+    "n": 25,
+    "title": "Consultation on the implementation of the new subscription contracts regime",
+    "publisher": "GOV.UK (Department for Business and Trade)",
+    "url": "https://www.gov.uk/government/consultations/consultation-on-the-implementation-of-the-new-subscription-contracts-regime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 2 April 2026. Consultation ran 18 November 2024 to 10 February 2025; government response published 2 April 2026; secondary legislation to follow; no start date given."
+  }
+]

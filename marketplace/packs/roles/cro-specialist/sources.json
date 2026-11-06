@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "How Not To Run an A/B Test (Evan Miller, 18 April 2010)",
+    "publisher": "evanmiller.org",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Peeking inflates false positives (worked example: 26.1% where 5% was intended); fix the sample size in advance; rule of thumb n = 16 sigma squared / delta squared, with sigma squared = p(1 - p) for a conversion rate."
+  },
+  {
+    "n": 2,
+    "title": "Sample Size Calculator (Evan's Awesome A/B Tools)",
+    "publisher": "evanmiller.org",
+    "url": "https://www.evanmiller.org/ab-testing/sample-size.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Inputs (baseline rate, minimum detectable effect as absolute or relative, power, significance level) and output (sample size per variation)."
+  },
+  {
+    "n": 3,
+    "title": "Simple Sequential A/B Testing (Evan Miller, 13 October 2015)",
+    "publisher": "evanmiller.org",
+    "url": "https://www.evanmiller.org/sequential-ab-testing.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The stopping rule (stop when treatment minus control successes reaches 2 times the square root of N, or total successes reach N), one-sided 5% basis, about 2.25 root N for two-sided, and when it saves sample."
+  },
+  {
+    "n": 4,
+    "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing (Ron Kohavi, Diane Tang, Ya Xu; Cambridge University Press, 2020)",
+    "publisher": "experimentguide.com (authors' book site)",
+    "url": "https://experimentguide.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book's authors, publisher and year, and its emphasis on an Overall Evaluation Criterion (OEC)."
+  },
+  {
+    "n": 5,
+    "title": "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments: A Taxonomy and Rules of Thumb for Practitioners (KDD 2019)",
+    "publisher": "Microsoft Research",
+    "url": "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page lists Aleksander Fabijan). What a sample ratio mismatch is, why ignoring it can ship a bad change, and a taxonomy drawn from four companies and 25+ products."
+  },
+  {
+    "n": 6,
+    "title": "Patterns of Trustworthy Experimentation: Pre-Experiment Stage (31 July 2020)",
+    "publisher": "Microsoft Research, Experimentation Platform",
+    "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Falsifiable hypothesis, core metric set with guardrails, power analysis, randomisation unit (cookies unstable), retrospective A/A checks, progressive rollout."
+  },
+  {
+    "n": 7,
+    "title": "Patterns of Trustworthy Experimentation: During-Experiment Stage (25 January 2021)",
+    "publisher": "Microsoft Research, Experimentation Platform",
+    "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SRMs typically invalidate a test; alerts and auto-shutdown on guardrails (a Bing test that introduced a 404 page); novelty effects (a 28% click lift on a Microsoft News button that faded); stricter significance for early looks; stable segments."
+  },
+  {
+    "n": 8,
+    "title": "Patterns of Trustworthy Experimentation: Post-Experiment Stage (24 December 2021)",
+    "publisher": "Microsoft Research, Experimentation Platform",
+    "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Check set-up against intended allocation; triggered analysis; trading off OEC and guardrails with weights set in advance; rerun results that look too good (Twyman's law); archive tests."
+  },
+  {
+    "n": 9,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 7.3.3: How can we determine whether two processes produce the same proportion of defectives?",
+    "publisher": "U.S. National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section3/prc33.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Two-proportion z-test with a pooled proportion for large samples; Fisher's exact test for small samples."
+  },
+  {
+    "n": 10,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 1.3.5.15: Chi-Square Goodness-of-Fit Test",
+    "publisher": "U.S. National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The chi-square goodness-of-fit statistic (sum of (observed - expected) squared / expected) and the need for enough expected counts."
+  },
+  {
+    "n": 11,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 7.4.7.3: Bonferroni's method",
+    "publisher": "U.S. National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/prc/section4/prc473.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bonferroni: for g comparisons chosen in advance, use alpha / g for each to keep overall confidence at least 1 - alpha."
+  },
+  {
+    "n": 12,
+    "title": "Statistical significance (Optimizely Experimentation docs, dated 5 August 2026)",
+    "publisher": "Optimizely",
+    "url": "https://docs.optimizely.com/experimentation-strategy/docs/statistical-significance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stats Engine accounts for running time, uses false discovery rate control with two-tailed tests, applies no extra FDR control across segments, holds winners until minimum visitors and conversions; significance level is a setting."
+  },
+  {
+    "n": 13,
+    "title": "Minimize A/B testing impact in Google Search",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/website-testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page undated in fetch). No cloaking; rel=canonical on test URLs; 302 not 301 redirects; end tests promptly and remove test code."
+  },
+  {
+    "n": 14,
+    "title": "Google Optimize and Optimize 360 sunset",
+    "publisher": "Google Optimize Help",
+    "url": "https://support.google.com/optimize/answer/12979939",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Optimize ended on 30 September 2023; Google works with third-party testing tools (AB Tasty, Optimizely, VWO) and opened its APIs."
+  },
+  {
+    "n": 15,
+    "title": "Shopify Editions Winter '26",
+    "publisher": "Shopify",
+    "url": "https://www.shopify.com/editions/winter2026",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rollouts: scheduled theme changes and A/B tests built into the Shopify admin. No help article on Rollouts could be found to confirm plans or limits."
+  },
+  {
+    "n": 16,
+    "title": "Why You Only Need to Test with 5 Users (Jakob Nielsen, 18 March 2000)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. About 85% of usability problems found with five users (model-based), several small rounds beat one large one, more users for distinct groups and for quantitative studies."
+  },
+  {
+    "n": 17,
+    "title": "Cart Abandonment Rate Statistics (updated 28 October 2026)",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/lists/cart-abandonment-rate",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 70.22% average documented abandonment from 50 studies (2006 to 2025); reasons for abandonment among US online shoppers (extra costs 40%, slow delivery 20%, trust 19%, forced account 18%, long checkout 17%, errors 17%)."
+  },
+  {
+    "n": 18,
+    "title": "Checkout Optimization: Reduce the Number of Form Fields (Edward Scott, 26 June 2024)",
+    "publisher": "Baymard Institute",
+    "url": "https://baymard.com/blog/checkout-flow-average-form-fields",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Average checkout has 11.3 form fields (2024); most sites need only 8; shares of sites not using single name field (89%), hidden address line 2 (75%), delayed account creation (84%)."
+  },
+  {
+    "n": 19,
+    "title": "Web Vitals (updated 31 October 2024)",
+    "publisher": "web.dev (Google)",
+    "url": "https://web.dev/articles/vitals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Core Web Vitals and good thresholds (LCP 2.5 s, INP 200 ms, CLS 0.1) at the 75th percentile; INP replaced FID in 2024."
+  },
+  {
+    "n": 20,
+    "title": "Fogg Behavior Model",
+    "publisher": "BJ Fogg, Behavior Design Lab (behaviormodel.org)",
+    "url": "https://behaviormodel.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. B = MAP: a behaviour happens when motivation, ability and a prompt come together; if it does not happen, one is missing."
+  },
+  {
+    "n": 21,
+    "title": "Guidelines 2/2023 on Technical Scope of Art. 5(3) of ePrivacy Directive, Version 2.0 (adopted 7 October 2024)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/documents/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text extracted). Art. 5(3) protects information on a device whether or not it is personal data (para 10, quoting the CJEU); JavaScript that tells the browser to send information is gaining access (para 33); pixels and unique identifiers are covered."
+  },
+  {
+    "n": 22,
+    "title": "Guidelines 05/2020 on consent under Regulation 2016/679, Version 1.1 (adopted 4 May 2020)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/documents/files/file1/edpb_guidelines_202005_consent_en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF; text extracted). Cookie walls make consent not freely given (paras 39-40); scrolling or swiping is never consent (para 86); pre-ticked boxes invalid; withdrawal as easy as giving (paras 113-114)."
+  },
+  {
+    "n": 23,
+    "title": "Cookies : solutions pour les outils de mesure d'audience (4 July 2025)",
+    "publisher": "CNIL (French data protection authority)",
+    "url": "https://www.cnil.fr/fr/cookies-solutions-pour-les-outils-de-mesure-daudience",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (French page). Conditions for audience measurement without consent in France: publisher-only purpose, anonymous statistics, no combining or cross-site tracking; recommended 13-month cookie life and 25-month data retention. Session replay, heatmaps and A/B testing are not mentioned."
+  },
+  {
+    "n": 24,
+    "title": "Data (Use and Access) Act 2025: data protection and privacy changes (first published 27 June 2025)",
+    "publisher": "UK Department for Science, Innovation and Technology (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Act allows storage and access technologies without consent in certain low-risk situations (not named on the page); changes commence in stages 2 to 12 months after Royal Assent on 19 June 2025."
+  },
+  {
+    "n": 25,
+    "title": "About consent mode (Google Analytics Help)",
+    "publisher": "Google",
+    "url": "https://support.google.com/analytics/answer/9976101",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Consent mode passes consent choices to Google tags; analytics_storage denied means no analytics cookies; basic mode blocks tags until consent; advanced mode sends cookieless pings used for modelling; set defaults by region."
+  },
+  {
+    "n": 26,
+    "title": "Clarity Cookie Consent API - ConsentV2 (updated 5 December 2025)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-consent-api-v2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 31 October 2025 Clarity enforces consent signals for visits from the EEA, UK and Switzerland; without consent it runs with no cookies and a unique ID per page view."
+  },
+  {
+    "n": 27,
+    "title": "Masking content (Microsoft Clarity, updated 5 December 2025)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-masking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Masking modes strict, balanced (default) and relaxed; input boxes and drop-downs masked in all modes; masked content is never uploaded; changes are not retroactive; only admins change masking."
+  },
+  {
+    "n": 28,
+    "title": "California Consumer Privacy Act (CCPA) (updated 28 August 2026)",
+    "publisher": "State of California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Consumer rights to know, delete, opt out of sale or sharing and limit use of sensitive data; a user-enabled global privacy control must be honoured as an opt-out by covered businesses."
+  },
+  {
+    "n": 29,
+    "title": "The Digital Services Act (policy page, last updated 1 October 2026)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The DSA bans deceptive dark-pattern designs on online platforms; micro and small companies have lighter requirements."
+  }
+]

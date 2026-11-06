@@ -5,7 +5,7 @@ import { Button, Page } from "../../components.tsx";
 import { Link } from "../../lib/router.tsx";
 import { SafeMarkdown } from "./pack-parts.tsx";
 import { markdownSummary, markdownTitle } from "./packs.ts";
-import { SITE_SUFFIX } from "../../../modules/directory/titles.ts";
+import { GUIDES_TITLE, SITE_SUFFIX } from "../../../modules/directory/titles.ts";
 import useAPack from "../../content/guides/use-an-agent-pack.md?raw";
 import trainYourOwn from "../../content/guides/train-your-own-agent.md?raw";
 
@@ -36,6 +36,8 @@ function GuideList() {
 }
 
 export function GuidesPage() {
+  // The same title the Worker sends (src/pages.ts); this runs after Page sets its own.
+  useEffect(() => { document.title = GUIDES_TITLE; }, []);
   return (
     <Page title="Guides" intro="How to load an AI Blocks agent into the AI you already use, and how to train your own.">
       <GuideList />

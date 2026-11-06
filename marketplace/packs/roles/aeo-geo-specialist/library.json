@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "ai-answer-visibility-tracker",
+    "name": "AI answer visibility tracker",
+    "why": "An agent that runs the same buyer questions through AI assistants each month and reports share of mentions, the loop behind the fortnightly AI citation check."
+  },
+  {
+    "slug": "ai-recommendation-panel-runner",
+    "name": "AI recommendation panel runner",
+    "why": "Runs shopper questions across assistants and records who is named and which sources are cited, the sampling step of the visibility audit."
+  },
+  {
+    "slug": "ai-recommendation-gap-finder",
+    "name": "AI recommendation gap finder",
+    "why": "Turns panel results into gaps marked fix, build or influence, matching the gap types in the ai-answer-visibility-audit skill."
+  },
+  {
+    "slug": "ai-citation-source-finder",
+    "name": "AI citation source finder",
+    "why": "Finds the sites AI tools keep citing for buyer questions and who to contact, the first step of earned source outreach."
+  },
+  {
+    "slug": "get-your-store-named-on-the-pages-ai-quotes",
+    "name": "Get your store named on the pages AI quotes",
+    "why": "A full workflow from cited sources to a plan to appear on them, for online shops."
+  },
+  {
+    "slug": "brand-facts-accuracy-fixer",
+    "name": "Brand facts accuracy fixer",
+    "why": "Checks what AI says about a store against the truth and lists a fix for each wrong fact, a shop-focused version of the brand-facts-and-entity-audit skill."
+  },
+  {
+    "slug": "answer-first-page-rewriter",
+    "name": "Answer-first page rewriter",
+    "why": "Rewrites guides and FAQ pages answer first and lists facts that still need a source, close to the citation-ready-page-rewrite skill."
+  },
+  {
+    "slug": "ai-ready-product-page-editor",
+    "name": "AI-ready product page editor",
+    "why": "Puts product facts, spec tables and FAQs into a form AI tools can read and quote."
+  },
+  {
+    "slug": "bot-and-ai-agent-access-planner",
+    "name": "Bot and AI agent access planner",
+    "why": "Decides which bots and AI agents to allow, check or block around logins and checkout, alongside the ai-crawler-access-review skill."
+  },
+  {
+    "slug": "ai-traffic-tracking-setup",
+    "name": "AI traffic tracking set-up",
+    "why": "Sets up an AI traffic channel, a post-purchase question and redirects, like the ai-referral-tracking-setup workflow."
+  },
+  {
+    "slug": "shopper-question-and-fan-out-mapper",
+    "name": "Shopper question and fan-out mapper",
+    "why": "Groups the questions shoppers ask AI and the follow-up searches behind them, a source for the buyer prompt set."
+  },
+  {
+    "slug": "journalist-query-answer-writer",
+    "name": "Journalist query answer writer",
+    "why": "Writes expert answers to journalist requests, an honest way to earn the third-party coverage AI engines cite."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Builds a page of real customer questions with direct answers, useful for quotable content when kept to genuine questions."
+  },
+  {
+    "slug": "seo-and-ai-search-agency-vetter",
+    "name": "SEO and AI search agency vetter",
+    "why": "Reviews agency proposals for red flags, a companion to the aeo-vendor-claim-check prompt."
+  }
+]

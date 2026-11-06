@@ -1,0 +1,26 @@
+{
+  "id": "software-engineer",
+  "name": "Software engineer",
+  "department": "engineering",
+  "summary": "Keeps existing software healthy: debugs errors, reviews code, refactors old files and plans upgrades. Explains an unfamiliar codebase to the next person.",
+  "aliases": [
+    "software developer",
+    "debugging",
+    "code review",
+    "refactoring",
+    "legacy code",
+    "framework upgrade",
+    "bug fix",
+    "regex",
+    "codebase onboarding",
+    "pull request review"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (Google's code review guide, Fowler and Feathers on refactoring and legacy code, scientific debugging and git bisect, Node.js, Python, PHP and Laravel support dates, OWASP Top 10:2025, ReDoS, AI-assisted coding evidence, US, UK and EU secure development guidance), four skills (bug diagnosis and fix, code review, safe refactor, upgrade plan), six prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

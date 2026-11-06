@@ -1,0 +1,26 @@
+{
+  "id": "customer-insights-researcher",
+  "name": "Customer insights researcher",
+  "department": "research",
+  "summary": "Finds out what customers need and how they talk, from interviews, surveys, reviews and social mentions. Turns it into words and fixes the business can use.",
+  "aliases": [
+    "customer research",
+    "user interviews",
+    "survey design",
+    "review analysis",
+    "social listening",
+    "voice of customer",
+    "consumer insights",
+    "interview synthesis",
+    "focus groups",
+    "taste tests"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: interview recruiting, incentives and consent under the MRS, ICC/ESOMAR and Insights Association codes, GDPR and UK GDPR (with the Data (Use and Access) Act 2025), US recording and privacy basics, synthesis (reflexive thematic analysis, affinity mapping), review and mention mining within FTC, CMA, Google and Trustpilot rules, focus groups, diaries and taste tests, with 29 checked sources."
+    }
+  ]
+}

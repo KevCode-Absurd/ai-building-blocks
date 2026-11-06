@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "CAP Code, Section 2: Recognition of marketing communications",
+    "publisher": "Advertising Standards Authority / Committee of Advertising Practice",
+    "url": "https://www.asa.org.uk/type/non_broadcast/code_section/02.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (section page undated). Rule 2.1: marketing must be obviously identifiable; 2.3: marketers must make their commercial intent clear and not pose as consumers; 2.4: advertorials must be made clear, for example with an 'advertisement feature' heading; rules 2.3 and 2.4 reflect DMCC Act Schedule 20 banned practices"
+  },
+  {
+    "n": 2,
+    "title": "Influencer and affiliate ads on social media (advice)",
+    "publisher": "Advertising Standards Authority / Committee of Advertising Practice",
+    "url": "https://www.asa.org.uk/advice-online/recognising-ads-social-media.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (advice dated 6 August 2026). Content is an ad when there is payment or another incentive, a commercial connection, own products, or an affiliate link; use 'Ad', 'Advert', 'Advertising' or 'Ad feature' up front; 'Sponsored', 'Supported by', 'Gifted', 'In association with', 'Thanks to X', 'sp', 'spon' and ambassador tags alone are not recommended; YouTube labels belong in the title or thumbnail; Instagram's Paid partnership label may not be enough on its own"
+  },
+  {
+    "n": 3,
+    "title": "Influencers' guide to making clear that ads are ads (2026 edition)",
+    "publisher": "Advertising Standards Authority / Committee of Advertising Practice, with the CMA",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 23 October 2026). Fourth edition of the guide first published in 2018, developed with the CMA; adds fake reviews, DMCC Act updates and the CMA's enforcement powers and penalties. Label details were taken from the advice page [2], not the guide PDF"
+  },
+  {
+    "n": 4,
+    "title": "ASA Ruling on The BLAC Awards (UK) C.I.C t/a The BLAC Awards",
+    "publisher": "Advertising Standards Authority",
+    "url": "https://www.asa.org.uk/rulings/the-blac-awards--uk--c-i-c-a24-1246302-the-blac-awards--uk--c-i-c.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (ruling 2 October 2024, upheld). Ads from December 2023 to May 2024 used the Royal Air Force logo and 'in partnership with' wording from a 2020 sponsorship; with no evidence the partnership was current, the ads were misleading; the advertiser must not imply an official partnership with a public body, including through logos, without one"
+  },
+  {
+    "n": 5,
+    "title": "ASA Ruling on Hillside (UK Sports) ENC t/a bet365",
+    "publisher": "Advertising Standards Authority",
+    "url": "https://www.asa.org.uk/rulings/hillside--uk-sports--enc-a23-1189958-hillside--uk-sports--enc.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (ruling 16 August 2023, upheld). A Sky Sports tweet promoted by bet365 showing Arsenal captain Granit Xhaka was treated as bet365's ad; top-club footballers are high-risk for strong appeal to under-18s; self-declared age data was not a reliable way to exclude under-18s; breach of CAP rules 16.1, 16.3 and 16.3.12"
+  },
+  {
+    "n": 6,
+    "title": "ASA Ruling on Aramco Overseas Oil Company BV t/a Aramco",
+    "publisher": "Advertising Standards Authority",
+    "url": "https://www.asa.org.uk/rulings/aramco-overseas-oil-company-bv-a24-1250237-aramco-overseas-oil-company-bv.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (ruling 9 July 2025, not upheld). Paid ads announcing Aramco's partnership with the Aston Martin Formula One team, showing the car with sponsor decals; the ASA judged them as partnership ads on what consumers would take from them and found no misleading omission or unexplained 'advanced fuels' claim"
+  },
+  {
+    "n": 7,
+    "title": "Unfair commercial practices (CMA207)",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207/unfair-commercial-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first part of a long page read; published 4 April 2025, updated 18 November 2025). The DMCC Act unfair commercial practices rules apply from 6 April 2025; banned practice 12: paid editorial promotion not made clear, with an influencer example; banned practice 4: false claims of approval or endorsement by a public or private body; statements about sponsorship can be a misleading action; the CMA can use direct enforcement"
+  },
+  {
+    "n": 8,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first 100,000 characters read; guides revised 2023). An audible endorsement needs at least an audible disclosure; 'Sponsored by XYZ' is clearer than 'Sponsored'; disclosures go near the endorsement, not only in descriptions or comments; platform tools do not remove responsibility; advertisers answer for their agencies and need training, disclosure instructions, monitoring and follow-up; the page does not name podcasts"
+  },
+  {
+    "n": 9,
+    "title": "Disclosures 101 for Social Media Influencers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (guide dated November 2019). Disclose financial, employment, personal or family relationships and free products; put the disclosure with the endorsement, not behind 'more' or among hashtags; use 'ad' or 'sponsored'; avoid 'sp', 'collab' or a bare 'thanks'; disclose in the video itself and repeat in live streams"
+  },
+  {
+    "n": 10,
+    "title": "Warner Bros. settles FTC charges it failed to adequately disclose it paid online influencers to post gameplay videos",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2016/07/warner-bros-settles-ftc-charges-it-failed-adequately-disclose-it-paid-online-influencers-post",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (press release 11 July 2016). Influencers were paid from hundreds to tens of thousands of dollars to promote Middle Earth: Shadow of Mordor, told to be positive and not mention bugs; disclosures sat below the 'Show More' fold; videos had over 5.5 million views; the order bars misrepresenting sponsored videos as independent and requires clear disclosure, education and monitoring"
+  },
+  {
+    "n": 11,
+    "title": "In the Matter of Warner Bros. Home Entertainment, Inc.",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/152-3034-warner-bros-home-entertainment-inc-matter",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Case page: proposed consent order July 2016; final decision and order approved 21 November 2016"
+  },
+  {
+    "n": 12,
+    "title": "Influencer Legal Hub",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/influencer-legal-hub_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU laws that apply to commercial content (Unfair Commercial Practices Directive, Digital Services Act and others); influencers who regularly advertise can be traders; the CPC Network's five key principles on disclosure; cites a 2025 study finding only 5.4% of posts labelled as advertising; legal briefs October 2023 and September 2024; webinar February 2026"
+  },
+  {
+    "n": 13,
+    "title": "Unfair commercial practices",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-commercial-practices/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked by the EU on 28 April 2026). Sponsored editorial content must be made clear by images, words or sound; paid or gifted influencer promotions must be identified; fake or paid reviews are banned; sponsored search results must be labelled"
+  },
+  {
+    "n": 14,
+    "title": "Add branded content restrictions and disclosure labels",
+    "publisher": "YouTube Help (Google)",
+    "url": "https://support.google.com/youtube/answer/154235",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated help page). Creators tick 'my video includes branded content' under Paid promotion, which adds a disclosure label at the start; creators and partners are responsible for legal compliance; age and country limits are available in YouTube Studio; points to the FTC, ASA and other regulators"
+  },
+  {
+    "n": 15,
+    "title": "Publication 598: Tax on Unrelated Business Income of Exempt Organizations (Rev. March 2021)",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/pub/irs-pdf/p598.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted locally). Qualified sponsorship payments (use or acknowledgment of the sponsor's name, logo or product lines) are not unrelated business income; advertising (qualitative or comparative language, price or savings, endorsements, inducements to buy) is not covered; payments contingent on attendance or ratings, trade show payments and acknowledgments in regular periodicals are excluded; benefits such as tickets are judged separately"
+  },
+  {
+    "n": 16,
+    "title": "VAT Notice 701/1: how VAT affects charities",
+    "publisher": "HM Revenue and Customs (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/how-vat-affects-charities-notice-7011",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 19 October 2026). Section 5.9.5: sponsorship where the sponsor gets significant benefits is a standard-rated business supply and may take a small charity over the VAT threshold; flags or a name in a supporters list are insignificant; 5.9.6: donations separate from sponsorship, with benefits not conditional on the gift; 5.2: advertising space in programmes and brochures is business income"
+  },
+  {
+    "n": 17,
+    "title": "Charity fundraising: a guide to trustee duties (CC20)",
+    "publisher": "Charity Commission for England and Wales (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/charity-fundraising-a-guide-to-trustee-duties-cc20/charities-and-fundraising",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 3 February 2026). Commercial participators (businesses that say part of sales goes to a charity) need a written agreement before fundraising starts and must make a solicitation statement; trustees do proportionate due diligence on partners and check fit with the charity's values and reputation"
+  },
+  {
+    "n": 18,
+    "title": "Sponsorship",
+    "publisher": "Buddle (the new home of Sport England's Club Matters)",
+    "url": "https://buddle.co/learning-and-support-resources/money-matters/raising-money/sponsorship",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Sponsorship is a commercial deal for the right to promote an association; what clubs can offer (kit, equipment and minibus logos, banners, website, email footers, event naming, sponsor events at the venue); what to ask for (money, kit, discounts, facilities); research local businesses; deliver what was promised rather than 'take the money and run'"
+  },
+  {
+    "n": 19,
+    "title": "Podcast Measurement Technical Guidelines",
+    "publisher": "IAB Tech Lab",
+    "url": "https://iabtechlab.com/standards/podcast-measurement-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current version 2.3, released September 2026 (2.2 was May 2024); covers downloads, audience and ad delivery; a compliance programme lets companies show buyers they follow the guidelines"
+  },
+  {
+    "n": 20,
+    "title": "Podcast Technical Measurement Guidelines v2.3",
+    "publisher": "IAB Tech Lab (GitHub)",
+    "url": "https://github.com/IABTechLab/Podcast-Technical-Measurement/blob/main/PTM-Guidelines_v2.3.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Downloads counted by IP address plus user agent within a stated window; the file must include enough content to play one minute; bots, data centres and known invalid traffic are filtered; a dynamically inserted ad counts only if all its bytes were downloaded; v2.3 adds video podcasts and uses 'podcast consumer' instead of 'listener'; summing episode uniques overstates reach"
+  },
+  {
+    "n": 21,
+    "title": "Ad Network",
+    "publisher": "beehiiv",
+    "url": "https://www.beehiiv.com/features/ad-network",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated feature page). Newsletter sponsors pay by CPM per 1,000 unique opens or CPC per verified unique click; Lite plan or above, sending on beehiiv; advertisers vetted; clicks and opens tracked for 72 hours; payouts on the 20th for the prior month"
+  },
+  {
+    "n": 22,
+    "title": "Books by Kim Skildum-Reid",
+    "publisher": "Power Sponsorship",
+    "url": "https://powersponsorship.com/books-by-kim-skildum-reid/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Corporate Sponsorship Toolkit (second edition): sponsorship works best when it connects a brand to something audiences already care about; The Sponsorship Seeker's Toolkit (fourth edition, with Anne-Marie Grey): a step-by-step guide for rightsholders seeking sponsors"
+  },
+  {
+    "n": 23,
+    "title": "Sponsorship white papers and templates",
+    "publisher": "Power Sponsorship",
+    "url": "https://powersponsorship.com/sponsorship-white-papers-templates/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free white papers including 'Last Generation Sponsorship Redux' (rewritten for 2025) and 'Top Ten Tips for Sponsorship Seekers'; free Word tools: a generic sponsorship inventory and sponsor-side sponsorship guidelines"
+  },
+  {
+    "n": 24,
+    "title": "European Sponsorship Association",
+    "publisher": "European Sponsorship Association",
+    "url": "https://sponsorship.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The sponsorship profession's European body: awards with case studies, a Diploma, an Introduction to Sponsorship and a Sales Certificate, research and best-practice resources"
+  },
+  {
+    "n": 25,
+    "title": "ESA Sponsorship Market Overview",
+    "publisher": "European Sponsorship Association",
+    "url": "https://sponsorship.org/resource-type/esasmo/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Annual European market overview provided by Nielsen Sports (volume by market, sport and non-sport, industry, top deals); free to logged-in ESA members only; no figures on the public page"
+  },
+  {
+    "n": 26,
+    "title": "CAN-SPAM Act: a compliance guide for business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (August 2023, edited January 2024). No business-to-business exception; accurate headers and subject lines; identify the message as an ad; a valid postal address; a clear opt-out honoured within 10 business days; liability stays with the company promoted; up to $53,088 per violating email"
+  },
+  {
+    "n": 27,
+    "title": "Marketing and advertising: the law, direct marketing",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/marketing-advertising-law/direct-marketing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated). Marketing emails to individual customers need permission; each message identifies the sender and offers an easy unsubscribe; check the Telephone Preference Service before calls; keep records of what people agreed to"
+  },
+  {
+    "n": 28,
+    "title": "Data protection and online privacy",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked by the EU on 5 August 2026). Marketing emails need prior consent except similar products to existing customers; people can object to direct marketing at any time and must be told at first contact"
+  }
+]

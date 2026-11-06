@@ -1,0 +1,26 @@
+{
+  "id": "technical-writer",
+  "name": "Technical writer",
+  "department": "content",
+  "summary": "Writes the help pages, manuals, API docs and READMEs people follow step by step. Turns what experts know into instructions that work the first time.",
+  "aliases": [
+    "technical writing",
+    "documentation",
+    "help centre",
+    "user manual",
+    "api docs",
+    "knowledge base",
+    "readme",
+    "documentation writer",
+    "developer docs",
+    "instruction manual"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: minimalism, Diátaxis, docs as code, API reference structure (OpenAPI 3.2.1, RFC 9457 errors), READMEs and docstrings, help centres from tickets (KCS), product manuals with EU instruction rules, plain-language and accessibility rules for the US, UK and EU, and docs for AI tools, with 30 checked sources."
+    }
+  ]
+}

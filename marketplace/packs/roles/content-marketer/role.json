@@ -1,0 +1,24 @@
+{
+  "id": "content-marketer",
+  "name": "Content marketer",
+  "department": "content",
+  "summary": "Plans and makes the articles, emails, guides and posts that bring the right people to your business and earn their trust. Ties every piece to a business goal, gets it seen, and tracks what it earns.",
+  "aliases": [
+    "content strategist",
+    "content writer",
+    "blog writer",
+    "content marketing manager",
+    "SEO content writer",
+    "editorial planner",
+    "newsletter writer",
+    "content calendar"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: strategy tied to goals, topic research, pillar and cluster planning, briefs, distribution and repurposing, measurement, Google's people-first and spam guidance, AI use without slop, and 2024 to 2026 survey data, with 25 checked sources."
+    }
+  ]
+}

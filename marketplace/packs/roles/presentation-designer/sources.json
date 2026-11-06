@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "slide:ology (Nancy Duarte)",
+    "publisher": "Duarte, Inc. (author's company)",
+    "url": "https://www.duarte.com/resources/books/slideology/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book and its ideas: visual thinking as a learnable skill, slides the audience can process; Duarte's Resonate course taught at Stanford"
+  },
+  {
+    "n": 2,
+    "title": "The Glance Test",
+    "publisher": "Duarte, Inc.",
+    "url": "https://www.duarte.com/resources/guides-tools/the-glance-test/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Whether the audience gets a slide's main point in 3 seconds or less; one clear point, contrast and white space, visuals that reinforce the message"
+  },
+  {
+    "n": 3,
+    "title": "Presentation Zen (Garr Reynolds)",
+    "publisher": "Garr Reynolds (author's own site)",
+    "url": "https://www.presentationzen.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Garr Reynolds and his book Presentation Zen; the ideas of simplicity and restraint are my summary of the book"
+  },
+  {
+    "n": 4,
+    "title": "The Visual Display of Quantitative Information (Edward R. Tufte, 1983; 2nd edition 2001)",
+    "publisher": "Graphics Press (Edward Tufte's site)",
+    "url": "https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book, its 1983 first edition and 2001 second edition; data-ink ratio, small multiples, and detecting graphical deception"
+  },
+  {
+    "n": 5,
+    "title": "The Cognitive Style of PowerPoint: Pitching Out Corrupts Within (Edward R. Tufte)",
+    "publisher": "Graphics Press (Edward Tufte's site)",
+    "url": "https://www.edwardtufte.com/book/the-cognitive-style-of-powerpoint-pitching-out-corrupts-within-ebook/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tufte's argument that slideware templates often weaken the analytical quality of presentations"
+  },
+  {
+    "n": 6,
+    "title": "The Assertion-Evidence Approach",
+    "publisher": "Leonhard Center, Penn State (Michael Alley, content editor)",
+    "url": "https://www.assertion-evidence.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Slides built on a sentence headline (the assertion) supported by visual evidence instead of a topic phrase and bullets"
+  },
+  {
+    "n": 7,
+    "title": "Richard E. Mayer, faculty profile",
+    "publisher": "Department of Psychological and Brain Sciences, UC Santa Barbara",
+    "url": "https://www.psych.ucsb.edu/people/faculty/richard-mayer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Mayer's cognitive theory of multimedia learning; more than 100 experiments leading to 12 research-based design principles; his book Multimedia Learning"
+  },
+  {
+    "n": 8,
+    "title": "The Pyramid Principle (Barbara Minto)",
+    "publisher": "Barbara Minto (author's own site)",
+    "url": "https://www.barbaraminto.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ideas grouped in a pyramid under one point; the situation, complication, question introduction; written 1987, reissued 2002"
+  },
+  {
+    "n": 9,
+    "title": "Visual Vocabulary (chart-doctor repository)",
+    "publisher": "Financial Times Visual Journalism Team (GitHub)",
+    "url": "https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chart choice by the relationship shown: deviation, correlation, ranking, distribution, change over time, magnitude, part-to-whole, spatial, flow; column charts start at zero"
+  },
+  {
+    "n": 10,
+    "title": "Writing a Business Plan",
+    "publisher": "Sequoia Capital",
+    "url": "https://sequoiacap.com/article/writing-a-business-plan/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ten sections for a pitch: company purpose, problem, solution, why now, market potential, competition, business model, team, financials, vision; no slide count given"
+  },
+  {
+    "n": 11,
+    "title": "Forms that Work: Designing Web Forms for Usability (Caroline Jarrett)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL16462162W",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The book, its author and publisher (Morgan Kaufmann); the ideas are my summary"
+  },
+  {
+    "n": 12,
+    "title": "Question pages (GOV.UK Design System)",
+    "publisher": "Government Digital Service, GOV.UK",
+    "url": "https://design-system.service.gov.uk/patterns/question-pages/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. One thing per page; know why you ask each question; mark optional fields with '(optional)' and never use asterisks; short hint text; ask for information once"
+  },
+  {
+    "n": 13,
+    "title": "Labeling Controls (Forms Tutorial, updated 13 May 2024)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Every form control needs a label; labels to the right of checkboxes and radio buttons, left of or above other fields; keep labels visually close to their fields"
+  },
+  {
+    "n": 14,
+    "title": "Set rules for your form (response validation)",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/3378864",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Forms response validation by number, text, length and regular expression, with custom error text; checkbox count rules"
+  },
+  {
+    "n": 15,
+    "title": "Smart Forms Using Conditional Logic (updated 27 August 2026)",
+    "publisher": "Jotform Help",
+    "url": "https://www.jotform.com/help/57-smart-forms-using-conditional-logic/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jotform conditions: show or hide fields, require or skip, calculate, and route emails by answer"
+  },
+  {
+    "n": 16,
+    "title": "Make your PowerPoint presentations accessible to people with disabilities",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unique slide titles, reading order pane, alt text, colour not the only cue, 18 pt or larger text, sans serif fonts, built-in layouts, Accessibility Checker before export"
+  },
+  {
+    "n": 17,
+    "title": "Change the size of your slides",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/change-the-size-of-your-slides-040a811c-be43-40b9-8d04-0de5ed79987e",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. New PowerPoint decks default to widescreen 16:9 at 13.333 x 7.5 in; Maximize and Ensure Fit when resizing; 4:3 and other presets"
+  },
+  {
+    "n": 18,
+    "title": "Benefits of embedding custom fonts",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/benefits-of-embedding-custom-fonts-cb3982aa-ea76-4323-b008-86670f222dbc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Embedding keeps fonts for people who lack them; font makers set embedding permissions (non-embeddable, preview/print, editable, installable); embed all characters when others will edit"
+  },
+  {
+    "n": 19,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum), WCAG 2.2",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Contrast of at least 4.5:1 for normal text and 3:1 for large text (18 pt, or 14 pt bold); ratios are not rounded"
+  },
+  {
+    "n": 20,
+    "title": "European Accessibility Act",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Act's scope includes e-books and e-commerce among other products and services"
+  },
+  {
+    "n": 21,
+    "title": "Paperback cover (cover requirements)",
+    "publisher": "Amazon Kindle Direct Publishing Help",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G201953020",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Spine width per page by paper type; 0.125 in (3.2 mm) bleed; spine text only above 79 pages; one PDF with back, spine and front; 300 DPI; CMYK; KDP adds a barcode if none is supplied"
+  },
+  {
+    "n": 22,
+    "title": "Print Cover Calculator",
+    "publisher": "Amazon Kindle Direct Publishing",
+    "url": "https://kdp.amazon.com/cover-calculator",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Calculates cover size and gives a PDF or PNG template from binding, interior and paper type, trim size and page count"
+  },
+  {
+    "n": 23,
+    "title": "eBook cover image guidelines",
+    "publisher": "Amazon Kindle Direct Publishing Help",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G200645690",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ideal 2,560 x 1,600 px (height to width 1.6:1), minimum 1,000 x 625 px, JPEG or TIFF, RGB, under 50 MB, grey border for very light covers, rights to all content"
+  },
+  {
+    "n": 24,
+    "title": "Content Guidelines (AI-generated and AI-assisted content)",
+    "publisher": "Amazon Kindle Direct Publishing Help",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G200672390",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Authors must tell KDP about AI-generated text, images or translations when publishing, even after substantial edits"
+  },
+  {
+    "n": 25,
+    "title": "File Creation Guide (dated 8.24.26)",
+    "publisher": "IngramSpark",
+    "url": "https://www.ingramspark.com/hubfs/downloads/file-creation-guide.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted). PDF/X-1a:2001 or PDF/X-3:2002; 0.125 in (3 mm) bleed on three trim edges; 300 ppi; CMYK; total ink 240%; cover template generator with a barcode that must not be resized; EPUB 3.0 for ebooks"
+  },
+  {
+    "n": 26,
+    "title": "Copyright Office Releases Part 2 of Artificial Intelligence Report (NewsNet, 29 January 2025)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prompts alone do not make AI output protectable; human expressive input, creative arrangement or modification can be"
+  },
+  {
+    "n": 27,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Canva MCP server lets AI assistants create and edit designs, search designs and folders, use brand kits and templates, export PDF, PNG, JPG, PPTX and MP4, resize and comment"
+  },
+  {
+    "n": 28,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote server recommended; writing to the canvas (Figma Design, FigJam and Figma Slides) is in beta, free during beta and later usage-based; a Full seat is needed to write outside drafts"
+  },
+  {
+    "n": 29,
+    "title": "Share and manage access to files and folders in Google Drive",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/2494822",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Viewer, Commenter and Editor roles; editors can share by default unless the owner turns that off"
+  }
+]

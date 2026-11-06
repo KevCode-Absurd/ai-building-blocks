@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Requirements",
+    "publisher": "WordPress.org",
+    "url": "https://wordpress.org/about/requirements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommends PHP 8.3 or newer, MariaDB 10.11 or newer or MySQL 8.0 or newer, and HTTPS; legacy PHP 7.4 and MySQL 5.5.5 work but are end of life; page modified 7 May 2026."
+  },
+  {
+    "n": 2,
+    "title": "PHP Compatibility and WordPress Versions",
+    "publisher": "Make WordPress Core handbook",
+    "url": "https://make.wordpress.org/core/handbook/references/php-compatibility-and-wordpress-versions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WordPress 7.0 minimum PHP 7.4 and marked compatible with PHP 7.4 to 8.5; 6.9 compatible 7.2 to 8.5; beta support label retired May 2026; page updated 4 November 2026."
+  },
+  {
+    "n": 3,
+    "title": "Releases",
+    "publisher": "WordPress.org",
+    "url": "https://wordpress.org/download/releases/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 7.1 released 19 August 2026 and 7.0 on 20 May 2026; latest security releases 7.1.4 and 7.0.8 on 28 October 2026; only the most recent 7.1 release is safe to use."
+  },
+  {
+    "n": 4,
+    "title": "WordPress 7.0 \"Armstrong\"",
+    "publisher": "WordPress.org News",
+    "url": "https://wordpress.org/news/2026/05/wordpress-7-0-armstrong/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 7.0 features: AI Client in core, Connectors screen, Abilities API with a client-side package, command palette, revisions view, new blocks, PHP-only server-side blocks and patterns."
+  },
+  {
+    "n": 5,
+    "title": "WordPress 7.1 \"Mary Lou\"",
+    "publisher": "WordPress.org News",
+    "url": "https://wordpress.org/news/2026/08/mary-lou/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 7.1 features: post editor fully iframed for all themes, responsive styles and breakpoints in theme.json, Tabs block, public SVG Icon API, AVIF and HEIC support, Abilities API changes."
+  },
+  {
+    "n": 6,
+    "title": "Block API Versions",
+    "publisher": "WordPress Block Editor Handbook",
+    "url": "https://developer.wordpress.org/block-editor/reference-guides/block-api/block-api-versions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. apiVersion 2 (WordPress 5.6) and 3 (6.3, must work in an iframe); in WordPress 7.1 the post editor always uses the iframe regardless of apiVersion; page modified 14 October 2026."
+  },
+  {
+    "n": 7,
+    "title": "Supported Versions",
+    "publisher": "PHP Group, php.net",
+    "url": "https://www.php.net/supported-versions.php",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PHP 8.2 security fixes until 31 December 2026; 8.3 until 31 December 2027; 8.4 active until 31 December 2026 and security until 31 December 2028; 8.5 released 20 November 2025, security until 31 December 2029."
+  },
+  {
+    "n": 8,
+    "title": "Unsupported Branches",
+    "publisher": "PHP Group, php.net",
+    "url": "https://www.php.net/eol.php",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PHP 8.1 end of life 31 December 2025; 8.0 on 26 November 2023; 7.4 on 28 November 2022."
+  },
+  {
+    "n": 9,
+    "title": "Security (Common APIs Handbook)",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/apis/security/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Treat all data as untrusted; use WordPress's built-in validation and sanitising functions; escape as late as possible; validation that rejects bad data is stronger than sanitising."
+  },
+  {
+    "n": 10,
+    "title": "Escaping Data",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/apis/security/escaping/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. esc_html, esc_attr, esc_url, esc_js, esc_textarea, wp_kses and wp_kses_post; escape output as late as possible."
+  },
+  {
+    "n": 11,
+    "title": "Nonces",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/apis/security/nonces/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nonces protect against CSRF but are not single-use and not access control; use current_user_can; default lifetime one day split into two 12-hour ticks; nonce functions."
+  },
+  {
+    "n": 12,
+    "title": "wpdb::prepare()",
+    "publisher": "WordPress Developer Resources (Code Reference)",
+    "url": "https://developer.wordpress.org/reference/classes/wpdb/prepare/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Placeholders %s, %d, %f and %i (identifiers, since 6.2.0); placeholders must be unquoted; use esc_like for LIKE searches."
+  },
+  {
+    "n": 13,
+    "title": "Best Practices (Plugin Handbook)",
+    "publisher": "WordPress Developer Resources",
+    "url": "https://developer.wordpress.org/plugins/plugin-basics/best-practices/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prefix all global code with at least four letters (five recommended), avoid wp_ prefixes, file organisation, exit if ABSPATH is not defined, is_admin is not a capability check."
+  },
+  {
+    "n": 14,
+    "title": "Adding Custom Endpoints",
+    "publisher": "WordPress REST API Handbook",
+    "url": "https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. permission_callback expected since WordPress 5.5 (a _doing_it_wrong notice otherwise); __return_true for public endpoints; use current_user_can; validate_callback and sanitize_callback for arguments."
+  },
+  {
+    "n": 15,
+    "title": "Debugging in WordPress",
+    "publisher": "WordPress Developer Resources (Advanced Administration)",
+    "url": "https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WP_DEBUG, WP_DEBUG_LOG (wp-content/debug.log or a custom path), WP_DEBUG_DISPLAY, SCRIPT_DEBUG and SAVEQUERIES; debug tools not recommended on live sites."
+  },
+  {
+    "n": 16,
+    "title": "Fatal Error Recovery Mode in 5.2",
+    "publisher": "Make WordPress Core",
+    "url": "https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On a fatal error the admin email receives a recovery link that pauses the broken plugin or theme for that browser only; WP_DISABLE_FATAL_ERROR_HANDLER turns the handler off."
+  },
+  {
+    "n": 17,
+    "title": "Site Health screen",
+    "publisher": "WordPress.org Documentation",
+    "url": "https://wordpress.org/documentation/article/site-health-screen/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Status and Info tabs; Info can be copied to the clipboard; critical issues include errors shown to visitors and a debug log in a potentially public file; page updated 12 July 2026."
+  },
+  {
+    "n": 18,
+    "title": "Child Themes",
+    "publisher": "WordPress Theme Handbook",
+    "url": "https://developer.wordpress.org/themes/advanced-topics/child-themes/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Child theme changes survive parent updates; style.css with a Template header is required; enqueuing styles; block theme child themes; do not copy parent functions.php."
+  },
+  {
+    "n": 19,
+    "title": "Hardening WordPress",
+    "publisher": "WordPress Developer Resources (Advanced Administration)",
+    "url": "https://developer.wordpress.org/advanced-administration/security/hardening/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Keep everything updated and remove unused code; strong passwords and two-factor authentication; SFTP; 755 and 644 permissions; DISALLOW_FILE_EDIT; tested backups; limited database privileges."
+  },
+  {
+    "n": 20,
+    "title": "Plugin and themes auto-updates",
+    "publisher": "WordPress.org Documentation",
+    "url": "https://wordpress.org/documentation/article/plugins-themes-auto-updates/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Per-plugin and per-theme auto-updates since WordPress 5.5; run twice a day via WP-Cron; email notifications after attempts; take backups first."
+  },
+  {
+    "n": 21,
+    "title": "wp core verify-checksums",
+    "publisher": "WordPress Developer Resources (WP-CLI)",
+    "url": "https://developer.wordpress.org/cli/commands/core/verify-checksums/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verifies core files against WordPress.org checksums without loading WordPress; options include --include-root and --version."
+  },
+  {
+    "n": 22,
+    "title": "Plugin Check (PCP)",
+    "publisher": "WordPress.org Plugin Directory",
+    "url": "https://wordpress.org/plugins/plugin-check/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Checks plugins against directory requirements and flags internationalisation, accessibility, performance and security issues; not a replacement for manual review; WP-CLI command wp plugin check; version 2.1.0."
+  },
+  {
+    "n": 23,
+    "title": "Detailed Plugin Guidelines",
+    "publisher": "WordPress Developer Resources (Plugin Handbook)",
+    "url": "https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GPL compatibility, no obfuscated code, no tracking without opt-in consent, no executing third-party code, use WordPress's bundled libraries, no admin hijacking; updated 11 March 2026."
+  },
+  {
+    "n": 24,
+    "title": "State of WordPress Security in 2026",
+    "publisher": "Patchstack",
+    "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2026/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 11,334 new vulnerabilities in 2025 (up 42%); 91% in plugins, 9% in themes, 6 in core; 46% unpatched at disclosure; weighted median 5 hours to mass exploitation for heavily exploited issues; broken access control most exploited; updated 25 February 2026."
+  },
+  {
+    "n": 25,
+    "title": "Email sender guidelines",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://support.google.com/a/answer/81126",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 1 February 2024 all senders to Gmail need SPF or DKIM, valid forward and reverse DNS, TLS and spam rates below 0.3%; bulk senders (5,000+ a day) also need DMARC and one-click unsubscribe."
+  },
+  {
+    "n": 26,
+    "title": "High-Performance Order Storage (HPOS)",
+    "publisher": "WooCommerce Developer Docs",
+    "url": "https://developer.woocommerce.com/docs/features/high-performance-order-storage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. HPOS stores orders in custom tables using WooCommerce's CRUD design; default for new installs since WooCommerce 8.2 (October 2023); extension developers must add support; incompatible plugins block HPOS in settings."
+  },
+  {
+    "n": 27,
+    "title": "Secure Custom Fields",
+    "publisher": "WordPress.org News",
+    "url": "https://wordpress.org/news/2024/10/secure-custom-fields/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. On 12 October 2024 the WordPress security team invoked guideline 18 to fork Advanced Custom Fields into Secure Custom Fields, after ACF said updates would come from its own website."
+  },
+  {
+    "n": 28,
+    "title": "Directive (EU) 2019/882 on the accessibility requirements for products and services (European Accessibility Act)",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "EUR-Lex returned an empty page to WebFetch; confirmed by a WebSearch result showing this exact page and its official summary. Requirements apply from 28 June 2025; services covered include e-commerce; microenterprises providing services are excluded."
+  },
+  {
+    "n": 29,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector websites and apps must meet WCAG 2.2 AA; all UK service providers have a legal obligation to make reasonable adjustments under the Equality Act 2010; page updated 30 September 2024."
+  },
+  {
+    "n": 30,
+    "title": "Guidance on Web Accessibility and the ADA",
+    "publisher": "U.S. Department of Justice, ADA.gov",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ADA applies to goods and services offered on the web by public accommodations; the Department has no regulation setting detailed technical standards for them; WCAG and Section 508 cited as helpful guidance; guidance dated 18 March 2022."
+  }
+]

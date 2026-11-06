@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "ad-headline-writer",
+    "name": "Ad headline writer",
+    "why": "Writes plain headlines with character counts and a glance test, the first check for print, outdoor and search lines."
+  },
+  {
+    "slug": "headline-promise-checker",
+    "name": "Headline promise checker",
+    "why": "Scores whether a headline's promise holds up, in line with the rule that a headline must not mislead on its own."
+  },
+  {
+    "slug": "usp-claim-checker",
+    "name": "USP claim checker",
+    "why": "Tests an ad claim against the offer and rivals before spend, the Reeves single-proposition check."
+  },
+  {
+    "slug": "fact-based-ad-copy-writer",
+    "name": "Fact-based ad copy writer",
+    "why": "Builds an ad on one real product fact and shows the source of each line."
+  },
+  {
+    "slug": "tagline-score-card",
+    "name": "Tagline score card",
+    "why": "Runs a tagline through pass or fail checks with a truth check, useful before a slogan becomes a lasting brand cue."
+  },
+  {
+    "slug": "type-led-poster-planner",
+    "name": "Type-led poster planner",
+    "why": "Plans a poster that reads from across the street, matching this kit's outdoor and print rules."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Checks that date, place and price read from a distance and match the facts."
+  },
+  {
+    "slug": "ad-script-read-aloud-editor",
+    "name": "Ad script read-aloud editor",
+    "why": "Fixes lines that trip when read aloud, the core test for radio and podcast scripts."
+  },
+  {
+    "slug": "jingle-video-ad-script-writer",
+    "name": "Jingle video ad script writer",
+    "why": "Writes a rhymed hook and a bar-by-bar lyric with a music brief for 6, 15 or 30 seconds."
+  },
+  {
+    "slug": "suno-song-and-music-bed-prompt-writer",
+    "name": "Suno song and music bed prompt writer",
+    "why": "Turns a jingle or music brief into a prompt for a demo bed the composer can react to."
+  },
+  {
+    "slug": "direct-mail-package-reviewer",
+    "name": "Direct mail package reviewer",
+    "why": "Scores an envelope line and letter before print, with a fix for each problem."
+  },
+  {
+    "slug": "keyed-headline-test-planner",
+    "name": "Keyed headline test planner",
+    "why": "Plans a headline test with a unique code per version, the same keyed method used for mail and print here."
+  },
+  {
+    "slug": "traction-offline-ads",
+    "name": "Offline ads experiment planner",
+    "why": "Sets up one small offline ad test with costs, measures and a keep, change or stop rule."
+  }
+]

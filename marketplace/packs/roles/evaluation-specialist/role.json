@@ -1,0 +1,26 @@
+{
+  "id": "evaluation-specialist",
+  "name": "Monitoring and evaluation specialist",
+  "department": "research",
+  "summary": "Shows what a programme changed: logic models, outcome measures, survey instruments and honest evaluation reports for funders.",
+  "aliases": [
+    "program evaluation",
+    "programme evaluation",
+    "m&e",
+    "impact measurement",
+    "theory of change",
+    "logic model",
+    "outcomes measurement",
+    "funder impact report",
+    "monitoring and evaluation",
+    "before and after survey"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 checked sources (Magenta Book May 2026 update, OECD DAC criteria via ALNAP, CDC 2024 framework, theory of change and logic models, survey design and consent, UK, EU and US data rules), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

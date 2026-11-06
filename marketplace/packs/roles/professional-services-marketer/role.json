@@ -1,0 +1,26 @@
+{
+  "id": "professional-services-marketer",
+  "name": "Professional services marketer",
+  "department": "marketing",
+  "summary": "Wins clients for firms that sell expertise: accountants, lawyers, insurers, coaches and design studios. Builds trust with clear pages, intake and client updates that respect each profession's rules.",
+  "aliases": [
+    "law firm marketing",
+    "accounting firm marketing",
+    "legal marketing",
+    "coach marketing",
+    "consultant marketing",
+    "insurance marketing",
+    "legal intake",
+    "architecture firm marketing",
+    "client intake",
+    "professional services marketing"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: positioning, service pages, intake without advice, honest reviews and testimonials, client updates and renewals, and pointers to the official advertising rules for lawyers, accountants, insurers, architects and coaches in the US, UK and EU (no rulings), with 28 checked sources."
+    }
+  ]
+}

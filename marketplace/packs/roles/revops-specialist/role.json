@@ -1,0 +1,26 @@
+{
+  "id": "revops-specialist",
+  "name": "Revenue operations (RevOps) specialist",
+  "department": "sales",
+  "summary": "Keeps the CRM clean, the pipeline honest and marketing and sales working from the same rules. Finds where deals stall and why they are won or lost.",
+  "aliases": [
+    "revops",
+    "sales operations",
+    "crm admin",
+    "hubspot",
+    "salesforce",
+    "pipeline analysis",
+    "marketing automation",
+    "lead scoring",
+    "revenue operations",
+    "win-loss analysis"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 sources (CRM stages, lead scoring, forecasting, CRM and billing data flows, refunds and disputes, subscription and email rules), four skills, five prompts, three workflows, training interview and test briefs."
+    }
+  ]
+}

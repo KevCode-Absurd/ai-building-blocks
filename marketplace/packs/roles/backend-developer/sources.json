@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "RFC 9110: HTTP Semantics",
+    "publisher": "IETF (RFC Editor)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published June 2022. Section 9.2.2: idempotent methods have the same intended effect when repeated; PUT, DELETE and safe methods (GET, HEAD, OPTIONS, TRACE) are idempotent."
+  },
+  {
+    "n": 2,
+    "title": "RFC 9457: Problem Details for HTTP APIs",
+    "publisher": "IETF (RFC Editor)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9457.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published July 2023, obsoletes RFC 7807; application/problem+json with type, status, title, detail, instance and extensions; do not expose implementation details such as stack dumps."
+  },
+  {
+    "n": 3,
+    "title": "The Idempotency-Key HTTP Header Field (draft-ietf-httpapi-idempotency-key-header)",
+    "publisher": "IETF Datatracker (HTTPAPI working group)",
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revision 08 updated 22 October 2026, an Internet-Draft, not an RFC, expires 25 April 2027; 409 for a concurrent retry, 422 for a reused key with a different payload, 400 for a missing required key; UUID keys recommended."
+  },
+  {
+    "n": 4,
+    "title": "RateLimit header fields for HTTP (draft-ietf-httpapi-ratelimit-headers)",
+    "publisher": "IETF Datatracker (HTTPAPI working group)",
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Revision 11 updated 23 May 2026, an Internet-Draft, not an RFC; defines RateLimit-Policy and RateLimit fields; Retry-After takes precedence when both are present; suggests jitter."
+  },
+  {
+    "n": 5,
+    "title": "OpenAPI Specification (latest)",
+    "publisher": "OpenAPI Initiative",
+    "url": "https://spec.openapis.org/oas/latest.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Latest version 3.2.1, dated 10 September 2026."
+  },
+  {
+    "n": 6,
+    "title": "OWASP Top 10 API Security Risks - 2023",
+    "publisher": "OWASP API Security Project",
+    "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (owasp.org/API-Security redirects here). The ten 2023 risks from API1 broken object level authorization to API10 unsafe consumption of APIs, with short descriptions of API1, API3, API4, API6 and API10."
+  },
+  {
+    "n": 7,
+    "title": "Idempotent requests",
+    "publisher": "Stripe (API reference)",
+    "url": "https://docs.stripe.com/api/idempotent_requests",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Idempotency-Key header on POST; saves status and body of the first request once execution begins, including 500s; keys up to 255 characters, prunable after at least 24 hours; parameters compared; V4 UUIDs suggested; no personal data in keys."
+  },
+  {
+    "n": 8,
+    "title": "Stripe blog post on designing predictable APIs with idempotency (title shortened)",
+    "publisher": "Stripe blog (Brandur Leach)",
+    "url": "https://stripe.com/blog/idempotency",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 22 February 2017; the full title uses a word on the kit banned-words list, so it is shortened here. Three ways a request can fail; idempotency keys reused on retries; exponential backoff and jitter."
+  },
+  {
+    "n": 9,
+    "title": "Receive Stripe events in your webhook endpoint",
+    "publisher": "Stripe (docs)",
+    "url": "https://docs.stripe.com/webhooks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verify Stripe-Signature on the raw body; return 2xx before complex logic; retries up to three days in live mode, three times over a few hours in a sandbox; duplicates handled by logging event IDs; order not guaranteed; asynchronous queue; default 5-minute timestamp tolerance, do not use zero."
+  },
+  {
+    "n": 10,
+    "title": "Testing",
+    "publisher": "Stripe (docs)",
+    "url": "https://docs.stripe.com/testing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sandboxes and test keys; test card numbers and test PaymentMethods; the Stripe Services Agreement prohibits testing in live mode with real payment method details; 3D Secure and decline test cards."
+  },
+  {
+    "n": 11,
+    "title": "Strong Customer Authentication readiness",
+    "publisher": "Stripe (docs)",
+    "url": "https://docs.stripe.com/strong-customer-authentication",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SCA in effect from 14 September 2019 under PSD2; affects EEA businesses serving EEA customers with cards; 3D Secure; Checkout and Payment Intents handle it; UK cards saved before 14 September 2021 could use previous authorisation agreements."
+  },
+  {
+    "n": 12,
+    "title": "Model Context Protocol (MCP)",
+    "publisher": "Stripe (docs)",
+    "url": "https://docs.stripe.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official server at mcp.stripe.com; OAuth or agent API keys; from December 2026 full-access secret keys and restricted keys without the Agent tag are not accepted; human confirmation for actions such as refunds; turn on the client's tool approval."
+  },
+  {
+    "n": 13,
+    "title": "FAQ clarifies new SAQ A eligibility criteria for e-commerce merchants",
+    "publisher": "PCI Security Standards Council (blog)",
+    "url": "https://blog.pcisecuritystandards.org/faq-clarifies-new-saq-a-eligibility-criteria-for-e-commerce-merchants",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 28 February 2025. Revised SAQ A for PCI DSS v4.0.1 from 1 April 2025 adds a criterion that the site is not susceptible to script attacks; applies to embedded (for example iframe) payment forms, not redirects or full outsourcing."
+  },
+  {
+    "n": 14,
+    "title": "Standard Webhooks specification",
+    "publisher": "Standard Webhooks (GitHub)",
+    "url": "https://github.com/standard-webhooks/standard-webhooks/blob/main/spec/standard-webhooks.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. webhook-id, webhook-timestamp and webhook-signature headers; signs id, timestamp and body; HMAC-SHA256 (v1) or ed25519 (v1a); webhook-id as idempotency key; example retry schedule over about 75 hours with backoff and jitter."
+  },
+  {
+    "n": 15,
+    "title": "Best practices for using webhooks",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Use a secret; respond with 2XX within 10 seconds; process asynchronously; redeliver missed deliveries; X-GitHub-Delivery for replay protection, kept on redelivery."
+  },
+  {
+    "n": 16,
+    "title": "Best practices for webhooks",
+    "publisher": "Shopify Dev Docs",
+    "url": "https://shopify.dev/docs/apps/build/webhooks/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. X-Shopify-Webhook-Id for duplicates; X-Shopify-Triggered-At or updated_at for ordering; X-Shopify-Hmac-Sha256 verification; delivery not always guaranteed, so run reconciliation jobs."
+  },
+  {
+    "n": 17,
+    "title": "Troubleshooting webhooks",
+    "publisher": "Shopify Dev Docs",
+    "url": "https://shopify.dev/docs/apps/build/webhooks/troubleshooting-webhooks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Respond within five seconds; up to eight retries within four hours; after repeated failures the subscription is removed."
+  },
+  {
+    "n": 18,
+    "title": "Transaction Isolation",
+    "publisher": "PostgreSQL Global Development Group (PostgreSQL 18 docs)",
+    "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PostgreSQL 18 current, 19 in development; Read Committed is the default; Repeatable Read and Serializable transactions can fail with SQLSTATE 40001 and must be retried."
+  },
+  {
+    "n": 19,
+    "title": "Explicit Locking",
+    "publisher": "PostgreSQL Global Development Group (PostgreSQL 18 docs)",
+    "url": "https://www.postgresql.org/docs/current/explicit-locking.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Row-level locks including FOR UPDATE; deadlock detection and consistent lock order; ACCESS EXCLUSIVE blocks even SELECT and is taken by many ALTER TABLE forms."
+  },
+  {
+    "n": 20,
+    "title": "INSERT",
+    "publisher": "PostgreSQL Global Development Group (PostgreSQL 18 docs)",
+    "url": "https://www.postgresql.org/docs/current/sql-insert.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ON CONFLICT DO UPDATE guarantees an atomic insert or update even under high concurrency; conflict target required for DO UPDATE; RETURNING."
+  },
+  {
+    "n": 21,
+    "title": "CREATE INDEX",
+    "publisher": "PostgreSQL Global Development Group (PostgreSQL 18 docs)",
+    "url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A normal build blocks writes; CONCURRENTLY does not but cannot run in a transaction block, takes longer and can leave an invalid index to drop or reindex."
+  },
+  {
+    "n": 22,
+    "title": "Timeouts, retries, and backoff with jitter",
+    "publisher": "Amazon Builders' Library (Marc Brooker)",
+    "url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (aws.amazon.com/builders-library redirects here). Published 5 December 2019. Timeouts from latency percentiles; retries multiply across layers (243x example); retry at one layer; exponential backoff with cap and jitter; token bucket; only retry idempotent calls."
+  },
+  {
+    "n": 23,
+    "title": "Pattern: Transactional outbox",
+    "publisher": "Microservices.io (Chris Richardson)",
+    "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Write messages to an outbox in the same transaction; a relay publishes them; messages may be published more than once, so consumers must be idempotent."
+  },
+  {
+    "n": 24,
+    "title": "Parallel Change",
+    "publisher": "martinfowler.com (Danilo Sato)",
+    "url": "https://martinfowler.com/bliki/ParallelChange.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 13 May 2014. Expand, migrate, contract phases for backward-incompatible changes; applies to database refactoring."
+  },
+  {
+    "n": 25,
+    "title": "Postmortem of database outage of January 31",
+    "publisher": "GitLab (blog)",
+    "url": "https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 10 February 2017. Data directory removed on the primary; about 300 GB deleted; about 18 hours down; about six hours of database changes lost; pg_dump backups failing silently on a version mismatch; failure emails rejected; restore testing added."
+  },
+  {
+    "n": 26,
+    "title": "Managing environments for deployment",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Required reviewers (up to six people or teams), prevent self-review, wait timer, deployment branch rules, environment secrets; private repositories need GitHub Team or Pro."
+  },
+  {
+    "n": 27,
+    "title": "Express@5.0.0 release",
+    "publisher": "Express (blog)",
+    "url": "https://expressjs.com/en/blog/2024-10-15-v5-release",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Post dated 15 October 2024. Requires Node.js 18 or newer; rejected promises go to error middleware; path-to-regexp changes remove regex sub-expressions because of ReDoS; deprecated signatures removed."
+  },
+  {
+    "n": 28,
+    "title": "Node.js Releases",
+    "publisher": "Node.js",
+    "url": "https://nodejs.org/en/about/previous-releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Node 20 end of life; Node 26 the latest LTS; production should use Active or Maintenance LTS lines; annual releases from Node 27."
+  },
+  {
+    "n": 29,
+    "title": "Principles of the GDPR",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Seven principles including data minimisation (adequate, relevant, limited to what is necessary) and storage limitation (shortest time possible, set time limits to erase or review)."
+  },
+  {
+    "n": 30,
+    "title": "Model context protocol (MCP)",
+    "publisher": "Supabase (docs)",
+    "url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Supabase MCP server at mcp.supabase.com; read-only mode runs SQL as a read-only user; project scoping; keep manual approval of tool calls on."
+  }
+]

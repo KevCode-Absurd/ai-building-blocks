@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Allergen guidance for food businesses",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The 14 allergens; allergen information for every non-prepacked item, written or verbal with a visible written notice, written plus conversation as best practice; PPDS name and full ingredients with allergens emphasised; distance selling before purchase and at delivery; free-from and gluten-free claim controls; cross-contamination steps."
+  },
+  {
+    "n": 2,
+    "title": "Allergen guidance for food businesses (publication page)",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to England, Northern Ireland and Wales; first published 2 Apr 2020, last updated 17 Jul 2026; allergen matrix and allergy sign downloads."
+  },
+  {
+    "n": 3,
+    "title": "Safer food, better business for caterers (full pack, PDF)",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://assets.publishing.service.gov.uk/media/69c5247ecdfd19de13d0f6ca/sfbb-caterers-pack-fixed_0_3.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch and read with pdftotext. Opening and closing checks; chilled food at 8C or below (law in England, Wales, NI; recommended in Scotland), fridges at 5C or below; frozen -18C; hot holding 63C or above; cooking time and temperature pairs (60C 45 min to 80C 6 s); probe check within 1C; PPDS labelling required since October 2021."
+  },
+  {
+    "n": 4,
+    "title": "Safer food, better business (SFBB)",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/safer-food-better-business-sfbb/safer-food-better-business-sfbb",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. SFBB packs for small businesses in England and Wales (caterers, retailers, Indian and Chinese cuisine and others); Northern Ireland uses Safe Catering; daily diary kept until the next inspection; page published 5 Jun 2025."
+  },
+  {
+    "n": 5,
+    "title": "Food safety management systems for businesses",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/food-safety-management-systems",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A food safety management system is a written set of processes, checks, rules and records; it must meet HACCP principles; records of checks and corrective actions are evidence in an incident. Page undated."
+  },
+  {
+    "n": 6,
+    "title": "Food Hygiene Rating Scheme (FHRS): guidance for businesses",
+    "publisher": "Food Standards Agency (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/food-hygiene-rating-scheme-fhrs-guidance-for-businesses/food-hygiene-rating-scheme-fhrs-guidance-for-businesses",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ratings 0 to 5 and their meanings; three inspection elements; display required in Wales and Northern Ireland, voluntary in England; 21-day appeal; right to reply; re-rating visits; updated 30 Jun 2026."
+  },
+  {
+    "n": 7,
+    "title": "FDA Food Code",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Food Code is a model adopted by local, state, tribal and federal regulators; the 2026 Food Code is the most recent full edition; page current as of 22 Oct 2026."
+  },
+  {
+    "n": 8,
+    "title": "Food Allergies",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nine major food allergens including sesame; FASTER Act signed 23 Apr 2021, effective 1 Jan 2023; FALCPA does not apply to food wrapped after ordering; page current as of 3 Nov 2026."
+  },
+  {
+    "n": 9,
+    "title": "Menu Labeling Requirements",
+    "publisher": "US Food and Drug Administration",
+    "url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/menu-labeling-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Chains of 20 or more locations; calories on menus and boards; written nutrition information on request; two required statements; compliance date 7 May 2018; page current as of 13 Dec 2023."
+  },
+  {
+    "n": 10,
+    "title": "Calorie labelling in the out of home sector",
+    "publisher": "Department of Health and Social Care (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/calorie-labelling-in-the-out-of-home-sector",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guidance on the Calorie Labelling (Out of Home Sector) (England) Regulations 2021; applies to England; in force from 6 Apr 2022; published 17 Sep 2021. Business-size threshold not on the page, so not stated in the kit."
+  },
+  {
+    "n": 11,
+    "title": "Regulation (EU) No 1169/2011 on the provision of food information to consumers",
+    "publisher": "EUR-Lex (Publications Office of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Article 44: allergen particulars mandatory for non-prepacked food, member states set how; Annex II list of 14; Article 21 allergen emphasis; Article 55: applies from 13 Dec 2014."
+  },
+  {
+    "n": 12,
+    "title": "Create and update menus (Square for Restaurants)",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/6424-create-menus-with-square-for-restaurants",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Menus by upload, import, AI or by hand; menu hours and dayparts; channel visibility; leave channels unassigned to keep a draft; applies to Restaurants Free, Plus and Premium. Undated help page."
+  },
+  {
+    "n": 13,
+    "title": "Mark items and modifiers as sold out",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/8430-mark-items-and-modifiers-as-sold-out",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Marking items or modifiers sold out (86-ing) hides them at checkout; optional reset time; needs item and inventory permissions. Undated help page."
+  },
+  {
+    "n": 14,
+    "title": "Manage ingredient inventory with Square Restaurant Inventory",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/8610-manage-ingredient-inventory-with-square-restaurant-inventory",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Third-party integration by MarketMan for ingredient tracking, purchase orders and menu costing; needs Restaurants Plus or Premium (or Square Plus or Premium with advanced restaurant features). Undated help page."
+  },
+  {
+    "n": 15,
+    "title": "Menu item inventory overview",
+    "publisher": "Toast platform guide",
+    "url": "https://doc.toasttab.com/doc/platformguide/adminMenuItemInventoryOverview.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Menu item inventory is not ingredient inventory; statuses In Stock, Out of Stock (86ing) and Quantity, which counts down as items are sent to the kitchen; changes take effect when published."
+  },
+  {
+    "n": 16,
+    "title": "Publishing overview",
+    "publisher": "Toast platform guide",
+    "url": "https://doc.toasttab.com/doc/platformguide/platformPublishingOverview.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Saved changes are not visible on devices until published; publish to each location; no rollback feature, so revert by changing back and publishing again."
+  },
+  {
+    "n": 17,
+    "title": "Create and edit your menu (Business Profile menu editor)",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/9455840?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Menu editor for food and drink businesses; sections, items, descriptions and prices; experimental AI menu from a photo; changes can take 24 to 48 hours; Google may transcribe menus from the website; API for multiple profiles."
+  },
+  {
+    "n": 18,
+    "title": "Read and reply to reviews",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474050?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Only verified businesses can reply; replies checked against policies, usually within 10 minutes, sometimes up to 30 days; reviewer is notified; replies can be edited or deleted; reviews can be flagged."
+  },
+  {
+    "n": 19,
+    "title": "Get bookings through Reserve with Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7475773?hl=en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bookings through a provider; provider may charge for bookings through Google; providers appear within a week; waitlists for restaurants only through an eligible provider."
+  },
+  {
+    "n": 20,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule effective 21 Oct 2024; incentives allowed if not conditioned on sentiment; steakhouse coupon example of a breach; insider disclosure; review suppression banned; page dated November 2024."
+  },
+  {
+    "n": 21,
+    "title": "Short guide for businesses publishing consumer reviews and complying with consumer protection law",
+    "publisher": "Competition and Markets Authority (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/fake-reviews-cma208/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bans fake reviews, concealed incentivised reviews and misleading review information; publishers need a policy, risk assessment and detection processes; published 4 Apr 2025."
+  },
+  {
+    "n": 22,
+    "title": "Set up team schedules",
+    "publisher": "Square Support Center",
+    "url": "https://squareup.com/help/us/en/article/7155-scheduling-with-team-management",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Availability, shifts, open shifts, publish with notify affected or all team members; Square Shifts Free covers up to 5 team members. Undated help page."
+  },
+  {
+    "n": 23,
+    "title": "Rest breaks at work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/rest-breaks-work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adults working over 6 hours get one 20-minute break; 11 hours' daily rest; 24 hours a week or 48 hours a fortnight weekly rest."
+  },
+  {
+    "n": 24,
+    "title": "Working Time Directive",
+    "publisher": "European Commission (Employment, Social Affairs and Inclusion)",
+    "url": "https://employment-social-affairs.ec.europa.eu/policies-and-activities/rights-work/labour-law/working-conditions/working-time-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Directive 2003/88/EC: 48-hour average week, break when the day is over 6 hours, 11 hours' daily rest, 24 hours' weekly rest, 4 weeks' paid leave, night work limits."
+  },
+  {
+    "n": 25,
+    "title": "Fact Sheet #15: Tipped Employees Under the Fair Labor Standards Act",
+    "publisher": "US Department of Labor, Wage and Hour Division",
+    "url": "https://www.dol.gov/agencies/whd/fact-sheets/15-tipped-employees-flsa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tipped employee over $30 a month in tips; $2.13 cash wage; maximum tip credit $5.12; managers may not keep employees' tips; tip pool rules; states may be more protective."
+  },
+  {
+    "n": 26,
+    "title": "Predictive scheduling",
+    "publisher": "Oregon Bureau of Labor and Industries",
+    "url": "https://www.oregon.gov/boli/workers/pages/predictive-scheduling.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Retail, hospitality and food service employers with 500 or more employees worldwide; 14 days' written notice; pay for late changes; 10-hour rest between shifts unless the worker agrees. Undated page; used as one US example."
+  },
+  {
+    "n": 27,
+    "title": "Distributing tips fairly: statutory code of practice",
+    "publisher": "Department for Business and Trade (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/distributing-tips-fairly-statutory-code-of-practice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employment (Allocation of Tips) Act 2023 in force 1 Oct 2024; all tips passed on without deductions; code published 29 Jul 2024; England, Scotland and Wales."
+  },
+  {
+    "n": 28,
+    "title": "Wasted Food Scale",
+    "publisher": "US Environmental Protection Agency",
+    "url": "https://www.epa.gov/sustainable-management-food/wasted-food-scale",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ranking of wasted food pathways from prevention (most preferred) through donation and upcycling to landfill, incineration and the drain (least); page updated 16 Sep 2026."
+  },
+  {
+    "n": 29,
+    "title": "Publication 334 (2025), Tax Guide for Small Business",
+    "publisher": "US Internal Revenue Service",
+    "url": "https://www.irs.gov/publications/p334",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cost of goods sold: beginning inventory plus purchases and other costs gives goods available, minus ending inventory gives cost of goods sold (Schedule C lines 35 to 42). Used for the arithmetic only, not tax advice."
+  },
+  {
+    "n": 30,
+    "title": "Food Service Managers (Occupational Outlook Handbook)",
+    "publisher": "US Bureau of Labor Statistics",
+    "url": "https://www.bls.gov/ooh/management/food-service-managers.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Median pay $69,390 (May 2025); 6% projected growth 2025-35; about 344,300 jobs in 2025; duties include hiring, scheduling, ordering, overseeing preparation, compliance, budgets and complaints; page modified 29 Oct 2026."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Entity registration",
+    "publisher": "SAM.gov (U.S. General Services Administration)",
+    "url": "https://sam.gov/entity-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Registration is needed to apply for federal awards as a prime; a Unique Entity ID is assigned during registration; a UEI-only record cannot apply directly; registration must be renewed every 365 days"
+  },
+  {
+    "n": 2,
+    "title": "Contract Opportunities",
+    "publisher": "SAM.gov (U.S. General Services Administration)",
+    "url": "https://sam.gov/opportunities",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Contract opportunities are notices from federal contracting offices (pre-solicitation, solicitation, award and sole source notices); anyone may search without an account; a free login.gov account saves searches and follows changes"
+  },
+  {
+    "n": 3,
+    "title": "Basic requirements (federal contracting guide)",
+    "publisher": "U.S. Small Business Administration",
+    "url": "https://www.sba.gov/federal-contracting/contracting-guide/basic-requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Steps to become a federal contractor: SAM.gov registration, the 12-character UEI, NAICS codes, SBA size standards, keeping compliant, and CMMC for DoD work"
+  },
+  {
+    "n": 4,
+    "title": "FAR Part 15: Contracting by Negotiation (FAC 2026-01, effective 13 March 2026)",
+    "publisher": "Acquisition.gov (GSA, for the FAR Council)",
+    "url": "https://www.acquisition.gov/far/part-15",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Best value tradeoff vs lowest price technically acceptable (15.101), avoiding LPTA for knowledge-based services (15.101-2(d)), oral presentations (15.102), evaluation factors and past performance (15.304), documenting strengths, weaknesses, deficiencies and risks and neutral past performance (15.305), discussions and final proposal revisions (15.306-15.307), debriefings (15.505-15.506)"
+  },
+  {
+    "n": 5,
+    "title": "FAR 2.101 Definitions (FAC 2026-01, effective 13 March 2026)",
+    "publisher": "Acquisition.gov (GSA, for the FAR Council)",
+    "url": "https://www.acquisition.gov/far/2.101",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. General micro-purchase threshold of $15,000 and simplified acquisition threshold of $350,000 as shown on 6 Nov 2026"
+  },
+  {
+    "n": 6,
+    "title": "Revolutionary FAR Overhaul",
+    "publisher": "Acquisition.gov (OFPP and the FAR Council)",
+    "url": "https://www.acquisition.gov/far-overhaul",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The FAR is being rewritten in plain language with most non-statutory rules removed, started under the executive order 'Restoring Common Sense to Federal Procurement'; press releases dated August 2025 and June 2026 on the page. Status of each part was not readable from the page"
+  },
+  {
+    "n": 7,
+    "title": "Applicant registration",
+    "publisher": "Grants.gov (U.S. Department of Health and Human Services)",
+    "url": "https://www.grants.gov/applicants/applicant-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Organisations register with SAM.gov first (free, renewed yearly); allow up to 10 business days for SAM to become active; the E-Business Point of Contact sets up the organisation and assigns roles such as Authorized Organization Representative (AOR)"
+  },
+  {
+    "n": 8,
+    "title": "Grant eligibility",
+    "publisher": "Grants.gov (U.S. Department of Health and Human Services)",
+    "url": "https://www.grants.gov/learn-grants/grant-eligibility",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eligible applicant types; most opportunities are for organisations; none provide personal financial assistance; each NOFO's eligibility section is the authority"
+  },
+  {
+    "n": 9,
+    "title": "Workspace overview",
+    "publisher": "Grants.gov (U.S. Department of Health and Human Services)",
+    "url": "https://www.grants.gov/applicants/workspace-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Workspace is the standard way to apply; teams fill forms in parallel online or offline; an AOR submits; external users such as consultants can be given form access by the Workspace Owner"
+  },
+  {
+    "n": 10,
+    "title": "Transforming Public Procurement",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/collections/transforming-public-procurement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Procurement Act 2023 came into force on 24 February 2025; the central digital platform is an enhanced Find a Tender plus a Supplier Information Service with one supplier account"
+  },
+  {
+    "n": 11,
+    "title": "The Procurement Act 2023: a short guide for suppliers",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/procurement-act-2023-short-guides/the-procurement-act-2023-a-short-guide-for-suppliers-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free registration on the central digital platform, needed when you want to bid; information asked for; bid assessments for final tenders; 30-day payment terms across more contracts; competitive flexible procedure"
+  },
+  {
+    "n": 12,
+    "title": "New legislative requirements under the Procurement Act 2023",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/procurement-act-2023-short-guides/new-legislative-requirements-under-the-procurement-act-2023-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 1 April 2026, suppliers awarded notifiable below-threshold contracts (12,000 GBP central government including NHS; 30,000 GBP sub-central) must register and share a unique identifier; KPIs on contracts above 5m GBP with the three most material published yearly; payment compliance notices"
+  },
+  {
+    "n": 13,
+    "title": "The Procurement Act 2023: the competitive flexible procedure and negotiation",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/procurement-act-2023-short-guides/the-procurement-act-2023-the-competitive-flexible-procedure-and-negotiation-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Stages are set out in the tender notice or documents; negotiation may happen at any stage if the documents allow it; suppliers should generally get the same chance to negotiate"
+  },
+  {
+    "n": 14,
+    "title": "Find a Tender: search",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.find-tender.service.gov.uk/Search",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search published notices; sign in with GOV.UK One Login to register a buyer or supplier organisation, save searches and get email alerts"
+  },
+  {
+    "n": 15,
+    "title": "Contracts Finder",
+    "publisher": "UK Government (GOV.UK)",
+    "url": "https://www.contractsfinder.service.gov.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search contract opportunities by keyword, location and stage (early engagement, future opportunity, opportunity, awarded)"
+  },
+  {
+    "n": 16,
+    "title": "Small and Medium Business Hub",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/small-and-medium-business-hub",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Where to find UK public notices and framework opportunities; government aims to pay 90% of invoices in 5 days and all within 30; prompt payment expectations on bidders for major contracts"
+  },
+  {
+    "n": 17,
+    "title": "PPN 017: Improving transparency of AI use in procurement (17 February 2025)",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/ppn-017-improving-transparency-of-ai-use-in-procurement/ppn-017-improving-transparency-of-ai-use-in-procurement-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Suppliers may use AI to prepare bids; buyers may ask suppliers to disclose AI use (example questions are for information, not scored); risk of inaccurate or misleading AI text; extra checks such as clarification questions, presentations or site visits"
+  },
+  {
+    "n": 18,
+    "title": "PPN 026: The Social Value Model",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/ppn-026-the-social-value-model/ppn-026-the-social-value-model-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to central government procurements commenced on or after 1 January 2027 worth 1m GBP or more; social value weighted at least 10% (1m to under 5m GBP) or 20% (5m GBP or more); outcomes on good jobs and skills; at least one social value KPI on contracts of 5m GBP or more"
+  },
+  {
+    "n": 19,
+    "title": "PPN 014: Cyber Essentials scheme",
+    "publisher": "Cabinet Office (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/ppn-014-cyber-essentials-scheme/ppn-014-cyber-essentials-scheme-html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Which central government contracts need Cyber Essentials or Cyber Essentials Plus (personal data of citizens or staff, ICT holding OFFICIAL data, government business information), proof before data passes, annual renewal, no blanket approach"
+  },
+  {
+    "n": 20,
+    "title": "Cyber Essentials: overview",
+    "publisher": "National Cyber Security Centre (UK)",
+    "url": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The five technical controls; Cyber Essentials Plus adds independent technical testing; IASME runs certification by self-assessment or a licensed certification body"
+  },
+  {
+    "n": 21,
+    "title": "Find a grant",
+    "publisher": "UK Government (GOV.UK)",
+    "url": "https://www.find-government-grants.service.gov.uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Beta service to search UK government grants, check eligibility and sign in to apply"
+  },
+  {
+    "n": 22,
+    "title": "Public tendering rules",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/selling-in-eu/public-contracts/public-tendering-rules/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU rules apply above thresholds; above-threshold tenders are published on TED; procedures (open, restricted, competitive with negotiation, competitive dialogue, innovation partnership); prior information notices 35 days to 12 months ahead; weighted award criteria; losing bidders are entitled to an explanation"
+  },
+  {
+    "n": 23,
+    "title": "Thresholds (public procurement)",
+    "publisher": "European Commission, DG GROW",
+    "url": "https://single-market-economy.ec.europa.eu/single-market/public-procurement/legal-rules-and-implementation/thresholds_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU thresholds for 2026-2027: 140,000 EUR central government supplies and services; 216,000 EUR sub-central; 5,404,000 EUR works; 750,000 EUR social and other specific services; set by Delegated Regulations (EU) 2025/2150, 2025/2151, 2025/2152 and 2025/2487"
+  },
+  {
+    "n": 24,
+    "title": "European Single Procurement Document and eCertis",
+    "publisher": "European Commission, DG GROW",
+    "url": "https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/european-single-procurement-document-and-ecertis_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The ESPD is a self-declaration that replaces certificates at bid stage; only the winner provides the documents; the Commission's own ESPD service closed on 2 May 2019, so national services are used"
+  },
+  {
+    "n": 25,
+    "title": "Funding and tenders",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/funding-tenders_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Grants answer calls for proposals for projects that serve EU policy; tenders answer calls for tender when the Commission buys; the Funding and Tenders Portal and TED are where calls are found"
+  },
+  {
+    "n": 26,
+    "title": "The application process (EU funding)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/funding-and-tenders/how-apply/application-process_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applications go through the Funding and Tenders Portal; find a call, find partners, register the organisation, submit electronically on time; late or incomplete proposals can be rejected; proposals that ignore the call documents can be ruled inadmissible"
+  },
+  {
+    "n": 27,
+    "title": "Award procedure and contract signature (EU funding)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/funding-and-tenders/how-apply/award-procedure-and-contract-signature_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Evaluation by Commission staff or independent specialists against the criteria in the call; order of eligibility and exclusion, selection, then award criteria; reserve lists; the grant agreement is the reference document"
+  },
+  {
+    "n": 28,
+    "title": "Color Team Reviews: who to invite and why",
+    "publisher": "Shipley Associates",
+    "url": "https://www.shipleywins.com/blogs/color-team-reviews-who-to-invite-and-why",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (undated, no author shown). Blue, Black Hat, Pink, Red, Green, Gold and White Hat reviews: what each checks, when it happens and who should review"
+  },
+  {
+    "n": 29,
+    "title": "APMP: Association of Proposal Management Professionals",
+    "publisher": "APMP",
+    "url": "https://www.apmp.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Professional body for bid, proposal, capture and business development staff; certifications start at Foundation level, plus micro-certifications"
+  },
+  {
+    "n": 30,
+    "title": "RFP Response Trends and Benchmarks Report 2026",
+    "publisher": "Loopio (with APMP)",
+    "url": "https://loopio.com/trends-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (summary page; full report gated). Seventh annual report, 1,500+ participants: average 166 RFPs submitted a year; management consulting 229; advertising lowest at 22 hours per RFP; 92% of software teams use AI in their RFP process. Vendor survey"
+  }
+]

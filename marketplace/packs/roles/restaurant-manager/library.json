@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "restaurant-portion-cost-builder",
+    "name": "Restaurant portion cost builder",
+    "why": "Costs one batch of one dish from real weights and prices, the same method as the recipe costing skill."
+  },
+  {
+    "slug": "prepare-a-restaurant-shift-handover",
+    "name": "Prepare a restaurant shift handover",
+    "why": "A handover with food safety issues first and an open-issue list, which feeds the shift log and weekly review."
+  },
+  {
+    "slug": "restaurant-shift-exception-review-assistant",
+    "name": "Restaurant shift exception review assistant",
+    "why": "Turns end-of-shift notes into an open-issue register and escalations for the next lead."
+  },
+  {
+    "slug": "check-a-catering-order-before-service",
+    "name": "Check a catering order before service",
+    "why": "Checks a catering order against the quote and event details, with a service checklist, for caterers and event nights."
+  },
+  {
+    "slug": "waste-to-profit",
+    "name": "Cost every step and turn your waste into profit",
+    "why": "Puts a price on each kind of waste, a useful next step after the waste log in the weekly review."
+  },
+  {
+    "slug": "check-supplier-invoices-before-approval",
+    "name": "Check supplier invoices before approval",
+    "why": "Matches invoices before the owner pays them, which keeps the prices on recipe cards honest."
+  },
+  {
+    "slug": "compare-supplier-prices-on-the-same-basis",
+    "name": "Compare supplier prices on the same basis",
+    "why": "Compares quotes on the same units and terms before a stock order or a supplier change is put to the owner."
+  },
+  {
+    "slug": "prepare-a-goods-receipt-discrepancy-brief",
+    "name": "Prepare a goods receipt discrepancy brief",
+    "why": "Matches orders, delivery notes and invoices line by line, a common cause of food cost gaps."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Checks how deep a promotion or price change can go before it eats the dish's margin."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Checked replies for each batch of reviews, with risky ones held for the owner, as in the review reply prompt."
+  },
+  {
+    "slug": "standards-sheet-writer",
+    "name": "Repeatable standards sheet writer",
+    "why": "A one-page sheet of checkable standards, the backbone of station guides and plating standards."
+  },
+  {
+    "slug": "second-location-check",
+    "name": "Second location readiness checker",
+    "why": "Checks whether the first site runs without the owner before a second restaurant opens."
+  }
+]

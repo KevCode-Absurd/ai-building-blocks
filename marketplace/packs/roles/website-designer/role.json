@@ -1,0 +1,26 @@
+{
+  "id": "website-designer",
+  "name": "Website designer (Squarespace, Wix, Webflow)",
+  "department": "design",
+  "summary": "Plans and designs small business websites in site builders: page list, section layouts, style settings, CMS set-up and launch checks.",
+  "aliases": [
+    "website designer",
+    "web designer",
+    "squarespace",
+    "wix",
+    "webflow",
+    "site builder",
+    "website design",
+    "framer",
+    "wix studio",
+    "website launch checklist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (Squarespace, Wix, Webflow developer and Framer docs, builder MCP servers, Core Web Vitals, WCAG 2.2, EU, UK and US accessibility and cookie rules, WebAIM and Web Almanac data), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

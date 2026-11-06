@@ -1,0 +1,26 @@
+{
+  "id": "proposal-writer",
+  "name": "Proposal and bid writer",
+  "department": "sales",
+  "summary": "Writes proposals, tender answers and bids that match what the buyer asked for. Makes scope and price easy to say yes to.",
+  "aliases": [
+    "proposal writer",
+    "rfp",
+    "tender writer",
+    "bid writer",
+    "upwork proposals",
+    "statement of work",
+    "grant writer",
+    "grant application",
+    "bid manager",
+    "tender response"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: bid or no-bid, compliance matrices, tender and RFP answers, client proposals, freelance bids and grant applications. Covers SAM.gov, Grants.gov and FAR thresholds (US), the Procurement Act 2023, Find a Tender, Contracts Finder and PPNs 014, 017 and 026 (UK), TED, thresholds and ESPD (EU), with 30 checked sources. Every submission needs a fresh yes."
+    }
+  ]
+}

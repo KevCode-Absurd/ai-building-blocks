@@ -1,0 +1,26 @@
+{
+  "id": "operations-manager",
+  "name": "Operations manager",
+  "department": "operations",
+  "summary": "Keeps a small business running smoothly: clear processes, written SOPs, weekly reviews and manuals that let a second site run like the first.",
+  "aliases": [
+    "operations",
+    "ops manager",
+    "sop writer",
+    "process improvement",
+    "business process",
+    "operations manual",
+    "franchise operations",
+    "process documentation",
+    "business systems",
+    "bottleneck analysis"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 29 sources, four skills (SOP writing, process map and bottleneck, weekly ops review, operations manual), five prompts, three workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

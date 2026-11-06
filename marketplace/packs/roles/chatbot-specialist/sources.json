@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "AI Act, Article 50: Transparency obligations for providers and deployers of certain AI systems",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (text based on the EUR-Lex consolidated version as at 27 July 2026). Providers must design systems that interact directly with people so they are informed it is AI unless obvious; information clear, distinguishable, accessible and at the latest at first interaction; paragraph 7 marked amended by the Digital Omnibus on AI."
+  },
+  {
+    "n": 2,
+    "title": "Transparency obligations under Article 50 of the AI Act (questions and answers, updated 24 July 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Chatbots, AI agents and avatars as examples; four cumulative criteria; obvious exception read restrictively; notice from the first interaction; deployer duties are for emotion recognition, deepfakes and published text; fines up to EUR 15 million or 3% of worldwide turnover; national market surveillance authorities enforce; no grace period stated for Article 50(1)."
+  },
+  {
+    "n": 3,
+    "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Published 20 July 2026, last updated 5 November 2026; the Commission adopted the guidelines; Article 50 applies from 2 August 2026."
+  },
+  {
+    "n": 4,
+    "title": "AI Act, Article 111: AI systems already placed on the market or put into service",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-111",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. New paragraph 4 (Digital Omnibus on AI): providers of systems placed on the market before 2 August 2026 must comply with Article 50(2) by 2 December 2026."
+  },
+  {
+    "n": 5,
+    "title": "AI Act, Article 113: Entry into force and application",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. General application date 2 August 2026 (covers Article 50); high-risk duties moved to 2 December 2027 (Annex III) and 2 August 2028 (Annex I); amendments marked as from the Digital Omnibus on AI."
+  },
+  {
+    "n": 6,
+    "title": "AI Act, Article 4: AI literacy",
+    "publisher": "European Commission, AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Providers and deployers must take measures to build AI literacy of staff and others operating AI on their behalf; Commission and Member States support SMEs; paragraphs marked amended by the Digital Omnibus on AI."
+  },
+  {
+    "n": 7,
+    "title": "AI Privacy Risks & Mitigations: Large Language Models (LLMs) (Support Pool of Experts report, April 2025)",
+    "publisher": "European Data Protection Board (report by an external expert, Isabel Barberá)",
+    "url": "https://www.edpb.europa.eu/system/files/2025-04/ai-privacy-risks-and-mitigations-in-llms.pdf",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch and read with a text extractor. Views are the author's, not the EDPB's. First use case is a customer-query chatbot: not high-risk under the AI Act but GDPR risk factors justify starting a DPIA; mitigations include informing users, minimising or anonymising logs, retrieval filters, output redaction, retention policies and rights requests reaching logs."
+  },
+  {
+    "n": 8,
+    "title": "Complying with consumer law when using AI agents (published 9 March 2026, updated 30 October 2026)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents/complying-with-consumer-law-when-using-ai-agents",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Businesses are responsible for AI agents as for employees, even if a third party supplies them; consider labelling so customers do not think a person is serving them; do not overstate AI; accurate answers on prices, products and rights; human in the loop; test and monitor; fines up to 10% of worldwide turnover."
+  },
+  {
+    "n": 9,
+    "title": "Data (Use and Access) Act 2025: plans for commencement (updated 12 October 2026)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Main Part 5 data protection changes in force 5 February 2026; the Information Commissioner's Office replaced by the Information Commission on 30 September 2026."
+  },
+  {
+    "n": 10,
+    "title": "California Business and Professions Code, Division 7, Part 3, Chapter 6: Bots (sections 17940 to 17943)",
+    "publisher": "California Legislative Information",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=BPC&division=7.&title=&part=3.&chapter=6.&article=",
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact page. Unlawful to use a bot to communicate with a person in California online with intent to mislead about its artificial identity to incentivise a sale or influence a vote; clear and conspicuous disclosure avoids liability; added by SB 1001 (2018)."
+  },
+  {
+    "n": 11,
+    "title": "AB-410 Bots: disclosure (bill status)",
+    "publisher": "California Legislative Information",
+    "url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB410",
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (the leginfo site blocks automated fetches): a search result showed this exact page. AB 410 would require bots to disclose at first contact and answer truthfully when asked; last recorded action 29 August 2025, held under submission in committee."
+  },
+  {
+    "n": 12,
+    "title": "S.B. 226 Artificial Intelligence Consumer Protection Amendments (2025, enrolled)",
+    "publisher": "Utah State Legislature",
+    "url": "https://le.utah.gov/Session/2025/bills/enrolled/SB0226.pdf",
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (the site refused connections at fetch time): a search result showed this exact document. Disclosure of generative AI when a consumer clearly and unambiguously asks; prominent disclosure at the outset for high-risk interactions in regulated occupations; safe harbour for clear and conspicuous disclosure."
+  },
+  {
+    "n": 13,
+    "title": "FTC announces crackdown on deceptive AI claims and schemes (25 September 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Operation AI Comply; using AI to deceive is illegal under existing law; DoNotPay marketed a robot lawyer without testing it against human lawyers and agreed to pay $193,000."
+  },
+  {
+    "n": 14,
+    "title": "Moffatt v. Air Canada, 2024 BCCRT 149 (decision of 14 February 2024)",
+    "publisher": "British Columbia Civil Resolution Tribunal",
+    "url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact decision page. The chatbot said a bereavement fare could be claimed after travel; Air Canada argued it was not liable for information from its agents including the chatbot; the tribunal found negligent misrepresentation and awarded the fare difference with interest and fees (about C$812 in total per published reports)."
+  },
+  {
+    "n": 15,
+    "title": "Klarna AI assistant handles two-thirds of customer service chats in its first month (27 February 2024)",
+    "publisher": "Klarna press release",
+    "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. 2.3 million conversations, two-thirds of chats, work of 700 full-time agents, satisfaction on par with humans, 25% fewer repeat inquiries, under 2 minutes vs 11, 23 markets and 35+ languages; customers can still choose live agents. Company claims."
+  },
+  {
+    "n": 16,
+    "title": "Fin AI Agent resolutions (updated 23 September 2026)",
+    "publisher": "Intercom Help Center",
+    "url": "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-resolutions",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Confirmed vs assumed resolutions; explicit requests for a human are not billed; Fin is priced per outcome, at most one per conversation."
+  },
+  {
+    "n": 17,
+    "title": "Hand off to a live agent (Microsoft Copilot Studio)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-hand-off",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (page dated 30 Apr 2026, updated 19 Aug 2026). Escalate system topic and Transfer conversation node; implicit triggers when intent is not matched or the user asks for an agent; full conversation history and context variables passed to the live agent."
+  },
+  {
+    "n": 18,
+    "title": "Messenger Platform policy overview",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. 24-hour standard messaging window; Human Agent tag for manual replies within 7 days; automated chats must disclose where the law requires (start, after a lapse, when switching from human to automated) and it is recommended best practice; bots respond within 30 seconds; window and some tags apply to the Instagram Messaging API."
+  },
+  {
+    "n": 19,
+    "title": "WhatsApp Business Messaging Policy (last updated 23 September 2026)",
+    "publisher": "WhatsApp (Meta)",
+    "url": "https://whatsappbusiness.com/policy/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Automation allowed in the 24-hour window with prompt, clear and direct escalation paths (in-chat transfer, phone, email, web, store, form); opt-in required; honour opt-outs; only approved templates outside the window."
+  },
+  {
+    "n": 20,
+    "title": "Knowledge in GPTs (search result title: Creating and editing GPTs)",
+    "publisher": "OpenAI Help Center",
+    "url": "https://help.openai.com/en/articles/8843948-knowledge-in-gpts",
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact page. A GPT can hold up to 20 knowledge files of up to 512 MB each."
+  },
+  {
+    "n": 21,
+    "title": "Retrieval augmented generation (RAG) for Projects",
+    "publisher": "Claude Help Center (Anthropic)",
+    "url": "https://support.claude.com/en/articles/11473015-retrieval-augmented-generation-rag-for-projects",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Projects switch to RAG automatically as knowledge nears the context limit; up to 10 times more content; paid plans only; tips on file names and grouping."
+  },
+  {
+    "n": 22,
+    "title": "Introducing Contextual Retrieval (19 September 2024)",
+    "publisher": "Anthropic",
+    "url": "https://www.anthropic.com/news/contextual-retrieval",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Chunks lose context; contextual embeddings cut failed top-20 retrievals by 35%, plus contextual BM25 by 49%, plus reranking by 67%; under about 200,000 tokens, include the whole knowledge base in the prompt."
+  },
+  {
+    "n": 23,
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (NeurIPS 2020)",
+    "publisher": "Patrick Lewis et al., arXiv",
+    "url": "https://arxiv.org/abs/2005.11401",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. RAG combines a language model with a retrieved document index and produces more specific and factual text than the model alone."
+  },
+  {
+    "n": 24,
+    "title": "Lost in the Middle: How Language Models Use Long Contexts (2023)",
+    "publisher": "Nelson F. Liu et al., arXiv (published in TACL)",
+    "url": "https://arxiv.org/abs/2307.03172",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Performance is highest when relevant information is at the start or end of the context and drops when it is in the middle."
+  },
+  {
+    "n": 25,
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "publisher": "OWASP Gen AI Security Project",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. LLM01 Prompt Injection through LLM10 Unbounded Consumption, including sensitive information disclosure, excessive agency, system prompt leakage and misinformation."
+  },
+  {
+    "n": 26,
+    "title": "NIST AI 600-1, Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (July 2024)",
+    "publisher": "US National Institute of Standards and Technology",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch and read with a text extractor. Lists 12 generative AI risks; defines confabulation as confidently stated but erroneous or false content."
+  },
+  {
+    "n": 27,
+    "title": "The User Experience of Chatbots (25 November 2018)",
+    "publisher": "Nielsen Norman Group (Raluca Budiu)",
+    "url": "https://www.nngroup.com/articles/chatbots/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Qualitative study with 8 US participants; bots fail off script, lose context and hide that they are bots; recommendations to disclose, state capabilities, tolerate typos, offer buttons and free text, and offer an escape hatch to a person."
+  },
+  {
+    "n": 28,
+    "title": "Guidelines for Human-AI Interaction (CHI 2019)",
+    "publisher": "Microsoft Research (Saleema Amershi et al.)",
+    "url": "https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Authors, CHI 2019 honourable mention; 18 design guidelines validated with 49 design practitioners against 20 AI-infused products."
+  },
+  {
+    "n": 29,
+    "title": "Paul Grice (Stanford Encyclopedia of Philosophy, revised 19 June 2026)",
+    "publisher": "Stanford Encyclopedia of Philosophy",
+    "url": "https://plato.stanford.edu/entries/grice/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The cooperative principle and the maxims of quantity, quality, relation and manner; Logic and Conversation (1975) and Studies in the Way of Words (1989)."
+  }
+]

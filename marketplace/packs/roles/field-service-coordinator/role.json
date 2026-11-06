@@ -1,0 +1,26 @@
+{
+  "id": "field-service-coordinator",
+  "name": "Field service coordinator",
+  "department": "operations",
+  "summary": "Runs the office side of trades and home services: quotes, job checklists, reminders and customer messages. Stops arguments about what was included.",
+  "aliases": [
+    "trades office manager",
+    "quotes",
+    "estimates",
+    "job scheduling",
+    "service advisor",
+    "cleaning business",
+    "home services",
+    "dispatcher",
+    "field service management",
+    "service plans"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 28 sources (Jobber, ServiceTitan and Housecall Pro help pages, US, UK and EU consumer rules), four skills (quotes and scope, scheduling and dispatch, job sheets and handover, customer messages), six prompts, three workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

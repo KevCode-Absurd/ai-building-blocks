@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Tidy Data (Journal of Statistical Software, vol. 59, issue 10, 2014)",
+    "publisher": "Hadley Wickham, Journal of Statistical Software",
+    "url": "https://www.jstatsoft.org/article/view/v059i10",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of tidy data (each variable a column, each observation a row, each type of observational unit a table) and the paper's five common messy-data problems."
+  },
+  {
+    "n": 2,
+    "title": "Data Organization in Spreadsheets (tutorial behind Broman and Woo, The American Statistician 72(1), 2018)",
+    "publisher": "Karl Broman (author's own site)",
+    "url": "https://kbroman.org/dataorg/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The practical rules: be consistent, YYYY-MM-DD dates, fill every cell, one thing per cell, make it a rectangle, data dictionary, no calculations in raw data, no colour as data, good names, backups, data validation, save as plain text."
+  },
+  {
+    "n": 3,
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.2 Some simple forecasting methods",
+    "publisher": "Rob J Hyndman and George Athanasopoulos, OTexts",
+    "url": "https://otexts.com/fpp3/simple-methods.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Mean, naive, seasonal naive and drift methods; these are benchmarks, and a new method that cannot beat them is not worth considering."
+  },
+  {
+    "n": 4,
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.8 Evaluating point forecast accuracy",
+    "publisher": "Rob J Hyndman and George Athanasopoulos, OTexts",
+    "url": "https://otexts.com/fpp3/accuracy.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Training and test sets (test typically about 20% and at least as long as the horizon); over-fitting; MAE and RMSE; MAPE problems with zero or near-zero values; MASE below 1 beats naive."
+  },
+  {
+    "n": 5,
+    "title": "Forecasting: Principles and Practice (3rd ed), 5.5 Distributional forecasts and prediction intervals",
+    "publisher": "Rob J Hyndman and George Athanasopoulos, OTexts",
+    "url": "https://otexts.com/fpp3/prediction-intervals.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Point forecasts are of little value without intervals; 80% and 95% multipliers of 1.28 and 1.96 for normal errors; intervals widen with the horizon."
+  },
+  {
+    "n": 6,
+    "title": "FORECAST.ETS function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/excel/forecast-ets-function",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Uses the AAA version of exponential smoothing; seasonality auto-detected by default (max 8,760); up to 30% missing points filled; duplicates averaged by default; constant timeline step; not available in Excel for the web, iOS or Android."
+  },
+  {
+    "n": 7,
+    "title": "What is Power Query?",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/power-query-what-is-power-query",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 30 Sep 2026). Power Query records refreshable steps without modifying the source; steps are written in M; available in Excel for Windows and Mac and Power BI."
+  },
+  {
+    "n": 8,
+    "title": "Unpivot columns",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/unpivot-column",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 10 Jul 2025). Unpivot output is Attribute and Value; Unpivot other columns picks up new columns on refresh; Unpivot only selected columns does not."
+  },
+  {
+    "n": 9,
+    "title": "Combine files overview",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/combine-files-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 29 Aug 2025). Combining a folder of same-schema files through a sample-file query; filter the file list; Changed type steps can error when column names change."
+  },
+  {
+    "n": 10,
+    "title": "Using the data profiling tools",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/data-profiling-tools",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 28 Aug 2025). Column quality, distribution and profile; profiling uses the first 1,000 rows by default and can be switched to the entire data set."
+  },
+  {
+    "n": 11,
+    "title": "Data types in Power Query",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/power-query/data-types",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 14 Aug 2026). Type detection inspects the first 200 rows; locale defaults to the operating system's regional settings; change type using locale for day/month dates; verify by extracting day, month and year."
+  },
+  {
+    "n": 12,
+    "title": "Excel specifications and limits",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 1,048,576 rows by 16,384 columns; 15-digit number precision; applies to Excel for Microsoft 365, 2024, 2021, 2019 and 2016."
+  },
+  {
+    "n": 13,
+    "title": "Files you can store in Google Drive",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/37603",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Sheets files hold up to 20 million cells or 100 MB."
+  },
+  {
+    "n": 14,
+    "title": "QUERY function",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/3093343",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Each column should hold one type; in mixed columns the majority type sets the column type and minority values are treated as null."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Python in Excel",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/introduction-to-python-in-excel-55643c2e-ff56-4168-b1ce-9428c8308545",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Python in Excel calculations run in the Microsoft Cloud, need internet access and use Anaconda libraries."
+  },
+  {
+    "n": 16,
+    "title": "Frequently asked questions about Copilot in Excel",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/frequently-asked-questions-about-agent-mode-in-excel-1cfd906d-40b4-46be-8e2d-65b893e28a02",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Edit, Plan and Chat modes; Copilot can make mistakes; review and verify everything; avoid it for decisions in finance, legal or medical topics; eligible subscriptions."
+  },
+  {
+    "n": 17,
+    "title": "COPILOT function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/excel/copilot-function",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The COPILOT function was a preview only and is no longer available from 14 September 2026; cells return #NAME? on recalculation; use the Copilot in Excel pane instead."
+  },
+  {
+    "n": 18,
+    "title": "Use the AI function in Google Sheets",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/15877199",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI function sees only the given range; first 350 selected cells per selection; results refresh manually; may suggest inaccurate information; needs an eligible Workspace or Google AI plan."
+  },
+  {
+    "n": 19,
+    "title": "Data Studio returns as new home for Data Cloud assets (11 April 2026)",
+    "publisher": "Google Cloud Blog",
+    "url": "https://cloud.google.com/blog/products/data-analytics/looker-studio-is-data-studio",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Looker Studio renamed Data Studio; existing reports move over with no action; free for individual analysis; Data Studio Pro is the paid team edition."
+  },
+  {
+    "n": 20,
+    "title": "The AQuA Book: guidance on producing quality analysis for government (2025 edition)",
+    "publisher": "GOV.UK (Government Analysis Function and partners; first edition by HM Treasury)",
+    "url": "https://www.gov.uk/guidance/the-aqua-book",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 30 Jul 2025). Proportionate assurance; verification versus validation; the assurer independent of the analyst; commissioner, analyst, assurer and approver roles; managing and communicating uncertainty."
+  },
+  {
+    "n": 21,
+    "title": "Reproducible Analytical Pipelines (RAP)",
+    "publisher": "UK Government Analysis Function",
+    "url": "https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. RAPs are automated analytical processes; minimum standard: minimise manual steps and document any left, peer review, version control, documented code."
+  },
+  {
+    "n": 22,
+    "title": "Same Stats, Different Graphs (Matejka and Fitzmaurice, CHI 2017)",
+    "publisher": "Autodesk Research",
+    "url": "https://www.research.autodesk.com/publications/same-stats-different-graphs/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Datasets with identical summary statistics but very different graphs (Datasaurus Dozen); builds on Anscombe's quartet (1973); always visualise data."
+  },
+  {
+    "n": 23,
+    "title": "Simpson's Paradox (revised 6 June 2026)",
+    "publisher": "Stanford Encyclopedia of Philosophy (Jan Sprenger and Naftali Weinberger)",
+    "url": "https://plato.stanford.edu/entries/paradox-simpson/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of Simpson's paradox; the Berkeley admissions example from Bickel, Hammel and O'Connell (1975); choosing the split or pooled table depends on the causal model."
+  },
+  {
+    "n": 24,
+    "title": "5 key things to know about the margin of error in election polls (8 September 2016)",
+    "publisher": "Pew Research Center (Andrew Mercer)",
+    "url": "https://www.pewresearch.org/short-reads/2016/09/08/understanding-the-margin-of-error-in-election-polls/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. About 1,067 cases give roughly plus or minus 3 points at 95%; subgroups have larger margins; the margin on a difference is roughly double; other error sources are rarely reported."
+  },
+  {
+    "n": 25,
+    "title": "Ofqual's statistics policies and procedures: rounding policy (updated 17 December 2025)",
+    "publisher": "Ofqual, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/ofquals-statistics-policies-and-procedures/rounding-policy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Figures normally rounded to the nearest 5; values 1 to 4 shown as fewer than 5; totals and percentages calculated from unrounded figures."
+  },
+  {
+    "n": 26,
+    "title": "How do we ensure anonymisation is effective?",
+    "publisher": "Information Commissioner's Office (UK)",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/anonymisation/how-do-we-ensure-anonymisation-is-effective/",
+    "checked": "2026-11-06",
+    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact page. Identifiability is a spectrum; the test is what is reasonably likely; use a motivated intruder test. Publication date not confirmed; re-open at each refresh."
+  },
+  {
+    "n": 27,
+    "title": "Guidelines 01/2025 on Pseudonymisation (public consultation)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2025/guidelines-012025-pseudonymisation_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pseudonymised data remains personal data if it can be attributed to a person using additional information; only version 1 (consultation, Jan to Mar 2025) is listed."
+  },
+  {
+    "n": 28,
+    "title": "EDPB sheds light on anonymisation and web scraping for generative AI (8 July 2026)",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Draft anonymisation guidelines for consultation until 30 October 2026; data is anonymous only if a person cannot be identified by means reasonably likely to be used; criteria of singling out, linkage and inference."
+  },
+  {
+    "n": 29,
+    "title": "Guidance Regarding Methods for De-identification of Protected Health Information",
+    "publisher": "US Department of Health and Human Services",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html",
+    "checked": "2026-11-06",
+    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact page. The HIPAA Privacy Rule de-identification standard is met by Expert Determination or Safe Harbor."
+  },
+  {
+    "n": 30,
+    "title": "Business population estimates for the UK and regions 2026: statistical release (5 November 2026)",
+    "publisher": "GOV.UK (Department for Business, Innovation, Science and Trade, as shown on the page)",
+    "url": "https://www.gov.uk/government/statistics/business-population-estimates-2026/business-population-estimates-for-the-uk-and-regions-2026-statistical-release",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 5.6 million private-sector businesses at the start of 2026, down 1.8%; 95% confidence interval of plus or minus 109,000; the release cannot confidently say the population fell; official statistics in development."
+  }
+]

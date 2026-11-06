@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "identity-system-planner",
+    "name": "Identity system planner",
+    "why": "Plans a brand identity system in phases from client facts and every touchpoint, the same start as this kit's discovery step."
+  },
+  {
+    "slug": "brand-mark-system-planner",
+    "name": "Brand mark system planner",
+    "why": "Plans a mark and tests it at tiny and huge sizes, a second pass on the logo brief's small-size checks."
+  },
+  {
+    "slug": "logo-strength-tester",
+    "name": "Logo strength tester",
+    "why": "Scores logo ideas with a one-colour and small-size check, useful alongside the logo draft review prompt."
+  },
+  {
+    "slug": "brand-guide-builder",
+    "name": "Brand guide builder",
+    "why": "Turns a brand file into a printable guide and a values file, close to the brand guidelines book skill."
+  },
+  {
+    "slug": "visual-system-rules-writer",
+    "name": "Visual system rules writer",
+    "why": "Firm colour, type and grid rules that sit under the brand book's application pages."
+  },
+  {
+    "slug": "mood-colour-palette-planner",
+    "name": "Mood colour palette planner",
+    "why": "A small palette with one job per colour, a starting point before the contrast pairing table."
+  },
+  {
+    "slug": "font-pair-shortlist-maker",
+    "name": "Font pair shortlist maker",
+    "why": "Three heading and body pairs with sizes, for clients with no brand fonts yet."
+  },
+  {
+    "slug": "icon-set-planner",
+    "name": "Icon set planner",
+    "why": "Grid and style rules for an icon set before anyone draws, matching the icon set spec prompt."
+  },
+  {
+    "slug": "brand-stylescape-planner",
+    "name": "Brand stylescape planner",
+    "why": "Three mood board directions with photo, type and colour choices, for the discovery stage."
+  },
+  {
+    "slug": "store-name-tester",
+    "name": "Store name tester",
+    "why": "Tests a name before a logo or domain is bought, ahead of the first trade mark search."
+  },
+  {
+    "slug": "store-rebrand-planner",
+    "name": "Store rebrand planner",
+    "why": "Decides whether to keep, tweak or change a name, the question behind any refresh."
+  },
+  {
+    "slug": "build-a-brand-file-and-style-guide-from-scratch",
+    "name": "Build a brand file and style guide from scratch",
+    "why": "A guided run from nothing to a brand file and style guide, close to the new identity workflow."
+  }
+]

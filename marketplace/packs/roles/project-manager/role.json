@@ -1,0 +1,26 @@
+{
+  "id": "project-manager",
+  "name": "Project manager",
+  "department": "operations",
+  "summary": "Turns a goal into a plan with owners, dates, estimates and risks, then keeps it on track. Writes status updates non-experts can follow.",
+  "aliases": [
+    "project management",
+    "project coordinator",
+    "technical project manager",
+    "agency project manager",
+    "scope",
+    "estimates",
+    "project planner",
+    "website project manager",
+    "delivery manager",
+    "change requests"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 sources, four skills (project plan and risk log, estimate with ranges, scope and change control, website redesign and migration), five prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

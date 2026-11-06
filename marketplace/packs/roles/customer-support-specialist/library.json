@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "customer-inbox-triage-and-reply-drafter",
+    "name": "Customer inbox triage and reply drafter",
+    "why": "Ranks new customer emails and drafts a checked reply for each, the same run as the triage skill."
+  },
+  {
+    "slug": "clear-your-support-inbox-and-turn-fixes-into-help-pages",
+    "name": "Clear your support inbox and turn fixes into help pages",
+    "why": "Clears open tickets and turns each fix into a help page, like the backlog prompt plus the weekly step."
+  },
+  {
+    "slug": "monthly-returns-and-refunds-reviewer",
+    "name": "Monthly returns and refunds reviewer",
+    "why": "Finds the products driving refunds and the first fix to make, matching the monthly review workflow."
+  },
+  {
+    "slug": "returns-policy-designer",
+    "name": "Returns policy designer",
+    "why": "Sets refund timing, keep-it rules and a recovery budget from returns data, before the policy rewrite."
+  },
+  {
+    "slug": "angry-customer-reply-writer",
+    "name": "Angry customer reply writer",
+    "why": "A reply that names the feeling and fixes what it can without false promises."
+  },
+  {
+    "slug": "apology-email-writer",
+    "name": "Apology email writer",
+    "why": "A short apology that owns the mistake and states the fix, for the hard-case templates."
+  },
+  {
+    "slug": "monthly-help-centre-keeper",
+    "name": "Monthly help centre keeper",
+    "why": "Finds questions the help pages miss each month, in the spirit of capture-and-improve."
+  },
+  {
+    "slug": "help-article-from-ticket-writer",
+    "name": "Help article writer from support tickets",
+    "why": "Turns a group of tickets about one problem into a help article in the customer's words."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Builds an FAQ page from real customer questions and approved answers."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Checked replies to public reviews, with risky ones held for the owner."
+  },
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Finds wrong bot answers against approved help text, so bots stay inside the policy."
+  },
+  {
+    "slug": "delivery-update-flow-builder",
+    "name": "Delivery update flow builder",
+    "why": "Delivery updates and a delay script that cut 'where is my order' tickets before they arrive."
+  }
+]

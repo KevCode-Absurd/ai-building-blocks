@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "weekly-customer-health-watcher",
+    "name": "Weekly customer health watcher",
+    "why": "Runs the weekly health check from account usage, matching the weekly account health run workflow."
+  },
+  {
+    "slug": "monthly-renewal-watcher",
+    "name": "Monthly renewal watcher",
+    "why": "Lists renewals due in the next 90 days with the risk on each, the first step of the renewal cycle."
+  },
+  {
+    "slug": "customer-onboarding-keeper",
+    "name": "Customer onboarding keeper",
+    "why": "Finds where each week's new customers stall in the first 30 days, the stuck signals from the onboarding skill."
+  },
+  {
+    "slug": "new-customer-onboarding-sequence-writer",
+    "name": "New customer onboarding sequence writer",
+    "why": "Drafts a welcome email and text series that pairs with the first-win plan."
+  },
+  {
+    "slug": "make-onboarding-instructions-match-the-product",
+    "name": "Make onboarding instructions match the product",
+    "why": "Checks that setup guides match the real product, so no step in the onboarding plan is invented."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Tracks monthly cancels and whether last month's fix worked, alongside the churn reasons breakdown prompt."
+  },
+  {
+    "slug": "cancel-reason-save-planner",
+    "name": "Cancel reason save planner",
+    "why": "Matches one save option to each cancel reason, the core of the fair cancel flow skill."
+  },
+  {
+    "slug": "subscription-cancel-flow-builder",
+    "name": "Subscription cancel flow builder",
+    "why": "Builds the cancel flow screens and a failed-payment plan from your portal options."
+  },
+  {
+    "slug": "win-back-flow-builder",
+    "name": "Win-back flow builder",
+    "why": "Times win-back messages to how former customers actually come back."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "Checks a planned price change or retention discount against margin before the announcement goes out."
+  },
+  {
+    "slug": "prepare-an-enterprise-account-plan",
+    "name": "Prepare an enterprise account plan",
+    "why": "Maps buyer roles and risks for a large account, useful input for a success plan and quarterly review."
+  },
+  {
+    "slug": "angry-customer-reply-writer",
+    "name": "Angry customer reply writer",
+    "why": "Drafts a calm reply to an unhappy customer before a save call."
+  }
+]

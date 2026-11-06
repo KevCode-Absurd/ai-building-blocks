@@ -1,0 +1,26 @@
+{
+  "id": "customer-support-specialist",
+  "name": "Customer support specialist",
+  "department": "customer-support",
+  "summary": "Answers customer emails and messages clearly and kindly, including returns, refunds and warranty claims. Keeps every reply true to the business's own policy.",
+  "aliases": [
+    "customer service",
+    "customer support",
+    "support agent",
+    "help desk",
+    "returns",
+    "refunds",
+    "zendesk",
+    "gorgias",
+    "warranty claims",
+    "reply templates"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 26 checked sources (customer effort, KCS, help desk macros and AI agents, US, UK and EU rules on returns, refunds, warranties, card disputes, reviews and data requests), four skills, five prompts, two workflows, training interview and test briefs. Access follows the three access levels (read; read and draft; read, write and publish within the client's limits)."
+    }
+  ]
+}

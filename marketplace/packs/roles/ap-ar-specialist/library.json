@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "weekly-invoice-and-cash-chaser",
+    "name": "Weekly invoice and cash chaser",
+    "why": "Runs the weekly chase: who to chase, a reminder for each late payer and a 30, 60 and 90 day cash view, matching the overdue invoice chase skill."
+  },
+  {
+    "slug": "get-a-late-invoice-paid-and-keep-the-customer",
+    "name": "Get a late invoice paid and keep the customer",
+    "why": "A full run for one late invoice: a warm reminder, a range the customer can meet and a firm follow-up."
+  },
+  {
+    "slug": "payment-reminder-letter-writer",
+    "name": "Payment reminder letter writer",
+    "why": "Writes one reminder letter from the invoice facts and the customer history, for the steps on the tone ladder."
+  },
+  {
+    "slug": "invoice-maker",
+    "name": "Invoice maker",
+    "why": "Builds a single invoice with totals checked, once the invoice template is set up."
+  },
+  {
+    "slug": "check-supplier-invoices-before-approval",
+    "name": "Check supplier invoices before approval",
+    "why": "Matches supplier invoices into a register and lists amounts to investigate, the same job as the supplier invoice check skill."
+  },
+  {
+    "slug": "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+    "name": "Code vendor bills, flag odd ones and find supplier savings",
+    "why": "Codes a batch of bills, flags odd ones and finds the biggest supplier savings, useful before a payment run."
+  },
+  {
+    "slug": "recurring-invoice-exception-review-assistant",
+    "name": "Recurring invoice exception review assistant",
+    "why": "Reviews recurring invoices for new exceptions each cycle, for subscriptions and retainers billed on a schedule."
+  },
+  {
+    "slug": "supplier-payment-terms-planner",
+    "name": "Supplier terms and float planner",
+    "why": "Works out the cash float from supplier terms and which terms to ask for, feeding the payment run plan."
+  },
+  {
+    "slug": "monthly-contract-renewal-keeper",
+    "name": "Monthly contract renewal keeper",
+    "why": "Catches supplier contract renewals, notice dates and price rises before the bills arrive."
+  },
+  {
+    "slug": "prepare-a-seasonal-cash-buffer",
+    "name": "Prepare a seasonal cash buffer",
+    "why": "Builds a dated cash forecast with a downside case, for businesses whose receipts swing by season."
+  },
+  {
+    "slug": "disagreement-calming-line-writer",
+    "name": "Disagreement calming line writer",
+    "why": "Prepares calm replies for a payment call where the customer is likely to dispute or push back."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Excel specifications and limits",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 1,048,576 rows by 16,384 columns; 15-digit precision; formula length 8,192 characters; 64 nesting levels; 255 arguments; applies to Excel for Microsoft 365, 2024, 2021, 2019 and 2016."
+  },
+  {
+    "n": 2,
+    "title": "XLOOKUP function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Syntax; exact match by default; if_not_found argument; binary search needs sorted data; not available in Excel 2016 and Excel 2019."
+  },
+  {
+    "n": 3,
+    "title": "LET function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/let-function-34842dd8-b92b-4d3f-b325-b8b8f9908999",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. LET names calculation results inside a formula; up to 126 name and value pairs; a repeated expression is calculated once; Microsoft 365, Excel 2024 and Excel 2021."
+  },
+  {
+    "n": 4,
+    "title": "LAMBDA function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/lambda-function-bd212d27-1cd1-4321-a34a-ccbf254b8b67",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Custom functions with no VBA; named LAMBDAs in Name Manager; up to 253 parameters; applies to Microsoft 365 and Excel 2024, not Excel 2021."
+  },
+  {
+    "n": 5,
+    "title": "Dynamic array formulas and spilled array behavior",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Results spill into neighbouring cells; #SPILL! when the range is blocked; spilled array formulas are not supported in Excel tables."
+  },
+  {
+    "n": 6,
+    "title": "Floating-point arithmetic may give inaccurate result in Excel",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/microsoft-365-apps/excel/floating-point-arithmetic-inaccurate-result",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 15 Apr 2026). Excel follows IEEE 754 with 15 digits of precision; 0.1 cannot be stored exactly; use ROUND; Set precision as displayed permanently loses data."
+  },
+  {
+    "n": 7,
+    "title": "Using structured references with Excel tables",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Structured references use table and column names and adjust automatically when rows or columns are added, removed or renamed."
+  },
+  {
+    "n": 8,
+    "title": "Apply data validation to cells",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Validation types (whole number, decimal, list, date, time, text length, custom); Stop alerts force a fix; settings cannot be changed when the sheet is protected or the workbook shared."
+  },
+  {
+    "n": 9,
+    "title": "Protect a worksheet",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/excel/protect-a-worksheet",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Worksheet level protection isn't intended as a security feature; cells are locked by default; Microsoft cannot retrieve a forgotten password."
+  },
+  {
+    "n": 10,
+    "title": "Set automatic data conversions",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/excel/set-automatic-data-conversions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four conversions can be turned off (leading zeros, 15-digit truncation, E notation, letters and numbers to dates); File > Options > Data; Excel for Microsoft 365 and Excel 2024."
+  },
+  {
+    "n": 11,
+    "title": "Excel performance: Tips for optimizing performance obstructions",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/office/vba/excel/concepts/excel-performance/excel-tips-for-optimizing-performance-obstructions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 11 Nov 2025). Minimise the used range; avoid volatile OFFSET and INDIRECT; prefer SUMIFS over SUMPRODUCT arrays; in VBA turn off screen updating, manual calculation and events, then restore; read and write ranges as arrays."
+  },
+  {
+    "n": 12,
+    "title": "Macros from the internet are blocked by default in Office",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/security/internet-macros-blocked",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 31 Jul 2026). Office on Windows blocks macros in files with the Mark of the Web; Current Channel 2206 from 27 Jul 2022; not Mac, mobile or web; Trusted Locations used sparingly; recommended baseline allows only digitally signed macros from trusted publishers."
+  },
+  {
+    "n": 13,
+    "title": "Migrate scripts to the V8 runtime",
+    "publisher": "Google for Developers (Apps Script)",
+    "url": "https://developers.google.com/apps-script/guides/v8-runtime/migration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Rhino runtime was deprecated on 31 January 2026; existing Rhino scripts must be migrated to V8; list of Rhino-only features that need changes."
+  },
+  {
+    "n": 14,
+    "title": "Option Explicit statement",
+    "publisher": "Microsoft Learn (VBA language reference)",
+    "url": "https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/option-explicit-statement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Option Explicit forces explicit declaration of all variables; an undeclared name causes a compile-time error; helps avoid mistyped variable names."
+  },
+  {
+    "n": 15,
+    "title": "Differences between Office Scripts and VBA macros",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/office/dev/scripts/resources/vba-differences",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 16 Nov 2023). Office Scripts run on web, Windows, Mac and Power Automate and only access the workbook; VBA is desktop only with no Power Automate connector; Office Scripts have no workbook events; licence wording."
+  },
+  {
+    "n": 16,
+    "title": "Get started with Copilot in Excel",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/agent-mode-in-excel-a2fd6fe4-97ac-416b-b89a-22f4d1357c7a",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Allow editing (default), Plan and Chat only modes; platform support for Windows, Mac, web, iPad, iPhone and Android."
+  },
+  {
+    "n": 17,
+    "title": "What's New in Excel (February 2026)",
+    "publisher": "Microsoft Tech Community, Excel Blog",
+    "url": "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-february-2026/4496014",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (24 Feb 2026). Agent Mode in Copilot in Excel became available to EU customers on Current Channel and Monthly Enterprise Channel; UK not mentioned."
+  },
+  {
+    "n": 18,
+    "title": "COPILOT function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/excel/functions/copilot-function",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The COPILOT function is no longer available from 14 September 2026; it was preview only; cached results stay but cells return #NAME? on recalculation."
+  },
+  {
+    "n": 19,
+    "title": "Quotas for Google Services",
+    "publisher": "Google for Developers (Apps Script)",
+    "url": "https://developers.google.com/apps-script/guides/services/quotas",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 6 minutes per execution; trigger runtime 90 min a day (consumer) and 6 hours (Workspace); email recipients 100 and 1,500 a day; quotas may change without notice."
+  },
+  {
+    "n": 20,
+    "title": "Best practices (Apps Script)",
+    "publisher": "Google for Developers (Apps Script)",
+    "url": "https://developers.google.com/apps-script/guides/support/best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Minimise service calls; batch reads and writes; example of about 70 seconds cell by cell versus about 1 second batched; use the Cache service."
+  },
+  {
+    "n": 21,
+    "title": "Installable triggers",
+    "publisher": "Google for Developers (Apps Script)",
+    "url": "https://developers.google.com/apps-script/guides/triggers/installable",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Installable triggers always run under the account of the person who created them; time-driven triggers from every minute to monthly; start times can vary within the chosen hour."
+  },
+  {
+    "n": 22,
+    "title": "Authorization scopes (Apps Script)",
+    "publisher": "Google for Developers (Apps Script)",
+    "url": "https://developers.google.com/apps-script/concepts/scopes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scopes are detected automatically and may be broader than needed; set oauthScopes in appsscript.json; always use the least permissive scope set possible."
+  },
+  {
+    "n": 23,
+    "title": "Files you can store in Google Drive",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/37603",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Sheets files hold up to 20 million cells or 100 MB."
+  },
+  {
+    "n": 24,
+    "title": "Protect, hide, and edit sheets",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/1218656",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Protected ranges can show a warning or restrict editors; protection should not be used as a security measure because people with access can still copy and export data."
+  },
+  {
+    "n": 25,
+    "title": "Use the AI function in Google Sheets",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/15877199",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AI function sees only the given range; first 350 selected cells per selection; manual refresh; may suggest inaccurate information."
+  },
+  {
+    "n": 26,
+    "title": "Audits of operational spreadsheets",
+    "publisher": "Raymond R. Panko (author's own site)",
+    "url": "https://panko.com/ssr/Audits.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Known-methodology audits found errors in 84% of 163 spreadsheets (83% in the table); core studies found serious errors in 91% of 55; single inspectors caught 34% to 69% of errors."
+  },
+  {
+    "n": 27,
+    "title": "Spreadsheet development experiments",
+    "publisher": "Raymond R. Panko (author's own site)",
+    "url": "https://panko.com/ssr/DevelopmentExperiments.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Individuals working alone had a cell error rate of 3.2% (1.1% to 5.6% across studies); groups of three or more reduced errors; people have poor intuition about their own error rates."
+  },
+  {
+    "n": 28,
+    "title": "The FAST Standard",
+    "publisher": "The FAST Standard Organisation",
+    "url": "https://www.fast-standard.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. FAST means Flexible, Appropriate, Structured, Transparent; current version 02c (July 2019), released under a Creative Commons licence."
+  },
+  {
+    "n": 29,
+    "title": "Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogoff (Working Paper 322, April 2013)",
+    "publisher": "Political Economy Research Institute, University of Massachusetts Amherst",
+    "url": "https://peri.umass.edu/publication/item/526-does-high-public-debt-consistently-stifle-economic-growth-a-critique-of-reinhart-and-rogoff",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A spreadsheet error left out Australia, Austria, Belgium, Canada and Denmark; corrected average growth above 90% debt was 2.2%, not -0.1%."
+  },
+  {
+    "n": 30,
+    "title": "Gene name errors are widespread in the scientific literature (Genome Biology 17, 177, 2016)",
+    "publisher": "Ziemann, Eren and El-Osta, Genome Biology (Springer Nature)",
+    "url": "https://link.springer.com/article/10.1186/s13059-016-1044-7",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Excel default settings convert gene symbols such as SEPT2 and MARCH1 to dates; errors in 704 of the articles with Excel gene lists, about 19.6%."
+  }
+]

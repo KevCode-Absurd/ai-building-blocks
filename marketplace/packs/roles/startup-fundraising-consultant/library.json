@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "forecast-your-startup-runway-and-prepare-a-finance-pack",
+    "name": "Forecast your startup runway and prepare a finance pack",
+    "why": "Finds the cash-out date and builds the finance pack, the first step of the round plan: should we raise now?"
+  },
+  {
+    "slug": "prepare-a-funding-pitch-evidence-appendix",
+    "name": "Prepare a funding pitch evidence appendix",
+    "why": "Matches every claim in the pitch to a dated source, the same check the deck skill runs on every number."
+  },
+  {
+    "slug": "pitch-deck-checker-10-20-30",
+    "name": "Pitch deck 10/20/30 checker",
+    "why": "A quick structural check on slide count and talk time to run alongside the deck review prompt."
+  },
+  {
+    "slug": "write-a-short-pitch-and-fix-it-after-every-no",
+    "name": "Write a short pitch and fix it after every no",
+    "why": "Tightens the one-line story and improves it after each pass, useful during practice meetings."
+  },
+  {
+    "slug": "post-money-safe-ownership-checker",
+    "name": "Post-money SAFE ownership checker",
+    "why": "Checks what a cap-only post-money SAFE owns after conversion and a later round, step 3 of the cap table model."
+  },
+  {
+    "slug": "check-a-safe-into-priced-financing",
+    "name": "Check a SAFE into priced financing",
+    "why": "Shows the SAFE stake before a priced round, the pool top-up and pro rata cash, matching the round model."
+  },
+  {
+    "slug": "safe-financing-revision-assistant",
+    "name": "SAFE financing revision assistant",
+    "why": "Reruns the SAFE conversion when round terms change, useful while term sheets are negotiated."
+  },
+  {
+    "slug": "check-a-convertible-note-conversion",
+    "name": "Check a convertible note conversion",
+    "why": "Converts a note with accrued interest at the cap or discount price, for rounds with notes outstanding."
+  },
+  {
+    "slug": "option-pool-top-up-checker",
+    "name": "Option pool top-up checker",
+    "why": "Solves the pool top-up needed to hit a term sheet target and shows who it dilutes."
+  },
+  {
+    "slug": "compare-preferred-exit-payout-terms",
+    "name": "Compare preferred exit payout terms",
+    "why": "Pays out non-participating and capped participating terms side by side, the sale-case step of the term sheet prompt."
+  },
+  {
+    "slug": "weighted-average-antidilution-checker",
+    "name": "Weighted-average antidilution checker",
+    "why": "Works out a weighted-average reset so the founder can see what an anti-dilution clause does before asking the lawyer."
+  },
+  {
+    "slug": "bad-news-update-writer",
+    "name": "Bad news update writer",
+    "why": "Writes an update that opens with the loss and the real numbers, for the months the investor update skill calls hard."
+  }
+]

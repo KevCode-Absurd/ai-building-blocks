@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "title": "PRSA Code of Ethics",
+    "publisher": "Public Relations Society of America",
+    "url": "https://www.prsa.org/about/prsa-code-of-ethics",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Core values (advocacy, honesty, expertise, independence, loyalty, fairness); gifts to journalists modest and rare; reveal sponsors of causes; correct errors; front groups improper; first developed in 1950"
+  },
+  {
+    "n": 2,
+    "title": "CIPR Code of Conduct",
+    "publisher": "Chartered Institute of Public Relations (UK)",
+    "url": "https://www.cipr.co.uk/CIPR/About_Us/Governance_/CIPR_Code_of_Conduct.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Never conceal the role of representing a client; check information for accuracy before sharing; declare conflicts; protect confidences; code appendix dated November 2025"
+  },
+  {
+    "n": 3,
+    "title": "CERC: Introduction (2018 update)",
+    "publisher": "US Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/cerc/media/pdfs/CERC_Introduction.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF read locally). Six principles: be first, be right, be credible, express empathy, promote action, show respect; phases preparation, initial, maintenance, resolution; what to say in the initial phase"
+  },
+  {
+    "n": 4,
+    "title": "CERC Manual",
+    "publisher": "US Centers for Disease Control and Prevention",
+    "url": "https://www.cdc.gov/cerc/php/cerc-manual/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Manual chapters on crisis communication plans, spokespersons and working with the media; page dated 20 November 2024, chapters last updated 2014 to 2019"
+  },
+  {
+    "n": 5,
+    "title": "The PESO Model breakdown",
+    "publisher": "Spin Sucks (Gini Dietrich)",
+    "url": "https://spinsucks.com/communication/peso-model-breakdown/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PESO (paid, earned, shared, owned) created by Gini Dietrich, launched in 2014 with the book Spin Sucks; what each media type covers"
+  },
+  {
+    "n": 6,
+    "title": "Barcelona Principles 4.0",
+    "publisher": "AMEC (International Association for the Measurement and Evaluation of Communication)",
+    "url": "https://amecorg.com/barcelona-principles-4-0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fourth version of principles that have existed since 2010; measurement should be meaningful, transparent and outcome-driven. The page text does not list the principles, so none are quoted"
+  },
+  {
+    "n": 7,
+    "title": "Say No to AVEs",
+    "publisher": "AMEC",
+    "url": "https://amecorg.com/say-no-to-aves/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Industry campaign (from June 2017) to stop using advertising value equivalents; supporters call AVEs outdated and flawed; recommends Barcelona Principles and the Integrated Evaluation Framework"
+  },
+  {
+    "n": 8,
+    "title": "Digital News Report 2026: executive summary",
+    "publisher": "Reuters Institute for the Study of Journalism",
+    "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 16 June 2026; 97,520 respondents in 48 markets; trust in news 37%; social and video networks 54% vs news sites and apps 51%; AI chatbots for news 10% weekly (7% the year before); news creators 27%; news podcasts 11%; US trust 25%"
+  },
+  {
+    "n": 9,
+    "title": "EurekAlert! help: embargoes and reporter access",
+    "publisher": "EurekAlert! (AAAS)",
+    "url": "https://www.eurekalert.org/help",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of a news embargo; only legitimate content owners set embargoes; reporters apply for access and sign an embargo agreement"
+  },
+  {
+    "n": 10,
+    "title": "EurekAlert! embargo agreement",
+    "publisher": "EurekAlert! (AAAS)",
+    "url": "https://www.eurekalert.org/embargoagreement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. What reporters agree to: hold news until release time, share with no one, do not upload embargoed material to AI tools; a breach may suspend the reporter and their whole outlet"
+  },
+  {
+    "n": 11,
+    "title": "Selective Disclosure and Insider Trading (Regulation FD), Release 33-7881",
+    "publisher": "US Securities and Exchange Commission",
+    "url": "https://www.sec.gov/rules-regulations/2000/08/selective-disclosure-insider-trading",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Effective 23 October 2000; disclose material nonpublic information to the public simultaneously (intentional) or promptly (24 hours or next NYSE open); covered recipients are market professionals and likely-trading holders, not the news media; a wire press release or Form 8-K counts as public disclosure; website posting alone generally not enough"
+  },
+  {
+    "n": 12,
+    "title": "UK Market Abuse Regulation",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/markets/market-abuse/regulation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Issuers disclose inside information as soon as possible; delay only if three conditions are met, then tell the FCA; EU MAR from 3 July 2016, onshored 31 December 2020; page updated 23 February 2026"
+  },
+  {
+    "n": 13,
+    "title": "Spam policies for Google web search: link spam",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Links with optimized anchor text in press releases distributed on other sites count as link spam; paid links are fine when marked nofollow or sponsored"
+  },
+  {
+    "n": 14,
+    "title": "Qualify your outbound links to Google",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. rel=\"sponsored\" for paid or sponsored links (nofollow still acceptable), rel=\"ugc\" and rel=\"nofollow\""
+  },
+  {
+    "n": 15,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guides revised 2023; free products and payment are material connections that need clear and conspicuous disclosure; reviewers who get free products generally disclose"
+  },
+  {
+    "n": 16,
+    "title": "Influencers' guide to making clear that ads are ads",
+    "publisher": "Advertising Standards Authority and CAP (UK)",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Fourth edition dated 23 October 2026, made with the CMA; covers when creator content is an ad, how to label it, fake reviews and the DMCC Act"
+  },
+  {
+    "n": 17,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rule in effect from 21 October 2024; bans fake reviews and testimonials, undisclosed insider reviews, review suppression and fake social media indicators"
+  },
+  {
+    "n": 18,
+    "title": "Data Breach Response: A Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guide dated August 2023: all states, DC, Puerto Rico and the Virgin Islands have breach notification laws; name one point person for releasing information; do not make misleading statements; publish plain-language answers; what a notice should say"
+  },
+  {
+    "n": 19,
+    "title": "Data protection guide for small business: data breaches",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/sme-data-protection-guide/data-breaches_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GDPR: notify the data protection authority within 72 hours unless the breach is unlikely to pose a risk; tell individuals without undue delay when risk is high; document every breach"
+  },
+  {
+    "n": 20,
+    "title": "Recall Guidance",
+    "publisher": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Recall-Guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CPSC compiles recall handbooks and the business duty to report; separate guides for recall websites, social media, posters and video news releases"
+  },
+  {
+    "n": 21,
+    "title": "Product recalls and alerts",
+    "publisher": "Office for Product Safety and Standards (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/product-recalls-and-alerts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK businesses may need to notify their market surveillance authority of unsafe products; PAS 7100:2022 recall code of practice; page updated 6 October 2026"
+  },
+  {
+    "n": 22,
+    "title": "Falcon Content Update Preliminary Post Incident Report",
+    "publisher": "CrowdStrike",
+    "url": "https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Faulty update 19 July 2024 at 04:09 UTC, reverted 05:27 UTC; preliminary review published 24 July 2024; promised staggered rollouts, customer control, independent reviews and a public root cause analysis"
+  },
+  {
+    "n": 23,
+    "title": "Helping our customers through the CrowdStrike outage",
+    "publisher": "Microsoft (David Weston)",
+    "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 20 July 2024; about 8.5 million Windows devices affected, less than one percent of all Windows machines"
+  },
+  {
+    "n": 24,
+    "title": "Cloudflare outage on November 18, 2025",
+    "publisher": "Cloudflare Blog",
+    "url": "https://blog.cloudflare.com/18-november-2025-outage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Posted the same day; errors from about 11:20 UTC, core traffic restored by 14:30, all systems normal by 17:06; not an attack (first suspected as one); apology; listed follow-up fixes"
+  },
+  {
+    "n": 25,
+    "title": "The State of Journalism 2026",
+    "publisher": "Muck Rack",
+    "url": "https://muckrack.com/resources/research/state-of-journalism",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Annual survey of nearly 1,100 journalists covering what makes a pitch land; full figures sit behind a download form, so none are used in this kit"
+  }
+]

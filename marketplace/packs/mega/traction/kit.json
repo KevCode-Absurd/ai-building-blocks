@@ -1,0 +1,118 @@
+{
+  "id": "traction",
+  "name": "First traction",
+  "book": {
+    "title": "Traction: How Any Startup Can Achieve Explosive Customer Growth",
+    "authors": [
+      "Gabriel Weinberg",
+      "Justin Mares"
+    ],
+    "year": 2015
+  },
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "variants": [
+    "general",
+    "saas",
+    "ecommerce",
+    "local",
+    "coaching"
+  ],
+  "channels": [
+    {
+      "id": "creators-and-newsletters",
+      "name": "Creators, newsletters and podcasts in your niche",
+      "book_chapter": "Targeting blogs"
+    },
+    {
+      "id": "publicity",
+      "name": "Publicity: press and journalists",
+      "book_chapter": "Publicity"
+    },
+    {
+      "id": "unconventional-pr",
+      "name": "Unconventional PR: stunts and customer appreciation",
+      "book_chapter": "Unconventional PR"
+    },
+    {
+      "id": "search-ads",
+      "name": "Search ads (Google, Bing, and ads in AI answers where they exist)",
+      "book_chapter": "Search engine marketing"
+    },
+    {
+      "id": "social-and-display-ads",
+      "name": "Social and display ads (Meta, TikTok, LinkedIn, Reddit, YouTube, display)",
+      "book_chapter": "Social and display ads"
+    },
+    {
+      "id": "offline-ads",
+      "name": "Offline ads (print, radio, TV, outdoor, direct mail)",
+      "book_chapter": "Offline ads"
+    },
+    {
+      "id": "seo-aeo-geo",
+      "name": "SEO plus AI answers (AEO and GEO)",
+      "book_chapter": "Search engine optimisation"
+    },
+    {
+      "id": "content-marketing",
+      "name": "Content marketing",
+      "book_chapter": "Content marketing"
+    },
+    {
+      "id": "email-marketing",
+      "name": "Email marketing",
+      "book_chapter": "Email marketing"
+    },
+    {
+      "id": "viral-and-referral",
+      "name": "Viral loops and referral programmes",
+      "book_chapter": "Viral marketing"
+    },
+    {
+      "id": "engineering-as-marketing",
+      "name": "Free tools as marketing (calculators, templates, widgets, small apps)",
+      "book_chapter": "Engineering as marketing"
+    },
+    {
+      "id": "business-development",
+      "name": "Partnerships and business development",
+      "book_chapter": "Business development"
+    },
+    {
+      "id": "sales",
+      "name": "Sales (outbound and founder-led)",
+      "book_chapter": "Sales"
+    },
+    {
+      "id": "affiliate-programs",
+      "name": "Affiliate and creator commission programmes",
+      "book_chapter": "Affiliate programs"
+    },
+    {
+      "id": "existing-platforms",
+      "name": "Existing platforms (app stores, marketplaces, Google Business Profile, AI assistant and plug-in stores)",
+      "book_chapter": "Existing platforms"
+    },
+    {
+      "id": "trade-shows",
+      "name": "Trade shows",
+      "book_chapter": "Trade shows"
+    },
+    {
+      "id": "offline-events",
+      "name": "Offline events (meetups, workshops, pop-ups)",
+      "book_chapter": "Offline events"
+    },
+    {
+      "id": "speaking-engagements",
+      "name": "Speaking, podcast guesting and webinars",
+      "book_chapter": "Speaking engagements"
+    },
+    {
+      "id": "community-building",
+      "name": "Community building (forums, Discord, Slack, Reddit, groups)",
+      "book_chapter": "Community building"
+    }
+  ]
+}

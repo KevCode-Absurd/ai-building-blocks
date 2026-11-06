@@ -1,0 +1,26 @@
+{
+  "id": "communications-coordinator",
+  "name": "Communications coordinator",
+  "department": "content",
+  "summary": "Writes the newsletters, notices and welcome messages for schools, churches, nurseries and community groups. Keeps a warm, clear voice for parents and members.",
+  "aliases": [
+    "church communications",
+    "school newsletter",
+    "parent communications",
+    "communications officer",
+    "newsletter",
+    "community notices",
+    "comms calendar",
+    "internal communications",
+    "impact report",
+    "plain language"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: a comms calendar across newsletter, website, social, press and internal channels, approval and sign-off chains, house style, plain language from GOV.UK, Digital.gov and the EU, accessible documents and emails, email and photo consent basics for the US, UK and EU, impact report honesty, access levels 1 to 3 with a fresh yes for formal statements and all-staff or all-customer sends, and 27 checked sources."
+    }
+  ]
+}

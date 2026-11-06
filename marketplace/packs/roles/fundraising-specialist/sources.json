@@ -1,0 +1,226 @@
+[
+  {
+    "n": 1,
+    "title": "Charitable contributions: written acknowledgments",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page reviewed 28 June 2026). A written acknowledgment is needed for a contribution of $250 or more; it must give the organisation name, cash amount, a description (not value) of non-cash gifts, and a no-goods statement or a description and good-faith estimate of goods or services given, or an intangible religious benefits statement"
+  },
+  {
+    "n": 2,
+    "title": "Charitable contributions: quid pro quo contributions",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-quid-pro-quo-contributions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page reviewed 28 June 2026). Disclosure needed when a payment over $75 is partly for goods or services: the deductible amount and a good-faith estimate of value, at solicitation or receipt; penalty $10 per contribution up to $5,000 per event or mailing; exceptions for insubstantial value, no donative element, intangible religious benefits and membership benefits of $75 or less a year"
+  },
+  {
+    "n": 3,
+    "title": "Publication 1771: Charitable contributions, substantiation and disclosure requirements (Rev. 11-2023)",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/pub/irs-pdf/p1771.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF text extracted locally). Donors are responsible for getting the acknowledgment and charities must assist; it must be received by the earlier of the filing date or the due date including extensions; charities typically send by 31 January; annual summaries and email are acceptable; no SSN needed; separate gifts under $250 are not aggregated; low-cost article amounts are 2023 figures adjusted for inflation"
+  },
+  {
+    "n": 4,
+    "title": "Charitable solicitation: initial state registration",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-solicitation-initial-state-registration",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page reviewed 28 June 2026). About 40 states have charitable solicitation statutes; most require registration before soliciting their residents; exemptions vary by state; points to each state's website"
+  },
+  {
+    "n": 5,
+    "title": "Issuing receipts",
+    "publisher": "Canada Revenue Agency",
+    "url": "https://www.canada.ca/en/revenue-agency/services/charities-giving/charities/operating-a-registered-charity/issuing-receipts.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (date modified 2019-02-22). CRA guidance on who may issue official donation receipts, required contents, split receipting, events and correcting receipts; listed for Canadian clients without detail"
+  },
+  {
+    "n": 6,
+    "title": "Claim Gift Aid as a charity or CASC (printable guide)",
+    "publisher": "HM Revenue and Customs, GOV.UK",
+    "url": "https://www.gov.uk/claim-gift-aid/print",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 25p per GBP 1 from individuals; the donor must have paid enough Income Tax or CGT; declaration contents; ineligible payments; keep declarations 6 years after the last donation claimed; claim within 4 years; claims over 1,000 donations need software; Charities Online or ChR1; GASDS for cash or contactless gifts of GBP 30 or less, up to GBP 2,000 a year, capped at 10 times the Gift Aid claim, claimed within 2 years"
+  },
+  {
+    "n": 7,
+    "title": "Charity fundraising: a guide to trustee duties (CC20)",
+    "publisher": "Charity Commission for England and Wales, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/charity-fundraising-a-guide-to-trustee-duties-cc20/charities-and-fundraising",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (first published 7 June 2016, updated 3 February 2026). Trustee duties; fundraising plan; register with the Fundraising Regulator and follow the Code; solicitation statements for staff paid over GBP 10 a day or GBP 1,000 a year, professional fundraisers and commercial participators; written agreements first; registered status and number on materials for income over GBP 10,000; restricted funds and secondary purposes; vulnerable people; data security; annual report duties for larger charities; complaints routes"
+  },
+  {
+    "n": 8,
+    "title": "Raising money for charity: public guidance",
+    "publisher": "Charity Commission for England and Wales, GOV.UK",
+    "url": "https://www.gov.uk/guidance/raising-money-for-charity-public-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 12 June 2026). Give the charity name and number; say whether funds are general or for a specific purpose; state a secondary purpose for leftovers; disclose expenses at the outset; read platform fees including optional tips; fundraising for an individual is unregulated but must not imply charity; the Fundraising Regulator covers England, Wales and Northern Ireland"
+  },
+  {
+    "n": 9,
+    "title": "Code of Fundraising Practice",
+    "publisher": "Scottish Fundraising Adjudication Panel",
+    "url": "https://goodfundraising.scot/code-of-fundraising-practice/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Used because fundraisingregulator.org.uk returned HTTP 403 to automated fetches. The Code moved to the Fundraising Regulator on 7 July 2016; the new principles-based Code took effect 1 November 2025 after a May to November 2025 transition; the regulator published guides on due diligence, documenting decisions and monitoring partnerships"
+  },
+  {
+    "n": 10,
+    "title": "Fundraising regulation in the UK",
+    "publisher": "Scottish Fundraising Adjudication Panel",
+    "url": "https://goodfundraising.scot/fundraising-regulation-in-the-uk/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Panel handles complaints about Scottish charities; the Fundraising Regulator covers England and Wales and, after a June 2017 decision, Northern Ireland; a lead-regulator model applies to charities registered in both"
+  },
+  {
+    "n": 11,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations",
+    "publisher": "Department for Science, Innovation and Technology, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 27 June 2025). The soft opt-in for charities: marketing emails and texts to people who have shown interest in or support for the charity, with a chance to refuse at collection and later, only for fundraising or promoting the charity's own work"
+  },
+  {
+    "n": 12,
+    "title": "Data Use and Access Act 2025: plans for commencement",
+    "publisher": "Department for Science, Innovation and Technology, GOV.UK",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 12 October 2026). Most Part 5 data protection and privacy provisions came into force on 5 February 2026 (Commencement No. 6 Regulations 2026); the page does not name the charity soft opt-in section, so its start date is among the least sure facts"
+  },
+  {
+    "n": 13,
+    "title": "Data protection and online privacy",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (checked by the EU 05/08/2026). Prior opt-in consent for marketing emails; the right to object to direct marketing at any time, explained at first contact; the existing-customer exception"
+  },
+  {
+    "n": 14,
+    "title": "360Giving",
+    "publisher": "360Giving (Funders Together)",
+    "url": "https://www.360giving.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 355 funders, about 2 million grants and GBP 339bn of grants data published to the 360Giving Data Standard; GrantNav is a free search engine for that data"
+  },
+  {
+    "n": 15,
+    "title": "Nonprofit Explorer",
+    "publisher": "ProPublica",
+    "url": "https://projects.propublica.org/nonprofits/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search Forms 990, 990-EZ and 990-PF, with full filings where possible, email alerts and an API"
+  },
+  {
+    "n": 16,
+    "title": "Candid pricing",
+    "publisher": "Candid",
+    "url": "https://candid.org/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free plan with limited search and profile views; Premium adds unlimited search, grants data, the AI fundraising assistant, funders of your peers and the Claude connector; Ultimate adds Landscapes and compliance data; Enterprise is custom"
+  },
+  {
+    "n": 17,
+    "title": "National Lottery Awards for All England",
+    "publisher": "The National Lottery Community Fund",
+    "url": "https://www.tnlcommunityfund.org.uk/funding/funding-programmes/national-lottery-awards-for-all-england",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GBP 300 to 20,000 for up to 2 years; decision in about 16 weeks; four priorities (bringing people together, places and spaces, reaching potential early, cost-of-living pressures); environment projects go to a separate programme"
+  },
+  {
+    "n": 18,
+    "title": "Fundraising Effectiveness Project: 2026 Q2 report",
+    "publisher": "Fundraising Effectiveness Project",
+    "url": "https://publications.fepreports.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026 Q2 year to date: dollars up 6.6%, donors down 1.6%, retention 26.4% (down 0.4 points), 11.3% of donors acquired in 2025 gave again by the end of Q2; 17.0K organisations, 5.7M donors, $8.1B"
+  },
+  {
+    "n": 19,
+    "title": "Fundraising Effectiveness Project: methodology improvements",
+    "publisher": "Fundraising Effectiveness Project",
+    "url": "https://publications.fepreports.org/methodology-improvements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Quarterly rebuilt panel, equal reporting window, size weighting removed, $25M cap; retention is a year-over-year, year-to-date comparison; results are not directly comparable with older reports"
+  },
+  {
+    "n": 20,
+    "title": "M+R Benchmarks 2026: Fundraising",
+    "publisher": "M+R",
+    "url": "https://mrbenchmarks.com/fundraising",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2025 data from 180 participants: online revenue up 15%, one-time up 17%, monthly up 12%, monthly giving 27% of online revenue, average direct mail gift $120, average DAF gift $1,430; do not compare with earlier editions"
+  },
+  {
+    "n": 21,
+    "title": "M+R Benchmarks 2026: Email messaging",
+    "publisher": "M+R",
+    "url": "https://mrbenchmarks.com/email-messaging",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2025: fundraising email response rate 0.05%, click-through 0.59%, $54 per 1,000 fundraising emails, 50 emails per subscriber a year including 31 appeals, 12% of the starting list lost to unsubscribes; averages and medians wording unclear"
+  },
+  {
+    "n": 22,
+    "title": "UK Giving Report 2026",
+    "publisher": "Charities Aid Foundation",
+    "url": "https://www.cafonline.org/insights/research/uk-giving-report",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The British public donated GBP 14bn in 2025; one in five people say they cannot afford to give"
+  },
+  {
+    "n": 23,
+    "title": "Does Price Matter in Charitable Giving? Evidence From a Large-Scale Natural Field Experiment (Working Paper 12338)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w12338",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dean Karlan and John A. List, June 2006: over 50,000 prior donors; a match offer raised revenue per solicitation and the probability of giving; 2:1 and 3:1 ratios did no better than 1:1"
+  },
+  {
+    "n": 24,
+    "title": "Do Thank-You Calls Increase Charitable Giving? Expert Forecasts and Field Experimental Evidence",
+    "publisher": "American Economic Association",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/app.20210068",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Anya Samek and Chuck Longfield, AEJ: Applied Economics 15(2), April 2023: 500,000 new donors randomised to a thank-you call or none; experts forecast an 80% retention rise; a precisely estimated null effect"
+  },
+  {
+    "n": 25,
+    "title": "Psychic numbing",
+    "publisher": "Arithmetic of Compassion (Decision Research)",
+    "url": "https://www.arithmeticofcompassion.org/psychic-numbing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Psychic numbing explained; cites Paul Slovic (2007) in Judgment and Decision Making; links a PLOS ONE study finding compassion starts to fade as the number at risk goes from one to two"
+  },
+  {
+    "n": 26,
+    "title": "Cygnus Applied Research",
+    "publisher": "Cygnus Applied Research",
+    "url": "https://www.cygresearch.com/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Penelope Burk's Donor-Centered Fundraising books; Cygnus originated the trademarked Donor-Centered Fundraising philosophy and runs donor research"
+  },
+  {
+    "n": 27,
+    "title": "Rogare: the independent fundraising think tank",
+    "publisher": "Rogare",
+    "url": "https://www.rogare.net/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Describes itself as an independent fundraising think tank; argues the lack of fundraising theory has led to poor and inconsistent decisions on ethics and regulation"
+  },
+  {
+    "n": 28,
+    "title": "The 100% model",
+    "publisher": "charity: water",
+    "url": "https://www.charitywater.org/our-approach/100-percent-model",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 100% of public donations fund water projects; operations are funded by The Well, The Pool, brand partnerships, investment earnings and gifts in kind; separate bank accounts; more than 1 million people have given"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "sdr",
+  "name": "Sales development representative (SDR)",
+  "department": "sales",
+  "summary": "Finds and researches the right prospects, then opens conversations by email and phone. Books meetings for the person who closes.",
+  "aliases": [
+    "sdr",
+    "bdr",
+    "lead generation",
+    "cold email",
+    "cold calling",
+    "appointment setter",
+    "prospecting",
+    "outbound sales",
+    "business development representative",
+    "inbound lead response"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 checked sources (US, UK and EU cold email and calling rules, mailbox sender rules, LinkedIn terms, speed to lead, lead scoring and public company records), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "amazon-ppc-specialist",
+  "name": "Amazon PPC specialist",
+  "department": "ecommerce",
+  "summary": "Runs Amazon Ads (Sponsored Products, Brands and Display). Harvests search terms, sets negatives and judges ACoS against each product's margin.",
+  "aliases": [
+    "amazon ppc",
+    "amazon ads",
+    "sponsored products",
+    "acos",
+    "amazon advertising",
+    "sponsored brands",
+    "tacos",
+    "amazon ppc manager",
+    "amazon display ads",
+    "amazon ads specialist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Sponsored Products, Sponsored Brands and display ads (formerly Sponsored Display), match types, negatives, bidding strategies, placement adjustments, budgets, search term harvesting, break-even ACOS and TACOS, Amazon Ads Agent, prompts, the Ads MCP server, access levels 1 to 3 and ad claim rules, with 29 checked sources."
+    }
+  ]
+}

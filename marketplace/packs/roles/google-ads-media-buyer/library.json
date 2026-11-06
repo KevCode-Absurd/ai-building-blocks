@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "google-ads-weekly-account-keeper",
+    "name": "Google Ads weekly account keeper",
+    "why": "Runs the weekly routine from your exports: waste cut, a scale-or-hold call and a change list to approve."
+  },
+  {
+    "slug": "search-term-junk-sorter",
+    "name": "Search term junk sorter",
+    "why": "Turns a search terms report into winners to promote and negatives to add, the core of the weekly clean-up."
+  },
+  {
+    "slug": "search-term-sorter",
+    "name": "Search term sorter",
+    "why": "A deeper search terms pass that also says where each negative should go."
+  },
+  {
+    "slug": "google-ads-purchase-tracking-checker",
+    "name": "Google Ads purchase tracking checker",
+    "why": "Checks your conversion actions for double counting before you trust any bidding decision."
+  },
+  {
+    "slug": "google-bid-strategy-chooser",
+    "name": "Google bid strategy chooser",
+    "why": "Picks a bid strategy and target from your campaign results, to pair with the Smart Bidding skill."
+  },
+  {
+    "slug": "brand-and-non-brand-splitter",
+    "name": "Brand and non-brand splitter",
+    "why": "Finds brand traffic leaking into other campaigns and shows your true non-brand return."
+  },
+  {
+    "slug": "google-ads-store-account-auditor",
+    "name": "Google Ads store account auditor",
+    "why": "A scored audit for online shops with a 90-day fix order."
+  },
+  {
+    "slug": "performance-max-routine-keeper",
+    "name": "Performance Max routine keeper",
+    "why": "Weekly Performance Max checks: exclusions, budget moves and where the spend goes."
+  },
+  {
+    "slug": "performance-max-launch-planner",
+    "name": "Performance Max launch planner",
+    "why": "Decides whether Performance Max fits your catalogue and budget, then plans the build."
+  },
+  {
+    "slug": "merchant-center-feed-health-checker",
+    "name": "Merchant Center feed health checker",
+    "why": "Ranks feed problems by lost sales, because the feed decides which searches your products can show for."
+  },
+  {
+    "slug": "shopping-feed-title-writer",
+    "name": "Shopping feed title writer",
+    "why": "Rewrites product titles around the words people search, one of the biggest Shopping levers."
+  },
+  {
+    "slug": "google-ads-dip-investigator",
+    "name": "Google Ads dip investigator",
+    "why": "Finds the likely cause when results drop and says whether to fix or wait."
+  },
+  {
+    "slug": "break-even-roas-and-cpa-calculator",
+    "name": "Break-even ROAS and CPA calculator",
+    "why": "Works out the most you can pay per sale, the number every target is set against."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check across analytics and ad platforms that catches broken tracking and double counts."
+  }
+]

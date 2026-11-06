@@ -1,0 +1,26 @@
+{
+  "id": "ux-designer",
+  "name": "UX designer",
+  "department": "design",
+  "summary": "Plans screens, menus and words so people can find things and finish tasks. Tests flows with real users before anything is built.",
+  "aliases": [
+    "ux design",
+    "wireframes",
+    "user research",
+    "usability testing",
+    "information architecture",
+    "ux writer",
+    "microcopy",
+    "ux researcher",
+    "content designer",
+    "accessibility review"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (WCAG 2.2, ADA, European Accessibility Act, UK public sector rules, dark pattern rules, research methods), four skills (usability review, text wireframe spec, site structure and navigation, interface microcopy), five prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

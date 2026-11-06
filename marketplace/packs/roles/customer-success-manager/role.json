@@ -1,0 +1,26 @@
+{
+  "id": "customer-success-manager",
+  "name": "Customer success manager",
+  "department": "customer-support",
+  "summary": "Gets new customers to their first win fast, spots the ones about to leave and grows the ones who stay. Runs onboarding, check-ins and renewals.",
+  "aliases": [
+    "customer success",
+    "csm",
+    "account manager",
+    "client onboarding",
+    "renewals",
+    "churn reduction",
+    "customer retention",
+    "customer health score",
+    "cancellation save desk",
+    "quarterly business review"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 28 checked sources (desired outcome, time to value, NPS, retention benchmarks, Stripe and HubSpot tools, US, UK and EU subscription, cancellation, email and AI disclosure rules), four skills, five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 // /connect: how to connect Claude, ChatGPT or another AI app to AI Blocks and load agents there, the public API, and
 // the person's connected apps. Agents run on the person's own AI; AI Blocks runs no work for them.
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { Badge, Button, Card, Loaded, Notice, Page, useLoad } from "../../components.tsx";
 import { api, when } from "../../lib/api.ts";
 import { useAuth } from "../../lib/auth.tsx";
+import { CONNECT_TITLE } from "../../../modules/directory/titles.ts";
 
 interface Connection { id: string; client_name: string; redirect_host: string; scopes: { id: string; label: string }[]; created_at: string; last_used_at: string | null }
 
@@ -65,6 +66,8 @@ function Connections() {
 export function Connect() {
   const auth = useAuth();
   const address = `${location.origin}/mcp`;
+  // The same title the Worker sends (src/pages.ts); this runs after Page sets its own.
+  useEffect(() => { document.title = CONNECT_TITLE; }, []);
   return (
     <Page title="Connect your AI" intro="Add AI Blocks to Claude, ChatGPT or another AI app once. Then ask it to find an agent and load it into your chat. The agent is free and works on your own AI plan.">
       <div class="stack">

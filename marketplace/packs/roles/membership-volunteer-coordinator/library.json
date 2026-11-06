@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "build-a-volunteer-induction-checklist",
+    "name": "Build a volunteer induction checklist",
+    "why": "Turns volunteer roles and rules into an induction procedure with sign-offs, a supervised practice plan and supervision gaps."
+  },
+  {
+    "slug": "volunteer-induction-evidence-review-assistant",
+    "name": "Volunteer induction evidence review assistant",
+    "why": "Checks each volunteer's induction records against their role and lists what is missing, without clearing anyone."
+  },
+  {
+    "slug": "honest-appreciation-note-writer",
+    "name": "Honest appreciation note writer",
+    "why": "Writes a short thank-you with one true detail and no ask, the core of volunteer and member thanks."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Builds reminders with a new reason each time, send timing and a stop rule, the shape of a renewal set."
+  },
+  {
+    "slug": "rough-notes-to-minutes-writer",
+    "name": "Rough notes to minutes writer",
+    "why": "Turns a secretary's rough notes into short minutes with decisions, owners and dates."
+  },
+  {
+    "slug": "weekly-meeting-actions-keeper",
+    "name": "Weekly meeting actions keeper",
+    "why": "Keeps committee actions moving between meetings and drafts the next agenda with late items first."
+  },
+  {
+    "slug": "run-a-meeting-worth-holding-from-agenda-to-action-items",
+    "name": "Run a meeting worth holding, from agenda to action items",
+    "why": "Helps a committee decide which meetings to hold and turn each one into owned actions."
+  },
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Drafts and checks each member newsletter issue from the club's notes, in the club's voice."
+  },
+  {
+    "slug": "make-a-new-policy-understandable-to-staff",
+    "name": "Make a new policy understandable to staff",
+    "why": "Explains a new club rule or volunteer policy in plain words, with an announcement and a rollout list."
+  },
+  {
+    "slug": "prepare-a-community-event-access-plan",
+    "name": "Prepare a community event access plan",
+    "why": "Plans who does what at a volunteer-run community event, from arrival to exit."
+  }
+]

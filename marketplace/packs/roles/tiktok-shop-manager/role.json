@@ -1,0 +1,26 @@
+{
+  "id": "tiktok-shop-manager",
+  "name": "TikTok Shop manager",
+  "department": "ecommerce",
+  "summary": "Launches and runs a TikTok Shop: product picks, listings, LIVE selling and shoppable videos. Checks margin after platform fees.",
+  "aliases": [
+    "tiktok shop",
+    "live selling",
+    "social commerce",
+    "shoppable video",
+    "tiktok seller",
+    "tiktok shop affiliate",
+    "tiktok live shopping",
+    "creator commerce",
+    "tiktok shop listings",
+    "tiktok shop manager"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: hero picks with margin after fees, listings, shoppable videos, LIVE run sheets, creators and samples, fulfilment and returns, FTC, ASA, CMA and EU disclosure and price rules, access levels 1 to 3, four skills, five prompts, two workflows, 28 sources. TikTok's own help pages blocked fetching, so TikTok fees and rules are read live."
+    }
+  ]
+}

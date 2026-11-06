@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "Use clear language (writing to GOV.UK standards)",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Split sentences over 25 words; no more than 5 sentences a paragraph; active voice; plain words; explain specialist terms; positive contractions such as \"you'll\" are fine; literacy figures for the four UK nations."
+  },
+  {
+    "n": 2,
+    "title": "Plain language guide series",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain language as content the audience understands; the Plain Writing Act of 2010 requires public content written for its audience; adapts the archived PlainLanguage.gov content (plainlanguage.gov now redirects here)."
+  },
+  {
+    "n": 3,
+    "title": "Plain language: writing",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language/writing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Active voice, present tense, avoid hidden verbs (nouns made from verbs)."
+  },
+  {
+    "n": 4,
+    "title": "How to write clearly",
+    "publisher": "European Commission, Directorate-General for Translation (Publications Office of the EU)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/c2dab20c-0414-408d-87b5-dd3c6e5dd9a5",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EU clear writing guide published 2011, available in the 24 official EU languages."
+  },
+  {
+    "n": 5,
+    "title": "Voice qualities (tutorial: rate of speech)",
+    "publisher": "National Center for Voice and Speech",
+    "url": "https://ncvs.org/archive/ncvs/tutorials/voiceprod/tutorial/quality.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Average rate of speech for US English speakers is about 150 words per minute."
+  },
+  {
+    "n": 6,
+    "title": "Rehearse your slide show with Speaker Coach",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/rehearse-your-slide-show-with-speaker-coach-cd7fc941-5c3b-498c-a225-83ef3f64f07b",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Checks pacing, pitch, filler words, informal speech, euphemisms, culturally sensitive terms and reading slide text; platforms; English only; report disappears when closed."
+  },
+  {
+    "n": 7,
+    "title": "Use Presenter View in PowerPoint",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/use-presenter-view-in-powerpoint-fe7638e4-76fb-4349-8d81-5eb6679f49d7",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Presenter view shows current and next slide, speaker notes, a timer and the time; notes text can be made larger."
+  },
+  {
+    "n": 8,
+    "title": "Present slides (Google Slides)",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/1696787",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Presenter view with speaker notes; audience Q&A; captions can be toggled while presenting, English only."
+  },
+  {
+    "n": 9,
+    "title": "Present with real-time, automatic captions or subtitles in PowerPoint",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/present-with-real-time-automatic-captions-or-subtitles-in-powerpoint-68d20e49-aec3-456a-939d-34a79e8ddd5f",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Live captions and translated subtitles in more than 60 languages; needs a fast connection; headset microphone advised; speech is sent to Microsoft."
+  },
+  {
+    "n": 10,
+    "title": "Present slides with captions (Google Slides)",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/9109474",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Captions in Chrome, Edge and Safari; no punctuation; not stored; only the speaker is captioned; accuracy varies with accent and intonation; ask the audience first."
+  },
+  {
+    "n": 11,
+    "title": "Use live captions in Microsoft Teams meetings",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-4be2d304-f675-4b57-8347-cbd000a21260",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Any participant can turn on captions; translated captions need a Teams Premium or Microsoft Copilot licence; CART captions supported; Teams does not save captions."
+  },
+  {
+    "n": 12,
+    "title": "Plan for Teams events",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/plan-events",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 Nov 2026). Event sizes, Speaker Coach in events if the admin allows, AI captions only in large-audience events, translated caption languages, and the advice to always run a dry run."
+  },
+  {
+    "n": 13,
+    "title": "Making Events Accessible: Checklist for meetings, conferences, training, and presentations",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/teach-advocate/accessible-presentations/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 31 Aug 2022). Send slides early in adaptable formats; describe visuals; speak clearly and not too fast; repeat audience questions; brief captioners and interpreters early; CART defined."
+  },
+  {
+    "n": 14,
+    "title": "Understanding Success Criterion 1.2.4: Captions (Live)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 9 Mar 2026). Level AA; captions for live audio in synchronised media; aimed at broadcasts, not two-way calls."
+  },
+  {
+    "n": 15,
+    "title": "ADA Requirements: Effective Communication",
+    "publisher": "US Department of Justice (ADA.gov)",
+    "url": "https://www.ada.gov/resources/effective-communication/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 28 Feb 2020). Title II and III entities; auxiliary aids including CART, captioning and interpreters; primary consideration to the person's choice under Title II."
+  },
+  {
+    "n": 16,
+    "title": "Accessible communication formats",
+    "publisher": "GOV.UK (Cabinet Office, Disability Unit)",
+    "url": "https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 17 Jun 2026). NRCPD-regulated BSL interpreters; captions; Easy Read lead times; large print of 16 point or above; formats available at the same time as the standard version."
+  },
+  {
+    "n": 17,
+    "title": "A new era of inclusion begins: the European Accessibility Act enters into force",
+    "publisher": "AccessibleEU (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EAA applies from 28 June 2025 to listed products and services; speeches and meetings are not named."
+  },
+  {
+    "n": 18,
+    "title": "Writing a business plan",
+    "publisher": "Sequoia Capital",
+    "url": "https://sequoiacap.com/article/writing-a-business-plan/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Order: company purpose, problem, solution, why now, market potential, competition, business model, team, financials, vision."
+  },
+  {
+    "n": 19,
+    "title": "Satya Nadella email to employees on first day as CEO",
+    "publisher": "Microsoft News Center",
+    "url": "https://news.microsoft.com/2014/02/04/satya-nadella-email-to-employees-on-first-day-as-ceo/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 4 Feb 2014 message built on four questions: who am I, why am I here, why are we here, what do we do next."
+  },
+  {
+    "n": 20,
+    "title": "More information on fair use",
+    "publisher": "US Copyright Office",
+    "url": "https://www.copyright.gov/fair-use/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Index updated Nov 2026). Four factors; decided case by case; no safe word count or percentage; not legal advice."
+  },
+  {
+    "n": 21,
+    "title": "Exceptions to copyright",
+    "publisher": "GOV.UK (Intellectual Property Office)",
+    "url": "https://www.gov.uk/guidance/exceptions-to-copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 Jan 2021). Fair dealing for criticism, review or quotation, with sufficient acknowledgement; usually only part of a work."
+  },
+  {
+    "n": 22,
+    "title": "Final Rule: Selective Disclosure and Insider Trading (Regulation FD)",
+    "publisher": "US Securities and Exchange Commission",
+    "url": "https://www.sec.gov/rules-regulations/2000/08/selective-disclosure-insider-trading",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Listed issuers must not disclose material nonpublic information selectively; unintentional disclosure must be made public promptly; effective 23 Oct 2000."
+  },
+  {
+    "n": 23,
+    "title": "UK Market Abuse Regulation",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/markets/market-abuse/regulation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 23 Feb 2026). UK MAR bans unlawful disclosure of inside information and requires prompt disclosure by issuers; it is the UK version of EU MAR."
+  },
+  {
+    "n": 24,
+    "title": "Social anxiety (social phobia)",
+    "publisher": "NHS",
+    "url": "https://www.nhs.uk/mental-health/conditions/social-anxiety/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (reviewed 17 May 2023; next review was due 17 May 2026). See a GP if social anxiety has a big impact; self-referral to NHS talking therapies is possible."
+  }
+]

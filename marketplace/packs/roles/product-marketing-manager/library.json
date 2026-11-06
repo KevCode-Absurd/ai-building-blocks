@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "positioning-statement-writer",
+    "name": "Positioning statement writer",
+    "why": "Writes one clear positioning line from buyer evidence and rivals, with the proof it needs; a quick start for the product-positioning-and-message-sheet skill."
+  },
+  {
+    "slug": "job-statement-rivals",
+    "name": "Write your customers' job and name its real rivals",
+    "why": "Finds the job buyers hire the product for and the real alternatives, the first step of Dunford-style positioning."
+  },
+  {
+    "slug": "map-your-rivals-and-write-a-message-they-cannot-answer",
+    "name": "Map your rivals and write a message they cannot answer",
+    "why": "A full run from rival map to a message rivals cannot easily copy, matching the rival-claim-map prompt."
+  },
+  {
+    "slug": "one-line-position-writer",
+    "name": "One-line position writer",
+    "why": "Finds the one idea to own and how far to stretch it, useful when the team wants to say five things."
+  },
+  {
+    "slug": "rival-gap-message-writer",
+    "name": "Rival gap message writer",
+    "why": "Writes messages from proven strengths against a rival's public weak spots, with the evidence and the rival's likely reply."
+  },
+  {
+    "slug": "claim-and-proof-matcher",
+    "name": "Claim evidence checker",
+    "why": "Lists stated and implied claims and checks each against the proof held, the core of the claims file."
+  },
+  {
+    "slug": "ad-claim-proof-gap-finder",
+    "name": "Ad claim proof gap finder",
+    "why": "Finds claims that the proof does not back and suggests a fix for each, before a page or ad goes live."
+  },
+  {
+    "slug": "comparison-page-set-planner",
+    "name": "Comparison page set planner",
+    "why": "Plans best-of, alternatives and vs pages for each rival; every page it plans still goes through the claims check and a fresh yes."
+  },
+  {
+    "slug": "monthly-competitor-watcher",
+    "name": "Monthly competitor watcher",
+    "why": "Spots what rivals changed each month, feeding the quarterly positioning and rival review."
+  },
+  {
+    "slug": "three-tier-price-ladder-drafter",
+    "name": "Three-tier price ladder drafter",
+    "why": "Drafts a plain, middle and top tier with who each is for, a starting point for the pricing-page-and-packaging-review skill."
+  },
+  {
+    "slug": "pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days",
+    "name": "Pre-sell to three buyers, then launch in thirty days",
+    "why": "A demand-first launch path for small teams, in the spirit of the demand-test-design prompt."
+  },
+  {
+    "slug": "go-or-no-go-launch-checker",
+    "name": "Go or no-go launch checker",
+    "why": "Checks a launch plan for common faults and readiness before money is spent."
+  },
+  {
+    "slug": "smaller-product-launch",
+    "name": "Launch a smaller product on the date you set",
+    "why": "A launch plan sized to a small team and a fixed date, matching the launch-sizing step."
+  },
+  {
+    "slug": "saas-launch-review-agent",
+    "name": "SaaS launch decision agent",
+    "why": "Turns launch results into a dated decision log of what to test, revise or keep, for the day-7 and day-14 reviews."
+  },
+  {
+    "slug": "usp-claim-checker",
+    "name": "USP claim checker",
+    "why": "Scores a selling claim on offer, rivals and pull before spend, a quick screen alongside the message sheet."
+  }
+]

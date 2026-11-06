@@ -1,0 +1,26 @@
+{
+  "id": "sales-enablement-specialist",
+  "name": "Sales enablement specialist",
+  "department": "sales",
+  "summary": "Gives a sales team the decks, playbooks, call coaching and deal plans it needs to win. Turns the best rep's habits into something everyone can follow.",
+  "aliases": [
+    "sales enablement",
+    "sales playbook",
+    "sales coach",
+    "sales deck",
+    "negotiation",
+    "battlecard",
+    "sales training",
+    "call coaching",
+    "sales onboarding",
+    "sell sheet"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 25 checked sources (call recording consent in US federal and state law, EU GDPR and AI Act workplace limits, New York monitoring notice, recording settings in HubSpot, Teams and Meet, claim and comparison rules, competition law, learning evidence and call data), four skills, five prompts, three workflows, training interview and test briefs."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bi-analyst",
+  "name": "Business intelligence (BI) analyst",
+  "department": "data",
+  "summary": "Picks the few numbers that matter, defines them exactly and builds the dashboards and reports people use to decide.",
+  "aliases": [
+    "bi developer",
+    "power bi",
+    "looker studio",
+    "dashboard",
+    "kpi",
+    "reporting analyst",
+    "tableau",
+    "data studio",
+    "metric definitions",
+    "semantic model"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: role knowledge with 28 sources, four skills (metric definition sheet, dashboard build sheet, dashboard review and tie-out, KPI report pack), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

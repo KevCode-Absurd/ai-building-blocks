@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Tips to improve your local ranking on Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7091",
+    "checked": "2026-11-07",
+    "supports": "Local results rest mainly on relevance, distance and prominence; links and review count and rating feed prominence; complete, accurate information, verification, review replies and photos help; there is no way to request or pay for a better local ranking"
+  },
+  {
+    "n": 2,
+    "title": "Guidelines for representing your business on Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3038177",
+    "checked": "2026-11-07",
+    "supports": "Name must match real-world signage with no taglines, keywords or locations added; precise real address, no PO boxes or unstaffed virtual offices; service-area businesses hide the address; local numbers preferred and numbers under the business's direct control; as few and as specific categories as possible; rules for practitioners and multiple locations"
+  },
+  {
+    "n": 3,
+    "title": "Manage your service areas for service-area & hybrid businesses",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/9157481",
+    "checked": "2026-11-07",
+    "supports": "Service areas set by city, postcode or area, not radius; up to 20 service areas; overall boundary no more than about 2 hours' drive from the base; hybrid businesses keep the address; edits can take up to 48 hours"
+  },
+  {
+    "n": 4,
+    "title": "Verify your business on Google",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7107242",
+    "checked": "2026-11-07",
+    "supports": "Verification methods (video recording, live video call, phone or text, email, postcard); Google chooses the methods; reviews take up to 5 business days; postcard codes arrive usually within 14 days and expire after 30; do not edit name, address or category while waiting"
+  },
+  {
+    "n": 5,
+    "title": "Manage your Business Profile owners & managers",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3403100",
+    "checked": "2026-11-07",
+    "supports": "Roles: primary owner, owner, manager (formerly site manager); managers can edit info, reply to reviews, post and manage photos but cannot add or remove users or remove the profile; how to invite a manager; 7-day wait before new users can transfer ownership or remove others"
+  },
+  {
+    "n": 6,
+    "title": "Understand your Business Profile performance & insights",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/9918094?hl=en",
+    "checked": "2026-11-07",
+    "supports": "Metrics: views, searches, directions, calls (call-button clicks), messages, website clicks, bookings; views count each person once a day; search terms update monthly; data only for verified profiles; downloads available"
+  },
+  {
+    "n": 7,
+    "title": "Create & manage posts on your Business Profile",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/7342169",
+    "checked": "2026-11-07",
+    "supports": "Post types (updates, offers, events); posts older than 6 months are archived unless dated; phone numbers in posts may be rejected; Google reviews posts after publishing (live, pending, not approved)"
+  },
+  {
+    "n": 8,
+    "title": "Tips to get more reviews",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474122",
+    "checked": "2026-11-07",
+    "supports": "Ask customers by sharing a review link or QR code; incentives such as free or discounted goods for reviews are strictly prohibited; reply guidance: short, specific, not promotional; value negative reviews"
+  },
+  {
+    "n": 9,
+    "title": "Manage customer reviews",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/3474050",
+    "checked": "2026-11-07",
+    "supports": "Only verified businesses can reply; replies are checked against policy, usually within 10 minutes but up to 30 days; reviewers are notified and can edit their review; replies show as the business"
+  },
+  {
+    "n": 10,
+    "title": "Report inappropriate reviews on your Business Profile",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/4596773",
+    "checked": "2026-11-07",
+    "supports": "Report reviews that break policy from the profile or the Reviews Management Tool; one appeal of up to 10 reviews; Google does not remove reviews just because they are negative or disputed"
+  },
+  {
+    "n": 11,
+    "title": "Changes to Google Business Profile chat and call history",
+    "publisher": "Google Business Profile Help",
+    "url": "https://support.google.com/business/answer/14919062",
+    "checked": "2026-11-07",
+    "supports": "Business Profile chat and call history removed on 31 July 2024; eligible profiles can offer text or WhatsApp contact options; Reserve with Google in some countries"
+  },
+  {
+    "n": 12,
+    "title": "Deprecation schedule (Google Business Profile APIs)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/my-business/content/sunset-dates",
+    "checked": "2026-11-07",
+    "supports": "The Business Profile Q&A API was discontinued on 3 November 2025 with no replacement; the call history API was discontinued on 30 May 2023"
+  },
+  {
+    "n": 13,
+    "title": "Prohibited & restricted content (fake engagement section), Maps User Generated Content Policy",
+    "publisher": "Google",
+    "url": "https://support.google.com/contributionpolicy/answer/7400114",
+    "checked": "2026-11-07",
+    "supports": "Businesses may not offer incentives for reviews, discourage negative reviews, selectively ask for positive reviews, set staff review quotas, pressure customers on the premises, or post on competitors; conflict-of-interest reviews (staff, family) are banned; content is removed and accounts can be suspended"
+  },
+  {
+    "n": 14,
+    "title": "Getting started with Local Services Ads",
+    "publisher": "Local Services Ads Help (Google)",
+    "url": "https://support.google.com/localservices/answer/6224841",
+    "checked": "2026-11-07",
+    "supports": "Local Services Ads appear in a Local Services unit and connect customers by call, message or booking; pay per lead; available only for listed service categories; leads possible before the badge but shown below verified providers; country versions listed for the US, Canada, UK, Ireland, Germany, Austria, Switzerland, France, Italy, Spain and Belgium"
+  },
+  {
+    "n": 15,
+    "title": "How leads work",
+    "publisher": "Local Services Ads Help (Google)",
+    "url": "https://support.google.com/localservices/answer/7195435",
+    "checked": "2026-11-07",
+    "supports": "What counts as a lead (answered or returned calls, missed calls over 20 seconds in business hours, messages, voicemails, booking requests in the US and Canada); weekly budget and monthly maximum; repeat contact within 15 days not charged; 30-day reassessment and automatic credits; credits and call recordings not available in Europe or for some US verticals; billing through Google Ads"
+  },
+  {
+    "n": 16,
+    "title": "About ad rankings (Local Services Ads)",
+    "publisher": "Local Services Ads Help (Google)",
+    "url": "https://support.google.com/localservices/answer/7527305",
+    "checked": "2026-11-07",
+    "supports": "Ranking inputs: bid, responsiveness (missed calls hurt it), search context, relevance of services and bio, lead types enabled, profile quality (rating, review count, response time, images, verification); only the top-ranked location of a business shows for an area"
+  },
+  {
+    "n": 17,
+    "title": "About Google Verified badge",
+    "publisher": "Local Services Ads Help (Google)",
+    "url": "https://support.google.com/localservices/answer/16498018",
+    "checked": "2026-11-07",
+    "supports": "A single Google Verified badge for all Local Services advertisers that pass screening; it does not affect ad ranking; the Money Back Guarantee tied to the Google Guarantee badge is discontinued, with reimbursement requests for bookings made before 7 December 2025"
+  },
+  {
+    "n": 18,
+    "title": "Set up tracking calls to a phone number on a website",
+    "publisher": "Google Ads Help",
+    "url": "https://support.google.com/google-ads/answer/6095883",
+    "checked": "2026-11-07",
+    "supports": "Google forwarding numbers on a website show which ads and keywords lead to calls; a minimum call length decides what counts; available only in some countries; imported call conversions for other call systems"
+  },
+  {
+    "n": 19,
+    "title": "URL builders: Collect campaign data with custom URLs",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10917952",
+    "checked": "2026-11-07",
+    "supports": "UTM parameters; always set utm_source, utm_medium and utm_campaign; values are case sensitive; use lowercase; Campaign URL Builder"
+  },
+  {
+    "n": 20,
+    "title": "Spam policies for Google web search (doorway abuse and scaled content abuse)",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "checked": "2026-11-07",
+    "supports": "Pages targeted at specific regions or cities that funnel users to one page are doorway abuse; mass-produced pages made mainly to rank, including with AI tools, are scaled content abuse"
+  },
+  {
+    "n": 21,
+    "title": "AI features and your website",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "checked": "2026-11-07",
+    "supports": "AI Overviews and AI Mode use pages that are indexed and eligible for a snippet; no extra requirements, special files or schema; traffic is reported under Web in Search Console"
+  },
+  {
+    "n": 22,
+    "title": "Apple Business",
+    "publisher": "Apple",
+    "url": "https://business.apple.com/",
+    "checked": "2026-11-07",
+    "supports": "businessconnect.apple.com now redirects here; claim the business location on Apple Maps with logo, hours and images, custom actions for bookings, insights, and Apple Ads on Apple Maps; availability varies by country"
+  },
+  {
+    "n": 23,
+    "title": "Don't Ask for Reviews",
+    "publisher": "Yelp Support",
+    "url": "https://www.yelp-support.com/article/Don-t-Ask-for-Reviews?l=en_US",
+    "checked": "2026-11-07",
+    "supports": "Yelp asks businesses not to ask anyone for Yelp reviews; its software tends not to recommend solicited reviews; incentives are banned and can trigger a Consumer Alert on the page"
+  },
+  {
+    "n": 24,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials (14 August 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-07",
+    "supports": "The rule bans fake reviews (including AI-generated), incentives conditioned on positive or negative sentiment, undisclosed insider reviews, review suppression by threats or intimidation, and fake social indicators; civil penalties for knowing violations; effective 60 days after Federal Register publication"
+  },
+  {
+    "n": 25,
+    "title": "Fashion Nova will pay $4.2 million as part of settlement of FTC allegations it blocked negative reviews (25 January 2022)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/01/fashion-nova-will-pay-42-million-part-settlement-ftc-allegations-it-blocked-negative-reviews",
+    "checked": "2026-11-07",
+    "supports": "Fashion Nova held back reviews under four stars from late 2015 to November 2019 and agreed to pay $4.2 million; the FTC also warned 10 review management firms that avoiding collecting or publishing negative reviews breaks the FTC Act"
+  },
+  {
+    "n": 26,
+    "title": "CMA secures important changes from Google to tackle fake reviews (24 January 2025)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/news/cma-secures-important-changes-from-google-to-tackle-fake-reviews",
+    "checked": "2026-11-07",
+    "supports": "Google's undertakings: warning alerts on UK business profiles that boosted ratings with fake reviews, review function switched off, repeat offenders' reviews deleted for six months or more, bans for repeat fake reviewers, easier reporting of incentives; plan to extend sanctions beyond the UK; the DMCC Act lets the CMA fine up to 10% of global turnover"
+  },
+  {
+    "n": 27,
+    "title": "Fake reviews: short guide for businesses publishing consumer reviews (CMA, 4 April 2025)",
+    "publisher": "Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/fake-reviews-cma208/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law",
+    "checked": "2026-11-07",
+    "supports": "UK banned practices: fake reviews, concealed incentivised reviews, misleading review information, writing or commissioning fake reviews; businesses that publish reviews need a policy, a risk assessment and reasonable steps"
+  },
+  {
+    "n": 28,
+    "title": "Unfair and blacklisted commercial practices (fake consumer reviews section)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/unfair-treatment/unfair-commercial-practices/index_en.htm",
+    "checked": "2026-11-07",
+    "supports": "EU traders publishing reviews must say how they check reviews come from real customers; altering reviews and paying for fake reviews are prohibited; reviews may be presented as consumer reviews only after reasonable checks; page last checked 28 April 2026"
+  },
+  {
+    "n": 29,
+    "title": "Reviews, Reputation, and Revenue: The Case of Yelp.com (Michael Luca, HBS Working Paper 12-016, 2011, revised 2016)",
+    "publisher": "RePEc EconPapers (Harvard Business School working paper series)",
+    "url": "https://econpapers.repec.org/RePEc:hbs:wpaper:12-016",
+    "checked": "2026-11-07",
+    "supports": "A one-star increase in Yelp rating is associated with a 5 to 9% increase in revenue for independent restaurants, with no effect for chains; Washington State revenue data; regression discontinuity on Yelp's rounding"
+  },
+  {
+    "n": 30,
+    "title": "BrightLocal Local Consumer Review Survey 2026: summary",
+    "publisher": "PinMeTo (summary of BrightLocal's survey)",
+    "url": "https://www.pinmeto.com/news/brightlocal-local-consumer-review-survey-2026/",
+    "checked": "2026-11-07",
+    "supports": "Secondary summary, used because brightlocal.com blocks automated fetches (403): 1,002 US adults surveyed February 2026; 41% always read reviews when browsing local businesses (29% in 2025); 74% look for reviews from the last three months; 31% only use businesses rated 4.5 or higher (17% before); 80% more likely to use a business that replies to all reviews; 50% put off by generic replies"
+  }
+]

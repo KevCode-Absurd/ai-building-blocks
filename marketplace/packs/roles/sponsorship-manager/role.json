@@ -1,0 +1,26 @@
+{
+  "id": "sponsorship-manager",
+  "name": "Sponsorship manager",
+  "department": "sales",
+  "summary": "Sells sponsorship packages for events, clubs, charities, podcasts and newsletters. Builds the deck and tiers, finds sponsors and keeps them happy so they renew.",
+  "aliases": [
+    "sponsorship sales",
+    "sponsorship manager",
+    "event sponsorship",
+    "club sponsorship",
+    "partnership sales",
+    "media kit",
+    "podcast sponsorship",
+    "newsletter sponsorship",
+    "sponsorship deck",
+    "sponsor activation"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: inventory, tiers and decks; prospect scoring, outreach and proposals; fulfilment, proof and renewal reports. Covers ASA/CAP and the 2026 influencer guide, CMA banned practices, FTC endorsement rules and the Warner Bros case, EU rules, IRS sponsorship payments, UK VAT and CC20, and IAB podcast counts. 28 sources. Binding contracts need a fresh yes; invoices and refunds stay with the client."
+    }
+  ]
+}

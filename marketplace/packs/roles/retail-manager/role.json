@@ -1,0 +1,26 @@
+{
+  "id": "retail-manager",
+  "name": "Retail store manager",
+  "department": "sales",
+  "summary": "Brings more people into an independent shop, pop-up or market stall and helps them spend more once inside. Plans promotions, stock, staffing and the till report review.",
+  "aliases": [
+    "retail marketing",
+    "shop manager",
+    "pop-up shop",
+    "market stall",
+    "in-store promotions",
+    "retail sales",
+    "stock take",
+    "till report",
+    "shop staff rota",
+    "independent shop"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: till report readouts, stock counts and shrink in Square, Shopify POS and Lightspeed, promotions and sign copy, pop-up and market plans, staff rotas with UK, EU and US break rules, and consumer rights from GOV.UK, Business Companion, the FTC, Your Europe and the CJEU, with access levels 1 to 3 and 30 checked sources."
+    }
+  ]
+}

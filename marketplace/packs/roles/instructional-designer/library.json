@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+    "name": "Build a lesson from explanation to practice and a quiz",
+    "why": "One lesson built the way this kit builds every lesson: explanation, worked example, practice and a check."
+  },
+  {
+    "slug": "check-a-lesson-before-teaching-it",
+    "name": "Check a lesson before teaching it",
+    "why": "A pre-launch review that finds barriers and adds quick checks, useful before storyboard sign-off."
+  },
+  {
+    "slug": "adapt-a-lesson-for-different-access-needs",
+    "name": "Adapt a lesson for different access needs",
+    "why": "Keeps the learning goal while removing barriers, the same aim as the kit's accessibility review prompt."
+  },
+  {
+    "slug": "make-an-educational-narration-with-a-text-companion",
+    "name": "Make a lesson narration learners can follow",
+    "why": "A spoken script with a text companion, matching the kit's rule that every narration has a transcript."
+  },
+  {
+    "slug": "recall-quiz-writer",
+    "name": "Recall quiz writer",
+    "why": "Quick recall questions at three levels to space practice between modules, alongside the scenario-based knowledge checks."
+  },
+  {
+    "slug": "monthly-course-lesson-keeper",
+    "name": "Monthly course lesson keeper",
+    "why": "Finds stale or confusing lessons each month, the upkeep step in the customer academy workflow."
+  },
+  {
+    "slug": "price-a-course-or-ebook-and-write-its-launch-emails",
+    "name": "Price a course or ebook and write its launch emails",
+    "why": "Honest pricing and launch emails for a paid course, to pair with a course outline built from this kit."
+  },
+  {
+    "slug": "powerpoint-accessibility-reviewer",
+    "name": "PowerPoint accessibility reviewer",
+    "why": "Checks slide titles, reading order and alt text in decks before they become e-learning."
+  },
+  {
+    "slug": "branded-video-captions",
+    "name": "Video caption maker in your brand font",
+    "why": "Timed caption groups and a subtitle file, a companion to the training video script and captions skill."
+  },
+  {
+    "slug": "make-onboarding-instructions-match-the-product",
+    "name": "Make onboarding instructions match the product",
+    "why": "Fixes first-use instructions that name moved or missing buttons, the accuracy check every academy lesson needs."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Re-checks a course site for accessibility gaps each quarter after launch."
+  },
+  {
+    "slug": "skill-breakdown-teaching-planner",
+    "name": "Skill breakdown teaching planner",
+    "why": "Breaks a skill into beginner steps with a common mistake for each, a fast start for goals and distractors."
+  }
+]

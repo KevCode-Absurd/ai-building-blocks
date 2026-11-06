@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "Manage channel posting permissions",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/help/articles/360004635551-Manage-channel-posting-permissions-",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Choose who can post and reply; limit posting to up to 100 specific people; separate mention controls; channel management tools on Business+ and Enterprise."
+  },
+  {
+    "n": 2,
+    "title": "Notify a channel or workspace",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/help/articles/202009646-Notify-a-channel-or-workspace",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. @everyone works only in the general channel; @channel and @here; confirmation in channels of six or more; in Enterprise orgs of 10,000+ only owners and admins use @channel and @here; admins can restrict."
+  },
+  {
+    "n": 3,
+    "title": "Schedule messages to send in Slack",
+    "publisher": "Slack Help Center",
+    "url": "https://slack.com/help/articles/1500012915082-Schedule-messages-to-send-in-Slack",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Schedule from the send button; edit, reschedule or cancel under Drafts and sent."
+  },
+  {
+    "n": 4,
+    "title": "Slack MCP server",
+    "publisher": "Slack Developer Docs",
+    "url": "https://docs.slack.dev/ai/mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Search, read, send, schedule and draft messages, canvases; workspace admins approve MCP clients; partner clients include Claude.ai, Claude Code, Perplexity and Cursor."
+  },
+  {
+    "n": 5,
+    "title": "Overview of teams and channels in Microsoft Teams",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/teams-channels-overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 10 Aug 2026). Channel moderation (moderators start posts, control replies) in standard channels only; org-wide teams for organisations up to 10,000 users."
+  },
+  {
+    "n": 6,
+    "title": "Use organization-wide teams in Microsoft Teams",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/create-an-org-wide-team",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 7 Oct 2026). Up to five org-wide teams; only owners post in the first channel; turn off @team mentions; moderation options."
+  },
+  {
+    "n": 7,
+    "title": "Plan for Teams events",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/plan-events",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 Nov 2026). 1 Apr 2026 licensing change; event sizes up to 1,000, 3,000 and 10,000 with Teams Enterprise, 100,000 with an add-on; Q&A export; recordings expire after 30 days by default; dry run."
+  },
+  {
+    "n": 8,
+    "title": "Use live captions in Microsoft Teams meetings",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-4be2d304-f675-4b57-8347-cbd000a21260",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Any participant can turn on captions; translation needs Teams Premium or Microsoft Copilot; captions not saved; CART supported."
+  },
+  {
+    "n": 9,
+    "title": "Learn about spaces",
+    "publisher": "Google Chat Help",
+    "url": "https://support.google.com/chat/answer/7659784",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Space types: Collaboration and Announcements (work or school accounts; owners or managers post, members react and reply; type cannot be changed later)."
+  },
+  {
+    "n": 10,
+    "title": "Manage space settings",
+    "publisher": "Google Chat Help",
+    "url": "https://support.google.com/chat/answer/13340792",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Owners choose who can use @all and who can turn history on or off; managers can delete any message and manage members."
+  },
+  {
+    "n": 11,
+    "title": "Learn about your role as a space owner or manager",
+    "publisher": "Google Chat Help",
+    "url": "https://support.google.com/chat/answer/11833441",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Owner and manager rights compared; only owners delete a space or make owners."
+  },
+  {
+    "n": 12,
+    "title": "Mention someone or add someone to a message",
+    "publisher": "Google Chat Help",
+    "url": "https://support.google.com/chat/answer/14170425",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. @all mentions everyone; messages with @all do not appear under Mentions."
+  },
+  {
+    "n": 13,
+    "title": "Create an organization news site",
+    "publisher": "Microsoft Learn (SharePoint)",
+    "url": "https://learn.microsoft.com/en-us/sharepoint/organization-news-site",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 1 Jul 2026). Up to 100 organisation news sites; their posts get special treatment on the SharePoint start page; a home site is an org news site automatically."
+  },
+  {
+    "n": 14,
+    "title": "Use clear language (writing to GOV.UK standards)",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Split sentences over 25 words; plain words; active voice; literacy figures for the four UK nations."
+  },
+  {
+    "n": 15,
+    "title": "IC Index 2026: The reality check",
+    "publisher": "Institute of Internal Communication (with Ipsos Karian and Box)",
+    "url": "https://www.ioic.org.uk/insight-practice/ic-index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 5,000 UK employees in organisations of 500+; published 20 May 2026; ratings of communication, trust in leaders, reasons for change, time for communication, psychological safety."
+  },
+  {
+    "n": 16,
+    "title": "CIPR Code of Conduct",
+    "publisher": "Chartered Institute of Public Relations",
+    "url": "https://www.cipr.co.uk/CIPR/About_Us/Governance_/CIPR_Code_of_Conduct.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Integrity and honesty, checking information is accurate, protecting confidences, competence, declaring conflicts."
+  },
+  {
+    "n": 17,
+    "title": "The 8 Steps for Leading Change",
+    "publisher": "Kotter Inc.",
+    "url": "https://www.kotterinc.com/methodology/8-steps/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The eight steps as named by Kotter Inc., from Leading Change."
+  },
+  {
+    "n": 18,
+    "title": "The Prosci ADKAR Model",
+    "publisher": "Prosci",
+    "url": "https://www.prosci.com/methodology/adkar",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Awareness, Desire, Knowledge, Ability, Reinforcement; a model for individual change; the page cites no studies."
+  },
+  {
+    "n": 19,
+    "title": "Consulting employees and their representatives",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/consulting-employees-and-their-representatives",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 30 Oct 2026). What consultation is; sometimes a legal requirement (redundancy, collective consultation); good practice in informing and consulting."
+  },
+  {
+    "n": 20,
+    "title": "Directive 2002/14/EC establishing a general framework for informing and consulting employees",
+    "publisher": "EUR-Lex (Official Journal of the EU)",
+    "url": "https://eur-lex.europa.eu/eli/dir/2002/14/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 11 Mar 2002; applies to undertakings of 50+ or establishments of 20+ (each country chooses); information and consultation on employment and changes to work organisation, at an appropriate time."
+  },
+  {
+    "n": 21,
+    "title": "Plant Closings and Layoffs (WARN)",
+    "publisher": "US Department of Labor, Employment and Training Administration",
+    "url": "https://www.dol.gov/agencies/eta/layoffs/warn",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The WARN Act helps ensure advance notice of qualified plant closings and mass layoffs; links to the Act, regulations and employer guide."
+  },
+  {
+    "n": 22,
+    "title": "State of the Global Workplace",
+    "publisher": "Gallup",
+    "url": "https://www.gallup.com/workplace/697904/state-of-the-global-workplace.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2026 report (data for 2025): global engagement 20%; managers 22%; US and Canada 31%; Europe 12% (three-year aggregates)."
+  },
+  {
+    "n": 23,
+    "title": "10 Best Intranets of 2023",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/intranet-design/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 9 Jul 2023: winning teams averaged 21 people; redesigns averaged 25 months; 7 of 10 used outside help."
+  },
+  {
+    "n": 24,
+    "title": "A message from co-founder and CEO Brian Chesky",
+    "publisher": "Airbnb Newsroom",
+    "url": "https://news.airbnb.com/a-message-from-co-founder-and-ceo-brian-chesky/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 5 May 2020: about 1,900 of 7,500 staff leaving; reasons; severance, equity, health and job support; 1:1 notice where legally possible; timing by country; CEO Q&A."
+  },
+  {
+    "n": 25,
+    "title": "Satya Nadella email to employees on first day as CEO",
+    "publisher": "Microsoft News Center",
+    "url": "https://news.microsoft.com/2014/02/04/satya-nadella-email-to-employees-on-first-day-as-ceo/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 4 Feb 2014 all-staff message built on four questions, with a clear ask of staff."
+  },
+  {
+    "n": 26,
+    "title": "Employment standards (federal)",
+    "publisher": "Government of Canada (Employment and Social Development Canada)",
+    "url": "https://www.canada.ca/en/employment-social-development/programs/employment-standards.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Federal labour standards under Part III of the Canada Labour Code; where to check in Canada."
+  }
+]

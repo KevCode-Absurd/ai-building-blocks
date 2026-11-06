@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "title": "Forecasting: Principles and Practice (3rd ed.), 5.8 Evaluating point forecast accuracy",
+    "publisher": "Rob J Hyndman and George Athanasopoulos (OTexts)",
+    "url": "https://otexts.com/fpp3/accuracy.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MAE and RMSE are scale-dependent and cannot compare series in different units; MAPE is undefined at zero and unstable near zero; MASE scales errors by a naive or seasonal naive forecast so series can be compared, and below 1 beats naive; points to section 5.4 where non-zero mean residuals indicate bias."
+  },
+  {
+    "n": 2,
+    "title": "Forecasting: Principles and Practice (3rd ed.), 6.7 Judgmental adjustments",
+    "publisher": "Rob J Hyndman and George Athanasopoulos (OTexts)",
+    "url": "https://otexts.com/fpp3/judgmental-adjustments.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adjust only for important information not in the model (promotions, events); use sparingly; document and justify; larger adjustments tend to be more accurate than small ones; small upward adjustments can add optimism; adjusting to chase patterns is ineffective."
+  },
+  {
+    "n": 3,
+    "title": "Forecasting: Principles and Practice (3rd ed.), Chapter 11 Forecasting hierarchical and grouped time series",
+    "publisher": "Rob J Hyndman and George Athanasopoulos (OTexts)",
+    "url": "https://otexts.com/fpp3/hierarchical.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Series split by product or place form hierarchies; forecasts should be coherent so parts add up to totals; bottom-up, top-down, middle-out and reconciliation approaches."
+  },
+  {
+    "n": 4,
+    "title": "Forecasting: Principles and Practice (3rd ed.), 13.2 Time series of counts",
+    "publisher": "Rob J Hyndman and George Athanasopoulos (OTexts)",
+    "url": "https://otexts.com/fpp3/counts.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Croston's method (1972) for intermittent demand smooths non-zero demand sizes and inter-arrival times separately and forecasts their ratio; it is biased and has no algebraic prediction intervals but is widely used; continuous methods are fine for large counts, small counts need care."
+  },
+  {
+    "n": 5,
+    "title": "Safety stock",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Safety_stock",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary of the textbook formulas, citing Hopp and Spearman (Factory Physics), Nahmias and Ballou: SS = z x sqrt(E(L) x var(D) + E(D)^2 x var(L)); demand-only form z x sigma(D) x sqrt(L); ROP = E(L) x E(D) + SS; z about 1.65 for 95%; Type I (cycle) and Type II (fill rate) service. Used for the standard formula only, credited to the textbooks."
+  },
+  {
+    "n": 6,
+    "title": "NORM.S.INV function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/norm-s-inv-function-d6d556b4-ab7f-49cd-b526-5a20918452b1",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. NORM.S.INV(probability) returns the inverse of the standard normal cumulative distribution; #NUM! if probability is 0 or less, or 1 or more."
+  },
+  {
+    "n": 7,
+    "title": "Economic order quantity",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Economic_order_quantity",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary: Ford W. Harris (1913, 'How many parts to make at once'); Q* = sqrt(2DK/h); assumes constant demand and a fixed cost per order; Q* does not depend on unit price; quantity discounts as an extension."
+  },
+  {
+    "n": 8,
+    "title": "Newsvendor model",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Newsvendor_model",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary: critical fractile q* = F^-1((p - c)/p) with underage cost p - c and overage cost c when leftovers have no value; single period, perishable goods; Edgeworth (1888) and Arrow, Harris and Marschak (1951)."
+  },
+  {
+    "n": 9,
+    "title": "The Bullwhip Effect in Supply Chains",
+    "publisher": "MIT Sloan Management Review (Hau L. Lee, V. Padmanabhan, Seungjin Whang)",
+    "url": "https://sloanreview.mit.edu/article/the-bullwhip-effect-in-supply-chains/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (introduction only; rest is paywalled). Spring 1997. P&G Pampers and HP printer examples of order swings growing upstream; consequences: excess inventory, weaker service, lost sales, misguided capacity plans, poor transport, missed production schedules."
+  },
+  {
+    "n": 10,
+    "title": "Bullwhip effect",
+    "publisher": "Wikipedia (encyclopedia summary)",
+    "url": "https://en.wikipedia.org/wiki/Bullwhip_effect",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Encyclopedia summary of Lee, Padmanabhan and Whang (1997), Management Science 43(4): four causes (demand forecast updating, order batching, price fluctuations, rationing and shortage gaming) and countermeasures (information sharing, smoother and smaller orders, everyday low pricing, allocation on past sales). Used because the primary paper is paywalled."
+  },
+  {
+    "n": 11,
+    "title": "Toyota Production System",
+    "publisher": "Toyota Motor Corporation",
+    "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Two pillars, jidoka and just-in-time; each process replenishes what the next one takes; roles of Sakichi Toyoda, Kiichiro Toyoda and Taiichi Ohno."
+  },
+  {
+    "n": 12,
+    "title": "Design details - Handling reordering policies",
+    "publisher": "Microsoft Learn (Dynamics 365 Business Central)",
+    "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-reordering-policies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 2 June 2026. Reorder point represents demand during lead time; safety stock covers demand fluctuations up to a target service level; four policies (Fixed Reorder Qty., Maximum Qty., Order, Lot-for-Lot); Fixed Reorder Qty. for low cost, low obsolescence, few items, and not with forecasts; time buckets."
+  },
+  {
+    "n": 13,
+    "title": "Design details - planning parameters",
+    "publisher": "Microsoft Learn (Dynamics 365 Business Central)",
+    "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-planning-parameters",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; updated 17 March 2026. Default safety lead time should be at least one day; order modifiers (maximum, minimum, order multiple) applied in that order; low-level codes for BOM explosion with end items at level 0."
+  },
+  {
+    "n": 14,
+    "title": "Record purchases with purchase invoices",
+    "publisher": "Microsoft Learn (Dynamics 365 Business Central)",
+    "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-record-purchases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 17 June 2026. Use purchase orders for partial receipts and drop shipments; do not post an invoice for physical items before receipt and final cost; cannot invoice before receipt; over-receipt tolerance with optional approval."
+  },
+  {
+    "n": 15,
+    "title": "Configure Business Central MCP Server",
+    "publisher": "Microsoft Learn (Dynamics 365 Business Central)",
+    "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 2 October 2026. Default configuration lets agents discover and read API pages and queries the user may access; create, modify, delete and actions need Unblock Edit Tools plus per-object Allow switches; data query tools in preview are read-only."
+  },
+  {
+    "n": 16,
+    "title": "Reordering rules (Odoo 19.0 documentation)",
+    "publisher": "Odoo",
+    "url": "https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Min is the lowest forecasted quantity before a replenishment order; Max is the level replenishment returns to; Buy route creates an RFQ, Manufacture route a manufacturing order."
+  },
+  {
+    "n": 17,
+    "title": "Lead times (Odoo 19.0 documentation)",
+    "publisher": "Odoo",
+    "url": "https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Vendor lead time runs from PO confirmation to receipt; days to purchase is the time a vendor needs to confirm an RFQ; lead times are worked backward from the deadline."
+  },
+  {
+    "n": 18,
+    "title": "Purchase orders",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/inventory/purchase-orders",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Purchase orders can be created in the Shopify admin with products, quantities, costs, payment terms and supplier; saved as draft; marked Ordered after the supplier confirms; inventory transfer used to track shipments and receive stock."
+  },
+  {
+    "n": 19,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 6.2.1 What is acceptance sampling?",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc21.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Acceptance sampling accepts or rejects a lot from a random sample; used when testing is destructive or full inspection costly or slow; judges lots rather than estimating quality; not a substitute for process control; Dodge and Romig."
+  },
+  {
+    "n": 20,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 6.3.1 What are control charts?",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc31.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Control charts plot a measure over time with a centre line and limits usually at three standard deviations; a point outside signals a need to look for an assignable cause."
+  },
+  {
+    "n": 21,
+    "title": "Incoterms rules",
+    "publisher": "International Chamber of Commerce",
+    "url": "https://iccwbo.org/business-solutions/incoterms-rules/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Incoterms 2020 is the most recent version, in force since 1 January 2020; eleven three-letter trade terms covering responsibilities, costs and risks between seller and buyer."
+  },
+  {
+    "n": 22,
+    "title": "Regulation on deforestation-free products",
+    "publisher": "European Commission, Environment",
+    "url": "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EUDR covers cattle, cocoa, coffee, oil palm, rubber, soya and wood and listed products; applies 30 Dec 2026 for large and medium operators and traders, 30 Jun 2027 for micro and small, 30 Dec 2027 for products newly added by Delegated Act; amended Dec 2024 and 19 Dec 2025."
+  },
+  {
+    "n": 23,
+    "title": "Late commercial payments: charging interest and debt recovery",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. If no date is agreed, payment is late 30 days after the invoice or delivery, whichever is later; public authorities normally pay within 30 days and businesses within 60 days unless longer is fair to both."
+  },
+  {
+    "n": 24,
+    "title": "E-Commerce",
+    "publisher": "U.S. Customs and Border Protection",
+    "url": "https://www.cbp.gov/trade/basic-import-export/e-commerce",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page last modified 4 Nov 2026. Links new rules for low-value shipments, including an indefinite suspension of the de minimis exemption for mail shipments; compliance date for new informal entry procedures for international mail extended to 20 Jan 2027."
+  },
+  {
+    "n": 25,
+    "title": "Manufacturing and Trade Inventories and Sales, August 2026",
+    "publisher": "U.S. Census Bureau",
+    "url": "https://www.census.gov/mtis/current/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 15 October 2026; total business inventories/sales ratio based on seasonally adjusted data at the end of August 2026 was 1.33."
+  },
+  {
+    "n": 26,
+    "title": "World Container Index - assessed by Drewry",
+    "publisher": "Drewry",
+    "url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Weekly spot rates per 40ft container on eight East-West routes; 5 Nov 2026 composite $4,389, down 1% week on week and 124% higher year on year; Shanghai-Rotterdam $3,615; Shanghai-Los Angeles $7,539."
+  }
+]

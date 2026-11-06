@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Selling fees (eBay US)",
+    "publisher": "eBay Help",
+    "url": "https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822",
+    "checked": "2026-11-06",
+    "supports": "Fetched (page shows no effective date). 250 zero insertion fee listings a month, then $0.35; final value fee for most categories 13.6% up to $7,500 plus 2.35% above, plus $0.30 per order ($10 or less) or $0.40; fee charged on the total including shipping and sales tax; Below Standard adds 6% (7% after four months); $20 dispute fee; 1.65% international fee."
+  },
+  {
+    "n": 2,
+    "title": "Seller performance policy",
+    "publisher": "eBay Help",
+    "url": "https://www.ebay.com/help/policies/selling-policies/seller-performance-policy?id=4347",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Seller levels; evaluation on the 20th of each month; transaction defect rate up to 2%; cases closed without seller resolution up to 0.3% or 2; Top Rated thresholds; Below Standard consequences; eBay Live transactions excluded from 15 October 2026; appeals within 30 days."
+  },
+  {
+    "n": 3,
+    "title": "eBay Money Back Guarantee policy",
+    "publisher": "eBay Help",
+    "url": "https://www.ebay.com/help/policies/ebay-money-back-guarantee-policy/ebay-money-back-guarantee-policy?id=4210",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Item not received and not as described: buyers have 30 days; sellers respond within 3 business days; refunds within 2 business days of receiving a return; evidence for non-receipt (tracking, delivery scan, signature for $750 or more); appeal within 30 days of eBay's decision."
+  },
+  {
+    "n": 4,
+    "title": "Feedback policy",
+    "publisher": "eBay Help",
+    "url": "https://www.ebay.com/help/policies/feedback-policies/feedback-policies?id=4208",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Fake, misleading or manipulated feedback is not allowed; feedback must reflect the buyer's actual experience; removal requests within 90 days of the transaction; negative or neutral feedback does not affect seller performance."
+  },
+  {
+    "n": 5,
+    "title": "ItemType (Trading API reference)",
+    "publisher": "eBay Developers Program",
+    "url": "https://developer.ebay.com/devzone/xml/docs/reference/ebay/types/ItemType.html",
+    "checked": "2026-11-06",
+    "supports": "Fetched (two parts). Up to 24 pictures at no cost in almost any category; no HTML or JavaScript in titles. The page gives no title length, so none is stated in the kit."
+  },
+  {
+    "n": 6,
+    "title": "Referral fees",
+    "publisher": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com/referral-fees/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. No setup or monthly fees; referral fee by category, some tiered by price; charged on the total sales price including shipping and handling; category rate table (for example Everything Else 15%, Consumer Electronics 8%, Apparel 5%, 10% or 15% by price)."
+  },
+  {
+    "n": 7,
+    "title": "Walmart Marketplace (home and FAQ)",
+    "publisher": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Seller qualifications: business tax ID (not a Social Security Number), documents for business name and address, a selling track record, GTINs or UPCs from GS1 company prefixes, compliance with the Prohibited Products Policy, fulfilment through WFS or a US warehouse that handles returns, a compatible payment processor."
+  },
+  {
+    "n": 8,
+    "title": "Listing Quality dashboard",
+    "publisher": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com/listing-quality/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Score at catalogue and item level covering content, discoverability, offer, ratings and reviews, plus post-purchase quality insights; improvement list (category and attributes, clear title, descriptions, high-resolution photos, shipping speed, competitive price, reviews)."
+  },
+  {
+    "n": 9,
+    "title": "Seller Performance Standards",
+    "publisher": "Walmart Marketplace Learn",
+    "url": "https://marketplacelearn.walmart.com/guides/Policies%20&%20standards/Performance/Seller-performance-standards",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Measured over 30 or 60 days: cancellation 2% or below, on-time delivery 90% or above, valid tracking 99% or above, response to customers within 48 hours 95% or above, negative feedback 2% or below, returns 6% or below (9% for resold), item not received 2% or below, late shipment 5% or below; failing to act may lead to suppression, suspension or termination."
+  },
+  {
+    "n": 10,
+    "title": "Pricing Insights overview",
+    "publisher": "Walmart Marketplace Learn",
+    "url": "https://marketplacelearn.walmart.com/guides/Listing%20optimization/Price/pricing-insights-overview",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last updated 19 June 2026). Price competitiveness compares the offer with comparable external prices including shipping; an offer is competitive at the same or a lower price; \"Price not competitive\" is a reason for Buy Box ineligibility; unpublished items are listed with reasons."
+  },
+  {
+    "n": 11,
+    "title": "Repricer",
+    "publisher": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com/repricer/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Free strategy-based repricing tool; sellers set minimum and maximum prices per item; Buy Box win rate dashboard."
+  },
+  {
+    "n": 12,
+    "title": "Seller success formula",
+    "publisher": "Walmart Marketplace",
+    "url": "https://marketplace.walmart.com/seller-success-formula/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Walmart internal study (November 2023 to November 2024): sellers meeting all five Seller Performance Standards averaged 40% more views, 40% more orders, 30% higher GMV and 10% higher customer rating than those who did not."
+  },
+  {
+    "n": 13,
+    "title": "Commissie (commission)",
+    "publisher": "bol Partner Platform",
+    "url": "https://partnerplatform.bol.com/nl/idp/commissie",
+    "checked": "2026-11-06",
+    "supports": "Fetched (Dutch). Listing is free; commission is a fixed amount per item plus a percentage by item type; the percentage is charged on the sales price including VAT; example range for kitchen items 5% to 12.5% plus €0.05 to €0.95; worked example; temporary lower commission when the price is at or below a set price point."
+  },
+  {
+    "n": 14,
+    "title": "General Product Safety Regulation",
+    "publisher": "bol Partner Platform",
+    "url": "https://partnerplatform.bol.com/nl/idp/gpsr",
+    "checked": "2026-11-06",
+    "supports": "Fetched (Dutch). New listings without manufacturer details not allowed online since 5 March 2026; EU responsible person required since 1 April 2026; existing listings without manufacturer details phased out; manufacturer name, address and electronic address and EU responsible person details required."
+  },
+  {
+    "n": 15,
+    "title": "Verantwoordelijke marktdeelnemers (DSA)",
+    "publisher": "bol Partner Platform",
+    "url": "https://partnerplatform.bol.com/nl/idp/dsa",
+    "checked": "2026-11-06",
+    "supports": "Fetched (Dutch). Sellers record their EU responsible economic operators and link them to products, per item, in bulk by Excel with EAN codes, or through the Retailer API."
+  },
+  {
+    "n": 16,
+    "title": "Servicenormen (service norms)",
+    "publisher": "bol Partner Platform",
+    "url": "https://partnerplatform.bol.com/nl/idp/servicenormen",
+    "checked": "2026-11-06",
+    "supports": "Fetched (Dutch). Nine service norms (on-time items, cancellations, track and trace, returns, customer questions, phone availability, rating, response time, NPS after contact) affect sales and the buy box; thresholds are in the seller account, not on the page."
+  },
+  {
+    "n": 17,
+    "title": "Partnership models",
+    "publisher": "Zalando",
+    "url": "https://partner.zalando.com/partnership/partnership-models",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Wholesale, Partner Program (partner sets its own prices and keeps control of assortment and logistics) and Connected Retail (Zalando deducts commission; rate not published); Zalando invites brands and does not accept direct applications; 25 markets."
+  },
+  {
+    "n": 18,
+    "title": "Informing Businesses about the INFORM Consumers Act",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/informing-businesses-about-inform-consumers-act",
+    "checked": "2026-11-06",
+    "supports": "Fetched. In effect 27 June 2023; high-volume seller test (200 or more sales and $5,000 or more in any 12 months of the past 24); information marketplaces collect and verify within 10 days; annual certification; disclosure for $20,000 or more; suspension after notice; civil penalty $53,088 per violation for marketplaces (January 2025 figure)."
+  },
+  {
+    "n": 19,
+    "title": "What third-party sellers need to know about the INFORM Consumers Act",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/what-third-party-sellers-need-know-about-inform-consumers-act",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Seller view: bank account, tax ID and contact details to provide; respond to certification requests within 10 days; home-based sellers may show only country and state with a contact method; marketplaces must suspend sales after notice if information is not provided."
+  },
+  {
+    "n": 20,
+    "title": "The DSA's impact on digital platforms",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/dsa-impact-platforms",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last update 6 November 2026). Marketplaces must have sellers give verified identity information before they sell, so buyers can identify who is responsible; when an illegal product is sold, marketplaces notify buyers, identify the seller and offer redress."
+  },
+  {
+    "n": 21,
+    "title": "Digital Services Act: questions and answers",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/digital-services-act-questions-and-answers",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The DSA covers online marketplaces; all regulated services had to comply by 17 February 2024; small and micro enterprises are exempt from some rules."
+  },
+  {
+    "n": 22,
+    "title": "DAC7",
+    "publisher": "European Commission (Taxation and Customs Union)",
+    "url": "https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/dac7_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Directive (EU) 2021/514 in force 1 January 2023; platforms report seller identity and the consideration paid to each seller, including for sales of goods; first exchange at the end of February 2024."
+  },
+  {
+    "n": 23,
+    "title": "Check if you need to register as a digital platform operator",
+    "publisher": "GOV.UK (HM Revenue & Customs)",
+    "url": "https://www.gov.uk/guidance/reporting-rules-for-digital-platforms",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last updated 21 July 2026). UK platforms collect, check and report seller details to HMRC; sellers of goods are not reported if they receive €2,000 (about £1,700) or less for fewer than 30 sales in a year."
+  },
+  {
+    "n": 24,
+    "title": "Understanding your Form 1099-K",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last reviewed or updated 28 October 2026). Payment apps and online marketplaces report payments for goods or services that total over $20,000 in more than 200 transactions."
+  },
+  {
+    "n": 25,
+    "title": "One Stop Shop",
+    "publisher": "European Commission (VAT One Stop Shop portal)",
+    "url": "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. OSS from 1 July 2021; EUR 10,000 threshold for intra-EU distance sales by a supplier in one Member State; Union, non-Union and Import schemes; marketplaces (electronic interfaces) are deemed suppliers for imports in consignments up to EUR 150 and for intra-EU supplies by sellers established outside the EU."
+  },
+  {
+    "n": 26,
+    "title": "Consumer Reviews and Testimonials Rule: Questions and Answers",
+    "publisher": "Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Rule in effect 21 October 2024; bans fake reviews, incentives conditioned on a particular sentiment, review suppression by threats or intimidation, and undisclosed insider reviews; general requests to all buyers are allowed."
+  },
+  {
+    "n": 27,
+    "title": "Open letter to online retailers: including mandatory delivery fees in the total price",
+    "publisher": "GOV.UK (Competition and Markets Authority)",
+    "url": "https://www.gov.uk/government/publications/online-retailers-including-mandatory-delivery-fees-in-the-total-price/open-letter-to-online-retailers-including-mandatory-delivery-fees-in-the-total-price",
+    "checked": "2026-11-06",
+    "supports": "Fetched (2 November 2026). Applies to marketplace operators as well as shops; where traders have their own delivery charges, the delivery price should be in the total price of each product; the total must appear at every stage."
+  },
+  {
+    "n": 28,
+    "title": "Pricing (Uber Eats for merchants, US)",
+    "publisher": "Uber Eats",
+    "url": "https://merchants.ubereats.com/us/en/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Fetched (page undated). Lite 20%, Plus 25% and Premium 30% marketplace fees; pickup fee 7%, or 10% without validated in-store pricing; self-delivery fee 15%; some cities have lower Lite rates."
+  },
+  {
+    "n": 29,
+    "title": "Guarantees and returns (right of withdrawal)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Fetched (last checked 28/04/2026). 14-day right to cancel online purchases from a trader; purchases from private individuals, including some on marketplaces, are not covered."
+  }
+]

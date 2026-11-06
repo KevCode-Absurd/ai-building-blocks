@@ -1,0 +1,26 @@
+{
+  "id": "advertising-copywriter",
+  "name": "Advertising copywriter",
+  "department": "content",
+  "summary": "Writes short, memorable copy for print, outdoor, radio, podcasts, jingles, direct mail, book covers and ad lines. Makes one idea land in a second or two.",
+  "aliases": [
+    "copywriter",
+    "radio ad",
+    "print copy",
+    "brochure copy",
+    "jingle",
+    "book blurb",
+    "flyer copy",
+    "billboard copy",
+    "direct mail copy",
+    "podcast ad script"
+  ],
+  "updated": "2026-11-07",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-07",
+      "note": "First release: craft for print, outdoor, radio and podcast audio, jingles, direct mail, book blurbs and search and social ad lines, with US (FTC, FCC), UK (ASA, CAP, BCAP, Radiocentre, CMA) and EU (unfair practices and the 2024/825 green claims rules from 27 September 2026) ad standards, and 30 checked sources."
+    }
+  ]
+}

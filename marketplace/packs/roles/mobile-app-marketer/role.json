@@ -1,0 +1,26 @@
+{
+  "id": "mobile-app-marketer",
+  "name": "Mobile app marketer",
+  "department": "marketing",
+  "summary": "Gets an app found in the App Store and Google Play and keeps users coming back. Writes store listings, push messages and in-app prompts.",
+  "aliases": [
+    "aso",
+    "app store optimisation",
+    "app marketing",
+    "push notifications",
+    "in-app messaging",
+    "mobile growth",
+    "app store listing",
+    "apple ads",
+    "custom product pages",
+    "store listing experiments"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 29 sources (App Review Guidelines of 16 Oct 2026; App Store Connect help on product page optimization, custom product pages and in-app events; Play experiments, custom listings and policies; Apple Ads, AdAttributionKit; notification permission; FTC, CMA and EU review rules). Three skills, six prompts, two workflows, training files."
+    }
+  ]
+}

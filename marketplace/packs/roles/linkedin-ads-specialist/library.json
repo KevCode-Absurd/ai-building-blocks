@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "lead-cost-and-friction-planner",
+    "name": "Lead cost and friction planner",
+    "why": "Works out cost per qualified lead with handling cost included, the number LinkedIn budgets should be judged on."
+  },
+  {
+    "slug": "lead-offer-tuner",
+    "name": "Lead offer tuner",
+    "why": "Tunes the guide, demo or audit behind a Lead Gen Form to get more replies or fewer weak ones."
+  },
+  {
+    "slug": "weekly-sales-pipeline-reviewer",
+    "name": "Weekly sales pipeline reviewer",
+    "why": "Reads the deal export each week, so LinkedIn results are checked against real pipeline."
+  },
+  {
+    "slug": "stalled-deal-revival-desk",
+    "name": "Stalled deal revival desk",
+    "why": "Helps sales follow up LinkedIn leads that went quiet, with the next message to send."
+  },
+  {
+    "slug": "monthly-tracking-health-keeper",
+    "name": "Monthly tracking health keeper",
+    "why": "A monthly check that catches broken tags and double counts across ad platforms, including the Insight Tag."
+  },
+  {
+    "slug": "campaign-link-tracker",
+    "name": "Campaign link tracker",
+    "why": "Builds tagged links and match rules so LinkedIn traffic shows up correctly in analytics and the CRM."
+  },
+  {
+    "slug": "incrementality-test-planner",
+    "name": "Incrementality test planner",
+    "why": "Plans a test of what LinkedIn ads really add, sized to spend and regions."
+  },
+  {
+    "slug": "campaign-fame-checker",
+    "name": "Campaign fame checker",
+    "why": "Checks a brand campaign plan for fame, useful for the out-of-market buyers LinkedIn brand spend aims at."
+  },
+  {
+    "slug": "channel-budget-mix-planner",
+    "name": "Channel budget mix planner",
+    "why": "Plans how much of the ad budget LinkedIn should get against other channels."
+  },
+  {
+    "slug": "ad-test-budget-calculator",
+    "name": "Ad test budget calculator",
+    "why": "Sets the spend needed before judging an ad test and a keep or cut rule."
+  },
+  {
+    "slug": "ad-fatigue-watcher",
+    "name": "Ad fatigue watcher",
+    "why": "Spots ads whose results are slipping so a new concept is briefed in time."
+  }
+]

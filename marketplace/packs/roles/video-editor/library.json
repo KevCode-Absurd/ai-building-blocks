@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "cut-a-raw-recording-and-get-chapters-and-short-clips",
+    "name": "Cut a raw recording and get chapters and short clips",
+    "why": "The same run as this kit's long-recording workflow: a timed cut list, chapters and the best short clips from one recording."
+  },
+  {
+    "slug": "cut-chapter-and-clip-a-long-video-into-five-shorts",
+    "name": "Cut, chapter and clip a long video into five shorts",
+    "why": "Works from a transcript to a cut list, working chapters and five clips, close to the edit decision list and clip finder skills."
+  },
+  {
+    "slug": "interview-transcript-trimmer",
+    "name": "Interview transcript trimmer",
+    "why": "Cuts a long interview transcript down in passes to the strongest passages, a useful first pass before building the edit list."
+  },
+  {
+    "slug": "social-video-edit-planner",
+    "name": "Social video edit planner",
+    "why": "A timed cut list, captions, cover and export checks for one social video, for clips that ship alone."
+  },
+  {
+    "slug": "video-ad-edit-planner",
+    "name": "Video ad edit planner",
+    "why": "A timed cut list, caption windows, a sound plan and exports when the edit is a paid ad rather than an organic clip."
+  },
+  {
+    "slug": "cut-caption-and-check-a-video-ad-before-launch",
+    "name": "Cut, caption and check a video ad before launch",
+    "why": "Adds brand-font captions and a launch check to an ad cut, a second check on caption timing and safe zones."
+  },
+  {
+    "slug": "branded-video-captions",
+    "name": "Video caption maker in your brand font",
+    "why": "Timed caption groups and a subtitle file in the brand's font, for clients who want styled burned-in captions."
+  },
+  {
+    "slug": "captioned-product-reel",
+    "name": "Get a short product reel with captions that fit",
+    "why": "A short product reel with timed captions, for product clips cut from photos and short footage."
+  },
+  {
+    "slug": "short-video-hook-writer",
+    "name": "Short video hook writer",
+    "why": "Ten hooks checked for length and first shot; use it to test hook text before it goes on a clip, keeping only words the speaker said."
+  },
+  {
+    "slug": "podcast-show-notes-writer",
+    "name": "Podcast show notes writer",
+    "why": "Show notes from a transcript, alongside this kit's chapters and description step for podcast episodes."
+  },
+  {
+    "slug": "reusable-reel-cover-recipe-builder",
+    "name": "Reusable Reel cover recipe builder",
+    "why": "A repeatable cover style for clips, so a weekly clip batch looks like one series."
+  },
+  {
+    "slug": "monthly-content-repurposer",
+    "name": "Monthly content repurposer",
+    "why": "Picks last month's best pieces to turn into clips, a good feed for the weekly clip batch workflow."
+  }
+]

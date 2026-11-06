@@ -1,0 +1,25 @@
+{
+  "id": "pinterest-marketer",
+  "name": "Pinterest marketing specialist",
+  "department": "marketing",
+  "summary": "Grows traffic from Pinterest with keyword-led boards, pins and seasonal timing. Turns product and blog images into pins that keep working for months.",
+  "aliases": [
+    "pinterest marketing",
+    "pinterest manager",
+    "pinterest seo",
+    "pin design",
+    "pinterest strategy",
+    "pinterest ads",
+    "pinterest marketer",
+    "pinterest consultant",
+    "pinterest account manager"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Pinterest as search, keyword and board maps, Pin specs and briefs, seasonal timing from Pinterest Trends, Rich Pins, catalogs, the tag and API for Conversions, verified merchants, ads objectives, targeting and shopping ads, the 12 Nov 2026 policy updates, disclosure and price-claim rules, and access levels 1 to 3, with 30 checked sources."
+    }
+  ]
+}

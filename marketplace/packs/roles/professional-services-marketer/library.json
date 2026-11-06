@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "elevator-pitch-writer",
+    "name": "Elevator pitch writer",
+    "why": "Turns 'what we do, for whom and the result' into short spoken pitches, the starting point for a firm's positioning line."
+  },
+  {
+    "slug": "landing-page-fix-loop",
+    "name": "Landing page fix loop",
+    "why": "Rewrites a service or 'work with me' page against your facts and rechecks it, before the claims check and sign-off."
+  },
+  {
+    "slug": "clear-before-clever-copy-checker",
+    "name": "Clear-before-clever copy checker",
+    "why": "Finds unclear lines in page and email copy, so a stressed first-time client understands it on one read."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Turns the questions enquirers really ask into an FAQ page with answers first, for service pages."
+  },
+  {
+    "slug": "blog-post-publish-check-loop",
+    "name": "Blog post publish check loop",
+    "why": "Matches every claim in an explainer or newsletter to its proof before it goes to the firm's reviewer."
+  },
+  {
+    "slug": "testimonial-request-writer",
+    "name": "Testimonial request writer",
+    "why": "Writes a short testimonial request with three easy questions and a follow-up, to pair with permission wording."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Drafts checked replies to new reviews and holds risky ones, which suits firms that must protect client confidentiality."
+  },
+  {
+    "slug": "sales-call-prep-assistant",
+    "name": "Sales call prep assistant",
+    "why": "Prepares a one-page plan for a consultation or discovery call and a follow-up draft afterwards."
+  },
+  {
+    "slug": "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+    "name": "Turn a sales call into a checked proposal",
+    "why": "Turns consultation notes into a checked fee proposal, which the firm sends itself because proposals can bind it."
+  },
+  {
+    "slug": "follow-up-email-sequence-writer",
+    "name": "Follow-up email sequence writer",
+    "why": "Builds polite follow-ups with a new reason each and a stop rule, for people who enquired but did not book."
+  },
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Turns the firm's notes into a plain-words client newsletter, ready for the general-information label and sign-off."
+  },
+  {
+    "slug": "lead-grader",
+    "name": "Lead grader",
+    "why": "Sorts enquiries by how soon each needs to act, so the firm replies to urgent ones first."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "data-visualisation-specialist",
+  "name": "Data visualisation specialist",
+  "department": "data",
+  "summary": "Turns numbers into charts, infographics and slides that make one clear point without misleading anyone.",
+  "aliases": [
+    "data visualisation",
+    "charts",
+    "infographic",
+    "data storytelling",
+    "dashboard design",
+    "chart design",
+    "data visualization",
+    "vega-lite",
+    "chart.js",
+    "accessible charts"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (WCAG 2.2 and W3C chart guidance, UK Analysis Function chart and colour rules, USWDS, FT Visual Vocabulary, Wilke, ColorBrewer, Vega-Lite 6 and Chart.js 4 docs), four skills, five prompts, two workflows, training interview and test briefs. Uses the three access levels."
+    }
+  ]
+}

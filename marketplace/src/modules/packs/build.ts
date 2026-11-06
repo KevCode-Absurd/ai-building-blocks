@@ -1112,7 +1112,7 @@ export function filesIndex(pack: BuiltPack, zips: { zip?: { url: string; bytes: 
     role: pack.manifest.role,
     version: pack.manifest.version,
     updated: pack.manifest.updated,
-    knowledge: pack.manifest.knowledge.status,
+    knowledge: pack.manifest.knowledge,
     ...(pack.manifest.mega ? { mega: pack.manifest.mega, team: pack.manifest.team } : {}),
     ...zips,
     files: pack.files.map(f => ({ path: f.path, url: fileUrl(pack, f), bytes: f.bytes, purpose: f.purpose, kind: f.group })),

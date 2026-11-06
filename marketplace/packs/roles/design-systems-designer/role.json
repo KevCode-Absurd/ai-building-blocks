@@ -1,0 +1,26 @@
+{
+  "id": "design-systems-designer",
+  "name": "Design systems designer",
+  "department": "design",
+  "summary": "Keeps a product's screens consistent with shared tokens, components and rules. Writes specs developers can build from.",
+  "aliases": [
+    "design system",
+    "design tokens",
+    "component library",
+    "ui kit",
+    "tailwind theme",
+    "figma variables",
+    "design system audit",
+    "component specs",
+    "dark mode tokens",
+    "style dictionary"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (W3C DTCG 2025.10 format, colour and resolver modules, Figma variables, components, libraries, analytics, Dev Mode, Code Connect and MCP, SemVer, GOV.UK and Atlassian practice), four skills, five prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

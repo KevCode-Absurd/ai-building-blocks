@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+    "name": "Build a lesson from explanation to practice and a quiz",
+    "why": "Builds a lesson with worked examples, practice and a quiz in one pass, the same order as the lesson plan skill."
+  },
+  {
+    "slug": "check-a-lesson-before-teaching-it",
+    "name": "Check a lesson before teaching it",
+    "why": "Reviews a finished plan for overload and barriers before it is taught, a good last check after the lesson plan skill."
+  },
+  {
+    "slug": "lesson-opener-planner",
+    "name": "Lesson opener planner",
+    "why": "Plans a five-minute starter linked to last lesson, matching the daily review step in the lesson plan skill."
+  },
+  {
+    "slug": "class-quiz-reteach-keeper",
+    "name": "Class quiz reteach keeper",
+    "why": "Turns quiz results into what to reteach and checks next time whether it worked, like the exit-ticket reteach prompt."
+  },
+  {
+    "slug": "recall-quiz-writer",
+    "name": "Recall quiz writer",
+    "why": "Writes low-stakes recall quizzes at three levels from lesson notes, useful for the weekly review in the lesson pack."
+  },
+  {
+    "slug": "task-rubric-drafter",
+    "name": "Task rubric drafter",
+    "why": "Drafts a rubric with clear wording at each level, a quick start before the two-marker check in the assessment skill."
+  },
+  {
+    "slug": "student-work-marking-desk",
+    "name": "Student work marking desk",
+    "why": "Marks a batch of work against one rubric with feedback, once the rubric from the assessment skill is agreed; the teacher confirms marks."
+  },
+  {
+    "slug": "mark-student-work-against-a-rubric-and-sharpen-your-feedback",
+    "name": "Mark student work against a rubric and sharpen your feedback",
+    "why": "Finds gaps and causes in student work against a goal and rubric, for the reteach step after a unit test."
+  },
+  {
+    "slug": "adapt-a-lesson-for-different-access-needs",
+    "name": "Adapt a lesson for different access needs",
+    "why": "Reviews barriers and adapts activities while keeping the goal unchanged, the same principle as the adapted materials skill."
+  },
+  {
+    "slug": "teach-a-class-to-check-ai-answers-and-set-fair-ai-rules",
+    "name": "Teach students to check AI answers and set fair rules",
+    "why": "Ready lessons on AI reliability and class AI rules, which fits England's planned AI literacy content."
+  },
+  {
+    "slug": "prepare-a-webinar-people-can-follow",
+    "name": "Prepare a webinar people can follow",
+    "why": "Plans one webinar around a clear result with an outline and slides, for each session in the member education year."
+  },
+  {
+    "slug": "monthly-course-lesson-keeper",
+    "name": "Monthly course lesson keeper",
+    "why": "Finds stale or hard-to-follow lessons in a running course each month, useful for the termly review in year planning."
+  }
+]

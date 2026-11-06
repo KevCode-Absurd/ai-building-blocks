@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "publisher": "EUR-Lex (Publications Office of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (articles read at a later page offset). Regulation of 27 April 2016. Article 5(1)(d): personal data accurate and, where necessary, kept up to date; every reasonable step to erase or rectify inaccurate data without delay. Article 5(2): the controller is responsible for, and able to show, compliance (accountability). Article 16: right to rectification without undue delay. Used because the ICO accuracy guidance returned HTTP 403 on 6 Nov 2026."
+  },
+  {
+    "n": 2,
+    "title": "Data protection",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/data-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; no page date shown. UK GDPR and Data Protection Act 2018 principles, including data 'accurate and, where necessary, kept up to date' and 'limited to only what is necessary'; people's right to have incorrect data updated."
+  },
+  {
+    "n": 3,
+    "title": "Quality of Data Entry Using Single Entry, Double Entry and Automated Forms Processing: An Example Based on a Study of Patient-Reported Outcomes",
+    "publisher": "PLOS ONE (Paulsen, Overgaard, Lauritsen, 2012)",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0035087",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 200 questionnaires sampled from 5,777. Errors per 1,000 fields: single key entry 0.370, double key entry 0.046, optical mark recognition 0.046, intelligent character recognition 10.101 (results section; the abstract gives other ICR figures). Conclusion limited to highly structured forms with check boxes and numbers and no dates."
+  },
+  {
+    "n": 4,
+    "title": "Data entry quality of double data entry vs automated form processing technologies: a cohort study validation of optical mark recognition and intelligent character recognition in a clinical setting",
+    "publisher": "Health Science Reports via PubMed Central (Paulsen, Harboe, Dalen, 2020)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7700101/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Check boxes: OMR 3.52 vs double data entry 4.18 errors per 10,000 fields, not a significant difference. ICR made significantly more errors than double entry on handwritten numbers. Authors: ICR 'is still problematic' and depends on manual validation."
+  },
+  {
+    "n": 5,
+    "title": "NIST/SEMATECH e-Handbook of Statistical Methods, 6.2.1: What is acceptance sampling?",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc21.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Acceptance sampling uses a random sample to accept or reject a lot; its purpose is not to estimate the lot's quality; it is not a substitute for process control; used when 100% inspection is destructive, too costly or too slow."
+  },
+  {
+    "n": 6,
+    "title": "RFC 4180: Common Format and MIME Type for Comma-Separated Values (CSV) Files",
+    "publisher": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc4180",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. October 2005, Informational. One record per line, optional header, same number of fields per line, spaces are part of a field, fields with commas, double quotes or line breaks go in double quotes, and a double quote inside is written twice. Registers text/csv."
+  },
+  {
+    "n": 7,
+    "title": "FCA fines CGML £27,766,200 for failures in its trading systems and controls",
+    "publisher": "Financial Conduct Authority",
+    "url": "https://www.fca.org.uk/news/press-releases/fca-fines-cgml-27-million",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; press release 22 May 2024. On 2 May 2022 a Citigroup Global Markets Limited trader meant to sell a US$58m basket but an input error created a US$444bn basket; controls blocked US$255bn; US$1.4bn of equities sold before cancellation. No hard block; a pop-up alert could be overridden without scrolling through it. PRA fined CGML £33,880,000 the same day."
+  },
+  {
+    "n": 8,
+    "title": "Gene name errors are widespread in the scientific literature",
+    "publisher": "Genome Biology via PubMed Central (Ziemann, Eren, El-Osta, 2016)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4994289/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (publisher site required a cookie sign-in, so the PMC copy was used). 35,175 supplementary Excel files from 18 journals, 2005 to 2015; 19.6% of papers with Excel gene lists (704 articles) affected; SEPT2 became 2-Sep, MARCH1 became 1-Mar, and RIKEN identifiers became floating-point numbers."
+  },
+  {
+    "n": 9,
+    "title": "Apply data validation to cells",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Validation types: whole number, decimal, list, date, time, text length, custom formula. Input messages. Error alert styles Stop, Warning and a third style the page labels 'Important' that lets users carry on. Settings cannot be changed while the workbook is shared or the sheet protected."
+  },
+  {
+    "n": 10,
+    "title": "Keeping leading zeros and large numbers",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/keeping-leading-zeros-and-large-numbers-1bf7b935-36e1-4985-842f-5dfa51f85fe7",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Excel removes leading zeros and shows large numbers in scientific notation; it keeps 15 significant digits and turns later digits to zero, so 16-digit codes need Text format; the Automatic Data Conversions setting is listed only for Excel for Microsoft 365 and Excel 2024 (Windows and Mac); Power Query can set a column to Text; custom formats do not restore zeros already lost."
+  },
+  {
+    "n": 11,
+    "title": "Import or export text (.txt or .csv) files",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Opening a .csv applies Excel's current default data formats; Data > From Text/CSV gives a preview and Transform Data; renaming .csv to .txt forces the Text Import Wizard; date columns in a different order may not convert correctly; Save As CSV saves only the current worksheet."
+  },
+  {
+    "n": 12,
+    "title": "TRIM function",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/trim-function-410388fa-c5df-49c6-b16c-9e5630b479f9",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. TRIM removes all spaces except single spaces between words; it was designed for the ASCII space (32) and does not remove the nonbreaking space (160) common on web pages."
+  },
+  {
+    "n": 13,
+    "title": "Split text, remove duplicates, or trim whitespace",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/6325535",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Google Sheets Data cleanup: Remove duplicates treats cells with the same value but different letter case, formatting or formulas as duplicates; Trim whitespace removes leading, trailing and excessive spaces but not non-breaking spaces; Split text to columns."
+  },
+  {
+    "n": 14,
+    "title": "Set a spreadsheet's location & calculation settings",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/58515",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Changing a Google Sheets file's locale changes its default currency, date and number formatting for everyone; it does not change language. File > Settings."
+  },
+  {
+    "n": 15,
+    "title": "Create an in-cell dropdown list",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/139705",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; this answer number now shows the dropdown article. Data that does not match the list is rejected by default; Advanced options can switch to 'Show a warning'; rules are added under Data > Data validation; trim spaces from options."
+  },
+  {
+    "n": 16,
+    "title": "Import data sets in Google Sheets",
+    "publisher": "Google Docs Editors Help",
+    "url": "https://support.google.com/docs/answer/40608",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Import locations include a new spreadsheet, new sheets, replacing a sheet, appending rows and replacing data at a selected cell; separator can be detected automatically or set to tab, comma or a custom character."
+  },
+  {
+    "n": 17,
+    "title": "Convert PDF and photo files to text",
+    "publisher": "Google Drive Help",
+    "url": "https://support.google.com/drive/answer/176692",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Drive converts PDFs and JPEG, PNG and GIF images to text in Google Docs; files 2 MB or smaller; text at least 10 pixels high; right way up; even lighting; lists, tables, columns and footnotes are often not detected."
+  },
+  {
+    "n": 18,
+    "title": "Improving the quality of the output",
+    "publisher": "Tesseract OCR documentation",
+    "url": "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Tesseract works best at 300 dpi or more; uneven backgrounds, noise and skew reduce accuracy; borders matter; page segmentation modes for single lines or words; turning off dictionaries can help with codes and prices."
+  },
+  {
+    "n": 19,
+    "title": "What is Amazon Textract?",
+    "publisher": "Amazon Web Services documentation",
+    "url": "https://docs.aws.amazon.com/textract/latest/dg/what-is.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Detects typed and handwritten text; extracts forms and tables; Queries; AnalyzeExpense for invoices and receipts; AnalyzeID for US IDs; lending document workflow. You pay only for documents analysed, with no minimum fee, and can get started for free."
+  },
+  {
+    "n": 20,
+    "title": "What Is Azure Document Intelligence in Foundry Tools?",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page dated 8 Sep 2026. Service now named 'Azure Document Intelligence in Foundry Tools' and positioned within Azure Content Understanding. API v4.0 (2024-11-30) is current GA; v3.0 retires 30 March 2029; v2.1 retires 15 September 2027. Prebuilt invoice, receipt, layout and read models; prebuilt models return typed fields such as InvoiceDate."
+  },
+  {
+    "n": 21,
+    "title": "Document AI overview",
+    "publisher": "Google Cloud documentation",
+    "url": "https://docs.cloud.google.com/document-ai/docs/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (cloud.google.com redirects here). Processors include Enterprise Document OCR, Form Parser, Layout Parser, Custom extractor and pretrained parsers; built on Vertex AI with generative AI; includes document and prediction review."
+  },
+  {
+    "n": 22,
+    "title": "Set up your import file",
+    "publisher": "HubSpot Knowledge Base",
+    "url": "https://knowledge.hubspot.com/import-and-export/set-up-your-import-file",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. .csv, .xlsx or .xls with one sheet and a header row; under 1,000 columns; UTF-8 for foreign characters; free tools 20 MB per file; paid 512 MB and 1,048,576 rows per file; email required for contacts, name or domain for companies; dates accepted day-month-year, month-day-year or year-month-day; phones as +country code; a unique identifier is needed to update existing records."
+  },
+  {
+    "n": 23,
+    "title": "HubSpot MCP server",
+    "publisher": "HubSpot Developers",
+    "url": "https://developers.hubspot.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. HubSpot's remote MCP server gives MCP clients read and write access to CRM objects such as contacts, companies, deals and tickets, connected through a user-level app with OAuth."
+  },
+  {
+    "n": 24,
+    "title": "Using CSV files to import and export products",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/products/import-export/using-csv",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title is the only required column for new products; URL handle needed for variants and updates; save as UTF-8 with LF line feeds; 'Overwrite products with matching handles' replaces existing values and a blank non-required column overwrites with a blank; changing option values deletes variant IDs."
+  },
+  {
+    "n": 25,
+    "title": "XeroAPI/xero-mcp-server",
+    "publisher": "Xero (XeroAPI GitHub organisation)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MCP server for Xero's accounting API with tools to list, create and update invoices, contacts, bank transactions and more; connects by custom connection or bearer token. The page does not itself say 'official'; it sits in Xero's own API organisation."
+  },
+  {
+    "n": 26,
+    "title": "Invoicing and taking payment from customers: invoices, what they must include",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/invoicing-and-taking-payment-from-customers/invoices-what-they-must-include",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A UK invoice must show a unique number, the seller's name, address and contact details, the customer's name and address, a description, the supply date, the invoice date, amounts, VAT if applicable and the total; VAT invoices are needed when both sides are VAT registered."
+  },
+  {
+    "n": 27,
+    "title": "Running a limited company: company and accounting records",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/running-a-limited-company/company-and-accounting-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK companies keep records for 6 years from the end of the last financial year they relate to, longer in some cases; supporting records include receipts, invoices, orders, delivery notes, contracts and bank statements."
+  },
+  {
+    "n": 28,
+    "title": "How long should I keep records?",
+    "publisher": "Internal Revenue Service",
+    "url": "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page reviewed 30 June 2026. Periods of 3, 6 and 7 years depending on the case, at least 4 years for employment tax records, and indefinitely if no return was filed."
+  },
+  {
+    "n": 29,
+    "title": "PCI Data Security Standard (PCI DSS)",
+    "publisher": "PCI Security Standards Council",
+    "url": "https://www.pcisecuritystandards.org/standards/pci-dss/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PCI DSS sets requirements to protect payment account data and applies to entities that store, process or transmit cardholder data or sensitive authentication data. The page refers to v4.x without a date."
+  }
+]

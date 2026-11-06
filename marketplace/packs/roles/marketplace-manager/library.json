@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "product-and-variant-setup-planner",
+    "name": "Product and variant setup planner",
+    "why": "Sorts products and variants into a clean table before mapping them to each marketplace's fields."
+  },
+  {
+    "slug": "make-matching-photos-for-a-product-sheet-and-check-them",
+    "name": "Make matching photos for a product sheet and check them",
+    "why": "One matching photo per product with a marketplace rules check, for bulk listings."
+  },
+  {
+    "slug": "turn-a-clothing-flat-lay-into-marketplace-ready-photos",
+    "name": "Turn a clothing flat lay into marketplace-ready photos",
+    "why": "Marketplace-ready apparel photos for sellers moving onto fashion marketplaces."
+  },
+  {
+    "slug": "product-photo-set-maker",
+    "name": "Product photo set maker",
+    "why": "A planned and checked photo set for one real product, for listings that need more images."
+  },
+  {
+    "slug": "product-margin-checker",
+    "name": "Product margin checker",
+    "why": "True margin per product from every cost, to sit alongside the what-you-keep sheet."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Cost per sellable unit from quotes and freight, for new-country entry plans."
+  },
+  {
+    "slug": "discount-and-price-change-checker",
+    "name": "Discount and price change checker",
+    "why": "The deepest discount a margin allows, before a marketplace promotion or price change."
+  },
+  {
+    "slug": "price-test-keeper",
+    "name": "Price test keeper",
+    "why": "Plans one reversible price test on a channel and reads the result."
+  },
+  {
+    "slug": "customer-inbox-triage-and-reply-drafter",
+    "name": "Customer inbox triage and reply drafter",
+    "why": "Ranks buyer messages and drafts checked replies for approval."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Checked replies to public reviews, with risky ones held, for marketplace feedback and delivery app ratings."
+  },
+  {
+    "slug": "monthly-returns-and-refunds-reviewer",
+    "name": "Monthly returns and refunds reviewer",
+    "why": "Finds the products driving refunds, which feed claims and account health."
+  },
+  {
+    "slug": "etsy-shop-opening-planner",
+    "name": "Etsy shop opening planner",
+    "why": "A plan for opening an Etsy shop: listings, photos, price check and launch steps."
+  }
+]

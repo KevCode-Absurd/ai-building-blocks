@@ -1,0 +1,30 @@
+{
+  "id": "amazon-marketplace-manager",
+  "name": "Amazon marketplace manager",
+  "department": "ecommerce",
+  "summary": "Lists, launches and grows products on Amazon. Picks products worth selling, writes listings and keeps the account healthy.",
+  "aliases": [
+    "amazon seller",
+    "amazon fba",
+    "amazon account manager",
+    "amazon listing",
+    "seller central",
+    "product research",
+    "amazon va",
+    "amazon launch",
+    "amazon ppc",
+    "amazon reimbursement"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: product research, listing rules, Brand Registry tools, reviews and Vine, launch and ads, 2026 fees, reimbursements, account health, US, UK and EU rules, and Amazon's AI tools, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-06",
+      "note": "Access levels 1 to 3 (SPEC decision 12): access.md says what the agent does at each level per tool and how to connect; skills, prompts and workflows mark which steps need level 2 or 3; new interview question and test brief on level 3 limits."
+    }
+  ]
+}

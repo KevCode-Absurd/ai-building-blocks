@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "support-capacity-planner",
+    "name": "Support capacity planner",
+    "why": "Turns ticket data and a sales forecast into cost per ticket and hiring dates, the step before the hourly rota."
+  },
+  {
+    "slug": "support-hiring-date-planner",
+    "name": "Support hiring date planner",
+    "why": "Works out agents needed by month from a year of tickets, for staffing plans beyond next week's rota."
+  },
+  {
+    "slug": "get-ready-for-peak-season-with-support-and-3pl-planned",
+    "name": "Get support and stock ready for peak season",
+    "why": "Plans support hiring dates for a peak, matching the forecasting step in the staffing skill."
+  },
+  {
+    "slug": "define-a-customer-support-escalation-agreement",
+    "name": "Define a customer support escalation agreement",
+    "why": "Writes down who handles a stuck issue and when it moves up, alongside the escalation playbook prompt."
+  },
+  {
+    "slug": "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+    "name": "Get a stuck customer issue unstuck and close the loop",
+    "why": "Unsticks one case with a fact check, an escalation brief and a reply that keeps its promises."
+  },
+  {
+    "slug": "complaint-reply-promise-checker",
+    "name": "Complaint reply promise checker",
+    "why": "Checks every promise in a complaint reply before the owner gives the fresh yes to send it."
+  },
+  {
+    "slug": "monthly-help-centre-keeper",
+    "name": "Monthly help centre keeper",
+    "why": "Finds the questions help pages miss each month, the same run as the help centre and macro review."
+  },
+  {
+    "slug": "help-article-from-ticket-writer",
+    "name": "Help article writer from support tickets",
+    "why": "Turns a group of tickets on one problem into a help article, a common fix in the monthly report."
+  },
+  {
+    "slug": "review-support-bot-errors-with-retest-cases",
+    "name": "Support bot error reviewer",
+    "why": "Reviews bot chats against approved help text, for the AI agent review in the monthly workflow."
+  },
+  {
+    "slug": "yes-later-no-request-sorter",
+    "name": "Yes-later-no request sorter",
+    "why": "Sorts merged feature requests into yes, later or no, the step after the voice-of-customer ranking."
+  },
+  {
+    "slug": "clear-your-support-inbox-and-turn-fixes-into-help-pages",
+    "name": "Clear your support inbox and turn fixes into help pages",
+    "why": "Clears a backlog and turns fixes into help pages when the weekly review shows the queue running behind."
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Vitals",
+    "publisher": "web.dev (Google)",
+    "url": "https://web.dev/articles/vitals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Core Web Vitals are LCP (good at 2.5 s or less), INP (200 ms or less) and CLS (0.1 or less), assessed at the 75th percentile split by mobile and desktop; field data from CrUX shown in PageSpeed Insights and Search Console; page last updated 31 October 2024."
+  },
+  {
+    "n": 2,
+    "title": "Interaction to Next Paint becomes a Core Web Vital on March 12",
+    "publisher": "web.dev (Google)",
+    "url": "https://web.dev/blog/inp-cwv-march-12",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. INP replaced FID as a Core Web Vital on 12 March 2024; INP is assessed at the 75th percentile of field page loads."
+  },
+  {
+    "n": 3,
+    "title": "Optimize Largest Contentful Paint",
+    "publisher": "web.dev (Google)",
+    "url": "https://web.dev/articles/optimize-lcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Never lazy-load the LCP image; use fetchpriority=\"high\" on it; make it discoverable in the HTML or preload it; serve a right-sized AVIF or WebP file; last updated 31 March 2025."
+  },
+  {
+    "n": 4,
+    "title": "What's New in WCAG 2.2",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 became a W3C Recommendation on 5 October 2023; lists the nine new success criteria and their levels; 4.1.1 Parsing is obsolete and removed."
+  },
+  {
+    "n": 5,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recommendation version dated 12 December 2024; 1.4.3 contrast 4.5:1 (3:1 for large text, 18 pt or 14 pt bold); 1.4.11 non-text contrast 3:1; 2.5.8 target size at least 24 by 24 CSS pixels with spacing, equivalent, inline, user agent and essential exceptions; 3.3.8 accessible authentication."
+  },
+  {
+    "n": 6,
+    "title": "Directive (EU) 2019/882 (European Accessibility Act)",
+    "publisher": "EUR-Lex (Publications Office of the EU)",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Applies to services provided to consumers after 28 June 2025, including e-commerce services provided through websites and mobile services; Article 4(5) exempts microenterprises providing services (fewer than 10 staff and turnover or balance sheet total up to EUR 2 million)."
+  },
+  {
+    "n": 7,
+    "title": "Accessibility requirements for public sector websites and apps",
+    "publisher": "GOV.UK (Central Digital and Data Office)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Public sector sites should meet WCAG 2.2 AA; all UK service providers must make reasonable adjustments under the Equality Act 2010; last updated 30 September 2024."
+  },
+  {
+    "n": 8,
+    "title": "Guidance on Web Accessibility and the ADA",
+    "publisher": "ADA.gov (US Department of Justice)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. DOJ says the ADA applies to goods and services businesses offer on the web; there is no detailed technical regulation for businesses; WCAG and Section 508 are helpful guidance; dated 18 March 2022."
+  },
+  {
+    "n": 9,
+    "title": "Report of the work undertaken by the Cookie Banner Taskforce",
+    "publisher": "European Data Protection Board",
+    "url": "https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (PDF saved and its text extracted). Adopted 17 January 2023: no consent-requiring cookies before a positive action; most authorities treat no reject option on any layer with an accept button as an infringement; pre-ticked boxes invalid; buried reject links invalid; unreadable reject-button contrast misleading; legitimate interest cannot be the basis for placing cookies; owners must show why cookies are essential; withdrawal as easy as giving consent."
+  },
+  {
+    "n": 10,
+    "title": "Data (Use and Access) Act factsheet: PEC Regulations",
+    "publisher": "GOV.UK (DSIT and DCMS)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Keeps the rule that nothing is stored on or read from a device unless an exception applies (such as consent or strict necessity) and adds an exception for statistics used to improve a service; published 27 June 2025. The ICO cookie pages refused automated fetching (HTTP 403) on 6 November 2026, so this official summary is used instead."
+  },
+  {
+    "n": 11,
+    "title": "Data (Use and Access) Act 2025: plans for commencement",
+    "publisher": "GOV.UK (DSIT)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The main Part 5 data protection changes (except section 103) commenced 5 February 2026; ICO functions transferred to the Information Commission on 30 September 2026; page last updated 12 October 2026. It does not name the cookie sections, so their start date is treated as unsure."
+  },
+  {
+    "n": 12,
+    "title": "California Consumer Privacy Act (CCPA)",
+    "publisher": "State of California Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Thresholds (over USD 25 million revenue, 100,000 or more residents or households, or 50% of revenue from selling data); \"Do Not Sell or Share My Personal Information\" link; Global Privacy Control must be honoured; updated 28 August 2026."
+  },
+  {
+    "n": 13,
+    "title": "Search Engine Optimization (SEO) Starter Guide",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unique, clear titles; short unique meta descriptions; descriptive URLs; short descriptive alt text; headings for readers; Google Search does not use the meta keywords tag. No date shown."
+  },
+  {
+    "n": 14,
+    "title": "Using code injection",
+    "publisher": "Squarespace Help Center",
+    "url": "https://support.squarespace.com/hc/en-us/articles/205815908-Using-code-injection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Code injection on Core, Plus, Advanced and some legacy plans; header, footer, lock page, order confirmation and order status areas; no code on checkout; Squarespace does not support custom code; last updated 16 September 2026."
+  },
+  {
+    "n": 15,
+    "title": "Cookie banner and visitor data settings",
+    "publisher": "Squarespace Help Center",
+    "url": "https://support.squarespace.com/hc/en-us/articles/360001264507-Cookie-banner-and-visitor-data-settings",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The banner can restrict Squarespace analytics cookies and some integrations including Google Analytics until visitors accept; necessary cookies are not restricted; it does not block every third-party cookie; Google tags added by code need Consent Mode; last updated 14 October 2026."
+  },
+  {
+    "n": 16,
+    "title": "Fluid Engine",
+    "publisher": "Squarespace Help Center",
+    "url": "https://support.squarespace.com/hc/en-us/articles/6421525446541-Fluid-Engine",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Main editor for block sections on version 7.1; classic sections can be upgraded, may shift, split past the 1,000-row grid limit, and the upgrade cannot be undone after saving; last updated 16 July 2026."
+  },
+  {
+    "n": 17,
+    "title": "Formatting your images for display on the web",
+    "publisher": "Squarespace Help Center",
+    "url": "https://support.squarespace.com/hc/en-us/articles/206542517-Formatting-your-images-for-display-on-the-web",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2,500 px width suits most images, under 1,500 px may blur; 20 MB maximum, 500 KB or less advised; .jpg, .gif, .png, .webp; up to seven sizes from 100 to 2,500 px; converted to WebP for display; last updated 5 November 2026."
+  },
+  {
+    "n": 18,
+    "title": "Connecting a domain to your Squarespace site",
+    "publisher": "Squarespace Help Center",
+    "url": "https://support.squarespace.com/hc/en-us/articles/205812378-Connecting-a-domain-to-your-Squarespace-site",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Verification CNAME, www CNAME and four A records; do not delete MX records because email may stop; 24 to 48 hours to work; last updated 28 October 2026."
+  },
+  {
+    "n": 19,
+    "title": "Embedding custom code on your site",
+    "publisher": "Wix Help Center",
+    "url": "https://support.wix.com/en/article/embedding-custom-code-on-your-site",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Needs a published site with a connected domain; head, body start or body end; all or chosen pages; load once per visit or on every page; categorise code to help with privacy laws such as GDPR. No date shown."
+  },
+  {
+    "n": 20,
+    "title": "About Wix Studio",
+    "publisher": "Wix Help Center",
+    "url": "https://support.wix.com/en/article/about-wix-studio",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Platform for agencies and enterprises with a shared workspace, role-based permissions and limited access for clients and freelancers; responsive tools (Responsive AI, stacks, grid cells, proportional scaling, per-element behaviours, custom CSS). No date shown."
+  },
+  {
+    "n": 21,
+    "title": "Site Performance: Best Practices",
+    "publisher": "Wix Help Center",
+    "url": "https://support.wix.com/en/article/site-performance-best-practices",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AVIF over PNG unless transparency is needed; 25 MB upload cap; three or four fonts; light static content above the fold; limit third-party code; Site Speed dashboard tracks Core Web Vitals. No date shown."
+  },
+  {
+    "n": 22,
+    "title": "About the Wix MCP",
+    "publisher": "Wix Developers",
+    "url": "https://dev.wix.com/docs/sdk/articles/use-the-wix-mcp/about-the-wix-mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official Wix MCP server: searches Wix docs, calls site APIs (CMS, Stores, Bookings), uploads images, and can create, update or publish a site; connects by sign-in or by API key. No date shown."
+  },
+  {
+    "n": 23,
+    "title": "Publishing CMS items (Data API v2)",
+    "publisher": "Webflow Developers",
+    "url": "https://developers.webflow.com/data/v2.0.0/docs/working-with-the-cms/publishing.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Item states: live, live with draft changes, draft, staged, scheduled, archived; site-wide publish pushes all staged content live; single items can be published. No date shown. Used because help.webflow.com refused automated fetching (HTTP 403) on 6 November 2026."
+  },
+  {
+    "n": 24,
+    "title": "Working with custom code (Data API v2)",
+    "publisher": "Webflow Developers",
+    "url": "https://developers.webflow.com/data/v2.0.0/docs/working-with-custom-code.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scripts in the head or footer, site-wide or per page; changes take effect after the site is published; inline scripts capped at 10,000 characters. No date shown."
+  },
+  {
+    "n": 25,
+    "title": "Webflow MCP server overview",
+    "publisher": "Webflow Developers",
+    "url": "https://developers.webflow.com/mcp/reference/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official MCP server: design and build, CMS collections and items, pages, SEO metadata and sitemap settings; works within existing permissions; changes in the site activity log; one workspace per authorisation; cannot create projects; some features need the Designer open with the Bridge App. No date shown."
+  },
+  {
+    "n": 26,
+    "title": "Staging and versions",
+    "publisher": "Framer Help",
+    "url": "https://www.framer.com/help/articles/staging-and-versions/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. With staging on, the default domain is a preview and the custom domain stays on the chosen version; needs a custom domain; each publish is a version with its own link; Deploy and roll back; updated 15 September 2026."
+  },
+  {
+    "n": 27,
+    "title": "Pricing",
+    "publisher": "Framer",
+    "url": "https://www.framer.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plan limits: Basic 30 pages, 2 CMS collections, 1,000 CMS items; Pro 150 pages (up to 700), 10 collections (up to 40), 2,500 items (up to 40,000) and staging; page dated 6 November 2026. Prices not used."
+  },
+  {
+    "n": 28,
+    "title": "Framer MCP",
+    "publisher": "Framer",
+    "url": "https://www.framer.com/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Described as the official Framer MCP server; inspects and edits the canvas, works with CMS content and settings using the account permissions; publishes only when explicitly asked; recommends working on a branch; OAuth sign-in; dated 6 November 2026."
+  },
+  {
+    "n": 29,
+    "title": "Web Almanac 2025: CMS chapter",
+    "publisher": "HTTP Archive",
+    "url": "https://almanac.httparchive.org/en/2025/cms",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Mobile good Core Web Vitals: Wix 74% (55% in 2024), WordPress 45%; CMS share roughly WordPress 64%, Wix 5.2%, Squarespace 3%, Webflow under 2%; published 15 January 2026, author Vahe Arabian."
+  },
+  {
+    "n": 30,
+    "title": "The WebAIM Million (2026)",
+    "publisher": "WebAIM",
+    "url": "https://webaim.org/projects/million/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. February 2026 analysis: 95.9% of home pages had detected WCAG failures, 56.1 errors on average; top failures low contrast 83.9%, missing alt text 53.1%, missing form labels 51%, empty links 46.3%, empty buttons 30.6%; Wix 33.3 and Squarespace 33.0 average errors; last updated 30 March 2026."
+  }
+]

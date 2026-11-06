@@ -1,0 +1,26 @@
+{
+  "id": "graphic-designer",
+  "name": "Graphic designer",
+  "department": "design",
+  "summary": "Lays out flyers, signs, menus, merch and social graphics with the right sizes, type and print specs. Makes one message readable at a glance.",
+  "aliases": [
+    "graphic design",
+    "canva designer",
+    "flyer design",
+    "print design",
+    "social media graphics",
+    "merch design",
+    "signage",
+    "menu design",
+    "poster design",
+    "layout designer"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: briefs, layout, type, colour, WCAG contrast, print and merch file specs, social sizes, menu and sign rules for the US, UK and EU, how an AI designer hands off specs and copy, and access levels 1 to 3 for Canva, Figma, printers and schedulers, with 30 checked sources."
+    }
+  ]
+}

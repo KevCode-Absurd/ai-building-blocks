@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "OWASP Top 10:2025",
+    "publisher": "OWASP Foundation",
+    "url": "https://top10.owasp.org/2025",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (owasp.org/Top10/2025 redirects here). The ten categories: A01 Broken Access Control, A02 Security Misconfiguration, A03 Software Supply Chain Failures, A04 Cryptographic Failures, A05 Injection, A06 Insecure Design, A07 Authentication Failures, A08 Software or Data Integrity Failures, A09 Security Logging and Alerting Failures, A10 Mishandling of Exceptional Conditions. No exact release date on the page."
+  },
+  {
+    "n": 2,
+    "title": "OWASP Top 10:2025 Introduction",
+    "publisher": "OWASP Foundation",
+    "url": "https://top10.owasp.org/2025/0x00_2025-Introduction/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A10 new (24 CWEs on error handling, logic errors and failing open); A03 expands the 2021 outdated components category; SSRF folded into A01; A07 and A09 renamed; Security Misconfiguration rose from 5th to 2nd; data contributed for over 2.8 million applications, 589 CWEs; eight categories from data and two from a community survey."
+  },
+  {
+    "n": 3,
+    "title": "OWASP Application Security Verification Standard",
+    "publisher": "OWASP Foundation",
+    "url": "https://asvs.owasp.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (owasp.org/asvs redirects here). Stable version 5.0.0 published 30 May 2025; requirement IDs as chapter.section.requirement; cite with the version, for example v5.0.0-1.2.5."
+  },
+  {
+    "n": 4,
+    "title": "ASVS 5.0: What is the ASVS",
+    "publisher": "OWASP Foundation (GitHub)",
+    "url": "https://github.com/OWASP/ASVS/blob/master/5.0/en/0x03-What-is-the-ASVS.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Three levels: L1 about 20% of requirements as first-layer defences, L2 about 50% more and the level most applications should aim for, L3 the final about 30%; around 350 requirements in 17 chapters; L1 is not necessarily testable from outside without documentation or code; ASVS is not an implementation guide or a testing method; the standard does not prescribe a level."
+  },
+  {
+    "n": 5,
+    "title": "Password Storage Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Argon2id with at least 19 MiB memory, 2 iterations, parallelism 1; scrypt N=2^17, r=8, p=1; bcrypt for legacy only with work factor 10 or more and a 72-byte input limit; PBKDF2-HMAC-SHA256 with 600,000 iterations where FIPS-140 is required; pepper stored outside the database; rehash legacy hashes at next login."
+  },
+  {
+    "n": 6,
+    "title": "Authorization Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Least privilege, deny by default, check permissions on every request, prefer ABAC or ReBAC over RBAC for object-level decisions, do not rely on hard-to-guess IDs and check access to each object, enforce on the server, fail safely, log access control events, and test authorisation logic with unit and integration tests."
+  },
+  {
+    "n": 7,
+    "title": "Secrets Management Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Centralise secrets in a secrets manager; least privilege per secret; automate rotation and prefer short-lived dynamic secrets; no secrets in code or Docker ENV/ARG; environment variables as a last resort; detect secrets in the IDE, pre-commit and CI with more than one tool; on a leak revoke first, then rotate; log and audit secret use."
+  },
+  {
+    "n": 8,
+    "title": "Threat Modeling Cheat Sheet",
+    "publisher": "OWASP Cheat Sheet Series",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four phases: system modelling with data flow diagrams and trust boundaries; threat identification with STRIDE; responses mitigate, eliminate, transfer or accept; review and validation. Start early in design and keep the model current."
+  },
+  {
+    "n": 9,
+    "title": "Threat Modeling Manifesto",
+    "publisher": "Threat Modeling Manifesto working group",
+    "url": "https://www.threatmodelingmanifesto.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four key questions (what are we working on, what can go wrong, what are we going to do about it, did we do a good enough job); values, principles, patterns and anti-patterns; authors include Adam Shostack, Kim Wuyts and Izar Tarandach. Undated page."
+  },
+  {
+    "n": 10,
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Supply Chain, LLM04 Data and Model Poisoning, LLM05 Improper Output Handling, LLM06 Excessive Agency, LLM07 System Prompt Leakage, LLM08 Vector and Embedding Weaknesses, LLM09 Misinformation, LLM10 Unbounded Consumption."
+  },
+  {
+    "n": 11,
+    "title": "Common Vulnerability Scoring System v4.0: Specification Document",
+    "publisher": "FIRST",
+    "url": "https://www.first.org/cvss/v4.0/specification-document",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. v1.0 published 1 November 2023, current revision v1.2 dated 18 June 2024; Base, Threat, Environmental and Supplemental metric groups; CVSS-B, CVSS-BT, CVSS-BE, CVSS-BTE; ratings None 0.0, Low 0.1-3.9, Medium 4.0-6.9, High 7.0-8.9, Critical 9.0-10.0; Base reflects intrinsic severity and Threat and Environmental values are needed for a fuller input to risk assessment."
+  },
+  {
+    "n": 12,
+    "title": "Exploit Prediction Scoring System (EPSS)",
+    "publisher": "FIRST",
+    "url": "https://www.first.org/epss/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. EPSS gives each published CVE a probability (0 to 1) of exploitation activity in the next 30 days, plus a percentile, updated daily, free as CSV and API; maintained by the EPSS Special Interest Group at FIRST."
+  },
+  {
+    "n": 13,
+    "title": "Known Exploited Vulnerabilities Catalog",
+    "publisher": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Catalogue of vulnerabilities exploited in the wild; organisations should use it as an input to vulnerability management prioritisation; 1,768 entries shown on 6 November 2026; each entry has a CVE ID and a 'Known To Be Used in Ransomware Campaigns?' field."
+  },
+  {
+    "n": 14,
+    "title": "RFC 9116: A File Format to Aid in Security Vulnerability Disclosure",
+    "publisher": "IETF (RFC Editor)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9116",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 2022; security.txt at /.well-known/security.txt over HTTPS; Contact and Expires required, Expires recommended less than a year ahead; optional Policy, Encryption (a URI, not the key), Canonical, Acknowledgments, Preferred-Languages, Hiring; OpenPGP signature recommended; applies only to the exact domain; publishing it does not grant or deny permission to test."
+  },
+  {
+    "n": 15,
+    "title": "Vulnerability Disclosure Toolkit",
+    "publisher": "UK National Cyber Security Centre",
+    "url": "https://www.ncsc.gov.uk/information/vulnerability-disclosure-toolkit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 14 September 2020, reviewed 7 November 2024. A dedicated email or web form published in security.txt; a policy covering how to contact, secure communication, what to include, what happens next and what is in and out of scope."
+  },
+  {
+    "n": 16,
+    "title": "Cyber Resilience Act: reporting obligations",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 11 September 2026 manufacturers report actively exploited vulnerabilities and severe incidents through ENISA's Single Reporting Platform (operational 11 September 2026) to the CSIRT of their main establishment: early warning within 24 hours, notification within 72 hours, final report within 14 days of a fix being available (vulnerabilities) or a month (incidents)."
+  },
+  {
+    "n": 17,
+    "title": "About secret scanning",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scans the whole Git history on all branches plus issues, pull requests, discussions and wikis; free and automatic for public repositories; private organisation repositories need GitHub Secret Protection on GitHub Team or Enterprise Cloud; partner programme notifies providers; validity checks; advice to rotate exposed credentials at once."
+  },
+  {
+    "n": 18,
+    "title": "About push protection",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Blocks pushes containing supported secrets; repository-level push protection is off by default and needs GitHub Secret Protection; user-level push protection is on by default on GitHub.com for pushes to public repositories; bypass reasons (used in tests, false positive, fix later) are logged and alert admins."
+  },
+  {
+    "n": 19,
+    "title": "Remediating a leaked secret",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/remediating-a-leaked-secret",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Order: assess, revoke with the provider first (the most important step), update services, check provider and audit logs for misuse, then clean history, document and prevent; removing the secret from code, history or the repository does not stop it being exploited."
+  },
+  {
+    "n": 20,
+    "title": "About Dependabot alerts",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Alerts from the GitHub Advisory Database and dependency graph; only GitHub-reviewed advisories trigger alerts; no notification for existing vulnerabilities when first enabled; archived repositories not scanned; GitHub Actions pinned by SHA do not generate alerts; reachability analysis in preview for npm, pnpm and Yarn; alerts cannot catch every issue."
+  },
+  {
+    "n": 21,
+    "title": "About code scanning with CodeQL",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. CodeQL supports C/C++, C#, Go, Java/Kotlin, JavaScript/TypeScript, Python, Ruby, Rust, Swift and GitHub Actions workflows; unsupported languages such as PHP and Scala may give no or incomplete results; default setup, advanced setup or external CI."
+  },
+  {
+    "n": 22,
+    "title": "npm-audit",
+    "publisher": "npm Docs",
+    "url": "https://docs.npmjs.com/cli/v11/commands/npm-audit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Sends the dependency tree to the registry and reports known vulnerabilities; --audit-level sets the severity that fails the exit code; npm audit fix runs npm install; --force may install semver-major updates and the docs strongly advise against it without a clear plan; npm audit signatures checks registry signatures and provenance."
+  },
+  {
+    "n": 23,
+    "title": "pip-audit",
+    "publisher": "Python Packaging Authority (GitHub)",
+    "url": "https://github.com/pypa/pip-audit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Audits Python environments, requirements files and projects against the PyPI or OSV vulnerability services; --fix and --fix --dry-run; not a static code analyser; cannot defend against malicious packages, and auditing a requirements file is functionally equivalent to pip install; maintained under PyPA, created by Trail of Bits with Google support."
+  },
+  {
+    "n": 24,
+    "title": "ZAP Baseline Scan",
+    "publisher": "ZAP (zaproxy.org)",
+    "url": "https://www.zaproxy.org/docs/docker/baseline-scan/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Runs the spider for one minute by default, then passive scanning only, with no active attacks; usually finishes in a few minutes; alerts default to WARN and can be set to FAIL or IGNORE; exit codes 0 to 3; run from the ZAP Docker image."
+  },
+  {
+    "n": 25,
+    "title": "Gitleaks",
+    "publisher": "Gitleaks project (GitHub)",
+    "url": "https://github.com/gitleaks/gitleaks",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open-source (MIT) secret scanner for git history, directories and stdin; pre-commit hook and GitHub Action; --redact hides secrets in output; the project is feature complete, future releases are security patches only, and development is moving to Betterleaks."
+  },
+  {
+    "n": 26,
+    "title": "Content-Security-Policy-Report-Only",
+    "publisher": "MDN Web Docs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reports CSP violations without enforcing; report-to with a Reporting-Endpoints header is current and report-uri is deprecated, so send both; not supported in a meta element; widely available across browsers since August 2016."
+  },
+  {
+    "n": 27,
+    "title": "Uber Agrees to Expanded Settlement with FTC Related to Privacy, Security Claims",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2018/04/uber-agrees-expanded-settlement-ftc-related-privacy-security-claims",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 12 April 2018: in 2016 intruders used an access key an Uber engineer had posted on a code-sharing website to download files from cloud storage, with over 25 million names and emails, 22 million names and phone numbers and 600,000 driver's licence numbers; Uber paid the intruders $100,000 through its bug bounty programme and did not disclose the breach until November 2017."
+  },
+  {
+    "n": 28,
+    "title": "Equifax to Pay $575 Million as Part of Settlement with FTC, CFPB, and States Related to 2017 Data Breach",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2019/07/equifax-pay-575-million-part-settlement-ftc-cfpb-states-related-2017-data-breach",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 22 July 2019: Equifax was alerted to a critical vulnerability in March 2017 and ordered a patch within 48 hours but did not check it was applied; the system stayed unpatched until July 2017; credentials stored in plain text; about 147 million people affected."
+  },
+  {
+    "n": 29,
+    "title": "Computer Misuse Act (legal guidance)",
+    "publisher": "Crown Prosecution Service",
+    "url": "https://www.cps.gov.uk/legal-guidance/computer-misuse-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated 3 August 2023. Section 1 unauthorised access (up to 2 years), section 3 unauthorised acts impairing operation (up to 10 years), section 3A making or supplying articles for use in offences (up to 2 years); the act must be unauthorised and the person must know it."
+  },
+  {
+    "n": 30,
+    "title": "Justice Manual 9-48.000: Computer Fraud and Abuse Act",
+    "publisher": "US Department of Justice",
+    "url": "https://www.justice.gov/jm/jm-9-48000-computer-fraud",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Updated May 2022: prosecutors should decline to charge good-faith security research, defined as access solely for good-faith testing, investigation or correction of a flaw, designed to avoid harm; research in bad faith, such as looking for holes to extort owners, does not qualify."
+  }
+]

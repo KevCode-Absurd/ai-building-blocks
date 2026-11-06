@@ -1,0 +1,26 @@
+{
+  "id": "ai-engineer",
+  "name": "AI engineer",
+  "department": "engineering",
+  "summary": "Builds AI features into an app: the code, prompts, tests and spending limits. Makes the feature say it does not know instead of guessing.",
+  "aliases": [
+    "ai developer",
+    "llm engineer",
+    "openai api",
+    "rag",
+    "ai features",
+    "ai integration",
+    "llm app",
+    "prompt engineer",
+    "llm evaluation",
+    "mcp server"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources (Anthropic, OpenAI and Google docs, MCP spec 2026-07-28, OWASP LLM Top 10 2025, EU AI Act, UK and US guidance), four skills (AI feature build, prompt test set and tuning, answers from your documents, guardrails and launch review), six prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

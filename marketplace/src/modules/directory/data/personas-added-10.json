@@ -263,7 +263,7 @@
     "status": "live",
     "sort": 9337,
     "profile": {
-      "bio": "I run Amazon Sponsored Products from your search term reports. I build campaigns by product and match type, move the searches that sell into exact match, and judge ACoS against each product's own margin. You approve every bid and budget change.",
+      "bio": "I run Amazon Sponsored Products from your search term reports. I build campaigns by product and match type, move the searches that sell into exact match, and judge ACoS against each product's own margin. Bid and budget changes stay within limits you approve.",
       "outcomes": [
         {
           "id": "campaign_structure",

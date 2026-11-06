@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Pinterest product specs",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-product-specs",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard Pin 2:3 (1000 x 1500 px), PNG or JPEG; video 4 seconds to 15 minutes; carousel 2 to 5 images (non-sales); collections; title up to 100 characters with the first 40 usually shown in feeds; description up to 800 characters, used for delivery relevance; ad format safe zones. No page date."
+  },
+  {
+    "n": 2,
+    "title": "Creative best practices",
+    "publisher": "Pinterest Business",
+    "url": "https://business.pinterest.com/creative-best-practices/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Vertical 2:3 images; logo or brand name on every ad without dominating; key message at the top; specific calls to action; refresh creative for seasonal moments; points to Pinterest Predicts and the Pinterest Palette as trend reports based on searches."
+  },
+  {
+    "n": 3,
+    "title": "How to make Pins",
+    "publisher": "Pinterest Business",
+    "url": "https://business.pinterest.com/how-to-make-pins/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Pins can be images or video and link to your site; create new original Pins at least once a week; clear, descriptive board titles help search (example 'Easy no-bake dinners'); bulk upload; RSS feed and product feed can create Pins automatically; scheduling tool."
+  },
+  {
+    "n": 4,
+    "title": "Schedule Pins",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/schedule-pins",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Pins can be scheduled up to 30 days ahead, with up to 10 Pins scheduled at once; title, board, description, link and date can be edited after scheduling, the image or video cannot. No page date."
+  },
+  {
+    "n": 5,
+    "title": "Get a business account",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/get-a-business-account",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Business accounts are free; create one or convert a public personal account (Pins and followers stay); gives Business Hub, Pinterest Analytics and ads."
+  },
+  {
+    "n": 6,
+    "title": "Claim your website",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/claim-your-website",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Claim by HTML tag, HTML file, DNS TXT record (up to 72 hours) or, for some accounts, Google Merchant Center; benefits: analytics on content saved from your site, attribution, your profile shown on those Pins; a site can be claimed by one account; marketplace shops such as Etsy, eBay and Amazon generally can't be claimed."
+  },
+  {
+    "n": 7,
+    "title": "Rich Pins",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/rich-pins",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Recipe, article and product Rich Pins pull data from Open Graph or Schema.org markup (recipes also h-recipe); sync can take up to 24 hours; existing Pins linking to tagged pages become Rich Pins; product Rich Pins need in-stock items with accurate prices and merchant guideline compliance; a meta tag can switch Rich Pins off per page."
+  },
+  {
+    "n": 8,
+    "title": "Before you get started with catalogs",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/before-you-get-started-with-catalogs",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Catalog needs a business account, claimed website, Pinterest tag and merchant guideline compliance; TSV, CSV, XML or Google Sheets data sources; required fields id, title, description, link, image_link, price, availability (item_group_id for variants); hosted sources read daily; up to 20 million products per retail catalog."
+  },
+  {
+    "n": 9,
+    "title": "Verified Merchant Program",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/verified-merchant-program",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Requirements: business account at least three months old with photo and About section; claimed website at least nine months old; at least 75% of catalog products ingested; page visit, add-to-cart and checkout events sent at least weekly over the last 30 days; benefits include a blue checkmark; 30 days to fix issues after a suspension."
+  },
+  {
+    "n": 10,
+    "title": "Pinterest Trends",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-trends",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Up to two years of search, save and shopping trends by region; volume normalised to an index from 0 to 100; weekly, monthly and yearly change and a seasonal marker; compare up to four keywords; age and gender breakdowns; audience trends over 90 days; needs a business account; not in the mobile app."
+  },
+  {
+    "n": 11,
+    "title": "Pinterest Analytics",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-analytics",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Metrics: impressions, engagements, saves, Pin clicks, outbound clicks, video metrics, total and engaged audience; custom ranges over the past year and a half; real-time estimates for the last 48 hours that may change; filters for organic or paid, format, claimed accounts, device, source; CSV export."
+  },
+  {
+    "n": 12,
+    "title": "Install the Pinterest tag",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/install-the-pinterest-tag",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The tag tracks visitors and their actions after seeing or engaging with ads; used for conversion tracking, audiences and verified merchant status; install through a partner integration, a developer, or manually; changes can take up to 24 hours to show in Ads Manager; set-up on desktop."
+  },
+  {
+    "n": 13,
+    "title": "Add event codes",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/add-event-codes",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Standard events including Checkout, AddToCart, PageVisit, Signup, Lead, Search, ViewCategory, WatchVideo and others, plus custom events; automatic enhanced match option; event_id to identify each event."
+  },
+  {
+    "n": 14,
+    "title": "The Pinterest API for Conversions",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/the-pinterest-api-for-conversions",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Server-to-server conversion events for optimisation, targeting and reporting; partner or direct integration; token generated in Ads Manager; send events in under an hour; deduplicate with the tag using event_id; aim for a 'Good' Event Quality Score."
+  },
+  {
+    "n": 15,
+    "title": "Advertise on Pinterest",
+    "publisher": "Pinterest Business",
+    "url": "https://business.pinterest.com/advertise/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Ad formats (image, video, carousel, collections, Idea, Showcase, Quiz, Premiere Spotlight); targeting by customer lists, keywords and interests; budgets and bids set by the advertiser or automatic; ads available to businesses of any size; Pinterest Academy courses."
+  },
+  {
+    "n": 16,
+    "title": "Campaign objectives",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/campaign-objectives",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Objectives: brand awareness (CPM), video completion (Performance+ only), consideration (CPC; outbound-click optimisation needs Performance+), leads and sales (target CPA or Performance+); ads not available in every region."
+  },
+  {
+    "n": 17,
+    "title": "Keyword targeting",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/keyword-targeting",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Broad (default), phrase and exact match, negative phrase and negative exact; up to 20,000 keywords per ad group; at least 25 recommended; ads reviewed against advertising guidelines, which can take up to 24 hours."
+  },
+  {
+    "n": 18,
+    "title": "Audience targeting",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/audience-targeting",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Site visitor, customer list, engagement, actalike and persona audiences; customer lists need at least 100 matches and contain emails or mobile ad IDs only; build times of 24 to 72 hours."
+  },
+  {
+    "n": 19,
+    "title": "Shopping ads",
+    "publisher": "Pinterest Help Center",
+    "url": "https://help.pinterest.com/en/business/article/shopping-ads",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Shopping ads need a catalog and product groups; no keyword or interest targeting needed for sales campaigns; dynamic retargeting; Performance+ bidding recommended at launch; formats standard, video, collections and carousel; catalog-wide image updates can delay delivery a day or two."
+  },
+  {
+    "n": 20,
+    "title": "Advertising Guidelines",
+    "publisher": "Pinterest Policy",
+    "url": "https://policy.pinterest.com/en/advertising-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Prohibited and restricted categories (political ads, weight loss with a narrow GLP-1 exception, before-and-after weight-loss images, most CBD, tobacco, online gambling); no false or exaggerated claims; landing pages must match the ad and avoid forced sign-ups, pop-ups and redirects; no targeting under-18s or sensitive categories; quality rules on legible text, no excessive capitals, no fake buttons. States an update effective 12 Nov 2026."
+  },
+  {
+    "n": 21,
+    "title": "Advertising Guidelines (preview of version effective 12 November 2026)",
+    "publisher": "Pinterest Policy",
+    "url": "https://policy.pinterest.com/advertising-guidelines-preview",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Preview of the guidelines taking effect 12 Nov 2026: disclose billing practices, health and GLP-1 rules, crypto pre-approval, no ads to under-18s, landing page and quality rules, and a new trade sanctions section."
+  },
+  {
+    "n": 22,
+    "title": "Merchant Guidelines",
+    "publisher": "Pinterest Policy",
+    "url": "https://policy.pinterest.com/en/merchant-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Merchants can't be affiliate marketers or wholesalers; clear return policy and contact details; price and stock data current within seven days; a Pin must show a specific item for sale; Pinterest can remove product Pins or feed access. Update effective 12 Nov 2026."
+  },
+  {
+    "n": 23,
+    "title": "Community Guidelines",
+    "publisher": "Pinterest Policy",
+    "url": "https://policy.pinterest.com/en/community-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Last updated May 2026, with an update effective 12 Nov 2026. Spam rules: no repetitive or irrelevant content to make money, no keyword stuffing, no bought engagement, no misleading links or excessive redirects, no unapproved automation (approved partners listed by Pinterest), no multiple accounts to manipulate; synthetic content rules."
+  },
+  {
+    "n": 24,
+    "title": "Commercial and Branded Content Guidelines",
+    "publisher": "Pinterest Policy",
+    "url": "https://policy.pinterest.com/en/commercial-and-branded-content-guidelines",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Last updated April 2025. Paid partnerships need a clear disclosure (#ad or the paid partnership label); EEA creators must disclose commercial purpose; no paying per follow or save; affiliate rules; contest rules (don't require saving a specific image; one entry per person)."
+  },
+  {
+    "n": 25,
+    "title": "Pinterest programmatic deals announcement (newsroom post on premium inventory for programmatic buyers)",
+    "publisher": "Pinterest Newsroom (26 Oct 2026)",
+    "url": "https://newsroom.pinterest.com/news/pinterest-programmatic-deals/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Published 26 Oct 2026: a record 640 million monthly active users; more than 80 billion searches a month, more than half commercial; more than 96% of text searches unbranded; Moroccanoil campaign results (June 2026); programmatic deals through DSP partners."
+  },
+  {
+    "n": 26,
+    "title": "Festive season on Pinterest",
+    "publisher": "Pinterest Business",
+    "url": "https://business.pinterest.com/holiday/",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Pinterest's festive-season advice: plan early and stay always-on, upload the catalog and install the tag before the season; vendor-reported results for Urban Outfitters, Glenfiddich and Waitrose, with footnoted sources not shown on the page. No page date."
+  },
+  {
+    "n": 27,
+    "title": "Advertising FAQs: a guide for small business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Ads must be truthful and not deceptive; proof before an ad runs; material connections with endorsers must be disclosed; 'free' offer rules. Dated April 2001, edited January 2025."
+  },
+  {
+    "n": 28,
+    "title": "Influencers' guide to making clear that ads are ads",
+    "publisher": "Advertising Standards Authority / CAP (UK)",
+    "url": "https://www.asa.org.uk/resource/influencers-guide.html",
+    "checked": "2026-11-06",
+    "supports": "Fetched. Fourth edition dated 23 Oct 2026: when content counts as advertising and how to label it, including affiliate marketing; adds fake consumer reviews and the DMCC Act enforcement powers. The page summarises the PDF guide."
+  },
+  {
+    "n": 29,
+    "title": "Court of Justice press release, case C-330/23: price reductions",
+    "publisher": "Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2024-09/cp240152en.pdf",
+    "checked": "2026-11-06",
+    "supports": "Fetched (PDF, text only partly readable). A price reduction announced in an advertisement must be calculated from the lowest price in the last 30 days. PDF created September 2024."
+  },
+  {
+    "n": 30,
+    "title": "Unfair Commercial Practices Directive",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/unfair-commercial-practices-law/unfair-commercial-practices-directive_en",
+    "checked": "2026-11-06",
+    "supports": "Fetched. The EU's general law against misleading and aggressive business-to-consumer practices; guidance adopted 17 Dec 2021; Directive (EU) 2024/825 on the green transition applies from 27 Sep 2026."
+  }
+]

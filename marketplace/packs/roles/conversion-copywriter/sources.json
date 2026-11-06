@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Breakthrough Advertising (Eugene Schwartz, 1966; current hardcover reprint)",
+    "publisher": "Titans Marketing (Brian Kurtz), the book's rights holder",
+    "url": "https://breakthroughadvertisingbook.com/",
+    "checked": "2026-11-06",
+    "supports": "The book and its 1966 date; source of the awareness and market sophistication ideas summarised in the canon"
+  },
+  {
+    "n": 2,
+    "title": "Scientific Advertising (Claude C. Hopkins, 1923 text)",
+    "publisher": "Dover Publications",
+    "url": "https://store.doverpublications.com/products/9780486836058",
+    "checked": "2026-11-06",
+    "supports": "Hopkins's book (Dover republication of the 1923 edition): measurable selling, specificity, samples and testing"
+  },
+  {
+    "n": 3,
+    "title": "Ogilvy on Advertising (David Ogilvy)",
+    "publisher": "Penguin Random House (Vintage)",
+    "url": "https://www.penguinrandomhouse.com/books/124131/ogilvy-on-advertising-by-david-ogilvy/",
+    "checked": "2026-11-06",
+    "supports": "Ogilvy's book: research, effective copy and what makes advertising work"
+  },
+  {
+    "n": 4,
+    "title": "Tested Advertising Methods (John Caples, first published 1932)",
+    "publisher": "Open Library (Internet Archive) catalogue record",
+    "url": "https://openlibrary.org/works/OL3350190W/Tested_advertising_methods",
+    "checked": "2026-11-06",
+    "supports": "Bibliographic record of Caples's book, first published 1932, later Prentice-Hall editions; source of the tested-headline ideas"
+  },
+  {
+    "n": 5,
+    "title": "The Adweek Copywriting Handbook (Joseph Sugarman)",
+    "publisher": "Wiley",
+    "url": "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/the-adweek-copywriting-handbook-978-0-470-05124-5",
+    "checked": "2026-11-06",
+    "supports": "Sugarman's handbook (January 2007 edition): copy process and the psychology of buying"
+  },
+  {
+    "n": 6,
+    "title": "The 7 Principles of Persuasion",
+    "publisher": "Influence at Work (Robert Cialdini's company)",
+    "url": "https://www.influenceatwork.com/7-principles-of-persuasion/",
+    "checked": "2026-11-06",
+    "supports": "The seven principles (reciprocity, scarcity, authority, consistency, liking, social proof, unity) and the emphasis on ethical use"
+  },
+  {
+    "n": 7,
+    "title": "Demand-Side Sales 101: Stop Selling and Help Your Customers Make Progress (Bob Moesta)",
+    "publisher": "Lioncrest Publishing",
+    "url": "https://lioncrest.com/books/demand-side-sales-101-stop-selling-and-help-your-customers-make-progress",
+    "checked": "2026-11-06",
+    "supports": "Moesta's book applying Jobs to be Done to buying and selling: customers buy to make progress"
+  },
+  {
+    "n": 8,
+    "title": "Unpacking the Progress Making Forces Diagram (Jobs-to-be-Done Radio)",
+    "publisher": "Jobs to be Done / The Re-Wired Group",
+    "url": "https://jobstobedone.org/radio/unpacking-the-progress-making-forces-diagram/",
+    "checked": "2026-11-06",
+    "supports": "Bob Moesta and Chris Spiek's definitions of the four forces: push, pull, anxiety, habit"
+  },
+  {
+    "n": 9,
+    "title": "Review Mining for Customer Research and Sales Marketing (Joanna Wiebe, 2014)",
+    "publisher": "Copyhackers",
+    "url": "https://copyhackers.com/2014/10/amazon-review-mining/",
+    "checked": "2026-11-06",
+    "supports": "The message-mining method and the Beachway test: more than 400% more button clicks and more than 20% more lead form submits"
+  },
+  {
+    "n": 10,
+    "title": "7 copywriting research techniques conversion copywriters love (2022)",
+    "publisher": "Copyhackers",
+    "url": "https://copyhackers.com/2022/06/copywriting-research/",
+    "checked": "2026-11-06",
+    "supports": "Research methods: interviews, surveys, review mining, heatmaps, thank-you polls, analytics, competitor audits"
+  },
+  {
+    "n": 11,
+    "title": "How to Use Voice of Customer Research to Boost Conversions",
+    "publisher": "CXL",
+    "url": "https://cxl.com/blog/voice-of-customer/",
+    "checked": "2026-11-06",
+    "supports": "Voice-of-customer research as the basis for conversion copy (site blocks automated fetching; page confirmed in search results)"
+  },
+  {
+    "n": 12,
+    "title": "#5: Learning From Customers (Qualitative Surveys)",
+    "publisher": "CXL",
+    "url": "https://cxl.com/conversion-optimization/learning-from-customers-qualitative-surveys/",
+    "checked": "2026-11-06",
+    "supports": "Survey recent first-time buyers, use open-ended questions, aim for at least about 100 responses (site blocks automated fetching; page confirmed in search results)"
+  },
+  {
+    "n": 13,
+    "title": "How Users Read on the Web (Jakob Nielsen, 1997)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "checked": "2026-11-06",
+    "supports": "79% scanned, 16% read word by word; concise 58%, scannable 47%, objective 27%, combined 124% better usability"
+  },
+  {
+    "n": 14,
+    "title": "How Little Do Users Read? (Jakob Nielsen, 2008)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-little-do-users-read/",
+    "checked": "2026-11-06",
+    "supports": "Users read at most about 28% of words per page visit, likely about 20%; sample and caveats"
+  },
+  {
+    "n": 15,
+    "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile) (Kara Pernice, 2017, reviewed 2026)",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+    "checked": "2026-11-06",
+    "supports": "F-pattern and other scanning patterns; front-loading, meaningful headings, descriptive links"
+  },
+  {
+    "n": 16,
+    "title": "2024 Conversion Benchmark Report",
+    "publisher": "Unbounce",
+    "url": "https://unbounce.com/conversion-benchmark-report/",
+    "checked": "2026-11-06",
+    "supports": "Median landing page conversion 6.6% (41K+ pages, 464M+ visitors, 57M+ conversions); grade 5-7 copy 11.1% vs 5.3% professional level; correlation caveats"
+  },
+  {
+    "n": 17,
+    "title": "The Surprising Power of Online Experiments (Ron Kohavi and Stefan Thomke, Sept-Oct 2017)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2017/09/the-surprising-power-of-online-experiments",
+    "checked": "2026-11-06",
+    "supports": "Bing ad headline display test: about 12% more revenue, over $100M a year in the US; ideas are hard to value without testing; check surprising results"
+  },
+  {
+    "n": 18,
+    "title": "Obama's $60 million dollar experiment (Dan Siroker, 29 November 2010)",
+    "publisher": "Optimizely",
+    "url": "https://www.optimizely.com/field-notes/articles/how-obama-raised-60-million-by-running-a-simple-experiment",
+    "checked": "2026-11-06",
+    "supports": "24-combination splash page test; Learn More plus family image raised sign-ups from 8.26% to 11.6% (40.6%); $60M is an extrapolation"
+  },
+  {
+    "n": 19,
+    "title": "Organ Donor Register (GDS blog, 18 March 2014)",
+    "publisher": "Government Digital Service, GOV.UK",
+    "url": "https://gds.blog.gov.uk/2014/03/18/organ-donor-register/",
+    "checked": "2026-11-06",
+    "supports": "Eight calls to action tested on over 1,000,000 visitors; reciprocity message won; projected 96,000 extra registrations a year"
+  },
+  {
+    "n": 20,
+    "title": "How Not To Run an A/B Test (Evan Miller, 18 April 2010)",
+    "publisher": "Evan Miller",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-06",
+    "supports": "Peeking inflates false positives (26.1% in the worked example); fix sample size in advance; n = 16 p(1-p) / delta squared"
+  },
+  {
+    "n": 21,
+    "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing (Kohavi, Tang, Xu, 2020)",
+    "publisher": "Cambridge University Press (book site)",
+    "url": "https://experimentguide.com/",
+    "checked": "2026-11-06",
+    "supports": "Standard practical guide to running A/B tests"
+  },
+  {
+    "n": 22,
+    "title": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials (14 August 2024)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+    "checked": "2026-11-06",
+    "supports": "The six practices the rule bans, including AI-generated fake reviews; civil penalties for knowing violations"
+  },
+  {
+    "n": 23,
+    "title": "Trade Regulation Rule on the Use of Consumer Reviews and Testimonials, 89 FR (22 August 2024)",
+    "publisher": "Federal Register via GovInfo",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2024-08-22/html/2024-18519.htm",
+    "checked": "2026-11-06",
+    "supports": "16 CFR Part 465; effective date 21 October 2024; AI-generated reviews covered"
+  },
+  {
+    "n": 24,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Typical-results disclosure for atypical testimonials; disclosing material connections; cherry-picking or suppressing reviews can mislead"
+  },
+  {
+    "n": 25,
+    "title": "Federal Trade Commission Announces Updated Advertising Guides to Combat Deceptive Reviews and Endorsements (29 June 2023)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/06/federal-trade-commission-announces-updated-advertising-guides-combat-deceptive-reviews-endorsements",
+    "checked": "2026-11-06",
+    "supports": "Date and scope of the 2023 Endorsement Guides update: review manipulation, incentivised and employee reviews, clear and conspicuous"
+  },
+  {
+    "n": 26,
+    "title": "FTC Report Shows Rise in Sophisticated Dark Patterns Designed to Trick and Trap Consumers (15 September 2022)",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick-trap-consumers",
+    "checked": "2026-11-06",
+    "supports": "Bringing Dark Patterns to Light: disguised ads, fake limited-time countdowns, hard cancellation, buried terms and junk fees, data tricks"
+  },
+  {
+    "n": 27,
+    "title": "CMA to boost consumer and business confidence as new consumer protection regime comes into force (7 April 2025)",
+    "publisher": "UK Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/news/cma-to-boost-consumer-and-business-confidence-as-new-consumer-protection-regime-comes-into-force",
+    "checked": "2026-11-06",
+    "supports": "DMCC Act consumer regime: CMA direct enforcement, fines up to 10% of global turnover, explicit bans on fake reviews and drip pricing"
+  },
+  {
+    "n": 28,
+    "title": "Fake reviews (CMA208), published 4 April 2025",
+    "publisher": "UK Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/fake-reviews",
+    "checked": "2026-11-06",
+    "supports": "CMA guidance on how businesses must comply with consumer protection law on reviews"
+  },
+  {
+    "n": 29,
+    "title": "It's the final countdown... but is it really? (20 April 2023)",
+    "publisher": "Advertising Standards Authority / CAP",
+    "url": "https://www.asa.org.uk/news/it-s-the-final-countdown-but-is-it-really.html",
+    "checked": "2026-11-06",
+    "supports": "Countdown timers must reflect real time limits; the offer ends at zero; timers must not restart"
+  },
+  {
+    "n": 30,
+    "title": "Online Choice Architecture: How digital design can harm competition and consumers (5 April 2022)",
+    "publisher": "UK Competition and Markets Authority, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/online-choice-architecture-how-digital-design-can-harm-competition-and-consumers",
+    "checked": "2026-11-06",
+    "supports": "CMA discussion paper and evidence review linking interface design practices and dark patterns to consumer harm"
+  }
+]

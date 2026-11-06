@@ -1,0 +1,218 @@
+[
+  {
+    "n": 1,
+    "title": "Use clear language",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain English is mandatory; split sentences over 25 words; no more than 5 sentences per paragraph; active voice; short familiar words; specialists prefer plain English and specialist terms are explained on first use; 1 in 6 adults in England have very poor literacy skills; negative contractions are hard for many users"
+  },
+  {
+    "n": 2,
+    "title": "A to Z style guide",
+    "publisher": "GOV.UK (Government Digital Service)",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/style-guides/a-to-z-style-guide/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dates without ordinals or commas; \"to\" in ranges; times like 5:30pm, midday and midnight; numerals from 2; commas in numbers over 999; bullet point rules; sentence case and no block capitals; explain abbreviations on first use; \"and\" not ampersand; \"select\" not \"click\"; specific link text; avoid negative contractions; words to avoid"
+  },
+  {
+    "n": 3,
+    "title": "Publishing accessible documents",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/publishing-accessible-documents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Publish in HTML wherever possible; a new PDF is a last resort with an HTML version too; heading styles, simple tables with headers, alt text, no images of text, not relying on colour, meaningful link text, sans serif at least 12 point, left aligned, run the accessibility checker; updated 9 Oct 2025"
+  },
+  {
+    "n": 4,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Public sector websites and apps must meet WCAG 2.2 AA; schools and nurseries partly exempt but must make content needed to use a service accessible and publish an accessibility statement; charities exempt unless mostly publicly funded, providing essential services or aimed at disabled people; updated 30 Sep 2024"
+  },
+  {
+    "n": 5,
+    "title": "Plain language guide series",
+    "publisher": "Digital.gov (US General Services Administration)",
+    "url": "https://digital.gov/guides/plain-language",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plain language is content the audience can understand; the Plain Writing Act of 2010 requires public content written for its audience; four guides on principles, writing, design and testing"
+  },
+  {
+    "n": 6,
+    "title": "Principles of plain language",
+    "publisher": "Digital.gov",
+    "url": "https://digital.gov/guides/plain-language/principles",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Write for your audience; plain language is not dumbing down; organise, keep it short and simple, avoid jargon; topic sentences, active voice, summaries up front, tables and lists"
+  },
+  {
+    "n": 7,
+    "title": "Writing for understanding",
+    "publisher": "Digital.gov",
+    "url": "https://digital.gov/guides/plain-language/writing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shorter words and sections, active voice and present tense; passive voice hides who acts; avoid hidden verbs (nouns made from verbs)"
+  },
+  {
+    "n": 8,
+    "title": "How to write clearly",
+    "publisher": "Publications Office of the European Union (European Commission, Directorate-General for Translation)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/c2dab20c-0414-408d-87b5-dd3c6e5dd9a5",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Commission clear writing guide, released 16 Mar 2011, available in 23 EU languages (metadata page; guide text not read)"
+  },
+  {
+    "n": 9,
+    "title": "Get your document's readability and level statistics",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/get-your-document-s-readability-and-level-statistics-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to show Flesch Reading Ease and Flesch-Kincaid Grade Level in Word; Microsoft suggests about 60 to 70 for Reading Ease and about 7.0 to 8.0 for grade level in most documents; scores depend on sentence length and syllables; mixed-language caveats"
+  },
+  {
+    "n": 10,
+    "title": "How users read on the web",
+    "publisher": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jakob Nielsen, article of 30 Sep 1997: 79% of test users scanned new pages and 16% read word by word; concise text measured 58% better usability, scannable layout 47%, objective language 27%, all three 124%"
+  },
+  {
+    "n": 11,
+    "title": "Voice and tone",
+    "publisher": "Mailchimp Content Style Guide",
+    "url": "https://styleguide.mailchimp.com/voice-and-tone/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Voice stays the same while tone changes with the situation and the reader's feelings; voice traits plainspoken, genuine, translator, dry humour; clarity over entertainment; guide under a CC BY-NC 4.0 licence"
+  },
+  {
+    "n": 12,
+    "title": "An alt Decision Tree",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. How to choose alt text: images of text, functional images in links or buttons, informative images with a short description, complex images with the information elsewhere on the page, decorative images with empty alt; updated 13 May 2024"
+  },
+  {
+    "n": 13,
+    "title": "Complex Images tutorial",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Charts and graphs need a short alt that identifies the image plus a long text description of the essential information, placed near the image or linked; updated 8 Apr 2026"
+  },
+  {
+    "n": 14,
+    "title": "Understanding SC 1.4.3: Contrast (Minimum)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level AA contrast of at least 4.5:1 for normal text and 3:1 for large text (at least 18 point, or 14 point bold); logos and decorative text excepted; updated 4 Oct 2026"
+  },
+  {
+    "n": 15,
+    "title": "Understanding SC 2.4.4: Link Purpose (In Context)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Level A: the purpose of each link can be determined from its text or its surrounding context; context before the link works better for screen reader users; updated 4 Oct 2026"
+  },
+  {
+    "n": 16,
+    "title": "Improve accessibility with the Accessibility Checker",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Accessibility Checker in Word, Excel, PowerPoint, Outlook and OneNote sorts issues into errors, warnings and tips; how to run it on Windows, Mac and the web, including while composing in Outlook"
+  },
+  {
+    "n": 17,
+    "title": "Email Accessibility Report 2026",
+    "publisher": "Email Markup Consortium",
+    "url": "https://emailmarkup.org/en/reports/accessibility/2026",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 376,348 emails analysed from May 2025 to May 2026 with Parcel's checker; 99.88% had serious or critical issues; 8 emails passed every check; common failures: missing lang and dir attributes, layout tables without role=presentation, links without discernible text, low colour contrast, images without alt text; .edu and .gov senders and major newsletter platforms all failed; last modified 21 May 2026"
+  },
+  {
+    "n": 18,
+    "title": "Email sender guidelines",
+    "publisher": "Google Workspace Admin Help",
+    "url": "https://support.google.com/a/answer/81126",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 1 Feb 2024 all senders to Gmail need SPF or DKIM, valid DNS, TLS and a spam rate below 0.3%; bulk senders (over 5,000 messages a day to Gmail) also need DMARC, alignment, one-click unsubscribe and a visible unsubscribe link; keep spam rate below 0.1%"
+  },
+  {
+    "n": 19,
+    "title": "Mail Privacy Protection",
+    "publisher": "Apple",
+    "url": "https://www.apple.com/legal/privacy/data/en/mail-privacy-protection/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Protect Mail Activity downloads remote content in the background whether or not the email is opened, and hides the IP address, so open signals are not reliable"
+  },
+  {
+    "n": 20,
+    "title": "Email marketing benchmarks and industry statistics",
+    "publisher": "Mailchimp",
+    "url": "https://mailchimp.com/resources/email-marketing-benchmarks/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data as of December 2023: all users 35.63% open, 2.62% click, 0.22% unsubscribe; Education and Training 35.64% open, 3.02% click; Non-Profits 40.04% open, 3.27% click; notes that Apple privacy changes may affect open rates"
+  },
+  {
+    "n": 21,
+    "title": "CAN-SPAM Act: A Compliance Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Primary purpose test for commercial versus transactional or relationship email; accurate headers and subject lines; identify ads; valid postal address; opt-out honoured within 10 business days; penalties up to $53,088 per email; guide dated Aug 2023, edited Jan 2024"
+  },
+  {
+    "n": 22,
+    "title": "Data (Use and Access) Act factsheet: Privacy and Electronic Communications Regulations",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 114 extends the soft opt-in so charities can email and text people who have shown interest in their purposes, with an opt-out at collection and later; the Act comes into force in stages; published 27 Jun 2025"
+  },
+  {
+    "n": 23,
+    "title": "Data protection and online privacy",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Prior consent is required for direct marketing emails, with an exception for a company you already buy from marketing its own similar products; right to object at any time; cookie consent rules; last checked 5 Aug 2026"
+  },
+  {
+    "n": 24,
+    "title": "Fact sheet: new rule on the accessibility of web content and mobile apps",
+    "publisher": "ADA.gov (US Department of Justice)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. ADA Title II rule covers state and local governments including public schools, colleges and universities; WCAG 2.1 AA; a 2026 interim final rule (20 Apr 2026) extended compliance to 26 Apr 2027 for populations of 50,000 or more and 26 Apr 2028 for smaller ones and special districts"
+  },
+  {
+    "n": 25,
+    "title": "A new era of inclusion begins: the European Accessibility Act enters into force",
+    "publisher": "AccessibleEU (European Commission)",
+    "url": "https://accessible-eu-centre.ec.europa.eu/content-corner/news/new-era-inclusion-begins-eaa-enters-force-2025-06-27_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 28 June 2025 covered products and services must be accessible, including e-commerce, banking, e-books, transport websites and apps, and computers and phones"
+  },
+  {
+    "n": 26,
+    "title": "FAQs on photos and videos under FERPA",
+    "publisher": "US Department of Education, Student Privacy Policy Office",
+    "url": "https://studentprivacy.ed.gov/faq/faqs-photos-and-videos-under-ferpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. When a photo or video is an education record (directly related to a student and kept by the school); students in the background or at public events are usually not the focus; schools often designate public-event photos as directory information or get consent before sharing"
+  },
+  {
+    "n": 27,
+    "title": "Data protection in schools: taking and using photos and videos, and using CCTV",
+    "publisher": "GOV.UK (Department for Education)",
+    "url": "https://www.gov.uk/guidance/data-protection-in-schools/taking-and-using-photos-and-videos-and-using-cctv-in-schools",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Schools in England may rely on consent or legitimate interests for newsletters and marketing; start-of-year consent may not cover new uses; many schools collect specific consent for social media; privacy notices explain opt-out; a printed prospectus cannot be recalled after withdrawal but the photo must not be reused; personal photos by parents usually outside data protection law; updated 14 Oct 2026"
+  }
+]

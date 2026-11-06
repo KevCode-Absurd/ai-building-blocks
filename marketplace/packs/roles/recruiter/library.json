@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "hiring-pipeline-runner",
+    "name": "Hiring pipeline runner",
+    "why": "Scores each batch of CVs against one guide and drafts replies, the same evidence-first sort as the screening skill."
+  },
+  {
+    "slug": "find-the-right-candidates-and-write-messages-they-answer",
+    "name": "Find the right candidates and write messages they answer",
+    "why": "A ready search plan with first messages and a pipeline, matching the search plan and outreach skills."
+  },
+  {
+    "slug": "problem-first-job-description-writer",
+    "name": "Problem-first job description writer",
+    "why": "Builds the job from the problem the hire must solve, the outcomes-first start of every role brief."
+  },
+  {
+    "slug": "plain-job-post-drafter",
+    "name": "Plain job post drafter",
+    "why": "Drafts a clear post with real requirements when you want a quick first version."
+  },
+  {
+    "slug": "interview-question-set-maker",
+    "name": "Interview question set maker",
+    "why": "Set questions, answer signs and a scorecard for the interview stage."
+  },
+  {
+    "slug": "candidate-comparison-table-builder",
+    "name": "Candidate comparison table builder",
+    "why": "Puts interview notes side by side on agreed criteria for the decision meeting."
+  },
+  {
+    "slug": "candidate-reply-drafter",
+    "name": "Candidate reply drafter",
+    "why": "A clear reply or decline for one candidate at any stage, between full message runs."
+  },
+  {
+    "slug": "run-fair-interviews-and-choose-on-evidence",
+    "name": "Run fair interviews and choose the candidate on evidence",
+    "why": "Interview plan, scorecards, work test and fair comparison as one guided flow."
+  },
+  {
+    "slug": "hire-fairly-from-job-post-to-a-checked-offer-letter",
+    "name": "Hire fairly, from job post to a checked offer letter",
+    "why": "The whole hiring run from post to checked offer, like the fill-one-role workflow."
+  },
+  {
+    "slug": "hire-mistake-checklist-builder",
+    "name": "Hiring mistake checklist builder",
+    "why": "Turns your past hiring misses into checks to run before the next offer."
+  },
+  {
+    "slug": "sales-hiring-scorecard-builder",
+    "name": "Sales hiring scorecard builder",
+    "why": "A trait scorecard with a test per trait when the role is a sales hire."
+  },
+  {
+    "slug": "new-hire-first-week-planner",
+    "name": "New hire first week planner",
+    "why": "Hands over to onboarding once the offer is accepted."
+  }
+]

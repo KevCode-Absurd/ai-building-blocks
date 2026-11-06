@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "App Review Guidelines",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/review/guidelines/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 16 October 2026. 2.1(a) demo account and live back end; 2.3.1(a) specific review notes; 2.5.2 no downloaded code that changes functionality; 4.2 minimum functionality; 4.8 equivalent login option; 5.1.1 privacy policy, purpose strings, in-app account deletion; 5.1.2 App Tracking Transparency; 3.1.1 in-app purchase and the 3.1.1(a) US storefront link exception; 1.3 Kids Category."
+  },
+  {
+    "n": 2,
+    "title": "Upcoming requirements",
+    "publisher": "Apple Developer News",
+    "url": "https://developer.apple.com/news/upcoming-requirements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Since 28 April 2026 uploads must be built with Xcode 26 and the 26 SDKs; since 9 September 2026 iOS and iPadOS apps must target iOS 13 or later; age rating answers due 31 January 2026; approved reasons for listed APIs, including in third-party SDKs, since 1 May 2024; apps without DSA trader status removed from the EU App Store since 17 February 2025."
+  },
+  {
+    "n": 3,
+    "title": "App privacy details on the App Store",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/app-store/app-privacy-details/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Declare all data you and third-party partners (including SDKs) collect; definitions of collect, linked to the user and tracking; narrow optional-disclosure criteria; answers can be updated at any time without an app update."
+  },
+  {
+    "n": 4,
+    "title": "App Review",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/distribute/app-review/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Typically at least 50% of submissions reviewed in under 24 hours and 90% in under 48 hours; expedited review for critical bug fixes with steps to reproduce; one appeal per rejected submission; demo account in App Review Information."
+  },
+  {
+    "n": 5,
+    "title": "Release a version update in phases",
+    "publisher": "Apple (App Store Connect Help)",
+    "url": "https://developer.apple.com/help/app-store-connect/update-your-app/release-a-version-update-in-phases/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Phased release over 7 days at 1, 2, 5, 10, 20, 50 and 100% of users with automatic updates; anyone can still update manually; pause up to 30 days in total; Release to All Users at any time; removing the app from sale ends the phased release."
+  },
+  {
+    "n": 6,
+    "title": "TestFlight overview",
+    "publisher": "Apple (App Store Connect Help)",
+    "url": "https://developer.apple.com/help/app-store-connect/test-a-beta-version/testflight-overview/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 100 internal testers and 10,000 external testers; the first build added to an external group goes to review; builds can be tested for up to 90 days."
+  },
+  {
+    "n": 7,
+    "title": "Offering account deletion in your app",
+    "publisher": "Apple Developer Support",
+    "url": "https://developer.apple.com/support/offering-account-deletion-in-your-app/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deletion must start in the app; a direct link to a web page is allowed; no phone or email flows outside highly regulated industries; revoke Sign in with Apple tokens; explain subscriptions continue until cancelled; tell people how long deletion takes."
+  },
+  {
+    "n": 8,
+    "title": "Manage European Union Digital Services Act trader requirements",
+    "publisher": "Apple (App Store Connect Help)",
+    "url": "https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Every developer declares trader status; verified address, phone and email show on the EU product page; verification by two-factor codes and documents; Apple suggests a legal adviser if unsure."
+  },
+  {
+    "n": 9,
+    "title": "Overview of Accessibility Nutrition Labels",
+    "publisher": "Apple (App Store Connect Help)",
+    "url": "https://developer.apple.com/help/app-store-connect/manage-app-accessibility/overview-of-accessibility-nutrition-labels/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Nine features can be declared (VoiceOver, Voice Control, Larger Text, Dark Interface, Differentiate Without Color Alone, Sufficient Contrast, Reduced Motion, Captions, Audio Descriptions); voluntary for now, required later; claim a feature only if all common tasks work with it."
+  },
+  {
+    "n": 10,
+    "title": "UI Design Dos and Don'ts",
+    "publisher": "Apple Developer",
+    "url": "https://developer.apple.com/design/tips/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Controls at least 44 x 44 points; text at least 11 points; ample contrast between text and background."
+  },
+  {
+    "n": 11,
+    "title": "Provide information for Google Play's Data safety section",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/10787469",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. All apps on closed, open or production tracks complete the form, even with no data collected; internal-testing-only apps exempt; developers answer for SDKs; ephemeral processing; Google does not verify answers and may block updates or remove apps for misrepresentation."
+  },
+  {
+    "n": 12,
+    "title": "Target API level requirements for Google Play apps",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/11926878",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 31 August 2026 new apps and updates must target Android 16 (API 36); existing apps must target Android 15 (API 35) to stay discoverable to new users on newer Android versions; extension available to 1 November 2026."
+  },
+  {
+    "n": 13,
+    "title": "Set up an open, closed or internal test",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/9845334",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Internal testing up to 100 testers, available within minutes, may skip standard reviews; closed lists up to 2,000 testers each or Google Groups; open testing unlimited or a limit of at least 1,000; test links can take several hours."
+  },
+  {
+    "n": 14,
+    "title": "Release app updates with staged rollouts",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/6346149",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Rollout percentage does not rise on its own; halt stops new users getting the version, people who have it keep it; resume only if the bundle is fine; updates only, not first publication; countries cannot be removed once a staged rollout starts."
+  },
+  {
+    "n": 15,
+    "title": "App testing requirements for new personal developer accounts",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/14151465",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Personal accounts created after 13 November 2023 need a closed test with at least 12 testers opted in for the last 14 days in a row before applying for production; review usually within 7 days."
+  },
+  {
+    "n": 16,
+    "title": "Understanding Google Play's app account deletion requirements",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/13327111",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Apps that let users create accounts need an in-app deletion path and a web link; declared in the Data safety form; retention reasons must be disclosed; enforcement possible after 31 May 2024."
+  },
+  {
+    "n": 17,
+    "title": "Support 16 KB page sizes",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/guide/practices/page-sizes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Apps targeting Android 15 and higher must support 16 KB pages on 64-bit devices on Google Play; from 1 February 2027 updates without support cannot be released; Java and Kotlin-only apps already comply; check .so files with APK Analyzer; AGP 8.5.1+ and NDK r28+ align by default."
+  },
+  {
+    "n": 18,
+    "title": "Android vitals",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/topic/performance/vitals",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bad behaviour thresholds: user-perceived crash rate 1.09% overall and 8% per phone model; ANR rate 0.47% overall and 8% per phone model; excessive partial wake locks 5%; Play may reduce visibility and warn on the listing; 28-day window; memory thresholds may affect visibility from February 2027; vitals rates are per daily active user, Crashlytics per session."
+  },
+  {
+    "n": 19,
+    "title": "Android developer verification",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/developer-verification",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From 30 September 2026 protections apply to installs from participating stores in Brazil, Indonesia, Singapore and Thailand on certified devices running Android 7+; global expansion in 2027; Google Play registers 99% of apps automatically."
+  },
+  {
+    "n": 20,
+    "title": "Display content edge-to-edge in views",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/develop/ui/views/layout/edge-to-edge",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Apps targeting SDK 35 are drawn edge-to-edge on Android 15 and higher; handle system bar, display cutout and gesture insets so content is not hidden."
+  },
+  {
+    "n": 21,
+    "title": "Touch target size",
+    "publisher": "Android Accessibility Help (Google)",
+    "url": "https://support.google.com/accessibility/android/answer/7101858",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Touch targets at least 48 x 48 dp, separated by 8 dp of space or more."
+  },
+  {
+    "n": 22,
+    "title": "Build an offline-first app",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/topic/architecture/data-layer/offline-first",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Local data source as source of truth; show local data at once; online-only, queued and lazy writes; exponential backoff without retrying unauthorised requests; pull and push sync; last write wins."
+  },
+  {
+    "n": 23,
+    "title": "React Native blog",
+    "publisher": "React Native (Meta)",
+    "url": "https://reactnative.dev/blog",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 0.88 released 19 October 2026; 0.86 (11 June 2026) edge-to-edge improvements; 0.84 (11 February 2026) Hermes V1 by default; 0.82 (8 October 2025) the first version to run entirely on the New Architecture."
+  },
+  {
+    "n": 24,
+    "title": "Expo SDK reference: versions",
+    "publisher": "Expo",
+    "url": "https://docs.expo.dev/versions/latest/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Expo SDK 58 uses React Native 0.88 and React 19.3.0; supports Android 7+ and iOS 16.4+; needs Xcode 26.4+; target SDK 36, compile SDK 37."
+  },
+  {
+    "n": 25,
+    "title": "Flutter release notes",
+    "publisher": "Flutter (Google)",
+    "url": "https://docs.flutter.dev/release/release-notes",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Newest stable line listed is 3.47 (after 3.44, 3.41 and 3.38); a notice says 3.47.8 blocks compromised eMudhra CA keys. No release dates on the page."
+  },
+  {
+    "n": 26,
+    "title": "Accessibility",
+    "publisher": "React Native docs",
+    "url": "https://reactnative.dev/docs/accessibility",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. accessible, accessibilityLabel, accessibilityHint, accessibilityRole, accessibilityState, live regions and aria-* equivalents; TalkBack always reads hints, VoiceOver only if the user turned hints on."
+  },
+  {
+    "n": 27,
+    "title": "Suddenly FBSDKRestrictiveDataFilterManager.m - Line 71 started to crash (issue 1373)",
+    "publisher": "GitHub, facebook-ios-sdk repository",
+    "url": "https://github.com/facebook/facebook-ios-sdk/issues/1373",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Opened 6 May 2020: apps with the Facebook iOS SDK crashed at launch without an app change; Meta said on 7 May a release on its side triggered the crashes and it was fixed; issue closed 7 May 2020."
+  },
+  {
+    "n": 28,
+    "title": "React Native is the Future of Mobile at Shopify",
+    "publisher": "Shopify Engineering (Farhan Thawar)",
+    "url": "https://shopify.engineering/react-native-future-mobile-shopify",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 29 January 2020: Shopify builds all new mobile apps in React Native; existing apps not automatically rewritten; expected about 80% code sharing, reached 95% in Arrive and 99% in Compass."
+  },
+  {
+    "n": 29,
+    "title": "European accessibility act",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Covers products and services including smartphones, e-commerce, banking services, e-books and passenger transport services; member states had to transpose it by June 2022. The page does not mention apps by name."
+  },
+  {
+    "n": 30,
+    "title": "Code of practice for app store operators and app developers",
+    "publisher": "GOV.UK (DCMS and DSIT)",
+    "url": "https://www.gov.uk/government/publications/code-of-practice-for-app-store-operators-and-app-developers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. First published 9 December 2022, updated version 13 October 2023, implementation period extended to June 2024; sets minimum security and privacy requirements for app stores and developers."
+  }
+]

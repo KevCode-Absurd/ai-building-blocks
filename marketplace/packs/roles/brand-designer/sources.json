@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Books",
+    "publisher": "Ehrenberg-Bass Institute for Marketing Science",
+    "url": "https://marketingscience.info/learn-with-us/books",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Jenni Romaniuk, Building Distinctive Brand Assets (Oxford University Press, March 2018): a long-term strategy for building and protecting distinctive assets, across asset types such as characters, taglines and jingles; Byron Sharp, How Brands Grow (OUP, 2010); Romaniuk and Sharp, How Brands Grow Part 2 revised (OUP, 2021)"
+  },
+  {
+    "n": 2,
+    "title": "Say hello, new logo",
+    "publisher": "Slack",
+    "url": "https://slack.com/blog/news/say-hello-new-logo",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 16 Jan 2019: the original logo used 11 colours and was easy to get wrong; it looked poor on backgrounds other than white, at angles other than its set 18 degree rotation, or with altered colours; versions made to compensate stopped matching; the new logo has a simpler palette and is easier to scale"
+  },
+  {
+    "n": 3,
+    "title": "Design & Branding Guidelines",
+    "publisher": "Spotify for Developers",
+    "url": "https://developer.spotify.com/documentation/design",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Partner rules: full logo minimum 70 px digital or 20 mm print, icon minimum 21 px or 6 mm; clear zone half the icon's height; green logo only on black or white, monochrome elsewhere; misuse list (no rotating, stretching, recolouring or adding); avoid over-saturated colours for CMYK print"
+  },
+  {
+    "n": 4,
+    "title": "Mailchimp Brand Assets and Resources Guidelines",
+    "publisher": "Intuit Mailchimp",
+    "url": "https://mailchimp.com/about/brand-assets/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Name spelling rules; the wordmark paired with the Freddie character; Cavendish Yellow as hero colour; rules against altering files, implying endorsement, or using the graphics in another business's name; EPS and PNG downloads"
+  },
+  {
+    "n": 5,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 4 Oct 2026). 4.5:1 for normal text and 3:1 for large text at level AA; text in a logo or brand name has no contrast requirement; brand guidelines do not exempt other text"
+  },
+  {
+    "n": 6,
+    "title": "Understanding Success Criterion 1.4.11: Non-text Contrast",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 4 Oct 2026). 3:1 for graphics needed to understand content, such as icons, and for user interface components; logos exempt, with limits when a logo is used as a control"
+  },
+  {
+    "n": 7,
+    "title": "OFL-FAQ",
+    "publisher": "SIL International (Open Font License)",
+    "url": "https://openfontlicense.org/ofl-faq/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OFL fonts may be used in logos, posters and signage (Q1.1); the resulting artwork is not under the OFL (Q1.1.1, Q1.13); crediting the font is optional (Q1.1.2); fonts cannot be sold on their own (Q1.6, Q3.3); modified fonts must drop any Reserved Font Name (Q3.1)"
+  },
+  {
+    "n": 8,
+    "title": "Material Symbols guide",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/fonts/docs/material_symbols",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Variable icon font axes: fill 0 to 1, weight 100 to 700, grade, optical size 20 to 48 dp; 24 px marked as the preferred icon size; Apache License 2.0"
+  },
+  {
+    "n": 9,
+    "title": "Define a favicon to show in search results",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/favicon-in-search",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Favicon must be square, at least 8 x 8 px, with larger than 48 x 48 px recommended; supported formats; one favicon per hostname; it should represent the brand; the URL should stay stable"
+  },
+  {
+    "n": 10,
+    "title": "Google Play icon design specifications",
+    "publisher": "Android Developers",
+    "url": "https://developer.android.com/distribute/google-play/resources/icon-design-specifications",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 512 x 512 px, 32-bit PNG, sRGB, up to 1024 KB, full square; Google Play applies a corner radius of 30% of icon size and a shadow, so assets should not include them; keyline grid for logos; no ranking, deal or misleading text in icons"
+  },
+  {
+    "n": 11,
+    "title": "Design Tokens Community Group",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. First stable version 2025.10 announced; list of organisations shipping compatible tokens, including Figma, Penpot, Sketch, Style Dictionary, Tokens Studio, Supernova and zeroheight"
+  },
+  {
+    "n": 12,
+    "title": "Design Tokens Format Module 2025.10",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/tr/2025.10/format/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final Community Group Report, 28 Oct 2025: JSON files with .tokens or .tokens.json extensions; $value, $type and $description; groups; aliases with {group.token}; types including color, dimension, fontFamily, fontWeight, duration, cubicBezier, number, border, shadow"
+  },
+  {
+    "n": 13,
+    "title": "Search our trademark database",
+    "publisher": "United States Patent and Trademark Office",
+    "url": "https://www.uspto.gov/trademarks/search",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 30 Nov 2023, updated 8 Apr 2026). Links to the Trademark Search system (tmsearch.uspto.gov), search guides, clearance searching, design search codes and the Trademark ID Manual"
+  },
+  {
+    "n": 14,
+    "title": "Likelihood of confusion",
+    "publisher": "United States Patent and Trademark Office",
+    "url": "https://www.uspto.gov/trademarks/search/likelihood-confusion",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The most common reason for refusing registration; marks compared for similarity in sound, appearance, meaning or commercial impression, together with relatedness of the goods or services; examples of related goods; the examiner searches regardless of the applicant's own search"
+  },
+  {
+    "n": 15,
+    "title": "Search for a trade mark",
+    "publisher": "GOV.UK (Intellectual Property Office)",
+    "url": "https://www.gov.uk/search-for-trademark",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK searches by trade mark number, owner, keyword, phrase or image, and for flags, emblems and hallmarks; the trade marks journal includes international marks covering the UK"
+  },
+  {
+    "n": 16,
+    "title": "Register a trade mark",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/how-to-register-a-trade-mark",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The IPO checks for the same or similar existing marks and publishes applications for opposition; registration usually takes around 3 to 4 months without issues; a trade mark lasts 10 years and is renewed every 10 years; cost depends on the goods and services covered"
+  },
+  {
+    "n": 17,
+    "title": "Register a trade mark: What you can and cannot register",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/how-to-register-a-trade-mark/what-you-can-register",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A UK trade mark can include words, sounds, logos and colours; it cannot describe the goods, be too common or non-distinctive, be offensive or misleading, be just a generic shape, or use national flags or official emblems without permission"
+  },
+  {
+    "n": 18,
+    "title": "Trade marks in the EU",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/running-business/intellectual-property/trade-marks/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 12 Jul 2026). National registration for one country; BOIP for Belgium, the Netherlands and Luxembourg; EUIPO for protection in all EU countries; WIPO for international protection; protection for 10 years, renewable; support from EUIPO and the IP Helpdesk"
+  },
+  {
+    "n": 19,
+    "title": "Global Brand Database",
+    "publisher": "World Intellectual Property Organization",
+    "url": "https://www.wipo.int/en/web/global-brand-database",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Searches international marks under the Madrid System, Article 6ter emblems and marks from participating national and regional offices, by words, numbers, goods and services, and image similarity"
+  },
+  {
+    "n": 20,
+    "title": "Nice Classification",
+    "publisher": "World Intellectual Property Organization",
+    "url": "https://www.wipo.int/en/web/classification-nice",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. International classification of goods and services for trade marks; version NCL(13-2026) in force from 1 January 2026"
+  },
+  {
+    "n": 21,
+    "title": "Copyright Law of the United States, Chapter 1 (17 U.S.C. 101)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/title17/92chap1.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A work made for hire is either work by an employee within the scope of employment, or a specially commissioned work in a closed list of categories when both parties sign a written agreement"
+  },
+  {
+    "n": 22,
+    "title": "Copyright Law of the United States, Chapter 2 (17 U.S.C. 201 and 204)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/title17/92chap2.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 201(b): for a work made for hire the employer or commissioner is the author; section 204(a): a transfer of copyright ownership is not valid without a signed writing"
+  },
+  {
+    "n": 23,
+    "title": "How copyright protects your work: License and sell your copyright",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/copyright/license-and-sell-your-copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A sale or transfer of UK copyright needs a written, signed assignment; owners can license their work"
+  },
+  {
+    "n": 24,
+    "title": "Copyright in the EU",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 12 Oct 2026). EU copyright is automatic and lasts 70 years after the author's death; licences may be exclusive or non-exclusive and limited by time, territory and use"
+  },
+  {
+    "n": 25,
+    "title": "NewsNet Issue 1060: Copyright Office Releases Part 2 of Artificial Intelligence Report",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 29 Jan 2025: prompts alone do not establish authorship of AI output; human expressive elements, creative arrangements or modifications can be protected"
+  },
+  {
+    "n": 26,
+    "title": "EU AI Act, Article 50: Transparency obligations",
+    "publisher": "artificialintelligenceact.eu (Future of Life Institute), text of Regulation (EU) 2024/1689",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Disclosure of AI image, audio or video that resembles real people, objects, places or events; lighter duty for evidently artistic or fictional work; applies from 2 August 2026"
+  },
+  {
+    "n": 27,
+    "title": "Guide to the Figma MCP server",
+    "publisher": "Figma Help Center",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Remote server recommended; extracts variables, components and layout; write to canvas in beta on the remote server; available on all plans; writing outside your drafts needs a Full seat; write to canvas free during beta, later usage-based"
+  },
+  {
+    "n": 28,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Create and edit designs, search designs and folders, use brand kits and templates, upload assets, export PDF, PNG, JPG, PPTX and MP4, resize, comment"
+  },
+  {
+    "n": 29,
+    "title": "zeroheight pricing",
+    "publisher": "zeroheight",
+    "url": "https://zeroheight.com/pricing/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Design system documentation platform with a free plan and paid plans; styleguides, token sets, Figma and developer tool connections; an MCP server listed on every plan"
+  },
+  {
+    "n": 30,
+    "title": "Design Tokens Color Module 2025.10",
+    "publisher": "W3C Design Tokens Community Group",
+    "url": "https://www.designtokens.org/tr/2025.10/color/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Final Community Group Report, 28 Oct 2025: a colour token's $value is an object with a required colorSpace (such as srgb, display-p3 or oklch) and components, an optional alpha (default 1) and an optional 6-digit hex fallback"
+  }
+]

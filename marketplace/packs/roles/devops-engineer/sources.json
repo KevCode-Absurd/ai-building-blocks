@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "DORA's software delivery performance metrics",
+    "publisher": "DORA (Google Cloud)",
+    "url": "https://dora.dev/guides/dora-metrics/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 5 January 2026. Throughput: change lead time, deployment frequency, failed deployment recovery time; instability: change fail rate, deployment rework rate; warns against turning the metrics into targets and comparing unlike applications."
+  },
+  {
+    "n": 2,
+    "title": "Postmortem Culture: Learning from Failure (Site Reliability Engineering, chapter 15)",
+    "publisher": "Google SRE (John Lunney and Sue Lueder)",
+    "url": "https://sre.google/sre-book/postmortem-culture/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Postmortem triggers (user-visible downtime, data loss, on-call intervention such as rollback, long resolution, monitoring failure) set in advance; blameless focus on contributing causes; senior review; shared repository."
+  },
+  {
+    "n": 3,
+    "title": "Managing Incidents (Site Reliability Engineering, chapter 14)",
+    "publisher": "Google SRE",
+    "url": "https://sre.google/sre-book/managing-incidents/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Roles: incident command, operations, communication, planning; only the ops team changes the system; a live incident state document; explicit handoff; declare an incident if a second team is needed, customers can see it, or it is unsolved after an hour of focused analysis."
+  },
+  {
+    "n": 4,
+    "title": "Keep a Changelog 1.1.0",
+    "publisher": "keepachangelog.com (Olivier Lacan)",
+    "url": "https://keepachangelog.com/en/1.1.0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Changelogs are for people; latest version first with dates; Unreleased section; Added, Changed, Deprecated, Removed, Fixed, Security; commit logs are not changelogs; yanked releases marked [YANKED]."
+  },
+  {
+    "n": 5,
+    "title": "BlueGreenDeployment",
+    "publisher": "martinfowler.com (Martin Fowler)",
+    "url": "https://martinfowler.com/bliki/BlueGreenDeployment.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 1 March 2010, updated 5 June 2015. Two production environments, switch traffic, switch back to roll back; ship a backward-compatible schema change before the application change."
+  },
+  {
+    "n": 6,
+    "title": "CanaryRelease",
+    "publisher": "martinfowler.com (Danilo Sato)",
+    "url": "https://martinfowler.com/bliki/CanaryRelease.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 25 June 2014. Release to a small subset of users first, widen as confidence grows, route users back to the old version if problems appear."
+  },
+  {
+    "n": 7,
+    "title": "Feature Toggles (aka Feature Flags)",
+    "publisher": "martinfowler.com (Pete Hodgson)",
+    "url": "https://martinfowler.com/articles/feature-toggles.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 9 October 2017. Release, experiment, ops and permissioning toggles; ops toggles include long-lived kill switches; toggles carry a cost, so add removal tasks and expiry dates."
+  },
+  {
+    "n": 8,
+    "title": "Building best practices",
+    "publisher": "Docker Docs",
+    "url": "https://docs.docker.com/build/building/best-practices/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Multi-stage builds; trusted minimal base images; tags are mutable, pin to a digest and update pins through reviewed pull requests; rebuild with --pull and --no-cache; .dockerignore; run as a non-root USER; combine apt-get update and install."
+  },
+  {
+    "n": 9,
+    "title": "Docker Hub usage and limits",
+    "publisher": "Docker Docs",
+    "url": "https://docs.docker.com/docker-hub/usage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pull limits per 6 hours: unauthenticated 100 per IPv4 address or IPv6 /64; Personal (signed in, free) 200; paid plans unlimited, with fair-use limits."
+  },
+  {
+    "n": 10,
+    "title": "Secure use reference (GitHub Actions)",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Pin actions to a full-length commit SHA from the action's own repository, or use a workflow dependency lockfile; least GITHUB_TOKEN permissions; no structured data as secrets; rotate leaked secrets; pass untrusted input through environment variables; avoid pull_request_target with untrusted code; self-hosted runners almost never for public repos; OIDC instead of long-lived cloud keys."
+  },
+  {
+    "n": 11,
+    "title": "Managing environments for deployment",
+    "publisher": "GitHub Docs",
+    "url": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 6 required reviewers, one approval needed, prevent self-review, wait timer, deployment branch and tag rules; environment secrets released only after protection rules pass; GitHub Free can configure environments only for public repositories."
+  },
+  {
+    "n": 12,
+    "title": "Supply Chain Compromise of Third-Party tj-actions/changed-files (CVE-2025-30066) and reviewdog/action-setup@v1 (CVE-2025-30154)",
+    "publisher": "CISA",
+    "url": "https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-tj-actionschanged-files-cve-2025-30066-and-reviewdogaction",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Alert of 18 March 2025, revised 26 March 2025. Compromised action exposed secrets in workflow logs between 12 and 15 March 2025 (UTC); fixed in v46.0.1; CISA advised finding affected repos, treating exposed secrets as compromised and rotating them."
+  },
+  {
+    "n": 13,
+    "title": "The lifecycle meta-argument",
+    "publisher": "HashiCorp Developer (Terraform docs)",
+    "url": "https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. prevent_destroy rejects plans that would destroy the resource but does not protect it if the resource block is removed; create_before_destroy; ignore_changes; replace_triggered_by."
+  },
+  {
+    "n": 14,
+    "title": "terraform plan command reference",
+    "publisher": "HashiCorp Developer (Terraform docs)",
+    "url": "https://developer.hashicorp.com/terraform/cli/commands/plan",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Plan proposes changes without making them; -out saves a plan to apply exactly, and the file can contain sensitive values; -destroy and -refresh-only modes; -detailed-exitcode returns 0 no changes, 1 error, 2 changes present."
+  },
+  {
+    "n": 15,
+    "title": "OpenTofu",
+    "publisher": "OpenTofu (Linux Foundation project)",
+    "url": "https://opentofu.org/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Open-source fork of Terraform under Linux Foundation stewardship, described as a drop-in replacement; 1.13 is the newest stable line; client-side state encryption since 1.7."
+  },
+  {
+    "n": 16,
+    "title": "Managing your costs with AWS Budgets",
+    "publisher": "AWS Documentation",
+    "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cost, usage, RI and Savings Plans budgets; actual and forecast alerts; actions such as applying an IAM policy that denies new resources; data updated up to three times a day, 8 to 12 hours apart; costs can pass the threshold before the alert arrives."
+  },
+  {
+    "n": 17,
+    "title": "Organizing and tracking costs using AWS cost allocation tags",
+    "publisher": "AWS Documentation",
+    "url": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. AWS-generated and user-defined tags must each be activated before they appear in Cost Explorer; tags can take up to 24 hours to appear; don't put sensitive information in tags; only the management account manages cost allocation tags."
+  },
+  {
+    "n": 18,
+    "title": "Detecting unusual spend with AWS Cost Anomaly Detection",
+    "publisher": "AWS Documentation",
+    "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/manage-ad.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Machine learning on net unblended cost, runs about three times a day; up to 24 hours to detect an anomaly; new monitors take 24 hours; a new service needs 10 days of history; root causes by service, account, Region and usage type."
+  },
+  {
+    "n": 19,
+    "title": "Create, edit, or delete budgets and budget alerts",
+    "publisher": "Google Cloud Documentation",
+    "url": "https://docs.cloud.google.com/billing/docs/how-to/budgets",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (cloud.google.com redirects here). An alerts-only budget does not cap usage or spending; costs are reported with a delay; Pub/Sub notifications can automate controls such as disabling billing on a project; spend cap budgets exist for some services."
+  },
+  {
+    "n": 20,
+    "title": "Tutorial: Create and manage budgets (Microsoft Cost Management)",
+    "publisher": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Budgets alert but resources are not affected and consumption is not stopped; cost data typically available within 8 to 24 hours and budgets evaluated every 24 hours; up to five thresholds; action groups can trigger automation."
+  },
+  {
+    "n": 21,
+    "title": "Restore testing (AWS Backup)",
+    "publisher": "AWS Documentation",
+    "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Scheduled restore tests of recovery points with restore time monitoring; restored resources deleted after an optional validation window; a cost per restore test; a separate account recommended for tests."
+  },
+  {
+    "n": 22,
+    "title": "Falcon Content Update Preliminary Post Incident Report",
+    "publisher": "CrowdStrike",
+    "url": "https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Content update released 04:09 UTC and reverted 05:27 UTC on 19 July 2024; Windows hosts on sensor 7.11+ crashed; a content validator bug let a faulty template through; fixes include staggered canary deployment and customer control over update timing."
+  },
+  {
+    "n": 23,
+    "title": "Helping our customers through the CrowdStrike outage",
+    "publisher": "Microsoft (David Weston)",
+    "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 20 July 2024: Microsoft estimated the update affected 8.5 million Windows devices, less than one percent of all Windows machines."
+  },
+  {
+    "n": 24,
+    "title": "Summary of the Amazon DynamoDB Service Disruption in the Northern Virginia (US-EAST-1) Region",
+    "publisher": "Amazon Web Services",
+    "url": "https://aws.amazon.com/message/101925/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 19 October 2025, 11:48 PM PDT to 20 October 2025, 2:20 PM PDT; a latent race condition in DynamoDB's DNS automation left an empty DNS record; knock-on failures in EC2 launches, Network Load Balancer, Lambda, ECS, EKS, Fargate, STS and IAM sign-in; AWS disabled the automation worldwide pending fixes."
+  },
+  {
+    "n": 25,
+    "title": "Cloudflare outage on November 18, 2025",
+    "publisher": "The Cloudflare Blog",
+    "url": "https://blog.cloudflare.com/18-november-2025-outage/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Failures from 11:20 UTC, core traffic largely restored by 14:30, all systems normal at 17:06 UTC; a database permissions change doubled a generated Bot Management feature file past a 200-feature limit; not an attack; fixes include treating generated config like user input and more global kill switches."
+  },
+  {
+    "n": 26,
+    "title": "SEC Adopts Rules on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure by Public Companies (2023-139)",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/newsroom/press-releases/2023-139",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Public companies disclose material cybersecurity incidents under Form 8-K Item 1.05, generally within four business days of deciding the incident is material; delay possible on national security or public safety grounds."
+  },
+  {
+    "n": 27,
+    "title": "NIS2 Directive: securing network and information systems",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Member states had until 17 October 2024 to transpose NIS2; medium-sized and large entities in 18 critical sectors take risk-management measures and notify national authorities of significant incidents. The page gives no reporting deadlines."
+  },
+  {
+    "n": 28,
+    "title": "NIS Directive and NIS Regulations 2018",
+    "publisher": "GOV.UK (DSIT)",
+    "url": "https://www.gov.uk/government/collections/nis-directive-and-nis-regulations-2018",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK NIS Regulations in force 10 May 2018; cover essential services and digital services including online marketplaces, online search engines and cloud computing services; updates planned, including incident reporting; links a Cyber Security and Resilience Bill collection."
+  },
+  {
+    "n": 29,
+    "title": "Release a version update in phases",
+    "publisher": "Apple (App Store Connect Help)",
+    "url": "https://developer.apple.com/help/app-store-connect/update-your-app/release-a-version-update-in-phases/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 7-day phased release (1, 2, 5, 10, 20, 50, 100%) for automatic updates; manual updates always possible; pause up to 30 days in total; release to all at any time."
+  },
+  {
+    "n": 30,
+    "title": "Release app updates with staged rollouts",
+    "publisher": "Google Play Console Help",
+    "url": "https://support.google.com/googleplay/android-developer/answer/6346149",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Percentage rises only when you raise it; halting stops new users getting the version but people who have it keep it; resume only if the bundle is fine; updates only."
+  }
+]

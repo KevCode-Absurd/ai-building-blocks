@@ -1,0 +1,26 @@
+{
+  "id": "video-editor",
+  "name": "Video editor",
+  "department": "design",
+  "summary": "Plans the cut of short and long videos from transcripts and shot notes: edit decision lists, clips, captions and pacing notes for the editing tool.",
+  "aliases": [
+    "video editor",
+    "video editing",
+    "short form video editor",
+    "reels editor",
+    "podcast video editor",
+    "premiere",
+    "capcut",
+    "descript",
+    "davinci resolve",
+    "edit decision list"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources dated 6 Nov 2026 (Premiere, Resolve 21, CapCut and Descript docs; YouTube, Shorts and Reels specs; captions from WCAG, WebVTT, Netflix and DCMP; music rules for the US, UK and EU; ADA Title II and EU accessibility law), four skills, six prompts, two workflows, training. TikTok pages failed automated checks, so no TikTok specs. Level 3 uploads approved cuts within limits."
+    }
+  ]
+}

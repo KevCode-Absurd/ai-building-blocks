@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Turns weekly notes into a newsletter issue checked against your voice before it goes out, a good fit for the weekly comms run."
+  },
+  {
+    "slug": "plain-english-editor",
+    "name": "Plain English editor",
+    "why": "Rewrites stiff drafts in plain words with each cut explained, alongside the plain language rewrite prompt."
+  },
+  {
+    "slug": "prepare-a-useful-customer-newsletter-issue",
+    "name": "Prepare a useful customer newsletter issue",
+    "why": "Builds a newsletter issue from real questions and news, useful for small companies and shops."
+  },
+  {
+    "slug": "make-a-readable-event-poster",
+    "name": "Make a readable event poster",
+    "why": "Plans an event poster with checked text and an export checklist; pair it with the accessibility skill so the facts also appear as real text."
+  },
+  {
+    "slug": "prepare-a-community-event-access-plan",
+    "name": "Prepare a community event access plan",
+    "why": "Plans access for a community event, giving the access details that invitations and visitor pages need."
+  },
+  {
+    "slug": "prepare-a-service-outage-communication-pack",
+    "name": "Prepare a service outage communication pack",
+    "why": "Drafts the first notice, updates and all-clear for an outage, matching the urgent notice workflow."
+  },
+  {
+    "slug": "powerpoint-accessibility-reviewer",
+    "name": "PowerPoint accessibility reviewer",
+    "why": "Checks slides for titles, reading order and alt text, for decks shared with parents, members or funders."
+  },
+  {
+    "slug": "quarterly-accessibility-keeper",
+    "name": "Quarterly accessibility keeper",
+    "why": "Checks the website for accessibility gaps each quarter and keeps the accessibility statement current."
+  },
+  {
+    "slug": "brand-voice-one-pager-writer",
+    "name": "Brand voice one-pager writer",
+    "why": "Writes a one-page voice guide with word lists, a quick start for the house style guide skill."
+  },
+  {
+    "slug": "brand-voice-reviewer",
+    "name": "Brand voice reviewer",
+    "why": "Checks each draft against your voice and tracks repeat slips, like the draft checks in the house style guide skill."
+  },
+  {
+    "slug": "email-campaign-calendar-planner",
+    "name": "Monthly email campaign calendar planner",
+    "why": "Plans a month of emails around real dates and team capacity; adapt it for the comms calendar's email channel."
+  }
+]

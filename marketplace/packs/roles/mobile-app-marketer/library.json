@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "review-reason-spotter",
+    "name": "Review reason spotter",
+    "why": "Ranks why people chose the app from 20 or more reviews, with exact quotes, which feeds the keyword map and the first screenshot."
+  },
+  {
+    "slug": "star-rating-review-miner",
+    "name": "Star-rating review miner",
+    "why": "Reads rival apps' reviews by star rating for gaps and broken promises, useful before writing a listing that answers them."
+  },
+  {
+    "slug": "product-review-mining",
+    "name": "Mine your product's own words and find the shared want",
+    "why": "Sorts the app's own phrases for headlines and finds the one want users share, a good start for the subtitle and short description."
+  },
+  {
+    "slug": "headline-test",
+    "name": "Write headlines and pick the winner with a small test",
+    "why": "Writes checked headline options and a small test, handy for screenshot captions and promotional text before a store test."
+  },
+  {
+    "slug": "one-change-experiment-planner",
+    "name": "One-change experiment planner",
+    "why": "Turns a question into a test that changes one thing, the same discipline the store page test skill uses."
+  },
+  {
+    "slug": "experiment-readout-desk",
+    "name": "Experiment readout desk",
+    "why": "Checks a test plan before it starts and gives an honest verdict when it ends, a second look for store listing tests."
+  },
+  {
+    "slug": "test-result-trust-checker",
+    "name": "Test result trust checker",
+    "why": "Checks whether a finished test can be trusted (split, run length, early stopping) before a winner is applied."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "Writes a specific public reply to each review and flags risky ones, useful for App Store and Google Play review replies."
+  },
+  {
+    "slug": "public-review-reply-desk",
+    "name": "Public review reply desk",
+    "why": "Keeps review replies going batch by batch and flags repeat complaints that the listing or the next release should address."
+  },
+  {
+    "slug": "set-up-product-tracking-and-build-a-retention-dashboard",
+    "name": "Set up product tracking and build a retention dashboard",
+    "why": "Plans the app events and return-rate view that push and in-app message triggers and results depend on."
+  },
+  {
+    "slug": "customer-onboarding-keeper",
+    "name": "Customer onboarding keeper",
+    "why": "Finds the step where new users stall each week, which tells the message map where a nudge would help."
+  },
+  {
+    "slug": "make-onboarding-instructions-match-the-product",
+    "name": "Make onboarding instructions match the product",
+    "why": "Fixes first-use instructions that name moved or missing buttons, so in-app tips and tooltips point to real screens."
+  }
+]

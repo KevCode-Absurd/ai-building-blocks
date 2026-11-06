@@ -1,0 +1,26 @@
+{
+  "id": "tiktok-ads-media-buyer",
+  "name": "TikTok ads media buyer",
+  "department": "marketing",
+  "summary": "Plans, runs and improves paid TikTok campaigns and Spark Ads. Briefs creators, tests hooks and moves budget to what sells.",
+  "aliases": [
+    "tiktok ads",
+    "tiktok ads manager",
+    "spark ads",
+    "tiktok advertising",
+    "tiktok media buyer",
+    "paid tiktok",
+    "TikTok ads specialist",
+    "Smart+ campaigns",
+    "TikTok creator ads",
+    "TikTok Events API"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Smart+ and manual campaigns, Spark Ads and account linking, Symphony and AI-generated content labels, Pixel and Events API from TikTok's own templates, measurement, teen ad limits, EU and UK rules and creator disclosure. TikTok's own help pages blocked fetching, so platform facts come from labelled trade summaries."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "etsy-shop-opening-planner",
+    "name": "Etsy shop opening planner",
+    "why": "Plans a new Etsy shop's listings, photos, price check and launch steps, before the new listing launch workflow takes over."
+  },
+  {
+    "slug": "monthly-catalogue-clean-up-keeper",
+    "name": "Monthly catalogue clean-up keeper",
+    "why": "Finds missing costs, clashing SKUs and hidden products each month, useful before the margin work in the Etsy Ads plan."
+  },
+  {
+    "slug": "product-photo-set-maker",
+    "name": "Product photo set maker",
+    "why": "Plans and checks a photo set for one real product, which gives Etsy listings a clear first photo, scale and detail shots."
+  },
+  {
+    "slug": "product-page-image-checker",
+    "name": "Product page image checker",
+    "why": "Scores product images against a plan and lists one fix per fault, a quick check before the first-photo fixes in the shop audit."
+  },
+  {
+    "slug": "product-gallery-answers",
+    "name": "Product gallery doubt review and image builder",
+    "why": "Reviews a gallery against customer doubts and plans images that answer them, using exact product photos only."
+  },
+  {
+    "slug": "review-reason-spotter",
+    "name": "Review reason spotter",
+    "why": "Ranks why buyers chose the shop from its reviews, in their exact words, a good source of buyer phrases for tags and descriptions."
+  },
+  {
+    "slug": "review-reply-batch-writer",
+    "name": "Review reply batch writer",
+    "why": "Drafts specific replies to Etsy reviews and lists risky ones; on Etsy, message the buyer before posting a reply to a complaint."
+  },
+  {
+    "slug": "monthly-returns-and-refunds-reviewer",
+    "name": "Monthly returns and refunds reviewer",
+    "why": "Finds the products driving refunds and cases each month, which protects Etsy's case-rate standard and Star Seller."
+  },
+  {
+    "slug": "buyer-trigger-and-proof-mapper",
+    "name": "Buyer trigger and proof mapper",
+    "why": "Maps what starts a buyer's search and what proof they need, useful for gift and occasion phrases in tags and sections."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "id": "hospitality-marketer",
+  "name": "Hospitality marketing manager",
+  "department": "marketing",
+  "summary": "Fills tables, taprooms and events for restaurants, cafes, bars and drinks makers. Writes menus, offers and posts that sound like the place.",
+  "aliases": [
+    "restaurant marketing",
+    "hospitality marketing",
+    "bar marketing",
+    "brewery marketing",
+    "winery marketing",
+    "cafe marketing",
+    "hotel marketing",
+    "menu copy",
+    "taproom events",
+    "venue marketing"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: Google restaurant and hotel features, free booking links and price accuracy, Booking.com ranking and reviews, FTC and CMA review and fee rules, UK service charges and tips, FSA, FDA and EU allergens, calorie labelling, CAP, Portman and TTB alcohol rules, with 29 checked sources. Replies to negative reviews and binding event contracts need a fresh yes; payouts stay with the owner."
+    }
+  ]
+}

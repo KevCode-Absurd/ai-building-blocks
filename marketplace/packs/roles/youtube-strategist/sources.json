@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Recommendations (How YouTube Works)",
+    "publisher": "YouTube",
+    "url": "https://www.youtube.com/howyoutubeworks/product-features/recommendations/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). Recommendations on Home and Up Next use viewing behaviour, likes, dislikes, subscriptions and satisfaction-survey feedback, plus channel reputation and quality and outside evaluators; viewers can pause or delete watch and search history"
+  },
+  {
+    "n": 2,
+    "title": "How YouTube search works",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/16090438",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). The old How YouTube Works search page redirects here. Search ranks on relevance (title, tags, description, video content, watch time for the query), engagement and quality (expertise, authoritativeness, trustworthiness); results are personalised; YouTube takes no payment for better organic placement"
+  },
+  {
+    "n": 3,
+    "title": "Add tags to your videos",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/146402",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Title, thumbnail and description matter more than tags for discovery; tags play a minimal role except for commonly misspelled subjects; excessive tags in a description break the spam policy"
+  },
+  {
+    "n": 4,
+    "title": "Get started with YouTube Analytics",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9002587",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Analytics tabs Overview, Content, Reach, Engagement, Audience, Revenue (YPP only) and Trends; Reach shows impressions, CTR, views, unique viewers; Engagement shows watch time, average view duration and Engaged views; Audience shows new, casual and regular viewers; updated YouTube Studio rolling out gradually from July 2026"
+  },
+  {
+    "n": 5,
+    "title": "Trends tab in YouTube Analytics",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/11962757",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Trends tab shows top searches from your audience and saved searches over 28 days, breakout videos from similar creators, recent videos and content gaps for Shorts; some insights limited by country, language and device; saving searches"
+  },
+  {
+    "n": 6,
+    "title": "Impressions and click-through rate",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/7628154",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Impressions CTR definition; half of all channels and videos range between 2% and 10%, wider for new channels and videos under 100 views; lower CTR for widely shown videos; external sites and end screens excluded; high CTR with low average view duration and lower impressions can signal clickbait"
+  },
+  {
+    "n": 7,
+    "title": "Measure key moments for audience retention",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9314415",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Audience retention report reading (flat, gradual decline, spikes, dips); typical retention uses your 10 latest videos of similar length; Intro = share still watching after 30 seconds; key moments need videos of 60 seconds or more with at least 100 views"
+  },
+  {
+    "n": 8,
+    "title": "Understand your YouTube video reach",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9314355",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Definitions of traffic sources: Browse features, Channel pages, End screens, Shorts, Notifications, Playlists, Suggested videos, YouTube search, External, Direct or unknown and others"
+  },
+  {
+    "n": 9,
+    "title": "Add video thumbnails on YouTube",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/72431",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Custom thumbnails need a verified account; recommended 3840 x 2160 at 16:9, minimum width 640; Shorts 2160 x 3840 at 9:16; JPG or PNG; 2 MB on mobile, 50 MB on desktop; vertical videos with 16:9 thumbnails get an automatic 4:5 thumbnail on some surfaces; daily thumbnail limits"
+  },
+  {
+    "n": 10,
+    "title": "Test & compare thumbnails and titles",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/13861714",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Up to 3 titles, thumbnails or both; desktop YouTube Studio; winner chosen by watch time share with a control group; results Winner, Performed Same, Inconclusive; tests finish within about two weeks; not for Shorts, made-for-kids, mature or private videos; thumbnails below 1280 x 720 cause downscaling"
+  },
+  {
+    "n": 11,
+    "title": "Thumbnails policy",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9229980",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Thumbnails that are sexual, violent, gory, vulgar or that mislead viewers about the video are not allowed; removal, warnings, strikes and termination"
+  },
+  {
+    "n": 12,
+    "title": "Video chapters",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9884579",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Chapters in the description; first timestamp 00:00; at least three timestamps in ascending order; each at least 10 seconds; manual chapters override automatic chapters"
+  },
+  {
+    "n": 13,
+    "title": "Add end screens to videos",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/6388789",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Video at least 25 seconds; end screens in the last 5 to 20 seconds; up to four elements on 16:9; link element needs YouTube Partner Program; not available on made-for-kids videos"
+  },
+  {
+    "n": 14,
+    "title": "Understand three-minute YouTube Shorts",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/15424877",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Square or vertical videos up to three minutes uploaded on or after 15 October 2024 are Shorts; a Short over one minute with an active copyright claim is blocked globally and cannot be recommended or monetised; most Shorts Audio Library songs usable for up to 90 seconds"
+  },
+  {
+    "n": 15,
+    "title": "YouTube Partner Program overview & eligibility",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/72851",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). 1,000 subscribers plus 4,000 qualified watch hours in 12 months or 10 million qualified Shorts views in 90 days; 2-Step Verification, AdSense for YouTube, no active strikes; updated YPP terms take effect 1 February 2027, to be accepted by 31 January 2027"
+  },
+  {
+    "n": 16,
+    "title": "YouTube channel monetization policies",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/1311392",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). On 15 July 2025 the repetitious content policy was renamed inauthentic content (mass-produced, templated, barely varied, including generic AI templates); reused content rules and examples"
+  },
+  {
+    "n": 17,
+    "title": "Spam policy",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/2801973",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Malicious clickbait (titles, thumbnails, descriptions that do not deliver), engagement manipulation such as sub-for-sub and bots or rewards, fake engagement with polls, comment spam"
+  },
+  {
+    "n": 18,
+    "title": "Community Guidelines strike basics on YouTube",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/2802032",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Warning first with optional policy training; first strike one week, second two weeks, third within 90 days may end the channel; strikes last 90 days; deleting content does not remove a strike"
+  },
+  {
+    "n": 19,
+    "title": "Determining if your content is made for kids",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9528076",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Every creator must set whether content is made for kids, under an agreement with the FTC and COPPA; factors; mixed-audience content counts; creators are legally responsible; under 13 in the US"
+  },
+  {
+    "n": 20,
+    "title": "Paid product placements and endorsements",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/154235",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Paid Promotion setting in YouTube Studio (\"Yes, my video includes branded content\"); disclosure label at the start of the video; creators and partners must follow local law, naming the FTC and ASA among others"
+  },
+  {
+    "n": 21,
+    "title": "Disclosing use of altered or synthetic content",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/14328491",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). What realistic AI content must be disclosed and what need not be; AI use setting in Attributes; labels in player or description; disclosure does not limit reach or earnings; consistent non-disclosure can lead to added labels, removal or YPP suspension"
+  },
+  {
+    "n": 22,
+    "title": "Manage channel permissions",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9481328",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). Roles Owner, Manager, Editor, Editor (Limited), Subtitle Editor, Viewer, Viewer (Limited) and what each can do; limited roles cannot see revenue; invitations expire after 30 days"
+  },
+  {
+    "n": 23,
+    "title": "Video SEO best practices",
+    "publisher": "Google Search Central",
+    "url": "https://developers.google.com/search/docs/appearance/video",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Watch pages, VideoObject structured data, video sitemaps, thumbnails; key moments via Clip and SeekToAction markup or YouTube chapters, which Google prioritises"
+  },
+  {
+    "n": 24,
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Guides revised 2023; on YouTube a description-only disclosure is not enough; disclose in the video, at the start or before the endorsement, spoken and shown; disclose affiliate links in the video and near the links"
+  },
+  {
+    "n": 25,
+    "title": "Recognising ads: Social media and influencer marketing",
+    "publisher": "Advertising Standards Authority (UK)",
+    "url": "https://www.asa.org.uk/advice-online/recognising-ads-social-media.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; dated 6 Aug 2026. Labels such as Ad; vague labels insufficient; on YouTube an identifier such as Ad in the title and/or thumbnail; brand and influencer both responsible"
+  },
+  {
+    "n": 26,
+    "title": "Influencer Legal Hub",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/influencer-legal-hub_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date; legal briefs dated 11 Oct 2023). EU consumer law requires brand partnerships and affiliate marketing to be disclosed; cites a 2018 Princeton study finding 10% of affiliate marketing on YouTube and Pinterest disclosed"
+  },
+  {
+    "n": 27,
+    "title": "AI Act (regulatory framework for AI)",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; page updated 19 Oct 2026. Transparency rules, including clear labels on deepfakes, apply from August 2026; code of practice on marking and labelling AI content; transparency guidelines (July 2026)"
+  },
+  {
+    "n": 28,
+    "title": "CSGO Lotto owners settle FTC's first-ever complaint against individual social media influencers",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2017/09/csgo-lotto-owners-settle-ftcs-first-ever-complaint-against-individual-social-media-influencers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 7 Sep 2017. YouTube creators promoted a site they owned without saying so; other creators paid $2,500 to $55,000; settlement requires clear disclosure of material connections"
+  },
+  {
+    "n": 29,
+    "title": "Google and YouTube will pay record $170 million for alleged violations of children's privacy law",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2019/09/google-youtube-will-pay-record-170-million-alleged-violations-childrens-privacy-law",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; 4 Sep 2019. $170 million ($136 million FTC, $34 million New York); settlement requires a system for channel owners to identify child-directed content and notices that it may be subject to COPPA"
+  },
+  {
+    "n": 30,
+    "title": "YouTube SEO: How to rank your videos from start to finish (Sam Oh)",
+    "publisher": "Ahrefs",
+    "url": "https://ahrefs.com/blog/youtube-seo/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; last updated 28 May 2020, describing 2019 results. One video a week on searched topics; over 3 million minutes of watch time in about seven months; one video 28,700 views and over 1,400 subscribers in two weeks; a series not built on searched topics drew little search traffic. The company's own account"
+  }
+]

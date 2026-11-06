@@ -1,0 +1,26 @@
+{
+  "id": "ghostwriter",
+  "name": "Ghostwriter",
+  "department": "content",
+  "summary": "Writes in a founder's or expert's own voice: posts, articles and books under their name. Turns notes and voice memos into a clear point of view.",
+  "aliases": [
+    "ghostwriting",
+    "linkedin ghostwriter",
+    "thought leadership",
+    "book ghostwriter",
+    "executive writer",
+    "founder content",
+    "ghost writer",
+    "speechwriter",
+    "book coach",
+    "founder story writer"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: canon, voice capture and story mining, LinkedIn rules and posting routes, book proposals, AI disclosure (KDP, publishers, EU AI Act Article 50), copyright and credit in the US, UK and EU, sponsored-post disclosure, and a firm no to graded academic work, with 30 checked sources."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "payroll-compensation-specialist",
+  "name": "Payroll and compensation specialist",
+  "department": "people",
+  "summary": "Checks payroll before it runs and designs fair pay bands, benefits and commission plans. Shows the maths so people can see why they are paid what they are.",
+  "aliases": [
+    "payroll",
+    "compensation",
+    "pay bands",
+    "benefits",
+    "commission plan",
+    "salary benchmarking",
+    "payroll checks",
+    "payroll specialist",
+    "compensation analyst",
+    "sales compensation"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: pre-payroll input checks, pay bands and fair-pay checks, benefits costing and sales commission plans, with US, UK and EU official sources and India, Canada and Australia pointers; 30 checked sources, 3 skills, 6 prompts, 2 workflows. Running payroll and paying anyone stay with the client."
+    }
+  ]
+}

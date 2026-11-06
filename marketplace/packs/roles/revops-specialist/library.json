@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "weekly-sales-pipeline-reviewer",
+    "name": "Weekly sales pipeline reviewer",
+    "why": "Runs the weekly deal export review from the pipeline-and-forecast-review skill: what changed, deals to act on and a fix list to approve."
+  },
+  {
+    "slug": "monthly-lost-deal-reviewer",
+    "name": "Monthly lost deal reviewer",
+    "why": "A monthly version of the win-loss prompt that turns lost deals into real reasons and pitch changes."
+  },
+  {
+    "slug": "deal-win-reason-finder",
+    "name": "Deal win reason finder",
+    "why": "Finds why you really win from deal notes, the other half of a win-loss review."
+  },
+  {
+    "slug": "stalled-deal-revival-desk",
+    "name": "Stalled deal revival desk",
+    "why": "Takes a deal flagged at risk in the pipeline review and works out why it stalled and what to send."
+  },
+  {
+    "slug": "subscription-churn-watcher",
+    "name": "Subscription churn watcher",
+    "why": "Tracks monthly cancellations and whether last month's fix worked, matching the monthly billing and churn close."
+  },
+  {
+    "slug": "cancel-reason-save-planner",
+    "name": "Cancel reason save planner",
+    "why": "Turns billing cancellation reasons into one save action per reason and the numbers to track."
+  },
+  {
+    "slug": "refund-request-reply-writer",
+    "name": "Refund request reply writer",
+    "why": "Drafts the customer reply for each item in the refund and billing change queue."
+  },
+  {
+    "slug": "lead-grader",
+    "name": "Lead grader",
+    "why": "A quick A, B, C grading of prospects for teams not ready for a full lead scoring model."
+  },
+  {
+    "slug": "sales-pay-plan-checker",
+    "name": "Sales pay plan checker",
+    "why": "Checks what a commission plan rewards before quotas are shared; pay terms still go to a qualified adviser."
+  },
+  {
+    "slug": "lead-nurture-follow-up",
+    "name": "Offer useful information first and follow up with stalled leads",
+    "why": "A ready nurture plan for leads sent back from sales under the handoff agreement."
+  },
+  {
+    "slug": "sales-funnel-drop-off-finder",
+    "name": "Sales funnel drop-off finder",
+    "why": "Finds the worst drop-off step before leads ever reach the CRM pipeline."
+  }
+]

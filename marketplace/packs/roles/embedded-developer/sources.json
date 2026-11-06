@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Zephyr releases",
+    "publisher": "Zephyr Project documentation",
+    "url": "https://docs.zephyrproject.org/latest/releases/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Zephyr 4.5.0 released 28 Oct 2026 (end of life 28 Oct 2027); 4.4.0 released 14 Apr 2026 (end of life 12 Apr 2027); LTS 3.7.0 released 26 Jul 2024 (end of life 27 Jul 2029). Major releases every six months (April and October); standard releases supported about a year; a new LTS every 2.5 to 3 years, kept about 5 years; security fixes go to the LTS and the two most recent releases."
+  },
+  {
+    "n": 2,
+    "title": "Getting Started Guide",
+    "publisher": "Zephyr Project documentation",
+    "url": "https://docs.zephyrproject.org/latest/develop/getting_started/index.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Host systems (Ubuntu 24.04 LTS or later, macOS on Apple Silicon only, Windows); west init, west update, west sdk install; build with west build -p always -b <board>; flash with west flash; Devicetree and Kconfig listed as references."
+  },
+  {
+    "n": 3,
+    "title": "Device Firmware Upgrade",
+    "publisher": "Zephyr Project documentation",
+    "url": "https://docs.zephyrproject.org/latest/services/device_mgmt/dfu.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Zephyr works with the open source MCUboot bootloader; set CONFIG_BOOTLOADER_MCUBOOT and define MCUboot flash partitions with the app in slot0; transport and management protocols are covered separately (MCUmgr, SMP)."
+  },
+  {
+    "n": 4,
+    "title": "Security Vulnerability Reporting",
+    "publisher": "Zephyr Project documentation",
+    "url": "https://docs.zephyrproject.org/latest/security/reporting.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reports acknowledged within 1 week; embargo of at most 90 days (30 days for Zephyr to fix, 60 days for product makers to ship fixes); each vulnerability gets a CVE; fixes backported to the current LTS and the two most recent releases."
+  },
+  {
+    "n": 5,
+    "title": "FreeRTOS LTS (README)",
+    "publisher": "FreeRTOS on GitHub (FreeRTOS/FreeRTOS-LTS)",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-LTS",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. LTS releases get security updates and critical bug fixes for two years; current 202604-LTS includes FreeRTOS Kernel 11.3.0 and libraries supported until 30 Apr 2028; coreMQTT moved from v2.x to v5.x with a migration guide; AWS offers an Extended Maintenance Plan."
+  },
+  {
+    "n": 6,
+    "title": "Mastering the FreeRTOS Real Time Kernel, chapter 7: Interrupt Management",
+    "publisher": "FreeRTOS on GitHub (FreeRTOS/FreeRTOS-Kernel-Book)",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch07.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Only FromISR API functions inside interrupts; keep interrupt handlers short and defer work to a task; direct-to-task notifications are the most efficient deferral; xHigherPriorityTaskWoken and portYIELD_FROM_ISR pattern; use timeouts rather than waiting forever."
+  },
+  {
+    "n": 7,
+    "title": "Mastering the FreeRTOS Real Time Kernel, chapter 13: Troubleshooting",
+    "publisher": "FreeRTOS on GitHub (FreeRTOS/FreeRTOS-Kernel-Book)",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch13.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. uxTaskGetStackHighWaterMark; configCHECK_FOR_STACK_OVERFLOW methods 1 to 3 (method 2 checks a fill pattern in the last 20 bytes) and their limits; no reliable recovery after overflow; enable configASSERT in development; interrupt priority mistakes on Cortex-M; heap exhaustion; never call non-FromISR API in an interrupt."
+  },
+  {
+    "n": 8,
+    "title": "ESP-IDF Versions (support periods)",
+    "publisher": "Espressif Systems, ESP-IDF Programming Guide",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/versions.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (stable docs labelled v6.1). Each major and minor release is supported for 30 months: 12 months of service, then 18 months of maintenance with only high-severity and security fixes; pre-releases have no support period; upgrade before end of life."
+  },
+  {
+    "n": 9,
+    "title": "ESP-IDF releases",
+    "publisher": "Espressif Systems on GitHub (espressif/esp-idf)",
+    "url": "https://github.com/espressif/esp-idf/releases",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. v6.1 marked Latest (27 Aug; the page shows no year, 2026 by context); recent bugfix releases v6.0.3 (2 Sep), v5.5.6 (16 Oct), v5.3.6 (15 Sep) and v5.2.8 (11 Sep)."
+  },
+  {
+    "n": 10,
+    "title": "Security Overview (ESP32)",
+    "publisher": "Espressif Systems, ESP-IDF Programming Guide",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/security/security.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Secure Boot v2 strongly recommended for production; flash encryption in Release Mode with a unique key per device; NVS encryption because NVS holds Wi-Fi credentials; disable JTAG and UART download mode; keep signing keys private; TLS with certificate checks; enable OTA rollback; confirm security eFuses before shipping; stay on the latest bugfix release."
+  },
+  {
+    "n": 11,
+    "title": "Over The Air Updates (OTA)",
+    "publisher": "Espressif Systems, ESP-IDF Programming Guide",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/ota.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Two OTA app slots plus an otadata partition; app rollback with PENDING_VERIFY state and esp_ota_mark_app_valid_cancel_rollback after self-tests; anti-rollback stores a security version in eFuse, bits only change from 0 to 1, limited to 32 increments."
+  },
+  {
+    "n": 12,
+    "title": "Arduino-ESP32 documentation",
+    "publisher": "Espressif Systems",
+    "url": "https://docs.espressif.com/projects/arduino-esp32/en/latest/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Arduino core for ESP32 is maintained by Espressif; the documented version 3.3.12 is based on ESP-IDF 5.5."
+  },
+  {
+    "n": 13,
+    "title": "millis() language reference (source)",
+    "publisher": "Arduino on GitHub (arduino/reference-en)",
+    "url": "https://github.com/arduino/reference-en/blob/master/Language/Functions/Time/millis.adoc",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (the docs.arduino.cc page returned no text to WebFetch). millis() returns unsigned long milliseconds since start; overflows to zero after about 50 days; arithmetic with int causes errors; micros() wraps in about 71 minutes."
+  },
+  {
+    "n": 14,
+    "title": "lib_deps",
+    "publisher": "PlatformIO documentation",
+    "url": "https://docs.platformio.org/en/latest/projectconf/sections/env/options/library/lib_deps.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. lib_deps in platformio.ini lists library dependencies by owner/name with version ranges, or Git URLs pinned to a tag."
+  },
+  {
+    "n": 15,
+    "title": "Raspberry Pi hardware: GPIO and the 40-pin header",
+    "publisher": "Raspberry Pi Ltd documentation",
+    "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GPIO pins work at 3.3 V and are not 5 V tolerant; never apply 5 V to a GPIO pin; 16 mA maximum per pin and 50 mA across all pins; GPIO2 and GPIO3 have fixed 1.8 kOhm pull-ups; GPIO Zero is included in Raspberry Pi OS; the pinout command shows a pin map."
+  },
+  {
+    "n": 16,
+    "title": "Raspberry Pi OS: Python",
+    "publisher": "Raspberry Pi Ltd documentation",
+    "url": "https://www.raspberrypi.com/documentation/computers/os.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A system-wide pip install fails with externally-managed-environment; install python3-<name> with apt, or create a virtual environment with python -m venv; --break-system-packages risks breaking the OS."
+  },
+  {
+    "n": 17,
+    "title": "GPIO Zero documentation",
+    "publisher": "GPIO Zero (Ben Nuttall and Dave Jones)",
+    "url": "https://gpiozero.readthedocs.io/en/stable/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GPIO Zero is a simple Python interface to GPIO devices (LED, Button, MotionSensor, LightSensor) that builds on several underlying pin libraries."
+  },
+  {
+    "n": 18,
+    "title": "systemd.service",
+    "publisher": "freedesktop.org (systemd manual)",
+    "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Restart=on-failure recommended for long-running services; RestartSec default 100 ms; Type=exec recommended for long-running services without a readiness signal; Type=simple reports success even if the binary is missing."
+  },
+  {
+    "n": 19,
+    "title": "Cyber Resilience Act",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Entered into force 10 Dec 2024; reporting obligations from 11 Sep 2026; main obligations from 11 Dec 2027; covers products with digital elements (connectable hardware and software); CE marking shows compliance; implementation guidance published 27 Jul 2026."
+  },
+  {
+    "n": 20,
+    "title": "Regulation (EU) 2024/2847 (Cyber Resilience Act), full text",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Art 13(8) support period of at least five years unless the product is expected to be used for less; Art 13(9) each security update stays available for at least 10 years or the rest of the support period; Art 14 early warning 24 h, notification 72 h, final report 14 days after a fix; Art 71 application dates (Chapter IV from 11 Jun 2026, Art 14 from 11 Sep 2026, the rest from 11 Dec 2027); Annex I essential requirements and vulnerability handling (SBOM, coordinated vulnerability disclosure policy)."
+  },
+  {
+    "n": 21,
+    "title": "Radio Equipment Directive (RED)",
+    "publisher": "European Commission, Internal Market, Industry, Entrepreneurship and SMEs",
+    "url": "https://single-market-economy.ec.europa.eu/sectors/electrical-and-electronic-engineering-industries-eei/radio-equipment-directive-red_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Delegated Regulation (EU) 2022/30 activating Art 3(3)(d), (e) and (f) for certain radio equipment entered into application in August 2025; Delegated Regulation (EU) 2026/339 repeals it with effect from 11 Dec 2027, when the CRA applies, so cybersecurity requirements move from RED to the CRA."
+  },
+  {
+    "n": 22,
+    "title": "CE marking",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-requirements/labels-markings/ce-marking/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 17 Jul 2026). Steps: find the EU requirements, choose self-assessment or a notified body, test, compile technical documentation, sign the EU declaration of conformity, affix the mark; at least 5 mm high; keep documents 10 years; CE marking must not be used where no EU rule requires it."
+  },
+  {
+    "n": 23,
+    "title": "Using the UKCA marking",
+    "publisher": "GOV.UK (Office for Product Safety and Standards)",
+    "url": "https://www.gov.uk/guidance/using-the-ukca-marking",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 21 Aug 2026). Great Britain continues to recognise CE marking alongside or instead of UKCA; UK approved bodies certify only for UKCA; UKCA may go on a label or accompanying document until 11pm on 31 Dec 2027; marks at least 5 mm; name and postal address of manufacturer and importer; instructions in English."
+  },
+  {
+    "n": 24,
+    "title": "The UK Product Security and Telecommunications Infrastructure (PSTI) product security regime",
+    "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
+    "url": "https://www.gov.uk/government/publications/the-uk-product-security-and-telecommunications-infrastructure-product-security-regime",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last updated 2 May 2024). Regime in effect from 29 Apr 2024 for connectable products; three requirements: unique or user-set passwords, published way to report security issues with timescales, published minimum security update period with an end date; statement of compliance must accompany the product; OPSS enforces."
+  },
+  {
+    "n": 25,
+    "title": "47 CFR 2.906 Supplier's Declaration of Conformity",
+    "publisher": "U.S. Government Publishing Office (govinfo), Code of Federal Regulations annual edition revised as of 1 Oct 2024",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title47-vol1/xml/CFR-2024-title47-vol1-sec2-906.xml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (fcc.gov pages returned 403 and ecfr.gov redirected to a bot check, so the official annual CFR edition is used). SDoC is a procedure where the responsible party makes measurements to ensure the equipment complies; no sample or data submitted unless the FCC asks."
+  },
+  {
+    "n": 26,
+    "title": "47 CFR 2.907 Certification",
+    "publisher": "U.S. Government Publishing Office (govinfo), Code of Federal Regulations annual edition revised as of 1 Oct 2024",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title47-vol1/xml/CFR-2024-title47-vol1-sec2-907.xml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Certification is an equipment authorization approved by the FCC or issued by a Telecommunication Certification Body, based on representations and test data from the applicant."
+  },
+  {
+    "n": 27,
+    "title": "47 CFR 15.212 Modular transmitters",
+    "publisher": "U.S. Government Publishing Office (govinfo), Code of Federal Regulations annual edition revised as of 1 Oct 2024",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title47-vol1/xml/CFR-2024-title47-vol1-sec15-212.xml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Conditions for a single modular transmitter (shielding, buffered inputs, own power regulation, attached or unique antenna, tested standalone, FCC ID label); host labelled with wording such as \"Contains FCC ID\"; limited approvals must state how end-product compliance is kept."
+  },
+  {
+    "n": 28,
+    "title": "47 CFR 15.101 Equipment authorization of unintentional radiators",
+    "publisher": "U.S. Government Publishing Office (govinfo), Code of Federal Regulations annual edition revised as of 1 Oct 2024",
+    "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title47-vol1/xml/CFR-2024-title47-vol1-sec15-101.xml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Table 1: Class A and Class B digital devices and peripherals use SDoC or Certification; subassemblies sold to a manufacturer for further fabrication need no authorization because the end manufacturer obtains it."
+  },
+  {
+    "n": 29,
+    "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets (TA16-288A)",
+    "publisher": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "url": "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Released 14 Oct 2016, revised 17 Oct 2017. Mirai tried 62 common default usernames and passwords to take over IoT devices; the 20 Sep 2016 attack on KrebsOnSecurity exceeded 620 Gbps; the OVH attack was at least 1.1 Tbps; mitigations include changing default passwords and patching."
+  },
+  {
+    "n": 30,
+    "title": "Directive (EU) 2024/2853 on liability for defective products, full text",
+    "publisher": "EUR-Lex, Publications Office of the European Union",
+    "url": "https://eur-lex.europa.eu/eli/dir/2024/2853/oj/eng",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Art 4(1): product includes software and digital manufacturing files; Art 8: importer, authorised representative or fulfilment service provider liable when the manufacturer is outside the EU; Art 21-22: old directive repealed with effect from 9 Dec 2026 and still applies to products placed on the market before that date; transposition by 9 Dec 2026."
+  }
+]

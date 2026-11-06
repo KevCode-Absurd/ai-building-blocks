@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "product-shot-list-writer",
+    "name": "Product shot list writer",
+    "why": "Writes a shot list with a reason for each shot, the same one-job-per-shot rule as the shot-list-and-shoot-brief skill."
+  },
+  {
+    "slug": "product-photo-shoot-planner",
+    "name": "Product photo shoot planner",
+    "why": "Builds a style sheet so every picture in a shoot matches; check its frames against the truth-to-product rule in this kit."
+  },
+  {
+    "slug": "phone-product-photoshoot",
+    "name": "A full product photoshoot from your phone photos",
+    "why": "Plans a phone shoot with a light set-up per shot, a companion to the home-studio-setup prompt."
+  },
+  {
+    "slug": "product-photo-set-maker",
+    "name": "Product photo set maker",
+    "why": "Checks AI product photos against the real product and redoes failed frames, the same check as step 4 of the AI check skill."
+  },
+  {
+    "slug": "product-image-spec-writer",
+    "name": "Product image spec writer",
+    "why": "Writes a sourced truth sheet for a product before any image work, so edits never change how it looks."
+  },
+  {
+    "slug": "product-page-image-checker",
+    "name": "Product page image checker",
+    "why": "Gives a pass or fail per image before upload; pair it with the dated channel spec sheet from this kit."
+  },
+  {
+    "slug": "store-image-prep-checker",
+    "name": "Store image prep checker",
+    "why": "Covers resizing, renaming, alt text and gallery order, the delivery steps of the channel image skill."
+  },
+  {
+    "slug": "image-upscale-checker",
+    "name": "Image upscale checker",
+    "why": "Checks an upscale for changes to the image, useful when AI output is smaller than a channel's suggested size."
+  },
+  {
+    "slug": "product-gallery-answers",
+    "name": "Product gallery doubt review and image builder",
+    "why": "Reviews a gallery against shopper doubts, like the listing-image-audit prompt."
+  },
+  {
+    "slug": "photo-product-gallery",
+    "name": "Turn real photos into a product page gallery",
+    "why": "Plans about eight gallery images that each answer one shopper question, from real photos."
+  },
+  {
+    "slug": "turn-a-clothing-flat-lay-into-marketplace-ready-photos",
+    "name": "Turn a clothing flat lay into marketplace-ready photos",
+    "why": "Turns a garment photo into marketplace images with a rules check; keep a real photo as the main image."
+  },
+  {
+    "slug": "make-matching-photos-for-a-product-sheet-and-check-them",
+    "name": "Make matching photos for a product sheet and check them",
+    "why": "Makes consistent photos across a product list and checks marketplace rules, as in the catalogue-image-refresh workflow."
+  },
+  {
+    "slug": "ai-image-fix-rules",
+    "name": "AI image and video fix rule writer",
+    "why": "Turns feedback on AI images into fix rules, so the same product distortion is caught every time."
+  }
+]

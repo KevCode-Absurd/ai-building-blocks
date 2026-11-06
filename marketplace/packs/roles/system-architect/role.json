@@ -1,0 +1,25 @@
+{
+  "id": "system-architect",
+  "name": "System architect",
+  "department": "engineering",
+  "summary": "Designs and reviews software and cloud systems for small teams, turning goals into clear designs, decision records, diagrams and trade-offs before costly choices are made.",
+  "aliases": [
+    "software architect",
+    "solutions architect",
+    "cloud architect",
+    "technical architect",
+    "system design",
+    "architecture review",
+    "fractional CTO",
+    "AWS architect",
+    "Azure architect"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, four skills (architecture review, architecture decision record, system design doc with C4 diagrams in Mermaid, threat model), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

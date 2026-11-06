@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "write-a-voice-guide-from-your-documents-and-check-copy",
+    "name": "Write a voice guide from your documents and check copy",
+    "why": "Builds a voice guide from a client's own documents and checks new drafts against it, the same job as this kit's voice profile skill."
+  },
+  {
+    "slug": "brand-voice-one-pager-writer",
+    "name": "Brand voice one-pager writer",
+    "why": "A one-page voice guide with word lists and before and after lines, useful when a business needs a house voice as well as the founder's."
+  },
+  {
+    "slug": "brand-voice-reviewer",
+    "name": "Brand voice reviewer",
+    "why": "Reviews each draft against the voice and fixes only the lines that slip, like the voice match edit prompt."
+  },
+  {
+    "slug": "write-your-founder-story-and-cut-it-to-what-moves",
+    "name": "Write your founder story and cut it to what moves",
+    "why": "Maps the true facts of how a founder started into a story and cuts it, a common first ghostwriting deliverable."
+  },
+  {
+    "slug": "expert-and-newcomer-writing",
+    "name": "Write something experts admire and newcomers enjoy",
+    "why": "Helps with the curse of knowledge: a draft that keeps experts' respect while newcomers can follow it."
+  },
+  {
+    "slug": "x-and-linkedin-post-pair-writer",
+    "name": "X and LinkedIn post pair writer",
+    "why": "Turns one idea into a LinkedIn post and an X post that each fit their place, for clients active on both."
+  },
+  {
+    "slug": "annual-letter",
+    "name": "Write an annual letter with long-term priorities and metrics",
+    "why": "A founder's annual letter from the year's real numbers, a classic ghostwritten piece."
+  },
+  {
+    "slug": "annual-letter-writer",
+    "name": "Annual letter writer",
+    "why": "A shorter annual letter that leads with bad news and owns mistakes, in the owner's voice."
+  },
+  {
+    "slug": "read-aloud-speech-shaper",
+    "name": "Read-aloud speech shaper",
+    "why": "Shapes notes into a speech made to be heard, for clients who need a talk or toast as well as written pieces."
+  },
+  {
+    "slug": "long-form-draft-editor",
+    "name": "Long-form draft editor",
+    "why": "Edits a finished article, talk or chapter in rounds and lists what is left, useful before the client's final read."
+  },
+  {
+    "slug": "daily-writing-habit",
+    "name": "Make a daily writing habit that lasts",
+    "why": "For authors who want to write parts of their book themselves alongside the ghostwriter."
+  },
+  {
+    "slug": "price-a-course-or-ebook-and-write-its-launch-emails",
+    "name": "Price a course or ebook and write its launch emails",
+    "why": "Prices a book or ebook and writes honest launch emails, the next step after the manuscript."
+  }
+]

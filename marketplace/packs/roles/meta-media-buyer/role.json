@@ -1,0 +1,24 @@
+{
+  "id": "meta-media-buyer",
+  "name": "Meta ads media buyer",
+  "department": "marketing",
+  "summary": "Runs your Facebook and Instagram ads so they bring in customers at a cost you can afford. Checks your tracking first, plans campaigns and creative tests, reads the results honestly, and changes nothing without your yes.",
+  "aliases": [
+    "Facebook ads manager",
+    "Instagram ads specialist",
+    "Meta ads specialist",
+    "paid social manager",
+    "Facebook ads expert",
+    "Advantage+ specialist",
+    "social media ads buyer",
+    "performance marketer Meta"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 14,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: how delivery and the auction work, Advantage+ for sales, app and leads, learning phase, creative as targeting, bid strategies, pixel and Conversions API, AEM, attribution models, lift tests, Special Ad Categories and the ads MCP server, with 30 checked sources."
+    }
+  ]
+}

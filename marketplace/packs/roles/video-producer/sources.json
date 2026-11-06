@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Recommended upload encoding settings",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/1722171",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). MP4 container with the moov atom at the front; H.264 High Profile, progressive, 4:2:0; AAC-LC or Opus audio at 48 kHz; encode at the frame rate recorded, with 24, 25, 30, 48, 50 and 60 fps listed as common; SDR 1080p at 8 Mbps (24 to 30 fps) or 12 Mbps (48 to 60 fps); 4K at 35 to 45 or 53 to 68 Mbps; stereo audio 384 kbps; deinterlace before upload"
+  },
+  {
+    "n": 2,
+    "title": "Video resolution & aspect ratios",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/6375112",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 16:9 is the standard on a computer; table of 16:9 resolutions from 426 x 240 to 7680 x 4320; vertical video gets padding from the player; advice not to add padding or black bars to the video itself"
+  },
+  {
+    "n": 3,
+    "title": "Upload YouTube Shorts",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/12779649",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shorts may be up to 3 minutes long, with a square or vertical aspect ratio; copyright-protected material can lead to a Content ID claim, and a valid takedown can lead to removal and a copyright strike"
+  },
+  {
+    "n": 4,
+    "title": "Instagram Reels video ad specs (Meta Ads Guide)",
+    "publisher": "Meta",
+    "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 9:16, 1440 x 2560 recommended, MP4 or MOV, up to 4 GB, 0 seconds to 15 minutes, captions and sound optional but recommended, H.264 with fixed frame rate and stereo AAC at 128 kbps or more; keep at least 14% at the top, 35% at the bottom and 6% at each side free of text and logos"
+  },
+  {
+    "n": 5,
+    "title": "Video ads advertising specifications",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "url": "https://www.linkedin.com/help/lms/answer/a424737",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. MP4, 75 KB to 500 MB, 3 seconds to 30 minutes with 15 to 30 seconds recommended; 16:9, 1:1, 4:5 and 9:16 with pixel ranges; under 30 fps; H.264 or VP8; AAC or MPEG4 audio; SRT caption files with plain text only"
+  },
+  {
+    "n": 6,
+    "title": "Supported subtitle and closed caption files",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/2734698",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Caption formats YouTube accepts: SubRip (.srt) and SubViewer (.sbv) as plain UTF-8 with no styling, WebVTT with positioning, TTML, SCC and others; SRT and SBV recommended for beginners"
+  },
+  {
+    "n": 7,
+    "title": "English (USA) Timed Text Style Guide",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (latest change log entry 19 Dec 2025). 42 characters per line; up to 20 characters per second for adult programmes and 17 for children's programmes; two lines at most"
+  },
+  {
+    "n": 8,
+    "title": "Timed Text Style Guide: General Requirements",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (latest change log entry 7 Oct 2022). Minimum subtitle duration five-sixths of a second (20 frames at 24 fps), maximum 7 seconds; centred at top or bottom; line-break rules; subtitle plot-relevant on-screen text"
+  },
+  {
+    "n": 9,
+    "title": "Understanding Success Criterion 1.2.2: Captions (Prerecorded)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 10 Aug 2026). Level A: captions for all prerecorded audio in synchronised media; captions identify speakers and include meaningful non-speech sound; open captions cannot be turned off, closed captions can"
+  },
+  {
+    "n": 10,
+    "title": "Understanding Success Criterion 2.3.1: Three Flashes or Below Threshold",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 17 Sep 2025). Level A: nothing flashes more than three times in any one second, unless below the general and red flash thresholds; definitions of general and red flashes; area limit"
+  },
+  {
+    "n": 11,
+    "title": "Understanding Success Criterion 2.2.2: Pause, Stop, Hide",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 4 Oct 2026). Level A: moving content that starts automatically, lasts more than five seconds and runs alongside other content needs a way to pause, stop or hide it; exceptions for essential movement"
+  },
+  {
+    "n": 12,
+    "title": "EBU R 95: Safe areas for 16:9 television production",
+    "publisher": "European Broadcasting Union",
+    "url": "https://tech.ebu.ch/publications/r095",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Version 1.1 (June 2017): action-safe margin 3.5% and graphics-safe margin 5% at the top, bottom and sides of the picture"
+  },
+  {
+    "n": 13,
+    "title": "EBU R 128: Loudness normalisation and permitted maximum level of audio signals",
+    "publisher": "European Broadcasting Union",
+    "url": "https://tech.ebu.ch/publications/r128",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Version 5.0, 21 Nov 2023; programme loudness target of -23 LUFS; names the true peak and loudness range descriptors (values not shown on the page, so not used)"
+  },
+  {
+    "n": 14,
+    "title": "What Musicians Should Know about Copyright",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/engage/musicians/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A recording of a song can contain two separate works, the musical work (composition and lyrics) and the sound recording, which are commonly owned and licensed separately"
+  },
+  {
+    "n": 15,
+    "title": "Learn about copyright claims",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/6013276",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Content ID claims are automatic matches; the owner can block, monetise or track; a claim affects the video, while a valid takedown can bring a channel strike; options to leave, remove or replace claimed audio, share revenue or dispute"
+  },
+  {
+    "n": 16,
+    "title": "Use music and sound effects from the Audio Library",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/3376882",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Audio Library tracks are described as copyright-safe and are not claimed through Content ID; Creative Commons tracks need credit in the description; YouTube is not responsible for royalty-free music from other sources"
+  },
+  {
+    "n": 17,
+    "title": "Music Guidelines",
+    "publisher": "Meta (Facebook)",
+    "url": "https://www.facebook.com/legal/music_guidelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (effective 26 Mar 2024). Users are responsible for music in their content; commercial or non-personal use needs the right licences; no music listening experiences; more music in a video makes limits more likely; shorter clips and a visual purpose recommended"
+  },
+  {
+    "n": 18,
+    "title": "About CC Licenses",
+    "publisher": "Creative Commons",
+    "url": "https://creativecommons.org/share-your-work/cclicenses/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The six licences and the BY, SA, NC and ND elements; NC allows only non-commercial use; ND allows no adaptations"
+  },
+  {
+    "n": 19,
+    "title": "Free Stock Photo & Video License",
+    "publisher": "Pexels",
+    "url": "https://www.pexels.com/license/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Free use including commercial promotion, editing allowed, no attribution required; not allowed: identifiable people in a bad light, implying endorsement by people or brands shown, selling unaltered copies, redistributing on other stock sites, use as a trademark"
+  },
+  {
+    "n": 20,
+    "title": "How copyright protects your work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK copyright is automatic with no register; covers musical works, sound and music recordings, film and broadcasts; stops copying, showing in public, adapting or putting work online without permission"
+  },
+  {
+    "n": 21,
+    "title": "How copyright protects your work: License and sell your copyright",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/copyright/license-and-sell-your-copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A sale or transfer of copyright needs a written, signed assignment; owners may license work and may use a collecting society to license on their behalf"
+  },
+  {
+    "n": 22,
+    "title": "Copyright in the EU",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 12 Oct 2026). EU copyright is automatic; lasts 70 years after the author's death; licences can be exclusive or non-exclusive and limited by time, territory and use; public licences such as Creative Commons"
+  },
+  {
+    "n": 23,
+    "title": "Copyright Law of the United States, Chapter 1 (17 U.S.C. 101)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/title17/92chap1.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Definition of a work made for hire: work by an employee in the scope of employment, or a specially commissioned work in listed categories (including part of a motion picture or other audiovisual work) when both parties sign a written agreement"
+  },
+  {
+    "n": 24,
+    "title": "Copyright Law of the United States, Chapter 2 (17 U.S.C. 201 and 204)",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/title17/92chap2.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 201(b): for a work made for hire the employer or commissioner is the author; section 204(a): a transfer of copyright ownership needs a signed writing"
+  },
+  {
+    "n": 25,
+    "title": "Disclosing use of GenAI content",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/14328491",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Creators must disclose realistic AI-made or altered content (a real person saying or doing something they did not, altered real events or places, realistic scenes that never happened, AI music as the main focus); not needed for unrealistic content, minor edits or AI help with scripts; set under AI use in YouTube Studio"
+  },
+  {
+    "n": 26,
+    "title": "EU AI Act, Article 50: Transparency obligations",
+    "publisher": "artificialintelligenceact.eu (Future of Life Institute), text of Regulation (EU) 2024/1689",
+    "url": "https://artificialintelligenceact.eu/article/50/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Deployers must disclose AI-generated or manipulated image, audio or video resembling real people, places or events (deepfakes); lighter duty for evidently artistic, creative, satirical or fictional work; providers must mark outputs machine-readably; applies from 2 August 2026"
+  },
+  {
+    "n": 27,
+    "title": "NewsNet Issue 1060: Copyright Office Releases Part 2 of Artificial Intelligence Report",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/newsnet/2025/1060.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Part 2 of the AI report (29 Jan 2025): prompts alone do not make an AI output protectable; human expressive elements, creative arrangements or modifications can be"
+  },
+  {
+    "n": 28,
+    "title": "Canva MCP server",
+    "publisher": "Canva Developers",
+    "url": "https://www.canva.dev/docs/mcp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Canva's MCP server lets an AI assistant create and edit designs, search designs and folders, use brand kits and templates, export PDF, PNG, JPG, PPTX and MP4, resize designs and add comments"
+  },
+  {
+    "n": 29,
+    "title": "Descript MCP: Edit Video From Claude or ChatGPT",
+    "publisher": "Descript",
+    "url": "https://www.descript.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Descript's MCP connector, signed in with a Descript account: import media, run edits such as captions and filler-word removal, publish to a share link, export transcripts (including SRT) and timelines (EDL, AAF, FCPXML, Premiere XML, DaVinci Resolve XML); cannot export an MP4 on request or import YouTube links (as of 6 Nov 2026)"
+  },
+  {
+    "n": 30,
+    "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 4 Oct 2026). Level AA contrast of at least 4.5:1 for normal text and 3:1 for large text (18 pt, or 14 pt bold); text in a logo or brand name has no contrast requirement"
+  }
+]

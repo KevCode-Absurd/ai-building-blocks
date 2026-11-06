@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "supplier-quote-request-writer",
+    "name": "Supplier quote request writer",
+    "why": "Writes a quote request in maker terms, the same job as the sourcing plan and RFQ skill for product brands."
+  },
+  {
+    "slug": "supplier-quote-comparer",
+    "name": "Supplier quote comparer",
+    "why": "Puts supplier quotes side by side on price, minimums, lead time and cash needed, as in quote levelling."
+  },
+  {
+    "slug": "factory-shortlist-vetter",
+    "name": "Supplier shortlist vetter",
+    "why": "Scores a factory shortlist and its red flags before a deposit, alongside the due diligence skill."
+  },
+  {
+    "slug": "landed-cost-calculator",
+    "name": "Landed cost calculator",
+    "why": "Works out landed cost per unit from a quote, freight and duty, the cost step in quote levelling."
+  },
+  {
+    "slug": "factory-price-break-negotiator",
+    "name": "Factory price-break negotiator",
+    "why": "Plans a factory price talk with asks, give-backs and a fallback, matching the negotiation skill."
+  },
+  {
+    "slug": "negotiation-call-prep-planner",
+    "name": "Negotiation call prep planner",
+    "why": "Prepares the opening, questions and listening points for a hard supplier call."
+  },
+  {
+    "slug": "monthly-contract-renewal-keeper",
+    "name": "Monthly contract renewal keeper",
+    "why": "Keeps renewal and notice dates, price rises and asks in view every month, so nothing rolls over unnoticed."
+  },
+  {
+    "slug": "prepare-a-contract-renewal-negotiation",
+    "name": "Prepare a contract renewal negotiation",
+    "why": "A renewal negotiation pack, the same moment as the renewal brief in the negotiation skill."
+  },
+  {
+    "slug": "find-duplicate-and-unused-business-subscriptions",
+    "name": "Find duplicate and unused business subscriptions",
+    "why": "Finds duplicate and unused subscriptions, the first pass of the spend and subscription review."
+  },
+  {
+    "slug": "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+    "name": "Code vendor bills, flag odd ones and find supplier savings",
+    "why": "Codes supplier bills, flags odd ones and finds savings, as in the quarterly spend review."
+  },
+  {
+    "slug": "preserve-a-procurement-decision-audit-trail",
+    "name": "Preserve a procurement decision audit trail",
+    "why": "Keeps the record of how a supplier was chosen, the file step at the end of every award."
+  },
+  {
+    "slug": "procurement-evidence-gap-review-assistant",
+    "name": "Procurement evidence gap review assistant",
+    "why": "Checks vendor proposals against an approval checklist and lists the proof still missing."
+  },
+  {
+    "slug": "supplier-payment-terms-planner",
+    "name": "Supplier terms and float planner",
+    "why": "Works out the payment terms to ask for from the order cycle and cash, a common trade in negotiations."
+  },
+  {
+    "slug": "plan-a-vendor-change-without-losing-work",
+    "name": "Plan a vendor change without losing work",
+    "why": "Plans the switch after a new supplier is chosen, including data and exit steps from the contract check."
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "National curriculum in England: framework for key stages 1 to 4",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+    "checked": "2026-11-06",
+    "supports": "First published 11 September 2013, last updated 2 December 2014; statutory guidance that local-authority-maintained schools must follow; most of it taught from September 2014, English and maths for all year groups from September 2016; separate programmes of study per subject. Opened with WebFetch."
+  },
+  {
+    "n": 2,
+    "title": "The national curriculum in England: framework document (HTML)",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4/the-national-curriculum-in-england-framework-for-key-stages-1-to-4",
+    "checked": "2026-11-06",
+    "supports": "Key stages and ages (KS1 Years 1-2 ages 5-7 to KS4 Years 10-11 ages 14-16); core and foundation subjects; national curriculum is one part of the school curriculum; maintained schools must follow it, academies must offer a broad and balanced curriculum; inclusion duties (suitable challenge, pupils' needs, English as an additional language). Opened with WebFetch."
+  },
+  {
+    "n": 3,
+    "title": "Curriculum and Assessment Review Final Report: government response",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/curriculum-and-assessment-review-final-report-government-response",
+    "checked": "2026-11-06",
+    "supports": "Published 5 November 2025, last updated 10 December 2025 (British Sign Language videos added); consultation on Progress 8 to follow. Opened with WebFetch."
+  },
+  {
+    "n": 4,
+    "title": "Government response to the Curriculum and Assessment Review (PDF)",
+    "publisher": "Department for Education",
+    "url": "https://assets.publishing.service.gov.uk/media/690b2a4a14b040dfe82922ea/Government_response_to_the_Curriculum_and_Assessment_Review.pdf",
+    "checked": "2026-11-06",
+    "supports": "Revised national curriculum to be published by spring 2027 for first teaching from September 2028; updated GCSEs for first teaching in 2029 and 2030; GCSE exam time cut by 2.5 to 3 hours on average; new statutory Year 8 reading test; schools expected to assess writing and maths in Year 8; citizenship statutory at key stages 1 and 2; AI literacy and bias in technology; academies to be required to teach the refreshed curriculum through the Children's Wellbeing and Schools Bill; EBacc measures removed from 2025 to 2026 data; Oak materials and Aila. PDF downloaded via WebFetch and converted to text."
+  },
+  {
+    "n": 5,
+    "title": "Generative AI: product safety standards (publication page, formerly product safety expectations)",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/generative-ai-product-safety-expectations",
+    "checked": "2026-11-06",
+    "supports": "The page at the 'expectations' address is now titled 'product safety standards'; first published 22 January 2025; updated 19 January 2026 to add standards on cognitive development, emotional and social development, mental health and manipulation. Opened with WebFetch."
+  },
+  {
+    "n": 6,
+    "title": "Generative AI: product safety standards (HTML)",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/generative-ai-product-safety-standards/generative-ai-product-safety-standards",
+    "checked": "2026-11-06",
+    "supports": "Standards for edtech developers and suppliers, also usable by schools: filtering, monitoring and reporting to safeguarding leads, security against jailbreaking, privacy and DPIA, no use of learner or teacher work for training without permission, no full answers by default with progressive hints, no human-like personas, distress detection and a crisis protocol, no flattery, pressure or embedded advertising. Opened with WebFetch."
+  },
+  {
+    "n": 7,
+    "title": "Generative artificial intelligence (AI) in education",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education/generative-artificial-intelligence-ai-in-education",
+    "checked": "2026-11-06",
+    "supports": "Last updated 12 August 2025: AI can help with lesson and curriculum planning, resources, feedback and admin; outputs need critical judgement for accuracy; personal data should generally not be entered; pupils' work not used to train AI without permission; follow tools' age limits; filtering and monitoring should cover generative AI; schools and awarding bodies must prevent AI malpractice using JCQ guidance. Opened with WebFetch."
+  },
+  {
+    "n": 8,
+    "title": "Keeping children safe in education",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/keeping-children-safe-in-education--2",
+    "checked": "2026-11-06",
+    "supports": "Statutory guidance; September 2026 versions came into force on 1 September 2026 and replaced earlier versions; all staff, including those who do not work directly with children, should read Part one; the shorter Part one in Annex A was removed. Opened with WebFetch."
+  },
+  {
+    "n": 9,
+    "title": "Filtering and monitoring standards for schools and colleges",
+    "publisher": "Department for Education (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/meeting-digital-and-technology-standards-in-schools-and-colleges/filtering-and-monitoring-standards-for-schools-and-colleges",
+    "checked": "2026-11-06",
+    "supports": "Last updated 16 September 2026: named roles; review at least once each academic year; block harmful content without unreasonably affecting teaching; monitoring with reports and alerts; filtering covers AI-generated content; consult the generative AI product safety standards before introducing AI products. Opened with WebFetch."
+  },
+  {
+    "n": 10,
+    "title": "SEND code of practice: 0 to 25 years",
+    "publisher": "Department for Education and Department of Health and Social Care (GOV.UK)",
+    "url": "https://www.gov.uk/government/publications/send-code-of-practice-0-to-25",
+    "checked": "2026-11-06",
+    "supports": "Statutory guidance for England for bodies named in section 77(1) of the Children and Families Act 2014, including schools; revised version in effect from 1 April 2015; page last updated 12 September 2024. Opened with WebFetch."
+  },
+  {
+    "n": 11,
+    "title": "Grade 4: Number and Operations - Fractions (4.NF)",
+    "publisher": "Common Core State Standards Initiative",
+    "url": "https://www.thecorestandards.org/Math/Content/4/NF/",
+    "checked": "2026-11-06",
+    "supports": "Wording behind 4.NF.A.1 and 4.NF.A.2 and how a code is built: subject, grade, domain, cluster and standard number. Opened with WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Standards in your state",
+    "publisher": "Common Core State Standards Initiative",
+    "url": "https://www.thecorestandards.org/standards-in-your-state/",
+    "checked": "2026-11-06",
+    "supports": "41 states, the District of Columbia, four territories and the Department of Defense Education Activity adopted the Common Core; states routinely review their standards and may change or add to them. Opened with WebFetch."
+  },
+  {
+    "n": 13,
+    "title": "Texas Essential Knowledge and Skills (TEKS)",
+    "publisher": "Texas Education Agency",
+    "url": "https://tea.texas.gov/academics/curriculum-standards/teks-review/texas-essential-knowledge-and-skills",
+    "checked": "2026-11-06",
+    "supports": "TEKS published as chapters of 19 TAC (110 ELA and reading, 111 mathematics, 112 science, 113 social studies, 126 technology applications and others); the State Board of Education revises them and sets implementation years, with schedules from 2024-2025 to 2033-2034 (for example English Language Proficiency Standards in 2026-2027, K-5 ELA and social studies in 2030-2031). Opened with WebFetch."
+  },
+  {
+    "n": 14,
+    "title": "Current Massachusetts Curriculum Frameworks",
+    "publisher": "Massachusetts Department of Elementary and Secondary Education",
+    "url": "https://www.doe.mass.edu/frameworks/current.html",
+    "checked": "2026-11-06",
+    "supports": "Framework years: mathematics 2017, ELA and literacy 2017, science and technology/engineering 2016, history and social science 2018, digital literacy and computer science 2016, arts 2019, world languages 2021, comprehensive health and PE 2023, CTE 2024; page last updated 4 November 2026. Opened with WebFetch."
+  },
+  {
+    "n": 15,
+    "title": "Next Generation Science Standards",
+    "publisher": "NGSS (Achieve)",
+    "url": "https://www.nextgenscience.org/",
+    "checked": "2026-11-06",
+    "supports": "K-12 science standards developed by states, built on three dimensions: science and engineering practices, disciplinary core ideas and crosscutting concepts. Opened with WebFetch."
+  },
+  {
+    "n": 16,
+    "title": "Search the standards",
+    "publisher": "NGSS (Achieve)",
+    "url": "https://www.nextgenscience.org/search-standards",
+    "checked": "2026-11-06",
+    "supports": "Performance expectations shown with codes such as K-PS2-1 and 1-PS4-1 (grade, discipline and core idea, sequence number); the code structure is read from the examples, not defined on the page. Opened with WebFetch."
+  },
+  {
+    "n": 17,
+    "title": "Complying with COPPA: Frequently Asked Questions",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions",
+    "checked": "2026-11-06",
+    "supports": "COPPA covers services directed to children under 13 or with actual knowledge of collecting their data; verifiable parental consent; Rule amended 22 April 2025; schools may consent for ed tech used solely for the school's educational purpose, not for commercial uses, ideally through administrators rather than individual teachers. Opened with WebFetch (two reads)."
+  },
+  {
+    "n": 18,
+    "title": "FERPA",
+    "publisher": "US Department of Education, Student Privacy Policy Office",
+    "url": "https://studentprivacy.ed.gov/ferpa",
+    "checked": "2026-11-06",
+    "supports": "FERPA (20 U.S.C. 1232g; 34 CFR Part 99) protects education records at institutions receiving Department of Education funds; parents' rights transfer to the student at 18 or on entering postsecondary education. Opened with WebFetch."
+  },
+  {
+    "n": 19,
+    "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+    "publisher": "US Department of Justice (ADA.gov)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "WCAG 2.1 Level AA for state and local government web content and apps, including public schools, community colleges and public universities; compliance 26 April 2027 (50,000 or more people) and 26 April 2028 (smaller and special district governments) after the 20 April 2026 interim final rule; school districts use their city, county or SAIPE population. Opened with WebFetch."
+  },
+  {
+    "n": 20,
+    "title": "Understanding accessibility requirements for public sector bodies",
+    "publisher": "Central Digital and Data Office (GOV.UK)",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "UK public sector websites and apps should meet WCAG 2.2 AA; schools and nurseries are partially exempt but content people need to use their services is covered, and they still publish an accessibility statement; page updated 30 September 2024. Opened with WebFetch."
+  },
+  {
+    "n": 21,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "W3C Recommendation dated 12 December 2024; 1.1.1 text alternatives; 1.4.3 contrast 4.5:1 (3:1 for large text); 1.4.12 text spacing; 2.2.1 timing adjustable. Opened with WebFetch."
+  },
+  {
+    "n": 22,
+    "title": "The UDL Guidelines",
+    "publisher": "CAST",
+    "url": "https://udlguidelines.cast.org/",
+    "checked": "2026-11-06",
+    "supports": "UDL Guidelines 3.0 released 30 July 2024; principles of engagement, representation, and action and expression; 3.0 addresses barriers rooted in bias and systems of exclusion. Opened with WebFetch."
+  },
+  {
+    "n": 23,
+    "title": "AI Act: regulatory framework for AI",
+    "publisher": "European Commission",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "checked": "2026-11-06",
+    "supports": "Page updated 19 October 2026: AI that may determine access to education or a professional path, such as exam scoring, is high-risk; after the AI Omnibus entered into force on 27 July 2026, Annex III high-risk rules apply from 2 December 2027; transparency rules take effect in August 2026. Opened with WebFetch."
+  },
+  {
+    "n": 24,
+    "title": "Understanding by Design Framework (white paper)",
+    "publisher": "ASCD (Jay McTighe and Grant Wiggins, 2012)",
+    "url": "https://files.ascd.org/staticfiles/ascd/pdf/siteASCD/publications/UbD_WhitePaper0312.pdf",
+    "checked": "2026-11-06",
+    "supports": "Backward design in three stages (desired results, evidence, learning plan); focus on understanding and transfer; six facets of understanding; avoids treating the textbook as the curriculum and activity-oriented teaching. PDF downloaded via WebFetch and converted to text."
+  },
+  {
+    "n": 25,
+    "title": "Principles of Instruction: Research-Based Strategies That All Teachers Should Know (Barak Rosenshine, American Educator, Spring 2012)",
+    "publisher": "American Federation of Teachers",
+    "url": "https://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+    "checked": "2026-11-06",
+    "supports": "Ten principles (daily review, small steps, many questions, models, guided practice, checking understanding, high success rate, scaffolds, independent practice, weekly and monthly review); optimal success rate about 80 percent; a fourth-grade maths study found 82 percent correct answers in the most successful teachers' classes against 73 percent in the least successful. PDF downloaded via WebFetch and converted to text."
+  },
+  {
+    "n": 26,
+    "title": "Grading and performance rubrics",
+    "publisher": "Carnegie Mellon University, Eberly Center",
+    "url": "https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html",
+    "checked": "2026-11-06",
+    "supports": "A rubric has criteria, descriptors and performance levels; benefits include consistency across time and graders and clearer expectations for students. Opened with WebFetch."
+  },
+  {
+    "n": 27,
+    "title": "Oak National Academy",
+    "publisher": "Oak National Academy",
+    "url": "https://www.thenational.academy/",
+    "checked": "2026-11-06",
+    "supports": "Free national curriculum-aligned curriculum plans and resources (slides, worksheets, quizzes) for key stages 1 to 4; AI lesson assistant Aila; Oak states an independent EEF trial found Aila saved teachers 49 minutes a week. Opened with WebFetch."
+  },
+  {
+    "n": 28,
+    "title": "Configure the Google Workspace MCP servers",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+    "checked": "2026-11-06",
+    "supports": "Google Workspace MCP servers in Developer Preview, including Google Classroom (classroommcp.googleapis.com) with tools such as creating announcements and listing course summaries; OAuth sign-in. Opened with WebFetch."
+  },
+  {
+    "n": 29,
+    "title": "Curriculum for Wales",
+    "publisher": "Welsh Government (Hwb)",
+    "url": "https://hwb.gov.wales/curriculum-for-wales",
+    "checked": "2026-11-06",
+    "supports": "National framework with areas of learning and experience, statements of what matters, principles of progression and descriptions of learning; schools design their own curriculum within it. Opened with WebFetch."
+  }
+]

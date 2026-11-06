@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Protecting data with privacy rules",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/data/the-database/protecting-data-with-privacy-rules",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Privacy rules are checked on the server; rules are additive; an \"Everyone else\" rule that grants nothing is recommended; View, Constraint and Auto-bind per field; Find in searches and View files per record; search privacy Off, Automatic or Strict; hidden fields can still be changed by workflows; API workflows can ignore privacy rules. No date shown."
+  },
+  {
+    "n": 2,
+    "title": "Bubble MCP",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/ai/bubble-mcp.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official server at mcp.bubble.io: creates and edits pages, elements, workflows, data types, API calls; reads logs; writes records to development only; cannot deploy, merge branches, set up OAuth2 or buy plugins; acts with the signed-in account permissions; changes skip undo history. No date shown."
+  },
+  {
+    "n": 3,
+    "title": "Exporting your Bubble app",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/account-and-marketplace/application-and-data-ownership/exporting-your-bubble-app.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. No ready-to-run code export; data exports as CSV or JSON; the .bubble file records structure but cannot run elsewhere; an agent can rebuild via the MCP; user passwords are not exported. No date shown."
+  },
+  {
+    "n": 4,
+    "title": "Version control",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/maintaining-an-application/version-control.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Development and Live have separate databases; changes reach users on deploy; deploy creates a savepoint; restore from savepoints; basic version control on any paid plan, custom branches on higher plans. No date shown."
+  },
+  {
+    "n": 5,
+    "title": "Pricing plans",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Web, Mobile and Web + Mobile plans; Starter, Growth, Team, Enterprise and Agency; workload units with a monthly allowance; emails at 75% and 100%; optional overages; Free plan has no mobile builds and a 1 GB monthly bandwidth cap. No date shown; prices not used."
+  },
+  {
+    "n": 6,
+    "title": "Hard limits",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/maintaining-an-application/performance-and-scaling/hard-limits.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Workflow timeout 300 seconds; sorted searches 50,000; 1,000 custom data types; Data and Workflow API requests per minute 15,000 (Starter), 25,000 (Growth), 35,000 (Team). No date shown."
+  },
+  {
+    "n": 7,
+    "title": "Data API security",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/security/api-security/data-api-security.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Data API off until enabled; enable only needed data types; user-authenticated calls follow that user privacy rules; admin tokens can read, modify and delete all data. No date shown."
+  },
+  {
+    "n": 8,
+    "title": "Security dashboard plan features",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/security/security-dashboard/security-dashboard-plan-features.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Starter gets 10 basic checks (missing privacy rules, search privacy, weak password policy and others); Growth, Team and Enterprise add 12 advanced checks (database exposure, compromised API tokens and others). No date shown."
+  },
+  {
+    "n": 9,
+    "title": "GDPR",
+    "publisher": "Bubble manual",
+    "url": "https://manual.bubble.io/help-guides/optimizing-an-application/compliance/gdpr.md",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Bubble is generally a processor and the customer the controller; DPAs with Standard Contractual Clauses; an EU-based dedicated server on Enterprise is not enough on its own; lists the customer duties (lawful basis, notices, rights, breach reporting, privacy rules). No date shown."
+  },
+  {
+    "n": 10,
+    "title": "Users",
+    "publisher": "Glide docs (Classic)",
+    "url": "https://www.glideapps.com/docs/essentials/users",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Private apps need sign-in, limited to the users table, team members, an email domain or emails in a table; sensitive apps should be private; roles in the users table work with Row Owner columns; row owners on by default for user tables. No date shown."
+  },
+  {
+    "n": 11,
+    "title": "Data sources",
+    "publisher": "Glide docs (Classic)",
+    "url": "https://www.glideapps.com/docs/essentials/data-sources",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Glide Tables and Big Tables on all plans; Google Sheets Maker and above; Airtable and Excel Business and above; SQL Enterprise; Sheets, Airtable and Excel not built for large volumes; external edits use updates, Glide Tables and Big Tables do not. No date shown."
+  },
+  {
+    "n": 12,
+    "title": "Publishing and sharing",
+    "publisher": "Glide docs (Classic)",
+    "url": "https://www.glideapps.com/docs/essentials/publishing-and-sharing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Publishing needs a paid plan; auto-publishing on by default; email invites add users and send a magic link regardless of sign-in settings; custom domains; web apps installed to the home screen. No date shown."
+  },
+  {
+    "n": 13,
+    "title": "Pricing",
+    "publisher": "Glide",
+    "url": "https://www.glideapps.com/pricing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GlideOS plans Free, Basic, Plus, Pro, Enterprise; public apps from Plus; MCP from Pro; SSO on Enterprise; GlideOS is separate from Glide Classic, Classic apps keep working, data cannot be shared and no migration tool exists. No date shown; prices not used."
+  },
+  {
+    "n": 14,
+    "title": "Global data restrictions",
+    "publisher": "Softr docs",
+    "url": "https://docs.softr.io/user-groups-and-permissions/global-data-restrictions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Restrict view, create, edit and delete per table and user group with conditions such as matching the logged-in email; view on all plans, create, edit and delete on Business and above; \"Can't\" wins on conflict. No date shown."
+  },
+  {
+    "n": 15,
+    "title": "Softr app security",
+    "publisher": "Softr docs",
+    "url": "https://docs.softr.io/security/softr-app-security",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visibility rules and conditional filters are evaluated server-side; Airtable views, Google Sheets filters and items-per-page are not security; publicly visible data is public. No date shown."
+  },
+  {
+    "n": 16,
+    "title": "Pricing and plans",
+    "publisher": "Softr docs",
+    "url": "https://docs.softr.io/workspace-and-billing/pricing-and-plans",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Users per plan: Free 5 total; Basic 5 Team + 5 Client; Pro 10 Team + 50 Client; Business 30 Team + 100 Client; extra users on Pro and Business. Screenshots dated 4 August 2026; prices not used."
+  },
+  {
+    "n": 17,
+    "title": "Choosing a data source",
+    "publisher": "Softr docs",
+    "url": "https://docs.softr.io/data-sources/choosing-a-data-source",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Softr Databases recommended for new apps and not bound by outside rate limits; Airtable up to 500K records and 200 to 300 concurrent users, Google Sheets 50 to 100; 24-hour cache; SOC 2 Type II; compliance such as HIPAA depends on the source. Vendor guidance, no date shown."
+  },
+  {
+    "n": 18,
+    "title": "Softr MCP server",
+    "publisher": "Softr docs",
+    "url": "https://docs.softr.io/mcp/overview",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Queries and changes databases; creates apps and pages; manages users and groups; sets domains; publishes apps; builds and publishes workflows; acts as the user; OAuth or personal access token; access per area read only or full. No date shown."
+  },
+  {
+    "n": 19,
+    "title": "Getting started with Airtable Interface Designer",
+    "publisher": "Airtable Support",
+    "url": "https://support.airtable.com/docs/getting-started-with-airtable-interface-designer",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Owners and Creators build interfaces; layouts listed; page filters viewers cannot change; per-element inline editing; computed fields not editable; drafts until Publish; publishing does not grant access. Page said \"last updated 3 days ago\" on 6 November 2026."
+  },
+  {
+    "n": 20,
+    "title": "Interface Designer permissions",
+    "publisher": "Airtable Support",
+    "url": "https://support.airtable.com/docs/interface-designer-permissions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Interface-only collaborators on paid plans; base collaborators see all interfaces; filters decide which records appear, not who can open a page; no per-collaborator permission inside a page; a record may stay visible up to 5 minutes after leaving a filter; public pages can expose data. Page said \"last updated 3 days ago\" on 6 November 2026."
+  },
+  {
+    "n": 21,
+    "title": "Airtable plans",
+    "publisher": "Airtable Support",
+    "url": "https://support.airtable.com/docs/airtable-plans",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Records per base: Free 1,000, Team 50,000, Business 125,000; API calls per workspace per month: Free 1,000, Team 100,000, Business unlimited. Page said \"last updated 17 days ago\" on 6 November 2026; prices not used."
+  },
+  {
+    "n": 22,
+    "title": "Using the Airtable MCP server",
+    "publisher": "Airtable Support",
+    "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reads and updates records, creates bases, interfaces, pages and forms, drafts automations; cannot edit existing interfaces or turn automations on; mirrors user permissions; OAuth or personal access token; read-only scopes listed. Page said \"last updated 11 days ago\" on 6 November 2026."
+  },
+  {
+    "n": 23,
+    "title": "Rate limits",
+    "publisher": "Airtable Web API documentation",
+    "url": "https://airtable.com/developers/web/api/rate-limits",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 5 requests per second per base; 50 per second per token across a user or service account; 429 response and a 30-second wait when exceeded. No date shown."
+  },
+  {
+    "n": 24,
+    "title": "A01:2025 Broken Access Control",
+    "publisher": "OWASP Top 10:2025",
+    "url": "https://top10.owasp.org/2025/A01_2025-Broken_Access_Control",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (after a redirect from owasp.org). Number one in the 2025 list; 100% of tested applications had some form; IDOR, missing checks, front-end-only access control; deny by default, server-side enforcement, record ownership, access tests."
+  },
+  {
+    "n": 25,
+    "title": "Understanding data protection basics",
+    "publisher": "European Data Protection Board (SME guide)",
+    "url": "https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GDPR principles for small businesses: lawful basis, purpose limitation, data minimisation, accuracy, storage limitation, security. No date shown."
+  },
+  {
+    "n": 26,
+    "title": "Secure personal data",
+    "publisher": "European Data Protection Board (SME guide)",
+    "url": "https://www.edpb.europa.eu/sme/be-compliant/secure-personal-data_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Unique user IDs, no shared accounts, least privilege, review authorisations regularly (for example every six months), strong authentication, encryption, backups, data protection by design. No date shown."
+  },
+  {
+    "n": 27,
+    "title": "Protecting Personal Information: A Guide for Business",
+    "publisher": "US Federal Trade Commission",
+    "url": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five principles: take stock, scale down, lock it, pitch it, plan ahead; dated October 2016."
+  },
+  {
+    "n": 28,
+    "title": "Data (Use and Access) Act factsheet: UK GDPR and DPA",
+    "publisher": "GOV.UK (DSIT and DCMS)",
+    "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-uk-gdpr-and-dpa",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Recognised legitimate interests; new automated decision-making Articles 22A to 22D with safeguards; subject access searches reasonable and proportionate with a stop-the-clock pause; published 27 June 2025. ICO pages refused automated fetching (HTTP 403) on 6 November 2026."
+  },
+  {
+    "n": 29,
+    "title": "Data (Use and Access) Act 2025: plans for commencement",
+    "publisher": "GOV.UK (DSIT)",
+    "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Main Part 5 data protection changes (except section 103) commenced 5 February 2026; ICO functions transferred to the Information Commission on 30 September 2026; last updated 12 October 2026."
+  },
+  {
+    "n": 30,
+    "title": "Integration security guide",
+    "publisher": "Stripe Docs",
+    "url": "https://docs.stripe.com/security/guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Handling raw card data can mean meeting more than 300 PCI DSS controls; low-risk integrations send card data straight to Stripe; card type, last four digits and expiry can be stored. No date shown."
+  }
+]

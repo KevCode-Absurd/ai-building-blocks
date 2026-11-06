@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Traction: How Any Startup Can Achieve Explosive Customer Growth (Gabriel Weinberg and Justin Mares)",
+    "publisher": "Penguin Books (Portfolio Penguin)",
+    "url": "https://www.penguin.co.uk/books/289806/traction/9780241242537.html",
+    "checked": "2026-11-07",
+    "supports": "The book, its authors and UK paperback date (29 October 2015); its case for spending about half of effort on traction, the 19 channels and the testing framework (Bullseye) that the Traction mega pack applies"
+  },
+  {
+    "n": 2,
+    "title": "Hacking Growth: How Today's Fastest-Growing Companies Drive Breakout Success (Morgan Brown and Sean Ellis)",
+    "publisher": "Penguin Books Australia (Penguin Random House)",
+    "url": "https://www.penguin.com.au/books/hacking-growth-9780753545386",
+    "checked": "2026-11-07",
+    "supports": "The book and its April 2017 date; its focus on acquiring, retaining, engaging and monetising customers through cross-functional teams and continuous testing"
+  },
+  {
+    "n": 3,
+    "title": "Four Fits for $100M+ Growth (Brian Balfour)",
+    "publisher": "brianbalfour.com (author's own site)",
+    "url": "https://brianbalfour.com/four-fits-growth-framework",
+    "checked": "2026-11-07",
+    "supports": "Market-product, product-channel, channel-model and model-market fit; products are built to fit channels; the fits change and must be revisited"
+  },
+  {
+    "n": 4,
+    "title": "The Law of Shitty Clickthroughs (Andrew Chen)",
+    "publisher": "andrewchen.com (author's own site)",
+    "url": "https://andrewchen.com/the-law-of-shitty-clickthroughs/",
+    "checked": "2026-11-07",
+    "supports": "Channels decay as they are copied and scaled; banner click-through fell from about 78% (HotWired, 1994) to about 0.05% (Facebook, 2011); small early tests overstate results at scale"
+  },
+  {
+    "n": 5,
+    "title": "The Lean Startup: Methodology (Eric Ries)",
+    "publisher": "theleanstartup.com",
+    "url": "https://theleanstartup.com/principles",
+    "checked": "2026-11-07",
+    "supports": "Build-measure-learn, minimum viable product, validated learning, innovation accounting and pivot or persevere"
+  },
+  {
+    "n": 6,
+    "title": "Startup Metrics for Pirates (Dave McClure, slide deck)",
+    "publisher": "SlideShare (uploaded by Dave McClure)",
+    "url": "https://www.slideshare.net/dmc500hats/startup-metrics-for-pirates-long-version",
+    "checked": "2026-11-07",
+    "supports": "The AARRR stages: acquisition, activation, retention, referral and revenue"
+  },
+  {
+    "n": 7,
+    "title": "How Superhuman Built an Engine to Find Product/Market Fit (Rahul Vohra, 12 November 2018)",
+    "publisher": "First Round Review",
+    "url": "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/",
+    "checked": "2026-11-07",
+    "supports": "Sean Ellis's 'very disappointed' question and 40% benchmark from nearly 100 startups; Superhuman's four questions; score moving from 22% to 33% after segmenting and to 58% within three quarters; half the roadmap on what fans love, half on what holds others back"
+  },
+  {
+    "n": 8,
+    "title": "Do Things that Don't Scale (Paul Graham, July 2013)",
+    "publisher": "paulgraham.com (author's own site)",
+    "url": "https://paulgraham.com/ds.html",
+    "checked": "2026-11-07",
+    "supports": "Recruiting early users by hand; Stripe's 'Collison installation'; Airbnb's founders going door to door in New York; Wufoo's handwritten thank-you notes; narrow starting markets"
+  },
+  {
+    "n": 9,
+    "title": "The Mom Test (Rob Fitzpatrick)",
+    "publisher": "momtestbook.com (the book's own site)",
+    "url": "https://www.momtestbook.com/",
+    "checked": "2026-11-07",
+    "supports": "The book and its aim: learning from customer conversations without biased feedback, and judging whether someone will really buy"
+  },
+  {
+    "n": 10,
+    "title": "SaaS Metrics 2.0: A Guide to Measuring and Improving What Matters (David Skok)",
+    "publisher": "For Entrepreneurs (forentrepreneurs.com)",
+    "url": "https://www.forentrepreneurs.com/saas-metrics-2/",
+    "checked": "2026-11-07",
+    "supports": "Guideline to recover CAC within 12 months (best 5 to 7); LTV to CAC above 3; net revenue churn above 2% a month loses about 22% of revenue a year; negative churn; cohort analysis by join month; the author calls these guidelines, not hard rules"
+  },
+  {
+    "n": 11,
+    "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing (Ron Kohavi, Diane Tang, Ya Xu)",
+    "publisher": "Cambridge University Press, 2020 (book site)",
+    "url": "https://experimentguide.com/",
+    "checked": "2026-11-07",
+    "supports": "The standard practical guide to A/B testing, including the overall evaluation criterion (OEC)"
+  },
+  {
+    "n": 12,
+    "title": "The Surprising Power of Online Experiments (Ron Kohavi and Stefan Thomke)",
+    "publisher": "Harvard Business Review, September-October 2017",
+    "url": "https://hbr.org/2017/09/the-surprising-power-of-online-experiments",
+    "checked": "2026-11-07",
+    "supports": "Bing's 2012 ad headline idea sat unprioritised for over six months; an A/B test showed a 12% revenue increase, estimated at over $100 million a year in the US"
+  },
+  {
+    "n": 13,
+    "title": "How Not To Run an A/B Test (Evan Miller, 18 April 2010)",
+    "publisher": "evanmiller.org (author's own site)",
+    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
+    "checked": "2026-11-07",
+    "supports": "Peeking and stopping early inflates false positives (26.1% in his worked example against a nominal 5%); fix sample size in advance; rule of thumb n = 16 x p(1 - p) / delta squared"
+  },
+  {
+    "n": 14,
+    "title": "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments: A Taxonomy and Rules of Thumb for Practitioners (Aleksander Fabijan et al., KDD 2019)",
+    "publisher": "Microsoft Research",
+    "url": "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/",
+    "checked": "2026-11-07",
+    "supports": "What a sample ratio mismatch is, that it signals data quality problems, and that ignoring it can make a harmful change look like a win; based on experiments at four companies"
+  },
+  {
+    "n": 15,
+    "title": "Retention (Mixpanel Docs)",
+    "publisher": "Mixpanel",
+    "url": "https://docs.mixpanel.com/docs/reports/retention",
+    "checked": "2026-11-07",
+    "supports": "How retention reports work: starting event and return event, 'on or after' versus 'on' retention, day, week and month buckets, rolling versus calendar mode, and picking a return event that reflects real value"
+  },
+  {
+    "n": 16,
+    "title": "Conversions vs. key events in Google Analytics",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/13965727",
+    "checked": "2026-11-07",
+    "supports": "Key events are the events that matter to the business; a Google Ads conversion is created from a key event and shared between the two products; from 15 June 2026 Consent Mode (within Google Ads) replaced Google Signals as the single control for whether the Analytics tag collects Google Ads cookies and IDs"
+  },
+  {
+    "n": 17,
+    "title": "Get started with attribution (Google Analytics)",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "checked": "2026-11-07",
+    "supports": "GA4 offers three models (data-driven attribution, paid and organic last click, Google paid channels last click); first click, linear, time decay and position-based were removed in November 2023; direct visits are excluded unless the whole path is direct; settings sit under Admin > Data display"
+  },
+  {
+    "n": 18,
+    "title": "URL builders: Collect campaign data with custom URLs",
+    "publisher": "Google Analytics Help",
+    "url": "https://support.google.com/analytics/answer/10917952",
+    "checked": "2026-11-07",
+    "supports": "UTM parameters (utm_source, utm_medium, utm_campaign, utm_id, utm_term, utm_content, utm_source_platform); always set source, medium and campaign; values are case sensitive; use lowercase; Campaign URL Builder"
+  },
+  {
+    "n": 19,
+    "title": "Consent mode overview",
+    "publisher": "Google for Developers (Tag Platform)",
+    "url": "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+    "checked": "2026-11-07",
+    "supports": "The four consent types (ad_storage, analytics_storage, ad_user_data, ad_personalization); basic mode blocks tags until consent; advanced mode sends cookieless pings while consent is denied and supports more detailed modelling"
+  },
+  {
+    "n": 20,
+    "title": "EU user consent policy",
+    "publisher": "Google",
+    "url": "https://www.google.com/about/company/user-consent-policy/",
+    "checked": "2026-11-07",
+    "supports": "Covers end users in the EEA, the UK and Switzerland; sites using Google products must obtain legally valid consent for cookies where legally required and for personal data used for ad personalisation, keep records and explain how to withdraw"
+  },
+  {
+    "n": 21,
+    "title": "Update on plans for Privacy Sandbox technologies (Anthony Chavez, 17 October 2025)",
+    "publisher": "Google Privacy Sandbox blog",
+    "url": "https://privacysandbox.google.com/blog/update-on-plans-for-privacy-sandbox-technologies",
+    "checked": "2026-11-07",
+    "supports": "Chrome keeps its current approach of offering users a choice on third-party cookies; the Attribution Reporting API, Topics and Protected Audience are retired; an interoperable attribution standard continues at the W3C"
+  },
+  {
+    "n": 22,
+    "title": "Unlawful cookies: a new avenue for the ICO to issue fines (12 February 2026)",
+    "publisher": "Mishcon de Reya (law firm summary)",
+    "url": "https://www.mishcon.com/news/unlawful-cookies-a-new-avenue-for-the-ico-to-issue-fines",
+    "checked": "2026-11-07",
+    "supports": "Law-firm summary, used because the ICO site blocks automated fetches: Data (Use and Access) Act 2025 cookie changes in force 5 February 2026; some analytics can fall under the new conditions; maximum PECR fine raised to GBP 17.5 million or 4% of global turnover"
+  },
+  {
+    "n": 23,
+    "title": "Data protection and online privacy (cookies section)",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
+    "checked": "2026-11-07",
+    "supports": "In the EU, sites must get consent before installing cookies, except those needed only to transmit a communication or strictly necessary for a service the user asked for; page last checked 5 August 2026"
+  },
+  {
+    "n": 24,
+    "title": "California Consumer Privacy Act (CCPA)",
+    "publisher": "State of California, Department of Justice, Office of the Attorney General",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "checked": "2026-11-07",
+    "supports": "Right to opt out of sale or sharing for cross-context behavioural advertising; 'Do Not Sell or Share' link; Global Privacy Control must be honoured as an opt-out; applies to for-profit businesses that meet set thresholds; page updated 28 August 2026"
+  },
+  {
+    "n": 25,
+    "title": "A Comparison of Approaches to Advertising Measurement: Evidence from Big Field Experiments at Facebook (Gordon, Zettelmeyer, Chapsky, Bhargave; Marketing Science, 2019)",
+    "publisher": "Kellogg School of Management, Northwestern University",
+    "url": "https://www.kellogg.northwestern.edu/academics-research/research/detail/2019/a-comparison-of-approaches-to-advertising-measurement-evidence-from/",
+    "checked": "2026-11-07",
+    "supports": "15 US advertising experiments at Facebook (about 500 million user-experiment observations); common observational methods often failed to recover the effects that the randomised experiments measured"
+  },
+  {
+    "n": 26,
+    "title": "Consumer Heterogeneity and Paid Search Effectiveness: A Large Scale Field Experiment (Blake, Nosko, Tadelis; NBER Working Paper 20171, 2014; Econometrica 2015)",
+    "publisher": "National Bureau of Economic Research",
+    "url": "https://www.nber.org/papers/w20171",
+    "checked": "2026-11-07",
+    "supports": "eBay field experiments: brand-keyword ads showed no measurable short-term benefit; non-brand ads helped new and infrequent users, but frequent users took most of the spend, so average returns were negative; non-experimental estimates overstated returns"
+  },
+  {
+    "n": 27,
+    "title": "Meridian (open-source marketing mix model)",
+    "publisher": "Google for Developers",
+    "url": "https://developers.google.com/meridian",
+    "checked": "2026-11-07",
+    "supports": "Google's open-source MMM; geo experiments (Meridian GeoX) used as priors to calibrate it; reach and frequency modelling; search query volume to control for organic demand"
+  },
+  {
+    "n": 28,
+    "title": "Robyn (open-source marketing mix modelling package)",
+    "publisher": "Meta Marketing Science on GitHub",
+    "url": "https://github.com/facebookexperimental/Robyn",
+    "checked": "2026-11-07",
+    "supports": "Meta's experimental, semi-automated, open-source MMM in R (Python API in beta), using ridge regression and budget optimisation"
+  },
+  {
+    "n": 29,
+    "title": "The next chapter for 'The Long and The Short of It' (Alison Hoad, 13 September 2023, updated 14 May 2025)",
+    "publisher": "IPA (Institute of Practitioners in Advertising)",
+    "url": "https://ipa.co.uk/knowledge/ipa-blog/the-next-chapter-for-the-long-and-the-short-of-it/",
+    "checked": "2026-11-07",
+    "supports": "Les Binet and Peter Field's 2013 report found an optimum budget split of about 60:40 brand building to sales activation (62:38 in the 2018 follow-up); warning about over-reliance on short-term metrics; data predates COVID"
+  }
+]

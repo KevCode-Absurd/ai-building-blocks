@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Recommended upload encoding settings",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/1722171",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). MP4 with no edit lists and the moov atom at the front; H.264 High Profile, progressive, 4:2:0; AAC-LC, Opus or Eclipsa Audio at 48 kHz; encode at the recorded frame rate (24, 25, 30, 48, 50, 60 fps common); deinterlace first; SDR 1080p at 8 Mbps (24-30 fps) or 12 Mbps (48-60 fps); 4K at 35-45 or 53-68 Mbps; stereo audio 384 kbps."
+  },
+  {
+    "n": 2,
+    "title": "Upload YouTube Shorts",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/12779649",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shorts may be up to 3 minutes long with a square or vertical aspect ratio; copyright-protected material can bring a Content ID claim, and a valid takedown can bring removal and a strike."
+  },
+  {
+    "n": 3,
+    "title": "Understand three-minute YouTube Shorts",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/15424877",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Square or vertical videos up to 3 minutes uploaded on or after 15 Oct 2024 are Shorts (8 Dec 2025 for Official Artist Channels); 16:9 stays long-form; Shorts over 1 minute with an active copyright claim are blocked globally without a channel penalty; most Shorts Audio Library songs can be used for up to 90 seconds, some only 60 or 30."
+  },
+  {
+    "n": 4,
+    "title": "Video chapters",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/9884579",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Manual chapters: the first timestamp is 00:00, at least three timestamps in ascending order, each chapter at least 10 seconds; manual chapters override automatic ones; chapters are unavailable with active strikes or content that may be inappropriate for some viewers."
+  },
+  {
+    "n": 5,
+    "title": "Supported subtitle and closed caption files",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/2734698",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Lists accepted caption formats (SubRip .srt, SubViewer, WebVTT, TTML, SCC and others); shows an SRT example with numbered blocks and comma before milliseconds (00:00:00,599 --> 00:00:04,160); basic files must be plain UTF-8 with no styling; WebVTT supports positioning and only b, i and u styling."
+  },
+  {
+    "n": 6,
+    "title": "Learn about copyright claims",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/6013276",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A Content ID claim is an automatic match; owners can block, monetise or track; claims usually affect the video, not the channel, while strikes come from valid removal requests; options to leave it, mute the song, trim, replace with Audio Library music, share revenue or dispute only with the necessary rights; claimed 1-3 minute Shorts are blocked."
+  },
+  {
+    "n": 7,
+    "title": "Use music and sound effects from the Audio Library",
+    "publisher": "YouTube Help",
+    "url": "https://support.google.com/youtube/answer/3376882",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Audio Library music and sound effects are copyright-safe on YouTube and not claimed through Content ID; YouTube is not responsible for royalty-free music from elsewhere; Creative Commons tracks need credit in the description; the page does not cover use outside YouTube."
+  },
+  {
+    "n": 8,
+    "title": "Instagram Reels video ad specs (Meta Ads Guide)",
+    "publisher": "Meta",
+    "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 9:16 at 1440 x 2560; MP4 or MOV up to 4 GB; 0 seconds to 15 minutes; H.264, square pixels, progressive, fixed frame rate; stereo AAC at 128 kbps or more; keep 14% top, 35% bottom and 6% each side free of text and logos; captions optional but recommended."
+  },
+  {
+    "n": 9,
+    "title": "IG User Media (Instagram Graph API reference)",
+    "publisher": "Meta for Developers",
+    "url": "https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (examples use v27.0). Reels published through the API: MOV or MP4 with the moov atom at the front; HEVC or H.264, progressive, closed GOP, 4:2:0; 23 to 60 fps; up to 1920 px wide; 9:16 recommended; up to 25 Mbps; AAC up to 48 kHz at 128 kbps; 3 seconds to 15 minutes; up to 300 MB."
+  },
+  {
+    "n": 10,
+    "title": "Music Guidelines",
+    "publisher": "Meta (Facebook)",
+    "url": "https://www.facebook.com/legal/music_guidelines",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (effective 26 Mar 2024). Users are responsible for music in what they post; commercial or non-personal use of music needs the right licences; music listening experiences are not allowed; unauthorised music may be blocked, muted or removed."
+  },
+  {
+    "n": 11,
+    "title": "Adobe Premiere features",
+    "publisher": "Adobe",
+    "url": "https://www.adobe.com/products/premiere/features.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no feature dates; update link to version 25.00). Text-Based Editing transcribes on import and builds rough cuts from text; Speech to Text captions in 18 languages with speaker identification; Auto Reframe; Media Intelligence search; Generative Extend with Adobe Firefly; Enhance Speech; social export with captions and Content Credentials; Frame.io review; Team Projects. Note: helpx.adobe.com returned 403 to WebFetch."
+  },
+  {
+    "n": 12,
+    "title": "Premiere Pro UXP API",
+    "publisher": "Adobe Developer",
+    "url": "https://developer.adobe.com/premiere-pro/uxp/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date). UXP plugins in Premiere can work with sequences, tracks, clips, markers, project items and application settings through Premiere's DOM API; no MCP server mentioned."
+  },
+  {
+    "n": 13,
+    "title": "DaVinci Resolve: What's New",
+    "publisher": "Blackmagic Design",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Describes DaVinci Resolve 21 (no release date shown); IntelliScript accepts Final Draft and plain-text scripts and compares them with transcribed audio to build a scene cut; free version and paid Studio version offered."
+  },
+  {
+    "n": 14,
+    "title": "DaVinci Resolve: Edit",
+    "publisher": "Blackmagic Design",
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Cut page for fast syncing and multicam; Edit page multicam, trimming and three-point editing; transcribe clips for subtitles or text-based editing; subtitle import TTML, SRT, XML and MXF/IMF; export TTML, SRT, VTT or burned in; Quick Export to YouTube, Vimeo and Dropbox; Studio-only features listed (for example people bins, Speed Warp, noise reduction, remote scripting API)."
+  },
+  {
+    "n": 15,
+    "title": "How Do I Export a Premiere Pro Project to CapCut?",
+    "publisher": "CapCut Help Center",
+    "url": "https://www.capcut.com/help/how-to-export-pro-project",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 21 Jan 2026). CapCut does not support importing or exporting project files from third-party editors including Premiere Pro; workarounds are rendering a video file to import or rebuilding the timeline by hand."
+  },
+  {
+    "n": 16,
+    "title": "How Do I Export a Part or Clip of a Video in CapCut?",
+    "publisher": "CapCut Help Center",
+    "url": "https://www.capcut.com/help/export-clip-of-video",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (dated 21 Jan 2026). Set In and Out points with I and O (or Shift+X) and export only the marked section."
+  },
+  {
+    "n": 17,
+    "title": "Free AI Caption Generator (CapCut Web)",
+    "publisher": "CapCut",
+    "url": "https://www.capcut.com/tools/ai-caption-generator",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date). Auto captions in 20+ languages, chosen before generating; fonts, colours, position and animation editable; you can upload your own SRT file; the page says the feature is free and captions can be used in commercial projects. It does not say captions can be exported as SRT. Note: capcut.com/legal/terms-of-service returned HTTP 451 to WebFetch."
+  },
+  {
+    "n": 18,
+    "title": "Descript MCP: Edit Video From Claude or ChatGPT",
+    "publisher": "Descript",
+    "url": "https://www.descript.com/mcp",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. With a Descript account, an AI assistant can import media by file URL or upload (not YouTube links), run Underlord edits such as captions, filler-word and retake removal, reframing and translation, publish a share link, export transcripts (TXT, Markdown, HTML, RTF, SRT) and timelines (EDL, AAF, SESX, FCPXML, Premiere XML, DaVinci Resolve XML); it cannot hand over an MP4 on request; AI edits use plan credits."
+  },
+  {
+    "n": 19,
+    "title": "Understanding Success Criterion 1.2.2: Captions (Prerecorded)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page updated 10 Aug 2026). Level A: captions for prerecorded audio in synchronised media; captions identify speakers and include non-speech sound needed to understand the content; open captions cannot be turned off, closed captions can."
+  },
+  {
+    "n": 20,
+    "title": "WebVTT: The Web Video Text Tracks Format",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/webvtt1/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Candidate Recommendation Draft, 20 May 2026). Files start with WEBVTT; timestamps use hh:mm:ss.ttt with a full stop before thousandths; cue settings include position, line and align; files must be UTF-8 and served as text/vtt."
+  },
+  {
+    "n": 21,
+    "title": "Captioning Key: Presentation Rate",
+    "publisher": "Described and Captioned Media Program (DCMP)",
+    "url": "https://dcmp.org/learn/601",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date). Optimal maximum caption rates of 130, 140 and 160 words per minute for lower, middle and upper educational levels; edited captions must keep the original meaning; captions stay verbatim for quotes, famous speakers, published works and lyrics."
+  },
+  {
+    "n": 22,
+    "title": "English (USA) Timed Text Style Guide",
+    "publisher": "Netflix Partner Help Center",
+    "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (latest change log entry 19 Dec 2025). 42 characters per line; two lines at most; up to 20 characters per second for adult programmes and 17 for children's; line-break rules (break after punctuation, before conjunctions and prepositions, keep name pairs together); a hyphen marks each speaker in a two-speaker subtitle."
+  },
+  {
+    "n": 23,
+    "title": "What Musicians Should Know about Copyright",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/engage/musicians/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A recording can contain two works, the musical work (composition and lyrics) and the sound recording, which follow different rules and are commonly owned and licensed separately."
+  },
+  {
+    "n": 24,
+    "title": "U.S. Copyright Office Fair Use Index",
+    "publisher": "U.S. Copyright Office",
+    "url": "https://www.copyright.gov/fair-use/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (index last updated Nov 2026). The four fair use factors; no formula or set amount of a work that can be used without permission; a small amount can still be unfair if it takes the heart of a work."
+  },
+  {
+    "n": 25,
+    "title": "About CC Licenses",
+    "publisher": "Creative Commons",
+    "url": "https://creativecommons.org/share-your-work/cclicenses/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. All six licences require attribution (BY); NC allows only non-commercial use; ND allows no adaptations; SA requires adaptations to use the same terms."
+  },
+  {
+    "n": 26,
+    "title": "How copyright protects your work",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/copyright",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). UK copyright is automatic with no register; covers musical works, sound recordings, film and broadcasts; stops copying, adapting, showing in public or putting work online without permission."
+  },
+  {
+    "n": 27,
+    "title": "Copyright in the EU",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/running-business/intellectual-property/copyright/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page last checked 12 Oct 2026). EU copyright is automatic and lasts 70 years after the author's death; licences can be exclusive or non-exclusive and limited by time, territory and use; Creative Commons offers public licences."
+  },
+  {
+    "n": 28,
+    "title": "Section Seven: Fairness (Ofcom Broadcasting Code)",
+    "publisher": "Ofcom",
+    "url": "https://www.ofcom.org.uk/tv-radio-and-on-demand/broadcast-codes/broadcast-code/section-seven-fairness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (published 29 Apr 2021, updated 16 Mar 2023). Rule 7.6: when a programme is edited, contributions should be represented fairly; rule 7.8: re-used material should not create unfairness. Binds UK broadcasters; used here as a standard of practice."
+  },
+  {
+    "n": 29,
+    "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+    "publisher": "U.S. Department of Justice, ADA.gov",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (page dated 8 Apr 2024; describes an interim final rule of 20 Apr 2026 extending dates). State and local governments and their contractors must meet WCAG 2.1 AA, which includes captions for video; compliance by 26 Apr 2027 (populations of 50,000 or more) or 26 Apr 2028 (smaller and special districts); archived video exception."
+  },
+  {
+    "n": 30,
+    "title": "Directive (EU) 2019/882 on accessibility requirements for products and services (European Accessibility Act)",
+    "publisher": "EUR-Lex (Official Journal of the European Union)",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Member States apply the measures from 28 June 2025 (Article 31(2)); microenterprises providing services (fewer than 10 staff and turnover or balance sheet up to EUR 2 million) are exempt from the service requirements (Article 4(5)); Article 2(2) covers services providing access to audiovisual media services and e-commerce services."
+  }
+]

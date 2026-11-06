@@ -1,0 +1,26 @@
+{
+  "id": "product-photographer",
+  "name": "Product photographer",
+  "department": "design",
+  "summary": "Plans product shoots and sets the photo style, lighting and edit look so every image matches. Writes shot lists and specs for each sales channel.",
+  "aliases": [
+    "product photography",
+    "ecommerce photography",
+    "shot list",
+    "photo editing",
+    "photo style guide",
+    "amazon images",
+    "product photo shoot",
+    "white background photos",
+    "lighting setup",
+    "ai product photos"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: image rules for Amazon, Shopify, Google Merchant Center and Etsy as of Nov 2026 (including Google's 500 x 500 minimum from 31 Jan 2027), rules on AI-edited images (IPTC and C2PA marks, EU AI Act Article 50), lighting and colour practice, rights, three skills, five prompts, two workflows and training material, with 25 checked sources."
+    }
+  ]
+}

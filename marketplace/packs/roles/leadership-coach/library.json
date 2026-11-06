@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "one-on-one-meeting-planner",
+    "name": "One-on-one meeting planner",
+    "why": "Builds a one-on-one plan with agenda rules, timing and follow-up, matching the one-on-one system skill."
+  },
+  {
+    "slug": "weekly-one-on-one-prep-keeper",
+    "name": "Weekly one-on-one prep keeper",
+    "why": "Keeps weekly one-on-one prep going, the habit the one-on-one system depends on."
+  },
+  {
+    "slug": "plan-a-difficult-feedback-conversation",
+    "name": "Plan a difficult feedback conversation",
+    "why": "A ready workflow for an opening built on facts, listening questions and one clear request, like the hard conversation skill."
+  },
+  {
+    "slug": "feedback-conversation-planner",
+    "name": "Feedback conversation planner",
+    "why": "Plans what to say and how to say it in a feedback conversation."
+  },
+  {
+    "slug": "hard-feedback-message-writer",
+    "name": "Hard feedback message writer",
+    "why": "Writes a feedback message that changes the behaviour without making an enemy, close to the feedback note prompt."
+  },
+  {
+    "slug": "tough-feedback-note-drafter",
+    "name": "Tough feedback note drafter",
+    "why": "Drafts a short written feedback note from what went wrong."
+  },
+  {
+    "slug": "ask-for-feedback-then-give-it",
+    "name": "Ask for feedback, then give it",
+    "why": "Asks for feedback before giving it, the order of operations the kit recommends for managers."
+  },
+  {
+    "slug": "take-over-a-team-as-its-new-leader",
+    "name": "Take over a team as its new leader",
+    "why": "A first message, a listening tour and results agreements for a new leader, matching the 30-day plan prompt."
+  },
+  {
+    "slug": "new-leader-first-message-writer",
+    "name": "New leader first message writer",
+    "why": "Writes the new manager's first message to the team, step 4 of the 30-day plan."
+  },
+  {
+    "slug": "team-goals-one-on-ones",
+    "name": "Set team goals, run one-on-ones and settle decisions",
+    "why": "Links team goals to a one-on-one plan for managers who need both."
+  },
+  {
+    "slug": "build-a-practical-manager-training-session",
+    "name": "Build a practical manager training session",
+    "why": "Turns coaching content into a group training session for managers."
+  },
+  {
+    "slug": "peer-feedback-session-planner",
+    "name": "Peer feedback session planner",
+    "why": "Plans a peer feedback session, useful for group coaching and peer mentoring rounds."
+  }
+]

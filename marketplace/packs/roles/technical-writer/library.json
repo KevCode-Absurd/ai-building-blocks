@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "write-docs-a-new-developer-can-follow-on-day-one",
+    "name": "Write docs a new developer can follow on day one",
+    "why": "Reads a codebase and produces a README, quickstart and first-run test, the same path as the readme-and-setup-guide skill."
+  },
+  {
+    "slug": "monthly-developer-docs-keeper",
+    "name": "Monthly developer docs keeper",
+    "why": "Finds stale pages and broken steps after changes each month, the upkeep half of the docs-as-code release cycle."
+  },
+  {
+    "slug": "monthly-help-centre-keeper",
+    "name": "Monthly help centre keeper",
+    "why": "Runs the monthly ticket-to-article loop: questions the help pages miss, new drafts and stale pages fixed."
+  },
+  {
+    "slug": "help-article-from-ticket-writer",
+    "name": "Help article writer from support tickets",
+    "why": "Turns a group of tickets about one problem into a short article titled in the customer's words."
+  },
+  {
+    "slug": "faq-page-from-questions-writer",
+    "name": "FAQ page writer from customer questions",
+    "why": "Builds an FAQ page from real customer questions and approved answers, grouped by topic."
+  },
+  {
+    "slug": "plain-english-editor",
+    "name": "Plain English editor",
+    "why": "Rewrites a draft in plain words with each cut explained, a quick pass before any page ships."
+  },
+  {
+    "slug": "check-a-release-and-its-docs",
+    "name": "Check a release and its docs",
+    "why": "Finds test gaps and stale docs before a release, matching steps 2 to 7 of the release cycle workflow."
+  },
+  {
+    "slug": "turn-a-spec-into-a-tested-service-with-api-docs",
+    "name": "Turn a spec into a tested service with API docs",
+    "why": "Goes from a written spec to a service, API tests and an API spec; the API reference skill then documents it."
+  },
+  {
+    "slug": "make-onboarding-instructions-match-the-product",
+    "name": "Make onboarding instructions match the product",
+    "why": "Corrects first-use instructions and labels against the real product, the test-as-a-new-user check in this kit."
+  },
+  {
+    "slug": "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+    "name": "Set up a documentation system and write procedures that pass",
+    "why": "Sets up a documentation system with procedures and runbooks for internal teams, with a check of each."
+  },
+  {
+    "slug": "product-how-to-guide-writer",
+    "name": "Product how-to guide writer",
+    "why": "Writes numbered how-to routines from product facts and buyer problems, useful for product pages next to the manual."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Gives a go or no-go, version and changelog before each release; pair it with the release notes prompt."
+  }
+]

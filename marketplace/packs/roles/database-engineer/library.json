@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "agent-database-setup-planner",
+    "name": "Agent database setup planner",
+    "why": "Plans a schema map, migration steps, access rules and a staging test, the same order as the schema design skill."
+  },
+  {
+    "slug": "agent-database-migration-planner",
+    "name": "Agent database migration planner",
+    "why": "Plans a change that keeps existing data, with staging checks, release order and recovery steps, a companion to the production migration workflow."
+  },
+  {
+    "slug": "build-a-backup-recovery-rehearsal",
+    "name": "Build a backup recovery rehearsal",
+    "why": "Gives a restore test plan, checklist and evidence log, the paperwork side of the backup and restore drill."
+  },
+  {
+    "slug": "recovery-rehearsal-evidence-assistant",
+    "name": "Recovery rehearsal evidence assistant",
+    "why": "Checks restore test evidence against recovery targets and assigns owners to the gaps found in a drill."
+  },
+  {
+    "slug": "connect-code-to-supabase-builder-prompt",
+    "name": "Connect Code to Supabase coding prompt",
+    "why": "Connects an app to Supabase with scoped access, safe secrets and a read check, a safe first step before any schema work there."
+  },
+  {
+    "slug": "plan-oracle-to-postgres-with-proof",
+    "name": "Plan Oracle to Postgres with proof",
+    "why": "Scopes a move to PostgreSQL with baseline tests, for clients changing databases rather than tables."
+  },
+  {
+    "slug": "release-manager",
+    "name": "Release manager",
+    "why": "Gives a go or no-go, rollback plan and live check for a release that carries a migration."
+  },
+  {
+    "slug": "excel-table-join-reconciler",
+    "name": "Excel table join reconciler",
+    "why": "Reconciles two tables on their keys and shows unmatched and duplicate rows, the same fan-out checks a report query needs."
+  },
+  {
+    "slug": "database-schema-designer",
+    "name": "Database schema designer",
+    "why": "Drafts tables, links, indexes and rules from an app description, a quick first pass to check against the business rules."
+  },
+  {
+    "slug": "data-warehouse-query-reviewer",
+    "name": "Data warehouse query reviewer",
+    "why": "Reviews a business question or SQL for join and privacy errors with a read-only plan, close to the SQL skill's checks."
+  },
+  {
+    "slug": "database-backup-setter",
+    "name": "Database backup setter",
+    "why": "Sets up full, incremental and point-in-time backups, which the restore drill then proves."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "id": "hr-specialist",
+  "name": "HR specialist",
+  "department": "people",
+  "summary": "Sets up fair hiring, onboarding, policies, reviews and records for a small business, using plain templates and points to official guidance when the law decides.",
+  "aliases": [
+    "HR generalist",
+    "HR manager",
+    "people operations",
+    "people ops",
+    "human resources",
+    "HR consultant",
+    "recruiter",
+    "employee handbook writer",
+    "onboarding specialist"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 30 sources, four skills (structured hiring kit, onboarding plan, policy template, performance review), five prompts, two workflows, training interview and test briefs."
+    }
+  ]
+}

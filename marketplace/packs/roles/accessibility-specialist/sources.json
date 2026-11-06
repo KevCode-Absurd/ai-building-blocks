@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2, W3C Recommendation (dated version 12 December 2024)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current dated version 12 December 2024; four principles (known as POUR) and 13 guidelines; text contrast 4.5:1 (3:1 for large text); non-text contrast 3:1; reflow at a width equal to 320 CSS pixels; Focus Not Obscured (Minimum) at level AA."
+  },
+  {
+    "n": 2,
+    "title": "What's New in WCAG 2.2 (updated 5 October 2023)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG 2.2 became a Recommendation on 5 October 2023; nine new success criteria with numbers and levels (2.4.11, 2.4.12, 2.4.13, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8, 3.3.9); 4.1.1 Parsing removed as obsolete."
+  },
+  {
+    "n": 3,
+    "title": "Understanding Conformance (WCAG 2.2, updated 20 September 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/conformance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The five conformance requirements (level, full pages, complete processes, accessibility-supported ways, non-interference); testing mixes automated and human evaluation; conformance claims are optional and list date, scope, version, level and technologies relied on; partial conformance statements for third-party content."
+  },
+  {
+    "n": 4,
+    "title": "WCAG-EM Overview: Website Accessibility Conformance Evaluation Methodology (version 2 published 23 July 2026; page updated 12 August 2026)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WCAG-EM is a W3C Group Note; version 2 covers apps and other digital products; five steps (define scope including target level, explore, select a representative sample, evaluate, report); recommends involving users with disabilities; evaluation needs expertise in standards, assistive technologies and how disabled people use the web; adds no new WCAG requirements."
+  },
+  {
+    "n": 5,
+    "title": "Easy Checks: A First Review of Web Accessibility (updated 9 August 2023)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ten quick checks (page title, alt text, headings, contrast, resize text, keyboard and focus, forms, moving content, multimedia, basic structure); a page can seem to pass and still have significant barriers; judging alt text needs a person who sees the image in context; points to WCAG-EM for full evaluation."
+  },
+  {
+    "n": 6,
+    "title": "Web Accessibility Directive: Standards and harmonisation (last update 23 June 2026)",
+    "publisher": "European Commission, Shaping Europe's digital future",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/web-accessibility",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The Web Accessibility Directive covers public sector websites and apps; requirements tied to EN 301 549 (v3.2.1 cited); each site and app needs an accessibility statement listing non-accessible content, alternatives and contacts, plus a feedback mechanism; member states monitor and report every three years; the directive complements the European Accessibility Act."
+  },
+  {
+    "n": 7,
+    "title": "Developing an Accessibility Statement (updated 11 March 2021)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/planning/statements/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A statement should at least contain a commitment, the standard applied (such as WCAG 2.2) and contact details for problems; also advises known limitations, measures taken, technical prerequisites, test environments and references to laws; public bodies under the EU Web Accessibility Directive may be required to publish one."
+  },
+  {
+    "n": 8,
+    "title": "Read Me First (ARIA Authoring Practices Guide)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). No ARIA is better than bad ARIA; a role is a promise that needs matching keyboard behaviour; ARIA can cloak or enhance native semantics; examples carry no workarounds for browser and assistive technology gaps, so test with each combination before production; mobile and touch support is not standardised."
+  },
+  {
+    "n": 9,
+    "title": "An alt Decision Tree (Images Tutorial, updated 13 May 2024)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five questions in order: text in the image, image in a link or button, image adds meaning (simple or complex), purely decorative, unclear cases; outcomes decorative (empty alt), functional, image of text, informative and complex (information provided elsewhere on the page)."
+  },
+  {
+    "n": 10,
+    "title": "Making Audio and Video Media Accessible (updated 17 September 2024)",
+    "publisher": "W3C Web Accessibility Initiative",
+    "url": "https://www.w3.org/WAI/media/av/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Captions for speech and non-speech audio; transcripts, with descriptive transcripts needed for people who are Deaf and blind; audio description of visual information such as charts and on-screen text; sign language where the audience needs it."
+  },
+  {
+    "n": 11,
+    "title": "Making Content Usable for People with Cognitive and Learning Disabilities (W3C Working Group Note, 29 April 2021)",
+    "publisher": "W3C (Cognitive and Learning Disabilities Accessibility Task Force)",
+    "url": "https://www.w3.org/TR/coga-usable/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Supplements WCAG 2.2 and is not required for conformance; eight objectives (help users understand what things are, find what they need, use clear content, avoid mistakes, focus, not rely on memory, get help, adapt the content); stresses testing with people who have these disabilities."
+  },
+  {
+    "n": 12,
+    "title": "W3C Accessibility Guidelines (WCAG) 3.0, Working Draft (10 September 2026)",
+    "publisher": "W3C",
+    "url": "https://www.w3.org/TR/wcag-3.0/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Working Draft dated 10 September 2026; may be updated, replaced or obsoleted; still several years of work; does not deprecate WCAG 2; WCAG 2.2 content expected to meet most of its minimum level."
+  },
+  {
+    "n": 13,
+    "title": "PDF9: Providing headings by marking content with heading tags in PDF documents (updated 26 January 2026)",
+    "publisher": "W3C Web Accessibility Initiative (WCAG 2.2 Techniques)",
+    "url": "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Headings in tagged PDFs use H and H1 to H6 in the structure tree; check with a screen reader heading list, a PDF editor or a structure-tree tool; supports 1.3.1 Info and Relationships and 2.4.1 Bypass Blocks; techniques are examples, not requirements."
+  },
+  {
+    "n": 14,
+    "title": "The WebAIM Million: the 2026 report on the accessibility of the top 1,000,000 home pages (updated 30 March 2026)",
+    "publisher": "WebAIM",
+    "url": "https://webaim.org/projects/million/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. February 2026 data: 95.9% of home pages had detected WCAG failures, 56.1 detected errors per page on average; most common: low contrast text 83.9%, missing alt text 53.1%, missing form labels 51%, empty links 46.3%, empty buttons 30.6%, missing document language 13.5%; absence of detected errors does not mean a page is accessible or conformant."
+  },
+  {
+    "n": 15,
+    "title": "Screen Reader User Survey #10 Results (survey December 2023 to January 2024)",
+    "publisher": "WebAIM",
+    "url": "https://webaim.org/projects/screenreadersurvey10/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 1,539 valid responses; primary desktop screen reader JAWS 40.5%, NVDA 37.7%, VoiceOver 9.7%; mobile screen readers commonly used VoiceOver 70.6%, TalkBack 34.7%; top combinations JAWS with Chrome 24.7%, NVDA with Chrome 21.3%; 71.6% first navigate a long page by headings; uncontrolled sample that may not represent all users."
+  },
+  {
+    "n": 16,
+    "title": "axe-core README",
+    "publisher": "Deque Systems (GitHub)",
+    "url": "https://github.com/dequelabs/axe-core",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The vendor says axe-core finds on average 57% of WCAG issues automatically; rules for WCAG 2.0, 2.1 and 2.2 at A, AA and AAA plus best practices; aims for zero false positives; Mozilla Public License 2.0."
+  },
+  {
+    "n": 17,
+    "title": "Testing with assistive technologies (Service Manual, updated 24 May 2022)",
+    "publisher": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Combinations to test: JAWS with Chrome or Edge, NVDA with Chrome, Firefox or Edge, VoiceOver on iOS with Safari, TalkBack with Chrome, Windows Magnifier or Apple Zoom, Dragon with Chrome; if testing everything is not practical, use a desktop screen reader, a mobile screen reader, a magnifier and speech recognition; test throughout development; include assistive technology users in research."
+  },
+  {
+    "n": 18,
+    "title": "Understanding accessibility requirements for public sector bodies (updated 30 September 2024)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. UK public sector sites and apps must meet WCAG 2.2 AA and publish and review an accessibility statement; GDS monitors a sample each year; EHRC enforces in Great Britain and ECNI in Northern Ireland; all UK service providers must make reasonable adjustments under the Equality Act 2010 (Disability Discrimination Act 1995 in Northern Ireland); PDFs and documents published before 23 September 2018 exempt unless needed to use a service."
+  },
+  {
+    "n": 19,
+    "title": "Publishing accessible documents (updated 9 October 2025)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/guidance/publishing-accessible-documents",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. HTML is preferred; PDFs often work poorly with screen readers; PDF/A is for archiving, not accessibility; use real heading styles, alt text, simple data tables with headers, logical reading order, contrast, descriptive links, sentences of around 25 words or fewer, sans serif 12 point or larger; run the office suite's accessibility checker and an external PDF checker."
+  },
+  {
+    "n": 20,
+    "title": "Accessible communication formats (updated 17 June 2026)",
+    "publisher": "GOV.UK (Disability Unit)",
+    "url": "https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Easy Read is for people with learning disabilities, uses clear images to support simple text, should be developed with the audience and is often commissioned from expert organisations; large print is 16 point and above; about 7% of registered blind or partially sighted people use braille; audio and British Sign Language guidance."
+  },
+  {
+    "n": 21,
+    "title": "PDF/UA-1, PDF for Universal Accessibility (ISO 14289-1) format description (updated 9 June 2024)",
+    "publisher": "Library of Congress, Sustainability of Digital Formats",
+    "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000350.shtml",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. PDF/UA-1 published 2012, minor update 2014; real content tagged in a logical reading order; figures need alternative text; languages declared; fonts embedded; meaning not by colour or layout alone; described as consistent with WCAG 2.0; notes Section 508 requires WCAG 2.0 A and AA; lists ISO 14289-2:2024 (PDF/UA-2) as the later version."
+  },
+  {
+    "n": 22,
+    "title": "Guidance on Web Accessibility and the ADA (18 March 2022)",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/web-guidance/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title III covers web offerings of businesses open to the public; no regulation sets detailed technical standards for them; WCAG and Section 508 named as helpful; example barriers (contrast, colour alone, alt text, captions, form labels, keyboard); automated checkers and overlays should be used carefully and a clean report does not mean a site is accessible; banner on the separate 2024 Title II rule."
+  },
+  {
+    "n": 23,
+    "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+    "publisher": "US Department of Justice, Civil Rights Division (ADA.gov)",
+    "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Title II rule sets WCAG 2.1 AA, including content from contractors; Interim Final Rule of 20 April 2026 moved compliance to 26 April 2027 (50,000 people or more) and 26 April 2028 (smaller entities and special districts); exceptions for archived content, preexisting conventional electronic documents (lost if updated or used to apply for services), third-party posts, individualised secured documents and older social media posts; effective communication still required."
+  },
+  {
+    "n": 24,
+    "title": "Robles v. Domino's Pizza, LLC, No. 17-55504 (9th Cir., filed 15 January 2019), opinion",
+    "publisher": "US Court of Appeals for the Ninth Circuit",
+    "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2019/01/15/17-55504.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PDF text extracted locally. A blind man using screen-reading software could not order a customised pizza on Domino's website and app; the court held the ADA applied because the website and app connect customers to the goods and services of physical restaurants; an order to meet WCAG 2.0 was a possible remedy; a phone number added after the suit was not enough for summary judgment without evidence it worked; reversed and remanded."
+  },
+  {
+    "n": 25,
+    "title": "Docket No. 18-1539, Domino's Pizza, LLC v. Guillermo Robles",
+    "publisher": "Supreme Court of the United States",
+    "url": "https://www.supremecourt.gov/docket/docketfiles/html/public/18-1539.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Petition for certiorari from the Ninth Circuit docketed 13 June 2019; denied 7 October 2019."
+  },
+  {
+    "n": 26,
+    "title": "IT Accessibility Laws and Policies (reviewed October 2026)",
+    "publisher": "Section508.gov (US General Services Administration)",
+    "url": "https://www.section508.gov/manage/laws-and-policies/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Section 508 applies to federal agencies when they develop, procure, maintain or use information technology; the Access Board's revised standards were issued 18 January 2017 and took effect 18 January 2018, harmonised with WCAG 2.0; FAR rule published 11 August 2021."
+  },
+  {
+    "n": 27,
+    "title": "VPAT (Voluntary Product Accessibility Template)",
+    "publisher": "Information Technology Industry Council (ITI)",
+    "url": "https://www.itic.org/policy/accessibility/vpat",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Current version VPAT 2.5Rev (April 2025); editions for Section 508 (WCAG 2.0), EU EN 301 549 (WCAG 2.1), WCAG (2.2) and INT (all three, WCAG 2.2); a completed template becomes an Accessibility Conformance Report; there is no VPAT certification and ITI does not review or approve VPATs."
+  },
+  {
+    "n": 28,
+    "title": "European Accessibility Act",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no page date shown). The Act is a directive covering computers and operating systems, ATMs, ticketing and check-in machines, smartphones, TV equipment, telephony, audiovisual media services, passenger transport services, banking services, e-books and e-commerce; member states had to transpose it by June 2022; the Commission monitors transposition with an expert group; AccessibleEU supports application."
+  },
+  {
+    "n": 29,
+    "title": "Accessibility requirements for services and products (Your Europe, last checked 12 July 2026)",
+    "publisher": "European Union, Your Europe",
+    "url": "https://europa.eu/youreurope/business/selling-in-eu/selling-goods-services/accessibility/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Requirements apply to products and services placed on the market after 28 June 2025; exception for service businesses with fewer than 10 employees and under EUR 2 million turnover; disproportionate burden claims need evidence and are reviewed every 5 years; self-service terminals in use before 28 June 2025 exempt for up to 20 years; customer support tools and manuals must also be accessible; declaration of conformity for products."
+  },
+  {
+    "n": 30,
+    "title": "EN 301 549 V4.1.1 (2026-09): Accessibility requirements for ICT products and services (Harmonised European Standard)",
+    "publisher": "ETSI, CEN and CENELEC",
+    "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch; PDF text extracted locally. Version 4.1.1 dated September 2026; web, non-web document and software clauses (9, 10, 11) updated to align with WCAG 2.2; new Annex ZB and clause A.2 for the European Accessibility Act (Directive 2019/882); presumption of conformity once cited in the Official Journal; WCAG 2.2 AA equals clauses 9.1 to 9.4 plus 9.6. ETSI's deliverable folder also lists V3.2.1 (2021-03)."
+  }
+]

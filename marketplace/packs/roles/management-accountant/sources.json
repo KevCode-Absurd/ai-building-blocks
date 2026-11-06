@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Measure Costs Right: Make the Right Decisions (Robin Cooper and Robert S. Kaplan, September 1988)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/1988/09/measure-costs-right-make-the-right-decisions",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Managers in multi-product firms make pricing, product-mix and technology decisions on distorted cost data, and usually find out only after profits and competitiveness have fallen; the authors argue for more accurate product costing (the article that launched activity-based costing)."
+  },
+  {
+    "n": 2,
+    "title": "Time-Driven Activity-Based Costing (Robert S. Kaplan and Steven R. Anderson, November 2004)",
+    "publisher": "Harvard Business Review",
+    "url": "https://hbr.org/2004/11/time-driven-activity-based-costing",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Many large activity-based costing projects were abandoned because of cost and staff frustration; the revised approach relies on managers' estimates instead of employee time surveys and gives a more flexible cost model."
+  },
+  {
+    "n": 3,
+    "title": "GMAP 2.0: Revised guidance for a rapidly changing world (31 January 2024)",
+    "publisher": "FM magazine (AICPA & CIMA)",
+    "url": "https://www.fm-magazine.com/news/2024/jan/gmap-2-0-revised-guidance-for-a-rapidly-changing-world/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The second edition of the Global Management Accounting Principles (AICPA & CIMA, June 2023) has four principles: communication influences and creates impact; information is relevant; analysis generates sustainable value; stewardship builds trust."
+  },
+  {
+    "n": 4,
+    "title": "Principles of Accounting, Volume 2: Managerial Accounting, 3.1 Explain Contribution Margin (Franklin, Graybeal and Cooper, 2019)",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Contribution margin per unit is price minus variable cost per unit; total contribution margin is sales minus total variable costs; the contribution margin ratio is contribution per unit divided by price. Free textbook under CC BY-NC-SA 4.0."
+  },
+  {
+    "n": 5,
+    "title": "Principles of Accounting, Volume 2: Managerial Accounting, 4.6 Determine and Dispose of Underapplied or Overapplied Overhead",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-6-determine-and-dispose-of-underapplied-or-overapplied-overhead",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Overhead is applied to jobs with a predetermined rate (for example per direct labour hour); the gap between overhead actually incurred and overhead applied is under-applied (debit balance) or over-applied (credit balance) overhead."
+  },
+  {
+    "n": 6,
+    "title": "Principles of Accounting, Volume 2: Managerial Accounting, 7.4 Prepare Flexible Budgets",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-4-prepare-flexible-budgets",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. A flexible budget restates budgeted costs at the actual level of activity, with variable costs moving and fixed costs staying put; comparing actuals with a static budget can mislead when volume differs from plan."
+  },
+  {
+    "n": 7,
+    "title": "Principles of Accounting, Volume 2: Managerial Accounting, 8.3 Compute and Evaluate Labor Variances",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-3-compute-and-evaluate-labor-variances",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Labour rate variance = (actual rate - standard rate) x actual hours; labour time (efficiency) variance = (actual hours - standard hours for actual output) x standard rate; the two add to the total labour variance; favourable and unfavourable defined."
+  },
+  {
+    "n": 8,
+    "title": "Principles of Accounting, Volume 2: Managerial Accounting, 10.1 Identify Relevant Information for Decision-Making",
+    "publisher": "OpenStax, Rice University",
+    "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-1-identify-relevant-information-for-decision-making",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Relevant costs are future costs that differ between options; sunk costs are ignored; in the short run only avoidable costs matter; opportunity cost is the benefit given up by not choosing the other option."
+  },
+  {
+    "n": 9,
+    "title": "Fraud Risk Management Guide, Executive Summary (September 2016)",
+    "publisher": "COSO and ACFE",
+    "url": "https://www.coso.org/_files/ugd/3059fc_02c01fde6552479196535bcfee8ea60e.pdf",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (PDF text extracted). The 2013 COSO Internal Control framework has 17 principles under five components; principle 8 is considering the potential for fraud when assessing risks; smaller and owner-managed organisations without boards can adapt the guide."
+  },
+  {
+    "n": 10,
+    "title": "Occupational Fraud 2026: A Report to the Nations (press release, 12 May 2026)",
+    "publisher": "Association of Certified Fraud Examiners (ACFE)",
+    "url": "https://www.acfe.com/about-the-acfe/newsroom-for-media/press-releases/press-release-detail?s=occupational-fraud-2026-a-report-to-the-nations-pr",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. 2,402 cases in 143 countries; organisations estimated to lose 5% of revenue a year to fraud; median loss $104,000; median 12 months before detection; 43% detected by tips; smaller businesses had the highest median losses of any size group."
+  },
+  {
+    "n": 11,
+    "title": "IAS 2 Inventories",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Inventory cost includes purchase costs, conversion costs (direct labour and production overhead) and other costs to bring items to their present location and condition; measured at the lower of cost and net realisable value; FIFO or weighted average for interchangeable items, specific identification otherwise."
+  },
+  {
+    "n": 12,
+    "title": "IFRS 15 Revenue from Contracts with Customers",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Five-step model; revenue recognised over time (typically services) using a measure of progress, or at a point in time (typically goods); effective for periods from 1 January 2018; issued in May 2014 alongside FASB Topic 606."
+  },
+  {
+    "n": 13,
+    "title": "IFRS 18 Presentation and Disclosure in Financial Statements",
+    "publisher": "IFRS Foundation",
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Applies to annual periods beginning on or after 1 January 2027; new defined subtotals (operating profit; profit before financing and income taxes); disclosure of management-defined performance measures used in public communications."
+  },
+  {
+    "n": 14,
+    "title": "FRS 102 Explainer: a summary of the Periodic Review 2024 changes for financial statements users (30 June 2026)",
+    "publisher": "Financial Reporting Council (UK)",
+    "url": "https://www.frc.org.uk/docs/9461/html/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Most amendments apply to periods beginning on or after 1 January 2026; lessees bring most leases onto the balance sheet (short-term and low-value exemptions); rent expense falls while depreciation and interest rise; gearing, interest cover, current ratio and EBITDA may change; single five-step revenue model; comparatives not always restated."
+  },
+  {
+    "n": 15,
+    "title": "Summary: G702-1992, Application and Certificate for Payment",
+    "publisher": "AIA Contract Documents (American Institute of Architects)",
+    "url": "https://help.aiacontracts.com/hc/en-us/articles/1500009387461",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. G702 is the contractor's payment application and the architect's certificate; it shows contract sum to date, completed and stored work, previous payments, change orders, retainage and the current payment due; it is used with the G703 continuation sheet, which breaks the contract sum down by a contractor-prepared schedule of values."
+  },
+  {
+    "n": 16,
+    "title": "Commercial Payments Bill: overview (19 May 2026)",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/government/publications/commercial-payments-bill-factsheets/commercial-payments-bill-overview",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Bill introduced to Parliament in May 2026, not yet law; maximum payment terms of 60 days with limited exemptions; statutory interest at 8% above Bank of England base rate; deduction and withholding of retention payments under construction contracts to be prohibited, with timing subject to further consultation; lead-in and transition periods; not retrospective."
+  },
+  {
+    "n": 17,
+    "title": "Late payment (Your Europe, last checked 5 August 2026)",
+    "publisher": "European Union",
+    "url": "https://europa.eu/youreurope/business/finance-and-tax/making-receiving-payments/late-payment/index_en.htm",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. EU B2B and public-authority late payment rules: with no agreed term, interest runs from 30 days after the invoice is received; flat EUR 40 compensation per late invoice plus reasonable recovery costs; statutory rates for 1 July to 31 December 2026 vary by country (for example Germany 10.52%, France 12.40%)."
+  },
+  {
+    "n": 18,
+    "title": "Instructions for Form 990 (2025), Part IX Statement of Functional Expenses",
+    "publisher": "Internal Revenue Service (US)",
+    "url": "https://www.irs.gov/instructions/i990",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch (Part IX read at offset 330,000). Expenses split into program services, management and general, and fundraising; where the accounting system does not allocate, any reasonable method may be used and must be documented; example of allocating salary by share of time spent."
+  },
+  {
+    "n": 19,
+    "title": "Changes to charity accounting and reporting (published 31 October 2025)",
+    "publisher": "GOV.UK (Charity Commission)",
+    "url": "https://www.gov.uk/guidance/changes-to-charity-accounting-and-reporting",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The updated Charities SORP applies to reporting periods starting on or after 1 January 2026; three tiers by income (up to 500,000 pounds; 500,000 pounds to 15 million pounds; over 15 million pounds); new rules for income and leases; refreshed trustees' report guidance on reserves and plans."
+  },
+  {
+    "n": 20,
+    "title": "The Nonprofit Starvation Cycle (Ann Goggins Gregory and Don Howard, Fall 2009)",
+    "publisher": "Stanford Social Innovation Review",
+    "url": "https://ssir.org/articles/entry/the_nonprofit_starvation_cycle",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Funders' unrealistic overhead expectations lead nonprofits to underspend on and under-report infrastructure; four youth-serving nonprofits reported overhead of 13% to 22% while their actual rates were 17% to 35%."
+  },
+  {
+    "n": 21,
+    "title": "SPI Research publishes its 19th annual Professional Services Maturity Benchmark report (24 February 2026)",
+    "publisher": "SPI Research (press release via EIN Presswire)",
+    "url": "https://www.einpresswire.com/article/894826291/spi-research-publishes-its-19th-annual-professional-services-maturity-benchmark-report",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Survey of 509 professional services organisations (2025 data, over 245,000 employees); average billable utilisation 66.4%, the lowest in the study's 19 years; revenue growth 5.2%; headcount growth 2.8%. The full report is paid, so only press-release figures are used."
+  },
+  {
+    "n": 22,
+    "title": "Metric of the Month: Cycle Time for Monthly Close (Perry D. Wiggins, 5 March 2018)",
+    "publisher": "CFO.com (APQC data)",
+    "url": "https://www.cfo.com/news/metric-of-the-month-cycle-time-for-monthly-close/659297/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. APQC Open Standards Benchmarking, 2,300 organisations: median 6.4 calendar days from running the trial balance to completed consolidated statements; top 25% 4.8 days or less; bottom 25% 10 or more days."
+  },
+  {
+    "n": 23,
+    "title": "Profit reports",
+    "publisher": "Shopify Help Center",
+    "url": "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/profit-reports",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Profit is reported only for items with a cost recorded when sold; gross profit reports use cost per item; profit margin by order also counts shipping, duties and import taxes; the page does not mention payment or other fees."
+  },
+  {
+    "n": 24,
+    "title": "xero-mcp-server",
+    "publisher": "Xero (XeroAPI on GitHub)",
+    "url": "https://github.com/XeroAPI/xero-mcp-server",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Read tools for profit and loss, trial balance, balance sheet, aged receivables and payables, and tracking categories; write tools include creating and updating tracking categories; connections created from 29 April 2026 use granular (V2) scopes, with read-only report scopes listed."
+  },
+  {
+    "n": 25,
+    "title": "quickbooks-online-mcp-server",
+    "publisher": "Intuit (GitHub)",
+    "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. 145 tools over 29 entity types plus 11 reports (balance sheet, profit and loss, cash flow, trial balance, general ledger, aged receivables and payables and others); Class and Department supported; OAuth 2.0; write, update and delete tools can be switched off by settings; sandbox recommended for testing."
+  },
+  {
+    "n": 26,
+    "title": "Frequently asked questions about Agent Mode in Excel",
+    "publisher": "Microsoft Support",
+    "url": "https://support.microsoft.com/en-us/office/frequently-asked-questions-about-agent-mode-in-excel-1cfd906d-40b4-46be-8e2d-65b893e28a02",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Copilot in Excel has Edit (changes the workbook), Plan (proposes before editing) and Chat (no changes) modes; it can make mistakes and output must be reviewed; Microsoft advises avoiding it for decisions in sensitive areas such as finance; saved changes are visible to co-authors."
+  },
+  {
+    "n": 27,
+    "title": "The Institute of Cost Accountants of India",
+    "publisher": "ICMAI",
+    "url": "https://icmai.in/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. India's professional body for cost and management accountants. Listed as the source to check in India; no detail given in the kit."
+  },
+  {
+    "n": 28,
+    "title": "Financial Reporting & Assurance Standards Canada",
+    "publisher": "FRAS Canada",
+    "url": "https://www.frascanada.ca/en",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Umbrella for Canada's standard-setting boards; covers IFRS Accounting Standards, ASPE (private enterprises) and ASNPO (not-for-profits). Listed as a source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 29,
+    "title": "Keeping records (modified 30 June 2026)",
+    "publisher": "Canada Revenue Agency",
+    "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. Official Canadian page on which business records to keep, in what format and for how long. Listed as a source to check in Canada; no detail given in the kit."
+  },
+  {
+    "n": 30,
+    "title": "Australian Accounting Standards Board",
+    "publisher": "AASB (Australian Government)",
+    "url": "https://www.aasb.gov.au/",
+    "checked": "2026-11-07",
+    "supports": "Opened with WebFetch. The body that issues accounting and sustainability standards for Australian reporting entities. Listed as the source to check in Australia; no detail given in the kit."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "traction-affiliate-programs",
+    "name": "Affiliate experiment planner",
+    "why": "A small affiliate pilot with commission limits and stop rules, the test to run before the launch-a-partner-programme workflow."
+  },
+  {
+    "slug": "influencer-gifting-planner",
+    "name": "Influencer gifting planner",
+    "why": "Picks creators by fit and writes the box card with the disclosure line, matching the gifting step of the creator-shortlist-and-outreach skill."
+  },
+  {
+    "slug": "creator-gifting-brief",
+    "name": "Send creators a gift and a brief to film from",
+    "why": "A gifting plan, phone-video script and filming brief in one run, for brands that want creator content they can reuse."
+  },
+  {
+    "slug": "creator-pay-planner",
+    "name": "Creator pay planner",
+    "why": "Works out a flat fee or floor-plus-commission offer from real views, a companion to the commission-ceiling-check prompt."
+  },
+  {
+    "slug": "creator-filming-brief-writer",
+    "name": "Creator filming brief writer",
+    "why": "Turns an approved script into talking points and a shoot order, to attach to the creator-brief-and-disclosure skill's brief."
+  },
+  {
+    "slug": "creator-ad-roster-builder",
+    "name": "Creator ad roster builder",
+    "why": "Plans a roster of creators for ads with a gifting funnel and pay rule, for shops scaling creator content into paid ads."
+  },
+  {
+    "slug": "clipper-program-planner",
+    "name": "Clipper program planner",
+    "why": "A paid clipper programme that pays only for approved clips up to a cap, a capped-payout model to compare with affiliate commissions."
+  },
+  {
+    "slug": "turn-your-best-organic-posts-and-creator-videos-into-meta-ads",
+    "name": "Turn your best posts and creator videos into ads",
+    "why": "Ranks creator videos and turns the best into ad tests, once usage rights are agreed in writing."
+  },
+  {
+    "slug": "build-a-clear-sponsorship-decision-brief",
+    "name": "Build a clear sponsorship decision brief",
+    "why": "Decides whether a paid sponsorship or creator slot is worth it, with a capped pilot and a decision date."
+  },
+  {
+    "slug": "traction-viral-marketing",
+    "name": "Viral growth experiment planner",
+    "why": "A small invite or referral test with limits, a starting point for the refer-a-friend-scheme prompt."
+  }
+]

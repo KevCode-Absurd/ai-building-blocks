@@ -1,0 +1,26 @@
+{
+  "id": "crowdfunding-manager",
+  "name": "Crowdfunding campaign manager",
+  "department": "marketing",
+  "summary": "Plans a Kickstarter or Indiegogo campaign from the pre-launch list to the final push. Sets the goal, prices the rewards and writes the page and updates.",
+  "aliases": [
+    "kickstarter",
+    "indiegogo",
+    "crowdfunding",
+    "pre-launch",
+    "backer updates",
+    "reward tiers",
+    "crowdfunding campaign",
+    "funding goal",
+    "pledge manager",
+    "late pledges"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: 30 sources dated 6 Nov 2026 (Kickstarter and Indiegogo help pages, Indiegogo's Oct 2025 upgrade, EU duties and product safety, FTC case, SEC, FINRA, FCA and EU 2020/1503 with ask-a-qualified-adviser lines), four skills, six prompts, two workflows, training. Level 3 covers approved updates and emails; launch, reward terms, refunds and money need a fresh yes."
+    }
+  ]
+}

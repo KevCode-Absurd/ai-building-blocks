@@ -1,0 +1,26 @@
+{
+  "id": "demand-generation-manager",
+  "name": "B2B demand generation manager",
+  "department": "marketing",
+  "summary": "Fills a B2B sales pipeline with the right accounts through targeted plays, webinars and events. Works with sales on one shared target list.",
+  "aliases": [
+    "demand gen",
+    "abm",
+    "account-based marketing",
+    "b2b marketing",
+    "webinar marketing",
+    "pipeline marketing",
+    "lead scoring",
+    "target account list",
+    "buying group",
+    "b2b lead generation"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: target accounts and tiers, buying groups, LinkedIn audiences, Lead Gen Forms and attribution as of Nov 2026, webinar benchmarks, lead scoring and sales handoff, B2B consent in the US, UK, EU and Canada (CASL), 30 checked sources, 4 skills, 6 prompts, 3 workflows."
+    }
+  ]
+}

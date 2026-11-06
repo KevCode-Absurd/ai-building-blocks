@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "quarterly-headcount-plan-keeper",
+    "name": "Quarterly headcount plan keeper",
+    "why": "Checks the headcount plan against last quarter's hires and exits, the same job as the quarterly headcount review."
+  },
+  {
+    "slug": "plan-a-year-of-hiring-and-what-it-will-cost",
+    "name": "Plan a year of hiring and what it will cost",
+    "why": "A year of hiring with its cost, matching the headcount plan and cost skill."
+  },
+  {
+    "slug": "monthly-contractor-roster-keeper",
+    "name": "Monthly contractor roster keeper",
+    "why": "Checks contractor invoices against what was agreed and drafts missing agreements, as in the contractor roster steps."
+  },
+  {
+    "slug": "support-capacity-planner",
+    "name": "Support capacity planner",
+    "why": "Plans support staffing for a sales peak from ticket data, a queue case of staffing from demand."
+  },
+  {
+    "slug": "support-hiring-date-planner",
+    "name": "Support hiring date planner",
+    "why": "Works out agents needed each month and when to start hiring, the timing step in a seasonal plan."
+  },
+  {
+    "slug": "check-production-shift-staffing-commitments",
+    "name": "Check production shift staffing commitments",
+    "why": "Checks shift staffing against production commitments, the rota check for makers and warehouses."
+  },
+  {
+    "slug": "restaurant-shift-exception-review-assistant",
+    "name": "Restaurant shift exception review assistant",
+    "why": "Reviews restaurant shift exceptions, useful in the weekly review step of the rota cycle."
+  },
+  {
+    "slug": "weekly-team-coverage-review-assistant",
+    "name": "Weekly team coverage review assistant",
+    "why": "Finds critical work left without cover during absences, alongside the weekly rota."
+  },
+  {
+    "slug": "plan-workforce-disruption-coverage-before-announcing",
+    "name": "Plan staff coverage during a disruption",
+    "why": "Coverage options when a disruption hits staff availability, beyond the normal rota."
+  },
+  {
+    "slug": "hiring-pipeline-runner",
+    "name": "Hiring pipeline runner",
+    "why": "Scores applicants the same way against a guide for seasonal or planned hires; the client decides on every person."
+  },
+  {
+    "slug": "new-hire-onboarding-keeper",
+    "name": "New hire onboarding keeper",
+    "why": "Plans and tracks a new hire's first weeks once the headcount plan turns into a start date."
+  },
+  {
+    "slug": "prepare-a-seasonal-cash-buffer",
+    "name": "Prepare a seasonal cash buffer",
+    "why": "Builds the cash buffer a seasonal wage bill needs before the peak pays for itself."
+  }
+]

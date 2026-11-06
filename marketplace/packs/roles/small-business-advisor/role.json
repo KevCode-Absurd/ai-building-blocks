@@ -1,0 +1,26 @@
+{
+  "id": "small-business-advisor",
+  "name": "Small business advisor",
+  "department": "finance",
+  "summary": "Helps owners and freelancers set up and plan the business: business plans for lenders and grants, rates, packages and client process. Says when to see an accountant or lawyer.",
+  "aliases": [
+    "business plan writer",
+    "business consultant",
+    "small business coach",
+    "freelance setup",
+    "business plan",
+    "startup advisor",
+    "register a business",
+    "cash flow forecast",
+    "profit first",
+    "first employee"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: business plans for lenders and grants, cash flow and profit allocation, freelance rates and packages, registering a business and the first hire in the US, UK and EU, official portals for India, Canada and Australia, and when to see an accountant or lawyer, with 30 checked sources. Government filings need a fresh yes."
+    }
+  ]
+}

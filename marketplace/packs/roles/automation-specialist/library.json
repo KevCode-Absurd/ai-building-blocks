@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "automation-flow-sketcher",
+    "name": "Automation flow sketcher",
+    "why": "Lays out a repeat task as a Zapier or Make automation with what can break, a quick start before the full build spec."
+  },
+  {
+    "slug": "repeat-chore-automation-planner",
+    "name": "Repeat chore automation planner",
+    "why": "Sorts the team's weekly chores into those worth handing to a tool, like the automation candidates prompt."
+  },
+  {
+    "slug": "hidden-value-check",
+    "name": "Hidden value check",
+    "why": "Finds what a step quietly does before you cut or automate it, so the automation does not drop it."
+  },
+  {
+    "slug": "process-waste-finder",
+    "name": "Process waste finder",
+    "why": "Marks each process step as value or waste, so pointless steps are removed before automating."
+  },
+  {
+    "slug": "check-a-new-automation-before-relying-on-it",
+    "name": "Check a new automation before relying on it",
+    "why": "Finds double runs and missing approvals and gives a test checklist, matching the review and fix skill."
+  },
+  {
+    "slug": "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+    "name": "Build an n8n automation that reports failures and is reusable",
+    "why": "An n8n build with failures that show and retry, a worked example of loud failure handling."
+  },
+  {
+    "slug": "make-a-recurring-process-easier-to-hand-over",
+    "name": "Make a recurring process easier to hand over",
+    "why": "Writes a procedure and exception guide, useful for the handover note after go-live."
+  },
+  {
+    "slug": "process-change-note-writer",
+    "name": "Process change note writer",
+    "why": "Tells the team what changes and from when once an automation replaces a manual step."
+  },
+  {
+    "slug": "email-flow-gap-checker",
+    "name": "Email automation gaps and trigger reviewer",
+    "why": "Reviews email flows and triggers for gaps and rule conflicts, a close cousin of the automation review."
+  },
+  {
+    "slug": "data-file-clean-up-loop",
+    "name": "Data file clean-up loop",
+    "why": "Cleans a messy file and saves the rules, handy before importing old spreadsheets into Airtable or Notion."
+  }
+]

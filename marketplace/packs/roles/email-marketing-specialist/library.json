@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "weekly-newsletter-keeper",
+    "name": "Weekly newsletter keeper",
+    "why": "Turns weekly notes into a drafted, voice-checked newsletter issue, the same useful-first format the newsletter-issue prompt uses."
+  },
+  {
+    "slug": "monthly-email-flow-keeper",
+    "name": "Monthly email flow keeper",
+    "why": "Finds the weakest flow from last month's numbers and rebuilds it, matching the monthly email cycle in this kit."
+  },
+  {
+    "slug": "write-a-welcome-email-sequence-that-teaches-then-sells",
+    "name": "Write a welcome email sequence that teaches, then sells",
+    "why": "A guided run at the welcome flow shape in the lifecycle-flow-builder skill: help first, one soft offer, a send check."
+  },
+  {
+    "slug": "welcome-flow-builder",
+    "name": "Welcome flow builder",
+    "why": "Adds timing, filters and test ideas for a store's welcome flow, the logic step before any copy is written."
+  },
+  {
+    "slug": "sunset-flow-and-list-cleaner",
+    "name": "Sunset flow and list cleaner",
+    "why": "Builds a sunset flow and a monthly suppression routine; set its engagement rule on clicks and orders rather than opens, as this kit advises."
+  },
+  {
+    "slug": "email-segment-builder",
+    "name": "Email audience segment and exclusion planner",
+    "why": "Writes behaviour-based segments and exclusions as explicit rules, as in step 2 and step 6 of the email-program-plan skill."
+  },
+  {
+    "slug": "email-setup-health-checker",
+    "name": "Email setup health checker",
+    "why": "Scores pasted email settings and DNS records with exact fixes, a quick companion to the dns-and-header-read prompt."
+  },
+  {
+    "slug": "fix-inbox-placement-and-win-back-your-opens",
+    "name": "Fix inbox placement and win back your opens",
+    "why": "A full recovery run from setup and 60 days of results to an engaged list and sunset flow, like the inbox-placement-recovery workflow."
+  },
+  {
+    "slug": "permission-email-audit",
+    "name": "Permission email audit",
+    "why": "Checks which contacts gave real permission and which messages earn it, the consent step this kit puts before any plan."
+  },
+  {
+    "slug": "lead-nurture-follow-up",
+    "name": "Offer useful information first and follow up with stalled leads",
+    "why": "Builds an information offer and follow-ups for stalled leads, in line with the nurture shape and stop rules here."
+  },
+  {
+    "slug": "email-send-readiness-scorer",
+    "name": "Email send-readiness scorer",
+    "why": "A last check on one email before the client sends it: cuts, subject lines and a ship or fix verdict."
+  },
+  {
+    "slug": "marketing-email-html-builder",
+    "name": "Marketing email HTML builder",
+    "why": "Produces editable HTML email designs from copy and photos; run the html-email-build-and-qa checks on its output."
+  },
+  {
+    "slug": "email-design-checker",
+    "name": "Email design checker",
+    "why": "Scores an email design for layout, links and weight, useful before the test checklist in the HTML skill."
+  },
+  {
+    "slug": "email-and-sms-performance-reader",
+    "name": "Email and SMS performance reader",
+    "why": "Reads last month's numbers for what broke and what to repeat, alongside the results-read-clicks-first prompt."
+  }
+]

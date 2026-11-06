@@ -1,0 +1,234 @@
+[
+  {
+    "n": 1,
+    "title": "Organisation development factsheet",
+    "publisher": "CIPD",
+    "url": "https://www.cipd.org/uk/knowledge/factsheets/organisational-development-factsheet/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 19 May 2025. Defines organisation development as a planned, systematic approach to sustained performance through involving people; principles (resources, alignment with strategy, behavioural science, continual improvement); process from review and diagnosis to intervention; four intervention types (human process, techno-structural, human resource, strategic); organisation development and organisation design as complementary but distinct."
+  },
+  {
+    "n": 2,
+    "title": "Change management factsheet",
+    "publisher": "CIPD",
+    "url": "https://www.cipd.org/uk/knowledge/factsheets/change-management-factsheet/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Dated 14 October 2026. Says change initiatives are often unsuccessful and poorly managed change can harm performance, engagement and wellbeing; gives no failure rate; people professionals support change. Main sections are for members only."
+  },
+  {
+    "n": 3,
+    "title": "The Star Model",
+    "publisher": "Jay R. Galbraith (jaygalbraith.com)",
+    "url": "https://jaygalbraith.com/services/star-model/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Five design policies (strategy, structure, processes, rewards, people) that must be aligned; structure is only one element of organisation design."
+  },
+  {
+    "n": 4,
+    "title": "Conway's Law",
+    "publisher": "Mel Conway (melconway.com)",
+    "url": "https://www.melconway.com/Home/Conways_Law.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The author's own statement that a system's design copies the communication structure of the organisation that designs it; first published in Datamation, April 1968."
+  },
+  {
+    "n": 5,
+    "title": "Key concepts",
+    "publisher": "Team Topologies (Matthew Skelton and Manuel Pais)",
+    "url": "https://teamtopologies.com/key-concepts",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Four team types (stream-aligned, enabling, complicated subsystem, platform), three interaction modes (collaboration, X-as-a-Service, facilitation) and managing team cognitive load."
+  },
+  {
+    "n": 6,
+    "title": "RAPID decision-making",
+    "publisher": "Bain & Company",
+    "url": "https://www.bain.com/insights/rapid-decision-making/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Published 13 October 2023. Recommend, Agree, Perform, Input, Decide; ideally one decider for each decision."
+  },
+  {
+    "n": 7,
+    "title": "Span of Control: What's the Optimal Team Size for Managers?",
+    "publisher": "Gallup (Jim Harter)",
+    "url": "https://www.gallup.com/workplace/700718/span-control-optimal-team-size-managers.aspx",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 13 January 2026. Average direct reports per manager 10.9 in 2024 and 12.1 in 2025; median about five to six; 37% of managers have fewer than five, 66% fewer than ten, 22% have 10 to 24 and 13% have 25 or more; manager talent matters more than span alone."
+  },
+  {
+    "n": 8,
+    "title": "Understand team effectiveness",
+    "publisher": "Google re:Work",
+    "url": "https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 180 Google teams (115 engineering, 65 sales); five dynamics in order (psychological safety, dependability, structure and clarity, meaning, impact); how the team worked together mattered more than who was on it; factors such as colocation, seniority and team size were not significantly linked at Google, with a note that results may not generalise."
+  },
+  {
+    "n": 9,
+    "title": "Psychological Safety and Learning Behavior in Work Teams (Administrative Science Quarterly 44(2): 350-383, 1999)",
+    "publisher": "Amy Edmondson, via Crossref metadata",
+    "url": "https://api.crossref.org/works/10.2307/2666999",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Crossref record with abstract). Field study of 51 work teams in a manufacturing company; team psychological safety associated with learning behaviour, which mediated its link with team performance."
+  },
+  {
+    "n": 10,
+    "title": "Health Monitor",
+    "publisher": "Atlassian Team Playbook",
+    "url": "https://www.atlassian.com/team-playbook/health-monitor",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Eight attributes, 3 to 11 people, 30 minutes preparation and 90 minutes to run; thumbs up, sideways or down voted at once; pick one to three attributes to improve; run quarterly."
+  },
+  {
+    "n": 11,
+    "title": "Squad Health Check model: visualizing what to improve",
+    "publisher": "Spotify Engineering (Henrik Kniberg and Kristian Lindwall)",
+    "url": "https://engineering.atspotify.com/2014/09/squad-health-check-model",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. 16 September 2014. Ten default indicators rated green, yellow or red with a trend; face-to-face workshops; a support tool, not a judgement tool; beware comparing teams; works only with high trust; avoid replacing the conversation with an online survey."
+  },
+  {
+    "n": 12,
+    "title": "The 8 steps for leading change",
+    "publisher": "Kotter Inc.",
+    "url": "https://www.kotterinc.com/methodology/8-steps/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The eight steps as currently named on the author's firm's site, from creating a sense of urgency to instituting change."
+  },
+  {
+    "n": 13,
+    "title": "The Prosci ADKAR Model",
+    "publisher": "Prosci",
+    "url": "https://www.prosci.com/methodology/adkar",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Awareness, Desire, Knowledge, Ability, Reinforcement; a model for individual change used to find where a person's progress is blocked."
+  },
+  {
+    "n": 14,
+    "title": "What is transition?",
+    "publisher": "William Bridges Associates",
+    "url": "https://wmbridges.com/about/what-is-transition/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Change is the outside event; transition is the inner process; three phases: endings, the neutral zone and new beginnings."
+  },
+  {
+    "n": 15,
+    "title": "Do 70 Per Cent of All Organizational Change Initiatives Really Fail? (Journal of Change Management 11(4): 451-464, 2011)",
+    "publisher": "Mark Hughes, via Crossref metadata",
+    "url": "https://api.crossref.org/works/10.1080/14697017.2011.630506",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (Crossref metadata only; the abstract was not available). Cited only to show that the widely repeated 70% failure figure has been publicly questioned; no finding from the paper is used."
+  },
+  {
+    "n": 16,
+    "title": "The Buurtzorg model",
+    "publisher": "Buurtzorg",
+    "url": "https://www.buurtzorg.com/about-us/buurtzorgmodel/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Founded 2006 by Jos de Blok; self-managing teams of twelve working in a neighbourhood; over 10,000 nurses in 850 teams in the first ten years and more than 14,000 professionals now (company-reported)."
+  },
+  {
+    "n": 17,
+    "title": "Changing an employment contract",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/changing-an-employment-contract",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Changes to terms and conditions must be agreed by worker and employer; employers should avoid fire and rehire; links to consultation guidance."
+  },
+  {
+    "n": 18,
+    "title": "Consultation",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/consultation",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Employers should consult workers and their representatives when making decisions; by law consultation is required in some cases, including collective redundancy of 20 or more, TUPE transfers and information and consultation agreements."
+  },
+  {
+    "n": 19,
+    "title": "Managing a redundancy process",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/manage-staff-redundancies",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Last updated 7 April 2026. Check redundancy is needed and consider alternatives (voluntary redundancy, changed hours, redeployment, pausing hiring); ten steps from checking the need to supporting staff; offering suitable alternative employment."
+  },
+  {
+    "n": 20,
+    "title": "TUPE transfers",
+    "publisher": "Acas",
+    "url": "https://www.acas.org.uk/tupe-transfers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. TUPE can protect workers when an organisation moves from one employer to another; old and new employers must both follow it; covers business transfers and service provider changes."
+  },
+  {
+    "n": 21,
+    "title": "Making staff redundant: redundancy consultations",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/staff-redundant/redundancy-consultations",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Collective consultation for 20 or more redundancies within 90 days at one establishment; HR1 notice and minimum consultation of 30 days (20 to 99) or 45 days (100 or more) before the first dismissal; unlimited fine for not notifying."
+  },
+  {
+    "n": 22,
+    "title": "Business transfers, takeovers and TUPE",
+    "publisher": "GOV.UK",
+    "url": "https://www.gov.uk/transfers-takeovers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. TUPE applies to business transfers (the employer's identity must change) and service provision changes; jobs and terms usually transfer; contact Acas or Citizens Advice for help deciding if it applies."
+  },
+  {
+    "n": 23,
+    "title": "Directive 2002/14/EC establishing a general framework for informing and consulting employees",
+    "publisher": "EUR-Lex (European Union)",
+    "url": "https://eur-lex.europa.eu/eli/dir/2002/14/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 11 March 2002; applies, at each member state's choice, to undertakings with at least 50 employees or establishments with at least 20; information and consultation on decisions likely to lead to substantial changes in work organisation or contractual relations (Article 4(2)(c))."
+  },
+  {
+    "n": 24,
+    "title": "Council Directive 98/59/EC on collective redundancies",
+    "publisher": "EUR-Lex (European Union)",
+    "url": "https://eur-lex.europa.eu/eli/dir/1998/59/oj",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Adopted 20 July 1998; thresholds chosen by each member state; consultation with workers' representatives in good time with a view to reaching an agreement; written notice to the public authority; redundancies no earlier than 30 days after notification."
+  },
+  {
+    "n": 25,
+    "title": "Worker Adjustment and Retraining Notification Act (WARN)",
+    "publisher": "US Department of Labor, Employment and Training Administration",
+    "url": "https://www.dol.gov/agencies/eta/layoffs/warn",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. WARN helps ensure advance notice of qualified plant closings and mass layoffs; only federal courts enforce it; the page links the Act and regulations (20 CFR Part 639)."
+  },
+  {
+    "n": 26,
+    "title": "Federal labour standards",
+    "publisher": "Employment and Social Development Canada",
+    "url": "https://www.canada.ca/en/employment-social-development/programs/employment-standards.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Page dated 30 April 2025. Part III of the Canada Labour Code sets standards for employees in federally regulated businesses. Listed as the official Canadian source to check."
+  },
+  {
+    "n": 27,
+    "title": "Employees",
+    "publisher": "business.gov.au (Australian Government)",
+    "url": "https://business.gov.au/people/employees",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Official guidance for Australian employers on hiring, pay and conditions, managing staff and ending employment, with a link to free workplace legal help. Listed as the official Australian source to check."
+  },
+  {
+    "n": 28,
+    "title": "Flowcharts: basic syntax",
+    "publisher": "Mermaid",
+    "url": "https://mermaid.js.org/syntax/flowchart.html",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Flowchart direction (TD), nodes with text, links and subgraphs, used to draw org charts as text; avoid the lowercase word \"end\" inside node text."
+  },
+  {
+    "n": 29,
+    "title": "Job descriptions",
+    "publisher": "SHRM",
+    "url": "https://www.shrm.org/topics-tools/tools/job-descriptions",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Undated. Five steps for writing job descriptions; for each task decide whether it is a requirement, how often it is done, the consequences of not doing it, other ways to do it and whether it can be reassigned, which helps with Americans with Disabilities Act accommodation requests."
+  }
+]

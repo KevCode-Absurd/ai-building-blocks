@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "What Can I Sell on Etsy?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360024112614-What-Can-I-Sell-on-Etsy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (no date shown). Everything listed must be made, designed, handpicked or sourced by the seller; the four Creativity Standards categories with examples; AI tools allowed with the seller's own creative input, AI use disclosed in the listing description; no bot-generated content, AI-generated functional instructions or AI prompt bundles; production partners must be disclosed. etsy.com/legal/creativity returned 403."
+  },
+  {
+    "n": 2,
+    "title": "Working with Production Partners on Etsy",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360000336547-Working-with-Production-Partners-on-Etsy",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. A production partner makes items from the seller's own designs; disclose on listings and in the About section; set under Settings, Partners you work with, or in the listing; print-on-demand services are a valid partner type; suppliers, white label, OEM and ODM manufacturers and wholesalers are not partners, and using them to source items for resale breaks the reselling policy."
+  },
+  {
+    "n": 3,
+    "title": "Does Etsy Allow Drop Shipping or Reselling?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/23948763872151-Does-Etsy-Allow-Drop-Shipping-or-Reselling",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Drop shipping is not allowed except craft and party supplies; reselling is not allowed except craft and party supplies, vintage items over 20 years old, and gift baskets the seller selects and packs; adding a card to an unaltered bought-in item is not allowed."
+  },
+  {
+    "n": 4,
+    "title": "How to Create a Listing",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015628707-How-to-Create-a-Listing",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 20 photos and 2 videos of 5 to 15 seconds; titles up to 140 characters, fewer than 15 words suggested, say what the item is, avoid repetition, subjective words, price and shipping; 13 tags; attributes depend on category; custom variations are not filterable; processing and shipping profiles; GPSR manufacturer and safety fields for traders selling to the EEA or Northern Ireland; How it's made (who, what, when) and production partners; sections, featured listings, renewal."
+  },
+  {
+    "n": 5,
+    "title": "How to Use Tags to Get Found in Search",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360000336307-How-to-Use-Tags-to-Get-Found-in-Search",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Up to 13 tags per listing, each up to 20 characters, letters, numbers and spaces; tags can be phrases; tags are most useful where no matching attribute exists; buyer-focused phrases such as gift for her; use a varied set."
+  },
+  {
+    "n": 6,
+    "title": "How to Use Attributes When Listing an Item",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115014502508-How-to-Use-Attributes-When-Listing-an-Item",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. The category sets which attributes are available; attributes help buyers find items; fill in both attributes and tags; choose the closest colour and add the exact shade as a tag; materials and material features (plastic-free, reusable, upcycled, vegan) with criteria."
+  },
+  {
+    "n": 7,
+    "title": "Search Engine Optimization (SEO) for Shop and Listing Pages",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015663987-Search-Engine-Optimization-SEO-for-Shop-and-Listing-Pages",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Titles under 15 words with key traits first, since search engines show about the first 50 to 60 characters; the listing web address is set at first publish; the description's first sentence says what the item is, without repeating phrases; alt text on photos; no bought links; no one can guarantee top placement."
+  },
+  {
+    "n": 8,
+    "title": "How to Use the Etsy Search Visibility Page",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/25869947521175-How-to-Use-the-Etsy-Search-Visibility-Page",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Checks for priority placement: at least one image; primary photo 2000 pixels or more, a single image of the finished product, clear and well lit; specific category; a return policy (even no returns); US listings with domestic shipping under $6 prioritised; complete shop with logo; customer service standards affect visibility; title recommendation tool; changes can take up to a day."
+  },
+  {
+    "n": 9,
+    "title": "How Do I Use Etsy's Marketplace Insights Tool?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/35122361353239-How-Do-I-Use-Etsy-s-Marketplace-Insights-Tool",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shows popular and related search terms, searches and listings counts and trends for the last 30 days; Shop Manager, Stats, Marketplace Insights, web only; 15 keyword searches a week on the free tier, unlimited with Etsy Plus."
+  },
+  {
+    "n": 10,
+    "title": "How to Use Etsy Stats for Your Shop",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015774268-How-to-Use-Etsy-Stats-for-Your-Shop",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Visits, orders, average order value, conversion rate and revenue; traffic sources including Etsy search, Etsy Ads and offsite ads; search terms that brought shoppers; listing views, favourites, orders and revenue; no export described."
+  },
+  {
+    "n": 11,
+    "title": "What to Do If You Notice a Drop in Sales",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360001961748-What-to-Do-If-You-Notice-a-Drop-in-Sales",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Compare year over year; search results are personalised, so searching for your own items is not a reliable rank check; replace keywords that bring no traffic; fix flagged listing quality issues (dark or blurry main photo, collage, vague category, missing return policy, high US shipping price)."
+  },
+  {
+    "n": 12,
+    "title": "Requirements and Best Practices for Images in Your Etsy Shop",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015663347",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. At least 2000 pixels each side recommended, first photo at least 635 pixels, horizontal or square; at least one unedited photo of the actual item on a real background; functional guides need a photo of a real result; AI and other edits allowed for light, colour, cropping and backgrounds but not to hide flaws; note AI edits in the description."
+  },
+  {
+    "n": 13,
+    "title": "How Ads Are Placed in Etsy Search",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015745808-How-Ads-Are-Placed-in-Etsy-Search",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Ads compete in an auction on listing quality (likelihood of a click, listing and shop history, titles and tags) and bid; relevance comes from titles and tags; filters such as ship-to country apply; pay per click; you may not see your own ads."
+  },
+  {
+    "n": 14,
+    "title": "How to Set Up and Manage an Etsy Ads Campaign",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360033701174-How-to-Set-Up-and-Manage-an-Etsy-Ads-Campaign",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Daily budget with a minimum and a starting maximum that Etsy recalculates weekly; spend never exceeds the daily budget; strategies Greater visibility, Efficient spending, Lower click cost; all listings advertised by default; a waiting period after opening a shop; pay per click; turn off listings or the whole campaign."
+  },
+  {
+    "n": 15,
+    "title": "How to Review the Performance of Your Etsy Ads",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360034223613-How-to-Review-the-Performance-of-Your-Etsy-Ads",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Metrics: views, clicks, click rate, orders, revenue, spend, ROAS; orders count if the shopper buys within 30 days of clicking; run an ad for 30 days before turning it off; use ROAS to choose listings."
+  },
+  {
+    "n": 16,
+    "title": "How Etsy's Offsite Ads Work",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360000338367-How-Etsy-s-Offsite-Ads-Work",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Etsy chooses listings to advertise off Etsy; fee only on attributed orders within 30 days of a click; 15% fee for shops under $10,000 in any 365 days, 12% at or above; mandatory for the life of the shop once $10,000 is reached; fee capped at $100 per order; only shops never over the threshold can opt out."
+  },
+  {
+    "n": 17,
+    "title": "How to Set Up Shipping Information",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115014115187-How-to-Set-Up-Shipping-Information",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Shipping profiles hold rates, processing time, service, origin and destinations; one profile per listing, and editing a profile changes every listing on it; fixed or calculated shipping (calculated only for US and Canada sellers with USPS or Canada Post); Everywhere Else means worldwide; US-bound orders must include duties and import fees upfront to keep Purchase Protection (from July 9; year not stated on the page)."
+  },
+  {
+    "n": 18,
+    "title": "How to Set Processing Times, Processing Profiles and Ship By Dates",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015588087-How-to-Set-Processing-Times-Processing-Profiles-and-Ship-By-Dates",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Processing time sets the ship-by date and when buyers can open a case or review; processing profiles (made to order or ready to ship); shorter times can shorten delivery estimates; actual times shown if faster (past 120 days, at least 5 orders); ship-by date can be extended once by up to 21 days."
+  },
+  {
+    "n": 19,
+    "title": "What are Etsy's Customer Service Standards?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360036207794-What-are-Etsy-s-Customer-Service-Standards",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Minimums: reply to 80% of first messages within 48 hours; ship 80% of orders on time; limits on reviews of 3 stars or lower; limits on refunded cases; missing standards can lower search visibility and Purchase Protection eligibility; Etsy may remove reviews only about things outside the seller's control."
+  },
+  {
+    "n": 20,
+    "title": "What is the Star Seller Badge?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/4403058372503-What-is-the-Star-Seller-Badge",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Reply to 95% of first messages within 24 hours; 95% of orders on time with tracking; average rating 4.8 or higher; at least 5 orders and $300 in sales over the past 3 months; eligible 90 days after first sale; reviewed on the 1st of each month."
+  },
+  {
+    "n": 21,
+    "title": "How the Review System Works for Sellers",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/360000572708-How-the-Review-System-Works-for-Sellers",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Buyers have 100 days from delivery to review; the shop rating is weighted to recent reviews (the past 12 months count most, weight halves each year); reviews can be downloaded as JSON; removed reviews cannot be reinstated."
+  },
+  {
+    "n": 22,
+    "title": "What to Do if You Receive a Negative Review",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/115015808588-What-to-Do-if-You-Receive-a-Negative-Review",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Message the buyer first; one public response per review within 100 days of the buyer's last edit; a response stops the buyer editing; no tracking numbers, links or private information; Etsy removes only reviews that break its policies."
+  },
+  {
+    "n": 23,
+    "title": "What is the General Product Safety Regulation (GPSR)?",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/28211364687383-What-is-the-General-Product-Safety-Regulation-GPSR",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. GPSR may apply to traders selling into the EEA and Northern Ireland wherever they are based; add an economic operator and/or manufacturer details and the Product safety info field; option to stop selling to GPSR countries; Etsy cannot decide trader status and suggests legal advice."
+  },
+  {
+    "n": 24,
+    "title": "Shared Access for Etsy Shop Owners",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/43600112070807-Shared-Access-for-Etsy-Shop-Owners",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Owners invite up to 5 team members with their own accounts and two-factor sign-in; members can manage orders, create, edit and publish listings, and reply to messages; they cannot cancel or refund orders, delete or deactivate listings, see finances, or open marketing, stats, settings or apps; the owner stays responsible."
+  },
+  {
+    "n": 25,
+    "title": "Etsy Open API v3 documentation",
+    "publisher": "Etsy Developers",
+    "url": "https://developers.etsy.com/documentation/",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. OAuth-based API for listings, orders and shop management; Seller App access covers the seller's own shop only with no commercial use; screen-scraping is not allowed; the OpenAPI Dev MCP server gives AI coding assistants API documentation and schemas, not shop data."
+  },
+  {
+    "n": 26,
+    "title": "How to Comply with US CPSC eFiling Requirements",
+    "publisher": "Etsy Help",
+    "url": "https://help.etsy.com/hc/en-us/articles/41840762260759-How-to-Comply-with-US-CPSC-eFiling-Requirements",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. From July 8, 2026 importers of products under CPSC rules must file certificate data electronically before entry; children's products usually need a Children's Product Certificate; postal imports must use the CPSC Product Registry route; missing data can delay or stop shipments."
+  },
+  {
+    "n": 27,
+    "title": "EU Regulation 2023/988 on General Product Safety: detailed guidance (Northern Ireland)",
+    "publisher": "Office for Product Safety and Standards, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/general-product-safety-regulations-northern-ireland/eu-regulation-2023988-on-general-product-safety-detailed-guidance",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 4 November 2025). GPSR applies from 13 December 2024; a responsible economic operator established in the EU or Northern Ireland is needed; its details and the manufacturer's on the product, packaging, parcel or an accompanying document; type, batch or serial number; safety information in language consumers understand; technical documentation kept 10 years."
+  },
+  {
+    "n": 28,
+    "title": "General Product Safety Regulations 2005: Great Britain",
+    "publisher": "Office for Product Safety and Standards, GOV.UK",
+    "url": "https://www.gov.uk/government/publications/general-product-safety-regulations-2005/general-product-safety-regulations-2005-great-britain",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (updated 13 December 2024). Products must be safe in normal or foreseeable use; producers give risk information, mark the producer's name and address and a batch reference where reasonable, keep a complaints register and notify Trading Standards of unsafe products; distributors must not supply products they know or should know are dangerous."
+  },
+  {
+    "n": 29,
+    "title": "CE marking",
+    "publisher": "Your Europe (European Union)",
+    "url": "https://europa.eu/youreurope/business/product-rules-compliance/general-product-compliance/ce-marking/index_en.htm",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch (last checked 17/07/2026). CE marking is needed only for products covered by EU rules that require it, such as toys, electrical and electronic equipment, batteries and personal protective equipment; the manufacturer, including anyone selling under their own name, affixes it; others fall under general product safety rules."
+  },
+  {
+    "n": 30,
+    "title": "Small Batch Manufacturers and Crafters",
+    "publisher": "US Consumer Product Safety Commission",
+    "url": "https://www.cpsc.gov/smallbatch",
+    "checked": "2026-11-06",
+    "supports": "Opened with WebFetch. Small batch makers must register each year to get relief from third-party testing for some children's product rules only; small parts, lead in paint, durable infant products and other Group A rules always need an accepted lab; a Children's Product Certificate and tracking labels are always required; relief is not an exemption from the rules."
+  }
+]

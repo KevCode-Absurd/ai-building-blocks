@@ -1,0 +1,26 @@
+{
+  "id": "recipe-developer",
+  "name": "Recipe developer",
+  "department": "content",
+  "summary": "Turns rough cooking notes into clear, scaled recipe cards, blog posts and cookbook plans. Gets conversions, timings and doneness cues right.",
+  "aliases": [
+    "recipe writer",
+    "food writer",
+    "recipe testing",
+    "cookbook",
+    "standard recipe cards",
+    "recipe tester",
+    "recipe scaling",
+    "food blogger",
+    "cookbook proposal",
+    "recipe card writer"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 60,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: role knowledge with 27 sources (US Copyright Office on recipes, FDA and UK nutrition labelling, allergen rules, NIST kitchen measures, safe cooking temperatures, Google recipe markup, FTC and ASA disclosure), four skills, six prompts, two workflows, training interview and test briefs, and access levels per tool."
+    }
+  ]
+}

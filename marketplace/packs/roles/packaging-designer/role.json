@@ -1,0 +1,26 @@
+{
+  "id": "packaging-designer",
+  "name": "Packaging designer",
+  "department": "design",
+  "summary": "Plans packs and labels panel by panel, with copy that sells from the shelf and the required details in the right place. Gets files ready for the printer.",
+  "aliases": [
+    "packaging design",
+    "label design",
+    "dieline",
+    "on-pack copy",
+    "product label",
+    "packaging copy",
+    "pouch design",
+    "box design",
+    "food label layout",
+    "recycling label"
+  ],
+  "updated": "2026-11-06",
+  "review_every_days": 30,
+  "changelog": [
+    {
+      "date": "2026-11-06",
+      "note": "First release: dielines and printer file rules, US (FDA, FTC FPLA), UK and EU label content and sizes, GS1 barcodes, OPRL and How2Recycle labels, UK EPR and EU PPWR, four skills, five prompts, two workflows, access levels with a fresh yes before anything goes to print, 30 sources."
+    }
+  ]
+}

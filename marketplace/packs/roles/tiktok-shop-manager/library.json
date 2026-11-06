@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "tiktok-shop-breakout-finder",
+    "name": "TikTok Shop breakout finder",
+    "why": "Scores products from TikTok Shop research graphs before you test them, so hero picks start from early breakouts, not crowded products."
+  },
+  {
+    "slug": "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+    "name": "Price a product so it pays after every cost",
+    "why": "Works out true margin and the discount depth that keeps profit, the same sum behind every hero pick."
+  },
+  {
+    "slug": "product-margin-checker",
+    "name": "Product margin checker",
+    "why": "Quick margin check per product when you only need one row of the margin table."
+  },
+  {
+    "slug": "winning-product-scorer",
+    "name": "Winning product scorer",
+    "why": "Scores a new product idea and its costs before it joins the shop."
+  },
+  {
+    "slug": "live-auction-show-planner",
+    "name": "Live auction show planner",
+    "why": "A run order, promotion schedule and profit sheet for live selling shows, useful alongside the LIVE run sheet skill."
+  },
+  {
+    "slug": "short-video-hook-writer",
+    "name": "Short video hook writer",
+    "why": "Ten hooks per product checked for length and first shot, for the shoppable video briefs."
+  },
+  {
+    "slug": "short-video-format-picker",
+    "name": "Short video format picker",
+    "why": "Picks a format and script outline for who is on camera, to turn one good video into a repeatable format."
+  },
+  {
+    "slug": "organic-format-tester",
+    "name": "Organic format tester",
+    "why": "Reads 20 posts and their numbers to find the formats that sell, for the weekly review."
+  },
+  {
+    "slug": "creator-ad-roster-builder",
+    "name": "Creator ad roster builder",
+    "why": "A gifting funnel, roster size, pay rule and creator brief, to set the sample rule and budget."
+  },
+  {
+    "slug": "creator-pay-planner",
+    "name": "Creator pay planner",
+    "why": "Checks whether a flat fee or a floor-or-commission offer to a creator makes sense before you ask the client for a yes."
+  },
+  {
+    "slug": "bundle-and-quantity-break-builder",
+    "name": "Bundle and quantity-break builder",
+    "why": "Builds bundle tiers that hold margin, for LIVE bundles and add-ons."
+  },
+  {
+    "slug": "returns-policy-designer",
+    "name": "Returns policy designer",
+    "why": "Sets refund timing and keep-it rules from returns data, when TikTok returns start to eat margin."
+  },
+  {
+    "slug": "start-your-stores-organic-social-from-zero",
+    "name": "Start your store's organic social from zero",
+    "why": "Setup fixes, formats and hooks to film for a store starting from nothing on social, before the first shoppable videos."
+  }
+]

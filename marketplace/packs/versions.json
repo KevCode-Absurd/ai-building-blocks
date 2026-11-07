@@ -460,12 +460,12 @@
     "updated": "2026-11-06"
   },
   "bethany-lead-scoring": {
-    "hash": "2ccab1fdb79ce31878c22eedb1b696e8a70e76462e5207d6e96287e1d4658e55",
+    "hash": "f1df42ec192f09744581601100b4dadbdf70ad4afced97bec4d4725f8c377deb",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "bethany-lead-scoring-train": {
-    "hash": "a0f5536d5fb902cf8f3a0212972937bf59cbb41a0c743199c269ae33fd772a05",
+    "hash": "9abe52ad309525fb7dd20ba08af4cbbafac89138a9ab60b24b9530ce9d9aee79",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -510,12 +510,12 @@
     "updated": "2026-11-06"
   },
   "bilge-presales": {
-    "hash": "fec4b8e8fd3aefd6e83285593b82862258d0320a917188d8737d6593f0cb653b",
+    "hash": "57bdbae744dc2106d1d0ef12575a96156fe72002f49e424cdfb369c4f01bc9ce",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "bilge-presales-train": {
-    "hash": "035e49833e6e5f7aa5353e1402982dadc0441b05aa3c9270b652ca7943f6d1a1",
+    "hash": "64e9599f67b11f30e2b8a1b59ec300e737e8e40353c1bd848f06bb52a9fc64e4",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -1320,12 +1320,12 @@
     "updated": "2026-11-06"
   },
   "eloise-site-builders": {
-    "hash": "9345ecef1be54bf8ab73002bb5a172fcb1b1ab9fa152b3876db574394e8e7c6f",
+    "hash": "95b35e984d6fcd7b588b1549944b4335eb17c4f95d409d59eea592c6cf804e25",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "eloise-site-builders-train": {
-    "hash": "c7ffd26f592c00022123946cbd138266fd0f8c5f892ab61477ce4031196e96a0",
+    "hash": "61813fcba302b7904de69c7e4b7417045fe3d3ef635ae6332fba556cae65243f",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -1560,12 +1560,12 @@
     "updated": "2026-11-07"
   },
   "frank-salesforecast": {
-    "hash": "f35fc81e52a049013012027dc1ad71357b77b141718add6d149e8ce68076f821",
+    "hash": "d166f1e439ed2fd53626f5d5e25a25b5cf87ad02d6c36ed6494ec9f785c46e59",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "frank-salesforecast-train": {
-    "hash": "985401d8c6a04c9d74e32f4ef919819ec7b7a689470b7643f9382c985dc09eff",
+    "hash": "f04ae225f9a0097f4cb4720b52014cacf23aab82a023c16562a6f01caac47340",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -1580,12 +1580,12 @@
     "updated": "2026-11-07"
   },
   "gareth-account-research": {
-    "hash": "d18c0845ebff5c2a6b82e45f7dc01b536c3fb9d917cc4eeae16b99dcae3129e3",
+    "hash": "c99d3d88dbe3c21b987279146596775f7b21d1511f29cee55c674a55d8d305f6",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "gareth-account-research-train": {
-    "hash": "1f2e0063796d8725943274c262f6697a4e2f0b8f1be2b599a669e17dafd8c962",
+    "hash": "d6430b0e28f19356e45ff6cb4256e4ff0be8025d7cbbbf39690601fee44331e8",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -1830,12 +1830,12 @@
     "updated": "2026-11-06"
   },
   "haruto-powerquery": {
-    "hash": "bd8fbf4aedebf6dc0cea90ae6bf9bcc66e6673b1b9678c7536276d151d99bb79",
+    "hash": "46826bf7f4645f556622de3528e344ebc0f4519ae464838a44205091a87dd8da",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "haruto-powerquery-train": {
-    "hash": "da99edfe2d981e3c96a7a3e197c9c88bafa8e1fbea0f3524f28d252db8bf89ab",
+    "hash": "4333f5100812c2f7bad7c124ba5a5147cab14a523188347ee29ebea691570730",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -1880,12 +1880,12 @@
     "updated": "2026-11-07"
   },
   "heidi-clubdata": {
-    "hash": "d4605c52eb42b5bc9b231c2806d29723c283f971490ec292dbac9c79f25749b2",
+    "hash": "ea12804cbf6a93227e7dab7a685498bd0df97224f5c69ee41822bc7c2dcef08f",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "heidi-clubdata-train": {
-    "hash": "f5c1bd9d0f22f4e973a3cc6f146cae7750aef185169e280d676d7288bf9eb486",
+    "hash": "ddb4fb46bf2bc87df0a05843831c600ae972101874f62baadd77d93ce0232367",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -2100,12 +2100,12 @@
     "updated": "2026-11-07"
   },
   "isaiah-outreach": {
-    "hash": "853ac65e62cc08b6a5e524d7f6b77315adabb8e10d2c6046e169380cda3ddfef",
+    "hash": "460df7cd01f93a5bb3ad06bd7cc1383ac93d48f7cedca30755dfcdb103abd2ec",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "isaiah-outreach-train": {
-    "hash": "626a11f6bd45156c3b98462def25ff554b585667aaa9d564188b95fec590c1c9",
+    "hash": "435fabe9bbb7a95fac6cbf70e3f90913408f183eef2ee2481d125ca2750a2b3a",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -2570,12 +2570,12 @@
     "updated": "2026-11-06"
   },
   "kwame-benchmarks": {
-    "hash": "71f4d5c9251cc87ef579ae1f4aa828f99b459db2212ecfadf575017bfc93a967",
+    "hash": "d9365e30e99d595e33a92c08d62e1a1f1b5f73a9bc47363fc1bd128b263c77cb",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "kwame-benchmarks-train": {
-    "hash": "9b74ffc24c5f1a9850810a9ea652cb85eb2b5cef0bd74e1a1dad197acb4e4bae",
+    "hash": "e1eb4199e7bfb07ff740d9a8009328036ec3fd8dbe5d711afd3fc8e1af730b84",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -3140,12 +3140,12 @@
     "updated": "2026-11-06"
   },
   "muriel-donor-data": {
-    "hash": "92f4382e12ea5e9365c0e6e600bf1cac75eea977d8974efb950aad959825185d",
+    "hash": "bef0213b1f63b7f8cac5b82dfa95ce0f63845e894a2f3be723993e0a3097871f",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "muriel-donor-data-train": {
-    "hash": "d1f7f162e45af887890887084235e8e72936373dacd9f95051861bfaed8750e8",
+    "hash": "5ecc8ffa98d968743fe86e79a6b7c30cb4b3e1878a12b069bfd2cdf0e2611a79",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -4280,12 +4280,12 @@
     "updated": "2026-11-06"
   },
   "sunil-cold-calls": {
-    "hash": "d9e6a91ff5cad87df5fc1e8c33cf78d1e6cd5c3d561b59716e438b32967adc87",
+    "hash": "ead98ff6c505078b7b1eaba5b8326d3b48eac2ab31b46e98fda77fe84c3c7083",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "sunil-cold-calls-train": {
-    "hash": "d68637e0c5883ba0590ab2eeaf6a0742d3624afb823e1b94078f53272ac67979",
+    "hash": "df3021e9aa9ebef212a02b91e9e5ab35900ad0802959c95808fb73cc39d15dca",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -4590,12 +4590,12 @@
     "updated": "2026-11-06"
   },
   "tyler-inbound-leads": {
-    "hash": "3530524325792ff0713f85da6fb88cbdc450c485e157afa18d0845f522fb5e5e",
+    "hash": "ca8d98fb73193ee9bce24ce221e343ba103d1b38b4607d60a97a84054d954b6a",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "tyler-inbound-leads-train": {
-    "hash": "6ac14235faec7ddc683f1709c4b6096534889be8b2c349583f041763794753ea",
+    "hash": "eb8c002d412bc943854c13ab5aa3f0f2f72d51c289c2a03193e1c9cf1509b6fe",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
@@ -4640,12 +4640,12 @@
     "updated": "2026-11-07"
   },
   "valeria-data-analysis": {
-    "hash": "f42aba1df6d11c0aba50d273dc265351900ad96796fe6652848300dc1cb5c31e",
+    "hash": "3692a8bded783f49b3c77c405a387fd8059f30726f5e27ad4e6b8d4c8705e012",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },
   "valeria-data-analysis-train": {
-    "hash": "b985262ff3a5179a58f18896fb128311f61a3bf6614d993cbc20fc47a541f2b5",
+    "hash": "e21ace7a655dd37bf4697dc92dfd7f9f06d2f232d232f559e1222c4777f3f6e4",
     "version": "2026.11.07",
     "updated": "2026-11-07"
   },

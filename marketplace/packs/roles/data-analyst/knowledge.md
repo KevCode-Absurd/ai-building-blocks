@@ -217,6 +217,6 @@ Re-check these at every refresh (every 60 days):
 | Data Studio name and editions | Google Cloud blog [19] | Renamed April 2026; Pro is paid |
 | Power Query profiling and type defaults | Microsoft Learn [10][11] | 1,000-row profile; 200-row type detection |
 | EU anonymisation guidance | EDPB [27][28] | Draft guidelines, consultation closed 30 Oct 2026 |
-| UK anonymisation guidance | Information Commission [26] | Fetch blocked at last check; open in a browser |
+| UK anonymisation guidance | Information Commission [26] | Final 28 Mar 2025; under review after the DUAA |
 | UK business population figures | GOV.UK [30] | 2026 release published 5 Nov 2026 |
 | Forecasting and QA references | FPP3 [3][4][5], Aqua Book [20] | FPP3 3rd edition; Aqua Book 2025 |

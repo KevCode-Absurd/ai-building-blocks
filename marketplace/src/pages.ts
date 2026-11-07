@@ -69,6 +69,8 @@ interface PageView {
   path: string;
   index: boolean;
   image?: string;
+  /** The page's largest image (an agent's portrait): fetched first, at high priority, so it paints as soon as the app draws. */
+  preloadImage?: string;
   jsonLd?: object[];
   /** Plain HTML for #app (public pages). */
   body?: string;
@@ -150,6 +152,7 @@ async function agentPage(env: Env, id: string): Promise<PageView> {
     title: agentTitle(a.name, a.title),
     description: clip(`${a.tagline} ${a.name} is a free AI agent you can download or load into your own AI.`, 160),
     image: `${origin}${a.portrait}`,
+    preloadImage: a.portrait,
     jsonLd: [
       { "@context": "https://schema.org", "@type": "SoftwareApplication", name: `${a.name}, ${a.title}`, description: a.tagline, url: `${origin}${path}`,
         image: `${origin}${a.portrait}`, applicationCategory: "BusinessApplication", operatingSystem: "Any AI app that reads files: Claude, ChatGPT, Gemini, Codex, Cursor",
@@ -248,6 +251,7 @@ export function headTags(env: Env, view: PageView): string {
     `<meta property="og:url" content="${esc(canonical)}" />`,
     `<meta property="og:image" content="${esc(image)}" />`,
     `<meta name="twitter:card" content="${view.image ? "summary_large_image" : "summary"}" />`,
+    ...(view.preloadImage ? [`<link rel="preload" as="image" href="${esc(view.preloadImage)}" fetchpriority="high" />`] : []),
     ...(view.jsonLd ?? []).map(d => `<script type="application/ld+json">${scriptJson(d)}</script>`),
   ];
   return tags.join("\n    ");

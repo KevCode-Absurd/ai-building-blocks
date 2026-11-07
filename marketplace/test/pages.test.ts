@@ -51,6 +51,8 @@ test("an agent's page has its own head tags, plain content and the profile data"
   assert.match(html, /"@type":"SoftwareApplication"/);
   assert.match(html, /"@type":"BreadcrumbList"/);
   assert.match(html, new RegExp(`<h1>${esc(agent.name)}</h1>`));
+  const portrait = html.match(/<img src="([^"]+)" alt="[^"]*" width="160"/)?.[1];
+  assert.ok(portrait && html.includes(`<link rel="preload" as="image" href="${portrait}" fetchpriority="high" />`), "the portrait, the largest image, is fetched first");
   const boot = JSON.parse(html.match(/<script type="application\/json" id="boot">([\s\S]*?)<\/script>/)![1]);
   const api = await t.api("GET", `/api/agents/${agent.id}`);
   assert.deepEqual(boot[`/api/agents/${agent.id}`], api.body, "the page carries what /api/agents/:id returns");

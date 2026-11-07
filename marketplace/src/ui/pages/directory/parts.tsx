@@ -65,7 +65,9 @@ export function Portrait(props: { name: string; src: string; accent: string; siz
       {failed ? (
         <span class="dir-avatar" aria-hidden="true"><span>{initials(props.name)}</span></span>
       ) : (
-        <img src={props.src} alt="" width={512} height={512} loading={props.eager ? "eager" : "lazy"} decoding="async"
+        // eager is the profile's big portrait, the page's largest image: fetch it first and paint it without waiting.
+        <img src={props.src} alt="" width={512} height={512} loading={props.eager ? "eager" : "lazy"}
+          fetchpriority={props.eager ? "high" : "auto"} decoding={props.eager ? "auto" : "async"}
           onLoad={e => { if ((e.currentTarget as HTMLImageElement).naturalWidth > 0) setLoadedSrc(props.src); else setFailedSrc(props.src); }}
           onError={() => setFailedSrc(props.src)} />
       )}

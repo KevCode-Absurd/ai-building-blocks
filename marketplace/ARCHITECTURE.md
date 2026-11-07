@@ -260,19 +260,24 @@ not be `roles`, `jobs` or `index`. Public URLs (all under agents.useaiblocks.com
 |---|---|
 | `/packs/<id>.zip` | "Download this agent" (folder `<id>/` inside) |
 | `/packs/<id>-train.zip` | "Train your own" (folder `<role-id>-agent/` inside) |
+| `/packs/<id>.txt` | The whole agent in one plain text file for chat apps (`oneFileText` in `packs/build.ts`): a short header, then every file the agent reads, AGENTS.md first, each after a `===== FILE: <path> =====` line. README, CLAUDE.md, CHANGELOG, pack.json and each `skills/*/SKILL.md` (all in skills.md) are left out. `.txt` because every chat app takes it. Made from the agent pack, so it shares its version. |
 | `/packs/<id>/<path>` | The agent's own files of its pack: README, AGENTS, CLAUDE, soul, personality, playbook, knowledge, skills.md, LICENSE, CHANGELOG, pack.json (and access.md while the role has no kit) |
 | `/packs/roles/<role-id>/<path>` | Each ready role kit once, its files as they stand (role.json, knowledge.md, access.md, sources.json, library.json, skills/, prompts/, workflows/, training/), plus `sources.md` and `library.md` as the packs carry them |
 | `/packs/jobs/<skill-slug>/SKILL.md` | Each job skill once (`<job-type-id>`, or `<job-type-id>-job` when the role kit has a skill of that name) |
 | `/packs/mega/<kit>/<path>` | Each ready mega kit once, its files as they stand (kit.json, orchestrator.md, variants/, channels/, agents/<channel>.md, prompts/, workflows/, training/) |
-| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `knowledge` = `{ status: "ready" | "pending", updated, sources, review_every_days }` (packs built before 7 Nov 2026 say just `"ready"` or `"pending"`; the UI reads both). `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training or about. List files in the order given. |
-| `/packs/index.json` | `{ schema: "ai-blocks-pack-index/1", count, packs: [{ id, name, title, role, version, updated, knowledge, files, files_url, agent_zip: { url, bytes, version }, train_zip: { url, bytes, version } }] }` |
+| `/packs/<id>/files.json` | `{ schema: "ai-blocks-pack-files/1", agent_id, kind: "agent", role, version, updated, knowledge, zip: { url, bytes, version }, train_zip: { url, bytes, version }, one_file: { url, bytes, version }, files: [{ path, url, bytes, purpose, kind }] }`. `knowledge` = `{ status: "ready" | "pending", updated, sources, review_every_days }` (packs built before 7 Nov 2026 say just `"ready"` or `"pending"`; the UI reads both). `url` is where the file's text is served (under the agent, the role or the job); the UI always uses it. File `kind` = start, identity, work, knowledge, skill, prompt, workflow, training or about. List files in the order given. |
+| `/packs/index.json` | `{ schema: "ai-blocks-pack-index/1", count, packs: [{ id, name, title, role, version, updated, knowledge, files, files_url, agent_zip: { url, bytes, version }, train_zip: { url, bytes, version }, one_file: { url, bytes, version } }] }` |
 | `/agents/<id>/soul.md` | The Worker's soul.md (same text as the pack's) |
 | `/guides/<slug>` | A browser-app page (SPA fallback, no Worker route) that renders `src/ui/content/guides/<slug>.md`, bundled at build time with a Vite `?raw` import (`src/ui/pages/directory/guides.tsx`; a new guide is listed in `GUIDES` there). Slugs: `train-your-own-agent` (the packs' `{{guide_url}}`), `use-an-agent-pack`. `/guides` lists them. |
 
 **In the browser app** (`src/ui/pages/directory/packs.ts` for data and pure helpers, `pack-parts.tsx`, `file.tsx`). A
 profile reads `/packs/<id>/files.json` (and `/packs/index.json` only when files.json does not name the zips) and shows
-"Use this agent in your own AI": "Download this agent" (primary) and "Train your own" with their sizes, "Learn more"
-(the training guide), the licence line ("Free to use and change in Claude, ChatGPT, Gemini, Codex or Cursor. Not for
+"Start <name> in your AI" (`PackDownloads`): a tab per app (`startGuides` in packs.ts: ChatGPT, Claude, Gemini, Coding
+apps, Connector; the choice is kept in localStorage `aib-start-app`), each with three steps: get the agent (the one
+file for chat apps, the zip for coding apps, `/connect` for the connector), open it, and paste a first message that
+needs no editing (the agent introduces itself and asks what the person needs). A one file over `LARGE_ONE_FILE` bytes
+(the mega agents) goes in a Claude project, not a single chat. Below the tabs: the full folder, "Train your own" with
+its size, "How training works", the licence line ("Free to use and change in Claude, ChatGPT, Gemini, Codex or Cursor. Not for
 resale.", linking to LICENSE.md in the viewer), the knowledge line ("Role knowledge checked <d Mon yyyy> from <n>
 sources", or "Role knowledge is being researched"; knowledge may be the string `ready`/`pending` or the object), then
 "What's inside" (files grouped by kind, in files.json order). A missing pack (an expert's agent, or a local app before

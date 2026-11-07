@@ -205,8 +205,26 @@
 .dir-pack-knowledge { display: flex; align-items: baseline; gap: 9px; margin: 0; font: 400 13px/1.5 var(--mono); color: var(--text-2); }
 .dir-pack-knowledge::before { content: ""; flex: none; width: 8px; height: 8px; transform: translateY(-1px); background: var(--ok); }
 .dir-pack-knowledge-pending::before { background: var(--line-2); }
+/* "Start in your AI": a tab per app, three numbered steps, then the other downloads. */
+/* Tabs wrap on a phone instead of scrolling, so every app shows. */
+.dir-start-tabs { flex-wrap: wrap; overflow-x: visible; margin-bottom: 18px; }
+.dir-start-panel { margin-bottom: 20px; }
+.dir-start-steps { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; counter-reset: dir-start; }
+.dir-start-steps > li { position: relative; min-width: 0; padding-left: 40px; counter-increment: dir-start; }
+.dir-start-steps > li::before { content: counter(dir-start); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 26px; height: 26px; font: 600 13px var(--mono); color: var(--btn-text); background: var(--btn); border-radius: 50%; }
+.dir-start-steps p { max-width: 44em; margin: 2px 0 10px; }
+.dir-start-steps > li > p:last-child { margin-bottom: 0; }
+.dir-start-message { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; max-width: 44em; padding: 14px 16px; background: var(--panel-2); border: 1px dashed var(--line-2); border-radius: var(--radius); }
+.dir-start-message p { margin: 0; font: 400 14px/1.55 var(--mono); color: var(--text-2); overflow-wrap: anywhere; }
+.dir-start-tip { max-width: 44em; margin: 16px 0 0; padding-left: 40px; font-size: 14px; color: var(--muted); }
+.dir-pack-other { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 14px; padding-top: 16px; border-top: 1px solid var(--line); }
+.dir-pack-other a { color: var(--text); }
 @media (max-width: 520px) {
   .dir-pack-actions .btn { width: 100%; }
+  .dir-start-steps > li { padding-left: 36px; }
+  .dir-start-steps .btn { width: 100%; }
+  .dir-start-message .btn { width: 100%; }
+  .dir-start-tip { padding-left: 0; }
 }
 
 .dir-files-total { font: 400 13px var(--mono); color: var(--muted); }

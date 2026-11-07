@@ -37,6 +37,8 @@ export interface PackInfo {
   files: PackFile[];
   agentZip: PackZip;
   trainZip: PackZip;
+  /** The whole agent in one .txt file, for chat apps. null when the build that made the pack had none. */
+  oneFile: PackZip | null;
 }
 
 /** File kinds in the order the viewer shows them, with plain labels. */
@@ -112,7 +114,7 @@ export function viewerHref(agentId: string, path: string): string {
 
 /** The zips as files.json ({ zip, train_zip }) or index.json ({ agent_zip, train_zip }) give them, each with a url or
  *  a path and its bytes. */
-export interface ZipsSource { zip?: unknown; agent_zip?: unknown; train_zip?: unknown }
+export interface ZipsSource { zip?: unknown; agent_zip?: unknown; train_zip?: unknown; one_file?: unknown }
 
 /** True when files.json or index.json names both zips. */
 export function hasZips(source: unknown): boolean {
@@ -138,6 +140,67 @@ export function packZips(agentId: string, ...sources: (ZipsSource | null | undef
     agentZip: zip(sources.map(s => s?.agent_zip ?? s?.zip), `/packs/${id}.zip`),
     trainZip: zip(sources.map(s => s?.train_zip), `/packs/${id}-train.zip`),
   };
+}
+
+/** The one-file version (<id>.txt) from files.json or index.json, at a safe /packs/ address. null when neither names it. */
+export function packOneFile(...sources: (ZipsSource | null | undefined)[]): PackZip | null {
+  for (const s of sources) {
+    const z = s?.one_file;
+    if (!z || typeof z !== "object") continue;
+    const { url, bytes } = z as { url?: unknown; bytes?: unknown };
+    if (isPackUrl(url) && url.endsWith(".txt")) return { path: url, bytes: typeof bytes === "number" && bytes > 0 ? bytes : null };
+  }
+  return null;
+}
+
+// ---------- Starting the agent in the person's own AI ----------
+
+export type StartApp = "chatgpt" | "claude" | "gemini" | "coding" | "connector";
+
+/** One tab of "Start in your AI": what to get, where to open it and the first message to paste. */
+export interface StartGuide {
+  id: StartApp;
+  label: string;
+  /** file: the one-file version (<id>.txt); folder: the zip; connect: the MCP connector, nothing to download. */
+  get: "file" | "folder" | "connect";
+  open: string;
+  message: string;
+  tip: string | null;
+}
+
+/** Above this many bytes the one file is too long for a single Claude chat, so Claude gets a project instead. */
+export const LARGE_ONE_FILE = 300_000;
+
+/**
+ * The tabs of "Start in your AI", most used app first. Each first message needs no editing: the agent introduces
+ * itself and asks what the person needs, so the start takes about a minute.
+ */
+export function startGuides(a: { id: string; name: string; title: string }, oneFileBytes: number | null = null): StartGuide[] {
+  const { name, title } = a;
+  const hello = "Introduce yourself in two sentences, then ask what I need help with.";
+  const read = "holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part.";
+  const chat = `You are ${name}, ${title}. The file I attached ${read} ${hello}`;
+  const large = (oneFileBytes ?? 0) > LARGE_ONE_FILE;
+  return [
+    { id: "chatgpt", label: "ChatGPT", get: "file", open: "Open ChatGPT and start a new chat. Select + by the message box and add the file.", message: chat,
+      tip: `To keep ${name} ready, make a project in ChatGPT and add the file to it. Start each chat there with the same message.` },
+    large
+      ? { id: "claude", label: "Claude", get: "file", open: `Open Claude and make a project. Add the file to its knowledge, then start a chat in the project. ${name}'s file is too long for a single chat.`,
+          message: `You are ${name}, ${title}. The file in this project ${read} ${hello}`, tip: null }
+      : { id: "claude", label: "Claude", get: "file", open: "Open Claude and start a new chat. Select + by the message box and add the file.", message: chat,
+          tip: `To keep ${name} ready, make a project in Claude and add the file to its knowledge. Start each chat there with the same message.` },
+    { id: "gemini", label: "Gemini", get: "file", open: "Open Gemini and start a new chat. Select + by the message box and upload the file.", message: chat,
+      tip: `To keep ${name} ready, make a Gem, add the file under Knowledge, and start each chat with the same message.` },
+    { id: "coding", label: "Coding apps", get: "folder", open: "Unzip the folder and open it in Claude Code, Codex or Cursor. They read its AGENTS.md on their own, and the skills are already in place.",
+      message: `Read AGENTS.md and follow it. You are ${name}, ${title}. ${hello}`, tip: null },
+    { id: "connector", label: "Connector", get: "connect", open: "Start a new chat in the AI you connected.",
+      message: `Load ${name} (${a.id}) from AI Blocks and work as ${name}. ${hello}`,
+      tip: `Your AI loads the newest version of ${name} each time, with nothing to download.` },
+  ];
+}
+
+export function isStartApp(v: unknown): v is StartApp {
+  return v === "chatgpt" || v === "claude" || v === "gemini" || v === "coding" || v === "connector";
 }
 
 const DAY = /^(\d{4})-(\d{2})-(\d{2})$/;
@@ -277,7 +340,7 @@ export function readFilesJson(raw: unknown): PackFiles | null {
   };
 }
 
-interface IndexEntry { id: string; version?: string; knowledge?: unknown; agent_zip?: unknown; train_zip?: unknown }
+interface IndexEntry { id: string; version?: string; knowledge?: unknown; agent_zip?: unknown; train_zip?: unknown; one_file?: unknown }
 let indexPromise: Promise<Map<string, IndexEntry> | null> | null = null;
 
 /** /packs/index.json, read once per visit. */
@@ -303,5 +366,6 @@ export async function loadPack(agentId: string): Promise<PackInfo | null> {
     knowledge: files?.knowledge ?? normalizeKnowledge(entry?.knowledge),
     files: files?.files ?? [],
     ...packZips(agentId, filesRaw as ZipsSource | null, entry),
+    oneFile: packOneFile(filesRaw as ZipsSource | null, entry),
   };
 }

@@ -61,7 +61,7 @@ export interface PackInput {
 
 export const SIMPLE_PLACEHOLDERS = [
   "name", "title", "role_name", "tagline", "agent_id", "role_id", "department", "version", "updated", "bio",
-  "profile_url", "pack_url", "train_pack_url", "guide_url", "studio_url", "mcp_url",
+  "profile_url", "pack_url", "train_pack_url", "one_file_url", "guide_url", "studio_url", "mcp_url",
 ] as const;
 /** team_list is a mega agent's "My channel team" section, heading included; it is empty (its line removed) for other agents. */
 export const BLOCK_PLACEHOLDERS = ["files_table", "skills_list", "prompts_list", "workflows_list", "outcomes_list", "not_for_list", "intake_list", "team_list"] as const;
@@ -177,9 +177,9 @@ This is {{name}}'s agent pack from AI Blocks, version {{version}} ({{updated}}).
 
 {{files_table}}
 
-## Hire {{name}} instead
+## Load {{name}} without a download
 
-Want checked, finished work without any setup? Hire {{name}} on AI Blocks: {{profile_url}}. You can also connect AI Blocks to your own AI: {{mcp_url}}.
+Connect AI Blocks to your own AI once ({{mcp_url}}), then ask it to load {{name}}. In ChatGPT, Claude or Gemini you can also attach the one-file version: {{one_file_url}}.
 
 ## Train your own
 
@@ -957,6 +957,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     profile_url: `${origin}/agents/${persona.id}`,
     pack_url: `${origin}/packs/${persona.id}.zip`,
     train_pack_url: `${origin}/packs/${persona.id}-train.zip`,
+    one_file_url: `${origin}/packs/${persona.id}.txt`,
     guide_url: `${origin}/guides/train-your-own-agent`,
     studio_url: `${origin}/studio`,
     mcp_url: `${origin}/mcp`,
@@ -1100,11 +1101,43 @@ export function packZip(pack: BuiltPack): Promise<Uint8Array> {
   return writeZip(entries, { date: pack.manifest.updated });
 }
 
+/** The setup guide, the pointer for Claude Code and the record files are for people and tools, not the agent. */
+const NOT_IN_ONE_FILE = new Set(["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json"]);
+
+/**
+ * <id>.txt: the whole agent in one plain text file, for chat apps (ChatGPT, Claude, Gemini) where one attachment is
+ * the quickest start. It holds every file the agent reads, AGENTS.md first, each after a "===== FILE: <path> ====="
+ * line; each skill's SKILL.md is left out when skills.md holds them all. Plain .txt, because every chat app takes it
+ * (Gemini's list of file types does not name .md). Agent packs only.
+ */
+export function oneFileText(pack: BuiltPack, origin: string = ORIGIN): string {
+  if (pack.kind !== "agent") throw new PackBuildError(`only agent packs have a one-file version, not ${pack.kind} packs`);
+  const m = pack.manifest, site = origin.replace(/\/+$/, "");
+  const bundled = pack.files.some(f => f.path === "skills.md");
+  const files = pack.files
+    .filter(f => !NOT_IN_ONE_FILE.has(f.path) && !(bundled && /^skills\/[^/]+\/SKILL\.md$/.test(f.path)))
+    .sort((a, b) => Number(b.path === "AGENTS.md") - Number(a.path === "AGENTS.md"));
+  const head = [
+    `# ${m.name}, ${m.title}: the whole agent in one file`,
+    "",
+    `This is ${m.name}'s agent pack from AI Blocks, version ${m.version}, in one file for chat apps such as ChatGPT, Claude and Gemini. Attach it to a chat, or add it to a project or Gem, and your AI works as ${m.name}. It runs on your own AI plan.`,
+    "",
+    `For the AI reading this: each part below is one file of the pack and starts with a line such as "===== FILE: playbook.md =====". When your instructions say to open or read a file, read that part. Start with the AGENTS.md part and follow it.${bundled ? " Every skill is in the skills.md part, under its own heading, so a path such as skills/<name>/SKILL.md means that heading." : ""}`,
+    "",
+    `Free to use and change, not to sell: the LICENSE.md part has the terms. Newest version and ${m.name}'s profile: ${site}/agents/${m.agent_id}`,
+  ];
+  const parts = files.map(f => `===== FILE: ${f.path} =====\n\n${f.content.trim()}`);
+  return normalizeText([head.join("\n"), ...parts].join("\n\n"));
+}
+
+type BuiltFile = { url: string; bytes: number; version: string };
+
 /**
  * files.json for the browsable copy: what the pack viewer lists, in pack order (never the zip-only skill copies).
- * Each file's url is where its text is served; zips (sizes from the build) are added by the caller.
+ * Each file's url is where its text is served; the zips and the one-file version (sizes from the build) are added by
+ * the caller.
  */
-export function filesIndex(pack: BuiltPack, zips: { zip?: { url: string; bytes: number; version: string }; train_zip?: { url: string; bytes: number; version: string } } = {}) {
+export function filesIndex(pack: BuiltPack, zips: { zip?: BuiltFile; train_zip?: BuiltFile; one_file?: BuiltFile } = {}) {
   return {
     schema: "ai-blocks-pack-files/1",
     agent_id: pack.manifest.agent_id,

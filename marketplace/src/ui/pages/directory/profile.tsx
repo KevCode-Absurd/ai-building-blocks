@@ -113,11 +113,11 @@ function Profile(props: { agent: AgentProfile; related: AgentCardData[] }) {
 
       <HowHiringWorks name={a.name} />
 
-      {pack.data && <PackDownloads agentId={a.id} name={a.name} pack={pack.data} />}
+      {pack.data && <PackDownloads agentId={a.id} name={a.name} title={a.title} pack={pack.data} />}
       {pack.data && pack.data.files.length > 0 && <PackInside agent={a} pack={pack.data} />}
       {!pack.loading && !pack.data && a.kind === "house" && (
         <section class="dir-section dir-pack" id="dir-pack" aria-labelledby="dir-pack-title">
-          <h2 id="dir-pack-title">Use this agent in your own AI</h2>
+          <h2 id="dir-pack-title">Start {a.name} in your AI</h2>
           <p class="muted">{a.name}'s free download is not ready yet. Check back soon.</p>
         </section>
       )}

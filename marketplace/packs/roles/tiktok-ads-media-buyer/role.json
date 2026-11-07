@@ -25,6 +25,10 @@
     {
       "date": "2026-11-07",
       "note": "TikTok gaps filled from TikTok's own help centre and developer docs, confirmed through search because TikTok blocks page fetches: objectives, in-feed specs, ad policy handbook, attribution windows, Spark code steps, Business Center roles, the official TikTok for Business MCP Server and its 30-day authorisation, teen targeting rules (US from 30 June 2024), the AI disclosure setting and the Custom Identity phase-out. Eleven trade summaries replaced; the ICO is now the Information Commission."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Linked the Information Commission's storage and access guidance; it still uses the ICO name."
     }
   ]
 }

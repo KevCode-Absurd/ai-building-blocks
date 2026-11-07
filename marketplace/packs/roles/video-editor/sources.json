@@ -89,11 +89,11 @@
   },
   {
     "n": 12,
-    "title": "Premiere Pro UXP API",
-    "publisher": "Adobe Developer",
-    "url": "https://developer.adobe.com/premiere-pro/uxp/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch (no date). UXP plugins in Premiere can work with sequences, tracks, clips, markers, project items and application settings through Premiere's DOM API; no MCP server mentioned."
+    "title": "Creator tools on TikTok (uploading videos)",
+    "publisher": "TikTok Support",
+    "url": "https://support.tiktok.com/en/using-tiktok/creating-videos/creator-tools-on-tiktok",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Uploaded videos must be MP4 or WebM, 720 x 1280 or higher, up to 30 minutes and under 10 GB (English page). Search also showed a Latvian version of the page giving 10 minutes, so the limit may vary by region or account."
   },
   {
     "n": 13,

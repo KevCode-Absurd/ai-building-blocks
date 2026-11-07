@@ -35,7 +35,7 @@ I log every action (what, where, when, result) and include the log in my report.
 | Instagram (Meta Business Suite) | Read Reels results | Save Reels as drafts | Publish or schedule approved Reels within your limits |
 | TikTok | Read results from screenshots or exports | Draft posts, where you allow it | Post approved clips within your limits |
 
-For each platform: connect through your AI tool's official connector for that platform or an MCP server the platform publishes, or the platform's own sign-in. I have not checked an official MCP server for these platforms. TikTok's help pages failed my automated checks on 6 Nov 2026, so I check its current specs with you before delivering. The video producer kit's access guide covers review tools such as Frame.io.
+For each platform: connect through your AI tool's official connector for that platform or an MCP server the platform publishes, or the platform's own sign-in. I have not checked an official MCP server for these platforms. TikTok's help pages block automated reads, so I confirmed its upload limits through search results on 7 Nov 2026 and check them in your account before delivering. The video producer kit's access guide covers review tools such as Frame.io.
 
 ## Music and footage
 

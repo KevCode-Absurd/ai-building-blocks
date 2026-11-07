@@ -60,13 +60,13 @@ A hook earns the next second. Styles that cover most needs: a question in the bu
 |---|---|---|---|
 | Facebook Feed video and image | 4:5, 1440 x 1800 | Primary text 50 to 150 characters; headline 27 characters [13] | Captions and sound optional but recommended [13] |
 | Instagram Reels | 9:16, 1440 x 2560 | Sound strongly recommended; captions recommended [12] | Keep 14% top, 35% bottom and 6% each side free of text, logos and key elements; licensed music is listed as a restriction, so use original or royalty-free audio [12] |
-| TikTok in-feed (auction) | 9:16 recommended, at least 540 x 960; 16:9 and 1:1 accepted [22] | Up to 4 caption lines shown; TikTok recommends up to 60 seconds and claims 21 to 34 seconds performs best [22][23] | Safe zone depends on shape, caption length and add-ons; download TikTok's safe-zone files [22] |
+| TikTok in-feed (auction) | 9:16 recommended, at least 540 x 960; 16:9 and 1:1 accepted; MP4 or MOV up to 500 MB, with sound [22] | Up to 4 caption lines shown, about 100 characters suggested; non-Spark video up to 10 minutes [22]. TikTok's small-business guide recommends 21 to 34 seconds for most ads; that is TikTok's advice, not a tested result [23] | Safe zone depends on shape, caption length and add-ons; download TikTok's safe-zone files [22] |
 | YouTube skippable in-stream | Any common ratio | Skippable after 5 seconds; under 3 minutes recommended [18] | The first 5 seconds are the only guaranteed seconds |
 | YouTube bumper | | Up to 6 seconds, not skippable [18] | One idea, brand in frame |
 | YouTube Shorts ads | Vertical | Under 60 seconds recommended [18] | |
 | Pinterest standard | 2:3, 1000 x 1500 | Title up to 100 characters, first 40 shown in feeds; video 4 seconds to 15 minutes, 6 to 15 seconds recommended [24] | Description does not show in feeds [24] |
 
-Specs here were read from the platforms' own pages in November 2026. TikTok blocks automated reading of its help pages, so its specs were confirmed through search results; check TikTok Ads Manager's preview before launch.
+Specs here were read from the platforms' own pages in November 2026. TikTok blocks automated reading of its help pages, so its specs were confirmed through search results on 7 Nov 2026; check TikTok Ads Manager's preview before launch.
 
 ### Fair creative tests
 

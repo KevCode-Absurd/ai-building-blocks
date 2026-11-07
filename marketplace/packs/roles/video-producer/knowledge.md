@@ -94,8 +94,9 @@ WCAG 2.2 level A asks for captions on all prerecorded audio in synchronised medi
 | YouTube Shorts | Square or vertical [3] | Up to 3 minutes [3] | See YouTube's general upload encoding page [1] |
 | Instagram Reels ads | 9:16, 1440 x 2560 recommended [4] | 0 seconds to 15 minutes [4] | MP4 or MOV, up to 4 GB, H.264, fixed frame rate, stereo AAC at 128 kbps or more; safe zones above [4] |
 | LinkedIn video ads | 16:9, 1:1, 4:5 or 9:16, with pixel ranges per shape; LinkedIn marks 4:5 as its recommended vertical ratio [5] | 3 seconds to 30 minutes; 15 to 30 seconds recommended [5] | MP4, 75 KB to 500 MB, under 30 fps, H.264 or VP8, AAC or MPEG4 audio, SRT captions [5] |
+| TikTok in-feed ads (auction) | 9:16 recommended, at least 540 x 960; 16:9 and 1:1 accepted [19] | Up to 10 minutes for non-Spark ads; a Spark Ad keeps its post's length [19] | MP4 or MOV, up to 500 MB, bitrate 516 kbps or more, sound required; text inside TikTok's safe-zone files, which change with caption length [19] |
 
-TikTok's help pages blocked my automated checks on 6 Nov 2026, so this kit gives no TikTok specs. Check TikTok's own business help centre before delivering.
+TikTok's specs were confirmed through search results on 7 Nov 2026, because its help pages block automated reads. TikTok's own guide recommends 21 to 34 seconds for most ads; the ad creative strategist kit covers that advice.
 
 ### Music and footage licensing basics
 
@@ -107,7 +108,7 @@ These are the basics a producer must know to ask the right questions. They are n
 - **Claims and strikes differ.** On YouTube, a Content ID claim is an automatic match that lets the owner block, monetise or track the video; it usually affects that video only. A valid takedown request can bring a copyright strike against the channel [15]. Removing or replacing the claimed audio clears a claim [15].
 - **"Royalty-free" is a licence, not a gift.** It usually means no per-use royalty, not no rules. Read who may use it, on which platforms, in ads or not, for how long, where, in how many projects, and whether credit is required.
 - **Creative Commons.** All six CC licences require credit; NC licences allow non-commercial use only, and ND licences allow no adaptations [18]. For a business video, NC material is out and ND material cannot be cut or edited.
-- **Stock footage.** Free libraries still set terms. Pexels, for example, allows commercial use and editing with no credit needed, but bars showing identifiable people in a bad light, implying that people or brands in a clip endorse a product, and using its media as a trademark [19].
+- **Stock footage.** Free libraries still set terms, such as limits on how identifiable people may be shown and on implying that people or brands in a clip endorse a product. Read each licence (access.md links Pexels's as an example) and keep a copy with the project.
 - **Who owns the finished video.** Under US law, a commissioned work counts as a work made for hire only in listed categories, which include part of an audiovisual work, and only when both sides sign a written agreement [23]; otherwise ownership moves only by a signed writing [24]. In the UK a transfer also needs a signed, written assignment [21]. The producer flags this at the start; the client's lawyer writes the clause.
 
 ### AI-made pictures, voices and music
@@ -215,7 +216,7 @@ No source I checked gives a trustworthy ideal length or completion rate for expl
 
 Re-check at each refresh:
 
-- **Platform specs and lengths:** YouTube encoding, resolution and Shorts pages [1][2][3]; Meta's Reels ad spec and safe zones [4]; LinkedIn's video ad spec [5]. Try TikTok's business help centre again; it blocked automated checks on 6 Nov 2026.
+- **Platform specs and lengths:** YouTube encoding, resolution and Shorts pages [1][2][3]; Meta's Reels ad spec and safe zones [4]; LinkedIn's video ad spec [5]; TikTok's in-feed ad spec [19].
 - **Caption formats:** YouTube's supported files [6] and each ad platform's caption rules.
 - **Music rules:** YouTube Audio Library and copyright claims pages [15][16]; Meta's Music Guidelines [17].
 - **AI disclosure:** YouTube's GenAI disclosure page [25]; the AI Act's Article 50 and any codes of practice or guidance under it [26]; US Copyright Office AI reports [27].

@@ -15,12 +15,16 @@
     "TikTok creator ads",
     "TikTok Events API"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 14,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: Smart+ and manual campaigns, Spark Ads and account linking, Symphony and AI-generated content labels, Pixel and Events API from TikTok's own templates, measurement, teen ad limits, EU and UK rules and creator disclosure. TikTok's own help pages blocked fetching, so platform facts come from labelled trade summaries."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "TikTok gaps filled from TikTok's own help centre and developer docs, confirmed through search because TikTok blocks page fetches: objectives, in-feed specs, ad policy handbook, attribution windows, Spark code steps, Business Center roles, the official TikTok for Business MCP Server and its 30-day authorisation, teen targeting rules (US from 30 June 2024), the AI disclosure setting and the Custom Identity phase-out. Eleven trade summaries replaced; the ICO is now the Information Commission."
     }
   ]
 }

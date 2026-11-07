@@ -15,12 +15,16 @@
     "logo animation",
     "video brief"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: two-column scripts, storyboards and shot tables, shoot plans, motion and title specs, on-screen text timing from published subtitle standards, safe areas, loudness, captions, flashing limits, dated YouTube, Shorts, Instagram Reels and LinkedIn video specs, music and footage licensing basics for the US, UK and EU, AI disclosure rules, and access levels 1 to 3 for editing, review and publishing tools, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "TikTok in-feed ad specs added from TikTok's help centre, confirmed through search (the Pexels licence stays linked in access.md)."
     }
   ]
 }

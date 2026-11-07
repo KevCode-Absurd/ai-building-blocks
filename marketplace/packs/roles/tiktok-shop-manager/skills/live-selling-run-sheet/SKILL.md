@@ -19,7 +19,7 @@ description: Builds a minute-by-minute run sheet for one TikTok LIVE selling ses
 4. Demo props and the proof shots for each product.
 5. Claims the host may make, with the client's evidence.
 6. Common questions and complaints from past comments, reviews or support.
-7. TikTok's current LIVE and promotion rules for the market [check in Seller Center or the Academy].
+7. TikTok's current LIVE and promotion rules for the market. In the US (as of 7 Nov 2026): a live host only, with no AI voices, pre-recorded clips or screen recordings; no links or QR codes that send viewers off TikTok Shop; giveaways only through TikTok's LIVE Giveaway feature. Other markets [check in Seller Center].
 
 **Access:** level 1 to read past LIVE results. Level 2 to set up the session's promotions without starting them. Level 3 to start and end approved promotions at the approved times and prices. The host runs the stream.
 

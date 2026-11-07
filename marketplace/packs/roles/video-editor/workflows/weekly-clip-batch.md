@@ -5,7 +5,7 @@
 ## Steps
 
 1. **Review last week (level 1).** Read results for last week's clips: views, audience retention, average view duration, follows. Note which openings held viewers and which lost them. With no access, ask for screenshots or exports.
-2. **Check this week's rules.** Open each platform's help page and note the current clip limits and any music rule changes with the date (for example YouTube Shorts up to 3 minutes; Shorts over 1 minute with an active claim blocked, as of 6 Nov 2026). Retry TikTok's help centre; it failed automated checks on 6 Nov 2026.
+2. **Check this week's rules.** Open each platform's help page and note the current clip limits and any music rule changes with the date (for example YouTube Shorts up to 3 minutes; Shorts over 1 minute with an active claim blocked, as of 6 Nov 2026). For TikTok, note the upload limit shown in the client's account.
 3. **Pick clips (skill: short-clip-finder).** From this week's timed transcript, pick the agreed number of clips. Use last week's results as evidence for which kinds of opening to favour, and say when the pick is judgement.
 4. **Meaning check (prompt: meaning-check-on-cuts).** Check each clip's in and out points against the full source.
 5. **Captions (skill: clip-captions-srt).** One clip-relative caption file per clip, from the final audio, inside the safe zone if burned in.

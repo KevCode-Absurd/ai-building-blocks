@@ -2,7 +2,7 @@
 
 The general coordinator turns the user's words into a real job and measurable acceptance checks. It reads the brand brain, chooses a task-specific lead and experts, and checks the final delivery against the original job. Experts compare distinct routes, record disagreement and combine useful parts when they fit together. A fresh judge reviews the work without seeing the council.
 
-The coordinator is a general role. Department labels help discovery; they do not install fixed department heads. A person can edit the roster, lead, personas, handoffs, three routes and acceptance checks at `/councils` (`/plan-team` is an alias). Its exported plan is a draft for the connected AI to validate and run.
+The coordinator is a general role. Department labels help discovery; they do not install fixed department heads. A person can edit the roster, lead, personas, handoffs, three routes and acceptance checks at `/councils` (`/plan-team` is an alias). Named councils can be saved and reopened in the browser, or imported from editable JSON. Private brain-file bytes are not persisted; loading a council clears the previous brain-read confirmation. Its exported plan is a draft for the connected AI to validate and run.
 
 ## Required context
 

@@ -31,7 +31,7 @@ export function engineFixture({ tier = 'standard' } = {}) {
   if(tier==='quick'){council.proposals=council.proposals.filter(p=>p.label!=='C');council.critiques=council.critiques.filter(c=>c.by_seat==='s1'&&c.on!=='C');council.ranking.ballots[0].order=['A','B'];council.ranking.result=['A','B'];council.red_team=[];council.decision.dissent.by_seat='s1';}
   if(tier==='deep')council.red_team.push({...council.red_team[0],pass:2});
   const production = document('ai-blocks-production/1');
-  production.artifacts = spread.slots.map((slot, n) => ({ slot_id: slot.slot_id, path: `deliverables/output-${n}.md`, sha256: 'a'.repeat(64), maker_seat: slot.maker_seat, family: slot.family, modality: slot.modality, items: structuredClone(slot.items), producer_note: 'A source-backed recommendation. All six outputs are delivered.', claims: [], checks: [{ id: 'useful', status: 'PASS' }], budget: { used: 0, allowance: 0 } }));
+  production.artifacts = spread.slots.map((slot, n) => ({ slot_id: slot.slot_id, kind: card.deliverables[0].kind, path: `deliverables/output-${n}.md`, sha256: 'a'.repeat(64), maker_seat: slot.maker_seat, family: slot.family, modality: slot.modality, items: structuredClone(slot.items), producer_note: 'A source-backed recommendation. All six outputs are delivered.', claims: [], checks: [{ id: 'useful', status: 'PASS' }], budget: { used: 0, allowance: 0 } }));
   const review = document('ai-blocks-review/1');
   review.items = production.artifacts.map(a => ({ ...structuredClone(review.items[0]), slot_id: a.slot_id }));
   review.critical_checks = [{ id: 'complete', passed: true, quote: 'All six outputs are delivered.' }];

@@ -213,7 +213,8 @@
           "claims",
           "checks",
           "producer_note",
-          "budget"
+          "budget",
+          "kind"
         ],
         "additionalProperties": false
       },

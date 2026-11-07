@@ -341,6 +341,7 @@ function reviewChecks(d, c, add, warn) {
   }
 }
 function productionChecks(d, c, add, warn) {
+  for(const scoped of list((c.card??c.job_card)?.deliverables))if(list(d.artifacts).filter(a=>a?.kind===scoped.kind).length!==scoped.count)add('artifacts.kind','meet the scoped count for every deliverable kind.');
   const artifacts = list(d.artifacts), slots = list(c.spread?.slots), seats = list(teamOf(c).seats);
   unique(artifacts, 'slot_id', 'artifacts', add);
   if (slots.length && (artifacts.length !== slots.length || slots.some(slot => !artifacts.some(a => a?.slot_id === slot.slot_id)))) add('artifacts', 'must produce every planned slot exactly once.');

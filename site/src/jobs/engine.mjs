@@ -57,9 +57,7 @@ function productionCheck(document, view, base, context) {
   }
   if (expected.length && (expected.length !== ids.size || expected.some(s => !ids.has(s.slot_id)))) fail('document.artifacts', 'Produce every approved spread slot exactly once.');
   if (document.artifacts.length !== view.card.deliverables.reduce((n, d) => n + d.count, 0)) fail('document.artifacts', 'Meet the requested deliverable count.');
-  if(view.card.deliverables.length>1){
-    for(const kind of view.card.deliverables)if(document.artifacts.filter(a=>a.kind===kind.kind).length!==kind.count)fail('document.artifacts.kind','Meet the scoped count for every deliverable kind.');
-  }
+  for(const kind of view.card.deliverables)if(document.artifacts.filter(a=>a.kind===kind.kind).length!==kind.count)fail('document.artifacts.kind','Meet the scoped count for every deliverable kind.');
   for (const claim of document.evidence.claims) {
     const checker = seats.get(claim.checked_by);
     if (!checker || !types(checker).has('fact_checker') || types(checker).has('maker')) fail('document.evidence.claims.checked_by', 'A staffed fact checker who did not make the work must check each claim.');

@@ -118,3 +118,10 @@ test('unexposed tool totals remain unknown without disguising process counts as 
  const mixed=structuredClone(unknown);mixed.artifacts[0].budget.used=3;await assert.rejects(()=>send(result,{event:'produce',document:mixed},f.context),/budget/);
  const over=structuredClone(f.production);over.artifacts[0].budget.used=11;await assert.rejects(()=>send(result,{event:'produce',document:over},f.context),/allowance/);
 });
+
+test('single-kind jobs reject unrelated or missing artifact kinds before review',async()=>{
+ const f=engineFixture();let result=await startJob(f.input,f.context);for(const entry of f.events.slice(0,4))result=await send(result,entry,f.context);
+ const wrong=structuredClone(f.production);for(const artifact of wrong.artifacts)artifact.kind='unrelated';await assert.rejects(()=>send(result,{event:'produce',document:wrong},f.context),/kind/);
+ const absent=structuredClone(f.production);for(const artifact of absent.artifacts)delete artifact.kind;await assert.rejects(()=>send(result,{event:'produce',document:absent},f.context),/kind/);
+ assert.equal((await send(result,{event:'produce',document:f.production},f.context)).phase,'REVIEW');
+});

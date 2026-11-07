@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 import {
   formatBytes, formatDay, groupPackFiles, hasZips, isAppPath, isPackUrl, kindLabel, knowledgeLine, markdownSummary, markdownTitle,
   normalizeKnowledge, packFileHref, packZips, prettyJson, readFilesJson, safePackPath, splitFrontmatter, viewerHref, fileFormat,
+  isStartApp, LARGE_ONE_FILE, packOneFile, startGuides,
   type PackFile,
 } from "../src/ui/pages/directory/packs.ts";
 
@@ -136,4 +137,32 @@ test("both guides have a title and a summary for the guides page", () => {
   }
   assert.equal(markdownTitle("Intro\n\n# Real title ##\n"), "Real title");
   assert.equal(markdownSummary("# T\n\nSee [the guide](/guides/x) and **this**.\nSecond line.\n\nNext para"), "See the guide and this. Second line.");
+});
+
+test("the one-file version is read only from a safe same-site .txt address", () => {
+  assert.deepEqual(packOneFile({ one_file: { url: "/packs/nova-seo.txt", bytes: 130000 } }), { path: "/packs/nova-seo.txt", bytes: 130000 });
+  assert.deepEqual(packOneFile(null, { one_file: { url: "/packs/nova-seo.txt", bytes: -1 } }), { path: "/packs/nova-seo.txt", bytes: null });
+  assert.equal(packOneFile({ one_file: { url: "https://evil.example/nova.txt", bytes: 1 } }), null);
+  assert.equal(packOneFile({ one_file: { url: "/packs/nova-seo.zip", bytes: 1 } }), null);
+  assert.equal(packOneFile({}, null), null);
+});
+
+test("Start in your AI: a tab per app, each with a first message that needs no editing", () => {
+  const agent = { id: "danielle-seo", name: "Danielle", title: "SEO strategist" };
+  const guides = startGuides(agent, 130000);
+  assert.deepEqual(guides.map(g => g.id), ["chatgpt", "claude", "gemini", "coding", "connector"]);
+  for (const g of guides) {
+    assert.ok(isStartApp(g.id), g.id);
+    assert.match(g.message, /Danielle/, g.id);
+    assert.doesNotMatch(g.message, /\[|\]/, `${g.id}: nothing to fill in`);
+    assert.match(g.message, /ask what I need help with\.$/, g.id);
+  }
+  assert.deepEqual(guides.map(g => g.get), ["file", "file", "file", "folder", "connect"]);
+  assert.match(guides[3].message, /^Read AGENTS\.md/);
+  assert.match(guides[4].message, /danielle-seo/, "the connector loads the agent by its id");
+  assert.match(guides[1].open, /new chat/);
+  const big = startGuides(agent, LARGE_ONE_FILE + 1).find(g => g.id === "claude")!;
+  assert.match(big.open, /project/, "a file too long for one Claude chat goes in a project");
+  assert.match(big.message, /file in this project/);
+  assert.equal(isStartApp("copilot"), false);
 });

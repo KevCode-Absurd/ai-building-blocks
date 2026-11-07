@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { crc32, readZip, writeZip, ZipError } from "../src/modules/packs/zip.ts";
 import {
   BLOCK_PLACEHOLDERS, SIMPLE_PLACEHOLDERS, buildPack, fileUrl, fillTemplate, filesIndex, frontmatter, lockKey, lockText, nextLockEntry,
-  packContentHash, packZip, PackBuildError, validateRoleKit, type PackInput, type RoleKit,
+  oneFileText, packContentHash, packZip, PackBuildError, validateRoleKit, type PackInput, type RoleKit,
 } from "../src/modules/packs/build.ts";
 import { PACK_LICENSE, PACK_SCHEMA, TEMPLATE_MARKER } from "../src/modules/packs/format.ts";
 import { checkRoleKitJson, getRole, listRoles, personasWithUnknownRole, validateRoles } from "../src/modules/directory/roles.ts";
@@ -413,6 +413,29 @@ test("addresses: role kit files and job skills have one shared url, the agent's 
   const index = filesIndex(pack, { zip: { url: "/packs/nova-seo.zip", bytes: 10, version: "2026.11.06" } });
   assert.equal(index.zip!.url, "/packs/nova-seo.zip");
   assert.deepEqual(index.files.map(f => f.url), pack.files.map(f => fileUrl(pack, f)));
+});
+
+test("one-file version: every file the agent reads, AGENTS.md first, in one text file for chat apps", async () => {
+  const pack = await build({ role: getRole("seo-specialist"), kit: KIT });
+  const text = oneFileText(pack, "https://agents.test/");
+  const parts = [...text.matchAll(/^===== FILE: (.+) =====$/gm)].map(m => m[1]);
+  assert.equal(parts[0], "AGENTS.md", "the AI starts with its operating instructions");
+  for (const p of ["soul.md", "personality.md", "playbook.md", "knowledge.md", "access.md", "skills.md", "LICENSE.md"]) assert.ok(parts.includes(p), p);
+  for (const p of ["README.md", "CLAUDE.md", "CHANGELOG.md", "pack.json"]) assert.ok(!parts.includes(p), `${p} is for people, not the agent`);
+  assert.ok(!parts.some(p => /^skills\/.+\/SKILL\.md$/.test(p)), "each SKILL.md is already in skills.md");
+  assert.equal(new Set(parts).size, parts.length);
+  const agents = pack.files.find(f => f.path === "AGENTS.md")!.content.trim();
+  assert.ok(text.includes(agents), "files go in whole");
+  assert.match(text, /^# Nova, .+: the whole agent in one file$/m);
+  assert.match(text, /https:\/\/agents\.test\/agents\/nova-seo/);
+  assert.ok(text.endsWith("\n") && !text.includes("\r"));
+  assert.equal(oneFileText(pack), oneFileText(pack), "the same pack gives the same bytes");
+  await assert.rejects(async () => oneFileText(await build({ kind: "train" })), PackBuildError);
+  const index = filesIndex(pack, { one_file: { url: "/packs/nova-seo.txt", bytes: 9, version: "2026.11.06" } });
+  assert.equal(index.one_file!.url, "/packs/nova-seo.txt");
+  const readme = pack.files.find(f => f.path === "README.md")!.content;
+  assert.match(readme, /\/packs\/nova-seo\.txt/, "the README points chat users to the one file");
+  assert.doesNotMatch(readme, /hosted agent|Hire Nova instead/, "agents run in the person's own AI, never on ours");
 });
 
 // ---------- Roles ----------

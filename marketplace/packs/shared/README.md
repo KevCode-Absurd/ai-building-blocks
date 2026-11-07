@@ -20,7 +20,9 @@ Your AI reads AGENTS.md first, because it explains who the agent is, which file 
 
 ## Use it in your AI
 
-Unzip the pack first, then choose your tool from the sections below. Each section ends with a first message that you can copy and paste, after replacing the part in square brackets with a sentence or two about your own job.
+The quickest start in ChatGPT, Claude or Gemini is the one-file version at {{one_file_url}}. It holds everything {{name}} needs in a single text file. Attach it to a new chat, then send: "You are {{name}}. The file I attached holds your instructions, method and knowledge. Read it and follow it, starting with its AGENTS.md part." Step-by-step help for each app is on {{name}}'s profile page, under "Start {{name}} in your AI".
+
+To use the whole folder instead, unzip the pack first, then choose your tool from the sections below. Each section ends with a first message that you can copy and paste, after replacing the part in square brackets with a sentence or two about your own job.
 
 If your tool limits how many files you can add, start with soul.md, personality.md, playbook.md, knowledge.md and access.md, because together they hold the agent's character, method and expertise. After that, add the skills you expect to use most often.
 
@@ -95,17 +97,15 @@ First message, in the Agent chat:
 Read AGENTS.md and follow it. You are {{name}}. Here is my job: [describe it]. Ask me only what you still need, then show me your plan before you start.
 ```
 
-## Hire {{name}} instead
+## Load {{name}} without a download
 
-If you would rather hand the whole job over, you can hire {{name}} on AI Blocks at {{profile_url}}. The hosted agent does the work for you and shows you the plan, the progress and the finished result along the way. When this version of the pack was published, hiring was free.
-
-You can also hire {{name}} from inside your own AI by adding this address as a connector, which some applications call an MCP server: {{mcp_url}}
+You can also load {{name}} straight into your own AI by adding this address as a connector, which some applications call an MCP server: {{mcp_url}}. Your AI then loads the newest version of {{name}} each time, and {{name}} still works on your own AI plan.
 
 - **Claude:** open Settings, then Connectors, choose "Add custom connector", and paste in the address above.
 - **Claude Code:** run `claude mcp add --transport http ai-blocks-agents {{mcp_url}}`, then run /mcp inside Claude Code and follow the steps to sign in.
 - **ChatGPT, Cursor and other applications:** follow the step-by-step instructions at https://agents.useaiblocks.com/connect
 
-Once you are connected, ask your AI something like "Ask {{name}} to [describe your job]", and it will show you the plan before any work begins.
+Once you are connected, ask your AI something like "Load {{name}} from AI Blocks and work as {{name}}", then describe your job.
 
 ## Find more in the library
 

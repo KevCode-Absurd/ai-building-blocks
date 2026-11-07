@@ -12,6 +12,7 @@
 // For every live house persona the build writes (URLs are the same paths under the site):
 //   dist/packs/<id>.zip                    "Download this agent"
 //   dist/packs/<id>-train.zip              "Train your own"
+//   dist/packs/<id>.txt                    the whole agent in one file, for chat apps ("Start in your AI")
 //   dist/packs/<id>/<path>                 the agent's own files of its pack (browsable copy)
 //   dist/packs/<id>/files.json             every file of the pack with its url, bytes, purpose and kind, plus the zips
 //   dist/packs/roles/<role-id>/<path>      each ready role kit, once: its files as they stand, plus sources.md and
@@ -29,7 +30,7 @@ import { housePersonas } from "../src/modules/directory/index.ts";
 import { listJobTypes } from "../src/modules/catalogue/index.ts";
 import { checkRoleKitJson, getRole, listRoles, personasWithUnknownRole } from "../src/modules/directory/roles.ts";
 import {
-  buildPack, fileUrl, filesIndex, lockKey, lockText, nextLockEntry, normalizeText, packContentHash, packZip, PackBuildError,
+  buildPack, fileUrl, filesIndex, lockKey, lockText, nextLockEntry, normalizeText, oneFileText, packContentHash, packZip, PackBuildError,
   RESERVED_PACK_PATHS, validateRoleKit,
 } from "../src/modules/packs/build.ts";
 import { validateMegaKit } from "../src/modules/packs/mega.ts";
@@ -237,7 +238,9 @@ async function buildOne(persona) {
   const [agentZip, trainZip] = await Promise.all([packZip(agent), packZip(train)]);
   writeFileSync(path.join(OUT, `${persona.id}.zip`), agentZip);
   writeFileSync(path.join(OUT, `${persona.id}-train.zip`), trainZip);
-  fileCount += 2;
+  const oneFile = Buffer.from(oneFileText(agent), "utf8");
+  writeFileSync(path.join(OUT, `${persona.id}.txt`), oneFile);
+  fileCount += 3;
   zipBytes += agentZip.length + trainZip.length;
   for (const f of agent.files) {
     const url = fileUrl(agent, f);
@@ -247,6 +250,7 @@ async function buildOne(persona) {
   const zips = {
     zip: { url: `/packs/${persona.id}.zip`, bytes: agentZip.length, version: agent.manifest.version },
     train_zip: { url: `/packs/${persona.id}-train.zip`, bytes: trainZip.length, version: train.manifest.version },
+    one_file: { url: `/packs/${persona.id}.txt`, bytes: oneFile.length, version: agent.manifest.version },
   };
   writeAt(`/packs/${persona.id}/files.json`, `${JSON.stringify(filesIndex(agent, zips), null, 2)}\n`);
   if (agent.manifest.knowledge.status === "pending") pending++;
@@ -263,6 +267,7 @@ async function buildOne(persona) {
     files_url: `/packs/${persona.id}/files.json`,
     agent_zip: zips.zip,
     train_zip: zips.train_zip,
+    one_file: zips.one_file,
   };
 }
 

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { CATEGORIES, GUIDES, ORDER, blogIndexHtml, blogPostHtml, readingMinutes, sections } from '../src/lib/blog.mjs';
+import { CATEGORIES, GUIDES, GUIDE_SECTIONS, ORDER, blogIndexHtml, blogPostHtml, guidesIndexHtml, readingMinutes, sections } from '../src/lib/blog.mjs';
 import { grade } from '../../tools/readability.mjs';
 
 const DIR = new URL('../src/content/blog/', import.meta.url);
@@ -86,4 +86,18 @@ test('the index lists every article and every guide, and each article page links
     // BlogPage reads the first article's text back from the built page between these markers, so it draws without moving.
     assert.ok(page.includes(`<!--post-body-->${bodies.get(p.slug)}<!--/post-body-->`), `${p.slug}: body markers`);
   }
+});
+
+test('the guides page lists every "Use AI Blocks well" article and the setup guides, each once', () => {
+  const html = guidesIndexHtml(posts);
+  const own = posts.filter(p => p.category === 'Use AI Blocks well').map(p => p.slug).sort();
+  const listed = GUIDE_SECTIONS.flatMap(s => s.items);
+  assert.deepEqual(listed.filter(k => !k.startsWith('/')).sort(), own, 'every guide article is on /guides');
+  for (const k of listed) {
+    const href = k.startsWith('/') ? k : `/blog/${k}`;
+    assert.equal(html.split(`href="${href}"`).length - 1, 1, `${href} appears once`);
+    if (k.startsWith('/')) assert.ok(GUIDES.some(g => g.href === k), `${k} is a known guide`);
+  }
+  assert.equal((html.match(/<h1/g) ?? []).length, 1);
+  assert.ok(html.includes('href="/blog"'));
 });

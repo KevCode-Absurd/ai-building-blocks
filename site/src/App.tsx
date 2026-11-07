@@ -55,7 +55,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   if (["/api-and-mcp", "/api-and-mcp.html"].includes(path)) return "docs";
   if (path === "/me-md") return "memd";
   if (path === "/train-your-own-ai-agent") return "agentguide";
-  if (path === "/blog" || path.startsWith("/blog/")) return "blog";
+  if (path === "/blog" || path.startsWith("/blog/") || path === "/guides") return "blog";
   if (["/publish", "/my-submissions", "/admin/review", "/community"].includes(path) || path.startsWith("/community/")) return "community";
   if (["/account", "/sign-up", "/sign-in"].includes(path)) return "account";
   if (path === "/tools/growth-channel-planner") return "traction";
@@ -227,7 +227,7 @@ export default function App() {
   // Sign-in, community and calculator pages never show catalogue items. My account names the skills in saved
   // kits, so it waits for kits and then needs only the small list index (4 MB less for most visitors).
   const hasKits = useStore(s => s.kits.length > 0);
-  const needsCatalogue = !infoPage(path) && !isOutcomePath(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md", "/train-your-own-ai-agent", "/blog", "/sign-in", "/sign-up", "/community", "/publish", "/my-submissions", "/admin/review"].some((p) => path === p || path.startsWith(`${p}/`)) && (path !== "/account" || hasKits);
+  const needsCatalogue = !infoPage(path) && !isOutcomePath(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md", "/train-your-own-ai-agent", "/blog", "/guides", "/sign-in", "/sign-up", "/community", "/publish", "/my-submissions", "/admin/review"].some((p) => path === p || path.startsWith(`${p}/`)) && (path !== "/account" || hasKits);
   const listTier = path === "/" || (path === "/account" && !kitsOpen);
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
@@ -323,7 +323,7 @@ export default function App() {
             <MeMdPage />
           ) : path === "/train-your-own-ai-agent" ? (
             <TrainAgentPage />
-          ) : path === "/blog" || path.startsWith("/blog/") ? (
+          ) : path === "/blog" || path.startsWith("/blog/") || path === "/guides" ? (
             <BlogPage key={path} path={path} />
           ) : path === "/how-it-works" ? (
             <HowItWorks toast={setToast} />

@@ -11,6 +11,7 @@ export const BLOG_DESCRIPTION = "Plain, step-by-step guides to using ChatGPT, Cl
 
 export const CATEGORIES = [
   { id: "get-started", name: "Get started with AI", line: "Prompts, skills, agents and context: the basics of getting good work from your AI." },
+  { id: "use-ai-blocks", name: "Use AI Blocks well", line: "Put a team of AI experts on a job, run a council, get real variety, and use each kind of block well." },
   { id: "ads", name: "Ads and marketing", line: "Ad copy, tests, video scripts, product photos and Google Ads." },
   { id: "web", name: "Websites and search", line: "Landing pages, product pages, SEO and getting found in AI search." },
   { id: "content", name: "Email, social and content", line: "Welcome emails, cold emails, social posts and turning one piece into many." },
@@ -38,6 +39,8 @@ export const ORDER = [
   "chatgpt-prompts-for-work", "ai-prompts-vs-skills-vs-workflows", "give-ai-context-about-your-business", "make-ai-writing-sound-like-you",
   "stop-ai-making-things-up", "how-to-use-claude-skills", "what-is-mcp", "build-ai-workflow-without-code", "ai-agents-for-small-business",
   "analyse-spreadsheet-with-ai",
+  "ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai", "use-ai-blocks-skills", "use-ai-blocks-workflows", "use-ai-blocks-prompts",
+  "hire-ai-specialists", "use-ai-minds",
   "facebook-ad-copy-with-ai", "why-facebook-ads-stopped-working", "plan-ad-creative-tests", "video-ad-script-template", "turn-reviews-into-ads",
   "ai-product-photos", "google-ads-with-ai",
   "landing-page-checklist", "product-descriptions-that-sell", "seo-content-with-ai", "get-found-in-ai-search",
@@ -108,6 +111,40 @@ ${CATEGORIES.map(c => {
     if (!items.length) return "";
     return `<section class="blog-topic" id="${c.id}" aria-labelledby="${c.id}-h"><h2 id="${c.id}-h">${esc(c.name)}</h2><p class="blog-topic-line">${esc(c.line)}</p><ul class="blog-cards">${items.map(card).join("")}</ul></section>`;
   }).join("\n")}
+</div>`;
+}
+
+// /guides: how to get the best work from AI Blocks. The guides are blog articles (category "Use AI Blocks well") plus
+// the setup guides that live at their own address; this page gathers them in reading order.
+export const GUIDES_PATH = "/guides";
+export const GUIDES_TITLE = "Guides to getting the best work from AI Blocks";
+export const GUIDES_DESCRIPTION = "How to put a team of AI experts on one job, run an AI council, get real variety, and use skills, workflows, prompts, specialists and minds well.";
+export const GUIDE_SECTIONS = [
+  { id: "team", name: "Work like a team of experts", line: "Get several specialists on one job, make them argue it out, and ask for real variety instead of one idea twenty times.",
+    items: ["ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai"] },
+  { id: "blocks", name: "Use each kind of block", line: "What each part of the library is for, and how to get the most from it in ChatGPT, Claude or Gemini.",
+    items: ["use-ai-blocks-skills", "use-ai-blocks-workflows", "use-ai-blocks-prompts", "hire-ai-specialists", "use-ai-minds"] },
+  { id: "setup", name: "Set up your AI", line: "Connect your AI once, tell it who you are, and train it to do a job your way.",
+    items: ["/how-it-works", "/api-and-mcp", "/me-md", "/train-your-own-ai-agent"] },
+];
+
+/** The guides page: each section with its guides, then a link to everything else in the blog. */
+export function guidesIndexHtml(posts) {
+  const bySlug = new Map(posts.map(p => [p.slug, p]));
+  const byHref = new Map(GUIDES.map(g => [g.href, g]));
+  const pick = (key) => (key.startsWith("/") ? byHref.get(key) : bySlug.get(key));
+  return `<div class="blog-index guides-index">
+<header class="blog-hero">
+<p class="eyebrow">Guides</p>
+<h1>${esc(GUIDES_TITLE)}</h1>
+<p class="lede">AI Blocks gives your AI more than one way to do a job: over a thousand specialists, hundreds of minds and thousands of skills, workflows and prompts. These guides show how to use them like a team, so you get better work, real choices and fewer surprises.</p>
+<nav class="blog-topics" aria-label="Sections">${GUIDE_SECTIONS.map(s => `<a href="#${s.id}">${esc(s.name)}</a>`).join("")}</nav>
+</header>
+${GUIDE_SECTIONS.map(s => {
+    const items = s.items.map(pick).filter(Boolean);
+    return `<section class="blog-topic" id="${s.id}" aria-labelledby="${s.id}-h"><h2 id="${s.id}-h">${esc(s.name)}</h2><p class="blog-topic-line">${esc(s.line)}</p><ul class="blog-cards">${items.map(card).join("")}</ul></section>`;
+  }).join("\n")}
+<p class="post-back"><a href="${BLOG_PATH}">All articles and guides in the blog</a></p>
 </div>`;
 }
 

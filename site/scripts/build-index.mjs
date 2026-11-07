@@ -503,9 +503,10 @@ if (fs.existsSync(aiToolsRoot)) {
 // The blog (src/content/blog, src/lib/blog.mjs): its own sitemap, each article dated by its updated or published day.
 const blogPosts = fs.existsSync("src/content/blog") ? fs.readdirSync("src/content/blog").filter((f) => f.endsWith(".json")).sort().map((f) => JSON.parse(fs.readFileSync(path.join("src/content/blog", f), "utf8"))) : [];
 if (blogPosts.length) {
-  SITEMAPS.blog = ["/blog", ...blogPosts.map((p) => `/blog/${p.slug}`)];
+  SITEMAPS.blog = ["/blog", "/guides", ...blogPosts.map((p) => `/blog/${p.slug}`)];
   for (const p of blogPosts) lastmod[`/blog/${p.slug}`] = p.updated ?? p.published ?? "2026-11-05";
   lastmod["/blog"] = newest(blogPosts.map((p) => lastmod[`/blog/${p.slug}`]));
+  lastmod["/guides"] = newest(blogPosts.filter((p) => p.category === "Use AI Blocks well").map((p) => lastmod[`/blog/${p.slug}`]));
 }
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
 for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, sitemapUrlset(us, lastmod));

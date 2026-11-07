@@ -16,7 +16,7 @@ for (const tag of ["", "@mobile "]) {
     const menu = page.getByTestId('site-menu');
     await expect(menu.getByRole('link').filter({ visible: true }).first()).toBeFocused();
     // The grouped menu reaches every main page; on a laptop the five in the header are left out of it.
-    for (const label of ['My work', 'Account settings', 'Sign in', 'AI tool guides', 'AI help by business', 'Get a whole job done', 'Turn an article or video into a workflow', 'Turn a workflow into an app', 'Train your own AI agent', 'Plan an AI team', 'Connect your AI', 'Your me.md file', 'Team space', 'How it works', 'How we test', 'Documentation', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
+    for (const label of ['My work', 'Account settings', 'Sign in', 'AI tool guides', 'AI help by business', 'Get a whole job done', 'Turn an article or video into a workflow', 'Turn a workflow into an app', 'Train your own AI agent', 'Plan an AI team', 'Connect your AI', 'Your me.md file', 'Team space', 'Guides', 'How it works', 'Documentation', 'Help & contact']) await expect(menu.getByRole('link', { name: label, exact: true })).toBeAttached();
     for (const label of main) await expect(menu.getByRole('link', { name: label, exact: true })).toHaveCount(wide ? 0 : 1);
     await page.keyboard.press('Escape'); await expect(trigger).toBeFocused(); await expect(menu).toHaveCount(0);
     await trigger.click(); await header.click({ position: { x: 4, y: 4 } }); await expect(menu).toHaveCount(0);

@@ -9,7 +9,7 @@ test("the blog lists every article and guide, and an article opens with its cont
   await page.goto("/blog");
   const blog = page.getByTestId("blog-page");
   await expect(blog.getByRole("heading", { level: 1 })).toBeVisible();
-  await expect(blog.locator('.blog-card a[href^="/blog/"]')).toHaveCount(30);
+  await expect(blog.locator('.blog-card a[href^="/blog/"]')).toHaveCount(38);
   for (const href of ["/train-your-own-ai-agent", "/me-md", "/industries", "/how-we-test"]) await expect(blog.locator(`.blog-card a[href="${href}"]`)).toHaveCount(1);
   await blog.locator('.blog-card a[href="/blog/landing-page-checklist"]').click();
   await expect(page).toHaveURL(/\/blog\/landing-page-checklist$/);
@@ -33,6 +33,20 @@ test("@mobile the menu's Blog group reaches the blog and the training guide", as
   await expect(menu.getByRole("link", { name: "Train your own AI agent", exact: true })).toHaveAttribute("href", "/train-your-own-ai-agent");
   await menu.getByRole("link", { name: "All articles and guides", exact: true }).click();
   await expect(page).toHaveURL(/\/blog$/);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+});
+
+test("the guides page gathers the AI Blocks guides and the setup guides, and is in the menu and footer", async ({ page }) => {
+  await page.goto("/guides");
+  const guides = page.getByTestId("blog-page");
+  await expect(guides.getByRole("heading", { level: 1 })).toHaveText("Guides to getting the best work from AI Blocks");
+  for (const slug of ["ai-team-of-experts", "run-an-ai-council", "get-variety-from-ai", "use-ai-blocks-skills", "use-ai-blocks-workflows", "use-ai-blocks-prompts", "hire-ai-specialists", "use-ai-minds"])
+    await expect(guides.locator(`.blog-card a[href="/blog/${slug}"]`)).toHaveCount(1);
+  for (const href of ["/how-it-works", "/api-and-mcp", "/me-md", "/train-your-own-ai-agent"]) await expect(guides.locator(`.blog-card a[href="${href}"]`)).toHaveCount(1);
+  await expect(page.locator("footer").getByRole("link", { name: "Guides", exact: true })).toHaveAttribute("href", "/guides");
+  await guides.locator('.blog-card a[href="/blog/run-an-ai-council"]').click();
+  await expect(page).toHaveURL(/\/blog\/run-an-ai-council$/);
+  await expect(guides.locator(".post-body h2").first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
 });
 

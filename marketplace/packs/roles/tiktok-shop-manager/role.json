@@ -15,12 +15,16 @@
     "tiktok shop listings",
     "tiktok shop manager"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: hero picks with margin after fees, listings, shoppable videos, LIVE run sheets, creators and samples, fulfilment and returns, FTC, ASA, CMA and EU disclosure and price rules, access levels 1 to 3, four skills, five prompts, two workflows, 28 sources. TikTok's own help pages blocked fetching, so TikTok fees and rules are read live."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Dated TikTok Shop rules added from Seller University pages, confirmed through search: US referral fee and refund administration fee, UK commission, US dispatch and tracking standards, US returns window and seller response time, US sample deadlines and US LIVE rules. UK and EU rules not confirmed stay marked [check in Seller Center]."
     }
   ]
 }

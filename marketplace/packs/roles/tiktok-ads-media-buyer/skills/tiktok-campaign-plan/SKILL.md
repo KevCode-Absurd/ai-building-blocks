@@ -39,7 +39,7 @@ description: Plan a paid TikTok campaign with a test phase and a scale phase. Wo
 ### 3. Choose Smart+ or manual
 - **Smart+** when tracking works, the shop has enough orders for the system to learn, and there is a steady supply of creative. Use its previews to check every creative combination, and draft mode for level 2 work.
 - **Manual** when you need a clean answer to one question, the client insists on a constraint, or tracking is not trusted yet.
-- Read the current objective and bid options in Ads Manager; they could not be confirmed from TikTok's pages for this kit.
+- Pick the objective for the action the business is paid for: Reach for awareness; Traffic, Video views or Community interaction for consideration; App promotion, Lead generation or Sales for conversion (TikTok's list, checked 7 Nov 2026). Name the attribution window (default 7-day click, 1-day view) in the plan.
 
 ### 4. Plan the creative
 - Three to five hooks, each named ("Shelf drop", "Morning routine"), written for different awareness levels, not one hook reworded.
@@ -54,8 +54,9 @@ description: Plan a paid TikTok campaign with a test phase and a scale phase. Wo
 - Every budget is a proposal. The client sets the cap.
 
 ### 6. Rules check
-- Teen targeting: in the US, only broad options (location, language, device). In the EU, no targeted ads to children.
-- Restricted products: read the current TikTok policy in Ads Manager before planning.
+- Teen targeting: when under-18s are in the audience, only broad options (age, location, language, device). In the EU, no targeted ads to children.
+- Restricted products: read TikTok's ad policy handbook for each market before planning.
+- Files: 9:16, MP4 or MOV, up to 500 MB, with sound; text inside TikTok's safe-zone files.
 - Creator content: agreement, approved fee and in-video disclosure.
 
 ### 7. Launch checklist
@@ -67,7 +68,7 @@ Tracking tested, identity linked in Business Center, creative approved, AI discl
 - No benchmark numbers that are not from the client or a dated source.
 - At least three distinct hooks with names and kill rules.
 - Steps that need level 2 or 3 are marked.
-- Anything unconfirmed from TikTok's own pages is marked "check in Ads Manager".
+- Every TikTok rule used carries its check date; anything that differs on screen is marked "check in Ads Manager".
 
 ## Output format
 

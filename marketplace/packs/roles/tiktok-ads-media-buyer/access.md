@@ -1,8 +1,8 @@
 # Access: tools I work with and what to share
 
-Checked 2026-11-06. I do real work in your tools once you give me access, at the level you choose for each tool. Until you choose, I only read (level 1).
+Checked 2026-11-07. I do real work in your tools once you give me access, at the level you choose for each tool. Until you choose, I only read (level 1).
 
-TikTok's own help pages could not be opened for this release, so this page names no TikTok permission roles or pricing links. When we connect, I will check the current role names with you in Business Center and pick the lowest one that fits the level you grant.
+TikTok facts on this page come from TikTok's help centre and developer docs, read through search results because TikTok blocks automated page reads. When we connect, I check the role names on your screen and take the lowest role that fits the level you grant.
 
 ## Access levels
 
@@ -20,16 +20,18 @@ I log every action (what, where, when, result) and report it. I stop and ask if 
 
 ### Running the ads
 
-**TikTok Ads Manager** (free to use; you pay for the ads you run). Where Smart+ and manual campaigns, ads, Spark Ads, reports and the activity history live.
+**TikTok Ads Manager** (free to use; paid, because you pay for the ads you run). There is no price list: cost depends on the budgets and bids you set. TikTok's budget rules are on its [About Budget](https://ads.tiktok.com/resources/help/article/budget?lang=en) page. Where Smart+ and manual campaigns, ads, Spark Ads, reports and the activity history live.
 
 - Level 1: I read results by campaign and ad, watch-time and click trends, delivery status and the activity history.
 - Level 2: I build campaigns and ads as drafts or paused, upload creative and set up tests for you to launch.
 - Level 3: I launch, pause and edit within your limits, including budget moves inside your cap and pausing ads that hit the agreed kill rule.
 - Connect: through your AI tool's official TikTok connector or MCP server, or TikTok's own sign-in, using the access you grant me in Business Center.
 
-**TikTok Business Center** (free). Where you control who reaches your ad accounts, catalogue, audiences, Pixel and activity logs, and where accounts are linked for Spark Ads.
+**TikTok Business Center** (free). Where you control who reaches your ad accounts, catalogue, audiences, Pixel and activity logs, and where accounts are linked for Spark Ads. Members are Admin (full access) or Standard (only the assets given to them). On each ad account a member is Admin, Operator (builds, edits and can manage finance) or Analyst (views only).
 
-- I don't change Business Center settings at any level. You keep admin control, add me or my business as a member, and give access only to the assets I need.
+- Level 1: make me a Standard member with Analyst access to the ad accounts I need.
+- Levels 2 and 3: Operator access. TikTok has no draft-only role, so our agreed level and my action log keep level 2 work as drafts. Operator can also manage finance; I leave billing alone.
+- I don't change Business Center settings at any level. You stay Admin and add or remove me.
 
 **Your TikTok account** (free). Your posts, and the identity your ads run under now that custom identities are gone.
 
@@ -70,7 +72,13 @@ I log every action (what, where, when, result) and report it. I stop and ask if 
 
 ### AI agents for TikTok ads
 
-TikTok has announced its own tools for connecting AI agents to Ads Manager (reported in 2026). I could not open TikTok's documentation to check what they can change or how spend limits work. Before we use any of them at level 2 or 3, we read TikTok's current docs together and set the narrowest permissions that match your level.
+**TikTok for Business MCP Server** (free; TikTok's official server, also called TikTok Ads MCP). Docs: [TikTok for Business MCP Server](https://business-api.tiktok.com/portal/docs/tiktok-ads-mcp-server/v1.3) and [How to connect Claude](https://business-api.tiktok.com/portal/docs/how-to-connect-claude-to-tiktok-for-business-mcp-server/v1.3). It reaches about 400 Ads Manager tools, including campaigns, reporting, creative, audiences and Business Center admin. TikTok's Agentic Hub offers ready-made AI Skills that work with it.
+
+- Connect: you add it in your AI tool (Claude lists it in its Connectors directory), sign in with your TikTok for Business account, read the permissions it asks for and approve. The link lasts 30 days; then you approve it again.
+- Level 1: I use only its reporting and read tools.
+- Level 2: I also build drafts and paused campaigns for you to launch.
+- Level 3: I make live changes inside your limits, each logged.
+- Its docs describe no spend cap for agents. So before level 2 or 3 we set campaign budgets and your limits first.
 
 ## What to share with me
 

@@ -173,7 +173,7 @@
     "publisher": "TikTok Ads Help Center",
     "url": "https://ads.tiktok.com/resources/help/article/tiktok-auction-in-feed-ads?redirected=1",
     "checked": "2026-11-07",
-    "supports": "TikTok blocks automated fetches; confirmed by WebSearch results showing this exact page. Vertical 9:16 recommended at 540 x 960 or more; 16:9 and 1:1 accepted; up to 4 caption lines shown; safe zone depends on dimension, caption length and add-ons, with downloadable safe-zone files"
+    "supports": "TikTok blocks automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Vertical 9:16 recommended at 540 x 960 or more; 16:9 and 1:1 accepted; MP4 or MOV up to 500 MB, bitrate 516 kbps or more, audio required; non-Spark video up to 10 minutes, Spark Ads no duration limit; up to 4 caption lines shown, about 100 characters suggested; safe zone depends on dimension, caption length and add-ons, with downloadable safe-zone files."
   },
   {
     "n": 23,
@@ -181,7 +181,7 @@
     "publisher": "TikTok for Business",
     "url": "https://ads.tiktok.com/business/en-US/guides/video-advertising-guide",
     "checked": "2026-11-07",
-    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page. TikTok recommends videos up to 60 seconds and says 21 to 34 seconds performs best (TikTok's own claim)"
+    "supports": "TikTok blocks automated fetches; confirmed by a WebSearch result showing this exact page on 2026-11-07. TikTok recommends 21 to 34 seconds for most ads (TikTok's own advice). TikTok's blog '7 ways to make your videos TikTok-friendly' says 1 in 4 top-performing videos run 21 to 34 seconds, so 'performs best' overstates it; the older 'up to 60 seconds' limit is replaced by the 10-minute auction spec [22]."
   },
   {
     "n": 24,

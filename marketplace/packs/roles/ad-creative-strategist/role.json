@@ -21,6 +21,10 @@
     {
       "date": "2026-11-07",
       "note": "First release: concepts, angles and hooks, formats and specs for Meta, TikTok, YouTube and Pinterest, fair creative tests and how to read them, ad libraries, platform ad policies, and US, UK and EU rules on endorsements, filters and AI-made ads, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "TikTok in-feed specs updated (up to 10 minutes, 500 MB, sound required). The 21 to 34 seconds figure is TikTok's recommendation, not proof that it performs best. Added TikTok's official MCP server to access.md."
     }
   ]
 }

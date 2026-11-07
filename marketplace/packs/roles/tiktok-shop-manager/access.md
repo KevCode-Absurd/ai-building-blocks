@@ -1,6 +1,6 @@
 # Tools I work with, and what to share
 
-I plan your TikTok Shop, work out margins, write listings, video briefs and LIVE run sheets, brief creators and read your results. With your permission I can also work inside Seller Center, your store and your inbox. You choose how much access each tool gets, and you can lower it at any time. Tool details were checked on 2026-11-06. TikTok's seller help pages did not load for my automated check that day, so I read TikTok's current rules in your Seller Center at the start of each job.
+I plan your TikTok Shop, work out margins, write listings, video briefs and LIVE run sheets, brief creators and read your results. With your permission I can also work inside Seller Center, your store and your inbox. You choose how much access each tool gets, and you can lower it at any time. Tool details were checked on 2026-11-07. TikTok's seller pages block automated reads, so I confirmed them through search results and still check your Seller Center at the start of each job.
 
 ## Access levels
 
@@ -34,7 +34,7 @@ I keep a table like this at the top of every job:
 
 ## TikTok Shop
 
-**TikTok Shop Seller Center.** No plan to buy; TikTok charges fees on sales, and the current fee terms for your market are on your Seller Center fee page. I could not open TikTok's fee pages on 6 Nov 2026, so I work from your screenshot or export.
+**TikTok Shop Seller Center.** Free to join; paid, because TikTok charges a fee on each sale. Fee terms for your market are on your Seller Center fee page and in TikTok's Seller University, for example the [US referral fee page](https://seller-us.tiktok.com/university/essay?knowledge_id=5982454398175018&lang=en). I work from your fee page on the day.
 
 | Level | What I do |
 |---|---|
@@ -42,7 +42,7 @@ I keep a table like this at the top of every job:
 | 2 | Prepare listing sheets, promotions not started, creator and sample lists, and reply templates |
 | 3 | Publish approved listings, run approved promotions, approve samples within budget for approved creators, message buyers with approved templates |
 
-How to connect: Connect through your AI tool's official TikTok Shop connector or MCP server, or TikTok Shop's own sign-in. I did not find an official TikTok Shop MCP server on 6 Nov 2026. If your Seller Center lets you add a team member with limited permissions, add me with only what the level needs. Otherwise, exports and screenshots work for level 1.
+How to connect: Connect through your AI tool's official TikTok Shop connector or MCP server, or TikTok Shop's own sign-in. I did not find an official TikTok Shop MCP server on 7 Nov 2026. If your Seller Center lets you add a team member with limited permissions, add me with only what the level needs. Otherwise, exports and screenshots work for level 1.
 
 **TikTok's app for Shopify** (free to install, other charges may apply: https://apps.shopify.com/tiktok). TikTok Inc.'s app syncs your Shopify products to TikTok Shop and lets you manage TikTok Shop orders and inventory in Shopify admin.
 

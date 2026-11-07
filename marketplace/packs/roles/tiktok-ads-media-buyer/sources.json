@@ -33,22 +33,6 @@
   },
   {
     "n": 5,
-    "title": "TikTok Phases Out Its Custom Identity Option for Advertisers",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktoks-phasing-out-its-custom-identity-option-for-advertisers/809002/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 7 January 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. Custom Identity removed by early 2026 (announced October 2025), so ads run from a TikTok account; link accounts in Business Center for Spark Ads; Spark Ads promote existing organic posts under the brand identity; TikTok's own figure that 59.3% of advertisers saw cost per acquisition fall at least 10% after linking."
-  },
-  {
-    "n": 6,
-    "title": "TikTok Launches New Spark Ads Which Enabled Brands to Tap into Trending Organic Content",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-launches-new-spark-ads-which-enabled-brands-to-tap-into-trending-o/603671/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 20 July 2021, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. Launch of Spark Ads: brands sponsor existing organic videos, their own or creators' after contacting the creator, as in-feed or TopView ads."
-  },
-  {
-    "n": 7,
     "title": "TikTok adds new AI creation tools for marketers",
     "publisher": "Social Media Today (trade summary)",
     "url": "https://www.socialmediatoday.com/news/tiktok-adds-new-ai-creation-tools-for-marketers/823463/",
@@ -56,15 +40,103 @@
     "supports": "Opened with WebFetch. 22 June 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. Symphony Agent builds video campaigns from trending examples or campaign details using Seedance 2.0, writes creator briefs and invites creators; avatars, dubbing and translation in Symphony Creative Studio; results vary."
   },
   {
+    "n": 6,
+    "title": "How to choose the right objective in TikTok Ads Manager",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/choose-right-objective",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Objectives in three groups: Awareness (Reach), Consideration (Traffic, Video views, Community interaction for followers, profile visits and LIVE), Conversion (App promotion, Lead generation, Sales from TikTok Shop, a website or an app)."
+  },
+  {
+    "n": 7,
+    "title": "TikTok Auction In-Feed Ads (specifications)",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Vertical 9:16 recommended at 540 x 960 or more, 16:9 and 1:1 accepted; MP4 or MOV; up to 500 MB; bitrate 516 kbps or more; must have audio; non-Spark video up to 10 minutes, Spark Ads no duration limit; caption up to 4 lines, about 100 characters suggested, links not clickable; display name up to 20 characters in most languages; safe zone depends on shape, caption length and add-ons, with downloadable files."
+  },
+  {
     "n": 8,
-    "title": "TikTok launches Agentic Hub",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-launches-agentic-hub/824169/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 30 June 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. A hub of AI Skills from TikTok and partners (HubSpot, Wix, Constant Contact, Mobvista) for campaign creation, creative, catalogues and audience insight, integrated with TikTok's MCP server; no detail on permissions."
+    "title": "Ad Policy Handbook: North America",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/ad-policy-handbook-north-america?lang=en",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Industries sorted as Prohibited, Restricted or Allowed; some prohibited in all markets (the global list includes animals and animal products, adult products and services, gambling, tobacco, drugs, weapons, counterfeits and political content); restricted industries allowed in some markets on conditions (18+ age targeting, certificates, required information); each country or region adds its own list. Global list cross-checked against TikTok's SEA/NEA and AU/NZ handbooks in the same searches."
   },
   {
     "n": 9,
+    "title": "About the attribution window on TikTok Ads Manager",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/about-the-attribution-window-on-tiktok-ads-manager",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Click-through windows of 1, 7, 14 or 28 days; view-through of 1 or 7 days or off. Default of 7-day click and 1-day view for Pixel and Web Events API advertisers, as shown in search results for this page and TikTok's ad-group attribution page."
+  },
+  {
+    "n": 10,
+    "title": "Still Using Custom Identity? Transition To A TikTok F.I.R.S.T. Presence",
+    "publisher": "TikTok for Business (blog)",
+    "url": "https://ads.tiktok.com/business/en/blog/custom-identity-transition",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. January 2026. Custom Identity phased out in early 2026; new campaigns launch from a verified TikTok profile linked in Business Center; TikTok's backend tests found 59.3% of advertisers saw cost per acquisition fall by at least 10% after linking accounts (TikTok's claim)."
+  },
+  {
+    "n": 11,
+    "title": "How to create Spark Ads for Manual and Search Campaigns in TikTok Ads Manager",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/spark-ads-creation-guide",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Creator turns on ad authorisation in the post's Ad settings, picks 7, 30, 60 or 365 days and generates a code; advertiser uses Tools, Creative library, Spark ads posts, Apply for Authorization and pastes the code; up to 20 codes at once; Duets and Stitches need codes from both creators; extend only before the code expires."
+  },
+  {
+    "n": 12,
+    "title": "About account and asset level permissions",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/about-assets-and-asset-level-permissions",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Business Center basic roles Admin (full access) and Standard (assigned assets only); only Admins assign permissions; ad account permissions Admin (finance, settings, permissions, campaigns), Operator (finance, create and edit campaigns, view performance), Analyst (view ads and performance)."
+  },
+  {
+    "n": 13,
+    "title": "TikTok for Business MCP Server",
+    "publisher": "TikTok API for Business (developer docs)",
+    "url": "https://business-api.tiktok.com/portal/docs/tiktok-ads-mcp-server/v1.3",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Official MCP server (TikTok Ads MCP): about 400 tools across campaigns, reporting, catalogues, creative, audiences and Business Center admin; full and progressive (about 40 core tools) addresses; authorise with a TikTok for Business account after reviewing requested permissions; no developer account needed; valid 30 days, then reauthorise; Claude Connectors directory version omits some tools such as finance management; TikTok's Agentic Hub of AI Skills works with it. No agent spend cap described."
+  },
+  {
+    "n": 14,
+    "title": "Enhancing Privacy and Control: New Ad Experience and Tools for TikTok Users and Advertisers",
+    "publisher": "TikTok for Business (blog)",
+    "url": "https://ads.tiktok.com/business/en-US/blog/enhancing-privacy-control-advertisers-users",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. Undated in search; about 856 days old on 2026-11-07, which puts it in July 2024 (trade reports of the change are dated July 2024). Starting 30 June, no personalised targeting of US users aged 13 to 17, only broad options such as location, language and device; a disclosure tool for AI-generated ad content."
+  },
+  {
+    "n": 15,
+    "title": "About advertising to people under the age of 18",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/about-advertising-to-people-under-the-age-of-18",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. When an audience includes under-18s in listed regions (versions list North America or the USA and Canada, Latin America, the EEA, Switzerland and the UK), detailed options such as gender, interests, household income and zip code are removed; age, language, country or city location and device (not device price) remain."
+  },
+  {
+    "n": 16,
+    "title": "About ad disclaimers in TikTok Ads Manager",
+    "publisher": "TikTok Ads Help Center",
+    "url": "https://ads.tiktok.com/help/article/about-ad-disclaimers-in-tiktok-ads-manager",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. AI-generated, synthetic or manipulated media is a mandatory disclaimer category (wholly AI-made images, video or audio, or real material significantly modified by AI); self-disclosure toggle 'This ad contains AI-generated content', which cannot be changed after submission unless the video or image changes."
+  },
+  {
+    "n": 17,
+    "title": "Content Policy (TikTok Shop US)",
+    "publisher": "TikTok Shop Seller University",
+    "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=6837891779151617&lang=en",
+    "checked": "2026-11-07",
+    "supports": "TikTok refuses automated fetches; confirmed by WebSearch results showing this exact page on 2026-11-07. LIVEs may not use AI-generated voices, pre-recorded clips or screen recordings; giveaways only through the official LIVE Giveaway feature; no links or calls to action that send viewers off TikTok Shop."
+  },
+  {
+    "n": 18,
     "title": "gtm-template-pixel: template.tpl",
     "publisher": "TikTok (official GitHub repository)",
     "url": "https://raw.githubusercontent.com/tiktok/gtm-template-pixel/main/template.tpl",
@@ -72,7 +144,7 @@
     "supports": "Opened with WebFetch (TikTok's own Google Tag Manager web template; repository updated 8 September 2026). Maps GA4 events to Pixel events (purchase to CompletePayment, sign_up to CompleteRegistration, begin_checkout to InitiateCheckout, view_item to ViewContent); passes an event_id for deduplication with the Events API; ttq.identify for advanced matching, with the Pixel hashing plain email and phone; needs the TikTok base code; no consent logic visible in the template."
   },
   {
-    "n": 10,
+    "n": 19,
     "title": "gtm-template-eapi: template.tpl",
     "publisher": "TikTok (official GitHub repository)",
     "url": "https://raw.githubusercontent.com/tiktok/gtm-template-eapi/main/template.tpl",
@@ -80,15 +152,7 @@
     "supports": "Opened with WebFetch (TikTok's own server-side Google Tag Manager template; repository updated 30 May 2024). Sends to the Events API v1.3 endpoint with an access token header; event_id for deduplication; reads ttclid from the URL and stores it in a first-party cookie for 30 days; reads the _ttp cookie; lowercases, trims and SHA-256 hashes email and phone; hashes external_id; test_event_code; server containers only."
   },
   {
-    "n": 11,
-    "title": "TikTok for WooCommerce",
-    "publisher": "WooCommerce (partner documentation)",
-    "url": "https://woocommerce.com/document/tiktok-for-woocommerce/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. Undated (footer 2026). Partner plugin installs the TikTok Pixel; Advanced Matching sends hashed email, phone, name and location; Business Center controls access to ad accounts, catalogue, audiences, pixel and activity logs; agencies added as members; ad reviews typically within 24 hours; catalogue ads need at least six approved products."
-  },
-  {
-    "n": 12,
+    "n": 20,
     "title": "TikTok Shares Insight Into Effective Ad Measurement Approaches",
     "publisher": "Social Media Today (trade summary)",
     "url": "https://www.socialmediatoday.com/news/tiktok-shares-insight-into-effective-ad-measurement-approaches/811130/",
@@ -96,63 +160,7 @@
     "supports": "Opened with WebFetch. 2 February 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok and Ebiquity econometrics on UK brands: TopView and Pulse 3 to 4 times the revenue per thousand impressions of Brand Auction; TopFeed about twice the impact at about twice the cost; average play duration linked to revenue per thousand impressions; advice to keep ads under 25 seconds and show the brand in the first 2 seconds."
   },
   {
-    "n": 13,
-    "title": "TikTok report explores creative AI optimization for brands",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-report-explores-creative-ai-optimization-for-brands/825239/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 19 July 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. Warc study with TikTok of 400 marketers in the UK, US, Australia and Brazil: relevance matters more than volume; AI useful for assets, weaker for scripts; use cultural signals in briefs."
-  },
-  {
-    "n": 14,
-    "title": "TikTok Implements Restrictions on Ads Targeted at Teens, New AI Disclosure Requirements",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-implements-restrictions-ads-targeted-teens-ai-disclosure/720667/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 7 July 2024, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. From 1 July 2024, US advertisers can reach teens only with broad options (location, language, device); Ads Manager self-disclosure toggle adds an AIGC label to AI-generated ads; AI avatars and virtual influencers that sell must be labelled."
-  },
-  {
-    "n": 15,
-    "title": "TikTok Will Now Label Content Created by External AI Tools",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-labels-content-created-by-ai/715720/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 9 May 2024, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok reads C2PA Content Credentials to label AI content made elsewhere, attaches Content Credentials to its own content, and already required labels on content made with its own AI effects."
-  },
-  {
-    "n": 16,
-    "title": "TikTok Adds Option To Limit AI Content in Feed",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-adds-option-to-limit-ai-content-in-your-for-you-feed/805952/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 19 November 2025, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. Users can turn AI content down in Manage Topics; TikTok requires users to label realistic AI content; testing invisible watermarks on content made with its tools."
-  },
-  {
-    "n": 17,
-    "title": "TikTok launches AI literacy measures",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-launches-ai-literacy-measures/825020/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 12 July 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok says it has labelled over 3 billion videos as AI-generated, using Content Credentials, creator labels and invisible watermarking."
-  },
-  {
-    "n": 18,
-    "title": "TikTok bans AI-generated voices in shopping livestreams",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-bans-ai-generated-voices-in-shopping-livestreams/822977/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 15 June 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok Shop LIVE rules prohibit AI-generated voices and pre-recorded audio in place of live speech."
-  },
-  {
-    "n": 19,
-    "title": "TikTok Joins European Advertising Standards Alliance",
-    "publisher": "Social Media Today (trade summary)",
-    "url": "https://www.socialmediatoday.com/news/tiktok-joins-european-advertising-standards-alliance/812399/",
-    "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. 17 February 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok joined EASA, the European body for advertising self-regulation; no specific policy changes listed."
-  },
-  {
-    "n": 20,
+    "n": 21,
     "title": "Will TikTok Change Under US Ownership?",
     "publisher": "Social Media Today (trade summary)",
     "url": "https://www.socialmediatoday.com/news/will-tiktok-change-under-its-new-us-ownership/810437/",
@@ -160,7 +168,7 @@
     "supports": "Opened with WebFetch. 25 January 2026, Andrew Hutchinson. Trade summary used because TikTok's own pages refused automated fetches on 2026-11-06. TikTok USDS Joint Venture LLC runs the US app; the recommendation algorithm is retrained on US data in Oracle's cloud; the updated US privacy policy allows on-platform data to be used for off-platform ads."
   },
   {
-    "n": 21,
+    "n": 22,
     "title": "The Digital Services Act",
     "publisher": "European Commission",
     "url": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act",
@@ -168,7 +176,7 @@
     "supports": "Opened with WebFetch. Last update 1 October 2026. Complete ban on targeted ads to children; no ad targeting on sensitive data; ads labelled with who placed them and why; very large platforms keep public ad repositories; deceptive design banned."
   },
   {
-    "n": 22,
+    "n": 23,
     "title": "Commission accepts TikTok commitments on advertising transparency under the Digital Services Act",
     "publisher": "European Commission",
     "url": "https://digital-strategy.ec.europa.eu/en/news/commission-accepts-tiktoks-commitments-advertising-transparency-under-digital-services-act",
@@ -176,7 +184,7 @@
     "supports": "Opened with WebFetch. Press release 5 December 2025, page updated 1 April 2026. TikTok committed to show full ad content and links in its ad repository, update it within 24 hours, and share targeting criteria and aggregated audience data."
   },
   {
-    "n": 23,
+    "n": 24,
     "title": "Article 50: Transparency obligations for providers and deployers of certain AI systems",
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
@@ -184,7 +192,7 @@
     "supports": "Opened with WebFetch. Text as at 27 July 2026. Providers mark synthetic audio, images and video in a machine-readable way; deployers disclose deepfakes, with lighter duties for clearly artistic or satirical work; information given clearly at first exposure."
   },
   {
-    "n": 24,
+    "n": 25,
     "title": "Timeline for the implementation of the EU AI Act",
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
@@ -192,7 +200,7 @@
     "supports": "Opened with WebFetch. Undated page reflecting the Digital Omnibus. Article 50 transparency rules apply from 2 August 2026; providers of synthetic-content systems placed on the market before then have until 2 December 2026 for Article 50(2)."
   },
   {
-    "n": 25,
+    "n": 26,
     "title": "Disclosures 101 for Social Media Influencers",
     "publisher": "US Federal Trade Commission",
     "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
@@ -200,7 +208,7 @@
     "supports": "Opened with WebFetch. November 2019. Disclose any material connection; put the disclosure in the video, spoken and on screen; plain words such as \"ad\" or \"sponsored\"; a platform disclosure tool alone may not be enough."
   },
   {
-    "n": 26,
+    "n": 27,
     "title": "Influencers' guide to making clear that ads are ads",
     "publisher": "Advertising Standards Authority (UK)",
     "url": "https://www.asa.org.uk/resource/influencers-guide.html",
@@ -208,7 +216,7 @@
     "supports": "Opened with WebFetch. Fourth edition dated 23 October 2026, made with the CMA; covers when influencer content must be disclosed as advertising and how to label it, updated for the Digital Markets, Competition and Consumers Act. Page text summarised; full guidance is a PDF."
   },
   {
-    "n": 27,
+    "n": 28,
     "title": "Guidelines 2/2023 on Technical Scope of Art. 5(3) of ePrivacy Directive, Version 2.0",
     "publisher": "European Data Protection Board",
     "url": "https://www.edpb.europa.eu/system/files/documents/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
@@ -216,7 +224,7 @@
     "supports": "Opened with WebFetch (PDF saved and text extracted). Adopted 7 October 2024. Tracking pixels and tracking links fall under Art. 5(3) (paras 47 to 51); hashed identifiers collected by client-side code are covered (paras 61 to 63); applicability does not always mean consent is needed (para 56)."
   },
   {
-    "n": 28,
+    "n": 29,
     "title": "Report of the work undertaken by the Cookie Banner Taskforce",
     "publisher": "European Data Protection Board",
     "url": "https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf",
@@ -224,7 +232,7 @@
     "supports": "Opened with WebFetch (PDF saved and text extracted). Adopted 17 January 2023. No consent-requiring cookies before a positive action (para 7); no reject option is an infringement for most authorities (para 8); pre-ticked boxes invalid (para 10); legitimate interest cannot justify placing cookies (para 24)."
   },
   {
-    "n": 29,
+    "n": 30,
     "title": "Data (Use and Access) Act factsheet: PEC Regulations",
     "publisher": "GOV.UK (DSIT and DCMS)",
     "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",

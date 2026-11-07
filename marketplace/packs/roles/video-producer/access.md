@@ -41,7 +41,7 @@ Connect through your AI tool's official Frame.io connector or MCP server, or Fra
 | LinkedIn (page and Campaign Manager) | Read post and ad results | Draft posts; build video ads paused with SRT captions | Publish posts or launch ads within your cap |
 | TikTok | Read results from screenshots or exports | Draft posts, where you allow it | Post within your limits |
 
-For each platform: connect through your AI tool's official connector for that platform or an MCP server the platform publishes, or the platform's own sign-in. I have not checked an official MCP server for any of these platforms. TikTok's help pages blocked my automated checks on 6 Nov 2026, so I check its specs with you before delivering.
+For each platform: connect through your AI tool's official connector for that platform or an MCP server the platform publishes, or the platform's own sign-in. I have not checked an official MCP server for any of these platforms. TikTok's help pages block automated reads, so I confirmed its ad specs through search results on 7 Nov 2026 and check them on screen with you before delivering.
 
 ## Music, footage and captions
 

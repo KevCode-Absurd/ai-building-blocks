@@ -1,11 +1,11 @@
 # TikTok Shop manager: what the role knows
 
-Checked 2026-11-06. Sources are numbered [n] and listed in sources.md with the date each was checked. This kit is general practice, not legal advice. Claims, disclosure and consumer law questions that matter go to the client's lawyer.
+Checked 2026-11-07. Sources are numbered [n] and listed in sources.md with the date each was checked. This kit is general practice, not legal advice. Claims, disclosure and consumer law questions that matter go to the client's lawyer.
 
-**A note on TikTok's own rules.** TikTok's seller pages (Seller Center help, TikTok Shop Academy, the TikTok Shop Partner Center docs) did not load for automated checks on 6 Nov 2026. So this kit states no TikTok fee, commission, sample, LIVE, listing, dispatch or return rule as fact. Those rules change often and differ by country. I read them where they live:
+**A note on TikTok's own rules.** TikTok's seller pages refuse automated page reads, so the TikTok Shop rules below were confirmed through search results that show each exact Seller University page, dated 7 Nov 2026. Most are US rules; UK and EU rules differ, and TikTok changes them often. So before each job I check them where they live:
 
-- **With web search connected:** I open the TikTok Shop Academy and the policy pages for the client's market, note the date, and quote what I used.
-- **Without web search:** I work from what the client gives me: their Seller Center fee page, policy pages, exports and screenshots. I mark anything I could not see as "[check in Seller Center]".
+- **With web search connected:** I open the Seller University and policy pages for the client's market, note the date, and quote what I used.
+- **Without web search:** I work from the client's Seller Center fee page, policy pages, exports and screenshots. Anything I could not see is marked "[check in Seller Center]".
 
 **Other kits hold the detail I lean on.** Creator programme design, reward maths and disclosure depth: the affiliate and influencer marketing manager kit. Posting, short video scripts and comment replies: the social media manager kit (it also covers TikTok's content disclosure setting). Product data, markdowns and its price reduction check prompt: the ecommerce manager kit. Setting prices and price display rules: the pricing strategist kit. Test design: the growth marketer kit.
 
@@ -31,9 +31,9 @@ A business hires this role to sell through TikTok Shop: products bought inside T
 
 ## 2. The canon
 
-**TikTok's own rules are the working manual.** TikTok Shop Academy, the Seller Center policy pages and the TikTok Community Guidelines set what can be sold, how listings and videos must look, how creators are paid and how fast orders ship. I could not open them on 6 Nov 2026, so I read them live or from the client's screenshots at every job.
+**TikTok's own rules are the working manual.** The Seller University, the Seller Center policy pages and the TikTok Community Guidelines set what can be sold, how listings and videos must look, how creators are paid and how fast orders ship [2][9][14][25][26][29][30]. They change often, so I re-read them at every job.
 
-**The regulators' guides are the honesty canon.** The FTC's Endorsement Guides FAQ (Guides revised 2023) has TikTok-specific advice on where a disclosure goes [1], and Disclosures 101 covers live streams [2]. The ASA's advice on recognising ads [8], the ASA and CMA influencers' guide (fourth edition, 23 October 2026) [9], and the CMA's guidance for brands and for creators [13][14] are the UK standard. The European Commission's Influencer Legal Hub covers the EU [21].
+**The regulators' guides are the honesty canon.** The FTC's Endorsement Guides FAQ (Guides revised 2023) has TikTok-specific advice on where a disclosure goes and how to disclose in live streams [1]. The ASA's advice on recognising ads [8] and the CMA's guidance for brands [13] are the UK standard. The European Commission's Influencer Legal Hub covers the EU [21].
 
 **Claims and selling pressure.** The FTC's Health Products Compliance Guidance sets the evidence bar for health, beauty and wellness claims [4]. The CMA's advice on urgency and price reduction claims (29 March 2023) shows, example by example, which countdowns, stock calls and "was" prices mislead [16]. LIVE selling uses all of these at speed.
 
@@ -59,7 +59,9 @@ Every plan starts with a margin table per product:
 
 contribution per order = price after discount − TikTok's fees for that order − creator commission (if a creator sold it) − product cost − packaging − shipping the seller pays − returns allowance
 
-The fee terms come from the client's Seller Center fee page, never from memory or a blog. A hero product needs a clear result on camera, a margin that survives the planned discount and commission, and stock for the plan. Drop products that cannot pay for a discount. The hero-product-margin-pick skill holds the method.
+**TikTok's fees (as of 7 Nov 2026).** In the US, TikTok's fee page set the referral fee at 6% per order from 1 April 2024, with some categories lower. When an order is refunded, TikTok keeps a refund administration fee of 20% of the referral fee, capped at $5 per item [2]. Some 2026 trade reports describe a higher US rate that TikTok's public pages did not show on 7 Nov 2026. In the UK, the standard commission is 9% including VAT, with lower rates for some categories and new sellers [9]. EU rates differ again [check in Seller Center].
+
+The fee terms used in a plan come from the client's Seller Center fee page on the day, never from memory or a blog. A hero product needs a clear result on camera, a margin that survives the planned discount and commission, and stock for the plan. Drop products that cannot pay for a discount. The hero-product-margin-pick skill holds the method.
 
 ### Listings
 
@@ -68,19 +70,19 @@ The fee terms come from the client's Seller Center fee page, never from memory o
 - **Images:** product on plain background first, then in use, scale, detail, contents.
 - **Rules:** TikTok's prohibited and restricted product lists and listing rules for the market [check in Seller Center].
 - **US:** under the INFORM Consumers Act (effective 27 June 2023), marketplaces must collect and verify bank, tax and contact details from high-volume sellers: 200 or more sales and $5,000 or more in gross revenue in any continuous 12 months within the last 24. Sellers with $20,000 or more a year on the platform must have their name, physical address and contact shown to buyers. Sellers certify their details at least once a year [6].
-- **EU:** under the Digital Services Act, marketplaces must verify and display sellers' contact details and make reasonable efforts to check products at random [24]. The General Product Safety Regulation aims to keep unsafe products off the EU market, and coordinated sweeps check online offers against it [26]. The Commission tells creators who sell to check products on Safety Gate and never to sell recalled ones [21]; the same check suits any seller.
+- **EU:** under the Digital Services Act, marketplaces must verify and display sellers' contact details and make reasonable efforts to check products at random [24]. The Commission tells creators who sell to check products on Safety Gate and never to sell recalled ones [21]; the same check suits any seller.
 
 ### Shoppable videos
 
 Each video brief names the product, the hook in the first seconds, the proof shot (the product working), the price moment and when to pin the product. One hook can carry three versions. Posting and scripts follow the social media manager kit.
 
-**On the brand's own account,** the commercial intent is usually plain, but anyone with a connection who posts from a personal account (owner, staff, family) must label it as an ad [8][14].
+**On the brand's own account,** the commercial intent is usually plain, but anyone with a connection who posts from a personal account (owner, staff, family) must label it as an ad [8].
 
 ### Creators, commissions and samples
 
-Creators can sell a shop's products for commission and may ask for free samples; TikTok sets the tools and terms in Seller Center [check in Seller Center]. The law around them is settled:
+Creators can sell a shop's products for commission and may ask for samples. **TikTok's US sample rules (as of 7 Nov 2026):** samples are free or refundable (the creator buys and is refunded after meeting the seller's sales target). Sellers answer a free sample request within 7 days or it is cancelled, then ship within 7 days of approval. Creators are expected to post within 14 days of receiving it [29]. UK and EU terms [check in Seller Center]. The law around samples is settled:
 
-- **US (FTC).** A free product given with an expectation of promotion is a material connection that must be disclosed, even if the product is returned [1]. On TikTok, a disclosure only in the text description is "very unlikely" to be clear; the FTC suggests larger text over the video, and a spoken disclosure too when the endorsement is spoken [1]. Platform tools may not be enough on their own [1][2]. Brands need a reasonable programme to explain allowed claims, instruct on disclosure, check what creators post and act on problems, and to keep checking for a few months after a contract ends [1]. Discount-code reviewers must disclose the discount [1].
+- **US (FTC).** A free product given with an expectation of promotion is a material connection that must be disclosed, even if the product is returned [1]. On TikTok, a disclosure only in the text description is "very unlikely" to be clear; the FTC suggests larger text over the video, and a spoken disclosure too when the endorsement is spoken [1]. Platform tools may not be enough on their own [1]. Brands need a reasonable programme to explain allowed claims, instruct on disclosure, check what creators post and act on problems, and to keep checking for a few months after a contract ends [1]. Discount-code reviewers must disclose the discount [1].
 - **UK (ASA and CMA).** Content is an ad if the creator got payment or any incentive, has a connection to the brand, or earns commission through an affiliate link or code [8]. "Ad", "Advert", "Advertising" or "Ad Feature" work; "sponsored", "gifted", "aff", "spon", a brand tag or a discount code alone are likely not enough. On TikTok the commercial intent should be clear before people click to watch where possible, or from the outset [8]. Brands should send gifts with clear instructions to label any resulting post "Ad", even when nothing is asked in return; gifts count as payment [13]. Brands check posts, act on unlabelled ones, and keep working with a creator who keeps failing at their own risk [13].
 - **EU.** Brand partnerships and affiliate marketing must be disclosed. Creators who regularly sell or advertise are treated as traders, with the duties that brings [21].
 
@@ -90,9 +92,11 @@ Creators can sell a shop's products for commission and may ask for free samples;
 
 A LIVE is a timed show: warm-up, product order, demo steps, offer moments, stock calls, comment answers and a close. The client or their host goes live; I write the run sheet, the host notes and the comment answers, and at level 3 can set up the approved offers.
 
+- **TikTok's US LIVE rules (as of 7 Nov 2026).** No AI-generated voices, pre-recorded clips or screen recordings in place of a live host. No links, phone numbers or QR codes that send viewers off TikTok Shop. Giveaways only through TikTok's own LIVE Giveaway feature, free to enter, and no raffles or chance games [30]. Other markets [check in Seller Center].
+
 - **Urgency must be true.** The CMA's examples of misleading claims include offers that do not end when the timer says, a new offer with the same deal straight after, "only 5 left" when more stock is coming, and "10 people are viewing" used to rush buyers who need not hurry [16]. Under the DMCC Act, falsely claiming an offer is only available for a limited time is banned outright [17]. On 14 October 2026 the CMA fined Wayfair £4.8 million because many "Daily Deals" and 24-hour "Flash Deals" stayed at the same or a lower price after they ended [18].
 - **"Was" prices must be real.** In the EU, a stated reduction is measured from the lowest price in at least the 30 days before it [23]. In the UK, the comparison price must be a genuine, usual selling price, not a short-lived hike, an old price or one at which few sold [16]. In the US, a former price must be one openly offered in good faith for a reasonably substantial period [7]. The pricing strategist kit has the full rules.
-- **Disclosure repeats.** When a creator sells a brand's product live, the FTC asks for disclosures repeated through the stream or shown all the time, and in the stream description [1][2].
+- **Disclosure repeats.** When a creator sells a brand's product live, the FTC asks for disclosures repeated through the stream or shown all the time, and in the stream description [1].
 - **Restricted products stay off.** In September 2023 the ASA ruled against ZOVOO (Shenzhen) Technology after an influencer promoted its unlicensed nicotine vape on a public TikTok account; e-cigarette ads are not allowed in that kind of public online media in the UK [12].
 
 ### Claims on camera
@@ -103,7 +107,12 @@ A LIVE is a timed show: warm-up, product order, demo steps, offer moments, stock
 
 ### Fulfilment and returns
 
-TikTok Shop sets its own dispatch, delivery and return rules for each market [check in Seller Center]. The law sits underneath:
+TikTok Shop sets its own dispatch, delivery and return rules for each market. **US rules (as of 7 Nov 2026):**
+
+- **Dispatch.** Regular orders must be shipped (marked In Transit) within 2 business days. TikTok asks sellers to keep their late dispatch rate at 4% or below and may act above 10%. Valid tracking must stay at 95% or more and on-time delivery at 80% or more [14].
+- **Returns.** Buyers can ask for a return within 30 days of delivery, started in the app [25]. Sellers have 4 business days to answer a return or refund request, or TikTok may approve it automatically [26].
+
+UK and EU dispatch and return rules [check in Seller Center]. The law sits underneath:
 
 - **US.** Any shipping time a seller states needs a reasonable basis. With no stated time, the seller must expect to ship within 30 days. If an order will be late, the buyer gets a delay notice with a new date and the right to cancel for a full refund, paid within seven working days. Sellers stay liable when a fulfilment house or drop shipper causes the breach [5].
 - **UK.** Before an order, buyers get the total price, delivery costs and expected delivery time. Goods are delivered within 30 days unless agreed otherwise. Buyers can cancel within 14 days of delivery without a reason; if not told of this right, they get up to 12 months [20]. Prices must include mandatory delivery fees wherever they appear, and the CMA's 2 November 2026 letter says marketplaces must include each trader's delivery charge in that product's total [19].
@@ -132,7 +141,10 @@ Each figure has a source, a date and a caveat.
 - **UK delivery and cancellation:** 30 days to deliver unless agreed; 14 days to cancel from delivery [20].
 - **UK fines:** Wayfair £4.8 million (October 2026) [18]. DMCC fines reach 10% of global turnover or £300,000, whichever is higher [18].
 
-No source I could open gives TikTok Shop fee rates, average commission rates, conversion rates or LIVE benchmarks. Use the client's Seller Center and their own past results.
+- **TikTok Shop fees:** US referral fee 6% per order (from 1 April 2024), refund administration fee 20% of it, capped at $5 per item [2]; UK commission 9% including VAT [9]. *Caveat:* check the client's Seller Center; trade reports describe 2026 changes.
+- **TikTok US service levels:** ship within 2 business days; late dispatch at or below 4% advised, action possible above 10%; valid tracking 95%; on-time delivery 80%; returns asked within 30 days of delivery; sellers answer in 4 business days [14][25][26].
+
+No source gives average creator commission rates, conversion rates or LIVE benchmarks. Use the client's own past results.
 
 ## 5. Decision rules
 
@@ -216,9 +228,9 @@ No source I could open gives TikTok Shop fee rates, average commission rates, co
 
 Re-check at each refresh (every 30 days):
 
-- **TikTok Shop rules and fees** for each market: Seller Center, TikTok Shop Academy, prohibited and restricted products, creator, sample, LIVE, dispatch and return rules. On 6 Nov 2026 these pages blocked automated checks; try again and note the result.
+- **TikTok Shop rules and fees** for each market: fees, sample, LIVE, dispatch and return rules [2][9][14][25][26][29][30], plus prohibited and restricted products and UK and EU versions, which this kit still marks "[check in Seller Center]". Least sure: the US referral fee (trade reports describe a 2026 rise) and whether the sample deadlines apply outside the US.
 - **TikTok's Shopify app** listing and features [27].
-- **EU:** Digital Services Act enforcement; on 6 Nov 2026 the Commission preliminarily found TikTok's For You feed in breach of the DSA over harmful "rabbit hole" effects, a preliminary step, not a decision [25]. Watch for changes to reach in the EU. Influencer Legal Hub updates [21].
-- **UK:** ASA rulings on TikTok, the influencers' guide, CMA guidance and DMCC enforcement [8]-[19].
+- **EU:** Digital Services Act enforcement and Influencer Legal Hub updates [21][24].
+- **UK:** ASA rulings on TikTok, CMA guidance and DMCC enforcement [8], [10]-[13], [15]-[19].
 - **US:** FTC endorsement, reviews, health claims and mail order guidance [1]-[7].
 - **Audience:** Pew's social media fact sheet [28].

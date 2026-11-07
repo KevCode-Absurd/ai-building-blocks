@@ -85,7 +85,7 @@ A good clip makes sense without the rest of the video, puts the point in the fir
 - **YouTube Shorts:** up to 3 minutes, square or vertical [2]. Square or vertical uploads of up to 3 minutes since 15 Oct 2024 count as Shorts; 16:9 stays long-form [3]. A Short over 1 minute with an active copyright claim is blocked worldwide, though the channel is not penalised [3][6]. Most songs from the Shorts audio library can run up to 90 seconds in a Short; some only 60 or 30 [3].
 - **Instagram Reels ads:** 9:16 at 1440 x 2560, up to 15 minutes and 4 GB, MP4 or MOV, H.264, fixed frame rate, stereo AAC at 128 kbps or more; keep 14% at the top, 35% at the bottom and 6% at each side free of text and logos [8].
 - **Reels published through Instagram's API:** 3 seconds to 15 minutes, up to 300 MB, 23 to 60 fps, up to 1920 pixels wide, H.264 or HEVC, 9:16 recommended [9]. A tool that posts for the client may enforce these limits.
-- **TikTok:** every TikTok help and developer page I tried failed to load for automated checks on 6 Nov 2026, so this kit gives no TikTok specs. Check TikTok's own help centre before delivering.
+- **TikTok uploads:** MP4 or WebM, at least 720 x 1280, under 10 GB and up to 30 minutes, per TikTok's English help page; some other language versions show 10 minutes, so check the client's account [12]. Confirmed through search results on 7 Nov 2026, because TikTok blocks automated reads. For TikTok ad specs, see the video producer kit.
 
 **Reframing to vertical.** Premiere's Auto Reframe changes the aspect ratio and keeps the focal point [11]; Descript can reframe as one of its edits [18]. Two people far apart in a wide shot rarely survive a 9:16 crop; plan a cut between single shots or a split layout, and note it.
 
@@ -122,7 +122,7 @@ Whether a legal duty applies to a client is a question for a qualified adviser.
 
 ### Access and connected tools (as of 6 Nov 2026)
 
-Descript publishes an MCP connector that works inside the client's Descript account: import media, edit, caption, publish a share link and export transcripts and timelines; it cannot hand over an MP4 on request [18]. Premiere supports UXP plugins that can work with sequences, clips and markers [12], but I found no official Premiere MCP server. Resolve Studio lists a remote scripting API among its paid features [14]. I found no CapCut connector. Access is granted per tool: read (level 1), read and draft (level 2), and read, write and publish within the client's limits (level 3). Level 3 covers uploading and scheduling an approved cut on the agreed channel and dates. A fresh yes is needed every time to delete or replace a live video, post to a new account, buy or accept a music or footage licence, dispute a copyright claim, or overwrite original media.
+Descript publishes an MCP connector that works inside the client's Descript account: import media, edit, caption, publish a share link and export transcripts and timelines; it cannot hand over an MP4 on request [18]. I found no official Premiere MCP server. Resolve Studio lists a remote scripting API among its paid features [14]. I found no CapCut connector. Access is granted per tool: read (level 1), read and draft (level 2), and read, write and publish within the client's limits (level 3). Level 3 covers uploading and scheduling an approved cut on the agreed channel and dates. A fresh yes is needed every time to delete or replace a live video, post to a new account, buy or accept a music or footage licence, dispute a copyright claim, or overwrite original media.
 
 ## 4. Benchmarks and numbers
 
@@ -217,8 +217,8 @@ No source I checked gives a trustworthy ideal clip length or retention rate. Use
 
 Re-check at each refresh:
 
-- **Platform specs and lengths:** YouTube encoding, Shorts and chapters [1]-[4]; Instagram Reels ad and API specs [8][9]. Try TikTok's help centre again; it failed automated checks on 6 Nov 2026.
+- **Platform specs and lengths:** YouTube encoding, Shorts and chapters [1]-[4]; Instagram Reels ad and API specs [8][9]; TikTok's upload limits [12].
 - **Music rules:** YouTube claims and Audio Library [6][7]; Shorts audio library limits [3]; Meta's Music Guidelines [10]; CapCut's licence terms, which were unreachable on 6 Nov 2026.
-- **Tool features:** Premiere features and UXP [11][12]; Resolve version and Studio-only list [13][14]; CapCut help and captions [15]-[17]; Descript's MCP abilities and limits [18].
+- **Tool features:** Premiere features [11]; Resolve version and Studio-only list [13][14]; CapCut help and captions [15]-[17]; Descript's MCP abilities and limits [18].
 - **Caption standards:** Netflix's style guide [22], the DCMP Captioning Key [21], W3C pages [19][20].
 - **Accessibility law:** ADA Title II dates [29]; European Accessibility Act guidance [30].

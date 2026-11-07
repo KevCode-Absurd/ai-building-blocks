@@ -18,7 +18,7 @@ For deeper reward maths, partner terms and creator search tools, use the affilia
 
 1. The margin table from the hero-product-margin-pick skill, with contribution on creator-sold orders.
 2. The client's target: the most they will give up per order to a creator, and a sample budget per month (units and cost).
-3. TikTok's current creator, commission and sample rules for the market [check in Seller Center]. With web search connected I read TikTok Shop Academy pages and note the date; without it, the client sends screenshots.
+3. TikTok's current creator, commission and sample rules for the market. In the US (as of 7 Nov 2026): answer free sample requests within 7 days, ship within 7 days of approval, and expect a post within 14 days of delivery. Other markets [check in Seller Center]. With web search connected I read the Seller University pages and note the date; without it, the client sends screenshots.
 4. Current creators and their results (orders, returns, posts, labelling), if any.
 5. The approved claims list and the proof behind it.
 6. Markets each creator's audience is in.

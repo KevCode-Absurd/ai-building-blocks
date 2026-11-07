@@ -33,7 +33,7 @@ const SITE = "https://useaiblocks.com";
 const arg = (k) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : null; };
 const KINDS = ["skills", "prompts", "workflows", "agents", "minds", "roles"]; // catalogue item pages and specialist (role) pages
 // Pages that must be noindex, and the only ones that may be.
-const NOINDEX = new Set(["/404", "/account", "/sign-in", "/sign-up", "/space", "/people", "/publish", "/my-submissions", "/admin/review", "/shared-space-shell", "/connect-mcp", "/support-chat-frame", "/analytics-privacy"]);
+const NOINDEX = new Set(["/404", "/account", "/sign-in", "/sign-up", "/space", "/people", "/publish", "/my-submissions", "/admin/review", "/shared-space-shell", "/connect-mcp", "/support-chat-frame", "/analytics-privacy", "/councils", "/plan-team"]);
 const SKIP_DIRS = new Set(["assets", "data", "metadata", "example-app", "example-app-shots", "mini-tools", "fonts", "og", "llms", "examples", "templates"]);
 
 const problems = new Map(), warnings = new Map();

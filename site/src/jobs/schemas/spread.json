@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-spread/1.json",
+  "title": "ai-blocks-spread/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-spread/1"
+    },
+    "variety_mix": {
+      "type": "object",
+      "properties": {
+        "preset": {
+          "type": "string",
+          "enum": [
+            "focused",
+            "balanced",
+            "wide",
+            "custom"
+          ]
+        },
+        "proven": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "new": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "outlier": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "proven",
+        "new",
+        "outlier"
+      ],
+      "additionalProperties": false
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "family": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+          },
+          "maker_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "revision_sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "slug",
+                "revision_sha256"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 100
+          },
+          "mix": {
+            "type": "string",
+            "enum": [
+              "proven",
+              "new",
+              "outlier"
+            ]
+          },
+          "variant_brief": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "image",
+              "video",
+              "audio",
+              "text",
+              "3d",
+              "interactive",
+              "doc",
+              "data"
+            ]
+          },
+          "tools_needed": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+            },
+            "minItems": 0,
+            "maxItems": 100,
+            "uniqueItems": true
+          },
+          "fallback": {
+            "type": "string",
+            "enum": [
+              "brief_only",
+              "swap_family"
+            ]
+          },
+          "render_pipeline": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "slot_id",
+          "family",
+          "maker_seat",
+          "items",
+          "mix",
+          "variant_brief",
+          "modality",
+          "tools_needed",
+          "fallback"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 1000
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    }
+  },
+  "required": [
+    "schema",
+    "variety_mix",
+    "slots",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

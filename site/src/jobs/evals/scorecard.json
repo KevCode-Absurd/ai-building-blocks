@@ -1,0 +1,381 @@
+{
+  "schema": "ai-blocks-job-eval-scorecard/1",
+  "method_version": 1,
+  "status": "NOT_RUN",
+  "pass_score": 95,
+  "average": null,
+  "recorded": 0,
+  "expected": 20,
+  "missing": [
+    "patagonia-ad-set",
+    "ikea-welcome-emails",
+    "duolingo-practice-set",
+    "canva-cover-directions",
+    "allbirds-product-pages",
+    "mailchimp-sales-sequences",
+    "lego-support-replies",
+    "decathlon-store-checklists",
+    "buffer-growth-choice",
+    "basecamp-positioning",
+    "ikea-supplier-choice",
+    "patagonia-hiring-choice",
+    "monzo-incident-review",
+    "allbirds-cash-scenario",
+    "duolingo-learning-plan",
+    "buffer-content-audit",
+    "canva-workshop-site",
+    "mailchimp-onboarding-flow",
+    "monzo-data-pipeline",
+    "decathlon-knowledge-system"
+  ],
+  "controls": {
+    "passed": 8,
+    "total": 8,
+    "status": "PASS"
+  },
+  "results": [
+    {
+      "id": "patagonia-ad-set",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "ikea-welcome-emails",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "duolingo-practice-set",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "canva-cover-directions",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "allbirds-product-pages",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "mailchimp-sales-sequences",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "lego-support-replies",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "decathlon-store-checklists",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "buffer-growth-choice",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "basecamp-positioning",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "ikea-supplier-choice",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "patagonia-hiring-choice",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "monzo-incident-review",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "allbirds-cash-scenario",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "duolingo-learning-plan",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "buffer-content-audit",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "canva-workshop-site",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "mailchimp-onboarding-flow",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "monzo-data-pipeline",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    },
+    {
+      "id": "decathlon-knowledge-system",
+      "status": "NOT_RUN",
+      "provenance": null,
+      "score": 0,
+      "checks": {
+        "routing_correct": false,
+        "contracts_pass": false,
+        "council_complete": false,
+        "variety_contract": false,
+        "review_independent": false,
+        "delivery_pack_complete": false
+      },
+      "errors": [
+        "No recording."
+      ]
+    }
+  ],
+  "model_calls": 0,
+  "bakeoff_v2": "NOT_RUN",
+  "quality_claim": "No blind quality or 10x claim is established by structural replay."
+}

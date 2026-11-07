@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-job/1.json",
+  "title": "ai-blocks-job/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-job/1"
+    },
+    "job_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "team",
+        "direct",
+        "outcome"
+      ]
+    },
+    "mode_reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "job_type": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "minItems": 0,
+          "maxItems": 100,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "job",
+        "confidence",
+        "alternatives"
+      ],
+      "additionalProperties": false
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "quick",
+        "standard",
+        "deep"
+      ]
+    },
+    "estimate": {
+      "type": "object",
+      "properties": {
+        "seats": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "council_rounds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "token_multiple": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "estimated",
+            "measured"
+          ]
+        }
+      },
+      "required": [
+        "seats",
+        "council_rounds",
+        "token_multiple",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "host_profile": {
+      "type": "string",
+      "enum": [
+        "parallel",
+        "sequential",
+        "pack"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "ROUTE",
+        "SCOPE",
+        "STAFF",
+        "DIVERGE",
+        "DELIBERATE",
+        "PRODUCE",
+        "REVIEW",
+        "DELIVER",
+        "LEARN",
+        "BLOCKED",
+        "COMPLETE",
+        "DIRECT",
+        "OUTCOME"
+      ]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "content": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 200000
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "revision_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 30
+    },
+    "next_action": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "questions_allowed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "required": [
+        "event",
+        "instruction"
+      ],
+      "additionalProperties": true
+    },
+    "model_calls": {
+      "const": 0
+    },
+    "state_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schema",
+    "job_id",
+    "mode",
+    "mode_reason",
+    "job_type",
+    "tier",
+    "estimate",
+    "host_profile",
+    "phase",
+    "files",
+    "next_action",
+    "model_calls"
+  ],
+  "additionalProperties": true
+}

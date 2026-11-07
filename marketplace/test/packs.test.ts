@@ -146,7 +146,7 @@ test("agent pack: files in order, soul and personality from the persona, one job
   const pack = await build();
   assert.equal(pack.folder, "nova-seo");
   assert.deepEqual(pack.files.map(f => f.path), [
-    "README.md", "AGENTS.md", "CLAUDE.md", "soul.md", "personality.md", "playbook.md", "knowledge.md", "access.md",
+    "README.md", "AGENTS.md", "CLAUDE.md", "soul.md", "personality.md", "playbook.md", "TEAM.md", "knowledge.md", "access.md",
     "skills.md", "skills/landing-page-copy/SKILL.md", "skills/seo-blog-post/SKILL.md", "LICENSE.md", "CHANGELOG.md", "pack.json",
   ]);
   const file = (p: string) => pack.files.find(f => f.path === p)!.content;

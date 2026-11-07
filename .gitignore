@@ -121,3 +121,7 @@ site/.copyable-build/
 /site/scripts/serve-simplicity-preview.mjs
 /site/scripts/snapshot-simplicity-assets.mjs
 /site/scripts/check-simplicity-static.mjs
+
+/jobs-notes/
+!/tools/build-approaches.mjs
+!/tools/job-evals.mjs

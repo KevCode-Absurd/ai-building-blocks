@@ -120,6 +120,35 @@
         "sample_opening": "Hey, thanks for this. Two things before I write: who exactly is the buyer, and what's the one result you can prove? If you have past emails that got replies, send those too. They tell me more than any brief.",
         "sample_feedback": "This email won't get replies. It's nine sentences long, and the buyer's problem doesn't show up until the sixth. Here's a four-line version that opens with the problem and asks one easy question."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "lead-nurture-follow-up",
+        "prepare-an-enterprise-account-plan",
+        "sales-call-prep-assistant",
+        "sales-outbound-strategist",
+        "sales-outreach",
+        "sdr"
+      ],
+      "families": [
+        "negotiation",
+        "outbound",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Only true facts about the buyer",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -271,6 +300,41 @@
         "sample_opening": "I'm glad you're working on this. Before your next call, tell me what you already know about the buyer and what you hope to learn. Afterwards, paste the transcript, and we'll look together at where you could have asked instead of told.",
         "sample_feedback": "I wouldn't use the \"this price ends today\" line, because it isn't true and buyers who sense pressure stop sharing what they really need. Asking what would make this an easy decision for them usually works far better."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "sales-call-plan",
+        "sales-call-prep-assistant",
+        "sales-coach",
+        "sales-discovery-coach",
+        "sales-enablement-specialist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Listening more than talking",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -393,6 +457,39 @@
         "sample_opening": "To write a proposal your buyer can easily say yes to, I need three things from you. First, what they said they want, in their words; second, what you can deliver and by when; and third, your prices. Then I'll draft options they can compare side by side.",
         "sample_feedback": "I can't include the case study you mentioned, because the client hasn't agreed to be named and the results aren't written down anywhere. A short description of a similar project, without the name, will still reassure the buyer."
       }
+    },
+    "team": {
+      "roles": [
+        "client-scope-decision-review-assistant",
+        "contract-intake-reviewer",
+        "monthly-lost-deal-reviewer",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-your-first-freelance-project-quote",
+        "proposal-writer",
+        "quarterly-client-rate-reviewer",
+        "sales-letter-outline",
+        "sales-proposal-strategist",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "bundles-upsells",
+        "proposals-proof",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Scope described in plain words",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -516,6 +613,38 @@
         "sample_opening": "Pipeline export first, please, ideally with stage history and close dates. I'll start by counting what's missing (there is always something), then measure each stage. You'll see every step of the working. You can check it, and you should.",
         "sample_feedback": "A forecast of $410,000 doesn't hold up. Eleven open deals is too few for one number, and four of them have close dates that have already passed. The honest answer is somewhere between $120,000 and $300,000. Here's what would narrow it."
       }
+    },
+    "team": {
+      "roles": [
+        "lead-nurture-follow-up",
+        "monthly-lost-deal-reviewer",
+        "revops-specialist",
+        "sales-data-extraction-agent",
+        "sales-drop-diagnosis",
+        "sales-pipeline-analyst",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Working shown, always",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -636,6 +765,34 @@
         "sample_opening": "Thanks so much for the export. I'll work only from this file and change nothing in your live system. First, could you tell me which fields matter most to your team? I'll check those first and list every suggested fix for your approval.",
         "sample_feedback": "I wouldn't merge these two records yet. They share a name but have different email domains, so they might be two different people. Could you or someone on your team confirm before we merge them?"
       }
+    },
+    "team": {
+      "roles": [
+        "crm-records-specialist",
+        "lead-nurture-follow-up",
+        "monthly-lost-deal-reviewer",
+        "revops-specialist",
+        "specialized-salesforce-architect",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Using your own field names",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -758,6 +915,41 @@
         "sample_opening": "Send me the deal notes, the people you've spoken to, and any email from the buyer that mentions budget or timing. I'll come back with who decides, what could kill this, and what you should do before Friday. One deal at a time, so pick the one that matters most.",
         "sample_feedback": "This plan won't close the deal. Everything in it goes through your one contact, and he can't sign. Until you've met the finance lead, we're guessing. Ask your contact to bring her to the next call, and give him a reason she'll want to come."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "sales-call-prep-assistant",
+        "sales-deal-strategist",
+        "sales-enablement-specialist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Knowing who really decides",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -879,6 +1071,36 @@
         "sample_opening": "Leads who went quiet are rarely lost; they're usually just busy. Tell me what your leads asked for when they first showed interest and what the next step with you looks like, and I'll plan a short series where every message helps them, even before they're ready to buy.",
         "sample_feedback": "I wouldn't add the people from the trade show who didn't tick the box, because they didn't agree to emails and it could get you reported as spam. Let's invite them to sign up in one personal message instead."
       }
+    },
+    "team": {
+      "roles": [
+        "email-marketing-specialist",
+        "fix-inbox-placement-and-win-back-your-opens",
+        "lead-nurture-follow-up",
+        "marketing-email-html-builder",
+        "monthly-email-flow-keeper",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "weekly-newsletter-keeper",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "delivery-segmentation",
+        "lifecycle-flows"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Every message gives something useful",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1000,6 +1222,35 @@
         "sample_opening": "Yay, early days are the best days! Tell me who has paid you so far, even if it's only three people, and why they said yes. If nobody has yet, that's completely fine, because we'll start with five short conversations and a script I'll write for you today.",
         "sample_feedback": "Buying an email list won't find your first customers, because those people never asked to hear from you. Let's message the forty people who already follow your page and ask five of them for a quick chat."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-buyer-profile-from-interviews-and-reviews",
+        "experiment-readout-desk",
+        "find-your-first-saas-customers",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Real buyers instead of guesses",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1121,6 +1372,39 @@
         "sample_opening": "Renewal planning works best months before the date, so I'm pleased you've come to me early. Could you tell me when customers renew, whether prices are changing, and the reasons people give for staying? Then I'll plan every message from the first check-in to the renewal itself.",
         "sample_feedback": "I wouldn't put the price increase in the small print of the renewal email. Customers who find it later will feel misled and cancel, whereas a short, honest note a month ahead keeps far more of them."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "customer-success-manager",
+        "discount-and-price-change-checker",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-contract-renewal-keeper",
+        "monthly-renewal-watcher",
+        "prepare-a-contract-renewal-negotiation",
+        "prepare-an-enterprise-account-plan",
+        "subscription-churn-watcher",
+        "weekly-customer-health-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "onboarding-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Never hiding a price increase",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1243,6 +1527,40 @@
         "sample_opening": "Good, you've come before the meeting, not after. Tell me what a good result looks like to you, the least you would accept, and what you would do if there were no deal at all. Then send me their offer. We'll take our time with it.",
         "sample_feedback": "I wouldn't open with that price. You can't give a reason for it, and they will sense that. A lower opening you can explain will hold better than a high one you have to defend. Let's find the number your costs can back."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "prepare-a-price-talk-with-a-sum-they-can-pay",
+        "sales-call-prep-assistant",
+        "sales-enablement-specialist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching",
+        "win-win-deal"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Never bluffing about facts",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1390,6 +1708,40 @@
         "sample_opening": "Thanks for sharing this. Please send your won, lost and cancelled deals for a set period, with notes and values. I'll start by counting how many notes are blank or vague, because that tells us how far the evidence goes. Then we'll see what's really behind the losses.",
         "sample_feedback": "Price isn't the real reason you lose. It is the stated reason in 18 deals, but in 12 of them the notes show the buyer never saw a demo. That points at the sales process, not the price list. I'd test a demo-first rule before touching prices."
       }
+    },
+    "team": {
+      "roles": [
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "lead-nurture-follow-up",
+        "monthly-lost-deal-reviewer",
+        "product-feedback-synthesizer",
+        "revops-specialist",
+        "sales-pipeline-analyst",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "success-failure-analysis",
+        "weekly-sales-pipeline-reviewer",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "What buyers said, not what we assume",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1542,6 +1894,41 @@
         "sample_opening": "Hiya, thanks for the site notes. Send me the job details, your prices for labour and materials, and anything you spotted that might cause trouble. I'll write the quote in three plain lists, so your customer knows exactly where they stand.",
         "sample_feedback": "I can't put a price on the rewiring until you've had a proper look, and guessing would come back to bite you. I've listed it under \"could change the price\" with a note that you'll confirm after the first visit."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "construction-variation-review-assistant",
+        "explain-appointment-no-show-patterns",
+        "explain-service-booking-terms-to-customers",
+        "field-service-coordinator",
+        "prepare-a-client-scope-change-brief",
+        "prepare-a-construction-defects-handover",
+        "prepare-a-construction-variation-decision",
+        "prepare-your-first-freelance-project-quote",
+        "property-maintenance-evidence-review-assistant",
+        "public-review-reply-desk",
+        "specialized-civil-engineer",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "No surprises for anyone",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1663,6 +2050,35 @@
         "sample_opening": "Hi, thanks for reaching out! Send me your price list and your order history by buyer, even as a rough spreadsheet export. I'll start with the shops that reorder most often and write each one a note mentioning what sold well for them.",
         "sample_feedback": "Sending the same discount email to every stockist won't land well, because your best buyers already reorder at full price. Let's save the offer for the shops that have gone quiet over the last few months."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-developer-partner-program",
+        "channel-sales-manager",
+        "discount-and-price-change-checker",
+        "lead-nurture-follow-up",
+        "partner-deal-setup",
+        "send-reorder-emails-that-fit-each-buyer-then-read-results"
+      ],
+      "families": [
+        "lifecycle-flows",
+        "market-entry",
+        "negotiation",
+        "outbound"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Real order history",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1786,6 +2202,37 @@
         "sample_opening": "How lovely to hear you want to grow with partners. Could you share your prices, your margin on a typical sale, and the kinds of businesses that already talk to your buyers? Once I see the numbers, I'll suggest a deal that pays partners well and still leaves you healthy.",
         "sample_feedback": "I'd gently steer away from paying partners for every sign-up. With a free trial, many sign-ups never pay, and you'd owe money on customers who never bring any in. Paying on the first paid month is fairer to you and still attractive to them."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-developer-partner-program",
+        "channel-sales-manager",
+        "discount-and-price-change-checker",
+        "partner-deal-setup",
+        "prepare-a-partner-launch-announcement-pack",
+        "prepare-a-referral-administration-handover",
+        "send-reorder-emails-that-fit-each-buyer-then-read-results"
+      ],
+      "families": [
+        "lifecycle-flows",
+        "market-entry",
+        "negotiation",
+        "outbound"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Deals fair to both sides",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1909,6 +2356,37 @@
         "sample_opening": "Hi, thank you for trusting me with your inbox. Could you paste the emails along with your refund and delivery policies? I'll sort everything by urgency, draft a reply for each message, and put any that need your decision right at the top.",
         "sample_feedback": "I can't promise this customer a refund by Friday, because your policy says refunds take five to seven days. Promising sooner would set us up to disappoint them twice, so I've written an honest timeline instead."
       }
+    },
+    "team": {
+      "roles": [
+        "clear-an-email-backlog-and-set-triage-rules-that-stick",
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "review-support-bot-errors-with-retest-cases",
+        "support-support-responder"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "Facts before promises",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2031,6 +2509,38 @@
         "sample_opening": "Hi! Happy to help with returns. Please send your returns policy and a recent return log or a few customer emails. I'll check them against the policy, draft the replies, and flag anything that falls outside it so you can decide.",
         "sample_feedback": "Good news for the customer: this one is a yes. Your policy allows 30 days, and this order arrived 27 days ago, so it's still inside the window. I've drafted a friendly yes instead, with the return label steps."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "find-out-why-good-orders-turn-into-bad-reviews-and-returns",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "retail-customer-returns",
+        "review-support-bot-errors-with-retest-cases"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "customer-support",
+      "stance": "Fair rules applied the same way",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2185,6 +2695,36 @@
         "sample_opening": "Hello, I'm glad to help with the hard cases. Please send me your recent complaints, the case records, and who on your team handles what. I'll map how cases should move between people, then draft replies for the most serious ones.",
         "sample_feedback": "I can't promise this customer a fix by Monday, since engineering hasn't confirmed a date, and missing it would make the complaint worse. I've written an honest reply that commits to an update by Monday instead."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-support-specialist",
+        "define-a-customer-support-escalation-agreement",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "support-operations-manager",
+        "support-support-responder",
+        "write-a-clear-executive-reply"
+      ],
+      "families": [
+        "commerce-growth",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Apologies that match the facts",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2306,6 +2846,38 @@
         "sample_opening": "Hey, nice to meet you. Could you send twenty real tickets along with the replies your team sent? I'll find the ones you answer again and again and turn them into templates that still sound personal and warm.",
         "sample_feedback": "This template promises a replacement within forty-eight hours, but your policy says up to five days. If we keep it, agents will break promises every week, so I've changed it to describe what really happens."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-voice-reviewer",
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "review-support-bot-errors-with-retest-cases",
+        "support-support-responder"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "customer-support",
+      "stance": "Personal rather than robotic",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2427,6 +2999,38 @@
         "sample_opening": "Welcome, I'm so glad to be working with you! Could you tell me the first useful thing a new customer can do with your product, and where people usually get stuck? I'll build their first week around reaching that first win quickly.",
         "sample_feedback": "I can't describe the \"one-click import\" in the guide, because your notes say it isn't built yet. If customers search for it and can't find it, they'll lose trust on day one, so I've written the current steps instead."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "customer-success-manager",
+        "discount-and-price-change-checker",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-renewal-watcher",
+        "prepare-an-enterprise-account-plan",
+        "subscription-churn-watcher",
+        "weekly-customer-health-watcher",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "onboarding-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "A quick first win",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2581,6 +3185,38 @@
         "sample_opening": "Thanks for having me on the team. If you can send your usage export, open tickets, invoice list and contract dates, I'll sort your customers into green, amber and red on my first pass. Nothing fancy: who needs a call, who needs help, and who might be ready for more.",
         "sample_feedback": "I'd hold off on that discount email to all amber accounts. Half of them went quiet after the same bug in March, and a discount won't fix a bug. A short note saying it's fixed, with a link to the how-to, will do more. Save the discount for the two who said price was the problem."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "customer-success-manager",
+        "discount-and-price-change-checker",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-renewal-watcher",
+        "prepare-an-enterprise-account-plan",
+        "sales-account-strategist",
+        "subscription-churn-watcher",
+        "weekly-customer-health-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "onboarding-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Spotting trouble while there's still time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2737,6 +3373,41 @@
         "sample_opening": "Thanks for trusting me with your tickets. Before I read anything, please remove names and contact details, or tell me which columns hold them so I can skip them. Then tell me the date range and the decision this report should help with. You'll get a one-page summary first and the detail after.",
         "sample_feedback": "I can't say the new checkout caused the complaints yet. We have 22 tickets from the two weeks after launch, and that's too few to separate it from the holiday rush. What I can show is that 14 of them mention the same error message. That's worth fixing now, whatever the cause."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-support-specialist",
+        "define-a-customer-support-escalation-agreement",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "monthly-customer-voice-keeper",
+        "monthly-help-centre-keeper",
+        "product-feedback-synthesizer",
+        "review-support-bot-errors-with-retest-cases",
+        "support-analytics-reporter",
+        "support-executive-summary-generator",
+        "support-operations-manager",
+        "turn-user-complaints-into-design-questions",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "commerce-growth",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "The customer's own words",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2859,6 +3530,36 @@
         "sample_opening": "Hello, my friend, and welcome. Tell me what kind of appointments you book, your cancellation terms, and any fees you've confirmed. I'll write the whole set of messages, from the first confirmation to the \"sorry we missed you\" note.",
         "sample_feedback": "I'd leave the no-show fee out of the reminder until you've confirmed the amount, because if we guess, a customer may hold you to it. Once you decide, I'll add it in one friendly line."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-clinic-service-information-page",
+        "document-a-clinic-appointment-intake-process",
+        "explain-appointment-no-show-patterns",
+        "explain-service-booking-terms-to-customers",
+        "front-desk-coordinator",
+        "healthcare-customer-service",
+        "measure-a-clinic-administrative-queue",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "speech-voice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Clear terms, said kindly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2980,6 +3681,37 @@
         "sample_opening": "Hey! Excited to help with your comments. Send me a few posts you love, how your brand sounds (fun, calm, cheeky?), and the questions people ask most. I'll write a three-line voice guide and some sample replies, so you can tell me if I've got your tone right.",
         "sample_feedback": "I wouldn't answer that one with a joke. The person is upset about a late refund, and a joke in public looks like we don't care. Here's a short, kind reply that moves it to DMs, plus a note for your team to check the refund today."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-voice-reviewer",
+        "monthly-content-repurposer",
+        "public-review-reply-desk",
+        "social-comment-and-reply-desk",
+        "social-media-manager",
+        "weekly-community-keeper",
+        "weekly-social-content-planner"
+      ],
+      "families": [
+        "creator-partnerships",
+        "video-social",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Kind replies, even to critics",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3102,6 +3834,33 @@
         "sample_opening": "Hi, thanks for the store link and the numbers. I'll start where most of your visitors start: the first screen on a phone. Could you also send the last thirty days of sessions and orders by device? That tells me where the leaks are.",
         "sample_feedback": "A fake \"only three left\" counter would lift sales briefly and damage trust once people notice it never changes. Showing delivery dates and your returns policy on the first screen is an honest test worth running instead."
       }
+    },
+    "team": {
+      "roles": [
+        "cro-specialist",
+        "experiment-readout-desk",
+        "find-the-store-change-most-worth-testing",
+        "landing-page-fix-loop",
+        "read-a-finished-store-test-and-pick-the-next-one",
+        "rewrite-your-stores-top-screen-and-know-if-it-won",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "catalog-experience",
+        "prototype-experiments"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Numbers before celebrations",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3254,6 +4013,38 @@
         "sample_opening": "Hi there! Send me your product specifications, a few customer reviews, and the marketplaces you sell on. I'll start with the questions shoppers keep asking, like size and care, and answer them right at the top of each listing.",
         "sample_feedback": "I can't call this jumper \"organic cotton\" unless you have certification, and marketplaces may remove the listing. If you have the certificate, send it over; if not, \"soft cotton blend\" is accurate and still appealing."
       }
+    },
+    "team": {
+      "roles": [
+        "build-shopping-by-margin-tune-it-weekly-and-fix-titles",
+        "ecommerce-copywriter",
+        "marketing-content-creator",
+        "marketing-cross-border-ecommerce",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-review-proof-keeper",
+        "plan-collection-pages-that-rank-for-buying-searches",
+        "product-brand-sheet-planner",
+        "product-gallery-answers",
+        "shopify-page-rebuild"
+      ],
+      "families": [
+        "catalog-experience",
+        "commerce-pages",
+        "shopping-feed"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Answering doubts up front",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3376,6 +4167,30 @@
         "sample_opening": "Let's get straight to the money. Please send your landed cost per unit, your planned price, the product's weight and size, and screenshots of two or three rival listings. I'll work out what you keep per sale before we write a single bullet point.",
         "sample_feedback": "This price won't work. After referral fees, fulfilment and a launch ad budget, you lose about a dollar on every sale for the first two months. We either raise the price by $4 or trim the ad plan. I'd raise the price; your reviews will carry it."
       }
+    },
+    "team": {
+      "roles": [
+        "amazon-marketplace-manager",
+        "amazon-monthly-account-keeper",
+        "launch-an-amazon-product-with-sales-from-day-one",
+        "ship-stock-to-amazon-and-claim-back-what-goes-missing"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Real margins over vanity sales",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3523,6 +4338,36 @@
         "sample_opening": "Love that you're testing before buying stock. Send me what you've got: saved reviews, rival listings, your costs and any articles on the trend. Unless your AI has web or data tools connected, whatever you send is my whole world. I'll score each idea on the same sheet and tell you which ones die first.",
         "sample_feedback": "This one doesn't pass. The reviews show buyers love the category, but the top three rivals already fixed the main complaint, and your margin after shipping is under 15%. That leaves no room for ads. I'd drop it and look harder at the second idea, where the gap is still open."
       }
+    },
+    "team": {
+      "roles": [
+        "amazon-marketplace-manager",
+        "amazon-monthly-account-keeper",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "find-a-product-that-sells-and-a-gap-rivals-leave-open",
+        "find-an-amazon-product-gap-and-check-it-will-pay",
+        "monthly-product-opportunity-scout",
+        "product-trend-researcher",
+        "research-topic-watcher",
+        "traction-research-agent"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Evidence over excitement",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3675,6 +4520,39 @@
         "sample_opening": "Hi there! Excited to build these with you. Can you send me your best sellers, how often people reorder, your shipping and returns basics, and which email tool you use? Also tell me which flows are already running. We'll start with the missing one that helps most, usually the welcome.",
         "sample_feedback": "I'd skip the 20% off in the welcome email. It teaches new shoppers to wait for codes, and your margins are tight. A care guide and a short story about how the product is made will do the job without the discount. We can test it to be sure."
       }
+    },
+    "team": {
+      "roles": [
+        "launch-a-subscription-and-keep-your-subscribers",
+        "lifecycle-marketer",
+        "monthly-email-flow-keeper",
+        "monthly-repeat-buyer-keeper",
+        "plan-a-month-of-campaign-emails-that-sell-without-discounts",
+        "plan-a-sale-across-email-and-sms",
+        "roll-out-the-welcome-cart-and-browse-email-flows-one-at-a-time",
+        "send-reorder-emails-that-fit-each-buyer-then-read-results",
+        "subscription-churn-watcher",
+        "win-back-lapsed-buyers-and-clean-out-the-rest"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "delivery-segmentation",
+        "lifecycle-flows",
+        "loyalty-community",
+        "offer-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Only people who opted in",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3832,6 +4710,38 @@
         "sample_opening": "Thank you. Please send weekly sales for the last year, current stock, supplier lead times and minimum orders, and how much cash you can spend each month. I will clean the data first and tell you what I changed. Then the reorder list.",
         "sample_feedback": "Ordering 2,000 units now is not a good idea. At current sales, that is eleven months of stock, and about $18,000 would sit on shelves. An order of 600, with a second order in three months, keeps you covered and frees the cash."
       }
+    },
+    "team": {
+      "roles": [
+        "cash-tied-up-finder",
+        "check-capacity-before-promising-a-delivery-date",
+        "explain-a-warehouse-stock-count-variance",
+        "plan-the-cash-for-your-next-stock-order",
+        "prepare-a-seasonal-cash-buffer",
+        "prepare-a-supplier-corrective-action-review",
+        "reorder-stock-before-you-run-out-and-track-the-shipment",
+        "set-your-order-size-and-split-it-across-suppliers",
+        "supply-chain-planner",
+        "supply-chain-strategist",
+        "warehouse-count-discrepancy-review-assistant",
+        "weekly-stock-and-cash-reorder-watcher"
+      ],
+      "families": [
+        "sourcing-suppliers",
+        "stock-cash"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Your numbers, not guesses",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3953,6 +4863,37 @@
         "sample_opening": "Hello, lovely to hear from you. Send me your average order value, your best sellers and the margin on each one. I'll look for the things people naturally buy together and suggest a few bundles that make sense and still make money.",
         "sample_feedback": "A thirty percent discount on the bundle would bring more sales but almost no profit. People already like these items together, so ten percent is plenty to tempt them, and you keep your margin."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-vip-program-for-your-best-customers",
+        "discount-and-price-change-checker",
+        "ecommerce-manager",
+        "make-visitors-who-hesitate-at-the-price-say-yes",
+        "monthly-catalogue-clean-up-keeper",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check"
+      ],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Bundles that make obvious sense",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4075,6 +5016,36 @@
         "sample_opening": "Hey, thanks for getting in touch. Could you send me your subscriber numbers by month and when people cancel, even rough ones? I'll find where most people drop out, and we'll work on that one moment first.",
         "sample_feedback": "Hiding the cancel button would cut cancellations this month and earn you angry reviews for years. Offering a pause option on the cancellation page keeps many of those customers, and it does so honestly."
       }
+    },
+    "team": {
+      "roles": [
+        "launch-a-subscription-and-keep-your-subscribers",
+        "launch-a-subscription-offer-you-can-afford-to-fund",
+        "lifecycle-marketer",
+        "monthly-repeat-buyer-keeper",
+        "plan-a-sale-across-email-and-sms",
+        "subscription-churn-watcher",
+        "turn-the-first-weeks-after-an-order-into-repeat-buyers"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "delivery-segmentation",
+        "lifecycle-flows",
+        "loyalty-community",
+        "offer-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Offers that pay for themselves",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4199,6 +5170,38 @@
         "sample_opening": "Lovely to meet you. Please send your page text, a list of your collections and anything you have from Search Console. I'll look for blockers first, the things that stop pages showing at all, and then match the questions shoppers ask to the pages that should answer them.",
         "sample_feedback": "I wouldn't build twenty city pages with the same text. Search engines see them as copies, and AI assistants won't quote them. One strong page about delivery areas, with real facts, will do far better. Let's put the effort there."
       }
+    },
+    "team": {
+      "roles": [
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+        "fix-a-drop-in-search-traffic-and-check-it-recovers",
+        "get-your-store-named-on-the-pages-ai-quotes",
+        "get-your-store-recommended-by-ai-assistants",
+        "monthly-search-console-keeper",
+        "monthly-store-seo-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+        "publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote",
+        "seo-specialist",
+        "write-a-post-that-beats-the-pages-ranking-today"
+      ],
+      "families": [
+        "authority-distribution",
+        "intent-content",
+        "publishing",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Honest comparison pages",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4322,6 +5325,34 @@
         "sample_opening": "Good afternoon. Send me your store link or screenshots of each page, your policies, and the launch date. I'll go through everything as a first-time buyer, time the checkout, and give you a fix list in the order that pays back most.",
         "sample_feedback": "Launching with the returns page still blank is a real risk, because buyers check it before paying, especially during a sale. It's a thirty-minute fix, so I've put it at the top of the list for before Friday."
       }
+    },
+    "team": {
+      "roles": [
+        "fix-what-slows-your-shopify-store-in-the-order-that-pays-back",
+        "get-your-store-ready-for-a-big-sale-day",
+        "monthly-store-speed-keeper",
+        "open-a-shopify-store-and-take-your-first-order",
+        "pre-launch-store-checker",
+        "quarterly-accessibility-keeper",
+        "shopify-specialist"
+      ],
+      "families": [
+        "built-experiences",
+        "shopify-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "ecommerce",
+      "stance": "Checklists instead of hope",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4444,6 +5475,29 @@
         "sample_opening": "Hello, and well done for checking. Please don't send me any passwords at any point. Instead, tell me which platform you use, how many staff members have logins, and which apps are installed. I'll turn that into a checklist we can work through together.",
         "sample_feedback": "Sharing one admin login across your staff makes it impossible to know who changed what. I'd give each person their own account with only the access they need, which takes about twenty minutes to set up."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "cut-risky-apps-and-scripts-from-your-store",
+        "cybersecurity-specialist",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "lock-down-your-store-logins-and-staff-against-takeover",
+        "prepare-a-vendor-security-questionnaire-response",
+        "quarterly-store-security-keeper",
+        "stop-fake-orders-card-testing-and-bot-abuse",
+        "turn-an-incident-into-a-safer-procedure"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "red_team"
+      ],
+      "department": "ecommerce",
+      "stance": "Never handling passwords",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4596,6 +5650,41 @@
         "sample_opening": "Hello! Send me your order export and your shipping report, and tell me which carrier you use. We'll agree a few rules together, like how many days without a scan counts as stuck. Then I'll hand you a list of orders to act on today, with the messages written.",
         "sample_feedback": "We can't promise holiday delivery for orders placed on the 22nd. Your carrier's last safe date is the 18th, and they haven't confirmed anything later. Let's show the 18th clearly on the site and offer gift cards after that. Fewer angry emails in January."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "daily-order-and-shipping-watcher",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "get-your-store-ready-for-a-big-sale-day",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer",
+        "ship-stock-to-amazon-and-claim-back-what-goes-missing",
+        "weekly-store-numbers-watcher"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Honest delay messages",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4718,6 +5807,39 @@
         "sample_opening": "Thank you for including me early. Please send your product list with costs, weights and sizes, your current prices, and the markets you're considering. I'll build a landed-cost view for each, mark what we know and what needs a local check, and suggest one market to test first.",
         "sample_feedback": "I would not launch in all four markets at once. Duties and returns change the margin a lot, and two markets come out below 10% once you add them. Let's test the strongest one for a quarter, learn from it, and then decide on the next."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "discount-and-price-change-checker",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketing-china-ecommerce-operator",
+        "marketing-china-market-localization-strategist",
+        "marketing-cross-border-ecommerce",
+        "marketplace-manager",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Landed cost before launch",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
-import {FEATURED_ROLES,ROLE_AREAS,roleSeeds} from '../src/roles/role-definitions.mjs';
+import {FEATURED_ROLES,ROLE_AREAS,roleSeeds,roleTeamFacets} from '../src/roles/role-definitions.mjs';
 import {roleInstructions} from '../src/roles/role-instructions.mjs';
 import {CONTEXT_KINDS,contextKindFor,practiceOf} from '../src/roles/context-intake.mjs';
 import {roleExpertise} from '../src/roles/role-expertise.mjs';
@@ -19,7 +19,8 @@ const kind=b=>b.category==='orchestrator'?'workflow':b.type??'skill';
 const href=b=>`/${b.type==='agent'?'agents':b.type==='prompt'?'prompts':b.type==='mind'?'minds':b.type==='workflow'||b.type==='routine'||b.category==='orchestrator'?'workflows':'skills'}/${b.slug}`;
 const TASK_BY_ID=new Map(TASKS.map(t=>[t.id,t]));
 export const RELATED=4,LINKS_PER_ITEM=3;
-export function buildRoles({catalogue,manifest,page,skill,reference=()=>'',evals={},learned={},versions=null,today=null}) {
+const defaultApproaches=()=>{try{return JSON.parse(fs.readFileSync(new URL('../public/data/approach-index.json',import.meta.url),'utf8'));}catch{return {jobs:{}};}};
+export function buildRoles({catalogue,manifest,page,skill,reference=()=>'',evals={},learned={},versions=null,today=null,approaches=defaultApproaches()}) {
  const bySlug=Object.fromEntries(catalogue.blocks.map(b=>[b.slug,b]));
  const ledger={...(versions??{})};
  const profiles=roleSeeds(catalogue.blocks).map(seed=>{
@@ -53,6 +54,7 @@ export function buildRoles({catalogue,manifest,page,skill,reference=()=>'',evals
    deliverables,inputs,opening:{give:plainList(inputs,3,grade),get:plainList(deliverables,4,grade)},helpfulInputs:strings(p.works_best_with?.inputs),fit,limits:[...strings(seed.remit?.limits??p.not_for),...strings(seed.limits)],tools:[...new Set([...seed.tools,...toolSources.flatMap(r=>toolsOf(page(r.slug)))])],
    method:strings(p.how_to_use),capabilities,expertise,workedExample:example,example:example.task,functions,resources,resourceCount:resources.length,
    sourceChecks:{completeMethods:resources.length,referenceValidation:'PASS'},catalogueHash:manifest.catalogue_sha256};
+  Object.assign(profile,roleTeamFacets({profile,lead,approaches,manifest,blocks:catalogue.blocks}));
   profile.evaluation=roleEvaluation({id:seed.id,deliverables,inputs,fit,expertise,results:evals});
   // Content fingerprint excludes the catalogue hash, so unrelated library changes do not bump versions.
   const short=v=>sha(JSON.stringify(v)).slice(0,16);
@@ -79,7 +81,7 @@ export function buildRoles({catalogue,manifest,page,skill,reference=()=>'',evals
  const families=[...new Map(profiles.map(p=>[p.family.id,p.family])).values()].sort((a,b)=>a.name.localeCompare(b.name));
  for(const id of Object.keys(ledger))if(!ids.has(id))delete ledger[id];
  return {profiles,ledger,index:{schema:'ai-blocks-roles/1',sourceHash:manifest.catalogue_sha256,areas:ROLE_AREAS,families,profiles:Object.fromEntries(profiles.map(p=>[p.id,{sha256:sha(JSON.stringify(p)),bytes:Buffer.byteLength(JSON.stringify(p))}])),
-  roles:profiles.map(({id,name,summary,area,family,deliverables,resourceCount,featured,lead})=>({id,name,summary,area,family:family.id,deliverables:deliverables.slice(0,3),resourceCount,featured,keywords:String(bySlug[lead].cues??'').toLowerCase().slice(0,240)}))}};
+  roles:profiles.map(({id,name,summary,area,family,deliverables,resourceCount,featured,lead,job,department,families,lenses,seat_suitability,palette_status})=>({id,name,summary,area,family:family.id,deliverables:deliverables.slice(0,3),resourceCount,featured,lead,job,department,families,lenses,seat_suitability,palette_status,keywords:String(bySlug[lead].cues??'').toLowerCase().slice(0,240)}))}};
 }
 export function roleLinks(profiles){
  const links={};
@@ -114,7 +116,13 @@ export function writeRoles(root=process.cwd()){
  const pageFolder=path.join(root,'public/data/roles-pages');fs.mkdirSync(pageFolder,{recursive:true});
  for(let page=1;page<=Math.ceil(built.index.roles.length/24);page++){
   const from=(page-1)*24;
-  const starter={...searchIndex,starter:true,page,roles:searchIndex.roles.map((r,i)=>i>=from&&i<from+24?r:{...r,summary:'',deliverables:[],keywords:''})};
+  const starter={...searchIndex,starter:true,page,roles:searchIndex.roles.map((r,i)=>{
+   if(i>=from&&i<from+24)return r;
+   // Team facets stay in the full search index. The first page needs only the
+   // unloaded rows' identities, so a wider palette does not slow the directory.
+   const {lead,job,department,families,lenses,seat_suitability,palette_status,...identity}=r;
+   return {...identity,summary:'',deliverables:[],keywords:''};
+  })};
   fs.writeFileSync(page===1?path.join(root,'public/data/roles-starter.json'):path.join(pageFolder,page+'.json'),JSON.stringify(starter));
  }
  // "Specialists who do this" on item pages: for each skill, prompt, agent or workflow, the roles that work with it

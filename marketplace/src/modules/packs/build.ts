@@ -14,6 +14,7 @@ import { soulMarkdown, soulView, splitVoice } from "../directory/soul.ts";
 import { BANNED_PATTERNS, STYLE_RULES, buildHousePackage, genericMethod, rubricMarkdown, specFieldsMarkdown } from "../runner/packages.ts";
 import { writeZip } from "./zip.ts";
 import { AGENT_MIRROR, LIBRARY_ORIGIN, ORIGIN, PACK_LICENSE, PACK_SCHEMA, SKILL_MIRRORS, TEMPLATE_MARKER, type PackKind, type PackManifest } from "./format.ts";
+import { teamMarkdown } from "../directory/team.ts";
 import { agentFrontmatter, megaSources, teamListMarkdown, type MegaKit } from "./mega.ts";
 
 export class PackBuildError extends Error {}
@@ -381,7 +382,7 @@ const REQUIRED_TEMPLATES: Record<PackKind, string[]> = {
 interface SourceRow { n: number; title: string; publisher: string; url: string; checked: string; supports: string }
 interface LibraryRow { slug: string; name: string; why: string }
 
-const KIT_ROOT_FILES = new Set(["knowledge.md", "access.md", "sources.json", "library.json", "role.json"]);
+const KIT_ROOT_FILES = new Set(["TEAM.md", "knowledge.md", "access.md", "sources.json", "library.json", "role.json"]);
 const KIT_FOLDERS = new Set(["skills", "prompts", "workflows", "training"]);
 
 function parseKitJson<T>(kit: RoleKit, path: string): T | null {
@@ -902,6 +903,7 @@ export async function buildPack(input: PackInput): Promise<BuiltPack> {
     { path: "playbook.md", group: "work", content: playbookMarkdown(persona, jts, kind, roleName),
       purpose: agent ? "How I work: intake questions, method, deliverables, quality checks and handoff." : "The base method, intake questions and quality checks, to make your own." },
     ...tractionPlaybook,
+    ...(agent ? [{ path: "TEAM.md", group: "work" as const, content: teamMarkdown(persona), purpose: "How I critique, what I defend, when I defer and what I never do in a team." }] : []),
     { path: "knowledge.md", group: "knowledge", content: knowledgeMarkdown(persona, kit, kind, roleName, megaKit),
       purpose: knowledgeReady ? "What I know about the role, with sources, then my specialty." : megaKit ? "My specialty, and where my channel knowledge is." : "My specialty. The role's researched knowledge is coming." },
     { path: "access.md", group: "work", content: kitFiles["access.md"]?.trim() ? kitFiles["access.md"] : fallbackAccess(), purpose: "Tools I work with, what to share with me and what I never ask for." },

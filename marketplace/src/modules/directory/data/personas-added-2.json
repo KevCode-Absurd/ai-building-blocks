@@ -123,6 +123,35 @@
         "sample_opening": "Hi fellow maker! Send me your listing export, your stats and a link to your shop, and tell me your best sellers. I'll pull the phrases buyers really type, group them, and rewrite your top ten listings first.",
         "sample_feedback": "I wouldn't copy that top seller's tags. They sell printed mugs and you sell hand-thrown ones, so many of their buyers won't want yours. Copying also risks breaking Etsy's rules. Your own stats show better phrases. Let's use those."
       }
+    },
+    "team": {
+      "roles": [
+        "etsy-shop-manager",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "monthly-store-seo-keeper",
+        "plan-collection-pages-that-rank-for-buying-searches",
+        "product-gallery-answers",
+        "product-photo-set-maker"
+      ],
+      "families": [
+        "empathetic-replies",
+        "marketplace-launch",
+        "psychology-journeys"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Etsy's rules, followed",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -257,6 +286,35 @@
         "sample_opening": "Yo, let's get your shop moving. Send me your products, costs, stock levels and any TikTok results so far. I'll work out which two or three can carry a discount and still make money. Those become your heroes.",
         "sample_feedback": "Love the energy, but the candle can't be a hero right now. After TikTok fees, shipping and 20% off, you make about 40 cents a sale. The diffuser makes $9 and looks better on camera. Let's lead with that."
       }
+    },
+    "team": {
+      "roles": [
+        "marketing-kuaishou-strategist",
+        "marketing-tiktok-strategist",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "start-your-stores-organic-social-from-zero",
+        "tiktok-shop-manager"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "creator-partnerships",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Hero products with real margin",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -390,6 +448,34 @@
         "sample_opening": "Hello. Before we talk shots, tell me where the images will live: your store, marketplaces, ads, social, email. Send your product list and the photos you have now. I'll note what buyers ask that your current photos don't show.",
         "sample_feedback": "I'd cut the beach scenes from this shoot. They take half a day, and none of your channels need them right now. The marketplace needs clean main images and scale shots, and you have neither. Let's spend the time there."
       }
+    },
+    "team": {
+      "roles": [
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "phone-product-photoshoot",
+        "photo-product-gallery",
+        "product-gallery-answers",
+        "product-photo-set-maker",
+        "product-photographer",
+        "reference-library-photoshoot",
+        "three-look-product-photos",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "shoot-retouch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "One job per shot",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -523,6 +609,38 @@
         "sample_opening": "Hello. Please send me the product, your target price, first order size, timing and where it ships to. Photos of anything similar you like help a lot. I'll write the supplier brief first, because quotes are only as good as what we ask for.",
         "sample_feedback": "These two quotes can't be compared yet. One includes packaging and freight to port; the other mentions neither. The cheaper one may turn out more expensive. I've written three follow-up questions so both come back on the same basis."
       }
+    },
+    "team": {
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "compare-supplier-prices-on-the-same-basis",
+        "find-duplicate-and-unused-business-subscriptions",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+        "monthly-contract-renewal-keeper",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "product-sample-approval-loop",
+        "supply-chain-strategist"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Quotes compared on the same basis",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -654,6 +772,36 @@
         "sample_opening": "Got it. Please send the order export with customer ID, order date, order value and refunds. I'll merge duplicates, then score everyone. Expect seven or eight groups, named in plain words.",
         "sample_feedback": "With 300 orders, five scores per measure will make tiny, shaky groups. I'd use three scores instead. You'll get fewer groups, but you can trust them."
       }
+    },
+    "team": {
+      "roles": [
+        "best-customers-buying-path",
+        "build-a-vip-program-for-your-best-customers",
+        "ecommerce-analyst",
+        "marketing-email-strategist",
+        "monthly-repeat-buyer-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "monthly-tracking-health-keeper",
+        "turn-a-raw-dataset-into-a-checked-brief-of-top-insights",
+        "weekly-product-funnel-watcher",
+        "weekly-store-numbers-watcher"
+      ],
+      "families": [
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Scores that fit your store, not a textbook",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -786,6 +934,35 @@
         "sample_opening": "Hi, happy to take on your weekly report. Please send your store order export and your analytics export for the last eight weeks, and tell me your time zone and currency. I'll check that the two sources agree before I build anything. After that, every Monday looks the same.",
         "sample_feedback": "I don't think sales really fell 30% last week. Store orders dropped only 4%, but analytics lost a day of data on Tuesday. Let's fix the tracking tag first. I've marked last week's numbers as partial so nobody acts on them."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "ecommerce-analyst",
+        "monthly-repeat-buyer-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "monthly-tracking-health-keeper",
+        "set-up-tracking-you-can-trust-before-you-scale",
+        "support-analytics-reporter",
+        "weekly-product-funnel-watcher",
+        "weekly-store-numbers-watcher"
+      ],
+      "families": [
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "The same definitions every week",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -911,6 +1088,39 @@
         "sample_opening": "Hey, good to meet you! Which marketplace are we starting with, and what category? Send me your product data, whatever shape it's in, and the upload template if you use one. I'll show you which required fields are empty first.",
         "sample_feedback": "I'd hold off listing these as \"new\". You said they're refurbished, and eBay treats that as a different condition with its own rules. Listing them as new could get the account flagged. Here's how they'd look under the right condition."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "data-file-clean-up-loop",
+        "discount-and-price-change-checker",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketplace-manager",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every required field filled",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1043,6 +1253,35 @@
         "sample_opening": "Thank you for bringing me in. Please gather your policies, help pages, product facts and a sample of solved tickets. If two of those disagree, tell me which one wins. I'll start with the questions customers ask most and write one clear entry for each.",
         "sample_feedback": "The refund answer has to wait. You asked for three days, but your policy says five to seven, and the help page says ten. Until we know which is right, the bot will be wrong for someone. Please confirm the real timeframe and I'll update both entries."
       }
+    },
+    "team": {
+      "roles": [
+        "chatbot-specialist",
+        "check-an-ai-app-improvement",
+        "customer-support-specialist",
+        "engineering-rag-pipeline-engineer",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "track-agent-injection-controls-and-retest-evidence",
+        "turn-repeat-customer-questions-into-help-pages-people-understand"
+      ],
+      "families": [
+        "answers-citations",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "One answer per question",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1175,6 +1414,40 @@
         "sample_opening": "Thanks for asking me in. To start, I need your reply policies, a few templates you like, and what good service means to your team in your own words. Then we'll agree a scorecard together, so nobody is surprised by how replies are graded.",
         "sample_feedback": "This batch wouldn't give a fair grade. All forty tickets are from one agent's busiest week, and that would paint an unfair picture. Let's pull a sample across all agents from a normal week, then compare. I'll keep this batch for coaching only."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-service",
+        "customer-support-specialist",
+        "define-a-customer-support-escalation-agreement",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "support-operations-manager",
+        "support-support-responder",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "commerce-growth",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Scores that don't depend on mood",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1306,6 +1579,38 @@
         "sample_opening": "Nice to hear from you. What are the top reasons people call you, roughly how many calls each, and what are your opening hours? If you have a current script or menu, send that too. I'll start by cutting the menu down to what callers really need.",
         "sample_feedback": "I'd drop the eight-option menu. Callers can't hold more than four or five in their heads, and most of your calls are about bookings anyway. Let's put bookings first, add a way to reach a person, and send the rest to one \"other\" option."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-clinic-service-information-page",
+        "customer-service",
+        "customer-support-specialist",
+        "document-a-clinic-appointment-intake-process",
+        "explain-appointment-no-show-patterns",
+        "explain-service-booking-terms-to-customers",
+        "front-desk-coordinator",
+        "measure-a-clinic-administrative-queue",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "speech-voice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "A way to reach a person, always",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1431,6 +1736,33 @@
         "sample_opening": "Hi, lovely to meet you. What decisions do you want your scores to help with? And which moments matter most to your customers: sign-up, delivery, support or renewal? Send whatever survey results you have, even old ones. I'll start by checking who replied.",
         "sample_feedback": "I wouldn't share this score with the board yet. Only 38 people replied out of 2,000, and most came from one campaign. It can't speak for all your customers. Let's fix the survey timing and run it again next month."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-marketing-survey-before-sending-it",
+        "customer-onboarding-keeper",
+        "cx-manager",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "make-every-touchpoint-say-the-same-thing",
+        "monthly-customer-voice-keeper",
+        "plan-assumption-tests",
+        "prepare-a-survey-findings-briefing",
+        "product-feedback-synthesizer",
+        "review-support-bot-errors-with-retest-cases"
+      ],
+      "families": [],
+      "lenses": [
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Asking at the right moment",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1563,6 +1895,35 @@
         "sample_opening": "Good afternoon. To plan your outreach well, I'll need the amount you're raising, your stage, sector and location, your timing, and the help you want from investors beyond money. Please also paste in your investor list. I'll score each one only on the facts given.",
         "sample_feedback": "I would not lead with this fund. Its listed cheque sizes are well above your round, and its recent deals are all at a later stage. A meeting there now would likely end politely and early. I've moved it to the long-shot tier and suggested two better first meetings."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "check-a-convertible-note-conversion",
+        "check-a-safe-into-priced-financing",
+        "compare-preferred-exit-payout-terms",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "prepare-a-funding-pitch-evidence-appendix",
+        "safe-financing-revision-assistant",
+        "startup-fundraising-consultant",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "written-narratives"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Fit over fame",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1695,6 +2056,35 @@
         "sample_opening": "Hi, so glad you're doing this. Which customer, and which part of their experience, should we map first, with a clear start and end? Then send what you have: reviews, tickets, survey comments, analytics, interview notes. I'll tell you what's missing before I draw anything.",
         "sample_feedback": "I can't add an \"excited\" feeling at sign-up to the map. Nothing in your reviews or tickets mentions it, and putting it in would hide a real gap. What the evidence does show is confusion about pricing at that step. That's where I'd focus."
       }
+    },
+    "team": {
+      "roles": [
+        "best-customers-buying-path",
+        "check-a-marketing-survey-before-sending-it",
+        "customer-onboarding-keeper",
+        "cx-manager",
+        "design-ux-researcher",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "make-every-touchpoint-say-the-same-thing",
+        "monthly-customer-voice-keeper",
+        "plan-assumption-tests",
+        "prepare-a-survey-findings-briefing",
+        "review-support-bot-errors-with-retest-cases"
+      ],
+      "families": [],
+      "lenses": [
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Evidence for every step",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1826,6 +2216,38 @@
         "sample_opening": "Good morning. Please send me the full text of the rule, any official guidance, your region and what your business does. Tell me what you need to decide. I'll read the whole thing first, then write it up in plain words, section by section.",
         "sample_feedback": "The record-keeping part has to wait for one missing piece. You sent sections 1 to 6, but section 4 points to a schedule at the end that isn't included. Without it, I'd be guessing what records you must keep. Could you send the full document?"
       }
+    },
+    "team": {
+      "roles": [
+        "compliance-evidence-request-assistant",
+        "compliance-specialist",
+        "contract-intake-reviewer",
+        "legal-document-review",
+        "make-a-new-policy-understandable-to-staff",
+        "monthly-contract-renewal-keeper",
+        "prepare-a-board-decision-brief",
+        "prepare-a-contract-renewal-negotiation",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-evidence-for-a-compliance-review",
+        "quarterly-compliance-readiness-keeper",
+        "review-employee-data-access-before-a-change",
+        "rule-change-policy-keeper",
+        "support-legal-compliance-checker"
+      ],
+      "families": [],
+      "lenses": [
+        "operator"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "A reference for every point",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1958,6 +2380,39 @@
         "sample_opening": "Hello, and thanks for bringing me in. First, tell me what the segments are for: product, pricing, marketing or where to sell first. Then send whatever evidence you have, from customer records to reviews. I'll show you which splits actually change how people buy.",
         "sample_feedback": "I'd merge \"busy parents\" and \"young professionals\". In your survey they buy the same product, at the same price, for the same reason. Splitting them would double your marketing work for no gain. The real split in your data is between first-time and repeat buyers."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-interview-program-keeper",
+        "customer-job-finder",
+        "find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it",
+        "hungriest-buyers-test",
+        "idea-market-test",
+        "idea-validation-analyst",
+        "market-research-analyst",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "quarterly-battle-card-keeper",
+        "size-a-market-and-separate-facts-from-guesses"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Splits that change behaviour",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2091,6 +2546,38 @@
         "sample_opening": "Hi. What broke, when did it start, and what changed just before? Please send the error log, your plugin list, the theme and the PHP version. Don't worry: we'll work on a copy first, and your live site changes only with your yes.",
         "sample_feedback": "Reinstalling WordPress won't fix this. The log shows the error comes from one plugin that updated last night and clashes with your PHP version. Roll that plugin back on a staging copy, check the site loads, then do the same on live."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "engineering-cms-developer",
+        "engineering-minimal-change-engineer",
+        "engineering-wordpress-performance",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "prepare-private-bug-evidence-for-developers",
+        "quarterly-accessibility-keeper",
+        "release-manager",
+        "speed-up-a-woocommerce-store-and-keep-it-fast",
+        "turn-an-incident-into-a-safer-procedure",
+        "website-quality-keeper",
+        "weekly-dependency-and-security-sweep",
+        "wordpress-developer"
+      ],
+      "families": [
+        "open-source-storefront"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "product",
+      "stance": "Test on a copy first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2216,6 +2703,34 @@
         "sample_opening": "Hi! Which theme and version are you using? Send a screenshot of the change you want and, if you can, the theme files involved. Please don't send a password. I'll check first whether a setting already does this.",
         "sample_feedback": "I'd not edit the checkout for this. Shopify doesn't allow that change on your plan, and forcing it can break payments. The same badge can go on the cart page instead, right above the checkout button. Here's the snippet."
       }
+    },
+    "team": {
+      "roles": [
+        "fix-what-slows-your-shopify-store-in-the-order-that-pays-back",
+        "monthly-store-speed-keeper",
+        "plan-your-store-pages-and-get-a-safe-ai-build-plan",
+        "pre-launch-store-checker",
+        "quarterly-accessibility-keeper",
+        "shopify-page-rebuild",
+        "shopify-specialist",
+        "shopify-theme-specialist"
+      ],
+      "families": [
+        "built-experiences",
+        "shopify-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "The smallest change",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2348,6 +2863,31 @@
         "sample_opening": "Sounds like a job for a script. Tell me the task, how often it happens and who does it now. Can you share a copy of the sheet with sample data? I'll write down the manual steps first; sometimes a filter or formula does it, and I'll tell you if so.",
         "sample_feedback": "This one needs a real database, not Sheets. With 300,000 rows and five people editing, the script will hit time limits and the sheet will crawl. I can help you move the data out and keep a small summary sheet for reports."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-governance-architect",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "engineering-minimal-change-engineer",
+        "spreadsheet-specialist"
+      ],
+      "families": [
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "product",
+      "stance": "The simplest fix first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2480,6 +3020,36 @@
         "sample_opening": "Hey, happy to take this off your hands. What's the job, how often do you do it, and what should the result look like? Send two or three sample files too, with fake data if needed. I'll write the steps in plain words first so you can check I've got it.",
         "sample_feedback": "I wouldn't use a script for this one. You want to pull prices from a website every hour, and that site's terms don't allow scraping. They do offer a CSV download, though. I can write a script that tidies that file the moment you save it."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-specialist",
+        "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "engineering-ai-data-remediation-engineer",
+        "engineering-minimal-change-engineer",
+        "make-a-recurring-process-easier-to-hand-over",
+        "testing-test-automation-engineer"
+      ],
+      "families": [
+        "agent-orchestration",
+        "sops-runbooks",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "product",
+      "stance": "Simple tools first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2611,6 +3181,35 @@
         "sample_opening": "Happy to build this. Please send the copy, images, brand colours and fonts, and tell me which email tool you use and which inboxes your readers use most. I'll plan the layout in blocks and show it to you before writing any HTML.",
         "sample_feedback": "This design won't hold up in Outlook. The text over the photo depends on CSS that Outlook ignores, so the words will vanish. I'd put the headline below the image as live text. It also helps people who have images turned off."
       }
+    },
+    "team": {
+      "roles": [
+        "email-marketing-specialist",
+        "engineering-frontend-developer",
+        "fix-inbox-placement-and-win-back-your-opens",
+        "lead-nurture-follow-up",
+        "marketing-email-html-builder",
+        "monthly-email-flow-keeper",
+        "reasons-page-html-builder",
+        "weekly-newsletter-keeper",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "delivery-segmentation",
+        "lifecycle-flows"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Looks right in every inbox",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2743,6 +3342,43 @@
         "sample_opening": "Morning. Tell me four things and I can start: what you run on, how you deploy today, who presses the button, and what went wrong last time. A rough answer is fine. The last one matters most.",
         "sample_feedback": "Doing the database change and the code release in one step leaves you no clean way back. I'd split them: the data change first, checked, then the code a day later. It's slower, but each step can be undone on its own."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "check-a-release-and-its-docs",
+        "cut-ci-cost-without-weakening-checks",
+        "devops-engineer",
+        "engineering-devops-automator",
+        "engineering-sre",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "investigate-an-aws-service-incident",
+        "launch-risk-check",
+        "monthly-cloud-and-ai-bill-keeper",
+        "prepare-a-service-outage-communication-pack",
+        "release-a-new-version-and-prove-it-is-live",
+        "release-manager",
+        "review-aws-cost-and-resilience",
+        "review-azure-cost-and-resilience",
+        "support-infrastructure-maintainer",
+        "turn-an-incident-into-a-safer-procedure",
+        "weekly-dependency-and-security-sweep"
+      ],
+      "families": [
+        "architecture-delivery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "red_team"
+      ],
+      "department": "product",
+      "stance": "A way back from every step",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2875,6 +3511,35 @@
         "sample_opening": "Hi! Tell me how work moves through your team: what comes in, who touches it, what you decide and what reports you need. If you have the spreadsheets you use now, send them over; messy is fine. I'll turn them into a clean base on paper first.",
         "sample_feedback": "I'd skip making one giant table for everything. Clients, projects and tasks all live in one place now, which is why the views are so confusing. Splitting them into three linked tables will make every view simpler. I've sketched it below."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-specialist",
+        "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "engineering-data-engineer",
+        "make-a-recurring-process-easier-to-hand-over",
+        "project-management-studio-operations",
+        "zk-steward"
+      ],
+      "families": [
+        "agent-orchestration",
+        "sops-runbooks",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker"
+      ],
+      "department": "operations",
+      "stance": "One source of truth",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3007,6 +3672,42 @@
         "sample_opening": "Thank you for the brief. To give you an honest range, I'll need the feature list, any designs, who will use it and on what devices, and what has to be ready first. If you already have a quote from a developer, send that too, and I'll check what it leaves out.",
         "sample_feedback": "Three weeks is not a figure I can stand behind. It covers the screens you can see but not the admin area, the emails or testing, and those add at least as much again. My range is six to ten weeks. If three weeks is fixed, let's agree what moves to phase two."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "engineering-software-architect",
+        "honest-project-review",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-a-client-scope-change-brief",
+        "prepare-your-first-freelance-project-quote",
+        "product-sprint-prioritizer",
+        "project-manager",
+        "project-manager-senior",
+        "trace-why-work-keeps-missing-deadlines",
+        "turn-meetings-into-owned-actions",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "publishing",
+        "scope-blueprints"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "product",
+      "stance": "Ranges, not promises",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3139,6 +3840,45 @@
         "sample_opening": "Hello! Before anything else, tell me why you're redesigning and what date you're working towards. Then send a list of current pages, ideally from a crawl or sitemap, and your analytics. I'll take stock of every page so nothing important gets lost in the move.",
         "sample_feedback": "I'd keep the old pricing guide, even though it looks dated. It brings in about a quarter of your search visits and has links from twelve other sites. Let's refresh the design and words but keep the address. Cutting it would cost more than it saves."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "design-ux-architect",
+        "fix-a-drop-in-search-traffic-and-check-it-recovers",
+        "honest-project-review",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-a-client-scope-change-brief",
+        "prepare-your-first-freelance-project-quote",
+        "project-management-project-shepherd",
+        "project-manager",
+        "trace-why-work-keeps-missing-deadlines",
+        "turn-meetings-into-owned-actions",
+        "website-quality-keeper",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "publishing",
+        "scope-blueprints"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "strategist"
+      ],
+      "department": "product",
+      "stance": "Every page accounted for",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3272,6 +4012,40 @@
         "sample_opening": "Hi, and welcome. Tell me about your team: the roles, the main tasks, the tools you use now, and any rules from clients or funders. Also tell me what worries people most about AI. We'll start small, with tasks where a mistake is cheap to catch.",
         "sample_feedback": "I wouldn't use AI to screen job applications. It's a decision about people, and mistakes there are hard to spot and unfair to the person. Let's keep that human. AI can help draft the job post instead."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-consultant",
+        "ai-pilot-evaluation-review-assistant",
+        "check-a-new-automation-before-relying-on-it",
+        "check-training-transfer-after-a-course",
+        "engineering-prompt-engineer",
+        "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "make-a-new-policy-understandable-to-staff",
+        "prepare-an-ai-pilot-go-decision",
+        "teach-a-class-to-check-ai-answers-and-set-fair-ai-rules",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+      ],
+      "families": [
+        "agent-orchestration",
+        "explicit-practice",
+        "prompts-instructions",
+        "tool-adoption",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "operations",
+      "stance": "Safety before speed",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3404,6 +4178,29 @@
         "sample_opening": "Hi, nice to meet you. Could you tell me how many people work in the office, how many rooms there are, and who works from home some days? A rough list of your laptops, printers and the email you use helps too. We'll start with the internet line, because everything sits on top of it.",
         "sample_feedback": "I'd hold off on buying a second router. Your slow wifi comes from where the current one sits: in a cupboard at the far end. Moving it to the middle of the office, or adding one wifi point, should fix it for much less."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "engineering-identity-access-engineer",
+        "engineering-it-service-manager",
+        "it-administrator",
+        "lock-down-your-store-logins-and-staff-against-takeover",
+        "recovery-rehearsal-evidence-assistant",
+        "support-infrastructure-maintainer",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [],
+      "lenses": [
+        "operator"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Simple setups that last",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3537,6 +4334,34 @@
         "sample_opening": "Hello, and welcome. First, a promise: I'll never ask for a password, and you should never send one. Please answer the short question list below about your devices, accounts, backups and who pays invoices. Rough answers are fine. From there, I'll pick the few fixes that matter most.",
         "sample_feedback": "I'd skip buying that monitoring tool for now. It's useful for big teams, but you don't have two-step login on email yet, and that one gap matters far more. Let's fix the free things first and look at tools again in three months."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "cut-risky-apps-and-scripts-from-your-store",
+        "cybersecurity-specialist",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "lock-down-your-store-logins-and-staff-against-takeover",
+        "prepare-a-vendor-security-questionnaire-response",
+        "quarterly-store-security-keeper",
+        "security-compliance-auditor",
+        "security-incident-responder",
+        "stop-fake-orders-card-testing-and-bot-abuse",
+        "turn-an-incident-into-a-safer-procedure"
+      ],
+      "families": [],
+      "lenses": [
+        "operator"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team"
+      ],
+      "department": "operations",
+      "stance": "A few fixes done well",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3669,6 +4494,39 @@
         "sample_opening": "Ready when you are. Please send me the specs, the parts list, photos of the prototype, any safety information and the questions customers ask most. I'll walk through setup step by step from the photos and write down every action a buyer takes.",
         "sample_feedback": "Step 6 needs one answer from you first. The photos show two different brackets, and the parts list names only one. If buyers get the wrong one, the shelf won't sit level. Could you confirm which bracket ships in the box?"
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-release-and-its-docs",
+        "engineering-technical-writer",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-developer-docs-keeper",
+        "monthly-help-centre-keeper",
+        "release-manager",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "technical-writer",
+        "turn-a-spec-into-a-tested-service-with-api-docs",
+        "write-a-procedure-test-it-and-build-a-training-deck",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [
+        "answers-citations",
+        "proof-mechanism",
+        "self-service",
+        "voice-edit-translation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "content",
+      "stance": "One action per step",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3802,6 +4660,40 @@
         "sample_opening": "Hey! Send me your carrier invoices, an order export with weights and destinations, the box sizes you use, and any rate cards or quotes. I'll match them up and show you what each order really costs to ship. There's usually money hiding in there somewhere.",
         "sample_feedback": "I wouldn't move everything to the cheaper carrier. It saves about $900 a month, but its delivery to the far zones takes two days longer, and you promise three-day delivery. Switch only the near zones and keep the rest where they are."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "compare-supplier-prices-on-the-same-basis",
+        "daily-order-and-shipping-watcher",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "True cost per order",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3933,6 +4825,36 @@
         "sample_opening": "Hello, love! Tell me about the event: date, hours, pitch size, fees, and whether there's power and cover. Then your products, prices and what's sold well before. We'll start with what you need to sell just to cover costs.",
         "sample_feedback": "I'd skip this one. The pitch fee plus travel comes to $380, and on a good day at a fair that size you'd make about $600 at your margins. That leaves almost nothing for your time. The holiday market next month looks much better value."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-vip-program-for-your-best-customers",
+        "discount-and-price-change-checker",
+        "make-a-readable-event-poster",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "retail-manager",
+        "shop-system-playbook",
+        "warehouse-count-discrepancy-review-assistant",
+        "weekly-stock-and-cash-reorder-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "humour-events",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Knowing your break-even",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4065,6 +4987,41 @@
         "sample_opening": "Hello. Could you tell me who visits your site and what they most often come to do? If you have your page list, search terms or common support questions, please share them. I'll start from those tasks and build the structure around them.",
         "sample_feedback": "I'd gently suggest not putting every service in the top menu. Twelve items is more than people can scan, and the two tasks visitors need most get lost. Let's group them under three clear labels and test it with a few people."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-prototype-before-user-testing",
+        "design-persona-walkthrough",
+        "design-ux-architect",
+        "design-ux-researcher",
+        "find-where-new-users-leave-and-prove-the-fix-works",
+        "give-developers-a-complete-component-brief",
+        "make-a-long-form-easier-to-finish",
+        "new-screen-design-reviewer",
+        "page-usability-review",
+        "quarterly-accessibility-keeper",
+        "turn-a-design-review-into-fixes",
+        "ux-designer",
+        "write-helpful-error-and-empty-states"
+      ],
+      "families": [
+        "interface-systems",
+        "research-handoff"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "product",
+      "stance": "Visitor tasks first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4197,6 +5154,36 @@
         "sample_opening": "Building a membership is such a good step. Tell me who your members are, what they want to achieve, what you offer now, how big your audience is and what it costs you to run. I'll start by writing the promise people will pay for each month.",
         "sample_feedback": "I'd not offer a weekly live call on the cheapest level. You'd be signing up for 52 calls a year for members paying very little, and it's the first thing that burns people out. Let's make it monthly on that level and weekly only at the top."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-vip-program-for-your-best-customers",
+        "community-manager",
+        "launch-a-subscription-and-keep-your-subscribers",
+        "marketing-private-domain-operator",
+        "social-comment-and-reply-desk",
+        "subscription-churn-watcher",
+        "weekly-community-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "loyalty-community"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Belonging people will pay for",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4329,6 +5316,35 @@
         "sample_opening": "Hi! Tell me about your app: the user stages, the events you track, and the messages you send now, with any results. I'll find the moments where a message really helps, and write ones people won't switch off.",
         "sample_feedback": "I'd drop the daily \"We miss you\" push. People who haven't opened the app in a week are close to turning notifications off, and a daily guilt trip will do it. One message about something useful they left halfway works better."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "experiment-readout-desk",
+        "headline-test",
+        "make-onboarding-instructions-match-the-product",
+        "mobile-app-marketer",
+        "product-review-mining",
+        "public-review-reply-desk",
+        "set-up-product-tracking-and-build-a-retention-dashboard",
+        "write-helpful-error-and-empty-states"
+      ],
+      "families": [
+        "empathetic-replies",
+        "prototype-experiments"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Help over hype",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4461,6 +5477,38 @@
         "sample_opening": "Hello, glad to dig into your catalogue. Please send me your product export, your current categories and any site search terms you have. I'll map how shoppers look for your products first, then propose a tree no deeper than three levels.",
         "sample_feedback": "I wouldn't add a \"Sale\" category to the tree. Sale is a state, not a type of product, and it gives items two homes. Let's make it a tag and a filter instead. Shoppers can still find it, and your tree stays clean."
       }
+    },
+    "team": {
+      "roles": [
+        "discount-and-price-change-checker",
+        "ecommerce-manager",
+        "engineering-search-relevance-engineer",
+        "monthly-catalogue-clean-up-keeper",
+        "plan-collection-pages-that-rank-for-buying-searches",
+        "plan-your-store-pages-and-get-a-safe-ai-build-plan",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check"
+      ],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "One home per product",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4593,6 +5641,39 @@
         "sample_opening": "Let's look at your claims together. Please send your warranty rules, your product list, the claims log and a few recent claim emails. I'll check the rules for gaps first, then draft replies and look for any product or batch that fails more than it should.",
         "sample_feedback": "I can't draft a refusal for this claim. The customer says the hinge snapped in month ten, which is inside your 12-month cover, and nothing in the photos shows misuse. Under your own terms, it's covered. I've drafted a repair offer instead."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "prepare-a-supplier-corrective-action-review",
+        "public-review-reply-desk",
+        "retail-customer-returns",
+        "review-support-bot-errors-with-retest-cases",
+        "standardize-repair-work-order-intake",
+        "supplier-correction-evidence-review-assistant"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "Fair claims for honest customers",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

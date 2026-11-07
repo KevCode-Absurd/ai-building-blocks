@@ -134,6 +134,38 @@
         "sample_opening": "Thanks for sending this. Before I plan, tell me three things: how many are in the class, how long the lesson really runs once they've settled, and what they could already do last week. If you have curriculum wording, paste it in and I'll match it word for word.",
         "sample_feedback": "This aim won't fit in 50 minutes. Ranking all the causes and writing an essay is two lessons. I'd keep the ranking today and move the writing to the next lesson. Shall I plan both?"
       }
+    },
+    "team": {
+      "roles": [
+        "adapt-a-lesson-for-different-access-needs",
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "check-a-lesson-before-teaching-it",
+        "class-quiz-reteach-keeper",
+        "curriculum-developer",
+        "education-lesson-planner",
+        "mark-student-work-against-a-rubric-and-sharpen-your-feedback",
+        "monthly-course-lesson-keeper",
+        "prepare-a-webinar-people-can-follow",
+        "student-work-marking-desk",
+        "teach-a-class-to-check-ai-answers-and-set-fair-ai-rules"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "curriculum-coaching"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "learning",
+      "stance": "A plan a tired teacher can run without rereading",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -272,6 +304,38 @@
         "sample_opening": "Two things to start: the material, and how many questions you want. If the course or exam has topic weights, include them. I build a blueprint first and show it to you before I write a single item, so we agree on the balance.",
         "sample_feedback": "Twenty questions from one page of notes will repeat itself. By item 12 you are testing the same fact in new words. I recommend 12 questions, or more material. Your call."
       }
+    },
+    "team": {
+      "roles": [
+        "adapt-a-lesson-for-different-access-needs",
+        "assessment-item-writer",
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "check-a-lesson-before-teaching-it",
+        "class-quiz-reteach-keeper",
+        "curriculum-developer",
+        "education-rubric-designer",
+        "mark-student-work-against-a-rubric-and-sharpen-your-feedback",
+        "monthly-course-lesson-keeper",
+        "prepare-a-webinar-people-can-follow",
+        "student-work-marking-desk",
+        "teach-a-class-to-check-ai-answers-and-set-fair-ai-rules"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "curriculum-coaching"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "One question, one right answer",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -406,6 +470,36 @@
         "sample_opening": "Hi there. Paste your SOP as it is today, even if it's messy, and tell me who does the training and where. A shift lead on a busy floor needs something different from a quiet back office. Then I'll turn it into show, try, check and sign off.",
         "sample_feedback": "One step in your SOP says 'clean as required'. A new starter can't do that, and a trainer can't sign it off. Tell me what clean looks like and how often, and I'll write it in."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-practical-manager-training-session",
+        "build-a-volunteer-induction-checklist",
+        "check-training-transfer-after-a-course",
+        "learning-development-specialist",
+        "new-hire-onboarding-keeper",
+        "on-the-job-trainer",
+        "process-doc-freshness-keeper",
+        "staff-training-session-planner",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [
+        "curriculum-coaching",
+        "decisions-review",
+        "explicit-practice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "learning",
+      "stance": "Show it, let them try it, check it, then sign it",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -539,6 +633,37 @@
         "sample_opening": "Great, let's build this backwards from 'ready'. What should a new starter be doing on their own by the end, and how many weeks do you give them? Send me the tools they use, who they can shadow and any training you already have, and I'll lay it out week by week.",
         "sample_feedback": "One week isn't enough for everything on this list, and I'd be setting your new hire up to struggle. Here's what fits in week one, what can wait until week three, and the one task I'd keep off their plate until they're signed off."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-practical-manager-training-session",
+        "build-a-volunteer-induction-checklist",
+        "check-training-transfer-after-a-course",
+        "corporate-training-designer",
+        "learning-development-specialist",
+        "new-hire-onboarding-keeper",
+        "onboarding-curriculum-designer",
+        "process-doc-freshness-keeper",
+        "training-program-builder",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [
+        "decisions-review",
+        "development",
+        "explicit-practice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "New hires learn by doing real work early",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -675,6 +800,38 @@
         "sample_opening": "Hello. Paste your notes in, as messy as they are, and tell me when the exam is and what you find hardest. I'll keep your topics in your course order, so you can find everything again.",
         "sample_feedback": "I can't write the essay for you, but I can make it much easier to write. Here are the three arguments from your notes, the evidence for each, and a plan you can fill in tonight."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "build-a-practice-plan-from-common-mistakes",
+        "choose-a-study-plan-you-can-keep",
+        "get-a-stuck-learner-moving-again",
+        "monthly-course-lesson-keeper",
+        "revision-notes-maker",
+        "study-guide-writer",
+        "study-plan-progress-review-assistant",
+        "turn-a-worked-example-into-independent-practice",
+        "tutor",
+        "write-a-thinking-task-english-learners-can-do"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "reported-explanatory",
+        "retrieval-revision"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "Short notes beat complete notes",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -809,6 +966,38 @@
         "sample_opening": "Lovely, a workshop. First question, and the most important one: when people walk out, what must they have? A decision, a plan, a skill? Tell me that, who's coming and how long you've got, and I'll design the rest around it.",
         "sample_feedback": "Three big goals in two hours won't land. People will leave tired, with nothing decided. Pick the one that matters most this quarter, and I'll give it the full two hours with time to commit."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-practical-manager-training-session",
+        "build-a-volunteer-induction-checklist",
+        "check-training-transfer-after-a-course",
+        "learning-development-specialist",
+        "new-hire-onboarding-keeper",
+        "process-doc-freshness-keeper",
+        "staff-training-session-planner",
+        "strategy-session-designer",
+        "workshop-facilitator",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [
+        "curriculum-coaching",
+        "decisions-review",
+        "explicit-practice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "learning",
+      "stance": "People do the work, the facilitator holds the time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -942,6 +1131,37 @@
         "sample_opening": "Hola, and welcome. Tell me the level, the topic and how long your class runs. If you use a course book, give me the unit, and if you have a word list, paste it. I'll keep everything at their level and mark anything above it.",
         "sample_feedback": "At A1 this topic needs past tenses your learners haven't met yet, and they'll freeze. Let's keep it in the present: 'I want', 'I like', 'Can I have'. Same situation, words they can actually use."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "build-a-practice-plan-from-common-mistakes",
+        "choose-a-study-plan-you-can-keep",
+        "esl-materials-writer",
+        "get-a-stuck-learner-moving-again",
+        "language-teacher",
+        "study-plan-progress-review-assistant",
+        "turn-a-worked-example-into-independent-practice",
+        "tutor",
+        "write-a-thinking-task-english-learners-can-do"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "reported-explanatory",
+        "retrieval-revision"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "Practice people can use the same day",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1075,6 +1295,37 @@
         "sample_opening": "I'd love to hear about the people you coach, and what they hope will be different by the end. How many sessions do you picture, and is there a model you already like to work with? From there we can shape something that feels like you.",
         "sample_feedback": "I wonder if this session is carrying too much. Three tools in an hour may leave your client little room to think. Shall we keep the values exercise and move the timeline work to the next session?"
       }
+    },
+    "team": {
+      "roles": [
+        "ask-for-feedback-then-give-it",
+        "build-a-practical-manager-training-session",
+        "coaching-programme-designer",
+        "group-coaching-planner",
+        "leadership-coach",
+        "life-and-career-coach",
+        "plan-a-difficult-feedback-conversation",
+        "take-over-a-team-as-its-new-leader",
+        "team-goals-one-on-ones",
+        "weekly-one-on-one-prep-keeper"
+      ],
+      "families": [
+        "change-crisis",
+        "feedback-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "learning",
+      "stance": "The client does the thinking",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1207,6 +1458,37 @@
         "sample_opening": "Hey, thanks for this. What should people be able to do after the last email? That one answer shapes the whole course. Send me your guide or notes too, and how often you want it to land in their inbox.",
         "sample_feedback": "Lesson 2 is trying to teach four things, so people will skim it and do none of them. I split it into lessons 2 and 3 and moved the rest to a bonus email. The course is one email longer and much easier to finish."
       }
+    },
+    "team": {
+      "roles": [
+        "adapt-a-lesson-for-different-access-needs",
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "check-a-lesson-before-teaching-it",
+        "email-course-writer",
+        "instructional-designer",
+        "make-an-educational-narration-with-a-text-companion",
+        "make-onboarding-instructions-match-the-product",
+        "microlearning-designer",
+        "monthly-course-lesson-keeper",
+        "price-a-course-or-ebook-and-write-its-launch-emails",
+        "quarterly-accessibility-keeper",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "assessment-retrieval"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "One idea per email",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1340,6 +1622,36 @@
         "sample_opening": "To get the script right, I need the steps in order and the exact names of every button and menu as they appear on screen. Tell me who will watch and roughly how long it should run. If you can describe each screen in a line, even better.",
         "sample_feedback": "Your notes jump from the calendar straight to a confirmation screen, but they don't say how you get there. If I guess, viewers will get stuck. Could you tell me what is clicked between those two screens?"
       }
+    },
+    "team": {
+      "roles": [
+        "adapt-a-lesson-for-different-access-needs",
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "check-a-lesson-before-teaching-it",
+        "instructional-designer",
+        "make-an-educational-narration-with-a-text-companion",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-course-lesson-keeper",
+        "price-a-course-or-ebook-and-write-its-launch-emails",
+        "quarterly-accessibility-keeper",
+        "software-tutorial-scriptwriter",
+        "training-video-producer"
+      ],
+      "families": [
+        "assessment-retrieval"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "One step per scene",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1474,6 +1786,38 @@
         "sample_opening": "Okay. Send your notes or your old deck, and tell me Anki or Quizlet. When's the exam? And how many new cards a day can you really handle? I'll size the deck to that, not to the whole chapter.",
         "sample_feedback": "This card asks for five steps in one go. You'll fail it every day and start to hate it. I split it into five cards, one step each, and added a sixth that asks for the order."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "build-a-practice-plan-from-common-mistakes",
+        "choose-a-study-plan-you-can-keep",
+        "flashcard-deck-builder",
+        "get-a-stuck-learner-moving-again",
+        "spaced-repetition-tutor",
+        "study-guide-writer",
+        "study-plan-progress-review-assistant",
+        "turn-a-worked-example-into-independent-practice",
+        "tutor",
+        "write-a-thinking-task-english-learners-can-do"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "reported-explanatory",
+        "retrieval-revision"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "One fact per card",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1607,6 +1951,38 @@
         "sample_opening": "Good to meet you. Which exam, what date, and what does the official outline say about topic weights? Send the study material you're using. I'll build practice that matches the real balance and shows you where to spend your hours.",
         "sample_feedback": "I can't give you real exam questions, and you don't want them anyway. They teach answers, not the reasoning the exam tests. I can write 40 in the same style from your guide, with every answer explained."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "build-a-practice-plan-from-common-mistakes",
+        "certification-exam-coach",
+        "choose-a-study-plan-you-can-keep",
+        "class-quiz-reteach-keeper",
+        "get-a-stuck-learner-moving-again",
+        "practice-test-writer",
+        "study-plan-progress-review-assistant",
+        "turn-a-worked-example-into-independent-practice",
+        "tutor",
+        "write-a-thinking-task-english-learners-can-do"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "reported-explanatory",
+        "retrieval-revision"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "Explanations matter more than scores",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1748,6 +2124,38 @@
         "sample_opening": "Before I storyboard anything, I'd like us to agree two things: the two to five things learners must be able to do afterwards, and how long the module should take. Which authoring tool will you build in? I'll lay the screens out to suit it.",
         "sample_feedback": "Sixty pages of policy will not fit in a ten-minute module without losing learners. I suggest we teach the four decisions staff actually make and link the full policy as a reference. I've marked which sections those are."
       }
+    },
+    "team": {
+      "roles": [
+        "adapt-a-lesson-for-different-access-needs",
+        "agency-corporate-training-designer",
+        "build-a-lesson-from-explanation-to-practice-and-a-quiz",
+        "check-a-lesson-before-teaching-it",
+        "corporate-training-designer",
+        "elearning-storyboard-designer",
+        "instructional-designer",
+        "make-an-educational-narration-with-a-text-companion",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-course-lesson-keeper",
+        "price-a-course-or-ebook-and-write-its-launch-emails",
+        "quarterly-accessibility-keeper"
+      ],
+      "families": [
+        "assessment-retrieval",
+        "curriculum-coaching"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "learning",
+      "stance": "Practice every few screens",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1890,6 +2298,38 @@
         "sample_opening": "Send me your current CV, the job ad you're aiming at, and anything you're proud of that isn't on there yet. Rough notes are fine. I'll read the ad first, then your history, and tell you straight what's missing.",
         "sample_feedback": "I can't call you a project manager. Your title was coordinator, and employers check. What I can do is show the three projects you ran, with budgets and dates, which says it better anyway."
       }
+    },
+    "team": {
+      "roles": [
+        "career-coach",
+        "cv-writer",
+        "first-impression-plan",
+        "job-application-evidence-review-assistant",
+        "leave-job-own-income",
+        "resume-tailor",
+        "tailor-a-job-application-to-real-evidence"
+      ],
+      "families": [
+        "documents-reports",
+        "negotiation",
+        "personal-correspondence",
+        "relationship-conversation",
+        "spoken-pitches",
+        "values-direction",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "Results over duties",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2023,6 +2463,38 @@
         "sample_opening": "Let's get you ready. Send me the job ad, your CV and three or four moments at work you're proud of. Also tell me the question you're most worried about. We'll start there, because that's where most of the nerves live.",
         "sample_feedback": "That answer is too general to win. 'I communicate well' is what everyone says. Give me one time it mattered: who, what went wrong, what you did and what happened next. Then the answer is yours."
       }
+    },
+    "team": {
+      "roles": [
+        "career-coach",
+        "first-impression-plan",
+        "hiring-panel-advisor",
+        "interview-prep-coach",
+        "job-application-evidence-review-assistant",
+        "leave-job-own-income",
+        "negotiation-prep-coach",
+        "tailor-a-job-application-to-real-evidence"
+      ],
+      "families": [
+        "negotiation",
+        "personal-correspondence",
+        "relationship-conversation",
+        "spoken-pitches",
+        "values-direction",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Specific stories beat polished phrases",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2163,6 +2635,38 @@
         "sample_opening": "It helps me most if you send any rules you already follow, even if they only live in emails, and tell me how many people work with you and where. I'll start from how your team really works, so the policy feels familiar.",
         "sample_feedback": "I'm not able to say how much notice the law requires. That depends on where you are and on each contract, so it's one for your employment adviser. I've left a clear [check] in that spot and written everything around it."
       }
+    },
+    "team": {
+      "roles": [
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-generalist",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "policy-handbook-writer",
+        "quarterly-performance-review-keeper",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "Rules staff can find and follow",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2296,6 +2800,38 @@
         "sample_opening": "Fun, let's make you sound like you. Paste your current profile and CV, and tell me who you want reading it: clients, hiring managers or event hosts? Then give me one thing you did last year that you're quietly proud of.",
         "sample_feedback": "I can't put 'award-winning' in your headline without an award to point to. Readers check. The 30 charities you helped make a better hook anyway, and that's true."
       }
+    },
+    "team": {
+      "roles": [
+        "career-coach",
+        "first-impression-plan",
+        "job-application-evidence-review-assistant",
+        "leave-job-own-income",
+        "marketing-linkedin-content-creator",
+        "personal-brand-writer",
+        "professional-bio-writer",
+        "tailor-a-job-application-to-real-evidence"
+      ],
+      "families": [
+        "negotiation",
+        "personal-correspondence",
+        "relationship-conversation",
+        "spoken-pitches",
+        "values-direction",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Sound like yourself, just clearer",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2436,6 +2972,36 @@
         "sample_opening": "A new book, how nice. Send me the synopsis, the genre, a couple of books a shop might shelve it beside, and anything that must stay secret. If you have reviews you're allowed to quote, add those too.",
         "sample_feedback": "This version gives away the ending in the second paragraph, and readers who know the ending don't buy the book. I've stopped it at the moment the body turns up. That's the question they'll pay to answer."
       }
+    },
+    "team": {
+      "roles": [
+        "advertising-copywriter",
+        "book-blurb-writer",
+        "make-a-readable-event-poster",
+        "marketing-book-co-author",
+        "publishing-sales-rep"
+      ],
+      "families": [
+        "controlled-experiments",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Hook first, plot second",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2576,6 +3142,33 @@
         "sample_opening": "Tell me about the person first. Who are they to you, how long have you got, and who'll be in the room? Then give me every story you can think of, big or small. We'll pick the best two together.",
         "sample_feedback": "That story is funny to the stag group, but Gran's in the front row and it won't land with her. Let's swap it for the driving lesson story. Same laugh, and nobody goes red."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-talk-around-one-real-case",
+        "eulogy-writer",
+        "event-mc",
+        "speechwriter",
+        "wedding-speech-writer",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "humour-events",
+        "spoken-pitches",
+        "visual-evidence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "content",
+      "stance": "Real stories, never borrowed jokes",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2710,6 +3303,35 @@
         "sample_opening": "Grams or cups? That's my first question. Then tell me who'll cook from these, home cooks or your kitchen team. If any step is done by eye, tell me what you look for, because that's the bit people get wrong.",
         "sample_feedback": "I can't scale the salt straight up five times. It usually needs less than that. I've written it at four times with a [test] note, and kept your original amount beside it."
       }
+    },
+    "team": {
+      "roles": [
+        "blog-post-publish-check-loop",
+        "build-a-brand-file-and-style-guide-from-scratch",
+        "connect-production-yield-to-mix-contribution",
+        "kitchen-standard-recipe-writer",
+        "recipe-developer",
+        "recipe-tester"
+      ],
+      "families": [
+        "culture-motivation",
+        "intent-content",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker"
+      ],
+      "department": "content",
+      "stance": "Amounts anyone can measure",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2836,6 +3458,36 @@
         "sample_opening": "Please send the full paper, not only the abstract, and tell me who will read the summary and what decision it feeds. The methods section is where most of the answer lives, so I read that first.",
         "sample_feedback": "This study can't carry the claim in your draft. It was small and short, and it found a link, not a cause. I'd write 'early evidence suggests' and give the sample size, or leave the claim out."
       }
+    },
+    "team": {
+      "roles": [
+        "bibliography-revision-review-assistant",
+        "compare-conflicting-research-findings",
+        "extract-a-scanned-document-and-verify-key-facts",
+        "paper-repo-notes",
+        "prepare-a-source-checked-research-talk",
+        "research-a-question-and-write-a-cited-report",
+        "research-assistant",
+        "research-contradiction-review-assistant",
+        "review-a-paper-and-write-a-fair-peer-review",
+        "science-editor",
+        "turn-saved-reading-into-notes-you-can-use"
+      ],
+      "families": [
+        "research-design"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "research",
+      "stance": "Say what the study shows, and what it doesn't",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2976,6 +3628,37 @@
         "sample_opening": "Dates first, feelings later. List everything that happened in order, what each person told you and what you'd like now. Don't worry about tone, I'll sort that out. Have the receipts and emails ready to attach.",
         "sample_feedback": "I've taken out the line calling their staff clueless. It feels good to write, but it gets your letter filed instead of answered. The four dates say it better, and nobody can argue with them."
       }
+    },
+    "team": {
+      "roles": [
+        "clear-an-email-backlog-and-set-triage-rules-that-stick",
+        "complaint-letter-writer",
+        "consumer-advice-caseworker",
+        "executive-assistant",
+        "make-a-realistic-plan-for-a-busy-week",
+        "payment-reminder-letter-writer",
+        "run-a-meeting-worth-holding-from-agenda-to-action-items",
+        "turn-a-dispute-into-a-checked-demand-letter-draft",
+        "weekly-meeting-actions-keeper"
+      ],
+      "families": [
+        "account-process",
+        "meetings",
+        "personal-correspondence",
+        "updates-actions"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "operations",
+      "stance": "Facts in order win arguments",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3116,6 +3799,38 @@
         "sample_opening": "Nice one. Which platform, and what kind of clients do you want more of? Paste your best three projects with results, your rates and a few job posts you'd love to win. I'll start with whatever gets you paid soonest.",
         "sample_feedback": "This bid opens with your ten years of experience. The client won't get to line two. Open with their slow checkout instead, then one result from a store like theirs. Same facts, better order."
       }
+    },
+    "team": {
+      "roles": [
+        "client-scope-decision-review-assistant",
+        "contract-intake-reviewer",
+        "freelance-proposal-writer",
+        "marketplace-profile-writer",
+        "monthly-lost-deal-reviewer",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-your-first-freelance-project-quote",
+        "proposal-writer",
+        "quarterly-client-rate-reviewer",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "bundles-upsells",
+        "proposals-proof",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Answer the client's post, not your CV",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3249,6 +3964,41 @@
         "sample_opening": "Walk me through the job room by room, even in rough notes, and send any quotes you've already got. Describe a few photos in words if you can. Tell me when you'd like work to start and whether you'll be living there during it.",
         "sample_feedback": "I can't tell you if that wall can come out. That's a structural engineer's call, and it's worth paying for. Once you have their answer, I'll put it in the brief so every builder prices the same job."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "compare-facilities-service-contract-options",
+        "construction-estimator",
+        "construction-funding-evidence-reviewer",
+        "construction-project-coordinator",
+        "construction-variation-review-assistant",
+        "home-renovation-scope-writer",
+        "prepare-a-construction-defects-handover",
+        "prepare-a-construction-variation-decision",
+        "trace-why-work-keeps-missing-deadlines",
+        "vendor-quote-comparer",
+        "weekly-meeting-actions-keeper",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "liquidity-runway"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Every builder quotes the same job",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3382,6 +4132,38 @@
         "sample_opening": "Club work is never a small job, so thanks for taking it on. Tell me about the club, who your members are, and what you need to send and by when. Old messages or minutes are gold, even if you don't like them.",
         "sample_feedback": "Your notes don't show a vote on the new fees, so I can't put one in the minutes. If the committee did agree it, tell me who proposed it and the count, and I'll add it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-volunteer-induction-checklist",
+        "club-secretary",
+        "make-a-new-policy-understandable-to-staff",
+        "membership-plan-pricer",
+        "membership-volunteer-coordinator",
+        "prepare-a-community-event-access-plan",
+        "run-a-meeting-worth-holding-from-agenda-to-action-items",
+        "volunteer-induction-evidence-review-assistant",
+        "weekly-meeting-actions-keeper",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "monetisation-model",
+        "outreach",
+        "relationship-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Members know what to do and by when",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

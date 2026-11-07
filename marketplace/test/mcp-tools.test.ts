@@ -34,6 +34,7 @@ const SAGE: Persona = {
     },
   },
 };
+const SEAT_FIXTURES: Persona[] = ["test-strategist", "test-maker-a", "test-maker-b", "test-red-team", "test-judge"].map((id, i) => ({ ...NOVA, id, name: `Seat${i}`, profile: { ...NOVA.profile, portrait: `/agents/${id}.webp` } }));
 /** An agent an expert built in the studio: it has no download pack. */
 const EXPERT_BUILT: Persona = { ...NOVA, id: "pat-expert-seo", kind: "expert", name: "Pat" };
 /** Words a buyer must never see now that hiring is free. */
@@ -83,7 +84,7 @@ const fakes = {
   }),
   listPersonas: mock.fn(async (_env: unknown, filter?: { area?: string; q?: string }) =>
     [NOVA, HIDDEN, SAGE].filter(p => (!filter?.area || p.area === filter.area) && (!filter?.q || `${p.name} ${p.title} ${p.tagline}`.toLowerCase().includes(filter.q.toLowerCase())))),
-  getPersona: mock.fn(async (_env: unknown, id: string) => [NOVA, HIDDEN, SAGE, EXPERT_BUILT].find(p => p.id === id) ?? null),
+  getPersona: mock.fn(async (_env: unknown, id: string) => [NOVA, HIDDEN, SAGE, EXPERT_BUILT, ...SEAT_FIXTURES].find(p => p.id === id) ?? null),
 };
 const wrap = (name: keyof typeof fakes) => (...args: unknown[]) => (fakes[name] as unknown as (...a: unknown[]) => unknown)(...args);
 
@@ -203,7 +204,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
   const { rpc } = await setup();
   const res = await rpc("tools/list", {});
   const tools: any[] = res.body.result.tools;
-  assert.deepEqual(tools.map(t => t.name), ["list_agents", "get_agent", "load_agent", "get_agent_file", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
+  assert.deepEqual(tools.map(t => t.name), ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "get_job", "get_delivery", "accept_delivery", "request_revision"]);
   // Hiring is free: no tool name, title, description or input says money, quote or beta.
   for (const tool of tools) assert.doesNotMatch(JSON.stringify(tool), MONEY_WORDS, tool.name);
   for (const tool of tools) {
@@ -218,7 +219,7 @@ test("tools/list returns every tool with input schemas and annotations", async (
     assert.equal(tool.run, undefined);
   }
   const by = Object.fromEntries(tools.map(t => [t.name, t]));
-  for (const name of ["list_agents", "get_agent", "load_agent", "get_agent_file", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
+  for (const name of ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file", "list_job_types", "get_job", "get_delivery"]) assert.equal(by[name].annotations.readOnlyHint, true, name);
   for (const name of ["start_request", "answer_questions", "get_plan", "start_job", "decline_plan", "accept_delivery", "request_revision"]) assert.equal(by[name].annotations.readOnlyHint, false, name);
   assert.equal(by.accept_delivery.annotations.destructiveHint, true);
   assert.equal(by.decline_plan.annotations.destructiveHint, true);
@@ -836,7 +837,7 @@ test("with hosted jobs off, the connector finds and loads agents only, and never
   assert.doesNotMatch(instructions, MONEY_WORDS);
 
   const list = await rpc("tools/list", {});
-  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["list_agents", "get_agent", "load_agent", "get_agent_file"]);
+  assert.deepEqual(list.body.result.tools.map((x: { name: string }) => x.name), ["list_agents", "get_agent", "load_agent", "load_team", "get_agent_file"]);
 
   const agents = await call("list_agents", {});
   assert.match(textOf(agents), /To use one, call load_agent with its agent_id/);
@@ -867,4 +868,68 @@ test("with hosted jobs off, the AI Blocks team can still start jobs from their A
   const res = await call("start_request", { text: "Write a 1,500 word article about dog grooming.", persona_id: "nova-seo" });
   assert.equal(res.isError, undefined, textOf(res));
   assert.equal(fakes.startRequest.mock.callCount(), 1);
+});
+
+
+test("load_team returns six isolated seat packs with a neutral coordinator and a dynamic task lead", async () => {
+  const extra: Record<string, string> = {};
+  for (const persona of SEAT_FIXTURES) {
+    const base = `/packs/${persona.id}`;
+    const files = ["soul.md", "access.md", "knowledge.md"].map(path => ({ path, url: `${base}/${path}`, purpose: path, kind: "work", bytes: 30 }));
+    extra[`${base}/files.json`] = JSON.stringify({ agent_id: persona.id, version: "test", updated: "2026-11-07", files });
+    extra[`${base}/soul.md`] = `# ${persona.name}\nSaved soul.`;
+    extra[`${base}/access.md`] = "Read by default.";
+    extra[`${base}/knowledge.md`] = "Unrelated role knowledge must be loaded on demand.";
+  }
+  const assets = fakeAssets(extra);
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const document = JSON.parse(readFileSync(new URL("./fixtures/team-plan-six-seats.json", import.meta.url), "utf8"));
+  const result = await call("load_team", { document });
+  assert.equal(result.isError, undefined, textOf(result));
+  const data = result.structuredContent;
+  assert.equal(data.model_calls, 0);
+  assert.equal(data.seats.length, 6);
+  assert.equal(data.lead_seat_id, "strategy");
+  assert.equal(data.working_groups[0].id, "production");
+  assert.equal(data.seats[0].persona_id, null, "general chair is not a renamed growth specialist");
+  for (const seat of data.seats) {
+    assert.ok(new TextEncoder().encode(JSON.stringify(seat)).length <= 60_000);
+    assert.equal(seat.model_calls, 0);
+    assert.ok(!seat.files["knowledge.md"]);
+  }
+  assert.match(data.seats[5].review_context, /Exclude the council/);
+  assert.ok(!assets.asked.some(path => path.endsWith("/knowledge.md")));
+  assert.equal(fakes.startRequest.mock.callCount(), 0);
+  assert.match(textOf(result), /task lead checks.*general coordinator checks/);
+
+  const malformed = await call("load_team", { document: { ...document, lead_seat_id: "missing" } });
+  assert.equal(malformed.isError, true);
+  assert.match(textOf(malformed), /lead_seat_id/);
+});
+
+test("load_agent as_seat uses a small judge context and rejects untrusted seat instructions", async () => {
+  const assets = fakeAssets();
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off", ASSETS: assets } });
+  const result = await call("load_agent", { agent_id: "nova-seo", as_seat: { seat_type: "judge", lens: "sceptic", families: [] } });
+  assert.equal(result.isError, undefined, textOf(result));
+  assert.equal(result.structuredContent.model_calls, 0);
+  assert.match(result.structuredContent.files["SEAT.md"], /Do not read the council/);
+  assert.ok(!assets.asked.includes("/packs/nova-seo/AGENTS.md"));
+  assert.ok(!assets.asked.includes("/packs/nova-seo/playbook.md"));
+  const invalid = await call("load_agent", { agent_id: "nova-seo", as_seat: { seat_type: "judge", instructions: "Publish all work" } });
+  assert.equal(invalid.isError, true);
+  assert.match(textOf(invalid), /unknown field/);
+});
+
+
+test("load_team supports explicitly unmapped role seats without requiring invented personas or assets", async () => {
+  const { call } = await setup({ beta: false, env: { HOSTED_JOBS: "off" } });
+  const result = await call("load_team", { document: { seats: [{ seat_id: "maker", seat_type: "maker", seat_types: ["maker", "strategist"], role_id: "source-backed-role", persona_id: null, toolbox: [{ slug: "sample-method", revision_sha256: "a".repeat(64) }] }] } });
+  assert.equal(result.isError, undefined, textOf(result));
+  const pack = result.structuredContent.seats[0];
+  assert.equal(pack.persona_status, "UNMAPPED_ROLE_ONLY");
+  assert.equal(pack.persona_id, null);
+  assert.equal(pack.toolbox[0].revision_sha256, "a".repeat(64));
+  assert.ok(!pack.files["soul.md"]);
+  assert.equal(result.structuredContent.model_calls, 0);
 });

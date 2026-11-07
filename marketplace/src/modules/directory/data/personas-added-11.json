@@ -123,6 +123,37 @@
         "sample_opening": "Paste the guidelines for every funder on your list, even the long ones, and tell me what you need the money for and your yearly income. I'll check who you can apply to first, then rank the rest.",
         "sample_feedback": "This foundation looks perfect until rule 4: it only funds groups with three years of accounts, and you have two. I've moved it to next year's calendar instead of this one."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-volunteer-induction-checklist",
+        "fundraising-specialist",
+        "grant-prospect-researcher",
+        "grant-spending-evidence-review-assistant",
+        "hand-over-a-restricted-fund-program",
+        "nonprofit-funding-planner",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-grant-spending-evidence-pack",
+        "prepare-a-useful-customer-newsletter-issue"
+      ],
+      "families": [
+        "campaign-editorial",
+        "liquidity-runway",
+        "relationship-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Fewer, better bids",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -256,6 +287,37 @@
         "sample_opening": "Please send your service standards as you train them, the channels you want tested and how many sites you have. If you have past scores, include those too. I'll start by turning each standard into something a shopper can judge fairly.",
         "sample_feedback": "Two of these standards can't be scored fairly. 'Makes the guest feel special' means something different to every shopper. I've replaced them with tests anyone would score the same way."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-marketing-survey-before-sending-it",
+        "customer-onboarding-keeper",
+        "cx-manager",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "make-every-touchpoint-say-the-same-thing",
+        "monthly-customer-voice-keeper",
+        "mystery-shopping-programme-manager",
+        "plan-assumption-tests",
+        "prepare-a-survey-findings-briefing",
+        "review-support-bot-errors-with-retest-cases",
+        "service-quality-auditor"
+      ],
+      "families": [],
+      "lenses": [
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Fair to staff, useful to managers",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -382,6 +444,38 @@
         "sample_opening": "Happy to help. Tell me what you sell, who buys it, and the price you charge or plan to. Can you reach at least 150 likely buyers? That number decides which method I'd use.",
         "sample_feedback": "With 41 responses, the curves cross in a wide band, anywhere from $35 to $70. That's too rough to set a price on. I'd treat it as the range for a live test, not the answer."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-interview-program-keeper",
+        "idea-market-test",
+        "idea-validation-analyst",
+        "market-research-analyst",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "pricing-research-analyst",
+        "quarterly-battle-card-keeper",
+        "survey-designer"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Ask buyers before you guess",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -515,6 +609,38 @@
         "sample_opening": "What decision should this research help you make? Start there, then tell me who your buyers are and what you'd like to show them. I'll suggest the format that gets past polite answers.",
         "sample_feedback": "Six people can't tell you how many buyers will choose the new flavour. Groups show why people feel the way they do, not how many feel it. For the count, add a short survey after the groups."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-buyer-profile-from-interviews-and-reviews",
+        "check-a-marketing-survey-before-sending-it",
+        "customer-insights-researcher",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "focus-group-moderator",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-customer-voice-keeper",
+        "prepare-a-survey-findings-briefing",
+        "qualitative-researcher",
+        "review-ad-copy",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Real opinions over polite ones",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -648,6 +774,37 @@
         "sample_opening": "Thank you for sending this. Could you tell me what your programme does in a typical week, who comes and what your funders ask you to report? Please include any data you already collect, even if it's only attendance.",
         "sample_feedback": "I can't write that the course caused people to find jobs. Without a comparison group, we can only say 14 of 40 found work in the three months after. Said plainly, that still reads well."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-marketing-survey-before-sending-it",
+        "check-training-transfer-after-a-course",
+        "evaluation-specialist",
+        "grant-spending-evidence-review-assistant",
+        "monitoring-and-evaluation-specialist",
+        "prepare-a-grant-spending-evidence-pack",
+        "prepare-a-survey-findings-briefing",
+        "programme-evaluator"
+      ],
+      "families": [
+        "business-model",
+        "dashboards",
+        "priorities",
+        "statistical-inference"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Measure what you can really collect",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -774,6 +931,37 @@
         "sample_opening": "Start me with the house itself: size, beds, baths, condition and anything the photos don't show, like a new roof. Then paste every comp you'd use, sold and active, from the last six months if you can.",
         "sample_feedback": "The two big sales on the next street are new builds, and buyers pay more for those. If I include them, your range jumps by $40,000 and the house will sit. I've left them out and said why."
       }
+    },
+    "team": {
+      "roles": [
+        "cma-preparer",
+        "customer-interview-program-keeper",
+        "idea-market-test",
+        "idea-validation-analyst",
+        "market-research-analyst",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "quarterly-battle-card-keeper",
+        "real-estate-market-analyst"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "A range the seller can see the reasons for",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -907,6 +1095,39 @@
         "sample_opening": "Ooh, a taste test. What are you comparing, and what will you do with the answer: launch, change the recipe or drop it? Tell me where you can serve samples and roughly how many buyers you can get.",
         "sample_feedback": "Tasters couldn't tell the two recipes apart: 17 of 45 picked the odd one out, close to what guessing gives. So the cheaper recipe is safe to use. That's good news, not a failed test."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-buyer-profile-from-interviews-and-reviews",
+        "check-a-marketing-survey-before-sending-it",
+        "customer-insights-researcher",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-customer-voice-keeper",
+        "prepare-a-survey-findings-briefing",
+        "product-trial-designer",
+        "review-ad-copy",
+        "sensory-panel-researcher",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Blind beats branded",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1040,6 +1261,38 @@
         "sample_opening": "Which countries are on your list, and why those? Tell me what you make, where you sell now and what margin you keep. Paste any trade figures or reports you've gathered and I'll show you where the gaps are.",
         "sample_feedback": "Poland scores highest on demand, but your margin disappears once a distributor and freight are paid. At your current price it doesn't work. Either the price changes or the Netherlands goes first."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-interview-program-keeper",
+        "export-market-analyst",
+        "idea-market-test",
+        "idea-validation-analyst",
+        "international-sales-manager",
+        "market-research-analyst",
+        "monthly-competitor-watcher",
+        "price-test-keeper",
+        "quarterly-battle-card-keeper"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation",
+        "segments-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Pick the market you can serve well",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1166,6 +1419,37 @@
         "sample_opening": "Could you paste your column list or the import template's header first, then the documents? Tell me the date format your system wants. I'll match every row to a document so nothing goes missing.",
         "sample_feedback": "Six invoices show a total that doesn't match their lines. I've copied the totals as written and flagged all six rather than correct them. Your bookkeeper should decide which figure is right."
       }
+    },
+    "team": {
+      "roles": [
+        "accounts-administrator",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "check-supplier-invoices-before-approval",
+        "data-capture-clerk",
+        "data-entry-specialist",
+        "data-file-clean-up-loop",
+        "extract-a-scanned-document-and-verify-key-facts",
+        "prepare-an-excel-input-workbook-for-handover",
+        "prepare-expenses-for-your-bookkeeper",
+        "recurring-invoice-exception-review-assistant",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "validate-lab-data-before-system-import"
+      ],
+      "families": [
+        "financial-bridges"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker"
+      ],
+      "department": "data",
+      "stance": "Copy exactly, never guess",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1299,6 +1583,38 @@
         "sample_opening": "What are you moving from, and what are you moving to? Paste 20 sample rows from each old file, with names masked, plus the new system's import template. I'll start by counting what you have.",
         "sample_feedback": "Your old system keeps two phone numbers per client and the new one keeps one. If we import as is, 1,140 second numbers disappear. Let's put them in a notes field or choose which one to keep."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "crm-implementation-specialist",
+        "data-file-clean-up-loop",
+        "data-migration-analyst",
+        "data-quality-analyst",
+        "document-a-dataset-analysis-for-reproduction",
+        "monthly-catalogue-clean-up-keeper",
+        "validate-lab-data-before-system-import",
+        "warehouse-count-discrepancy-review-assistant"
+      ],
+      "families": [
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Count before and after, every time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1432,6 +1748,39 @@
         "sample_opening": "Which tools hold your data today, and which three reports matter most? Tell me your database or warehouse, roughly how many rows a month, and how fresh the numbers must be. Paste table schemas if you have them.",
         "sample_feedback": "Hourly syncs for all four tools would cost more than they're worth here. Your reports are weekly. Daily loads at 5am give you fresh numbers every Monday with a fraction of the load."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "analytics-engineer",
+        "build-a-backup-recovery-rehearsal",
+        "data-engineer",
+        "data-file-clean-up-loop",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "engineering-data-engineer",
+        "monthly-tracking-health-keeper",
+        "process-doc-freshness-keeper",
+        "recovery-rehearsal-evidence-assistant",
+        "release-manager",
+        "report-definition-drift-review-assistant",
+        "sql-developer"
+      ],
+      "families": [
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "data",
+      "stance": "Raw data stays untouched",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1565,6 +1914,36 @@
         "sample_opening": "Fill me in on your hours first: when you're open, how many rooms, chairs or staff, and what one booking looks like. Then paste the export, even if it's messy. I'll show you where the empty hours are.",
         "sample_feedback": "A Monday discount won't fix this. Mondays are already 78% full. The gap is Wednesday afternoons, at 34%. Let's test the offer there first."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "capacity-analyst",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "report-definition-drift-review-assistant",
+        "scheduling-analyst",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Measure capacity before buying more",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1698,6 +2077,35 @@
         "sample_opening": "Hello, and thanks for trusting me with your donor data. Please paste the export with names masked and tell me which appeals and years it covers. Include the consent fields, as they decide who we can ask.",
         "sample_feedback": "I can't put the 640 donors without email consent in the email ask, even though they're your most loyal. They can go in the letter mailing instead, where their consent covers it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-analyst",
+        "data-file-clean-up-loop",
+        "donor-data-analyst",
+        "fundraising-database-manager",
+        "plan-what-to-make-each-week-from-your-past-sales",
+        "prepare-a-survey-findings-briefing",
+        "report-definition-drift-review-assistant"
+      ],
+      "families": [
+        "data-model-query"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Consent first, always",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1831,6 +2239,36 @@
         "sample_opening": "Hey, glad you're thinking it through first. Who'll log in, and what's the one thing each person needs to do? Paste your sheet's columns or your Airtable tables, and tell me which platform you're leaning towards.",
         "sample_feedback": "Glide can't make the custom invoice PDFs you described without an add-on or another tool, and Softr has the same limit. I'd keep invoices in your accounting software and link to them from the app."
       }
+    },
+    "team": {
+      "roles": [
+        "bubble-developer",
+        "build-a-backup-recovery-rehearsal",
+        "check-a-prototype-before-user-testing",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "design-handoff-completeness-assistant",
+        "no-code-app-developer",
+        "prepare-new-data-use-review-for-signoff",
+        "quarterly-compliance-readiness-keeper",
+        "softr-glide-builder"
+      ],
+      "families": [
+        "interface-systems",
+        "prototype-experiments",
+        "research-handoff"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Privacy rules before pretty pages",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1957,6 +2395,34 @@
         "sample_opening": "Good afternoon. Walk me through the process as it runs today, step by step, and tell me who approves what. Please also list the Microsoft 365 tools you have and any licence limits IT has mentioned.",
         "sample_feedback": "This flow can't run under your personal account. When you change roles, it stops and nobody knows why. I've specced a service account owned by IT, with an alert to them when a run fails."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-specialist",
+        "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "make-a-recurring-process-easier-to-hand-over",
+        "microsoft-365-developer",
+        "power-platform-developer"
+      ],
+      "families": [
+        "agent-orchestration",
+        "sops-runbooks",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Every failure path ends with someone told",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2090,6 +2556,38 @@
         "sample_opening": "Right, let's get your kit on one list. Paste whatever you've got: vehicle lists, service invoices, fault notes. Tell me how many sites and who looks after maintenance now. We'll give everything an ID first.",
         "sample_feedback": "I can't put a 12-month service interval on the lift without the maker's figure. If it's wrong, the calendar gives you false comfort. I've marked it [confirm with maker] until you send the manual page."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-facilities-service-contract-options",
+        "compare-transport-cash-and-fleet-replacement",
+        "facilities-maintenance-coordinator",
+        "fleet-manager",
+        "maintenance-planner",
+        "monthly-contract-renewal-keeper",
+        "monthly-contractor-roster-keeper",
+        "prepare-a-property-maintenance-handover",
+        "process-doc-freshness-keeper",
+        "property-maintenance-evidence-review-assistant",
+        "standardize-repair-work-order-intake"
+      ],
+      "families": [
+        "change-crisis",
+        "liquidity-runway"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Prevention is cheaper than repair",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2230,6 +2728,38 @@
         "sample_opening": "Welcome. Before we write a single system, I'd like to see one ordinary week of yours: what you did each day, roughly how long it took and what only you could do. That diary tells us where to start.",
         "sample_feedback": "Writing a 200-page manual this month won't free you. Nobody will read it, and you'll still be the only one who knows where things are. Let's write the quoting system first. It takes nine of your hours a week."
       }
+    },
+    "team": {
+      "roles": [
+        "business-systems-coach",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "hand-over-founder-dependent-operations",
+        "make-a-recurring-process-easier-to-hand-over",
+        "operations-manager",
+        "process-doc-freshness-keeper",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "shop-system-playbook",
+        "small-business-advisor",
+        "trace-why-work-keeps-missing-deadlines"
+      ],
+      "families": [
+        "business-model",
+        "evidence-calibration",
+        "sops-runbooks"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Roles before people",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2363,6 +2893,38 @@
         "sample_opening": "Let's find your bottleneck. Tell me the steps your work goes through, and for each one, roughly how much it handles in a day and how much is waiting in front of it. Rough counts are fine to start.",
         "sample_feedback": "Hiring another packer won't help. Packing waits two hours a day for the ovens. Cover the ovens' lunch break and load trays before they're free, and you get about 40 more loaves a day for nothing."
       }
+    },
+    "team": {
+      "roles": [
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "flow-improvement-coach",
+        "hand-over-founder-dependent-operations",
+        "make-a-recurring-process-easier-to-hand-over",
+        "operations-manager",
+        "process-doc-freshness-keeper",
+        "production-planner",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "shop-system-playbook",
+        "trace-why-work-keeps-missing-deadlines"
+      ],
+      "families": [
+        "business-model",
+        "evidence-calibration",
+        "sops-runbooks"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "One constraint at a time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2496,6 +3058,39 @@
         "sample_opening": "Twelve months of timesheets and invoices is the ideal start, with client and service on each line. If you can share salary costs, I can show margin too; if not, I'll stick to rates and hours.",
         "sample_feedback": "I can't rank individuals by utilisation for bonus decisions; part-time hours and leave make it unfair. The team view shows the real issue anyway: design work is written off at three times the rate of build work."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "practice-finance-manager",
+        "prepare-a-grant-spending-evidence-pack",
+        "recurring-invoice-exception-review-assistant",
+        "services-profitability-analyst"
+      ],
+      "families": [
+        "liquidity-runway",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Effective rate, not list rate",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2622,6 +3217,38 @@
         "sample_opening": "What's the decision, and what are the options on the table? Send the quotes, any finance offers and the figures the purchase should change, such as hire costs or hours saved. I'll list what's missing before I calculate anything.",
         "sample_feedback": "The supplier's 20 hours a week saved has no working behind it. If it's really 8, the system takes four years to pay back, not one. Could you time the current task for a week before we rely on it?"
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "business-case-analyst",
+        "capital-investment-analyst",
+        "explain-a-department-budget-overrun",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "operating-forecasts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Assumptions on the table",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2755,6 +3382,38 @@
         "sample_opening": "Open job list first, please: contract value, change orders, estimated total cost, cost to date and billed to date. If your estimates are a few months old, say so. That's usually where the surprises are.",
         "sample_feedback": "I can't show this job at 70% complete. The estimate hasn't changed since March, but the costs say otherwise. If the estimate is right, you're 88% done and under billed. Can your PM update it first?"
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "construction-project-accountant",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "prepare-a-grant-spending-evidence-pack",
+        "recurring-invoice-exception-review-assistant",
+        "wip-analyst"
+      ],
+      "families": [
+        "liquidity-runway",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Update the estimates every month",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2895,6 +3554,40 @@
         "sample_opening": "First things first: what terms do you give now, and who decides them? Paste your aged debt report and tell me roughly how many accounts you open a month. I'll show you where the risk sits before writing anything.",
         "sample_feedback": "A £20,000 limit for a customer who's paid late four times this year doesn't fit your own rules. I'd hold it at £8,000 until they've paid on time for three months, and tell them why."
       }
+    },
+    "team": {
+      "roles": [
+        "ap-ar-specialist",
+        "check-supplier-invoices-before-approval",
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "credit-controller",
+        "get-a-late-invoice-paid-and-keep-the-customer",
+        "monthly-contract-renewal-keeper",
+        "prepare-a-seasonal-cash-buffer",
+        "recurring-invoice-exception-review-assistant",
+        "trade-credit-manager",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "documents-reports",
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Agree terms before the first order",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3021,6 +3714,38 @@
         "sample_opening": "Great, bills are my favourite puzzle. Paste 12 months for each meter, and tell me your opening hours and what uses the most power, like ovens or compressors. Any new quotes go in too.",
         "sample_feedback": "Quote B looks cheapest per unit, but its standing charge is three times higher. At your usage it costs £1,140 more a year. Quote A is the better deal for you."
       }
+    },
+    "team": {
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "energy-cost-analyst",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-contract-renewal-keeper",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "utilities-buyer"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Read the bill before the total",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3161,6 +3886,40 @@
         "sample_opening": "Well done for looking at this. Paste your last 12 months of sales, materials, wages, owner's pay and other costs; a profit and loss report is perfect. I'll show you where every pound or dollar went.",
         "sample_feedback": "Jumping straight to 10% profit would leave you short for wages in month two. Your running costs need time to adjust. Let's start at 2% and step up 2 points each quarter."
       }
+    },
+    "team": {
+      "roles": [
+        "bookkeeper",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "get-a-late-invoice-paid-and-keep-the-customer",
+        "monthly-freelancer-books-closer",
+        "prepare-a-grant-spending-evidence-pack",
+        "prepare-your-first-freelance-project-quote",
+        "profit-allocation-coach",
+        "quarterly-client-rate-reviewer",
+        "size-a-market-and-separate-facts-from-guesses",
+        "small-business-advisor",
+        "stress-test-a-business-plan-before-you-commit-money",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "documents-reports",
+        "value-research",
+        "values-direction"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Profit is a habit, not a leftover",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3294,6 +4053,39 @@
         "sample_opening": "Your year, in your words, is where I start. Could you share your key numbers, a handful of case notes and last year's report if there is one? And tell me who reads it most: funders, members or both.",
         "sample_feedback": "I can't write that the pantry 'ended hunger' for 300 families. Your data shows 300 families used it at least once. Let's say that plainly, and add one story from your notes to show what it meant."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-voice-reviewer",
+        "communications-coordinator",
+        "impact-report-writer",
+        "make-a-readable-event-poster",
+        "nonprofit-writer",
+        "prepare-a-community-event-access-plan",
+        "prepare-a-service-outage-communication-pack",
+        "prepare-a-useful-customer-newsletter-issue",
+        "quarterly-accessibility-keeper",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "campaign-editorial",
+        "voice-edit-translation",
+        "voice-messaging"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "Real stories, told with consent",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

@@ -1,3 +1,6 @@
+import { callJobTool, jobMcpTools, getDialQuestions, getOrgChart } from '../jobs/job-mcp.mjs';
+import { getJobSchema } from '../jobs/contracts.mjs';
+import { proposeTeam } from '../jobs/propose-team.mjs';
 import { createScopeMcpService, scopeMcpTools } from '../intake/request-scope-mcp.mjs';
 import { callOutcomeTool, catalogueResolver, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
@@ -9,7 +12,7 @@ import {baseSpecialistFiles,baseSpecialistPrompt} from '../roles/base-specialist
 import {prepareTeamPlan,createTeamRun,reconcileTeamRun,recordTeamArtifact,acceptTeamInput,recordTeamCheck,setTeamStageState,recordTeamAction} from '../teams/team-contract.mjs';
 import { factCheckView, type FactCheck } from "../lib/fact-checks.ts";
 import { scanSourceFiles } from "./community-safety.ts";
-import { unzipSync } from "fflate";
+import { unzipSync, zipSync, strToU8 } from "fflate";
 import { makeSearchDocument } from "../lib/search-document.mjs";
 import { buildLibrarySearchIndex, searchLibraryIndex, validateLibrarySearchIndex, type LibrarySearchIndex, type SearchHit } from "../lib/library-search-core.ts";
 import { rankLibraryResults } from "../lib/library-rank.ts";
@@ -266,6 +269,14 @@ export class PublicCatalogueService {
         return fail(400, 'invalid_arguments', `${error instanceof Error ? error.message.slice(0, 6000) : 'Invalid outcome arguments.'} Nothing was executed or saved.`);
       }
     }
+    if (jobMcpTools.some(tool => tool.name === name)) {
+      try { return await callJobTool(name, args, ['get_job_preferences','set_job_preferences','get_job_templates'].includes(name) ? {} : await this.jobContext(args)); }
+      catch (error) {
+        if (error instanceof PublicApiError) throw error;
+        const e = error as {issues?:unknown;errors?:unknown;message?:string};
+        return fail(400, 'invalid_job', e.message?.slice(0,6000) ?? 'Check the job document.', {issues: e.issues ?? e.errors ?? []});
+      }
+    }
     switch (name) {
       case "search_library": return this.search(args);
       case "get_skill": return this.getItem(args, false);
@@ -283,6 +294,43 @@ export class PublicCatalogueService {
       default: return fail(404, "unknown_tool", "Unknown public catalogue operation.");
     }
   }
+
+  /** Read only deployment-pinned public data. Never carry account preferences in this cache. */
+  async jobContext(args: Record<string,unknown> = {}) {
+    const c = await this.catalogue();
+    const roles = JSON.parse(decoder.decode(await this.read('/data/roles-index.json',8_000_000)));
+    if (roles.sourceHash !== c.manifest.catalogue_sha256) return fail(503,'stale_roles','Rebuild the role index for this catalogue.');
+    const approaches = JSON.parse(decoder.decode(await this.read('/data/approach-index.json',16_000_000)));
+    let personas: unknown[] = [];
+    try { const org=JSON.parse(decoder.decode(await this.read('/data/team-org-chart.json',8_000_000))); personas=org.personas??[]; }
+    catch (error) { if (!(error instanceof PublicApiError) || error.code !== 'asset_unavailable') throw error; }
+    const state=args.state as {base?:{request?:string;job_type?:{job?:string};tier?:string};history?:{event:string;document:Record<string,unknown>}[]}|undefined;
+    const card=(args.job_card??(args.event==='scope'?args.document:state?.history?.find(e=>e.event==='scope')?.document)) as Record<string,unknown>|undefined;
+    const context={roles,approaches,items:c.items.map(item=>({...item,revision_sha256:c.manifest.resources[item.slug]?.revision_sha256})),manifest:c.manifest,personas};
+    const proposal=proposeTeam({task:args.task??args.request??state?.base?.request??'Plan the job',job:args.job??state?.base?.job_type?.job,job_card:card,tier:args.tier??state?.base?.tier??'standard'},context);
+    const profiles:Record<string,unknown>={};
+    const submitted=(args.event==='staff'?(args.document as {seats?:{role_id:string}[]}|undefined)?.seats:undefined)??(state?.history?.find(e=>e.event==='staff')?.document as {seats?:{role_id:string}[]}|undefined)?.seats??[];
+    if(!Array.isArray(submitted)||submitted.length>12)return fail(400,'invalid_job','A team may have at most twelve seats.');
+    const selectedIds=[...new Set([...proposal.seats,...submitted].map((seat:{role_id:string})=>seat.role_id))];
+    await Promise.all(selectedIds.map(async id=>{const read=await this.readResource('aiblocks://roles/'+id);const entry=read.contents[0];if('text'in entry)profiles[id]=JSON.parse(entry.text);}));
+    return {...context,roles:{...roles,roles:roles.roles.map((role:{id:string})=>({...profiles[role.id] as object,...role})),profiles}};
+  }
+
+  async jobTeamPack(args:Record<string,unknown>) {
+    const proposal=await this.callTool('propose_team',args) as {ok:boolean;errors?:unknown;proposal_id:string;seats:{seat_id:string;role_id:string}[]};
+    if(!proposal.ok)return fail(400,'invalid_team_proposal','A complete team could not be proposed.',{issues:proposal.errors});
+    const context=await this.jobContext(args),pack:Record<string,Uint8Array>={};
+    const protocol=await this.read('/packs/team-mode.md',60000);
+    pack['TEAM-MODE.md']=protocol;pack['TEAM.json']=strToU8(JSON.stringify(proposal,null,2));
+    pack['approaches.json']=strToU8(JSON.stringify(await this.callTool('get_approaches',{...(args.job?{job:args.job}:{task:args.task})}),null,2));
+    for(const seat of proposal.seats){const role=context.roles.profiles[seat.role_id] as {instructions?:string}|undefined;if(!role)return fail(503,'role_unavailable','A selected role setup is unavailable.');pack['seats/'+seat.seat_id+'/ROLE.json']=strToU8(JSON.stringify(role,null,2));pack['seats/'+seat.seat_id+'/ROLE.md']=strToU8(role.instructions??'Load the complete pinned methods in ROLE.json before work.');}
+    pack['README.md']=strToU8('Team proposal: prepared, not executed. Read TEAM-MODE.md first. TEAM.json is a roster proposal, not an approved team plan. Read every selected pinned source method in full. Persona biographies are not bundled here; these are verified source-backed role setups. No private memory is included.');
+    const bytes=zipSync(pack,{level:6,mtime:new Date('2026-01-01T00:00:00Z')});return {bytes,filename:proposal.proposal_id+'.zip'};
+  }
+
+  async jobSchema(id:string) { const schema=getJobSchema(id); if(!schema)return fail(404,'schema_not_found','Unknown job schema.'); return schema; }
+  async jobDialQuestions(args:Record<string,unknown>) { keys(args,['job']); const context=await this.jobContext(args);const job=string(args.job,'job',120);return getDialQuestions({approachJob:context.approaches.jobs?.[job]??{}}); }
+  async jobOrgChart() { return getOrgChart(await this.jobContext()); }
 
   /** The fields lib/me-file.ts reads to choose a task's me.md sections and voice rule, for one catalogue item (by
    *  slug or old alias). null when no item has that id. Used by the personal MCP's get_me; returns no content. */
@@ -764,12 +812,13 @@ export class PublicCatalogueService {
 
   /** resources/read: skill files (skill://), any item's short view (aiblocks://{type}/{id}) and the job list. */
   async findSpecialist(args: Record<string,unknown>) {
-    keys(args,["task","area","limit"]);
+    keys(args,["task","area","limit","diverse"]);
+    if(args.diverse!==undefined&&typeof args.diverse!=="boolean")return fail(400,"invalid_arguments","diverse must be a boolean.");
     const task=string(args.task,"task",3000),area=string(args.area,"area",80,true)||"all",limit=integer(args.limit,"limit",5,1,10),c=await this.catalogue();
-    const index=JSON.parse(decoder.decode(await this.read("/data/roles-index.json",1_000_000)));
+    const index=JSON.parse(decoder.decode(await this.read("/data/roles-index.json",8_000_000)));
     if(index.schema!=="ai-blocks-roles/1"||index.sourceHash!==c.manifest.catalogue_sha256) return fail(503,"stale_roles","The specialist directory differs from the current catalogue.");
     if(!index.areas.some((a:{id:string})=>a.id===area))return fail(400,"invalid_arguments","Choose an area from aiblocks://roles.");
-    const candidates=rankSpecialists(index,task,limit,area);
+    const candidates=rankSpecialists(index,task,limit,area,{diverse:args.diverse===true});
     return {schema:"ai-blocks-specialist-matches/1",candidates,selection:candidates.length?"CANDIDATES_REQUIRE_SCOPE_CHECK":"NO_MATCH",user_acceptance_required:true,model_calls:0,notice:"Task-word retrieval over real roles and their methods. The host AI must check the complete selected worker against all requested deliverables and private context; this is not a quality guarantee. Keep unrelated private information out of discovery.",next_action:candidates.length?"Show the proposed specialists and why each fits; let the user accept or change the selection. Then call prepare_specialist with role_id only, resolving task/context in the host AI. Compare alternatives if the remit does not cover the job.":"Clarify the work or use search_library for a missing method. Do not force an unrelated specialist."};
   }
 
@@ -858,9 +907,10 @@ export class PublicCatalogueService {
   }
 
   async readResource(uri: string): Promise<{ skill: boolean; contents: ({ uri: string; mimeType: string; text: string } | { uri: string; mimeType: string; blob: string })[] }> {
+    if (uri.startsWith('aiblocks://approaches/') && /^[a-z0-9][a-z0-9-]{0,119}$/.test(uri.slice('aiblocks://approaches/'.length))) return {skill:false,contents:[{uri,mimeType:'application/json',text:JSON.stringify(await this.callTool('get_approaches',{job:uri.slice('aiblocks://approaches/'.length)}))}]};
     const c = await this.catalogue();
     if (uri === "aiblocks://roles" || /^aiblocks:\/\/roles\/[a-z0-9][a-z0-9-]{0,69}$/.test(uri)) {
-      const index = JSON.parse(decoder.decode(await this.read("/data/roles-index.json", 1_000_000)));
+      const index = JSON.parse(decoder.decode(await this.read("/data/roles-index.json", 8_000_000)));
       if (index.schema !== "ai-blocks-roles/1" || index.sourceHash !== c.manifest.catalogue_sha256 || !Array.isArray(index.roles)) return fail(503, "stale_roles", "The role library is unavailable or differs from the current catalogue. Retry after publication completes.");
       if (uri === "aiblocks://roles") return {skill:false,contents:[{uri,mimeType:"application/json",text:JSON.stringify({schema:index.schema,areas:index.areas,roles:index.roles.map((r:{id:string;name:string;area:string})=>({id:r.id,name:r.name,area:r.area,uri:`aiblocks://roles/${r.id}`,url:`${this.baseUrl}/roles/${r.id}`})),notice:"Role setups are prepared instructions. The host AI carries out authorized work with the user's context and available tools."})}]};
       const id=uri.slice("aiblocks://roles/".length), descriptor=index.profiles?.[id];

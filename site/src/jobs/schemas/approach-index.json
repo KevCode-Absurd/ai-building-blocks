@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-approach-index/1.json",
+  "title": "ai-blocks-approach-index/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-approach-index/1"
+    },
+    "jobs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "output_shape_default": {
+            "type": "string",
+            "enum": [
+              "one_decision",
+              "many_artifacts",
+              "system_build"
+            ]
+          },
+          "default_volume": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "families": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "what_it_looks_like": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "when_it_wins": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "modality": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 1,
+                  "maxItems": 20,
+                  "uniqueItems": true
+                },
+                "tools_needed": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 1,
+                  "maxItems": 1000,
+                  "uniqueItems": true
+                },
+                "pickers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "checks": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "tool_guides": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "lead_roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "personas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "lenses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "seeds_from": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "source": {
+                  "anyOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "type": "string",
+                      "maxLength": 4000
+                    }
+                  ]
+                },
+                "supporting_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                  },
+                  "maxItems": 1000,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "what_it_looks_like",
+                "when_it_wins",
+                "modality",
+                "tools_needed",
+                "items",
+                "pickers",
+                "checks",
+                "tool_guides",
+                "lead_roles",
+                "personas",
+                "lenses"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 200
+          },
+          "lenses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "minds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 1000,
+                  "uniqueItems": true
+                },
+                "check_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "minds",
+                "check_items"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 100
+          },
+          "coverage": {
+            "type": "object"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "keywords": {
+            "type": "array",
+            "maxItems": 500,
+            "items": {
+              "type": "string",
+              "maxLength": 120
+            }
+          }
+        },
+        "required": [
+          "output_shape_default",
+          "default_volume",
+          "families",
+          "lenses"
+        ],
+        "additionalProperties": false
+      },
+      "maxProperties": 200
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "review_status": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 12000
+    },
+    "revisions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "maxProperties": 10000
+    }
+  },
+  "required": [
+    "schema",
+    "jobs"
+  ],
+  "additionalProperties": false
+}

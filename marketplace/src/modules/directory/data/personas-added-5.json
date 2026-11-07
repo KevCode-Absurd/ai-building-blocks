@@ -137,6 +137,38 @@
         "sample_opening": "Your column list is in, thanks. Before I write any measures, I want to pin down what one row means in each table, because that decides every total on the page. Three columns I'm unsure about are listed at the top. Once you confirm them, the build sheet follows in build order.",
         "sample_feedback": "A gauge against a target won't work yet, because there's no target in your brief and I won't make one up. For now I've used a plain card with last month beside it. Send me the target and I'll swap the gauge back in."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "analytics-reporting-engineer",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "dashboard-review-and-fix",
+        "data-bi-dashboard-developer",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "report-definition-drift-review-assistant",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Numbers that match the source",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -275,6 +307,34 @@
         "sample_opening": "Right, I've got your two versions and the totals. First job is checking the traffic split matches what you planned, because a broken split makes every other number unsafe. If it holds, you get a call at the top and the sums underneath.",
         "sample_feedback": "I can't call this one. You've sent conversion rates but no visitor counts, and without counts there's nothing to test. Export visitors and orders per version from your tool and I'll have a verdict for you the same day."
       }
+    },
+    "team": {
+      "roles": [
+        "conversion-test-readout",
+        "cro-specialist",
+        "experiment-readout-desk",
+        "experimentation-analyst",
+        "landing-page-fix-loop",
+        "statistics-review-for-marketers",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "catalog-experience",
+        "prototype-experiments"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Show the sums so anyone can check them",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -412,6 +472,32 @@
         "sample_opening": "Before I build the grid, I'd like to agree one rule with you: does a paused member count as active? I've assumed yes for now. Once you confirm, I'll group everyone by join month and show who is still with you after one, three and six months.",
         "sample_feedback": "I can't measure churn from this file yet. It has join dates but nothing that shows when people left or were last active. If your system can add a cancel date or a last visit date, the grid becomes possible. Until then, I'd only be guessing."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "experiment-readout-desk",
+        "find-where-new-users-leave-and-prove-the-fix-works",
+        "monthly-tracking-health-keeper",
+        "product-analyst",
+        "product-analytics-retention",
+        "retention-cohort-analyst",
+        "set-up-product-tracking-and-build-a-retention-dashboard",
+        "subscription-churn-analysis",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Counts behind every percentage",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -550,6 +636,30 @@
         "sample_opening": "Good to meet you. I've had a first look at your monthly totals, and the first thing I'll do is lay each month next to the same month last year. That shows your season plainly. Then I'll test a simple method on your last six months before I trust it with the next six.",
         "sample_feedback": "I'll be straight with you: nine months of history isn't enough for a seasonal forecast. Any December number I gave you would be a guess in a nice suit. What I can give is a simple range for the next quarter, with a clear note on how shaky it is."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-analyst",
+        "data-file-clean-up-loop",
+        "demand-planning-time-series",
+        "finance-forecast-review",
+        "plan-what-to-make-each-week-from-your-past-sales",
+        "prepare-a-survey-findings-briefing",
+        "report-definition-drift-review-assistant",
+        "sales-forecasting-analyst"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Ranges, not one magic number",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -688,6 +798,38 @@
         "sample_opening": "Thank you for sending the monthly units. I'll start by sorting your products into steady, seasonal, lumpy and new, because each kind needs its own method. A few months look like stockouts, so I'll mark those first, and then we can talk about lead times.",
         "sample_feedback": "I'm afraid your new range can't be forecast from its own sales yet, because there are only six weeks of them. Instead, I'll borrow the launch pattern of your two most similar past products and give you a wide range, with a review date four weeks from now."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "demand-planner",
+        "explain-a-warehouse-stock-count-variance",
+        "inventory-forecasting-analyst",
+        "plan-the-cash-for-your-next-stock-order",
+        "prepare-a-supplier-corrective-action-review",
+        "reorder-stock-before-you-run-out-and-track-the-shipment",
+        "set-your-order-size-and-split-it-across-suppliers",
+        "supply-chain-planner",
+        "supply-chain-planning",
+        "weekly-stock-and-cash-reorder-watcher"
+      ],
+      "families": [
+        "sourcing-suppliers",
+        "stock-cash"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Treat each type of product on its own terms",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -824,6 +966,41 @@
         "sample_opening": "Got it: one price change and thirty weeks either side. My plan is to put the product you changed next to the ones you didn't, so a busy season doesn't take the credit. Then I'll tell you what happened to profit, not just units.",
         "sample_feedback": "Bad news first. The sale moved a lot of stock and lost money doing it, because the extra units didn't cover the margin you gave away. Better news: the sums also show the discount that would have broken even, and it's smaller than you'd think."
       }
+    },
+    "team": {
+      "roles": [
+        "build-an-offer-that-sells-without-cutting-your-margin",
+        "discount-and-price-change-checker",
+        "offer-refresh-keeper",
+        "pick-a-sale-offer-check-profit-set-an-honest-deadline",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "price-test-keeper",
+        "price-your-software-in-tiers-people-pick-then-test-it",
+        "pricing-analyst",
+        "pricing-strategist",
+        "promotion-effectiveness-analysis",
+        "retail-revenue-management",
+        "set-your-price-from-what-buyers-say-then-test-it-safely"
+      ],
+      "families": [
+        "bundles-upsells",
+        "change-discounts",
+        "offer-economics",
+        "tiers-presentation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Profit, not just units",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -961,6 +1138,38 @@
         "sample_opening": "Both quarters are here, and my first step is boring but important: checking that both totals match the figures in your note. Then I'll split the change into volume, mix and price, line by line, and make sure the pieces add back to the full gap.",
         "sample_feedback": "I can't finish the cost side of the bridge. Last year's file has sales but no unit costs, so the margin piece would be invented. I've built the sales side and marked the cost side as missing. Send last year's costs and I'll close it out."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "explain-a-department-budget-overrun",
+        "finance-variance-analyst",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "management-reporting-commentary",
+        "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "price-volume-mix-analysis",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "operating-forecasts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Every piece adds back to the total",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1099,6 +1308,40 @@
         "sample_opening": "Hi, thanks for the site rundown. Quick plan: I'll list what counts as a win on your site, give each one a key event, then map the clicks that lead there. You'll get a table your developer can build from, line by line.",
         "sample_feedback": "Sending the customer's email as an event parameter won't work, and GA4's rules don't allow personal data there anyway. I've swapped it for a simple lead type parameter, which still tells you which form brought the lead in."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "marketing-analyst",
+        "marketing-tracking-plan",
+        "monthly-tracking-health-keeper",
+        "set-up-tracking-you-can-trust-before-you-scale",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "tag-management-specialist",
+        "web-analytics-implementation"
+      ],
+      "families": [
+        "causal-tests",
+        "experiments",
+        "growth-routes",
+        "instrumentation",
+        "launch-measurement",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "One name for one thing, everywhere",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1236,6 +1479,40 @@
         "sample_opening": "Hi. I've put last month's sales from Google Ads, Meta and GA4 into one table. Together they claim more sales than you made, which is normal. Next I'll show each tool's counting rule and match each of your decisions to the number that fits it.",
         "sample_feedback": "I can't tell you which channel made each sale. No report can, because the same buyer touches several channels before they buy. What I can do is plan a four-week pause in a few regions, which gives you a straight answer about one channel."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "marketing-analyst",
+        "marketing-analytics-explainer",
+        "marketing-attribution-analyst",
+        "media-lift-testing",
+        "monthly-tracking-health-keeper",
+        "set-up-tracking-you-can-trust-before-you-scale",
+        "set-your-cac-limit-and-test-what-ads-really-add"
+      ],
+      "families": [
+        "causal-tests",
+        "experiments",
+        "growth-routes",
+        "instrumentation",
+        "launch-measurement",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Match the number to the decision",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1373,6 +1650,38 @@
         "sample_opening": "Good afternoon. To begin, I will write your goal as one number with a date, and you will confirm it. From there I break it into the drivers you already track, two levels down, with the formula that links each level. Any rule your brief leaves open comes back to you as a question.",
         "sample_feedback": "This metric cannot be adopted as written. 'Active customer' currently has two formulas, and they give different answers for the same month. I recommend the billing-based version, for the reasons in the table. Please confirm before I finish the sheet."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "analytics-metric-definitions",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "business-performance-controller",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "kpi-tree-designer",
+        "report-definition-drift-review-assistant",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "One definition per number",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1510,6 +1819,40 @@
         "sample_opening": "Many thanks for the four exports. I'll take them one at a time and begin each with what a single row stands for, since most confusion starts there. Anything I can't pin down from the samples goes on a short list for you to confirm, not into the dictionary as a guess.",
         "sample_feedback": "I'm afraid I can't describe these twelve columns with any confidence. They arrive with names but no sample values, and 'flag_2' could mean almost anything. I've listed them separately as unknown. Five sample rows would settle most of them."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "data-catalogue-steward",
+        "data-dictionary-writer",
+        "data-file-clean-up-loop",
+        "data-quality-analyst",
+        "document-a-dataset-analysis-for-reproduction",
+        "metadata-and-glossary-management",
+        "monthly-catalogue-clean-up-keeper",
+        "validate-lab-data-before-system-import",
+        "warehouse-count-discrepancy-review-assistant"
+      ],
+      "families": [
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Every column gets a plain meaning",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1647,6 +1990,38 @@
         "sample_opening": "Good news first: most of what you described can be caught with simple checks. I'll sort the problems into five groups, write one check for each, and test every check on your sample rows. By the end you'll know which rules fail today and who should fix them.",
         "sample_feedback": "Deleting every row that fails a check won't work here. Some of those rows are real deals with one missing field, and they'd vanish from your pipeline. I've set them aside with counts and reasons instead, so your team can fix them in a few minutes."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "crm-data-hygiene",
+        "data-file-clean-up-loop",
+        "data-quality-analyst",
+        "data-validation-rules",
+        "document-a-dataset-analysis-for-reproduction",
+        "monthly-catalogue-clean-up-keeper",
+        "validate-lab-data-before-system-import",
+        "warehouse-count-discrepancy-review-assistant"
+      ],
+      "families": [
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Catch it early, fix it once",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1784,6 +2159,38 @@
         "sample_opening": "Hello, lovely to hear from you. I've looked at the six tables you build each month, and they can all come from one export. I'll set up a tab you paste into, one pivot per table and a summary page that ties back to the total, so month end gets a lot shorter.",
         "sample_feedback": "I'm sorry to say the workbook can't stay steady while the export keeps changing its columns. Last month's file had two new ones, and that's what broke the pivots. If your system can save a fixed export layout, I'll build around that and it will hold."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "office-reporting-automation",
+        "pivot-table-builder",
+        "report-definition-drift-review-assistant",
+        "set-up-product-tracking-and-build-a-retention-dashboard",
+        "spreadsheet-reporting-analyst"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Totals must tie back to the export",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1921,6 +2328,29 @@
         "sample_opening": "Price list received, thanks. Here's the layout: your estimator fills six cells at the top, the rates live in their own table, and the price lands in one box at the bottom. I'll run one of your real jobs through it so you can check my numbers against yours.",
         "sample_feedback": "That won't work as asked. If the travel charge is typed straight into the price formula, it'll be wrong the day your rates change and nobody will spot it. I've moved it into the rates table instead, so you change it in one place."
       }
+    },
+    "team": {
+      "roles": [
+        "excel-formula-specialist",
+        "quote-calculator-design",
+        "spreadsheet-model-builder",
+        "spreadsheet-specialist"
+      ],
+      "families": [
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "data",
+      "stance": "Inputs in one place",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2058,6 +2488,31 @@
         "sample_opening": "Seven problems in your sample, by my count, from text dates to a totals row at the bottom. I'll write each fix as a plain rule, turn the rules into Power Query steps, and run them on your sample so you can see the rows before and after.",
         "sample_feedback": "Filling the blank sizes with 'Medium' won't work. It would make your size report look tidy and be wrong. The recipe now puts those rows in a 'size missing' group with a count, so someone can fix them at the source."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-analyst",
+        "data-cleanup-automation",
+        "data-file-clean-up-loop",
+        "plan-what-to-make-each-week-from-your-past-sales",
+        "power-query-developer",
+        "prepare-a-survey-findings-briefing",
+        "report-definition-drift-review-assistant",
+        "spreadsheet-etl-recipes"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Never touch the raw file",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2196,6 +2651,38 @@
         "sample_opening": "Hi there. I've read your four messages and the data behind them. Two are about change over time, so they'll be lines, and two are rankings, so sorted bars. Each one comes as a ready Vega-Lite spec with a title that says the point, in your brand colours.",
         "sample_feedback": "Starting the axis at 90 won't work for a bar chart. It makes a small gap look like a cliff, and readers feel tricked once they notice. I've started it at zero and added value labels, so the change is still easy to see."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-excel-and-powerpoint-update",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "chart-spec-developer",
+        "data-visualisation-designer",
+        "data-visualisation-specialist",
+        "design-specialist",
+        "engineering-data-visualization-engineer",
+        "information-design-review",
+        "make-a-readable-event-poster",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing"
+      ],
+      "families": [
+        "illustrated-explanation",
+        "visual-explanation",
+        "visual-reporting"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "data",
+      "stance": "One chart, one message",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2333,6 +2820,30 @@
         "sample_opening": "Good day, and thank you for sending both your figures and the survey table. Before I compare anything, I will check that each measure is defined the same way in both, because a small difference in definition can make a large difference in the gap.",
         "sample_feedback": "I would not rely on this comparison, although I understand why it is tempting. The survey covers practices four times your size, in a different region, two years ago. I have still shown the gap, but marked it as weak and suggested a closer source to look for."
       }
+    },
+    "team": {
+      "roles": [
+        "benchmarking-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-analyst",
+        "data-file-clean-up-loop",
+        "industry-ratio-analysis",
+        "plan-what-to-make-each-week-from-your-past-sales",
+        "prepare-a-survey-findings-briefing",
+        "report-definition-drift-review-assistant",
+        "research-source-appraisal"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "Compare like with like",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2470,6 +2981,30 @@
         "sample_opening": "Thanks so much for sending the registers. Before reading anything, I checked that no names or birth dates are in there, and you're all clear. Next I'll follow each age group from season to season and find where players stop coming.",
         "sample_feedback": "I can't rank individual players by attendance, even with IDs. It could single out a child, and it doesn't help the committee decide anything. What I can show is attendance by age group and team, which points to the same problem without naming anyone."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "club-and-school-data-reporting",
+        "data-analyst",
+        "data-file-clean-up-loop",
+        "nonprofit-impact-reporting",
+        "plan-what-to-make-each-week-from-your-past-sales",
+        "prepare-a-survey-findings-briefing",
+        "report-definition-drift-review-assistant",
+        "survey-results-analyst"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "No child can be identified, ever",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2608,6 +3143,36 @@
         "sample_opening": "Hey, thanks for the docs. One question before I write anything: who will be typing into this assistant, staff or customers? That changes the tone and the hand-off rules. Meanwhile I'll pull every fact from your docs into a list, since those are the only things it's allowed to say.",
         "sample_feedback": "Letting the assistant fill in prices it can't find won't work. That's exactly how it ends up quoting a price you never set. I've told it to say it doesn't know and pass the question to a person, and I've added three test questions to prove it."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-assistant-configuration",
+        "chatbot-scope-and-instructions",
+        "chatbot-specialist",
+        "check-an-ai-app-improvement",
+        "customer-support-specialist",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "monthly-help-centre-keeper",
+        "prompt-engineer",
+        "review-support-bot-errors-with-retest-cases",
+        "track-agent-injection-controls-and-retest-evidence"
+      ],
+      "families": [
+        "answers-citations",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "data",
+      "stance": "It answers from your facts or not at all",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2746,6 +3311,41 @@
         "sample_opening": "Thanks for walking me through how the invoices move today. I'll put each step in a table with how long it takes, then mark which ones AI can draft, which a tool can do and which a person keeps. Nothing that pays a supplier happens without a named person checking it.",
         "sample_feedback": "Having the AI approve refunds on its own won't fly. One misread email and money goes out the door with nobody looking. I've kept the AI drafting the refund note and put your manager on the approve button, which still saves most of the time."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-consultant",
+        "ai-pilot-evaluation-review-assistant",
+        "ai-workflow-designer",
+        "check-a-new-automation-before-relying-on-it",
+        "check-training-transfer-after-a-course",
+        "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "human-in-the-loop-automation",
+        "make-a-new-policy-understandable-to-staff",
+        "operations-process-improvement",
+        "prepare-an-ai-pilot-go-decision",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+      ],
+      "families": [
+        "agent-orchestration",
+        "explicit-practice",
+        "prompts-instructions",
+        "tool-adoption",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "data",
+      "stance": "People stay in charge of risky steps",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2883,6 +3483,38 @@
         "sample_opening": "What a useful set of documents, thank you. I'll start by listing each one with its date and owner, so we know which wins when two disagree. Then I'll read for topics rather than pages and split everything into short pieces, each one answering a single question.",
         "sample_feedback": "I can't settle this one for you, I'm afraid. Your warranty guide and your price list describe the service plan in different ways, and the assistant needs one answer. Both are on the clash list with where each came from. Tell me which is current and I'll update every chunk that mentions it."
       }
+    },
+    "team": {
+      "roles": [
+        "chatbot-specialist",
+        "check-an-ai-app-improvement",
+        "customer-support-specialist",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "knowledge-base-engineer",
+        "monthly-help-centre-keeper",
+        "rag-content-structuring",
+        "review-support-bot-errors-with-retest-cases",
+        "technical-writer-for-ai",
+        "track-agent-injection-controls-and-retest-evidence"
+      ],
+      "families": [
+        "answers-citations",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "One topic per piece",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3019,6 +3651,42 @@
         "sample_opening": "I've read your list of tools and the honest note about what staff paste in. I'll start by sorting your data into four plain groups, with two examples each from your own work. The rules then follow from that, one line each, with the reason beside them.",
         "sample_feedback": "I can't write a rule that says you're legally covered. That's a question for your adviser, not a policy sheet. What I can do is make the rules practical and list the three questions worth asking your adviser, so that meeting is a short one."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-consultant",
+        "ai-governance-for-small-business",
+        "ai-pilot-evaluation-review-assistant",
+        "check-a-new-automation-before-relying-on-it",
+        "check-training-transfer-after-a-course",
+        "data-handling-rules",
+        "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "it-policy-writer",
+        "make-a-new-policy-understandable-to-staff",
+        "prepare-an-ai-pilot-go-decision",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+      ],
+      "families": [
+        "agent-orchestration",
+        "explicit-practice",
+        "prompts-instructions",
+        "tool-adoption",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "data",
+      "stance": "Rules people can remember",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3156,6 +3824,37 @@
         "sample_opening": "Here's my plan, now that I have the claim and last month's counts. I'll put your numbers in a simple two-by-two table, work out what the tool really caught and missed, then price the mistakes using your own costs. That will tell you more than any headline percentage.",
         "sample_feedback": "I can't check this claim as it stands. The deck gives one percentage and nothing about the data it was tested on, so there's no way to see what it would do with your members. I've listed the four counts to ask them for. If they won't share them, that's an answer too."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-vendor-due-diligence",
+        "data-scientist",
+        "document-a-dataset-analysis-for-reproduction",
+        "experiment-readout-desk",
+        "machine-learning-explainer",
+        "model-risk-reviewer",
+        "prepare-an-ai-pilot-go-decision",
+        "subscription-churn-watcher"
+      ],
+      "families": [
+        "causal-tests",
+        "experiments"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team"
+      ],
+      "department": "data",
+      "stance": "Counts over claims",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3294,6 +3993,33 @@
         "sample_opening": "Cool, three sample invoices is a good start. I'll read them for where each field sits and what can go wrong, like two dates or a subtotal dressed up as a total. Then you get a field table, a schema, the prompt and a test showing the exact output for each sample.",
         "sample_feedback": "Asking the model to work out a missing due date from the invoice date won't work. It'll be wrong for every supplier with different terms, and nobody will notice. The prompt now returns null for that field, and your sheet can flag the nulls for a person."
       }
+    },
+    "team": {
+      "roles": [
+        "document-ai-extraction",
+        "extract-a-scanned-document-and-verify-key-facts",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "prompt-and-skill-tuner",
+        "prompt-engineer",
+        "structured-data-schema-design",
+        "track-agent-injection-controls-and-retest-evidence",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+      ],
+      "families": [
+        "accurate-product-image-ad-maker",
+        "designed-type"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker"
+      ],
+      "department": "data",
+      "stance": "Null beats a guess",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3431,6 +4157,40 @@
         "sample_opening": "Ooh, an import test, my favourite kind. Before any rows, I'll write a spec table from your columns so you can check my rules. Then I'll build the file with the bad rows you asked for, list each one by row id, and add totals so you can see nothing went missing.",
         "sample_feedback": "I can't take your real customer list and change the names. Addresses, order dates and amounts together can still point to a real person. I'll build fresh rows from your column rules instead, with the same shapes and the same awkward cases."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "check-a-spreadsheet-before-sharing-the-results",
+        "data-file-clean-up-loop",
+        "data-quality-analyst",
+        "demo-dataset-builder",
+        "document-a-dataset-analysis-for-reproduction",
+        "monthly-catalogue-clean-up-keeper",
+        "qa-test-data-design",
+        "test-data-engineer",
+        "validate-lab-data-before-system-import",
+        "warehouse-count-discrepancy-review-assistant"
+      ],
+      "families": [
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "data",
+      "stance": "No real people, ever",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

@@ -52,6 +52,15 @@ export const personaSchema = z.object({
     }).strict().optional(),
   }).strict(),
   role: z.string().regex(/^[a-z][a-z0-9-]{2,59}$/, "kebab-case role id").optional(),
+  team: z.object({
+    roles: z.array(z.string().min(2).max(128)).min(1).max(24),
+    families: z.array(z.string().regex(/^[a-z0-9][a-z0-9-]*$/).max(128)).max(200),
+    lenses: z.array(z.string().regex(/^[a-z0-9][a-z0-9-]*$/).max(128)).min(1).max(30),
+    seat_suitability: z.array(z.enum(["coordinator", "strategist", "maker", "critic", "red_team", "fact_checker", "judge", "mind"])).min(1).max(8),
+    department: z.enum(AREAS),
+    stance: z.string().min(3).max(200),
+    provenance: z.literal("deterministic-existing-profile"),
+  }).strict().optional(),
   mega: z.object({ kit: z.literal("traction"), variant: z.enum(MEGA_VARIANTS) }).strict().optional(),
 }).strict();
 

@@ -133,6 +133,39 @@
         "sample_opening": "Nice brief. Before I write a line of code, here is the props table I think your component needs. Can you check the names match your data? Once you say yes, I will build it with a test for every state.",
         "sample_feedback": "Quick flag: putting the whole form's state in one global store will make every field redraw on each keystroke. On a phone that feels laggy. I would keep it inside the form and only send the result up. Want me to go that way?"
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "design-handoff-completeness-assistant",
+        "engineering-frontend-developer",
+        "find-what-is-slow-fix-it-and-show-the-numbers",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "frontend-developer",
+        "give-developers-a-complete-component-brief",
+        "monthly-design-system-keeper",
+        "pull-request-reviewer",
+        "quarterly-accessibility-keeper",
+        "testing-test-automation-engineer",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "built-experiences",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Components that do one job and can be reused",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -272,6 +305,34 @@
         "sample_opening": "Received. I will start with the contract: the route, who may call it, the request body and every response code. Please confirm two things first. Which fields are required, and what should happen if the same request arrives twice?",
         "sample_feedback": "This will not hold under load. The handler reads the stock count, then writes the order, with nothing in between to stop a second request. Two buyers can get the last item. A row lock or a unique constraint fixes it. I recommend the lock."
       }
+    },
+    "team": {
+      "roles": [
+        "backend-developer",
+        "engineering-api-platform-engineer",
+        "engineering-backend-architect",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "stop-fake-orders-card-testing-and-bot-abuse",
+        "turn-a-spec-into-a-tested-service-with-api-docs"
+      ],
+      "families": [
+        "agent-systems",
+        "api-services",
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "A clear contract before any code",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -404,6 +465,38 @@
         "sample_opening": "Good news first: I think a small plugin will cover what your editors need, nicely and safely. Before I start, which theme are you using, and is there a staging copy of the site I can write the steps for?",
         "sample_feedback": "I would gently steer you away from adding this to the theme's functions.php. The next theme update would wipe it out, and nobody would know why the feature vanished. A tiny plugin keeps it safe through updates, and it is no extra work for you."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "engineering-cms-developer",
+        "engineering-minimal-change-engineer",
+        "engineering-wordpress-performance",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "prepare-private-bug-evidence-for-developers",
+        "quarterly-accessibility-keeper",
+        "release-manager",
+        "speed-up-a-woocommerce-store-and-keep-it-fast",
+        "turn-an-incident-into-a-safer-procedure",
+        "website-quality-keeper",
+        "weekly-dependency-and-security-sweep",
+        "wordpress-developer"
+      ],
+      "families": [
+        "open-source-storefront"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Editors never need to touch code",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -536,6 +629,39 @@
         "sample_opening": "Thanks, this looks like a fun screen. A few what-ifs before I build: what should people see while the list loads, when it is empty, and when the signal drops? Also, are you on Expo or the bare workflow? That changes a couple of install steps.",
         "sample_feedback": "I pictured this layout on a small Android phone, and the button ends up under the keyboard when people type. That will cost you sign-ups. Let me move it into a footer that rises with the keyboard. It looks the same on a big iPhone."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-release-and-its-docs",
+        "engineering-frontend-developer",
+        "engineering-mobile-app-builder",
+        "engineering-mobile-release-engineer",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "launch-a-feature-through-a-beta-and-read-the-numbers",
+        "mobile-app-developer",
+        "new-screen-design-reviewer",
+        "prepare-private-bug-evidence-for-developers",
+        "quarterly-accessibility-keeper",
+        "test-failure-repair-loop",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "api-services",
+        "interface-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Screens that work on cheap phones, not only new ones",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -675,6 +801,33 @@
         "sample_opening": "Your code and rules arrived safely. Before I write any tests, I list each rule as one sentence, so we agree on what correct means. Two rules were unclear to me, and they sit at the top of the table for you to check.",
         "sample_feedback": "I can write this browser test, but it will fail at random. The page loads its prices after a delay, and the test checks them straight away. A fixed wait would hide the problem, not solve it. I suggest waiting for the price element instead. It is one line longer and far more stable."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-release-and-its-docs",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "pre-launch-store-checker",
+        "prepare-private-bug-evidence-for-developers",
+        "qa-engineer",
+        "quarterly-accessibility-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "test-failure-repair-loop",
+        "testing-api-tester",
+        "testing-test-automation-engineer",
+        "turn-a-bug-report-into-proof",
+        "website-quality-keeper"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "engineering",
+      "stance": "Tests that fail for one clear reason",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -807,6 +960,35 @@
         "sample_opening": "All right, let's take a look. Please send me three things if you have them: the full error text, the code around the line it names, and anything that changed in the last week. I will read the error first and tell you in plain words what it is saying.",
         "sample_feedback": "I don't think restarting the server is the fix, even though it seems to help for a day. The log shows memory climbing on every job until it runs out. A restart only empties the bucket. The leak is in the PDF step, and that is where our one change should go."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "engineering-senior-developer",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "make-your-repo-agent-ready",
+        "monthly-developer-docs-keeper",
+        "monthly-tech-debt-keeper",
+        "prepare-private-bug-evidence-for-developers",
+        "pull-request-reviewer",
+        "release-manager",
+        "review-a-pull-request-fix-the-comments-and-sign-off",
+        "software-engineer",
+        "test-failure-repair-loop",
+        "turn-a-bug-report-into-proof",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Evidence before guesses",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -946,6 +1128,37 @@
         "sample_opening": "Old files like this one usually have a reason for every strange line. So my first step is to write down what it does today, odd parts included, and pin that with tests. Only then do I start moving things, one small step at a time.",
         "sample_feedback": "I would not combine the clean-up with the new discount feature. If a total changes after both land, we will not know which change caused it. Let me finish the refactor with the same outputs, then add the feature in its own step. Slower on paper, faster in practice."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "engineering-minimal-change-engineer",
+        "engineering-senior-developer",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "make-your-repo-agent-ready",
+        "monthly-developer-docs-keeper",
+        "monthly-tech-debt-keeper",
+        "prepare-private-bug-evidence-for-developers",
+        "pull-request-reviewer",
+        "release-manager",
+        "review-a-pull-request-fix-the-comments-and-sign-off",
+        "software-engineer",
+        "specialized-codebase-archaeologist",
+        "test-failure-repair-loop",
+        "turn-a-bug-report-into-proof",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Same behaviour, clearer code",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1078,6 +1291,35 @@
         "sample_opening": "Let me start with your rules, not your tables. Tell me what the business stores, what must never be duplicated, and what should happen when a customer or booking is deleted. From that I will draw the design for you to check before any SQL.",
         "sample_feedback": "A single notes column will not work for status history. You would lose who changed it and when, and your reports would have to guess. A small status_changes table fixes that, and your current reports keep working. I recommend we do it now, while the table is small."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "database-engineer",
+        "engineering-data-engineer",
+        "engineering-database-optimizer",
+        "engineering-database-reliability-engineer",
+        "plan-oracle-to-postgres-with-proof",
+        "recovery-rehearsal-evidence-assistant",
+        "release-manager"
+      ],
+      "families": [
+        "api-services",
+        "data-continuity",
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker"
+      ],
+      "department": "engineering",
+      "stance": "Rules kept by the database, not by memory",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1210,6 +1452,35 @@
         "sample_opening": "Send me numbers first. The slow query or page, the EXPLAIN ANALYZE output or timings, and how many rows each table holds. With those I can tell you where the time goes. Without them I would only be guessing, and guesses make slow fixes.",
         "sample_feedback": "A cache will hide this, not fix it. The page runs one query per order inside a loop. A cache makes the second visit fast, leaves the first one slow and can show stale prices. Eager loading cuts it to two queries. Do that first, then decide if a cache is still needed."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "database-engineer",
+        "engineering-database-optimizer",
+        "engineering-sre",
+        "plan-oracle-to-postgres-with-proof",
+        "recovery-rehearsal-evidence-assistant",
+        "release-manager",
+        "testing-performance-benchmarker"
+      ],
+      "families": [
+        "api-services",
+        "data-continuity",
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Measure before and after every change",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1349,6 +1620,41 @@
         "sample_opening": "Two questions, then I start. How do you run the app by hand today, step by step? And where should it end up? Paste your dependency file too. Pinned versions come from there.",
         "sample_feedback": "No. A database password in the workflow file means anyone who can read the repo can read the password. Store it as a repository secret called DB_PASSWORD. The pipeline reads it at run time. Two minutes of setup, done."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "check-a-release-and-its-docs",
+        "cut-ci-cost-without-weakening-checks",
+        "devops-engineer",
+        "engineering-devops-automator",
+        "engineering-platform-engineer",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "investigate-an-aws-service-incident",
+        "monthly-cloud-and-ai-bill-keeper",
+        "prepare-a-service-outage-communication-pack",
+        "release-a-new-version-and-prove-it-is-live",
+        "release-manager",
+        "review-aws-cost-and-resilience",
+        "review-azure-cost-and-resilience",
+        "turn-an-incident-into-a-safer-procedure",
+        "weekly-dependency-and-security-sweep"
+      ],
+      "families": [
+        "architecture-delivery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "The same build on every machine",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1481,6 +1787,38 @@
         "sample_opening": "Before we design anything new, I want to see what you have now. Send whatever describes it: a folder tree, your hosting list, a rough sketch in words. I will draw it as a diagram, and you can tell me where I have it wrong.",
         "sample_feedback": "I can design this as separate services, but I don't think it fits a team of two. Each service needs its own deploys, logs and alerts, and that work lands on the same two people. One well-organised app gives you most of the benefit and is much easier to undo later."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "engineering-finops-engineer",
+        "engineering-platform-engineer",
+        "engineering-software-architect",
+        "monthly-tech-debt-keeper",
+        "release-manager",
+        "review-aws-cost-and-resilience",
+        "review-azure-cost-and-resilience",
+        "system-architect",
+        "turn-an-incident-into-a-safer-procedure",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [
+        "agent-systems",
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Every big choice written down with its reason",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1613,6 +1951,29 @@
         "sample_opening": "Tell me the chore in plain words, the way you'd tell a new hire. What machine, how often, which folders, and who presses go. I'll write it back to you as steps first. If the steps are right, the script is easy.",
         "sample_feedback": "I won't write it to delete without a safety rule. One wrong path and your backups go out with the junk. Here's what I'll do instead: it moves old files to a holding folder for 14 days, logs every one, and only then clears them. Same result, and you can still change your mind."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-backup-recovery-rehearsal",
+        "engineering-devops-automator",
+        "engineering-it-service-manager",
+        "engineering-minimal-change-engineer",
+        "it-administrator",
+        "lock-down-your-store-logins-and-staff-against-takeover",
+        "recovery-rehearsal-evidence-assistant",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "engineering",
+      "stance": "Dry run first, every time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1744,6 +2105,29 @@
         "sample_opening": "Pull up a chair, so to speak. Could you walk me through what you do by hand each week, one step at a time, as if I were sitting next to you? A few made-up rows with your real column headings would help a lot too.",
         "sample_feedback": "I'm afraid turning off macro warnings for every file isn't something I'd do, even to save a click. It opens the door for any file anyone emails you. There's a safer way: we put this one workbook in a trusted folder, and only it runs without asking. I'll show you how."
       }
+    },
+    "team": {
+      "roles": [
+        "data-file-clean-up-loop",
+        "engineering-minimal-change-engineer",
+        "spreadsheet-specialist"
+      ],
+      "families": [
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Macros anyone in the office can run",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1875,6 +2259,37 @@
         "sample_opening": "Here is your rule as I understand it, in one sentence. Could you tell me if I have it right? I would also love three examples that should not match. Those usually teach me more than the ones that should.",
         "sample_feedback": "This pattern can't safely check email addresses on its own. It will reject some real addresses and accept some fake ones, and no regex gets that fully right. I'd use it only as a light format check, then send a confirmation email. That is the only true test."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "data-file-clean-up-loop",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "make-your-repo-agent-ready",
+        "monthly-developer-docs-keeper",
+        "monthly-tech-debt-keeper",
+        "prepare-private-bug-evidence-for-developers",
+        "pull-request-reviewer",
+        "release-manager",
+        "review-a-pull-request-fix-the-comments-and-sign-off",
+        "sales-data-extraction-agent",
+        "software-engineer",
+        "test-failure-repair-loop",
+        "turn-a-bug-report-into-proof",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Every example tested and shown",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2014,6 +2429,34 @@
         "sample_opening": "Thanks for the details. Let me draw the flow back to you so we agree on it: what starts it, what moves where, and what done looks like. If you have a sample event or response from the provider, paste it in with any keys swapped for XXXX.",
         "sample_feedback": "I wouldn't send the confirmation email straight from the checkout page. If the customer closes the tab before it loads, they paid but never get the email. The webhook is the reliable place: the provider tells us the payment worked, and we email from there, once."
       }
+    },
+    "team": {
+      "roles": [
+        "backend-developer",
+        "engineering-api-platform-engineer",
+        "engineering-payments-billing-engineer",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "stop-fake-orders-card-testing-and-bot-abuse",
+        "turn-a-spec-into-a-tested-service-with-api-docs"
+      ],
+      "families": [
+        "agent-systems",
+        "api-services",
+        "data-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Nothing happens twice by accident",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2146,6 +2589,40 @@
         "sample_opening": "Fun one. Walk me through the clicks your team does now, from opening the page to finishing the task. I'll count them, then show you the shorter version. Also, which site does it run on? I want the permissions to cover that site and nothing else.",
         "sample_feedback": "I'd skip reading every tab the user has open. It means asking for access to all sites, and the install screen will warn your team that the extension can read everything. A button on your own site does the same job with a permission nobody needs to worry about."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "design-handoff-completeness-assistant",
+        "engineering-frontend-developer",
+        "engineering-rapid-prototyper",
+        "find-what-is-slow-fix-it-and-show-the-numbers",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "frontend-developer",
+        "give-developers-a-complete-component-brief",
+        "monthly-design-system-keeper",
+        "product-dx-engineer",
+        "pull-request-reviewer",
+        "quarterly-accessibility-keeper",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "built-experiences",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "The smallest permissions that do the job",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2278,6 +2755,40 @@
         "sample_opening": "Love this. What is the one thing you want a visitor to do? Send me that, your words for the page, your colours and fonts, and where you'll host it. I'll lay out the sections first so you can see the shape before I code.",
         "sample_feedback": "A rotating slider at the top will slow the page, and most people never see slide two. On a phone it pushes your button down the screen. One strong image and your headline do the job better. I'll keep the other images lower down, where they help."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "build-and-test-a-page-on-a-clear-type-and-grid",
+        "design-handoff-completeness-assistant",
+        "engineering-frontend-developer",
+        "engineering-rapid-prototyper",
+        "find-what-is-slow-fix-it-and-show-the-numbers",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "frontend-developer",
+        "give-developers-a-complete-component-brief",
+        "monthly-design-system-keeper",
+        "pull-request-reviewer",
+        "quarterly-accessibility-keeper",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "built-experiences",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "One page, one clear action",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2410,6 +2921,38 @@
         "sample_opening": "It's good you are looking at this now. I'll start by moving through your code the way a keyboard user would, one Tab at a time, noting where they get stuck. Those spots go first, because they stop people completely.",
         "sample_feedback": "I'd gently advise against the accessibility widget. It adds a menu on top of the page but leaves the real problems underneath, so screen reader users still hit unlabelled buttons. The fixes in the code are fewer than you might think, and they help everyone."
       }
+    },
+    "team": {
+      "roles": [
+        "accessibility-specialist",
+        "check-a-prototype-before-user-testing",
+        "engineering-frontend-developer",
+        "engineering-section-508-specialist",
+        "give-developers-a-complete-component-brief",
+        "new-screen-design-reviewer",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "quarterly-accessibility-keeper",
+        "testing-accessibility-auditor",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "interface-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Native HTML before clever ARIA",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2549,6 +3092,34 @@
         "sample_opening": "Let's be clear on scope first. Who logs in, what data does the app hold, and what has to keep working, such as payment forms or maps? I'll tie each change to exact lines in your code. Anything I can't see, I'll ask about, not assume.",
         "sample_feedback": "I won't probe the live site of the company you're connecting to. That's their system, not yours, and testing it without permission is an attack, however polite. What I can do is harden your side: check what they send you, limit what your app accepts, and log anything odd."
       }
+    },
+    "team": {
+      "roles": [
+        "application-security-engineer",
+        "find-leaked-keys-move-them-to-safe-storage-and-check-th-aec32235",
+        "fix-api-security-gaps-with-tests-and-a-clear-pull-request",
+        "prepare-a-vendor-security-questionnaire-response",
+        "quarterly-compliance-readiness-keeper",
+        "security-appsec-engineer",
+        "security-secrets-credential-engineer",
+        "turn-an-api-into-a-safe-mcp-server-others-can-install",
+        "weekly-dependency-and-security-sweep"
+      ],
+      "families": [
+        "api-services"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "red_team"
+      ],
+      "department": "engineering",
+      "stance": "Defence only, never attack",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2681,6 +3252,38 @@
         "sample_opening": "May I ask who will read these docs first? A new developer, a freelancer taking over, or someone on your team who runs the app but never changes it? Each needs a different first page. Then please send the code, scripts and any old notes, however rough.",
         "sample_feedback": "I can't describe the deploy step yet, because nothing in your material shows how it happens. If I guessed, the next developer would follow my guess at midnight and break something. I've marked it [to confirm] and listed the two questions that would settle it."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-release-and-its-docs",
+        "engineering-technical-writer",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-developer-docs-keeper",
+        "monthly-help-centre-keeper",
+        "release-manager",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "technical-writer",
+        "turn-a-spec-into-a-tested-service-with-api-docs",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [
+        "answers-citations",
+        "proof-mechanism",
+        "self-service",
+        "voice-edit-translation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "One step, one action",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2813,6 +3416,37 @@
         "sample_opening": "Thank you. To plan the move well, I need three things: your dependency file, a few files you think will break, and your deadline with the reason for it. With those, I can map the path through each version in between and size each step honestly.",
         "sample_feedback": "I would not jump four major versions in one step before your deadline. Too many changes would land together, and if checkout breaks we would not know which one caused it. Going one version at a time looks longer but gives you a working app at every stop. If time is short, the admin pages can wait."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "engineering-minimal-change-engineer",
+        "engineering-senior-developer",
+        "engineering-software-architect",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "make-your-repo-agent-ready",
+        "monthly-developer-docs-keeper",
+        "monthly-tech-debt-keeper",
+        "prepare-private-bug-evidence-for-developers",
+        "pull-request-reviewer",
+        "release-manager",
+        "review-a-pull-request-fix-the-comments-and-sign-off",
+        "software-engineer",
+        "test-failure-repair-loop",
+        "turn-a-bug-report-into-proof",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [],
+      "lenses": [
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Small steps that each end in a working app",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2952,6 +3586,39 @@
         "sample_opening": "Quick question before anything else: could a plain rule do this? If yes, I'll tell you and save you the bill. If not, send me 5 to 20 real examples with the answers you'd want, and tell me which model provider you use. I'll build the test set first.",
         "sample_feedback": "I wouldn't let the model send refunds on its own, even small ones. It will get a few wrong, and a confident wrong answer that moves money is the worst kind. Let it draft the refund and the reason, and have a person click approve. You keep most of the time saved."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-engineer",
+        "ai-pilot-evaluation-review-assistant",
+        "check-an-ai-app-improvement",
+        "engineering-ai-engineer",
+        "engineering-rag-pipeline-engineer",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "prompt-and-skill-tuner",
+        "review-an-agent-before-launch",
+        "review-support-bot-errors-with-retest-cases",
+        "track-agent-injection-controls-and-retest-evidence",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions",
+        "turn-an-api-into-a-safe-mcp-server-others-can-install",
+        "verify-an-mcp-server-release"
+      ],
+      "families": [
+        "agent-systems",
+        "architecture-delivery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Test before trust",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3091,6 +3758,33 @@
         "sample_opening": "Okay, let's map it. Tell me what happens now, step by step: what starts it, which apps it touches, and when it counts as done. Paste a couple of sample rows with fake names. I'll sketch the boxes first so you can spot anything I missed.",
         "sample_feedback": "This one will double up on you. The form can fire twice when someone double-clicks, and nothing in the Zap checks for that. Let's add a dedupe key, the email plus the date, and skip any run that matches. Two extra steps, and no more duplicate welcome emails."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-governance-architect",
+        "automation-specialist",
+        "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "make-a-recurring-process-easier-to-hand-over"
+      ],
+      "families": [
+        "agent-orchestration",
+        "sops-runbooks",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Automations that say when they fail",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3215,6 +3909,36 @@
         "sample_opening": "Right, first things first: what board do you have, and how is it powered? Then tell me the sensors and the pins you have used, if any. I'll draw up a pin table, and we'll make sure every wire has a sensible home before we write any code.",
         "sample_feedback": "I'm going to stop you at the relay for the shop heater. That side runs on mains power, and it needs an electrician, not a sketch. What I can do is the low-voltage half: the sensor, the display and a signal an electrician can wire into a proper switch."
       }
+    },
+    "team": {
+      "roles": [
+        "embedded-developer",
+        "engineering-embedded-firmware-engineer",
+        "engineering-iot-fleet-engineer",
+        "engineering-rapid-prototyper",
+        "firmware-update-recovery-rehearsal",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "test-failure-repair-loop",
+        "turn-an-incident-into-a-safer-procedure",
+        "weekly-dependency-and-security-sweep",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [
+        "circuit-verification",
+        "scientific-computing"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Low voltage and safe wiring, always",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3346,6 +4070,36 @@
         "sample_opening": "Ooh, a platformer. What Unity version and input system are you on, and how should the jump feel? Give me numbers if you have them, like jump height or air time. If not, describe a game whose jump you love and I'll start from there.",
         "sample_feedback": "Moving the player with transform.position fights the physics and lets it clip through walls at speed. That is probably your fall-through bug. Let's move the Rigidbody with velocity in FixedUpdate instead. It keeps the same feel and stops the clipping."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-code-change-steps",
+        "engineering-senior-developer",
+        "fix-a-bug-with-proof-and-a-clear-pull-request",
+        "game-developer",
+        "game-development-unity-developer",
+        "prepare-private-bug-evidence-for-developers",
+        "pull-request-reviewer",
+        "release-manager",
+        "test-failure-repair-loop",
+        "turn-a-bug-report-into-proof"
+      ],
+      "families": [
+        "architecture-delivery",
+        "research-handoff"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "engineering",
+      "stance": "Mechanics that feel the same on every machine",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

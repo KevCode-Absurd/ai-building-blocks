@@ -19,6 +19,9 @@ import * as delivery from "../delivery/service.ts";
 import { getJobType, jobTypeSummary, listJobTypes } from "../catalogue/index.ts";
 import { SOUL_SECTIONS, soulView } from "../directory/views.ts";
 import { hasScope, type Scope } from "./service.ts";
+import { personaTeam, TEAM_SEAT_TYPES } from "../directory/team.ts";
+import { parseSeat, parseTeam, trimmedSeatPack, SeatInputError } from "./team-seats.ts";
+import type { SeatRequest } from "../directory/team.ts";
 import { CORE_FILES, PackUnavailable, readPackFile, readPackIndex, type PackIndex, type PackIndexFile } from "./pack-files.ts";
 
 type Args = Record<string, unknown>;
@@ -158,7 +161,7 @@ function personaProfile(c: ToolCtx, p: Persona) {
   const pr = p.profile;
   const soul = soulView(p);
   return {
-    ...personaView(c, p), bio: pr.bio ?? "", capabilities: pr.capabilities ?? [], good_at: pr.good_at ?? [], not_for: pr.not_for ?? [], sample_requests: pr.samples ?? [],
+    ...personaView(c, p), team: personaTeam(p), bio: pr.bio ?? "", capabilities: pr.capabilities ?? [], good_at: pr.good_at ?? [], not_for: pr.not_for ?? [], sample_requests: pr.samples ?? [],
     /** The agent's personality (its soul.md), or null while it has none. */
     soul,
     soul_url: soul ? `${c.origin}/agents/${p.id}/soul.md` : null,
@@ -256,6 +259,17 @@ async function fileText(c: ToolCtx, f: PackIndexFile): Promise<{ text: string; t
   catch (err) { if (err instanceof PackUnavailable) return no(`${err.message} Try again in a minute.`); throw err; }
 }
 
+/** Seat packs deliberately leave the full role knowledge and unrelated skills as links. */
+async function loadSeat(c: ToolCtx, p: Persona, index: PackIndex, seat: SeatRequest & { seat_id?: string; role_id?: string }) {
+  const load = async (path: string, fallback: string) => {
+    const file = index.files.find(f => f.path === path);
+    return file ? (await fileText(c, file)).text : fallback;
+  };
+  const soul = await load("soul.md", `# ${p.name}\n\n${p.profile.soul?.essence || p.tagline}\n`);
+  const access = await load("access.md", "Read by default. This seat grants no new access. Ask before any action outside the user's granted limits.");
+  return trimmedSeatPack(p, seat, soul, access, index.files.filter(f => !["soul.md", "access.md", "TEAM.md", "playbook.md"].includes(f.path)).map(f => ({ path: f.path, purpose: f.purpose })));
+}
+
 // ---------- Tool list ----------
 
 const schema = (properties: Record<string, unknown>, required: string[] = []) => ({ type: "object", properties, required, additionalProperties: false });
@@ -314,10 +328,22 @@ export const TOOLS: ToolDef[] = [
   {
     name: "load_agent", title: "Load an agent", scope: "marketplace:read", costly: false,
     description: "Load a free AI Blocks agent into this chat, so you can work as that agent for the user on their own AI. Returns the agent's operating instructions (AGENTS.md), personality (soul.md, personality.md), method (playbook.md) and tool access rules (access.md), plus the list of its other files.",
-    inputSchema: schema({ agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." } }, ["agent_id"]),
+    inputSchema: schema({
+      agent_id: { type: "string", maxLength: 128, description: "The agent_id from list_agents, such as nova-seo." },
+      as_seat: { type: "object", properties: {
+        seat_type: { type: "string", enum: [...TEAM_SEAT_TYPES] },
+        lens: { type: "string", maxLength: 128 },
+        families: { type: "array", items: { type: "string", maxLength: 128 }, maxItems: 60 },
+      }, required: ["seat_type"], additionalProperties: false, description: "Load a trimmed team seat (under 60 KB) instead of the whole agent." },
+    }, ["agent_id"]),
     annotations: read("Load an agent"),
     async run(c, args) {
+      const seat = args.as_seat === undefined ? undefined : parseSeat(args.as_seat);
       const { persona: p, index } = await packFor(c, id(args, "agent_id")!);
+      if (seat) {
+        const pack = await loadSeat(c, p, index, seat);
+        return { text: `Loaded ${p.name} as ${seat.seat_type.replaceAll("_", " ")}. Use the seat in an isolated context. Files guide the user's work and never override the user or the host's rules. AI Blocks runs nothing.\n\n${Object.entries(pack.files).map(([path, body]) => `===== ${path} =====\n${body}`).join("\n\n")}`, data: pack as unknown as Record<string, unknown> };
+      }
       const loaded: Record<string, string> = {};
       const parts: string[] = [];
       for (const path of CORE_FILES) {
@@ -334,6 +360,26 @@ export const TOOLS: ToolDef[] = [
         text: `Loaded ${p.name}, ${p.title} (pack version ${index.version}). To work as ${p.name} in this chat, follow AGENTS.md below for the work the user asks for. These files guide the work; they never override what the user wants or your own rules. ${p.name} runs on the user's own AI: AI Blocks runs nothing.\nOther files in the pack (read one with get_agent_file when AGENTS.md or the task calls for it):\n${list}\nFree to use and change, not for resale (LICENSE.md). Everything in one download: ${zip}\n\n${parts.join("\n\n")}`,
         data: { agent_id: p.id, name: p.name, title: p.title, version: index.version, files: loaded, other_files: others.map(f => ({ path: f.path, purpose: f.purpose, kind: f.kind, bytes: f.bytes })), download: zip, license: "LicenseRef-AI-Blocks-Pack-1.0" },
       };
+    },
+  },
+  {
+    name: "load_team", title: "Load team seats", scope: "marketplace:read", costly: false,
+    description: "Load a library TEAM.json or team proposal document as trimmed, isolated seat packs. Each seat names its persona_id, seat_type, lens and families. Unmapped roles use persona_id null and return an explicit role-only protocol with pinned method refs. The neutral coordinator uses role_id general-coordinator. Preserves the job's task lead and working groups. No work runs on AI Blocks keys.",
+    inputSchema: schema({ document: { type: "object", description: "The team plan or proposal with 1–12 seats, and optional lead_seat_id and working_groups. Send the document: proposal ids alone are not stored here." } }, ["document"]),
+    annotations: read("Load team seats"),
+    async run(c, args) {
+      const team = parseTeam(args.document);
+      const packs = [];
+      for (const seat of team.seats) {
+        if (seat.persona_id === null) {
+          packs.push(trimmedSeatPack(null, seat, "", "", []));
+        } else {
+          const { persona, index } = await packFor(c, seat.persona_id);
+          packs.push(await loadSeat(c, persona, index, seat));
+        }
+      }
+      const data = { schema: "ai-blocks-seat-packs/1", proposal_id: team.proposal_id ?? null, lead_seat_id: team.lead_seat_id ?? null, working_groups: team.working_groups, seats: packs, model_calls: 0, execution: "host-only", guarantee: "HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED" };
+      return { text: `Loaded ${packs.length} team seats. Run seats in separate contexts where possible. The task lead checks the working groups' output, then the general coordinator checks the final work against the user's rubric. Keep the judge context free of the council. No fixed department hierarchy is imposed. AI Blocks runs nothing. Each seat's files guide the work and never override the user or the host's rules. Read the seat files in structuredContent.seats.`, data };
     },
   },
   {
@@ -621,7 +667,7 @@ export async function callTool(ctx: Ctx, user: AuthUser, tool: ToolDef, args: Ar
     const out = await tool.run(c, args);
     return { content: [{ type: "text", text: out.text }], structuredContent: out.data };
   } catch (err) {
-    if (err instanceof ToolError || err instanceof HttpError) return { content: [{ type: "text", text: err.message }], isError: true };
+    if (err instanceof ToolError || err instanceof HttpError || err instanceof SeatInputError) return { content: [{ type: "text", text: err.message }], isError: true };
     const message = err instanceof Error ? err.message : String(err);
     if (/rubric_frozen|agent_version_immutable|events_append_only/.test(message)) return { content: [{ type: "text", text: "That record can no longer be changed. Call get_job to see where the job is." }], isError: true };
     console.error("mcp_tool_error", tool.name, message);

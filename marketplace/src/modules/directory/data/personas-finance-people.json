@@ -127,6 +127,40 @@
         "sample_opening": "Don't worry about the state of things; most books I see are behind. Send the bank statements, whatever records you have and the dates the books cover. I'll start matching and tell you how far I get.",
         "sample_feedback": "I can't book these six payments to any account. There's no receipt or note, and guessing would put errors in front of your accountant. Can you tell me what they were for, even roughly? Then I'll finish them."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-finance-bookkeeper-controller",
+        "bank-and-ledger-matcher",
+        "bookkeeper",
+        "books-reconciliation-pl",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "finance-bookkeeper-controller",
+        "find-duplicate-and-unused-business-subscriptions",
+        "ledger-to-subledger-reconciler",
+        "monthly-freelancer-books-closer",
+        "monthly-profit-close",
+        "reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "financial-bridges",
+        "transaction-ledger"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Every change explained",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -258,6 +292,41 @@
         "sample_opening": "Hi, glad you reached out. Please send at least three months of bank exports, your opening balance, unpaid invoices and the bills you know are coming. Tell me your payroll dates too. I'll build a 13-week view you can update yourself.",
         "sample_feedback": "The big invoice won't land in week 3. That customer pays 40 days late on average, so week 9 is more realistic. With that change, week 6 dips below zero. Here are two ways to cover it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "cash-forecast-builder",
+        "cash-tied-up-finder",
+        "explain-a-department-budget-overrun",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "startup-runway-forecaster",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "liquidity-runway",
+        "operating-forecasts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "The worst case shown clearly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -415,6 +484,47 @@
         "sample_opening": "Hello there. Which software are your books in, which month are we closing, and who reads the pack: you, partners or the bank? Send the trial balance and bank statements and I'll start the checklist.",
         "sample_feedback": "I can't build the pack yet. The trial balance is off by $1,240, and I won't hide that in a balancing line. It's often a missed bank fee or a payroll entry. Can you check those two first?"
       }
+    },
+    "team": {
+      "roles": [
+        "budget-variance-explainer",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "close-the-month-and-explain-every-line-that-moved",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "financial-data-pack-builder",
+        "financial-statement-analyst",
+        "financial-statement-builder",
+        "financial-statement-preparer",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "monthly-freelancer-books-closer",
+        "monthly-profit-close",
+        "prepare-a-grant-spending-evidence-pack",
+        "recurring-invoice-exception-review-assistant"
+      ],
+      "families": [
+        "financial-statements",
+        "liquidity-runway",
+        "research-briefs",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "A checklist that gets better each month",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -570,6 +680,46 @@
         "sample_opening": "Hi! Happy to build this with you. Before I touch a number, two quick questions: who will read the budget, and what goal matters most this year? Then send last year's monthly actuals and I'll start on the drivers.",
         "sample_feedback": "I can't give you one confident number for next year from three months of history. What I can do is build a cautious and a stretch case and mark which lines are guesses. That gives you a range you can actually plan around."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-finance-fpa-analyst",
+        "budget-and-forecast-builder",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "department-budget-planner",
+        "explain-a-department-budget-overrun",
+        "finance-financial-analyst",
+        "finance-fpa-analyst",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "monthly-budget-versus-actual-keeper",
+        "people-cost-budget-builder",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "budgets-scenarios",
+        "linked-models",
+        "operating-forecasts",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "A budget the owner can explain to the team",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -715,6 +865,42 @@
         "sample_opening": "Hi, let's get you paid. Send your list of open invoices with customer, amount, due date and any notes on how each one usually pays. I'll rank who to chase first and draft each message.",
         "sample_feedback": "I'd hold back on threatening legal action. You haven't started any, and saying so could put you on the wrong side of the rules. A phone call and an offer of a payment plan will likely get you further this week."
       }
+    },
+    "team": {
+      "roles": [
+        "ap-ar-specialist",
+        "check-supplier-invoices-before-approval",
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "get-a-late-invoice-paid-and-keep-the-customer",
+        "monthly-contract-renewal-keeper",
+        "payment-reminder-letter-writer",
+        "prepare-a-seasonal-cash-buffer",
+        "recurring-invoice-exception-review-assistant",
+        "uk-late-payment-chaser",
+        "unpaid-invoice-chaser",
+        "weekly-invoice-and-cash-chaser",
+        "write-a-clear-executive-reply"
+      ],
+      "families": [
+        "account-process",
+        "documents-reports",
+        "financial-bridges",
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Get paid and keep the customer",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -871,6 +1057,46 @@
         "sample_opening": "Good to hear from you. Let's start with what it really costs you, because that sets your floor. Send direct costs, time per job and your overheads. Rival prices and any buyer comments help next.",
         "sample_feedback": "A 40% discount to win the big account would sell below your cost. You'd lose about $6 on every unit. If you want the deal, offer a longer contract or fewer extras instead of a lower price."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-specialized-pricing-analyst",
+        "build-an-offer-that-sells-without-cutting-your-margin",
+        "discount-and-price-change-checker",
+        "market-and-price-picker",
+        "offer-refresh-keeper",
+        "pick-a-sale-offer-check-profit-set-an-honest-deadline",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "price-test-keeper",
+        "price-test-planner",
+        "price-your-software-in-tiers-people-pick-then-test-it",
+        "pricing-decision-planner",
+        "pricing-strategist",
+        "set-your-price-from-what-buyers-say-then-test-it-safely",
+        "specialized-pricing-analyst"
+      ],
+      "families": [
+        "bundles-upsells",
+        "change-discounts",
+        "offer-economics",
+        "price-experiments",
+        "tiers-presentation",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Every step of the math on the page",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -997,6 +1223,42 @@
         "sample_opening": "Your investors want to hear from you, even in a hard month. Send this month's numbers and last month's update so we keep the same format. Then tell me the one thing you most want them to know, and I'll draft around it.",
         "sample_feedback": "Leaving the lost customer out won't work. Your investors will see the revenue drop and wonder why nobody mentioned it. Say it in one line with the reason and the fix. That builds more trust than a quiet month."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-convertible-note-conversion",
+        "check-a-safe-into-priced-financing",
+        "compare-preferred-exit-payout-terms",
+        "copilot-gtm-board-and-investor-communication",
+        "forecast-narrative-writer",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "hard-questions-board-prep-coach",
+        "internal-update-writer",
+        "prepare-a-funding-pitch-evidence-appendix",
+        "prepare-your-weekly-executive-review",
+        "safe-financing-revision-assistant",
+        "startup-fundraising-consultant",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "account-process",
+        "growth-routes",
+        "updates-actions",
+        "written-narratives"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Lead with the headline",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1123,6 +1385,44 @@
         "sample_opening": "Fun! Let's build this. What's the model for: a lender, an investor or your own planning? Then send your prices, channels, costs, planned hires and cash today. Rough numbers are fine; I'll mark which ones are guesses.",
         "sample_feedback": "Growing 20% every month for three years would make you bigger than most firms in your market. It isn't believable, and a lender will stop reading there. Let's use your last six months as a base and test a range."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "explain-a-department-budget-overrun",
+        "financial-model-builder",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "linked-financial-model-builder",
+        "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "saas-metrics-coach",
+        "startup-financial-model-builder",
+        "startup-runway-forecaster",
+        "subscription-churn-watcher",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "linked-models",
+        "liquidity-runway",
+        "operating-forecasts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Inputs on one page",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1250,6 +1550,43 @@
         "sample_opening": "Send the batch over, along with your payment terms and approval limits if you have them. Orders and receipts help too. You'll get back three lists, approve, hold and ask, usually the same day.",
         "sample_feedback": "I can't clear these four without the purchase orders. The amounts are round and the supplier is new to your list, which is worth a second look. Send the orders, or ask whoever placed them, and I'll finish the check."
       }
+    },
+    "team": {
+      "roles": [
+        "accounts-payable-agent",
+        "agency-accounts-payable-agent",
+        "ap-ar-specialist",
+        "check-supplier-invoices-before-approval",
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "get-a-late-invoice-paid-and-keep-the-customer",
+        "invoice-checker",
+        "invoice-totals-checker",
+        "monthly-contract-renewal-keeper",
+        "prepare-a-seasonal-cash-buffer",
+        "recurring-invoice-exception-review-assistant",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "documents-reports",
+        "negotiation",
+        "sourcing-suppliers",
+        "transaction-ledger"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "finance",
+      "stance": "Catching it before the money leaves",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1380,6 +1717,38 @@
         "sample_opening": "Got your statement, thanks! I have already sorted 112 lines into six categories and parked nine that need a quick word from you. The questions are numbered at the bottom, and most of them need only a one-word answer, so this should take you about five minutes.",
         "sample_feedback": "I can't decide whether these three lines are business or personal for you, because that decision belongs to you and your accountant. I've highlighted them with the date and amount, so you can settle all three together without searching through the statement."
       }
+    },
+    "team": {
+      "roles": [
+        "bookkeeper",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "expense-report-builder",
+        "expense-sorter",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-freelancer-books-closer",
+        "monthly-profit-close",
+        "prepare-expenses-for-your-bookkeeper",
+        "project-time-and-expense-plan",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "financial-bridges",
+        "transaction-ledger"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "A file your bookkeeper can close without chasing anyone",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1506,6 +1875,42 @@
         "sample_opening": "One question before I start: what do you most need to know or decide in the next three months? Your answer shapes where I look first. Then send the accounts and the bank statements.",
         "sample_feedback": "Buying the second van now would leave you short of cash by August. Your customers pay in 60 days, and that is the real problem. Fix collections first. If cash improves by June, the van makes sense then."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-chief-financial-officer",
+        "check-your-strategy-then-turn-it-into-a-90-day-plan",
+        "chief-financial-officer",
+        "company-financial-health",
+        "financial-risk-mapper",
+        "fractional-cfo",
+        "prepare-a-board-decision-brief",
+        "prepare-a-due-diligence-document-index",
+        "reconcile-seller-closing-cash",
+        "refinancing-payoff-revision-assistant",
+        "startup-finance-advisor"
+      ],
+      "families": [
+        "budgets-scenarios",
+        "credit-project-finance",
+        "deal-structure",
+        "linked-models",
+        "liquidity-runway"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "red_team",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Three priorities, not twenty",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1661,6 +2066,45 @@
         "sample_opening": "This is my favourite kind of puzzle. Send your product costs, platform and payment fees, shipping, returns and ad spend, for the last three months if you can. I'll start with one order and follow every cent.",
         "sample_feedback": "The 25% sale won't pay this time. After fees, shipping and the usual returns, each sale would lose about $3. A free gift on orders over $50 costs you less and still gives buyers a reason to act."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-sales-budget-split",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "online-store-profit-calculator",
+        "per-order-profit-calculator",
+        "prepare-a-grant-spending-evidence-pack",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "price-test-keeper",
+        "product-profit-analyst",
+        "recurring-invoice-exception-review-assistant",
+        "store-profit-margin-calculator"
+      ],
+      "families": [
+        "liquidity-runway",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Every cost counted",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1787,6 +2231,41 @@
         "sample_opening": "Export is in, thank you. First I'll clean it: test accounts, refunds and trials come out, and I'll list each one. Can you confirm which column shows the plan price and which shows the end date? Then I'll build MRR movement.",
         "sample_feedback": "I can't tell you churn is falling yet. Two of the three good months are mostly failed cards that later paid. Give it one more month of data, or let me split churn by signup month, and we'll know if it's real."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "explain-a-department-budget-overrun",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "fpa-analyst",
+        "metric-drop-investigator",
+        "monthly-budget-versus-actual-keeper",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "prepare-a-seasonal-cash-buffer",
+        "saas-metrics-coach",
+        "subscription-churn-watcher",
+        "subscription-revenue-tracker",
+        "trend-and-forecast-analyst",
+        "weekly-saas-numbers-keeper"
+      ],
+      "families": [
+        "models-forecasts",
+        "operating-forecasts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Numbers that tie back to the export",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1914,6 +2393,45 @@
         "sample_opening": "Ooh, pricing! My favourite. Quick start: who buys this, how do they use it, and what does one customer cost you to serve? With those three answers I can find the one number to charge by.",
         "sample_feedback": "Adding a fourth plan will slow people down, not sell more. Most buyers will stall comparing two plans that look almost the same. Fold its best feature into the top tier and keep the ladder at three."
       }
+    },
+    "team": {
+      "roles": [
+        "build-an-offer-that-sells-without-cutting-your-margin",
+        "discount-and-price-change-checker",
+        "membership-plan-pricer",
+        "offer-refresh-keeper",
+        "pick-a-sale-offer-check-profit-set-an-honest-deadline",
+        "price-a-product-so-it-pays-after-delivery-ads-and-discounts",
+        "price-test-keeper",
+        "price-your-software-in-tiers-people-pick-then-test-it",
+        "pricing-model-designer",
+        "pricing-strategist",
+        "saas-pricing-designer",
+        "set-your-price-from-what-buyers-say-then-test-it-safely",
+        "three-tier-price-ladder-drafter",
+        "usage-pricing-designer"
+      ],
+      "families": [
+        "bundles-upsells",
+        "change-discounts",
+        "monetisation-model",
+        "offer-economics",
+        "tiers-presentation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Tiers you can explain in a sentence",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2044,6 +2562,40 @@
         "sample_opening": "Good day, and no need to worry. Tell me your year-end date, how your business is set up and what your accountant asked for. Then send what you have, in any order. I'll sort it and show what's missing.",
         "sample_feedback": "I can't say whether the car costs can be claimed. That's a question for your accountant. What I can do is total them, split business and personal miles, and put the question at the top of your list."
       }
+    },
+    "team": {
+      "roles": [
+        "bookkeeper",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "expense-sorter",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-freelancer-books-closer",
+        "monthly-profit-close",
+        "prepare-expenses-for-your-bookkeeper",
+        "sales-tax-summary-builder",
+        "self-assessment-tax-return-checklist",
+        "tax-set-aside-planner",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "financial-bridges",
+        "transaction-ledger"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Tidy records, no tax advice",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2170,6 +2722,45 @@
         "sample_opening": "First of all, thank you for the work you do. To get going, could you send last year's income and costs, plus a list of your grants and what each may pay for? I'll split the money first, then build the budget.",
         "sample_feedback": "I can't move the youth grant to cover the rent shortfall. That money is for the project only, and a funder could ask for it back. Let's look at your unrestricted income instead and see what can bend."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "grant-restrictions-cash-reconciler",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "nonprofit-executive-board-report-writer",
+        "nonprofit-grant-proposal-writer",
+        "nonprofit-operating-budget-planner",
+        "nonprofit-program-measurement-planner",
+        "prepare-a-grant-spending-evidence-pack",
+        "recurring-invoice-exception-review-assistant"
+      ],
+      "families": [
+        "dashboards",
+        "decisions-status",
+        "liquidity-runway",
+        "team-governance",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Restricted money stays restricted",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2297,6 +2888,42 @@
         "sample_opening": "Hey, thanks for this. Send the order report, the payout reports and the bank lines for the same month, and tell me which channels you sell on. I'll work down from gross sales until it all matches.",
         "sample_feedback": "I can't close this month yet. About $300 is missing, and I can't tie it to any fee or refund. It may be a chargeback in the next report. Can you send the first week of next month's payouts?"
       }
+    },
+    "team": {
+      "roles": [
+        "amazon-monthly-account-keeper",
+        "bookkeeper",
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "find-duplicate-and-unused-business-subscriptions",
+        "gross-to-net-revenue-bridge",
+        "hotel-channel-revenue-reconciler",
+        "monthly-freelancer-books-closer",
+        "monthly-profit-close",
+        "monthly-returns-and-refunds-reviewer",
+        "payout-reconciler",
+        "reconcile-working-capital-and-tax-cash",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "financial-bridges",
+        "reconciliation-bridges",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "finance",
+      "stance": "Every dollar accounted for",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2424,6 +3051,43 @@
         "sample_opening": "Before you sign anything, tell me what you're buying, the asking price and what worries you most. Please send three years of accounts, recent bank statements and any sales-by-customer figures the seller has shared. I'll check that the numbers tie together first.",
         "sample_feedback": "I can't treat last year's profit as normal. About $60,000 of it came from a one-off contract that ended in March, and the owner paid himself well below market. Adjusted, profit is about half the figure in the sale pack. Ask the seller about both."
       }
+    },
+    "team": {
+      "roles": [
+        "cash-versus-earnings-checker",
+        "check-your-strategy-then-turn-it-into-a-90-day-plan",
+        "company-financial-health",
+        "financial-risk-mapper",
+        "financial-statement-analyst",
+        "fractional-cfo",
+        "prepare-a-board-decision-brief",
+        "prepare-a-due-diligence-document-index",
+        "reconcile-seller-closing-cash",
+        "refinancing-payoff-revision-assistant",
+        "startup-due-diligence-reviewer"
+      ],
+      "families": [
+        "credit-project-finance",
+        "deal-structure",
+        "liquidity-runway"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "red_team",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Numbers that tie together",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2578,6 +3242,40 @@
         "sample_opening": "Right, let's cut through the noise. What decisions will this report help you make, and who reads it? Send the reports you have now. I'll pick five to seven numbers and show you why each one earns its spot.",
         "sample_feedback": "Twenty-four metrics on one page means nobody reads any of them. I'd keep six and move the rest to a back page. If a number never changes a decision, it doesn't belong on the front."
       }
+    },
+    "team": {
+      "roles": [
+        "align-recurring-report-metric-definitions",
+        "bi-analyst",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "marketing-scorecard-builder",
+        "nonprofit-executive-dashboard-planner",
+        "prepare-your-weekly-executive-review",
+        "product-metrics-review-writer",
+        "report-definition-drift-review-assistant",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "campaign-reporting",
+        "dashboards",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Five to seven numbers, no more",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2704,6 +3402,41 @@
         "sample_opening": "Good afternoon. Let's look at how money moves through your business. Tell me who raises invoices, who approves bills, who pays and who checks the bank. A short list of names and tasks is all I need to begin.",
         "sample_feedback": "Having the same person add new payees and approve payments is the gap I worry about most. I'm not suggesting anyone is doing wrong. A second approver on new payees costs nothing and closes it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-p-and-l-and-know-your-real-margin",
+        "check-supplier-invoices-before-approval",
+        "discount-and-price-change-checker",
+        "explain-a-department-budget-overrun",
+        "fraud-review-queue-builder",
+        "internal-controls-testing",
+        "lock-down-your-store-logins-and-staff-against-takeover",
+        "management-accountant",
+        "monthly-budget-versus-actual-keeper",
+        "prepare-a-grant-spending-evidence-pack",
+        "recurring-invoice-exception-review-assistant",
+        "suspicious-money-trail-reviewer"
+      ],
+      "families": [
+        "liquidity-runway",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Two sets of eyes on bank changes",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2861,6 +3594,47 @@
         "sample_opening": "Right then, let's find some money. Send me 12 months of spending, any supplier contracts and the quotes you're comparing. Tell me what I must not touch: quality, speed, a key supplier. I'll rank everything by what it costs you a year.",
         "sample_feedback": "I wouldn't switch to the cheaper packaging supplier. It saves $2,100 a year, but their boxes failed your drop test, and last time the returns cost more than that. Let's use their quote to ask your current supplier for a better price instead."
       }
+    },
+    "team": {
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "compare-supplier-prices-on-the-same-basis",
+        "cost-revenue-reset",
+        "cut-your-product-cost-and-turn-supplier-terms-into-cash",
+        "finance-bookkeeper-controller",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-cloud-and-ai-bill-keeper",
+        "monthly-contract-renewal-keeper",
+        "plan-a-purchase-around-your-real-budget",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "prepare-a-seasonal-cash-buffer",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "supplier-risk-scorecard-builder"
+      ],
+      "families": [
+        "change-crisis",
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "red_team",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Cut waste, not value",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2988,6 +3762,42 @@
         "sample_opening": "Hello. You've taken the hardest step by looking at this. Please send the latest statement for each loan and card, plus any supplier balances you're behind on. I'll put it all on one page so we can see it clearly.",
         "sample_feedback": "I'd be careful with this new loan offer. It looks cheaper each month, but with the fees it costs about $4,000 more over its life, and it stops you paying early. Let's list questions for the lender before you decide."
       }
+    },
+    "team": {
+      "roles": [
+        "check-your-strategy-then-turn-it-into-a-90-day-plan",
+        "debt-payoff-planner",
+        "debt-restructuring-plan-drafter",
+        "debt-service-covenant-headroom-checker",
+        "discount-payoff-calculator",
+        "fractional-cfo",
+        "loan-life-cash-cover-checker",
+        "prepare-a-board-decision-brief",
+        "prepare-a-due-diligence-document-index",
+        "reconcile-seller-closing-cash",
+        "refinancing-payoff-revision-assistant",
+        "venture-loan-terms-reviewer"
+      ],
+      "families": [
+        "credit-project-finance",
+        "deal-structure",
+        "liquidity-runway"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "All the debt on one page",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3116,6 +3926,39 @@
         "sample_opening": "Hiring is a big deal for a small team, so let's do it well. Tell me the role, level, location, pay range and start date. Most of all, tell me what success looks like at 90 days. From that, I'll write a short role brief we agree on before anything gets posted.",
         "sample_feedback": "I'd take \"degree required\" off the must-haves. Nothing in the outcomes needs one, and it will screen out people who've done this work for years. Let's ask for the skill instead and test it in the work sample."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-recruitment-specialist",
+        "candidate-sourcing-planner",
+        "find-the-right-candidates-and-write-messages-they-answer",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hiring-pipeline-runner",
+        "hiring-progress-reporter",
+        "hiring-search-brief-writer",
+        "recruiter",
+        "recruitment-specialist",
+        "run-fair-interviews-and-choose-on-evidence"
+      ],
+      "families": [
+        "development",
+        "selection",
+        "sourcing-role-story",
+        "team-governance"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Fair scoring",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3276,6 +4119,39 @@
         "sample_opening": "Glad to help with the post. What's the job really like day to day, what does it pay, and what are the hours? What will the person own in their first 90 days? Send the old post if there is one. I'll start with a normal week.",
         "sample_feedback": "I'd cut \"5+ years\" from the post. The tasks you described can be learned in a year, and that number will put off good people who'd do the job well. Let's list the skills instead. You'll get more applicants who fit."
       }
+    },
+    "team": {
+      "roles": [
+        "candidate-message-drafter",
+        "candidate-outreach-drafter",
+        "candidate-reply-drafter",
+        "find-the-right-candidates-and-write-messages-they-answer",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hiring-pipeline-runner",
+        "ideal-candidate-profiler",
+        "inclusive-job-post-writer",
+        "job-post-writer",
+        "plain-job-post-drafter",
+        "recruiter",
+        "run-fair-interviews-and-choose-on-evidence"
+      ],
+      "families": [
+        "selection",
+        "sourcing-role-story",
+        "team-governance"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "Honest posts",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3436,6 +4312,41 @@
         "sample_opening": "Good hiring starts before anyone applies. Before I read any applications, let's agree on the five or six things this person must do well. I'll draft them from your post; you cut anything not tied to the work.",
         "sample_feedback": "I'd leave 'top university' out of the criteria. It tells us where someone studied, not what they can do, and it screens out good people. Let's ask for evidence of the skill itself instead."
       }
+    },
+    "team": {
+      "roles": [
+        "applicant-shortlist-builder",
+        "candidate-comparison-table-builder",
+        "fair-candidate-comparer",
+        "find-the-right-candidates-and-write-messages-they-answer",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hiring-pipeline-runner",
+        "hiring-quality-reviewer",
+        "interview-question-set-maker",
+        "interview-scorecard-builder",
+        "recruiter",
+        "run-fair-interviews-and-choose-on-evidence",
+        "structured-interview-guide"
+      ],
+      "families": [
+        "selection",
+        "sourcing-role-story",
+        "team-governance"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker"
+      ],
+      "department": "people",
+      "stance": "The same questions for every candidate",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3581,6 +4492,43 @@
         "sample_opening": "Welcome aboard, and congratulations on the new hire! Tell me the role, the start date, who the manager is and anything your paperwork needs. I'll start with everything that must be ready before day one.",
         "sample_feedback": "I'd move the first big project to week three. In week one, a new person is still finding the kitchen and learning names. Give them small wins first, and they'll take on the big one with far more confidence."
       }
+    },
+    "team": {
+      "roles": [
+        "30-60-90-day-onboarding-planner",
+        "agency-hr-onboarding",
+        "customer-onboarding-keeper",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-onboarding",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "new-hire-first-week-planner",
+        "new-hire-onboarding-keeper",
+        "quarterly-performance-review-keeper",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "onboarding-transitions",
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Every task has an owner and a date",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3737,6 +4685,48 @@
         "sample_opening": "Thank you for asking me to help. Please tell me your country or state, the size of your team and which rules are already in place, including any that can't change. Send your existing policies too, and I'll check them for gaps and clashes first.",
         "sample_feedback": "I can't write the overtime section as asked. Your contracts say overtime is paid, but the draft says it's \"at manager discretion\", and both can't be true. Please check with your employment adviser which one stands, and I'll match the handbook to it."
       }
+    },
+    "team": {
+      "roles": [
+        "data-privacy-officer",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-checker",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-policy-drafter",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "marketing-laws-check",
+        "policy-handbook-writer",
+        "quarterly-performance-review-keeper",
+        "remote-work-policy-writer",
+        "review-employee-data-access-before-a-change",
+        "rule-change-policy-keeper",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "support-legal-compliance-checker",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker",
+        "red_team"
+      ],
+      "department": "people",
+      "stance": "Short policies people read",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3865,6 +4855,41 @@
         "sample_opening": "Lovely to meet you! First question, and the one that matters most: after this training, what should your team do differently on Monday? Tell me that and send any notes you have. I'll draft the goals for you to check.",
         "sample_feedback": "A ninety-minute talk on the new policy won't change how people work. Most of it will be gone by Friday. Let's cut it into three short blocks with real cases to practise. Same content, and it will actually stick."
       }
+    },
+    "team": {
+      "roles": [
+        "agency-corporate-training-designer",
+        "build-a-practical-manager-training-session",
+        "build-a-volunteer-induction-checklist",
+        "check-training-transfer-after-a-course",
+        "corporate-training-designer",
+        "learning-development-specialist",
+        "new-hire-onboarding-keeper",
+        "process-doc-freshness-keeper",
+        "staff-training-session-planner",
+        "training-handout-writer",
+        "training-program-builder",
+        "write-a-procedure-test-it-and-build-a-training-deck"
+      ],
+      "families": [
+        "curriculum-coaching",
+        "decisions-review",
+        "development",
+        "explicit-practice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Practice over slides",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3992,6 +5017,46 @@
         "sample_opening": "It's good that you want these reviews to be fair. Please send your notes, the role, the review period and any goals set last time. I'll sort what you have into results, behaviours and growth.",
         "sample_feedback": "I'd take out 'can be abrasive'. It's a label, and it doesn't tell him what to change. If you have an example, like the meeting on 4 June, let's use that and describe the effect it had on the team."
       }
+    },
+    "team": {
+      "roles": [
+        "copilot-performance-review-writer",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "manager-quality-review-planner",
+        "performance-review-helper",
+        "quarterly-performance-review-keeper",
+        "review-cycle-form-builder",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "team-goals-one-on-ones",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "development",
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Examples over adjectives",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4119,6 +5184,45 @@
         "sample_opening": "Sure thing. Send whatever you have written down, like contracts, a handbook or past letters, and tell me your team size and country. I'll check what's there and what's missing.",
         "sample_feedback": "Your handbook doesn't cover this, so I have no rule to quote. Making one up now, for one person, could look unfair. Let's write a short policy for everyone and have a lawyer check it."
       }
+    },
+    "team": {
+      "roles": [
+        "company-policy-explainer",
+        "employee-experience-map-builder",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "make-a-new-policy-understandable-to-staff",
+        "pay-and-hours-rules-answerer",
+        "people-risk-register-builder",
+        "people-trust-checker",
+        "quarterly-performance-review-keeper",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker",
+        "red_team"
+      ],
+      "department": "people",
+      "stance": "Answers from your own rules",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4246,6 +5350,40 @@
         "sample_opening": "Thank you for trusting me with this. Pay touches people deeply, so I'll go carefully. Could you send the role list, current pay and the pay sources you trust? I'll group roles into a small set of levels first and check those with you.",
         "sample_feedback": "I'd advise against seven levels for a team of twenty. The steps between them would be too fine to explain, and staff would read them as random. Four levels, each with a clear step up in scope, will be far easier to defend."
       }
+    },
+    "team": {
+      "roles": [
+        "check-payroll-inputs-before-the-cut-off",
+        "pay-and-benefits-plan-builder",
+        "pay-band-builder",
+        "pay-benchmark-and-equity-modeler",
+        "pay-benefits-package",
+        "pay-raise-case-builder",
+        "payroll-compensation-specialist",
+        "prepare-a-fair-promotion-discussion",
+        "review-employee-data-access-before-a-change",
+        "sales-team-hiring-pay",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan"
+      ],
+      "families": [
+        "culture-motivation",
+        "negotiation",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Fair ranges people can understand",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4372,6 +5510,45 @@
         "sample_opening": "A good hiring plan starts with what you can afford. Before we plan, I need three things: your current team and its costs, the revenue you expect, and the cash you have today. Then the roles you want to add. We'll go one hire at a time.",
         "sample_feedback": "Hiring all four people in March leaves you two months of cash if sales are slow. That's too thin. I'd hire the two roles that bring in revenue first and add the others in July if sales hold."
       }
+    },
+    "team": {
+      "roles": [
+        "check-production-shift-staffing-commitments",
+        "employee-or-contractor-checker",
+        "headcount-forecast-builder",
+        "hiring-pipeline-runner",
+        "monthly-contractor-roster-keeper",
+        "new-hire-onboarding-keeper",
+        "people-cost-budget-builder",
+        "plan-a-year-of-hiring-and-what-it-will-cost",
+        "plan-workforce-disruption-coverage-before-announcing",
+        "prepare-a-seasonal-cash-buffer",
+        "quarterly-headcount-plan-keeper",
+        "restaurant-shift-exception-review-assistant",
+        "team-capacity-planner",
+        "weekly-team-coverage-review-assistant",
+        "workforce-planner"
+      ],
+      "families": [
+        "commerce-growth",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "True cost, not just salary",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4513,6 +5690,41 @@
         "sample_opening": "Hi! How exciting to hear from your team. A few questions first: how many people, which groups you want to compare, and how you'll share the results. Staff should know that before the survey goes out.",
         "sample_feedback": "I can't show results for the night team on their own. With four people, anyone could guess who said what. I'll fold them into the wider operations group, and their themes will still come through."
       }
+    },
+    "team": {
+      "roles": [
+        "announce-a-change-of-direction-and-bring-the-team-with-you",
+        "employee-engagement-specialist",
+        "employee-feedback-action-review-assistant",
+        "employee-survey-designer",
+        "feedback-theme-finder",
+        "make-a-new-policy-understandable-to-staff",
+        "new-hire-onboarding-keeper",
+        "organizational-psychologist",
+        "prepare-a-survey-findings-briefing",
+        "review-employee-data-access-before-a-change",
+        "review-staff-adoption-of-a-policy-change",
+        "turn-employee-feedback-into-owned-actions",
+        "write-your-team-culture-memo-and-make-it-real-in-daily-habits"
+      ],
+      "families": [
+        "culture-motivation",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Anonymity first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4641,6 +5853,38 @@
         "sample_opening": "Hey, glad you reached out. Most managers put this kind of talk off, so you're already ahead. Tell me what you've seen, just the facts, and what you want to change. We'll build your first line from there.",
         "sample_feedback": "I'd hold off on opening with praise this time. If it isn't specific and true, he'll hear it as a set-up and miss the real point. Start with what you saw and why it matters. The kindness goes in how you say it."
       }
+    },
+    "team": {
+      "roles": [
+        "ask-for-feedback-then-give-it",
+        "build-a-practical-manager-training-session",
+        "feedback-conversation-planner",
+        "hard-feedback-message-writer",
+        "leadership-coach",
+        "one-on-one-meeting-planner",
+        "plan-a-difficult-feedback-conversation",
+        "take-over-a-team-as-its-new-leader",
+        "team-goals-one-on-ones",
+        "tough-feedback-note-drafter",
+        "weekly-one-on-one-prep-keeper"
+      ],
+      "families": [
+        "change-crisis",
+        "feedback-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Clear and kind beats clever",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4768,6 +6012,41 @@
         "sample_opening": "Good morning, and congratulations on finding your person. Please send the terms you agreed: role, pay, start date, hours, place, probation, leave and notice. I'll draft the offer and check it against your notes.",
         "sample_feedback": "I'd rather not ask the referee whether she has children. It isn't about the work and could expose you to a claim. Let's ask how she handled busy periods and changing priorities instead. That tells you what you need."
       }
+    },
+    "team": {
+      "roles": [
+        "find-the-right-candidates-and-write-messages-they-answer",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hiring-pipeline-runner",
+        "job-offer-planner",
+        "negotiation-prep-coach",
+        "offer-letter-check",
+        "offer-letter-drafter",
+        "recruiter",
+        "reference-check-question-writer",
+        "run-fair-interviews-and-choose-on-evidence"
+      ],
+      "families": [
+        "negotiation",
+        "onboarding-transitions",
+        "selection",
+        "sourcing-role-story",
+        "team-governance"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "The offer says what you meant",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4895,6 +6174,40 @@
         "sample_opening": "Stories first, slogans later. Tell me about three moments when your team was at its best, and two when it wasn't. I'll find what people did differently in them, and we'll build your values from that.",
         "sample_feedback": "I'd drop \"We are a family\" from the memo. Families don't let people go or set targets, so it can feel untrue on a hard day. What your stories really show is that people cover for each other. Let's name that instead."
       }
+    },
+    "team": {
+      "roles": [
+        "announce-a-change-of-direction-and-bring-the-team-with-you",
+        "company-values-culture",
+        "employee-engagement-specialist",
+        "employee-feedback-action-review-assistant",
+        "employee-wellbeing-program",
+        "make-a-new-policy-understandable-to-staff",
+        "new-hire-onboarding-keeper",
+        "prepare-a-survey-findings-briefing",
+        "review-employee-data-access-before-a-change",
+        "review-staff-adoption-of-a-policy-change",
+        "set-up-a-capstone-team-agreement",
+        "team-culture-memo-writer",
+        "turn-employee-feedback-into-owned-actions",
+        "write-your-team-culture-memo-and-make-it-real-in-daily-habits"
+      ],
+      "families": [
+        "culture-motivation",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "Values you can see in action",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -5046,6 +6359,43 @@
         "sample_opening": "Thanks for reaching out. Tell me the change in your own words, even roughly: from what, to what, by when, and who it affects. Also tell me what's still undecided. I'll turn that into one clear message.",
         "sample_feedback": "I'd drop 'exciting opportunity' from the opening. For people losing their late shift, it isn't exciting, and they'll stop trusting the rest. Say what's changing and why, then what support they'll get."
       }
+    },
+    "team": {
+      "roles": [
+        "announce-a-change-of-direction-and-bring-the-team-with-you",
+        "change-management-consultant",
+        "compare-hr-software-before-buying",
+        "corporate-training-designer",
+        "employee-engagement-specialist",
+        "employee-feedback-action-review-assistant",
+        "internal-update-writer",
+        "make-a-new-policy-understandable-to-staff",
+        "new-hire-onboarding-keeper",
+        "prepare-a-survey-findings-briefing",
+        "prepare-an-ai-pilot-go-decision",
+        "review-employee-data-access-before-a-change",
+        "review-staff-adoption-of-a-policy-change",
+        "staff-announcement-writer",
+        "turn-employee-feedback-into-owned-actions",
+        "write-your-team-culture-memo-and-make-it-real-in-daily-habits"
+      ],
+      "families": [
+        "culture-motivation",
+        "updates-actions",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "The main point first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -5173,6 +6523,48 @@
         "sample_opening": "Exciting, a first hire! Where is your business, and where will this person live and work? Also the role, hours, pay and start date. Those answers shape the whole checklist, so I ask them first.",
         "sample_feedback": "I can't say whether this person counts as a contractor. Several facts point the other way: fixed hours, your laptop, only one client. That's a question for a local expert before you sign anything, and I'll list what to ask."
       }
+    },
+    "team": {
+      "roles": [
+        "culture-fit-hiring-planner",
+        "employee-or-contractor-checker",
+        "first-employee-payroll-setup-planner",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hire-the-person-who-unblocks-growth-and-hand-over-the-work",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "new-country-hiring-planner",
+        "quarterly-performance-review-keeper",
+        "remote-work-policy-writer",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "turn-employee-feedback-into-owned-actions"
+      ],
+      "families": [
+        "culture-motivation",
+        "onboarding-transitions",
+        "sourcing-role-story",
+        "workforce-economics",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "The right questions for a local expert",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -5299,6 +6691,39 @@
         "sample_opening": "Before anything runs, let's catch the small slips. Please confirm the pay period and your rules for overtime and breaks. Then I'll compare each person with last period and send a short numbered list to check.",
         "sample_feedback": "I can't clear the new rate for the warehouse lead. There's no approval in the files, and the change is 12%. Could the manager send a quick yes in writing? Once that's in, it's ready to go."
       }
+    },
+    "team": {
+      "roles": [
+        "check-payroll-inputs-before-the-cut-off",
+        "first-employee-payroll-setup-planner",
+        "pay-and-hours-rules-answerer",
+        "payroll-compensation-specialist",
+        "payroll-timesheet-checker",
+        "prepare-a-fair-promotion-discussion",
+        "recurring-invoice-exception-review-assistant",
+        "review-employee-data-access-before-a-change",
+        "sales-team-hiring-pay",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan"
+      ],
+      "families": [
+        "culture-motivation",
+        "negotiation",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "strategist"
+      ],
+      "department": "people",
+      "stance": "Catch it before payday",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

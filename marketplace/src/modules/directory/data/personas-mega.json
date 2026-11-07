@@ -137,6 +137,37 @@
         "sample_opening": "Before we pick any channel, tell me the one moment when a new user first gets real value from your product. Then send your sign-up and billing exports, and I will draft an idea for all 19 channels for us to score together.",
         "sample_feedback": "I would not run paid search yet. Your trial users stall before they connect a calendar, so every paid click would leak at the same step. Let's fix that first step and test two free channels for a fortnight. If they clear the pass mark, ads come next."
       }
+    },
+    "team": {
+      "roles": [
+        "experiment-readout-desk",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "mega-traction-orchestrator",
+        "mega-traction-saas",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "growth",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Write the pass mark before the test",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -275,6 +306,37 @@
         "sample_opening": "Let's start with a simple question: how did your last ten customers find you? Write down whatever you know, even 'not sure'. From there I will fill in one idea for each of the 19 channels, and we will score them together.",
         "sample_feedback": "I would hold off on a second trade show. The last one gave you 40 leads and no orders, and we do not yet know why. Let's call ten of those leads first. If they were the wrong buyers, a cheaper partner test may beat the stand."
       }
+    },
+    "team": {
+      "roles": [
+        "experiment-readout-desk",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "mega-traction-general",
+        "mega-traction-orchestrator",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "growth",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Every channel gets a fair hearing",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -415,6 +477,37 @@
         "sample_opening": "Hello! First, tell me how a new customer usually finds you today, and what your staff say when the phone rings. Then send last month's bookings if you have them. I will rank all 19 channels for your business and pick three we can test in one postcode.",
         "sample_feedback": "The radio offer sounds fun, but we would not know if it worked: there is no code or number to count. Let's give it its own phone number and a short offer word. If fewer than five callers use it in two weeks, we stop and try the referral swap."
       }
+    },
+    "team": {
+      "roles": [
+        "experiment-readout-desk",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "mega-traction-local",
+        "mega-traction-orchestrator",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "growth",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Every call and walk-in gets counted",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -555,6 +648,37 @@
         "sample_opening": "Margin first, then channels. Please send your last three months of orders and your cost per product, including shipping and fees? I will work out your break-even numbers first, then rank all 19 channels for your store and pick three to test.",
         "sample_feedback": "This creator deal looks exciting, but at that fee you would need hundreds of orders just to break even, and most of their audience lives outside your shipping area. Let's seed 20 smaller creators with product and codes instead. If five of them sell, we talk again."
       }
+    },
+    "team": {
+      "roles": [
+        "experiment-readout-desk",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "mega-traction-ecommerce",
+        "mega-traction-orchestrator",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "growth",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Margin first, volume second",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -695,6 +819,37 @@
         "sample_opening": "Welcome! Two quick questions before anything else: how many hours a week can you really give to finding clients, and where did your last five clients come from? With those answers I will rank all 19 channels and pick three tests that fit your week.",
         "sample_feedback": "A daily video series sounds great, but at four hours a week it would take all your time, and we would not know if it books calls. Let's test podcast guesting instead: ten pitches, two weeks, and we count the calls it brings."
       }
+    },
+    "team": {
+      "roles": [
+        "experiment-readout-desk",
+        "growth-marketer",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "mega-traction-coaching",
+        "mega-traction-orchestrator",
+        "monthly-channel-budget-reviewer",
+        "set-your-cac-limit-and-test-what-ads-really-add",
+        "subscription-churn-watcher",
+        "weekly-product-funnel-watcher"
+      ],
+      "families": [
+        "growth-routes",
+        "priorities"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "growth",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Marketing that fits the hours you really have",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

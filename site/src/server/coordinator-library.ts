@@ -3,10 +3,12 @@ import {PublicApiError} from './public-catalogue.ts';
 import {safePackagePath,sha256,inspectSkillArchive} from '../lib/workflow-execution.ts';
 import {validateTeamPlan,prepareTeamPlan,reconcileTeamRun,teamPlanDigest} from '../teams/team-contract.mjs';
 import type {CoordinatorStore,StoredRecord} from './coordinator-store.ts';
+import {validateJobDocument} from '../jobs/contracts.mjs';
+import {RECOMMENDED_DIALS,updatePreferences} from '../jobs/dials.mjs';
 type Dict=Record<string,unknown>;
 type Service={callTool(name:string,args:Dict):Promise<unknown>};
 type Scope={scope:string;write:boolean;userId:string};
-export type CoordinatorLibraryOptions={authorize:(write:boolean)=>Promise<Scope>;publicService?:Service;asset?:(path:string)=>Promise<Response>;origin:string;now?:()=>Date};
+export type CoordinatorLibraryOptions={authorize:(write:boolean)=>Promise<Scope>;authorizePreferences?:(write:boolean)=>Promise<Scope>;publicService?:Service;asset?:(path:string)=>Promise<Response>;origin:string;now?:()=>Date};
 const obj=(v:unknown):v is Dict=>!!v&&typeof v==='object'&&!Array.isArray(v);
 const fail=(status:number,code:string,message:string):never=>{throw new PublicApiError(status,code,message);};
 const string=(v:unknown,label:string,max=1000)=>typeof v==='string'&&v.trim()&&v.length<=max&&!v.includes('\0')?v:fail(400,'invalid_arguments',`Check ${label}.`);
@@ -35,12 +37,47 @@ export const coordinatorWriteTools=[
  tool('revoke_workflow_share','Revoke a specific share owned by the authenticated scope, after the user requests it.',{type:'object',properties:{share_id:{type:'string'},confirmed:{type:'boolean',const:true}},required:['share_id','confirmed'],additionalProperties:false},true)
  ,{...tool('delete_private_record','Permanently purge this exact private record and all its versions only after the user explicitly requests deletion. Requires its current expected_version and write scope. Workflow shares are revoked; decisions referenced by outcomes must be cleared first.',{type:'object',properties:{id:{type:'string'},expected_version:{type:'integer',minimum:1,maximum:100},confirmed:{type:'boolean',const:true}},required:['id','expected_version','confirmed'],additionalProperties:false},true),annotations:{readOnlyHint:false,destructiveHint:true,idempotentHint:true,openWorldHint:false}}
 ];
+const preferenceProps={preferences:{type:'object'},answers:{type:'object'},job:{type:'string',maxLength:120},request:{type:'string',maxLength:4000},reset:{type:'boolean'},expected_version:{type:'integer',minimum:0,maximum:99},idempotency_key:{type:'string',minLength:8,maxLength:100}};
+coordinatorReadTools.push(tool('get_job_preferences','Read this person’s saved job choices in the selected workspace. Defaults are private and never grant permission to act.',{type:'object',properties:{},additionalProperties:false}));
+coordinatorWriteTools.push(tool('set_job_preferences','Save explicit default choices or owner answers in this person’s selected workspace. Requires write consent, the current version and a unique retry key. Ordinary one-off requests do not save defaults.',{type:'object',properties:preferenceProps,required:['expected_version','idempotency_key'],additionalProperties:false},true));
 export class CoordinatorLibraryService {
  private store:CoordinatorStore;
  private options:CoordinatorLibraryOptions;
  constructor(store:CoordinatorStore,options:CoordinatorLibraryOptions){this.store=store;this.options=options;}
+ private async preferenceIdentity(write=false){
+  const who=await (this.options.authorizePreferences??this.options.authorize)(write);if(write&&!who.write)fail(403,'write_scope_required','Reconnect with explicit write consent before saving defaults.');
+  const accountScope='account:'+who.userId+'/'+who.scope.replace(/[^A-Za-z0-9_-]/g,'_');
+  const storageScope='job-preferences:'+who.scope+':user:'+who.userId,generation=await this.store.deletedCount?.(storageScope)??0,id='job-preferences-'+(await digest({scope:who.scope,user:who.userId,generation})).slice(0,32);
+  return {...who,scope:storageScope,owner_scope:accountScope,id};
+ }
+ private async getPreferences(){
+  const who=await this.preferenceIdentity(),row=await this.store.get(who.scope,who.id),preferences=row?JSON.parse(row.contents).content:{schema:'ai-blocks-job-preferences/1',owner_scope:who.owner_scope,version:0,general:{},by_job_type:{},history:[]};
+  return {schema:'ai-blocks-job-preferences-result/1',preferences,recommended:structuredClone(RECOMMENDED_DIALS),store:'account',record:{id:who.id,version:row?.version??0},version:row?.version??0,privacy:'private-authenticated-no-store',stored_by_service:!!row,model_calls:0};
+ }
+ private async setPreferences(input:unknown){
+  const a=args(input,Object.keys(preferenceProps)),who=await this.preferenceIdentity(true),expected=integer(a.expected_version,0,99),requestKey=string(a.idempotency_key,'idempotency key',100);
+  if(!/^[A-Za-z0-9_-]{8,100}$/.test(requestKey))fail(400,'invalid_arguments','Use an 8–100 character idempotency key.');
+  if([a.preferences!==undefined,a.answers!==undefined,a.reset===true].filter(Boolean).length!==1)fail(400,'invalid_arguments','Send one of preferences, answers or reset.');
+  if(a.answers!==undefined&&!obj(a.answers))fail(400,'invalid_arguments','Send the saved answers as an object.');
+  if(a.job!==undefined&&!/^[a-z0-9][a-z0-9-]{0,119}$/.test(string(a.job,'job type',120)))fail(400,'invalid_arguments','Use a job slug.');
+  if(a.request!==undefined)string(a.request,'owner request',4000);
+  safeDocument(a,64000);const requestDigest=await digest({input:a,owner_scope:who.owner_scope}),prior=await this.store.request(who.scope,requestKey);
+  if(prior){if('deleted' in prior)return fail(410,'record_deleted','These saved defaults were deleted. A retry cannot restore them.');if(prior.request_digest!==requestDigest)fail(409,'idempotency_conflict','That retry key was used for different choices.');return {...await this.getPreferences(),saved:true,idempotent_replay:true,saved_version:prior.version};}
+  const old=await this.store.get(who.scope,who.id);if((old?.version??0)!==expected)fail(409,'revision_conflict','Your defaults changed. Read the current choices before saving.');
+  const stamp=(this.options.now?.()??new Date()).toISOString(),previous=old?JSON.parse(old.contents).content:{schema:'ai-blocks-job-preferences/1',owner_scope:who.owner_scope,version:0,general:{},by_job_type:{},history:[]};
+  let preferences:Dict;
+  if(a.preferences!==undefined){if(!obj(a.preferences))fail(400,'invalid_preferences','Send the complete preference document.');preferences=structuredClone(a.preferences as Dict);if(preferences.owner_scope!=='local'&&preferences.owner_scope!==who.owner_scope)fail(403,'preference_scope_mismatch','Saved choices belong to another person or workspace.');preferences.owner_scope=who.owner_scope;if(preferences.version!==expected+1)fail(409,'revision_conflict','The preference document version must follow the current saved version.');}
+  else if(a.reset===true)preferences={schema:'ai-blocks-job-preferences/1',owner_scope:who.owner_scope,version:expected+1,general:{},by_job_type:{},history:[...previous.history,{at:stamp,change:'Reset saved defaults.',by:'explicit_edit'}].slice(-50)};
+  else {const updated=updatePreferences(previous,{job:a.job as string|undefined,answers:a.answers as Record<string,unknown>,request:typeof a.request==='string'?a.request:'',explicit:true,at:stamp});if(!updated.ok)fail(400,'invalid_preferences',updated.errors.map((e:{path:string;message:string})=>e.path+': '+e.message).join('\n'));preferences=updated.preferences;}
+  const checked=validateJobDocument('ai-blocks-job-preferences/1',preferences,{owner_scope:who.owner_scope});if(!checked.ok)fail(400,'invalid_preferences',checked.errors.map((e:{path:string;message:string})=>e.path+': '+e.message).join('\n'));
+  const content={kind:'job-preferences',scope:who.owner_scope,source:'Owner default choice or validated job feedback',date:stamp,content:preferences},contents=safeDocument(content,64000),row:StoredRecord={scope:who.scope,record_id:who.id,version:expected+1,business_id:'job-preferences',kind:'memory',title:'Job preferences',digest:await sha256(bytes(contents)),contents,request_key:requestKey,request_digest:requestDigest,created:stamp};
+  try{if(!await this.store.put(row)){const replay=await this.store.request(who.scope,requestKey);if(replay&&'deleted' in replay)return fail(410,'record_deleted','These defaults were deleted during this save.');if(replay?.request_digest===requestDigest)return {...await this.getPreferences(),saved:true,idempotent_replay:true,saved_version:replay.version};return fail(409,'revision_conflict','Another save won the race. Read the latest defaults.');}}catch(error){if(/coordinator_storage_limit/.test(String(error)))fail(413,'storage_limit','Saved preference history reached the account storage limit.');throw error;}
+  return {...await this.getPreferences(),saved:true,idempotent_replay:false,saved_version:row.version};
+ }
  private async owned(id:unknown,version:unknown,kind?:StoredRecord['kind']){const who=await this.options.authorize(false),r=await this.store.get(who.scope,ident(id),version===undefined?undefined:integer(version,1));if(!r||kind&&r.kind!==kind)fail(404,'record_unavailable','That record is not available in this selected scope.');return r!;}
  async callTool(name:string,input:unknown={}):Promise<unknown>{
+  if(name==='get_job_preferences'){args(input,[]);return this.getPreferences();}
+  if(name==='set_job_preferences')return this.setPreferences(input);
   if(name==='list_workflows'||name==='list_memory'||name==='list_outcomes'||name==='list_team_runs'){
    const a=args(input,['business_id','query','limit']),who=await this.options.authorize(false),business=ident(a.business_id,'business id'),q=a.query===undefined?'':string(a.query,'query',200).toLowerCase(),limit=a.limit===undefined?20:integer(a.limit,1,25);
    const rows=await this.store.list(who.scope,business,name==='list_workflows'?'workflow':name==='list_outcomes'?'outcome':name==='list_team_runs'?'run':'memory'),superseded=new Set(name==='list_memory'?await this.store.suppressed(who.scope):[]);const found=rows.filter(r=>!superseded.has(r.record_id)&&(!q||`${r.title} ${r.contents}`.toLowerCase().includes(q)));return {schema:'ai-blocks-private-record-list/1',business_id:business,items:found.slice(0,limit).map(r=>({...metadata(r),...(r.kind==='run'?reportedState(r):{})})),total:found.length,privacy:'private-authenticated-no-store',execution_status:name==='list_team_runs'?'HOST_REPORTED_ONLY':'NOT_STARTED'};
@@ -95,7 +132,9 @@ export class CoordinatorLibraryService {
   }
   if(name==='revoke_workflow_share'){const a=args(input,['share_id','confirmed']);if(a.confirmed!==true)fail(403,'confirmation_required','Confirm revoking this share.');const who=await this.options.authorize(true);if(!who.write)fail(403,'write_scope_required','A write grant is required.');return {share_id:ident(a.share_id),revoked:await this.store.revoke(who.scope,ident(a.share_id))};}
   if(name==='delete_private_record'){
-   const a=args(input,['id','expected_version','confirmed']);if(a.confirmed!==true)fail(403,'confirmation_required','Ask for explicit deletion of this record and its history.');const who=await this.options.authorize(true);if(!who.write)fail(403,'write_scope_required','A write grant is required.');const record=await this.owned(a.id,undefined),version=integer(a.expected_version,1);if(record.version!==version)fail(409,'revision_conflict','The record changed. Review its current version before deleting.');
+   const a=args(input,['id','expected_version','confirmed']);if(a.confirmed!==true)fail(403,'confirmation_required','Ask for explicit deletion of this record and its history.');
+   const preferenceWho=await this.preferenceIdentity(),preferenceRecord=a.id===preferenceWho.id?await this.store.get(preferenceWho.scope,ident(a.id)):null;
+   const who=preferenceRecord?await this.preferenceIdentity(true):await this.options.authorize(true);if(!who.write)fail(403,'write_scope_required','A write grant is required.');const record=preferenceRecord??await this.owned(a.id,undefined),version=integer(a.expected_version,1);if(record.version!==version)fail(409,'revision_conflict','The record changed. Review its current version before deleting.');
    if(record.kind==='memory'){const dependents=(await this.store.list(who.scope,record.business_id,'outcome')).filter(r=>JSON.parse(r.contents).decision_id===record.record_id);if(dependents.length)fail(409,'record_in_use','This decision has saved outcome records. Explicitly remove those first.');}
    try{if(!await this.store.erase(who.scope,record.record_id,version))fail(409,'revision_conflict','The record changed during deletion. No current record was purged.');}catch(error){if(/coordinator_record_in_use/.test(String(error)))fail(409,'record_in_use','Saved outcome or run history references this record. Explicitly remove those dependent records first.');throw error;}return {id:record.record_id,purged:true,versions_purged:version,linked_shares_revoked:true,notice:'Private contents and version history were removed. Non-content revocation/supersession markers prevent old links or guidance from being reactivated.'};
   }

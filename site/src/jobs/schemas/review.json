@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-review/1.json",
+  "title": "ai-blocks-review/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-review/1"
+    },
+    "judge_seat": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+    },
+    "judge_model": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "judge_saw_council": {
+      "type": "boolean",
+      "const": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "scores": {
+            "type": "object",
+            "properties": {
+              "job": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "usable": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "range": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "truth": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "reasoned": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "insight": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "fit": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "clear": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 10
+              }
+            },
+            "minProperties": 1,
+            "additionalProperties": false,
+            "required": [
+              "job",
+              "usable",
+              "range",
+              "truth",
+              "reasoned",
+              "insight",
+              "fit",
+              "clear"
+            ]
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "REVISE",
+              "CUT"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 4000
+          },
+          "critical_passed": {
+            "type": "boolean"
+          },
+          "critical_checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                },
+                "passed": {
+                  "type": "boolean"
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4000
+                }
+              },
+              "required": [
+                "id",
+                "passed",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 100
+          }
+        },
+        "required": [
+          "slot_id",
+          "scores",
+          "quote",
+          "verdict",
+          "notes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 1000
+    },
+    "set_checks": {
+      "type": "object",
+      "properties": {
+        "count_met": {
+          "type": "boolean"
+        },
+        "variety_contract": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "decision_record": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_APPLICABLE"
+          ]
+        }
+      },
+      "required": [
+        "count_met",
+        "variety_contract",
+        "decision_record"
+      ],
+      "additionalProperties": false
+    },
+    "loop": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "overall": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "critical_passed": {
+      "type": "boolean"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "critical_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          }
+        },
+        "required": [
+          "id",
+          "passed",
+          "quote"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "schema",
+    "judge_seat",
+    "judge_model",
+    "judge_saw_council",
+    "items",
+    "set_checks",
+    "loop"
+  ],
+  "additionalProperties": false
+}

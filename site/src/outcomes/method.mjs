@@ -72,6 +72,7 @@ export const COMPOSITION_RULES = [
 
 export const RUN_RULES = [
   'Show PLAN.md and its warnings; nothing runs until the owner approves the plan.',
+  'Production and decision stages use start_job with parent_outcome_id. The coordinator selects a lead for that request, experts collaborate, and the delivery includes council decisions and independent review. Return the decision record through record_outcome_decision; existing owner gates still apply.',
   'For each ready stage, use its prompt: load the specialist, read the inputs, retrieve the items, write the outputs, run the checks, then report complete.',
   'Owner-reported numbers stay reports until evidence checks them. Every claim points to its evidence. Unknowns stay unknown.',
   'Decisions: show ranked options and ask the owner to choose; when they pass over the top option, ask why and record it.',

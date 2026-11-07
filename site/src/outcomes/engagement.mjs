@@ -216,6 +216,8 @@ export function stageInstruction(e, def) {
   const steps = def.from_steps.map(id => e.research.steps.find(s => s.id === id));
   const who = def.owner.role ? `the ${def.owner.role} specialist` : `the expert this stage needs (${def.owner.gap})`;
   const load = def.owner.role ? `Load the specialist with prepare_specialist {"role_id":"${def.owner.role}"}${def.support.length ? ` and, for their parts, ${def.support.map(r => `"${r}"`).join(', ')}` : ''}.` : `No catalogue specialist fits. Work as ${def.owner.gap}, using the items below, and note anything a specialist would have needed.`;
+  const teamStage = ['production','decision'].includes(def.kind);
+  const jobHandoff = teamStage ? { tool:'start_job', args:{request:def.goal,mode:'team',parent_outcome_id:e.id,context_refs:[{id:'outcome-brief',kind:'files',ref:'BRIEF.md'},...inputs.map((ref,index)=>({id:'stage-input-'+index,kind:'files',ref}))]}, decision_record_tool:'record_outcome_decision' } : null;
   const prompt = [
     `You are ${who} on outcome engagement ${e.id} (plan v${e.plan_version}, round ${e.round}).`,
     `Goal: ${def.goal}`,
@@ -225,13 +227,14 @@ export function stageInstruction(e, def) {
     data.length ? `Data: ${data.map(d => `${d.name} (${d.status})`).join('; ')}.` : '', ...(s.limits ?? []).map(l => `Limit: ${l}`),
     caps.length ? `Access: ${caps.map(c => `${c.name} (${c.access} via ${c.via}${c.access === 'live' ? '; only with the owner\'s approval of each action' : ''}${c.via === 'api_key' ? '; ask the owner for the key now, keep it in the environment or secret store, never in files' : ''})`).join('; ')}.` : '',
     def.kind === 'diagnosis' ? 'Test every hypothesis in hypotheses.md and add any the data suggests.' : '',
+    teamStage ? 'Run this stage through start_job with '+JSON.stringify(jobHandoff.args)+'. Follow the full team protocol: the general coordinator selects a task lead and flexible experts, validates real variety, runs the council and independent review, and returns the delivery decision record. Map considered routes, the choice, rationale, dissent and alternatives into record_outcome_decision. The council offers decision support; the owner still chooses at this stage’s existing approval gate. Team mode grants no new live-action authority.' : '',
     s.changes ? `The owner asked for changes: ${s.changes}` : '',
     `Write: ${def.outputs.map(o => `${o.path} (${o.name})`).join('; ')}.`,
     `Check before reporting: ${def.checks.map(c => `${c.id}: ${c.name}${c.required ? '' : ' (optional)'}`).join('; ')}.`,
     def.reviewers.length ? `Then have ${def.reviewers.map(r => `"${r}"`).join(', ')} review the output (prepare_specialist) and fix what they find.` : '',
     `Owner-reported numbers stay reports until checked. Don't invent data, results or approvals. When done, call advance_outcome with {"type":"complete","stage_id":"${def.id}","outputs":[...],"checks":[...]}.`,
   ].filter(Boolean).join('\n');
-  return { stage_id: def.id, kind: def.kind, name: def.name, state: s.state, owner: def.owner, support: def.support, reviewers: def.reviewers, uses: def.uses, inputs, data, capabilities: caps, outputs: def.outputs, checks: def.checks, gate: gateFor(def, e), ...(def.optional_when ? { optional_when: def.optional_when } : {}), ...(s.limits ? { limits: s.limits } : {}), prompt };
+  return { stage_id: def.id, kind: def.kind, name: def.name, state: s.state, owner: def.owner, support: def.support, reviewers: def.reviewers, uses: def.uses, inputs, data, capabilities: caps, outputs: def.outputs, checks: def.checks, gate: gateFor(def, e), ...(jobHandoff ? {job_handoff:jobHandoff} : {}), ...(def.optional_when ? { optional_when: def.optional_when } : {}), ...(s.limits ? { limits: s.limits } : {}), prompt };
 }
 
 export function briefMarkdown(e) {

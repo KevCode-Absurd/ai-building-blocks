@@ -1,3 +1,4 @@
+import { JOB_REST_OPERATIONS, jobMcpTools } from '../jobs/job-mcp.mjs';
 import { SCOPE_REST_OPERATIONS } from '../intake/request-scope-mcp.mjs';
 import { OUTCOME_MAX_BODY_BYTES, OUTCOME_REST_OPERATIONS, outcomeMcpTools } from '../outcomes/outcome-mcp.mjs';
 import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js';
@@ -49,7 +50,7 @@ export async function publicApiSecurity(request: Request, env: PublicApiEnv, opt
 
 /** MCP tools that only read the catalogue. Every other tool call (outcome, scope, preparation and team tools, which
  *  carry whole briefs and plans) counts against the write bucket, as does any request over the general body limit. */
-export const MCP_READ_TOOLS = new Set(['search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'get_item', 'search', 'fetch', 'find_specialist']);
+export const MCP_READ_TOOLS = new Set(['search_library', 'plan_workflow', 'get_skill', 'get_workflow', 'get_resource', 'get_item', 'search', 'fetch', 'find_specialist', 'get_approaches', 'get_job_templates', 'get_job_preferences']);
 /** The rate-limit bucket for one MCP POST body, by JSON-RPC method: initialize, tools/list, resources/*, prompts/*,
  *  skills/*, ping, notifications and read-only tool calls are reads. Also returns the request id for error replies. */
 export function mcpLimitClass(bytes: Uint8Array): { limit: LimitClass; id: string | number | null } {
@@ -79,7 +80,7 @@ export function publicError(error: PublicApiError) {
 }
 
 /** Anonymous catalogue reads: GET or HEAD only, open to any origin and cacheable by anyone. */
-const CATALOGUE_READ = /^\/api\/v1\/(?:status|openapi\.json|search|plan|documents(?:\/.+)?|(?:skills|workflows|resources|items)\/[^/]+|specialists(?:\/[^/]+(?:\/pack)?)?)$/;
+const CATALOGUE_READ = /^\/api\/v1\/(?:status|openapi\.json|approaches|dial-questions|org-chart|schemas\/.+\.json|team-proposals|search|plan|documents(?:\/.+)?|(?:skills|workflows|resources|items)\/[^/]+|specialists(?:\/[^/]+(?:\/pack)?)?)$/;
 export const isCatalogueRead = (route: string) => CATALOGUE_READ.test(route);
 const PUBLIC_CACHE = 'public, max-age=300, stale-while-revalidate=86400';
 const ANY_ORIGIN = { 'access-control-allow-origin': '*', 'access-control-expose-headers': 'ETag, Retry-After, RateLimit, RateLimit-Policy' };
@@ -245,14 +246,25 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
       mcp: { url: `${url.origin}/mcp`, tools: PUBLIC_MCP_LISTED_TOOLS.map(tool => tool.name), server_card: `${url.origin}${SERVER_CARD}`, version: PUBLIC_MCP_VERSION, protocol_versions: [...SUPPORTED_PROTOCOL_VERSIONS], prompts: true, resources: true, extensions: [SKILLS_EXTENSION] },
     }));
     if (['GET', 'HEAD'].includes(request.method) && route === '/api/v1/openapi.json') return finish(publicJson(200, openApi(url.origin)));
-    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route) || Object.hasOwn(OUTCOME_REST_OPERATIONS, route)) {
+    const jobSchema=route.match(/^\/api\/v1\/schemas\/(ai-blocks-[a-z-]+\/\d+)\.json$/);
+    const jobRead=route==='/api/v1/approaches'||route==='/api/v1/dial-questions'||route==='/api/v1/org-chart'||route==='/api/v1/team-proposals'&&['GET','HEAD'].includes(request.method)||!!jobSchema;
+    if(jobRead){
+      if(!['GET','HEAD'].includes(request.method))return finish(publicJson(405,{error:{code:'method_not_allowed',message:'Use GET.'}},{allow:'GET, HEAD, OPTIONS'}));
+      if(jobSchema){if(url.search)throw new PublicApiError(400,'invalid_arguments','Schema reads do not accept query fields.');return finish(publicJson(200,await service.jobSchema(jobSchema[1])));}
+      const args=queryArguments(url);
+      if(route==='/api/v1/org-chart'){if(Object.keys(args).length)throw new PublicApiError(400,'invalid_arguments','Org chart reads do not accept query fields.');return finish(publicJson(200,await service.jobOrgChart()));}
+      if(route==='/api/v1/dial-questions')return finish(publicJson(200,await service.jobDialQuestions(args)));
+      if(route==='/api/v1/team-proposals'&&args.format==='zip'){delete args.format;const pack=await service.jobTeamPack(args);return finish(new Response(pack.bytes as BodyInit,{headers:{'content-type':'application/zip','content-disposition':'attachment; filename="'+pack.filename+'"','cache-control':'no-store','x-content-sha256':await sha256(pack.bytes)}}));}
+      return finish(publicJson(200,await service.callTool(route==='/api/v1/approaches'?'get_approaches':'propose_team',args)));
+    }
+    if (route === '/api/v1/workflow-preparations' || route === '/api/v1/specialist-preparations' || route === '/api/v1/specialist-team-preparations' || route === '/api/v1/specialist-team-checkpoints' || Object.hasOwn(SCOPE_REST_OPERATIONS, route) || Object.hasOwn(OUTCOME_REST_OPERATIONS, route) || Object.hasOwn(JOB_REST_OPERATIONS, route)) {
       if (request.method !== 'POST') return finish(publicJson(405, { error: { code: 'method_not_allowed', message: 'Use POST.' } }, { allow: 'POST, OPTIONS' }));
       if (!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type') ?? '')) return finish(publicJson(415, { error: { code: 'unsupported_media_type', message: 'Use application/json.' } }));
       let input: unknown;
-      try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request, Object.hasOwn(OUTCOME_REST_OPERATIONS, route) ? OUTCOME_MAX_BODY_BYTES : MAX_PUBLIC_BODY_BYTES))); }
+      try { input = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(await readPublicBody(request, (Object.hasOwn(OUTCOME_REST_OPERATIONS, route)||Object.hasOwn(JOB_REST_OPERATIONS, route)) ? OUTCOME_MAX_BODY_BYTES : MAX_PUBLIC_BODY_BYTES))); }
       catch (error) { if (error instanceof PublicApiError) throw error; throw new PublicApiError(400, 'invalid_json', 'Send a valid JSON object.'); }
       if (!input || typeof input !== 'object' || Array.isArray(input)) throw new PublicApiError(400, 'invalid_arguments', 'Send a JSON object.');
-      const operation=(SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (OUTCOME_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
+      const operation=(JOB_REST_OPERATIONS as Record<string,string>)[route] ?? (SCOPE_REST_OPERATIONS as Record<string, string>)[route] ?? (OUTCOME_REST_OPERATIONS as Record<string, string>)[route] ?? (route==='/api/v1/specialist-team-preparations'?'prepare_specialist_team':route==='/api/v1/specialist-team-checkpoints'?'checkpoint_specialist_team':route==='/api/v1/specialist-preparations'?'prepare_specialist':'prepare_workflow');
       return finish(publicJson(200, await service.callTool(operation, input as Record<string, unknown>)));
     }
     const specialistPack=route.match(/^\/api\/v1\/specialists\/([a-z0-9][a-z0-9-]{0,69})\/pack$/);
@@ -301,7 +313,7 @@ export async function handlePublicApi(request: Request, env: PublicApiEnv): Prom
 function isOutcomeCall(bytes: Uint8Array): boolean {
   try {
     const message = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
-    return message?.method === 'tools/call' && outcomeMcpTools.some(tool => tool.name === message.params?.name);
+    return message?.method === 'tools/call' && [...outcomeMcpTools,...jobMcpTools].some(tool => tool.name === message.params?.name);
   } catch { return false; }
 }
 
@@ -378,6 +390,11 @@ function openApi(origin: string) {
     '/api/v1/items/{id}': read('get_item', parameters('get_item', 'id'), result('get_item'), { revision: revisioned('get_item'), file: true }),
     '/api/v1/documents': read('search', [...parameters('search'), q], ref('DocumentSearchResult')),
     '/api/v1/documents/{id}': read('fetch', parameters('fetch', 'id'), ref('DocumentFetchResult'), { file: true, description: 'id is type/id from search, such as skill/ad-angle-planner.' }),
+    '/api/v1/approaches': read('get_approaches',parameters('get_approaches'),result('get_approaches')),
+    '/api/v1/dial-questions': read('get_dial_questions',[{name:'job',in:'query',required:true,schema:{type:'string'}}],{type:'object'}),
+    '/api/v1/org-chart': read('get_org_chart',[],{type:'object'}),
+    '/api/v1/schemas/{schema_id}.json': read('get_job_schema',[path('schema_id')],{type:'object'}),
+    ...Object.fromEntries(Object.entries(JOB_REST_OPERATIONS as Record<string,string>).map(([route,operationId])=>[route,write(operationId,'Stateless host-run jobs: send the complete validated state and state_digest. Maximum request body 256,000 bytes. No model calls, hosted execution or permission grants.')])),
     ...Object.fromEntries(Object.entries(OUTCOME_REST_OPERATIONS).map(([route, operationId]) => [route, write(operationId, 'Stateless outcome orchestration: send the engagement and its engagement_sha256 back with each call. No model calls, persistence or action authority. Requests up to 256,000 bytes.')])),
     ...Object.fromEntries(Object.entries(SCOPE_REST_OPERATIONS).map(([route, operationId]) => [route, write(operationId, 'Stateless host-authored scope and recommendation preparation; no persistence, hosted execution or action authority. Existing request-body limits apply.')])),
     '/api/v1/workflow-preparations': write('prepare_workflow'),

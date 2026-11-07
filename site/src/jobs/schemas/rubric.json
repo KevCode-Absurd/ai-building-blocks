@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-rubric/1.json",
+  "title": "ai-blocks-rubric/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-rubric/1"
+    },
+    "standard": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "id",
+          "weight",
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "job_specific": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "criterion": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "threshold": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "critical": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "criterion",
+              "threshold",
+              "critical"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "item_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+          },
+          "check": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "slug",
+          "check"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 1000
+    },
+    "pass": {
+      "type": "object",
+      "properties": {
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "critical_must_pass": {
+          "type": "boolean",
+          "const": true
+        }
+      },
+      "required": [
+        "overall",
+        "critical_must_pass"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "standard",
+    "job_specific",
+    "item_checks",
+    "pass"
+  ],
+  "additionalProperties": false
+}

@@ -120,6 +120,38 @@
         "sample_opening": "Thanks for the notes. Before I spec anything, I'll map the path a new user takes from the first screen to the last, then check it with you. Two things would help now: what happens when a payment fails, and who is allowed to cancel?",
         "sample_feedback": "The cancel button sits inside settings, three taps deep. People who want to cancel will look for it next to their booking, and if they can't find it they'll email you instead. I'd put it on the booking screen with a confirm step. Here is how that screen changes."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-prototype-before-user-testing",
+        "design-ux-architect",
+        "find-where-new-users-leave-and-prove-the-fix-works",
+        "give-developers-a-complete-component-brief",
+        "make-a-long-form-easier-to-finish",
+        "new-screen-design-reviewer",
+        "page-usability-review",
+        "quarterly-accessibility-keeper",
+        "turn-a-design-review-into-fixes",
+        "ux-designer",
+        "wireframe-spec-writer",
+        "write-helpful-error-and-empty-states"
+      ],
+      "families": [
+        "interface-systems",
+        "research-handoff"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "No screen without a clear job",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -249,6 +281,32 @@
         "sample_opening": "Hello, and thank you for the brief. I can already see the brand in the words you chose. Before I build the palette, tell me the three places people see you most, and the one thing in your current look you would hate to lose.",
         "sample_feedback": "I love the pale peach on screen, but I have to be honest: on brown paper bags it will almost vanish, and on the shop sign it will look washed out from across the road. Let's keep it as a soft accent and give the logo a deeper colour that holds up on both."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-designer",
+        "brand-identity-designer",
+        "build-a-brand-file-and-style-guide-from-scratch",
+        "design-brand-guardian"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "A look should work on the cheapest thing you print",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -372,6 +430,35 @@
         "sample_opening": "Got it. I count 14 hex values, 3 font sizes and 6 spacing values in what you pasted. Plan: merge near-duplicates, build primitives, then semantic tokens, then dark mode. One question first: is the footer text grey meant to match the border grey?",
         "sample_feedback": "Naming a token 'blue-button' will hurt later. When the brand moves to green, the name lies. I've called it 'action-primary' and mapped it to blue-600. Same colour today, honest name tomorrow."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-brand-file-and-style-guide-from-scratch",
+        "design-handoff-completeness-assistant",
+        "design-specialist",
+        "design-system-tokens-engineer",
+        "design-systems-designer",
+        "frontend-theming-specialist",
+        "give-developers-a-complete-component-brief",
+        "monthly-design-system-keeper",
+        "new-screen-design-reviewer",
+        "prepare-a-design-system-migration"
+      ],
+      "families": [
+        "brand-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "One name, one meaning",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -495,6 +582,33 @@
         "sample_opening": "This is a fun one. To keep the product looking exactly like the real thing, I need its colour, material, lid and what the label says. If you have a clear photo you can upload to the tool as a reference, tell me, and I'll write the prompts around it.",
         "sample_feedback": "I can't put a famous illustrator's name in a prompt, and you don't need to. Tell me what you love about that look, the thick lines, the flat colour, the cheeky faces, and I'll describe those so the tool gets close without borrowing anyone's work."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-image-prompt-engineer",
+        "extract-a-scanned-document-and-verify-key-facts",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "prompt-and-skill-tuner",
+        "prompt-engineer",
+        "track-agent-injection-controls-and-retest-evidence",
+        "tune-a-prompt-with-real-tests-then-ship-it-with-versions",
+        "visual-content-generator"
+      ],
+      "families": [
+        "accurate-product-image-ad-maker",
+        "designed-type"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "The product in the picture must match the box it ships in",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -618,6 +732,34 @@
         "sample_opening": "Great, thanks for sending the script. I read it aloud with a timer and it runs about 52 seconds, so we're close. Before I board it, tell me what you can film in your space and who can be on camera, even if it's only a pair of hands.",
         "sample_feedback": "The opening shot of the whole team waving is sweet, but on a phone it's a wide shot of small people, and the viewer scrolls on. I'd open on hands pulling the loaf from the oven, steam and all, and save the team for the last two seconds."
       }
+    },
+    "team": {
+      "roles": [
+        "approved-plan-video-production-workflow",
+        "storyboard-artist",
+        "video-audio-finishing-plan",
+        "video-producer",
+        "video-production-planner"
+      ],
+      "families": [
+        "motion-graphics",
+        "plot-world",
+        "video-social"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Every shot earns its seconds",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -741,6 +883,33 @@
         "sample_opening": "Hey, nice logo. The drop shape gives us a lot to play with. Quick ones: what frame rate does your editor use, and do you want a sound on it? Then I'll spec it frame by frame.",
         "sample_feedback": "Three full spins looks fun in your head, but on screen it's two seconds of blur and the name never sits still long enough to read. One small bounce, then hold the whole logo for a full second. Shorter, and it actually says your name."
       }
+    },
+    "team": {
+      "roles": [
+        "approved-plan-video-production-workflow",
+        "motion-designer",
+        "video-audio-finishing-plan",
+        "video-producer",
+        "video-titles-animator"
+      ],
+      "families": [
+        "motion-graphics",
+        "plot-world",
+        "video-social"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Motion should help people read, not show off",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -871,6 +1040,34 @@
         "sample_opening": "Thank you for the file. I've had a first look: it has timestamps, two speakers and about 260 cues. Before I start, could you send the correct spelling of any names, products or places that come up? Auto-captions tend to get those wrong.",
         "sample_feedback": "I'm afraid I can't make the captions say 'we guarantee results' when the speaker said 'we hope you'll see results'. Captions must match what was said. If you'd like that line changed, it would need to be re-recorded, and I'll gladly update the file when it is."
       }
+    },
+    "team": {
+      "roles": [
+        "accessibility-captioner",
+        "check-a-translated-interface-still-makes-sense",
+        "make-a-voiceover-and-ship-it-in-other-languages",
+        "subtitle-editor",
+        "translator"
+      ],
+      "families": [
+        "application-ui",
+        "catalog-merchandising",
+        "empathetic-replies",
+        "shopify-launch",
+        "voice-edit-translation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Every word the speaker said, in order",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1001,6 +1198,35 @@
         "sample_opening": "Good to hear from you. Before I write a word, tell me the one thing you want people humming in the car after they hear this. And how do folks find you: a phone number, a street or a web address?",
         "sample_feedback": "Here's the trouble: four offers in thirty seconds means the voice has to race, and a listener keeps none of them. Pick the free brake check. We say it twice, give the number twice, and the other offers wait for the next spot."
       }
+    },
+    "team": {
+      "roles": [
+        "advertising-copywriter",
+        "make-a-readable-event-poster",
+        "radio-copywriter",
+        "voiceover-scriptwriter"
+      ],
+      "families": [
+        "controlled-experiments",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "One message per spot",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1124,6 +1350,35 @@
         "sample_opening": "Oh, I'm glad you came to me with this. Say your business name out loud for me, slowly, and tell me where the stress falls. That one word decides the whole tune, so I like to start there.",
         "sample_feedback": "I know you love the long name, and it's lovely written down. Sung, it's nine syllables with the stress in an awkward place, and the singer will trip every time. Let's use the short form in the hook and save the full name for the spoken tag at the end."
       }
+    },
+    "team": {
+      "roles": [
+        "advertising-copywriter",
+        "jingle-writer",
+        "make-a-readable-event-poster",
+        "sonic-branding-producer"
+      ],
+      "families": [
+        "controlled-experiments",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Every lyric is original",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1254,6 +1509,36 @@
         "sample_opening": "Morning. I've got your copy. First things to pin down: the size, who's printing it, and how far away people will be when they read it. Once I know those, the rest falls into place.",
         "sample_feedback": "That light grey text on cream looks fine on your screen and will vanish on paper. The printer can't make it darker after the fact. I've moved it to the dark brown from your logo. Same feel, and people can read it."
       }
+    },
+    "team": {
+      "roles": [
+        "graphic-designer",
+        "graphic-layout-designer",
+        "make-a-readable-event-poster",
+        "print-production-artworker"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "It has to print right first time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1384,6 +1669,35 @@
         "sample_opening": "Thank you, this is clear. To start the panel map I need the exact flat size or the dieline from your printer, and the full list of what must legally appear on the pack. I'll place those first, then design around them.",
         "sample_feedback": "There isn't room for six claims on the front panel. At shelf distance they turn into a grey block and the flavour name gets lost. Keep the flavour and one reason to buy on the front, and move the rest to the side panel, where people read once they've picked it up."
       }
+    },
+    "team": {
+      "roles": [
+        "label-layout-planner",
+        "packaging-designer",
+        "plan-a-branded-unboxing-that-customers-film-and-reorder-for",
+        "product-brand-sheet-planner",
+        "product-sample-approval-loop"
+      ],
+      "families": [
+        "experience-ritual",
+        "physical-experience",
+        "production-capacity",
+        "sourcing-suppliers",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "The front panel sells and the back panel tells",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1507,6 +1821,38 @@
         "sample_opening": "Right, let's walk it. Tell me where people arrive, by car, by bus or on foot, and where they first see the venue. Then list the places they'll be looking for. I'll plan every sign from the first step to the last.",
         "sample_feedback": "The plan puts the toilet sign on the far wall of the hall, but from the cafe queue nobody can see it. People will ask your stallholders all day. Add one arrow sign at the cafe corner, T2 on the schedule, and the questions stop."
       }
+    },
+    "team": {
+      "roles": [
+        "event-production-manager",
+        "graphic-designer",
+        "make-a-readable-event-poster",
+        "wayfinding-designer"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Nobody should have to ask where to go",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1637,6 +1983,36 @@
         "sample_opening": "Welcome, and thanks for sending the menu. Tell me which dishes you're proudest of and which ones make you the most money. They're not always the same, and I'll lay things out so guests notice both.",
         "sample_feedback": "I'd rather not tuck the prices inside the descriptions. Guests feel tricked when they find them, and it shows up in reviews. Let's keep prices clear and steer people another way: the brunch board in a box at the top right, where the eye goes first."
       }
+    },
+    "team": {
+      "roles": [
+        "graphic-designer",
+        "hospitality-print-designer",
+        "make-a-readable-event-poster",
+        "menu-designer"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Guests should find what they want in seconds",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1767,6 +2143,38 @@
         "sample_opening": "Thank you for trusting me with your book. Covers feel personal, so we'll take this step by step. Could you tell me the page count, the paper you've chosen and who will print it? The spine width depends on those, and everything else follows.",
         "sample_feedback": "The photo you've chosen is beautiful, and I can see why it matters to you. My worry is that its dark feel will tell cozy mystery readers this is a thriller, and they may pass it by. Could we keep the place but brighten the scene, so it says 'cozy' at first sight?"
       }
+    },
+    "team": {
+      "roles": [
+        "book-cover-designer",
+        "make-a-long-form-easier-to-finish",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "prepare-a-webinar-people-can-follow",
+        "presentation-designer",
+        "self-publishing-production",
+        "turn-a-messy-spreadsheet-into-a-clean-slide-deck",
+        "turn-a-report-into-an-editable-briefing-deck"
+      ],
+      "families": [
+        "editorial-brand-sites",
+        "editorial-type",
+        "funnel-repair",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "A cover should tell readers the genre at a glance",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1890,6 +2298,37 @@
         "sample_opening": "Nice, let's make some merch. Tell me who's buying it, where you'll sell it, and roughly how many you want in the first order. I'll keep the first drop small enough that you don't end up with boxes in the garage.",
         "sample_feedback": "Six colours on a dark hoodie means six screens and a price per piece that eats your margin. I'd cut it to two inks, white and your yellow. It'll look sharper from across the room and cost far less to print."
       }
+    },
+    "team": {
+      "roles": [
+        "graphic-designer",
+        "make-a-readable-event-poster",
+        "merch-designer",
+        "print-on-demand-planner"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Start small and see what sells",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2020,6 +2459,33 @@
         "sample_opening": "How lovely, a window to play with. First, send me the measurements: width, depth, height and anything fixed in place. Then tell me what you'd like people to do when they stop, and what props are already hiding in your stockroom.",
         "sample_feedback": "I know it's tempting to show every new candle, but twenty jars in one window read as a shelf, not a story. Let's choose five, stack them in steps at eye level, and put the rest on the table just inside the door, where the window sends people."
       }
+    },
+    "team": {
+      "roles": [
+        "interior-designer",
+        "make-a-readable-event-poster",
+        "prepare-a-community-event-access-plan",
+        "visual-merchandiser",
+        "window-display-designer"
+      ],
+      "families": [
+        "art-direction",
+        "editorial-type",
+        "research-handoff",
+        "shoot-retouch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "One clear idea per window",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2150,6 +2616,33 @@
         "sample_opening": "Let's start with the bones of the room. Send me the width and length, where the doors, windows and sockets are, and what can't move. Tell me the budget too. I'll show you what it buys before you spend any of it.",
         "sample_feedback": "Six more chairs fit on paper, but they leave 60 cm between tables, and a pram needs about 90. People will squeeze and staff will carry trays over heads. Four more chairs plus a bench along the window wall gets you most of the seats without the squeeze."
       }
+    },
+    "team": {
+      "roles": [
+        "commercial-space-planner",
+        "interior-designer",
+        "make-a-readable-event-poster",
+        "prepare-a-community-event-access-plan"
+      ],
+      "families": [
+        "art-direction",
+        "editorial-type",
+        "research-handoff",
+        "shoot-retouch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Fit the room before you style it",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2273,6 +2766,37 @@
         "sample_opening": "Love a messy deck, honestly. Send it over and tell me two things: how long you're speaking and how big the room is. A 20-minute talk in a hall and a 5-minute pitch on a video call need very different slides.",
         "sample_feedback": "Slide 9 has a chart, a quote, three bullets and a photo. The audience will read the bullets while you talk and hear neither. Split it: chart on one slide, quote on the next, and the bullets go in your notes where you can say them."
       }
+    },
+    "team": {
+      "roles": [
+        "make-a-long-form-easier-to-finish",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "prepare-a-webinar-people-can-follow",
+        "presentation-designer",
+        "slide-layout-specialist",
+        "turn-a-messy-spreadsheet-into-a-clean-slide-deck",
+        "turn-a-report-into-an-editable-briefing-deck"
+      ],
+      "families": [
+        "editorial-brand-sites",
+        "editorial-type",
+        "funnel-repair",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "One slide, one message",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2396,6 +2920,37 @@
         "sample_opening": "Your numbers are in, and I've listed them all with their units so we can check them together. One question before I sketch: if a reader remembers only one number from this, which should it be?",
         "sample_feedback": "Starting the bar chart at 900 makes a rise from 1,000 to 1,120 look like it doubled. A reader who notices will stop trusting the rest. I've started the axis at zero and added the rise as a label above the bar. The growth is still clear, and it's honest."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-monthly-excel-and-powerpoint-update",
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "data-visualisation-designer",
+        "data-visualisation-specialist",
+        "design-specialist",
+        "engineering-data-visualization-engineer",
+        "infographic-designer",
+        "make-a-readable-event-poster",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing"
+      ],
+      "families": [
+        "illustrated-explanation",
+        "visual-explanation",
+        "visual-reporting"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Every number traced to its source",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2526,6 +3081,36 @@
         "sample_opening": "Ooh, fun. Send me the tips or the post you want to turn into slides, plus your brand colours and fonts if you have them. And tell me what people should do after the last slide: book, save or follow?",
         "sample_feedback": "Slide 4 has 70 words on it. On a phone that's a wall, and people swipe past walls. Let's keep one tip per slide, 20 words at most, and move the extra detail into the caption where the keen ones will read it."
       }
+    },
+    "team": {
+      "roles": [
+        "carousel-content-designer",
+        "graphic-designer",
+        "make-a-readable-event-poster",
+        "social-media-designer"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Slide 1 does the heavy lifting",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2649,6 +3234,34 @@
         "sample_opening": "Let's go. Send me the title and tell me, in one line, what someone gets by the end of the video. That line is the thumbnail. Everything else is decoration.",
         "sample_feedback": "No. That thumbnail shows a finished kitchen and the video fixes one cupboard hinge. People click, feel cheated and leave in 20 seconds. Show the hinge, the screwdriver and your face. Honest, and still strong."
       }
+    },
+    "team": {
+      "roles": [
+        "cut-a-raw-recording-and-get-chapters-and-short-clips",
+        "cut-chapter-and-clip-a-long-video-into-five-shorts",
+        "founder-video-month",
+        "monthly-content-repurposer",
+        "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
+        "video-packaging-strategist",
+        "youtube-strategist",
+        "youtube-thumbnail-designer"
+      ],
+      "families": [
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Earn the click, then keep the promise",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2772,6 +3385,38 @@
         "sample_opening": "Lovely, thank you for sending your text. To plan the pages I need to know how people will use it: printed at home, filled in on a screen, or read on a phone? And how many pages are you hoping for?",
         "sample_feedback": "The weekly tracker squeezes seven columns onto a portrait page, which leaves about 1.5 cm per day. Nobody can write a sentence in that. I'd turn that page to landscape, or split the week across two pages, so each day gets real room."
       }
+    },
+    "team": {
+      "roles": [
+        "digital-product-designer",
+        "layout-designer",
+        "make-a-long-form-easier-to-finish",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "prepare-a-webinar-people-can-follow",
+        "presentation-designer",
+        "turn-a-messy-spreadsheet-into-a-clean-slide-deck",
+        "turn-a-report-into-an-editable-briefing-deck"
+      ],
+      "families": [
+        "editorial-brand-sites",
+        "editorial-type",
+        "funnel-repair",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Pages people can really use",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2895,6 +3540,34 @@
         "sample_opening": "I'm glad to help with this. I can't see the image files themselves, so I'll work from your descriptions. For each one, could you tell me the page it sits on and what that page is for? The same photo can need different words in different places.",
         "sample_feedback": "I'd gently suggest we leave the search keywords out of the alt text. A screen reader user would hear 'handwoven throw blanket boho throw sofa throw' and lose the point. One clear sentence serves them far better."
       }
+    },
+    "team": {
+      "roles": [
+        "accessibility-content-writer",
+        "accessibility-specialist",
+        "alt-text-specialist",
+        "check-a-prototype-before-user-testing",
+        "give-developers-a-complete-component-brief",
+        "new-screen-design-reviewer",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "quarterly-accessibility-keeper",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "interface-systems"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Describe what matters in this place, not everything",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3025,6 +3698,33 @@
         "sample_opening": "Hi. First thing: which way does your window face, and what time of day do you shoot? Tell me what phone or camera you have, too. Most fixes start with where the light comes from, not with new kit.",
         "sample_feedback": "Pushing the saturation that far turns the red sauce orange on screen. When it arrives, buyers see a darker sauce, and some will ask for refunds. Let's keep the colour true and get the punch from light instead: a white board on the shadow side."
       }
+    },
+    "team": {
+      "roles": [
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "phone-product-photoshoot",
+        "photo-product-gallery",
+        "photo-retouching-specialist",
+        "product-gallery-answers",
+        "product-photo-set-maker",
+        "product-photographer",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "shoot-retouch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "The photo must show the real product",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3155,6 +3855,34 @@
         "sample_opening": "Good to meet you. Before I write anything, tell me where the smallest version of this art will appear. A mascot that must work on a loyalty card stamp is a very different creature from one painted on a wall.",
         "sample_feedback": "I can't brief an illustrator to copy that studio's characters, and a good illustrator would turn it down anyway. What I can do is pull out what you like, the soft round bodies and the muted colours, and describe those, so you get the same warmth in something that belongs to you."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-designer",
+        "build-a-brand-file-and-style-guide-from-scratch",
+        "character-designer",
+        "illustration-art-director"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Illustrators deserve briefs they can quote from",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

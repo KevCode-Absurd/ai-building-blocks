@@ -1,0 +1,12 @@
+/** Each question changes a real planning choice; saved answers skip it. The variety tree is one question. */
+export function dialQuestions({ dials = {}, approachJob = {}, output_shape = 'many_artifacts', limit = 3 } = {}) {
+  if (['use_defaults','use_defaults_silently'].includes(dials.ask_before_start?.value)) return [];
+  const unset = name => !dials[name] || dials[name].source === 'recommended';
+  const out = [];
+  if (unset('variety_mix')) out.push({ id: 'variety_mix', priority: 100, question: output_shape === 'one_decision' ? 'Would you like a mix of approaches, one approach, or a wide spread?' : 'Would you like a mix of output kinds, one kind, or a wide spread?', recommended: 'balanced', options: [{ value: 'balanced', label: 'A mix (recommended)' }, { value: 'focused', label: 'One kind' }, { value: 'wide', label: 'A wide spread' }, { value: 'you_decide', label: 'You decide' }], branches: { focused: { question: 'Which kind?', options: (approachJob.families ?? []).map(f => ({ value: f.id, label: f.name, description: f.what_it_looks_like })), preview_limit: 6, follow_up: 'Any kinds you already know work for you?' }, balanced: { question: 'Pick the kinds you want, or let us choose?', recommended: 'you_choose' } }, max_depth: 3 });
+  if (unset('volume')) out.push({ id: 'volume', priority: 90, question: `Shall we make ${dials.volume?.value ?? approachJob.default_volume ?? 10} outputs, or use a count you choose?`, recommended: dials.volume?.value ?? approachJob.default_volume ?? 10 });
+  if (output_shape === 'one_decision' && unset('decision_style')) out.push({ id: 'decision_style', priority: 80, question: 'Would you like one recommended path with alternatives, or options to compare?', recommended: 'one_path_plus_options', options: [{ value: 'one_path_plus_options', label: 'One path with alternatives (recommended)' }, { value: 'compare_options', label: 'Options to compare' }] });
+  if (unset('depth')) out.push({ id: 'depth', priority: 70, question: 'Would you like a full council and review, or a quick team?', recommended: 'standard', options: [{ value: 'standard', label: 'Full council and review (recommended)' }, { value: 'quick', label: 'Quick team' }, { value: 'deep', label: 'Deeper review' }] });
+  if ((dials.modalities?.value?.length ?? 0) > 1 && unset('modalities')) out.push({ id: 'modalities', priority: 60, question: 'May the team use all the output tools available here?', recommended: dials.modalities.value });
+  return out.sort((a, b) => b.priority - a.priority).slice(0, Math.min(3, Math.max(0, limit)));
+}

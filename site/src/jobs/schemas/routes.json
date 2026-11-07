@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-routes/1.json",
+  "title": "ai-blocks-routes/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-routes/1"
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "owner_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "thesis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "differs_on": {
+            "type": "object",
+            "properties": {
+              "first_move": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "mechanism": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "segment": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "horizon": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              }
+            },
+            "required": [
+              "first_move",
+              "mechanism",
+              "segment",
+              "horizon"
+            ],
+            "additionalProperties": false
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+            },
+            "minItems": 0,
+            "maxItems": 100,
+            "uniqueItems": true
+          },
+          "first_moves": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "minItems": 1,
+            "maxItems": 20
+          },
+          "expected_effect": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "effort": {
+            "type": "string",
+            "enum": [
+              "S",
+              "M",
+              "L"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "low",
+              "med",
+              "high"
+            ]
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            "minItems": 0,
+            "maxItems": 100
+          },
+          "wins_if": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "mix": {
+            "type": "string",
+            "enum": [
+              "proven",
+              "new",
+              "outlier"
+            ]
+          }
+        },
+        "required": [
+          "route_id",
+          "owner_seat",
+          "name",
+          "thesis",
+          "differs_on",
+          "evidence",
+          "first_moves",
+          "expected_effect",
+          "effort",
+          "confidence",
+          "risks",
+          "wins_if"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 5
+    }
+  },
+  "required": [
+    "schema",
+    "routes"
+  ],
+  "additionalProperties": false
+}

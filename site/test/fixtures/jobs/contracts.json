@@ -1,0 +1,5370 @@
+[
+  {
+    "schema": "ai-blocks-job/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-job/1",
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "parallel",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 0
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-job/1",
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "sequential",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 0
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-job/1",
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "pack",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 0
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "parallel",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 0
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "parallel",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 0
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-job/1",
+          "job_id": "job_fixture",
+          "mode": "team",
+          "mode_reason": "Deliverable-shaped request",
+          "job_type": {
+            "job": "write-documents",
+            "confidence": 0.8,
+            "alternatives": []
+          },
+          "tier": "standard",
+          "estimate": {
+            "seats": 7,
+            "council_rounds": 1,
+            "token_multiple": [
+              2.5,
+              4
+            ],
+            "source": "estimated"
+          },
+          "host_profile": "parallel",
+          "phase": "SCOPE",
+          "files": [],
+          "next_action": {
+            "event": "scope",
+            "instruction": "Define the job card",
+            "questions_allowed": 3
+          },
+          "model_calls": 1
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-job-card/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-job-card/1",
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "Business owners",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          }
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-job-card/1",
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "Internal operators",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          }
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-job-card/1",
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "First-time users",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          }
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "Business owners",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          }
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "Business owners",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          }
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-job-card/1",
+          "request_verbatim": "Make six useful outputs",
+          "job_to_be_done": "Provide six outputs for the target audience",
+          "output_shape": "many_artifacts",
+          "deliverables": [
+            {
+              "kind": "document",
+              "count": 6,
+              "format_constraints": []
+            }
+          ],
+          "dials": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20,
+              "source": "recommended"
+            },
+            "families": {
+              "value": "you_choose",
+              "source": "recommended"
+            },
+            "volume": {
+              "value": 6,
+              "source": "recommended"
+            },
+            "decision_style": {
+              "value": "one_path_plus_options",
+              "source": "recommended"
+            },
+            "depth": {
+              "value": "standard",
+              "source": "recommended"
+            },
+            "modalities": {
+              "value": [
+                "text"
+              ],
+              "source": "recommended"
+            },
+            "risk": {
+              "value": "normal",
+              "source": "recommended"
+            }
+          },
+          "preferences_ref": {
+            "store": "none"
+          },
+          "audience": "Business owners",
+          "constraints": [],
+          "context_sources": [],
+          "facts": [],
+          "unknowns": [],
+          "questions_asked": [],
+          "acceptance": [
+            {
+              "id": "complete",
+              "criterion": "All outputs delivered",
+              "threshold": "6 outputs",
+              "critical": true
+            }
+          ],
+          "priors": {
+            "source": "none",
+            "families_that_worked": [],
+            "families_that_failed": []
+          },
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-team-plan/2",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-team-plan/2",
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": []
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-team-plan/2",
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "A task-specific lead coordinates the work.",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": []
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-team-plan/2",
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "A fresh judge checks the final output.",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": []
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": []
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": []
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-team-plan/2",
+          "proposal_id": "tp_fixture",
+          "goal": "Do the agreed job",
+          "route_options": [
+            {
+              "id": "team",
+              "name": "Flexible team",
+              "reason": "Distinct methods and independent review"
+            }
+          ],
+          "selected_route": "team",
+          "context": [],
+          "permissions": [],
+          "stages": [],
+          "constraints": [],
+          "success_checks": [],
+          "kpis": [],
+          "notes": "",
+          "seats": [
+            {
+              "seat_id": "s1",
+              "seat_type": "coordinator",
+              "seat_types": [
+                "coordinator"
+              ],
+              "role_id": "role-1",
+              "mind_ids": [],
+              "lens": "operator",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s2",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-2",
+              "mind_ids": [],
+              "lens": "craft",
+              "families": [
+                "family-2"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s3",
+              "seat_type": "maker",
+              "seat_types": [
+                "maker",
+                "strategist"
+              ],
+              "role_id": "role-3",
+              "mind_ids": [],
+              "lens": "customer",
+              "families": [
+                "family-3"
+              ],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s4",
+              "seat_type": "red_team",
+              "seat_types": [
+                "red_team",
+                "strategist"
+              ],
+              "role_id": "role-4",
+              "mind_ids": [],
+              "lens": "sceptic",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s5",
+              "seat_type": "fact_checker",
+              "seat_types": [
+                "fact_checker"
+              ],
+              "role_id": "role-5",
+              "mind_ids": [],
+              "lens": "numbers",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s6",
+              "seat_type": "judge",
+              "seat_types": [
+                "judge"
+              ],
+              "role_id": "role-6",
+              "mind_ids": [],
+              "lens": "legal",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            },
+            {
+              "seat_id": "s7",
+              "seat_type": "critic",
+              "seat_types": [
+                "critic"
+              ],
+              "role_id": "role-7",
+              "mind_ids": [],
+              "lens": "brand",
+              "families": [],
+              "toolbox": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "tools_needed": [],
+              "budget": {
+                "max_tool_calls": 10,
+                "max_generations": 3
+              }
+            }
+          ],
+          "lead_seat_id": "s2",
+          "working_groups": [
+            {
+              "id": "production",
+              "lead_seat_id": "s2",
+              "members": [
+                "s2",
+                "s3"
+              ],
+              "reports_to": "s1"
+            }
+          ],
+          "amendments": [],
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-routes/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-routes/1",
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "Start with the customer",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-routes/1",
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "Check the main customer need",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-routes/1",
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "Learn from a small customer sample",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ]
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ]
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ]
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-routes/1",
+          "routes": [
+            {
+              "route_id": "r0",
+              "owner_seat": "s2",
+              "name": "Customer first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Interview customers",
+                "mechanism": "Customer learning",
+                "segment": "New buyers",
+                "horizon": "30d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "proven"
+            },
+            {
+              "route_id": "r1",
+              "owner_seat": "s3",
+              "name": "Operations first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Rebuild the operating process",
+                "mechanism": "Process automation",
+                "segment": "Returning buyers",
+                "horizon": "90d"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "new"
+            },
+            {
+              "route_id": "r2",
+              "owner_seat": "s4",
+              "name": "Evidence first",
+              "thesis": "A distinct practical approach",
+              "differs_on": {
+                "first_move": "Audit source records",
+                "mechanism": "Truth checking",
+                "segment": "Internal operators",
+                "horizon": "12m"
+              },
+              "evidence": [],
+              "first_moves": [
+                "Start with one test"
+              ],
+              "expected_effect": "A measurable improvement",
+              "effort": "M",
+              "confidence": "med",
+              "risks": [
+                "Missing evidence"
+              ],
+              "wins_if": "Its test clears the acceptance threshold",
+              "mix": "outlier"
+            }
+          ],
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-spread/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-spread/1",
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Balance known work and new work"
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-spread/1",
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Use three distinct output families"
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-spread/1",
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Keep enough range to test a new approach"
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Half conventional, with sensible new approaches and a wild card"
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Half conventional, with sensible new approaches and a wild card"
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-spread/1",
+          "variety_mix": {
+            "preset": "balanced",
+            "proven": 50,
+            "new": 30,
+            "outlier": 20
+          },
+          "slots": [
+            {
+              "slot_id": "d0",
+              "family": "family-0",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 0",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d1",
+              "family": "family-1",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 1",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d2",
+              "family": "family-2",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "proven",
+              "variant_brief": "Make a useful example 2",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d3",
+              "family": "family-0",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-0",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 3",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d4",
+              "family": "family-1",
+              "maker_seat": "s2",
+              "items": [
+                {
+                  "slug": "method-1",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "new",
+              "variant_brief": "Make a useful example 4",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            },
+            {
+              "slot_id": "d5",
+              "family": "family-2",
+              "maker_seat": "s3",
+              "items": [
+                {
+                  "slug": "method-2",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "mix": "outlier",
+              "variant_brief": "Make a useful example 5",
+              "modality": "text",
+              "tools_needed": [],
+              "fallback": "brief_only"
+            }
+          ],
+          "rationale": "Half conventional, with sensible new approaches and a wild card",
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-council/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-council/1",
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "The first test is reversible",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED"
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-council/1",
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "Customer evidence is cheap to gather",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED"
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-council/1",
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "The test can settle the main unknown",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED"
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "Its test is cheaper to reverse",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED"
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "Its test is cheaper to reverse",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED"
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-council/1",
+          "subject": "routes",
+          "proposals": [
+            {
+              "label": "A",
+              "ref": "r0",
+              "owner_seat": "s2",
+              "file": "council/a.md",
+              "content": "Interview five customers before choosing the plan."
+            },
+            {
+              "label": "B",
+              "ref": "r1",
+              "owner_seat": "s3",
+              "file": "council/b.md",
+              "content": "Automate the slowest process before hiring."
+            }
+          ],
+          "critiques": [
+            {
+              "by_seat": "c1",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "A",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "five customers",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c1",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            },
+            {
+              "by_seat": "c2",
+              "on": "B",
+              "strongest_point": "Clear first move",
+              "flaw_quote": "before hiring",
+              "flaw": "This needs a larger evidence base",
+              "would_change_mind_if": "A trial supplies stronger evidence"
+            }
+          ],
+          "red_team": [
+            {
+              "pass": 1,
+              "against": "A",
+              "case": "Five interviews may miss edge cases",
+              "for_weakest": "B",
+              "case_for": "A measured delay would favour automation"
+            }
+          ],
+          "revisions": [
+            {
+              "label": "A",
+              "change": "Add a follow-up test"
+            }
+          ],
+          "ranking": {
+            "method": "borda",
+            "ballots": [
+              {
+                "by_seat": "c1",
+                "order": [
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "result": [
+              "A",
+              "B"
+            ]
+          },
+          "decision": {
+            "chosen": [
+              "A"
+            ],
+            "why": "Its test is cheaper to reverse",
+            "dissent": {
+              "by_seat": "c2",
+              "verbatim": "I favour B if delay is the main cause."
+            },
+            "alternative_wins_if": [
+              {
+                "label": "B",
+                "condition": "Delay explains the measured loss"
+              }
+            ],
+            "option_cards": [
+              {
+                "option_id": "o1",
+                "from": "B",
+                "pitch": "Automate one proven bottleneck",
+                "rerun": {
+                  "tool": "start_job",
+                  "args": {
+                    "from_option": "o1"
+                  }
+                }
+              }
+            ],
+            "killed": [
+              {
+                "idea": "Hire before testing",
+                "reason": "No evidence that capacity is the cause"
+              }
+            ]
+          },
+          "status": "DECIDED",
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-evidence/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-evidence/1",
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "CONFIRMED",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-evidence/1",
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "INFERRED",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-evidence/1",
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "UNKNOWN",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "INFERRED",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "INFERRED",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-evidence/1",
+          "claims": [
+            {
+              "id": "f1",
+              "claim": "The source reports this figure",
+              "status": "INFERRED",
+              "source": "evidence/source.md",
+              "checked_by": "s5",
+              "used_in": [
+                "d0"
+              ]
+            }
+          ],
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-rubric/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-rubric/1",
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          }
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-rubric/1",
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [
+            "Six outputs delivered"
+          ],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          }
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-rubric/1",
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [
+            "All required sources present"
+          ],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          }
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          }
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          }
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-rubric/1",
+          "standard": [
+            {
+              "id": "job",
+              "weight": 20,
+              "text": "Check job"
+            },
+            {
+              "id": "usable",
+              "weight": 15,
+              "text": "Check usable"
+            },
+            {
+              "id": "range",
+              "weight": 15,
+              "text": "Check range"
+            },
+            {
+              "id": "truth",
+              "weight": 15,
+              "text": "Check truth"
+            },
+            {
+              "id": "reasoned",
+              "weight": 10,
+              "text": "Check reasoned"
+            },
+            {
+              "id": "insight",
+              "weight": 10,
+              "text": "Check insight"
+            },
+            {
+              "id": "fit",
+              "weight": 10,
+              "text": "Check fit"
+            },
+            {
+              "id": "clear",
+              "weight": 5,
+              "text": "Check clear"
+            }
+          ],
+          "job_specific": [],
+          "item_checks": [],
+          "pass": {
+            "overall": 0.75,
+            "critical_must_pass": true
+          },
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-review/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-review/1",
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "PASS",
+              "notes": ""
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-review/1",
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "REVISE",
+              "notes": "Fix the quoted issue before use"
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-review/1",
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "CUT",
+              "notes": "Fix the quoted issue before use"
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "PASS",
+              "notes": ""
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "PASS",
+              "notes": ""
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-review/1",
+          "judge_seat": "s6",
+          "judge_model": "host-selected-model",
+          "judge_saw_council": false,
+          "items": [
+            {
+              "slot_id": "d0",
+              "scores": {
+                "job": 8,
+                "usable": 8,
+                "range": 8,
+                "truth": 8,
+                "reasoned": 8,
+                "insight": 8,
+                "fit": 8,
+                "clear": 8
+              },
+              "quote": "A source-backed recommendation",
+              "verdict": "PASS",
+              "notes": ""
+            }
+          ],
+          "set_checks": {
+            "count_met": true,
+            "variety_contract": "PASS",
+            "decision_record": "PASS"
+          },
+          "loop": 0,
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-job-delivery/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-job-delivery/1",
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": []
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-job-delivery/1",
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": [
+            "Owner review still needed 1"
+          ]
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-job-delivery/1",
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": [
+            "Owner review still needed 2"
+          ]
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": []
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": []
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-job-delivery/1",
+          "files": [
+            {
+              "path": "DELIVERY.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "DECISIONS.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "EVIDENCE.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "REVIEW.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "TEAM.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "path": "run.json",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "deliverables": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ],
+          "flags": [],
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-job-preferences/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-job-preferences/1",
+          "owner_scope": "local",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": []
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-job-preferences/1",
+          "owner_scope": "account:user/workspace",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": []
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-job-preferences/1",
+          "owner_scope": "account:another/personal",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": []
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "owner_scope": "local",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": []
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "owner_scope": "local",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": []
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-job-preferences/1",
+          "owner_scope": "local",
+          "version": 1,
+          "general": {
+            "variety_mix": {
+              "preset": "balanced",
+              "proven": 50,
+              "new": 30,
+              "outlier": 20
+            },
+            "depth": "standard"
+          },
+          "by_job_type": {},
+          "history": [],
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-approach-index/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-approach-index/1",
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 4,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          }
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-approach-index/1",
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 5,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          }
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-approach-index/1",
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 6,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          }
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 6,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          }
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 6,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          }
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-approach-index/1",
+          "jobs": {
+            "write-documents": {
+              "output_shape_default": "many_artifacts",
+              "default_volume": 6,
+              "families": [
+                {
+                  "id": "plain-guide",
+                  "name": "Plain guide",
+                  "what_it_looks_like": "A step-by-step guide",
+                  "when_it_wins": "The reader needs clear steps",
+                  "modality": [
+                    "text"
+                  ],
+                  "tools_needed": [],
+                  "items": [
+                    "sample-method"
+                  ],
+                  "pickers": [],
+                  "checks": [],
+                  "tool_guides": [],
+                  "lead_roles": [],
+                  "personas": [],
+                  "lenses": []
+                }
+              ],
+              "lenses": []
+            }
+          },
+          "unexpected_field": true
+        }
+      }
+    ]
+  },
+  {
+    "schema": "ai-blocks-production/1",
+    "valid": [
+      {
+        "name": "valid-1",
+        "document": {
+          "schema": "ai-blocks-production/1",
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "Matches the job"
+          }
+        }
+      },
+      {
+        "name": "valid-2",
+        "document": {
+          "schema": "ai-blocks-production/1",
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "The evidence is linked"
+          }
+        }
+      },
+      {
+        "name": "valid-3",
+        "document": {
+          "schema": "ai-blocks-production/1",
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "Producer checks passed"
+          }
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "null",
+        "document": null
+      },
+      {
+        "name": "empty",
+        "document": {}
+      },
+      {
+        "name": "missing-schema",
+        "document": {
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "Checked against the agreed brief"
+          }
+        }
+      },
+      {
+        "name": "wrong-schema",
+        "document": {
+          "schema": "ai-blocks-unknown/1",
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "Checked against the agreed brief"
+          }
+        }
+      },
+      {
+        "name": "unsupported-field",
+        "document": {
+          "schema": "ai-blocks-production/1",
+          "artifacts": [
+            {
+              "slot_id": "d0",
+              "path": "deliverables/output.md",
+              "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "maker_seat": "s2",
+              "family": "family-0",
+              "modality": "text",
+              "items": [
+                {
+                  "slug": "sample-method",
+                  "revision_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                }
+              ],
+              "claims": [],
+              "checks": [
+                {
+                  "id": "useful",
+                  "status": "PASS"
+                }
+              ],
+              "producer_note": "A source-backed recommendation",
+              "budget": {
+                "used": 0,
+                "allowance": 0
+              }
+            }
+          ],
+          "evidence": {
+            "schema": "ai-blocks-evidence/1",
+            "claims": []
+          },
+          "lead_review": {
+            "by_seat": "s2",
+            "status": "PASS",
+            "notes": "Checked against the agreed brief"
+          },
+          "unexpected_field": true
+        }
+      }
+    ]
+  }
+]

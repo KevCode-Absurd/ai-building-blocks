@@ -11,11 +11,13 @@ export type CoordinatorStore = {
  revoke(scope:string,id:string):Promise<boolean>;
  suppressed(scope:string):Promise<string[]>;
  erase(scope:string,id:string,expected:number):Promise<boolean>;
+ deletedCount?(scope:string):Promise<number>;
 };
 type Statement={bind(...values:unknown[]):Statement;first<T>():Promise<T|null>;all<T>():Promise<{results:T[]}>;run():Promise<{meta?:{changes?:number}}>};
 export type CoordinatorDB={prepare(sql:string):Statement;batch(statements:Statement[]):Promise<{meta?:{changes?:number}}[]>};
 export function d1CoordinatorStore(db:CoordinatorDB):CoordinatorStore {
  return {
+  async deletedCount(scope){return (await db.prepare('SELECT COUNT(*) count FROM coordinator_deleted_records WHERE scope=?').bind(scope).first<{count:number}>())?.count??0;},
   async list(scope,business,kind){return(await db.prepare('SELECT v.* FROM coordinator_versions v JOIN (SELECT record_id,MAX(version) latest FROM coordinator_versions WHERE scope=? AND business_id=? AND kind=? GROUP BY record_id) h ON h.record_id=v.record_id AND h.latest=v.version WHERE v.scope=? ORDER BY v.created DESC LIMIT 500').bind(scope,business,kind,scope).all<StoredRecord>()).results;},
   get:(scope,id,version)=>db.prepare(`SELECT * FROM coordinator_versions WHERE scope=? AND record_id=?${version===undefined?' ORDER BY version DESC LIMIT 1':' AND version=?'}`).bind(scope,id,...(version===undefined?[]:[version])).first<StoredRecord>(),
   async request(scope,key){const live=await db.prepare('SELECT * FROM coordinator_versions WHERE scope=? AND request_key=?').bind(scope,key).first<StoredRecord>();if(live)return live;const erased=await db.prepare('SELECT request_digest FROM coordinator_deleted_requests WHERE scope=? AND request_key=?').bind(scope,key).first<{request_digest:string}>();return erased?{deleted:true,...erased}:null;},
@@ -30,6 +32,7 @@ export function d1CoordinatorStore(db:CoordinatorDB):CoordinatorStore {
 export function memoryCoordinatorStore():CoordinatorStore {
  const records:StoredRecord[]=[],shares:StoredShare[]=[],suppressed=new Map<string,Set<string>>(),deleted=new Set<string>(),requests=new Map<string,DeletedRequest>();const marker=(scope:string,id:string)=>JSON.stringify([scope,id]);const clone=<T>(x:T)=>structuredClone(x);
  return {
+  async deletedCount(scope){return [...deleted].filter(marker=>JSON.parse(marker)[0]===scope).length;},
   async list(scope,business,kind){const latest=new Map<string,StoredRecord>();for(const r of records)if(r.scope===scope&&r.business_id===business&&r.kind===kind)latest.set(r.record_id,r);return [...latest.values()].sort((a,b)=>b.created.localeCompare(a.created)).map(clone);},
   async get(scope,id,version){return clone(records.filter(r=>r.scope===scope&&r.record_id===id&&(version===undefined||r.version===version)).at(-1)??null);},
   async request(scope,key){return clone(records.find(r=>r.scope===scope&&r.request_key===key)??requests.get(marker(scope,key))??null);},

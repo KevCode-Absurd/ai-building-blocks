@@ -47,6 +47,7 @@ const PAGES = {
   intake: () => import("./IntakePage"),
   compose: () => import("./ComposePage"),
   teams: () => import("./teams/TeamPage"),
+  councils: () => import("./councils/CouncilPage"),
   info: () => import("./InfoPage"),
 };
 /** Which section's code a link opens, if it isn't the home page or a block. */
@@ -69,6 +70,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
   if (path === "/from-a-source") return "intake";
   if (path === "/compose") return "compose";
   if (path === "/teams") return "teams";
+  if (path === "/councils" || path === "/plan-team") return "councils";
   if (path === "/how-it-works") return "guide";
   return null;
 }
@@ -109,6 +111,7 @@ const AiToolsPage = startupPage(PAGES.aitools);
 const TractionPage = startupPage(PAGES.traction);
 const AppsPage = startupPage(PAGES.apps);
 const TeamPage = startupPage(PAGES.teams,true);
+const CouncilPage = startupPage(PAGES.councils,true);
 const SpacePage = startupPage(PAGES.space);
 const IntakePage = startupPage(PAGES.intake);
 const InfoPage = startupPage(PAGES.info);
@@ -227,7 +230,7 @@ export default function App() {
   // Sign-in, community and calculator pages never show catalogue items. My account names the skills in saved
   // kits, so it waits for kits and then needs only the small list index (4 MB less for most visitors).
   const hasKits = useStore(s => s.kits.length > 0);
-  const needsCatalogue = !infoPage(path) && !isOutcomePath(path) && !["/roles", "/teams", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md", "/train-your-own-ai-agent", "/blog", "/sign-in", "/sign-up", "/community", "/publish", "/my-submissions", "/admin/review"].some((p) => path === p || path.startsWith(`${p}/`)) && (path !== "/account" || hasKits);
+  const needsCatalogue = !infoPage(path) && !isOutcomePath(path) && !["/roles", "/teams", "/councils", "/plan-team", "/ai-tools", "/tools", "/apps", "/how-it-works", "/traction", "/api-and-mcp", "/api-and-mcp.html", "/me-md", "/train-your-own-ai-agent", "/blog", "/sign-in", "/sign-up", "/community", "/publish", "/my-submissions", "/admin/review"].some((p) => path === p || path.startsWith(`${p}/`)) && (path !== "/account" || hasKits);
   const listTier = path === "/" || (path === "/account" && !kitsOpen);
   // Home only lists cards, so it loads the small list index; other catalogue pages need the full file.
   // A first visit to home shows the starter picks; the list index waits until the visitor starts browsing.
@@ -306,6 +309,8 @@ export default function App() {
             <SpacePage path={path} c={c} toast={setToast} />
           ) : path === "/teams" ? (
             <TeamPage toast={setToast} />
+          ) : path === "/councils" || path === "/plan-team" ? (
+            <CouncilPage toast={setToast} />
           ) : path === "/roles" || path.startsWith("/roles/") ? (
             <RolesRoute key={path} path={path} toast={setToast} />
           ) : path === "/minds" ? (

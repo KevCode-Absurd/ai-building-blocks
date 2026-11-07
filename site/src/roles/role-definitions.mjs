@@ -11,6 +11,7 @@ const FOCUSED_ROLES = [
  ? ['An export supports a file review. Live schema, history and saved changes require separate connection checks.','Suggested values remain proposals until the exact changes are accepted.']
  : ['Plans and code sketches do not count as implemented files or passed tests.']}));
 export const FEATURED_ROLES = [
+  {id:'general-coordinator',name:'General coordinator',lead:'advisory-council',area:'operations',resources:['request-acceptance-brief','request-acceptance-checker','task-rubric-drafter','parallel-work-coordinator'],tools:['The user\'s request, context and constraints','The host AI\'s actual tools and specialist agents'],example:'Clarify who the work is for and the job they need done. Agree the rubric, choose a task lead and a team, chair the council and check the final delivery.',remit:{summary:'Turn a request into a clear job, a team and a checked delivery.',inputs:['The user\'s own request','The audience, constraints and available context'],deliverables:['An agreed job brief and measurable rubric','A task lead and a team chosen for this request','A decision record and checked delivery'],fit:['You want a team chosen around the job rather than a fixed department.'],limits:['Runs in your own AI and cannot grant new tool access.','The coordinator never makes or independently judges the same work.'],capabilities:[{name:'Scope the job',description:'Clarify the user, the job to be done and the acceptance criteria.'},{name:'Choose the team',description:'Select a task lead and specialists for this request.'},{name:'Chair and check',description:'Record decisions and check the final delivery against the rubric.'}]}},
   {id:'coding-specialist',name:'Coding specialist',lead:'turn-an-idea-into-a-spec-tickets-and-tested-code',area:'engineering',resources:['screenshot-to-interface-builder','agency-engineering-frontend-developer','agency-engineering-software-architect','agency-engineering-code-reviewer','accessibility-checker','find-what-is-slow-fix-it-and-show-the-numbers'],tools:['Project files and a terminal','A browser for interface checks'],example:'Build the feature in my project. Start with a short spec, make the change, run the relevant checks and hand back the code and test results.'},
   {id:'design-specialist',name:'Design specialist',lead:'write-design-rules-check-colours-and-hand-developers-a-spec',area:'design',resources:['screenshot-to-interface-builder','agency-design-ui-designer','agency-design-ux-researcher','agency-design-ui-finish-gate-reviewer','accessibility-checker','build-and-test-a-page-on-a-clear-type-and-grid'],tools:['Design files or a rendered page','A browser for layout and accessibility checks'],example:'Turn my product brief into a clear screen design and a developer handoff. Include all states, mobile behavior and checks against the brief.'},
   {id:'executive-assistant',name:'Executive assistant',lead:'prepare-your-executive-day',area:'operations',resources:['status-report-writer','executive-work-keeper','prepare-your-weekly-executive-review','executive-meeting-brief','executive-email-draft','executive-action-register','turn-meetings-into-owned-actions'],tools:['Your notes and task list','Calendar or email access only when you choose to connect it'],example:'Prepare my day from the notes, meetings and deadlines I supply. Give me a daily brief, meeting preparation, an action list and follow-up drafts.'},
@@ -55,6 +56,32 @@ export function roleSeeds(blocks) {
   return {id,name,lead:b.slug,area:areaOf(b),resources:[],tools:[],featured:false};
  });
  return [...featured,...rest];
+}
+/** Add team references without changing the compact pack's resources. Facets
+ * come from authored family mappings and the existing lead's declared role. */
+export function roleTeamFacets({profile,lead,approaches={jobs:{}},manifest={resources:{}},blocks=[]}) {
+ const resources=profile.resources??[],core=resources.map(resource=>({slug:resource.slug,revision_sha256:resource.revision}));
+ const owned=new Set(resources.filter(resource=>!resource.onboarding&&!resource.reviewer).map(resource=>resource.slug));
+ const matches=Object.entries(approaches.jobs??{}).flatMap(([job,value])=>(value.families??[]).filter(family=>(family.lead_roles??[]).includes(profile.id)||(family.items??[]).some(slug=>owned.has(slug))).map(family=>({job,family})));
+ const department=profile.area??'specialist',families=[...new Set(matches.map(({family})=>family.id))].sort();
+ // blocks.json omits the default `make` role to keep its wire format small.
+ const declared=lead.role??'make';
+ const suitability=declared==='check'?['critic','red_team','fact_checker','judge']:declared==='orchestrate'||lead.category==='orchestrator'?['coordinator','strategist']:['make','render'].includes(declared)?['maker',...(['workflow','agent','routine'].includes(lead.type)?['strategist']:[])]:['strategist'];
+ const bySlug=new Map(blocks.map(block=>[block.slug,block]));
+ const methodRoles=resources.filter(resource=>!resource.onboarding&&!resource.reviewer).flatMap(resource=>bySlug.has(resource.slug)?[bySlug.get(resource.slug).role??'make']:[]);
+ if(profile.id!=='general-coordinator') {
+  if((declared!=='check'&&['workflow','agent','routine'].includes(lead.type))||methodRoles.some(role=>role==='make'||role==='render'))suitability.push('maker');
+  if(methodRoles.includes('check'))suitability.push('critic','red_team','fact_checker','judge');
+  if(methodRoles.includes('orchestrate'))suitability.push('strategist');
+ }
+ const defaultLenses=declared==='check'?['sceptic','craft']:declared==='orchestrate'||lead.category==='orchestrator'?['operator']:['craft'];
+ const lenses=[...new Set(defaultLenses.concat(matches.flatMap(({family})=>family.lenses??[])))].sort();
+ const all=[...new Set(core.map(row=>row.slug).concat(matches.flatMap(({family})=>['items','pickers','checks','tool_guides','supporting_items'].flatMap(field=>family[field]??[]))))].sort();
+ const extended=all.flatMap(slug=>{
+  const revision=manifest.resources?.[slug]?.revision_sha256??resources.find(row=>row.slug===slug)?.revision;
+  return revision?[{slug,revision_sha256:revision,families:matches.filter(({family})=>['items','pickers','checks','tool_guides','supporting_items'].some(field=>(family[field]??[]).includes(slug))).map(({family})=>family.id),kind:bySlug.get(slug)?.type??'skill'}]:[];
+ });
+ return {job:lead.task,department,families,lenses,seat_suitability:[...new Set(suitability)],core,extended,palette_status:families.length?'SOURCE_MAPPED':'NEEDS_APPROACH_MAPPING'};
 }
 // An agency agent and the role built on it are one job on two pages (/agents/agency-x and /roles/x). The role page
 // is the fuller one, so the agent page names it as its canonical address and stays out of the sitemap.

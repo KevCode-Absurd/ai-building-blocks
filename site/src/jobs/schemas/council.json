@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-council/1.json",
+  "title": "ai-blocks-council/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-council/1"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "routes",
+        "spread",
+        "directions"
+      ]
+    },
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "owner_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 12000
+          }
+        },
+        "required": [
+          "label",
+          "ref",
+          "owner_seat",
+          "file"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 12
+    },
+    "critiques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "by_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "on": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "strongest_point": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "flaw_quote": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "flaw": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 4000
+          },
+          "would_change_mind_if": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "by_seat",
+          "on",
+          "strongest_point",
+          "flaw_quote",
+          "flaw",
+          "would_change_mind_if"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 300
+    },
+    "red_team": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pass": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2
+          },
+          "against": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "case": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "for_weakest": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "case_for": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "by_seat": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          }
+        },
+        "required": [
+          "pass",
+          "against",
+          "case",
+          "for_weakest",
+          "case_for"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 10
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "change": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "label",
+          "change"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "ranking": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "const": "borda"
+        },
+        "ballots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "by_seat": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "order": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                },
+                "minItems": 1,
+                "maxItems": 12,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "by_seat",
+              "order"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 30
+        },
+        "result": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "method",
+        "ballots",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "chosen": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "dissent": {
+          "type": "object",
+          "properties": {
+            "by_seat": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+            },
+            "verbatim": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            }
+          },
+          "required": [
+            "by_seat",
+            "verbatim"
+          ],
+          "additionalProperties": false
+        },
+        "alternative_wins_if": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "condition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "label",
+              "condition"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "option_cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "option_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "from": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "pitch": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "rerun": {
+                "type": "object",
+                "properties": {
+                  "tool": {
+                    "const": "start_job"
+                  },
+                  "args": {
+                    "type": "object",
+                    "properties": {
+                      "from_option": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 120,
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                      }
+                    },
+                    "required": [
+                      "from_option"
+                    ],
+                    "additionalProperties": true
+                  }
+                },
+                "required": [
+                  "tool",
+                  "args"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "option_id",
+              "from",
+              "pitch",
+              "rerun"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 12
+        },
+        "killed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "idea": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            },
+            "required": [
+              "idea",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "chosen",
+        "why",
+        "alternative_wins_if",
+        "option_cards",
+        "killed"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DECIDED",
+        "CONSENSUS_UNTESTED"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "subject",
+    "proposals",
+    "critiques",
+    "red_team",
+    "revisions",
+    "ranking",
+    "decision",
+    "status"
+  ],
+  "additionalProperties": false
+}

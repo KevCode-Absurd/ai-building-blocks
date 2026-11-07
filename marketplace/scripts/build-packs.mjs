@@ -216,6 +216,8 @@ function writeShared(url, content) {
   else if (before !== content) fatal(`two packs need different text at ${url}; the builder should give them different paths`);
 }
 
+writeAt("/packs/coordinator/TEAM.md", readFileSync(path.join(PACKS, "coordinator/TEAM.md"), "utf8"));
+
 // Each ready role kit once, as it stands (text files with LF endings and a final newline, as packs carry them).
 for (const [roleId, files] of kitFilesAsTheyStand) {
   for (const [p, text] of Object.entries(files)) writeShared(`/packs/roles/${roleId}/${p}`, normalizeText(text));

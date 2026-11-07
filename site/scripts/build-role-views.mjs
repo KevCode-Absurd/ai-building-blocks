@@ -4,7 +4,7 @@ const folder=new URL('data/role-views/',publicDir);await fs.mkdir(folder,{recurs
 for(const row of index.roles){
  const profilePath='/data/roles/'+row.id+'.json',bytes=await fs.readFile(new URL(profilePath.slice(1),publicDir)),proof=index.profiles[row.id],hash=createHash('sha256').update(bytes).digest('hex');
  if(bytes.length!==proof.bytes||hash!==proof.sha256)throw Error('Source profile changed: '+row.id);
- const {worker,instructions,...fields}=JSON.parse(bytes);
+ const {worker,instructions,core,extended,...fields}=JSON.parse(bytes);
  if(fields.id!==row.id||!worker)throw Error('Incomplete source profile: '+row.id);
  const view={...fields,schema:'ai-blocks-role-view/1',sourceProfile:{path:profilePath,bytes:bytes.length,sha256:hash}};
  const text=JSON.stringify(view),file=new URL(row.id+'.json',folder);if(await fs.readFile(file,'utf8').catch(()=>null)!==text)await fs.writeFile(file,text);

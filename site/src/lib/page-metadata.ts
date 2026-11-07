@@ -46,6 +46,10 @@ headObserver.observe(document.head, { childList: true, subtree: true, characterD
 /** Static HTML and SPA navigation share one small build-generated route record. */
 export function syncPageMetadata(input: string) {
   const path = normalize(input), controller = new AbortController();
+  if (path === '/councils' || path === '/plan-team') {
+    apply({ title: 'Build your council · AI Blocks', description: 'Choose a task lead and specialists, set your rubric, map their handoffs, and explore three different routes before your AI makes the work.', canonical: SITE + '/councils', robots: 'noindex, nofollow', graph: null }, path);
+    return () => controller.abort();
+  }
   if (path.startsWith('/community/')) {
     apply({ title: 'Community skill or workflow · AI Blocks', description: 'Read a reviewed community submission and inspect its complete files before use.', canonical: SITE + path, robots: 'noindex, nofollow', graph: null }, path);
     return () => controller.abort();

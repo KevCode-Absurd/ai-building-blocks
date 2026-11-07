@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "index": "node scripts/build-dither-css.mjs && node scripts/build-index.mjs && node scripts/build-starter-index.mjs && node scripts/build-list-index.mjs && node scripts/build-item-index.mjs && node scripts/build-library-search.mjs && node scripts/build-ai-tools.mjs && node ../tools/build-mini-tool.mjs && node scripts/build-public-api.mjs && node scripts/build-skill-assets.mjs && node scripts/build-roles.mjs && node scripts/build-role-views.mjs && node scripts/build-base-specialist-packs.mjs && node ../tools/check-masking.mjs",
+    "index": "node scripts/build-dither-css.mjs && node scripts/build-index.mjs && node scripts/build-starter-index.mjs && node scripts/build-list-index.mjs && node scripts/build-item-index.mjs && node scripts/build-library-search.mjs && node scripts/build-ai-tools.mjs && node ../tools/build-mini-tool.mjs && node scripts/build-public-api.mjs && node scripts/build-skill-assets.mjs && node ../tools/build-approaches.mjs && node scripts/build-roles.mjs && node ../marketplace/scripts/build-seat-briefs.mjs && node scripts/build-team-mode.mjs && node scripts/build-role-views.mjs && node scripts/build-base-specialist-packs.mjs && node ../tools/check-masking.mjs",
     "dev": "npm run index && vite",
     "build": "npm run index && node scripts/build-icons.mjs && tsc -b && vite build && node scripts/prerender.mjs && node scripts/build-usability-help.mjs && node scripts/build-home-initial-shell.mjs && node scripts/build-item-first-paint.mjs && node scripts/stamp-content.mjs",
     "preview": "vite preview",

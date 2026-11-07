@@ -83,7 +83,7 @@ function docsOf(index){
 }
 /** Every matching role with its score, best first. Owners come first: coding and engineering roles sit lower
  *  unless the task is a developer's (SPECIALIST_REQUEST) or an engineering area was chosen. */
-export function rankRoles(index,task,area='all') {
+export function rankRoles(index,task,area='all',options={}) {
  const terms=words(task);if(!terms.length)return [];
  const preferred=artifactIntent(task)??intents.find(([pattern])=>pattern.test(task))?.[1];
  const synonyms=ownerSynonyms(task,expand(terms)),boost=new Set(AREA_INTENTS.filter(([,pattern])=>pattern.test(task)).map(([id])=>id));
@@ -92,7 +92,7 @@ export function rankRoles(index,task,area='all') {
  const all=[...new Set([...terms,...[...synonyms.values()].flat()])];
  const frequency=new Map(all.map(t=>[t,docs.filter(d=>d.fields.some(f=>f.includes(t))).length]));
  const weigh=(t,fields,factor)=>Math.log(1+docs.length/(1+frequency.get(t)))*fields.reduce((n,f,i)=>n+(f.includes(t)?[8,2,2,1.5][i]:0),0)*factor;
- return docs.map(({r,fields})=>{
+ const ranked=docs.map(({r,fields})=>{
   const matched=terms.filter(t=>fields.some(f=>f.includes(t))||synonyms.get(t).some(x=>fields.some(f=>f.includes(x))));
   // A hired job title counts a little, and does not reduce coverage when absent.
   let score=matched.reduce((n,t)=>n+Math.max(weigh(t,fields,1),...synonyms.get(t).map(x=>weigh(x,fields,0.7)))*(hired.has(t)?0.25:1),0);
@@ -103,9 +103,24 @@ export function rankRoles(index,task,area='all') {
   if(r.id===preferred&&matched.length)score+=1000;
   return {role:r,matched,score};
  }).filter(r=>r.matched.length&&r.score>0).sort((a,b)=>b.score-a.score||a.role.id.localeCompare(b.role.id));
+ return options.diverse?rerankDiverse(ranked,options):ranked;
+}
+/** Maximal marginal relevance over declared facets. No embeddings or calls. */
+export function rerankDiverse(rows,{lambda=0.6,limit=rows.length}={}) {
+ if(!rows.length)return [];
+ const weight=Math.max(0,Math.min(1,Number.isFinite(lambda)?lambda:0.6));
+ const facets=role=>new Set([...(role.families??[]).map(value=>'family:'+value),...(role.lenses??[]).map(value=>'lens:'+value),'department:'+(role.department??role.area??'unknown'),...(!role.families?.length&&role.family?['family:'+(typeof role.family==='string'?role.family:role.family.id)]:[])]);
+ const similarity=(a,b)=>{const left=facets(a),right=facets(b);let overlap=0;for(const value of left)if(right.has(value))overlap++;return overlap/(left.size+right.size-overlap||1);};
+ const max=Math.log1p(Math.max(...rows.map(row=>row.score),1)),remaining=[...rows],selected=[];
+ while(remaining.length&&selected.length<limit) {
+  const score=row=>weight*(Math.log1p(row.score)/max)-(1-weight)*(selected.length?Math.max(...selected.map(chosen=>similarity(row.role,chosen.role))):0);
+  remaining.sort((a,b)=>score(b)-score(a)||b.score-a.score||a.role.id.localeCompare(b.role.id));
+  selected.push(remaining.shift());
+ }
+ return selected;
 }
 /** A role that covers every word of the task (or a synonym): a strong match, not a passing one. */
 export const isStrongRoleMatch=(row,task)=>row.matched.length===words(task).length;
-export function rankSpecialists(index,task,limit=5,area='all') {
- return rankRoles(index,task,area).slice(0,limit).map(({role,matched,score})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,score:Math.round(score*10)/10,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
+export function rankSpecialists(index,task,limit=5,area='all',options={}) {
+ return rankRoles(index,task,area,options).slice(0,limit).map(({role,matched,score})=>({id:role.id,name:role.name,summary:role.summary,area:role.area,deliverables:role.deliverables,matched_terms:matched,score:Math.round(score*10)/10,uri:`aiblocks://roles/${role.id}`,url:`https://useaiblocks.com/roles/${role.id}`}));
 }

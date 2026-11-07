@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://useaiblocks.com/api/v1/schemas/ai-blocks-job-preferences/1.json",
+  "title": "ai-blocks-job-preferences/1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ai-blocks-job-preferences/1"
+    },
+    "owner_scope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000000
+    },
+    "general": {
+      "type": "object",
+      "properties": {
+        "variety_mix": {
+          "type": "object",
+          "properties": {
+            "preset": {
+              "type": "string",
+              "enum": [
+                "focused",
+                "balanced",
+                "wide",
+                "custom"
+              ]
+            },
+            "proven": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "new": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "outlier": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "proven",
+            "new",
+            "outlier"
+          ],
+          "additionalProperties": false
+        },
+        "families": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "you_choose"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+              },
+              "minItems": 1,
+              "maxItems": 60,
+              "uniqueItems": true
+            },
+            {
+              "type": "object",
+              "properties": {
+                "prefer": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "avoid": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120,
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                  },
+                  "minItems": 0,
+                  "maxItems": 100,
+                  "uniqueItems": true
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "decision_style": {
+          "type": "string",
+          "enum": [
+            "one_path_plus_options",
+            "options_to_compare",
+            "compare_options"
+          ]
+        },
+        "depth": {
+          "type": "string",
+          "enum": [
+            "quick",
+            "standard",
+            "deep"
+          ]
+        },
+        "modalities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          },
+          "minItems": 1,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "risk": {
+          "type": "string",
+          "enum": [
+            "conservative",
+            "normal",
+            "bold"
+          ]
+        },
+        "show_debate": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "full_minutes"
+          ]
+        },
+        "ask_before_start": {
+          "type": "string",
+          "enum": [
+            "ask_first_time_per_job_type",
+            "use_defaults_silently",
+            "ask_dials",
+            "use_defaults"
+          ]
+        },
+        "proven_pool": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "family": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "updated": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              }
+            },
+            "required": [
+              "family",
+              "evidence",
+              "updated"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 300
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "by_job_type": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "variety_mix": {
+            "type": "object",
+            "properties": {
+              "preset": {
+                "type": "string",
+                "enum": [
+                  "focused",
+                  "balanced",
+                  "wide",
+                  "custom"
+                ]
+              },
+              "proven": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "new": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "outlier": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "proven",
+              "new",
+              "outlier"
+            ],
+            "additionalProperties": false
+          },
+          "families": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "you_choose"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                },
+                "minItems": 1,
+                "maxItems": 60,
+                "uniqueItems": true
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "prefer": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120,
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                    },
+                    "minItems": 0,
+                    "maxItems": 100,
+                    "uniqueItems": true
+                  },
+                  "avoid": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 120,
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+                    },
+                    "minItems": 0,
+                    "maxItems": 100,
+                    "uniqueItems": true
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "volume": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "decision_style": {
+            "type": "string",
+            "enum": [
+              "one_path_plus_options",
+              "options_to_compare",
+              "compare_options"
+            ]
+          },
+          "depth": {
+            "type": "string",
+            "enum": [
+              "quick",
+              "standard",
+              "deep"
+            ]
+          },
+          "modalities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+            },
+            "minItems": 1,
+            "maxItems": 20,
+            "uniqueItems": true
+          },
+          "risk": {
+            "type": "string",
+            "enum": [
+              "conservative",
+              "normal",
+              "bold"
+            ]
+          },
+          "show_debate": {
+            "type": "string",
+            "enum": [
+              "summary",
+              "full_minutes"
+            ]
+          },
+          "ask_before_start": {
+            "type": "string",
+            "enum": [
+              "ask_first_time_per_job_type",
+              "use_defaults_silently",
+              "ask_dials",
+              "use_defaults"
+            ]
+          },
+          "proven_pool": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "family": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "pattern": "^[a-z0-9][a-z0-9-]{0,119}$"
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "updated": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                }
+              },
+              "required": [
+                "family",
+                "evidence",
+                "updated"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "maxItems": 300
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "maxProperties": 200
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T"
+          },
+          "change": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "by": {
+            "type": "string",
+            "enum": [
+              "owner_answer",
+              "feedback",
+              "explicit_edit"
+            ]
+          },
+          "job_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,119}$"
+          }
+        },
+        "required": [
+          "at",
+          "change",
+          "by"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 50
+    }
+  },
+  "required": [
+    "schema",
+    "owner_scope",
+    "version",
+    "general",
+    "by_job_type",
+    "history"
+  ],
+  "additionalProperties": false
+}

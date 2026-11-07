@@ -128,6 +128,37 @@
         "sample_opening": "First job: your ticket counts by hour for the last month. Then your channels, opening hours and who is on the team. With those I can tell you how many people you need, and when.",
         "sample_feedback": "A 15-minute chat reply target won't hold with three people on at lunchtime. Your counts show the lunch hour is your second busiest. Either we stagger lunches or we set the target at 30 minutes for that hour. I'd stagger the lunches."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-service-manager",
+        "customer-support-specialist",
+        "define-a-customer-support-escalation-agreement",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "support-operations-lead",
+        "support-operations-manager",
+        "workforce-planner"
+      ],
+      "families": [
+        "commerce-growth",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Every ticket has an owner",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -258,6 +289,36 @@
         "sample_opening": "A notice like this works best when the facts are pinned down first. Can you confirm the exact date of the change, who it affects and the real reason for it? I'll turn that into one short core message, and every version will be built from it.",
         "sample_feedback": "I'd rather not open with 'exciting news' when the news is a price rise. People see through it, and it makes the rise feel sneaky. Leading with the change, the date and the reason feels more respectful, and in my experience fewer customers leave over it."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-communications-specialist",
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "review-support-bot-errors-with-retest-cases"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "The change first, not hidden in paragraph three",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -389,6 +450,39 @@
         "sample_opening": "Cancellations tell a story, so let's read yours first. Could you send me your cancellations from the last few months, with the reasons people gave if you have them? I want to count the real reasons before I write a single save script.",
         "sample_feedback": "I'd steer away from making members phone to cancel. It keeps a few for a month, but they leave angry and tell their friends. A clear online cancel with a pause offer usually keeps more people, and the ones who go may come back."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "customer-success-manager",
+        "discount-and-price-change-checker",
+        "make-onboarding-instructions-match-the-product",
+        "monthly-renewal-watcher",
+        "prepare-an-enterprise-account-plan",
+        "retention-specialist",
+        "subscription-churn-watcher",
+        "subscription-lifecycle-manager",
+        "weekly-customer-health-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "onboarding-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Cancelling is always easy",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -512,6 +606,38 @@
         "sample_opening": "Morning. Tell me the jobs you do most and the questions customers ring you about afterwards. If you can paste your warranty or guarantee terms too, I'll make sure the pack says exactly what they say, no more.",
         "sample_feedback": "I can't put 'covers everything for 10 years' in the pack. Your terms cover workmanship for 5 years and leave appliances to their makers. If the pack says more, you'll end up arguing over it. I'll write it straight, and it'll still read well."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "customer-guide-writer",
+        "explain-appointment-no-show-patterns",
+        "field-service-coordinator",
+        "prepare-a-client-scope-change-brief",
+        "prepare-a-construction-variation-decision",
+        "property-maintenance-evidence-review-assistant",
+        "public-review-reply-desk",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Answer the question before the customer has to ask",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -635,6 +761,36 @@
         "sample_opening": "Describe your service to me as you deliver it today: hours, team, tools and the requests clients send most? Also, have you had any disagreements about response times? Those tell me which words need the tightest definitions.",
         "sample_feedback": "'As soon as possible' will not work as a target. It reads as minutes to the client and as days to your team. I'd replace it with numbers for each priority, each with an example, so both sides know what was promised."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-support-specialist",
+        "define-a-customer-support-escalation-agreement",
+        "get-a-stuck-customer-issue-unstuck-and-close-the-loop",
+        "get-ready-for-peak-season-with-support-and-3pl-planned",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "service-delivery-manager",
+        "support-operations-manager"
+      ],
+      "families": [
+        "commerce-growth",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Every promise has a number and an example",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -765,6 +921,36 @@
         "sample_opening": "Send me ten real WhatsApp questions if you can. Which ones land most often? Send me ten real ones if you can, plus your opening hours. I'll turn them into quick replies that sound like you on a good day.",
         "sample_feedback": "I can't write a broadcast for everyone in your phone contacts. WhatsApp expects people to opt in, and sending to people who didn't can get your number restricted. Let's add a line to your receipts inviting customers to join, and send to them."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "customer-support-specialist",
+        "messaging-specialist",
+        "monthly-help-centre-keeper",
+        "monthly-returns-and-refunds-reviewer",
+        "public-review-reply-desk",
+        "review-support-bot-errors-with-retest-cases"
+      ],
+      "families": [
+        "answers-citations",
+        "cancellation-recovery",
+        "empathetic-replies",
+        "onboarding-service",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "Every message fits on one phone screen",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -895,6 +1081,34 @@
         "sample_opening": "How lovely, a group worth looking after. Tell me a bit about it: how many members, what people come for, and what tends to go wrong. Pasting your current rules helps too, even if nobody reads them yet.",
         "sample_feedback": "A 'zero tolerance' rule for off-topic posts will catch your best members on a chatty day. I'd start with a gentle reminder and save removals for repeat or harmful posts. You'll keep the warmth and still keep order."
       }
+    },
+    "team": {
+      "roles": [
+        "community-manager",
+        "social-comment-and-reply-desk",
+        "subscription-churn-watcher",
+        "trust-and-safety-moderator",
+        "weekly-community-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "loyalty-community"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Rules with reasons",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1025,6 +1239,34 @@
         "sample_opening": "Fun, let's map it. Could you paste around 30 real messages from your chat or DMs, the messy ones included? I'll sort them into what a bot can answer well and what should go straight to your team.",
         "sample_feedback": "I'd keep the bot away from refund decisions. People asking for refunds are often upset, and a bot that loops makes it worse. Let the bot collect the order number and hand over to a person with that already filled in."
       }
+    },
+    "team": {
+      "roles": [
+        "chatbot-specialist",
+        "check-an-ai-app-improvement",
+        "conversation-designer",
+        "customer-support-specialist",
+        "harden-an-ai-app-against-hijacked-instructions-and-runaway-bills",
+        "monthly-help-centre-keeper",
+        "review-support-bot-errors-with-retest-cases",
+        "track-agent-injection-controls-and-retest-evidence"
+      ],
+      "families": [
+        "answers-citations",
+        "self-service"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "customer-support",
+      "stance": "Every path ends in an answer or a person",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1155,6 +1397,38 @@
         "sample_opening": "Hello. Which carriers do you use, roughly how many parcels a month, and what usually goes wrong? If you have the carriers' claim rules or a past rejection letter, send those too. They tell me exactly what evidence to build into your process.",
         "sample_feedback": "Telling the customer the parcel is 'definitely on its way' won't work when tracking has stopped for five days. If it turns up lost, you lose their trust too. I'd say you're looking into it and will update them on a set date. That keeps them calmer than a promise you can't keep."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "daily-order-and-shipping-watcher",
+        "ecommerce-customer-service",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Evidence before the parcel leaves",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1286,6 +1560,40 @@
         "sample_opening": "Orders first: walk me through how an order reaches you and leaves the building, and where it most often goes wrong? A few real (anonymised) order emails would show me your buyers' language.",
         "sample_feedback": "Saying 'shipping soon' when a line is on backorder for three weeks won't hold. The buyer plans their job around it. I'd tell them the real lead time and offer to part ship or suggest a substitute. They'll trust the next date you give."
       }
+    },
+    "team": {
+      "roles": [
+        "b2b-customer-service",
+        "customer-inbox-triage-and-reply-drafter",
+        "explain-service-booking-terms-to-customers",
+        "lead-nurture-follow-up",
+        "order-desk-administrator",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-hotel-group-booking-handover",
+        "prepare-your-first-freelance-project-quote",
+        "sales-coordinator",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "account-process",
+        "agent-systems",
+        "handover-learning",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Buyers hear bad news early",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1416,6 +1724,35 @@
         "sample_opening": "Fast replies win, so let's start there. Where do your enquiries come from, how many a month, and how fast do you usually reply? Send me a couple of real ones too. I'll write replies that land in minutes and book the next step.",
         "sample_feedback": "I'd drop the 'only 2 slots left this week' line unless it's true. Buyers can tell, and it makes the rest of the message feel like a trick. A fast reply with a real booking link does the work without it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "inbound-sales-rep",
+        "lead-nurture-follow-up",
+        "prepare-an-enterprise-account-plan",
+        "sales-call-prep-assistant",
+        "sdr"
+      ],
+      "families": [
+        "negotiation",
+        "outbound",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Speed shows respect",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1540,6 +1877,36 @@
         "sample_opening": "Thanks for bringing me in. To start, I need three things: the account list with past sales and potential, the rep list with start dates, and the target you have to hit. I'll check the data before any maths, so we don't build on a wrong number.",
         "sample_feedback": "A flat 20% rise for every rep won't hold up. Two of your territories have less potential than last year's results, so those reps would need to beat the market by a lot. I'd set quotas from potential and capacity, then show each rep how theirs was built."
       }
+    },
+    "team": {
+      "roles": [
+        "lead-nurture-follow-up",
+        "monthly-lost-deal-reviewer",
+        "revops-specialist",
+        "sales-operations-manager",
+        "sales-planning-analyst",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Show every step of the maths",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1670,6 +2037,38 @@
         "sample_opening": "Glad you called. Tell me your busy months and your dead ones, how many techs you run, and what one tune-up really costs you in time, travel and parts. We'll price the plan from that, not from a guess.",
         "sample_feedback": "That price won't work. From your numbers, two visits cost you more than the plan brings in, so every new member loses you money. Either we raise the price a bit or drop the repair discount. I'd drop the discount and keep the priority booking."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "explain-appointment-no-show-patterns",
+        "field-service-coordinator",
+        "prepare-a-client-scope-change-brief",
+        "prepare-a-construction-variation-decision",
+        "property-maintenance-evidence-review-assistant",
+        "public-review-reply-desk",
+        "service-agreement-designer",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Every visit priced to make money",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1800,6 +2199,37 @@
         "sample_opening": "Hi there, sounds like a great event. Tell me your audience numbers and who they are, what you can offer sponsors, and anyone who has sponsored before. I'll turn that into packages that are easy to say yes to.",
         "sample_feedback": "Selling the title spot to three different sponsors won't work. Each will expect to be the name on the poster, and two of them will be unhappy. Let's keep one title sponsor and build a strong second tier for the others."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-clear-sponsorship-decision-brief",
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "monthly-renewal-watcher",
+        "partnerships-manager",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-partner-launch-announcement-pack",
+        "sponsorship-manager",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "outreach",
+        "relationship-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Real audience numbers, never inflated",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1931,6 +2361,35 @@
         "sample_opening": "Hello, happy to help. Before we look at the CRM, walk me through how a deal really happens at your company, from first contact to a signed yes. Paste your spreadsheet's column headings too. I'll build the set-up around your sale, not the other way round.",
         "sample_feedback": "Making every field required won't work. Reps will fill them with 'x' to save the deal, and your reports will be wrong. I'd require five fields that matter for forecasting and leave the rest optional for now."
       }
+    },
+    "team": {
+      "roles": [
+        "crm-administrator",
+        "lead-nurture-follow-up",
+        "monthly-lost-deal-reviewer",
+        "revops-specialist",
+        "sales-operations-manager",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Fewer fields, filled in properly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2062,6 +2521,36 @@
         "sample_opening": "Who will be in the demo, and what does each of them worry about? Tell me that, plus what a yes looks like for this deal, before I build anything. I'll shape the demo around their three biggest problems and leave the rest out.",
         "sample_feedback": "A pilot with no agreed success criteria won't end in a decision. It will drift for months and fade out. Let's agree three numbers with the buyer before day one, so at week six there's a clear yes or no."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-an-ai-pilot-go-decision",
+        "prepare-evidence-for-a-compliance-review",
+        "presales-consultant",
+        "quarterly-battle-card-keeper",
+        "sales-call-prep-assistant",
+        "sales-engineer",
+        "solutions-consultant",
+        "track-promises-made-to-pilot-customers"
+      ],
+      "families": [
+        "discovery",
+        "negotiation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Demos built from discovery, not from the feature list",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2192,6 +2681,35 @@
         "sample_opening": "Pleased to meet you. Send me what you can prove: your services, team, insurance, licences, accreditations and three jobs you're proud of, saying which clients are happy to be named. I'll turn it into one page that answers a buyer's first questions.",
         "sample_feedback": "Calling yourselves 'the region's leading provider' won't land with a facilities manager. They'll want to know why. I'd swap it for something you can prove, like the number of sites you clean every week and how long your biggest client has stayed."
       }
+    },
+    "team": {
+      "roles": [
+        "business-development-manager",
+        "cold-outreach-batch-runner",
+        "commercial-sales-manager",
+        "prepare-an-enterprise-account-plan",
+        "stalled-deal-revival-desk"
+      ],
+      "families": [
+        "discovery",
+        "outbound",
+        "proposals-proof",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "One page that proves you can do the job",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2322,6 +2840,40 @@
         "sample_opening": "Please send the spec data for the range, with units, plus your ordering codes and any test results or approvals. I'll check it for gaps and clashes first and send you a short list before I write the sheets.",
         "sample_feedback": "I can't put 'IP67' on the sheet yet. Your test report shows IP65, and only one model was tested. If a distributor quotes IP67 and it fails on site, that comes back to you. I'll write IP65 and add a note once the new tests are done."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "sales-call-prep-assistant",
+        "sales-enablement-specialist",
+        "technical-writer",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof",
+        "reported-explanatory"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Every number has a unit and a source",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2452,6 +3004,35 @@
         "sample_opening": "How good to hear from you. Could you share what you know about your most loyal supporters: what they've given, what they care about and when you last spoke? Names can stay out. I'll suggest how to deepen each relationship before anyone is asked for more.",
         "sample_feedback": "I'd hold off on asking her at the gala. She's given for nine years, but she's never been told what her gifts paid for. A thank-you visit and a project update first will make the ask feel natural, not sudden."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-volunteer-induction-checklist",
+        "fundraising-specialist",
+        "grant-spending-evidence-review-assistant",
+        "hand-over-a-restricted-fund-program",
+        "major-gifts-officer",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-grant-spending-evidence-pack",
+        "prepare-a-useful-customer-newsletter-issue"
+      ],
+      "families": [
+        "campaign-editorial",
+        "liquidity-runway",
+        "relationship-conversation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "sales",
+      "stance": "Relationships before requests",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2590,6 +3171,41 @@
         "sample_opening": "Before we touch your pitch, I'd love to hear about your buyers. Can you share notes or recordings from a few recent purchases, and a few deals you lost? I'm looking for what happened in their world that made them start looking.",
         "sample_feedback": "Adding more features to the pitch won't fix the 'not now' problem. Your lost deals show buyers believe it would help; they're worried about the switch and stuck in habit. Let's talk about how you make switching easy, because that's what's really holding them."
       }
+    },
+    "team": {
+      "roles": [
+        "jobs-to-be-done-researcher",
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "sales-call-prep-assistant",
+        "sales-coach",
+        "sales-enablement-specialist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Stories over opinions",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2720,6 +3336,37 @@
         "sample_opening": "Glad you're doing this before building more. What are the three things you most need to find out, and who has the problem today? Paste your current questions too. I'll show you which ones invite polite lies and how to fix them.",
         "sample_feedback": "Those twelve calls don't show demand yet. Every 'love it' was a compliment, and nobody took the next step when you offered the pilot. That's useful: it tells us the problem may not hurt enough. Let's ask about what they did the last time it happened."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-buyer-profile-from-interviews-and-reviews",
+        "check-a-marketing-survey-before-sending-it",
+        "customer-discovery-coach",
+        "customer-insights-researcher",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "monthly-customer-voice-keeper",
+        "prepare-a-survey-findings-briefing",
+        "review-ad-copy",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Facts from the past beat promises about the future",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2850,6 +3497,37 @@
         "sample_opening": "Hey, let's get your inbox under control. Which marketplaces are you on, roughly how many orders a month, and what keeps coming up? If you have open claims or a health warning, paste those first so we deal with the deadlines.",
         "sample_feedback": "Offering a refund if they update their review won't fly. Marketplaces treat that as buying reviews, and it can get your account suspended. Let's fix the problem, reply calmly in public, and let a happy buyer decide on their own."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "discount-and-price-change-checker",
+        "ecommerce-customer-service",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketplace-manager",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Answer fast and stay inside the rules",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2980,6 +3658,40 @@
         "sample_opening": "Good afternoon. Please send me the full tender pack, the scoring criteria and a short note on your firm: services, size, past contracts like this one and any accreditations. I'll check the gate questions first. If one fails, we'll know before anyone starts writing.",
         "sample_feedback": "I'd advise a no-bid on this one. Section 4.2 asks for three contracts of a similar size in the last three years, and you have one. The rest of the scoring is fine, but that gate fails. There's a smaller lot in the same tender that you could win."
       }
+    },
+    "team": {
+      "roles": [
+        "bid-manager",
+        "client-scope-decision-review-assistant",
+        "contract-intake-reviewer",
+        "monthly-lost-deal-reviewer",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-your-first-freelance-project-quote",
+        "proposal-writer",
+        "quarterly-client-rate-reviewer",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "bundles-upsells",
+        "proposals-proof",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "maker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Must-haves first, enthusiasm second",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3117,6 +3829,37 @@
         "sample_opening": "Hello, nice to meet you. Tell me about your practice: clinicians, rooms, opening hours, who's on the desk and the moments it all gets busy. I'll start with your busiest ten minutes and build from there.",
         "sample_feedback": "I can't set how often patients are recalled. That's a clinical decision for your dentists. What I can do is build the recall process and messages around whatever interval they choose, so nobody falls through the cracks."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-clinic-service-information-page",
+        "clinic-operations-coordinator",
+        "document-a-clinic-appointment-intake-process",
+        "explain-appointment-no-show-patterns",
+        "measure-a-clinic-administrative-queue",
+        "practice-manager",
+        "prepare-a-referral-administration-handover",
+        "process-doc-freshness-keeper",
+        "reconcile-clinic-remittances-to-settlement-cash",
+        "referral-administration-evidence-review-assistant"
+      ],
+      "families": [
+        "priorities",
+        "reconciliation-bridges"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "A calm front desk",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3247,6 +3990,34 @@
         "sample_opening": "Let's build your timeline backwards from closing. Send me the dates from the contract or memorandum of sale, who's involved on each side and how the buyer is paying. Then we can see every deadline at a glance.",
         "sample_feedback": "I can't tell the buyer they're 'all set for the 28th' yet. The mortgage offer hasn't arrived, and that date depends on it. I'd send an update that says what's done, what we're waiting for, and when we'll know. They'll feel looked after, not let down later."
       }
+    },
+    "team": {
+      "roles": [
+        "extract-a-scanned-document-and-verify-key-facts",
+        "prepare-questions-for-a-property-viewing",
+        "real-estate-transaction-coordinator",
+        "sales-progressor",
+        "trace-why-work-keeps-missing-deadlines"
+      ],
+      "families": [
+        "decisions-status",
+        "handover-learning",
+        "personal-correspondence",
+        "updates-actions"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "No surprises on closing day",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

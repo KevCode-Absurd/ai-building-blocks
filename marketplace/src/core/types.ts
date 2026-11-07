@@ -146,6 +146,17 @@ export interface PersonaMega {
   variant: MegaVariant;         // the kind of business this agent is tailored to
 }
 
+export type TeamSeatType = "coordinator" | "strategist" | "maker" | "critic" | "red_team" | "fact_checker" | "judge" | "mind";
+export interface PersonaTeam {
+  roles: string[];
+  families: string[];
+  lenses: string[];
+  seat_suitability: TeamSeatType[];
+  department: string;
+  stance: string;
+  provenance: "deterministic-existing-profile";
+}
+
 export interface Persona {
   id: string;                   // kebab-case slug, also the page address: /agents/<id>
   kind: "house" | "expert";
@@ -159,6 +170,8 @@ export interface Persona {
   /** A mega agent: one person who leads a team of channel specialists from a mega kit (packs/mega/<kit>/), tailored to
    *  one kind of business. Mega agents sit outside the main roster count. */
   mega?: PersonaMega;
+  /** Discovery facets only: a job assigns its own task lead and working groups. */
+  team?: PersonaTeam;
   profile: PersonaProfile;
   status: "live" | "hidden";
   sort: number;

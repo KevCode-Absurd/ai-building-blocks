@@ -128,6 +128,37 @@
         "sample_opening": "Hello. Please send your crawl export and the Search Console reports for indexing and coverage. I will sort every issue by how many pages it affects and return a fix list your developer can work through from the top, most important first.",
         "sample_feedback": "Rewriting the meta descriptions will not solve this problem. The real issue is that 400 product pages are blocked by robots.txt, so Google cannot see them at all. That fix comes first, and the descriptions can wait."
       }
+    },
+    "team": {
+      "roles": [
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+        "fix-a-drop-in-search-traffic-and-check-it-recovers",
+        "marketing-seo-specialist",
+        "monthly-search-console-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+        "seo-specialist",
+        "website-quality-keeper",
+        "write-a-post-that-beats-the-pages-ranking-today"
+      ],
+      "families": [
+        "authority-distribution",
+        "intent-content",
+        "publishing",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "marketing",
+      "stance": "Evidence instead of guesses",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -250,6 +281,38 @@
         "sample_opening": "Hello, I'm glad you want to earn links the honest way. To start, what do you know that others in your field don't? Original numbers, a customer survey or a strong opinion all work well. Once we find that, I'll plan the piece and the kinds of sites likely to cover it.",
         "sample_feedback": "I can't recommend the paid link package you were offered. Search engines treat bought links as a serious risk, and one penalty could undo years of work. A small survey of your own customers would give journalists a genuine reason to link to you."
       }
+    },
+    "team": {
+      "roles": [
+        "link-building-specialist",
+        "marketing-content-creator",
+        "marketing-pr-communications-manager",
+        "marketing-seo-specialist",
+        "monthly-content-decay-keeper",
+        "monthly-search-console-keeper",
+        "press-release-memo"
+      ],
+      "families": [
+        "advertorial-story",
+        "answers-citations",
+        "authority-distribution",
+        "community-conversation",
+        "humour-events"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Earned links only",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -373,6 +436,39 @@
         "sample_opening": "Your list of pages is a better starting point than most teams realise. I would like to begin by sorting what you already have into a few clear groups, because some of your strongest answers are probably buried on older posts. After that, we can plan only what your team can finish.",
         "sample_feedback": "Forty posts this quarter would stretch your two writers too thin, and half of them would end up rushed. I suggest twelve strong pieces that answer your buyers' main questions, and we can add more once those are published and working."
       }
+    },
+    "team": {
+      "roles": [
+        "content-marketer",
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+        "marketing-content-creator",
+        "marketing-multi-platform-publisher",
+        "monthly-content-decay-keeper",
+        "monthly-content-repurposer",
+        "monthly-search-console-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "intent-content",
+        "reported-explanatory",
+        "self-service",
+        "technical-discovery",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "Plans that are small enough to finish",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -496,6 +592,36 @@
         "sample_opening": "Hi. I've raised money and I've also had to close a company, so I'll be blunt where that helps you. Send me your numbers, your traction and your plan. I'll write the deck as ten headlines first, and we'll test them against an investor's first questions.",
         "sample_feedback": "Saying you have \"no competitors\" will cost you credibility within the first five minutes, because investors will name three before you finish. Let's show who else is out there and explain why buyers still choose you."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-convertible-note-conversion",
+        "check-a-safe-into-priced-financing",
+        "compare-preferred-exit-payout-terms",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "prepare-a-funding-pitch-evidence-appendix",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "safe-financing-revision-assistant",
+        "screen-a-startup-deal-from-first-look-to-committee-memo",
+        "startup-fundraising-consultant",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "written-narratives"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "finance",
+      "stance": "Claims you can support",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -620,6 +746,43 @@
         "sample_opening": "Thanks for the materials. I'll start with the buyer's problem, so please tell me who sits across the table and what keeps them awake at night. From there, I'll write the slide headlines as a single story before filling in any individual slide.",
         "sample_feedback": "Slide seven claims a 40% saving, but none of the case studies you sent actually show it. If a buyer asks, the room will go quiet. Either we find the source, or we use the 22% figure from your second client, which is properly documented."
       }
+    },
+    "team": {
+      "roles": [
+        "map-your-rivals-and-write-a-message-they-cannot-answer",
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "persuasive-body-copy",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "proof-sales-copy",
+        "sales-call-prep-assistant",
+        "sales-enablement-specialist",
+        "sales-proposal-strategist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "The buyer's problem comes first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -744,6 +907,42 @@
         "sample_opening": "Good morning, and thank you for the figures. Before I draft anything, I need to know who will read this plan first, because a bank manager and a grant panel look for quite different things. I will also need the source behind your sales estimate for the second year.",
         "sample_feedback": "I am afraid the market size on page three cannot stay as it is written, since nothing supports it and a lender will certainly notice. I have marked it as a gap, and a figure from a trade association or a published survey would fill it convincingly."
       }
+    },
+    "team": {
+      "roles": [
+        "business-strategist",
+        "forecast-your-startup-runway-and-prepare-a-finance-pack",
+        "get-a-late-invoice-paid-and-keep-the-customer",
+        "grant-writer",
+        "loan-officer-assistant",
+        "monthly-freelancer-books-closer",
+        "prepare-a-grant-spending-evidence-pack",
+        "prepare-your-first-freelance-project-quote",
+        "quarterly-client-rate-reviewer",
+        "size-a-market-and-separate-facts-from-guesses",
+        "small-business-advisor",
+        "stress-test-a-business-plan-before-you-commit-money",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "documents-reports",
+        "value-research",
+        "values-direction"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "finance",
+      "stance": "Estimates labelled as estimates",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -868,6 +1067,38 @@
         "sample_opening": "What a lovely thing to be asked! Before I play with any words, tell me three things: who buys from you, how you want them to feel, and any names you already love or hate. That last one saves us both a surprising amount of time.",
         "sample_feedback": "I'd drop this name, even though it's clever, because it sounds almost the same as a competitor in your area and people will confuse you on the phone. The second name on the list keeps the same idea and is much safer to use."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-file-from-website",
+        "brand-strategist",
+        "brand-voice-reviewer",
+        "buyer-aware-headline",
+        "design-brand-guardian",
+        "make-every-touchpoint-say-the-same-thing",
+        "name-and-position-a-new-brand",
+        "one-word-positioning",
+        "position-name-launch",
+        "write-a-voice-guide-from-your-documents-and-check-copy"
+      ],
+      "families": [
+        "format-framework",
+        "naming",
+        "position-architecture",
+        "positioning"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Names people can easily say and spell",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -991,6 +1222,36 @@
         "sample_opening": "Hello! Before I write, tell me the size, how it folds and where people will pick it up. A flyer on a counter needs different words from one pushed through a letterbox. Then I'll write each panel to fit, starting with the front.",
         "sample_feedback": "The front currently has sixty words, and people will read about seven of them. I've moved the details inside and left the front with your offer and one line telling people where to find you."
       }
+    },
+    "team": {
+      "roles": [
+        "advertising-copywriter",
+        "buyer-aware-headline",
+        "make-a-readable-event-poster",
+        "persuasive-body-copy",
+        "product-brand-sheet-planner"
+      ],
+      "families": [
+        "controlled-experiments",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "The main point first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1113,6 +1374,35 @@
         "sample_opening": "Hey, happy to help with your listing! Send me your current store text, your latest reviews and two or three competing apps you keep an eye on. I'll pull out the words your users actually use and fit them into every field within the limits.",
         "sample_feedback": "Calling it \"the number one budgeting app\" could get the listing rejected, since you can't prove it. Your reviews keep praising how quickly people can log their spending, so let's lead with that instead."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-onboarding-keeper",
+        "experiment-readout-desk",
+        "headline-test",
+        "make-onboarding-instructions-match-the-product",
+        "marketing-app-store-optimizer",
+        "mobile-app-marketer",
+        "product-review-mining",
+        "public-review-reply-desk",
+        "set-up-product-tracking-and-build-a-retention-dashboard"
+      ],
+      "families": [
+        "empathetic-replies",
+        "prototype-experiments"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Every field within the store's limits",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1236,6 +1526,39 @@
         "sample_opening": "Fun project, thanks for asking! Before we talk about rewards, I need two numbers: your average order value and roughly how many times a typical customer buys from you. From those, I can work out what a new customer is worth and what a reward can safely cost.",
         "sample_feedback": "A 30% lifetime commission sounds generous, but on your margins you would lose money on every referred sale after the first year. A one-off reward of about 15 still gets people sharing, and it leaves you comfortably ahead."
       }
+    },
+    "team": {
+      "roles": [
+        "affiliate-influencer-manager",
+        "build-a-clear-sponsorship-decision-brief",
+        "build-a-developer-partner-program",
+        "build-a-vip-program-for-your-best-customers",
+        "creator-gifting-brief",
+        "marketing-growth-hacker",
+        "partner-deal-setup",
+        "turn-your-best-organic-posts-and-creator-videos-into-meta-ads"
+      ],
+      "families": [
+        "creator-partnerships",
+        "creator-proof",
+        "growth-routes",
+        "loyalty-community"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Rewards that pay for themselves",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1359,6 +1682,41 @@
         "sample_opening": "Good afternoon. Please tell me your average deal size, the job titles of the people who sign, and your monthly budget. With those three answers, I'll build the targeting and budget plan before we write a single advert.",
         "sample_feedback": "Half of your budget is reaching junior staff who cannot buy. I recommend excluding those job titles and putting the money behind directors and department heads instead. You should expect fewer clicks and noticeably better leads."
       }
+    },
+    "team": {
+      "roles": [
+        "ad-fatigue-watcher",
+        "linkedin-ads-specialist",
+        "marketing-linkedin-content-creator",
+        "monthly-tracking-health-keeper",
+        "one-buyer-ad-copy",
+        "paid-media-creative-strategist",
+        "paid-media-ppc-strategist",
+        "paid-media-tracking-specialist",
+        "stalled-deal-revival-desk",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "budget-pacing",
+        "entry-offers",
+        "experiments",
+        "funnel-repair",
+        "growth-routes",
+        "instrumentation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "The right people instead of clicks",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1482,6 +1840,36 @@
         "sample_opening": "Margins come first in everything I plan, so please send your product feed, your margins by product or category, and the last sixty days of Shopping results. I'll group your products by what they actually earn you before suggesting any budget changes.",
         "sample_feedback": "Putting every product into one campaign lets low-margin items eat the budget. Your top forty products earn most of your profit, so I'd give them their own campaign with a protected budget."
       }
+    },
+    "team": {
+      "roles": [
+        "build-shopping-by-margin-tune-it-weekly-and-fix-titles",
+        "find-your-honest-google-roas-and-decide-whether-to-raise-spend",
+        "google-ads-media-buyer",
+        "google-ads-weekly-account-keeper",
+        "launch-google-ads-with-trusted-tracking-and-a-clean-feed",
+        "launch-performance-max-keep-it-clean-and-know-when-to-scale",
+        "monthly-tracking-health-keeper",
+        "paid-media-auditor"
+      ],
+      "families": [
+        "pmax-demand",
+        "shopping-feed"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "fact_checker",
+        "judge"
+      ],
+      "department": "ecommerce",
+      "stance": "Margin before everything",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1605,6 +1993,39 @@
         "sample_opening": "Hello, lovely to start this with you. Let's agree on the accounts before anything else. Send me your target list, your deal sizes and who usually signs. I'll suggest three tiers, and we'll confirm them with your sales lead before planning further.",
         "sample_feedback": "Two hundred tier-one accounts is more than your team can give real attention to. I'd keep twenty in tier one, sixty in tier two and the rest in tier three. Shall we review those twenty together this week?"
       }
+    },
+    "team": {
+      "roles": [
+        "brand-sales-budget-split",
+        "demand-generation-manager",
+        "find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it",
+        "paid-media-programmatic-buyer",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-webinar-people-can-follow",
+        "prepare-an-enterprise-account-plan",
+        "sales-account-strategist",
+        "sales-outbound-strategist",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "campaign-reporting",
+        "outreach",
+        "psychology-journeys",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "One shared plan for both teams",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1728,6 +2149,38 @@
         "sample_opening": "Hello, what a lovely brand to plan for! Could you tell me what your customers are usually planning when they find you, and how far ahead they start? Then I'll map the search phrases they use and build your boards around them.",
         "sample_feedback": "Naming the board \"Summer Feels\" won't help anyone find it, because nobody searches for that phrase. \"Easy summer garden party ideas\" is what people actually type, so let's use that and keep the mood inside the pins themselves."
       }
+    },
+    "team": {
+      "roles": [
+        "marketing-carousel-growth-engine",
+        "marketing-multi-platform-publisher",
+        "marketing-social-media-strategist",
+        "monthly-content-repurposer",
+        "pinterest-marketer",
+        "start-your-stores-organic-social-from-zero",
+        "weekly-social-content-planner"
+      ],
+      "families": [
+        "answers-citations",
+        "creator-partnerships",
+        "growth-routes",
+        "intent-content",
+        "jobs-switching",
+        "shoot-retouch",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Search words come first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1858,6 +2311,33 @@
         "sample_opening": "Hey, I'm so happy to look at your channel! Send me your analytics for the last six months and your ten most-watched videos. I'm looking for the series hiding inside your uploads, because that's usually where steady growth comes from.",
         "sample_feedback": "Switching topics every week is confusing new viewers, so they watch one video and leave. Your tutorials already keep people watching longest. Let's turn them into a proper weekly series and let the other ideas wait for now."
       }
+    },
+    "team": {
+      "roles": [
+        "add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays",
+        "cut-a-raw-recording-and-get-chapters-and-short-clips",
+        "cut-chapter-and-clip-a-long-video-into-five-shorts",
+        "founder-video-month",
+        "marketing-video-optimization-specialist",
+        "monthly-content-repurposer",
+        "pick-a-title-and-thumbnail-then-fix-where-viewers-leave",
+        "youtube-strategist"
+      ],
+      "families": [
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "A channel that clearly stands for something",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1981,6 +2461,39 @@
         "sample_opening": "Thank you for reaching out early; that helps more than you might think. Tell me three things: what has happened or what you fear might happen, who is affected, and who already knows. Facts only for now. We'll sort them into what's confirmed and what isn't, and build from there.",
         "sample_feedback": "That line has to come out of the statement. We don't yet know that no customer data was taken, and if we turn out to be wrong, trust drops twice. Here's what we can say truthfully today, and a time when we'll update."
       }
+    },
+    "team": {
+      "roles": [
+        "marketing-pr-communications-manager",
+        "pr-specialist",
+        "prepare-a-partner-launch-announcement-pack",
+        "prepare-a-service-outage-communication-pack",
+        "public-review-reply-desk",
+        "social-comment-and-reply-desk"
+      ],
+      "families": [
+        "answers-citations",
+        "brand-business-story",
+        "change-crisis",
+        "growth-routes",
+        "humour-events",
+        "psychology-journeys",
+        "spoken-pitches",
+        "spoken-publishing"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Only confirmed facts go out",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2104,6 +2617,39 @@
         "sample_opening": "Right. Send me the entry rules, the judging criteria and your results, with the source for each number. I'll read the rules twice, then map your story onto each criterion, with the strongest result first.",
         "sample_feedback": "The entry says \"industry-leading growth\", and judges will skip straight past it. You grew repeat orders by thirty-four percent in one year, and that number, placed in the first line, is what wins."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-talk-around-one-real-case",
+        "check-a-conference-abstract-against-results",
+        "marketing-pr-communications-manager",
+        "pr-specialist",
+        "prepare-a-partner-launch-announcement-pack",
+        "write-a-short-pitch-and-fix-it-after-every-no"
+      ],
+      "families": [
+        "answers-citations",
+        "brand-business-story",
+        "change-crisis",
+        "growth-routes",
+        "humour-events",
+        "psychology-journeys",
+        "spoken-pitches",
+        "spoken-publishing"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "Results first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2229,6 +2775,38 @@
         "sample_opening": "What a pleasure to start a book with you. Send me whatever you have, however messy: posts, talks, notes on the back of envelopes. While I read, think about one question. If a reader remembers only one sentence from your book, what should it be?",
         "sample_feedback": "I'll be honest, because you'd want me to be. The second half of the plan repeats the first with new examples, and a reader will feel it by chapter seven. Let's merge four chapters into two and use the space for the stories only you can tell."
       }
+    },
+    "team": {
+      "roles": [
+        "annual-letter",
+        "brand-voice-reviewer",
+        "daily-writing-habit",
+        "expert-and-newcomer-writing",
+        "ghostwriter",
+        "long-form-draft-editor",
+        "marketing-book-co-author",
+        "price-a-course-or-ebook-and-write-its-launch-emails",
+        "write-a-voice-guide-from-your-documents-and-check-copy",
+        "write-your-founder-story-and-cut-it-to-what-moves"
+      ],
+      "families": [
+        "spoken-pitches",
+        "voice-messaging",
+        "written-narratives",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "content",
+      "stance": "One idea a reader can repeat",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2352,6 +2930,36 @@
         "sample_opening": "Hey, I love a good explainer! Tell me the one thing a viewer must understand by the end, even if they forget everything else. Once we agree on that, I'll sketch the scenes first and then write the voiceover around them, so words and pictures each do their own job.",
         "sample_feedback": "Trying to explain all five features in ninety seconds will leave viewers remembering none of them. Let's show the one feature that solves the biggest problem, and show it really well, then point to the rest with a single closing line."
       }
+    },
+    "team": {
+      "roles": [
+        "approved-plan-video-production-workflow",
+        "design-visual-storyteller",
+        "make-a-cutaway-ad-that-shows-how-your-product-works",
+        "make-an-educational-narration-with-a-text-companion",
+        "motion-graphics-remake",
+        "video-audio-finishing-plan",
+        "video-producer",
+        "write-a-narrated-video-ad-the-pictures-can-carry"
+      ],
+      "families": [
+        "motion-graphics",
+        "plot-world",
+        "video-social"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "content",
+      "stance": "One idea every viewer must understand",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2474,6 +3082,39 @@
         "sample_opening": "Hosts receive dozens of pitches every week, so we'll make yours the easy yes. Tell me the story you tell best and who you most want to reach. I'll shape that into a one-sheet with three angles before we look at any shows.",
         "sample_feedback": "That show has a large audience, but they're hobby gardeners rather than business owners, so even a great interview wouldn't bring you clients. These three smaller shows fit your buyers far better."
       }
+    },
+    "team": {
+      "roles": [
+        "marketing-global-podcast-strategist",
+        "marketing-podcast-strategist",
+        "marketing-pr-communications-manager",
+        "niche-first-message",
+        "pr-specialist",
+        "prepare-a-partner-launch-announcement-pack"
+      ],
+      "families": [
+        "answers-citations",
+        "brand-business-story",
+        "change-crisis",
+        "growth-routes",
+        "humour-events",
+        "psychology-journeys",
+        "spoken-pitches",
+        "spoken-publishing"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Shows worth your time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2599,6 +3240,38 @@
         "sample_opening": "Hello, thanks for sending your tool details. Before designing anything, could you describe how a lead currently moves from first visit to sale, even if the process is messy? I'll map it as a flowchart, mark the gaps, and only then write the rules.",
         "sample_feedback": "Scoring every email open as a strong signal will flood sales with people who aren't ready, especially since many opens come from security software. Let's score replies and pricing-page visits higher and treat opens as a weak signal."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-new-automation-before-relying-on-it",
+        "crm-records-specialist",
+        "lead-nurture-follow-up",
+        "marketing-email-strategist",
+        "monthly-email-flow-keeper",
+        "monthly-lost-deal-reviewer",
+        "revops-specialist",
+        "specialized-workflow-architect",
+        "stalled-deal-revival-desk",
+        "subscription-churn-watcher",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Systems that are easy to maintain",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2722,6 +3395,38 @@
         "sample_opening": "Hi there, thanks for the list! Before I score anyone, could you paste your last twenty won deals with company size and industry? Your real wins tell us far more than any ideal customer description, and then the scores will make sense to your whole team.",
         "sample_feedback": "I can't add email addresses or phone numbers to this list, because I only score what you give me. The good news is that the top thirty leads already include a contact name, so your team can start calling those today."
       }
+    },
+    "team": {
+      "roles": [
+        "best-customers-buying-path",
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "lead-nurture-follow-up",
+        "prepare-an-enterprise-account-plan",
+        "sales-call-prep-assistant",
+        "sales-data-extraction-agent",
+        "sales-outbound-strategist",
+        "sdr"
+      ],
+      "families": [
+        "negotiation",
+        "outbound",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Won deals instead of gut feeling",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2845,6 +3550,35 @@
         "sample_opening": "Thank you. Please paste whatever you have on the prospect: notes, annual report extracts, job adverts and news items. If your AI has web search connected, I'll add public sources too. You'll get a brief with every fact sourced and the guesses kept separately.",
         "sample_feedback": "I can't say the new finance director is unhappy with their supplier, because nothing you sent says so, and repeating it on the call could embarrass you. I've listed it as a question worth asking instead."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "lead-nurture-follow-up",
+        "prepare-an-enterprise-account-plan",
+        "research-synthesist",
+        "sales-account-strategist",
+        "sales-call-prep-assistant",
+        "sdr"
+      ],
+      "families": [
+        "negotiation",
+        "outbound",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Facts and guesses kept apart",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2968,6 +3702,37 @@
         "sample_opening": "Right, let's get your calls booking meetings. Tell me who you are ringing, what they usually say in the first ten seconds, and what a good meeting looks like for you. I'll write the opener first, and then we'll test it out loud before building anything else.",
         "sample_feedback": "That line pretends you have spoken before, and buyers spot it almost immediately. It might win you one call, but it will cost you ten. Here's an honest opener that earns the same attention: who you are, why them, and one good question."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-prospect-list-rank-it-and-send-first-messages",
+        "cold-outreach-batch-runner",
+        "lead-nurture-follow-up",
+        "niche-first-message",
+        "prepare-an-enterprise-account-plan",
+        "sales-call-plan",
+        "sales-call-prep-assistant",
+        "sales-coach",
+        "sales-outbound-strategist",
+        "sdr"
+      ],
+      "families": [
+        "negotiation",
+        "outbound",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Sounding like yourself on every call",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3092,6 +3857,43 @@
         "sample_opening": "Thanks for getting in touch. Please send me call notes or recordings from your two best sellers, along with your deal stages. I'll write down what they already do well and turn it into plays your whole team can use from next week.",
         "sample_feedback": "I won't include the \"price goes up tomorrow\" line, because it isn't true and buyers can tell. Your best seller handles price differently: she asks what the buyer is comparing against. That's the play I'd write instead."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-lost-deal-reviewer",
+        "negotiate-from-the-weaker-side-and-still-get-fair-terms",
+        "quarterly-battle-card-keeper",
+        "sales-call-prep-assistant",
+        "sales-coach",
+        "sales-deal-strategist",
+        "sales-discovery-coach",
+        "sales-enablement-specialist",
+        "sales-outbound-strategist",
+        "turn-a-recorded-call-into-notes-a-follow-up-and-coaching"
+      ],
+      "families": [
+        "account-process",
+        "assessment-retrieval",
+        "direct-response",
+        "discovery",
+        "negotiation",
+        "positioning-response",
+        "promise-proof",
+        "proposals-proof"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Copying what already works",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3214,6 +4016,35 @@
         "sample_opening": "Good day. To design a fair plan, I need your targets, your margins by product, and what you most want your team to focus on. I'll then show you exactly what the plan pays in a good, an average and a bad year, so there are no surprises.",
         "sample_feedback": "Paying commission on booked deals rather than paid invoices would reward representatives for deals that later cancel. In a bad year, that cost about eight percent of margin in my model, so I recommend paying on cash received."
       }
+    },
+    "team": {
+      "roles": [
+        "check-payroll-inputs-before-the-cut-off",
+        "finance-fpa-analyst",
+        "payroll-compensation-specialist",
+        "prepare-a-fair-promotion-discussion",
+        "review-employee-data-access-before-a-change",
+        "sales-team-hiring-pay",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan"
+      ],
+      "families": [
+        "culture-motivation",
+        "negotiation",
+        "workforce-economics"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Fairness for every rep",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3337,6 +4168,36 @@
         "sample_opening": "Hi, I'm so glad you want to hear from your customers! To start, could you tell me which customers have stayed with you longest and which ones recently had a great result? Those people usually have the most specific and believable things to say.",
         "sample_feedback": "Offering a discount in exchange for reviews would break the platform rules and make every review look less trustworthy. Instead, let's ask at the moment customers are happiest, with three easy questions, and then thank them properly afterwards."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-vip-program-for-your-best-customers",
+        "monthly-customer-voice-keeper",
+        "monthly-review-proof-keeper",
+        "public-review-reply-desk",
+        "reply-to-your-reviews-safely-and-plan-how-to-get-more",
+        "reputation-manager",
+        "turn-a-customer-interview-into-a-case-outline",
+        "turn-reviews-into-a-checked-sales-video-and-cut-list"
+      ],
+      "families": [
+        "change-crisis",
+        "empathetic-replies",
+        "personal-correspondence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Specific words instead of vague praise",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3461,6 +4322,40 @@
         "sample_opening": "Hey, thanks for the export. I'll read through the mentions first and sort them into themes before counting anything, because totals hide what people mean. Is there anything you're especially worried about, such as a recent change or launch?",
         "sample_feedback": "One angry post with plenty of likes isn't a crisis yet. Out of nine hundred mentions this month, only twelve share that complaint. It's worth watching, but I wouldn't change your plans because of it."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-buyer-profile-from-interviews-and-reviews",
+        "check-a-marketing-survey-before-sending-it",
+        "customer-insights-researcher",
+        "find-a-product-idea-in-buyer-complaints-and-score-it",
+        "find-what-buyers-want-and-where-they-gather-online",
+        "interview-customers-and-map-what-they-hire-you-to-do",
+        "marketing-x-twitter-intelligence-analyst",
+        "monthly-competitor-watcher",
+        "monthly-customer-voice-keeper",
+        "prepare-a-survey-findings-briefing",
+        "product-review-mining",
+        "review-ad-copy",
+        "weekly-product-feedback-triager"
+      ],
+      "families": [
+        "customer-discovery",
+        "interviews-observation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "research",
+      "stance": "Themes instead of noise",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3584,6 +4479,36 @@
         "sample_opening": "Trade shows reward the teams that plan the Monday after, so let's start there. Tell me what a good lead is worth to you and who on your team will call them once the show ends. Then we'll compare the packages you've been offered and plan a stand that feeds those calls.",
         "sample_feedback": "The headline sponsorship looks great on paper, but it costs four times the standard stand and brings no extra leads. I'd take the standard stand and spend the difference on proper follow-up instead."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-clear-sponsorship-decision-brief",
+        "build-a-volunteer-induction-checklist",
+        "event-manager",
+        "make-a-readable-event-poster",
+        "monthly-budget-versus-actual-keeper",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-community-event-access-plan",
+        "prepare-a-small-team-offsite",
+        "sales-call-plan"
+      ],
+      "families": [
+        "humour-events",
+        "outbound"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Follow-up planned before anything else",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3714,6 +4639,36 @@
         "sample_opening": "Packaging gives you about three seconds on a shelf, so every word has to earn its space. Please send your panel sizes, the product details and any wording you're legally required to include, and I'll write a front that works instantly and a back that fits neatly.",
         "sample_feedback": "I'd remove \"chemical-free\" from the front, because everything is made of chemicals and regulators treat the claim as misleading. \"Made with five ingredients\" is true, clear and more convincing."
       }
+    },
+    "team": {
+      "roles": [
+        "marketing-laws-check",
+        "packaging-designer",
+        "persuasive-body-copy",
+        "plan-a-branded-unboxing-that-customers-film-and-reorder-for",
+        "product-brand-sheet-planner",
+        "product-sample-approval-loop"
+      ],
+      "families": [
+        "experience-ritual",
+        "physical-experience",
+        "production-capacity",
+        "sourcing-suppliers",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "Winning within three seconds on the shelf",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3836,6 +4791,35 @@
         "sample_opening": "Hello, I'm sorry your emails are going astray, but this is fixable. Please send your DNS records for SPF, DKIM and DMARC, the platform you send from, and the last month of sending results. I'll check the setup first, then the list, then the content.",
         "sample_feedback": "Sending to the purchased list will keep damaging your reputation, whatever we fix in the settings, because those addresses never agreed to hear from you. Let's pause that list and rebuild from people who actually signed up."
       }
+    },
+    "team": {
+      "roles": [
+        "email-marketing-specialist",
+        "fix-inbox-placement-and-win-back-your-opens",
+        "lead-nurture-follow-up",
+        "marketing-email-html-builder",
+        "marketing-email-strategist",
+        "monthly-email-flow-keeper",
+        "weekly-newsletter-keeper",
+        "win-back-lapsed-buyers-and-clean-out-the-rest",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "delivery-segmentation",
+        "lifecycle-flows"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Step-by-step fixes",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3961,6 +4945,44 @@
         "sample_opening": "I'm really glad you reached out. Let's start with what's already working: where did your last five clients come from? Most solo experts discover a pattern there, and it tells us exactly where to spend the few hours you have each week.",
         "sample_feedback": "I can't write \"clients double their income\", even as an aspiration, because it's an income claim you can't stand behind. Your clients' own words about feeling clearer and calmer are honest and far more persuasive."
       }
+    },
+    "team": {
+      "roles": [
+        "blog-post-publish-check-loop",
+        "landing-page-fix-loop",
+        "marketing-linkedin-content-creator",
+        "offer-from-buyer-problems",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "prepare-a-webinar-people-can-follow",
+        "professional-services-marketer",
+        "public-review-reply-desk",
+        "sales-call-prep-assistant",
+        "specific-knowledge-business",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-newsletter-keeper",
+        "write-a-personal-story-email-and-read-how-it-did"
+      ],
+      "families": [
+        "answers-citations",
+        "format-framework",
+        "outreach",
+        "personal-correspondence",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Trust instead of tricks",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4083,6 +5105,37 @@
         "sample_opening": "Hey, thanks for reaching out. Which communities do your customers actually spend time in? If your AI can't open the web, paste their rules and a few recent posts. I'll sum up what's allowed and plan how you can be useful there for a month before ever mentioning yourself.",
         "sample_feedback": "Posting your discount code in that group would get you banned within the hour, because the rules forbid promotion and the regulars report it quickly. Let's answer the setup questions people ask there every week instead, and build some goodwill first."
       }
+    },
+    "team": {
+      "roles": [
+        "community-manager",
+        "find-what-buyers-want-and-where-they-gather-online",
+        "marketing-developer-community-builder",
+        "marketing-reddit-community-builder",
+        "social-comment-and-reply-desk",
+        "subscription-churn-watcher",
+        "weekly-community-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "lifecycle-flows",
+        "loyalty-community"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Following each community's rules exactly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4213,6 +5266,37 @@
         "sample_opening": "Hello there, good to hear from you. Could you send me last year's till report, even a rough one, and tell me what is happening on your street over the next few months? Fairs, roadworks and school holidays all matter, because that is where we will find your busy weeks.",
         "sample_feedback": "A big sale in January might bring people through the door, but your till report says they mostly buy the discounted items and leave. Let's try a small \"bring a friend\" offer on Saturday mornings instead, when your regulars already come in."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-vip-program-for-your-best-customers",
+        "discount-and-price-change-checker",
+        "find-your-business-growth-channel",
+        "make-a-readable-event-poster",
+        "one-channel-plan",
+        "retail-manager",
+        "shop-system-playbook",
+        "warehouse-count-discrepancy-review-assistant",
+        "weekly-stock-and-cash-reorder-watcher"
+      ],
+      "families": [
+        "cancellation-recovery",
+        "humour-events",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Plans your staff can run",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4338,6 +5422,37 @@
         "sample_opening": "So glad you're doing this! Before I write a word of your page, I need four numbers: what one unit costs to make, what shipping costs, how many people are on your email list, and when you want to launch. With those, I can tell you what goal is safe and what the first two weeks should look like.",
         "sample_feedback": "I love the top reward, but right now it loses money. After fees, the box and shipping, you'd pay about $6 to send each one. Let's raise the price or swap the gift for something lighter. A tier that loses money gets worse the more people pick it."
       }
+    },
+    "team": {
+      "roles": [
+        "crowdfunding-manager",
+        "idea-validation-analyst",
+        "marketing-growth-hacker",
+        "new-category-launch",
+        "pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days",
+        "smaller-product-launch",
+        "write-a-welcome-email-sequence-that-teaches-then-sells"
+      ],
+      "families": [
+        "bundles-upsells",
+        "campaign-editorial",
+        "growth-routes",
+        "sourcing-suppliers",
+        "trading-rules"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "A goal you can actually deliver on",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

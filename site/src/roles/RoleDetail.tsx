@@ -20,6 +20,7 @@ export default function RoleDetail({role,toast}:{role:RoleView|null;toast:(text:
  if(!role)return <section className="wrap role-pending"><p role="status">Opening this role…</p></section>;
  const o=roleOpening(role),hub=!!role.family?.id&&role.family.id!=='other';
  return <div className="wrap role-profile-grid"><div className="role-profile" data-testid="role-profile">
+  <p className="small"><Link to="/councils">Use with a team →</Link></p>
   <section className="role-profile-section role-start" data-testid="role-opening"><p className="role-summary">{o.summary}</p>
    <div className="role-give-get"><div><h2>What you give</h2><ul>{o.give.map(d=><li key={d}>{d}</li>)}</ul></div><div><h2>What you get</h2><ul>{o.get.map(d=><li key={d}>{d}</li>)}</ul></div></div></section>
   {o.example&&<section className="role-profile-section" data-testid="role-short-example"><h2>An example</h2>{o.example.situation&&<p>{o.example.situation}</p>}<p>You ask: “{o.example.task}”</p>{o.example.outputs.length>0&&<><p>You get back:</p><dl className="role-capabilities">{o.example.outputs.map(x=><div key={x.name}><dt>{x.name}</dt><dd>{x.contains}</dd></div>)}</dl></>}<p className="small">An example, not your task.</p></section>}

@@ -1,0 +1,16 @@
+{
+  "schema": "ai-blocks-team-plan/2",
+  "proposal_id": "tp_six_seat_test",
+  "lead_seat_id": "strategy",
+  "working_groups": [
+    { "id": "production", "lead_seat_id": "strategy", "seat_ids": ["strategy", "maker-a", "maker-b"] }
+  ],
+  "seats": [
+    { "seat_id": "chair", "seat_type": "coordinator", "role_id": "general-coordinator", "persona_id": null, "lens": "operator", "families": [] },
+    { "seat_id": "strategy", "seat_type": "strategist", "persona_id": "test-strategist", "lens": "growth", "families": ["text-first"] },
+    { "seat_id": "maker-a", "seat_type": "maker", "persona_id": "test-maker-a", "lens": "craft", "families": ["text-first"] },
+    { "seat_id": "maker-b", "seat_type": "maker", "persona_id": "test-maker-b", "lens": "customer", "families": ["picture-first"] },
+    { "seat_id": "challenge", "seat_type": "red_team", "persona_id": "test-red-team", "lens": "sceptic", "families": [] },
+    { "seat_id": "review", "seat_type": "judge", "persona_id": "test-judge", "lens": "numbers", "families": [] }
+  ]
+}

@@ -1,6 +1,6 @@
 # Specialists: AI Blocks
 
-> 1063 AI specialists you can hire for free. Each one bundles working methods for one kind of job and runs in your own AI. Load one with the MCP tool prepare_specialist or GET https://useaiblocks.com/api/v1/specialists/{id}/pack.
+> 1064 AI specialists you can hire for free. Each one bundles working methods for one kind of job and runs in your own AI. Load one with the MCP tool prepare_specialist or GET https://useaiblocks.com/api/v1/specialists/{id}/pack.
 
 - [3D map scene developer](https://useaiblocks.com/roles/gis-3d-scene-developer): Plan a 3D web map scene with terrain, buildings or LiDAR, lighting, camera and speed checks for Cesium or ArcGIS. Get a build plan you can follow.
 - [90-day marketing strategy planner](https://useaiblocks.com/roles/check-your-strategy-then-turn-it-into-a-90-day-plan): Give it your strategy, goal or plan, as it stands today. You get a blunt read of what is hollow in the strategy and what holds.
@@ -421,6 +421,7 @@
 - [Game narrative designer](https://useaiblocks.com/roles/narrative-designer): Turn a game idea into a story plan: character voices, branching dialogue with real consequences, and lore in layers. For game writers and indie teams.
 - [Gameplay designer](https://useaiblocks.com/roles/game-designer): Turn a game idea into a game design plan. Get design pillars, a gameplay loop, mechanic specs, tuning numbers to test and a playtest plan.
 - [GaussDB query and schema reviewer](https://useaiblocks.com/roles/engineering-gaussdb-expert): Get a GaussDB query and schema review: distribution keys, slow plans, indexes and storage choices. Bring your SQL, tables and plan output.
+- [General coordinator](https://useaiblocks.com/roles/general-coordinator): Turn a request into a clear job, a team and a checked delivery.
 - [Generative art and image export workflow](https://useaiblocks.com/roles/make-generative-art-and-export-sharp-small-images): Describe the art and intended use. Get an editable coded artwork, captured stills and compressed files where the required tools can run.
 - [Geography analyst](https://useaiblocks.com/roles/academic-geographer): Check a fictional map for impossible rivers, climate and resources, or build one that follows real physics. Get a report on land, weather and settlements.
 - [Geoprocessing specialist](https://useaiblocks.com/roles/gis-geoprocessing-specialist): Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script.

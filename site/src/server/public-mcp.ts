@@ -1,3 +1,4 @@
+import { jobMcpTools } from '../jobs/job-mcp.mjs';
 import { WORKFLOW_NOTES_LIMIT } from "../lib/workflow-limits.ts";
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
@@ -78,9 +79,10 @@ const itemOutput = (extra: Record<string, unknown>, required: string[] = []) => 
  *  The public MCP lists PUBLIC_MCP_LISTED_TOOLS; the rest answer there with where to go instead (RETIRED_MCP_TOOLS). */
 export const PUBLIC_MCP_TOOLS: Tool[] = [
 ...outcomeMcpTools as unknown as Tool[],
+...jobMcpTools as unknown as Tool[],
 ...scopeMcpTools as Tool[],
 ...TEAM_MCP_TOOLS,
-{"name":"find_specialist","title":"Find a specialist for a task","description":"Find worker candidates for a deliverable. Compare their remit and outputs, then use prepare_specialist to onboard the chosen worker. Keep unrelated private context out of discovery.","inputSchema":{"type":"object","properties":{"task":{"type":"string","minLength":1,"maxLength":3000},"area":{"type":"string","minLength":1,"maxLength":80},"limit":{"type":"integer","minimum":1,"maximum":10}},"required":["task"],"additionalProperties":false},"outputSchema":{"type":"object","properties":{"schema":{"type":"string"}},"required":["schema"]},"annotations":{"readOnlyHint":true,"destructiveHint":false,"idempotentHint":true,"openWorldHint":false}},
+{"name":"find_specialist","title":"Find a specialist for a task","description":"Find worker candidates for a deliverable. Compare their remit and outputs, then use prepare_specialist to onboard the chosen worker. Keep unrelated private context out of discovery.","inputSchema":{"type":"object","properties":{"task":{"type":"string","minLength":1,"maxLength":3000},"area":{"type":"string","minLength":1,"maxLength":80},"diverse":{"type":"boolean","description":"Re-rank candidates for distinct families and lenses."},"limit":{"type":"integer","minimum":1,"maximum":10}},"required":["task"],"additionalProperties":false},"outputSchema":{"type":"object","properties":{"schema":{"type":"string"}},"required":["schema"]},"annotations":{"readOnlyHint":true,"destructiveHint":false,"idempotentHint":true,"openWorldHint":false}},
 {"name":"prepare_specialist","title":"Load a base specialist or prepare a job","description":"Supply role_id only to load a complete base specialist: README, setup, SOUL, intake, playbook, handoff and best-practice files, pinned methods and a full ZIP download. The host AI asks task and output questions in the conversation; no website context form is required. Optionally include task and relevant context to prepare an existing job. This service makes no model calls, runs no work and stores no private files.","inputSchema":{"type":"object","properties":{"role_id":{"type":"string","minLength":1,"maxLength":70,"pattern":"^[a-z0-9][a-z0-9-]{0,69}$"},"task":{"type":"string","minLength":1,"maxLength":3000},"context":{"type":"string","minLength":1,"maxLength":8000},"tools":{"type":"string","minLength":1,"maxLength":2000},"training":{"type":"string","minLength":1,"maxLength":6000},"me":{"type":"string","minLength":1,"maxLength":8000},"deliverables":{"type":"array","minItems":1,"maxItems":30,"items":{"type":"string","minLength":1,"maxLength":1000},"description":"Actual task-specific files or outcomes. The host checks whether the worker covers them; source-method examples are not mandatory extra work."}},"required":[],"additionalProperties":false,"anyOf":[{"required":["role_id"]},{"required":["task"]}]},"outputSchema":{"type":"object","properties":{"schema":{"type":"string"}},"required":["schema"]},"annotations":{"readOnlyHint":true,"destructiveHint":false,"idempotentHint":true,"openWorldHint":false}},
   {
     name: 'search_library', title: 'Find any AI Blocks item',
@@ -168,7 +170,7 @@ export const RETIRED_MCP_TOOLS: Record<string, { rest: string; instead: string }
   ...Object.entries(SCOPE_REST_OPERATIONS as Record<string, string>).map(([rest, name]) => [name, { rest, instead: 'For a business goal or problem, use start_outcome: it pins down the outcome, then plans and checks the work.' }]),
   ...Object.entries(TEAM_REST).map(([name, rest]) => [name, { rest, instead: 'For a business goal, use start_outcome: it composes the team plan from catalogue specialists and checks it. Signed-in AI Blocks connections still list this tool.' }]),
 ]);
-export const PUBLIC_MCP_LISTED_TOOLS: Tool[] = PUBLIC_MCP_TOOLS.filter(tool => !Object.hasOwn(RETIRED_MCP_TOOLS, tool.name));
+export const PUBLIC_MCP_LISTED_TOOLS: Tool[] = PUBLIC_MCP_TOOLS.filter(tool => !Object.hasOwn(RETIRED_MCP_TOOLS, tool.name)).map(tool => ['plan_workflow','prepare_workflow'].includes(tool.name) ? {...tool,outputSchema:{type:'object',properties:{schema:{type:'string'}},required:['schema'],additionalProperties:true}} : tool);
 
 /** Slash-command prompts. Each tells the host AI the procedure with our tools; nothing runs on the server. */
 const BASE_PROMPTS: Prompt[] = [
@@ -292,6 +294,7 @@ function registerLibrary(server: Server, library: McpLibraryFeatures) {
   server.setRequestHandler(ListResourceTemplatesRequestSchema, async request => {
     if (request.params?.cursor !== undefined) throw new McpError(ErrorCode.InvalidParams, 'Resource-template cursors are not supported.');
     return { resourceTemplates: [
+      { uriTemplate: 'aiblocks://approaches/{job}', name: 'approaches', title: 'Ways to do a job', description: 'Source-backed approach families, lenses, tools and honest coverage gaps.', mimeType: 'application/json' },
       { uriTemplate: 'aiblocks://roles{?area,page}', name: 'roles-page', title: 'A page of specialist roles', description: 'Roles in one area, 100 a page. area: an id from aiblocks://roles. For a task, use find_specialist.', mimeType: 'application/json' },
       {uriTemplate:'aiblocks://roles/{id}',name:'role',title:'An AI specialist role setup',description:'A source-backed role with deliverables, methods, full role instructions and a revision-pinned custom skill. Prepared, not executed.',mimeType:'application/json'},
       { uriTemplate: 'aiblocks://{type}/{id}', name: 'item', title: 'Any AI Blocks item', description: 'The short view of any item, as get_item returns it. type: skill, workflow, agent, prompt, mind, ai_tool or mini_tool.', mimeType: 'application/json' },

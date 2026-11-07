@@ -23,6 +23,7 @@ export const gateSteps=[
   ['Check source',process.execPath,['tools/qa/check.mjs','--worktree'],'.'],
   ['Unit tests','npm',['run','test:unit'],'site'],
   ['Outcome evals scorecard',process.execPath,['tools/outcome-evals.mjs','score'],'.'],
+  ['Team job structural controls',process.execPath,['tools/job-evals.mjs','check'],'.'],
   ['Production build','npm',['run','build'],'site'],
   ['Byte budgets',process.execPath,['scripts/byte-budgets.mjs'],'site'],
   ['SEO','npm',['run','seo'],'site'],

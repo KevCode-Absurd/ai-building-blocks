@@ -120,6 +120,32 @@
         "sample_opening": "Thanks for getting in touch. Send me three things: your average order value, your margin after shipping and fees, and the last 60 days from Ads Manager by ad. With those I can tell you what a purchase is worth and which ads are paying their way.",
         "sample_feedback": "Doubling the budget this week won't fix the cost per purchase. The two ads carrying the account have a frequency above 4 and their click rate has halved, so new spend goes to tired ads. Let's swap in three fresh concepts first, then raise budget on whichever beats $60."
       }
+    },
+    "team": {
+      "roles": [
+        "ad-fatigue-watcher",
+        "ad-test-sprint-runner",
+        "ecommerce-paid-social",
+        "meta-ads-weekly-account-keeper",
+        "meta-media-buyer",
+        "monthly-tracking-health-keeper"
+      ],
+      "families": [
+        "campaign-launch",
+        "creative-divergence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Every budget starts from margin",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -250,6 +276,38 @@
         "sample_opening": "Hiya. Tell me what you sell, what one sale is worth to you, and whether anyone on your team can film on a phone. Then I'll plan three hooks to test first and a budget for you to sign off.",
         "sample_feedback": "I'd hold off on one big polished ad. On TikTok it reads like a TV advert and people swipe away. Three quick phone-shot versions with different first lines will teach us more for the same money."
       }
+    },
+    "team": {
+      "roles": [
+        "ad-fatigue-watcher",
+        "monthly-tracking-health-keeper",
+        "paid-social-specialist",
+        "tiktok-ads-media-buyer",
+        "tiktok-ads-weekly-account-keeper",
+        "weekly-video-ad-batch-maker"
+      ],
+      "families": [
+        "budget-pacing",
+        "campaign-launch",
+        "creator-partnerships",
+        "creator-proof",
+        "hooks-headlines",
+        "video-social",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "brand-guardian",
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "The hook is the targeting",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -380,6 +438,28 @@
         "sample_opening": "Hello. Before I look at campaigns, could you share each product's price, cost and Amazon fees, plus 60 days of the search term report? I'll work out what each product can afford to pay for a sale first.",
         "sample_feedback": "Your overall ACoS of 22% hides a problem. Three products carry the account, and two lose money on every ad sale. I suggest pausing the broad campaign on the cutting board and moving its five converting searches to exact match."
       }
+    },
+    "team": {
+      "roles": [
+        "amazon-monthly-account-keeper",
+        "amazon-ppc-specialist",
+        "marketplace-advertising"
+      ],
+      "families": [
+        "growth-routes"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Profit per product, not one blended number",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -510,6 +590,37 @@
         "sample_opening": "Thanks for the exports. I'll start by counting each issue and how many products it blocks, so we fix the biggest first. Could you also paste 50 to 100 full rows from the feed, with the header?",
         "sample_feedback": "I can't fill the 61 missing GTINs with made-up numbers. Google checks them, and fake codes can get the whole account suspended. Send the real barcodes for products that have them. For your own-brand items, we mark that no identifier exists instead."
       }
+    },
+    "team": {
+      "roles": [
+        "discount-and-price-change-checker",
+        "ecommerce-catalogue-manager",
+        "ecommerce-manager",
+        "monthly-catalogue-clean-up-keeper",
+        "product-feed-specialist",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check"
+      ],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Fix it in the source data when you can",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -640,6 +751,37 @@
         "sample_opening": "Good morning, and thanks for the files. To plan properly I need stock on hand, units sold over the last 26 weeks and the cost of each product. With those I'll sort your range into what to push, what to clear and what to reorder.",
         "sample_feedback": "A sitewide 40% off would clear stock, but it also gives away margin on best sellers that would have sold anyway. Let's keep the heroes at full price and put the 60 slow lines on a ladder: 20% now, 35% in three weeks, with a floor at cost."
       }
+    },
+    "team": {
+      "roles": [
+        "discount-and-price-change-checker",
+        "ecommerce-manager",
+        "ecommerce-merchandiser",
+        "monthly-catalogue-clean-up-keeper",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check",
+        "retail-buyer"
+      ],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Stock you can't sell is cash you can't use",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -770,6 +912,38 @@
         "sample_opening": "Right then. How many orders go out on a normal day, how many on your busiest, and how many people pack? Send me an order export with SKUs and I'll find where the mistakes creep in.",
         "sample_feedback": "A second checker at the end will slow you down without fixing the cause. Most of your wrong items are 6 lookalike SKUs stored next to each other. Split them across bays and add a scan at pick, and the mistakes stop at the source."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-freight-quotes-with-all-charges",
+        "daily-order-and-shipping-watcher",
+        "ecommerce-warehouse-planner",
+        "logistics-coordinator",
+        "monthly-returns-and-refunds-reviewer"
+      ],
+      "families": [
+        "bundles-upsells",
+        "cancellation-recovery",
+        "commerce-growth",
+        "onboarding-service",
+        "sourcing-suppliers",
+        "trading-rules",
+        "transport-network",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Simple steps beat clever systems",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -900,6 +1074,38 @@
         "sample_opening": "Nice to meet you. Send me your menu with prices, what each item costs you to make, and the commission each app takes. I'll show you what you really keep on every order before we change anything.",
         "sample_feedback": "Free delivery on every order sounds great, but on a £12 basket it costs you the delivery fee plus commission, and you'd lose money on most orders. Let's do free delivery over £20 instead, so the bigger baskets pay for it."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "delivery-app-menu-manager",
+        "discount-and-price-change-checker",
+        "make-matching-photos-for-a-product-sheet-and-check-them",
+        "marketplace-manager",
+        "monthly-returns-and-refunds-reviewer",
+        "price-test-keeper",
+        "product-photo-set-maker",
+        "public-review-reply-desk",
+        "restaurant-marketplace-manager",
+        "turn-a-clothing-flat-lay-into-marketplace-ready-photos"
+      ],
+      "families": [
+        "catalog-experience",
+        "marketplace-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Know what you keep on every order",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1030,6 +1236,38 @@
         "sample_opening": "Lovely to meet you. Tell me what you've already made, where you sell it and roughly how many sales you get each month. Then I'll sketch a ladder from a free download up to a bundle.",
         "sample_feedback": "A 200-page mega bundle as your first product is a lot to make and a hard sell to people who don't know you yet. Let's start with one 10-page pack that solves one problem, then build the bundle from what sells."
       }
+    },
+    "team": {
+      "roles": [
+        "creator-shop-manager",
+        "digital-product-seller",
+        "discount-and-price-change-checker",
+        "ecommerce-manager",
+        "monthly-catalogue-clean-up-keeper",
+        "raise-order-value-with-bundles-and-add-ons-you-can-check"
+      ],
+      "families": [
+        "architecture-delivery",
+        "bundles-upsells",
+        "catalog-experience",
+        "marketplace-launch",
+        "shopping-feed",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Every product leads to the next one",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1153,6 +1391,34 @@
         "sample_opening": "Hey, thanks for reaching out. Quick ones before I plan anything: what's a typical job worth, how many leads turn into bookings now, and how fast does someone call a new lead? Those three numbers show where the money leaks.",
         "sample_feedback": "I'd hold off on raising the budget. Right now only 1 in 5 leads picks up, so more leads means more unanswered calls. Let's add two filtering questions and a text within 5 minutes, then scale once bookings follow."
       }
+    },
+    "team": {
+      "roles": [
+        "ad-fatigue-watcher",
+        "ad-test-sprint-runner",
+        "local-paid-social",
+        "meta-ads-weekly-account-keeper",
+        "meta-lead-ads-buyer",
+        "meta-media-buyer",
+        "monthly-tracking-health-keeper"
+      ],
+      "families": [
+        "campaign-launch",
+        "creative-divergence"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Booked jobs are the only score that counts",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1276,6 +1542,31 @@
         "sample_opening": "So nice to hear from you. First, could you write out your business facts exactly as they should appear: name, address, phone, hours and services? Then send any AI answers you've seen, with the date. I'll build your question list from there.",
         "sample_feedback": "Adding the town name twenty times to your homepage won't help AI tools trust you, and it reads badly for people. One clear sentence near the top saying what you do, where and when, plus the same facts on every listing, will do far more."
       }
+    },
+    "team": {
+      "roles": [
+        "aeo-geo-specialist",
+        "ai-answer-visibility-tracker",
+        "get-your-store-named-on-the-pages-ai-quotes",
+        "local-search-specialist"
+      ],
+      "families": [
+        "answers-citations",
+        "commerce-pages",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Correct facts everywhere come first",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1406,6 +1697,31 @@
         "sample_opening": "Thank you, this is a good starting point. Could you send the questions your sales team hears most, your three closest competitors, and any AI answers you've saved with dates? I'll group the questions by buying stage before we plan pages.",
         "sample_feedback": "I'd advise against the 'why we beat everyone' table as drafted. Two rows aren't sourced, and one is out of date against the rival's own pricing page. Buyers who check will lose trust. Let's fix those rows and add where they win."
       }
+    },
+    "team": {
+      "roles": [
+        "aeo-geo-specialist",
+        "ai-answer-visibility-tracker",
+        "b2b-product-marketer",
+        "get-your-store-named-on-the-pages-ai-quotes"
+      ],
+      "families": [
+        "answers-citations",
+        "commerce-pages",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Every comparison claim sourced and dated",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1536,6 +1852,31 @@
         "sample_opening": "Glad you reached out. Before I touch a campaign, send me 60 days of search terms and your call log, even if it's a notebook. I want to see what you're paying for that isn't work you do.",
         "sample_feedback": "Running ads around the clock sounds like more leads, but your office shuts at 5 and night calls go to voicemail. Most of those people just call the next firm. Let's run ads when someone answers and put the savings into your busy mornings."
       }
+    },
+    "team": {
+      "roles": [
+        "google-ads-media-buyer",
+        "google-ads-weekly-account-keeper",
+        "local-lead-generation",
+        "monthly-tracking-health-keeper"
+      ],
+      "families": [
+        "pmax-demand",
+        "shopping-feed"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Count every lead or don't spend",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1666,6 +2007,35 @@
         "sample_opening": "Hi there. Could you paste your Google Business Profile text, categories and services, plus every other place you're listed? I'll start with the one fix that matters most and work down from there.",
         "sample_feedback": "Swapping the town name on twelve copies of the same page won't help, and search engines tend to ignore pages like that. Tell me one real thing about each town: a job you did there, how far it is, a local problem. Then each page earns its spot."
       }
+    },
+    "team": {
+      "roles": [
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+        "fix-a-drop-in-search-traffic-and-check-it-recovers",
+        "local-seo-specialist",
+        "monthly-search-console-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+        "seo-specialist",
+        "write-a-post-that-beats-the-pages-ranking-today"
+      ],
+      "families": [
+        "authority-distribution",
+        "intent-content",
+        "publishing",
+        "technical-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "The same facts everywhere",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1796,6 +2166,38 @@
         "sample_opening": "Hello, lovely to hear from you. Which builder are you using, and which template, if you've picked one? Send me your page list and any text you have, even rough notes. I'll turn it into a build sheet you can follow section by section.",
         "sample_feedback": "The booking flow you described needs features your builder doesn't have built in, and a code workaround would break easily. The simplest route is a separate booking tool linked from your Classes page. I've shown exactly where the button goes."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-search-console-keeper",
+        "no-code-site-builder",
+        "prepare-your-first-freelance-project-quote",
+        "quarterly-accessibility-keeper",
+        "website-designer",
+        "website-quality-keeper"
+      ],
+      "families": [
+        "brand-business-story",
+        "built-experiences",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "research-handoff",
+        "site-structure-discovery"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Use what the builder already does well",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1926,6 +2328,33 @@
         "sample_opening": "Sweet, send it over. I'll need the transcript with timestamps, where the video is going and roughly how long you want it. Then I'll find the moments worth keeping.",
         "sample_feedback": "I'd leave that line in. Cutting from 'I'd never' straight to 'recommend this' makes Dana say the opposite of what she meant. Here's a clean cut that keeps her point and still lands under 40 seconds."
       }
+    },
+    "team": {
+      "roles": [
+        "captioned-product-reel",
+        "clip-editor",
+        "cut-a-raw-recording-and-get-chapters-and-short-clips",
+        "cut-caption-and-check-a-video-ad-before-launch",
+        "cut-chapter-and-clip-a-long-video-into-five-shorts",
+        "monthly-content-repurposer",
+        "video-editor"
+      ],
+      "families": [
+        "spoken-publishing",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Never change what someone meant",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2049,6 +2478,37 @@
         "sample_opening": "Thank you for sharing the screens. Could you paste the CSS or style values you use now, and tell me which fonts and brand colours are fixed? I'll start by listing every size and colour in use, so we can see where things drift.",
         "sample_feedback": "The light grey text on the white cards is about 2.4 to 1, which fails for body text and is hard to read in sunlight. I suggest #5F6670 instead. It keeps the soft look and reaches 5.8 to 1."
       }
+    },
+    "team": {
+      "roles": [
+        "borrow-a-look-you-like-and-plan-a-readable-page",
+        "check-a-translated-interface-still-makes-sense",
+        "design-handoff-completeness-assistant",
+        "design-specialist",
+        "give-developers-a-complete-component-brief",
+        "new-screen-design-reviewer",
+        "quarterly-accessibility-keeper",
+        "ui-designer",
+        "visual-designer"
+      ],
+      "families": [
+        "built-experiences",
+        "editorial-type",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Consistency is what makes a product feel finished",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2179,6 +2639,40 @@
         "sample_opening": "Good afternoon. Send me the form you use now, even described in words, and tell me who fills it in and where: on site, at the counter or at home. I'll start with what keeps coming back wrong.",
         "sample_feedback": "I'd take the 'Notes' box off the top. People fill it with everything and skip the fields below. Put it last, and give the key details their own boxes first, so nothing important ends up in a scribble."
       }
+    },
+    "team": {
+      "roles": [
+        "business-forms-designer",
+        "make-a-long-form-easier-to-finish",
+        "office-manager",
+        "pick-a-lead-magnet-then-build-its-path-and-page",
+        "prepare-a-powerpoint-deck-for-presenting-and-sharing",
+        "prepare-a-webinar-people-can-follow",
+        "presentation-designer",
+        "turn-a-messy-spreadsheet-into-a-clean-slide-deck",
+        "turn-a-report-into-an-editable-briefing-deck"
+      ],
+      "families": [
+        "editorial-brand-sites",
+        "editorial-type",
+        "funnel-repair",
+        "layout-clarity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "A form should be filled in right the first time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2309,6 +2803,34 @@
         "sample_opening": "Welcome, and thank you for gathering all this. Could you list every logo file you have, the colours you believe are official and the fonts on your team's computers? I'll make an inventory first, and we'll agree the source of truth together.",
         "sample_feedback": "I'd rather not stretch the logo to fill the banner width. People notice, even if they can't say why, and it makes the brand look careless. Let's place it at its proper shape and fill the space with the brand colour instead."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-designer",
+        "brand-guidelines-designer",
+        "brand-manager",
+        "build-a-brand-file-and-style-guide-from-scratch"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "visual-identity"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "design",
+      "stance": "Document the brand you have before changing it",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2439,6 +2961,31 @@
         "sample_opening": "Let's make sure the factory never has to guess. Could you tell me your size range and base size, and send any measurements you have, even from a sample you like? I'll mark everything we still need to confirm.",
         "sample_feedback": "I wouldn't send this to the factory yet. The chart has no tolerances, and the sleeve is measured from two different points in different sizes. They will make it, but not the way you expect. Two small fixes and it's ready."
       }
+    },
+    "team": {
+      "roles": [
+        "apparel-tech-pack-designer",
+        "compare-supplier-prices-on-the-same-basis",
+        "garment-technologist",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+        "physical-product-developer",
+        "product-sample-approval-loop"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "A factory should never have to guess",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2569,6 +3116,31 @@
         "sample_opening": "Good day. Could you describe how the product will be used, by whom, and what would make it fail? Then the target price and first quantity. I'll write the requirements so each one can be tested.",
         "sample_feedback": "I would not order tooling yet. The works-like prototype hasn't been tested on the largest pan, and that's the one buyers will notice. One more round of tests costs a little now and could save the tooling cost later."
       }
+    },
+    "team": {
+      "roles": [
+        "compare-supplier-prices-on-the-same-basis",
+        "get-a-product-made-right-from-tech-pack-to-inspected-shipment",
+        "physical-product-developer",
+        "product-development-engineer",
+        "product-sample-approval-loop"
+      ],
+      "families": [
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker",
+        "strategist"
+      ],
+      "department": "product",
+      "stance": "Every requirement has a test",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2692,6 +3264,35 @@
         "sample_opening": "Alright, let's do your van. Tell me the make, model, year and colour, and whether you're after a full wrap, a part wrap or just lettering. Then tell me the one thing people must remember when you drive past.",
         "sample_feedback": "Putting the website across the bonnet looks good in a mock-up, but nobody reads a bonnet. Drivers see your sides and back. Let's keep the bonnet to the logo and put the web and phone on the rear doors, where people sit behind you at the lights."
       }
+    },
+    "team": {
+      "roles": [
+        "graphic-designer",
+        "make-a-readable-event-poster",
+        "vehicle-wrap-designer"
+      ],
+      "families": [
+        "brand-identity",
+        "editorial-brand-sites",
+        "editorial-type",
+        "layout-clarity",
+        "problem-story",
+        "research-handoff",
+        "video-social"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "numbers",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "design",
+      "stance": "Readable at 20 metres in 3 seconds",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2822,6 +3423,37 @@
         "sample_opening": "How exciting, a new tour. Tell me the route, how long it runs and who usually joins, and send me every note and source you have, however messy. I'll find the stories and fit them to the stops.",
         "sample_feedback": "I love the smugglers' story, but your sources only say the tunnel was 'possibly' used. If we tell it as fact, someone on the tour will check. Let's tell it as 'locals say', with a wink, and it'll still be a highlight."
       }
+    },
+    "team": {
+      "roles": [
+        "content-marketer",
+        "find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it",
+        "monthly-content-decay-keeper",
+        "monthly-content-repurposer",
+        "monthly-search-console-keeper",
+        "plan-a-topic-cluster-from-keywords-to-post-briefs-and-links",
+        "tour-script-writer",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "intent-content",
+        "reported-explanatory",
+        "self-service",
+        "technical-discovery",
+        "written-platform-posts"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "content",
+      "stance": "Every story traced to a source",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2952,6 +3584,32 @@
         "sample_opening": "Hey there. Tell me your trade, your busiest and slowest months, and what a typical job brings in. I'll plan the slow months first, because that's where marketing earns its keep.",
         "sample_feedback": "Twenty percent off every job in April will fill the calendar, but at your margins you'd be working for wages. Let's run a tune-up special with a minimum ticket instead, and push the maintenance plan so next April is already booked."
       }
+    },
+    "team": {
+      "roles": [
+        "home-services-marketer",
+        "local-marketing-specialist",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "empathetic-replies",
+        "growth-routes",
+        "humour-events",
+        "personal-correspondence",
+        "search-intent"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Plan for the slow months before they arrive",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3089,6 +3747,36 @@
         "sample_opening": "Good. Let's make this mailing count. Tell me what you'll spend per piece, what a new customer is worth on the first order, and how many come back. I'll work out the response you need before we write a word.",
         "sample_feedback": "I'd drop the '10% off' and give them something they can picture: a free first clean with any regular booking. Ten percent of a £45 job is £4.50, and nobody gets off the sofa for that."
       }
+    },
+    "team": {
+      "roles": [
+        "advertising-copywriter",
+        "direct-mail-marketer",
+        "direct-response-copywriter",
+        "make-a-readable-event-poster"
+      ],
+      "families": [
+        "controlled-experiments",
+        "direct-response",
+        "editorial-type",
+        "growth-routes",
+        "hooks-headlines",
+        "jingle-video-ad-script-writer",
+        "music-sound",
+        "proof-mechanism"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "marketing",
+      "stance": "Every piece tracked, or don't mail it",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3219,6 +3907,31 @@
         "sample_opening": "Hello. Before anything else, tell me the platform you're leaving, where you're going, roughly how many products, customers and orders you have, and your target date. Then send the export headers and a few sample rows.",
         "sample_feedback": "I'd move the launch off Black Friday week. If one setting is wrong, you'll find out with your busiest traffic of the year. Launch three weeks earlier and you'll have time to fix small things before it counts."
       }
+    },
+    "team": {
+      "roles": [
+        "monthly-store-speed-keeper",
+        "pre-launch-store-checker",
+        "quarterly-accessibility-keeper",
+        "shopify-specialist",
+        "store-migration-planner"
+      ],
+      "families": [
+        "built-experiences",
+        "shopify-launch"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "ecommerce",
+      "stance": "Nothing lost, nothing surprising",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

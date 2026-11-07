@@ -30,13 +30,13 @@ export function rowToPersona(row: PersonaRow): Persona {
   const extra = row.kind === "house" ? houseExtras(row.id) : undefined;
   return {
     id: row.id, kind: row.kind, expert_id: row.expert_id, name: row.name, title: row.title, tagline: row.tagline,
-    area: row.area as Persona["area"], ...(extra?.role ? { role: extra.role } : {}), ...(extra?.mega ? { mega: extra.mega } : {}),
+    area: row.area as Persona["area"], ...(extra?.role ? { role: extra.role } : {}), ...(extra?.mega ? { mega: extra.mega } : {}), ...(extra?.team ? { team: extra.team } : {}),
     profile: { ...emptyProfile(row.id), ...parseJson<Partial<PersonaProfile>>(row.profile, {}) },
     status: row.status, sort: row.sort,
   };
 }
 
-type HouseExtras = Pick<Persona, "role" | "mega">;
+type HouseExtras = Pick<Persona, "role" | "mega" | "team">;
 let extrasIndex: { list: Persona[]; byId: Map<string, HouseExtras> } | null = null;
 
 /**
@@ -46,7 +46,7 @@ let extrasIndex: { list: Persona[]; byId: Map<string, HouseExtras> } | null = nu
 export function houseExtras(id: string): HouseExtras | undefined {
   const list = housePersonas();
   if (!extrasIndex || extrasIndex.list !== list) {
-    extrasIndex = { list, byId: new Map(list.filter(p => p.role || p.mega).map(p => [p.id, { role: p.role, mega: p.mega }])) };
+    extrasIndex = { list, byId: new Map(list.filter(p => p.role || p.mega || p.team).map(p => [p.id, { role: p.role, mega: p.mega, team: p.team }])) };
   }
   return extrasIndex.byId.get(id);
 }

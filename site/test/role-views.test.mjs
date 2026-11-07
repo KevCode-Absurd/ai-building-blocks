@@ -4,7 +4,7 @@ const read=p=>fs.readFileSync(new URL('../public/data/'+p,import.meta.url)),sha=
 const view=id=>JSON.parse(read('role-views/'+id+'.json'));
 test('every lightweight role view retains its complete public remit and binds the unchanged full profile',()=>{
  const index=JSON.parse(read('roles-index.json'));let fullBytes=0,viewBytes=0;
- for(const row of index.roles){const bytes=read('roles/'+row.id+'.json'),{worker,instructions,...fields}=JSON.parse(bytes),v=view(row.id);assert.deepEqual(v,{...fields,schema:'ai-blocks-role-view/1',sourceProfile:{path:'/data/roles/'+row.id+'.json',bytes:bytes.length,sha256:sha(bytes)}},row.id);assert(worker);const size=read('role-views/'+row.id+'.json').length;assert(size<50_000,row.id);fullBytes+=bytes.length;viewBytes+=size;}
+ for(const row of index.roles){const bytes=read('roles/'+row.id+'.json'),{worker,instructions,core,extended,...fields}=JSON.parse(bytes),v=view(row.id);assert.deepEqual(v,{...fields,schema:'ai-blocks-role-view/1',sourceProfile:{path:'/data/roles/'+row.id+'.json',bytes:bytes.length,sha256:sha(bytes)}},row.id);assert(worker);const size=read('role-views/'+row.id+'.json').length;assert(size<50_000,row.id);fullBytes+=bytes.length;viewBytes+=size;}
  assert(viewBytes<fullBytes*.5,'Display views must remove at least half of the profile bytes, and each stays under 50 KB, without truncating the remit.');
 });
 test('full task setup is retrieved once per exact revision; failed or changed downloads remain retryable',async()=>{

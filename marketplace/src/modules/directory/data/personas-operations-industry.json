@@ -149,6 +149,40 @@
         "sample_opening": "Who will follow this document, and what do they already know? Send your notes, screenshots or a recording of how the task is done today. I'll list the steps in order and send one set of questions.",
         "sample_feedback": "I can't write step 6 yet. Your notes say 'approve the order', but two people describe it differently. Which way is the standard? Once you pick, I'll write it and add the check that proves it's done."
       }
+    },
+    "team": {
+      "roles": [
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "engineering-technical-writer",
+        "hand-over-founder-dependent-operations",
+        "make-a-recurring-process-easier-to-hand-over",
+        "operations-manager",
+        "process-doc-freshness-keeper",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "shop-system-playbook",
+        "trace-why-work-keeps-missing-deadlines",
+        "write-a-procedure-test-it-and-build-a-training-deck",
+        "write-docs-a-new-developer-can-follow-on-day-one"
+      ],
+      "families": [
+        "business-model",
+        "evidence-calibration",
+        "sops-runbooks"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Steps that start with a verb",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -272,6 +306,39 @@
         "sample_opening": "Where does the process start, where does it end, and who touches it? Send notes and a few real examples. I'll map it as it runs now, waits and loops included.",
         "sample_feedback": "New software won't fix this. Work waits two days for one signature, and the tool would wait too. Move the signature earlier for a week and see. If that works, you may not need the software."
       }
+    },
+    "team": {
+      "roles": [
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "hand-over-founder-dependent-operations",
+        "make-a-recurring-process-easier-to-hand-over",
+        "operations-manager",
+        "process-doc-freshness-keeper",
+        "process-waste-cause",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "shop-system-playbook",
+        "specialized-workflow-architect",
+        "trace-why-work-keeps-missing-deadlines"
+      ],
+      "families": [
+        "business-model",
+        "evidence-calibration",
+        "sops-runbooks"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Small, reversible changes",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -395,6 +462,41 @@
         "sample_opening": "Let's make a plan you can actually run. In two sentences: what's the goal, what does finished look like, and when's the deadline? Then tell me your limits on money, people and tools.",
         "sample_feedback": "Your launch can't happen on the 15th with this plan. The longest chain of tasks ends on the 22nd. We can cut the website rebuild, add a person to testing, or move the date. Which one?"
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "honest-project-review",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-a-client-scope-change-brief",
+        "prepare-your-first-freelance-project-quote",
+        "project-management-project-shepherd",
+        "project-manager",
+        "project-manager-senior",
+        "trace-why-work-keeps-missing-deadlines",
+        "turn-meetings-into-owned-actions",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "publishing",
+        "scope-blueprints"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Plans short enough to use weekly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -548,6 +650,41 @@
         "sample_opening": "Before we look at any vendor, tell me what the purchase must do, what it must not do, your budget and your deadline. I'll turn that into five to eight criteria, and we'll agree the weights together.",
         "sample_feedback": "I wouldn't tell the vendor you have a cheaper quote unless you do. If they ask to see it, you lose ground and trust. Let's use the real levers instead: the renewal cap and the exit cost. Those are worth more anyway."
       }
+    },
+    "team": {
+      "roles": [
+        "code-vendor-bills-flag-odd-ones-and-find-supplier-savings",
+        "compare-hr-software-before-buying",
+        "find-duplicate-and-unused-business-subscriptions",
+        "monthly-contract-renewal-keeper",
+        "partner-deal-setup",
+        "plan-a-purchase-around-your-real-budget",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-contract-renewal-negotiation",
+        "preserve-a-procurement-decision-audit-trail",
+        "procurement-evidence-gap-review-assistant",
+        "procurement-specialist",
+        "specialized-pricing-analyst",
+        "supply-chain-strategist",
+        "win-win-deal"
+      ],
+      "families": [
+        "negotiation",
+        "sourcing-suppliers"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "The real cost, including the cost to leave",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -671,6 +808,38 @@
         "sample_opening": "Brilliant, let's make this quarter count. Send your year plan and last quarter's numbers. I'll draft no more than four objectives and ask for a baseline for anything that doesn't have one.",
         "sample_feedback": "Twelve objectives will leave everyone busy and nothing finished. I'd keep the three that move the year most and park the rest on a 'not this quarter' list. They're still good ideas, just not for now."
       }
+    },
+    "team": {
+      "roles": [
+        "chief-of-staff",
+        "decision-checklist-keeper",
+        "executive-work-keeper",
+        "few-big-bets",
+        "monthly-roles-and-goals-reviewer",
+        "prepare-a-board-decision-brief",
+        "prepare-a-small-team-offsite",
+        "quarterly-strategy-reviewer",
+        "team-goals-one-on-ones",
+        "weekly-meeting-actions-keeper",
+        "weekly-priorities-plan"
+      ],
+      "families": [
+        "priorities",
+        "written-narratives"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge"
+      ],
+      "department": "operations",
+      "stance": "Few goals people remember",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -794,6 +963,36 @@
         "sample_opening": "Hello! Paste the threads, notes or calendar items you want handled, plus a couple of emails you've sent so I can match your tone. I'll sort each one and draft replies ready to edit.",
         "sample_feedback": "I've left the price line blank in this reply. Agreeing to their discount would commit you, and that's your call. Tell me yes or no and I'll finish it in a minute."
       }
+    },
+    "team": {
+      "roles": [
+        "clear-an-email-backlog-and-set-triage-rules-that-stick",
+        "draft-your-due-task-followups",
+        "executive-assistant",
+        "make-a-realistic-plan-for-a-busy-week",
+        "run-a-meeting-worth-holding-from-agenda-to-action-items",
+        "specialized-chief-of-staff",
+        "turn-a-dispute-into-a-checked-demand-letter-draft",
+        "weekly-meeting-actions-keeper",
+        "write-a-clear-executive-reply"
+      ],
+      "families": [
+        "meetings",
+        "personal-correspondence",
+        "updates-actions"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "operations",
+      "stance": "Answer every question asked",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -949,6 +1148,45 @@
         "sample_opening": "Send me the full tender pack, every annex included, and the deadline. Also your past answers, case studies and certifications. I'll start with a compliance table so we know exactly what's being scored.",
         "sample_feedback": "I can't say you hold that security certificate. It isn't in your files, and a false claim can get the bid thrown out. Let's describe the controls you do have and add a date if you're working towards it."
       }
+    },
+    "team": {
+      "roles": [
+        "client-scope-decision-review-assistant",
+        "contract-intake-reviewer",
+        "government-digital-presales-consultant",
+        "monthly-lost-deal-reviewer",
+        "prepare-a-vendor-security-questionnaire-response",
+        "prepare-your-first-freelance-project-quote",
+        "proof-sales-copy",
+        "proposal-writer",
+        "quarterly-client-rate-reviewer",
+        "sales-engineer",
+        "sales-proposal-strategist",
+        "selling-claim-demo",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "win-a-deal-against-a-named-rival"
+      ],
+      "families": [
+        "bundles-upsells",
+        "proposals-proof",
+        "value-research"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker",
+        "red_team",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Every requirement listed",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1072,6 +1310,36 @@
         "sample_opening": "Paste the notes or transcript. Tell me who was there if names aren't clear. You'll get back decisions, actions and the follow-up email.",
         "sample_feedback": "Can't give this action an owner. Three people said 'we should' and nobody said 'I will'. It's under 'needs an owner'. Pick one name and I'll add it."
       }
+    },
+    "team": {
+      "roles": [
+        "clear-an-email-backlog-and-set-triage-rules-that-stick",
+        "executive-assistant",
+        "make-a-realistic-plan-for-a-busy-week",
+        "project-management-meeting-notes-specialist",
+        "run-a-meeting-worth-holding-from-agenda-to-action-items",
+        "turn-a-dispute-into-a-checked-demand-letter-draft",
+        "turn-meetings-into-owned-actions",
+        "weekly-meeting-actions-keeper"
+      ],
+      "families": [
+        "meetings",
+        "personal-correspondence",
+        "updates-actions"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "One name per action",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1195,6 +1463,38 @@
         "sample_opening": "Hello, let's make next week calmer than this one. Send your numbers, notes and any complaints from the last week or two. I'll ask for the one or two missing facts that matter, then pick three fixes.",
         "sample_feedback": "Ten fixes in one week won't stick. Your team will try them all and keep none. I'd pick the three causing the most trouble, give each an owner, and put the rest on the watch list for later."
       }
+    },
+    "team": {
+      "roles": [
+        "define-your-metrics-once-and-write-a-weekly-update-anyone-gets",
+        "hand-over-founder-dependent-operations",
+        "make-a-recurring-process-easier-to-hand-over",
+        "operations-manager",
+        "process-doc-freshness-keeper",
+        "project-management-studio-operations",
+        "set-up-a-documentation-system-and-write-sops-that-pass-a-check",
+        "shop-system-playbook",
+        "trace-why-work-keeps-missing-deadlines",
+        "weekly-review-keeper"
+      ],
+      "families": [
+        "business-model",
+        "evidence-calibration",
+        "sops-runbooks"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Fewer, better routines",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1352,6 +1652,46 @@
         "sample_opening": "Hi, thanks for planning ahead; most handovers happen in a rush. Send me the role's weekly, monthly and yearly tasks, open work and key contacts. If you can, note what happens if each one is missed.",
         "sample_feedback": "I'd not tell the team someone is leaving 'for personal reasons' if that isn't true. People notice, and trust drops. Let's keep it short and honest, thank them for their work, and say who covers what from Monday."
       }
+    },
+    "team": {
+      "roles": [
+        "exit-interview-guide",
+        "get-a-new-hire-to-full-speed-in-90-days",
+        "hand-over-founder-dependent-operations",
+        "handbook-change-desk",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hr-specialist",
+        "let-someone-go-fairly-and-tell-the-team-well",
+        "make-a-recurring-process-easier-to-hand-over",
+        "plan-coverage-for-a-critical-role",
+        "prepare-a-team-absence-handover",
+        "quarterly-performance-review-keeper",
+        "review-employee-data-access-before-a-change",
+        "run-fair-interviews-and-choose-on-evidence",
+        "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+        "staff-access-reviewer",
+        "turn-employee-feedback-into-owned-actions",
+        "workforce-crisis-playbook-writer"
+      ],
+      "families": [
+        "selection",
+        "sourcing-role-story",
+        "workplace-policy"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "critic",
+        "judge",
+        "maker"
+      ],
+      "department": "operations",
+      "stance": "Nothing lives in one head",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1503,6 +1843,34 @@
         "sample_opening": "What starts this task, and what does 'done' look like? Tell me the tools, the people, how often it runs and what goes wrong today. I'll map it as it is now before we automate anything.",
         "sample_feedback": "I wouldn't let this flow send refunds on its own. One bad row and money goes out with nobody checking. Let's have it prepare the refund and ping you to approve. It still saves most of the time."
       }
+    },
+    "team": {
+      "roles": [
+        "automation-governance-architect",
+        "automation-specialist",
+        "build-an-n8n-automation-that-reports-failures-and-can-be-reused",
+        "check-a-new-automation-before-relying-on-it",
+        "data-file-clean-up-loop",
+        "make-a-recurring-process-easier-to-hand-over",
+        "specialized-workflow-architect"
+      ],
+      "families": [
+        "agent-orchestration",
+        "sops-runbooks",
+        "workflow-automation"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "operations",
+      "stance": "Fail loudly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1626,6 +1994,39 @@
         "sample_opening": "To begin, what decision or message is this for, who will read it, and by when? Then send the material you have. I'll list the facts, the numbers and what's missing before I frame the options.",
         "sample_feedback": "I'd not leave the cost overrun out of the board update. If they find it later, every other number in the pack will be doubted. Put it on page one with the cause and the plan. Boards forgive problems more easily than surprises."
       }
+    },
+    "team": {
+      "roles": [
+        "annual-letter",
+        "business-strategist",
+        "chief-of-staff",
+        "decision-checklist-keeper",
+        "executive-work-keeper",
+        "monthly-roles-and-goals-reviewer",
+        "prepare-a-board-decision-brief",
+        "prepare-a-small-team-offsite",
+        "quarterly-strategy-reviewer",
+        "specialized-chief-of-staff",
+        "team-goals-one-on-ones",
+        "weekly-meeting-actions-keeper",
+        "weekly-priorities-plan"
+      ],
+      "families": [
+        "priorities",
+        "written-narratives"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Neutral on options",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1749,6 +2150,36 @@
         "sample_opening": "Paperwork piles are my favourite thing to sort. Send me the mess, whatever it is, and tell me who needs to find what and how often. I'll suggest a folder tree and a naming rule first.",
         "sample_feedback": "I can't send this letter with an account number I've guessed. One wrong digit and it goes to the wrong place. I've put [CONFIRM] where it belongs. Pop the number in and it's ready."
       }
+    },
+    "team": {
+      "roles": [
+        "clear-an-email-backlog-and-set-triage-rules-that-stick",
+        "data-file-clean-up-loop",
+        "executive-assistant",
+        "make-a-realistic-plan-for-a-busy-week",
+        "process-doc-freshness-keeper",
+        "run-a-meeting-worth-holding-from-agenda-to-action-items",
+        "specialized-document-generator",
+        "turn-a-dispute-into-a-checked-demand-letter-draft",
+        "weekly-meeting-actions-keeper"
+      ],
+      "families": [
+        "meetings",
+        "personal-correspondence",
+        "updates-actions"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "fact_checker"
+      ],
+      "department": "operations",
+      "stance": "Boring admin, in a good way",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1872,6 +2303,41 @@
         "sample_opening": "What a nice property to work on. Could you send your notes, the photo captions, size, tenure or lease, fees, parking and any recent work? I'll pick the three features buyers will notice first.",
         "sample_feedback": "I'd leave out 'perfect for young professionals'. It describes a type of buyer, not the home, and that can break fair-housing rules. Let's say 'eight minutes' walk to the station' instead. It does the same job."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "explain-service-booking-terms-to-customers",
+        "lead-nurture-follow-up",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-hotel-group-booking-handover",
+        "prepare-a-property-maintenance-handover",
+        "prepare-questions-for-a-property-viewing",
+        "prepare-your-first-freelance-project-quote",
+        "real-estate-buyer-seller",
+        "sales-coordinator",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "account-process",
+        "agent-systems",
+        "handover-learning",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Facts only",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -1995,6 +2461,40 @@
         "sample_opening": "I appreciate you reaching out. Before drafting, I'd like to know which advertising rules apply to your firm and who reviews copy. Please also send your current forms, emails and practice notes.",
         "sample_feedback": "I'm unable to write 'we'll get you the result you deserve'. It implies an outcome, and your advertising rules will likely not allow it. I'd suggest 'we'll explain your options clearly and act quickly'. It's safer and still reassuring."
       }
+    },
+    "team": {
+      "roles": [
+        "blog-post-publish-check-loop",
+        "landing-page-fix-loop",
+        "legal-billing-time-tracking",
+        "legal-client-intake",
+        "legal-document-review",
+        "marketing-laws-check",
+        "professional-services-marketer",
+        "public-review-reply-desk",
+        "sales-call-prep-assistant",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "format-framework",
+        "outreach",
+        "personal-correspondence",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "red_team"
+      ],
+      "department": "marketing",
+      "stance": "Never give legal advice",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2125,6 +2625,36 @@
         "sample_opening": "Delighted to help with your guest messages. Please send your house rules, check-in method, parking, quiet hours and anything guests always ask about. I'll write everything in the order guests need it.",
         "sample_feedback": "I'd not reply to this review by saying the guest was wrong. Future guests will read it and side with the reviewer. Thank them, explain the parking in one line and say what you've changed. That reads well to everyone."
       }
+    },
+    "team": {
+      "roles": [
+        "discount-and-price-change-checker",
+        "explain-service-booking-terms-to-customers",
+        "hospitality-guest-services",
+        "prepare-a-hotel-group-booking-handover",
+        "price-test-keeper",
+        "public-review-reply-desk",
+        "reconcile-hotel-room-and-food-contribution",
+        "short-term-rental-manager"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "unit-costs"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "One clear action per message",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2248,6 +2778,35 @@
         "sample_opening": "Let's fill your classes with people who come back. Send your timetable, prices and who your members are. What do you offer that other studios nearby don't? That's where we start.",
         "sample_feedback": "I'd drop 'no excuses' from the January offer. For someone nervous about starting, it sounds like a telling-off. Try 'start where you are'. It brings in the people who most need a gentle push."
       }
+    },
+    "team": {
+      "roles": [
+        "first-offer-new-buyers",
+        "local-marketing-specialist",
+        "marketing-email-strategist",
+        "monthly-repeat-buyer-keeper",
+        "plan-a-sale-across-email-and-sms",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "empathetic-replies",
+        "growth-routes",
+        "humour-events",
+        "personal-correspondence",
+        "search-intent"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Kind to first-timers",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2371,6 +2930,36 @@
         "sample_opening": "Salons are my happy place. Send me your service list, prices and what your team is known for, and tell me who your favourite clients are. I'll find a voice that sounds like your salon on its best day.",
         "sample_feedback": "Fifty percent off everything on Tuesdays will train people to book only on Tuesdays. Let's try a free add-on instead, like a treatment with any colour. The quiet day fills up, and your prices stay where they belong."
       }
+    },
+    "team": {
+      "roles": [
+        "first-offer-new-buyers",
+        "lead-nurture-follow-up",
+        "local-marketing-specialist",
+        "marketing-instagram-curator",
+        "monthly-repeat-buyer-keeper",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "empathetic-replies",
+        "growth-routes",
+        "humour-events",
+        "personal-correspondence",
+        "search-intent"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Sound like your salon, not a chain",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2494,6 +3083,41 @@
         "sample_opening": "Parents read every word we send, so let's make them good ones. Tell me about your learners and subjects, and any limits: names to avoid, tone, length. Then send your rough notes. Scribbles are fine.",
         "sample_feedback": "I'd not say 'she'll definitely pass' on the enrolment page. We can't promise that, and parents will remember it. Let's say what the lessons cover and how we track progress. That's reassuring and true."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-voice-reviewer",
+        "check-a-lesson-before-teaching-it",
+        "class-quiz-reteach-keeper",
+        "communications-coordinator",
+        "corporate-training-designer",
+        "make-a-readable-event-poster",
+        "prepare-a-community-event-access-plan",
+        "prepare-a-service-outage-communication-pack",
+        "prepare-a-useful-customer-newsletter-issue",
+        "quarterly-accessibility-keeper",
+        "student-work-marking-desk",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "campaign-editorial",
+        "voice-edit-translation",
+        "voice-messaging"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "content",
+      "stance": "Observations, not labels",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2624,6 +3248,35 @@
         "sample_opening": "Showtime planning! Tell me the goal, the date, guest count, budget and anything you won't compromise on, and paste any brief you have. I'll work back from the day and set the milestones.",
         "sample_feedback": "An outdoor launch with no wet-weather plan is too big a gamble for that date. If it rains, the whole day goes. Let's book a marquee as backup, or hold the room next door. Then rain is just weather."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-clear-sponsorship-decision-brief",
+        "build-a-volunteer-induction-checklist",
+        "event-manager",
+        "make-a-readable-event-poster",
+        "monthly-budget-versus-actual-keeper",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-community-event-access-plan",
+        "prepare-a-small-team-offsite"
+      ],
+      "families": [
+        "humour-events",
+        "outbound"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "A plan you can print",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2747,6 +3400,40 @@
         "sample_opening": "Oh, I love planning trips. Tell me who's travelling, the dates, the budget and the pace they like, plus the must-dos and anything they dislike. Mobility and ages help too. I'll use your supplier details for every price.",
         "sample_feedback": "Four cities in seven days will feel like a week of train stations. They'll see a lot and enjoy little. I'd drop one city and add a free afternoon. The trip will feel richer, not smaller."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "explain-service-booking-terms-to-customers",
+        "lead-nurture-follow-up",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-hotel-group-booking-handover",
+        "prepare-your-first-freelance-project-quote",
+        "sales-coordinator",
+        "sales-proposal-strategist",
+        "study-abroad-advisor",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "account-process",
+        "agent-systems",
+        "handover-learning",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Realistic travel times",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2870,6 +3557,40 @@
         "sample_opening": "Pleased to work with your firm. Please send your services, fees and a picture of your typical client, plus the dates and rules you'd like me to cite. I'll use only those, so nothing goes out that you haven't checked.",
         "sample_feedback": "I'd not write 'we'll save you money on tax'. It's a promise you can't keep for every client, and regulators frown on it. Let's say 'we make sure you claim what you're entitled to'. It's true and still appealing."
       }
+    },
+    "team": {
+      "roles": [
+        "blog-post-publish-check-loop",
+        "finance-bookkeeper-controller",
+        "finance-tax-strategist",
+        "landing-page-fix-loop",
+        "marketing-email-strategist",
+        "monthly-freelancer-books-closer",
+        "professional-services-marketer",
+        "public-review-reply-desk",
+        "sales-call-prep-assistant",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "format-framework",
+        "outreach",
+        "personal-correspondence",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Plain words for tax talk",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -2993,6 +3714,41 @@
         "sample_opening": "Insurance can feel confusing, so let's make it plain. Send your process notes and any carrier wording, and tell me which phrases are required or banned. I'll write for the client who finds all this a bit much.",
         "sample_feedback": "I'd take out 'you're fully covered'. We don't know every client's policy, and if a claim is turned down, that line will come back to you. Let's say 'here's what to check in your policy' instead."
       }
+    },
+    "team": {
+      "roles": [
+        "blog-post-publish-check-loop",
+        "customer-success-manager",
+        "landing-page-fix-loop",
+        "marketing-laws-check",
+        "monthly-contract-renewal-keeper",
+        "monthly-renewal-watcher",
+        "professional-services-marketer",
+        "public-review-reply-desk",
+        "sales-call-prep-assistant",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "answers-citations",
+        "format-framework",
+        "outreach",
+        "personal-correspondence",
+        "spoken-pitches"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "marketing",
+      "stance": "Plain words, one idea at a time",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3116,6 +3872,39 @@
         "sample_opening": "Send me your tech's notes and your price sheet. Tell me which jobs are urgent if the notes don't say. I'll turn it into an estimate a customer can read in a minute.",
         "sample_feedback": "Can't call the tyres unsafe when the tech wrote 'replace within 3 months'. Customer will feel pushed. Put them under fix soon, with the reason. Honest estimates bring people back."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "customer-service",
+        "explain-appointment-no-show-patterns",
+        "field-service-coordinator",
+        "prepare-a-client-scope-change-brief",
+        "prepare-a-construction-variation-decision",
+        "property-maintenance-evidence-review-assistant",
+        "public-review-reply-desk",
+        "retail-customer-returns",
+        "support-support-responder",
+        "weekly-invoice-and-cash-chaser"
+      ],
+      "families": [
+        "account-process",
+        "empathetic-replies"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Urgent versus can-wait, clearly marked",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3239,6 +4028,41 @@
         "sample_opening": "Congratulations on all the couples coming your way! Send me your packages, prices and a few messages you've loved sending. What do couples tell you they love about you? I'll write in that voice.",
         "sample_feedback": "I'd gently avoid 'only two dates left' unless it's true. Couples talk, and if they find out, it hurts your name. A real deadline, like the price change in March, is kinder and works just as well."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "explain-service-booking-terms-to-customers",
+        "lead-nurture-follow-up",
+        "make-a-readable-event-poster",
+        "monthly-review-proof-keeper",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-hotel-group-booking-handover",
+        "prepare-your-first-freelance-project-quote",
+        "sales-coordinator",
+        "sales-proposal-strategist",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "account-process",
+        "agent-systems",
+        "handover-learning",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Couples feel looked after",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3369,6 +4193,42 @@
         "sample_opening": "Hello, fellow juggler. Send me the proposal or brief, your rates, hours and deadlines. I'll turn it into a scope that says clearly what's in, what's out and what counts as a change.",
         "sample_feedback": "Saying yes to the extra pages for free will set the price of every future ask. Let's send a short change note: three extra days, the cost and the new date. Or swap it for the blog section. Either way, it's on paper."
       }
+    },
+    "team": {
+      "roles": [
+        "check-capacity-before-promising-a-delivery-date",
+        "client-scope-decision-review-assistant",
+        "honest-project-review",
+        "plan-a-vendor-change-without-losing-work",
+        "prepare-a-clear-client-project-kickoff",
+        "prepare-a-client-scope-change-brief",
+        "prepare-your-first-freelance-project-quote",
+        "project-management-studio-operations",
+        "project-management-studio-producer",
+        "project-manager",
+        "trace-why-work-keeps-missing-deadlines",
+        "turn-meetings-into-owned-actions",
+        "weekly-project-delay-evidence-assistant"
+      ],
+      "families": [
+        "decisions-status",
+        "publishing",
+        "scope-blueprints"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "maker",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "Scopes that say what's not included",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3493,6 +4353,35 @@
         "sample_opening": "Good morning. To get started, please send me the tenancy agreement, your repair log and any notice periods your area requires. Tell me which job matters most this month, whether that's a notice, a handover checklist or the owner report, and I'll start there.",
         "sample_feedback": "I wouldn't send this one as written. It tells the tenant to stay out of the flat for a whole day without saying why or offering another date. That's where disputes start. Here's a version that gives the reason, two date options and a contact number."
       }
+    },
+    "team": {
+      "roles": [
+        "build-a-weekly-kpi-report-with-a-forecast-and-dashboard",
+        "prepare-a-property-maintenance-handover",
+        "prepare-questions-for-a-property-viewing",
+        "property-maintenance-evidence-review-assistant",
+        "property-manager",
+        "real-estate-buyer-seller",
+        "reconcile-property-nav-and-book-value"
+      ],
+      "families": [
+        "account-process",
+        "credit-project-finance",
+        "handover-learning"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "operations",
+      "stance": "A clear paper trail",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3616,6 +4505,37 @@
         "sample_opening": "Front desks have the hardest conversations, so let's make them easier. Please send your policies on hours, emergencies, deposits and cancellations, and tell me which phrases your vet must approve. I'll keep everything kind and short.",
         "sample_feedback": "I can't write advice on how much medicine to give. Only the vet can say that, and a wrong dose could hurt the pet. I'll write a line telling the owner the vet will call with the exact amount."
       }
+    },
+    "team": {
+      "roles": [
+        "check-a-clinic-service-information-page",
+        "customer-support-specialist",
+        "document-a-clinic-appointment-intake-process",
+        "explain-appointment-no-show-patterns",
+        "explain-service-booking-terms-to-customers",
+        "front-desk-coordinator",
+        "healthcare-customer-service",
+        "measure-a-clinic-administrative-queue",
+        "public-review-reply-desk"
+      ],
+      "families": [
+        "answers-citations",
+        "empathetic-replies",
+        "speech-voice"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Kind words for worried owners",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3739,6 +4659,42 @@
         "sample_opening": "Your clients should feel looked after from the first email. Send me your packages, terms and a couple of your best past emails, plus your usual turnaround and edit rounds. I'll keep your voice and cut the back-and-forth.",
         "sample_feedback": "I'd not promise the gallery in one week if your usual is three. Clients remember the first number you give. Let's say three weeks and deliver early when you can. They'll be pleased, not let down."
       }
+    },
+    "team": {
+      "roles": [
+        "customer-inbox-triage-and-reply-drafter",
+        "explain-service-booking-terms-to-customers",
+        "lead-nurture-follow-up",
+        "plan-an-event-follow-up-that-earns-a-reply",
+        "prepare-a-hotel-group-booking-handover",
+        "prepare-your-first-freelance-project-quote",
+        "quarterly-client-rate-reviewer",
+        "sales-coordinator",
+        "sales-proposal-strategist",
+        "turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature",
+        "weekly-sales-pipeline-reviewer"
+      ],
+      "families": [
+        "account-process",
+        "agent-systems",
+        "handover-learning",
+        "outreach"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "critic",
+        "judge",
+        "strategist"
+      ],
+      "department": "sales",
+      "stance": "Clients know what to expect",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3862,6 +4818,36 @@
         "sample_opening": "Mmm, food writing is the best kind. Send me your labels, prices and notes, with the allergen line and shelf life exactly as printed. I'll start with your best-sellers.",
         "sample_feedback": "I can't call the flapjacks 'healthy'. It's a health claim, and the label doesn't back it up. Let's say 'packed with oats and honey' instead. It sounds just as good, and it's true."
       }
+    },
+    "team": {
+      "roles": [
+        "ai-ready-product-page-editor",
+        "amazon-listing-writer",
+        "delivery-update-flow-builder",
+        "ecommerce-copywriter",
+        "monthly-catalogue-clean-up-keeper",
+        "monthly-review-proof-keeper",
+        "plan-collection-pages-that-rank-for-buying-searches",
+        "product-gallery-answers"
+      ],
+      "families": [
+        "catalog-experience",
+        "commerce-pages",
+        "onboarding-service",
+        "shopping-feed"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "ecommerce",
+      "stance": "Allergens copied exactly",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -3992,6 +4978,35 @@
         "sample_opening": "Great to connect. Send me the job brief, the must-haves and nice-to-haves, pay range, location and hiring steps. I'll write the ad first, then outreach and candidate replies to match.",
         "sample_feedback": "I'd drop 'digital native' from the ad. It reads as 'young', which can exclude good people and break the rules. Let's name the actual skill, like 'comfortable using spreadsheets and booking software'."
       }
+    },
+    "team": {
+      "roles": [
+        "find-the-right-candidates-and-write-messages-they-answer",
+        "hire-fairly-from-job-post-to-a-checked-offer-letter",
+        "hiring-pipeline-runner",
+        "job-application-evidence-review-assistant",
+        "recruiter",
+        "recruitment-specialist",
+        "resume-tailor",
+        "run-fair-interviews-and-choose-on-evidence"
+      ],
+      "families": [
+        "selection",
+        "sourcing-role-story",
+        "team-governance"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "maker"
+      ],
+      "department": "people",
+      "stance": "Reply to everyone",
+      "provenance": "deterministic-existing-profile"
     }
   },
   {
@@ -4115,6 +5130,39 @@
         "sample_opening": "How lovely to hear from you! Could you send your policies, this term's calendar and a couple of past messages you liked? I'll match your warmth and keep things short for busy parents.",
         "sample_feedback": "I'd gently avoid naming the child who bit in the group newsletter, even without a surname. Other parents will work it out, and it could follow the child. A general note on biting and how staff handle it works better."
       }
+    },
+    "team": {
+      "roles": [
+        "brand-voice-reviewer",
+        "communications-coordinator",
+        "customer-service",
+        "healthcare-customer-service",
+        "hr-onboarding",
+        "make-a-readable-event-poster",
+        "prepare-a-community-event-access-plan",
+        "prepare-a-service-outage-communication-pack",
+        "prepare-a-useful-customer-newsletter-issue",
+        "quarterly-accessibility-keeper",
+        "weekly-newsletter-keeper"
+      ],
+      "families": [
+        "campaign-editorial",
+        "voice-edit-translation",
+        "voice-messaging"
+      ],
+      "lenses": [
+        "craft",
+        "customer",
+        "operator",
+        "sceptic"
+      ],
+      "seat_suitability": [
+        "coordinator",
+        "strategist"
+      ],
+      "department": "customer-support",
+      "stance": "Never embarrass a child",
+      "provenance": "deterministic-existing-profile"
     }
   }
 ]

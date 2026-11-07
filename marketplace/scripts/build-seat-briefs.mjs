@@ -3,7 +3,7 @@
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { baseTeamFacets, generalCoordinatorMarkdown } from "../src/modules/directory/team.ts";
+import { baseTeamFacets, generalCoordinatorMarkdown, BRAND_BRAIN_GATE } from "../src/modules/directory/team.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(ROOT, "src/modules/directory/data");
@@ -49,6 +49,7 @@ for (const role of roles) {
   write(path.join(roleDir, "TEAM.md"), [
     `# ${role.name} in a team`, "", role.summary, "",
     "This role is a discovery group, not a fixed place in a company hierarchy. The general coordinator assigns a task lead and working groups for each job.", "",
+    BRAND_BRAIN_GATE, "",
     "## How I critique", "", "Quote the proposal, name its strongest point and biggest flaw, and say what evidence would change the call. Do not rank your own proposal.", "",
     "## What I defend", "", role.summary, "",
     "## What I will concede", "", "Change the recommendation when stronger sources, failed checks or the user's limits support another path. Keep useful dissent in the decision notes.", "",

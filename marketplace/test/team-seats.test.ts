@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { baseTeamFacets, generalCoordinatorMarkdown, MAX_SEAT_BYTES, seatPlaybook, teamMarkdown } from "../src/modules/directory/team.ts";
+import { baseTeamFacets, generalCoordinatorMarkdown, MAX_SEAT_BYTES, roleSeatMarkdown, seatBriefMarkdown, seatPlaybook, teamMarkdown } from "../src/modules/directory/team.ts";
 import { parseSeat, parseTeam, SeatInputError, trimmedSeatPack } from "../src/modules/mcp/team-seats.ts";
 import { buildPack } from "../src/modules/packs/build.ts";
 import { NOVA } from "./fixtures.ts";
@@ -16,6 +16,11 @@ test("facets and team notes come from saved persona text without a fixed hierarc
   assert.ok(notes.includes(persona.profile.not_for[0]));
   assert.match(generalCoordinatorMarkdown(), /task-specific lead and flexible working groups/);
   assert.match(generalCoordinatorMarkdown(), /no invented person or biography/);
+  for (const protocol of [notes, generalCoordinatorMarkdown(), roleSeatMarkdown("sample", {seat_type:"maker"}), seatBriefMarkdown(persona, {seat_type:"maker"})]) {
+    assert.match(protocol, /complete verified brand brain/);
+    assert.match(protocol, /SHA-256/);
+    assert.match(protocol, /Missing, stale or unread context blocks work/);
+  }
   assert.doesNotMatch(generalCoordinatorMarkdown(), /department heads|Mehdi|Rhys/);
 });
 

@@ -133,9 +133,13 @@
             "type": "object",
             "properties": {
               "used": {
-                "type": "integer",
+                "type": [
+                  "integer",
+                  "null"
+                ],
                 "minimum": 0,
-                "maximum": 10000
+                "maximum": 10000,
+                "description": "Measured total tool calls, or null when the host does not expose that total. Do not substitute render/process counts."
               },
               "allowance": {
                 "type": "integer",
@@ -145,6 +149,13 @@
               "reason": {
                 "type": "string",
                 "maxLength": 4000
+              },
+              "usage_status": {
+                "type": "string",
+                "enum": [
+                  "MEASURED",
+                  "NOT_AVAILABLE"
+                ]
               }
             },
             "required": [

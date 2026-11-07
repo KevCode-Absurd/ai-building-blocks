@@ -145,6 +145,8 @@ Keep artifacts local. For each output, record its path, SHA-256, family, media, 
 
 The task lead checks whether the expert work fits the job before final review. Record who checked it, the result and the notes. Do not hide a failed check by renaming a file.
 
+Tool totals must use their real unit. When the host does not expose the total, report budget.used as null, usage_status as NOT_AVAILABLE and a reason with the separate receipt path. Record known render/process operations separately; they are not total tool calls. Unknown use is unverified, never zero.
+
 ## 6. Review independently
 
 Give the judge only the job card, rubric, artifacts and producer notes. Exclude the council, names behind proposals and earlier rankings. Use a different model when the host supports it. The fact checker checks each claim against its source and updates the ledger.

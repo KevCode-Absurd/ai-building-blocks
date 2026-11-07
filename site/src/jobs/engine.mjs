@@ -47,8 +47,13 @@ function productionCheck(document, view, base, context) {
     for (const ref of a.items) if (!pins.some(r => r.slug === ref.slug && r.revision_sha256 === ref.revision_sha256)) fail(`${p}.items`, 'Use only methods pinned in the actual makers’ toolboxes.');
     if (!Array.isArray(a.claims) || a.claims.some(id => !claims.has(id))) fail(`${p}.claims`, 'Link every claimed fact to the evidence ledger.');
     if (slot && (slot.family !== a.family || slot.maker_seat !== a.maker_seat || slot.modality !== a.modality)) fail(p, 'The output must match the approved spread slot, maker, family and modality.');
-    if (!object(a.budget) || !Number.isFinite(a.budget.used) || !Number.isFinite(a.budget.allowance) || a.budget.used < 0 || a.budget.allowance < 0 || a.budget.used > a.budget.allowance) fail(`${p}.budget`, 'Report actual tool use within its allowance.');
-    if (a.budget.allowance && a.budget.used < 0.6 * a.budget.allowance && !a.budget.reason?.trim()) fail(`${p}.budget.reason`, 'Explain why less than 60% of the allowance was needed.');
+    if (!object(a.budget)||!Number.isFinite(a.budget.allowance)||a.budget.allowance<0)fail(`${p}.budget`,'Report the actual declared tool allowance.');
+    if(a.budget.used===null){
+      if(a.budget.usage_status!=='NOT_AVAILABLE'||!a.budget.reason?.trim())fail(`${p}.budget`,'Unknown tool totals need NOT_AVAILABLE and an explanation; do not substitute operation counts.');
+    }else{
+      if(!Number.isFinite(a.budget.used)||a.budget.used<0||a.budget.used>a.budget.allowance||a.budget.usage_status==='NOT_AVAILABLE')fail(`${p}.budget`,'Report measured total tool use within its allowance, or explicitly mark it unavailable.');
+      if(a.budget.allowance&&a.budget.used<.6*a.budget.allowance&&!a.budget.reason?.trim())fail(`${p}.budget.reason`,'Explain why less than 60% of the allowance was needed.');
+    }
   }
   if (expected.length && (expected.length !== ids.size || expected.some(s => !ids.has(s.slot_id)))) fail('document.artifacts', 'Produce every approved spread slot exactly once.');
   if (document.artifacts.length !== view.card.deliverables.reduce((n, d) => n + d.count, 0)) fail('document.artifacts', 'Meet the requested deliverable count.');
@@ -141,8 +146,8 @@ function applyEvent(view, entry, base, catalogue) {
     if(!finalCheck||finalCheck.by_seat!==coordinator.seat_id||typeof finalCheck.job_match!=='boolean'||!finalCheck.notes?.trim()||!Array.isArray(finalCheck.rubric_checks)||view.card.acceptance.some(c=>!finalCheck.rubric_checks.some(x=>x.id===c.id&&typeof x.passed==='boolean'&&x.notes?.trim())))fail('document.coordinator_review','The general coordinator must check the original job and every acceptance criterion after the task lead and independent judge.');
     const coordinatorPass=finalCheck.job_match&&finalCheck.rubric_checks.every(c=>c.passed);
     if(!coordinatorPass&&(!document.flags?.length||document.status!=='DELIVERED_WITH_FLAGS'))fail('document.coordinator_review','A failed final coordinator check requires explicit unresolved flags and DELIVERED_WITH_FLAGS status.');
-    const required = deliveryTemplates({ hasSpread: Boolean(view.spread) }).map(f => f.path.replace(/^delivery\//, ''));
-    const names = (document.files ?? []).map(f => f.path.replace(/^delivery\//, ''));
+    const required = deliveryTemplates({ hasSpread: Boolean(view.spread) }).map(f => (document.delivery_root?document.delivery_root+'/':'')+f.path.replace(/^delivery\//, ''));
+    const names = (document.files ?? []).map(f => document.delivery_root?f.path:f.path.replace(/^delivery\//, ''));
     if (required.some(path => !names.includes(path))) fail('document.files', 'Include every required delivery file.');
     if (document.files.some(f => !pathSafe(f.path) || !HASH.test(f.sha256 ?? ''))) fail('document.files', 'Use safe relative file paths and actual content hashes.');
     if (document.deliverables.length !== view.production.artifacts.length || document.deliverables.some(d => !view.production.artifacts.some(a => a.slot_id === d.slot_id && a.path === d.path && a.sha256 === d.sha256))) fail('document.deliverables', 'Deliver the exact produced and reviewed artifact revisions.');
@@ -186,6 +191,7 @@ async function describe(state, view, catalogue, initial = false) {
   if (view.preferences_changed) files.push(...localPreferences(view.preferences).files);
   const warnings = [];
   if (base.host_profile !== 'parallel') warnings.push('A single-context host cannot prove independent review. State the actual isolation used.');
+  if(view.production?.artifacts?.some(a=>a.budget?.used===null))warnings.push('The host did not expose some producer tool-call totals; their allowance use is not verified.');
   if (view.needs_revision) warnings.push('The review failed. Unresolved work cannot be described as passing.');
   if (view.preferences_changed) warnings.push('Preference files are proposals for the authorized host to save; no account write ran on this public service.');
   return { schema: 'ai-blocks-job/1', job_id: base.job_id, mode: base.mode, mode_reason: base.mode_reason, job_type: base.job_type, tier: base.tier, estimate: { seats: settings.seats[1], council_rounds: settings.council_rounds, token_multiple: settings.token_multiple, source: 'estimated' }, host_profile: base.host_profile, phase: view.phase, ok: true, errors: [], warnings, state, state_digest: await jobStateDigest(state), next_action: nextAction(view, base), files, ...(initial ? { dials: base.dials, dial_questions: base.dial_questions } : {}), ...(proposal ? { proposal } : {}), ...(view.rubric ? { rubric: view.rubric } : {}), ...(view.review_score ? { review_score: view.review_score } : {}), ...(view.preferences_changed ? { preference_update: localPreferences(view.preferences) } : {}), model_calls: 0, hosted_execution: false, stored_by_service: false, assurance: 'HOST_REPORTED_NOT_INDEPENDENTLY_VERIFIED' };
@@ -210,7 +216,7 @@ export async function startJob(input = {}, catalogue = {}) {
     const selectedItem=input.item_id??(routed.selected_id&&catalogue.items?.some(i=>i.slug===routed.selected_id)?routed.selected_id:null);
     const selectedRole=input.role_id??(routed.selected_id&&(Array.isArray(catalogue.roles)?catalogue.roles:catalogue.roles?.roles??[]).some(r=>r.id===routed.selected_id)?routed.selected_id:null);
     const action=routed.mode==='outcome'?{tool:'start_outcome',args:{request:input.request}}:selectedItem?{tool:'get_item',args:{id:selectedItem}}:selectedRole?{tool:'prepare_specialist',args:{role_id:selectedRole}}:input.persona_id?{tool:'load_agent',server:'https://agents.useaiblocks.com/mcp',args:{id:input.persona_id}}:{tool:'find_specialist',args:{task:input.request}};
-    return {schema:'ai-blocks-job/1',job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.'},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
+    return {schema:'ai-blocks-job/1',job_id:'job_'+crypto.randomUUID(),...routed,tier:'quick',estimate:{seats:1,council_rounds:0,token_multiple:[1,1],source:'estimated'},host_profile:input.host_capabilities?.parallel_agents?'parallel':'sequential',phase:'ROUTE',next_action:{event:null,...action,instruction:'Before any production, read the complete verified brand brain or build one from authorized sources; use a verified project context brain for non-business work. Keep the path, hash and read receipt with the job. '+(routed.mode==='outcome'?'Continue in the outcome track, retaining the owner’s words.':'Load the named item or specialist through the existing direct tools.')},files:[],model_calls:0,stored_by_service:false,hosted_execution:false};
   }
   const approachJob = catalogue.approaches?.jobs?.[routed.job_type.job] ?? {}, host = input.host_capabilities ?? {};
   const resolved = resolveDials({ ...input, job: routed.job_type.job, approachJob }); if (!resolved.ok) throw new JobValidationError(resolved.errors);

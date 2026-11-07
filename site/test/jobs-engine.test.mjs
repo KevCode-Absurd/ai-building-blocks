@@ -99,3 +99,22 @@ test('a missing or unread brand brain blocks staffing', async () => {
   const detached = structuredClone(f.card); detached.context_sources = [];
   await assert.rejects(() => send(result, { event: 'scope', document: detached }, f.context), /matching context source/);
 });
+
+test('separate jobs may declare safe delivery metadata roots without accepting another job’s files',async()=>{
+ const f=engineFixture();let result=await startJob(f.input,f.context);for(const entry of f.events.slice(0,6))result=await send(result,entry,f.context);
+ const nested=structuredClone(f.delivery);nested.delivery_root='cases/T1/delivery';for(const file of nested.files)file.path=nested.delivery_root+'/'+file.path.replace(/^delivery\//,'');
+ assert.equal((await send(result,{event:'deliver',document:nested},f.context)).phase,'LEARN');
+ const crossed=structuredClone(nested);crossed.files[0].path=crossed.files[0].path.replace('T1','T2');await assert.rejects(()=>send(result,{event:'deliver',document:crossed},f.context),/missing/);
+ const unsafe=structuredClone(nested);unsafe.delivery_root='../outside';await assert.rejects(()=>send(result,{event:'deliver',document:unsafe},f.context),/delivery_root/);
+ const trailing=structuredClone(nested);trailing.delivery_root+=' /';await assert.rejects(()=>send(result,{event:'deliver',document:trailing},f.context),/delivery_root/);
+});
+
+test('unexposed tool totals remain unknown without disguising process counts as measured use',async()=>{
+ const f=engineFixture();let result=await startJob(f.input,f.context);for(const entry of f.events.slice(0,4))result=await send(result,entry,f.context);
+ const unknown=structuredClone(f.production);unknown.artifacts[0].budget={used:null,allowance:10,usage_status:'NOT_AVAILABLE',reason:'Host total tool calls are not exposed; separately recorded render launches have a different unit. See usage-receipt.json.'};
+ const accepted=await send(result,{event:'produce',document:unknown},f.context);assert.equal(accepted.phase,'REVIEW');assert(accepted.warnings.some(w=>/allowance use is not verified/.test(w)));
+ const noReason=structuredClone(unknown);delete noReason.artifacts[0].budget.reason;await assert.rejects(()=>send(result,{event:'produce',document:noReason},f.context),/budget/);
+ const noStatus=structuredClone(unknown);delete noStatus.artifacts[0].budget.usage_status;await assert.rejects(()=>send(result,{event:'produce',document:noStatus},f.context),/budget/);
+ const mixed=structuredClone(unknown);mixed.artifacts[0].budget.used=3;await assert.rejects(()=>send(result,{event:'produce',document:mixed},f.context),/budget/);
+ const over=structuredClone(f.production);over.artifacts[0].budget.used=11;await assert.rejects(()=>send(result,{event:'produce',document:over},f.context),/allowance/);
+});

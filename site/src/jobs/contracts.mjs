@@ -357,8 +357,13 @@ function productionChecks(d, c, add, warn) {
     for(const ref of extra){if(!producerPins.some(pin=>pin.slug===ref.slug&&pin.revision_sha256===ref.revision_sha256))add(`${path}.items`,'additional methods must belong to the maker’s pinned role toolbox.');if(!list(artifact?.method_amendments).some(change=>change.slug===ref.slug&&present(change.reason)))add(`${path}.method_amendments`,'explain each extra role method needed during production.');}
     for (const ref of list(artifact?.items)) pinned(ref, `${path}.items`, c, add);
     const budget = artifact?.budget;
-    if (budget?.used > budget?.allowance) add(`${path}.budget`, 'exceeds the tool-call allowance.');
-    if (budget?.allowance > 0 && budget.used < budget.allowance * 0.6 && !present(budget.reason)) add(`${path}.budget.reason`, 'explain why less than 60% of the allowance was used.');
+    if(budget?.used===null){
+      if(budget.usage_status!=='NOT_AVAILABLE'||!present(budget.reason))add(`${path}.budget`,'unknown total tool use needs NOT_AVAILABLE and an explanation or receipt reference.');
+    }else{
+      if(budget?.usage_status==='NOT_AVAILABLE')add(`${path}.budget.usage_status`,'use null when the total is not available.');
+      if (budget?.used > budget?.allowance) add(`${path}.budget`, 'exceeds the tool-call allowance.');
+      if (budget?.allowance > 0 && budget.used < budget.allowance * 0.6 && !present(budget.reason)) add(`${path}.budget.reason`, 'explain why less than 60% of the allowance was used.');
+    }
     if (list(artifact?.checks).some(check => check?.status !== 'PASS')) warn(`${path}.checks`, 'Producer checks have open failures. The judge must check them and the delivery must report unresolved issues.');
     for (const id of list(artifact?.claims)) if (!list(d.evidence?.claims).some(claim => claim?.id === id && list(claim.used_in).includes(artifact.slot_id))) add(`${path}.claims`, `claim ${id} is missing from the ledger or is not linked to this artifact.`);
   });
@@ -372,7 +377,8 @@ function productionChecks(d, c, add, warn) {
 }
 function deliveryChecks(d, c, add) {
   unique(d.files, 'path', 'files', add); unique(d.deliverables, 'slot_id', 'deliverables', add);
-  const required = ['DELIVERY.md', 'DECISIONS.md', 'EVIDENCE.md', 'REVIEW.md', 'TEAM.md', 'run.json', ...(c.spread ? ['SPREAD.md'] : [])], paths = new Set(list(d.files).map(f => f?.path?.replace(/^delivery\//, '')));
+  if(d.delivery_root!==undefined&&!safePath(d.delivery_root))add('delivery_root','must be a safe relative directory.');
+  const required = ['DELIVERY.md', 'DECISIONS.md', 'EVIDENCE.md', 'REVIEW.md', 'TEAM.md', 'run.json', ...(c.spread ? ['SPREAD.md'] : [])].map(name=>d.delivery_root?d.delivery_root+'/'+name:name), paths = new Set(list(d.files).map(f => d.delivery_root?f?.path:f?.path?.replace(/^delivery\//, '')));
   for (const name of required) if (!paths.has(name)) add('files', `delivery pack is missing ${name}.`);
   for (const field of ['files', 'deliverables']) list(d[field]).forEach((file, idx) => { if (!safePath(file?.path)) add(`${field}[${idx}].path`, 'must be a safe relative file path.'); if (!/^[a-f0-9]{64}$/.test(file?.sha256 ?? '')) add(`${field}[${idx}].sha256`, 'must pin the exact file contents.'); });
   const slots = list(c.spread?.slots);

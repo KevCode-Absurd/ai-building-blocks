@@ -229,6 +229,12 @@
         "notes"
       ],
       "additionalProperties": false
+    },
+    "delivery_root": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240,
+      "description": "Relative directory containing the required delivery metadata files. Artifact paths remain relative to the run root. Omit for the legacy flat or delivery/ layout."
     }
   },
   "required": [

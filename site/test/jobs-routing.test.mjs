@@ -16,7 +16,7 @@ test('borderline requests ask about the output and explicit team selection takes
   assert.equal(routeJob({ request: 'More customers', parent_outcome_id: 'parent' }, context).mode, 'team');
 });
 test('direct and outcome routing results satisfy their published response schema', async () => {
-  for (const request of ['Use copy-checker', 'I need more customers']) { const result = await startJob({ request }, context); const check = validateJobDocument('ai-blocks-job/1', result); assert(check.ok, JSON.stringify(check.errors)); }
+  for (const request of ['Use copy-checker', 'I need more customers']) { const result = await startJob({ request }, context); assert.match(result.next_action.instruction,/complete verified brand brain/); const check = validateJobDocument('ai-blocks-job/1', result); assert(check.ok, JSON.stringify(check.errors)); }
 });
 
 test('real catalogue distinguishes making an output from auditing the same output', async () => {

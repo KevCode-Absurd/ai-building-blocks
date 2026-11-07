@@ -17,7 +17,7 @@ Give me:
 2. What to preserve as evidence and how (screenshots, sign-in logs, message headers), before anything is wiped or rebuilt.
 3. Account clean-up for each affected user: reset through the admin console's own flow (never share a password in chat or email), re-register MFA, check for new mail forwarding rules and connected apps.
 4. A timeline table to fill in: time, what was seen, what was done, by whom.
-5. Who to tell: the owner, our IT firm or insurer, and a note that a breach reporting clock may be running (for example 72 hours to the authority under the GDPR for reportable personal data breaches in the EU; US state laws; for the UK, the ICO's guidance). Say the client decides with their adviser.
+5. Who to tell: the owner, our IT firm or insurer, and a note that a breach reporting clock may be running (for example 72 hours to the authority under the GDPR for reportable personal data breaches in the EU; US state laws; for the UK, the Information Commission's guidance). Say the client decides with their adviser.
 6. What not to do yet: delete accounts, wipe devices, pay anyone, or contact the attacker. Deleting or wiping needs a fresh yes from the owner.
 
 Keep it short enough to follow under stress.

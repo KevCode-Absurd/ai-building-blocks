@@ -15,12 +15,16 @@
     "contribution margin",
     "ga4 ecommerce"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: weekly store report and sales change checks, GA4 ecommerce events, Shopify reports (Sept 2026 session change, Oct 2026 channel values), RFM and cohorts, margin per order, returns, attribution and consent limits, access levels 1 to 3 per tool, 28 checked sources, 4 skills, 5 prompts, 2 workflows."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's storage and access guidance."
     }
   ]
 }

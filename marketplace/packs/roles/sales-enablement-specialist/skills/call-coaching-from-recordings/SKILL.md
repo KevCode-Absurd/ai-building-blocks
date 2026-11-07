@@ -36,7 +36,7 @@ Do not use it to join, listen to or record live calls, to judge a rep for pay, p
 Do not analyse a recording until the client confirms how consent was obtained. Point them to the official sources for each place involved:
 - US federal law allows recording by a party or with one party's consent (18 U.S.C. 2511). Some states need every party's consent; Washington (RCW 9.73.030) and Florida (934.03) are two. Calls across states need checking against each.
 - In the EU, recording is processing personal data and needs a legal ground under the GDPR; the European Commission notes that consent is not freely given where there is a clear imbalance, such as employer and employee. The client's data protection adviser decides the ground for recording its own staff.
-- In the UK, read the ICO's guidance on monitoring workers.
+- In the UK, read the Information Commission's guidance on monitoring workers.
 - Employers in New York must give written notice of phone, email and internet monitoring on hiring.
 
 If anything is unclear, stop and ask. This is general information; the client checks it with a lawyer.

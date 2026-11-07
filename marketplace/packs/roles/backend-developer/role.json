@@ -15,12 +15,16 @@
     "database migrations",
     "idempotency"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (HTTP and IETF specs, OWASP API Top 10 2023, Stripe, Shopify and GitHub webhook docs, PostgreSQL 18 docs, PCI SAQ A and SCA rules, AWS retry guidance, GitLab's 2017 outage), four skills (API endpoint build, webhook receiver, safe database migration, third-party API client), five prompts, two workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

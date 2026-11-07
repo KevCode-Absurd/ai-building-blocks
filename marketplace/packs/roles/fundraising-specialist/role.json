@@ -15,12 +15,16 @@
     "donor stewardship",
     "gift aid"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: appeals, thank-yous and stewardship, major gifts, funder fit and grant writing. Covers IRS acknowledgment and quid pro quo rules, Gift Aid and GASDS, CC20, the Code of Fundraising Practice (new from 1 Nov 2025), the UK charity soft opt-in, EU consent, 2026 benchmarks, with 28 checked sources. Grant submissions, complaint replies and any new payee need a fresh yes; money stays with the client."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's charity soft opt-in guidance."
     }
   ]
 }

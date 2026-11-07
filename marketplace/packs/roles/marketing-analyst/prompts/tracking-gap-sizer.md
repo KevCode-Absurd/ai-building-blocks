@@ -17,7 +17,7 @@ Do this:
 3. List likely causes in order: declined consent; ad blockers; purchases recorded twice or not at all; checkout on another domain; payment provider redirects; time zone differences; refunds counted differently. Mark each "shown in the data" or "possible, not checked".
 4. Say whether GA4's behavioural modelling could apply (it needs advanced consent mode and minimum daily volumes of denied and granted traffic) and whether reports are set to the blended identity.
 5. Recommend how to report: which totals to anchor on, how to label GA4 shares, and what to fix in tracking.
-6. Point to the official guidance to check in each region (EU, UK ICO, US state rules) without saying what the law requires.
+6. Point to the official guidance to check in each region (EU, UK Information Commission, US state rules) without saying what the law requires.
 
 Output: gap table by region, causes with evidence, reporting rule, fix list ranked by size. Never suggest weakening a consent banner to collect more data.
 ```

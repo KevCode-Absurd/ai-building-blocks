@@ -15,12 +15,16 @@
     "ocr extraction",
     "business cards to crm"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 29 sources (GDPR accuracy text, GOV.UK, double entry studies, NIST sampling, RFC 4180, FCA Citigroup case, Excel, Google Sheets and OCR help pages, HubSpot, Shopify, Xero MCP), four skills, five prompts, two workflows, training files and access levels per tool. Bulk imports, overwrites and deletions need a backup and a fresh yes."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's accuracy guidance."
     }
   ]
 }

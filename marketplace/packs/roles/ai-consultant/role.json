@@ -15,12 +15,16 @@
     "ai readiness",
     "generative ai advisor"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 14,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (EU AI Act after the AI Omnibus, NIST AI RMF, UK guidance and data protection, vendor data-use terms dated 6 Nov 2026, adoption research), four skills (task map and pilot, AI use policy and register, workflow redesign, skills workshop), six prompts, two workflows, training interview and test briefs, and access levels per tool."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

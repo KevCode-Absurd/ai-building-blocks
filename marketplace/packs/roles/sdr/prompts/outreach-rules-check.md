@@ -15,7 +15,7 @@ The draft messages or script: {{drafts}}
 
 Check and report, channel by channel:
 1. Email to US recipients: accurate headers and From name, honest subject line, clear notice that it is an ad, a physical postal address, a working opt-out honoured within 10 business days (FTC CAN-SPAM guide).
-2. Email or texts to UK recipients: which are companies or LLPs and which are sole traders or partnerships; sender identified; opt-out offered (ICO business-to-business marketing guidance).
+2. Email or texts to UK recipients: which are companies or LLPs and which are sole traders or partnerships; sender identified; opt-out offered (Information Commission business-to-business marketing guidance).
 3. Email to EU recipients: the country's rule for business email; telling people where we got their data; honouring objections (EU ePrivacy Directive Article 13 and the European Commission's GDPR guidance).
 4. Calls: US Do Not Call Registry scrub within 31 days for consumer numbers and calling hours; UK TPS and CTPS screening; our own do-not-call list; any automated, prerecorded or AI voice (needs consent); call recording consent.
 5. LinkedIn: no automation, scraping or shared logins (LinkedIn User Agreement).

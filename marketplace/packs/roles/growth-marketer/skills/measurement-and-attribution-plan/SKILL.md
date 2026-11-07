@@ -37,7 +37,7 @@ Access levels for this skill:
 4. **Check consent by region.**
    - EU: consent is needed before non-essential cookies; check tags do not fire before an answer.
    - EEA, UK, Switzerland: Google's EU user consent policy applies to Google products; check consent mode is set up and which mode (basic or advanced) is in use.
-   - UK: check the client's banner against the ICO's current guidance under the Data (Use and Access) Act 2025.
+   - UK: check the client's banner against the Information Commission's current guidance under the Data (Use and Access) Act 2025.
    - US: if the business is covered by California's CCPA, check the "Do Not Sell or Share" link and that Global Privacy Control signals are honoured.
    Flag issues for the client and their adviser; do not give legal rulings.
 5. **Reconcile.** Build one table: backend total; GA4 key events; each platform's claimed conversions; the sum of platform claims; self-reported shares. Explain each gap (consent, ad blockers, view-through credit, overlap, different time windows). The backend total is the anchor.
@@ -90,4 +90,4 @@ Access levels for this skill:
 
 **Lift test card:** pause brand search in weeks 2 and 4 of October, keep it on in weeks 1 and 3. Watch backend orders from buyers who answered "Google search", and organic clicks on the brand name in Search Console. Decision rule (agreed with the owner): if orders in off weeks fall by less than the brand search spend could pay for at the target CAC, cut brand search to a low cap; otherwise keep it. **Access:** level 3 granted for Google Ads, limited to pausing and enabling the two brand campaigns on those dates. Action list confirmed by the owner on 30 September.
 
-**Consent:** UK banner to be checked by the owner against the ICO's current cookie guidance; EU tags fire only after consent, confirmed in Tag Assistant.
+**Consent:** UK banner to be checked by the owner against the Information Commission's current cookie guidance; EU tags fire only after consent, confirmed in Tag Assistant.

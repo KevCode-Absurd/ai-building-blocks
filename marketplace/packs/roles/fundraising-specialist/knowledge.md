@@ -88,7 +88,7 @@ The thank-you and the legal acknowledgment can be one message, but they do diffe
 
 ### 3.5 Donor data and consent
 
-- **UK.** The Data (Use and Access) Act 2025 created a soft opt-in for charities: they may send marketing emails and texts to people who have shown interest in or support for their charitable purposes, if each person is given a chance to refuse when details are collected and in every message, and only to promote the charity's own fundraising and work [11]. GOV.UK says most of the Act's data protection and privacy changes came into force on 5 February 2026 [12]; the email marketing kit records this soft opt-in as starting that day and covering only contact details collected from then. Check the ICO's guidance before relying on it.
+- **UK.** The Data (Use and Access) Act 2025 created a soft opt-in for charities: they may send marketing emails and texts to people who have shown interest in or support for their charitable purposes, if each person is given a chance to refuse when details are collected and in every message, and only to promote the charity's own fundraising and work [11]. GOV.UK says most of the Act's data protection and privacy changes came into force on 5 February 2026 [12]; the Information Commission confirms the soft opt-in started that day and covers only contact details collected from then [29]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **EU.** Marketing emails need prior opt-in consent; people can object to direct marketing at any time and must be told so at first contact [13]. Rules for charities vary by country.
 - **Major donor research.** Use what the donor shared with the charity and what they would reasonably expect it to know. Building wealth profiles from outside sources without telling donors raises data protection questions; ask the client's data protection lead and read the regulator's guidance first.
 - **Stories.** Get written consent for each use of a person's story, name and photo, record what they agreed to, and let them withdraw.
@@ -133,7 +133,7 @@ There is no trustworthy universal "good" retention rate, cost to raise a pound, 
 - If a UK donor pays income tax, ask for a Gift Aid declaration at the first gift and keep it for six years after the last claim [6].
 - If a payment buys goods or a ticket, do not claim Gift Aid on it unless the special event rules allow it [6].
 - If the charity's income was over £10,000 last year, put the registered charity number on every fundraising piece [7].
-- If a UK supporter has not consented to email or text, use the charity soft opt-in only where its conditions are met and the ICO's guidance confirms it applies; otherwise use post or ask for consent [11][12].
+- If a UK supporter has not consented to email or text, use the charity soft opt-in only where its conditions are met [29]; otherwise use post or ask for consent [11][12].
 - If a donor has given once, thank and report before any second ask, because second gifts are the biggest drop-off [18].
 - If a matching fund exists, say so plainly and use a 1:1 match before asking the funder for a bigger ratio [23].
 - If a funder's must-have rule is not met, skip that funder and give the reason, because a bid that fails eligibility is not read.
@@ -215,7 +215,7 @@ Re-check at each refresh:
 - **IRS acknowledgment and quid pro quo pages** and the yearly low-cost article amounts [1][2][3]; state solicitation registration links [4].
 - **Gift Aid and GASDS rules** on GOV.UK, including limits and claim methods [6].
 - **The Code of Fundraising Practice** and the regulator's guides (read on the Fundraising Regulator's own site); CC20 and the public guidance [7][8][9].
-- **The charity soft opt-in and other Data (Use and Access) Act changes,** on GOV.UK and the ICO [11][12].
+- **The charity soft opt-in and other Data (Use and Access) Act changes,** on GOV.UK and the Information Commission [11][12][29].
 - **Benchmarks:** the Fundraising Effectiveness Project each quarter [18][19], M+R Benchmarks and CAF UK Giving each year [20][21][22].
 - **Funder programmes,** amounts and decision times, such as Awards for All [17]; 360Giving, ProPublica and Candid features and plans [14][15][16].
 - **CRA receipting guidance** for Canadian clients [5].

@@ -62,7 +62,7 @@ A great answer must:
 - Decline to put emails in analytics events, citing data minimisation and the platform's personal data rules, without giving a legal ruling.
 - Propose an internal user ID and a join in the client's own warehouse or CRM instead.
 - Treat postcode as possibly identifying and suggest a coarser region only if a question needs it.
-- Suggest the client checks with its privacy adviser and the ICO's guidance.
+- Suggest the client checks with its privacy adviser and the Information Commission's guidance.
 
 ## 7. Low traffic, big hopes
 

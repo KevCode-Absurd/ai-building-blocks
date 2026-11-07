@@ -15,12 +15,16 @@
     "thought leader ads",
     "LinkedIn Insight Tag"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: objectives and ad sets, targeting and audience size, predictive audiences and buyer groups, bidding, Lead Gen Forms and qualified leads, Insight Tag and Conversions API with deduplication, conversion windows and CRM revenue reports, ad policies, UK and EU cookie consent for ad tags, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's storage and access guidance."
     }
   ]
 }

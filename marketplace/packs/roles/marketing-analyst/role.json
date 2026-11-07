@@ -15,12 +15,16 @@
     "media mix modelling",
     "web analytics"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: GA4 tracking plans and UTM rules, attribution and why tools disagree, incrementality tests (holdout, geo, lift studies) and media mix models (Meridian, Robyn, PyMC-Marketing), weekly reporting, 30 checked sources, 4 skills, 6 prompts, 3 workflows."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's storage and access guidance."
     }
   ]
 }

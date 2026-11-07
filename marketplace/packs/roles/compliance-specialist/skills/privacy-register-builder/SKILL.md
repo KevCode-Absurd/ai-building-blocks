@@ -72,7 +72,7 @@ A short action list with owners (fix a missing contract term, shorten a retentio
 - No real personal records were requested or copied; fields only.
 - Every activity has an owner and a retention period, or a [NEEDED] mark.
 - Lawful basis and DPIA conclusions are marked "to confirm" unless a lawyer set them.
-- UK documents reflect the Data (Use and Access) Act 2025 changes and the move of the ICO's functions to the Information Commission on 30 September 2026; check current guidance.
+- UK documents reflect the Data (Use and Access) Act 2025 changes and the move of the Information Commission's functions to the Information Commission on 30 September 2026; check current guidance.
 - Due dates in the request log are calculated per law.
 - The document ends with "Questions for a qualified lawyer or auditor" and the line: this is a working document, not legal advice.
 

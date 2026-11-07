@@ -15,12 +15,16 @@
     "klaviyo",
     "lifecycle email"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: Gmail, Yahoo, Microsoft and Apple sender rules as of Nov 2026, DMARC (RFC 9989), consent law for the US, UK and EU, benchmarks with caveats, four skills (program plan, lifecycle flows, deliverability and consent check, HTML build and QA), six prompts, three workflows and training material, with 28 checked sources."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

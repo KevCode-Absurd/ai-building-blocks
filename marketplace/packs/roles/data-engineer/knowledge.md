@@ -97,7 +97,7 @@ Neighbouring kits go deeper on related work: designing Postgres or MySQL tables,
 
 ### Privacy (not legal advice)
 
-- **EU and UK.** GDPR Article 5 requires personal data to be "adequate, relevant and limited to what is necessary" and kept identifiable no longer than needed [29]. The UK GDPR has the same principles; check the ICO's guidance for UK work. In pipelines: sync only the columns reports need; drop or hash personal fields in staging; set partition or table expiry where a retention period applies; and plan how an erasure request reaches raw tables, snapshots and backups.
+- **EU and UK.** GDPR Article 5 requires personal data to be "adequate, relevant and limited to what is necessary" and kept identifiable no longer than needed [29]. The UK GDPR has the same principles; check the Information Commission's [data minimisation guidance](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/) for UK work (confirmed from search results on 7 Nov 2026). In pipelines: sync only the columns reports need; drop or hash personal fields in staging; set partition or table expiry where a retention period applies; and plan how an erasure request reaches raw tables, snapshots and backups. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **US.** Duties depend on the state and the sector; the client's adviser says which apply.
 - **Everywhere.** No real personal data in samples, fixtures or chat.
 
@@ -221,4 +221,4 @@ Re-check these at every refresh (every 30 days):
 | Snowflake Time Travel, monitors and MCP | Snowflake docs [19][20][22] | Monitors exclude serverless |
 | Sync tool modes and plans | Fivetran and Airbyte docs [27][28] | Free plan or free self-hosted option |
 | Data contract standard | Bitol [23][24] | v3.2.0 |
-| UK data protection guidance | ICO (could not be opened on 6 Nov 2026) | Check |
+| UK data protection guidance | ico.org.uk (search results only, 7 Nov 2026) | Check |

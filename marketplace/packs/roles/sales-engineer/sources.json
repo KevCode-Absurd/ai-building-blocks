@@ -214,5 +214,13 @@
     "url": "https://www.salesforce.com/sales/pricing/",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch. Lists a Free Suite and paid editions (Starter Suite, Pro Suite, Core, Advanced, Max), most with free trials, and Agentforce for Sales as an add-on. Salesforce Help pages did not load for automated checks on 6 November 2026."
+  },
+  {
+    "n": 28,
+    "title": "What needs to be included in the contract?",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/contracts-and-liabilities-between-controllers-and-processors-multi/what-needs-to-be-included-in-the-contract/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. A controller-processor contract must set out the subject matter, duration, nature and purpose of the processing, the types of data and people, and the controller's rights; and must cover documented instructions, confidentiality, security, sub-processors (prior written authorisation), help with people's rights, deletion or return at the end, and audits."
   }
 ]

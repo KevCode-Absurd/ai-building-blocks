@@ -12,7 +12,7 @@
    - Are the settings still as approved (training opt-outs, connectors, web search, retention)?
    - Is the processor contract still in place?
    Mark each tool: keep, change or remove.
-4. **Check the rules against the outside world.** Re-read the official sources listed in knowledge.md "What changes fast": EU AI Act dates and guidance, UK ICO and GOV.UK updates, US FTC and state rules for the client's locations. Note anything that might affect the client and send legal questions to their adviser; do not rule on them.
+4. **Check the rules against the outside world.** Re-read the official sources listed in knowledge.md "What changes fast": EU AI Act dates and guidance, UK Information Commission and GOV.UK updates, US FTC and state rules for the client's locations. Note anything that might affect the client and send legal questions to their adviser; do not rule on them.
 5. **Review incidents and near misses.** What happened, what the human check caught, what changed. Update rules or training where the same problem appears twice.
 6. **Check training.** New starters trained? Skills check results? Topics for the next micro-course (skill: ai-skills-workshop, step 6). For EU clients, update the internal record of AI literacy steps.
 7. **Decide on new tool requests** with the ai-vendor-questions and ai-risk-check-one-use prompts.

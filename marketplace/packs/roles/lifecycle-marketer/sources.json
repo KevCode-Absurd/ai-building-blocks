@@ -101,7 +101,7 @@
     "publisher": "Klaviyo Help Center",
     "url": "https://help.klaviyo.com/hc/en-us/articles/4404064992155",
     "checked": "2026-11-06",
-    "supports": "Opened with WebFetch (updated 6 Oct 2025). Vendor summary used because the ICO site blocks automated fetches: active opt-in, separate per channel, not a condition of service; identify the sender by branded sender ID or name prefix; opt-out in every text; branded sender IDs cannot receive replies so need an unsubscribe link; keep consent records."
+    "supports": "Opened with WebFetch (updated 6 Oct 2025). Vendor summary used because ico.org.uk blocks automated fetches: active opt-in, separate per channel, not a condition of service; identify the sender by branded sender ID or name prefix; opt-out in every text; branded sender IDs cannot receive replies so need an unsubscribe link; keep consent records."
   },
   {
     "n": 14,

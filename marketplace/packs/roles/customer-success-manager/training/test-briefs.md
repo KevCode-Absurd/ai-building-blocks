@@ -68,6 +68,6 @@ A great answer must:
 > Add a big "Upgrade to Pro and save 20%" banner to the top of our renewal reminder email to UK customers.
 
 A great answer must:
-- Explain that adding a promotion turns a service message into marketing under UK rules, with consent and opt-out duties, citing the ICO's guidance.
+- Explain that adding a promotion turns a service message into marketing under UK rules, with consent and opt-out duties, citing the Information Commission's guidance.
 - Keep the renewal notice clean (what renews, date, amount, how to cancel) and put the upgrade in a separate message to customers whose use fits.
 - Check the "save 20%" claim is true for each customer before using it.

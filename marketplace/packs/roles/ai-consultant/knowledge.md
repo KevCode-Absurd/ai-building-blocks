@@ -73,7 +73,7 @@ AI assistants can now act inside business tools through official connectors and 
 ### United Kingdom
 
 - **No single AI law for most businesses.** The government's February 2024 response kept a principles-based approach applied by existing regulators, with possible binding rules only for developers of the most capable general-purpose models [13]. Check GOV.UK for later bills.
-- **Data protection.** The ICO's guidance on AI and data protection explains how UK data protection law applies to AI that processes personal data; it is guidance, not a statutory code [15]. The Data (Use and Access) Act 2025 replaces the old Article 22 with Articles 22A to 22D, which allow solely automated significant decisions only with safeguards: telling people, letting them make representations, obtain human intervention and challenge the decision [16]. Most of the Act's data protection changes started on 5 February 2026, but the commencement page does not name the automated decision-making section, so check before relying on it [17].
+- **Data protection.** The Information Commission's guidance on AI and data protection explains how UK data protection law applies to AI that processes personal data; it is guidance, not a statutory code [15]. The Data (Use and Access) Act 2025 replaces the old Article 22 with Articles 22A to 22D, which allow solely automated significant decisions only with safeguards: telling people, letting them make representations, obtain human intervention and challenge the decision [16]. Most of the Act's data protection changes started on 5 February 2026, but the commencement page does not name the automated decision-making section, so check before relying on it [17]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **Help for small firms.** DSIT's AI Management Essentials is a self-assessment tool aimed at start-ups and SMEs; the consultation ran from November 2024 to January 2025 and the government response was published on 6 February 2026 [18].
 
 ### United States
@@ -179,7 +179,7 @@ Re-check these at every refresh (every 14 days):
 | AI literacy guidance | Commission Q&A [10] | Updated 20 Oct 2026; supervision from 2 Aug 2026 |
 | Codes of practice and guidelines | Commission AI Act page [8] | Code on marking and labelling AI content published |
 | UK AI legislation | GOV.UK [13] | Principles-based; check for new bills |
-| UK automated decisions | DUAA commencement page [17]; ICO [15] | Most Part 5 in force 5 Feb 2026; ADM section to confirm |
+| UK automated decisions | DUAA commencement page [17]; Information Commission [15] | Most Part 5 in force 5 Feb 2026; ADM section to confirm |
 | UK SME tools | DSIT AIME [18] | Response published 6 Feb 2026 |
 | NIST AI RMF revision | NIST [1] | Under revision; no date |
 | US federal and state AI rules | FTC [20]; state official sites | Check each refresh |

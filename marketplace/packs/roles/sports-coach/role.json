@@ -15,12 +15,16 @@
     "grassroots coach",
     "volunteer coach handbook"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 30 checked sources (NSPCC CPSU safeguarding, US Center for SafeSport MAAPP, UK Coaching, Sport for Life LTD 3.0, UK grassroots concussion guidelines, CDC HEADS UP, DBS and positions of trust, GDPR), four skills, five prompts, two workflows, training interview and test briefs. Not medical advice."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

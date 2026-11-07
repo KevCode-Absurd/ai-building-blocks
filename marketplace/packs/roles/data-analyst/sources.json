@@ -202,10 +202,10 @@
   {
     "n": 26,
     "title": "How do we ensure anonymisation is effective?",
-    "publisher": "Information Commissioner's Office (UK)",
+    "publisher": "Information Commission (ICO), UK",
     "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/anonymisation/how-do-we-ensure-anonymisation-is-effective/",
-    "checked": "2026-11-06",
-    "supports": "Search-confirmed (fetch blocked with HTTP 403): a search result showed this exact page. Identifiability is a spectrum; the test is what is reasonably likely; use a motivated intruder test. Publication date not confirmed; re-open at each refresh."
+    "checked": "2026-11-07",
+    "supports": "Search-confirmed (ico.org.uk blocks automated fetches with HTTP 403): a search result showed this exact page on 7 Nov 2026. Part of the final anonymisation guidance published 28 March 2025, now under review after the Data (Use and Access) Act 2025. Identifiability is a spectrum; the test is what is reasonably likely; use a motivated intruder test."
   },
   {
     "n": 27,

@@ -15,12 +15,16 @@
     "security questionnaire",
     "rfp technical response"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 27 checked sources on demos, pilots, RFPs, security questionnaires (CSA CAIQ v4.1 and STAR, SOC 2, ISO/IEC 27001 via BSI, Cyber Essentials, FedRAMP), EU supplier rules (NIS2, DORA, GDPR Article 28), claims rules and CRM connectors. Four skills, five prompts, two workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's controller-processor contract guidance."
     }
   ]
 }

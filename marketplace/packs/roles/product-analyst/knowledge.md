@@ -100,9 +100,9 @@ This kit covers tracking plans, funnels, retention and the basics of product tes
 
 ### Privacy: collect only what the question needs (not legal advice)
 
-- **EU and UK.** GDPR Article 5 requires personal data to be collected for specified purposes, "adequate, relevant and limited to what is necessary", and kept no longer than needed [27]. The UK GDPR carries the same principles; check the ICO's data minimisation guidance for UK work. In a tracking plan this means: every property answers a listed question; IDs instead of names and emails; no free-text fields; retention set on purpose.
+- **EU and UK.** GDPR Article 5 requires personal data to be collected for specified purposes, "adequate, relevant and limited to what is necessary", and kept no longer than needed [27]. The UK GDPR carries the same principles; check the Information Commission's [data minimisation guidance](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/) for UK work (confirmed from search results on 7 Nov 2026; the site blocks automated fetches). In a tracking plan this means: every property answers a listed question; IDs instead of names and emails; no free-text fields; retention set on purpose. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **Analytics cookies in the EU.** Trackers generally need consent. France's CNIL exempts audience measurement only when it is limited to measurement and A/B testing, not cross-referenced with other data, limited to one publisher, with the last byte of the IP removed and a tracker life of 13 months at most; the CNIL says most large analytics offerings do not qualify, and rules vary by EU country [28].
-- **UK cookie rules: unsure.** UK rules on analytics cookies were being changed by the Data (Use and Access) Act 2025. I could not open the ICO or legislation pages on 6 November 2026, so check the ICO's current guidance before advising.
+- **UK cookie rules.** The Information Commission's [storage and access guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/) (final 29 April 2026, confirmed from search results on 7 Nov 2026) allows aggregate analytics that improve your own service without consent, if people are told and can object. It does not cover advertising, tracking individuals or recordings of individual visits. Check the live page before advising.
 - **US.** Rules depend on the state and the sector; the client's adviser says which apply. The GoodRx case shows the FTC acting on health data sent to ad platforms [29].
 
 ### Access level 3 in product analytics
@@ -219,5 +219,5 @@ Re-check these at every refresh (every 30 days):
 | Mixpanel and PostHog retention defaults | Vendor docs [17][21] | "On or After" vs "On" |
 | Amplitude and Mixpanel plans | Vendor pricing pages (see `access.md`) | Free plans exist |
 | EU analytics cookie rules | CNIL [28] and other national regulators | Exemption narrow |
-| UK cookie and data rules | ICO (could not be opened on 6 Nov 2026) | Unsure: check |
+| UK cookie and data rules | ico.org.uk (search results only, 7 Nov 2026) | Statistics exception final 29 Apr 2026 |
 | Health data in tracking | FTC [29] | GoodRx order, 2023 |

@@ -104,7 +104,7 @@ Building endpoints, webhooks and integrations belongs to a back-end developer; d
 ### Rules by region (not legal advice)
 
 - **EU.** GDPR's principles shape schema design: collect only what the purpose needs (data minimisation), keep personal data no longer than needed with set erase or review dates (storage limitation), and secure it with access limited to those who need it [30]. In practice: retention dates on tables, delete or anonymise jobs, and least-privilege database roles.
-- **UK.** Check the ICO's guidance on UK GDPR for retention, erasure and what to do about backups.
+- **UK.** Check the Information Commission's guidance on UK GDPR for retention, erasure and what to do about backups. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **US.** Privacy duties depend on the state and the sector; the client's adviser says which apply.
 - **Everywhere.** Keep real customer data out of chat, development copies and test fixtures unless it is masked.
 

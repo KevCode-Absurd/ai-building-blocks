@@ -21,6 +21,10 @@
     {
       "date": "2026-11-07",
       "note": "First release: growth canon, funnels and activation, retention cohorts, unit economics and allowable CAC, experiment design and readouts, measurement and attribution in GA4 with US, UK and EU consent rules, incrementality, and the weekly growth review, with 29 checked sources. Channel playbooks stay in the Traction mega pack and are referenced, not repeated."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Replaced the law-firm cookie summary with the regulator's storage and access guidance."
     }
   ]
 }

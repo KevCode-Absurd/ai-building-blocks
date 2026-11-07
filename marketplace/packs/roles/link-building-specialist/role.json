@@ -15,12 +15,16 @@
     "broken link building",
     "backlink audit"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 28 sources (Google spam policies, link qualifying and link spam updates, site reputation abuse incl. the Aug 2026 EEA change, disavow and manual actions, FTC, ASA and EU disclosure rules, CAN-SPAM and EDPB outreach rules), four skills (asset plan, prospect scoring, outreach pitches, monthly link report), six prompts, three workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's email marketing guidance."
     }
   ]
 }

@@ -51,7 +51,7 @@ Checked 6 November 2026. Every fact that can change carries a date and a source 
 ### Privacy: UK GDPR and the Data (Use and Access) Act 2025
 
 - The UK GDPR and the Data Protection Act 2018 set the UK rules, with the same core principles and rights [8].
-- The Data (Use and Access) Act 2025 received Royal Assent on 19 June 2025. Most of its data protection and privacy changes came into force on 5 February 2026. A duty for controllers to handle data protection complaints was planned for about a year after Royal Assent. On 30 September 2026 the Information Commissioner's functions moved to a new Information Commission (GOV.UK page updated 12 October 2026) [9]. UK privacy notices, complaint routes and templates that name "the ICO" should be checked against current guidance at each refresh.
+- The Data (Use and Access) Act 2025 received Royal Assent on 19 June 2025. Most of its data protection and privacy changes came into force on 5 February 2026. A duty for controllers to handle data protection complaints was planned for about a year after Royal Assent. On 30 September 2026 the Information Commissioner's functions moved to a new Information Commission (GOV.UK page updated 12 October 2026) [9]. UK privacy notices, complaint routes and templates that name "the Information Commission" should be checked against current guidance at each refresh.
 
 ### Privacy: California (CCPA as amended by the CPRA)
 

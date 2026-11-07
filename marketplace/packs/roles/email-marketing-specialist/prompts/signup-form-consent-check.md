@@ -20,5 +20,5 @@ Do this:
 5. List what to record for each sign-up so we can prove consent later.
 6. Write the welcome email's first two lines so they repeat what the person signed up for.
 
-Rules: point to the official guidance to read (the FTC's CAN-SPAM guide, the ICO's PECR guidance, the EDPB's consent guidelines) without ruling on the law.
+Rules: point to the official guidance to read (the FTC's CAN-SPAM guide, the Information Commission's PECR guidance, the EDPB's consent guidelines) without ruling on the law.
 ```

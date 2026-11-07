@@ -43,7 +43,7 @@ This skill writes practical rules and a register. It does not decide whether a u
    - What to do after a mistake: stop, tell the named person, record what happened, no blame for reporting.
 5. **Add the regional pointers (no rulings).**
    - **EU:** the AI Act's AI literacy duty (staff using AI should get suitable training; no certificate needed), transparency rules, and high-risk uses such as hiring and credit scoring. Point to the European Commission's AI Act pages and the AI literacy Q&A.
-   - **UK:** the ICO's guidance on AI and data protection, and the Data (Use and Access) Act changes on automated decisions. Point to the ICO and GOV.UK.
+   - **UK:** the Information Commission's guidance on AI and data protection, and the Data (Use and Access) Act changes on automated decisions. Point to the Information Commission and GOV.UK.
    - **US:** the FTC's position that there is no AI exemption from laws against deception; NIST's voluntary AI Risk Management Framework; state rules to check with a lawyer.
 6. **Build the register:** tool, owner, users or teams, purpose, plan, sign-in method, data classes allowed, connected data sources, settings to confirm, processor contract in place (yes, no, unknown), date added, review date, notes.
 7. **Draft the roll-out:** a short staff message, an FAQ with the questions staff will ask, where the policy lives, and a review date. Suggest a short training session on the team's own tasks.

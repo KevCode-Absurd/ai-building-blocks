@@ -122,7 +122,7 @@
   {
     "n": 16,
     "title": "Electronic mail marketing (Guide to PECR)",
-    "publisher": "UK Information Commissioner's Office",
+    "publisher": "UK Information Commission (ICO)",
     "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/",
     "checked": "2026-11-06",
     "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. UK rules: specific consent for marketing email to individuals, the soft opt-in conditions for existing customers, no third-party list meets the soft opt-in, corporate subscribers need no consent but must get identification and an opt-out, sole traders treated as individuals"
@@ -130,7 +130,7 @@
   {
     "n": 17,
     "title": "The charitable purpose soft opt-in",
-    "publisher": "UK Information Commissioner's Office",
+    "publisher": "UK Information Commission (ICO)",
     "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/the-charitable-purpose-soft-opt-in/",
     "checked": "2026-11-06",
     "supports": "The site blocks automated fetches (HTTP 403); confirmed by a WebSearch result showing this exact page. The new soft opt-in for charities from the Data (Use and Access) Act 2025, commenced 5 February 2026, for contact details obtained on or after that date"
@@ -146,7 +146,7 @@
   {
     "n": 19,
     "title": "Direct marketing guidance: enforcement",
-    "publisher": "UK Information Commissioner's Office (ICO Welsh-language site)",
+    "publisher": "UK Information Commission (ICO Welsh-language site)",
     "url": "https://cy.ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/direct-marketing-guidance/enforcement",
     "checked": "2026-11-06",
     "supports": "Confirmed by a WebSearch result showing this exact page (not opened). States the higher PECR maximum penalty of £17.5 million or 4% of global turnover and notes the guidance is under review after the Data (Use and Access) Act 2025; law-firm summaries say the same"

@@ -221,7 +221,7 @@
     "publisher": "GOV.UK (DSIT and DCMS)",
     "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-uk-gdpr-and-dpa",
     "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. Recognised legitimate interests; new automated decision-making Articles 22A to 22D with safeguards; subject access searches reasonable and proportionate with a stop-the-clock pause; published 27 June 2025. ICO pages refused automated fetching (HTTP 403) on 6 November 2026."
+    "supports": "Opened with WebFetch. Recognised legitimate interests; new automated decision-making Articles 22A to 22D with safeguards; subject access searches reasonable and proportionate with a stop-the-clock pause; published 27 June 2025. ico.org.uk pages refused automated fetching (HTTP 403) on 6 November 2026."
   },
   {
     "n": 29,

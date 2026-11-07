@@ -15,12 +15,16 @@
     "data contracts",
     "dbt tests"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (UK data quality framework, GDPR accuracy, CCPA right to correct, dbt, GX, Soda, ODCS, OpenRefine, Splink, HubSpot), four skills, five prompts, two workflows, training interview and test briefs. Merges, deletions and bulk updates need a backup and a fresh yes, even at level 3."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's accuracy guidance."
     }
   ]
 }

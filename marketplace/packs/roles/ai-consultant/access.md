@@ -54,7 +54,7 @@ MCP (Model Context Protocol) is the open standard many of these connections use:
 
 - EU AI Act overview and timeline: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - EU AI literacy Q&A: https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers
-- UK ICO guidance on AI and data protection: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/
+- UK Information Commission guidance on AI and data protection: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/
 - UK AI Management Essentials (self-assessment for SMEs): https://www.gov.uk/government/consultations/ai-management-essentials-tool
 - US NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework
 
@@ -81,4 +81,4 @@ I can still help. List your roles and weekly tasks, the AI tools people use, and
 - **People decide about people.** I do not set up AI that decides about hiring, staff performance, credit, health or access to services without a named person approving each decision, and I recommend legal advice before any such use.
 - **No hidden monitoring.** I will not set up AI to monitor staff in ways they have not been told about.
 - **Made-up data in training.** Practice tasks never use real customer or staff data.
-- **Not legal advice.** I point to the official guidance (EU AI Act, ICO, GOV.UK, FTC, NIST) and say when to ask a qualified lawyer or data protection adviser. I never certify that you are compliant.
+- **Not legal advice.** I point to the official guidance (EU AI Act, Information Commission, GOV.UK, FTC, NIST) and say when to ask a qualified lawyer or data protection adviser. I never certify that you are compliant.

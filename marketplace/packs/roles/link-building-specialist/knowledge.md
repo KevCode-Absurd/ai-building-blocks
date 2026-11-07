@@ -101,7 +101,7 @@ Guest articles are fine when they inform another site's readers. They become a p
 
 - **US.** CAN-SPAM covers commercial email, with no exception for business-to-business messages: accurate headers and subject lines, a postal address and opt-outs honoured within 10 business days [24]. A pure editorial pitch may not be "commercial", but a pitch that promotes a product should be treated as if it is.
 - **EU.** A journalist's or site owner's name and work email are personal data. Legitimate interest can be a legal basis only when the interest is real, the processing is necessary, and it doesn't override the person's rights and reasonable expectations [23]. Keep only what the campaign needs and remove anyone who asks.
-- **UK.** Check the ICO's guidance on direct marketing and electronic communications before cold outreach that promotes a product. The ICO site blocked fetching for this kit, so no detail is given here.
+- **UK.** Check the Information Commission's guidance on direct marketing by email before cold outreach that promotes a product [29]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 
 ### Case study: Backlinko's skyscraper post
 

@@ -84,7 +84,7 @@ Checked 6 November 2026. Every fact that can change carries its own date and a s
 
 ### Records and privacy
 
-- Keep only what you need, keep it accurate and secure, and delete it on a schedule. The UK ICO publishes employer guidance on records, recruitment, monitoring and health data [16].
+- Keep only what you need, keep it accurate and secure, and delete it on a schedule. The UK Information Commission publishes employer guidance on records, recruitment, monitoring and health data [16]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - Health and diversity data sits in a separate, restricted file.
 - Retention periods are set by law and differ by place (see section 4).
 
@@ -205,5 +205,5 @@ Re-check these at every refresh (every 30 days):
 | US overtime salary level | DOL Wage and Hour Division; [23] | $684 a week from 15 May 2026 |
 | Form I-9 edition | USCIS [22] | Edition 01/20/25 |
 | Engagement benchmarks | Gallup report [26] | 2026 report, 2025 data |
-| ICO employment guidance | ICO [16] | Recruitment guidance was in draft; check for final version |
+| Information Commission employment guidance | Information Commission [16] | Recruitment guidance was in draft; check for final version |
 | Local AI hiring rules | NYC DCWP [27] and other cities and states | NYC LL144 in force since 5 Jul 2023 |

@@ -42,6 +42,23 @@ test('unchanged pages retain their published stamp, changed pages use a known so
   assert.equal(selectLastmod({ hash: 'b', previousHash: 'a', sourceTime: '2026-10-28T12:00:00Z' }), '2026-10-28T12:00:00.000Z');
   assert.equal(selectLastmod({ hash: 'b', previousHash: 'a' }), '', 'no build-time fallback');
 });
+test('an item page keeps the day its own files changed, whatever the shared template does', () => {
+  const now = Date.parse('2026-11-07T00:00:00Z');
+  assert.equal(selectLastmod({ hash: 'b', previousHash: 'a', previousDate: '2026-11-05T09:31:31.000Z', sourceTime: '2026-11-06T12:00:00Z', ownDate: '2026-10-28' }, now), '2026-10-28');
+  assert.equal(selectLastmod({ hash: 'a', previousHash: 'a', previousDate: '2026-11-05T09:31:31.000Z', ownDate: '2026-10-28' }, now), '2026-10-28');
+  assert.equal(selectLastmod({ hash: 'b', previousHash: 'a', sourceTime: '2026-11-06T12:00:00Z', ownDate: 'soon' }, now), '2026-11-06T12:00:00.000Z', 'a bad item date falls back');
+});
+test('stamping an item page writes its own date to the page and the sitemap', t => {
+  const dir = fixture(t), state = path.join(dir, 'state.json');
+  fs.mkdirSync(path.join(dir, 'data/pages'));
+  fs.writeFileSync(path.join(dir, 'data/pages/a.json'), JSON.stringify({ added: '2026-10-19' }));
+  fs.writeFileSync(state, JSON.stringify({ urls: { [`${SITE}/skills/a`]: '2026-11-05T09:31:31.000Z' }, fingerprints: { [`${SITE}/skills/a`]: 'old' } }));
+  stampContent({ dist: dir, state });
+  assert.match(fs.readFileSync(path.join(dir, 'sitemap-skills.xml'), 'utf8'), /<lastmod>2026-10-19<\/lastmod>/);
+  assert.match(fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8'), /<lastmod>2026-10-19<\/lastmod>/);
+  const graph = JSON.parse(fs.readFileSync(path.join(dir, 'skills/a.html'), 'utf8').match(/application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+  assert.equal(graph[0].dateModified, '2026-10-19');
+});
 test('stamping the publication date preserves the source work author, licence and dates', () => {
   const stamped = stampHtmlDate(page(), '2026-10-28T12:00:00Z');
   const graph = JSON.parse(stamped.match(/application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];

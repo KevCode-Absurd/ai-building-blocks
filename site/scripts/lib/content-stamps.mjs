@@ -49,7 +49,11 @@ export function validLastmod(value, now = Date.now()) {
   return Number.isFinite(time) && time <= now;
 }
 
-export function selectLastmod({ hash, previousHash, previousDate = '', sourceTime = '' }, now = Date.now()) {
+export function selectLastmod({ hash, previousHash, previousDate = '', sourceTime = '', ownDate = '' }, now = Date.now()) {
+  // A page about one item carries the day the item's own files last changed: the "Updated" date the page shows. A new
+  // section in the shared item template is not news about 6,000 items, and a sitemap that re-dates them all on each
+  // release teaches search engines to ignore its dates (all skills read 5 Nov while their pages said 28 Oct).
+  if (validLastmod(ownDate, now)) return ownDate;
   if (hash === previousHash) return previousDate;
   // A committed source revision is a stable, verifiable version time. Never use build time.
   return validLastmod(sourceTime, now) ? new Date(sourceTime).toISOString() : '';

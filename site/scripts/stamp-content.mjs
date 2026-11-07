@@ -35,11 +35,13 @@ export function fingerprints(dist) {
   const toolDir = path.join(root, 'site/src/tools');
   // These tool pages share code. Include the imported agency helpers and UI, not only their short metadata rows.
   const toolSource = sha256(fs.readdirSync(toolDir).filter(name => /\.(?:mjs|tsx?|css)$/.test(name)).sort().map(name => `${name}\n${fs.readFileSync(path.join(toolDir, name), 'utf8')}`).join('\n'));
-  const hashes = {};
+  const hashes = {}, ownDates = {};
   for (const [url] of publication.urls) {
     const file = htmlFile(dist, url);
     const html = fs.readFileSync(file, 'utf8'), pathname = new URL(url).pathname;
-    const slug = pathname.split('/').at(-1), own = /^\/(skills|workflows|agents|prompts|minds)\//.test(pathname) ? resources[slug]?.revision_sha256 : '';
+    const slug = pathname.split('/').at(-1), isItem = /^\/(skills|workflows|agents|prompts|minds)\/[^/]+$/.test(pathname), own = isItem ? resources[slug]?.revision_sha256 : '';
+    // The day the item's own files last changed (from git, scripts/build-index.mjs): the day its page shows as "Updated".
+    if (isItem) { try { const added = readJson(path.join(dist, 'data/pages', slug + '.json')).added; if (typeof added === 'string') ownDates[url] = added; } catch { /* no page data: keep the fingerprint date */ } }
     const extras = {};
     if (/^\/roles(?:\/|$)/.test(pathname)) {
       if (pathname === '/roles' || pathname.startsWith('/roles/page/')) extras.roles = sha256(fs.readFileSync(path.join(dist, 'data/roles-index.json')));
@@ -56,7 +58,7 @@ export function fingerprints(dist) {
     }
     hashes[url] = contentFingerprint(html, own, extras);
   }
-  return { ...publication, hashes };
+  return { ...publication, hashes, ownDates };
 }
 export function stampContent({ dist = path.join(root, 'site/dist'), state = path.join(root, 'tools/indexnow-state.json') } = {}) {
   const previous = readJson(state), publication = fingerprints(dist);
@@ -65,7 +67,7 @@ export function stampContent({ dist = path.join(root, 'site/dist'), state = path
   const dirty = git('status', '--porcelain', '--untracked-files=all').split(/\r?\n/).filter(line => line && line.slice(3) !== 'tools/indexnow-state.json').length > 0;
   const urls = {};
   for (const [url, hash] of Object.entries(publication.hashes)) {
-    const lastmod = selectLastmod({ hash, previousHash: previous.fingerprints[url], previousDate: previous.urls[url] ?? '', sourceTime: dirty ? '' : sourceTime });
+    const lastmod = selectLastmod({ hash, previousHash: previous.fingerprints[url], previousDate: previous.urls[url] ?? '', sourceTime: dirty ? '' : sourceTime, ownDate: publication.ownDates[url] });
     urls[url] = { sha256: hash, lastmod };
     const file = htmlFile(dist, url);
     fs.writeFileSync(file, stampHtmlDate(fs.readFileSync(file, 'utf8'), lastmod));

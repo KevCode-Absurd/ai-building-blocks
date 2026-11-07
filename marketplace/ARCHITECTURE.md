@@ -148,6 +148,11 @@ generated. robots.txt blocks `/api/` except `/api/agents` and `/api/config`, whi
 draw; every API answer says `x-robots-tag: noindex`. Only production (`APP_ENV` "production") is indexed; other
 environments say noindex and disallow everything.
 
+Search engines: Google reads `/sitemap.xml` through Search Console (property `sc-domain:useaiblocks.com`, submitted
+7 Nov 2026). Bing, Yandex and the other IndexNow engines get every sitemap page in one request from
+`node scripts/indexnow.mjs` after a production deploy that adds or renames pages. Its key file is
+`public/<key>.txt`; the key is public by design, so it is committed.
+
 ## Agent order, the roster in memory, and going back
 
 - Browse order (`directory/views.ts`): `/agents` with no search or role starts with `START_HERE`, 20 agents most

@@ -15,12 +15,16 @@
     "database migrations",
     "database backups"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (PostgreSQL 18, MySQL 8.4 and 9.7, SQLite and Django docs, AWS RDS, Supabase and PlanetScale backup and migration docs, Atlassian's 2022 outage review), four skills, five prompts, two workflows, training interview and test briefs. Production migrations and destructive changes need a tested backup and a fresh yes."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

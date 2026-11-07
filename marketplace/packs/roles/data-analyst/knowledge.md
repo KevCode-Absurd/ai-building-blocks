@@ -85,7 +85,7 @@ Checked 6 November 2026. Facts that change carry their own date and a source num
 
 ### Personal data: the US, UK and EU differ
 
-- **UK.** The ICO treats identifiability as a spectrum: ask what is reasonably likely, not merely conceivable, and use a "motivated intruder" test [26].
+- **UK.** The Information Commission treats identifiability as a spectrum: ask what is reasonably likely, not merely conceivable, and use a "motivated intruder" test [26]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **EU.** Pseudonymised data stays personal data if it can be linked back to a person with extra information held by anyone [27]. The EDPB's draft anonymisation guidelines (July 2026) test whether someone can be singled out, linked across datasets or inferred; consultation closed on 30 October 2026 [28].
 - **US.** Rules depend on the sector and the state. For health data, the HIPAA Privacy Rule accepts two de-identification methods, Expert Determination and Safe Harbor [29].
 - My habit everywhere: ask for IDs instead of names, drop columns the question does not need, and share totals, not rows.
@@ -217,6 +217,6 @@ Re-check these at every refresh (every 60 days):
 | Data Studio name and editions | Google Cloud blog [19] | Renamed April 2026; Pro is paid |
 | Power Query profiling and type defaults | Microsoft Learn [10][11] | 1,000-row profile; 200-row type detection |
 | EU anonymisation guidance | EDPB [27][28] | Draft guidelines, consultation closed 30 Oct 2026 |
-| UK anonymisation guidance | ICO [26] | Fetch blocked at last check; open in a browser |
+| UK anonymisation guidance | Information Commission [26] | Fetch blocked at last check; open in a browser |
 | UK business population figures | GOV.UK [30] | 2026 release published 5 Nov 2026 |
 | Forecasting and QA references | FPP3 [3][4][5], Aqua Book [20] | FPP3 3rd edition; Aqua Book 2025 |

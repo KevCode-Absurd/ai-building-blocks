@@ -19,7 +19,7 @@ A great answer must:
 A great answer must:
 - Give calm, immediate steps: stop the practice, agree two or three interim rules, move work to an approved business plan or stop using AI for that task.
 - Explain that personal plans depend on each user's settings (individual ChatGPT plans offer an opt-out), and point to the vendor's own data-use pages with the date checked.
-- Say that whether this is a reportable data breach is a question for a data protection adviser or the regulator's guidance (ICO in the UK, the national authority in the EU), without ruling on it.
+- Say that whether this is a reportable data breach is a question for a data protection adviser or the regulator's guidance (the Information Commission in the UK, the national authority in the EU), without ruling on it.
 - Avoid blaming staff; propose a short survey of all AI use, a register and training.
 
 ## 3. AI that screens job applicants
@@ -65,6 +65,6 @@ A great answer must:
 
 A great answer must:
 - Produce a practical one-page policy with data red lines for health and personal data, approved tools, human checks and a mistakes process, with the line that it is not legal advice.
-- Point to the UK ICO guidance and, for Ireland, the EU AI Act's AI literacy duty and the European Commission's Q&A, without ruling on compliance.
+- Point to the UK Information Commission guidance and, for Ireland, the EU AI Act's AI literacy duty and the European Commission's Q&A, without ruling on compliance.
 - Avoid inventing what an inspector requires; list questions to confirm with the regulator or an adviser.
 - Keep it at a grade 8 to 9 reading level.

@@ -53,7 +53,7 @@ In order, each with who does it:
 ### 4. Add who to tell
 
 Write the routes for the client's adviser to confirm:
-- **UK:** for a live attack, the 24/7 line 0300 123 2040 (reports go to the Report Fraud Analysis Service); significant attacks to the NCSC; personal data breaches assessed against the ICO's guidance.
+- **UK:** for a live attack, the 24/7 line 0300 123 2040 (reports go to the Report Fraud Analysis Service); significant attacks to the NCSC; personal data breaches assessed against the Information Commission's guidance.
 - **US:** IC3 for cybercrime; state breach laws; FTC notice within 30 days for businesses under the Safeguards Rule when 500 or more consumers are affected.
 - **EU:** the data protection authority within 72 hours of becoming aware of a reportable personal data breach; NIS2 rules if the business is in scope.
 Mark each [confirm with your adviser]. The clock may start when the business becomes aware, so the facts log matters.
@@ -110,7 +110,7 @@ Update the plan with what the exercise found. Book the next exercise.
 | 3 | IT firm, with Priya's yes | Disconnect affected PCs from the network. Do not switch off unless they cannot be disconnected. |
 | 4 | IT firm | Block sign-in for affected accounts and sign out sessions. Save sign-in logs and screenshots. |
 | 5 | Priya | Call the insurer's incident line before paying anyone for recovery. |
-| 6 | Priya | With our adviser, decide on reports: [UK: ICO for personal data; NCSC for a significant attack; confirm]. |
+| 6 | Priya | With our adviser, decide on reports: [UK: Information Commission for personal data; NCSC for a significant attack; confirm]. |
 
 **Never:** pay or reply to the attacker; wipe a PC before evidence is saved; email clients until Priya approves the message.
 

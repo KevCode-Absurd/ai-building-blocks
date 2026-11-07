@@ -198,5 +198,13 @@
     "url": "https://muckrack.com/resources/research/state-of-journalism",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch. Annual survey of nearly 1,100 journalists covering what makes a pitch land; full figures sit behind a download form, so none are used in this kit"
+  },
+  {
+    "n": 26,
+    "title": "Personal data breaches: a guide",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/personal-data-breaches-a-guide/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. Report a notifiable personal data breach to the regulator within 72 hours of becoming aware of it, where feasible, giving details in phases if needed; tell people without undue delay when the risk to them is high; record every breach. The page says it is under review after the Data (Use and Access) Act 2025."
   }
 ]

@@ -62,7 +62,7 @@ Checked 6 November 2026. Facts that can change carry a date and a source number 
 
 ### Messages and email rules
 - In the US, a message's primary purpose decides whether it is commercial. Notices about a change to an account or membership count as transactional or relationship messages; an upgrade pitch is commercial and needs an opt-out honoured within 10 business days, a postal address and an honest subject line [18].
-- In the UK, a purely administrative message is a service message, not marketing; adding any promotion makes it marketing, whatever the tone [19]. Keep renewal notices and upsell offers in separate messages.
+- In the UK, a purely administrative message is a service message, not marketing; adding any promotion makes it marketing, whatever the tone [19]. That guidance comes from the Information Commission, which replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator)). Keep renewal notices and upsell offers in separate messages.
 - Customer stories and case studies must be real. The FTC's 2024 rule bans fake testimonials and reviews, incentives tied to positive sentiment and undisclosed insider reviews [20].
 - In the EU, an AI system that talks directly with people must tell them it is AI unless that is obvious, from 2 August 2026 [21]. Label automated check-ins and give a route to a person.
 

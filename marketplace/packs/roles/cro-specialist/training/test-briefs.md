@@ -38,7 +38,7 @@ A made-up skincare brand selling in the UK and Germany wants session recordings 
 
 A great answer must:
 - Treat turning on recording as needing a fresh yes, and check consent first.
-- Explain, without legal rulings, the EDPB's view on Article 5(3) and consent, and the UK position to confirm with the ICO's current guidance.
+- Explain, without legal rulings, the EDPB's view on Article 5(3) and consent, and the UK position to confirm with the Information Commission's current guidance.
 - Check Clarity's or the chosen tool's consent signal and set strict masking on checkout and account pages.
 - Note that recordings will cover consenting visitors only.
 

@@ -222,5 +222,13 @@
     "url": "https://www.helpareporter.com/",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch. A journalist request service, shown as powered by Featured; sources can subscribe free to daily media queries."
+  },
+  {
+    "n": 29,
+    "title": "Guidance on direct marketing using electronic mail",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. The regulator's guidance on PECR rules for marketing by email and text, updated after the Data (Use and Access) Act 2025."
   }
 ]

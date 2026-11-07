@@ -111,7 +111,7 @@ Checked 6 November 2026. Facts that change carry their own date and a source num
 ### Rules by region (not legal advice)
 
 - **EU and UK.** Strong Customer Authentication under PSD2 has applied since 14 September 2019 to many online card payments where the business and customers are in Europe; card payments use 3D Secure, and Stripe's Checkout and Payment Intents handle it. UK cards saved before 14 September 2021 could use earlier agreements for off-session payments [11].
-- **EU.** GDPR's data minimisation and storage limitation principles mean logs, webhook stores and idempotency tables should keep only the personal data needed, for the shortest time needed [29]. The UK applies the same principles through UK GDPR; check the ICO's guidance.
+- **EU.** GDPR's data minimisation and storage limitation principles mean logs, webhook stores and idempotency tables should keep only the personal data needed, for the shortest time needed [29]. The UK applies the same principles through UK GDPR; check the Information Commission's guidance. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **US.** SCA does not apply. The PCI SAQ rules above still apply to card payments [13]. State privacy laws vary; the client's adviser confirms what applies.
 
 ### Tools that touch live systems

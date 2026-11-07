@@ -107,7 +107,7 @@ A media mix model (MMM) explains weekly sales with spend or exposure by channel,
 ### 3.7 Consent and regions
 
 - **EU.** Sites must get consent before setting cookies, other than those needed only to transmit a communication or strictly needed for a service the user asked for [14].
-- **UK.** Cookie rules are overseen by the ICO and changed under recent law; check the ICO's current guidance before changing a banner.
+- **UK.** The Information Commission's [storage and access guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/) (final 29 April 2026) lets aggregate analytics that improve your own service run without consent, if people are told and can object, but not advertising or tracking individuals. Check it before changing a banner. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **US.** Rules differ by state; some states give people the right to opt out of their data being shared for advertising. Check the state rules where customers live.
 - **Google's tags.** Consent mode passes four signals (ad_storage, analytics_storage, ad_user_data, ad_personalization). In basic mode, tags wait for consent; in advanced mode, they send cookieless pings while consent is denied, which allows more detailed modelling [13]. GA4 can model users who decline analytics cookies only after at least 1,000 events a day with analytics consent denied for at least seven days and at least 1,000 daily users with consent granted on 7 of the previous 28 days, among other conditions [12]. Modelled data does not reach the BigQuery export [12].
 
@@ -227,7 +227,7 @@ Re-check at every refresh (every 30 days):
 | GA4 limits and naming | [1][2] | 40 / 100 / 25 |
 | Default channel rules, AI Assistant channel | [6] | AI Assistant channel live; AI Overviews excluded |
 | Consent control in GA4 and Google Ads | [4][12][13] | Consent Mode the single control since 15 Jun 2026 |
-| Cookie rules: EU, UK ICO, US states | [14]; ICO; state sites | EU consent rule unchanged |
+| Cookie rules: EU, UK Information Commission, US states | [14]; ico.org.uk; state sites | EU consent rule unchanged |
 | Data Studio naming and editions | [18] | Renamed 11 Apr 2026 |
 | BigQuery export limits | [11] | 1 million events a day, standard |
 | Google Conversion Lift availability | [16] | Not open to every account |

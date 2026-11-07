@@ -17,7 +17,7 @@ Do this:
 2. Rate each risk low, medium or high, with a one-line reason (who is hurt and how badly).
 3. Say which data must never go in for this use, and whether the stated tool and plan is suitable for the data involved, based only on facts I give you or marked "check with vendor".
 4. List the checks to add: who reviews the output, what they compare it against, and the reject rule.
-5. Flag if the use might decide about people (hiring, staff performance, credit, access to services, health) or produce public information or realistic images. If so, say it needs advice from a qualified lawyer or data protection adviser before going ahead, and point to the official source to read (EU AI Act pages, the UK ICO, or the US FTC) without saying whether it is legal.
+5. Flag if the use might decide about people (hiring, staff performance, credit, access to services, health) or produce public information or realistic images. If so, say it needs advice from a qualified lawyer or data protection adviser before going ahead, and point to the official source to read (EU AI Act pages, the UK Information Commission, or the US FTC) without saying whether it is legal.
 6. Give a recommendation: go with these checks, change (and how), or do not use AI for this.
 
 Output: a one-page note with a risk table (risk, rating, reason, check), data red lines, the recommendation and open questions.

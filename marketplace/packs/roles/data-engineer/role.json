@@ -15,12 +15,16 @@
     "airflow",
     "elt"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: 30 sources (dbt v1.12 and v2.0, Airflow 3.4, Dagster, BigQuery, Snowflake, Fivetran, Airbyte, Open Data Contract Standard, Google SRE Workbook, PHE 2020 case, GDPR). Four skills, five prompts, three workflows, training. Dropping or overwriting data and raising warehouse spend need a fresh yes."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's data minimisation guidance."
     }
   ]
 }

@@ -112,7 +112,7 @@ For coaches and solo experts, the sale is the discovery call. Fill the calendar 
 4. Email sender guidelines FAQ. Google Workspace Admin Help. https://support.google.com/a/answer/14229414 (checked 2026-11-06)
 5. Sender Best Practices. Yahoo Sender Hub. https://senders.yahooinc.com/best-practices/ (checked 2026-11-06)
 6. CAN-SPAM Act: A Compliance Guide for Business. US Federal Trade Commission. https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business (checked 2026-11-06)
-7. Business-to-business marketing. Information Commissioner's Office (UK). https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/ (checked 2026-11-06, confirmed by search; the site blocks automated fetches)
+7. Business-to-business marketing. Information Commission (ICO), UK. https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/ (checked 2026-11-06, confirmed by search; the site blocks automated fetches)
 8. Data (Use and Access) Act factsheet: ICO. GOV.UK, 27 Jun 2025. https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-ico (checked 2026-11-06)
 9. The Data (Use and Access) Act 2025 (Commencement No. 6 and Transitional and Saving Provisions) Regulations 2026. legislation.gov.uk. https://www.legislation.gov.uk/uksi/2026/82/made (checked 2026-11-06, confirmed by search; the page did not load for our fetcher)
 10. La prospection commerciale par courrier électronique. CNIL (France), 10 Jun 2026. https://www.cnil.fr/fr/la-prospection-commerciale-par-courrier-electronique (checked 2026-11-06)

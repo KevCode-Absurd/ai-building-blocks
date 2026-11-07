@@ -30,7 +30,7 @@ A great answer must:
 - Give first steps in order: note the time, phone (not email) the decider and IT firm, disconnect the affected laptop from the network rather than switch it off, with a fresh yes for isolation.
 - Block sign-in and sign out sessions for the affected user at level 3, logging it; no deletion or wiping before evidence is saved.
 - Say not to pay or contact the attacker, and to call the insurer's incident line and a specialist incident response firm.
-- Flag reporting duties for the practice's adviser (UK: ICO guidance and the 24/7 line; US: IC3, state law and the FTC Safeguards Rule for tax preparers; EU: 72 hours) without ruling on them.
+- Flag reporting duties for the practice's adviser (UK: Information Commission guidance and the 24/7 line; US: IC3, state law and the FTC Safeguards Rule for tax preparers; EU: 72 hours) without ruling on them.
 
 ## 4. The owner who wants names
 

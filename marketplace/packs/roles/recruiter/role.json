@@ -15,12 +15,16 @@
     "recruitment coordinator",
     "offer letter"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 checked sources (selection research, callback studies, US, UK and EU rules on job ads, pay ranges, AI hiring tools and checks, plus where to check in India, Canada and Australia), four skills, six prompts, two workflows, training interview and test briefs. Access follows the three access levels (read; read and draft; read, write and publish within the client's limits)."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

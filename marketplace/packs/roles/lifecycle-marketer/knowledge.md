@@ -95,7 +95,7 @@ Email consent is not text consent; each needs its own clear yes [5][8]. For emai
 - **Penalties.** Private TCPA suits seek $500 per violation, and courts can treble that for knowing or wilful breaches (Klaviyo's summary, Sep 2026) [5].
 - **Open item.** The copy of 47 CFR 64.1200 I could read links an amendment published 26 Oct 2026 that I could not open [2]. Check the official eCFR text before relying on any detail above.
 
-**UK and EU detail.** The ICO's PECR guidance and EUR-Lex block automated reading, so the UK and EU rows lean on GOV.UK, EU and CNIL pages plus Klaviyo's labelled summaries [11][12][13][16][17]. The email marketing specialist kit lists the ICO pages; read them first-hand before a UK launch.
+**UK and EU detail.** The Information Commission's PECR guidance and EUR-Lex block automated reading, so the UK and EU rows lean on GOV.UK, EU and CNIL pages plus Klaviyo's labelled summaries [11][12][13][16][17]. The email marketing specialist kit lists the Information Commission pages; read them first-hand before a UK launch. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 
 ### Subscriptions and cancel paths (general guidance, not legal advice)
 
@@ -213,7 +213,7 @@ Re-check at each refresh:
 - **US texting rules:** the official eCFR text of 47 CFR 64.1200, including the amendment published 26 Oct 2026 [2]; FCC orders in docket CG 02-278 [3]; state frequency and hours laws [6].
 - **Carrier and platform rules:** 10DLC registration, cart text rules and messaging policies [7][9][10].
 - **Klaviyo:** compliance articles, attribution defaults, holdout thresholds and benchmarks; note the data date each time [4][5][18][19][20][21].
-- **UK:** ICO guidance after the Data (Use and Access) Act 2025, and the start date of the subscription contracts regime [11][12][27].
+- **UK:** Information Commission guidance after the Data (Use and Access) Act 2025, and the start date of the subscription contracts regime [11][12][27].
 - **EU:** national regulator pages such as the CNIL's, and EDPB consent guidance [15][16].
 - **US subscriptions:** the FTC's negative option rulemaking (FTC-2026-0265) and state auto-renewal laws [25][26].
 - **Unfair practices guidance:** CMA207 and EU consumer pages on urgency and pricing [29][30].

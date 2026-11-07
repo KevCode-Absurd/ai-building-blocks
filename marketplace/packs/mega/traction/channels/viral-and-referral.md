@@ -17,7 +17,7 @@ What changed by November 2026 is the rulebook around rewards:
 
 - **US.** The FTC's rule announced on 14 August 2024 bans rewards conditioned on writing positive or negative reviews [8]. People who get a discount or commission for recommending you should disclose it [10].
 - **Google Maps.** Reviews prompted by rewards are removed, and businesses may not ask only happy customers [9].
-- **UK.** The ICO says that if you encourage customers to forward your marketing to friends, you are instigating those messages, cannot rely on the soft opt-in, and would need each friend's consent; letting customers share a code on their own is lower risk [7].
+- **UK.** The Information Commission says that if you encourage customers to forward your marketing to friends, you are instigating those messages, cannot rely on the soft opt-in, and would need each friend's consent; letting customers share a code on their own is lower risk [7].
 - **EU.** Marketing emails need prior opt-in consent, so the same caution applies to "invite a friend" emails you send [11].
 
 ## 2. When it works and when it doesn't

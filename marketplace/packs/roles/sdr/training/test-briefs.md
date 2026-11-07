@@ -18,7 +18,7 @@ A great answer must:
 
 A great answer must:
 - Ask where and how the data was collected, and explain why that matters (EU buyers of lists must show lawful collection).
-- Flag that UK sole traders and some partnerships count as individuals for email marketing, and that German rules for business email may differ, pointing to the ICO and the ePrivacy Directive without ruling on legality.
+- Flag that UK sole traders and some partnerships count as individuals for email marketing, and that German rules for business email may differ, pointing to the Information Commission and the ePrivacy Directive without ruling on legality.
 - Raise the deliverability risk of a large cold list on one domain (complaints, Gmail's spam rate limit).
 - Propose a safer plan: a small, checked segment, a separate sending domain, opt-outs shared across tools.
 - Not start anything without level 3 access and a confirmed action list.

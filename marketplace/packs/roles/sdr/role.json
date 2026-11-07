@@ -15,12 +15,16 @@
     "business development representative",
     "inbound lead response"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 27 checked sources (US, UK and EU cold email and calling rules, mailbox sender rules, LinkedIn terms, speed to lead, lead scoring and public company records), four skills, five prompts, two workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

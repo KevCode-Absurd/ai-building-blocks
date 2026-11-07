@@ -124,7 +124,7 @@ Rank the backlog with ICE scores [2], raising confidence only with evidence. Log
 
 - *EU:* sites must get consent before setting cookies other than those strictly needed for the service the user asked for [23].
 - *EEA, UK and Switzerland, for Google products:* Google's EU user consent policy requires legally valid consent for cookies where the law requires it and for personal data used in ad personalisation, with records kept [20]. Consent mode passes four signals (ad_storage, analytics_storage, ad_user_data, ad_personalization); in basic mode tags wait for consent, in advanced mode they send cookieless pings while consent is denied, which allows more detailed modelling [19]. Since 15 June 2026, Consent Mode (in Google Ads) has replaced Google Signals as the control for whether the Analytics tag collects Google Ads cookies and identifiers [16].
-- *UK:* the Data (Use and Access) Act 2025 changed the cookie rules from 5 February 2026. Some analytics can now fall under the new conditions, and the maximum fine under PECR rose to £17.5 million or 4% of global turnover (law-firm summary; the ICO's own guidance should be checked) [22].
+- *UK:* the Information Commission (which replaced the ICO on 30 Sep 2026 but still uses that name; [GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator)) allows aggregate analytics that improve your own service without consent, if people are told and can object easily. Advertising, tracking individuals and session recordings still need consent [22].
 - *US:* rules vary by state. In California, covered businesses must honour opt-outs of "sale or sharing" for cross-context behavioural advertising, including Global Privacy Control browser signals, and show a "Do Not Sell or Share" link [24].
 - *Browsers:* in October 2025 Google said Chrome will keep giving users a choice about third-party cookies and retired most Privacy Sandbox APIs, including Topics and the Attribution Reporting API [21].
 
@@ -256,7 +256,7 @@ No reliable cross-industry average exists for small businesses' activation, rete
 Re-check at each refresh:
 
 - **GA4 and Google Ads measurement:** attribution models, key events and how consent controls work, at Google Analytics Help [16][17][18].
-- **Consent rules:** Google's EU user consent policy and consent mode docs [19][20]; the ICO's cookie guidance under the Data (Use and Access) Act and the first fines [22]; EU guidance [23]; US state privacy laws, starting with California's [24].
+- **Consent rules:** Google's EU user consent policy and consent mode docs [19][20]; the Information Commission's storage and access guidance [22]; EU guidance [23]; US state privacy laws, starting with California's [24].
 - **Browser privacy:** Chrome's third-party cookie choice and what replaces the retired Privacy Sandbox APIs, on Google's Privacy Sandbox blog [21].
 - **Open-source MMM tools:** new versions and features of Meridian and Robyn [27][28].
 - **Product analytics features:** retention reports and AI connectors in Mixpanel, Amplitude and PostHog [15].

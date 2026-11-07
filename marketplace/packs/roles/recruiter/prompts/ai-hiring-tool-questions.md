@@ -13,7 +13,7 @@ What the vendor has told us so far (paste their answers or documents): {{vendor_
 Do this:
 1. List the questions to put to the vendor, grouped as: what data the tool uses and keeps; how long it keeps it; whether it was tested for bias, by whom, when, and with what results; whether any filter could act on protected characteristics or proxies such as postcode or graduation year; how a person reviews and overrides its output; what candidates are told.
 2. Mark which answers in the vendor material already respond to each question, and which are missing.
-3. List the local rules to check for our locations, naming the official source for each, for example New York City's automated employment decision tool page, the Illinois Department of Human Rights, the EU AI Act timeline or the UK ICO. Do not say whether we comply.
+3. List the local rules to check for our locations, naming the official source for each, for example New York City's automated employment decision tool page, the Illinois Department of Human Rights, the EU AI Act timeline or the UK Information Commission. Do not say whether we comply.
 4. Draft a short notice to candidates explaining that the tool is used, for me to adapt.
 
 Rules: no legal conclusions; say "unknown" rather than guess.

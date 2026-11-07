@@ -63,7 +63,7 @@ Checked 6 November 2026. Facts that can change carry a date and a source number 
 - **New York City.** An automated employment decision tool needs a bias audit within one year before use, a public summary of the results and notice to candidates 10 business days before use; enforced since 5 July 2023 [10].
 - **Illinois.** HB 3773 has been in force since 1 January 2026: AI that discriminates in employment decisions is barred and use must be disclosed. Draft notice rules were published on 15 May 2026 and withdrawn on 2 June 2026, so the details are unsettled (law-firm summary) [13].
 - **EU.** AI used to target job ads, filter applications or evaluate candidates is high-risk under the AI Act [11]. The AI Omnibus (Regulation (EU) 2026/1744, in force 27 July 2026) moved those high-risk duties to 2 December 2027; transparency duties apply from 2 August 2026 (law-firm summary) [12].
-- **UK.** The ICO audited AI recruitment tools and found some let recruiters filter by protected characteristics, collected more data than needed or kept it indefinitely. Before buying a tool, it asks: have you done a data protection impact assessment, what is your lawful basis, are responsibilities written down, and has the provider checked for bias? [14]
+- **UK.** The ICO (now the Information Commission) audited AI recruitment tools and found some let recruiters filter by protected characteristics, collected more data than needed or kept it indefinitely. Before buying a tool, it asks: have you done a data protection impact assessment, what is your lawful basis, are responsibilities written down, and has the provider checked for bias? [14] The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **Vendor agents.** LinkedIn's Hiring Assistant, an AI agent that sources and screens for recruiters, has been available globally in English since the end of September 2025; its time-saving figures are LinkedIn's own claims [20].
 
 ### Checks before an offer
@@ -192,7 +192,7 @@ Re-check at every refresh (every 30 days):
 | EU AI Act high-risk dates | Official Journal; summary [12] | Employment AI duties from 2 Dec 2027 |
 | Illinois AI notice rules | Illinois Department of Human Rights; summary [13] | Draft withdrawn 2 Jun 2026 |
 | NYC AEDT rules | DCWP [10] | In force since 5 Jul 2023 |
-| UK AI recruitment guidance | ICO [14] | 2024 audit questions; check for new guidance |
+| UK AI recruitment guidance | Information Commission [14] | 2024 audit questions; check for new guidance |
 | Google job posting rules | Search Central [19] | Checked 6 Nov 2026 |
 | Recruiting AI agents | Vendor newsrooms [20] | LinkedIn Hiring Assistant global in English since Sep 2025 |
 | Form I-9 edition | USCIS [25] | Edition 01/20/25 |

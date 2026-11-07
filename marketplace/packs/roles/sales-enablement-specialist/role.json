@@ -15,12 +15,16 @@
     "sales onboarding",
     "sell sheet"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 25 checked sources (call recording consent in US federal and state law, EU GDPR and AI Act workplace limits, New York monitoring notice, recording settings in HubSpot, Teams and Meet, claim and comparison rules, competition law, learning evidence and call data), four skills, five prompts, three workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Cited the regulator's monitoring workers guidance."
     }
   ]
 }

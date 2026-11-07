@@ -15,12 +15,16 @@
     "volunteer rota",
     "membership officer"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: volunteer roles, induction, retention and impact reports; member renewals; AGM papers from CC48. Covers NCVO guidance, DBS levels and Oct 2026 fees, certificate handling, Charity Commission safeguarding, PVG, UK and EU consent, Wild Apricot, Beacon and Memberful. 30 sources. ICO pages blocked fetches, so no ICO claims."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's charity soft opt-in guidance."
     }
   ]
 }

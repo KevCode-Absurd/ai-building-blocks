@@ -15,12 +15,16 @@
     "buying group",
     "b2b lead generation"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: target accounts and tiers, buying groups, LinkedIn audiences, Lead Gen Forms and attribution as of Nov 2026, webinar benchmarks, lead scoring and sales handoff, B2B consent in the US, UK, EU and Canada (CASL), 30 checked sources, 4 skills, 6 prompts, 3 workflows."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name. Linked the regulator's business-to-business marketing guidance."
     }
   ]
 }

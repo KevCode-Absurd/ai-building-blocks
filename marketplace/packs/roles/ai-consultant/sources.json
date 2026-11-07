@@ -114,10 +114,10 @@
   {
     "n": 15,
     "title": "Guidance on AI and data protection: About this guidance",
-    "publisher": "Information Commissioner's Office (UK)",
+    "publisher": "Information Commission (ICO), UK",
     "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/about-this-guidance/",
     "checked": "2026-11-06",
-    "supports": "The ICO site blocks automated fetching (HTTP 403); confirmed by a WebSearch result showing this exact page. The guidance explains how UK data protection law applies to AI that processes personal data; it is not a statutory code and is structured around the data protection principles."
+    "supports": "ico.org.uk blocks automated fetching (HTTP 403); confirmed by a WebSearch result showing this exact page. The guidance explains how UK data protection law applies to AI that processes personal data; it is not a statutory code and is structured around the data protection principles."
   },
   {
     "n": 16,

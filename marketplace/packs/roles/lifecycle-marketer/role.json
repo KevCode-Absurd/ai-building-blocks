@@ -15,12 +15,16 @@
     "win-back",
     "churn"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: repeat-purchase and cohort reads, holdout testing, SMS consent and sending rules for the US (TCPA, carriers), UK (PECR) and EU (GDPR, national rules), subscription and cancel-path rules, false-urgency limits, Klaviyo benchmarks with caveats, three skills, five prompts, two workflows and training material, with 30 checked sources."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

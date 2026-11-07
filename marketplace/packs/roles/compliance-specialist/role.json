@@ -15,12 +15,16 @@
     "ISO 27001",
     "AI Act"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 30,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 official sources (GDPR and UK GDPR, CCPA/CPRA, SOC 2, ISO/IEC 27001, PCI DSS, EU AI Act, UK company filings), four skills, five prompts, three workflows, training interview and test briefs. No legal rulings; attesting and certifying stay with auditors."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

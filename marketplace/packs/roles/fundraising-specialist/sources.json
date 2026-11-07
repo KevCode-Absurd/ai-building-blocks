@@ -222,5 +222,13 @@
     "url": "https://www.charitywater.org/our-approach/100-percent-model",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch. 100% of public donations fund water projects; operations are funded by The Well, The Pool, brand partnerships, investment earnings and gifts in kind; separate bank accounts; more than 1 million people have given"
+  },
+  {
+    "n": 29,
+    "title": "What can we do to prepare for the charitable purpose soft opt-in?",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/what-can-we-do-to-prepare-for-the-charitable-purpose-soft-opt-in/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. The charitable purpose soft opt-in started on 5 February 2026 and covers only contact details collected on or after that date; only charities may use it; there is no third-party list that is \"soft opt-in compliant\"; update the privacy notice and keep soft opt-in contacts separate from consented ones."
   }
 ]

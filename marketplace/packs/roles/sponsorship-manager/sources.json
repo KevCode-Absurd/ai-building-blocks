@@ -222,5 +222,13 @@
     "url": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch (last checked by the EU on 5 August 2026). Marketing emails need prior consent except similar products to existing customers; people can object to direct marketing at any time and must be told at first contact"
+  },
+  {
+    "n": 29,
+    "title": "Business-to-business marketing",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. Marketing emails and texts to corporate subscribers (companies, LLPs and some others) do not need prior consent under PECR; sole traders and some partnerships count as individuals and need consent or the soft opt-in."
   }
 ]

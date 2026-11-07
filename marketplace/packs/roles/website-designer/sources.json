@@ -77,7 +77,7 @@
     "publisher": "GOV.UK (DSIT and DCMS)",
     "url": "https://www.gov.uk/government/publications/data-use-and-access-act-2025-factsheets/data-use-and-access-act-factsheet-pec-regulations",
     "checked": "2026-11-06",
-    "supports": "Opened with WebFetch. Keeps the rule that nothing is stored on or read from a device unless an exception applies (such as consent or strict necessity) and adds an exception for statistics used to improve a service; published 27 June 2025. The ICO cookie pages refused automated fetching (HTTP 403) on 6 November 2026, so this official summary is used instead."
+    "supports": "Opened with WebFetch. Keeps the rule that nothing is stored on or read from a device unless an exception applies (such as consent or strict necessity) and adds an exception for statistics used to improve a service; published 27 June 2025. The Information Commission cookie pages refused automated fetching (HTTP 403) on 6 November 2026, so this official summary is used instead."
   },
   {
     "n": 11,

@@ -198,5 +198,13 @@
     "url": "https://www.nysenate.gov/legislation/laws/CVR/52-C*2",
     "checked": "2026-11-06",
     "supports": "Employers with a place of business in New York that monitor employees' phone calls, email or internet use must give prior written notice on hiring, get an acknowledgment and post the notice; enforced by the attorney general with civil penalties of USD 500, 1,000 and 3,000 for first, second and later offences. Most recent revision dated 13 May 2022. Opened with WebFetch."
+  },
+  {
+    "n": 26,
+    "title": "Data protection and monitoring workers",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/monitoring-workers/data-protection-and-monitoring-workers/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. Employer guidance (October 2023): monitoring needs a defined purpose and no less intrusive way to meet it; workers must be told what is collected and how; a DPIA is needed for some monitoring; covert monitoring is exceptional."
   }
 ]

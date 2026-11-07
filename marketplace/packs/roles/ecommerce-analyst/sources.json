@@ -197,7 +197,7 @@
     "publisher": "GOV.UK (Department for Science, Innovation and Technology)",
     "url": "https://www.gov.uk/guidance/data-use-and-access-act-2025-data-protection-and-privacy-changes",
     "checked": "2026-11-06",
-    "supports": "Fetched. The Act allows some low-risk storage and access technologies without consent; changes commence in stages 2 to 12 months after Royal Assent on 19 June 2025; refers to the ICO for guidance."
+    "supports": "Fetched. The Act allows some low-risk storage and access technologies without consent; changes commence in stages 2 to 12 months after Royal Assent on 19 June 2025; refers to the Information Commission for guidance."
   },
   {
     "n": 26,
@@ -222,5 +222,13 @@
     "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
     "checked": "2026-11-06",
     "supports": "Fetched. UK online buyers have 14 days from receipt to cancel and another 14 days to return; refunds due within 14 days of receiving the returned item."
+  },
+  {
+    "n": 29,
+    "title": "Guidance on the use of storage and access technologies: What are the exceptions?",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. Final guidance published 29 April 2026 after the Data (Use and Access) Act 2025 changes. The statistics exception covers only aggregate statistics used to improve your own service, with clear information and an easy way to object; it does not cover online advertising or identifying or tracking individuals, and logs or recordings of individual visitors need consent."
   }
 ]

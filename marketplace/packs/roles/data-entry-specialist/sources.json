@@ -5,7 +5,7 @@
     "publisher": "EUR-Lex (Publications Office of the European Union)",
     "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
     "checked": "2026-11-06",
-    "supports": "Opened with WebFetch (articles read at a later page offset). Regulation of 27 April 2016. Article 5(1)(d): personal data accurate and, where necessary, kept up to date; every reasonable step to erase or rectify inaccurate data without delay. Article 5(2): the controller is responsible for, and able to show, compliance (accountability). Article 16: right to rectification without undue delay. Used because the ICO accuracy guidance returned HTTP 403 on 6 Nov 2026."
+    "supports": "Opened with WebFetch (articles read at a later page offset). Regulation of 27 April 2016. Article 5(1)(d): personal data accurate and, where necessary, kept up to date; every reasonable step to erase or rectify inaccurate data without delay. Article 5(2): the controller is responsible for, and able to show, compliance (accountability). Article 16: right to rectification without undue delay. Used because the Information Commission accuracy guidance returned HTTP 403 on 6 Nov 2026."
   },
   {
     "n": 2,

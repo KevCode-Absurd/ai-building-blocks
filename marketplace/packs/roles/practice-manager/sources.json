@@ -230,5 +230,13 @@
     "url": "https://www.dol.gov/agencies/whd/overtime",
     "checked": "2026-11-06",
     "supports": "Opened with WebFetch. Non-exempt employees get at least 1.5 times the regular rate for hours over 40 in a workweek; workweek is a fixed 168-hour period; no averaging across weeks; no extra federal pay for weekends as such. No page date."
+  },
+  {
+    "n": 30,
+    "title": "What is special category data?",
+    "publisher": "Information Commission (ICO), UK",
+    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/",
+    "checked": "2026-11-07",
+    "supports": "ico.org.uk returns 403 to automated fetches, so this exact page was confirmed from search results on 7 Nov 2026 (Decision 8). The Information Commission replaced the ICO on 30 Sep 2026 and still uses the ICO name. Health data includes medical history, diagnoses, treatment, test results and details given when registering for health services; it needs a lawful basis plus an Article 9 condition."
   }
 ]

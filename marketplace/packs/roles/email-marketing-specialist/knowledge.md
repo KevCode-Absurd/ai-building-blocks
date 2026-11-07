@@ -94,7 +94,7 @@ Apple Mail's Protect Mail Activity downloads images in the background when a mes
 | Charities | Not covered separately | New charitable-purpose soft opt-in, in force 5 February 2026, only for contact details obtained on or after that date [17][18] | No EU-wide charity exception |
 | Unsubscribe | Honour within 10 business days; link must work for 30 days after sending; no fee or extra details [15] | Every message must offer a simple, free opt-out [16] | People can object at any time and the company must stop [20] |
 | Other musts | Accurate From and headers, honest subject line, say it is an ad, a valid postal address; you stay liable for anyone sending for you [15] | Say who you are and give a valid contact address [16] | Consent must meet GDPR standards; the EDPB's 2020 guidelines are the reference [21] |
-| Penalties | The FTC guide gives up to $53,088 per violating email (as shown on the page when checked; adjusted for inflation) [15] | The Data (Use and Access) Act 2025 raised the PECR maximum to £17.5 million or 4% of global turnover; the ICO's enforcement guidance is under review [19] | Set by national regulators |
+| Penalties | The FTC guide gives up to $53,088 per violating email (as shown on the page when checked; adjusted for inflation) [15] | The Data (Use and Access) Act 2025 raised the PECR maximum to £17.5 million or 4% of global turnover; the Information Commission's enforcement guidance is under review [19] | Set by national regulators |
 
 Because the mailbox providers now require consent in practice [7][10], a US business that relies on opt-out still has a deliverability reason to collect clear opt-in.
 
@@ -220,7 +220,7 @@ Re-check at each refresh:
 - **Apple iCloud Mail** postmaster page and Mail Privacy Protection [10][11].
 - **DMARC (RFC 9989) adoption:** when provider help pages drop `pct` and start using the new tags [5][13].
 - **M3AAWG** documents, including the promised list maintenance paper [14].
-- **UK law:** ICO guidance updates after the Data (Use and Access) Act 2025, including the direct marketing enforcement guidance under review [16][17][19].
+- **UK law:** Information Commission guidance updates after the Data (Use and Access) Act 2025, including the direct marketing enforcement guidance under review [16][17][19]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - **US:** the FTC's CAN-SPAM penalty figure, which is adjusted for inflation [15].
 - **EU:** national regulators' guidance and any EDPB update on consent [20][21].
 - **Benchmarks:** Mailchimp and Klaviyo reissue theirs; note the data date every time [22][23].

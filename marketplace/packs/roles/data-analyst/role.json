@@ -15,12 +15,16 @@
     "sales forecast",
     "insights report"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 60,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources, three skills (data profiling and clean-up, insight brief from data, forecast from history), five prompts, two workflows, training interview and test briefs. Uses the three access levels (read; read and draft; read, write and publish)."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

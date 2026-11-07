@@ -15,12 +15,16 @@
     "llm evaluation",
     "mcp server"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "review_every_days": 14,
   "changelog": [
     {
       "date": "2026-11-06",
       "note": "First release: role knowledge with 30 sources (Anthropic, OpenAI and Google docs, MCP spec 2026-07-28, OWASP LLM Top 10 2025, EU AI Act, UK and US guidance), four skills (AI feature build, prompt test set and tuning, answers from your documents, guardrails and launch review), six prompts, two workflows, training interview and test briefs."
+    },
+    {
+      "date": "2026-11-07",
+      "note": "Named the UK regulator as the Information Commission, which replaced the Information Commissioner's Office (ICO) on 30 Sep 2026 and still uses the ICO name."
     }
   ]
 }

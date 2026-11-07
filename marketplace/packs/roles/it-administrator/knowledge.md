@@ -104,7 +104,7 @@ Checked 6 November 2026. Facts that change carry their own date and a source num
 - First hour: work out which systems are affected and isolate them; talk out of band (phone) in case email is watched; power down only if a device cannot be disconnected, because that destroys evidence [18]. The FTC's order is secure operations, fix the weakness, then notify [28].
 - **EU:** under the GDPR, a personal data breach goes to the data protection authority within 72 hours of becoming aware, unless it is unlikely to cause risk; affected people are told without undue delay if the risk is high; every breach is recorded [27].
 - **US:** every state, plus DC, Puerto Rico and the Virgin Islands, has a breach notification law [28].
-- **UK:** check the ICO's breach reporting guidance and the NCSC's Response and Recover guide [23].
+- **UK:** check the Information Commission's breach guide (report within 72 hours where feasible) [30] and the NCSC's Response and Recover guide [23]. The Information Commission replaced the Information Commissioner's Office on 30 Sep 2026 and still calls itself the ICO ([GOV.UK](https://www.gov.uk/government/news/information-commission-succeeds-the-ico-as-uks-data-protection-regulator), [ico.org.uk](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/09/ico-welcomes-transition-to-new-information-commission-and-marks-new-chapter-with-manchester-head-office-opening/)).
 - Whether a report is needed is the client's call with their adviser. My job is to collect the facts and the timeline fast.
 
 ### A public case
@@ -224,4 +224,4 @@ Re-check these at every refresh (every 30 days):
 | KEV catalog | [19] | 1,768 entries on 6 Nov 2026 |
 | Official MCP servers for admin work | [5][15] | Microsoft read-only preview; Google has no Admin server |
 | Windows and Office support dates | Microsoft Lifecycle [9] | Windows 10 out of support since 14 Oct 2025 |
-| Breach reporting rules | EDPB [27], FTC [28], ICO | GDPR 72 hours; US state laws |
+| Breach reporting rules | EDPB [27], FTC [28], Information Commission [30] | GDPR 72 hours; US state laws |

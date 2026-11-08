@@ -84,6 +84,6 @@ Pause here: Redo or retouch any picture the inspector flagged, then save the fin
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Virtual try-on photo maker](https://useaiblocks.com/skills/virtual-try-on-photo-maker).
+- The [Clothing photo model and background editor](https://useaiblocks.com/skills/model-and-scene-swapper).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

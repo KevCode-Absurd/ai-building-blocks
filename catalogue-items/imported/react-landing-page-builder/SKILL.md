@@ -7,19 +7,6 @@ description: "Generates high-converting landing pages as complete Next.js/React 
 
 Generate high-converting landing pages from a product description. Output complete Next.js/React components with multiple section variants, proven copy frameworks, SEO optimization, and performance-first patterns. Not lorem ipsum — actual copy that converts.
 
-## AI Blocks: existing-site implementation requirements
-
-Read the user's original request, brand brain and actual repository before choosing a design or framework. Inspect existing routes, components, styles, font loading and buying controls. Extend those files and reuse the working header, footer, product/variant controls and navigation. Do not create a new Next.js project, add Tailwind or swap a brand font merely because this skill's examples use them. If the actual target is not React, load a compatible AI Blocks builder instead.
-
-The style table, section order and examples below are optional patterns. Existing brand tokens and the buyer's job take priority. Draft distinct buyer arguments and compositions separately, compare their trade-offs, then build the selected direction. Avoid treating every product as a SaaS pricing page or adding irrelevant feature grids and testimonial blocks. No claim of improved conversion follows from generated code.
-
-Deliver editable source or a patch, dependencies, local build/preview commands and an integration map. Run the current build, then exercise the real primary action, links, assets, phone/desktop layout, keyboard access and brand implementation. Save the observed result and receipt against the current source-bundle SHA-256; recheck affected behaviour after edits. A screenshot is supporting evidence, not source, and a generated page image is only a design reference. Missing required actions or unrun browser checks keep the result labelled implementation preview. Technical readiness, publication, owner acceptance and measured business performance are separate states.
-
-**Target:** LCP < 1s · CLS < 0.1 · FID < 100ms  
-**Output:** TSX components + Tailwind styles + SEO meta + copy variants
-
----
-
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -32,6 +19,19 @@ How to start:
 2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
+
+## AI Blocks: existing-site implementation requirements
+
+Read the user's original request, brand brain and actual repository before choosing a design or framework. Inspect existing routes, components, styles, font loading and buying controls. Extend those files and reuse the working header, footer, product/variant controls and navigation. Do not create a new Next.js project, add Tailwind or swap a brand font merely because this skill's examples use them. If the actual target is not React, load a compatible AI Blocks builder instead.
+
+The style table, section order and examples below are optional patterns. Existing brand tokens and the buyer's job take priority. Draft distinct buyer arguments and compositions separately, compare their trade-offs, then build the selected direction. Avoid treating every product as a SaaS pricing page or adding irrelevant feature grids and testimonial blocks. No claim of improved conversion follows from generated code.
+
+Deliver editable source or a patch, dependencies, local build/preview commands and an integration map. Run the current build, then exercise the real primary action, links, assets, phone/desktop layout, keyboard access and brand implementation. Save the observed result and receipt against the current source-bundle SHA-256; recheck affected behaviour after edits. A screenshot is supporting evidence, not source, and a generated page image is only a design reference. Missing required actions or unrun browser checks keep the result labelled implementation preview. Technical readiness, publication, owner acceptance and measured business performance are separate states.
+
+**Target:** LCP < 1s · CLS < 0.1 · FID < 100ms  
+**Output:** TSX components + Tailwind styles + SEO meta + copy variants
+
+---
 
 ## Core Capabilities
 

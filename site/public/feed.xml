@@ -8,6 +8,26 @@
     <atom:link href="https://useaiblocks.com/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Personal agent builder</title>
+      <link>https://useaiblocks.com/skills/personal-agent-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/personal-agent-builder</guid>
+      <description>Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>new</category>
+      <category>skill</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Video ad production plan builder</title>
+      <link>https://useaiblocks.com/skills/video-ad-production-plan-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/video-ad-production-plan-builder</guid>
+      <description>Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Make video ads</category>
+    </item>
+    <item>
       <title>Plain HTML landing page builder</title>
       <link>https://useaiblocks.com/skills/static-html-landing-page-builder</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/static-html-landing-page-builder</guid>
@@ -16,6 +36,36 @@
       <category>updated</category>
       <category>skill</category>
       <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>AI task brief writer</title>
+      <link>https://useaiblocks.com/prompts/job-to-agent-goal-writer</link>
+      <guid isPermaLink="true">https://useaiblocks.com/prompts/job-to-agent-goal-writer</guid>
+      <description>Describe a job and your limits. Get a clear AI task brief with scope, completion checks, approval points and stop rules.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>prompt</category>
+      <category>Set up AI to work for you</category>
+    </item>
+    <item>
+      <title>Clothing marketplace photo editor</title>
+      <link>https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos</link>
+      <guid isPermaLink="true">https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos</guid>
+      <description>Share a real garment photo and target marketplace. Get photo edits, close-up checks and a review of the final images against relevant rules.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>workflow</category>
+      <category>Make product photos</category>
+    </item>
+    <item>
+      <title>Short film video ad script writer</title>
+      <link>https://useaiblocks.com/skills/short-film-ad-script</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/short-film-ad-script</guid>
+      <description>Write a short film video ad script with a twist your product causes. You get a timed shot table, edit notes and a cast note.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Make video ads</category>
     </item>
     <item>
       <title>React landing page builder</title>
@@ -36,6 +86,16 @@
       <category>updated</category>
       <category>skill</category>
       <category>Write and build a landing page</category>
+    </item>
+    <item>
+      <title>Brand profile builder</title>
+      <link>https://useaiblocks.com/skills/website-brand-brain-builder</link>
+      <guid isPermaLink="true">https://useaiblocks.com/skills/website-brand-brain-builder</guid>
+      <description>Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <category>updated</category>
+      <category>skill</category>
+      <category>Set up your brand file</category>
     </item>
     <item>
       <title>Landing page design planner</title>
@@ -508,16 +568,6 @@
       <category>Make image ads</category>
     </item>
     <item>
-      <title>Video ad production plan builder</title>
-      <link>https://useaiblocks.com/skills/video-ad-production-plan-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/video-ad-production-plan-builder</guid>
-      <description>Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Make video ads</category>
-    </item>
-    <item>
       <title>Video hook and retention reviewer</title>
       <link>https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer</link>
       <guid isPermaLink="true">https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer</guid>
@@ -956,56 +1006,6 @@
       <category>updated</category>
       <category>skill</category>
       <category>Keep your store safe</category>
-    </item>
-    <item>
-      <title>Brand mood board planner</title>
-      <link>https://useaiblocks.com/skills/brand-stylescape-planner</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-stylescape-planner</guid>
-      <description>Share your brand values and buyers. Get three visual directions, one combined style and clear photo rules for a designer.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Set up your brand file</category>
-    </item>
-    <item>
-      <title>Brand perception survey planner</title>
-      <link>https://useaiblocks.com/skills/brand-ladder-survey-builder</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-ladder-survey-builder</guid>
-      <description>Share your category, rivals and buyer sample. Get a survey, scoring sheet and report layout to compare which brands buyers recall and rate.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Understand your customers</category>
-    </item>
-    <item>
-      <title>Brand playbook fit checker</title>
-      <link>https://useaiblocks.com/skills/brand-playbook-fit-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-playbook-fit-checker</guid>
-      <description>Share a larger brand’s tactic, public evidence and your store’s limits. Get a fit review, dependencies, claim risks and a small test.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Study competitor ads</category>
-    </item>
-    <item>
-      <title>Brand ritual designer</title>
-      <link>https://useaiblocks.com/skills/brand-ritual-designer</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-ritual-designer</guid>
-      <description>Design a brand ritual for your product. Give it how customers use it. You get three ritual ideas and a 90-day launch plan for the best one.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Set up your brand file</category>
-    </item>
-    <item>
-      <title>Brand social account checker</title>
-      <link>https://useaiblocks.com/skills/brand-social-account-checker</link>
-      <guid isPermaLink="true">https://useaiblocks.com/skills/brand-social-account-checker</guid>
-      <description>Share account details, posting methods and recent topics. Get an eight-rule setup review, a custom score and changes to test first.</description>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      <category>updated</category>
-      <category>skill</category>
-      <category>Grow on social</category>
     </item>
   </channel>
 </rss>

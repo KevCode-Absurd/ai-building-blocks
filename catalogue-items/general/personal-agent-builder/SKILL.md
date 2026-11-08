@@ -9,6 +9,25 @@ Help a person create useful AI instructions that reflect how they work and help 
 
 This is a conversational method run by the user's current AI. Loading this method does not create a hosted agent, acquire other conversations, run an interview, connect accounts, save memory, train weights or publish anything. Ask one or a few useful questions at a time. Do not turn the sections below into a mandatory questionnaire.
 
+<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Makes it better (optional):**
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+
+**Tools that do this best:**
+- **Your current AI:** The work runs in your chosen AI; available memory and files depend on that host. Its provider and connected tools process supplied content under their own policies.
+<!-- /needs -->
+
 ## Inputs and limits
 
 Required: the person's request about the work they want help with or the artifact they want to build. A short request is enough to begin.

@@ -15,6 +15,70 @@
  ],
  "items": [
   {
+   "id": "https://useaiblocks.com/skills/personal-agent-builder",
+   "url": "https://useaiblocks.com/skills/personal-agent-builder",
+   "title": "Personal agent builder",
+   "summary": "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.",
+   "content_text": "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier.",
+   "date_published": "2026-11-08T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "new",
+    "skill",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/personal-agent-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/personal-agent-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/personal-agent-builder.md",
+    "json": "https://useaiblocks.com/skills/personal-agent-builder.json",
+    "skill": "https://useaiblocks.com/skills/personal-agent-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/video-ad-production-plan-builder",
+   "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder",
+   "title": "Video ad production plan builder",
+   "summary": "Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style.",
+   "content_text": "Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style. Updated 2026-11-08.",
+   "date_published": "2026-10-25T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Make video ads"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/video-ad-production-plan-builder.md",
+    "json": "https://useaiblocks.com/skills/video-ad-production-plan-builder.json",
+    "skill": "https://useaiblocks.com/skills/video-ad-production-plan-builder/SKILL.md"
+   }
+  },
+  {
    "id": "https://useaiblocks.com/skills/static-html-landing-page-builder",
    "url": "https://useaiblocks.com/skills/static-html-landing-page-builder",
    "title": "Plain HTML landing page builder",
@@ -44,6 +108,102 @@
     "markdown": "https://useaiblocks.com/skills/static-html-landing-page-builder.md",
     "json": "https://useaiblocks.com/skills/static-html-landing-page-builder.json",
     "skill": "https://useaiblocks.com/skills/static-html-landing-page-builder/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/prompts/job-to-agent-goal-writer",
+   "url": "https://useaiblocks.com/prompts/job-to-agent-goal-writer",
+   "title": "AI task brief writer",
+   "summary": "Describe a job and your limits. Get a clear AI task brief with scope, completion checks, approval points and stop rules.",
+   "content_text": "Describe a job and your limits. Get a clear AI task brief with scope, completion checks, approval points and stop rules. Updated 2026-11-08.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "prompt",
+    "Set up AI to work for you"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/prompts/job-to-agent-goal-writer.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/job-to-agent-goal-writer/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "prompt",
+    "markdown": "https://useaiblocks.com/prompts/job-to-agent-goal-writer.md",
+    "json": "https://useaiblocks.com/prompts/job-to-agent-goal-writer.json",
+    "skill": "https://useaiblocks.com/skills/job-to-agent-goal-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos",
+   "url": "https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos",
+   "title": "Clothing marketplace photo editor",
+   "summary": "Share a real garment photo and target marketplace. Get photo edits, close-up checks and a review of the final images against relevant rules.",
+   "content_text": "Share a real garment photo and target marketplace. Get photo edits, close-up checks and a review of the final images against relevant rules. Updated 2026-11-08.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "workflow",
+    "Make product photos"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/turn-a-clothing-flat-lay-into-marketplace-ready-photos/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "workflow",
+    "markdown": "https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos.md",
+    "json": "https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos.json",
+    "skill": "https://useaiblocks.com/skills/turn-a-clothing-flat-lay-into-marketplace-ready-photos/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/short-film-ad-script",
+   "url": "https://useaiblocks.com/skills/short-film-ad-script",
+   "title": "Short film video ad script writer",
+   "summary": "Write a short film video ad script with a twist your product causes. You get a timed shot table, edit notes and a cast note.",
+   "content_text": "Write a short film video ad script with a twist your product causes. You get a timed shot table, edit notes and a cast note. Updated 2026-11-08.",
+   "date_published": "2026-10-21T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Make video ads"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/short-film-ad-script.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/short-film-ad-script/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/short-film-ad-script.md",
+    "json": "https://useaiblocks.com/skills/short-film-ad-script.json",
+    "skill": "https://useaiblocks.com/skills/short-film-ad-script/SKILL.md"
    }
   },
   {
@@ -108,6 +268,38 @@
     "markdown": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.md",
     "json": "https://useaiblocks.com/skills/ad-matched-landing-page-writer.json",
     "skill": "https://useaiblocks.com/skills/ad-matched-landing-page-writer/SKILL.md"
+   }
+  },
+  {
+   "id": "https://useaiblocks.com/skills/website-brand-brain-builder",
+   "url": "https://useaiblocks.com/skills/website-brand-brain-builder",
+   "title": "Brand profile builder",
+   "summary": "Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.",
+   "content_text": "Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources. Updated 2026-11-08.",
+   "date_published": "2026-10-19T00:00:00Z",
+   "date_modified": "2026-11-08T00:00:00Z",
+   "tags": [
+    "updated",
+    "skill",
+    "Set up your brand file"
+   ],
+   "attachments": [
+    {
+     "url": "https://useaiblocks.com/skills/website-brand-brain-builder.md",
+     "mime_type": "text/markdown",
+     "title": "Markdown version"
+    },
+    {
+     "url": "https://useaiblocks.com/skills/website-brand-brain-builder/SKILL.md",
+     "mime_type": "text/markdown",
+     "title": "SKILL.md"
+    }
+   ],
+   "_aiblocks": {
+    "type": "skill",
+    "markdown": "https://useaiblocks.com/skills/website-brand-brain-builder.md",
+    "json": "https://useaiblocks.com/skills/website-brand-brain-builder.json",
+    "skill": "https://useaiblocks.com/skills/website-brand-brain-builder/SKILL.md"
    }
   },
   {
@@ -1615,38 +1807,6 @@
    }
   },
   {
-   "id": "https://useaiblocks.com/skills/video-ad-production-plan-builder",
-   "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder",
-   "title": "Video ad production plan builder",
-   "summary": "Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style.",
-   "content_text": "Turn your product facts and ad idea into a video ad production plan: cast kit, timed shot table, clip prompts and edit handoff in one style. Updated 2026-11-04.",
-   "date_published": "2026-10-25T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Make video ads"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/video-ad-production-plan-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/video-ad-production-plan-builder.md",
-    "json": "https://useaiblocks.com/skills/video-ad-production-plan-builder.json",
-    "skill": "https://useaiblocks.com/skills/video-ad-production-plan-builder/SKILL.md"
-   }
-  },
-  {
    "id": "https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer",
    "url": "https://useaiblocks.com/skills/video-hook-and-hold-matrix-reviewer",
    "title": "Video hook and retention reviewer",
@@ -3052,166 +3212,6 @@
     "markdown": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner.md",
     "json": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner.json",
     "skill": "https://useaiblocks.com/skills/bot-and-ai-agent-access-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-stylescape-planner",
-   "url": "https://useaiblocks.com/skills/brand-stylescape-planner",
-   "title": "Brand mood board planner",
-   "summary": "Share your brand values and buyers. Get three visual directions, one combined style and clear photo rules for a designer.",
-   "content_text": "Share your brand values and buyers. Get three visual directions, one combined style and clear photo rules for a designer. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Set up your brand file"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-stylescape-planner.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-stylescape-planner/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-stylescape-planner.md",
-    "json": "https://useaiblocks.com/skills/brand-stylescape-planner.json",
-    "skill": "https://useaiblocks.com/skills/brand-stylescape-planner/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-ladder-survey-builder",
-   "url": "https://useaiblocks.com/skills/brand-ladder-survey-builder",
-   "title": "Brand perception survey planner",
-   "summary": "Share your category, rivals and buyer sample. Get a survey, scoring sheet and report layout to compare which brands buyers recall and rate.",
-   "content_text": "Share your category, rivals and buyer sample. Get a survey, scoring sheet and report layout to compare which brands buyers recall and rate. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Understand your customers"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-ladder-survey-builder.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-ladder-survey-builder/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-ladder-survey-builder.md",
-    "json": "https://useaiblocks.com/skills/brand-ladder-survey-builder.json",
-    "skill": "https://useaiblocks.com/skills/brand-ladder-survey-builder/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-playbook-fit-checker",
-   "url": "https://useaiblocks.com/skills/brand-playbook-fit-checker",
-   "title": "Brand playbook fit checker",
-   "summary": "Share a larger brand’s tactic, public evidence and your store’s limits. Get a fit review, dependencies, claim risks and a small test.",
-   "content_text": "Share a larger brand’s tactic, public evidence and your store’s limits. Get a fit review, dependencies, claim risks and a small test. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Study competitor ads"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-playbook-fit-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-playbook-fit-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-playbook-fit-checker.md",
-    "json": "https://useaiblocks.com/skills/brand-playbook-fit-checker.json",
-    "skill": "https://useaiblocks.com/skills/brand-playbook-fit-checker/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-ritual-designer",
-   "url": "https://useaiblocks.com/skills/brand-ritual-designer",
-   "title": "Brand ritual designer",
-   "summary": "Design a brand ritual for your product. Give it how customers use it. You get three ritual ideas and a 90-day launch plan for the best one.",
-   "content_text": "Design a brand ritual for your product. Give it how customers use it. You get three ritual ideas and a 90-day launch plan for the best one. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Set up your brand file"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-ritual-designer.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-ritual-designer/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-ritual-designer.md",
-    "json": "https://useaiblocks.com/skills/brand-ritual-designer.json",
-    "skill": "https://useaiblocks.com/skills/brand-ritual-designer/SKILL.md"
-   }
-  },
-  {
-   "id": "https://useaiblocks.com/skills/brand-social-account-checker",
-   "url": "https://useaiblocks.com/skills/brand-social-account-checker",
-   "title": "Brand social account checker",
-   "summary": "Share account details, posting methods and recent topics. Get an eight-rule setup review, a custom score and changes to test first.",
-   "content_text": "Share account details, posting methods and recent topics. Get an eight-rule setup review, a custom score and changes to test first. Updated 2026-11-04.",
-   "date_published": "2026-10-21T00:00:00Z",
-   "date_modified": "2026-11-04T00:00:00Z",
-   "tags": [
-    "updated",
-    "skill",
-    "Grow on social"
-   ],
-   "attachments": [
-    {
-     "url": "https://useaiblocks.com/skills/brand-social-account-checker.md",
-     "mime_type": "text/markdown",
-     "title": "Markdown version"
-    },
-    {
-     "url": "https://useaiblocks.com/skills/brand-social-account-checker/SKILL.md",
-     "mime_type": "text/markdown",
-     "title": "SKILL.md"
-    }
-   ],
-   "_aiblocks": {
-    "type": "skill",
-    "markdown": "https://useaiblocks.com/skills/brand-social-account-checker.md",
-    "json": "https://useaiblocks.com/skills/brand-social-account-checker.json",
-    "skill": "https://useaiblocks.com/skills/brand-social-account-checker/SKILL.md"
    }
   }
  ]

@@ -40,10 +40,11 @@ test('personal builder starts from a request and has traceable optional-document
 test('actual generated catalogue discovers personal builder by job and judgment vocabulary', async () => {
   const s = service();
   for (const query of ['personal agent builder', 'tacit judgment', 'editable dossier', 'conditional taste']) {
-    const result = await s.callTool('search_library', { query, type: 'skill', limit: 50 });
+    const result = await s.callTool('search_library', { query, type: 'skill', limit: 25 });
     const found = result.items.find(row => row.id === id);
     assert.ok(found, `Missing from generated search for ${query}; regenerate the catalogue before running this integration check.`);
     assert.equal(found.url, `https://useaiblocks.com/skills/${id}`);
+    assert.equal(found.tested, false, 'A reviewed instruction outline is not an executed sample or quality test.');
   }
   const response = await handlePublicApi(get(`/api/v1/search?q=personal%20agent%20builder&type=skill`), env());
   assert.equal(response.status, 200);

@@ -1,6 +1,6 @@
 new_slug: personal-agent-builder
 name: "Personal agent builder"
-summary: "Create a personal prompt, skill, agent or collection through real work, decision replay and reviewed corrections."
+summary: "Build a personal prompt, skill, agent or collection from real work, tacit judgment, conditional taste and reviewed corrections. Keep an editable private dossier."
 job: set-up-ai
 thinking: medium
 thinking_why: "It adapts questions to real decisions, preserves conditional preferences and compiles the smallest useful artifact."
@@ -45,17 +45,6 @@ how_it_works:
     text: "Builds the chosen prompt, skill, agent or collection with only the structure it needs."
   - title: "Reports saving honestly"
     text: "Shows the real save receipt or provides an export and says persistence is unavailable."
-output_sample:
-  input:
-    - "Your request about work you want help with or an artifact you want to build."
-    - "Optional permitted examples, edits, current instructions or dossier."
-  output:
-    - name: "Chosen artifact"
-      contains: "The actual prompt, reusable skill, bounded agent instructions or collection."
-    - name: "Editable dossier"
-      contains: "Relevant approved context, decision cases, conditional preferences, boundaries and open questions."
-    - name: "Change and save status"
-      contains: "Reviewed changes, actual destination/receipt or export-only status, and checks not run."
 output_shape: |
   Use the native structure of the chosen artifact. Add a compact editable dossier and change notes only where useful. State actual persistence/export status, unresolved items and the next real assignment. Do not require every dossier section before the first usable result.
 works_best_with:

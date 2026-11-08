@@ -419,7 +419,7 @@
     "catalogue-items/general/studio-world-image-ad-maker/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "a889511fb6689180f4a245ef6840239ffb2d77982b5044f49e9ef436b779fa36",
+      "method_sha256": "ea120beb63d233e27e34dd879979a093b72b4b6966657994c6d1ac78f356f857",
       "inputs": [
         {
           "type": "brief",
@@ -518,7 +518,7 @@
     "catalogue-items/general/personal-agent-builder/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "18b59ecb155a3e6ac30019096541b2bda501ad5c2cb47c373144bd7775be4ae0",
+      "method_sha256": "05e7b431fb87f455357cd5895a7d4ebd61f5ab60ae157a28a59d5e0932dc036b",
       "inputs": [
         {
           "type": "question",
@@ -734,7 +734,7 @@
     "catalogue-items/imported/react-landing-page-builder/item.yaml": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "method_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "method_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
       "inputs": [
         {
           "type": "question",
@@ -869,7 +869,7 @@
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
       "from_sha256": "6b15650d4a38cb9463488c11787322308b0fb67a0e3e62fdc0b384452c0484ab",
-      "to_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "to_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
       "ports_sha256": "d9b7fa189d6dcf3f521521a26f6b08f3007eed7d664744ccffbc98d8aa5e87b2",
       "from_type": "code_change",
       "to_type": "question",
@@ -883,7 +883,7 @@
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
       "from_sha256": "2a0bc6d9b0304ecb5de23677469803b75119b2c12e1c57bc32e435efc1580982",
-      "to_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "to_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
       "ports_sha256": "90ec3c02c71fd607525c9d871ce2f69700e63ad864c9f930cf06132dee99943a",
       "from_type": "web_app",
       "to_type": "question",
@@ -896,7 +896,7 @@
     "catalogue-items/imported/react-landing-page-builder/page.yaml#next#landing-page-auditor": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "from_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "from_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
       "to_sha256": "cf86c5991cdfb50cd9f17d830b8e0b948c62bcd8a31c6170c7d141b4669048f2",
       "ports_sha256": "6c3b23998dfbfe23c31172fdc94bbea7665139f02f16131dd7c1aeeec9a35344",
       "from_type": "code_change",
@@ -910,7 +910,7 @@
     "catalogue-items/imported/react-landing-page-builder/page.yaml#next#landing-page-30-point-checker": {
       "reviewed_by": "AI Blocks source review (Codex)",
       "reviewed_on": "2026-11-08",
-      "from_sha256": "e850f781a0342b83ffc0095397c2b81f9e250f77440b7f268359ede859f9e626",
+      "from_sha256": "0e71979de9e6238a50161c20a39f7f1c67fea4c15ac051a3f58811cabaef51dc",
       "to_sha256": "41c30e40f08451ff7bd51d09d9f252aed21724140b08e365bba223483a5b87f1",
       "ports_sha256": "04f8c6cb7c12d92161c59f0fd4ea1f2dc447b46a504912e7eacf8495a4771391",
       "from_type": "code_change",
